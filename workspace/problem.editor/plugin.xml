@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="uk.ac.open.problem.presentation.ProblemModelWizardID"
+            name="%_UI_ProblemModelWizard_label"
+            class="uk.ac.open.problem.presentation.ProblemModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ProblemModelFile.gif">
+         <description>%_UI_ProblemModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="uk.ac.open.problem.presentation.ProblemEditorID"
+            name="%_UI_ProblemEditor_label"
+            icon="icons/full/obj16/ProblemModelFile.gif"
+            extensions="problem"
+            class="uk.ac.open.problem.presentation.ProblemEditor"
+            contributorClass="uk.ac.open.problem.presentation.ProblemActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

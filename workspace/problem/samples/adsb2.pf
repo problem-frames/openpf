@@ -1,0 +1,51 @@
+problem:
+"ADS-B 2"
+
+#Maintain SD# R
+
+Aircraft C
+
+Airspace B
+
+#Secondary Surveillance System# C
+
+#Primary Surveillance System# C
+
+#Central Processor# C
+
+#ATC Display# C
+
+Operator B
+
+Operator -> #ATC Display#
+{i}:"a"
+
+#ATC Display# -> #Central Processor#
+{h1}:"b"
+
+#Central Processor# -> #ATC Display#
+{h2}:"c"
+
+#Primary Surveillance System# -> #Central Processor#
+{d}:"d"
+
+#Secondary Surveillance System# -> #Central Processor#
+{f}:"e"
+
+#Central Processor# -> Aircraft
+{g}:"f"
+
+Airspace -> #Primary Surveillance System#
+{c1}:"g"
+
+#Primary Surveillance System# -> Airspace
+{c2}:"h"
+
+Airspace -> #Secondary Surveillance System#
+{e1}:"i"
+
+Aircraft -> Airspace
+{b}:"j"
+
+Aircraft ~> #Maintain SD#
+{a}:"l"   

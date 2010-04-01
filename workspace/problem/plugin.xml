@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<plugin>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http://open.ac.uk/problem" 
+       class = "uk.ac.open.problem.ProblemPackage"
+       genModel = "uk/ac/open/Problem.genmodel" /> 
+	
+  </extension>
+  <extension point="core.example">
+      <example file="adsb1.pf"/>
+      <example file="adsb2.pf"/>
+      <example file="example.pf"/>
+      <example file="library.pf"/>
+  </extension>
+</plugin>

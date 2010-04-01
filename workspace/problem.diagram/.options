@@ -1,0 +1,7 @@
+# Tracing options for the problem.diagram plug-in
+
+# Common issues
+problem.diagram/debug=false
+
+# Visual IDs
+problem.diagram/debug/visualID=false

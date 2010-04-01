@@ -1,0 +1,1 @@
+~/IDE/sdk/3.5.2/eclipse/eclipse -data workspace -vmargs -Xms128m -Xmx512m -XX:MaxPermSize=128m

@@ -1,0 +1,32 @@
+problem:
+"ADSB 1"
+
+Operator -> #ATC Display#
+{g}
+:"a"
+
+#ATC Display# -> #Central Processor#
+{f}
+:"b"
+
+#Central Processor# -> Aircraft
+{e}
+:"c"
+
+Requirements ~~ Aircraft
+{r}
+:"d"
+
+Requirements ~> Aircraft
+{r}
+:"e"
+
+Requirements R
+
+Aircraft C
+
+#Central Processor# M
+
+#ATC Display# C
+
+Operator B

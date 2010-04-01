@@ -1,0 +1,727 @@
+/**
+ * <copyright>
+ * </copyright>
+ *
+ */
+package uk.ac.open.problem;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Package</b> for the model.
+ * It contains accessors for the meta objects to represent
+ * <ul>
+ *   <li>each class,</li>
+ *   <li>each feature of each class,</li>
+ *   <li>each enum,</li>
+ *   <li>and each data type</li>
+ * </ul>
+ * <!-- end-user-doc -->
+ * @see uk.ac.open.problem.ProblemFactory
+ * @model kind="package"
+ * @generated
+ */
+public interface ProblemPackage extends EPackage
+{
+  /**
+	 * The package name.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  String eNAME = "problem";
+
+  /**
+	 * The package namespace URI.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  String eNS_URI = "http://open.ac.uk/problem";
+
+  /**
+	 * The package namespace name.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  String eNS_PREFIX = "problem";
+
+  /**
+	 * The singleton instance of the package.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  ProblemPackage eINSTANCE = uk.ac.open.problem.impl.ProblemPackageImpl.init();
+
+  /**
+	 * The meta object id for the '{@link uk.ac.open.problem.impl.ProblemDiagramImpl <em>Diagram</em>}' class.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see uk.ac.open.problem.impl.ProblemDiagramImpl
+	 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getProblemDiagram()
+	 * @generated
+	 */
+  int PROBLEM_DIAGRAM = 0;
+
+  /**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int PROBLEM_DIAGRAM__DESCRIPTION = 0;
+
+  /**
+	 * The feature id for the '<em><b>Nodes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int PROBLEM_DIAGRAM__NODES = 1;
+
+  /**
+	 * The feature id for the '<em><b>Links</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int PROBLEM_DIAGRAM__LINKS = 2;
+
+  /**
+	 * The number of structural features of the '<em>Diagram</em>' class.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int PROBLEM_DIAGRAM_FEATURE_COUNT = 3;
+
+  /**
+	 * The meta object id for the '{@link uk.ac.open.problem.impl.NodeImpl <em>Node</em>}' class.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see uk.ac.open.problem.impl.NodeImpl
+	 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getNode()
+	 * @generated
+	 */
+  int NODE = 1;
+
+  /**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int NODE__NAME = 0;
+
+  /**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int NODE__TYPE = 1;
+
+  /**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int NODE__DESCRIPTION = 2;
+
+  /**
+	 * The number of structural features of the '<em>Node</em>' class.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int NODE_FEATURE_COUNT = 3;
+
+  /**
+	 * The meta object id for the '{@link uk.ac.open.problem.impl.PhenomenonImpl <em>Phenomenon</em>}' class.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see uk.ac.open.problem.impl.PhenomenonImpl
+	 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getPhenomenon()
+	 * @generated
+	 */
+  int PHENOMENON = 2;
+
+  /**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int PHENOMENON__TYPE = 0;
+
+  /**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int PHENOMENON__NAME = 1;
+
+  /**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int PHENOMENON__DESCRIPTION = 2;
+
+  /**
+	 * The number of structural features of the '<em>Phenomenon</em>' class.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int PHENOMENON_FEATURE_COUNT = 3;
+
+  /**
+	 * The meta object id for the '{@link uk.ac.open.problem.impl.LinkImpl <em>Link</em>}' class.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see uk.ac.open.problem.impl.LinkImpl
+	 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getLink()
+	 * @generated
+	 */
+  int LINK = 3;
+
+  /**
+	 * The feature id for the '<em><b>From</b></em>' reference.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int LINK__FROM = 0;
+
+  /**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int LINK__TYPE = 1;
+
+  /**
+	 * The feature id for the '<em><b>To</b></em>' reference.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int LINK__TO = 2;
+
+  /**
+	 * The feature id for the '<em><b>Phenomena</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int LINK__PHENOMENA = 3;
+
+  /**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int LINK__DESCRIPTION = 4;
+
+  /**
+	 * The number of structural features of the '<em>Link</em>' class.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int LINK_FEATURE_COUNT = 5;
+
+  /**
+	 * The meta object id for the '{@link uk.ac.open.problem.NodeType <em>Node Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see uk.ac.open.problem.NodeType
+	 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getNodeType()
+	 * @generated
+	 */
+  int NODE_TYPE = 4;
+
+  /**
+	 * The meta object id for the '{@link uk.ac.open.problem.PhenomenonType <em>Phenomenon Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see uk.ac.open.problem.PhenomenonType
+	 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getPhenomenonType()
+	 * @generated
+	 */
+  int PHENOMENON_TYPE = 5;
+
+  /**
+	 * The meta object id for the '{@link uk.ac.open.problem.LinkType <em>Link Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see uk.ac.open.problem.LinkType
+	 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getLinkType()
+	 * @generated
+	 */
+  int LINK_TYPE = 6;
+
+
+  /**
+	 * Returns the meta object for class '{@link uk.ac.open.problem.ProblemDiagram <em>Diagram</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Diagram</em>'.
+	 * @see uk.ac.open.problem.ProblemDiagram
+	 * @generated
+	 */
+  EClass getProblemDiagram();
+
+  /**
+	 * Returns the meta object for the attribute '{@link uk.ac.open.problem.ProblemDiagram#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see uk.ac.open.problem.ProblemDiagram#getDescription()
+	 * @see #getProblemDiagram()
+	 * @generated
+	 */
+  EAttribute getProblemDiagram_Description();
+
+  /**
+	 * Returns the meta object for the containment reference list '{@link uk.ac.open.problem.ProblemDiagram#getNodes <em>Nodes</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Nodes</em>'.
+	 * @see uk.ac.open.problem.ProblemDiagram#getNodes()
+	 * @see #getProblemDiagram()
+	 * @generated
+	 */
+  EReference getProblemDiagram_Nodes();
+
+  /**
+	 * Returns the meta object for the containment reference list '{@link uk.ac.open.problem.ProblemDiagram#getLinks <em>Links</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Links</em>'.
+	 * @see uk.ac.open.problem.ProblemDiagram#getLinks()
+	 * @see #getProblemDiagram()
+	 * @generated
+	 */
+  EReference getProblemDiagram_Links();
+
+  /**
+	 * Returns the meta object for class '{@link uk.ac.open.problem.Node <em>Node</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Node</em>'.
+	 * @see uk.ac.open.problem.Node
+	 * @generated
+	 */
+  EClass getNode();
+
+  /**
+	 * Returns the meta object for the attribute '{@link uk.ac.open.problem.Node#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see uk.ac.open.problem.Node#getName()
+	 * @see #getNode()
+	 * @generated
+	 */
+  EAttribute getNode_Name();
+
+  /**
+	 * Returns the meta object for the attribute '{@link uk.ac.open.problem.Node#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see uk.ac.open.problem.Node#getType()
+	 * @see #getNode()
+	 * @generated
+	 */
+  EAttribute getNode_Type();
+
+  /**
+	 * Returns the meta object for the attribute '{@link uk.ac.open.problem.Node#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see uk.ac.open.problem.Node#getDescription()
+	 * @see #getNode()
+	 * @generated
+	 */
+  EAttribute getNode_Description();
+
+  /**
+	 * Returns the meta object for class '{@link uk.ac.open.problem.Phenomenon <em>Phenomenon</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Phenomenon</em>'.
+	 * @see uk.ac.open.problem.Phenomenon
+	 * @generated
+	 */
+  EClass getPhenomenon();
+
+  /**
+	 * Returns the meta object for the attribute '{@link uk.ac.open.problem.Phenomenon#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see uk.ac.open.problem.Phenomenon#getType()
+	 * @see #getPhenomenon()
+	 * @generated
+	 */
+  EAttribute getPhenomenon_Type();
+
+  /**
+	 * Returns the meta object for the attribute '{@link uk.ac.open.problem.Phenomenon#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see uk.ac.open.problem.Phenomenon#getName()
+	 * @see #getPhenomenon()
+	 * @generated
+	 */
+  EAttribute getPhenomenon_Name();
+
+  /**
+	 * Returns the meta object for the attribute '{@link uk.ac.open.problem.Phenomenon#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see uk.ac.open.problem.Phenomenon#getDescription()
+	 * @see #getPhenomenon()
+	 * @generated
+	 */
+  EAttribute getPhenomenon_Description();
+
+  /**
+	 * Returns the meta object for class '{@link uk.ac.open.problem.Link <em>Link</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Link</em>'.
+	 * @see uk.ac.open.problem.Link
+	 * @generated
+	 */
+  EClass getLink();
+
+  /**
+	 * Returns the meta object for the reference '{@link uk.ac.open.problem.Link#getFrom <em>From</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>From</em>'.
+	 * @see uk.ac.open.problem.Link#getFrom()
+	 * @see #getLink()
+	 * @generated
+	 */
+  EReference getLink_From();
+
+  /**
+	 * Returns the meta object for the attribute '{@link uk.ac.open.problem.Link#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see uk.ac.open.problem.Link#getType()
+	 * @see #getLink()
+	 * @generated
+	 */
+  EAttribute getLink_Type();
+
+  /**
+	 * Returns the meta object for the reference '{@link uk.ac.open.problem.Link#getTo <em>To</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>To</em>'.
+	 * @see uk.ac.open.problem.Link#getTo()
+	 * @see #getLink()
+	 * @generated
+	 */
+  EReference getLink_To();
+
+  /**
+	 * Returns the meta object for the containment reference list '{@link uk.ac.open.problem.Link#getPhenomena <em>Phenomena</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Phenomena</em>'.
+	 * @see uk.ac.open.problem.Link#getPhenomena()
+	 * @see #getLink()
+	 * @generated
+	 */
+  EReference getLink_Phenomena();
+
+  /**
+	 * Returns the meta object for the attribute '{@link uk.ac.open.problem.Link#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see uk.ac.open.problem.Link#getDescription()
+	 * @see #getLink()
+	 * @generated
+	 */
+  EAttribute getLink_Description();
+
+  /**
+	 * Returns the meta object for enum '{@link uk.ac.open.problem.NodeType <em>Node Type</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Node Type</em>'.
+	 * @see uk.ac.open.problem.NodeType
+	 * @generated
+	 */
+  EEnum getNodeType();
+
+  /**
+	 * Returns the meta object for enum '{@link uk.ac.open.problem.PhenomenonType <em>Phenomenon Type</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Phenomenon Type</em>'.
+	 * @see uk.ac.open.problem.PhenomenonType
+	 * @generated
+	 */
+  EEnum getPhenomenonType();
+
+  /**
+	 * Returns the meta object for enum '{@link uk.ac.open.problem.LinkType <em>Link Type</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Link Type</em>'.
+	 * @see uk.ac.open.problem.LinkType
+	 * @generated
+	 */
+  EEnum getLinkType();
+
+  /**
+	 * Returns the factory that creates the instances of the model.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the factory that creates the instances of the model.
+	 * @generated
+	 */
+  ProblemFactory getProblemFactory();
+
+  /**
+	 * <!-- begin-user-doc -->
+   * Defines literals for the meta objects that represent
+   * <ul>
+   *   <li>each class,</li>
+   *   <li>each feature of each class,</li>
+   *   <li>each enum,</li>
+   *   <li>and each data type</li>
+   * </ul>
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  interface Literals
+  {
+    /**
+		 * The meta object literal for the '{@link uk.ac.open.problem.impl.ProblemDiagramImpl <em>Diagram</em>}' class.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @see uk.ac.open.problem.impl.ProblemDiagramImpl
+		 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getProblemDiagram()
+		 * @generated
+		 */
+    EClass PROBLEM_DIAGRAM = eINSTANCE.getProblemDiagram();
+
+    /**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EAttribute PROBLEM_DIAGRAM__DESCRIPTION = eINSTANCE.getProblemDiagram_Description();
+
+    /**
+		 * The meta object literal for the '<em><b>Nodes</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EReference PROBLEM_DIAGRAM__NODES = eINSTANCE.getProblemDiagram_Nodes();
+
+    /**
+		 * The meta object literal for the '<em><b>Links</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EReference PROBLEM_DIAGRAM__LINKS = eINSTANCE.getProblemDiagram_Links();
+
+    /**
+		 * The meta object literal for the '{@link uk.ac.open.problem.impl.NodeImpl <em>Node</em>}' class.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @see uk.ac.open.problem.impl.NodeImpl
+		 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getNode()
+		 * @generated
+		 */
+    EClass NODE = eINSTANCE.getNode();
+
+    /**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EAttribute NODE__NAME = eINSTANCE.getNode_Name();
+
+    /**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EAttribute NODE__TYPE = eINSTANCE.getNode_Type();
+
+    /**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EAttribute NODE__DESCRIPTION = eINSTANCE.getNode_Description();
+
+    /**
+		 * The meta object literal for the '{@link uk.ac.open.problem.impl.PhenomenonImpl <em>Phenomenon</em>}' class.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @see uk.ac.open.problem.impl.PhenomenonImpl
+		 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getPhenomenon()
+		 * @generated
+		 */
+    EClass PHENOMENON = eINSTANCE.getPhenomenon();
+
+    /**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EAttribute PHENOMENON__TYPE = eINSTANCE.getPhenomenon_Type();
+
+    /**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EAttribute PHENOMENON__NAME = eINSTANCE.getPhenomenon_Name();
+
+    /**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EAttribute PHENOMENON__DESCRIPTION = eINSTANCE.getPhenomenon_Description();
+
+    /**
+		 * The meta object literal for the '{@link uk.ac.open.problem.impl.LinkImpl <em>Link</em>}' class.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @see uk.ac.open.problem.impl.LinkImpl
+		 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getLink()
+		 * @generated
+		 */
+    EClass LINK = eINSTANCE.getLink();
+
+    /**
+		 * The meta object literal for the '<em><b>From</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EReference LINK__FROM = eINSTANCE.getLink_From();
+
+    /**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EAttribute LINK__TYPE = eINSTANCE.getLink_Type();
+
+    /**
+		 * The meta object literal for the '<em><b>To</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EReference LINK__TO = eINSTANCE.getLink_To();
+
+    /**
+		 * The meta object literal for the '<em><b>Phenomena</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EReference LINK__PHENOMENA = eINSTANCE.getLink_Phenomena();
+
+    /**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EAttribute LINK__DESCRIPTION = eINSTANCE.getLink_Description();
+
+    /**
+		 * The meta object literal for the '{@link uk.ac.open.problem.NodeType <em>Node Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @see uk.ac.open.problem.NodeType
+		 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getNodeType()
+		 * @generated
+		 */
+    EEnum NODE_TYPE = eINSTANCE.getNodeType();
+
+    /**
+		 * The meta object literal for the '{@link uk.ac.open.problem.PhenomenonType <em>Phenomenon Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @see uk.ac.open.problem.PhenomenonType
+		 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getPhenomenonType()
+		 * @generated
+		 */
+    EEnum PHENOMENON_TYPE = eINSTANCE.getPhenomenonType();
+
+    /**
+		 * The meta object literal for the '{@link uk.ac.open.problem.LinkType <em>Link Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @see uk.ac.open.problem.LinkType
+		 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getLinkType()
+		 * @generated
+		 */
+    EEnum LINK_TYPE = eINSTANCE.getLinkType();
+
+  }
+
+} //ProblemPackage

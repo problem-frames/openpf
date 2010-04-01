@@ -1,0 +1,30 @@
+grammar uk.ac.open.Problem with org.eclipse.xtext.common.Terminals
+
+generate problem "http://open.ac.uk/problem"
+// import 'platform:/resource/problem/src/problem/Problem.ecore'
+
+ProblemDiagram: ("problem" ':' description=STRING)? 
+	((nodes+=Node|links+=Link))*;
+
+Node:
+  name=ID (type=NodeType)? 
+  (':' description=STRING)?;
+
+enum NodeType:
+  REQUIREMENT="R" | MACHINE="M" | BIDDABLE="B" | LEXICAL="X" | CAUSAL="C" | DESIGNED="D" | PHYSICAL="P";
+
+Phenomenon:
+  (type=PhenomenonType)? name=(ID|STRING) (':' description=STRING)?;
+
+enum PhenomenonType:
+  UNSPECIFIED="phenomenon" | EVENT="event" | STATE="state";
+
+Link:
+  from=[Node] (type=LinkType) to=[Node] ('{' phenomena+=Phenomenon (',' phenomena+=
+  Phenomenon)* '}')? (':' description=STRING)?;
+
+enum LinkType:
+  INTERFACE="->" | REFERENCE="~~" | CONSTRAINT="~>";
+
+terminal ID: ('#' (!('#'))+ '#') |
+  ('^'? ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*);
