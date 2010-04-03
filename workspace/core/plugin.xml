@@ -34,29 +34,24 @@
          </action>
       </actionSet>
    </extension>
-   <extension point="org.eclipse.ui.preferencePages">
-      <page name="OpenOME"
-            category="primary"
-            class="ui.PrefPage"
-            id="preference">
-      </page>
-   </extension>
    <extension point="org.eclipse.help.toc">
       <toc file="help.xml"/>
       <toc file="helpToc.xml" primary="true"/>
    </extension>
    <extension
-         id="openome"
+         id="openre"
          point="org.eclipse.core.runtime.products">
       <product
             application="org.eclipse.ui.ide.workbench"
-            name="Core">
+            name="ProblemFrames">
          <property
-               name="aboutText"
-               value="OpenOME, an open-source requirements engineering tool"/>
+               name="appName"
+               value="ProblemFrames">
+         </property>
          <property
-               name="aboutImage"
-               value="icons/eclipse_lg.gif"/>
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
       </product>
    </extension>
 </plugin>

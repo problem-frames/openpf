@@ -8,7 +8,6 @@ import java.util.ResourceBundle;
 import org.eclipse.core.resources.IWorkspace;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.IStatus;
-import org.eclipse.core.runtime.Preferences;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.ui.IStartup;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
@@ -19,7 +18,6 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
  */
 public class Plugin extends AbstractUIPlugin implements IStartup {
 	private static Plugin plugin;
-	private static boolean prefsInit = false;
 	private ResourceBundle resourceBundle = null;
     private static ResourceBundle resources;
     static {
@@ -27,7 +25,7 @@ public class Plugin extends AbstractUIPlugin implements IStartup {
             resources = ResourceBundle.getBundle("core", 
             		Locale.getDefault(),
             		Plugin.class.getClassLoader());
-            for (Enumeration i = resources.getKeys(); i.hasMoreElements(); ) {
+            for (Enumeration<?> i = resources.getKeys(); i.hasMoreElements(); ) {
             	String key = (String)i.nextElement();
             	String val = resources.getString(key);
             	System.setProperty(IConstants.PREFIX + key, val);
@@ -56,17 +54,6 @@ public class Plugin extends AbstractUIPlugin implements IStartup {
 	}
 
 	/**
-	 * Returns preferences assigned to the singleton instance.
-	 * @return Preferences
-	 */
-	public static Preferences getPreferences() {
-		Preferences prefs = getPlugin().getPluginPreferences();
-		if (!prefsInit)
-			initPrefs(prefs);
-		return prefs;
-	}
-
-	/**
 	 * Returns the string from the plugin's resource bundle,
 	 * or 'key' if not found.
 	 */
@@ -88,16 +75,6 @@ public class Plugin extends AbstractUIPlugin implements IStartup {
 	}
 
 	/**
-	 * Ensures that defaults exist for preference settings.
-	 * @param prefs Preferences
-	 */
-	protected static synchronized void initPrefs(Preferences prefs) {
-		if (!prefsInit) {
-			// Init defaults here ...
-		}
-	}
-
-	/**
 	 * Logs a message to the active log with the given IStatus.
 	 * @param iStatus
 	 * @param msg
@@ -115,13 +92,6 @@ public class Plugin extends AbstractUIPlugin implements IStartup {
 	public static void log(int iStatus, String msg, Throwable t) {
 		getPlugin().getLog().log(
 			new Status(iStatus, "ui", IStatus.OK, msg, t));
-	}
-
-	/**
-	 * Saves preferences assigned to the singleton instance.
-	 */
-	public static void savePreferences() {
-		getPlugin().savePluginPreferences();
 	}
 
 	/**
