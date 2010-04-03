@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.eclipse.draw2d.Ellipse;
 import org.eclipse.draw2d.Graphics;
+import org.eclipse.draw2d.GridData;
 import org.eclipse.draw2d.GridLayout;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.Shape;
@@ -113,29 +114,29 @@ public class Node2EditPart extends ShapeNodeEditPart {
 	 * @generated NOT
 	 */
 	protected IFigure createNodeShape() {
-		EntityFigure figure = new EntityFigure(node);
+		problem.EntityFigure figure = new problem.EntityFigure(node);
 		return primaryShape = figure;
 	}
 
 	/**
 	 * @generated NOT
 	 */
-	public EntityFigure getPrimaryShape() {
-		return (EntityFigure) primaryShape;
+	public problem.EntityFigure getPrimaryShape() {
+		return (problem.EntityFigure) primaryShape;
 	}
 
 	/**
 	 * @generated
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof NodeDescription2EditPart) {
-			((NodeDescription2EditPart) childEditPart)
-					.setLabel(getPrimaryShape().getFigureEntityDescription());
-			return true;
-		}
 		if (childEditPart instanceof NodeNameDescription2EditPart) {
 			((NodeNameDescription2EditPart) childEditPart)
 					.setLabel(getPrimaryShape().getFigureEntityName());
+			return true;
+		}
+		if (childEditPart instanceof NodeDescription2EditPart) {
+			((NodeDescription2EditPart) childEditPart)
+					.setLabel(getPrimaryShape().getFigureEntityDescription());
 			return true;
 		}
 		return false;
@@ -157,10 +158,10 @@ public class Node2EditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof NodeDescription2EditPart) {
+		if (childEditPart instanceof NodeNameDescription2EditPart) {
 			return true;
 		}
-		if (childEditPart instanceof NodeNameDescription2EditPart) {
+		if (childEditPart instanceof NodeDescription2EditPart) {
 			return true;
 		}
 		return false;
@@ -497,5 +498,122 @@ public class Node2EditPart extends ShapeNodeEditPart {
 		}
 		return types;
 	}
+
+	/**
+	 * @generated
+	 */
+	public class EntityFigure extends Ellipse {
+
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureEntityName;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureEntityDescription;
+
+		/**
+		 * @generated
+		 */
+		public EntityFigure() {
+
+			GridLayout layoutThis = new GridLayout();
+			layoutThis.numColumns = 1;
+			layoutThis.makeColumnsEqualWidth = true;
+			this.setLayoutManager(layoutThis);
+
+			this.setLineWidth(1);
+			this.setLineStyle(Graphics.LINE_DASH);
+			createContents();
+		}
+
+		/**
+		 * @generated
+		 */
+		private void createContents() {
+
+			fFigureEntityName = new WrappingLabel();
+			fFigureEntityName.setText("");
+
+			fFigureEntityName.setFont(FFIGUREENTITYNAME_FONT);
+
+			GridData constraintFFigureEntityName = new GridData();
+			constraintFFigureEntityName.verticalAlignment = GridData.BEGINNING;
+			constraintFFigureEntityName.horizontalAlignment = GridData.CENTER;
+			constraintFFigureEntityName.horizontalIndent = 40;
+			constraintFFigureEntityName.horizontalSpan = 1;
+			constraintFFigureEntityName.verticalSpan = 1;
+			constraintFFigureEntityName.grabExcessHorizontalSpace = true;
+			constraintFFigureEntityName.grabExcessVerticalSpace = true;
+			this.add(fFigureEntityName, constraintFFigureEntityName);
+
+			fFigureEntityDescription = new WrappingLabel();
+			fFigureEntityDescription.setText("");
+
+			fFigureEntityDescription.setFont(FFIGUREENTITYDESCRIPTION_FONT);
+
+			GridData constraintFFigureEntityDescription = new GridData();
+			constraintFFigureEntityDescription.verticalAlignment = GridData.CENTER;
+			constraintFFigureEntityDescription.horizontalAlignment = GridData.CENTER;
+			constraintFFigureEntityDescription.horizontalIndent = 40;
+			constraintFFigureEntityDescription.horizontalSpan = 1;
+			constraintFFigureEntityDescription.verticalSpan = 2;
+			constraintFFigureEntityDescription.grabExcessHorizontalSpace = true;
+			constraintFFigureEntityDescription.grabExcessVerticalSpace = true;
+			this.add(fFigureEntityDescription,
+					constraintFFigureEntityDescription);
+
+		}
+
+		/**
+		 * @generated
+		 */
+		private boolean myUseLocalCoordinates = false;
+
+		/**
+		 * @generated
+		 */
+		protected boolean useLocalCoordinates() {
+			return myUseLocalCoordinates;
+		}
+
+		/**
+		 * @generated
+		 */
+		protected void setUseLocalCoordinates(boolean useLocalCoordinates) {
+			myUseLocalCoordinates = useLocalCoordinates;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureEntityName() {
+			return fFigureEntityName;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureEntityDescription() {
+			return fFigureEntityDescription;
+		}
+
+	}
+
+	/**
+	 * @generated
+	 */
+	static final Font FFIGUREENTITYNAME_FONT = new Font(Display.getCurrent(),
+			Display.getDefault().getSystemFont().getFontData()[0].getName(), 9,
+			SWT.NORMAL);
+
+	/**
+	 * @generated
+	 */
+	static final Font FFIGUREENTITYDESCRIPTION_FONT = new Font(Display
+			.getCurrent(),
+			Display.getDefault().getSystemFont().getFontData()[0].getName(), 6,
+			SWT.ITALIC);
 
 }

@@ -66,12 +66,24 @@
             xsi:type="gmfgraph:Label"
             name="EntityName"
             text="">
+          <layoutData
+              xsi:type="gmfgraph:GridLayoutData"
+              grabExcessHorizontalSpace="true"
+              grabExcessVerticalSpace="true"
+              verticalAlignment="BEGINNING"
+              horizontalIndent="40"/>
           <font
               xsi:type="gmfgraph:BasicFont"/>
         </children>
         <children
             xsi:type="gmfgraph:Label"
             name="EntityDescription">
+          <layoutData
+              xsi:type="gmfgraph:GridLayoutData"
+              grabExcessHorizontalSpace="true"
+              grabExcessVerticalSpace="true"
+              verticalSpan="2"
+              horizontalIndent="40"/>
           <font
               xsi:type="gmfgraph:BasicFont"
               height="6"

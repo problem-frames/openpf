@@ -5,12 +5,11 @@ import java.util.List;
 
 import org.eclipse.draw2d.Ellipse;
 import org.eclipse.draw2d.Graphics;
+import org.eclipse.draw2d.GridData;
 import org.eclipse.draw2d.GridLayout;
 import org.eclipse.draw2d.IFigure;
-import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
-import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
@@ -33,10 +32,7 @@ import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.widgets.Display;
 
-import problem.EntityFigure;
-
 import uk.ac.open.problem.Node;
-import uk.ac.open.problem.NodeType;
 import uk.ac.open.problem.ProblemPackage;
 import uk.ac.open.problem.diagram.edit.policies.NodeItemSemanticEditPolicy;
 import uk.ac.open.problem.diagram.part.ProblemVisualIDRegistry;
@@ -113,32 +109,32 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	}
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
 	protected IFigure createNodeShape() {
-		EntityFigure figure = new EntityFigure();
+		problem.EntityFigure figure = new problem.EntityFigure(node);
 		return primaryShape = figure;
 	}
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
-	public EntityFigure getPrimaryShape() {
-		return (EntityFigure) primaryShape;
+	public problem.EntityFigure getPrimaryShape() {
+		return (problem.EntityFigure) primaryShape;
 	}
 
 	/**
 	 * @generated
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof NodeNameDescriptionEditPart) {
-			((NodeNameDescriptionEditPart) childEditPart)
-					.setLabel(getPrimaryShape().getFigureEntityName());
-			return true;
-		}
 		if (childEditPart instanceof NodeDescriptionEditPart) {
 			((NodeDescriptionEditPart) childEditPart)
 					.setLabel(getPrimaryShape().getFigureEntityDescription());
+			return true;
+		}
+		if (childEditPart instanceof NodeNameDescriptionEditPart) {
+			((NodeNameDescriptionEditPart) childEditPart)
+					.setLabel(getPrimaryShape().getFigureEntityName());
 			return true;
 		}
 		return false;
@@ -148,10 +144,10 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof NodeNameDescriptionEditPart) {
+		if (childEditPart instanceof NodeDescriptionEditPart) {
 			return true;
 		}
-		if (childEditPart instanceof NodeDescriptionEditPart) {
+		if (childEditPart instanceof NodeNameDescriptionEditPart) {
 			return true;
 		}
 		return false;
@@ -492,7 +488,7 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	}
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
 	public class EntityFigure extends Ellipse {
 
@@ -530,14 +526,31 @@ public class NodeEditPart extends ShapeNodeEditPart {
 
 			fFigureEntityName.setFont(FFIGUREENTITYNAME_FONT);
 
-			this.add(fFigureEntityName);
+			GridData constraintFFigureEntityName = new GridData();
+			constraintFFigureEntityName.verticalAlignment = GridData.BEGINNING;
+			constraintFFigureEntityName.horizontalAlignment = GridData.CENTER;
+			constraintFFigureEntityName.horizontalIndent = 40;
+			constraintFFigureEntityName.horizontalSpan = 1;
+			constraintFFigureEntityName.verticalSpan = 1;
+			constraintFFigureEntityName.grabExcessHorizontalSpace = true;
+			constraintFFigureEntityName.grabExcessVerticalSpace = true;
+			this.add(fFigureEntityName, constraintFFigureEntityName);
 
 			fFigureEntityDescription = new WrappingLabel();
 			fFigureEntityDescription.setText("");
 
 			fFigureEntityDescription.setFont(FFIGUREENTITYDESCRIPTION_FONT);
 
-			this.add(fFigureEntityDescription);
+			GridData constraintFFigureEntityDescription = new GridData();
+			constraintFFigureEntityDescription.verticalAlignment = GridData.CENTER;
+			constraintFFigureEntityDescription.horizontalAlignment = GridData.CENTER;
+			constraintFFigureEntityDescription.horizontalIndent = 40;
+			constraintFFigureEntityDescription.horizontalSpan = 1;
+			constraintFFigureEntityDescription.verticalSpan = 2;
+			constraintFFigureEntityDescription.grabExcessHorizontalSpace = true;
+			constraintFFigureEntityDescription.grabExcessVerticalSpace = true;
+			this.add(fFigureEntityDescription,
+					constraintFFigureEntityDescription);
 
 		}
 
@@ -577,14 +590,14 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	}
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
 	static final Font FFIGUREENTITYNAME_FONT = new Font(Display.getCurrent(),
 			Display.getDefault().getSystemFont().getFontData()[0].getName(), 9,
 			SWT.NORMAL);
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
 	static final Font FFIGUREENTITYDESCRIPTION_FONT = new Font(Display
 			.getCurrent(),
