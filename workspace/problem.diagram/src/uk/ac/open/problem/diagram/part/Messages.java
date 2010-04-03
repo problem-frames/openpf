@@ -273,12 +273,12 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String Domain2CreationTool_title;
+	public static String DesignedDomain2CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Domain2CreationTool_desc;
+	public static String DesignedDomain2CreationTool_desc;
 
 	/**
 	 * @generated

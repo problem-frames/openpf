@@ -761,8 +761,8 @@
             genNodes="//@diagram/@topLevelNodes.2"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
-            title="Domain"
-            description="Create new Domain"
+            title="Designed Domain"
+            description="Create new Designed Domain"
             largeIconPath="/problem/icons/obj16/dom_obj.gif"
             smallIconPath="/problem/icons/obj16/dom_obj.gif"
             genNodes="//@diagram/@topLevelNodes.3"/>

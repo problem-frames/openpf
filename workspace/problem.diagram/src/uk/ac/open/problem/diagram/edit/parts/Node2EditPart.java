@@ -129,14 +129,14 @@ public class Node2EditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof NodeNameDescription2EditPart) {
-			((NodeNameDescription2EditPart) childEditPart)
-					.setLabel(getPrimaryShape().getFigureEntityName());
-			return true;
-		}
 		if (childEditPart instanceof NodeDescription2EditPart) {
 			((NodeDescription2EditPart) childEditPart)
 					.setLabel(getPrimaryShape().getFigureEntityDescription());
+			return true;
+		}
+		if (childEditPart instanceof NodeNameDescription2EditPart) {
+			((NodeNameDescription2EditPart) childEditPart)
+					.setLabel(getPrimaryShape().getFigureEntityName());
 			return true;
 		}
 		return false;
@@ -158,10 +158,10 @@ public class Node2EditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof NodeNameDescription2EditPart) {
+		if (childEditPart instanceof NodeDescription2EditPart) {
 			return true;
 		}
-		if (childEditPart instanceof NodeDescription2EditPart) {
+		if (childEditPart instanceof NodeNameDescription2EditPart) {
 			return true;
 		}
 		return false;

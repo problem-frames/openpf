@@ -24,8 +24,8 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Domain"
-          description="Create new Domain">
+          title="Designed Domain"
+          description="Create new Designed Domain">
         <smallIcon
             xsi:type="gmftool:BundleImage"
             path="icons/obj16/dom_obj.gif"

@@ -36,7 +36,7 @@ public class ProblemPaletteFactory {
 		paletteContainer.setId("createNode1Group"); //$NON-NLS-1$
 		paletteContainer.setDescription(Messages.Node1Group_desc);
 		paletteContainer.add(createMachine1CreationTool());
-		paletteContainer.add(createDomain2CreationTool());
+		paletteContainer.add(createDesignedDomain2CreationTool());
 		paletteContainer.add(createBiddableDomain3CreationTool());
 		paletteContainer.add(createCausalDomain4CreationTool());
 		paletteContainer.add(createLexicalDomain5CreationTool());
@@ -79,13 +79,13 @@ public class ProblemPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createDomain2CreationTool() {
+	private ToolEntry createDesignedDomain2CreationTool() {
 		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
 		types.add(ProblemElementTypes.Node_2004);
 		NodeToolEntry entry = new NodeToolEntry(
-				Messages.Domain2CreationTool_title,
-				Messages.Domain2CreationTool_desc, types);
-		entry.setId("createDomain2CreationTool"); //$NON-NLS-1$
+				Messages.DesignedDomain2CreationTool_title,
+				Messages.DesignedDomain2CreationTool_desc, types);
+		entry.setId("createDesignedDomain2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ProblemDiagramEditorPlugin
 				.findImageDescriptor("/problem/icons/obj16/dom_obj.gif")); //$NON-NLS-1$
 		entry.setLargeIcon(ProblemDiagramEditorPlugin
