@@ -36,5 +36,7 @@ Require-Bundle: org.eclipse.core.runtime,
  problem;visibility:=reexport,
  problem.edit;visibility:=reexport,
  org.eclipse.ocl.ecore;visibility:=reexport,
- org.eclipse.gef;visibility:=reexport
+ org.eclipse.gef;visibility:=reexport,
+ org.eclipse.xtext;bundle-version="0.7.2",
+ org.eclipse.xtext.ui.core;bundle-version="0.7.2"
 Eclipse-LazyStart: true

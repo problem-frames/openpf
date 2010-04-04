@@ -6,7 +6,7 @@
     <extension
             point="org.eclipse.ui.editors">
         <editor
-            class="uk.ac.open.ProblemExecutableExtensionFactory:problem.ProblemEditor"
+            class="uk.ac.open.ProblemExecutableExtensionFactory:uk.ac.open.problem.diagram.part.ProblemEditor"
             contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
             default="true"
             extensions="pf"

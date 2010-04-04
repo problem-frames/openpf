@@ -8,12 +8,15 @@
  * You can also open up the properties editor (right click) to change the domain types
 
  = Developer's Manual = 
- * To develop OpenPF, you need the following steps:
+ * To develop OpenPF inside Eclipse IDE, you need the following steps:
   * Install an compatible Eclipse Modeling Tools IDE
   * Import the projects from the workspace
   * Run Eclipse
   * Change the Preference/Java/Compiler/Deprecated,Restricted Access/ from Error to Warning
   * Run as an Eclipse Application
+
+ = Deployer's Manual =
+ * You can run the headless script build.sh to create a RCP application specific for PF
 
 Enjoy,
 
