@@ -2,8 +2,9 @@
  * Click the toolbar button with multiple paint frames
  * Select the file with ".pf" extension under the Examples project folder
  * Edit it and save
- * The file with ".problem" extension will be generated
- * Right click it to "initialise the problem diagram"
+ * The file with ".problem" extension will be generated for the EMF model
+ * The file with ".problem_diagram" extension will be generated for the GMF
+   diagram
  * You can edit the name and description of the domains by clicking and editing
  * You can also open up the properties editor (right click) to change the domain types
 

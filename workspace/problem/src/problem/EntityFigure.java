@@ -107,7 +107,7 @@ public class EntityFigure extends RectangleFigure {
 		r.width -= inset1 + inset2;
 		r.height -= inset1 + inset2;
 
-		System.out.println(node.getType().getName());
+//		System.out.println(node.getType().getName());
 		if (node != null && node.getType() == NodeType.REQUIREMENT) {
 			this.setLineWidth(1);
 			this.setLineStyle(Graphics.LINE_DASH);
