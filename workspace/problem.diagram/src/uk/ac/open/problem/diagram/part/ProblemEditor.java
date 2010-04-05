@@ -46,7 +46,7 @@ public class ProblemEditor extends XtextEditor {
 	@Override
 	public void performSave(boolean overwrite, IProgressMonitor monitor) {
 		super.performSave(overwrite, monitor);
-		String filename = this.getResource().getFullPath().toOSString();
+		String filename = this.getResource().getFullPath().toString();
 		saveModel(filename);
 	}
 
