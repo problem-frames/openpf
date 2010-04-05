@@ -555,5 +555,11 @@
       <?gmfgen generated="true"?>
    </extension>
 
+  <extension point="org.eclipse.gmf.runtime.diagram.ui.layoutProviders">
+   <?gmfgen generated="false"?>
+   <layoutProvider class="uk.ac.open.problem.diagram.part.ProblemDiagramLayout">
+       <Priority name="Medium"/>
+   </layoutProvider>
+  </extension>
    <!-- optionally, specify keybindings -->
 </plugin>
