@@ -144,13 +144,22 @@ public interface ProblemPackage extends EPackage
   int NODE__DESCRIPTION = 2;
 
   /**
+	 * The feature id for the '<em><b>Subproblem</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__SUBPROBLEM = 3;
+
+		/**
 	 * The number of structural features of the '<em>Node</em>' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int NODE_FEATURE_COUNT = 3;
+  int NODE_FEATURE_COUNT = 4;
 
   /**
 	 * The meta object id for the '{@link uk.ac.open.problem.impl.PhenomenonImpl <em>Phenomenon</em>}' class.
@@ -380,6 +389,17 @@ public interface ProblemPackage extends EPackage
   EAttribute getNode_Description();
 
   /**
+	 * Returns the meta object for the containment reference '{@link uk.ac.open.problem.Node#getSubproblem <em>Subproblem</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Subproblem</em>'.
+	 * @see uk.ac.open.problem.Node#getSubproblem()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EReference getNode_Subproblem();
+
+		/**
 	 * Returns the meta object for class '{@link uk.ac.open.problem.Phenomenon <em>Phenomenon</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -609,6 +629,14 @@ public interface ProblemPackage extends EPackage
     EAttribute NODE__DESCRIPTION = eINSTANCE.getNode_Description();
 
     /**
+		 * The meta object literal for the '<em><b>Subproblem</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NODE__SUBPROBLEM = eINSTANCE.getNode_Subproblem();
+
+				/**
 		 * The meta object literal for the '{@link uk.ac.open.problem.impl.PhenomenonImpl <em>Phenomenon</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

@@ -281,11 +281,11 @@ protected class ProblemDiagram_LinksAssignment_1_1 extends AssignmentToken  {
 /************ begin Rule Node ****************
  *
  * Node:
- *   name=ID type=NodeType? (":" description=STRING)?;
+ *   name=ID type=NodeType? (":" description=STRING)? ("{" subproblem=ProblemDiagram "}")?;
  *
  **/
 
-// name=ID type=NodeType? (":" description=STRING)?
+// name=ID type=NodeType? (":" description=STRING)? ("{" subproblem=ProblemDiagram "}")?
 protected class Node_Group extends GroupToken {
 	
 	public Node_Group(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
@@ -298,9 +298,10 @@ protected class Node_Group extends GroupToken {
 
 	public AbstractToken createFollower(int index, IInstanceDescription inst) {
 		switch(index) {
-			case 0: return new Node_Group_2(parent, this, 0, inst);
-			case 1: return new Node_TypeAssignment_1(parent, this, 1, inst);
-			case 2: return new Node_NameAssignment_0(parent, this, 2, inst);
+			case 0: return new Node_Group_3(parent, this, 0, inst);
+			case 1: return new Node_Group_2(parent, this, 1, inst);
+			case 2: return new Node_TypeAssignment_1(parent, this, 2, inst);
+			case 3: return new Node_NameAssignment_0(parent, this, 3, inst);
 			default: return null;
 		}	
 	}	
@@ -442,6 +443,111 @@ protected class Node_DescriptionAssignment_2_1 extends AssignmentToken  {
 		return null;
 	}
 
+}
+
+
+// ("{" subproblem=ProblemDiagram "}")?
+protected class Node_Group_3 extends GroupToken {
+	
+	public Node_Group_3(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
+		super(parent, next, no, current);
+	}
+	
+	public Group getGrammarElement() {
+		return grammarAccess.getNodeAccess().getGroup_3();
+	}
+
+	public AbstractToken createFollower(int index, IInstanceDescription inst) {
+		switch(index) {
+			case 0: return new Node_RightCurlyBracketKeyword_3_2(parent, this, 0, inst);
+			default: return null;
+		}	
+	}	
+		
+}
+
+// "{"
+protected class Node_LeftCurlyBracketKeyword_3_0 extends KeywordToken  {
+	
+	public Node_LeftCurlyBracketKeyword_3_0(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
+		super(parent, next, no, current);
+	}
+	
+	public Keyword getGrammarElement() {
+		return grammarAccess.getNodeAccess().getLeftCurlyBracketKeyword_3_0();
+	}
+
+	public AbstractToken createFollower(int index, IInstanceDescription inst) {
+		switch(index) {
+			case 0: return new Node_Group_2(parent, this, 0, inst);
+			case 1: return new Node_TypeAssignment_1(parent, this, 1, inst);
+			case 2: return new Node_NameAssignment_0(parent, this, 2, inst);
+			default: return null;
+		}	
+	}	
+		
+}
+
+// subproblem=ProblemDiagram
+protected class Node_SubproblemAssignment_3_1 extends AssignmentToken  {
+	
+	public Node_SubproblemAssignment_3_1(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
+		super(parent, next, no, current);
+	}
+	
+	public Assignment getGrammarElement() {
+		return grammarAccess.getNodeAccess().getSubproblemAssignment_3_1();
+	}
+
+	public AbstractToken createFollower(int index, IInstanceDescription inst) {
+		switch(index) {
+			case 0: return new ProblemDiagram_Group(this, this, 0, inst);
+			default: return null;
+		}	
+	}	
+		
+	protected IInstanceDescription tryConsumeVal() {
+		if((value = current.getConsumable("subproblem",false)) == null) return null;
+		IInstanceDescription obj = current.cloneAndConsume("subproblem");
+		if(value instanceof EObject) { // org::eclipse::xtext::impl::RuleCallImpl
+			IInstanceDescription param = getDescr((EObject)value);
+			if(param.isInstanceOf(grammarAccess.getProblemDiagramRule().getType().getClassifier())) {
+				type = AssignmentType.PRC;
+				element = grammarAccess.getNodeAccess().getSubproblemProblemDiagramParserRuleCall_3_1_0(); 
+				consumed = obj;
+				return param;
+			}
+		}
+		return null;
+	}
+
+	public AbstractToken createParentFollower(AbstractToken next,	int actIndex, int index, IInstanceDescription inst) {
+		if(value == inst.getDelegate() && !inst.isConsumed()) return null;
+		switch(index) {
+			case 0: return new Node_LeftCurlyBracketKeyword_3_0(parent, next, actIndex, consumed);
+			default: return null;
+		}	
+	}	
+}
+
+// "}"
+protected class Node_RightCurlyBracketKeyword_3_2 extends KeywordToken  {
+	
+	public Node_RightCurlyBracketKeyword_3_2(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
+		super(parent, next, no, current);
+	}
+	
+	public Keyword getGrammarElement() {
+		return grammarAccess.getNodeAccess().getRightCurlyBracketKeyword_3_2();
+	}
+
+	public AbstractToken createFollower(int index, IInstanceDescription inst) {
+		switch(index) {
+			case 0: return new Node_SubproblemAssignment_3_1(parent, this, 0, inst);
+			default: return null;
+		}	
+	}	
+		
 }
 
 

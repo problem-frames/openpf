@@ -225,6 +225,15 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 
   /**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getNode_Subproblem() {
+		return (EReference)nodeEClass.getEStructuralFeatures().get(3);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -392,6 +401,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 		createEAttribute(nodeEClass, NODE__NAME);
 		createEAttribute(nodeEClass, NODE__TYPE);
 		createEAttribute(nodeEClass, NODE__DESCRIPTION);
+		createEReference(nodeEClass, NODE__SUBPROBLEM);
 
 		phenomenonEClass = createEClass(PHENOMENON);
 		createEAttribute(phenomenonEClass, PHENOMENON__TYPE);
@@ -451,6 +461,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 		initEAttribute(getNode_Name(), ecorePackage.getEString(), "name", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNode_Type(), this.getNodeType(), "type", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNode_Description(), ecorePackage.getEString(), "description", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNode_Subproblem(), this.getProblemDiagram(), null, "subproblem", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(phenomenonEClass, Phenomenon.class, "Phenomenon", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPhenomenon_Type(), this.getPhenomenonType(), "type", null, 0, 1, Phenomenon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

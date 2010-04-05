@@ -26,25 +26,25 @@ T26 : '{' ;
 T27 : '}' ;
 T28 : ',' ;
 
-// $ANTLR src "../problem.ui/src-gen/uk/ac/open/contentassist/antlr/internal/InternalProblem.g" 1193
+// $ANTLR src "../problem.ui/src-gen/uk/ac/open/contentassist/antlr/internal/InternalProblem.g" 1291
 RULE_ID : ('#' ~('#')+ '#'|'^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*);
 
-// $ANTLR src "../problem.ui/src-gen/uk/ac/open/contentassist/antlr/internal/InternalProblem.g" 1195
+// $ANTLR src "../problem.ui/src-gen/uk/ac/open/contentassist/antlr/internal/InternalProblem.g" 1293
 RULE_INT : ('0'..'9')+;
 
-// $ANTLR src "../problem.ui/src-gen/uk/ac/open/contentassist/antlr/internal/InternalProblem.g" 1197
+// $ANTLR src "../problem.ui/src-gen/uk/ac/open/contentassist/antlr/internal/InternalProblem.g" 1295
 RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\'');
 
-// $ANTLR src "../problem.ui/src-gen/uk/ac/open/contentassist/antlr/internal/InternalProblem.g" 1199
+// $ANTLR src "../problem.ui/src-gen/uk/ac/open/contentassist/antlr/internal/InternalProblem.g" 1297
 RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 
-// $ANTLR src "../problem.ui/src-gen/uk/ac/open/contentassist/antlr/internal/InternalProblem.g" 1201
+// $ANTLR src "../problem.ui/src-gen/uk/ac/open/contentassist/antlr/internal/InternalProblem.g" 1299
 RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
-// $ANTLR src "../problem.ui/src-gen/uk/ac/open/contentassist/antlr/internal/InternalProblem.g" 1203
+// $ANTLR src "../problem.ui/src-gen/uk/ac/open/contentassist/antlr/internal/InternalProblem.g" 1301
 RULE_WS : (' '|'\t'|'\r'|'\n')+;
 
-// $ANTLR src "../problem.ui/src-gen/uk/ac/open/contentassist/antlr/internal/InternalProblem.g" 1205
+// $ANTLR src "../problem.ui/src-gen/uk/ac/open/contentassist/antlr/internal/InternalProblem.g" 1303
 RULE_ANY_OTHER : .;
 
 

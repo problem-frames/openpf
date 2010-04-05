@@ -81,12 +81,17 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 		private final Keyword cColonKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final Assignment cDescriptionAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
 		private final RuleCall cDescriptionSTRINGTerminalRuleCall_2_1_0 = (RuleCall)cDescriptionAssignment_2_1.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cLeftCurlyBracketKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cSubproblemAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cSubproblemProblemDiagramParserRuleCall_3_1_0 = (RuleCall)cSubproblemAssignment_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
 		
 		//Node:
-		//  name=ID type=NodeType? (":" description=STRING)?;
+		//  name=ID type=NodeType? (":" description=STRING)? ("{" subproblem=ProblemDiagram "}")?;
 		public ParserRule getRule() { return rule; }
 
-		//name=ID type=NodeType? (":" description=STRING)?
+		//name=ID type=NodeType? (":" description=STRING)? ("{" subproblem=ProblemDiagram "}")?
 		public Group getGroup() { return cGroup; }
 
 		//name=ID
@@ -112,6 +117,21 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 
 		//STRING
 		public RuleCall getDescriptionSTRINGTerminalRuleCall_2_1_0() { return cDescriptionSTRINGTerminalRuleCall_2_1_0; }
+
+		//("{" subproblem=ProblemDiagram "}")?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_3_0() { return cLeftCurlyBracketKeyword_3_0; }
+
+		//subproblem=ProblemDiagram
+		public Assignment getSubproblemAssignment_3_1() { return cSubproblemAssignment_3_1; }
+
+		//ProblemDiagram
+		public RuleCall getSubproblemProblemDiagramParserRuleCall_3_1_0() { return cSubproblemProblemDiagramParserRuleCall_3_1_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_3_2() { return cRightCurlyBracketKeyword_3_2; }
 	}
 
 	public class PhenomenonElements implements IParserRuleAccess {
@@ -449,7 +469,7 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 	}
 
 	//Node:
-	//  name=ID type=NodeType? (":" description=STRING)?;
+	//  name=ID type=NodeType? (":" description=STRING)? ("{" subproblem=ProblemDiagram "}")?;
 	public NodeElements getNodeAccess() {
 		return (pNode != null) ? pNode : (pNode = new NodeElements());
 	}

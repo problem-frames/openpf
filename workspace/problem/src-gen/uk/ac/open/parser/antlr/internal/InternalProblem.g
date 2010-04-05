@@ -241,7 +241,36 @@ ruleNode returns [EObject current=null]
 	        }
 	    }
 	
-))?);
+))?('{' 
+    {
+        createLeafNode(grammarAccess.getNodeAccess().getLeftCurlyBracketKeyword_3_0(), null); 
+    }
+(	
+	
+	    
+	    { 
+	        currentNode=createCompositeNode(grammarAccess.getNodeAccess().getSubproblemProblemDiagramParserRuleCall_3_1_0(), currentNode); 
+	    }
+	    lv_subproblem_5=ruleProblemDiagram 
+	    {
+	        if ($current==null) {
+	            $current = factory.create(grammarAccess.getNodeRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode.getParent(), $current);
+	        }
+	        
+	        try {
+	       		set($current, "subproblem", lv_subproblem_5, "ProblemDiagram", currentNode);
+	        } catch (ValueConverterException vce) {
+				handleValueConverterException(vce);
+	        }
+	        currentNode = currentNode.getParent();
+	    }
+	
+)'}' 
+    {
+        createLeafNode(grammarAccess.getNodeAccess().getRightCurlyBracketKeyword_3_2(), null); 
+    }
+)?);
 
 
 

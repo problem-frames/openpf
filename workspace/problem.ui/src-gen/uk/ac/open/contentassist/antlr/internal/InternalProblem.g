@@ -538,10 +538,30 @@ rule__Node__Group__2
 { after(grammarAccess.getNodeAccess().getGroup_2()); }
 )
 
+	rule__Node__Group__3
 ;
 finally {
 	restoreStackSize(stackSize);
 }
+
+
+rule__Node__Group__3
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getNodeAccess().getGroup_3()); }
+(rule__Node__Group_3__0)?
+{ after(grammarAccess.getNodeAccess().getGroup_3()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
 
 
 
@@ -585,6 +605,69 @@ rule__Node__Group_2__1
 finally {
 	restoreStackSize(stackSize);
 }
+
+
+
+
+
+
+rule__Node__Group_3__0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getNodeAccess().getLeftCurlyBracketKeyword_3_0()); }
+
+	'{' 
+
+{ after(grammarAccess.getNodeAccess().getLeftCurlyBracketKeyword_3_0()); }
+)
+
+	rule__Node__Group_3__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__Node__Group_3__1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getNodeAccess().getSubproblemAssignment_3_1()); }
+(rule__Node__SubproblemAssignment_3_1)
+{ after(grammarAccess.getNodeAccess().getSubproblemAssignment_3_1()); }
+)
+
+	rule__Node__Group_3__2
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__Node__Group_3__2
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getNodeAccess().getRightCurlyBracketKeyword_3_2()); }
+
+	'}' 
+
+{ after(grammarAccess.getNodeAccess().getRightCurlyBracketKeyword_3_2()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
 
 
 
@@ -1038,6 +1121,21 @@ rule__Node__DescriptionAssignment_2_1
 (
 { before(grammarAccess.getNodeAccess().getDescriptionSTRINGTerminalRuleCall_2_1_0()); }
 	RULE_STRING{ after(grammarAccess.getNodeAccess().getDescriptionSTRINGTerminalRuleCall_2_1_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Node__SubproblemAssignment_3_1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getNodeAccess().getSubproblemProblemDiagramParserRuleCall_3_1_0()); }
+	ruleProblemDiagram{ after(grammarAccess.getNodeAccess().getSubproblemProblemDiagramParserRuleCall_3_1_0()); }
 )
 
 ;

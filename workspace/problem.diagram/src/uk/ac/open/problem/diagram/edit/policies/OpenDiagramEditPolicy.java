@@ -33,6 +33,9 @@ import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
+import uk.ac.open.problem.Node;
+import uk.ac.open.problem.ProblemDiagram;
+import uk.ac.open.problem.ProblemFactory;
 import uk.ac.open.problem.diagram.edit.parts.ProblemDiagramEditPart;
 import uk.ac.open.problem.diagram.part.Messages;
 import uk.ac.open.problem.diagram.part.ProblemDiagramEditor;
@@ -87,24 +90,30 @@ public class OpenDiagramEditPolicy extends OpenEditPolicy {
 		// FIXME canExecute if  !(readOnly && getDiagramToOpen == null), i.e. open works on ro diagrams only when there's associated diagram already
 
 		/**
-		 * @generated
+		 * @generated NOT
 		 */
 		protected CommandResult doExecuteWithResult(IProgressMonitor monitor,
 				IAdaptable info) throws ExecutionException {
 			try {
 				Diagram diagram = getDiagramToOpen();
 				if (diagram == null) {
+					System.out.println("create new diagram");
 					diagram = intializeNewDiagram();
+					System.out.println("diagram created");
 				}
 				URI uri = EcoreUtil.getURI(diagram);
+				System.out.println(uri);
 				String editorName = uri.lastSegment()
 						+ "#" + diagram.eResource().getContents().indexOf(diagram); //$NON-NLS-1$
+				System.out.println(editorName);
+
 				IEditorInput editorInput = new URIEditorInput(uri, editorName);
 				IWorkbenchPage page = PlatformUI.getWorkbench()
 						.getActiveWorkbenchWindow().getActivePage();
 				page.openEditor(editorInput, getEditorID());
 				return CommandResult.newOKCommandResult();
 			} catch (Exception ex) {
+				ex.printStackTrace();
 				throw new ExecutionException("Can't open diagram", ex);
 			}
 		}
@@ -117,10 +126,16 @@ public class OpenDiagramEditPolicy extends OpenEditPolicy {
 		}
 
 		/**
-		 * @generated
+		 * @generated NOT
 		 */
 		protected Diagram intializeNewDiagram() throws ExecutionException {
-			Diagram d = ViewService.createDiagram(getDiagramDomainElement(),
+			Node node = (Node) getDiagramDomainElement();
+			if (node.getSubproblem() == null) {
+				ProblemDiagram pd =ProblemFactory.eINSTANCE.createProblemDiagram();
+				pd.setDescription(node.getDescription());
+				node.setSubproblem(pd);
+			}
+			Diagram d = ViewService.createDiagram(node.getSubproblem(),
 					getDiagramKind(), getPreferencesHint());
 			if (d == null) {
 				throw new ExecutionException("Can't create diagram of '"

@@ -6,14 +6,17 @@
 package uk.ac.open.problem.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.NodeType;
+import uk.ac.open.problem.ProblemDiagram;
 import uk.ac.open.problem.ProblemPackage;
 
 /**
@@ -26,6 +29,7 @@ import uk.ac.open.problem.ProblemPackage;
  *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getName <em>Name</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getType <em>Type</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getSubproblem <em>Subproblem</em>}</li>
  * </ul>
  * </p>
  *
@@ -94,6 +98,16 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
   protected String description = DESCRIPTION_EDEFAULT;
 
   /**
+	 * The cached value of the '{@link #getSubproblem() <em>Subproblem</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSubproblem()
+	 * @generated
+	 * @ordered
+	 */
+	protected ProblemDiagram subproblem;
+
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -185,6 +199,63 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 
   /**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ProblemDiagram getSubproblem() {
+		return subproblem;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSubproblem(ProblemDiagram newSubproblem, NotificationChain msgs) {
+		ProblemDiagram oldSubproblem = subproblem;
+		subproblem = newSubproblem;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ProblemPackage.NODE__SUBPROBLEM, oldSubproblem, newSubproblem);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSubproblem(ProblemDiagram newSubproblem) {
+		if (newSubproblem != subproblem) {
+			NotificationChain msgs = null;
+			if (subproblem != null)
+				msgs = ((InternalEObject)subproblem).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ProblemPackage.NODE__SUBPROBLEM, null, msgs);
+			if (newSubproblem != null)
+				msgs = ((InternalEObject)newSubproblem).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ProblemPackage.NODE__SUBPROBLEM, null, msgs);
+			msgs = basicSetSubproblem(newSubproblem, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.NODE__SUBPROBLEM, newSubproblem, newSubproblem));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ProblemPackage.NODE__SUBPROBLEM:
+				return basicSetSubproblem(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -198,6 +269,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 				return getType();
 			case ProblemPackage.NODE__DESCRIPTION:
 				return getDescription();
+			case ProblemPackage.NODE__SUBPROBLEM:
+				return getSubproblem();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -219,6 +292,9 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 				return;
 			case ProblemPackage.NODE__DESCRIPTION:
 				setDescription((String)newValue);
+				return;
+			case ProblemPackage.NODE__SUBPROBLEM:
+				setSubproblem((ProblemDiagram)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -242,6 +318,9 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 			case ProblemPackage.NODE__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
+			case ProblemPackage.NODE__SUBPROBLEM:
+				setSubproblem((ProblemDiagram)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -261,6 +340,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 				return type != TYPE_EDEFAULT;
 			case ProblemPackage.NODE__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+			case ProblemPackage.NODE__SUBPROBLEM:
+				return subproblem != null;
 		}
 		return super.eIsSet(featureID);
 	}

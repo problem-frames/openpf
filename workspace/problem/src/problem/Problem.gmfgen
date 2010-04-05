@@ -311,6 +311,8 @@
             width="100"
             height="62"/>
       </viewmap>
+      <behaviour
+          xsi:type="gmfgen:OpenDiagramBehaviour"/>
       <modelFacet
           modelElementSelector="//@expressionProviders/@providers.0/@expressions.6">
         <metaClass

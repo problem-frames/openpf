@@ -43,6 +43,13 @@
             <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
           </tokens>
         </tokens>
+        <tokens xsi:type="xtext:Group" cardinality="?">
+          <tokens xsi:type="xtext:Keyword" value="{"/>
+          <tokens xsi:type="xtext:Assignment" feature="subproblem" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.0"/>
+          </tokens>
+          <tokens xsi:type="xtext:Keyword" value="}"/>
+        </tokens>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:EnumRule" name="NodeType">

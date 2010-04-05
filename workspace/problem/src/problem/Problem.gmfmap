@@ -149,7 +149,8 @@
         href="Problem.ecore#//ProblemDiagram/nodes"/>
     <childrenFeature
         href="Problem.ecore#//ProblemDiagram/nodes"/>
-    <ownedChild>
+    <ownedChild
+        relatedDiagrams="//@diagram">
       <domainMetaElement
           href="Problem.ecore#//Node"/>
       <domainSpecialization

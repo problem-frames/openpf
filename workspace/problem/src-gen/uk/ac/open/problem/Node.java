@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link uk.ac.open.problem.Node#getName <em>Name</em>}</li>
  *   <li>{@link uk.ac.open.problem.Node#getType <em>Type</em>}</li>
  *   <li>{@link uk.ac.open.problem.Node#getDescription <em>Description</em>}</li>
+ *   <li>{@link uk.ac.open.problem.Node#getSubproblem <em>Subproblem</em>}</li>
  * </ul>
  * </p>
  *
@@ -107,5 +108,31 @@ public interface Node extends EObject
 	 * @generated
 	 */
   void setDescription(String value);
+
+		/**
+	 * Returns the value of the '<em><b>Subproblem</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Subproblem</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Subproblem</em>' containment reference.
+	 * @see #setSubproblem(ProblemDiagram)
+	 * @see uk.ac.open.problem.ProblemPackage#getNode_Subproblem()
+	 * @model containment="true"
+	 * @generated
+	 */
+	ProblemDiagram getSubproblem();
+
+		/**
+	 * Sets the value of the '{@link uk.ac.open.problem.Node#getSubproblem <em>Subproblem</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Subproblem</em>' containment reference.
+	 * @see #getSubproblem()
+	 * @generated
+	 */
+	void setSubproblem(ProblemDiagram value);
 
 } // Node

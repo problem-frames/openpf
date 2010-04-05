@@ -36,6 +36,7 @@ import problem.EntityFigure;
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.ProblemPackage;
 import uk.ac.open.problem.diagram.edit.policies.Node4ItemSemanticEditPolicy;
+import uk.ac.open.problem.diagram.edit.policies.OpenDiagramEditPolicy;
 import uk.ac.open.problem.diagram.part.ProblemVisualIDRegistry;
 import uk.ac.open.problem.diagram.providers.ProblemElementTypes;
 
@@ -67,6 +68,8 @@ public class Node4EditPart extends ShapeNodeEditPart {
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
 				new Node4ItemSemanticEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
+		installEditPolicy(EditPolicyRoles.OPEN_ROLE,
+				new OpenDiagramEditPolicy());
 		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
 	}
@@ -101,14 +104,14 @@ public class Node4EditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof NodeName2EditPart) {
-			((NodeName2EditPart) childEditPart).setLabel(getPrimaryShape()
-					.getFigureEntityName());
-			return true;
-		}
 		if (childEditPart instanceof NodeDescription4EditPart) {
 			((NodeDescription4EditPart) childEditPart)
 					.setLabel(getPrimaryShape().getFigureEntityDescription());
+			return true;
+		}
+		if (childEditPart instanceof NodeName2EditPart) {
+			((NodeName2EditPart) childEditPart).setLabel(getPrimaryShape()
+					.getFigureEntityName());
 			return true;
 		}
 		return false;
@@ -118,10 +121,10 @@ public class Node4EditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof NodeName2EditPart) {
+		if (childEditPart instanceof NodeDescription4EditPart) {
 			return true;
 		}
-		if (childEditPart instanceof NodeDescription4EditPart) {
+		if (childEditPart instanceof NodeName2EditPart) {
 			return true;
 		}
 		return false;

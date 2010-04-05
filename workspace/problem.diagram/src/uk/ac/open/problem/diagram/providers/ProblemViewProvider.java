@@ -437,6 +437,8 @@ public class ProblemViewProvider extends AbstractProvider implements
 	public Node createNode_2004(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(ProblemVisualIDRegistry.getType(Node4EditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);

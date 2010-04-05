@@ -8,7 +8,8 @@ ProblemDiagram: ("problem" ':' description=STRING)?
 
 Node:
   name=ID (type=NodeType)? 
-  (':' description=STRING)?;
+  (':' description=STRING)?
+  ("{" subproblem=ProblemDiagram "}")?;
 
 enum NodeType:
   REQUIREMENT="R" | MACHINE="M" | BIDDABLE="B" | LEXICAL="X" | CAUSAL="C" | DESIGNED="D" | PHYSICAL="P";
