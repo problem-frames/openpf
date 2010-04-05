@@ -1,0 +1,5 @@
+<project default="build">
+  <target name="build">
+    <exec dir="build.x86_64" executable="./build.sh"/>
+  </target>
+</project>
