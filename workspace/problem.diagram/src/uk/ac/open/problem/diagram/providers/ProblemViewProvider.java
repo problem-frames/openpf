@@ -297,6 +297,8 @@ public class ProblemViewProvider extends AbstractProvider implements
 	public Node createNode_2001(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(ProblemVisualIDRegistry.getType(NodeEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
@@ -343,6 +345,8 @@ public class ProblemViewProvider extends AbstractProvider implements
 	public Node createNode_2002(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(ProblemVisualIDRegistry.getType(Node2EditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
@@ -485,6 +489,8 @@ public class ProblemViewProvider extends AbstractProvider implements
 	public Node createNode_2005(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(ProblemVisualIDRegistry.getType(Node5EditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
@@ -531,6 +537,8 @@ public class ProblemViewProvider extends AbstractProvider implements
 	public Node createNode_2006(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(ProblemVisualIDRegistry.getType(Node6EditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
@@ -621,9 +629,6 @@ public class ProblemViewProvider extends AbstractProvider implements
 				.getType(LinkDescriptionEditPart.VISUAL_ID));
 		label6001.setLayoutConstraint(NotationFactory.eINSTANCE
 				.createLocation());
-		Location location6001 = (Location) label6001.getLayoutConstraint();
-		location6001.setX(0);
-		location6001.setY(40);
 		return edge;
 	}
 
@@ -677,9 +682,6 @@ public class ProblemViewProvider extends AbstractProvider implements
 				.getType(LinkDescription2EditPart.VISUAL_ID));
 		label6002.setLayoutConstraint(NotationFactory.eINSTANCE
 				.createLocation());
-		Location location6002 = (Location) label6002.getLayoutConstraint();
-		location6002.setX(0);
-		location6002.setY(40);
 		return edge;
 	}
 
@@ -733,9 +735,6 @@ public class ProblemViewProvider extends AbstractProvider implements
 				.getType(LinkDescription3EditPart.VISUAL_ID));
 		label6003.setLayoutConstraint(NotationFactory.eINSTANCE
 				.createLocation());
-		Location location6003 = (Location) label6003.getLayoutConstraint();
-		location6003.setX(0);
-		location6003.setY(40);
 		return edge;
 	}
 

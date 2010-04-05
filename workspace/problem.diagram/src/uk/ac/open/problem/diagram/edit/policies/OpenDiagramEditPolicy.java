@@ -91,21 +91,22 @@ public class OpenDiagramEditPolicy extends OpenEditPolicy {
 
 		/**
 		 * @generated NOT
+		 * @author yy66: we open the subproblem diagram instead
 		 */
 		protected CommandResult doExecuteWithResult(IProgressMonitor monitor,
 				IAdaptable info) throws ExecutionException {
 			try {
 				Diagram diagram = getDiagramToOpen();
 				if (diagram == null) {
-					System.out.println("create new diagram");
+					//					System.out.println("create new diagram");
 					diagram = intializeNewDiagram();
-					System.out.println("diagram created");
+					//					System.out.println("diagram created");
 				}
 				URI uri = EcoreUtil.getURI(diagram);
-				System.out.println(uri);
+				//				System.out.println(uri);
 				String editorName = uri.lastSegment()
 						+ "#" + diagram.eResource().getContents().indexOf(diagram); //$NON-NLS-1$
-				System.out.println(editorName);
+				//				System.out.println(editorName);
 
 				IEditorInput editorInput = new URIEditorInput(uri, editorName);
 				IWorkbenchPage page = PlatformUI.getWorkbench()
@@ -131,7 +132,8 @@ public class OpenDiagramEditPolicy extends OpenEditPolicy {
 		protected Diagram intializeNewDiagram() throws ExecutionException {
 			Node node = (Node) getDiagramDomainElement();
 			if (node.getSubproblem() == null) {
-				ProblemDiagram pd =ProblemFactory.eINSTANCE.createProblemDiagram();
+				ProblemDiagram pd = ProblemFactory.eINSTANCE
+						.createProblemDiagram();
 				pd.setDescription(node.getDescription());
 				node.setSubproblem(pd);
 			}

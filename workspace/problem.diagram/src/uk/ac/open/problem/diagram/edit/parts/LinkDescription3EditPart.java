@@ -86,7 +86,7 @@ public class LinkDescription3EditPart extends LabelEditPart implements
 		registerSnapBackPosition(
 				ProblemVisualIDRegistry
 						.getType(uk.ac.open.problem.diagram.edit.parts.LinkDescription3EditPart.VISUAL_ID),
-				new Point(0, 40));
+				new Point(0, 0));
 	}
 
 	/**

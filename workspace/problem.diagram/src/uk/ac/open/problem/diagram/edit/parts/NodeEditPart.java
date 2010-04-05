@@ -35,6 +35,7 @@ import org.eclipse.swt.widgets.Display;
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.ProblemPackage;
 import uk.ac.open.problem.diagram.edit.policies.NodeItemSemanticEditPolicy;
+import uk.ac.open.problem.diagram.edit.policies.OpenDiagramEditPolicy;
 import uk.ac.open.problem.diagram.part.ProblemVisualIDRegistry;
 import uk.ac.open.problem.diagram.providers.ProblemElementTypes;
 
@@ -78,6 +79,8 @@ public class NodeEditPart extends ShapeNodeEditPart {
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
 				new NodeItemSemanticEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
+		installEditPolicy(EditPolicyRoles.OPEN_ROLE,
+				new OpenDiagramEditPolicy());
 		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
 	}
@@ -127,14 +130,14 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof NodeDescriptionEditPart) {
-			((NodeDescriptionEditPart) childEditPart)
-					.setLabel(getPrimaryShape().getFigureEntityDescription());
-			return true;
-		}
 		if (childEditPart instanceof NodeNameDescriptionEditPart) {
 			((NodeNameDescriptionEditPart) childEditPart)
 					.setLabel(getPrimaryShape().getFigureEntityName());
+			return true;
+		}
+		if (childEditPart instanceof NodeDescriptionEditPart) {
+			((NodeDescriptionEditPart) childEditPart)
+					.setLabel(getPrimaryShape().getFigureEntityDescription());
 			return true;
 		}
 		return false;
@@ -144,10 +147,10 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof NodeDescriptionEditPart) {
+		if (childEditPart instanceof NodeNameDescriptionEditPart) {
 			return true;
 		}
-		if (childEditPart instanceof NodeNameDescriptionEditPart) {
+		if (childEditPart instanceof NodeDescriptionEditPart) {
 			return true;
 		}
 		return false;

@@ -115,12 +115,14 @@ public class ProblemDocumentProvider extends AbstractDocumentProvider implements
 	}
 
 	/**
-	 * Sets up the given document as it would be provided for the given element. The
-	 * content of the document is not changed. This default implementation is empty.
-	 * Subclasses may reimplement.
+	 * Sets up the given document as it would be provided for the given element.
+	 * The content of the document is not changed. This default implementation
+	 * is empty. Subclasses may reimplement.
 	 * 
-	 * @param element the blue-print element
-	 * @param document the document to set up
+	 * @param element
+	 *            the blue-print element
+	 * @param document
+	 *            the document to set up
 	 * @generated
 	 */
 	protected void setupDocument(Object element, IDocument document) {
@@ -1062,7 +1064,7 @@ public class ProblemDocumentProvider extends AbstractDocumentProvider implements
 		private ResourceSetInfo myInfo;
 
 		/**
-		 * @generated
+		 * @generated NOT
 		 */
 		public ResourceSetModificationListener(ResourceSetInfo info) {
 			myInfo = info;
@@ -1072,6 +1074,21 @@ public class ProblemDocumentProvider extends AbstractDocumentProvider implements
 							.createEventTypeFilter(Notification.UNSET)).and(
 					NotificationFilter.createFeatureFilter(Resource.class,
 							Resource.RESOURCE__IS_MODIFIED));
+			NotificationFilter setFilter = NotificationFilter
+					.createEventTypeFilter(Notification.SET);
+			NotificationFilter addFilter = NotificationFilter
+					.createEventTypeFilter(Notification.ADD);
+			NotificationFilter addManyFilter = NotificationFilter
+					.createEventTypeFilter(Notification.ADD_MANY);
+			NotificationFilter removeFilter = NotificationFilter
+					.createEventTypeFilter(Notification.REMOVE);
+			NotificationFilter removeManyFilter = NotificationFilter
+					.createEventTypeFilter(Notification.REMOVE_MANY);
+			NotificationFilter diagramResourceModifiedFilter = setFilter
+					.or(addFilter.or(addManyFilter.or(removeFilter
+							.or(removeManyFilter))));
+			myModifiedFilter = myModifiedFilter
+					.or(diagramResourceModifiedFilter);
 		}
 
 		/**

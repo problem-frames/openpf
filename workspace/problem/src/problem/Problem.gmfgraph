@@ -120,19 +120,37 @@
       figure="InterfaceFigure"
       elementIcon="false"
       accessor="//@figures.0/@descriptors.2/@accessors.0"
-      container="//@figures.0/@descriptors.2/@accessors.0"/>
+      container="//@figures.0/@descriptors.2/@accessors.0">
+    <facets
+        xsi:type="gmfgraph:AlignmentFacet"
+        alignment="CENTER"/>
+    <facets
+        xsi:type="gmfgraph:LabelOffsetFacet"/>
+  </labels>
   <labels
       name="ConstraintName"
       figure="ConstraintFigure"
       elementIcon="false"
       accessor="//@figures.0/@descriptors.1/@accessors.0"
-      container="//@figures.0/@descriptors.1/@accessors.0"/>
+      container="//@figures.0/@descriptors.1/@accessors.0">
+    <facets
+        xsi:type="gmfgraph:AlignmentFacet"
+        alignment="CENTER"/>
+    <facets
+        xsi:type="gmfgraph:LabelOffsetFacet"/>
+  </labels>
   <labels
       name="ReferenceName"
       figure="ReferenceFigure"
       elementIcon="false"
       accessor="//@figures.0/@descriptors.0/@accessors.0"
-      container="//@figures.0/@descriptors.0/@accessors.0"/>
+      container="//@figures.0/@descriptors.0/@accessors.0">
+    <facets
+        xsi:type="gmfgraph:AlignmentFacet"
+        alignment="CENTER"/>
+    <facets
+        xsi:type="gmfgraph:LabelOffsetFacet"/>
+  </labels>
   <labels
       name="Name"
       figure="EntityFigure"
