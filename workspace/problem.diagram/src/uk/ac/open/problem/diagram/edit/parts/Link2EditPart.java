@@ -1,6 +1,7 @@
 package uk.ac.open.problem.diagram.edit.parts;
 
 import org.eclipse.draw2d.Connection;
+import org.eclipse.draw2d.ConnectionAnchor;
 import org.eclipse.draw2d.Graphics;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.gef.EditPart;
@@ -156,4 +157,22 @@ public class Link2EditPart extends ConnectionNodeEditPart implements
 			super.handleNotificationEvent(notification);
 	}
 
+	/**
+	 * @generated NOT
+	 * @author yy66
+	 * This is a very subtle bug: the reason is the parent class
+	 * cast to the NodeEditPart class in org.eclipse.gef, rather 
+	 * than the local NodeEditPart generated from our GMFgraph 
+	 * definition. So remove the import org.eclipse.gef.NodeEditPart
+	 * and override the parent method solves the problem!
+	 */
+	@Override
+	protected ConnectionAnchor getSourceConnectionAnchor() {
+		if (getSource() != null && getSource() instanceof NodeEditPart) {
+			NodeEditPart editPart = (NodeEditPart) getSource();
+			return editPart.getSourceConnectionAnchor(this);
+		}
+		return super.getSourceConnectionAnchor();
+	}	
+	
 }

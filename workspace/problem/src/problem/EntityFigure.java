@@ -3,7 +3,7 @@ package problem;
 import org.eclipse.draw2d.Graphics;
 import org.eclipse.draw2d.GridData;
 import org.eclipse.draw2d.GridLayout;
-import org.eclipse.draw2d.RectangleFigure;
+import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.swt.SWT;
@@ -14,7 +14,7 @@ import uk.ac.open.problem.Node;
 import uk.ac.open.problem.NodeType;
 
 
-public class EntityFigure extends RectangleFigure {
+public class EntityFigure extends Shape {
 
 	private Node node;
 	static final Font FFIGUREENTITYNAME_FONT = new Font(Display.getCurrent(),
@@ -28,7 +28,37 @@ public class EntityFigure extends RectangleFigure {
 	
 	private WrappingLabel fFigureEntityName;
 	private WrappingLabel fFigureEntityDescription;
+	
+	@Override
+	public boolean containsPoint(int x, int y) {
+		if (node.getType().equals(NodeType.REQUIREMENT)) {
+			// Ellipse in fact
+			if (!super.containsPoint(x, y)) {
+				return false;
+			} else {
+				Rectangle r = getBounds();
+				long ux = x - r.x - r.width / 2;
+				long uy = y - r.y - r.height / 2;
+				return ((ux * ux) << 10) / (r.width * r.width) 
+					 + ((uy * uy) << 10) / (r.height * r.height) <= 256;
+			}
+		} 
+		return super.containsPoint(x, y);
+	}
 
+	@Override
+	protected void fillShape(Graphics graphics) {
+		if (node.getType().equals(NodeType.REQUIREMENT)) {
+			/**
+			 * Fills the ellipse.
+			 * @see org.eclipse.draw2d.Shape#fillShape(org.eclipse.draw2d.Graphics)
+			 */
+			graphics.fillOval(getBounds());
+		} else {
+			graphics.fillRectangle(getBounds());
+		}
+	}	
+	
 	private void createContents() {
 
 		fFigureEntityName = new WrappingLabel();
@@ -48,7 +78,7 @@ public class EntityFigure extends RectangleFigure {
 
 		fFigureEntityDescription = new WrappingLabel();
 		fFigureEntityDescription.setText("");
-
+		fFigureEntityDescription.setTextWrap(true);
 		fFigureEntityDescription.setFont(FFIGUREENTITYDESCRIPTION_FONT);
 
 

@@ -3,7 +3,10 @@ package uk.ac.open.problem.diagram.edit.parts;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.eclipse.draw2d.ChopboxAnchor;
+import org.eclipse.draw2d.ConnectionAnchor;
 import org.eclipse.draw2d.Ellipse;
+import org.eclipse.draw2d.EllipseAnchor;
 import org.eclipse.draw2d.Graphics;
 import org.eclipse.draw2d.GridData;
 import org.eclipse.draw2d.GridLayout;
@@ -18,6 +21,7 @@ import org.eclipse.gef.commands.Command;
 import org.eclipse.gef.editpolicies.LayoutEditPolicy;
 import org.eclipse.gef.editpolicies.NonResizableEditPolicy;
 import org.eclipse.gef.requests.CreateRequest;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.ConnectionEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
@@ -33,6 +37,7 @@ import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.widgets.Display;
 
 import uk.ac.open.problem.Node;
+import uk.ac.open.problem.NodeType;
 import uk.ac.open.problem.ProblemPackage;
 import uk.ac.open.problem.diagram.edit.policies.NodeItemSemanticEditPolicy;
 import uk.ac.open.problem.diagram.edit.policies.OpenDiagramEditPolicy;
@@ -72,7 +77,7 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	}
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
@@ -81,8 +86,9 @@ public class NodeEditPart extends ShapeNodeEditPart {
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
 		installEditPolicy(EditPolicyRoles.OPEN_ROLE,
 				new OpenDiagramEditPolicy());
-		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
-		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
+		// XXX need an SCR to runtime to have another abstract superclass that
+		// would let children add reasonable editpolicies
+		removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
 	}
 
 	/**
@@ -116,6 +122,7 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	 */
 	protected IFigure createNodeShape() {
 		problem.EntityFigure figure = new problem.EntityFigure(node);
+		// EntityFigure figure = new EntityFigure();
 		return primaryShape = figure;
 	}
 
@@ -123,7 +130,9 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	 * @generated NOT
 	 */
 	public problem.EntityFigure getPrimaryShape() {
+		// public EntityFigure getPrimaryShape() {
 		return (problem.EntityFigure) primaryShape;
+		// return (EntityFigure) primaryShape;
 	}
 
 	/**
@@ -282,8 +291,25 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMARelTypesOnSource() {
-		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
+	public List/* <org.eclipse.gmf.runtime.emf.type.core.IElementType> */getMARelTypesOnSource() {
+		List/* <org.eclipse.gmf.runtime.emf.type.core.IElementType> */types = new ArrayList/*
+																							 * <org
+																							 * .
+																							 * eclipse
+																							 * .
+																							 * gmf
+																							 * .
+																							 * runtime
+																							 * .
+																							 * emf
+																							 * .
+																							 * type
+																							 * .
+																							 * core
+																							 * .
+																							 * IElementType
+																							 * >
+																							 */();
 		types.add(ProblemElementTypes.Link_4001);
 		types.add(ProblemElementTypes.Link_4002);
 		types.add(ProblemElementTypes.Link_4003);
@@ -293,9 +319,26 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMARelTypesOnSourceAndTarget(
+	public List/* <org.eclipse.gmf.runtime.emf.type.core.IElementType> */getMARelTypesOnSourceAndTarget(
 			IGraphicalEditPart targetEditPart) {
-		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
+		List/* <org.eclipse.gmf.runtime.emf.type.core.IElementType> */types = new ArrayList/*
+																							 * <org
+																							 * .
+																							 * eclipse
+																							 * .
+																							 * gmf
+																							 * .
+																							 * runtime
+																							 * .
+																							 * emf
+																							 * .
+																							 * type
+																							 * .
+																							 * core
+																							 * .
+																							 * IElementType
+																							 * >
+																							 */();
 		if (targetEditPart instanceof uk.ac.open.problem.diagram.edit.parts.NodeEditPart) {
 			types.add(ProblemElementTypes.Link_4001);
 		}
@@ -356,9 +399,26 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMATypesForTarget(
+	public List/* <org.eclipse.gmf.runtime.emf.type.core.IElementType> */getMATypesForTarget(
 			IElementType relationshipType) {
-		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
+		List/* <org.eclipse.gmf.runtime.emf.type.core.IElementType> */types = new ArrayList/*
+																							 * <org
+																							 * .
+																							 * eclipse
+																							 * .
+																							 * gmf
+																							 * .
+																							 * runtime
+																							 * .
+																							 * emf
+																							 * .
+																							 * type
+																							 * .
+																							 * core
+																							 * .
+																							 * IElementType
+																							 * >
+																							 */();
 		if (relationshipType == ProblemElementTypes.Link_4001) {
 			types.add(ProblemElementTypes.Node_2001);
 		}
@@ -419,8 +479,25 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMARelTypesOnTarget() {
-		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
+	public List/* <org.eclipse.gmf.runtime.emf.type.core.IElementType> */getMARelTypesOnTarget() {
+		List/* <org.eclipse.gmf.runtime.emf.type.core.IElementType> */types = new ArrayList/*
+																							 * <org
+																							 * .
+																							 * eclipse
+																							 * .
+																							 * gmf
+																							 * .
+																							 * runtime
+																							 * .
+																							 * emf
+																							 * .
+																							 * type
+																							 * .
+																							 * core
+																							 * .
+																							 * IElementType
+																							 * >
+																							 */();
 		types.add(ProblemElementTypes.Link_4001);
 		types.add(ProblemElementTypes.Link_4002);
 		types.add(ProblemElementTypes.Link_4003);
@@ -430,9 +507,26 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMATypesForSource(
+	public List/* <org.eclipse.gmf.runtime.emf.type.core.IElementType> */getMATypesForSource(
 			IElementType relationshipType) {
-		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
+		List/* <org.eclipse.gmf.runtime.emf.type.core.IElementType> */types = new ArrayList/*
+																							 * <org
+																							 * .
+																							 * eclipse
+																							 * .
+																							 * gmf
+																							 * .
+																							 * runtime
+																							 * .
+																							 * emf
+																							 * .
+																							 * type
+																							 * .
+																							 * core
+																							 * .
+																							 * IElementType
+																							 * >
+																							 */();
 		if (relationshipType == ProblemElementTypes.Link_4001) {
 			types.add(ProblemElementTypes.Node_2001);
 		}
@@ -491,7 +585,7 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	}
 
 	/**
-	 * @generated NOT
+	 * @generated
 	 */
 	public class EntityFigure extends Ellipse {
 
@@ -615,8 +709,55 @@ public class NodeEditPart extends ShapeNodeEditPart {
 		Object feature = notification.getFeature();
 		if (ProblemPackage.eINSTANCE.getNode().equals(feature)) {
 			getPrimaryShape().repaint();
-		} else
-			super.handleNotificationEvent(notification);
+		}
+		super.handleNotificationEvent(notification);
 	}
 
+	/**
+	 * @generated NOT
+	 */
+	private ConnectionAnchor anchor;
+	/**
+	 * @generated NOT
+	 */
+	protected ConnectionAnchor getConnectionAnchor() {
+		if (anchor == null) {
+			if (node.getType().equals(NodeType.REQUIREMENT))
+				anchor = new EllipseAnchor(getFigure());
+			else
+				anchor = new ChopboxAnchor(getFigure());
+		}
+		return anchor;
+	}
+
+	/**
+	 * @generated NOT
+	 */
+	@Override
+	public ConnectionAnchor getSourceConnectionAnchor(Request request) {
+		return getConnectionAnchor();
+	}
+
+	/**
+	 * @generated NOT
+	 */
+	@Override
+	public ConnectionAnchor getTargetConnectionAnchor(Request request) {
+		return getConnectionAnchor();
+	}
+
+	/**
+	 * @generated NOT
+	 */
+	public ConnectionAnchor getSourceConnectionAnchor(ConnectionEditPart con) {
+		return getConnectionAnchor();
+	}
+
+	/**
+	 * @generated NOT
+	 */
+	public ConnectionAnchor getTargetConnectionAnchor(ConnectionEditPart con) {
+		return getConnectionAnchor();
+	}
+	
 }

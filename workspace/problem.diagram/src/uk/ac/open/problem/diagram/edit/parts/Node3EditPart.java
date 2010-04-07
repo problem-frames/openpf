@@ -3,7 +3,10 @@ package uk.ac.open.problem.diagram.edit.parts;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.eclipse.draw2d.ChopboxAnchor;
+import org.eclipse.draw2d.ConnectionAnchor;
 import org.eclipse.draw2d.Ellipse;
+import org.eclipse.draw2d.EllipseAnchor;
 import org.eclipse.draw2d.Graphics;
 import org.eclipse.draw2d.GridData;
 import org.eclipse.draw2d.GridLayout;
@@ -18,6 +21,7 @@ import org.eclipse.gef.commands.Command;
 import org.eclipse.gef.editpolicies.LayoutEditPolicy;
 import org.eclipse.gef.editpolicies.NonResizableEditPolicy;
 import org.eclipse.gef.requests.CreateRequest;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.ConnectionEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
@@ -35,6 +39,7 @@ import org.eclipse.swt.widgets.Display;
 import problem.EntityFigure;
 
 import uk.ac.open.problem.Node;
+import uk.ac.open.problem.NodeType;
 import uk.ac.open.problem.ProblemPackage;
 import uk.ac.open.problem.diagram.edit.policies.Node3ItemSemanticEditPolicy;
 import uk.ac.open.problem.diagram.edit.policies.OpenDiagramEditPolicy;
@@ -70,7 +75,7 @@ public class Node3EditPart extends ShapeNodeEditPart {
 	}
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
@@ -80,7 +85,7 @@ public class Node3EditPart extends ShapeNodeEditPart {
 		installEditPolicy(EditPolicyRoles.OPEN_ROLE,
 				new OpenDiagramEditPolicy());
 		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
-		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
+		 removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
 	}
 
 	/**
@@ -573,6 +578,7 @@ public class Node3EditPart extends ShapeNodeEditPart {
 
 	}
 
+
 	/**
 	 * @generated
 	 */
@@ -608,16 +614,56 @@ public class Node3EditPart extends ShapeNodeEditPart {
 		return (problem.EntityFigure) primaryShape;
 	}
 
-	/**
-	 * @generated NOT
-	 */
-	@Override
 	protected void handleNotificationEvent(Notification notification) {
 		Object feature = notification.getFeature();
 		if (ProblemPackage.eINSTANCE.getNode().equals(feature)) {
 			getPrimaryShape().repaint();
 		} else
 			super.handleNotificationEvent(notification);
+	}
+
+	ConnectionAnchor anchor;
+	/**
+	 * @generated NOT
+	 */
+	protected ConnectionAnchor getConnectionAnchor() {
+		if (anchor == null) {
+			if (node.getType().equals(NodeType.REQUIREMENT))
+				anchor = new EllipseAnchor(getFigure());
+			else
+				anchor = new ChopboxAnchor(getFigure());
+		}
+		return anchor;
+	}
+
+	/**
+	 * @generated NOT
+	 */
+	public ConnectionAnchor getSourceConnectionAnchor(Request request) {
+		return getConnectionAnchor();
+	}
+
+	/**
+	 * @generated NOT
+	 */
+	public ConnectionAnchor getTargetConnectionAnchor(Request request) {
+		return getConnectionAnchor();
+	}
+
+	/**
+	 * @generated NOT
+	 */
+	public ConnectionAnchor getSourceConnectionAnchor(
+			ConnectionEditPart connEditPart) {
+		return getConnectionAnchor();
+	}
+
+	/**
+	 * @generated NOT
+	 */
+	public ConnectionAnchor getTargetConnectionAnchor(
+			ConnectionEditPart connEditPart) {
+		return getConnectionAnchor();
 	}
 
 }
