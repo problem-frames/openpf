@@ -5,6 +5,7 @@ import org.eclipse.draw2d.ConnectionAnchor;
 import org.eclipse.draw2d.Graphics;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.gef.EditPart;
+import org.eclipse.gef.NodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ConnectionNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ITreeBranchEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
@@ -174,5 +175,13 @@ public class Link2EditPart extends ConnectionNodeEditPart implements
 		}
 		return super.getSourceConnectionAnchor();
 	}	
+	@Override
+	protected ConnectionAnchor getTargetConnectionAnchor() {
+		if (getTarget() instanceof NodeEditPart) {
+			NodeEditPart editPart = (NodeEditPart) getTarget();
+			return editPart.getTargetConnectionAnchor(this);
+		}
+		return super.getTargetConnectionAnchor();
+	}
 	
 }

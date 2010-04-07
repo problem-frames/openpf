@@ -8,6 +8,7 @@ import org.eclipse.draw2d.PolylineDecoration;
 import org.eclipse.draw2d.RotatableDecoration;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.gef.EditPart;
+import org.eclipse.gef.NodeEditPart;
 import org.eclipse.gef.Request;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ConnectionEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ConnectionNodeEditPart;
@@ -192,4 +193,12 @@ public class LinkEditPart extends ConnectionNodeEditPart implements
 		return super.getSourceConnectionAnchor();
 	}	
 
+	@Override
+	protected ConnectionAnchor getTargetConnectionAnchor() {
+		if (getTarget() instanceof NodeEditPart) {
+			NodeEditPart editPart = (NodeEditPart) getTarget();
+			return editPart.getTargetConnectionAnchor(this);
+		}
+		return super.getTargetConnectionAnchor();
+	}
 }
