@@ -166,19 +166,18 @@ public class Link3EditPart extends ConnectionNodeEditPart implements
 	 */
 	@Override
 	protected ConnectionAnchor getSourceConnectionAnchor() {
-		if (getSource() != null && getSource() instanceof NodeEditPart) {
-			NodeEditPart editPart = (NodeEditPart) getSource();
+		if (getSource() != null && getSource() instanceof uk.ac.open.problem.diagram.edit.parts.NodeEditPart) {
+			uk.ac.open.problem.diagram.edit.parts.NodeEditPart editPart = (uk.ac.open.problem.diagram.edit.parts.NodeEditPart) getSource();
 			return editPart.getSourceConnectionAnchor(this);
 		}
 		return super.getSourceConnectionAnchor();
 	}	
 	@Override
 	protected ConnectionAnchor getTargetConnectionAnchor() {
-		if (getTarget() instanceof NodeEditPart) {
-			NodeEditPart editPart = (NodeEditPart) getTarget();
+		if (getTarget() instanceof uk.ac.open.problem.diagram.edit.parts.NodeEditPart) {
+			uk.ac.open.problem.diagram.edit.parts.NodeEditPart editPart = (uk.ac.open.problem.diagram.edit.parts.NodeEditPart) getTarget();
 			return editPart.getTargetConnectionAnchor(this);
 		}
 		return super.getTargetConnectionAnchor();
 	}
-
 }
