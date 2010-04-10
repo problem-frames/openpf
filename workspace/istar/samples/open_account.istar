@@ -1,0 +1,45 @@
+istar:
+  role Manager {
+	  goal #Manage Money#	  
+	  goal #Check Credit#        
+	  goal #Open Account#
+	  goal CreateAccount
+	  goal ManageAccount
+	  goal CreateAuthorization
+	  goal IssueCard
+	  goal AuthorizeCard
+  }  
+  role Customer {
+	  goal Banking
+	  goal InitialDeposit
+	  goal ProvidePersonalInfo
+	  goal DepositAccount
+	  goal #Open an Account#
+	  goal WithdrawAccount
+	  goal Deposit
+	  goal ChangeBalance
+	  goal ProvideCard
+  }      
+  soft Security 
+  #Manage Money# <-(and)- #Open Account#
+  #Open Account# <-(and)- CreateAccount
+  #Open Account# <-(and)- ManageAccount
+  CreateAccount <-(and)- CreateAuthorization   
+  CreateAccount <-(and)- IssueCard
+  CreateAccount ~> InitialDeposit
+  ManageAccount <-(and)- AuthorizeCard
+  AuthorizeCard ~> ProvideCard
+  ManageAccount ~> ChangeBalance
+  #Check Credit# ~> ProvidePersonalInfo
+  Banking <-(or)- DepositAccount
+  Banking <-(or)- WithdrawAccount
+  DepositAccount <-(or)- #Open an Account#
+  DepositAccount <-(or)- Deposit
+  #Open an Account# <-(and)- ProvidePersonalInfo
+  #Open an Account# <-(and)- ChangeBalance
+  ChangeBalance -(++)-> Security
+  Deposit <-(and)- ProvideCard
+  Deposit <-(and)- ChangeBalance 
+  WithdrawAccount <-(and)- ProvideCard
+  ProvideCard ~> IssueCard
+  WithdrawAccount <-(and)- ChangeBalance 

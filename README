@@ -1,10 +1,18 @@
- = User's Manual = 
+ = An Open Requirements Engineering Tool =
+
+ == User's Manual == 
+
  * Click at the toolbar button with an icon showing multiple paint frames, 
    a new project Examples will be created
+   * Open > Generate Example Project
  * Select a file with ".pf" extension under the Examples project folder
 	* You can also create your own problem frames by either editing a file
 	  with the ".pf" extension, or 
 	* by creating a new diagram using the Problem Diagram editor
+ * Select a file with ".istar" extension under the Examples project folder
+	* You can also create your own i* diagrams by either editing a file
+	  with the ".istar" extension, or 
+	* by creating a new diagram using the OpenOME editor
  * Edit:
 	* The syntax highlighting text editor makes sure you are entering a
 	  valid problem diagram textually. If you save the text, a diagram will 
@@ -13,25 +21,52 @@
 		* You can also open up the properties editor (right click) to change the domain types
 		* You can edit any node as a subproblem diagram using double click at the node
  * Save when you are using the text editor
+    * If it is saved from the .pf editor
 	 * The file with ".problem" extension will be generated for the EMF model
 	 * The file with ".problem_diagram" extension will be generated for the GMF diagram
 	 * If the diagram file already exists, a SaveAs dialog will prompt you to avoid overwrite it
+    * If it is saved from the .istar editor
+	 * The file with ".oom" extension will be generated for the EMF model of OpenOME
+	 * The file with ".ood" extension will be generated for the GMF diagram of OpenOME
+	 * If the diagram file already exists, a SaveAs dialog will prompt you to avoid overwrite it
 
- = Developer's Manual = 
- * To develop OpenPF inside Eclipse IDE, you need the following steps:
-  * checkout the code
-    git svn clone https://computing-research.open.ac.uk/repos/openpf/trunk openpf
+ == Developer's Manual ==
+
+ * To develop OpenPF/OpenOME inside the Eclipse IDE, you need the following steps:
+  * checkout both the code for openpf and openome:
+    git svn clone -r HEAD https://computing-research.open.ac.uk/repos/openpf/trunk openpf
+    git svn clone -r HEAD https://se.cs.toronto.edu/svn/trac/ome/trunk/workspace ../openome-workspace
   * Install an compatible Eclipse Modeling Tools IDE
     download eclipse-modeling-galileo-SR2-incubation-linux-gtk.tar.gz
-    update the antlr library: http://download.itemis.com/updates/releases/site/site.xml
   * Run Eclipse
-	* Import the projects from the workspace folder
-  	* Change the Preference/Java/Compiler/Deprecated,Restricted Access/ from Error to Warning
-  * Double click at the pf.product file
-	* Launch the product as an Eclipse Application
+    The following menu/dialog options are needed to build the system
+    * import the projects from the workspace
+      File > Import ... >  General > Existing Projects into the workspace > Next > Browse > OK > Finish
+    * change the compiler settings for the restricted API usages
+      Window > Preferences > Java > Compiler > Errors/Warnings > Deprecated and restricted API > 
+      Forbidden references (access rules) > Error => Warning > OK > Yes
+    * update the SWTBot library:
+      Help > Install New Software >  Enter http://download.eclipse.org/technology/swtbot/galileo/dev-build/update-site >
+      Select the following features:
+  SWTBot for Eclipse Testing (incubation) org.eclipse.swtbot.eclipse.feature.group
+  SWTBot for GEF Testing (incubation) org.eclipse.swtbot.eclipse.gef.feature.group
+  SWTBot for SWT Testing (incubation) org.eclipse.swtbot.feature.group
+  SWTBot IDE Features (incubation) org.eclipse.swtbot.ide.feature.group
+  SWTBot JUnit 3.x Headless launchers for Eclipse (incubation) org.eclipse.swtbot.eclipse.test.junit3.feature.group
+  SWTBot JUnit 4.x Headless launchers for Eclipse (incubation) org.eclipse.swtbot.eclipse.test.junit4.feature.group
+      Next > Accept the licenses > Finish > Yes to restart Eclipse
+    * update the antlr library: 
+      Help > Install New Software >  Enter http://download.itemis.com/updates/releases/site/site.xml >
+      Select the following feature:
+  Xtext Antlr Support 0.7.2	
+      Next > Accept the licenses > Finish > Yes to restart Eclipse
+  * open and run the product:
+    Project Explorer > problem > Double click at the pf.product file > Testing > Launch an Eclipse Application
 
- = Deployer's Manual =
-  * Run the headless script build.sh to create a RCP application specific for PF
+ == Maintainer's Manual ==
+  * Run the headless script:
+    cd build.x86_64
+    build.sh 
 
 Enjoy,
 
