@@ -3,43 +3,43 @@ istar:
 	  goal #Manage Money#	  
 	  goal #Check Credit#        
 	  goal #Open Account#
-	  goal CreateAccount
-	  goal ManageAccount
-	  goal CreateAuthorization
-	  goal IssueCard
-	  goal AuthorizeCard
+	  goal #Create Account#
+	  goal #Manage Account#
+	  task #Create Authorization#
+	  goal #Issue Card#
+	  goal #Authorize Card#
   }  
   role Customer {
 	  goal Banking
-	  goal InitialDeposit
-	  goal ProvidePersonalInfo
+	  goal #Initial Deposit#
+	  goal #Provide Personal Info#
 	  goal DepositAccount
 	  goal #Open an Account#
-	  goal WithdrawAccount
+	  goal #Withdraw Account#
 	  goal Deposit
-	  goal ChangeBalance
-	  goal ProvideCard
+	  goal #Change Balance#
+	  goal #Provide Card#
   }      
-  soft Security 
+  soft Security   
   #Manage Money# <-(and)- #Open Account#
-  #Open Account# <-(and)- CreateAccount
-  #Open Account# <-(and)- ManageAccount
-  CreateAccount <-(and)- CreateAuthorization   
-  CreateAccount <-(and)- IssueCard
-  CreateAccount ~> InitialDeposit
-  ManageAccount <-(and)- AuthorizeCard
-  AuthorizeCard ~> ProvideCard
-  ManageAccount ~> ChangeBalance
-  #Check Credit# ~> ProvidePersonalInfo
+  #Manage Money# <-(and)- #Create Account#
+  #Open Account# <-(and)- #Manage Account#
+  #Create Account# <-(and)- #Create Authorization#   
+  #Create Account# <-(and)- #Issue Card#
+  #Create Account# ~> #Initial Deposit#
+  #Manage Account# <-(and)- #Authorize Card#
+  #Authorize Card# ~> #Provide Card#
+  #Manage Account# ~> #Change Balance#
+  #Check Credit# ~> #Provide Personal Info#
   Banking <-(or)- DepositAccount
-  Banking <-(or)- WithdrawAccount
+  Banking <-(or)- #Withdraw Account#
   DepositAccount <-(or)- #Open an Account#
   DepositAccount <-(or)- Deposit
-  #Open an Account# <-(and)- ProvidePersonalInfo
-  #Open an Account# <-(and)- ChangeBalance
-  ChangeBalance -(++)-> Security
-  Deposit <-(and)- ProvideCard
-  Deposit <-(and)- ChangeBalance 
-  WithdrawAccount <-(and)- ProvideCard
-  ProvideCard ~> IssueCard
-  WithdrawAccount <-(and)- ChangeBalance 
+  #Open an Account# <-(and)- #Provide Personal Info#
+  #Open an Account# <-(and)- #Change Balance#
+  #Change Balance# -(++)-> Security
+  Deposit <-(and)- #Provide Card#
+  Deposit <-(and)-  #Change Balance# 
+  #Withdraw Account# <-(and)- #Provide Card#
+  #Provide Card# ~> #Issue Card#
+  #Withdraw Account# <-(and)-  #Change Balance# 
