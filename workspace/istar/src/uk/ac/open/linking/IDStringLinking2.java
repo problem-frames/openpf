@@ -23,7 +23,7 @@ import edu.toronto.cs.openome_model.Container;
 import edu.toronto.cs.openome_model.Intention;
 
 @Singleton
-public class IDStringLinking extends DefaultLinkingService {
+public class IDStringLinking2 extends DefaultLinkingService {
 	// Remove the # in the ID
 	@Override
 	protected String getCrossRefNodeAsString(AbstractNode node, boolean convert) {

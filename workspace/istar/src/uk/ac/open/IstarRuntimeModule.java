@@ -5,14 +5,14 @@ package uk.ac.open;
 
 import org.eclipse.xtext.linking.ILinkingService;
 
-import uk.ac.open.linking.IDStringLinking;
+import uk.ac.open.linking.IDStringLinking2;
 
 /**
  * Use this class to register components to be used within the IDE.
  */
 public class IstarRuntimeModule extends uk.ac.open.AbstractIstarRuntimeModule {
 	public Class<? extends ILinkingService> bindILinkingService() {
-		return IDStringLinking.class;
+		return IDStringLinking2.class;
 	}
 
 }
