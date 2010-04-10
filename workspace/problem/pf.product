@@ -27,7 +27,6 @@
       <plugin id="core"/>
       <plugin id="edu.toronto.cs.openome.conversion"/>
       <plugin id="edu.toronto.cs.openome.evaluation"/>
-      <plugin id="edu.toronto.cs.openome.testing"/>
       <plugin id="edu.toronto.cs.openome.versioning"/>
       <plugin id="edu.toronto.cs.openome_model"/>
       <plugin id="edu.toronto.cs.openome_model.diagram"/>
@@ -308,7 +307,6 @@
       <plugin id="problem.diagram"/>
       <plugin id="problem.edit"/>
       <plugin id="problem.editor"/>
-      <plugin id="problem.tests"/>
       <plugin id="problem.ui"/>
       <plugin id="q7"/>
       <plugin id="util"/>
