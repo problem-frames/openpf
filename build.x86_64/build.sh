@@ -10,7 +10,7 @@ export PRODUCT_HOME=$(cd ..; pwd)
 #-----------------------------------------------------------
 PRODUCT_FILE=$PRODUCT.product
 PROJECT_FILE=$PROJECT
-/software/git-1.6.0.3/bin/git svn rebase
+#/software/git-1.6.0.3/bin/git svn rebase
 \ls ../workspace > workspace.plugins.txt
 /usr/bin/xsltproc product.xsl ../workspace/$PROJECT_FILE/$PRODUCT_FILE > product.plugins.txt
 files=`awk -f intersect.awk`
@@ -29,7 +29,7 @@ sed -e "s/MYPRODUCT/\/$PROJECT_FILE\/$PRODUCT_FILE/" productBuild.properties  | 
 #$ECLIPSE_HOME/eclipse -configuration configuration -nosplash -application org.eclipse.ant.core.antRunner -buildfile $ECLIPSE_HOME/plugins/org.eclipse.pde.build_*/scripts/productBuild/productBuild.xml -Dbuilder=. $*
 cp $ECLIPSE_HOME/plugins/org.eclipse.pde.build_*/scripts/productBuild/productBuild.xml build.xml
 $ECLIPSE_HOME/eclipse -configuration configuration -nosplash -application org.eclipse.ant.core.antRunner -Dbuilder=. $*
-./deploy.sh
+#./deploy.sh
 if [ $? ]; then
  exit
 fi
