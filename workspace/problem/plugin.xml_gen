@@ -10,8 +10,10 @@
        genModel = "uk/ac/open/Problem.genmodel" /> 
 	
   </extension>
-
-
-
-
+  <extension point="core.example">
+      <example file="ads-b-pwd.pf"/>
+      <example file="ads-b-pwd-attack.pf"/>
+      <example file="library.pf"/>
+      <example file="openpf.pf"/>
+  </extension>
 </plugin>

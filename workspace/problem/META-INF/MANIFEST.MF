@@ -47,5 +47,5 @@ Export-Package: problem,
  uk.ac.open.services,
  uk.ac.open.validation
 Import-Package: org.eclipse.gmf.runtime.diagram.ui.editparts,
- org.eclipse.gmf.runtime.gef.ui.figures,
- uk.ac.open
+ org.eclipse.gmf.runtime.gef.ui.figures
+Bundle-Activator: uk.ac.open.ProblemPluginActivator
