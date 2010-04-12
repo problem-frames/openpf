@@ -5,7 +5,10 @@
  */
 package uk.ac.open.problem;
 
+
 import org.eclipse.emf.ecore.EObject;
+
+import edu.toronto.cs.openome_model.Model;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link uk.ac.open.problem.Node#getType <em>Type</em>}</li>
  *   <li>{@link uk.ac.open.problem.Node#getDescription <em>Description</em>}</li>
  *   <li>{@link uk.ac.open.problem.Node#getSubproblem <em>Subproblem</em>}</li>
+ *   <li>{@link uk.ac.open.problem.Node#getIstar <em>Istar</em>}</li>
  * </ul>
  * </p>
  *
@@ -109,30 +113,56 @@ public interface Node extends EObject
 	 */
   void setDescription(String value);
 
-		/**
+  /**
 	 * Returns the value of the '<em><b>Subproblem</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Subproblem</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Subproblem</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
 	 * @return the value of the '<em>Subproblem</em>' containment reference.
 	 * @see #setSubproblem(ProblemDiagram)
 	 * @see uk.ac.open.problem.ProblemPackage#getNode_Subproblem()
 	 * @model containment="true"
 	 * @generated
 	 */
-	ProblemDiagram getSubproblem();
+  ProblemDiagram getSubproblem();
 
-		/**
+  /**
 	 * Sets the value of the '{@link uk.ac.open.problem.Node#getSubproblem <em>Subproblem</em>}' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+   * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Subproblem</em>' containment reference.
 	 * @see #getSubproblem()
 	 * @generated
 	 */
-	void setSubproblem(ProblemDiagram value);
+  void setSubproblem(ProblemDiagram value);
+
+  /**
+	 * Returns the value of the '<em><b>Istar</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Istar</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+	 * @return the value of the '<em>Istar</em>' containment reference.
+	 * @see #setIstar(Model)
+	 * @see uk.ac.open.problem.ProblemPackage#getNode_Istar()
+	 * @model containment="true"
+	 * @generated
+	 */
+  Model getIstar();
+
+  /**
+	 * Sets the value of the '{@link uk.ac.open.problem.Node#getIstar <em>Istar</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Istar</em>' containment reference.
+	 * @see #getIstar()
+	 * @generated
+	 */
+  void setIstar(Model value);
 
 } // Node

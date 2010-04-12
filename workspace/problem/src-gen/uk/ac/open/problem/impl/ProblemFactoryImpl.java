@@ -14,7 +14,15 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import uk.ac.open.problem.*;
+import uk.ac.open.problem.Link;
+import uk.ac.open.problem.LinkType;
+import uk.ac.open.problem.Node;
+import uk.ac.open.problem.NodeType;
+import uk.ac.open.problem.Phenomenon;
+import uk.ac.open.problem.PhenomenonType;
+import uk.ac.open.problem.ProblemDiagram;
+import uk.ac.open.problem.ProblemFactory;
+import uk.ac.open.problem.ProblemPackage;
 
 /**
  * <!-- begin-user-doc -->

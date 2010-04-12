@@ -121,7 +121,7 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	 * @generated NOT
 	 */
 	protected IFigure createNodeShape() {
-		problem.EntityFigure figure = new problem.EntityFigure(node);
+		uk.ac.open.problem.figures.EntityFigure figure = new uk.ac.open.problem.figures.EntityFigure(node);
 		// EntityFigure figure = new EntityFigure();
 		return primaryShape = figure;
 	}
@@ -129,9 +129,9 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated NOT
 	 */
-	public problem.EntityFigure getPrimaryShape() {
+	public uk.ac.open.problem.figures.EntityFigure getPrimaryShape() {
 		// public EntityFigure getPrimaryShape() {
-		return (problem.EntityFigure) primaryShape;
+		return (uk.ac.open.problem.figures.EntityFigure) primaryShape;
 		// return (EntityFigure) primaryShape;
 	}
 
@@ -291,25 +291,8 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/* <org.eclipse.gmf.runtime.emf.type.core.IElementType> */getMARelTypesOnSource() {
-		List/* <org.eclipse.gmf.runtime.emf.type.core.IElementType> */types = new ArrayList/*
-																							 * <org
-																							 * .
-																							 * eclipse
-																							 * .
-																							 * gmf
-																							 * .
-																							 * runtime
-																							 * .
-																							 * emf
-																							 * .
-																							 * type
-																							 * .
-																							 * core
-																							 * .
-																							 * IElementType
-																							 * >
-																							 */();
+	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMARelTypesOnSource() {
+		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
 		types.add(ProblemElementTypes.Link_4001);
 		types.add(ProblemElementTypes.Link_4002);
 		types.add(ProblemElementTypes.Link_4003);
@@ -319,26 +302,9 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/* <org.eclipse.gmf.runtime.emf.type.core.IElementType> */getMARelTypesOnSourceAndTarget(
+	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMARelTypesOnSourceAndTarget(
 			IGraphicalEditPart targetEditPart) {
-		List/* <org.eclipse.gmf.runtime.emf.type.core.IElementType> */types = new ArrayList/*
-																							 * <org
-																							 * .
-																							 * eclipse
-																							 * .
-																							 * gmf
-																							 * .
-																							 * runtime
-																							 * .
-																							 * emf
-																							 * .
-																							 * type
-																							 * .
-																							 * core
-																							 * .
-																							 * IElementType
-																							 * >
-																							 */();
+		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
 		if (targetEditPart instanceof uk.ac.open.problem.diagram.edit.parts.NodeEditPart) {
 			types.add(ProblemElementTypes.Link_4001);
 		}
@@ -399,26 +365,9 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/* <org.eclipse.gmf.runtime.emf.type.core.IElementType> */getMATypesForTarget(
+	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMATypesForTarget(
 			IElementType relationshipType) {
-		List/* <org.eclipse.gmf.runtime.emf.type.core.IElementType> */types = new ArrayList/*
-																							 * <org
-																							 * .
-																							 * eclipse
-																							 * .
-																							 * gmf
-																							 * .
-																							 * runtime
-																							 * .
-																							 * emf
-																							 * .
-																							 * type
-																							 * .
-																							 * core
-																							 * .
-																							 * IElementType
-																							 * >
-																							 */();
+		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
 		if (relationshipType == ProblemElementTypes.Link_4001) {
 			types.add(ProblemElementTypes.Node_2001);
 		}
@@ -479,25 +428,8 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/* <org.eclipse.gmf.runtime.emf.type.core.IElementType> */getMARelTypesOnTarget() {
-		List/* <org.eclipse.gmf.runtime.emf.type.core.IElementType> */types = new ArrayList/*
-																							 * <org
-																							 * .
-																							 * eclipse
-																							 * .
-																							 * gmf
-																							 * .
-																							 * runtime
-																							 * .
-																							 * emf
-																							 * .
-																							 * type
-																							 * .
-																							 * core
-																							 * .
-																							 * IElementType
-																							 * >
-																							 */();
+	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMARelTypesOnTarget() {
+		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
 		types.add(ProblemElementTypes.Link_4001);
 		types.add(ProblemElementTypes.Link_4002);
 		types.add(ProblemElementTypes.Link_4003);
@@ -507,26 +439,9 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/* <org.eclipse.gmf.runtime.emf.type.core.IElementType> */getMATypesForSource(
+	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMATypesForSource(
 			IElementType relationshipType) {
-		List/* <org.eclipse.gmf.runtime.emf.type.core.IElementType> */types = new ArrayList/*
-																							 * <org
-																							 * .
-																							 * eclipse
-																							 * .
-																							 * gmf
-																							 * .
-																							 * runtime
-																							 * .
-																							 * emf
-																							 * .
-																							 * type
-																							 * .
-																							 * core
-																							 * .
-																							 * IElementType
-																							 * >
-																							 */();
+		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
 		if (relationshipType == ProblemElementTypes.Link_4001) {
 			types.add(ProblemElementTypes.Node_2001);
 		}
@@ -717,6 +632,7 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	 * @generated NOT
 	 */
 	private ConnectionAnchor anchor;
+
 	/**
 	 * @generated NOT
 	 */
@@ -759,5 +675,5 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	public ConnectionAnchor getTargetConnectionAnchor(ConnectionEditPart con) {
 		return getConnectionAnchor();
 	}
-	
+
 }

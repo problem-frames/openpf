@@ -21,8 +21,8 @@ import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.resource.XtextResourceSet;
 import org.eclipse.xtext.ui.core.editor.XtextEditor;
 
-import uk.ac.open.ProblemStandaloneSetup;
-import uk.ac.open.parser.antlr.ProblemParser;
+import uk.ac.open.problem.ProblemStandaloneSetup;
+import uk.ac.open.problem.parser.antlr.ProblemParser;
 
 /**
  * 

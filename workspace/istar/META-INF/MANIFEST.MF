@@ -37,7 +37,4 @@ Export-Package: uk.ac.open,
  uk.ac.open.parser.antlr,
  uk.ac.open.services,
  uk.ac.open.validation
-Import-Package: org.eclipse.core.resources,
- org.eclipse.core.runtime,
- org.eclipse.ui,
- org.eclipse.xtext.ui.core.editor
+Import-Package: org.eclipse.core.resources,org.eclipse.core.runtime,org.eclipse.ui,org.eclipse.xtext.ui.core.editor

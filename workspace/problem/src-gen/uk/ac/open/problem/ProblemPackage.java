@@ -5,11 +5,14 @@
  */
 package uk.ac.open.problem;
 
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
+import edu.toronto.cs.openome_model.openome_modelPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -146,20 +149,29 @@ public interface ProblemPackage extends EPackage
   /**
 	 * The feature id for the '<em><b>Subproblem</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+   * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__SUBPROBLEM = 3;
+  int NODE__SUBPROBLEM = 3;
 
-		/**
+  /**
+	 * The feature id for the '<em><b>Istar</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int NODE__ISTAR = 4;
+
+  /**
 	 * The number of structural features of the '<em>Node</em>' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int NODE_FEATURE_COUNT = 4;
+  int NODE_FEATURE_COUNT = 5;
 
   /**
 	 * The meta object id for the '{@link uk.ac.open.problem.impl.PhenomenonImpl <em>Phenomenon</em>}' class.
@@ -224,7 +236,7 @@ public interface ProblemPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LINK__FROM = 0;
+  int LINK__FROM = openome_modelPackage.LINK_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -233,7 +245,7 @@ public interface ProblemPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LINK__TYPE = 1;
+  int LINK__TYPE = openome_modelPackage.LINK_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>To</b></em>' reference.
@@ -242,7 +254,7 @@ public interface ProblemPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LINK__TO = 2;
+  int LINK__TO = openome_modelPackage.LINK_FEATURE_COUNT + 2;
 
   /**
 	 * The feature id for the '<em><b>Phenomena</b></em>' containment reference list.
@@ -251,7 +263,7 @@ public interface ProblemPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LINK__PHENOMENA = 3;
+  int LINK__PHENOMENA = openome_modelPackage.LINK_FEATURE_COUNT + 3;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -260,7 +272,7 @@ public interface ProblemPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LINK__DESCRIPTION = 4;
+  int LINK__DESCRIPTION = openome_modelPackage.LINK_FEATURE_COUNT + 4;
 
   /**
 	 * The number of structural features of the '<em>Link</em>' class.
@@ -269,7 +281,7 @@ public interface ProblemPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LINK_FEATURE_COUNT = 5;
+  int LINK_FEATURE_COUNT = openome_modelPackage.LINK_FEATURE_COUNT + 5;
 
   /**
 	 * The meta object id for the '{@link uk.ac.open.problem.NodeType <em>Node Type</em>}' enum.
@@ -391,15 +403,26 @@ public interface ProblemPackage extends EPackage
   /**
 	 * Returns the meta object for the containment reference '{@link uk.ac.open.problem.Node#getSubproblem <em>Subproblem</em>}'.
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+   * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Subproblem</em>'.
 	 * @see uk.ac.open.problem.Node#getSubproblem()
 	 * @see #getNode()
 	 * @generated
 	 */
-	EReference getNode_Subproblem();
+  EReference getNode_Subproblem();
 
-		/**
+  /**
+	 * Returns the meta object for the containment reference '{@link uk.ac.open.problem.Node#getIstar <em>Istar</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Istar</em>'.
+	 * @see uk.ac.open.problem.Node#getIstar()
+	 * @see #getNode()
+	 * @generated
+	 */
+  EReference getNode_Istar();
+
+  /**
 	 * Returns the meta object for class '{@link uk.ac.open.problem.Phenomenon <em>Phenomenon</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -631,12 +654,20 @@ public interface ProblemPackage extends EPackage
     /**
 		 * The meta object literal for the '<em><b>Subproblem</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference NODE__SUBPROBLEM = eINSTANCE.getNode_Subproblem();
+    EReference NODE__SUBPROBLEM = eINSTANCE.getNode_Subproblem();
 
-				/**
+    /**
+		 * The meta object literal for the '<em><b>Istar</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EReference NODE__ISTAR = eINSTANCE.getNode_Istar();
+
+    /**
 		 * The meta object literal for the '{@link uk.ac.open.problem.impl.PhenomenonImpl <em>Phenomenon</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

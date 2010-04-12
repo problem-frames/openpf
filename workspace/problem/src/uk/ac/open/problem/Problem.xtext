@@ -1,0 +1,27 @@
+grammar uk.ac.open.problem.Problem with uk.ac.open.Istar
+import "platform:/resource/openome_model/model/openome_model.ecore" as openome_model
+generate problem "http://open.ac.uk/problem"
+
+ProblemDiagram: ("problem" ':' description=STRING)? 
+	((nodes+=Node|links+=Link))*;
+
+Node:
+  name=ID (type=NodeType)? 
+  (':' description=STRING)?
+  ("{" (subproblem=ProblemDiagram | istar=Model) "}")?;
+
+enum NodeType:
+  REQUIREMENT="R" | MACHINE="M" | BIDDABLE="B" | LEXICAL="X" | CAUSAL="C" | DESIGNED="D" | PHYSICAL="P";
+
+Phenomenon:
+  (type=PhenomenonType)? name=ID (':' description=STRING)?;
+
+enum PhenomenonType:
+  UNSPECIFIED="phenomenon" | EVENT="event" | STATE="state";
+
+Link:
+  from=[Node] (type=LinkType) to=[Node] ('{' phenomena+=Phenomenon (',' phenomena+=
+  Phenomenon)* '}')? (':' description=STRING)?;
+
+enum LinkType:
+  INTERFACE="->" | REFERENCE="~~" | CONSTRAINT="~>";

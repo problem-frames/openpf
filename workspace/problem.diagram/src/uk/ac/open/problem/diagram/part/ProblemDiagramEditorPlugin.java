@@ -21,6 +21,7 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
 import uk.ac.open.problem.provider.ProblemItemProviderAdapterFactory;
+import edu.toronto.cs.openome_model.provider.openome_modelItemProviderAdapterFactory;
 
 /**
  * @generated
@@ -101,6 +102,8 @@ public class ProblemDiagramEditorPlugin extends AbstractUIPlugin {
 	 */
 	protected void fillItemProviderFactories(List factories) {
 		factories.add(new ProblemItemProviderAdapterFactory());
+		factories
+				.add(new openome_modelItemProviderAdapterFactory());
 		factories.add(new ResourceItemProviderAdapterFactory());
 		factories.add(new ReflectiveItemProviderAdapterFactory());
 	}

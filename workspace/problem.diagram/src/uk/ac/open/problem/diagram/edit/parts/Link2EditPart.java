@@ -4,8 +4,7 @@ import org.eclipse.draw2d.Connection;
 import org.eclipse.draw2d.ConnectionAnchor;
 import org.eclipse.draw2d.Graphics;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.gef.EditPart;
-// import org.eclipse.gef.NodeEditPart;
+import org.eclipse.gef.EditPart; // import org.eclipse.gef.NodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ConnectionNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ITreeBranchEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
@@ -169,12 +168,14 @@ public class Link2EditPart extends ConnectionNodeEditPart implements
 	 */
 	@Override
 	protected ConnectionAnchor getSourceConnectionAnchor() {
-		if (getSource() != null && getSource() instanceof uk.ac.open.problem.diagram.edit.parts.NodeEditPart) {
+		if (getSource() != null
+				&& getSource() instanceof uk.ac.open.problem.diagram.edit.parts.NodeEditPart) {
 			uk.ac.open.problem.diagram.edit.parts.NodeEditPart editPart = (uk.ac.open.problem.diagram.edit.parts.NodeEditPart) getSource();
 			return editPart.getSourceConnectionAnchor(this);
 		}
 		return super.getSourceConnectionAnchor();
-	}	
+	}
+
 	@Override
 	protected ConnectionAnchor getTargetConnectionAnchor() {
 		if (getTarget() instanceof uk.ac.open.problem.diagram.edit.parts.NodeEditPart) {
@@ -183,5 +184,5 @@ public class Link2EditPart extends ConnectionNodeEditPart implements
 		}
 		return super.getTargetConnectionAnchor();
 	}
-	
+
 }

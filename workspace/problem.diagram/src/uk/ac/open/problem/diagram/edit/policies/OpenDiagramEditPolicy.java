@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Iterator;
 
+import edu.toronto.cs.openome_model.Model;
+import edu.toronto.cs.openome_model.openome_modelFactory;
+
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IAdaptable;
@@ -34,6 +37,7 @@ import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
 import uk.ac.open.problem.Node;
+import uk.ac.open.problem.NodeType;
 import uk.ac.open.problem.ProblemDiagram;
 import uk.ac.open.problem.ProblemFactory;
 import uk.ac.open.problem.diagram.edit.parts.ProblemDiagramEditPart;
@@ -41,6 +45,8 @@ import uk.ac.open.problem.diagram.part.Messages;
 import uk.ac.open.problem.diagram.part.ProblemDiagramEditor;
 import uk.ac.open.problem.diagram.part.ProblemDiagramEditorPlugin;
 import uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil;
+import edu.toronto.cs.openome_model.diagram.edit.parts.ModelEditPart;
+import edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin;
 
 /**
  * @generated
@@ -80,14 +86,17 @@ public class OpenDiagramEditPolicy extends OpenEditPolicy {
 		 * @generated
 		 */
 		OpenDiagramCommand(HintedDiagramLinkStyle linkStyle) {
-			// editing domain is taken for original diagram, 
-			// if we open diagram from another file, we should use another editing domain
+			// editing domain is taken for original diagram,
+			// if we open diagram from another file, we should use another
+			// editing domain
 			super(TransactionUtil.getEditingDomain(linkStyle),
 					Messages.CommandName_OpenDiagram, null);
 			diagramFacet = linkStyle;
 		}
 
-		// FIXME canExecute if  !(readOnly && getDiagramToOpen == null), i.e. open works on ro diagrams only when there's associated diagram already
+		// FIXME canExecute if !(readOnly && getDiagramToOpen == null), i.e.
+		// open works on ro diagrams only when there's associated diagram
+		// already
 
 		/**
 		 * @generated NOT
@@ -98,15 +107,15 @@ public class OpenDiagramEditPolicy extends OpenEditPolicy {
 			try {
 				Diagram diagram = getDiagramToOpen();
 				if (diagram == null) {
-					//					System.out.println("create new diagram");
+					// System.out.println("create new diagram");
 					diagram = intializeNewDiagram();
-					//					System.out.println("diagram created");
+					// System.out.println("diagram created");
 				}
 				URI uri = EcoreUtil.getURI(diagram);
-				//				System.out.println(uri);
+				// System.out.println(uri);
 				String editorName = uri.lastSegment()
 						+ "#" + diagram.eResource().getContents().indexOf(diagram); //$NON-NLS-1$
-				//				System.out.println(editorName);
+				// System.out.println(editorName);
 
 				IEditorInput editorInput = new URIEditorInput(uri, editorName);
 				IWorkbenchPage page = PlatformUI.getWorkbench()
@@ -131,14 +140,30 @@ public class OpenDiagramEditPolicy extends OpenEditPolicy {
 		 */
 		protected Diagram intializeNewDiagram() throws ExecutionException {
 			Node node = (Node) getDiagramDomainElement();
-			if (node.getSubproblem() == null) {
-				ProblemDiagram pd = ProblemFactory.eINSTANCE
-						.createProblemDiagram();
-				pd.setDescription(node.getDescription());
-				node.setSubproblem(pd);
+			Diagram d = null;
+			if (!node.getType().equals(NodeType.REQUIREMENT)) {
+				if (node.getSubproblem() == null) {
+					ProblemDiagram pd = ProblemFactory.eINSTANCE
+							.createProblemDiagram();
+					pd.setDescription(node.getDescription());
+					node.setSubproblem(pd);
+				}
+				d = ViewService.createDiagram(node.getSubproblem(),
+						getDiagramKind(), getPreferencesHint());
+			} else {
+				if (node.getIstar() == null) {
+					Model ood = openome_modelFactory.eINSTANCE.createModel();
+					ood.setName(node.getDescription());
+					node.setIstar(ood);
+				}
+				System.out.println(node.getIstar());
+				System.out.println(ModelEditPart.MODEL_ID);
+//				System.out.println(Openome_modelDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT);
+				d = ViewService.createDiagram(node.getIstar(),
+					ModelEditPart.MODEL_ID,
+					null);
+				System.out.println(d);
 			}
-			Diagram d = ViewService.createDiagram(node.getSubproblem(),
-					getDiagramKind(), getPreferencesHint());
 			if (d == null) {
 				throw new ExecutionException("Can't create diagram of '"
 						+ getDiagramKind() + "' kind");

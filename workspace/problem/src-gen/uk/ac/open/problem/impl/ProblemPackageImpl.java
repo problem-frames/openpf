@@ -5,6 +5,8 @@
  */
 package uk.ac.open.problem.impl;
 
+
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -12,6 +14,9 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.impl.openome_modelPackageImpl;
 
 import uk.ac.open.problem.Link;
 import uk.ac.open.problem.LinkType;
@@ -128,11 +133,16 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 
 		isInited = true;
 
+		// Obtain or create and register interdependencies
+		openome_modelPackageImpl theOpenome_modelPackage = (openome_modelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(openome_modelPackage.eNS_URI) instanceof openome_modelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(openome_modelPackage.eNS_URI) : openome_modelPackage.eINSTANCE);
+
 		// Create package meta-data objects
 		theProblemPackage.createPackageContents();
+		theOpenome_modelPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theProblemPackage.initializePackageContents();
+		theOpenome_modelPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theProblemPackage.freeze();
@@ -225,14 +235,25 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 
   /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+   * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getNode_Subproblem() {
+  public EReference getNode_Subproblem()
+  {
 		return (EReference)nodeEClass.getEStructuralFeatures().get(3);
 	}
 
-		/**
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EReference getNode_Istar()
+  {
+		return (EReference)nodeEClass.getEStructuralFeatures().get(4);
+	}
+
+  /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -402,6 +423,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 		createEAttribute(nodeEClass, NODE__TYPE);
 		createEAttribute(nodeEClass, NODE__DESCRIPTION);
 		createEReference(nodeEClass, NODE__SUBPROBLEM);
+		createEReference(nodeEClass, NODE__ISTAR);
 
 		phenomenonEClass = createEClass(PHENOMENON);
 		createEAttribute(phenomenonEClass, PHENOMENON__TYPE);
@@ -445,11 +467,15 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		openome_modelPackage theOpenome_modelPackage = (openome_modelPackage)EPackage.Registry.INSTANCE.getEPackage(openome_modelPackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		linkEClass.getESuperTypes().add(theOpenome_modelPackage.getLink());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(problemDiagramEClass, ProblemDiagram.class, "ProblemDiagram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -462,6 +488,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 		initEAttribute(getNode_Type(), this.getNodeType(), "type", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNode_Description(), ecorePackage.getEString(), "description", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getNode_Subproblem(), this.getProblemDiagram(), null, "subproblem", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNode_Istar(), theOpenome_modelPackage.getModel(), null, "istar", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(phenomenonEClass, Phenomenon.class, "Phenomenon", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPhenomenon_Type(), this.getPhenomenonType(), "type", null, 0, 1, Phenomenon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

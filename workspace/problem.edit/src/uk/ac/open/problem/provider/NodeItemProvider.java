@@ -10,12 +10,14 @@ package uk.ac.open.problem.provider;
 import java.util.Collection;
 import java.util.List;
 
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -26,6 +28,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import edu.toronto.cs.openome_model.openome_modelFactory;
 
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.ProblemFactory;
@@ -152,6 +156,7 @@ public class NodeItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ProblemPackage.Literals.NODE__SUBPROBLEM);
+			childrenFeatures.add(ProblemPackage.Literals.NODE__ISTAR);
 		}
 		return childrenFeatures;
 	}
@@ -212,6 +217,7 @@ public class NodeItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ProblemPackage.NODE__SUBPROBLEM:
+			case ProblemPackage.NODE__ISTAR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -233,6 +239,11 @@ public class NodeItemProvider
 			(createChildParameter
 				(ProblemPackage.Literals.NODE__SUBPROBLEM,
 				 ProblemFactory.eINSTANCE.createProblemDiagram()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ProblemPackage.Literals.NODE__ISTAR,
+				 openome_modelFactory.eINSTANCE.createModel()));
 	}
 
 	/**

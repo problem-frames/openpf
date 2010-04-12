@@ -138,7 +138,7 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start entryRuleContainer
     // ../istar.ui/src-gen/uk/ac/open/contentassist/antlr/internal/InternalIstar.g:87:1: entryRuleContainer : ruleContainer EOF ;
-    public final void entryRuleContainer() throws RecognitionException {
+    public void entryRuleContainer() throws RecognitionException {
         try {
             // ../istar.ui/src-gen/uk/ac/open/contentassist/antlr/internal/InternalIstar.g:87:20: ( ruleContainer EOF )
             // ../istar.ui/src-gen/uk/ac/open/contentassist/antlr/internal/InternalIstar.g:88:1: ruleContainer EOF

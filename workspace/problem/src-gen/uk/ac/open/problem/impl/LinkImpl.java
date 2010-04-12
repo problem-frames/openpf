@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -44,7 +43,7 @@ import uk.ac.open.problem.ProblemPackage;
  *
  * @generated
  */
-public class LinkImpl extends MinimalEObjectImpl.Container implements Link
+public class LinkImpl extends edu.toronto.cs.openome_model.impl.LinkImpl implements Link
 {
   /**
 	 * The cached value of the '{@link #getFrom() <em>From</em>}' reference.

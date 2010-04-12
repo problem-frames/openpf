@@ -75,7 +75,7 @@ public class Node2EditPart extends ShapeNodeEditPart {
 		installEditPolicy(EditPolicyRoles.OPEN_ROLE,
 				new OpenDiagramEditPolicy());
 		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
-		 removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
+		removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
 	}
 
 	/**
@@ -121,15 +121,15 @@ public class Node2EditPart extends ShapeNodeEditPart {
 	 * @generated NOT
 	 */
 	protected IFigure createNodeShape() {
-		problem.EntityFigure figure = new problem.EntityFigure(node);
+		uk.ac.open.problem.figures.EntityFigure figure = new uk.ac.open.problem.figures.EntityFigure(node);
 		return primaryShape = figure;
 	}
 
 	/**
 	 * @generated NOT
 	 */
-	public problem.EntityFigure getPrimaryShape() {
-		return (problem.EntityFigure) primaryShape;
+	public uk.ac.open.problem.figures.EntityFigure getPrimaryShape() {
+		return (uk.ac.open.problem.figures.EntityFigure) primaryShape;
 	}
 
 	/**
@@ -624,6 +624,7 @@ public class Node2EditPart extends ShapeNodeEditPart {
 			SWT.ITALIC);
 
 	ConnectionAnchor anchor;
+
 	/**
 	 * @generated NOT
 	 */

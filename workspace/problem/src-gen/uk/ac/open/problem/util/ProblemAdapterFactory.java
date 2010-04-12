@@ -12,7 +12,11 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import uk.ac.open.problem.*;
+import uk.ac.open.problem.Link;
+import uk.ac.open.problem.Node;
+import uk.ac.open.problem.Phenomenon;
+import uk.ac.open.problem.ProblemDiagram;
+import uk.ac.open.problem.ProblemPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -88,6 +92,9 @@ public class ProblemAdapterFactory extends AdapterFactoryImpl
 			@Override
 			public Adapter caseLink(Link object) {
 				return createLinkAdapter();
+			}
+			public Adapter caseOpenome_model_Link(edu.toronto.cs.openome_model.Link object) {
+				return createOpenome_model_LinkAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -166,6 +173,21 @@ public class ProblemAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
   public Adapter createLinkAdapter()
+  {
+		return null;
+	}
+
+  /**
+	 * Creates a new adapter for an object of class '{@link edu.toronto.cs.openome_model.Link <em>Link</em>}'.
+	 * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.toronto.cs.openome_model.Link
+	 * @generated
+	 */
+  public Adapter createOpenome_model_LinkAdapter()
   {
 		return null;
 	}

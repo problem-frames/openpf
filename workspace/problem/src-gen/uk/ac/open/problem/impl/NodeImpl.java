@@ -5,6 +5,7 @@
  */
 package uk.ac.open.problem.impl;
 
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -13,6 +14,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import edu.toronto.cs.openome_model.Model;
 
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.NodeType;
@@ -30,6 +33,7 @@ import uk.ac.open.problem.ProblemPackage;
  *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getType <em>Type</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getSubproblem <em>Subproblem</em>}</li>
+ *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getIstar <em>Istar</em>}</li>
  * </ul>
  * </p>
  *
@@ -100,14 +104,24 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
   /**
 	 * The cached value of the '{@link #getSubproblem() <em>Subproblem</em>}' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+   * <!-- end-user-doc -->
 	 * @see #getSubproblem()
 	 * @generated
 	 * @ordered
 	 */
-	protected ProblemDiagram subproblem;
+  protected ProblemDiagram subproblem;
 
-		/**
+  /**
+	 * The cached value of the '{@link #getIstar() <em>Istar</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see #getIstar()
+	 * @generated
+	 * @ordered
+	 */
+  protected Model istar;
+
+  /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -199,19 +213,21 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 
   /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+   * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProblemDiagram getSubproblem() {
+  public ProblemDiagram getSubproblem()
+  {
 		return subproblem;
 	}
 
-		/**
+  /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+   * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSubproblem(ProblemDiagram newSubproblem, NotificationChain msgs) {
+  public NotificationChain basicSetSubproblem(ProblemDiagram newSubproblem, NotificationChain msgs)
+  {
 		ProblemDiagram oldSubproblem = subproblem;
 		subproblem = newSubproblem;
 		if (eNotificationRequired()) {
@@ -221,12 +237,13 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 		return msgs;
 	}
 
-		/**
+  /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+   * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSubproblem(ProblemDiagram newSubproblem) {
+  public void setSubproblem(ProblemDiagram newSubproblem)
+  {
 		if (newSubproblem != subproblem) {
 			NotificationChain msgs = null;
 			if (subproblem != null)
@@ -240,21 +257,70 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 			eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.NODE__SUBPROBLEM, newSubproblem, newSubproblem));
 	}
 
-		/**
+  /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+   * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+  public Model getIstar()
+  {
+		return istar;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public NotificationChain basicSetIstar(Model newIstar, NotificationChain msgs)
+  {
+		Model oldIstar = istar;
+		istar = newIstar;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ProblemPackage.NODE__ISTAR, oldIstar, newIstar);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public void setIstar(Model newIstar)
+  {
+		if (newIstar != istar) {
+			NotificationChain msgs = null;
+			if (istar != null)
+				msgs = ((InternalEObject)istar).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ProblemPackage.NODE__ISTAR, null, msgs);
+			if (newIstar != null)
+				msgs = ((InternalEObject)newIstar).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ProblemPackage.NODE__ISTAR, null, msgs);
+			msgs = basicSetIstar(newIstar, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.NODE__ISTAR, newIstar, newIstar));
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
 		switch (featureID) {
 			case ProblemPackage.NODE__SUBPROBLEM:
 				return basicSetSubproblem(null, msgs);
+			case ProblemPackage.NODE__ISTAR:
+				return basicSetIstar(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
-		/**
+  /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -271,6 +337,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 				return getDescription();
 			case ProblemPackage.NODE__SUBPROBLEM:
 				return getSubproblem();
+			case ProblemPackage.NODE__ISTAR:
+				return getIstar();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -295,6 +363,9 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 				return;
 			case ProblemPackage.NODE__SUBPROBLEM:
 				setSubproblem((ProblemDiagram)newValue);
+				return;
+			case ProblemPackage.NODE__ISTAR:
+				setIstar((Model)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -321,6 +392,9 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 			case ProblemPackage.NODE__SUBPROBLEM:
 				setSubproblem((ProblemDiagram)null);
 				return;
+			case ProblemPackage.NODE__ISTAR:
+				setIstar((Model)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -342,6 +416,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case ProblemPackage.NODE__SUBPROBLEM:
 				return subproblem != null;
+			case ProblemPackage.NODE__ISTAR:
+				return istar != null;
 		}
 		return super.eIsSet(featureID);
 	}

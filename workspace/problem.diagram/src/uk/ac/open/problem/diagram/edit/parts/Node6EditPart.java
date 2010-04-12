@@ -36,7 +36,6 @@ import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.widgets.Display;
 
-import problem.EntityFigure;
 
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.NodeType;
@@ -45,6 +44,7 @@ import uk.ac.open.problem.diagram.edit.policies.Node6ItemSemanticEditPolicy;
 import uk.ac.open.problem.diagram.edit.policies.OpenDiagramEditPolicy;
 import uk.ac.open.problem.diagram.part.ProblemVisualIDRegistry;
 import uk.ac.open.problem.diagram.providers.ProblemElementTypes;
+import uk.ac.open.problem.figures.EntityFigure;
 
 /**
  * @generated
@@ -77,7 +77,7 @@ public class Node6EditPart extends ShapeNodeEditPart {
 		installEditPolicy(EditPolicyRoles.OPEN_ROLE,
 				new OpenDiagramEditPolicy());
 		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
-		 removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
+		removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
 	}
 
 	/**
@@ -594,15 +594,15 @@ public class Node6EditPart extends ShapeNodeEditPart {
 	 * @generated NOT
 	 */
 	protected IFigure createNodeShape() {
-		problem.EntityFigure figure = new problem.EntityFigure(node);
+		uk.ac.open.problem.figures.EntityFigure figure = new uk.ac.open.problem.figures.EntityFigure(node);
 		return primaryShape = figure;
 	}
 
 	/**
 	 * @generated NOT
 	 */
-	public problem.EntityFigure getPrimaryShape() {
-		return (problem.EntityFigure) primaryShape;
+	public uk.ac.open.problem.figures.EntityFigure getPrimaryShape() {
+		return (uk.ac.open.problem.figures.EntityFigure) primaryShape;
 	}
 
 	/**
@@ -626,6 +626,7 @@ public class Node6EditPart extends ShapeNodeEditPart {
 	}
 
 	ConnectionAnchor anchor;
+
 	/**
 	 * @generated NOT
 	 */
@@ -668,5 +669,5 @@ public class Node6EditPart extends ShapeNodeEditPart {
 			ConnectionEditPart connEditPart) {
 		return getConnectionAnchor();
 	}
-	
+
 }

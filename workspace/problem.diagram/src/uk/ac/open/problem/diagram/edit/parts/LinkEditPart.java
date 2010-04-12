@@ -171,10 +171,10 @@ public class LinkEditPart extends ConnectionNodeEditPart implements
 		Object feature = notification.getFeature();
 		if (ProblemPackage.eINSTANCE.getNode().equals(feature)) {
 			getPrimaryShape().repaint();
-		}  else 
+		} else
 			super.handleNotificationEvent(notification);
 	}
-	
+
 	/**
 	 * @generated NOT
 	 * @author yy66
@@ -186,12 +186,14 @@ public class LinkEditPart extends ConnectionNodeEditPart implements
 	 */
 	@Override
 	protected ConnectionAnchor getSourceConnectionAnchor() {
-		if (getSource() != null && getSource() instanceof uk.ac.open.problem.diagram.edit.parts.NodeEditPart) {
+		if (getSource() != null
+				&& getSource() instanceof uk.ac.open.problem.diagram.edit.parts.NodeEditPart) {
 			uk.ac.open.problem.diagram.edit.parts.NodeEditPart editPart = (uk.ac.open.problem.diagram.edit.parts.NodeEditPart) getSource();
 			return editPart.getSourceConnectionAnchor(this);
 		}
 		return super.getSourceConnectionAnchor();
-	}	
+	}
+
 	@Override
 	protected ConnectionAnchor getTargetConnectionAnchor() {
 		if (getTarget() instanceof uk.ac.open.problem.diagram.edit.parts.NodeEditPart) {
