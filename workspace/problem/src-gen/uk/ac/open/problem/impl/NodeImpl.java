@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import edu.toronto.cs.openome_model.Intention;
 import edu.toronto.cs.openome_model.Model;
 
 import uk.ac.open.problem.Node;
@@ -33,7 +34,9 @@ import uk.ac.open.problem.ProblemPackage;
  *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getType <em>Type</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getSubproblem <em>Subproblem</em>}</li>
+ *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getProblemRef <em>Problem Ref</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getIstar <em>Istar</em>}</li>
+ *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getIstarRef <em>Istar Ref</em>}</li>
  * </ul>
  * </p>
  *
@@ -112,6 +115,16 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
   protected ProblemDiagram subproblem;
 
   /**
+	 * The cached value of the '{@link #getProblemRef() <em>Problem Ref</em>}' reference.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see #getProblemRef()
+	 * @generated
+	 * @ordered
+	 */
+  protected Node problemRef;
+
+  /**
 	 * The cached value of the '{@link #getIstar() <em>Istar</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -120,6 +133,16 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 	 * @ordered
 	 */
   protected Model istar;
+
+  /**
+	 * The cached value of the '{@link #getIstarRef() <em>Istar Ref</em>}' reference.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see #getIstarRef()
+	 * @generated
+	 * @ordered
+	 */
+  protected Intention istarRef;
 
   /**
 	 * <!-- begin-user-doc -->
@@ -262,6 +285,47 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
    * <!-- end-user-doc -->
 	 * @generated
 	 */
+  public Node getProblemRef()
+  {
+		if (problemRef != null && problemRef.eIsProxy()) {
+			InternalEObject oldProblemRef = (InternalEObject)problemRef;
+			problemRef = (Node)eResolveProxy(oldProblemRef);
+			if (problemRef != oldProblemRef) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ProblemPackage.NODE__PROBLEM_REF, oldProblemRef, problemRef));
+			}
+		}
+		return problemRef;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public Node basicGetProblemRef()
+  {
+		return problemRef;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public void setProblemRef(Node newProblemRef)
+  {
+		Node oldProblemRef = problemRef;
+		problemRef = newProblemRef;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.NODE__PROBLEM_REF, oldProblemRef, problemRef));
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
   public Model getIstar()
   {
 		return istar;
@@ -308,6 +372,47 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
    * <!-- end-user-doc -->
 	 * @generated
 	 */
+  public Intention getIstarRef()
+  {
+		if (istarRef != null && istarRef.eIsProxy()) {
+			InternalEObject oldIstarRef = (InternalEObject)istarRef;
+			istarRef = (Intention)eResolveProxy(oldIstarRef);
+			if (istarRef != oldIstarRef) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ProblemPackage.NODE__ISTAR_REF, oldIstarRef, istarRef));
+			}
+		}
+		return istarRef;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public Intention basicGetIstarRef()
+  {
+		return istarRef;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public void setIstarRef(Intention newIstarRef)
+  {
+		Intention oldIstarRef = istarRef;
+		istarRef = newIstarRef;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.NODE__ISTAR_REF, oldIstarRef, istarRef));
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -337,8 +442,14 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 				return getDescription();
 			case ProblemPackage.NODE__SUBPROBLEM:
 				return getSubproblem();
+			case ProblemPackage.NODE__PROBLEM_REF:
+				if (resolve) return getProblemRef();
+				return basicGetProblemRef();
 			case ProblemPackage.NODE__ISTAR:
 				return getIstar();
+			case ProblemPackage.NODE__ISTAR_REF:
+				if (resolve) return getIstarRef();
+				return basicGetIstarRef();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -364,8 +475,14 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 			case ProblemPackage.NODE__SUBPROBLEM:
 				setSubproblem((ProblemDiagram)newValue);
 				return;
+			case ProblemPackage.NODE__PROBLEM_REF:
+				setProblemRef((Node)newValue);
+				return;
 			case ProblemPackage.NODE__ISTAR:
 				setIstar((Model)newValue);
+				return;
+			case ProblemPackage.NODE__ISTAR_REF:
+				setIstarRef((Intention)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -392,8 +509,14 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 			case ProblemPackage.NODE__SUBPROBLEM:
 				setSubproblem((ProblemDiagram)null);
 				return;
+			case ProblemPackage.NODE__PROBLEM_REF:
+				setProblemRef((Node)null);
+				return;
 			case ProblemPackage.NODE__ISTAR:
 				setIstar((Model)null);
+				return;
+			case ProblemPackage.NODE__ISTAR_REF:
+				setIstarRef((Intention)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -416,8 +539,12 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case ProblemPackage.NODE__SUBPROBLEM:
 				return subproblem != null;
+			case ProblemPackage.NODE__PROBLEM_REF:
+				return problemRef != null;
 			case ProblemPackage.NODE__ISTAR:
 				return istar != null;
+			case ProblemPackage.NODE__ISTAR_REF:
+				return istarRef != null;
 		}
 		return super.eIsSet(featureID);
 	}

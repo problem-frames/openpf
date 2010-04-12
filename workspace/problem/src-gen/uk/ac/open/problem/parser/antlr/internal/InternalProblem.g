@@ -267,13 +267,38 @@ ruleNode returns [EObject current=null]
 	    }
 	
 )
+    |('see' 
+    {
+        createLeafNode(grammarAccess.getNodeAccess().getSeeKeyword_3_1_1_0(), null); 
+    }
+'domain' 
+    {
+        createLeafNode(grammarAccess.getNodeAccess().getDomainKeyword_3_1_1_1(), null); 
+    }
+(	
+	
+		
+		{
+			if ($current==null) {
+	            $current = factory.create(grammarAccess.getNodeRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode, $current);
+	        }
+        }
+	RULE_ID
+	{
+		createLeafNode(grammarAccess.getNodeAccess().getProblemRefNodeCrossReference_3_1_1_2_0(), "problemRef"); 
+	}
+
+		// TODO assign feature to currentNode
+	
+))
     |(	
 	
 	    
 	    { 
-	        currentNode=createCompositeNode(grammarAccess.getNodeAccess().getIstarModelParserRuleCall_3_1_1_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getNodeAccess().getIstarModelParserRuleCall_3_1_2_0(), currentNode); 
 	    }
-	    lv_istar_6=ruleModel 
+	    lv_istar_9=ruleModel 
 	    {
 	        if ($current==null) {
 	            $current = factory.create(grammarAccess.getNodeRule().getType().getClassifier());
@@ -281,14 +306,39 @@ ruleNode returns [EObject current=null]
 	        }
 	        
 	        try {
-	       		set($current, "istar", lv_istar_6, "Model", currentNode);
+	       		set($current, "istar", lv_istar_9, "Model", currentNode);
 	        } catch (ValueConverterException vce) {
 				handleValueConverterException(vce);
 	        }
 	        currentNode = currentNode.getParent();
 	    }
 	
-))'}' 
+)
+    |('see' 
+    {
+        createLeafNode(grammarAccess.getNodeAccess().getSeeKeyword_3_1_3_0(), null); 
+    }
+'intention' 
+    {
+        createLeafNode(grammarAccess.getNodeAccess().getIntentionKeyword_3_1_3_1(), null); 
+    }
+(	
+	
+		
+		{
+			if ($current==null) {
+	            $current = factory.create(grammarAccess.getNodeRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode, $current);
+	        }
+        }
+	RULE_ID
+	{
+		createLeafNode(grammarAccess.getNodeAccess().getIstarRefIntentionCrossReference_3_1_3_2_0(), "istarRef"); 
+	}
+
+		// TODO assign feature to currentNode
+	
+)))'}' 
     {
         createLeafNode(grammarAccess.getNodeAccess().getRightCurlyBracketKeyword_3_2(), null); 
     }

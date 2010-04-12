@@ -6,7 +6,6 @@
 package uk.ac.open.problem;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,7 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Link extends EObject
+public interface Link extends edu.toronto.cs.openome_model.Link
 {
   /**
 	 * Returns the value of the '<em><b>From</b></em>' reference.

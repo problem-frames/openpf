@@ -6,7 +6,7 @@
 package edu.toronto.cs.openome_model.tests;
 
 import edu.toronto.cs.openome_model.Goal;
-import edu.toronto.cs.openome_model.openome_modelFactory;
+import edu.toronto.cs.openome_model.Openome_modelFactory;
 
 import junit.textui.TestRunner;
 
@@ -56,7 +56,7 @@ public class GoalTest extends IntentionTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(openome_modelFactory.eINSTANCE.createGoal());
+		setFixture(Openome_modelFactory.eINSTANCE.createGoal());
 	}
 
 	/**

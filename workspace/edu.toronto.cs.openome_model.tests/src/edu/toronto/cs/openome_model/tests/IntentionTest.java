@@ -6,7 +6,7 @@
 package edu.toronto.cs.openome_model.tests;
 
 import edu.toronto.cs.openome_model.Intention;
-import edu.toronto.cs.openome_model.openome_modelFactory;
+import edu.toronto.cs.openome_model.Openome_modelFactory;
 
 import junit.textui.TestRunner;
 
@@ -56,7 +56,7 @@ public class IntentionTest extends DependableTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(openome_modelFactory.eINSTANCE.createIntention());
+		setFixture(Openome_modelFactory.eINSTANCE.createIntention());
 	}
 
 	/**

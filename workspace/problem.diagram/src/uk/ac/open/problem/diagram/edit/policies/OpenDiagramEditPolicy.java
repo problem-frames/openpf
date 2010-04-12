@@ -5,7 +5,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Iterator;
 
 import edu.toronto.cs.openome_model.Model;
-import edu.toronto.cs.openome_model.openome_modelFactory;
+import edu.toronto.cs.openome_model.Openome_modelFactory;
 
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.CoreException;
@@ -143,26 +143,37 @@ public class OpenDiagramEditPolicy extends OpenEditPolicy {
 			Diagram d = null;
 			if (!node.getType().equals(NodeType.REQUIREMENT)) {
 				if (node.getSubproblem() == null) {
-					ProblemDiagram pd = ProblemFactory.eINSTANCE
-							.createProblemDiagram();
-					pd.setDescription(node.getDescription());
+					ProblemDiagram pd = null;
+					if (node.getProblemRef()!=null) {
+						if (node.getProblemRef().getSubproblem() != null) {
+							pd = node.getProblemRef().getSubproblem();							
+						}
+					} 
+					if (pd == null) {
+						pd = ProblemFactory.eINSTANCE.createProblemDiagram();
+						pd.setDescription(node.getDescription());
+					}
 					node.setSubproblem(pd);
 				}
 				d = ViewService.createDiagram(node.getSubproblem(),
 						getDiagramKind(), getPreferencesHint());
 			} else {
 				if (node.getIstar() == null) {
-					Model ood = openome_modelFactory.eINSTANCE.createModel();
-					ood.setName(node.getDescription());
+					Model ood = null;
+					if (node.getIstarRef()!=null) {
+						if (node.getIstarRef().getContainer() != null) {
+							ood = node.getIstarRef().getContainer().getModel();							
+						}
+					} 
+					if (ood == null) {
+						ood = Openome_modelFactory.eINSTANCE.createModel();
+						ood.setName(node.getDescription());
+					}
 					node.setIstar(ood);
 				}
-				System.out.println(node.getIstar());
-				System.out.println(ModelEditPart.MODEL_ID);
-//				System.out.println(Openome_modelDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT);
 				d = ViewService.createDiagram(node.getIstar(),
 					ModelEditPart.MODEL_ID,
 					null);
-				System.out.println(d);
 			}
 			if (d == null) {
 				throw new ExecutionException("Can't create diagram of '"

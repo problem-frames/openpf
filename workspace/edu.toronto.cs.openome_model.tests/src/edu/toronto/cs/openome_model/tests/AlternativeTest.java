@@ -6,7 +6,7 @@
 package edu.toronto.cs.openome_model.tests;
 
 import edu.toronto.cs.openome_model.Alternative;
-import edu.toronto.cs.openome_model.openome_modelFactory;
+import edu.toronto.cs.openome_model.Openome_modelFactory;
 
 import junit.framework.TestCase;
 
@@ -75,7 +75,7 @@ public class AlternativeTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(openome_modelFactory.eINSTANCE.createAlternative());
+		setFixture(Openome_modelFactory.eINSTANCE.createAlternative());
 	}
 
 	/**

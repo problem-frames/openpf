@@ -85,17 +85,31 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 		private final Alternatives cAlternatives_3_1 = (Alternatives)cGroup_3.eContents().get(1);
 		private final Assignment cSubproblemAssignment_3_1_0 = (Assignment)cAlternatives_3_1.eContents().get(0);
 		private final RuleCall cSubproblemProblemDiagramParserRuleCall_3_1_0_0 = (RuleCall)cSubproblemAssignment_3_1_0.eContents().get(0);
-		private final Assignment cIstarAssignment_3_1_1 = (Assignment)cAlternatives_3_1.eContents().get(1);
-		private final RuleCall cIstarModelParserRuleCall_3_1_1_0 = (RuleCall)cIstarAssignment_3_1_1.eContents().get(0);
+		private final Group cGroup_3_1_1 = (Group)cAlternatives_3_1.eContents().get(1);
+		private final Keyword cSeeKeyword_3_1_1_0 = (Keyword)cGroup_3_1_1.eContents().get(0);
+		private final Keyword cDomainKeyword_3_1_1_1 = (Keyword)cGroup_3_1_1.eContents().get(1);
+		private final Assignment cProblemRefAssignment_3_1_1_2 = (Assignment)cGroup_3_1_1.eContents().get(2);
+		private final CrossReference cProblemRefNodeCrossReference_3_1_1_2_0 = (CrossReference)cProblemRefAssignment_3_1_1_2.eContents().get(0);
+		private final RuleCall cProblemRefNodeIDTerminalRuleCall_3_1_1_2_0_1 = (RuleCall)cProblemRefNodeCrossReference_3_1_1_2_0.eContents().get(1);
+		private final Assignment cIstarAssignment_3_1_2 = (Assignment)cAlternatives_3_1.eContents().get(2);
+		private final RuleCall cIstarModelParserRuleCall_3_1_2_0 = (RuleCall)cIstarAssignment_3_1_2.eContents().get(0);
+		private final Group cGroup_3_1_3 = (Group)cAlternatives_3_1.eContents().get(3);
+		private final Keyword cSeeKeyword_3_1_3_0 = (Keyword)cGroup_3_1_3.eContents().get(0);
+		private final Keyword cIntentionKeyword_3_1_3_1 = (Keyword)cGroup_3_1_3.eContents().get(1);
+		private final Assignment cIstarRefAssignment_3_1_3_2 = (Assignment)cGroup_3_1_3.eContents().get(2);
+		private final CrossReference cIstarRefIntentionCrossReference_3_1_3_2_0 = (CrossReference)cIstarRefAssignment_3_1_3_2.eContents().get(0);
+		private final RuleCall cIstarRefIntentionIDTerminalRuleCall_3_1_3_2_0_1 = (RuleCall)cIstarRefIntentionCrossReference_3_1_3_2_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
 		
 		//Node:
 		//  name=ID type=NodeType? (":" description=STRING)? ("{" (subproblem=ProblemDiagram|
-		//  istar=Model) "}")?;
+		//  "see" "domain" problemRef=[Node]|istar=Model|"see" "intention" istarRef=[
+		//  openome_model::Intention]) "}")?;
 		public ParserRule getRule() { return rule; }
 
 		//name=ID type=NodeType? (":" description=STRING)? ("{" (subproblem=ProblemDiagram|
-		//istar=Model) "}")?
+		//"see" "domain" problemRef=[Node]|istar=Model|"see" "intention" istarRef=[
+		//openome_model::Intention]) "}")?
 		public Group getGroup() { return cGroup; }
 
 		//name=ID
@@ -122,13 +136,15 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 		//STRING
 		public RuleCall getDescriptionSTRINGTerminalRuleCall_2_1_0() { return cDescriptionSTRINGTerminalRuleCall_2_1_0; }
 
-		//("{" (subproblem=ProblemDiagram|istar=Model) "}")?
+		//("{" (subproblem=ProblemDiagram|"see" "domain" problemRef=[Node]|istar=Model|"see"
+		//"intention" istarRef=[openome_model::Intention]) "}")?
 		public Group getGroup_3() { return cGroup_3; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_3_0() { return cLeftCurlyBracketKeyword_3_0; }
 
-		//subproblem=ProblemDiagram|istar=Model
+		//subproblem=ProblemDiagram|"see" "domain" problemRef=[Node]|istar=Model|"see"
+		//"intention" istarRef=[openome_model::Intention]
 		public Alternatives getAlternatives_3_1() { return cAlternatives_3_1; }
 
 		//subproblem=ProblemDiagram
@@ -137,11 +153,47 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 		//ProblemDiagram
 		public RuleCall getSubproblemProblemDiagramParserRuleCall_3_1_0_0() { return cSubproblemProblemDiagramParserRuleCall_3_1_0_0; }
 
+		//"see" "domain" problemRef=[Node]
+		public Group getGroup_3_1_1() { return cGroup_3_1_1; }
+
+		//"see"
+		public Keyword getSeeKeyword_3_1_1_0() { return cSeeKeyword_3_1_1_0; }
+
+		//"domain"
+		public Keyword getDomainKeyword_3_1_1_1() { return cDomainKeyword_3_1_1_1; }
+
+		//problemRef=[Node]
+		public Assignment getProblemRefAssignment_3_1_1_2() { return cProblemRefAssignment_3_1_1_2; }
+
+		//[Node]
+		public CrossReference getProblemRefNodeCrossReference_3_1_1_2_0() { return cProblemRefNodeCrossReference_3_1_1_2_0; }
+
+		//ID
+		public RuleCall getProblemRefNodeIDTerminalRuleCall_3_1_1_2_0_1() { return cProblemRefNodeIDTerminalRuleCall_3_1_1_2_0_1; }
+
 		//istar=Model
-		public Assignment getIstarAssignment_3_1_1() { return cIstarAssignment_3_1_1; }
+		public Assignment getIstarAssignment_3_1_2() { return cIstarAssignment_3_1_2; }
 
 		//Model
-		public RuleCall getIstarModelParserRuleCall_3_1_1_0() { return cIstarModelParserRuleCall_3_1_1_0; }
+		public RuleCall getIstarModelParserRuleCall_3_1_2_0() { return cIstarModelParserRuleCall_3_1_2_0; }
+
+		//"see" "intention" istarRef=[openome_model::Intention]
+		public Group getGroup_3_1_3() { return cGroup_3_1_3; }
+
+		//"see"
+		public Keyword getSeeKeyword_3_1_3_0() { return cSeeKeyword_3_1_3_0; }
+
+		//"intention"
+		public Keyword getIntentionKeyword_3_1_3_1() { return cIntentionKeyword_3_1_3_1; }
+
+		//istarRef=[openome_model::Intention]
+		public Assignment getIstarRefAssignment_3_1_3_2() { return cIstarRefAssignment_3_1_3_2; }
+
+		//[openome_model::Intention]
+		public CrossReference getIstarRefIntentionCrossReference_3_1_3_2_0() { return cIstarRefIntentionCrossReference_3_1_3_2_0; }
+
+		//ID
+		public RuleCall getIstarRefIntentionIDTerminalRuleCall_3_1_3_2_0_1() { return cIstarRefIntentionIDTerminalRuleCall_3_1_3_2_0_1; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_3_2() { return cRightCurlyBracketKeyword_3_2; }
@@ -473,7 +525,8 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 
 	//Node:
 	//  name=ID type=NodeType? (":" description=STRING)? ("{" (subproblem=ProblemDiagram|
-	//  istar=Model) "}")?;
+	//  "see" "domain" problemRef=[Node]|istar=Model|"see" "intention" istarRef=[
+	//  openome_model::Intention]) "}")?;
 	public NodeElements getNodeAccess() {
 		return (pNode != null) ? pNode : (pNode = new NodeElements());
 	}

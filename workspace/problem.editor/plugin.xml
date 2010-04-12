@@ -17,7 +17,7 @@
       <wizard
             id="uk.ac.open.problem.problem.presentation.ProblemModelWizardID"
             name="%_UI_ProblemModelWizard_label"
-            class="uk.ac.open.problem.problem.presentation.ProblemModelWizard"
+            class="uk.ac.open.problem.presentation.ProblemModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/ProblemModelFile.gif">
          <description>%_UI_ProblemModelWizard_description</description>
@@ -31,8 +31,8 @@
             name="%_UI_ProblemEditor_label"
             icon="icons/full/obj16/ProblemModelFile.gif"
             extensions="problem"
-            class="uk.ac.open.problem.problem.presentation.ProblemEditor"
-            contributorClass="uk.ac.open.problem.problem.presentation.ProblemActionBarContributor">
+            class="uk.ac.open.problem.presentation.ProblemEditor"
+            contributorClass="uk.ac.open.problem.presentation.ProblemActionBarContributor">
       </editor>
    </extension>
 

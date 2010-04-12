@@ -29,11 +29,14 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import edu.toronto.cs.openome_model.openome_modelFactory;
+import edu.toronto.cs.openome_model.Openome_modelFactory;
+import edu.toronto.cs.openome_model.Openome_modelFactory;
 
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.ProblemFactory;
 import uk.ac.open.problem.ProblemPackage;
+
+import uk.ac.open.problem.provider.ProblemEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link uk.ac.open.problem.Node} object.
@@ -73,6 +76,8 @@ public class NodeItemProvider
 			addNamePropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
+			addProblemRefPropertyDescriptor(object);
+			addIstarRefPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -139,6 +144,50 @@ public class NodeItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Problem Ref feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addProblemRefPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Node_problemRef_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Node_problemRef_feature", "_UI_Node_type"),
+				 ProblemPackage.Literals.NODE__PROBLEM_REF,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Istar Ref feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIstarRefPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Node_istarRef_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Node_istarRef_feature", "_UI_Node_type"),
+				 ProblemPackage.Literals.NODE__ISTAR_REF,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}
@@ -243,7 +292,7 @@ public class NodeItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ProblemPackage.Literals.NODE__ISTAR,
-				 openome_modelFactory.eINSTANCE.createModel()));
+				 Openome_modelFactory.eINSTANCE.createModel()));
 	}
 
 	/**

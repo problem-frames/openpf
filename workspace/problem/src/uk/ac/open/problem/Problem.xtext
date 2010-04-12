@@ -8,7 +8,9 @@ ProblemDiagram: ("problem" ':' description=STRING)?
 Node:
   name=ID (type=NodeType)? 
   (':' description=STRING)?
-  ("{" (subproblem=ProblemDiagram | istar=Model) "}")?;
+  ("{" (subproblem=ProblemDiagram | "see" "domain" problemRef=[Node] | 
+  		istar=Model | "see" "intention" istarRef=[openome_model::Intention]
+  ) "}")?;
 
 enum NodeType:
   REQUIREMENT="R" | MACHINE="M" | BIDDABLE="B" | LEXICAL="X" | CAUSAL="C" | DESIGNED="D" | PHYSICAL="P";
@@ -25,3 +27,4 @@ Link:
 
 enum LinkType:
   INTERFACE="->" | REFERENCE="~~" | CONSTRAINT="~>";
+   

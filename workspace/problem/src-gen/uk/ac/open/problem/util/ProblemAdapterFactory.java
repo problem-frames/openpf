@@ -17,6 +17,7 @@ import uk.ac.open.problem.Node;
 import uk.ac.open.problem.Phenomenon;
 import uk.ac.open.problem.ProblemDiagram;
 import uk.ac.open.problem.ProblemPackage;
+//import uk.ac.open.problem.problem.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -93,6 +94,7 @@ public class ProblemAdapterFactory extends AdapterFactoryImpl
 			public Adapter caseLink(Link object) {
 				return createLinkAdapter();
 			}
+			@Override
 			public Adapter caseOpenome_model_Link(edu.toronto.cs.openome_model.Link object) {
 				return createOpenome_model_LinkAdapter();
 			}

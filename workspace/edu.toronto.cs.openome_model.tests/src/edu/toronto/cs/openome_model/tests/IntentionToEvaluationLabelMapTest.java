@@ -7,8 +7,8 @@ package edu.toronto.cs.openome_model.tests;
 
 import edu.toronto.cs.openome_model.EvaluationLabel;
 import edu.toronto.cs.openome_model.Intention;
-import edu.toronto.cs.openome_model.openome_modelFactory;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelFactory;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 
 import java.util.Map;
 
@@ -80,7 +80,7 @@ public class IntentionToEvaluationLabelMapTest extends TestCase {
 	@Override
 	@SuppressWarnings("unchecked")
 	protected void setUp() throws Exception {
-		setFixture((Map.Entry<Intention, EvaluationLabel>)openome_modelFactory.eINSTANCE.create(openome_modelPackage.Literals.INTENTION_TO_EVALUATION_LABEL_MAP));
+		setFixture((Map.Entry<Intention, EvaluationLabel>)Openome_modelFactory.eINSTANCE.create(Openome_modelPackage.Literals.INTENTION_TO_EVALUATION_LABEL_MAP));
 	}
 
 	/**

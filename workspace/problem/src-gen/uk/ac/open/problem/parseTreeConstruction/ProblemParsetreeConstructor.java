@@ -281,12 +281,14 @@ protected class ProblemDiagram_LinksAssignment_1_1 extends AssignmentToken  {
  *
  * Node:
  *   name=ID type=NodeType? (":" description=STRING)? ("{" (subproblem=ProblemDiagram|
- *   istar=Model) "}")?;
+ *   "see" "domain" problemRef=[Node]|istar=Model|"see" "intention" istarRef=[
+ *   openome_model::Intention]) "}")?;
  *
  **/
 
 // name=ID type=NodeType? (":" description=STRING)? ("{" (subproblem=ProblemDiagram|
-// istar=Model) "}")?
+// "see" "domain" problemRef=[Node]|istar=Model|"see" "intention" istarRef=[
+// openome_model::Intention]) "}")?
 protected class Node_Group extends GroupToken {
 	
 	public Node_Group(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
@@ -447,7 +449,8 @@ protected class Node_DescriptionAssignment_2_1 extends AssignmentToken  {
 }
 
 
-// ("{" (subproblem=ProblemDiagram|istar=Model) "}")?
+// ("{" (subproblem=ProblemDiagram|"see" "domain" problemRef=[Node]|istar=Model|"see"
+// "intention" istarRef=[openome_model::Intention]) "}")?
 protected class Node_Group_3 extends GroupToken {
 	
 	public Node_Group_3(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
@@ -489,7 +492,8 @@ protected class Node_LeftCurlyBracketKeyword_3_0 extends KeywordToken  {
 		
 }
 
-// subproblem=ProblemDiagram|istar=Model
+// subproblem=ProblemDiagram|"see" "domain" problemRef=[Node]|istar=Model|"see"
+// "intention" istarRef=[openome_model::Intention]
 protected class Node_Alternatives_3_1 extends AlternativesToken {
 
 	public Node_Alternatives_3_1(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
@@ -503,7 +507,9 @@ protected class Node_Alternatives_3_1 extends AlternativesToken {
 	public AbstractToken createFollower(int index, IInstanceDescription inst) {
 		switch(index) {
 			case 0: return new Node_SubproblemAssignment_3_1_0(parent, this, 0, inst);
-			case 1: return new Node_IstarAssignment_3_1_1(parent, this, 1, inst);
+			case 1: return new Node_Group_3_1_1(parent, this, 1, inst);
+			case 2: return new Node_IstarAssignment_3_1_2(parent, this, 2, inst);
+			case 3: return new Node_Group_3_1_3(parent, this, 3, inst);
 			default: return null;
 		}	
 	}	
@@ -552,15 +558,110 @@ protected class Node_SubproblemAssignment_3_1_0 extends AssignmentToken  {
 	}	
 }
 
-// istar=Model
-protected class Node_IstarAssignment_3_1_1 extends AssignmentToken  {
+// "see" "domain" problemRef=[Node]
+protected class Node_Group_3_1_1 extends GroupToken {
 	
-	public Node_IstarAssignment_3_1_1(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
+	public Node_Group_3_1_1(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
+		super(parent, next, no, current);
+	}
+	
+	public Group getGrammarElement() {
+		return grammarAccess.getNodeAccess().getGroup_3_1_1();
+	}
+
+	public AbstractToken createFollower(int index, IInstanceDescription inst) {
+		switch(index) {
+			case 0: return new Node_ProblemRefAssignment_3_1_1_2(parent, this, 0, inst);
+			default: return null;
+		}	
+	}	
+		
+}
+
+// "see"
+protected class Node_SeeKeyword_3_1_1_0 extends KeywordToken  {
+	
+	public Node_SeeKeyword_3_1_1_0(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
+		super(parent, next, no, current);
+	}
+	
+	public Keyword getGrammarElement() {
+		return grammarAccess.getNodeAccess().getSeeKeyword_3_1_1_0();
+	}
+
+	public AbstractToken createFollower(int index, IInstanceDescription inst) {
+		switch(index) {
+			case 0: return new Node_LeftCurlyBracketKeyword_3_0(parent, this, 0, inst);
+			default: return null;
+		}	
+	}	
+		
+}
+
+// "domain"
+protected class Node_DomainKeyword_3_1_1_1 extends KeywordToken  {
+	
+	public Node_DomainKeyword_3_1_1_1(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
+		super(parent, next, no, current);
+	}
+	
+	public Keyword getGrammarElement() {
+		return grammarAccess.getNodeAccess().getDomainKeyword_3_1_1_1();
+	}
+
+	public AbstractToken createFollower(int index, IInstanceDescription inst) {
+		switch(index) {
+			case 0: return new Node_SeeKeyword_3_1_1_0(parent, this, 0, inst);
+			default: return null;
+		}	
+	}	
+		
+}
+
+// problemRef=[Node]
+protected class Node_ProblemRefAssignment_3_1_1_2 extends AssignmentToken  {
+	
+	public Node_ProblemRefAssignment_3_1_1_2(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
 		super(parent, next, no, current);
 	}
 	
 	public Assignment getGrammarElement() {
-		return grammarAccess.getNodeAccess().getIstarAssignment_3_1_1();
+		return grammarAccess.getNodeAccess().getProblemRefAssignment_3_1_1_2();
+	}
+
+	public AbstractToken createFollower(int index, IInstanceDescription inst) {
+		switch(index) {
+			case 0: return new Node_DomainKeyword_3_1_1_1(parent, this, 0, inst);
+			default: return null;
+		}	
+	}	
+		
+	protected IInstanceDescription tryConsumeVal() {
+		if((value = current.getConsumable("problemRef",true)) == null) return null;
+		IInstanceDescription obj = current.cloneAndConsume("problemRef");
+		if(value instanceof EObject) { // org::eclipse::xtext::impl::CrossReferenceImpl
+			IInstanceDescription param = getDescr((EObject)value);
+			if(param.isInstanceOf(grammarAccess.getNodeAccess().getProblemRefNodeCrossReference_3_1_1_2_0().getType().getClassifier())) {
+				type = AssignmentType.CR;
+				element = grammarAccess.getNodeAccess().getProblemRefNodeCrossReference_3_1_1_2_0(); 
+				return obj;
+			}
+		}
+		return null;
+	}
+
+}
+
+
+// istar=Model
+protected class Node_IstarAssignment_3_1_2 extends AssignmentToken  {
+	
+	public Node_IstarAssignment_3_1_2(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
+		super(parent, next, no, current);
+	}
+	
+	public Assignment getGrammarElement() {
+		return grammarAccess.getNodeAccess().getIstarAssignment_3_1_2();
 	}
 
 	public AbstractToken createFollower(int index, IInstanceDescription inst) {
@@ -577,7 +678,7 @@ protected class Node_IstarAssignment_3_1_1 extends AssignmentToken  {
 			IInstanceDescription param = getDescr((EObject)value);
 			if(param.isInstanceOf(grammarAccess.getModelRule().getType().getClassifier())) {
 				type = AssignmentType.PRC;
-				element = grammarAccess.getNodeAccess().getIstarModelParserRuleCall_3_1_1_0(); 
+				element = grammarAccess.getNodeAccess().getIstarModelParserRuleCall_3_1_2_0(); 
 				consumed = obj;
 				return param;
 			}
@@ -593,6 +694,101 @@ protected class Node_IstarAssignment_3_1_1 extends AssignmentToken  {
 		}	
 	}	
 }
+
+// "see" "intention" istarRef=[openome_model::Intention]
+protected class Node_Group_3_1_3 extends GroupToken {
+	
+	public Node_Group_3_1_3(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
+		super(parent, next, no, current);
+	}
+	
+	public Group getGrammarElement() {
+		return grammarAccess.getNodeAccess().getGroup_3_1_3();
+	}
+
+	public AbstractToken createFollower(int index, IInstanceDescription inst) {
+		switch(index) {
+			case 0: return new Node_IstarRefAssignment_3_1_3_2(parent, this, 0, inst);
+			default: return null;
+		}	
+	}	
+		
+}
+
+// "see"
+protected class Node_SeeKeyword_3_1_3_0 extends KeywordToken  {
+	
+	public Node_SeeKeyword_3_1_3_0(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
+		super(parent, next, no, current);
+	}
+	
+	public Keyword getGrammarElement() {
+		return grammarAccess.getNodeAccess().getSeeKeyword_3_1_3_0();
+	}
+
+	public AbstractToken createFollower(int index, IInstanceDescription inst) {
+		switch(index) {
+			case 0: return new Node_LeftCurlyBracketKeyword_3_0(parent, this, 0, inst);
+			default: return null;
+		}	
+	}	
+		
+}
+
+// "intention"
+protected class Node_IntentionKeyword_3_1_3_1 extends KeywordToken  {
+	
+	public Node_IntentionKeyword_3_1_3_1(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
+		super(parent, next, no, current);
+	}
+	
+	public Keyword getGrammarElement() {
+		return grammarAccess.getNodeAccess().getIntentionKeyword_3_1_3_1();
+	}
+
+	public AbstractToken createFollower(int index, IInstanceDescription inst) {
+		switch(index) {
+			case 0: return new Node_SeeKeyword_3_1_3_0(parent, this, 0, inst);
+			default: return null;
+		}	
+	}	
+		
+}
+
+// istarRef=[openome_model::Intention]
+protected class Node_IstarRefAssignment_3_1_3_2 extends AssignmentToken  {
+	
+	public Node_IstarRefAssignment_3_1_3_2(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
+		super(parent, next, no, current);
+	}
+	
+	public Assignment getGrammarElement() {
+		return grammarAccess.getNodeAccess().getIstarRefAssignment_3_1_3_2();
+	}
+
+	public AbstractToken createFollower(int index, IInstanceDescription inst) {
+		switch(index) {
+			case 0: return new Node_IntentionKeyword_3_1_3_1(parent, this, 0, inst);
+			default: return null;
+		}	
+	}	
+		
+	protected IInstanceDescription tryConsumeVal() {
+		if((value = current.getConsumable("istarRef",true)) == null) return null;
+		IInstanceDescription obj = current.cloneAndConsume("istarRef");
+		if(value instanceof EObject) { // org::eclipse::xtext::impl::CrossReferenceImpl
+			IInstanceDescription param = getDescr((EObject)value);
+			if(param.isInstanceOf(grammarAccess.getNodeAccess().getIstarRefIntentionCrossReference_3_1_3_2_0().getType().getClassifier())) {
+				type = AssignmentType.CR;
+				element = grammarAccess.getNodeAccess().getIstarRefIntentionCrossReference_3_1_3_2_0(); 
+				return obj;
+			}
+		}
+		return null;
+	}
+
+}
+
 
 
 // "}"

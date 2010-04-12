@@ -6,8 +6,8 @@
 package edu.toronto.cs.openome_model.tests;
 
 import edu.toronto.cs.openome_model.Actor;
-import edu.toronto.cs.openome_model.openome_modelFactory;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelFactory;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 
 import java.io.File;
 import java.io.IOException;
@@ -54,8 +54,8 @@ public class openome_modelExample {
 		// Register the package to ensure it is available during loading.
 		//
 		resourceSet.getPackageRegistry().put
-			(openome_modelPackage.eNS_URI, 
-			 openome_modelPackage.eINSTANCE);
+			(Openome_modelPackage.eNS_URI, 
+			 Openome_modelPackage.eINSTANCE);
         
 		// If there are no arguments, emit an appropriate usage message.
 		//
@@ -63,7 +63,7 @@ public class openome_modelExample {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
 				Resource resource = resourceSet.createResource(URI.createURI("http:///My.openome_model"));
-				Actor root = openome_modelFactory.eINSTANCE.createActor();
+				Actor root = Openome_modelFactory.eINSTANCE.createActor();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
 			}

@@ -17,7 +17,7 @@ import uk.ac.open.problem.ProblemFactory;
  * <!-- end-user-doc -->
  * @generated
  */
-public class LinkTest extends edu.toronto.cs.openome_model.tests.LinkTest {
+public class LinkTest extends openome_model.tests.LinkTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -44,8 +44,9 @@ public class LinkTest extends edu.toronto.cs.openome_model.tests.LinkTest {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */	
-	protected edu.toronto.cs.openome_model.Link getFixture() {
-		return (edu.toronto.cs.openome_model.Link)fixture;
+	@Override
+	protected Link getFixture() {
+		return (Link)fixture;
 	}
 
 	/**
@@ -56,7 +57,7 @@ public class LinkTest extends edu.toronto.cs.openome_model.tests.LinkTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture((edu.toronto.cs.openome_model.Link) ProblemFactory.eINSTANCE.createLink());
+		setFixture(ProblemFactory.eINSTANCE.createLink());
 	}
 
 	/**

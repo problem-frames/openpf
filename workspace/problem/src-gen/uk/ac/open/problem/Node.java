@@ -8,6 +8,7 @@ package uk.ac.open.problem;
 
 import org.eclipse.emf.ecore.EObject;
 
+import edu.toronto.cs.openome_model.Intention;
 import edu.toronto.cs.openome_model.Model;
 
 /**
@@ -22,7 +23,9 @@ import edu.toronto.cs.openome_model.Model;
  *   <li>{@link uk.ac.open.problem.Node#getType <em>Type</em>}</li>
  *   <li>{@link uk.ac.open.problem.Node#getDescription <em>Description</em>}</li>
  *   <li>{@link uk.ac.open.problem.Node#getSubproblem <em>Subproblem</em>}</li>
+ *   <li>{@link uk.ac.open.problem.Node#getProblemRef <em>Problem Ref</em>}</li>
  *   <li>{@link uk.ac.open.problem.Node#getIstar <em>Istar</em>}</li>
+ *   <li>{@link uk.ac.open.problem.Node#getIstarRef <em>Istar Ref</em>}</li>
  * </ul>
  * </p>
  *
@@ -140,6 +143,32 @@ public interface Node extends EObject
   void setSubproblem(ProblemDiagram value);
 
   /**
+	 * Returns the value of the '<em><b>Problem Ref</b></em>' reference.
+	 * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Problem Ref</em>' reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+	 * @return the value of the '<em>Problem Ref</em>' reference.
+	 * @see #setProblemRef(Node)
+	 * @see uk.ac.open.problem.ProblemPackage#getNode_ProblemRef()
+	 * @model
+	 * @generated
+	 */
+  Node getProblemRef();
+
+  /**
+	 * Sets the value of the '{@link uk.ac.open.problem.Node#getProblemRef <em>Problem Ref</em>}' reference.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Problem Ref</em>' reference.
+	 * @see #getProblemRef()
+	 * @generated
+	 */
+  void setProblemRef(Node value);
+
+  /**
 	 * Returns the value of the '<em><b>Istar</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
    * <p>
@@ -164,5 +193,31 @@ public interface Node extends EObject
 	 * @generated
 	 */
   void setIstar(Model value);
+
+  /**
+	 * Returns the value of the '<em><b>Istar Ref</b></em>' reference.
+	 * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Istar Ref</em>' reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+	 * @return the value of the '<em>Istar Ref</em>' reference.
+	 * @see #setIstarRef(Intention)
+	 * @see uk.ac.open.problem.ProblemPackage#getNode_IstarRef()
+	 * @model
+	 * @generated
+	 */
+  Intention getIstarRef();
+
+  /**
+	 * Sets the value of the '{@link uk.ac.open.problem.Node#getIstarRef <em>Istar Ref</em>}' reference.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Istar Ref</em>' reference.
+	 * @see #getIstarRef()
+	 * @generated
+	 */
+  void setIstarRef(Intention value);
 
 } // Node

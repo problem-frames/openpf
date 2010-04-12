@@ -15,6 +15,7 @@ import uk.ac.open.problem.Node;
 import uk.ac.open.problem.Phenomenon;
 import uk.ac.open.problem.ProblemDiagram;
 import uk.ac.open.problem.ProblemPackage;
+//import uk.ac.open.problem.problem.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -199,7 +200,7 @@ public class ProblemSwitch<T>
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseOpenome_model_Link(Link object)
+  public T caseOpenome_model_Link(edu.toronto.cs.openome_model.Link object)
   {
 		return null;
 	}

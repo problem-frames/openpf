@@ -52,8 +52,32 @@
             <groups xsi:type="xtext:Assignment" feature="subproblem" operator="=">
               <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.0"/>
             </groups>
+            <groups xsi:type="xtext:Group">
+              <tokens xsi:type="xtext:Keyword" value="see"/>
+              <tokens xsi:type="xtext:Keyword" value="domain"/>
+              <tokens xsi:type="xtext:Assignment" feature="problemRef" operator="=">
+                <terminal xsi:type="xtext:CrossReference">
+                  <type metamodel="/0/@metamodelDeclarations.1">
+                    <classifier xsi:type="ecore:EClass" href="http://open.ac.uk/problem#//Node"/>
+                  </type>
+                  <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.26"/>
+                </terminal>
+              </tokens>
+            </groups>
             <groups xsi:type="xtext:Assignment" feature="istar" operator="=">
               <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+            </groups>
+            <groups xsi:type="xtext:Group">
+              <tokens xsi:type="xtext:Keyword" value="see"/>
+              <tokens xsi:type="xtext:Keyword" value="intention"/>
+              <tokens xsi:type="xtext:Assignment" feature="istarRef" operator="=">
+                <terminal xsi:type="xtext:CrossReference">
+                  <type metamodel="/0/@metamodelDeclarations.0">
+                    <classifier xsi:type="ecore:EClass" href="http:///edu/toronto/cs/openome_model.ecore#//Intention"/>
+                  </type>
+                  <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.26"/>
+                </terminal>
+              </tokens>
             </groups>
           </tokens>
           <tokens xsi:type="xtext:Keyword" value="}"/>

@@ -29,6 +29,8 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import uk.ac.open.problem.Phenomenon;
 import uk.ac.open.problem.ProblemPackage;
 
+import uk.ac.open.problem.provider.ProblemEditPlugin;
+
 /**
  * This is the item provider adapter for a {@link uk.ac.open.problem.Phenomenon} object.
  * <!-- begin-user-doc -->

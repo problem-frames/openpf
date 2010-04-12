@@ -32,6 +32,8 @@ import uk.ac.open.problem.LinkType;
 import uk.ac.open.problem.ProblemFactory;
 import uk.ac.open.problem.ProblemPackage;
 
+import uk.ac.open.problem.provider.ProblemEditPlugin;
+
 /**
  * This is the item provider adapter for a {@link uk.ac.open.problem.Link} object.
  * <!-- begin-user-doc -->
