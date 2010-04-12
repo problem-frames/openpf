@@ -36,6 +36,8 @@
   * checkout both the code for openpf and openome:
     git svn clone -r HEAD https://computing-research.open.ac.uk/repos/openpf/trunk openpf
     git svn clone -r HEAD https://se.cs.toronto.edu/svn/trac/ome/trunk/workspace ../openome-workspace
+	* Note for the checkout access, please ask Jennifer Horkoff <mailto:jenhork@cs.utoronto.ca> at the
+	  University of Toronto to get the permission
   * Install an compatible Eclipse Modeling Tools IDE
     download eclipse-modeling-galileo-SR2-incubation-linux-gtk.tar.gz
   * Run Eclipse
