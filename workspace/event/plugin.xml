@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<plugin>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http://www.ac.uk/open/EventCalculus" 
+       class = "uk.ac.open.event.eventcalculus.EventcalculusPackage"
+       genModel = "uk/ac/open/event/EventCalculus.genmodel" /> 
+	
+  </extension>
+
+  <extension point="core.example">
+      <example file="sit1.ec"/>
+      <example file="sit2.ec"/>
+      <example file="sit3.ec"/>
+      <example file="sit4.ec"/>
+  </extension>
+
+</plugin>

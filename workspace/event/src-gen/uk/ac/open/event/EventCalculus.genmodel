@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/event/src-gen"
+    editDirectory="/event.edit/src" editorDirectory="/event.editor/src" modelPluginID="event"
+    forceOverwrite="true" modelName="EventCalculus" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="event.edit" editorPluginID="event.editor">
+  <genPackages prefix="Eventcalculus" basePackage="uk.ac.open.event" disposableProviderFactory="true"
+      ecorePackage="EventCalculus.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="EventCalculus.ecore#//BinaryIntOp">
+      <genEnumLiterals ecoreEnumLiteral="EventCalculus.ecore#//BinaryIntOp/PLUS"/>
+      <genEnumLiterals ecoreEnumLiteral="EventCalculus.ecore#//BinaryIntOp/MINUS"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="EventCalculus.ecore#//UnaryBoolOp">
+      <genEnumLiterals ecoreEnumLiteral="EventCalculus.ecore#//UnaryBoolOp/NEGATION"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="EventCalculus.ecore#//BinaryBoolOp">
+      <genEnumLiterals ecoreEnumLiteral="EventCalculus.ecore#//BinaryBoolOp/IMPLICATION"/>
+      <genEnumLiterals ecoreEnumLiteral="EventCalculus.ecore#//BinaryBoolOp/EQUIVALENCE"/>
+      <genEnumLiterals ecoreEnumLiteral="EventCalculus.ecore#//BinaryBoolOp/AND"/>
+      <genEnumLiterals ecoreEnumLiteral="EventCalculus.ecore#//BinaryBoolOp/OR"/>
+    </genEnums>
+    <genClasses ecoreClass="EventCalculus.ecore#//Knowledge">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//Knowledge/imports"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//Knowledge/entities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//Knowledge/rules"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//Knowledge/vars"/>
+    </genClasses>
+    <genClasses ecoreClass="EventCalculus.ecore#//Rule">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//Rule/decl"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//Rule/expr"/>
+    </genClasses>
+    <genClasses ecoreClass="EventCalculus.ecore#//VarDecl">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//VarDecl/vars"/>
+    </genClasses>
+    <genClasses ecoreClass="EventCalculus.ecore#//IntTerm">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EventCalculus.ecore#//IntTerm/const"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//IntTerm/var"/>
+    </genClasses>
+    <genClasses ecoreClass="EventCalculus.ecore#//IntExpr"/>
+    <genClasses ecoreClass="EventCalculus.ecore#//BinaryIntExpr">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//BinaryIntExpr/opr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EventCalculus.ecore#//BinaryIntExpr/binaryop"/>
+    </genClasses>
+    <genClasses ecoreClass="EventCalculus.ecore#//TemporalPredicate">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//TemporalPredicate/time"/>
+    </genClasses>
+    <genClasses ecoreClass="EventCalculus.ecore#//BoolExpr"/>
+    <genClasses ecoreClass="EventCalculus.ecore#//UnaryBoolExpr">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EventCalculus.ecore#//UnaryBoolExpr/unaryop_lhs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//UnaryBoolExpr/opr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//UnaryBoolExpr/ops"/>
+    </genClasses>
+    <genClasses ecoreClass="EventCalculus.ecore#//BinaryBoolExpr">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//BinaryBoolExpr/opr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EventCalculus.ecore#//BinaryBoolExpr/binaryop"/>
+    </genClasses>
+    <genClasses ecoreClass="EventCalculus.ecore#//Entity"/>
+    <genClasses ecoreClass="EventCalculus.ecore#//Sort">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EventCalculus.ecore#//Sort/name"/>
+    </genClasses>
+    <genClasses ecoreClass="EventCalculus.ecore#//Import">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//Import/path"/>
+    </genClasses>
+    <genClasses ecoreClass="EventCalculus.ecore#//Var">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EventCalculus.ecore#//Var/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EventCalculus.ecore#//Var/min"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EventCalculus.ecore#//Var/max"/>
+    </genClasses>
+    <genClasses ecoreClass="EventCalculus.ecore#//Fluent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//Fluent/term"/>
+    </genClasses>
+    <genClasses ecoreClass="EventCalculus.ecore#//Event">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//Event/term"/>
+    </genClasses>
+    <genClasses ecoreClass="EventCalculus.ecore#//Term">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EventCalculus.ecore#//Term/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EventCalculus.ecore#//Term/args"/>
+    </genClasses>
+    <genClasses ecoreClass="EventCalculus.ecore#//HoldsAt">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//HoldsAt/fluent"/>
+    </genClasses>
+    <genClasses ecoreClass="EventCalculus.ecore#//Happens">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//Happens/event"/>
+    </genClasses>
+    <genClasses ecoreClass="EventCalculus.ecore#//Initiates">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//Initiates/event"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//Initiates/fluent"/>
+    </genClasses>
+    <genClasses ecoreClass="EventCalculus.ecore#//Terminates">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//Terminates/event"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//Terminates/fluent"/>
+    </genClasses>
+    <genClasses ecoreClass="EventCalculus.ecore#//Path">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//Path/file"/>
+    </genClasses>
+    <genClasses ecoreClass="EventCalculus.ecore#//File">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EventCalculus.ecore#//File/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

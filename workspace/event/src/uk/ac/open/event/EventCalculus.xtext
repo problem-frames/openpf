@@ -1,0 +1,50 @@
+grammar uk.ac.open.event.EventCalculus with uk.ac.open.Istar
+import "platform:/resource/openome_model/model/openome_model.ecore" as openome_model
+
+//import "http://open.ac.uk/problem" as problem
+
+generate eventcalculus "http://www.ac.uk/open/EventCalculus"
+
+Knowledge:
+	(imports+=Import)*
+	(entities+=Entity)*
+	(rules+=Rule ".")*
+	(vars+=Var)*;
+
+Rule: (decl=VarDecl)? expr=BoolExpr; 
+VarDecl: "[" vars+=[Var] ("," vars+=[Var])* "]";
+
+IntTerm: const=INT | var=[Var];    
+//IntExpr: IntTerm;
+IntExpr: IntTerm | BinaryIntExpr;
+//IntExpr: IntTerm | UnaryIntExpr | BinaryIntExpr;
+//UnaryIntExpr: (unaryop_lhs=UnaryIntOp)? opr+=IntTerm (unaryop_rhs=UnaryIntOp)?;
+//BinaryIntExpr: opr+=IntTerm binaryop=BinaryIntOp opr+=IntExpr;
+BinaryIntExpr: opr+=IntTerm binaryop=BinaryIntOp opr+=IntTerm;
+//enum UnaryIntOp: MINUS="-" | LPAREN="(" | RPAREN=")";     
+enum BinaryIntOp: PLUS="+" | MINUS="-";     
+        
+TemporalPredicate: HoldsAt | Happens | Initiates | Terminates;
+BoolExpr: TemporalPredicate | UnaryBoolExpr | BinaryBoolExpr;
+UnaryBoolExpr: unaryop_lhs=UnaryBoolOp opr+=BoolExpr |
+	"(" ops+=BoolExpr ")";
+enum UnaryBoolOp: NEGATION="!";     
+BinaryBoolExpr: opr+=TemporalPredicate binaryop=BinaryBoolOp opr+=BoolExpr;
+//BinaryBoolExpr: opr+=BoolExpr binaryop=BinaryBoolOp opr+=BoolExpr;
+enum BinaryBoolOp: IMPLICATION="->" | EQUIVALENCE="<->" | AND="&" | OR="|";     
+
+Entity: Fluent | Event | Sort;
+
+Sort: "sort" name=ID;
+Import: "load" path=Path;	
+Var: "range" name=ID min=INT max=INT;
+Fluent: "fluent" term=Term;
+Event: "event" term=Term;
+Term: name=ID ("(" (args+=ID)? ("," args+=ID)* ")")?;
+HoldsAt: "HoldsAt" "(" fluent=Term "," time=IntExpr ")";
+Happens: "Happens" "(" event=Term "," time=IntExpr ")";
+Initiates: "Initiates" "(" event=Term "," fluent=Term "," time=IntExpr ")";
+Terminates: "Terminates" "(" event=Term "," fluent=Term "," time=IntExpr ")";
+Path: file=File ("/" file=File)*;
+File: name=ID ("." name=ID)*;
+terminal SL_COMMENT: ';' !('\n'|'\r')* ('\r'? '\n')?;

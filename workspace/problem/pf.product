@@ -33,6 +33,12 @@
       <plugin id="edu.toronto.cs.openome_model.diagram"/>
       <plugin id="edu.toronto.cs.openome_model.edit"/>
       <plugin id="edu.toronto.cs.openome_model.editor"/>
+      <plugin id="event"/>
+      <plugin id="event.edit"/>
+      <plugin id="event.editor"/>
+      <plugin id="event.generator"/>
+      <plugin id="event.tests"/>
+      <plugin id="event.ui"/>
       <plugin id="istar"/>
       <plugin id="istar.generator"/>
       <plugin id="istar.ui"/>
@@ -254,10 +260,8 @@
       <plugin id="org.eclipse.swt.win32.win32.x86" fragment="true"/>
       <plugin id="org.eclipse.swt.win32.win32.x86_64" fragment="true"/>
       <plugin id="org.eclipse.swt.wpf.win32.x86" fragment="true"/>
-<!--
       <plugin id="org.eclipse.swtbot.ant.optional.junit3" fragment="true"/>
       <plugin id="org.eclipse.swtbot.ant.optional.junit4" fragment="true"/>
--->
       <plugin id="org.eclipse.swtbot.eclipse.finder"/>
       <plugin id="org.eclipse.swtbot.junit4_x"/>
       <plugin id="org.eclipse.swtbot.swt.finder"/>
