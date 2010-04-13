@@ -99,17 +99,26 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 		private final Assignment cIstarRefAssignment_3_1_3_2 = (Assignment)cGroup_3_1_3.eContents().get(2);
 		private final CrossReference cIstarRefIntentionCrossReference_3_1_3_2_0 = (CrossReference)cIstarRefAssignment_3_1_3_2.eContents().get(0);
 		private final RuleCall cIstarRefIntentionIDTerminalRuleCall_3_1_3_2_0_1 = (RuleCall)cIstarRefIntentionCrossReference_3_1_3_2_0.eContents().get(1);
+		private final Group cGroup_3_1_4 = (Group)cAlternatives_3_1.eContents().get(4);
+		private final Assignment cHiddenPhenomenaAssignment_3_1_4_0 = (Assignment)cGroup_3_1_4.eContents().get(0);
+		private final RuleCall cHiddenPhenomenaPhenomenonParserRuleCall_3_1_4_0_0 = (RuleCall)cHiddenPhenomenaAssignment_3_1_4_0.eContents().get(0);
+		private final Group cGroup_3_1_4_1 = (Group)cGroup_3_1_4.eContents().get(1);
+		private final Keyword cCommaKeyword_3_1_4_1_0 = (Keyword)cGroup_3_1_4_1.eContents().get(0);
+		private final Assignment cHiddenPhenomenaAssignment_3_1_4_1_1 = (Assignment)cGroup_3_1_4_1.eContents().get(1);
+		private final RuleCall cHiddenPhenomenaPhenomenonParserRuleCall_3_1_4_1_1_0 = (RuleCall)cHiddenPhenomenaAssignment_3_1_4_1_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
 		
 		//Node:
 		//  name=ID type=NodeType? (":" description=STRING)? ("{" (subproblem=ProblemDiagram|
 		//  "see" "domain" problemRef=[Node]|istar=Model|"see" "intention" istarRef=[
-		//  openome_model::Intention]) "}")?;
+		//  openome_model::Intention]|hiddenPhenomena+=Phenomenon ("," hiddenPhenomena+=
+		//  Phenomenon)*) "}")?;
 		public ParserRule getRule() { return rule; }
 
 		//name=ID type=NodeType? (":" description=STRING)? ("{" (subproblem=ProblemDiagram|
 		//"see" "domain" problemRef=[Node]|istar=Model|"see" "intention" istarRef=[
-		//openome_model::Intention]) "}")?
+		//openome_model::Intention]|hiddenPhenomena+=Phenomenon ("," hiddenPhenomena+=
+		//Phenomenon)*) "}")?
 		public Group getGroup() { return cGroup; }
 
 		//name=ID
@@ -137,14 +146,16 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 		public RuleCall getDescriptionSTRINGTerminalRuleCall_2_1_0() { return cDescriptionSTRINGTerminalRuleCall_2_1_0; }
 
 		//("{" (subproblem=ProblemDiagram|"see" "domain" problemRef=[Node]|istar=Model|"see"
-		//"intention" istarRef=[openome_model::Intention]) "}")?
+		//"intention" istarRef=[openome_model::Intention]|hiddenPhenomena+=Phenomenon (","
+		//hiddenPhenomena+=Phenomenon)*) "}")?
 		public Group getGroup_3() { return cGroup_3; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_3_0() { return cLeftCurlyBracketKeyword_3_0; }
 
 		//subproblem=ProblemDiagram|"see" "domain" problemRef=[Node]|istar=Model|"see"
-		//"intention" istarRef=[openome_model::Intention]
+		//"intention" istarRef=[openome_model::Intention]|hiddenPhenomena+=Phenomenon (","
+		//hiddenPhenomena+=Phenomenon)*
 		public Alternatives getAlternatives_3_1() { return cAlternatives_3_1; }
 
 		//subproblem=ProblemDiagram
@@ -194,6 +205,27 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 
 		//ID
 		public RuleCall getIstarRefIntentionIDTerminalRuleCall_3_1_3_2_0_1() { return cIstarRefIntentionIDTerminalRuleCall_3_1_3_2_0_1; }
+
+		//hiddenPhenomena+=Phenomenon ("," hiddenPhenomena+=Phenomenon)*
+		public Group getGroup_3_1_4() { return cGroup_3_1_4; }
+
+		//hiddenPhenomena+=Phenomenon
+		public Assignment getHiddenPhenomenaAssignment_3_1_4_0() { return cHiddenPhenomenaAssignment_3_1_4_0; }
+
+		//Phenomenon
+		public RuleCall getHiddenPhenomenaPhenomenonParserRuleCall_3_1_4_0_0() { return cHiddenPhenomenaPhenomenonParserRuleCall_3_1_4_0_0; }
+
+		//("," hiddenPhenomena+=Phenomenon)*
+		public Group getGroup_3_1_4_1() { return cGroup_3_1_4_1; }
+
+		//","
+		public Keyword getCommaKeyword_3_1_4_1_0() { return cCommaKeyword_3_1_4_1_0; }
+
+		//hiddenPhenomena+=Phenomenon
+		public Assignment getHiddenPhenomenaAssignment_3_1_4_1_1() { return cHiddenPhenomenaAssignment_3_1_4_1_1; }
+
+		//Phenomenon
+		public RuleCall getHiddenPhenomenaPhenomenonParserRuleCall_3_1_4_1_1_0() { return cHiddenPhenomenaPhenomenonParserRuleCall_3_1_4_1_1_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_3_2() { return cRightCurlyBracketKeyword_3_2; }
@@ -526,7 +558,8 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 	//Node:
 	//  name=ID type=NodeType? (":" description=STRING)? ("{" (subproblem=ProblemDiagram|
 	//  "see" "domain" problemRef=[Node]|istar=Model|"see" "intention" istarRef=[
-	//  openome_model::Intention]) "}")?;
+	//  openome_model::Intention]|hiddenPhenomena+=Phenomenon ("," hiddenPhenomena+=
+	//  Phenomenon)*) "}")?;
 	public NodeElements getNodeAccess() {
 		return (pNode != null) ? pNode : (pNode = new NodeElements());
 	}

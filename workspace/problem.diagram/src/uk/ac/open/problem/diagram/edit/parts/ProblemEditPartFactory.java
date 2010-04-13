@@ -44,8 +44,8 @@ public class ProblemEditPartFactory implements EditPartFactory {
 			case Node2EditPart.VISUAL_ID:
 				return new Node2EditPart(view);
 
-			case NodeNameDescription2EditPart.VISUAL_ID:
-				return new NodeNameDescription2EditPart(view);
+			case NodeNameEditPart.VISUAL_ID:
+				return new NodeNameEditPart(view);
 
 			case NodeDescription2EditPart.VISUAL_ID:
 				return new NodeDescription2EditPart(view);
@@ -53,8 +53,8 @@ public class ProblemEditPartFactory implements EditPartFactory {
 			case Node3EditPart.VISUAL_ID:
 				return new Node3EditPart(view);
 
-			case NodeNameEditPart.VISUAL_ID:
-				return new NodeNameEditPart(view);
+			case NodeName2EditPart.VISUAL_ID:
+				return new NodeName2EditPart(view);
 
 			case NodeDescription3EditPart.VISUAL_ID:
 				return new NodeDescription3EditPart(view);
@@ -62,8 +62,8 @@ public class ProblemEditPartFactory implements EditPartFactory {
 			case Node4EditPart.VISUAL_ID:
 				return new Node4EditPart(view);
 
-			case NodeName2EditPart.VISUAL_ID:
-				return new NodeName2EditPart(view);
+			case NodeName3EditPart.VISUAL_ID:
+				return new NodeName3EditPart(view);
 
 			case NodeDescription4EditPart.VISUAL_ID:
 				return new NodeDescription4EditPart(view);
@@ -71,8 +71,8 @@ public class ProblemEditPartFactory implements EditPartFactory {
 			case Node5EditPart.VISUAL_ID:
 				return new Node5EditPart(view);
 
-			case NodeNameDescription3EditPart.VISUAL_ID:
-				return new NodeNameDescription3EditPart(view);
+			case NodeName4EditPart.VISUAL_ID:
+				return new NodeName4EditPart(view);
 
 			case NodeDescription5EditPart.VISUAL_ID:
 				return new NodeDescription5EditPart(view);
@@ -80,8 +80,8 @@ public class ProblemEditPartFactory implements EditPartFactory {
 			case Node6EditPart.VISUAL_ID:
 				return new Node6EditPart(view);
 
-			case NodeNameDescription4EditPart.VISUAL_ID:
-				return new NodeNameDescription4EditPart(view);
+			case NodeName5EditPart.VISUAL_ID:
+				return new NodeName5EditPart(view);
 
 			case NodeDescription6EditPart.VISUAL_ID:
 				return new NodeDescription6EditPart(view);

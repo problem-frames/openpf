@@ -115,9 +115,9 @@ public class Node6EditPart extends ShapeNodeEditPart {
 					.setLabel(getPrimaryShape().getFigureEntityDescription());
 			return true;
 		}
-		if (childEditPart instanceof NodeNameDescription4EditPart) {
-			((NodeNameDescription4EditPart) childEditPart)
-					.setLabel(getPrimaryShape().getFigureEntityName());
+		if (childEditPart instanceof NodeName5EditPart) {
+			((NodeName5EditPart) childEditPart).setLabel(getPrimaryShape()
+					.getFigureEntityName());
 			return true;
 		}
 		return false;
@@ -130,7 +130,7 @@ public class Node6EditPart extends ShapeNodeEditPart {
 		if (childEditPart instanceof NodeDescription6EditPart) {
 			return true;
 		}
-		if (childEditPart instanceof NodeNameDescription4EditPart) {
+		if (childEditPart instanceof NodeName5EditPart) {
 			return true;
 		}
 		return false;
@@ -254,7 +254,7 @@ public class Node6EditPart extends ShapeNodeEditPart {
 	 */
 	public EditPart getPrimaryChildEditPart() {
 		return getChildBySemanticHint(ProblemVisualIDRegistry
-				.getType(NodeNameDescription4EditPart.VISUAL_ID));
+				.getType(NodeName5EditPart.VISUAL_ID));
 	}
 
 	/**
@@ -594,7 +594,8 @@ public class Node6EditPart extends ShapeNodeEditPart {
 	 * @generated NOT
 	 */
 	protected IFigure createNodeShape() {
-		uk.ac.open.problem.figures.EntityFigure figure = new uk.ac.open.problem.figures.EntityFigure(node);
+		uk.ac.open.problem.figures.EntityFigure figure = new uk.ac.open.problem.figures.EntityFigure(
+				node);
 		return primaryShape = figure;
 	}
 

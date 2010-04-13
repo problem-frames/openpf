@@ -87,6 +87,7 @@ import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PartInitException;
+
 import uk.ac.open.problem.presentation.ProblemEditorPlugin;
 
 

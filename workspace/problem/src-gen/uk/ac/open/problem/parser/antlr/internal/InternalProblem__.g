@@ -13,8 +13,8 @@ T13 : '{' ;
 T14 : 'see' ;
 T15 : 'domain' ;
 T16 : 'intention' ;
-T17 : '}' ;
-T18 : ',' ;
+T17 : ',' ;
+T18 : '}' ;
 T19 : 'istar' ;
 T20 : 'actor' ;
 T21 : 'agent' ;
@@ -48,25 +48,25 @@ T48 : 'state' ;
 T49 : '->' ;
 T50 : '~~' ;
 
-// $ANTLR src "../problem/src-gen/uk/ac/open/problem/parser/antlr/internal/InternalProblem.g" 2274
+// $ANTLR src "../problem/src-gen/uk/ac/open/problem/parser/antlr/internal/InternalProblem.g" 2321
 RULE_ID : ('#' ~('#')+ '#'|'^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*);
 
-// $ANTLR src "../problem/src-gen/uk/ac/open/problem/parser/antlr/internal/InternalProblem.g" 2276
+// $ANTLR src "../problem/src-gen/uk/ac/open/problem/parser/antlr/internal/InternalProblem.g" 2323
 RULE_INT : ('0'..'9')+;
 
-// $ANTLR src "../problem/src-gen/uk/ac/open/problem/parser/antlr/internal/InternalProblem.g" 2278
+// $ANTLR src "../problem/src-gen/uk/ac/open/problem/parser/antlr/internal/InternalProblem.g" 2325
 RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\'');
 
-// $ANTLR src "../problem/src-gen/uk/ac/open/problem/parser/antlr/internal/InternalProblem.g" 2280
+// $ANTLR src "../problem/src-gen/uk/ac/open/problem/parser/antlr/internal/InternalProblem.g" 2327
 RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 
-// $ANTLR src "../problem/src-gen/uk/ac/open/problem/parser/antlr/internal/InternalProblem.g" 2282
+// $ANTLR src "../problem/src-gen/uk/ac/open/problem/parser/antlr/internal/InternalProblem.g" 2329
 RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
-// $ANTLR src "../problem/src-gen/uk/ac/open/problem/parser/antlr/internal/InternalProblem.g" 2284
+// $ANTLR src "../problem/src-gen/uk/ac/open/problem/parser/antlr/internal/InternalProblem.g" 2331
 RULE_WS : (' '|'\t'|'\r'|'\n')+;
 
-// $ANTLR src "../problem/src-gen/uk/ac/open/problem/parser/antlr/internal/InternalProblem.g" 2286
+// $ANTLR src "../problem/src-gen/uk/ac/open/problem/parser/antlr/internal/InternalProblem.g" 2333
 RULE_ANY_OTHER : .;
 
 

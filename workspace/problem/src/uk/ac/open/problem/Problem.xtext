@@ -9,7 +9,8 @@ Node:
   name=ID (type=NodeType)? 
   (':' description=STRING)?
   ("{" (subproblem=ProblemDiagram | "see" "domain" problemRef=[Node] | 
-  		istar=Model | "see" "intention" istarRef=[openome_model::Intention]
+  		istar=Model | "see" "intention" istarRef=[openome_model::Intention] |
+  		(hiddenPhenomena+=Phenomenon (',' hiddenPhenomena+=Phenomenon)*) 
   ) "}")?;
 
 enum NodeType:

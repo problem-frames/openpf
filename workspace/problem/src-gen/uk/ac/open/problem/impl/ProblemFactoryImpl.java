@@ -23,7 +23,7 @@ import uk.ac.open.problem.PhenomenonType;
 import uk.ac.open.problem.ProblemDiagram;
 import uk.ac.open.problem.ProblemFactory;
 import uk.ac.open.problem.ProblemPackage;
-//import uk.ac.open.problem.problem.*;
+
 
 /**
  * <!-- begin-user-doc -->

@@ -16,6 +16,7 @@ import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.resource.ImageRegistry;
 import org.eclipse.swt.graphics.Image;
 
+
 import uk.ac.open.problem.ProblemPackage;
 import uk.ac.open.problem.diagram.edit.parts.Link2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Link3EditPart;
@@ -209,26 +210,36 @@ public class ProblemElementTypes extends ElementInitializers {
 		if (elements == null) {
 			elements = new IdentityHashMap();
 
-			elements.put(ProblemDiagram_1000, ProblemPackage.eINSTANCE
-					.getProblemDiagram());
+			elements.put(ProblemDiagram_1000,
+					uk.ac.open.problem.ProblemPackage.eINSTANCE
+							.getProblemDiagram());
 
-			elements.put(Node_2001, ProblemPackage.eINSTANCE.getNode());
+			elements.put(Node_2001, uk.ac.open.problem.ProblemPackage.eINSTANCE
+					.getNode());
 
-			elements.put(Node_2002, ProblemPackage.eINSTANCE.getNode());
+			elements.put(Node_2002, uk.ac.open.problem.ProblemPackage.eINSTANCE
+					.getNode());
 
-			elements.put(Node_2003, ProblemPackage.eINSTANCE.getNode());
+			elements.put(Node_2003, uk.ac.open.problem.ProblemPackage.eINSTANCE
+					.getNode());
 
-			elements.put(Node_2004, ProblemPackage.eINSTANCE.getNode());
+			elements.put(Node_2004, uk.ac.open.problem.ProblemPackage.eINSTANCE
+					.getNode());
 
-			elements.put(Node_2005, ProblemPackage.eINSTANCE.getNode());
+			elements.put(Node_2005, uk.ac.open.problem.ProblemPackage.eINSTANCE
+					.getNode());
 
-			elements.put(Node_2006, ProblemPackage.eINSTANCE.getNode());
+			elements.put(Node_2006, uk.ac.open.problem.ProblemPackage.eINSTANCE
+					.getNode());
 
-			elements.put(Link_4001, ProblemPackage.eINSTANCE.getLink());
+			elements.put(Link_4001, uk.ac.open.problem.ProblemPackage.eINSTANCE
+					.getLink());
 
-			elements.put(Link_4002, ProblemPackage.eINSTANCE.getLink());
+			elements.put(Link_4002, uk.ac.open.problem.ProblemPackage.eINSTANCE
+					.getLink());
 
-			elements.put(Link_4003, ProblemPackage.eINSTANCE.getLink());
+			elements.put(Link_4003, uk.ac.open.problem.ProblemPackage.eINSTANCE
+					.getLink());
 		}
 		return (ENamedElement) elements.get(type);
 	}

@@ -29,13 +29,14 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+
 import edu.toronto.cs.openome_model.Openome_modelFactory;
 import edu.toronto.cs.openome_model.Openome_modelFactory;
+
 
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.ProblemFactory;
 import uk.ac.open.problem.ProblemPackage;
-
 import uk.ac.open.problem.provider.ProblemEditPlugin;
 
 /**

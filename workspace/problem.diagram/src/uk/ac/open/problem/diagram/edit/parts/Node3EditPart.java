@@ -118,14 +118,14 @@ public class Node3EditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof NodeNameEditPart) {
-			((NodeNameEditPart) childEditPart).setLabel(getPrimaryShape()
-					.getFigureEntityName());
-			return true;
-		}
 		if (childEditPart instanceof NodeDescription3EditPart) {
 			((NodeDescription3EditPart) childEditPart)
 					.setLabel(getPrimaryShape().getFigureEntityDescription());
+			return true;
+		}
+		if (childEditPart instanceof NodeName2EditPart) {
+			((NodeName2EditPart) childEditPart).setLabel(getPrimaryShape()
+					.getFigureEntityName());
 			return true;
 		}
 		return false;
@@ -135,10 +135,10 @@ public class Node3EditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof NodeNameEditPart) {
+		if (childEditPart instanceof NodeDescription3EditPart) {
 			return true;
 		}
-		if (childEditPart instanceof NodeDescription3EditPart) {
+		if (childEditPart instanceof NodeName2EditPart) {
 			return true;
 		}
 		return false;
@@ -262,7 +262,7 @@ public class Node3EditPart extends ShapeNodeEditPart {
 	 */
 	public EditPart getPrimaryChildEditPart() {
 		return getChildBySemanticHint(ProblemVisualIDRegistry
-				.getType(NodeNameEditPart.VISUAL_ID));
+				.getType(NodeName2EditPart.VISUAL_ID));
 	}
 
 	/**
@@ -602,7 +602,8 @@ public class Node3EditPart extends ShapeNodeEditPart {
 	 * @generated NOT
 	 */
 	protected IFigure createNodeShape() {
-		uk.ac.open.problem.figures.EntityFigure figure = new uk.ac.open.problem.figures.EntityFigure(node);
+		uk.ac.open.problem.figures.EntityFigure figure = new uk.ac.open.problem.figures.EntityFigure(
+				node);
 		return primaryShape = figure;
 	}
 

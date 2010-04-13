@@ -6,12 +6,12 @@
  */
 package uk.ac.open.problem.problem.tests;
 
+import uk.ac.open.problem.Node;
+import uk.ac.open.problem.ProblemFactory;
 import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
 
-import uk.ac.open.problem.Node;
-import uk.ac.open.problem.ProblemFactory;
 
 /**
  * <!-- begin-user-doc -->

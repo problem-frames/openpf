@@ -6,6 +6,8 @@
 package uk.ac.open.problem;
 
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 import edu.toronto.cs.openome_model.Intention;
@@ -26,6 +28,7 @@ import edu.toronto.cs.openome_model.Model;
  *   <li>{@link uk.ac.open.problem.Node#getProblemRef <em>Problem Ref</em>}</li>
  *   <li>{@link uk.ac.open.problem.Node#getIstar <em>Istar</em>}</li>
  *   <li>{@link uk.ac.open.problem.Node#getIstarRef <em>Istar Ref</em>}</li>
+ *   <li>{@link uk.ac.open.problem.Node#getHiddenPhenomena <em>Hidden Phenomena</em>}</li>
  * </ul>
  * </p>
  *
@@ -219,5 +222,21 @@ public interface Node extends EObject
 	 * @generated
 	 */
   void setIstarRef(Intention value);
+
+  /**
+	 * Returns the value of the '<em><b>Hidden Phenomena</b></em>' containment reference list.
+	 * The list contents are of type {@link uk.ac.open.problem.Phenomenon}.
+	 * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Hidden Phenomena</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+	 * @return the value of the '<em>Hidden Phenomena</em>' containment reference list.
+	 * @see uk.ac.open.problem.ProblemPackage#getNode_HiddenPhenomena()
+	 * @model containment="true"
+	 * @generated
+	 */
+  EList<Phenomenon> getHiddenPhenomena();
 
 } // Node

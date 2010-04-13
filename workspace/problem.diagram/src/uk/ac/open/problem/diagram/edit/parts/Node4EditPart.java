@@ -36,6 +36,7 @@ import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.widgets.Display;
 
+
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.NodeType;
 import uk.ac.open.problem.ProblemPackage;
@@ -109,14 +110,14 @@ public class Node4EditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
+		if (childEditPart instanceof NodeName3EditPart) {
+			((NodeName3EditPart) childEditPart).setLabel(getPrimaryShape()
+					.getFigureEntityName());
+			return true;
+		}
 		if (childEditPart instanceof NodeDescription4EditPart) {
 			((NodeDescription4EditPart) childEditPart)
 					.setLabel(getPrimaryShape().getFigureEntityDescription());
-			return true;
-		}
-		if (childEditPart instanceof NodeName2EditPart) {
-			((NodeName2EditPart) childEditPart).setLabel(getPrimaryShape()
-					.getFigureEntityName());
 			return true;
 		}
 		return false;
@@ -126,10 +127,10 @@ public class Node4EditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof NodeDescription4EditPart) {
+		if (childEditPart instanceof NodeName3EditPart) {
 			return true;
 		}
-		if (childEditPart instanceof NodeName2EditPart) {
+		if (childEditPart instanceof NodeDescription4EditPart) {
 			return true;
 		}
 		return false;
@@ -253,7 +254,7 @@ public class Node4EditPart extends ShapeNodeEditPart {
 	 */
 	public EditPart getPrimaryChildEditPart() {
 		return getChildBySemanticHint(ProblemVisualIDRegistry
-				.getType(NodeName2EditPart.VISUAL_ID));
+				.getType(NodeName3EditPart.VISUAL_ID));
 	}
 
 	/**
@@ -593,7 +594,8 @@ public class Node4EditPart extends ShapeNodeEditPart {
 	 * @generated NOT
 	 */
 	protected IFigure createNodeShape() {
-		uk.ac.open.problem.figures.EntityFigure figure = new uk.ac.open.problem.figures.EntityFigure(node);
+		uk.ac.open.problem.figures.EntityFigure figure = new uk.ac.open.problem.figures.EntityFigure(
+				node);
 		return primaryShape = figure;
 	}
 

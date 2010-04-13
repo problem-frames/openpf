@@ -5,9 +5,13 @@
  */
 package uk.ac.open.problem.impl;
 
+import java.util.Collection;
+
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -15,13 +19,18 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import edu.toronto.cs.openome_model.Intention;
-import edu.toronto.cs.openome_model.Model;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.NodeType;
+import uk.ac.open.problem.Phenomenon;
 import uk.ac.open.problem.ProblemDiagram;
 import uk.ac.open.problem.ProblemPackage;
+
+import edu.toronto.cs.openome_model.Intention;
+import edu.toronto.cs.openome_model.Model;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -37,6 +46,7 @@ import uk.ac.open.problem.ProblemPackage;
  *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getProblemRef <em>Problem Ref</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getIstar <em>Istar</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getIstarRef <em>Istar Ref</em>}</li>
+ *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getHiddenPhenomena <em>Hidden Phenomena</em>}</li>
  * </ul>
  * </p>
  *
@@ -143,6 +153,16 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 	 * @ordered
 	 */
   protected Intention istarRef;
+
+  /**
+	 * The cached value of the '{@link #getHiddenPhenomena() <em>Hidden Phenomena</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see #getHiddenPhenomena()
+	 * @generated
+	 * @ordered
+	 */
+  protected EList<Phenomenon> hiddenPhenomena;
 
   /**
 	 * <!-- begin-user-doc -->
@@ -413,6 +433,19 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
    * <!-- end-user-doc -->
 	 * @generated
 	 */
+  public EList<Phenomenon> getHiddenPhenomena()
+  {
+		if (hiddenPhenomena == null) {
+			hiddenPhenomena = new EObjectContainmentEList<Phenomenon>(Phenomenon.class, this, ProblemPackage.NODE__HIDDEN_PHENOMENA);
+		}
+		return hiddenPhenomena;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -421,6 +454,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 				return basicSetSubproblem(null, msgs);
 			case ProblemPackage.NODE__ISTAR:
 				return basicSetIstar(null, msgs);
+			case ProblemPackage.NODE__HIDDEN_PHENOMENA:
+				return ((InternalEList<?>)getHiddenPhenomena()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -450,6 +485,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 			case ProblemPackage.NODE__ISTAR_REF:
 				if (resolve) return getIstarRef();
 				return basicGetIstarRef();
+			case ProblemPackage.NODE__HIDDEN_PHENOMENA:
+				return getHiddenPhenomena();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -459,6 +496,7 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
    * <!-- end-user-doc -->
 	 * @generated
 	 */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -483,6 +521,10 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 				return;
 			case ProblemPackage.NODE__ISTAR_REF:
 				setIstarRef((Intention)newValue);
+				return;
+			case ProblemPackage.NODE__HIDDEN_PHENOMENA:
+				getHiddenPhenomena().clear();
+				getHiddenPhenomena().addAll((Collection<? extends Phenomenon>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -518,6 +560,9 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 			case ProblemPackage.NODE__ISTAR_REF:
 				setIstarRef((Intention)null);
 				return;
+			case ProblemPackage.NODE__HIDDEN_PHENOMENA:
+				getHiddenPhenomena().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -545,6 +590,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 				return istar != null;
 			case ProblemPackage.NODE__ISTAR_REF:
 				return istarRef != null;
+			case ProblemPackage.NODE__HIDDEN_PHENOMENA:
+				return hiddenPhenomena != null && !hiddenPhenomena.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

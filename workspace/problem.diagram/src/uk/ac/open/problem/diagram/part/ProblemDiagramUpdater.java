@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.gmf.runtime.notation.View;
 
+
 import uk.ac.open.problem.Link;
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.ProblemDiagram;
@@ -51,10 +52,12 @@ public class ProblemDiagramUpdater {
 		if (!view.isSetElement()) {
 			return Collections.EMPTY_LIST;
 		}
-		ProblemDiagram modelElement = (ProblemDiagram) view.getElement();
+		uk.ac.open.problem.ProblemDiagram modelElement = (uk.ac.open.problem.ProblemDiagram) view
+				.getElement();
 		List result = new LinkedList();
 		for (Iterator it = modelElement.getNodes().iterator(); it.hasNext();) {
-			Node childElement = (Node) it.next();
+			uk.ac.open.problem.Node childElement = (uk.ac.open.problem.Node) it
+					.next();
 			int visualID = ProblemVisualIDRegistry.getNodeVisualID(view,
 					childElement);
 			if (visualID == NodeEditPart.VISUAL_ID) {
@@ -172,7 +175,8 @@ public class ProblemDiagramUpdater {
 	 * @generated
 	 */
 	public static List getProblemDiagram_1000ContainedLinks(View view) {
-		ProblemDiagram modelElement = (ProblemDiagram) view.getElement();
+		uk.ac.open.problem.ProblemDiagram modelElement = (uk.ac.open.problem.ProblemDiagram) view
+				.getElement();
 		List result = new LinkedList();
 		result.addAll(getContainedTypeModelFacetLinks_Link_4001(modelElement));
 		result.addAll(getContainedTypeModelFacetLinks_Link_4002(modelElement));
@@ -247,7 +251,8 @@ public class ProblemDiagramUpdater {
 	 * @generated
 	 */
 	public static List getNode_2001IncomingLinks(View view) {
-		Node modelElement = (Node) view.getElement();
+		uk.ac.open.problem.Node modelElement = (uk.ac.open.problem.Node) view
+				.getElement();
 		Map crossReferences = EcoreUtil.CrossReferencer.find(view.eResource()
 				.getResourceSet().getResources());
 		List result = new LinkedList();
@@ -264,7 +269,8 @@ public class ProblemDiagramUpdater {
 	 * @generated
 	 */
 	public static List getNode_2002IncomingLinks(View view) {
-		Node modelElement = (Node) view.getElement();
+		uk.ac.open.problem.Node modelElement = (uk.ac.open.problem.Node) view
+				.getElement();
 		Map crossReferences = EcoreUtil.CrossReferencer.find(view.eResource()
 				.getResourceSet().getResources());
 		List result = new LinkedList();
@@ -281,7 +287,8 @@ public class ProblemDiagramUpdater {
 	 * @generated
 	 */
 	public static List getNode_2003IncomingLinks(View view) {
-		Node modelElement = (Node) view.getElement();
+		uk.ac.open.problem.Node modelElement = (uk.ac.open.problem.Node) view
+				.getElement();
 		Map crossReferences = EcoreUtil.CrossReferencer.find(view.eResource()
 				.getResourceSet().getResources());
 		List result = new LinkedList();
@@ -298,7 +305,8 @@ public class ProblemDiagramUpdater {
 	 * @generated
 	 */
 	public static List getNode_2004IncomingLinks(View view) {
-		Node modelElement = (Node) view.getElement();
+		uk.ac.open.problem.Node modelElement = (uk.ac.open.problem.Node) view
+				.getElement();
 		Map crossReferences = EcoreUtil.CrossReferencer.find(view.eResource()
 				.getResourceSet().getResources());
 		List result = new LinkedList();
@@ -315,7 +323,8 @@ public class ProblemDiagramUpdater {
 	 * @generated
 	 */
 	public static List getNode_2005IncomingLinks(View view) {
-		Node modelElement = (Node) view.getElement();
+		uk.ac.open.problem.Node modelElement = (uk.ac.open.problem.Node) view
+				.getElement();
 		Map crossReferences = EcoreUtil.CrossReferencer.find(view.eResource()
 				.getResourceSet().getResources());
 		List result = new LinkedList();
@@ -332,7 +341,8 @@ public class ProblemDiagramUpdater {
 	 * @generated
 	 */
 	public static List getNode_2006IncomingLinks(View view) {
-		Node modelElement = (Node) view.getElement();
+		uk.ac.open.problem.Node modelElement = (uk.ac.open.problem.Node) view
+				.getElement();
 		Map crossReferences = EcoreUtil.CrossReferencer.find(view.eResource()
 				.getResourceSet().getResources());
 		List result = new LinkedList();
@@ -370,7 +380,8 @@ public class ProblemDiagramUpdater {
 	 * @generated
 	 */
 	public static List getNode_2001OutgoingLinks(View view) {
-		Node modelElement = (Node) view.getElement();
+		uk.ac.open.problem.Node modelElement = (uk.ac.open.problem.Node) view
+				.getElement();
 		List result = new LinkedList();
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4001(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4002(modelElement));
@@ -382,7 +393,8 @@ public class ProblemDiagramUpdater {
 	 * @generated
 	 */
 	public static List getNode_2002OutgoingLinks(View view) {
-		Node modelElement = (Node) view.getElement();
+		uk.ac.open.problem.Node modelElement = (uk.ac.open.problem.Node) view
+				.getElement();
 		List result = new LinkedList();
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4001(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4002(modelElement));
@@ -394,7 +406,8 @@ public class ProblemDiagramUpdater {
 	 * @generated
 	 */
 	public static List getNode_2003OutgoingLinks(View view) {
-		Node modelElement = (Node) view.getElement();
+		uk.ac.open.problem.Node modelElement = (uk.ac.open.problem.Node) view
+				.getElement();
 		List result = new LinkedList();
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4001(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4002(modelElement));
@@ -406,7 +419,8 @@ public class ProblemDiagramUpdater {
 	 * @generated
 	 */
 	public static List getNode_2004OutgoingLinks(View view) {
-		Node modelElement = (Node) view.getElement();
+		uk.ac.open.problem.Node modelElement = (uk.ac.open.problem.Node) view
+				.getElement();
 		List result = new LinkedList();
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4001(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4002(modelElement));
@@ -418,7 +432,8 @@ public class ProblemDiagramUpdater {
 	 * @generated
 	 */
 	public static List getNode_2005OutgoingLinks(View view) {
-		Node modelElement = (Node) view.getElement();
+		uk.ac.open.problem.Node modelElement = (uk.ac.open.problem.Node) view
+				.getElement();
 		List result = new LinkedList();
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4001(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4002(modelElement));
@@ -430,7 +445,8 @@ public class ProblemDiagramUpdater {
 	 * @generated
 	 */
 	public static List getNode_2006OutgoingLinks(View view) {
-		Node modelElement = (Node) view.getElement();
+		uk.ac.open.problem.Node modelElement = (uk.ac.open.problem.Node) view
+				.getElement();
 		List result = new LinkedList();
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4001(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4002(modelElement));
@@ -463,20 +479,20 @@ public class ProblemDiagramUpdater {
 	 * @generated
 	 */
 	private static Collection getContainedTypeModelFacetLinks_Link_4001(
-			ProblemDiagram container) {
+			uk.ac.open.problem.ProblemDiagram container) {
 		Collection result = new LinkedList();
 		for (Iterator links = container.getLinks().iterator(); links.hasNext();) {
 			EObject linkObject = (EObject) links.next();
-			if (false == linkObject instanceof Link) {
+			if (false == linkObject instanceof uk.ac.open.problem.Link) {
 				continue;
 			}
-			Link link = (Link) linkObject;
+			uk.ac.open.problem.Link link = (uk.ac.open.problem.Link) linkObject;
 			if (LinkEditPart.VISUAL_ID != ProblemVisualIDRegistry
 					.getLinkWithClassVisualID(link)) {
 				continue;
 			}
-			Node dst = link.getTo();
-			Node src = link.getFrom();
+			uk.ac.open.problem.Node dst = link.getTo();
+			uk.ac.open.problem.Node src = link.getFrom();
 			result.add(new ProblemLinkDescriptor(src, dst, link,
 					ProblemElementTypes.Link_4001, LinkEditPart.VISUAL_ID));
 		}
@@ -487,20 +503,20 @@ public class ProblemDiagramUpdater {
 	 * @generated
 	 */
 	private static Collection getContainedTypeModelFacetLinks_Link_4002(
-			ProblemDiagram container) {
+			uk.ac.open.problem.ProblemDiagram container) {
 		Collection result = new LinkedList();
 		for (Iterator links = container.getLinks().iterator(); links.hasNext();) {
 			EObject linkObject = (EObject) links.next();
-			if (false == linkObject instanceof Link) {
+			if (false == linkObject instanceof uk.ac.open.problem.Link) {
 				continue;
 			}
-			Link link = (Link) linkObject;
+			uk.ac.open.problem.Link link = (uk.ac.open.problem.Link) linkObject;
 			if (Link2EditPart.VISUAL_ID != ProblemVisualIDRegistry
 					.getLinkWithClassVisualID(link)) {
 				continue;
 			}
-			Node dst = link.getTo();
-			Node src = link.getFrom();
+			uk.ac.open.problem.Node dst = link.getTo();
+			uk.ac.open.problem.Node src = link.getFrom();
 			result.add(new ProblemLinkDescriptor(src, dst, link,
 					ProblemElementTypes.Link_4002, Link2EditPart.VISUAL_ID));
 		}
@@ -511,20 +527,20 @@ public class ProblemDiagramUpdater {
 	 * @generated
 	 */
 	private static Collection getContainedTypeModelFacetLinks_Link_4003(
-			ProblemDiagram container) {
+			uk.ac.open.problem.ProblemDiagram container) {
 		Collection result = new LinkedList();
 		for (Iterator links = container.getLinks().iterator(); links.hasNext();) {
 			EObject linkObject = (EObject) links.next();
-			if (false == linkObject instanceof Link) {
+			if (false == linkObject instanceof uk.ac.open.problem.Link) {
 				continue;
 			}
-			Link link = (Link) linkObject;
+			uk.ac.open.problem.Link link = (uk.ac.open.problem.Link) linkObject;
 			if (Link3EditPart.VISUAL_ID != ProblemVisualIDRegistry
 					.getLinkWithClassVisualID(link)) {
 				continue;
 			}
-			Node dst = link.getTo();
-			Node src = link.getFrom();
+			uk.ac.open.problem.Node dst = link.getTo();
+			uk.ac.open.problem.Node src = link.getFrom();
 			result.add(new ProblemLinkDescriptor(src, dst, link,
 					ProblemElementTypes.Link_4003, Link3EditPart.VISUAL_ID));
 		}
@@ -535,23 +551,24 @@ public class ProblemDiagramUpdater {
 	 * @generated
 	 */
 	private static Collection getIncomingTypeModelFacetLinks_Link_4001(
-			Node target, Map crossReferences) {
+			uk.ac.open.problem.Node target, Map crossReferences) {
 		Collection result = new LinkedList();
 		Collection settings = (Collection) crossReferences.get(target);
 		for (Iterator it = settings.iterator(); it.hasNext();) {
 			EStructuralFeature.Setting setting = (EStructuralFeature.Setting) it
 					.next();
-			if (setting.getEStructuralFeature() != ProblemPackage.eINSTANCE
+			if (setting.getEStructuralFeature() != uk.ac.open.problem.ProblemPackage.eINSTANCE
 					.getLink_To()
-					|| false == setting.getEObject() instanceof Link) {
+					|| false == setting.getEObject() instanceof uk.ac.open.problem.Link) {
 				continue;
 			}
-			Link link = (Link) setting.getEObject();
+			uk.ac.open.problem.Link link = (uk.ac.open.problem.Link) setting
+					.getEObject();
 			if (LinkEditPart.VISUAL_ID != ProblemVisualIDRegistry
 					.getLinkWithClassVisualID(link)) {
 				continue;
 			}
-			Node src = link.getFrom();
+			uk.ac.open.problem.Node src = link.getFrom();
 			result.add(new ProblemLinkDescriptor(src, target, link,
 					ProblemElementTypes.Link_4001, LinkEditPart.VISUAL_ID));
 		}
@@ -562,23 +579,24 @@ public class ProblemDiagramUpdater {
 	 * @generated
 	 */
 	private static Collection getIncomingTypeModelFacetLinks_Link_4002(
-			Node target, Map crossReferences) {
+			uk.ac.open.problem.Node target, Map crossReferences) {
 		Collection result = new LinkedList();
 		Collection settings = (Collection) crossReferences.get(target);
 		for (Iterator it = settings.iterator(); it.hasNext();) {
 			EStructuralFeature.Setting setting = (EStructuralFeature.Setting) it
 					.next();
-			if (setting.getEStructuralFeature() != ProblemPackage.eINSTANCE
+			if (setting.getEStructuralFeature() != uk.ac.open.problem.ProblemPackage.eINSTANCE
 					.getLink_To()
-					|| false == setting.getEObject() instanceof Link) {
+					|| false == setting.getEObject() instanceof uk.ac.open.problem.Link) {
 				continue;
 			}
-			Link link = (Link) setting.getEObject();
+			uk.ac.open.problem.Link link = (uk.ac.open.problem.Link) setting
+					.getEObject();
 			if (Link2EditPart.VISUAL_ID != ProblemVisualIDRegistry
 					.getLinkWithClassVisualID(link)) {
 				continue;
 			}
-			Node src = link.getFrom();
+			uk.ac.open.problem.Node src = link.getFrom();
 			result.add(new ProblemLinkDescriptor(src, target, link,
 					ProblemElementTypes.Link_4002, Link2EditPart.VISUAL_ID));
 		}
@@ -589,23 +607,24 @@ public class ProblemDiagramUpdater {
 	 * @generated
 	 */
 	private static Collection getIncomingTypeModelFacetLinks_Link_4003(
-			Node target, Map crossReferences) {
+			uk.ac.open.problem.Node target, Map crossReferences) {
 		Collection result = new LinkedList();
 		Collection settings = (Collection) crossReferences.get(target);
 		for (Iterator it = settings.iterator(); it.hasNext();) {
 			EStructuralFeature.Setting setting = (EStructuralFeature.Setting) it
 					.next();
-			if (setting.getEStructuralFeature() != ProblemPackage.eINSTANCE
+			if (setting.getEStructuralFeature() != uk.ac.open.problem.ProblemPackage.eINSTANCE
 					.getLink_To()
-					|| false == setting.getEObject() instanceof Link) {
+					|| false == setting.getEObject() instanceof uk.ac.open.problem.Link) {
 				continue;
 			}
-			Link link = (Link) setting.getEObject();
+			uk.ac.open.problem.Link link = (uk.ac.open.problem.Link) setting
+					.getEObject();
 			if (Link3EditPart.VISUAL_ID != ProblemVisualIDRegistry
 					.getLinkWithClassVisualID(link)) {
 				continue;
 			}
-			Node src = link.getFrom();
+			uk.ac.open.problem.Node src = link.getFrom();
 			result.add(new ProblemLinkDescriptor(src, target, link,
 					ProblemElementTypes.Link_4003, Link3EditPart.VISUAL_ID));
 		}
@@ -616,15 +635,15 @@ public class ProblemDiagramUpdater {
 	 * @generated
 	 */
 	private static Collection getOutgoingTypeModelFacetLinks_Link_4001(
-			Node source) {
-		ProblemDiagram container = null;
+			uk.ac.open.problem.Node source) {
+		uk.ac.open.problem.ProblemDiagram container = null;
 		// Find container element for the link.
 		// Climb up by containment hierarchy starting from the source
 		// and return the first element that is instance of the container class.
 		for (EObject element = source; element != null && container == null; element = element
 				.eContainer()) {
-			if (element instanceof ProblemDiagram) {
-				container = (ProblemDiagram) element;
+			if (element instanceof uk.ac.open.problem.ProblemDiagram) {
+				container = (uk.ac.open.problem.ProblemDiagram) element;
 			}
 		}
 		if (container == null) {
@@ -633,16 +652,16 @@ public class ProblemDiagramUpdater {
 		Collection result = new LinkedList();
 		for (Iterator links = container.getLinks().iterator(); links.hasNext();) {
 			EObject linkObject = (EObject) links.next();
-			if (false == linkObject instanceof Link) {
+			if (false == linkObject instanceof uk.ac.open.problem.Link) {
 				continue;
 			}
-			Link link = (Link) linkObject;
+			uk.ac.open.problem.Link link = (uk.ac.open.problem.Link) linkObject;
 			if (LinkEditPart.VISUAL_ID != ProblemVisualIDRegistry
 					.getLinkWithClassVisualID(link)) {
 				continue;
 			}
-			Node dst = link.getTo();
-			Node src = link.getFrom();
+			uk.ac.open.problem.Node dst = link.getTo();
+			uk.ac.open.problem.Node src = link.getFrom();
 			if (src != source) {
 				continue;
 			}
@@ -656,15 +675,15 @@ public class ProblemDiagramUpdater {
 	 * @generated
 	 */
 	private static Collection getOutgoingTypeModelFacetLinks_Link_4002(
-			Node source) {
-		ProblemDiagram container = null;
+			uk.ac.open.problem.Node source) {
+		uk.ac.open.problem.ProblemDiagram container = null;
 		// Find container element for the link.
 		// Climb up by containment hierarchy starting from the source
 		// and return the first element that is instance of the container class.
 		for (EObject element = source; element != null && container == null; element = element
 				.eContainer()) {
-			if (element instanceof ProblemDiagram) {
-				container = (ProblemDiagram) element;
+			if (element instanceof uk.ac.open.problem.ProblemDiagram) {
+				container = (uk.ac.open.problem.ProblemDiagram) element;
 			}
 		}
 		if (container == null) {
@@ -673,16 +692,16 @@ public class ProblemDiagramUpdater {
 		Collection result = new LinkedList();
 		for (Iterator links = container.getLinks().iterator(); links.hasNext();) {
 			EObject linkObject = (EObject) links.next();
-			if (false == linkObject instanceof Link) {
+			if (false == linkObject instanceof uk.ac.open.problem.Link) {
 				continue;
 			}
-			Link link = (Link) linkObject;
+			uk.ac.open.problem.Link link = (uk.ac.open.problem.Link) linkObject;
 			if (Link2EditPart.VISUAL_ID != ProblemVisualIDRegistry
 					.getLinkWithClassVisualID(link)) {
 				continue;
 			}
-			Node dst = link.getTo();
-			Node src = link.getFrom();
+			uk.ac.open.problem.Node dst = link.getTo();
+			uk.ac.open.problem.Node src = link.getFrom();
 			if (src != source) {
 				continue;
 			}
@@ -696,15 +715,15 @@ public class ProblemDiagramUpdater {
 	 * @generated
 	 */
 	private static Collection getOutgoingTypeModelFacetLinks_Link_4003(
-			Node source) {
-		ProblemDiagram container = null;
+			uk.ac.open.problem.Node source) {
+		uk.ac.open.problem.ProblemDiagram container = null;
 		// Find container element for the link.
 		// Climb up by containment hierarchy starting from the source
 		// and return the first element that is instance of the container class.
 		for (EObject element = source; element != null && container == null; element = element
 				.eContainer()) {
-			if (element instanceof ProblemDiagram) {
-				container = (ProblemDiagram) element;
+			if (element instanceof uk.ac.open.problem.ProblemDiagram) {
+				container = (uk.ac.open.problem.ProblemDiagram) element;
 			}
 		}
 		if (container == null) {
@@ -713,16 +732,16 @@ public class ProblemDiagramUpdater {
 		Collection result = new LinkedList();
 		for (Iterator links = container.getLinks().iterator(); links.hasNext();) {
 			EObject linkObject = (EObject) links.next();
-			if (false == linkObject instanceof Link) {
+			if (false == linkObject instanceof uk.ac.open.problem.Link) {
 				continue;
 			}
-			Link link = (Link) linkObject;
+			uk.ac.open.problem.Link link = (uk.ac.open.problem.Link) linkObject;
 			if (Link3EditPart.VISUAL_ID != ProblemVisualIDRegistry
 					.getLinkWithClassVisualID(link)) {
 				continue;
 			}
-			Node dst = link.getTo();
-			Node src = link.getFrom();
+			uk.ac.open.problem.Node dst = link.getTo();
+			uk.ac.open.problem.Node src = link.getFrom();
 			if (src != source) {
 				continue;
 			}

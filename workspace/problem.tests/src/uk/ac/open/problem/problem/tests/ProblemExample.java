@@ -27,6 +27,7 @@ import uk.ac.open.problem.ProblemDiagram;
 import uk.ac.open.problem.ProblemFactory;
 import uk.ac.open.problem.ProblemPackage;
 
+
 /**
  * <!-- begin-user-doc -->
  * A sample utility for the '<em><b>problem</b></em>' package.

@@ -13,6 +13,7 @@ import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.emf.ui.services.parser.ParserHintAdapter;
 import org.eclipse.gmf.runtime.notation.View;
 
+
 import uk.ac.open.problem.ProblemPackage;
 import uk.ac.open.problem.diagram.edit.parts.LinkDescription2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.LinkDescription3EditPart;
@@ -52,9 +53,9 @@ public class ProblemParserProvider extends AbstractProvider implements
 	 */
 	private IParser getNodeName_5001Parser() {
 		if (nodeName_5001Parser == null) {
-			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
 					.getNode_Name() };
-			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
+			EAttribute[] editableFeatures = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
 					.getNode_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
@@ -66,43 +67,22 @@ public class ProblemParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser nodeDescription_5007Parser;
+	private IParser nodeDescription_5002Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getNodeDescription_5007Parser() {
-		if (nodeDescription_5007Parser == null) {
-			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
+	private IParser getNodeDescription_5002Parser() {
+		if (nodeDescription_5002Parser == null) {
+			EAttribute[] features = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
 					.getNode_Description() };
-			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
+			EAttribute[] editableFeatures = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
 					.getNode_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
-			nodeDescription_5007Parser = parser;
+			nodeDescription_5002Parser = parser;
 		}
-		return nodeDescription_5007Parser;
-	}
-
-	/**
-	 * @generated
-	 */
-	private IParser nodeName_5002Parser;
-
-	/**
-	 * @generated
-	 */
-	private IParser getNodeName_5002Parser() {
-		if (nodeName_5002Parser == null) {
-			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
-					.getNode_Name() };
-			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
-					.getNode_Name() };
-			MessageFormatParser parser = new MessageFormatParser(features,
-					editableFeatures);
-			nodeName_5002Parser = parser;
-		}
-		return nodeName_5002Parser;
+		return nodeDescription_5002Parser;
 	}
 
 	/**
@@ -115,15 +95,36 @@ public class ProblemParserProvider extends AbstractProvider implements
 	 */
 	private IParser getNodeDescription_5008Parser() {
 		if (nodeDescription_5008Parser == null) {
-			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
 					.getNode_Description() };
-			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
+			EAttribute[] editableFeatures = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
 					.getNode_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
 			nodeDescription_5008Parser = parser;
 		}
 		return nodeDescription_5008Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser nodeName_5009Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getNodeName_5009Parser() {
+		if (nodeName_5009Parser == null) {
+			EAttribute[] features = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+					.getNode_Name() };
+			EAttribute[] editableFeatures = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+					.getNode_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features,
+					editableFeatures);
+			nodeName_5009Parser = parser;
+		}
+		return nodeName_5009Parser;
 	}
 
 	/**
@@ -136,9 +137,9 @@ public class ProblemParserProvider extends AbstractProvider implements
 	 */
 	private IParser getNodeName_5003Parser() {
 		if (nodeName_5003Parser == null) {
-			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
 					.getNode_Name() };
-			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
+			EAttribute[] editableFeatures = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
 					.getNode_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
@@ -150,43 +151,22 @@ public class ProblemParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser nodeDescription_5009Parser;
+	private IParser nodeDescription_5004Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getNodeDescription_5009Parser() {
-		if (nodeDescription_5009Parser == null) {
-			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
+	private IParser getNodeDescription_5004Parser() {
+		if (nodeDescription_5004Parser == null) {
+			EAttribute[] features = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
 					.getNode_Description() };
-			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
+			EAttribute[] editableFeatures = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
 					.getNode_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
-			nodeDescription_5009Parser = parser;
+			nodeDescription_5004Parser = parser;
 		}
-		return nodeDescription_5009Parser;
-	}
-
-	/**
-	 * @generated
-	 */
-	private IParser nodeName_5004Parser;
-
-	/**
-	 * @generated
-	 */
-	private IParser getNodeName_5004Parser() {
-		if (nodeName_5004Parser == null) {
-			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
-					.getNode_Name() };
-			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
-					.getNode_Name() };
-			MessageFormatParser parser = new MessageFormatParser(features,
-					editableFeatures);
-			nodeName_5004Parser = parser;
-		}
-		return nodeName_5004Parser;
+		return nodeDescription_5004Parser;
 	}
 
 	/**
@@ -199,15 +179,36 @@ public class ProblemParserProvider extends AbstractProvider implements
 	 */
 	private IParser getNodeDescription_5010Parser() {
 		if (nodeDescription_5010Parser == null) {
-			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
 					.getNode_Description() };
-			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
+			EAttribute[] editableFeatures = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
 					.getNode_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
 			nodeDescription_5010Parser = parser;
 		}
 		return nodeDescription_5010Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser nodeName_5011Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getNodeName_5011Parser() {
+		if (nodeName_5011Parser == null) {
+			EAttribute[] features = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+					.getNode_Name() };
+			EAttribute[] editableFeatures = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+					.getNode_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features,
+					editableFeatures);
+			nodeName_5011Parser = parser;
+		}
+		return nodeName_5011Parser;
 	}
 
 	/**
@@ -220,9 +221,9 @@ public class ProblemParserProvider extends AbstractProvider implements
 	 */
 	private IParser getNodeName_5005Parser() {
 		if (nodeName_5005Parser == null) {
-			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
 					.getNode_Name() };
-			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
+			EAttribute[] editableFeatures = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
 					.getNode_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
@@ -234,43 +235,43 @@ public class ProblemParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser nodeDescription_5011Parser;
+	private IParser nodeDescription_5006Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getNodeDescription_5011Parser() {
-		if (nodeDescription_5011Parser == null) {
-			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
+	private IParser getNodeDescription_5006Parser() {
+		if (nodeDescription_5006Parser == null) {
+			EAttribute[] features = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
 					.getNode_Description() };
-			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
+			EAttribute[] editableFeatures = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
 					.getNode_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
-			nodeDescription_5011Parser = parser;
+			nodeDescription_5006Parser = parser;
 		}
-		return nodeDescription_5011Parser;
+		return nodeDescription_5006Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser nodeName_5006Parser;
+	private IParser nodeName_5007Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getNodeName_5006Parser() {
-		if (nodeName_5006Parser == null) {
-			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
+	private IParser getNodeName_5007Parser() {
+		if (nodeName_5007Parser == null) {
+			EAttribute[] features = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
 					.getNode_Name() };
-			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
+			EAttribute[] editableFeatures = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
 					.getNode_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
-			nodeName_5006Parser = parser;
+			nodeName_5007Parser = parser;
 		}
-		return nodeName_5006Parser;
+		return nodeName_5007Parser;
 	}
 
 	/**
@@ -283,9 +284,9 @@ public class ProblemParserProvider extends AbstractProvider implements
 	 */
 	private IParser getNodeDescription_5012Parser() {
 		if (nodeDescription_5012Parser == null) {
-			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
 					.getNode_Description() };
-			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
+			EAttribute[] editableFeatures = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
 					.getNode_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
@@ -304,9 +305,9 @@ public class ProblemParserProvider extends AbstractProvider implements
 	 */
 	private IParser getLinkDescription_6001Parser() {
 		if (linkDescription_6001Parser == null) {
-			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
 					.getLink_Description() };
-			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
+			EAttribute[] editableFeatures = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
 					.getLink_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
@@ -325,9 +326,9 @@ public class ProblemParserProvider extends AbstractProvider implements
 	 */
 	private IParser getLinkDescription_6002Parser() {
 		if (linkDescription_6002Parser == null) {
-			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
 					.getLink_Description() };
-			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
+			EAttribute[] editableFeatures = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
 					.getLink_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
@@ -346,9 +347,9 @@ public class ProblemParserProvider extends AbstractProvider implements
 	 */
 	private IParser getLinkDescription_6003Parser() {
 		if (linkDescription_6003Parser == null) {
-			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
 					.getLink_Description() };
-			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
+			EAttribute[] editableFeatures = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
 					.getLink_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
@@ -365,25 +366,25 @@ public class ProblemParserProvider extends AbstractProvider implements
 		case NodeNameDescriptionEditPart.VISUAL_ID:
 			return getNodeName_5001Parser();
 		case NodeDescriptionEditPart.VISUAL_ID:
-			return getNodeDescription_5007Parser();
-		case NodeNameDescription2EditPart.VISUAL_ID:
-			return getNodeName_5002Parser();
-		case NodeDescription2EditPart.VISUAL_ID:
-			return getNodeDescription_5008Parser();
+			return getNodeDescription_5002Parser();
 		case NodeNameEditPart.VISUAL_ID:
 			return getNodeName_5003Parser();
-		case NodeDescription3EditPart.VISUAL_ID:
-			return getNodeDescription_5009Parser();
+		case NodeDescription2EditPart.VISUAL_ID:
+			return getNodeDescription_5004Parser();
 		case NodeName2EditPart.VISUAL_ID:
-			return getNodeName_5004Parser();
-		case NodeDescription4EditPart.VISUAL_ID:
-			return getNodeDescription_5010Parser();
-		case NodeNameDescription3EditPart.VISUAL_ID:
 			return getNodeName_5005Parser();
+		case NodeDescription3EditPart.VISUAL_ID:
+			return getNodeDescription_5006Parser();
+		case NodeName3EditPart.VISUAL_ID:
+			return getNodeName_5007Parser();
+		case NodeDescription4EditPart.VISUAL_ID:
+			return getNodeDescription_5008Parser();
+		case NodeName4EditPart.VISUAL_ID:
+			return getNodeName_5009Parser();
 		case NodeDescription5EditPart.VISUAL_ID:
-			return getNodeDescription_5011Parser();
-		case NodeNameDescription4EditPart.VISUAL_ID:
-			return getNodeName_5006Parser();
+			return getNodeDescription_5010Parser();
+		case NodeName5EditPart.VISUAL_ID:
+			return getNodeName_5011Parser();
 		case NodeDescription6EditPart.VISUAL_ID:
 			return getNodeDescription_5012Parser();
 		case LinkDescriptionEditPart.VISUAL_ID:

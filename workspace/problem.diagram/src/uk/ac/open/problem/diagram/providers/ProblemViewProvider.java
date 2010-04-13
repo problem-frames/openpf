@@ -334,7 +334,7 @@ public class ProblemViewProvider extends AbstractProvider implements
 				.RGBToInteger(fillRGB));
 		Node label5001 = createLabel(node, ProblemVisualIDRegistry
 				.getType(NodeNameDescriptionEditPart.VISUAL_ID));
-		Node label5007 = createLabel(node, ProblemVisualIDRegistry
+		Node label5002 = createLabel(node, ProblemVisualIDRegistry
 				.getType(NodeDescriptionEditPart.VISUAL_ID));
 		return node;
 	}
@@ -380,9 +380,9 @@ public class ProblemViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
 				.getFillStyle_FillColor(), FigureUtilities
 				.RGBToInteger(fillRGB));
-		Node label5002 = createLabel(node, ProblemVisualIDRegistry
-				.getType(NodeNameDescription2EditPart.VISUAL_ID));
-		Node label5008 = createLabel(node, ProblemVisualIDRegistry
+		Node label5003 = createLabel(node, ProblemVisualIDRegistry
+				.getType(NodeNameEditPart.VISUAL_ID));
+		Node label5004 = createLabel(node, ProblemVisualIDRegistry
 				.getType(NodeDescription2EditPart.VISUAL_ID));
 		return node;
 	}
@@ -428,9 +428,9 @@ public class ProblemViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
 				.getFillStyle_FillColor(), FigureUtilities
 				.RGBToInteger(fillRGB));
-		Node label5003 = createLabel(node, ProblemVisualIDRegistry
-				.getType(NodeNameEditPart.VISUAL_ID));
-		Node label5009 = createLabel(node, ProblemVisualIDRegistry
+		Node label5005 = createLabel(node, ProblemVisualIDRegistry
+				.getType(NodeName2EditPart.VISUAL_ID));
+		Node label5006 = createLabel(node, ProblemVisualIDRegistry
 				.getType(NodeDescription3EditPart.VISUAL_ID));
 		return node;
 	}
@@ -476,9 +476,9 @@ public class ProblemViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
 				.getFillStyle_FillColor(), FigureUtilities
 				.RGBToInteger(fillRGB));
-		Node label5004 = createLabel(node, ProblemVisualIDRegistry
-				.getType(NodeName2EditPart.VISUAL_ID));
-		Node label5010 = createLabel(node, ProblemVisualIDRegistry
+		Node label5007 = createLabel(node, ProblemVisualIDRegistry
+				.getType(NodeName3EditPart.VISUAL_ID));
+		Node label5008 = createLabel(node, ProblemVisualIDRegistry
 				.getType(NodeDescription4EditPart.VISUAL_ID));
 		return node;
 	}
@@ -524,9 +524,9 @@ public class ProblemViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
 				.getFillStyle_FillColor(), FigureUtilities
 				.RGBToInteger(fillRGB));
-		Node label5005 = createLabel(node, ProblemVisualIDRegistry
-				.getType(NodeNameDescription3EditPart.VISUAL_ID));
-		Node label5011 = createLabel(node, ProblemVisualIDRegistry
+		Node label5009 = createLabel(node, ProblemVisualIDRegistry
+				.getType(NodeName4EditPart.VISUAL_ID));
+		Node label5010 = createLabel(node, ProblemVisualIDRegistry
 				.getType(NodeDescription5EditPart.VISUAL_ID));
 		return node;
 	}
@@ -572,8 +572,8 @@ public class ProblemViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
 				.getFillStyle_FillColor(), FigureUtilities
 				.RGBToInteger(fillRGB));
-		Node label5006 = createLabel(node, ProblemVisualIDRegistry
-				.getType(NodeNameDescription4EditPart.VISUAL_ID));
+		Node label5011 = createLabel(node, ProblemVisualIDRegistry
+				.getType(NodeName5EditPart.VISUAL_ID));
 		Node label5012 = createLabel(node, ProblemVisualIDRegistry
 				.getType(NodeDescription6EditPart.VISUAL_ID));
 		return node;

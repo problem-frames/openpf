@@ -315,7 +315,7 @@ public class NodeNameEditPart extends CompartmentEditPart implements
 		if (parser == null) {
 			parser = ProblemParserProvider
 					.getParser(
-							ProblemElementTypes.Node_2003,
+							ProblemElementTypes.Node_2002,
 							getParserElement(),
 							ProblemVisualIDRegistry
 									.getType(uk.ac.open.problem.diagram.edit.parts.NodeNameEditPart.VISUAL_ID));

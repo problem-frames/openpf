@@ -36,6 +36,7 @@ import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
+
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.NodeType;
 import uk.ac.open.problem.ProblemDiagram;
@@ -86,9 +87,8 @@ public class OpenDiagramEditPolicy extends OpenEditPolicy {
 		 * @generated
 		 */
 		OpenDiagramCommand(HintedDiagramLinkStyle linkStyle) {
-			// editing domain is taken for original diagram,
-			// if we open diagram from another file, we should use another
-			// editing domain
+			// editing domain is taken for original diagram, 
+			// if we open diagram from another file, we should use another editing domain
 			super(TransactionUtil.getEditingDomain(linkStyle),
 					Messages.CommandName_OpenDiagram, null);
 			diagramFacet = linkStyle;
@@ -144,11 +144,11 @@ public class OpenDiagramEditPolicy extends OpenEditPolicy {
 			if (!node.getType().equals(NodeType.REQUIREMENT)) {
 				if (node.getSubproblem() == null) {
 					ProblemDiagram pd = null;
-					if (node.getProblemRef()!=null) {
+					if (node.getProblemRef() != null) {
 						if (node.getProblemRef().getSubproblem() != null) {
-							pd = node.getProblemRef().getSubproblem();							
+							pd = node.getProblemRef().getSubproblem();
 						}
-					} 
+					}
 					if (pd == null) {
 						pd = ProblemFactory.eINSTANCE.createProblemDiagram();
 						pd.setDescription(node.getDescription());
@@ -160,11 +160,11 @@ public class OpenDiagramEditPolicy extends OpenEditPolicy {
 			} else {
 				if (node.getIstar() == null) {
 					Model ood = null;
-					if (node.getIstarRef()!=null) {
+					if (node.getIstarRef() != null) {
 						if (node.getIstarRef().getContainer() != null) {
-							ood = node.getIstarRef().getContainer().getModel();							
+							ood = node.getIstarRef().getContainer().getModel();
 						}
-					} 
+					}
 					if (ood == null) {
 						ood = Openome_modelFactory.eINSTANCE.createModel();
 						ood.setName(node.getDescription());
@@ -172,8 +172,7 @@ public class OpenDiagramEditPolicy extends OpenEditPolicy {
 					node.setIstar(ood);
 				}
 				d = ViewService.createDiagram(node.getIstar(),
-					ModelEditPart.MODEL_ID,
-					null);
+						ModelEditPart.MODEL_ID, null);
 			}
 			if (d == null) {
 				throw new ExecutionException("Can't create diagram of '"

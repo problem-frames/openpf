@@ -49,6 +49,7 @@ import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.FileEditorInput;
 
+
 import uk.ac.open.problem.ProblemDiagram;
 import uk.ac.open.problem.ProblemFactory;
 import uk.ac.open.problem.diagram.edit.parts.ProblemDiagramEditPart;
@@ -173,7 +174,7 @@ public class ProblemDiagramEditorUtil {
 			protected CommandResult doExecuteWithResult(
 					IProgressMonitor monitor, IAdaptable info)
 					throws ExecutionException {
-				ProblemDiagram model = createInitialModel();
+				uk.ac.open.problem.ProblemDiagram model = createInitialModel();
 				attachModelToResource(model, modelResource);
 
 				Diagram diagram = ViewService.createDiagram(model,
@@ -218,8 +219,8 @@ public class ProblemDiagramEditorUtil {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static ProblemDiagram createInitialModel() {
-		return ProblemFactory.eINSTANCE.createProblemDiagram();
+	private static uk.ac.open.problem.ProblemDiagram createInitialModel() {
+		return uk.ac.open.problem.ProblemFactory.eINSTANCE.createProblemDiagram();
 	}
 
 	/**
@@ -228,8 +229,8 @@ public class ProblemDiagramEditorUtil {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static void attachModelToResource(ProblemDiagram model,
-			Resource resource) {
+	private static void attachModelToResource(
+			uk.ac.open.problem.ProblemDiagram model, Resource resource) {
 		resource.getContents().add(model);
 	}
 

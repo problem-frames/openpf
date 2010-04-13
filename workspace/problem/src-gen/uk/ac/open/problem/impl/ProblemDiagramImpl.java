@@ -26,6 +26,7 @@ import uk.ac.open.problem.Node;
 import uk.ac.open.problem.ProblemDiagram;
 import uk.ac.open.problem.ProblemPackage;
 
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Diagram</b></em>'.

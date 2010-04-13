@@ -18,6 +18,7 @@ import org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.notation.View;
 
+
 import uk.ac.open.problem.ProblemPackage;
 import uk.ac.open.problem.diagram.edit.policies.LinkItemSemanticEditPolicy;
 

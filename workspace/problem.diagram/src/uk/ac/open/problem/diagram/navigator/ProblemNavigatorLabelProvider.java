@@ -16,6 +16,7 @@ import org.eclipse.ui.IMemento;
 import org.eclipse.ui.navigator.ICommonContentExtensionSite;
 import org.eclipse.ui.navigator.ICommonLabelProvider;
 
+
 import uk.ac.open.problem.Link;
 import uk.ac.open.problem.ProblemDiagram;
 import uk.ac.open.problem.diagram.edit.parts.Link2EditPart;
@@ -217,7 +218,8 @@ public class ProblemNavigatorLabelProvider extends LabelProvider implements
 	 * @generated
 	 */
 	private String getProblemDiagram_1000Text(View view) {
-		ProblemDiagram domainModelElement = (ProblemDiagram) view.getElement();
+		uk.ac.open.problem.ProblemDiagram domainModelElement = (uk.ac.open.problem.ProblemDiagram) view
+				.getElement();
 		if (domainModelElement != null) {
 			return domainModelElement.getDescription();
 		} else {
@@ -253,25 +255,6 @@ public class ProblemNavigatorLabelProvider extends LabelProvider implements
 		IParser parser = ProblemParserProvider.getParser(
 				ProblemElementTypes.Node_2002, view.getElement() != null ? view
 						.getElement() : view, ProblemVisualIDRegistry
-						.getType(NodeNameDescription2EditPart.VISUAL_ID));
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(
-					view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			ProblemDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5002); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getNode_2003Text(View view) {
-		IParser parser = ProblemParserProvider.getParser(
-				ProblemElementTypes.Node_2003, view.getElement() != null ? view
-						.getElement() : view, ProblemVisualIDRegistry
 						.getType(NodeNameEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
@@ -287,30 +270,11 @@ public class ProblemNavigatorLabelProvider extends LabelProvider implements
 	/**
 	 * @generated
 	 */
-	private String getNode_2004Text(View view) {
+	private String getNode_2003Text(View view) {
 		IParser parser = ProblemParserProvider.getParser(
-				ProblemElementTypes.Node_2004, view.getElement() != null ? view
+				ProblemElementTypes.Node_2003, view.getElement() != null ? view
 						.getElement() : view, ProblemVisualIDRegistry
 						.getType(NodeName2EditPart.VISUAL_ID));
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(
-					view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			ProblemDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5004); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getNode_2005Text(View view) {
-		IParser parser = ProblemParserProvider.getParser(
-				ProblemElementTypes.Node_2005, view.getElement() != null ? view
-						.getElement() : view, ProblemVisualIDRegistry
-						.getType(NodeNameDescription3EditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
 					view.getElement() != null ? view.getElement() : view),
@@ -325,18 +289,56 @@ public class ProblemNavigatorLabelProvider extends LabelProvider implements
 	/**
 	 * @generated
 	 */
-	private String getNode_2006Text(View view) {
+	private String getNode_2004Text(View view) {
 		IParser parser = ProblemParserProvider.getParser(
-				ProblemElementTypes.Node_2006, view.getElement() != null ? view
+				ProblemElementTypes.Node_2004, view.getElement() != null ? view
 						.getElement() : view, ProblemVisualIDRegistry
-						.getType(NodeNameDescription4EditPart.VISUAL_ID));
+						.getType(NodeName3EditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
 					view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
 		} else {
 			ProblemDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5006); //$NON-NLS-1$
+					"Parser was not found for label " + 5007); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getNode_2005Text(View view) {
+		IParser parser = ProblemParserProvider.getParser(
+				ProblemElementTypes.Node_2005, view.getElement() != null ? view
+						.getElement() : view, ProblemVisualIDRegistry
+						.getType(NodeName4EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			ProblemDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5009); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getNode_2006Text(View view) {
+		IParser parser = ProblemParserProvider.getParser(
+				ProblemElementTypes.Node_2006, view.getElement() != null ? view
+						.getElement() : view, ProblemVisualIDRegistry
+						.getType(NodeName5EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			ProblemDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5011); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}

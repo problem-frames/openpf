@@ -48,25 +48,25 @@ T48 : '-(++)->' ;
 T49 : '-(-)->' ;
 T50 : '-(--)->' ;
 
-// $ANTLR src "../problem.ui/src-gen/uk/ac/open/problem/contentassist/antlr/internal/InternalProblem.g" 4576
+// $ANTLR src "../problem.ui/src-gen/uk/ac/open/problem/contentassist/antlr/internal/InternalProblem.g" 4692
 RULE_ID : ('#' ~('#')+ '#'|'^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*);
 
-// $ANTLR src "../problem.ui/src-gen/uk/ac/open/problem/contentassist/antlr/internal/InternalProblem.g" 4578
+// $ANTLR src "../problem.ui/src-gen/uk/ac/open/problem/contentassist/antlr/internal/InternalProblem.g" 4694
 RULE_INT : ('0'..'9')+;
 
-// $ANTLR src "../problem.ui/src-gen/uk/ac/open/problem/contentassist/antlr/internal/InternalProblem.g" 4580
+// $ANTLR src "../problem.ui/src-gen/uk/ac/open/problem/contentassist/antlr/internal/InternalProblem.g" 4696
 RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\'');
 
-// $ANTLR src "../problem.ui/src-gen/uk/ac/open/problem/contentassist/antlr/internal/InternalProblem.g" 4582
+// $ANTLR src "../problem.ui/src-gen/uk/ac/open/problem/contentassist/antlr/internal/InternalProblem.g" 4698
 RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 
-// $ANTLR src "../problem.ui/src-gen/uk/ac/open/problem/contentassist/antlr/internal/InternalProblem.g" 4584
+// $ANTLR src "../problem.ui/src-gen/uk/ac/open/problem/contentassist/antlr/internal/InternalProblem.g" 4700
 RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
-// $ANTLR src "../problem.ui/src-gen/uk/ac/open/problem/contentassist/antlr/internal/InternalProblem.g" 4586
+// $ANTLR src "../problem.ui/src-gen/uk/ac/open/problem/contentassist/antlr/internal/InternalProblem.g" 4702
 RULE_WS : (' '|'\t'|'\r'|'\n')+;
 
-// $ANTLR src "../problem.ui/src-gen/uk/ac/open/problem/contentassist/antlr/internal/InternalProblem.g" 4588
+// $ANTLR src "../problem.ui/src-gen/uk/ac/open/problem/contentassist/antlr/internal/InternalProblem.g" 4704
 RULE_ANY_OTHER : .;
 
 

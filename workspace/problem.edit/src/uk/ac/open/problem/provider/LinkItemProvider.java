@@ -27,11 +27,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+
+
 import uk.ac.open.problem.Link;
 import uk.ac.open.problem.LinkType;
 import uk.ac.open.problem.ProblemFactory;
 import uk.ac.open.problem.ProblemPackage;
-
 import uk.ac.open.problem.provider.ProblemEditPlugin;
 
 /**

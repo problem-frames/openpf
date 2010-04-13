@@ -183,13 +183,22 @@ public interface ProblemPackage extends EPackage
   int NODE__ISTAR_REF = 6;
 
   /**
+	 * The feature id for the '<em><b>Hidden Phenomena</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int NODE__HIDDEN_PHENOMENA = 7;
+
+  /**
 	 * The number of structural features of the '<em>Node</em>' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int NODE_FEATURE_COUNT = 7;
+  int NODE_FEATURE_COUNT = 8;
 
   /**
 	 * The meta object id for the '{@link uk.ac.open.problem.impl.PhenomenonImpl <em>Phenomenon</em>}' class.
@@ -463,6 +472,17 @@ public interface ProblemPackage extends EPackage
   EReference getNode_IstarRef();
 
   /**
+	 * Returns the meta object for the containment reference list '{@link uk.ac.open.problem.Node#getHiddenPhenomena <em>Hidden Phenomena</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Hidden Phenomena</em>'.
+	 * @see uk.ac.open.problem.Node#getHiddenPhenomena()
+	 * @see #getNode()
+	 * @generated
+	 */
+  EReference getNode_HiddenPhenomena();
+
+  /**
 	 * Returns the meta object for class '{@link uk.ac.open.problem.Phenomenon <em>Phenomenon</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -722,6 +742,14 @@ public interface ProblemPackage extends EPackage
 		 * @generated
 		 */
     EReference NODE__ISTAR_REF = eINSTANCE.getNode_IstarRef();
+
+    /**
+		 * The meta object literal for the '<em><b>Hidden Phenomena</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EReference NODE__HIDDEN_PHENOMENA = eINSTANCE.getNode_HiddenPhenomena();
 
     /**
 		 * The meta object literal for the '{@link uk.ac.open.problem.impl.PhenomenonImpl <em>Phenomenon</em>}' class.

@@ -8,6 +8,7 @@ import org.eclipse.xtext.formatting.impl.FormattingConfig;
 
 import uk.ac.open.problem.services.ProblemGrammarAccess;
 
+
 /**
  * This class contains custom formatting description.
  * 

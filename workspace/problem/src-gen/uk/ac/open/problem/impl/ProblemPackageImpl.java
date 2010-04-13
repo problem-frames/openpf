@@ -15,9 +15,6 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import edu.toronto.cs.openome_model.Openome_modelPackage;
-import edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl;
-
 import uk.ac.open.problem.Link;
 import uk.ac.open.problem.LinkType;
 import uk.ac.open.problem.Node;
@@ -27,6 +24,10 @@ import uk.ac.open.problem.PhenomenonType;
 import uk.ac.open.problem.ProblemDiagram;
 import uk.ac.open.problem.ProblemFactory;
 import uk.ac.open.problem.ProblemPackage;
+
+import edu.toronto.cs.openome_model.Openome_modelPackage;
+import edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -278,6 +279,16 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
+  public EReference getNode_HiddenPhenomena()
+  {
+		return (EReference)nodeEClass.getEStructuralFeatures().get(7);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
   public EClass getPhenomenon()
   {
 		return phenomenonEClass;
@@ -446,6 +457,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 		createEReference(nodeEClass, NODE__PROBLEM_REF);
 		createEReference(nodeEClass, NODE__ISTAR);
 		createEReference(nodeEClass, NODE__ISTAR_REF);
+		createEReference(nodeEClass, NODE__HIDDEN_PHENOMENA);
 
 		phenomenonEClass = createEClass(PHENOMENON);
 		createEAttribute(phenomenonEClass, PHENOMENON__TYPE);
@@ -513,6 +525,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 		initEReference(getNode_ProblemRef(), this.getNode(), null, "problemRef", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getNode_Istar(), theOpenome_modelPackage.getModel(), null, "istar", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getNode_IstarRef(), theOpenome_modelPackage.getIntention(), null, "istarRef", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNode_HiddenPhenomena(), this.getPhenomenon(), null, "hiddenPhenomena", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(phenomenonEClass, Phenomenon.class, "Phenomenon", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPhenomenon_Type(), this.getPhenomenonType(), "type", null, 0, 1, Phenomenon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

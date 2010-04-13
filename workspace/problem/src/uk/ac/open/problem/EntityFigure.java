@@ -10,6 +10,9 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.widgets.Display;
 
+import uk.ac.open.problem.Node;
+import uk.ac.open.problem.NodeType;
+
 public class EntityFigure extends Shape {
 
 	private Node node;

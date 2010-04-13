@@ -20,6 +20,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="istar" eType="ecore:EClass platform:/resource/openome_model/model/openome_model.ecore#//Model"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="istarRef" eType="ecore:EClass platform:/resource/openome_model/model/openome_model.ecore#//Intention"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hiddenPhenomena" upperBound="-1"
+        eType="#//Phenomenon" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="NodeType">
     <eLiterals name="REQUIREMENT" literal="R"/>

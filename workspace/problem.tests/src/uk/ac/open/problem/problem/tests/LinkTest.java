@@ -6,10 +6,10 @@
  */
 package uk.ac.open.problem.problem.tests;
 
-import junit.textui.TestRunner;
-
 import uk.ac.open.problem.Link;
 import uk.ac.open.problem.ProblemFactory;
+import junit.textui.TestRunner;
+
 
 /**
  * <!-- begin-user-doc -->

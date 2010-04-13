@@ -62,6 +62,10 @@
       Select the following feature:
   Xtext Antlr Support 0.7.2	
       Next > Accept the licenses > Finish > Yes to restart Eclipse
+        * Warning: If you haven't installed this feature, there might be two
+          compilation errors related to the missing org.eclipse.xtext.log4j
+	  plugin library. It is included because xtext code generator requires
+          the Antlr parser generator.
   * open and run the product:
     Project Explorer > problem > Double click at the pf.product file > Testing > Launch an Eclipse Application
 

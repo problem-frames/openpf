@@ -79,6 +79,17 @@
                 </terminal>
               </tokens>
             </groups>
+            <groups xsi:type="xtext:Group">
+              <tokens xsi:type="xtext:Assignment" feature="hiddenPhenomena" operator="+=">
+                <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
+              </tokens>
+              <tokens xsi:type="xtext:Group" cardinality="*">
+                <tokens xsi:type="xtext:Keyword" value=","/>
+                <tokens xsi:type="xtext:Assignment" feature="hiddenPhenomena" operator="+=">
+                  <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
+                </tokens>
+              </tokens>
+            </groups>
           </tokens>
           <tokens xsi:type="xtext:Keyword" value="}"/>
         </tokens>

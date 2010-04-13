@@ -101,9 +101,10 @@ public class ProblemDiagramEditorPlugin extends AbstractUIPlugin {
 	 * @generated
 	 */
 	protected void fillItemProviderFactories(List factories) {
-		factories.add(new ProblemItemProviderAdapterFactory());
 		factories
-				.add(new Openome_modelItemProviderAdapterFactory());
+				.add(new uk.ac.open.problem.provider.ProblemItemProviderAdapterFactory());
+		factories
+				.add(new edu.toronto.cs.openome_model.provider.Openome_modelItemProviderAdapterFactory());
 		factories.add(new ResourceItemProviderAdapterFactory());
 		factories.add(new ReflectiveItemProviderAdapterFactory());
 	}

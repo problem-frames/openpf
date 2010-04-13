@@ -17,6 +17,8 @@ import org.eclipse.xtext.parsetree.AbstractNode;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.IScopedElement;
 
+import uk.ac.open.problem.Node;
+
 
 import com.google.inject.Singleton;
 

@@ -12,6 +12,7 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest;
 
+
 import uk.ac.open.problem.Link;
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.ProblemDiagram;
@@ -37,7 +38,7 @@ public class Link3CreateCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	private final ProblemDiagram container;
+	private final uk.ac.open.problem.ProblemDiagram container;
 
 	/**
 	 * @generated
@@ -57,10 +58,10 @@ public class Link3CreateCommand extends EditElementCommand {
 		if (source == null && target == null) {
 			return false;
 		}
-		if (source != null && false == source instanceof Node) {
+		if (source != null && false == source instanceof uk.ac.open.problem.Node) {
 			return false;
 		}
-		if (target != null && false == target instanceof Node) {
+		if (target != null && false == target instanceof uk.ac.open.problem.Node) {
 			return false;
 		}
 		if (getSource() == null) {
@@ -84,7 +85,8 @@ public class Link3CreateCommand extends EditElementCommand {
 					"Invalid arguments in create link command"); //$NON-NLS-1$
 		}
 
-		Link newElement = ProblemFactory.eINSTANCE.createLink();
+		uk.ac.open.problem.Link newElement = uk.ac.open.problem.ProblemFactory.eINSTANCE
+				.createLink();
 		getContainer().getLinks().add(newElement);
 		newElement.setFrom(getSource());
 		newElement.setTo(getTarget());
@@ -98,8 +100,9 @@ public class Link3CreateCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	protected void doConfigure(Link newElement, IProgressMonitor monitor,
-			IAdaptable info) throws ExecutionException {
+	protected void doConfigure(uk.ac.open.problem.Link newElement,
+			IProgressMonitor monitor, IAdaptable info)
+			throws ExecutionException {
 		IElementType elementType = ((CreateElementRequest) getRequest())
 				.getElementType();
 		ConfigureRequest configureRequest = new ConfigureRequest(
@@ -128,21 +131,21 @@ public class Link3CreateCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	protected Node getSource() {
-		return (Node) source;
+	protected uk.ac.open.problem.Node getSource() {
+		return (uk.ac.open.problem.Node) source;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected Node getTarget() {
-		return (Node) target;
+	protected uk.ac.open.problem.Node getTarget() {
+		return (uk.ac.open.problem.Node) target;
 	}
 
 	/**
 	 * @generated
 	 */
-	public ProblemDiagram getContainer() {
+	public uk.ac.open.problem.ProblemDiagram getContainer() {
 		return container;
 	}
 
@@ -151,14 +154,15 @@ public class Link3CreateCommand extends EditElementCommand {
 	 * Modify with appropriate logic.
 	 * @generated
 	 */
-	private static ProblemDiagram deduceContainer(EObject source, EObject target) {
+	private static uk.ac.open.problem.ProblemDiagram deduceContainer(
+			EObject source, EObject target) {
 		// Find container element for the new link.
 		// Climb up by containment hierarchy starting from the source
 		// and return the first element that is instance of the container class.
 		for (EObject element = source; element != null; element = element
 				.eContainer()) {
-			if (element instanceof ProblemDiagram) {
-				return (ProblemDiagram) element;
+			if (element instanceof uk.ac.open.problem.ProblemDiagram) {
+				return (uk.ac.open.problem.ProblemDiagram) element;
 			}
 		}
 		return null;

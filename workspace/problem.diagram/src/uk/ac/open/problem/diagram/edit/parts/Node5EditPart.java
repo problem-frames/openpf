@@ -36,6 +36,7 @@ import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.widgets.Display;
 
+
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.NodeType;
 import uk.ac.open.problem.ProblemPackage;
@@ -114,9 +115,9 @@ public class Node5EditPart extends ShapeNodeEditPart {
 					.setLabel(getPrimaryShape().getFigureEntityDescription());
 			return true;
 		}
-		if (childEditPart instanceof NodeNameDescription3EditPart) {
-			((NodeNameDescription3EditPart) childEditPart)
-					.setLabel(getPrimaryShape().getFigureEntityName());
+		if (childEditPart instanceof NodeName4EditPart) {
+			((NodeName4EditPart) childEditPart).setLabel(getPrimaryShape()
+					.getFigureEntityName());
 			return true;
 		}
 		return false;
@@ -129,7 +130,7 @@ public class Node5EditPart extends ShapeNodeEditPart {
 		if (childEditPart instanceof NodeDescription5EditPart) {
 			return true;
 		}
-		if (childEditPart instanceof NodeNameDescription3EditPart) {
+		if (childEditPart instanceof NodeName4EditPart) {
 			return true;
 		}
 		return false;
@@ -253,7 +254,7 @@ public class Node5EditPart extends ShapeNodeEditPart {
 	 */
 	public EditPart getPrimaryChildEditPart() {
 		return getChildBySemanticHint(ProblemVisualIDRegistry
-				.getType(NodeNameDescription3EditPart.VISUAL_ID));
+				.getType(NodeName4EditPart.VISUAL_ID));
 	}
 
 	/**
@@ -593,7 +594,8 @@ public class Node5EditPart extends ShapeNodeEditPart {
 	 * @generated NOT
 	 */
 	protected IFigure createNodeShape() {
-		uk.ac.open.problem.figures.EntityFigure figure = new uk.ac.open.problem.figures.EntityFigure(node);
+		uk.ac.open.problem.figures.EntityFigure figure = new uk.ac.open.problem.figures.EntityFigure(
+				node);
 		return primaryShape = figure;
 	}
 

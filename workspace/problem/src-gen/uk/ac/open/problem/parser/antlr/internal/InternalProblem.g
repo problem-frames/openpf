@@ -338,7 +338,54 @@ ruleNode returns [EObject current=null]
 
 		// TODO assign feature to currentNode
 	
-)))'}' 
+))
+    |((	
+	
+	    
+	    { 
+	        currentNode=createCompositeNode(grammarAccess.getNodeAccess().getHiddenPhenomenaPhenomenonParserRuleCall_3_1_4_0_0(), currentNode); 
+	    }
+	    lv_hiddenPhenomena_13=rulePhenomenon 
+	    {
+	        if ($current==null) {
+	            $current = factory.create(grammarAccess.getNodeRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode.getParent(), $current);
+	        }
+	        
+	        try {
+	       		add($current, "hiddenPhenomena", lv_hiddenPhenomena_13, "Phenomenon", currentNode);
+	        } catch (ValueConverterException vce) {
+				handleValueConverterException(vce);
+	        }
+	        currentNode = currentNode.getParent();
+	    }
+	
+)(',' 
+    {
+        createLeafNode(grammarAccess.getNodeAccess().getCommaKeyword_3_1_4_1_0(), null); 
+    }
+(	
+	
+	    
+	    { 
+	        currentNode=createCompositeNode(grammarAccess.getNodeAccess().getHiddenPhenomenaPhenomenonParserRuleCall_3_1_4_1_1_0(), currentNode); 
+	    }
+	    lv_hiddenPhenomena_15=rulePhenomenon 
+	    {
+	        if ($current==null) {
+	            $current = factory.create(grammarAccess.getNodeRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode.getParent(), $current);
+	        }
+	        
+	        try {
+	       		add($current, "hiddenPhenomena", lv_hiddenPhenomena_15, "Phenomenon", currentNode);
+	        } catch (ValueConverterException vce) {
+				handleValueConverterException(vce);
+	        }
+	        currentNode = currentNode.getParent();
+	    }
+	
+))*))'}' 
     {
         createLeafNode(grammarAccess.getNodeAccess().getRightCurlyBracketKeyword_3_2(), null); 
     }

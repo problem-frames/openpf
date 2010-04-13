@@ -5,6 +5,8 @@ package uk.ac.open.problem;
 
 import org.eclipse.xtext.linking.ILinkingService;
 
+import uk.ac.open.problem.AbstractProblemRuntimeModule;
+
 /**
  * Use this class to register components to be used within the IDE.
  */

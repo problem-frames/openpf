@@ -12,6 +12,7 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
 
+
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.ProblemDiagram;
 import uk.ac.open.problem.ProblemFactory;
@@ -55,9 +56,10 @@ public class Node3CreateCommand extends EditElementCommand {
 	 */
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor,
 			IAdaptable info) throws ExecutionException {
-		Node newElement = ProblemFactory.eINSTANCE.createNode();
+		uk.ac.open.problem.Node newElement = uk.ac.open.problem.ProblemFactory.eINSTANCE
+				.createNode();
 
-		ProblemDiagram owner = (ProblemDiagram) getElementToEdit();
+		uk.ac.open.problem.ProblemDiagram owner = (uk.ac.open.problem.ProblemDiagram) getElementToEdit();
 		owner.getNodes().add(newElement);
 
 		ProblemElementTypes.init_Node_2003(newElement);
@@ -71,8 +73,9 @@ public class Node3CreateCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	protected void doConfigure(Node newElement, IProgressMonitor monitor,
-			IAdaptable info) throws ExecutionException {
+	protected void doConfigure(uk.ac.open.problem.Node newElement,
+			IProgressMonitor monitor, IAdaptable info)
+			throws ExecutionException {
 		IElementType elementType = ((CreateElementRequest) getRequest())
 				.getElementType();
 		ConfigureRequest configureRequest = new ConfigureRequest(

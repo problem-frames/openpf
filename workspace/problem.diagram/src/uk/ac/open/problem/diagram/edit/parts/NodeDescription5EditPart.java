@@ -59,7 +59,7 @@ public class NodeDescription5EditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5011;
+	public static final int VISUAL_ID = 5010;
 
 	/**
 	 * @generated

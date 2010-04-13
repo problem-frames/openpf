@@ -9,9 +9,10 @@ import org.eclipse.xtext.parser.IParseResult;
 import org.eclipse.xtext.parser.ParseException;
 import org.eclipse.xtext.parser.antlr.XtextTokenStream;
 
+import uk.ac.open.problem.services.ProblemGrammarAccess;
+
 import com.google.inject.Inject;
 
-import uk.ac.open.problem.services.ProblemGrammarAccess;
 
 public class ProblemParser extends org.eclipse.xtext.parser.antlr.AbstractAntlrParser {
 	

@@ -36,6 +36,7 @@ import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.widgets.Display;
 
+
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.NodeType;
 import uk.ac.open.problem.ProblemPackage;
@@ -121,7 +122,8 @@ public class Node2EditPart extends ShapeNodeEditPart {
 	 * @generated NOT
 	 */
 	protected IFigure createNodeShape() {
-		uk.ac.open.problem.figures.EntityFigure figure = new uk.ac.open.problem.figures.EntityFigure(node);
+		uk.ac.open.problem.figures.EntityFigure figure = new uk.ac.open.problem.figures.EntityFigure(
+				node);
 		return primaryShape = figure;
 	}
 
@@ -136,9 +138,9 @@ public class Node2EditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof NodeNameDescription2EditPart) {
-			((NodeNameDescription2EditPart) childEditPart)
-					.setLabel(getPrimaryShape().getFigureEntityName());
+		if (childEditPart instanceof NodeNameEditPart) {
+			((NodeNameEditPart) childEditPart).setLabel(getPrimaryShape()
+					.getFigureEntityName());
 			return true;
 		}
 		if (childEditPart instanceof NodeDescription2EditPart) {
@@ -165,7 +167,7 @@ public class Node2EditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof NodeNameDescription2EditPart) {
+		if (childEditPart instanceof NodeNameEditPart) {
 			return true;
 		}
 		if (childEditPart instanceof NodeDescription2EditPart) {
@@ -292,7 +294,7 @@ public class Node2EditPart extends ShapeNodeEditPart {
 	 */
 	public EditPart getPrimaryChildEditPart() {
 		return getChildBySemanticHint(ProblemVisualIDRegistry
-				.getType(NodeNameDescription2EditPart.VISUAL_ID));
+				.getType(NodeNameEditPart.VISUAL_ID));
 	}
 
 	/**

@@ -45,3 +45,4 @@ Require-Bundle: org.eclipse.core.runtime,
  problem.editor;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Import-Package: edu.toronto.cs.openome_model.diagram.edit.parts
+Eclipse-LazyStart: true

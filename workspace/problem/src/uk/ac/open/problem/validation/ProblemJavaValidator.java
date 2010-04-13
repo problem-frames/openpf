@@ -1,4 +1,6 @@
 package uk.ac.open.problem.validation;
+
+import uk.ac.open.problem.validation.AbstractProblemJavaValidator;
  
 
 public class ProblemJavaValidator extends AbstractProblemJavaValidator {
