@@ -38,6 +38,12 @@
     git svn clone -r HEAD https://se.cs.toronto.edu/svn/trac/ome/trunk/workspace ../openome-workspace
 	* Note for the checkout access, please ask Jennifer Horkoff <mailto:jenhork@cs.utoronto.ca> at the
 	  University of Toronto to get the permission
+	* Note if you are using a proxy server, to check out the code need to change the configuration file 
+          ~/.subversion/servers, for example:
+[global]
+http-proxy-host = wwwcache.open.ac.uk
+http-proxy-port = 80
+
   * Install an compatible Eclipse Modeling Tools IDE
     download eclipse-modeling-galileo-SR2-incubation-linux-gtk.tar.gz
   * Run Eclipse
