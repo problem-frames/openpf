@@ -1,0 +1,36 @@
+[module generate('http://open.ac.uk/problem')/]
+[template public generate(d: ProblemDiagram)]
+[file (d.description, false)]
+load foundations/Root.e
+load foundations/EC.e	
+    [for (dom: Node | d.nodes)]
+      [for (hidden: Phenomenon | dom.hiddenPhenomena)]
+       [if (hidden.type.toString() ='state')]      
+fluent [hidden.name/]_[dom.name/]()
+       [/if]
+       [/for]
+      [/for]
+      [for (interface: Link | d.links)]
+      [for (shared: Phenomenon | interface.phenomena)]
+		[if (shared.type.toString() = 'event')]  
+event [shared.name/]_[interface.description/]()
+        [/if]
+		[if (shared.toString() = 'state')]      
+fluent [shared.name/]_[interface.description/]()
+        [/if]
+      [/for]
+    [/for]	
+    [for (dom: Node | d.nodes)]
+     [if (dom.type.toString() != 'R')]
+;--[dom.name/]--
+['['/]time[']'/]
+      [for (interface: Link | d.links)]
+       [if (interface.from = dom)]
+       [/if]
+      [/for]
+      [/if]
+   [/for].
+range time 0 3
+range offset 1 2	
+[/file]	
+[/template]

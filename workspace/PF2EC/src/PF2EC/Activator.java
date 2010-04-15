@@ -8,7 +8,7 @@
  * Contributors:
  *     Obeo - initial API and implementation
  *******************************************************************************/
-package org.eclipse.acceleo.module.sample;
+package PF2EC;
 
 import org.eclipse.core.runtime.Plugin;
 import org.osgi.framework.BundleContext;
@@ -23,7 +23,7 @@ public class Activator extends Plugin {
 	/**
 	 * The plug-in ID.
 	 */
-	public static final String PLUGIN_ID = "org.eclipse.acceleo.module.sample";
+	public static final String PLUGIN_ID = "PF2EC";
 
 	/**
 	 * The shared instance.

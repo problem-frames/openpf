@@ -1,0 +1,13 @@
+load foundations/Root.e
+load foundations/EC.e	
+fluent State1_CWP()
+fluent State2_CWP()
+event Pheonmena1_a()
+;--MSoD--
+[time]
+;--Test--
+[time]
+.
+range time 0 3
+range offset 1 2	
+
