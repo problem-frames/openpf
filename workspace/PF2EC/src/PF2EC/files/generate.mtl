@@ -21,7 +21,7 @@ fluent [shared.name/]_[interface.description/]()
       [/for]
     [/for]	
     [for (dom: Node | d.nodes)]
-     [if (dom.type.toString() != 'R')]
+     [if (dom.type.toString() <> 'R')]
 ;--[dom.name/]--
 ['['/]time[']'/]
       [for (interface: Link | d.links)]

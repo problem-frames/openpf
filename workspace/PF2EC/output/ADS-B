@@ -3,9 +3,19 @@ load foundations/EC.e
 fluent State1_CWP()
 fluent State2_CWP()
 event Pheonmena1_a()
-;--MSoD--
+;--CP--
 [time]
-;--Test--
+;--ADS-B--
+[time]
+;--Display--
+[time]
+;--Operator--
+[time]
+;--GPS--
+[time]
+;--Aircrafts--
+[time]
+;--CWP--
 [time]
 .
 range time 0 3
