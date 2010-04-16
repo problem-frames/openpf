@@ -34,10 +34,12 @@
       <plugin id="edu.toronto.cs.openome_model.edit"/>
       <plugin id="edu.toronto.cs.openome_model.editor"/>
       <plugin id="event"/>
+<!-- not for now
       <plugin id="event.edit"/>
       <plugin id="event.editor"/>
-      <plugin id="event.generator"/>
       <plugin id="event.tests"/>
+-->
+      <plugin id="event.generator"/>
       <plugin id="event.ui"/>
       <plugin id="istar"/>
       <plugin id="istar.generator"/>
@@ -149,6 +151,7 @@
       <plugin id="org.eclipse.equinox.launcher"/>
       <plugin id="org.eclipse.equinox.launcher.gtk.linux.x86" fragment="true"/>
       <plugin id="org.eclipse.equinox.launcher.gtk.linux.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.equinox.launcher.cocoa.macosx.x86_64" fragment="true"/>
       <plugin id="org.eclipse.equinox.p2.artifact.repository"/>
       <plugin id="org.eclipse.equinox.p2.core"/>
       <plugin id="org.eclipse.equinox.p2.director"/>
@@ -260,8 +263,10 @@
       <plugin id="org.eclipse.swt.win32.win32.x86" fragment="true"/>
       <plugin id="org.eclipse.swt.win32.win32.x86_64" fragment="true"/>
       <plugin id="org.eclipse.swt.wpf.win32.x86" fragment="true"/>
+<!--
       <plugin id="org.eclipse.swtbot.ant.optional.junit3" fragment="true"/>
       <plugin id="org.eclipse.swtbot.ant.optional.junit4" fragment="true"/>
+-->
       <plugin id="org.eclipse.swtbot.eclipse.finder"/>
       <plugin id="org.eclipse.swtbot.junit4_x"/>
       <plugin id="org.eclipse.swtbot.swt.finder"/>
