@@ -37,8 +37,6 @@ import org.eclipse.gmf.runtime.notation.Ratio;
 import org.eclipse.gmf.runtime.notation.Size;
 import org.eclipse.gmf.runtime.notation.View;
 
-
-import uk.ac.open.problem.ProblemPackage;
 import uk.ac.open.problem.diagram.edit.parts.Link2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Link3EditPart;
 import uk.ac.open.problem.diagram.edit.parts.LinkEditPart;

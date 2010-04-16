@@ -1,8 +1,5 @@
 package uk.ac.open.problem.diagram.part;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.eclipse.core.resources.IFile;
@@ -16,13 +13,11 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.dialogs.SaveAsDialog;
-import org.eclipse.xtext.parser.IParseResult;
 import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.resource.XtextResourceSet;
 import org.eclipse.xtext.ui.core.editor.XtextEditor;
 
-import uk.ac.open.problem.ProblemStandaloneSetup;
-import uk.ac.open.problem.parser.antlr.ProblemParser;
+import uk.ac.open.ProblemStandaloneSetup;
 
 
 /**

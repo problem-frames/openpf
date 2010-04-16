@@ -4,14 +4,12 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Iterator;
 
-import edu.toronto.cs.openome_model.Model;
-import edu.toronto.cs.openome_model.Openome_modelFactory;
-
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.common.ui.URIEditorInput;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -36,7 +34,6 @@ import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
-
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.NodeType;
 import uk.ac.open.problem.ProblemDiagram;
@@ -46,8 +43,6 @@ import uk.ac.open.problem.diagram.part.Messages;
 import uk.ac.open.problem.diagram.part.ProblemDiagramEditor;
 import uk.ac.open.problem.diagram.part.ProblemDiagramEditorPlugin;
 import uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil;
-import edu.toronto.cs.openome_model.diagram.edit.parts.ModelEditPart;
-import edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin;
 
 /**
  * @generated
@@ -141,39 +136,28 @@ public class OpenDiagramEditPolicy extends OpenEditPolicy {
 		protected Diagram intializeNewDiagram() throws ExecutionException {
 			Node node = (Node) getDiagramDomainElement();
 			Diagram d = null;
-			if (!node.getType().equals(NodeType.REQUIREMENT)) {
-				if (node.getSubproblem() == null) {
-					ProblemDiagram pd = null;
-					if (node.getProblemRef() != null) {
-						if (node.getProblemRef().getSubproblem() != null) {
-							pd = node.getProblemRef().getSubproblem();
-						}
-					}
+			if (node.getSubproblem().isEmpty()) {
+				EList<ProblemDiagram> pd = null;
+				for (Node n: node.getProblemNodeRef()) {
+					pd = n.getSubproblem();
 					if (pd == null) {
-						pd = ProblemFactory.eINSTANCE.createProblemDiagram();
-						pd.setDescription(node.getDescription());
+						ProblemDiagram pd0 = ProblemFactory.eINSTANCE.createProblemDiagram();
+						n.getSubproblem().add(pd0);
+						pd0.setName(node.getDescription());
+						d = ViewService.createDiagram(pd0,
+								getDiagramKind(), getPreferencesHint());
 					}
-					node.setSubproblem(pd);
-				}
-				d = ViewService.createDiagram(node.getSubproblem(),
-						getDiagramKind(), getPreferencesHint());
-			} else {
-				if (node.getIstar() == null) {
-					Model ood = null;
-					if (node.getIstarRef() != null) {
-						if (node.getIstarRef().getContainer() != null) {
-							ood = node.getIstarRef().getContainer().getModel();
-						}
-					}
-					if (ood == null) {
-						ood = Openome_modelFactory.eINSTANCE.createModel();
-						ood.setName(node.getDescription());
-					}
-					node.setIstar(ood);
-				}
-				d = ViewService.createDiagram(node.getIstar(),
-						ModelEditPart.MODEL_ID, null);
+				}				
 			}
+			if (d == null) {
+				if (node.getSubproblem().isEmpty()) {
+					ProblemDiagram pd0 = ProblemFactory.eINSTANCE.createProblemDiagram();
+					node.getSubproblem().add(pd0);
+					pd0.setName(node.getDescription());
+				}
+			}
+			d = ViewService.createDiagram(node.getSubproblem().get(0),
+					getDiagramKind(), getPreferencesHint());
 			if (d == null) {
 				throw new ExecutionException("Can't create diagram of '"
 						+ getDiagramKind() + "' kind");

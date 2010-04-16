@@ -36,7 +36,6 @@ import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.widgets.Display;
 
-
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.NodeType;
 import uk.ac.open.problem.ProblemPackage;

@@ -26,7 +26,6 @@ import uk.ac.open.problem.Node;
 import uk.ac.open.problem.ProblemDiagram;
 import uk.ac.open.problem.ProblemPackage;
 
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Diagram</b></em>'.
@@ -34,7 +33,7 @@ import uk.ac.open.problem.ProblemPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link uk.ac.open.problem.impl.ProblemDiagramImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link uk.ac.open.problem.impl.ProblemDiagramImpl#getName <em>Name</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.ProblemDiagramImpl#getNodes <em>Nodes</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.ProblemDiagramImpl#getLinks <em>Links</em>}</li>
  * </ul>
@@ -45,24 +44,24 @@ import uk.ac.open.problem.ProblemPackage;
 public class ProblemDiagramImpl extends MinimalEObjectImpl.Container implements ProblemDiagram
 {
   /**
-	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getDescription()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-  protected static final String DESCRIPTION_EDEFAULT = null;
+  protected static final String NAME_EDEFAULT = null;
 
   /**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getDescription()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-  protected String description = DESCRIPTION_EDEFAULT;
+  protected String name = NAME_EDEFAULT;
 
   /**
 	 * The cached value of the '{@link #getNodes() <em>Nodes</em>}' containment reference list.
@@ -110,9 +109,9 @@ public class ProblemDiagramImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public String getDescription()
+  public String getName()
   {
-		return description;
+		return name;
 	}
 
   /**
@@ -120,12 +119,12 @@ public class ProblemDiagramImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setDescription(String newDescription)
+  public void setName(String newName)
   {
-		String oldDescription = description;
-		description = newDescription;
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.PROBLEM_DIAGRAM__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.PROBLEM_DIAGRAM__NAME, oldName, name));
 	}
 
   /**
@@ -180,8 +179,8 @@ public class ProblemDiagramImpl extends MinimalEObjectImpl.Container implements 
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case ProblemPackage.PROBLEM_DIAGRAM__DESCRIPTION:
-				return getDescription();
+			case ProblemPackage.PROBLEM_DIAGRAM__NAME:
+				return getName();
 			case ProblemPackage.PROBLEM_DIAGRAM__NODES:
 				return getNodes();
 			case ProblemPackage.PROBLEM_DIAGRAM__LINKS:
@@ -200,8 +199,8 @@ public class ProblemDiagramImpl extends MinimalEObjectImpl.Container implements 
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case ProblemPackage.PROBLEM_DIAGRAM__DESCRIPTION:
-				setDescription((String)newValue);
+			case ProblemPackage.PROBLEM_DIAGRAM__NAME:
+				setName((String)newValue);
 				return;
 			case ProblemPackage.PROBLEM_DIAGRAM__NODES:
 				getNodes().clear();
@@ -224,8 +223,8 @@ public class ProblemDiagramImpl extends MinimalEObjectImpl.Container implements 
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case ProblemPackage.PROBLEM_DIAGRAM__DESCRIPTION:
-				setDescription(DESCRIPTION_EDEFAULT);
+			case ProblemPackage.PROBLEM_DIAGRAM__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 			case ProblemPackage.PROBLEM_DIAGRAM__NODES:
 				getNodes().clear();
@@ -246,8 +245,8 @@ public class ProblemDiagramImpl extends MinimalEObjectImpl.Container implements 
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case ProblemPackage.PROBLEM_DIAGRAM__DESCRIPTION:
-				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+			case ProblemPackage.PROBLEM_DIAGRAM__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case ProblemPackage.PROBLEM_DIAGRAM__NODES:
 				return nodes != null && !nodes.isEmpty();
 			case ProblemPackage.PROBLEM_DIAGRAM__LINKS:
@@ -267,8 +266,8 @@ public class ProblemDiagramImpl extends MinimalEObjectImpl.Container implements 
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (description: ");
-		result.append(description);
+		result.append(" (name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

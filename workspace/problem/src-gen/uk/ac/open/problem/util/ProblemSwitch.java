@@ -10,12 +10,7 @@ import java.util.List;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 
-import uk.ac.open.problem.Link;
-import uk.ac.open.problem.Node;
-import uk.ac.open.problem.Phenomenon;
-import uk.ac.open.problem.ProblemDiagram;
-import uk.ac.open.problem.ProblemPackage;
-
+import uk.ac.open.problem.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -108,6 +103,12 @@ public class ProblemSwitch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ProblemPackage.OTHER_LANGUAGE: {
+				OtherLanguage otherLanguage = (OtherLanguage)theEObject;
+				T result = caseOtherLanguage(otherLanguage);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ProblemPackage.PHENOMENON: {
 				Phenomenon phenomenon = (Phenomenon)theEObject;
 				T result = casePhenomenon(phenomenon);
@@ -117,7 +118,6 @@ public class ProblemSwitch<T>
 			case ProblemPackage.LINK: {
 				Link link = (Link)theEObject;
 				T result = caseLink(link);
-				if (result == null) result = caseOpenome_model_Link(link);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -158,6 +158,22 @@ public class ProblemSwitch<T>
 	}
 
   /**
+	 * Returns the result of interpreting the object as an instance of '<em>Other Language</em>'.
+	 * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Other Language</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+  public T caseOtherLanguage(OtherLanguage object)
+  {
+		return null;
+	}
+
+  /**
 	 * Returns the result of interpreting the object as an instance of '<em>Phenomenon</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -185,22 +201,6 @@ public class ProblemSwitch<T>
 	 * @generated
 	 */
   public T caseLink(Link object)
-  {
-		return null;
-	}
-
-  /**
-	 * Returns the result of interpreting the object as an instance of '<em>Link</em>'.
-	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Link</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-  public T caseOpenome_model_Link(edu.toronto.cs.openome_model.Link object)
   {
 		return null;
 	}

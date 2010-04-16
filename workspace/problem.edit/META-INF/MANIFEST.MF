@@ -11,6 +11,5 @@ Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: uk.ac.open.problem.provider
 Require-Bundle: org.eclipse.core.runtime,
  problem;visibility:=reexport,
- org.eclipse.emf.edit;visibility:=reexport,
- edu.toronto.cs.openome_model.edit;bundle-version="1.0.0"
+ org.eclipse.emf.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

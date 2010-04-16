@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link uk.ac.open.problem.ProblemDiagram#getDescription <em>Description</em>}</li>
+ *   <li>{@link uk.ac.open.problem.ProblemDiagram#getName <em>Name</em>}</li>
  *   <li>{@link uk.ac.open.problem.ProblemDiagram#getNodes <em>Nodes</em>}</li>
  *   <li>{@link uk.ac.open.problem.ProblemDiagram#getLinks <em>Links</em>}</li>
  * </ul>
@@ -30,30 +30,30 @@ import org.eclipse.emf.ecore.EObject;
 public interface ProblemDiagram extends EObject
 {
   /**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Description</em>' attribute isn't clear,
+   * If the meaning of the '<em>Name</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' attribute.
-	 * @see #setDescription(String)
-	 * @see uk.ac.open.problem.ProblemPackage#getProblemDiagram_Description()
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see uk.ac.open.problem.ProblemPackage#getProblemDiagram_Name()
 	 * @model
 	 * @generated
 	 */
-  String getDescription();
+  String getName();
 
   /**
-	 * Sets the value of the '{@link uk.ac.open.problem.ProblemDiagram#getDescription <em>Description</em>}' attribute.
+	 * Sets the value of the '{@link uk.ac.open.problem.ProblemDiagram#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' attribute.
-	 * @see #getDescription()
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
 	 * @generated
 	 */
-  void setDescription(String value);
+  void setName(String value);
 
   /**
 	 * Returns the value of the '<em><b>Nodes</b></em>' containment reference list.

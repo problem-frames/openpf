@@ -12,10 +12,6 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
 
-
-import uk.ac.open.problem.Node;
-import uk.ac.open.problem.ProblemDiagram;
-import uk.ac.open.problem.ProblemFactory;
 import uk.ac.open.problem.diagram.providers.ProblemElementTypes;
 
 /**

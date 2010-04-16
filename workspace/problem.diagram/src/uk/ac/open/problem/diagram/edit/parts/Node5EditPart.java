@@ -36,7 +36,6 @@ import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.widgets.Display;
 
-
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.NodeType;
 import uk.ac.open.problem.ProblemPackage;
@@ -44,7 +43,6 @@ import uk.ac.open.problem.diagram.edit.policies.Node5ItemSemanticEditPolicy;
 import uk.ac.open.problem.diagram.edit.policies.OpenDiagramEditPolicy;
 import uk.ac.open.problem.diagram.part.ProblemVisualIDRegistry;
 import uk.ac.open.problem.diagram.providers.ProblemElementTypes;
-import uk.ac.open.problem.figures.EntityFigure;
 
 /**
  * @generated

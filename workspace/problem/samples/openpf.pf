@@ -16,3 +16,18 @@ OpenPF R: "The model shall be compliant to the language"
 OpenPF ~> Editor: "g"
 OpenPF ~~ Language: "i"
 OpenPF ~> Model: "j"
+
+
+/* 
+1. Consider pattern matching problem diagrams into problem frames
+
+2. Consider warning/error as ways to implement concerns
+
+3. Handle Interface/Shared Phenomena differently
+
+4. Link semantics of the nodes to any other description languages
+
+5. Round trip: when a graph is saved, also save its concrete syntax notations
+
+6. GUI of the node should be able to attach a project file to it 
+*/

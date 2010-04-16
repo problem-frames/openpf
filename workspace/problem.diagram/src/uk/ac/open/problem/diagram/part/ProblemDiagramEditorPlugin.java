@@ -20,9 +20,6 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
-import uk.ac.open.problem.provider.ProblemItemProviderAdapterFactory;
-import edu.toronto.cs.openome_model.provider.Openome_modelItemProviderAdapterFactory;
-
 /**
  * @generated
  */
@@ -103,8 +100,6 @@ public class ProblemDiagramEditorPlugin extends AbstractUIPlugin {
 	protected void fillItemProviderFactories(List factories) {
 		factories
 				.add(new uk.ac.open.problem.provider.ProblemItemProviderAdapterFactory());
-		factories
-				.add(new edu.toronto.cs.openome_model.provider.Openome_modelItemProviderAdapterFactory());
 		factories.add(new ResourceItemProviderAdapterFactory());
 		factories.add(new ReflectiveItemProviderAdapterFactory());
 	}

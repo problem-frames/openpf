@@ -12,7 +12,6 @@ import java.util.Collection;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.edit.provider.ChangeNotifier;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
@@ -120,6 +119,29 @@ public class ProblemItemProviderAdapterFactory extends ProblemAdapterFactory imp
 		}
 
 		return nodeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link uk.ac.open.problem.OtherLanguage} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OtherLanguageItemProvider otherLanguageItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link uk.ac.open.problem.OtherLanguage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOtherLanguageAdapter() {
+		if (otherLanguageItemProvider == null) {
+			otherLanguageItemProvider = new OtherLanguageItemProvider(this);
+		}
+
+		return otherLanguageItemProvider;
 	}
 
 	/**
@@ -269,6 +291,7 @@ public class ProblemItemProviderAdapterFactory extends ProblemAdapterFactory imp
 	public void dispose() {
 		if (problemDiagramItemProvider != null) problemDiagramItemProvider.dispose();
 		if (nodeItemProvider != null) nodeItemProvider.dispose();
+		if (otherLanguageItemProvider != null) otherLanguageItemProvider.dispose();
 		if (phenomenonItemProvider != null) phenomenonItemProvider.dispose();
 		if (linkItemProvider != null) linkItemProvider.dispose();
 	}

@@ -16,18 +16,20 @@ Require-Bundle: org.eclipse.xtext,
  org.eclipse.emf.mwe.core;resolution:=optional,
  com.ibm.icu;resolution:=optional,
  org.eclipse.xtext.xtend;resolution:=optional,
- istar;bundle-version="1.0.0",
  org.eclipse.xtext.util,
  org.eclipse.emf.ecore,
  org.eclipse.emf.common,
  org.antlr.runtime,
- edu.toronto.cs.openome_model;bundle-version="1.0.0",
+ org.eclipse.draw2d;visibility:=reexport,
+ org.eclipse.gmf.runtime.draw2d.ui;visibility:=reexport, 
  core;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: uk.ac.open.problem,
  uk.ac.open.problem.impl,
- uk.ac.open.problem.parseTreeConstruction,
- uk.ac.open.problem.parser.antlr,
- uk.ac.open.problem.services,
  uk.ac.open.problem.util,
- uk.ac.open.problem.validation
+ uk.ac.open,
+ uk.ac.open.services,
+ uk.ac.open.parseTreeConstruction,
+ uk.ac.open.parser.antlr,
+ uk.ac.open.validation
+Import-Package: uk.ac.open

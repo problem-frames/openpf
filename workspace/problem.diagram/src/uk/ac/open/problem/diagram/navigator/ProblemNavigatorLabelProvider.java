@@ -16,9 +16,6 @@ import org.eclipse.ui.IMemento;
 import org.eclipse.ui.navigator.ICommonContentExtensionSite;
 import org.eclipse.ui.navigator.ICommonLabelProvider;
 
-
-import uk.ac.open.problem.Link;
-import uk.ac.open.problem.ProblemDiagram;
 import uk.ac.open.problem.diagram.edit.parts.Link2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Link3EditPart;
 import uk.ac.open.problem.diagram.edit.parts.LinkDescription2EditPart;
@@ -35,10 +32,6 @@ import uk.ac.open.problem.diagram.edit.parts.NodeName2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeName3EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeName4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeName5EditPart;
-import uk.ac.open.problem.diagram.edit.parts.NodeName6EditPart;
-import uk.ac.open.problem.diagram.edit.parts.NodeNameDescription2EditPart;
-import uk.ac.open.problem.diagram.edit.parts.NodeNameDescription3EditPart;
-import uk.ac.open.problem.diagram.edit.parts.NodeNameDescription4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeNameDescriptionEditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeNameEditPart;
 import uk.ac.open.problem.diagram.edit.parts.ProblemDiagramEditPart;
@@ -221,7 +214,7 @@ public class ProblemNavigatorLabelProvider extends LabelProvider implements
 		uk.ac.open.problem.ProblemDiagram domainModelElement = (uk.ac.open.problem.ProblemDiagram) view
 				.getElement();
 		if (domainModelElement != null) {
-			return domainModelElement.getDescription();
+			return domainModelElement.getName();
 		} else {
 			ProblemDiagramEditorPlugin.getInstance().logError(
 					"No domain element for view with visualID = " + 1000); //$NON-NLS-1$

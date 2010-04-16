@@ -1,10 +1,5 @@
 package uk.ac.open.problem.diagram.providers;
 
-import uk.ac.open.problem.Link;
-import uk.ac.open.problem.LinkType;
-import uk.ac.open.problem.Node;
-import uk.ac.open.problem.NodeType;
-import uk.ac.open.problem.ProblemPackage;
 import uk.ac.open.problem.diagram.expressions.ProblemAbstractExpression;
 import uk.ac.open.problem.diagram.expressions.ProblemOCLFactory;
 import uk.ac.open.problem.diagram.part.ProblemDiagramEditorPlugin;

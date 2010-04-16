@@ -49,9 +49,6 @@ import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.FileEditorInput;
 
-
-import uk.ac.open.problem.ProblemDiagram;
-import uk.ac.open.problem.ProblemFactory;
 import uk.ac.open.problem.diagram.edit.parts.ProblemDiagramEditPart;
 
 /**

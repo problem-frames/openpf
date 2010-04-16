@@ -5,8 +5,6 @@
  */
 package uk.ac.open.problem.impl;
 
-
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -19,15 +17,12 @@ import uk.ac.open.problem.Link;
 import uk.ac.open.problem.LinkType;
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.NodeType;
+import uk.ac.open.problem.OtherLanguage;
 import uk.ac.open.problem.Phenomenon;
 import uk.ac.open.problem.PhenomenonType;
 import uk.ac.open.problem.ProblemDiagram;
 import uk.ac.open.problem.ProblemFactory;
 import uk.ac.open.problem.ProblemPackage;
-
-import edu.toronto.cs.openome_model.Openome_modelPackage;
-import edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl;
-
 
 /**
  * <!-- begin-user-doc -->
@@ -50,6 +45,13 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 	 * @generated
 	 */
   private EClass nodeEClass = null;
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  private EClass otherLanguageEClass = null;
 
   /**
 	 * <!-- begin-user-doc -->
@@ -134,16 +136,11 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 
 		isInited = true;
 
-		// Obtain or create and register interdependencies
-		Openome_modelPackageImpl theOpenome_modelPackage = (Openome_modelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(Openome_modelPackage.eNS_URI) instanceof Openome_modelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(Openome_modelPackage.eNS_URI) : Openome_modelPackage.eINSTANCE);
-
 		// Create package meta-data objects
 		theProblemPackage.createPackageContents();
-		theOpenome_modelPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theProblemPackage.initializePackageContents();
-		theOpenome_modelPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theProblemPackage.freeze();
@@ -169,7 +166,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getProblemDiagram_Description()
+  public EAttribute getProblemDiagram_Name()
   {
 		return (EAttribute)problemDiagramEClass.getEStructuralFeatures().get(0);
 	}
@@ -239,7 +236,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getNode_Subproblem()
+  public EReference getNode_HiddenPhenomena()
   {
 		return (EReference)nodeEClass.getEStructuralFeatures().get(3);
 	}
@@ -249,7 +246,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getNode_ProblemRef()
+  public EReference getNode_Subproblem()
   {
 		return (EReference)nodeEClass.getEStructuralFeatures().get(4);
 	}
@@ -259,7 +256,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getNode_Istar()
+  public EReference getNode_ProblemNodeRef()
   {
 		return (EReference)nodeEClass.getEStructuralFeatures().get(5);
 	}
@@ -269,7 +266,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getNode_IstarRef()
+  public EReference getNode_ProblemRef()
   {
 		return (EReference)nodeEClass.getEStructuralFeatures().get(6);
 	}
@@ -279,9 +276,39 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getNode_HiddenPhenomena()
+  public EReference getNode_Other()
   {
 		return (EReference)nodeEClass.getEStructuralFeatures().get(7);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EClass getOtherLanguage()
+  {
+		return otherLanguageEClass;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EAttribute getOtherLanguage_Type()
+  {
+		return (EAttribute)otherLanguageEClass.getEStructuralFeatures().get(0);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EAttribute getOtherLanguage_Href()
+  {
+		return (EAttribute)otherLanguageEClass.getEStructuralFeatures().get(1);
 	}
 
   /**
@@ -309,7 +336,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getPhenomenon_Name()
+  public EAttribute getPhenomenon_IsControlled()
   {
 		return (EAttribute)phenomenonEClass.getEStructuralFeatures().get(1);
 	}
@@ -319,9 +346,19 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getPhenomenon_Description()
+  public EAttribute getPhenomenon_Name()
   {
 		return (EAttribute)phenomenonEClass.getEStructuralFeatures().get(2);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EAttribute getPhenomenon_Description()
+  {
+		return (EAttribute)phenomenonEClass.getEStructuralFeatures().get(3);
 	}
 
   /**
@@ -445,7 +482,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 
 		// Create classes and their features
 		problemDiagramEClass = createEClass(PROBLEM_DIAGRAM);
-		createEAttribute(problemDiagramEClass, PROBLEM_DIAGRAM__DESCRIPTION);
+		createEAttribute(problemDiagramEClass, PROBLEM_DIAGRAM__NAME);
 		createEReference(problemDiagramEClass, PROBLEM_DIAGRAM__NODES);
 		createEReference(problemDiagramEClass, PROBLEM_DIAGRAM__LINKS);
 
@@ -453,14 +490,19 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 		createEAttribute(nodeEClass, NODE__NAME);
 		createEAttribute(nodeEClass, NODE__TYPE);
 		createEAttribute(nodeEClass, NODE__DESCRIPTION);
-		createEReference(nodeEClass, NODE__SUBPROBLEM);
-		createEReference(nodeEClass, NODE__PROBLEM_REF);
-		createEReference(nodeEClass, NODE__ISTAR);
-		createEReference(nodeEClass, NODE__ISTAR_REF);
 		createEReference(nodeEClass, NODE__HIDDEN_PHENOMENA);
+		createEReference(nodeEClass, NODE__SUBPROBLEM);
+		createEReference(nodeEClass, NODE__PROBLEM_NODE_REF);
+		createEReference(nodeEClass, NODE__PROBLEM_REF);
+		createEReference(nodeEClass, NODE__OTHER);
+
+		otherLanguageEClass = createEClass(OTHER_LANGUAGE);
+		createEAttribute(otherLanguageEClass, OTHER_LANGUAGE__TYPE);
+		createEAttribute(otherLanguageEClass, OTHER_LANGUAGE__HREF);
 
 		phenomenonEClass = createEClass(PHENOMENON);
 		createEAttribute(phenomenonEClass, PHENOMENON__TYPE);
+		createEAttribute(phenomenonEClass, PHENOMENON__IS_CONTROLLED);
 		createEAttribute(phenomenonEClass, PHENOMENON__NAME);
 		createEAttribute(phenomenonEClass, PHENOMENON__DESCRIPTION);
 
@@ -501,19 +543,15 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
-		// Obtain other dependent packages
-		Openome_modelPackage theOpenome_modelPackage = (Openome_modelPackage)EPackage.Registry.INSTANCE.getEPackage(Openome_modelPackage.eNS_URI);
-
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		linkEClass.getESuperTypes().add(theOpenome_modelPackage.getLink());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(problemDiagramEClass, ProblemDiagram.class, "ProblemDiagram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getProblemDiagram_Description(), ecorePackage.getEString(), "description", null, 0, 1, ProblemDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProblemDiagram_Name(), ecorePackage.getEString(), "name", null, 0, 1, ProblemDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProblemDiagram_Nodes(), this.getNode(), null, "nodes", null, 0, -1, ProblemDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProblemDiagram_Links(), this.getLink(), null, "links", null, 0, -1, ProblemDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -521,14 +559,19 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 		initEAttribute(getNode_Name(), ecorePackage.getEString(), "name", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNode_Type(), this.getNodeType(), "type", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNode_Description(), ecorePackage.getEString(), "description", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNode_Subproblem(), this.getProblemDiagram(), null, "subproblem", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNode_ProblemRef(), this.getNode(), null, "problemRef", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNode_Istar(), theOpenome_modelPackage.getModel(), null, "istar", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNode_IstarRef(), theOpenome_modelPackage.getIntention(), null, "istarRef", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getNode_HiddenPhenomena(), this.getPhenomenon(), null, "hiddenPhenomena", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNode_Subproblem(), this.getProblemDiagram(), null, "subproblem", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNode_ProblemNodeRef(), this.getNode(), null, "problemNodeRef", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNode_ProblemRef(), this.getProblemDiagram(), null, "problemRef", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNode_Other(), this.getOtherLanguage(), null, "other", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(otherLanguageEClass, OtherLanguage.class, "OtherLanguage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getOtherLanguage_Type(), ecorePackage.getEString(), "type", null, 0, 1, OtherLanguage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOtherLanguage_Href(), ecorePackage.getEString(), "href", null, 0, 1, OtherLanguage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(phenomenonEClass, Phenomenon.class, "Phenomenon", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPhenomenon_Type(), this.getPhenomenonType(), "type", null, 0, 1, Phenomenon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPhenomenon_IsControlled(), ecorePackage.getEBoolean(), "isControlled", null, 0, 1, Phenomenon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPhenomenon_Name(), ecorePackage.getEString(), "name", null, 0, 1, Phenomenon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPhenomenon_Description(), ecorePackage.getEString(), "description", null, 0, 1, Phenomenon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

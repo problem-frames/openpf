@@ -14,16 +14,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import uk.ac.open.problem.Link;
-import uk.ac.open.problem.LinkType;
-import uk.ac.open.problem.Node;
-import uk.ac.open.problem.NodeType;
-import uk.ac.open.problem.Phenomenon;
-import uk.ac.open.problem.PhenomenonType;
-import uk.ac.open.problem.ProblemDiagram;
-import uk.ac.open.problem.ProblemFactory;
-import uk.ac.open.problem.ProblemPackage;
-
+import uk.ac.open.problem.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -75,6 +66,7 @@ public class ProblemFactoryImpl extends EFactoryImpl implements ProblemFactory
 		switch (eClass.getClassifierID()) {
 			case ProblemPackage.PROBLEM_DIAGRAM: return createProblemDiagram();
 			case ProblemPackage.NODE: return createNode();
+			case ProblemPackage.OTHER_LANGUAGE: return createOtherLanguage();
 			case ProblemPackage.PHENOMENON: return createPhenomenon();
 			case ProblemPackage.LINK: return createLink();
 			default:
@@ -142,6 +134,17 @@ public class ProblemFactoryImpl extends EFactoryImpl implements ProblemFactory
   {
 		NodeImpl node = new NodeImpl();
 		return node;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public OtherLanguage createOtherLanguage()
+  {
+		OtherLanguageImpl otherLanguage = new OtherLanguageImpl();
+		return otherLanguage;
 	}
 
   /**

@@ -30,7 +30,7 @@ public enum LinkType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  INTERFACE(0, "INTERFACE", "->"),
+  INTERFACE(0, "INTERFACE", "--"),
 
   /**
 	 * The '<em><b>REFERENCE</b></em>' literal object.
@@ -61,7 +61,7 @@ public enum LinkType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #INTERFACE
-	 * @model literal="->"
+	 * @model literal="--"
 	 * @generated
 	 * @ordered
 	 */

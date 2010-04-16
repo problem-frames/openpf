@@ -12,11 +12,8 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -28,12 +25,9 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-
-
 import uk.ac.open.problem.ProblemDiagram;
 import uk.ac.open.problem.ProblemFactory;
 import uk.ac.open.problem.ProblemPackage;
-import uk.ac.open.problem.provider.ProblemEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link uk.ac.open.problem.ProblemDiagram} object.
@@ -70,25 +64,25 @@ public class ProblemDiagramItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addDescriptionPropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Description feature.
+	 * This adds a property descriptor for the Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDescriptionPropertyDescriptor(Object object) {
+	protected void addNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ProblemDiagram_description_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ProblemDiagram_description_feature", "_UI_ProblemDiagram_type"),
-				 ProblemPackage.Literals.PROBLEM_DIAGRAM__DESCRIPTION,
+				 getString("_UI_ProblemDiagram_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ProblemDiagram_name_feature", "_UI_ProblemDiagram_type"),
+				 ProblemPackage.Literals.PROBLEM_DIAGRAM__NAME,
 				 true,
 				 false,
 				 false,
@@ -147,7 +141,7 @@ public class ProblemDiagramItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ProblemDiagram)object).getDescription();
+		String label = ((ProblemDiagram)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ProblemDiagram_type") :
 			getString("_UI_ProblemDiagram_type") + " " + label;
@@ -165,7 +159,7 @@ public class ProblemDiagramItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ProblemDiagram.class)) {
-			case ProblemPackage.PROBLEM_DIAGRAM__DESCRIPTION:
+			case ProblemPackage.PROBLEM_DIAGRAM__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ProblemPackage.PROBLEM_DIAGRAM__NODES:

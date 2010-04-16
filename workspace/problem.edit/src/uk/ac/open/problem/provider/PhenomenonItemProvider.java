@@ -12,9 +12,7 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -26,11 +24,8 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-
-
 import uk.ac.open.problem.Phenomenon;
 import uk.ac.open.problem.ProblemPackage;
-import uk.ac.open.problem.provider.ProblemEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link uk.ac.open.problem.Phenomenon} object.
@@ -68,6 +63,7 @@ public class PhenomenonItemProvider
 			super.getPropertyDescriptors(object);
 
 			addTypePropertyDescriptor(object);
+			addIsControlledPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
 		}
@@ -92,6 +88,28 @@ public class PhenomenonItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Controlled feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsControlledPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Phenomenon_isControlled_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Phenomenon_isControlled_feature", "_UI_Phenomenon_type"),
+				 ProblemPackage.Literals.PHENOMENON__IS_CONTROLLED,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -178,6 +196,7 @@ public class PhenomenonItemProvider
 
 		switch (notification.getFeatureID(Phenomenon.class)) {
 			case ProblemPackage.PHENOMENON__TYPE:
+			case ProblemPackage.PHENOMENON__IS_CONTROLLED:
 			case ProblemPackage.PHENOMENON__NAME:
 			case ProblemPackage.PHENOMENON__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

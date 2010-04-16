@@ -16,8 +16,6 @@ import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.resource.ImageRegistry;
 import org.eclipse.swt.graphics.Image;
 
-
-import uk.ac.open.problem.ProblemPackage;
 import uk.ac.open.problem.diagram.edit.parts.Link2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Link3EditPart;
 import uk.ac.open.problem.diagram.edit.parts.LinkEditPart;

@@ -7,10 +7,9 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: uk.ac.open.problem.problem.tests
+Export-Package: uk.ac.open.problem.tests
 Require-Bundle: org.eclipse.core.runtime,
  problem;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
- org.junit;visibility:=reexport,
- edu.toronto.cs.openome_model.tests;bundle-version="1.0.0"
+ org.junit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

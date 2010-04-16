@@ -6,8 +6,8 @@
   <extension point="org.eclipse.emf.ecore.generated_package">
     <package 
        uri = "http://open.ac.uk/problem" 
-       class = "uk.ac.open.problem.problem.ProblemPackage"
-       genModel = "uk/ac/open/problem/Problem.genmodel" /> 
+       class = "uk.ac.open.problem.ProblemPackage"
+       genModel = "uk/ac/open/Problem.genmodel" /> 
 	
   </extension>
 

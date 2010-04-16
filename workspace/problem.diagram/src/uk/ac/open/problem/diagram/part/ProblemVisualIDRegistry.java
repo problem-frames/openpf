@@ -6,11 +6,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.View;
 
-
-import uk.ac.open.problem.Link;
-import uk.ac.open.problem.Node;
-import uk.ac.open.problem.ProblemDiagram;
-import uk.ac.open.problem.ProblemPackage;
 import uk.ac.open.problem.diagram.edit.parts.Link2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Link3EditPart;
 import uk.ac.open.problem.diagram.edit.parts.LinkDescription2EditPart;
@@ -33,10 +28,6 @@ import uk.ac.open.problem.diagram.edit.parts.NodeName2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeName3EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeName4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeName5EditPart;
-import uk.ac.open.problem.diagram.edit.parts.NodeName6EditPart;
-import uk.ac.open.problem.diagram.edit.parts.NodeNameDescription2EditPart;
-import uk.ac.open.problem.diagram.edit.parts.NodeNameDescription3EditPart;
-import uk.ac.open.problem.diagram.edit.parts.NodeNameDescription4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeNameDescriptionEditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeNameEditPart;
 import uk.ac.open.problem.diagram.edit.parts.ProblemDiagramEditPart;

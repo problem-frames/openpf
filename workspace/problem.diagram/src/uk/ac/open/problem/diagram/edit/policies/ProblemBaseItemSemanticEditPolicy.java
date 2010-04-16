@@ -31,9 +31,6 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipReques
 import org.eclipse.gmf.runtime.emf.type.core.requests.SetRequest;
 import org.eclipse.gmf.runtime.notation.View;
 
-
-import uk.ac.open.problem.Node;
-import uk.ac.open.problem.ProblemDiagram;
 import uk.ac.open.problem.diagram.edit.helpers.ProblemBaseEditHelper;
 import uk.ac.open.problem.diagram.part.ProblemVisualIDRegistry;
 import uk.ac.open.problem.diagram.providers.ProblemElementTypes;

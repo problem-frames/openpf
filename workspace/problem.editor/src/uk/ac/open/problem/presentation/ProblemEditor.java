@@ -111,7 +111,6 @@ import org.eclipse.ui.IPartListener;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
-import uk.ac.open.problem.presentation.ProblemEditorPlugin;
 import org.eclipse.ui.dialogs.SaveAsDialog;
 import org.eclipse.ui.ide.IGotoMarker;
 import org.eclipse.ui.part.FileEditorInput;
@@ -124,7 +123,6 @@ import org.eclipse.ui.views.properties.PropertySheet;
 import org.eclipse.ui.views.properties.PropertySheetPage;
 
 import uk.ac.open.problem.provider.ProblemItemProviderAdapterFactory;
-import edu.toronto.cs.openome_model.provider.Openome_modelItemProviderAdapterFactory;
 
 /**
  * This is an example of a Problem model editor.
@@ -659,7 +657,6 @@ public class ProblemEditor
 
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ProblemItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new Openome_modelItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.

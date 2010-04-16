@@ -5,13 +5,9 @@
  */
 package uk.ac.open.problem;
 
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
-
-import edu.toronto.cs.openome_model.Intention;
-import edu.toronto.cs.openome_model.Model;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,11 +20,11 @@ import edu.toronto.cs.openome_model.Model;
  *   <li>{@link uk.ac.open.problem.Node#getName <em>Name</em>}</li>
  *   <li>{@link uk.ac.open.problem.Node#getType <em>Type</em>}</li>
  *   <li>{@link uk.ac.open.problem.Node#getDescription <em>Description</em>}</li>
- *   <li>{@link uk.ac.open.problem.Node#getSubproblem <em>Subproblem</em>}</li>
- *   <li>{@link uk.ac.open.problem.Node#getProblemRef <em>Problem Ref</em>}</li>
- *   <li>{@link uk.ac.open.problem.Node#getIstar <em>Istar</em>}</li>
- *   <li>{@link uk.ac.open.problem.Node#getIstarRef <em>Istar Ref</em>}</li>
  *   <li>{@link uk.ac.open.problem.Node#getHiddenPhenomena <em>Hidden Phenomena</em>}</li>
+ *   <li>{@link uk.ac.open.problem.Node#getSubproblem <em>Subproblem</em>}</li>
+ *   <li>{@link uk.ac.open.problem.Node#getProblemNodeRef <em>Problem Node Ref</em>}</li>
+ *   <li>{@link uk.ac.open.problem.Node#getProblemRef <em>Problem Ref</em>}</li>
+ *   <li>{@link uk.ac.open.problem.Node#getOther <em>Other</em>}</li>
  * </ul>
  * </p>
  *
@@ -120,110 +116,6 @@ public interface Node extends EObject
   void setDescription(String value);
 
   /**
-	 * Returns the value of the '<em><b>Subproblem</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Subproblem</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-	 * @return the value of the '<em>Subproblem</em>' containment reference.
-	 * @see #setSubproblem(ProblemDiagram)
-	 * @see uk.ac.open.problem.ProblemPackage#getNode_Subproblem()
-	 * @model containment="true"
-	 * @generated
-	 */
-  ProblemDiagram getSubproblem();
-
-  /**
-	 * Sets the value of the '{@link uk.ac.open.problem.Node#getSubproblem <em>Subproblem</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Subproblem</em>' containment reference.
-	 * @see #getSubproblem()
-	 * @generated
-	 */
-  void setSubproblem(ProblemDiagram value);
-
-  /**
-	 * Returns the value of the '<em><b>Problem Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Problem Ref</em>' reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-	 * @return the value of the '<em>Problem Ref</em>' reference.
-	 * @see #setProblemRef(Node)
-	 * @see uk.ac.open.problem.ProblemPackage#getNode_ProblemRef()
-	 * @model
-	 * @generated
-	 */
-  Node getProblemRef();
-
-  /**
-	 * Sets the value of the '{@link uk.ac.open.problem.Node#getProblemRef <em>Problem Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Problem Ref</em>' reference.
-	 * @see #getProblemRef()
-	 * @generated
-	 */
-  void setProblemRef(Node value);
-
-  /**
-	 * Returns the value of the '<em><b>Istar</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Istar</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-	 * @return the value of the '<em>Istar</em>' containment reference.
-	 * @see #setIstar(Model)
-	 * @see uk.ac.open.problem.ProblemPackage#getNode_Istar()
-	 * @model containment="true"
-	 * @generated
-	 */
-  Model getIstar();
-
-  /**
-	 * Sets the value of the '{@link uk.ac.open.problem.Node#getIstar <em>Istar</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Istar</em>' containment reference.
-	 * @see #getIstar()
-	 * @generated
-	 */
-  void setIstar(Model value);
-
-  /**
-	 * Returns the value of the '<em><b>Istar Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Istar Ref</em>' reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-	 * @return the value of the '<em>Istar Ref</em>' reference.
-	 * @see #setIstarRef(Intention)
-	 * @see uk.ac.open.problem.ProblemPackage#getNode_IstarRef()
-	 * @model
-	 * @generated
-	 */
-  Intention getIstarRef();
-
-  /**
-	 * Sets the value of the '{@link uk.ac.open.problem.Node#getIstarRef <em>Istar Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Istar Ref</em>' reference.
-	 * @see #getIstarRef()
-	 * @generated
-	 */
-  void setIstarRef(Intention value);
-
-  /**
 	 * Returns the value of the '<em><b>Hidden Phenomena</b></em>' containment reference list.
 	 * The list contents are of type {@link uk.ac.open.problem.Phenomenon}.
 	 * <!-- begin-user-doc -->
@@ -238,5 +130,69 @@ public interface Node extends EObject
 	 * @generated
 	 */
   EList<Phenomenon> getHiddenPhenomena();
+
+  /**
+	 * Returns the value of the '<em><b>Subproblem</b></em>' containment reference list.
+	 * The list contents are of type {@link uk.ac.open.problem.ProblemDiagram}.
+	 * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Subproblem</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+	 * @return the value of the '<em>Subproblem</em>' containment reference list.
+	 * @see uk.ac.open.problem.ProblemPackage#getNode_Subproblem()
+	 * @model containment="true"
+	 * @generated
+	 */
+  EList<ProblemDiagram> getSubproblem();
+
+  /**
+	 * Returns the value of the '<em><b>Problem Node Ref</b></em>' reference list.
+	 * The list contents are of type {@link uk.ac.open.problem.Node}.
+	 * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Problem Node Ref</em>' reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+	 * @return the value of the '<em>Problem Node Ref</em>' reference list.
+	 * @see uk.ac.open.problem.ProblemPackage#getNode_ProblemNodeRef()
+	 * @model
+	 * @generated
+	 */
+  EList<Node> getProblemNodeRef();
+
+  /**
+	 * Returns the value of the '<em><b>Problem Ref</b></em>' reference list.
+	 * The list contents are of type {@link uk.ac.open.problem.ProblemDiagram}.
+	 * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Problem Ref</em>' reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+	 * @return the value of the '<em>Problem Ref</em>' reference list.
+	 * @see uk.ac.open.problem.ProblemPackage#getNode_ProblemRef()
+	 * @model
+	 * @generated
+	 */
+  EList<ProblemDiagram> getProblemRef();
+
+  /**
+	 * Returns the value of the '<em><b>Other</b></em>' containment reference list.
+	 * The list contents are of type {@link uk.ac.open.problem.OtherLanguage}.
+	 * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Other</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+	 * @return the value of the '<em>Other</em>' containment reference list.
+	 * @see uk.ac.open.problem.ProblemPackage#getNode_Other()
+	 * @model containment="true"
+	 * @generated
+	 */
+  EList<OtherLanguage> getOther();
 
 } // Node

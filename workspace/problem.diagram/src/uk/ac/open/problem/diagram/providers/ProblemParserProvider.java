@@ -13,8 +13,6 @@ import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.emf.ui.services.parser.ParserHintAdapter;
 import org.eclipse.gmf.runtime.notation.View;
 
-
-import uk.ac.open.problem.ProblemPackage;
 import uk.ac.open.problem.diagram.edit.parts.LinkDescription2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.LinkDescription3EditPart;
 import uk.ac.open.problem.diagram.edit.parts.LinkDescriptionEditPart;
@@ -28,10 +26,6 @@ import uk.ac.open.problem.diagram.edit.parts.NodeName2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeName3EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeName4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeName5EditPart;
-import uk.ac.open.problem.diagram.edit.parts.NodeName6EditPart;
-import uk.ac.open.problem.diagram.edit.parts.NodeNameDescription2EditPart;
-import uk.ac.open.problem.diagram.edit.parts.NodeNameDescription3EditPart;
-import uk.ac.open.problem.diagram.edit.parts.NodeNameDescription4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeNameDescriptionEditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeNameEditPart;
 import uk.ac.open.problem.diagram.parsers.MessageFormatParser;

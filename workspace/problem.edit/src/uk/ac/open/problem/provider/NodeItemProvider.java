@@ -10,14 +10,10 @@ package uk.ac.open.problem.provider;
 import java.util.Collection;
 import java.util.List;
 
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -29,15 +25,9 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-
-import edu.toronto.cs.openome_model.Openome_modelFactory;
-import edu.toronto.cs.openome_model.Openome_modelFactory;
-
-
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.ProblemFactory;
 import uk.ac.open.problem.ProblemPackage;
-import uk.ac.open.problem.provider.ProblemEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link uk.ac.open.problem.Node} object.
@@ -77,8 +67,8 @@ public class NodeItemProvider
 			addNamePropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
+			addProblemNodeRefPropertyDescriptor(object);
 			addProblemRefPropertyDescriptor(object);
-			addIstarRefPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -150,6 +140,28 @@ public class NodeItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Problem Node Ref feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addProblemNodeRefPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Node_problemNodeRef_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Node_problemNodeRef_feature", "_UI_Node_type"),
+				 ProblemPackage.Literals.NODE__PROBLEM_NODE_REF,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Problem Ref feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -172,28 +184,6 @@ public class NodeItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Istar Ref feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIstarRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Node_istarRef_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Node_istarRef_feature", "_UI_Node_type"),
-				 ProblemPackage.Literals.NODE__ISTAR_REF,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -205,8 +195,9 @@ public class NodeItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(ProblemPackage.Literals.NODE__HIDDEN_PHENOMENA);
 			childrenFeatures.add(ProblemPackage.Literals.NODE__SUBPROBLEM);
-			childrenFeatures.add(ProblemPackage.Literals.NODE__ISTAR);
+			childrenFeatures.add(ProblemPackage.Literals.NODE__OTHER);
 		}
 		return childrenFeatures;
 	}
@@ -266,8 +257,9 @@ public class NodeItemProvider
 			case ProblemPackage.NODE__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
+			case ProblemPackage.NODE__HIDDEN_PHENOMENA:
 			case ProblemPackage.NODE__SUBPROBLEM:
-			case ProblemPackage.NODE__ISTAR:
+			case ProblemPackage.NODE__OTHER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -287,13 +279,18 @@ public class NodeItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(ProblemPackage.Literals.NODE__HIDDEN_PHENOMENA,
+				 ProblemFactory.eINSTANCE.createPhenomenon()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(ProblemPackage.Literals.NODE__SUBPROBLEM,
 				 ProblemFactory.eINSTANCE.createProblemDiagram()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ProblemPackage.Literals.NODE__ISTAR,
-				 Openome_modelFactory.eINSTANCE.createModel()));
+				(ProblemPackage.Literals.NODE__OTHER,
+				 ProblemFactory.eINSTANCE.createOtherLanguage()));
 	}
 
 	/**

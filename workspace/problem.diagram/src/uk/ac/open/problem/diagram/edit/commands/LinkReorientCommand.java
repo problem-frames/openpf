@@ -8,10 +8,6 @@ import org.eclipse.gmf.runtime.common.core.command.CommandResult;
 import org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest;
 
-
-import uk.ac.open.problem.Link;
-import uk.ac.open.problem.Node;
-import uk.ac.open.problem.ProblemDiagram;
 import uk.ac.open.problem.diagram.edit.policies.ProblemBaseItemSemanticEditPolicy;
 
 /**

@@ -5,14 +5,11 @@
  */
 package uk.ac.open.problem;
 
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
-import edu.toronto.cs.openome_model.Openome_modelPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -74,13 +71,13 @@ public interface ProblemPackage extends EPackage
   int PROBLEM_DIAGRAM = 0;
 
   /**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int PROBLEM_DIAGRAM__DESCRIPTION = 0;
+  int PROBLEM_DIAGRAM__NAME = 0;
 
   /**
 	 * The feature id for the '<em><b>Nodes</b></em>' containment reference list.
@@ -147,49 +144,49 @@ public interface ProblemPackage extends EPackage
   int NODE__DESCRIPTION = 2;
 
   /**
-	 * The feature id for the '<em><b>Subproblem</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int NODE__SUBPROBLEM = 3;
-
-  /**
-	 * The feature id for the '<em><b>Problem Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int NODE__PROBLEM_REF = 4;
-
-  /**
-	 * The feature id for the '<em><b>Istar</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int NODE__ISTAR = 5;
-
-  /**
-	 * The feature id for the '<em><b>Istar Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int NODE__ISTAR_REF = 6;
-
-  /**
 	 * The feature id for the '<em><b>Hidden Phenomena</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int NODE__HIDDEN_PHENOMENA = 7;
+  int NODE__HIDDEN_PHENOMENA = 3;
+
+  /**
+	 * The feature id for the '<em><b>Subproblem</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int NODE__SUBPROBLEM = 4;
+
+  /**
+	 * The feature id for the '<em><b>Problem Node Ref</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int NODE__PROBLEM_NODE_REF = 5;
+
+  /**
+	 * The feature id for the '<em><b>Problem Ref</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int NODE__PROBLEM_REF = 6;
+
+  /**
+	 * The feature id for the '<em><b>Other</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int NODE__OTHER = 7;
 
   /**
 	 * The number of structural features of the '<em>Node</em>' class.
@@ -201,6 +198,43 @@ public interface ProblemPackage extends EPackage
   int NODE_FEATURE_COUNT = 8;
 
   /**
+	 * The meta object id for the '{@link uk.ac.open.problem.impl.OtherLanguageImpl <em>Other Language</em>}' class.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see uk.ac.open.problem.impl.OtherLanguageImpl
+	 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getOtherLanguage()
+	 * @generated
+	 */
+  int OTHER_LANGUAGE = 2;
+
+  /**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int OTHER_LANGUAGE__TYPE = 0;
+
+  /**
+	 * The feature id for the '<em><b>Href</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int OTHER_LANGUAGE__HREF = 1;
+
+  /**
+	 * The number of structural features of the '<em>Other Language</em>' class.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int OTHER_LANGUAGE_FEATURE_COUNT = 2;
+
+  /**
 	 * The meta object id for the '{@link uk.ac.open.problem.impl.PhenomenonImpl <em>Phenomenon</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -208,7 +242,7 @@ public interface ProblemPackage extends EPackage
 	 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getPhenomenon()
 	 * @generated
 	 */
-  int PHENOMENON = 2;
+  int PHENOMENON = 3;
 
   /**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -220,13 +254,22 @@ public interface ProblemPackage extends EPackage
   int PHENOMENON__TYPE = 0;
 
   /**
+	 * The feature id for the '<em><b>Is Controlled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int PHENOMENON__IS_CONTROLLED = 1;
+
+  /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int PHENOMENON__NAME = 1;
+  int PHENOMENON__NAME = 2;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -235,7 +278,7 @@ public interface ProblemPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PHENOMENON__DESCRIPTION = 2;
+  int PHENOMENON__DESCRIPTION = 3;
 
   /**
 	 * The number of structural features of the '<em>Phenomenon</em>' class.
@@ -244,7 +287,7 @@ public interface ProblemPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PHENOMENON_FEATURE_COUNT = 3;
+  int PHENOMENON_FEATURE_COUNT = 4;
 
   /**
 	 * The meta object id for the '{@link uk.ac.open.problem.impl.LinkImpl <em>Link</em>}' class.
@@ -254,7 +297,7 @@ public interface ProblemPackage extends EPackage
 	 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getLink()
 	 * @generated
 	 */
-  int LINK = 3;
+  int LINK = 4;
 
   /**
 	 * The feature id for the '<em><b>From</b></em>' reference.
@@ -263,7 +306,7 @@ public interface ProblemPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LINK__FROM = Openome_modelPackage.LINK_FEATURE_COUNT + 0;
+  int LINK__FROM = 0;
 
   /**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -272,7 +315,7 @@ public interface ProblemPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LINK__TYPE = Openome_modelPackage.LINK_FEATURE_COUNT + 1;
+  int LINK__TYPE = 1;
 
   /**
 	 * The feature id for the '<em><b>To</b></em>' reference.
@@ -281,7 +324,7 @@ public interface ProblemPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LINK__TO = Openome_modelPackage.LINK_FEATURE_COUNT + 2;
+  int LINK__TO = 2;
 
   /**
 	 * The feature id for the '<em><b>Phenomena</b></em>' containment reference list.
@@ -290,7 +333,7 @@ public interface ProblemPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LINK__PHENOMENA = Openome_modelPackage.LINK_FEATURE_COUNT + 3;
+  int LINK__PHENOMENA = 3;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -299,7 +342,7 @@ public interface ProblemPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LINK__DESCRIPTION = Openome_modelPackage.LINK_FEATURE_COUNT + 4;
+  int LINK__DESCRIPTION = 4;
 
   /**
 	 * The number of structural features of the '<em>Link</em>' class.
@@ -308,7 +351,7 @@ public interface ProblemPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LINK_FEATURE_COUNT = Openome_modelPackage.LINK_FEATURE_COUNT + 5;
+  int LINK_FEATURE_COUNT = 5;
 
   /**
 	 * The meta object id for the '{@link uk.ac.open.problem.NodeType <em>Node Type</em>}' enum.
@@ -318,7 +361,7 @@ public interface ProblemPackage extends EPackage
 	 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getNodeType()
 	 * @generated
 	 */
-  int NODE_TYPE = 4;
+  int NODE_TYPE = 5;
 
   /**
 	 * The meta object id for the '{@link uk.ac.open.problem.PhenomenonType <em>Phenomenon Type</em>}' enum.
@@ -328,7 +371,7 @@ public interface ProblemPackage extends EPackage
 	 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getPhenomenonType()
 	 * @generated
 	 */
-  int PHENOMENON_TYPE = 5;
+  int PHENOMENON_TYPE = 6;
 
   /**
 	 * The meta object id for the '{@link uk.ac.open.problem.LinkType <em>Link Type</em>}' enum.
@@ -338,7 +381,7 @@ public interface ProblemPackage extends EPackage
 	 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getLinkType()
 	 * @generated
 	 */
-  int LINK_TYPE = 6;
+  int LINK_TYPE = 7;
 
 
   /**
@@ -352,15 +395,15 @@ public interface ProblemPackage extends EPackage
   EClass getProblemDiagram();
 
   /**
-	 * Returns the meta object for the attribute '{@link uk.ac.open.problem.ProblemDiagram#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link uk.ac.open.problem.ProblemDiagram#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see uk.ac.open.problem.ProblemDiagram#getDescription()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see uk.ac.open.problem.ProblemDiagram#getName()
 	 * @see #getProblemDiagram()
 	 * @generated
 	 */
-  EAttribute getProblemDiagram_Description();
+  EAttribute getProblemDiagram_Name();
 
   /**
 	 * Returns the meta object for the containment reference list '{@link uk.ac.open.problem.ProblemDiagram#getNodes <em>Nodes</em>}'.
@@ -428,50 +471,6 @@ public interface ProblemPackage extends EPackage
   EAttribute getNode_Description();
 
   /**
-	 * Returns the meta object for the containment reference '{@link uk.ac.open.problem.Node#getSubproblem <em>Subproblem</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Subproblem</em>'.
-	 * @see uk.ac.open.problem.Node#getSubproblem()
-	 * @see #getNode()
-	 * @generated
-	 */
-  EReference getNode_Subproblem();
-
-  /**
-	 * Returns the meta object for the reference '{@link uk.ac.open.problem.Node#getProblemRef <em>Problem Ref</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Problem Ref</em>'.
-	 * @see uk.ac.open.problem.Node#getProblemRef()
-	 * @see #getNode()
-	 * @generated
-	 */
-  EReference getNode_ProblemRef();
-
-  /**
-	 * Returns the meta object for the containment reference '{@link uk.ac.open.problem.Node#getIstar <em>Istar</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Istar</em>'.
-	 * @see uk.ac.open.problem.Node#getIstar()
-	 * @see #getNode()
-	 * @generated
-	 */
-  EReference getNode_Istar();
-
-  /**
-	 * Returns the meta object for the reference '{@link uk.ac.open.problem.Node#getIstarRef <em>Istar Ref</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Istar Ref</em>'.
-	 * @see uk.ac.open.problem.Node#getIstarRef()
-	 * @see #getNode()
-	 * @generated
-	 */
-  EReference getNode_IstarRef();
-
-  /**
 	 * Returns the meta object for the containment reference list '{@link uk.ac.open.problem.Node#getHiddenPhenomena <em>Hidden Phenomena</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -481,6 +480,82 @@ public interface ProblemPackage extends EPackage
 	 * @generated
 	 */
   EReference getNode_HiddenPhenomena();
+
+  /**
+	 * Returns the meta object for the containment reference list '{@link uk.ac.open.problem.Node#getSubproblem <em>Subproblem</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Subproblem</em>'.
+	 * @see uk.ac.open.problem.Node#getSubproblem()
+	 * @see #getNode()
+	 * @generated
+	 */
+  EReference getNode_Subproblem();
+
+  /**
+	 * Returns the meta object for the reference list '{@link uk.ac.open.problem.Node#getProblemNodeRef <em>Problem Node Ref</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Problem Node Ref</em>'.
+	 * @see uk.ac.open.problem.Node#getProblemNodeRef()
+	 * @see #getNode()
+	 * @generated
+	 */
+  EReference getNode_ProblemNodeRef();
+
+  /**
+	 * Returns the meta object for the reference list '{@link uk.ac.open.problem.Node#getProblemRef <em>Problem Ref</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Problem Ref</em>'.
+	 * @see uk.ac.open.problem.Node#getProblemRef()
+	 * @see #getNode()
+	 * @generated
+	 */
+  EReference getNode_ProblemRef();
+
+  /**
+	 * Returns the meta object for the containment reference list '{@link uk.ac.open.problem.Node#getOther <em>Other</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Other</em>'.
+	 * @see uk.ac.open.problem.Node#getOther()
+	 * @see #getNode()
+	 * @generated
+	 */
+  EReference getNode_Other();
+
+  /**
+	 * Returns the meta object for class '{@link uk.ac.open.problem.OtherLanguage <em>Other Language</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Other Language</em>'.
+	 * @see uk.ac.open.problem.OtherLanguage
+	 * @generated
+	 */
+  EClass getOtherLanguage();
+
+  /**
+	 * Returns the meta object for the attribute '{@link uk.ac.open.problem.OtherLanguage#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see uk.ac.open.problem.OtherLanguage#getType()
+	 * @see #getOtherLanguage()
+	 * @generated
+	 */
+  EAttribute getOtherLanguage_Type();
+
+  /**
+	 * Returns the meta object for the attribute '{@link uk.ac.open.problem.OtherLanguage#getHref <em>Href</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Href</em>'.
+	 * @see uk.ac.open.problem.OtherLanguage#getHref()
+	 * @see #getOtherLanguage()
+	 * @generated
+	 */
+  EAttribute getOtherLanguage_Href();
 
   /**
 	 * Returns the meta object for class '{@link uk.ac.open.problem.Phenomenon <em>Phenomenon</em>}'.
@@ -502,6 +577,17 @@ public interface ProblemPackage extends EPackage
 	 * @generated
 	 */
   EAttribute getPhenomenon_Type();
+
+  /**
+	 * Returns the meta object for the attribute '{@link uk.ac.open.problem.Phenomenon#isIsControlled <em>Is Controlled</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Controlled</em>'.
+	 * @see uk.ac.open.problem.Phenomenon#isIsControlled()
+	 * @see #getPhenomenon()
+	 * @generated
+	 */
+  EAttribute getPhenomenon_IsControlled();
 
   /**
 	 * Returns the meta object for the attribute '{@link uk.ac.open.problem.Phenomenon#getName <em>Name</em>}'.
@@ -654,12 +740,12 @@ public interface ProblemPackage extends EPackage
     EClass PROBLEM_DIAGRAM = eINSTANCE.getProblemDiagram();
 
     /**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EAttribute PROBLEM_DIAGRAM__DESCRIPTION = eINSTANCE.getProblemDiagram_Description();
+    EAttribute PROBLEM_DIAGRAM__NAME = eINSTANCE.getProblemDiagram_Name();
 
     /**
 		 * The meta object literal for the '<em><b>Nodes</b></em>' containment reference list feature.
@@ -712,7 +798,15 @@ public interface ProblemPackage extends EPackage
     EAttribute NODE__DESCRIPTION = eINSTANCE.getNode_Description();
 
     /**
-		 * The meta object literal for the '<em><b>Subproblem</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Hidden Phenomena</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EReference NODE__HIDDEN_PHENOMENA = eINSTANCE.getNode_HiddenPhenomena();
+
+    /**
+		 * The meta object literal for the '<em><b>Subproblem</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @generated
@@ -720,7 +814,15 @@ public interface ProblemPackage extends EPackage
     EReference NODE__SUBPROBLEM = eINSTANCE.getNode_Subproblem();
 
     /**
-		 * The meta object literal for the '<em><b>Problem Ref</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Problem Node Ref</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EReference NODE__PROBLEM_NODE_REF = eINSTANCE.getNode_ProblemNodeRef();
+
+    /**
+		 * The meta object literal for the '<em><b>Problem Ref</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @generated
@@ -728,28 +830,38 @@ public interface ProblemPackage extends EPackage
     EReference NODE__PROBLEM_REF = eINSTANCE.getNode_ProblemRef();
 
     /**
-		 * The meta object literal for the '<em><b>Istar</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Other</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EReference NODE__ISTAR = eINSTANCE.getNode_Istar();
+    EReference NODE__OTHER = eINSTANCE.getNode_Other();
 
     /**
-		 * The meta object literal for the '<em><b>Istar Ref</b></em>' reference feature.
+		 * The meta object literal for the '{@link uk.ac.open.problem.impl.OtherLanguageImpl <em>Other Language</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+		 * @see uk.ac.open.problem.impl.OtherLanguageImpl
+		 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getOtherLanguage()
 		 * @generated
 		 */
-    EReference NODE__ISTAR_REF = eINSTANCE.getNode_IstarRef();
+    EClass OTHER_LANGUAGE = eINSTANCE.getOtherLanguage();
 
     /**
-		 * The meta object literal for the '<em><b>Hidden Phenomena</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EReference NODE__HIDDEN_PHENOMENA = eINSTANCE.getNode_HiddenPhenomena();
+    EAttribute OTHER_LANGUAGE__TYPE = eINSTANCE.getOtherLanguage_Type();
+
+    /**
+		 * The meta object literal for the '<em><b>Href</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EAttribute OTHER_LANGUAGE__HREF = eINSTANCE.getOtherLanguage_Href();
 
     /**
 		 * The meta object literal for the '{@link uk.ac.open.problem.impl.PhenomenonImpl <em>Phenomenon</em>}' class.
@@ -768,6 +880,14 @@ public interface ProblemPackage extends EPackage
 		 * @generated
 		 */
     EAttribute PHENOMENON__TYPE = eINSTANCE.getPhenomenon_Type();
+
+    /**
+		 * The meta object literal for the '<em><b>Is Controlled</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EAttribute PHENOMENON__IS_CONTROLLED = eINSTANCE.getPhenomenon_IsControlled();
 
     /**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
