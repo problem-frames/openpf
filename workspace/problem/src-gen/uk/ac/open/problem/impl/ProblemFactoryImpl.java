@@ -66,7 +66,6 @@ public class ProblemFactoryImpl extends EFactoryImpl implements ProblemFactory
 		switch (eClass.getClassifierID()) {
 			case ProblemPackage.PROBLEM_DIAGRAM: return createProblemDiagram();
 			case ProblemPackage.NODE: return createNode();
-			case ProblemPackage.OTHER_LANGUAGE: return createOtherLanguage();
 			case ProblemPackage.PHENOMENON: return createPhenomenon();
 			case ProblemPackage.LINK: return createLink();
 			default:
@@ -134,17 +133,6 @@ public class ProblemFactoryImpl extends EFactoryImpl implements ProblemFactory
   {
 		NodeImpl node = new NodeImpl();
 		return node;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public OtherLanguage createOtherLanguage()
-  {
-		OtherLanguageImpl otherLanguage = new OtherLanguageImpl();
-		return otherLanguage;
 	}
 
   /**

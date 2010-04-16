@@ -1,56 +1,14 @@
 problem:
 "ADS-B"
 MSoD R
-:"Maintain the Safety Distance" {
-istar:
-  role Manager {
-	  goal #Manage Money#	  
-	  goal #Check Credit#        
-	  goal #Open Account#
-	  goal #Create Account#
-	  goal #Manage Account#
-	  task #Create Authorization#
-	  goal #Issue Card#
-	  goal #Authorize Card#
-  }  
-  role Customer {
-	  goal Banking
-	  goal #Initial Deposit#
-	  goal #Provide Personal Info#
-	  goal #Deposit Account#
-	  goal #Open an Account#
-	  goal #Withdraw Account#
-	  goal Deposit
-	  goal #Change Balance#
-	  goal #Provide Card#
-  }
-  soft Security   
-  #Manage Money# <-(and)- #Open Account#
-  #Manage Money# <-(and)- #Create Account#
-  #Open Account# <-(and)- #Manage Account#
-  #Create Account# <-(and)- #Create Authorization#   
-  #Create Account# <-(and)- #Issue Card#
-  #Create Account# ~> #Initial Deposit#
-  #Manage Account# <-(and)- #Authorize Card#
-  #Authorize Card# ~> #Provide Card#
-  #Manage Account# ~> #Change Balance#
-  #Check Credit# ~> #Provide Personal Info#
-  Banking <-(or)- #Deposit Account#
-  Banking <-(or)- #Withdraw Account#
-  #Deposit Account# <-(or)- #Open an Account#
-  #Deposit Account# <-(or)- Deposit
-  #Open an Account# <-(and)- #Provide Personal Info#
-  #Open an Account# <-(and)- #Change Balance#
-  #Change Balance# -(++)-> Security
-  Deposit <-(and)- #Provide Card#
-  Deposit <-(and)-  #Change Balance# 
-  #Withdraw Account# <-(and)- #Provide Card#
-  #Provide Card# ~> #Issue Card#
-  #Withdraw Account# <-(and)-  #Change Balance# 
-}
-
-Test R {
-  see intention #Withdraw Account#
+:"Maintain the Safety Distance"
+{
+  see "/Examples/event/sit1.ec"
+  see "/Examples/event/sit2.ec"
+  see "/Examples/event/sit3.ec"
+  see "/Examples/event/sit4.ec"
+  see "/Examples/event/notexist.ec"  
+  see "/Examples/istar/open_account.ood"
 }
 
 CP M
@@ -79,25 +37,25 @@ Aircrafts C
 CWP X
 :"Controller Working Position"
 
-Operator -> CWP
+Operator -- CWP
 :"a"
 
-CWP -> CP
+CWP -- CP
 :"g"
 
-GPS -> Aircrafts
+GPS -- Aircrafts
 :"b"
 
-#ADS-B# -> Aircrafts
+#ADS-B# -- Aircrafts
 :"c"
 
-#ADS-B# -> CP
+#ADS-B# -- CP
 :"d"
 
-CP -> Display
+CP -- Display
 :"f"
 
-CP -> Aircrafts
+CP -- Aircrafts
 :"e"
 
 MSoD ~> Aircrafts

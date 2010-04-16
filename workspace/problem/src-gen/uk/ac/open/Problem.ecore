@@ -22,12 +22,8 @@
         upperBound="-1" eType="#//Node"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="problemRef" unique="false"
         upperBound="-1" eType="#//ProblemDiagram"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="other" upperBound="-1"
-        eType="#//OtherLanguage" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="OtherLanguage">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="href" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="href" unique="false" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="NodeType">
     <eLiterals name="REQUIREMENT" literal="R"/>

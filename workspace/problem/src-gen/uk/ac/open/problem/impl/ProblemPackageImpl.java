@@ -17,7 +17,6 @@ import uk.ac.open.problem.Link;
 import uk.ac.open.problem.LinkType;
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.NodeType;
-import uk.ac.open.problem.OtherLanguage;
 import uk.ac.open.problem.Phenomenon;
 import uk.ac.open.problem.PhenomenonType;
 import uk.ac.open.problem.ProblemDiagram;
@@ -45,13 +44,6 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 	 * @generated
 	 */
   private EClass nodeEClass = null;
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  private EClass otherLanguageEClass = null;
 
   /**
 	 * <!-- begin-user-doc -->
@@ -276,39 +268,9 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getNode_Other()
+  public EAttribute getNode_Href()
   {
-		return (EReference)nodeEClass.getEStructuralFeatures().get(7);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EClass getOtherLanguage()
-  {
-		return otherLanguageEClass;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EAttribute getOtherLanguage_Type()
-  {
-		return (EAttribute)otherLanguageEClass.getEStructuralFeatures().get(0);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EAttribute getOtherLanguage_Href()
-  {
-		return (EAttribute)otherLanguageEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)nodeEClass.getEStructuralFeatures().get(7);
 	}
 
   /**
@@ -494,11 +456,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 		createEReference(nodeEClass, NODE__SUBPROBLEM);
 		createEReference(nodeEClass, NODE__PROBLEM_NODE_REF);
 		createEReference(nodeEClass, NODE__PROBLEM_REF);
-		createEReference(nodeEClass, NODE__OTHER);
-
-		otherLanguageEClass = createEClass(OTHER_LANGUAGE);
-		createEAttribute(otherLanguageEClass, OTHER_LANGUAGE__TYPE);
-		createEAttribute(otherLanguageEClass, OTHER_LANGUAGE__HREF);
+		createEAttribute(nodeEClass, NODE__HREF);
 
 		phenomenonEClass = createEClass(PHENOMENON);
 		createEAttribute(phenomenonEClass, PHENOMENON__TYPE);
@@ -563,11 +521,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 		initEReference(getNode_Subproblem(), this.getProblemDiagram(), null, "subproblem", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getNode_ProblemNodeRef(), this.getNode(), null, "problemNodeRef", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getNode_ProblemRef(), this.getProblemDiagram(), null, "problemRef", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNode_Other(), this.getOtherLanguage(), null, "other", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(otherLanguageEClass, OtherLanguage.class, "OtherLanguage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getOtherLanguage_Type(), ecorePackage.getEString(), "type", null, 0, 1, OtherLanguage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getOtherLanguage_Href(), ecorePackage.getEString(), "href", null, 0, 1, OtherLanguage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNode_Href(), ecorePackage.getEString(), "href", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(phenomenonEClass, Phenomenon.class, "Phenomenon", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPhenomenon_Type(), this.getPhenomenonType(), "type", null, 0, 1, Phenomenon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

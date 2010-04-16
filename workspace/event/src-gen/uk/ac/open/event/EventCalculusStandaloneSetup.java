@@ -17,7 +17,7 @@ public class EventCalculusStandaloneSetup implements ISetup {
 	}
 
 	public Injector createInjectorAndDoEMFRegistration() {
-		uk.ac.open.IstarStandaloneSetup.doSetup();
+		org.eclipse.xtext.common.TerminalsStandaloneSetup.doSetup();
 
 		Injector injector = createInjector();
 		register(injector);

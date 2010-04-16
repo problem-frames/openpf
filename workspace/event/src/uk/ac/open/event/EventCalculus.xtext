@@ -1,8 +1,4 @@
-grammar uk.ac.open.event.EventCalculus with uk.ac.open.Istar
-import "platform:/resource/openome_model/model/openome_model.ecore" as openome_model
-
-//import "http://open.ac.uk/problem" as problem
-
+grammar uk.ac.open.event.EventCalculus with org.eclipse.xtext.common.Terminals 
 generate eventcalculus "http://www.ac.uk/open/EventCalculus"
 
 Knowledge:
@@ -48,3 +44,6 @@ Terminates: "Terminates" "(" event=Term "," fluent=Term "," time=IntExpr ")";
 Path: file=File ("/" file=File)*;
 File: name=ID ("." name=ID)*;
 terminal SL_COMMENT: ';' !('\n'|'\r')* ('\r'? '\n')?;
+
+terminal ID: ('#' (!('#'))+ '#') |
+  ('^'? ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*);

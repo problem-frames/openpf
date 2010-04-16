@@ -5,9 +5,20 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Iterator;
 
 import org.eclipse.core.commands.ExecutionException;
+import org.eclipse.core.filesystem.EFS;
+import org.eclipse.core.filesystem.IFileStore;
+import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IWorkspace;
+import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IAdaptable;
+import org.eclipse.core.runtime.IConfigurationElement;
+import org.eclipse.core.runtime.IExtension;
+import org.eclipse.core.runtime.IExtensionPoint;
+import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.Path;
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.ui.URIEditorInput;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
@@ -29,13 +40,23 @@ import org.eclipse.gmf.runtime.notation.HintedDiagramLinkStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.Style;
 import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.ui.IEditorDescriptor;
 import org.eclipse.ui.IEditorInput;
+import org.eclipse.ui.IEditorPart;
+import org.eclipse.ui.IEditorRegistry;
+import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPage;
+import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.IWorkbenchWizard;
+import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
+import org.eclipse.ui.editors.text.EditorsUI;
+import org.eclipse.ui.ide.IDE;
+import org.eclipse.ui.internal.editors.text.EditorsPlugin;
+import org.eclipse.ui.internal.editors.text.NonExistingFileEditorInput;
 
 import uk.ac.open.problem.Node;
-import uk.ac.open.problem.NodeType;
 import uk.ac.open.problem.ProblemDiagram;
 import uk.ac.open.problem.ProblemFactory;
 import uk.ac.open.problem.diagram.edit.parts.ProblemDiagramEditPart;
@@ -82,8 +103,9 @@ public class OpenDiagramEditPolicy extends OpenEditPolicy {
 		 * @generated
 		 */
 		OpenDiagramCommand(HintedDiagramLinkStyle linkStyle) {
-			// editing domain is taken for original diagram, 
-			// if we open diagram from another file, we should use another editing domain
+			// editing domain is taken for original diagram,
+			// if we open diagram from another file, we should use another
+			// editing domain
 			super(TransactionUtil.getEditingDomain(linkStyle),
 					Messages.CommandName_OpenDiagram, null);
 			diagramFacet = linkStyle;
@@ -135,23 +157,40 @@ public class OpenDiagramEditPolicy extends OpenEditPolicy {
 		 */
 		protected Diagram intializeNewDiagram() throws ExecutionException {
 			Node node = (Node) getDiagramDomainElement();
+			for (String other : node.getHref()) {
+				IWorkbenchWindow dw = PlatformUI.getWorkbench()
+						.getActiveWorkbenchWindow();
+				try {
+					if (dw != null) {
+						IWorkbenchPage page = dw.getActivePage();
+						if (page != null) {
+							IWorkspace ws = ResourcesPlugin.getWorkspace();
+							IFile file = ws.getRoot().getFile(new Path(other));
+							IEditorPart openEditor = IDE.openEditor(page, file, true);
+						}
+					}
+				} catch (PartInitException e) {
+				}
+			}
 			Diagram d = null;
 			if (node.getSubproblem().isEmpty()) {
 				EList<ProblemDiagram> pd = null;
-				for (Node n: node.getProblemNodeRef()) {
+				for (Node n : node.getProblemNodeRef()) {
 					pd = n.getSubproblem();
 					if (pd == null) {
-						ProblemDiagram pd0 = ProblemFactory.eINSTANCE.createProblemDiagram();
+						ProblemDiagram pd0 = ProblemFactory.eINSTANCE
+								.createProblemDiagram();
 						n.getSubproblem().add(pd0);
 						pd0.setName(node.getDescription());
-						d = ViewService.createDiagram(pd0,
-								getDiagramKind(), getPreferencesHint());
+						d = ViewService.createDiagram(pd0, getDiagramKind(),
+								getPreferencesHint());
 					}
-				}				
+				}
 			}
 			if (d == null) {
 				if (node.getSubproblem().isEmpty()) {
-					ProblemDiagram pd0 = ProblemFactory.eINSTANCE.createProblemDiagram();
+					ProblemDiagram pd0 = ProblemFactory.eINSTANCE
+							.createProblemDiagram();
 					node.getSubproblem().add(pd0);
 					pd0.setName(node.getDescription());
 				}

@@ -122,29 +122,6 @@ public class ProblemItemProviderAdapterFactory extends ProblemAdapterFactory imp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link uk.ac.open.problem.OtherLanguage} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected OtherLanguageItemProvider otherLanguageItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link uk.ac.open.problem.OtherLanguage}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createOtherLanguageAdapter() {
-		if (otherLanguageItemProvider == null) {
-			otherLanguageItemProvider = new OtherLanguageItemProvider(this);
-		}
-
-		return otherLanguageItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link uk.ac.open.problem.Phenomenon} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -291,7 +268,6 @@ public class ProblemItemProviderAdapterFactory extends ProblemAdapterFactory imp
 	public void dispose() {
 		if (problemDiagramItemProvider != null) problemDiagramItemProvider.dispose();
 		if (nodeItemProvider != null) nodeItemProvider.dispose();
-		if (otherLanguageItemProvider != null) otherLanguageItemProvider.dispose();
 		if (phenomenonItemProvider != null) phenomenonItemProvider.dispose();
 		if (linkItemProvider != null) linkItemProvider.dispose();
 	}

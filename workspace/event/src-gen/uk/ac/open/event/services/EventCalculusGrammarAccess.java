@@ -11,7 +11,7 @@ import org.eclipse.xtext.*;
 
 import org.eclipse.xtext.service.GrammarProvider;
 
-import uk.ac.open.services.IstarGrammarAccess;
+import org.eclipse.xtext.common.services.TerminalsGrammarAccess;
 
 @Singleton
 public class EventCalculusGrammarAccess implements IGrammarAccess {
@@ -1008,16 +1008,17 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 	private PathElements pPath;
 	private FileElements pFile;
 	private TerminalRule tSL_COMMENT;
+	private TerminalRule tID;
 	
 	private final GrammarProvider grammarProvider;
 
-	private IstarGrammarAccess gaIstar;
+	private TerminalsGrammarAccess gaTerminals;
 
 	@Inject
 	public EventCalculusGrammarAccess(GrammarProvider grammarProvider,
-		IstarGrammarAccess gaIstar) {
+		TerminalsGrammarAccess gaTerminals) {
 		this.grammarProvider = grammarProvider;
-		this.gaIstar = gaIstar;
+		this.gaTerminals = gaTerminals;
 	}
 	
 	public Grammar getGrammar() {	
@@ -1025,8 +1026,8 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 	}
 	
 
-	public IstarGrammarAccess getIstarGrammarAccess() {
-		return gaIstar;
+	public TerminalsGrammarAccess getTerminalsGrammarAccess() {
+		return gaTerminals;
 	}
 
 	
@@ -1313,304 +1314,40 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		return (tSL_COMMENT != null) ? tSL_COMMENT : (tSL_COMMENT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "SL_COMMENT"));
 	} 
 
-	//Model:
-	//  "istar" name=ID? ":" (containers+=Container|intentions+=Intention|decompositions+=
-	//  Decomposition|dependencies+=Dependency|contributions+=Contribution|associations
-	//  +=Association)*;
-	public IstarGrammarAccess.ModelElements getModelAccess() {
-		return gaIstar.getModelAccess();
-	}
-	
-	public ParserRule getModelRule() {
-		return getModelAccess().getRule();
-	}
-
-	//Container:
-	//  Actor|Agent|Role|Position;
-	public IstarGrammarAccess.ContainerElements getContainerAccess() {
-		return gaIstar.getContainerAccess();
-	}
-	
-	public ParserRule getContainerRule() {
-		return getContainerAccess().getRule();
-	}
-
-	//Actor:
-	//  "actor" name=ID (is_a+=[Actor]|is_part_of+=[Actor])* ("{" intentions+=Intention* "}")
-	//  ?;
-	public IstarGrammarAccess.ActorElements getActorAccess() {
-		return gaIstar.getActorAccess();
-	}
-	
-	public ParserRule getActorRule() {
-		return getActorAccess().getRule();
-	}
-
-	//Agent:
-	//  "agent" name=ID ("{" intentions+=Intention* "}")?;
-	public IstarGrammarAccess.AgentElements getAgentAccess() {
-		return gaIstar.getAgentAccess();
-	}
-	
-	public ParserRule getAgentRule() {
-		return getAgentAccess().getRule();
-	}
-
-	//Role:
-	//  "role" name=ID ("{" intentions+=Intention* "}")?;
-	public IstarGrammarAccess.RoleElements getRoleAccess() {
-		return gaIstar.getRoleAccess();
-	}
-	
-	public ParserRule getRoleRule() {
-		return getRoleAccess().getRule();
-	}
-
-	//Position:
-	//  "position" name=ID ("{" intentions+=Intention* "}")?;
-	public IstarGrammarAccess.PositionElements getPositionAccess() {
-		return gaIstar.getPositionAccess();
-	}
-	
-	public ParserRule getPositionRule() {
-		return getPositionAccess().getRule();
-	}
-
-	//Intention:
-	//  Goal|Softgoal|Task|Resource|Belief;
-	public IstarGrammarAccess.IntentionElements getIntentionAccess() {
-		return gaIstar.getIntentionAccess();
-	}
-	
-	public ParserRule getIntentionRule() {
-		return getIntentionAccess().getRule();
-	}
-
-	//Goal:
-	//  "goal" name=ID ("{" decompositions+=[Decomposition]* "}")?;
-	public IstarGrammarAccess.GoalElements getGoalAccess() {
-		return gaIstar.getGoalAccess();
-	}
-	
-	public ParserRule getGoalRule() {
-		return getGoalAccess().getRule();
-	}
-
-	//Softgoal:
-	//  "soft" name=ID;
-	public IstarGrammarAccess.SoftgoalElements getSoftgoalAccess() {
-		return gaIstar.getSoftgoalAccess();
-	}
-	
-	public ParserRule getSoftgoalRule() {
-		return getSoftgoalAccess().getRule();
-	}
-
-	//Task:
-	//  "task" name=ID;
-	public IstarGrammarAccess.TaskElements getTaskAccess() {
-		return gaIstar.getTaskAccess();
-	}
-	
-	public ParserRule getTaskRule() {
-		return getTaskAccess().getRule();
-	}
-
-	//Resource:
-	//  "resource" name=ID;
-	public IstarGrammarAccess.ResourceElements getResourceAccess() {
-		return gaIstar.getResourceAccess();
-	}
-	
-	public ParserRule getResourceRule() {
-		return getResourceAccess().getRule();
-	}
-
-	//Belief:
-	//  "belief" name=ID;
-	public IstarGrammarAccess.BeliefElements getBeliefAccess() {
-		return gaIstar.getBeliefAccess();
-	}
-	
-	public ParserRule getBeliefRule() {
-		return getBeliefAccess().getRule();
-	}
-
-	//Link:
-	//  Association|Dependency|Decomposition|Contribution;
-	public IstarGrammarAccess.LinkElements getLinkAccess() {
-		return gaIstar.getLinkAccess();
-	}
-	
-	public ParserRule getLinkRule() {
-		return getLinkAccess().getRule();
-	}
-
-	//Dependable:
-	//  Intention|Container;
-	public IstarGrammarAccess.DependableElements getDependableAccess() {
-		return gaIstar.getDependableAccess();
-	}
-	
-	public ParserRule getDependableRule() {
-		return getDependableAccess().getRule();
-	}
-
-	//Association:
-	//  source=[Container] "~~>" target=[Container];
-	public IstarGrammarAccess.AssociationElements getAssociationAccess() {
-		return gaIstar.getAssociationAccess();
-	}
-	
-	public ParserRule getAssociationRule() {
-		return getAssociationAccess().getRule();
-	}
-
-	//Dependency:
-	//  dependencyFrom=[Dependable] "~>" dependencyTo=[Dependable];
-	public IstarGrammarAccess.DependencyElements getDependencyAccess() {
-		return gaIstar.getDependencyAccess();
-	}
-	
-	public ParserRule getDependencyRule() {
-		return getDependencyAccess().getRule();
-	}
-
-	//Decomposition:
-	//  AndDecomposition|OrDecomposition;
-	public IstarGrammarAccess.DecompositionElements getDecompositionAccess() {
-		return gaIstar.getDecompositionAccess();
-	}
-	
-	public ParserRule getDecompositionRule() {
-		return getDecompositionAccess().getRule();
-	}
-
-	//AndDecomposition:
-	//  target=[Intention] "<-(and)-" source=[Intention];
-	public IstarGrammarAccess.AndDecompositionElements getAndDecompositionAccess() {
-		return gaIstar.getAndDecompositionAccess();
-	}
-	
-	public ParserRule getAndDecompositionRule() {
-		return getAndDecompositionAccess().getRule();
-	}
-
-	//OrDecomposition:
-	//  target=[Intention] "<-(or)-" source=[Intention];
-	public IstarGrammarAccess.OrDecompositionElements getOrDecompositionAccess() {
-		return gaIstar.getOrDecompositionAccess();
-	}
-	
-	public ParserRule getOrDecompositionRule() {
-		return getOrDecompositionAccess().getRule();
-	}
-
-	//Contribution:
-	//  AndContribution|OrContribution|HelpContribution|HurtContribution|
-	//  MakeContribution|BreakContribution;
-	public IstarGrammarAccess.ContributionElements getContributionAccess() {
-		return gaIstar.getContributionAccess();
-	}
-	
-	public ParserRule getContributionRule() {
-		return getContributionAccess().getRule();
-	}
-
-	//AndContribution:
-	//  source=[Intention] "-(and)->" target=[Intention];
-	public IstarGrammarAccess.AndContributionElements getAndContributionAccess() {
-		return gaIstar.getAndContributionAccess();
-	}
-	
-	public ParserRule getAndContributionRule() {
-		return getAndContributionAccess().getRule();
-	}
-
-	//OrContribution:
-	//  source=[Intention] "-(or)->" target=[Intention];
-	public IstarGrammarAccess.OrContributionElements getOrContributionAccess() {
-		return gaIstar.getOrContributionAccess();
-	}
-	
-	public ParserRule getOrContributionRule() {
-		return getOrContributionAccess().getRule();
-	}
-
-	//HelpContribution:
-	//  source=[Intention] "-(+)->" target=[Intention];
-	public IstarGrammarAccess.HelpContributionElements getHelpContributionAccess() {
-		return gaIstar.getHelpContributionAccess();
-	}
-	
-	public ParserRule getHelpContributionRule() {
-		return getHelpContributionAccess().getRule();
-	}
-
-	//MakeContribution:
-	//  source=[Intention] "-(++)->" target=[Intention];
-	public IstarGrammarAccess.MakeContributionElements getMakeContributionAccess() {
-		return gaIstar.getMakeContributionAccess();
-	}
-	
-	public ParserRule getMakeContributionRule() {
-		return getMakeContributionAccess().getRule();
-	}
-
-	//HurtContribution:
-	//  source=[Intention] "-(-)->" target=[Intention];
-	public IstarGrammarAccess.HurtContributionElements getHurtContributionAccess() {
-		return gaIstar.getHurtContributionAccess();
-	}
-	
-	public ParserRule getHurtContributionRule() {
-		return getHurtContributionAccess().getRule();
-	}
-
-	//BreakContribution:
-	//  source=[Intention] "-(--)->" target=[Intention];
-	public IstarGrammarAccess.BreakContributionElements getBreakContributionAccess() {
-		return gaIstar.getBreakContributionAccess();
-	}
-	
-	public ParserRule getBreakContributionRule() {
-		return getBreakContributionAccess().getRule();
-	}
-
 	//terminal ID:
 	//  "#" !"#"+ "#" | "^"? ("a".."z" | "A".."Z" | "_") ("a".."z" | "A".."Z" | "_" | "0".."9")*;
 	public TerminalRule getIDRule() {
-		return gaIstar.getIDRule();
+		return (tID != null) ? tID : (tID = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ID"));
 	} 
 
 	//terminal INT returns ecore::EInt:
 	//  "0".."9"+;
 	public TerminalRule getINTRule() {
-		return gaIstar.getINTRule();
+		return gaTerminals.getINTRule();
 	} 
 
 	//terminal STRING:
 	//  "\"" ("\\" ("b" | "t" | "n" | "f" | "r" | "\"" | "\'" | "\\") | !("\\" | "\""))* "\"" | "\'" ("\\" ("b" |
 	//  "t" | "n" | "f" | "r" | "\"" | "\'" | "\\") | !("\\" | "\'"))* "\'";
 	public TerminalRule getSTRINGRule() {
-		return gaIstar.getSTRINGRule();
+		return gaTerminals.getSTRINGRule();
 	} 
 
 	//terminal ML_COMMENT:
 	//  "/ *"->"* /";
 	public TerminalRule getML_COMMENTRule() {
-		return gaIstar.getML_COMMENTRule();
+		return gaTerminals.getML_COMMENTRule();
 	} 
 
 	//terminal WS:
 	//  (" " | "\t" | "\r" | "\n")+;
 	public TerminalRule getWSRule() {
-		return gaIstar.getWSRule();
+		return gaTerminals.getWSRule();
 	} 
 
 	//terminal ANY_OTHER:
 	//  .;
 	public TerminalRule getANY_OTHERRule() {
-		return gaIstar.getANY_OTHERRule();
+		return gaTerminals.getANY_OTHERRule();
 	} 
 }

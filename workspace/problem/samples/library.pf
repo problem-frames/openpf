@@ -7,7 +7,7 @@ RNR R // requirement
 LD X // lexical domain
 :"Library Database "
 
-ID D // designed domain
+ID D // designed domain 
 :"Input Device "
 
 LM B // biddable domain
@@ -16,17 +16,17 @@ LM B // biddable domain
 RH M // machine domain
 :"Registration Handler "
 
-LM -> ID // shared phenomena
- {event "New Reader Record "}
+LM -- ID // shared phenomena
+ {event #New Reader Record #}
 
-ID -> RH // shared phenomena
+ID -- RH // shared phenomena
  {event commands}
 
-RH -> LD // shared phenomena
- {event "Reader Record "}
+RH -- LD // shared phenomena
+ {event #Reader Record #}
 
 LM ~~ RNR // reference phenomena
- {state "Personal Details "}
+ {state #Personal Details #}
 
 LD ~> RNR // constraint phenomena
- {state "Membership Details"}
+ {state #Membership Details#}

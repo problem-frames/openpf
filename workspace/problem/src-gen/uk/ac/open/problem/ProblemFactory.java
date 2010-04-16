@@ -44,15 +44,6 @@ public interface ProblemFactory extends EFactory
   Node createNode();
 
   /**
-	 * Returns a new object of class '<em>Other Language</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Other Language</em>'.
-	 * @generated
-	 */
-  OtherLanguage createOtherLanguage();
-
-  /**
 	 * Returns a new object of class '<em>Phenomenon</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

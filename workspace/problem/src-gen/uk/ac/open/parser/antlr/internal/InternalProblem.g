@@ -369,23 +369,22 @@ ruleNode returns [EObject current=null]
     }
 (	
 	
-	    
-	    { 
-	        currentNode=createCompositeNode(grammarAccess.getNodeAccess().getOtherOtherLanguageParserRuleCall_3_2_3_1_0(), currentNode); 
-	    }
-	    lv_other_16=ruleOtherLanguage 
+	    lv_href_16=	RULE_STRING
+	{
+		createLeafNode(grammarAccess.getNodeAccess().getHrefSTRINGTerminalRuleCall_3_2_3_1_0(), "href"); 
+	}
+ 
 	    {
 	        if ($current==null) {
 	            $current = factory.create(grammarAccess.getNodeRule().getType().getClassifier());
-	            associateNodeWithAstElement(currentNode.getParent(), $current);
+	            associateNodeWithAstElement(currentNode, $current);
 	        }
 	        
 	        try {
-	       		add($current, "other", lv_other_16, "OtherLanguage", currentNode);
+	       		add($current, "href", lv_href_16, "STRING", lastConsumedNode);
 	        } catch (ValueConverterException vce) {
 				handleValueConverterException(vce);
 	        }
-	        currentNode = currentNode.getParent();
 	    }
 	
 )))*'}' 
@@ -393,67 +392,6 @@ ruleNode returns [EObject current=null]
         createLeafNode(grammarAccess.getNodeAccess().getRightCurlyBracketKeyword_3_3(), null); 
     }
 )?);
-
-
-
-
-
-// Entry rule entryRuleOtherLanguage
-entryRuleOtherLanguage returns [EObject current=null] :
-	{ currentNode = createCompositeNode(grammarAccess.getOtherLanguageRule(), currentNode); }
-	 iv_ruleOtherLanguage=ruleOtherLanguage 
-	 { $current=$iv_ruleOtherLanguage.current; } 
-	 EOF 
-;
-
-// Rule OtherLanguage
-ruleOtherLanguage returns [EObject current=null] 
-    @init { EObject temp=null; setCurrentLookahead(); resetLookahead(); 
-    }
-    @after { resetLookahead(); 
-    	lastConsumedNode = currentNode;
-    }:
-((	
-	
-	    lv_type_0=	RULE_STRING
-	{
-		createLeafNode(grammarAccess.getOtherLanguageAccess().getTypeSTRINGTerminalRuleCall_0_0(), "type"); 
-	}
- 
-	    {
-	        if ($current==null) {
-	            $current = factory.create(grammarAccess.getOtherLanguageRule().getType().getClassifier());
-	            associateNodeWithAstElement(currentNode, $current);
-	        }
-	        
-	        try {
-	       		set($current, "type", lv_type_0, "STRING", lastConsumedNode);
-	        } catch (ValueConverterException vce) {
-				handleValueConverterException(vce);
-	        }
-	    }
-	
-)(	
-	
-	    lv_href_1=	RULE_STRING
-	{
-		createLeafNode(grammarAccess.getOtherLanguageAccess().getHrefSTRINGTerminalRuleCall_1_0(), "href"); 
-	}
- 
-	    {
-	        if ($current==null) {
-	            $current = factory.create(grammarAccess.getOtherLanguageRule().getType().getClassifier());
-	            associateNodeWithAstElement(currentNode, $current);
-	        }
-	        
-	        try {
-	       		set($current, "href", lv_href_1, "STRING", lastConsumedNode);
-	        } catch (ValueConverterException vce) {
-				handleValueConverterException(vce);
-	        }
-	    }
-	
-));
 
 
 

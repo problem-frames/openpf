@@ -16,22 +16,22 @@ Display C: "ATC Display"
 
 Operator B: "ATC Operator"
 
-Operator -> CP: "h1"
+Operator -- CP: "h1"
 
-CP -> Display: "h2"
+CP -- Display: "h2"
 
-PSS -> CP: "d"
+PSS -- CP: "d"
 
-SSS -> CP: "f"
+SSS -- CP: "f"
 
-CP -> Aircrafts: "g"
+CP -- Aircrafts: "g"
 
-Airspace -> PSS: "c1"
+Airspace -- PSS: "c1"
 
-PSS -> Airspace: "c2"
+PSS -- Airspace: "c2"
 
-Airspace -> SSS: "e1"
+Airspace -- SSS: "e1"
 
-Aircrafts -> Airspace:"b"
+Aircrafts -- Airspace:"b"
 
 Collide ~> Aircrafts: "a"   

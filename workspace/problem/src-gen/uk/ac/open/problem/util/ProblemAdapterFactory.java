@@ -82,10 +82,6 @@ public class ProblemAdapterFactory extends AdapterFactoryImpl
 				return createNodeAdapter();
 			}
 			@Override
-			public Adapter caseOtherLanguage(OtherLanguage object) {
-				return createOtherLanguageAdapter();
-			}
-			@Override
 			public Adapter casePhenomenon(Phenomenon object) {
 				return createPhenomenonAdapter();
 			}
@@ -140,21 +136,6 @@ public class ProblemAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
   public Adapter createNodeAdapter()
-  {
-		return null;
-	}
-
-  /**
-	 * Creates a new adapter for an object of class '{@link uk.ac.open.problem.OtherLanguage <em>Other Language</em>}'.
-	 * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uk.ac.open.problem.OtherLanguage
-	 * @generated
-	 */
-  public Adapter createOtherLanguageAdapter()
   {
 		return null;
 	}

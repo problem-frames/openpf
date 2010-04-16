@@ -18,13 +18,13 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EDataTypeEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.NodeType;
-import uk.ac.open.problem.OtherLanguage;
 import uk.ac.open.problem.Phenomenon;
 import uk.ac.open.problem.ProblemDiagram;
 import uk.ac.open.problem.ProblemPackage;
@@ -43,7 +43,7 @@ import uk.ac.open.problem.ProblemPackage;
  *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getSubproblem <em>Subproblem</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getProblemNodeRef <em>Problem Node Ref</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getProblemRef <em>Problem Ref</em>}</li>
- *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getOther <em>Other</em>}</li>
+ *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getHref <em>Href</em>}</li>
  * </ul>
  * </p>
  *
@@ -152,14 +152,14 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
   protected EList<ProblemDiagram> problemRef;
 
   /**
-	 * The cached value of the '{@link #getOther() <em>Other</em>}' containment reference list.
+	 * The cached value of the '{@link #getHref() <em>Href</em>}' attribute list.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getOther()
+	 * @see #getHref()
 	 * @generated
 	 * @ordered
 	 */
-  protected EList<OtherLanguage> other;
+  protected EList<String> href;
 
   /**
 	 * <!-- begin-user-doc -->
@@ -308,12 +308,12 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EList<OtherLanguage> getOther()
+  public EList<String> getHref()
   {
-		if (other == null) {
-			other = new EObjectContainmentEList<OtherLanguage>(OtherLanguage.class, this, ProblemPackage.NODE__OTHER);
+		if (href == null) {
+			href = new EDataTypeEList<String>(String.class, this, ProblemPackage.NODE__HREF);
 		}
-		return other;
+		return href;
 	}
 
   /**
@@ -329,8 +329,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 				return ((InternalEList<?>)getHiddenPhenomena()).basicRemove(otherEnd, msgs);
 			case ProblemPackage.NODE__SUBPROBLEM:
 				return ((InternalEList<?>)getSubproblem()).basicRemove(otherEnd, msgs);
-			case ProblemPackage.NODE__OTHER:
-				return ((InternalEList<?>)getOther()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -358,8 +356,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 				return getProblemNodeRef();
 			case ProblemPackage.NODE__PROBLEM_REF:
 				return getProblemRef();
-			case ProblemPackage.NODE__OTHER:
-				return getOther();
+			case ProblemPackage.NODE__HREF:
+				return getHref();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -399,9 +397,9 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 				getProblemRef().clear();
 				getProblemRef().addAll((Collection<? extends ProblemDiagram>)newValue);
 				return;
-			case ProblemPackage.NODE__OTHER:
-				getOther().clear();
-				getOther().addAll((Collection<? extends OtherLanguage>)newValue);
+			case ProblemPackage.NODE__HREF:
+				getHref().clear();
+				getHref().addAll((Collection<? extends String>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -437,8 +435,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 			case ProblemPackage.NODE__PROBLEM_REF:
 				getProblemRef().clear();
 				return;
-			case ProblemPackage.NODE__OTHER:
-				getOther().clear();
+			case ProblemPackage.NODE__HREF:
+				getHref().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -467,8 +465,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 				return problemNodeRef != null && !problemNodeRef.isEmpty();
 			case ProblemPackage.NODE__PROBLEM_REF:
 				return problemRef != null && !problemRef.isEmpty();
-			case ProblemPackage.NODE__OTHER:
-				return other != null && !other.isEmpty();
+			case ProblemPackage.NODE__HREF:
+				return href != null && !href.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -490,6 +488,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 		result.append(type);
 		result.append(", description: ");
 		result.append(description);
+		result.append(", href: ");
+		result.append(href);
 		result.append(')');
 		return result.toString();
 	}

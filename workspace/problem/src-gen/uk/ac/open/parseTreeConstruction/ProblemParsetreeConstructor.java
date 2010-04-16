@@ -34,9 +34,8 @@ protected class ThisRootNode extends RootToken {
 		switch(index) {
 			case 0: return new ProblemDiagram_Group(this, this, 0, inst);
 			case 1: return new Node_Group(this, this, 1, inst);
-			case 2: return new OtherLanguage_Group(this, this, 2, inst);
-			case 3: return new Phenomenon_Group(this, this, 3, inst);
-			case 4: return new Link_Group(this, this, 4, inst);
+			case 2: return new Phenomenon_Group(this, this, 2, inst);
+			case 3: return new Link_Group(this, this, 3, inst);
 			default: return null;
 		}	
 	}	
@@ -262,15 +261,15 @@ protected class ProblemDiagram_LinksAssignment_3_1 extends AssignmentToken  {
  * Node:
  *   name=ID type=NodeType? (":" description=STRING)? ("{" (hiddenPhenomena+=Phenomenon (
  *   "," hiddenPhenomena+=Phenomenon)*)? (subproblem+=ProblemDiagram|"see" "domain"
- *   problemNodeRef+=[Node]|"see" "problem" problemRef+=[ProblemDiagram]|"see" other+=
- *   OtherLanguage)* "}")?;
+ *   problemNodeRef+=[Node]|"see" "problem" problemRef+=[ProblemDiagram]|"see" href+=
+ *   STRING)* "}")?;
  *
  **/
 
 // name=ID type=NodeType? (":" description=STRING)? ("{" (hiddenPhenomena+=Phenomenon (
 // "," hiddenPhenomena+=Phenomenon)*)? (subproblem+=ProblemDiagram|"see" "domain"
-// problemNodeRef+=[Node]|"see" "problem" problemRef+=[ProblemDiagram]|"see" other+=
-// OtherLanguage)* "}")?
+// problemNodeRef+=[Node]|"see" "problem" problemRef+=[ProblemDiagram]|"see" href+=
+// STRING)* "}")?
 protected class Node_Group extends GroupToken {
 	
 	public Node_Group(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
@@ -433,7 +432,7 @@ protected class Node_DescriptionAssignment_2_1 extends AssignmentToken  {
 
 // ("{" (hiddenPhenomena+=Phenomenon ("," hiddenPhenomena+=Phenomenon)*)? (subproblem+=
 // ProblemDiagram|"see" "domain" problemNodeRef+=[Node]|"see" "problem" problemRef+=[
-// ProblemDiagram]|"see" other+=OtherLanguage)* "}")?
+// ProblemDiagram]|"see" href+=STRING)* "}")?
 protected class Node_Group_3 extends GroupToken {
 	
 	public Node_Group_3(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
@@ -624,7 +623,7 @@ protected class Node_HiddenPhenomenaAssignment_3_1_1_1 extends AssignmentToken  
 
 
 // (subproblem+=ProblemDiagram|"see" "domain" problemNodeRef+=[Node]|"see" "problem"
-// problemRef+=[ProblemDiagram]|"see" other+=OtherLanguage)*
+// problemRef+=[ProblemDiagram]|"see" href+=STRING)*
 protected class Node_Alternatives_3_2 extends AlternativesToken {
 
 	public Node_Alternatives_3_2(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
@@ -885,7 +884,7 @@ protected class Node_ProblemRefAssignment_3_2_2_2 extends AssignmentToken  {
 }
 
 
-// "see" other+=OtherLanguage
+// "see" href+=STRING
 protected class Node_Group_3_2_3 extends GroupToken {
 	
 	public Node_Group_3_2_3(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
@@ -898,7 +897,7 @@ protected class Node_Group_3_2_3 extends GroupToken {
 
 	public AbstractToken createFollower(int index, IInstanceDescription inst) {
 		switch(index) {
-			case 0: return new Node_OtherAssignment_3_2_3_1(parent, this, 0, inst);
+			case 0: return new Node_HrefAssignment_3_2_3_1(parent, this, 0, inst);
 			default: return null;
 		}	
 	}	
@@ -927,46 +926,35 @@ protected class Node_SeeKeyword_3_2_3_0 extends KeywordToken  {
 		
 }
 
-// other+=OtherLanguage
-protected class Node_OtherAssignment_3_2_3_1 extends AssignmentToken  {
+// href+=STRING
+protected class Node_HrefAssignment_3_2_3_1 extends AssignmentToken  {
 	
-	public Node_OtherAssignment_3_2_3_1(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
+	public Node_HrefAssignment_3_2_3_1(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
 		super(parent, next, no, current);
 	}
 	
 	public Assignment getGrammarElement() {
-		return grammarAccess.getNodeAccess().getOtherAssignment_3_2_3_1();
+		return grammarAccess.getNodeAccess().getHrefAssignment_3_2_3_1();
 	}
 
 	public AbstractToken createFollower(int index, IInstanceDescription inst) {
 		switch(index) {
-			case 0: return new OtherLanguage_Group(this, this, 0, inst);
+			case 0: return new Node_SeeKeyword_3_2_3_0(parent, this, 0, inst);
 			default: return null;
 		}	
 	}	
 		
 	protected IInstanceDescription tryConsumeVal() {
-		if((value = current.getConsumable("other",true)) == null) return null;
-		IInstanceDescription obj = current.cloneAndConsume("other");
-		if(value instanceof EObject) { // org::eclipse::xtext::impl::RuleCallImpl
-			IInstanceDescription param = getDescr((EObject)value);
-			if(param.isInstanceOf(grammarAccess.getOtherLanguageRule().getType().getClassifier())) {
-				type = AssignmentType.PRC;
-				element = grammarAccess.getNodeAccess().getOtherOtherLanguageParserRuleCall_3_2_3_1_0(); 
-				consumed = obj;
-				return param;
-			}
+		if((value = current.getConsumable("href",true)) == null) return null;
+		IInstanceDescription obj = current.cloneAndConsume("href");
+		if(Boolean.TRUE.booleanValue()) { // org::eclipse::xtext::impl::RuleCallImpl FIXME: check if value is valid for lexer rule
+			type = AssignmentType.LRC;
+			element = grammarAccess.getNodeAccess().getHrefSTRINGTerminalRuleCall_3_2_3_1_0();
+			return obj;
 		}
 		return null;
 	}
 
-	public AbstractToken createParentFollower(AbstractToken next,	int actIndex, int index, IInstanceDescription inst) {
-		if(value == inst.getDelegate() && !inst.isConsumed()) return null;
-		switch(index) {
-			case 0: return new Node_SeeKeyword_3_2_3_0(parent, next, actIndex, consumed);
-			default: return null;
-		}	
-	}	
 }
 
 
@@ -996,102 +984,6 @@ protected class Node_RightCurlyBracketKeyword_3_3 extends KeywordToken  {
 
 
 /************ end Rule Node ****************/
-
-
-/************ begin Rule OtherLanguage ****************
- *
- * OtherLanguage:
- *   type=STRING href=STRING;
- *
- **/
-
-// type=STRING href=STRING
-protected class OtherLanguage_Group extends GroupToken {
-	
-	public OtherLanguage_Group(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
-		super(parent, next, no, current);
-	}
-	
-	public Group getGrammarElement() {
-		return grammarAccess.getOtherLanguageAccess().getGroup();
-	}
-
-	public AbstractToken createFollower(int index, IInstanceDescription inst) {
-		switch(index) {
-			case 0: return new OtherLanguage_HrefAssignment_1(parent, this, 0, inst);
-			default: return null;
-		}	
-	}	
-		
-	public IInstanceDescription tryConsume() {
-		if(!current.isInstanceOf(grammarAccess.getOtherLanguageRule().getType().getClassifier())) return null;
-		return tryConsumeVal();
-	}
-}
-
-// type=STRING
-protected class OtherLanguage_TypeAssignment_0 extends AssignmentToken  {
-	
-	public OtherLanguage_TypeAssignment_0(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
-		super(parent, next, no, current);
-	}
-	
-	public Assignment getGrammarElement() {
-		return grammarAccess.getOtherLanguageAccess().getTypeAssignment_0();
-	}
-
-	public AbstractToken createFollower(int index, IInstanceDescription inst) {
-		switch(index) {
-			default: return parent.createParentFollower(this, index, index, inst);
-		}	
-	}	
-		
-	protected IInstanceDescription tryConsumeVal() {
-		if((value = current.getConsumable("type",true)) == null) return null;
-		IInstanceDescription obj = current.cloneAndConsume("type");
-		if(Boolean.TRUE.booleanValue()) { // org::eclipse::xtext::impl::RuleCallImpl FIXME: check if value is valid for lexer rule
-			type = AssignmentType.LRC;
-			element = grammarAccess.getOtherLanguageAccess().getTypeSTRINGTerminalRuleCall_0_0();
-			return obj;
-		}
-		return null;
-	}
-
-}
-
-// href=STRING
-protected class OtherLanguage_HrefAssignment_1 extends AssignmentToken  {
-	
-	public OtherLanguage_HrefAssignment_1(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
-		super(parent, next, no, current);
-	}
-	
-	public Assignment getGrammarElement() {
-		return grammarAccess.getOtherLanguageAccess().getHrefAssignment_1();
-	}
-
-	public AbstractToken createFollower(int index, IInstanceDescription inst) {
-		switch(index) {
-			case 0: return new OtherLanguage_TypeAssignment_0(parent, this, 0, inst);
-			default: return null;
-		}	
-	}	
-		
-	protected IInstanceDescription tryConsumeVal() {
-		if((value = current.getConsumable("href",true)) == null) return null;
-		IInstanceDescription obj = current.cloneAndConsume("href");
-		if(Boolean.TRUE.booleanValue()) { // org::eclipse::xtext::impl::RuleCallImpl FIXME: check if value is valid for lexer rule
-			type = AssignmentType.LRC;
-			element = grammarAccess.getOtherLanguageAccess().getHrefSTRINGTerminalRuleCall_1_0();
-			return obj;
-		}
-		return null;
-	}
-
-}
-
-
-/************ end Rule OtherLanguage ****************/
 
 
 /************ begin Rule Phenomenon ****************

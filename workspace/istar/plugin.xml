@@ -5,6 +5,8 @@
 
   <extension point="core.example">
       <example file="open_account.istar"/>
+      <example file="open_account.oom"/>
+      <example file="open_account.ood"/>
   </extension>
 
 </plugin>

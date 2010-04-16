@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link uk.ac.open.problem.Node#getSubproblem <em>Subproblem</em>}</li>
  *   <li>{@link uk.ac.open.problem.Node#getProblemNodeRef <em>Problem Node Ref</em>}</li>
  *   <li>{@link uk.ac.open.problem.Node#getProblemRef <em>Problem Ref</em>}</li>
- *   <li>{@link uk.ac.open.problem.Node#getOther <em>Other</em>}</li>
+ *   <li>{@link uk.ac.open.problem.Node#getHref <em>Href</em>}</li>
  * </ul>
  * </p>
  *
@@ -180,19 +180,19 @@ public interface Node extends EObject
   EList<ProblemDiagram> getProblemRef();
 
   /**
-	 * Returns the value of the '<em><b>Other</b></em>' containment reference list.
-	 * The list contents are of type {@link uk.ac.open.problem.OtherLanguage}.
+	 * Returns the value of the '<em><b>Href</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.String}.
 	 * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Other</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Href</em>' attribute list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Other</em>' containment reference list.
-	 * @see uk.ac.open.problem.ProblemPackage#getNode_Other()
-	 * @model containment="true"
+	 * @return the value of the '<em>Href</em>' attribute list.
+	 * @see uk.ac.open.problem.ProblemPackage#getNode_Href()
+	 * @model unique="false"
 	 * @generated
 	 */
-  EList<OtherLanguage> getOther();
+  EList<String> getHref();
 
 } // Node

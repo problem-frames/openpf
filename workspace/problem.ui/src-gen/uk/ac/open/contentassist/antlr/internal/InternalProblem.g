@@ -110,33 +110,6 @@ finally {
 
 
 
-// Entry rule entryRuleOtherLanguage
-entryRuleOtherLanguage :
-{ before(grammarAccess.getOtherLanguageRule()); }
-	 ruleOtherLanguage
-{ after(grammarAccess.getOtherLanguageRule()); } 
-	 EOF 
-;
-
-// Rule OtherLanguage
-ruleOtherLanguage 
-    @init {
-		int stackSize = keepStackSize();
-    }
- :
-(
-{ before(grammarAccess.getOtherLanguageAccess().getGroup()); }
-(rule__OtherLanguage__Group__0)
-{ after(grammarAccess.getOtherLanguageAccess().getGroup()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-
 // Entry rule entryRulePhenomenon
 entryRulePhenomenon :
 { before(grammarAccess.getPhenomenonRule()); }
@@ -946,48 +919,9 @@ rule__Node__Group_3_2_3__1
     }
 :
 (
-{ before(grammarAccess.getNodeAccess().getOtherAssignment_3_2_3_1()); }
-(rule__Node__OtherAssignment_3_2_3_1)
-{ after(grammarAccess.getNodeAccess().getOtherAssignment_3_2_3_1()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-
-
-
-
-rule__OtherLanguage__Group__0
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getOtherLanguageAccess().getTypeAssignment_0()); }
-(rule__OtherLanguage__TypeAssignment_0)
-{ after(grammarAccess.getOtherLanguageAccess().getTypeAssignment_0()); }
-)
-
-	rule__OtherLanguage__Group__1
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__OtherLanguage__Group__1
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getOtherLanguageAccess().getHrefAssignment_1()); }
-(rule__OtherLanguage__HrefAssignment_1)
-{ after(grammarAccess.getOtherLanguageAccess().getHrefAssignment_1()); }
+{ before(grammarAccess.getNodeAccess().getHrefAssignment_3_2_3_1()); }
+(rule__Node__HrefAssignment_3_2_3_1)
+{ after(grammarAccess.getNodeAccess().getHrefAssignment_3_2_3_1()); }
 )
 
 ;
@@ -1557,44 +1491,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Node__OtherAssignment_3_2_3_1
+rule__Node__HrefAssignment_3_2_3_1
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getNodeAccess().getOtherOtherLanguageParserRuleCall_3_2_3_1_0()); }
-	ruleOtherLanguage{ after(grammarAccess.getNodeAccess().getOtherOtherLanguageParserRuleCall_3_2_3_1_0()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__OtherLanguage__TypeAssignment_0
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getOtherLanguageAccess().getTypeSTRINGTerminalRuleCall_0_0()); }
-	RULE_STRING{ after(grammarAccess.getOtherLanguageAccess().getTypeSTRINGTerminalRuleCall_0_0()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__OtherLanguage__HrefAssignment_1
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getOtherLanguageAccess().getHrefSTRINGTerminalRuleCall_1_0()); }
-	RULE_STRING{ after(grammarAccess.getOtherLanguageAccess().getHrefSTRINGTerminalRuleCall_1_0()); }
+{ before(grammarAccess.getNodeAccess().getHrefSTRINGTerminalRuleCall_3_2_3_1_0()); }
+	RULE_STRING{ after(grammarAccess.getNodeAccess().getHrefSTRINGTerminalRuleCall_3_2_3_1_0()); }
 )
 
 ;

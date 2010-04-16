@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:edu.toronto.cs.openome_model="http:///edu/toronto/cs/openome_model.ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_oiyn8Eb9Ed-gJJ7SdaQIrA" type="openome_model" name="open_account.ood" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_pzVp0Eb9Ed-gJJ7SdaQIrA" type="1004" fontName="Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_pzYtIEb9Ed-gJJ7SdaQIrA" type="4036"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_pzZ7QEb9Ed-gJJ7SdaQIrA" type="5004">
+      <children xmi:type="notation:Shape" xmi:id="_p9C_cEb9Ed-gJJ7SdaQIrA" type="2013" fontName="Sans">
+        <children xmi:type="notation:DecorationNode" xmi:id="_p9DmgEb9Ed-gJJ7SdaQIrA" type="4028"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_p9DmgUb9Ed-gJJ7SdaQIrA" type="4029">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_p9Dmgkb9Ed-gJJ7SdaQIrA" y="5"/>
+        </children>
+        <element xmi:type="edu.toronto.cs.openome_model:Goal" href="/Examples/istar/open_account.oom#//@containers.0/@intentions.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p9C_cUb9Ed-gJJ7SdaQIrA" x="295" y="385"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_p9MwcEb9Ed-gJJ7SdaQIrA" type="2013" fontName="Sans">
+        <children xmi:type="notation:DecorationNode" xmi:id="_p9Mwckb9Ed-gJJ7SdaQIrA" type="4028"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_p9NXgEb9Ed-gJJ7SdaQIrA" type="4029">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_p9NXgUb9Ed-gJJ7SdaQIrA" y="5"/>
+        </children>
+        <element xmi:type="edu.toronto.cs.openome_model:Goal" href="/Examples/istar/open_account.oom#//@containers.0/@intentions.1"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p9MwcUb9Ed-gJJ7SdaQIrA" x="440" y="70"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_p9NXgkb9Ed-gJJ7SdaQIrA" type="2013" fontName="Sans">
+        <children xmi:type="notation:DecorationNode" xmi:id="_p9NXhEb9Ed-gJJ7SdaQIrA" type="4028"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_p9N-kEb9Ed-gJJ7SdaQIrA" type="4029">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_p9N-kUb9Ed-gJJ7SdaQIrA" y="5"/>
+        </children>
+        <element xmi:type="edu.toronto.cs.openome_model:Goal" href="/Examples/istar/open_account.oom#//@containers.0/@intentions.2"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p9NXg0b9Ed-gJJ7SdaQIrA" x="205" y="265"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_p9N-kkb9Ed-gJJ7SdaQIrA" type="2013" fontName="Sans">
+        <children xmi:type="notation:DecorationNode" xmi:id="_p9N-lEb9Ed-gJJ7SdaQIrA" type="4028"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_p9N-lUb9Ed-gJJ7SdaQIrA" type="4029">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_p9N-lkb9Ed-gJJ7SdaQIrA" y="5"/>
+        </children>
+        <element xmi:type="edu.toronto.cs.openome_model:Goal" href="/Examples/istar/open_account.oom#//@containers.0/@intentions.3"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p9N-k0b9Ed-gJJ7SdaQIrA" x="385" y="265"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_p9OloEb9Ed-gJJ7SdaQIrA" type="2013" fontName="Sans">
+        <children xmi:type="notation:DecorationNode" xmi:id="_p9Olokb9Ed-gJJ7SdaQIrA" type="4028"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_p9Olo0b9Ed-gJJ7SdaQIrA" type="4029">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_p9OlpEb9Ed-gJJ7SdaQIrA" y="5"/>
+        </children>
+        <element xmi:type="edu.toronto.cs.openome_model:Goal" href="/Examples/istar/open_account.oom#//@containers.0/@intentions.4"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p9OloUb9Ed-gJJ7SdaQIrA" x="205" y="150"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_p9PzwEb9Ed-gJJ7SdaQIrA" type="2016" fontName="Sans">
+        <children xmi:type="notation:DecorationNode" xmi:id="_p9Pzwkb9Ed-gJJ7SdaQIrA" type="4034"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_p9Pzw0b9Ed-gJJ7SdaQIrA" type="4035">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_p9Qa0Eb9Ed-gJJ7SdaQIrA" y="5"/>
+        </children>
+        <element xmi:type="edu.toronto.cs.openome_model:Task" href="/Examples/istar/open_account.oom#//@containers.0/@intentions.5"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p9PzwUb9Ed-gJJ7SdaQIrA" x="385" y="150"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_p9Qa0Ub9Ed-gJJ7SdaQIrA" type="2013" fontName="Sans">
+        <children xmi:type="notation:DecorationNode" xmi:id="_p9Qa00b9Ed-gJJ7SdaQIrA" type="4028"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_p9Qa1Eb9Ed-gJJ7SdaQIrA" type="4029">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_p9RB4Eb9Ed-gJJ7SdaQIrA" y="5"/>
+        </children>
+        <element xmi:type="edu.toronto.cs.openome_model:Goal" href="/Examples/istar/open_account.oom#//@containers.0/@intentions.6"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p9Qa0kb9Ed-gJJ7SdaQIrA" x="560" y="150"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_p9RB4Ub9Ed-gJJ7SdaQIrA" type="2013" fontName="Sans">
+        <children xmi:type="notation:DecorationNode" xmi:id="_p9RB40b9Ed-gJJ7SdaQIrA" type="4028"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_p9RB5Eb9Ed-gJJ7SdaQIrA" type="4029">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_p9RB5Ub9Ed-gJJ7SdaQIrA" y="5"/>
+        </children>
+        <element xmi:type="edu.toronto.cs.openome_model:Goal" href="/Examples/istar/open_account.oom#//@containers.0/@intentions.7"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p9RB4kb9Ed-gJJ7SdaQIrA" x="205" y="30"/>
+      </children>
+    </children>
+    <element xmi:type="edu.toronto.cs.openome_model:Role" href="/Examples/istar/open_account.oom#//@containers.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pzVp0Ub9Ed-gJJ7SdaQIrA" x="30" y="30" width="741"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_pzZ7QUb9Ed-gJJ7SdaQIrA" type="1004" fontName="Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_pzaiUEb9Ed-gJJ7SdaQIrA" type="4036"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_pzaiUUb9Ed-gJJ7SdaQIrA" type="5004">
+      <children xmi:type="notation:Shape" xmi:id="_p_9JgEb9Ed-gJJ7SdaQIrA" type="2013" fontName="Sans">
+        <children xmi:type="notation:DecorationNode" xmi:id="_p_9Jgkb9Ed-gJJ7SdaQIrA" type="4028"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_p_9wkEb9Ed-gJJ7SdaQIrA" type="4029">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_p_9wkUb9Ed-gJJ7SdaQIrA" y="5"/>
+        </children>
+        <element xmi:type="edu.toronto.cs.openome_model:Goal" href="/Examples/istar/open_account.oom#//@containers.1/@intentions.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p_9JgUb9Ed-gJJ7SdaQIrA" x="560" y="385"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_p_9wkkb9Ed-gJJ7SdaQIrA" type="2013" fontName="Sans">
+        <children xmi:type="notation:DecorationNode" xmi:id="_p_9wlEb9Ed-gJJ7SdaQIrA" type="4028"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_p_9wlUb9Ed-gJJ7SdaQIrA" type="4029">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_p_9wlkb9Ed-gJJ7SdaQIrA" y="5"/>
+        </children>
+        <element xmi:type="edu.toronto.cs.openome_model:Goal" href="/Examples/istar/open_account.oom#//@containers.1/@intentions.1"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p_9wk0b9Ed-gJJ7SdaQIrA" x="30" y="30"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_p_-XoEb9Ed-gJJ7SdaQIrA" type="2013" fontName="Sans">
+        <children xmi:type="notation:DecorationNode" xmi:id="_p_-Xokb9Ed-gJJ7SdaQIrA" type="4028"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_p_-Xo0b9Ed-gJJ7SdaQIrA" type="4029">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_p_-XpEb9Ed-gJJ7SdaQIrA" y="5"/>
+        </children>
+        <element xmi:type="edu.toronto.cs.openome_model:Goal" href="/Examples/istar/open_account.oom#//@containers.1/@intentions.2"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p_-XoUb9Ed-gJJ7SdaQIrA" x="205" y="30"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_p_--sEb9Ed-gJJ7SdaQIrA" type="2013" fontName="Sans">
+        <children xmi:type="notation:DecorationNode" xmi:id="_p_--skb9Ed-gJJ7SdaQIrA" type="4028"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_p_--s0b9Ed-gJJ7SdaQIrA" type="4029">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_p_--tEb9Ed-gJJ7SdaQIrA" y="5"/>
+        </children>
+        <element xmi:type="edu.toronto.cs.openome_model:Goal" href="/Examples/istar/open_account.oom#//@containers.1/@intentions.3"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p_--sUb9Ed-gJJ7SdaQIrA" x="385" y="265"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_p_--tUb9Ed-gJJ7SdaQIrA" type="2013" fontName="Sans">
+        <children xmi:type="notation:DecorationNode" xmi:id="_p__lwEb9Ed-gJJ7SdaQIrA" type="4028"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_p__lwUb9Ed-gJJ7SdaQIrA" type="4029">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_p__lwkb9Ed-gJJ7SdaQIrA" y="5"/>
+        </children>
+        <element xmi:type="edu.toronto.cs.openome_model:Goal" href="/Examples/istar/open_account.oom#//@containers.1/@intentions.4"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p_--tkb9Ed-gJJ7SdaQIrA" x="205" y="150"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_p__lw0b9Ed-gJJ7SdaQIrA" type="2013" fontName="Sans">
+        <children xmi:type="notation:DecorationNode" xmi:id="_qAAM0Eb9Ed-gJJ7SdaQIrA" type="4028"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_qAAM0Ub9Ed-gJJ7SdaQIrA" type="4029">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_qAAM0kb9Ed-gJJ7SdaQIrA" y="5"/>
+        </children>
+        <element xmi:type="edu.toronto.cs.openome_model:Goal" href="/Examples/istar/open_account.oom#//@containers.1/@intentions.5"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p__lxEb9Ed-gJJ7SdaQIrA" x="560" y="150"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_qAAM00b9Ed-gJJ7SdaQIrA" type="2013" fontName="Sans">
+        <children xmi:type="notation:DecorationNode" xmi:id="_qAAz4Eb9Ed-gJJ7SdaQIrA" type="4028"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_qAAz4Ub9Ed-gJJ7SdaQIrA" type="4029">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_qAAz4kb9Ed-gJJ7SdaQIrA" y="5"/>
+        </children>
+        <element xmi:type="edu.toronto.cs.openome_model:Goal" href="/Examples/istar/open_account.oom#//@containers.1/@intentions.6"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qAAM1Eb9Ed-gJJ7SdaQIrA" x="385" y="150"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_qABa8Eb9Ed-gJJ7SdaQIrA" type="2013" fontName="Sans">
+        <children xmi:type="notation:DecorationNode" xmi:id="_qABa8kb9Ed-gJJ7SdaQIrA" type="4028"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_qABa80b9Ed-gJJ7SdaQIrA" type="4029">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_qACCAEb9Ed-gJJ7SdaQIrA" y="5"/>
+        </children>
+        <element xmi:type="edu.toronto.cs.openome_model:Goal" href="/Examples/istar/open_account.oom#//@containers.1/@intentions.7"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qABa8Ub9Ed-gJJ7SdaQIrA" x="385" y="30"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_qACCAUb9Ed-gJJ7SdaQIrA" type="2013" fontName="Sans">
+        <children xmi:type="notation:DecorationNode" xmi:id="_qACpEEb9Ed-gJJ7SdaQIrA" type="4028"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_qACpEUb9Ed-gJJ7SdaQIrA" type="4029">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_qACpEkb9Ed-gJJ7SdaQIrA" y="5"/>
+        </children>
+        <element xmi:type="edu.toronto.cs.openome_model:Goal" href="/Examples/istar/open_account.oom#//@containers.1/@intentions.8"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qACCAkb9Ed-gJJ7SdaQIrA" x="560" y="30"/>
+      </children>
+    </children>
+    <element xmi:type="edu.toronto.cs.openome_model:Role" href="/Examples/istar/open_account.oom#//@containers.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pzZ7Qkb9Ed-gJJ7SdaQIrA" x="825" y="60" width="766"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_pzaiUkb9Ed-gJJ7SdaQIrA" type="1006" fontName="Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_pzbJYEb9Ed-gJJ7SdaQIrA" type="4039"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_pzbJYUb9Ed-gJJ7SdaQIrA" type="4040">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_pzbJYkb9Ed-gJJ7SdaQIrA" y="5"/>
+    </children>
+    <element xmi:type="edu.toronto.cs.openome_model:Softgoal" href="/Examples/istar/open_account.oom#//@intentions.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pzaiU0b9Ed-gJJ7SdaQIrA" x="1600" y="30"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_oiyn8Ub9Ed-gJJ7SdaQIrA"/>
+  <element xmi:type="edu.toronto.cs.openome_model:Model" href="/Examples/istar/open_account.oom#/"/>
+  <edges xmi:type="notation:Connector" xmi:id="_qBxHYEb9Ed-gJJ7SdaQIrA" type="3001" source="_p_9wkkb9Ed-gJJ7SdaQIrA" target="_p9N-kkb9Ed-gJJ7SdaQIrA">
+    <styles xmi:type="notation:FontStyle" xmi:id="_qBxHYUb9Ed-gJJ7SdaQIrA" fontName="Sans"/>
+    <element xmi:type="edu.toronto.cs.openome_model:Dependency" href="/Examples/istar/open_account.oom#//@dependencies.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qBxHYkb9Ed-gJJ7SdaQIrA" points="[0, 0, 0, 0]$[-1, -1, -1, -1]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_qCanoEb9Ed-gJJ7SdaQIrA" type="3001" source="_qACCAUb9Ed-gJJ7SdaQIrA" target="_p9RB4Ub9Ed-gJJ7SdaQIrA">
+    <styles xmi:type="notation:FontStyle" xmi:id="_qCanoUb9Ed-gJJ7SdaQIrA" fontName="Sans"/>
+    <element xmi:type="edu.toronto.cs.openome_model:Dependency" href="/Examples/istar/open_account.oom#//@dependencies.1"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qCanokb9Ed-gJJ7SdaQIrA" points="[0, 0, 0, 0]$[-1, -1, -1, -1]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_qCdD4Eb9Ed-gJJ7SdaQIrA" type="3001" source="_qABa8Eb9Ed-gJJ7SdaQIrA" target="_p9OloEb9Ed-gJJ7SdaQIrA">
+    <styles xmi:type="notation:FontStyle" xmi:id="_qCdD4Ub9Ed-gJJ7SdaQIrA" fontName="Sans"/>
+    <element xmi:type="edu.toronto.cs.openome_model:Dependency" href="/Examples/istar/open_account.oom#//@dependencies.2"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qCdD4kb9Ed-gJJ7SdaQIrA" points="[0, 0, 0, 0]$[-1, -1, -1, -1]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_qCe5EEb9Ed-gJJ7SdaQIrA" type="3001" source="_p_-XoEb9Ed-gJJ7SdaQIrA" target="_p9MwcEb9Ed-gJJ7SdaQIrA">
+    <styles xmi:type="notation:FontStyle" xmi:id="_qCfgIEb9Ed-gJJ7SdaQIrA" fontName="Sans"/>
+    <element xmi:type="edu.toronto.cs.openome_model:Dependency" href="/Examples/istar/open_account.oom#//@dependencies.3"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qCfgIUb9Ed-gJJ7SdaQIrA" points="[-59, -10, 501, -20]$[-303, -49, 257, -59]$[-504, -4, 56, -14]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_qChVUEb9Ed-gJJ7SdaQIrA" type="3001" source="_p9Qa0Ub9Ed-gJJ7SdaQIrA" target="_qACCAUb9Ed-gJJ7SdaQIrA">
+    <styles xmi:type="notation:FontStyle" xmi:id="_qChVUUb9Ed-gJJ7SdaQIrA" fontName="Sans"/>
+    <element xmi:type="edu.toronto.cs.openome_model:Dependency" href="/Examples/istar/open_account.oom#//@dependencies.4"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qChVUkb9Ed-gJJ7SdaQIrA" points="[0, 0, 0, 0]$[-1, -1, -1, -1]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_qCkYoEb9Ed-gJJ7SdaQIrA" type="3002" source="_p9NXgkb9Ed-gJJ7SdaQIrA" target="_p9C_cEb9Ed-gJJ7SdaQIrA">
+    <styles xmi:type="notation:FontStyle" xmi:id="_qCkYoUb9Ed-gJJ7SdaQIrA" fontName="Sans"/>
+    <element xmi:type="edu.toronto.cs.openome_model:AndDecomposition" href="/Examples/istar/open_account.oom#//@decompositions.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qCkYokb9Ed-gJJ7SdaQIrA" points="[0, 29, -88, -89]$[69, 89, -19, -29]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_qCvXwEb9Ed-gJJ7SdaQIrA" type="3002" source="_p9N-kkb9Ed-gJJ7SdaQIrA" target="_p9C_cEb9Ed-gJJ7SdaQIrA">
+    <styles xmi:type="notation:FontStyle" xmi:id="_qCvXwUb9Ed-gJJ7SdaQIrA" fontName="Sans"/>
+    <element xmi:type="edu.toronto.cs.openome_model:AndDecomposition" href="/Examples/istar/open_account.oom#//@decompositions.1"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qCvXwkb9Ed-gJJ7SdaQIrA" points="[0, 29, 89, -89]$[-69, 89, 20, -29]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_qC36oEb9Ed-gJJ7SdaQIrA" type="3002" source="_p9OloEb9Ed-gJJ7SdaQIrA" target="_p9NXgkb9Ed-gJJ7SdaQIrA">
+    <styles xmi:type="notation:FontStyle" xmi:id="_qC36oUb9Ed-gJJ7SdaQIrA" fontName="Sans"/>
+    <element xmi:type="edu.toronto.cs.openome_model:AndDecomposition" href="/Examples/istar/open_account.oom#//@decompositions.2"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qC36okb9Ed-gJJ7SdaQIrA" points="[0, 29, 0, -89]$[0, 89, 0, -29]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_qC7lAEb9Ed-gJJ7SdaQIrA" type="3002" source="_p9PzwEb9Ed-gJJ7SdaQIrA" target="_p9N-kkb9Ed-gJJ7SdaQIrA">
+    <styles xmi:type="notation:FontStyle" xmi:id="_qC7lAUb9Ed-gJJ7SdaQIrA" fontName="Sans"/>
+    <element xmi:type="edu.toronto.cs.openome_model:AndDecomposition" href="/Examples/istar/open_account.oom#//@decompositions.3"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qC7lAkb9Ed-gJJ7SdaQIrA" points="[0, 29, 0, -89]$[0, 89, 0, -29]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_qC_2cEb9Ed-gJJ7SdaQIrA" type="3002" source="_p9Qa0Ub9Ed-gJJ7SdaQIrA" target="_p9N-kkb9Ed-gJJ7SdaQIrA">
+    <styles xmi:type="notation:FontStyle" xmi:id="_qC_2cUb9Ed-gJJ7SdaQIrA" fontName="Sans"/>
+    <element xmi:type="edu.toronto.cs.openome_model:AndDecomposition" href="/Examples/istar/open_account.oom#//@decompositions.4"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qC_2ckb9Ed-gJJ7SdaQIrA" points="[0, 29, 177, -89]$[-148, 89, 29, -29]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_qDC5wEb9Ed-gJJ7SdaQIrA" type="3002" source="_p9RB4Ub9Ed-gJJ7SdaQIrA" target="_p9OloEb9Ed-gJJ7SdaQIrA">
+    <styles xmi:type="notation:FontStyle" xmi:id="_qDC5wUb9Ed-gJJ7SdaQIrA" fontName="Sans"/>
+    <element xmi:type="edu.toronto.cs.openome_model:AndDecomposition" href="/Examples/istar/open_account.oom#//@decompositions.5"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qDC5wkb9Ed-gJJ7SdaQIrA" points="[0, 29, 0, -89]$[0, 89, 0, -29]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_qDFWAEb9Ed-gJJ7SdaQIrA" type="3002" source="_p_-XoEb9Ed-gJJ7SdaQIrA" target="_p_--tUb9Ed-gJJ7SdaQIrA">
+    <styles xmi:type="notation:FontStyle" xmi:id="_qDFWAUb9Ed-gJJ7SdaQIrA" fontName="Sans"/>
+    <element xmi:type="edu.toronto.cs.openome_model:AndDecomposition" href="/Examples/istar/open_account.oom#//@decompositions.10"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qDFWAkb9Ed-gJJ7SdaQIrA" points="[0, 29, 0, -89]$[0, 89, 0, -29]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_qDHLMEb9Ed-gJJ7SdaQIrA" type="3002" source="_qABa8Eb9Ed-gJJ7SdaQIrA" target="_p_--tUb9Ed-gJJ7SdaQIrA">
+    <styles xmi:type="notation:FontStyle" xmi:id="_qDHLMUb9Ed-gJJ7SdaQIrA" fontName="Sans"/>
+    <element xmi:type="edu.toronto.cs.openome_model:AndDecomposition" href="/Examples/istar/open_account.oom#//@decompositions.11"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qDHLMkb9Ed-gJJ7SdaQIrA" points="[-29, 29, 148, -89]$[-148, 89, 29, -29]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_qDJncEb9Ed-gJJ7SdaQIrA" type="3002" source="_qACCAUb9Ed-gJJ7SdaQIrA" target="_qAAM00b9Ed-gJJ7SdaQIrA">
+    <styles xmi:type="notation:FontStyle" xmi:id="_qDJncUb9Ed-gJJ7SdaQIrA" fontName="Sans"/>
+    <element xmi:type="edu.toronto.cs.openome_model:AndDecomposition" href="/Examples/istar/open_account.oom#//@decompositions.12"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qDJnckb9Ed-gJJ7SdaQIrA" points="[-29, 29, 148, -89]$[-148, 89, 29, -29]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_qDLcoEb9Ed-gJJ7SdaQIrA" type="3002" source="_qABa8Eb9Ed-gJJ7SdaQIrA" target="_qAAM00b9Ed-gJJ7SdaQIrA">
+    <styles xmi:type="notation:FontStyle" xmi:id="_qDLcoUb9Ed-gJJ7SdaQIrA" fontName="Sans"/>
+    <element xmi:type="edu.toronto.cs.openome_model:AndDecomposition" href="/Examples/istar/open_account.oom#//@decompositions.13"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qDLcokb9Ed-gJJ7SdaQIrA" points="[0, 29, 0, -89]$[0, 89, 0, -29]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_qDN44Eb9Ed-gJJ7SdaQIrA" type="3002" source="_qACCAUb9Ed-gJJ7SdaQIrA" target="_p__lw0b9Ed-gJJ7SdaQIrA">
+    <styles xmi:type="notation:FontStyle" xmi:id="_qDN44Ub9Ed-gJJ7SdaQIrA" fontName="Sans"/>
+    <element xmi:type="edu.toronto.cs.openome_model:AndDecomposition" href="/Examples/istar/open_account.oom#//@decompositions.14"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qDN44kb9Ed-gJJ7SdaQIrA" points="[0, 29, 0, -89]$[0, 89, 0, -29]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_qDQVIEb9Ed-gJJ7SdaQIrA" type="3002" source="_qABa8Eb9Ed-gJJ7SdaQIrA" target="_p__lw0b9Ed-gJJ7SdaQIrA">
+    <styles xmi:type="notation:FontStyle" xmi:id="_qDQVIUb9Ed-gJJ7SdaQIrA" fontName="Sans"/>
+    <element xmi:type="edu.toronto.cs.openome_model:AndDecomposition" href="/Examples/istar/open_account.oom#//@decompositions.15"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qDQVIkb9Ed-gJJ7SdaQIrA" points="[29, 29, -148, -89]$[148, 89, -29, -29]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_qDSxYEb9Ed-gJJ7SdaQIrA" type="3003" source="_p_--sEb9Ed-gJJ7SdaQIrA" target="_p_9JgEb9Ed-gJJ7SdaQIrA">
+    <styles xmi:type="notation:FontStyle" xmi:id="_qDSxYUb9Ed-gJJ7SdaQIrA" fontName="Sans"/>
+    <element xmi:type="edu.toronto.cs.openome_model:OrDecomposition" href="/Examples/istar/open_account.oom#//@decompositions.6"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qDSxYkb9Ed-gJJ7SdaQIrA" points="[0, 29, -177, -89]$[148, 89, -29, -29]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_qDlsUEb9Ed-gJJ7SdaQIrA" type="3003" source="_p__lw0b9Ed-gJJ7SdaQIrA" target="_p_9JgEb9Ed-gJJ7SdaQIrA">
+    <styles xmi:type="notation:FontStyle" xmi:id="_qDlsUUb9Ed-gJJ7SdaQIrA" fontName="Sans"/>
+    <element xmi:type="edu.toronto.cs.openome_model:OrDecomposition" href="/Examples/istar/open_account.oom#//@decompositions.7"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qDlsUkb9Ed-gJJ7SdaQIrA" points="[0, 29, 0, -207]$[0, 207, 0, -29]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_qDovoEb9Ed-gJJ7SdaQIrA" type="3003" source="_p_--tUb9Ed-gJJ7SdaQIrA" target="_p_--sEb9Ed-gJJ7SdaQIrA">
+    <styles xmi:type="notation:FontStyle" xmi:id="_qDovoUb9Ed-gJJ7SdaQIrA" fontName="Sans"/>
+    <element xmi:type="edu.toronto.cs.openome_model:OrDecomposition" href="/Examples/istar/open_account.oom#//@decompositions.8"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qDpWsEb9Ed-gJJ7SdaQIrA" points="[0, 29, -177, -89]$[148, 89, -29, -29]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_qDsaAEb9Ed-gJJ7SdaQIrA" type="3003" source="_qAAM00b9Ed-gJJ7SdaQIrA" target="_p_--sEb9Ed-gJJ7SdaQIrA">
+    <styles xmi:type="notation:FontStyle" xmi:id="_qDsaAUb9Ed-gJJ7SdaQIrA" fontName="Sans"/>
+    <element xmi:type="edu.toronto.cs.openome_model:OrDecomposition" href="/Examples/istar/open_account.oom#//@decompositions.9"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qDsaAkb9Ed-gJJ7SdaQIrA" points="[0, 29, 0, -89]$[0, 89, 0, -29]"/>
+  </edges>
+</notation:Diagram>

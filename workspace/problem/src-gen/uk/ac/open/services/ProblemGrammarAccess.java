@@ -102,21 +102,21 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 		private final RuleCall cProblemRefProblemDiagramIDTerminalRuleCall_3_2_2_2_0_1 = (RuleCall)cProblemRefProblemDiagramCrossReference_3_2_2_2_0.eContents().get(1);
 		private final Group cGroup_3_2_3 = (Group)cAlternatives_3_2.eContents().get(3);
 		private final Keyword cSeeKeyword_3_2_3_0 = (Keyword)cGroup_3_2_3.eContents().get(0);
-		private final Assignment cOtherAssignment_3_2_3_1 = (Assignment)cGroup_3_2_3.eContents().get(1);
-		private final RuleCall cOtherOtherLanguageParserRuleCall_3_2_3_1_0 = (RuleCall)cOtherAssignment_3_2_3_1.eContents().get(0);
+		private final Assignment cHrefAssignment_3_2_3_1 = (Assignment)cGroup_3_2_3.eContents().get(1);
+		private final RuleCall cHrefSTRINGTerminalRuleCall_3_2_3_1_0 = (RuleCall)cHrefAssignment_3_2_3_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_3_3 = (Keyword)cGroup_3.eContents().get(3);
 		
 		//Node:
 		//  name=ID type=NodeType? (":" description=STRING)? ("{" (hiddenPhenomena+=Phenomenon (
 		//  "," hiddenPhenomena+=Phenomenon)*)? (subproblem+=ProblemDiagram|"see" "domain"
-		//  problemNodeRef+=[Node]|"see" "problem" problemRef+=[ProblemDiagram]|"see" other+=
-		//  OtherLanguage)* "}")?;
+		//  problemNodeRef+=[Node]|"see" "problem" problemRef+=[ProblemDiagram]|"see" href+=
+		//  STRING)* "}")?;
 		public ParserRule getRule() { return rule; }
 
 		//name=ID type=NodeType? (":" description=STRING)? ("{" (hiddenPhenomena+=Phenomenon (
 		//"," hiddenPhenomena+=Phenomenon)*)? (subproblem+=ProblemDiagram|"see" "domain"
-		//problemNodeRef+=[Node]|"see" "problem" problemRef+=[ProblemDiagram]|"see" other+=
-		//OtherLanguage)* "}")?
+		//problemNodeRef+=[Node]|"see" "problem" problemRef+=[ProblemDiagram]|"see" href+=
+		//STRING)* "}")?
 		public Group getGroup() { return cGroup; }
 
 		//name=ID
@@ -145,7 +145,7 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 
 		//("{" (hiddenPhenomena+=Phenomenon ("," hiddenPhenomena+=Phenomenon)*)? (subproblem+=
 		//ProblemDiagram|"see" "domain" problemNodeRef+=[Node]|"see" "problem" problemRef+=[
-		//ProblemDiagram]|"see" other+=OtherLanguage)* "}")?
+		//ProblemDiagram]|"see" href+=STRING)* "}")?
 		public Group getGroup_3() { return cGroup_3; }
 
 		//"{"
@@ -173,7 +173,7 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 		public RuleCall getHiddenPhenomenaPhenomenonParserRuleCall_3_1_1_1_0() { return cHiddenPhenomenaPhenomenonParserRuleCall_3_1_1_1_0; }
 
 		//(subproblem+=ProblemDiagram|"see" "domain" problemNodeRef+=[Node]|"see" "problem"
-		//problemRef+=[ProblemDiagram]|"see" other+=OtherLanguage)*
+		//problemRef+=[ProblemDiagram]|"see" href+=STRING)*
 		public Alternatives getAlternatives_3_2() { return cAlternatives_3_2; }
 
 		//subproblem+=ProblemDiagram
@@ -218,48 +218,20 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 		//ID
 		public RuleCall getProblemRefProblemDiagramIDTerminalRuleCall_3_2_2_2_0_1() { return cProblemRefProblemDiagramIDTerminalRuleCall_3_2_2_2_0_1; }
 
-		//"see" other+=OtherLanguage
+		//"see" href+=STRING
 		public Group getGroup_3_2_3() { return cGroup_3_2_3; }
 
 		//"see"
 		public Keyword getSeeKeyword_3_2_3_0() { return cSeeKeyword_3_2_3_0; }
 
-		//other+=OtherLanguage
-		public Assignment getOtherAssignment_3_2_3_1() { return cOtherAssignment_3_2_3_1; }
+		//href+=STRING
+		public Assignment getHrefAssignment_3_2_3_1() { return cHrefAssignment_3_2_3_1; }
 
-		//OtherLanguage
-		public RuleCall getOtherOtherLanguageParserRuleCall_3_2_3_1_0() { return cOtherOtherLanguageParserRuleCall_3_2_3_1_0; }
+		//STRING
+		public RuleCall getHrefSTRINGTerminalRuleCall_3_2_3_1_0() { return cHrefSTRINGTerminalRuleCall_3_2_3_1_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_3_3() { return cRightCurlyBracketKeyword_3_3; }
-	}
-
-	public class OtherLanguageElements implements IParserRuleAccess {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "OtherLanguage");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cTypeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cTypeSTRINGTerminalRuleCall_0_0 = (RuleCall)cTypeAssignment_0.eContents().get(0);
-		private final Assignment cHrefAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cHrefSTRINGTerminalRuleCall_1_0 = (RuleCall)cHrefAssignment_1.eContents().get(0);
-		
-		//OtherLanguage:
-		//  type=STRING href=STRING;
-		public ParserRule getRule() { return rule; }
-
-		//type=STRING href=STRING
-		public Group getGroup() { return cGroup; }
-
-		//type=STRING
-		public Assignment getTypeAssignment_0() { return cTypeAssignment_0; }
-
-		//STRING
-		public RuleCall getTypeSTRINGTerminalRuleCall_0_0() { return cTypeSTRINGTerminalRuleCall_0_0; }
-
-		//href=STRING
-		public Assignment getHrefAssignment_1() { return cHrefAssignment_1; }
-
-		//STRING
-		public RuleCall getHrefSTRINGTerminalRuleCall_1_0() { return cHrefSTRINGTerminalRuleCall_1_0; }
 	}
 
 	public class PhenomenonElements implements IParserRuleAccess {
@@ -557,7 +529,6 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 	
 	private ProblemDiagramElements pProblemDiagram;
 	private NodeElements pNode;
-	private OtherLanguageElements pOtherLanguage;
 	private NodeTypeElements unknownRuleNodeType;
 	private PhenomenonElements pPhenomenon;
 	private PhenomenonTypeElements unknownRulePhenomenonType;
@@ -599,24 +570,14 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 	//Node:
 	//  name=ID type=NodeType? (":" description=STRING)? ("{" (hiddenPhenomena+=Phenomenon (
 	//  "," hiddenPhenomena+=Phenomenon)*)? (subproblem+=ProblemDiagram|"see" "domain"
-	//  problemNodeRef+=[Node]|"see" "problem" problemRef+=[ProblemDiagram]|"see" other+=
-	//  OtherLanguage)* "}")?;
+	//  problemNodeRef+=[Node]|"see" "problem" problemRef+=[ProblemDiagram]|"see" href+=
+	//  STRING)* "}")?;
 	public NodeElements getNodeAccess() {
 		return (pNode != null) ? pNode : (pNode = new NodeElements());
 	}
 	
 	public ParserRule getNodeRule() {
 		return getNodeAccess().getRule();
-	}
-
-	//OtherLanguage:
-	//  type=STRING href=STRING;
-	public OtherLanguageElements getOtherLanguageAccess() {
-		return (pOtherLanguage != null) ? pOtherLanguage : (pOtherLanguage = new OtherLanguageElements());
-	}
-	
-	public ParserRule getOtherLanguageRule() {
-		return getOtherLanguageAccess().getRule();
 	}
 
 	//enum NodeType:

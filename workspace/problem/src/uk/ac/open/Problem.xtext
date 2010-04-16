@@ -9,13 +9,11 @@ Node:
   (':' description=STRING)?
   ("{" 
      (hiddenPhenomena+=Phenomenon (',' hiddenPhenomena+=Phenomenon)*)? 
-     ((subproblem+=ProblemDiagram 
+       (subproblem+=ProblemDiagram 
   		| "see" "domain" problemNodeRef+=[Node] 
   		| "see" "problem" problemRef+=[ProblemDiagram] 
-  		| "see" other+=OtherLanguage)* 
-  ) "}")?;
-
-OtherLanguage: type=STRING href=STRING;
+  		| "see" href+=STRING)* 
+    "}")?;
 
 enum NodeType:
   REQUIREMENT="R" | MACHINE="M" | BIDDABLE="B" | LEXICAL="X" | CAUSAL="C" | DESIGNED="D" | PHYSICAL="P";

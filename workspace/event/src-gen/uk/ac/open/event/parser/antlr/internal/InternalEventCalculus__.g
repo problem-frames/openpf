@@ -23,54 +23,33 @@ T23 : 'Happens' ;
 T24 : 'Initiates' ;
 T25 : 'Terminates' ;
 T26 : '/' ;
-T27 : 'actor' ;
-T28 : '{' ;
-T29 : '}' ;
-T30 : 'agent' ;
-T31 : 'role' ;
-T32 : 'position' ;
-T33 : 'goal' ;
-T34 : 'soft' ;
-T35 : 'task' ;
-T36 : 'resource' ;
-T37 : 'belief' ;
-T38 : '~~>' ;
-T39 : '~>' ;
-T40 : '<-(and)-' ;
-T41 : '<-(or)-' ;
-T42 : '-(and)->' ;
-T43 : '-(or)->' ;
-T44 : '-(+)->' ;
-T45 : '-(++)->' ;
-T46 : '-(-)->' ;
-T47 : '-(--)->' ;
-T48 : '+' ;
-T49 : '-' ;
-T50 : '!' ;
-T51 : '->' ;
-T52 : '<->' ;
-T53 : '&' ;
-T54 : '|' ;
+T27 : '+' ;
+T28 : '-' ;
+T29 : '!' ;
+T30 : '->' ;
+T31 : '<->' ;
+T32 : '&' ;
+T33 : '|' ;
 
-// $ANTLR src "../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g" 3160
+// $ANTLR src "../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g" 1756
 RULE_SL_COMMENT : ';' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
-// $ANTLR src "../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g" 3162
+// $ANTLR src "../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g" 1758
 RULE_ID : ('#' ~('#')+ '#'|'^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*);
 
-// $ANTLR src "../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g" 3164
+// $ANTLR src "../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g" 1760
 RULE_INT : ('0'..'9')+;
 
-// $ANTLR src "../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g" 3166
+// $ANTLR src "../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g" 1762
 RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\'');
 
-// $ANTLR src "../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g" 3168
+// $ANTLR src "../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g" 1764
 RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 
-// $ANTLR src "../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g" 3170
+// $ANTLR src "../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g" 1766
 RULE_WS : (' '|'\t'|'\r'|'\n')+;
 
-// $ANTLR src "../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g" 3172
+// $ANTLR src "../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g" 1768
 RULE_ANY_OTHER : .;
 
 

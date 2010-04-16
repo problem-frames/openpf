@@ -180,13 +180,13 @@ public interface ProblemPackage extends EPackage
   int NODE__PROBLEM_REF = 6;
 
   /**
-	 * The feature id for the '<em><b>Other</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Href</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int NODE__OTHER = 7;
+  int NODE__HREF = 7;
 
   /**
 	 * The number of structural features of the '<em>Node</em>' class.
@@ -198,43 +198,6 @@ public interface ProblemPackage extends EPackage
   int NODE_FEATURE_COUNT = 8;
 
   /**
-	 * The meta object id for the '{@link uk.ac.open.problem.impl.OtherLanguageImpl <em>Other Language</em>}' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see uk.ac.open.problem.impl.OtherLanguageImpl
-	 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getOtherLanguage()
-	 * @generated
-	 */
-  int OTHER_LANGUAGE = 2;
-
-  /**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int OTHER_LANGUAGE__TYPE = 0;
-
-  /**
-	 * The feature id for the '<em><b>Href</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int OTHER_LANGUAGE__HREF = 1;
-
-  /**
-	 * The number of structural features of the '<em>Other Language</em>' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int OTHER_LANGUAGE_FEATURE_COUNT = 2;
-
-  /**
 	 * The meta object id for the '{@link uk.ac.open.problem.impl.PhenomenonImpl <em>Phenomenon</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -242,7 +205,7 @@ public interface ProblemPackage extends EPackage
 	 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getPhenomenon()
 	 * @generated
 	 */
-  int PHENOMENON = 3;
+  int PHENOMENON = 2;
 
   /**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -297,7 +260,7 @@ public interface ProblemPackage extends EPackage
 	 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getLink()
 	 * @generated
 	 */
-  int LINK = 4;
+  int LINK = 3;
 
   /**
 	 * The feature id for the '<em><b>From</b></em>' reference.
@@ -361,7 +324,7 @@ public interface ProblemPackage extends EPackage
 	 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getNodeType()
 	 * @generated
 	 */
-  int NODE_TYPE = 5;
+  int NODE_TYPE = 4;
 
   /**
 	 * The meta object id for the '{@link uk.ac.open.problem.PhenomenonType <em>Phenomenon Type</em>}' enum.
@@ -371,7 +334,7 @@ public interface ProblemPackage extends EPackage
 	 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getPhenomenonType()
 	 * @generated
 	 */
-  int PHENOMENON_TYPE = 6;
+  int PHENOMENON_TYPE = 5;
 
   /**
 	 * The meta object id for the '{@link uk.ac.open.problem.LinkType <em>Link Type</em>}' enum.
@@ -381,7 +344,7 @@ public interface ProblemPackage extends EPackage
 	 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getLinkType()
 	 * @generated
 	 */
-  int LINK_TYPE = 7;
+  int LINK_TYPE = 6;
 
 
   /**
@@ -515,47 +478,15 @@ public interface ProblemPackage extends EPackage
   EReference getNode_ProblemRef();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link uk.ac.open.problem.Node#getOther <em>Other</em>}'.
+	 * Returns the meta object for the attribute list '{@link uk.ac.open.problem.Node#getHref <em>Href</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Other</em>'.
-	 * @see uk.ac.open.problem.Node#getOther()
+	 * @return the meta object for the attribute list '<em>Href</em>'.
+	 * @see uk.ac.open.problem.Node#getHref()
 	 * @see #getNode()
 	 * @generated
 	 */
-  EReference getNode_Other();
-
-  /**
-	 * Returns the meta object for class '{@link uk.ac.open.problem.OtherLanguage <em>Other Language</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Other Language</em>'.
-	 * @see uk.ac.open.problem.OtherLanguage
-	 * @generated
-	 */
-  EClass getOtherLanguage();
-
-  /**
-	 * Returns the meta object for the attribute '{@link uk.ac.open.problem.OtherLanguage#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see uk.ac.open.problem.OtherLanguage#getType()
-	 * @see #getOtherLanguage()
-	 * @generated
-	 */
-  EAttribute getOtherLanguage_Type();
-
-  /**
-	 * Returns the meta object for the attribute '{@link uk.ac.open.problem.OtherLanguage#getHref <em>Href</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Href</em>'.
-	 * @see uk.ac.open.problem.OtherLanguage#getHref()
-	 * @see #getOtherLanguage()
-	 * @generated
-	 */
-  EAttribute getOtherLanguage_Href();
+  EAttribute getNode_Href();
 
   /**
 	 * Returns the meta object for class '{@link uk.ac.open.problem.Phenomenon <em>Phenomenon</em>}'.
@@ -830,38 +761,12 @@ public interface ProblemPackage extends EPackage
     EReference NODE__PROBLEM_REF = eINSTANCE.getNode_ProblemRef();
 
     /**
-		 * The meta object literal for the '<em><b>Other</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Href</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EReference NODE__OTHER = eINSTANCE.getNode_Other();
-
-    /**
-		 * The meta object literal for the '{@link uk.ac.open.problem.impl.OtherLanguageImpl <em>Other Language</em>}' class.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @see uk.ac.open.problem.impl.OtherLanguageImpl
-		 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getOtherLanguage()
-		 * @generated
-		 */
-    EClass OTHER_LANGUAGE = eINSTANCE.getOtherLanguage();
-
-    /**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    EAttribute OTHER_LANGUAGE__TYPE = eINSTANCE.getOtherLanguage_Type();
-
-    /**
-		 * The meta object literal for the '<em><b>Href</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    EAttribute OTHER_LANGUAGE__HREF = eINSTANCE.getOtherLanguage_Href();
+    EAttribute NODE__HREF = eINSTANCE.getNode_Href();
 
     /**
 		 * The meta object literal for the '{@link uk.ac.open.problem.impl.PhenomenonImpl <em>Phenomenon</em>}' class.
