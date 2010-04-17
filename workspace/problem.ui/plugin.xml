@@ -54,27 +54,27 @@
             id="uk.ac.open.Problem"
             name="Problem"
             category="org.eclipse.xtext.languages">
-            <keywordReference id="uk.ac.open.problem.ui.keyword_Problem"/>
+            <keywordReference id="uk.ac.open.ui.keyword_Problem"/>
         </page>
         <page
             category="uk.ac.open.Problem"
             class="uk.ac.open.ProblemExecutableExtensionFactory:org.eclipse.xtext.ui.common.editor.syntaxcoloring.SyntaxColoringPreferencePage"
             id="uk.ac.open.Problem.coloring"
             name="Syntax Coloring">
-            <keywordReference id="uk.ac.open.problem.ui.keyword_Problem"/>
+            <keywordReference id="uk.ac.open.ui.keyword_Problem"/>
         </page>
         <page
             category="uk.ac.open.Problem"
             class="uk.ac.open.ProblemExecutableExtensionFactory:org.eclipse.xtext.ui.common.editor.templates.XtextTemplatePreferencePage"
             id="uk.ac.open.Problem.templates"
             name="Templates">
-            <keywordReference id="uk.ac.open.problem.ui.keyword_Problem"/>
+            <keywordReference id="uk.ac.open.ui.keyword_Problem"/>
         </page>
     </extension>
     <extension
         point="org.eclipse.ui.keywords">
         <keyword
-            id="uk.ac.open.problem.ui.keyword_Problem"
+            id="uk.ac.open.ui.keyword_Problem"
             label="Problem"/>
     </extension>
     <extension
@@ -110,8 +110,4 @@
 			type="pf">
 		</parser>
 	</extension>
-
-
-
-
 </plugin>

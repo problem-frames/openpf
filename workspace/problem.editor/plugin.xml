@@ -15,7 +15,7 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="uk.ac.open.problem.problem.presentation.ProblemModelWizardID"
+            id="uk.ac.open.problem.presentation.ProblemModelWizardID"
             name="%_UI_ProblemModelWizard_label"
             class="uk.ac.open.problem.presentation.ProblemModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
@@ -27,38 +27,12 @@
 
    <extension point="org.eclipse.ui.editors">
       <editor
-            id="uk.ac.open.problem.problem.presentation.ProblemEditorID"
+            id="uk.ac.open.problem.presentation.ProblemEditorID"
             name="%_UI_ProblemEditor_label"
             icon="icons/full/obj16/ProblemModelFile.gif"
             extensions="problem"
             class="uk.ac.open.problem.presentation.ProblemEditor"
             contributorClass="uk.ac.open.problem.presentation.ProblemActionBarContributor">
-      </editor>
-   </extension>
-
-   <extension point="org.eclipse.ui.newWizards">
-      <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
-            name="%_UI_Wizard_category"/>
-      <wizard
-            id="openome_model.presentation.Openome_modelModelWizardID"
-            name="%_UI_Openome_modelModelWizard_label"
-            class="edu.toronto.cs.openome_model.presentation.openome_modelModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/Openome_modelModelFile.gif">
-         <description>%_UI_Openome_modelModelWizard_description</description>
-         <selection class="org.eclipse.core.resources.IResource"/>
-      </wizard>
-   </extension>
-
-   <extension point="org.eclipse.ui.editors">
-      <editor
-            id="openome_model.presentation.Openome_modelEditorID"
-            name="%_UI_Openome_modelEditor_label"
-            icon="icons/full/obj16/Openome_modelModelFile.gif"
-            extensions="openome_model"
-            class="edu.toronto.cs.openome_model.presentation.openome_modelEditor"
-            contributorClass="edu.toronto.cs.openome_model.presentation.openome_modelActionBarContributor">
       </editor>
    </extension>
 

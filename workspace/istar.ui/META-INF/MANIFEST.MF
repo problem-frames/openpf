@@ -15,7 +15,6 @@ Require-Bundle: istar;visibility:=reexport,
  org.eclipse.ui,
  org.antlr.runtime
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: uk.ac.open.contentassist,
- uk.ac.open.contentassist.antlr,
- uk.ac.open.contentassist.antlr.internal
-Bundle-Activator: uk.ac.open.internal.IstarActivator
+Export-Package: uk.ac.open.istar.contentassist,
+ uk.ac.open.istar.contentassist.antlr
+Bundle-Activator: uk.ac.open.istar.internal.IstarActivator

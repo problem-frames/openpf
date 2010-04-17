@@ -50,6 +50,7 @@ http-proxy-port = 80
     The following menu/dialog options are needed to build the system
     * import the projects from the workspace
       File > Import ... >  General > Existing Projects into the workspace > Next > Browse > OK > Finish
+	* You may unselect PF2EC project as it is meant to be used inside a running OpenPF environment
     * change the compiler settings for the restricted API usages
       Window > Preferences > Java > Compiler > Errors/Warnings > Deprecated and restricted API > 
       Forbidden references (access rules) > Error => Warning > OK > Yes

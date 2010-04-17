@@ -7,3 +7,4 @@ workspace/*/@dot.log
 workspace/*/\@dot
 workspace/*/\@dot.log
 workspace/*/javaCompiler...args
+*.log

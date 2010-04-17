@@ -6,7 +6,7 @@
     <extension
             point="org.eclipse.ui.editors">
         <editor
-            class="uk.ac.open.IstarExecutableExtensionFactory:uk.ac.open.IstarEditor"
+            class="uk.ac.open.istar.IstarExecutableExtensionFactory:uk.ac.open.istar.IstarEditor"
             contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
             default="true"
             extensions="istar"
@@ -17,7 +17,7 @@
     <extension
         point="org.eclipse.ui.handlers">
         <handler
-            class="uk.ac.open.IstarExecutableExtensionFactory:org.eclipse.xtext.ui.common.editor.hyperlinking.OpenDeclarationHandler"
+            class="uk.ac.open.istar.IstarExecutableExtensionFactory:org.eclipse.xtext.ui.common.editor.hyperlinking.OpenDeclarationHandler"
             commandId="org.eclipse.xtext.ui.common.editor.hyperlinking.OpenDeclaration">
             <activeWhen>
                 <reference
@@ -26,7 +26,7 @@
             </activeWhen>
         </handler>
         <handler
-            class="uk.ac.open.IstarExecutableExtensionFactory:org.eclipse.xtext.ui.core.editor.handler.ValidateActionHandler"
+            class="uk.ac.open.istar.IstarExecutableExtensionFactory:org.eclipse.xtext.ui.core.editor.handler.ValidateActionHandler"
             commandId="uk.ac.open.Istar.validate">
          <activeWhen>
             <reference
@@ -50,7 +50,7 @@
     <extension
             point="org.eclipse.ui.preferencePages">
         <page
-            class="uk.ac.open.IstarExecutableExtensionFactory:org.eclipse.xtext.ui.core.editor.preferences.LanguageRootPreferencePage"
+            class="uk.ac.open.istar.IstarExecutableExtensionFactory:org.eclipse.xtext.ui.core.editor.preferences.LanguageRootPreferencePage"
             id="uk.ac.open.Istar"
             name="Istar"
             category="org.eclipse.xtext.languages">
@@ -58,14 +58,14 @@
         </page>
         <page
             category="uk.ac.open.Istar"
-            class="uk.ac.open.IstarExecutableExtensionFactory:org.eclipse.xtext.ui.common.editor.syntaxcoloring.SyntaxColoringPreferencePage"
+            class="uk.ac.open.istar.IstarExecutableExtensionFactory:org.eclipse.xtext.ui.common.editor.syntaxcoloring.SyntaxColoringPreferencePage"
             id="uk.ac.open.Istar.coloring"
             name="Syntax Coloring">
             <keywordReference id="uk.ac.open.ui.keyword_Istar"/>
         </page>
         <page
             category="uk.ac.open.Istar"
-            class="uk.ac.open.IstarExecutableExtensionFactory:org.eclipse.xtext.ui.common.editor.templates.XtextTemplatePreferencePage"
+            class="uk.ac.open.istar.IstarExecutableExtensionFactory:org.eclipse.xtext.ui.common.editor.templates.XtextTemplatePreferencePage"
             id="uk.ac.open.Istar.templates"
             name="Templates">
             <keywordReference id="uk.ac.open.ui.keyword_Istar"/>
@@ -106,7 +106,7 @@
 	<extension
 		point="org.eclipse.emf.ecore.extension_parser">
 		<parser
-			class="uk.ac.open.IstarExecutableExtensionFactory:org.eclipse.xtext.resource.XtextResourceFactory"
+			class="uk.ac.open.istar.IstarExecutableExtensionFactory:org.eclipse.xtext.resource.XtextResourceFactory"
 			type="istar">
 		</parser>
 	</extension>

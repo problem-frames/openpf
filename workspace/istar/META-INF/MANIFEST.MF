@@ -30,11 +30,12 @@ Require-Bundle: org.eclipse.xtext,
  org.eclipse.ui.ide,
  core
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: uk.ac.open,
- uk.ac.open.formatting,
- uk.ac.open.linking,
- uk.ac.open.parseTreeConstruction,
- uk.ac.open.parser.antlr,
- uk.ac.open.services,
- uk.ac.open.validation
+Export-Package: uk.ac.open.istar.formatting,
+ uk.ac.open.istar,
+ uk.ac.open.istar.services,
+ uk.ac.open.istar.parseTreeConstruction,
+ uk.ac.open.istar.parser.antlr,
+ uk.ac.open.istar.parser.packrat,
+ uk.ac.open.istar.parser.packrat.consumers,
+ uk.ac.open.istar.validation
 Import-Package: org.eclipse.core.resources,org.eclipse.core.runtime,org.eclipse.ui,org.eclipse.xtext.ui.core.editor
