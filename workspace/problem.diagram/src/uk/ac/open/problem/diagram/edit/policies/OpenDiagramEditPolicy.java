@@ -122,7 +122,8 @@ public class OpenDiagramEditPolicy extends OpenEditPolicy {
 		protected CommandResult doExecuteWithResult(IProgressMonitor monitor,
 				IAdaptable info) throws ExecutionException {
 			try {
-				Diagram diagram = getDiagramToOpen();
+				openExternalEditors();
+				Diagram diagram = getDiagramToOpen();				
 				if (diagram == null) {
 					// System.out.println("create new diagram");
 					diagram = intializeNewDiagram();
@@ -145,17 +146,7 @@ public class OpenDiagramEditPolicy extends OpenEditPolicy {
 			}
 		}
 
-		/**
-		 * @generated
-		 */
-		protected Diagram getDiagramToOpen() {
-			return diagramFacet.getDiagramLink();
-		}
-
-		/**
-		 * @generated NOT
-		 */
-		protected Diagram intializeNewDiagram() throws ExecutionException {
+		private void openExternalEditors() {
 			Node node = (Node) getDiagramDomainElement();
 			for (String other : node.getHref()) {
 				IWorkbenchWindow dw = PlatformUI.getWorkbench()
@@ -171,7 +162,21 @@ public class OpenDiagramEditPolicy extends OpenEditPolicy {
 					}
 				} catch (PartInitException e) {
 				}
-			}
+			}			
+		}
+
+		/**
+		 * @generated
+		 */
+		protected Diagram getDiagramToOpen() {
+			return diagramFacet.getDiagramLink();
+		}
+
+		/**
+		 * @generated NOT
+		 */
+		protected Diagram intializeNewDiagram() throws ExecutionException {
+			Node node = (Node) getDiagramDomainElement();
 			Diagram d = null;
 			if (node.getSubproblem().isEmpty()) {
 				EList<ProblemDiagram> pd = null;
