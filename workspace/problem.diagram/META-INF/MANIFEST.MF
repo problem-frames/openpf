@@ -34,8 +34,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide,
  org.eclipse.draw2d;visibility:=reexport,
  org.eclipse.gmf.runtime.draw2d.ui;visibility:=reexport,
- problem;visibility:=reexport,
- problem.edit;visibility:=reexport,
  org.eclipse.ocl.ecore;visibility:=reexport,
  org.eclipse.gef;visibility:=reexport,
  org.eclipse.xtext;bundle-version="0.7.2",
@@ -44,5 +42,4 @@ Require-Bundle: org.eclipse.core.runtime,
  problem.edit;bundle-version="1.0.0",
  problem.editor;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
-Import-Package: edu.toronto.cs.openome_model.diagram.edit.parts
 Eclipse-LazyStart: true

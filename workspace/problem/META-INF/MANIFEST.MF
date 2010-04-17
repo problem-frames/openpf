@@ -35,4 +35,3 @@ Export-Package: uk.ac.open,
  uk.ac.open.scoping,
  uk.ac.open.services,
  uk.ac.open.validation
-Import-Package: uk.ac.open
