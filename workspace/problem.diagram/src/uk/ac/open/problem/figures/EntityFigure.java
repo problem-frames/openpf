@@ -3,6 +3,7 @@ package uk.ac.open.problem.figures;
 import org.eclipse.draw2d.Graphics;
 import org.eclipse.draw2d.GridData;
 import org.eclipse.draw2d.GridLayout;
+import org.eclipse.draw2d.PositionConstants;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
@@ -13,22 +14,18 @@ import org.eclipse.swt.widgets.Display;
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.NodeType;
 
-
-/**
- * 
- * @author yy66
- * @generated NOT
- */
 public class EntityFigure extends Shape {
 
 	private Node node;
 	static final Font FFIGUREENTITYNAME_FONT = new Font(Display.getCurrent(),
-			Display.getDefault().getSystemFont().getFontData()[0].getName(), 9,
+			Display.getDefault().getSystemFont().getFontData()[0].getName(), 
+			Display.getDefault().getSystemFont().getFontData()[0].getHeight(),
 			SWT.NORMAL);
 
 	static final Font FFIGUREENTITYDESCRIPTION_FONT = new Font(Display
 			.getCurrent(),
-			Display.getDefault().getSystemFont().getFontData()[0].getName(), 6,
+			Display.getDefault().getSystemFont().getFontData()[0].getName(), 
+			Display.getDefault().getSystemFont().getFontData()[0].getHeight(),
 			SWT.ITALIC);
 	
 	private WrappingLabel fFigureEntityName;
@@ -68,7 +65,9 @@ public class EntityFigure extends Shape {
 
 		fFigureEntityName = new WrappingLabel();
 		fFigureEntityName.setText("");
-
+		fFigureEntityName.setAlignment(PositionConstants.CENTER);
+		fFigureEntityName.setTextAlignment(PositionConstants.CENTER);
+		fFigureEntityName.setTextUnderline(true);
 		fFigureEntityName.setFont(FFIGUREENTITYNAME_FONT);
 
 		GridData constraintFFigureEntityName = new GridData();
@@ -85,8 +84,9 @@ public class EntityFigure extends Shape {
 		fFigureEntityDescription.setText("");
 		fFigureEntityDescription.setTextWrap(true);
 		fFigureEntityDescription.setFont(FFIGUREENTITYDESCRIPTION_FONT);
-
-
+		fFigureEntityDescription.setAlignment(PositionConstants.LEFT);
+		fFigureEntityDescription.setTextAlignment(PositionConstants.LEFT);
+		
 		GridData constraintFFigureEntityDescription = new GridData();
 		constraintFFigureEntityDescription.verticalAlignment = GridData.CENTER;
 		constraintFFigureEntityDescription.horizontalAlignment = GridData.CENTER;
