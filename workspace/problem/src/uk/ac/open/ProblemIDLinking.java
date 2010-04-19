@@ -44,19 +44,21 @@ public class ProblemIDLinking extends DefaultLinkingService {
 		final IScope scope = getScope(context, ref);
 		final Iterator<IScopedElement> iterator = scope.getAllContents()
 				.iterator();
-		final String s = getCrossRefNodeAsString(node);
+		final String s = getCrossRefNodeAsString(node, true);
 		if (s != null) {
 			while (iterator.hasNext()) {
 				final IScopedElement element = iterator.next();
 				String n = element.name(); 
 				if (n.startsWith("#") && n.endsWith("#")) {
-					if (element.element() instanceof ProblemDiagram)
-						((ProblemDiagram)element.element()).setName(n.substring(1, n.length() - 1));
-					if (element.element() instanceof Node)
-						((Node)element.element()).setName(n.substring(1, n.length() - 1));
+					n = n.substring(1, n.length() - 1);
 				}
-				if (s.equals(element.name()))
+				if (s.equals(n)) {
+					if (element.element() instanceof ProblemDiagram)
+						((ProblemDiagram)element.element()).setName(n);
+					if (element.element() instanceof Node)
+						((Node)element.element()).setName(n);
 					return Collections.singletonList(element.element());
+				}
 			}
 		}
 		return Collections.emptyList();

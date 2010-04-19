@@ -52,446 +52,456 @@ import uk.ac.open.problem.ProblemPackage;
 public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 {
   /**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
   protected static final String NAME_EDEFAULT = null;
 
   /**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
   protected String name = NAME_EDEFAULT;
 
   /**
-	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
   protected static final NodeType TYPE_EDEFAULT = NodeType.REQUIREMENT;
 
   /**
-	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
   protected NodeType type = TYPE_EDEFAULT;
 
   /**
-	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getDescription()
+   * @generated
+   * @ordered
+   */
   protected static final String DESCRIPTION_EDEFAULT = null;
 
   /**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getDescription()
+   * @generated
+   * @ordered
+   */
   protected String description = DESCRIPTION_EDEFAULT;
 
   /**
-	 * The cached value of the '{@link #getHiddenPhenomena() <em>Hidden Phenomena</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getHiddenPhenomena() <em>Hidden Phenomena</em>}' containment reference list.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getHiddenPhenomena()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getHiddenPhenomena()
+   * @generated
+   * @ordered
+   */
   protected EList<Phenomenon> hiddenPhenomena;
 
   /**
-	 * The cached value of the '{@link #getSubproblem() <em>Subproblem</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getSubproblem() <em>Subproblem</em>}' containment reference list.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getSubproblem()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getSubproblem()
+   * @generated
+   * @ordered
+   */
   protected EList<ProblemDiagram> subproblem;
 
   /**
-	 * The cached value of the '{@link #getProblemNodeRef() <em>Problem Node Ref</em>}' reference list.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getProblemNodeRef() <em>Problem Node Ref</em>}' reference list.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getProblemNodeRef()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getProblemNodeRef()
+   * @generated
+   * @ordered
+   */
   protected EList<Node> problemNodeRef;
 
   /**
-	 * The cached value of the '{@link #getProblemRef() <em>Problem Ref</em>}' reference list.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getProblemRef() <em>Problem Ref</em>}' reference list.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getProblemRef()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getProblemRef()
+   * @generated
+   * @ordered
+   */
   protected EList<ProblemDiagram> problemRef;
 
   /**
-	 * The cached value of the '{@link #getHref() <em>Href</em>}' attribute list.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getHref() <em>Href</em>}' attribute list.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getHref()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getHref()
+   * @generated
+   * @ordered
+   */
   protected EList<String> href;
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected NodeImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   protected EClass eStaticClass()
   {
-		return ProblemPackage.Literals.NODE;
-	}
+    return ProblemPackage.Literals.NODE;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public String getName()
   {
-		return name;
-	}
+    return name;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public void setName(String newName)
   {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.NODE__NAME, oldName, name));
-	}
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.NODE__NAME, oldName, name));
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public NodeType getType()
   {
-		return type;
-	}
+    return type;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public void setType(NodeType newType)
   {
-		NodeType oldType = type;
-		type = newType == null ? TYPE_EDEFAULT : newType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.NODE__TYPE, oldType, type));
-	}
+    NodeType oldType = type;
+    type = newType == null ? TYPE_EDEFAULT : newType;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.NODE__TYPE, oldType, type));
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public String getDescription()
   {
-		return description;
-	}
+    return description;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public void setDescription(String newDescription)
   {
-		String oldDescription = description;
-		description = newDescription;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.NODE__DESCRIPTION, oldDescription, description));
-	}
+    String oldDescription = description;
+    description = newDescription;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.NODE__DESCRIPTION, oldDescription, description));
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EList<Phenomenon> getHiddenPhenomena()
   {
-		if (hiddenPhenomena == null) {
-			hiddenPhenomena = new EObjectContainmentEList<Phenomenon>(Phenomenon.class, this, ProblemPackage.NODE__HIDDEN_PHENOMENA);
-		}
-		return hiddenPhenomena;
-	}
+    if (hiddenPhenomena == null)
+    {
+      hiddenPhenomena = new EObjectContainmentEList<Phenomenon>(Phenomenon.class, this, ProblemPackage.NODE__HIDDEN_PHENOMENA);
+    }
+    return hiddenPhenomena;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EList<ProblemDiagram> getSubproblem()
   {
-		if (subproblem == null) {
-			subproblem = new EObjectContainmentEList<ProblemDiagram>(ProblemDiagram.class, this, ProblemPackage.NODE__SUBPROBLEM);
-		}
-		return subproblem;
-	}
+    if (subproblem == null)
+    {
+      subproblem = new EObjectContainmentEList<ProblemDiagram>(ProblemDiagram.class, this, ProblemPackage.NODE__SUBPROBLEM);
+    }
+    return subproblem;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EList<Node> getProblemNodeRef()
   {
-		if (problemNodeRef == null) {
-			problemNodeRef = new EObjectResolvingEList<Node>(Node.class, this, ProblemPackage.NODE__PROBLEM_NODE_REF);
-		}
-		return problemNodeRef;
-	}
+    if (problemNodeRef == null)
+    {
+      problemNodeRef = new EObjectResolvingEList<Node>(Node.class, this, ProblemPackage.NODE__PROBLEM_NODE_REF);
+    }
+    return problemNodeRef;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EList<ProblemDiagram> getProblemRef()
   {
-		if (problemRef == null) {
-			problemRef = new EObjectResolvingEList<ProblemDiagram>(ProblemDiagram.class, this, ProblemPackage.NODE__PROBLEM_REF);
-		}
-		return problemRef;
-	}
+    if (problemRef == null)
+    {
+      problemRef = new EObjectResolvingEList<ProblemDiagram>(ProblemDiagram.class, this, ProblemPackage.NODE__PROBLEM_REF);
+    }
+    return problemRef;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EList<String> getHref()
   {
-		if (href == null) {
-			href = new EDataTypeEList<String>(String.class, this, ProblemPackage.NODE__HREF);
-		}
-		return href;
-	}
+    if (href == null)
+    {
+      href = new EDataTypeEList<String>(String.class, this, ProblemPackage.NODE__HREF);
+    }
+    return href;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-		switch (featureID) {
-			case ProblemPackage.NODE__HIDDEN_PHENOMENA:
-				return ((InternalEList<?>)getHiddenPhenomena()).basicRemove(otherEnd, msgs);
-			case ProblemPackage.NODE__SUBPROBLEM:
-				return ((InternalEList<?>)getSubproblem()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    switch (featureID)
+    {
+      case ProblemPackage.NODE__HIDDEN_PHENOMENA:
+        return ((InternalEList<?>)getHiddenPhenomena()).basicRemove(otherEnd, msgs);
+      case ProblemPackage.NODE__SUBPROBLEM:
+        return ((InternalEList<?>)getSubproblem()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-		switch (featureID) {
-			case ProblemPackage.NODE__NAME:
-				return getName();
-			case ProblemPackage.NODE__TYPE:
-				return getType();
-			case ProblemPackage.NODE__DESCRIPTION:
-				return getDescription();
-			case ProblemPackage.NODE__HIDDEN_PHENOMENA:
-				return getHiddenPhenomena();
-			case ProblemPackage.NODE__SUBPROBLEM:
-				return getSubproblem();
-			case ProblemPackage.NODE__PROBLEM_NODE_REF:
-				return getProblemNodeRef();
-			case ProblemPackage.NODE__PROBLEM_REF:
-				return getProblemRef();
-			case ProblemPackage.NODE__HREF:
-				return getHref();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    switch (featureID)
+    {
+      case ProblemPackage.NODE__NAME:
+        return getName();
+      case ProblemPackage.NODE__TYPE:
+        return getType();
+      case ProblemPackage.NODE__DESCRIPTION:
+        return getDescription();
+      case ProblemPackage.NODE__HIDDEN_PHENOMENA:
+        return getHiddenPhenomena();
+      case ProblemPackage.NODE__SUBPROBLEM:
+        return getSubproblem();
+      case ProblemPackage.NODE__PROBLEM_NODE_REF:
+        return getProblemNodeRef();
+      case ProblemPackage.NODE__PROBLEM_REF:
+        return getProblemRef();
+      case ProblemPackage.NODE__HREF:
+        return getHref();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
-		switch (featureID) {
-			case ProblemPackage.NODE__NAME:
-				setName((String)newValue);
-				return;
-			case ProblemPackage.NODE__TYPE:
-				setType((NodeType)newValue);
-				return;
-			case ProblemPackage.NODE__DESCRIPTION:
-				setDescription((String)newValue);
-				return;
-			case ProblemPackage.NODE__HIDDEN_PHENOMENA:
-				getHiddenPhenomena().clear();
-				getHiddenPhenomena().addAll((Collection<? extends Phenomenon>)newValue);
-				return;
-			case ProblemPackage.NODE__SUBPROBLEM:
-				getSubproblem().clear();
-				getSubproblem().addAll((Collection<? extends ProblemDiagram>)newValue);
-				return;
-			case ProblemPackage.NODE__PROBLEM_NODE_REF:
-				getProblemNodeRef().clear();
-				getProblemNodeRef().addAll((Collection<? extends Node>)newValue);
-				return;
-			case ProblemPackage.NODE__PROBLEM_REF:
-				getProblemRef().clear();
-				getProblemRef().addAll((Collection<? extends ProblemDiagram>)newValue);
-				return;
-			case ProblemPackage.NODE__HREF:
-				getHref().clear();
-				getHref().addAll((Collection<? extends String>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    switch (featureID)
+    {
+      case ProblemPackage.NODE__NAME:
+        setName((String)newValue);
+        return;
+      case ProblemPackage.NODE__TYPE:
+        setType((NodeType)newValue);
+        return;
+      case ProblemPackage.NODE__DESCRIPTION:
+        setDescription((String)newValue);
+        return;
+      case ProblemPackage.NODE__HIDDEN_PHENOMENA:
+        getHiddenPhenomena().clear();
+        getHiddenPhenomena().addAll((Collection<? extends Phenomenon>)newValue);
+        return;
+      case ProblemPackage.NODE__SUBPROBLEM:
+        getSubproblem().clear();
+        getSubproblem().addAll((Collection<? extends ProblemDiagram>)newValue);
+        return;
+      case ProblemPackage.NODE__PROBLEM_NODE_REF:
+        getProblemNodeRef().clear();
+        getProblemNodeRef().addAll((Collection<? extends Node>)newValue);
+        return;
+      case ProblemPackage.NODE__PROBLEM_REF:
+        getProblemRef().clear();
+        getProblemRef().addAll((Collection<? extends ProblemDiagram>)newValue);
+        return;
+      case ProblemPackage.NODE__HREF:
+        getHref().clear();
+        getHref().addAll((Collection<? extends String>)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public void eUnset(int featureID)
   {
-		switch (featureID) {
-			case ProblemPackage.NODE__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case ProblemPackage.NODE__TYPE:
-				setType(TYPE_EDEFAULT);
-				return;
-			case ProblemPackage.NODE__DESCRIPTION:
-				setDescription(DESCRIPTION_EDEFAULT);
-				return;
-			case ProblemPackage.NODE__HIDDEN_PHENOMENA:
-				getHiddenPhenomena().clear();
-				return;
-			case ProblemPackage.NODE__SUBPROBLEM:
-				getSubproblem().clear();
-				return;
-			case ProblemPackage.NODE__PROBLEM_NODE_REF:
-				getProblemNodeRef().clear();
-				return;
-			case ProblemPackage.NODE__PROBLEM_REF:
-				getProblemRef().clear();
-				return;
-			case ProblemPackage.NODE__HREF:
-				getHref().clear();
-				return;
-		}
-		super.eUnset(featureID);
-	}
+    switch (featureID)
+    {
+      case ProblemPackage.NODE__NAME:
+        setName(NAME_EDEFAULT);
+        return;
+      case ProblemPackage.NODE__TYPE:
+        setType(TYPE_EDEFAULT);
+        return;
+      case ProblemPackage.NODE__DESCRIPTION:
+        setDescription(DESCRIPTION_EDEFAULT);
+        return;
+      case ProblemPackage.NODE__HIDDEN_PHENOMENA:
+        getHiddenPhenomena().clear();
+        return;
+      case ProblemPackage.NODE__SUBPROBLEM:
+        getSubproblem().clear();
+        return;
+      case ProblemPackage.NODE__PROBLEM_NODE_REF:
+        getProblemNodeRef().clear();
+        return;
+      case ProblemPackage.NODE__PROBLEM_REF:
+        getProblemRef().clear();
+        return;
+      case ProblemPackage.NODE__HREF:
+        getHref().clear();
+        return;
+    }
+    super.eUnset(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public boolean eIsSet(int featureID)
   {
-		switch (featureID) {
-			case ProblemPackage.NODE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case ProblemPackage.NODE__TYPE:
-				return type != TYPE_EDEFAULT;
-			case ProblemPackage.NODE__DESCRIPTION:
-				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case ProblemPackage.NODE__HIDDEN_PHENOMENA:
-				return hiddenPhenomena != null && !hiddenPhenomena.isEmpty();
-			case ProblemPackage.NODE__SUBPROBLEM:
-				return subproblem != null && !subproblem.isEmpty();
-			case ProblemPackage.NODE__PROBLEM_NODE_REF:
-				return problemNodeRef != null && !problemNodeRef.isEmpty();
-			case ProblemPackage.NODE__PROBLEM_REF:
-				return problemRef != null && !problemRef.isEmpty();
-			case ProblemPackage.NODE__HREF:
-				return href != null && !href.isEmpty();
-		}
-		return super.eIsSet(featureID);
-	}
+    switch (featureID)
+    {
+      case ProblemPackage.NODE__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case ProblemPackage.NODE__TYPE:
+        return type != TYPE_EDEFAULT;
+      case ProblemPackage.NODE__DESCRIPTION:
+        return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+      case ProblemPackage.NODE__HIDDEN_PHENOMENA:
+        return hiddenPhenomena != null && !hiddenPhenomena.isEmpty();
+      case ProblemPackage.NODE__SUBPROBLEM:
+        return subproblem != null && !subproblem.isEmpty();
+      case ProblemPackage.NODE__PROBLEM_NODE_REF:
+        return problemNodeRef != null && !problemNodeRef.isEmpty();
+      case ProblemPackage.NODE__PROBLEM_REF:
+        return problemRef != null && !problemRef.isEmpty();
+      case ProblemPackage.NODE__HREF:
+        return href != null && !href.isEmpty();
+    }
+    return super.eIsSet(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public String toString()
   {
-		if (eIsProxy()) return super.toString();
+    if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", type: ");
-		result.append(type);
-		result.append(", description: ");
-		result.append(description);
-		result.append(", href: ");
-		result.append(href);
-		result.append(')');
-		return result.toString();
-	}
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (name: ");
+    result.append(name);
+    result.append(", type: ");
+    result.append(type);
+    result.append(", description: ");
+    result.append(description);
+    result.append(", href: ");
+    result.append(href);
+    result.append(')');
+    return result.toString();
+  }
 
 } //NodeImpl

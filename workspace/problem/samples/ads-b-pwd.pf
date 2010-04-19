@@ -1,20 +1,23 @@
-problem: #ADS-B#
+problem:
+#The ADS-B problem#
 MSoD R
-:"Maintain the Safety Distance"
-{
-  see "/Examples/event/sit1.ec"
-  see "/Examples/event/sit2.ec"
-  see "/Examples/event/sit3.ec"
-  see "/Examples/event/sit4.ec"
-  see "/Examples/istar/open_account.ood" // just a demo
+:"Maintain the Safety Distance" {
+see "/Examples/event/sit1.ec"
+see "/Examples/event/sit2.ec"
+see "/Examples/event/sit3.ec"
+see "/Examples/event/sit4.ec"
+see "/Examples/istar/open_account.ood" // just a demo
+see problem #The Central Processor problem#
 }
 
 CP M
-:"Central Processor" { 
-problem: #Central Processor# for CPU
+:"Central Processor" { problem:
+#The Central Processor problem# for CPU
 
 CPU M
-:"Central Processing Unit" 
+:"Central Processing Unit" {
+ see problem #The ADS-B problem#
+}
 }
 
 #ADS-B# C

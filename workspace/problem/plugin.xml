@@ -15,5 +15,7 @@
       <example file="ads-b-pwd-attack.pf"/>
       <example file="library.pf"/>
       <example file="openpf.pf"/>
+      <example file="pf.xpt"/>
+      <example file="ProblemGenerator.mwe"/>
   </extension>
 </plugin>

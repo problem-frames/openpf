@@ -1,14 +1,35 @@
 
-problem ##Library example in Michael Jackson's book [Jackson01]##
+problem: #Library example in Michael Jackson's book [Jackson01]# 
 
-##Library example in Michael Jackson's book [Jackson01]##
+RNR R : "Register New Reader"  
 
-##Library example in Michael Jackson's book [Jackson01]##
+LD X : "Library Database "  
 
-##Library example in Michael Jackson's book [Jackson01]##
+ID D : "Input Device "  
 
-##Library example in Michael Jackson's book [Jackson01]##
+LM B : "Library Member "  
 
-##Library example in Michael Jackson's book [Jackson01]##
+RH M : "Registration Handler "  
+   
+
+LM -- ID  { 
+ event #New Reader Record # 
+}   
+
+ID -- RH  { 
+ event commands 
+}   
+
+RH -- LD  { 
+ event #Reader Record # 
+}   
+
+LM ~~ RNR  { 
+ state #Personal Details # 
+}   
+
+LD ~> RNR  { 
+ state #Membership Details# 
+}   
    
    

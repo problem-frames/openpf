@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: event
-Bundle-Vendor: My Company
+Bundle-Vendor: The Open University
 Bundle-Version: 1.0.0
 Bundle-SymbolicName: event; singleton:=true
 Eclipse-RegisterBuddy: org.eclipse.xtext.log4j
@@ -16,7 +16,6 @@ Require-Bundle: org.eclipse.xtext,
  org.eclipse.emf.mwe.core;resolution:=optional,
  com.ibm.icu;resolution:=optional,
  org.eclipse.xtext.xtend;resolution:=optional,
- problem;bundle-version="1.0.0",
  org.eclipse.xtext.util,
  org.eclipse.emf.ecore,
  org.eclipse.emf.common,

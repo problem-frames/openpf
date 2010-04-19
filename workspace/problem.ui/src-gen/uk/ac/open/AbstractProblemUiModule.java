@@ -162,5 +162,10 @@ public abstract class AbstractProblemUiModule extends ProblemRuntimeModule {
 		return uk.ac.open.contentassist.antlr.ProblemParser.class;
 	}
 
+	// contributed by org.eclipse.xtext.ui.generator.projectWizard.SimpleProjectWizardFragment
+	public Class<? extends org.eclipse.xtext.ui.core.wizard.IProjectCreator> bindIProjectCreator() {
+		return uk.ac.open.ui.wizard.ProblemProjectCreator.class;
+	}
+
 
 }

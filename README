@@ -65,8 +65,8 @@ http-proxy-port = 80
   SWTBot JUnit 4.x Headless launchers for Eclipse (incubation) org.eclipse.swtbot.eclipse.test.junit4.feature.group
       Next > Accept the licenses > Finish > Yes to restart Eclipse
     * update the antlr library: 
-      Help > Install New Software >  Enter http://download.itemis.com/updates/releases/site/site.xml >
-      Select the following feature:
+      Help > Install New Software >  Enter http://download.itemis.com/updates >
+Select the following feature:
   Xtext Antlr Support 0.7.2	
       Next > Accept the licenses > Finish > Yes to restart Eclipse
         * Warning: If you haven't installed this feature, there might be two

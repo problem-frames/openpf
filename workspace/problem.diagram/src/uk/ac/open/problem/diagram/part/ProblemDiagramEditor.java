@@ -1,5 +1,7 @@
 package uk.ac.open.problem.diagram.part;
 
+import java.util.HashMap;
+
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IMarker;
 import org.eclipse.core.resources.IWorkspaceRoot;
@@ -10,6 +12,7 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.emf.common.ui.URIEditorInput;
+import org.eclipse.emf.mwe.core.WorkflowRunner;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.emf.workspace.util.WorkspaceSynchronizer;
 import org.eclipse.gef.palette.PaletteRoot;
@@ -230,6 +233,9 @@ public class ProblemDiagramEditor extends DiagramDocumentEditor implements
 			getDocumentProvider(newInput).saveDocument(progressMonitor,
 					newInput,
 					getDocumentProvider().getDocument(getEditorInput()), true);
+			WorkflowRunner wfr = new WorkflowRunner();
+			wfr.prepare("/Example/problem/ProblemGenerator.mwe", null, new HashMap<String, String>());
+			wfr.executeWorkflow(null, null);
 			success = true;
 		} catch (CoreException x) {
 			IStatus status = x.getStatus();

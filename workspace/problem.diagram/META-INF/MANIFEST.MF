@@ -39,6 +39,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.xtext;bundle-version="0.7.2",
  org.eclipse.xtext.ui.core;bundle-version="0.7.2",
  org.eclipse.core.filesystem,
+ org.eclipse.emf.mwe.core,
+ org.eclipse.emf.mwe.util,
  problem.edit;bundle-version="1.0.0",
  problem.editor;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy

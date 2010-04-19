@@ -110,4 +110,15 @@
 			type="pf">
 		</parser>
 	</extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <wizard
+            category="org.eclipse.xtext.projectwiz"
+            class="uk.ac.open.ProblemExecutableExtensionFactory:uk.ac.open.ui.wizard.ProblemNewProjectWizard"
+            icon="icons/example.gif"
+            id="uk.ac.open.ui.wizard.ProblemNewProjectWizard"
+            name="Problem Project"
+            project="true">
+      </wizard>
+   </extension>	
 </plugin>
