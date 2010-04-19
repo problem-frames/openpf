@@ -80,13 +80,22 @@ public interface ProblemPackage extends EPackage
   int PROBLEM_DIAGRAM__NAME = 0;
 
   /**
+	 * The feature id for the '<em><b>Highlight</b></em>' reference.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int PROBLEM_DIAGRAM__HIGHLIGHT = 1;
+
+  /**
 	 * The feature id for the '<em><b>Nodes</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int PROBLEM_DIAGRAM__NODES = 1;
+  int PROBLEM_DIAGRAM__NODES = 2;
 
   /**
 	 * The feature id for the '<em><b>Links</b></em>' containment reference list.
@@ -95,7 +104,7 @@ public interface ProblemPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PROBLEM_DIAGRAM__LINKS = 2;
+  int PROBLEM_DIAGRAM__LINKS = 3;
 
   /**
 	 * The number of structural features of the '<em>Diagram</em>' class.
@@ -104,7 +113,7 @@ public interface ProblemPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PROBLEM_DIAGRAM_FEATURE_COUNT = 3;
+  int PROBLEM_DIAGRAM_FEATURE_COUNT = 4;
 
   /**
 	 * The meta object id for the '{@link uk.ac.open.problem.impl.NodeImpl <em>Node</em>}' class.
@@ -367,6 +376,17 @@ public interface ProblemPackage extends EPackage
 	 * @generated
 	 */
   EAttribute getProblemDiagram_Name();
+
+  /**
+	 * Returns the meta object for the reference '{@link uk.ac.open.problem.ProblemDiagram#getHighlight <em>Highlight</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Highlight</em>'.
+	 * @see uk.ac.open.problem.ProblemDiagram#getHighlight()
+	 * @see #getProblemDiagram()
+	 * @generated
+	 */
+  EReference getProblemDiagram_Highlight();
 
   /**
 	 * Returns the meta object for the containment reference list '{@link uk.ac.open.problem.ProblemDiagram#getNodes <em>Nodes</em>}'.
@@ -677,6 +697,14 @@ public interface ProblemPackage extends EPackage
 		 * @generated
 		 */
     EAttribute PROBLEM_DIAGRAM__NAME = eINSTANCE.getProblemDiagram_Name();
+
+    /**
+		 * The meta object literal for the '<em><b>Highlight</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EReference PROBLEM_DIAGRAM__HIGHLIGHT = eINSTANCE.getProblemDiagram_Highlight();
 
     /**
 		 * The meta object literal for the '<em><b>Nodes</b></em>' containment reference list feature.

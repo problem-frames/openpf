@@ -45,11 +45,11 @@ protected class ThisRootNode extends RootToken {
 /************ begin Rule ProblemDiagram ****************
  *
  * ProblemDiagram:
- *   "problem" ":" name=STRING (nodes+=Node|links+=Link)*;
+ *   "problem" ":" name=ID ("for" highlight=[Node])? (nodes+=Node|links+=Link)*;
  *
  **/
 
-// "problem" ":" name=STRING (nodes+=Node|links+=Link)*
+// "problem" ":" name=ID ("for" highlight=[Node])? (nodes+=Node|links+=Link)*
 protected class ProblemDiagram_Group extends GroupToken {
 	
 	public ProblemDiagram_Group(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
@@ -62,8 +62,9 @@ protected class ProblemDiagram_Group extends GroupToken {
 
 	public AbstractToken createFollower(int index, IInstanceDescription inst) {
 		switch(index) {
-			case 0: return new ProblemDiagram_Alternatives_3(parent, this, 0, inst);
-			case 1: return new ProblemDiagram_NameAssignment_2(parent, this, 1, inst);
+			case 0: return new ProblemDiagram_Alternatives_4(parent, this, 0, inst);
+			case 1: return new ProblemDiagram_Group_3(parent, this, 1, inst);
+			case 2: return new ProblemDiagram_NameAssignment_2(parent, this, 2, inst);
 			default: return null;
 		}	
 	}	
@@ -113,7 +114,7 @@ protected class ProblemDiagram_ColonKeyword_1 extends KeywordToken  {
 		
 }
 
-// name=STRING
+// name=ID
 protected class ProblemDiagram_NameAssignment_2 extends AssignmentToken  {
 	
 	public ProblemDiagram_NameAssignment_2(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
@@ -136,7 +137,7 @@ protected class ProblemDiagram_NameAssignment_2 extends AssignmentToken  {
 		IInstanceDescription obj = current.cloneAndConsume("name");
 		if(Boolean.TRUE.booleanValue()) { // org::eclipse::xtext::impl::RuleCallImpl FIXME: check if value is valid for lexer rule
 			type = AssignmentType.LRC;
-			element = grammarAccess.getProblemDiagramAccess().getNameSTRINGTerminalRuleCall_2_0();
+			element = grammarAccess.getProblemDiagramAccess().getNameIDTerminalRuleCall_2_0();
 			return obj;
 		}
 		return null;
@@ -144,21 +145,96 @@ protected class ProblemDiagram_NameAssignment_2 extends AssignmentToken  {
 
 }
 
-// (nodes+=Node|links+=Link)*
-protected class ProblemDiagram_Alternatives_3 extends AlternativesToken {
-
-	public ProblemDiagram_Alternatives_3(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
+// ("for" highlight=[Node])?
+protected class ProblemDiagram_Group_3 extends GroupToken {
+	
+	public ProblemDiagram_Group_3(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
 		super(parent, next, no, current);
 	}
 	
-	public Alternatives getGrammarElement() {
-		return grammarAccess.getProblemDiagramAccess().getAlternatives_3();
+	public Group getGrammarElement() {
+		return grammarAccess.getProblemDiagramAccess().getGroup_3();
 	}
 
 	public AbstractToken createFollower(int index, IInstanceDescription inst) {
 		switch(index) {
-			case 0: return new ProblemDiagram_NodesAssignment_3_0(parent, this, 0, inst);
-			case 1: return new ProblemDiagram_LinksAssignment_3_1(parent, this, 1, inst);
+			case 0: return new ProblemDiagram_HighlightAssignment_3_1(parent, this, 0, inst);
+			default: return null;
+		}	
+	}	
+		
+}
+
+// "for"
+protected class ProblemDiagram_ForKeyword_3_0 extends KeywordToken  {
+	
+	public ProblemDiagram_ForKeyword_3_0(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
+		super(parent, next, no, current);
+	}
+	
+	public Keyword getGrammarElement() {
+		return grammarAccess.getProblemDiagramAccess().getForKeyword_3_0();
+	}
+
+	public AbstractToken createFollower(int index, IInstanceDescription inst) {
+		switch(index) {
+			case 0: return new ProblemDiagram_NameAssignment_2(parent, this, 0, inst);
+			default: return null;
+		}	
+	}	
+		
+}
+
+// highlight=[Node]
+protected class ProblemDiagram_HighlightAssignment_3_1 extends AssignmentToken  {
+	
+	public ProblemDiagram_HighlightAssignment_3_1(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
+		super(parent, next, no, current);
+	}
+	
+	public Assignment getGrammarElement() {
+		return grammarAccess.getProblemDiagramAccess().getHighlightAssignment_3_1();
+	}
+
+	public AbstractToken createFollower(int index, IInstanceDescription inst) {
+		switch(index) {
+			case 0: return new ProblemDiagram_ForKeyword_3_0(parent, this, 0, inst);
+			default: return null;
+		}	
+	}	
+		
+	protected IInstanceDescription tryConsumeVal() {
+		if((value = current.getConsumable("highlight",false)) == null) return null;
+		IInstanceDescription obj = current.cloneAndConsume("highlight");
+		if(value instanceof EObject) { // org::eclipse::xtext::impl::CrossReferenceImpl
+			IInstanceDescription param = getDescr((EObject)value);
+			if(param.isInstanceOf(grammarAccess.getProblemDiagramAccess().getHighlightNodeCrossReference_3_1_0().getType().getClassifier())) {
+				type = AssignmentType.CR;
+				element = grammarAccess.getProblemDiagramAccess().getHighlightNodeCrossReference_3_1_0(); 
+				return obj;
+			}
+		}
+		return null;
+	}
+
+}
+
+
+// (nodes+=Node|links+=Link)*
+protected class ProblemDiagram_Alternatives_4 extends AlternativesToken {
+
+	public ProblemDiagram_Alternatives_4(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
+		super(parent, next, no, current);
+	}
+	
+	public Alternatives getGrammarElement() {
+		return grammarAccess.getProblemDiagramAccess().getAlternatives_4();
+	}
+
+	public AbstractToken createFollower(int index, IInstanceDescription inst) {
+		switch(index) {
+			case 0: return new ProblemDiagram_NodesAssignment_4_0(parent, this, 0, inst);
+			case 1: return new ProblemDiagram_LinksAssignment_4_1(parent, this, 1, inst);
 			default: return null;
 		}	
 	}	
@@ -166,14 +242,14 @@ protected class ProblemDiagram_Alternatives_3 extends AlternativesToken {
 }
 
 // nodes+=Node
-protected class ProblemDiagram_NodesAssignment_3_0 extends AssignmentToken  {
+protected class ProblemDiagram_NodesAssignment_4_0 extends AssignmentToken  {
 	
-	public ProblemDiagram_NodesAssignment_3_0(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
+	public ProblemDiagram_NodesAssignment_4_0(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
 		super(parent, next, no, current);
 	}
 	
 	public Assignment getGrammarElement() {
-		return grammarAccess.getProblemDiagramAccess().getNodesAssignment_3_0();
+		return grammarAccess.getProblemDiagramAccess().getNodesAssignment_4_0();
 	}
 
 	public AbstractToken createFollower(int index, IInstanceDescription inst) {
@@ -190,7 +266,7 @@ protected class ProblemDiagram_NodesAssignment_3_0 extends AssignmentToken  {
 			IInstanceDescription param = getDescr((EObject)value);
 			if(param.isInstanceOf(grammarAccess.getNodeRule().getType().getClassifier())) {
 				type = AssignmentType.PRC;
-				element = grammarAccess.getProblemDiagramAccess().getNodesNodeParserRuleCall_3_0_0(); 
+				element = grammarAccess.getProblemDiagramAccess().getNodesNodeParserRuleCall_4_0_0(); 
 				consumed = obj;
 				return param;
 			}
@@ -201,22 +277,23 @@ protected class ProblemDiagram_NodesAssignment_3_0 extends AssignmentToken  {
 	public AbstractToken createParentFollower(AbstractToken next,	int actIndex, int index, IInstanceDescription inst) {
 		if(value == inst.getDelegate() && !inst.isConsumed()) return null;
 		switch(index) {
-			case 0: return new ProblemDiagram_Alternatives_3(parent, next, actIndex, consumed);
-			case 1: return new ProblemDiagram_NameAssignment_2(parent, next, actIndex, consumed);
+			case 0: return new ProblemDiagram_Alternatives_4(parent, next, actIndex, consumed);
+			case 1: return new ProblemDiagram_Group_3(parent, next, actIndex, consumed);
+			case 2: return new ProblemDiagram_NameAssignment_2(parent, next, actIndex, consumed);
 			default: return null;
 		}	
 	}	
 }
 
 // links+=Link
-protected class ProblemDiagram_LinksAssignment_3_1 extends AssignmentToken  {
+protected class ProblemDiagram_LinksAssignment_4_1 extends AssignmentToken  {
 	
-	public ProblemDiagram_LinksAssignment_3_1(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
+	public ProblemDiagram_LinksAssignment_4_1(AbstractToken parent, AbstractToken next, int no, IInstanceDescription current) {
 		super(parent, next, no, current);
 	}
 	
 	public Assignment getGrammarElement() {
-		return grammarAccess.getProblemDiagramAccess().getLinksAssignment_3_1();
+		return grammarAccess.getProblemDiagramAccess().getLinksAssignment_4_1();
 	}
 
 	public AbstractToken createFollower(int index, IInstanceDescription inst) {
@@ -233,7 +310,7 @@ protected class ProblemDiagram_LinksAssignment_3_1 extends AssignmentToken  {
 			IInstanceDescription param = getDescr((EObject)value);
 			if(param.isInstanceOf(grammarAccess.getLinkRule().getType().getClassifier())) {
 				type = AssignmentType.PRC;
-				element = grammarAccess.getProblemDiagramAccess().getLinksLinkParserRuleCall_3_1_0(); 
+				element = grammarAccess.getProblemDiagramAccess().getLinksLinkParserRuleCall_4_1_0(); 
 				consumed = obj;
 				return param;
 			}
@@ -244,8 +321,9 @@ protected class ProblemDiagram_LinksAssignment_3_1 extends AssignmentToken  {
 	public AbstractToken createParentFollower(AbstractToken next,	int actIndex, int index, IInstanceDescription inst) {
 		if(value == inst.getDelegate() && !inst.isConsumed()) return null;
 		switch(index) {
-			case 0: return new ProblemDiagram_Alternatives_3(parent, next, actIndex, consumed);
-			case 1: return new ProblemDiagram_NameAssignment_2(parent, next, actIndex, consumed);
+			case 0: return new ProblemDiagram_Alternatives_4(parent, next, actIndex, consumed);
+			case 1: return new ProblemDiagram_Group_3(parent, next, actIndex, consumed);
+			case 2: return new ProblemDiagram_NameAssignment_2(parent, next, actIndex, consumed);
 			default: return null;
 		}	
 	}	

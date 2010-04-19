@@ -94,9 +94,9 @@ ruleProblemDiagram returns [EObject current=null]
     }
 (	
 	
-	    lv_name_2=	RULE_STRING
+	    lv_name_2=	RULE_ID
 	{
-		createLeafNode(grammarAccess.getProblemDiagramAccess().getNameSTRINGTerminalRuleCall_2_0(), "name"); 
+		createLeafNode(grammarAccess.getProblemDiagramAccess().getNameIDTerminalRuleCall_2_0(), "name"); 
 	}
  
 	    {
@@ -106,19 +106,39 @@ ruleProblemDiagram returns [EObject current=null]
 	        }
 	        
 	        try {
-	       		set($current, "name", lv_name_2, "STRING", lastConsumedNode);
+	       		set($current, "name", lv_name_2, "ID", lastConsumedNode);
 	        } catch (ValueConverterException vce) {
 				handleValueConverterException(vce);
 	        }
 	    }
 	
-)((	
+)('for' 
+    {
+        createLeafNode(grammarAccess.getProblemDiagramAccess().getForKeyword_3_0(), null); 
+    }
+(	
+	
+		
+		{
+			if ($current==null) {
+	            $current = factory.create(grammarAccess.getProblemDiagramRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode, $current);
+	        }
+        }
+	RULE_ID
+	{
+		createLeafNode(grammarAccess.getProblemDiagramAccess().getHighlightNodeCrossReference_3_1_0(), "highlight"); 
+	}
+
+		// TODO assign feature to currentNode
+	
+))?((	
 	
 	    
 	    { 
-	        currentNode=createCompositeNode(grammarAccess.getProblemDiagramAccess().getNodesNodeParserRuleCall_3_0_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getProblemDiagramAccess().getNodesNodeParserRuleCall_4_0_0(), currentNode); 
 	    }
-	    lv_nodes_3=ruleNode 
+	    lv_nodes_5=ruleNode 
 	    {
 	        if ($current==null) {
 	            $current = factory.create(grammarAccess.getProblemDiagramRule().getType().getClassifier());
@@ -126,7 +146,7 @@ ruleProblemDiagram returns [EObject current=null]
 	        }
 	        
 	        try {
-	       		add($current, "nodes", lv_nodes_3, "Node", currentNode);
+	       		add($current, "nodes", lv_nodes_5, "Node", currentNode);
 	        } catch (ValueConverterException vce) {
 				handleValueConverterException(vce);
 	        }
@@ -138,9 +158,9 @@ ruleProblemDiagram returns [EObject current=null]
 	
 	    
 	    { 
-	        currentNode=createCompositeNode(grammarAccess.getProblemDiagramAccess().getLinksLinkParserRuleCall_3_1_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getProblemDiagramAccess().getLinksLinkParserRuleCall_4_1_0(), currentNode); 
 	    }
-	    lv_links_4=ruleLink 
+	    lv_links_6=ruleLink 
 	    {
 	        if ($current==null) {
 	            $current = factory.create(grammarAccess.getProblemDiagramRule().getType().getClassifier());
@@ -148,7 +168,7 @@ ruleProblemDiagram returns [EObject current=null]
 	        }
 	        
 	        try {
-	       		add($current, "links", lv_links_4, "Link", currentNode);
+	       		add($current, "links", lv_links_6, "Link", currentNode);
 	        } catch (ValueConverterException vce) {
 				handleValueConverterException(vce);
 	        }

@@ -1,5 +1,6 @@
 package uk.ac.open.problem.figures;
 
+import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.Graphics;
 import org.eclipse.draw2d.GridData;
 import org.eclipse.draw2d.GridLayout;
@@ -14,9 +15,16 @@ import org.eclipse.swt.widgets.Display;
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.NodeType;
 
+/**
+ * 
+ * @author yy66
+ * @generated NOT
+ *
+ */
 public class EntityFigure extends Shape {
 
 	private Node node;
+	private boolean highlight;
 	static final Font FFIGUREENTITYNAME_FONT = new Font(Display.getCurrent(),
 			Display.getDefault().getSystemFont().getFontData()[0].getName(), 
 			Display.getDefault().getSystemFont().getFontData()[0].getHeight(),
@@ -69,7 +77,10 @@ public class EntityFigure extends Shape {
 		fFigureEntityName.setTextAlignment(PositionConstants.CENTER);
 		fFigureEntityName.setTextUnderline(true);
 		fFigureEntityName.setFont(FFIGUREENTITYNAME_FONT);
-
+		if (highlight) {
+			fFigureEntityName.setForegroundColor(ColorConstants.white);
+			fFigureEntityName.setBackgroundColor(ColorConstants.black);
+		}
 		GridData constraintFFigureEntityName = new GridData();
 		constraintFFigureEntityName.verticalAlignment = GridData.BEGINNING;
 		constraintFFigureEntityName.horizontalAlignment = GridData.CENTER;
@@ -86,6 +97,10 @@ public class EntityFigure extends Shape {
 		fFigureEntityDescription.setFont(FFIGUREENTITYDESCRIPTION_FONT);
 		fFigureEntityDescription.setAlignment(PositionConstants.LEFT);
 		fFigureEntityDescription.setTextAlignment(PositionConstants.LEFT);
+		if (highlight) {
+			fFigureEntityDescription.setForegroundColor(ColorConstants.white);
+			fFigureEntityDescription.setBackgroundColor(ColorConstants.black);
+		}
 		
 		GridData constraintFFigureEntityDescription = new GridData();
 		constraintFFigureEntityDescription.verticalAlignment = GridData.CENTER;
@@ -211,6 +226,14 @@ public class EntityFigure extends Shape {
 				}
 			}
 		}
+	}
+
+	public void setHighlight(boolean highlight) {
+		this.highlight = highlight;
+	}
+
+	public boolean isHighlight() {
+		return highlight;
 	}
 
 }

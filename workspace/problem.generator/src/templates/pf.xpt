@@ -1,0 +1,9 @@
+«IMPORT problem»
+«DEFINE main FOR ProblemDiagram»
+   «FILE name+".pf"»
+problem #«name»#
+«FOREACH nodes AS n»
+#«name»#
+«ENDFOREACH»   
+   «ENDFILE»
+«ENDDEFINE»

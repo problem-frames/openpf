@@ -34,6 +34,7 @@ import uk.ac.open.problem.ProblemPackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link uk.ac.open.problem.impl.ProblemDiagramImpl#getName <em>Name</em>}</li>
+ *   <li>{@link uk.ac.open.problem.impl.ProblemDiagramImpl#getHighlight <em>Highlight</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.ProblemDiagramImpl#getNodes <em>Nodes</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.ProblemDiagramImpl#getLinks <em>Links</em>}</li>
  * </ul>
@@ -62,6 +63,16 @@ public class ProblemDiagramImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
   protected String name = NAME_EDEFAULT;
+
+  /**
+	 * The cached value of the '{@link #getHighlight() <em>Highlight</em>}' reference.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see #getHighlight()
+	 * @generated
+	 * @ordered
+	 */
+  protected Node highlight;
 
   /**
 	 * The cached value of the '{@link #getNodes() <em>Nodes</em>}' containment reference list.
@@ -132,6 +143,47 @@ public class ProblemDiagramImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
 	 * @generated
 	 */
+  public Node getHighlight()
+  {
+		if (highlight != null && highlight.eIsProxy()) {
+			InternalEObject oldHighlight = (InternalEObject)highlight;
+			highlight = (Node)eResolveProxy(oldHighlight);
+			if (highlight != oldHighlight) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ProblemPackage.PROBLEM_DIAGRAM__HIGHLIGHT, oldHighlight, highlight));
+			}
+		}
+		return highlight;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public Node basicGetHighlight()
+  {
+		return highlight;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public void setHighlight(Node newHighlight)
+  {
+		Node oldHighlight = highlight;
+		highlight = newHighlight;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.PROBLEM_DIAGRAM__HIGHLIGHT, oldHighlight, highlight));
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
   public EList<Node> getNodes()
   {
 		if (nodes == null) {
@@ -181,6 +233,9 @@ public class ProblemDiagramImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case ProblemPackage.PROBLEM_DIAGRAM__NAME:
 				return getName();
+			case ProblemPackage.PROBLEM_DIAGRAM__HIGHLIGHT:
+				if (resolve) return getHighlight();
+				return basicGetHighlight();
 			case ProblemPackage.PROBLEM_DIAGRAM__NODES:
 				return getNodes();
 			case ProblemPackage.PROBLEM_DIAGRAM__LINKS:
@@ -201,6 +256,9 @@ public class ProblemDiagramImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case ProblemPackage.PROBLEM_DIAGRAM__NAME:
 				setName((String)newValue);
+				return;
+			case ProblemPackage.PROBLEM_DIAGRAM__HIGHLIGHT:
+				setHighlight((Node)newValue);
 				return;
 			case ProblemPackage.PROBLEM_DIAGRAM__NODES:
 				getNodes().clear();
@@ -226,6 +284,9 @@ public class ProblemDiagramImpl extends MinimalEObjectImpl.Container implements 
 			case ProblemPackage.PROBLEM_DIAGRAM__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case ProblemPackage.PROBLEM_DIAGRAM__HIGHLIGHT:
+				setHighlight((Node)null);
+				return;
 			case ProblemPackage.PROBLEM_DIAGRAM__NODES:
 				getNodes().clear();
 				return;
@@ -247,6 +308,8 @@ public class ProblemDiagramImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case ProblemPackage.PROBLEM_DIAGRAM__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case ProblemPackage.PROBLEM_DIAGRAM__HIGHLIGHT:
+				return highlight != null;
 			case ProblemPackage.PROBLEM_DIAGRAM__NODES:
 				return nodes != null && !nodes.isEmpty();
 			case ProblemPackage.PROBLEM_DIAGRAM__LINKS:

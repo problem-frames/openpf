@@ -168,7 +168,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getProblemDiagram_Nodes()
+  public EReference getProblemDiagram_Highlight()
   {
 		return (EReference)problemDiagramEClass.getEStructuralFeatures().get(1);
 	}
@@ -178,9 +178,19 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getProblemDiagram_Links()
+  public EReference getProblemDiagram_Nodes()
   {
 		return (EReference)problemDiagramEClass.getEStructuralFeatures().get(2);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EReference getProblemDiagram_Links()
+  {
+		return (EReference)problemDiagramEClass.getEStructuralFeatures().get(3);
 	}
 
   /**
@@ -445,6 +455,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 		// Create classes and their features
 		problemDiagramEClass = createEClass(PROBLEM_DIAGRAM);
 		createEAttribute(problemDiagramEClass, PROBLEM_DIAGRAM__NAME);
+		createEReference(problemDiagramEClass, PROBLEM_DIAGRAM__HIGHLIGHT);
 		createEReference(problemDiagramEClass, PROBLEM_DIAGRAM__NODES);
 		createEReference(problemDiagramEClass, PROBLEM_DIAGRAM__LINKS);
 
@@ -510,6 +521,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 		// Initialize classes and features; add operations and parameters
 		initEClass(problemDiagramEClass, ProblemDiagram.class, "ProblemDiagram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getProblemDiagram_Name(), ecorePackage.getEString(), "name", null, 0, 1, ProblemDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProblemDiagram_Highlight(), this.getNode(), null, "highlight", null, 0, 1, ProblemDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProblemDiagram_Nodes(), this.getNode(), null, "nodes", null, 0, -1, ProblemDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProblemDiagram_Links(), this.getLink(), null, "links", null, 0, -1, ProblemDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

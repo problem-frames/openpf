@@ -65,6 +65,7 @@ public class ProblemDiagramItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addHighlightPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -87,6 +88,28 @@ public class ProblemDiagramItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Highlight feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addHighlightPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ProblemDiagram_highlight_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ProblemDiagram_highlight_feature", "_UI_ProblemDiagram_type"),
+				 ProblemPackage.Literals.PROBLEM_DIAGRAM__HIGHLIGHT,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

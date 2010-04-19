@@ -44,10 +44,10 @@ import org.eclipse.ui.part.ShowInContext;
 import uk.ac.open.problem.diagram.navigator.ProblemNavigatorItem;
 
 /**
- * @generated
+ * @generated NOT
  */
 public class ProblemDiagramEditor extends DiagramDocumentEditor implements
-		IGotoMarker {
+		IGotoMarker, IHighlightingElement {
 
 	/**
 	 * @generated
@@ -287,4 +287,13 @@ public class ProblemDiagramEditor extends DiagramDocumentEditor implements
 				provider, getDiagramGraphicalViewer());
 	}
 
+	public static String idToHighlight;
+	@Override
+	/**
+	 * @yy66
+	 * Highlight the element identified by the id  
+	 */
+	public void highlightElement(String id) {
+		idToHighlight = id;		
+	}
 }

@@ -200,6 +200,14 @@ public class OpenDiagramEditPolicy extends OpenEditPolicy {
 					pd0.setName(node.getDescription());
 				}
 			}
+			String highlight = ProblemDiagramEditor.idToHighlight;
+			ProblemDiagram pd = node.getSubproblem().get(0);
+			if (highlight!=null) {
+				for (Node n: pd.getNodes()) {
+					if (n.getName().equals(highlight))
+						pd.setHighlight(n);
+				}
+			}
 			d = ViewService.createDiagram(node.getSubproblem().get(0),
 					getDiagramKind(), getPreferencesHint());
 			if (d == null) {

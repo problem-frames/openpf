@@ -41,6 +41,7 @@ import uk.ac.open.problem.NodeType;
 import uk.ac.open.problem.ProblemPackage;
 import uk.ac.open.problem.diagram.edit.policies.NodeItemSemanticEditPolicy;
 import uk.ac.open.problem.diagram.edit.policies.OpenDiagramEditPolicy;
+import uk.ac.open.problem.diagram.part.ProblemDiagramEditor;
 import uk.ac.open.problem.diagram.part.ProblemVisualIDRegistry;
 import uk.ac.open.problem.diagram.providers.ProblemElementTypes;
 
@@ -123,6 +124,7 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	protected IFigure createNodeShape() {
 		uk.ac.open.problem.figures.EntityFigure figure = new uk.ac.open.problem.figures.EntityFigure(
 				node);
+		figure.setHighlight(node.getName().equals(ProblemDiagramEditor.idToHighlight));
 		// EntityFigure figure = new EntityFigure();
 		return primaryShape = figure;
 	}

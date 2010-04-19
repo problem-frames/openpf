@@ -42,12 +42,13 @@ public class ProblemParser extends AbstractContentAssistParser {
 		if (nameMappings == null) {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				{
-					put(grammarAccess.getProblemDiagramAccess().getAlternatives_3(), "rule__ProblemDiagram__Alternatives_3");
+					put(grammarAccess.getProblemDiagramAccess().getAlternatives_4(), "rule__ProblemDiagram__Alternatives_4");
 					put(grammarAccess.getNodeAccess().getAlternatives_3_2(), "rule__Node__Alternatives_3_2");
 					put(grammarAccess.getNodeTypeAccess().getAlternatives(), "rule__NodeType__Alternatives");
 					put(grammarAccess.getPhenomenonTypeAccess().getAlternatives(), "rule__PhenomenonType__Alternatives");
 					put(grammarAccess.getLinkTypeAccess().getAlternatives(), "rule__LinkType__Alternatives");
 					put(grammarAccess.getProblemDiagramAccess().getGroup(), "rule__ProblemDiagram__Group__0");
+					put(grammarAccess.getProblemDiagramAccess().getGroup_3(), "rule__ProblemDiagram__Group_3__0");
 					put(grammarAccess.getNodeAccess().getGroup(), "rule__Node__Group__0");
 					put(grammarAccess.getNodeAccess().getGroup_2(), "rule__Node__Group_2__0");
 					put(grammarAccess.getNodeAccess().getGroup_3(), "rule__Node__Group_3__0");
@@ -63,8 +64,9 @@ public class ProblemParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLinkAccess().getGroup_3_2(), "rule__Link__Group_3_2__0");
 					put(grammarAccess.getLinkAccess().getGroup_4(), "rule__Link__Group_4__0");
 					put(grammarAccess.getProblemDiagramAccess().getNameAssignment_2(), "rule__ProblemDiagram__NameAssignment_2");
-					put(grammarAccess.getProblemDiagramAccess().getNodesAssignment_3_0(), "rule__ProblemDiagram__NodesAssignment_3_0");
-					put(grammarAccess.getProblemDiagramAccess().getLinksAssignment_3_1(), "rule__ProblemDiagram__LinksAssignment_3_1");
+					put(grammarAccess.getProblemDiagramAccess().getHighlightAssignment_3_1(), "rule__ProblemDiagram__HighlightAssignment_3_1");
+					put(grammarAccess.getProblemDiagramAccess().getNodesAssignment_4_0(), "rule__ProblemDiagram__NodesAssignment_4_0");
+					put(grammarAccess.getProblemDiagramAccess().getLinksAssignment_4_1(), "rule__ProblemDiagram__LinksAssignment_4_1");
 					put(grammarAccess.getNodeAccess().getNameAssignment_0(), "rule__Node__NameAssignment_0");
 					put(grammarAccess.getNodeAccess().getTypeAssignment_1(), "rule__Node__TypeAssignment_1");
 					put(grammarAccess.getNodeAccess().getDescriptionAssignment_2_1(), "rule__Node__DescriptionAssignment_2_1");

@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link uk.ac.open.problem.ProblemDiagram#getName <em>Name</em>}</li>
+ *   <li>{@link uk.ac.open.problem.ProblemDiagram#getHighlight <em>Highlight</em>}</li>
  *   <li>{@link uk.ac.open.problem.ProblemDiagram#getNodes <em>Nodes</em>}</li>
  *   <li>{@link uk.ac.open.problem.ProblemDiagram#getLinks <em>Links</em>}</li>
  * </ul>
@@ -54,6 +55,32 @@ public interface ProblemDiagram extends EObject
 	 * @generated
 	 */
   void setName(String value);
+
+  /**
+	 * Returns the value of the '<em><b>Highlight</b></em>' reference.
+	 * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Highlight</em>' reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+	 * @return the value of the '<em>Highlight</em>' reference.
+	 * @see #setHighlight(Node)
+	 * @see uk.ac.open.problem.ProblemPackage#getProblemDiagram_Highlight()
+	 * @model
+	 * @generated
+	 */
+  Node getHighlight();
+
+  /**
+	 * Sets the value of the '{@link uk.ac.open.problem.ProblemDiagram#getHighlight <em>Highlight</em>}' reference.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Highlight</em>' reference.
+	 * @see #getHighlight()
+	 * @generated
+	 */
+  void setHighlight(Node value);
 
   /**
 	 * Returns the value of the '<em><b>Nodes</b></em>' containment reference list.

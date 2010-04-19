@@ -1,5 +1,4 @@
-problem:
-"ADS-B"
+problem: #ADS-B#
 MSoD R
 :"Maintain the Safety Distance"
 {
@@ -7,14 +6,12 @@ MSoD R
   see "/Examples/event/sit2.ec"
   see "/Examples/event/sit3.ec"
   see "/Examples/event/sit4.ec"
-  see "/Examples/event/notexist.ec"  
-  see "/Examples/istar/open_account.ood"
+  see "/Examples/istar/open_account.ood" // just a demo
 }
 
 CP M
 :"Central Processor" { 
-problem:
-"Central Processor"
+problem: #Central Processor# for CPU
 
 CPU M
 :"Central Processing Unit" 
