@@ -17,5 +17,29 @@
       <example file="openpf.pf"/>
       <example file="pf.xpt"/>
       <example file="ProblemGenerator.mwe"/>
+      <example file="CommandedBehaviour.pf"/>
+      <example file="CommandedBehaviour.png"/>
+      <example file="InformationDisplay.pf"/>
+      <example file="InformationDisplay.png"/>
+      <example file="LightController.pf"/>
+      <example file="LightController.problem"/>
+      <example file="LightController.problem_diagram"/>
+      <example file="ProblemGenerator.mwe"/>
+      <example file="RequiredBehaviour.pf"/>
+      <example file="RequiredBehaviour.png"/>
+      <example file="SecuReqEngforEvolvingSys.pdf"/>
+      <example file="SluiceGateInteractive.pf"/>
+      <example file="SluiceGateInteractive.problem"/>
+      <example file="SluiceGateInteractive.problem_diagram"/>
+      <example file="SluiceGateTimed.pf"/>
+      <example file="SluiceGateTimed.problem"/>
+      <example file="SluiceGateTimed.problem_diagram"/>
+      <example file="Transformation.pf"/>
+      <example file="Transformation.png"/>
+      <example file="Workpiece.pf"/>
+      <example file="Workpiece.png"/>
+      <example file="zooturnstile1.pf"/>
+      <example file="zooturnstile1.problem"/>
+      <example file="zooturnstile1.problem_diagram"/>
   </extension>
 </plugin>

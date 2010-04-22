@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:problem="http://open.ac.uk/problem" xmi:id="_X03B0E0uEd-Oz6UjLzdrbQ" type="Problem" name="SluiceGateInteractive.problem_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_YNj1sE0uEd-Oz6UjLzdrbQ" type="2001" fontName="Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_YNj1s00uEd-Oz6UjLzdrbQ" type="5001"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_YNj1tE0uEd-Oz6UjLzdrbQ" type="5002"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_YNj1sU0uEd-Oz6UjLzdrbQ"/>
+    <element xmi:type="problem:Node" href="/Examples/problem/SluiceGateInteractive.problem#//@nodes.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YNj1sk0uEd-Oz6UjLzdrbQ" x="540" y="75"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_YNmR8E0uEd-Oz6UjLzdrbQ" type="2003" fontName="Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_YNmR800uEd-Oz6UjLzdrbQ" type="5005"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_YNmR9E0uEd-Oz6UjLzdrbQ" type="5006"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_YNmR8U0uEd-Oz6UjLzdrbQ"/>
+    <element xmi:type="problem:Node" href="/Examples/problem/SluiceGateInteractive.problem#//@nodes.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YNmR8k0uEd-Oz6UjLzdrbQ" x="180" y="80"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_YNngEE0uEd-Oz6UjLzdrbQ" type="2006" fontName="Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_YNuNwk0uEd-Oz6UjLzdrbQ" type="5011"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_YNuNw00uEd-Oz6UjLzdrbQ" type="5012"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_YNuNwE0uEd-Oz6UjLzdrbQ"/>
+    <element xmi:type="problem:Node" href="/Examples/problem/SluiceGateInteractive.problem#//@nodes.2"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YNuNwU0uEd-Oz6UjLzdrbQ" x="380" y="30"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_YNvb4E0uEd-Oz6UjLzdrbQ" type="2005" fontName="Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_YNvb400uEd-Oz6UjLzdrbQ" type="5009"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_YNvb5E0uEd-Oz6UjLzdrbQ" type="5010"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_YNvb4U0uEd-Oz6UjLzdrbQ"/>
+    <element xmi:type="problem:Node" href="/Examples/problem/SluiceGateInteractive.problem#//@nodes.3"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YNvb4k0uEd-Oz6UjLzdrbQ" x="385" y="125"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_X03B0U0uEd-Oz6UjLzdrbQ"/>
+  <element xmi:type="problem:ProblemDiagram" href="/Examples/problem/SluiceGateInteractive.problem#/"/>
+</notation:Diagram>

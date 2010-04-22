@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:problem="http://open.ac.uk/problem" xmi:id="_nXJhcE0iEd-Oz6UjLzdrbQ" type="Problem" name="LightController.problem_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_oFa8sE0iEd-Oz6UjLzdrbQ" type="2001" fontName="Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_oFbjwE0iEd-Oz6UjLzdrbQ" type="5001"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_oFbjwU0iEd-Oz6UjLzdrbQ" type="5002"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_oFa8sU0iEd-Oz6UjLzdrbQ"/>
+    <element xmi:type="problem:Node" href="/Examples/problem/LightController.problem#//@nodes.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oFa8sk0iEd-Oz6UjLzdrbQ" x="450" y="130"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_oFcK0E0iEd-Oz6UjLzdrbQ" type="2003" fontName="Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_oFl70E0iEd-Oz6UjLzdrbQ" type="5005"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_oFl70U0iEd-Oz6UjLzdrbQ" type="5006"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_oFlUwE0iEd-Oz6UjLzdrbQ"/>
+    <element xmi:type="problem:Node" href="/Examples/problem/LightController.problem#//@nodes.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oFlUwU0iEd-Oz6UjLzdrbQ" x="165" y="122"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_oFmi4E0iEd-Oz6UjLzdrbQ" type="2006" fontName="Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_oFmi400iEd-Oz6UjLzdrbQ" type="5011"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_oFmi5E0iEd-Oz6UjLzdrbQ" type="5012"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_oFmi4U0iEd-Oz6UjLzdrbQ"/>
+    <element xmi:type="problem:Node" href="/Examples/problem/LightController.problem#//@nodes.2"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oFmi4k0iEd-Oz6UjLzdrbQ" x="305" y="125"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_nXJhcU0iEd-Oz6UjLzdrbQ"/>
+  <element xmi:type="problem:ProblemDiagram" href="/Examples/problem/LightController.problem#/"/>
+</notation:Diagram>

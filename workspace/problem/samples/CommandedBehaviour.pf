@@ -1,0 +1,13 @@
+problem: "Required Behavior"
+
+RB R :"Required Behavior" 
+
+CM M :"Control Machine" 
+
+CD C :"Controlled Domain" 
+
+RB ~> CD
+:"a"
+
+CM -> CD
+:"b"

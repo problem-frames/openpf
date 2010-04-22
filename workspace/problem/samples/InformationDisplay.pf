@@ -1,0 +1,17 @@
+problem: "Information Display"
+
+DRW :"Display Real World" 
+
+IM M :"Information Machine" 
+
+Dis C :"Display" 
+
+RW C : "Real World"
+
+IM -> RW : "b"
+
+IM -> Dis : "c"
+
+DRW ~~ RW : "a"
+
+DRW ~> Dis : "d"

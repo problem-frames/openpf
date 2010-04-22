@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ASCII"?>
+<problem:ProblemDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:problem="http://open.ac.uk/problem" description="Zoo turnstile">
+  <nodes name="NoFreeEntry" description="Prevent Free Entry"/>
+  <nodes name="TC" type="M" description="Turnstile Controller"/>
+  <nodes name="T" type="C" description="Turnstile"/>
+  <nodes name="Z" type="C" description="Zoo"/>
+  <nodes name="ZC" type="B" description="Zoo Customer"/>
+  <links from="//@nodes.1" to="//@nodes.2" description="a"/>
+  <links from="//@nodes.2" to="//@nodes.3" description="c"/>
+  <links from="//@nodes.2" to="//@nodes.4" description="b"/>
+  <links from="//@nodes.4" to="//@nodes.3" description="d"/>
+  <links from="//@nodes.0" type="~>" to="//@nodes.3"/>
+  <links from="//@nodes.0" type="~~" to="//@nodes.4"/>
+</problem:ProblemDiagram>

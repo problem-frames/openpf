@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:problem="http://open.ac.uk/problem" xmi:id="_qJM2gE0bEd-Oz6UjLzdrbQ" type="Problem" name="zooturnstile1.problem_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_qwYyUE0bEd-Oz6UjLzdrbQ" type="2001" fontName="Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_qwYyU00bEd-Oz6UjLzdrbQ" type="5001"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_qwYyVE0bEd-Oz6UjLzdrbQ" type="5002"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_qwYyUU0bEd-Oz6UjLzdrbQ"/>
+    <element xmi:type="problem:Node" href="/Examples/problem/zooturnstile1.problem#//@nodes.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qwYyUk0bEd-Oz6UjLzdrbQ" x="590" y="240"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_qwZZYE0bEd-Oz6UjLzdrbQ" type="2003" fontName="Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_qwZZY00bEd-Oz6UjLzdrbQ" type="5005"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_qwZZZE0bEd-Oz6UjLzdrbQ" type="5006"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_qwZZYU0bEd-Oz6UjLzdrbQ"/>
+    <element xmi:type="problem:Node" href="/Examples/problem/zooturnstile1.problem#//@nodes.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qwZZYk0bEd-Oz6UjLzdrbQ" x="90" y="240"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_qwZZZU0bEd-Oz6UjLzdrbQ" type="2006" fontName="Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_qwaAcE0bEd-Oz6UjLzdrbQ" type="5011"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_qwaAcU0bEd-Oz6UjLzdrbQ" type="5012"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_qwZZZk0bEd-Oz6UjLzdrbQ"/>
+    <element xmi:type="problem:Node" href="/Examples/problem/zooturnstile1.problem#//@nodes.2"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qwZZZ00bEd-Oz6UjLzdrbQ" x="275" y="240"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_qwangE0bEd-Oz6UjLzdrbQ" type="2006" fontName="Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_qwang00bEd-Oz6UjLzdrbQ" type="5011"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_qwanhE0bEd-Oz6UjLzdrbQ" type="5012"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_qwangU0bEd-Oz6UjLzdrbQ"/>
+    <element xmi:type="problem:Node" href="/Examples/problem/zooturnstile1.problem#//@nodes.3"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qwangk0bEd-Oz6UjLzdrbQ" x="450" y="305"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_qwanhU0bEd-Oz6UjLzdrbQ" type="2005" fontName="Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_qwaniE0bEd-Oz6UjLzdrbQ" type="5009"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_qwbOkE0bEd-Oz6UjLzdrbQ" type="5010"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_qwanhk0bEd-Oz6UjLzdrbQ"/>
+    <element xmi:type="problem:Node" href="/Examples/problem/zooturnstile1.problem#//@nodes.4"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qwanh00bEd-Oz6UjLzdrbQ" x="440" y="195"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_qJM2gU0bEd-Oz6UjLzdrbQ"/>
+  <element xmi:type="problem:ProblemDiagram" href="/Examples/problem/zooturnstile1.problem#/"/>
+  <edges xmi:type="notation:Connector" xmi:id="_qw36gE0bEd-Oz6UjLzdrbQ" type="4001" source="_qwYyUE0bEd-Oz6UjLzdrbQ" target="_qwangE0bEd-Oz6UjLzdrbQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_qw36g00bEd-Oz6UjLzdrbQ" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_qw36hE0bEd-Oz6UjLzdrbQ"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_qw36gU0bEd-Oz6UjLzdrbQ" fontName="Sans"/>
+    <element xmi:type="problem:Link" href="/Examples/problem/zooturnstile1.problem#//@links.4"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qw36gk0bEd-Oz6UjLzdrbQ" points="[-61, 7, 117, -18]$[-128, 17, 50, -8]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_qxEu0E0bEd-Oz6UjLzdrbQ" type="4002" source="_qwYyUE0bEd-Oz6UjLzdrbQ" target="_qwanhU0bEd-Oz6UjLzdrbQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_qxEu000bEd-Oz6UjLzdrbQ" type="6002">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_qxEu1E0bEd-Oz6UjLzdrbQ"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_qxEu0U0bEd-Oz6UjLzdrbQ" fontName="Sans"/>
+    <element xmi:type="problem:Link" href="/Examples/problem/zooturnstile1.problem#//@links.5"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qxEu0k0bEd-Oz6UjLzdrbQ" points="[33, -31, -49, 60]$[82, -91, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_qxGkAE0bEd-Oz6UjLzdrbQ" type="4003" source="_qwZZYE0bEd-Oz6UjLzdrbQ" target="_qwZZZU0bEd-Oz6UjLzdrbQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_qxGkA00bEd-Oz6UjLzdrbQ" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_qxGkBE0bEd-Oz6UjLzdrbQ"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_qxGkAU0bEd-Oz6UjLzdrbQ" fontName="Sans"/>
+    <element xmi:type="problem:Link" href="/Examples/problem/zooturnstile1.problem#//@links.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qxGkAk0bEd-Oz6UjLzdrbQ" points="[0, 0, 0, 60]$[0, -60, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_qxIZME0bEd-Oz6UjLzdrbQ" type="4003" source="_qwZZZU0bEd-Oz6UjLzdrbQ" target="_qwangE0bEd-Oz6UjLzdrbQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_qxIZM00bEd-Oz6UjLzdrbQ" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_qxIZNE0bEd-Oz6UjLzdrbQ"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_qxIZMU0bEd-Oz6UjLzdrbQ" fontName="Sans"/>
+    <element xmi:type="problem:Link" href="/Examples/problem/zooturnstile1.problem#//@links.1"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qxIZMk0bEd-Oz6UjLzdrbQ" points="[50, 15, -140, -45]$[140, 44, -50, -16]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_qxTYUE0bEd-Oz6UjLzdrbQ" type="4003" source="_qwZZZU0bEd-Oz6UjLzdrbQ" target="_qwanhU0bEd-Oz6UjLzdrbQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_qxTYU00bEd-Oz6UjLzdrbQ" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_qxTYVE0bEd-Oz6UjLzdrbQ"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_qxTYUU0bEd-Oz6UjLzdrbQ" fontName="Sans"/>
+    <element xmi:type="problem:Link" href="/Examples/problem/zooturnstile1.problem#//@links.2"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qxTYUk0bEd-Oz6UjLzdrbQ" points="[0, 0, 56, 60]$[-56, -60, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_qxTYVU0bEd-Oz6UjLzdrbQ" type="4003" source="_qwanhU0bEd-Oz6UjLzdrbQ" target="_qwangE0bEd-Oz6UjLzdrbQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_qxTYWE0bEd-Oz6UjLzdrbQ" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_qxTYWU0bEd-Oz6UjLzdrbQ"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_qxTYVk0bEd-Oz6UjLzdrbQ" fontName="Sans"/>
+    <element xmi:type="problem:Link" href="/Examples/problem/zooturnstile1.problem#//@links.3"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qxTYV00bEd-Oz6UjLzdrbQ" points="[0, 0, 0, 60]$[0, -60, 0, 0]"/>
+  </edges>
+</notation:Diagram>
