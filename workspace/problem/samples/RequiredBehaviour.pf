@@ -1,4 +1,4 @@
-problem: "Commanded Behavior"
+problem: #Commanded Behavior#
 
 CB R :"Commanded Behavior" 
 
@@ -12,6 +12,6 @@ CB ~> CD :"d"
 
 CB ~~ O : "a"
 
-CM -> O : "b"
+CM -- O : "b"
 
-CM -> CD : "c"
+CM -- CD : "c"

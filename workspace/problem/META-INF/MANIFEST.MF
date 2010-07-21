@@ -21,8 +21,10 @@ Require-Bundle: org.eclipse.xtext,
  org.eclipse.emf.common,
  org.antlr.runtime,
  org.eclipse.draw2d;visibility:=reexport,
- org.eclipse.gmf.runtime.draw2d.ui;visibility:=reexport, 
- core;bundle-version="1.0.0"
+ org.eclipse.gmf.runtime.draw2d.ui;visibility:=reexport,
+ core;bundle-version="1.0.0",
+ org.eclipse.emf.mwe2.launch;bundle-version="1.0.0",
+ org.apache.log4j;bundle-version="1.2.15"
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: uk.ac.open,
  uk.ac.open.formatting,
@@ -35,3 +37,4 @@ Export-Package: uk.ac.open,
  uk.ac.open.scoping,
  uk.ac.open.services,
  uk.ac.open.validation
+Import-Package: org.apache.log4j

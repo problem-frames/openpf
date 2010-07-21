@@ -8,16 +8,16 @@ import com.google.inject.Singleton;
 import com.google.inject.Inject;
 
 import org.eclipse.xtext.*;
-
 import org.eclipse.xtext.service.GrammarProvider;
+import org.eclipse.xtext.service.AbstractElementFinder.*;
 
 import org.eclipse.xtext.common.services.TerminalsGrammarAccess;
 
 @Singleton
-public class ProblemGrammarAccess implements IGrammarAccess {
+public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
-	public class ProblemDiagramElements implements IParserRuleAccess {
+	public class ProblemDiagramElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ProblemDiagram");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cProblemKeyword_0 = (Keyword)cGroup.eContents().get(0);
@@ -36,10 +36,10 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 		private final RuleCall cLinksLinkParserRuleCall_4_1_0 = (RuleCall)cLinksAssignment_4_1.eContents().get(0);
 		
 		//ProblemDiagram:
-		//  "problem" ":" name=ID ("for" highlight=[Node])? (nodes+=Node|links+=Link)*;
+		//	"problem" ":" name=ID ("for" highlight=[Node])? (nodes+=Node | links+=Link)*;
 		public ParserRule getRule() { return rule; }
 
-		//"problem" ":" name=ID ("for" highlight=[Node])? (nodes+=Node|links+=Link)*
+		//"problem" ":" name=ID ("for" highlight=[Node])? (nodes+=Node | links+=Link)*
 		public Group getGroup() { return cGroup; }
 
 		//"problem"
@@ -69,7 +69,7 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 		//ID
 		public RuleCall getHighlightNodeIDTerminalRuleCall_3_1_0_1() { return cHighlightNodeIDTerminalRuleCall_3_1_0_1; }
 
-		//(nodes+=Node|links+=Link)*
+		//(nodes+=Node | links+=Link)*
 		public Alternatives getAlternatives_4() { return cAlternatives_4; }
 
 		//nodes+=Node
@@ -85,7 +85,7 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 		public RuleCall getLinksLinkParserRuleCall_4_1_0() { return cLinksLinkParserRuleCall_4_1_0; }
 	}
 
-	public class NodeElements implements IParserRuleAccess {
+	public class NodeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Node");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
@@ -119,7 +119,7 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 		private final Keyword cProblemKeyword_3_2_2_1 = (Keyword)cGroup_3_2_2.eContents().get(1);
 		private final Assignment cProblemRefAssignment_3_2_2_2 = (Assignment)cGroup_3_2_2.eContents().get(2);
 		private final CrossReference cProblemRefProblemDiagramCrossReference_3_2_2_2_0 = (CrossReference)cProblemRefAssignment_3_2_2_2.eContents().get(0);
-		private final RuleCall cProblemRefProblemDiagramIDTerminalRuleCall_3_2_2_2_0_1 = (RuleCall)cProblemRefProblemDiagramCrossReference_3_2_2_2_0.eContents().get(1);
+		private final RuleCall cProblemRefProblemDiagramQUALIFIED_NAMETerminalRuleCall_3_2_2_2_0_1 = (RuleCall)cProblemRefProblemDiagramCrossReference_3_2_2_2_0.eContents().get(1);
 		private final Group cGroup_3_2_3 = (Group)cAlternatives_3_2.eContents().get(3);
 		private final Keyword cSeeKeyword_3_2_3_0 = (Keyword)cGroup_3_2_3.eContents().get(0);
 		private final Assignment cHrefAssignment_3_2_3_1 = (Assignment)cGroup_3_2_3.eContents().get(1);
@@ -127,16 +127,14 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 		private final Keyword cRightCurlyBracketKeyword_3_3 = (Keyword)cGroup_3.eContents().get(3);
 		
 		//Node:
-		//  name=ID type=NodeType? (":" description=STRING)? ("{" (hiddenPhenomena+=Phenomenon (
-		//  "," hiddenPhenomena+=Phenomenon)*)? (subproblem+=ProblemDiagram|"see" "domain"
-		//  problemNodeRef+=[Node]|"see" "problem" problemRef+=[ProblemDiagram]|"see" href+=
-		//  STRING)* "}")?;
+		//	name=ID type=NodeType? (":"? description=STRING)? ("{" (hiddenPhenomena+=Phenomenon (","
+		//	hiddenPhenomena+=Phenomenon)*)? (subproblem+=ProblemDiagram | "see" "domain" problemNodeRef+=[Node] | "see" "problem"
+		//	problemRef+=[ProblemDiagram|QUALIFIED_NAME] | "see" href+=STRING)* "}")?;
 		public ParserRule getRule() { return rule; }
 
-		//name=ID type=NodeType? (":" description=STRING)? ("{" (hiddenPhenomena+=Phenomenon (
-		//"," hiddenPhenomena+=Phenomenon)*)? (subproblem+=ProblemDiagram|"see" "domain"
-		//problemNodeRef+=[Node]|"see" "problem" problemRef+=[ProblemDiagram]|"see" href+=
-		//STRING)* "}")?
+		//name=ID type=NodeType? (":"? description=STRING)? ("{" (hiddenPhenomena+=Phenomenon ("," hiddenPhenomena+=Phenomenon)*)?
+		//(subproblem+=ProblemDiagram | "see" "domain" problemNodeRef+=[Node] | "see" "problem"
+		//problemRef+=[ProblemDiagram|QUALIFIED_NAME] | "see" href+=STRING)* "}")?
 		public Group getGroup() { return cGroup; }
 
 		//name=ID
@@ -151,10 +149,10 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 		//NodeType
 		public RuleCall getTypeNodeTypeEnumRuleCall_1_0() { return cTypeNodeTypeEnumRuleCall_1_0; }
 
-		//(":" description=STRING)?
+		//(":"? description=STRING)?
 		public Group getGroup_2() { return cGroup_2; }
 
-		//":"
+		//":"?
 		public Keyword getColonKeyword_2_0() { return cColonKeyword_2_0; }
 
 		//description=STRING
@@ -163,9 +161,8 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 		//STRING
 		public RuleCall getDescriptionSTRINGTerminalRuleCall_2_1_0() { return cDescriptionSTRINGTerminalRuleCall_2_1_0; }
 
-		//("{" (hiddenPhenomena+=Phenomenon ("," hiddenPhenomena+=Phenomenon)*)? (subproblem+=
-		//ProblemDiagram|"see" "domain" problemNodeRef+=[Node]|"see" "problem" problemRef+=[
-		//ProblemDiagram]|"see" href+=STRING)* "}")?
+		//("{" (hiddenPhenomena+=Phenomenon ("," hiddenPhenomena+=Phenomenon)*)? (subproblem+=ProblemDiagram | "see" "domain"
+		//problemNodeRef+=[Node] | "see" "problem" problemRef+=[ProblemDiagram|QUALIFIED_NAME] | "see" href+=STRING)* "}")?
 		public Group getGroup_3() { return cGroup_3; }
 
 		//"{"
@@ -192,8 +189,8 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 		//Phenomenon
 		public RuleCall getHiddenPhenomenaPhenomenonParserRuleCall_3_1_1_1_0() { return cHiddenPhenomenaPhenomenonParserRuleCall_3_1_1_1_0; }
 
-		//(subproblem+=ProblemDiagram|"see" "domain" problemNodeRef+=[Node]|"see" "problem"
-		//problemRef+=[ProblemDiagram]|"see" href+=STRING)*
+		//(subproblem+=ProblemDiagram | "see" "domain" problemNodeRef+=[Node] | "see" "problem"
+		//problemRef+=[ProblemDiagram|QUALIFIED_NAME] | "see" href+=STRING)*
 		public Alternatives getAlternatives_3_2() { return cAlternatives_3_2; }
 
 		//subproblem+=ProblemDiagram
@@ -220,7 +217,7 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 		//ID
 		public RuleCall getProblemNodeRefNodeIDTerminalRuleCall_3_2_1_2_0_1() { return cProblemNodeRefNodeIDTerminalRuleCall_3_2_1_2_0_1; }
 
-		//"see" "problem" problemRef+=[ProblemDiagram]
+		//"see" "problem" problemRef+=[ProblemDiagram|QUALIFIED_NAME]
 		public Group getGroup_3_2_2() { return cGroup_3_2_2; }
 
 		//"see"
@@ -229,14 +226,14 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 		//"problem"
 		public Keyword getProblemKeyword_3_2_2_1() { return cProblemKeyword_3_2_2_1; }
 
-		//problemRef+=[ProblemDiagram]
+		//problemRef+=[ProblemDiagram|QUALIFIED_NAME]
 		public Assignment getProblemRefAssignment_3_2_2_2() { return cProblemRefAssignment_3_2_2_2; }
 
-		//[ProblemDiagram]
+		//[ProblemDiagram|QUALIFIED_NAME]
 		public CrossReference getProblemRefProblemDiagramCrossReference_3_2_2_2_0() { return cProblemRefProblemDiagramCrossReference_3_2_2_2_0; }
 
-		//ID
-		public RuleCall getProblemRefProblemDiagramIDTerminalRuleCall_3_2_2_2_0_1() { return cProblemRefProblemDiagramIDTerminalRuleCall_3_2_2_2_0_1; }
+		//QUALIFIED_NAME
+		public RuleCall getProblemRefProblemDiagramQUALIFIED_NAMETerminalRuleCall_3_2_2_2_0_1() { return cProblemRefProblemDiagramQUALIFIED_NAMETerminalRuleCall_3_2_2_2_0_1; }
 
 		//"see" href+=STRING
 		public Group getGroup_3_2_3() { return cGroup_3_2_3; }
@@ -254,7 +251,7 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 		public Keyword getRightCurlyBracketKeyword_3_3() { return cRightCurlyBracketKeyword_3_3; }
 	}
 
-	public class PhenomenonElements implements IParserRuleAccess {
+	public class PhenomenonElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Phenomenon");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cTypeAssignment_0 = (Assignment)cGroup.eContents().get(0);
@@ -269,10 +266,10 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 		private final RuleCall cDescriptionSTRINGTerminalRuleCall_3_1_0 = (RuleCall)cDescriptionAssignment_3_1.eContents().get(0);
 		
 		//Phenomenon:
-		//  type=PhenomenonType? isControlled?="!"? name=ID (":" description=STRING)?;
+		//	type=PhenomenonType? isControlled?="!"? name=ID (":"? description=STRING)?;
 		public ParserRule getRule() { return rule; }
 
-		//type=PhenomenonType? isControlled?="!"? name=ID (":" description=STRING)?
+		//type=PhenomenonType? isControlled?="!"? name=ID (":"? description=STRING)?
 		public Group getGroup() { return cGroup; }
 
 		//type=PhenomenonType?
@@ -293,10 +290,10 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 
-		//(":" description=STRING)?
+		//(":"? description=STRING)?
 		public Group getGroup_3() { return cGroup_3; }
 
-		//":"
+		//":"?
 		public Keyword getColonKeyword_3_0() { return cColonKeyword_3_0; }
 
 		//description=STRING
@@ -306,7 +303,7 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 		public RuleCall getDescriptionSTRINGTerminalRuleCall_3_1_0() { return cDescriptionSTRINGTerminalRuleCall_3_1_0; }
 	}
 
-	public class LinkElements implements IParserRuleAccess {
+	public class LinkElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Link");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cFromAssignment_0 = (Assignment)cGroup.eContents().get(0);
@@ -332,12 +329,12 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 		private final RuleCall cDescriptionSTRINGTerminalRuleCall_4_1_0 = (RuleCall)cDescriptionAssignment_4_1.eContents().get(0);
 		
 		//Link:
-		//  from=[Node] type=LinkType to=[Node] ("{" phenomena+=Phenomenon ("," phenomena+=
-		//  Phenomenon)* "}")? (":" description=STRING)?;
+		//	from=[Node] type=LinkType to=[Node] ("{" phenomena+=Phenomenon ("," phenomena+=Phenomenon)* "}")? (":"?
+		//	description=STRING)?;
 		public ParserRule getRule() { return rule; }
 
-		//from=[Node] type=LinkType to=[Node] ("{" phenomena+=Phenomenon ("," phenomena+=
-		//Phenomenon)* "}")? (":" description=STRING)?
+		//from=[Node] type=LinkType to=[Node] ("{" phenomena+=Phenomenon ("," phenomena+=Phenomenon)* "}")? (":"?
+		//description=STRING)?
 		public Group getGroup() { return cGroup; }
 
 		//from=[Node]
@@ -391,10 +388,10 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_3_3() { return cRightCurlyBracketKeyword_3_3; }
 
-		//(":" description=STRING)?
+		//(":"? description=STRING)?
 		public Group getGroup_4() { return cGroup_4; }
 
-		//":"
+		//":"?
 		public Keyword getColonKeyword_4_0() { return cColonKeyword_4_0; }
 
 		//description=STRING
@@ -405,7 +402,7 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 	}
 	
 	
-	public class NodeTypeElements implements IEnumRuleAccess {
+	public class NodeTypeElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "NodeType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cREQUIREMENTEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
@@ -424,12 +421,10 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 		private final Keyword cPHYSICALPKeyword_6_0 = (Keyword)cPHYSICALEnumLiteralDeclaration_6.eContents().get(0);
 		
 		//enum NodeType:
-		//  REQUIREMENT="R" | MACHINE="M" | BIDDABLE="B" | LEXICAL="X" | CAUSAL="C" | DESIGNED="D" |
-		//  PHYSICAL="P";
+		//	REQUIREMENT="R" | MACHINE="M" | BIDDABLE="B" | LEXICAL="X" | CAUSAL="C" | DESIGNED="D" | PHYSICAL="P";
 		public EnumRule getRule() { return rule; }
 
-		//REQUIREMENT="R" | MACHINE="M" | BIDDABLE="B" | LEXICAL="X" | CAUSAL="C" | DESIGNED="D" |
-		//PHYSICAL="P"
+		//REQUIREMENT="R" | MACHINE="M" | BIDDABLE="B" | LEXICAL="X" | CAUSAL="C" | DESIGNED="D" | PHYSICAL="P"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//REQUIREMENT="R"
@@ -475,7 +470,7 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 		public Keyword getPHYSICALPKeyword_6_0() { return cPHYSICALPKeyword_6_0; }
 	}
 
-	public class PhenomenonTypeElements implements IEnumRuleAccess {
+	public class PhenomenonTypeElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "PhenomenonType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cUNSPECIFIEDEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
@@ -486,7 +481,7 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 		private final Keyword cSTATEStateKeyword_2_0 = (Keyword)cSTATEEnumLiteralDeclaration_2.eContents().get(0);
 		
 		//enum PhenomenonType:
-		//  UNSPECIFIED="phenomenon" | EVENT="event" | STATE="state";
+		//	UNSPECIFIED="phenomenon" | EVENT="event" | STATE="state";
 		public EnumRule getRule() { return rule; }
 
 		//UNSPECIFIED="phenomenon" | EVENT="event" | STATE="state"
@@ -511,7 +506,7 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 		public Keyword getSTATEStateKeyword_2_0() { return cSTATEStateKeyword_2_0; }
 	}
 
-	public class LinkTypeElements implements IEnumRuleAccess {
+	public class LinkTypeElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "LinkType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cINTERFACEEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
@@ -522,7 +517,7 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 		private final Keyword cCONSTRAINTTildeGreaterThanSignKeyword_2_0 = (Keyword)cCONSTRAINTEnumLiteralDeclaration_2.eContents().get(0);
 		
 		//enum LinkType:
-		//  INTERFACE="--" | REFERENCE="~~" | CONSTRAINT="~>";
+		//	INTERFACE="--" | REFERENCE="~~" | CONSTRAINT="~>";
 		public EnumRule getRule() { return rule; }
 
 		//INTERFACE="--" | REFERENCE="~~" | CONSTRAINT="~>"
@@ -555,6 +550,7 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 	private LinkElements pLink;
 	private LinkTypeElements unknownRuleLinkType;
 	private TerminalRule tID;
+	private TerminalRule tQUALIFIED_NAME;
 	
 	private final GrammarProvider grammarProvider;
 
@@ -578,7 +574,7 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 
 	
 	//ProblemDiagram:
-	//  "problem" ":" name=ID ("for" highlight=[Node])? (nodes+=Node|links+=Link)*;
+	//	"problem" ":" name=ID ("for" highlight=[Node])? (nodes+=Node | links+=Link)*;
 	public ProblemDiagramElements getProblemDiagramAccess() {
 		return (pProblemDiagram != null) ? pProblemDiagram : (pProblemDiagram = new ProblemDiagramElements());
 	}
@@ -588,10 +584,9 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 	}
 
 	//Node:
-	//  name=ID type=NodeType? (":" description=STRING)? ("{" (hiddenPhenomena+=Phenomenon (
-	//  "," hiddenPhenomena+=Phenomenon)*)? (subproblem+=ProblemDiagram|"see" "domain"
-	//  problemNodeRef+=[Node]|"see" "problem" problemRef+=[ProblemDiagram]|"see" href+=
-	//  STRING)* "}")?;
+	//	name=ID type=NodeType? (":"? description=STRING)? ("{" (hiddenPhenomena+=Phenomenon (","
+	//	hiddenPhenomena+=Phenomenon)*)? (subproblem+=ProblemDiagram | "see" "domain" problemNodeRef+=[Node] | "see" "problem"
+	//	problemRef+=[ProblemDiagram|QUALIFIED_NAME] | "see" href+=STRING)* "}")?;
 	public NodeElements getNodeAccess() {
 		return (pNode != null) ? pNode : (pNode = new NodeElements());
 	}
@@ -601,8 +596,7 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 	}
 
 	//enum NodeType:
-	//  REQUIREMENT="R" | MACHINE="M" | BIDDABLE="B" | LEXICAL="X" | CAUSAL="C" | DESIGNED="D" |
-	//  PHYSICAL="P";
+	//	REQUIREMENT="R" | MACHINE="M" | BIDDABLE="B" | LEXICAL="X" | CAUSAL="C" | DESIGNED="D" | PHYSICAL="P";
 	public NodeTypeElements getNodeTypeAccess() {
 		return (unknownRuleNodeType != null) ? unknownRuleNodeType : (unknownRuleNodeType = new NodeTypeElements());
 	}
@@ -612,7 +606,7 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 	}
 
 	//Phenomenon:
-	//  type=PhenomenonType? isControlled?="!"? name=ID (":" description=STRING)?;
+	//	type=PhenomenonType? isControlled?="!"? name=ID (":"? description=STRING)?;
 	public PhenomenonElements getPhenomenonAccess() {
 		return (pPhenomenon != null) ? pPhenomenon : (pPhenomenon = new PhenomenonElements());
 	}
@@ -622,7 +616,7 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 	}
 
 	//enum PhenomenonType:
-	//  UNSPECIFIED="phenomenon" | EVENT="event" | STATE="state";
+	//	UNSPECIFIED="phenomenon" | EVENT="event" | STATE="state";
 	public PhenomenonTypeElements getPhenomenonTypeAccess() {
 		return (unknownRulePhenomenonType != null) ? unknownRulePhenomenonType : (unknownRulePhenomenonType = new PhenomenonTypeElements());
 	}
@@ -632,8 +626,8 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 	}
 
 	//Link:
-	//  from=[Node] type=LinkType to=[Node] ("{" phenomena+=Phenomenon ("," phenomena+=
-	//  Phenomenon)* "}")? (":" description=STRING)?;
+	//	from=[Node] type=LinkType to=[Node] ("{" phenomena+=Phenomenon ("," phenomena+=Phenomenon)* "}")? (":"?
+	//	description=STRING)?;
 	public LinkElements getLinkAccess() {
 		return (pLink != null) ? pLink : (pLink = new LinkElements());
 	}
@@ -643,7 +637,7 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 	}
 
 	//enum LinkType:
-	//  INTERFACE="--" | REFERENCE="~~" | CONSTRAINT="~>";
+	//	INTERFACE="--" | REFERENCE="~~" | CONSTRAINT="~>";
 	public LinkTypeElements getLinkTypeAccess() {
 		return (unknownRuleLinkType != null) ? unknownRuleLinkType : (unknownRuleLinkType = new LinkTypeElements());
 	}
@@ -653,44 +647,50 @@ public class ProblemGrammarAccess implements IGrammarAccess {
 	}
 
 	//terminal ID:
-	//  "#" !"#"+ "#" | "^"? ("a".."z" | "A".."Z" | "_") ("a".."z" | "A".."Z" | "_" | "0".."9")*;
+	//	"#" !"#"+ "#" | "^"? ("a".."z" | "A".."Z" | "_") ("a".."z" | "A".."Z" | "_" | "0".."9")*;
 	public TerminalRule getIDRule() {
 		return (tID != null) ? tID : (tID = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ID"));
 	} 
 
+	//terminal QUALIFIED_NAME:
+	//	ID ("." ID)*;
+	public TerminalRule getQUALIFIED_NAMERule() {
+		return (tQUALIFIED_NAME != null) ? tQUALIFIED_NAME : (tQUALIFIED_NAME = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "QUALIFIED_NAME"));
+	} 
+
 	//terminal INT returns ecore::EInt:
-	//  "0".."9"+;
+	//	"0".."9"+;
 	public TerminalRule getINTRule() {
 		return gaTerminals.getINTRule();
 	} 
 
 	//terminal STRING:
-	//  "\"" ("\\" ("b" | "t" | "n" | "f" | "r" | "\"" | "\'" | "\\") | !("\\" | "\""))* "\"" | "\'" ("\\" ("b" |
-	//  "t" | "n" | "f" | "r" | "\"" | "\'" | "\\") | !("\\" | "\'"))* "\'";
+	//	"\"" ("\\" ("b" | "t" | "n" | "f" | "r" | "\"" | "\'" | "\\") | !("\\" | "\""))* "\"" | "\'" ("\\" ("b" | "t" | "n" |
+	//	"f" | "r" | "\"" | "\'" | "\\") | !("\\" | "\'"))* "\'";
 	public TerminalRule getSTRINGRule() {
 		return gaTerminals.getSTRINGRule();
 	} 
 
 	//terminal ML_COMMENT:
-	//  "/ *"->"* /";
+	//	"/ *"->"* /";
 	public TerminalRule getML_COMMENTRule() {
 		return gaTerminals.getML_COMMENTRule();
 	} 
 
 	//terminal SL_COMMENT:
-	//  "//" !("\n" | "\r")* ("\r"? "\n")?;
+	//	"//" !("\n" | "\r")* ("\r"? "\n")?;
 	public TerminalRule getSL_COMMENTRule() {
 		return gaTerminals.getSL_COMMENTRule();
 	} 
 
 	//terminal WS:
-	//  (" " | "\t" | "\r" | "\n")+;
+	//	(" " | "\t" | "\r" | "\n")+;
 	public TerminalRule getWSRule() {
 		return gaTerminals.getWSRule();
 	} 
 
 	//terminal ANY_OTHER:
-	//  .;
+	//	.;
 	public TerminalRule getANY_OTHERRule() {
 		return gaTerminals.getANY_OTHERRule();
 	} 

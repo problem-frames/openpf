@@ -1,4 +1,4 @@
-problem: "Zoo turnstile"
+problem: #Zoo turnstile#
 
 NoFreeEntry R :"Prevent Free Entry" 
 
@@ -11,16 +11,16 @@ Z C : "Zoo"
 
 ZC B : "Zoo Customer"
 
-TC -> T
+TC -- T
 :"a"
 
-T -> Z
+T -- Z
 :"c"
 
-T -> ZC
+T -- ZC
 :"b"
 
-ZC -> Z
+ZC -- Z
 :"d"
 
 NoFreeEntry ~> Z

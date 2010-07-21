@@ -5,7 +5,6 @@
 package uk.ac.open;
 
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EClass;
@@ -14,8 +13,8 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.xtext.linking.impl.DefaultLinkingService;
 import org.eclipse.xtext.linking.impl.IllegalNodeException;
 import org.eclipse.xtext.parsetree.AbstractNode;
+import org.eclipse.xtext.resource.IEObjectDescription;
 import org.eclipse.xtext.scoping.IScope;
-import org.eclipse.xtext.scoping.IScopedElement;
 
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.ProblemDiagram;
@@ -24,42 +23,51 @@ import com.google.inject.Singleton;
 
 @Singleton
 public class ProblemIDLinking extends DefaultLinkingService {
-	// Remove the # in the ID
 	@Override
-	protected String getCrossRefNodeAsString(AbstractNode node, boolean convert) {
-		String result = super.getCrossRefNodeAsString(node, convert);
+	public String getCrossRefNodeAsString(AbstractNode node) {
+		String result = super.getCrossRefNodeAsString(node);
 		if (result.startsWith("#") && result.endsWith("#")) {
 			result = result.substring(1, result.length() - 1);
 		}
 		return result;
-	}
+	}	
 
 	@Override
 	public List<EObject> getLinkedObjects(EObject context, EReference ref,
-			AbstractNode node) throws IllegalNodeException {
+			AbstractNode node) throws IllegalNodeException {		
 		final EClass requiredType = ref.getEReferenceType();
 		if (requiredType == null)
 			return Collections.<EObject> emptyList();
-
 		final IScope scope = getScope(context, ref);
-		final Iterator<IScopedElement> iterator = scope.getAllContents()
-				.iterator();
-		final String s = getCrossRefNodeAsString(node, true);
+		final String s = getCrossRefNodeAsString(node);		
 		if (s != null) {
-			while (iterator.hasNext()) {
-				final IScopedElement element = iterator.next();
-				String n = element.name(); 
+			IEObjectDescription eObjectDescription = null;
+			for (IEObjectDescription c: scope.getContents()) {
+				String n = c.getName();
+				while (n.indexOf(".") > 0)
+					n = n.substring(n.indexOf(".")+1);
 				if (n.startsWith("#") && n.endsWith("#")) {
-					n = n.substring(1, n.length() - 1);
+					n = n.substring(1, n.length()-1);
 				}
-				if (s.equals(n)) {
-					if (element.element() instanceof ProblemDiagram)
-						((ProblemDiagram)element.element()).setName(n);
-					if (element.element() instanceof Node)
-						((Node)element.element()).setName(n);
-					return Collections.singletonList(element.element());
+				if (n.equals(s)) {
+					eObjectDescription = c;
 				}
+				System.out.println(n);
 			}
+			if (eObjectDescription != null) {
+				EObject obj = eObjectDescription.getEObjectOrProxy();
+				if (obj instanceof ProblemDiagram) {
+					((ProblemDiagram)obj).setName(s);
+				}
+				if (obj instanceof Node) {
+					((Node) obj).setName(s);
+				}
+				return Collections.singletonList(obj);
+			} else {
+				System.out.println("??? " + s);
+			}
+		} else {
+			System.out.println("??? " + context + ref + node);			
 		}
 		return Collections.emptyList();
 	}

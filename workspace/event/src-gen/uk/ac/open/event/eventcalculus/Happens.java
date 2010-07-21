@@ -25,26 +25,26 @@ package uk.ac.open.event.eventcalculus;
 public interface Happens extends TemporalPredicate
 {
   /**
-   * Returns the value of the '<em><b>Event</b></em>' containment reference.
+   * Returns the value of the '<em><b>Event</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Event</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Event</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Event</em>' containment reference.
+   * @return the value of the '<em>Event</em>' reference.
    * @see #setEvent(Term)
    * @see uk.ac.open.event.eventcalculus.EventcalculusPackage#getHappens_Event()
-   * @model containment="true"
+   * @model
    * @generated
    */
   Term getEvent();
 
   /**
-   * Sets the value of the '{@link uk.ac.open.event.eventcalculus.Happens#getEvent <em>Event</em>}' containment reference.
+   * Sets the value of the '{@link uk.ac.open.event.eventcalculus.Happens#getEvent <em>Event</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Event</em>' containment reference.
+   * @param value the new value of the '<em>Event</em>' reference.
    * @see #getEvent()
    * @generated
    */

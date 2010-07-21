@@ -37,12 +37,12 @@ Var: "range" name=ID min=INT max=INT;
 Fluent: "fluent" term=Term;
 Event: "event" term=Term;
 Term: name=ID ("(" (args+=ID)? ("," args+=ID)* ")")?;
-HoldsAt: "HoldsAt" "(" fluent=Term "," time=IntExpr ")";
-Happens: "Happens" "(" event=Term "," time=IntExpr ")";
-Initiates: "Initiates" "(" event=Term "," fluent=Term "," time=IntExpr ")";
-Terminates: "Terminates" "(" event=Term "," fluent=Term "," time=IntExpr ")";
-Path: file=File ("/" file=File)*;
-File: name=ID ("." name=ID)*;
+HoldsAt: "HoldsAt" "(" fluent=[Term] ("(" (args+=ID)? ("," args+=ID)* ")")? "," time=IntExpr ")";
+Happens: "Happens" "(" event=[Term] ("(" (args+=ID)? ("," args+=ID)* ")")?"," time=IntExpr ")";
+Initiates: "Initiates" "(" event=[Term] ("(" (args+=ID)? ("," args+=ID)* ")")? "," fluent=[Term] ("(" (args2+=ID)? ("," args2+=ID)* ")")? "," time=IntExpr ")";
+Terminates: "Terminates" "(" event=[Term]("(" (args+=ID)? ("," args+=ID)* ")")? "," fluent=[Term] ("(" (args2+=ID)? ("," args2+=ID)* ")")?"," time=IntExpr ")";
+Path: files+=File ("/" files+=File)*;
+File: names+=ID ("." names+=ID)*;
 terminal SL_COMMENT: ';' !('\n'|'\r')* ('\r'? '\n')?;
 
 terminal ID: ('#' (!('#'))+ '#') |

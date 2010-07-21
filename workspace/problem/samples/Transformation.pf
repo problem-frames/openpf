@@ -1,4 +1,4 @@
-problem: "Transformation"
+problem: #Transformation#
 
 IOR R :"IO Relation" 
 
@@ -8,9 +8,9 @@ I X : "Input"
 
 O X : "Output"
 
-TM -> I :"b"
+TM -- I :"b"
 
-TM -> O : "c"
+TM -- O : "c"
 
 IOR ~> O :"d"
 

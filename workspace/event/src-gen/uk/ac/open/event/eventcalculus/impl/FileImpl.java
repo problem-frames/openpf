@@ -5,12 +5,15 @@
  */
 package uk.ac.open.event.eventcalculus.impl;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 import uk.ac.open.event.eventcalculus.EventcalculusPackage;
 import uk.ac.open.event.eventcalculus.File;
@@ -22,7 +25,7 @@ import uk.ac.open.event.eventcalculus.File;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link uk.ac.open.event.eventcalculus.impl.FileImpl#getName <em>Name</em>}</li>
+ *   <li>{@link uk.ac.open.event.eventcalculus.impl.FileImpl#getNames <em>Names</em>}</li>
  * </ul>
  * </p>
  *
@@ -31,24 +34,14 @@ import uk.ac.open.event.eventcalculus.File;
 public class FileImpl extends MinimalEObjectImpl.Container implements File
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getNames() <em>Names</em>}' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getNames()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
+  protected EList<String> names;
 
   /**
    * <!-- begin-user-doc -->
@@ -76,22 +69,13 @@ public class FileImpl extends MinimalEObjectImpl.Container implements File
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
+  public EList<String> getNames()
   {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EventcalculusPackage.FILE__NAME, oldName, name));
+    if (names == null)
+    {
+      names = new EDataTypeEList<String>(String.class, this, EventcalculusPackage.FILE__NAMES);
+    }
+    return names;
   }
 
   /**
@@ -104,8 +88,8 @@ public class FileImpl extends MinimalEObjectImpl.Container implements File
   {
     switch (featureID)
     {
-      case EventcalculusPackage.FILE__NAME:
-        return getName();
+      case EventcalculusPackage.FILE__NAMES:
+        return getNames();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -115,13 +99,15 @@ public class FileImpl extends MinimalEObjectImpl.Container implements File
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case EventcalculusPackage.FILE__NAME:
-        setName((String)newValue);
+      case EventcalculusPackage.FILE__NAMES:
+        getNames().clear();
+        getNames().addAll((Collection<? extends String>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -137,8 +123,8 @@ public class FileImpl extends MinimalEObjectImpl.Container implements File
   {
     switch (featureID)
     {
-      case EventcalculusPackage.FILE__NAME:
-        setName(NAME_EDEFAULT);
+      case EventcalculusPackage.FILE__NAMES:
+        getNames().clear();
         return;
     }
     super.eUnset(featureID);
@@ -154,8 +140,8 @@ public class FileImpl extends MinimalEObjectImpl.Container implements File
   {
     switch (featureID)
     {
-      case EventcalculusPackage.FILE__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case EventcalculusPackage.FILE__NAMES:
+        return names != null && !names.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -171,8 +157,8 @@ public class FileImpl extends MinimalEObjectImpl.Container implements File
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
+    result.append(" (names: ");
+    result.append(names);
     result.append(')');
     return result.toString();
   }

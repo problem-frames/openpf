@@ -43,6 +43,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EventCalculus.ecore#//BinaryIntExpr/binaryop"/>
     </genClasses>
     <genClasses ecoreClass="EventCalculus.ecore#//TemporalPredicate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EventCalculus.ecore#//TemporalPredicate/args"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//TemporalPredicate/time"/>
     </genClasses>
     <genClasses ecoreClass="EventCalculus.ecore#//BoolExpr"/>
@@ -78,24 +79,26 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EventCalculus.ecore#//Term/args"/>
     </genClasses>
     <genClasses ecoreClass="EventCalculus.ecore#//HoldsAt">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//HoldsAt/fluent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//HoldsAt/fluent"/>
     </genClasses>
     <genClasses ecoreClass="EventCalculus.ecore#//Happens">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//Happens/event"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//Happens/event"/>
     </genClasses>
     <genClasses ecoreClass="EventCalculus.ecore#//Initiates">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//Initiates/event"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//Initiates/fluent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//Initiates/event"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//Initiates/fluent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EventCalculus.ecore#//Initiates/args2"/>
     </genClasses>
     <genClasses ecoreClass="EventCalculus.ecore#//Terminates">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//Terminates/event"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//Terminates/fluent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//Terminates/event"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//Terminates/fluent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EventCalculus.ecore#//Terminates/args2"/>
     </genClasses>
     <genClasses ecoreClass="EventCalculus.ecore#//Path">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//Path/file"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//Path/files"/>
     </genClasses>
     <genClasses ecoreClass="EventCalculus.ecore#//File">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EventCalculus.ecore#//File/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EventCalculus.ecore#//File/names"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -1,0 +1,60 @@
+problem: #The ADS-B problem#
+MSoD R
+:"Maintain the Safety Distance" {
+see "/Examples/event/sit1.ec"
+see "/Examples/event/sit2.ec"
+see "/Examples/event/sit3.ec"
+see "/Examples/event/sit4.ec"
+see "/Examples/istar/open_account.ood" // just a demo
+see problem #The Central Processor problem#
+}
+CP M
+:"Central Processor" { problem:
+#The Central Processor problem# for CPU
+
+CPU M
+:"Central Processing Unit" {
+ see problem #The ADS-B problem#
+}
+}
+
+#ADS-B# C
+:"Ground Receivers"
+
+Display C
+:"ATC Display"
+
+Operator B
+:"ATC Operator"
+
+GPS B
+:"Satellites"
+
+Aircrafts C
+
+CWP X
+:"Controller Working Position"
+
+Operator -- CWP
+:"a"
+
+CWP -- CP
+:"g"
+
+GPS -- Aircrafts
+:"b"
+
+#ADS-B# -- Aircrafts
+:"c"
+
+#ADS-B# -- CP
+:"d"
+
+CP -- Display
+:"f"
+
+CP -- Aircrafts
+:"e"
+
+MSoD ~> Aircrafts
+:"r"

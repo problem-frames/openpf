@@ -13,11 +13,18 @@ package PF2EC.files;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.List;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
+import org.eclipse.acceleo.engine.service.AcceleoService;
+import org.eclipse.acceleo.model.mtl.Module;
+import org.eclipse.acceleo.model.mtl.MtlPackage;
+import org.eclipse.core.runtime.FileLocator;
+import org.eclipse.emf.common.EMFPlugin;
+import org.eclipse.emf.common.util.BasicMonitor;
+import org.eclipse.emf.common.util.Monitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -28,15 +35,11 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
-import org.eclipse.acceleo.model.mtl.Module;
-import org.eclipse.acceleo.model.mtl.MtlPackage;
-import org.eclipse.core.runtime.FileLocator;
-import org.eclipse.emf.common.EMFPlugin;
-import org.eclipse.emf.common.util.Monitor;
-import org.eclipse.emf.common.util.BasicMonitor;
-import org.eclipse.acceleo.engine.service.AcceleoService;
 import org.eclipse.ocl.ecore.EcoreEnvironment;
 import org.eclipse.ocl.ecore.EcoreEnvironmentFactory;
+
+import uk.ac.open.problem.ProblemFactory;
+import uk.ac.open.problem.ProblemPackage;
 
 /**
  * Entry point of the 'Generate' generation module.
@@ -222,6 +225,8 @@ public class Generate {
 				for (int i = 2; i < args.length; i++) {
 					arguments.add(args[i]);
 				}
+				EPackage.Registry.INSTANCE.put(ProblemPackage.eNS_URI, ProblemPackage.eINSTANCE);
+				Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put("pf", ProblemFactory.eINSTANCE);				
 				Generate generator = new Generate(modelURI, folder, arguments);
 				generator.doGenerate(new BasicMonitor());
 			}
@@ -243,9 +248,9 @@ public class Generate {
 		if (!targetFolder.exists()) {
 			targetFolder.mkdirs();
 		}
-		for (int i = 0; i < TEMPLATE_NAMES.length; i++) {
-			AcceleoService.doGenerate(module, TEMPLATE_NAMES[i], model, arguments, targetFolder, false, monitor);
-		}
+//		for (int i = 0; i < TEMPLATE_NAMES.length; i++) {
+//			AcceleoService.doGenerate(module, TEMPLATE_NAMES[i], model, targetFolder, monitor);
+//		}
 	}
 
 	/**

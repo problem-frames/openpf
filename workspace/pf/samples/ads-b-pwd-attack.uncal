@@ -1,0 +1,179 @@
+&src @ cycle(
+(
+  &src := 
+  {
+      name: "#ADS-B Attack#",
+      highlight: "null",
+      nodes:{hd:&NodeImpl1, tl:{hd:&NodeImpl2, tl:{hd:&NodeImpl3, tl:{hd:&NodeImpl4, tl:{hd:&NodeImpl5, tl:{hd:&NodeImpl6, tl:{hd:&NodeImpl7, tl:{hd:&NodeImpl8, tl:{}}}}}}}}},
+      links:{hd:&LinkImpl1, tl:{hd:&LinkImpl2, tl:{hd:&LinkImpl3, tl:{hd:&LinkImpl4, tl:{hd:&LinkImpl5, tl:{hd:&LinkImpl6, tl:{hd:&LinkImpl7, tl:{hd:&LinkImpl8, tl:{hd:&LinkImpl9, tl:{hd:&LinkImpl10, tl:{}}}}}}}}}}}
+  },
+  &NodeImpl1 := 
+  {
+      name: "Collide",
+      type: "R",
+      description: "anti-requirement",
+      hiddenPhenomena:{},
+      subproblem:{},
+      problemNodeRef:{},
+      problemRef:{},
+      href:{}
+  },
+  &NodeImpl2 := 
+  {
+      name: "Aircrafts",
+      type: "C",
+      description: "null",
+      hiddenPhenomena:{},
+      subproblem:{},
+      problemNodeRef:{},
+      problemRef:{},
+      href:{}
+  },
+  &NodeImpl3 := 
+  {
+      name: "Airspace",
+      type: "B",
+      description: "null",
+      hiddenPhenomena:{},
+      subproblem:{},
+      problemNodeRef:{},
+      problemRef:{},
+      href:{}
+  },
+  &NodeImpl4 := 
+  {
+      name: "SSS",
+      type: "C",
+      description: "Secondary Surveillance System",
+      hiddenPhenomena:{},
+      subproblem:{},
+      problemNodeRef:{},
+      problemRef:{},
+      href:{}
+  },
+  &NodeImpl5 := 
+  {
+      name: "PSS",
+      type: "C",
+      description: "Primary Surveillance System",
+      hiddenPhenomena:{},
+      subproblem:{},
+      problemNodeRef:{},
+      problemRef:{},
+      href:{}
+  },
+  &NodeImpl6 := 
+  {
+      name: "CP",
+      type: "M",
+      description: "Central Processor",
+      hiddenPhenomena:{},
+      subproblem:{},
+      problemNodeRef:{},
+      problemRef:{},
+      href:{}
+  },
+  &NodeImpl7 := 
+  {
+      name: "Display",
+      type: "C",
+      description: "ATC Display",
+      hiddenPhenomena:{},
+      subproblem:{},
+      problemNodeRef:{},
+      problemRef:{},
+      href:{}
+  },
+  &NodeImpl8 := 
+  {
+      name: "Operator",
+      type: "B",
+      description: "ATC Operator",
+      hiddenPhenomena:{},
+      subproblem:{},
+      problemNodeRef:{},
+      problemRef:{},
+      href:{}
+  },
+  &LinkImpl1 := 
+  {
+      from: &NodeImpl8,
+      type: "--",
+      to: &NodeImpl6,
+      phenomena:{},
+      description: "h1"
+  },
+  &LinkImpl2 := 
+  {
+      from: &NodeImpl6,
+      type: "--",
+      to: &NodeImpl7,
+      phenomena:{},
+      description: "h2"
+  },
+  &LinkImpl3 := 
+  {
+      from: &NodeImpl5,
+      type: "--",
+      to: &NodeImpl6,
+      phenomena:{},
+      description: "d"
+  },
+  &LinkImpl4 := 
+  {
+      from: &NodeImpl4,
+      type: "--",
+      to: &NodeImpl6,
+      phenomena:{},
+      description: "f"
+  },
+  &LinkImpl5 := 
+  {
+      from: &NodeImpl6,
+      type: "--",
+      to: &NodeImpl2,
+      phenomena:{},
+      description: "g"
+  },
+  &LinkImpl6 := 
+  {
+      from: &NodeImpl3,
+      type: "--",
+      to: &NodeImpl5,
+      phenomena:{},
+      description: "c1"
+  },
+  &LinkImpl7 := 
+  {
+      from: &NodeImpl5,
+      type: "--",
+      to: &NodeImpl3,
+      phenomena:{},
+      description: "c2"
+  },
+  &LinkImpl8 := 
+  {
+      from: &NodeImpl3,
+      type: "--",
+      to: &NodeImpl4,
+      phenomena:{},
+      description: "e1"
+  },
+  &LinkImpl9 := 
+  {
+      from: &NodeImpl2,
+      type: "--",
+      to: &NodeImpl3,
+      phenomena:{},
+      description: "b"
+  },
+  &LinkImpl10 := 
+  {
+      from: &NodeImpl1,
+      type: "~>",
+      to: &NodeImpl2,
+      phenomena:{},
+      description: "a"
+  }
+)
+)

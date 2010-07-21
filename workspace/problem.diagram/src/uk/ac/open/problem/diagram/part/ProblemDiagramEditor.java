@@ -294,11 +294,6 @@ public class ProblemDiagramEditor extends DiagramDocumentEditor implements
 	}
 
 	public static String idToHighlight;
-	@Override
-	/**
-	 * @yy66
-	 * Highlight the element identified by the id  
-	 */
 	public void highlightElement(String id) {
 		idToHighlight = id;		
 	}

@@ -6,7 +6,6 @@
 package uk.ac.open.event.eventcalculus.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -33,7 +32,7 @@ import uk.ac.open.event.eventcalculus.Term;
 public class HoldsAtImpl extends TemporalPredicateImpl implements HoldsAt
 {
   /**
-   * The cached value of the '{@link #getFluent() <em>Fluent</em>}' containment reference.
+   * The cached value of the '{@link #getFluent() <em>Fluent</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getFluent()
@@ -70,6 +69,16 @@ public class HoldsAtImpl extends TemporalPredicateImpl implements HoldsAt
    */
   public Term getFluent()
   {
+    if (fluent != null && fluent.eIsProxy())
+    {
+      InternalEObject oldFluent = (InternalEObject)fluent;
+      fluent = (Term)eResolveProxy(oldFluent);
+      if (fluent != oldFluent)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, EventcalculusPackage.HOLDS_AT__FLUENT, oldFluent, fluent));
+      }
+    }
     return fluent;
   }
 
@@ -78,16 +87,9 @@ public class HoldsAtImpl extends TemporalPredicateImpl implements HoldsAt
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetFluent(Term newFluent, NotificationChain msgs)
+  public Term basicGetFluent()
   {
-    Term oldFluent = fluent;
-    fluent = newFluent;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EventcalculusPackage.HOLDS_AT__FLUENT, oldFluent, newFluent);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
+    return fluent;
   }
 
   /**
@@ -97,34 +99,10 @@ public class HoldsAtImpl extends TemporalPredicateImpl implements HoldsAt
    */
   public void setFluent(Term newFluent)
   {
-    if (newFluent != fluent)
-    {
-      NotificationChain msgs = null;
-      if (fluent != null)
-        msgs = ((InternalEObject)fluent).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EventcalculusPackage.HOLDS_AT__FLUENT, null, msgs);
-      if (newFluent != null)
-        msgs = ((InternalEObject)newFluent).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EventcalculusPackage.HOLDS_AT__FLUENT, null, msgs);
-      msgs = basicSetFluent(newFluent, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EventcalculusPackage.HOLDS_AT__FLUENT, newFluent, newFluent));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case EventcalculusPackage.HOLDS_AT__FLUENT:
-        return basicSetFluent(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
+    Term oldFluent = fluent;
+    fluent = newFluent;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EventcalculusPackage.HOLDS_AT__FLUENT, oldFluent, fluent));
   }
 
   /**
@@ -138,7 +116,8 @@ public class HoldsAtImpl extends TemporalPredicateImpl implements HoldsAt
     switch (featureID)
     {
       case EventcalculusPackage.HOLDS_AT__FLUENT:
-        return getFluent();
+        if (resolve) return getFluent();
+        return basicGetFluent();
     }
     return super.eGet(featureID, resolve, coreType);
   }

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<problem:ProblemDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:problem="http://open.ac.uk/problem" description="Light Controller">
-  <nodes name="LR" description="Light Regime"/>
-  <nodes name="LC" type="M" description="Light Controller"/>
-  <nodes name="L" type="C" description="Light"/>
-  <links from="//@nodes.1" to="//@nodes.2" description="a"/>
-  <links from="//@nodes.0" type="~>" to="//@nodes.2" description="b"/>
-</problem:ProblemDiagram>

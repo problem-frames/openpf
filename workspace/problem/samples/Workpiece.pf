@@ -1,4 +1,4 @@
-problem: "Workpiece"
+problem: #Workpiece#
 
 CE R :"Command Effects" 
 
@@ -8,9 +8,9 @@ U B :"User"
 
 WP X : "Workpiece"
 
-ET -> U : "b"
+ET -- U : "b"
 
-ET -> WP : "c"
+ET -- WP : "c"
 
 CE ~> WP : "d"
 

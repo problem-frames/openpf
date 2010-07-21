@@ -9,21 +9,21 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//Knowledge"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <tokens xsi:type="xtext:Assignment" cardinality="*" feature="imports" operator="+=">
+        <elements xsi:type="xtext:Assignment" cardinality="*" feature="imports" operator="+=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.15"/>
-        </tokens>
-        <tokens xsi:type="xtext:Assignment" cardinality="*" feature="entities" operator="+=">
+        </elements>
+        <elements xsi:type="xtext:Assignment" cardinality="*" feature="entities" operator="+=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.13"/>
-        </tokens>
-        <tokens xsi:type="xtext:Group" cardinality="*">
-          <tokens xsi:type="xtext:Assignment" feature="rules" operator="+=">
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="*">
+          <elements xsi:type="xtext:Assignment" feature="rules" operator="+=">
             <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.1"/>
-          </tokens>
-          <tokens xsi:type="xtext:Keyword" value="."/>
-        </tokens>
-        <tokens xsi:type="xtext:Assignment" cardinality="*" feature="vars" operator="+=">
+          </elements>
+          <elements xsi:type="xtext:Keyword" value="."/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" cardinality="*" feature="vars" operator="+=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.16"/>
-        </tokens>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Rule">
@@ -31,12 +31,12 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//Rule"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <tokens xsi:type="xtext:Assignment" cardinality="?" feature="decl" operator="=">
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="decl" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.2"/>
-        </tokens>
-        <tokens xsi:type="xtext:Assignment" feature="expr" operator="=">
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="expr" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.8"/>
-        </tokens>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="VarDecl">
@@ -44,27 +44,27 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//VarDecl"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <tokens xsi:type="xtext:Keyword" value="["/>
-        <tokens xsi:type="xtext:Assignment" feature="vars" operator="+=">
+        <elements xsi:type="xtext:Keyword" value="["/>
+        <elements xsi:type="xtext:Assignment" feature="vars" operator="+=">
           <terminal xsi:type="xtext:CrossReference">
             <type metamodel="/0/@metamodelDeclarations.0">
               <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//Var"/>
             </type>
             <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
           </terminal>
-        </tokens>
-        <tokens xsi:type="xtext:Group" cardinality="*">
-          <tokens xsi:type="xtext:Keyword" value=","/>
-          <tokens xsi:type="xtext:Assignment" feature="vars" operator="+=">
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="*">
+          <elements xsi:type="xtext:Keyword" value=","/>
+          <elements xsi:type="xtext:Assignment" feature="vars" operator="+=">
             <terminal xsi:type="xtext:CrossReference">
               <type metamodel="/0/@metamodelDeclarations.0">
                 <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//Var"/>
               </type>
               <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
             </terminal>
-          </tokens>
-        </tokens>
-        <tokens xsi:type="xtext:Keyword" value="]"/>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="]"/>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="IntTerm">
@@ -72,17 +72,17 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//IntTerm"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
-        <groups xsi:type="xtext:Assignment" feature="const" operator="=">
+        <elements xsi:type="xtext:Assignment" feature="const" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.1"/>
-        </groups>
-        <groups xsi:type="xtext:Assignment" feature="var" operator="=">
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="var" operator="=">
           <terminal xsi:type="xtext:CrossReference">
             <type metamodel="/0/@metamodelDeclarations.0">
               <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//Var"/>
             </type>
             <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
           </terminal>
-        </groups>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="IntExpr">
@@ -90,8 +90,8 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//IntExpr"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
-        <groups xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
-        <groups xsi:type="xtext:RuleCall" rule="/0/@rules.5"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.5"/>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="BinaryIntExpr">
@@ -99,15 +99,15 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//BinaryIntExpr"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <tokens xsi:type="xtext:Assignment" feature="opr" operator="+=">
+        <elements xsi:type="xtext:Assignment" feature="opr" operator="+=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
-        </tokens>
-        <tokens xsi:type="xtext:Assignment" feature="binaryop" operator="=">
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="binaryop" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.6"/>
-        </tokens>
-        <tokens xsi:type="xtext:Assignment" feature="opr" operator="+=">
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="opr" operator="+=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
-        </tokens>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:EnumRule" name="BinaryIntOp">
@@ -115,14 +115,14 @@
         <classifier xsi:type="ecore:EEnum" href="http://www.ac.uk/open/EventCalculus#//BinaryIntOp"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
-        <groups xsi:type="xtext:EnumLiteralDeclaration">
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
           <enumLiteral href="http://www.ac.uk/open/EventCalculus#//BinaryIntOp/PLUS"/>
           <literal value="+"/>
-        </groups>
-        <groups xsi:type="xtext:EnumLiteralDeclaration">
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
           <enumLiteral href="http://www.ac.uk/open/EventCalculus#//BinaryIntOp/MINUS"/>
           <literal value="-"/>
-        </groups>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="TemporalPredicate">
@@ -130,10 +130,10 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//TemporalPredicate"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
-        <groups xsi:type="xtext:RuleCall" rule="/0/@rules.20"/>
-        <groups xsi:type="xtext:RuleCall" rule="/0/@rules.21"/>
-        <groups xsi:type="xtext:RuleCall" rule="/0/@rules.22"/>
-        <groups xsi:type="xtext:RuleCall" rule="/0/@rules.23"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.20"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.21"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.22"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.23"/>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="BoolExpr">
@@ -141,9 +141,9 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//BoolExpr"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
-        <groups xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
-        <groups xsi:type="xtext:RuleCall" rule="/0/@rules.9"/>
-        <groups xsi:type="xtext:RuleCall" rule="/0/@rules.11"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.9"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.11"/>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="UnaryBoolExpr">
@@ -151,21 +151,21 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//UnaryBoolExpr"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
-        <groups xsi:type="xtext:Group">
-          <tokens xsi:type="xtext:Assignment" feature="unaryop_lhs" operator="=">
+        <elements xsi:type="xtext:Group">
+          <elements xsi:type="xtext:Assignment" feature="unaryop_lhs" operator="=">
             <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
-          </tokens>
-          <tokens xsi:type="xtext:Assignment" feature="opr" operator="+=">
+          </elements>
+          <elements xsi:type="xtext:Assignment" feature="opr" operator="+=">
             <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.8"/>
-          </tokens>
-        </groups>
-        <groups xsi:type="xtext:Group">
-          <tokens xsi:type="xtext:Keyword" value="("/>
-          <tokens xsi:type="xtext:Assignment" feature="ops" operator="+=">
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Group">
+          <elements xsi:type="xtext:Keyword" value="("/>
+          <elements xsi:type="xtext:Assignment" feature="ops" operator="+=">
             <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.8"/>
-          </tokens>
-          <tokens xsi:type="xtext:Keyword" value=")"/>
-        </groups>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value=")"/>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:EnumRule" name="UnaryBoolOp">
@@ -182,15 +182,15 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//BinaryBoolExpr"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <tokens xsi:type="xtext:Assignment" feature="opr" operator="+=">
+        <elements xsi:type="xtext:Assignment" feature="opr" operator="+=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
-        </tokens>
-        <tokens xsi:type="xtext:Assignment" feature="binaryop" operator="=">
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="binaryop" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
-        </tokens>
-        <tokens xsi:type="xtext:Assignment" feature="opr" operator="+=">
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="opr" operator="+=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.8"/>
-        </tokens>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:EnumRule" name="BinaryBoolOp">
@@ -198,22 +198,22 @@
         <classifier xsi:type="ecore:EEnum" href="http://www.ac.uk/open/EventCalculus#//BinaryBoolOp"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
-        <groups xsi:type="xtext:EnumLiteralDeclaration">
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
           <enumLiteral href="http://www.ac.uk/open/EventCalculus#//BinaryBoolOp/IMPLICATION"/>
           <literal value="->"/>
-        </groups>
-        <groups xsi:type="xtext:EnumLiteralDeclaration">
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
           <enumLiteral href="http://www.ac.uk/open/EventCalculus#//BinaryBoolOp/EQUIVALENCE"/>
           <literal value="&lt;->"/>
-        </groups>
-        <groups xsi:type="xtext:EnumLiteralDeclaration">
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
           <enumLiteral href="http://www.ac.uk/open/EventCalculus#//BinaryBoolOp/AND"/>
           <literal value="&amp;"/>
-        </groups>
-        <groups xsi:type="xtext:EnumLiteralDeclaration">
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
           <enumLiteral href="http://www.ac.uk/open/EventCalculus#//BinaryBoolOp/OR"/>
           <literal value="|"/>
-        </groups>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Entity">
@@ -221,9 +221,9 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//Entity"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
-        <groups xsi:type="xtext:RuleCall" rule="/0/@rules.17"/>
-        <groups xsi:type="xtext:RuleCall" rule="/0/@rules.18"/>
-        <groups xsi:type="xtext:RuleCall" rule="/0/@rules.14"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.17"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.18"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.14"/>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Sort">
@@ -231,10 +231,10 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//Sort"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <tokens xsi:type="xtext:Keyword" value="sort"/>
-        <tokens xsi:type="xtext:Assignment" feature="name" operator="=">
+        <elements xsi:type="xtext:Keyword" value="sort"/>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
-        </tokens>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Import">
@@ -242,10 +242,10 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//Import"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <tokens xsi:type="xtext:Keyword" value="load"/>
-        <tokens xsi:type="xtext:Assignment" feature="path" operator="=">
+        <elements xsi:type="xtext:Keyword" value="load"/>
+        <elements xsi:type="xtext:Assignment" feature="path" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.24"/>
-        </tokens>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Var">
@@ -253,16 +253,16 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//Var"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <tokens xsi:type="xtext:Keyword" value="range"/>
-        <tokens xsi:type="xtext:Assignment" feature="name" operator="=">
+        <elements xsi:type="xtext:Keyword" value="range"/>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
-        </tokens>
-        <tokens xsi:type="xtext:Assignment" feature="min" operator="=">
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="min" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.1"/>
-        </tokens>
-        <tokens xsi:type="xtext:Assignment" feature="max" operator="=">
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="max" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.1"/>
-        </tokens>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Fluent">
@@ -270,10 +270,10 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//Fluent"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <tokens xsi:type="xtext:Keyword" value="fluent"/>
-        <tokens xsi:type="xtext:Assignment" feature="term" operator="=">
+        <elements xsi:type="xtext:Keyword" value="fluent"/>
+        <elements xsi:type="xtext:Assignment" feature="term" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
-        </tokens>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Event">
@@ -281,10 +281,10 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//Event"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <tokens xsi:type="xtext:Keyword" value="event"/>
-        <tokens xsi:type="xtext:Assignment" feature="term" operator="=">
+        <elements xsi:type="xtext:Keyword" value="event"/>
+        <elements xsi:type="xtext:Assignment" feature="term" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
-        </tokens>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Term">
@@ -292,22 +292,22 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//Term"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <tokens xsi:type="xtext:Assignment" feature="name" operator="=">
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
-        </tokens>
-        <tokens xsi:type="xtext:Group" cardinality="?">
-          <tokens xsi:type="xtext:Keyword" value="("/>
-          <tokens xsi:type="xtext:Assignment" cardinality="?" feature="args" operator="+=">
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="("/>
+          <elements xsi:type="xtext:Assignment" cardinality="?" feature="args" operator="+=">
             <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
-          </tokens>
-          <tokens xsi:type="xtext:Group" cardinality="*">
-            <tokens xsi:type="xtext:Keyword" value=","/>
-            <tokens xsi:type="xtext:Assignment" feature="args" operator="+=">
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="args" operator="+=">
               <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
-            </tokens>
-          </tokens>
-          <tokens xsi:type="xtext:Keyword" value=")"/>
-        </tokens>
+            </elements>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value=")"/>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="HoldsAt">
@@ -315,16 +315,34 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//HoldsAt"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <tokens xsi:type="xtext:Keyword" value="HoldsAt"/>
-        <tokens xsi:type="xtext:Keyword" value="("/>
-        <tokens xsi:type="xtext:Assignment" feature="fluent" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
-        </tokens>
-        <tokens xsi:type="xtext:Keyword" value=","/>
-        <tokens xsi:type="xtext:Assignment" feature="time" operator="=">
+        <elements xsi:type="xtext:Keyword" value="HoldsAt"/>
+        <elements xsi:type="xtext:Keyword" value="("/>
+        <elements xsi:type="xtext:Assignment" feature="fluent" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.0">
+              <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//Term"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="("/>
+          <elements xsi:type="xtext:Assignment" cardinality="?" feature="args" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="args" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
+            </elements>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value=")"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value=","/>
+        <elements xsi:type="xtext:Assignment" feature="time" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
-        </tokens>
-        <tokens xsi:type="xtext:Keyword" value=")"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value=")"/>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Happens">
@@ -332,16 +350,34 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//Happens"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <tokens xsi:type="xtext:Keyword" value="Happens"/>
-        <tokens xsi:type="xtext:Keyword" value="("/>
-        <tokens xsi:type="xtext:Assignment" feature="event" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
-        </tokens>
-        <tokens xsi:type="xtext:Keyword" value=","/>
-        <tokens xsi:type="xtext:Assignment" feature="time" operator="=">
+        <elements xsi:type="xtext:Keyword" value="Happens"/>
+        <elements xsi:type="xtext:Keyword" value="("/>
+        <elements xsi:type="xtext:Assignment" feature="event" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.0">
+              <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//Term"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="("/>
+          <elements xsi:type="xtext:Assignment" cardinality="?" feature="args" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="args" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
+            </elements>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value=")"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value=","/>
+        <elements xsi:type="xtext:Assignment" feature="time" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
-        </tokens>
-        <tokens xsi:type="xtext:Keyword" value=")"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value=")"/>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Initiates">
@@ -349,20 +385,56 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//Initiates"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <tokens xsi:type="xtext:Keyword" value="Initiates"/>
-        <tokens xsi:type="xtext:Keyword" value="("/>
-        <tokens xsi:type="xtext:Assignment" feature="event" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
-        </tokens>
-        <tokens xsi:type="xtext:Keyword" value=","/>
-        <tokens xsi:type="xtext:Assignment" feature="fluent" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
-        </tokens>
-        <tokens xsi:type="xtext:Keyword" value=","/>
-        <tokens xsi:type="xtext:Assignment" feature="time" operator="=">
+        <elements xsi:type="xtext:Keyword" value="Initiates"/>
+        <elements xsi:type="xtext:Keyword" value="("/>
+        <elements xsi:type="xtext:Assignment" feature="event" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.0">
+              <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//Term"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="("/>
+          <elements xsi:type="xtext:Assignment" cardinality="?" feature="args" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="args" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
+            </elements>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value=")"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value=","/>
+        <elements xsi:type="xtext:Assignment" feature="fluent" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.0">
+              <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//Term"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="("/>
+          <elements xsi:type="xtext:Assignment" cardinality="?" feature="args2" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="args2" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
+            </elements>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value=")"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value=","/>
+        <elements xsi:type="xtext:Assignment" feature="time" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
-        </tokens>
-        <tokens xsi:type="xtext:Keyword" value=")"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value=")"/>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Terminates">
@@ -370,20 +442,56 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//Terminates"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <tokens xsi:type="xtext:Keyword" value="Terminates"/>
-        <tokens xsi:type="xtext:Keyword" value="("/>
-        <tokens xsi:type="xtext:Assignment" feature="event" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
-        </tokens>
-        <tokens xsi:type="xtext:Keyword" value=","/>
-        <tokens xsi:type="xtext:Assignment" feature="fluent" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
-        </tokens>
-        <tokens xsi:type="xtext:Keyword" value=","/>
-        <tokens xsi:type="xtext:Assignment" feature="time" operator="=">
+        <elements xsi:type="xtext:Keyword" value="Terminates"/>
+        <elements xsi:type="xtext:Keyword" value="("/>
+        <elements xsi:type="xtext:Assignment" feature="event" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.0">
+              <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//Term"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="("/>
+          <elements xsi:type="xtext:Assignment" cardinality="?" feature="args" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="args" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
+            </elements>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value=")"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value=","/>
+        <elements xsi:type="xtext:Assignment" feature="fluent" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.0">
+              <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//Term"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="("/>
+          <elements xsi:type="xtext:Assignment" cardinality="?" feature="args2" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="args2" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
+            </elements>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value=")"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value=","/>
+        <elements xsi:type="xtext:Assignment" feature="time" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
-        </tokens>
-        <tokens xsi:type="xtext:Keyword" value=")"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value=")"/>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Path">
@@ -391,15 +499,15 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//Path"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <tokens xsi:type="xtext:Assignment" feature="file" operator="=">
+        <elements xsi:type="xtext:Assignment" feature="files" operator="+=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.25"/>
-        </tokens>
-        <tokens xsi:type="xtext:Group" cardinality="*">
-          <tokens xsi:type="xtext:Keyword" value="/"/>
-          <tokens xsi:type="xtext:Assignment" feature="file" operator="=">
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="*">
+          <elements xsi:type="xtext:Keyword" value="/"/>
+          <elements xsi:type="xtext:Assignment" feature="files" operator="+=">
             <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.25"/>
-          </tokens>
-        </tokens>
+          </elements>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="File">
@@ -407,15 +515,15 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/EventCalculus#//File"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <tokens xsi:type="xtext:Assignment" feature="name" operator="=">
+        <elements xsi:type="xtext:Assignment" feature="names" operator="+=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
-        </tokens>
-        <tokens xsi:type="xtext:Group" cardinality="*">
-          <tokens xsi:type="xtext:Keyword" value="."/>
-          <tokens xsi:type="xtext:Assignment" feature="name" operator="=">
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="*">
+          <elements xsi:type="xtext:Keyword" value="."/>
+          <elements xsi:type="xtext:Assignment" feature="names" operator="+=">
             <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
-          </tokens>
-        </tokens>
+          </elements>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:TerminalRule" name="SL_COMMENT">
@@ -423,17 +531,17 @@
         <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <tokens xsi:type="xtext:Keyword" value=";"/>
-        <tokens xsi:type="xtext:NegatedToken" cardinality="*">
+        <elements xsi:type="xtext:Keyword" value=";"/>
+        <elements xsi:type="xtext:NegatedToken" cardinality="*">
           <terminal xsi:type="xtext:Alternatives">
-            <groups xsi:type="xtext:Keyword" value="&#xA;"/>
-            <groups xsi:type="xtext:Keyword" value="&#xD;"/>
+            <elements xsi:type="xtext:Keyword" value="&#xA;"/>
+            <elements xsi:type="xtext:Keyword" value="&#xD;"/>
           </terminal>
-        </tokens>
-        <tokens xsi:type="xtext:Group" cardinality="?">
-          <tokens xsi:type="xtext:Keyword" cardinality="?" value="&#xD;"/>
-          <tokens xsi:type="xtext:Keyword" value="&#xA;"/>
-        </tokens>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" cardinality="?" value="&#xD;"/>
+          <elements xsi:type="xtext:Keyword" value="&#xA;"/>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:TerminalRule" name="ID">
@@ -441,42 +549,42 @@
         <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
-        <groups xsi:type="xtext:Group">
-          <tokens xsi:type="xtext:Keyword" value="#"/>
-          <tokens xsi:type="xtext:NegatedToken" cardinality="+">
+        <elements xsi:type="xtext:Group">
+          <elements xsi:type="xtext:Keyword" value="#"/>
+          <elements xsi:type="xtext:NegatedToken" cardinality="+">
             <terminal xsi:type="xtext:Keyword" value="#"/>
-          </tokens>
-          <tokens xsi:type="xtext:Keyword" value="#"/>
-        </groups>
-        <groups xsi:type="xtext:Group">
-          <tokens xsi:type="xtext:Keyword" cardinality="?" value="^"/>
-          <tokens xsi:type="xtext:Alternatives">
-            <groups xsi:type="xtext:CharacterRange">
+          </elements>
+          <elements xsi:type="xtext:Keyword" value="#"/>
+        </elements>
+        <elements xsi:type="xtext:Group">
+          <elements xsi:type="xtext:Keyword" cardinality="?" value="^"/>
+          <elements xsi:type="xtext:Alternatives">
+            <elements xsi:type="xtext:CharacterRange">
               <left value="a"/>
               <right value="z"/>
-            </groups>
-            <groups xsi:type="xtext:CharacterRange">
+            </elements>
+            <elements xsi:type="xtext:CharacterRange">
               <left value="A"/>
               <right value="Z"/>
-            </groups>
-            <groups xsi:type="xtext:Keyword" value="_"/>
-          </tokens>
-          <tokens xsi:type="xtext:Alternatives" cardinality="*">
-            <groups xsi:type="xtext:CharacterRange">
+            </elements>
+            <elements xsi:type="xtext:Keyword" value="_"/>
+          </elements>
+          <elements xsi:type="xtext:Alternatives" cardinality="*">
+            <elements xsi:type="xtext:CharacterRange">
               <left value="a"/>
               <right value="z"/>
-            </groups>
-            <groups xsi:type="xtext:CharacterRange">
+            </elements>
+            <elements xsi:type="xtext:CharacterRange">
               <left value="A"/>
               <right value="Z"/>
-            </groups>
-            <groups xsi:type="xtext:Keyword" value="_"/>
-            <groups xsi:type="xtext:CharacterRange">
+            </elements>
+            <elements xsi:type="xtext:Keyword" value="_"/>
+            <elements xsi:type="xtext:CharacterRange">
               <left value="0"/>
               <right value="9"/>
-            </groups>
-          </tokens>
-        </groups>
+            </elements>
+          </elements>
+        </elements>
       </alternatives>
     </rules>
   </xtext:Grammar>
@@ -489,33 +597,33 @@
         <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <tokens xsi:type="xtext:Keyword" cardinality="?" value="^"/>
-        <tokens xsi:type="xtext:Alternatives">
-          <groups xsi:type="xtext:CharacterRange">
+        <elements xsi:type="xtext:Keyword" cardinality="?" value="^"/>
+        <elements xsi:type="xtext:Alternatives">
+          <elements xsi:type="xtext:CharacterRange">
             <left value="a"/>
             <right value="z"/>
-          </groups>
-          <groups xsi:type="xtext:CharacterRange">
+          </elements>
+          <elements xsi:type="xtext:CharacterRange">
             <left value="A"/>
             <right value="Z"/>
-          </groups>
-          <groups xsi:type="xtext:Keyword" value="_"/>
-        </tokens>
-        <tokens xsi:type="xtext:Alternatives" cardinality="*">
-          <groups xsi:type="xtext:CharacterRange">
+          </elements>
+          <elements xsi:type="xtext:Keyword" value="_"/>
+        </elements>
+        <elements xsi:type="xtext:Alternatives" cardinality="*">
+          <elements xsi:type="xtext:CharacterRange">
             <left value="a"/>
             <right value="z"/>
-          </groups>
-          <groups xsi:type="xtext:CharacterRange">
+          </elements>
+          <elements xsi:type="xtext:CharacterRange">
             <left value="A"/>
             <right value="Z"/>
-          </groups>
-          <groups xsi:type="xtext:Keyword" value="_"/>
-          <groups xsi:type="xtext:CharacterRange">
+          </elements>
+          <elements xsi:type="xtext:Keyword" value="_"/>
+          <elements xsi:type="xtext:CharacterRange">
             <left value="0"/>
             <right value="9"/>
-          </groups>
-        </tokens>
+          </elements>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:TerminalRule" name="INT">
@@ -532,56 +640,56 @@
         <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
-        <groups xsi:type="xtext:Group">
-          <tokens xsi:type="xtext:Keyword" value="&quot;"/>
-          <tokens xsi:type="xtext:Alternatives" cardinality="*">
-            <groups xsi:type="xtext:Group">
-              <tokens xsi:type="xtext:Keyword" value="\"/>
-              <tokens xsi:type="xtext:Alternatives">
-                <groups xsi:type="xtext:Keyword" value="b"/>
-                <groups xsi:type="xtext:Keyword" value="t"/>
-                <groups xsi:type="xtext:Keyword" value="n"/>
-                <groups xsi:type="xtext:Keyword" value="f"/>
-                <groups xsi:type="xtext:Keyword" value="r"/>
-                <groups xsi:type="xtext:Keyword" value="&quot;"/>
-                <groups xsi:type="xtext:Keyword" value="'"/>
-                <groups xsi:type="xtext:Keyword" value="\"/>
-              </tokens>
-            </groups>
-            <groups xsi:type="xtext:NegatedToken">
+        <elements xsi:type="xtext:Group">
+          <elements xsi:type="xtext:Keyword" value="&quot;"/>
+          <elements xsi:type="xtext:Alternatives" cardinality="*">
+            <elements xsi:type="xtext:Group">
+              <elements xsi:type="xtext:Keyword" value="\"/>
+              <elements xsi:type="xtext:Alternatives">
+                <elements xsi:type="xtext:Keyword" value="b"/>
+                <elements xsi:type="xtext:Keyword" value="t"/>
+                <elements xsi:type="xtext:Keyword" value="n"/>
+                <elements xsi:type="xtext:Keyword" value="f"/>
+                <elements xsi:type="xtext:Keyword" value="r"/>
+                <elements xsi:type="xtext:Keyword" value="&quot;"/>
+                <elements xsi:type="xtext:Keyword" value="'"/>
+                <elements xsi:type="xtext:Keyword" value="\"/>
+              </elements>
+            </elements>
+            <elements xsi:type="xtext:NegatedToken">
               <terminal xsi:type="xtext:Alternatives">
-                <groups xsi:type="xtext:Keyword" value="\"/>
-                <groups xsi:type="xtext:Keyword" value="&quot;"/>
+                <elements xsi:type="xtext:Keyword" value="\"/>
+                <elements xsi:type="xtext:Keyword" value="&quot;"/>
               </terminal>
-            </groups>
-          </tokens>
-          <tokens xsi:type="xtext:Keyword" value="&quot;"/>
-        </groups>
-        <groups xsi:type="xtext:Group">
-          <tokens xsi:type="xtext:Keyword" value="'"/>
-          <tokens xsi:type="xtext:Alternatives" cardinality="*">
-            <groups xsi:type="xtext:Group">
-              <tokens xsi:type="xtext:Keyword" value="\"/>
-              <tokens xsi:type="xtext:Alternatives">
-                <groups xsi:type="xtext:Keyword" value="b"/>
-                <groups xsi:type="xtext:Keyword" value="t"/>
-                <groups xsi:type="xtext:Keyword" value="n"/>
-                <groups xsi:type="xtext:Keyword" value="f"/>
-                <groups xsi:type="xtext:Keyword" value="r"/>
-                <groups xsi:type="xtext:Keyword" value="&quot;"/>
-                <groups xsi:type="xtext:Keyword" value="'"/>
-                <groups xsi:type="xtext:Keyword" value="\"/>
-              </tokens>
-            </groups>
-            <groups xsi:type="xtext:NegatedToken">
+            </elements>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value="&quot;"/>
+        </elements>
+        <elements xsi:type="xtext:Group">
+          <elements xsi:type="xtext:Keyword" value="'"/>
+          <elements xsi:type="xtext:Alternatives" cardinality="*">
+            <elements xsi:type="xtext:Group">
+              <elements xsi:type="xtext:Keyword" value="\"/>
+              <elements xsi:type="xtext:Alternatives">
+                <elements xsi:type="xtext:Keyword" value="b"/>
+                <elements xsi:type="xtext:Keyword" value="t"/>
+                <elements xsi:type="xtext:Keyword" value="n"/>
+                <elements xsi:type="xtext:Keyword" value="f"/>
+                <elements xsi:type="xtext:Keyword" value="r"/>
+                <elements xsi:type="xtext:Keyword" value="&quot;"/>
+                <elements xsi:type="xtext:Keyword" value="'"/>
+                <elements xsi:type="xtext:Keyword" value="\"/>
+              </elements>
+            </elements>
+            <elements xsi:type="xtext:NegatedToken">
               <terminal xsi:type="xtext:Alternatives">
-                <groups xsi:type="xtext:Keyword" value="\"/>
-                <groups xsi:type="xtext:Keyword" value="'"/>
+                <elements xsi:type="xtext:Keyword" value="\"/>
+                <elements xsi:type="xtext:Keyword" value="'"/>
               </terminal>
-            </groups>
-          </tokens>
-          <tokens xsi:type="xtext:Keyword" value="'"/>
-        </groups>
+            </elements>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value="'"/>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:TerminalRule" name="ML_COMMENT">
@@ -589,10 +697,10 @@
         <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <tokens xsi:type="xtext:Keyword" value="/*"/>
-        <tokens xsi:type="xtext:UntilToken">
+        <elements xsi:type="xtext:Keyword" value="/*"/>
+        <elements xsi:type="xtext:UntilToken">
           <terminal xsi:type="xtext:Keyword" value="*/"/>
-        </tokens>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:TerminalRule" name="SL_COMMENT">
@@ -600,17 +708,17 @@
         <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <tokens xsi:type="xtext:Keyword" value="//"/>
-        <tokens xsi:type="xtext:NegatedToken" cardinality="*">
+        <elements xsi:type="xtext:Keyword" value="//"/>
+        <elements xsi:type="xtext:NegatedToken" cardinality="*">
           <terminal xsi:type="xtext:Alternatives">
-            <groups xsi:type="xtext:Keyword" value="&#xA;"/>
-            <groups xsi:type="xtext:Keyword" value="&#xD;"/>
+            <elements xsi:type="xtext:Keyword" value="&#xA;"/>
+            <elements xsi:type="xtext:Keyword" value="&#xD;"/>
           </terminal>
-        </tokens>
-        <tokens xsi:type="xtext:Group" cardinality="?">
-          <tokens xsi:type="xtext:Keyword" cardinality="?" value="&#xD;"/>
-          <tokens xsi:type="xtext:Keyword" value="&#xA;"/>
-        </tokens>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" cardinality="?" value="&#xD;"/>
+          <elements xsi:type="xtext:Keyword" value="&#xA;"/>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:TerminalRule" name="WS">
@@ -618,10 +726,10 @@
         <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives" cardinality="+">
-        <groups xsi:type="xtext:Keyword" value=" "/>
-        <groups xsi:type="xtext:Keyword" value="&#x9;"/>
-        <groups xsi:type="xtext:Keyword" value="&#xD;"/>
-        <groups xsi:type="xtext:Keyword" value="&#xA;"/>
+        <elements xsi:type="xtext:Keyword" value=" "/>
+        <elements xsi:type="xtext:Keyword" value="&#x9;"/>
+        <elements xsi:type="xtext:Keyword" value="&#xD;"/>
+        <elements xsi:type="xtext:Keyword" value="&#xA;"/>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:TerminalRule" name="ANY_OTHER">

@@ -1,4 +1,4 @@
-problem: "Required Behavior"
+problem: #Required Behavior#
 
 RB R :"Required Behavior" 
 
@@ -9,5 +9,5 @@ CD C :"Controlled Domain"
 RB ~> CD
 :"a"
 
-CM -> CD
+CM -- CD
 :"b"

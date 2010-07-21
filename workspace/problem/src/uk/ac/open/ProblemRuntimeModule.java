@@ -3,14 +3,13 @@
  */
 package uk.ac.open;
 
-import org.eclipse.xtext.linking.ILinkingService;
 
 
 /**
  * Use this class to register components to be used within the IDE.
  */
 public class ProblemRuntimeModule extends uk.ac.open.AbstractProblemRuntimeModule {
-	public Class<? extends ILinkingService> bindILinkingService() {
-		return ProblemIDLinking.class;
-	}
+//	public Class<? extends ILinkingService> bindILinkingService() {
+//		return ProblemIDLinking.class;
+//	}
 }

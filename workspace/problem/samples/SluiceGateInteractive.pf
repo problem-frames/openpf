@@ -1,4 +1,4 @@
-problem: "Sluice Gate: respond to command by the operator"
+problem: #Sluice Gate: respond to command by the operator#
 
 OC R :"Obey Command" 
 
@@ -8,10 +8,10 @@ G C :"Gate"
 
 O B : "Operator"
 
-IC -> G :"a"
+IC -- G :"a"
 
 OC ~> G :"b"
 
-IC -> O : "c"
+IC -- O : "c"
 
 OC ~~ O : "c"

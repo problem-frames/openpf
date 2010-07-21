@@ -303,13 +303,22 @@ public interface EventcalculusPackage extends EPackage
   int TEMPORAL_PREDICATE = 6;
 
   /**
+   * The feature id for the '<em><b>Args</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEMPORAL_PREDICATE__ARGS = BOOL_EXPR_FEATURE_COUNT + 0;
+
+  /**
    * The feature id for the '<em><b>Time</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TEMPORAL_PREDICATE__TIME = BOOL_EXPR_FEATURE_COUNT + 0;
+  int TEMPORAL_PREDICATE__TIME = BOOL_EXPR_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Temporal Predicate</em>' class.
@@ -318,7 +327,7 @@ public interface EventcalculusPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEMPORAL_PREDICATE_FEATURE_COUNT = BOOL_EXPR_FEATURE_COUNT + 1;
+  int TEMPORAL_PREDICATE_FEATURE_COUNT = BOOL_EXPR_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link uk.ac.open.event.eventcalculus.impl.UnaryBoolExprImpl <em>Unary Bool Expr</em>}' class.
@@ -628,6 +637,15 @@ public interface EventcalculusPackage extends EPackage
   int HOLDS_AT = 17;
 
   /**
+   * The feature id for the '<em><b>Args</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HOLDS_AT__ARGS = TEMPORAL_PREDICATE__ARGS;
+
+  /**
    * The feature id for the '<em><b>Time</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -637,7 +655,7 @@ public interface EventcalculusPackage extends EPackage
   int HOLDS_AT__TIME = TEMPORAL_PREDICATE__TIME;
 
   /**
-   * The feature id for the '<em><b>Fluent</b></em>' containment reference.
+   * The feature id for the '<em><b>Fluent</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -665,6 +683,15 @@ public interface EventcalculusPackage extends EPackage
   int HAPPENS = 18;
 
   /**
+   * The feature id for the '<em><b>Args</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HAPPENS__ARGS = TEMPORAL_PREDICATE__ARGS;
+
+  /**
    * The feature id for the '<em><b>Time</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -674,7 +701,7 @@ public interface EventcalculusPackage extends EPackage
   int HAPPENS__TIME = TEMPORAL_PREDICATE__TIME;
 
   /**
-   * The feature id for the '<em><b>Event</b></em>' containment reference.
+   * The feature id for the '<em><b>Event</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -702,6 +729,15 @@ public interface EventcalculusPackage extends EPackage
   int INITIATES = 19;
 
   /**
+   * The feature id for the '<em><b>Args</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIATES__ARGS = TEMPORAL_PREDICATE__ARGS;
+
+  /**
    * The feature id for the '<em><b>Time</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -711,7 +747,7 @@ public interface EventcalculusPackage extends EPackage
   int INITIATES__TIME = TEMPORAL_PREDICATE__TIME;
 
   /**
-   * The feature id for the '<em><b>Event</b></em>' containment reference.
+   * The feature id for the '<em><b>Event</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -720,7 +756,7 @@ public interface EventcalculusPackage extends EPackage
   int INITIATES__EVENT = TEMPORAL_PREDICATE_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Fluent</b></em>' containment reference.
+   * The feature id for the '<em><b>Fluent</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -729,13 +765,22 @@ public interface EventcalculusPackage extends EPackage
   int INITIATES__FLUENT = TEMPORAL_PREDICATE_FEATURE_COUNT + 1;
 
   /**
+   * The feature id for the '<em><b>Args2</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIATES__ARGS2 = TEMPORAL_PREDICATE_FEATURE_COUNT + 2;
+
+  /**
    * The number of structural features of the '<em>Initiates</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INITIATES_FEATURE_COUNT = TEMPORAL_PREDICATE_FEATURE_COUNT + 2;
+  int INITIATES_FEATURE_COUNT = TEMPORAL_PREDICATE_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link uk.ac.open.event.eventcalculus.impl.TerminatesImpl <em>Terminates</em>}' class.
@@ -748,6 +793,15 @@ public interface EventcalculusPackage extends EPackage
   int TERMINATES = 20;
 
   /**
+   * The feature id for the '<em><b>Args</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TERMINATES__ARGS = TEMPORAL_PREDICATE__ARGS;
+
+  /**
    * The feature id for the '<em><b>Time</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -757,7 +811,7 @@ public interface EventcalculusPackage extends EPackage
   int TERMINATES__TIME = TEMPORAL_PREDICATE__TIME;
 
   /**
-   * The feature id for the '<em><b>Event</b></em>' containment reference.
+   * The feature id for the '<em><b>Event</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -766,7 +820,7 @@ public interface EventcalculusPackage extends EPackage
   int TERMINATES__EVENT = TEMPORAL_PREDICATE_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Fluent</b></em>' containment reference.
+   * The feature id for the '<em><b>Fluent</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -775,13 +829,22 @@ public interface EventcalculusPackage extends EPackage
   int TERMINATES__FLUENT = TEMPORAL_PREDICATE_FEATURE_COUNT + 1;
 
   /**
+   * The feature id for the '<em><b>Args2</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TERMINATES__ARGS2 = TEMPORAL_PREDICATE_FEATURE_COUNT + 2;
+
+  /**
    * The number of structural features of the '<em>Terminates</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TERMINATES_FEATURE_COUNT = TEMPORAL_PREDICATE_FEATURE_COUNT + 2;
+  int TERMINATES_FEATURE_COUNT = TEMPORAL_PREDICATE_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link uk.ac.open.event.eventcalculus.impl.PathImpl <em>Path</em>}' class.
@@ -794,13 +857,13 @@ public interface EventcalculusPackage extends EPackage
   int PATH = 21;
 
   /**
-   * The feature id for the '<em><b>File</b></em>' containment reference.
+   * The feature id for the '<em><b>Files</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PATH__FILE = 0;
+  int PATH__FILES = 0;
 
   /**
    * The number of structural features of the '<em>Path</em>' class.
@@ -822,13 +885,13 @@ public interface EventcalculusPackage extends EPackage
   int FILE = 22;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * The feature id for the '<em><b>Names</b></em>' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FILE__NAME = 0;
+  int FILE__NAMES = 0;
 
   /**
    * The number of structural features of the '<em>File</em>' class.
@@ -1060,6 +1123,17 @@ public interface EventcalculusPackage extends EPackage
    * @generated
    */
   EClass getTemporalPredicate();
+
+  /**
+   * Returns the meta object for the attribute list '{@link uk.ac.open.event.eventcalculus.TemporalPredicate#getArgs <em>Args</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Args</em>'.
+   * @see uk.ac.open.event.eventcalculus.TemporalPredicate#getArgs()
+   * @see #getTemporalPredicate()
+   * @generated
+   */
+  EAttribute getTemporalPredicate_Args();
 
   /**
    * Returns the meta object for the containment reference '{@link uk.ac.open.event.eventcalculus.TemporalPredicate#getTime <em>Time</em>}'.
@@ -1337,10 +1411,10 @@ public interface EventcalculusPackage extends EPackage
   EClass getHoldsAt();
 
   /**
-   * Returns the meta object for the containment reference '{@link uk.ac.open.event.eventcalculus.HoldsAt#getFluent <em>Fluent</em>}'.
+   * Returns the meta object for the reference '{@link uk.ac.open.event.eventcalculus.HoldsAt#getFluent <em>Fluent</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Fluent</em>'.
+   * @return the meta object for the reference '<em>Fluent</em>'.
    * @see uk.ac.open.event.eventcalculus.HoldsAt#getFluent()
    * @see #getHoldsAt()
    * @generated
@@ -1358,10 +1432,10 @@ public interface EventcalculusPackage extends EPackage
   EClass getHappens();
 
   /**
-   * Returns the meta object for the containment reference '{@link uk.ac.open.event.eventcalculus.Happens#getEvent <em>Event</em>}'.
+   * Returns the meta object for the reference '{@link uk.ac.open.event.eventcalculus.Happens#getEvent <em>Event</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Event</em>'.
+   * @return the meta object for the reference '<em>Event</em>'.
    * @see uk.ac.open.event.eventcalculus.Happens#getEvent()
    * @see #getHappens()
    * @generated
@@ -1379,10 +1453,10 @@ public interface EventcalculusPackage extends EPackage
   EClass getInitiates();
 
   /**
-   * Returns the meta object for the containment reference '{@link uk.ac.open.event.eventcalculus.Initiates#getEvent <em>Event</em>}'.
+   * Returns the meta object for the reference '{@link uk.ac.open.event.eventcalculus.Initiates#getEvent <em>Event</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Event</em>'.
+   * @return the meta object for the reference '<em>Event</em>'.
    * @see uk.ac.open.event.eventcalculus.Initiates#getEvent()
    * @see #getInitiates()
    * @generated
@@ -1390,15 +1464,26 @@ public interface EventcalculusPackage extends EPackage
   EReference getInitiates_Event();
 
   /**
-   * Returns the meta object for the containment reference '{@link uk.ac.open.event.eventcalculus.Initiates#getFluent <em>Fluent</em>}'.
+   * Returns the meta object for the reference '{@link uk.ac.open.event.eventcalculus.Initiates#getFluent <em>Fluent</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Fluent</em>'.
+   * @return the meta object for the reference '<em>Fluent</em>'.
    * @see uk.ac.open.event.eventcalculus.Initiates#getFluent()
    * @see #getInitiates()
    * @generated
    */
   EReference getInitiates_Fluent();
+
+  /**
+   * Returns the meta object for the attribute list '{@link uk.ac.open.event.eventcalculus.Initiates#getArgs2 <em>Args2</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Args2</em>'.
+   * @see uk.ac.open.event.eventcalculus.Initiates#getArgs2()
+   * @see #getInitiates()
+   * @generated
+   */
+  EAttribute getInitiates_Args2();
 
   /**
    * Returns the meta object for class '{@link uk.ac.open.event.eventcalculus.Terminates <em>Terminates</em>}'.
@@ -1411,10 +1496,10 @@ public interface EventcalculusPackage extends EPackage
   EClass getTerminates();
 
   /**
-   * Returns the meta object for the containment reference '{@link uk.ac.open.event.eventcalculus.Terminates#getEvent <em>Event</em>}'.
+   * Returns the meta object for the reference '{@link uk.ac.open.event.eventcalculus.Terminates#getEvent <em>Event</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Event</em>'.
+   * @return the meta object for the reference '<em>Event</em>'.
    * @see uk.ac.open.event.eventcalculus.Terminates#getEvent()
    * @see #getTerminates()
    * @generated
@@ -1422,15 +1507,26 @@ public interface EventcalculusPackage extends EPackage
   EReference getTerminates_Event();
 
   /**
-   * Returns the meta object for the containment reference '{@link uk.ac.open.event.eventcalculus.Terminates#getFluent <em>Fluent</em>}'.
+   * Returns the meta object for the reference '{@link uk.ac.open.event.eventcalculus.Terminates#getFluent <em>Fluent</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Fluent</em>'.
+   * @return the meta object for the reference '<em>Fluent</em>'.
    * @see uk.ac.open.event.eventcalculus.Terminates#getFluent()
    * @see #getTerminates()
    * @generated
    */
   EReference getTerminates_Fluent();
+
+  /**
+   * Returns the meta object for the attribute list '{@link uk.ac.open.event.eventcalculus.Terminates#getArgs2 <em>Args2</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Args2</em>'.
+   * @see uk.ac.open.event.eventcalculus.Terminates#getArgs2()
+   * @see #getTerminates()
+   * @generated
+   */
+  EAttribute getTerminates_Args2();
 
   /**
    * Returns the meta object for class '{@link uk.ac.open.event.eventcalculus.Path <em>Path</em>}'.
@@ -1443,15 +1539,15 @@ public interface EventcalculusPackage extends EPackage
   EClass getPath();
 
   /**
-   * Returns the meta object for the containment reference '{@link uk.ac.open.event.eventcalculus.Path#getFile <em>File</em>}'.
+   * Returns the meta object for the containment reference list '{@link uk.ac.open.event.eventcalculus.Path#getFiles <em>Files</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>File</em>'.
-   * @see uk.ac.open.event.eventcalculus.Path#getFile()
+   * @return the meta object for the containment reference list '<em>Files</em>'.
+   * @see uk.ac.open.event.eventcalculus.Path#getFiles()
    * @see #getPath()
    * @generated
    */
-  EReference getPath_File();
+  EReference getPath_Files();
 
   /**
    * Returns the meta object for class '{@link uk.ac.open.event.eventcalculus.File <em>File</em>}'.
@@ -1464,15 +1560,15 @@ public interface EventcalculusPackage extends EPackage
   EClass getFile();
 
   /**
-   * Returns the meta object for the attribute '{@link uk.ac.open.event.eventcalculus.File#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute list '{@link uk.ac.open.event.eventcalculus.File#getNames <em>Names</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see uk.ac.open.event.eventcalculus.File#getName()
+   * @return the meta object for the attribute list '<em>Names</em>'.
+   * @see uk.ac.open.event.eventcalculus.File#getNames()
    * @see #getFile()
    * @generated
    */
-  EAttribute getFile_Name();
+  EAttribute getFile_Names();
 
   /**
    * Returns the meta object for enum '{@link uk.ac.open.event.eventcalculus.BinaryIntOp <em>Binary Int Op</em>}'.
@@ -1684,6 +1780,14 @@ public interface EventcalculusPackage extends EPackage
      * @generated
      */
     EClass TEMPORAL_PREDICATE = eINSTANCE.getTemporalPredicate();
+
+    /**
+     * The meta object literal for the '<em><b>Args</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TEMPORAL_PREDICATE__ARGS = eINSTANCE.getTemporalPredicate_Args();
 
     /**
      * The meta object literal for the '<em><b>Time</b></em>' containment reference feature.
@@ -1916,7 +2020,7 @@ public interface EventcalculusPackage extends EPackage
     EClass HOLDS_AT = eINSTANCE.getHoldsAt();
 
     /**
-     * The meta object literal for the '<em><b>Fluent</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Fluent</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1934,7 +2038,7 @@ public interface EventcalculusPackage extends EPackage
     EClass HAPPENS = eINSTANCE.getHappens();
 
     /**
-     * The meta object literal for the '<em><b>Event</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Event</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1952,7 +2056,7 @@ public interface EventcalculusPackage extends EPackage
     EClass INITIATES = eINSTANCE.getInitiates();
 
     /**
-     * The meta object literal for the '<em><b>Event</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Event</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1960,12 +2064,20 @@ public interface EventcalculusPackage extends EPackage
     EReference INITIATES__EVENT = eINSTANCE.getInitiates_Event();
 
     /**
-     * The meta object literal for the '<em><b>Fluent</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Fluent</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference INITIATES__FLUENT = eINSTANCE.getInitiates_Fluent();
+
+    /**
+     * The meta object literal for the '<em><b>Args2</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INITIATES__ARGS2 = eINSTANCE.getInitiates_Args2();
 
     /**
      * The meta object literal for the '{@link uk.ac.open.event.eventcalculus.impl.TerminatesImpl <em>Terminates</em>}' class.
@@ -1978,7 +2090,7 @@ public interface EventcalculusPackage extends EPackage
     EClass TERMINATES = eINSTANCE.getTerminates();
 
     /**
-     * The meta object literal for the '<em><b>Event</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Event</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1986,12 +2098,20 @@ public interface EventcalculusPackage extends EPackage
     EReference TERMINATES__EVENT = eINSTANCE.getTerminates_Event();
 
     /**
-     * The meta object literal for the '<em><b>Fluent</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Fluent</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference TERMINATES__FLUENT = eINSTANCE.getTerminates_Fluent();
+
+    /**
+     * The meta object literal for the '<em><b>Args2</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TERMINATES__ARGS2 = eINSTANCE.getTerminates_Args2();
 
     /**
      * The meta object literal for the '{@link uk.ac.open.event.eventcalculus.impl.PathImpl <em>Path</em>}' class.
@@ -2004,12 +2124,12 @@ public interface EventcalculusPackage extends EPackage
     EClass PATH = eINSTANCE.getPath();
 
     /**
-     * The meta object literal for the '<em><b>File</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Files</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference PATH__FILE = eINSTANCE.getPath_File();
+    EReference PATH__FILES = eINSTANCE.getPath_Files();
 
     /**
      * The meta object literal for the '{@link uk.ac.open.event.eventcalculus.impl.FileImpl <em>File</em>}' class.
@@ -2022,12 +2142,12 @@ public interface EventcalculusPackage extends EPackage
     EClass FILE = eINSTANCE.getFile();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Names</b></em>' attribute list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute FILE__NAME = eINSTANCE.getFile_Name();
+    EAttribute FILE__NAMES = eINSTANCE.getFile_Names();
 
     /**
      * The meta object literal for the '{@link uk.ac.open.event.eventcalculus.BinaryIntOp <em>Binary Int Op</em>}' enum.

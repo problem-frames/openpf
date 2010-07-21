@@ -5,13 +5,19 @@
  */
 package uk.ac.open.event.eventcalculus.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 import uk.ac.open.event.eventcalculus.EventcalculusPackage;
 import uk.ac.open.event.eventcalculus.IntExpr;
@@ -24,6 +30,7 @@ import uk.ac.open.event.eventcalculus.TemporalPredicate;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link uk.ac.open.event.eventcalculus.impl.TemporalPredicateImpl#getArgs <em>Args</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.TemporalPredicateImpl#getTime <em>Time</em>}</li>
  * </ul>
  * </p>
@@ -32,6 +39,16 @@ import uk.ac.open.event.eventcalculus.TemporalPredicate;
  */
 public class TemporalPredicateImpl extends BoolExprImpl implements TemporalPredicate
 {
+  /**
+   * The cached value of the '{@link #getArgs() <em>Args</em>}' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getArgs()
+   * @generated
+   * @ordered
+   */
+  protected EList<String> args;
+
   /**
    * The cached value of the '{@link #getTime() <em>Time</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -61,6 +78,20 @@ public class TemporalPredicateImpl extends BoolExprImpl implements TemporalPredi
   protected EClass eStaticClass()
   {
     return EventcalculusPackage.Literals.TEMPORAL_PREDICATE;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<String> getArgs()
+  {
+    if (args == null)
+    {
+      args = new EDataTypeEList<String>(String.class, this, EventcalculusPackage.TEMPORAL_PREDICATE__ARGS);
+    }
+    return args;
   }
 
   /**
@@ -137,6 +168,8 @@ public class TemporalPredicateImpl extends BoolExprImpl implements TemporalPredi
   {
     switch (featureID)
     {
+      case EventcalculusPackage.TEMPORAL_PREDICATE__ARGS:
+        return getArgs();
       case EventcalculusPackage.TEMPORAL_PREDICATE__TIME:
         return getTime();
     }
@@ -148,11 +181,16 @@ public class TemporalPredicateImpl extends BoolExprImpl implements TemporalPredi
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
+      case EventcalculusPackage.TEMPORAL_PREDICATE__ARGS:
+        getArgs().clear();
+        getArgs().addAll((Collection<? extends String>)newValue);
+        return;
       case EventcalculusPackage.TEMPORAL_PREDICATE__TIME:
         setTime((IntExpr)newValue);
         return;
@@ -170,6 +208,9 @@ public class TemporalPredicateImpl extends BoolExprImpl implements TemporalPredi
   {
     switch (featureID)
     {
+      case EventcalculusPackage.TEMPORAL_PREDICATE__ARGS:
+        getArgs().clear();
+        return;
       case EventcalculusPackage.TEMPORAL_PREDICATE__TIME:
         setTime((IntExpr)null);
         return;
@@ -187,10 +228,29 @@ public class TemporalPredicateImpl extends BoolExprImpl implements TemporalPredi
   {
     switch (featureID)
     {
+      case EventcalculusPackage.TEMPORAL_PREDICATE__ARGS:
+        return args != null && !args.isEmpty();
       case EventcalculusPackage.TEMPORAL_PREDICATE__TIME:
         return time != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (args: ");
+    result.append(args);
+    result.append(')');
+    return result.toString();
   }
 
 } //TemporalPredicateImpl

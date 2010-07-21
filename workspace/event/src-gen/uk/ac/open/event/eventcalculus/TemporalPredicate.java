@@ -5,6 +5,7 @@
  */
 package uk.ac.open.event.eventcalculus;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,6 +15,7 @@ package uk.ac.open.event.eventcalculus;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link uk.ac.open.event.eventcalculus.TemporalPredicate#getArgs <em>Args</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.TemporalPredicate#getTime <em>Time</em>}</li>
  * </ul>
  * </p>
@@ -24,6 +26,22 @@ package uk.ac.open.event.eventcalculus;
  */
 public interface TemporalPredicate extends BoolExpr
 {
+  /**
+   * Returns the value of the '<em><b>Args</b></em>' attribute list.
+   * The list contents are of type {@link java.lang.String}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Args</em>' attribute list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Args</em>' attribute list.
+   * @see uk.ac.open.event.eventcalculus.EventcalculusPackage#getTemporalPredicate_Args()
+   * @model unique="false"
+   * @generated
+   */
+  EList<String> getArgs();
+
   /**
    * Returns the value of the '<em><b>Time</b></em>' containment reference.
    * <!-- begin-user-doc -->

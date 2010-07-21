@@ -38,6 +38,8 @@
     <eLiterals name="MINUS" value="1" literal="-"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TemporalPredicate" eSuperTypes="#//BoolExpr">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="args" unique="false" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="time" eType="#//IntExpr"
         containment="true"/>
   </eClassifiers>
@@ -87,29 +89,29 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HoldsAt" eSuperTypes="#//TemporalPredicate">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fluent" eType="#//Term"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fluent" eType="#//Term"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Happens" eSuperTypes="#//TemporalPredicate">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="event" eType="#//Term"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="event" eType="#//Term"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Initiates" eSuperTypes="#//TemporalPredicate">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="event" eType="#//Term"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fluent" eType="#//Term"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="event" eType="#//Term"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fluent" eType="#//Term"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="args2" unique="false" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Terminates" eSuperTypes="#//TemporalPredicate">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="event" eType="#//Term"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fluent" eType="#//Term"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="event" eType="#//Term"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fluent" eType="#//Term"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="args2" unique="false" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Path">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="file" eType="#//File" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="files" upperBound="-1"
+        eType="#//File" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="File">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="names" unique="false" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

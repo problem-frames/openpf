@@ -5,13 +5,18 @@
  */
 package uk.ac.open.event.eventcalculus.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 import uk.ac.open.event.eventcalculus.EventcalculusPackage;
 import uk.ac.open.event.eventcalculus.Initiates;
@@ -26,6 +31,7 @@ import uk.ac.open.event.eventcalculus.Term;
  * <ul>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.InitiatesImpl#getEvent <em>Event</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.InitiatesImpl#getFluent <em>Fluent</em>}</li>
+ *   <li>{@link uk.ac.open.event.eventcalculus.impl.InitiatesImpl#getArgs2 <em>Args2</em>}</li>
  * </ul>
  * </p>
  *
@@ -34,7 +40,7 @@ import uk.ac.open.event.eventcalculus.Term;
 public class InitiatesImpl extends TemporalPredicateImpl implements Initiates
 {
   /**
-   * The cached value of the '{@link #getEvent() <em>Event</em>}' containment reference.
+   * The cached value of the '{@link #getEvent() <em>Event</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getEvent()
@@ -44,7 +50,7 @@ public class InitiatesImpl extends TemporalPredicateImpl implements Initiates
   protected Term event;
 
   /**
-   * The cached value of the '{@link #getFluent() <em>Fluent</em>}' containment reference.
+   * The cached value of the '{@link #getFluent() <em>Fluent</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getFluent()
@@ -52,6 +58,16 @@ public class InitiatesImpl extends TemporalPredicateImpl implements Initiates
    * @ordered
    */
   protected Term fluent;
+
+  /**
+   * The cached value of the '{@link #getArgs2() <em>Args2</em>}' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getArgs2()
+   * @generated
+   * @ordered
+   */
+  protected EList<String> args2;
 
   /**
    * <!-- begin-user-doc -->
@@ -81,6 +97,16 @@ public class InitiatesImpl extends TemporalPredicateImpl implements Initiates
    */
   public Term getEvent()
   {
+    if (event != null && event.eIsProxy())
+    {
+      InternalEObject oldEvent = (InternalEObject)event;
+      event = (Term)eResolveProxy(oldEvent);
+      if (event != oldEvent)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, EventcalculusPackage.INITIATES__EVENT, oldEvent, event));
+      }
+    }
     return event;
   }
 
@@ -89,16 +115,9 @@ public class InitiatesImpl extends TemporalPredicateImpl implements Initiates
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetEvent(Term newEvent, NotificationChain msgs)
+  public Term basicGetEvent()
   {
-    Term oldEvent = event;
-    event = newEvent;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EventcalculusPackage.INITIATES__EVENT, oldEvent, newEvent);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
+    return event;
   }
 
   /**
@@ -108,18 +127,10 @@ public class InitiatesImpl extends TemporalPredicateImpl implements Initiates
    */
   public void setEvent(Term newEvent)
   {
-    if (newEvent != event)
-    {
-      NotificationChain msgs = null;
-      if (event != null)
-        msgs = ((InternalEObject)event).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EventcalculusPackage.INITIATES__EVENT, null, msgs);
-      if (newEvent != null)
-        msgs = ((InternalEObject)newEvent).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EventcalculusPackage.INITIATES__EVENT, null, msgs);
-      msgs = basicSetEvent(newEvent, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EventcalculusPackage.INITIATES__EVENT, newEvent, newEvent));
+    Term oldEvent = event;
+    event = newEvent;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EventcalculusPackage.INITIATES__EVENT, oldEvent, event));
   }
 
   /**
@@ -129,6 +140,16 @@ public class InitiatesImpl extends TemporalPredicateImpl implements Initiates
    */
   public Term getFluent()
   {
+    if (fluent != null && fluent.eIsProxy())
+    {
+      InternalEObject oldFluent = (InternalEObject)fluent;
+      fluent = (Term)eResolveProxy(oldFluent);
+      if (fluent != oldFluent)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, EventcalculusPackage.INITIATES__FLUENT, oldFluent, fluent));
+      }
+    }
     return fluent;
   }
 
@@ -137,16 +158,9 @@ public class InitiatesImpl extends TemporalPredicateImpl implements Initiates
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetFluent(Term newFluent, NotificationChain msgs)
+  public Term basicGetFluent()
   {
-    Term oldFluent = fluent;
-    fluent = newFluent;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EventcalculusPackage.INITIATES__FLUENT, oldFluent, newFluent);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
+    return fluent;
   }
 
   /**
@@ -156,18 +170,10 @@ public class InitiatesImpl extends TemporalPredicateImpl implements Initiates
    */
   public void setFluent(Term newFluent)
   {
-    if (newFluent != fluent)
-    {
-      NotificationChain msgs = null;
-      if (fluent != null)
-        msgs = ((InternalEObject)fluent).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EventcalculusPackage.INITIATES__FLUENT, null, msgs);
-      if (newFluent != null)
-        msgs = ((InternalEObject)newFluent).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EventcalculusPackage.INITIATES__FLUENT, null, msgs);
-      msgs = basicSetFluent(newFluent, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EventcalculusPackage.INITIATES__FLUENT, newFluent, newFluent));
+    Term oldFluent = fluent;
+    fluent = newFluent;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EventcalculusPackage.INITIATES__FLUENT, oldFluent, fluent));
   }
 
   /**
@@ -175,17 +181,13 @@ public class InitiatesImpl extends TemporalPredicateImpl implements Initiates
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  public EList<String> getArgs2()
   {
-    switch (featureID)
+    if (args2 == null)
     {
-      case EventcalculusPackage.INITIATES__EVENT:
-        return basicSetEvent(null, msgs);
-      case EventcalculusPackage.INITIATES__FLUENT:
-        return basicSetFluent(null, msgs);
+      args2 = new EDataTypeEList<String>(String.class, this, EventcalculusPackage.INITIATES__ARGS2);
     }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
+    return args2;
   }
 
   /**
@@ -199,9 +201,13 @@ public class InitiatesImpl extends TemporalPredicateImpl implements Initiates
     switch (featureID)
     {
       case EventcalculusPackage.INITIATES__EVENT:
-        return getEvent();
+        if (resolve) return getEvent();
+        return basicGetEvent();
       case EventcalculusPackage.INITIATES__FLUENT:
-        return getFluent();
+        if (resolve) return getFluent();
+        return basicGetFluent();
+      case EventcalculusPackage.INITIATES__ARGS2:
+        return getArgs2();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -211,6 +217,7 @@ public class InitiatesImpl extends TemporalPredicateImpl implements Initiates
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -221,6 +228,10 @@ public class InitiatesImpl extends TemporalPredicateImpl implements Initiates
         return;
       case EventcalculusPackage.INITIATES__FLUENT:
         setFluent((Term)newValue);
+        return;
+      case EventcalculusPackage.INITIATES__ARGS2:
+        getArgs2().clear();
+        getArgs2().addAll((Collection<? extends String>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -242,6 +253,9 @@ public class InitiatesImpl extends TemporalPredicateImpl implements Initiates
       case EventcalculusPackage.INITIATES__FLUENT:
         setFluent((Term)null);
         return;
+      case EventcalculusPackage.INITIATES__ARGS2:
+        getArgs2().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -260,8 +274,27 @@ public class InitiatesImpl extends TemporalPredicateImpl implements Initiates
         return event != null;
       case EventcalculusPackage.INITIATES__FLUENT:
         return fluent != null;
+      case EventcalculusPackage.INITIATES__ARGS2:
+        return args2 != null && !args2.isEmpty();
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (args2: ");
+    result.append(args2);
+    result.append(')');
+    return result.toString();
   }
 
 } //InitiatesImpl

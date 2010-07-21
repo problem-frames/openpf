@@ -1,6 +1,6 @@
 [module generate('http://open.ac.uk/problem')/]
 [template public generate(d: ProblemDiagram)]
-[file (d.description.toString().concat('.ec'), false)]
+[file (d.name.toString().concat('.ec'), false)]
 load foundations/Root.e
 load foundations/EC.e	
     [for (dom: Node | d.nodes)]

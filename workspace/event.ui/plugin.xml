@@ -6,7 +6,7 @@
     <extension
             point="org.eclipse.ui.editors">
         <editor
-            class="uk.ac.open.event.EventCalculusExecutableExtensionFactory:org.eclipse.xtext.ui.core.editor.XtextEditor"
+            class="uk.ac.open.event.ui.EventCalculusExecutableExtensionFactory:uk.ac.open.event.ui.EventCalculusEditor"
             contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
             default="true"
             extensions="ec"
@@ -17,8 +17,8 @@
     <extension
         point="org.eclipse.ui.handlers">
         <handler
-            class="uk.ac.open.event.EventCalculusExecutableExtensionFactory:org.eclipse.xtext.ui.common.editor.hyperlinking.OpenDeclarationHandler"
-            commandId="org.eclipse.xtext.ui.common.editor.hyperlinking.OpenDeclaration">
+            class="uk.ac.open.event.ui.EventCalculusExecutableExtensionFactory:org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler"
+            commandId="org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclaration">
             <activeWhen>
                 <reference
                     definitionId="uk.ac.open.event.EventCalculus.Editor.opened">
@@ -26,7 +26,7 @@
             </activeWhen>
         </handler>
         <handler
-            class="uk.ac.open.event.EventCalculusExecutableExtensionFactory:org.eclipse.xtext.ui.core.editor.handler.ValidateActionHandler"
+            class="uk.ac.open.event.ui.EventCalculusExecutableExtensionFactory:org.eclipse.xtext.ui.editor.handler.ValidateActionHandler"
             commandId="uk.ac.open.event.EventCalculus.validate">
          <activeWhen>
             <reference
@@ -40,7 +40,7 @@
             <and>
                 <reference definitionId="isActiveEditorAnInstanceOfXtextEditor"/>
                 <with variable="activeEditor">
-                    <test property="org.eclipse.xtext.ui.core.editor.XtextEditor.languageName" 
+                    <test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName" 
                         value="uk.ac.open.event.EventCalculus" 
                         forcePluginActivation="true"/>
                 </with>        
@@ -50,22 +50,21 @@
     <extension
             point="org.eclipse.ui.preferencePages">
         <page
-            class="uk.ac.open.event.EventCalculusExecutableExtensionFactory:org.eclipse.xtext.ui.core.editor.preferences.LanguageRootPreferencePage"
+            class="uk.ac.open.event.ui.EventCalculusExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
             id="uk.ac.open.event.EventCalculus"
-            name="EventCalculus"
-            category="org.eclipse.xtext.languages">
+            name="EventCalculus">
             <keywordReference id="uk.ac.open.event.ui.keyword_EventCalculus"/>
         </page>
         <page
             category="uk.ac.open.event.EventCalculus"
-            class="uk.ac.open.event.EventCalculusExecutableExtensionFactory:org.eclipse.xtext.ui.common.editor.syntaxcoloring.SyntaxColoringPreferencePage"
+            class="uk.ac.open.event.ui.EventCalculusExecutableExtensionFactory:org.eclipse.xtext.ui.editor.syntaxcoloring.SyntaxColoringPreferencePage"
             id="uk.ac.open.event.EventCalculus.coloring"
             name="Syntax Coloring">
             <keywordReference id="uk.ac.open.event.ui.keyword_EventCalculus"/>
         </page>
         <page
             category="uk.ac.open.event.EventCalculus"
-            class="uk.ac.open.event.EventCalculusExecutableExtensionFactory:org.eclipse.xtext.ui.common.editor.templates.XtextTemplatePreferencePage"
+            class="uk.ac.open.event.ui.EventCalculusExecutableExtensionFactory:org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage"
             id="uk.ac.open.event.EventCalculus.templates"
             name="Templates">
             <keywordReference id="uk.ac.open.event.ui.keyword_EventCalculus"/>
@@ -87,7 +86,7 @@
     </extension>
     <extension point="org.eclipse.ui.menus">
         <menuContribution
-            locationURI="popup:#TextEditorContext?after=group.open">
+            locationURI="popup:#TextEditorContext?after=group.edit">
              <command
                  commandId="uk.ac.open.event.EventCalculus.validate"
                  style="push"
@@ -100,18 +99,86 @@
          </command>  
          </menuContribution>
     </extension>
+    <extension point="org.eclipse.ui.menus">
+		<menuContribution locationURI="popup:#TextEditorContext?endof=group.find">
+			<command commandId="org.eclipse.xtext.ui.editor.FindReferences">
+				<visibleWhen checkEnabled="false">
+                	<reference definitionId="uk.ac.open.event.EventCalculus.Editor.opened">
+                	</reference>
+            	</visibleWhen>
+			</command>
+		</menuContribution>
+	</extension>
+	<extension point="org.eclipse.ui.handlers">
+	    <handler
+            class="uk.ac.open.event.ui.EventCalculusExecutableExtensionFactory:org.eclipse.xtext.ui.editor.findrefs.FindReferencesHandler"
+            commandId="org.eclipse.xtext.ui.editor.FindReferences">
+            <activeWhen>
+                <reference
+                    definitionId="uk.ac.open.event.EventCalculus.Editor.opened">
+                </reference>
+            </activeWhen>
+        </handler>
+    </extension>   
 
 <!-- adding resource factories -->
 
 	<extension
 		point="org.eclipse.emf.ecore.extension_parser">
 		<parser
-			class="uk.ac.open.event.EventCalculusExecutableExtensionFactory:org.eclipse.xtext.resource.XtextResourceFactory"
+			class="uk.ac.open.event.ui.EventCalculusExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
 			type="ec">
 		</parser>
 	</extension>
+	<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
+        <resourceServiceProvider
+            class="uk.ac.open.event.ui.EventCalculusExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
+            uriExtension="ec">
+        </resourceServiceProvider>
+    </extension>
 
 
 
+
+	<!-- Quick Outline -->
+	<extension
+		point="org.eclipse.ui.handlers">
+		<handler 
+			class="uk.ac.open.event.ui.EventCalculusExecutableExtensionFactory:org.eclipse.xtext.ui.editor.outline.quickoutline.ShowQuickOutlineActionHandler"
+			commandId="org.eclipse.xtext.ui.editor.outline.QuickOutline">
+			<activeWhen>
+				<reference
+					definitionId="uk.ac.open.event.EventCalculus.Editor.opened">
+				</reference>
+			</activeWhen>
+		</handler>
+	</extension>
+	<extension
+		point="org.eclipse.ui.commands">
+		<command
+			description="Open the quick outline."
+			id="org.eclipse.xtext.ui.editor.outline.QuickOutline"
+			name="Quick Outline">
+		</command>
+	</extension>
+	<extension point="org.eclipse.ui.menus">
+		<menuContribution
+			locationURI="popup:#TextEditorContext?after=group.open">
+			<command commandId="org.eclipse.xtext.ui.editor.outline.QuickOutline"
+				style="push"
+				tooltip="Open Quick Outline">
+				<visibleWhen checkEnabled="false">
+					<reference definitionId="uk.ac.open.event.EventCalculus.Editor.opened"/>
+				</visibleWhen>
+			</command>
+		</menuContribution>
+	</extension>
+   <!-- quickfix marker resolution generator -->
+   <extension
+         point="org.eclipse.ui.ide.markerResolution">
+      <markerResolutionGenerator
+            class="uk.ac.open.event.ui.EventCalculusExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator">
+      </markerResolutionGenerator>
+   </extension>
 
 </plugin>

@@ -1,11 +1,11 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Acceleo PF2EC Module Runtime Plug-in
-Bundle-SymbolicName: PF2EC
+Bundle-SymbolicName: PF2EC;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: PF2EC.Activator
 Bundle-Vendor: Eclipse.org
-Require-Bundle: org.eclipse.core.runtime, 
+Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.uml2.uml,
  org.eclipse.emf.ecore,
  org.eclipse.emf.ecore.xmi,
@@ -15,7 +15,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.acceleo.engine,
  problem;bundle-version="1.0.0",
  problem.edit;bundle-version="1.0.0",
- edu.toronto.cs.openome_model
+ core,
+ org.eclipse.xtext;bundle-version="0.7.2"
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Bundle-ActivationPolicy: lazy
 Export-Package: PF2EC.files

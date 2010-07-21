@@ -25,26 +25,26 @@ package uk.ac.open.event.eventcalculus;
 public interface HoldsAt extends TemporalPredicate
 {
   /**
-   * Returns the value of the '<em><b>Fluent</b></em>' containment reference.
+   * Returns the value of the '<em><b>Fluent</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Fluent</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Fluent</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Fluent</em>' containment reference.
+   * @return the value of the '<em>Fluent</em>' reference.
    * @see #setFluent(Term)
    * @see uk.ac.open.event.eventcalculus.EventcalculusPackage#getHoldsAt_Fluent()
-   * @model containment="true"
+   * @model
    * @generated
    */
   Term getFluent();
 
   /**
-   * Sets the value of the '{@link uk.ac.open.event.eventcalculus.HoldsAt#getFluent <em>Fluent</em>}' containment reference.
+   * Sets the value of the '{@link uk.ac.open.event.eventcalculus.HoldsAt#getFluent <em>Fluent</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Fluent</em>' containment reference.
+   * @param value the new value of the '<em>Fluent</em>' reference.
    * @see #getFluent()
    * @generated
    */

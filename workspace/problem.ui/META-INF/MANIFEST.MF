@@ -6,10 +6,7 @@ Bundle-Version: 1.0.0
 Bundle-SymbolicName: problem.ui; singleton:=true
 Eclipse-RegisterBuddy: org.eclipse.xtext.log4j
 Bundle-ActivationPolicy: lazy
-Require-Bundle: org.eclipse.xtext.ui.core,
- org.eclipse.xtext.ui.common,
- org.eclipse.xtext.log4j;bundle-version="1.2.15",
- org.eclipse.ui.editors;bundle-version="3.5.0",
+Require-Bundle: org.eclipse.ui.editors;bundle-version="3.5.0",
  org.eclipse.ui.ide;bundle-version="3.5.0",
  org.eclipse.ui,
  org.antlr.runtime,
@@ -20,19 +17,18 @@ Require-Bundle: org.eclipse.xtext.ui.core,
  org.eclipse.xtend,
  org.eclipse.xpand,
  com.ibm.icu,
- org.eclipse.xtext, 
+ org.eclipse.xtext,
  org.eclipse.xtext.generator,
- org.eclipse.xtend,
  org.eclipse.xtend.typesystem.emf,
- org.eclipse.xpand, 
  org.apache.commons.logging,
  de.itemis.xtext.antlr;resolution:=optional,
  org.eclipse.emf.codegen.ecore;resolution:=optional,
- org.eclipse.xtend.util.stdlib 
+ org.eclipse.xtend.util.stdlib,
+ org.eclipse.xtext.ui,
+ org.eclipse.xtext.ui.shared,
+ org.eclipse.xtext.builder
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: uk.ac.open,
- uk.ac.open.contentassist,
- uk.ac.open.contentassist.antlr,
- uk.ac.open.labeling,
- uk.ac.open.outline
-Bundle-Activator: uk.ac.open.internal.ProblemActivator
+Export-Package: uk.ac.open.ui.contentassist.antlr
+Import-Package: org.apache.log4j
+Bundle-Activator: uk.ac.open.ui.internal.ProblemActivator
+

@@ -5,14 +5,19 @@
  */
 package uk.ac.open.event.eventcalculus.impl;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 import uk.ac.open.event.eventcalculus.EventcalculusPackage;
 import uk.ac.open.event.eventcalculus.File;
@@ -25,7 +30,7 @@ import uk.ac.open.event.eventcalculus.Path;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link uk.ac.open.event.eventcalculus.impl.PathImpl#getFile <em>File</em>}</li>
+ *   <li>{@link uk.ac.open.event.eventcalculus.impl.PathImpl#getFiles <em>Files</em>}</li>
  * </ul>
  * </p>
  *
@@ -34,14 +39,14 @@ import uk.ac.open.event.eventcalculus.Path;
 public class PathImpl extends MinimalEObjectImpl.Container implements Path
 {
   /**
-   * The cached value of the '{@link #getFile() <em>File</em>}' containment reference.
+   * The cached value of the '{@link #getFiles() <em>Files</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getFile()
+   * @see #getFiles()
    * @generated
    * @ordered
    */
-  protected File file;
+  protected EList<File> files;
 
   /**
    * <!-- begin-user-doc -->
@@ -69,47 +74,13 @@ public class PathImpl extends MinimalEObjectImpl.Container implements Path
    * <!-- end-user-doc -->
    * @generated
    */
-  public File getFile()
+  public EList<File> getFiles()
   {
-    return file;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetFile(File newFile, NotificationChain msgs)
-  {
-    File oldFile = file;
-    file = newFile;
-    if (eNotificationRequired())
+    if (files == null)
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EventcalculusPackage.PATH__FILE, oldFile, newFile);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
+      files = new EObjectContainmentEList<File>(File.class, this, EventcalculusPackage.PATH__FILES);
     }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setFile(File newFile)
-  {
-    if (newFile != file)
-    {
-      NotificationChain msgs = null;
-      if (file != null)
-        msgs = ((InternalEObject)file).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EventcalculusPackage.PATH__FILE, null, msgs);
-      if (newFile != null)
-        msgs = ((InternalEObject)newFile).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EventcalculusPackage.PATH__FILE, null, msgs);
-      msgs = basicSetFile(newFile, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EventcalculusPackage.PATH__FILE, newFile, newFile));
+    return files;
   }
 
   /**
@@ -122,8 +93,8 @@ public class PathImpl extends MinimalEObjectImpl.Container implements Path
   {
     switch (featureID)
     {
-      case EventcalculusPackage.PATH__FILE:
-        return basicSetFile(null, msgs);
+      case EventcalculusPackage.PATH__FILES:
+        return ((InternalEList<?>)getFiles()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -138,8 +109,8 @@ public class PathImpl extends MinimalEObjectImpl.Container implements Path
   {
     switch (featureID)
     {
-      case EventcalculusPackage.PATH__FILE:
-        return getFile();
+      case EventcalculusPackage.PATH__FILES:
+        return getFiles();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -149,13 +120,15 @@ public class PathImpl extends MinimalEObjectImpl.Container implements Path
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case EventcalculusPackage.PATH__FILE:
-        setFile((File)newValue);
+      case EventcalculusPackage.PATH__FILES:
+        getFiles().clear();
+        getFiles().addAll((Collection<? extends File>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -171,8 +144,8 @@ public class PathImpl extends MinimalEObjectImpl.Container implements Path
   {
     switch (featureID)
     {
-      case EventcalculusPackage.PATH__FILE:
-        setFile((File)null);
+      case EventcalculusPackage.PATH__FILES:
+        getFiles().clear();
         return;
     }
     super.eUnset(featureID);
@@ -188,8 +161,8 @@ public class PathImpl extends MinimalEObjectImpl.Container implements Path
   {
     switch (featureID)
     {
-      case EventcalculusPackage.PATH__FILE:
-        return file != null;
+      case EventcalculusPackage.PATH__FILES:
+        return files != null && !files.isEmpty();
     }
     return super.eIsSet(featureID);
   }

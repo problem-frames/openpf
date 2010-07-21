@@ -480,9 +480,19 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getTemporalPredicate_Args()
+  {
+    return (EAttribute)temporalPredicateEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getTemporalPredicate_Time()
   {
-    return (EReference)temporalPredicateEClass.getEStructuralFeatures().get(0);
+    return (EReference)temporalPredicateEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -800,6 +810,16 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getInitiates_Args2()
+  {
+    return (EAttribute)initiatesEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getTerminates()
   {
     return terminatesEClass;
@@ -830,6 +850,16 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getTerminates_Args2()
+  {
+    return (EAttribute)terminatesEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getPath()
   {
     return pathEClass;
@@ -840,7 +870,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPath_File()
+  public EReference getPath_Files()
   {
     return (EReference)pathEClass.getEStructuralFeatures().get(0);
   }
@@ -860,7 +890,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getFile_Name()
+  public EAttribute getFile_Names()
   {
     return (EAttribute)fileEClass.getEStructuralFeatures().get(0);
   }
@@ -949,6 +979,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
     createEAttribute(binaryIntExprEClass, BINARY_INT_EXPR__BINARYOP);
 
     temporalPredicateEClass = createEClass(TEMPORAL_PREDICATE);
+    createEAttribute(temporalPredicateEClass, TEMPORAL_PREDICATE__ARGS);
     createEReference(temporalPredicateEClass, TEMPORAL_PREDICATE__TIME);
 
     boolExprEClass = createEClass(BOOL_EXPR);
@@ -994,16 +1025,18 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
     initiatesEClass = createEClass(INITIATES);
     createEReference(initiatesEClass, INITIATES__EVENT);
     createEReference(initiatesEClass, INITIATES__FLUENT);
+    createEAttribute(initiatesEClass, INITIATES__ARGS2);
 
     terminatesEClass = createEClass(TERMINATES);
     createEReference(terminatesEClass, TERMINATES__EVENT);
     createEReference(terminatesEClass, TERMINATES__FLUENT);
+    createEAttribute(terminatesEClass, TERMINATES__ARGS2);
 
     pathEClass = createEClass(PATH);
-    createEReference(pathEClass, PATH__FILE);
+    createEReference(pathEClass, PATH__FILES);
 
     fileEClass = createEClass(FILE);
-    createEAttribute(fileEClass, FILE__NAME);
+    createEAttribute(fileEClass, FILE__NAMES);
 
     // Create enums
     binaryIntOpEEnum = createEEnum(BINARY_INT_OP);
@@ -1078,6 +1111,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
     initEAttribute(getBinaryIntExpr_Binaryop(), this.getBinaryIntOp(), "binaryop", null, 0, 1, BinaryIntExpr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(temporalPredicateEClass, TemporalPredicate.class, "TemporalPredicate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTemporalPredicate_Args(), ecorePackage.getEString(), "args", null, 0, -1, TemporalPredicate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTemporalPredicate_Time(), this.getIntExpr(), null, "time", null, 0, 1, TemporalPredicate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(boolExprEClass, BoolExpr.class, "BoolExpr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1115,24 +1149,26 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
     initEAttribute(getTerm_Args(), ecorePackage.getEString(), "args", null, 0, -1, Term.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(holdsAtEClass, HoldsAt.class, "HoldsAt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getHoldsAt_Fluent(), this.getTerm(), null, "fluent", null, 0, 1, HoldsAt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getHoldsAt_Fluent(), this.getTerm(), null, "fluent", null, 0, 1, HoldsAt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(happensEClass, Happens.class, "Happens", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getHappens_Event(), this.getTerm(), null, "event", null, 0, 1, Happens.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getHappens_Event(), this.getTerm(), null, "event", null, 0, 1, Happens.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(initiatesEClass, Initiates.class, "Initiates", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getInitiates_Event(), this.getTerm(), null, "event", null, 0, 1, Initiates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInitiates_Fluent(), this.getTerm(), null, "fluent", null, 0, 1, Initiates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getInitiates_Event(), this.getTerm(), null, "event", null, 0, 1, Initiates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getInitiates_Fluent(), this.getTerm(), null, "fluent", null, 0, 1, Initiates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getInitiates_Args2(), ecorePackage.getEString(), "args2", null, 0, -1, Initiates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(terminatesEClass, Terminates.class, "Terminates", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getTerminates_Event(), this.getTerm(), null, "event", null, 0, 1, Terminates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTerminates_Fluent(), this.getTerm(), null, "fluent", null, 0, 1, Terminates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTerminates_Event(), this.getTerm(), null, "event", null, 0, 1, Terminates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTerminates_Fluent(), this.getTerm(), null, "fluent", null, 0, 1, Terminates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTerminates_Args2(), ecorePackage.getEString(), "args2", null, 0, -1, Terminates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(pathEClass, Path.class, "Path", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getPath_File(), this.getFile(), null, "file", null, 0, 1, Path.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPath_Files(), this.getFile(), null, "files", null, 0, -1, Path.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(fileEClass, File.class, "File", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getFile_Name(), ecorePackage.getEString(), "name", null, 0, 1, File.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFile_Names(), ecorePackage.getEString(), "names", null, 0, -1, File.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
     initEEnum(binaryIntOpEEnum, BinaryIntOp.class, "BinaryIntOp");

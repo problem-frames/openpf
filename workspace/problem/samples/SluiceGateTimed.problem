@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<problem:ProblemDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:problem="http://open.ac.uk/problem" description="Sluice Gate: open for the first ten minutes of every three-hour period">
-  <nodes name="GR" description="Gate Regime"/>
-  <nodes name="TC" type="M" description="Timed Controller"/>
-  <nodes name="G" type="C" description="Gate"/>
-  <links from="//@nodes.1" to="//@nodes.2" description="a"/>
-  <links from="//@nodes.0" type="~>" to="//@nodes.2" description="b"/>
-</problem:ProblemDiagram>

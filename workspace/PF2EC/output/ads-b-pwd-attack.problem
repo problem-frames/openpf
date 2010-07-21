@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ASCII"?>
+<problem:ProblemDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:problem="http://open.ac.uk/problem" name="#ADS-B Attack#">
+  <nodes name="Collide" description="anti-requirement"/>
+  <nodes name="Aircrafts" type="C"/>
+  <nodes name="Airspace" type="B"/>
+  <nodes name="SSS" type="C" description="Secondary Surveillance System"/>
+  <nodes name="PSS" type="C" description="Primary Surveillance System"/>
+  <nodes name="CP" type="M" description="Central Processor"/>
+  <nodes name="Display" type="C" description="ATC Display"/>
+  <nodes name="Operator" type="B" description="ATC Operator"/>
+  <links from="//@nodes.7" to="//@nodes.5" description="h1"/>
+  <links from="//@nodes.5" to="//@nodes.6" description="h2"/>
+  <links from="//@nodes.4" to="//@nodes.5" description="d"/>
+  <links from="//@nodes.3" to="//@nodes.5" description="f"/>
+  <links from="//@nodes.5" to="//@nodes.1" description="g"/>
+  <links from="//@nodes.2" to="//@nodes.4" description="c1"/>
+  <links from="//@nodes.4" to="//@nodes.2" description="c2"/>
+  <links from="//@nodes.2" to="//@nodes.3" description="e1"/>
+  <links from="//@nodes.1" to="//@nodes.2" description="b"/>
+  <links from="//@nodes.0" type="~>" to="//@nodes.1" description="a"/>
+</problem:ProblemDiagram>

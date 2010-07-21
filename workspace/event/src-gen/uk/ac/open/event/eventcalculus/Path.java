@@ -5,6 +5,8 @@
  */
 package uk.ac.open.event.eventcalculus;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link uk.ac.open.event.eventcalculus.Path#getFile <em>File</em>}</li>
+ *   <li>{@link uk.ac.open.event.eventcalculus.Path#getFiles <em>Files</em>}</li>
  * </ul>
  * </p>
  *
@@ -26,29 +28,19 @@ import org.eclipse.emf.ecore.EObject;
 public interface Path extends EObject
 {
   /**
-   * Returns the value of the '<em><b>File</b></em>' containment reference.
+   * Returns the value of the '<em><b>Files</b></em>' containment reference list.
+   * The list contents are of type {@link uk.ac.open.event.eventcalculus.File}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>File</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Files</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>File</em>' containment reference.
-   * @see #setFile(File)
-   * @see uk.ac.open.event.eventcalculus.EventcalculusPackage#getPath_File()
+   * @return the value of the '<em>Files</em>' containment reference list.
+   * @see uk.ac.open.event.eventcalculus.EventcalculusPackage#getPath_Files()
    * @model containment="true"
    * @generated
    */
-  File getFile();
-
-  /**
-   * Sets the value of the '{@link uk.ac.open.event.eventcalculus.Path#getFile <em>File</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>File</em>' containment reference.
-   * @see #getFile()
-   * @generated
-   */
-  void setFile(File value);
+  EList<File> getFiles();
 
 } // Path

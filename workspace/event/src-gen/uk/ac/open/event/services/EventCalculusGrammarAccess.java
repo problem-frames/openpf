@@ -8,16 +8,16 @@ import com.google.inject.Singleton;
 import com.google.inject.Inject;
 
 import org.eclipse.xtext.*;
-
 import org.eclipse.xtext.service.GrammarProvider;
+import org.eclipse.xtext.service.AbstractElementFinder.*;
 
 import org.eclipse.xtext.common.services.TerminalsGrammarAccess;
 
 @Singleton
-public class EventCalculusGrammarAccess implements IGrammarAccess {
+public class EventCalculusGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
-	public class KnowledgeElements implements IParserRuleAccess {
+	public class KnowledgeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Knowledge");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cImportsAssignment_0 = (Assignment)cGroup.eContents().get(0);
@@ -32,7 +32,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		private final RuleCall cVarsVarParserRuleCall_3_0 = (RuleCall)cVarsAssignment_3.eContents().get(0);
 		
 		//Knowledge:
-		//  imports+=Import* entities+=Entity* (rules+=Rule ".")* vars+=Var*;
+		//	imports+=Import* entities+=Entity* (rules+=Rule ".")* vars+=Var*;
 		public ParserRule getRule() { return rule; }
 
 		//imports+=Import* entities+=Entity* (rules+=Rule ".")* vars+=Var*
@@ -69,7 +69,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		public RuleCall getVarsVarParserRuleCall_3_0() { return cVarsVarParserRuleCall_3_0; }
 	}
 
-	public class RuleElements implements IParserRuleAccess {
+	public class RuleElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Rule");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cDeclAssignment_0 = (Assignment)cGroup.eContents().get(0);
@@ -78,7 +78,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		private final RuleCall cExprBoolExprParserRuleCall_1_0 = (RuleCall)cExprAssignment_1.eContents().get(0);
 		
 		//Rule:
-		//  decl=VarDecl? expr=BoolExpr;
+		//	decl=VarDecl? expr=BoolExpr;
 		public ParserRule getRule() { return rule; }
 
 		//decl=VarDecl? expr=BoolExpr
@@ -97,7 +97,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		public RuleCall getExprBoolExprParserRuleCall_1_0() { return cExprBoolExprParserRuleCall_1_0; }
 	}
 
-	public class VarDeclElements implements IParserRuleAccess {
+	public class VarDeclElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "VarDecl");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cLeftSquareBracketKeyword_0 = (Keyword)cGroup.eContents().get(0);
@@ -112,7 +112,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		private final Keyword cRightSquareBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//VarDecl:
-		//  "[" vars+=[Var] ("," vars+=[Var])* "]";
+		//	"[" vars+=[Var] ("," vars+=[Var])* "]";
 		public ParserRule getRule() { return rule; }
 
 		//"[" vars+=[Var] ("," vars+=[Var])* "]"
@@ -149,7 +149,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		public Keyword getRightSquareBracketKeyword_3() { return cRightSquareBracketKeyword_3; }
 	}
 
-	public class IntTermElements implements IParserRuleAccess {
+	public class IntTermElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "IntTerm");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Assignment cConstAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
@@ -159,16 +159,10 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		private final RuleCall cVarVarIDTerminalRuleCall_1_0_1 = (RuleCall)cVarVarCrossReference_1_0.eContents().get(1);
 		
 		//IntTerm:
-		//  const=INT|var=[Var]; 
-		//
-		//          
-		////IntExpr: IntTerm;
+		//	const=INT | var=[Var];
 		public ParserRule getRule() { return rule; }
 
-		//const=INT|var=[Var] 
-		//
-		//          
-		////IntExpr: IntTerm;
+		//const=INT | var=[Var]
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//const=INT
@@ -187,27 +181,18 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		public RuleCall getVarVarIDTerminalRuleCall_1_0_1() { return cVarVarIDTerminalRuleCall_1_0_1; }
 	}
 
-	public class IntExprElements implements IParserRuleAccess {
+	public class IntExprElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "IntExpr");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cIntTermParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cBinaryIntExprParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//IntExpr:
-		//  IntTerm|BinaryIntExpr;     
 		////IntExpr: IntTerm;
-		//      
-		////IntExpr: IntTerm | UnaryIntExpr | BinaryIntExpr;
-		////UnaryIntExpr: (unaryop_lhs=UnaryIntOp)? opr+=IntTerm (unaryop_rhs=UnaryIntOp)?;
-		////BinaryIntExpr: opr+=IntTerm binaryop=BinaryIntOp opr+=IntExpr;
+		//IntExpr:
+		//	IntTerm | BinaryIntExpr;
 		public ParserRule getRule() { return rule; }
 
-		//IntTerm|BinaryIntExpr     
-		////IntExpr: IntTerm;
-		//      
-		////IntExpr: IntTerm | UnaryIntExpr | BinaryIntExpr;
-		////UnaryIntExpr: (unaryop_lhs=UnaryIntOp)? opr+=IntTerm (unaryop_rhs=UnaryIntOp)?;
-		////BinaryIntExpr: opr+=IntTerm binaryop=BinaryIntOp opr+=IntExpr;
+		//IntTerm | BinaryIntExpr
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//IntTerm
@@ -217,7 +202,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		public RuleCall getBinaryIntExprParserRuleCall_1() { return cBinaryIntExprParserRuleCall_1; }
 	}
 
-	public class BinaryIntExprElements implements IParserRuleAccess {
+	public class BinaryIntExprElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BinaryIntExpr");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cOprAssignment_0 = (Assignment)cGroup.eContents().get(0);
@@ -227,13 +212,11 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		private final Assignment cOprAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cOprIntTermParserRuleCall_2_0 = (RuleCall)cOprAssignment_2.eContents().get(0);
 		
-		//BinaryIntExpr:
-		//  opr+=IntTerm binaryop=BinaryIntOp opr+=IntTerm; 
 		////IntExpr: IntTerm | UnaryIntExpr | BinaryIntExpr;
 		////UnaryIntExpr: (unaryop_lhs=UnaryIntOp)? opr+=IntTerm (unaryop_rhs=UnaryIntOp)?;
 		////BinaryIntExpr: opr+=IntTerm binaryop=BinaryIntOp opr+=IntExpr;
-		//      
-		////enum UnaryIntOp: MINUS="-" | LPAREN="(" | RPAREN=")";
+		//BinaryIntExpr:
+		//	opr+=IntTerm binaryop=BinaryIntOp opr+=IntTerm;
 		public ParserRule getRule() { return rule; }
 
 		//opr+=IntTerm binaryop=BinaryIntOp opr+=IntTerm
@@ -258,7 +241,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		public RuleCall getOprIntTermParserRuleCall_2_0() { return cOprIntTermParserRuleCall_2_0; }
 	}
 
-	public class TemporalPredicateElements implements IParserRuleAccess {
+	public class TemporalPredicateElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TemporalPredicate");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cHoldsAtParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
@@ -267,10 +250,10 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		private final RuleCall cTerminatesParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
 		//TemporalPredicate:
-		//  HoldsAt|Happens|Initiates|Terminates;
+		//	HoldsAt | Happens | Initiates | Terminates;
 		public ParserRule getRule() { return rule; }
 
-		//HoldsAt|Happens|Initiates|Terminates
+		//HoldsAt | Happens | Initiates | Terminates
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//HoldsAt
@@ -286,7 +269,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		public RuleCall getTerminatesParserRuleCall_3() { return cTerminatesParserRuleCall_3; }
 	}
 
-	public class BoolExprElements implements IParserRuleAccess {
+	public class BoolExprElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BoolExpr");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cTemporalPredicateParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
@@ -294,10 +277,10 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		private final RuleCall cBinaryBoolExprParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
 		//BoolExpr:
-		//  TemporalPredicate|UnaryBoolExpr|BinaryBoolExpr;
+		//	TemporalPredicate | UnaryBoolExpr | BinaryBoolExpr;
 		public ParserRule getRule() { return rule; }
 
-		//TemporalPredicate|UnaryBoolExpr|BinaryBoolExpr
+		//TemporalPredicate | UnaryBoolExpr | BinaryBoolExpr
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//TemporalPredicate
@@ -310,7 +293,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		public RuleCall getBinaryBoolExprParserRuleCall_2() { return cBinaryBoolExprParserRuleCall_2; }
 	}
 
-	public class UnaryBoolExprElements implements IParserRuleAccess {
+	public class UnaryBoolExprElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "UnaryBoolExpr");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
@@ -325,10 +308,10 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		private final Keyword cRightParenthesisKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
 		
 		//UnaryBoolExpr:
-		//  unaryop_lhs=UnaryBoolOp opr+=BoolExpr|"(" ops+=BoolExpr ")";
+		//	unaryop_lhs=UnaryBoolOp opr+=BoolExpr | "(" ops+=BoolExpr ")";
 		public ParserRule getRule() { return rule; }
 
-		//unaryop_lhs=UnaryBoolOp opr+=BoolExpr|"(" ops+=BoolExpr ")"
+		//unaryop_lhs=UnaryBoolOp opr+=BoolExpr | "(" ops+=BoolExpr ")"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//unaryop_lhs=UnaryBoolOp opr+=BoolExpr
@@ -362,7 +345,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		public Keyword getRightParenthesisKeyword_1_2() { return cRightParenthesisKeyword_1_2; }
 	}
 
-	public class BinaryBoolExprElements implements IParserRuleAccess {
+	public class BinaryBoolExprElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BinaryBoolExpr");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cOprAssignment_0 = (Assignment)cGroup.eContents().get(0);
@@ -373,9 +356,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		private final RuleCall cOprBoolExprParserRuleCall_2_0 = (RuleCall)cOprAssignment_2.eContents().get(0);
 		
 		//BinaryBoolExpr:
-		//  opr+=TemporalPredicate binaryop=BinaryBoolOp opr+=BoolExpr;      
-		//      
-		////BinaryBoolExpr: opr+=BoolExpr binaryop=BinaryBoolOp opr+=BoolExpr;
+		//	opr+=TemporalPredicate binaryop=BinaryBoolOp opr+=BoolExpr;
 		public ParserRule getRule() { return rule; }
 
 		//opr+=TemporalPredicate binaryop=BinaryBoolOp opr+=BoolExpr
@@ -400,7 +381,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		public RuleCall getOprBoolExprParserRuleCall_2_0() { return cOprBoolExprParserRuleCall_2_0; }
 	}
 
-	public class EntityElements implements IParserRuleAccess {
+	public class EntityElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Entity");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cFluentParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
@@ -408,10 +389,10 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		private final RuleCall cSortParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
 		//Entity:
-		//  Fluent|Event|Sort;
+		//	Fluent | Event | Sort;
 		public ParserRule getRule() { return rule; }
 
-		//Fluent|Event|Sort
+		//Fluent | Event | Sort
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//Fluent
@@ -424,7 +405,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		public RuleCall getSortParserRuleCall_2() { return cSortParserRuleCall_2; }
 	}
 
-	public class SortElements implements IParserRuleAccess {
+	public class SortElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Sort");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cSortKeyword_0 = (Keyword)cGroup.eContents().get(0);
@@ -432,7 +413,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		
 		//Sort:
-		//  "sort" name=ID;
+		//	"sort" name=ID;
 		public ParserRule getRule() { return rule; }
 
 		//"sort" name=ID
@@ -448,7 +429,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 	}
 
-	public class ImportElements implements IParserRuleAccess {
+	public class ImportElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Import");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cLoadKeyword_0 = (Keyword)cGroup.eContents().get(0);
@@ -456,7 +437,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		private final RuleCall cPathPathParserRuleCall_1_0 = (RuleCall)cPathAssignment_1.eContents().get(0);
 		
 		//Import:
-		//  "load" path=Path;
+		//	"load" path=Path;
 		public ParserRule getRule() { return rule; }
 
 		//"load" path=Path
@@ -472,7 +453,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		public RuleCall getPathPathParserRuleCall_1_0() { return cPathPathParserRuleCall_1_0; }
 	}
 
-	public class VarElements implements IParserRuleAccess {
+	public class VarElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Var");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cRangeKeyword_0 = (Keyword)cGroup.eContents().get(0);
@@ -484,7 +465,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		private final RuleCall cMaxINTTerminalRuleCall_3_0 = (RuleCall)cMaxAssignment_3.eContents().get(0);
 		
 		//Var:
-		//  "range" name=ID min=INT max=INT;
+		//	"range" name=ID min=INT max=INT;
 		public ParserRule getRule() { return rule; }
 
 		//"range" name=ID min=INT max=INT
@@ -512,7 +493,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		public RuleCall getMaxINTTerminalRuleCall_3_0() { return cMaxINTTerminalRuleCall_3_0; }
 	}
 
-	public class FluentElements implements IParserRuleAccess {
+	public class FluentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Fluent");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cFluentKeyword_0 = (Keyword)cGroup.eContents().get(0);
@@ -520,7 +501,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		private final RuleCall cTermTermParserRuleCall_1_0 = (RuleCall)cTermAssignment_1.eContents().get(0);
 		
 		//Fluent:
-		//  "fluent" term=Term;
+		//	"fluent" term=Term;
 		public ParserRule getRule() { return rule; }
 
 		//"fluent" term=Term
@@ -536,7 +517,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		public RuleCall getTermTermParserRuleCall_1_0() { return cTermTermParserRuleCall_1_0; }
 	}
 
-	public class EventElements implements IParserRuleAccess {
+	public class EventElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Event");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cEventKeyword_0 = (Keyword)cGroup.eContents().get(0);
@@ -544,7 +525,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		private final RuleCall cTermTermParserRuleCall_1_0 = (RuleCall)cTermAssignment_1.eContents().get(0);
 		
 		//Event:
-		//  "event" term=Term;
+		//	"event" term=Term;
 		public ParserRule getRule() { return rule; }
 
 		//"event" term=Term
@@ -560,7 +541,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		public RuleCall getTermTermParserRuleCall_1_0() { return cTermTermParserRuleCall_1_0; }
 	}
 
-	public class TermElements implements IParserRuleAccess {
+	public class TermElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Term");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
@@ -576,7 +557,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		private final Keyword cRightParenthesisKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
 		
 		//Term:
-		//  name=ID ("(" args+=ID? ("," args+=ID)* ")")?;
+		//	name=ID ("(" args+=ID? ("," args+=ID)* ")")?;
 		public ParserRule getRule() { return rule; }
 
 		//name=ID ("(" args+=ID? ("," args+=ID)* ")")?
@@ -616,23 +597,33 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		public Keyword getRightParenthesisKeyword_1_3() { return cRightParenthesisKeyword_1_3; }
 	}
 
-	public class HoldsAtElements implements IParserRuleAccess {
+	public class HoldsAtElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "HoldsAt");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cHoldsAtKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cFluentAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cFluentTermParserRuleCall_2_0 = (RuleCall)cFluentAssignment_2.eContents().get(0);
-		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cTimeAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cTimeIntExprParserRuleCall_4_0 = (RuleCall)cTimeAssignment_4.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final CrossReference cFluentTermCrossReference_2_0 = (CrossReference)cFluentAssignment_2.eContents().get(0);
+		private final RuleCall cFluentTermIDTerminalRuleCall_2_0_1 = (RuleCall)cFluentTermCrossReference_2_0.eContents().get(1);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cLeftParenthesisKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cArgsAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cArgsIDTerminalRuleCall_3_1_0 = (RuleCall)cArgsAssignment_3_1.eContents().get(0);
+		private final Group cGroup_3_2 = (Group)cGroup_3.eContents().get(2);
+		private final Keyword cCommaKeyword_3_2_0 = (Keyword)cGroup_3_2.eContents().get(0);
+		private final Assignment cArgsAssignment_3_2_1 = (Assignment)cGroup_3_2.eContents().get(1);
+		private final RuleCall cArgsIDTerminalRuleCall_3_2_1_0 = (RuleCall)cArgsAssignment_3_2_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_3_3 = (Keyword)cGroup_3.eContents().get(3);
+		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cTimeAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cTimeIntExprParserRuleCall_5_0 = (RuleCall)cTimeAssignment_5.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//HoldsAt:
-		//  "HoldsAt" "(" fluent=Term "," time=IntExpr ")";
+		//	"HoldsAt" "(" fluent=[Term] ("(" args+=ID? ("," args+=ID)* ")")? "," time=IntExpr ")";
 		public ParserRule getRule() { return rule; }
 
-		//"HoldsAt" "(" fluent=Term "," time=IntExpr ")"
+		//"HoldsAt" "(" fluent=[Term] ("(" args+=ID? ("," args+=ID)* ")")? "," time=IntExpr ")"
 		public Group getGroup() { return cGroup; }
 
 		//"HoldsAt"
@@ -641,42 +632,82 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		//"("
 		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
 
-		//fluent=Term
+		//fluent=[Term]
 		public Assignment getFluentAssignment_2() { return cFluentAssignment_2; }
 
-		//Term
-		public RuleCall getFluentTermParserRuleCall_2_0() { return cFluentTermParserRuleCall_2_0; }
+		//[Term]
+		public CrossReference getFluentTermCrossReference_2_0() { return cFluentTermCrossReference_2_0; }
+
+		//ID
+		public RuleCall getFluentTermIDTerminalRuleCall_2_0_1() { return cFluentTermIDTerminalRuleCall_2_0_1; }
+
+		//("(" args+=ID? ("," args+=ID)* ")")?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"("
+		public Keyword getLeftParenthesisKeyword_3_0() { return cLeftParenthesisKeyword_3_0; }
+
+		//args+=ID?
+		public Assignment getArgsAssignment_3_1() { return cArgsAssignment_3_1; }
+
+		//ID
+		public RuleCall getArgsIDTerminalRuleCall_3_1_0() { return cArgsIDTerminalRuleCall_3_1_0; }
+
+		//("," args+=ID)*
+		public Group getGroup_3_2() { return cGroup_3_2; }
 
 		//","
-		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
+		public Keyword getCommaKeyword_3_2_0() { return cCommaKeyword_3_2_0; }
 
-		//time=IntExpr
-		public Assignment getTimeAssignment_4() { return cTimeAssignment_4; }
+		//args+=ID
+		public Assignment getArgsAssignment_3_2_1() { return cArgsAssignment_3_2_1; }
 
-		//IntExpr
-		public RuleCall getTimeIntExprParserRuleCall_4_0() { return cTimeIntExprParserRuleCall_4_0; }
+		//ID
+		public RuleCall getArgsIDTerminalRuleCall_3_2_1_0() { return cArgsIDTerminalRuleCall_3_2_1_0; }
 
 		//")"
-		public Keyword getRightParenthesisKeyword_5() { return cRightParenthesisKeyword_5; }
+		public Keyword getRightParenthesisKeyword_3_3() { return cRightParenthesisKeyword_3_3; }
+
+		//","
+		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
+
+		//time=IntExpr
+		public Assignment getTimeAssignment_5() { return cTimeAssignment_5; }
+
+		//IntExpr
+		public RuleCall getTimeIntExprParserRuleCall_5_0() { return cTimeIntExprParserRuleCall_5_0; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_6() { return cRightParenthesisKeyword_6; }
 	}
 
-	public class HappensElements implements IParserRuleAccess {
+	public class HappensElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Happens");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cHappensKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cEventAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cEventTermParserRuleCall_2_0 = (RuleCall)cEventAssignment_2.eContents().get(0);
-		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cTimeAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cTimeIntExprParserRuleCall_4_0 = (RuleCall)cTimeAssignment_4.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final CrossReference cEventTermCrossReference_2_0 = (CrossReference)cEventAssignment_2.eContents().get(0);
+		private final RuleCall cEventTermIDTerminalRuleCall_2_0_1 = (RuleCall)cEventTermCrossReference_2_0.eContents().get(1);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cLeftParenthesisKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cArgsAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cArgsIDTerminalRuleCall_3_1_0 = (RuleCall)cArgsAssignment_3_1.eContents().get(0);
+		private final Group cGroup_3_2 = (Group)cGroup_3.eContents().get(2);
+		private final Keyword cCommaKeyword_3_2_0 = (Keyword)cGroup_3_2.eContents().get(0);
+		private final Assignment cArgsAssignment_3_2_1 = (Assignment)cGroup_3_2.eContents().get(1);
+		private final RuleCall cArgsIDTerminalRuleCall_3_2_1_0 = (RuleCall)cArgsAssignment_3_2_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_3_3 = (Keyword)cGroup_3.eContents().get(3);
+		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cTimeAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cTimeIntExprParserRuleCall_5_0 = (RuleCall)cTimeAssignment_5.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Happens:
-		//  "Happens" "(" event=Term "," time=IntExpr ")";
+		//	"Happens" "(" event=[Term] ("(" args+=ID? ("," args+=ID)* ")")? "," time=IntExpr ")";
 		public ParserRule getRule() { return rule; }
 
-		//"Happens" "(" event=Term "," time=IntExpr ")"
+		//"Happens" "(" event=[Term] ("(" args+=ID? ("," args+=ID)* ")")? "," time=IntExpr ")"
 		public Group getGroup() { return cGroup; }
 
 		//"Happens"
@@ -685,45 +716,97 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		//"("
 		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
 
-		//event=Term
+		//event=[Term]
 		public Assignment getEventAssignment_2() { return cEventAssignment_2; }
 
-		//Term
-		public RuleCall getEventTermParserRuleCall_2_0() { return cEventTermParserRuleCall_2_0; }
+		//[Term]
+		public CrossReference getEventTermCrossReference_2_0() { return cEventTermCrossReference_2_0; }
+
+		//ID
+		public RuleCall getEventTermIDTerminalRuleCall_2_0_1() { return cEventTermIDTerminalRuleCall_2_0_1; }
+
+		//("(" args+=ID? ("," args+=ID)* ")")?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"("
+		public Keyword getLeftParenthesisKeyword_3_0() { return cLeftParenthesisKeyword_3_0; }
+
+		//args+=ID?
+		public Assignment getArgsAssignment_3_1() { return cArgsAssignment_3_1; }
+
+		//ID
+		public RuleCall getArgsIDTerminalRuleCall_3_1_0() { return cArgsIDTerminalRuleCall_3_1_0; }
+
+		//("," args+=ID)*
+		public Group getGroup_3_2() { return cGroup_3_2; }
 
 		//","
-		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
+		public Keyword getCommaKeyword_3_2_0() { return cCommaKeyword_3_2_0; }
 
-		//time=IntExpr
-		public Assignment getTimeAssignment_4() { return cTimeAssignment_4; }
+		//args+=ID
+		public Assignment getArgsAssignment_3_2_1() { return cArgsAssignment_3_2_1; }
 
-		//IntExpr
-		public RuleCall getTimeIntExprParserRuleCall_4_0() { return cTimeIntExprParserRuleCall_4_0; }
+		//ID
+		public RuleCall getArgsIDTerminalRuleCall_3_2_1_0() { return cArgsIDTerminalRuleCall_3_2_1_0; }
 
 		//")"
-		public Keyword getRightParenthesisKeyword_5() { return cRightParenthesisKeyword_5; }
+		public Keyword getRightParenthesisKeyword_3_3() { return cRightParenthesisKeyword_3_3; }
+
+		//","
+		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
+
+		//time=IntExpr
+		public Assignment getTimeAssignment_5() { return cTimeAssignment_5; }
+
+		//IntExpr
+		public RuleCall getTimeIntExprParserRuleCall_5_0() { return cTimeIntExprParserRuleCall_5_0; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_6() { return cRightParenthesisKeyword_6; }
 	}
 
-	public class InitiatesElements implements IParserRuleAccess {
+	public class InitiatesElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Initiates");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cInitiatesKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cEventAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cEventTermParserRuleCall_2_0 = (RuleCall)cEventAssignment_2.eContents().get(0);
-		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cFluentAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cFluentTermParserRuleCall_4_0 = (RuleCall)cFluentAssignment_4.eContents().get(0);
-		private final Keyword cCommaKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cTimeAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cTimeIntExprParserRuleCall_6_0 = (RuleCall)cTimeAssignment_6.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final CrossReference cEventTermCrossReference_2_0 = (CrossReference)cEventAssignment_2.eContents().get(0);
+		private final RuleCall cEventTermIDTerminalRuleCall_2_0_1 = (RuleCall)cEventTermCrossReference_2_0.eContents().get(1);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cLeftParenthesisKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cArgsAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cArgsIDTerminalRuleCall_3_1_0 = (RuleCall)cArgsAssignment_3_1.eContents().get(0);
+		private final Group cGroup_3_2 = (Group)cGroup_3.eContents().get(2);
+		private final Keyword cCommaKeyword_3_2_0 = (Keyword)cGroup_3_2.eContents().get(0);
+		private final Assignment cArgsAssignment_3_2_1 = (Assignment)cGroup_3_2.eContents().get(1);
+		private final RuleCall cArgsIDTerminalRuleCall_3_2_1_0 = (RuleCall)cArgsAssignment_3_2_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_3_3 = (Keyword)cGroup_3.eContents().get(3);
+		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cFluentAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final CrossReference cFluentTermCrossReference_5_0 = (CrossReference)cFluentAssignment_5.eContents().get(0);
+		private final RuleCall cFluentTermIDTerminalRuleCall_5_0_1 = (RuleCall)cFluentTermCrossReference_5_0.eContents().get(1);
+		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
+		private final Keyword cLeftParenthesisKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Assignment cArgs2Assignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
+		private final RuleCall cArgs2IDTerminalRuleCall_6_1_0 = (RuleCall)cArgs2Assignment_6_1.eContents().get(0);
+		private final Group cGroup_6_2 = (Group)cGroup_6.eContents().get(2);
+		private final Keyword cCommaKeyword_6_2_0 = (Keyword)cGroup_6_2.eContents().get(0);
+		private final Assignment cArgs2Assignment_6_2_1 = (Assignment)cGroup_6_2.eContents().get(1);
+		private final RuleCall cArgs2IDTerminalRuleCall_6_2_1_0 = (RuleCall)cArgs2Assignment_6_2_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_6_3 = (Keyword)cGroup_6.eContents().get(3);
+		private final Keyword cCommaKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cTimeAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cTimeIntExprParserRuleCall_8_0 = (RuleCall)cTimeAssignment_8.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//Initiates:
-		//  "Initiates" "(" event=Term "," fluent=Term "," time=IntExpr ")";
+		//	"Initiates" "(" event=[Term] ("(" args+=ID? ("," args+=ID)* ")")? "," fluent=[Term] ("(" args2+=ID? ("," args2+=ID)*
+		//	")")? "," time=IntExpr ")";
 		public ParserRule getRule() { return rule; }
 
-		//"Initiates" "(" event=Term "," fluent=Term "," time=IntExpr ")"
+		//"Initiates" "(" event=[Term] ("(" args+=ID? ("," args+=ID)* ")")? "," fluent=[Term] ("(" args2+=ID? ("," args2+=ID)*
+		//")")? "," time=IntExpr ")"
 		public Group getGroup() { return cGroup; }
 
 		//"Initiates"
@@ -732,54 +815,136 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		//"("
 		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
 
-		//event=Term
+		//event=[Term]
 		public Assignment getEventAssignment_2() { return cEventAssignment_2; }
 
-		//Term
-		public RuleCall getEventTermParserRuleCall_2_0() { return cEventTermParserRuleCall_2_0; }
+		//[Term]
+		public CrossReference getEventTermCrossReference_2_0() { return cEventTermCrossReference_2_0; }
+
+		//ID
+		public RuleCall getEventTermIDTerminalRuleCall_2_0_1() { return cEventTermIDTerminalRuleCall_2_0_1; }
+
+		//("(" args+=ID? ("," args+=ID)* ")")?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"("
+		public Keyword getLeftParenthesisKeyword_3_0() { return cLeftParenthesisKeyword_3_0; }
+
+		//args+=ID?
+		public Assignment getArgsAssignment_3_1() { return cArgsAssignment_3_1; }
+
+		//ID
+		public RuleCall getArgsIDTerminalRuleCall_3_1_0() { return cArgsIDTerminalRuleCall_3_1_0; }
+
+		//("," args+=ID)*
+		public Group getGroup_3_2() { return cGroup_3_2; }
 
 		//","
-		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
+		public Keyword getCommaKeyword_3_2_0() { return cCommaKeyword_3_2_0; }
 
-		//fluent=Term
-		public Assignment getFluentAssignment_4() { return cFluentAssignment_4; }
+		//args+=ID
+		public Assignment getArgsAssignment_3_2_1() { return cArgsAssignment_3_2_1; }
 
-		//Term
-		public RuleCall getFluentTermParserRuleCall_4_0() { return cFluentTermParserRuleCall_4_0; }
-
-		//","
-		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
-
-		//time=IntExpr
-		public Assignment getTimeAssignment_6() { return cTimeAssignment_6; }
-
-		//IntExpr
-		public RuleCall getTimeIntExprParserRuleCall_6_0() { return cTimeIntExprParserRuleCall_6_0; }
+		//ID
+		public RuleCall getArgsIDTerminalRuleCall_3_2_1_0() { return cArgsIDTerminalRuleCall_3_2_1_0; }
 
 		//")"
-		public Keyword getRightParenthesisKeyword_7() { return cRightParenthesisKeyword_7; }
+		public Keyword getRightParenthesisKeyword_3_3() { return cRightParenthesisKeyword_3_3; }
+
+		//","
+		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
+
+		//fluent=[Term]
+		public Assignment getFluentAssignment_5() { return cFluentAssignment_5; }
+
+		//[Term]
+		public CrossReference getFluentTermCrossReference_5_0() { return cFluentTermCrossReference_5_0; }
+
+		//ID
+		public RuleCall getFluentTermIDTerminalRuleCall_5_0_1() { return cFluentTermIDTerminalRuleCall_5_0_1; }
+
+		//("(" args2+=ID? ("," args2+=ID)* ")")?
+		public Group getGroup_6() { return cGroup_6; }
+
+		//"("
+		public Keyword getLeftParenthesisKeyword_6_0() { return cLeftParenthesisKeyword_6_0; }
+
+		//args2+=ID?
+		public Assignment getArgs2Assignment_6_1() { return cArgs2Assignment_6_1; }
+
+		//ID
+		public RuleCall getArgs2IDTerminalRuleCall_6_1_0() { return cArgs2IDTerminalRuleCall_6_1_0; }
+
+		//("," args2+=ID)*
+		public Group getGroup_6_2() { return cGroup_6_2; }
+
+		//","
+		public Keyword getCommaKeyword_6_2_0() { return cCommaKeyword_6_2_0; }
+
+		//args2+=ID
+		public Assignment getArgs2Assignment_6_2_1() { return cArgs2Assignment_6_2_1; }
+
+		//ID
+		public RuleCall getArgs2IDTerminalRuleCall_6_2_1_0() { return cArgs2IDTerminalRuleCall_6_2_1_0; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_6_3() { return cRightParenthesisKeyword_6_3; }
+
+		//","
+		public Keyword getCommaKeyword_7() { return cCommaKeyword_7; }
+
+		//time=IntExpr
+		public Assignment getTimeAssignment_8() { return cTimeAssignment_8; }
+
+		//IntExpr
+		public RuleCall getTimeIntExprParserRuleCall_8_0() { return cTimeIntExprParserRuleCall_8_0; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_9() { return cRightParenthesisKeyword_9; }
 	}
 
-	public class TerminatesElements implements IParserRuleAccess {
+	public class TerminatesElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Terminates");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cTerminatesKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cEventAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cEventTermParserRuleCall_2_0 = (RuleCall)cEventAssignment_2.eContents().get(0);
-		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cFluentAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cFluentTermParserRuleCall_4_0 = (RuleCall)cFluentAssignment_4.eContents().get(0);
-		private final Keyword cCommaKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cTimeAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cTimeIntExprParserRuleCall_6_0 = (RuleCall)cTimeAssignment_6.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final CrossReference cEventTermCrossReference_2_0 = (CrossReference)cEventAssignment_2.eContents().get(0);
+		private final RuleCall cEventTermIDTerminalRuleCall_2_0_1 = (RuleCall)cEventTermCrossReference_2_0.eContents().get(1);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cLeftParenthesisKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cArgsAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cArgsIDTerminalRuleCall_3_1_0 = (RuleCall)cArgsAssignment_3_1.eContents().get(0);
+		private final Group cGroup_3_2 = (Group)cGroup_3.eContents().get(2);
+		private final Keyword cCommaKeyword_3_2_0 = (Keyword)cGroup_3_2.eContents().get(0);
+		private final Assignment cArgsAssignment_3_2_1 = (Assignment)cGroup_3_2.eContents().get(1);
+		private final RuleCall cArgsIDTerminalRuleCall_3_2_1_0 = (RuleCall)cArgsAssignment_3_2_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_3_3 = (Keyword)cGroup_3.eContents().get(3);
+		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cFluentAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final CrossReference cFluentTermCrossReference_5_0 = (CrossReference)cFluentAssignment_5.eContents().get(0);
+		private final RuleCall cFluentTermIDTerminalRuleCall_5_0_1 = (RuleCall)cFluentTermCrossReference_5_0.eContents().get(1);
+		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
+		private final Keyword cLeftParenthesisKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Assignment cArgs2Assignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
+		private final RuleCall cArgs2IDTerminalRuleCall_6_1_0 = (RuleCall)cArgs2Assignment_6_1.eContents().get(0);
+		private final Group cGroup_6_2 = (Group)cGroup_6.eContents().get(2);
+		private final Keyword cCommaKeyword_6_2_0 = (Keyword)cGroup_6_2.eContents().get(0);
+		private final Assignment cArgs2Assignment_6_2_1 = (Assignment)cGroup_6_2.eContents().get(1);
+		private final RuleCall cArgs2IDTerminalRuleCall_6_2_1_0 = (RuleCall)cArgs2Assignment_6_2_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_6_3 = (Keyword)cGroup_6.eContents().get(3);
+		private final Keyword cCommaKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cTimeAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cTimeIntExprParserRuleCall_8_0 = (RuleCall)cTimeAssignment_8.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//Terminates:
-		//  "Terminates" "(" event=Term "," fluent=Term "," time=IntExpr ")";
+		//	"Terminates" "(" event=[Term] ("(" args+=ID? ("," args+=ID)* ")")? "," fluent=[Term] ("(" args2+=ID? ("," args2+=ID)*
+		//	")")? "," time=IntExpr ")";
 		public ParserRule getRule() { return rule; }
 
-		//"Terminates" "(" event=Term "," fluent=Term "," time=IntExpr ")"
+		//"Terminates" "(" event=[Term] ("(" args+=ID? ("," args+=ID)* ")")? "," fluent=[Term] ("(" args2+=ID? ("," args2+=ID)*
+		//")")? "," time=IntExpr ")"
 		public Group getGroup() { return cGroup; }
 
 		//"Terminates"
@@ -788,108 +953,168 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		//"("
 		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
 
-		//event=Term
+		//event=[Term]
 		public Assignment getEventAssignment_2() { return cEventAssignment_2; }
 
-		//Term
-		public RuleCall getEventTermParserRuleCall_2_0() { return cEventTermParserRuleCall_2_0; }
+		//[Term]
+		public CrossReference getEventTermCrossReference_2_0() { return cEventTermCrossReference_2_0; }
+
+		//ID
+		public RuleCall getEventTermIDTerminalRuleCall_2_0_1() { return cEventTermIDTerminalRuleCall_2_0_1; }
+
+		//("(" args+=ID? ("," args+=ID)* ")")?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"("
+		public Keyword getLeftParenthesisKeyword_3_0() { return cLeftParenthesisKeyword_3_0; }
+
+		//args+=ID?
+		public Assignment getArgsAssignment_3_1() { return cArgsAssignment_3_1; }
+
+		//ID
+		public RuleCall getArgsIDTerminalRuleCall_3_1_0() { return cArgsIDTerminalRuleCall_3_1_0; }
+
+		//("," args+=ID)*
+		public Group getGroup_3_2() { return cGroup_3_2; }
 
 		//","
-		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
+		public Keyword getCommaKeyword_3_2_0() { return cCommaKeyword_3_2_0; }
 
-		//fluent=Term
-		public Assignment getFluentAssignment_4() { return cFluentAssignment_4; }
+		//args+=ID
+		public Assignment getArgsAssignment_3_2_1() { return cArgsAssignment_3_2_1; }
 
-		//Term
-		public RuleCall getFluentTermParserRuleCall_4_0() { return cFluentTermParserRuleCall_4_0; }
-
-		//","
-		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
-
-		//time=IntExpr
-		public Assignment getTimeAssignment_6() { return cTimeAssignment_6; }
-
-		//IntExpr
-		public RuleCall getTimeIntExprParserRuleCall_6_0() { return cTimeIntExprParserRuleCall_6_0; }
+		//ID
+		public RuleCall getArgsIDTerminalRuleCall_3_2_1_0() { return cArgsIDTerminalRuleCall_3_2_1_0; }
 
 		//")"
-		public Keyword getRightParenthesisKeyword_7() { return cRightParenthesisKeyword_7; }
+		public Keyword getRightParenthesisKeyword_3_3() { return cRightParenthesisKeyword_3_3; }
+
+		//","
+		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
+
+		//fluent=[Term]
+		public Assignment getFluentAssignment_5() { return cFluentAssignment_5; }
+
+		//[Term]
+		public CrossReference getFluentTermCrossReference_5_0() { return cFluentTermCrossReference_5_0; }
+
+		//ID
+		public RuleCall getFluentTermIDTerminalRuleCall_5_0_1() { return cFluentTermIDTerminalRuleCall_5_0_1; }
+
+		//("(" args2+=ID? ("," args2+=ID)* ")")?
+		public Group getGroup_6() { return cGroup_6; }
+
+		//"("
+		public Keyword getLeftParenthesisKeyword_6_0() { return cLeftParenthesisKeyword_6_0; }
+
+		//args2+=ID?
+		public Assignment getArgs2Assignment_6_1() { return cArgs2Assignment_6_1; }
+
+		//ID
+		public RuleCall getArgs2IDTerminalRuleCall_6_1_0() { return cArgs2IDTerminalRuleCall_6_1_0; }
+
+		//("," args2+=ID)*
+		public Group getGroup_6_2() { return cGroup_6_2; }
+
+		//","
+		public Keyword getCommaKeyword_6_2_0() { return cCommaKeyword_6_2_0; }
+
+		//args2+=ID
+		public Assignment getArgs2Assignment_6_2_1() { return cArgs2Assignment_6_2_1; }
+
+		//ID
+		public RuleCall getArgs2IDTerminalRuleCall_6_2_1_0() { return cArgs2IDTerminalRuleCall_6_2_1_0; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_6_3() { return cRightParenthesisKeyword_6_3; }
+
+		//","
+		public Keyword getCommaKeyword_7() { return cCommaKeyword_7; }
+
+		//time=IntExpr
+		public Assignment getTimeAssignment_8() { return cTimeAssignment_8; }
+
+		//IntExpr
+		public RuleCall getTimeIntExprParserRuleCall_8_0() { return cTimeIntExprParserRuleCall_8_0; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_9() { return cRightParenthesisKeyword_9; }
 	}
 
-	public class PathElements implements IParserRuleAccess {
+	public class PathElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Path");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cFileAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cFileFileParserRuleCall_0_0 = (RuleCall)cFileAssignment_0.eContents().get(0);
+		private final Assignment cFilesAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cFilesFileParserRuleCall_0_0 = (RuleCall)cFilesAssignment_0.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Keyword cSolidusKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Assignment cFileAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cFileFileParserRuleCall_1_1_0 = (RuleCall)cFileAssignment_1_1.eContents().get(0);
+		private final Assignment cFilesAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cFilesFileParserRuleCall_1_1_0 = (RuleCall)cFilesAssignment_1_1.eContents().get(0);
 		
 		//Path:
-		//  file=File ("/" file=File)*;
+		//	files+=File ("/" files+=File)*;
 		public ParserRule getRule() { return rule; }
 
-		//file=File ("/" file=File)*
+		//files+=File ("/" files+=File)*
 		public Group getGroup() { return cGroup; }
 
-		//file=File
-		public Assignment getFileAssignment_0() { return cFileAssignment_0; }
+		//files+=File
+		public Assignment getFilesAssignment_0() { return cFilesAssignment_0; }
 
 		//File
-		public RuleCall getFileFileParserRuleCall_0_0() { return cFileFileParserRuleCall_0_0; }
+		public RuleCall getFilesFileParserRuleCall_0_0() { return cFilesFileParserRuleCall_0_0; }
 
-		//("/" file=File)*
+		//("/" files+=File)*
 		public Group getGroup_1() { return cGroup_1; }
 
 		//"/"
 		public Keyword getSolidusKeyword_1_0() { return cSolidusKeyword_1_0; }
 
-		//file=File
-		public Assignment getFileAssignment_1_1() { return cFileAssignment_1_1; }
+		//files+=File
+		public Assignment getFilesAssignment_1_1() { return cFilesAssignment_1_1; }
 
 		//File
-		public RuleCall getFileFileParserRuleCall_1_1_0() { return cFileFileParserRuleCall_1_1_0; }
+		public RuleCall getFilesFileParserRuleCall_1_1_0() { return cFilesFileParserRuleCall_1_1_0; }
 	}
 
-	public class FileElements implements IParserRuleAccess {
+	public class FileElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "File");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cNamesAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNamesIDTerminalRuleCall_0_0 = (RuleCall)cNamesAssignment_0.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Keyword cFullStopKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Assignment cNameAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_1_0 = (RuleCall)cNameAssignment_1_1.eContents().get(0);
+		private final Assignment cNamesAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cNamesIDTerminalRuleCall_1_1_0 = (RuleCall)cNamesAssignment_1_1.eContents().get(0);
 		
 		//File:
-		//  name=ID ("." name=ID)*;
+		//	names+=ID ("." names+=ID)*;
 		public ParserRule getRule() { return rule; }
 
-		//name=ID ("." name=ID)*
+		//names+=ID ("." names+=ID)*
 		public Group getGroup() { return cGroup; }
 
-		//name=ID
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+		//names+=ID
+		public Assignment getNamesAssignment_0() { return cNamesAssignment_0; }
 
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
+		public RuleCall getNamesIDTerminalRuleCall_0_0() { return cNamesIDTerminalRuleCall_0_0; }
 
-		//("." name=ID)*
+		//("." names+=ID)*
 		public Group getGroup_1() { return cGroup_1; }
 
 		//"."
 		public Keyword getFullStopKeyword_1_0() { return cFullStopKeyword_1_0; }
 
-		//name=ID
-		public Assignment getNameAssignment_1_1() { return cNameAssignment_1_1; }
+		//names+=ID
+		public Assignment getNamesAssignment_1_1() { return cNamesAssignment_1_1; }
 
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_1_0() { return cNameIDTerminalRuleCall_1_1_0; }
+		public RuleCall getNamesIDTerminalRuleCall_1_1_0() { return cNamesIDTerminalRuleCall_1_1_0; }
 	}
 	
 	
-	public class BinaryIntOpElements implements IEnumRuleAccess {
+	public class BinaryIntOpElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "BinaryIntOp");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cPLUSEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
@@ -897,13 +1122,12 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		private final EnumLiteralDeclaration cMINUSEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
 		private final Keyword cMINUSHyphenMinusKeyword_1_0 = (Keyword)cMINUSEnumLiteralDeclaration_1.eContents().get(0);
 		
+		////enum UnaryIntOp: MINUS="-" | LPAREN="(" | RPAREN=")";     
 		//enum BinaryIntOp:
-		//  PLUS="+" | MINUS="-"; 
-		////enum UnaryIntOp: MINUS="-" | LPAREN="(" | RPAREN=")";
+		//	PLUS="+" | MINUS="-";
 		public EnumRule getRule() { return rule; }
 
-		//PLUS="+" | MINUS="-" 
-		////enum UnaryIntOp: MINUS="-" | LPAREN="(" | RPAREN=")";
+		//PLUS="+" | MINUS="-"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//PLUS="+"
@@ -919,13 +1143,13 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		public Keyword getMINUSHyphenMinusKeyword_1_0() { return cMINUSHyphenMinusKeyword_1_0; }
 	}
 
-	public class UnaryBoolOpElements implements IEnumRuleAccess {
+	public class UnaryBoolOpElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "UnaryBoolOp");
 		private final EnumLiteralDeclaration cNEGATIONEnumLiteralDeclaration = (EnumLiteralDeclaration)rule.eContents().get(1);
 		private final Keyword cNEGATIONExclamationMarkKeyword_0 = (Keyword)cNEGATIONEnumLiteralDeclaration.eContents().get(0);
 		
 		//enum UnaryBoolOp:
-		//  NEGATION="!";
+		//	NEGATION="!";
 		public EnumRule getRule() { return rule; }
 
 		//NEGATION="!"
@@ -935,7 +1159,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		public Keyword getNEGATIONExclamationMarkKeyword_0() { return cNEGATIONExclamationMarkKeyword_0; }
 	}
 
-	public class BinaryBoolOpElements implements IEnumRuleAccess {
+	public class BinaryBoolOpElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "BinaryBoolOp");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cIMPLICATIONEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
@@ -947,13 +1171,12 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		private final EnumLiteralDeclaration cOREnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
 		private final Keyword cORVerticalLineKeyword_3_0 = (Keyword)cOREnumLiteralDeclaration_3.eContents().get(0);
 		
-		//enum BinaryBoolOp:
-		//  IMPLICATION="->" | EQUIVALENCE="<->" | AND="&" | OR="|"; 
 		////BinaryBoolExpr: opr+=BoolExpr binaryop=BinaryBoolOp opr+=BoolExpr;
+		//enum BinaryBoolOp:
+		//	IMPLICATION="->" | EQUIVALENCE="<->" | AND="&" | OR="|";
 		public EnumRule getRule() { return rule; }
 
-		//IMPLICATION="->" | EQUIVALENCE="<->" | AND="&" | OR="|" 
-		////BinaryBoolExpr: opr+=BoolExpr binaryop=BinaryBoolOp opr+=BoolExpr;
+		//IMPLICATION="->" | EQUIVALENCE="<->" | AND="&" | OR="|"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//IMPLICATION="->"
@@ -1032,7 +1255,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 
 	
 	//Knowledge:
-	//  imports+=Import* entities+=Entity* (rules+=Rule ".")* vars+=Var*;
+	//	imports+=Import* entities+=Entity* (rules+=Rule ".")* vars+=Var*;
 	public KnowledgeElements getKnowledgeAccess() {
 		return (pKnowledge != null) ? pKnowledge : (pKnowledge = new KnowledgeElements());
 	}
@@ -1042,7 +1265,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 	}
 
 	//Rule:
-	//  decl=VarDecl? expr=BoolExpr;
+	//	decl=VarDecl? expr=BoolExpr;
 	public RuleElements getRuleAccess() {
 		return (pRule != null) ? pRule : (pRule = new RuleElements());
 	}
@@ -1052,7 +1275,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 	}
 
 	//VarDecl:
-	//  "[" vars+=[Var] ("," vars+=[Var])* "]";
+	//	"[" vars+=[Var] ("," vars+=[Var])* "]";
 	public VarDeclElements getVarDeclAccess() {
 		return (pVarDecl != null) ? pVarDecl : (pVarDecl = new VarDeclElements());
 	}
@@ -1062,10 +1285,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 	}
 
 	//IntTerm:
-	//  const=INT|var=[Var]; 
-	//
-	//          
-	////IntExpr: IntTerm;
+	//	const=INT | var=[Var];
 	public IntTermElements getIntTermAccess() {
 		return (pIntTerm != null) ? pIntTerm : (pIntTerm = new IntTermElements());
 	}
@@ -1074,13 +1294,9 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		return getIntTermAccess().getRule();
 	}
 
-	//IntExpr:
-	//  IntTerm|BinaryIntExpr;     
 	////IntExpr: IntTerm;
-	//      
-	////IntExpr: IntTerm | UnaryIntExpr | BinaryIntExpr;
-	////UnaryIntExpr: (unaryop_lhs=UnaryIntOp)? opr+=IntTerm (unaryop_rhs=UnaryIntOp)?;
-	////BinaryIntExpr: opr+=IntTerm binaryop=BinaryIntOp opr+=IntExpr;
+	//IntExpr:
+	//	IntTerm | BinaryIntExpr;
 	public IntExprElements getIntExprAccess() {
 		return (pIntExpr != null) ? pIntExpr : (pIntExpr = new IntExprElements());
 	}
@@ -1089,13 +1305,11 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		return getIntExprAccess().getRule();
 	}
 
-	//BinaryIntExpr:
-	//  opr+=IntTerm binaryop=BinaryIntOp opr+=IntTerm; 
 	////IntExpr: IntTerm | UnaryIntExpr | BinaryIntExpr;
 	////UnaryIntExpr: (unaryop_lhs=UnaryIntOp)? opr+=IntTerm (unaryop_rhs=UnaryIntOp)?;
 	////BinaryIntExpr: opr+=IntTerm binaryop=BinaryIntOp opr+=IntExpr;
-	//      
-	////enum UnaryIntOp: MINUS="-" | LPAREN="(" | RPAREN=")";
+	//BinaryIntExpr:
+	//	opr+=IntTerm binaryop=BinaryIntOp opr+=IntTerm;
 	public BinaryIntExprElements getBinaryIntExprAccess() {
 		return (pBinaryIntExpr != null) ? pBinaryIntExpr : (pBinaryIntExpr = new BinaryIntExprElements());
 	}
@@ -1104,9 +1318,9 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		return getBinaryIntExprAccess().getRule();
 	}
 
+	////enum UnaryIntOp: MINUS="-" | LPAREN="(" | RPAREN=")";     
 	//enum BinaryIntOp:
-	//  PLUS="+" | MINUS="-"; 
-	////enum UnaryIntOp: MINUS="-" | LPAREN="(" | RPAREN=")";
+	//	PLUS="+" | MINUS="-";
 	public BinaryIntOpElements getBinaryIntOpAccess() {
 		return (unknownRuleBinaryIntOp != null) ? unknownRuleBinaryIntOp : (unknownRuleBinaryIntOp = new BinaryIntOpElements());
 	}
@@ -1116,7 +1330,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 	}
 
 	//TemporalPredicate:
-	//  HoldsAt|Happens|Initiates|Terminates;
+	//	HoldsAt | Happens | Initiates | Terminates;
 	public TemporalPredicateElements getTemporalPredicateAccess() {
 		return (pTemporalPredicate != null) ? pTemporalPredicate : (pTemporalPredicate = new TemporalPredicateElements());
 	}
@@ -1126,7 +1340,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 	}
 
 	//BoolExpr:
-	//  TemporalPredicate|UnaryBoolExpr|BinaryBoolExpr;
+	//	TemporalPredicate | UnaryBoolExpr | BinaryBoolExpr;
 	public BoolExprElements getBoolExprAccess() {
 		return (pBoolExpr != null) ? pBoolExpr : (pBoolExpr = new BoolExprElements());
 	}
@@ -1136,7 +1350,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 	}
 
 	//UnaryBoolExpr:
-	//  unaryop_lhs=UnaryBoolOp opr+=BoolExpr|"(" ops+=BoolExpr ")";
+	//	unaryop_lhs=UnaryBoolOp opr+=BoolExpr | "(" ops+=BoolExpr ")";
 	public UnaryBoolExprElements getUnaryBoolExprAccess() {
 		return (pUnaryBoolExpr != null) ? pUnaryBoolExpr : (pUnaryBoolExpr = new UnaryBoolExprElements());
 	}
@@ -1146,7 +1360,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 	}
 
 	//enum UnaryBoolOp:
-	//  NEGATION="!";
+	//	NEGATION="!";
 	public UnaryBoolOpElements getUnaryBoolOpAccess() {
 		return (unknownRuleUnaryBoolOp != null) ? unknownRuleUnaryBoolOp : (unknownRuleUnaryBoolOp = new UnaryBoolOpElements());
 	}
@@ -1156,9 +1370,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 	}
 
 	//BinaryBoolExpr:
-	//  opr+=TemporalPredicate binaryop=BinaryBoolOp opr+=BoolExpr;      
-	//      
-	////BinaryBoolExpr: opr+=BoolExpr binaryop=BinaryBoolOp opr+=BoolExpr;
+	//	opr+=TemporalPredicate binaryop=BinaryBoolOp opr+=BoolExpr;
 	public BinaryBoolExprElements getBinaryBoolExprAccess() {
 		return (pBinaryBoolExpr != null) ? pBinaryBoolExpr : (pBinaryBoolExpr = new BinaryBoolExprElements());
 	}
@@ -1167,9 +1379,9 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 		return getBinaryBoolExprAccess().getRule();
 	}
 
-	//enum BinaryBoolOp:
-	//  IMPLICATION="->" | EQUIVALENCE="<->" | AND="&" | OR="|"; 
 	////BinaryBoolExpr: opr+=BoolExpr binaryop=BinaryBoolOp opr+=BoolExpr;
+	//enum BinaryBoolOp:
+	//	IMPLICATION="->" | EQUIVALENCE="<->" | AND="&" | OR="|";
 	public BinaryBoolOpElements getBinaryBoolOpAccess() {
 		return (unknownRuleBinaryBoolOp != null) ? unknownRuleBinaryBoolOp : (unknownRuleBinaryBoolOp = new BinaryBoolOpElements());
 	}
@@ -1179,7 +1391,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 	}
 
 	//Entity:
-	//  Fluent|Event|Sort;
+	//	Fluent | Event | Sort;
 	public EntityElements getEntityAccess() {
 		return (pEntity != null) ? pEntity : (pEntity = new EntityElements());
 	}
@@ -1189,7 +1401,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 	}
 
 	//Sort:
-	//  "sort" name=ID;
+	//	"sort" name=ID;
 	public SortElements getSortAccess() {
 		return (pSort != null) ? pSort : (pSort = new SortElements());
 	}
@@ -1199,7 +1411,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 	}
 
 	//Import:
-	//  "load" path=Path;
+	//	"load" path=Path;
 	public ImportElements getImportAccess() {
 		return (pImport != null) ? pImport : (pImport = new ImportElements());
 	}
@@ -1209,7 +1421,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 	}
 
 	//Var:
-	//  "range" name=ID min=INT max=INT;
+	//	"range" name=ID min=INT max=INT;
 	public VarElements getVarAccess() {
 		return (pVar != null) ? pVar : (pVar = new VarElements());
 	}
@@ -1219,7 +1431,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 	}
 
 	//Fluent:
-	//  "fluent" term=Term;
+	//	"fluent" term=Term;
 	public FluentElements getFluentAccess() {
 		return (pFluent != null) ? pFluent : (pFluent = new FluentElements());
 	}
@@ -1229,7 +1441,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 	}
 
 	//Event:
-	//  "event" term=Term;
+	//	"event" term=Term;
 	public EventElements getEventAccess() {
 		return (pEvent != null) ? pEvent : (pEvent = new EventElements());
 	}
@@ -1239,7 +1451,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 	}
 
 	//Term:
-	//  name=ID ("(" args+=ID? ("," args+=ID)* ")")?;
+	//	name=ID ("(" args+=ID? ("," args+=ID)* ")")?;
 	public TermElements getTermAccess() {
 		return (pTerm != null) ? pTerm : (pTerm = new TermElements());
 	}
@@ -1249,7 +1461,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 	}
 
 	//HoldsAt:
-	//  "HoldsAt" "(" fluent=Term "," time=IntExpr ")";
+	//	"HoldsAt" "(" fluent=[Term] ("(" args+=ID? ("," args+=ID)* ")")? "," time=IntExpr ")";
 	public HoldsAtElements getHoldsAtAccess() {
 		return (pHoldsAt != null) ? pHoldsAt : (pHoldsAt = new HoldsAtElements());
 	}
@@ -1259,7 +1471,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 	}
 
 	//Happens:
-	//  "Happens" "(" event=Term "," time=IntExpr ")";
+	//	"Happens" "(" event=[Term] ("(" args+=ID? ("," args+=ID)* ")")? "," time=IntExpr ")";
 	public HappensElements getHappensAccess() {
 		return (pHappens != null) ? pHappens : (pHappens = new HappensElements());
 	}
@@ -1269,7 +1481,8 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 	}
 
 	//Initiates:
-	//  "Initiates" "(" event=Term "," fluent=Term "," time=IntExpr ")";
+	//	"Initiates" "(" event=[Term] ("(" args+=ID? ("," args+=ID)* ")")? "," fluent=[Term] ("(" args2+=ID? ("," args2+=ID)*
+	//	")")? "," time=IntExpr ")";
 	public InitiatesElements getInitiatesAccess() {
 		return (pInitiates != null) ? pInitiates : (pInitiates = new InitiatesElements());
 	}
@@ -1279,7 +1492,8 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 	}
 
 	//Terminates:
-	//  "Terminates" "(" event=Term "," fluent=Term "," time=IntExpr ")";
+	//	"Terminates" "(" event=[Term] ("(" args+=ID? ("," args+=ID)* ")")? "," fluent=[Term] ("(" args2+=ID? ("," args2+=ID)*
+	//	")")? "," time=IntExpr ")";
 	public TerminatesElements getTerminatesAccess() {
 		return (pTerminates != null) ? pTerminates : (pTerminates = new TerminatesElements());
 	}
@@ -1289,7 +1503,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 	}
 
 	//Path:
-	//  file=File ("/" file=File)*;
+	//	files+=File ("/" files+=File)*;
 	public PathElements getPathAccess() {
 		return (pPath != null) ? pPath : (pPath = new PathElements());
 	}
@@ -1299,7 +1513,7 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 	}
 
 	//File:
-	//  name=ID ("." name=ID)*;
+	//	names+=ID ("." names+=ID)*;
 	public FileElements getFileAccess() {
 		return (pFile != null) ? pFile : (pFile = new FileElements());
 	}
@@ -1309,44 +1523,44 @@ public class EventCalculusGrammarAccess implements IGrammarAccess {
 	}
 
 	//terminal SL_COMMENT:
-	//  ";" !("\n" | "\r")* ("\r"? "\n")?;
+	//	";" !("\n" | "\r")* ("\r"? "\n")?;
 	public TerminalRule getSL_COMMENTRule() {
 		return (tSL_COMMENT != null) ? tSL_COMMENT : (tSL_COMMENT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "SL_COMMENT"));
 	} 
 
 	//terminal ID:
-	//  "#" !"#"+ "#" | "^"? ("a".."z" | "A".."Z" | "_") ("a".."z" | "A".."Z" | "_" | "0".."9")*;
+	//	"#" !"#"+ "#" | "^"? ("a".."z" | "A".."Z" | "_") ("a".."z" | "A".."Z" | "_" | "0".."9")*;
 	public TerminalRule getIDRule() {
 		return (tID != null) ? tID : (tID = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ID"));
 	} 
 
 	//terminal INT returns ecore::EInt:
-	//  "0".."9"+;
+	//	"0".."9"+;
 	public TerminalRule getINTRule() {
 		return gaTerminals.getINTRule();
 	} 
 
 	//terminal STRING:
-	//  "\"" ("\\" ("b" | "t" | "n" | "f" | "r" | "\"" | "\'" | "\\") | !("\\" | "\""))* "\"" | "\'" ("\\" ("b" |
-	//  "t" | "n" | "f" | "r" | "\"" | "\'" | "\\") | !("\\" | "\'"))* "\'";
+	//	"\"" ("\\" ("b" | "t" | "n" | "f" | "r" | "\"" | "\'" | "\\") | !("\\" | "\""))* "\"" | "\'" ("\\" ("b" | "t" | "n" |
+	//	"f" | "r" | "\"" | "\'" | "\\") | !("\\" | "\'"))* "\'";
 	public TerminalRule getSTRINGRule() {
 		return gaTerminals.getSTRINGRule();
 	} 
 
 	//terminal ML_COMMENT:
-	//  "/ *"->"* /";
+	//	"/ *"->"* /";
 	public TerminalRule getML_COMMENTRule() {
 		return gaTerminals.getML_COMMENTRule();
 	} 
 
 	//terminal WS:
-	//  (" " | "\t" | "\r" | "\n")+;
+	//	(" " | "\t" | "\r" | "\n")+;
 	public TerminalRule getWSRule() {
 		return gaTerminals.getWSRule();
 	} 
 
 	//terminal ANY_OTHER:
-	//  .;
+	//	.;
 	public TerminalRule getANY_OTHERRule() {
 		return gaTerminals.getANY_OTHERRule();
 	} 

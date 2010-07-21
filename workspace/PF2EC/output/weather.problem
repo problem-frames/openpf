@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ASCII"?>
+<problem:ProblemDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:problem="http://open.ac.uk/problem" name="#Has Weather Data#">
+  <nodes name="HasWData" description="Has Weather Data"/>
+  <nodes name="Aircraft" type="C"/>
+  <nodes name="ATMSystem" type="M" description="AirTraffic Management System"/>
+  <nodes name="Operator" type="B" description="ATC Operator"/>
+  <links from="//@nodes.3" to="//@nodes.2" description="a">
+    <phenomena type="event" name="InputWeatherData"/>
+  </links>
+  <links from="//@nodes.2" to="//@nodes.1" description="b">
+    <phenomena type="event" name="SendWeatherData"/>
+  </links>
+  <links from="//@nodes.0" type="~>" to="//@nodes.1" description="r">
+    <phenomena type="state" name="HasWeatherData"/>
+  </links>
+</problem:ProblemDiagram>

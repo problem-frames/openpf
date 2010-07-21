@@ -7,17 +7,14 @@ see "/Examples/event/sit2.ec"
 see "/Examples/event/sit3.ec"
 see "/Examples/event/sit4.ec"
 see "/Examples/istar/open_account.ood" // just a demo
-see problem #The Central Processor problem#
+see problem  CP.#The Central Processor problem#
 }
-
 CP M
 :"Central Processor" { problem:
 #The Central Processor problem# for CPU
 
 CPU M
-:"Central Processing Unit" {
- see problem #The ADS-B problem#
-}
+:"Central Processing Unit"
 }
 
 #ADS-B# C

@@ -1,4 +1,4 @@
-problem: "Information Display"
+problem: #Information Display#
 
 DRW :"Display Real World" 
 
@@ -8,9 +8,9 @@ Dis C :"Display"
 
 RW C : "Real World"
 
-IM -> RW : "b"
+IM -- RW : "b"
 
-IM -> Dis : "c"
+IM -- Dis : "c"
 
 DRW ~~ RW : "a"
 
