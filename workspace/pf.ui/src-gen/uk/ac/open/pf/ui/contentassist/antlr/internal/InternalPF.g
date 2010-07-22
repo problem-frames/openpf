@@ -321,9 +321,9 @@ rule__RootDiagram__Group__1__Impl
     }
 :
 (
-{ before(grammarAccess.getRootDiagramAccess().getValueTerminalRuleCall_1()); }
-	RULE_VALUE
-{ after(grammarAccess.getRootDiagramAccess().getValueTerminalRuleCall_1()); }
+{ before(grammarAccess.getRootDiagramAccess().getNameAssignment_1()); }
+(rule__RootDiagram__NameAssignment_1)
+{ after(grammarAccess.getRootDiagramAccess().getNameAssignment_1()); }
 )
 
 ;
@@ -1163,6 +1163,21 @@ finally {
 
 
 
+
+rule__RootDiagram__NameAssignment_1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getRootDiagramAccess().getNameValueTerminalRuleCall_1_0()); }
+	RULE_VALUE{ after(grammarAccess.getRootDiagramAccess().getNameValueTerminalRuleCall_1_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
 
 rule__RootDiagram__ObjectsAssignment_6
     @init {

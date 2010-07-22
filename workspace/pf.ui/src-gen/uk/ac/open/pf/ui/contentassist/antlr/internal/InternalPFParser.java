@@ -531,11 +531,11 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
                 if ( (LA1_1==20) ) {
                     int LA1_2 = input.LA(3);
 
-                    if ( (LA1_2==RULE_VALUE||LA1_2==RULE_STRING) ) {
-                        alt1=1;
-                    }
-                    else if ( (LA1_2==18) ) {
+                    if ( (LA1_2==18) ) {
                         alt1=2;
+                    }
+                    else if ( (LA1_2==RULE_VALUE||LA1_2==RULE_STRING) ) {
+                        alt1=1;
                     }
                     else {
                         NoViableAltException nvae =
@@ -810,21 +810,30 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__RootDiagram__Group__1__Impl
-    // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:318:1: rule__RootDiagram__Group__1__Impl : ( RULE_VALUE ) ;
+    // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:318:1: rule__RootDiagram__Group__1__Impl : ( ( rule__RootDiagram__NameAssignment_1 ) ) ;
     public final void rule__RootDiagram__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:322:1: ( ( RULE_VALUE ) )
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:323:1: ( RULE_VALUE )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:322:1: ( ( ( rule__RootDiagram__NameAssignment_1 ) ) )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:323:1: ( ( rule__RootDiagram__NameAssignment_1 ) )
             {
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:323:1: ( RULE_VALUE )
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:324:1: RULE_VALUE
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:323:1: ( ( rule__RootDiagram__NameAssignment_1 ) )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:324:1: ( rule__RootDiagram__NameAssignment_1 )
             {
-             before(grammarAccess.getRootDiagramAccess().getValueTerminalRuleCall_1()); 
-            match(input,RULE_VALUE,FOLLOW_RULE_VALUE_in_rule__RootDiagram__Group__1__Impl619); 
-             after(grammarAccess.getRootDiagramAccess().getValueTerminalRuleCall_1()); 
+             before(grammarAccess.getRootDiagramAccess().getNameAssignment_1()); 
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:325:1: ( rule__RootDiagram__NameAssignment_1 )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:325:2: rule__RootDiagram__NameAssignment_1
+            {
+            pushFollow(FOLLOW_rule__RootDiagram__NameAssignment_1_in_rule__RootDiagram__Group__1__Impl619);
+            rule__RootDiagram__NameAssignment_1();
+            _fsp--;
+
+
+            }
+
+             after(grammarAccess.getRootDiagramAccess().getNameAssignment_1()); 
 
             }
 
@@ -856,11 +865,11 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:339:1: ( rule__RootDiagram__Group__2__Impl rule__RootDiagram__Group__3 )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:340:2: rule__RootDiagram__Group__2__Impl rule__RootDiagram__Group__3
             {
-            pushFollow(FOLLOW_rule__RootDiagram__Group__2__Impl_in_rule__RootDiagram__Group__2648);
+            pushFollow(FOLLOW_rule__RootDiagram__Group__2__Impl_in_rule__RootDiagram__Group__2649);
             rule__RootDiagram__Group__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__RootDiagram__Group__3_in_rule__RootDiagram__Group__2651);
+            pushFollow(FOLLOW_rule__RootDiagram__Group__3_in_rule__RootDiagram__Group__2652);
             rule__RootDiagram__Group__3();
             _fsp--;
 
@@ -896,7 +905,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:353:1: '@'
             {
              before(grammarAccess.getRootDiagramAccess().getCommercialAtKeyword_2()); 
-            match(input,12,FOLLOW_12_in_rule__RootDiagram__Group__2__Impl679); 
+            match(input,12,FOLLOW_12_in_rule__RootDiagram__Group__2__Impl680); 
              after(grammarAccess.getRootDiagramAccess().getCommercialAtKeyword_2()); 
 
             }
@@ -929,11 +938,11 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:370:1: ( rule__RootDiagram__Group__3__Impl rule__RootDiagram__Group__4 )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:371:2: rule__RootDiagram__Group__3__Impl rule__RootDiagram__Group__4
             {
-            pushFollow(FOLLOW_rule__RootDiagram__Group__3__Impl_in_rule__RootDiagram__Group__3710);
+            pushFollow(FOLLOW_rule__RootDiagram__Group__3__Impl_in_rule__RootDiagram__Group__3711);
             rule__RootDiagram__Group__3__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__RootDiagram__Group__4_in_rule__RootDiagram__Group__3713);
+            pushFollow(FOLLOW_rule__RootDiagram__Group__4_in_rule__RootDiagram__Group__3714);
             rule__RootDiagram__Group__4();
             _fsp--;
 
@@ -969,7 +978,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:384:1: 'cycle'
             {
              before(grammarAccess.getRootDiagramAccess().getCycleKeyword_3()); 
-            match(input,13,FOLLOW_13_in_rule__RootDiagram__Group__3__Impl741); 
+            match(input,13,FOLLOW_13_in_rule__RootDiagram__Group__3__Impl742); 
              after(grammarAccess.getRootDiagramAccess().getCycleKeyword_3()); 
 
             }
@@ -1002,11 +1011,11 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:401:1: ( rule__RootDiagram__Group__4__Impl rule__RootDiagram__Group__5 )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:402:2: rule__RootDiagram__Group__4__Impl rule__RootDiagram__Group__5
             {
-            pushFollow(FOLLOW_rule__RootDiagram__Group__4__Impl_in_rule__RootDiagram__Group__4772);
+            pushFollow(FOLLOW_rule__RootDiagram__Group__4__Impl_in_rule__RootDiagram__Group__4773);
             rule__RootDiagram__Group__4__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__RootDiagram__Group__5_in_rule__RootDiagram__Group__4775);
+            pushFollow(FOLLOW_rule__RootDiagram__Group__5_in_rule__RootDiagram__Group__4776);
             rule__RootDiagram__Group__5();
             _fsp--;
 
@@ -1042,7 +1051,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:415:1: '('
             {
              before(grammarAccess.getRootDiagramAccess().getLeftParenthesisKeyword_4()); 
-            match(input,14,FOLLOW_14_in_rule__RootDiagram__Group__4__Impl803); 
+            match(input,14,FOLLOW_14_in_rule__RootDiagram__Group__4__Impl804); 
              after(grammarAccess.getRootDiagramAccess().getLeftParenthesisKeyword_4()); 
 
             }
@@ -1075,11 +1084,11 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:432:1: ( rule__RootDiagram__Group__5__Impl rule__RootDiagram__Group__6 )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:433:2: rule__RootDiagram__Group__5__Impl rule__RootDiagram__Group__6
             {
-            pushFollow(FOLLOW_rule__RootDiagram__Group__5__Impl_in_rule__RootDiagram__Group__5834);
+            pushFollow(FOLLOW_rule__RootDiagram__Group__5__Impl_in_rule__RootDiagram__Group__5835);
             rule__RootDiagram__Group__5__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__RootDiagram__Group__6_in_rule__RootDiagram__Group__5837);
+            pushFollow(FOLLOW_rule__RootDiagram__Group__6_in_rule__RootDiagram__Group__5838);
             rule__RootDiagram__Group__6();
             _fsp--;
 
@@ -1115,7 +1124,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:446:1: '('
             {
              before(grammarAccess.getRootDiagramAccess().getLeftParenthesisKeyword_5()); 
-            match(input,14,FOLLOW_14_in_rule__RootDiagram__Group__5__Impl865); 
+            match(input,14,FOLLOW_14_in_rule__RootDiagram__Group__5__Impl866); 
              after(grammarAccess.getRootDiagramAccess().getLeftParenthesisKeyword_5()); 
 
             }
@@ -1148,11 +1157,11 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:463:1: ( rule__RootDiagram__Group__6__Impl rule__RootDiagram__Group__7 )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:464:2: rule__RootDiagram__Group__6__Impl rule__RootDiagram__Group__7
             {
-            pushFollow(FOLLOW_rule__RootDiagram__Group__6__Impl_in_rule__RootDiagram__Group__6896);
+            pushFollow(FOLLOW_rule__RootDiagram__Group__6__Impl_in_rule__RootDiagram__Group__6897);
             rule__RootDiagram__Group__6__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__RootDiagram__Group__7_in_rule__RootDiagram__Group__6899);
+            pushFollow(FOLLOW_rule__RootDiagram__Group__7_in_rule__RootDiagram__Group__6900);
             rule__RootDiagram__Group__7();
             _fsp--;
 
@@ -1191,7 +1200,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:478:1: ( rule__RootDiagram__ObjectsAssignment_6 )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:478:2: rule__RootDiagram__ObjectsAssignment_6
             {
-            pushFollow(FOLLOW_rule__RootDiagram__ObjectsAssignment_6_in_rule__RootDiagram__Group__6__Impl926);
+            pushFollow(FOLLOW_rule__RootDiagram__ObjectsAssignment_6_in_rule__RootDiagram__Group__6__Impl927);
             rule__RootDiagram__ObjectsAssignment_6();
             _fsp--;
 
@@ -1230,11 +1239,11 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:492:1: ( rule__RootDiagram__Group__7__Impl rule__RootDiagram__Group__8 )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:493:2: rule__RootDiagram__Group__7__Impl rule__RootDiagram__Group__8
             {
-            pushFollow(FOLLOW_rule__RootDiagram__Group__7__Impl_in_rule__RootDiagram__Group__7956);
+            pushFollow(FOLLOW_rule__RootDiagram__Group__7__Impl_in_rule__RootDiagram__Group__7957);
             rule__RootDiagram__Group__7__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__RootDiagram__Group__8_in_rule__RootDiagram__Group__7959);
+            pushFollow(FOLLOW_rule__RootDiagram__Group__8_in_rule__RootDiagram__Group__7960);
             rule__RootDiagram__Group__8();
             _fsp--;
 
@@ -1285,7 +1294,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:507:2: rule__RootDiagram__Group_7__0
             	    {
-            	    pushFollow(FOLLOW_rule__RootDiagram__Group_7__0_in_rule__RootDiagram__Group__7__Impl986);
+            	    pushFollow(FOLLOW_rule__RootDiagram__Group_7__0_in_rule__RootDiagram__Group__7__Impl987);
             	    rule__RootDiagram__Group_7__0();
             	    _fsp--;
 
@@ -1330,11 +1339,11 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:521:1: ( rule__RootDiagram__Group__8__Impl rule__RootDiagram__Group__9 )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:522:2: rule__RootDiagram__Group__8__Impl rule__RootDiagram__Group__9
             {
-            pushFollow(FOLLOW_rule__RootDiagram__Group__8__Impl_in_rule__RootDiagram__Group__81017);
+            pushFollow(FOLLOW_rule__RootDiagram__Group__8__Impl_in_rule__RootDiagram__Group__81018);
             rule__RootDiagram__Group__8__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__RootDiagram__Group__9_in_rule__RootDiagram__Group__81020);
+            pushFollow(FOLLOW_rule__RootDiagram__Group__9_in_rule__RootDiagram__Group__81021);
             rule__RootDiagram__Group__9();
             _fsp--;
 
@@ -1370,7 +1379,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:535:1: ')'
             {
              before(grammarAccess.getRootDiagramAccess().getRightParenthesisKeyword_8()); 
-            match(input,15,FOLLOW_15_in_rule__RootDiagram__Group__8__Impl1048); 
+            match(input,15,FOLLOW_15_in_rule__RootDiagram__Group__8__Impl1049); 
              after(grammarAccess.getRootDiagramAccess().getRightParenthesisKeyword_8()); 
 
             }
@@ -1403,7 +1412,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:552:1: ( rule__RootDiagram__Group__9__Impl )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:553:2: rule__RootDiagram__Group__9__Impl
             {
-            pushFollow(FOLLOW_rule__RootDiagram__Group__9__Impl_in_rule__RootDiagram__Group__91079);
+            pushFollow(FOLLOW_rule__RootDiagram__Group__9__Impl_in_rule__RootDiagram__Group__91080);
             rule__RootDiagram__Group__9__Impl();
             _fsp--;
 
@@ -1439,7 +1448,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:565:1: ')'
             {
              before(grammarAccess.getRootDiagramAccess().getRightParenthesisKeyword_9()); 
-            match(input,15,FOLLOW_15_in_rule__RootDiagram__Group__9__Impl1107); 
+            match(input,15,FOLLOW_15_in_rule__RootDiagram__Group__9__Impl1108); 
              after(grammarAccess.getRootDiagramAccess().getRightParenthesisKeyword_9()); 
 
             }
@@ -1472,11 +1481,11 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:602:1: ( rule__RootDiagram__Group_7__0__Impl rule__RootDiagram__Group_7__1 )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:603:2: rule__RootDiagram__Group_7__0__Impl rule__RootDiagram__Group_7__1
             {
-            pushFollow(FOLLOW_rule__RootDiagram__Group_7__0__Impl_in_rule__RootDiagram__Group_7__01158);
+            pushFollow(FOLLOW_rule__RootDiagram__Group_7__0__Impl_in_rule__RootDiagram__Group_7__01159);
             rule__RootDiagram__Group_7__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__RootDiagram__Group_7__1_in_rule__RootDiagram__Group_7__01161);
+            pushFollow(FOLLOW_rule__RootDiagram__Group_7__1_in_rule__RootDiagram__Group_7__01162);
             rule__RootDiagram__Group_7__1();
             _fsp--;
 
@@ -1512,7 +1521,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:616:1: ','
             {
              before(grammarAccess.getRootDiagramAccess().getCommaKeyword_7_0()); 
-            match(input,16,FOLLOW_16_in_rule__RootDiagram__Group_7__0__Impl1189); 
+            match(input,16,FOLLOW_16_in_rule__RootDiagram__Group_7__0__Impl1190); 
              after(grammarAccess.getRootDiagramAccess().getCommaKeyword_7_0()); 
 
             }
@@ -1545,7 +1554,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:633:1: ( rule__RootDiagram__Group_7__1__Impl )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:634:2: rule__RootDiagram__Group_7__1__Impl
             {
-            pushFollow(FOLLOW_rule__RootDiagram__Group_7__1__Impl_in_rule__RootDiagram__Group_7__11220);
+            pushFollow(FOLLOW_rule__RootDiagram__Group_7__1__Impl_in_rule__RootDiagram__Group_7__11221);
             rule__RootDiagram__Group_7__1__Impl();
             _fsp--;
 
@@ -1584,7 +1593,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:647:1: ( rule__RootDiagram__ObjectsAssignment_7_1 )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:647:2: rule__RootDiagram__ObjectsAssignment_7_1
             {
-            pushFollow(FOLLOW_rule__RootDiagram__ObjectsAssignment_7_1_in_rule__RootDiagram__Group_7__1__Impl1247);
+            pushFollow(FOLLOW_rule__RootDiagram__ObjectsAssignment_7_1_in_rule__RootDiagram__Group_7__1__Impl1248);
             rule__RootDiagram__ObjectsAssignment_7_1();
             _fsp--;
 
@@ -1623,11 +1632,11 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:665:1: ( rule__Node__Group__0__Impl rule__Node__Group__1 )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:666:2: rule__Node__Group__0__Impl rule__Node__Group__1
             {
-            pushFollow(FOLLOW_rule__Node__Group__0__Impl_in_rule__Node__Group__01281);
+            pushFollow(FOLLOW_rule__Node__Group__0__Impl_in_rule__Node__Group__01282);
             rule__Node__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Node__Group__1_in_rule__Node__Group__01284);
+            pushFollow(FOLLOW_rule__Node__Group__1_in_rule__Node__Group__01285);
             rule__Node__Group__1();
             _fsp--;
 
@@ -1666,7 +1675,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:680:1: ( rule__Node__NameAssignment_0 )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:680:2: rule__Node__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__Node__NameAssignment_0_in_rule__Node__Group__0__Impl1311);
+            pushFollow(FOLLOW_rule__Node__NameAssignment_0_in_rule__Node__Group__0__Impl1312);
             rule__Node__NameAssignment_0();
             _fsp--;
 
@@ -1705,11 +1714,11 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:694:1: ( rule__Node__Group__1__Impl rule__Node__Group__2 )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:695:2: rule__Node__Group__1__Impl rule__Node__Group__2
             {
-            pushFollow(FOLLOW_rule__Node__Group__1__Impl_in_rule__Node__Group__11341);
+            pushFollow(FOLLOW_rule__Node__Group__1__Impl_in_rule__Node__Group__11342);
             rule__Node__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Node__Group__2_in_rule__Node__Group__11344);
+            pushFollow(FOLLOW_rule__Node__Group__2_in_rule__Node__Group__11345);
             rule__Node__Group__2();
             _fsp--;
 
@@ -1745,7 +1754,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:708:1: ':='
             {
              before(grammarAccess.getNodeAccess().getColonEqualsSignKeyword_1()); 
-            match(input,17,FOLLOW_17_in_rule__Node__Group__1__Impl1372); 
+            match(input,17,FOLLOW_17_in_rule__Node__Group__1__Impl1373); 
              after(grammarAccess.getNodeAccess().getColonEqualsSignKeyword_1()); 
 
             }
@@ -1778,7 +1787,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:725:1: ( rule__Node__Group__2__Impl )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:726:2: rule__Node__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Node__Group__2__Impl_in_rule__Node__Group__21403);
+            pushFollow(FOLLOW_rule__Node__Group__2__Impl_in_rule__Node__Group__21404);
             rule__Node__Group__2__Impl();
             _fsp--;
 
@@ -1817,7 +1826,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:739:1: ( rule__Node__CompositeAssignment_2 )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:739:2: rule__Node__CompositeAssignment_2
             {
-            pushFollow(FOLLOW_rule__Node__CompositeAssignment_2_in_rule__Node__Group__2__Impl1430);
+            pushFollow(FOLLOW_rule__Node__CompositeAssignment_2_in_rule__Node__Group__2__Impl1431);
             rule__Node__CompositeAssignment_2();
             _fsp--;
 
@@ -1856,11 +1865,11 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:759:1: ( rule__CompositeObject__Group__0__Impl rule__CompositeObject__Group__1 )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:760:2: rule__CompositeObject__Group__0__Impl rule__CompositeObject__Group__1
             {
-            pushFollow(FOLLOW_rule__CompositeObject__Group__0__Impl_in_rule__CompositeObject__Group__01466);
+            pushFollow(FOLLOW_rule__CompositeObject__Group__0__Impl_in_rule__CompositeObject__Group__01467);
             rule__CompositeObject__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__CompositeObject__Group__1_in_rule__CompositeObject__Group__01469);
+            pushFollow(FOLLOW_rule__CompositeObject__Group__1_in_rule__CompositeObject__Group__01470);
             rule__CompositeObject__Group__1();
             _fsp--;
 
@@ -1929,11 +1938,11 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:790:1: ( rule__CompositeObject__Group__1__Impl rule__CompositeObject__Group__2 )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:791:2: rule__CompositeObject__Group__1__Impl rule__CompositeObject__Group__2
             {
-            pushFollow(FOLLOW_rule__CompositeObject__Group__1__Impl_in_rule__CompositeObject__Group__11527);
+            pushFollow(FOLLOW_rule__CompositeObject__Group__1__Impl_in_rule__CompositeObject__Group__11528);
             rule__CompositeObject__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__CompositeObject__Group__2_in_rule__CompositeObject__Group__11530);
+            pushFollow(FOLLOW_rule__CompositeObject__Group__2_in_rule__CompositeObject__Group__11531);
             rule__CompositeObject__Group__2();
             _fsp--;
 
@@ -1969,7 +1978,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:804:1: '{'
             {
              before(grammarAccess.getCompositeObjectAccess().getLeftCurlyBracketKeyword_1()); 
-            match(input,18,FOLLOW_18_in_rule__CompositeObject__Group__1__Impl1558); 
+            match(input,18,FOLLOW_18_in_rule__CompositeObject__Group__1__Impl1559); 
              after(grammarAccess.getCompositeObjectAccess().getLeftCurlyBracketKeyword_1()); 
 
             }
@@ -2002,11 +2011,11 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:821:1: ( rule__CompositeObject__Group__2__Impl rule__CompositeObject__Group__3 )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:822:2: rule__CompositeObject__Group__2__Impl rule__CompositeObject__Group__3
             {
-            pushFollow(FOLLOW_rule__CompositeObject__Group__2__Impl_in_rule__CompositeObject__Group__21589);
+            pushFollow(FOLLOW_rule__CompositeObject__Group__2__Impl_in_rule__CompositeObject__Group__21590);
             rule__CompositeObject__Group__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__CompositeObject__Group__3_in_rule__CompositeObject__Group__21592);
+            pushFollow(FOLLOW_rule__CompositeObject__Group__3_in_rule__CompositeObject__Group__21593);
             rule__CompositeObject__Group__3();
             _fsp--;
 
@@ -2053,7 +2062,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
                 case 1 :
                     // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:836:2: rule__CompositeObject__FieldsAssignment_2
                     {
-                    pushFollow(FOLLOW_rule__CompositeObject__FieldsAssignment_2_in_rule__CompositeObject__Group__2__Impl1619);
+                    pushFollow(FOLLOW_rule__CompositeObject__FieldsAssignment_2_in_rule__CompositeObject__Group__2__Impl1620);
                     rule__CompositeObject__FieldsAssignment_2();
                     _fsp--;
 
@@ -2095,11 +2104,11 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:850:1: ( rule__CompositeObject__Group__3__Impl rule__CompositeObject__Group__4 )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:851:2: rule__CompositeObject__Group__3__Impl rule__CompositeObject__Group__4
             {
-            pushFollow(FOLLOW_rule__CompositeObject__Group__3__Impl_in_rule__CompositeObject__Group__31650);
+            pushFollow(FOLLOW_rule__CompositeObject__Group__3__Impl_in_rule__CompositeObject__Group__31651);
             rule__CompositeObject__Group__3__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__CompositeObject__Group__4_in_rule__CompositeObject__Group__31653);
+            pushFollow(FOLLOW_rule__CompositeObject__Group__4_in_rule__CompositeObject__Group__31654);
             rule__CompositeObject__Group__4();
             _fsp--;
 
@@ -2150,7 +2159,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:865:2: rule__CompositeObject__Group_3__0
             	    {
-            	    pushFollow(FOLLOW_rule__CompositeObject__Group_3__0_in_rule__CompositeObject__Group__3__Impl1680);
+            	    pushFollow(FOLLOW_rule__CompositeObject__Group_3__0_in_rule__CompositeObject__Group__3__Impl1681);
             	    rule__CompositeObject__Group_3__0();
             	    _fsp--;
 
@@ -2195,7 +2204,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:879:1: ( rule__CompositeObject__Group__4__Impl )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:880:2: rule__CompositeObject__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__CompositeObject__Group__4__Impl_in_rule__CompositeObject__Group__41711);
+            pushFollow(FOLLOW_rule__CompositeObject__Group__4__Impl_in_rule__CompositeObject__Group__41712);
             rule__CompositeObject__Group__4__Impl();
             _fsp--;
 
@@ -2231,7 +2240,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:892:1: '}'
             {
              before(grammarAccess.getCompositeObjectAccess().getRightCurlyBracketKeyword_4()); 
-            match(input,19,FOLLOW_19_in_rule__CompositeObject__Group__4__Impl1739); 
+            match(input,19,FOLLOW_19_in_rule__CompositeObject__Group__4__Impl1740); 
              after(grammarAccess.getCompositeObjectAccess().getRightCurlyBracketKeyword_4()); 
 
             }
@@ -2264,11 +2273,11 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:919:1: ( rule__CompositeObject__Group_3__0__Impl rule__CompositeObject__Group_3__1 )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:920:2: rule__CompositeObject__Group_3__0__Impl rule__CompositeObject__Group_3__1
             {
-            pushFollow(FOLLOW_rule__CompositeObject__Group_3__0__Impl_in_rule__CompositeObject__Group_3__01780);
+            pushFollow(FOLLOW_rule__CompositeObject__Group_3__0__Impl_in_rule__CompositeObject__Group_3__01781);
             rule__CompositeObject__Group_3__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__CompositeObject__Group_3__1_in_rule__CompositeObject__Group_3__01783);
+            pushFollow(FOLLOW_rule__CompositeObject__Group_3__1_in_rule__CompositeObject__Group_3__01784);
             rule__CompositeObject__Group_3__1();
             _fsp--;
 
@@ -2304,7 +2313,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:933:1: ','
             {
              before(grammarAccess.getCompositeObjectAccess().getCommaKeyword_3_0()); 
-            match(input,16,FOLLOW_16_in_rule__CompositeObject__Group_3__0__Impl1811); 
+            match(input,16,FOLLOW_16_in_rule__CompositeObject__Group_3__0__Impl1812); 
              after(grammarAccess.getCompositeObjectAccess().getCommaKeyword_3_0()); 
 
             }
@@ -2337,7 +2346,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:950:1: ( rule__CompositeObject__Group_3__1__Impl )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:951:2: rule__CompositeObject__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__CompositeObject__Group_3__1__Impl_in_rule__CompositeObject__Group_3__11842);
+            pushFollow(FOLLOW_rule__CompositeObject__Group_3__1__Impl_in_rule__CompositeObject__Group_3__11843);
             rule__CompositeObject__Group_3__1__Impl();
             _fsp--;
 
@@ -2376,7 +2385,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:964:1: ( rule__CompositeObject__FieldsAssignment_3_1 )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:964:2: rule__CompositeObject__FieldsAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__CompositeObject__FieldsAssignment_3_1_in_rule__CompositeObject__Group_3__1__Impl1869);
+            pushFollow(FOLLOW_rule__CompositeObject__FieldsAssignment_3_1_in_rule__CompositeObject__Group_3__1__Impl1870);
             rule__CompositeObject__FieldsAssignment_3_1();
             _fsp--;
 
@@ -2415,11 +2424,11 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:982:1: ( rule__SimpleField__Group__0__Impl rule__SimpleField__Group__1 )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:983:2: rule__SimpleField__Group__0__Impl rule__SimpleField__Group__1
             {
-            pushFollow(FOLLOW_rule__SimpleField__Group__0__Impl_in_rule__SimpleField__Group__01903);
+            pushFollow(FOLLOW_rule__SimpleField__Group__0__Impl_in_rule__SimpleField__Group__01904);
             rule__SimpleField__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__SimpleField__Group__1_in_rule__SimpleField__Group__01906);
+            pushFollow(FOLLOW_rule__SimpleField__Group__1_in_rule__SimpleField__Group__01907);
             rule__SimpleField__Group__1();
             _fsp--;
 
@@ -2458,7 +2467,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:997:1: ( rule__SimpleField__NameAssignment_0 )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:997:2: rule__SimpleField__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__SimpleField__NameAssignment_0_in_rule__SimpleField__Group__0__Impl1933);
+            pushFollow(FOLLOW_rule__SimpleField__NameAssignment_0_in_rule__SimpleField__Group__0__Impl1934);
             rule__SimpleField__NameAssignment_0();
             _fsp--;
 
@@ -2497,11 +2506,11 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1011:1: ( rule__SimpleField__Group__1__Impl rule__SimpleField__Group__2 )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1012:2: rule__SimpleField__Group__1__Impl rule__SimpleField__Group__2
             {
-            pushFollow(FOLLOW_rule__SimpleField__Group__1__Impl_in_rule__SimpleField__Group__11963);
+            pushFollow(FOLLOW_rule__SimpleField__Group__1__Impl_in_rule__SimpleField__Group__11964);
             rule__SimpleField__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__SimpleField__Group__2_in_rule__SimpleField__Group__11966);
+            pushFollow(FOLLOW_rule__SimpleField__Group__2_in_rule__SimpleField__Group__11967);
             rule__SimpleField__Group__2();
             _fsp--;
 
@@ -2537,7 +2546,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1025:1: ':'
             {
              before(grammarAccess.getSimpleFieldAccess().getColonKeyword_1()); 
-            match(input,20,FOLLOW_20_in_rule__SimpleField__Group__1__Impl1994); 
+            match(input,20,FOLLOW_20_in_rule__SimpleField__Group__1__Impl1995); 
              after(grammarAccess.getSimpleFieldAccess().getColonKeyword_1()); 
 
             }
@@ -2570,7 +2579,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1042:1: ( rule__SimpleField__Group__2__Impl )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1043:2: rule__SimpleField__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__SimpleField__Group__2__Impl_in_rule__SimpleField__Group__22025);
+            pushFollow(FOLLOW_rule__SimpleField__Group__2__Impl_in_rule__SimpleField__Group__22026);
             rule__SimpleField__Group__2__Impl();
             _fsp--;
 
@@ -2609,7 +2618,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1056:1: ( rule__SimpleField__Alternatives_2 )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1056:2: rule__SimpleField__Alternatives_2
             {
-            pushFollow(FOLLOW_rule__SimpleField__Alternatives_2_in_rule__SimpleField__Group__2__Impl2052);
+            pushFollow(FOLLOW_rule__SimpleField__Alternatives_2_in_rule__SimpleField__Group__2__Impl2053);
             rule__SimpleField__Alternatives_2();
             _fsp--;
 
@@ -2648,11 +2657,11 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1076:1: ( rule__CompositeField__Group__0__Impl rule__CompositeField__Group__1 )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1077:2: rule__CompositeField__Group__0__Impl rule__CompositeField__Group__1
             {
-            pushFollow(FOLLOW_rule__CompositeField__Group__0__Impl_in_rule__CompositeField__Group__02088);
+            pushFollow(FOLLOW_rule__CompositeField__Group__0__Impl_in_rule__CompositeField__Group__02089);
             rule__CompositeField__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__CompositeField__Group__1_in_rule__CompositeField__Group__02091);
+            pushFollow(FOLLOW_rule__CompositeField__Group__1_in_rule__CompositeField__Group__02092);
             rule__CompositeField__Group__1();
             _fsp--;
 
@@ -2691,7 +2700,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1091:1: ( rule__CompositeField__NameAssignment_0 )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1091:2: rule__CompositeField__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__CompositeField__NameAssignment_0_in_rule__CompositeField__Group__0__Impl2118);
+            pushFollow(FOLLOW_rule__CompositeField__NameAssignment_0_in_rule__CompositeField__Group__0__Impl2119);
             rule__CompositeField__NameAssignment_0();
             _fsp--;
 
@@ -2730,11 +2739,11 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1105:1: ( rule__CompositeField__Group__1__Impl rule__CompositeField__Group__2 )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1106:2: rule__CompositeField__Group__1__Impl rule__CompositeField__Group__2
             {
-            pushFollow(FOLLOW_rule__CompositeField__Group__1__Impl_in_rule__CompositeField__Group__12148);
+            pushFollow(FOLLOW_rule__CompositeField__Group__1__Impl_in_rule__CompositeField__Group__12149);
             rule__CompositeField__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__CompositeField__Group__2_in_rule__CompositeField__Group__12151);
+            pushFollow(FOLLOW_rule__CompositeField__Group__2_in_rule__CompositeField__Group__12152);
             rule__CompositeField__Group__2();
             _fsp--;
 
@@ -2770,7 +2779,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1119:1: ':'
             {
              before(grammarAccess.getCompositeFieldAccess().getColonKeyword_1()); 
-            match(input,20,FOLLOW_20_in_rule__CompositeField__Group__1__Impl2179); 
+            match(input,20,FOLLOW_20_in_rule__CompositeField__Group__1__Impl2180); 
              after(grammarAccess.getCompositeFieldAccess().getColonKeyword_1()); 
 
             }
@@ -2803,7 +2812,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1136:1: ( rule__CompositeField__Group__2__Impl )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1137:2: rule__CompositeField__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__CompositeField__Group__2__Impl_in_rule__CompositeField__Group__22210);
+            pushFollow(FOLLOW_rule__CompositeField__Group__2__Impl_in_rule__CompositeField__Group__22211);
             rule__CompositeField__Group__2__Impl();
             _fsp--;
 
@@ -2842,7 +2851,7 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1150:1: ( rule__CompositeField__ValueAssignment_2 )
             // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1150:2: rule__CompositeField__ValueAssignment_2
             {
-            pushFollow(FOLLOW_rule__CompositeField__ValueAssignment_2_in_rule__CompositeField__Group__2__Impl2237);
+            pushFollow(FOLLOW_rule__CompositeField__ValueAssignment_2_in_rule__CompositeField__Group__2__Impl2238);
             rule__CompositeField__ValueAssignment_2();
             _fsp--;
 
@@ -2871,21 +2880,58 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
     // $ANTLR end rule__CompositeField__Group__2__Impl
 
 
+    // $ANTLR start rule__RootDiagram__NameAssignment_1
+    // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1167:1: rule__RootDiagram__NameAssignment_1 : ( RULE_VALUE ) ;
+    public final void rule__RootDiagram__NameAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1171:1: ( ( RULE_VALUE ) )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1172:1: ( RULE_VALUE )
+            {
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1172:1: ( RULE_VALUE )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1173:1: RULE_VALUE
+            {
+             before(grammarAccess.getRootDiagramAccess().getNameValueTerminalRuleCall_1_0()); 
+            match(input,RULE_VALUE,FOLLOW_RULE_VALUE_in_rule__RootDiagram__NameAssignment_12279); 
+             after(grammarAccess.getRootDiagramAccess().getNameValueTerminalRuleCall_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end rule__RootDiagram__NameAssignment_1
+
+
     // $ANTLR start rule__RootDiagram__ObjectsAssignment_6
-    // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1167:1: rule__RootDiagram__ObjectsAssignment_6 : ( ruleNode ) ;
+    // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1182:1: rule__RootDiagram__ObjectsAssignment_6 : ( ruleNode ) ;
     public final void rule__RootDiagram__ObjectsAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1171:1: ( ( ruleNode ) )
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1172:1: ( ruleNode )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1186:1: ( ( ruleNode ) )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1187:1: ( ruleNode )
             {
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1172:1: ( ruleNode )
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1173:1: ruleNode
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1187:1: ( ruleNode )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1188:1: ruleNode
             {
              before(grammarAccess.getRootDiagramAccess().getObjectsNodeParserRuleCall_6_0()); 
-            pushFollow(FOLLOW_ruleNode_in_rule__RootDiagram__ObjectsAssignment_62278);
+            pushFollow(FOLLOW_ruleNode_in_rule__RootDiagram__ObjectsAssignment_62310);
             ruleNode();
             _fsp--;
 
@@ -2912,20 +2958,20 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__RootDiagram__ObjectsAssignment_7_1
-    // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1182:1: rule__RootDiagram__ObjectsAssignment_7_1 : ( ruleNode ) ;
+    // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1197:1: rule__RootDiagram__ObjectsAssignment_7_1 : ( ruleNode ) ;
     public final void rule__RootDiagram__ObjectsAssignment_7_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1186:1: ( ( ruleNode ) )
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1187:1: ( ruleNode )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1201:1: ( ( ruleNode ) )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1202:1: ( ruleNode )
             {
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1187:1: ( ruleNode )
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1188:1: ruleNode
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1202:1: ( ruleNode )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1203:1: ruleNode
             {
              before(grammarAccess.getRootDiagramAccess().getObjectsNodeParserRuleCall_7_1_0()); 
-            pushFollow(FOLLOW_ruleNode_in_rule__RootDiagram__ObjectsAssignment_7_12309);
+            pushFollow(FOLLOW_ruleNode_in_rule__RootDiagram__ObjectsAssignment_7_12341);
             ruleNode();
             _fsp--;
 
@@ -2952,20 +2998,20 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Node__NameAssignment_0
-    // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1197:1: rule__Node__NameAssignment_0 : ( RULE_VALUE ) ;
+    // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1212:1: rule__Node__NameAssignment_0 : ( RULE_VALUE ) ;
     public final void rule__Node__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1201:1: ( ( RULE_VALUE ) )
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1202:1: ( RULE_VALUE )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1216:1: ( ( RULE_VALUE ) )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1217:1: ( RULE_VALUE )
             {
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1202:1: ( RULE_VALUE )
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1203:1: RULE_VALUE
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1217:1: ( RULE_VALUE )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1218:1: RULE_VALUE
             {
              before(grammarAccess.getNodeAccess().getNameValueTerminalRuleCall_0_0()); 
-            match(input,RULE_VALUE,FOLLOW_RULE_VALUE_in_rule__Node__NameAssignment_02340); 
+            match(input,RULE_VALUE,FOLLOW_RULE_VALUE_in_rule__Node__NameAssignment_02372); 
              after(grammarAccess.getNodeAccess().getNameValueTerminalRuleCall_0_0()); 
 
             }
@@ -2989,20 +3035,20 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Node__CompositeAssignment_2
-    // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1212:1: rule__Node__CompositeAssignment_2 : ( ruleCompositeObject ) ;
+    // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1227:1: rule__Node__CompositeAssignment_2 : ( ruleCompositeObject ) ;
     public final void rule__Node__CompositeAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1216:1: ( ( ruleCompositeObject ) )
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1217:1: ( ruleCompositeObject )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1231:1: ( ( ruleCompositeObject ) )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1232:1: ( ruleCompositeObject )
             {
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1217:1: ( ruleCompositeObject )
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1218:1: ruleCompositeObject
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1232:1: ( ruleCompositeObject )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1233:1: ruleCompositeObject
             {
              before(grammarAccess.getNodeAccess().getCompositeCompositeObjectParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleCompositeObject_in_rule__Node__CompositeAssignment_22371);
+            pushFollow(FOLLOW_ruleCompositeObject_in_rule__Node__CompositeAssignment_22403);
             ruleCompositeObject();
             _fsp--;
 
@@ -3029,20 +3075,20 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__CompositeObject__FieldsAssignment_2
-    // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1227:1: rule__CompositeObject__FieldsAssignment_2 : ( ruleField ) ;
+    // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1242:1: rule__CompositeObject__FieldsAssignment_2 : ( ruleField ) ;
     public final void rule__CompositeObject__FieldsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1231:1: ( ( ruleField ) )
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1232:1: ( ruleField )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1246:1: ( ( ruleField ) )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1247:1: ( ruleField )
             {
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1232:1: ( ruleField )
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1233:1: ruleField
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1247:1: ( ruleField )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1248:1: ruleField
             {
              before(grammarAccess.getCompositeObjectAccess().getFieldsFieldParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleField_in_rule__CompositeObject__FieldsAssignment_22402);
+            pushFollow(FOLLOW_ruleField_in_rule__CompositeObject__FieldsAssignment_22434);
             ruleField();
             _fsp--;
 
@@ -3069,20 +3115,20 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__CompositeObject__FieldsAssignment_3_1
-    // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1242:1: rule__CompositeObject__FieldsAssignment_3_1 : ( ruleField ) ;
+    // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1257:1: rule__CompositeObject__FieldsAssignment_3_1 : ( ruleField ) ;
     public final void rule__CompositeObject__FieldsAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1246:1: ( ( ruleField ) )
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1247:1: ( ruleField )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1261:1: ( ( ruleField ) )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1262:1: ( ruleField )
             {
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1247:1: ( ruleField )
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1248:1: ruleField
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1262:1: ( ruleField )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1263:1: ruleField
             {
              before(grammarAccess.getCompositeObjectAccess().getFieldsFieldParserRuleCall_3_1_0()); 
-            pushFollow(FOLLOW_ruleField_in_rule__CompositeObject__FieldsAssignment_3_12433);
+            pushFollow(FOLLOW_ruleField_in_rule__CompositeObject__FieldsAssignment_3_12465);
             ruleField();
             _fsp--;
 
@@ -3109,20 +3155,20 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__SimpleField__NameAssignment_0
-    // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1257:1: rule__SimpleField__NameAssignment_0 : ( RULE_ID ) ;
+    // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1272:1: rule__SimpleField__NameAssignment_0 : ( RULE_ID ) ;
     public final void rule__SimpleField__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1261:1: ( ( RULE_ID ) )
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1262:1: ( RULE_ID )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1276:1: ( ( RULE_ID ) )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1277:1: ( RULE_ID )
             {
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1262:1: ( RULE_ID )
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1263:1: RULE_ID
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1277:1: ( RULE_ID )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1278:1: RULE_ID
             {
              before(grammarAccess.getSimpleFieldAccess().getNameIDTerminalRuleCall_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SimpleField__NameAssignment_02464); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SimpleField__NameAssignment_02496); 
              after(grammarAccess.getSimpleFieldAccess().getNameIDTerminalRuleCall_0_0()); 
 
             }
@@ -3146,20 +3192,20 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__SimpleField__ValueAssignment_2_0
-    // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1272:1: rule__SimpleField__ValueAssignment_2_0 : ( RULE_VALUE ) ;
+    // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1287:1: rule__SimpleField__ValueAssignment_2_0 : ( RULE_VALUE ) ;
     public final void rule__SimpleField__ValueAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1276:1: ( ( RULE_VALUE ) )
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1277:1: ( RULE_VALUE )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1291:1: ( ( RULE_VALUE ) )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1292:1: ( RULE_VALUE )
             {
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1277:1: ( RULE_VALUE )
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1278:1: RULE_VALUE
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1292:1: ( RULE_VALUE )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1293:1: RULE_VALUE
             {
              before(grammarAccess.getSimpleFieldAccess().getValueValueTerminalRuleCall_2_0_0()); 
-            match(input,RULE_VALUE,FOLLOW_RULE_VALUE_in_rule__SimpleField__ValueAssignment_2_02495); 
+            match(input,RULE_VALUE,FOLLOW_RULE_VALUE_in_rule__SimpleField__ValueAssignment_2_02527); 
              after(grammarAccess.getSimpleFieldAccess().getValueValueTerminalRuleCall_2_0_0()); 
 
             }
@@ -3183,20 +3229,20 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__SimpleField__ValueAssignment_2_1
-    // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1287:1: rule__SimpleField__ValueAssignment_2_1 : ( RULE_STRING ) ;
+    // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1302:1: rule__SimpleField__ValueAssignment_2_1 : ( RULE_STRING ) ;
     public final void rule__SimpleField__ValueAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1291:1: ( ( RULE_STRING ) )
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1292:1: ( RULE_STRING )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1306:1: ( ( RULE_STRING ) )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1307:1: ( RULE_STRING )
             {
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1292:1: ( RULE_STRING )
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1293:1: RULE_STRING
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1307:1: ( RULE_STRING )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1308:1: RULE_STRING
             {
              before(grammarAccess.getSimpleFieldAccess().getValueSTRINGTerminalRuleCall_2_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SimpleField__ValueAssignment_2_12526); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SimpleField__ValueAssignment_2_12558); 
              after(grammarAccess.getSimpleFieldAccess().getValueSTRINGTerminalRuleCall_2_1_0()); 
 
             }
@@ -3220,20 +3266,20 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__CompositeField__NameAssignment_0
-    // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1302:1: rule__CompositeField__NameAssignment_0 : ( RULE_ID ) ;
+    // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1317:1: rule__CompositeField__NameAssignment_0 : ( RULE_ID ) ;
     public final void rule__CompositeField__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1306:1: ( ( RULE_ID ) )
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1307:1: ( RULE_ID )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1321:1: ( ( RULE_ID ) )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1322:1: ( RULE_ID )
             {
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1307:1: ( RULE_ID )
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1308:1: RULE_ID
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1322:1: ( RULE_ID )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1323:1: RULE_ID
             {
              before(grammarAccess.getCompositeFieldAccess().getNameIDTerminalRuleCall_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CompositeField__NameAssignment_02557); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CompositeField__NameAssignment_02589); 
              after(grammarAccess.getCompositeFieldAccess().getNameIDTerminalRuleCall_0_0()); 
 
             }
@@ -3257,20 +3303,20 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__CompositeField__ValueAssignment_2
-    // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1317:1: rule__CompositeField__ValueAssignment_2 : ( ruleCompositeObject ) ;
+    // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1332:1: rule__CompositeField__ValueAssignment_2 : ( ruleCompositeObject ) ;
     public final void rule__CompositeField__ValueAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1321:1: ( ( ruleCompositeObject ) )
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1322:1: ( ruleCompositeObject )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1336:1: ( ( ruleCompositeObject ) )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1337:1: ( ruleCompositeObject )
             {
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1322:1: ( ruleCompositeObject )
-            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1323:1: ruleCompositeObject
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1337:1: ( ruleCompositeObject )
+            // ../pf.ui/src-gen/uk/ac/open/pf/ui/contentassist/antlr/internal/InternalPF.g:1338:1: ruleCompositeObject
             {
              before(grammarAccess.getCompositeFieldAccess().getValueCompositeObjectParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleCompositeObject_in_rule__CompositeField__ValueAssignment_22588);
+            pushFollow(FOLLOW_ruleCompositeObject_in_rule__CompositeField__ValueAssignment_22620);
             ruleCompositeObject();
             _fsp--;
 
@@ -3324,87 +3370,88 @@ public class InternalPFParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__RootDiagram__Group__1_in_rule__RootDiagram__Group__0531 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__RootDiagram__Group__1__Impl_in_rule__RootDiagram__Group__1589 = new BitSet(new long[]{0x0000000000001000L});
     public static final BitSet FOLLOW_rule__RootDiagram__Group__2_in_rule__RootDiagram__Group__1592 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_VALUE_in_rule__RootDiagram__Group__1__Impl619 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RootDiagram__Group__2__Impl_in_rule__RootDiagram__Group__2648 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_rule__RootDiagram__Group__3_in_rule__RootDiagram__Group__2651 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__RootDiagram__Group__2__Impl679 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RootDiagram__Group__3__Impl_in_rule__RootDiagram__Group__3710 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_rule__RootDiagram__Group__4_in_rule__RootDiagram__Group__3713 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__RootDiagram__Group__3__Impl741 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RootDiagram__Group__4__Impl_in_rule__RootDiagram__Group__4772 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_rule__RootDiagram__Group__5_in_rule__RootDiagram__Group__4775 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__RootDiagram__Group__4__Impl803 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RootDiagram__Group__5__Impl_in_rule__RootDiagram__Group__5834 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__RootDiagram__Group__6_in_rule__RootDiagram__Group__5837 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__RootDiagram__Group__5__Impl865 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RootDiagram__Group__6__Impl_in_rule__RootDiagram__Group__6896 = new BitSet(new long[]{0x0000000000018000L});
-    public static final BitSet FOLLOW_rule__RootDiagram__Group__7_in_rule__RootDiagram__Group__6899 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RootDiagram__ObjectsAssignment_6_in_rule__RootDiagram__Group__6__Impl926 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RootDiagram__Group__7__Impl_in_rule__RootDiagram__Group__7956 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_rule__RootDiagram__Group__8_in_rule__RootDiagram__Group__7959 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RootDiagram__Group_7__0_in_rule__RootDiagram__Group__7__Impl986 = new BitSet(new long[]{0x0000000000010002L});
-    public static final BitSet FOLLOW_rule__RootDiagram__Group__8__Impl_in_rule__RootDiagram__Group__81017 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_rule__RootDiagram__Group__9_in_rule__RootDiagram__Group__81020 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__RootDiagram__Group__8__Impl1048 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RootDiagram__Group__9__Impl_in_rule__RootDiagram__Group__91079 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__RootDiagram__Group__9__Impl1107 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RootDiagram__Group_7__0__Impl_in_rule__RootDiagram__Group_7__01158 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__RootDiagram__Group_7__1_in_rule__RootDiagram__Group_7__01161 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__RootDiagram__Group_7__0__Impl1189 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RootDiagram__Group_7__1__Impl_in_rule__RootDiagram__Group_7__11220 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RootDiagram__ObjectsAssignment_7_1_in_rule__RootDiagram__Group_7__1__Impl1247 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group__0__Impl_in_rule__Node__Group__01281 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_rule__Node__Group__1_in_rule__Node__Group__01284 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__NameAssignment_0_in_rule__Node__Group__0__Impl1311 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group__1__Impl_in_rule__Node__Group__11341 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_rule__Node__Group__2_in_rule__Node__Group__11344 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__Node__Group__1__Impl1372 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group__2__Impl_in_rule__Node__Group__21403 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__CompositeAssignment_2_in_rule__Node__Group__2__Impl1430 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompositeObject__Group__0__Impl_in_rule__CompositeObject__Group__01466 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_rule__CompositeObject__Group__1_in_rule__CompositeObject__Group__01469 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompositeObject__Group__1__Impl_in_rule__CompositeObject__Group__11527 = new BitSet(new long[]{0x0000000000090020L});
-    public static final BitSet FOLLOW_rule__CompositeObject__Group__2_in_rule__CompositeObject__Group__11530 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__CompositeObject__Group__1__Impl1558 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompositeObject__Group__2__Impl_in_rule__CompositeObject__Group__21589 = new BitSet(new long[]{0x0000000000090000L});
-    public static final BitSet FOLLOW_rule__CompositeObject__Group__3_in_rule__CompositeObject__Group__21592 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompositeObject__FieldsAssignment_2_in_rule__CompositeObject__Group__2__Impl1619 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompositeObject__Group__3__Impl_in_rule__CompositeObject__Group__31650 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__CompositeObject__Group__4_in_rule__CompositeObject__Group__31653 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompositeObject__Group_3__0_in_rule__CompositeObject__Group__3__Impl1680 = new BitSet(new long[]{0x0000000000010002L});
-    public static final BitSet FOLLOW_rule__CompositeObject__Group__4__Impl_in_rule__CompositeObject__Group__41711 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__CompositeObject__Group__4__Impl1739 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompositeObject__Group_3__0__Impl_in_rule__CompositeObject__Group_3__01780 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__CompositeObject__Group_3__1_in_rule__CompositeObject__Group_3__01783 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__CompositeObject__Group_3__0__Impl1811 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompositeObject__Group_3__1__Impl_in_rule__CompositeObject__Group_3__11842 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompositeObject__FieldsAssignment_3_1_in_rule__CompositeObject__Group_3__1__Impl1869 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleField__Group__0__Impl_in_rule__SimpleField__Group__01903 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_rule__SimpleField__Group__1_in_rule__SimpleField__Group__01906 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleField__NameAssignment_0_in_rule__SimpleField__Group__0__Impl1933 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleField__Group__1__Impl_in_rule__SimpleField__Group__11963 = new BitSet(new long[]{0x0000000000000050L});
-    public static final BitSet FOLLOW_rule__SimpleField__Group__2_in_rule__SimpleField__Group__11966 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__SimpleField__Group__1__Impl1994 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleField__Group__2__Impl_in_rule__SimpleField__Group__22025 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleField__Alternatives_2_in_rule__SimpleField__Group__2__Impl2052 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompositeField__Group__0__Impl_in_rule__CompositeField__Group__02088 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_rule__CompositeField__Group__1_in_rule__CompositeField__Group__02091 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompositeField__NameAssignment_0_in_rule__CompositeField__Group__0__Impl2118 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompositeField__Group__1__Impl_in_rule__CompositeField__Group__12148 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_rule__CompositeField__Group__2_in_rule__CompositeField__Group__12151 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__CompositeField__Group__1__Impl2179 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompositeField__Group__2__Impl_in_rule__CompositeField__Group__22210 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompositeField__ValueAssignment_2_in_rule__CompositeField__Group__2__Impl2237 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNode_in_rule__RootDiagram__ObjectsAssignment_62278 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNode_in_rule__RootDiagram__ObjectsAssignment_7_12309 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_VALUE_in_rule__Node__NameAssignment_02340 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCompositeObject_in_rule__Node__CompositeAssignment_22371 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleField_in_rule__CompositeObject__FieldsAssignment_22402 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleField_in_rule__CompositeObject__FieldsAssignment_3_12433 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SimpleField__NameAssignment_02464 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_VALUE_in_rule__SimpleField__ValueAssignment_2_02495 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__SimpleField__ValueAssignment_2_12526 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__CompositeField__NameAssignment_02557 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCompositeObject_in_rule__CompositeField__ValueAssignment_22588 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RootDiagram__NameAssignment_1_in_rule__RootDiagram__Group__1__Impl619 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RootDiagram__Group__2__Impl_in_rule__RootDiagram__Group__2649 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_rule__RootDiagram__Group__3_in_rule__RootDiagram__Group__2652 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__RootDiagram__Group__2__Impl680 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RootDiagram__Group__3__Impl_in_rule__RootDiagram__Group__3711 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_rule__RootDiagram__Group__4_in_rule__RootDiagram__Group__3714 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__RootDiagram__Group__3__Impl742 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RootDiagram__Group__4__Impl_in_rule__RootDiagram__Group__4773 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_rule__RootDiagram__Group__5_in_rule__RootDiagram__Group__4776 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__RootDiagram__Group__4__Impl804 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RootDiagram__Group__5__Impl_in_rule__RootDiagram__Group__5835 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__RootDiagram__Group__6_in_rule__RootDiagram__Group__5838 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__RootDiagram__Group__5__Impl866 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RootDiagram__Group__6__Impl_in_rule__RootDiagram__Group__6897 = new BitSet(new long[]{0x0000000000018000L});
+    public static final BitSet FOLLOW_rule__RootDiagram__Group__7_in_rule__RootDiagram__Group__6900 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RootDiagram__ObjectsAssignment_6_in_rule__RootDiagram__Group__6__Impl927 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RootDiagram__Group__7__Impl_in_rule__RootDiagram__Group__7957 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_rule__RootDiagram__Group__8_in_rule__RootDiagram__Group__7960 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RootDiagram__Group_7__0_in_rule__RootDiagram__Group__7__Impl987 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_rule__RootDiagram__Group__8__Impl_in_rule__RootDiagram__Group__81018 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_rule__RootDiagram__Group__9_in_rule__RootDiagram__Group__81021 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__RootDiagram__Group__8__Impl1049 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RootDiagram__Group__9__Impl_in_rule__RootDiagram__Group__91080 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__RootDiagram__Group__9__Impl1108 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RootDiagram__Group_7__0__Impl_in_rule__RootDiagram__Group_7__01159 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__RootDiagram__Group_7__1_in_rule__RootDiagram__Group_7__01162 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__RootDiagram__Group_7__0__Impl1190 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RootDiagram__Group_7__1__Impl_in_rule__RootDiagram__Group_7__11221 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RootDiagram__ObjectsAssignment_7_1_in_rule__RootDiagram__Group_7__1__Impl1248 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group__0__Impl_in_rule__Node__Group__01282 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_rule__Node__Group__1_in_rule__Node__Group__01285 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__NameAssignment_0_in_rule__Node__Group__0__Impl1312 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group__1__Impl_in_rule__Node__Group__11342 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_rule__Node__Group__2_in_rule__Node__Group__11345 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__Node__Group__1__Impl1373 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group__2__Impl_in_rule__Node__Group__21404 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__CompositeAssignment_2_in_rule__Node__Group__2__Impl1431 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompositeObject__Group__0__Impl_in_rule__CompositeObject__Group__01467 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_rule__CompositeObject__Group__1_in_rule__CompositeObject__Group__01470 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompositeObject__Group__1__Impl_in_rule__CompositeObject__Group__11528 = new BitSet(new long[]{0x0000000000090020L});
+    public static final BitSet FOLLOW_rule__CompositeObject__Group__2_in_rule__CompositeObject__Group__11531 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__CompositeObject__Group__1__Impl1559 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompositeObject__Group__2__Impl_in_rule__CompositeObject__Group__21590 = new BitSet(new long[]{0x0000000000090000L});
+    public static final BitSet FOLLOW_rule__CompositeObject__Group__3_in_rule__CompositeObject__Group__21593 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompositeObject__FieldsAssignment_2_in_rule__CompositeObject__Group__2__Impl1620 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompositeObject__Group__3__Impl_in_rule__CompositeObject__Group__31651 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_rule__CompositeObject__Group__4_in_rule__CompositeObject__Group__31654 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompositeObject__Group_3__0_in_rule__CompositeObject__Group__3__Impl1681 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_rule__CompositeObject__Group__4__Impl_in_rule__CompositeObject__Group__41712 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__CompositeObject__Group__4__Impl1740 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompositeObject__Group_3__0__Impl_in_rule__CompositeObject__Group_3__01781 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__CompositeObject__Group_3__1_in_rule__CompositeObject__Group_3__01784 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__CompositeObject__Group_3__0__Impl1812 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompositeObject__Group_3__1__Impl_in_rule__CompositeObject__Group_3__11843 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompositeObject__FieldsAssignment_3_1_in_rule__CompositeObject__Group_3__1__Impl1870 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleField__Group__0__Impl_in_rule__SimpleField__Group__01904 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_rule__SimpleField__Group__1_in_rule__SimpleField__Group__01907 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleField__NameAssignment_0_in_rule__SimpleField__Group__0__Impl1934 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleField__Group__1__Impl_in_rule__SimpleField__Group__11964 = new BitSet(new long[]{0x0000000000000050L});
+    public static final BitSet FOLLOW_rule__SimpleField__Group__2_in_rule__SimpleField__Group__11967 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__SimpleField__Group__1__Impl1995 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleField__Group__2__Impl_in_rule__SimpleField__Group__22026 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleField__Alternatives_2_in_rule__SimpleField__Group__2__Impl2053 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompositeField__Group__0__Impl_in_rule__CompositeField__Group__02089 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_rule__CompositeField__Group__1_in_rule__CompositeField__Group__02092 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompositeField__NameAssignment_0_in_rule__CompositeField__Group__0__Impl2119 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompositeField__Group__1__Impl_in_rule__CompositeField__Group__12149 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_rule__CompositeField__Group__2_in_rule__CompositeField__Group__12152 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__CompositeField__Group__1__Impl2180 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompositeField__Group__2__Impl_in_rule__CompositeField__Group__22211 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompositeField__ValueAssignment_2_in_rule__CompositeField__Group__2__Impl2238 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_VALUE_in_rule__RootDiagram__NameAssignment_12279 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNode_in_rule__RootDiagram__ObjectsAssignment_62310 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNode_in_rule__RootDiagram__ObjectsAssignment_7_12341 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_VALUE_in_rule__Node__NameAssignment_02372 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCompositeObject_in_rule__Node__CompositeAssignment_22403 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleField_in_rule__CompositeObject__FieldsAssignment_22434 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleField_in_rule__CompositeObject__FieldsAssignment_3_12465 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SimpleField__NameAssignment_02496 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_VALUE_in_rule__SimpleField__ValueAssignment_2_02527 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__SimpleField__ValueAssignment_2_12558 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__CompositeField__NameAssignment_02589 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCompositeObject_in_rule__CompositeField__ValueAssignment_22620 = new BitSet(new long[]{0x0000000000000002L});
 
 }

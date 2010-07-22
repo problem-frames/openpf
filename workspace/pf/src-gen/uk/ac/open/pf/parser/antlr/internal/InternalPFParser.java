@@ -109,10 +109,11 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleRootDiagram
-    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:86:1: ruleRootDiagram returns [EObject current=null] : ( () RULE_VALUE '@' 'cycle' '(' '(' ( (lv_objects_6_0= ruleNode ) ) ( ',' ( (lv_objects_8_0= ruleNode ) ) )* ')' ')' ) ;
+    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:86:1: ruleRootDiagram returns [EObject current=null] : ( () ( (lv_name_1_0= RULE_VALUE ) ) '@' 'cycle' '(' '(' ( (lv_objects_6_0= ruleNode ) ) ( ',' ( (lv_objects_8_0= ruleNode ) ) )* ')' ')' ) ;
     public final EObject ruleRootDiagram() throws RecognitionException {
         EObject current = null;
 
+        Token lv_name_1_0=null;
         EObject lv_objects_6_0 = null;
 
         EObject lv_objects_8_0 = null;
@@ -121,11 +122,11 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:91:6: ( ( () RULE_VALUE '@' 'cycle' '(' '(' ( (lv_objects_6_0= ruleNode ) ) ( ',' ( (lv_objects_8_0= ruleNode ) ) )* ')' ')' ) )
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:92:1: ( () RULE_VALUE '@' 'cycle' '(' '(' ( (lv_objects_6_0= ruleNode ) ) ( ',' ( (lv_objects_8_0= ruleNode ) ) )* ')' ')' )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:91:6: ( ( () ( (lv_name_1_0= RULE_VALUE ) ) '@' 'cycle' '(' '(' ( (lv_objects_6_0= ruleNode ) ) ( ',' ( (lv_objects_8_0= ruleNode ) ) )* ')' ')' ) )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:92:1: ( () ( (lv_name_1_0= RULE_VALUE ) ) '@' 'cycle' '(' '(' ( (lv_objects_6_0= ruleNode ) ) ( ',' ( (lv_objects_8_0= ruleNode ) ) )* ')' ')' )
             {
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:92:1: ( () RULE_VALUE '@' 'cycle' '(' '(' ( (lv_objects_6_0= ruleNode ) ) ( ',' ( (lv_objects_8_0= ruleNode ) ) )* ')' ')' )
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:92:2: () RULE_VALUE '@' 'cycle' '(' '(' ( (lv_objects_6_0= ruleNode ) ) ( ',' ( (lv_objects_8_0= ruleNode ) ) )* ')' ')'
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:92:1: ( () ( (lv_name_1_0= RULE_VALUE ) ) '@' 'cycle' '(' '(' ( (lv_objects_6_0= ruleNode ) ) ( ',' ( (lv_objects_8_0= ruleNode ) ) )* ')' ')' )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:92:2: () ( (lv_name_1_0= RULE_VALUE ) ) '@' 'cycle' '(' '(' ( (lv_objects_6_0= ruleNode ) ) ( ',' ( (lv_objects_8_0= ruleNode ) ) )* ')' ')'
             {
             // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:92:2: ()
             // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:93:5: 
@@ -143,36 +144,65 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,RULE_VALUE,FOLLOW_RULE_VALUE_in_ruleRootDiagram128); 
-             
-                createLeafNode(grammarAccess.getRootDiagramAccess().getValueTerminalRuleCall_1(), null); 
-                
-            match(input,12,FOLLOW_12_in_ruleRootDiagram137); 
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:103:2: ( (lv_name_1_0= RULE_VALUE ) )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:104:1: (lv_name_1_0= RULE_VALUE )
+            {
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:104:1: (lv_name_1_0= RULE_VALUE )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:105:3: lv_name_1_0= RULE_VALUE
+            {
+            lv_name_1_0=(Token)input.LT(1);
+            match(input,RULE_VALUE,FOLLOW_RULE_VALUE_in_ruleRootDiagram136); 
+
+            			createLeafNode(grammarAccess.getRootDiagramAccess().getNameValueTerminalRuleCall_1_0(), "name"); 
+            		
+
+            	        if (current==null) {
+            	            current = factory.create(grammarAccess.getRootDiagramRule().getType().getClassifier());
+            	            associateNodeWithAstElement(currentNode, current);
+            	        }
+            	        try {
+            	       		set(
+            	       			current, 
+            	       			"name",
+            	        		lv_name_1_0, 
+            	        		"Value", 
+            	        		lastConsumedNode);
+            	        } catch (ValueConverterException vce) {
+            				handleValueConverterException(vce);
+            	        }
+            	    
+
+            }
+
+
+            }
+
+            match(input,12,FOLLOW_12_in_ruleRootDiagram151); 
 
                     createLeafNode(grammarAccess.getRootDiagramAccess().getCommercialAtKeyword_2(), null); 
                 
-            match(input,13,FOLLOW_13_in_ruleRootDiagram147); 
+            match(input,13,FOLLOW_13_in_ruleRootDiagram161); 
 
                     createLeafNode(grammarAccess.getRootDiagramAccess().getCycleKeyword_3(), null); 
                 
-            match(input,14,FOLLOW_14_in_ruleRootDiagram157); 
+            match(input,14,FOLLOW_14_in_ruleRootDiagram171); 
 
                     createLeafNode(grammarAccess.getRootDiagramAccess().getLeftParenthesisKeyword_4(), null); 
                 
-            match(input,14,FOLLOW_14_in_ruleRootDiagram167); 
+            match(input,14,FOLLOW_14_in_ruleRootDiagram181); 
 
                     createLeafNode(grammarAccess.getRootDiagramAccess().getLeftParenthesisKeyword_5(), null); 
                 
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:123:1: ( (lv_objects_6_0= ruleNode ) )
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:124:1: (lv_objects_6_0= ruleNode )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:143:1: ( (lv_objects_6_0= ruleNode ) )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:144:1: (lv_objects_6_0= ruleNode )
             {
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:124:1: (lv_objects_6_0= ruleNode )
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:125:3: lv_objects_6_0= ruleNode
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:144:1: (lv_objects_6_0= ruleNode )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:145:3: lv_objects_6_0= ruleNode
             {
              
             	        currentNode=createCompositeNode(grammarAccess.getRootDiagramAccess().getObjectsNodeParserRuleCall_6_0(), currentNode); 
             	    
-            pushFollow(FOLLOW_ruleNode_in_ruleRootDiagram188);
+            pushFollow(FOLLOW_ruleNode_in_ruleRootDiagram202);
             lv_objects_6_0=ruleNode();
             _fsp--;
 
@@ -199,7 +229,7 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:147:2: ( ',' ( (lv_objects_8_0= ruleNode ) ) )*
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:167:2: ( ',' ( (lv_objects_8_0= ruleNode ) ) )*
             loop1:
             do {
                 int alt1=2;
@@ -212,22 +242,22 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
 
                 switch (alt1) {
             	case 1 :
-            	    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:147:4: ',' ( (lv_objects_8_0= ruleNode ) )
+            	    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:167:4: ',' ( (lv_objects_8_0= ruleNode ) )
             	    {
-            	    match(input,15,FOLLOW_15_in_ruleRootDiagram199); 
+            	    match(input,15,FOLLOW_15_in_ruleRootDiagram213); 
 
             	            createLeafNode(grammarAccess.getRootDiagramAccess().getCommaKeyword_7_0(), null); 
             	        
-            	    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:151:1: ( (lv_objects_8_0= ruleNode ) )
-            	    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:152:1: (lv_objects_8_0= ruleNode )
+            	    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:171:1: ( (lv_objects_8_0= ruleNode ) )
+            	    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:172:1: (lv_objects_8_0= ruleNode )
             	    {
-            	    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:152:1: (lv_objects_8_0= ruleNode )
-            	    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:153:3: lv_objects_8_0= ruleNode
+            	    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:172:1: (lv_objects_8_0= ruleNode )
+            	    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:173:3: lv_objects_8_0= ruleNode
             	    {
             	     
             	    	        currentNode=createCompositeNode(grammarAccess.getRootDiagramAccess().getObjectsNodeParserRuleCall_7_1_0(), currentNode); 
             	    	    
-            	    pushFollow(FOLLOW_ruleNode_in_ruleRootDiagram220);
+            	    pushFollow(FOLLOW_ruleNode_in_ruleRootDiagram234);
             	    lv_objects_8_0=ruleNode();
             	    _fsp--;
 
@@ -263,11 +293,11 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            match(input,16,FOLLOW_16_in_ruleRootDiagram232); 
+            match(input,16,FOLLOW_16_in_ruleRootDiagram246); 
 
                     createLeafNode(grammarAccess.getRootDiagramAccess().getRightParenthesisKeyword_8(), null); 
                 
-            match(input,16,FOLLOW_16_in_ruleRootDiagram242); 
+            match(input,16,FOLLOW_16_in_ruleRootDiagram256); 
 
                     createLeafNode(grammarAccess.getRootDiagramAccess().getRightParenthesisKeyword_9(), null); 
                 
@@ -294,7 +324,7 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleNode
-    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:191:1: entryRuleNode returns [EObject current=null] : iv_ruleNode= ruleNode EOF ;
+    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:211:1: entryRuleNode returns [EObject current=null] : iv_ruleNode= ruleNode EOF ;
     public final EObject entryRuleNode() throws RecognitionException {
         EObject current = null;
 
@@ -302,16 +332,16 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:192:2: (iv_ruleNode= ruleNode EOF )
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:193:2: iv_ruleNode= ruleNode EOF
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:212:2: (iv_ruleNode= ruleNode EOF )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:213:2: iv_ruleNode= ruleNode EOF
             {
              currentNode = createCompositeNode(grammarAccess.getNodeRule(), currentNode); 
-            pushFollow(FOLLOW_ruleNode_in_entryRuleNode278);
+            pushFollow(FOLLOW_ruleNode_in_entryRuleNode292);
             iv_ruleNode=ruleNode();
             _fsp--;
 
              current =iv_ruleNode; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNode288); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNode302); 
 
             }
 
@@ -329,7 +359,7 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleNode
-    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:200:1: ruleNode returns [EObject current=null] : ( ( (lv_name_0_0= RULE_VALUE ) ) ':=' ( (lv_composite_2_0= ruleCompositeObject ) ) ) ;
+    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:220:1: ruleNode returns [EObject current=null] : ( ( (lv_name_0_0= RULE_VALUE ) ) ':=' ( (lv_composite_2_0= ruleCompositeObject ) ) ) ;
     public final EObject ruleNode() throws RecognitionException {
         EObject current = null;
 
@@ -340,20 +370,20 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:205:6: ( ( ( (lv_name_0_0= RULE_VALUE ) ) ':=' ( (lv_composite_2_0= ruleCompositeObject ) ) ) )
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:206:1: ( ( (lv_name_0_0= RULE_VALUE ) ) ':=' ( (lv_composite_2_0= ruleCompositeObject ) ) )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:225:6: ( ( ( (lv_name_0_0= RULE_VALUE ) ) ':=' ( (lv_composite_2_0= ruleCompositeObject ) ) ) )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:226:1: ( ( (lv_name_0_0= RULE_VALUE ) ) ':=' ( (lv_composite_2_0= ruleCompositeObject ) ) )
             {
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:206:1: ( ( (lv_name_0_0= RULE_VALUE ) ) ':=' ( (lv_composite_2_0= ruleCompositeObject ) ) )
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:206:2: ( (lv_name_0_0= RULE_VALUE ) ) ':=' ( (lv_composite_2_0= ruleCompositeObject ) )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:226:1: ( ( (lv_name_0_0= RULE_VALUE ) ) ':=' ( (lv_composite_2_0= ruleCompositeObject ) ) )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:226:2: ( (lv_name_0_0= RULE_VALUE ) ) ':=' ( (lv_composite_2_0= ruleCompositeObject ) )
             {
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:206:2: ( (lv_name_0_0= RULE_VALUE ) )
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:207:1: (lv_name_0_0= RULE_VALUE )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:226:2: ( (lv_name_0_0= RULE_VALUE ) )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:227:1: (lv_name_0_0= RULE_VALUE )
             {
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:207:1: (lv_name_0_0= RULE_VALUE )
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:208:3: lv_name_0_0= RULE_VALUE
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:227:1: (lv_name_0_0= RULE_VALUE )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:228:3: lv_name_0_0= RULE_VALUE
             {
             lv_name_0_0=(Token)input.LT(1);
-            match(input,RULE_VALUE,FOLLOW_RULE_VALUE_in_ruleNode330); 
+            match(input,RULE_VALUE,FOLLOW_RULE_VALUE_in_ruleNode344); 
 
             			createLeafNode(grammarAccess.getNodeAccess().getNameValueTerminalRuleCall_0_0(), "name"); 
             		
@@ -379,20 +409,20 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,17,FOLLOW_17_in_ruleNode345); 
+            match(input,17,FOLLOW_17_in_ruleNode359); 
 
                     createLeafNode(grammarAccess.getNodeAccess().getColonEqualsSignKeyword_1(), null); 
                 
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:234:1: ( (lv_composite_2_0= ruleCompositeObject ) )
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:235:1: (lv_composite_2_0= ruleCompositeObject )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:254:1: ( (lv_composite_2_0= ruleCompositeObject ) )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:255:1: (lv_composite_2_0= ruleCompositeObject )
             {
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:235:1: (lv_composite_2_0= ruleCompositeObject )
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:236:3: lv_composite_2_0= ruleCompositeObject
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:255:1: (lv_composite_2_0= ruleCompositeObject )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:256:3: lv_composite_2_0= ruleCompositeObject
             {
              
             	        currentNode=createCompositeNode(grammarAccess.getNodeAccess().getCompositeCompositeObjectParserRuleCall_2_0(), currentNode); 
             	    
-            pushFollow(FOLLOW_ruleCompositeObject_in_ruleNode366);
+            pushFollow(FOLLOW_ruleCompositeObject_in_ruleNode380);
             lv_composite_2_0=ruleCompositeObject();
             _fsp--;
 
@@ -442,7 +472,7 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleCompositeObject
-    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:266:1: entryRuleCompositeObject returns [EObject current=null] : iv_ruleCompositeObject= ruleCompositeObject EOF ;
+    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:286:1: entryRuleCompositeObject returns [EObject current=null] : iv_ruleCompositeObject= ruleCompositeObject EOF ;
     public final EObject entryRuleCompositeObject() throws RecognitionException {
         EObject current = null;
 
@@ -450,16 +480,16 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:267:2: (iv_ruleCompositeObject= ruleCompositeObject EOF )
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:268:2: iv_ruleCompositeObject= ruleCompositeObject EOF
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:287:2: (iv_ruleCompositeObject= ruleCompositeObject EOF )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:288:2: iv_ruleCompositeObject= ruleCompositeObject EOF
             {
              currentNode = createCompositeNode(grammarAccess.getCompositeObjectRule(), currentNode); 
-            pushFollow(FOLLOW_ruleCompositeObject_in_entryRuleCompositeObject402);
+            pushFollow(FOLLOW_ruleCompositeObject_in_entryRuleCompositeObject416);
             iv_ruleCompositeObject=ruleCompositeObject();
             _fsp--;
 
              current =iv_ruleCompositeObject; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCompositeObject412); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCompositeObject426); 
 
             }
 
@@ -477,7 +507,7 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleCompositeObject
-    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:275:1: ruleCompositeObject returns [EObject current=null] : ( () '{' ( (lv_fields_2_0= ruleField ) )? ( ',' ( (lv_fields_4_0= ruleField ) ) )* '}' ) ;
+    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:295:1: ruleCompositeObject returns [EObject current=null] : ( () '{' ( (lv_fields_2_0= ruleField ) )? ( ',' ( (lv_fields_4_0= ruleField ) ) )* '}' ) ;
     public final EObject ruleCompositeObject() throws RecognitionException {
         EObject current = null;
 
@@ -489,14 +519,14 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:280:6: ( ( () '{' ( (lv_fields_2_0= ruleField ) )? ( ',' ( (lv_fields_4_0= ruleField ) ) )* '}' ) )
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:281:1: ( () '{' ( (lv_fields_2_0= ruleField ) )? ( ',' ( (lv_fields_4_0= ruleField ) ) )* '}' )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:300:6: ( ( () '{' ( (lv_fields_2_0= ruleField ) )? ( ',' ( (lv_fields_4_0= ruleField ) ) )* '}' ) )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:301:1: ( () '{' ( (lv_fields_2_0= ruleField ) )? ( ',' ( (lv_fields_4_0= ruleField ) ) )* '}' )
             {
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:281:1: ( () '{' ( (lv_fields_2_0= ruleField ) )? ( ',' ( (lv_fields_4_0= ruleField ) ) )* '}' )
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:281:2: () '{' ( (lv_fields_2_0= ruleField ) )? ( ',' ( (lv_fields_4_0= ruleField ) ) )* '}'
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:301:1: ( () '{' ( (lv_fields_2_0= ruleField ) )? ( ',' ( (lv_fields_4_0= ruleField ) ) )* '}' )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:301:2: () '{' ( (lv_fields_2_0= ruleField ) )? ( ',' ( (lv_fields_4_0= ruleField ) ) )* '}'
             {
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:281:2: ()
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:282:5: 
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:301:2: ()
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:302:5: 
             {
              
                     temp=factory.create(grammarAccess.getCompositeObjectAccess().getCompositeObjectAction_0().getType().getClassifier());
@@ -511,11 +541,11 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,18,FOLLOW_18_in_ruleCompositeObject456); 
+            match(input,18,FOLLOW_18_in_ruleCompositeObject470); 
 
                     createLeafNode(grammarAccess.getCompositeObjectAccess().getLeftCurlyBracketKeyword_1(), null); 
                 
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:296:1: ( (lv_fields_2_0= ruleField ) )?
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:316:1: ( (lv_fields_2_0= ruleField ) )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -524,15 +554,15 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
             }
             switch (alt2) {
                 case 1 :
-                    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:297:1: (lv_fields_2_0= ruleField )
+                    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:317:1: (lv_fields_2_0= ruleField )
                     {
-                    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:297:1: (lv_fields_2_0= ruleField )
-                    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:298:3: lv_fields_2_0= ruleField
+                    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:317:1: (lv_fields_2_0= ruleField )
+                    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:318:3: lv_fields_2_0= ruleField
                     {
                      
                     	        currentNode=createCompositeNode(grammarAccess.getCompositeObjectAccess().getFieldsFieldParserRuleCall_2_0(), currentNode); 
                     	    
-                    pushFollow(FOLLOW_ruleField_in_ruleCompositeObject477);
+                    pushFollow(FOLLOW_ruleField_in_ruleCompositeObject491);
                     lv_fields_2_0=ruleField();
                     _fsp--;
 
@@ -562,7 +592,7 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:320:3: ( ',' ( (lv_fields_4_0= ruleField ) ) )*
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:340:3: ( ',' ( (lv_fields_4_0= ruleField ) ) )*
             loop3:
             do {
                 int alt3=2;
@@ -575,22 +605,22 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:320:5: ',' ( (lv_fields_4_0= ruleField ) )
+            	    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:340:5: ',' ( (lv_fields_4_0= ruleField ) )
             	    {
-            	    match(input,15,FOLLOW_15_in_ruleCompositeObject489); 
+            	    match(input,15,FOLLOW_15_in_ruleCompositeObject503); 
 
             	            createLeafNode(grammarAccess.getCompositeObjectAccess().getCommaKeyword_3_0(), null); 
             	        
-            	    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:324:1: ( (lv_fields_4_0= ruleField ) )
-            	    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:325:1: (lv_fields_4_0= ruleField )
+            	    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:344:1: ( (lv_fields_4_0= ruleField ) )
+            	    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:345:1: (lv_fields_4_0= ruleField )
             	    {
-            	    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:325:1: (lv_fields_4_0= ruleField )
-            	    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:326:3: lv_fields_4_0= ruleField
+            	    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:345:1: (lv_fields_4_0= ruleField )
+            	    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:346:3: lv_fields_4_0= ruleField
             	    {
             	     
             	    	        currentNode=createCompositeNode(grammarAccess.getCompositeObjectAccess().getFieldsFieldParserRuleCall_3_1_0(), currentNode); 
             	    	    
-            	    pushFollow(FOLLOW_ruleField_in_ruleCompositeObject510);
+            	    pushFollow(FOLLOW_ruleField_in_ruleCompositeObject524);
             	    lv_fields_4_0=ruleField();
             	    _fsp--;
 
@@ -626,7 +656,7 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            match(input,19,FOLLOW_19_in_ruleCompositeObject522); 
+            match(input,19,FOLLOW_19_in_ruleCompositeObject536); 
 
                     createLeafNode(grammarAccess.getCompositeObjectAccess().getRightCurlyBracketKeyword_4(), null); 
                 
@@ -653,7 +683,7 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleField
-    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:360:1: entryRuleField returns [EObject current=null] : iv_ruleField= ruleField EOF ;
+    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:380:1: entryRuleField returns [EObject current=null] : iv_ruleField= ruleField EOF ;
     public final EObject entryRuleField() throws RecognitionException {
         EObject current = null;
 
@@ -661,16 +691,16 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:361:2: (iv_ruleField= ruleField EOF )
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:362:2: iv_ruleField= ruleField EOF
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:381:2: (iv_ruleField= ruleField EOF )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:382:2: iv_ruleField= ruleField EOF
             {
              currentNode = createCompositeNode(grammarAccess.getFieldRule(), currentNode); 
-            pushFollow(FOLLOW_ruleField_in_entryRuleField558);
+            pushFollow(FOLLOW_ruleField_in_entryRuleField572);
             iv_ruleField=ruleField();
             _fsp--;
 
              current =iv_ruleField; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleField568); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleField582); 
 
             }
 
@@ -688,7 +718,7 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleField
-    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:369:1: ruleField returns [EObject current=null] : (this_SimpleField_0= ruleSimpleField | this_CompositeField_1= ruleCompositeField ) ;
+    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:389:1: ruleField returns [EObject current=null] : (this_SimpleField_0= ruleSimpleField | this_CompositeField_1= ruleCompositeField ) ;
     public final EObject ruleField() throws RecognitionException {
         EObject current = null;
 
@@ -700,10 +730,10 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:374:6: ( (this_SimpleField_0= ruleSimpleField | this_CompositeField_1= ruleCompositeField ) )
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:375:1: (this_SimpleField_0= ruleSimpleField | this_CompositeField_1= ruleCompositeField )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:394:6: ( (this_SimpleField_0= ruleSimpleField | this_CompositeField_1= ruleCompositeField ) )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:395:1: (this_SimpleField_0= ruleSimpleField | this_CompositeField_1= ruleCompositeField )
             {
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:375:1: (this_SimpleField_0= ruleSimpleField | this_CompositeField_1= ruleCompositeField )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:395:1: (this_SimpleField_0= ruleSimpleField | this_CompositeField_1= ruleCompositeField )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -713,40 +743,40 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
                 if ( (LA4_1==20) ) {
                     int LA4_2 = input.LA(3);
 
-                    if ( (LA4_2==RULE_VALUE||LA4_2==RULE_STRING) ) {
-                        alt4=1;
-                    }
-                    else if ( (LA4_2==18) ) {
+                    if ( (LA4_2==18) ) {
                         alt4=2;
+                    }
+                    else if ( (LA4_2==RULE_VALUE||LA4_2==RULE_STRING) ) {
+                        alt4=1;
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("375:1: (this_SimpleField_0= ruleSimpleField | this_CompositeField_1= ruleCompositeField )", 4, 2, input);
+                            new NoViableAltException("395:1: (this_SimpleField_0= ruleSimpleField | this_CompositeField_1= ruleCompositeField )", 4, 2, input);
 
                         throw nvae;
                     }
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("375:1: (this_SimpleField_0= ruleSimpleField | this_CompositeField_1= ruleCompositeField )", 4, 1, input);
+                        new NoViableAltException("395:1: (this_SimpleField_0= ruleSimpleField | this_CompositeField_1= ruleCompositeField )", 4, 1, input);
 
                     throw nvae;
                 }
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("375:1: (this_SimpleField_0= ruleSimpleField | this_CompositeField_1= ruleCompositeField )", 4, 0, input);
+                    new NoViableAltException("395:1: (this_SimpleField_0= ruleSimpleField | this_CompositeField_1= ruleCompositeField )", 4, 0, input);
 
                 throw nvae;
             }
             switch (alt4) {
                 case 1 :
-                    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:376:5: this_SimpleField_0= ruleSimpleField
+                    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:396:5: this_SimpleField_0= ruleSimpleField
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getFieldAccess().getSimpleFieldParserRuleCall_0(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleSimpleField_in_ruleField615);
+                    pushFollow(FOLLOW_ruleSimpleField_in_ruleField629);
                     this_SimpleField_0=ruleSimpleField();
                     _fsp--;
 
@@ -758,12 +788,12 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:386:5: this_CompositeField_1= ruleCompositeField
+                    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:406:5: this_CompositeField_1= ruleCompositeField
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getFieldAccess().getCompositeFieldParserRuleCall_1(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleCompositeField_in_ruleField642);
+                    pushFollow(FOLLOW_ruleCompositeField_in_ruleField656);
                     this_CompositeField_1=ruleCompositeField();
                     _fsp--;
 
@@ -797,7 +827,7 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleSimpleField
-    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:402:1: entryRuleSimpleField returns [EObject current=null] : iv_ruleSimpleField= ruleSimpleField EOF ;
+    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:422:1: entryRuleSimpleField returns [EObject current=null] : iv_ruleSimpleField= ruleSimpleField EOF ;
     public final EObject entryRuleSimpleField() throws RecognitionException {
         EObject current = null;
 
@@ -805,16 +835,16 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:403:2: (iv_ruleSimpleField= ruleSimpleField EOF )
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:404:2: iv_ruleSimpleField= ruleSimpleField EOF
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:423:2: (iv_ruleSimpleField= ruleSimpleField EOF )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:424:2: iv_ruleSimpleField= ruleSimpleField EOF
             {
              currentNode = createCompositeNode(grammarAccess.getSimpleFieldRule(), currentNode); 
-            pushFollow(FOLLOW_ruleSimpleField_in_entryRuleSimpleField677);
+            pushFollow(FOLLOW_ruleSimpleField_in_entryRuleSimpleField691);
             iv_ruleSimpleField=ruleSimpleField();
             _fsp--;
 
              current =iv_ruleSimpleField; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSimpleField687); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSimpleField701); 
 
             }
 
@@ -832,7 +862,7 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleSimpleField
-    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:411:1: ruleSimpleField returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ':' ( ( (lv_value_2_0= RULE_VALUE ) ) | ( (lv_value_3_0= RULE_STRING ) ) ) ) ;
+    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:431:1: ruleSimpleField returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ':' ( ( (lv_value_2_0= RULE_VALUE ) ) | ( (lv_value_3_0= RULE_STRING ) ) ) ) ;
     public final EObject ruleSimpleField() throws RecognitionException {
         EObject current = null;
 
@@ -843,20 +873,20 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:416:6: ( ( ( (lv_name_0_0= RULE_ID ) ) ':' ( ( (lv_value_2_0= RULE_VALUE ) ) | ( (lv_value_3_0= RULE_STRING ) ) ) ) )
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:417:1: ( ( (lv_name_0_0= RULE_ID ) ) ':' ( ( (lv_value_2_0= RULE_VALUE ) ) | ( (lv_value_3_0= RULE_STRING ) ) ) )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:436:6: ( ( ( (lv_name_0_0= RULE_ID ) ) ':' ( ( (lv_value_2_0= RULE_VALUE ) ) | ( (lv_value_3_0= RULE_STRING ) ) ) ) )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:437:1: ( ( (lv_name_0_0= RULE_ID ) ) ':' ( ( (lv_value_2_0= RULE_VALUE ) ) | ( (lv_value_3_0= RULE_STRING ) ) ) )
             {
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:417:1: ( ( (lv_name_0_0= RULE_ID ) ) ':' ( ( (lv_value_2_0= RULE_VALUE ) ) | ( (lv_value_3_0= RULE_STRING ) ) ) )
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:417:2: ( (lv_name_0_0= RULE_ID ) ) ':' ( ( (lv_value_2_0= RULE_VALUE ) ) | ( (lv_value_3_0= RULE_STRING ) ) )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:437:1: ( ( (lv_name_0_0= RULE_ID ) ) ':' ( ( (lv_value_2_0= RULE_VALUE ) ) | ( (lv_value_3_0= RULE_STRING ) ) ) )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:437:2: ( (lv_name_0_0= RULE_ID ) ) ':' ( ( (lv_value_2_0= RULE_VALUE ) ) | ( (lv_value_3_0= RULE_STRING ) ) )
             {
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:417:2: ( (lv_name_0_0= RULE_ID ) )
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:418:1: (lv_name_0_0= RULE_ID )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:437:2: ( (lv_name_0_0= RULE_ID ) )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:438:1: (lv_name_0_0= RULE_ID )
             {
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:418:1: (lv_name_0_0= RULE_ID )
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:419:3: lv_name_0_0= RULE_ID
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:438:1: (lv_name_0_0= RULE_ID )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:439:3: lv_name_0_0= RULE_ID
             {
             lv_name_0_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSimpleField729); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSimpleField743); 
 
             			createLeafNode(grammarAccess.getSimpleFieldAccess().getNameIDTerminalRuleCall_0_0(), "name"); 
             		
@@ -882,11 +912,11 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,20,FOLLOW_20_in_ruleSimpleField744); 
+            match(input,20,FOLLOW_20_in_ruleSimpleField758); 
 
                     createLeafNode(grammarAccess.getSimpleFieldAccess().getColonKeyword_1(), null); 
                 
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:445:1: ( ( (lv_value_2_0= RULE_VALUE ) ) | ( (lv_value_3_0= RULE_STRING ) ) )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:465:1: ( ( (lv_value_2_0= RULE_VALUE ) ) | ( (lv_value_3_0= RULE_STRING ) ) )
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -898,22 +928,22 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("445:1: ( ( (lv_value_2_0= RULE_VALUE ) ) | ( (lv_value_3_0= RULE_STRING ) ) )", 5, 0, input);
+                    new NoViableAltException("465:1: ( ( (lv_value_2_0= RULE_VALUE ) ) | ( (lv_value_3_0= RULE_STRING ) ) )", 5, 0, input);
 
                 throw nvae;
             }
             switch (alt5) {
                 case 1 :
-                    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:445:2: ( (lv_value_2_0= RULE_VALUE ) )
+                    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:465:2: ( (lv_value_2_0= RULE_VALUE ) )
                     {
-                    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:445:2: ( (lv_value_2_0= RULE_VALUE ) )
-                    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:446:1: (lv_value_2_0= RULE_VALUE )
+                    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:465:2: ( (lv_value_2_0= RULE_VALUE ) )
+                    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:466:1: (lv_value_2_0= RULE_VALUE )
                     {
-                    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:446:1: (lv_value_2_0= RULE_VALUE )
-                    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:447:3: lv_value_2_0= RULE_VALUE
+                    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:466:1: (lv_value_2_0= RULE_VALUE )
+                    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:467:3: lv_value_2_0= RULE_VALUE
                     {
                     lv_value_2_0=(Token)input.LT(1);
-                    match(input,RULE_VALUE,FOLLOW_RULE_VALUE_in_ruleSimpleField762); 
+                    match(input,RULE_VALUE,FOLLOW_RULE_VALUE_in_ruleSimpleField776); 
 
                     			createLeafNode(grammarAccess.getSimpleFieldAccess().getValueValueTerminalRuleCall_2_0_0(), "value"); 
                     		
@@ -943,16 +973,16 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:470:6: ( (lv_value_3_0= RULE_STRING ) )
+                    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:490:6: ( (lv_value_3_0= RULE_STRING ) )
                     {
-                    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:470:6: ( (lv_value_3_0= RULE_STRING ) )
-                    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:471:1: (lv_value_3_0= RULE_STRING )
+                    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:490:6: ( (lv_value_3_0= RULE_STRING ) )
+                    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:491:1: (lv_value_3_0= RULE_STRING )
                     {
-                    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:471:1: (lv_value_3_0= RULE_STRING )
-                    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:472:3: lv_value_3_0= RULE_STRING
+                    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:491:1: (lv_value_3_0= RULE_STRING )
+                    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:492:3: lv_value_3_0= RULE_STRING
                     {
                     lv_value_3_0=(Token)input.LT(1);
-                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleSimpleField790); 
+                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleSimpleField804); 
 
                     			createLeafNode(grammarAccess.getSimpleFieldAccess().getValueSTRINGTerminalRuleCall_2_1_0(), "value"); 
                     		
@@ -1007,7 +1037,7 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleCompositeField
-    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:502:1: entryRuleCompositeField returns [EObject current=null] : iv_ruleCompositeField= ruleCompositeField EOF ;
+    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:522:1: entryRuleCompositeField returns [EObject current=null] : iv_ruleCompositeField= ruleCompositeField EOF ;
     public final EObject entryRuleCompositeField() throws RecognitionException {
         EObject current = null;
 
@@ -1015,16 +1045,16 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:503:2: (iv_ruleCompositeField= ruleCompositeField EOF )
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:504:2: iv_ruleCompositeField= ruleCompositeField EOF
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:523:2: (iv_ruleCompositeField= ruleCompositeField EOF )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:524:2: iv_ruleCompositeField= ruleCompositeField EOF
             {
              currentNode = createCompositeNode(grammarAccess.getCompositeFieldRule(), currentNode); 
-            pushFollow(FOLLOW_ruleCompositeField_in_entryRuleCompositeField832);
+            pushFollow(FOLLOW_ruleCompositeField_in_entryRuleCompositeField846);
             iv_ruleCompositeField=ruleCompositeField();
             _fsp--;
 
              current =iv_ruleCompositeField; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCompositeField842); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCompositeField856); 
 
             }
 
@@ -1042,7 +1072,7 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleCompositeField
-    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:511:1: ruleCompositeField returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ':' ( (lv_value_2_0= ruleCompositeObject ) ) ) ;
+    // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:531:1: ruleCompositeField returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ':' ( (lv_value_2_0= ruleCompositeObject ) ) ) ;
     public final EObject ruleCompositeField() throws RecognitionException {
         EObject current = null;
 
@@ -1053,20 +1083,20 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:516:6: ( ( ( (lv_name_0_0= RULE_ID ) ) ':' ( (lv_value_2_0= ruleCompositeObject ) ) ) )
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:517:1: ( ( (lv_name_0_0= RULE_ID ) ) ':' ( (lv_value_2_0= ruleCompositeObject ) ) )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:536:6: ( ( ( (lv_name_0_0= RULE_ID ) ) ':' ( (lv_value_2_0= ruleCompositeObject ) ) ) )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:537:1: ( ( (lv_name_0_0= RULE_ID ) ) ':' ( (lv_value_2_0= ruleCompositeObject ) ) )
             {
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:517:1: ( ( (lv_name_0_0= RULE_ID ) ) ':' ( (lv_value_2_0= ruleCompositeObject ) ) )
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:517:2: ( (lv_name_0_0= RULE_ID ) ) ':' ( (lv_value_2_0= ruleCompositeObject ) )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:537:1: ( ( (lv_name_0_0= RULE_ID ) ) ':' ( (lv_value_2_0= ruleCompositeObject ) ) )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:537:2: ( (lv_name_0_0= RULE_ID ) ) ':' ( (lv_value_2_0= ruleCompositeObject ) )
             {
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:517:2: ( (lv_name_0_0= RULE_ID ) )
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:518:1: (lv_name_0_0= RULE_ID )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:537:2: ( (lv_name_0_0= RULE_ID ) )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:538:1: (lv_name_0_0= RULE_ID )
             {
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:518:1: (lv_name_0_0= RULE_ID )
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:519:3: lv_name_0_0= RULE_ID
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:538:1: (lv_name_0_0= RULE_ID )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:539:3: lv_name_0_0= RULE_ID
             {
             lv_name_0_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleCompositeField884); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleCompositeField898); 
 
             			createLeafNode(grammarAccess.getCompositeFieldAccess().getNameIDTerminalRuleCall_0_0(), "name"); 
             		
@@ -1092,20 +1122,20 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,20,FOLLOW_20_in_ruleCompositeField899); 
+            match(input,20,FOLLOW_20_in_ruleCompositeField913); 
 
                     createLeafNode(grammarAccess.getCompositeFieldAccess().getColonKeyword_1(), null); 
                 
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:545:1: ( (lv_value_2_0= ruleCompositeObject ) )
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:546:1: (lv_value_2_0= ruleCompositeObject )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:565:1: ( (lv_value_2_0= ruleCompositeObject ) )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:566:1: (lv_value_2_0= ruleCompositeObject )
             {
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:546:1: (lv_value_2_0= ruleCompositeObject )
-            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:547:3: lv_value_2_0= ruleCompositeObject
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:566:1: (lv_value_2_0= ruleCompositeObject )
+            // ../pf/src-gen/uk/ac/open/pf/parser/antlr/internal/InternalPF.g:567:3: lv_value_2_0= ruleCompositeObject
             {
              
             	        currentNode=createCompositeNode(grammarAccess.getCompositeFieldAccess().getValueCompositeObjectParserRuleCall_2_0(), currentNode); 
             	    
-            pushFollow(FOLLOW_ruleCompositeObject_in_ruleCompositeField920);
+            pushFollow(FOLLOW_ruleCompositeObject_in_ruleCompositeField934);
             lv_value_2_0=ruleCompositeObject();
             _fsp--;
 
@@ -1158,42 +1188,42 @@ public class InternalPFParser extends AbstractInternalAntlrParser {
 
     public static final BitSet FOLLOW_ruleRootDiagram_in_entryRuleRootDiagram75 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleRootDiagram85 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_VALUE_in_ruleRootDiagram128 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleRootDiagram137 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_ruleRootDiagram147 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleRootDiagram157 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleRootDiagram167 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleNode_in_ruleRootDiagram188 = new BitSet(new long[]{0x0000000000018000L});
-    public static final BitSet FOLLOW_15_in_ruleRootDiagram199 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleNode_in_ruleRootDiagram220 = new BitSet(new long[]{0x0000000000018000L});
-    public static final BitSet FOLLOW_16_in_ruleRootDiagram232 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_16_in_ruleRootDiagram242 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNode_in_entryRuleNode278 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNode288 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_VALUE_in_ruleNode330 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleNode345 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_ruleCompositeObject_in_ruleNode366 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCompositeObject_in_entryRuleCompositeObject402 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCompositeObject412 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_ruleCompositeObject456 = new BitSet(new long[]{0x0000000000088020L});
-    public static final BitSet FOLLOW_ruleField_in_ruleCompositeObject477 = new BitSet(new long[]{0x0000000000088000L});
-    public static final BitSet FOLLOW_15_in_ruleCompositeObject489 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleField_in_ruleCompositeObject510 = new BitSet(new long[]{0x0000000000088000L});
-    public static final BitSet FOLLOW_19_in_ruleCompositeObject522 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleField_in_entryRuleField558 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleField568 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSimpleField_in_ruleField615 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCompositeField_in_ruleField642 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSimpleField_in_entryRuleSimpleField677 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSimpleField687 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleSimpleField729 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_ruleSimpleField744 = new BitSet(new long[]{0x0000000000000050L});
-    public static final BitSet FOLLOW_RULE_VALUE_in_ruleSimpleField762 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleSimpleField790 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCompositeField_in_entryRuleCompositeField832 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCompositeField842 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleCompositeField884 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_ruleCompositeField899 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_ruleCompositeObject_in_ruleCompositeField920 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_VALUE_in_ruleRootDiagram136 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_ruleRootDiagram151 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_13_in_ruleRootDiagram161 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleRootDiagram171 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleRootDiagram181 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleNode_in_ruleRootDiagram202 = new BitSet(new long[]{0x0000000000018000L});
+    public static final BitSet FOLLOW_15_in_ruleRootDiagram213 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleNode_in_ruleRootDiagram234 = new BitSet(new long[]{0x0000000000018000L});
+    public static final BitSet FOLLOW_16_in_ruleRootDiagram246 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleRootDiagram256 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNode_in_entryRuleNode292 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNode302 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_VALUE_in_ruleNode344 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleNode359 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_ruleCompositeObject_in_ruleNode380 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCompositeObject_in_entryRuleCompositeObject416 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCompositeObject426 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_ruleCompositeObject470 = new BitSet(new long[]{0x0000000000088020L});
+    public static final BitSet FOLLOW_ruleField_in_ruleCompositeObject491 = new BitSet(new long[]{0x0000000000088000L});
+    public static final BitSet FOLLOW_15_in_ruleCompositeObject503 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleField_in_ruleCompositeObject524 = new BitSet(new long[]{0x0000000000088000L});
+    public static final BitSet FOLLOW_19_in_ruleCompositeObject536 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleField_in_entryRuleField572 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleField582 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSimpleField_in_ruleField629 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCompositeField_in_ruleField656 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSimpleField_in_entryRuleSimpleField691 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSimpleField701 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleSimpleField743 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_20_in_ruleSimpleField758 = new BitSet(new long[]{0x0000000000000050L});
+    public static final BitSet FOLLOW_RULE_VALUE_in_ruleSimpleField776 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleSimpleField804 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCompositeField_in_entryRuleCompositeField846 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCompositeField856 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleCompositeField898 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_20_in_ruleCompositeField913 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_ruleCompositeObject_in_ruleCompositeField934 = new BitSet(new long[]{0x0000000000000002L});
 
 }

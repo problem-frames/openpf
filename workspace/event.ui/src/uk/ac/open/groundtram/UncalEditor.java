@@ -22,7 +22,8 @@ import org.eclipse.xtext.ui.editor.XtextEditor;
 
 /**
  * The class extends the xtext editor with an additional behavior: 
- * When the text file is saved, an .uncal file is generated from the semantics model (XtextResource). <p/>
+ * When the .pf text file is saved, an .uncal file is generated from the semantics model (XtextResource); <p/>
+ * and when the .uncal file is saved, an .problem file is generated from the semantics model (XtextResource). <p/>
  * To use the editor, you need to do the followings:
  * <ol>
  * <li> create a subclass FooEditor to inherit this behavior:
@@ -53,10 +54,12 @@ import org.eclipse.xtext.ui.editor.XtextEditor;
  * </li>
  * </ol>
  * @author Yijun Yu <p/>
- * @see uk.ac.open.problem.diagram.part.ProblemEditor#doSave()
+ * @see uk.ac.open.PFEditor.diagram.part.ProblemEditor#doSave()
  * @see uk.ac.open.event.EventCalculusEditor#doSave()
  */
 public class UncalEditor extends XtextEditor {
+	static protected String ROOT = "&ec";
+	
 	/**
 	 * Save the resource to the unql/uncal format used by the GRoundTram system
 	 * @see http://www.biglab.org/pdf/manual.pdf
@@ -76,7 +79,7 @@ public class UncalEditor extends XtextEditor {
 			EObject o = root;
 			new_object(table, count, counts, root, o);			
 			String name = referenceName(table, count, root, o);
-			out.println("&src" + " @ cycle(");
+			out.println(ROOT + " @ cycle(");
 			out.println("(");
 			int u = 0;
 			for (TreeIterator<EObject> objects = EcoreUtil.getAllContents(
@@ -85,7 +88,7 @@ public class UncalEditor extends XtextEditor {
 				new_object(table, count, counts, root, o);			
 				name = referenceName(table, count, root, o);
 				if (o == root)
-					name = "&src";
+					name = ROOT;
 				if (u > 0) {
 					out.println(",");
 				}
@@ -109,7 +112,6 @@ public class UncalEditor extends XtextEditor {
             } else {
                 file.create(stream, false, null);
             }
-            file.setDerived(true);			
 		} catch (CoreException e) {
 			e.printStackTrace();
 		}
@@ -171,5 +173,5 @@ public class UncalEditor extends XtextEditor {
 			out.print(((n>0)?",\n":"") + "      " + feature.getName() + ": \"" + val + "\"");
 		}
 	}
-
+	
 }

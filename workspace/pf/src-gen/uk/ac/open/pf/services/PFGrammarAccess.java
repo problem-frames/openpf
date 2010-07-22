@@ -21,7 +21,8 @@ public class PFGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RootDiagram");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cRootDiagramAction_0 = (Action)cGroup.eContents().get(0);
-		private final RuleCall cValueTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameValueTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cCommercialAtKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Keyword cCycleKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Keyword cLeftParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
@@ -36,17 +37,20 @@ public class PFGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightParenthesisKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//RootDiagram:
-		//	{RootDiagram} Value "@" "cycle" "(" "(" objects+=Node ("," objects+=Node)* ")" ")";
+		//	{RootDiagram} name=Value "@" "cycle" "(" "(" objects+=Node ("," objects+=Node)* ")" ")";
 		public ParserRule getRule() { return rule; }
 
-		//{RootDiagram} Value "@" "cycle" "(" "(" objects+=Node ("," objects+=Node)* ")" ")"
+		//{RootDiagram} name=Value "@" "cycle" "(" "(" objects+=Node ("," objects+=Node)* ")" ")"
 		public Group getGroup() { return cGroup; }
 
 		//{RootDiagram}
 		public Action getRootDiagramAction_0() { return cRootDiagramAction_0; }
 
+		//name=Value
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
 		//Value
-		public RuleCall getValueTerminalRuleCall_1() { return cValueTerminalRuleCall_1; }
+		public RuleCall getNameValueTerminalRuleCall_1_0() { return cNameValueTerminalRuleCall_1_0; }
 
 		//"@"
 		public Keyword getCommercialAtKeyword_2() { return cCommercialAtKeyword_2; }
@@ -292,7 +296,7 @@ public class PFGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//RootDiagram:
-	//	{RootDiagram} Value "@" "cycle" "(" "(" objects+=Node ("," objects+=Node)* ")" ")";
+	//	{RootDiagram} name=Value "@" "cycle" "(" "(" objects+=Node ("," objects+=Node)* ")" ")";
 	public RootDiagramElements getRootDiagramAccess() {
 		return (pRootDiagram != null) ? pRootDiagram : (pRootDiagram = new RootDiagramElements());
 	}

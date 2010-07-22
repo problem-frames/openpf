@@ -5,7 +5,7 @@ grammar uk.ac.open.pf.PF with org.eclipse.xtext.common.Terminals
 generate pF "http://www.ac.uk/open/pf/PF"
 
 RootDiagram: {RootDiagram}
-	Value '@' 'cycle' '('
+	name=Value '@' 'cycle' '('
 	'('
 		objects+=Node (',' objects+=Node)*
 	')'

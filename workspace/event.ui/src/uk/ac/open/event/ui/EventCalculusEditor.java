@@ -23,9 +23,11 @@ public class EventCalculusEditor extends UncalEditor {
 
 	@Override
 	public void performSave(boolean overwrite, IProgressMonitor monitor) {
+		try {
 		super.performSave(overwrite, monitor);
 		String filename = this.getResource().getFullPath().toString();
 		saveModel(filename);
+		} catch (IllegalStateException e) {}
 	}
 
 	/**

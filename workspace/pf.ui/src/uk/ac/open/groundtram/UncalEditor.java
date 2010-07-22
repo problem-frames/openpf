@@ -4,25 +4,41 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.HashMap;
+import java.util.TreeMap;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.xtext.ui.editor.XtextEditor;
 
+import uk.ac.open.event.eventcalculus.EventcalculusPackage;
+import uk.ac.open.pf.pF.CompositeField;
+import uk.ac.open.pf.pF.CompositeObject;
+import uk.ac.open.pf.pF.Field;
+import uk.ac.open.pf.pF.Node;
+import uk.ac.open.pf.pF.RootDiagram;
+import uk.ac.open.pf.pF.SimpleField;
+import uk.ac.open.problem.ProblemPackage;
+
 /**
  * The class extends the xtext editor with an additional behavior: 
- * When the text file is saved, an .uncal file is generated from the semantics model (XtextResource). <p/>
+ * When the .pf text file is saved, an .uncal file is generated from the semantics model (XtextResource); <p/>
+ * and when the .uncal file is saved, an .problem file is generated from the semantics model (XtextResource). <p/>
  * To use the editor, you need to do the followings:
  * <ol>
  * <li> create a subclass FooEditor to inherit this behavior:
@@ -57,6 +73,8 @@ import org.eclipse.xtext.ui.editor.XtextEditor;
  * @see uk.ac.open.event.EventCalculusEditor#doSave()
  */
 public class UncalEditor extends XtextEditor {
+	protected static String ROOT = "&problem";
+	
 	/**
 	 * Save the resource to the unql/uncal format used by the GRoundTram system
 	 * @see http://www.biglab.org/pdf/manual.pdf
@@ -76,7 +94,7 @@ public class UncalEditor extends XtextEditor {
 			EObject o = root;
 			new_object(table, count, counts, root, o);			
 			String name = referenceName(table, count, root, o);
-			out.println("&src" + " @ cycle(");
+			out.println(ROOT + " @ cycle(");
 			out.println("(");
 			int u = 0;
 			for (TreeIterator<EObject> objects = EcoreUtil.getAllContents(
@@ -85,7 +103,7 @@ public class UncalEditor extends XtextEditor {
 				new_object(table, count, counts, root, o);			
 				name = referenceName(table, count, root, o);
 				if (o == root)
-					name = "&src";
+					name = ROOT;
 				if (u > 0) {
 					out.println(",");
 				}
@@ -109,7 +127,6 @@ public class UncalEditor extends XtextEditor {
             } else {
                 file.create(stream, false, null);
             }
-            file.setDerived(true);			
 		} catch (CoreException e) {
 			e.printStackTrace();
 		}
@@ -172,4 +189,164 @@ public class UncalEditor extends XtextEditor {
 		}
 	}
 
+
+	/**
+	 * Convert a generic uncal resource into a specific resource denoted by an
+	 * Ecore package through the reflection mechanisms
+	 * 
+	 * @param xtextResource
+	 *            The generic source resource of uncal parsed from xtext
+	 * @param resource
+	 *            The specific target resource of the Ecore package
+	 * @param pkg
+	 *            The instance of Ecore package
+	 */
+	protected static void convert(Resource xtextResource, Resource resource,
+			EPackage pkg) {
+		TreeMap<String, EObject> table = new TreeMap<String, EObject>();
+		// System.out.println(rootClass);
+		for (TreeIterator<EObject> iter = xtextResource.getAllContents(); iter
+				.hasNext();) {
+			EObject obj = iter.next();
+			if (obj instanceof RootDiagram) {
+				RootDiagram root = (RootDiagram) obj;
+				if (root.getName().startsWith("&")) {
+					ROOT = root.getName();
+					if (root.getName().equals("&problem")) {
+						pkg = ProblemPackage.eINSTANCE;
+					} else if (root.getName().equals("&ec")) {
+						pkg = EventcalculusPackage.eINSTANCE;
+					} else {
+						pkg = ProblemPackage.eINSTANCE;						
+					}
+				}
+				String rootClass = pkg.getEClassifiers().get(0).getName();
+				for (Node node : root.getObjects()) {
+					String name = node.getName();
+					EObject eo = new_value(table, name, rootClass, pkg);
+					CompositeObject co = node.getComposite();
+					for (Field field : co.getFields()) {
+						String real_name = field.getName();
+						for (EClassifier ec : pkg.getEClassifiers()) {
+							if (ec instanceof EClass && ec == eo.eClass()) {
+								for (EStructuralFeature esf : ((EClass) ec)
+										.getEAllStructuralFeatures()) {
+									if (real_name.equals(esf.getName())) {
+										if (field instanceof SimpleField) {
+											SimpleField sf = (SimpleField) field;
+											String value = sf.getValue();
+											if (!value.startsWith("&")
+													&& !value.equals("null")) { // a
+																				// string
+												if (esf instanceof EAttribute) {
+													if (eo.eGet(esf) instanceof Enum) {
+														Enum<?> e = (Enum<?>) eo
+																.eGet(esf);
+														for (Enum<?> en : e
+																.getClass()
+																.getEnumConstants()) {
+															if (en.toString()
+																	.equals(value))
+																eo.eSet(esf, en);
+														}
+													} else if (eo.eGet(esf) instanceof String) {
+														eo.eSet(esf, value);
+													} else if (eo.eGet(esf) instanceof Integer) {
+														eo.eSet(esf, Integer.parseInt(value));
+													}
+												}
+											} else { // an ID
+												EObject vo = new_value(table,
+														value, rootClass, pkg);
+												if (esf instanceof EReference)
+													eo.eSet(esf, vo);
+											}
+										} else { // a CompositeField
+											CompositeField cf = (CompositeField) field;
+											CompositeObject vo = cf.getValue();
+											EList<Object> node_list = get_list(
+													table, vo, rootClass, pkg);
+											eo.eSet(esf, node_list);
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		resource.getContents().add(table.get(ROOT));
+	}
+
+	/**
+	 * Obtain an EList from a composite object like: {hd: <?>, tl: { hd:<?>,
+	 * ..., tl:{}}...}
+	 * 
+	 * @param table
+	 *            The table to map string like &TypeNumber to an object
+	 * @param vo
+	 *            The Composite object
+	 * @param rootClass
+	 *            Pass on the name of the root class
+	 * @param pkg
+	 *            Pass on the name of the EPackage
+	 * @return The EList
+	 */
+	private static EList<Object> get_list(TreeMap<String, EObject> table,
+			CompositeObject vo, String rootClass, EPackage pkg) {
+		EList<Object> a = new BasicEList<Object>();
+		for (Field f : vo.getFields()) {
+			if (f instanceof SimpleField && f.getName().equals("hd")) {
+				SimpleField sf = (SimpleField) f;
+				String val = sf.getValue();
+				String value = sf.getValue();
+				if (!value.startsWith("&") && !value.equals("null")) // a String
+					a.add(value);
+				else { // an ID
+					EObject eo = new_value(table, val, rootClass, pkg);
+					a.add(eo);
+				}
+			}
+			// recursion
+			if (f instanceof CompositeField && f.getName().equals("tl")) {
+				CompositeObject tail = ((CompositeField) f).getValue();
+				EList<Object> a1 = get_list(table, tail, rootClass, pkg);
+				a.addAll(a1);
+			}
+		}
+		return a;
+	}
+
+	/**
+	 * Look up the table that maps &TypeNumber reference names into an EObject
+	 * 
+	 * @param table
+	 * @param name
+	 * @param rootClass
+	 * @return The EObject if found, otherwise create an empty new one
+	 */
+	private static EObject new_value(TreeMap<String, EObject> table,
+			String name, String rootClass, EPackage pkg) {
+		// We assume that the class name is <name>Impl, except for the
+		// rootClass, which will be translated from "src"
+		String klass = name.equals(ROOT) ? rootClass
+				: ((name.indexOf("Impl") >= 0) ? name.substring(1,
+						name.indexOf("Impl")) : name);
+		EObject eo = table.get(name);
+		if (eo == null) {
+			for (EClassifier ec : pkg.getEClassifiers()) {
+				if (ec instanceof EClass) {
+					if (klass.equals(((EClass) ec).getName())) {
+						EObject obj = pkg.getEFactoryInstance().create(
+								(EClass) ec);
+						table.put(name, obj);
+					}
+				}
+			}
+		}
+		return table.get(name);
+	}
+	
+	
 }

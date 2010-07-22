@@ -46,6 +46,7 @@ public class PFParser extends AbstractContentAssistParser {
 					put(grammarAccess.getCompositeObjectAccess().getGroup_3(), "rule__CompositeObject__Group_3__0");
 					put(grammarAccess.getSimpleFieldAccess().getGroup(), "rule__SimpleField__Group__0");
 					put(grammarAccess.getCompositeFieldAccess().getGroup(), "rule__CompositeField__Group__0");
+					put(grammarAccess.getRootDiagramAccess().getNameAssignment_1(), "rule__RootDiagram__NameAssignment_1");
 					put(grammarAccess.getRootDiagramAccess().getObjectsAssignment_6(), "rule__RootDiagram__ObjectsAssignment_6");
 					put(grammarAccess.getRootDiagramAccess().getObjectsAssignment_7_1(), "rule__RootDiagram__ObjectsAssignment_7_1");
 					put(grammarAccess.getNodeAccess().getNameAssignment_0(), "rule__Node__NameAssignment_0");

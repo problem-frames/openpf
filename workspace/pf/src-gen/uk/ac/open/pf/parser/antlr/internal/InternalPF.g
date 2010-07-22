@@ -100,11 +100,31 @@ ruleRootDiagram returns [EObject current=null]
     currentNode = newNode; 
         associateNodeWithAstElement(currentNode, $current); 
     }
-)RULE_VALUE
-    { 
-    createLeafNode(grammarAccess.getRootDiagramAccess().getValueTerminalRuleCall_1(), null); 
-    }
-	'@' 
+)(
+(
+		lv_name_1_0=RULE_VALUE
+		{
+			createLeafNode(grammarAccess.getRootDiagramAccess().getNameValueTerminalRuleCall_1_0(), "name"); 
+		}
+		{
+	        if ($current==null) {
+	            $current = factory.create(grammarAccess.getRootDiagramRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode, $current);
+	        }
+	        try {
+	       		set(
+	       			$current, 
+	       			"name",
+	        		lv_name_1_0, 
+	        		"Value", 
+	        		lastConsumedNode);
+	        } catch (ValueConverterException vce) {
+				handleValueConverterException(vce);
+	        }
+	    }
+
+)
+)	'@' 
     {
         createLeafNode(grammarAccess.getRootDiagramAccess().getCommercialAtKeyword_2(), null); 
     }

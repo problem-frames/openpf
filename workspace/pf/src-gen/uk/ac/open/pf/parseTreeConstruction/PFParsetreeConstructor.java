@@ -46,11 +46,11 @@ protected class ThisRootNode extends RootToken {
 /************ begin Rule RootDiagram ****************
  *
  * RootDiagram:
- * 	{RootDiagram} Value "@" "cycle" "(" "(" objects+=Node ("," objects+=Node)* ")" ")";
+ * 	{RootDiagram} name=Value "@" "cycle" "(" "(" objects+=Node ("," objects+=Node)* ")" ")";
  *
  **/
 
-// {RootDiagram} Value "@" "cycle" "(" "(" objects+=Node ("," objects+=Node)* ")" ")"
+// {RootDiagram} name=Value "@" "cycle" "(" "(" objects+=Node ("," objects+=Node)* ")" ")"
 protected class RootDiagram_Group extends GroupToken {
 	
 	public RootDiagram_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -105,16 +105,16 @@ protected class RootDiagram_RootDiagramAction_0 extends ActionToken  {
 	}
 }
 
-// Value
-protected class RootDiagram_ValueTerminalRuleCall_1 extends UnassignedTextToken {
-
-	public RootDiagram_ValueTerminalRuleCall_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+// name=Value
+protected class RootDiagram_NameAssignment_1 extends AssignmentToken  {
+	
+	public RootDiagram_NameAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
-	public RuleCall getGrammarElement() {
-		return grammarAccess.getRootDiagramAccess().getValueTerminalRuleCall_1();
+	public Assignment getGrammarElement() {
+		return grammarAccess.getRootDiagramAccess().getNameAssignment_1();
 	}
 
     @Override
@@ -123,6 +123,18 @@ protected class RootDiagram_ValueTerminalRuleCall_1 extends UnassignedTextToken 
 			case 0: return new RootDiagram_RootDiagramAction_0(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
+	}
+
+    @Override	
+	public IEObjectConsumer tryConsume() {
+		if((value = eObjectConsumer.getConsumable("name",true)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("name");
+		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getRootDiagramAccess().getNameValueTerminalRuleCall_1_0(), value, null)) {
+			type = AssignmentType.TERMINAL_RULE_CALL;
+			element = grammarAccess.getRootDiagramAccess().getNameValueTerminalRuleCall_1_0();
+			return obj;
+		}
+		return null;
 	}
 
 }
@@ -142,7 +154,7 @@ protected class RootDiagram_CommercialAtKeyword_2 extends KeywordToken  {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new RootDiagram_ValueTerminalRuleCall_1(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new RootDiagram_NameAssignment_1(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}

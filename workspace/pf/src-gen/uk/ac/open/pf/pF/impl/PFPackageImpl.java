@@ -149,9 +149,19 @@ public class PFPackageImpl extends EPackageImpl implements PFPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getRootDiagram_Name()
+  {
+    return (EAttribute)rootDiagramEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getRootDiagram_Objects()
   {
-    return (EReference)rootDiagramEClass.getEStructuralFeatures().get(0);
+    return (EReference)rootDiagramEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -295,6 +305,7 @@ public class PFPackageImpl extends EPackageImpl implements PFPackage
 
     // Create classes and their features
     rootDiagramEClass = createEClass(ROOT_DIAGRAM);
+    createEAttribute(rootDiagramEClass, ROOT_DIAGRAM__NAME);
     createEReference(rootDiagramEClass, ROOT_DIAGRAM__OBJECTS);
 
     nodeEClass = createEClass(NODE);
@@ -348,6 +359,7 @@ public class PFPackageImpl extends EPackageImpl implements PFPackage
 
     // Initialize classes and features; add operations and parameters
     initEClass(rootDiagramEClass, RootDiagram.class, "RootDiagram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getRootDiagram_Name(), ecorePackage.getEString(), "name", null, 0, 1, RootDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getRootDiagram_Objects(), this.getNode(), null, "objects", null, 0, -1, RootDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(nodeEClass, Node.class, "Node", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
