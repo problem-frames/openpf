@@ -23,6 +23,7 @@ import uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil;
 
 /**
  * 
+ * This class modifies the saving behaviour of the xtext editor to create .uncal files
  * @author yy66
  * @generate NOT
  */
@@ -62,8 +63,8 @@ public class PFEditor extends UncalEditor {
 		} else {
 			modelURI = URI.createURI(newfile + "." + "ec.xmi");
 			save_emf(modelURI, resource);
-//			modelURI = URI.createURI(newfile + "." + "ec");
-//			save_xtext(modelURI, resource);
+			modelURI = URI.createURI(newfile + "." + "new.ec");
+			save_xtext(modelURI, resource);
 		}
 	}
 

@@ -36,7 +36,7 @@ public class EventCalculusEditor extends UncalEditor {
 	 */
 	private static void saveModel(String filename) {
 		// http://www.eclipse.org/forums/index.php?t=msg&goto=520616&
-		EventCalculusStandaloneSetup.doSetup();
+//		EventCalculusStandaloneSetup.doSetup();
 		XtextResourceSet resourceSet = new XtextResourceSet();
 		// http://www.eclipse.org/forums/index.php?t=msg&goto=480679&
 		resourceSet.addLoadOption(XtextResource.OPTION_RESOLVE_ALL,

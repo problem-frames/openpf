@@ -48,7 +48,7 @@ public class ProblemEditor extends UncalEditor {
 
 	private static void saveModel(String filename) {
 		// http://www.eclipse.org/forums/index.php?t=msg&goto=520616&
-		ProblemStandaloneSetup.doSetup();
+//		ProblemStandaloneSetup.doSetup();
 		XtextResourceSet resourceSet = new XtextResourceSet();
 		// http://www.eclipse.org/forums/index.php?t=msg&goto=480679&
 		resourceSet.addLoadOption(XtextResource.OPTION_RESOLVE_ALL,

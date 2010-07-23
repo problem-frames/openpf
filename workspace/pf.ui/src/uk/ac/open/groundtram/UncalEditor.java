@@ -36,22 +36,34 @@ import uk.ac.open.pf.pF.SimpleField;
 import uk.ac.open.problem.ProblemPackage;
 
 /**
- * The class extends the xtext editor with an additional behavior: 
- * When the .pf text file is saved, an .uncal file is generated from the semantics model (XtextResource); <p/>
- * and when the .uncal file is saved, an .problem file is generated from the semantics model (XtextResource). <p/>
+ * The class extends the xtext editor with an additional behavior: When the .pf
+ * text file is saved, an .uncal file is generated from the semantics model
+ * (XtextResource);
+ * <p/>
+ * and when the .uncal file is saved, an .problem file is generated from the
+ * semantics model (XtextResource).
+ * <p/>
  * To use the editor, you need to do the followings:
  * <ol>
- * <li> create a subclass FooEditor to inherit this behavior:
- *  <ol>
- *  <li> Modify the MANIFEST.MF to add the "uk.ac.open.GRroundTram" plugin dependency </li>
- *  <li> Import this class in the FooEditor.java <pre>
- *   class FooEditor extends UncalEditor { ... } </pre>
- *  </li>
- *  </ol>
+ * <li>create a subclass FooEditor to inherit this behavior:
+ * <ol>
+ * <li>Modify the MANIFEST.MF to add the "uk.ac.open.GRroundTram" plugin
+ * dependency</li>
+ * <li>Import this class in the FooEditor.java
+ * 
+ * <pre>
+ *   class FooEditor extends UncalEditor { ... }
+ * </pre>
+ * 
  * </li>
- * <li> modify the description of the xtext generated plugin: "foo.ui/plugin.xml":
- *  <ol>
- *  <li> Modify the extension point: <pre>
+ * </ol>
+ * </li>
+ * <li>modify the description of the xtext generated plugin:
+ * "foo.ui/plugin.xml":
+ * <ol>
+ * <li>Modify the extension point:
+ * 
+ * <pre>
  *   &lt;extension
  *           point="org.eclipse.ui.editors"&gt;
  *       &lt;editor
@@ -63,27 +75,31 @@ import uk.ac.open.problem.ProblemPackage;
  *           name="Foo Editor"&gt;
  *       &lt;/editor&gt;
  *   &lt;/extension&gt;
- *   </pre>
- *  </li>
- *  </ol>
+ * </pre>
+ * 
  * </li>
  * </ol>
- * @author Yijun Yu <p/>
+ * </li>
+ * </ol>
+ * 
+ * @author Yijun Yu
+ *         <p/>
  * @see uk.ac.open.PFEditor.diagram.part.ProblemEditor#doSave()
  * @see uk.ac.open.event.EventCalculusEditor#doSave()
  */
 public class UncalEditor extends XtextEditor {
 	protected static String ROOT = "&problem";
-	
+
 	/**
 	 * Save the resource to the unql/uncal format used by the GRoundTram system
+	 * 
 	 * @see http://www.biglab.org/pdf/manual.pdf
 	 * @param xtextResource
 	 */
 	protected static void saveUncal(Resource xtextResource, String filename) {
 		URI uri = URI.createURI(filename);
 		IPath path = new Path(uri.toString());
-		IFile file = ResourcesPlugin.getWorkspace().getRoot().getFile(path);		
+		IFile file = ResourcesPlugin.getWorkspace().getRoot().getFile(path);
 		try {
 			ByteArrayOutputStream content = new ByteArrayOutputStream();
 			PrintStream out = new PrintStream(content);
@@ -92,7 +108,7 @@ public class UncalEditor extends XtextEditor {
 			HashMap<EClass, Integer> counts = new HashMap<EClass, Integer>();
 			EObject root = xtextResource.getContents().get(0);
 			EObject o = root;
-			new_object(table, count, counts, root, o);			
+			new_object(table, count, counts, root, o);
 			String name = referenceName(table, count, root, o);
 			out.println(ROOT + " @ cycle(");
 			out.println("(");
@@ -100,7 +116,7 @@ public class UncalEditor extends XtextEditor {
 			for (TreeIterator<EObject> objects = EcoreUtil.getAllContents(
 					xtextResource, true); objects.hasNext();) {
 				o = objects.next();
-				new_object(table, count, counts, root, o);			
+				new_object(table, count, counts, root, o);
 				name = referenceName(table, count, root, o);
 				if (o == root)
 					name = ROOT;
@@ -111,22 +127,25 @@ public class UncalEditor extends XtextEditor {
 				out.println("  " + name + " := ");
 				out.println("  {");
 				int n = 0;
-				for (EStructuralFeature feature : o.eClass().getEAllStructuralFeatures()) {
+				for (EStructuralFeature feature : o.eClass()
+						.getEAllStructuralFeatures()) {
 					Object val = o.eGet(feature);
-					handleValue(out, table, count, counts, n, feature, val, root);
+					handleValue(out, table, count, counts, n, feature, val,
+							root);
 					n++;
-				} 
+				}
 				out.print("\n  }");
 			}
 			out.println("\n)");
 			out.println(")");
 			out.close();
-			ByteArrayInputStream stream = new ByteArrayInputStream(content.toByteArray());
-            if (file.exists()) {
-                file.setContents(stream, false, true, null);
-            } else {
-                file.create(stream, false, null);
-            }
+			ByteArrayInputStream stream = new ByteArrayInputStream(
+					content.toByteArray());
+			if (file.exists()) {
+				file.setContents(stream, false, true, null);
+			} else {
+				file.create(stream, false, null);
+			}
 		} catch (CoreException e) {
 			e.printStackTrace();
 		}
@@ -134,7 +153,7 @@ public class UncalEditor extends XtextEditor {
 
 	private static String referenceName(HashMap<EObject, String> table,
 			HashMap<EObject, Integer> count, EObject root, EObject o) {
-		String name = table.get(o) + (o==root?"":count.get(o));
+		String name = table.get(o) + (o == root ? "" : count.get(o));
 		return name;
 	}
 
@@ -155,40 +174,42 @@ public class UncalEditor extends XtextEditor {
 
 	private static void handleValue(PrintStream out,
 			HashMap<EObject, String> table, HashMap<EObject, Integer> count,
-			HashMap<EClass, Integer> counts, int n, EStructuralFeature feature, Object val,
-			EObject root) {
+			HashMap<EClass, Integer> counts, int n, EStructuralFeature feature,
+			Object val, EObject root) {
 		if (val instanceof EList<?>) {
 			String list = "{";
 			int m = 0;
-			for (Object Obj: (EList<?>) val) {
+			for (Object Obj : (EList<?>) val) {
 				if (Obj instanceof EList<?>) {
 					// TODO: we need to create a list variable
 				} else if (Obj instanceof EObject) {
 					EObject obj = (EObject) Obj;
-					new_object(table, count, counts, root, obj);			
-					String name = referenceName(table, count, root, obj);					
+					new_object(table, count, counts, root, obj);
+					String name = referenceName(table, count, root, obj);
 					list = list + "hd:" + name + ", tl:{";
-					m ++;
+					m++;
 				} else {
 					// primitive value
 					Object obj = Obj;
 					list = list + "hd:\"" + obj + "\"" + ", tl:{";
-					m ++;
+					m++;
 				}
 			}
-			for (int i=0; i<=m; i++)
+			for (int i = 0; i <= m; i++)
 				list = list + "}";
-			out.print(((n>0)?",\n":"") + "      " + feature.getName() + ":" + list);
+			out.print(((n > 0) ? ",\n" : "") + "      " + feature.getName()
+					+ ":" + list);
 		} else if (val instanceof EObject) {
 			EObject obj = (EObject) val;
-			new_object(table, count, counts, root, obj);			
-			String name = referenceName(table, count, root, obj);					
-			out.print(((n>0)?",\n":"") + "      " + feature.getName() + ": " + name);				
+			new_object(table, count, counts, root, obj);
+			String name = referenceName(table, count, root, obj);
+			out.print(((n > 0) ? ",\n" : "") + "      " + feature.getName()
+					+ ": " + name);
 		} else {
-			out.print(((n>0)?",\n":"") + "      " + feature.getName() + ": \"" + val + "\"");
+			out.print(((n > 0) ? ",\n" : "") + "      " + feature.getName()
+					+ ": \"" + val + "\"");
 		}
 	}
-
 
 	/**
 	 * Convert a generic uncal resource into a specific resource denoted by an
@@ -249,10 +270,13 @@ public class UncalEditor extends XtextEditor {
 																	.equals(value))
 																eo.eSet(esf, en);
 														}
-													} else if (eo.eGet(esf) instanceof String) {
-														eo.eSet(esf, value);
-													} else if (eo.eGet(esf) instanceof Integer) {
-														eo.eSet(esf, Integer.parseInt(value));
+													} else {
+//														System.out.println(esf.getEType().getName());
+														if (esf.getEType().getName().equals("EString")) {
+															eo.eSet(esf, value);
+														} else if (esf.getEType().getName().equals("EInt")) {
+															eo.eSet(esf, Integer.parseInt(value));
+														}
 													}
 												}
 											} else { // an ID
@@ -347,6 +371,5 @@ public class UncalEditor extends XtextEditor {
 		}
 		return table.get(name);
 	}
-	
-	
+
 }
