@@ -366,14 +366,14 @@ protected class ProblemDiagram_LinksAssignment_4_1 extends AssignmentToken  {
  *
  * Node:
  * 	name=ID type=NodeType? (":"? description=STRING)? ("{" (hiddenPhenomena+=Phenomenon (","
- * 	hiddenPhenomena+=Phenomenon)*)? (subproblem+=ProblemDiagram | "see" "domain" problemNodeRef+=[Node] | "see" "problem"
- * 	problemRef+=[ProblemDiagram|QUALIFIED_NAME] | "see" href+=STRING)* "}")?;
+ * 	hiddenPhenomena+=Phenomenon)*)? (subproblem+=ProblemDiagram //	| "see" "problem" problemRef+=[ProblemDiagram|QUALIFIED_NAME]
+ * 	| "see" "domain" problemNodeRef+=[Node] | "see" "problem" problemRef+=[ProblemDiagram] | "see" href+=STRING)* "}")?;
  *
  **/
 
 // name=ID type=NodeType? (":"? description=STRING)? ("{" (hiddenPhenomena+=Phenomenon ("," hiddenPhenomena+=Phenomenon)*)?
-// (subproblem+=ProblemDiagram | "see" "domain" problemNodeRef+=[Node] | "see" "problem"
-// problemRef+=[ProblemDiagram|QUALIFIED_NAME] | "see" href+=STRING)* "}")?
+// (subproblem+=ProblemDiagram //	| "see" "problem" problemRef+=[ProblemDiagram|QUALIFIED_NAME]
+// | "see" "domain" problemNodeRef+=[Node] | "see" "problem" problemRef+=[ProblemDiagram] | "see" href+=STRING)* "}")?
 protected class Node_Group extends GroupToken {
 	
 	public Node_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -530,8 +530,8 @@ protected class Node_DescriptionAssignment_2_1 extends AssignmentToken  {
 }
 
 
-// ("{" (hiddenPhenomena+=Phenomenon ("," hiddenPhenomena+=Phenomenon)*)? (subproblem+=ProblemDiagram | "see" "domain"
-// problemNodeRef+=[Node] | "see" "problem" problemRef+=[ProblemDiagram|QUALIFIED_NAME] | "see" href+=STRING)* "}")?
+// ("{" (hiddenPhenomena+=Phenomenon ("," hiddenPhenomena+=Phenomenon)*)? (subproblem+=ProblemDiagram //	| "see" "problem" problemRef+=[ProblemDiagram|QUALIFIED_NAME]
+// | "see" "domain" problemNodeRef+=[Node] | "see" "problem" problemRef+=[ProblemDiagram] | "see" href+=STRING)* "}")?
 protected class Node_Group_3 extends GroupToken {
 	
 	public Node_Group_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -739,8 +739,8 @@ protected class Node_HiddenPhenomenaAssignment_3_1_1_1 extends AssignmentToken  
 
 
 
-// (subproblem+=ProblemDiagram | "see" "domain" problemNodeRef+=[Node] | "see" "problem"
-// problemRef+=[ProblemDiagram|QUALIFIED_NAME] | "see" href+=STRING)*
+// (subproblem+=ProblemDiagram //	| "see" "problem" problemRef+=[ProblemDiagram|QUALIFIED_NAME]
+// | "see" "domain" problemNodeRef+=[Node] | "see" "problem" problemRef+=[ProblemDiagram] | "see" href+=STRING)*
 protected class Node_Alternatives_3_2 extends AlternativesToken {
 
 	public Node_Alternatives_3_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -919,7 +919,7 @@ protected class Node_ProblemNodeRefAssignment_3_2_1_2 extends AssignmentToken  {
 }
 
 
-// "see" "problem" problemRef+=[ProblemDiagram|QUALIFIED_NAME]
+// "see" "problem" problemRef+=[ProblemDiagram]
 protected class Node_Group_3_2_2 extends GroupToken {
 	
 	public Node_Group_3_2_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -987,7 +987,7 @@ protected class Node_ProblemKeyword_3_2_2_1 extends KeywordToken  {
 
 }
 
-// problemRef+=[ProblemDiagram|QUALIFIED_NAME]
+// problemRef+=[ProblemDiagram]
 protected class Node_ProblemRefAssignment_3_2_2_2 extends AssignmentToken  {
 	
 	public Node_ProblemRefAssignment_3_2_2_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {

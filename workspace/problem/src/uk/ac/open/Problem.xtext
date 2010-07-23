@@ -13,7 +13,8 @@ Node:
 	(hiddenPhenomena+=Phenomenon (',' hiddenPhenomena+=Phenomenon)*)?
 	(subproblem+=ProblemDiagram
 	| "see" "domain" problemNodeRef+=[Node]
-	| "see" "problem" problemRef+=[ProblemDiagram|QUALIFIED_NAME]
+//	| "see" "problem" problemRef+=[ProblemDiagram|QUALIFIED_NAME]
+	| "see" "problem" problemRef+=[ProblemDiagram]
 	| "see" href+=STRING)*
 	"}")?;
 

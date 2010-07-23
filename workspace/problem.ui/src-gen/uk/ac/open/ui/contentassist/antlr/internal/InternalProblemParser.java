@@ -5597,25 +5597,25 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Node__ProblemRefAssignment_3_2_2_2
-    // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2089:1: rule__Node__ProblemRefAssignment_3_2_2_2 : ( ( RULE_QUALIFIED_NAME ) ) ;
+    // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2089:1: rule__Node__ProblemRefAssignment_3_2_2_2 : ( ( RULE_ID ) ) ;
     public final void rule__Node__ProblemRefAssignment_3_2_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2093:1: ( ( ( RULE_QUALIFIED_NAME ) ) )
-            // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2094:1: ( ( RULE_QUALIFIED_NAME ) )
+            // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2093:1: ( ( ( RULE_ID ) ) )
+            // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2094:1: ( ( RULE_ID ) )
             {
-            // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2094:1: ( ( RULE_QUALIFIED_NAME ) )
-            // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2095:1: ( RULE_QUALIFIED_NAME )
+            // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2094:1: ( ( RULE_ID ) )
+            // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2095:1: ( RULE_ID )
             {
              before(grammarAccess.getNodeAccess().getProblemRefProblemDiagramCrossReference_3_2_2_2_0()); 
-            // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2096:1: ( RULE_QUALIFIED_NAME )
-            // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2097:1: RULE_QUALIFIED_NAME
+            // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2096:1: ( RULE_ID )
+            // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2097:1: RULE_ID
             {
-             before(grammarAccess.getNodeAccess().getProblemRefProblemDiagramQUALIFIED_NAMETerminalRuleCall_3_2_2_2_0_1()); 
-            match(input,RULE_QUALIFIED_NAME,FOLLOW_RULE_QUALIFIED_NAME_in_rule__Node__ProblemRefAssignment_3_2_2_24223); 
-             after(grammarAccess.getNodeAccess().getProblemRefProblemDiagramQUALIFIED_NAMETerminalRuleCall_3_2_2_2_0_1()); 
+             before(grammarAccess.getNodeAccess().getProblemRefProblemDiagramIDTerminalRuleCall_3_2_2_2_0_1()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Node__ProblemRefAssignment_3_2_2_24223); 
+             after(grammarAccess.getNodeAccess().getProblemRefProblemDiagramIDTerminalRuleCall_3_2_2_2_0_1()); 
 
             }
 
@@ -6187,7 +6187,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__Node__Group_3_2_2__0__Impl_in_rule__Node__Group_3_2_2__02365 = new BitSet(new long[]{0x0000000002000000L});
     public static final BitSet FOLLOW_rule__Node__Group_3_2_2__1_in_rule__Node__Group_3_2_2__02368 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_31_in_rule__Node__Group_3_2_2__0__Impl2396 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group_3_2_2__1__Impl_in_rule__Node__Group_3_2_2__12427 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__Node__Group_3_2_2__1__Impl_in_rule__Node__Group_3_2_2__12427 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_rule__Node__Group_3_2_2__2_in_rule__Node__Group_3_2_2__12430 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_25_in_rule__Node__Group_3_2_2__1__Impl2458 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Node__Group_3_2_2__2__Impl_in_rule__Node__Group_3_2_2__22489 = new BitSet(new long[]{0x0000000000000002L});
@@ -6259,7 +6259,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rulePhenomenon_in_rule__Node__HiddenPhenomenaAssignment_3_1_1_14118 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleProblemDiagram_in_rule__Node__SubproblemAssignment_3_2_04149 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_rule__Node__ProblemNodeRefAssignment_3_2_1_24184 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_QUALIFIED_NAME_in_rule__Node__ProblemRefAssignment_3_2_2_24223 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Node__ProblemRefAssignment_3_2_2_24223 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_STRING_in_rule__Node__HrefAssignment_3_2_3_14258 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulePhenomenonType_in_rule__Phenomenon__TypeAssignment_04289 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_33_in_rule__Phenomenon__IsControlledAssignment_14325 = new BitSet(new long[]{0x0000000000000002L});

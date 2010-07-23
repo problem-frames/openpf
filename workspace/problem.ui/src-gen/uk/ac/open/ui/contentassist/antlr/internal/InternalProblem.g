@@ -2094,8 +2094,8 @@ rule__Node__ProblemRefAssignment_3_2_2_2
 (
 { before(grammarAccess.getNodeAccess().getProblemRefProblemDiagramCrossReference_3_2_2_2_0()); }
 (
-{ before(grammarAccess.getNodeAccess().getProblemRefProblemDiagramQUALIFIED_NAMETerminalRuleCall_3_2_2_2_0_1()); }
-	RULE_QUALIFIED_NAME{ after(grammarAccess.getNodeAccess().getProblemRefProblemDiagramQUALIFIED_NAMETerminalRuleCall_3_2_2_2_0_1()); }
+{ before(grammarAccess.getNodeAccess().getProblemRefProblemDiagramIDTerminalRuleCall_3_2_2_2_0_1()); }
+	RULE_ID{ after(grammarAccess.getNodeAccess().getProblemRefProblemDiagramIDTerminalRuleCall_3_2_2_2_0_1()); }
 )
 { after(grammarAccess.getNodeAccess().getProblemRefProblemDiagramCrossReference_3_2_2_2_0()); }
 )

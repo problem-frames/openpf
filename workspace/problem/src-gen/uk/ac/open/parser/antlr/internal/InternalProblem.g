@@ -408,7 +408,7 @@ ruleNode returns [EObject current=null]
 	            associateNodeWithAstElement(currentNode, $current);
 	        }
         }
-	RULE_QUALIFIED_NAME
+	RULE_ID
 	{
 		createLeafNode(grammarAccess.getNodeAccess().getProblemRefProblemDiagramCrossReference_3_2_2_2_0(), "problemRef"); 
 	}

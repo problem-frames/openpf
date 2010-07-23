@@ -1,5 +1,5 @@
 problem:
-#The ADS-B problem#
+TheADS_Bproblem
 MSoD R
 :"Maintain the Safety Distance" {
 see "/Examples/event/sit1.ec"
@@ -7,17 +7,17 @@ see "/Examples/event/sit2.ec"
 see "/Examples/event/sit3.ec"
 see "/Examples/event/sit4.ec"
 see "/Examples/istar/open_account.ood" // just a demo
-see problem  CP.#The Central Processor problem#
+see problem TheCentralProcessorProblem
 }
-CP M
-:"Central Processor" { problem:
-#The Central Processor problem# for CPU
+CP M 
+:"Central Processor" { 
+problem: TheCentralProcessorProblem for CPU
 
 CPU M
 :"Central Processing Unit"
 }
 
-#ADS-B# C
+ADS_B C
 :"Ground Receivers"
 
 Display C
@@ -43,10 +43,10 @@ CWP -- CP
 GPS -- Aircrafts
 :"b"
 
-#ADS-B# -- Aircrafts
+ADS_B -- Aircrafts
 :"c"
 
-#ADS-B# -- CP
+ADS_B -- CP
 :"d"
 
 CP -- Display

@@ -89,7 +89,7 @@
                   <type metamodel="/0/@metamodelDeclarations.0">
                     <classifier xsi:type="ecore:EClass" href="http://open.ac.uk/problem#//ProblemDiagram"/>
                   </type>
-                  <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.8"/>
+                  <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
                 </terminal>
               </elements>
             </elements>

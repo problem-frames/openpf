@@ -1,4 +1,4 @@
-problem: #Library example in Michael Jackson's book [Jackson01]#
+problem: Library //example in Michael Jackson's book [Jackson01]
 
 RNR R // requirement
 :"Register New Reader"
@@ -16,16 +16,16 @@ RH M // machine domain
 :"Registration Handler "
 
 LM -- ID // shared phenomena
- {event #New Reader Record #}
+ {event NewReaderRecord }: "a"
 
 ID -- RH // shared phenomena
- {event commands}
+ {event commands} : "b"
 
 RH -- LD // shared phenomena
- {event #Reader Record #}
+ {event ReaderRecord} : "c"
 
 LM ~~ RNR // reference phenomena
- {state #Personal Details #}
+ {state PersonalDetails }: "d"
 
 LD ~> RNR // constraint phenomena
- {state #Membership Details#}
+ {state MembershipDetails}: "e"

@@ -119,7 +119,7 @@ public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cProblemKeyword_3_2_2_1 = (Keyword)cGroup_3_2_2.eContents().get(1);
 		private final Assignment cProblemRefAssignment_3_2_2_2 = (Assignment)cGroup_3_2_2.eContents().get(2);
 		private final CrossReference cProblemRefProblemDiagramCrossReference_3_2_2_2_0 = (CrossReference)cProblemRefAssignment_3_2_2_2.eContents().get(0);
-		private final RuleCall cProblemRefProblemDiagramQUALIFIED_NAMETerminalRuleCall_3_2_2_2_0_1 = (RuleCall)cProblemRefProblemDiagramCrossReference_3_2_2_2_0.eContents().get(1);
+		private final RuleCall cProblemRefProblemDiagramIDTerminalRuleCall_3_2_2_2_0_1 = (RuleCall)cProblemRefProblemDiagramCrossReference_3_2_2_2_0.eContents().get(1);
 		private final Group cGroup_3_2_3 = (Group)cAlternatives_3_2.eContents().get(3);
 		private final Keyword cSeeKeyword_3_2_3_0 = (Keyword)cGroup_3_2_3.eContents().get(0);
 		private final Assignment cHrefAssignment_3_2_3_1 = (Assignment)cGroup_3_2_3.eContents().get(1);
@@ -128,13 +128,13 @@ public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//Node:
 		//	name=ID type=NodeType? (":"? description=STRING)? ("{" (hiddenPhenomena+=Phenomenon (","
-		//	hiddenPhenomena+=Phenomenon)*)? (subproblem+=ProblemDiagram | "see" "domain" problemNodeRef+=[Node] | "see" "problem"
-		//	problemRef+=[ProblemDiagram|QUALIFIED_NAME] | "see" href+=STRING)* "}")?;
+		//	hiddenPhenomena+=Phenomenon)*)? (subproblem+=ProblemDiagram //	| "see" "problem" problemRef+=[ProblemDiagram|QUALIFIED_NAME]
+		//	| "see" "domain" problemNodeRef+=[Node] | "see" "problem" problemRef+=[ProblemDiagram] | "see" href+=STRING)* "}")?;
 		public ParserRule getRule() { return rule; }
 
 		//name=ID type=NodeType? (":"? description=STRING)? ("{" (hiddenPhenomena+=Phenomenon ("," hiddenPhenomena+=Phenomenon)*)?
-		//(subproblem+=ProblemDiagram | "see" "domain" problemNodeRef+=[Node] | "see" "problem"
-		//problemRef+=[ProblemDiagram|QUALIFIED_NAME] | "see" href+=STRING)* "}")?
+		//(subproblem+=ProblemDiagram //	| "see" "problem" problemRef+=[ProblemDiagram|QUALIFIED_NAME]
+		//| "see" "domain" problemNodeRef+=[Node] | "see" "problem" problemRef+=[ProblemDiagram] | "see" href+=STRING)* "}")?
 		public Group getGroup() { return cGroup; }
 
 		//name=ID
@@ -161,8 +161,8 @@ public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getDescriptionSTRINGTerminalRuleCall_2_1_0() { return cDescriptionSTRINGTerminalRuleCall_2_1_0; }
 
-		//("{" (hiddenPhenomena+=Phenomenon ("," hiddenPhenomena+=Phenomenon)*)? (subproblem+=ProblemDiagram | "see" "domain"
-		//problemNodeRef+=[Node] | "see" "problem" problemRef+=[ProblemDiagram|QUALIFIED_NAME] | "see" href+=STRING)* "}")?
+		//("{" (hiddenPhenomena+=Phenomenon ("," hiddenPhenomena+=Phenomenon)*)? (subproblem+=ProblemDiagram //	| "see" "problem" problemRef+=[ProblemDiagram|QUALIFIED_NAME]
+		//| "see" "domain" problemNodeRef+=[Node] | "see" "problem" problemRef+=[ProblemDiagram] | "see" href+=STRING)* "}")?
 		public Group getGroup_3() { return cGroup_3; }
 
 		//"{"
@@ -189,8 +189,8 @@ public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 		//Phenomenon
 		public RuleCall getHiddenPhenomenaPhenomenonParserRuleCall_3_1_1_1_0() { return cHiddenPhenomenaPhenomenonParserRuleCall_3_1_1_1_0; }
 
-		//(subproblem+=ProblemDiagram | "see" "domain" problemNodeRef+=[Node] | "see" "problem"
-		//problemRef+=[ProblemDiagram|QUALIFIED_NAME] | "see" href+=STRING)*
+		//(subproblem+=ProblemDiagram //	| "see" "problem" problemRef+=[ProblemDiagram|QUALIFIED_NAME]
+		//| "see" "domain" problemNodeRef+=[Node] | "see" "problem" problemRef+=[ProblemDiagram] | "see" href+=STRING)*
 		public Alternatives getAlternatives_3_2() { return cAlternatives_3_2; }
 
 		//subproblem+=ProblemDiagram
@@ -217,7 +217,7 @@ public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getProblemNodeRefNodeIDTerminalRuleCall_3_2_1_2_0_1() { return cProblemNodeRefNodeIDTerminalRuleCall_3_2_1_2_0_1; }
 
-		//"see" "problem" problemRef+=[ProblemDiagram|QUALIFIED_NAME]
+		//"see" "problem" problemRef+=[ProblemDiagram]
 		public Group getGroup_3_2_2() { return cGroup_3_2_2; }
 
 		//"see"
@@ -226,14 +226,14 @@ public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 		//"problem"
 		public Keyword getProblemKeyword_3_2_2_1() { return cProblemKeyword_3_2_2_1; }
 
-		//problemRef+=[ProblemDiagram|QUALIFIED_NAME]
+		//problemRef+=[ProblemDiagram]
 		public Assignment getProblemRefAssignment_3_2_2_2() { return cProblemRefAssignment_3_2_2_2; }
 
-		//[ProblemDiagram|QUALIFIED_NAME]
+		//[ProblemDiagram]
 		public CrossReference getProblemRefProblemDiagramCrossReference_3_2_2_2_0() { return cProblemRefProblemDiagramCrossReference_3_2_2_2_0; }
 
-		//QUALIFIED_NAME
-		public RuleCall getProblemRefProblemDiagramQUALIFIED_NAMETerminalRuleCall_3_2_2_2_0_1() { return cProblemRefProblemDiagramQUALIFIED_NAMETerminalRuleCall_3_2_2_2_0_1; }
+		//ID
+		public RuleCall getProblemRefProblemDiagramIDTerminalRuleCall_3_2_2_2_0_1() { return cProblemRefProblemDiagramIDTerminalRuleCall_3_2_2_2_0_1; }
 
 		//"see" href+=STRING
 		public Group getGroup_3_2_3() { return cGroup_3_2_3; }
@@ -585,8 +585,8 @@ public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 
 	//Node:
 	//	name=ID type=NodeType? (":"? description=STRING)? ("{" (hiddenPhenomena+=Phenomenon (","
-	//	hiddenPhenomena+=Phenomenon)*)? (subproblem+=ProblemDiagram | "see" "domain" problemNodeRef+=[Node] | "see" "problem"
-	//	problemRef+=[ProblemDiagram|QUALIFIED_NAME] | "see" href+=STRING)* "}")?;
+	//	hiddenPhenomena+=Phenomenon)*)? (subproblem+=ProblemDiagram //	| "see" "problem" problemRef+=[ProblemDiagram|QUALIFIED_NAME]
+	//	| "see" "domain" problemNodeRef+=[Node] | "see" "problem" problemRef+=[ProblemDiagram] | "see" href+=STRING)* "}")?;
 	public NodeElements getNodeAccess() {
 		return (pNode != null) ? pNode : (pNode = new NodeElements());
 	}
