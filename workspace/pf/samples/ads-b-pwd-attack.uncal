@@ -1,14 +1,16 @@
-&src @ cycle(
+&problem @ cycle(
 (
-  &src := 
+  &problem := 
   {
+      ObjectType: "ProblemDiagramImpl",
       name: "#ADS-B Attack#",
       highlight: "null",
-      nodes:{hd:&NodeImpl1, tl:{hd:&NodeImpl2, tl:{hd:&NodeImpl3, tl:{hd:&NodeImpl4, tl:{hd:&NodeImpl5, tl:{hd:&NodeImpl6, tl:{hd:&NodeImpl7, tl:{hd:&NodeImpl8, tl:{}}}}}}}}},
-      links:{hd:&LinkImpl1, tl:{hd:&LinkImpl2, tl:{hd:&LinkImpl3, tl:{hd:&LinkImpl4, tl:{hd:&LinkImpl5, tl:{hd:&LinkImpl6, tl:{hd:&LinkImpl7, tl:{hd:&LinkImpl8, tl:{hd:&LinkImpl9, tl:{hd:&LinkImpl10, tl:{}}}}}}}}}}}
+      nodes:{hd:&n2, tl:{hd:&n3, tl:{hd:&n4, tl:{hd:&n5, tl:{hd:&n6, tl:{hd:&n7, tl:{hd:&n8, tl:{hd:&n9, tl:{}}}}}}}}},
+      links:{hd:&n10, tl:{hd:&n11, tl:{hd:&n12, tl:{hd:&n13, tl:{hd:&n14, tl:{hd:&n15, tl:{hd:&n16, tl:{hd:&n17, tl:{hd:&n18, tl:{hd:&n19, tl:{}}}}}}}}}}}
   },
-  &NodeImpl1 := 
+  &n2 := 
   {
+      ObjectType: "NodeImpl",
       name: "Collide",
       type: "R",
       description: "anti-requirement",
@@ -18,8 +20,9 @@
       problemRef:{},
       href:{}
   },
-  &NodeImpl2 := 
+  &n3 := 
   {
+      ObjectType: "NodeImpl",
       name: "Aircrafts",
       type: "C",
       description: "null",
@@ -29,8 +32,9 @@
       problemRef:{},
       href:{}
   },
-  &NodeImpl3 := 
+  &n4 := 
   {
+      ObjectType: "NodeImpl",
       name: "Airspace",
       type: "B",
       description: "null",
@@ -40,8 +44,9 @@
       problemRef:{},
       href:{}
   },
-  &NodeImpl4 := 
+  &n5 := 
   {
+      ObjectType: "NodeImpl",
       name: "SSS",
       type: "C",
       description: "Secondary Surveillance System",
@@ -51,8 +56,9 @@
       problemRef:{},
       href:{}
   },
-  &NodeImpl5 := 
+  &n6 := 
   {
+      ObjectType: "NodeImpl",
       name: "PSS",
       type: "C",
       description: "Primary Surveillance System",
@@ -62,8 +68,9 @@
       problemRef:{},
       href:{}
   },
-  &NodeImpl6 := 
+  &n7 := 
   {
+      ObjectType: "NodeImpl",
       name: "CP",
       type: "M",
       description: "Central Processor",
@@ -73,8 +80,9 @@
       problemRef:{},
       href:{}
   },
-  &NodeImpl7 := 
+  &n8 := 
   {
+      ObjectType: "NodeImpl",
       name: "Display",
       type: "C",
       description: "ATC Display",
@@ -84,8 +92,9 @@
       problemRef:{},
       href:{}
   },
-  &NodeImpl8 := 
+  &n9 := 
   {
+      ObjectType: "NodeImpl",
       name: "Operator",
       type: "B",
       description: "ATC Operator",
@@ -95,83 +104,93 @@
       problemRef:{},
       href:{}
   },
-  &LinkImpl1 := 
+  &n10 := 
   {
-      from: &NodeImpl8,
+      ObjectType: "LinkImpl",
+      from: &n9,
       type: "--",
-      to: &NodeImpl6,
+      to: &n7,
       phenomena:{},
       description: "h1"
   },
-  &LinkImpl2 := 
+  &n11 := 
   {
-      from: &NodeImpl6,
+      ObjectType: "LinkImpl",
+      from: &n7,
       type: "--",
-      to: &NodeImpl7,
+      to: &n8,
       phenomena:{},
       description: "h2"
   },
-  &LinkImpl3 := 
+  &n12 := 
   {
-      from: &NodeImpl5,
+      ObjectType: "LinkImpl",
+      from: &n6,
       type: "--",
-      to: &NodeImpl6,
+      to: &n7,
       phenomena:{},
       description: "d"
   },
-  &LinkImpl4 := 
+  &n13 := 
   {
-      from: &NodeImpl4,
+      ObjectType: "LinkImpl",
+      from: &n5,
       type: "--",
-      to: &NodeImpl6,
+      to: &n7,
       phenomena:{},
       description: "f"
   },
-  &LinkImpl5 := 
+  &n14 := 
   {
-      from: &NodeImpl6,
+      ObjectType: "LinkImpl",
+      from: &n7,
       type: "--",
-      to: &NodeImpl2,
+      to: &n3,
       phenomena:{},
       description: "g"
   },
-  &LinkImpl6 := 
+  &n15 := 
   {
-      from: &NodeImpl3,
+      ObjectType: "LinkImpl",
+      from: &n4,
       type: "--",
-      to: &NodeImpl5,
+      to: &n6,
       phenomena:{},
       description: "c1"
   },
-  &LinkImpl7 := 
+  &n16 := 
   {
-      from: &NodeImpl5,
+      ObjectType: "LinkImpl",
+      from: &n6,
       type: "--",
-      to: &NodeImpl3,
+      to: &n4,
       phenomena:{},
       description: "c2"
   },
-  &LinkImpl8 := 
+  &n17 := 
   {
-      from: &NodeImpl3,
+      ObjectType: "LinkImpl",
+      from: &n4,
       type: "--",
-      to: &NodeImpl4,
+      to: &n5,
       phenomena:{},
       description: "e1"
   },
-  &LinkImpl9 := 
+  &n18 := 
   {
-      from: &NodeImpl2,
+      ObjectType: "LinkImpl",
+      from: &n3,
       type: "--",
-      to: &NodeImpl3,
+      to: &n4,
       phenomena:{},
       description: "b"
   },
-  &LinkImpl10 := 
+  &n19 := 
   {
-      from: &NodeImpl1,
+      ObjectType: "LinkImpl",
+      from: &n2,
       type: "~>",
-      to: &NodeImpl2,
+      to: &n3,
       phenomena:{},
       description: "a"
   }

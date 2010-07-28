@@ -90,8 +90,8 @@ public class EventCalculusParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRuleAccess().getExprAssignment_1(), "rule__Rule__ExprAssignment_1");
 					put(grammarAccess.getVarDeclAccess().getVarsAssignment_1(), "rule__VarDecl__VarsAssignment_1");
 					put(grammarAccess.getVarDeclAccess().getVarsAssignment_2_1(), "rule__VarDecl__VarsAssignment_2_1");
-					put(grammarAccess.getIntTermAccess().getConstAssignment_0(), "rule__IntTerm__ConstAssignment_0");
-					put(grammarAccess.getIntTermAccess().getVarAssignment_1(), "rule__IntTerm__VarAssignment_1");
+					put(grammarAccess.getConstTermAccess().getValueAssignment(), "rule__ConstTerm__ValueAssignment");
+					put(grammarAccess.getVarTermAccess().getValueAssignment(), "rule__VarTerm__ValueAssignment");
 					put(grammarAccess.getBinaryIntExprAccess().getOprAssignment_0(), "rule__BinaryIntExpr__OprAssignment_0");
 					put(grammarAccess.getBinaryIntExprAccess().getBinaryopAssignment_1(), "rule__BinaryIntExpr__BinaryopAssignment_1");
 					put(grammarAccess.getBinaryIntExprAccess().getOprAssignment_2(), "rule__BinaryIntExpr__OprAssignment_2");

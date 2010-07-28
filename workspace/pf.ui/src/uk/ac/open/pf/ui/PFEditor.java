@@ -61,8 +61,8 @@ public class PFEditor extends UncalEditor {
 			save_diagram(filename, modelURI);
 			save_emf(modelURI, resource);
 		} else {
-			modelURI = URI.createURI(newfile + "." + "ec.xmi");
-			save_emf(modelURI, resource);
+//			modelURI = URI.createURI(newfile + "." + "eventcalculus");
+//			save_emf(modelURI, resource);
 			modelURI = URI.createURI(newfile + "." + "new.ec");
 			save_xtext(modelURI, resource);
 		}
@@ -71,12 +71,13 @@ public class PFEditor extends UncalEditor {
 	private static void save_emf(URI modelURI, Resource resource) {
 		Resource xmiResource = new XMIResourceFactoryImpl()
 				.createResource(modelURI);
-		for (int i = 0; i < resource.getContents().size(); i++)
+		for (int i = 0; i < resource.getContents().size(); i++) {
 			xmiResource.getContents().add(resource.getContents().get(i));
+		}
 		try {
 			xmiResource.save(null);
-		} catch (IOException e) {
-			e.printStackTrace();
+		} catch (Exception e) {
+//			e.printStackTrace();
 		}
 	}
 

@@ -347,22 +347,64 @@ ruleIntTerm returns [EObject current=null]
     @after { resetLookahead(); 
     	lastConsumedNode = currentNode;
     }:
-((
 (
-		lv_const_0_0=RULE_INT
+    { 
+        currentNode=createCompositeNode(grammarAccess.getIntTermAccess().getConstTermParserRuleCall_0(), currentNode); 
+    }
+    this_ConstTerm_0=ruleConstTerm
+    { 
+        $current = $this_ConstTerm_0.current; 
+        currentNode = currentNode.getParent();
+    }
+
+    |
+    { 
+        currentNode=createCompositeNode(grammarAccess.getIntTermAccess().getVarTermParserRuleCall_1(), currentNode); 
+    }
+    this_VarTerm_1=ruleVarTerm
+    { 
+        $current = $this_VarTerm_1.current; 
+        currentNode = currentNode.getParent();
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleConstTerm
+entryRuleConstTerm returns [EObject current=null] 
+	:
+	{ currentNode = createCompositeNode(grammarAccess.getConstTermRule(), currentNode); }
+	 iv_ruleConstTerm=ruleConstTerm 
+	 { $current=$iv_ruleConstTerm.current; } 
+	 EOF 
+;
+
+// Rule ConstTerm
+ruleConstTerm returns [EObject current=null] 
+    @init { EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+    }
+    @after { resetLookahead(); 
+    	lastConsumedNode = currentNode;
+    }:
+(
+(
+		lv_value_0_0=RULE_INT
 		{
-			createLeafNode(grammarAccess.getIntTermAccess().getConstINTTerminalRuleCall_0_0(), "const"); 
+			createLeafNode(grammarAccess.getConstTermAccess().getValueINTTerminalRuleCall_0(), "value"); 
 		}
 		{
 	        if ($current==null) {
-	            $current = factory.create(grammarAccess.getIntTermRule().getType().getClassifier());
+	            $current = factory.create(grammarAccess.getConstTermRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode, $current);
 	        }
 	        try {
 	       		set(
 	       			$current, 
-	       			"const",
-	        		lv_const_0_0, 
+	       			"value",
+	        		lv_value_0_0, 
 	        		"INT", 
 	        		lastConsumedNode);
 	        } catch (ValueConverterException vce) {
@@ -372,21 +414,43 @@ ruleIntTerm returns [EObject current=null]
 
 )
 )
-    |(
+;
+
+
+
+
+
+// Entry rule entryRuleVarTerm
+entryRuleVarTerm returns [EObject current=null] 
+	:
+	{ currentNode = createCompositeNode(grammarAccess.getVarTermRule(), currentNode); }
+	 iv_ruleVarTerm=ruleVarTerm 
+	 { $current=$iv_ruleVarTerm.current; } 
+	 EOF 
+;
+
+// Rule VarTerm
+ruleVarTerm returns [EObject current=null] 
+    @init { EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+    }
+    @after { resetLookahead(); 
+    	lastConsumedNode = currentNode;
+    }:
+(
 (
 		{
 			if ($current==null) {
-	            $current = factory.create(grammarAccess.getIntTermRule().getType().getClassifier());
+	            $current = factory.create(grammarAccess.getVarTermRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode, $current);
 	        }
         }
 	RULE_ID
 	{
-		createLeafNode(grammarAccess.getIntTermAccess().getVarVarCrossReference_1_0(), "var"); 
+		createLeafNode(grammarAccess.getVarTermAccess().getValueVarCrossReference_0(), "value"); 
 	}
 
 )
-))
+)
 ;
 
 

@@ -99,6 +99,7 @@ public class PFSwitch<T>
       {
         RootDiagram rootDiagram = (RootDiagram)theEObject;
         T result = caseRootDiagram(rootDiagram);
+        if (result == null) result = caseNode(rootDiagram);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }

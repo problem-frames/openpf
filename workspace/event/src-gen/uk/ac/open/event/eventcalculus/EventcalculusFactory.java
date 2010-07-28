@@ -62,6 +62,24 @@ public interface EventcalculusFactory extends EFactory
   IntTerm createIntTerm();
 
   /**
+   * Returns a new object of class '<em>Const Term</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Const Term</em>'.
+   * @generated
+   */
+  ConstTerm createConstTerm();
+
+  /**
+   * Returns a new object of class '<em>Var Term</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Var Term</em>'.
+   * @generated
+   */
+  VarTerm createVarTerm();
+
+  /**
    * Returns a new object of class '<em>Int Expr</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

@@ -10,7 +10,9 @@ Knowledge:
 Rule: (decl=VarDecl)? expr=BoolExpr; 
 VarDecl: "[" vars+=[Var] ("," vars+=[Var])* "]";
 
-IntTerm: const=INT | var=[Var];    
+IntTerm: ConstTerm | VarTerm;
+ConstTerm: value=INT;
+VarTerm: value=[Var];
 //IntExpr: IntTerm;
 IntExpr: IntTerm | BinaryIntExpr;
 //IntExpr: IntTerm | UnaryIntExpr | BinaryIntExpr;

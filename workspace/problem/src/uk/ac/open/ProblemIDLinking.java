@@ -52,7 +52,7 @@ public class ProblemIDLinking extends DefaultLinkingService {
 				if (n.equals(s)) {
 					eObjectDescription = c;
 				}
-				System.out.println(n);
+//				System.out.println(n);
 			}
 			if (eObjectDescription != null) {
 				EObject obj = eObjectDescription.getEObjectOrProxy();

@@ -27,20 +27,32 @@ public class PFGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCycleKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Keyword cLeftParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Keyword cLeftParenthesisKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cObjectsAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cObjectsNodeParserRuleCall_6_0 = (RuleCall)cObjectsAssignment_6.eContents().get(0);
-		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
-		private final Keyword cCommaKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
-		private final Assignment cObjectsAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
-		private final RuleCall cObjectsNodeParserRuleCall_7_1_0 = (RuleCall)cObjectsAssignment_7_1.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_8 = (Keyword)cGroup.eContents().get(8);
-		private final Keyword cRightParenthesisKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final RuleCall cValueTerminalRuleCall_6 = (RuleCall)cGroup.eContents().get(6);
+		private final Keyword cColonEqualsSignKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Keyword cLeftCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Keyword cObjectTypeKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Keyword cColonKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Assignment cTypeAssignment_11 = (Assignment)cGroup.eContents().get(11);
+		private final RuleCall cTypeSTRINGTerminalRuleCall_11_0 = (RuleCall)cTypeAssignment_11.eContents().get(0);
+		private final Group cGroup_12 = (Group)cGroup.eContents().get(12);
+		private final Keyword cCommaKeyword_12_0 = (Keyword)cGroup_12.eContents().get(0);
+		private final Assignment cCompositeAssignment_12_1 = (Assignment)cGroup_12.eContents().get(1);
+		private final RuleCall cCompositeCompositeObjectParserRuleCall_12_1_0 = (RuleCall)cCompositeAssignment_12_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_13 = (Keyword)cGroup.eContents().get(13);
+		private final Group cGroup_14 = (Group)cGroup.eContents().get(14);
+		private final Keyword cCommaKeyword_14_0 = (Keyword)cGroup_14.eContents().get(0);
+		private final Assignment cObjectsAssignment_14_1 = (Assignment)cGroup_14.eContents().get(1);
+		private final RuleCall cObjectsNodeParserRuleCall_14_1_0 = (RuleCall)cObjectsAssignment_14_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_15 = (Keyword)cGroup.eContents().get(15);
+		private final Keyword cRightParenthesisKeyword_16 = (Keyword)cGroup.eContents().get(16);
 		
 		//RootDiagram:
-		//	{RootDiagram} name=Value "@" "cycle" "(" "(" objects+=Node ("," objects+=Node)* ")" ")";
+		//	{RootDiagram} name=Value "@" "cycle" "(" "(" Value ":=" "{" "ObjectType" ":" type=STRING (","
+		//	composite=CompositeObject)? "}" ("," objects+=Node)* ")" ")";
 		public ParserRule getRule() { return rule; }
 
-		//{RootDiagram} name=Value "@" "cycle" "(" "(" objects+=Node ("," objects+=Node)* ")" ")"
+		//{RootDiagram} name=Value "@" "cycle" "(" "(" Value ":=" "{" "ObjectType" ":" type=STRING (","
+		//composite=CompositeObject)? "}" ("," objects+=Node)* ")" ")"
 		public Group getGroup() { return cGroup; }
 
 		//{RootDiagram}
@@ -64,109 +76,171 @@ public class PFGrammarAccess extends AbstractGrammarElementFinder {
 		//"("
 		public Keyword getLeftParenthesisKeyword_5() { return cLeftParenthesisKeyword_5; }
 
-		//objects+=Node
-		public Assignment getObjectsAssignment_6() { return cObjectsAssignment_6; }
+		//Value
+		public RuleCall getValueTerminalRuleCall_6() { return cValueTerminalRuleCall_6; }
 
-		//Node
-		public RuleCall getObjectsNodeParserRuleCall_6_0() { return cObjectsNodeParserRuleCall_6_0; }
+		//":="
+		public Keyword getColonEqualsSignKeyword_7() { return cColonEqualsSignKeyword_7; }
 
-		//("," objects+=Node)*
-		public Group getGroup_7() { return cGroup_7; }
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_8() { return cLeftCurlyBracketKeyword_8; }
+
+		//"ObjectType"
+		public Keyword getObjectTypeKeyword_9() { return cObjectTypeKeyword_9; }
+
+		//":"
+		public Keyword getColonKeyword_10() { return cColonKeyword_10; }
+
+		//type=STRING
+		public Assignment getTypeAssignment_11() { return cTypeAssignment_11; }
+
+		//STRING
+		public RuleCall getTypeSTRINGTerminalRuleCall_11_0() { return cTypeSTRINGTerminalRuleCall_11_0; }
+
+		//("," composite=CompositeObject)?
+		public Group getGroup_12() { return cGroup_12; }
 
 		//","
-		public Keyword getCommaKeyword_7_0() { return cCommaKeyword_7_0; }
+		public Keyword getCommaKeyword_12_0() { return cCommaKeyword_12_0; }
+
+		//composite=CompositeObject
+		public Assignment getCompositeAssignment_12_1() { return cCompositeAssignment_12_1; }
+
+		//CompositeObject
+		public RuleCall getCompositeCompositeObjectParserRuleCall_12_1_0() { return cCompositeCompositeObjectParserRuleCall_12_1_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_13() { return cRightCurlyBracketKeyword_13; }
+
+		//("," objects+=Node)*
+		public Group getGroup_14() { return cGroup_14; }
+
+		//","
+		public Keyword getCommaKeyword_14_0() { return cCommaKeyword_14_0; }
 
 		//objects+=Node
-		public Assignment getObjectsAssignment_7_1() { return cObjectsAssignment_7_1; }
+		public Assignment getObjectsAssignment_14_1() { return cObjectsAssignment_14_1; }
 
 		//Node
-		public RuleCall getObjectsNodeParserRuleCall_7_1_0() { return cObjectsNodeParserRuleCall_7_1_0; }
+		public RuleCall getObjectsNodeParserRuleCall_14_1_0() { return cObjectsNodeParserRuleCall_14_1_0; }
 
 		//")"
-		public Keyword getRightParenthesisKeyword_8() { return cRightParenthesisKeyword_8; }
+		public Keyword getRightParenthesisKeyword_15() { return cRightParenthesisKeyword_15; }
 
 		//")"
-		public Keyword getRightParenthesisKeyword_9() { return cRightParenthesisKeyword_9; }
+		public Keyword getRightParenthesisKeyword_16() { return cRightParenthesisKeyword_16; }
 	}
 
 	public class NodeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Node");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameValueTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
-		private final Keyword cColonEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cCompositeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cCompositeCompositeObjectParserRuleCall_2_0 = (RuleCall)cCompositeAssignment_2.eContents().get(0);
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
+		private final Assignment cNameAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
+		private final RuleCall cNameValueTerminalRuleCall_0_0_0 = (RuleCall)cNameAssignment_0_0.eContents().get(0);
+		private final Keyword cColonEqualsSignKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_0_2 = (Keyword)cGroup_0.eContents().get(2);
+		private final Keyword cObjectTypeKeyword_0_3 = (Keyword)cGroup_0.eContents().get(3);
+		private final Keyword cColonKeyword_0_4 = (Keyword)cGroup_0.eContents().get(4);
+		private final Assignment cTypeAssignment_0_5 = (Assignment)cGroup_0.eContents().get(5);
+		private final RuleCall cTypeSTRINGTerminalRuleCall_0_5_0 = (RuleCall)cTypeAssignment_0_5.eContents().get(0);
+		private final Group cGroup_0_6 = (Group)cGroup_0.eContents().get(6);
+		private final Keyword cCommaKeyword_0_6_0 = (Keyword)cGroup_0_6.eContents().get(0);
+		private final Assignment cCompositeAssignment_0_6_1 = (Assignment)cGroup_0_6.eContents().get(1);
+		private final RuleCall cCompositeCompositeObjectParserRuleCall_0_6_1_0 = (RuleCall)cCompositeAssignment_0_6_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_0_7 = (Keyword)cGroup_0.eContents().get(7);
+		private final RuleCall cRootDiagramParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//Node:
-		//	name=Value ":=" composite=CompositeObject;
+		//	name=Value ":=" "{" "ObjectType" ":" type=STRING ("," composite=CompositeObject)? "}" | RootDiagram;
 		public ParserRule getRule() { return rule; }
 
-		//name=Value ":=" composite=CompositeObject
-		public Group getGroup() { return cGroup; }
+		//name=Value ":=" "{" "ObjectType" ":" type=STRING ("," composite=CompositeObject)? "}" | RootDiagram
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//name=Value ":=" "{" "ObjectType" ":" type=STRING ("," composite=CompositeObject)? "}"
+		public Group getGroup_0() { return cGroup_0; }
 
 		//name=Value
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+		public Assignment getNameAssignment_0_0() { return cNameAssignment_0_0; }
 
 		//Value
-		public RuleCall getNameValueTerminalRuleCall_0_0() { return cNameValueTerminalRuleCall_0_0; }
+		public RuleCall getNameValueTerminalRuleCall_0_0_0() { return cNameValueTerminalRuleCall_0_0_0; }
 
 		//":="
-		public Keyword getColonEqualsSignKeyword_1() { return cColonEqualsSignKeyword_1; }
+		public Keyword getColonEqualsSignKeyword_0_1() { return cColonEqualsSignKeyword_0_1; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_0_2() { return cLeftCurlyBracketKeyword_0_2; }
+
+		//"ObjectType"
+		public Keyword getObjectTypeKeyword_0_3() { return cObjectTypeKeyword_0_3; }
+
+		//":"
+		public Keyword getColonKeyword_0_4() { return cColonKeyword_0_4; }
+
+		//type=STRING
+		public Assignment getTypeAssignment_0_5() { return cTypeAssignment_0_5; }
+
+		//STRING
+		public RuleCall getTypeSTRINGTerminalRuleCall_0_5_0() { return cTypeSTRINGTerminalRuleCall_0_5_0; }
+
+		//("," composite=CompositeObject)?
+		public Group getGroup_0_6() { return cGroup_0_6; }
+
+		//","
+		public Keyword getCommaKeyword_0_6_0() { return cCommaKeyword_0_6_0; }
 
 		//composite=CompositeObject
-		public Assignment getCompositeAssignment_2() { return cCompositeAssignment_2; }
+		public Assignment getCompositeAssignment_0_6_1() { return cCompositeAssignment_0_6_1; }
 
 		//CompositeObject
-		public RuleCall getCompositeCompositeObjectParserRuleCall_2_0() { return cCompositeCompositeObjectParserRuleCall_2_0; }
+		public RuleCall getCompositeCompositeObjectParserRuleCall_0_6_1_0() { return cCompositeCompositeObjectParserRuleCall_0_6_1_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_0_7() { return cRightCurlyBracketKeyword_0_7; }
+
+		//RootDiagram
+		public RuleCall getRootDiagramParserRuleCall_1() { return cRootDiagramParserRuleCall_1; }
 	}
 
 	public class CompositeObjectElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CompositeObject");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cCompositeObjectAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cFieldsAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cFieldsFieldParserRuleCall_2_0 = (RuleCall)cFieldsAssignment_2.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cCommaKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cFieldsAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cFieldsFieldParserRuleCall_3_1_0 = (RuleCall)cFieldsAssignment_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cFieldsAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cFieldsFieldParserRuleCall_1_0 = (RuleCall)cFieldsAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cFieldsAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cFieldsFieldParserRuleCall_2_1_0 = (RuleCall)cFieldsAssignment_2_1.eContents().get(0);
 		
 		//CompositeObject:
-		//	{CompositeObject} "{" fields+=Field? ("," fields+=Field)* "}";
+		//	{CompositeObject} fields+=Field? ("," fields+=Field)*;
 		public ParserRule getRule() { return rule; }
 
-		//{CompositeObject} "{" fields+=Field? ("," fields+=Field)* "}"
+		//{CompositeObject} fields+=Field? ("," fields+=Field)*
 		public Group getGroup() { return cGroup; }
 
 		//{CompositeObject}
 		public Action getCompositeObjectAction_0() { return cCompositeObjectAction_0; }
 
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
-
 		//fields+=Field?
-		public Assignment getFieldsAssignment_2() { return cFieldsAssignment_2; }
+		public Assignment getFieldsAssignment_1() { return cFieldsAssignment_1; }
 
 		//Field
-		public RuleCall getFieldsFieldParserRuleCall_2_0() { return cFieldsFieldParserRuleCall_2_0; }
+		public RuleCall getFieldsFieldParserRuleCall_1_0() { return cFieldsFieldParserRuleCall_1_0; }
 
 		//("," fields+=Field)*
-		public Group getGroup_3() { return cGroup_3; }
+		public Group getGroup_2() { return cGroup_2; }
 
 		//","
-		public Keyword getCommaKeyword_3_0() { return cCommaKeyword_3_0; }
+		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
 
 		//fields+=Field
-		public Assignment getFieldsAssignment_3_1() { return cFieldsAssignment_3_1; }
+		public Assignment getFieldsAssignment_2_1() { return cFieldsAssignment_2_1; }
 
 		//Field
-		public RuleCall getFieldsFieldParserRuleCall_3_1_0() { return cFieldsFieldParserRuleCall_3_1_0; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		public RuleCall getFieldsFieldParserRuleCall_2_1_0() { return cFieldsFieldParserRuleCall_2_1_0; }
 	}
 
 	public class FieldElements extends AbstractParserRuleElementFinder {
@@ -239,14 +313,16 @@ public class PFGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
 		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cValueCompositeObjectParserRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cValueAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cValueCompositeObjectParserRuleCall_3_0 = (RuleCall)cValueAssignment_3.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//CompositeField:
-		//	name=ID ":" value=CompositeObject;
+		//	name=ID ":" "{" value=CompositeObject "}";
 		public ParserRule getRule() { return rule; }
 
-		//name=ID ":" value=CompositeObject
+		//name=ID ":" "{" value=CompositeObject "}"
 		public Group getGroup() { return cGroup; }
 
 		//name=ID
@@ -258,11 +334,17 @@ public class PFGrammarAccess extends AbstractGrammarElementFinder {
 		//":"
 		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
 
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+
 		//value=CompositeObject
-		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
+		public Assignment getValueAssignment_3() { return cValueAssignment_3; }
 
 		//CompositeObject
-		public RuleCall getValueCompositeObjectParserRuleCall_2_0() { return cValueCompositeObjectParserRuleCall_2_0; }
+		public RuleCall getValueCompositeObjectParserRuleCall_3_0() { return cValueCompositeObjectParserRuleCall_3_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 	
 	
@@ -296,7 +378,8 @@ public class PFGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//RootDiagram:
-	//	{RootDiagram} name=Value "@" "cycle" "(" "(" objects+=Node ("," objects+=Node)* ")" ")";
+	//	{RootDiagram} name=Value "@" "cycle" "(" "(" Value ":=" "{" "ObjectType" ":" type=STRING (","
+	//	composite=CompositeObject)? "}" ("," objects+=Node)* ")" ")";
 	public RootDiagramElements getRootDiagramAccess() {
 		return (pRootDiagram != null) ? pRootDiagram : (pRootDiagram = new RootDiagramElements());
 	}
@@ -306,7 +389,7 @@ public class PFGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Node:
-	//	name=Value ":=" composite=CompositeObject;
+	//	name=Value ":=" "{" "ObjectType" ":" type=STRING ("," composite=CompositeObject)? "}" | RootDiagram;
 	public NodeElements getNodeAccess() {
 		return (pNode != null) ? pNode : (pNode = new NodeElements());
 	}
@@ -316,7 +399,7 @@ public class PFGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//CompositeObject:
-	//	{CompositeObject} "{" fields+=Field? ("," fields+=Field)* "}";
+	//	{CompositeObject} fields+=Field? ("," fields+=Field)*;
 	public CompositeObjectElements getCompositeObjectAccess() {
 		return (pCompositeObject != null) ? pCompositeObject : (pCompositeObject = new CompositeObjectElements());
 	}
@@ -346,7 +429,7 @@ public class PFGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//CompositeField:
-	//	name=ID ":" value=CompositeObject;
+	//	name=ID ":" "{" value=CompositeObject "}";
 	public CompositeFieldElements getCompositeFieldAccess() {
 		return (pCompositeField != null) ? pCompositeField : (pCompositeField = new CompositeFieldElements());
 	}

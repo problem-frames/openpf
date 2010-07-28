@@ -23,9 +23,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="vars" unique="false" upperBound="-1"
         eType="#//Var"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IntTerm" eSuperTypes="#//IntExpr">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="const" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="var" eType="#//Var"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IntTerm" eSuperTypes="#//IntExpr"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConstTerm" eSuperTypes="#//IntTerm">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VarTerm" eSuperTypes="#//IntTerm">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//Var"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IntExpr"/>
   <eClassifiers xsi:type="ecore:EClass" name="BinaryIntExpr" eSuperTypes="#//IntExpr">

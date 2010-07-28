@@ -72,6 +72,8 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
       case EventcalculusPackage.RULE: return createRule();
       case EventcalculusPackage.VAR_DECL: return createVarDecl();
       case EventcalculusPackage.INT_TERM: return createIntTerm();
+      case EventcalculusPackage.CONST_TERM: return createConstTerm();
+      case EventcalculusPackage.VAR_TERM: return createVarTerm();
       case EventcalculusPackage.INT_EXPR: return createIntExpr();
       case EventcalculusPackage.BINARY_INT_EXPR: return createBinaryIntExpr();
       case EventcalculusPackage.TEMPORAL_PREDICATE: return createTemporalPredicate();
@@ -180,6 +182,28 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
   {
     IntTermImpl intTerm = new IntTermImpl();
     return intTerm;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ConstTerm createConstTerm()
+  {
+    ConstTermImpl constTerm = new ConstTermImpl();
+    return constTerm;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public VarTerm createVarTerm()
+  {
+    VarTermImpl varTerm = new VarTermImpl();
+    return varTerm;
   }
 
   /**

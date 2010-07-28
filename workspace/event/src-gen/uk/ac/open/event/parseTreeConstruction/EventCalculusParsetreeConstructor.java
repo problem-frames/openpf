@@ -35,25 +35,27 @@ protected class ThisRootNode extends RootToken {
 			case 1: return new Rule_Group(this, this, 1, inst);
 			case 2: return new VarDecl_Group(this, this, 2, inst);
 			case 3: return new IntTerm_Alternatives(this, this, 3, inst);
-			case 4: return new IntExpr_Alternatives(this, this, 4, inst);
-			case 5: return new BinaryIntExpr_Group(this, this, 5, inst);
-			case 6: return new TemporalPredicate_Alternatives(this, this, 6, inst);
-			case 7: return new BoolExpr_Alternatives(this, this, 7, inst);
-			case 8: return new UnaryBoolExpr_Alternatives(this, this, 8, inst);
-			case 9: return new BinaryBoolExpr_Group(this, this, 9, inst);
-			case 10: return new Entity_Alternatives(this, this, 10, inst);
-			case 11: return new Sort_Group(this, this, 11, inst);
-			case 12: return new Import_Group(this, this, 12, inst);
-			case 13: return new Var_Group(this, this, 13, inst);
-			case 14: return new Fluent_Group(this, this, 14, inst);
-			case 15: return new Event_Group(this, this, 15, inst);
-			case 16: return new Term_Group(this, this, 16, inst);
-			case 17: return new HoldsAt_Group(this, this, 17, inst);
-			case 18: return new Happens_Group(this, this, 18, inst);
-			case 19: return new Initiates_Group(this, this, 19, inst);
-			case 20: return new Terminates_Group(this, this, 20, inst);
-			case 21: return new Path_Group(this, this, 21, inst);
-			case 22: return new File_Group(this, this, 22, inst);
+			case 4: return new ConstTerm_ValueAssignment(this, this, 4, inst);
+			case 5: return new VarTerm_ValueAssignment(this, this, 5, inst);
+			case 6: return new IntExpr_Alternatives(this, this, 6, inst);
+			case 7: return new BinaryIntExpr_Group(this, this, 7, inst);
+			case 8: return new TemporalPredicate_Alternatives(this, this, 8, inst);
+			case 9: return new BoolExpr_Alternatives(this, this, 9, inst);
+			case 10: return new UnaryBoolExpr_Alternatives(this, this, 10, inst);
+			case 11: return new BinaryBoolExpr_Group(this, this, 11, inst);
+			case 12: return new Entity_Alternatives(this, this, 12, inst);
+			case 13: return new Sort_Group(this, this, 13, inst);
+			case 14: return new Import_Group(this, this, 14, inst);
+			case 15: return new Var_Group(this, this, 15, inst);
+			case 16: return new Fluent_Group(this, this, 16, inst);
+			case 17: return new Event_Group(this, this, 17, inst);
+			case 18: return new Term_Group(this, this, 18, inst);
+			case 19: return new HoldsAt_Group(this, this, 19, inst);
+			case 20: return new Happens_Group(this, this, 20, inst);
+			case 21: return new Initiates_Group(this, this, 21, inst);
+			case 22: return new Terminates_Group(this, this, 22, inst);
+			case 23: return new Path_Group(this, this, 23, inst);
+			case 24: return new File_Group(this, this, 24, inst);
 			default: return null;
 		}	
 	}	
@@ -676,11 +678,11 @@ protected class VarDecl_RightSquareBracketKeyword_3 extends KeywordToken  {
 /************ begin Rule IntTerm ****************
  *
  * IntTerm:
- * 	const=INT | var=[Var];
+ * 	ConstTerm | VarTerm;
  *
  **/
 
-// const=INT | var=[Var]
+// ConstTerm | VarTerm
 protected class IntTerm_Alternatives extends AlternativesToken {
 
 	public IntTerm_Alternatives(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -695,31 +697,115 @@ protected class IntTerm_Alternatives extends AlternativesToken {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new IntTerm_ConstAssignment_0(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new IntTerm_VarAssignment_1(lastRuleCallOrigin, this, 1, inst);
+			case 0: return new IntTerm_ConstTermParserRuleCall_0(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new IntTerm_VarTermParserRuleCall_1(lastRuleCallOrigin, this, 1, inst);
 			default: return null;
 		}	
 	}
 
     @Override
 	public IEObjectConsumer tryConsume() {
-		if(getEObject().eClass() != grammarAccess.getIntTermRule().getType().getClassifier())
+		if(getEObject().eClass() != grammarAccess.getConstTermRule().getType().getClassifier() && 
+		   getEObject().eClass() != grammarAccess.getVarTermRule().getType().getClassifier())
 			return null;
 		return eObjectConsumer;
 	}
 
 }
 
-// const=INT
-protected class IntTerm_ConstAssignment_0 extends AssignmentToken  {
+// ConstTerm
+protected class IntTerm_ConstTermParserRuleCall_0 extends RuleCallToken {
 	
-	public IntTerm_ConstAssignment_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public IntTerm_ConstTermParserRuleCall_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public RuleCall getGrammarElement() {
+		return grammarAccess.getIntTermAccess().getConstTermParserRuleCall_0();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new ConstTerm_ValueAssignment(this, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+    @Override
+	public IEObjectConsumer tryConsume() {
+		if(getEObject().eClass() != grammarAccess.getConstTermRule().getType().getClassifier())
+			return null;
+		if(checkForRecursion(ConstTerm_ValueAssignment.class, eObjectConsumer)) return null;
+		return eObjectConsumer;
+	}
+	
+    @Override
+	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
+		switch(index) {
+			default: return lastRuleCallOrigin.createFollowerAfterReturn(next, actIndex , index, inst);
+		}	
+	}	
+}
+
+// VarTerm
+protected class IntTerm_VarTermParserRuleCall_1 extends RuleCallToken {
+	
+	public IntTerm_VarTermParserRuleCall_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public RuleCall getGrammarElement() {
+		return grammarAccess.getIntTermAccess().getVarTermParserRuleCall_1();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new VarTerm_ValueAssignment(this, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+    @Override
+	public IEObjectConsumer tryConsume() {
+		if(getEObject().eClass() != grammarAccess.getVarTermRule().getType().getClassifier())
+			return null;
+		if(checkForRecursion(VarTerm_ValueAssignment.class, eObjectConsumer)) return null;
+		return eObjectConsumer;
+	}
+	
+    @Override
+	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
+		switch(index) {
+			default: return lastRuleCallOrigin.createFollowerAfterReturn(next, actIndex , index, inst);
+		}	
+	}	
+}
+
+
+/************ end Rule IntTerm ****************/
+
+
+/************ begin Rule ConstTerm ****************
+ *
+ * ConstTerm:
+ * 	value=INT;
+ *
+ **/
+
+// value=INT
+protected class ConstTerm_ValueAssignment extends AssignmentToken  {
+	
+	public ConstTerm_ValueAssignment(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getIntTermAccess().getConstAssignment_0();
+		return grammarAccess.getConstTermAccess().getValueAssignment();
 	}
 
     @Override
@@ -731,11 +817,13 @@ protected class IntTerm_ConstAssignment_0 extends AssignmentToken  {
 
     @Override	
 	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("const",true)) == null) return null;
-		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("const");
-		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getIntTermAccess().getConstINTTerminalRuleCall_0_0(), value, null)) {
+		if(getEObject().eClass() != grammarAccess.getConstTermRule().getType().getClassifier())
+			return null;
+		if((value = eObjectConsumer.getConsumable("value",true)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("value");
+		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getConstTermAccess().getValueINTTerminalRuleCall_0(), value, null)) {
 			type = AssignmentType.TERMINAL_RULE_CALL;
-			element = grammarAccess.getIntTermAccess().getConstINTTerminalRuleCall_0_0();
+			element = grammarAccess.getConstTermAccess().getValueINTTerminalRuleCall_0();
 			return obj;
 		}
 		return null;
@@ -743,16 +831,26 @@ protected class IntTerm_ConstAssignment_0 extends AssignmentToken  {
 
 }
 
-// var=[Var]
-protected class IntTerm_VarAssignment_1 extends AssignmentToken  {
+/************ end Rule ConstTerm ****************/
+
+
+/************ begin Rule VarTerm ****************
+ *
+ * VarTerm:
+ * 	value=[Var];
+ *
+ **/
+
+// value=[Var]
+protected class VarTerm_ValueAssignment extends AssignmentToken  {
 	
-	public IntTerm_VarAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public VarTerm_ValueAssignment(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getIntTermAccess().getVarAssignment_1();
+		return grammarAccess.getVarTermAccess().getValueAssignment();
 	}
 
     @Override
@@ -764,13 +862,15 @@ protected class IntTerm_VarAssignment_1 extends AssignmentToken  {
 
     @Override	
 	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("var",true)) == null) return null;
-		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("var");
+		if(getEObject().eClass() != grammarAccess.getVarTermRule().getType().getClassifier())
+			return null;
+		if((value = eObjectConsumer.getConsumable("value",true)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("value");
 		if(value instanceof EObject) { // org::eclipse::xtext::impl::CrossReferenceImpl
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
-			if(param.isInstanceOf(grammarAccess.getIntTermAccess().getVarVarCrossReference_1_0().getType().getClassifier())) {
+			if(param.isInstanceOf(grammarAccess.getVarTermAccess().getValueVarCrossReference_0().getType().getClassifier())) {
 				type = AssignmentType.CROSS_REFERENCE;
-				element = grammarAccess.getIntTermAccess().getVarVarCrossReference_1_0(); 
+				element = grammarAccess.getVarTermAccess().getValueVarCrossReference_0(); 
 				return obj;
 			}
 		}
@@ -779,8 +879,7 @@ protected class IntTerm_VarAssignment_1 extends AssignmentToken  {
 
 }
 
-
-/************ end Rule IntTerm ****************/
+/************ end Rule VarTerm ****************/
 
 
 /************ begin Rule IntExpr ****************
@@ -815,7 +914,8 @@ protected class IntExpr_Alternatives extends AlternativesToken {
     @Override
 	public IEObjectConsumer tryConsume() {
 		if(getEObject().eClass() != grammarAccess.getBinaryIntExprRule().getType().getClassifier() && 
-		   getEObject().eClass() != grammarAccess.getIntTermRule().getType().getClassifier())
+		   getEObject().eClass() != grammarAccess.getConstTermRule().getType().getClassifier() && 
+		   getEObject().eClass() != grammarAccess.getVarTermRule().getType().getClassifier())
 			return null;
 		return eObjectConsumer;
 	}
@@ -844,7 +944,8 @@ protected class IntExpr_IntTermParserRuleCall_0 extends RuleCallToken {
 
     @Override
 	public IEObjectConsumer tryConsume() {
-		if(getEObject().eClass() != grammarAccess.getIntTermRule().getType().getClassifier())
+		if(getEObject().eClass() != grammarAccess.getConstTermRule().getType().getClassifier() && 
+		   getEObject().eClass() != grammarAccess.getVarTermRule().getType().getClassifier())
 			return null;
 		if(checkForRecursion(IntTerm_Alternatives.class, eObjectConsumer)) return null;
 		return eObjectConsumer;

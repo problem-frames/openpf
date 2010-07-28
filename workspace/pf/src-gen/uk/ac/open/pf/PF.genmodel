@@ -8,11 +8,11 @@
   <genPackages prefix="PF" basePackage="uk.ac.open.pf" disposableProviderFactory="true"
       ecorePackage="PF.ecore#/">
     <genClasses ecoreClass="PF.ecore#//RootDiagram">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PF.ecore#//RootDiagram/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PF.ecore#//RootDiagram/objects"/>
     </genClasses>
     <genClasses ecoreClass="PF.ecore#//Node">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PF.ecore#//Node/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PF.ecore#//Node/type"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PF.ecore#//Node/composite"/>
     </genClasses>
     <genClasses ecoreClass="PF.ecore#//CompositeObject">

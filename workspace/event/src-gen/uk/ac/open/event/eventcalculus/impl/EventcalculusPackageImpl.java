@@ -18,6 +18,7 @@ import uk.ac.open.event.eventcalculus.BinaryBoolOp;
 import uk.ac.open.event.eventcalculus.BinaryIntExpr;
 import uk.ac.open.event.eventcalculus.BinaryIntOp;
 import uk.ac.open.event.eventcalculus.BoolExpr;
+import uk.ac.open.event.eventcalculus.ConstTerm;
 import uk.ac.open.event.eventcalculus.Entity;
 import uk.ac.open.event.eventcalculus.Event;
 import uk.ac.open.event.eventcalculus.EventcalculusFactory;
@@ -41,6 +42,7 @@ import uk.ac.open.event.eventcalculus.UnaryBoolExpr;
 import uk.ac.open.event.eventcalculus.UnaryBoolOp;
 import uk.ac.open.event.eventcalculus.Var;
 import uk.ac.open.event.eventcalculus.VarDecl;
+import uk.ac.open.event.eventcalculus.VarTerm;
 
 /**
  * <!-- begin-user-doc -->
@@ -77,6 +79,20 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * @generated
    */
   private EClass intTermEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass constTermEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass varTermEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -410,9 +426,9 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getIntTerm_Const()
+  public EClass getConstTerm()
   {
-    return (EAttribute)intTermEClass.getEStructuralFeatures().get(0);
+    return constTermEClass;
   }
 
   /**
@@ -420,9 +436,29 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getIntTerm_Var()
+  public EAttribute getConstTerm_Value()
   {
-    return (EReference)intTermEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)constTermEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getVarTerm()
+  {
+    return varTermEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getVarTerm_Value()
+  {
+    return (EReference)varTermEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -969,8 +1005,12 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
     createEReference(varDeclEClass, VAR_DECL__VARS);
 
     intTermEClass = createEClass(INT_TERM);
-    createEAttribute(intTermEClass, INT_TERM__CONST);
-    createEReference(intTermEClass, INT_TERM__VAR);
+
+    constTermEClass = createEClass(CONST_TERM);
+    createEAttribute(constTermEClass, CONST_TERM__VALUE);
+
+    varTermEClass = createEClass(VAR_TERM);
+    createEReference(varTermEClass, VAR_TERM__VALUE);
 
     intExprEClass = createEClass(INT_EXPR);
 
@@ -1074,6 +1114,8 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
 
     // Add supertypes to classes
     intTermEClass.getESuperTypes().add(this.getIntExpr());
+    constTermEClass.getESuperTypes().add(this.getIntTerm());
+    varTermEClass.getESuperTypes().add(this.getIntTerm());
     binaryIntExprEClass.getESuperTypes().add(this.getIntExpr());
     temporalPredicateEClass.getESuperTypes().add(this.getBoolExpr());
     unaryBoolExprEClass.getESuperTypes().add(this.getBoolExpr());
@@ -1101,8 +1143,12 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
     initEReference(getVarDecl_Vars(), this.getVar(), null, "vars", null, 0, -1, VarDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(intTermEClass, IntTerm.class, "IntTerm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getIntTerm_Const(), ecorePackage.getEInt(), "const", null, 0, 1, IntTerm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getIntTerm_Var(), this.getVar(), null, "var", null, 0, 1, IntTerm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(constTermEClass, ConstTerm.class, "ConstTerm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getConstTerm_Value(), ecorePackage.getEInt(), "value", null, 0, 1, ConstTerm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(varTermEClass, VarTerm.class, "VarTerm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getVarTerm_Value(), this.getVar(), null, "value", null, 0, 1, VarTerm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(intExprEClass, IntExpr.class, "IntExpr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

@@ -37,27 +37,32 @@ public class PFParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
+					put(grammarAccess.getNodeAccess().getAlternatives(), "rule__Node__Alternatives");
 					put(grammarAccess.getFieldAccess().getAlternatives(), "rule__Field__Alternatives");
 					put(grammarAccess.getSimpleFieldAccess().getAlternatives_2(), "rule__SimpleField__Alternatives_2");
 					put(grammarAccess.getRootDiagramAccess().getGroup(), "rule__RootDiagram__Group__0");
-					put(grammarAccess.getRootDiagramAccess().getGroup_7(), "rule__RootDiagram__Group_7__0");
-					put(grammarAccess.getNodeAccess().getGroup(), "rule__Node__Group__0");
+					put(grammarAccess.getRootDiagramAccess().getGroup_12(), "rule__RootDiagram__Group_12__0");
+					put(grammarAccess.getRootDiagramAccess().getGroup_14(), "rule__RootDiagram__Group_14__0");
+					put(grammarAccess.getNodeAccess().getGroup_0(), "rule__Node__Group_0__0");
+					put(grammarAccess.getNodeAccess().getGroup_0_6(), "rule__Node__Group_0_6__0");
 					put(grammarAccess.getCompositeObjectAccess().getGroup(), "rule__CompositeObject__Group__0");
-					put(grammarAccess.getCompositeObjectAccess().getGroup_3(), "rule__CompositeObject__Group_3__0");
+					put(grammarAccess.getCompositeObjectAccess().getGroup_2(), "rule__CompositeObject__Group_2__0");
 					put(grammarAccess.getSimpleFieldAccess().getGroup(), "rule__SimpleField__Group__0");
 					put(grammarAccess.getCompositeFieldAccess().getGroup(), "rule__CompositeField__Group__0");
 					put(grammarAccess.getRootDiagramAccess().getNameAssignment_1(), "rule__RootDiagram__NameAssignment_1");
-					put(grammarAccess.getRootDiagramAccess().getObjectsAssignment_6(), "rule__RootDiagram__ObjectsAssignment_6");
-					put(grammarAccess.getRootDiagramAccess().getObjectsAssignment_7_1(), "rule__RootDiagram__ObjectsAssignment_7_1");
-					put(grammarAccess.getNodeAccess().getNameAssignment_0(), "rule__Node__NameAssignment_0");
-					put(grammarAccess.getNodeAccess().getCompositeAssignment_2(), "rule__Node__CompositeAssignment_2");
-					put(grammarAccess.getCompositeObjectAccess().getFieldsAssignment_2(), "rule__CompositeObject__FieldsAssignment_2");
-					put(grammarAccess.getCompositeObjectAccess().getFieldsAssignment_3_1(), "rule__CompositeObject__FieldsAssignment_3_1");
+					put(grammarAccess.getRootDiagramAccess().getTypeAssignment_11(), "rule__RootDiagram__TypeAssignment_11");
+					put(grammarAccess.getRootDiagramAccess().getCompositeAssignment_12_1(), "rule__RootDiagram__CompositeAssignment_12_1");
+					put(grammarAccess.getRootDiagramAccess().getObjectsAssignment_14_1(), "rule__RootDiagram__ObjectsAssignment_14_1");
+					put(grammarAccess.getNodeAccess().getNameAssignment_0_0(), "rule__Node__NameAssignment_0_0");
+					put(grammarAccess.getNodeAccess().getTypeAssignment_0_5(), "rule__Node__TypeAssignment_0_5");
+					put(grammarAccess.getNodeAccess().getCompositeAssignment_0_6_1(), "rule__Node__CompositeAssignment_0_6_1");
+					put(grammarAccess.getCompositeObjectAccess().getFieldsAssignment_1(), "rule__CompositeObject__FieldsAssignment_1");
+					put(grammarAccess.getCompositeObjectAccess().getFieldsAssignment_2_1(), "rule__CompositeObject__FieldsAssignment_2_1");
 					put(grammarAccess.getSimpleFieldAccess().getNameAssignment_0(), "rule__SimpleField__NameAssignment_0");
 					put(grammarAccess.getSimpleFieldAccess().getValueAssignment_2_0(), "rule__SimpleField__ValueAssignment_2_0");
 					put(grammarAccess.getSimpleFieldAccess().getValueAssignment_2_1(), "rule__SimpleField__ValueAssignment_2_1");
 					put(grammarAccess.getCompositeFieldAccess().getNameAssignment_0(), "rule__CompositeField__NameAssignment_0");
-					put(grammarAccess.getCompositeFieldAccess().getValueAssignment_2(), "rule__CompositeField__ValueAssignment_2");
+					put(grammarAccess.getCompositeFieldAccess().getValueAssignment_3(), "rule__CompositeField__ValueAssignment_3");
 				}
 			};
 		}

@@ -58,7 +58,7 @@ Workflow {
 			fragment = validation.JavaValidatorFragment {
 //				composedCheck = "org.eclipse.xtext.validation.ImportUriValidator"
 //				composedCheck = "org.eclipse.xtext.validation.NamesAreUniqueValidator"
-//				registerForImportedPackages = true
+				registerForImportedPackages = true
 			}
 
 			// scoping and exporting API

@@ -33,9 +33,12 @@
     <genClasses ecoreClass="EventCalculus.ecore#//VarDecl">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//VarDecl/vars"/>
     </genClasses>
-    <genClasses ecoreClass="EventCalculus.ecore#//IntTerm">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EventCalculus.ecore#//IntTerm/const"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//IntTerm/var"/>
+    <genClasses ecoreClass="EventCalculus.ecore#//IntTerm"/>
+    <genClasses ecoreClass="EventCalculus.ecore#//ConstTerm">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EventCalculus.ecore#//ConstTerm/value"/>
+    </genClasses>
+    <genClasses ecoreClass="EventCalculus.ecore#//VarTerm">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//VarTerm/value"/>
     </genClasses>
     <genClasses ecoreClass="EventCalculus.ecore#//IntExpr"/>
     <genClasses ecoreClass="EventCalculus.ecore#//BinaryIntExpr">

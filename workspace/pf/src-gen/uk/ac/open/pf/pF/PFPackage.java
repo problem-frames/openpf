@@ -60,43 +60,6 @@ public interface PFPackage extends EPackage
   PFPackage eINSTANCE = uk.ac.open.pf.pF.impl.PFPackageImpl.init();
 
   /**
-   * The meta object id for the '{@link uk.ac.open.pf.pF.impl.RootDiagramImpl <em>Root Diagram</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see uk.ac.open.pf.pF.impl.RootDiagramImpl
-   * @see uk.ac.open.pf.pF.impl.PFPackageImpl#getRootDiagram()
-   * @generated
-   */
-  int ROOT_DIAGRAM = 0;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ROOT_DIAGRAM__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Objects</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ROOT_DIAGRAM__OBJECTS = 1;
-
-  /**
-   * The number of structural features of the '<em>Root Diagram</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ROOT_DIAGRAM_FEATURE_COUNT = 2;
-
-  /**
    * The meta object id for the '{@link uk.ac.open.pf.pF.impl.NodeImpl <em>Node</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -116,13 +79,22 @@ public interface PFPackage extends EPackage
   int NODE__NAME = 0;
 
   /**
+   * The feature id for the '<em><b>Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NODE__TYPE = 1;
+
+  /**
    * The feature id for the '<em><b>Composite</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NODE__COMPOSITE = 1;
+  int NODE__COMPOSITE = 2;
 
   /**
    * The number of structural features of the '<em>Node</em>' class.
@@ -131,7 +103,62 @@ public interface PFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NODE_FEATURE_COUNT = 2;
+  int NODE_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link uk.ac.open.pf.pF.impl.RootDiagramImpl <em>Root Diagram</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see uk.ac.open.pf.pF.impl.RootDiagramImpl
+   * @see uk.ac.open.pf.pF.impl.PFPackageImpl#getRootDiagram()
+   * @generated
+   */
+  int ROOT_DIAGRAM = 0;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ROOT_DIAGRAM__NAME = NODE__NAME;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ROOT_DIAGRAM__TYPE = NODE__TYPE;
+
+  /**
+   * The feature id for the '<em><b>Composite</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ROOT_DIAGRAM__COMPOSITE = NODE__COMPOSITE;
+
+  /**
+   * The feature id for the '<em><b>Objects</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ROOT_DIAGRAM__OBJECTS = NODE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Root Diagram</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ROOT_DIAGRAM_FEATURE_COUNT = NODE_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link uk.ac.open.pf.pF.impl.CompositeObjectImpl <em>Composite Object</em>}' class.
@@ -275,17 +302,6 @@ public interface PFPackage extends EPackage
   EClass getRootDiagram();
 
   /**
-   * Returns the meta object for the attribute '{@link uk.ac.open.pf.pF.RootDiagram#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see uk.ac.open.pf.pF.RootDiagram#getName()
-   * @see #getRootDiagram()
-   * @generated
-   */
-  EAttribute getRootDiagram_Name();
-
-  /**
    * Returns the meta object for the containment reference list '{@link uk.ac.open.pf.pF.RootDiagram#getObjects <em>Objects</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -316,6 +332,17 @@ public interface PFPackage extends EPackage
    * @generated
    */
   EAttribute getNode_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link uk.ac.open.pf.pF.Node#getType <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Type</em>'.
+   * @see uk.ac.open.pf.pF.Node#getType()
+   * @see #getNode()
+   * @generated
+   */
+  EAttribute getNode_Type();
 
   /**
    * Returns the meta object for the containment reference '{@link uk.ac.open.pf.pF.Node#getComposite <em>Composite</em>}'.
@@ -446,14 +473,6 @@ public interface PFPackage extends EPackage
     EClass ROOT_DIAGRAM = eINSTANCE.getRootDiagram();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute ROOT_DIAGRAM__NAME = eINSTANCE.getRootDiagram_Name();
-
-    /**
      * The meta object literal for the '<em><b>Objects</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -478,6 +497,14 @@ public interface PFPackage extends EPackage
      * @generated
      */
     EAttribute NODE__NAME = eINSTANCE.getNode_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute NODE__TYPE = eINSTANCE.getNode_Type();
 
     /**
      * The meta object literal for the '<em><b>Composite</b></em>' containment reference feature.

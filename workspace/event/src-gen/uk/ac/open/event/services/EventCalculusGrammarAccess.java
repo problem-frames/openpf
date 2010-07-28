@@ -152,33 +152,57 @@ public class EventCalculusGrammarAccess extends AbstractGrammarElementFinder {
 	public class IntTermElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "IntTerm");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Assignment cConstAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
-		private final RuleCall cConstINTTerminalRuleCall_0_0 = (RuleCall)cConstAssignment_0.eContents().get(0);
-		private final Assignment cVarAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
-		private final CrossReference cVarVarCrossReference_1_0 = (CrossReference)cVarAssignment_1.eContents().get(0);
-		private final RuleCall cVarVarIDTerminalRuleCall_1_0_1 = (RuleCall)cVarVarCrossReference_1_0.eContents().get(1);
+		private final RuleCall cConstTermParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cVarTermParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//IntTerm:
-		//	const=INT | var=[Var];
+		//	ConstTerm | VarTerm;
 		public ParserRule getRule() { return rule; }
 
-		//const=INT | var=[Var]
+		//ConstTerm | VarTerm
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//const=INT
-		public Assignment getConstAssignment_0() { return cConstAssignment_0; }
+		//ConstTerm
+		public RuleCall getConstTermParserRuleCall_0() { return cConstTermParserRuleCall_0; }
+
+		//VarTerm
+		public RuleCall getVarTermParserRuleCall_1() { return cVarTermParserRuleCall_1; }
+	}
+
+	public class ConstTermElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ConstTerm");
+		private final Assignment cValueAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cValueINTTerminalRuleCall_0 = (RuleCall)cValueAssignment.eContents().get(0);
+		
+		//ConstTerm:
+		//	value=INT;
+		public ParserRule getRule() { return rule; }
+
+		//value=INT
+		public Assignment getValueAssignment() { return cValueAssignment; }
 
 		//INT
-		public RuleCall getConstINTTerminalRuleCall_0_0() { return cConstINTTerminalRuleCall_0_0; }
+		public RuleCall getValueINTTerminalRuleCall_0() { return cValueINTTerminalRuleCall_0; }
+	}
 
-		//var=[Var]
-		public Assignment getVarAssignment_1() { return cVarAssignment_1; }
+	public class VarTermElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "VarTerm");
+		private final Assignment cValueAssignment = (Assignment)rule.eContents().get(1);
+		private final CrossReference cValueVarCrossReference_0 = (CrossReference)cValueAssignment.eContents().get(0);
+		private final RuleCall cValueVarIDTerminalRuleCall_0_1 = (RuleCall)cValueVarCrossReference_0.eContents().get(1);
+		
+		//VarTerm:
+		//	value=[Var];
+		public ParserRule getRule() { return rule; }
+
+		//value=[Var]
+		public Assignment getValueAssignment() { return cValueAssignment; }
 
 		//[Var]
-		public CrossReference getVarVarCrossReference_1_0() { return cVarVarCrossReference_1_0; }
+		public CrossReference getValueVarCrossReference_0() { return cValueVarCrossReference_0; }
 
 		//ID
-		public RuleCall getVarVarIDTerminalRuleCall_1_0_1() { return cVarVarIDTerminalRuleCall_1_0_1; }
+		public RuleCall getValueVarIDTerminalRuleCall_0_1() { return cValueVarIDTerminalRuleCall_0_1; }
 	}
 
 	public class IntExprElements extends AbstractParserRuleElementFinder {
@@ -1208,6 +1232,8 @@ public class EventCalculusGrammarAccess extends AbstractGrammarElementFinder {
 	private RuleElements pRule;
 	private VarDeclElements pVarDecl;
 	private IntTermElements pIntTerm;
+	private ConstTermElements pConstTerm;
+	private VarTermElements pVarTerm;
 	private IntExprElements pIntExpr;
 	private BinaryIntExprElements pBinaryIntExpr;
 	private BinaryIntOpElements unknownRuleBinaryIntOp;
@@ -1285,13 +1311,33 @@ public class EventCalculusGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//IntTerm:
-	//	const=INT | var=[Var];
+	//	ConstTerm | VarTerm;
 	public IntTermElements getIntTermAccess() {
 		return (pIntTerm != null) ? pIntTerm : (pIntTerm = new IntTermElements());
 	}
 	
 	public ParserRule getIntTermRule() {
 		return getIntTermAccess().getRule();
+	}
+
+	//ConstTerm:
+	//	value=INT;
+	public ConstTermElements getConstTermAccess() {
+		return (pConstTerm != null) ? pConstTerm : (pConstTerm = new ConstTermElements());
+	}
+	
+	public ParserRule getConstTermRule() {
+		return getConstTermAccess().getRule();
+	}
+
+	//VarTerm:
+	//	value=[Var];
+	public VarTermElements getVarTermAccess() {
+		return (pVarTerm != null) ? pVarTerm : (pVarTerm = new VarTermElements());
+	}
+	
+	public ParserRule getVarTermRule() {
+		return getVarTermAccess().getRule();
 	}
 
 	////IntExpr: IntTerm;

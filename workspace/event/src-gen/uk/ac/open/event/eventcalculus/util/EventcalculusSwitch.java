@@ -124,6 +124,24 @@ public class EventcalculusSwitch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case EventcalculusPackage.CONST_TERM:
+      {
+        ConstTerm constTerm = (ConstTerm)theEObject;
+        T result = caseConstTerm(constTerm);
+        if (result == null) result = caseIntTerm(constTerm);
+        if (result == null) result = caseIntExpr(constTerm);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EventcalculusPackage.VAR_TERM:
+      {
+        VarTerm varTerm = (VarTerm)theEObject;
+        T result = caseVarTerm(varTerm);
+        if (result == null) result = caseIntTerm(varTerm);
+        if (result == null) result = caseIntExpr(varTerm);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case EventcalculusPackage.INT_EXPR:
       {
         IntExpr intExpr = (IntExpr)theEObject;
@@ -336,6 +354,38 @@ public class EventcalculusSwitch<T>
    * @generated
    */
   public T caseIntTerm(IntTerm object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Const Term</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Const Term</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseConstTerm(ConstTerm object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Var Term</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Var Term</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVarTerm(VarTerm object)
   {
     return null;
   }

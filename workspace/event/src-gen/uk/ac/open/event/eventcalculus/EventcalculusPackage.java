@@ -188,7 +188,7 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getIntExpr()
    * @generated
    */
-  int INT_EXPR = 4;
+  int INT_EXPR = 6;
 
   /**
    * The number of structural features of the '<em>Int Expr</em>' class.
@@ -210,31 +210,69 @@ public interface EventcalculusPackage extends EPackage
   int INT_TERM = 3;
 
   /**
-   * The feature id for the '<em><b>Const</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INT_TERM__CONST = INT_EXPR_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Var</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INT_TERM__VAR = INT_EXPR_FEATURE_COUNT + 1;
-
-  /**
    * The number of structural features of the '<em>Int Term</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INT_TERM_FEATURE_COUNT = INT_EXPR_FEATURE_COUNT + 2;
+  int INT_TERM_FEATURE_COUNT = INT_EXPR_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link uk.ac.open.event.eventcalculus.impl.ConstTermImpl <em>Const Term</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see uk.ac.open.event.eventcalculus.impl.ConstTermImpl
+   * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getConstTerm()
+   * @generated
+   */
+  int CONST_TERM = 4;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONST_TERM__VALUE = INT_TERM_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Const Term</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONST_TERM_FEATURE_COUNT = INT_TERM_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link uk.ac.open.event.eventcalculus.impl.VarTermImpl <em>Var Term</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see uk.ac.open.event.eventcalculus.impl.VarTermImpl
+   * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getVarTerm()
+   * @generated
+   */
+  int VAR_TERM = 5;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VAR_TERM__VALUE = INT_TERM_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Var Term</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VAR_TERM_FEATURE_COUNT = INT_TERM_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link uk.ac.open.event.eventcalculus.impl.BinaryIntExprImpl <em>Binary Int Expr</em>}' class.
@@ -244,7 +282,7 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getBinaryIntExpr()
    * @generated
    */
-  int BINARY_INT_EXPR = 5;
+  int BINARY_INT_EXPR = 7;
 
   /**
    * The feature id for the '<em><b>Opr</b></em>' containment reference list.
@@ -281,7 +319,7 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getBoolExpr()
    * @generated
    */
-  int BOOL_EXPR = 7;
+  int BOOL_EXPR = 9;
 
   /**
    * The number of structural features of the '<em>Bool Expr</em>' class.
@@ -300,7 +338,7 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getTemporalPredicate()
    * @generated
    */
-  int TEMPORAL_PREDICATE = 6;
+  int TEMPORAL_PREDICATE = 8;
 
   /**
    * The feature id for the '<em><b>Args</b></em>' attribute list.
@@ -337,7 +375,7 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getUnaryBoolExpr()
    * @generated
    */
-  int UNARY_BOOL_EXPR = 8;
+  int UNARY_BOOL_EXPR = 10;
 
   /**
    * The feature id for the '<em><b>Unaryop lhs</b></em>' attribute.
@@ -383,7 +421,7 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getBinaryBoolExpr()
    * @generated
    */
-  int BINARY_BOOL_EXPR = 9;
+  int BINARY_BOOL_EXPR = 11;
 
   /**
    * The feature id for the '<em><b>Opr</b></em>' containment reference list.
@@ -420,7 +458,7 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getEntity()
    * @generated
    */
-  int ENTITY = 10;
+  int ENTITY = 12;
 
   /**
    * The number of structural features of the '<em>Entity</em>' class.
@@ -439,7 +477,7 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getSort()
    * @generated
    */
-  int SORT = 11;
+  int SORT = 13;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -467,7 +505,7 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getImport()
    * @generated
    */
-  int IMPORT = 12;
+  int IMPORT = 14;
 
   /**
    * The feature id for the '<em><b>Path</b></em>' containment reference.
@@ -495,7 +533,7 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getVar()
    * @generated
    */
-  int VAR = 13;
+  int VAR = 15;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -541,7 +579,7 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getFluent()
    * @generated
    */
-  int FLUENT = 14;
+  int FLUENT = 16;
 
   /**
    * The feature id for the '<em><b>Term</b></em>' containment reference.
@@ -569,7 +607,7 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getEvent()
    * @generated
    */
-  int EVENT = 15;
+  int EVENT = 17;
 
   /**
    * The feature id for the '<em><b>Term</b></em>' containment reference.
@@ -597,7 +635,7 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getTerm()
    * @generated
    */
-  int TERM = 16;
+  int TERM = 18;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -634,7 +672,7 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getHoldsAt()
    * @generated
    */
-  int HOLDS_AT = 17;
+  int HOLDS_AT = 19;
 
   /**
    * The feature id for the '<em><b>Args</b></em>' attribute list.
@@ -680,7 +718,7 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getHappens()
    * @generated
    */
-  int HAPPENS = 18;
+  int HAPPENS = 20;
 
   /**
    * The feature id for the '<em><b>Args</b></em>' attribute list.
@@ -726,7 +764,7 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getInitiates()
    * @generated
    */
-  int INITIATES = 19;
+  int INITIATES = 21;
 
   /**
    * The feature id for the '<em><b>Args</b></em>' attribute list.
@@ -790,7 +828,7 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getTerminates()
    * @generated
    */
-  int TERMINATES = 20;
+  int TERMINATES = 22;
 
   /**
    * The feature id for the '<em><b>Args</b></em>' attribute list.
@@ -854,7 +892,7 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getPath()
    * @generated
    */
-  int PATH = 21;
+  int PATH = 23;
 
   /**
    * The feature id for the '<em><b>Files</b></em>' containment reference list.
@@ -882,7 +920,7 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getFile()
    * @generated
    */
-  int FILE = 22;
+  int FILE = 24;
 
   /**
    * The feature id for the '<em><b>Names</b></em>' attribute list.
@@ -910,7 +948,7 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getBinaryIntOp()
    * @generated
    */
-  int BINARY_INT_OP = 23;
+  int BINARY_INT_OP = 25;
 
   /**
    * The meta object id for the '{@link uk.ac.open.event.eventcalculus.UnaryBoolOp <em>Unary Bool Op</em>}' enum.
@@ -920,7 +958,7 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getUnaryBoolOp()
    * @generated
    */
-  int UNARY_BOOL_OP = 24;
+  int UNARY_BOOL_OP = 26;
 
   /**
    * The meta object id for the '{@link uk.ac.open.event.eventcalculus.BinaryBoolOp <em>Binary Bool Op</em>}' enum.
@@ -930,7 +968,7 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getBinaryBoolOp()
    * @generated
    */
-  int BINARY_BOOL_OP = 25;
+  int BINARY_BOOL_OP = 27;
 
 
   /**
@@ -1051,26 +1089,46 @@ public interface EventcalculusPackage extends EPackage
   EClass getIntTerm();
 
   /**
-   * Returns the meta object for the attribute '{@link uk.ac.open.event.eventcalculus.IntTerm#getConst <em>Const</em>}'.
+   * Returns the meta object for class '{@link uk.ac.open.event.eventcalculus.ConstTerm <em>Const Term</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Const</em>'.
-   * @see uk.ac.open.event.eventcalculus.IntTerm#getConst()
-   * @see #getIntTerm()
+   * @return the meta object for class '<em>Const Term</em>'.
+   * @see uk.ac.open.event.eventcalculus.ConstTerm
    * @generated
    */
-  EAttribute getIntTerm_Const();
+  EClass getConstTerm();
 
   /**
-   * Returns the meta object for the reference '{@link uk.ac.open.event.eventcalculus.IntTerm#getVar <em>Var</em>}'.
+   * Returns the meta object for the attribute '{@link uk.ac.open.event.eventcalculus.ConstTerm#getValue <em>Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Var</em>'.
-   * @see uk.ac.open.event.eventcalculus.IntTerm#getVar()
-   * @see #getIntTerm()
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see uk.ac.open.event.eventcalculus.ConstTerm#getValue()
+   * @see #getConstTerm()
    * @generated
    */
-  EReference getIntTerm_Var();
+  EAttribute getConstTerm_Value();
+
+  /**
+   * Returns the meta object for class '{@link uk.ac.open.event.eventcalculus.VarTerm <em>Var Term</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Var Term</em>'.
+   * @see uk.ac.open.event.eventcalculus.VarTerm
+   * @generated
+   */
+  EClass getVarTerm();
+
+  /**
+   * Returns the meta object for the reference '{@link uk.ac.open.event.eventcalculus.VarTerm#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Value</em>'.
+   * @see uk.ac.open.event.eventcalculus.VarTerm#getValue()
+   * @see #getVarTerm()
+   * @generated
+   */
+  EReference getVarTerm_Value();
 
   /**
    * Returns the meta object for class '{@link uk.ac.open.event.eventcalculus.IntExpr <em>Int Expr</em>}'.
@@ -1720,20 +1778,40 @@ public interface EventcalculusPackage extends EPackage
     EClass INT_TERM = eINSTANCE.getIntTerm();
 
     /**
-     * The meta object literal for the '<em><b>Const</b></em>' attribute feature.
+     * The meta object literal for the '{@link uk.ac.open.event.eventcalculus.impl.ConstTermImpl <em>Const Term</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see uk.ac.open.event.eventcalculus.impl.ConstTermImpl
+     * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getConstTerm()
      * @generated
      */
-    EAttribute INT_TERM__CONST = eINSTANCE.getIntTerm_Const();
+    EClass CONST_TERM = eINSTANCE.getConstTerm();
 
     /**
-     * The meta object literal for the '<em><b>Var</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference INT_TERM__VAR = eINSTANCE.getIntTerm_Var();
+    EAttribute CONST_TERM__VALUE = eINSTANCE.getConstTerm_Value();
+
+    /**
+     * The meta object literal for the '{@link uk.ac.open.event.eventcalculus.impl.VarTermImpl <em>Var Term</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see uk.ac.open.event.eventcalculus.impl.VarTermImpl
+     * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getVarTerm()
+     * @generated
+     */
+    EClass VAR_TERM = eINSTANCE.getVarTerm();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference VAR_TERM__VALUE = eINSTANCE.getVarTerm_Value();
 
     /**
      * The meta object literal for the '{@link uk.ac.open.event.eventcalculus.impl.IntExprImpl <em>Int Expr</em>}' class.

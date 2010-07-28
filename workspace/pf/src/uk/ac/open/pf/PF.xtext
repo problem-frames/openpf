@@ -7,19 +7,18 @@ generate pF "http://www.ac.uk/open/pf/PF"
 RootDiagram: {RootDiagram}
 	name=Value '@' 'cycle' '('
 	'('
-		objects+=Node (',' objects+=Node)*
+		Value ':=' "{" "ObjectType" ":" type=STRING ("," composite=CompositeObject)? "}" ("," objects+=Node)*
 	')'
 	')';
 
-Node: name=Value ':=' composite=CompositeObject;
+Node: name=Value ':=' "{" "ObjectType" ":" type=STRING ("," composite=CompositeObject)? "}" | RootDiagram;
   
-CompositeObject: {CompositeObject} 
-	'{' (fields+=Field)? (',' fields+=Field)* '}';
+CompositeObject: {CompositeObject} (fields+=Field)? (',' fields+=Field)*;
 
 Field: SimpleField | CompositeField;
 
 SimpleField: name=ID ':' (value=Value | value=STRING);
 
-CompositeField: name=ID ':' value=CompositeObject;
+CompositeField: name=ID ':' "{" value=CompositeObject "}";
 
 terminal Value: '&' ID;

@@ -149,19 +149,9 @@ public class PFPackageImpl extends EPackageImpl implements PFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getRootDiagram_Name()
-  {
-    return (EAttribute)rootDiagramEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getRootDiagram_Objects()
   {
-    return (EReference)rootDiagramEClass.getEStructuralFeatures().get(1);
+    return (EReference)rootDiagramEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -189,9 +179,19 @@ public class PFPackageImpl extends EPackageImpl implements PFPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getNode_Type()
+  {
+    return (EAttribute)nodeEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getNode_Composite()
   {
-    return (EReference)nodeEClass.getEStructuralFeatures().get(1);
+    return (EReference)nodeEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -305,11 +305,11 @@ public class PFPackageImpl extends EPackageImpl implements PFPackage
 
     // Create classes and their features
     rootDiagramEClass = createEClass(ROOT_DIAGRAM);
-    createEAttribute(rootDiagramEClass, ROOT_DIAGRAM__NAME);
     createEReference(rootDiagramEClass, ROOT_DIAGRAM__OBJECTS);
 
     nodeEClass = createEClass(NODE);
     createEAttribute(nodeEClass, NODE__NAME);
+    createEAttribute(nodeEClass, NODE__TYPE);
     createEReference(nodeEClass, NODE__COMPOSITE);
 
     compositeObjectEClass = createEClass(COMPOSITE_OBJECT);
@@ -354,16 +354,17 @@ public class PFPackageImpl extends EPackageImpl implements PFPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    rootDiagramEClass.getESuperTypes().add(this.getNode());
     simpleFieldEClass.getESuperTypes().add(this.getField());
     compositeFieldEClass.getESuperTypes().add(this.getField());
 
     // Initialize classes and features; add operations and parameters
     initEClass(rootDiagramEClass, RootDiagram.class, "RootDiagram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getRootDiagram_Name(), ecorePackage.getEString(), "name", null, 0, 1, RootDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getRootDiagram_Objects(), this.getNode(), null, "objects", null, 0, -1, RootDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(nodeEClass, Node.class, "Node", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getNode_Name(), ecorePackage.getEString(), "name", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getNode_Type(), ecorePackage.getEString(), "type", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getNode_Composite(), this.getCompositeObject(), null, "composite", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(compositeObjectEClass, CompositeObject.class, "CompositeObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

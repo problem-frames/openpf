@@ -75,20 +75,29 @@ public class UncalEditor extends XtextEditor {
 			HashMap<EObject, String> table = new HashMap<EObject, String>();
 			HashMap<EObject, Integer> count = new HashMap<EObject, Integer>();
 			HashMap<EClass, Integer> counts = new HashMap<EClass, Integer>();
+			HashMap<EObject, Integer> globalCount = new HashMap<EObject, Integer>();
 			EObject root = xtextResource.getContents().get(0);
 			EObject o = root;
-			new_object(table, count, counts, root, o);			
-			String name = referenceName(table, count, root, o);
+			new_object(table, count, counts, globalCount, root, o);			
+			String name = ROOT;
+			String edge_name = ROOT;
 			out.println(ROOT + " @ cycle(");
 			out.println("(");
 			int u = 0;
+			int number = 0;
 			for (TreeIterator<EObject> objects = EcoreUtil.getAllContents(
 					xtextResource, true); objects.hasNext();) {
 				o = objects.next();
-				new_object(table, count, counts, root, o);			
-				name = referenceName(table, count, root, o);
-				if (o == root)
+				new_object(table, count, counts, globalCount, root, o);			
+				if (o == root) {
+					edge_name = referenceName(table, o);
+					number = 0;
 					name = ROOT;
+				} else {					
+					edge_name = referenceName(table, o);
+					number = globalCount.get(o);					
+					name = "&n" + number;
+				}
 				if (u > 0) {
 					out.println(",");
 				}
@@ -96,9 +105,10 @@ public class UncalEditor extends XtextEditor {
 				out.println("  " + name + " := ");
 				out.println("  {");
 				int n = 0;
+				out.print("      " + "ObjectType" + ": \"" + edge_name + "\"");				
 				for (EStructuralFeature feature : o.eClass().getEAllStructuralFeatures()) {
 					Object val = o.eGet(feature);
-					handleValue(out, table, count, counts, n, feature, val, root);
+					handleValue(out, table, count, counts, globalCount, n, feature, val, root);
 					n++;
 				} 
 				out.print("\n  }");
@@ -117,30 +127,59 @@ public class UncalEditor extends XtextEditor {
 		}
 	}
 
-	private static String referenceName(HashMap<EObject, String> table,
-			HashMap<EObject, Integer> count, EObject root, EObject o) {
-		String name = table.get(o) + (o==root?"":count.get(o));
+	private static String referenceName(HashMap<EObject, String> table, EObject o) {
+//		String name = table.get(o) + (o==root?"":count.get(o));
+		String name = table.get(o);
 		return name;
 	}
-
+	
+	
+	static int total = 0;
+	/**
+	 * Create a new entry of object -> classname mapping, and increment the instance count for that class
+	 * Also increment the total instances
+	 * @param table
+	 * @param count
+	 * @param counts
+	 * @param root
+	 * @param o
+	 * @return
+	 */
 	private static EObject new_object(HashMap<EObject, String> table,
-			HashMap<EObject, Integer> count, HashMap<EClass, Integer> counts,
+			HashMap<EObject, Integer> count, 
+			HashMap<EClass, Integer> counts,
+			HashMap<EObject, Integer> globalCount,
 			EObject root, EObject o) {
 		String name = o.getClass().getSimpleName();
-		table.put(o, "&" + name);
+		table.put(o, name);
 		if (count.get(o) == null) {
 			if (counts.get(o.eClass()) == null)
 				counts.put(o.eClass(), 1);
 			else
 				counts.put(o.eClass(), 1 + counts.get(o.eClass()));
 			count.put(o, counts.get(o.eClass()));
+			total++;
+			globalCount.put(o, total);
 		}
 		return o;
 	}
 
+	/**
+	 * Create the attributes based on the reflected EObject's features
+	 * @param out
+	 * @param table
+	 * @param count
+	 * @param counts
+	 * @param globalCounts
+	 * @param n
+	 * @param feature
+	 * @param val
+	 * @param root
+	 */
 	private static void handleValue(PrintStream out,
 			HashMap<EObject, String> table, HashMap<EObject, Integer> count,
-			HashMap<EClass, Integer> counts, int n, EStructuralFeature feature, Object val,
+			HashMap<EClass, Integer> counts, HashMap<EObject, Integer> globalCounts, 
+			int n, EStructuralFeature feature, Object val,
 			EObject root) {
 		if (val instanceof EList<?>) {
 			String list = "{";
@@ -150,8 +189,9 @@ public class UncalEditor extends XtextEditor {
 					// TODO: we need to create a list variable
 				} else if (Obj instanceof EObject) {
 					EObject obj = (EObject) Obj;
-					new_object(table, count, counts, root, obj);			
-					String name = referenceName(table, count, root, obj);					
+					new_object(table, count, counts, globalCounts, root, obj);			
+//					String name = referenceName(table, count, root, obj);
+					String name = "&n" + globalCounts.get(obj);
 					list = list + "hd:" + name + ", tl:{";
 					m ++;
 				} else {
@@ -163,14 +203,15 @@ public class UncalEditor extends XtextEditor {
 			}
 			for (int i=0; i<=m; i++)
 				list = list + "}";
-			out.print(((n>0)?",\n":"") + "      " + feature.getName() + ":" + list);
+			out.print(",\n" + "      " + feature.getName() + ":" + list);
 		} else if (val instanceof EObject) {
 			EObject obj = (EObject) val;
-			new_object(table, count, counts, root, obj);			
-			String name = referenceName(table, count, root, obj);					
-			out.print(((n>0)?",\n":"") + "      " + feature.getName() + ": " + name);				
+			new_object(table, count, counts, globalCounts, root, obj);			
+//			String name = referenceName(table, count, root, obj);					
+			String name = "&n" + globalCounts.get(obj);
+			out.print(",\n" + "      " + feature.getName() + ": " + name);				
 		} else {
-			out.print(((n>0)?",\n":"") + "      " + feature.getName() + ": \"" + val + "\"");
+			out.print(",\n" + "      " + feature.getName() + ": \"" + val + "\"");
 		}
 	}
 	

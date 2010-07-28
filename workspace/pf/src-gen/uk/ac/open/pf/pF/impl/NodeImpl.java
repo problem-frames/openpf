@@ -26,6 +26,7 @@ import uk.ac.open.pf.pF.PFPackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link uk.ac.open.pf.pF.impl.NodeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link uk.ac.open.pf.pF.impl.NodeImpl#getType <em>Type</em>}</li>
  *   <li>{@link uk.ac.open.pf.pF.impl.NodeImpl#getComposite <em>Composite</em>}</li>
  * </ul>
  * </p>
@@ -53,6 +54,26 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected static final String TYPE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected String type = TYPE_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getComposite() <em>Composite</em>}' containment reference.
@@ -106,6 +127,29 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
     name = newName;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, PFPackage.NODE__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getType()
+  {
+    return type;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setType(String newType)
+  {
+    String oldType = type;
+    type = newType;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, PFPackage.NODE__TYPE, oldType, type));
   }
 
   /**
@@ -184,6 +228,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
     {
       case PFPackage.NODE__NAME:
         return getName();
+      case PFPackage.NODE__TYPE:
+        return getType();
       case PFPackage.NODE__COMPOSITE:
         return getComposite();
     }
@@ -202,6 +248,9 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
     {
       case PFPackage.NODE__NAME:
         setName((String)newValue);
+        return;
+      case PFPackage.NODE__TYPE:
+        setType((String)newValue);
         return;
       case PFPackage.NODE__COMPOSITE:
         setComposite((CompositeObject)newValue);
@@ -223,6 +272,9 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
       case PFPackage.NODE__NAME:
         setName(NAME_EDEFAULT);
         return;
+      case PFPackage.NODE__TYPE:
+        setType(TYPE_EDEFAULT);
+        return;
       case PFPackage.NODE__COMPOSITE:
         setComposite((CompositeObject)null);
         return;
@@ -242,6 +294,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
     {
       case PFPackage.NODE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case PFPackage.NODE__TYPE:
+        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
       case PFPackage.NODE__COMPOSITE:
         return composite != null;
     }
@@ -261,6 +315,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
+    result.append(", type: ");
+    result.append(type);
     result.append(')');
     return result.toString();
   }

@@ -98,6 +98,16 @@ public class EventcalculusAdapterFactory extends AdapterFactoryImpl
         return createIntTermAdapter();
       }
       @Override
+      public Adapter caseConstTerm(ConstTerm object)
+      {
+        return createConstTermAdapter();
+      }
+      @Override
+      public Adapter caseVarTerm(VarTerm object)
+      {
+        return createVarTermAdapter();
+      }
+      @Override
       public Adapter caseIntExpr(IntExpr object)
       {
         return createIntExprAdapter();
@@ -270,6 +280,36 @@ public class EventcalculusAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createIntTermAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.event.eventcalculus.ConstTerm <em>Const Term</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.event.eventcalculus.ConstTerm
+   * @generated
+   */
+  public Adapter createConstTermAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.event.eventcalculus.VarTerm <em>Var Term</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.event.eventcalculus.VarTerm
+   * @generated
+   */
+  public Adapter createVarTermAdapter()
   {
     return null;
   }
