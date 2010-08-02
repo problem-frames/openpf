@@ -45,8 +45,9 @@ http-proxy-host = wwwcache.open.ac.uk
 http-proxy-port = 80
 
   * Install an compatible Eclipse Modeling Tools IDE
-    Helios
-    download eclipse-modeling-galileo-SR2-incubation-linux-gtk.tar.gz
+    Helios (Linux or the platform of your choice such as macosx-cocoa or win32)
+    download eclipse-modeling-helios-incubation-linux-gtk.tar.gz
+  * In the Help menu, select Install Modeling Components > xtext text-to-model and Acceleo model-to-text components
   * Run Eclipse
     The following menu/dialog options are needed to build the system
     * import the projects from the workspace
