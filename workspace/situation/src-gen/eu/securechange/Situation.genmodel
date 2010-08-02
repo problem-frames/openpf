@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/situation/src-gen"
+    editDirectory="/situation.edit/src" editorDirectory="/situation.editor/src" modelPluginID="situation"
+    forceOverwrite="true" modelName="Situation" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="situation.edit" editorPluginID="situation.editor">
+  <genPackages prefix="Situation" basePackage="eu.securechange" disposableProviderFactory="true"
+      ecorePackage="Situation.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Situation.ecore#//PropositionType">
+      <genEnumLiterals ecoreEnumLiteral="Situation.ecore#//PropositionType/DomainAssumption"/>
+      <genEnumLiterals ecoreEnumLiteral="Situation.ecore#//PropositionType/Function"/>
+      <genEnumLiterals ecoreEnumLiteral="Situation.ecore#//PropositionType/Security"/>
+      <genEnumLiterals ecoreEnumLiteral="Situation.ecore#//PropositionType/Anti"/>
+      <genEnumLiterals ecoreEnumLiteral="Situation.ecore#//PropositionType/QualityProposition"/>
+      <genEnumLiterals ecoreEnumLiteral="Situation.ecore#//PropositionType/Argument"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Situation.ecore#//DomainType">
+      <genEnumLiterals ecoreEnumLiteral="Situation.ecore#//DomainType/Machine"/>
+      <genEnumLiterals ecoreEnumLiteral="Situation.ecore#//DomainType/Requirement"/>
+      <genEnumLiterals ecoreEnumLiteral="Situation.ecore#//DomainType/Specification"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Situation.ecore#//DecompositionLabel">
+      <genEnumLiterals ecoreEnumLiteral="Situation.ecore#//DecompositionLabel/AND"/>
+      <genEnumLiterals ecoreEnumLiteral="Situation.ecore#//DecompositionLabel/OR"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Situation.ecore#//ContributionLabel">
+      <genEnumLiterals ecoreEnumLiteral="Situation.ecore#//ContributionLabel/HURT"/>
+      <genEnumLiterals ecoreEnumLiteral="Situation.ecore#//ContributionLabel/HELP"/>
+      <genEnumLiterals ecoreEnumLiteral="Situation.ecore#//ContributionLabel/BREAK"/>
+      <genEnumLiterals ecoreEnumLiteral="Situation.ecore#//ContributionLabel/MAKE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Situation.ecore#//DependencyType">
+      <genEnumLiterals ecoreEnumLiteral="Situation.ecore#//DependencyType/TRUST"/>
+      <genEnumLiterals ecoreEnumLiteral="Situation.ecore#//DependencyType/DELEGATE"/>
+    </genEnums>
+    <genClasses ecoreClass="Situation.ecore#//Situation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Situation.ecore#//Situation/time"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Situation.ecore#//Situation/world"/>
+    </genClasses>
+    <genClasses ecoreClass="Situation.ecore#//World">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Situation.ecore#//World/entities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Situation.ecore#//World/domains"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Situation.ecore#//World/relationships"/>
+    </genClasses>
+    <genClasses ecoreClass="Situation.ecore#//Thing"/>
+    <genClasses ecoreClass="Situation.ecore#//Event">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Situation.ecore#//Event/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Situation.ecore#//Object"/>
+    <genClasses ecoreClass="Situation.ecore#//PhysicalWorld">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Situation.ecore#//PhysicalWorld/entities"/>
+    </genClasses>
+    <genClasses ecoreClass="Situation.ecore#//BeliefWorld">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Situation.ecore#//BeliefWorld/domains"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Situation.ecore#//BeliefWorld/relationships"/>
+    </genClasses>
+    <genClasses ecoreClass="Situation.ecore#//Proposition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Situation.ecore#//Proposition/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Situation.ecore#//Proposition/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Situation.ecore#//Entity"/>
+    <genClasses ecoreClass="Situation.ecore#//Domain">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Situation.ecore#//Domain/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Situation.ecore#//Domain/properties"/>
+    </genClasses>
+    <genClasses ecoreClass="Situation.ecore#//Actor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Situation.ecore#//Actor/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Situation.ecore#//Stakeholder"/>
+    <genClasses ecoreClass="Situation.ecore#//Attacker"/>
+    <genClasses ecoreClass="Situation.ecore#//Process"/>
+    <genClasses ecoreClass="Situation.ecore#//NaturalProcess">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Situation.ecore#//NaturalProcess/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Situation.ecore#//NaturalProcess/activities"/>
+    </genClasses>
+    <genClasses ecoreClass="Situation.ecore#//HumanActivity"/>
+    <genClasses ecoreClass="Situation.ecore#//Action">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Situation.ecore#//Action/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Situation.ecore#//Resource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Situation.ecore#//Resource/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Situation.ecore#//Asset"/>
+    <genClasses ecoreClass="Situation.ecore#//Relationship">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Situation.ecore#//Relationship/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Situation.ecore#//Relationship/things"/>
+    </genClasses>
+    <genClasses ecoreClass="Situation.ecore#//Wants"/>
+    <genClasses ecoreClass="Situation.ecore#//Does"/>
+    <genClasses ecoreClass="Situation.ecore#//Decomposes">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Situation.ecore#//Decomposes/type"/>
+    </genClasses>
+    <genClasses ecoreClass="Situation.ecore#//Contributes">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Situation.ecore#//Contributes/type"/>
+    </genClasses>
+    <genClasses ecoreClass="Situation.ecore#//Fulfils"/>
+    <genClasses ecoreClass="Situation.ecore#//Depends">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Situation.ecore#//Depends/kind"/>
+    </genClasses>
+    <genClasses ecoreClass="Situation.ecore#//Provides"/>
+    <genClasses ecoreClass="Situation.ecore#//Consumes"/>
+    <genClasses ecoreClass="Situation.ecore#//Exploits"/>
+    <genClasses ecoreClass="Situation.ecore#//Damages"/>
+    <genClasses ecoreClass="Situation.ecore#//Attack"/>
+    <genClasses ecoreClass="Situation.ecore#//Argues"/>
+    <genClasses ecoreClass="Situation.ecore#//Activity">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Situation.ecore#//Activity/actions"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

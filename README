@@ -45,6 +45,7 @@ http-proxy-host = wwwcache.open.ac.uk
 http-proxy-port = 80
 
   * Install an compatible Eclipse Modeling Tools IDE
+    Helios
     download eclipse-modeling-galileo-SR2-incubation-linux-gtk.tar.gz
   * Run Eclipse
     The following menu/dialog options are needed to build the system

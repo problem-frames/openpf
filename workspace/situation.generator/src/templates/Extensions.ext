@@ -1,0 +1,4 @@
+import Situation::situation;
+
+sortedGreetings(Model this) :
+	this.greetings.sortBy(g|g.name.toLowerCase());

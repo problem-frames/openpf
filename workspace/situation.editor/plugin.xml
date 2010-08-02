@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="eu.securechange.situation.presentation.SituationModelWizardID"
+            name="%_UI_SituationModelWizard_label"
+            class="eu.securechange.situation.presentation.SituationModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SituationModelFile.gif">
+         <description>%_UI_SituationModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="eu.securechange.situation.presentation.SituationEditorID"
+            name="%_UI_SituationEditor_label"
+            icon="icons/full/obj16/SituationModelFile.gif"
+            extensions="situation"
+            class="eu.securechange.situation.presentation.SituationEditor"
+            contributorClass="eu.securechange.situation.presentation.SituationActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

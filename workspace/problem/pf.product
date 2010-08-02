@@ -346,6 +346,11 @@
       <plugin id="problem.editor"/>
       <plugin id="problem.generator"/>
       <plugin id="problem.ui"/>
+      <plugin id="situation"/>
+      <plugin id="situation.edit"/>
+      <plugin id="situation.editor"/>
+      <plugin id="situation.generator"/>
+      <plugin id="situation.ui"/>
    </plugins>
 
 
