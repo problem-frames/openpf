@@ -1,6 +1,6 @@
 grammar eu.securechange.Situation with org.eclipse.xtext.common.Terminals
 generate situation "http://securechange.eu/situation" 
-
+/*
 Situation: ("model" time=ID ":")? world=World;
 
 World: {World} (entities+=Entity | domains+=Domain | relationships+=Relationship)*;
@@ -10,43 +10,40 @@ Event: "event" name=ID;
 Object: Proposition | Entity | Relationship;
 PhysicalWorld: {PhysicalWorld} (entities+=Entity)*;
 BeliefWorld: {BeliefWorld} ( domains+=Domain | relationships+=Relationship )*;
+*/
 
-Proposition: type=PropositionType name=ID;
-
-enum PropositionType: DomainAssumption="DA" | Function="FR" | Security="SR" | Anti="AR" | QualityProposition="Q" | Argument="A";
-
-Entity: Actor | Process | Resource;
-
-Domain: type=DomainType properties+=Proposition ("," properties+=Proposition)*;
+Situation: ("model" time=ID ":")? (things+=Thing)*;
+Thing: Entity | Relationship | Domain;
+Entity: type=EntityType name=ID;
+Relationship: type=RelationshipType "(" source=[Thing] "," target=[Thing] ")";
+Domain: type=DomainType properties+=Entity ("," properties+=Entity)*;
+enum EntityType: 
+    DomainAssumption="DA" | Function="FR" | Security="SR" | Anti="AR" | QualityProposition="Q" | Argument="A"
+  | Actor="actor" | Action="action" | Attacker="attacker" | Process="process" | Activity="activity" | Resource="resource" | Asset="asset" 
+  | Event="event";
 enum DomainType: Machine="M" | Requirement="R" | Specification="S";
 
-Actor: Stakeholder | Attacker;
-Stakeholder: "actor" name=ID;
-Attacker: "attacker" name=ID;  
+//Proposition: type=PropositionType name=ID;
+//enum PropositionType: DomainAssumption="DA" | Function="FR" | Security="SR" | Anti="AR" | QualityProposition="Q" | Argument="A";
+//Entity: Actor | Process | Resource;
+//Actor: Stakeholder | Attacker;
+//Stakeholder: "actor" name=ID;
+//Attacker: "attacker" name=ID;  
+//Process: NaturalProcess | HumanActivity;
+//NaturalProcess: "process" name=ID ("{" (activities+=[Process])* "}")?;
+//HumanActivity: {Activity} "activity" name=ID (actions+=Action)*;
+//Action: "action" name=ID;
+//Resource: "resource" name=ID | Asset;
+//Asset: "asset" name=ID;
 
-Process: NaturalProcess | HumanActivity;
-NaturalProcess: ("process" name=ID ("{" (activities+=[Process])* "}")?);
-HumanActivity: {Activity} "activity" (actions+=Action)*;
-Action: "action" name=ID;
-
-Resource: "resource" name=ID | Asset;
-Asset: "asset" name=ID;
-
-Relationship: Wants|Does|Decomposes|Contributes|Fulfils|Provides|Consumes|Depends|Exploits|Damages|Attack|Argues;
-Wants: "wants" name=ID "(" things+=[Thing] "," things+=[Thing] ")";
-Does:  "does" name=ID "(" things+=[Thing] "," things+=[Thing] ")";
-Decomposes: type=DecompositionLabel name=ID "(" things+=[Thing] ("," things+=[Thing])+ ")";
-enum DecompositionLabel: AND="and" | OR="or";
-Contributes: type=ContributionLabel name=ID "(" things+=[Thing] ("," things+=[Thing])+ ")";
-enum ContributionLabel: HURT="-" | HELP="+" | BREAK="--" | MAKE="++";
-Fulfils: "fulfils" name=ID "(" things+=[Thing] ("," things+=[Thing])+ ")";
-Depends:  kind=DependencyType name=ID "(" things+=[Thing] "," things+=[Thing] "," things+=[Thing] ")";
-enum DependencyType: TRUST="trusts" | DELEGATE="delegates";
-Provides: "provides" name=ID "(" things+=[Thing] ("," things+=[Thing])+ ")";
-Consumes: "consumes" name=ID "(" things+=[Thing] ("," things+=[Thing])+ ")";
-Exploits: "exploits" name=ID "(" things+=[Thing] ("," things+=[Thing])+ ")";
-Damages:  "damages" name=ID "(" things+=[Thing] ("," things+=[Thing])+ ")";
-Attack: "attack" name=ID "(" things+=[Thing] ("," things+=[Thing])+ ")";
-Argues: "argues" name=ID "(" things+=[Thing] ("," things+=[Thing])+ ")";
-
+enum RelationshipType: 
+     Wants="wants" 
+    |Does="does" 
+    |AND="and" | OR="or"
+    |TRUST="trusts" | DELEGATE="delegates"
+    |HURT="-" | HELP="+" | BREAK="--" | MAKE="++"
+	|Fulfils="fulfils" 
+	|Provides="provides"|Consumes="consumes"
+	|Exploits="exploits"|Damages="damages"|Attacks="attacks"
+	|Argues="argues";
 terminal ID: ('#' (!('#'))+ '#') | ('^'? ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*);

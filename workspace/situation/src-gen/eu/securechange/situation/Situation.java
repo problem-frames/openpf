@@ -5,6 +5,8 @@
  */
 package eu.securechange.situation;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link eu.securechange.situation.Situation#getTime <em>Time</em>}</li>
- *   <li>{@link eu.securechange.situation.Situation#getWorld <em>World</em>}</li>
+ *   <li>{@link eu.securechange.situation.Situation#getThings <em>Things</em>}</li>
  * </ul>
  * </p>
  *
@@ -53,29 +55,19 @@ public interface Situation extends EObject
   void setTime(String value);
 
   /**
-	 * Returns the value of the '<em><b>World</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Things</b></em>' containment reference list.
+	 * The list contents are of type {@link eu.securechange.situation.Thing}.
 	 * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>World</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Things</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>World</em>' containment reference.
-	 * @see #setWorld(World)
-	 * @see eu.securechange.situation.SituationPackage#getSituation_World()
+	 * @return the value of the '<em>Things</em>' containment reference list.
+	 * @see eu.securechange.situation.SituationPackage#getSituation_Things()
 	 * @model containment="true"
 	 * @generated
 	 */
-  World getWorld();
-
-  /**
-	 * Sets the value of the '{@link eu.securechange.situation.Situation#getWorld <em>World</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>World</em>' containment reference.
-	 * @see #getWorld()
-	 * @generated
-	 */
-  void setWorld(World value);
+  EList<Thing> getThings();
 
 } // Situation

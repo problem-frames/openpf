@@ -9,8 +9,6 @@ package eu.securechange.situation.tests;
 import eu.securechange.situation.Domain;
 import eu.securechange.situation.SituationFactory;
 
-import junit.framework.TestCase;
-
 import junit.textui.TestRunner;
 
 /**
@@ -19,15 +17,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DomainTest extends TestCase {
-
-	/**
-	 * The fixture for this Domain test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Domain fixture = null;
+public class DomainTest extends ThingTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -49,23 +39,14 @@ public class DomainTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Domain test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(Domain fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Domain test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected Domain getFixture() {
-		return fixture;
+		return (Domain)fixture;
 	}
 
 	/**

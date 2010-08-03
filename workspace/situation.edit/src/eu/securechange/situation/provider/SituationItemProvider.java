@@ -106,7 +106,7 @@ public class SituationItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SituationPackage.Literals.SITUATION__WORLD);
+			childrenFeatures.add(SituationPackage.Literals.SITUATION__THINGS);
 		}
 		return childrenFeatures;
 	}
@@ -164,7 +164,7 @@ public class SituationItemProvider
 			case SituationPackage.SITUATION__TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SituationPackage.SITUATION__WORLD:
+			case SituationPackage.SITUATION__THINGS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -184,8 +184,23 @@ public class SituationItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SituationPackage.Literals.SITUATION__WORLD,
-				 SituationFactory.eINSTANCE.createWorld()));
+				(SituationPackage.Literals.SITUATION__THINGS,
+				 SituationFactory.eINSTANCE.createThing()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SituationPackage.Literals.SITUATION__THINGS,
+				 SituationFactory.eINSTANCE.createEntity()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SituationPackage.Literals.SITUATION__THINGS,
+				 SituationFactory.eINSTANCE.createRelationship()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SituationPackage.Literals.SITUATION__THINGS,
+				 SituationFactory.eINSTANCE.createDomain()));
 	}
 
 	/**

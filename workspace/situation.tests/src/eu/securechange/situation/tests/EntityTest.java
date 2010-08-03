@@ -17,7 +17,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class EntityTest extends ObjectTest {
+public class EntityTest extends ThingTest {
 
 	/**
 	 * <!-- begin-user-doc -->

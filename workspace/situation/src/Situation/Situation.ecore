@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="situation"
+    nsURI="http://securechange.eu/situation" nsPrefix="situation">
+  <eAnnotations source="gmf">
+    <details key="foo" value="bar"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Situation">
+    <eAnnotations source="gmf.diagram">
+      <details key="foo" value="bar"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="things" upperBound="-1"
+        eType="#//Thing" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Thing"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Entity" eSuperTypes="#//Thing">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EntityType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Relationship" eSuperTypes="#//Thing">
+    <eAnnotations source="gmf.link">
+      <details key="source" value="source"/>
+      <details key="target" value="target"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//RelationshipType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Thing"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Thing"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Domain" eSuperTypes="#//Thing">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="type"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//DomainType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
+        eType="#//Entity" containment="true">
+      <eAnnotations source="gmf.containment">
+        <details key="foo" value="bar"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EntityType">
+    <eLiterals name="DomainAssumption"/>
+    <eLiterals name="Function" value="1"/>
+    <eLiterals name="Security" value="2"/>
+    <eLiterals name="Anti" value="3"/>
+    <eLiterals name="QualityProposition" value="4"/>
+    <eLiterals name="Argument" value="5"/>
+    <eLiterals name="Actor" value="6"/>
+    <eLiterals name="Action" value="7"/>
+    <eLiterals name="Attacker" value="8"/>
+    <eLiterals name="Process" value="9"/>
+    <eLiterals name="Activity" value="10"/>
+    <eLiterals name="Resource" value="11"/>
+    <eLiterals name="Asset" value="12"/>
+    <eLiterals name="Event" value="13"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DomainType">
+    <eLiterals name="Machine"/>
+    <eLiterals name="Requirement" value="1"/>
+    <eLiterals name="Specification" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RelationshipType">
+    <eLiterals name="Wants"/>
+    <eLiterals name="Does" value="1"/>
+    <eLiterals name="AND" value="2"/>
+    <eLiterals name="OR" value="3"/>
+    <eLiterals name="TRUST" value="4"/>
+    <eLiterals name="DELEGATE" value="5"/>
+    <eLiterals name="HURT" value="6"/>
+    <eLiterals name="HELP" value="7"/>
+    <eLiterals name="BREAK" value="8"/>
+    <eLiterals name="MAKE" value="9"/>
+    <eLiterals name="Fulfils" value="10"/>
+    <eLiterals name="Provides" value="11"/>
+    <eLiterals name="Consumes" value="12"/>
+    <eLiterals name="Exploits" value="13"/>
+    <eLiterals name="Damages" value="14"/>
+    <eLiterals name="Attacks" value="15"/>
+    <eLiterals name="Argues" value="16"/>
+  </eClassifiers>
+</ecore:EPackage>

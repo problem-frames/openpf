@@ -7,16 +7,23 @@ package eu.securechange.situation.impl;
 
 import eu.securechange.situation.Situation;
 import eu.securechange.situation.SituationPackage;
-import eu.securechange.situation.World;
+import eu.securechange.situation.Thing;
+
+import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +33,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link eu.securechange.situation.impl.SituationImpl#getTime <em>Time</em>}</li>
- *   <li>{@link eu.securechange.situation.impl.SituationImpl#getWorld <em>World</em>}</li>
+ *   <li>{@link eu.securechange.situation.impl.SituationImpl#getThings <em>Things</em>}</li>
  * </ul>
  * </p>
  *
@@ -55,14 +62,14 @@ public class SituationImpl extends MinimalEObjectImpl.Container implements Situa
   protected String time = TIME_EDEFAULT;
 
   /**
-	 * The cached value of the '{@link #getWorld() <em>World</em>}' containment reference.
+	 * The cached value of the '{@link #getThings() <em>Things</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getWorld()
+	 * @see #getThings()
 	 * @generated
 	 * @ordered
 	 */
-  protected World world;
+  protected EList<Thing> things;
 
   /**
 	 * <!-- begin-user-doc -->
@@ -113,45 +120,12 @@ public class SituationImpl extends MinimalEObjectImpl.Container implements Situa
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public World getWorld()
+  public EList<Thing> getThings()
   {
-		return world;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public NotificationChain basicSetWorld(World newWorld, NotificationChain msgs)
-  {
-		World oldWorld = world;
-		world = newWorld;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SituationPackage.SITUATION__WORLD, oldWorld, newWorld);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
+		if (things == null) {
+			things = new EObjectContainmentEList<Thing>(Thing.class, this, SituationPackage.SITUATION__THINGS);
 		}
-		return msgs;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public void setWorld(World newWorld)
-  {
-		if (newWorld != world) {
-			NotificationChain msgs = null;
-			if (world != null)
-				msgs = ((InternalEObject)world).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SituationPackage.SITUATION__WORLD, null, msgs);
-			if (newWorld != null)
-				msgs = ((InternalEObject)newWorld).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SituationPackage.SITUATION__WORLD, null, msgs);
-			msgs = basicSetWorld(newWorld, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SituationPackage.SITUATION__WORLD, newWorld, newWorld));
+		return things;
 	}
 
   /**
@@ -163,8 +137,8 @@ public class SituationImpl extends MinimalEObjectImpl.Container implements Situa
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case SituationPackage.SITUATION__WORLD:
-				return basicSetWorld(null, msgs);
+			case SituationPackage.SITUATION__THINGS:
+				return ((InternalEList<?>)getThings()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -180,8 +154,8 @@ public class SituationImpl extends MinimalEObjectImpl.Container implements Situa
 		switch (featureID) {
 			case SituationPackage.SITUATION__TIME:
 				return getTime();
-			case SituationPackage.SITUATION__WORLD:
-				return getWorld();
+			case SituationPackage.SITUATION__THINGS:
+				return getThings();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -191,6 +165,7 @@ public class SituationImpl extends MinimalEObjectImpl.Container implements Situa
    * <!-- end-user-doc -->
 	 * @generated
 	 */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -198,8 +173,9 @@ public class SituationImpl extends MinimalEObjectImpl.Container implements Situa
 			case SituationPackage.SITUATION__TIME:
 				setTime((String)newValue);
 				return;
-			case SituationPackage.SITUATION__WORLD:
-				setWorld((World)newValue);
+			case SituationPackage.SITUATION__THINGS:
+				getThings().clear();
+				getThings().addAll((Collection<? extends Thing>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -217,8 +193,8 @@ public class SituationImpl extends MinimalEObjectImpl.Container implements Situa
 			case SituationPackage.SITUATION__TIME:
 				setTime(TIME_EDEFAULT);
 				return;
-			case SituationPackage.SITUATION__WORLD:
-				setWorld((World)null);
+			case SituationPackage.SITUATION__THINGS:
+				getThings().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -235,8 +211,8 @@ public class SituationImpl extends MinimalEObjectImpl.Container implements Situa
 		switch (featureID) {
 			case SituationPackage.SITUATION__TIME:
 				return TIME_EDEFAULT == null ? time != null : !TIME_EDEFAULT.equals(time);
-			case SituationPackage.SITUATION__WORLD:
-				return world != null;
+			case SituationPackage.SITUATION__THINGS:
+				return things != null && !things.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

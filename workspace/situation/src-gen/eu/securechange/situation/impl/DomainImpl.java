@@ -7,7 +7,7 @@ package eu.securechange.situation.impl;
 
 import eu.securechange.situation.Domain;
 import eu.securechange.situation.DomainType;
-import eu.securechange.situation.Proposition;
+import eu.securechange.situation.Entity;
 import eu.securechange.situation.SituationPackage;
 
 import java.util.Collection;
@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -40,7 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class DomainImpl extends MinimalEObjectImpl.Container implements Domain
+public class DomainImpl extends ThingImpl implements Domain
 {
   /**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -70,7 +69,7 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain
 	 * @generated
 	 * @ordered
 	 */
-  protected EList<Proposition> properties;
+  protected EList<Entity> properties;
 
   /**
 	 * <!-- begin-user-doc -->
@@ -121,10 +120,10 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EList<Proposition> getProperties()
+  public EList<Entity> getProperties()
   {
 		if (properties == null) {
-			properties = new EObjectContainmentEList<Proposition>(Proposition.class, this, SituationPackage.DOMAIN__PROPERTIES);
+			properties = new EObjectContainmentEList<Entity>(Entity.class, this, SituationPackage.DOMAIN__PROPERTIES);
 		}
 		return properties;
 	}
@@ -176,7 +175,7 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain
 				return;
 			case SituationPackage.DOMAIN__PROPERTIES:
 				getProperties().clear();
-				getProperties().addAll((Collection<? extends Proposition>)newValue);
+				getProperties().addAll((Collection<? extends Entity>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

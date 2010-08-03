@@ -8,6 +8,7 @@ package eu.securechange.situation.provider;
 
 
 import eu.securechange.situation.Relationship;
+import eu.securechange.situation.RelationshipType;
 import eu.securechange.situation.SituationPackage;
 
 import java.util.Collection;
@@ -33,7 +34,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * @generated
  */
 public class RelationshipItemProvider
-	extends ObjectItemProvider
+	extends ThingItemProvider
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -61,26 +62,27 @@ public class RelationshipItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
-			addThingsPropertyDescriptor(object);
+			addTypePropertyDescriptor(object);
+			addSourcePropertyDescriptor(object);
+			addTargetPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
+	 * This adds a property descriptor for the Type feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNamePropertyDescriptor(Object object) {
+	protected void addTypePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Relationship_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Relationship_name_feature", "_UI_Relationship_type"),
-				 SituationPackage.Literals.RELATIONSHIP__NAME,
+				 getString("_UI_Relationship_type_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Relationship_type_feature", "_UI_Relationship_type"),
+				 SituationPackage.Literals.RELATIONSHIP__TYPE,
 				 true,
 				 false,
 				 false,
@@ -90,19 +92,41 @@ public class RelationshipItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Things feature.
+	 * This adds a property descriptor for the Source feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addThingsPropertyDescriptor(Object object) {
+	protected void addSourcePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Relationship_things_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Relationship_things_feature", "_UI_Relationship_type"),
-				 SituationPackage.Literals.RELATIONSHIP__THINGS,
+				 getString("_UI_Relationship_source_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Relationship_source_feature", "_UI_Relationship_type"),
+				 SituationPackage.Literals.RELATIONSHIP__SOURCE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Target feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTargetPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Relationship_target_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Relationship_target_feature", "_UI_Relationship_type"),
+				 SituationPackage.Literals.RELATIONSHIP__TARGET,
 				 true,
 				 false,
 				 true,
@@ -130,7 +154,8 @@ public class RelationshipItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Relationship)object).getName();
+		RelationshipType labelValue = ((Relationship)object).getType();
+		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Relationship_type") :
 			getString("_UI_Relationship_type") + " " + label;
@@ -148,7 +173,7 @@ public class RelationshipItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Relationship.class)) {
-			case SituationPackage.RELATIONSHIP__NAME:
+			case SituationPackage.RELATIONSHIP__TYPE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

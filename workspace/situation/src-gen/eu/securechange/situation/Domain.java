@@ -7,8 +7,6 @@ package eu.securechange.situation;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Domain</b></em>'.
@@ -26,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Domain extends EObject
+public interface Domain extends Thing
 {
   /**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
@@ -59,7 +57,7 @@ public interface Domain extends EObject
 
   /**
 	 * Returns the value of the '<em><b>Properties</b></em>' containment reference list.
-	 * The list contents are of type {@link eu.securechange.situation.Proposition}.
+	 * The list contents are of type {@link eu.securechange.situation.Entity}.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Properties</em>' containment reference list isn't clear,
@@ -71,6 +69,6 @@ public interface Domain extends EObject
 	 * @model containment="true"
 	 * @generated
 	 */
-  EList<Proposition> getProperties();
+  EList<Entity> getProperties();
 
 } // Domain

@@ -13,61 +13,59 @@ T13 : 'SR' ;
 T14 : 'AR' ;
 T15 : 'Q' ;
 T16 : 'A' ;
-T17 : 'M' ;
-T18 : 'R' ;
-T19 : 'S' ;
-T20 : 'and' ;
-T21 : 'or' ;
-T22 : '-' ;
-T23 : '+' ;
-T24 : '--' ;
-T25 : '++' ;
-T26 : 'trusts' ;
-T27 : 'delegates' ;
-T28 : 'model' ;
-T29 : ':' ;
-T30 : 'event' ;
-T31 : ',' ;
-T32 : 'actor' ;
-T33 : 'attacker' ;
-T34 : 'process' ;
-T35 : '{' ;
-T36 : '}' ;
-T37 : 'activity' ;
-T38 : 'action' ;
-T39 : 'resource' ;
-T40 : 'asset' ;
-T41 : 'wants' ;
-T42 : '(' ;
-T43 : ')' ;
-T44 : 'does' ;
-T45 : 'fulfils' ;
-T46 : 'provides' ;
-T47 : 'consumes' ;
-T48 : 'exploits' ;
-T49 : 'damages' ;
-T50 : 'attack' ;
-T51 : 'argues' ;
+T17 : 'actor' ;
+T18 : 'action' ;
+T19 : 'attacker' ;
+T20 : 'process' ;
+T21 : 'activity' ;
+T22 : 'resource' ;
+T23 : 'asset' ;
+T24 : 'event' ;
+T25 : 'M' ;
+T26 : 'R' ;
+T27 : 'S' ;
+T28 : 'wants' ;
+T29 : 'does' ;
+T30 : 'and' ;
+T31 : 'or' ;
+T32 : 'trusts' ;
+T33 : 'delegates' ;
+T34 : '-' ;
+T35 : '+' ;
+T36 : '--' ;
+T37 : '++' ;
+T38 : 'fulfils' ;
+T39 : 'provides' ;
+T40 : 'consumes' ;
+T41 : 'exploits' ;
+T42 : 'damages' ;
+T43 : 'attacks' ;
+T44 : 'argues' ;
+T45 : 'model' ;
+T46 : ':' ;
+T47 : '(' ;
+T48 : ',' ;
+T49 : ')' ;
 
-// $ANTLR src "../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g" 6554
+// $ANTLR src "../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g" 1280
 RULE_ID : ('#' ~('#')+ '#'|'^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*);
 
-// $ANTLR src "../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g" 6556
+// $ANTLR src "../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g" 1282
 RULE_INT : ('0'..'9')+;
 
-// $ANTLR src "../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g" 6558
+// $ANTLR src "../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g" 1284
 RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\'');
 
-// $ANTLR src "../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g" 6560
+// $ANTLR src "../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g" 1286
 RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 
-// $ANTLR src "../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g" 6562
+// $ANTLR src "../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g" 1288
 RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
-// $ANTLR src "../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g" 6564
+// $ANTLR src "../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g" 1290
 RULE_WS : (' '|'\t'|'\r'|'\n')+;
 
-// $ANTLR src "../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g" 6566
+// $ANTLR src "../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g" 1292
 RULE_ANY_OTHER : .;
 
 

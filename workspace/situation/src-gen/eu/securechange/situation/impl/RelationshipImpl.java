@@ -6,20 +6,16 @@
 package eu.securechange.situation.impl;
 
 import eu.securechange.situation.Relationship;
+import eu.securechange.situation.RelationshipType;
 import eu.securechange.situation.SituationPackage;
 import eu.securechange.situation.Thing;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,44 +24,55 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link eu.securechange.situation.impl.RelationshipImpl#getName <em>Name</em>}</li>
- *   <li>{@link eu.securechange.situation.impl.RelationshipImpl#getThings <em>Things</em>}</li>
+ *   <li>{@link eu.securechange.situation.impl.RelationshipImpl#getType <em>Type</em>}</li>
+ *   <li>{@link eu.securechange.situation.impl.RelationshipImpl#getSource <em>Source</em>}</li>
+ *   <li>{@link eu.securechange.situation.impl.RelationshipImpl#getTarget <em>Target</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class RelationshipImpl extends ObjectImpl implements Relationship
+public class RelationshipImpl extends ThingImpl implements Relationship
 {
   /**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getType()
 	 * @generated
 	 * @ordered
 	 */
-  protected static final String NAME_EDEFAULT = null;
+  protected static final RelationshipType TYPE_EDEFAULT = RelationshipType.WANTS;
 
   /**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getType()
 	 * @generated
 	 * @ordered
 	 */
-  protected String name = NAME_EDEFAULT;
+  protected RelationshipType type = TYPE_EDEFAULT;
 
   /**
-	 * The cached value of the '{@link #getThings() <em>Things</em>}' reference list.
+	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getThings()
+	 * @see #getSource()
 	 * @generated
 	 * @ordered
 	 */
-  protected EList<Thing> things;
+  protected Thing source;
+
+  /**
+	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see #getTarget()
+	 * @generated
+	 * @ordered
+	 */
+  protected Thing target;
 
   /**
 	 * <!-- begin-user-doc -->
@@ -93,9 +100,9 @@ public class RelationshipImpl extends ObjectImpl implements Relationship
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public String getName()
+  public RelationshipType getType()
   {
-		return name;
+		return type;
 	}
 
   /**
@@ -103,12 +110,12 @@ public class RelationshipImpl extends ObjectImpl implements Relationship
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setName(String newName)
+  public void setType(RelationshipType newType)
   {
-		String oldName = name;
-		name = newName;
+		RelationshipType oldType = type;
+		type = newType == null ? TYPE_EDEFAULT : newType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SituationPackage.RELATIONSHIP__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, SituationPackage.RELATIONSHIP__TYPE, oldType, type));
 	}
 
   /**
@@ -116,12 +123,81 @@ public class RelationshipImpl extends ObjectImpl implements Relationship
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EList<Thing> getThings()
+  public Thing getSource()
   {
-		if (things == null) {
-			things = new EObjectResolvingEList<Thing>(Thing.class, this, SituationPackage.RELATIONSHIP__THINGS);
+		if (source != null && source.eIsProxy()) {
+			InternalEObject oldSource = (InternalEObject)source;
+			source = (Thing)eResolveProxy(oldSource);
+			if (source != oldSource) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SituationPackage.RELATIONSHIP__SOURCE, oldSource, source));
+			}
 		}
-		return things;
+		return source;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public Thing basicGetSource()
+  {
+		return source;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public void setSource(Thing newSource)
+  {
+		Thing oldSource = source;
+		source = newSource;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SituationPackage.RELATIONSHIP__SOURCE, oldSource, source));
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public Thing getTarget()
+  {
+		if (target != null && target.eIsProxy()) {
+			InternalEObject oldTarget = (InternalEObject)target;
+			target = (Thing)eResolveProxy(oldTarget);
+			if (target != oldTarget) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SituationPackage.RELATIONSHIP__TARGET, oldTarget, target));
+			}
+		}
+		return target;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public Thing basicGetTarget()
+  {
+		return target;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public void setTarget(Thing newTarget)
+  {
+		Thing oldTarget = target;
+		target = newTarget;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SituationPackage.RELATIONSHIP__TARGET, oldTarget, target));
 	}
 
   /**
@@ -133,10 +209,14 @@ public class RelationshipImpl extends ObjectImpl implements Relationship
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SituationPackage.RELATIONSHIP__NAME:
-				return getName();
-			case SituationPackage.RELATIONSHIP__THINGS:
-				return getThings();
+			case SituationPackage.RELATIONSHIP__TYPE:
+				return getType();
+			case SituationPackage.RELATIONSHIP__SOURCE:
+				if (resolve) return getSource();
+				return basicGetSource();
+			case SituationPackage.RELATIONSHIP__TARGET:
+				if (resolve) return getTarget();
+				return basicGetTarget();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -146,17 +226,18 @@ public class RelationshipImpl extends ObjectImpl implements Relationship
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SituationPackage.RELATIONSHIP__NAME:
-				setName((String)newValue);
+			case SituationPackage.RELATIONSHIP__TYPE:
+				setType((RelationshipType)newValue);
 				return;
-			case SituationPackage.RELATIONSHIP__THINGS:
-				getThings().clear();
-				getThings().addAll((Collection<? extends Thing>)newValue);
+			case SituationPackage.RELATIONSHIP__SOURCE:
+				setSource((Thing)newValue);
+				return;
+			case SituationPackage.RELATIONSHIP__TARGET:
+				setTarget((Thing)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -171,11 +252,14 @@ public class RelationshipImpl extends ObjectImpl implements Relationship
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SituationPackage.RELATIONSHIP__NAME:
-				setName(NAME_EDEFAULT);
+			case SituationPackage.RELATIONSHIP__TYPE:
+				setType(TYPE_EDEFAULT);
 				return;
-			case SituationPackage.RELATIONSHIP__THINGS:
-				getThings().clear();
+			case SituationPackage.RELATIONSHIP__SOURCE:
+				setSource((Thing)null);
+				return;
+			case SituationPackage.RELATIONSHIP__TARGET:
+				setTarget((Thing)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -190,10 +274,12 @@ public class RelationshipImpl extends ObjectImpl implements Relationship
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SituationPackage.RELATIONSHIP__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case SituationPackage.RELATIONSHIP__THINGS:
-				return things != null && !things.isEmpty();
+			case SituationPackage.RELATIONSHIP__TYPE:
+				return type != TYPE_EDEFAULT;
+			case SituationPackage.RELATIONSHIP__SOURCE:
+				return source != null;
+			case SituationPackage.RELATIONSHIP__TARGET:
+				return target != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -209,8 +295,8 @@ public class RelationshipImpl extends ObjectImpl implements Relationship
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
+		result.append(" (type: ");
+		result.append(type);
 		result.append(')');
 		return result.toString();
 	}

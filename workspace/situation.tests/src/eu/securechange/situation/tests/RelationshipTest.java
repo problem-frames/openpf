@@ -17,7 +17,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class RelationshipTest extends ObjectTest {
+public class RelationshipTest extends ThingTest {
 
 	/**
 	 * <!-- begin-user-doc -->
