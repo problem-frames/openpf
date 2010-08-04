@@ -24,7 +24,6 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see eu.securechange.situation.SituationFactory
  * @model kind="package"
- *        annotation="gmf foo='bar'"
  * @generated
  */
 public interface SituationPackage extends EPackage

@@ -1,7 +1,0 @@
-# Tracing options for the emfatic.diagram plug-in
-
-# Common issues
-emfatic.diagram/debug=false
-
-# Visual IDs
-emfatic.diagram/debug/visualID=false

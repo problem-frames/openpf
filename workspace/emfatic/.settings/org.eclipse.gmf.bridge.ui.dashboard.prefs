@@ -1,9 +1,0 @@
-#Tue Aug 03 17:10:16 BST 2010
-eclipse.preferences.version=1
-gmf_dashboard/domainGenerationModel=platform\:/resource/emfatic/model/filesystem.genmodel
-gmf_dashboard/domainModel=platform\:/resource/emfatic/model/filesystem.ecore
-gmf_dashboard/generationModel=platform\:/resource/emfatic/model/filesystem.gmfgen
-gmf_dashboard/graphicalDefinitionModel=platform\:/resource/emfatic/model/filesystem.gmfgraph
-gmf_dashboard/mappingModel=platform\:/resource/emfatic/model/filesystem.gmfmap
-gmf_dashboard/option_rcp=*
-gmf_dashboard/toolingDefinitionModel=platform\:/resource/emfatic/model/filesystem.gmftool

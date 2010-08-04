@@ -314,6 +314,7 @@
       <plugin id="org.eclipse.xtext.builder"/>
       <plugin id="org.eclipse.xtext.common.types"/>
       <plugin id="org.eclipse.xtext.generator"/>
+      <plugin id="org.eclipse.xtext.gmf.glue"/>
       <plugin id="org.eclipse.xtext.log4j" fragment=""/>
       <plugin id="org.eclipse.xtext.logging" fragment="true"/>
       <plugin id="org.eclipse.xtext.ui"/>
@@ -348,6 +349,7 @@
       <plugin id="problem.ui"/>
       <plugin id="situation"/>
       <plugin id="situation.diagram"/>
+      <plugin id="situation.diagram.extension"/>
       <plugin id="situation.edit"/>
       <plugin id="situation.editor"/>
       <plugin id="situation.generator"/>

@@ -136,10 +136,10 @@
    </extension>   
 
    <extension id="validationDecoratorProvider" name="ValidationDecorations" point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders">
-      <?gmfgen generated="true"?>
+      <?gmfgen generated="false"?>
       <decoratorProvider class="eu.securechange.situation.diagram.providers.SituationValidationDecoratorProvider">
          <Priority name="Lowest"/>
-         <object class="org.eclipse.gmf.runtime.diagram.ui.editparts.IPrimaryEditPart(org.eclipse.gmf.runtime.diagram.ui)" id="PRIMARY_VIEW"/>
+         <object class="org.eclipse.gmf.runtime.diagram.ui.editparts.IPrimaryEditPart" id="PRIMARY_VIEW"/>
          <context decoratorTargets="PRIMARY_VIEW"/>
       </decoratorProvider>
    </extension>
@@ -250,7 +250,7 @@
       <viewProvider class="eu.securechange.situation.diagram.providers.SituationViewProvider">
          <Priority name="Lowest"/>
          <object id="referencing-diagrams" class="org.eclipse.gmf.runtime.notation.Diagram">
-            <method name="getType()" value="situation"/>
+            <method name="getType()" value="sit"/>
          </object>
          <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Situation"/>
@@ -308,10 +308,10 @@
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders" id="decorator-provider">
-      <?gmfgen generated="true"?>
+      <?gmfgen generated="false"?>
       <decoratorProvider class="eu.securechange.situation.diagram.providers.SituationShortcutsDecoratorProvider">
          <Priority name="Lowest"/>
-         <object class="org.eclipse.gmf.runtime.notation.Node(org.eclipse.gmf.runtime.notation)" id="generated-top-nodes">
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-top-nodes">
             <method name="getType()" value="2001,2002"/>
          </object>
          <context decoratorTargets="generated-top-nodes"/>
@@ -483,7 +483,7 @@
             <or>
 	           <and>
     	          <instanceof value="org.eclipse.core.resources.IFile"/>
-        	      <test property="org.eclipse.core.resources.extension" value="situation"/>
+        	      <test property="org.eclipse.core.resources.extension" value="sit"/>
                </and>
                <instanceof value="eu.securechange.situation.diagram.navigator.SituationDomainNavigatorItem"/>
             </or>

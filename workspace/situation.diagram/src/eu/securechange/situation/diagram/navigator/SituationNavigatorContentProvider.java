@@ -240,6 +240,63 @@ public class SituationNavigatorContentProvider implements
 	private Object[] getViewChildren(View view, Object parentElement) {
 		switch (SituationVisualIDRegistry.getVisualID(view)) {
 
+		case RelationshipEditPart.VISUAL_ID: {
+			LinkedList<SituationAbstractNavigatorItem> result = new LinkedList<SituationAbstractNavigatorItem>();
+			Edge sv = (Edge) view;
+			SituationNavigatorGroup target = new SituationNavigatorGroup(
+					Messages.NavigatorGroupName_Relationship_4001_target,
+					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			SituationNavigatorGroup incominglinks = new SituationNavigatorGroup(
+					Messages.NavigatorGroupName_Relationship_4001_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			SituationNavigatorGroup source = new SituationNavigatorGroup(
+					Messages.NavigatorGroupName_Relationship_4001_source,
+					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			SituationNavigatorGroup outgoinglinks = new SituationNavigatorGroup(
+					Messages.NavigatorGroupName_Relationship_4001_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					SituationVisualIDRegistry.getType(EntityEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					SituationVisualIDRegistry.getType(DomainEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					SituationVisualIDRegistry
+							.getType(Entity2EditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					SituationVisualIDRegistry.getType(EntityEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					SituationVisualIDRegistry.getType(DomainEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					SituationVisualIDRegistry
+							.getType(Entity2EditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			if (!target.isEmpty()) {
+				result.add(target);
+			}
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			if (!source.isEmpty()) {
+				result.add(source);
+			}
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
 		case SituationEditPart.VISUAL_ID: {
 			LinkedList<SituationAbstractNavigatorItem> result = new LinkedList<SituationAbstractNavigatorItem>();
 			result.addAll(getForeignShortcuts((Diagram) view, parentElement));
@@ -304,71 +361,14 @@ public class SituationNavigatorContentProvider implements
 			return result.toArray();
 		}
 
-		case RelationshipEditPart.VISUAL_ID: {
-			LinkedList<SituationAbstractNavigatorItem> result = new LinkedList<SituationAbstractNavigatorItem>();
-			Edge sv = (Edge) view;
-			SituationNavigatorGroup target = new SituationNavigatorGroup(
-					Messages.NavigatorGroupName_Relationship_4001_target,
-					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			SituationNavigatorGroup incominglinks = new SituationNavigatorGroup(
-					Messages.NavigatorGroupName_Relationship_4001_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			SituationNavigatorGroup source = new SituationNavigatorGroup(
-					Messages.NavigatorGroupName_Relationship_4001_source,
-					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			SituationNavigatorGroup outgoinglinks = new SituationNavigatorGroup(
-					Messages.NavigatorGroupName_Relationship_4001_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					SituationVisualIDRegistry.getType(EntityEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					SituationVisualIDRegistry.getType(DomainEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					SituationVisualIDRegistry
-							.getType(Entity2EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					SituationVisualIDRegistry.getType(EntityEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					SituationVisualIDRegistry.getType(DomainEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					SituationVisualIDRegistry
-							.getType(Entity2EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			if (!target.isEmpty()) {
-				result.add(target);
-			}
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
-			if (!source.isEmpty()) {
-				result.add(source);
-			}
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
-			}
-			return result.toArray();
-		}
-
-		case Entity2EditPart.VISUAL_ID: {
+		case EntityEditPart.VISUAL_ID: {
 			LinkedList<SituationAbstractNavigatorItem> result = new LinkedList<SituationAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			SituationNavigatorGroup incominglinks = new SituationNavigatorGroup(
-					Messages.NavigatorGroupName_Entity_3001_incominglinks,
+					Messages.NavigatorGroupName_Entity_2001_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			SituationNavigatorGroup outgoinglinks = new SituationNavigatorGroup(
-					Messages.NavigatorGroupName_Entity_3001_outgoinglinks,
+					Messages.NavigatorGroupName_Entity_2001_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
@@ -390,14 +390,14 @@ public class SituationNavigatorContentProvider implements
 			return result.toArray();
 		}
 
-		case EntityEditPart.VISUAL_ID: {
+		case Entity2EditPart.VISUAL_ID: {
 			LinkedList<SituationAbstractNavigatorItem> result = new LinkedList<SituationAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			SituationNavigatorGroup incominglinks = new SituationNavigatorGroup(
-					Messages.NavigatorGroupName_Entity_2001_incominglinks,
+					Messages.NavigatorGroupName_Entity_3001_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			SituationNavigatorGroup outgoinglinks = new SituationNavigatorGroup(
-					Messages.NavigatorGroupName_Entity_2001_outgoinglinks,
+					Messages.NavigatorGroupName_Entity_3001_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),

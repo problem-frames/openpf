@@ -30,7 +30,7 @@ public enum DomainType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  MACHINE(0, "Machine", "Machine"),
+  MACHINE(0, "Machine", "M"),
 
   /**
 	 * The '<em><b>Requirement</b></em>' literal object.
@@ -40,7 +40,7 @@ public enum DomainType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  REQUIREMENT(1, "Requirement", "Requirement"),
+  REQUIREMENT(1, "Requirement", "R"),
 
   /**
 	 * The '<em><b>Specification</b></em>' literal object.
@@ -50,7 +50,7 @@ public enum DomainType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  SPECIFICATION(2, "Specification", "Specification");
+  SPECIFICATION(2, "Specification", "S");
 
   /**
 	 * The '<em><b>Machine</b></em>' literal value.
@@ -61,7 +61,7 @@ public enum DomainType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #MACHINE
-	 * @model name="Machine"
+	 * @model name="Machine" literal="M"
 	 * @generated
 	 * @ordered
 	 */
@@ -76,7 +76,7 @@ public enum DomainType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #REQUIREMENT
-	 * @model name="Requirement"
+	 * @model name="Requirement" literal="R"
 	 * @generated
 	 * @ordered
 	 */
@@ -91,7 +91,7 @@ public enum DomainType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #SPECIFICATION
-	 * @model name="Specification"
+	 * @model name="Specification" literal="S"
 	 * @generated
 	 * @ordered
 	 */

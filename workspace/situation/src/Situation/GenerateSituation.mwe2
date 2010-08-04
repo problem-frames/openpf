@@ -1,3 +1,10 @@
+/*******************************************************************************
+ * Copyright (c) 2010 itemis AG (http://www.itemis.eu) and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
 module Situation.Situation
 
 import org.eclipse.emf.mwe.utils.*
@@ -5,12 +12,12 @@ import org.eclipse.xtext.generator.*
 import org.eclipse.xtext.ui.generator.*
 
 var grammarURI = "classpath:/Situation/Situation.xtext"
-var file.extensions = "sit"
+var file.extensions = "situation"
 var projectName = "situation"
 var runtimeProject = "../${projectName}"
 
 Workflow {
-    bean = StandaloneSetup {
+	bean = StandaloneSetup {
 		platformUri = "${runtimeProject}/.."
 	}
 
@@ -47,28 +54,21 @@ Workflow {
 				fileExtensions = file.extensions
 			}
 
-			// The antlr parser generator fragment.
-			fragment = parser.antlr.XtextAntlrGeneratorFragment {
-			//  options = {
-			//		backtrack = true
-			//	}
-			}
+			// the Antlr parser
+			fragment = de.itemis.xtext.antlr.XtextAntlrGeneratorFragment {}
+
+			// check-based API for validation
+			// fragment = validation.CheckFragment {}
 
 			// java-based API for validation 
 			fragment = validation.JavaValidatorFragment {
 				composedCheck = "org.eclipse.xtext.validation.ImportUriValidator"
 				composedCheck = "org.eclipse.xtext.validation.NamesAreUniqueValidator"
-				// registerForImportedPackages = true
 			}
-
-			// scoping and exporting API
-			// fragment = scoping.ImportURIScopingFragment {}
-			// fragment = exporting.SimpleNamesFragment {}
 
 			// scoping and exporting API 
 			fragment = scoping.ImportNamespacesScopingFragment {}
 			fragment = exporting.QualifiedNamesFragment {}
-			fragment = builder.BuilderIntegrationFragment {}
 
 			// formatter API 
 			fragment = formatting.FormatterFragment {}
@@ -79,22 +79,28 @@ Workflow {
 			// outline API 
 			fragment = outline.TransformerFragment {}
 			fragment = outline.OutlineNodeAdapterFactoryFragment {}
-			fragment = outline.QuickOutlineFragment {}
 
-			// quickfix API 
-			fragment = quickfix.QuickfixProviderFragment {}
-
-			// content assist API  
+			// java-based API for content assistance 
 			fragment = contentAssist.JavaBasedContentAssistFragment {}
 
-			// generates a more lightweight Antlr parser and lexer tailored for content assist  
-			fragment = parser.antlr.XtextAntlrUiGeneratorFragment {}
+			// the following fragment tries to use the Antlr based content assist 
+			//     fragment which can be downloaded from http://www.itemis.com 
+			//     and will be ignored if it's not available. 
+			fragment = DelegatingGeneratorFragment {
+				delegate = "de.itemis.xtext.antlr.XtextAntlrUiGeneratorFragment"
+				message =
+				"You are generating without ANTLR. It is highly recommended to download and use the plugin \'de.itemis.xtext.antlr\' \n\t using the update site http://download.itemis.com/updates/."
+			}
+
+			fragment = builder.BuilderIntegrationFragment {}
 
 			// project wizard (optional) 
-			// fragment = projectWizard.SimpleProjectWizardFragment {
-			// 		generatorProjectName = "${projectName}.generator" 
-			//		modelFileExtension = file.extensions
-			// }
+			/*
+			fragment = projectWizard.SimpleProjectWizardFragment {
+				generatorProjectName = "${projectName}.generator" 
+				modelFileExtension = file.extensions
+			}
+			*/
 		}
 	}
 }

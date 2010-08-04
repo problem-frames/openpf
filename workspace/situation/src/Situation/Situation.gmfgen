@@ -2,7 +2,9 @@
 <gmfgen:GenEditorGenerator xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:gmfgen="http://www.eclipse.org/gmf/2009/GenModel" copyrightText="">
+    xmlns:gmfgen="http://www.eclipse.org/gmf/2009/GenModel" dynamicTemplates="true"
+    templateDirectory="situation/templates"
+    copyrightText="">
   <diagram
       visualID="1000"
       editPartClassName="SituationEditPart"
@@ -285,6 +287,7 @@
       printingEnabled="true">
     <requiredPlugins>org.eclipse.draw2d</requiredPlugins>
     <requiredPlugins>org.eclipse.gmf.runtime.draw2d.ui</requiredPlugins>
+    <requiredPlugins>org.eclipse.xtext.gmf.glue</requiredPlugins>
   </plugin>
   <editor/>
   <navigator>

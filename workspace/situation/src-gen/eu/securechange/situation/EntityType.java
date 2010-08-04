@@ -30,7 +30,7 @@ public enum EntityType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  DOMAIN_ASSUMPTION(0, "DomainAssumption", "DomainAssumption"),
+  DOMAIN_ASSUMPTION(0, "DomainAssumption", "DA"),
 
   /**
 	 * The '<em><b>Function</b></em>' literal object.
@@ -40,7 +40,7 @@ public enum EntityType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  FUNCTION(1, "Function", "Function"),
+  FUNCTION(1, "Function", "FR"),
 
   /**
 	 * The '<em><b>Security</b></em>' literal object.
@@ -50,7 +50,7 @@ public enum EntityType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  SECURITY(2, "Security", "Security"),
+  SECURITY(2, "Security", "SR"),
 
   /**
 	 * The '<em><b>Anti</b></em>' literal object.
@@ -60,7 +60,7 @@ public enum EntityType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  ANTI(3, "Anti", "Anti"),
+  ANTI(3, "Anti", "AR"),
 
   /**
 	 * The '<em><b>Quality Proposition</b></em>' literal object.
@@ -70,7 +70,7 @@ public enum EntityType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  QUALITY_PROPOSITION(4, "QualityProposition", "QualityProposition"),
+  QUALITY_PROPOSITION(4, "QualityProposition", "Q"),
 
   /**
 	 * The '<em><b>Argument</b></em>' literal object.
@@ -80,7 +80,7 @@ public enum EntityType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  ARGUMENT(5, "Argument", "Argument"),
+  ARGUMENT(5, "Argument", "A"),
 
   /**
 	 * The '<em><b>Actor</b></em>' literal object.
@@ -90,7 +90,7 @@ public enum EntityType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  ACTOR(6, "Actor", "Actor"),
+  ACTOR(6, "Actor", "actor"),
 
   /**
 	 * The '<em><b>Action</b></em>' literal object.
@@ -100,7 +100,7 @@ public enum EntityType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  ACTION(7, "Action", "Action"),
+  ACTION(7, "Action", "action"),
 
   /**
 	 * The '<em><b>Attacker</b></em>' literal object.
@@ -110,7 +110,7 @@ public enum EntityType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  ATTACKER(8, "Attacker", "Attacker"),
+  ATTACKER(8, "Attacker", "attacker"),
 
   /**
 	 * The '<em><b>Process</b></em>' literal object.
@@ -120,7 +120,7 @@ public enum EntityType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  PROCESS(9, "Process", "Process"),
+  PROCESS(9, "Process", "process"),
 
   /**
 	 * The '<em><b>Activity</b></em>' literal object.
@@ -130,7 +130,7 @@ public enum EntityType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  ACTIVITY(10, "Activity", "Activity"),
+  ACTIVITY(10, "Activity", "activity"),
 
   /**
 	 * The '<em><b>Resource</b></em>' literal object.
@@ -140,7 +140,7 @@ public enum EntityType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  RESOURCE(11, "Resource", "Resource"),
+  RESOURCE(11, "Resource", "resource"),
 
   /**
 	 * The '<em><b>Asset</b></em>' literal object.
@@ -150,7 +150,7 @@ public enum EntityType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  ASSET(12, "Asset", "Asset"),
+  ASSET(12, "Asset", "asset"),
 
   /**
 	 * The '<em><b>Event</b></em>' literal object.
@@ -160,7 +160,7 @@ public enum EntityType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  EVENT(13, "Event", "Event");
+  EVENT(13, "Event", "event");
 
   /**
 	 * The '<em><b>Domain Assumption</b></em>' literal value.
@@ -171,7 +171,7 @@ public enum EntityType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #DOMAIN_ASSUMPTION
-	 * @model name="DomainAssumption"
+	 * @model name="DomainAssumption" literal="DA"
 	 * @generated
 	 * @ordered
 	 */
@@ -186,7 +186,7 @@ public enum EntityType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #FUNCTION
-	 * @model name="Function"
+	 * @model name="Function" literal="FR"
 	 * @generated
 	 * @ordered
 	 */
@@ -201,7 +201,7 @@ public enum EntityType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #SECURITY
-	 * @model name="Security"
+	 * @model name="Security" literal="SR"
 	 * @generated
 	 * @ordered
 	 */
@@ -216,7 +216,7 @@ public enum EntityType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #ANTI
-	 * @model name="Anti"
+	 * @model name="Anti" literal="AR"
 	 * @generated
 	 * @ordered
 	 */
@@ -231,7 +231,7 @@ public enum EntityType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #QUALITY_PROPOSITION
-	 * @model name="QualityProposition"
+	 * @model name="QualityProposition" literal="Q"
 	 * @generated
 	 * @ordered
 	 */
@@ -246,7 +246,7 @@ public enum EntityType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #ARGUMENT
-	 * @model name="Argument"
+	 * @model name="Argument" literal="A"
 	 * @generated
 	 * @ordered
 	 */
@@ -261,7 +261,7 @@ public enum EntityType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #ACTOR
-	 * @model name="Actor"
+	 * @model name="Actor" literal="actor"
 	 * @generated
 	 * @ordered
 	 */
@@ -276,7 +276,7 @@ public enum EntityType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #ACTION
-	 * @model name="Action"
+	 * @model name="Action" literal="action"
 	 * @generated
 	 * @ordered
 	 */
@@ -291,7 +291,7 @@ public enum EntityType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #ATTACKER
-	 * @model name="Attacker"
+	 * @model name="Attacker" literal="attacker"
 	 * @generated
 	 * @ordered
 	 */
@@ -306,7 +306,7 @@ public enum EntityType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #PROCESS
-	 * @model name="Process"
+	 * @model name="Process" literal="process"
 	 * @generated
 	 * @ordered
 	 */
@@ -321,7 +321,7 @@ public enum EntityType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #ACTIVITY
-	 * @model name="Activity"
+	 * @model name="Activity" literal="activity"
 	 * @generated
 	 * @ordered
 	 */
@@ -336,7 +336,7 @@ public enum EntityType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #RESOURCE
-	 * @model name="Resource"
+	 * @model name="Resource" literal="resource"
 	 * @generated
 	 * @ordered
 	 */
@@ -351,7 +351,7 @@ public enum EntityType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #ASSET
-	 * @model name="Asset"
+	 * @model name="Asset" literal="asset"
 	 * @generated
 	 * @ordered
 	 */
@@ -366,7 +366,7 @@ public enum EntityType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #EVENT
-	 * @model name="Event"
+	 * @model name="Event" literal="event"
 	 * @generated
 	 * @ordered
 	 */

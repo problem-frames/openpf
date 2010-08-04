@@ -9,7 +9,7 @@
             class="eu.securechange.ui.SituationExecutableExtensionFactory:eu.securechange.ui.SituationEditor"
             contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
             default="true"
-            extensions="sit"
+            extensions="situation"
             id="eu.securechange.Situation"
             name="Situation Editor">
         </editor>
@@ -52,7 +52,7 @@
         <page
             class="eu.securechange.ui.SituationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
             id="eu.securechange.Situation"
-            name="Situation">
+            name="situation">
             <keywordReference id="eu.securechange.ui.keyword_Situation"/>
         </page>
         <page
@@ -74,7 +74,7 @@
         point="org.eclipse.ui.keywords">
         <keyword
             id="eu.securechange.ui.keyword_Situation"
-            label="Situation"/>
+            label="situation"/>
     </extension>
     <extension
          point="org.eclipse.ui.commands">
@@ -127,18 +127,15 @@
 		point="org.eclipse.emf.ecore.extension_parser">
 		<parser
 			class="eu.securechange.ui.SituationExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
-			type="sit">
+			type="situation">
 		</parser>
 	</extension>
 	<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
         <resourceServiceProvider
             class="eu.securechange.ui.SituationExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
-            uriExtension="sit">
+            uriExtension="situation">
         </resourceServiceProvider>
     </extension>
-
-
-
 
 	<!-- Quick Outline -->
 	<extension
