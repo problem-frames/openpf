@@ -30,6 +30,7 @@ import org.eclipse.gmf.runtime.notation.DecorationNode;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.FontStyle;
+import org.eclipse.gmf.runtime.notation.Location;
 import org.eclipse.gmf.runtime.notation.MeasurementUnit;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.NotationFactory;
@@ -37,6 +38,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.RelativeBendpoints;
 import org.eclipse.gmf.runtime.notation.Routing;
 import org.eclipse.gmf.runtime.notation.Shape;
+import org.eclipse.gmf.runtime.notation.TitleStyle;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.runtime.notation.datatype.RelativeBendpoint;
 import org.eclipse.jface.preference.IPreferenceStore;
@@ -44,11 +46,15 @@ import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.FontData;
 
+import eu.securechange.situation.diagram.edit.parts.DomainDomainPropertiesCompartmentEditPart;
 import eu.securechange.situation.diagram.edit.parts.DomainEditPart;
 import eu.securechange.situation.diagram.edit.parts.DomainTypeEditPart;
+import eu.securechange.situation.diagram.edit.parts.Entity2EditPart;
 import eu.securechange.situation.diagram.edit.parts.EntityEditPart;
+import eu.securechange.situation.diagram.edit.parts.EntityName2EditPart;
 import eu.securechange.situation.diagram.edit.parts.EntityNameEditPart;
 import eu.securechange.situation.diagram.edit.parts.RelationshipEditPart;
+import eu.securechange.situation.diagram.edit.parts.RelationshipTypeEditPart;
 import eu.securechange.situation.diagram.edit.parts.SituationEditPart;
 import eu.securechange.situation.diagram.part.SituationVisualIDRegistry;
 
@@ -147,6 +153,7 @@ public class SituationViewProvider extends AbstractProvider implements
 				switch (visualID) {
 				case EntityEditPart.VISUAL_ID:
 				case DomainEditPart.VISUAL_ID:
+				case Entity2EditPart.VISUAL_ID:
 					if (domainElement == null
 							|| visualID != SituationVisualIDRegistry
 									.getNodeVisualID(op.getContainerView(),
@@ -160,7 +167,8 @@ public class SituationViewProvider extends AbstractProvider implements
 			}
 		}
 		return EntityEditPart.VISUAL_ID == visualID
-				|| DomainEditPart.VISUAL_ID == visualID;
+				|| DomainEditPart.VISUAL_ID == visualID
+				|| Entity2EditPart.VISUAL_ID == visualID;
 	}
 
 	/**
@@ -222,6 +230,9 @@ public class SituationViewProvider extends AbstractProvider implements
 					persisted, preferencesHint);
 		case DomainEditPart.VISUAL_ID:
 			return createDomain_2002(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case Entity2EditPart.VISUAL_ID:
+			return createEntity_3001(domainElement, containerView, index,
 					persisted, preferencesHint);
 		}
 		// can't happen, provided #provides(CreateNodeViewOperation) is correct
@@ -296,6 +307,8 @@ public class SituationViewProvider extends AbstractProvider implements
 	public Node createDomain_2002(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(SituationVisualIDRegistry
 				.getType(DomainEditPart.VISUAL_ID));
@@ -332,6 +345,56 @@ public class SituationViewProvider extends AbstractProvider implements
 				FigureUtilities.RGBToInteger(fillRGB));
 		Node label5002 = createLabel(node,
 				SituationVisualIDRegistry.getType(DomainTypeEditPart.VISUAL_ID));
+		createCompartment(
+				node,
+				SituationVisualIDRegistry
+						.getType(DomainDomainPropertiesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createEntity_3001(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(SituationVisualIDRegistry
+				.getType(Entity2EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5003 = createLabel(node,
+				SituationVisualIDRegistry
+						.getType(EntityName2EditPart.VISUAL_ID));
 		return node;
 	}
 
@@ -385,6 +448,14 @@ public class SituationViewProvider extends AbstractProvider implements
 					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
 					routing);
 		}
+		Node label6001 = createLabel(edge,
+				SituationVisualIDRegistry
+						.getType(RelationshipTypeEditPart.VISUAL_ID));
+		label6001.setLayoutConstraint(NotationFactory.eINSTANCE
+				.createLocation());
+		Location location6001 = (Location) label6001.getLayoutConstraint();
+		location6001.setX(0);
+		location6001.setY(40);
 		return edge;
 	}
 
@@ -408,6 +479,38 @@ public class SituationViewProvider extends AbstractProvider implements
 	 */
 	private Node createLabel(View owner, String hint) {
 		DecorationNode rv = NotationFactory.eINSTANCE.createDecorationNode();
+		rv.setType(hint);
+		ViewUtil.insertChildView(owner, rv, ViewUtil.APPEND, true);
+		return rv;
+	}
+
+	/**
+	 * @generated
+	 */
+	private Node createCompartment(View owner, String hint,
+			boolean canCollapse, boolean hasTitle, boolean canSort,
+			boolean canFilter) {
+		//SemanticListCompartment rv = NotationFactory.eINSTANCE.createSemanticListCompartment();
+		//rv.setShowTitle(showTitle);
+		//rv.setCollapsed(isCollapsed);
+		Node rv;
+		if (canCollapse) {
+			rv = NotationFactory.eINSTANCE.createBasicCompartment();
+		} else {
+			rv = NotationFactory.eINSTANCE.createDecorationNode();
+		}
+		if (hasTitle) {
+			TitleStyle ts = NotationFactory.eINSTANCE.createTitleStyle();
+			ts.setShowTitle(true);
+			rv.getStyles().add(ts);
+		}
+		if (canSort) {
+			rv.getStyles().add(NotationFactory.eINSTANCE.createSortingStyle());
+		}
+		if (canFilter) {
+			rv.getStyles()
+					.add(NotationFactory.eINSTANCE.createFilteringStyle());
+		}
 		rv.setType(hint);
 		ViewUtil.insertChildView(owner, rv, ViewUtil.APPEND, true);
 		return rv;

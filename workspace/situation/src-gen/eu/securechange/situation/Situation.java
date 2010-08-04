@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see eu.securechange.situation.SituationPackage#getSituation()
- * @model
+ * @model annotation="gmf.diagram foo='bar'"
  * @generated
  */
 public interface Situation extends EObject

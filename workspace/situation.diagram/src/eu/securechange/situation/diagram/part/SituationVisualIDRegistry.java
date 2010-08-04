@@ -11,11 +11,15 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import eu.securechange.situation.Situation;
 import eu.securechange.situation.SituationPackage;
+import eu.securechange.situation.diagram.edit.parts.DomainDomainPropertiesCompartmentEditPart;
 import eu.securechange.situation.diagram.edit.parts.DomainEditPart;
 import eu.securechange.situation.diagram.edit.parts.DomainTypeEditPart;
+import eu.securechange.situation.diagram.edit.parts.Entity2EditPart;
 import eu.securechange.situation.diagram.edit.parts.EntityEditPart;
+import eu.securechange.situation.diagram.edit.parts.EntityName2EditPart;
 import eu.securechange.situation.diagram.edit.parts.EntityNameEditPart;
 import eu.securechange.situation.diagram.edit.parts.RelationshipEditPart;
+import eu.securechange.situation.diagram.edit.parts.RelationshipTypeEditPart;
 import eu.securechange.situation.diagram.edit.parts.SituationEditPart;
 
 /**
@@ -136,6 +140,12 @@ public class SituationVisualIDRegistry {
 				return DomainEditPart.VISUAL_ID;
 			}
 			break;
+		case DomainDomainPropertiesCompartmentEditPart.VISUAL_ID:
+			if (SituationPackage.eINSTANCE.getEntity().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Entity2EditPart.VISUAL_ID;
+			}
+			break;
 		}
 		return -1;
 	}
@@ -177,6 +187,24 @@ public class SituationVisualIDRegistry {
 			break;
 		case DomainEditPart.VISUAL_ID:
 			if (DomainTypeEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DomainDomainPropertiesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Entity2EditPart.VISUAL_ID:
+			if (EntityName2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case DomainDomainPropertiesCompartmentEditPart.VISUAL_ID:
+			if (Entity2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case RelationshipEditPart.VISUAL_ID:
+			if (RelationshipTypeEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;

@@ -24,9 +24,12 @@ import eu.securechange.situation.Relationship;
 import eu.securechange.situation.Situation;
 import eu.securechange.situation.diagram.edit.parts.DomainEditPart;
 import eu.securechange.situation.diagram.edit.parts.DomainTypeEditPart;
+import eu.securechange.situation.diagram.edit.parts.Entity2EditPart;
 import eu.securechange.situation.diagram.edit.parts.EntityEditPart;
+import eu.securechange.situation.diagram.edit.parts.EntityName2EditPart;
 import eu.securechange.situation.diagram.edit.parts.EntityNameEditPart;
 import eu.securechange.situation.diagram.edit.parts.RelationshipEditPart;
+import eu.securechange.situation.diagram.edit.parts.RelationshipTypeEditPart;
 import eu.securechange.situation.diagram.edit.parts.SituationEditPart;
 import eu.securechange.situation.diagram.part.SituationDiagramEditorPlugin;
 import eu.securechange.situation.diagram.part.SituationVisualIDRegistry;
@@ -100,18 +103,21 @@ public class SituationNavigatorLabelProvider extends LabelProvider implements
 	 */
 	public Image getImage(View view) {
 		switch (SituationVisualIDRegistry.getVisualID(view)) {
-		case RelationshipEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Link?http://securechange.eu/situation?Relationship", SituationElementTypes.Relationship_4001); //$NON-NLS-1$
-		case EntityEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://securechange.eu/situation?Entity", SituationElementTypes.Entity_2001); //$NON-NLS-1$
-		case DomainEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://securechange.eu/situation?Domain", SituationElementTypes.Domain_2002); //$NON-NLS-1$
 		case SituationEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Diagram?http://securechange.eu/situation?Situation", SituationElementTypes.Situation_1000); //$NON-NLS-1$
+		case DomainEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?http://securechange.eu/situation?Domain", SituationElementTypes.Domain_2002); //$NON-NLS-1$
+		case RelationshipEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?http://securechange.eu/situation?Relationship", SituationElementTypes.Relationship_4001); //$NON-NLS-1$
+		case Entity2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://securechange.eu/situation?Entity", SituationElementTypes.Entity_3001); //$NON-NLS-1$
+		case EntityEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?http://securechange.eu/situation?Entity", SituationElementTypes.Entity_2001); //$NON-NLS-1$
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -172,14 +178,16 @@ public class SituationNavigatorLabelProvider extends LabelProvider implements
 			return getUnresolvedDomainElementProxyText(view);
 		}
 		switch (SituationVisualIDRegistry.getVisualID(view)) {
-		case RelationshipEditPart.VISUAL_ID:
-			return getRelationship_4001Text(view);
-		case EntityEditPart.VISUAL_ID:
-			return getEntity_2001Text(view);
-		case DomainEditPart.VISUAL_ID:
-			return getDomain_2002Text(view);
 		case SituationEditPart.VISUAL_ID:
 			return getSituation_1000Text(view);
+		case DomainEditPart.VISUAL_ID:
+			return getDomain_2002Text(view);
+		case RelationshipEditPart.VISUAL_ID:
+			return getRelationship_4001Text(view);
+		case Entity2EditPart.VISUAL_ID:
+			return getEntity_3001Text(view);
+		case EntityEditPart.VISUAL_ID:
+			return getEntity_2001Text(view);
 		}
 		return getUnknownElementText(view);
 	}
@@ -188,12 +196,38 @@ public class SituationNavigatorLabelProvider extends LabelProvider implements
 	 * @generated
 	 */
 	private String getRelationship_4001Text(View view) {
-		Relationship domainModelElement = (Relationship) view.getElement();
-		if (domainModelElement != null) {
-			return String.valueOf(domainModelElement.getType());
+		IParser parser = SituationParserProvider.getParser(
+				SituationElementTypes.Relationship_4001,
+				view.getElement() != null ? view.getElement() : view,
+				SituationVisualIDRegistry
+						.getType(RelationshipTypeEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
 		} else {
 			SituationDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 4001); //$NON-NLS-1$
+					"Parser was not found for label " + 6001); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getEntity_3001Text(View view) {
+		IParser parser = SituationParserProvider.getParser(
+				SituationElementTypes.Entity_3001,
+				view.getElement() != null ? view.getElement() : view,
+				SituationVisualIDRegistry
+						.getType(EntityName2EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			SituationDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5003); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}

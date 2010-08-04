@@ -26,6 +26,7 @@
     <eAnnotations source="gmf.link">
       <details key="source" value="source"/>
       <details key="target" value="target"/>
+      <details key="label" value="type"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//RelationshipType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Thing"/>
@@ -38,7 +39,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//DomainType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
         eType="#//Entity" containment="true">
-      <eAnnotations source="gmf.containment">
+      <eAnnotations source="gmf.compartment">
         <details key="foo" value="bar"/>
       </eAnnotations>
     </eStructuralFeatures>

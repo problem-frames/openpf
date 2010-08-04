@@ -20,7 +20,7 @@ package eu.securechange.situation;
  * </p>
  *
  * @see eu.securechange.situation.SituationPackage#getEntity()
- * @model
+ * @model annotation="gmf.node label='name'"
  * @generated
  */
 public interface Entity extends Thing

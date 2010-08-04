@@ -47,8 +47,20 @@ public class SituationEditPartFactory implements EditPartFactory {
 			case DomainTypeEditPart.VISUAL_ID:
 				return new DomainTypeEditPart(view);
 
+			case Entity2EditPart.VISUAL_ID:
+				return new Entity2EditPart(view);
+
+			case EntityName2EditPart.VISUAL_ID:
+				return new EntityName2EditPart(view);
+
+			case DomainDomainPropertiesCompartmentEditPart.VISUAL_ID:
+				return new DomainDomainPropertiesCompartmentEditPart(view);
+
 			case RelationshipEditPart.VISUAL_ID:
 				return new RelationshipEditPart(view);
+
+			case RelationshipTypeEditPart.VISUAL_ID:
+				return new RelationshipTypeEditPart(view);
 
 			}
 		}

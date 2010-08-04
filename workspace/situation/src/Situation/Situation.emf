@@ -16,7 +16,7 @@ class Entity extends Thing {
   attr String name;
 }
 
-@gmf.link(source="source", target="target")
+@gmf.link(source="source", target="target", label="type")
 class Relationship extends Thing {
   attr RelationshipType type;
   ref Thing source;
@@ -26,7 +26,7 @@ class Relationship extends Thing {
 @gmf.node(label="type")
 class Domain extends Thing {
   attr DomainType type;
-  @gmf.containment(foo="bar")
+  @gmf.compartment(foo="bar")
   val Entity[*] properties;
 }
 

@@ -21,7 +21,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  *
  * @see eu.securechange.situation.SituationPackage#getDomain()
- * @model
+ * @model annotation="gmf.node label='type'"
  * @generated
  */
 public interface Domain extends Thing
@@ -67,6 +67,7 @@ public interface Domain extends Thing
 	 * @return the value of the '<em>Properties</em>' containment reference list.
 	 * @see eu.securechange.situation.SituationPackage#getDomain_Properties()
 	 * @model containment="true"
+	 *        annotation="gmf.compartment foo='bar'"
 	 * @generated
 	 */
   EList<Entity> getProperties();

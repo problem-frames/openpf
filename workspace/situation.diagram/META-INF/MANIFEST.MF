@@ -7,7 +7,7 @@ Bundle-ClassPath: .
 Bundle-Activator: eu.securechange.situation.diagram.part.SituationDiagramEditorPlugin
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: eu.securechange.situation.diagram.edit.parts, 
+Export-Package: eu.securechange.situation.diagram.edit.parts,
  eu.securechange.situation.diagram.part,
  eu.securechange.situation.diagram.providers
 Require-Bundle: org.eclipse.core.runtime,

@@ -13,8 +13,6 @@ import org.eclipse.draw2d.RoundedRectangle;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
 import org.eclipse.draw2d.geometry.Dimension;
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
 import org.eclipse.gef.Request;
@@ -33,19 +31,19 @@ import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
-import eu.securechange.situation.diagram.edit.policies.EntityItemSemanticEditPolicy;
+import eu.securechange.situation.diagram.edit.policies.Entity2ItemSemanticEditPolicy;
 import eu.securechange.situation.diagram.part.SituationVisualIDRegistry;
 import eu.securechange.situation.diagram.providers.SituationElementTypes;
 
 /**
  * @generated
  */
-public class EntityEditPart extends ShapeNodeEditPart {
+public class Entity2EditPart extends ShapeNodeEditPart {
 
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2001;
+	public static final int VISUAL_ID = 3001;
 
 	/**
 	 * @generated
@@ -60,7 +58,7 @@ public class EntityEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public EntityEditPart(View view) {
+	public Entity2EditPart(View view) {
 		super(view);
 	}
 
@@ -70,7 +68,7 @@ public class EntityEditPart extends ShapeNodeEditPart {
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new EntityItemSemanticEditPolicy());
+				new Entity2ItemSemanticEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
 		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
@@ -120,8 +118,8 @@ public class EntityEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof EntityNameEditPart) {
-			((EntityNameEditPart) childEditPart).setLabel(getPrimaryShape()
+		if (childEditPart instanceof EntityName2EditPart) {
+			((EntityName2EditPart) childEditPart).setLabel(getPrimaryShape()
 					.getFigureEntityLabelFigure());
 			return true;
 		}
@@ -132,7 +130,7 @@ public class EntityEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof EntityNameEditPart) {
+		if (childEditPart instanceof EntityName2EditPart) {
 			return true;
 		}
 		return false;
@@ -256,7 +254,7 @@ public class EntityEditPart extends ShapeNodeEditPart {
 	 */
 	public EditPart getPrimaryChildEditPart() {
 		return getChildBySemanticHint(SituationVisualIDRegistry
-				.getType(EntityNameEditPart.VISUAL_ID));
+				.getType(EntityName2EditPart.VISUAL_ID));
 	}
 
 	/**
@@ -274,13 +272,13 @@ public class EntityEditPart extends ShapeNodeEditPart {
 	public List<IElementType> getMARelTypesOnSourceAndTarget(
 			IGraphicalEditPart targetEditPart) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (targetEditPart instanceof eu.securechange.situation.diagram.edit.parts.EntityEditPart) {
+		if (targetEditPart instanceof EntityEditPart) {
 			types.add(SituationElementTypes.Relationship_4001);
 		}
 		if (targetEditPart instanceof DomainEditPart) {
 			types.add(SituationElementTypes.Relationship_4001);
 		}
-		if (targetEditPart instanceof Entity2EditPart) {
+		if (targetEditPart instanceof eu.securechange.situation.diagram.edit.parts.Entity2EditPart) {
 			types.add(SituationElementTypes.Relationship_4001);
 		}
 		return types;
@@ -319,19 +317,6 @@ public class EntityEditPart extends ShapeNodeEditPart {
 			types.add(SituationElementTypes.Entity_3001);
 		}
 		return types;
-	}
-
-	/**
-	 * @generated
-	 */
-	protected void handleNotificationEvent(Notification event) {
-		if (event.getNotifier() == getModel()
-				&& EcorePackage.eINSTANCE.getEModelElement_EAnnotations()
-						.equals(event.getFeature())) {
-			handleMajorSemanticChange();
-		} else {
-			super.handleNotificationEvent(event);
-		}
 	}
 
 	/**

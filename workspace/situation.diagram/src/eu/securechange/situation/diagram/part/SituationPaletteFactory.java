@@ -3,6 +3,7 @@
  */
 package eu.securechange.situation.diagram.part;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -74,10 +75,12 @@ public class SituationPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createEntity2CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(SituationElementTypes.Entity_2001);
+		types.add(SituationElementTypes.Entity_3001);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Entity2CreationTool_title,
-				Messages.Entity2CreationTool_desc,
-				Collections.singletonList(SituationElementTypes.Entity_2001));
+				Messages.Entity2CreationTool_desc, types);
 		entry.setId("createEntity2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(SituationElementTypes
 				.getImageDescriptor(SituationElementTypes.Entity_2001));

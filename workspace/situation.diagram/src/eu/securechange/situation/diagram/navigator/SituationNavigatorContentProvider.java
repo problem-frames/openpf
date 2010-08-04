@@ -28,7 +28,9 @@ import org.eclipse.ui.IMemento;
 import org.eclipse.ui.navigator.ICommonContentExtensionSite;
 import org.eclipse.ui.navigator.ICommonContentProvider;
 
+import eu.securechange.situation.diagram.edit.parts.DomainDomainPropertiesCompartmentEditPart;
 import eu.securechange.situation.diagram.edit.parts.DomainEditPart;
+import eu.securechange.situation.diagram.edit.parts.Entity2EditPart;
 import eu.securechange.situation.diagram.edit.parts.EntityEditPart;
 import eu.securechange.situation.diagram.edit.parts.RelationshipEditPart;
 import eu.securechange.situation.diagram.edit.parts.SituationEditPart;
@@ -238,6 +240,70 @@ public class SituationNavigatorContentProvider implements
 	private Object[] getViewChildren(View view, Object parentElement) {
 		switch (SituationVisualIDRegistry.getVisualID(view)) {
 
+		case SituationEditPart.VISUAL_ID: {
+			LinkedList<SituationAbstractNavigatorItem> result = new LinkedList<SituationAbstractNavigatorItem>();
+			result.addAll(getForeignShortcuts((Diagram) view, parentElement));
+			Diagram sv = (Diagram) view;
+			SituationNavigatorGroup links = new SituationNavigatorGroup(
+					Messages.NavigatorGroupName_Situation_1000_links,
+					"icons/linksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					SituationVisualIDRegistry.getType(EntityEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					SituationVisualIDRegistry.getType(DomainEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
+					SituationVisualIDRegistry
+							.getType(RelationshipEditPart.VISUAL_ID));
+			links.addChildren(createNavigatorItems(connectedViews, links, false));
+			if (!links.isEmpty()) {
+				result.add(links);
+			}
+			return result.toArray();
+		}
+
+		case DomainEditPart.VISUAL_ID: {
+			LinkedList<SituationAbstractNavigatorItem> result = new LinkedList<SituationAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			SituationNavigatorGroup incominglinks = new SituationNavigatorGroup(
+					Messages.NavigatorGroupName_Domain_2002_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			SituationNavigatorGroup outgoinglinks = new SituationNavigatorGroup(
+					Messages.NavigatorGroupName_Domain_2002_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					SituationVisualIDRegistry
+							.getType(DomainDomainPropertiesCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					SituationVisualIDRegistry
+							.getType(Entity2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					SituationVisualIDRegistry
+							.getType(RelationshipEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					SituationVisualIDRegistry
+							.getType(RelationshipEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
 		case RelationshipEditPart.VISUAL_ID: {
 			LinkedList<SituationAbstractNavigatorItem> result = new LinkedList<SituationAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
@@ -262,12 +328,22 @@ public class SituationNavigatorContentProvider implements
 					SituationVisualIDRegistry.getType(DomainEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target,
 					true));
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					SituationVisualIDRegistry
+							.getType(Entity2EditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					SituationVisualIDRegistry.getType(EntityEditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					SituationVisualIDRegistry.getType(DomainEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					SituationVisualIDRegistry
+							.getType(Entity2EditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			if (!target.isEmpty()) {
@@ -278,6 +354,35 @@ public class SituationNavigatorContentProvider implements
 			}
 			if (!source.isEmpty()) {
 				result.add(source);
+			}
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case Entity2EditPart.VISUAL_ID: {
+			LinkedList<SituationAbstractNavigatorItem> result = new LinkedList<SituationAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			SituationNavigatorGroup incominglinks = new SituationNavigatorGroup(
+					Messages.NavigatorGroupName_Entity_3001_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			SituationNavigatorGroup outgoinglinks = new SituationNavigatorGroup(
+					Messages.NavigatorGroupName_Entity_3001_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					SituationVisualIDRegistry
+							.getType(RelationshipEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					SituationVisualIDRegistry
+							.getType(RelationshipEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
 			}
 			if (!outgoinglinks.isEmpty()) {
 				result.add(outgoinglinks);
@@ -310,61 +415,6 @@ public class SituationNavigatorContentProvider implements
 			}
 			if (!outgoinglinks.isEmpty()) {
 				result.add(outgoinglinks);
-			}
-			return result.toArray();
-		}
-
-		case DomainEditPart.VISUAL_ID: {
-			LinkedList<SituationAbstractNavigatorItem> result = new LinkedList<SituationAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			SituationNavigatorGroup incominglinks = new SituationNavigatorGroup(
-					Messages.NavigatorGroupName_Domain_2002_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			SituationNavigatorGroup outgoinglinks = new SituationNavigatorGroup(
-					Messages.NavigatorGroupName_Domain_2002_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					SituationVisualIDRegistry
-							.getType(RelationshipEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					SituationVisualIDRegistry
-							.getType(RelationshipEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
-			}
-			return result.toArray();
-		}
-
-		case SituationEditPart.VISUAL_ID: {
-			LinkedList<SituationAbstractNavigatorItem> result = new LinkedList<SituationAbstractNavigatorItem>();
-			result.addAll(getForeignShortcuts((Diagram) view, parentElement));
-			Diagram sv = (Diagram) view;
-			SituationNavigatorGroup links = new SituationNavigatorGroup(
-					Messages.NavigatorGroupName_Situation_1000_links,
-					"icons/linksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					SituationVisualIDRegistry.getType(EntityEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					SituationVisualIDRegistry.getType(DomainEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
-					SituationVisualIDRegistry
-							.getType(RelationshipEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			if (!links.isEmpty()) {
-				result.add(links);
 			}
 			return result.toArray();
 		}

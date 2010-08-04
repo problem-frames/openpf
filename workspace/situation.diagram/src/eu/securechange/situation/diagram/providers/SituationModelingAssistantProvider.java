@@ -24,7 +24,9 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.dialogs.ElementListSelectionDialog;
 
+import eu.securechange.situation.diagram.edit.parts.DomainDomainPropertiesCompartmentEditPart;
 import eu.securechange.situation.diagram.edit.parts.DomainEditPart;
+import eu.securechange.situation.diagram.edit.parts.Entity2EditPart;
 import eu.securechange.situation.diagram.edit.parts.EntityEditPart;
 import eu.securechange.situation.diagram.edit.parts.SituationEditPart;
 import eu.securechange.situation.diagram.part.Messages;
@@ -48,6 +50,11 @@ public class SituationModelingAssistantProvider extends
 			types.add(SituationElementTypes.Domain_2002);
 			return types;
 		}
+		if (editPart instanceof DomainDomainPropertiesCompartmentEditPart) {
+			ArrayList<IElementType> types = new ArrayList<IElementType>(1);
+			types.add(SituationElementTypes.Entity_3001);
+			return types;
+		}
 		return Collections.EMPTY_LIST;
 	}
 
@@ -63,6 +70,9 @@ public class SituationModelingAssistantProvider extends
 		if (sourceEditPart instanceof DomainEditPart) {
 			return ((DomainEditPart) sourceEditPart).getMARelTypesOnSource();
 		}
+		if (sourceEditPart instanceof Entity2EditPart) {
+			return ((Entity2EditPart) sourceEditPart).getMARelTypesOnSource();
+		}
 		return Collections.EMPTY_LIST;
 	}
 
@@ -77,6 +87,9 @@ public class SituationModelingAssistantProvider extends
 		}
 		if (targetEditPart instanceof DomainEditPart) {
 			return ((DomainEditPart) targetEditPart).getMARelTypesOnTarget();
+		}
+		if (targetEditPart instanceof Entity2EditPart) {
+			return ((Entity2EditPart) targetEditPart).getMARelTypesOnTarget();
 		}
 		return Collections.EMPTY_LIST;
 	}
@@ -98,6 +111,10 @@ public class SituationModelingAssistantProvider extends
 			return ((DomainEditPart) sourceEditPart)
 					.getMARelTypesOnSourceAndTarget(targetEditPart);
 		}
+		if (sourceEditPart instanceof Entity2EditPart) {
+			return ((Entity2EditPart) sourceEditPart)
+					.getMARelTypesOnSourceAndTarget(targetEditPart);
+		}
 		return Collections.EMPTY_LIST;
 	}
 
@@ -116,6 +133,10 @@ public class SituationModelingAssistantProvider extends
 			return ((DomainEditPart) targetEditPart)
 					.getMATypesForSource(relationshipType);
 		}
+		if (targetEditPart instanceof Entity2EditPart) {
+			return ((Entity2EditPart) targetEditPart)
+					.getMATypesForSource(relationshipType);
+		}
 		return Collections.EMPTY_LIST;
 	}
 
@@ -132,6 +153,10 @@ public class SituationModelingAssistantProvider extends
 		}
 		if (sourceEditPart instanceof DomainEditPart) {
 			return ((DomainEditPart) sourceEditPart)
+					.getMATypesForTarget(relationshipType);
+		}
+		if (sourceEditPart instanceof Entity2EditPart) {
+			return ((Entity2EditPart) sourceEditPart)
 					.getMATypesForTarget(relationshipType);
 		}
 		return Collections.EMPTY_LIST;

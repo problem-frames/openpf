@@ -254,7 +254,7 @@
          </object>
          <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Situation"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,3001"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001"/>
       </viewProvider>
    </extension>
@@ -267,16 +267,16 @@
             <method name="getType()" value="Situation"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
-            <method name="getType()" value="2001,2002"/>
+            <method name="getType()" value="2001,2002,3001"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
             <method name="getType()" value="4001"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
-            <method name="getType()" value="5001,5002"/>
+            <method name="getType()" value="5001,5002,5003"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
-            <method name="getType()" value=""/>
+            <method name="getType()" value="7001"/>
          </object>
          <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
       </editpartProvider>
@@ -351,6 +351,15 @@
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://securechange.eu/situation">
+         <specializationType
+               id="situation.diagram.Entity_3001"
+               name="%metatype.name.Entity_3001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="situation.diagram.Entity_2001"/>
+            <param name="semanticHint" value="3001"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://securechange.eu/situation">
          <metamodelType
                id="situation.diagram.Relationship_4001"
                name="%metatype.name.Relationship_4001"
@@ -375,6 +384,7 @@
          <elementType ref="situation.diagram.Situation_1000"/>
          <elementType ref="situation.diagram.Entity_2001"/>
          <elementType ref="situation.diagram.Domain_2002"/>
+         <elementType ref="situation.diagram.Entity_3001"/>
          <elementType ref="situation.diagram.Relationship_4001"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
       </binding>

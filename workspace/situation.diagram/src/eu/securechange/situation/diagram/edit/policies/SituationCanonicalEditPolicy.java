@@ -34,6 +34,7 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import eu.securechange.situation.SituationPackage;
 import eu.securechange.situation.diagram.edit.parts.DomainEditPart;
+import eu.securechange.situation.diagram.edit.parts.Entity2EditPart;
 import eu.securechange.situation.diagram.edit.parts.EntityEditPart;
 import eu.securechange.situation.diagram.edit.parts.RelationshipEditPart;
 import eu.securechange.situation.diagram.edit.parts.SituationEditPart;
@@ -264,6 +265,17 @@ public class SituationCanonicalEditPolicy extends CanonicalEditPolicy {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(SituationDiagramUpdater
 						.getDomain_2002ContainedLinks(view));
+			}
+			if (!domain2NotationMap.containsKey(view.getElement())
+					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
+				domain2NotationMap.put(view.getElement(), view);
+			}
+			break;
+		}
+		case Entity2EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(SituationDiagramUpdater
+						.getEntity_3001ContainedLinks(view));
 			}
 			if (!domain2NotationMap.containsKey(view.getElement())
 					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$

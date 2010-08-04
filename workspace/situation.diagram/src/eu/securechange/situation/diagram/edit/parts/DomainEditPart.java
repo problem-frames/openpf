@@ -9,6 +9,7 @@ import java.util.List;
 
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;
+import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.draw2d.RoundedRectangle;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
@@ -34,6 +35,7 @@ import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
 import eu.securechange.situation.diagram.edit.policies.DomainItemSemanticEditPolicy;
+import eu.securechange.situation.diagram.edit.policies.OpenDiagramEditPolicy;
 import eu.securechange.situation.diagram.part.SituationVisualIDRegistry;
 import eu.securechange.situation.diagram.providers.SituationElementTypes;
 
@@ -72,6 +74,8 @@ public class DomainEditPart extends ShapeNodeEditPart {
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
 				new DomainItemSemanticEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
+		installEditPolicy(EditPolicyRoles.OPEN_ROLE,
+				new OpenDiagramEditPolicy());
 		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
 	}
@@ -125,6 +129,14 @@ public class DomainEditPart extends ShapeNodeEditPart {
 					.getFigureDomainLabelFigure());
 			return true;
 		}
+		if (childEditPart instanceof DomainDomainPropertiesCompartmentEditPart) {
+			IFigure pane = getPrimaryShape()
+					.getDomainPropertiesCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((DomainDomainPropertiesCompartmentEditPart) childEditPart)
+					.getFigure());
+			return true;
+		}
 		return false;
 	}
 
@@ -133,6 +145,14 @@ public class DomainEditPart extends ShapeNodeEditPart {
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
 		if (childEditPart instanceof DomainTypeEditPart) {
+			return true;
+		}
+		if (childEditPart instanceof DomainDomainPropertiesCompartmentEditPart) {
+			IFigure pane = getPrimaryShape()
+					.getDomainPropertiesCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.remove(((DomainDomainPropertiesCompartmentEditPart) childEditPart)
+					.getFigure());
 			return true;
 		}
 		return false;
@@ -162,6 +182,9 @@ public class DomainEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
+		if (editPart instanceof DomainDomainPropertiesCompartmentEditPart) {
+			return getPrimaryShape().getDomainPropertiesCompartmentFigure();
+		}
 		return getContentPane();
 	}
 
@@ -280,6 +303,9 @@ public class DomainEditPart extends ShapeNodeEditPart {
 		if (targetEditPart instanceof eu.securechange.situation.diagram.edit.parts.DomainEditPart) {
 			types.add(SituationElementTypes.Relationship_4001);
 		}
+		if (targetEditPart instanceof Entity2EditPart) {
+			types.add(SituationElementTypes.Relationship_4001);
+		}
 		return types;
 	}
 
@@ -291,6 +317,7 @@ public class DomainEditPart extends ShapeNodeEditPart {
 		if (relationshipType == SituationElementTypes.Relationship_4001) {
 			types.add(SituationElementTypes.Entity_2001);
 			types.add(SituationElementTypes.Domain_2002);
+			types.add(SituationElementTypes.Entity_3001);
 		}
 		return types;
 	}
@@ -312,6 +339,7 @@ public class DomainEditPart extends ShapeNodeEditPart {
 		if (relationshipType == SituationElementTypes.Relationship_4001) {
 			types.add(SituationElementTypes.Entity_2001);
 			types.add(SituationElementTypes.Domain_2002);
+			types.add(SituationElementTypes.Entity_3001);
 		}
 		return types;
 	}
@@ -342,6 +370,11 @@ public class DomainEditPart extends ShapeNodeEditPart {
 		/**
 		 * @generated
 		 */
+		private RectangleFigure fDomainPropertiesCompartmentFigure;
+
+		/**
+		 * @generated
+		 */
 		public DomainFigure() {
 			this.setCornerDimensions(new Dimension(getMapMode().DPtoLP(8),
 					getMapMode().DPtoLP(8)));
@@ -358,8 +391,15 @@ public class DomainEditPart extends ShapeNodeEditPart {
 
 			fFigureDomainLabelFigure = new WrappingLabel();
 			fFigureDomainLabelFigure.setText("Domain");
+			fFigureDomainLabelFigure.setMaximumSize(new Dimension(getMapMode()
+					.DPtoLP(10000), getMapMode().DPtoLP(50)));
 
 			this.add(fFigureDomainLabelFigure);
+
+			fDomainPropertiesCompartmentFigure = new RectangleFigure();
+			fDomainPropertiesCompartmentFigure.setOutline(false);
+
+			this.add(fDomainPropertiesCompartmentFigure);
 
 		}
 
@@ -368,6 +408,13 @@ public class DomainEditPart extends ShapeNodeEditPart {
 		 */
 		public WrappingLabel getFigureDomainLabelFigure() {
 			return fFigureDomainLabelFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public RectangleFigure getDomainPropertiesCompartmentFigure() {
+			return fDomainPropertiesCompartmentFigure;
 		}
 
 	}

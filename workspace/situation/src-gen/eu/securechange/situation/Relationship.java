@@ -21,7 +21,7 @@ package eu.securechange.situation;
  * </p>
  *
  * @see eu.securechange.situation.SituationPackage#getRelationship()
- * @model
+ * @model annotation="gmf.link source='source' target='target' label='type'"
  * @generated
  */
 public interface Relationship extends Thing

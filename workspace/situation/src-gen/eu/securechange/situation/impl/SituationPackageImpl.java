@@ -472,6 +472,106 @@ public class SituationPackageImpl extends EPackageImpl implements SituationPacka
 
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// gmf
+		createGmfAnnotations();
+		// gmf.diagram
+		createGmf_1Annotations();
+		// gmf.node
+		createGmf_2Annotations();
+		// gmf.link
+		createGmf_3Annotations();
+		// gmf.compartment
+		createGmf_4Annotations();
+	}
+
+		/**
+	 * Initializes the annotations for <b>gmf</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGmfAnnotations() {
+		String source = "gmf";		
+		addAnnotation
+		  (this, 
+		   source, 
+		   new String[] {
+			 "foo", "bar"
+		   });					
+	}
+
+		/**
+	 * Initializes the annotations for <b>gmf.diagram</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGmf_1Annotations() {
+		String source = "gmf.diagram";			
+		addAnnotation
+		  (situationEClass, 
+		   source, 
+		   new String[] {
+			 "foo", "bar"
+		   });				
+	}
+
+		/**
+	 * Initializes the annotations for <b>gmf.node</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGmf_2Annotations() {
+		String source = "gmf.node";				
+		addAnnotation
+		  (entityEClass, 
+		   source, 
+		   new String[] {
+			 "label", "name"
+		   });			
+		addAnnotation
+		  (domainEClass, 
+		   source, 
+		   new String[] {
+			 "label", "type"
+		   });	
+	}
+
+		/**
+	 * Initializes the annotations for <b>gmf.link</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGmf_3Annotations() {
+		String source = "gmf.link";					
+		addAnnotation
+		  (relationshipEClass, 
+		   source, 
+		   new String[] {
+			 "source", "source",
+			 "target", "target",
+			 "label", "type"
+		   });		
+	}
+
+		/**
+	 * Initializes the annotations for <b>gmf.compartment</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGmf_4Annotations() {
+		String source = "gmf.compartment";							
+		addAnnotation
+		  (getDomain_Properties(), 
+		   source, 
+		   new String[] {
+			 "foo", "bar"
+		   });
 	}
 
 } //SituationPackageImpl

@@ -286,6 +286,11 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
+	public static String DomainDomainPropertiesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
 	public static String CommandName_OpenDiagram;
 
 	/**
@@ -307,6 +312,16 @@ public class Messages extends NLS {
 	 * @generated
 	 */
 	public static String NavigatorGroupName_Relationship_4001_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Entity_3001_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Entity_3001_outgoinglinks;
 
 	/**
 	 * @generated

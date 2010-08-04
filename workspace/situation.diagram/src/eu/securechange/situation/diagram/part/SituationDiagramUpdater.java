@@ -21,7 +21,9 @@ import eu.securechange.situation.Relationship;
 import eu.securechange.situation.Situation;
 import eu.securechange.situation.SituationPackage;
 import eu.securechange.situation.Thing;
+import eu.securechange.situation.diagram.edit.parts.DomainDomainPropertiesCompartmentEditPart;
 import eu.securechange.situation.diagram.edit.parts.DomainEditPart;
+import eu.securechange.situation.diagram.edit.parts.Entity2EditPart;
 import eu.securechange.situation.diagram.edit.parts.EntityEditPart;
 import eu.securechange.situation.diagram.edit.parts.RelationshipEditPart;
 import eu.securechange.situation.diagram.edit.parts.SituationEditPart;
@@ -47,6 +49,8 @@ public class SituationDiagramUpdater {
 		switch (SituationVisualIDRegistry.getVisualID(view)) {
 		case SituationEditPart.VISUAL_ID:
 			return getSituation_1000SemanticChildren(view);
+		case DomainDomainPropertiesCompartmentEditPart.VISUAL_ID:
+			return getDomainDomainPropertiesCompartment_7001SemanticChildren(view);
 		}
 		return Collections.emptyList();
 	}
@@ -80,6 +84,33 @@ public class SituationDiagramUpdater {
 	/**
 	 * @generated
 	 */
+	public static List<SituationNodeDescriptor> getDomainDomainPropertiesCompartment_7001SemanticChildren(
+			View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Domain modelElement = (Domain) containerView.getElement();
+		LinkedList<SituationNodeDescriptor> result = new LinkedList<SituationNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getProperties().iterator(); it
+				.hasNext();) {
+			Entity childElement = (Entity) it.next();
+			int visualID = SituationVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == Entity2EditPart.VISUAL_ID) {
+				result.add(new SituationNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
 	public static List<SituationLinkDescriptor> getContainedLinks(View view) {
 		switch (SituationVisualIDRegistry.getVisualID(view)) {
 		case SituationEditPart.VISUAL_ID:
@@ -88,6 +119,8 @@ public class SituationDiagramUpdater {
 			return getEntity_2001ContainedLinks(view);
 		case DomainEditPart.VISUAL_ID:
 			return getDomain_2002ContainedLinks(view);
+		case Entity2EditPart.VISUAL_ID:
+			return getEntity_3001ContainedLinks(view);
 		case RelationshipEditPart.VISUAL_ID:
 			return getRelationship_4001ContainedLinks(view);
 		}
@@ -103,6 +136,8 @@ public class SituationDiagramUpdater {
 			return getEntity_2001IncomingLinks(view);
 		case DomainEditPart.VISUAL_ID:
 			return getDomain_2002IncomingLinks(view);
+		case Entity2EditPart.VISUAL_ID:
+			return getEntity_3001IncomingLinks(view);
 		case RelationshipEditPart.VISUAL_ID:
 			return getRelationship_4001IncomingLinks(view);
 		}
@@ -118,6 +153,8 @@ public class SituationDiagramUpdater {
 			return getEntity_2001OutgoingLinks(view);
 		case DomainEditPart.VISUAL_ID:
 			return getDomain_2002OutgoingLinks(view);
+		case Entity2EditPart.VISUAL_ID:
+			return getEntity_3001OutgoingLinks(view);
 		case RelationshipEditPart.VISUAL_ID:
 			return getRelationship_4001OutgoingLinks(view);
 		}
@@ -147,6 +184,14 @@ public class SituationDiagramUpdater {
 	 * @generated
 	 */
 	public static List<SituationLinkDescriptor> getDomain_2002ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<SituationLinkDescriptor> getEntity_3001ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -190,6 +235,20 @@ public class SituationDiagramUpdater {
 	/**
 	 * @generated
 	 */
+	public static List<SituationLinkDescriptor> getEntity_3001IncomingLinks(
+			View view) {
+		Entity modelElement = (Entity) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<SituationLinkDescriptor> result = new LinkedList<SituationLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Relationship_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
 	public static List<SituationLinkDescriptor> getRelationship_4001IncomingLinks(
 			View view) {
 		Relationship modelElement = (Relationship) view.getElement();
@@ -218,6 +277,17 @@ public class SituationDiagramUpdater {
 	public static List<SituationLinkDescriptor> getDomain_2002OutgoingLinks(
 			View view) {
 		Domain modelElement = (Domain) view.getElement();
+		LinkedList<SituationLinkDescriptor> result = new LinkedList<SituationLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Relationship_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<SituationLinkDescriptor> getEntity_3001OutgoingLinks(
+			View view) {
+		Entity modelElement = (Entity) view.getElement();
 		LinkedList<SituationLinkDescriptor> result = new LinkedList<SituationLinkDescriptor>();
 		result.addAll(getOutgoingTypeModelFacetLinks_Relationship_4001(modelElement));
 		return result;

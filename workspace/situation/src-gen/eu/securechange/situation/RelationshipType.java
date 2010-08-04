@@ -30,7 +30,7 @@ public enum RelationshipType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  WANTS(0, "Wants", "wants"),
+  WANTS(0, "Wants", "Wants"),
 
   /**
 	 * The '<em><b>Does</b></em>' literal object.
@@ -40,7 +40,7 @@ public enum RelationshipType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  DOES(1, "Does", "does"),
+  DOES(1, "Does", "Does"),
 
   /**
 	 * The '<em><b>AND</b></em>' literal object.
@@ -50,7 +50,7 @@ public enum RelationshipType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  AND(2, "AND", "and"),
+  AND(2, "AND", "AND"),
 
   /**
 	 * The '<em><b>OR</b></em>' literal object.
@@ -60,7 +60,7 @@ public enum RelationshipType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  OR(3, "OR", "or"),
+  OR(3, "OR", "OR"),
 
   /**
 	 * The '<em><b>TRUST</b></em>' literal object.
@@ -70,7 +70,7 @@ public enum RelationshipType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  TRUST(4, "TRUST", "trusts"),
+  TRUST(4, "TRUST", "TRUST"),
 
   /**
 	 * The '<em><b>DELEGATE</b></em>' literal object.
@@ -80,7 +80,7 @@ public enum RelationshipType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  DELEGATE(5, "DELEGATE", "delegates"),
+  DELEGATE(5, "DELEGATE", "DELEGATE"),
 
   /**
 	 * The '<em><b>HURT</b></em>' literal object.
@@ -90,7 +90,7 @@ public enum RelationshipType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  HURT(6, "HURT", "-"),
+  HURT(6, "HURT", "HURT"),
 
   /**
 	 * The '<em><b>HELP</b></em>' literal object.
@@ -100,7 +100,7 @@ public enum RelationshipType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  HELP(7, "HELP", "+"),
+  HELP(7, "HELP", "HELP"),
 
   /**
 	 * The '<em><b>BREAK</b></em>' literal object.
@@ -110,7 +110,7 @@ public enum RelationshipType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  BREAK(8, "BREAK", "--"),
+  BREAK(8, "BREAK", "BREAK"),
 
   /**
 	 * The '<em><b>MAKE</b></em>' literal object.
@@ -120,7 +120,7 @@ public enum RelationshipType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  MAKE(9, "MAKE", "++"),
+  MAKE(9, "MAKE", "MAKE"),
 
   /**
 	 * The '<em><b>Fulfils</b></em>' literal object.
@@ -130,7 +130,7 @@ public enum RelationshipType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  FULFILS(10, "Fulfils", "fulfils"),
+  FULFILS(10, "Fulfils", "Fulfils"),
 
   /**
 	 * The '<em><b>Provides</b></em>' literal object.
@@ -140,7 +140,7 @@ public enum RelationshipType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  PROVIDES(11, "Provides", "provides"),
+  PROVIDES(11, "Provides", "Provides"),
 
   /**
 	 * The '<em><b>Consumes</b></em>' literal object.
@@ -150,7 +150,7 @@ public enum RelationshipType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  CONSUMES(12, "Consumes", "consumes"),
+  CONSUMES(12, "Consumes", "Consumes"),
 
   /**
 	 * The '<em><b>Exploits</b></em>' literal object.
@@ -160,7 +160,7 @@ public enum RelationshipType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  EXPLOITS(13, "Exploits", "exploits"),
+  EXPLOITS(13, "Exploits", "Exploits"),
 
   /**
 	 * The '<em><b>Damages</b></em>' literal object.
@@ -170,7 +170,7 @@ public enum RelationshipType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  DAMAGES(14, "Damages", "damages"),
+  DAMAGES(14, "Damages", "Damages"),
 
   /**
 	 * The '<em><b>Attacks</b></em>' literal object.
@@ -180,7 +180,7 @@ public enum RelationshipType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  ATTACKS(15, "Attacks", "attacks"),
+  ATTACKS(15, "Attacks", "Attacks"),
 
   /**
 	 * The '<em><b>Argues</b></em>' literal object.
@@ -190,7 +190,7 @@ public enum RelationshipType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  ARGUES(16, "Argues", "argues");
+  ARGUES(16, "Argues", "Argues");
 
   /**
 	 * The '<em><b>Wants</b></em>' literal value.
@@ -201,7 +201,7 @@ public enum RelationshipType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #WANTS
-	 * @model name="Wants" literal="wants"
+	 * @model name="Wants"
 	 * @generated
 	 * @ordered
 	 */
@@ -216,7 +216,7 @@ public enum RelationshipType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #DOES
-	 * @model name="Does" literal="does"
+	 * @model name="Does"
 	 * @generated
 	 * @ordered
 	 */
@@ -231,7 +231,7 @@ public enum RelationshipType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #AND
-	 * @model literal="and"
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -246,7 +246,7 @@ public enum RelationshipType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #OR
-	 * @model literal="or"
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -261,7 +261,7 @@ public enum RelationshipType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #TRUST
-	 * @model literal="trusts"
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -276,7 +276,7 @@ public enum RelationshipType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #DELEGATE
-	 * @model literal="delegates"
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -291,7 +291,7 @@ public enum RelationshipType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #HURT
-	 * @model literal="-"
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -306,7 +306,7 @@ public enum RelationshipType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #HELP
-	 * @model literal="+"
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -321,7 +321,7 @@ public enum RelationshipType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #BREAK
-	 * @model literal="--"
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -336,7 +336,7 @@ public enum RelationshipType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #MAKE
-	 * @model literal="++"
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -351,7 +351,7 @@ public enum RelationshipType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #FULFILS
-	 * @model name="Fulfils" literal="fulfils"
+	 * @model name="Fulfils"
 	 * @generated
 	 * @ordered
 	 */
@@ -366,7 +366,7 @@ public enum RelationshipType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #PROVIDES
-	 * @model name="Provides" literal="provides"
+	 * @model name="Provides"
 	 * @generated
 	 * @ordered
 	 */
@@ -381,7 +381,7 @@ public enum RelationshipType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #CONSUMES
-	 * @model name="Consumes" literal="consumes"
+	 * @model name="Consumes"
 	 * @generated
 	 * @ordered
 	 */
@@ -396,7 +396,7 @@ public enum RelationshipType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #EXPLOITS
-	 * @model name="Exploits" literal="exploits"
+	 * @model name="Exploits"
 	 * @generated
 	 * @ordered
 	 */
@@ -411,7 +411,7 @@ public enum RelationshipType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #DAMAGES
-	 * @model name="Damages" literal="damages"
+	 * @model name="Damages"
 	 * @generated
 	 * @ordered
 	 */
@@ -426,7 +426,7 @@ public enum RelationshipType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #ATTACKS
-	 * @model name="Attacks" literal="attacks"
+	 * @model name="Attacks"
 	 * @generated
 	 * @ordered
 	 */
@@ -441,7 +441,7 @@ public enum RelationshipType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #ARGUES
-	 * @model name="Argues" literal="argues"
+	 * @model name="Argues"
 	 * @generated
 	 * @ordered
 	 */

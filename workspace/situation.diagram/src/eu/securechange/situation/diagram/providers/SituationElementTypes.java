@@ -21,6 +21,7 @@ import org.eclipse.swt.graphics.Image;
 
 import eu.securechange.situation.SituationPackage;
 import eu.securechange.situation.diagram.edit.parts.DomainEditPart;
+import eu.securechange.situation.diagram.edit.parts.Entity2EditPart;
 import eu.securechange.situation.diagram.edit.parts.EntityEditPart;
 import eu.securechange.situation.diagram.edit.parts.RelationshipEditPart;
 import eu.securechange.situation.diagram.edit.parts.SituationEditPart;
@@ -64,6 +65,11 @@ public class SituationElementTypes {
 	 * @generated
 	 */
 	public static final IElementType Domain_2002 = getElementType("situation.diagram.Domain_2002"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Entity_3001 = getElementType("situation.diagram.Entity_3001"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
@@ -187,6 +193,8 @@ public class SituationElementTypes {
 
 			elements.put(Domain_2002, SituationPackage.eINSTANCE.getDomain());
 
+			elements.put(Entity_3001, SituationPackage.eINSTANCE.getEntity());
+
 			elements.put(Relationship_4001,
 					SituationPackage.eINSTANCE.getRelationship());
 		}
@@ -209,6 +217,7 @@ public class SituationElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Situation_1000);
 			KNOWN_ELEMENT_TYPES.add(Entity_2001);
 			KNOWN_ELEMENT_TYPES.add(Domain_2002);
+			KNOWN_ELEMENT_TYPES.add(Entity_3001);
 			KNOWN_ELEMENT_TYPES.add(Relationship_4001);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
@@ -225,6 +234,8 @@ public class SituationElementTypes {
 			return Entity_2001;
 		case DomainEditPart.VISUAL_ID:
 			return Domain_2002;
+		case Entity2EditPart.VISUAL_ID:
+			return Entity_3001;
 		case RelationshipEditPart.VISUAL_ID:
 			return Relationship_4001;
 		}

@@ -28,7 +28,8 @@
   <nodes>
     <containmentFeature
         href="Situation.ecore#//Situation/things"/>
-    <ownedChild>
+    <ownedChild
+        relatedDiagrams="//@diagram">
       <domainMetaElement
           href="Situation.ecore#//Domain"/>
       <labelMappings
@@ -43,11 +44,29 @@
           href="Situation.gmftool#//@palette/@tools.0/@tools.0"/>
       <diagramNode
           href="Situation.gmfgraph#Domain"/>
+      <children
+          compartment="//@nodes.1/@ownedChild/@compartments.0"
+          referencedChild="//@nodes.0/@ownedChild">
+        <containmentFeature
+            href="Situation.ecore#//Domain/properties"/>
+      </children>
+      <compartments
+          children="//@nodes.1/@ownedChild/@children.0">
+        <compartment
+            href="Situation.gmfgraph#DomainPropertiesCompartment"/>
+      </compartments>
     </ownedChild>
   </nodes>
   <links>
     <domainMetaElement
         href="Situation.ecore#//Relationship"/>
+    <labelMappings
+        xsi:type="gmfmap:FeatureLabelMapping">
+      <diagramLabel
+          href="Situation.gmfgraph#RelationshipLabel"/>
+      <features
+          href="Situation.ecore#//Relationship/type"/>
+    </labelMappings>
     <containmentFeature
         href="Situation.ecore#//Situation/things"/>
     <tool

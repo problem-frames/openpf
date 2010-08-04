@@ -18,7 +18,9 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import eu.securechange.situation.SituationPackage;
 import eu.securechange.situation.diagram.edit.parts.DomainTypeEditPart;
+import eu.securechange.situation.diagram.edit.parts.EntityName2EditPart;
 import eu.securechange.situation.diagram.edit.parts.EntityNameEditPart;
+import eu.securechange.situation.diagram.edit.parts.RelationshipTypeEditPart;
 import eu.securechange.situation.diagram.parsers.MessageFormatParser;
 import eu.securechange.situation.diagram.part.SituationVisualIDRegistry;
 
@@ -67,12 +69,52 @@ public class SituationParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
+	private IParser entityName_5003Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getEntityName_5003Parser() {
+		if (entityName_5003Parser == null) {
+			EAttribute[] features = new EAttribute[] { SituationPackage.eINSTANCE
+					.getEntity_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			entityName_5003Parser = parser;
+		}
+		return entityName_5003Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser relationshipType_6001Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getRelationshipType_6001Parser() {
+		if (relationshipType_6001Parser == null) {
+			EAttribute[] features = new EAttribute[] { SituationPackage.eINSTANCE
+					.getRelationship_Type() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			relationshipType_6001Parser = parser;
+		}
+		return relationshipType_6001Parser;
+	}
+
+	/**
+	 * @generated
+	 */
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
 		case EntityNameEditPart.VISUAL_ID:
 			return getEntityName_5001Parser();
 		case DomainTypeEditPart.VISUAL_ID:
 			return getDomainType_5002Parser();
+		case EntityName2EditPart.VISUAL_ID:
+			return getEntityName_5003Parser();
+		case RelationshipTypeEditPart.VISUAL_ID:
+			return getRelationshipType_6001Parser();
 		}
 		return null;
 	}
