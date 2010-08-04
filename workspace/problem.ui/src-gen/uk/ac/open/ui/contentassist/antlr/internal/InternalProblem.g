@@ -424,11 +424,11 @@ rule__ProblemDiagram__Group__0__Impl
     }
 :
 (
-{ before(grammarAccess.getProblemDiagramAccess().getProblemKeyword_0()); }
+{ before(grammarAccess.getProblemDiagramAccess().getProblemDiagramAction_0()); }
+(
 
-	'problem' 
-
-{ after(grammarAccess.getProblemDiagramAccess().getProblemKeyword_0()); }
+)
+{ after(grammarAccess.getProblemDiagramAccess().getProblemDiagramAction_0()); }
 )
 
 ;
@@ -455,11 +455,11 @@ rule__ProblemDiagram__Group__1__Impl
     }
 :
 (
-{ before(grammarAccess.getProblemDiagramAccess().getColonKeyword_1()); }
+{ before(grammarAccess.getProblemDiagramAccess().getProblemKeyword_1()); }
 
-	':' 
+	'problem:' 
 
-{ after(grammarAccess.getProblemDiagramAccess().getColonKeyword_1()); }
+{ after(grammarAccess.getProblemDiagramAccess().getProblemKeyword_1()); }
 )
 
 ;

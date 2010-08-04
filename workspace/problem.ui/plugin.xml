@@ -9,7 +9,7 @@
             class="uk.ac.open.ui.ProblemExecutableExtensionFactory:uk.ac.open.ui.ProblemEditor"
             contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
             default="true"
-            extensions="pf"
+            extensions="problem"
             id="uk.ac.open.Problem"
             name="Problem Editor">
         </editor>
@@ -127,18 +127,15 @@
 		point="org.eclipse.emf.ecore.extension_parser">
 		<parser
 			class="uk.ac.open.ui.ProblemExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
-			type="pf">
+			type="problem">
 		</parser>
 	</extension>
 	<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
         <resourceServiceProvider
             class="uk.ac.open.ui.ProblemExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
-            uriExtension="pf">
+            uriExtension="problem">
         </resourceServiceProvider>
     </extension>
-
-
-
 
 	<!-- Quick Outline -->
 	<extension

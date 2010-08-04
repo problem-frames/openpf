@@ -11,26 +11,24 @@
 	
   </extension>
   <extension point="core.example">
-      <example file="CommandedBehaviour.pf"/>
+      <example file="CommandedBehaviour.problem"/>
       <example file="CommandedBehaviour.png"/>
-      <example file="InformationDisplay.pf"/>
+      <example file="InformationDisplay.problem"/>
       <example file="InformationDisplay.png"/>
-      <example file="RequiredBehaviour.pf"/>
+      <example file="RequiredBehaviour.problem"/>
       <example file="RequiredBehaviour.png"/>
-      <example file="Transformation.pf"/>
+      <example file="Transformation.problem"/>
       <example file="Transformation.png"/>
-      <example file="Workpiece.pf"/>
+      <example file="Workpiece.problem"/>
       <example file="Workpiece.png"/>
-      <example file="LightController.pf"/>
-      <example file="SluiceGateInteractive.pf"/>
-      <example file="SluiceGateTimed.pf"/>
-      <example file="zooturnstile1.pf"/>
-      <example file="ads-b-pwd.pf"/>
-      <example file="ads-b-pwd-attack.pf"/>
-      <example file="library.pf"/>
-      <example file="openpf.pf"/>
-      <example file="pf.xpt"/>
-      <example file="ProblemGenerator.mwe"/>
+      <example file="LightController.problem"/>
+      <example file="SluiceGateInteractive.problem"/>
+      <example file="SluiceGateTimed.problem"/>
+      <example file="zooturnstile1.problem"/>
+      <example file="ads-b-pwd.problem"/>
+      <example file="ads-b-pwd-attack.problem"/>
+      <example file="library.problem"/>
+      <example file="openpf.problem"/>
       <example file="SecuReqEngforEvolvingSys.pdf"/>
   </extension>
 </plugin>

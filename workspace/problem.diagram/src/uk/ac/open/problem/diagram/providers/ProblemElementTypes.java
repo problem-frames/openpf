@@ -16,6 +16,7 @@ import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.resource.ImageRegistry;
 import org.eclipse.swt.graphics.Image;
 
+import uk.ac.open.problem.ProblemPackage;
 import uk.ac.open.problem.diagram.edit.parts.Link2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Link3EditPart;
 import uk.ac.open.problem.diagram.edit.parts.LinkEditPart;
@@ -31,7 +32,7 @@ import uk.ac.open.problem.diagram.part.ProblemDiagramEditorPlugin;
 /**
  * @generated
  */
-public class ProblemElementTypes extends ElementInitializers {
+public class ProblemElementTypes {
 
 	/**
 	 * @generated
@@ -42,7 +43,7 @@ public class ProblemElementTypes extends ElementInitializers {
 	/**
 	 * @generated
 	 */
-	private static Map elements;
+	private static Map<IElementType, ENamedElement> elements;
 
 	/**
 	 * @generated
@@ -52,7 +53,7 @@ public class ProblemElementTypes extends ElementInitializers {
 	/**
 	 * @generated
 	 */
-	private static Set KNOWN_ELEMENT_TYPES;
+	private static Set<IElementType> KNOWN_ELEMENT_TYPES;
 
 	/**
 	 * @generated
@@ -206,38 +207,28 @@ public class ProblemElementTypes extends ElementInitializers {
 	public static ENamedElement getElement(IAdaptable hint) {
 		Object type = hint.getAdapter(IElementType.class);
 		if (elements == null) {
-			elements = new IdentityHashMap();
+			elements = new IdentityHashMap<IElementType, ENamedElement>();
 
 			elements.put(ProblemDiagram_1000,
-					uk.ac.open.problem.ProblemPackage.eINSTANCE
-							.getProblemDiagram());
+					ProblemPackage.eINSTANCE.getProblemDiagram());
 
-			elements.put(Node_2001, uk.ac.open.problem.ProblemPackage.eINSTANCE
-					.getNode());
+			elements.put(Node_2001, ProblemPackage.eINSTANCE.getNode());
 
-			elements.put(Node_2002, uk.ac.open.problem.ProblemPackage.eINSTANCE
-					.getNode());
+			elements.put(Node_2002, ProblemPackage.eINSTANCE.getNode());
 
-			elements.put(Node_2003, uk.ac.open.problem.ProblemPackage.eINSTANCE
-					.getNode());
+			elements.put(Node_2003, ProblemPackage.eINSTANCE.getNode());
 
-			elements.put(Node_2004, uk.ac.open.problem.ProblemPackage.eINSTANCE
-					.getNode());
+			elements.put(Node_2004, ProblemPackage.eINSTANCE.getNode());
 
-			elements.put(Node_2005, uk.ac.open.problem.ProblemPackage.eINSTANCE
-					.getNode());
+			elements.put(Node_2005, ProblemPackage.eINSTANCE.getNode());
 
-			elements.put(Node_2006, uk.ac.open.problem.ProblemPackage.eINSTANCE
-					.getNode());
+			elements.put(Node_2006, ProblemPackage.eINSTANCE.getNode());
 
-			elements.put(Link_4001, uk.ac.open.problem.ProblemPackage.eINSTANCE
-					.getLink());
+			elements.put(Link_4001, ProblemPackage.eINSTANCE.getLink());
 
-			elements.put(Link_4002, uk.ac.open.problem.ProblemPackage.eINSTANCE
-					.getLink());
+			elements.put(Link_4002, ProblemPackage.eINSTANCE.getLink());
 
-			elements.put(Link_4003, uk.ac.open.problem.ProblemPackage.eINSTANCE
-					.getLink());
+			elements.put(Link_4003, ProblemPackage.eINSTANCE.getLink());
 		}
 		return (ENamedElement) elements.get(type);
 	}
@@ -254,7 +245,7 @@ public class ProblemElementTypes extends ElementInitializers {
 	 */
 	public static boolean isKnownElementType(IElementType elementType) {
 		if (KNOWN_ELEMENT_TYPES == null) {
-			KNOWN_ELEMENT_TYPES = new HashSet();
+			KNOWN_ELEMENT_TYPES = new HashSet<IElementType>();
 			KNOWN_ELEMENT_TYPES.add(ProblemDiagram_1000);
 			KNOWN_ELEMENT_TYPES.add(Node_2001);
 			KNOWN_ELEMENT_TYPES.add(Node_2002);

@@ -3,7 +3,11 @@
  */
 package uk.ac.open;
 
-import org.eclipse.xtext.linking.ILinkingService;
+import org.eclipse.xtext.example.gmf.resource.QualifiedNameFragmentProvider;
+import org.eclipse.xtext.parser.antlr.IReferableElementsUnloader;
+import org.eclipse.xtext.resource.IFragmentProvider;
+import org.eclipse.xtext.service.SingletonBinding;
+import org.eclipse.xtext.validation.impl.ConcreteSyntaxEValidator;
 
 
 
@@ -11,7 +15,21 @@ import org.eclipse.xtext.linking.ILinkingService;
  * Use this class to register components to be used within the IDE.
  */
 public class ProblemRuntimeModule extends uk.ac.open.AbstractProblemRuntimeModule {
-	public Class<? extends ILinkingService> bindILinkingService() {
-		return ProblemIDLinking.class;
+//	public Class<? extends ILinkingService> bindILinkingService() {
+//		return ProblemIDLinking.class;
+//	}
+	@Override
+	public Class<? extends IFragmentProvider> bindIFragmentProvider() {
+		return QualifiedNameFragmentProvider.class;
 	}
+
+	public Class<? extends IReferableElementsUnloader> bindIReferableElementsUnloader() {
+		return IReferableElementsUnloader.GenericUnloader.class;
+	}
+
+	@SingletonBinding(eager = true)
+	public Class<? extends ConcreteSyntaxEValidator> bindConcreteSyntaxEValidator() {
+		return ConcreteSyntaxEValidator.class;
+	}
+	
 }

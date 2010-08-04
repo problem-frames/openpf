@@ -73,10 +73,9 @@ public class ProblemNavigatorItem extends ProblemAbstractNavigatorItem {
 		if (obj instanceof uk.ac.open.problem.diagram.navigator.ProblemNavigatorItem) {
 			return EcoreUtil
 					.getURI(getView())
-					.equals(
-							EcoreUtil
-									.getURI(((uk.ac.open.problem.diagram.navigator.ProblemNavigatorItem) obj)
-											.getView()));
+					.equals(EcoreUtil
+							.getURI(((uk.ac.open.problem.diagram.navigator.ProblemNavigatorItem) obj)
+									.getView()));
 		}
 		return super.equals(obj);
 	}

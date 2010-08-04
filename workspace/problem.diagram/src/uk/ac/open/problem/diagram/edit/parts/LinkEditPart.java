@@ -64,7 +64,7 @@ public class LinkEditPart extends ConnectionNodeEditPart implements
 		if (addFixedChild(childEditPart)) {
 			return;
 		}
-		super.addChildVisual(childEditPart, -1);
+		super.addChildVisual(childEditPart, index);
 	}
 
 	/**
@@ -121,7 +121,6 @@ public class LinkEditPart extends ConnectionNodeEditPart implements
 		 * @generated
 		 */
 		public ConstraintFigure() {
-			this.setLineWidth(1);
 			this.setLineStyle(Graphics.LINE_DASH);
 
 			createContents();
@@ -145,7 +144,6 @@ public class LinkEditPart extends ConnectionNodeEditPart implements
 		 */
 		private RotatableDecoration createTargetDecoration() {
 			PolylineDecoration df = new PolylineDecoration();
-			df.setLineWidth(1);
 			df.setForegroundColor(ColorConstants.black);
 			df.setBackgroundColor(ColorConstants.black);
 			return df;

@@ -100,10 +100,9 @@ public class ProblemDomainNavigatorItem extends PlatformObject {
 		if (obj instanceof uk.ac.open.problem.diagram.navigator.ProblemDomainNavigatorItem) {
 			return EcoreUtil
 					.getURI(getEObject())
-					.equals(
-							EcoreUtil
-									.getURI(((uk.ac.open.problem.diagram.navigator.ProblemDomainNavigatorItem) obj)
-											.getEObject()));
+					.equals(EcoreUtil
+							.getURI(((uk.ac.open.problem.diagram.navigator.ProblemDomainNavigatorItem) obj)
+									.getEObject()));
 		}
 		return super.equals(obj);
 	}

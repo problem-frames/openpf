@@ -179,8 +179,7 @@ public class ProblemDiagramEditor extends DiagramDocumentEditor implements
 		IEditorInput input = getEditorInput();
 		SaveAsDialog dialog = new SaveAsDialog(shell);
 		IFile original = input instanceof IFileEditorInput ? ((IFileEditorInput) input)
-				.getFile()
-				: null;
+				.getFile() : null;
 		if (original != null) {
 			dialog.setOriginalFile(original);
 		}
@@ -192,8 +191,8 @@ public class ProblemDiagramEditor extends DiagramDocumentEditor implements
 		}
 		if (provider.isDeleted(input) && original != null) {
 			String message = NLS.bind(
-					Messages.ProblemDiagramEditor_SavingDeletedFile, original
-							.getName());
+					Messages.ProblemDiagramEditor_SavingDeletedFile,
+					original.getName());
 			dialog.setErrorMessage(null);
 			dialog.setMessage(message, IMessageProvider.WARNING);
 		}
@@ -234,7 +233,8 @@ public class ProblemDiagramEditor extends DiagramDocumentEditor implements
 					newInput,
 					getDocumentProvider().getDocument(getEditorInput()), true);
 			WorkflowRunner wfr = new WorkflowRunner();
-			wfr.prepare("/Example/problem/ProblemGenerator.mwe", null, new HashMap<String, String>());
+			wfr.prepare("/Example/problem/ProblemGenerator.mwe", null,
+					new HashMap<String, String>());
 			wfr.executeWorkflow(null, null);
 			success = true;
 		} catch (CoreException x) {
@@ -242,8 +242,8 @@ public class ProblemDiagramEditor extends DiagramDocumentEditor implements
 			if (status == null || status.getSeverity() != IStatus.CANCEL) {
 				ErrorDialog.openError(shell,
 						Messages.ProblemDiagramEditor_SaveErrorTitle,
-						Messages.ProblemDiagramEditor_SaveErrorMessage, x
-								.getStatus());
+						Messages.ProblemDiagramEditor_SaveErrorMessage,
+						x.getStatus());
 			}
 		} finally {
 			provider.changed(newInput);
@@ -294,7 +294,8 @@ public class ProblemDiagramEditor extends DiagramDocumentEditor implements
 	}
 
 	public static String idToHighlight;
+
 	public void highlightElement(String id) {
-		idToHighlight = id;		
+		idToHighlight = id;
 	}
 }

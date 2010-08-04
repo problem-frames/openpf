@@ -5,7 +5,7 @@ import org.eclipse.xtext.generator.*
 import org.eclipse.xtext.ui.generator.*
 
 var grammarURI = "classpath:/uk/ac/open/Problem.xtext"
-var file.extensions = "pf"
+var file.extensions = "problem"
 var projectName = "problem"
 var runtimeProject = "../${projectName}"
 
@@ -63,11 +63,11 @@ Workflow {
 
 			// scoping and exporting API
 			// fragment = scoping.ImportURIScopingFragment {}
-			fragment = exporting.SimpleNamesFragment {}
+//			fragment = exporting.SimpleNamesFragment {}
 
 			// scoping and exporting API 
 			fragment = scoping.ImportNamespacesScopingFragment {}
-//			fragment = exporting.QualifiedNamesFragment {}
+			fragment = exporting.QualifiedNamesFragment {}
 			fragment = builder.BuilderIntegrationFragment {}
 
 			// formatter API 
@@ -79,10 +79,10 @@ Workflow {
 			// outline API 
 			fragment = outline.TransformerFragment {}
 			fragment = outline.OutlineNodeAdapterFactoryFragment {}
-			fragment = outline.QuickOutlineFragment {}
+//			fragment = outline.QuickOutlineFragment {}
 
 			// quickfix API 
-			fragment = quickfix.QuickfixProviderFragment {}
+//			fragment = quickfix.QuickfixProviderFragment {}
 
 			// content assist API  
 			fragment = contentAssist.JavaBasedContentAssistFragment {}

@@ -1,6 +1,7 @@
 package uk.ac.open.problem.diagram.part;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.eclipse.gef.Tool;
@@ -11,6 +12,7 @@ import org.eclipse.gef.palette.ToolEntry;
 import org.eclipse.gmf.runtime.diagram.ui.tools.UnspecifiedTypeConnectionTool;
 import org.eclipse.gmf.runtime.diagram.ui.tools.UnspecifiedTypeCreationTool;
 
+import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import uk.ac.open.problem.diagram.providers.ProblemElementTypes;
 
 /**
@@ -63,11 +65,10 @@ public class ProblemPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createMachine1CreationTool() {
-		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
-		types.add(ProblemElementTypes.Node_2003);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Machine1CreationTool_title,
-				Messages.Machine1CreationTool_desc, types);
+				Messages.Machine1CreationTool_desc,
+				Collections.singletonList(ProblemElementTypes.Node_2003));
 		entry.setId("createMachine1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ProblemDiagramEditorPlugin
 				.findImageDescriptor("/problem/icons/obj16/mch_obj.gif")); //$NON-NLS-1$
@@ -80,11 +81,10 @@ public class ProblemPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createDesignedDomain2CreationTool() {
-		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
-		types.add(ProblemElementTypes.Node_2004);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.DesignedDomain2CreationTool_title,
-				Messages.DesignedDomain2CreationTool_desc, types);
+				Messages.DesignedDomain2CreationTool_desc,
+				Collections.singletonList(ProblemElementTypes.Node_2004));
 		entry.setId("createDesignedDomain2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ProblemDiagramEditorPlugin
 				.findImageDescriptor("/problem/icons/obj16/dom_obj.gif")); //$NON-NLS-1$
@@ -97,11 +97,10 @@ public class ProblemPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createBiddableDomain3CreationTool() {
-		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
-		types.add(ProblemElementTypes.Node_2005);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.BiddableDomain3CreationTool_title,
-				Messages.BiddableDomain3CreationTool_desc, types);
+				Messages.BiddableDomain3CreationTool_desc,
+				Collections.singletonList(ProblemElementTypes.Node_2005));
 		entry.setId("createBiddableDomain3CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ProblemDiagramEditorPlugin
 				.findImageDescriptor("/problem/icons/obj16/bdm_obj.gif")); //$NON-NLS-1$
@@ -114,11 +113,10 @@ public class ProblemPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createCausalDomain4CreationTool() {
-		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
-		types.add(ProblemElementTypes.Node_2006);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.CausalDomain4CreationTool_title,
-				Messages.CausalDomain4CreationTool_desc, types);
+				Messages.CausalDomain4CreationTool_desc,
+				Collections.singletonList(ProblemElementTypes.Node_2006));
 		entry.setId("createCausalDomain4CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ProblemDiagramEditorPlugin
 				.findImageDescriptor("/problem/icons/obj16/cdm_obj.gif")); //$NON-NLS-1$
@@ -131,11 +129,10 @@ public class ProblemPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createLexicalDomain5CreationTool() {
-		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
-		types.add(ProblemElementTypes.Node_2002);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.LexicalDomain5CreationTool_title,
-				Messages.LexicalDomain5CreationTool_desc, types);
+				Messages.LexicalDomain5CreationTool_desc,
+				Collections.singletonList(ProblemElementTypes.Node_2002));
 		entry.setId("createLexicalDomain5CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ProblemDiagramEditorPlugin
 				.findImageDescriptor("/problem/icons/obj16/ldm_obj.gif")); //$NON-NLS-1$
@@ -148,11 +145,10 @@ public class ProblemPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createRequirement6CreationTool() {
-		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
-		types.add(ProblemElementTypes.Node_2001);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Requirement6CreationTool_title,
-				Messages.Requirement6CreationTool_desc, types);
+				Messages.Requirement6CreationTool_desc,
+				Collections.singletonList(ProblemElementTypes.Node_2001));
 		entry.setId("createRequirement6CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ProblemDiagramEditorPlugin
 				.findImageDescriptor("/problem/icons/obj16/rq_obj.gif")); //$NON-NLS-1$
@@ -165,11 +161,10 @@ public class ProblemPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createInterface1CreationTool() {
-		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
-		types.add(ProblemElementTypes.Link_4003);
 		LinkToolEntry entry = new LinkToolEntry(
 				Messages.Interface1CreationTool_title,
-				Messages.Interface1CreationTool_desc, types);
+				Messages.Interface1CreationTool_desc,
+				Collections.singletonList(ProblemElementTypes.Link_4003));
 		entry.setId("createInterface1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ProblemDiagramEditorPlugin
 				.findImageDescriptor("/problem/icons/obj16/int_obj.gif")); //$NON-NLS-1$
@@ -182,11 +177,10 @@ public class ProblemPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createReference2CreationTool() {
-		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
-		types.add(ProblemElementTypes.Link_4002);
 		LinkToolEntry entry = new LinkToolEntry(
 				Messages.Reference2CreationTool_title,
-				Messages.Reference2CreationTool_desc, types);
+				Messages.Reference2CreationTool_desc,
+				Collections.singletonList(ProblemElementTypes.Link_4002));
 		entry.setId("createReference2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ProblemDiagramEditorPlugin
 				.findImageDescriptor("/problem/icons/obj16/rqr_obj.gif")); //$NON-NLS-1$
@@ -199,11 +193,10 @@ public class ProblemPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createConstraint3CreationTool() {
-		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
-		types.add(ProblemElementTypes.Link_4001);
 		LinkToolEntry entry = new LinkToolEntry(
 				Messages.Constraint3CreationTool_title,
-				Messages.Constraint3CreationTool_desc, types);
+				Messages.Constraint3CreationTool_desc,
+				Collections.singletonList(ProblemElementTypes.Link_4001));
 		entry.setId("createConstraint3CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ProblemDiagramEditorPlugin
 				.findImageDescriptor("/problem/icons/obj16/rqc_obj.gif")); //$NON-NLS-1$
@@ -220,13 +213,13 @@ public class ProblemPaletteFactory {
 		/**
 		 * @generated
 		 */
-		private final List elementTypes;
+		private final List<IElementType> elementTypes;
 
 		/**
 		 * @generated
 		 */
 		private NodeToolEntry(String title, String description,
-				List elementTypes) {
+				List<IElementType> elementTypes) {
 			super(title, description, null, null);
 			this.elementTypes = elementTypes;
 		}
@@ -249,13 +242,13 @@ public class ProblemPaletteFactory {
 		/**
 		 * @generated
 		 */
-		private final List relationshipTypes;
+		private final List<IElementType> relationshipTypes;
 
 		/**
 		 * @generated
 		 */
 		private LinkToolEntry(String title, String description,
-				List relationshipTypes) {
+				List<IElementType> relationshipTypes) {
 			super(title, description, null, null);
 			this.relationshipTypes = relationshipTypes;
 		}

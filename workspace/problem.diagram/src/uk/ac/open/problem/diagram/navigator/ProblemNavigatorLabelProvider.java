@@ -16,6 +16,7 @@ import org.eclipse.ui.IMemento;
 import org.eclipse.ui.navigator.ICommonContentExtensionSite;
 import org.eclipse.ui.navigator.ICommonLabelProvider;
 
+import uk.ac.open.problem.ProblemDiagram;
 import uk.ac.open.problem.diagram.edit.parts.Link2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Link3EditPart;
 import uk.ac.open.problem.diagram.edit.parts.LinkDescription2EditPart;
@@ -53,13 +54,11 @@ public class ProblemNavigatorLabelProvider extends LabelProvider implements
 		ProblemDiagramEditorPlugin
 				.getInstance()
 				.getImageRegistry()
-				.put(
-						"Navigator?UnknownElement", ImageDescriptor.getMissingImageDescriptor()); //$NON-NLS-1$
+				.put("Navigator?UnknownElement", ImageDescriptor.getMissingImageDescriptor()); //$NON-NLS-1$
 		ProblemDiagramEditorPlugin
 				.getInstance()
 				.getImageRegistry()
-				.put(
-						"Navigator?ImageNotFound", ImageDescriptor.getMissingImageDescriptor()); //$NON-NLS-1$
+				.put("Navigator?ImageNotFound", ImageDescriptor.getMissingImageDescriptor()); //$NON-NLS-1$
 	}
 
 	/**
@@ -101,36 +100,36 @@ public class ProblemNavigatorLabelProvider extends LabelProvider implements
 	 */
 	public Image getImage(View view) {
 		switch (ProblemVisualIDRegistry.getVisualID(view)) {
-		case ProblemDiagramEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Diagram?http://open.ac.uk/problem?ProblemDiagram", ProblemElementTypes.ProblemDiagram_1000); //$NON-NLS-1$
-		case NodeEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://open.ac.uk/problem?Node", ProblemElementTypes.Node_2001); //$NON-NLS-1$
-		case Node2EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://open.ac.uk/problem?Node", ProblemElementTypes.Node_2002); //$NON-NLS-1$
-		case Node3EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://open.ac.uk/problem?Node", ProblemElementTypes.Node_2003); //$NON-NLS-1$
 		case Node4EditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?TopLevelNode?http://open.ac.uk/problem?Node", ProblemElementTypes.Node_2004); //$NON-NLS-1$
 		case Node5EditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?TopLevelNode?http://open.ac.uk/problem?Node", ProblemElementTypes.Node_2005); //$NON-NLS-1$
-		case Node6EditPart.VISUAL_ID:
+		case Node3EditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?TopLevelNode?http://open.ac.uk/problem?Node", ProblemElementTypes.Node_2006); //$NON-NLS-1$
+					"Navigator?TopLevelNode?http://open.ac.uk/problem?Node", ProblemElementTypes.Node_2003); //$NON-NLS-1$
+		case NodeEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?http://open.ac.uk/problem?Node", ProblemElementTypes.Node_2001); //$NON-NLS-1$
 		case LinkEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?http://open.ac.uk/problem?Link", ProblemElementTypes.Link_4001); //$NON-NLS-1$
+		case ProblemDiagramEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Diagram?http://open.ac.uk/problem?ProblemDiagram", ProblemElementTypes.ProblemDiagram_1000); //$NON-NLS-1$
 		case Link2EditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?http://open.ac.uk/problem?Link", ProblemElementTypes.Link_4002); //$NON-NLS-1$
 		case Link3EditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?http://open.ac.uk/problem?Link", ProblemElementTypes.Link_4003); //$NON-NLS-1$
+		case Node2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?http://open.ac.uk/problem?Node", ProblemElementTypes.Node_2002); //$NON-NLS-1$
+		case Node6EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?http://open.ac.uk/problem?Node", ProblemElementTypes.Node_2006); //$NON-NLS-1$
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -183,26 +182,26 @@ public class ProblemNavigatorLabelProvider extends LabelProvider implements
 			return getUnresolvedDomainElementProxyText(view);
 		}
 		switch (ProblemVisualIDRegistry.getVisualID(view)) {
-		case ProblemDiagramEditPart.VISUAL_ID:
-			return getProblemDiagram_1000Text(view);
-		case NodeEditPart.VISUAL_ID:
-			return getNode_2001Text(view);
-		case Node2EditPart.VISUAL_ID:
-			return getNode_2002Text(view);
-		case Node3EditPart.VISUAL_ID:
-			return getNode_2003Text(view);
 		case Node4EditPart.VISUAL_ID:
 			return getNode_2004Text(view);
 		case Node5EditPart.VISUAL_ID:
 			return getNode_2005Text(view);
-		case Node6EditPart.VISUAL_ID:
-			return getNode_2006Text(view);
+		case Node3EditPart.VISUAL_ID:
+			return getNode_2003Text(view);
+		case NodeEditPart.VISUAL_ID:
+			return getNode_2001Text(view);
 		case LinkEditPart.VISUAL_ID:
 			return getLink_4001Text(view);
+		case ProblemDiagramEditPart.VISUAL_ID:
+			return getProblemDiagram_1000Text(view);
 		case Link2EditPart.VISUAL_ID:
 			return getLink_4002Text(view);
 		case Link3EditPart.VISUAL_ID:
 			return getLink_4003Text(view);
+		case Node2EditPart.VISUAL_ID:
+			return getNode_2002Text(view);
+		case Node6EditPart.VISUAL_ID:
+			return getNode_2006Text(view);
 		}
 		return getUnknownElementText(view);
 	}
@@ -211,8 +210,7 @@ public class ProblemNavigatorLabelProvider extends LabelProvider implements
 	 * @generated
 	 */
 	private String getProblemDiagram_1000Text(View view) {
-		uk.ac.open.problem.ProblemDiagram domainModelElement = (uk.ac.open.problem.ProblemDiagram) view
-				.getElement();
+		ProblemDiagram domainModelElement = (ProblemDiagram) view.getElement();
 		if (domainModelElement != null) {
 			return domainModelElement.getName();
 		} else {
@@ -227,8 +225,9 @@ public class ProblemNavigatorLabelProvider extends LabelProvider implements
 	 */
 	private String getNode_2001Text(View view) {
 		IParser parser = ProblemParserProvider.getParser(
-				ProblemElementTypes.Node_2001, view.getElement() != null ? view
-						.getElement() : view, ProblemVisualIDRegistry
+				ProblemElementTypes.Node_2001,
+				view.getElement() != null ? view.getElement() : view,
+				ProblemVisualIDRegistry
 						.getType(NodeNameDescriptionEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
@@ -246,9 +245,9 @@ public class ProblemNavigatorLabelProvider extends LabelProvider implements
 	 */
 	private String getNode_2002Text(View view) {
 		IParser parser = ProblemParserProvider.getParser(
-				ProblemElementTypes.Node_2002, view.getElement() != null ? view
-						.getElement() : view, ProblemVisualIDRegistry
-						.getType(NodeNameEditPart.VISUAL_ID));
+				ProblemElementTypes.Node_2002,
+				view.getElement() != null ? view.getElement() : view,
+				ProblemVisualIDRegistry.getType(NodeNameEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
 					view.getElement() != null ? view.getElement() : view),
@@ -265,9 +264,9 @@ public class ProblemNavigatorLabelProvider extends LabelProvider implements
 	 */
 	private String getNode_2003Text(View view) {
 		IParser parser = ProblemParserProvider.getParser(
-				ProblemElementTypes.Node_2003, view.getElement() != null ? view
-						.getElement() : view, ProblemVisualIDRegistry
-						.getType(NodeName2EditPart.VISUAL_ID));
+				ProblemElementTypes.Node_2003,
+				view.getElement() != null ? view.getElement() : view,
+				ProblemVisualIDRegistry.getType(NodeName2EditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
 					view.getElement() != null ? view.getElement() : view),
@@ -284,9 +283,9 @@ public class ProblemNavigatorLabelProvider extends LabelProvider implements
 	 */
 	private String getNode_2004Text(View view) {
 		IParser parser = ProblemParserProvider.getParser(
-				ProblemElementTypes.Node_2004, view.getElement() != null ? view
-						.getElement() : view, ProblemVisualIDRegistry
-						.getType(NodeName3EditPart.VISUAL_ID));
+				ProblemElementTypes.Node_2004,
+				view.getElement() != null ? view.getElement() : view,
+				ProblemVisualIDRegistry.getType(NodeName3EditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
 					view.getElement() != null ? view.getElement() : view),
@@ -303,9 +302,9 @@ public class ProblemNavigatorLabelProvider extends LabelProvider implements
 	 */
 	private String getNode_2005Text(View view) {
 		IParser parser = ProblemParserProvider.getParser(
-				ProblemElementTypes.Node_2005, view.getElement() != null ? view
-						.getElement() : view, ProblemVisualIDRegistry
-						.getType(NodeName4EditPart.VISUAL_ID));
+				ProblemElementTypes.Node_2005,
+				view.getElement() != null ? view.getElement() : view,
+				ProblemVisualIDRegistry.getType(NodeName4EditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
 					view.getElement() != null ? view.getElement() : view),
@@ -322,9 +321,9 @@ public class ProblemNavigatorLabelProvider extends LabelProvider implements
 	 */
 	private String getNode_2006Text(View view) {
 		IParser parser = ProblemParserProvider.getParser(
-				ProblemElementTypes.Node_2006, view.getElement() != null ? view
-						.getElement() : view, ProblemVisualIDRegistry
-						.getType(NodeName5EditPart.VISUAL_ID));
+				ProblemElementTypes.Node_2006,
+				view.getElement() != null ? view.getElement() : view,
+				ProblemVisualIDRegistry.getType(NodeName5EditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
 					view.getElement() != null ? view.getElement() : view),
@@ -341,8 +340,9 @@ public class ProblemNavigatorLabelProvider extends LabelProvider implements
 	 */
 	private String getLink_4001Text(View view) {
 		IParser parser = ProblemParserProvider.getParser(
-				ProblemElementTypes.Link_4001, view.getElement() != null ? view
-						.getElement() : view, ProblemVisualIDRegistry
+				ProblemElementTypes.Link_4001,
+				view.getElement() != null ? view.getElement() : view,
+				ProblemVisualIDRegistry
 						.getType(LinkDescriptionEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
@@ -360,8 +360,9 @@ public class ProblemNavigatorLabelProvider extends LabelProvider implements
 	 */
 	private String getLink_4002Text(View view) {
 		IParser parser = ProblemParserProvider.getParser(
-				ProblemElementTypes.Link_4002, view.getElement() != null ? view
-						.getElement() : view, ProblemVisualIDRegistry
+				ProblemElementTypes.Link_4002,
+				view.getElement() != null ? view.getElement() : view,
+				ProblemVisualIDRegistry
 						.getType(LinkDescription2EditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
@@ -379,8 +380,9 @@ public class ProblemNavigatorLabelProvider extends LabelProvider implements
 	 */
 	private String getLink_4003Text(View view) {
 		IParser parser = ProblemParserProvider.getParser(
-				ProblemElementTypes.Link_4003, view.getElement() != null ? view
-						.getElement() : view, ProblemVisualIDRegistry
+				ProblemElementTypes.Link_4003,
+				view.getElement() != null ? view.getElement() : view,
+				ProblemVisualIDRegistry
 						.getType(LinkDescription3EditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(

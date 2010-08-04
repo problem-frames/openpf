@@ -46,7 +46,7 @@ public class Node2ItemSemanticEditPolicy extends
 		CompositeTransactionalCommand cmd = new CompositeTransactionalCommand(
 				getEditingDomain(), null);
 		cmd.setTransactionNestingEnabled(false);
-		for (Iterator it = view.getTargetEdges().iterator(); it.hasNext();) {
+		for (Iterator<?> it = view.getTargetEdges().iterator(); it.hasNext();) {
 			Edge incomingLink = (Edge) it.next();
 			if (ProblemVisualIDRegistry.getVisualID(incomingLink) == LinkEditPart.VISUAL_ID) {
 				DestroyElementRequest r = new DestroyElementRequest(
@@ -70,7 +70,7 @@ public class Node2ItemSemanticEditPolicy extends
 				continue;
 			}
 		}
-		for (Iterator it = view.getSourceEdges().iterator(); it.hasNext();) {
+		for (Iterator<?> it = view.getSourceEdges().iterator(); it.hasNext();) {
 			Edge outgoingLink = (Edge) it.next();
 			if (ProblemVisualIDRegistry.getVisualID(outgoingLink) == LinkEditPart.VISUAL_ID) {
 				DestroyElementRequest r = new DestroyElementRequest(

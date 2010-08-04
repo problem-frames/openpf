@@ -83,6 +83,16 @@
          </ViewId>
       </GlobalActionHandlerProvider>
       <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.printing.render.providers.DiagramWithPrintGlobalActionHandlerProvider"
+         id="ProblemPresentationPrint">
+         <Priority name="Lowest"/>
+         <ViewId id="uk.ac.open.problem.diagram.part.ProblemDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="print"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
          class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
          id="ProblemPresentationIDE">
          <Priority name="Lowest"/>

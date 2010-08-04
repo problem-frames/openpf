@@ -31,7 +31,11 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipReques
 import org.eclipse.gmf.runtime.emf.type.core.requests.SetRequest;
 import org.eclipse.gmf.runtime.notation.View;
 
+import uk.ac.open.problem.Link;
+import uk.ac.open.problem.Node;
+import uk.ac.open.problem.ProblemDiagram;
 import uk.ac.open.problem.diagram.edit.helpers.ProblemBaseEditHelper;
+import uk.ac.open.problem.diagram.part.ProblemDiagramEditorPlugin;
 import uk.ac.open.problem.diagram.part.ProblemVisualIDRegistry;
 import uk.ac.open.problem.diagram.providers.ProblemElementTypes;
 
@@ -72,8 +76,8 @@ public class ProblemBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 			Object view = ((ReconnectRequest) request).getConnectionEditPart()
 					.getModel();
 			if (view instanceof View) {
-				Integer id = new Integer(ProblemVisualIDRegistry
-						.getVisualID((View) view));
+				Integer id = new Integer(
+						ProblemVisualIDRegistry.getVisualID((View) view));
 				request.getExtendedData().put(VISUAL_ID_KEY, id);
 			}
 		}
@@ -123,8 +127,7 @@ public class ProblemBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 			Command editPolicyCommand) {
 		if (editPolicyCommand != null) {
 			ICommand command = editPolicyCommand instanceof ICommandProxy ? ((ICommandProxy) editPolicyCommand)
-					.getICommand()
-					: new CommandProxy(editPolicyCommand);
+					.getICommand() : new CommandProxy(editPolicyCommand);
 			request.setParameter(ProblemBaseEditHelper.EDIT_POLICY_COMMAND,
 					command);
 		}
@@ -297,64 +300,73 @@ public class ProblemBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 	/**
 	 * @generated
 	 */
+	public static LinkConstraints getLinkConstraints() {
+		LinkConstraints cached = ProblemDiagramEditorPlugin.getInstance()
+				.getLinkConstraints();
+		if (cached == null) {
+			ProblemDiagramEditorPlugin.getInstance().setLinkConstraints(
+					cached = new LinkConstraints());
+		}
+		return cached;
+	}
+
+	/**
+	 * @generated
+	 */
 	public static class LinkConstraints {
 
 		/**
 		 * @generated
 		 */
-		private static final String OPPOSITE_END_VAR = "oppositeEnd"; //$NON-NLS-1$
-
-		/**
-		 * @generated
-		 */
-		public static boolean canCreateLink_4001(
-				uk.ac.open.problem.ProblemDiagram container,
-				uk.ac.open.problem.Node source, uk.ac.open.problem.Node target) {
-			return canExistLink_4001(container, source, target);
+		LinkConstraints() {
+			// use static method #getLinkConstraints() to access instance
 		}
 
 		/**
 		 * @generated
 		 */
-		public static boolean canCreateLink_4002(
-				uk.ac.open.problem.ProblemDiagram container,
-				uk.ac.open.problem.Node source, uk.ac.open.problem.Node target) {
-			return canExistLink_4002(container, source, target);
+		public boolean canCreateLink_4001(ProblemDiagram container,
+				Node source, Node target) {
+			return canExistLink_4001(container, null, source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public static boolean canCreateLink_4003(
-				uk.ac.open.problem.ProblemDiagram container,
-				uk.ac.open.problem.Node source, uk.ac.open.problem.Node target) {
-			return canExistLink_4003(container, source, target);
+		public boolean canCreateLink_4002(ProblemDiagram container,
+				Node source, Node target) {
+			return canExistLink_4002(container, null, source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public static boolean canExistLink_4001(
-				uk.ac.open.problem.ProblemDiagram container,
-				uk.ac.open.problem.Node source, uk.ac.open.problem.Node target) {
+		public boolean canCreateLink_4003(ProblemDiagram container,
+				Node source, Node target) {
+			return canExistLink_4003(container, null, source, target);
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canExistLink_4001(ProblemDiagram container,
+				Link linkInstance, Node source, Node target) {
 			return true;
 		}
 
 		/**
 		 * @generated
 		 */
-		public static boolean canExistLink_4002(
-				uk.ac.open.problem.ProblemDiagram container,
-				uk.ac.open.problem.Node source, uk.ac.open.problem.Node target) {
+		public boolean canExistLink_4002(ProblemDiagram container,
+				Link linkInstance, Node source, Node target) {
 			return true;
 		}
 
 		/**
 		 * @generated
 		 */
-		public static boolean canExistLink_4003(
-				uk.ac.open.problem.ProblemDiagram container,
-				uk.ac.open.problem.Node source, uk.ac.open.problem.Node target) {
+		public boolean canExistLink_4003(ProblemDiagram container,
+				Link linkInstance, Node source, Node target) {
 			return true;
 		}
 	}

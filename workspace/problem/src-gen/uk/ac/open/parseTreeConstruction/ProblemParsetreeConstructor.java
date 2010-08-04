@@ -44,11 +44,11 @@ protected class ThisRootNode extends RootToken {
 /************ begin Rule ProblemDiagram ****************
  *
  * ProblemDiagram:
- * 	"problem" ":" name=ID ("for" highlight=[Node])? (nodes+=Node | links+=Link)*;
+ * 	{ProblemDiagram} "problem:" name=ID ("for" highlight=[Node])? (nodes+=Node | links+=Link)*;
  *
  **/
 
-// "problem" ":" name=ID ("for" highlight=[Node])? (nodes+=Node | links+=Link)*
+// {ProblemDiagram} "problem:" name=ID ("for" highlight=[Node])? (nodes+=Node | links+=Link)*
 protected class ProblemDiagram_Group extends GroupToken {
 	
 	public ProblemDiagram_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -72,23 +72,23 @@ protected class ProblemDiagram_Group extends GroupToken {
 
     @Override
 	public IEObjectConsumer tryConsume() {
-		if(getEObject().eClass() != grammarAccess.getProblemDiagramRule().getType().getClassifier())
+		if(getEObject().eClass() != grammarAccess.getProblemDiagramAccess().getProblemDiagramAction_0().getType().getClassifier())
 			return null;
 		return eObjectConsumer;
 	}
 
 }
 
-// "problem"
-protected class ProblemDiagram_ProblemKeyword_0 extends KeywordToken  {
-	
-	public ProblemDiagram_ProblemKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+// {ProblemDiagram}
+protected class ProblemDiagram_ProblemDiagramAction_0 extends ActionToken  {
+
+	public ProblemDiagram_ProblemDiagramAction_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
-	public Keyword getGrammarElement() {
-		return grammarAccess.getProblemDiagramAccess().getProblemKeyword_0();
+	public Action getGrammarElement() {
+		return grammarAccess.getProblemDiagramAccess().getProblemDiagramAction_0();
 	}
 
     @Override
@@ -98,24 +98,29 @@ protected class ProblemDiagram_ProblemKeyword_0 extends KeywordToken  {
 		}	
 	}
 
+    @Override
+	public IEObjectConsumer tryConsume() {
+		if(!eObjectConsumer.isConsumed()) return null;
+		return eObjectConsumer;
+	}
 }
 
-// ":"
-protected class ProblemDiagram_ColonKeyword_1 extends KeywordToken  {
+// "problem:"
+protected class ProblemDiagram_ProblemKeyword_1 extends KeywordToken  {
 	
-	public ProblemDiagram_ColonKeyword_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public ProblemDiagram_ProblemKeyword_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Keyword getGrammarElement() {
-		return grammarAccess.getProblemDiagramAccess().getColonKeyword_1();
+		return grammarAccess.getProblemDiagramAccess().getProblemKeyword_1();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new ProblemDiagram_ProblemKeyword_0(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new ProblemDiagram_ProblemDiagramAction_0(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -137,7 +142,7 @@ protected class ProblemDiagram_NameAssignment_2 extends AssignmentToken  {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new ProblemDiagram_ColonKeyword_1(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new ProblemDiagram_ProblemKeyword_1(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}

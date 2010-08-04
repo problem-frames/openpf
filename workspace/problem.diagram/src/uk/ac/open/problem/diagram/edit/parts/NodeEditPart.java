@@ -1,6 +1,7 @@
 package uk.ac.open.problem.diagram.edit.parts;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import org.eclipse.draw2d.ChopboxAnchor;
@@ -96,7 +97,7 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected LayoutEditPolicy createLayoutEditPolicy() {
-		LayoutEditPolicy lep = new LayoutEditPolicy() {
+		org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy lep = new org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy() {
 
 			protected EditPolicy createChildEditPolicy(EditPart child) {
 				EditPolicy result = child
@@ -124,7 +125,8 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	protected IFigure createNodeShape() {
 		uk.ac.open.problem.figures.EntityFigure figure = new uk.ac.open.problem.figures.EntityFigure(
 				node);
-		figure.setHighlight(node.getName().equals(ProblemDiagramEditor.idToHighlight));
+		figure.setHighlight(node.getName().equals(
+				ProblemDiagramEditor.idToHighlight));
 		// EntityFigure figure = new EntityFigure();
 		return primaryShape = figure;
 	}
@@ -142,14 +144,14 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof NodeDescriptionEditPart) {
-			((NodeDescriptionEditPart) childEditPart)
-					.setLabel(getPrimaryShape().getFigureEntityDescription());
-			return true;
-		}
 		if (childEditPart instanceof NodeNameDescriptionEditPart) {
 			((NodeNameDescriptionEditPart) childEditPart)
 					.setLabel(getPrimaryShape().getFigureEntityName());
+			return true;
+		}
+		if (childEditPart instanceof NodeDescriptionEditPart) {
+			((NodeDescriptionEditPart) childEditPart)
+					.setLabel(getPrimaryShape().getFigureEntityDescription());
 			return true;
 		}
 		return false;
@@ -159,10 +161,10 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof NodeDescriptionEditPart) {
+		if (childEditPart instanceof NodeNameDescriptionEditPart) {
 			return true;
 		}
-		if (childEditPart instanceof NodeNameDescriptionEditPart) {
+		if (childEditPart instanceof NodeDescriptionEditPart) {
 			return true;
 		}
 		return false;
@@ -294,8 +296,8 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMARelTypesOnSource() {
-		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
+	public List<IElementType> getMARelTypesOnSource() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
 		types.add(ProblemElementTypes.Link_4001);
 		types.add(ProblemElementTypes.Link_4002);
 		types.add(ProblemElementTypes.Link_4003);
@@ -305,9 +307,9 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMARelTypesOnSourceAndTarget(
+	public List<IElementType> getMARelTypesOnSourceAndTarget(
 			IGraphicalEditPart targetEditPart) {
-		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
+		LinkedList<IElementType> types = new LinkedList<IElementType>();
 		if (targetEditPart instanceof uk.ac.open.problem.diagram.edit.parts.NodeEditPart) {
 			types.add(ProblemElementTypes.Link_4001);
 		}
@@ -368,61 +370,28 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMATypesForTarget(
-			IElementType relationshipType) {
-		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
+	public List<IElementType> getMATypesForTarget(IElementType relationshipType) {
+		LinkedList<IElementType> types = new LinkedList<IElementType>();
 		if (relationshipType == ProblemElementTypes.Link_4001) {
 			types.add(ProblemElementTypes.Node_2001);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4001) {
 			types.add(ProblemElementTypes.Node_2002);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4001) {
 			types.add(ProblemElementTypes.Node_2003);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4001) {
 			types.add(ProblemElementTypes.Node_2004);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4001) {
 			types.add(ProblemElementTypes.Node_2005);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4001) {
 			types.add(ProblemElementTypes.Node_2006);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4002) {
+		} else if (relationshipType == ProblemElementTypes.Link_4002) {
 			types.add(ProblemElementTypes.Node_2001);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4002) {
 			types.add(ProblemElementTypes.Node_2002);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4002) {
 			types.add(ProblemElementTypes.Node_2003);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4002) {
 			types.add(ProblemElementTypes.Node_2004);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4002) {
 			types.add(ProblemElementTypes.Node_2005);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4002) {
 			types.add(ProblemElementTypes.Node_2006);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4003) {
+		} else if (relationshipType == ProblemElementTypes.Link_4003) {
 			types.add(ProblemElementTypes.Node_2001);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4003) {
 			types.add(ProblemElementTypes.Node_2002);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4003) {
 			types.add(ProblemElementTypes.Node_2003);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4003) {
 			types.add(ProblemElementTypes.Node_2004);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4003) {
 			types.add(ProblemElementTypes.Node_2005);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4003) {
 			types.add(ProblemElementTypes.Node_2006);
 		}
 		return types;
@@ -431,8 +400,8 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMARelTypesOnTarget() {
-		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
+	public List<IElementType> getMARelTypesOnTarget() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
 		types.add(ProblemElementTypes.Link_4001);
 		types.add(ProblemElementTypes.Link_4002);
 		types.add(ProblemElementTypes.Link_4003);
@@ -442,61 +411,28 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMATypesForSource(
-			IElementType relationshipType) {
-		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
+	public List<IElementType> getMATypesForSource(IElementType relationshipType) {
+		LinkedList<IElementType> types = new LinkedList<IElementType>();
 		if (relationshipType == ProblemElementTypes.Link_4001) {
 			types.add(ProblemElementTypes.Node_2001);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4001) {
 			types.add(ProblemElementTypes.Node_2002);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4001) {
 			types.add(ProblemElementTypes.Node_2003);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4001) {
 			types.add(ProblemElementTypes.Node_2004);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4001) {
 			types.add(ProblemElementTypes.Node_2005);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4001) {
 			types.add(ProblemElementTypes.Node_2006);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4002) {
+		} else if (relationshipType == ProblemElementTypes.Link_4002) {
 			types.add(ProblemElementTypes.Node_2001);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4002) {
 			types.add(ProblemElementTypes.Node_2002);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4002) {
 			types.add(ProblemElementTypes.Node_2003);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4002) {
 			types.add(ProblemElementTypes.Node_2004);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4002) {
 			types.add(ProblemElementTypes.Node_2005);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4002) {
 			types.add(ProblemElementTypes.Node_2006);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4003) {
+		} else if (relationshipType == ProblemElementTypes.Link_4003) {
 			types.add(ProblemElementTypes.Node_2001);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4003) {
 			types.add(ProblemElementTypes.Node_2002);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4003) {
 			types.add(ProblemElementTypes.Node_2003);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4003) {
 			types.add(ProblemElementTypes.Node_2004);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4003) {
 			types.add(ProblemElementTypes.Node_2005);
-		}
-		if (relationshipType == ProblemElementTypes.Link_4003) {
 			types.add(ProblemElementTypes.Node_2006);
 		}
 		return types;
@@ -526,7 +462,6 @@ public class NodeEditPart extends ShapeNodeEditPart {
 			layoutThis.makeColumnsEqualWidth = true;
 			this.setLayoutManager(layoutThis);
 
-			this.setLineWidth(1);
 			this.setLineStyle(Graphics.LINE_DASH);
 			createContents();
 		}
@@ -572,25 +507,6 @@ public class NodeEditPart extends ShapeNodeEditPart {
 		/**
 		 * @generated
 		 */
-		private boolean myUseLocalCoordinates = false;
-
-		/**
-		 * @generated
-		 */
-		protected boolean useLocalCoordinates() {
-			return myUseLocalCoordinates;
-		}
-
-		/**
-		 * @generated
-		 */
-		protected void setUseLocalCoordinates(boolean useLocalCoordinates) {
-			myUseLocalCoordinates = useLocalCoordinates;
-		}
-
-		/**
-		 * @generated
-		 */
 		public WrappingLabel getFigureEntityName() {
 			return fFigureEntityName;
 		}
@@ -614,10 +530,9 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated NOT
 	 */
-	static final Font FFIGUREENTITYDESCRIPTION_FONT = new Font(Display
-			.getCurrent(),
-			Display.getDefault().getSystemFont().getFontData()[0].getName(), 6,
-			SWT.ITALIC);
+	static final Font FFIGUREENTITYDESCRIPTION_FONT = new Font(
+			Display.getCurrent(), Display.getDefault().getSystemFont()
+					.getFontData()[0].getName(), 6, SWT.ITALIC);
 
 	/**
 	 * @generated NOT

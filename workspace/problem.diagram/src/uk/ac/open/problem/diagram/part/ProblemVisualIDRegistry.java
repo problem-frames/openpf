@@ -6,6 +6,10 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.View;
 
+import uk.ac.open.problem.Link;
+import uk.ac.open.problem.Node;
+import uk.ac.open.problem.ProblemDiagram;
+import uk.ac.open.problem.ProblemPackage;
 import uk.ac.open.problem.diagram.edit.parts.Link2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Link3EditPart;
 import uk.ac.open.problem.diagram.edit.parts.LinkDescription2EditPart;
@@ -47,51 +51,6 @@ public class ProblemVisualIDRegistry {
 	 * @generated
 	 */
 	private static final String DEBUG_KEY = "problem.diagram/debug/visualID"; //$NON-NLS-1$
-
-	/**
-	 * @generated
-	 */
-	private static ProblemAbstractExpression Node_2001_Constraint;
-
-	/**
-	 * @generated
-	 */
-	private static ProblemAbstractExpression Node_2002_Constraint;
-
-	/**
-	 * @generated
-	 */
-	private static ProblemAbstractExpression Node_2003_Constraint;
-
-	/**
-	 * @generated
-	 */
-	private static ProblemAbstractExpression Node_2004_Constraint;
-
-	/**
-	 * @generated
-	 */
-	private static ProblemAbstractExpression Node_2005_Constraint;
-
-	/**
-	 * @generated
-	 */
-	private static ProblemAbstractExpression Node_2006_Constraint;
-
-	/**
-	 * @generated
-	 */
-	private static ProblemAbstractExpression Link_4001_Constraint;
-
-	/**
-	 * @generated
-	 */
-	private static ProblemAbstractExpression Link_4002_Constraint;
-
-	/**
-	 * @generated
-	 */
-	private static ProblemAbstractExpression Link_4003_Constraint;
 
 	/**
 	 * @generated
@@ -144,7 +103,7 @@ public class ProblemVisualIDRegistry {
 	 * @generated
 	 */
 	public static String getType(int visualID) {
-		return String.valueOf(visualID);
+		return Integer.toString(visualID);
 	}
 
 	/**
@@ -154,9 +113,9 @@ public class ProblemVisualIDRegistry {
 		if (domainElement == null) {
 			return -1;
 		}
-		if (uk.ac.open.problem.ProblemPackage.eINSTANCE.getProblemDiagram()
-				.isSuperTypeOf(domainElement.eClass())
-				&& isDiagram((uk.ac.open.problem.ProblemDiagram) domainElement)) {
+		if (ProblemPackage.eINSTANCE.getProblemDiagram().isSuperTypeOf(
+				domainElement.eClass())
+				&& isDiagram((ProblemDiagram) domainElement)) {
 			return ProblemDiagramEditPart.VISUAL_ID;
 		}
 		return -1;
@@ -187,34 +146,34 @@ public class ProblemVisualIDRegistry {
 		}
 		switch (containerVisualID) {
 		case ProblemDiagramEditPart.VISUAL_ID:
-			if (uk.ac.open.problem.ProblemPackage.eINSTANCE.getNode()
-					.isSuperTypeOf(domainElement.eClass())
-					&& isNode_2001((uk.ac.open.problem.Node) domainElement)) {
+			if (ProblemPackage.eINSTANCE.getNode().isSuperTypeOf(
+					domainElement.eClass())
+					&& isNode_2001((Node) domainElement)) {
 				return NodeEditPart.VISUAL_ID;
 			}
-			if (uk.ac.open.problem.ProblemPackage.eINSTANCE.getNode()
-					.isSuperTypeOf(domainElement.eClass())
-					&& isNode_2002((uk.ac.open.problem.Node) domainElement)) {
+			if (ProblemPackage.eINSTANCE.getNode().isSuperTypeOf(
+					domainElement.eClass())
+					&& isNode_2002((Node) domainElement)) {
 				return Node2EditPart.VISUAL_ID;
 			}
-			if (uk.ac.open.problem.ProblemPackage.eINSTANCE.getNode()
-					.isSuperTypeOf(domainElement.eClass())
-					&& isNode_2003((uk.ac.open.problem.Node) domainElement)) {
+			if (ProblemPackage.eINSTANCE.getNode().isSuperTypeOf(
+					domainElement.eClass())
+					&& isNode_2003((Node) domainElement)) {
 				return Node3EditPart.VISUAL_ID;
 			}
-			if (uk.ac.open.problem.ProblemPackage.eINSTANCE.getNode()
-					.isSuperTypeOf(domainElement.eClass())
-					&& isNode_2004((uk.ac.open.problem.Node) domainElement)) {
+			if (ProblemPackage.eINSTANCE.getNode().isSuperTypeOf(
+					domainElement.eClass())
+					&& isNode_2004((Node) domainElement)) {
 				return Node4EditPart.VISUAL_ID;
 			}
-			if (uk.ac.open.problem.ProblemPackage.eINSTANCE.getNode()
-					.isSuperTypeOf(domainElement.eClass())
-					&& isNode_2005((uk.ac.open.problem.Node) domainElement)) {
+			if (ProblemPackage.eINSTANCE.getNode().isSuperTypeOf(
+					domainElement.eClass())
+					&& isNode_2005((Node) domainElement)) {
 				return Node5EditPart.VISUAL_ID;
 			}
-			if (uk.ac.open.problem.ProblemPackage.eINSTANCE.getNode()
-					.isSuperTypeOf(domainElement.eClass())
-					&& isNode_2006((uk.ac.open.problem.Node) domainElement)) {
+			if (ProblemPackage.eINSTANCE.getNode().isSuperTypeOf(
+					domainElement.eClass())
+					&& isNode_2006((Node) domainElement)) {
 				return Node6EditPart.VISUAL_ID;
 			}
 			break;
@@ -243,6 +202,26 @@ public class ProblemVisualIDRegistry {
 			}
 		}
 		switch (containerVisualID) {
+		case ProblemDiagramEditPart.VISUAL_ID:
+			if (NodeEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Node2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Node3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Node4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Node5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Node6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
 		case NodeEditPart.VISUAL_ID:
 			if (NodeNameDescriptionEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
@@ -291,26 +270,6 @@ public class ProblemVisualIDRegistry {
 				return true;
 			}
 			break;
-		case ProblemDiagramEditPart.VISUAL_ID:
-			if (NodeEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Node2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Node3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Node4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Node5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Node6EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
 		case LinkEditPart.VISUAL_ID:
 			if (LinkDescriptionEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
@@ -337,19 +296,19 @@ public class ProblemVisualIDRegistry {
 		if (domainElement == null) {
 			return -1;
 		}
-		if (uk.ac.open.problem.ProblemPackage.eINSTANCE.getLink().isSuperTypeOf(
+		if (ProblemPackage.eINSTANCE.getLink().isSuperTypeOf(
 				domainElement.eClass())
-				&& isLink_4001((uk.ac.open.problem.Link) domainElement)) {
+				&& isLink_4001((Link) domainElement)) {
 			return LinkEditPart.VISUAL_ID;
 		}
-		if (uk.ac.open.problem.ProblemPackage.eINSTANCE.getLink().isSuperTypeOf(
+		if (ProblemPackage.eINSTANCE.getLink().isSuperTypeOf(
 				domainElement.eClass())
-				&& isLink_4002((uk.ac.open.problem.Link) domainElement)) {
+				&& isLink_4002((Link) domainElement)) {
 			return Link2EditPart.VISUAL_ID;
 		}
-		if (uk.ac.open.problem.ProblemPackage.eINSTANCE.getLink().isSuperTypeOf(
+		if (ProblemPackage.eINSTANCE.getLink().isSuperTypeOf(
 				domainElement.eClass())
-				&& isLink_4003((uk.ac.open.problem.Link) domainElement)) {
+				&& isLink_4003((Link) domainElement)) {
 			return Link3EditPart.VISUAL_ID;
 		}
 		return -1;
@@ -361,124 +320,97 @@ public class ProblemVisualIDRegistry {
 	 * 
 	 * @generated
 	 */
-	private static boolean isDiagram(uk.ac.open.problem.ProblemDiagram element) {
+	private static boolean isDiagram(ProblemDiagram element) {
 		return true;
 	}
 
 	/**
 	 * @generated
 	 */
-	private static boolean isNode_2001(uk.ac.open.problem.Node domainElement) {
-		if (Node_2001_Constraint == null) { // lazy initialization
-			Node_2001_Constraint = ProblemOCLFactory
-					.getExpression(
-							"self.type = NodeType::REQUIREMENT", uk.ac.open.problem.ProblemPackage.eINSTANCE.getNode()); //$NON-NLS-1$
-		}
-		Object result = Node_2001_Constraint.evaluate(domainElement);
+	private static boolean isNode_2001(Node domainElement) {
+		Object result = ProblemOCLFactory.getExpression(0,
+				ProblemPackage.eINSTANCE.getNode(), null).evaluate(
+				domainElement);
 		return result instanceof Boolean && ((Boolean) result).booleanValue();
 	}
 
 	/**
 	 * @generated
 	 */
-	private static boolean isNode_2002(uk.ac.open.problem.Node domainElement) {
-		if (Node_2002_Constraint == null) { // lazy initialization
-			Node_2002_Constraint = ProblemOCLFactory
-					.getExpression(
-							"self.type = NodeType::LEXICAL", uk.ac.open.problem.ProblemPackage.eINSTANCE.getNode()); //$NON-NLS-1$
-		}
-		Object result = Node_2002_Constraint.evaluate(domainElement);
+	private static boolean isNode_2002(Node domainElement) {
+		Object result = ProblemOCLFactory.getExpression(2,
+				ProblemPackage.eINSTANCE.getNode(), null).evaluate(
+				domainElement);
 		return result instanceof Boolean && ((Boolean) result).booleanValue();
 	}
 
 	/**
 	 * @generated
 	 */
-	private static boolean isNode_2003(uk.ac.open.problem.Node domainElement) {
-		if (Node_2003_Constraint == null) { // lazy initialization
-			Node_2003_Constraint = ProblemOCLFactory
-					.getExpression(
-							"self.type = NodeType::MACHINE", uk.ac.open.problem.ProblemPackage.eINSTANCE.getNode()); //$NON-NLS-1$
-		}
-		Object result = Node_2003_Constraint.evaluate(domainElement);
+	private static boolean isNode_2003(Node domainElement) {
+		Object result = ProblemOCLFactory.getExpression(4,
+				ProblemPackage.eINSTANCE.getNode(), null).evaluate(
+				domainElement);
 		return result instanceof Boolean && ((Boolean) result).booleanValue();
 	}
 
 	/**
 	 * @generated
 	 */
-	private static boolean isNode_2004(uk.ac.open.problem.Node domainElement) {
-		if (Node_2004_Constraint == null) { // lazy initialization
-			Node_2004_Constraint = ProblemOCLFactory
-					.getExpression(
-							"self.type = NodeType::DESIGNED", uk.ac.open.problem.ProblemPackage.eINSTANCE.getNode()); //$NON-NLS-1$
-		}
-		Object result = Node_2004_Constraint.evaluate(domainElement);
+	private static boolean isNode_2004(Node domainElement) {
+		Object result = ProblemOCLFactory.getExpression(6,
+				ProblemPackage.eINSTANCE.getNode(), null).evaluate(
+				domainElement);
 		return result instanceof Boolean && ((Boolean) result).booleanValue();
 	}
 
 	/**
 	 * @generated
 	 */
-	private static boolean isNode_2005(uk.ac.open.problem.Node domainElement) {
-		if (Node_2005_Constraint == null) { // lazy initialization
-			Node_2005_Constraint = ProblemOCLFactory
-					.getExpression(
-							"self.type = NodeType::BIDDABLE", uk.ac.open.problem.ProblemPackage.eINSTANCE.getNode()); //$NON-NLS-1$
-		}
-		Object result = Node_2005_Constraint.evaluate(domainElement);
+	private static boolean isNode_2005(Node domainElement) {
+		Object result = ProblemOCLFactory.getExpression(8,
+				ProblemPackage.eINSTANCE.getNode(), null).evaluate(
+				domainElement);
 		return result instanceof Boolean && ((Boolean) result).booleanValue();
 	}
 
 	/**
 	 * @generated
 	 */
-	private static boolean isNode_2006(uk.ac.open.problem.Node domainElement) {
-		if (Node_2006_Constraint == null) { // lazy initialization
-			Node_2006_Constraint = ProblemOCLFactory
-					.getExpression(
-							"self.type = NodeType::CAUSAL", uk.ac.open.problem.ProblemPackage.eINSTANCE.getNode()); //$NON-NLS-1$
-		}
-		Object result = Node_2006_Constraint.evaluate(domainElement);
+	private static boolean isNode_2006(Node domainElement) {
+		Object result = ProblemOCLFactory.getExpression(10,
+				ProblemPackage.eINSTANCE.getNode(), null).evaluate(
+				domainElement);
 		return result instanceof Boolean && ((Boolean) result).booleanValue();
 	}
 
 	/**
 	 * @generated
 	 */
-	private static boolean isLink_4001(uk.ac.open.problem.Link domainElement) {
-		if (Link_4001_Constraint == null) { // lazy initialization
-			Link_4001_Constraint = ProblemOCLFactory
-					.getExpression(
-							"self.type = LinkType::CONSTRAINT", uk.ac.open.problem.ProblemPackage.eINSTANCE.getLink()); //$NON-NLS-1$
-		}
-		Object result = Link_4001_Constraint.evaluate(domainElement);
+	private static boolean isLink_4001(Link domainElement) {
+		Object result = ProblemOCLFactory.getExpression(12,
+				ProblemPackage.eINSTANCE.getLink(), null).evaluate(
+				domainElement);
 		return result instanceof Boolean && ((Boolean) result).booleanValue();
 	}
 
 	/**
 	 * @generated
 	 */
-	private static boolean isLink_4002(uk.ac.open.problem.Link domainElement) {
-		if (Link_4002_Constraint == null) { // lazy initialization
-			Link_4002_Constraint = ProblemOCLFactory
-					.getExpression(
-							"self.type = LinkType::REFERENCE", uk.ac.open.problem.ProblemPackage.eINSTANCE.getLink()); //$NON-NLS-1$
-		}
-		Object result = Link_4002_Constraint.evaluate(domainElement);
+	private static boolean isLink_4002(Link domainElement) {
+		Object result = ProblemOCLFactory.getExpression(14,
+				ProblemPackage.eINSTANCE.getLink(), null).evaluate(
+				domainElement);
 		return result instanceof Boolean && ((Boolean) result).booleanValue();
 	}
 
 	/**
 	 * @generated
 	 */
-	private static boolean isLink_4003(uk.ac.open.problem.Link domainElement) {
-		if (Link_4003_Constraint == null) { // lazy initialization
-			Link_4003_Constraint = ProblemOCLFactory
-					.getExpression(
-							"self.type = LinkType::INTERFACE", uk.ac.open.problem.ProblemPackage.eINSTANCE.getLink()); //$NON-NLS-1$
-		}
-		Object result = Link_4003_Constraint.evaluate(domainElement);
+	private static boolean isLink_4003(Link domainElement) {
+		Object result = ProblemOCLFactory.getExpression(16,
+				ProblemPackage.eINSTANCE.getLink(), null).evaluate(
+				domainElement);
 		return result instanceof Boolean && ((Boolean) result).booleanValue();
 	}
 

@@ -12,7 +12,12 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest;
 
+import uk.ac.open.problem.Link;
+import uk.ac.open.problem.Node;
+import uk.ac.open.problem.ProblemDiagram;
+import uk.ac.open.problem.ProblemFactory;
 import uk.ac.open.problem.diagram.edit.policies.ProblemBaseItemSemanticEditPolicy;
+import uk.ac.open.problem.diagram.providers.ElementInitializers;
 import uk.ac.open.problem.diagram.providers.ProblemElementTypes;
 
 /**
@@ -33,7 +38,7 @@ public class Link3CreateCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	private final uk.ac.open.problem.ProblemDiagram container;
+	private final ProblemDiagram container;
 
 	/**
 	 * @generated
@@ -53,10 +58,10 @@ public class Link3CreateCommand extends EditElementCommand {
 		if (source == null && target == null) {
 			return false;
 		}
-		if (source != null && false == source instanceof uk.ac.open.problem.Node) {
+		if (source != null && false == source instanceof Node) {
 			return false;
 		}
-		if (target != null && false == target instanceof uk.ac.open.problem.Node) {
+		if (target != null && false == target instanceof Node) {
 			return false;
 		}
 		if (getSource() == null) {
@@ -66,7 +71,7 @@ public class Link3CreateCommand extends EditElementCommand {
 		if (getContainer() == null) {
 			return false;
 		}
-		return ProblemBaseItemSemanticEditPolicy.LinkConstraints
+		return ProblemBaseItemSemanticEditPolicy.getLinkConstraints()
 				.canCreateLink_4003(getContainer(), getSource(), getTarget());
 	}
 
@@ -80,12 +85,11 @@ public class Link3CreateCommand extends EditElementCommand {
 					"Invalid arguments in create link command"); //$NON-NLS-1$
 		}
 
-		uk.ac.open.problem.Link newElement = uk.ac.open.problem.ProblemFactory.eINSTANCE
-				.createLink();
+		Link newElement = ProblemFactory.eINSTANCE.createLink();
 		getContainer().getLinks().add(newElement);
 		newElement.setFrom(getSource());
 		newElement.setTo(getTarget());
-		ProblemElementTypes.init_Link_4003(newElement);
+		ElementInitializers.getInstance().init_Link_4003(newElement);
 		doConfigure(newElement, monitor, info);
 		((CreateElementRequest) getRequest()).setNewElement(newElement);
 		return CommandResult.newOKCommandResult(newElement);
@@ -95,9 +99,8 @@ public class Link3CreateCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	protected void doConfigure(uk.ac.open.problem.Link newElement,
-			IProgressMonitor monitor, IAdaptable info)
-			throws ExecutionException {
+	protected void doConfigure(Link newElement, IProgressMonitor monitor,
+			IAdaptable info) throws ExecutionException {
 		IElementType elementType = ((CreateElementRequest) getRequest())
 				.getElementType();
 		ConfigureRequest configureRequest = new ConfigureRequest(
@@ -126,21 +129,21 @@ public class Link3CreateCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	protected uk.ac.open.problem.Node getSource() {
-		return (uk.ac.open.problem.Node) source;
+	protected Node getSource() {
+		return (Node) source;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected uk.ac.open.problem.Node getTarget() {
-		return (uk.ac.open.problem.Node) target;
+	protected Node getTarget() {
+		return (Node) target;
 	}
 
 	/**
 	 * @generated
 	 */
-	public uk.ac.open.problem.ProblemDiagram getContainer() {
+	public ProblemDiagram getContainer() {
 		return container;
 	}
 
@@ -149,15 +152,14 @@ public class Link3CreateCommand extends EditElementCommand {
 	 * Modify with appropriate logic.
 	 * @generated
 	 */
-	private static uk.ac.open.problem.ProblemDiagram deduceContainer(
-			EObject source, EObject target) {
+	private static ProblemDiagram deduceContainer(EObject source, EObject target) {
 		// Find container element for the new link.
 		// Climb up by containment hierarchy starting from the source
 		// and return the first element that is instance of the container class.
 		for (EObject element = source; element != null; element = element
 				.eContainer()) {
-			if (element instanceof uk.ac.open.problem.ProblemDiagram) {
-				return (uk.ac.open.problem.ProblemDiagram) element;
+			if (element instanceof ProblemDiagram) {
+				return (ProblemDiagram) element;
 			}
 		}
 		return null;

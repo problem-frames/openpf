@@ -19,6 +19,10 @@ import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
+import uk.ac.open.problem.diagram.edit.policies.ProblemBaseItemSemanticEditPolicy;
+import uk.ac.open.problem.diagram.expressions.ProblemOCLFactory;
+import uk.ac.open.problem.diagram.providers.ElementInitializers;
+import uk.ac.open.problem.provider.ProblemItemProviderAdapterFactory;
 
 /**
  * @generated
@@ -54,6 +58,21 @@ public class ProblemDiagramEditorPlugin extends AbstractUIPlugin {
 	/**
 	 * @generated
 	 */
+	private ProblemBaseItemSemanticEditPolicy.LinkConstraints linkConstraints;
+
+	/**
+	 * @generated
+	 */
+	private ElementInitializers initializers;
+
+	/**
+	 * @generated
+	 */
+	private ProblemOCLFactory oclFactory;
+
+	/**
+	 * @generated
+	 */
 	public ProblemDiagramEditorPlugin() {
 	}
 
@@ -74,6 +93,9 @@ public class ProblemDiagramEditorPlugin extends AbstractUIPlugin {
 	public void stop(BundleContext context) throws Exception {
 		adapterFactory.dispose();
 		adapterFactory = null;
+		linkConstraints = null;
+		initializers = null;
+		oclFactory = null;
 		instance = null;
 		super.stop(context);
 	}
@@ -89,7 +111,7 @@ public class ProblemDiagramEditorPlugin extends AbstractUIPlugin {
 	 * @generated
 	 */
 	protected ComposedAdapterFactory createAdapterFactory() {
-		List factories = new ArrayList();
+		ArrayList<AdapterFactory> factories = new ArrayList<AdapterFactory>();
 		fillItemProviderFactories(factories);
 		return new ComposedAdapterFactory(factories);
 	}
@@ -97,9 +119,8 @@ public class ProblemDiagramEditorPlugin extends AbstractUIPlugin {
 	/**
 	 * @generated
 	 */
-	protected void fillItemProviderFactories(List factories) {
-		factories
-				.add(new uk.ac.open.problem.provider.ProblemItemProviderAdapterFactory());
+	protected void fillItemProviderFactories(List<AdapterFactory> factories) {
+		factories.add(new ProblemItemProviderAdapterFactory());
 		factories.add(new ResourceItemProviderAdapterFactory());
 		factories.add(new ReflectiveItemProviderAdapterFactory());
 	}
@@ -189,6 +210,49 @@ public class ProblemDiagramEditorPlugin extends AbstractUIPlugin {
 			documentProvider = new ProblemDocumentProvider();
 		}
 		return documentProvider;
+	}
+
+	/**
+	 * @generated
+	 */
+	public ProblemBaseItemSemanticEditPolicy.LinkConstraints getLinkConstraints() {
+		return linkConstraints;
+	}
+
+	/**
+	 * @generated
+	 */
+	public void setLinkConstraints(
+			ProblemBaseItemSemanticEditPolicy.LinkConstraints lc) {
+		this.linkConstraints = lc;
+	}
+
+	/**
+	 * @generated
+	 */
+	public ElementInitializers getElementInitializers() {
+		return initializers;
+	}
+
+	/**
+	 * @generated
+	 */
+	public void setElementInitializers(ElementInitializers i) {
+		this.initializers = i;
+	}
+
+	/**
+	 * @generated
+	 */
+	public ProblemOCLFactory getProblemOCLFactory() {
+		return oclFactory;
+	}
+
+	/**
+	 * @generated
+	 */
+	public void setProblemOCLFactory(ProblemOCLFactory f) {
+		this.oclFactory = f;
 	}
 
 	/**

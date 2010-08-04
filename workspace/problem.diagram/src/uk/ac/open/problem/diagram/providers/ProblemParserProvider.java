@@ -13,6 +13,7 @@ import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.emf.ui.services.parser.ParserHintAdapter;
 import org.eclipse.gmf.runtime.notation.View;
 
+import uk.ac.open.problem.ProblemPackage;
 import uk.ac.open.problem.diagram.edit.parts.LinkDescription2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.LinkDescription3EditPart;
 import uk.ac.open.problem.diagram.edit.parts.LinkDescriptionEditPart;
@@ -47,9 +48,9 @@ public class ProblemParserProvider extends AbstractProvider implements
 	 */
 	private IParser getNodeName_5001Parser() {
 		if (nodeName_5001Parser == null) {
-			EAttribute[] features = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getNode_Name() };
-			EAttribute[] editableFeatures = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getNode_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
@@ -68,9 +69,9 @@ public class ProblemParserProvider extends AbstractProvider implements
 	 */
 	private IParser getNodeDescription_5002Parser() {
 		if (nodeDescription_5002Parser == null) {
-			EAttribute[] features = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getNode_Description() };
-			EAttribute[] editableFeatures = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getNode_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
@@ -89,9 +90,9 @@ public class ProblemParserProvider extends AbstractProvider implements
 	 */
 	private IParser getNodeDescription_5008Parser() {
 		if (nodeDescription_5008Parser == null) {
-			EAttribute[] features = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getNode_Description() };
-			EAttribute[] editableFeatures = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getNode_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
@@ -110,9 +111,9 @@ public class ProblemParserProvider extends AbstractProvider implements
 	 */
 	private IParser getNodeName_5009Parser() {
 		if (nodeName_5009Parser == null) {
-			EAttribute[] features = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getNode_Name() };
-			EAttribute[] editableFeatures = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getNode_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
@@ -131,9 +132,9 @@ public class ProblemParserProvider extends AbstractProvider implements
 	 */
 	private IParser getNodeName_5003Parser() {
 		if (nodeName_5003Parser == null) {
-			EAttribute[] features = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getNode_Name() };
-			EAttribute[] editableFeatures = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getNode_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
@@ -152,9 +153,9 @@ public class ProblemParserProvider extends AbstractProvider implements
 	 */
 	private IParser getNodeDescription_5004Parser() {
 		if (nodeDescription_5004Parser == null) {
-			EAttribute[] features = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getNode_Description() };
-			EAttribute[] editableFeatures = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getNode_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
@@ -173,9 +174,9 @@ public class ProblemParserProvider extends AbstractProvider implements
 	 */
 	private IParser getNodeDescription_5010Parser() {
 		if (nodeDescription_5010Parser == null) {
-			EAttribute[] features = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getNode_Description() };
-			EAttribute[] editableFeatures = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getNode_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
@@ -194,9 +195,9 @@ public class ProblemParserProvider extends AbstractProvider implements
 	 */
 	private IParser getNodeName_5011Parser() {
 		if (nodeName_5011Parser == null) {
-			EAttribute[] features = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getNode_Name() };
-			EAttribute[] editableFeatures = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getNode_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
@@ -215,9 +216,9 @@ public class ProblemParserProvider extends AbstractProvider implements
 	 */
 	private IParser getNodeName_5005Parser() {
 		if (nodeName_5005Parser == null) {
-			EAttribute[] features = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getNode_Name() };
-			EAttribute[] editableFeatures = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getNode_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
@@ -236,9 +237,9 @@ public class ProblemParserProvider extends AbstractProvider implements
 	 */
 	private IParser getNodeDescription_5006Parser() {
 		if (nodeDescription_5006Parser == null) {
-			EAttribute[] features = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getNode_Description() };
-			EAttribute[] editableFeatures = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getNode_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
@@ -257,9 +258,9 @@ public class ProblemParserProvider extends AbstractProvider implements
 	 */
 	private IParser getNodeName_5007Parser() {
 		if (nodeName_5007Parser == null) {
-			EAttribute[] features = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getNode_Name() };
-			EAttribute[] editableFeatures = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getNode_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
@@ -278,9 +279,9 @@ public class ProblemParserProvider extends AbstractProvider implements
 	 */
 	private IParser getNodeDescription_5012Parser() {
 		if (nodeDescription_5012Parser == null) {
-			EAttribute[] features = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getNode_Description() };
-			EAttribute[] editableFeatures = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getNode_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
@@ -299,9 +300,9 @@ public class ProblemParserProvider extends AbstractProvider implements
 	 */
 	private IParser getLinkDescription_6001Parser() {
 		if (linkDescription_6001Parser == null) {
-			EAttribute[] features = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getLink_Description() };
-			EAttribute[] editableFeatures = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getLink_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
@@ -320,9 +321,9 @@ public class ProblemParserProvider extends AbstractProvider implements
 	 */
 	private IParser getLinkDescription_6002Parser() {
 		if (linkDescription_6002Parser == null) {
-			EAttribute[] features = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getLink_Description() };
-			EAttribute[] editableFeatures = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getLink_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
@@ -341,9 +342,9 @@ public class ProblemParserProvider extends AbstractProvider implements
 	 */
 	private IParser getLinkDescription_6003Parser() {
 		if (linkDescription_6003Parser == null) {
-			EAttribute[] features = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getLink_Description() };
-			EAttribute[] editableFeatures = new EAttribute[] { uk.ac.open.problem.ProblemPackage.eINSTANCE
+			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getLink_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);

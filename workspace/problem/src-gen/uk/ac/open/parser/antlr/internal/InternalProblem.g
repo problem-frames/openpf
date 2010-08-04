@@ -90,13 +90,20 @@ ruleProblemDiagram returns [EObject current=null]
     @after { resetLookahead(); 
     	lastConsumedNode = currentNode;
     }:
-(	'problem' 
-    {
-        createLeafNode(grammarAccess.getProblemDiagramAccess().getProblemKeyword_0(), null); 
+((
+    { 
+        temp=factory.create(grammarAccess.getProblemDiagramAccess().getProblemDiagramAction_0().getType().getClassifier());
+        $current = temp; 
+        temp = null;
+        CompositeNode newNode = createCompositeNode(grammarAccess.getProblemDiagramAccess().getProblemDiagramAction_0(), currentNode.getParent());
+    newNode.getChildren().add(currentNode);
+    moveLookaheadInfo(currentNode, newNode);
+    currentNode = newNode; 
+        associateNodeWithAstElement(currentNode, $current); 
     }
-	':' 
+)	'problem:' 
     {
-        createLeafNode(grammarAccess.getProblemDiagramAccess().getColonKeyword_1(), null); 
+        createLeafNode(grammarAccess.getProblemDiagramAccess().getProblemKeyword_1(), null); 
     }
 (
 (

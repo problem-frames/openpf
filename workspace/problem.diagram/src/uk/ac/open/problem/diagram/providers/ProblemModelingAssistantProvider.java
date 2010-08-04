@@ -43,7 +43,7 @@ public class ProblemModelingAssistantProvider extends ModelingAssistantProvider 
 		IGraphicalEditPart editPart = (IGraphicalEditPart) host
 				.getAdapter(IGraphicalEditPart.class);
 		if (editPart instanceof ProblemDiagramEditPart) {
-			ArrayList types = new ArrayList(6);
+			ArrayList<IElementType> types = new ArrayList<IElementType>(6);
 			types.add(ProblemElementTypes.Node_2001);
 			types.add(ProblemElementTypes.Node_2002);
 			types.add(ProblemElementTypes.Node_2003);
@@ -218,8 +218,8 @@ public class ProblemModelingAssistantProvider extends ModelingAssistantProvider 
 	 */
 	public EObject selectExistingElementForSource(IAdaptable target,
 			IElementType relationshipType) {
-		return selectExistingElement(target, getTypesForSource(target,
-				relationshipType));
+		return selectExistingElement(target,
+				getTypesForSource(target, relationshipType));
 	}
 
 	/**
@@ -227,8 +227,8 @@ public class ProblemModelingAssistantProvider extends ModelingAssistantProvider 
 	 */
 	public EObject selectExistingElementForTarget(IAdaptable source,
 			IElementType relationshipType) {
-		return selectExistingElement(source, getTypesForTarget(source,
-				relationshipType));
+		return selectExistingElement(source,
+				getTypesForTarget(source, relationshipType));
 	}
 
 	/**
@@ -244,9 +244,10 @@ public class ProblemModelingAssistantProvider extends ModelingAssistantProvider 
 			return null;
 		}
 		Diagram diagram = (Diagram) editPart.getRoot().getContents().getModel();
-		Collection elements = new HashSet();
-		for (Iterator it = diagram.getElement().eAllContents(); it.hasNext();) {
-			EObject element = (EObject) it.next();
+		HashSet<EObject> elements = new HashSet<EObject>();
+		for (Iterator<EObject> it = diagram.getElement().eAllContents(); it
+				.hasNext();) {
+			EObject element = it.next();
 			if (isApplicableElement(element, types)) {
 				elements.add(element);
 			}

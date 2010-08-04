@@ -61,7 +61,7 @@ public class Link2EditPart extends ConnectionNodeEditPart implements
 		if (addFixedChild(childEditPart)) {
 			return;
 		}
-		super.addChildVisual(childEditPart, -1);
+		super.addChildVisual(childEditPart, index);
 	}
 
 	/**
@@ -118,7 +118,6 @@ public class Link2EditPart extends ConnectionNodeEditPart implements
 		 * @generated
 		 */
 		public ReferenceFigure() {
-			this.setLineWidth(1);
 			this.setLineStyle(Graphics.LINE_DASH);
 
 			createContents();

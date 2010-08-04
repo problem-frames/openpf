@@ -103,9 +103,8 @@ public class OpenDiagramEditPolicy extends OpenEditPolicy {
 		 * @generated
 		 */
 		OpenDiagramCommand(HintedDiagramLinkStyle linkStyle) {
-			// editing domain is taken for original diagram,
-			// if we open diagram from another file, we should use another
-			// editing domain
+			// editing domain is taken for original diagram, 
+			// if we open diagram from another file, we should use another editing domain
 			super(TransactionUtil.getEditingDomain(linkStyle),
 					Messages.CommandName_OpenDiagram, null);
 			diagramFacet = linkStyle;
@@ -123,7 +122,7 @@ public class OpenDiagramEditPolicy extends OpenEditPolicy {
 				IAdaptable info) throws ExecutionException {
 			try {
 				openExternalEditors();
-				Diagram diagram = getDiagramToOpen();				
+				Diagram diagram = getDiagramToOpen();
 				if (diagram == null) {
 					// System.out.println("create new diagram");
 					diagram = intializeNewDiagram();
@@ -157,12 +156,13 @@ public class OpenDiagramEditPolicy extends OpenEditPolicy {
 						if (page != null) {
 							IWorkspace ws = ResourcesPlugin.getWorkspace();
 							IFile file = ws.getRoot().getFile(new Path(other));
-							IEditorPart openEditor = IDE.openEditor(page, file, true);
+							IEditorPart openEditor = IDE.openEditor(page, file,
+									true);
 						}
 					}
 				} catch (PartInitException e) {
 				}
-			}			
+			}
 		}
 
 		/**
@@ -202,8 +202,8 @@ public class OpenDiagramEditPolicy extends OpenEditPolicy {
 			}
 			String highlight = ProblemDiagramEditor.idToHighlight;
 			ProblemDiagram pd = node.getSubproblem().get(0);
-			if (highlight!=null) {
-				for (Node n: pd.getNodes()) {
+			if (highlight != null) {
+				for (Node n : pd.getNodes()) {
 					if (n.getName().equals(highlight))
 						pd.setHighlight(n);
 				}

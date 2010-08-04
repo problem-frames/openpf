@@ -8,6 +8,9 @@ import org.eclipse.gmf.runtime.common.core.command.CommandResult;
 import org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest;
 
+import uk.ac.open.problem.Link;
+import uk.ac.open.problem.Node;
+import uk.ac.open.problem.ProblemDiagram;
 import uk.ac.open.problem.diagram.edit.policies.ProblemBaseItemSemanticEditPolicy;
 
 /**
@@ -44,7 +47,7 @@ public class Link2ReorientCommand extends EditElementCommand {
 	 * @generated
 	 */
 	public boolean canExecute() {
-		if (false == getElementToEdit() instanceof uk.ac.open.problem.Link) {
+		if (false == getElementToEdit() instanceof Link) {
 			return false;
 		}
 		if (reorientDirection == ReorientRelationshipRequest.REORIENT_SOURCE) {
@@ -60,34 +63,34 @@ public class Link2ReorientCommand extends EditElementCommand {
 	 * @generated
 	 */
 	protected boolean canReorientSource() {
-		if (!(oldEnd instanceof uk.ac.open.problem.Node && newEnd instanceof uk.ac.open.problem.Node)) {
+		if (!(oldEnd instanceof Node && newEnd instanceof Node)) {
 			return false;
 		}
-		uk.ac.open.problem.Node target = getLink().getTo();
-		if (!(getLink().eContainer() instanceof uk.ac.open.problem.ProblemDiagram)) {
+		Node target = getLink().getTo();
+		if (!(getLink().eContainer() instanceof ProblemDiagram)) {
 			return false;
 		}
-		uk.ac.open.problem.ProblemDiagram container = (uk.ac.open.problem.ProblemDiagram) getLink()
-				.eContainer();
-		return ProblemBaseItemSemanticEditPolicy.LinkConstraints
-				.canExistLink_4002(container, getNewSource(), target);
+		ProblemDiagram container = (ProblemDiagram) getLink().eContainer();
+		return ProblemBaseItemSemanticEditPolicy
+				.getLinkConstraints()
+				.canExistLink_4002(container, getLink(), getNewSource(), target);
 	}
 
 	/**
 	 * @generated
 	 */
 	protected boolean canReorientTarget() {
-		if (!(oldEnd instanceof uk.ac.open.problem.Node && newEnd instanceof uk.ac.open.problem.Node)) {
+		if (!(oldEnd instanceof Node && newEnd instanceof Node)) {
 			return false;
 		}
-		uk.ac.open.problem.Node source = getLink().getFrom();
-		if (!(getLink().eContainer() instanceof uk.ac.open.problem.ProblemDiagram)) {
+		Node source = getLink().getFrom();
+		if (!(getLink().eContainer() instanceof ProblemDiagram)) {
 			return false;
 		}
-		uk.ac.open.problem.ProblemDiagram container = (uk.ac.open.problem.ProblemDiagram) getLink()
-				.eContainer();
-		return ProblemBaseItemSemanticEditPolicy.LinkConstraints
-				.canExistLink_4002(container, source, getNewTarget());
+		ProblemDiagram container = (ProblemDiagram) getLink().eContainer();
+		return ProblemBaseItemSemanticEditPolicy
+				.getLinkConstraints()
+				.canExistLink_4002(container, getLink(), source, getNewTarget());
 	}
 
 	/**
@@ -127,35 +130,35 @@ public class Link2ReorientCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	protected uk.ac.open.problem.Link getLink() {
-		return (uk.ac.open.problem.Link) getElementToEdit();
+	protected Link getLink() {
+		return (Link) getElementToEdit();
 	}
 
 	/**
 	 * @generated
 	 */
-	protected uk.ac.open.problem.Node getOldSource() {
-		return (uk.ac.open.problem.Node) oldEnd;
+	protected Node getOldSource() {
+		return (Node) oldEnd;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected uk.ac.open.problem.Node getNewSource() {
-		return (uk.ac.open.problem.Node) newEnd;
+	protected Node getNewSource() {
+		return (Node) newEnd;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected uk.ac.open.problem.Node getOldTarget() {
-		return (uk.ac.open.problem.Node) oldEnd;
+	protected Node getOldTarget() {
+		return (Node) oldEnd;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected uk.ac.open.problem.Node getNewTarget() {
-		return (uk.ac.open.problem.Node) newEnd;
+	protected Node getNewTarget() {
+		return (Node) newEnd;
 	}
 }

@@ -60,7 +60,7 @@ public class Link3EditPart extends ConnectionNodeEditPart implements
 		if (addFixedChild(childEditPart)) {
 			return;
 		}
-		super.addChildVisual(childEditPart, -1);
+		super.addChildVisual(childEditPart, index);
 	}
 
 	/**
@@ -117,7 +117,6 @@ public class Link3EditPart extends ConnectionNodeEditPart implements
 		 * @generated
 		 */
 		public InterfaceFigure() {
-			this.setLineWidth(1);
 
 			createContents();
 		}

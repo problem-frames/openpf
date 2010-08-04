@@ -9,7 +9,7 @@
             class="uk.ac.open.ui.ProblemExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
             contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
             default="true"
-            extensions="pf"
+            extensions="problem"
             id="uk.ac.open.Problem"
             name="Problem Editor">
         </editor>
@@ -127,58 +127,17 @@
 		point="org.eclipse.emf.ecore.extension_parser">
 		<parser
 			class="uk.ac.open.ui.ProblemExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
-			type="pf">
+			type="problem">
 		</parser>
 	</extension>
 	<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
         <resourceServiceProvider
             class="uk.ac.open.ui.ProblemExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
-            uriExtension="pf">
+            uriExtension="problem">
         </resourceServiceProvider>
     </extension>
 
 
 
-
-	<!-- Quick Outline -->
-	<extension
-		point="org.eclipse.ui.handlers">
-		<handler 
-			class="uk.ac.open.ui.ProblemExecutableExtensionFactory:org.eclipse.xtext.ui.editor.outline.quickoutline.ShowQuickOutlineActionHandler"
-			commandId="org.eclipse.xtext.ui.editor.outline.QuickOutline">
-			<activeWhen>
-				<reference
-					definitionId="uk.ac.open.Problem.Editor.opened">
-				</reference>
-			</activeWhen>
-		</handler>
-	</extension>
-	<extension
-		point="org.eclipse.ui.commands">
-		<command
-			description="Open the quick outline."
-			id="org.eclipse.xtext.ui.editor.outline.QuickOutline"
-			name="Quick Outline">
-		</command>
-	</extension>
-	<extension point="org.eclipse.ui.menus">
-		<menuContribution
-			locationURI="popup:#TextEditorContext?after=group.open">
-			<command commandId="org.eclipse.xtext.ui.editor.outline.QuickOutline"
-				style="push"
-				tooltip="Open Quick Outline">
-				<visibleWhen checkEnabled="false">
-					<reference definitionId="uk.ac.open.Problem.Editor.opened"/>
-				</visibleWhen>
-			</command>
-		</menuContribution>
-	</extension>
-   <!-- quickfix marker resolution generator -->
-   <extension
-         point="org.eclipse.ui.ide.markerResolution">
-      <markerResolutionGenerator
-            class="uk.ac.open.ui.ProblemExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator">
-      </markerResolutionGenerator>
-   </extension>
 
 </plugin>

@@ -20,15 +20,16 @@ T21 : 'state' ;
 T22 : '--' ;
 T23 : '~~' ;
 T24 : '~>' ;
-T25 : 'problem' ;
-T26 : ':' ;
-T27 : 'for' ;
+T25 : 'problem:' ;
+T26 : 'for' ;
+T27 : ':' ;
 T28 : '{' ;
 T29 : '}' ;
 T30 : ',' ;
 T31 : 'see' ;
 T32 : 'domain' ;
-T33 : '!' ;
+T33 : 'problem' ;
+T34 : '!' ;
 
 // $ANTLR src "../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g" 2290
 RULE_ID : ('#' ~('#')+ '#'|'^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*);
