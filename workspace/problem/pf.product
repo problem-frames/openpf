@@ -38,7 +38,9 @@
       <plugin id="javax.mail.glassfish"/>
       <plugin id="javax.servlet"/>
       <plugin id="javax.servlet.jsp"/>
+      <!--
       <plugin id="javax.transaction" fragment="true"/>
+      -->
       <plugin id="javax.xml" fragment=""/>
       <plugin id="lpg.runtime.java"/>
       <plugin id="net.sourceforge.lpg.lpgjavaruntime" fragment=""/>
@@ -68,7 +70,9 @@
       <plugin id="org.apache.xerces" fragment=""/>
       <plugin id="org.apache.xml.resolver" fragment=""/>
       <plugin id="org.apache.xml.serializer" fragment=""/>
+      <!--
       <plugin id="org.easymock"/>
+      -->
       <plugin id="org.eclipse.acceleo.common"/>
       <plugin id="org.eclipse.acceleo.engine"/>
       <plugin id="org.eclipse.acceleo.model"/>
@@ -265,11 +269,13 @@
       <plugin id="org.eclipse.swt.motif.solaris.sparc" fragment="true"/>
       <plugin id="org.eclipse.swt.win32.win32.x86" fragment="true"/>
       <plugin id="org.eclipse.swt.win32.win32.x86_64" fragment="true"/>
+      <!--
       <plugin id="org.eclipse.swtbot.ant.optional.junit3" fragment="true"/>
       <plugin id="org.eclipse.swtbot.ant.optional.junit4" fragment="true"/>
       <plugin id="org.eclipse.swtbot.eclipse.finder"/>
       <plugin id="org.eclipse.swtbot.junit4_x"/>
       <plugin id="org.eclipse.swtbot.swt.finder"/>
+      -->
       <plugin id="org.eclipse.team.core"/>
       <plugin id="org.eclipse.team.ui"/>
       <plugin id="org.eclipse.text"/>
@@ -302,7 +308,9 @@
       <plugin id="org.eclipse.xpand"/>
       <plugin id="org.eclipse.xtend"/>
       <plugin id="org.eclipse.xtend.typesystem.emf"/>
+      <!--
       <plugin id="org.eclipse.xtend.util.stdlib" fragment=""/>
+      -->
       <plugin id="org.eclipse.xtext"/>
       <plugin id="org.eclipse.xtext.builder"/>
       <plugin id="org.eclipse.xtext.common.types"/>
@@ -313,11 +321,13 @@
       <plugin id="org.eclipse.xtext.ui.shared"/>
       <plugin id="org.eclipse.xtext.util"/>
       <plugin id="org.eclipse.xtext.xtend"/>
+      <!--
       <plugin id="org.hamcrest"/>
       <plugin id="org.hamcrest.core"/>
       <plugin id="org.hamcrest.integration"/>
       <plugin id="org.hamcrest.library"/>
       <plugin id="org.hamcrest.text"/>
+      -->
       <plugin id="org.junit"/>
       <plugin id="org.junit4"/>
       <plugin id="org.mortbay.jetty.server"/>
