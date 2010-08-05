@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: situation.diagram.extension; singleton:=true
+Bundle-SymbolicName: situation.diagram.extensions; singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: eu.securechange.situation.diagram.extensions.Activator
