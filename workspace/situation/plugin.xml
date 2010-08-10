@@ -12,6 +12,7 @@
   </extension>
 
   <extension point="core.example">
+      <example file="Situation.xtext"/>
       <example file="a.situation"/>
       <example file="D3.2.pdf"/>
   </extension>
