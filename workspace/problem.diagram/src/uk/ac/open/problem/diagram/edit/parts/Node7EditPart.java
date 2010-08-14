@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package uk.ac.open.problem.diagram.edit.parts;
 
 import java.util.ArrayList;
@@ -40,7 +43,7 @@ import org.eclipse.swt.widgets.Display;
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.NodeType;
 import uk.ac.open.problem.ProblemPackage;
-import uk.ac.open.problem.diagram.edit.policies.Node5ItemSemanticEditPolicy;
+import uk.ac.open.problem.diagram.edit.policies.Node7ItemSemanticEditPolicy;
 import uk.ac.open.problem.diagram.edit.policies.OpenDiagramEditPolicy;
 import uk.ac.open.problem.diagram.part.ProblemVisualIDRegistry;
 import uk.ac.open.problem.diagram.providers.ProblemElementTypes;
@@ -48,12 +51,12 @@ import uk.ac.open.problem.diagram.providers.ProblemElementTypes;
 /**
  * @generated
  */
-public class Node5EditPart extends ShapeNodeEditPart {
+public class Node7EditPart extends ShapeNodeEditPart {
 
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2005;
+	public static final int VISUAL_ID = 2007;
 
 	/**
 	 * @generated
@@ -65,19 +68,7 @@ public class Node5EditPart extends ShapeNodeEditPart {
 	 */
 	protected IFigure primaryShape;
 
-	/**
-	 * @generated NOT
-	 */
-	protected void createDefaultEditPolicies() {
-		super.createDefaultEditPolicies();
-		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new Node5ItemSemanticEditPolicy());
-		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
-		installEditPolicy(EditPolicyRoles.OPEN_ROLE,
-				new OpenDiagramEditPolicy());
-		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
-		removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
-	}
+	Node node;
 
 	/**
 	 * @generated
@@ -109,13 +100,13 @@ public class Node5EditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof NodeName4EditPart) {
-			((NodeName4EditPart) childEditPart).setLabel(getPrimaryShape()
+		if (childEditPart instanceof NodeName6EditPart) {
+			((NodeName6EditPart) childEditPart).setLabel(getPrimaryShape()
 					.getFigureEntityName());
 			return true;
 		}
-		if (childEditPart instanceof NodeDescription5EditPart) {
-			((NodeDescription5EditPart) childEditPart)
+		if (childEditPart instanceof NodeDescription7EditPart) {
+			((NodeDescription7EditPart) childEditPart)
 					.setLabel(getPrimaryShape().getFigureEntityDescription());
 			return true;
 		}
@@ -126,10 +117,10 @@ public class Node5EditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof NodeName4EditPart) {
+		if (childEditPart instanceof NodeName6EditPart) {
 			return true;
 		}
-		if (childEditPart instanceof NodeDescription5EditPart) {
+		if (childEditPart instanceof NodeDescription7EditPart) {
 			return true;
 		}
 		return false;
@@ -253,7 +244,7 @@ public class Node5EditPart extends ShapeNodeEditPart {
 	 */
 	public EditPart getPrimaryChildEditPart() {
 		return getChildBySemanticHint(ProblemVisualIDRegistry
-				.getType(NodeName4EditPart.VISUAL_ID));
+				.getType(NodeName6EditPart.VISUAL_ID));
 	}
 
 	/**
@@ -285,13 +276,13 @@ public class Node5EditPart extends ShapeNodeEditPart {
 		if (targetEditPart instanceof Node4EditPart) {
 			types.add(ProblemElementTypes.Link_4001);
 		}
-		if (targetEditPart instanceof uk.ac.open.problem.diagram.edit.parts.Node5EditPart) {
+		if (targetEditPart instanceof Node5EditPart) {
 			types.add(ProblemElementTypes.Link_4001);
 		}
 		if (targetEditPart instanceof Node6EditPart) {
 			types.add(ProblemElementTypes.Link_4001);
 		}
-		if (targetEditPart instanceof Node7EditPart) {
+		if (targetEditPart instanceof uk.ac.open.problem.diagram.edit.parts.Node7EditPart) {
 			types.add(ProblemElementTypes.Link_4001);
 		}
 		if (targetEditPart instanceof NodeEditPart) {
@@ -306,13 +297,13 @@ public class Node5EditPart extends ShapeNodeEditPart {
 		if (targetEditPart instanceof Node4EditPart) {
 			types.add(ProblemElementTypes.Link_4002);
 		}
-		if (targetEditPart instanceof uk.ac.open.problem.diagram.edit.parts.Node5EditPart) {
+		if (targetEditPart instanceof Node5EditPart) {
 			types.add(ProblemElementTypes.Link_4002);
 		}
 		if (targetEditPart instanceof Node6EditPart) {
 			types.add(ProblemElementTypes.Link_4002);
 		}
-		if (targetEditPart instanceof Node7EditPart) {
+		if (targetEditPart instanceof uk.ac.open.problem.diagram.edit.parts.Node7EditPart) {
 			types.add(ProblemElementTypes.Link_4002);
 		}
 		if (targetEditPart instanceof NodeEditPart) {
@@ -327,13 +318,13 @@ public class Node5EditPart extends ShapeNodeEditPart {
 		if (targetEditPart instanceof Node4EditPart) {
 			types.add(ProblemElementTypes.Link_4003);
 		}
-		if (targetEditPart instanceof uk.ac.open.problem.diagram.edit.parts.Node5EditPart) {
+		if (targetEditPart instanceof Node5EditPart) {
 			types.add(ProblemElementTypes.Link_4003);
 		}
 		if (targetEditPart instanceof Node6EditPart) {
 			types.add(ProblemElementTypes.Link_4003);
 		}
-		if (targetEditPart instanceof Node7EditPart) {
+		if (targetEditPart instanceof uk.ac.open.problem.diagram.edit.parts.Node7EditPart) {
 			types.add(ProblemElementTypes.Link_4003);
 		}
 		return types;
@@ -511,21 +502,6 @@ public class Node5EditPart extends ShapeNodeEditPart {
 	static final Font FFIGUREENTITYDESCRIPTION_FONT = new Font(
 			Display.getCurrent(), Display.getDefault().getSystemFont()
 					.getFontData()[0].getName(), 6, SWT.ITALIC);
-
-	/**
-	 * @generated NOT
-	 */
-	Node node;
-
-	/**
-	 * @generated NOT
-	 */
-	protected IFigure createNodeShape() {
-		uk.ac.open.problem.figures.EntityFigure figure = new uk.ac.open.problem.figures.EntityFigure(
-				node);
-		return primaryShape = figure;
-	}
-
 	/**
 	 * @generated NOT
 	 */
@@ -548,7 +524,7 @@ public class Node5EditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated NOT
 	 */
-	public Node5EditPart(View view) {
+	public Node7EditPart(View view) {
 		super(view);
 		node = (Node) view.getElement();
 	}
@@ -596,6 +572,29 @@ public class Node5EditPart extends ShapeNodeEditPart {
 	public ConnectionAnchor getTargetConnectionAnchor(
 			ConnectionEditPart connEditPart) {
 		return getConnectionAnchor();
+	}
+	
+	/**
+	 * @generated NOT
+	 */
+	protected void createDefaultEditPolicies() {
+		super.createDefaultEditPolicies();
+		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
+				new Node7ItemSemanticEditPolicy());
+		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
+		installEditPolicy(EditPolicyRoles.OPEN_ROLE,
+				new OpenDiagramEditPolicy());
+		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
+		removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
+	}
+	
+	/**
+	 * @generated NOT
+	 */
+	protected IFigure createNodeShape() {
+		uk.ac.open.problem.figures.EntityFigure figure = new uk.ac.open.problem.figures.EntityFigure(
+				node);
+		return primaryShape = figure;
 	}
 
 }

@@ -313,12 +313,22 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String Requirement6CreationTool_title;
+	public static String PhysicalDomain6CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Requirement6CreationTool_desc;
+	public static String PhysicalDomain6CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Requirement7CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Requirement7CreationTool_desc;
 
 	/**
 	 * @generated
@@ -369,6 +379,16 @@ public class Messages extends NLS {
 	 * @generated
 	 */
 	public static String NavigatorGroupName_Node_2001_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Node_2007_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Node_2007_outgoinglinks;
 
 	/**
 	 * @generated

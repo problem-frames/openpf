@@ -42,7 +42,8 @@ public class ProblemPaletteFactory {
 		paletteContainer.add(createBiddableDomain3CreationTool());
 		paletteContainer.add(createCausalDomain4CreationTool());
 		paletteContainer.add(createLexicalDomain5CreationTool());
-		paletteContainer.add(createRequirement6CreationTool());
+		paletteContainer.add(createPhysicalDomain6CreationTool());
+		paletteContainer.add(createRequirement7CreationTool());
 		return paletteContainer;
 	}
 
@@ -144,12 +145,28 @@ public class ProblemPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createRequirement6CreationTool() {
+	private ToolEntry createPhysicalDomain6CreationTool() {
 		NodeToolEntry entry = new NodeToolEntry(
-				Messages.Requirement6CreationTool_title,
-				Messages.Requirement6CreationTool_desc,
+				Messages.PhysicalDomain6CreationTool_title,
+				Messages.PhysicalDomain6CreationTool_desc,
 				Collections.singletonList(ProblemElementTypes.Node_2001));
-		entry.setId("createRequirement6CreationTool"); //$NON-NLS-1$
+		entry.setId("createPhysicalDomain6CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ProblemDiagramEditorPlugin
+				.findImageDescriptor("/problem/icons/obj16/pdm_obj.gif")); //$NON-NLS-1$
+		entry.setLargeIcon(ProblemDiagramEditorPlugin
+				.findImageDescriptor("/problem/icons/obj16/pdm_obj.gif")); //$NON-NLS-1$
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createRequirement7CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(
+				Messages.Requirement7CreationTool_title,
+				Messages.Requirement7CreationTool_desc,
+				Collections.singletonList(ProblemElementTypes.Node_2007));
+		entry.setId("createRequirement7CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ProblemDiagramEditorPlugin
 				.findImageDescriptor("/problem/icons/obj16/rq_obj.gif")); //$NON-NLS-1$
 		entry.setLargeIcon(ProblemDiagramEditorPlugin

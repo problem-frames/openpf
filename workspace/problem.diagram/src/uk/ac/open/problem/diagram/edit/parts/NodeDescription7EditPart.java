@@ -1,6 +1,8 @@
+/*
+ * 
+ */
 package uk.ac.open.problem.diagram.edit.parts;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -12,12 +14,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.transaction.RunnableWithResult;
 import org.eclipse.gef.AccessibleEditPart;
 import org.eclipse.gef.EditPolicy;
-import org.eclipse.gef.GraphicalEditPart;
 import org.eclipse.gef.Request;
-import org.eclipse.gef.commands.Command;
-import org.eclipse.gef.editpolicies.NonResizableEditPolicy;
-import org.eclipse.gef.handles.MoveHandle;
-import org.eclipse.gef.handles.NonResizableHandleKit;
 import org.eclipse.gef.requests.DirectEditRequest;
 import org.eclipse.gef.tools.DirectEditManager;
 import org.eclipse.gmf.runtime.common.ui.services.parser.IParser;
@@ -53,13 +50,13 @@ import uk.ac.open.problem.diagram.providers.ProblemParserProvider;
 /**
  * @generated
  */
-public class NodeName6EditPart extends CompartmentEditPart implements
+public class NodeDescription7EditPart extends CompartmentEditPart implements
 		ITextAwareEditPart {
 
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5013;
+	public static final int VISUAL_ID = 5014;
 
 	/**
 	 * @generated
@@ -84,7 +81,7 @@ public class NodeName6EditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public NodeName6EditPart(View view) {
+	public NodeDescription7EditPart(View view) {
 		super(view);
 	}
 
@@ -300,7 +297,7 @@ public class NodeName6EditPart extends CompartmentEditPart implements
 							ProblemElementTypes.Node_2007,
 							getParserElement(),
 							ProblemVisualIDRegistry
-									.getType(uk.ac.open.problem.diagram.edit.parts.NodeName6EditPart.VISUAL_ID));
+									.getType(uk.ac.open.problem.diagram.edit.parts.NodeDescription7EditPart.VISUAL_ID));
 		}
 		return parser;
 	}

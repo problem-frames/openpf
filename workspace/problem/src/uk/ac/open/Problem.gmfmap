@@ -287,6 +287,53 @@
           href="Problem.gmfgraph#Entity"/>
     </ownedChild>
   </nodes>
+  <nodes>
+    <containmentFeature
+        href="Problem.ecore#//ProblemDiagram/nodes"/>
+    <childrenFeature
+        href="Problem.ecore#//ProblemDiagram/nodes"/>
+    <ownedChild
+        relatedDiagrams="//@diagram">
+      <domainMetaElement
+          href="Problem.ecore#//Node"/>
+      <domainSpecialization
+          body="self.type = NodeType::PHYSICAL"/>
+      <domainInitializer
+          xsi:type="gmfmap:FeatureSeqInitializer">
+        <initializers
+            xsi:type="gmfmap:FeatureValueSpec">
+          <feature
+              xsi:type="ecore:EAttribute"
+              href="Problem.ecore#//Node/type"/>
+          <value
+              body="NodeType::PHYSICAL"/>
+        </initializers>
+      </domainInitializer>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="Problem.gmfgraph#Name"/>
+        <features
+            href="Problem.ecore#//Node/name"/>
+        <editableFeatures
+            href="Problem.ecore#//Node/name"/>
+      </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="Problem.gmfgraph#Description"/>
+        <features
+            href="Problem.ecore#//Node/description"/>
+        <editableFeatures
+            href="Problem.ecore#//Node/description"/>
+      </labelMappings>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="Problem.gmftool#//@palette/@tools.0/@tools.6"/>
+      <diagramNode
+          href="Problem.gmfgraph#Entity"/>
+    </ownedChild>
+  </nodes>
   <links>
     <domainMetaElement
         href="Problem.ecore#//Link"/>

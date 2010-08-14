@@ -28,11 +28,13 @@ import uk.ac.open.problem.diagram.edit.parts.Node3EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node5EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node6EditPart;
+import uk.ac.open.problem.diagram.edit.parts.Node7EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeEditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeName2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeName3EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeName4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeName5EditPart;
+import uk.ac.open.problem.diagram.edit.parts.NodeName6EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeNameDescriptionEditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeNameEditPart;
 import uk.ac.open.problem.diagram.edit.parts.ProblemDiagramEditPart;
@@ -100,36 +102,39 @@ public class ProblemNavigatorLabelProvider extends LabelProvider implements
 	 */
 	public Image getImage(View view) {
 		switch (ProblemVisualIDRegistry.getVisualID(view)) {
-		case Node4EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://open.ac.uk/problem?Node", ProblemElementTypes.Node_2004); //$NON-NLS-1$
-		case Node5EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://open.ac.uk/problem?Node", ProblemElementTypes.Node_2005); //$NON-NLS-1$
-		case Node3EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://open.ac.uk/problem?Node", ProblemElementTypes.Node_2003); //$NON-NLS-1$
-		case NodeEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://open.ac.uk/problem?Node", ProblemElementTypes.Node_2001); //$NON-NLS-1$
 		case LinkEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?http://open.ac.uk/problem?Link", ProblemElementTypes.Link_4001); //$NON-NLS-1$
 		case ProblemDiagramEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Diagram?http://open.ac.uk/problem?ProblemDiagram", ProblemElementTypes.ProblemDiagram_1000); //$NON-NLS-1$
-		case Link2EditPart.VISUAL_ID:
+		case NodeEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Link?http://open.ac.uk/problem?Link", ProblemElementTypes.Link_4002); //$NON-NLS-1$
-		case Link3EditPart.VISUAL_ID:
+					"Navigator?TopLevelNode?http://open.ac.uk/problem?Node", ProblemElementTypes.Node_2001); //$NON-NLS-1$
+		case Node7EditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Link?http://open.ac.uk/problem?Link", ProblemElementTypes.Link_4003); //$NON-NLS-1$
-		case Node2EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://open.ac.uk/problem?Node", ProblemElementTypes.Node_2002); //$NON-NLS-1$
+					"Navigator?TopLevelNode?http://open.ac.uk/problem?Node", ProblemElementTypes.Node_2007); //$NON-NLS-1$
 		case Node6EditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?TopLevelNode?http://open.ac.uk/problem?Node", ProblemElementTypes.Node_2006); //$NON-NLS-1$
+		case Link3EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?http://open.ac.uk/problem?Link", ProblemElementTypes.Link_4003); //$NON-NLS-1$
+		case Link2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?http://open.ac.uk/problem?Link", ProblemElementTypes.Link_4002); //$NON-NLS-1$
+		case Node5EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?http://open.ac.uk/problem?Node", ProblemElementTypes.Node_2005); //$NON-NLS-1$
+		case Node4EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?http://open.ac.uk/problem?Node", ProblemElementTypes.Node_2004); //$NON-NLS-1$
+		case Node3EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?http://open.ac.uk/problem?Node", ProblemElementTypes.Node_2003); //$NON-NLS-1$
+		case Node2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?http://open.ac.uk/problem?Node", ProblemElementTypes.Node_2002); //$NON-NLS-1$
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -182,26 +187,28 @@ public class ProblemNavigatorLabelProvider extends LabelProvider implements
 			return getUnresolvedDomainElementProxyText(view);
 		}
 		switch (ProblemVisualIDRegistry.getVisualID(view)) {
-		case Node4EditPart.VISUAL_ID:
-			return getNode_2004Text(view);
-		case Node5EditPart.VISUAL_ID:
-			return getNode_2005Text(view);
-		case Node3EditPart.VISUAL_ID:
-			return getNode_2003Text(view);
-		case NodeEditPart.VISUAL_ID:
-			return getNode_2001Text(view);
 		case LinkEditPart.VISUAL_ID:
 			return getLink_4001Text(view);
 		case ProblemDiagramEditPart.VISUAL_ID:
 			return getProblemDiagram_1000Text(view);
-		case Link2EditPart.VISUAL_ID:
-			return getLink_4002Text(view);
-		case Link3EditPart.VISUAL_ID:
-			return getLink_4003Text(view);
-		case Node2EditPart.VISUAL_ID:
-			return getNode_2002Text(view);
+		case NodeEditPart.VISUAL_ID:
+			return getNode_2001Text(view);
+		case Node7EditPart.VISUAL_ID:
+			return getNode_2007Text(view);
 		case Node6EditPart.VISUAL_ID:
 			return getNode_2006Text(view);
+		case Link3EditPart.VISUAL_ID:
+			return getLink_4003Text(view);
+		case Link2EditPart.VISUAL_ID:
+			return getLink_4002Text(view);
+		case Node5EditPart.VISUAL_ID:
+			return getNode_2005Text(view);
+		case Node4EditPart.VISUAL_ID:
+			return getNode_2004Text(view);
+		case Node3EditPart.VISUAL_ID:
+			return getNode_2003Text(view);
+		case Node2EditPart.VISUAL_ID:
+			return getNode_2002Text(view);
 		}
 		return getUnknownElementText(view);
 	}
@@ -236,6 +243,25 @@ public class ProblemNavigatorLabelProvider extends LabelProvider implements
 		} else {
 			ProblemDiagramEditorPlugin.getInstance().logError(
 					"Parser was not found for label " + 5001); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getNode_2007Text(View view) {
+		IParser parser = ProblemParserProvider.getParser(
+				ProblemElementTypes.Node_2007,
+				view.getElement() != null ? view.getElement() : view,
+				ProblemVisualIDRegistry.getType(NodeName6EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			ProblemDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5013); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}

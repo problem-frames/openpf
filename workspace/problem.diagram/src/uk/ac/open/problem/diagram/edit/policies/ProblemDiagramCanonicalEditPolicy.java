@@ -47,6 +47,7 @@ import uk.ac.open.problem.diagram.edit.parts.Node3EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node5EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node6EditPart;
+import uk.ac.open.problem.diagram.edit.parts.Node7EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeEditPart;
 import uk.ac.open.problem.diagram.edit.parts.ProblemDiagramEditPart;
 import uk.ac.open.problem.diagram.part.ProblemDiagramUpdater;
@@ -102,6 +103,7 @@ public class ProblemDiagramCanonicalEditPolicy extends CanonicalEditPolicy {
 		case Node4EditPart.VISUAL_ID:
 		case Node5EditPart.VISUAL_ID:
 		case Node6EditPart.VISUAL_ID:
+		case Node7EditPart.VISUAL_ID:
 			return true;
 		}
 		return false;
@@ -376,6 +378,17 @@ public class ProblemDiagramCanonicalEditPolicy extends CanonicalEditPolicy {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(ProblemDiagramUpdater
 						.getNode_2006ContainedLinks(view));
+			}
+			if (!domain2NotationMap.containsKey(view.getElement())
+					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
+				domain2NotationMap.put(view.getElement(), view);
+			}
+			break;
+		}
+		case Node7EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(ProblemDiagramUpdater
+						.getNode_2007ContainedLinks(view));
 			}
 			if (!domain2NotationMap.containsKey(view.getElement())
 					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$

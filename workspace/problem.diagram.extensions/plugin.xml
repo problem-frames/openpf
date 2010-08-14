@@ -7,7 +7,7 @@
    <extension
          point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders">
       <editpartProvider
-            class="eu.securechange.situation.diagram.edit.part.ProblemEditPartProviderOverride">
+            class="uk.ac.open.problem.diagram.edit.part.ProblemDiagramEditPartProviderOverride">
          <Priority
                name="Low">
          </Priority>

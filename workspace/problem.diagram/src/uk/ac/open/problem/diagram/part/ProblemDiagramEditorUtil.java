@@ -187,9 +187,9 @@ public class ProblemDiagramEditorUtil {
 				}
 
 				try {
-//					modelResource
-//							.save(uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil
-//									.getSaveOptions());
+					modelResource
+							.save(uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil
+									.getSaveOptions());
 					diagramResource
 							.save(uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil
 									.getSaveOptions());
@@ -208,7 +208,7 @@ public class ProblemDiagramEditorUtil {
 			ProblemDiagramEditorPlugin.getInstance().logError(
 					"Unable to create model and diagram", e); //$NON-NLS-1$
 		}
-//		setCharset(WorkspaceSynchronizer.getFile(modelResource));
+		setCharset(WorkspaceSynchronizer.getFile(modelResource));
 		setCharset(WorkspaceSynchronizer.getFile(diagramResource));
 		return diagramResource;
 	}

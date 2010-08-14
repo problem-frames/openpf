@@ -25,6 +25,7 @@ import uk.ac.open.problem.diagram.edit.parts.Node3EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node5EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node6EditPart;
+import uk.ac.open.problem.diagram.edit.parts.Node7EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeEditPart;
 import uk.ac.open.problem.diagram.edit.parts.ProblemDiagramEditPart;
 import uk.ac.open.problem.diagram.part.ProblemDiagramEditorPlugin;
@@ -83,6 +84,11 @@ public class ProblemElementTypes {
 	 * @generated
 	 */
 	public static final IElementType Node_2006 = getElementType("problem.diagram.Node_2006"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Node_2007 = getElementType("problem.diagram.Node_2007"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
@@ -224,6 +230,8 @@ public class ProblemElementTypes {
 
 			elements.put(Node_2006, ProblemPackage.eINSTANCE.getNode());
 
+			elements.put(Node_2007, ProblemPackage.eINSTANCE.getNode());
+
 			elements.put(Link_4001, ProblemPackage.eINSTANCE.getLink());
 
 			elements.put(Link_4002, ProblemPackage.eINSTANCE.getLink());
@@ -253,6 +261,7 @@ public class ProblemElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Node_2004);
 			KNOWN_ELEMENT_TYPES.add(Node_2005);
 			KNOWN_ELEMENT_TYPES.add(Node_2006);
+			KNOWN_ELEMENT_TYPES.add(Node_2007);
 			KNOWN_ELEMENT_TYPES.add(Link_4001);
 			KNOWN_ELEMENT_TYPES.add(Link_4002);
 			KNOWN_ELEMENT_TYPES.add(Link_4003);
@@ -279,6 +288,8 @@ public class ProblemElementTypes {
 			return Node_2005;
 		case Node6EditPart.VISUAL_ID:
 			return Node_2006;
+		case Node7EditPart.VISUAL_ID:
+			return Node_2007;
 		case LinkEditPart.VISUAL_ID:
 			return Link_4001;
 		case Link2EditPart.VISUAL_ID:

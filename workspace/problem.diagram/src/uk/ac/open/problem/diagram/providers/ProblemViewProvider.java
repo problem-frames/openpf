@@ -52,17 +52,20 @@ import uk.ac.open.problem.diagram.edit.parts.Node3EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node5EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node6EditPart;
+import uk.ac.open.problem.diagram.edit.parts.Node7EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeDescription2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeDescription3EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeDescription4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeDescription5EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeDescription6EditPart;
+import uk.ac.open.problem.diagram.edit.parts.NodeDescription7EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeDescriptionEditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeEditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeName2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeName3EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeName4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeName5EditPart;
+import uk.ac.open.problem.diagram.edit.parts.NodeName6EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeNameDescriptionEditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeNameEditPart;
 import uk.ac.open.problem.diagram.edit.parts.ProblemDiagramEditPart;
@@ -166,6 +169,7 @@ public class ProblemViewProvider extends AbstractProvider implements
 				case Node4EditPart.VISUAL_ID:
 				case Node5EditPart.VISUAL_ID:
 				case Node6EditPart.VISUAL_ID:
+				case Node7EditPart.VISUAL_ID:
 					if (domainElement == null
 							|| visualID != ProblemVisualIDRegistry
 									.getNodeVisualID(op.getContainerView(),
@@ -183,7 +187,8 @@ public class ProblemViewProvider extends AbstractProvider implements
 				|| Node3EditPart.VISUAL_ID == visualID
 				|| Node4EditPart.VISUAL_ID == visualID
 				|| Node5EditPart.VISUAL_ID == visualID
-				|| Node6EditPart.VISUAL_ID == visualID;
+				|| Node6EditPart.VISUAL_ID == visualID
+				|| Node7EditPart.VISUAL_ID == visualID;
 	}
 
 	/**
@@ -257,6 +262,9 @@ public class ProblemViewProvider extends AbstractProvider implements
 					persisted, preferencesHint);
 		case Node6EditPart.VISUAL_ID:
 			return createNode_2006(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case Node7EditPart.VISUAL_ID:
+			return createNode_2007(domainElement, containerView, index,
 					persisted, preferencesHint);
 		}
 		// can't happen, provided #provides(CreateNodeViewOperation) is correct
@@ -578,6 +586,55 @@ public class ProblemViewProvider extends AbstractProvider implements
 		Node label5012 = createLabel(node,
 				ProblemVisualIDRegistry
 						.getType(NodeDescription6EditPart.VISUAL_ID));
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createNode_2007(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(ProblemVisualIDRegistry.getType(Node7EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		stampShortcut(containerView, node);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5013 = createLabel(node,
+				ProblemVisualIDRegistry.getType(NodeName6EditPart.VISUAL_ID));
+		Node label5014 = createLabel(node,
+				ProblemVisualIDRegistry
+						.getType(NodeDescription7EditPart.VISUAL_ID));
 		return node;
 	}
 

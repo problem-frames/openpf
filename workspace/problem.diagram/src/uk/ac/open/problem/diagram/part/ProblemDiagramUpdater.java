@@ -24,6 +24,7 @@ import uk.ac.open.problem.diagram.edit.parts.Node3EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node5EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node6EditPart;
+import uk.ac.open.problem.diagram.edit.parts.Node7EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeEditPart;
 import uk.ac.open.problem.diagram.edit.parts.ProblemDiagramEditPart;
 import uk.ac.open.problem.diagram.providers.ProblemElementTypes;
@@ -82,6 +83,10 @@ public class ProblemDiagramUpdater {
 				result.add(new ProblemNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == Node7EditPart.VISUAL_ID) {
+				result.add(new ProblemNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -105,6 +110,8 @@ public class ProblemDiagramUpdater {
 			return getNode_2005ContainedLinks(view);
 		case Node6EditPart.VISUAL_ID:
 			return getNode_2006ContainedLinks(view);
+		case Node7EditPart.VISUAL_ID:
+			return getNode_2007ContainedLinks(view);
 		case LinkEditPart.VISUAL_ID:
 			return getLink_4001ContainedLinks(view);
 		case Link2EditPart.VISUAL_ID:
@@ -132,6 +139,8 @@ public class ProblemDiagramUpdater {
 			return getNode_2005IncomingLinks(view);
 		case Node6EditPart.VISUAL_ID:
 			return getNode_2006IncomingLinks(view);
+		case Node7EditPart.VISUAL_ID:
+			return getNode_2007IncomingLinks(view);
 		case LinkEditPart.VISUAL_ID:
 			return getLink_4001IncomingLinks(view);
 		case Link2EditPart.VISUAL_ID:
@@ -159,6 +168,8 @@ public class ProblemDiagramUpdater {
 			return getNode_2005OutgoingLinks(view);
 		case Node6EditPart.VISUAL_ID:
 			return getNode_2006OutgoingLinks(view);
+		case Node7EditPart.VISUAL_ID:
+			return getNode_2007OutgoingLinks(view);
 		case LinkEditPart.VISUAL_ID:
 			return getLink_4001OutgoingLinks(view);
 		case Link2EditPart.VISUAL_ID:
@@ -226,6 +237,14 @@ public class ProblemDiagramUpdater {
 	 * @generated
 	 */
 	public static List<ProblemLinkDescriptor> getNode_2006ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<ProblemLinkDescriptor> getNode_2007ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -365,6 +384,24 @@ public class ProblemDiagramUpdater {
 	/**
 	 * @generated
 	 */
+	public static List<ProblemLinkDescriptor> getNode_2007IncomingLinks(
+			View view) {
+		Node modelElement = (Node) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<ProblemLinkDescriptor> result = new LinkedList<ProblemLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Link_4001(modelElement,
+				crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_Link_4002(modelElement,
+				crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_Link_4003(modelElement,
+				crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
 	public static List<ProblemLinkDescriptor> getLink_4001IncomingLinks(
 			View view) {
 		return Collections.emptyList();
@@ -455,6 +492,19 @@ public class ProblemDiagramUpdater {
 	 * @generated
 	 */
 	public static List<ProblemLinkDescriptor> getNode_2006OutgoingLinks(
+			View view) {
+		Node modelElement = (Node) view.getElement();
+		LinkedList<ProblemLinkDescriptor> result = new LinkedList<ProblemLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Link_4001(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_Link_4002(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_Link_4003(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<ProblemLinkDescriptor> getNode_2007OutgoingLinks(
 			View view) {
 		Node modelElement = (Node) view.getElement();
 		LinkedList<ProblemLinkDescriptor> result = new LinkedList<ProblemLinkDescriptor>();

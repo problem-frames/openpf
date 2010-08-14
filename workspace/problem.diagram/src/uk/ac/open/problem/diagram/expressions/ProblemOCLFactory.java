@@ -38,7 +38,7 @@ public class ProblemOCLFactory {
 	 * @generated
 	 */
 	protected ProblemOCLFactory() {
-		this.expressions = new ProblemAbstractExpression[18];
+		this.expressions = new ProblemAbstractExpression[20];
 	}
 
 	/**
@@ -69,6 +69,8 @@ public class ProblemOCLFactory {
 					"NodeType::BIDDABLE", //$NON-NLS-1$
 					"self.type = NodeType::CAUSAL", //$NON-NLS-1$
 					"NodeType::CAUSAL", //$NON-NLS-1$
+					"self.type = NodeType::PHYSICAL", //$NON-NLS-1$
+					"NodeType::PHYSICAL", //$NON-NLS-1$
 					"self.type = LinkType::CONSTRAINT", //$NON-NLS-1$
 					"LinkType::CONSTRAINT", //$NON-NLS-1$
 					"self.type = LinkType::REFERENCE", //$NON-NLS-1$

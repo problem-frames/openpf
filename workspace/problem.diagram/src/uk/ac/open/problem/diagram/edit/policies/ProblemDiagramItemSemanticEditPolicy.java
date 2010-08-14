@@ -12,6 +12,7 @@ import uk.ac.open.problem.diagram.edit.commands.Node3CreateCommand;
 import uk.ac.open.problem.diagram.edit.commands.Node4CreateCommand;
 import uk.ac.open.problem.diagram.edit.commands.Node5CreateCommand;
 import uk.ac.open.problem.diagram.edit.commands.Node6CreateCommand;
+import uk.ac.open.problem.diagram.edit.commands.Node7CreateCommand;
 import uk.ac.open.problem.diagram.edit.commands.NodeCreateCommand;
 import uk.ac.open.problem.diagram.providers.ProblemElementTypes;
 
@@ -49,6 +50,9 @@ public class ProblemDiagramItemSemanticEditPolicy extends
 		}
 		if (ProblemElementTypes.Node_2006 == req.getElementType()) {
 			return getGEFWrapper(new Node6CreateCommand(req));
+		}
+		if (ProblemElementTypes.Node_2007 == req.getElementType()) {
+			return getGEFWrapper(new Node7CreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}

@@ -76,6 +76,19 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
+          title="Physical Domain"
+          description="Create new Physical Domain">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/obj16/pdm_obj.gif"
+            bundle="problem"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/obj16/pdm_obj.gif"
+            bundle="problem"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
           title="Requirement"
           description="Create new Requirement">
         <smallIcon

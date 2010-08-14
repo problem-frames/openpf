@@ -332,6 +332,9 @@ public class Node2EditPart extends ShapeNodeEditPart {
 		if (targetEditPart instanceof Node6EditPart) {
 			types.add(ProblemElementTypes.Link_4001);
 		}
+		if (targetEditPart instanceof Node7EditPart) {
+			types.add(ProblemElementTypes.Link_4001);
+		}
 		if (targetEditPart instanceof NodeEditPart) {
 			types.add(ProblemElementTypes.Link_4002);
 		}
@@ -350,6 +353,9 @@ public class Node2EditPart extends ShapeNodeEditPart {
 		if (targetEditPart instanceof Node6EditPart) {
 			types.add(ProblemElementTypes.Link_4002);
 		}
+		if (targetEditPart instanceof Node7EditPart) {
+			types.add(ProblemElementTypes.Link_4002);
+		}
 		if (targetEditPart instanceof NodeEditPart) {
 			types.add(ProblemElementTypes.Link_4003);
 		}
@@ -366,6 +372,9 @@ public class Node2EditPart extends ShapeNodeEditPart {
 			types.add(ProblemElementTypes.Link_4003);
 		}
 		if (targetEditPart instanceof Node6EditPart) {
+			types.add(ProblemElementTypes.Link_4003);
+		}
+		if (targetEditPart instanceof Node7EditPart) {
 			types.add(ProblemElementTypes.Link_4003);
 		}
 		return types;
@@ -383,6 +392,7 @@ public class Node2EditPart extends ShapeNodeEditPart {
 			types.add(ProblemElementTypes.Node_2004);
 			types.add(ProblemElementTypes.Node_2005);
 			types.add(ProblemElementTypes.Node_2006);
+			types.add(ProblemElementTypes.Node_2007);
 		} else if (relationshipType == ProblemElementTypes.Link_4002) {
 			types.add(ProblemElementTypes.Node_2001);
 			types.add(ProblemElementTypes.Node_2002);
@@ -390,6 +400,7 @@ public class Node2EditPart extends ShapeNodeEditPart {
 			types.add(ProblemElementTypes.Node_2004);
 			types.add(ProblemElementTypes.Node_2005);
 			types.add(ProblemElementTypes.Node_2006);
+			types.add(ProblemElementTypes.Node_2007);
 		} else if (relationshipType == ProblemElementTypes.Link_4003) {
 			types.add(ProblemElementTypes.Node_2001);
 			types.add(ProblemElementTypes.Node_2002);
@@ -397,6 +408,7 @@ public class Node2EditPart extends ShapeNodeEditPart {
 			types.add(ProblemElementTypes.Node_2004);
 			types.add(ProblemElementTypes.Node_2005);
 			types.add(ProblemElementTypes.Node_2006);
+			types.add(ProblemElementTypes.Node_2007);
 		}
 		return types;
 	}
@@ -424,6 +436,7 @@ public class Node2EditPart extends ShapeNodeEditPart {
 			types.add(ProblemElementTypes.Node_2004);
 			types.add(ProblemElementTypes.Node_2005);
 			types.add(ProblemElementTypes.Node_2006);
+			types.add(ProblemElementTypes.Node_2007);
 		} else if (relationshipType == ProblemElementTypes.Link_4002) {
 			types.add(ProblemElementTypes.Node_2001);
 			types.add(ProblemElementTypes.Node_2002);
@@ -431,6 +444,7 @@ public class Node2EditPart extends ShapeNodeEditPart {
 			types.add(ProblemElementTypes.Node_2004);
 			types.add(ProblemElementTypes.Node_2005);
 			types.add(ProblemElementTypes.Node_2006);
+			types.add(ProblemElementTypes.Node_2007);
 		} else if (relationshipType == ProblemElementTypes.Link_4003) {
 			types.add(ProblemElementTypes.Node_2001);
 			types.add(ProblemElementTypes.Node_2002);
@@ -438,6 +452,7 @@ public class Node2EditPart extends ShapeNodeEditPart {
 			types.add(ProblemElementTypes.Node_2004);
 			types.add(ProblemElementTypes.Node_2005);
 			types.add(ProblemElementTypes.Node_2006);
+			types.add(ProblemElementTypes.Node_2007);
 		}
 		return types;
 	}

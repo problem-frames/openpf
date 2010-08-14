@@ -86,6 +86,15 @@ public class ProblemEditPartFactory implements EditPartFactory {
 			case NodeDescription6EditPart.VISUAL_ID:
 				return new NodeDescription6EditPart(view);
 
+			case Node7EditPart.VISUAL_ID:
+				return new Node7EditPart(view);
+
+			case NodeName6EditPart.VISUAL_ID:
+				return new NodeName6EditPart(view);
+
+			case NodeDescription7EditPart.VISUAL_ID:
+				return new NodeDescription7EditPart(view);
+
 			case LinkEditPart.VISUAL_ID:
 				return new LinkEditPart(view);
 
