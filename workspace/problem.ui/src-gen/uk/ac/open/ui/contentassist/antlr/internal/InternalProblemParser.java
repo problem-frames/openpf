@@ -516,11 +516,11 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             if ( (LA1_0==RULE_ID) ) {
                 int LA1_1 = input.LA(2);
 
-                if ( ((LA1_1>=22 && LA1_1<=24)) ) {
-                    alt1=2;
-                }
-                else if ( (LA1_1==EOF||(LA1_1>=RULE_ID && LA1_1<=RULE_STRING)||(LA1_1>=12 && LA1_1<=18)||LA1_1==25||(LA1_1>=27 && LA1_1<=29)||LA1_1==31) ) {
+                if ( (LA1_1==EOF||(LA1_1>=RULE_ID && LA1_1<=RULE_STRING)||(LA1_1>=12 && LA1_1<=18)||LA1_1==25||(LA1_1>=27 && LA1_1<=29)||LA1_1==31) ) {
                     alt1=1;
+                }
+                else if ( ((LA1_1>=22 && LA1_1<=24)) ) {
+                    alt1=2;
                 }
                 else {
                     NoViableAltException nvae =
@@ -617,14 +617,14 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             }
             else if ( (LA2_0==31) ) {
                 switch ( input.LA(2) ) {
-                case 32:
-                    {
-                    alt2=2;
-                    }
-                    break;
                 case 33:
                     {
                     alt2=3;
+                    }
+                    break;
+                case 32:
+                    {
+                    alt2=2;
                     }
                     break;
                 case RULE_STRING:
@@ -1386,26 +1386,37 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ProblemDiagram__Group__2__Impl
-    // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:483:1: rule__ProblemDiagram__Group__2__Impl : ( ( rule__ProblemDiagram__NameAssignment_2 ) ) ;
+    // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:483:1: rule__ProblemDiagram__Group__2__Impl : ( ( rule__ProblemDiagram__NameAssignment_2 )? ) ;
     public final void rule__ProblemDiagram__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:487:1: ( ( ( rule__ProblemDiagram__NameAssignment_2 ) ) )
-            // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:488:1: ( ( rule__ProblemDiagram__NameAssignment_2 ) )
+            // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:487:1: ( ( ( rule__ProblemDiagram__NameAssignment_2 )? ) )
+            // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:488:1: ( ( rule__ProblemDiagram__NameAssignment_2 )? )
             {
-            // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:488:1: ( ( rule__ProblemDiagram__NameAssignment_2 ) )
-            // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:489:1: ( rule__ProblemDiagram__NameAssignment_2 )
+            // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:488:1: ( ( rule__ProblemDiagram__NameAssignment_2 )? )
+            // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:489:1: ( rule__ProblemDiagram__NameAssignment_2 )?
             {
              before(grammarAccess.getProblemDiagramAccess().getNameAssignment_2()); 
-            // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:490:1: ( rule__ProblemDiagram__NameAssignment_2 )
-            // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:490:2: rule__ProblemDiagram__NameAssignment_2
-            {
-            pushFollow(FOLLOW_rule__ProblemDiagram__NameAssignment_2_in_rule__ProblemDiagram__Group__2__Impl1025);
-            rule__ProblemDiagram__NameAssignment_2();
-            _fsp--;
+            // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:490:1: ( rule__ProblemDiagram__NameAssignment_2 )?
+            int alt6=2;
+            int LA6_0 = input.LA(1);
 
+            if ( (LA6_0==RULE_ID) ) {
+                alt6=1;
+            }
+            switch (alt6) {
+                case 1 :
+                    // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:490:2: rule__ProblemDiagram__NameAssignment_2
+                    {
+                    pushFollow(FOLLOW_rule__ProblemDiagram__NameAssignment_2_in_rule__ProblemDiagram__Group__2__Impl1025);
+                    rule__ProblemDiagram__NameAssignment_2();
+                    _fsp--;
+
+
+                    }
+                    break;
 
             }
 
@@ -1441,11 +1452,11 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:504:1: ( rule__ProblemDiagram__Group__3__Impl rule__ProblemDiagram__Group__4 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:505:2: rule__ProblemDiagram__Group__3__Impl rule__ProblemDiagram__Group__4
             {
-            pushFollow(FOLLOW_rule__ProblemDiagram__Group__3__Impl_in_rule__ProblemDiagram__Group__31055);
+            pushFollow(FOLLOW_rule__ProblemDiagram__Group__3__Impl_in_rule__ProblemDiagram__Group__31056);
             rule__ProblemDiagram__Group__3__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__ProblemDiagram__Group__4_in_rule__ProblemDiagram__Group__31058);
+            pushFollow(FOLLOW_rule__ProblemDiagram__Group__4_in_rule__ProblemDiagram__Group__31059);
             rule__ProblemDiagram__Group__4();
             _fsp--;
 
@@ -1482,17 +1493,17 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getProblemDiagramAccess().getGroup_3()); 
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:519:1: ( rule__ProblemDiagram__Group_3__0 )?
-            int alt6=2;
-            int LA6_0 = input.LA(1);
+            int alt7=2;
+            int LA7_0 = input.LA(1);
 
-            if ( (LA6_0==26) ) {
-                alt6=1;
+            if ( (LA7_0==26) ) {
+                alt7=1;
             }
-            switch (alt6) {
+            switch (alt7) {
                 case 1 :
                     // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:519:2: rule__ProblemDiagram__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__ProblemDiagram__Group_3__0_in_rule__ProblemDiagram__Group__3__Impl1085);
+                    pushFollow(FOLLOW_rule__ProblemDiagram__Group_3__0_in_rule__ProblemDiagram__Group__3__Impl1086);
                     rule__ProblemDiagram__Group_3__0();
                     _fsp--;
 
@@ -1534,7 +1545,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:533:1: ( rule__ProblemDiagram__Group__4__Impl )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:534:2: rule__ProblemDiagram__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__ProblemDiagram__Group__4__Impl_in_rule__ProblemDiagram__Group__41116);
+            pushFollow(FOLLOW_rule__ProblemDiagram__Group__4__Impl_in_rule__ProblemDiagram__Group__41117);
             rule__ProblemDiagram__Group__4__Impl();
             _fsp--;
 
@@ -1571,21 +1582,21 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getProblemDiagramAccess().getAlternatives_4()); 
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:547:1: ( rule__ProblemDiagram__Alternatives_4 )*
-            loop7:
+            loop8:
             do {
-                int alt7=2;
-                int LA7_0 = input.LA(1);
+                int alt8=2;
+                int LA8_0 = input.LA(1);
 
-                if ( (LA7_0==RULE_ID) ) {
-                    alt7=1;
+                if ( (LA8_0==RULE_ID) ) {
+                    alt8=1;
                 }
 
 
-                switch (alt7) {
+                switch (alt8) {
             	case 1 :
             	    // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:547:2: rule__ProblemDiagram__Alternatives_4
             	    {
-            	    pushFollow(FOLLOW_rule__ProblemDiagram__Alternatives_4_in_rule__ProblemDiagram__Group__4__Impl1143);
+            	    pushFollow(FOLLOW_rule__ProblemDiagram__Alternatives_4_in_rule__ProblemDiagram__Group__4__Impl1144);
             	    rule__ProblemDiagram__Alternatives_4();
             	    _fsp--;
 
@@ -1594,7 +1605,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop7;
+            	    break loop8;
                 }
             } while (true);
 
@@ -1630,11 +1641,11 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:571:1: ( rule__ProblemDiagram__Group_3__0__Impl rule__ProblemDiagram__Group_3__1 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:572:2: rule__ProblemDiagram__Group_3__0__Impl rule__ProblemDiagram__Group_3__1
             {
-            pushFollow(FOLLOW_rule__ProblemDiagram__Group_3__0__Impl_in_rule__ProblemDiagram__Group_3__01184);
+            pushFollow(FOLLOW_rule__ProblemDiagram__Group_3__0__Impl_in_rule__ProblemDiagram__Group_3__01185);
             rule__ProblemDiagram__Group_3__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__ProblemDiagram__Group_3__1_in_rule__ProblemDiagram__Group_3__01187);
+            pushFollow(FOLLOW_rule__ProblemDiagram__Group_3__1_in_rule__ProblemDiagram__Group_3__01188);
             rule__ProblemDiagram__Group_3__1();
             _fsp--;
 
@@ -1670,7 +1681,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:585:1: 'for'
             {
              before(grammarAccess.getProblemDiagramAccess().getForKeyword_3_0()); 
-            match(input,26,FOLLOW_26_in_rule__ProblemDiagram__Group_3__0__Impl1215); 
+            match(input,26,FOLLOW_26_in_rule__ProblemDiagram__Group_3__0__Impl1216); 
              after(grammarAccess.getProblemDiagramAccess().getForKeyword_3_0()); 
 
             }
@@ -1703,7 +1714,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:602:1: ( rule__ProblemDiagram__Group_3__1__Impl )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:603:2: rule__ProblemDiagram__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__ProblemDiagram__Group_3__1__Impl_in_rule__ProblemDiagram__Group_3__11246);
+            pushFollow(FOLLOW_rule__ProblemDiagram__Group_3__1__Impl_in_rule__ProblemDiagram__Group_3__11247);
             rule__ProblemDiagram__Group_3__1__Impl();
             _fsp--;
 
@@ -1742,7 +1753,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:616:1: ( rule__ProblemDiagram__HighlightAssignment_3_1 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:616:2: rule__ProblemDiagram__HighlightAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__ProblemDiagram__HighlightAssignment_3_1_in_rule__ProblemDiagram__Group_3__1__Impl1273);
+            pushFollow(FOLLOW_rule__ProblemDiagram__HighlightAssignment_3_1_in_rule__ProblemDiagram__Group_3__1__Impl1274);
             rule__ProblemDiagram__HighlightAssignment_3_1();
             _fsp--;
 
@@ -1781,11 +1792,11 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:634:1: ( rule__Node__Group__0__Impl rule__Node__Group__1 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:635:2: rule__Node__Group__0__Impl rule__Node__Group__1
             {
-            pushFollow(FOLLOW_rule__Node__Group__0__Impl_in_rule__Node__Group__01307);
+            pushFollow(FOLLOW_rule__Node__Group__0__Impl_in_rule__Node__Group__01308);
             rule__Node__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Node__Group__1_in_rule__Node__Group__01310);
+            pushFollow(FOLLOW_rule__Node__Group__1_in_rule__Node__Group__01311);
             rule__Node__Group__1();
             _fsp--;
 
@@ -1824,7 +1835,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:649:1: ( rule__Node__NameAssignment_0 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:649:2: rule__Node__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__Node__NameAssignment_0_in_rule__Node__Group__0__Impl1337);
+            pushFollow(FOLLOW_rule__Node__NameAssignment_0_in_rule__Node__Group__0__Impl1338);
             rule__Node__NameAssignment_0();
             _fsp--;
 
@@ -1863,11 +1874,11 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:663:1: ( rule__Node__Group__1__Impl rule__Node__Group__2 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:664:2: rule__Node__Group__1__Impl rule__Node__Group__2
             {
-            pushFollow(FOLLOW_rule__Node__Group__1__Impl_in_rule__Node__Group__11367);
+            pushFollow(FOLLOW_rule__Node__Group__1__Impl_in_rule__Node__Group__11368);
             rule__Node__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Node__Group__2_in_rule__Node__Group__11370);
+            pushFollow(FOLLOW_rule__Node__Group__2_in_rule__Node__Group__11371);
             rule__Node__Group__2();
             _fsp--;
 
@@ -1904,17 +1915,17 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getNodeAccess().getTypeAssignment_1()); 
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:678:1: ( rule__Node__TypeAssignment_1 )?
-            int alt8=2;
-            int LA8_0 = input.LA(1);
+            int alt9=2;
+            int LA9_0 = input.LA(1);
 
-            if ( ((LA8_0>=12 && LA8_0<=18)) ) {
-                alt8=1;
+            if ( ((LA9_0>=12 && LA9_0<=18)) ) {
+                alt9=1;
             }
-            switch (alt8) {
+            switch (alt9) {
                 case 1 :
                     // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:678:2: rule__Node__TypeAssignment_1
                     {
-                    pushFollow(FOLLOW_rule__Node__TypeAssignment_1_in_rule__Node__Group__1__Impl1397);
+                    pushFollow(FOLLOW_rule__Node__TypeAssignment_1_in_rule__Node__Group__1__Impl1398);
                     rule__Node__TypeAssignment_1();
                     _fsp--;
 
@@ -1956,11 +1967,11 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:692:1: ( rule__Node__Group__2__Impl rule__Node__Group__3 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:693:2: rule__Node__Group__2__Impl rule__Node__Group__3
             {
-            pushFollow(FOLLOW_rule__Node__Group__2__Impl_in_rule__Node__Group__21428);
+            pushFollow(FOLLOW_rule__Node__Group__2__Impl_in_rule__Node__Group__21429);
             rule__Node__Group__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Node__Group__3_in_rule__Node__Group__21431);
+            pushFollow(FOLLOW_rule__Node__Group__3_in_rule__Node__Group__21432);
             rule__Node__Group__3();
             _fsp--;
 
@@ -1997,17 +2008,17 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getNodeAccess().getGroup_2()); 
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:707:1: ( rule__Node__Group_2__0 )?
-            int alt9=2;
-            int LA9_0 = input.LA(1);
+            int alt10=2;
+            int LA10_0 = input.LA(1);
 
-            if ( (LA9_0==RULE_STRING||LA9_0==27) ) {
-                alt9=1;
+            if ( (LA10_0==RULE_STRING||LA10_0==27) ) {
+                alt10=1;
             }
-            switch (alt9) {
+            switch (alt10) {
                 case 1 :
                     // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:707:2: rule__Node__Group_2__0
                     {
-                    pushFollow(FOLLOW_rule__Node__Group_2__0_in_rule__Node__Group__2__Impl1458);
+                    pushFollow(FOLLOW_rule__Node__Group_2__0_in_rule__Node__Group__2__Impl1459);
                     rule__Node__Group_2__0();
                     _fsp--;
 
@@ -2049,7 +2060,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:721:1: ( rule__Node__Group__3__Impl )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:722:2: rule__Node__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__Node__Group__3__Impl_in_rule__Node__Group__31489);
+            pushFollow(FOLLOW_rule__Node__Group__3__Impl_in_rule__Node__Group__31490);
             rule__Node__Group__3__Impl();
             _fsp--;
 
@@ -2086,17 +2097,17 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getNodeAccess().getGroup_3()); 
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:735:1: ( rule__Node__Group_3__0 )?
-            int alt10=2;
-            int LA10_0 = input.LA(1);
+            int alt11=2;
+            int LA11_0 = input.LA(1);
 
-            if ( (LA10_0==28) ) {
-                alt10=1;
+            if ( (LA11_0==28) ) {
+                alt11=1;
             }
-            switch (alt10) {
+            switch (alt11) {
                 case 1 :
                     // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:735:2: rule__Node__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__Node__Group_3__0_in_rule__Node__Group__3__Impl1516);
+                    pushFollow(FOLLOW_rule__Node__Group_3__0_in_rule__Node__Group__3__Impl1517);
                     rule__Node__Group_3__0();
                     _fsp--;
 
@@ -2138,11 +2149,11 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:757:1: ( rule__Node__Group_2__0__Impl rule__Node__Group_2__1 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:758:2: rule__Node__Group_2__0__Impl rule__Node__Group_2__1
             {
-            pushFollow(FOLLOW_rule__Node__Group_2__0__Impl_in_rule__Node__Group_2__01555);
+            pushFollow(FOLLOW_rule__Node__Group_2__0__Impl_in_rule__Node__Group_2__01556);
             rule__Node__Group_2__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Node__Group_2__1_in_rule__Node__Group_2__01558);
+            pushFollow(FOLLOW_rule__Node__Group_2__1_in_rule__Node__Group_2__01559);
             rule__Node__Group_2__1();
             _fsp--;
 
@@ -2179,17 +2190,17 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getNodeAccess().getColonKeyword_2_0()); 
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:772:1: ( ':' )?
-            int alt11=2;
-            int LA11_0 = input.LA(1);
+            int alt12=2;
+            int LA12_0 = input.LA(1);
 
-            if ( (LA11_0==27) ) {
-                alt11=1;
+            if ( (LA12_0==27) ) {
+                alt12=1;
             }
-            switch (alt11) {
+            switch (alt12) {
                 case 1 :
                     // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:773:2: ':'
                     {
-                    match(input,27,FOLLOW_27_in_rule__Node__Group_2__0__Impl1587); 
+                    match(input,27,FOLLOW_27_in_rule__Node__Group_2__0__Impl1588); 
 
                     }
                     break;
@@ -2228,7 +2239,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:788:1: ( rule__Node__Group_2__1__Impl )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:789:2: rule__Node__Group_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Node__Group_2__1__Impl_in_rule__Node__Group_2__11620);
+            pushFollow(FOLLOW_rule__Node__Group_2__1__Impl_in_rule__Node__Group_2__11621);
             rule__Node__Group_2__1__Impl();
             _fsp--;
 
@@ -2267,7 +2278,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:802:1: ( rule__Node__DescriptionAssignment_2_1 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:802:2: rule__Node__DescriptionAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__Node__DescriptionAssignment_2_1_in_rule__Node__Group_2__1__Impl1647);
+            pushFollow(FOLLOW_rule__Node__DescriptionAssignment_2_1_in_rule__Node__Group_2__1__Impl1648);
             rule__Node__DescriptionAssignment_2_1();
             _fsp--;
 
@@ -2306,11 +2317,11 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:820:1: ( rule__Node__Group_3__0__Impl rule__Node__Group_3__1 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:821:2: rule__Node__Group_3__0__Impl rule__Node__Group_3__1
             {
-            pushFollow(FOLLOW_rule__Node__Group_3__0__Impl_in_rule__Node__Group_3__01681);
+            pushFollow(FOLLOW_rule__Node__Group_3__0__Impl_in_rule__Node__Group_3__01682);
             rule__Node__Group_3__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Node__Group_3__1_in_rule__Node__Group_3__01684);
+            pushFollow(FOLLOW_rule__Node__Group_3__1_in_rule__Node__Group_3__01685);
             rule__Node__Group_3__1();
             _fsp--;
 
@@ -2346,7 +2357,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:834:1: '{'
             {
              before(grammarAccess.getNodeAccess().getLeftCurlyBracketKeyword_3_0()); 
-            match(input,28,FOLLOW_28_in_rule__Node__Group_3__0__Impl1712); 
+            match(input,28,FOLLOW_28_in_rule__Node__Group_3__0__Impl1713); 
              after(grammarAccess.getNodeAccess().getLeftCurlyBracketKeyword_3_0()); 
 
             }
@@ -2379,11 +2390,11 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:851:1: ( rule__Node__Group_3__1__Impl rule__Node__Group_3__2 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:852:2: rule__Node__Group_3__1__Impl rule__Node__Group_3__2
             {
-            pushFollow(FOLLOW_rule__Node__Group_3__1__Impl_in_rule__Node__Group_3__11743);
+            pushFollow(FOLLOW_rule__Node__Group_3__1__Impl_in_rule__Node__Group_3__11744);
             rule__Node__Group_3__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Node__Group_3__2_in_rule__Node__Group_3__11746);
+            pushFollow(FOLLOW_rule__Node__Group_3__2_in_rule__Node__Group_3__11747);
             rule__Node__Group_3__2();
             _fsp--;
 
@@ -2420,17 +2431,17 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getNodeAccess().getGroup_3_1()); 
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:866:1: ( rule__Node__Group_3_1__0 )?
-            int alt12=2;
-            int LA12_0 = input.LA(1);
+            int alt13=2;
+            int LA13_0 = input.LA(1);
 
-            if ( (LA12_0==RULE_ID||(LA12_0>=19 && LA12_0<=21)||LA12_0==34) ) {
-                alt12=1;
+            if ( (LA13_0==RULE_ID||(LA13_0>=19 && LA13_0<=21)||LA13_0==34) ) {
+                alt13=1;
             }
-            switch (alt12) {
+            switch (alt13) {
                 case 1 :
                     // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:866:2: rule__Node__Group_3_1__0
                     {
-                    pushFollow(FOLLOW_rule__Node__Group_3_1__0_in_rule__Node__Group_3__1__Impl1773);
+                    pushFollow(FOLLOW_rule__Node__Group_3_1__0_in_rule__Node__Group_3__1__Impl1774);
                     rule__Node__Group_3_1__0();
                     _fsp--;
 
@@ -2472,11 +2483,11 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:880:1: ( rule__Node__Group_3__2__Impl rule__Node__Group_3__3 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:881:2: rule__Node__Group_3__2__Impl rule__Node__Group_3__3
             {
-            pushFollow(FOLLOW_rule__Node__Group_3__2__Impl_in_rule__Node__Group_3__21804);
+            pushFollow(FOLLOW_rule__Node__Group_3__2__Impl_in_rule__Node__Group_3__21805);
             rule__Node__Group_3__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Node__Group_3__3_in_rule__Node__Group_3__21807);
+            pushFollow(FOLLOW_rule__Node__Group_3__3_in_rule__Node__Group_3__21808);
             rule__Node__Group_3__3();
             _fsp--;
 
@@ -2513,21 +2524,21 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getNodeAccess().getAlternatives_3_2()); 
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:895:1: ( rule__Node__Alternatives_3_2 )*
-            loop13:
+            loop14:
             do {
-                int alt13=2;
-                int LA13_0 = input.LA(1);
+                int alt14=2;
+                int LA14_0 = input.LA(1);
 
-                if ( (LA13_0==25||LA13_0==31) ) {
-                    alt13=1;
+                if ( (LA14_0==25||LA14_0==31) ) {
+                    alt14=1;
                 }
 
 
-                switch (alt13) {
+                switch (alt14) {
             	case 1 :
             	    // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:895:2: rule__Node__Alternatives_3_2
             	    {
-            	    pushFollow(FOLLOW_rule__Node__Alternatives_3_2_in_rule__Node__Group_3__2__Impl1834);
+            	    pushFollow(FOLLOW_rule__Node__Alternatives_3_2_in_rule__Node__Group_3__2__Impl1835);
             	    rule__Node__Alternatives_3_2();
             	    _fsp--;
 
@@ -2536,7 +2547,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop13;
+            	    break loop14;
                 }
             } while (true);
 
@@ -2572,7 +2583,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:909:1: ( rule__Node__Group_3__3__Impl )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:910:2: rule__Node__Group_3__3__Impl
             {
-            pushFollow(FOLLOW_rule__Node__Group_3__3__Impl_in_rule__Node__Group_3__31865);
+            pushFollow(FOLLOW_rule__Node__Group_3__3__Impl_in_rule__Node__Group_3__31866);
             rule__Node__Group_3__3__Impl();
             _fsp--;
 
@@ -2608,7 +2619,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:922:1: '}'
             {
              before(grammarAccess.getNodeAccess().getRightCurlyBracketKeyword_3_3()); 
-            match(input,29,FOLLOW_29_in_rule__Node__Group_3__3__Impl1893); 
+            match(input,29,FOLLOW_29_in_rule__Node__Group_3__3__Impl1894); 
              after(grammarAccess.getNodeAccess().getRightCurlyBracketKeyword_3_3()); 
 
             }
@@ -2641,11 +2652,11 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:947:1: ( rule__Node__Group_3_1__0__Impl rule__Node__Group_3_1__1 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:948:2: rule__Node__Group_3_1__0__Impl rule__Node__Group_3_1__1
             {
-            pushFollow(FOLLOW_rule__Node__Group_3_1__0__Impl_in_rule__Node__Group_3_1__01932);
+            pushFollow(FOLLOW_rule__Node__Group_3_1__0__Impl_in_rule__Node__Group_3_1__01933);
             rule__Node__Group_3_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Node__Group_3_1__1_in_rule__Node__Group_3_1__01935);
+            pushFollow(FOLLOW_rule__Node__Group_3_1__1_in_rule__Node__Group_3_1__01936);
             rule__Node__Group_3_1__1();
             _fsp--;
 
@@ -2684,7 +2695,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:962:1: ( rule__Node__HiddenPhenomenaAssignment_3_1_0 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:962:2: rule__Node__HiddenPhenomenaAssignment_3_1_0
             {
-            pushFollow(FOLLOW_rule__Node__HiddenPhenomenaAssignment_3_1_0_in_rule__Node__Group_3_1__0__Impl1962);
+            pushFollow(FOLLOW_rule__Node__HiddenPhenomenaAssignment_3_1_0_in_rule__Node__Group_3_1__0__Impl1963);
             rule__Node__HiddenPhenomenaAssignment_3_1_0();
             _fsp--;
 
@@ -2723,7 +2734,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:976:1: ( rule__Node__Group_3_1__1__Impl )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:977:2: rule__Node__Group_3_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Node__Group_3_1__1__Impl_in_rule__Node__Group_3_1__11992);
+            pushFollow(FOLLOW_rule__Node__Group_3_1__1__Impl_in_rule__Node__Group_3_1__11993);
             rule__Node__Group_3_1__1__Impl();
             _fsp--;
 
@@ -2760,21 +2771,21 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getNodeAccess().getGroup_3_1_1()); 
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:990:1: ( rule__Node__Group_3_1_1__0 )*
-            loop14:
+            loop15:
             do {
-                int alt14=2;
-                int LA14_0 = input.LA(1);
+                int alt15=2;
+                int LA15_0 = input.LA(1);
 
-                if ( (LA14_0==30) ) {
-                    alt14=1;
+                if ( (LA15_0==30) ) {
+                    alt15=1;
                 }
 
 
-                switch (alt14) {
+                switch (alt15) {
             	case 1 :
             	    // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:990:2: rule__Node__Group_3_1_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__Node__Group_3_1_1__0_in_rule__Node__Group_3_1__1__Impl2019);
+            	    pushFollow(FOLLOW_rule__Node__Group_3_1_1__0_in_rule__Node__Group_3_1__1__Impl2020);
             	    rule__Node__Group_3_1_1__0();
             	    _fsp--;
 
@@ -2783,7 +2794,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop14;
+            	    break loop15;
                 }
             } while (true);
 
@@ -2819,11 +2830,11 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1008:1: ( rule__Node__Group_3_1_1__0__Impl rule__Node__Group_3_1_1__1 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1009:2: rule__Node__Group_3_1_1__0__Impl rule__Node__Group_3_1_1__1
             {
-            pushFollow(FOLLOW_rule__Node__Group_3_1_1__0__Impl_in_rule__Node__Group_3_1_1__02054);
+            pushFollow(FOLLOW_rule__Node__Group_3_1_1__0__Impl_in_rule__Node__Group_3_1_1__02055);
             rule__Node__Group_3_1_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Node__Group_3_1_1__1_in_rule__Node__Group_3_1_1__02057);
+            pushFollow(FOLLOW_rule__Node__Group_3_1_1__1_in_rule__Node__Group_3_1_1__02058);
             rule__Node__Group_3_1_1__1();
             _fsp--;
 
@@ -2859,7 +2870,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1022:1: ','
             {
              before(grammarAccess.getNodeAccess().getCommaKeyword_3_1_1_0()); 
-            match(input,30,FOLLOW_30_in_rule__Node__Group_3_1_1__0__Impl2085); 
+            match(input,30,FOLLOW_30_in_rule__Node__Group_3_1_1__0__Impl2086); 
              after(grammarAccess.getNodeAccess().getCommaKeyword_3_1_1_0()); 
 
             }
@@ -2892,7 +2903,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1039:1: ( rule__Node__Group_3_1_1__1__Impl )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1040:2: rule__Node__Group_3_1_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Node__Group_3_1_1__1__Impl_in_rule__Node__Group_3_1_1__12116);
+            pushFollow(FOLLOW_rule__Node__Group_3_1_1__1__Impl_in_rule__Node__Group_3_1_1__12117);
             rule__Node__Group_3_1_1__1__Impl();
             _fsp--;
 
@@ -2931,7 +2942,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1053:1: ( rule__Node__HiddenPhenomenaAssignment_3_1_1_1 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1053:2: rule__Node__HiddenPhenomenaAssignment_3_1_1_1
             {
-            pushFollow(FOLLOW_rule__Node__HiddenPhenomenaAssignment_3_1_1_1_in_rule__Node__Group_3_1_1__1__Impl2143);
+            pushFollow(FOLLOW_rule__Node__HiddenPhenomenaAssignment_3_1_1_1_in_rule__Node__Group_3_1_1__1__Impl2144);
             rule__Node__HiddenPhenomenaAssignment_3_1_1_1();
             _fsp--;
 
@@ -2970,11 +2981,11 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1071:1: ( rule__Node__Group_3_2_1__0__Impl rule__Node__Group_3_2_1__1 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1072:2: rule__Node__Group_3_2_1__0__Impl rule__Node__Group_3_2_1__1
             {
-            pushFollow(FOLLOW_rule__Node__Group_3_2_1__0__Impl_in_rule__Node__Group_3_2_1__02177);
+            pushFollow(FOLLOW_rule__Node__Group_3_2_1__0__Impl_in_rule__Node__Group_3_2_1__02178);
             rule__Node__Group_3_2_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Node__Group_3_2_1__1_in_rule__Node__Group_3_2_1__02180);
+            pushFollow(FOLLOW_rule__Node__Group_3_2_1__1_in_rule__Node__Group_3_2_1__02181);
             rule__Node__Group_3_2_1__1();
             _fsp--;
 
@@ -3010,7 +3021,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1085:1: 'see'
             {
              before(grammarAccess.getNodeAccess().getSeeKeyword_3_2_1_0()); 
-            match(input,31,FOLLOW_31_in_rule__Node__Group_3_2_1__0__Impl2208); 
+            match(input,31,FOLLOW_31_in_rule__Node__Group_3_2_1__0__Impl2209); 
              after(grammarAccess.getNodeAccess().getSeeKeyword_3_2_1_0()); 
 
             }
@@ -3043,11 +3054,11 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1102:1: ( rule__Node__Group_3_2_1__1__Impl rule__Node__Group_3_2_1__2 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1103:2: rule__Node__Group_3_2_1__1__Impl rule__Node__Group_3_2_1__2
             {
-            pushFollow(FOLLOW_rule__Node__Group_3_2_1__1__Impl_in_rule__Node__Group_3_2_1__12239);
+            pushFollow(FOLLOW_rule__Node__Group_3_2_1__1__Impl_in_rule__Node__Group_3_2_1__12240);
             rule__Node__Group_3_2_1__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Node__Group_3_2_1__2_in_rule__Node__Group_3_2_1__12242);
+            pushFollow(FOLLOW_rule__Node__Group_3_2_1__2_in_rule__Node__Group_3_2_1__12243);
             rule__Node__Group_3_2_1__2();
             _fsp--;
 
@@ -3083,7 +3094,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1116:1: 'domain'
             {
              before(grammarAccess.getNodeAccess().getDomainKeyword_3_2_1_1()); 
-            match(input,32,FOLLOW_32_in_rule__Node__Group_3_2_1__1__Impl2270); 
+            match(input,32,FOLLOW_32_in_rule__Node__Group_3_2_1__1__Impl2271); 
              after(grammarAccess.getNodeAccess().getDomainKeyword_3_2_1_1()); 
 
             }
@@ -3116,7 +3127,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1133:1: ( rule__Node__Group_3_2_1__2__Impl )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1134:2: rule__Node__Group_3_2_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__Node__Group_3_2_1__2__Impl_in_rule__Node__Group_3_2_1__22301);
+            pushFollow(FOLLOW_rule__Node__Group_3_2_1__2__Impl_in_rule__Node__Group_3_2_1__22302);
             rule__Node__Group_3_2_1__2__Impl();
             _fsp--;
 
@@ -3155,7 +3166,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1147:1: ( rule__Node__ProblemNodeRefAssignment_3_2_1_2 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1147:2: rule__Node__ProblemNodeRefAssignment_3_2_1_2
             {
-            pushFollow(FOLLOW_rule__Node__ProblemNodeRefAssignment_3_2_1_2_in_rule__Node__Group_3_2_1__2__Impl2328);
+            pushFollow(FOLLOW_rule__Node__ProblemNodeRefAssignment_3_2_1_2_in_rule__Node__Group_3_2_1__2__Impl2329);
             rule__Node__ProblemNodeRefAssignment_3_2_1_2();
             _fsp--;
 
@@ -3194,11 +3205,11 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1167:1: ( rule__Node__Group_3_2_2__0__Impl rule__Node__Group_3_2_2__1 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1168:2: rule__Node__Group_3_2_2__0__Impl rule__Node__Group_3_2_2__1
             {
-            pushFollow(FOLLOW_rule__Node__Group_3_2_2__0__Impl_in_rule__Node__Group_3_2_2__02364);
+            pushFollow(FOLLOW_rule__Node__Group_3_2_2__0__Impl_in_rule__Node__Group_3_2_2__02365);
             rule__Node__Group_3_2_2__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Node__Group_3_2_2__1_in_rule__Node__Group_3_2_2__02367);
+            pushFollow(FOLLOW_rule__Node__Group_3_2_2__1_in_rule__Node__Group_3_2_2__02368);
             rule__Node__Group_3_2_2__1();
             _fsp--;
 
@@ -3234,7 +3245,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1181:1: 'see'
             {
              before(grammarAccess.getNodeAccess().getSeeKeyword_3_2_2_0()); 
-            match(input,31,FOLLOW_31_in_rule__Node__Group_3_2_2__0__Impl2395); 
+            match(input,31,FOLLOW_31_in_rule__Node__Group_3_2_2__0__Impl2396); 
              after(grammarAccess.getNodeAccess().getSeeKeyword_3_2_2_0()); 
 
             }
@@ -3267,11 +3278,11 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1198:1: ( rule__Node__Group_3_2_2__1__Impl rule__Node__Group_3_2_2__2 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1199:2: rule__Node__Group_3_2_2__1__Impl rule__Node__Group_3_2_2__2
             {
-            pushFollow(FOLLOW_rule__Node__Group_3_2_2__1__Impl_in_rule__Node__Group_3_2_2__12426);
+            pushFollow(FOLLOW_rule__Node__Group_3_2_2__1__Impl_in_rule__Node__Group_3_2_2__12427);
             rule__Node__Group_3_2_2__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Node__Group_3_2_2__2_in_rule__Node__Group_3_2_2__12429);
+            pushFollow(FOLLOW_rule__Node__Group_3_2_2__2_in_rule__Node__Group_3_2_2__12430);
             rule__Node__Group_3_2_2__2();
             _fsp--;
 
@@ -3307,7 +3318,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1212:1: 'problem'
             {
              before(grammarAccess.getNodeAccess().getProblemKeyword_3_2_2_1()); 
-            match(input,33,FOLLOW_33_in_rule__Node__Group_3_2_2__1__Impl2457); 
+            match(input,33,FOLLOW_33_in_rule__Node__Group_3_2_2__1__Impl2458); 
              after(grammarAccess.getNodeAccess().getProblemKeyword_3_2_2_1()); 
 
             }
@@ -3340,7 +3351,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1229:1: ( rule__Node__Group_3_2_2__2__Impl )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1230:2: rule__Node__Group_3_2_2__2__Impl
             {
-            pushFollow(FOLLOW_rule__Node__Group_3_2_2__2__Impl_in_rule__Node__Group_3_2_2__22488);
+            pushFollow(FOLLOW_rule__Node__Group_3_2_2__2__Impl_in_rule__Node__Group_3_2_2__22489);
             rule__Node__Group_3_2_2__2__Impl();
             _fsp--;
 
@@ -3379,7 +3390,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1243:1: ( rule__Node__ProblemRefAssignment_3_2_2_2 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1243:2: rule__Node__ProblemRefAssignment_3_2_2_2
             {
-            pushFollow(FOLLOW_rule__Node__ProblemRefAssignment_3_2_2_2_in_rule__Node__Group_3_2_2__2__Impl2515);
+            pushFollow(FOLLOW_rule__Node__ProblemRefAssignment_3_2_2_2_in_rule__Node__Group_3_2_2__2__Impl2516);
             rule__Node__ProblemRefAssignment_3_2_2_2();
             _fsp--;
 
@@ -3418,11 +3429,11 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1263:1: ( rule__Node__Group_3_2_3__0__Impl rule__Node__Group_3_2_3__1 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1264:2: rule__Node__Group_3_2_3__0__Impl rule__Node__Group_3_2_3__1
             {
-            pushFollow(FOLLOW_rule__Node__Group_3_2_3__0__Impl_in_rule__Node__Group_3_2_3__02551);
+            pushFollow(FOLLOW_rule__Node__Group_3_2_3__0__Impl_in_rule__Node__Group_3_2_3__02552);
             rule__Node__Group_3_2_3__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Node__Group_3_2_3__1_in_rule__Node__Group_3_2_3__02554);
+            pushFollow(FOLLOW_rule__Node__Group_3_2_3__1_in_rule__Node__Group_3_2_3__02555);
             rule__Node__Group_3_2_3__1();
             _fsp--;
 
@@ -3458,7 +3469,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1277:1: 'see'
             {
              before(grammarAccess.getNodeAccess().getSeeKeyword_3_2_3_0()); 
-            match(input,31,FOLLOW_31_in_rule__Node__Group_3_2_3__0__Impl2582); 
+            match(input,31,FOLLOW_31_in_rule__Node__Group_3_2_3__0__Impl2583); 
              after(grammarAccess.getNodeAccess().getSeeKeyword_3_2_3_0()); 
 
             }
@@ -3491,7 +3502,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1294:1: ( rule__Node__Group_3_2_3__1__Impl )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1295:2: rule__Node__Group_3_2_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__Node__Group_3_2_3__1__Impl_in_rule__Node__Group_3_2_3__12613);
+            pushFollow(FOLLOW_rule__Node__Group_3_2_3__1__Impl_in_rule__Node__Group_3_2_3__12614);
             rule__Node__Group_3_2_3__1__Impl();
             _fsp--;
 
@@ -3530,7 +3541,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1308:1: ( rule__Node__HrefAssignment_3_2_3_1 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1308:2: rule__Node__HrefAssignment_3_2_3_1
             {
-            pushFollow(FOLLOW_rule__Node__HrefAssignment_3_2_3_1_in_rule__Node__Group_3_2_3__1__Impl2640);
+            pushFollow(FOLLOW_rule__Node__HrefAssignment_3_2_3_1_in_rule__Node__Group_3_2_3__1__Impl2641);
             rule__Node__HrefAssignment_3_2_3_1();
             _fsp--;
 
@@ -3569,11 +3580,11 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1326:1: ( rule__Phenomenon__Group__0__Impl rule__Phenomenon__Group__1 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1327:2: rule__Phenomenon__Group__0__Impl rule__Phenomenon__Group__1
             {
-            pushFollow(FOLLOW_rule__Phenomenon__Group__0__Impl_in_rule__Phenomenon__Group__02674);
+            pushFollow(FOLLOW_rule__Phenomenon__Group__0__Impl_in_rule__Phenomenon__Group__02675);
             rule__Phenomenon__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Phenomenon__Group__1_in_rule__Phenomenon__Group__02677);
+            pushFollow(FOLLOW_rule__Phenomenon__Group__1_in_rule__Phenomenon__Group__02678);
             rule__Phenomenon__Group__1();
             _fsp--;
 
@@ -3610,17 +3621,17 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getPhenomenonAccess().getTypeAssignment_0()); 
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1341:1: ( rule__Phenomenon__TypeAssignment_0 )?
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( ((LA15_0>=19 && LA15_0<=21)) ) {
-                alt15=1;
+            if ( ((LA16_0>=19 && LA16_0<=21)) ) {
+                alt16=1;
             }
-            switch (alt15) {
+            switch (alt16) {
                 case 1 :
                     // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1341:2: rule__Phenomenon__TypeAssignment_0
                     {
-                    pushFollow(FOLLOW_rule__Phenomenon__TypeAssignment_0_in_rule__Phenomenon__Group__0__Impl2704);
+                    pushFollow(FOLLOW_rule__Phenomenon__TypeAssignment_0_in_rule__Phenomenon__Group__0__Impl2705);
                     rule__Phenomenon__TypeAssignment_0();
                     _fsp--;
 
@@ -3662,11 +3673,11 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1355:1: ( rule__Phenomenon__Group__1__Impl rule__Phenomenon__Group__2 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1356:2: rule__Phenomenon__Group__1__Impl rule__Phenomenon__Group__2
             {
-            pushFollow(FOLLOW_rule__Phenomenon__Group__1__Impl_in_rule__Phenomenon__Group__12735);
+            pushFollow(FOLLOW_rule__Phenomenon__Group__1__Impl_in_rule__Phenomenon__Group__12736);
             rule__Phenomenon__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Phenomenon__Group__2_in_rule__Phenomenon__Group__12738);
+            pushFollow(FOLLOW_rule__Phenomenon__Group__2_in_rule__Phenomenon__Group__12739);
             rule__Phenomenon__Group__2();
             _fsp--;
 
@@ -3703,17 +3714,17 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getPhenomenonAccess().getIsControlledAssignment_1()); 
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1370:1: ( rule__Phenomenon__IsControlledAssignment_1 )?
-            int alt16=2;
-            int LA16_0 = input.LA(1);
+            int alt17=2;
+            int LA17_0 = input.LA(1);
 
-            if ( (LA16_0==34) ) {
-                alt16=1;
+            if ( (LA17_0==34) ) {
+                alt17=1;
             }
-            switch (alt16) {
+            switch (alt17) {
                 case 1 :
                     // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1370:2: rule__Phenomenon__IsControlledAssignment_1
                     {
-                    pushFollow(FOLLOW_rule__Phenomenon__IsControlledAssignment_1_in_rule__Phenomenon__Group__1__Impl2765);
+                    pushFollow(FOLLOW_rule__Phenomenon__IsControlledAssignment_1_in_rule__Phenomenon__Group__1__Impl2766);
                     rule__Phenomenon__IsControlledAssignment_1();
                     _fsp--;
 
@@ -3755,11 +3766,11 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1384:1: ( rule__Phenomenon__Group__2__Impl rule__Phenomenon__Group__3 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1385:2: rule__Phenomenon__Group__2__Impl rule__Phenomenon__Group__3
             {
-            pushFollow(FOLLOW_rule__Phenomenon__Group__2__Impl_in_rule__Phenomenon__Group__22796);
+            pushFollow(FOLLOW_rule__Phenomenon__Group__2__Impl_in_rule__Phenomenon__Group__22797);
             rule__Phenomenon__Group__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Phenomenon__Group__3_in_rule__Phenomenon__Group__22799);
+            pushFollow(FOLLOW_rule__Phenomenon__Group__3_in_rule__Phenomenon__Group__22800);
             rule__Phenomenon__Group__3();
             _fsp--;
 
@@ -3798,7 +3809,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1399:1: ( rule__Phenomenon__NameAssignment_2 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1399:2: rule__Phenomenon__NameAssignment_2
             {
-            pushFollow(FOLLOW_rule__Phenomenon__NameAssignment_2_in_rule__Phenomenon__Group__2__Impl2826);
+            pushFollow(FOLLOW_rule__Phenomenon__NameAssignment_2_in_rule__Phenomenon__Group__2__Impl2827);
             rule__Phenomenon__NameAssignment_2();
             _fsp--;
 
@@ -3837,7 +3848,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1413:1: ( rule__Phenomenon__Group__3__Impl )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1414:2: rule__Phenomenon__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__Phenomenon__Group__3__Impl_in_rule__Phenomenon__Group__32856);
+            pushFollow(FOLLOW_rule__Phenomenon__Group__3__Impl_in_rule__Phenomenon__Group__32857);
             rule__Phenomenon__Group__3__Impl();
             _fsp--;
 
@@ -3874,17 +3885,17 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getPhenomenonAccess().getGroup_3()); 
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1427:1: ( rule__Phenomenon__Group_3__0 )?
-            int alt17=2;
-            int LA17_0 = input.LA(1);
+            int alt18=2;
+            int LA18_0 = input.LA(1);
 
-            if ( (LA17_0==RULE_STRING||LA17_0==27) ) {
-                alt17=1;
+            if ( (LA18_0==RULE_STRING||LA18_0==27) ) {
+                alt18=1;
             }
-            switch (alt17) {
+            switch (alt18) {
                 case 1 :
                     // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1427:2: rule__Phenomenon__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__Phenomenon__Group_3__0_in_rule__Phenomenon__Group__3__Impl2883);
+                    pushFollow(FOLLOW_rule__Phenomenon__Group_3__0_in_rule__Phenomenon__Group__3__Impl2884);
                     rule__Phenomenon__Group_3__0();
                     _fsp--;
 
@@ -3926,11 +3937,11 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1449:1: ( rule__Phenomenon__Group_3__0__Impl rule__Phenomenon__Group_3__1 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1450:2: rule__Phenomenon__Group_3__0__Impl rule__Phenomenon__Group_3__1
             {
-            pushFollow(FOLLOW_rule__Phenomenon__Group_3__0__Impl_in_rule__Phenomenon__Group_3__02922);
+            pushFollow(FOLLOW_rule__Phenomenon__Group_3__0__Impl_in_rule__Phenomenon__Group_3__02923);
             rule__Phenomenon__Group_3__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Phenomenon__Group_3__1_in_rule__Phenomenon__Group_3__02925);
+            pushFollow(FOLLOW_rule__Phenomenon__Group_3__1_in_rule__Phenomenon__Group_3__02926);
             rule__Phenomenon__Group_3__1();
             _fsp--;
 
@@ -3967,17 +3978,17 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getPhenomenonAccess().getColonKeyword_3_0()); 
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1464:1: ( ':' )?
-            int alt18=2;
-            int LA18_0 = input.LA(1);
+            int alt19=2;
+            int LA19_0 = input.LA(1);
 
-            if ( (LA18_0==27) ) {
-                alt18=1;
+            if ( (LA19_0==27) ) {
+                alt19=1;
             }
-            switch (alt18) {
+            switch (alt19) {
                 case 1 :
                     // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1465:2: ':'
                     {
-                    match(input,27,FOLLOW_27_in_rule__Phenomenon__Group_3__0__Impl2954); 
+                    match(input,27,FOLLOW_27_in_rule__Phenomenon__Group_3__0__Impl2955); 
 
                     }
                     break;
@@ -4016,7 +4027,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1480:1: ( rule__Phenomenon__Group_3__1__Impl )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1481:2: rule__Phenomenon__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__Phenomenon__Group_3__1__Impl_in_rule__Phenomenon__Group_3__12987);
+            pushFollow(FOLLOW_rule__Phenomenon__Group_3__1__Impl_in_rule__Phenomenon__Group_3__12988);
             rule__Phenomenon__Group_3__1__Impl();
             _fsp--;
 
@@ -4055,7 +4066,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1494:1: ( rule__Phenomenon__DescriptionAssignment_3_1 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1494:2: rule__Phenomenon__DescriptionAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__Phenomenon__DescriptionAssignment_3_1_in_rule__Phenomenon__Group_3__1__Impl3014);
+            pushFollow(FOLLOW_rule__Phenomenon__DescriptionAssignment_3_1_in_rule__Phenomenon__Group_3__1__Impl3015);
             rule__Phenomenon__DescriptionAssignment_3_1();
             _fsp--;
 
@@ -4094,11 +4105,11 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1512:1: ( rule__Link__Group__0__Impl rule__Link__Group__1 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1513:2: rule__Link__Group__0__Impl rule__Link__Group__1
             {
-            pushFollow(FOLLOW_rule__Link__Group__0__Impl_in_rule__Link__Group__03048);
+            pushFollow(FOLLOW_rule__Link__Group__0__Impl_in_rule__Link__Group__03049);
             rule__Link__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Link__Group__1_in_rule__Link__Group__03051);
+            pushFollow(FOLLOW_rule__Link__Group__1_in_rule__Link__Group__03052);
             rule__Link__Group__1();
             _fsp--;
 
@@ -4137,7 +4148,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1527:1: ( rule__Link__FromAssignment_0 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1527:2: rule__Link__FromAssignment_0
             {
-            pushFollow(FOLLOW_rule__Link__FromAssignment_0_in_rule__Link__Group__0__Impl3078);
+            pushFollow(FOLLOW_rule__Link__FromAssignment_0_in_rule__Link__Group__0__Impl3079);
             rule__Link__FromAssignment_0();
             _fsp--;
 
@@ -4176,11 +4187,11 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1541:1: ( rule__Link__Group__1__Impl rule__Link__Group__2 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1542:2: rule__Link__Group__1__Impl rule__Link__Group__2
             {
-            pushFollow(FOLLOW_rule__Link__Group__1__Impl_in_rule__Link__Group__13108);
+            pushFollow(FOLLOW_rule__Link__Group__1__Impl_in_rule__Link__Group__13109);
             rule__Link__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Link__Group__2_in_rule__Link__Group__13111);
+            pushFollow(FOLLOW_rule__Link__Group__2_in_rule__Link__Group__13112);
             rule__Link__Group__2();
             _fsp--;
 
@@ -4219,7 +4230,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1556:1: ( rule__Link__TypeAssignment_1 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1556:2: rule__Link__TypeAssignment_1
             {
-            pushFollow(FOLLOW_rule__Link__TypeAssignment_1_in_rule__Link__Group__1__Impl3138);
+            pushFollow(FOLLOW_rule__Link__TypeAssignment_1_in_rule__Link__Group__1__Impl3139);
             rule__Link__TypeAssignment_1();
             _fsp--;
 
@@ -4258,11 +4269,11 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1570:1: ( rule__Link__Group__2__Impl rule__Link__Group__3 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1571:2: rule__Link__Group__2__Impl rule__Link__Group__3
             {
-            pushFollow(FOLLOW_rule__Link__Group__2__Impl_in_rule__Link__Group__23168);
+            pushFollow(FOLLOW_rule__Link__Group__2__Impl_in_rule__Link__Group__23169);
             rule__Link__Group__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Link__Group__3_in_rule__Link__Group__23171);
+            pushFollow(FOLLOW_rule__Link__Group__3_in_rule__Link__Group__23172);
             rule__Link__Group__3();
             _fsp--;
 
@@ -4301,7 +4312,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1585:1: ( rule__Link__ToAssignment_2 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1585:2: rule__Link__ToAssignment_2
             {
-            pushFollow(FOLLOW_rule__Link__ToAssignment_2_in_rule__Link__Group__2__Impl3198);
+            pushFollow(FOLLOW_rule__Link__ToAssignment_2_in_rule__Link__Group__2__Impl3199);
             rule__Link__ToAssignment_2();
             _fsp--;
 
@@ -4340,11 +4351,11 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1599:1: ( rule__Link__Group__3__Impl rule__Link__Group__4 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1600:2: rule__Link__Group__3__Impl rule__Link__Group__4
             {
-            pushFollow(FOLLOW_rule__Link__Group__3__Impl_in_rule__Link__Group__33228);
+            pushFollow(FOLLOW_rule__Link__Group__3__Impl_in_rule__Link__Group__33229);
             rule__Link__Group__3__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Link__Group__4_in_rule__Link__Group__33231);
+            pushFollow(FOLLOW_rule__Link__Group__4_in_rule__Link__Group__33232);
             rule__Link__Group__4();
             _fsp--;
 
@@ -4381,17 +4392,17 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getLinkAccess().getGroup_3()); 
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1614:1: ( rule__Link__Group_3__0 )?
-            int alt19=2;
-            int LA19_0 = input.LA(1);
+            int alt20=2;
+            int LA20_0 = input.LA(1);
 
-            if ( (LA19_0==28) ) {
-                alt19=1;
+            if ( (LA20_0==28) ) {
+                alt20=1;
             }
-            switch (alt19) {
+            switch (alt20) {
                 case 1 :
                     // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1614:2: rule__Link__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__Link__Group_3__0_in_rule__Link__Group__3__Impl3258);
+                    pushFollow(FOLLOW_rule__Link__Group_3__0_in_rule__Link__Group__3__Impl3259);
                     rule__Link__Group_3__0();
                     _fsp--;
 
@@ -4433,7 +4444,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1628:1: ( rule__Link__Group__4__Impl )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1629:2: rule__Link__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__Link__Group__4__Impl_in_rule__Link__Group__43289);
+            pushFollow(FOLLOW_rule__Link__Group__4__Impl_in_rule__Link__Group__43290);
             rule__Link__Group__4__Impl();
             _fsp--;
 
@@ -4470,17 +4481,17 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getLinkAccess().getGroup_4()); 
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1642:1: ( rule__Link__Group_4__0 )?
-            int alt20=2;
-            int LA20_0 = input.LA(1);
+            int alt21=2;
+            int LA21_0 = input.LA(1);
 
-            if ( (LA20_0==RULE_STRING||LA20_0==27) ) {
-                alt20=1;
+            if ( (LA21_0==RULE_STRING||LA21_0==27) ) {
+                alt21=1;
             }
-            switch (alt20) {
+            switch (alt21) {
                 case 1 :
                     // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1642:2: rule__Link__Group_4__0
                     {
-                    pushFollow(FOLLOW_rule__Link__Group_4__0_in_rule__Link__Group__4__Impl3316);
+                    pushFollow(FOLLOW_rule__Link__Group_4__0_in_rule__Link__Group__4__Impl3317);
                     rule__Link__Group_4__0();
                     _fsp--;
 
@@ -4522,11 +4533,11 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1666:1: ( rule__Link__Group_3__0__Impl rule__Link__Group_3__1 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1667:2: rule__Link__Group_3__0__Impl rule__Link__Group_3__1
             {
-            pushFollow(FOLLOW_rule__Link__Group_3__0__Impl_in_rule__Link__Group_3__03357);
+            pushFollow(FOLLOW_rule__Link__Group_3__0__Impl_in_rule__Link__Group_3__03358);
             rule__Link__Group_3__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Link__Group_3__1_in_rule__Link__Group_3__03360);
+            pushFollow(FOLLOW_rule__Link__Group_3__1_in_rule__Link__Group_3__03361);
             rule__Link__Group_3__1();
             _fsp--;
 
@@ -4562,7 +4573,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1680:1: '{'
             {
              before(grammarAccess.getLinkAccess().getLeftCurlyBracketKeyword_3_0()); 
-            match(input,28,FOLLOW_28_in_rule__Link__Group_3__0__Impl3388); 
+            match(input,28,FOLLOW_28_in_rule__Link__Group_3__0__Impl3389); 
              after(grammarAccess.getLinkAccess().getLeftCurlyBracketKeyword_3_0()); 
 
             }
@@ -4595,11 +4606,11 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1697:1: ( rule__Link__Group_3__1__Impl rule__Link__Group_3__2 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1698:2: rule__Link__Group_3__1__Impl rule__Link__Group_3__2
             {
-            pushFollow(FOLLOW_rule__Link__Group_3__1__Impl_in_rule__Link__Group_3__13419);
+            pushFollow(FOLLOW_rule__Link__Group_3__1__Impl_in_rule__Link__Group_3__13420);
             rule__Link__Group_3__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Link__Group_3__2_in_rule__Link__Group_3__13422);
+            pushFollow(FOLLOW_rule__Link__Group_3__2_in_rule__Link__Group_3__13423);
             rule__Link__Group_3__2();
             _fsp--;
 
@@ -4638,7 +4649,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1712:1: ( rule__Link__PhenomenaAssignment_3_1 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1712:2: rule__Link__PhenomenaAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__Link__PhenomenaAssignment_3_1_in_rule__Link__Group_3__1__Impl3449);
+            pushFollow(FOLLOW_rule__Link__PhenomenaAssignment_3_1_in_rule__Link__Group_3__1__Impl3450);
             rule__Link__PhenomenaAssignment_3_1();
             _fsp--;
 
@@ -4677,11 +4688,11 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1726:1: ( rule__Link__Group_3__2__Impl rule__Link__Group_3__3 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1727:2: rule__Link__Group_3__2__Impl rule__Link__Group_3__3
             {
-            pushFollow(FOLLOW_rule__Link__Group_3__2__Impl_in_rule__Link__Group_3__23479);
+            pushFollow(FOLLOW_rule__Link__Group_3__2__Impl_in_rule__Link__Group_3__23480);
             rule__Link__Group_3__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Link__Group_3__3_in_rule__Link__Group_3__23482);
+            pushFollow(FOLLOW_rule__Link__Group_3__3_in_rule__Link__Group_3__23483);
             rule__Link__Group_3__3();
             _fsp--;
 
@@ -4718,21 +4729,21 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getLinkAccess().getGroup_3_2()); 
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1741:1: ( rule__Link__Group_3_2__0 )*
-            loop21:
+            loop22:
             do {
-                int alt21=2;
-                int LA21_0 = input.LA(1);
+                int alt22=2;
+                int LA22_0 = input.LA(1);
 
-                if ( (LA21_0==30) ) {
-                    alt21=1;
+                if ( (LA22_0==30) ) {
+                    alt22=1;
                 }
 
 
-                switch (alt21) {
+                switch (alt22) {
             	case 1 :
             	    // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1741:2: rule__Link__Group_3_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__Link__Group_3_2__0_in_rule__Link__Group_3__2__Impl3509);
+            	    pushFollow(FOLLOW_rule__Link__Group_3_2__0_in_rule__Link__Group_3__2__Impl3510);
             	    rule__Link__Group_3_2__0();
             	    _fsp--;
 
@@ -4741,7 +4752,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop21;
+            	    break loop22;
                 }
             } while (true);
 
@@ -4777,7 +4788,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1755:1: ( rule__Link__Group_3__3__Impl )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1756:2: rule__Link__Group_3__3__Impl
             {
-            pushFollow(FOLLOW_rule__Link__Group_3__3__Impl_in_rule__Link__Group_3__33540);
+            pushFollow(FOLLOW_rule__Link__Group_3__3__Impl_in_rule__Link__Group_3__33541);
             rule__Link__Group_3__3__Impl();
             _fsp--;
 
@@ -4813,7 +4824,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1768:1: '}'
             {
              before(grammarAccess.getLinkAccess().getRightCurlyBracketKeyword_3_3()); 
-            match(input,29,FOLLOW_29_in_rule__Link__Group_3__3__Impl3568); 
+            match(input,29,FOLLOW_29_in_rule__Link__Group_3__3__Impl3569); 
              after(grammarAccess.getLinkAccess().getRightCurlyBracketKeyword_3_3()); 
 
             }
@@ -4846,11 +4857,11 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1793:1: ( rule__Link__Group_3_2__0__Impl rule__Link__Group_3_2__1 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1794:2: rule__Link__Group_3_2__0__Impl rule__Link__Group_3_2__1
             {
-            pushFollow(FOLLOW_rule__Link__Group_3_2__0__Impl_in_rule__Link__Group_3_2__03607);
+            pushFollow(FOLLOW_rule__Link__Group_3_2__0__Impl_in_rule__Link__Group_3_2__03608);
             rule__Link__Group_3_2__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Link__Group_3_2__1_in_rule__Link__Group_3_2__03610);
+            pushFollow(FOLLOW_rule__Link__Group_3_2__1_in_rule__Link__Group_3_2__03611);
             rule__Link__Group_3_2__1();
             _fsp--;
 
@@ -4886,7 +4897,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1807:1: ','
             {
              before(grammarAccess.getLinkAccess().getCommaKeyword_3_2_0()); 
-            match(input,30,FOLLOW_30_in_rule__Link__Group_3_2__0__Impl3638); 
+            match(input,30,FOLLOW_30_in_rule__Link__Group_3_2__0__Impl3639); 
              after(grammarAccess.getLinkAccess().getCommaKeyword_3_2_0()); 
 
             }
@@ -4919,7 +4930,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1824:1: ( rule__Link__Group_3_2__1__Impl )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1825:2: rule__Link__Group_3_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Link__Group_3_2__1__Impl_in_rule__Link__Group_3_2__13669);
+            pushFollow(FOLLOW_rule__Link__Group_3_2__1__Impl_in_rule__Link__Group_3_2__13670);
             rule__Link__Group_3_2__1__Impl();
             _fsp--;
 
@@ -4958,7 +4969,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1838:1: ( rule__Link__PhenomenaAssignment_3_2_1 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1838:2: rule__Link__PhenomenaAssignment_3_2_1
             {
-            pushFollow(FOLLOW_rule__Link__PhenomenaAssignment_3_2_1_in_rule__Link__Group_3_2__1__Impl3696);
+            pushFollow(FOLLOW_rule__Link__PhenomenaAssignment_3_2_1_in_rule__Link__Group_3_2__1__Impl3697);
             rule__Link__PhenomenaAssignment_3_2_1();
             _fsp--;
 
@@ -4997,11 +5008,11 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1856:1: ( rule__Link__Group_4__0__Impl rule__Link__Group_4__1 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1857:2: rule__Link__Group_4__0__Impl rule__Link__Group_4__1
             {
-            pushFollow(FOLLOW_rule__Link__Group_4__0__Impl_in_rule__Link__Group_4__03730);
+            pushFollow(FOLLOW_rule__Link__Group_4__0__Impl_in_rule__Link__Group_4__03731);
             rule__Link__Group_4__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Link__Group_4__1_in_rule__Link__Group_4__03733);
+            pushFollow(FOLLOW_rule__Link__Group_4__1_in_rule__Link__Group_4__03734);
             rule__Link__Group_4__1();
             _fsp--;
 
@@ -5038,17 +5049,17 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getLinkAccess().getColonKeyword_4_0()); 
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1871:1: ( ':' )?
-            int alt22=2;
-            int LA22_0 = input.LA(1);
+            int alt23=2;
+            int LA23_0 = input.LA(1);
 
-            if ( (LA22_0==27) ) {
-                alt22=1;
+            if ( (LA23_0==27) ) {
+                alt23=1;
             }
-            switch (alt22) {
+            switch (alt23) {
                 case 1 :
                     // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1872:2: ':'
                     {
-                    match(input,27,FOLLOW_27_in_rule__Link__Group_4__0__Impl3762); 
+                    match(input,27,FOLLOW_27_in_rule__Link__Group_4__0__Impl3763); 
 
                     }
                     break;
@@ -5087,7 +5098,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1887:1: ( rule__Link__Group_4__1__Impl )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1888:2: rule__Link__Group_4__1__Impl
             {
-            pushFollow(FOLLOW_rule__Link__Group_4__1__Impl_in_rule__Link__Group_4__13795);
+            pushFollow(FOLLOW_rule__Link__Group_4__1__Impl_in_rule__Link__Group_4__13796);
             rule__Link__Group_4__1__Impl();
             _fsp--;
 
@@ -5126,7 +5137,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1901:1: ( rule__Link__DescriptionAssignment_4_1 )
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1901:2: rule__Link__DescriptionAssignment_4_1
             {
-            pushFollow(FOLLOW_rule__Link__DescriptionAssignment_4_1_in_rule__Link__Group_4__1__Impl3822);
+            pushFollow(FOLLOW_rule__Link__DescriptionAssignment_4_1_in_rule__Link__Group_4__1__Impl3823);
             rule__Link__DescriptionAssignment_4_1();
             _fsp--;
 
@@ -5169,7 +5180,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1922:1: RULE_ID
             {
              before(grammarAccess.getProblemDiagramAccess().getNameIDTerminalRuleCall_2_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ProblemDiagram__NameAssignment_23861); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ProblemDiagram__NameAssignment_23862); 
              after(grammarAccess.getProblemDiagramAccess().getNameIDTerminalRuleCall_2_0()); 
 
             }
@@ -5210,7 +5221,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1939:1: RULE_ID
             {
              before(grammarAccess.getProblemDiagramAccess().getHighlightNodeIDTerminalRuleCall_3_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ProblemDiagram__HighlightAssignment_3_13896); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ProblemDiagram__HighlightAssignment_3_13897); 
              after(grammarAccess.getProblemDiagramAccess().getHighlightNodeIDTerminalRuleCall_3_1_0_1()); 
 
             }
@@ -5251,7 +5262,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1956:1: ruleNode
             {
              before(grammarAccess.getProblemDiagramAccess().getNodesNodeParserRuleCall_4_0_0()); 
-            pushFollow(FOLLOW_ruleNode_in_rule__ProblemDiagram__NodesAssignment_4_03931);
+            pushFollow(FOLLOW_ruleNode_in_rule__ProblemDiagram__NodesAssignment_4_03932);
             ruleNode();
             _fsp--;
 
@@ -5291,7 +5302,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1971:1: ruleLink
             {
              before(grammarAccess.getProblemDiagramAccess().getLinksLinkParserRuleCall_4_1_0()); 
-            pushFollow(FOLLOW_ruleLink_in_rule__ProblemDiagram__LinksAssignment_4_13962);
+            pushFollow(FOLLOW_ruleLink_in_rule__ProblemDiagram__LinksAssignment_4_13963);
             ruleLink();
             _fsp--;
 
@@ -5331,7 +5342,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:1986:1: RULE_ID
             {
              before(grammarAccess.getNodeAccess().getNameIDTerminalRuleCall_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Node__NameAssignment_03993); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Node__NameAssignment_03994); 
              after(grammarAccess.getNodeAccess().getNameIDTerminalRuleCall_0_0()); 
 
             }
@@ -5368,7 +5379,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2001:1: ruleNodeType
             {
              before(grammarAccess.getNodeAccess().getTypeNodeTypeEnumRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleNodeType_in_rule__Node__TypeAssignment_14024);
+            pushFollow(FOLLOW_ruleNodeType_in_rule__Node__TypeAssignment_14025);
             ruleNodeType();
             _fsp--;
 
@@ -5408,7 +5419,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2016:1: RULE_STRING
             {
              before(grammarAccess.getNodeAccess().getDescriptionSTRINGTerminalRuleCall_2_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Node__DescriptionAssignment_2_14055); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Node__DescriptionAssignment_2_14056); 
              after(grammarAccess.getNodeAccess().getDescriptionSTRINGTerminalRuleCall_2_1_0()); 
 
             }
@@ -5445,7 +5456,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2031:1: rulePhenomenon
             {
              before(grammarAccess.getNodeAccess().getHiddenPhenomenaPhenomenonParserRuleCall_3_1_0_0()); 
-            pushFollow(FOLLOW_rulePhenomenon_in_rule__Node__HiddenPhenomenaAssignment_3_1_04086);
+            pushFollow(FOLLOW_rulePhenomenon_in_rule__Node__HiddenPhenomenaAssignment_3_1_04087);
             rulePhenomenon();
             _fsp--;
 
@@ -5485,7 +5496,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2046:1: rulePhenomenon
             {
              before(grammarAccess.getNodeAccess().getHiddenPhenomenaPhenomenonParserRuleCall_3_1_1_1_0()); 
-            pushFollow(FOLLOW_rulePhenomenon_in_rule__Node__HiddenPhenomenaAssignment_3_1_1_14117);
+            pushFollow(FOLLOW_rulePhenomenon_in_rule__Node__HiddenPhenomenaAssignment_3_1_1_14118);
             rulePhenomenon();
             _fsp--;
 
@@ -5525,7 +5536,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2061:1: ruleProblemDiagram
             {
              before(grammarAccess.getNodeAccess().getSubproblemProblemDiagramParserRuleCall_3_2_0_0()); 
-            pushFollow(FOLLOW_ruleProblemDiagram_in_rule__Node__SubproblemAssignment_3_2_04148);
+            pushFollow(FOLLOW_ruleProblemDiagram_in_rule__Node__SubproblemAssignment_3_2_04149);
             ruleProblemDiagram();
             _fsp--;
 
@@ -5569,7 +5580,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2078:1: RULE_ID
             {
              before(grammarAccess.getNodeAccess().getProblemNodeRefNodeIDTerminalRuleCall_3_2_1_2_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Node__ProblemNodeRefAssignment_3_2_1_24183); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Node__ProblemNodeRefAssignment_3_2_1_24184); 
              after(grammarAccess.getNodeAccess().getProblemNodeRefNodeIDTerminalRuleCall_3_2_1_2_0_1()); 
 
             }
@@ -5614,7 +5625,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2097:1: RULE_ID
             {
              before(grammarAccess.getNodeAccess().getProblemRefProblemDiagramIDTerminalRuleCall_3_2_2_2_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Node__ProblemRefAssignment_3_2_2_24222); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Node__ProblemRefAssignment_3_2_2_24223); 
              after(grammarAccess.getNodeAccess().getProblemRefProblemDiagramIDTerminalRuleCall_3_2_2_2_0_1()); 
 
             }
@@ -5655,7 +5666,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2114:1: RULE_STRING
             {
              before(grammarAccess.getNodeAccess().getHrefSTRINGTerminalRuleCall_3_2_3_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Node__HrefAssignment_3_2_3_14257); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Node__HrefAssignment_3_2_3_14258); 
              after(grammarAccess.getNodeAccess().getHrefSTRINGTerminalRuleCall_3_2_3_1_0()); 
 
             }
@@ -5692,7 +5703,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2129:1: rulePhenomenonType
             {
              before(grammarAccess.getPhenomenonAccess().getTypePhenomenonTypeEnumRuleCall_0_0()); 
-            pushFollow(FOLLOW_rulePhenomenonType_in_rule__Phenomenon__TypeAssignment_04288);
+            pushFollow(FOLLOW_rulePhenomenonType_in_rule__Phenomenon__TypeAssignment_04289);
             rulePhenomenonType();
             _fsp--;
 
@@ -5736,7 +5747,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2146:1: '!'
             {
              before(grammarAccess.getPhenomenonAccess().getIsControlledExclamationMarkKeyword_1_0()); 
-            match(input,34,FOLLOW_34_in_rule__Phenomenon__IsControlledAssignment_14324); 
+            match(input,34,FOLLOW_34_in_rule__Phenomenon__IsControlledAssignment_14325); 
              after(grammarAccess.getPhenomenonAccess().getIsControlledExclamationMarkKeyword_1_0()); 
 
             }
@@ -5777,7 +5788,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2167:1: RULE_ID
             {
              before(grammarAccess.getPhenomenonAccess().getNameIDTerminalRuleCall_2_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Phenomenon__NameAssignment_24363); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Phenomenon__NameAssignment_24364); 
              after(grammarAccess.getPhenomenonAccess().getNameIDTerminalRuleCall_2_0()); 
 
             }
@@ -5814,7 +5825,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2182:1: RULE_STRING
             {
              before(grammarAccess.getPhenomenonAccess().getDescriptionSTRINGTerminalRuleCall_3_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Phenomenon__DescriptionAssignment_3_14394); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Phenomenon__DescriptionAssignment_3_14395); 
              after(grammarAccess.getPhenomenonAccess().getDescriptionSTRINGTerminalRuleCall_3_1_0()); 
 
             }
@@ -5855,7 +5866,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2199:1: RULE_ID
             {
              before(grammarAccess.getLinkAccess().getFromNodeIDTerminalRuleCall_0_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Link__FromAssignment_04429); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Link__FromAssignment_04430); 
              after(grammarAccess.getLinkAccess().getFromNodeIDTerminalRuleCall_0_0_1()); 
 
             }
@@ -5896,7 +5907,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2216:1: ruleLinkType
             {
              before(grammarAccess.getLinkAccess().getTypeLinkTypeEnumRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleLinkType_in_rule__Link__TypeAssignment_14464);
+            pushFollow(FOLLOW_ruleLinkType_in_rule__Link__TypeAssignment_14465);
             ruleLinkType();
             _fsp--;
 
@@ -5940,7 +5951,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2233:1: RULE_ID
             {
              before(grammarAccess.getLinkAccess().getToNodeIDTerminalRuleCall_2_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Link__ToAssignment_24499); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Link__ToAssignment_24500); 
              after(grammarAccess.getLinkAccess().getToNodeIDTerminalRuleCall_2_0_1()); 
 
             }
@@ -5981,7 +5992,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2250:1: rulePhenomenon
             {
              before(grammarAccess.getLinkAccess().getPhenomenaPhenomenonParserRuleCall_3_1_0()); 
-            pushFollow(FOLLOW_rulePhenomenon_in_rule__Link__PhenomenaAssignment_3_14534);
+            pushFollow(FOLLOW_rulePhenomenon_in_rule__Link__PhenomenaAssignment_3_14535);
             rulePhenomenon();
             _fsp--;
 
@@ -6021,7 +6032,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2265:1: rulePhenomenon
             {
              before(grammarAccess.getLinkAccess().getPhenomenaPhenomenonParserRuleCall_3_2_1_0()); 
-            pushFollow(FOLLOW_rulePhenomenon_in_rule__Link__PhenomenaAssignment_3_2_14565);
+            pushFollow(FOLLOW_rulePhenomenon_in_rule__Link__PhenomenaAssignment_3_2_14566);
             rulePhenomenon();
             _fsp--;
 
@@ -6061,7 +6072,7 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
             // ../problem.ui/src-gen/uk/ac/open/ui/contentassist/antlr/internal/InternalProblem.g:2280:1: RULE_STRING
             {
              before(grammarAccess.getLinkAccess().getDescriptionSTRINGTerminalRuleCall_4_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Link__DescriptionAssignment_4_14596); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Link__DescriptionAssignment_4_14597); 
              after(grammarAccess.getLinkAccess().getDescriptionSTRINGTerminalRuleCall_4_1_0()); 
 
             }
@@ -6122,153 +6133,153 @@ public class InternalProblemParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_24_in_rule__LinkType__Alternatives839 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__ProblemDiagram__Group__0__Impl_in_rule__ProblemDiagram__Group__0872 = new BitSet(new long[]{0x0000000002000000L});
     public static final BitSet FOLLOW_rule__ProblemDiagram__Group__1_in_rule__ProblemDiagram__Group__0875 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ProblemDiagram__Group__1__Impl_in_rule__ProblemDiagram__Group__1933 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__ProblemDiagram__Group__1__Impl_in_rule__ProblemDiagram__Group__1933 = new BitSet(new long[]{0x0000000004000012L});
     public static final BitSet FOLLOW_rule__ProblemDiagram__Group__2_in_rule__ProblemDiagram__Group__1936 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_25_in_rule__ProblemDiagram__Group__1__Impl964 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__ProblemDiagram__Group__2__Impl_in_rule__ProblemDiagram__Group__2995 = new BitSet(new long[]{0x0000000004000012L});
     public static final BitSet FOLLOW_rule__ProblemDiagram__Group__3_in_rule__ProblemDiagram__Group__2998 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__ProblemDiagram__NameAssignment_2_in_rule__ProblemDiagram__Group__2__Impl1025 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ProblemDiagram__Group__3__Impl_in_rule__ProblemDiagram__Group__31055 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__ProblemDiagram__Group__4_in_rule__ProblemDiagram__Group__31058 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ProblemDiagram__Group_3__0_in_rule__ProblemDiagram__Group__3__Impl1085 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ProblemDiagram__Group__4__Impl_in_rule__ProblemDiagram__Group__41116 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ProblemDiagram__Alternatives_4_in_rule__ProblemDiagram__Group__4__Impl1143 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__ProblemDiagram__Group_3__0__Impl_in_rule__ProblemDiagram__Group_3__01184 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__ProblemDiagram__Group_3__1_in_rule__ProblemDiagram__Group_3__01187 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__ProblemDiagram__Group_3__0__Impl1215 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ProblemDiagram__Group_3__1__Impl_in_rule__ProblemDiagram__Group_3__11246 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ProblemDiagram__HighlightAssignment_3_1_in_rule__ProblemDiagram__Group_3__1__Impl1273 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group__0__Impl_in_rule__Node__Group__01307 = new BitSet(new long[]{0x000000001807F022L});
-    public static final BitSet FOLLOW_rule__Node__Group__1_in_rule__Node__Group__01310 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__NameAssignment_0_in_rule__Node__Group__0__Impl1337 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group__1__Impl_in_rule__Node__Group__11367 = new BitSet(new long[]{0x0000000018000022L});
-    public static final BitSet FOLLOW_rule__Node__Group__2_in_rule__Node__Group__11370 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__TypeAssignment_1_in_rule__Node__Group__1__Impl1397 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group__2__Impl_in_rule__Node__Group__21428 = new BitSet(new long[]{0x0000000010000002L});
-    public static final BitSet FOLLOW_rule__Node__Group__3_in_rule__Node__Group__21431 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group_2__0_in_rule__Node__Group__2__Impl1458 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group__3__Impl_in_rule__Node__Group__31489 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group_3__0_in_rule__Node__Group__3__Impl1516 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group_2__0__Impl_in_rule__Node__Group_2__01555 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Node__Group_2__1_in_rule__Node__Group_2__01558 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__Node__Group_2__0__Impl1587 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group_2__1__Impl_in_rule__Node__Group_2__11620 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__DescriptionAssignment_2_1_in_rule__Node__Group_2__1__Impl1647 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group_3__0__Impl_in_rule__Node__Group_3__01681 = new BitSet(new long[]{0x00000004A2380010L});
-    public static final BitSet FOLLOW_rule__Node__Group_3__1_in_rule__Node__Group_3__01684 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__Node__Group_3__0__Impl1712 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group_3__1__Impl_in_rule__Node__Group_3__11743 = new BitSet(new long[]{0x00000000A2000000L});
-    public static final BitSet FOLLOW_rule__Node__Group_3__2_in_rule__Node__Group_3__11746 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group_3_1__0_in_rule__Node__Group_3__1__Impl1773 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group_3__2__Impl_in_rule__Node__Group_3__21804 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_rule__Node__Group_3__3_in_rule__Node__Group_3__21807 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Alternatives_3_2_in_rule__Node__Group_3__2__Impl1834 = new BitSet(new long[]{0x0000000082000002L});
-    public static final BitSet FOLLOW_rule__Node__Group_3__3__Impl_in_rule__Node__Group_3__31865 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rule__Node__Group_3__3__Impl1893 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group_3_1__0__Impl_in_rule__Node__Group_3_1__01932 = new BitSet(new long[]{0x0000000040000002L});
-    public static final BitSet FOLLOW_rule__Node__Group_3_1__1_in_rule__Node__Group_3_1__01935 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__HiddenPhenomenaAssignment_3_1_0_in_rule__Node__Group_3_1__0__Impl1962 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group_3_1__1__Impl_in_rule__Node__Group_3_1__11992 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group_3_1_1__0_in_rule__Node__Group_3_1__1__Impl2019 = new BitSet(new long[]{0x0000000040000002L});
-    public static final BitSet FOLLOW_rule__Node__Group_3_1_1__0__Impl_in_rule__Node__Group_3_1_1__02054 = new BitSet(new long[]{0x0000000400380010L});
-    public static final BitSet FOLLOW_rule__Node__Group_3_1_1__1_in_rule__Node__Group_3_1_1__02057 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__Node__Group_3_1_1__0__Impl2085 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group_3_1_1__1__Impl_in_rule__Node__Group_3_1_1__12116 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__HiddenPhenomenaAssignment_3_1_1_1_in_rule__Node__Group_3_1_1__1__Impl2143 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group_3_2_1__0__Impl_in_rule__Node__Group_3_2_1__02177 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__Node__Group_3_2_1__1_in_rule__Node__Group_3_2_1__02180 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rule__Node__Group_3_2_1__0__Impl2208 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group_3_2_1__1__Impl_in_rule__Node__Group_3_2_1__12239 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Node__Group_3_2_1__2_in_rule__Node__Group_3_2_1__12242 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__Node__Group_3_2_1__1__Impl2270 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group_3_2_1__2__Impl_in_rule__Node__Group_3_2_1__22301 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__ProblemNodeRefAssignment_3_2_1_2_in_rule__Node__Group_3_2_1__2__Impl2328 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group_3_2_2__0__Impl_in_rule__Node__Group_3_2_2__02364 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_rule__Node__Group_3_2_2__1_in_rule__Node__Group_3_2_2__02367 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rule__Node__Group_3_2_2__0__Impl2395 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group_3_2_2__1__Impl_in_rule__Node__Group_3_2_2__12426 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Node__Group_3_2_2__2_in_rule__Node__Group_3_2_2__12429 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__Node__Group_3_2_2__1__Impl2457 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group_3_2_2__2__Impl_in_rule__Node__Group_3_2_2__22488 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__ProblemRefAssignment_3_2_2_2_in_rule__Node__Group_3_2_2__2__Impl2515 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group_3_2_3__0__Impl_in_rule__Node__Group_3_2_3__02551 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Node__Group_3_2_3__1_in_rule__Node__Group_3_2_3__02554 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rule__Node__Group_3_2_3__0__Impl2582 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group_3_2_3__1__Impl_in_rule__Node__Group_3_2_3__12613 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__HrefAssignment_3_2_3_1_in_rule__Node__Group_3_2_3__1__Impl2640 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Phenomenon__Group__0__Impl_in_rule__Phenomenon__Group__02674 = new BitSet(new long[]{0x0000000400000010L});
-    public static final BitSet FOLLOW_rule__Phenomenon__Group__1_in_rule__Phenomenon__Group__02677 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Phenomenon__TypeAssignment_0_in_rule__Phenomenon__Group__0__Impl2704 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Phenomenon__Group__1__Impl_in_rule__Phenomenon__Group__12735 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Phenomenon__Group__2_in_rule__Phenomenon__Group__12738 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Phenomenon__IsControlledAssignment_1_in_rule__Phenomenon__Group__1__Impl2765 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Phenomenon__Group__2__Impl_in_rule__Phenomenon__Group__22796 = new BitSet(new long[]{0x0000000008000022L});
-    public static final BitSet FOLLOW_rule__Phenomenon__Group__3_in_rule__Phenomenon__Group__22799 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Phenomenon__NameAssignment_2_in_rule__Phenomenon__Group__2__Impl2826 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Phenomenon__Group__3__Impl_in_rule__Phenomenon__Group__32856 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Phenomenon__Group_3__0_in_rule__Phenomenon__Group__3__Impl2883 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Phenomenon__Group_3__0__Impl_in_rule__Phenomenon__Group_3__02922 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Phenomenon__Group_3__1_in_rule__Phenomenon__Group_3__02925 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__Phenomenon__Group_3__0__Impl2954 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Phenomenon__Group_3__1__Impl_in_rule__Phenomenon__Group_3__12987 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Phenomenon__DescriptionAssignment_3_1_in_rule__Phenomenon__Group_3__1__Impl3014 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Link__Group__0__Impl_in_rule__Link__Group__03048 = new BitSet(new long[]{0x0000000001C00000L});
-    public static final BitSet FOLLOW_rule__Link__Group__1_in_rule__Link__Group__03051 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Link__FromAssignment_0_in_rule__Link__Group__0__Impl3078 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Link__Group__1__Impl_in_rule__Link__Group__13108 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Link__Group__2_in_rule__Link__Group__13111 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Link__TypeAssignment_1_in_rule__Link__Group__1__Impl3138 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Link__Group__2__Impl_in_rule__Link__Group__23168 = new BitSet(new long[]{0x0000000018000022L});
-    public static final BitSet FOLLOW_rule__Link__Group__3_in_rule__Link__Group__23171 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Link__ToAssignment_2_in_rule__Link__Group__2__Impl3198 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Link__Group__3__Impl_in_rule__Link__Group__33228 = new BitSet(new long[]{0x0000000008000022L});
-    public static final BitSet FOLLOW_rule__Link__Group__4_in_rule__Link__Group__33231 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Link__Group_3__0_in_rule__Link__Group__3__Impl3258 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Link__Group__4__Impl_in_rule__Link__Group__43289 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Link__Group_4__0_in_rule__Link__Group__4__Impl3316 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Link__Group_3__0__Impl_in_rule__Link__Group_3__03357 = new BitSet(new long[]{0x0000000400380010L});
-    public static final BitSet FOLLOW_rule__Link__Group_3__1_in_rule__Link__Group_3__03360 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__Link__Group_3__0__Impl3388 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Link__Group_3__1__Impl_in_rule__Link__Group_3__13419 = new BitSet(new long[]{0x0000000060000000L});
-    public static final BitSet FOLLOW_rule__Link__Group_3__2_in_rule__Link__Group_3__13422 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Link__PhenomenaAssignment_3_1_in_rule__Link__Group_3__1__Impl3449 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Link__Group_3__2__Impl_in_rule__Link__Group_3__23479 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_rule__Link__Group_3__3_in_rule__Link__Group_3__23482 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Link__Group_3_2__0_in_rule__Link__Group_3__2__Impl3509 = new BitSet(new long[]{0x0000000040000002L});
-    public static final BitSet FOLLOW_rule__Link__Group_3__3__Impl_in_rule__Link__Group_3__33540 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rule__Link__Group_3__3__Impl3568 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Link__Group_3_2__0__Impl_in_rule__Link__Group_3_2__03607 = new BitSet(new long[]{0x0000000400380010L});
-    public static final BitSet FOLLOW_rule__Link__Group_3_2__1_in_rule__Link__Group_3_2__03610 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__Link__Group_3_2__0__Impl3638 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Link__Group_3_2__1__Impl_in_rule__Link__Group_3_2__13669 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Link__PhenomenaAssignment_3_2_1_in_rule__Link__Group_3_2__1__Impl3696 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Link__Group_4__0__Impl_in_rule__Link__Group_4__03730 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Link__Group_4__1_in_rule__Link__Group_4__03733 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__Link__Group_4__0__Impl3762 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Link__Group_4__1__Impl_in_rule__Link__Group_4__13795 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Link__DescriptionAssignment_4_1_in_rule__Link__Group_4__1__Impl3822 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__ProblemDiagram__NameAssignment_23861 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__ProblemDiagram__HighlightAssignment_3_13896 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNode_in_rule__ProblemDiagram__NodesAssignment_4_03931 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLink_in_rule__ProblemDiagram__LinksAssignment_4_13962 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Node__NameAssignment_03993 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNodeType_in_rule__Node__TypeAssignment_14024 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Node__DescriptionAssignment_2_14055 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePhenomenon_in_rule__Node__HiddenPhenomenaAssignment_3_1_04086 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePhenomenon_in_rule__Node__HiddenPhenomenaAssignment_3_1_1_14117 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProblemDiagram_in_rule__Node__SubproblemAssignment_3_2_04148 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Node__ProblemNodeRefAssignment_3_2_1_24183 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Node__ProblemRefAssignment_3_2_2_24222 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Node__HrefAssignment_3_2_3_14257 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePhenomenonType_in_rule__Phenomenon__TypeAssignment_04288 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__Phenomenon__IsControlledAssignment_14324 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Phenomenon__NameAssignment_24363 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Phenomenon__DescriptionAssignment_3_14394 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Link__FromAssignment_04429 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLinkType_in_rule__Link__TypeAssignment_14464 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Link__ToAssignment_24499 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePhenomenon_in_rule__Link__PhenomenaAssignment_3_14534 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePhenomenon_in_rule__Link__PhenomenaAssignment_3_2_14565 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Link__DescriptionAssignment_4_14596 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ProblemDiagram__Group__3__Impl_in_rule__ProblemDiagram__Group__31056 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_rule__ProblemDiagram__Group__4_in_rule__ProblemDiagram__Group__31059 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ProblemDiagram__Group_3__0_in_rule__ProblemDiagram__Group__3__Impl1086 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ProblemDiagram__Group__4__Impl_in_rule__ProblemDiagram__Group__41117 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ProblemDiagram__Alternatives_4_in_rule__ProblemDiagram__Group__4__Impl1144 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_rule__ProblemDiagram__Group_3__0__Impl_in_rule__ProblemDiagram__Group_3__01185 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__ProblemDiagram__Group_3__1_in_rule__ProblemDiagram__Group_3__01188 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__ProblemDiagram__Group_3__0__Impl1216 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ProblemDiagram__Group_3__1__Impl_in_rule__ProblemDiagram__Group_3__11247 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ProblemDiagram__HighlightAssignment_3_1_in_rule__ProblemDiagram__Group_3__1__Impl1274 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group__0__Impl_in_rule__Node__Group__01308 = new BitSet(new long[]{0x000000001807F022L});
+    public static final BitSet FOLLOW_rule__Node__Group__1_in_rule__Node__Group__01311 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__NameAssignment_0_in_rule__Node__Group__0__Impl1338 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group__1__Impl_in_rule__Node__Group__11368 = new BitSet(new long[]{0x0000000018000022L});
+    public static final BitSet FOLLOW_rule__Node__Group__2_in_rule__Node__Group__11371 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__TypeAssignment_1_in_rule__Node__Group__1__Impl1398 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group__2__Impl_in_rule__Node__Group__21429 = new BitSet(new long[]{0x0000000010000002L});
+    public static final BitSet FOLLOW_rule__Node__Group__3_in_rule__Node__Group__21432 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group_2__0_in_rule__Node__Group__2__Impl1459 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group__3__Impl_in_rule__Node__Group__31490 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group_3__0_in_rule__Node__Group__3__Impl1517 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group_2__0__Impl_in_rule__Node__Group_2__01556 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Node__Group_2__1_in_rule__Node__Group_2__01559 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__Node__Group_2__0__Impl1588 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group_2__1__Impl_in_rule__Node__Group_2__11621 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__DescriptionAssignment_2_1_in_rule__Node__Group_2__1__Impl1648 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group_3__0__Impl_in_rule__Node__Group_3__01682 = new BitSet(new long[]{0x00000004A2380010L});
+    public static final BitSet FOLLOW_rule__Node__Group_3__1_in_rule__Node__Group_3__01685 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__Node__Group_3__0__Impl1713 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group_3__1__Impl_in_rule__Node__Group_3__11744 = new BitSet(new long[]{0x00000000A2000000L});
+    public static final BitSet FOLLOW_rule__Node__Group_3__2_in_rule__Node__Group_3__11747 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group_3_1__0_in_rule__Node__Group_3__1__Impl1774 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group_3__2__Impl_in_rule__Node__Group_3__21805 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_rule__Node__Group_3__3_in_rule__Node__Group_3__21808 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Alternatives_3_2_in_rule__Node__Group_3__2__Impl1835 = new BitSet(new long[]{0x0000000082000002L});
+    public static final BitSet FOLLOW_rule__Node__Group_3__3__Impl_in_rule__Node__Group_3__31866 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rule__Node__Group_3__3__Impl1894 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group_3_1__0__Impl_in_rule__Node__Group_3_1__01933 = new BitSet(new long[]{0x0000000040000002L});
+    public static final BitSet FOLLOW_rule__Node__Group_3_1__1_in_rule__Node__Group_3_1__01936 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__HiddenPhenomenaAssignment_3_1_0_in_rule__Node__Group_3_1__0__Impl1963 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group_3_1__1__Impl_in_rule__Node__Group_3_1__11993 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group_3_1_1__0_in_rule__Node__Group_3_1__1__Impl2020 = new BitSet(new long[]{0x0000000040000002L});
+    public static final BitSet FOLLOW_rule__Node__Group_3_1_1__0__Impl_in_rule__Node__Group_3_1_1__02055 = new BitSet(new long[]{0x0000000400380010L});
+    public static final BitSet FOLLOW_rule__Node__Group_3_1_1__1_in_rule__Node__Group_3_1_1__02058 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__Node__Group_3_1_1__0__Impl2086 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group_3_1_1__1__Impl_in_rule__Node__Group_3_1_1__12117 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__HiddenPhenomenaAssignment_3_1_1_1_in_rule__Node__Group_3_1_1__1__Impl2144 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group_3_2_1__0__Impl_in_rule__Node__Group_3_2_1__02178 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_rule__Node__Group_3_2_1__1_in_rule__Node__Group_3_2_1__02181 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__Node__Group_3_2_1__0__Impl2209 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group_3_2_1__1__Impl_in_rule__Node__Group_3_2_1__12240 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Node__Group_3_2_1__2_in_rule__Node__Group_3_2_1__12243 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Node__Group_3_2_1__1__Impl2271 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group_3_2_1__2__Impl_in_rule__Node__Group_3_2_1__22302 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__ProblemNodeRefAssignment_3_2_1_2_in_rule__Node__Group_3_2_1__2__Impl2329 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group_3_2_2__0__Impl_in_rule__Node__Group_3_2_2__02365 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_rule__Node__Group_3_2_2__1_in_rule__Node__Group_3_2_2__02368 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__Node__Group_3_2_2__0__Impl2396 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group_3_2_2__1__Impl_in_rule__Node__Group_3_2_2__12427 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Node__Group_3_2_2__2_in_rule__Node__Group_3_2_2__12430 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__Node__Group_3_2_2__1__Impl2458 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group_3_2_2__2__Impl_in_rule__Node__Group_3_2_2__22489 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__ProblemRefAssignment_3_2_2_2_in_rule__Node__Group_3_2_2__2__Impl2516 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group_3_2_3__0__Impl_in_rule__Node__Group_3_2_3__02552 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Node__Group_3_2_3__1_in_rule__Node__Group_3_2_3__02555 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__Node__Group_3_2_3__0__Impl2583 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group_3_2_3__1__Impl_in_rule__Node__Group_3_2_3__12614 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__HrefAssignment_3_2_3_1_in_rule__Node__Group_3_2_3__1__Impl2641 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Phenomenon__Group__0__Impl_in_rule__Phenomenon__Group__02675 = new BitSet(new long[]{0x0000000400000010L});
+    public static final BitSet FOLLOW_rule__Phenomenon__Group__1_in_rule__Phenomenon__Group__02678 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Phenomenon__TypeAssignment_0_in_rule__Phenomenon__Group__0__Impl2705 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Phenomenon__Group__1__Impl_in_rule__Phenomenon__Group__12736 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Phenomenon__Group__2_in_rule__Phenomenon__Group__12739 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Phenomenon__IsControlledAssignment_1_in_rule__Phenomenon__Group__1__Impl2766 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Phenomenon__Group__2__Impl_in_rule__Phenomenon__Group__22797 = new BitSet(new long[]{0x0000000008000022L});
+    public static final BitSet FOLLOW_rule__Phenomenon__Group__3_in_rule__Phenomenon__Group__22800 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Phenomenon__NameAssignment_2_in_rule__Phenomenon__Group__2__Impl2827 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Phenomenon__Group__3__Impl_in_rule__Phenomenon__Group__32857 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Phenomenon__Group_3__0_in_rule__Phenomenon__Group__3__Impl2884 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Phenomenon__Group_3__0__Impl_in_rule__Phenomenon__Group_3__02923 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Phenomenon__Group_3__1_in_rule__Phenomenon__Group_3__02926 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__Phenomenon__Group_3__0__Impl2955 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Phenomenon__Group_3__1__Impl_in_rule__Phenomenon__Group_3__12988 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Phenomenon__DescriptionAssignment_3_1_in_rule__Phenomenon__Group_3__1__Impl3015 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Link__Group__0__Impl_in_rule__Link__Group__03049 = new BitSet(new long[]{0x0000000001C00000L});
+    public static final BitSet FOLLOW_rule__Link__Group__1_in_rule__Link__Group__03052 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Link__FromAssignment_0_in_rule__Link__Group__0__Impl3079 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Link__Group__1__Impl_in_rule__Link__Group__13109 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Link__Group__2_in_rule__Link__Group__13112 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Link__TypeAssignment_1_in_rule__Link__Group__1__Impl3139 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Link__Group__2__Impl_in_rule__Link__Group__23169 = new BitSet(new long[]{0x0000000018000022L});
+    public static final BitSet FOLLOW_rule__Link__Group__3_in_rule__Link__Group__23172 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Link__ToAssignment_2_in_rule__Link__Group__2__Impl3199 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Link__Group__3__Impl_in_rule__Link__Group__33229 = new BitSet(new long[]{0x0000000008000022L});
+    public static final BitSet FOLLOW_rule__Link__Group__4_in_rule__Link__Group__33232 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Link__Group_3__0_in_rule__Link__Group__3__Impl3259 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Link__Group__4__Impl_in_rule__Link__Group__43290 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Link__Group_4__0_in_rule__Link__Group__4__Impl3317 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Link__Group_3__0__Impl_in_rule__Link__Group_3__03358 = new BitSet(new long[]{0x0000000400380010L});
+    public static final BitSet FOLLOW_rule__Link__Group_3__1_in_rule__Link__Group_3__03361 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__Link__Group_3__0__Impl3389 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Link__Group_3__1__Impl_in_rule__Link__Group_3__13420 = new BitSet(new long[]{0x0000000060000000L});
+    public static final BitSet FOLLOW_rule__Link__Group_3__2_in_rule__Link__Group_3__13423 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Link__PhenomenaAssignment_3_1_in_rule__Link__Group_3__1__Impl3450 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Link__Group_3__2__Impl_in_rule__Link__Group_3__23480 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_rule__Link__Group_3__3_in_rule__Link__Group_3__23483 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Link__Group_3_2__0_in_rule__Link__Group_3__2__Impl3510 = new BitSet(new long[]{0x0000000040000002L});
+    public static final BitSet FOLLOW_rule__Link__Group_3__3__Impl_in_rule__Link__Group_3__33541 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rule__Link__Group_3__3__Impl3569 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Link__Group_3_2__0__Impl_in_rule__Link__Group_3_2__03608 = new BitSet(new long[]{0x0000000400380010L});
+    public static final BitSet FOLLOW_rule__Link__Group_3_2__1_in_rule__Link__Group_3_2__03611 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__Link__Group_3_2__0__Impl3639 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Link__Group_3_2__1__Impl_in_rule__Link__Group_3_2__13670 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Link__PhenomenaAssignment_3_2_1_in_rule__Link__Group_3_2__1__Impl3697 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Link__Group_4__0__Impl_in_rule__Link__Group_4__03731 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Link__Group_4__1_in_rule__Link__Group_4__03734 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__Link__Group_4__0__Impl3763 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Link__Group_4__1__Impl_in_rule__Link__Group_4__13796 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Link__DescriptionAssignment_4_1_in_rule__Link__Group_4__1__Impl3823 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__ProblemDiagram__NameAssignment_23862 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__ProblemDiagram__HighlightAssignment_3_13897 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNode_in_rule__ProblemDiagram__NodesAssignment_4_03932 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLink_in_rule__ProblemDiagram__LinksAssignment_4_13963 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Node__NameAssignment_03994 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNodeType_in_rule__Node__TypeAssignment_14025 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Node__DescriptionAssignment_2_14056 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePhenomenon_in_rule__Node__HiddenPhenomenaAssignment_3_1_04087 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePhenomenon_in_rule__Node__HiddenPhenomenaAssignment_3_1_1_14118 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProblemDiagram_in_rule__Node__SubproblemAssignment_3_2_04149 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Node__ProblemNodeRefAssignment_3_2_1_24184 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Node__ProblemRefAssignment_3_2_2_24223 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Node__HrefAssignment_3_2_3_14258 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePhenomenonType_in_rule__Phenomenon__TypeAssignment_04289 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__Phenomenon__IsControlledAssignment_14325 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Phenomenon__NameAssignment_24364 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Phenomenon__DescriptionAssignment_3_14395 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Link__FromAssignment_04430 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLinkType_in_rule__Link__TypeAssignment_14465 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Link__ToAssignment_24500 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePhenomenon_in_rule__Link__PhenomenaAssignment_3_14535 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePhenomenon_in_rule__Link__PhenomenaAssignment_3_2_14566 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Link__DescriptionAssignment_4_14597 = new BitSet(new long[]{0x0000000000000002L});
 
 }

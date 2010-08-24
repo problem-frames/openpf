@@ -36,10 +36,10 @@ public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cLinksLinkParserRuleCall_4_1_0 = (RuleCall)cLinksAssignment_4_1.eContents().get(0);
 		
 		//ProblemDiagram:
-		//	{ProblemDiagram} "problem:" name=ID ("for" highlight=[Node])? (nodes+=Node | links+=Link)*;
+		//	{ProblemDiagram} "problem:" name=ID? ("for" highlight=[Node])? (nodes+=Node | links+=Link)*;
 		public ParserRule getRule() { return rule; }
 
-		//{ProblemDiagram} "problem:" name=ID ("for" highlight=[Node])? (nodes+=Node | links+=Link)*
+		//{ProblemDiagram} "problem:" name=ID? ("for" highlight=[Node])? (nodes+=Node | links+=Link)*
 		public Group getGroup() { return cGroup; }
 
 		//{ProblemDiagram}
@@ -48,7 +48,7 @@ public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 		//"problem:"
 		public Keyword getProblemKeyword_1() { return cProblemKeyword_1; }
 
-		//name=ID
+		//name=ID?
 		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
 
 		//ID
@@ -574,7 +574,7 @@ public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//ProblemDiagram:
-	//	{ProblemDiagram} "problem:" name=ID ("for" highlight=[Node])? (nodes+=Node | links+=Link)*;
+	//	{ProblemDiagram} "problem:" name=ID? ("for" highlight=[Node])? (nodes+=Node | links+=Link)*;
 	public ProblemDiagramElements getProblemDiagramAccess() {
 		return (pProblemDiagram != null) ? pProblemDiagram : (pProblemDiagram = new ProblemDiagramElements());
 	}

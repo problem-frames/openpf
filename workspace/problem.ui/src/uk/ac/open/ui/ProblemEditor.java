@@ -41,6 +41,11 @@ public class ProblemEditor extends UncalEditor {
 				Boolean.TRUE);
 		URI uri = URI.createURI(filename); // your input textual file
 		Resource xtextResource = resourceSet.getResource(uri, true);
+		try {
+			xtextResource.load(null);
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
 		String diagramFile = filename.substring(0, filename.lastIndexOf("."))
 				+ ".problem_diagram";
 		URI diagramURI = URI.createURI(diagramFile);

@@ -44,11 +44,11 @@ protected class ThisRootNode extends RootToken {
 /************ begin Rule ProblemDiagram ****************
  *
  * ProblemDiagram:
- * 	{ProblemDiagram} "problem:" name=ID ("for" highlight=[Node])? (nodes+=Node | links+=Link)*;
+ * 	{ProblemDiagram} "problem:" name=ID? ("for" highlight=[Node])? (nodes+=Node | links+=Link)*;
  *
  **/
 
-// {ProblemDiagram} "problem:" name=ID ("for" highlight=[Node])? (nodes+=Node | links+=Link)*
+// {ProblemDiagram} "problem:" name=ID? ("for" highlight=[Node])? (nodes+=Node | links+=Link)*
 protected class ProblemDiagram_Group extends GroupToken {
 	
 	public ProblemDiagram_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -66,6 +66,7 @@ protected class ProblemDiagram_Group extends GroupToken {
 			case 0: return new ProblemDiagram_Alternatives_4(lastRuleCallOrigin, this, 0, inst);
 			case 1: return new ProblemDiagram_Group_3(lastRuleCallOrigin, this, 1, inst);
 			case 2: return new ProblemDiagram_NameAssignment_2(lastRuleCallOrigin, this, 2, inst);
+			case 3: return new ProblemDiagram_ProblemKeyword_1(lastRuleCallOrigin, this, 3, inst);
 			default: return null;
 		}	
 	}
@@ -127,7 +128,7 @@ protected class ProblemDiagram_ProblemKeyword_1 extends KeywordToken  {
 
 }
 
-// name=ID
+// name=ID?
 protected class ProblemDiagram_NameAssignment_2 extends AssignmentToken  {
 	
 	public ProblemDiagram_NameAssignment_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -149,7 +150,7 @@ protected class ProblemDiagram_NameAssignment_2 extends AssignmentToken  {
 
     @Override	
 	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("name",true)) == null) return null;
+		if((value = eObjectConsumer.getConsumable("name",false)) == null) return null;
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("name");
 		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getProblemDiagramAccess().getNameIDTerminalRuleCall_2_0(), value, null)) {
 			type = AssignmentType.TERMINAL_RULE_CALL;
@@ -199,6 +200,7 @@ protected class ProblemDiagram_ForKeyword_3_0 extends KeywordToken  {
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
 			case 0: return new ProblemDiagram_NameAssignment_2(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new ProblemDiagram_ProblemKeyword_1(lastRuleCallOrigin, this, 1, inst);
 			default: return null;
 		}	
 	}
@@ -309,6 +311,7 @@ protected class ProblemDiagram_NodesAssignment_4_0 extends AssignmentToken  {
 			case 0: return new ProblemDiagram_Alternatives_4(lastRuleCallOrigin, next, actIndex, consumed);
 			case 1: return new ProblemDiagram_Group_3(lastRuleCallOrigin, next, actIndex, consumed);
 			case 2: return new ProblemDiagram_NameAssignment_2(lastRuleCallOrigin, next, actIndex, consumed);
+			case 3: return new ProblemDiagram_ProblemKeyword_1(lastRuleCallOrigin, next, actIndex, consumed);
 			default: return null;
 		}	
 	}	
@@ -357,6 +360,7 @@ protected class ProblemDiagram_LinksAssignment_4_1 extends AssignmentToken  {
 			case 0: return new ProblemDiagram_Alternatives_4(lastRuleCallOrigin, next, actIndex, consumed);
 			case 1: return new ProblemDiagram_Group_3(lastRuleCallOrigin, next, actIndex, consumed);
 			case 2: return new ProblemDiagram_NameAssignment_2(lastRuleCallOrigin, next, actIndex, consumed);
+			case 3: return new ProblemDiagram_ProblemKeyword_1(lastRuleCallOrigin, next, actIndex, consumed);
 			default: return null;
 		}	
 	}	

@@ -129,7 +129,7 @@ ruleProblemDiagram returns [EObject current=null]
 	    }
 
 )
-)(	'for' 
+)?(	'for' 
     {
         createLeafNode(grammarAccess.getProblemDiagramAccess().getForKeyword_3_0(), null); 
     }

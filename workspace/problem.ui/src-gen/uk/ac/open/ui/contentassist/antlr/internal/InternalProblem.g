@@ -487,7 +487,7 @@ rule__ProblemDiagram__Group__2__Impl
 :
 (
 { before(grammarAccess.getProblemDiagramAccess().getNameAssignment_2()); }
-(rule__ProblemDiagram__NameAssignment_2)
+(rule__ProblemDiagram__NameAssignment_2)?
 { after(grammarAccess.getProblemDiagramAccess().getNameAssignment_2()); }
 )
 
