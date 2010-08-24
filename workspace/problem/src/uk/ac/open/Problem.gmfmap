@@ -47,7 +47,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="Problem.gmftool#//@palette/@tools.0/@tools.5"/>
+          href="Problem.gmftool#//@palette/@tools.0/@tools.6"/>
       <diagramNode
           href="Problem.gmfgraph#Entity"/>
     </ownedChild>
@@ -329,7 +329,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="Problem.gmftool#//@palette/@tools.0/@tools.6"/>
+          href="Problem.gmftool#//@palette/@tools.0/@tools.5"/>
       <diagramNode
           href="Problem.gmfgraph#Entity"/>
     </ownedChild>

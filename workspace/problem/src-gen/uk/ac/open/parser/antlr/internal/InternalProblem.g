@@ -90,26 +90,15 @@ ruleProblemDiagram returns [EObject current=null]
     @after { resetLookahead(); 
     	lastConsumedNode = currentNode;
     }:
-((
-    { 
-        temp=factory.create(grammarAccess.getProblemDiagramAccess().getProblemDiagramAction_0().getType().getClassifier());
-        $current = temp; 
-        temp = null;
-        CompositeNode newNode = createCompositeNode(grammarAccess.getProblemDiagramAccess().getProblemDiagramAction_0(), currentNode.getParent());
-    newNode.getChildren().add(currentNode);
-    moveLookaheadInfo(currentNode, newNode);
-    currentNode = newNode; 
-        associateNodeWithAstElement(currentNode, $current); 
-    }
-)	'problem:' 
+(	'problem:' 
     {
-        createLeafNode(grammarAccess.getProblemDiagramAccess().getProblemKeyword_1(), null); 
+        createLeafNode(grammarAccess.getProblemDiagramAccess().getProblemKeyword_0(), null); 
     }
 (
 (
-		lv_name_2_0=RULE_ID
+		lv_name_1_0=RULE_ID
 		{
-			createLeafNode(grammarAccess.getProblemDiagramAccess().getNameIDTerminalRuleCall_2_0(), "name"); 
+			createLeafNode(grammarAccess.getProblemDiagramAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
 		}
 		{
 	        if ($current==null) {
@@ -120,7 +109,7 @@ ruleProblemDiagram returns [EObject current=null]
 	       		set(
 	       			$current, 
 	       			"name",
-	        		lv_name_2_0, 
+	        		lv_name_1_0, 
 	        		"ID", 
 	        		lastConsumedNode);
 	        } catch (ValueConverterException vce) {
@@ -129,9 +118,9 @@ ruleProblemDiagram returns [EObject current=null]
 	    }
 
 )
-)?(	'for' 
+)(	'for' 
     {
-        createLeafNode(grammarAccess.getProblemDiagramAccess().getForKeyword_3_0(), null); 
+        createLeafNode(grammarAccess.getProblemDiagramAccess().getForKeyword_2_0(), null); 
     }
 (
 (
@@ -143,16 +132,16 @@ ruleProblemDiagram returns [EObject current=null]
         }
 	RULE_ID
 	{
-		createLeafNode(grammarAccess.getProblemDiagramAccess().getHighlightNodeCrossReference_3_1_0(), "highlight"); 
+		createLeafNode(grammarAccess.getProblemDiagramAccess().getHighlightNodeCrossReference_2_1_0(), "highlight"); 
 	}
 
 )
 ))?((
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getProblemDiagramAccess().getNodesNodeParserRuleCall_4_0_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getProblemDiagramAccess().getNodesNodeParserRuleCall_3_0_0(), currentNode); 
 	    }
-		lv_nodes_5_0=ruleNode		{
+		lv_nodes_4_0=ruleNode		{
 	        if ($current==null) {
 	            $current = factory.create(grammarAccess.getProblemDiagramRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode.getParent(), $current);
@@ -161,7 +150,7 @@ ruleProblemDiagram returns [EObject current=null]
 	       		add(
 	       			$current, 
 	       			"nodes",
-	        		lv_nodes_5_0, 
+	        		lv_nodes_4_0, 
 	        		"Node", 
 	        		currentNode);
 	        } catch (ValueConverterException vce) {
@@ -175,9 +164,9 @@ ruleProblemDiagram returns [EObject current=null]
     |(
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getProblemDiagramAccess().getLinksLinkParserRuleCall_4_1_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getProblemDiagramAccess().getLinksLinkParserRuleCall_3_1_0(), currentNode); 
 	    }
-		lv_links_6_0=ruleLink		{
+		lv_links_5_0=ruleLink		{
 	        if ($current==null) {
 	            $current = factory.create(grammarAccess.getProblemDiagramRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode.getParent(), $current);
@@ -186,7 +175,7 @@ ruleProblemDiagram returns [EObject current=null]
 	       		add(
 	       			$current, 
 	       			"links",
-	        		lv_links_6_0, 
+	        		lv_links_5_0, 
 	        		"Link", 
 	        		currentNode);
 	        } catch (ValueConverterException vce) {

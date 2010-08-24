@@ -502,6 +502,7 @@ public class Node7EditPart extends ShapeNodeEditPart {
 	static final Font FFIGUREENTITYDESCRIPTION_FONT = new Font(
 			Display.getCurrent(), Display.getDefault().getSystemFont()
 					.getFontData()[0].getName(), 6, SWT.ITALIC);
+
 	/**
 	 * @generated NOT
 	 */
@@ -573,7 +574,7 @@ public class Node7EditPart extends ShapeNodeEditPart {
 			ConnectionEditPart connEditPart) {
 		return getConnectionAnchor();
 	}
-	
+
 	/**
 	 * @generated NOT
 	 */
@@ -587,7 +588,7 @@ public class Node7EditPart extends ShapeNodeEditPart {
 		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
 	}
-	
+
 	/**
 	 * @generated NOT
 	 */

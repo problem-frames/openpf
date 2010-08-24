@@ -20,69 +20,65 @@ public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 	public class ProblemDiagramElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ProblemDiagram");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cProblemDiagramAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cProblemKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cForKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cHighlightAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final CrossReference cHighlightNodeCrossReference_3_1_0 = (CrossReference)cHighlightAssignment_3_1.eContents().get(0);
-		private final RuleCall cHighlightNodeIDTerminalRuleCall_3_1_0_1 = (RuleCall)cHighlightNodeCrossReference_3_1_0.eContents().get(1);
-		private final Alternatives cAlternatives_4 = (Alternatives)cGroup.eContents().get(4);
-		private final Assignment cNodesAssignment_4_0 = (Assignment)cAlternatives_4.eContents().get(0);
-		private final RuleCall cNodesNodeParserRuleCall_4_0_0 = (RuleCall)cNodesAssignment_4_0.eContents().get(0);
-		private final Assignment cLinksAssignment_4_1 = (Assignment)cAlternatives_4.eContents().get(1);
-		private final RuleCall cLinksLinkParserRuleCall_4_1_0 = (RuleCall)cLinksAssignment_4_1.eContents().get(0);
+		private final Keyword cProblemKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cForKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cHighlightAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final CrossReference cHighlightNodeCrossReference_2_1_0 = (CrossReference)cHighlightAssignment_2_1.eContents().get(0);
+		private final RuleCall cHighlightNodeIDTerminalRuleCall_2_1_0_1 = (RuleCall)cHighlightNodeCrossReference_2_1_0.eContents().get(1);
+		private final Alternatives cAlternatives_3 = (Alternatives)cGroup.eContents().get(3);
+		private final Assignment cNodesAssignment_3_0 = (Assignment)cAlternatives_3.eContents().get(0);
+		private final RuleCall cNodesNodeParserRuleCall_3_0_0 = (RuleCall)cNodesAssignment_3_0.eContents().get(0);
+		private final Assignment cLinksAssignment_3_1 = (Assignment)cAlternatives_3.eContents().get(1);
+		private final RuleCall cLinksLinkParserRuleCall_3_1_0 = (RuleCall)cLinksAssignment_3_1.eContents().get(0);
 		
 		//ProblemDiagram:
-		//	{ProblemDiagram} "problem:" name=ID? ("for" highlight=[Node])? (nodes+=Node | links+=Link)*;
+		//	"problem:" name=ID ("for" highlight=[Node])? (nodes+=Node | links+=Link)*;
 		public ParserRule getRule() { return rule; }
 
-		//{ProblemDiagram} "problem:" name=ID? ("for" highlight=[Node])? (nodes+=Node | links+=Link)*
+		//"problem:" name=ID ("for" highlight=[Node])? (nodes+=Node | links+=Link)*
 		public Group getGroup() { return cGroup; }
 
-		//{ProblemDiagram}
-		public Action getProblemDiagramAction_0() { return cProblemDiagramAction_0; }
-
 		//"problem:"
-		public Keyword getProblemKeyword_1() { return cProblemKeyword_1; }
+		public Keyword getProblemKeyword_0() { return cProblemKeyword_0; }
 
-		//name=ID?
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
 		//("for" highlight=[Node])?
-		public Group getGroup_3() { return cGroup_3; }
+		public Group getGroup_2() { return cGroup_2; }
 
 		//"for"
-		public Keyword getForKeyword_3_0() { return cForKeyword_3_0; }
+		public Keyword getForKeyword_2_0() { return cForKeyword_2_0; }
 
 		//highlight=[Node]
-		public Assignment getHighlightAssignment_3_1() { return cHighlightAssignment_3_1; }
+		public Assignment getHighlightAssignment_2_1() { return cHighlightAssignment_2_1; }
 
 		//[Node]
-		public CrossReference getHighlightNodeCrossReference_3_1_0() { return cHighlightNodeCrossReference_3_1_0; }
+		public CrossReference getHighlightNodeCrossReference_2_1_0() { return cHighlightNodeCrossReference_2_1_0; }
 
 		//ID
-		public RuleCall getHighlightNodeIDTerminalRuleCall_3_1_0_1() { return cHighlightNodeIDTerminalRuleCall_3_1_0_1; }
+		public RuleCall getHighlightNodeIDTerminalRuleCall_2_1_0_1() { return cHighlightNodeIDTerminalRuleCall_2_1_0_1; }
 
 		//(nodes+=Node | links+=Link)*
-		public Alternatives getAlternatives_4() { return cAlternatives_4; }
+		public Alternatives getAlternatives_3() { return cAlternatives_3; }
 
 		//nodes+=Node
-		public Assignment getNodesAssignment_4_0() { return cNodesAssignment_4_0; }
+		public Assignment getNodesAssignment_3_0() { return cNodesAssignment_3_0; }
 
 		//Node
-		public RuleCall getNodesNodeParserRuleCall_4_0_0() { return cNodesNodeParserRuleCall_4_0_0; }
+		public RuleCall getNodesNodeParserRuleCall_3_0_0() { return cNodesNodeParserRuleCall_3_0_0; }
 
 		//links+=Link
-		public Assignment getLinksAssignment_4_1() { return cLinksAssignment_4_1; }
+		public Assignment getLinksAssignment_3_1() { return cLinksAssignment_3_1; }
 
 		//Link
-		public RuleCall getLinksLinkParserRuleCall_4_1_0() { return cLinksLinkParserRuleCall_4_1_0; }
+		public RuleCall getLinksLinkParserRuleCall_3_1_0() { return cLinksLinkParserRuleCall_3_1_0; }
 	}
 
 	public class NodeElements extends AbstractParserRuleElementFinder {
@@ -574,7 +570,7 @@ public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//ProblemDiagram:
-	//	{ProblemDiagram} "problem:" name=ID? ("for" highlight=[Node])? (nodes+=Node | links+=Link)*;
+	//	"problem:" name=ID ("for" highlight=[Node])? (nodes+=Node | links+=Link)*;
 	public ProblemDiagramElements getProblemDiagramAccess() {
 		return (pProblemDiagram != null) ? pProblemDiagram : (pProblemDiagram = new ProblemDiagramElements());
 	}

@@ -149,7 +149,7 @@ public class ProblemPaletteFactory {
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.PhysicalDomain6CreationTool_title,
 				Messages.PhysicalDomain6CreationTool_desc,
-				Collections.singletonList(ProblemElementTypes.Node_2001));
+				Collections.singletonList(ProblemElementTypes.Node_2007));
 		entry.setId("createPhysicalDomain6CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ProblemDiagramEditorPlugin
 				.findImageDescriptor("/problem/icons/obj16/pdm_obj.gif")); //$NON-NLS-1$
@@ -165,7 +165,7 @@ public class ProblemPaletteFactory {
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Requirement7CreationTool_title,
 				Messages.Requirement7CreationTool_desc,
-				Collections.singletonList(ProblemElementTypes.Node_2007));
+				Collections.singletonList(ProblemElementTypes.Node_2001));
 		entry.setId("createRequirement7CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ProblemDiagramEditorPlugin
 				.findImageDescriptor("/problem/icons/obj16/rq_obj.gif")); //$NON-NLS-1$

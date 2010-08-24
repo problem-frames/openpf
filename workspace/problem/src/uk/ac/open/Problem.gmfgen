@@ -896,14 +896,14 @@
             description="Create new Physical Domain"
             largeIconPath="/problem/icons/obj16/pdm_obj.gif"
             smallIconPath="/problem/icons/obj16/pdm_obj.gif"
-            genNodes="//@diagram/@topLevelNodes.0"/>
+            genNodes="//@diagram/@topLevelNodes.6"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Requirement"
             description="Create new Requirement"
             largeIconPath="/problem/icons/obj16/rq_obj.gif"
             smallIconPath="/problem/icons/obj16/rq_obj.gif"
-            genNodes="//@diagram/@topLevelNodes.6"/>
+            genNodes="//@diagram/@topLevelNodes.0"/>
       </groups>
       <groups
           title="link"

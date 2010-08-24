@@ -125,8 +125,9 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	protected IFigure createNodeShape() {
 		uk.ac.open.problem.figures.EntityFigure figure = new uk.ac.open.problem.figures.EntityFigure(
 				node);
-		figure.setHighlight(node.getName().equals(
-				ProblemDiagramEditor.idToHighlight));
+		if (node.getName() != null)
+			figure.setHighlight(node.getName().equals(
+					ProblemDiagramEditor.idToHighlight));
 		// EntityFigure figure = new EntityFigure();
 		return primaryShape = figure;
 	}
