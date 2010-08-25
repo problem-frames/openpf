@@ -31,6 +31,7 @@
         visualID="3001"
         editPartClassName="Entity2EditPart"
         itemSemanticEditPolicyClassName="Entity2ItemSemanticEditPolicy"
+        notationViewFactoryClassName="EntityViewFactory"
         canonicalEditPolicyClassName="Entity2CanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="Entity2GraphicalNodeEditPolicy"
         createCommandClassName="Entity2CreateCommand"
@@ -56,6 +57,7 @@
           visualID="5003"
           editPartClassName="EntityName2EditPart"
           itemSemanticEditPolicyClassName="EntityName2ItemSemanticEditPolicy"
+          notationViewFactoryClassName="EntityNameViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
             href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -219,6 +221,7 @@
         visualID="7001"
         editPartClassName="DomainDomainPropertiesCompartmentEditPart"
         itemSemanticEditPolicyClassName="DomainDomainPropertiesCompartmentItemSemanticEditPolicy"
+        notationViewFactoryClassName="DomainDomainPropertiesCompartmentViewFactory"
         canonicalEditPolicyClassName="DomainDomainPropertiesCompartmentCanonicalEditPolicy"
         childNodes="//@diagram/@childNodes.0"
         title="DomainPropertiesCompartment"

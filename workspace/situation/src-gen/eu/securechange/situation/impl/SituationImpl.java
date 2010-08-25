@@ -42,196 +42,202 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class SituationImpl extends MinimalEObjectImpl.Container implements Situation
 {
   /**
-	 * The default value of the '{@link #getTime() <em>Time</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The default value of the '{@link #getTime() <em>Time</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getTime()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getTime()
+   * @generated
+   * @ordered
+   */
   protected static final String TIME_EDEFAULT = null;
 
   /**
-	 * The cached value of the '{@link #getTime() <em>Time</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getTime() <em>Time</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getTime()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getTime()
+   * @generated
+   * @ordered
+   */
   protected String time = TIME_EDEFAULT;
 
   /**
-	 * The cached value of the '{@link #getThings() <em>Things</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getThings() <em>Things</em>}' containment reference list.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getThings()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getThings()
+   * @generated
+   * @ordered
+   */
   protected EList<Thing> things;
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected SituationImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   protected EClass eStaticClass()
   {
-		return SituationPackage.Literals.SITUATION;
-	}
+    return SituationPackage.Literals.SITUATION;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public String getTime()
   {
-		return time;
-	}
+    return time;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public void setTime(String newTime)
   {
-		String oldTime = time;
-		time = newTime;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SituationPackage.SITUATION__TIME, oldTime, time));
-	}
+    String oldTime = time;
+    time = newTime;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SituationPackage.SITUATION__TIME, oldTime, time));
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EList<Thing> getThings()
   {
-		if (things == null) {
-			things = new EObjectContainmentEList<Thing>(Thing.class, this, SituationPackage.SITUATION__THINGS);
-		}
-		return things;
-	}
+    if (things == null)
+    {
+      things = new EObjectContainmentEList<Thing>(Thing.class, this, SituationPackage.SITUATION__THINGS);
+    }
+    return things;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-		switch (featureID) {
-			case SituationPackage.SITUATION__THINGS:
-				return ((InternalEList<?>)getThings()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    switch (featureID)
+    {
+      case SituationPackage.SITUATION__THINGS:
+        return ((InternalEList<?>)getThings()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-		switch (featureID) {
-			case SituationPackage.SITUATION__TIME:
-				return getTime();
-			case SituationPackage.SITUATION__THINGS:
-				return getThings();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    switch (featureID)
+    {
+      case SituationPackage.SITUATION__TIME:
+        return getTime();
+      case SituationPackage.SITUATION__THINGS:
+        return getThings();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
-		switch (featureID) {
-			case SituationPackage.SITUATION__TIME:
-				setTime((String)newValue);
-				return;
-			case SituationPackage.SITUATION__THINGS:
-				getThings().clear();
-				getThings().addAll((Collection<? extends Thing>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    switch (featureID)
+    {
+      case SituationPackage.SITUATION__TIME:
+        setTime((String)newValue);
+        return;
+      case SituationPackage.SITUATION__THINGS:
+        getThings().clear();
+        getThings().addAll((Collection<? extends Thing>)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public void eUnset(int featureID)
   {
-		switch (featureID) {
-			case SituationPackage.SITUATION__TIME:
-				setTime(TIME_EDEFAULT);
-				return;
-			case SituationPackage.SITUATION__THINGS:
-				getThings().clear();
-				return;
-		}
-		super.eUnset(featureID);
-	}
+    switch (featureID)
+    {
+      case SituationPackage.SITUATION__TIME:
+        setTime(TIME_EDEFAULT);
+        return;
+      case SituationPackage.SITUATION__THINGS:
+        getThings().clear();
+        return;
+    }
+    super.eUnset(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public boolean eIsSet(int featureID)
   {
-		switch (featureID) {
-			case SituationPackage.SITUATION__TIME:
-				return TIME_EDEFAULT == null ? time != null : !TIME_EDEFAULT.equals(time);
-			case SituationPackage.SITUATION__THINGS:
-				return things != null && !things.isEmpty();
-		}
-		return super.eIsSet(featureID);
-	}
+    switch (featureID)
+    {
+      case SituationPackage.SITUATION__TIME:
+        return TIME_EDEFAULT == null ? time != null : !TIME_EDEFAULT.equals(time);
+      case SituationPackage.SITUATION__THINGS:
+        return things != null && !things.isEmpty();
+    }
+    return super.eIsSet(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public String toString()
   {
-		if (eIsProxy()) return super.toString();
+    if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (time: ");
-		result.append(time);
-		result.append(')');
-		return result.toString();
-	}
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (time: ");
+    result.append(time);
+    result.append(')');
+    return result.toString();
+  }
 
 } //SituationImpl

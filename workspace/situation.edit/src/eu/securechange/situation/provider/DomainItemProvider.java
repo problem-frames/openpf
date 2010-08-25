@@ -65,9 +65,32 @@ public class DomainItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addNamePropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Domain_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Domain_name_feature", "_UI_Domain_type"),
+				 SituationPackage.Literals.DOMAIN__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -141,8 +164,7 @@ public class DomainItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		DomainType labelValue = ((Domain)object).getType();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((Domain)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Domain_type") :
 			getString("_UI_Domain_type") + " " + label;
@@ -160,6 +182,7 @@ public class DomainItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Domain.class)) {
+			case SituationPackage.DOMAIN__NAME:
 			case SituationPackage.DOMAIN__TYPE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

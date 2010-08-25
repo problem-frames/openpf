@@ -26,9 +26,9 @@ T26 : 'activity' ;
 T27 : 'resource' ;
 T28 : 'asset' ;
 T29 : 'event' ;
-T30 : 'M' ;
+T30 : 'S' ;
 T31 : 'R' ;
-T32 : 'S' ;
+T32 : 'W' ;
 T33 : 'wants' ;
 T34 : 'does' ;
 T35 : 'and' ;
@@ -47,25 +47,25 @@ T47 : 'damages' ;
 T48 : 'attacks' ;
 T49 : 'argues' ;
 
-// $ANTLR src "../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g" 696
-RULE_ID : ('#' ~('#')+ '#'|'^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*);
+// $ANTLR src "../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g" 720
+RULE_ID : ('#' ~('#')+ '#'|'^'? ('a'..'z'|'A'..'Z'|'_'|'.') ('a'..'z'|'A'..'Z'|'_'|'0'..'9'|'.')*);
 
-// $ANTLR src "../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g" 698
+// $ANTLR src "../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g" 722
 RULE_INT : ('0'..'9')+;
 
-// $ANTLR src "../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g" 700
+// $ANTLR src "../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g" 724
 RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\'');
 
-// $ANTLR src "../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g" 702
+// $ANTLR src "../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g" 726
 RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 
-// $ANTLR src "../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g" 704
+// $ANTLR src "../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g" 728
 RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
-// $ANTLR src "../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g" 706
+// $ANTLR src "../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g" 730
 RULE_WS : (' '|'\t'|'\r'|'\n')+;
 
-// $ANTLR src "../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g" 708
+// $ANTLR src "../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g" 732
 RULE_ANY_OTHER : .;
 
 

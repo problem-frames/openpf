@@ -25,6 +25,7 @@ class Relationship extends Thing {
 
 @gmf.node(label="type")
 class Domain extends Thing {
+  attr String name;
   attr DomainType type;
   @gmf.compartment(foo="bar")
   val Entity[*] properties;
@@ -48,9 +49,9 @@ enum EntityType {
 }
 
 enum DomainType {
-  Machine = 0;
+  Specification = 0;
   Requirement = 1;
-  Specification = 2;
+  World = 2;
 }
 
 enum RelationshipType {

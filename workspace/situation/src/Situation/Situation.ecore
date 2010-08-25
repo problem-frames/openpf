@@ -36,6 +36,7 @@
     <eAnnotations source="gmf.node">
       <details key="label" value="type"/>
     </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//DomainType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
         eType="#//Entity" containment="true">
@@ -61,9 +62,9 @@
     <eLiterals name="Event" value="13"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="DomainType">
-    <eLiterals name="Machine"/>
+    <eLiterals name="Specification"/>
     <eLiterals name="Requirement" value="1"/>
-    <eLiterals name="Specification" value="2"/>
+    <eLiterals name="World" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="RelationshipType">
     <eLiterals name="Wants"/>

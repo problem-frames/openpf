@@ -250,7 +250,7 @@
       <viewProvider class="eu.securechange.situation.diagram.providers.SituationViewProvider">
          <Priority name="Lowest"/>
          <object id="referencing-diagrams" class="org.eclipse.gmf.runtime.notation.Diagram">
-            <method name="getType()" value="sit"/>
+            <method name="getType()" value="situation"/>
          </object>
          <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Situation"/>
@@ -483,7 +483,7 @@
             <or>
 	           <and>
     	          <instanceof value="org.eclipse.core.resources.IFile"/>
-        	      <test property="org.eclipse.core.resources.extension" value="sit"/>
+        	      <test property="org.eclipse.core.resources.extension" value="situation"/>
                </and>
                <instanceof value="eu.securechange.situation.diagram.navigator.SituationDomainNavigatorItem"/>
             </or>

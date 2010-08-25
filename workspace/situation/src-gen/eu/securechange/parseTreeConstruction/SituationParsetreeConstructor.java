@@ -44,17 +44,7 @@ protected class ThisRootNode extends RootToken {
 
 /************ begin Rule Situation ****************
  *
- * / *
- * Situation: ("model" time=ID ":")? world=World;
- * 
- * World: {World} (entities+=Entity | domains+=Domain | relationships+=Relationship)*;
- * 
- * Thing:  Object | Event;
- * Event: "event" name=ID;
- * Object: Proposition | Entity | Relationship;
- * PhysicalWorld: {PhysicalWorld} (entities+=Entity)*;
- * BeliefWorld: {BeliefWorld} ( domains+=Domain | relationships+=Relationship )*;
- * * /Situation:
+ * Situation:
  * 	("model" time=ID ":")? things+=Thing*;
  *
  **/
@@ -715,11 +705,11 @@ protected class Relationship_RightParenthesisKeyword_5 extends KeywordToken  {
 /************ begin Rule Domain ****************
  *
  * Domain:
- * 	type=DomainType properties+=Entity ("," properties+=Entity)*;
+ * 	name=ID type=DomainType properties+=Entity ("," properties+=Entity)*;
  *
  **/
 
-// type=DomainType properties+=Entity ("," properties+=Entity)*
+// name=ID type=DomainType properties+=Entity ("," properties+=Entity)*
 protected class Domain_Group extends GroupToken {
 	
 	public Domain_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -734,8 +724,8 @@ protected class Domain_Group extends GroupToken {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Domain_Group_2(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new Domain_PropertiesAssignment_1(lastRuleCallOrigin, this, 1, inst);
+			case 0: return new Domain_Group_3(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new Domain_PropertiesAssignment_2(lastRuleCallOrigin, this, 1, inst);
 			default: return null;
 		}	
 	}
@@ -749,16 +739,16 @@ protected class Domain_Group extends GroupToken {
 
 }
 
-// type=DomainType
-protected class Domain_TypeAssignment_0 extends AssignmentToken  {
+// name=ID
+protected class Domain_NameAssignment_0 extends AssignmentToken  {
 	
-	public Domain_TypeAssignment_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public Domain_NameAssignment_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getDomainAccess().getTypeAssignment_0();
+		return grammarAccess.getDomainAccess().getNameAssignment_0();
 	}
 
     @Override
@@ -770,11 +760,45 @@ protected class Domain_TypeAssignment_0 extends AssignmentToken  {
 
     @Override	
 	public IEObjectConsumer tryConsume() {
+		if((value = eObjectConsumer.getConsumable("name",true)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("name");
+		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getDomainAccess().getNameIDTerminalRuleCall_0_0(), value, null)) {
+			type = AssignmentType.TERMINAL_RULE_CALL;
+			element = grammarAccess.getDomainAccess().getNameIDTerminalRuleCall_0_0();
+			return obj;
+		}
+		return null;
+	}
+
+}
+
+// type=DomainType
+protected class Domain_TypeAssignment_1 extends AssignmentToken  {
+	
+	public Domain_TypeAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Assignment getGrammarElement() {
+		return grammarAccess.getDomainAccess().getTypeAssignment_1();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new Domain_NameAssignment_0(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+    @Override	
+	public IEObjectConsumer tryConsume() {
 		if((value = eObjectConsumer.getConsumable("type",true)) == null) return null;
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("type");
-		if(enumLitSerializer.isValid(obj.getEObject(), grammarAccess.getDomainAccess().getTypeDomainTypeEnumRuleCall_0_0(), value, null)) { 
+		if(enumLitSerializer.isValid(obj.getEObject(), grammarAccess.getDomainAccess().getTypeDomainTypeEnumRuleCall_1_0(), value, null)) { 
 			type = AssignmentType.ENUM_RULE_CALL;
-			element = grammarAccess.getDomainAccess().getTypeDomainTypeEnumRuleCall_0_0();
+			element = grammarAccess.getDomainAccess().getTypeDomainTypeEnumRuleCall_1_0();
 			return obj;
 		}
 		return null;
@@ -783,15 +807,15 @@ protected class Domain_TypeAssignment_0 extends AssignmentToken  {
 }
 
 // properties+=Entity
-protected class Domain_PropertiesAssignment_1 extends AssignmentToken  {
+protected class Domain_PropertiesAssignment_2 extends AssignmentToken  {
 	
-	public Domain_PropertiesAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public Domain_PropertiesAssignment_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getDomainAccess().getPropertiesAssignment_1();
+		return grammarAccess.getDomainAccess().getPropertiesAssignment_2();
 	}
 
     @Override
@@ -810,7 +834,7 @@ protected class Domain_PropertiesAssignment_1 extends AssignmentToken  {
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
 			if(param.isInstanceOf(grammarAccess.getEntityRule().getType().getClassifier())) {
 				type = AssignmentType.PARSER_RULE_CALL;
-				element = grammarAccess.getDomainAccess().getPropertiesEntityParserRuleCall_1_0(); 
+				element = grammarAccess.getDomainAccess().getPropertiesEntityParserRuleCall_2_0(); 
 				consumed = obj;
 				return param;
 			}
@@ -822,28 +846,28 @@ protected class Domain_PropertiesAssignment_1 extends AssignmentToken  {
 	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
 		if(value == inst.getEObject() && !inst.isConsumed()) return null;
 		switch(index) {
-			case 0: return new Domain_TypeAssignment_0(lastRuleCallOrigin, next, actIndex, consumed);
+			case 0: return new Domain_TypeAssignment_1(lastRuleCallOrigin, next, actIndex, consumed);
 			default: return null;
 		}	
 	}	
 }
 
 // ("," properties+=Entity)*
-protected class Domain_Group_2 extends GroupToken {
+protected class Domain_Group_3 extends GroupToken {
 	
-	public Domain_Group_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public Domain_Group_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Group getGrammarElement() {
-		return grammarAccess.getDomainAccess().getGroup_2();
+		return grammarAccess.getDomainAccess().getGroup_3();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Domain_PropertiesAssignment_2_1(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new Domain_PropertiesAssignment_3_1(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -851,22 +875,22 @@ protected class Domain_Group_2 extends GroupToken {
 }
 
 // ","
-protected class Domain_CommaKeyword_2_0 extends KeywordToken  {
+protected class Domain_CommaKeyword_3_0 extends KeywordToken  {
 	
-	public Domain_CommaKeyword_2_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public Domain_CommaKeyword_3_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Keyword getGrammarElement() {
-		return grammarAccess.getDomainAccess().getCommaKeyword_2_0();
+		return grammarAccess.getDomainAccess().getCommaKeyword_3_0();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Domain_Group_2(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new Domain_PropertiesAssignment_1(lastRuleCallOrigin, this, 1, inst);
+			case 0: return new Domain_Group_3(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new Domain_PropertiesAssignment_2(lastRuleCallOrigin, this, 1, inst);
 			default: return null;
 		}	
 	}
@@ -874,15 +898,15 @@ protected class Domain_CommaKeyword_2_0 extends KeywordToken  {
 }
 
 // properties+=Entity
-protected class Domain_PropertiesAssignment_2_1 extends AssignmentToken  {
+protected class Domain_PropertiesAssignment_3_1 extends AssignmentToken  {
 	
-	public Domain_PropertiesAssignment_2_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public Domain_PropertiesAssignment_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getDomainAccess().getPropertiesAssignment_2_1();
+		return grammarAccess.getDomainAccess().getPropertiesAssignment_3_1();
 	}
 
     @Override
@@ -901,7 +925,7 @@ protected class Domain_PropertiesAssignment_2_1 extends AssignmentToken  {
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
 			if(param.isInstanceOf(grammarAccess.getEntityRule().getType().getClassifier())) {
 				type = AssignmentType.PARSER_RULE_CALL;
-				element = grammarAccess.getDomainAccess().getPropertiesEntityParserRuleCall_2_1_0(); 
+				element = grammarAccess.getDomainAccess().getPropertiesEntityParserRuleCall_3_1_0(); 
 				consumed = obj;
 				return param;
 			}
@@ -913,7 +937,7 @@ protected class Domain_PropertiesAssignment_2_1 extends AssignmentToken  {
 	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
 		if(value == inst.getEObject() && !inst.isConsumed()) return null;
 		switch(index) {
-			case 0: return new Domain_CommaKeyword_2_0(lastRuleCallOrigin, next, actIndex, consumed);
+			case 0: return new Domain_CommaKeyword_3_0(lastRuleCallOrigin, next, actIndex, consumed);
 			default: return null;
 		}	
 	}	

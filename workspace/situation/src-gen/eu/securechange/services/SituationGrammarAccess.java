@@ -28,17 +28,7 @@ public class SituationGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cThingsAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cThingsThingParserRuleCall_1_0 = (RuleCall)cThingsAssignment_1.eContents().get(0);
 		
-		/// *
-		//Situation: ("model" time=ID ":")? world=World;
-		//
-		//World: {World} (entities+=Entity | domains+=Domain | relationships+=Relationship)*;
-		//
-		//Thing:  Object | Event;
-		//Event: "event" name=ID;
-		//Object: Proposition | Entity | Relationship;
-		//PhysicalWorld: {PhysicalWorld} (entities+=Entity)*;
-		//BeliefWorld: {BeliefWorld} ( domains+=Domain | relationships+=Relationship )*;
-		// * /Situation:
+		//Situation:
 		//	("model" time=ID ":")? things+=Thing*;
 		public ParserRule getRule() { return rule; }
 
@@ -178,45 +168,53 @@ public class SituationGrammarAccess extends AbstractGrammarElementFinder {
 	public class DomainElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Domain");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cTypeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cTypeDomainTypeEnumRuleCall_0_0 = (RuleCall)cTypeAssignment_0.eContents().get(0);
-		private final Assignment cPropertiesAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cPropertiesEntityParserRuleCall_1_0 = (RuleCall)cPropertiesAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cPropertiesAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cPropertiesEntityParserRuleCall_2_1_0 = (RuleCall)cPropertiesAssignment_2_1.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cTypeDomainTypeEnumRuleCall_1_0 = (RuleCall)cTypeAssignment_1.eContents().get(0);
+		private final Assignment cPropertiesAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cPropertiesEntityParserRuleCall_2_0 = (RuleCall)cPropertiesAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cCommaKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cPropertiesAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cPropertiesEntityParserRuleCall_3_1_0 = (RuleCall)cPropertiesAssignment_3_1.eContents().get(0);
 		
 		//Domain:
-		//	type=DomainType properties+=Entity ("," properties+=Entity)*;
+		//	name=ID type=DomainType properties+=Entity ("," properties+=Entity)*;
 		public ParserRule getRule() { return rule; }
 
-		//type=DomainType properties+=Entity ("," properties+=Entity)*
+		//name=ID type=DomainType properties+=Entity ("," properties+=Entity)*
 		public Group getGroup() { return cGroup; }
 
+		//name=ID
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
+
 		//type=DomainType
-		public Assignment getTypeAssignment_0() { return cTypeAssignment_0; }
+		public Assignment getTypeAssignment_1() { return cTypeAssignment_1; }
 
 		//DomainType
-		public RuleCall getTypeDomainTypeEnumRuleCall_0_0() { return cTypeDomainTypeEnumRuleCall_0_0; }
+		public RuleCall getTypeDomainTypeEnumRuleCall_1_0() { return cTypeDomainTypeEnumRuleCall_1_0; }
 
 		//properties+=Entity
-		public Assignment getPropertiesAssignment_1() { return cPropertiesAssignment_1; }
+		public Assignment getPropertiesAssignment_2() { return cPropertiesAssignment_2; }
 
 		//Entity
-		public RuleCall getPropertiesEntityParserRuleCall_1_0() { return cPropertiesEntityParserRuleCall_1_0; }
+		public RuleCall getPropertiesEntityParserRuleCall_2_0() { return cPropertiesEntityParserRuleCall_2_0; }
 
 		//("," properties+=Entity)*
-		public Group getGroup_2() { return cGroup_2; }
+		public Group getGroup_3() { return cGroup_3; }
 
 		//","
-		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
+		public Keyword getCommaKeyword_3_0() { return cCommaKeyword_3_0; }
 
 		//properties+=Entity
-		public Assignment getPropertiesAssignment_2_1() { return cPropertiesAssignment_2_1; }
+		public Assignment getPropertiesAssignment_3_1() { return cPropertiesAssignment_3_1; }
 
 		//Entity
-		public RuleCall getPropertiesEntityParserRuleCall_2_1_0() { return cPropertiesEntityParserRuleCall_2_1_0; }
+		public RuleCall getPropertiesEntityParserRuleCall_3_1_0() { return cPropertiesEntityParserRuleCall_3_1_0; }
 	}
 	
 	
@@ -351,25 +349,25 @@ public class SituationGrammarAccess extends AbstractGrammarElementFinder {
 	public class DomainTypeElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "DomainType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final EnumLiteralDeclaration cMachineEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cMachineMKeyword_0_0 = (Keyword)cMachineEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cSpecificationEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cSpecificationSKeyword_0_0 = (Keyword)cSpecificationEnumLiteralDeclaration_0.eContents().get(0);
 		private final EnumLiteralDeclaration cRequirementEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
 		private final Keyword cRequirementRKeyword_1_0 = (Keyword)cRequirementEnumLiteralDeclaration_1.eContents().get(0);
-		private final EnumLiteralDeclaration cSpecificationEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
-		private final Keyword cSpecificationSKeyword_2_0 = (Keyword)cSpecificationEnumLiteralDeclaration_2.eContents().get(0);
+		private final EnumLiteralDeclaration cWorldEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cWorldWKeyword_2_0 = (Keyword)cWorldEnumLiteralDeclaration_2.eContents().get(0);
 		
 		//enum DomainType:
-		//	Machine="M" | Requirement="R" | Specification="S";
+		//	Specification="S" | Requirement="R" | World="W";
 		public EnumRule getRule() { return rule; }
 
-		//Machine="M" | Requirement="R" | Specification="S"
+		//Specification="S" | Requirement="R" | World="W"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//Machine="M"
-		public EnumLiteralDeclaration getMachineEnumLiteralDeclaration_0() { return cMachineEnumLiteralDeclaration_0; }
+		//Specification="S"
+		public EnumLiteralDeclaration getSpecificationEnumLiteralDeclaration_0() { return cSpecificationEnumLiteralDeclaration_0; }
 
-		//"M"
-		public Keyword getMachineMKeyword_0_0() { return cMachineMKeyword_0_0; }
+		//"S"
+		public Keyword getSpecificationSKeyword_0_0() { return cSpecificationSKeyword_0_0; }
 
 		//Requirement="R"
 		public EnumLiteralDeclaration getRequirementEnumLiteralDeclaration_1() { return cRequirementEnumLiteralDeclaration_1; }
@@ -377,11 +375,11 @@ public class SituationGrammarAccess extends AbstractGrammarElementFinder {
 		//"R"
 		public Keyword getRequirementRKeyword_1_0() { return cRequirementRKeyword_1_0; }
 
-		//Specification="S"
-		public EnumLiteralDeclaration getSpecificationEnumLiteralDeclaration_2() { return cSpecificationEnumLiteralDeclaration_2; }
+		//World="W"
+		public EnumLiteralDeclaration getWorldEnumLiteralDeclaration_2() { return cWorldEnumLiteralDeclaration_2; }
 
-		//"S"
-		public Keyword getSpecificationSKeyword_2_0() { return cSpecificationSKeyword_2_0; }
+		//"W"
+		public Keyword getWorldWKeyword_2_0() { return cWorldWKeyword_2_0; }
 	}
 
 	public class RelationshipTypeElements extends AbstractEnumRuleElementFinder {
@@ -422,18 +420,6 @@ public class SituationGrammarAccess extends AbstractGrammarElementFinder {
 		private final EnumLiteralDeclaration cArguesEnumLiteralDeclaration_16 = (EnumLiteralDeclaration)cAlternatives.eContents().get(16);
 		private final Keyword cArguesArguesKeyword_16_0 = (Keyword)cArguesEnumLiteralDeclaration_16.eContents().get(0);
 		
-		////Proposition: type=PropositionType name=ID;
-		////enum PropositionType: DomainAssumption="DA" | Function="FR" | Security="SR" | Anti="AR" | QualityProposition="Q" | Argument="A";
-		////Entity: Actor | Process | Resource;
-		////Actor: Stakeholder | Attacker;
-		////Stakeholder: "actor" name=ID;
-		////Attacker: "attacker" name=ID;  
-		////Process: NaturalProcess | HumanActivity;
-		////NaturalProcess: "process" name=ID ("{" (activities+=[Process])* "}")?;
-		////HumanActivity: {Activity} "activity" name=ID (actions+=Action)*;
-		////Action: "action" name=ID;
-		////Resource: "resource" name=ID | Asset;
-		////Asset: "asset" name=ID;
 		//enum RelationshipType:
 		//	Wants="wants" | Does="does" | AND="and" | OR="or" | TRUST="trusts" | DELEGATE="delegates" | HURT="-" | HELP="+" |
 		//	BREAK="--" | MAKE="++" | Fulfils="fulfils" | Provides="provides" | Consumes="consumes" | Exploits="exploits" |
@@ -579,17 +565,7 @@ public class SituationGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
-	/// *
-	//Situation: ("model" time=ID ":")? world=World;
-	//
-	//World: {World} (entities+=Entity | domains+=Domain | relationships+=Relationship)*;
-	//
-	//Thing:  Object | Event;
-	//Event: "event" name=ID;
-	//Object: Proposition | Entity | Relationship;
-	//PhysicalWorld: {PhysicalWorld} (entities+=Entity)*;
-	//BeliefWorld: {BeliefWorld} ( domains+=Domain | relationships+=Relationship )*;
-	// * /Situation:
+	//Situation:
 	//	("model" time=ID ":")? things+=Thing*;
 	public SituationElements getSituationAccess() {
 		return (pSituation != null) ? pSituation : (pSituation = new SituationElements());
@@ -630,7 +606,7 @@ public class SituationGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Domain:
-	//	type=DomainType properties+=Entity ("," properties+=Entity)*;
+	//	name=ID type=DomainType properties+=Entity ("," properties+=Entity)*;
 	public DomainElements getDomainAccess() {
 		return (pDomain != null) ? pDomain : (pDomain = new DomainElements());
 	}
@@ -652,7 +628,7 @@ public class SituationGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum DomainType:
-	//	Machine="M" | Requirement="R" | Specification="S";
+	//	Specification="S" | Requirement="R" | World="W";
 	public DomainTypeElements getDomainTypeAccess() {
 		return (unknownRuleDomainType != null) ? unknownRuleDomainType : (unknownRuleDomainType = new DomainTypeElements());
 	}
@@ -661,18 +637,6 @@ public class SituationGrammarAccess extends AbstractGrammarElementFinder {
 		return getDomainTypeAccess().getRule();
 	}
 
-	////Proposition: type=PropositionType name=ID;
-	////enum PropositionType: DomainAssumption="DA" | Function="FR" | Security="SR" | Anti="AR" | QualityProposition="Q" | Argument="A";
-	////Entity: Actor | Process | Resource;
-	////Actor: Stakeholder | Attacker;
-	////Stakeholder: "actor" name=ID;
-	////Attacker: "attacker" name=ID;  
-	////Process: NaturalProcess | HumanActivity;
-	////NaturalProcess: "process" name=ID ("{" (activities+=[Process])* "}")?;
-	////HumanActivity: {Activity} "activity" name=ID (actions+=Action)*;
-	////Action: "action" name=ID;
-	////Resource: "resource" name=ID | Asset;
-	////Asset: "asset" name=ID;
 	//enum RelationshipType:
 	//	Wants="wants" | Does="does" | AND="and" | OR="or" | TRUST="trusts" | DELEGATE="delegates" | HURT="-" | HELP="+" |
 	//	BREAK="--" | MAKE="++" | Fulfils="fulfils" | Provides="provides" | Consumes="consumes" | Exploits="exploits" |
@@ -686,7 +650,7 @@ public class SituationGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//terminal ID:
-	//	"#" !"#"+ "#" | "^"? ("a".."z" | "A".."Z" | "_") ("a".."z" | "A".."Z" | "_" | "0".."9")*;
+	//	"#" !"#"+ "#" | "^"? ("a".."z" | "A".."Z" | "_" | ".") ("a".."z" | "A".."Z" | "_" | "0".."9" | ".")*;
 	public TerminalRule getIDRule() {
 		return (tID != null) ? tID : (tID = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ID"));
 	} 

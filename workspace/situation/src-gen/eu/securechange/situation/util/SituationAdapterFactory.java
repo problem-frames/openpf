@@ -25,181 +25,191 @@ import org.eclipse.emf.ecore.EObject;
 public class SituationAdapterFactory extends AdapterFactoryImpl
 {
   /**
-	 * The cached model package.
-	 * <!-- begin-user-doc -->
+   * The cached model package.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected static SituationPackage modelPackage;
 
   /**
-	 * Creates an instance of the adapter factory.
-	 * <!-- begin-user-doc -->
+   * Creates an instance of the adapter factory.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public SituationAdapterFactory()
   {
-		if (modelPackage == null) {
-			modelPackage = SituationPackage.eINSTANCE;
-		}
-	}
+    if (modelPackage == null)
+    {
+      modelPackage = SituationPackage.eINSTANCE;
+    }
+  }
 
   /**
-	 * Returns whether this factory is applicable for the type of the object.
-	 * <!-- begin-user-doc -->
+   * Returns whether this factory is applicable for the type of the object.
+   * <!-- begin-user-doc -->
    * This implementation returns <code>true</code> if the object is either the model's package or is an instance object of the model.
    * <!-- end-user-doc -->
-	 * @return whether this factory is applicable for the type of the object.
-	 * @generated
-	 */
+   * @return whether this factory is applicable for the type of the object.
+   * @generated
+   */
   @Override
   public boolean isFactoryForType(Object object)
   {
-		if (object == modelPackage) {
-			return true;
-		}
-		if (object instanceof EObject) {
-			return ((EObject)object).eClass().getEPackage() == modelPackage;
-		}
-		return false;
-	}
+    if (object == modelPackage)
+    {
+      return true;
+    }
+    if (object instanceof EObject)
+    {
+      return ((EObject)object).eClass().getEPackage() == modelPackage;
+    }
+    return false;
+  }
 
   /**
-	 * The switch that delegates to the <code>createXXX</code> methods.
-	 * <!-- begin-user-doc -->
+   * The switch that delegates to the <code>createXXX</code> methods.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected SituationSwitch<Adapter> modelSwitch =
-    new SituationSwitch<Adapter>() {
-			@Override
-			public Adapter caseSituation(Situation object) {
-				return createSituationAdapter();
-			}
-			@Override
-			public Adapter caseThing(Thing object) {
-				return createThingAdapter();
-			}
-			@Override
-			public Adapter caseEntity(Entity object) {
-				return createEntityAdapter();
-			}
-			@Override
-			public Adapter caseRelationship(Relationship object) {
-				return createRelationshipAdapter();
-			}
-			@Override
-			public Adapter caseDomain(Domain object) {
-				return createDomainAdapter();
-			}
-			@Override
-			public Adapter defaultCase(EObject object) {
-				return createEObjectAdapter();
-			}
-		};
+    new SituationSwitch<Adapter>()
+    {
+      @Override
+      public Adapter caseSituation(Situation object)
+      {
+        return createSituationAdapter();
+      }
+      @Override
+      public Adapter caseThing(Thing object)
+      {
+        return createThingAdapter();
+      }
+      @Override
+      public Adapter caseEntity(Entity object)
+      {
+        return createEntityAdapter();
+      }
+      @Override
+      public Adapter caseRelationship(Relationship object)
+      {
+        return createRelationshipAdapter();
+      }
+      @Override
+      public Adapter caseDomain(Domain object)
+      {
+        return createDomainAdapter();
+      }
+      @Override
+      public Adapter defaultCase(EObject object)
+      {
+        return createEObjectAdapter();
+      }
+    };
 
   /**
-	 * Creates an adapter for the <code>target</code>.
-	 * <!-- begin-user-doc -->
+   * Creates an adapter for the <code>target</code>.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param target the object to adapt.
-	 * @return the adapter for the <code>target</code>.
-	 * @generated
-	 */
+   * @param target the object to adapt.
+   * @return the adapter for the <code>target</code>.
+   * @generated
+   */
   @Override
   public Adapter createAdapter(Notifier target)
   {
-		return modelSwitch.doSwitch((EObject)target);
-	}
+    return modelSwitch.doSwitch((EObject)target);
+  }
 
 
   /**
-	 * Creates a new adapter for an object of class '{@link eu.securechange.situation.Situation <em>Situation</em>}'.
-	 * <!-- begin-user-doc -->
+   * Creates a new adapter for an object of class '{@link eu.securechange.situation.Situation <em>Situation</em>}'.
+   * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see eu.securechange.situation.Situation
-	 * @generated
-	 */
+   * @return the new adapter.
+   * @see eu.securechange.situation.Situation
+   * @generated
+   */
   public Adapter createSituationAdapter()
   {
-		return null;
-	}
+    return null;
+  }
 
   /**
-	 * Creates a new adapter for an object of class '{@link eu.securechange.situation.Thing <em>Thing</em>}'.
-	 * <!-- begin-user-doc -->
+   * Creates a new adapter for an object of class '{@link eu.securechange.situation.Thing <em>Thing</em>}'.
+   * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see eu.securechange.situation.Thing
-	 * @generated
-	 */
+   * @return the new adapter.
+   * @see eu.securechange.situation.Thing
+   * @generated
+   */
   public Adapter createThingAdapter()
   {
-		return null;
-	}
+    return null;
+  }
 
   /**
-	 * Creates a new adapter for an object of class '{@link eu.securechange.situation.Entity <em>Entity</em>}'.
-	 * <!-- begin-user-doc -->
+   * Creates a new adapter for an object of class '{@link eu.securechange.situation.Entity <em>Entity</em>}'.
+   * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see eu.securechange.situation.Entity
-	 * @generated
-	 */
+   * @return the new adapter.
+   * @see eu.securechange.situation.Entity
+   * @generated
+   */
   public Adapter createEntityAdapter()
   {
-		return null;
-	}
+    return null;
+  }
 
   /**
-	 * Creates a new adapter for an object of class '{@link eu.securechange.situation.Relationship <em>Relationship</em>}'.
-	 * <!-- begin-user-doc -->
+   * Creates a new adapter for an object of class '{@link eu.securechange.situation.Relationship <em>Relationship</em>}'.
+   * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see eu.securechange.situation.Relationship
-	 * @generated
-	 */
+   * @return the new adapter.
+   * @see eu.securechange.situation.Relationship
+   * @generated
+   */
   public Adapter createRelationshipAdapter()
   {
-		return null;
-	}
+    return null;
+  }
 
   /**
-	 * Creates a new adapter for an object of class '{@link eu.securechange.situation.Domain <em>Domain</em>}'.
-	 * <!-- begin-user-doc -->
+   * Creates a new adapter for an object of class '{@link eu.securechange.situation.Domain <em>Domain</em>}'.
+   * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see eu.securechange.situation.Domain
-	 * @generated
-	 */
+   * @return the new adapter.
+   * @see eu.securechange.situation.Domain
+   * @generated
+   */
   public Adapter createDomainAdapter()
   {
-		return null;
-	}
+    return null;
+  }
 
   /**
-	 * Creates a new adapter for the default case.
-	 * <!-- begin-user-doc -->
+   * Creates a new adapter for the default case.
+   * <!-- begin-user-doc -->
    * This default implementation returns null.
    * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @generated
-	 */
+   * @return the new adapter.
+   * @generated
+   */
   public Adapter createEObjectAdapter()
   {
-		return null;
-	}
+    return null;
+  }
 
 } //SituationAdapterFactory

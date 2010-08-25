@@ -19,6 +19,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Thing"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Domain" eSuperTypes="#//Thing">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//DomainType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
         eType="#//Entity" containment="true"/>
@@ -40,9 +41,9 @@
     <eLiterals name="Event" value="13" literal="event"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="DomainType">
-    <eLiterals name="Machine" literal="M"/>
+    <eLiterals name="Specification" literal="S"/>
     <eLiterals name="Requirement" value="1" literal="R"/>
-    <eLiterals name="Specification" value="2" literal="S"/>
+    <eLiterals name="World" value="2" literal="W"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="RelationshipType">
     <eLiterals name="Wants" literal="wants"/>
