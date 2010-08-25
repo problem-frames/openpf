@@ -18,11 +18,14 @@
    </launcher>
 
    <plugins>
-      <plugin id="PF2EC"/>
-      <plugin id="PF2EC.ui"/>
+      <plugin id="PF2EC" fragment=""/>
+      <plugin id="PF2EC.ui" fragment=""/>
+<!--
+>>>>>>> Stashed changes:workspace/problem/pf.product
       <plugin id="ch.qos.logback.classic"/>
       <plugin id="ch.qos.logback.core"/>
       <plugin id="ch.qos.logback.slf4j" fragment="true"/>
+-->
       <plugin id="com.google.collect"/>
       <plugin id="com.google.inject"/>
       <plugin id="com.ibm.icu"/>
@@ -32,8 +35,10 @@
       <plugin id="event.editor"/>
       <plugin id="event.generator"/>
       <plugin id="event.ui"/>
-      <plugin id="javax.activation"/>
+<!--
+>>>>>>> Stashed changes:workspace/problem/pf.product
       <plugin id="javax.mail.glassfish"/>
+-->
       <plugin id="javax.servlet"/>
       <plugin id="javax.servlet.jsp"/>
       <plugin id="javax.xml"/>
@@ -215,9 +220,6 @@
       <plugin id="org.eclipse.jdt.compiler.tool" fragment="true"/>
       <plugin id="org.eclipse.jdt.core"/>
       <plugin id="org.eclipse.jdt.core.manipulation"/>
-      <plugin id="org.eclipse.jdt.debug"/>
-      <plugin id="org.eclipse.jdt.debug.ui"/>
-      <plugin id="org.eclipse.jdt.junit"/>
       <plugin id="org.eclipse.jdt.junit.core"/>
       <plugin id="org.eclipse.jdt.junit.runtime"/>
       <plugin id="org.eclipse.jdt.launching"/>
@@ -236,7 +238,10 @@
       <plugin id="org.eclipse.m2m.qvt.oml.emf.util"/>
       <plugin id="org.eclipse.m2m.qvt.oml.project"/>
       <plugin id="org.eclipse.m2m.qvt.oml.runtime"/>
+<!--
+>>>>>>> Stashed changes:workspace/problem/pf.product
       <plugin id="org.eclipse.net4j.jms.api"/>
+-->
       <plugin id="org.eclipse.ocl"/>
       <plugin id="org.eclipse.ocl.ecore"/>
       <plugin id="org.eclipse.osgi"/>
@@ -310,7 +315,9 @@
       <plugin id="org.mortbay.jetty.util"/>
       <plugin id="org.sat4j.core"/>
       <plugin id="org.sat4j.pb"/>
+<!--
       <plugin id="org.slf4j.api"/>
+-->
       <plugin id="org.w3c.css.sac"/>
       <plugin id="org.w3c.dom.events"/>
       <plugin id="org.w3c.dom.smil"/>
