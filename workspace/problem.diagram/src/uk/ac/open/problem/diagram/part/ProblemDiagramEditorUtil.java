@@ -1,7 +1,6 @@
 package uk.ac.open.problem.diagram.part;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -49,6 +48,7 @@ import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.FileEditorInput;
+import org.eclipse.xtext.validation.IConcreteSyntaxValidator;
 
 import uk.ac.open.problem.ProblemDiagram;
 import uk.ac.open.problem.ProblemFactory;
@@ -187,14 +187,16 @@ public class ProblemDiagramEditorUtil {
 				}
 
 				try {
+					diagramResource
+					.save(uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil
+							.getSaveOptions());
 					modelResource
 							.save(uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil
 									.getSaveOptions());
-					diagramResource
-							.save(uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil
-									.getSaveOptions());
+				} catch (IConcreteSyntaxValidator.InvalidConcreteSyntaxException e) {
+					ProblemDiagramEditorPlugin.getInstance().logError(
+							"Unable to store the concrete syntax", e); //$NON-NLS-1$
 				} catch (IOException e) {
-
 					ProblemDiagramEditorPlugin.getInstance().logError(
 							"Unable to store model and diagram resources", e); //$NON-NLS-1$
 				}

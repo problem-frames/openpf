@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: pf
 Bundle-Vendor: My Company
 Bundle-Version: 1.0.0
-Bundle-SymbolicName: pf; singleton:=true
+Bundle-SymbolicName: uncal;singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext,
  org.eclipse.xtext.generator;resolution:=optional,

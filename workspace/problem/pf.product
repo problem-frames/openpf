@@ -18,8 +18,8 @@
    </launcher>
 
    <plugins>
-      <plugin id="PF2EC" fragment=""/>
-      <plugin id="PF2EC.ui" fragment=""/>
+      <plugin id="PF2EC"/>
+      <plugin id="PF2EC.ui"/>
       <plugin id="com.google.collect"/>
       <plugin id="com.google.inject"/>
       <plugin id="com.ibm.icu"/>
@@ -31,6 +31,7 @@
       <plugin id="event.ui"/>
       <plugin id="javax.servlet"/>
       <plugin id="javax.servlet.jsp"/>
+      <plugin id="javax.transaction" fragment="true"/>
       <plugin id="javax.xml"/>
       <plugin id="lpg.runtime.java"/>
       <plugin id="net.sourceforge.lpg.lpgjavaruntime"/>
@@ -210,11 +211,14 @@
       <plugin id="org.eclipse.jdt.compiler.tool" fragment="true"/>
       <plugin id="org.eclipse.jdt.core"/>
       <plugin id="org.eclipse.jdt.core.manipulation"/>
+      <plugin id="org.eclipse.jdt.debug"/>
+      <plugin id="org.eclipse.jdt.debug.ui"/>
+      <plugin id="org.eclipse.jdt.junit"/>
       <plugin id="org.eclipse.jdt.junit.core"/>
       <plugin id="org.eclipse.jdt.junit.runtime"/>
       <plugin id="org.eclipse.jdt.launching"/>
-      <plugin id="org.eclipse.jdt.launching.macosx" fragment=""/>
-      <plugin id="org.eclipse.jdt.launching.ui.macosx" fragment=""/>
+      <plugin id="org.eclipse.jdt.launching.macosx"/>
+      <plugin id="org.eclipse.jdt.launching.ui.macosx"/>
       <plugin id="org.eclipse.jdt.ui"/>
       <plugin id="org.eclipse.jface"/>
       <plugin id="org.eclipse.jface.databinding"/>
@@ -252,6 +256,8 @@
       <plugin id="org.eclipse.swt.motif.solaris.sparc" fragment="true"/>
       <plugin id="org.eclipse.swt.win32.win32.x86" fragment="true"/>
       <plugin id="org.eclipse.swt.win32.win32.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.swtbot.ant.optional.junit3" fragment="true"/>
+      <plugin id="org.eclipse.swtbot.ant.optional.junit4" fragment="true"/>
       <plugin id="org.eclipse.team.core"/>
       <plugin id="org.eclipse.team.ui"/>
       <plugin id="org.eclipse.text"/>
@@ -305,9 +311,6 @@
       <plugin id="org.w3c.dom.events"/>
       <plugin id="org.w3c.dom.smil"/>
       <plugin id="org.w3c.dom.svg"/>
-      <plugin id="pf"/>
-      <plugin id="pf.generator"/>
-      <plugin id="pf.ui"/>
       <plugin id="problem"/>
       <plugin id="problem.diagram"/>
       <plugin id="problem.diagram.extensions"/>
@@ -322,6 +325,9 @@
       <plugin id="situation.editor"/>
       <plugin id="situation.generator"/>
       <plugin id="situation.ui"/>
+      <plugin id="uncal"/>
+      <plugin id="uncal.generator"/>
+      <plugin id="uncal.ui"/>
    </plugins>
 
 
