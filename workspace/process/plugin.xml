@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.w3.org/namespace/"
+            class="org.w3.namespace.NamespacePackage"
+            genModel="littlejil.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="namespace"
+            class="org.w3.namespace.util.NamespaceResourceFactoryImpl"/>
+   </extension>
+  <extension point="core.example">
+      <example file="WP3.ljx"/>
+  </extension>
+</plugin>

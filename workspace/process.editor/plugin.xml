@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.w3.namespace.presentation.NamespaceModelWizardID"
+            name="%_UI_NamespaceModelWizard_label"
+            class="org.w3.namespace.presentation.NamespaceModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/NamespaceModelFile.gif">
+         <description>%_UI_NamespaceModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.w3.namespace.presentation.NamespaceEditorID"
+            name="%_UI_NamespaceEditor_label"
+            icon="icons/full/obj16/NamespaceModelFile.gif"
+            extensions="ljx"
+            class="org.w3.namespace.presentation.NamespaceEditor"
+            contributorClass="org.w3.namespace.presentation.NamespaceActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
