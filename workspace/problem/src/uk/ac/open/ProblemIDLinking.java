@@ -16,22 +16,10 @@ import org.eclipse.xtext.parsetree.AbstractNode;
 import org.eclipse.xtext.resource.IEObjectDescription;
 import org.eclipse.xtext.scoping.IScope;
 
-import uk.ac.open.problem.Node;
-import uk.ac.open.problem.ProblemDiagram;
-
 import com.google.inject.Singleton;
 
 @Singleton
 public class ProblemIDLinking extends DefaultLinkingService {
-	@Override
-	public String getCrossRefNodeAsString(AbstractNode node) {
-		String result = super.getCrossRefNodeAsString(node);
-		if (result.startsWith("#") && result.endsWith("#")) {
-			result = result.substring(1, result.length() - 1);
-		}
-		return result;
-	}	
-
 	@Override
 	public List<EObject> getLinkedObjects(EObject context, EReference ref,
 			AbstractNode node) throws IllegalNodeException {		
@@ -44,24 +32,13 @@ public class ProblemIDLinking extends DefaultLinkingService {
 			IEObjectDescription eObjectDescription = null;
 			for (IEObjectDescription c: scope.getContents()) {
 				String n = c.getName();
-				while (n.indexOf(".") > 0)
-					n = n.substring(n.indexOf(".")+1);
-				if (n.startsWith("#") && n.endsWith("#")) {
-					n = n.substring(1, n.length()-1);
-				}
-				if (n.equals(s)) {
+				String id = n;
+				if (id.equals(s)) {
 					eObjectDescription = c;
 				}
-//				System.out.println(n);
 			}
 			if (eObjectDescription != null) {
 				EObject obj = eObjectDescription.getEObjectOrProxy();
-				if (obj instanceof ProblemDiagram) {
-					((ProblemDiagram)obj).setName(s);
-				}
-				if (obj instanceof Node) {
-					((Node) obj).setName(s);
-				}
 				return Collections.singletonList(obj);
 			} else {
 				System.out.println("??? " + s);

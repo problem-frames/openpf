@@ -8,12 +8,16 @@ import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
+import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.resource.XtextResourceSet;
 
 import uk.ac.open.groundtram.UncalEditor;
+import uk.ac.open.problem.Node;
+import uk.ac.open.problem.ProblemDiagram;
 import uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil;
 
 /**
@@ -57,6 +61,16 @@ public class ProblemEditor extends UncalEditor {
 			}
 		} catch (IllegalStateException e) {
 		}
+		for (TreeIterator<EObject> it= xtextResource.getAllContents(); it.hasNext();) {
+			EObject o = it.next();
+			if (o instanceof ProblemDiagram) {
+				updateID((ProblemDiagram) o);
+			}
+			if (o instanceof Node) {
+				updateID((Node) o);
+			}
+		}
+
 		String newfile = filename.substring(0, filename.lastIndexOf("."))
 				+ ".problem";
 		URI modelURI = URI.createURI(newfile);
@@ -68,6 +82,20 @@ public class ProblemEditor extends UncalEditor {
 			xtextResource.save(null);
 		} catch (IOException e) {
 			e.printStackTrace();
+		}
+	}
+	private static void updateID(ProblemDiagram o) {
+		String name = o.getName();
+		if (name.indexOf(" ") >= 0 && name.indexOf("#") <0 ) {
+			System.out.println(name);
+			o.setName("#" + name + "#");
+		}
+	}
+	
+	private static void updateID(Node o) {
+		String name = o.getName();
+		if (name.indexOf(" ") >= 0 && name.indexOf("#") <0 ) {
+			o.setName("#" + name + "#");
 		}
 	}
 
