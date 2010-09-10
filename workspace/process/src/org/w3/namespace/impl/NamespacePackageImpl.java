@@ -38,11 +38,11 @@ import org.w3.namespace.Field;
 import org.w3.namespace.HandlerConnector;
 import org.w3.namespace.Import;
 import org.w3.namespace.InterfaceDecl;
-import org.w3.namespace.Kind;
-import org.w3.namespace.Kind1;
-import org.w3.namespace.Kind2;
-import org.w3.namespace.Kind3;
-import org.w3.namespace.Kind4;
+import org.w3.namespace.KindType;
+import org.w3.namespace.KindType1;
+import org.w3.namespace.KindType2;
+import org.w3.namespace.KindType3;
+import org.w3.namespace.KindType4;
 import org.w3.namespace.Littlejil;
 import org.w3.namespace.Location;
 import org.w3.namespace.Metadata;
@@ -313,35 +313,35 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum kindEEnum = null;
+	private EEnum kindTypeEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum kind1EEnum = null;
+	private EEnum kindType1EEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum kind2EEnum = null;
+	private EEnum kindType2EEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum kind3EEnum = null;
+	private EEnum kindType3EEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum kind4EEnum = null;
+	private EEnum kindType4EEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -376,49 +376,49 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EDataType kindObjectEDataType = null;
+	private EDataType kindTypeObjectEDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EDataType kindObject1EDataType = null;
+	private EDataType kindTypeObject1EDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EDataType kindObject2EDataType = null;
+	private EDataType kindTypeObject2EDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EDataType kindObject3EDataType = null;
+	private EDataType kindTypeObject3EDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EDataType kindObject4EDataType = null;
+	private EDataType kindTypeObject4EDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EDataType preOrPostObjectEDataType = null;
+	private EDataType preOrPostTypeObjectEDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EDataType preOrPostObject1EDataType = null;
+	private EDataType preOrPostTypeObject1EDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -2019,8 +2019,8 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getKind() {
-		return kindEEnum;
+	public EEnum getKindType() {
+		return kindTypeEEnum;
 	}
 
 	/**
@@ -2028,8 +2028,8 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getKind1() {
-		return kind1EEnum;
+	public EEnum getKindType1() {
+		return kindType1EEnum;
 	}
 
 	/**
@@ -2037,8 +2037,8 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getKind2() {
-		return kind2EEnum;
+	public EEnum getKindType2() {
+		return kindType2EEnum;
 	}
 
 	/**
@@ -2046,8 +2046,8 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getKind3() {
-		return kind3EEnum;
+	public EEnum getKindType3() {
+		return kindType3EEnum;
 	}
 
 	/**
@@ -2055,8 +2055,8 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getKind4() {
-		return kind4EEnum;
+	public EEnum getKindType4() {
+		return kindType4EEnum;
 	}
 
 	/**
@@ -2100,8 +2100,8 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EDataType getKindObject() {
-		return kindObjectEDataType;
+	public EDataType getKindTypeObject() {
+		return kindTypeObjectEDataType;
 	}
 
 	/**
@@ -2109,8 +2109,8 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EDataType getKindObject1() {
-		return kindObject1EDataType;
+	public EDataType getKindTypeObject1() {
+		return kindTypeObject1EDataType;
 	}
 
 	/**
@@ -2118,8 +2118,8 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EDataType getKindObject2() {
-		return kindObject2EDataType;
+	public EDataType getKindTypeObject2() {
+		return kindTypeObject2EDataType;
 	}
 
 	/**
@@ -2127,8 +2127,8 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EDataType getKindObject3() {
-		return kindObject3EDataType;
+	public EDataType getKindTypeObject3() {
+		return kindTypeObject3EDataType;
 	}
 
 	/**
@@ -2136,8 +2136,8 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EDataType getKindObject4() {
-		return kindObject4EDataType;
+	public EDataType getKindTypeObject4() {
+		return kindTypeObject4EDataType;
 	}
 
 	/**
@@ -2145,8 +2145,8 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EDataType getPreOrPostObject() {
-		return preOrPostObjectEDataType;
+	public EDataType getPreOrPostTypeObject() {
+		return preOrPostTypeObjectEDataType;
 	}
 
 	/**
@@ -2154,8 +2154,8 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EDataType getPreOrPostObject1() {
-		return preOrPostObject1EDataType;
+	public EDataType getPreOrPostTypeObject1() {
+		return preOrPostTypeObject1EDataType;
 	}
 
 	/**
@@ -2389,24 +2389,24 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 		// Create enums
 		continuationActionEEnum = createEEnum(CONTINUATION_ACTION);
 		encodingEEnum = createEEnum(ENCODING);
-		kindEEnum = createEEnum(KIND);
-		kind1EEnum = createEEnum(KIND1);
-		kind2EEnum = createEEnum(KIND2);
-		kind3EEnum = createEEnum(KIND3);
-		kind4EEnum = createEEnum(KIND4);
+		kindTypeEEnum = createEEnum(KIND_TYPE);
+		kindType1EEnum = createEEnum(KIND_TYPE1);
+		kindType2EEnum = createEEnum(KIND_TYPE2);
+		kindType3EEnum = createEEnum(KIND_TYPE3);
+		kindType4EEnum = createEEnum(KIND_TYPE4);
 		preOrPostEEnum = createEEnum(PRE_OR_POST);
 		preOrPost1EEnum = createEEnum(PRE_OR_POST1);
 
 		// Create data types
 		continuationActionObjectEDataType = createEDataType(CONTINUATION_ACTION_OBJECT);
 		encodingObjectEDataType = createEDataType(ENCODING_OBJECT);
-		kindObjectEDataType = createEDataType(KIND_OBJECT);
-		kindObject1EDataType = createEDataType(KIND_OBJECT1);
-		kindObject2EDataType = createEDataType(KIND_OBJECT2);
-		kindObject3EDataType = createEDataType(KIND_OBJECT3);
-		kindObject4EDataType = createEDataType(KIND_OBJECT4);
-		preOrPostObjectEDataType = createEDataType(PRE_OR_POST_OBJECT);
-		preOrPostObject1EDataType = createEDataType(PRE_OR_POST_OBJECT1);
+		kindTypeObjectEDataType = createEDataType(KIND_TYPE_OBJECT);
+		kindTypeObject1EDataType = createEDataType(KIND_TYPE_OBJECT1);
+		kindTypeObject2EDataType = createEDataType(KIND_TYPE_OBJECT2);
+		kindTypeObject3EDataType = createEDataType(KIND_TYPE_OBJECT3);
+		kindTypeObject4EDataType = createEDataType(KIND_TYPE_OBJECT4);
+		preOrPostTypeObjectEDataType = createEDataType(PRE_OR_POST_TYPE_OBJECT);
+		preOrPostTypeObject1EDataType = createEDataType(PRE_OR_POST_TYPE_OBJECT1);
 	}
 
 	/**
@@ -2471,7 +2471,7 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 
 		initEClass(channelBindingEClass, ChannelBinding.class, "ChannelBinding", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getChannelBinding_ChannelName(), theXMLTypePackage.getString(), "channelName", null, 1, 1, ChannelBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getChannelBinding_Kind(), this.getKind3(), "kind", null, 1, 1, ChannelBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getChannelBinding_Kind(), this.getKindType3(), "kind", null, 1, 1, ChannelBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(connectorEClass, Connector.class, "Connector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConnector_RequisiteConnector(), this.getRequisiteConnector(), null, "requisiteConnector", null, 0, 1, Connector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2550,7 +2550,7 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 		initEAttribute(getField_Group(), ecorePackage.getEFeatureMapEntry(), "group", null, 0, -1, Field.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getField_Aggregate(), this.getAggregate(), null, "aggregate", null, 0, -1, Field.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getField_NullAggregate(), this.getNullAggregate(), null, "nullAggregate", null, 0, -1, Field.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getField_Kind(), this.getKind4(), "kind", null, 1, 1, Field.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getField_Kind(), this.getKindType4(), "kind", null, 1, 1, Field.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getField_Name(), theXMLTypePackage.getString(), "name", null, 1, 1, Field.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(handlerConnectorEClass, HandlerConnector.class, "HandlerConnector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2565,7 +2565,7 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 		initEClass(interfaceDeclEClass, InterfaceDecl.class, "InterfaceDecl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInterfaceDecl_ExternalObject(), this.getExternalObject(), null, "externalObject", null, 0, 1, InterfaceDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInterfaceDecl_Id(), theXMLTypePackage.getID(), "id", null, 0, 1, InterfaceDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getInterfaceDecl_Kind(), this.getKind2(), "kind", null, 1, 1, InterfaceDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getInterfaceDecl_Kind(), this.getKindType2(), "kind", null, 1, 1, InterfaceDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInterfaceDecl_Name(), theXMLTypePackage.getString(), "name", null, 0, 1, InterfaceDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(littlejilEClass, Littlejil.class, "Littlejil", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2611,7 +2611,7 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 		initEAttribute(getRequisiteConnector_PreOrPost(), this.getPreOrPost1(), "preOrPost", null, 1, 1, RequisiteConnector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(scopeBindingEClass, ScopeBinding.class, "ScopeBinding", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getScopeBinding_Kind(), this.getKind1(), "kind", null, 1, 1, ScopeBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getScopeBinding_Kind(), this.getKindType1(), "kind", null, 1, 1, ScopeBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getScopeBinding_NameInParent(), theXMLTypePackage.getString(), "nameInParent", null, 1, 1, ScopeBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(simpleRequisiteConnectorEClass, SimpleRequisiteConnector.class, "SimpleRequisiteConnector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2625,7 +2625,7 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 		initEReference(getStepDeclaration_Connector(), this.getConnector(), null, "connector", null, 0, -1, StepDeclaration.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getStepDeclaration_Aborter(), this.getAborter(), null, "aborter", null, 0, -1, StepDeclaration.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getStepDeclaration_Id(), theXMLTypePackage.getID(), "id", null, 0, 1, StepDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getStepDeclaration_Kind(), this.getKind(), "kind", null, 1, 1, StepDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStepDeclaration_Kind(), this.getKindType(), "kind", null, 1, 1, StepDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getStepDeclaration_Name(), theXMLTypePackage.getString(), "name", null, 1, 1, StepDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(stepReferenceEClass, StepReference.class, "StepReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2654,47 +2654,47 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 		addEEnumLiteral(encodingEEnum, Encoding.ODESC);
 		addEEnumLiteral(encodingEEnum, Encoding.STRING);
 
-		initEEnum(kindEEnum, Kind.class, "Kind");
-		addEEnumLiteral(kindEEnum, Kind.SEQUENTIAL);
-		addEEnumLiteral(kindEEnum, Kind.PARALLEL);
-		addEEnumLiteral(kindEEnum, Kind.CHOICE);
-		addEEnumLiteral(kindEEnum, Kind.TRY);
-		addEEnumLiteral(kindEEnum, Kind.LEAF);
+		initEEnum(kindTypeEEnum, KindType.class, "KindType");
+		addEEnumLiteral(kindTypeEEnum, KindType.SEQUENTIAL);
+		addEEnumLiteral(kindTypeEEnum, KindType.PARALLEL);
+		addEEnumLiteral(kindTypeEEnum, KindType.CHOICE);
+		addEEnumLiteral(kindTypeEEnum, KindType.TRY);
+		addEEnumLiteral(kindTypeEEnum, KindType.LEAF);
 
-		initEEnum(kind1EEnum, Kind1.class, "Kind1");
-		addEEnumLiteral(kind1EEnum, Kind1.COPY_IN);
-		addEEnumLiteral(kind1EEnum, Kind1.COPY_OUT);
-		addEEnumLiteral(kind1EEnum, Kind1.COPY_IN_AND_OUT);
-		addEEnumLiteral(kind1EEnum, Kind1.CONSTRAIN);
+		initEEnum(kindType1EEnum, KindType1.class, "KindType1");
+		addEEnumLiteral(kindType1EEnum, KindType1.COPY_IN);
+		addEEnumLiteral(kindType1EEnum, KindType1.COPY_OUT);
+		addEEnumLiteral(kindType1EEnum, KindType1.COPY_IN_AND_OUT);
+		addEEnumLiteral(kindType1EEnum, KindType1.CONSTRAIN);
 
-		initEEnum(kind2EEnum, Kind2.class, "Kind2");
-		addEEnumLiteral(kind2EEnum, Kind2.RESOURCE);
-		addEEnumLiteral(kind2EEnum, Kind2.RESOURCE_USE);
-		addEEnumLiteral(kind2EEnum, Kind2.RESOURCE_COLLECTION);
-		addEEnumLiteral(kind2EEnum, Kind2.RESOURCE_COLLECTION_ITERATOR);
-		addEEnumLiteral(kind2EEnum, Kind2.RESOURCE_COLLECTION_USE);
-		addEEnumLiteral(kind2EEnum, Kind2.IN_PARAMETER);
-		addEEnumLiteral(kind2EEnum, Kind2.OUT_PARAMETER);
-		addEEnumLiteral(kind2EEnum, Kind2.IN_OUT_PARAMETER);
-		addEEnumLiteral(kind2EEnum, Kind2.LOCAL_PARAMETER);
-		addEEnumLiteral(kind2EEnum, Kind2.MESSAGE);
-		addEEnumLiteral(kind2EEnum, Kind2.EXCEPTION);
-		addEEnumLiteral(kind2EEnum, Kind2.CHANNEL);
+		initEEnum(kindType2EEnum, KindType2.class, "KindType2");
+		addEEnumLiteral(kindType2EEnum, KindType2.RESOURCE);
+		addEEnumLiteral(kindType2EEnum, KindType2.RESOURCE_USE);
+		addEEnumLiteral(kindType2EEnum, KindType2.RESOURCE_COLLECTION);
+		addEEnumLiteral(kindType2EEnum, KindType2.RESOURCE_COLLECTION_ITERATOR);
+		addEEnumLiteral(kindType2EEnum, KindType2.RESOURCE_COLLECTION_USE);
+		addEEnumLiteral(kindType2EEnum, KindType2.IN_PARAMETER);
+		addEEnumLiteral(kindType2EEnum, KindType2.OUT_PARAMETER);
+		addEEnumLiteral(kindType2EEnum, KindType2.IN_OUT_PARAMETER);
+		addEEnumLiteral(kindType2EEnum, KindType2.LOCAL_PARAMETER);
+		addEEnumLiteral(kindType2EEnum, KindType2.MESSAGE);
+		addEEnumLiteral(kindType2EEnum, KindType2.EXCEPTION);
+		addEEnumLiteral(kindType2EEnum, KindType2.CHANNEL);
 
-		initEEnum(kind3EEnum, Kind3.class, "Kind3");
-		addEEnumLiteral(kind3EEnum, Kind3.READ);
-		addEEnumLiteral(kind3EEnum, Kind3.WRITE);
-		addEEnumLiteral(kind3EEnum, Kind3.TAKE);
-		addEEnumLiteral(kind3EEnum, Kind3.READ_NOWAIT);
-		addEEnumLiteral(kind3EEnum, Kind3.TAKE_NOWAIT);
+		initEEnum(kindType3EEnum, KindType3.class, "KindType3");
+		addEEnumLiteral(kindType3EEnum, KindType3.READ);
+		addEEnumLiteral(kindType3EEnum, KindType3.WRITE);
+		addEEnumLiteral(kindType3EEnum, KindType3.TAKE);
+		addEEnumLiteral(kindType3EEnum, KindType3.READ_NOWAIT);
+		addEEnumLiteral(kindType3EEnum, KindType3.TAKE_NOWAIT);
 
-		initEEnum(kind4EEnum, Kind4.class, "Kind4");
-		addEEnumLiteral(kind4EEnum, Kind4.AGGREGATE);
-		addEEnumLiteral(kind4EEnum, Kind4.BOOLEAN);
-		addEEnumLiteral(kind4EEnum, Kind4.INTEGER);
-		addEEnumLiteral(kind4EEnum, Kind4.REAL);
-		addEEnumLiteral(kind4EEnum, Kind4.STRING);
-		addEEnumLiteral(kind4EEnum, Kind4.SYMBOL);
+		initEEnum(kindType4EEnum, KindType4.class, "KindType4");
+		addEEnumLiteral(kindType4EEnum, KindType4.AGGREGATE);
+		addEEnumLiteral(kindType4EEnum, KindType4.BOOLEAN);
+		addEEnumLiteral(kindType4EEnum, KindType4.INTEGER);
+		addEEnumLiteral(kindType4EEnum, KindType4.REAL);
+		addEEnumLiteral(kindType4EEnum, KindType4.STRING);
+		addEEnumLiteral(kindType4EEnum, KindType4.SYMBOL);
 
 		initEEnum(preOrPostEEnum, PreOrPost.class, "PreOrPost");
 		addEEnumLiteral(preOrPostEEnum, PreOrPost.PRE);
@@ -2707,13 +2707,13 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 		// Initialize data types
 		initEDataType(continuationActionObjectEDataType, Enumerator.class, "ContinuationActionObject", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(encodingObjectEDataType, Enumerator.class, "EncodingObject", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(kindObjectEDataType, Enumerator.class, "KindObject", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(kindObject1EDataType, Enumerator.class, "KindObject1", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(kindObject2EDataType, Enumerator.class, "KindObject2", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(kindObject3EDataType, Enumerator.class, "KindObject3", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(kindObject4EDataType, Enumerator.class, "KindObject4", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(preOrPostObjectEDataType, Enumerator.class, "PreOrPostObject", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(preOrPostObject1EDataType, Enumerator.class, "PreOrPostObject1", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(kindTypeObjectEDataType, Enumerator.class, "KindTypeObject", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(kindTypeObject1EDataType, Enumerator.class, "KindTypeObject1", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(kindTypeObject2EDataType, Enumerator.class, "KindTypeObject2", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(kindTypeObject3EDataType, Enumerator.class, "KindTypeObject3", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(kindTypeObject4EDataType, Enumerator.class, "KindTypeObject4", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(preOrPostTypeObjectEDataType, Enumerator.class, "PreOrPostTypeObject", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(preOrPostTypeObject1EDataType, Enumerator.class, "PreOrPostTypeObject1", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -3584,65 +3584,65 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 			 "name", "name"
 		   });		
 		addAnnotation
-		  (kindEEnum, 
+		  (kindTypeEEnum, 
 		   source, 
 		   new String[] {
 			 "name", "kind_._1_._type"
 		   });		
 		addAnnotation
-		  (kind1EEnum, 
+		  (kindType1EEnum, 
 		   source, 
 		   new String[] {
 			 "name", "kind_._2_._type"
 		   });		
 		addAnnotation
-		  (kind2EEnum, 
+		  (kindType2EEnum, 
 		   source, 
 		   new String[] {
 			 "name", "kind_._3_._type"
 		   });		
 		addAnnotation
-		  (kind3EEnum, 
+		  (kindType3EEnum, 
 		   source, 
 		   new String[] {
 			 "name", "kind_._4_._type"
 		   });		
 		addAnnotation
-		  (kind4EEnum, 
+		  (kindType4EEnum, 
 		   source, 
 		   new String[] {
 			 "name", "kind_._type"
 		   });		
 		addAnnotation
-		  (kindObjectEDataType, 
+		  (kindTypeObjectEDataType, 
 		   source, 
 		   new String[] {
 			 "name", "kind_._3_._type:Object",
 			 "base", "kind_._3_._type"
 		   });		
 		addAnnotation
-		  (kindObject1EDataType, 
+		  (kindTypeObject1EDataType, 
 		   source, 
 		   new String[] {
 			 "name", "kind_._1_._type:Object",
 			 "base", "kind_._1_._type"
 		   });		
 		addAnnotation
-		  (kindObject2EDataType, 
+		  (kindTypeObject2EDataType, 
 		   source, 
 		   new String[] {
 			 "name", "kind_._2_._type:Object",
 			 "base", "kind_._2_._type"
 		   });		
 		addAnnotation
-		  (kindObject3EDataType, 
+		  (kindTypeObject3EDataType, 
 		   source, 
 		   new String[] {
 			 "name", "kind_._4_._type:Object",
 			 "base", "kind_._4_._type"
 		   });		
 		addAnnotation
-		  (kindObject4EDataType, 
+		  (kindTypeObject4EDataType, 
 		   source, 
 		   new String[] {
 			 "name", "kind_._type:Object",
@@ -3871,14 +3871,14 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 			 "name", "pre-or-post_._1_._type"
 		   });		
 		addAnnotation
-		  (preOrPostObjectEDataType, 
+		  (preOrPostTypeObjectEDataType, 
 		   source, 
 		   new String[] {
 			 "name", "pre-or-post_._type:Object",
 			 "base", "pre-or-post_._type"
 		   });		
 		addAnnotation
-		  (preOrPostObject1EDataType, 
+		  (preOrPostTypeObject1EDataType, 
 		   source, 
 		   new String[] {
 			 "name", "pre-or-post_._1_._type:Object",

@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.w3.namespace.Aggregate;
 import org.w3.namespace.Field;
-import org.w3.namespace.Kind4;
+import org.w3.namespace.KindType4;
 import org.w3.namespace.NamespacePackage;
 import org.w3.namespace.NullAggregate;
 
@@ -66,7 +66,7 @@ public class FieldImpl extends EObjectImpl implements Field {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Kind4 KIND_EDEFAULT = Kind4.AGGREGATE;
+	protected static final KindType4 KIND_EDEFAULT = KindType4.AGGREGATE;
 
 	/**
 	 * The cached value of the '{@link #getKind() <em>Kind</em>}' attribute.
@@ -76,7 +76,7 @@ public class FieldImpl extends EObjectImpl implements Field {
 	 * @generated
 	 * @ordered
 	 */
-	protected Kind4 kind = KIND_EDEFAULT;
+	protected KindType4 kind = KIND_EDEFAULT;
 
 	/**
 	 * This is true if the Kind attribute has been set.
@@ -170,7 +170,7 @@ public class FieldImpl extends EObjectImpl implements Field {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Kind4 getKind() {
+	public KindType4 getKind() {
 		return kind;
 	}
 
@@ -179,8 +179,8 @@ public class FieldImpl extends EObjectImpl implements Field {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setKind(Kind4 newKind) {
-		Kind4 oldKind = kind;
+	public void setKind(KindType4 newKind) {
+		KindType4 oldKind = kind;
 		kind = newKind == null ? KIND_EDEFAULT : newKind;
 		boolean oldKindESet = kindESet;
 		kindESet = true;
@@ -194,7 +194,7 @@ public class FieldImpl extends EObjectImpl implements Field {
 	 * @generated
 	 */
 	public void unsetKind() {
-		Kind4 oldKind = kind;
+		KindType4 oldKind = kind;
 		boolean oldKindESet = kindESet;
 		kind = KIND_EDEFAULT;
 		kindESet = false;
@@ -302,7 +302,7 @@ public class FieldImpl extends EObjectImpl implements Field {
 				getNullAggregate().addAll((Collection<? extends NullAggregate>)newValue);
 				return;
 			case NamespacePackage.FIELD__KIND:
-				setKind((Kind4)newValue);
+				setKind((KindType4)newValue);
 				return;
 			case NamespacePackage.FIELD__NAME:
 				setName((String)newValue);

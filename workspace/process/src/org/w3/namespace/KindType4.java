@@ -14,14 +14,14 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Kind4</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Kind Type4</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.w3.namespace.NamespacePackage#getKind4()
+ * @see org.w3.namespace.NamespacePackage#getKindType4()
  * @model extendedMetaData="name='kind_._type'"
  * @generated
  */
-public enum Kind4 implements Enumerator {
+public enum KindType4 implements Enumerator {
 	/**
 	 * The '<em><b>Aggregate</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -173,13 +173,13 @@ public enum Kind4 implements Enumerator {
 	public static final int SYMBOL_VALUE = 5;
 
 	/**
-	 * An array of all the '<em><b>Kind4</b></em>' enumerators.
+	 * An array of all the '<em><b>Kind Type4</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final Kind4[] VALUES_ARRAY =
-		new Kind4[] {
+	private static final KindType4[] VALUES_ARRAY =
+		new KindType4[] {
 			AGGREGATE,
 			BOOLEAN,
 			INTEGER,
@@ -189,22 +189,22 @@ public enum Kind4 implements Enumerator {
 		};
 
 	/**
-	 * A public read-only list of all the '<em><b>Kind4</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Kind Type4</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<Kind4> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<KindType4> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Kind4</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Kind Type4</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Kind4 get(String literal) {
+	public static KindType4 get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			Kind4 result = VALUES_ARRAY[i];
+			KindType4 result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -213,14 +213,14 @@ public enum Kind4 implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Kind4</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Kind Type4</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Kind4 getByName(String name) {
+	public static KindType4 getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			Kind4 result = VALUES_ARRAY[i];
+			KindType4 result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -229,12 +229,12 @@ public enum Kind4 implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Kind4</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Kind Type4</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Kind4 get(int value) {
+	public static KindType4 get(int value) {
 		switch (value) {
 			case AGGREGATE_VALUE: return AGGREGATE;
 			case BOOLEAN_VALUE: return BOOLEAN;
@@ -273,7 +273,7 @@ public enum Kind4 implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private Kind4(int value, String name, String literal) {
+	private KindType4(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -317,4 +317,4 @@ public enum Kind4 implements Enumerator {
 		return literal;
 	}
 	
-} //Kind4
+} //KindType4

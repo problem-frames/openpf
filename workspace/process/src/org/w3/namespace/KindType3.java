@@ -14,171 +14,171 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Kind</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Kind Type3</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.w3.namespace.NamespacePackage#getKind()
- * @model extendedMetaData="name='kind_._1_._type'"
+ * @see org.w3.namespace.NamespacePackage#getKindType3()
+ * @model extendedMetaData="name='kind_._4_._type'"
  * @generated
  */
-public enum Kind implements Enumerator {
+public enum KindType3 implements Enumerator {
 	/**
-	 * The '<em><b>Sequential</b></em>' literal object.
+	 * The '<em><b>Read</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #SEQUENTIAL_VALUE
+	 * @see #READ_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	SEQUENTIAL(0, "sequential", "sequential"),
+	READ(0, "read", "read"),
 
 	/**
-	 * The '<em><b>Parallel</b></em>' literal object.
+	 * The '<em><b>Write</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #PARALLEL_VALUE
+	 * @see #WRITE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	PARALLEL(1, "parallel", "parallel"),
+	WRITE(1, "write", "write"),
 
 	/**
-	 * The '<em><b>Choice</b></em>' literal object.
+	 * The '<em><b>Take</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #CHOICE_VALUE
+	 * @see #TAKE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	CHOICE(2, "choice", "choice"),
+	TAKE(2, "take", "take"),
 
 	/**
-	 * The '<em><b>Try</b></em>' literal object.
+	 * The '<em><b>Read Nowait</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #TRY_VALUE
+	 * @see #READ_NOWAIT_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	TRY(3, "try", "try"),
+	READ_NOWAIT(3, "readNowait", "read-nowait"),
 
 	/**
-	 * The '<em><b>Leaf</b></em>' literal object.
+	 * The '<em><b>Take Nowait</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #LEAF_VALUE
+	 * @see #TAKE_NOWAIT_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	LEAF(4, "leaf", "leaf");
+	TAKE_NOWAIT(4, "takeNowait", "take-nowait");
 
 	/**
-	 * The '<em><b>Sequential</b></em>' literal value.
+	 * The '<em><b>Read</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Sequential</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Read</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #SEQUENTIAL
-	 * @model name="sequential"
+	 * @see #READ
+	 * @model name="read"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int SEQUENTIAL_VALUE = 0;
+	public static final int READ_VALUE = 0;
 
 	/**
-	 * The '<em><b>Parallel</b></em>' literal value.
+	 * The '<em><b>Write</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Parallel</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Write</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #PARALLEL
-	 * @model name="parallel"
+	 * @see #WRITE
+	 * @model name="write"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PARALLEL_VALUE = 1;
+	public static final int WRITE_VALUE = 1;
 
 	/**
-	 * The '<em><b>Choice</b></em>' literal value.
+	 * The '<em><b>Take</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Choice</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Take</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #CHOICE
-	 * @model name="choice"
+	 * @see #TAKE
+	 * @model name="take"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int CHOICE_VALUE = 2;
+	public static final int TAKE_VALUE = 2;
 
 	/**
-	 * The '<em><b>Try</b></em>' literal value.
+	 * The '<em><b>Read Nowait</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Try</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Read Nowait</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #TRY
-	 * @model name="try"
+	 * @see #READ_NOWAIT
+	 * @model name="readNowait" literal="read-nowait"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int TRY_VALUE = 3;
+	public static final int READ_NOWAIT_VALUE = 3;
 
 	/**
-	 * The '<em><b>Leaf</b></em>' literal value.
+	 * The '<em><b>Take Nowait</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Leaf</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Take Nowait</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #LEAF
-	 * @model name="leaf"
+	 * @see #TAKE_NOWAIT
+	 * @model name="takeNowait" literal="take-nowait"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int LEAF_VALUE = 4;
+	public static final int TAKE_NOWAIT_VALUE = 4;
 
 	/**
-	 * An array of all the '<em><b>Kind</b></em>' enumerators.
+	 * An array of all the '<em><b>Kind Type3</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final Kind[] VALUES_ARRAY =
-		new Kind[] {
-			SEQUENTIAL,
-			PARALLEL,
-			CHOICE,
-			TRY,
-			LEAF,
+	private static final KindType3[] VALUES_ARRAY =
+		new KindType3[] {
+			READ,
+			WRITE,
+			TAKE,
+			READ_NOWAIT,
+			TAKE_NOWAIT,
 		};
 
 	/**
-	 * A public read-only list of all the '<em><b>Kind</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Kind Type3</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<Kind> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<KindType3> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Kind</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Kind Type3</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Kind get(String literal) {
+	public static KindType3 get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			Kind result = VALUES_ARRAY[i];
+			KindType3 result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -187,14 +187,14 @@ public enum Kind implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Kind</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Kind Type3</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Kind getByName(String name) {
+	public static KindType3 getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			Kind result = VALUES_ARRAY[i];
+			KindType3 result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -203,18 +203,18 @@ public enum Kind implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Kind</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Kind Type3</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Kind get(int value) {
+	public static KindType3 get(int value) {
 		switch (value) {
-			case SEQUENTIAL_VALUE: return SEQUENTIAL;
-			case PARALLEL_VALUE: return PARALLEL;
-			case CHOICE_VALUE: return CHOICE;
-			case TRY_VALUE: return TRY;
-			case LEAF_VALUE: return LEAF;
+			case READ_VALUE: return READ;
+			case WRITE_VALUE: return WRITE;
+			case TAKE_VALUE: return TAKE;
+			case READ_NOWAIT_VALUE: return READ_NOWAIT;
+			case TAKE_NOWAIT_VALUE: return TAKE_NOWAIT;
 		}
 		return null;
 	}
@@ -246,7 +246,7 @@ public enum Kind implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private Kind(int value, String name, String literal) {
+	private KindType3(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -290,4 +290,4 @@ public enum Kind implements Enumerator {
 		return literal;
 	}
 	
-} //Kind
+} //KindType3

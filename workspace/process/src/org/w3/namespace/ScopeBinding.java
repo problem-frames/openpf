@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface ScopeBinding extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Kind</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.w3.namespace.Kind1}.
+	 * The literals are from the enumeration {@link org.w3.namespace.KindType1}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Kind</em>' attribute isn't clear,
@@ -36,29 +36,29 @@ public interface ScopeBinding extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Kind</em>' attribute.
-	 * @see org.w3.namespace.Kind1
+	 * @see org.w3.namespace.KindType1
 	 * @see #isSetKind()
 	 * @see #unsetKind()
-	 * @see #setKind(Kind1)
+	 * @see #setKind(KindType1)
 	 * @see org.w3.namespace.NamespacePackage#getScopeBinding_Kind()
 	 * @model unsettable="true" required="true"
 	 *        extendedMetaData="kind='attribute' name='kind'"
 	 * @generated
 	 */
-	Kind1 getKind();
+	KindType1 getKind();
 
 	/**
 	 * Sets the value of the '{@link org.w3.namespace.ScopeBinding#getKind <em>Kind</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Kind</em>' attribute.
-	 * @see org.w3.namespace.Kind1
+	 * @see org.w3.namespace.KindType1
 	 * @see #isSetKind()
 	 * @see #unsetKind()
 	 * @see #getKind()
 	 * @generated
 	 */
-	void setKind(Kind1 value);
+	void setKind(KindType1 value);
 
 	/**
 	 * Unsets the value of the '{@link org.w3.namespace.ScopeBinding#getKind <em>Kind</em>}' attribute.
@@ -66,7 +66,7 @@ public interface ScopeBinding extends EObject {
 	 * <!-- end-user-doc -->
 	 * @see #isSetKind()
 	 * @see #getKind()
-	 * @see #setKind(Kind1)
+	 * @see #setKind(KindType1)
 	 * @generated
 	 */
 	void unsetKind();
@@ -78,7 +78,7 @@ public interface ScopeBinding extends EObject {
 	 * @return whether the value of the '<em>Kind</em>' attribute is set.
 	 * @see #unsetKind()
 	 * @see #getKind()
-	 * @see #setKind(Kind1)
+	 * @see #setKind(KindType1)
 	 * @generated
 	 */
 	boolean isSetKind();

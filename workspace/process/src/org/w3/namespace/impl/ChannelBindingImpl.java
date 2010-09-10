@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import org.w3.namespace.ChannelBinding;
-import org.w3.namespace.Kind3;
+import org.w3.namespace.KindType3;
 import org.w3.namespace.NamespacePackage;
 
 /**
@@ -60,7 +60,7 @@ public class ChannelBindingImpl extends EObjectImpl implements ChannelBinding {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Kind3 KIND_EDEFAULT = Kind3.READ;
+	protected static final KindType3 KIND_EDEFAULT = KindType3.READ;
 
 	/**
 	 * The cached value of the '{@link #getKind() <em>Kind</em>}' attribute.
@@ -70,7 +70,7 @@ public class ChannelBindingImpl extends EObjectImpl implements ChannelBinding {
 	 * @generated
 	 * @ordered
 	 */
-	protected Kind3 kind = KIND_EDEFAULT;
+	protected KindType3 kind = KIND_EDEFAULT;
 
 	/**
 	 * This is true if the Kind attribute has been set.
@@ -126,7 +126,7 @@ public class ChannelBindingImpl extends EObjectImpl implements ChannelBinding {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Kind3 getKind() {
+	public KindType3 getKind() {
 		return kind;
 	}
 
@@ -135,8 +135,8 @@ public class ChannelBindingImpl extends EObjectImpl implements ChannelBinding {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setKind(Kind3 newKind) {
-		Kind3 oldKind = kind;
+	public void setKind(KindType3 newKind) {
+		KindType3 oldKind = kind;
 		kind = newKind == null ? KIND_EDEFAULT : newKind;
 		boolean oldKindESet = kindESet;
 		kindESet = true;
@@ -150,7 +150,7 @@ public class ChannelBindingImpl extends EObjectImpl implements ChannelBinding {
 	 * @generated
 	 */
 	public void unsetKind() {
-		Kind3 oldKind = kind;
+		KindType3 oldKind = kind;
 		boolean oldKindESet = kindESet;
 		kind = KIND_EDEFAULT;
 		kindESet = false;
@@ -195,7 +195,7 @@ public class ChannelBindingImpl extends EObjectImpl implements ChannelBinding {
 				setChannelName((String)newValue);
 				return;
 			case NamespacePackage.CHANNEL_BINDING__KIND:
-				setKind((Kind3)newValue);
+				setKind((KindType3)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

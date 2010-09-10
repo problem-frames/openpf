@@ -84,7 +84,7 @@ public interface InterfaceDecl extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Kind</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.w3.namespace.Kind2}.
+	 * The literals are from the enumeration {@link org.w3.namespace.KindType2}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Kind</em>' attribute isn't clear,
@@ -92,29 +92,29 @@ public interface InterfaceDecl extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Kind</em>' attribute.
-	 * @see org.w3.namespace.Kind2
+	 * @see org.w3.namespace.KindType2
 	 * @see #isSetKind()
 	 * @see #unsetKind()
-	 * @see #setKind(Kind2)
+	 * @see #setKind(KindType2)
 	 * @see org.w3.namespace.NamespacePackage#getInterfaceDecl_Kind()
 	 * @model unsettable="true" required="true"
 	 *        extendedMetaData="kind='attribute' name='kind'"
 	 * @generated
 	 */
-	Kind2 getKind();
+	KindType2 getKind();
 
 	/**
 	 * Sets the value of the '{@link org.w3.namespace.InterfaceDecl#getKind <em>Kind</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Kind</em>' attribute.
-	 * @see org.w3.namespace.Kind2
+	 * @see org.w3.namespace.KindType2
 	 * @see #isSetKind()
 	 * @see #unsetKind()
 	 * @see #getKind()
 	 * @generated
 	 */
-	void setKind(Kind2 value);
+	void setKind(KindType2 value);
 
 	/**
 	 * Unsets the value of the '{@link org.w3.namespace.InterfaceDecl#getKind <em>Kind</em>}' attribute.
@@ -122,7 +122,7 @@ public interface InterfaceDecl extends EObject {
 	 * <!-- end-user-doc -->
 	 * @see #isSetKind()
 	 * @see #getKind()
-	 * @see #setKind(Kind2)
+	 * @see #setKind(KindType2)
 	 * @generated
 	 */
 	void unsetKind();
@@ -134,7 +134,7 @@ public interface InterfaceDecl extends EObject {
 	 * @return whether the value of the '<em>Kind</em>' attribute is set.
 	 * @see #unsetKind()
 	 * @see #getKind()
-	 * @see #setKind(Kind2)
+	 * @see #setKind(KindType2)
 	 * @generated
 	 */
 	boolean isSetKind();

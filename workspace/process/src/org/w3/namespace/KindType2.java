@@ -14,14 +14,14 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Kind2</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Kind Type2</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.w3.namespace.NamespacePackage#getKind2()
+ * @see org.w3.namespace.NamespacePackage#getKindType2()
  * @model extendedMetaData="name='kind_._3_._type'"
  * @generated
  */
-public enum Kind2 implements Enumerator {
+public enum KindType2 implements Enumerator {
 	/**
 	 * The '<em><b>Resource</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -323,13 +323,13 @@ public enum Kind2 implements Enumerator {
 	public static final int CHANNEL_VALUE = 11;
 
 	/**
-	 * An array of all the '<em><b>Kind2</b></em>' enumerators.
+	 * An array of all the '<em><b>Kind Type2</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final Kind2[] VALUES_ARRAY =
-		new Kind2[] {
+	private static final KindType2[] VALUES_ARRAY =
+		new KindType2[] {
 			RESOURCE,
 			RESOURCE_USE,
 			RESOURCE_COLLECTION,
@@ -345,22 +345,22 @@ public enum Kind2 implements Enumerator {
 		};
 
 	/**
-	 * A public read-only list of all the '<em><b>Kind2</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Kind Type2</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<Kind2> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<KindType2> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Kind2</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Kind Type2</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Kind2 get(String literal) {
+	public static KindType2 get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			Kind2 result = VALUES_ARRAY[i];
+			KindType2 result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -369,14 +369,14 @@ public enum Kind2 implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Kind2</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Kind Type2</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Kind2 getByName(String name) {
+	public static KindType2 getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			Kind2 result = VALUES_ARRAY[i];
+			KindType2 result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -385,12 +385,12 @@ public enum Kind2 implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Kind2</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Kind Type2</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Kind2 get(int value) {
+	public static KindType2 get(int value) {
 		switch (value) {
 			case RESOURCE_VALUE: return RESOURCE;
 			case RESOURCE_USE_VALUE: return RESOURCE_USE;
@@ -435,7 +435,7 @@ public enum Kind2 implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private Kind2(int value, String name, String literal) {
+	private KindType2(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -479,4 +479,4 @@ public enum Kind2 implements Enumerator {
 		return literal;
 	}
 	
-} //Kind2
+} //KindType2

@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
-import org.w3.namespace.Kind1;
+import org.w3.namespace.KindType1;
 import org.w3.namespace.NamespacePackage;
 import org.w3.namespace.ScopeBinding;
 
@@ -40,7 +40,7 @@ public class ScopeBindingImpl extends EObjectImpl implements ScopeBinding {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Kind1 KIND_EDEFAULT = Kind1.COPY_IN;
+	protected static final KindType1 KIND_EDEFAULT = KindType1.COPY_IN;
 
 	/**
 	 * The cached value of the '{@link #getKind() <em>Kind</em>}' attribute.
@@ -50,7 +50,7 @@ public class ScopeBindingImpl extends EObjectImpl implements ScopeBinding {
 	 * @generated
 	 * @ordered
 	 */
-	protected Kind1 kind = KIND_EDEFAULT;
+	protected KindType1 kind = KIND_EDEFAULT;
 
 	/**
 	 * This is true if the Kind attribute has been set.
@@ -105,7 +105,7 @@ public class ScopeBindingImpl extends EObjectImpl implements ScopeBinding {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Kind1 getKind() {
+	public KindType1 getKind() {
 		return kind;
 	}
 
@@ -114,8 +114,8 @@ public class ScopeBindingImpl extends EObjectImpl implements ScopeBinding {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setKind(Kind1 newKind) {
-		Kind1 oldKind = kind;
+	public void setKind(KindType1 newKind) {
+		KindType1 oldKind = kind;
 		kind = newKind == null ? KIND_EDEFAULT : newKind;
 		boolean oldKindESet = kindESet;
 		kindESet = true;
@@ -129,7 +129,7 @@ public class ScopeBindingImpl extends EObjectImpl implements ScopeBinding {
 	 * @generated
 	 */
 	public void unsetKind() {
-		Kind1 oldKind = kind;
+		KindType1 oldKind = kind;
 		boolean oldKindESet = kindESet;
 		kind = KIND_EDEFAULT;
 		kindESet = false;
@@ -192,7 +192,7 @@ public class ScopeBindingImpl extends EObjectImpl implements ScopeBinding {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case NamespacePackage.SCOPE_BINDING__KIND:
-				setKind((Kind1)newValue);
+				setKind((KindType1)newValue);
 				return;
 			case NamespacePackage.SCOPE_BINDING__NAME_IN_PARENT:
 				setNameInParent((String)newValue);

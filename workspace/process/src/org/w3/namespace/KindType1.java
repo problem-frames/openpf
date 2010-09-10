@@ -14,171 +14,145 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Kind3</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Kind Type1</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.w3.namespace.NamespacePackage#getKind3()
- * @model extendedMetaData="name='kind_._4_._type'"
+ * @see org.w3.namespace.NamespacePackage#getKindType1()
+ * @model extendedMetaData="name='kind_._2_._type'"
  * @generated
  */
-public enum Kind3 implements Enumerator {
+public enum KindType1 implements Enumerator {
 	/**
-	 * The '<em><b>Read</b></em>' literal object.
+	 * The '<em><b>Copy In</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #READ_VALUE
+	 * @see #COPY_IN_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	READ(0, "read", "read"),
+	COPY_IN(0, "copyIn", "copy-in"),
 
 	/**
-	 * The '<em><b>Write</b></em>' literal object.
+	 * The '<em><b>Copy Out</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #WRITE_VALUE
+	 * @see #COPY_OUT_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	WRITE(1, "write", "write"),
+	COPY_OUT(1, "copyOut", "copy-out"),
 
 	/**
-	 * The '<em><b>Take</b></em>' literal object.
+	 * The '<em><b>Copy In And Out</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #TAKE_VALUE
+	 * @see #COPY_IN_AND_OUT_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	TAKE(2, "take", "take"),
+	COPY_IN_AND_OUT(2, "copyInAndOut", "copy-in-and-out"),
 
 	/**
-	 * The '<em><b>Read Nowait</b></em>' literal object.
+	 * The '<em><b>Constrain</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #READ_NOWAIT_VALUE
+	 * @see #CONSTRAIN_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	READ_NOWAIT(3, "readNowait", "read-nowait"),
+	CONSTRAIN(3, "constrain", "constrain");
 
 	/**
-	 * The '<em><b>Take Nowait</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #TAKE_NOWAIT_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	TAKE_NOWAIT(4, "takeNowait", "take-nowait");
-
-	/**
-	 * The '<em><b>Read</b></em>' literal value.
+	 * The '<em><b>Copy In</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Read</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Copy In</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #READ
-	 * @model name="read"
+	 * @see #COPY_IN
+	 * @model name="copyIn" literal="copy-in"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int READ_VALUE = 0;
+	public static final int COPY_IN_VALUE = 0;
 
 	/**
-	 * The '<em><b>Write</b></em>' literal value.
+	 * The '<em><b>Copy Out</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Write</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Copy Out</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #WRITE
-	 * @model name="write"
+	 * @see #COPY_OUT
+	 * @model name="copyOut" literal="copy-out"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int WRITE_VALUE = 1;
+	public static final int COPY_OUT_VALUE = 1;
 
 	/**
-	 * The '<em><b>Take</b></em>' literal value.
+	 * The '<em><b>Copy In And Out</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Take</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Copy In And Out</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #TAKE
-	 * @model name="take"
+	 * @see #COPY_IN_AND_OUT
+	 * @model name="copyInAndOut" literal="copy-in-and-out"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int TAKE_VALUE = 2;
+	public static final int COPY_IN_AND_OUT_VALUE = 2;
 
 	/**
-	 * The '<em><b>Read Nowait</b></em>' literal value.
+	 * The '<em><b>Constrain</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Read Nowait</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Constrain</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #READ_NOWAIT
-	 * @model name="readNowait" literal="read-nowait"
+	 * @see #CONSTRAIN
+	 * @model name="constrain"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int READ_NOWAIT_VALUE = 3;
+	public static final int CONSTRAIN_VALUE = 3;
 
 	/**
-	 * The '<em><b>Take Nowait</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Take Nowait</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #TAKE_NOWAIT
-	 * @model name="takeNowait" literal="take-nowait"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int TAKE_NOWAIT_VALUE = 4;
-
-	/**
-	 * An array of all the '<em><b>Kind3</b></em>' enumerators.
+	 * An array of all the '<em><b>Kind Type1</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final Kind3[] VALUES_ARRAY =
-		new Kind3[] {
-			READ,
-			WRITE,
-			TAKE,
-			READ_NOWAIT,
-			TAKE_NOWAIT,
+	private static final KindType1[] VALUES_ARRAY =
+		new KindType1[] {
+			COPY_IN,
+			COPY_OUT,
+			COPY_IN_AND_OUT,
+			CONSTRAIN,
 		};
 
 	/**
-	 * A public read-only list of all the '<em><b>Kind3</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Kind Type1</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<Kind3> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<KindType1> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Kind3</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Kind Type1</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Kind3 get(String literal) {
+	public static KindType1 get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			Kind3 result = VALUES_ARRAY[i];
+			KindType1 result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -187,14 +161,14 @@ public enum Kind3 implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Kind3</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Kind Type1</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Kind3 getByName(String name) {
+	public static KindType1 getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			Kind3 result = VALUES_ARRAY[i];
+			KindType1 result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -203,18 +177,17 @@ public enum Kind3 implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Kind3</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Kind Type1</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Kind3 get(int value) {
+	public static KindType1 get(int value) {
 		switch (value) {
-			case READ_VALUE: return READ;
-			case WRITE_VALUE: return WRITE;
-			case TAKE_VALUE: return TAKE;
-			case READ_NOWAIT_VALUE: return READ_NOWAIT;
-			case TAKE_NOWAIT_VALUE: return TAKE_NOWAIT;
+			case COPY_IN_VALUE: return COPY_IN;
+			case COPY_OUT_VALUE: return COPY_OUT;
+			case COPY_IN_AND_OUT_VALUE: return COPY_IN_AND_OUT;
+			case CONSTRAIN_VALUE: return CONSTRAIN;
 		}
 		return null;
 	}
@@ -246,7 +219,7 @@ public enum Kind3 implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private Kind3(int value, String name, String literal) {
+	private KindType1(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -290,4 +263,4 @@ public enum Kind3 implements Enumerator {
 		return literal;
 	}
 	
-} //Kind3
+} //KindType1

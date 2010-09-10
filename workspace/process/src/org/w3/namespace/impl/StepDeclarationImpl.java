@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.w3.namespace.Aborter;
 import org.w3.namespace.Connector;
 import org.w3.namespace.InterfaceDecl;
-import org.w3.namespace.Kind;
+import org.w3.namespace.KindType;
 import org.w3.namespace.NamespacePackage;
 import org.w3.namespace.StepDeclaration;
 
@@ -88,7 +88,7 @@ public class StepDeclarationImpl extends EObjectImpl implements StepDeclaration 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Kind KIND_EDEFAULT = Kind.SEQUENTIAL;
+	protected static final KindType KIND_EDEFAULT = KindType.SEQUENTIAL;
 
 	/**
 	 * The cached value of the '{@link #getKind() <em>Kind</em>}' attribute.
@@ -98,7 +98,7 @@ public class StepDeclarationImpl extends EObjectImpl implements StepDeclaration 
 	 * @generated
 	 * @ordered
 	 */
-	protected Kind kind = KIND_EDEFAULT;
+	protected KindType kind = KIND_EDEFAULT;
 
 	/**
 	 * This is true if the Kind attribute has been set.
@@ -213,7 +213,7 @@ public class StepDeclarationImpl extends EObjectImpl implements StepDeclaration 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Kind getKind() {
+	public KindType getKind() {
 		return kind;
 	}
 
@@ -222,8 +222,8 @@ public class StepDeclarationImpl extends EObjectImpl implements StepDeclaration 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setKind(Kind newKind) {
-		Kind oldKind = kind;
+	public void setKind(KindType newKind) {
+		KindType oldKind = kind;
 		kind = newKind == null ? KIND_EDEFAULT : newKind;
 		boolean oldKindESet = kindESet;
 		kindESet = true;
@@ -237,7 +237,7 @@ public class StepDeclarationImpl extends EObjectImpl implements StepDeclaration 
 	 * @generated
 	 */
 	public void unsetKind() {
-		Kind oldKind = kind;
+		KindType oldKind = kind;
 		boolean oldKindESet = kindESet;
 		kind = KIND_EDEFAULT;
 		kindESet = false;
@@ -350,7 +350,7 @@ public class StepDeclarationImpl extends EObjectImpl implements StepDeclaration 
 				setId((String)newValue);
 				return;
 			case NamespacePackage.STEP_DECLARATION__KIND:
-				setKind((Kind)newValue);
+				setKind((KindType)newValue);
 				return;
 			case NamespacePackage.STEP_DECLARATION__NAME:
 				setName((String)newValue);

@@ -1914,54 +1914,54 @@ public interface NamespacePackage extends EPackage {
 	int ENCODING = 33;
 
 	/**
-	 * The meta object id for the '{@link org.w3.namespace.Kind <em>Kind</em>}' enum.
+	 * The meta object id for the '{@link org.w3.namespace.KindType <em>Kind Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.w3.namespace.Kind
-	 * @see org.w3.namespace.impl.NamespacePackageImpl#getKind()
+	 * @see org.w3.namespace.KindType
+	 * @see org.w3.namespace.impl.NamespacePackageImpl#getKindType()
 	 * @generated
 	 */
-	int KIND = 34;
+	int KIND_TYPE = 34;
 
 	/**
-	 * The meta object id for the '{@link org.w3.namespace.Kind1 <em>Kind1</em>}' enum.
+	 * The meta object id for the '{@link org.w3.namespace.KindType1 <em>Kind Type1</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.w3.namespace.Kind1
-	 * @see org.w3.namespace.impl.NamespacePackageImpl#getKind1()
+	 * @see org.w3.namespace.KindType1
+	 * @see org.w3.namespace.impl.NamespacePackageImpl#getKindType1()
 	 * @generated
 	 */
-	int KIND1 = 35;
+	int KIND_TYPE1 = 35;
 
 	/**
-	 * The meta object id for the '{@link org.w3.namespace.Kind2 <em>Kind2</em>}' enum.
+	 * The meta object id for the '{@link org.w3.namespace.KindType2 <em>Kind Type2</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.w3.namespace.Kind2
-	 * @see org.w3.namespace.impl.NamespacePackageImpl#getKind2()
+	 * @see org.w3.namespace.KindType2
+	 * @see org.w3.namespace.impl.NamespacePackageImpl#getKindType2()
 	 * @generated
 	 */
-	int KIND2 = 36;
+	int KIND_TYPE2 = 36;
 
 	/**
-	 * The meta object id for the '{@link org.w3.namespace.Kind3 <em>Kind3</em>}' enum.
+	 * The meta object id for the '{@link org.w3.namespace.KindType3 <em>Kind Type3</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.w3.namespace.Kind3
-	 * @see org.w3.namespace.impl.NamespacePackageImpl#getKind3()
+	 * @see org.w3.namespace.KindType3
+	 * @see org.w3.namespace.impl.NamespacePackageImpl#getKindType3()
 	 * @generated
 	 */
-	int KIND3 = 37;
+	int KIND_TYPE3 = 37;
 
 	/**
-	 * The meta object id for the '{@link org.w3.namespace.Kind4 <em>Kind4</em>}' enum.
+	 * The meta object id for the '{@link org.w3.namespace.KindType4 <em>Kind Type4</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.w3.namespace.Kind4
-	 * @see org.w3.namespace.impl.NamespacePackageImpl#getKind4()
+	 * @see org.w3.namespace.KindType4
+	 * @see org.w3.namespace.impl.NamespacePackageImpl#getKindType4()
 	 * @generated
 	 */
-	int KIND4 = 38;
+	int KIND_TYPE4 = 38;
 
 	/**
 	 * The meta object id for the '{@link org.w3.namespace.PreOrPost <em>Pre Or Post</em>}' enum.
@@ -2004,74 +2004,74 @@ public interface NamespacePackage extends EPackage {
 	int ENCODING_OBJECT = 42;
 
 	/**
-	 * The meta object id for the '<em>Kind Object</em>' data type.
+	 * The meta object id for the '<em>Kind Type Object</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.common.util.Enumerator
-	 * @see org.w3.namespace.impl.NamespacePackageImpl#getKindObject()
+	 * @see org.w3.namespace.impl.NamespacePackageImpl#getKindTypeObject()
 	 * @generated
 	 */
-	int KIND_OBJECT = 43;
+	int KIND_TYPE_OBJECT = 43;
 
 	/**
-	 * The meta object id for the '<em>Kind Object1</em>' data type.
+	 * The meta object id for the '<em>Kind Type Object1</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.common.util.Enumerator
-	 * @see org.w3.namespace.impl.NamespacePackageImpl#getKindObject1()
+	 * @see org.w3.namespace.impl.NamespacePackageImpl#getKindTypeObject1()
 	 * @generated
 	 */
-	int KIND_OBJECT1 = 44;
+	int KIND_TYPE_OBJECT1 = 44;
 
 	/**
-	 * The meta object id for the '<em>Kind Object2</em>' data type.
+	 * The meta object id for the '<em>Kind Type Object2</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.common.util.Enumerator
-	 * @see org.w3.namespace.impl.NamespacePackageImpl#getKindObject2()
+	 * @see org.w3.namespace.impl.NamespacePackageImpl#getKindTypeObject2()
 	 * @generated
 	 */
-	int KIND_OBJECT2 = 45;
+	int KIND_TYPE_OBJECT2 = 45;
 
 	/**
-	 * The meta object id for the '<em>Kind Object3</em>' data type.
+	 * The meta object id for the '<em>Kind Type Object3</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.common.util.Enumerator
-	 * @see org.w3.namespace.impl.NamespacePackageImpl#getKindObject3()
+	 * @see org.w3.namespace.impl.NamespacePackageImpl#getKindTypeObject3()
 	 * @generated
 	 */
-	int KIND_OBJECT3 = 46;
+	int KIND_TYPE_OBJECT3 = 46;
 
 	/**
-	 * The meta object id for the '<em>Kind Object4</em>' data type.
+	 * The meta object id for the '<em>Kind Type Object4</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.common.util.Enumerator
-	 * @see org.w3.namespace.impl.NamespacePackageImpl#getKindObject4()
+	 * @see org.w3.namespace.impl.NamespacePackageImpl#getKindTypeObject4()
 	 * @generated
 	 */
-	int KIND_OBJECT4 = 47;
+	int KIND_TYPE_OBJECT4 = 47;
 
 	/**
-	 * The meta object id for the '<em>Pre Or Post Object</em>' data type.
+	 * The meta object id for the '<em>Pre Or Post Type Object</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.common.util.Enumerator
-	 * @see org.w3.namespace.impl.NamespacePackageImpl#getPreOrPostObject()
+	 * @see org.w3.namespace.impl.NamespacePackageImpl#getPreOrPostTypeObject()
 	 * @generated
 	 */
-	int PRE_OR_POST_OBJECT = 48;
+	int PRE_OR_POST_TYPE_OBJECT = 48;
 
 	/**
-	 * The meta object id for the '<em>Pre Or Post Object1</em>' data type.
+	 * The meta object id for the '<em>Pre Or Post Type Object1</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.common.util.Enumerator
-	 * @see org.w3.namespace.impl.NamespacePackageImpl#getPreOrPostObject1()
+	 * @see org.w3.namespace.impl.NamespacePackageImpl#getPreOrPostTypeObject1()
 	 * @generated
 	 */
-	int PRE_OR_POST_OBJECT1 = 49;
+	int PRE_OR_POST_TYPE_OBJECT1 = 49;
 
 
 	/**
@@ -3911,54 +3911,54 @@ public interface NamespacePackage extends EPackage {
 	EEnum getEncoding();
 
 	/**
-	 * Returns the meta object for enum '{@link org.w3.namespace.Kind <em>Kind</em>}'.
+	 * Returns the meta object for enum '{@link org.w3.namespace.KindType <em>Kind Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Kind</em>'.
-	 * @see org.w3.namespace.Kind
+	 * @return the meta object for enum '<em>Kind Type</em>'.
+	 * @see org.w3.namespace.KindType
 	 * @generated
 	 */
-	EEnum getKind();
+	EEnum getKindType();
 
 	/**
-	 * Returns the meta object for enum '{@link org.w3.namespace.Kind1 <em>Kind1</em>}'.
+	 * Returns the meta object for enum '{@link org.w3.namespace.KindType1 <em>Kind Type1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Kind1</em>'.
-	 * @see org.w3.namespace.Kind1
+	 * @return the meta object for enum '<em>Kind Type1</em>'.
+	 * @see org.w3.namespace.KindType1
 	 * @generated
 	 */
-	EEnum getKind1();
+	EEnum getKindType1();
 
 	/**
-	 * Returns the meta object for enum '{@link org.w3.namespace.Kind2 <em>Kind2</em>}'.
+	 * Returns the meta object for enum '{@link org.w3.namespace.KindType2 <em>Kind Type2</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Kind2</em>'.
-	 * @see org.w3.namespace.Kind2
+	 * @return the meta object for enum '<em>Kind Type2</em>'.
+	 * @see org.w3.namespace.KindType2
 	 * @generated
 	 */
-	EEnum getKind2();
+	EEnum getKindType2();
 
 	/**
-	 * Returns the meta object for enum '{@link org.w3.namespace.Kind3 <em>Kind3</em>}'.
+	 * Returns the meta object for enum '{@link org.w3.namespace.KindType3 <em>Kind Type3</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Kind3</em>'.
-	 * @see org.w3.namespace.Kind3
+	 * @return the meta object for enum '<em>Kind Type3</em>'.
+	 * @see org.w3.namespace.KindType3
 	 * @generated
 	 */
-	EEnum getKind3();
+	EEnum getKindType3();
 
 	/**
-	 * Returns the meta object for enum '{@link org.w3.namespace.Kind4 <em>Kind4</em>}'.
+	 * Returns the meta object for enum '{@link org.w3.namespace.KindType4 <em>Kind Type4</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Kind4</em>'.
-	 * @see org.w3.namespace.Kind4
+	 * @return the meta object for enum '<em>Kind Type4</em>'.
+	 * @see org.w3.namespace.KindType4
 	 * @generated
 	 */
-	EEnum getKind4();
+	EEnum getKindType4();
 
 	/**
 	 * Returns the meta object for enum '{@link org.w3.namespace.PreOrPost <em>Pre Or Post</em>}'.
@@ -4005,88 +4005,88 @@ public interface NamespacePackage extends EPackage {
 	EDataType getEncodingObject();
 
 	/**
-	 * Returns the meta object for data type '{@link org.eclipse.emf.common.util.Enumerator <em>Kind Object</em>}'.
+	 * Returns the meta object for data type '{@link org.eclipse.emf.common.util.Enumerator <em>Kind Type Object</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Kind Object</em>'.
+	 * @return the meta object for data type '<em>Kind Type Object</em>'.
 	 * @see org.eclipse.emf.common.util.Enumerator
 	 * @model instanceClass="org.eclipse.emf.common.util.Enumerator"
 	 *        extendedMetaData="name='kind_._3_._type:Object' base='kind_._3_._type'"
 	 * @generated
 	 */
-	EDataType getKindObject();
+	EDataType getKindTypeObject();
 
 	/**
-	 * Returns the meta object for data type '{@link org.eclipse.emf.common.util.Enumerator <em>Kind Object1</em>}'.
+	 * Returns the meta object for data type '{@link org.eclipse.emf.common.util.Enumerator <em>Kind Type Object1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Kind Object1</em>'.
+	 * @return the meta object for data type '<em>Kind Type Object1</em>'.
 	 * @see org.eclipse.emf.common.util.Enumerator
 	 * @model instanceClass="org.eclipse.emf.common.util.Enumerator"
 	 *        extendedMetaData="name='kind_._1_._type:Object' base='kind_._1_._type'"
 	 * @generated
 	 */
-	EDataType getKindObject1();
+	EDataType getKindTypeObject1();
 
 	/**
-	 * Returns the meta object for data type '{@link org.eclipse.emf.common.util.Enumerator <em>Kind Object2</em>}'.
+	 * Returns the meta object for data type '{@link org.eclipse.emf.common.util.Enumerator <em>Kind Type Object2</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Kind Object2</em>'.
+	 * @return the meta object for data type '<em>Kind Type Object2</em>'.
 	 * @see org.eclipse.emf.common.util.Enumerator
 	 * @model instanceClass="org.eclipse.emf.common.util.Enumerator"
 	 *        extendedMetaData="name='kind_._2_._type:Object' base='kind_._2_._type'"
 	 * @generated
 	 */
-	EDataType getKindObject2();
+	EDataType getKindTypeObject2();
 
 	/**
-	 * Returns the meta object for data type '{@link org.eclipse.emf.common.util.Enumerator <em>Kind Object3</em>}'.
+	 * Returns the meta object for data type '{@link org.eclipse.emf.common.util.Enumerator <em>Kind Type Object3</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Kind Object3</em>'.
+	 * @return the meta object for data type '<em>Kind Type Object3</em>'.
 	 * @see org.eclipse.emf.common.util.Enumerator
 	 * @model instanceClass="org.eclipse.emf.common.util.Enumerator"
 	 *        extendedMetaData="name='kind_._4_._type:Object' base='kind_._4_._type'"
 	 * @generated
 	 */
-	EDataType getKindObject3();
+	EDataType getKindTypeObject3();
 
 	/**
-	 * Returns the meta object for data type '{@link org.eclipse.emf.common.util.Enumerator <em>Kind Object4</em>}'.
+	 * Returns the meta object for data type '{@link org.eclipse.emf.common.util.Enumerator <em>Kind Type Object4</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Kind Object4</em>'.
+	 * @return the meta object for data type '<em>Kind Type Object4</em>'.
 	 * @see org.eclipse.emf.common.util.Enumerator
 	 * @model instanceClass="org.eclipse.emf.common.util.Enumerator"
 	 *        extendedMetaData="name='kind_._type:Object' base='kind_._type'"
 	 * @generated
 	 */
-	EDataType getKindObject4();
+	EDataType getKindTypeObject4();
 
 	/**
-	 * Returns the meta object for data type '{@link org.eclipse.emf.common.util.Enumerator <em>Pre Or Post Object</em>}'.
+	 * Returns the meta object for data type '{@link org.eclipse.emf.common.util.Enumerator <em>Pre Or Post Type Object</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Pre Or Post Object</em>'.
+	 * @return the meta object for data type '<em>Pre Or Post Type Object</em>'.
 	 * @see org.eclipse.emf.common.util.Enumerator
 	 * @model instanceClass="org.eclipse.emf.common.util.Enumerator"
 	 *        extendedMetaData="name='pre-or-post_._type:Object' base='pre-or-post_._type'"
 	 * @generated
 	 */
-	EDataType getPreOrPostObject();
+	EDataType getPreOrPostTypeObject();
 
 	/**
-	 * Returns the meta object for data type '{@link org.eclipse.emf.common.util.Enumerator <em>Pre Or Post Object1</em>}'.
+	 * Returns the meta object for data type '{@link org.eclipse.emf.common.util.Enumerator <em>Pre Or Post Type Object1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Pre Or Post Object1</em>'.
+	 * @return the meta object for data type '<em>Pre Or Post Type Object1</em>'.
 	 * @see org.eclipse.emf.common.util.Enumerator
 	 * @model instanceClass="org.eclipse.emf.common.util.Enumerator"
 	 *        extendedMetaData="name='pre-or-post_._1_._type:Object' base='pre-or-post_._1_._type'"
 	 * @generated
 	 */
-	EDataType getPreOrPostObject1();
+	EDataType getPreOrPostTypeObject1();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -5539,54 +5539,54 @@ public interface NamespacePackage extends EPackage {
 		EEnum ENCODING = eINSTANCE.getEncoding();
 
 		/**
-		 * The meta object literal for the '{@link org.w3.namespace.Kind <em>Kind</em>}' enum.
+		 * The meta object literal for the '{@link org.w3.namespace.KindType <em>Kind Type</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.w3.namespace.Kind
-		 * @see org.w3.namespace.impl.NamespacePackageImpl#getKind()
+		 * @see org.w3.namespace.KindType
+		 * @see org.w3.namespace.impl.NamespacePackageImpl#getKindType()
 		 * @generated
 		 */
-		EEnum KIND = eINSTANCE.getKind();
+		EEnum KIND_TYPE = eINSTANCE.getKindType();
 
 		/**
-		 * The meta object literal for the '{@link org.w3.namespace.Kind1 <em>Kind1</em>}' enum.
+		 * The meta object literal for the '{@link org.w3.namespace.KindType1 <em>Kind Type1</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.w3.namespace.Kind1
-		 * @see org.w3.namespace.impl.NamespacePackageImpl#getKind1()
+		 * @see org.w3.namespace.KindType1
+		 * @see org.w3.namespace.impl.NamespacePackageImpl#getKindType1()
 		 * @generated
 		 */
-		EEnum KIND1 = eINSTANCE.getKind1();
+		EEnum KIND_TYPE1 = eINSTANCE.getKindType1();
 
 		/**
-		 * The meta object literal for the '{@link org.w3.namespace.Kind2 <em>Kind2</em>}' enum.
+		 * The meta object literal for the '{@link org.w3.namespace.KindType2 <em>Kind Type2</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.w3.namespace.Kind2
-		 * @see org.w3.namespace.impl.NamespacePackageImpl#getKind2()
+		 * @see org.w3.namespace.KindType2
+		 * @see org.w3.namespace.impl.NamespacePackageImpl#getKindType2()
 		 * @generated
 		 */
-		EEnum KIND2 = eINSTANCE.getKind2();
+		EEnum KIND_TYPE2 = eINSTANCE.getKindType2();
 
 		/**
-		 * The meta object literal for the '{@link org.w3.namespace.Kind3 <em>Kind3</em>}' enum.
+		 * The meta object literal for the '{@link org.w3.namespace.KindType3 <em>Kind Type3</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.w3.namespace.Kind3
-		 * @see org.w3.namespace.impl.NamespacePackageImpl#getKind3()
+		 * @see org.w3.namespace.KindType3
+		 * @see org.w3.namespace.impl.NamespacePackageImpl#getKindType3()
 		 * @generated
 		 */
-		EEnum KIND3 = eINSTANCE.getKind3();
+		EEnum KIND_TYPE3 = eINSTANCE.getKindType3();
 
 		/**
-		 * The meta object literal for the '{@link org.w3.namespace.Kind4 <em>Kind4</em>}' enum.
+		 * The meta object literal for the '{@link org.w3.namespace.KindType4 <em>Kind Type4</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.w3.namespace.Kind4
-		 * @see org.w3.namespace.impl.NamespacePackageImpl#getKind4()
+		 * @see org.w3.namespace.KindType4
+		 * @see org.w3.namespace.impl.NamespacePackageImpl#getKindType4()
 		 * @generated
 		 */
-		EEnum KIND4 = eINSTANCE.getKind4();
+		EEnum KIND_TYPE4 = eINSTANCE.getKindType4();
 
 		/**
 		 * The meta object literal for the '{@link org.w3.namespace.PreOrPost <em>Pre Or Post</em>}' enum.
@@ -5629,74 +5629,74 @@ public interface NamespacePackage extends EPackage {
 		EDataType ENCODING_OBJECT = eINSTANCE.getEncodingObject();
 
 		/**
-		 * The meta object literal for the '<em>Kind Object</em>' data type.
+		 * The meta object literal for the '<em>Kind Type Object</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.eclipse.emf.common.util.Enumerator
-		 * @see org.w3.namespace.impl.NamespacePackageImpl#getKindObject()
+		 * @see org.w3.namespace.impl.NamespacePackageImpl#getKindTypeObject()
 		 * @generated
 		 */
-		EDataType KIND_OBJECT = eINSTANCE.getKindObject();
+		EDataType KIND_TYPE_OBJECT = eINSTANCE.getKindTypeObject();
 
 		/**
-		 * The meta object literal for the '<em>Kind Object1</em>' data type.
+		 * The meta object literal for the '<em>Kind Type Object1</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.eclipse.emf.common.util.Enumerator
-		 * @see org.w3.namespace.impl.NamespacePackageImpl#getKindObject1()
+		 * @see org.w3.namespace.impl.NamespacePackageImpl#getKindTypeObject1()
 		 * @generated
 		 */
-		EDataType KIND_OBJECT1 = eINSTANCE.getKindObject1();
+		EDataType KIND_TYPE_OBJECT1 = eINSTANCE.getKindTypeObject1();
 
 		/**
-		 * The meta object literal for the '<em>Kind Object2</em>' data type.
+		 * The meta object literal for the '<em>Kind Type Object2</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.eclipse.emf.common.util.Enumerator
-		 * @see org.w3.namespace.impl.NamespacePackageImpl#getKindObject2()
+		 * @see org.w3.namespace.impl.NamespacePackageImpl#getKindTypeObject2()
 		 * @generated
 		 */
-		EDataType KIND_OBJECT2 = eINSTANCE.getKindObject2();
+		EDataType KIND_TYPE_OBJECT2 = eINSTANCE.getKindTypeObject2();
 
 		/**
-		 * The meta object literal for the '<em>Kind Object3</em>' data type.
+		 * The meta object literal for the '<em>Kind Type Object3</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.eclipse.emf.common.util.Enumerator
-		 * @see org.w3.namespace.impl.NamespacePackageImpl#getKindObject3()
+		 * @see org.w3.namespace.impl.NamespacePackageImpl#getKindTypeObject3()
 		 * @generated
 		 */
-		EDataType KIND_OBJECT3 = eINSTANCE.getKindObject3();
+		EDataType KIND_TYPE_OBJECT3 = eINSTANCE.getKindTypeObject3();
 
 		/**
-		 * The meta object literal for the '<em>Kind Object4</em>' data type.
+		 * The meta object literal for the '<em>Kind Type Object4</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.eclipse.emf.common.util.Enumerator
-		 * @see org.w3.namespace.impl.NamespacePackageImpl#getKindObject4()
+		 * @see org.w3.namespace.impl.NamespacePackageImpl#getKindTypeObject4()
 		 * @generated
 		 */
-		EDataType KIND_OBJECT4 = eINSTANCE.getKindObject4();
+		EDataType KIND_TYPE_OBJECT4 = eINSTANCE.getKindTypeObject4();
 
 		/**
-		 * The meta object literal for the '<em>Pre Or Post Object</em>' data type.
+		 * The meta object literal for the '<em>Pre Or Post Type Object</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.eclipse.emf.common.util.Enumerator
-		 * @see org.w3.namespace.impl.NamespacePackageImpl#getPreOrPostObject()
+		 * @see org.w3.namespace.impl.NamespacePackageImpl#getPreOrPostTypeObject()
 		 * @generated
 		 */
-		EDataType PRE_OR_POST_OBJECT = eINSTANCE.getPreOrPostObject();
+		EDataType PRE_OR_POST_TYPE_OBJECT = eINSTANCE.getPreOrPostTypeObject();
 
 		/**
-		 * The meta object literal for the '<em>Pre Or Post Object1</em>' data type.
+		 * The meta object literal for the '<em>Pre Or Post Type Object1</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.eclipse.emf.common.util.Enumerator
-		 * @see org.w3.namespace.impl.NamespacePackageImpl#getPreOrPostObject1()
+		 * @see org.w3.namespace.impl.NamespacePackageImpl#getPreOrPostTypeObject1()
 		 * @generated
 		 */
-		EDataType PRE_OR_POST_OBJECT1 = eINSTANCE.getPreOrPostObject1();
+		EDataType PRE_OR_POST_TYPE_OBJECT1 = eINSTANCE.getPreOrPostTypeObject1();
 
 	}
 

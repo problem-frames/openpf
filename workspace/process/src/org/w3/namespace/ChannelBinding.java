@@ -55,7 +55,7 @@ public interface ChannelBinding extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Kind</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.w3.namespace.Kind3}.
+	 * The literals are from the enumeration {@link org.w3.namespace.KindType3}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Kind</em>' attribute isn't clear,
@@ -63,29 +63,29 @@ public interface ChannelBinding extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Kind</em>' attribute.
-	 * @see org.w3.namespace.Kind3
+	 * @see org.w3.namespace.KindType3
 	 * @see #isSetKind()
 	 * @see #unsetKind()
-	 * @see #setKind(Kind3)
+	 * @see #setKind(KindType3)
 	 * @see org.w3.namespace.NamespacePackage#getChannelBinding_Kind()
 	 * @model unsettable="true" required="true"
 	 *        extendedMetaData="kind='attribute' name='kind'"
 	 * @generated
 	 */
-	Kind3 getKind();
+	KindType3 getKind();
 
 	/**
 	 * Sets the value of the '{@link org.w3.namespace.ChannelBinding#getKind <em>Kind</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Kind</em>' attribute.
-	 * @see org.w3.namespace.Kind3
+	 * @see org.w3.namespace.KindType3
 	 * @see #isSetKind()
 	 * @see #unsetKind()
 	 * @see #getKind()
 	 * @generated
 	 */
-	void setKind(Kind3 value);
+	void setKind(KindType3 value);
 
 	/**
 	 * Unsets the value of the '{@link org.w3.namespace.ChannelBinding#getKind <em>Kind</em>}' attribute.
@@ -93,7 +93,7 @@ public interface ChannelBinding extends EObject {
 	 * <!-- end-user-doc -->
 	 * @see #isSetKind()
 	 * @see #getKind()
-	 * @see #setKind(Kind3)
+	 * @see #setKind(KindType3)
 	 * @generated
 	 */
 	void unsetKind();
@@ -105,7 +105,7 @@ public interface ChannelBinding extends EObject {
 	 * @return whether the value of the '<em>Kind</em>' attribute is set.
 	 * @see #unsetKind()
 	 * @see #getKind()
-	 * @see #setKind(Kind3)
+	 * @see #setKind(KindType3)
 	 * @generated
 	 */
 	boolean isSetKind();

@@ -14,145 +14,171 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Kind1</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Kind Type</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.w3.namespace.NamespacePackage#getKind1()
- * @model extendedMetaData="name='kind_._2_._type'"
+ * @see org.w3.namespace.NamespacePackage#getKindType()
+ * @model extendedMetaData="name='kind_._1_._type'"
  * @generated
  */
-public enum Kind1 implements Enumerator {
+public enum KindType implements Enumerator {
 	/**
-	 * The '<em><b>Copy In</b></em>' literal object.
+	 * The '<em><b>Sequential</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #COPY_IN_VALUE
+	 * @see #SEQUENTIAL_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	COPY_IN(0, "copyIn", "copy-in"),
+	SEQUENTIAL(0, "sequential", "sequential"),
 
 	/**
-	 * The '<em><b>Copy Out</b></em>' literal object.
+	 * The '<em><b>Parallel</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #COPY_OUT_VALUE
+	 * @see #PARALLEL_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	COPY_OUT(1, "copyOut", "copy-out"),
+	PARALLEL(1, "parallel", "parallel"),
 
 	/**
-	 * The '<em><b>Copy In And Out</b></em>' literal object.
+	 * The '<em><b>Choice</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #COPY_IN_AND_OUT_VALUE
+	 * @see #CHOICE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	COPY_IN_AND_OUT(2, "copyInAndOut", "copy-in-and-out"),
+	CHOICE(2, "choice", "choice"),
 
 	/**
-	 * The '<em><b>Constrain</b></em>' literal object.
+	 * The '<em><b>Try</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #CONSTRAIN_VALUE
+	 * @see #TRY_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	CONSTRAIN(3, "constrain", "constrain");
+	TRY(3, "try", "try"),
 
 	/**
-	 * The '<em><b>Copy In</b></em>' literal value.
+	 * The '<em><b>Leaf</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #LEAF_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	LEAF(4, "leaf", "leaf");
+
+	/**
+	 * The '<em><b>Sequential</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Copy In</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Sequential</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #COPY_IN
-	 * @model name="copyIn" literal="copy-in"
+	 * @see #SEQUENTIAL
+	 * @model name="sequential"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int COPY_IN_VALUE = 0;
+	public static final int SEQUENTIAL_VALUE = 0;
 
 	/**
-	 * The '<em><b>Copy Out</b></em>' literal value.
+	 * The '<em><b>Parallel</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Copy Out</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Parallel</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #COPY_OUT
-	 * @model name="copyOut" literal="copy-out"
+	 * @see #PARALLEL
+	 * @model name="parallel"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int COPY_OUT_VALUE = 1;
+	public static final int PARALLEL_VALUE = 1;
 
 	/**
-	 * The '<em><b>Copy In And Out</b></em>' literal value.
+	 * The '<em><b>Choice</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Copy In And Out</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Choice</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #COPY_IN_AND_OUT
-	 * @model name="copyInAndOut" literal="copy-in-and-out"
+	 * @see #CHOICE
+	 * @model name="choice"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int COPY_IN_AND_OUT_VALUE = 2;
+	public static final int CHOICE_VALUE = 2;
 
 	/**
-	 * The '<em><b>Constrain</b></em>' literal value.
+	 * The '<em><b>Try</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Constrain</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Try</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #CONSTRAIN
-	 * @model name="constrain"
+	 * @see #TRY
+	 * @model name="try"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int CONSTRAIN_VALUE = 3;
+	public static final int TRY_VALUE = 3;
 
 	/**
-	 * An array of all the '<em><b>Kind1</b></em>' enumerators.
+	 * The '<em><b>Leaf</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Leaf</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #LEAF
+	 * @model name="leaf"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int LEAF_VALUE = 4;
+
+	/**
+	 * An array of all the '<em><b>Kind Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final Kind1[] VALUES_ARRAY =
-		new Kind1[] {
-			COPY_IN,
-			COPY_OUT,
-			COPY_IN_AND_OUT,
-			CONSTRAIN,
+	private static final KindType[] VALUES_ARRAY =
+		new KindType[] {
+			SEQUENTIAL,
+			PARALLEL,
+			CHOICE,
+			TRY,
+			LEAF,
 		};
 
 	/**
-	 * A public read-only list of all the '<em><b>Kind1</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Kind Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<Kind1> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<KindType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Kind1</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Kind Type</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Kind1 get(String literal) {
+	public static KindType get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			Kind1 result = VALUES_ARRAY[i];
+			KindType result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -161,14 +187,14 @@ public enum Kind1 implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Kind1</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Kind Type</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Kind1 getByName(String name) {
+	public static KindType getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			Kind1 result = VALUES_ARRAY[i];
+			KindType result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -177,17 +203,18 @@ public enum Kind1 implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Kind1</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Kind Type</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Kind1 get(int value) {
+	public static KindType get(int value) {
 		switch (value) {
-			case COPY_IN_VALUE: return COPY_IN;
-			case COPY_OUT_VALUE: return COPY_OUT;
-			case COPY_IN_AND_OUT_VALUE: return COPY_IN_AND_OUT;
-			case CONSTRAIN_VALUE: return CONSTRAIN;
+			case SEQUENTIAL_VALUE: return SEQUENTIAL;
+			case PARALLEL_VALUE: return PARALLEL;
+			case CHOICE_VALUE: return CHOICE;
+			case TRY_VALUE: return TRY;
+			case LEAF_VALUE: return LEAF;
 		}
 		return null;
 	}
@@ -219,7 +246,7 @@ public enum Kind1 implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private Kind1(int value, String name, String literal) {
+	private KindType(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -263,4 +290,4 @@ public enum Kind1 implements Enumerator {
 		return literal;
 	}
 	
-} //Kind1
+} //KindType

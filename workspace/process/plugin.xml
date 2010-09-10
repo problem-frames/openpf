@@ -23,6 +23,10 @@
             class="org.w3.namespace.util.NamespaceResourceFactoryImpl"/>
    </extension>
   <extension point="core.example">
-      <example file="WP3.ljx"/>
+      <example file="SecurityArgumentation.namespace"/>
+      <example file="WP3.namespace"/>
+      <example file="littlejil-1.5.dtd"/>
+      <example file="littlejil.xsd"/>
+      <example file="littlejil.ecore"/>
   </extension>
 </plugin>

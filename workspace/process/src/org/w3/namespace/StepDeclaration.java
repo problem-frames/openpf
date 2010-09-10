@@ -132,7 +132,7 @@ public interface StepDeclaration extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Kind</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.w3.namespace.Kind}.
+	 * The literals are from the enumeration {@link org.w3.namespace.KindType}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Kind</em>' attribute isn't clear,
@@ -140,29 +140,29 @@ public interface StepDeclaration extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Kind</em>' attribute.
-	 * @see org.w3.namespace.Kind
+	 * @see org.w3.namespace.KindType
 	 * @see #isSetKind()
 	 * @see #unsetKind()
-	 * @see #setKind(Kind)
+	 * @see #setKind(KindType)
 	 * @see org.w3.namespace.NamespacePackage#getStepDeclaration_Kind()
 	 * @model unsettable="true" required="true"
 	 *        extendedMetaData="kind='attribute' name='kind'"
 	 * @generated
 	 */
-	Kind getKind();
+	KindType getKind();
 
 	/**
 	 * Sets the value of the '{@link org.w3.namespace.StepDeclaration#getKind <em>Kind</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Kind</em>' attribute.
-	 * @see org.w3.namespace.Kind
+	 * @see org.w3.namespace.KindType
 	 * @see #isSetKind()
 	 * @see #unsetKind()
 	 * @see #getKind()
 	 * @generated
 	 */
-	void setKind(Kind value);
+	void setKind(KindType value);
 
 	/**
 	 * Unsets the value of the '{@link org.w3.namespace.StepDeclaration#getKind <em>Kind</em>}' attribute.
@@ -170,7 +170,7 @@ public interface StepDeclaration extends EObject {
 	 * <!-- end-user-doc -->
 	 * @see #isSetKind()
 	 * @see #getKind()
-	 * @see #setKind(Kind)
+	 * @see #setKind(KindType)
 	 * @generated
 	 */
 	void unsetKind();
@@ -182,7 +182,7 @@ public interface StepDeclaration extends EObject {
 	 * @return whether the value of the '<em>Kind</em>' attribute is set.
 	 * @see #unsetKind()
 	 * @see #getKind()
-	 * @see #setKind(Kind)
+	 * @see #setKind(KindType)
 	 * @generated
 	 */
 	boolean isSetKind();

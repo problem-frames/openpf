@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import org.w3.namespace.ExternalObject;
 import org.w3.namespace.InterfaceDecl;
-import org.w3.namespace.Kind2;
+import org.w3.namespace.KindType2;
 import org.w3.namespace.NamespacePackage;
 
 /**
@@ -75,7 +75,7 @@ public class InterfaceDeclImpl extends EObjectImpl implements InterfaceDecl {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Kind2 KIND_EDEFAULT = Kind2.RESOURCE;
+	protected static final KindType2 KIND_EDEFAULT = KindType2.RESOURCE;
 
 	/**
 	 * The cached value of the '{@link #getKind() <em>Kind</em>}' attribute.
@@ -85,7 +85,7 @@ public class InterfaceDeclImpl extends EObjectImpl implements InterfaceDecl {
 	 * @generated
 	 * @ordered
 	 */
-	protected Kind2 kind = KIND_EDEFAULT;
+	protected KindType2 kind = KIND_EDEFAULT;
 
 	/**
 	 * This is true if the Kind attribute has been set.
@@ -204,7 +204,7 @@ public class InterfaceDeclImpl extends EObjectImpl implements InterfaceDecl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Kind2 getKind() {
+	public KindType2 getKind() {
 		return kind;
 	}
 
@@ -213,8 +213,8 @@ public class InterfaceDeclImpl extends EObjectImpl implements InterfaceDecl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setKind(Kind2 newKind) {
-		Kind2 oldKind = kind;
+	public void setKind(KindType2 newKind) {
+		KindType2 oldKind = kind;
 		kind = newKind == null ? KIND_EDEFAULT : newKind;
 		boolean oldKindESet = kindESet;
 		kindESet = true;
@@ -228,7 +228,7 @@ public class InterfaceDeclImpl extends EObjectImpl implements InterfaceDecl {
 	 * @generated
 	 */
 	public void unsetKind() {
-		Kind2 oldKind = kind;
+		KindType2 oldKind = kind;
 		boolean oldKindESet = kindESet;
 		kind = KIND_EDEFAULT;
 		kindESet = false;
@@ -315,7 +315,7 @@ public class InterfaceDeclImpl extends EObjectImpl implements InterfaceDecl {
 				setId((String)newValue);
 				return;
 			case NamespacePackage.INTERFACE_DECL__KIND:
-				setKind((Kind2)newValue);
+				setKind((KindType2)newValue);
 				return;
 			case NamespacePackage.INTERFACE_DECL__NAME:
 				setName((String)newValue);

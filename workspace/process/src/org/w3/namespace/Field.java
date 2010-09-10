@@ -104,7 +104,7 @@ public interface Field extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Kind</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.w3.namespace.Kind4}.
+	 * The literals are from the enumeration {@link org.w3.namespace.KindType4}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Kind</em>' attribute isn't clear,
@@ -112,29 +112,29 @@ public interface Field extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Kind</em>' attribute.
-	 * @see org.w3.namespace.Kind4
+	 * @see org.w3.namespace.KindType4
 	 * @see #isSetKind()
 	 * @see #unsetKind()
-	 * @see #setKind(Kind4)
+	 * @see #setKind(KindType4)
 	 * @see org.w3.namespace.NamespacePackage#getField_Kind()
 	 * @model unsettable="true" required="true"
 	 *        extendedMetaData="kind='attribute' name='kind'"
 	 * @generated
 	 */
-	Kind4 getKind();
+	KindType4 getKind();
 
 	/**
 	 * Sets the value of the '{@link org.w3.namespace.Field#getKind <em>Kind</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Kind</em>' attribute.
-	 * @see org.w3.namespace.Kind4
+	 * @see org.w3.namespace.KindType4
 	 * @see #isSetKind()
 	 * @see #unsetKind()
 	 * @see #getKind()
 	 * @generated
 	 */
-	void setKind(Kind4 value);
+	void setKind(KindType4 value);
 
 	/**
 	 * Unsets the value of the '{@link org.w3.namespace.Field#getKind <em>Kind</em>}' attribute.
@@ -142,7 +142,7 @@ public interface Field extends EObject {
 	 * <!-- end-user-doc -->
 	 * @see #isSetKind()
 	 * @see #getKind()
-	 * @see #setKind(Kind4)
+	 * @see #setKind(KindType4)
 	 * @generated
 	 */
 	void unsetKind();
@@ -154,7 +154,7 @@ public interface Field extends EObject {
 	 * @return whether the value of the '<em>Kind</em>' attribute is set.
 	 * @see #unsetKind()
 	 * @see #getKind()
-	 * @see #setKind(Kind4)
+	 * @see #setKind(KindType4)
 	 * @generated
 	 */
 	boolean isSetKind();

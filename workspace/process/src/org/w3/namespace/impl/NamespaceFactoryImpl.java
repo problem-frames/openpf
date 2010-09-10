@@ -112,16 +112,16 @@ public class NamespaceFactoryImpl extends EFactoryImpl implements NamespaceFacto
 				return createContinuationActionFromString(eDataType, initialValue);
 			case NamespacePackage.ENCODING:
 				return createEncodingFromString(eDataType, initialValue);
-			case NamespacePackage.KIND:
-				return createKindFromString(eDataType, initialValue);
-			case NamespacePackage.KIND1:
-				return createKind1FromString(eDataType, initialValue);
-			case NamespacePackage.KIND2:
-				return createKind2FromString(eDataType, initialValue);
-			case NamespacePackage.KIND3:
-				return createKind3FromString(eDataType, initialValue);
-			case NamespacePackage.KIND4:
-				return createKind4FromString(eDataType, initialValue);
+			case NamespacePackage.KIND_TYPE:
+				return createKindTypeFromString(eDataType, initialValue);
+			case NamespacePackage.KIND_TYPE1:
+				return createKindType1FromString(eDataType, initialValue);
+			case NamespacePackage.KIND_TYPE2:
+				return createKindType2FromString(eDataType, initialValue);
+			case NamespacePackage.KIND_TYPE3:
+				return createKindType3FromString(eDataType, initialValue);
+			case NamespacePackage.KIND_TYPE4:
+				return createKindType4FromString(eDataType, initialValue);
 			case NamespacePackage.PRE_OR_POST:
 				return createPreOrPostFromString(eDataType, initialValue);
 			case NamespacePackage.PRE_OR_POST1:
@@ -130,20 +130,20 @@ public class NamespaceFactoryImpl extends EFactoryImpl implements NamespaceFacto
 				return createContinuationActionObjectFromString(eDataType, initialValue);
 			case NamespacePackage.ENCODING_OBJECT:
 				return createEncodingObjectFromString(eDataType, initialValue);
-			case NamespacePackage.KIND_OBJECT:
-				return createKindObjectFromString(eDataType, initialValue);
-			case NamespacePackage.KIND_OBJECT1:
-				return createKindObject1FromString(eDataType, initialValue);
-			case NamespacePackage.KIND_OBJECT2:
-				return createKindObject2FromString(eDataType, initialValue);
-			case NamespacePackage.KIND_OBJECT3:
-				return createKindObject3FromString(eDataType, initialValue);
-			case NamespacePackage.KIND_OBJECT4:
-				return createKindObject4FromString(eDataType, initialValue);
-			case NamespacePackage.PRE_OR_POST_OBJECT:
-				return createPreOrPostObjectFromString(eDataType, initialValue);
-			case NamespacePackage.PRE_OR_POST_OBJECT1:
-				return createPreOrPostObject1FromString(eDataType, initialValue);
+			case NamespacePackage.KIND_TYPE_OBJECT:
+				return createKindTypeObjectFromString(eDataType, initialValue);
+			case NamespacePackage.KIND_TYPE_OBJECT1:
+				return createKindTypeObject1FromString(eDataType, initialValue);
+			case NamespacePackage.KIND_TYPE_OBJECT2:
+				return createKindTypeObject2FromString(eDataType, initialValue);
+			case NamespacePackage.KIND_TYPE_OBJECT3:
+				return createKindTypeObject3FromString(eDataType, initialValue);
+			case NamespacePackage.KIND_TYPE_OBJECT4:
+				return createKindTypeObject4FromString(eDataType, initialValue);
+			case NamespacePackage.PRE_OR_POST_TYPE_OBJECT:
+				return createPreOrPostTypeObjectFromString(eDataType, initialValue);
+			case NamespacePackage.PRE_OR_POST_TYPE_OBJECT1:
+				return createPreOrPostTypeObject1FromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -161,16 +161,16 @@ public class NamespaceFactoryImpl extends EFactoryImpl implements NamespaceFacto
 				return convertContinuationActionToString(eDataType, instanceValue);
 			case NamespacePackage.ENCODING:
 				return convertEncodingToString(eDataType, instanceValue);
-			case NamespacePackage.KIND:
-				return convertKindToString(eDataType, instanceValue);
-			case NamespacePackage.KIND1:
-				return convertKind1ToString(eDataType, instanceValue);
-			case NamespacePackage.KIND2:
-				return convertKind2ToString(eDataType, instanceValue);
-			case NamespacePackage.KIND3:
-				return convertKind3ToString(eDataType, instanceValue);
-			case NamespacePackage.KIND4:
-				return convertKind4ToString(eDataType, instanceValue);
+			case NamespacePackage.KIND_TYPE:
+				return convertKindTypeToString(eDataType, instanceValue);
+			case NamespacePackage.KIND_TYPE1:
+				return convertKindType1ToString(eDataType, instanceValue);
+			case NamespacePackage.KIND_TYPE2:
+				return convertKindType2ToString(eDataType, instanceValue);
+			case NamespacePackage.KIND_TYPE3:
+				return convertKindType3ToString(eDataType, instanceValue);
+			case NamespacePackage.KIND_TYPE4:
+				return convertKindType4ToString(eDataType, instanceValue);
 			case NamespacePackage.PRE_OR_POST:
 				return convertPreOrPostToString(eDataType, instanceValue);
 			case NamespacePackage.PRE_OR_POST1:
@@ -179,20 +179,20 @@ public class NamespaceFactoryImpl extends EFactoryImpl implements NamespaceFacto
 				return convertContinuationActionObjectToString(eDataType, instanceValue);
 			case NamespacePackage.ENCODING_OBJECT:
 				return convertEncodingObjectToString(eDataType, instanceValue);
-			case NamespacePackage.KIND_OBJECT:
-				return convertKindObjectToString(eDataType, instanceValue);
-			case NamespacePackage.KIND_OBJECT1:
-				return convertKindObject1ToString(eDataType, instanceValue);
-			case NamespacePackage.KIND_OBJECT2:
-				return convertKindObject2ToString(eDataType, instanceValue);
-			case NamespacePackage.KIND_OBJECT3:
-				return convertKindObject3ToString(eDataType, instanceValue);
-			case NamespacePackage.KIND_OBJECT4:
-				return convertKindObject4ToString(eDataType, instanceValue);
-			case NamespacePackage.PRE_OR_POST_OBJECT:
-				return convertPreOrPostObjectToString(eDataType, instanceValue);
-			case NamespacePackage.PRE_OR_POST_OBJECT1:
-				return convertPreOrPostObject1ToString(eDataType, instanceValue);
+			case NamespacePackage.KIND_TYPE_OBJECT:
+				return convertKindTypeObjectToString(eDataType, instanceValue);
+			case NamespacePackage.KIND_TYPE_OBJECT1:
+				return convertKindTypeObject1ToString(eDataType, instanceValue);
+			case NamespacePackage.KIND_TYPE_OBJECT2:
+				return convertKindTypeObject2ToString(eDataType, instanceValue);
+			case NamespacePackage.KIND_TYPE_OBJECT3:
+				return convertKindTypeObject3ToString(eDataType, instanceValue);
+			case NamespacePackage.KIND_TYPE_OBJECT4:
+				return convertKindTypeObject4ToString(eDataType, instanceValue);
+			case NamespacePackage.PRE_OR_POST_TYPE_OBJECT:
+				return convertPreOrPostTypeObjectToString(eDataType, instanceValue);
+			case NamespacePackage.PRE_OR_POST_TYPE_OBJECT1:
+				return convertPreOrPostTypeObject1ToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -563,8 +563,8 @@ public class NamespaceFactoryImpl extends EFactoryImpl implements NamespaceFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Kind createKindFromString(EDataType eDataType, String initialValue) {
-		Kind result = Kind.get(initialValue);
+	public KindType createKindTypeFromString(EDataType eDataType, String initialValue) {
+		KindType result = KindType.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -574,7 +574,7 @@ public class NamespaceFactoryImpl extends EFactoryImpl implements NamespaceFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertKindToString(EDataType eDataType, Object instanceValue) {
+	public String convertKindTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -583,8 +583,8 @@ public class NamespaceFactoryImpl extends EFactoryImpl implements NamespaceFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Kind1 createKind1FromString(EDataType eDataType, String initialValue) {
-		Kind1 result = Kind1.get(initialValue);
+	public KindType1 createKindType1FromString(EDataType eDataType, String initialValue) {
+		KindType1 result = KindType1.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -594,7 +594,7 @@ public class NamespaceFactoryImpl extends EFactoryImpl implements NamespaceFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertKind1ToString(EDataType eDataType, Object instanceValue) {
+	public String convertKindType1ToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -603,8 +603,8 @@ public class NamespaceFactoryImpl extends EFactoryImpl implements NamespaceFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Kind2 createKind2FromString(EDataType eDataType, String initialValue) {
-		Kind2 result = Kind2.get(initialValue);
+	public KindType2 createKindType2FromString(EDataType eDataType, String initialValue) {
+		KindType2 result = KindType2.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -614,7 +614,7 @@ public class NamespaceFactoryImpl extends EFactoryImpl implements NamespaceFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertKind2ToString(EDataType eDataType, Object instanceValue) {
+	public String convertKindType2ToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -623,8 +623,8 @@ public class NamespaceFactoryImpl extends EFactoryImpl implements NamespaceFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Kind3 createKind3FromString(EDataType eDataType, String initialValue) {
-		Kind3 result = Kind3.get(initialValue);
+	public KindType3 createKindType3FromString(EDataType eDataType, String initialValue) {
+		KindType3 result = KindType3.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -634,7 +634,7 @@ public class NamespaceFactoryImpl extends EFactoryImpl implements NamespaceFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertKind3ToString(EDataType eDataType, Object instanceValue) {
+	public String convertKindType3ToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -643,8 +643,8 @@ public class NamespaceFactoryImpl extends EFactoryImpl implements NamespaceFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Kind4 createKind4FromString(EDataType eDataType, String initialValue) {
-		Kind4 result = Kind4.get(initialValue);
+	public KindType4 createKindType4FromString(EDataType eDataType, String initialValue) {
+		KindType4 result = KindType4.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -654,7 +654,7 @@ public class NamespaceFactoryImpl extends EFactoryImpl implements NamespaceFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertKind4ToString(EDataType eDataType, Object instanceValue) {
+	public String convertKindType4ToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -739,7 +739,7 @@ public class NamespaceFactoryImpl extends EFactoryImpl implements NamespaceFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Enumerator createKindObjectFromString(EDataType eDataType, String initialValue) {
+	public Enumerator createKindTypeObjectFromString(EDataType eDataType, String initialValue) {
 		return (Enumerator)super.createFromString(eDataType, initialValue);
 	}
 
@@ -748,7 +748,7 @@ public class NamespaceFactoryImpl extends EFactoryImpl implements NamespaceFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertKindObjectToString(EDataType eDataType, Object instanceValue) {
+	public String convertKindTypeObjectToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 
@@ -757,7 +757,7 @@ public class NamespaceFactoryImpl extends EFactoryImpl implements NamespaceFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Enumerator createKindObject1FromString(EDataType eDataType, String initialValue) {
+	public Enumerator createKindTypeObject1FromString(EDataType eDataType, String initialValue) {
 		return (Enumerator)super.createFromString(eDataType, initialValue);
 	}
 
@@ -766,7 +766,7 @@ public class NamespaceFactoryImpl extends EFactoryImpl implements NamespaceFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertKindObject1ToString(EDataType eDataType, Object instanceValue) {
+	public String convertKindTypeObject1ToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 
@@ -775,7 +775,7 @@ public class NamespaceFactoryImpl extends EFactoryImpl implements NamespaceFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Enumerator createKindObject2FromString(EDataType eDataType, String initialValue) {
+	public Enumerator createKindTypeObject2FromString(EDataType eDataType, String initialValue) {
 		return (Enumerator)super.createFromString(eDataType, initialValue);
 	}
 
@@ -784,7 +784,7 @@ public class NamespaceFactoryImpl extends EFactoryImpl implements NamespaceFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertKindObject2ToString(EDataType eDataType, Object instanceValue) {
+	public String convertKindTypeObject2ToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 
@@ -793,7 +793,7 @@ public class NamespaceFactoryImpl extends EFactoryImpl implements NamespaceFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Enumerator createKindObject3FromString(EDataType eDataType, String initialValue) {
+	public Enumerator createKindTypeObject3FromString(EDataType eDataType, String initialValue) {
 		return (Enumerator)super.createFromString(eDataType, initialValue);
 	}
 
@@ -802,7 +802,7 @@ public class NamespaceFactoryImpl extends EFactoryImpl implements NamespaceFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertKindObject3ToString(EDataType eDataType, Object instanceValue) {
+	public String convertKindTypeObject3ToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 
@@ -811,7 +811,7 @@ public class NamespaceFactoryImpl extends EFactoryImpl implements NamespaceFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Enumerator createKindObject4FromString(EDataType eDataType, String initialValue) {
+	public Enumerator createKindTypeObject4FromString(EDataType eDataType, String initialValue) {
 		return (Enumerator)super.createFromString(eDataType, initialValue);
 	}
 
@@ -820,7 +820,7 @@ public class NamespaceFactoryImpl extends EFactoryImpl implements NamespaceFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertKindObject4ToString(EDataType eDataType, Object instanceValue) {
+	public String convertKindTypeObject4ToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 
@@ -829,7 +829,7 @@ public class NamespaceFactoryImpl extends EFactoryImpl implements NamespaceFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Enumerator createPreOrPostObjectFromString(EDataType eDataType, String initialValue) {
+	public Enumerator createPreOrPostTypeObjectFromString(EDataType eDataType, String initialValue) {
 		return (Enumerator)super.createFromString(eDataType, initialValue);
 	}
 
@@ -838,7 +838,7 @@ public class NamespaceFactoryImpl extends EFactoryImpl implements NamespaceFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertPreOrPostObjectToString(EDataType eDataType, Object instanceValue) {
+	public String convertPreOrPostTypeObjectToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 
@@ -847,7 +847,7 @@ public class NamespaceFactoryImpl extends EFactoryImpl implements NamespaceFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Enumerator createPreOrPostObject1FromString(EDataType eDataType, String initialValue) {
+	public Enumerator createPreOrPostTypeObject1FromString(EDataType eDataType, String initialValue) {
 		return (Enumerator)super.createFromString(eDataType, initialValue);
 	}
 
@@ -856,7 +856,7 @@ public class NamespaceFactoryImpl extends EFactoryImpl implements NamespaceFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertPreOrPostObject1ToString(EDataType eDataType, Object instanceValue) {
+	public String convertPreOrPostTypeObject1ToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 
