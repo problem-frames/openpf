@@ -56,25 +56,10 @@ http-proxy-port = 80
     * change the compiler settings for the restricted API usages
       Window > Preferences > Java > Compiler > Errors/Warnings > Deprecated and restricted API > 
       Forbidden references (access rules) > Error => Warning > OK > Yes
-    * update the SWTBot library:
-      Help > Install New Software >  Enter http://download.eclipse.org/technology/swtbot/galileo/dev-build/update-site >
-      Select the following features:
-  SWTBot for Eclipse Testing (incubation) org.eclipse.swtbot.eclipse.feature.group
-  SWTBot for GEF Testing (incubation) org.eclipse.swtbot.eclipse.gef.feature.group
-  SWTBot for SWT Testing (incubation) org.eclipse.swtbot.feature.group
-  SWTBot IDE Features (incubation) org.eclipse.swtbot.ide.feature.group
-  SWTBot JUnit 3.x Headless launchers for Eclipse (incubation) org.eclipse.swtbot.eclipse.test.junit3.feature.group
-  SWTBot JUnit 4.x Headless launchers for Eclipse (incubation) org.eclipse.swtbot.eclipse.test.junit4.feature.group
-      Next > Accept the licenses > Finish > Yes to restart Eclipse
-    * update the antlr library: 
-      Help > Install New Software >  Enter http://download.itemis.com/updates >
-Select the following feature:
-  Xtext Antlr Support 0.7.2	
-      Next > Accept the licenses > Finish > Yes to restart Eclipse
-        * Warning: If you haven't installed this feature, there might be two
-          compilation errors related to the missing org.eclipse.xtext.log4j
-	  plugin library. It is included because xtext code generator requires
-          the Antlr parser generator.
+    * Select the following features from Help > Install Modeling component
+	Acceleo
+	Xtext 
+	GMF
   * open and run the product:
     Project Explorer > problem > Double click at the pf.product file > Testing > Launch an Eclipse Application
 
@@ -82,6 +67,7 @@ Select the following feature:
   * Run the headless script:
     cd build.x86_64
     build.sh 
+  * It is now continously integrated (any svn commit of the workspace will trigger a rebuilt of the binaries)
 
 Enjoy,
 
