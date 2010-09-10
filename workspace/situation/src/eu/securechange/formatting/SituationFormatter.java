@@ -24,16 +24,15 @@ public class SituationFormatter extends AbstractDeclarativeFormatter {
 		c.setLinewrap(0, 1, 2).before(f.getML_COMMENTRule());
 		c.setLinewrap(0, 1, 1).after(f.getML_COMMENTRule());
 		c.setAutoLinewrap(120);
+		c.setLinewrap().before(f.getML_COMMENTRule());
 	    c.setLinewrap(2).before(f.getDomainRule());
-	    c.setLinewrap().before(f.getEntityRule());
+//	    c.setLinewrap().before(f.getEntityRule());
 	    c.setLinewrap().before(f.getRelationshipRule());
-//	    c.setIndentation(f.getLinkAccess().getLeftCurlyBracketKeyword_3_0(),
-// 	         f.getLinkAccess().getRightCurlyBracketKeyword_3_3());
-//	    c.setNoSpace().around(f.getLinkAccess().getTypeAssignment_1());	    
-//	    c.setNoSpace().after(f.getLinkAccess().getLeftCurlyBracketKeyword_3_0());	    
-//	    c.setNoSpace().before(f.getLinkAccess().getRightCurlyBracketKeyword_3_3());	    
-//	    c.setNoSpace().before(f.getLinkAccess().getCommaKeyword_3_2_0());	    
-//		c.setNoLinewrap().around(f.getSL_COMMENTRule());
-//		c.setLinewrap().before(f.getML_COMMENTRule());
+	    c.setSpace("\n    ").before(f.getEntityAccess().getTypeAssignment_0());	    
+	    c.setNoSpace().before(f.getDomainAccess().getCommaKeyword_3_0());	    
+	    c.setNoSpace().before(f.getSituationAccess().getColonKeyword_0_2());	    
+	    c.setNoSpace().before(f.getRelationshipAccess().getCommaKeyword_3());	    
+	    c.setNoSpace().before(f.getRelationshipAccess().getRightParenthesisKeyword_5());	    
+		c.setNoLinewrap().around(f.getSL_COMMENTRule());
 	}
 }

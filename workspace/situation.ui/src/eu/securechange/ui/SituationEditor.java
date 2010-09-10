@@ -8,7 +8,9 @@ import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
+import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.ui.PlatformUI;
@@ -17,6 +19,8 @@ import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.resource.XtextResourceSet;
 import org.eclipse.xtext.ui.editor.XtextEditor;
 
+import eu.securechange.situation.Domain;
+import eu.securechange.situation.Entity;
 import eu.securechange.situation.diagram.part.SituationDiagramEditorUtil;
 
 /**
@@ -58,12 +62,36 @@ public class SituationEditor extends XtextEditor {
 			SituationDiagramEditorUtil.createDiagram(diagramURI, modelURI,
 					new NullProgressMonitor());
 		}
+		for (TreeIterator<EObject> it= xtextResource.getAllContents(); it.hasNext();) {
+			EObject o = it.next();
+			if (o instanceof Entity) {
+				updateID((Entity) o);
+			}
+			if (o instanceof Domain) {
+				updateID((Domain) o);
+			}
+		}
 		try {
 			xtextResource.save(null);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 //		save_emf(xtextResource, newfile);
+	}
+
+	private static void updateID(Entity o) {
+		String name = o.getName();
+		if (name.indexOf(" ") >= 0 && name.indexOf("#") <0 ) {
+			System.out.println(name);
+			o.setName("#" + name + "#");
+		}
+	}
+	
+	private static void updateID(Domain o) {
+		String name = o.getName();
+		if (name.indexOf(" ") >= 0 && name.indexOf("#") <0 ) {
+			o.setName("#" + name + "#");
+		}
 	}
 
 	private static URI warn_overwrite(IFile file) {
