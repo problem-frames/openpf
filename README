@@ -60,6 +60,11 @@ http-proxy-port = 80
 	Acceleo
 	Xtext 
 	GMF
+    * Install LittleJil plugins:
+	http://laser.cs.umass.edu/documentation/vjinstall/
+	http://laser.cs.umass.edu/documentation/ljainstall/
+	http://laser.cs.umass.edu/documentation/propelinstall/
+	
   * open and run the product:
     Project Explorer > problem > Double click at the pf.product file > Testing > Launch an Eclipse Application
 
