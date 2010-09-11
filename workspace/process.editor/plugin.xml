@@ -30,7 +30,7 @@
             id="org.w3.namespace.presentation.NamespaceEditorID"
             name="%_UI_NamespaceEditor_label"
             icon="icons/full/obj16/NamespaceModelFile.gif"
-            extensions="namespace"
+            extensions="ljx"
             class="org.w3.namespace.presentation.NamespaceEditor"
             contributorClass="org.w3.namespace.presentation.NamespaceActionBarContributor">
       </editor>
