@@ -1,9 +1,13 @@
 package eu.securechange.ui;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.PrintStream;
+import java.util.Scanner;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
@@ -12,6 +16,8 @@ import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.dialogs.SaveAsDialog;
@@ -37,6 +43,19 @@ public class SituationEditor extends XtextEditor {
 		saveModel(filename);
 	}
 
+	private static String get_the_content(URI uri) throws IOException,
+			CoreException {
+		ResourceSet rs = new ResourceSetImpl();
+		InputStream expected = rs.getURIConverter().createInputStream(uri);
+		String lines = "";
+		for (Scanner s = new Scanner(expected); s.hasNextLine();) {
+			lines += s.nextLine();
+			if (s.hasNextLine())
+				lines += "\n";
+		}
+		return lines;
+	}
+
 	private static void saveModel(String filename) {
 		XtextResourceSet resourceSet = new XtextResourceSet();
 		resourceSet.addLoadOption(XtextResource.OPTION_RESOLVE_ALL,
@@ -50,7 +69,7 @@ public class SituationEditor extends XtextEditor {
 		try {
 			IFile file = ResourcesPlugin.getWorkspace().getRoot().getFile(path);
 			if (file != null && file.exists()) {
-//				diagramURI = warn_overwrite(file);
+				// diagramURI = warn_overwrite(file);
 				diagramURI = null;
 			}
 		} catch (IllegalStateException e) {
@@ -62,7 +81,8 @@ public class SituationEditor extends XtextEditor {
 			SituationDiagramEditorUtil.createDiagram(diagramURI, modelURI,
 					new NullProgressMonitor());
 		}
-		for (TreeIterator<EObject> it= xtextResource.getAllContents(); it.hasNext();) {
+		for (TreeIterator<EObject> it = xtextResource.getAllContents(); it
+				.hasNext();) {
 			EObject o = it.next();
 			if (o instanceof Entity) {
 				updateID((Entity) o);
@@ -73,23 +93,33 @@ public class SituationEditor extends XtextEditor {
 		}
 		try {
 			xtextResource.save(null);
+			String contents = get_the_content(xtextResource.getURI());
+			PrintStream ps = new PrintStream(resourceSet.getURIConverter()
+					.createOutputStream(
+							xtextResource.getURI().trimFileExtension()
+									.appendFileExtension("ontology")));
+			ps.print(contents);
+			ps.flush();
+			ps.close();
 		} catch (IOException e) {
 			e.printStackTrace();
+		} catch (CoreException e) {
+			e.printStackTrace();
 		}
-//		save_emf(xtextResource, newfile);
+		// save_emf(xtextResource, newfile);
 	}
 
 	private static void updateID(Entity o) {
 		String name = o.getName();
-		if (name.indexOf(" ") >= 0 && name.indexOf("#") <0 ) {
+		if (name.indexOf(" ") >= 0 && name.indexOf("#") < 0) {
 			System.out.println(name);
 			o.setName("#" + name + "#");
 		}
 	}
-	
+
 	private static void updateID(Domain o) {
 		String name = o.getName();
-		if (name.indexOf(" ") >= 0 && name.indexOf("#") <0 ) {
+		if (name.indexOf(" ") >= 0 && name.indexOf("#") < 0) {
 			o.setName("#" + name + "#");
 		}
 	}

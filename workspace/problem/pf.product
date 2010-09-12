@@ -61,6 +61,8 @@
       <plugin id="littlejil.analysis.translator"/>
       <plugin id="lpg.runtime.java"/>
       <plugin id="net.sourceforge.lpg.lpgjavaruntime"/>
+      <plugin id="ontology"/>
+      <plugin id="ontology.ui"/>
       <plugin id="org.antlr.runtime"/>
       <plugin id="org.aopalliance"/>
       <plugin id="org.apache.ant"/>

@@ -1,0 +1,121 @@
+grammar eu.securechange.Ontology with org.eclipse.xtext.common.Terminals
+
+generate ontology "http://securechange.eu/ontology"
+
+Situation:
+	("model" time=ID ":")? world=World;
+
+World:
+	{World} (physical=PhysicalWorld)? (belief=BeliefWorld)?;
+
+Thing:
+	Object | Event;
+
+Event:
+	"event" name=ID;
+
+Object:
+	Entity | Relationship | Proposition;
+
+PhysicalWorld:
+	{PhysicalWorld} (entities+=Entity)*;
+
+BeliefWorld:
+	{BeliefWorld} (domains+=Domain | relationships+=Relationship)*;
+
+Domain:
+	name=ID type=DomainType properties+=Proposition ("," properties+=Proposition)*;
+
+enum DomainType:
+	Specification="S" | Requirement="R" | World="W";
+
+Proposition:
+	type=PropositionType name=ID;
+
+enum PropositionType:
+	DomainAssumption="DA" | Function="FR" | Security="SR" | Anti="AR" | QualityProposition="Q" | Argument="A";
+
+Entity:
+	Actor | Process | Resource;
+
+Actor:
+	Stakeholder | Attacker;
+
+Stakeholder:
+	"actor" name=ID;
+
+Attacker:
+	"attacker" name=ID;
+
+Process:
+	NaturalProcess | HumanActivity;
+
+NaturalProcess:
+	"process" name=ID ("{" (activities+=[Process])* "}")?;
+
+HumanActivity:
+	{Activity} "activity" name=ID (actions+=Action)*;
+
+Action:
+	"action" name=ID;
+
+Resource:
+	"resource" name=ID | Asset;
+
+Asset:
+	"asset" name=ID;
+
+Relationship:
+	Wants | Does | Decomposes | Trusts | Delegates | Contributes | Fulfils | Provides | Consumes |
+	Exploits | Damages | Attacks | Argues;
+
+Wants:
+	type="wants" "(" source=[Thing] "," target=[Thing] ")";
+
+Does:
+	type="does" "(" source=[Thing] "," target=[Thing] ")";
+
+Decomposes:
+	type=DecomposesType "(" source=[Thing] "," target=[Thing] ")";
+
+enum DecomposesType:
+	AND="and" | OR="or";
+
+Trusts:
+	type="trusts" "(" source=[Thing] "," target=[Thing] ")";
+
+Delegates:
+	type="delegates" "(" source=[Thing] "," target=[Thing] ")";
+
+Contributes:
+	type=ContributesType "(" source=[Thing] "," target=[Thing] ")";
+
+enum ContributesType:
+	HURT="-" | HELP="+" | BREAK="--" | MAKE="++";
+
+Fulfils:
+	type=FulfilsType "(" source=[Process] "," target=[Proposition] ")";
+
+enum FulfilsType:
+	Fulfils="fulfils";
+
+Provides:
+	type="provides" "(" source=[Thing] "," target=[Thing] ")";
+
+Consumes:
+	type="consumes" "(" source=[Thing] "," target=[Thing] ")";
+
+Exploits:
+	type="exploits" "(" source=[Thing] "," target=[Thing] ")";
+
+Damages:
+	type="damages" "(" source=[Thing] "," target=[Thing] ")";
+
+Attacks:
+	type="attacks" "(" source=[Thing] "," target=[Thing] ")";
+
+Argues:
+	type="argues" "(" source=[Thing] "," target=[Thing] ")";
+
+terminal ID:
+	('#' (!('#'))+ '#') | ('^'? ('a'..'z' | 'A'..'Z' | '_' | '.') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9' | '.')*);
