@@ -12,7 +12,7 @@ import org.eclipse.xtext.generator.*
 import org.eclipse.xtext.ui.generator.*
 
 var grammarURI = "classpath:/Ontology/Ontology.xtext"
-var file.extensions = "ontology"
+var file.extensions = "ontology, situation"
 var projectName = "ontology"
 var runtimeProject = "../${projectName}"
 

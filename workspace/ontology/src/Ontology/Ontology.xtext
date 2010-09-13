@@ -1,4 +1,4 @@
-grammar eu.securechange.Ontology with org.eclipse.xtext.common.Terminals
+grammar eu.securechange.ontology.Ontology with org.eclipse.xtext.common.Terminals
 
 generate ontology "http://securechange.eu/ontology"
 
@@ -30,10 +30,27 @@ enum DomainType:
 	Specification="S" | Requirement="R" | World="W";
 
 Proposition:
-	type=PropositionType name=ID;
+	DomainAssumption | Requirement | Argument;
 
-enum PropositionType:
-	DomainAssumption="DA" | Function="FR" | Security="SR" | Anti="AR" | QualityProposition="Q" | Argument="A";
+Requirement: FunctionalRequirement | SecurityRequirement | AntiRequirement | QualityRequirement;
+
+DomainAssumption:
+	"DA" name=ID;
+
+FunctionalRequirement:
+	"FR" name=ID;
+
+SecurityRequirement:
+	"SR" name=ID;
+
+AntiRequirement:
+	"AR" name=ID;
+
+QualityRequirement:
+	"Q" name=ID;
+
+Argument:
+	"A" name=ID;
 
 Entity:
 	Actor | Process | Resource;
@@ -70,25 +87,25 @@ Relationship:
 	Exploits | Damages | Attacks | Argues;
 
 Wants:
-	type="wants" "(" source=[Thing] "," target=[Thing] ")";
+	type="wants" "(" source=[Actor] "," target=[Requirement] ")";
 
 Does:
-	type="does" "(" source=[Thing] "," target=[Thing] ")";
+	type="does" "(" source=[Actor] "," target=[Activity] ")";
 
 Decomposes:
-	type=DecomposesType "(" source=[Thing] "," target=[Thing] ")";
+	type=DecomposesType "(" source=[Requirement] "," target=[Requirement] ")";
 
 enum DecomposesType:
 	AND="and" | OR="or";
 
 Trusts:
-	type="trusts" "(" source=[Thing] "," target=[Thing] ")";
+	type="trusts" "(" source=[Actor] "," target=[Actor] ("," entity=[Thing])? ")";
 
 Delegates:
-	type="delegates" "(" source=[Thing] "," target=[Thing] ")";
+	type="delegates" "(" source=[Actor] "," target=[Actor] ("," entity=[Thing])? ")";
 
 Contributes:
-	type=ContributesType "(" source=[Thing] "," target=[Thing] ")";
+	type=ContributesType "(" source=[Requirement] "," target=[Requirement] ")";
 
 enum ContributesType:
 	HURT="-" | HELP="+" | BREAK="--" | MAKE="++";
@@ -100,22 +117,22 @@ enum FulfilsType:
 	Fulfils="fulfils";
 
 Provides:
-	type="provides" "(" source=[Thing] "," target=[Thing] ")";
+	type="provides" "(" source=[Process] "," target=[Resource] ")";
 
 Consumes:
-	type="consumes" "(" source=[Thing] "," target=[Thing] ")";
+	type="consumes" "(" source=[Process] "," target=[Resource] ")";
 
 Exploits:
-	type="exploits" "(" source=[Thing] "," target=[Thing] ")";
+	type="exploits" "(" source=[Attacker] "," target=[Process] ")";
 
 Damages:
-	type="damages" "(" source=[Thing] "," target=[Thing] ")";
+	type="damages" "(" source=[Attacker] "," target=[Asset] ")";
 
 Attacks:
-	type="attacks" "(" source=[Thing] "," target=[Thing] ")";
+	type="attacks" "(" source=[Attacker] "," target=[Process] ")";
 
 Argues:
-	type="argues" "(" source=[Thing] "," target=[Thing] ")";
+	type="argues" "(" source=[Proposition] "," target=[Proposition] ")";
 
 terminal ID:
 	('#' (!('#'))+ '#') | ('^'? ('a'..'z' | 'A'..'Z' | '_' | '.') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9' | '.')*);

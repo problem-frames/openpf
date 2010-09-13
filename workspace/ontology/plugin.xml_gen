@@ -6,8 +6,8 @@
   <extension point="org.eclipse.emf.ecore.generated_package">
     <package 
        uri = "http://securechange.eu/ontology" 
-       class = "eu.securechange.ontology.OntologyPackage"
-       genModel = "eu/securechange/Ontology.genmodel" /> 
+       class = "eu.securechange.ontology.ontology.OntologyPackage"
+       genModel = "eu/securechange/ontology/Ontology.genmodel" /> 
 	
   </extension>
 

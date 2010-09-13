@@ -20,12 +20,13 @@ Require-Bundle: org.eclipse.xtext,
  core;bundle-version="1.0.0"
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: eu.securechange,
- eu.securechange.services,
- eu.securechange.ontology,
- eu.securechange.ontology.impl,
- eu.securechange.ontology.util,
- eu.securechange.parseTreeConstruction,
- eu.securechange.parser.antlr,
- eu.securechange.parser.antlr.internal,
- eu.securechange.validation
+Export-Package: eu.securechange.ontology,
+ eu.securechange.ontology.services,
+ eu.securechange.ontology.ontology,
+ eu.securechange.ontology.ontology.impl,
+ eu.securechange.ontology.ontology.util,
+ eu.securechange.ontology.parseTreeConstruction,
+ eu.securechange.ontology.parser.antlr,
+ eu.securechange.ontology.parser.antlr.internal,
+ eu.securechange.ontology.validation
+
