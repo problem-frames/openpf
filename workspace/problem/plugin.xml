@@ -30,5 +30,7 @@
       <example file="library.problem"/>
       <example file="openpf.problem"/>
       <example file="SecuReqEngforEvolvingSys.pdf"/>
+      <example file="Problem.xtext"/>
+      <example file="Tun10SSIRI.pdf"/>
   </extension>
 </plugin>
