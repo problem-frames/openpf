@@ -52,7 +52,7 @@
         <page
             class="eu.securechange.ui.SituationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
             id="eu.securechange.Situation"
-            name="situation">
+            name="Situation">
             <keywordReference id="eu.securechange.ui.keyword_Situation"/>
         </page>
         <page
@@ -74,7 +74,7 @@
         point="org.eclipse.ui.keywords">
         <keyword
             id="eu.securechange.ui.keyword_Situation"
-            label="situation"/>
+            label="Situation"/>
     </extension>
     <extension
          point="org.eclipse.ui.commands">
@@ -177,5 +177,6 @@
             class="eu.securechange.ui.SituationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator">
       </markerResolutionGenerator>
    </extension>
+
 
 </plugin>

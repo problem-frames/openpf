@@ -18,9 +18,6 @@ import org.eclipse.xtext.scoping.IScope;
 
 import com.google.inject.Singleton;
 
-import eu.securechange.situation.Domain;
-import eu.securechange.situation.Entity;
-
 @Singleton
 public class SituationIDLinking extends DefaultLinkingService {
 	@Override

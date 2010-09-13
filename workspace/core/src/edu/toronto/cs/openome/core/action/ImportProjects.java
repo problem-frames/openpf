@@ -37,9 +37,6 @@ public class ImportProjects extends ExtensionReader implements org.eclipse.core.
 	   // Assume that dir is a directory.  List its contents.
 	   ArrayList<File> listed_files = new ArrayList<File>();
 	   File file = new File(string);
-	   if (file == null) {
-		   return listed_files;
-	   }
 	   File[] files;  // The names of the files in the directory.
 	   files = file.listFiles();
 	   if (files ==null)

@@ -8,7 +8,6 @@ package eu.securechange.situation.provider;
 
 
 import eu.securechange.situation.Domain;
-import eu.securechange.situation.DomainType;
 import eu.securechange.situation.SituationFactory;
 import eu.securechange.situation.SituationPackage;
 

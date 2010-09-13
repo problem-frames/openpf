@@ -30,7 +30,7 @@
             id="eu.securechange.situation.presentation.SituationEditorID"
             name="%_UI_SituationEditor_label"
             icon="icons/full/obj16/SituationModelFile.gif"
-            extensions="situation"
+            extensions="situation.xmi"
             class="eu.securechange.situation.presentation.SituationEditor"
             contributorClass="eu.securechange.situation.presentation.SituationActionBarContributor">
       </editor>

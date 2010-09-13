@@ -9,7 +9,7 @@
             class="eu.securechange.ontology.ui.OntologyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
             contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
             default="true"
-            extensions="ontology,situation"
+            extensions="ontology"
             id="eu.securechange.ontology.Ontology"
             name="Ontology Editor">
         </editor>
@@ -134,20 +134,6 @@
         <resourceServiceProvider
             class="eu.securechange.ontology.ui.OntologyExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
             uriExtension="ontology">
-        </resourceServiceProvider>
-    </extension>
-
-	<extension
-		point="org.eclipse.emf.ecore.extension_parser">
-		<parser
-			class="eu.securechange.ontology.ui.OntologyExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
-			type="situation">
-		</parser>
-	</extension>
-	<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
-        <resourceServiceProvider
-            class="eu.securechange.ontology.ui.OntologyExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
-            uriExtension="situation">
         </resourceServiceProvider>
     </extension>
 

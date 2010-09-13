@@ -18,9 +18,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
-import org.eclipse.ui.PlatformUI;
-import org.eclipse.ui.dialogs.SaveAsDialog;
 import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.resource.XtextResourceSet;
 import org.eclipse.xtext.ui.editor.XtextEditor;
@@ -121,34 +118,6 @@ public class SituationEditor extends XtextEditor {
 		String name = o.getName();
 		if (name.indexOf(" ") >= 0 && name.indexOf("#") < 0) {
 			o.setName("#" + name + "#");
-		}
-	}
-
-	private static URI warn_overwrite(IFile file) {
-		URI diagramURI;
-		IPath path;
-		SaveAsDialog fd = new SaveAsDialog(PlatformUI.getWorkbench()
-				.getDisplay().getActiveShell());
-		fd.setOriginalName(file.getName());
-		fd.setTitle("Please specify the diagram name to save!");
-		fd.open();
-		path = fd.getResult();
-		if (path != null) {
-			diagramURI = URI.createURI(path.toOSString());
-		} else {
-			diagramURI = null;
-		}
-		return diagramURI;
-	}
-
-	private static void save_emf(Resource xtextResource, String newfile) {
-		Resource xmiResource = new XMIResourceFactoryImpl().createResource(URI
-				.createURI(newfile + "uation"));
-		xmiResource.getContents().add(xtextResource.getContents().get(0));
-		try {
-			xmiResource.save(null);
-		} catch (IOException e) {
-			e.printStackTrace();
 		}
 	}
 
