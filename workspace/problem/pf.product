@@ -20,7 +20,9 @@
    <plugins>
       <plugin id="PF2EC"/>
       <plugin id="PF2EC.ui"/>
+<!--
       <plugin id="antlr.plugin"/>
+-->
       <plugin id="com.google.collect"/>
       <plugin id="com.google.inject"/>
       <plugin id="com.ibm.icu"/>
@@ -32,8 +34,11 @@
       <plugin id="event.ui"/>
       <plugin id="javax.servlet"/>
       <plugin id="javax.servlet.jsp"/>
+<!--
       <plugin id="javax.transaction" fragment="true"/>
+-->
       <plugin id="javax.xml"/>
+<!--
       <plugin id="laser.flavers.plugin"/>
       <plugin id="laser.juliette.archive"/>
       <plugin id="laser.littlejil"/>
@@ -59,6 +64,7 @@
       <plugin id="littlejil.analysis.trace"/>
       <plugin id="littlejil.analysis.trace.visualization"/>
       <plugin id="littlejil.analysis.translator"/>
+-->
       <plugin id="lpg.runtime.java"/>
       <plugin id="net.sourceforge.lpg.lpgjavaruntime"/>
       <plugin id="ontology"/>
@@ -284,8 +290,10 @@
       <plugin id="org.eclipse.swt.motif.solaris.sparc" fragment="true"/>
       <plugin id="org.eclipse.swt.win32.win32.x86" fragment="true"/>
       <plugin id="org.eclipse.swt.win32.win32.x86_64" fragment="true"/>
+<!--
       <plugin id="org.eclipse.swtbot.ant.optional.junit3" fragment="true"/>
       <plugin id="org.eclipse.swtbot.ant.optional.junit4" fragment="true"/>
+-->
       <plugin id="org.eclipse.team.core"/>
       <plugin id="org.eclipse.team.ui"/>
       <plugin id="org.eclipse.text"/>
@@ -315,10 +323,12 @@
       <plugin id="org.eclipse.update.core.linux" fragment="true"/>
       <plugin id="org.eclipse.update.core.win32" fragment="true"/>
       <plugin id="org.eclipse.update.ui"/>
+<!--
       <plugin id="org.eclipse.wst.common.core"/>
       <plugin id="org.eclipse.wst.common.uriresolver"/>
       <plugin id="org.eclipse.wst.sse.core"/>
       <plugin id="org.eclipse.wst.xml.core"/>
+-->
       <plugin id="org.eclipse.xpand"/>
       <plugin id="org.eclipse.xtend"/>
       <plugin id="org.eclipse.xtend.typesystem.emf"/>
@@ -350,9 +360,11 @@
       <plugin id="problem.editor"/>
       <plugin id="problem.generator"/>
       <plugin id="problem.ui"/>
+<!--
       <plugin id="process"/>
       <plugin id="process.edit"/>
       <plugin id="process.editor"/>
+-->
       <plugin id="situation"/>
       <plugin id="situation.diagram"/>
       <plugin id="situation.diagram.extensions"/>

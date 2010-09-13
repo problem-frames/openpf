@@ -1,6 +1,6 @@
 #!/bin/bash
 PRODUCT=problem
-VERSION=3.6
+VERSION=3.6pf
 export ECLIPSE_SDK=$HOME/IDE/sdk/$VERSION
 export ECLIPSE_HOME=$ECLIPSE_SDK/eclipse
 rm -rf configuration
