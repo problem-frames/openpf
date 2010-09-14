@@ -23,7 +23,7 @@ public class SituationFormatter extends AbstractDeclarativeFormatter {
 		c.setLinewrap(0, 1, 2).before(f.getSL_COMMENTRule());
 		c.setLinewrap(0, 1, 2).before(f.getML_COMMENTRule());
 		c.setLinewrap(0, 1, 1).after(f.getML_COMMENTRule());
-		c.setAutoLinewrap(120);
+		c.setAutoLinewrap(1200);
 		c.setLinewrap().before(f.getML_COMMENTRule());
 	    c.setLinewrap(2).before(f.getDomainRule());
 //	    c.setLinewrap().before(f.getEntityRule());
