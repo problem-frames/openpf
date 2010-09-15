@@ -22,24 +22,24 @@ import org.eclipse.emf.ecore.EClass;
 public class ArgumentImpl extends PropositionImpl implements Argument
 {
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected ArgumentImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return OntologyPackage.Literals.ARGUMENT;
-  }
+		return OntologyPackage.Literals.ARGUMENT;
+	}
 
 } //ArgumentImpl

@@ -96,10 +96,10 @@
        point="org.eclipse.core.runtime.products">
     <product
           application="org.eclipse.ui.ide.workbench"
-          name="ProblemFrames">
+          name="Problem Analysis Tool">
        <property
              name="appName"
-             value="ProblemFrames">
+             value="Problem Analysis Tool">
        </property>
        <property
              name="preferenceCustomization"

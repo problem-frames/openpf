@@ -22,24 +22,24 @@ import org.eclipse.emf.ecore.EClass;
 public class AssetImpl extends ResourceImpl implements Asset
 {
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected AssetImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return OntologyPackage.Literals.ASSET;
-  }
+		return OntologyPackage.Literals.ASSET;
+	}
 
 } //AssetImpl

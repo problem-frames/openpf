@@ -61,32 +61,44 @@ public class OntologyGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "World");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cWorldAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cPhysicalAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cPhysicalPhysicalWorldParserRuleCall_1_0 = (RuleCall)cPhysicalAssignment_1.eContents().get(0);
-		private final Assignment cBeliefAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cBeliefBeliefWorldParserRuleCall_2_0 = (RuleCall)cBeliefAssignment_2.eContents().get(0);
+		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
+		private final Assignment cEntitiesAssignment_1_0 = (Assignment)cAlternatives_1.eContents().get(0);
+		private final RuleCall cEntitiesEntityParserRuleCall_1_0_0 = (RuleCall)cEntitiesAssignment_1_0.eContents().get(0);
+		private final Assignment cDomainsAssignment_1_1 = (Assignment)cAlternatives_1.eContents().get(1);
+		private final RuleCall cDomainsDomainParserRuleCall_1_1_0 = (RuleCall)cDomainsAssignment_1_1.eContents().get(0);
+		private final Assignment cRelationshipsAssignment_1_2 = (Assignment)cAlternatives_1.eContents().get(2);
+		private final RuleCall cRelationshipsRelationshipParserRuleCall_1_2_0 = (RuleCall)cRelationshipsAssignment_1_2.eContents().get(0);
 		
 		//World:
-		//	{World} physical=PhysicalWorld? belief=BeliefWorld?;
+		//	{World} (entities+=Entity | domains+=Domain | relationships+=Relationship)*;
 		public ParserRule getRule() { return rule; }
 
-		//{World} physical=PhysicalWorld? belief=BeliefWorld?
+		//{World} (entities+=Entity | domains+=Domain | relationships+=Relationship)*
 		public Group getGroup() { return cGroup; }
 
 		//{World}
 		public Action getWorldAction_0() { return cWorldAction_0; }
 
-		//physical=PhysicalWorld?
-		public Assignment getPhysicalAssignment_1() { return cPhysicalAssignment_1; }
+		//(entities+=Entity | domains+=Domain | relationships+=Relationship)*
+		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 
-		//PhysicalWorld
-		public RuleCall getPhysicalPhysicalWorldParserRuleCall_1_0() { return cPhysicalPhysicalWorldParserRuleCall_1_0; }
+		//entities+=Entity
+		public Assignment getEntitiesAssignment_1_0() { return cEntitiesAssignment_1_0; }
 
-		//belief=BeliefWorld?
-		public Assignment getBeliefAssignment_2() { return cBeliefAssignment_2; }
+		//Entity
+		public RuleCall getEntitiesEntityParserRuleCall_1_0_0() { return cEntitiesEntityParserRuleCall_1_0_0; }
 
-		//BeliefWorld
-		public RuleCall getBeliefBeliefWorldParserRuleCall_2_0() { return cBeliefBeliefWorldParserRuleCall_2_0; }
+		//domains+=Domain
+		public Assignment getDomainsAssignment_1_1() { return cDomainsAssignment_1_1; }
+
+		//Domain
+		public RuleCall getDomainsDomainParserRuleCall_1_1_0() { return cDomainsDomainParserRuleCall_1_1_0; }
+
+		//relationships+=Relationship
+		public Assignment getRelationshipsAssignment_1_2() { return cRelationshipsAssignment_1_2; }
+
+		//Relationship
+		public RuleCall getRelationshipsRelationshipParserRuleCall_1_2_0() { return cRelationshipsRelationshipParserRuleCall_1_2_0; }
 	}
 
 	public class ThingElements extends AbstractParserRuleElementFinder {
@@ -157,66 +169,6 @@ public class OntologyGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getPropositionParserRuleCall_2() { return cPropositionParserRuleCall_2; }
 	}
 
-	public class PhysicalWorldElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "PhysicalWorld");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cPhysicalWorldAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cEntitiesAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cEntitiesEntityParserRuleCall_1_0 = (RuleCall)cEntitiesAssignment_1.eContents().get(0);
-		
-		//PhysicalWorld:
-		//	{PhysicalWorld} entities+=Entity*;
-		public ParserRule getRule() { return rule; }
-
-		//{PhysicalWorld} entities+=Entity*
-		public Group getGroup() { return cGroup; }
-
-		//{PhysicalWorld}
-		public Action getPhysicalWorldAction_0() { return cPhysicalWorldAction_0; }
-
-		//entities+=Entity*
-		public Assignment getEntitiesAssignment_1() { return cEntitiesAssignment_1; }
-
-		//Entity
-		public RuleCall getEntitiesEntityParserRuleCall_1_0() { return cEntitiesEntityParserRuleCall_1_0; }
-	}
-
-	public class BeliefWorldElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BeliefWorld");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cBeliefWorldAction_0 = (Action)cGroup.eContents().get(0);
-		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
-		private final Assignment cDomainsAssignment_1_0 = (Assignment)cAlternatives_1.eContents().get(0);
-		private final RuleCall cDomainsDomainParserRuleCall_1_0_0 = (RuleCall)cDomainsAssignment_1_0.eContents().get(0);
-		private final Assignment cRelationshipsAssignment_1_1 = (Assignment)cAlternatives_1.eContents().get(1);
-		private final RuleCall cRelationshipsRelationshipParserRuleCall_1_1_0 = (RuleCall)cRelationshipsAssignment_1_1.eContents().get(0);
-		
-		//BeliefWorld:
-		//	{BeliefWorld} (domains+=Domain | relationships+=Relationship)*;
-		public ParserRule getRule() { return rule; }
-
-		//{BeliefWorld} (domains+=Domain | relationships+=Relationship)*
-		public Group getGroup() { return cGroup; }
-
-		//{BeliefWorld}
-		public Action getBeliefWorldAction_0() { return cBeliefWorldAction_0; }
-
-		//(domains+=Domain | relationships+=Relationship)*
-		public Alternatives getAlternatives_1() { return cAlternatives_1; }
-
-		//domains+=Domain
-		public Assignment getDomainsAssignment_1_0() { return cDomainsAssignment_1_0; }
-
-		//Domain
-		public RuleCall getDomainsDomainParserRuleCall_1_0_0() { return cDomainsDomainParserRuleCall_1_0_0; }
-
-		//relationships+=Relationship
-		public Assignment getRelationshipsAssignment_1_1() { return cRelationshipsAssignment_1_1; }
-
-		//Relationship
-		public RuleCall getRelationshipsRelationshipParserRuleCall_1_1_0() { return cRelationshipsRelationshipParserRuleCall_1_1_0; }
-	}
-
 	public class DomainElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Domain");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -224,18 +176,16 @@ public class OntologyGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
 		private final Assignment cTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cTypeDomainTypeEnumRuleCall_1_0 = (RuleCall)cTypeAssignment_1.eContents().get(0);
-		private final Assignment cPropertiesAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cPropertiesPropositionParserRuleCall_2_0 = (RuleCall)cPropertiesAssignment_2.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cCommaKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cPropertiesAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cPropertiesPropositionParserRuleCall_3_1_0 = (RuleCall)cPropertiesAssignment_3_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cPropertiesAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cPropertiesPropositionParserRuleCall_2_1_0 = (RuleCall)cPropertiesAssignment_2_1.eContents().get(0);
 		
 		//Domain:
-		//	name=ID type=DomainType properties+=Proposition ("," properties+=Proposition)*;
+		//	name=ID type=DomainType (","? properties+=Proposition)*;
 		public ParserRule getRule() { return rule; }
 
-		//name=ID type=DomainType properties+=Proposition ("," properties+=Proposition)*
+		//name=ID type=DomainType (","? properties+=Proposition)*
 		public Group getGroup() { return cGroup; }
 
 		//name=ID
@@ -250,23 +200,17 @@ public class OntologyGrammarAccess extends AbstractGrammarElementFinder {
 		//DomainType
 		public RuleCall getTypeDomainTypeEnumRuleCall_1_0() { return cTypeDomainTypeEnumRuleCall_1_0; }
 
-		//properties+=Proposition
-		public Assignment getPropertiesAssignment_2() { return cPropertiesAssignment_2; }
+		//(","? properties+=Proposition)*
+		public Group getGroup_2() { return cGroup_2; }
 
-		//Proposition
-		public RuleCall getPropertiesPropositionParserRuleCall_2_0() { return cPropertiesPropositionParserRuleCall_2_0; }
-
-		//("," properties+=Proposition)*
-		public Group getGroup_3() { return cGroup_3; }
-
-		//","
-		public Keyword getCommaKeyword_3_0() { return cCommaKeyword_3_0; }
+		//","?
+		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
 
 		//properties+=Proposition
-		public Assignment getPropertiesAssignment_3_1() { return cPropertiesAssignment_3_1; }
+		public Assignment getPropertiesAssignment_2_1() { return cPropertiesAssignment_2_1; }
 
 		//Proposition
-		public RuleCall getPropertiesPropositionParserRuleCall_3_1_0() { return cPropertiesPropositionParserRuleCall_3_1_0; }
+		public RuleCall getPropertiesPropositionParserRuleCall_2_1_0() { return cPropertiesPropositionParserRuleCall_2_1_0; }
 	}
 
 	public class PropositionElements extends AbstractParserRuleElementFinder {
@@ -1245,9 +1189,13 @@ public class OntologyGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cTypeAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final Keyword cTypeProvidesKeyword_0_0 = (Keyword)cTypeAssignment_0.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cSourceAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final CrossReference cSourceProcessCrossReference_2_0 = (CrossReference)cSourceAssignment_2.eContents().get(0);
-		private final RuleCall cSourceProcessIDTerminalRuleCall_2_0_1 = (RuleCall)cSourceProcessCrossReference_2_0.eContents().get(1);
+		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
+		private final Assignment cSourceAssignment_2_0 = (Assignment)cAlternatives_2.eContents().get(0);
+		private final CrossReference cSourceProcessCrossReference_2_0_0 = (CrossReference)cSourceAssignment_2_0.eContents().get(0);
+		private final RuleCall cSourceProcessIDTerminalRuleCall_2_0_0_1 = (RuleCall)cSourceProcessCrossReference_2_0_0.eContents().get(1);
+		private final Assignment cSourceAssignment_2_1 = (Assignment)cAlternatives_2.eContents().get(1);
+		private final CrossReference cSourceActorCrossReference_2_1_0 = (CrossReference)cSourceAssignment_2_1.eContents().get(0);
+		private final RuleCall cSourceActorIDTerminalRuleCall_2_1_0_1 = (RuleCall)cSourceActorCrossReference_2_1_0.eContents().get(1);
 		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cTargetAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final CrossReference cTargetResourceCrossReference_4_0 = (CrossReference)cTargetAssignment_4.eContents().get(0);
@@ -1255,10 +1203,10 @@ public class OntologyGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightParenthesisKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Provides:
-		//	type="provides" "(" source=[Process] "," target=[Resource] ")";
+		//	type="provides" "(" (source=[Process] | source=[Actor]) "," target=[Resource] ")";
 		public ParserRule getRule() { return rule; }
 
-		//type="provides" "(" source=[Process] "," target=[Resource] ")"
+		//type="provides" "(" (source=[Process] | source=[Actor]) "," target=[Resource] ")"
 		public Group getGroup() { return cGroup; }
 
 		//type="provides"
@@ -1270,14 +1218,26 @@ public class OntologyGrammarAccess extends AbstractGrammarElementFinder {
 		//"("
 		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
 
+		//source=[Process] | source=[Actor]
+		public Alternatives getAlternatives_2() { return cAlternatives_2; }
+
 		//source=[Process]
-		public Assignment getSourceAssignment_2() { return cSourceAssignment_2; }
+		public Assignment getSourceAssignment_2_0() { return cSourceAssignment_2_0; }
 
 		//[Process]
-		public CrossReference getSourceProcessCrossReference_2_0() { return cSourceProcessCrossReference_2_0; }
+		public CrossReference getSourceProcessCrossReference_2_0_0() { return cSourceProcessCrossReference_2_0_0; }
 
 		//ID
-		public RuleCall getSourceProcessIDTerminalRuleCall_2_0_1() { return cSourceProcessIDTerminalRuleCall_2_0_1; }
+		public RuleCall getSourceProcessIDTerminalRuleCall_2_0_0_1() { return cSourceProcessIDTerminalRuleCall_2_0_0_1; }
+
+		//source=[Actor]
+		public Assignment getSourceAssignment_2_1() { return cSourceAssignment_2_1; }
+
+		//[Actor]
+		public CrossReference getSourceActorCrossReference_2_1_0() { return cSourceActorCrossReference_2_1_0; }
+
+		//ID
+		public RuleCall getSourceActorIDTerminalRuleCall_2_1_0_1() { return cSourceActorIDTerminalRuleCall_2_1_0_1; }
 
 		//","
 		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
@@ -1301,9 +1261,13 @@ public class OntologyGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cTypeAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final Keyword cTypeConsumesKeyword_0_0 = (Keyword)cTypeAssignment_0.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cSourceAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final CrossReference cSourceProcessCrossReference_2_0 = (CrossReference)cSourceAssignment_2.eContents().get(0);
-		private final RuleCall cSourceProcessIDTerminalRuleCall_2_0_1 = (RuleCall)cSourceProcessCrossReference_2_0.eContents().get(1);
+		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
+		private final Assignment cSourceAssignment_2_0 = (Assignment)cAlternatives_2.eContents().get(0);
+		private final CrossReference cSourceProcessCrossReference_2_0_0 = (CrossReference)cSourceAssignment_2_0.eContents().get(0);
+		private final RuleCall cSourceProcessIDTerminalRuleCall_2_0_0_1 = (RuleCall)cSourceProcessCrossReference_2_0_0.eContents().get(1);
+		private final Assignment cSourceAssignment_2_1 = (Assignment)cAlternatives_2.eContents().get(1);
+		private final CrossReference cSourceActorCrossReference_2_1_0 = (CrossReference)cSourceAssignment_2_1.eContents().get(0);
+		private final RuleCall cSourceActorIDTerminalRuleCall_2_1_0_1 = (RuleCall)cSourceActorCrossReference_2_1_0.eContents().get(1);
 		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cTargetAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final CrossReference cTargetResourceCrossReference_4_0 = (CrossReference)cTargetAssignment_4.eContents().get(0);
@@ -1311,10 +1275,10 @@ public class OntologyGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightParenthesisKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Consumes:
-		//	type="consumes" "(" source=[Process] "," target=[Resource] ")";
+		//	type="consumes" "(" (source=[Process] | source=[Actor]) "," target=[Resource] ")";
 		public ParserRule getRule() { return rule; }
 
-		//type="consumes" "(" source=[Process] "," target=[Resource] ")"
+		//type="consumes" "(" (source=[Process] | source=[Actor]) "," target=[Resource] ")"
 		public Group getGroup() { return cGroup; }
 
 		//type="consumes"
@@ -1326,14 +1290,26 @@ public class OntologyGrammarAccess extends AbstractGrammarElementFinder {
 		//"("
 		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
 
+		//source=[Process] | source=[Actor]
+		public Alternatives getAlternatives_2() { return cAlternatives_2; }
+
 		//source=[Process]
-		public Assignment getSourceAssignment_2() { return cSourceAssignment_2; }
+		public Assignment getSourceAssignment_2_0() { return cSourceAssignment_2_0; }
 
 		//[Process]
-		public CrossReference getSourceProcessCrossReference_2_0() { return cSourceProcessCrossReference_2_0; }
+		public CrossReference getSourceProcessCrossReference_2_0_0() { return cSourceProcessCrossReference_2_0_0; }
 
 		//ID
-		public RuleCall getSourceProcessIDTerminalRuleCall_2_0_1() { return cSourceProcessIDTerminalRuleCall_2_0_1; }
+		public RuleCall getSourceProcessIDTerminalRuleCall_2_0_0_1() { return cSourceProcessIDTerminalRuleCall_2_0_0_1; }
+
+		//source=[Actor]
+		public Assignment getSourceAssignment_2_1() { return cSourceAssignment_2_1; }
+
+		//[Actor]
+		public CrossReference getSourceActorCrossReference_2_1_0() { return cSourceActorCrossReference_2_1_0; }
+
+		//ID
+		public RuleCall getSourceActorIDTerminalRuleCall_2_1_0_1() { return cSourceActorIDTerminalRuleCall_2_1_0_1; }
 
 		//","
 		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
@@ -1705,8 +1681,6 @@ public class OntologyGrammarAccess extends AbstractGrammarElementFinder {
 	private ThingElements pThing;
 	private EventElements pEvent;
 	private ObjectElements pObject;
-	private PhysicalWorldElements pPhysicalWorld;
-	private BeliefWorldElements pBeliefWorld;
 	private DomainElements pDomain;
 	private DomainTypeElements unknownRuleDomainType;
 	private PropositionElements pProposition;
@@ -1778,7 +1752,7 @@ public class OntologyGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//World:
-	//	{World} physical=PhysicalWorld? belief=BeliefWorld?;
+	//	{World} (entities+=Entity | domains+=Domain | relationships+=Relationship)*;
 	public WorldElements getWorldAccess() {
 		return (pWorld != null) ? pWorld : (pWorld = new WorldElements());
 	}
@@ -1817,28 +1791,8 @@ public class OntologyGrammarAccess extends AbstractGrammarElementFinder {
 		return getObjectAccess().getRule();
 	}
 
-	//PhysicalWorld:
-	//	{PhysicalWorld} entities+=Entity*;
-	public PhysicalWorldElements getPhysicalWorldAccess() {
-		return (pPhysicalWorld != null) ? pPhysicalWorld : (pPhysicalWorld = new PhysicalWorldElements());
-	}
-	
-	public ParserRule getPhysicalWorldRule() {
-		return getPhysicalWorldAccess().getRule();
-	}
-
-	//BeliefWorld:
-	//	{BeliefWorld} (domains+=Domain | relationships+=Relationship)*;
-	public BeliefWorldElements getBeliefWorldAccess() {
-		return (pBeliefWorld != null) ? pBeliefWorld : (pBeliefWorld = new BeliefWorldElements());
-	}
-	
-	public ParserRule getBeliefWorldRule() {
-		return getBeliefWorldAccess().getRule();
-	}
-
 	//Domain:
-	//	name=ID type=DomainType properties+=Proposition ("," properties+=Proposition)*;
+	//	name=ID type=DomainType (","? properties+=Proposition)*;
 	public DomainElements getDomainAccess() {
 		return (pDomain != null) ? pDomain : (pDomain = new DomainElements());
 	}
@@ -2149,7 +2103,7 @@ public class OntologyGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Provides:
-	//	type="provides" "(" source=[Process] "," target=[Resource] ")";
+	//	type="provides" "(" (source=[Process] | source=[Actor]) "," target=[Resource] ")";
 	public ProvidesElements getProvidesAccess() {
 		return (pProvides != null) ? pProvides : (pProvides = new ProvidesElements());
 	}
@@ -2159,7 +2113,7 @@ public class OntologyGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Consumes:
-	//	type="consumes" "(" source=[Process] "," target=[Resource] ")";
+	//	type="consumes" "(" (source=[Process] | source=[Actor]) "," target=[Resource] ")";
 	public ConsumesElements getConsumesAccess() {
 		return (pConsumes != null) ? pConsumes : (pConsumes = new ConsumesElements());
 	}

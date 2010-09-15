@@ -47,25 +47,25 @@ T47 : 'damages' ;
 T48 : 'attacks' ;
 T49 : 'argues' ;
 
-// $ANTLR src "../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g" 720
+// $ANTLR src "../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g" 696
 RULE_ID : ('#' ~('#')+ '#'|'^'? ('a'..'z'|'A'..'Z'|'_'|'.') ('a'..'z'|'A'..'Z'|'_'|'0'..'9'|'.')*);
 
-// $ANTLR src "../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g" 722
+// $ANTLR src "../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g" 698
 RULE_INT : ('0'..'9')+;
 
-// $ANTLR src "../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g" 724
+// $ANTLR src "../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g" 700
 RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\'');
 
-// $ANTLR src "../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g" 726
+// $ANTLR src "../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g" 702
 RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 
-// $ANTLR src "../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g" 728
+// $ANTLR src "../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g" 704
 RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
-// $ANTLR src "../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g" 730
+// $ANTLR src "../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g" 706
 RULE_WS : (' '|'\t'|'\r'|'\n')+;
 
-// $ANTLR src "../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g" 732
+// $ANTLR src "../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g" 708
 RULE_ANY_OTHER : .;
 
 

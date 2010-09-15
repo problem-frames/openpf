@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/problem.feature_1.0.0.qualifier.jar" id="problem.feature" version="1.0.0.qualifier">
+      <category name="RE_Tools"/>
+   </feature>
+   <feature url="features/istar.feature_1.0.0.qualifier.jar" id="istar.feature" version="1.0.0.qualifier">
+      <category name="RE_Tools"/>
+   </feature>
+   <feature url="features/process.feature_1.0.0.qualifier.jar" id="process.feature" version="1.0.0.qualifier">
+      <category name="RE_Tools"/>
+   </feature>
+   <feature url="features/situation.feature_1.0.0.qualifier.jar" id="situation.feature" version="1.0.0.qualifier">
+      <category name="RE_Tools"/>
+   </feature>
+   <feature url="features/event.feature_1.0.0.qualifier.jar" id="event.feature" version="1.0.0.qualifier">
+      <category name="RE_Tools"/>
+   </feature>
+   <feature url="features/org.eclipse.emf_2.6.0.v20100614-1136.jar" id="org.eclipse.emf" version="2.6.0.v20100614-1136">
+      <category name="EnablingTools"/>
+   </feature>
+   <feature url="features/org.eclipse.gef_3.6.0.v20100519-2050-777B-81A2Bz-69793A8B83447.jar" id="org.eclipse.gef" version="3.6.0.v20100519-2050-777B-81A2Bz-69793A8B83447">
+      <category name="EnablingTools"/>
+   </feature>
+   <feature url="features/org.eclipse.draw2d_3.6.0.v20100519-2050-45-7w3121163602336.jar" id="org.eclipse.draw2d" version="3.6.0.v20100519-2050-45-7w3121163602336">
+      <category name="EnablingTools"/>
+   </feature>
+   <feature url="features/org.eclipse.gmf_1.4.0.v20100603-2230-7d98-FYnmMCGUhhvqV4nR2tsgWcV.jar" id="org.eclipse.gmf" version="1.4.0.v20100603-2230-7d98-FYnmMCGUhhvqV4nR2tsgWcV">
+      <category name="EnablingTools"/>
+   </feature>
+   <feature url="features/org.eclipse.xtext.sdk_1.0.0.v201006170321.jar" id="org.eclipse.xtext.sdk" version="1.0.0.v201006170321">
+      <category name="EnablingTools"/>
+   </feature>
+   <feature url="features/org.eclipse.platform_3.6.0.v20100602-9gF78GpqFt6trOGhL60z0oEx3fz-JKNwxPY.jar" id="org.eclipse.platform" version="3.6.0.v20100602-9gF78GpqFt6trOGhL60z0oEx3fz-JKNwxPY">
+      <category name="EnablingTools"/>
+   </feature>
+   <feature url="features/org.eclipse.rcp_3.6.0.v20100519-9OArFKvFtsd7WLUKh-DcYTS.jar" id="org.eclipse.rcp" version="3.6.0.v20100519-9OArFKvFtsd7WLUKh-DcYTS">
+      <category name="EnablingTools"/>
+   </feature>
+   <feature url="features/org.eclipse.pde_3.6.0.v20100525-7b7mFKtFEx2XmfZ4_B7NUJA.jar" id="org.eclipse.pde" version="3.6.0.v20100525-7b7mFKtFEx2XmfZ4_B7NUJA">
+      <category name="EnablingTools"/>
+   </feature>
+   <feature url="features/org.eclipse.acceleo_3.0.0.v201006150906.jar" id="org.eclipse.acceleo" version="3.0.0.v201006150906">
+      <category name="EnablingTools"/>
+   </feature>
+   <category-def name="RE_Tools" label="Open Requirements Engineering Tools"/>
+   <category-def name="EnablingTools" label="Enabling Tools"/>
+</site>

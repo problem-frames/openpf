@@ -427,40 +427,16 @@ ruleDomain returns [EObject current=null]
 	    }
 
 )
-)(
-(
-		{ 
-	        currentNode=createCompositeNode(grammarAccess.getDomainAccess().getPropertiesEntityParserRuleCall_2_0(), currentNode); 
-	    }
-		lv_properties_2_0=ruleEntity		{
-	        if ($current==null) {
-	            $current = factory.create(grammarAccess.getDomainRule().getType().getClassifier());
-	            associateNodeWithAstElement(currentNode.getParent(), $current);
-	        }
-	        try {
-	       		add(
-	       			$current, 
-	       			"properties",
-	        		lv_properties_2_0, 
-	        		"Entity", 
-	        		currentNode);
-	        } catch (ValueConverterException vce) {
-				handleValueConverterException(vce);
-	        }
-	        currentNode = currentNode.getParent();
-	    }
-
-)
-)(	',' 
+)((	',' 
     {
-        createLeafNode(grammarAccess.getDomainAccess().getCommaKeyword_3_0(), null); 
+        createLeafNode(grammarAccess.getDomainAccess().getCommaKeyword_2_0(), null); 
     }
-(
+)?(
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getDomainAccess().getPropertiesEntityParserRuleCall_3_1_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getDomainAccess().getPropertiesEntityParserRuleCall_2_1_0(), currentNode); 
 	    }
-		lv_properties_4_0=ruleEntity		{
+		lv_properties_3_0=ruleEntity		{
 	        if ($current==null) {
 	            $current = factory.create(grammarAccess.getDomainRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode.getParent(), $current);
@@ -469,7 +445,7 @@ ruleDomain returns [EObject current=null]
 	       		add(
 	       			$current, 
 	       			"properties",
-	        		lv_properties_4_0, 
+	        		lv_properties_3_0, 
 	        		"Entity", 
 	        		currentNode);
 	        } catch (ValueConverterException vce) {

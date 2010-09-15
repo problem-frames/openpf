@@ -22,24 +22,24 @@ import org.eclipse.emf.ecore.EClass;
 public class EntityImpl extends ObjectImpl implements Entity
 {
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected EntityImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return OntologyPackage.Literals.ENTITY;
-  }
+		return OntologyPackage.Literals.ENTITY;
+	}
 
 } //EntityImpl

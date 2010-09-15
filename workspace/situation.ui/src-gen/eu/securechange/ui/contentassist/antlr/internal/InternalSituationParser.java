@@ -2897,21 +2897,17 @@ public class InternalSituationParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start rule__Domain__Group__2
-    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1023:1: rule__Domain__Group__2 : rule__Domain__Group__2__Impl rule__Domain__Group__3 ;
+    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1023:1: rule__Domain__Group__2 : rule__Domain__Group__2__Impl ;
     public final void rule__Domain__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1027:1: ( rule__Domain__Group__2__Impl rule__Domain__Group__3 )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1028:2: rule__Domain__Group__2__Impl rule__Domain__Group__3
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1027:1: ( rule__Domain__Group__2__Impl )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1028:2: rule__Domain__Group__2__Impl
             {
             pushFollow(FOLLOW_rule__Domain__Group__2__Impl_in_rule__Domain__Group__22227);
             rule__Domain__Group__2__Impl();
-            _fsp--;
-
-            pushFollow(FOLLOW_rule__Domain__Group__3_in_rule__Domain__Group__22230);
-            rule__Domain__Group__3();
             _fsp--;
 
 
@@ -2933,30 +2929,204 @@ public class InternalSituationParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start rule__Domain__Group__2__Impl
-    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1035:1: rule__Domain__Group__2__Impl : ( ( rule__Domain__PropertiesAssignment_2 ) ) ;
+    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1034:1: rule__Domain__Group__2__Impl : ( ( rule__Domain__Group_2__0 )* ) ;
     public final void rule__Domain__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1039:1: ( ( ( rule__Domain__PropertiesAssignment_2 ) ) )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1040:1: ( ( rule__Domain__PropertiesAssignment_2 ) )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1038:1: ( ( ( rule__Domain__Group_2__0 )* ) )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1039:1: ( ( rule__Domain__Group_2__0 )* )
             {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1040:1: ( ( rule__Domain__PropertiesAssignment_2 ) )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1041:1: ( rule__Domain__PropertiesAssignment_2 )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1039:1: ( ( rule__Domain__Group_2__0 )* )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1040:1: ( rule__Domain__Group_2__0 )*
             {
-             before(grammarAccess.getDomainAccess().getPropertiesAssignment_2()); 
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1042:1: ( rule__Domain__PropertiesAssignment_2 )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1042:2: rule__Domain__PropertiesAssignment_2
-            {
-            pushFollow(FOLLOW_rule__Domain__PropertiesAssignment_2_in_rule__Domain__Group__2__Impl2257);
-            rule__Domain__PropertiesAssignment_2();
-            _fsp--;
+             before(grammarAccess.getDomainAccess().getGroup_2()); 
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1041:1: ( rule__Domain__Group_2__0 )*
+            loop7:
+            do {
+                int alt7=2;
+                switch ( input.LA(1) ) {
+                case 11:
+                    {
+                    int LA7_2 = input.LA(2);
+
+                    if ( (LA7_2==RULE_ID) ) {
+                        alt7=1;
+                    }
 
 
-            }
+                    }
+                    break;
+                case 12:
+                    {
+                    int LA7_3 = input.LA(2);
 
-             after(grammarAccess.getDomainAccess().getPropertiesAssignment_2()); 
+                    if ( (LA7_3==RULE_ID) ) {
+                        alt7=1;
+                    }
+
+
+                    }
+                    break;
+                case 13:
+                    {
+                    int LA7_4 = input.LA(2);
+
+                    if ( (LA7_4==RULE_ID) ) {
+                        alt7=1;
+                    }
+
+
+                    }
+                    break;
+                case 14:
+                    {
+                    int LA7_5 = input.LA(2);
+
+                    if ( (LA7_5==RULE_ID) ) {
+                        alt7=1;
+                    }
+
+
+                    }
+                    break;
+                case 15:
+                    {
+                    int LA7_6 = input.LA(2);
+
+                    if ( (LA7_6==RULE_ID) ) {
+                        alt7=1;
+                    }
+
+
+                    }
+                    break;
+                case 16:
+                    {
+                    int LA7_7 = input.LA(2);
+
+                    if ( (LA7_7==RULE_ID) ) {
+                        alt7=1;
+                    }
+
+
+                    }
+                    break;
+                case 17:
+                    {
+                    int LA7_8 = input.LA(2);
+
+                    if ( (LA7_8==RULE_ID) ) {
+                        alt7=1;
+                    }
+
+
+                    }
+                    break;
+                case 18:
+                    {
+                    int LA7_9 = input.LA(2);
+
+                    if ( (LA7_9==RULE_ID) ) {
+                        alt7=1;
+                    }
+
+
+                    }
+                    break;
+                case 19:
+                    {
+                    int LA7_10 = input.LA(2);
+
+                    if ( (LA7_10==RULE_ID) ) {
+                        alt7=1;
+                    }
+
+
+                    }
+                    break;
+                case 20:
+                    {
+                    int LA7_11 = input.LA(2);
+
+                    if ( (LA7_11==RULE_ID) ) {
+                        alt7=1;
+                    }
+
+
+                    }
+                    break;
+                case 21:
+                    {
+                    int LA7_12 = input.LA(2);
+
+                    if ( (LA7_12==RULE_ID) ) {
+                        alt7=1;
+                    }
+
+
+                    }
+                    break;
+                case 22:
+                    {
+                    int LA7_13 = input.LA(2);
+
+                    if ( (LA7_13==RULE_ID) ) {
+                        alt7=1;
+                    }
+
+
+                    }
+                    break;
+                case 23:
+                    {
+                    int LA7_14 = input.LA(2);
+
+                    if ( (LA7_14==RULE_ID) ) {
+                        alt7=1;
+                    }
+
+
+                    }
+                    break;
+                case 24:
+                    {
+                    int LA7_15 = input.LA(2);
+
+                    if ( (LA7_15==RULE_ID) ) {
+                        alt7=1;
+                    }
+
+
+                    }
+                    break;
+                case 48:
+                    {
+                    alt7=1;
+                    }
+                    break;
+
+                }
+
+                switch (alt7) {
+            	case 1 :
+            	    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1041:2: rule__Domain__Group_2__0
+            	    {
+            	    pushFollow(FOLLOW_rule__Domain__Group_2__0_in_rule__Domain__Group__2__Impl2254);
+            	    rule__Domain__Group_2__0();
+            	    _fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop7;
+                }
+            } while (true);
+
+             after(grammarAccess.getDomainAccess().getGroup_2()); 
 
             }
 
@@ -2978,18 +3148,22 @@ public class InternalSituationParser extends AbstractInternalContentAssistParser
     // $ANTLR end rule__Domain__Group__2__Impl
 
 
-    // $ANTLR start rule__Domain__Group__3
-    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1052:1: rule__Domain__Group__3 : rule__Domain__Group__3__Impl ;
-    public final void rule__Domain__Group__3() throws RecognitionException {
+    // $ANTLR start rule__Domain__Group_2__0
+    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1057:1: rule__Domain__Group_2__0 : rule__Domain__Group_2__0__Impl rule__Domain__Group_2__1 ;
+    public final void rule__Domain__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1056:1: ( rule__Domain__Group__3__Impl )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1057:2: rule__Domain__Group__3__Impl
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1061:1: ( rule__Domain__Group_2__0__Impl rule__Domain__Group_2__1 )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1062:2: rule__Domain__Group_2__0__Impl rule__Domain__Group_2__1
             {
-            pushFollow(FOLLOW_rule__Domain__Group__3__Impl_in_rule__Domain__Group__32287);
-            rule__Domain__Group__3__Impl();
+            pushFollow(FOLLOW_rule__Domain__Group_2__0__Impl_in_rule__Domain__Group_2__02291);
+            rule__Domain__Group_2__0__Impl();
+            _fsp--;
+
+            pushFollow(FOLLOW_rule__Domain__Group_2__1_in_rule__Domain__Group_2__02294);
+            rule__Domain__Group_2__1();
             _fsp--;
 
 
@@ -3007,52 +3181,42 @@ public class InternalSituationParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end rule__Domain__Group__3
+    // $ANTLR end rule__Domain__Group_2__0
 
 
-    // $ANTLR start rule__Domain__Group__3__Impl
-    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1063:1: rule__Domain__Group__3__Impl : ( ( rule__Domain__Group_3__0 )* ) ;
-    public final void rule__Domain__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start rule__Domain__Group_2__0__Impl
+    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1069:1: rule__Domain__Group_2__0__Impl : ( ( ',' )? ) ;
+    public final void rule__Domain__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1067:1: ( ( ( rule__Domain__Group_3__0 )* ) )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1068:1: ( ( rule__Domain__Group_3__0 )* )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1073:1: ( ( ( ',' )? ) )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1074:1: ( ( ',' )? )
             {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1068:1: ( ( rule__Domain__Group_3__0 )* )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1069:1: ( rule__Domain__Group_3__0 )*
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1074:1: ( ( ',' )? )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1075:1: ( ',' )?
             {
-             before(grammarAccess.getDomainAccess().getGroup_3()); 
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1070:1: ( rule__Domain__Group_3__0 )*
-            loop7:
-            do {
-                int alt7=2;
-                int LA7_0 = input.LA(1);
+             before(grammarAccess.getDomainAccess().getCommaKeyword_2_0()); 
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1076:1: ( ',' )?
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-                if ( (LA7_0==48) ) {
-                    alt7=1;
-                }
+            if ( (LA8_0==48) ) {
+                alt8=1;
+            }
+            switch (alt8) {
+                case 1 :
+                    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1077:2: ','
+                    {
+                    match(input,48,FOLLOW_48_in_rule__Domain__Group_2__0__Impl2323); 
 
+                    }
+                    break;
 
-                switch (alt7) {
-            	case 1 :
-            	    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1070:2: rule__Domain__Group_3__0
-            	    {
-            	    pushFollow(FOLLOW_rule__Domain__Group_3__0_in_rule__Domain__Group__3__Impl2314);
-            	    rule__Domain__Group_3__0();
-            	    _fsp--;
+            }
 
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop7;
-                }
-            } while (true);
-
-             after(grammarAccess.getDomainAccess().getGroup_3()); 
+             after(grammarAccess.getDomainAccess().getCommaKeyword_2_0()); 
 
             }
 
@@ -3071,25 +3235,21 @@ public class InternalSituationParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end rule__Domain__Group__3__Impl
+    // $ANTLR end rule__Domain__Group_2__0__Impl
 
 
-    // $ANTLR start rule__Domain__Group_3__0
-    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1088:1: rule__Domain__Group_3__0 : rule__Domain__Group_3__0__Impl rule__Domain__Group_3__1 ;
-    public final void rule__Domain__Group_3__0() throws RecognitionException {
+    // $ANTLR start rule__Domain__Group_2__1
+    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1088:1: rule__Domain__Group_2__1 : rule__Domain__Group_2__1__Impl ;
+    public final void rule__Domain__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1092:1: ( rule__Domain__Group_3__0__Impl rule__Domain__Group_3__1 )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1093:2: rule__Domain__Group_3__0__Impl rule__Domain__Group_3__1
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1092:1: ( rule__Domain__Group_2__1__Impl )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1093:2: rule__Domain__Group_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Domain__Group_3__0__Impl_in_rule__Domain__Group_3__02353);
-            rule__Domain__Group_3__0__Impl();
-            _fsp--;
-
-            pushFollow(FOLLOW_rule__Domain__Group_3__1_in_rule__Domain__Group_3__02356);
-            rule__Domain__Group_3__1();
+            pushFollow(FOLLOW_rule__Domain__Group_2__1__Impl_in_rule__Domain__Group_2__12356);
+            rule__Domain__Group_2__1__Impl();
             _fsp--;
 
 
@@ -3107,103 +3267,34 @@ public class InternalSituationParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end rule__Domain__Group_3__0
+    // $ANTLR end rule__Domain__Group_2__1
 
 
-    // $ANTLR start rule__Domain__Group_3__0__Impl
-    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1100:1: rule__Domain__Group_3__0__Impl : ( ',' ) ;
-    public final void rule__Domain__Group_3__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1104:1: ( ( ',' ) )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1105:1: ( ',' )
-            {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1105:1: ( ',' )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1106:1: ','
-            {
-             before(grammarAccess.getDomainAccess().getCommaKeyword_3_0()); 
-            match(input,48,FOLLOW_48_in_rule__Domain__Group_3__0__Impl2384); 
-             after(grammarAccess.getDomainAccess().getCommaKeyword_3_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__Domain__Group_3__0__Impl
-
-
-    // $ANTLR start rule__Domain__Group_3__1
-    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1119:1: rule__Domain__Group_3__1 : rule__Domain__Group_3__1__Impl ;
-    public final void rule__Domain__Group_3__1() throws RecognitionException {
+    // $ANTLR start rule__Domain__Group_2__1__Impl
+    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1099:1: rule__Domain__Group_2__1__Impl : ( ( rule__Domain__PropertiesAssignment_2_1 ) ) ;
+    public final void rule__Domain__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1123:1: ( rule__Domain__Group_3__1__Impl )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1124:2: rule__Domain__Group_3__1__Impl
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1103:1: ( ( ( rule__Domain__PropertiesAssignment_2_1 ) ) )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1104:1: ( ( rule__Domain__PropertiesAssignment_2_1 ) )
             {
-            pushFollow(FOLLOW_rule__Domain__Group_3__1__Impl_in_rule__Domain__Group_3__12415);
-            rule__Domain__Group_3__1__Impl();
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1104:1: ( ( rule__Domain__PropertiesAssignment_2_1 ) )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1105:1: ( rule__Domain__PropertiesAssignment_2_1 )
+            {
+             before(grammarAccess.getDomainAccess().getPropertiesAssignment_2_1()); 
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1106:1: ( rule__Domain__PropertiesAssignment_2_1 )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1106:2: rule__Domain__PropertiesAssignment_2_1
+            {
+            pushFollow(FOLLOW_rule__Domain__PropertiesAssignment_2_1_in_rule__Domain__Group_2__1__Impl2383);
+            rule__Domain__PropertiesAssignment_2_1();
             _fsp--;
 
 
             }
 
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__Domain__Group_3__1
-
-
-    // $ANTLR start rule__Domain__Group_3__1__Impl
-    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1130:1: rule__Domain__Group_3__1__Impl : ( ( rule__Domain__PropertiesAssignment_3_1 ) ) ;
-    public final void rule__Domain__Group_3__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1134:1: ( ( ( rule__Domain__PropertiesAssignment_3_1 ) ) )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1135:1: ( ( rule__Domain__PropertiesAssignment_3_1 ) )
-            {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1135:1: ( ( rule__Domain__PropertiesAssignment_3_1 ) )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1136:1: ( rule__Domain__PropertiesAssignment_3_1 )
-            {
-             before(grammarAccess.getDomainAccess().getPropertiesAssignment_3_1()); 
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1137:1: ( rule__Domain__PropertiesAssignment_3_1 )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1137:2: rule__Domain__PropertiesAssignment_3_1
-            {
-            pushFollow(FOLLOW_rule__Domain__PropertiesAssignment_3_1_in_rule__Domain__Group_3__1__Impl2442);
-            rule__Domain__PropertiesAssignment_3_1();
-            _fsp--;
-
-
-            }
-
-             after(grammarAccess.getDomainAccess().getPropertiesAssignment_3_1()); 
+             after(grammarAccess.getDomainAccess().getPropertiesAssignment_2_1()); 
 
             }
 
@@ -3222,24 +3313,24 @@ public class InternalSituationParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end rule__Domain__Group_3__1__Impl
+    // $ANTLR end rule__Domain__Group_2__1__Impl
 
 
     // $ANTLR start rule__Situation__TimeAssignment_0_1
-    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1152:1: rule__Situation__TimeAssignment_0_1 : ( RULE_ID ) ;
+    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1121:1: rule__Situation__TimeAssignment_0_1 : ( RULE_ID ) ;
     public final void rule__Situation__TimeAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1156:1: ( ( RULE_ID ) )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1157:1: ( RULE_ID )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1125:1: ( ( RULE_ID ) )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1126:1: ( RULE_ID )
             {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1157:1: ( RULE_ID )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1158:1: RULE_ID
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1126:1: ( RULE_ID )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1127:1: RULE_ID
             {
              before(grammarAccess.getSituationAccess().getTimeIDTerminalRuleCall_0_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Situation__TimeAssignment_0_12481); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Situation__TimeAssignment_0_12422); 
              after(grammarAccess.getSituationAccess().getTimeIDTerminalRuleCall_0_1_0()); 
 
             }
@@ -3263,20 +3354,20 @@ public class InternalSituationParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start rule__Situation__ThingsAssignment_1
-    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1167:1: rule__Situation__ThingsAssignment_1 : ( ruleThing ) ;
+    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1136:1: rule__Situation__ThingsAssignment_1 : ( ruleThing ) ;
     public final void rule__Situation__ThingsAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1171:1: ( ( ruleThing ) )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1172:1: ( ruleThing )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1140:1: ( ( ruleThing ) )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1141:1: ( ruleThing )
             {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1172:1: ( ruleThing )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1173:1: ruleThing
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1141:1: ( ruleThing )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1142:1: ruleThing
             {
              before(grammarAccess.getSituationAccess().getThingsThingParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleThing_in_rule__Situation__ThingsAssignment_12512);
+            pushFollow(FOLLOW_ruleThing_in_rule__Situation__ThingsAssignment_12453);
             ruleThing();
             _fsp--;
 
@@ -3303,20 +3394,20 @@ public class InternalSituationParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start rule__Entity__TypeAssignment_0
-    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1182:1: rule__Entity__TypeAssignment_0 : ( ruleEntityType ) ;
+    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1151:1: rule__Entity__TypeAssignment_0 : ( ruleEntityType ) ;
     public final void rule__Entity__TypeAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1186:1: ( ( ruleEntityType ) )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1187:1: ( ruleEntityType )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1155:1: ( ( ruleEntityType ) )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1156:1: ( ruleEntityType )
             {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1187:1: ( ruleEntityType )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1188:1: ruleEntityType
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1156:1: ( ruleEntityType )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1157:1: ruleEntityType
             {
              before(grammarAccess.getEntityAccess().getTypeEntityTypeEnumRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleEntityType_in_rule__Entity__TypeAssignment_02543);
+            pushFollow(FOLLOW_ruleEntityType_in_rule__Entity__TypeAssignment_02484);
             ruleEntityType();
             _fsp--;
 
@@ -3343,20 +3434,20 @@ public class InternalSituationParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start rule__Entity__NameAssignment_1
-    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1197:1: rule__Entity__NameAssignment_1 : ( RULE_ID ) ;
+    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1166:1: rule__Entity__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Entity__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1201:1: ( ( RULE_ID ) )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1202:1: ( RULE_ID )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1170:1: ( ( RULE_ID ) )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1171:1: ( RULE_ID )
             {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1202:1: ( RULE_ID )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1203:1: RULE_ID
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1171:1: ( RULE_ID )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1172:1: RULE_ID
             {
              before(grammarAccess.getEntityAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Entity__NameAssignment_12574); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Entity__NameAssignment_12515); 
              after(grammarAccess.getEntityAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -3380,20 +3471,20 @@ public class InternalSituationParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start rule__Relationship__TypeAssignment_0
-    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1212:1: rule__Relationship__TypeAssignment_0 : ( ruleRelationshipType ) ;
+    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1181:1: rule__Relationship__TypeAssignment_0 : ( ruleRelationshipType ) ;
     public final void rule__Relationship__TypeAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1216:1: ( ( ruleRelationshipType ) )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1217:1: ( ruleRelationshipType )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1185:1: ( ( ruleRelationshipType ) )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1186:1: ( ruleRelationshipType )
             {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1217:1: ( ruleRelationshipType )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1218:1: ruleRelationshipType
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1186:1: ( ruleRelationshipType )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1187:1: ruleRelationshipType
             {
              before(grammarAccess.getRelationshipAccess().getTypeRelationshipTypeEnumRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleRelationshipType_in_rule__Relationship__TypeAssignment_02605);
+            pushFollow(FOLLOW_ruleRelationshipType_in_rule__Relationship__TypeAssignment_02546);
             ruleRelationshipType();
             _fsp--;
 
@@ -3420,24 +3511,24 @@ public class InternalSituationParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start rule__Relationship__SourceAssignment_2
-    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1227:1: rule__Relationship__SourceAssignment_2 : ( ( RULE_ID ) ) ;
+    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1196:1: rule__Relationship__SourceAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__Relationship__SourceAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1231:1: ( ( ( RULE_ID ) ) )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1232:1: ( ( RULE_ID ) )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1200:1: ( ( ( RULE_ID ) ) )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1201:1: ( ( RULE_ID ) )
             {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1232:1: ( ( RULE_ID ) )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1233:1: ( RULE_ID )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1201:1: ( ( RULE_ID ) )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1202:1: ( RULE_ID )
             {
              before(grammarAccess.getRelationshipAccess().getSourceThingCrossReference_2_0()); 
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1234:1: ( RULE_ID )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1235:1: RULE_ID
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1203:1: ( RULE_ID )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1204:1: RULE_ID
             {
              before(grammarAccess.getRelationshipAccess().getSourceThingIDTerminalRuleCall_2_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Relationship__SourceAssignment_22640); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Relationship__SourceAssignment_22581); 
              after(grammarAccess.getRelationshipAccess().getSourceThingIDTerminalRuleCall_2_0_1()); 
 
             }
@@ -3465,24 +3556,24 @@ public class InternalSituationParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start rule__Relationship__TargetAssignment_4
-    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1246:1: rule__Relationship__TargetAssignment_4 : ( ( RULE_ID ) ) ;
+    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1215:1: rule__Relationship__TargetAssignment_4 : ( ( RULE_ID ) ) ;
     public final void rule__Relationship__TargetAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1250:1: ( ( ( RULE_ID ) ) )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1251:1: ( ( RULE_ID ) )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1219:1: ( ( ( RULE_ID ) ) )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1220:1: ( ( RULE_ID ) )
             {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1251:1: ( ( RULE_ID ) )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1252:1: ( RULE_ID )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1220:1: ( ( RULE_ID ) )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1221:1: ( RULE_ID )
             {
              before(grammarAccess.getRelationshipAccess().getTargetThingCrossReference_4_0()); 
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1253:1: ( RULE_ID )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1254:1: RULE_ID
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1222:1: ( RULE_ID )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1223:1: RULE_ID
             {
              before(grammarAccess.getRelationshipAccess().getTargetThingIDTerminalRuleCall_4_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Relationship__TargetAssignment_42679); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Relationship__TargetAssignment_42620); 
              after(grammarAccess.getRelationshipAccess().getTargetThingIDTerminalRuleCall_4_0_1()); 
 
             }
@@ -3510,20 +3601,20 @@ public class InternalSituationParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start rule__Domain__NameAssignment_0
-    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1265:1: rule__Domain__NameAssignment_0 : ( RULE_ID ) ;
+    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1234:1: rule__Domain__NameAssignment_0 : ( RULE_ID ) ;
     public final void rule__Domain__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1269:1: ( ( RULE_ID ) )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1270:1: ( RULE_ID )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1238:1: ( ( RULE_ID ) )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1239:1: ( RULE_ID )
             {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1270:1: ( RULE_ID )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1271:1: RULE_ID
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1239:1: ( RULE_ID )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1240:1: RULE_ID
             {
              before(grammarAccess.getDomainAccess().getNameIDTerminalRuleCall_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Domain__NameAssignment_02714); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Domain__NameAssignment_02655); 
              after(grammarAccess.getDomainAccess().getNameIDTerminalRuleCall_0_0()); 
 
             }
@@ -3547,20 +3638,20 @@ public class InternalSituationParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start rule__Domain__TypeAssignment_1
-    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1280:1: rule__Domain__TypeAssignment_1 : ( ruleDomainType ) ;
+    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1249:1: rule__Domain__TypeAssignment_1 : ( ruleDomainType ) ;
     public final void rule__Domain__TypeAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1284:1: ( ( ruleDomainType ) )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1285:1: ( ruleDomainType )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1253:1: ( ( ruleDomainType ) )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1254:1: ( ruleDomainType )
             {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1285:1: ( ruleDomainType )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1286:1: ruleDomainType
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1254:1: ( ruleDomainType )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1255:1: ruleDomainType
             {
              before(grammarAccess.getDomainAccess().getTypeDomainTypeEnumRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleDomainType_in_rule__Domain__TypeAssignment_12745);
+            pushFollow(FOLLOW_ruleDomainType_in_rule__Domain__TypeAssignment_12686);
             ruleDomainType();
             _fsp--;
 
@@ -3586,25 +3677,25 @@ public class InternalSituationParser extends AbstractInternalContentAssistParser
     // $ANTLR end rule__Domain__TypeAssignment_1
 
 
-    // $ANTLR start rule__Domain__PropertiesAssignment_2
-    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1295:1: rule__Domain__PropertiesAssignment_2 : ( ruleEntity ) ;
-    public final void rule__Domain__PropertiesAssignment_2() throws RecognitionException {
+    // $ANTLR start rule__Domain__PropertiesAssignment_2_1
+    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1264:1: rule__Domain__PropertiesAssignment_2_1 : ( ruleEntity ) ;
+    public final void rule__Domain__PropertiesAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1299:1: ( ( ruleEntity ) )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1300:1: ( ruleEntity )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1268:1: ( ( ruleEntity ) )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1269:1: ( ruleEntity )
             {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1300:1: ( ruleEntity )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1301:1: ruleEntity
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1269:1: ( ruleEntity )
+            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1270:1: ruleEntity
             {
-             before(grammarAccess.getDomainAccess().getPropertiesEntityParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleEntity_in_rule__Domain__PropertiesAssignment_22776);
+             before(grammarAccess.getDomainAccess().getPropertiesEntityParserRuleCall_2_1_0()); 
+            pushFollow(FOLLOW_ruleEntity_in_rule__Domain__PropertiesAssignment_2_12717);
             ruleEntity();
             _fsp--;
 
-             after(grammarAccess.getDomainAccess().getPropertiesEntityParserRuleCall_2_0()); 
+             after(grammarAccess.getDomainAccess().getPropertiesEntityParserRuleCall_2_1_0()); 
 
             }
 
@@ -3623,47 +3714,7 @@ public class InternalSituationParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end rule__Domain__PropertiesAssignment_2
-
-
-    // $ANTLR start rule__Domain__PropertiesAssignment_3_1
-    // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1310:1: rule__Domain__PropertiesAssignment_3_1 : ( ruleEntity ) ;
-    public final void rule__Domain__PropertiesAssignment_3_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1314:1: ( ( ruleEntity ) )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1315:1: ( ruleEntity )
-            {
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1315:1: ( ruleEntity )
-            // ../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g:1316:1: ruleEntity
-            {
-             before(grammarAccess.getDomainAccess().getPropertiesEntityParserRuleCall_3_1_0()); 
-            pushFollow(FOLLOW_ruleEntity_in_rule__Domain__PropertiesAssignment_3_12807);
-            ruleEntity();
-            _fsp--;
-
-             after(grammarAccess.getDomainAccess().getPropertiesEntityParserRuleCall_3_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__Domain__PropertiesAssignment_3_1
+    // $ANTLR end rule__Domain__PropertiesAssignment_2_1
 
 
  
@@ -3761,29 +3812,25 @@ public class InternalSituationParser extends AbstractInternalContentAssistParser
     public static final BitSet FOLLOW_rule__Domain__Group__0__Impl_in_rule__Domain__Group__02107 = new BitSet(new long[]{0x000000000E000000L});
     public static final BitSet FOLLOW_rule__Domain__Group__1_in_rule__Domain__Group__02110 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Domain__NameAssignment_0_in_rule__Domain__Group__0__Impl2137 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Domain__Group__1__Impl_in_rule__Domain__Group__12167 = new BitSet(new long[]{0x0000000001FFF800L});
+    public static final BitSet FOLLOW_rule__Domain__Group__1__Impl_in_rule__Domain__Group__12167 = new BitSet(new long[]{0x0001000001FFF802L});
     public static final BitSet FOLLOW_rule__Domain__Group__2_in_rule__Domain__Group__12170 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Domain__TypeAssignment_1_in_rule__Domain__Group__1__Impl2197 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Domain__Group__2__Impl_in_rule__Domain__Group__22227 = new BitSet(new long[]{0x0001000000000002L});
-    public static final BitSet FOLLOW_rule__Domain__Group__3_in_rule__Domain__Group__22230 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Domain__PropertiesAssignment_2_in_rule__Domain__Group__2__Impl2257 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Domain__Group__3__Impl_in_rule__Domain__Group__32287 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Domain__Group_3__0_in_rule__Domain__Group__3__Impl2314 = new BitSet(new long[]{0x0001000000000002L});
-    public static final BitSet FOLLOW_rule__Domain__Group_3__0__Impl_in_rule__Domain__Group_3__02353 = new BitSet(new long[]{0x0000000001FFF800L});
-    public static final BitSet FOLLOW_rule__Domain__Group_3__1_in_rule__Domain__Group_3__02356 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_rule__Domain__Group_3__0__Impl2384 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Domain__Group_3__1__Impl_in_rule__Domain__Group_3__12415 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Domain__PropertiesAssignment_3_1_in_rule__Domain__Group_3__1__Impl2442 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Situation__TimeAssignment_0_12481 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleThing_in_rule__Situation__ThingsAssignment_12512 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEntityType_in_rule__Entity__TypeAssignment_02543 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Entity__NameAssignment_12574 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRelationshipType_in_rule__Relationship__TypeAssignment_02605 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Relationship__SourceAssignment_22640 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Relationship__TargetAssignment_42679 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Domain__NameAssignment_02714 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDomainType_in_rule__Domain__TypeAssignment_12745 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEntity_in_rule__Domain__PropertiesAssignment_22776 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEntity_in_rule__Domain__PropertiesAssignment_3_12807 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Domain__Group__2__Impl_in_rule__Domain__Group__22227 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Domain__Group_2__0_in_rule__Domain__Group__2__Impl2254 = new BitSet(new long[]{0x0001000001FFF802L});
+    public static final BitSet FOLLOW_rule__Domain__Group_2__0__Impl_in_rule__Domain__Group_2__02291 = new BitSet(new long[]{0x0000000001FFF800L});
+    public static final BitSet FOLLOW_rule__Domain__Group_2__1_in_rule__Domain__Group_2__02294 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_rule__Domain__Group_2__0__Impl2323 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Domain__Group_2__1__Impl_in_rule__Domain__Group_2__12356 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Domain__PropertiesAssignment_2_1_in_rule__Domain__Group_2__1__Impl2383 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Situation__TimeAssignment_0_12422 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleThing_in_rule__Situation__ThingsAssignment_12453 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEntityType_in_rule__Entity__TypeAssignment_02484 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Entity__NameAssignment_12515 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRelationshipType_in_rule__Relationship__TypeAssignment_02546 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Relationship__SourceAssignment_22581 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Relationship__TargetAssignment_42620 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Domain__NameAssignment_02655 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDomainType_in_rule__Domain__TypeAssignment_12686 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEntity_in_rule__Domain__PropertiesAssignment_2_12717 = new BitSet(new long[]{0x0000000000000002L});
 
 }

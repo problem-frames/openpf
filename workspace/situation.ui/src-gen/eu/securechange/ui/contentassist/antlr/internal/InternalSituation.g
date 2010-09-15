@@ -1026,7 +1026,6 @@ rule__Domain__Group__2
     }
 :
 	rule__Domain__Group__2__Impl
-	rule__Domain__Group__3
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -1038,37 +1037,9 @@ rule__Domain__Group__2__Impl
     }
 :
 (
-{ before(grammarAccess.getDomainAccess().getPropertiesAssignment_2()); }
-(rule__Domain__PropertiesAssignment_2)
-{ after(grammarAccess.getDomainAccess().getPropertiesAssignment_2()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__Domain__Group__3
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__Domain__Group__3__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Domain__Group__3__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getDomainAccess().getGroup_3()); }
-(rule__Domain__Group_3__0)*
-{ after(grammarAccess.getDomainAccess().getGroup_3()); }
+{ before(grammarAccess.getDomainAccess().getGroup_2()); }
+(rule__Domain__Group_2__0)*
+{ after(grammarAccess.getDomainAccess().getGroup_2()); }
 )
 
 ;
@@ -1083,31 +1054,29 @@ finally {
 
 
 
-
-
-rule__Domain__Group_3__0
+rule__Domain__Group_2__0
     @init {
 		int stackSize = keepStackSize();
     }
 :
-	rule__Domain__Group_3__0__Impl
-	rule__Domain__Group_3__1
+	rule__Domain__Group_2__0__Impl
+	rule__Domain__Group_2__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Domain__Group_3__0__Impl
+rule__Domain__Group_2__0__Impl
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getDomainAccess().getCommaKeyword_3_0()); }
-
+{ before(grammarAccess.getDomainAccess().getCommaKeyword_2_0()); }
+(
 	',' 
-
-{ after(grammarAccess.getDomainAccess().getCommaKeyword_3_0()); }
+)?
+{ after(grammarAccess.getDomainAccess().getCommaKeyword_2_0()); }
 )
 
 ;
@@ -1116,26 +1085,26 @@ finally {
 }
 
 
-rule__Domain__Group_3__1
+rule__Domain__Group_2__1
     @init {
 		int stackSize = keepStackSize();
     }
 :
-	rule__Domain__Group_3__1__Impl
+	rule__Domain__Group_2__1__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Domain__Group_3__1__Impl
+rule__Domain__Group_2__1__Impl
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getDomainAccess().getPropertiesAssignment_3_1()); }
-(rule__Domain__PropertiesAssignment_3_1)
-{ after(grammarAccess.getDomainAccess().getPropertiesAssignment_3_1()); }
+{ before(grammarAccess.getDomainAccess().getPropertiesAssignment_2_1()); }
+(rule__Domain__PropertiesAssignment_2_1)
+{ after(grammarAccess.getDomainAccess().getPropertiesAssignment_2_1()); }
 )
 
 ;
@@ -1292,29 +1261,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Domain__PropertiesAssignment_2
+rule__Domain__PropertiesAssignment_2_1
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getDomainAccess().getPropertiesEntityParserRuleCall_2_0()); }
-	ruleEntity{ after(grammarAccess.getDomainAccess().getPropertiesEntityParserRuleCall_2_0()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Domain__PropertiesAssignment_3_1
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getDomainAccess().getPropertiesEntityParserRuleCall_3_1_0()); }
-	ruleEntity{ after(grammarAccess.getDomainAccess().getPropertiesEntityParserRuleCall_3_1_0()); }
+{ before(grammarAccess.getDomainAccess().getPropertiesEntityParserRuleCall_2_1_0()); }
+	ruleEntity{ after(grammarAccess.getDomainAccess().getPropertiesEntityParserRuleCall_2_1_0()); }
 )
 
 ;

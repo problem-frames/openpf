@@ -97,7 +97,7 @@ public class PrefPage extends PreferencePage implements IWorkbenchPreferencePage
         Composite composite_checkBox = createComposite(composite_tab, 1);
         Properties ps = System.getProperties();        
         Button button;
-        for (Enumeration i = ps.keys(); i.hasMoreElements(); ) {
+        for (Enumeration<?> i = ps.keys(); i.hasMoreElements(); ) {
         	String key = (String)i.nextElement();
         	if (!key.startsWith(IConstants.PREFIX))
         		continue;
@@ -215,7 +215,7 @@ public class PrefPage extends PreferencePage implements IWorkbenchPreferencePage
         Properties ps = System.getProperties();        
         Button button;
         Text text;
-        for (Enumeration i = ps.keys(); i.hasMoreElements(); ) {
+        for (Enumeration<?> i = ps.keys(); i.hasMoreElements(); ) {
         	String key = (String)i.nextElement();
         	if (!key.startsWith(IConstants.PREFIX))
         		continue;
@@ -250,7 +250,8 @@ public class PrefPage extends PreferencePage implements IWorkbenchPreferencePage
         initializeDefaults();
     }
 
-    public boolean performOk() {
+    @SuppressWarnings("deprecation")
+	public boolean performOk() {
         storeValues();
         Plugin.getPlugin().savePluginPreferences();
         return true;

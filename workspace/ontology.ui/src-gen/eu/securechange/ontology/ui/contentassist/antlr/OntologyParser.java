@@ -37,9 +37,9 @@ public class OntologyParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
+					put(grammarAccess.getWorldAccess().getAlternatives_1(), "rule__World__Alternatives_1");
 					put(grammarAccess.getThingAccess().getAlternatives(), "rule__Thing__Alternatives");
 					put(grammarAccess.getObjectAccess().getAlternatives(), "rule__Object__Alternatives");
-					put(grammarAccess.getBeliefWorldAccess().getAlternatives_1(), "rule__BeliefWorld__Alternatives_1");
 					put(grammarAccess.getPropositionAccess().getAlternatives(), "rule__Proposition__Alternatives");
 					put(grammarAccess.getRequirementAccess().getAlternatives(), "rule__Requirement__Alternatives");
 					put(grammarAccess.getEntityAccess().getAlternatives(), "rule__Entity__Alternatives");
@@ -47,6 +47,8 @@ public class OntologyParser extends AbstractContentAssistParser {
 					put(grammarAccess.getProcessAccess().getAlternatives(), "rule__Process__Alternatives");
 					put(grammarAccess.getResourceAccess().getAlternatives(), "rule__Resource__Alternatives");
 					put(grammarAccess.getRelationshipAccess().getAlternatives(), "rule__Relationship__Alternatives");
+					put(grammarAccess.getProvidesAccess().getAlternatives_2(), "rule__Provides__Alternatives_2");
+					put(grammarAccess.getConsumesAccess().getAlternatives_2(), "rule__Consumes__Alternatives_2");
 					put(grammarAccess.getDomainTypeAccess().getAlternatives(), "rule__DomainType__Alternatives");
 					put(grammarAccess.getDecomposesTypeAccess().getAlternatives(), "rule__DecomposesType__Alternatives");
 					put(grammarAccess.getContributesTypeAccess().getAlternatives(), "rule__ContributesType__Alternatives");
@@ -54,10 +56,8 @@ public class OntologyParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSituationAccess().getGroup_0(), "rule__Situation__Group_0__0");
 					put(grammarAccess.getWorldAccess().getGroup(), "rule__World__Group__0");
 					put(grammarAccess.getEventAccess().getGroup(), "rule__Event__Group__0");
-					put(grammarAccess.getPhysicalWorldAccess().getGroup(), "rule__PhysicalWorld__Group__0");
-					put(grammarAccess.getBeliefWorldAccess().getGroup(), "rule__BeliefWorld__Group__0");
 					put(grammarAccess.getDomainAccess().getGroup(), "rule__Domain__Group__0");
-					put(grammarAccess.getDomainAccess().getGroup_3(), "rule__Domain__Group_3__0");
+					put(grammarAccess.getDomainAccess().getGroup_2(), "rule__Domain__Group_2__0");
 					put(grammarAccess.getDomainAssumptionAccess().getGroup(), "rule__DomainAssumption__Group__0");
 					put(grammarAccess.getFunctionalRequirementAccess().getGroup(), "rule__FunctionalRequirement__Group__0");
 					put(grammarAccess.getSecurityRequirementAccess().getGroup(), "rule__SecurityRequirement__Group__0");
@@ -89,16 +89,13 @@ public class OntologyParser extends AbstractContentAssistParser {
 					put(grammarAccess.getArguesAccess().getGroup(), "rule__Argues__Group__0");
 					put(grammarAccess.getSituationAccess().getTimeAssignment_0_1(), "rule__Situation__TimeAssignment_0_1");
 					put(grammarAccess.getSituationAccess().getWorldAssignment_1(), "rule__Situation__WorldAssignment_1");
-					put(grammarAccess.getWorldAccess().getPhysicalAssignment_1(), "rule__World__PhysicalAssignment_1");
-					put(grammarAccess.getWorldAccess().getBeliefAssignment_2(), "rule__World__BeliefAssignment_2");
+					put(grammarAccess.getWorldAccess().getEntitiesAssignment_1_0(), "rule__World__EntitiesAssignment_1_0");
+					put(grammarAccess.getWorldAccess().getDomainsAssignment_1_1(), "rule__World__DomainsAssignment_1_1");
+					put(grammarAccess.getWorldAccess().getRelationshipsAssignment_1_2(), "rule__World__RelationshipsAssignment_1_2");
 					put(grammarAccess.getEventAccess().getNameAssignment_1(), "rule__Event__NameAssignment_1");
-					put(grammarAccess.getPhysicalWorldAccess().getEntitiesAssignment_1(), "rule__PhysicalWorld__EntitiesAssignment_1");
-					put(grammarAccess.getBeliefWorldAccess().getDomainsAssignment_1_0(), "rule__BeliefWorld__DomainsAssignment_1_0");
-					put(grammarAccess.getBeliefWorldAccess().getRelationshipsAssignment_1_1(), "rule__BeliefWorld__RelationshipsAssignment_1_1");
 					put(grammarAccess.getDomainAccess().getNameAssignment_0(), "rule__Domain__NameAssignment_0");
 					put(grammarAccess.getDomainAccess().getTypeAssignment_1(), "rule__Domain__TypeAssignment_1");
-					put(grammarAccess.getDomainAccess().getPropertiesAssignment_2(), "rule__Domain__PropertiesAssignment_2");
-					put(grammarAccess.getDomainAccess().getPropertiesAssignment_3_1(), "rule__Domain__PropertiesAssignment_3_1");
+					put(grammarAccess.getDomainAccess().getPropertiesAssignment_2_1(), "rule__Domain__PropertiesAssignment_2_1");
 					put(grammarAccess.getDomainAssumptionAccess().getNameAssignment_1(), "rule__DomainAssumption__NameAssignment_1");
 					put(grammarAccess.getFunctionalRequirementAccess().getNameAssignment_1(), "rule__FunctionalRequirement__NameAssignment_1");
 					put(grammarAccess.getSecurityRequirementAccess().getNameAssignment_1(), "rule__SecurityRequirement__NameAssignment_1");
@@ -138,10 +135,12 @@ public class OntologyParser extends AbstractContentAssistParser {
 					put(grammarAccess.getFulfilsAccess().getSourceAssignment_2(), "rule__Fulfils__SourceAssignment_2");
 					put(grammarAccess.getFulfilsAccess().getTargetAssignment_4(), "rule__Fulfils__TargetAssignment_4");
 					put(grammarAccess.getProvidesAccess().getTypeAssignment_0(), "rule__Provides__TypeAssignment_0");
-					put(grammarAccess.getProvidesAccess().getSourceAssignment_2(), "rule__Provides__SourceAssignment_2");
+					put(grammarAccess.getProvidesAccess().getSourceAssignment_2_0(), "rule__Provides__SourceAssignment_2_0");
+					put(grammarAccess.getProvidesAccess().getSourceAssignment_2_1(), "rule__Provides__SourceAssignment_2_1");
 					put(grammarAccess.getProvidesAccess().getTargetAssignment_4(), "rule__Provides__TargetAssignment_4");
 					put(grammarAccess.getConsumesAccess().getTypeAssignment_0(), "rule__Consumes__TypeAssignment_0");
-					put(grammarAccess.getConsumesAccess().getSourceAssignment_2(), "rule__Consumes__SourceAssignment_2");
+					put(grammarAccess.getConsumesAccess().getSourceAssignment_2_0(), "rule__Consumes__SourceAssignment_2_0");
+					put(grammarAccess.getConsumesAccess().getSourceAssignment_2_1(), "rule__Consumes__SourceAssignment_2_1");
 					put(grammarAccess.getConsumesAccess().getTargetAssignment_4(), "rule__Consumes__TargetAssignment_4");
 					put(grammarAccess.getExploitsAccess().getTypeAssignment_0(), "rule__Exploits__TypeAssignment_0");
 					put(grammarAccess.getExploitsAccess().getSourceAssignment_2(), "rule__Exploits__SourceAssignment_2");

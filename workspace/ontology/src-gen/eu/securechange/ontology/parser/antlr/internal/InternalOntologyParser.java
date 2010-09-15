@@ -278,23 +278,25 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleWorld
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:166:1: ruleWorld returns [EObject current=null] : ( () ( (lv_physical_1_0= rulePhysicalWorld ) )? ( (lv_belief_2_0= ruleBeliefWorld ) )? ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:166:1: ruleWorld returns [EObject current=null] : ( () ( ( (lv_entities_1_0= ruleEntity ) ) | ( (lv_domains_2_0= ruleDomain ) ) | ( (lv_relationships_3_0= ruleRelationship ) ) )* ) ;
     public final EObject ruleWorld() throws RecognitionException {
         EObject current = null;
 
-        EObject lv_physical_1_0 = null;
+        EObject lv_entities_1_0 = null;
 
-        EObject lv_belief_2_0 = null;
+        EObject lv_domains_2_0 = null;
+
+        EObject lv_relationships_3_0 = null;
 
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:171:6: ( ( () ( (lv_physical_1_0= rulePhysicalWorld ) )? ( (lv_belief_2_0= ruleBeliefWorld ) )? ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:172:1: ( () ( (lv_physical_1_0= rulePhysicalWorld ) )? ( (lv_belief_2_0= ruleBeliefWorld ) )? )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:171:6: ( ( () ( ( (lv_entities_1_0= ruleEntity ) ) | ( (lv_domains_2_0= ruleDomain ) ) | ( (lv_relationships_3_0= ruleRelationship ) ) )* ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:172:1: ( () ( ( (lv_entities_1_0= ruleEntity ) ) | ( (lv_domains_2_0= ruleDomain ) ) | ( (lv_relationships_3_0= ruleRelationship ) ) )* )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:172:1: ( () ( (lv_physical_1_0= rulePhysicalWorld ) )? ( (lv_belief_2_0= ruleBeliefWorld ) )? )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:172:2: () ( (lv_physical_1_0= rulePhysicalWorld ) )? ( (lv_belief_2_0= ruleBeliefWorld ) )?
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:172:1: ( () ( ( (lv_entities_1_0= ruleEntity ) ) | ( (lv_domains_2_0= ruleDomain ) ) | ( (lv_relationships_3_0= ruleRelationship ) ) )* )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:172:2: () ( ( (lv_entities_1_0= ruleEntity ) ) | ( (lv_domains_2_0= ruleDomain ) ) | ( (lv_relationships_3_0= ruleRelationship ) ) )*
             {
             // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:172:2: ()
             // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:173:5: 
@@ -312,9 +314,11 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:183:2: ( (lv_physical_1_0= rulePhysicalWorld ) )?
-            int alt2=2;
-            switch ( input.LA(1) ) {
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:183:2: ( ( (lv_entities_1_0= ruleEntity ) ) | ( (lv_domains_2_0= ruleDomain ) ) | ( (lv_relationships_3_0= ruleRelationship ) ) )*
+            loop2:
+            do {
+                int alt2=4;
+                switch ( input.LA(1) ) {
                 case 21:
                 case 22:
                 case 23:
@@ -327,190 +331,165 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     break;
                 case RULE_ID:
                     {
-                    alt2=1;
+                    alt2=2;
                     }
                     break;
                 case 30:
-                    {
-                    alt2=1;
-                    }
-                    break;
                 case 33:
-                    {
-                    alt2=1;
-                    }
-                    break;
-                case 45:
-                    {
-                    alt2=1;
-                    }
-                    break;
-                case 46:
-                    {
-                    alt2=1;
-                    }
-                    break;
                 case 34:
-                    {
-                    alt2=1;
-                    }
-                    break;
                 case 35:
-                    {
-                    alt2=1;
-                    }
-                    break;
+                case 36:
+                case 37:
+                case 38:
+                case 39:
+                case 40:
+                case 41:
+                case 45:
+                case 46:
                 case 47:
-                    {
-                    alt2=1;
-                    }
-                    break;
                 case 48:
-                    {
-                    alt2=1;
-                    }
-                    break;
                 case 49:
-                    {
-                    alt2=1;
-                    }
-                    break;
                 case 50:
-                    {
-                    alt2=1;
-                    }
-                    break;
                 case 51:
                     {
-                    alt2=1;
-                    }
-                    break;
-                case 36:
-                    {
-                    alt2=1;
-                    }
-                    break;
-                case 37:
-                    {
-                    alt2=1;
-                    }
-                    break;
-                case 38:
-                    {
-                    alt2=1;
-                    }
-                    break;
-                case 39:
-                    {
-                    alt2=1;
-                    }
-                    break;
-                case 40:
-                    {
-                    alt2=1;
-                    }
-                    break;
-                case 41:
-                    {
-                    alt2=1;
-                    }
-                    break;
-                case EOF:
-                    {
-                    alt2=1;
-                    }
-                    break;
-            }
-
-            switch (alt2) {
-                case 1 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:184:1: (lv_physical_1_0= rulePhysicalWorld )
-                    {
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:184:1: (lv_physical_1_0= rulePhysicalWorld )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:185:3: lv_physical_1_0= rulePhysicalWorld
-                    {
-                     
-                    	        currentNode=createCompositeNode(grammarAccess.getWorldAccess().getPhysicalPhysicalWorldParserRuleCall_1_0(), currentNode); 
-                    	    
-                    pushFollow(FOLLOW_rulePhysicalWorld_in_ruleWorld277);
-                    lv_physical_1_0=rulePhysicalWorld();
-                    _fsp--;
-
-
-                    	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getWorldRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode.getParent(), current);
-                    	        }
-                    	        try {
-                    	       		set(
-                    	       			current, 
-                    	       			"physical",
-                    	        		lv_physical_1_0, 
-                    	        		"PhysicalWorld", 
-                    	        		currentNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	        currentNode = currentNode.getParent();
-                    	    
-
-                    }
-
-
+                    alt2=3;
                     }
                     break;
 
-            }
+                }
 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:207:3: ( (lv_belief_2_0= ruleBeliefWorld ) )?
-            int alt3=2;
-            int LA3_0 = input.LA(1);
-
-            if ( (LA3_0==RULE_ID||LA3_0==30||(LA3_0>=33 && LA3_0<=41)||(LA3_0>=45 && LA3_0<=51)) ) {
-                alt3=1;
-            }
-            else if ( (LA3_0==EOF) ) {
-                alt3=1;
-            }
-            switch (alt3) {
-                case 1 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:208:1: (lv_belief_2_0= ruleBeliefWorld )
-                    {
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:208:1: (lv_belief_2_0= ruleBeliefWorld )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:209:3: lv_belief_2_0= ruleBeliefWorld
-                    {
-                     
-                    	        currentNode=createCompositeNode(grammarAccess.getWorldAccess().getBeliefBeliefWorldParserRuleCall_2_0(), currentNode); 
-                    	    
-                    pushFollow(FOLLOW_ruleBeliefWorld_in_ruleWorld299);
-                    lv_belief_2_0=ruleBeliefWorld();
-                    _fsp--;
+                switch (alt2) {
+            	case 1 :
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:183:3: ( (lv_entities_1_0= ruleEntity ) )
+            	    {
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:183:3: ( (lv_entities_1_0= ruleEntity ) )
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:184:1: (lv_entities_1_0= ruleEntity )
+            	    {
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:184:1: (lv_entities_1_0= ruleEntity )
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:185:3: lv_entities_1_0= ruleEntity
+            	    {
+            	     
+            	    	        currentNode=createCompositeNode(grammarAccess.getWorldAccess().getEntitiesEntityParserRuleCall_1_0_0(), currentNode); 
+            	    	    
+            	    pushFollow(FOLLOW_ruleEntity_in_ruleWorld278);
+            	    lv_entities_1_0=ruleEntity();
+            	    _fsp--;
 
 
-                    	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getWorldRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode.getParent(), current);
-                    	        }
-                    	        try {
-                    	       		set(
-                    	       			current, 
-                    	       			"belief",
-                    	        		lv_belief_2_0, 
-                    	        		"BeliefWorld", 
-                    	        		currentNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	        currentNode = currentNode.getParent();
-                    	    
+            	    	        if (current==null) {
+            	    	            current = factory.create(grammarAccess.getWorldRule().getType().getClassifier());
+            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	    	        }
+            	    	        try {
+            	    	       		add(
+            	    	       			current, 
+            	    	       			"entities",
+            	    	        		lv_entities_1_0, 
+            	    	        		"Entity", 
+            	    	        		currentNode);
+            	    	        } catch (ValueConverterException vce) {
+            	    				handleValueConverterException(vce);
+            	    	        }
+            	    	        currentNode = currentNode.getParent();
+            	    	    
 
-                    }
+            	    }
 
 
-                    }
-                    break;
+            	    }
 
-            }
+
+            	    }
+            	    break;
+            	case 2 :
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:208:6: ( (lv_domains_2_0= ruleDomain ) )
+            	    {
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:208:6: ( (lv_domains_2_0= ruleDomain ) )
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:209:1: (lv_domains_2_0= ruleDomain )
+            	    {
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:209:1: (lv_domains_2_0= ruleDomain )
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:210:3: lv_domains_2_0= ruleDomain
+            	    {
+            	     
+            	    	        currentNode=createCompositeNode(grammarAccess.getWorldAccess().getDomainsDomainParserRuleCall_1_1_0(), currentNode); 
+            	    	    
+            	    pushFollow(FOLLOW_ruleDomain_in_ruleWorld305);
+            	    lv_domains_2_0=ruleDomain();
+            	    _fsp--;
+
+
+            	    	        if (current==null) {
+            	    	            current = factory.create(grammarAccess.getWorldRule().getType().getClassifier());
+            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	    	        }
+            	    	        try {
+            	    	       		add(
+            	    	       			current, 
+            	    	       			"domains",
+            	    	        		lv_domains_2_0, 
+            	    	        		"Domain", 
+            	    	        		currentNode);
+            	    	        } catch (ValueConverterException vce) {
+            	    				handleValueConverterException(vce);
+            	    	        }
+            	    	        currentNode = currentNode.getParent();
+            	    	    
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
+            	case 3 :
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:233:6: ( (lv_relationships_3_0= ruleRelationship ) )
+            	    {
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:233:6: ( (lv_relationships_3_0= ruleRelationship ) )
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:234:1: (lv_relationships_3_0= ruleRelationship )
+            	    {
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:234:1: (lv_relationships_3_0= ruleRelationship )
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:235:3: lv_relationships_3_0= ruleRelationship
+            	    {
+            	     
+            	    	        currentNode=createCompositeNode(grammarAccess.getWorldAccess().getRelationshipsRelationshipParserRuleCall_1_2_0(), currentNode); 
+            	    	    
+            	    pushFollow(FOLLOW_ruleRelationship_in_ruleWorld332);
+            	    lv_relationships_3_0=ruleRelationship();
+            	    _fsp--;
+
+
+            	    	        if (current==null) {
+            	    	            current = factory.create(grammarAccess.getWorldRule().getType().getClassifier());
+            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	    	        }
+            	    	        try {
+            	    	       		add(
+            	    	       			current, 
+            	    	       			"relationships",
+            	    	        		lv_relationships_3_0, 
+            	    	        		"Relationship", 
+            	    	        		currentNode);
+            	    	        } catch (ValueConverterException vce) {
+            	    				handleValueConverterException(vce);
+            	    	        }
+            	    	        currentNode = currentNode.getParent();
+            	    	    
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop2;
+                }
+            } while (true);
 
 
             }
@@ -535,7 +514,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleEvent
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:241:1: entryRuleEvent returns [EObject current=null] : iv_ruleEvent= ruleEvent EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:267:1: entryRuleEvent returns [EObject current=null] : iv_ruleEvent= ruleEvent EOF ;
     public final EObject entryRuleEvent() throws RecognitionException {
         EObject current = null;
 
@@ -543,16 +522,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:242:2: (iv_ruleEvent= ruleEvent EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:243:2: iv_ruleEvent= ruleEvent EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:268:2: (iv_ruleEvent= ruleEvent EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:269:2: iv_ruleEvent= ruleEvent EOF
             {
              currentNode = createCompositeNode(grammarAccess.getEventRule(), currentNode); 
-            pushFollow(FOLLOW_ruleEvent_in_entryRuleEvent338);
+            pushFollow(FOLLOW_ruleEvent_in_entryRuleEvent372);
             iv_ruleEvent=ruleEvent();
             _fsp--;
 
              current =iv_ruleEvent; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEvent348); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEvent382); 
 
             }
 
@@ -570,7 +549,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleEvent
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:250:1: ruleEvent returns [EObject current=null] : ( 'event' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:276:1: ruleEvent returns [EObject current=null] : ( 'event' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleEvent() throws RecognitionException {
         EObject current = null;
 
@@ -579,24 +558,24 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:255:6: ( ( 'event' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:256:1: ( 'event' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:281:6: ( ( 'event' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:282:1: ( 'event' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:256:1: ( 'event' ( (lv_name_1_0= RULE_ID ) ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:256:3: 'event' ( (lv_name_1_0= RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:282:1: ( 'event' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:282:3: 'event' ( (lv_name_1_0= RULE_ID ) )
             {
-            match(input,13,FOLLOW_13_in_ruleEvent383); 
+            match(input,13,FOLLOW_13_in_ruleEvent417); 
 
                     createLeafNode(grammarAccess.getEventAccess().getEventKeyword_0(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:260:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:261:1: (lv_name_1_0= RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:286:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:287:1: (lv_name_1_0= RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:261:1: (lv_name_1_0= RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:262:3: lv_name_1_0= RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:287:1: (lv_name_1_0= RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:288:3: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleEvent400); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleEvent434); 
 
             			createLeafNode(grammarAccess.getEventAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
             		
@@ -645,7 +624,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleObject
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:292:1: entryRuleObject returns [EObject current=null] : iv_ruleObject= ruleObject EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:318:1: entryRuleObject returns [EObject current=null] : iv_ruleObject= ruleObject EOF ;
     public final EObject entryRuleObject() throws RecognitionException {
         EObject current = null;
 
@@ -653,16 +632,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:293:2: (iv_ruleObject= ruleObject EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:294:2: iv_ruleObject= ruleObject EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:319:2: (iv_ruleObject= ruleObject EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:320:2: iv_ruleObject= ruleObject EOF
             {
              currentNode = createCompositeNode(grammarAccess.getObjectRule(), currentNode); 
-            pushFollow(FOLLOW_ruleObject_in_entryRuleObject441);
+            pushFollow(FOLLOW_ruleObject_in_entryRuleObject475);
             iv_ruleObject=ruleObject();
             _fsp--;
 
              current =iv_ruleObject; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleObject451); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleObject485); 
 
             }
 
@@ -680,7 +659,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleObject
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:301:1: ruleObject returns [EObject current=null] : (this_Entity_0= ruleEntity | this_Relationship_1= ruleRelationship | this_Proposition_2= ruleProposition ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:327:1: ruleObject returns [EObject current=null] : (this_Entity_0= ruleEntity | this_Relationship_1= ruleRelationship | this_Proposition_2= ruleProposition ) ;
     public final EObject ruleObject() throws RecognitionException {
         EObject current = null;
 
@@ -694,11 +673,11 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:306:6: ( (this_Entity_0= ruleEntity | this_Relationship_1= ruleRelationship | this_Proposition_2= ruleProposition ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:307:1: (this_Entity_0= ruleEntity | this_Relationship_1= ruleRelationship | this_Proposition_2= ruleProposition )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:332:6: ( (this_Entity_0= ruleEntity | this_Relationship_1= ruleRelationship | this_Proposition_2= ruleProposition ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:333:1: (this_Entity_0= ruleEntity | this_Relationship_1= ruleRelationship | this_Proposition_2= ruleProposition )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:307:1: (this_Entity_0= ruleEntity | this_Relationship_1= ruleRelationship | this_Proposition_2= ruleProposition )
-            int alt4=3;
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:333:1: (this_Entity_0= ruleEntity | this_Relationship_1= ruleRelationship | this_Proposition_2= ruleProposition )
+            int alt3=3;
             switch ( input.LA(1) ) {
             case 21:
             case 22:
@@ -707,7 +686,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             case 28:
             case 29:
                 {
-                alt4=1;
+                alt3=1;
                 }
                 break;
             case 30:
@@ -728,7 +707,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             case 50:
             case 51:
                 {
-                alt4=2;
+                alt3=2;
                 }
                 break;
             case 15:
@@ -738,24 +717,24 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             case 19:
             case 20:
                 {
-                alt4=3;
+                alt3=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("307:1: (this_Entity_0= ruleEntity | this_Relationship_1= ruleRelationship | this_Proposition_2= ruleProposition )", 4, 0, input);
+                    new NoViableAltException("333:1: (this_Entity_0= ruleEntity | this_Relationship_1= ruleRelationship | this_Proposition_2= ruleProposition )", 3, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt4) {
+            switch (alt3) {
                 case 1 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:308:5: this_Entity_0= ruleEntity
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:334:5: this_Entity_0= ruleEntity
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getObjectAccess().getEntityParserRuleCall_0(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleEntity_in_ruleObject498);
+                    pushFollow(FOLLOW_ruleEntity_in_ruleObject532);
                     this_Entity_0=ruleEntity();
                     _fsp--;
 
@@ -767,12 +746,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:318:5: this_Relationship_1= ruleRelationship
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:344:5: this_Relationship_1= ruleRelationship
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getObjectAccess().getRelationshipParserRuleCall_1(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleRelationship_in_ruleObject525);
+                    pushFollow(FOLLOW_ruleRelationship_in_ruleObject559);
                     this_Relationship_1=ruleRelationship();
                     _fsp--;
 
@@ -784,12 +763,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:328:5: this_Proposition_2= ruleProposition
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:354:5: this_Proposition_2= ruleProposition
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getObjectAccess().getPropositionParserRuleCall_2(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleProposition_in_ruleObject552);
+                    pushFollow(FOLLOW_ruleProposition_in_ruleObject586);
                     this_Proposition_2=ruleProposition();
                     _fsp--;
 
@@ -822,25 +801,25 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
     // $ANTLR end ruleObject
 
 
-    // $ANTLR start entryRulePhysicalWorld
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:344:1: entryRulePhysicalWorld returns [EObject current=null] : iv_rulePhysicalWorld= rulePhysicalWorld EOF ;
-    public final EObject entryRulePhysicalWorld() throws RecognitionException {
+    // $ANTLR start entryRuleDomain
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:370:1: entryRuleDomain returns [EObject current=null] : iv_ruleDomain= ruleDomain EOF ;
+    public final EObject entryRuleDomain() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_rulePhysicalWorld = null;
+        EObject iv_ruleDomain = null;
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:345:2: (iv_rulePhysicalWorld= rulePhysicalWorld EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:346:2: iv_rulePhysicalWorld= rulePhysicalWorld EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:371:2: (iv_ruleDomain= ruleDomain EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:372:2: iv_ruleDomain= ruleDomain EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getPhysicalWorldRule(), currentNode); 
-            pushFollow(FOLLOW_rulePhysicalWorld_in_entryRulePhysicalWorld587);
-            iv_rulePhysicalWorld=rulePhysicalWorld();
+             currentNode = createCompositeNode(grammarAccess.getDomainRule(), currentNode); 
+            pushFollow(FOLLOW_ruleDomain_in_entryRuleDomain621);
+            iv_ruleDomain=ruleDomain();
             _fsp--;
 
-             current =iv_rulePhysicalWorld; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePhysicalWorld597); 
+             current =iv_ruleDomain; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDomain631); 
 
             }
 
@@ -854,84 +833,167 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRulePhysicalWorld
+    // $ANTLR end entryRuleDomain
 
 
-    // $ANTLR start rulePhysicalWorld
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:353:1: rulePhysicalWorld returns [EObject current=null] : ( () ( (lv_entities_1_0= ruleEntity ) )* ) ;
-    public final EObject rulePhysicalWorld() throws RecognitionException {
+    // $ANTLR start ruleDomain
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:379:1: ruleDomain returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleDomainType ) ) ( ( ',' )? ( (lv_properties_3_0= ruleProposition ) ) )* ) ;
+    public final EObject ruleDomain() throws RecognitionException {
         EObject current = null;
 
-        EObject lv_entities_1_0 = null;
+        Token lv_name_0_0=null;
+        Enumerator lv_type_1_0 = null;
+
+        EObject lv_properties_3_0 = null;
 
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:358:6: ( ( () ( (lv_entities_1_0= ruleEntity ) )* ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:359:1: ( () ( (lv_entities_1_0= ruleEntity ) )* )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:384:6: ( ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleDomainType ) ) ( ( ',' )? ( (lv_properties_3_0= ruleProposition ) ) )* ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:385:1: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleDomainType ) ) ( ( ',' )? ( (lv_properties_3_0= ruleProposition ) ) )* )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:359:1: ( () ( (lv_entities_1_0= ruleEntity ) )* )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:359:2: () ( (lv_entities_1_0= ruleEntity ) )*
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:385:1: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleDomainType ) ) ( ( ',' )? ( (lv_properties_3_0= ruleProposition ) ) )* )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:385:2: ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleDomainType ) ) ( ( ',' )? ( (lv_properties_3_0= ruleProposition ) ) )*
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:359:2: ()
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:360:5: 
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:385:2: ( (lv_name_0_0= RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:386:1: (lv_name_0_0= RULE_ID )
             {
-             
-                    temp=factory.create(grammarAccess.getPhysicalWorldAccess().getPhysicalWorldAction_0().getType().getClassifier());
-                    current = temp; 
-                    temp = null;
-                    CompositeNode newNode = createCompositeNode(grammarAccess.getPhysicalWorldAccess().getPhysicalWorldAction_0(), currentNode.getParent());
-                newNode.getChildren().add(currentNode);
-                moveLookaheadInfo(currentNode, newNode);
-                currentNode = newNode; 
-                    associateNodeWithAstElement(currentNode, current); 
-                
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:386:1: (lv_name_0_0= RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:387:3: lv_name_0_0= RULE_ID
+            {
+            lv_name_0_0=(Token)input.LT(1);
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDomain673); 
+
+            			createLeafNode(grammarAccess.getDomainAccess().getNameIDTerminalRuleCall_0_0(), "name"); 
+            		
+
+            	        if (current==null) {
+            	            current = factory.create(grammarAccess.getDomainRule().getType().getClassifier());
+            	            associateNodeWithAstElement(currentNode, current);
+            	        }
+            	        try {
+            	       		set(
+            	       			current, 
+            	       			"name",
+            	        		lv_name_0_0, 
+            	        		"ID", 
+            	        		lastConsumedNode);
+            	        } catch (ValueConverterException vce) {
+            				handleValueConverterException(vce);
+            	        }
+            	    
 
             }
 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:370:2: ( (lv_entities_1_0= ruleEntity ) )*
+
+            }
+
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:409:2: ( (lv_type_1_0= ruleDomainType ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:410:1: (lv_type_1_0= ruleDomainType )
+            {
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:410:1: (lv_type_1_0= ruleDomainType )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:411:3: lv_type_1_0= ruleDomainType
+            {
+             
+            	        currentNode=createCompositeNode(grammarAccess.getDomainAccess().getTypeDomainTypeEnumRuleCall_1_0(), currentNode); 
+            	    
+            pushFollow(FOLLOW_ruleDomainType_in_ruleDomain699);
+            lv_type_1_0=ruleDomainType();
+            _fsp--;
+
+
+            	        if (current==null) {
+            	            current = factory.create(grammarAccess.getDomainRule().getType().getClassifier());
+            	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	        }
+            	        try {
+            	       		set(
+            	       			current, 
+            	       			"type",
+            	        		lv_type_1_0, 
+            	        		"DomainType", 
+            	        		currentNode);
+            	        } catch (ValueConverterException vce) {
+            				handleValueConverterException(vce);
+            	        }
+            	        currentNode = currentNode.getParent();
+            	    
+
+            }
+
+
+            }
+
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:433:2: ( ( ',' )? ( (lv_properties_3_0= ruleProposition ) ) )*
             loop5:
             do {
                 int alt5=2;
                 int LA5_0 = input.LA(1);
 
-                if ( ((LA5_0>=21 && LA5_0<=23)||LA5_0==26||(LA5_0>=28 && LA5_0<=29)) ) {
+                if ( ((LA5_0>=14 && LA5_0<=20)) ) {
                     alt5=1;
                 }
 
 
                 switch (alt5) {
             	case 1 :
-            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:371:1: (lv_entities_1_0= ruleEntity )
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:433:3: ( ',' )? ( (lv_properties_3_0= ruleProposition ) )
             	    {
-            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:371:1: (lv_entities_1_0= ruleEntity )
-            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:372:3: lv_entities_1_0= ruleEntity
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:433:3: ( ',' )?
+            	    int alt4=2;
+            	    int LA4_0 = input.LA(1);
+
+            	    if ( (LA4_0==14) ) {
+            	        alt4=1;
+            	    }
+            	    switch (alt4) {
+            	        case 1 :
+            	            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:433:5: ','
+            	            {
+            	            match(input,14,FOLLOW_14_in_ruleDomain711); 
+
+            	                    createLeafNode(grammarAccess.getDomainAccess().getCommaKeyword_2_0(), null); 
+            	                
+
+            	            }
+            	            break;
+
+            	    }
+
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:437:3: ( (lv_properties_3_0= ruleProposition ) )
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:438:1: (lv_properties_3_0= ruleProposition )
+            	    {
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:438:1: (lv_properties_3_0= ruleProposition )
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:439:3: lv_properties_3_0= ruleProposition
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getPhysicalWorldAccess().getEntitiesEntityParserRuleCall_1_0(), currentNode); 
+            	    	        currentNode=createCompositeNode(grammarAccess.getDomainAccess().getPropertiesPropositionParserRuleCall_2_1_0(), currentNode); 
             	    	    
-            	    pushFollow(FOLLOW_ruleEntity_in_rulePhysicalWorld652);
-            	    lv_entities_1_0=ruleEntity();
+            	    pushFollow(FOLLOW_ruleProposition_in_ruleDomain734);
+            	    lv_properties_3_0=ruleProposition();
             	    _fsp--;
 
 
             	    	        if (current==null) {
-            	    	            current = factory.create(grammarAccess.getPhysicalWorldRule().getType().getClassifier());
+            	    	            current = factory.create(grammarAccess.getDomainRule().getType().getClassifier());
             	    	            associateNodeWithAstElement(currentNode.getParent(), current);
             	    	        }
             	    	        try {
             	    	       		add(
             	    	       			current, 
-            	    	       			"entities",
-            	    	        		lv_entities_1_0, 
-            	    	        		"Entity", 
+            	    	       			"properties",
+            	    	        		lv_properties_3_0, 
+            	    	        		"Proposition", 
             	    	        		currentNode);
             	    	        } catch (ValueConverterException vce) {
             	    				handleValueConverterException(vce);
             	    	        }
             	    	        currentNode = currentNode.getParent();
             	    	    
+
+            	    }
+
 
             	    }
 
@@ -963,456 +1025,11 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end rulePhysicalWorld
-
-
-    // $ANTLR start entryRuleBeliefWorld
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:402:1: entryRuleBeliefWorld returns [EObject current=null] : iv_ruleBeliefWorld= ruleBeliefWorld EOF ;
-    public final EObject entryRuleBeliefWorld() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_ruleBeliefWorld = null;
-
-
-        try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:403:2: (iv_ruleBeliefWorld= ruleBeliefWorld EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:404:2: iv_ruleBeliefWorld= ruleBeliefWorld EOF
-            {
-             currentNode = createCompositeNode(grammarAccess.getBeliefWorldRule(), currentNode); 
-            pushFollow(FOLLOW_ruleBeliefWorld_in_entryRuleBeliefWorld689);
-            iv_ruleBeliefWorld=ruleBeliefWorld();
-            _fsp--;
-
-             current =iv_ruleBeliefWorld; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBeliefWorld699); 
-
-            }
-
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end entryRuleBeliefWorld
-
-
-    // $ANTLR start ruleBeliefWorld
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:411:1: ruleBeliefWorld returns [EObject current=null] : ( () ( ( (lv_domains_1_0= ruleDomain ) ) | ( (lv_relationships_2_0= ruleRelationship ) ) )* ) ;
-    public final EObject ruleBeliefWorld() throws RecognitionException {
-        EObject current = null;
-
-        EObject lv_domains_1_0 = null;
-
-        EObject lv_relationships_2_0 = null;
-
-
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
-            
-        try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:416:6: ( ( () ( ( (lv_domains_1_0= ruleDomain ) ) | ( (lv_relationships_2_0= ruleRelationship ) ) )* ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:417:1: ( () ( ( (lv_domains_1_0= ruleDomain ) ) | ( (lv_relationships_2_0= ruleRelationship ) ) )* )
-            {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:417:1: ( () ( ( (lv_domains_1_0= ruleDomain ) ) | ( (lv_relationships_2_0= ruleRelationship ) ) )* )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:417:2: () ( ( (lv_domains_1_0= ruleDomain ) ) | ( (lv_relationships_2_0= ruleRelationship ) ) )*
-            {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:417:2: ()
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:418:5: 
-            {
-             
-                    temp=factory.create(grammarAccess.getBeliefWorldAccess().getBeliefWorldAction_0().getType().getClassifier());
-                    current = temp; 
-                    temp = null;
-                    CompositeNode newNode = createCompositeNode(grammarAccess.getBeliefWorldAccess().getBeliefWorldAction_0(), currentNode.getParent());
-                newNode.getChildren().add(currentNode);
-                moveLookaheadInfo(currentNode, newNode);
-                currentNode = newNode; 
-                    associateNodeWithAstElement(currentNode, current); 
-                
-
-            }
-
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:428:2: ( ( (lv_domains_1_0= ruleDomain ) ) | ( (lv_relationships_2_0= ruleRelationship ) ) )*
-            loop6:
-            do {
-                int alt6=3;
-                int LA6_0 = input.LA(1);
-
-                if ( (LA6_0==RULE_ID) ) {
-                    alt6=1;
-                }
-                else if ( (LA6_0==30||(LA6_0>=33 && LA6_0<=41)||(LA6_0>=45 && LA6_0<=51)) ) {
-                    alt6=2;
-                }
-
-
-                switch (alt6) {
-            	case 1 :
-            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:428:3: ( (lv_domains_1_0= ruleDomain ) )
-            	    {
-            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:428:3: ( (lv_domains_1_0= ruleDomain ) )
-            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:429:1: (lv_domains_1_0= ruleDomain )
-            	    {
-            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:429:1: (lv_domains_1_0= ruleDomain )
-            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:430:3: lv_domains_1_0= ruleDomain
-            	    {
-            	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getBeliefWorldAccess().getDomainsDomainParserRuleCall_1_0_0(), currentNode); 
-            	    	    
-            	    pushFollow(FOLLOW_ruleDomain_in_ruleBeliefWorld755);
-            	    lv_domains_1_0=ruleDomain();
-            	    _fsp--;
-
-
-            	    	        if (current==null) {
-            	    	            current = factory.create(grammarAccess.getBeliefWorldRule().getType().getClassifier());
-            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
-            	    	        }
-            	    	        try {
-            	    	       		add(
-            	    	       			current, 
-            	    	       			"domains",
-            	    	        		lv_domains_1_0, 
-            	    	        		"Domain", 
-            	    	        		currentNode);
-            	    	        } catch (ValueConverterException vce) {
-            	    				handleValueConverterException(vce);
-            	    	        }
-            	    	        currentNode = currentNode.getParent();
-            	    	    
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-            	case 2 :
-            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:453:6: ( (lv_relationships_2_0= ruleRelationship ) )
-            	    {
-            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:453:6: ( (lv_relationships_2_0= ruleRelationship ) )
-            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:454:1: (lv_relationships_2_0= ruleRelationship )
-            	    {
-            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:454:1: (lv_relationships_2_0= ruleRelationship )
-            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:455:3: lv_relationships_2_0= ruleRelationship
-            	    {
-            	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getBeliefWorldAccess().getRelationshipsRelationshipParserRuleCall_1_1_0(), currentNode); 
-            	    	    
-            	    pushFollow(FOLLOW_ruleRelationship_in_ruleBeliefWorld782);
-            	    lv_relationships_2_0=ruleRelationship();
-            	    _fsp--;
-
-
-            	    	        if (current==null) {
-            	    	            current = factory.create(grammarAccess.getBeliefWorldRule().getType().getClassifier());
-            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
-            	    	        }
-            	    	        try {
-            	    	       		add(
-            	    	       			current, 
-            	    	       			"relationships",
-            	    	        		lv_relationships_2_0, 
-            	    	        		"Relationship", 
-            	    	        		currentNode);
-            	    	        } catch (ValueConverterException vce) {
-            	    				handleValueConverterException(vce);
-            	    	        }
-            	    	        currentNode = currentNode.getParent();
-            	    	    
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop6;
-                }
-            } while (true);
-
-
-            }
-
-
-            }
-
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end ruleBeliefWorld
-
-
-    // $ANTLR start entryRuleDomain
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:485:1: entryRuleDomain returns [EObject current=null] : iv_ruleDomain= ruleDomain EOF ;
-    public final EObject entryRuleDomain() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_ruleDomain = null;
-
-
-        try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:486:2: (iv_ruleDomain= ruleDomain EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:487:2: iv_ruleDomain= ruleDomain EOF
-            {
-             currentNode = createCompositeNode(grammarAccess.getDomainRule(), currentNode); 
-            pushFollow(FOLLOW_ruleDomain_in_entryRuleDomain820);
-            iv_ruleDomain=ruleDomain();
-            _fsp--;
-
-             current =iv_ruleDomain; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDomain830); 
-
-            }
-
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end entryRuleDomain
-
-
-    // $ANTLR start ruleDomain
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:494:1: ruleDomain returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleDomainType ) ) ( (lv_properties_2_0= ruleProposition ) ) ( ',' ( (lv_properties_4_0= ruleProposition ) ) )* ) ;
-    public final EObject ruleDomain() throws RecognitionException {
-        EObject current = null;
-
-        Token lv_name_0_0=null;
-        Enumerator lv_type_1_0 = null;
-
-        EObject lv_properties_2_0 = null;
-
-        EObject lv_properties_4_0 = null;
-
-
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
-            
-        try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:499:6: ( ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleDomainType ) ) ( (lv_properties_2_0= ruleProposition ) ) ( ',' ( (lv_properties_4_0= ruleProposition ) ) )* ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:500:1: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleDomainType ) ) ( (lv_properties_2_0= ruleProposition ) ) ( ',' ( (lv_properties_4_0= ruleProposition ) ) )* )
-            {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:500:1: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleDomainType ) ) ( (lv_properties_2_0= ruleProposition ) ) ( ',' ( (lv_properties_4_0= ruleProposition ) ) )* )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:500:2: ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleDomainType ) ) ( (lv_properties_2_0= ruleProposition ) ) ( ',' ( (lv_properties_4_0= ruleProposition ) ) )*
-            {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:500:2: ( (lv_name_0_0= RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:501:1: (lv_name_0_0= RULE_ID )
-            {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:501:1: (lv_name_0_0= RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:502:3: lv_name_0_0= RULE_ID
-            {
-            lv_name_0_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDomain872); 
-
-            			createLeafNode(grammarAccess.getDomainAccess().getNameIDTerminalRuleCall_0_0(), "name"); 
-            		
-
-            	        if (current==null) {
-            	            current = factory.create(grammarAccess.getDomainRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
-            	        }
-            	        try {
-            	       		set(
-            	       			current, 
-            	       			"name",
-            	        		lv_name_0_0, 
-            	        		"ID", 
-            	        		lastConsumedNode);
-            	        } catch (ValueConverterException vce) {
-            				handleValueConverterException(vce);
-            	        }
-            	    
-
-            }
-
-
-            }
-
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:524:2: ( (lv_type_1_0= ruleDomainType ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:525:1: (lv_type_1_0= ruleDomainType )
-            {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:525:1: (lv_type_1_0= ruleDomainType )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:526:3: lv_type_1_0= ruleDomainType
-            {
-             
-            	        currentNode=createCompositeNode(grammarAccess.getDomainAccess().getTypeDomainTypeEnumRuleCall_1_0(), currentNode); 
-            	    
-            pushFollow(FOLLOW_ruleDomainType_in_ruleDomain898);
-            lv_type_1_0=ruleDomainType();
-            _fsp--;
-
-
-            	        if (current==null) {
-            	            current = factory.create(grammarAccess.getDomainRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode.getParent(), current);
-            	        }
-            	        try {
-            	       		set(
-            	       			current, 
-            	       			"type",
-            	        		lv_type_1_0, 
-            	        		"DomainType", 
-            	        		currentNode);
-            	        } catch (ValueConverterException vce) {
-            				handleValueConverterException(vce);
-            	        }
-            	        currentNode = currentNode.getParent();
-            	    
-
-            }
-
-
-            }
-
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:548:2: ( (lv_properties_2_0= ruleProposition ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:549:1: (lv_properties_2_0= ruleProposition )
-            {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:549:1: (lv_properties_2_0= ruleProposition )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:550:3: lv_properties_2_0= ruleProposition
-            {
-             
-            	        currentNode=createCompositeNode(grammarAccess.getDomainAccess().getPropertiesPropositionParserRuleCall_2_0(), currentNode); 
-            	    
-            pushFollow(FOLLOW_ruleProposition_in_ruleDomain919);
-            lv_properties_2_0=ruleProposition();
-            _fsp--;
-
-
-            	        if (current==null) {
-            	            current = factory.create(grammarAccess.getDomainRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode.getParent(), current);
-            	        }
-            	        try {
-            	       		add(
-            	       			current, 
-            	       			"properties",
-            	        		lv_properties_2_0, 
-            	        		"Proposition", 
-            	        		currentNode);
-            	        } catch (ValueConverterException vce) {
-            				handleValueConverterException(vce);
-            	        }
-            	        currentNode = currentNode.getParent();
-            	    
-
-            }
-
-
-            }
-
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:572:2: ( ',' ( (lv_properties_4_0= ruleProposition ) ) )*
-            loop7:
-            do {
-                int alt7=2;
-                int LA7_0 = input.LA(1);
-
-                if ( (LA7_0==14) ) {
-                    alt7=1;
-                }
-
-
-                switch (alt7) {
-            	case 1 :
-            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:572:4: ',' ( (lv_properties_4_0= ruleProposition ) )
-            	    {
-            	    match(input,14,FOLLOW_14_in_ruleDomain930); 
-
-            	            createLeafNode(grammarAccess.getDomainAccess().getCommaKeyword_3_0(), null); 
-            	        
-            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:576:1: ( (lv_properties_4_0= ruleProposition ) )
-            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:577:1: (lv_properties_4_0= ruleProposition )
-            	    {
-            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:577:1: (lv_properties_4_0= ruleProposition )
-            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:578:3: lv_properties_4_0= ruleProposition
-            	    {
-            	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getDomainAccess().getPropertiesPropositionParserRuleCall_3_1_0(), currentNode); 
-            	    	    
-            	    pushFollow(FOLLOW_ruleProposition_in_ruleDomain951);
-            	    lv_properties_4_0=ruleProposition();
-            	    _fsp--;
-
-
-            	    	        if (current==null) {
-            	    	            current = factory.create(grammarAccess.getDomainRule().getType().getClassifier());
-            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
-            	    	        }
-            	    	        try {
-            	    	       		add(
-            	    	       			current, 
-            	    	       			"properties",
-            	    	        		lv_properties_4_0, 
-            	    	        		"Proposition", 
-            	    	        		currentNode);
-            	    	        } catch (ValueConverterException vce) {
-            	    				handleValueConverterException(vce);
-            	    	        }
-            	    	        currentNode = currentNode.getParent();
-            	    	    
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop7;
-                }
-            } while (true);
-
-
-            }
-
-
-            }
-
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
     // $ANTLR end ruleDomain
 
 
     // $ANTLR start entryRuleProposition
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:608:1: entryRuleProposition returns [EObject current=null] : iv_ruleProposition= ruleProposition EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:469:1: entryRuleProposition returns [EObject current=null] : iv_ruleProposition= ruleProposition EOF ;
     public final EObject entryRuleProposition() throws RecognitionException {
         EObject current = null;
 
@@ -1420,16 +1037,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:609:2: (iv_ruleProposition= ruleProposition EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:610:2: iv_ruleProposition= ruleProposition EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:470:2: (iv_ruleProposition= ruleProposition EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:471:2: iv_ruleProposition= ruleProposition EOF
             {
              currentNode = createCompositeNode(grammarAccess.getPropositionRule(), currentNode); 
-            pushFollow(FOLLOW_ruleProposition_in_entryRuleProposition989);
+            pushFollow(FOLLOW_ruleProposition_in_entryRuleProposition772);
             iv_ruleProposition=ruleProposition();
             _fsp--;
 
              current =iv_ruleProposition; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleProposition999); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleProposition782); 
 
             }
 
@@ -1447,7 +1064,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleProposition
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:617:1: ruleProposition returns [EObject current=null] : (this_DomainAssumption_0= ruleDomainAssumption | this_Requirement_1= ruleRequirement | this_Argument_2= ruleArgument ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:478:1: ruleProposition returns [EObject current=null] : (this_DomainAssumption_0= ruleDomainAssumption | this_Requirement_1= ruleRequirement | this_Argument_2= ruleArgument ) ;
     public final EObject ruleProposition() throws RecognitionException {
         EObject current = null;
 
@@ -1461,15 +1078,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:622:6: ( (this_DomainAssumption_0= ruleDomainAssumption | this_Requirement_1= ruleRequirement | this_Argument_2= ruleArgument ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:623:1: (this_DomainAssumption_0= ruleDomainAssumption | this_Requirement_1= ruleRequirement | this_Argument_2= ruleArgument )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:483:6: ( (this_DomainAssumption_0= ruleDomainAssumption | this_Requirement_1= ruleRequirement | this_Argument_2= ruleArgument ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:484:1: (this_DomainAssumption_0= ruleDomainAssumption | this_Requirement_1= ruleRequirement | this_Argument_2= ruleArgument )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:623:1: (this_DomainAssumption_0= ruleDomainAssumption | this_Requirement_1= ruleRequirement | this_Argument_2= ruleArgument )
-            int alt8=3;
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:484:1: (this_DomainAssumption_0= ruleDomainAssumption | this_Requirement_1= ruleRequirement | this_Argument_2= ruleArgument )
+            int alt6=3;
             switch ( input.LA(1) ) {
             case 15:
                 {
-                alt8=1;
+                alt6=1;
                 }
                 break;
             case 16:
@@ -1477,29 +1094,29 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             case 18:
             case 19:
                 {
-                alt8=2;
+                alt6=2;
                 }
                 break;
             case 20:
                 {
-                alt8=3;
+                alt6=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("623:1: (this_DomainAssumption_0= ruleDomainAssumption | this_Requirement_1= ruleRequirement | this_Argument_2= ruleArgument )", 8, 0, input);
+                    new NoViableAltException("484:1: (this_DomainAssumption_0= ruleDomainAssumption | this_Requirement_1= ruleRequirement | this_Argument_2= ruleArgument )", 6, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt8) {
+            switch (alt6) {
                 case 1 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:624:5: this_DomainAssumption_0= ruleDomainAssumption
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:485:5: this_DomainAssumption_0= ruleDomainAssumption
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getPropositionAccess().getDomainAssumptionParserRuleCall_0(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleDomainAssumption_in_ruleProposition1046);
+                    pushFollow(FOLLOW_ruleDomainAssumption_in_ruleProposition829);
                     this_DomainAssumption_0=ruleDomainAssumption();
                     _fsp--;
 
@@ -1511,12 +1128,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:634:5: this_Requirement_1= ruleRequirement
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:495:5: this_Requirement_1= ruleRequirement
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getPropositionAccess().getRequirementParserRuleCall_1(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleRequirement_in_ruleProposition1073);
+                    pushFollow(FOLLOW_ruleRequirement_in_ruleProposition856);
                     this_Requirement_1=ruleRequirement();
                     _fsp--;
 
@@ -1528,12 +1145,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:644:5: this_Argument_2= ruleArgument
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:505:5: this_Argument_2= ruleArgument
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getPropositionAccess().getArgumentParserRuleCall_2(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleArgument_in_ruleProposition1100);
+                    pushFollow(FOLLOW_ruleArgument_in_ruleProposition883);
                     this_Argument_2=ruleArgument();
                     _fsp--;
 
@@ -1567,7 +1184,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleRequirement
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:660:1: entryRuleRequirement returns [EObject current=null] : iv_ruleRequirement= ruleRequirement EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:521:1: entryRuleRequirement returns [EObject current=null] : iv_ruleRequirement= ruleRequirement EOF ;
     public final EObject entryRuleRequirement() throws RecognitionException {
         EObject current = null;
 
@@ -1575,16 +1192,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:661:2: (iv_ruleRequirement= ruleRequirement EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:662:2: iv_ruleRequirement= ruleRequirement EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:522:2: (iv_ruleRequirement= ruleRequirement EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:523:2: iv_ruleRequirement= ruleRequirement EOF
             {
              currentNode = createCompositeNode(grammarAccess.getRequirementRule(), currentNode); 
-            pushFollow(FOLLOW_ruleRequirement_in_entryRuleRequirement1135);
+            pushFollow(FOLLOW_ruleRequirement_in_entryRuleRequirement918);
             iv_ruleRequirement=ruleRequirement();
             _fsp--;
 
              current =iv_ruleRequirement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRequirement1145); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRequirement928); 
 
             }
 
@@ -1602,7 +1219,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleRequirement
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:669:1: ruleRequirement returns [EObject current=null] : (this_FunctionalRequirement_0= ruleFunctionalRequirement | this_SecurityRequirement_1= ruleSecurityRequirement | this_AntiRequirement_2= ruleAntiRequirement | this_QualityRequirement_3= ruleQualityRequirement ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:530:1: ruleRequirement returns [EObject current=null] : (this_FunctionalRequirement_0= ruleFunctionalRequirement | this_SecurityRequirement_1= ruleSecurityRequirement | this_AntiRequirement_2= ruleAntiRequirement | this_QualityRequirement_3= ruleQualityRequirement ) ;
     public final EObject ruleRequirement() throws RecognitionException {
         EObject current = null;
 
@@ -1618,47 +1235,47 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:674:6: ( (this_FunctionalRequirement_0= ruleFunctionalRequirement | this_SecurityRequirement_1= ruleSecurityRequirement | this_AntiRequirement_2= ruleAntiRequirement | this_QualityRequirement_3= ruleQualityRequirement ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:675:1: (this_FunctionalRequirement_0= ruleFunctionalRequirement | this_SecurityRequirement_1= ruleSecurityRequirement | this_AntiRequirement_2= ruleAntiRequirement | this_QualityRequirement_3= ruleQualityRequirement )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:535:6: ( (this_FunctionalRequirement_0= ruleFunctionalRequirement | this_SecurityRequirement_1= ruleSecurityRequirement | this_AntiRequirement_2= ruleAntiRequirement | this_QualityRequirement_3= ruleQualityRequirement ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:536:1: (this_FunctionalRequirement_0= ruleFunctionalRequirement | this_SecurityRequirement_1= ruleSecurityRequirement | this_AntiRequirement_2= ruleAntiRequirement | this_QualityRequirement_3= ruleQualityRequirement )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:675:1: (this_FunctionalRequirement_0= ruleFunctionalRequirement | this_SecurityRequirement_1= ruleSecurityRequirement | this_AntiRequirement_2= ruleAntiRequirement | this_QualityRequirement_3= ruleQualityRequirement )
-            int alt9=4;
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:536:1: (this_FunctionalRequirement_0= ruleFunctionalRequirement | this_SecurityRequirement_1= ruleSecurityRequirement | this_AntiRequirement_2= ruleAntiRequirement | this_QualityRequirement_3= ruleQualityRequirement )
+            int alt7=4;
             switch ( input.LA(1) ) {
             case 16:
                 {
-                alt9=1;
+                alt7=1;
                 }
                 break;
             case 17:
                 {
-                alt9=2;
+                alt7=2;
                 }
                 break;
             case 18:
                 {
-                alt9=3;
+                alt7=3;
                 }
                 break;
             case 19:
                 {
-                alt9=4;
+                alt7=4;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("675:1: (this_FunctionalRequirement_0= ruleFunctionalRequirement | this_SecurityRequirement_1= ruleSecurityRequirement | this_AntiRequirement_2= ruleAntiRequirement | this_QualityRequirement_3= ruleQualityRequirement )", 9, 0, input);
+                    new NoViableAltException("536:1: (this_FunctionalRequirement_0= ruleFunctionalRequirement | this_SecurityRequirement_1= ruleSecurityRequirement | this_AntiRequirement_2= ruleAntiRequirement | this_QualityRequirement_3= ruleQualityRequirement )", 7, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt9) {
+            switch (alt7) {
                 case 1 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:676:5: this_FunctionalRequirement_0= ruleFunctionalRequirement
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:537:5: this_FunctionalRequirement_0= ruleFunctionalRequirement
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getRequirementAccess().getFunctionalRequirementParserRuleCall_0(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleFunctionalRequirement_in_ruleRequirement1192);
+                    pushFollow(FOLLOW_ruleFunctionalRequirement_in_ruleRequirement975);
                     this_FunctionalRequirement_0=ruleFunctionalRequirement();
                     _fsp--;
 
@@ -1670,12 +1287,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:686:5: this_SecurityRequirement_1= ruleSecurityRequirement
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:547:5: this_SecurityRequirement_1= ruleSecurityRequirement
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getRequirementAccess().getSecurityRequirementParserRuleCall_1(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleSecurityRequirement_in_ruleRequirement1219);
+                    pushFollow(FOLLOW_ruleSecurityRequirement_in_ruleRequirement1002);
                     this_SecurityRequirement_1=ruleSecurityRequirement();
                     _fsp--;
 
@@ -1687,12 +1304,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:696:5: this_AntiRequirement_2= ruleAntiRequirement
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:557:5: this_AntiRequirement_2= ruleAntiRequirement
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getRequirementAccess().getAntiRequirementParserRuleCall_2(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleAntiRequirement_in_ruleRequirement1246);
+                    pushFollow(FOLLOW_ruleAntiRequirement_in_ruleRequirement1029);
                     this_AntiRequirement_2=ruleAntiRequirement();
                     _fsp--;
 
@@ -1704,12 +1321,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:706:5: this_QualityRequirement_3= ruleQualityRequirement
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:567:5: this_QualityRequirement_3= ruleQualityRequirement
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getRequirementAccess().getQualityRequirementParserRuleCall_3(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleQualityRequirement_in_ruleRequirement1273);
+                    pushFollow(FOLLOW_ruleQualityRequirement_in_ruleRequirement1056);
                     this_QualityRequirement_3=ruleQualityRequirement();
                     _fsp--;
 
@@ -1743,7 +1360,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleDomainAssumption
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:722:1: entryRuleDomainAssumption returns [EObject current=null] : iv_ruleDomainAssumption= ruleDomainAssumption EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:583:1: entryRuleDomainAssumption returns [EObject current=null] : iv_ruleDomainAssumption= ruleDomainAssumption EOF ;
     public final EObject entryRuleDomainAssumption() throws RecognitionException {
         EObject current = null;
 
@@ -1751,16 +1368,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:723:2: (iv_ruleDomainAssumption= ruleDomainAssumption EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:724:2: iv_ruleDomainAssumption= ruleDomainAssumption EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:584:2: (iv_ruleDomainAssumption= ruleDomainAssumption EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:585:2: iv_ruleDomainAssumption= ruleDomainAssumption EOF
             {
              currentNode = createCompositeNode(grammarAccess.getDomainAssumptionRule(), currentNode); 
-            pushFollow(FOLLOW_ruleDomainAssumption_in_entryRuleDomainAssumption1308);
+            pushFollow(FOLLOW_ruleDomainAssumption_in_entryRuleDomainAssumption1091);
             iv_ruleDomainAssumption=ruleDomainAssumption();
             _fsp--;
 
              current =iv_ruleDomainAssumption; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDomainAssumption1318); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDomainAssumption1101); 
 
             }
 
@@ -1778,7 +1395,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleDomainAssumption
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:731:1: ruleDomainAssumption returns [EObject current=null] : ( 'DA' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:592:1: ruleDomainAssumption returns [EObject current=null] : ( 'DA' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleDomainAssumption() throws RecognitionException {
         EObject current = null;
 
@@ -1787,24 +1404,24 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:736:6: ( ( 'DA' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:737:1: ( 'DA' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:597:6: ( ( 'DA' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:598:1: ( 'DA' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:737:1: ( 'DA' ( (lv_name_1_0= RULE_ID ) ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:737:3: 'DA' ( (lv_name_1_0= RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:598:1: ( 'DA' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:598:3: 'DA' ( (lv_name_1_0= RULE_ID ) )
             {
-            match(input,15,FOLLOW_15_in_ruleDomainAssumption1353); 
+            match(input,15,FOLLOW_15_in_ruleDomainAssumption1136); 
 
                     createLeafNode(grammarAccess.getDomainAssumptionAccess().getDAKeyword_0(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:741:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:742:1: (lv_name_1_0= RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:602:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:603:1: (lv_name_1_0= RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:742:1: (lv_name_1_0= RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:743:3: lv_name_1_0= RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:603:1: (lv_name_1_0= RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:604:3: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDomainAssumption1370); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDomainAssumption1153); 
 
             			createLeafNode(grammarAccess.getDomainAssumptionAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
             		
@@ -1853,7 +1470,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleFunctionalRequirement
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:773:1: entryRuleFunctionalRequirement returns [EObject current=null] : iv_ruleFunctionalRequirement= ruleFunctionalRequirement EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:634:1: entryRuleFunctionalRequirement returns [EObject current=null] : iv_ruleFunctionalRequirement= ruleFunctionalRequirement EOF ;
     public final EObject entryRuleFunctionalRequirement() throws RecognitionException {
         EObject current = null;
 
@@ -1861,16 +1478,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:774:2: (iv_ruleFunctionalRequirement= ruleFunctionalRequirement EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:775:2: iv_ruleFunctionalRequirement= ruleFunctionalRequirement EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:635:2: (iv_ruleFunctionalRequirement= ruleFunctionalRequirement EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:636:2: iv_ruleFunctionalRequirement= ruleFunctionalRequirement EOF
             {
              currentNode = createCompositeNode(grammarAccess.getFunctionalRequirementRule(), currentNode); 
-            pushFollow(FOLLOW_ruleFunctionalRequirement_in_entryRuleFunctionalRequirement1411);
+            pushFollow(FOLLOW_ruleFunctionalRequirement_in_entryRuleFunctionalRequirement1194);
             iv_ruleFunctionalRequirement=ruleFunctionalRequirement();
             _fsp--;
 
              current =iv_ruleFunctionalRequirement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFunctionalRequirement1421); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFunctionalRequirement1204); 
 
             }
 
@@ -1888,7 +1505,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleFunctionalRequirement
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:782:1: ruleFunctionalRequirement returns [EObject current=null] : ( 'FR' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:643:1: ruleFunctionalRequirement returns [EObject current=null] : ( 'FR' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleFunctionalRequirement() throws RecognitionException {
         EObject current = null;
 
@@ -1897,24 +1514,24 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:787:6: ( ( 'FR' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:788:1: ( 'FR' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:648:6: ( ( 'FR' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:649:1: ( 'FR' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:788:1: ( 'FR' ( (lv_name_1_0= RULE_ID ) ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:788:3: 'FR' ( (lv_name_1_0= RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:649:1: ( 'FR' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:649:3: 'FR' ( (lv_name_1_0= RULE_ID ) )
             {
-            match(input,16,FOLLOW_16_in_ruleFunctionalRequirement1456); 
+            match(input,16,FOLLOW_16_in_ruleFunctionalRequirement1239); 
 
                     createLeafNode(grammarAccess.getFunctionalRequirementAccess().getFRKeyword_0(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:792:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:793:1: (lv_name_1_0= RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:653:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:654:1: (lv_name_1_0= RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:793:1: (lv_name_1_0= RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:794:3: lv_name_1_0= RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:654:1: (lv_name_1_0= RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:655:3: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFunctionalRequirement1473); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFunctionalRequirement1256); 
 
             			createLeafNode(grammarAccess.getFunctionalRequirementAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
             		
@@ -1963,7 +1580,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleSecurityRequirement
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:824:1: entryRuleSecurityRequirement returns [EObject current=null] : iv_ruleSecurityRequirement= ruleSecurityRequirement EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:685:1: entryRuleSecurityRequirement returns [EObject current=null] : iv_ruleSecurityRequirement= ruleSecurityRequirement EOF ;
     public final EObject entryRuleSecurityRequirement() throws RecognitionException {
         EObject current = null;
 
@@ -1971,16 +1588,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:825:2: (iv_ruleSecurityRequirement= ruleSecurityRequirement EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:826:2: iv_ruleSecurityRequirement= ruleSecurityRequirement EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:686:2: (iv_ruleSecurityRequirement= ruleSecurityRequirement EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:687:2: iv_ruleSecurityRequirement= ruleSecurityRequirement EOF
             {
              currentNode = createCompositeNode(grammarAccess.getSecurityRequirementRule(), currentNode); 
-            pushFollow(FOLLOW_ruleSecurityRequirement_in_entryRuleSecurityRequirement1514);
+            pushFollow(FOLLOW_ruleSecurityRequirement_in_entryRuleSecurityRequirement1297);
             iv_ruleSecurityRequirement=ruleSecurityRequirement();
             _fsp--;
 
              current =iv_ruleSecurityRequirement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSecurityRequirement1524); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSecurityRequirement1307); 
 
             }
 
@@ -1998,7 +1615,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleSecurityRequirement
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:833:1: ruleSecurityRequirement returns [EObject current=null] : ( 'SR' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:694:1: ruleSecurityRequirement returns [EObject current=null] : ( 'SR' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleSecurityRequirement() throws RecognitionException {
         EObject current = null;
 
@@ -2007,24 +1624,24 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:838:6: ( ( 'SR' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:839:1: ( 'SR' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:699:6: ( ( 'SR' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:700:1: ( 'SR' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:839:1: ( 'SR' ( (lv_name_1_0= RULE_ID ) ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:839:3: 'SR' ( (lv_name_1_0= RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:700:1: ( 'SR' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:700:3: 'SR' ( (lv_name_1_0= RULE_ID ) )
             {
-            match(input,17,FOLLOW_17_in_ruleSecurityRequirement1559); 
+            match(input,17,FOLLOW_17_in_ruleSecurityRequirement1342); 
 
                     createLeafNode(grammarAccess.getSecurityRequirementAccess().getSRKeyword_0(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:843:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:844:1: (lv_name_1_0= RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:704:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:705:1: (lv_name_1_0= RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:844:1: (lv_name_1_0= RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:845:3: lv_name_1_0= RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:705:1: (lv_name_1_0= RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:706:3: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSecurityRequirement1576); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSecurityRequirement1359); 
 
             			createLeafNode(grammarAccess.getSecurityRequirementAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
             		
@@ -2073,7 +1690,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleAntiRequirement
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:875:1: entryRuleAntiRequirement returns [EObject current=null] : iv_ruleAntiRequirement= ruleAntiRequirement EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:736:1: entryRuleAntiRequirement returns [EObject current=null] : iv_ruleAntiRequirement= ruleAntiRequirement EOF ;
     public final EObject entryRuleAntiRequirement() throws RecognitionException {
         EObject current = null;
 
@@ -2081,16 +1698,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:876:2: (iv_ruleAntiRequirement= ruleAntiRequirement EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:877:2: iv_ruleAntiRequirement= ruleAntiRequirement EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:737:2: (iv_ruleAntiRequirement= ruleAntiRequirement EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:738:2: iv_ruleAntiRequirement= ruleAntiRequirement EOF
             {
              currentNode = createCompositeNode(grammarAccess.getAntiRequirementRule(), currentNode); 
-            pushFollow(FOLLOW_ruleAntiRequirement_in_entryRuleAntiRequirement1617);
+            pushFollow(FOLLOW_ruleAntiRequirement_in_entryRuleAntiRequirement1400);
             iv_ruleAntiRequirement=ruleAntiRequirement();
             _fsp--;
 
              current =iv_ruleAntiRequirement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAntiRequirement1627); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAntiRequirement1410); 
 
             }
 
@@ -2108,7 +1725,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleAntiRequirement
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:884:1: ruleAntiRequirement returns [EObject current=null] : ( 'AR' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:745:1: ruleAntiRequirement returns [EObject current=null] : ( 'AR' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleAntiRequirement() throws RecognitionException {
         EObject current = null;
 
@@ -2117,24 +1734,24 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:889:6: ( ( 'AR' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:890:1: ( 'AR' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:750:6: ( ( 'AR' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:751:1: ( 'AR' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:890:1: ( 'AR' ( (lv_name_1_0= RULE_ID ) ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:890:3: 'AR' ( (lv_name_1_0= RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:751:1: ( 'AR' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:751:3: 'AR' ( (lv_name_1_0= RULE_ID ) )
             {
-            match(input,18,FOLLOW_18_in_ruleAntiRequirement1662); 
+            match(input,18,FOLLOW_18_in_ruleAntiRequirement1445); 
 
                     createLeafNode(grammarAccess.getAntiRequirementAccess().getARKeyword_0(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:894:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:895:1: (lv_name_1_0= RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:755:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:756:1: (lv_name_1_0= RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:895:1: (lv_name_1_0= RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:896:3: lv_name_1_0= RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:756:1: (lv_name_1_0= RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:757:3: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleAntiRequirement1679); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleAntiRequirement1462); 
 
             			createLeafNode(grammarAccess.getAntiRequirementAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
             		
@@ -2183,7 +1800,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleQualityRequirement
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:926:1: entryRuleQualityRequirement returns [EObject current=null] : iv_ruleQualityRequirement= ruleQualityRequirement EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:787:1: entryRuleQualityRequirement returns [EObject current=null] : iv_ruleQualityRequirement= ruleQualityRequirement EOF ;
     public final EObject entryRuleQualityRequirement() throws RecognitionException {
         EObject current = null;
 
@@ -2191,16 +1808,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:927:2: (iv_ruleQualityRequirement= ruleQualityRequirement EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:928:2: iv_ruleQualityRequirement= ruleQualityRequirement EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:788:2: (iv_ruleQualityRequirement= ruleQualityRequirement EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:789:2: iv_ruleQualityRequirement= ruleQualityRequirement EOF
             {
              currentNode = createCompositeNode(grammarAccess.getQualityRequirementRule(), currentNode); 
-            pushFollow(FOLLOW_ruleQualityRequirement_in_entryRuleQualityRequirement1720);
+            pushFollow(FOLLOW_ruleQualityRequirement_in_entryRuleQualityRequirement1503);
             iv_ruleQualityRequirement=ruleQualityRequirement();
             _fsp--;
 
              current =iv_ruleQualityRequirement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleQualityRequirement1730); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleQualityRequirement1513); 
 
             }
 
@@ -2218,7 +1835,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleQualityRequirement
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:935:1: ruleQualityRequirement returns [EObject current=null] : ( 'Q' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:796:1: ruleQualityRequirement returns [EObject current=null] : ( 'Q' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleQualityRequirement() throws RecognitionException {
         EObject current = null;
 
@@ -2227,24 +1844,24 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:940:6: ( ( 'Q' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:941:1: ( 'Q' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:801:6: ( ( 'Q' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:802:1: ( 'Q' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:941:1: ( 'Q' ( (lv_name_1_0= RULE_ID ) ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:941:3: 'Q' ( (lv_name_1_0= RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:802:1: ( 'Q' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:802:3: 'Q' ( (lv_name_1_0= RULE_ID ) )
             {
-            match(input,19,FOLLOW_19_in_ruleQualityRequirement1765); 
+            match(input,19,FOLLOW_19_in_ruleQualityRequirement1548); 
 
                     createLeafNode(grammarAccess.getQualityRequirementAccess().getQKeyword_0(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:945:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:946:1: (lv_name_1_0= RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:806:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:807:1: (lv_name_1_0= RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:946:1: (lv_name_1_0= RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:947:3: lv_name_1_0= RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:807:1: (lv_name_1_0= RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:808:3: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualityRequirement1782); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualityRequirement1565); 
 
             			createLeafNode(grammarAccess.getQualityRequirementAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
             		
@@ -2293,7 +1910,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleArgument
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:977:1: entryRuleArgument returns [EObject current=null] : iv_ruleArgument= ruleArgument EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:838:1: entryRuleArgument returns [EObject current=null] : iv_ruleArgument= ruleArgument EOF ;
     public final EObject entryRuleArgument() throws RecognitionException {
         EObject current = null;
 
@@ -2301,16 +1918,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:978:2: (iv_ruleArgument= ruleArgument EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:979:2: iv_ruleArgument= ruleArgument EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:839:2: (iv_ruleArgument= ruleArgument EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:840:2: iv_ruleArgument= ruleArgument EOF
             {
              currentNode = createCompositeNode(grammarAccess.getArgumentRule(), currentNode); 
-            pushFollow(FOLLOW_ruleArgument_in_entryRuleArgument1823);
+            pushFollow(FOLLOW_ruleArgument_in_entryRuleArgument1606);
             iv_ruleArgument=ruleArgument();
             _fsp--;
 
              current =iv_ruleArgument; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleArgument1833); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleArgument1616); 
 
             }
 
@@ -2328,7 +1945,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleArgument
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:986:1: ruleArgument returns [EObject current=null] : ( 'A' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:847:1: ruleArgument returns [EObject current=null] : ( 'A' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleArgument() throws RecognitionException {
         EObject current = null;
 
@@ -2337,24 +1954,24 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:991:6: ( ( 'A' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:992:1: ( 'A' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:852:6: ( ( 'A' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:853:1: ( 'A' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:992:1: ( 'A' ( (lv_name_1_0= RULE_ID ) ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:992:3: 'A' ( (lv_name_1_0= RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:853:1: ( 'A' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:853:3: 'A' ( (lv_name_1_0= RULE_ID ) )
             {
-            match(input,20,FOLLOW_20_in_ruleArgument1868); 
+            match(input,20,FOLLOW_20_in_ruleArgument1651); 
 
                     createLeafNode(grammarAccess.getArgumentAccess().getAKeyword_0(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:996:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:997:1: (lv_name_1_0= RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:857:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:858:1: (lv_name_1_0= RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:997:1: (lv_name_1_0= RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:998:3: lv_name_1_0= RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:858:1: (lv_name_1_0= RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:859:3: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleArgument1885); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleArgument1668); 
 
             			createLeafNode(grammarAccess.getArgumentAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
             		
@@ -2403,7 +2020,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleEntity
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1028:1: entryRuleEntity returns [EObject current=null] : iv_ruleEntity= ruleEntity EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:889:1: entryRuleEntity returns [EObject current=null] : iv_ruleEntity= ruleEntity EOF ;
     public final EObject entryRuleEntity() throws RecognitionException {
         EObject current = null;
 
@@ -2411,16 +2028,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1029:2: (iv_ruleEntity= ruleEntity EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1030:2: iv_ruleEntity= ruleEntity EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:890:2: (iv_ruleEntity= ruleEntity EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:891:2: iv_ruleEntity= ruleEntity EOF
             {
              currentNode = createCompositeNode(grammarAccess.getEntityRule(), currentNode); 
-            pushFollow(FOLLOW_ruleEntity_in_entryRuleEntity1926);
+            pushFollow(FOLLOW_ruleEntity_in_entryRuleEntity1709);
             iv_ruleEntity=ruleEntity();
             _fsp--;
 
              current =iv_ruleEntity; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEntity1936); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEntity1719); 
 
             }
 
@@ -2438,7 +2055,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleEntity
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1037:1: ruleEntity returns [EObject current=null] : (this_Actor_0= ruleActor | this_Process_1= ruleProcess | this_Resource_2= ruleResource ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:898:1: ruleEntity returns [EObject current=null] : (this_Actor_0= ruleActor | this_Process_1= ruleProcess | this_Resource_2= ruleResource ) ;
     public final EObject ruleEntity() throws RecognitionException {
         EObject current = null;
 
@@ -2452,45 +2069,45 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1042:6: ( (this_Actor_0= ruleActor | this_Process_1= ruleProcess | this_Resource_2= ruleResource ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1043:1: (this_Actor_0= ruleActor | this_Process_1= ruleProcess | this_Resource_2= ruleResource )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:903:6: ( (this_Actor_0= ruleActor | this_Process_1= ruleProcess | this_Resource_2= ruleResource ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:904:1: (this_Actor_0= ruleActor | this_Process_1= ruleProcess | this_Resource_2= ruleResource )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1043:1: (this_Actor_0= ruleActor | this_Process_1= ruleProcess | this_Resource_2= ruleResource )
-            int alt10=3;
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:904:1: (this_Actor_0= ruleActor | this_Process_1= ruleProcess | this_Resource_2= ruleResource )
+            int alt8=3;
             switch ( input.LA(1) ) {
             case 21:
             case 22:
                 {
-                alt10=1;
+                alt8=1;
                 }
                 break;
             case 23:
             case 26:
                 {
-                alt10=2;
+                alt8=2;
                 }
                 break;
             case 28:
             case 29:
                 {
-                alt10=3;
+                alt8=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("1043:1: (this_Actor_0= ruleActor | this_Process_1= ruleProcess | this_Resource_2= ruleResource )", 10, 0, input);
+                    new NoViableAltException("904:1: (this_Actor_0= ruleActor | this_Process_1= ruleProcess | this_Resource_2= ruleResource )", 8, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt10) {
+            switch (alt8) {
                 case 1 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1044:5: this_Actor_0= ruleActor
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:905:5: this_Actor_0= ruleActor
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getEntityAccess().getActorParserRuleCall_0(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleActor_in_ruleEntity1983);
+                    pushFollow(FOLLOW_ruleActor_in_ruleEntity1766);
                     this_Actor_0=ruleActor();
                     _fsp--;
 
@@ -2502,12 +2119,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1054:5: this_Process_1= ruleProcess
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:915:5: this_Process_1= ruleProcess
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getEntityAccess().getProcessParserRuleCall_1(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleProcess_in_ruleEntity2010);
+                    pushFollow(FOLLOW_ruleProcess_in_ruleEntity1793);
                     this_Process_1=ruleProcess();
                     _fsp--;
 
@@ -2519,12 +2136,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1064:5: this_Resource_2= ruleResource
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:925:5: this_Resource_2= ruleResource
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getEntityAccess().getResourceParserRuleCall_2(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleResource_in_ruleEntity2037);
+                    pushFollow(FOLLOW_ruleResource_in_ruleEntity1820);
                     this_Resource_2=ruleResource();
                     _fsp--;
 
@@ -2558,7 +2175,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleActor
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1080:1: entryRuleActor returns [EObject current=null] : iv_ruleActor= ruleActor EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:941:1: entryRuleActor returns [EObject current=null] : iv_ruleActor= ruleActor EOF ;
     public final EObject entryRuleActor() throws RecognitionException {
         EObject current = null;
 
@@ -2566,16 +2183,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1081:2: (iv_ruleActor= ruleActor EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1082:2: iv_ruleActor= ruleActor EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:942:2: (iv_ruleActor= ruleActor EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:943:2: iv_ruleActor= ruleActor EOF
             {
              currentNode = createCompositeNode(grammarAccess.getActorRule(), currentNode); 
-            pushFollow(FOLLOW_ruleActor_in_entryRuleActor2072);
+            pushFollow(FOLLOW_ruleActor_in_entryRuleActor1855);
             iv_ruleActor=ruleActor();
             _fsp--;
 
              current =iv_ruleActor; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleActor2082); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleActor1865); 
 
             }
 
@@ -2593,7 +2210,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleActor
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1089:1: ruleActor returns [EObject current=null] : (this_Stakeholder_0= ruleStakeholder | this_Attacker_1= ruleAttacker ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:950:1: ruleActor returns [EObject current=null] : (this_Stakeholder_0= ruleStakeholder | this_Attacker_1= ruleAttacker ) ;
     public final EObject ruleActor() throws RecognitionException {
         EObject current = null;
 
@@ -2605,33 +2222,33 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1094:6: ( (this_Stakeholder_0= ruleStakeholder | this_Attacker_1= ruleAttacker ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1095:1: (this_Stakeholder_0= ruleStakeholder | this_Attacker_1= ruleAttacker )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:955:6: ( (this_Stakeholder_0= ruleStakeholder | this_Attacker_1= ruleAttacker ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:956:1: (this_Stakeholder_0= ruleStakeholder | this_Attacker_1= ruleAttacker )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1095:1: (this_Stakeholder_0= ruleStakeholder | this_Attacker_1= ruleAttacker )
-            int alt11=2;
-            int LA11_0 = input.LA(1);
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:956:1: (this_Stakeholder_0= ruleStakeholder | this_Attacker_1= ruleAttacker )
+            int alt9=2;
+            int LA9_0 = input.LA(1);
 
-            if ( (LA11_0==21) ) {
-                alt11=1;
+            if ( (LA9_0==21) ) {
+                alt9=1;
             }
-            else if ( (LA11_0==22) ) {
-                alt11=2;
+            else if ( (LA9_0==22) ) {
+                alt9=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("1095:1: (this_Stakeholder_0= ruleStakeholder | this_Attacker_1= ruleAttacker )", 11, 0, input);
+                    new NoViableAltException("956:1: (this_Stakeholder_0= ruleStakeholder | this_Attacker_1= ruleAttacker )", 9, 0, input);
 
                 throw nvae;
             }
-            switch (alt11) {
+            switch (alt9) {
                 case 1 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1096:5: this_Stakeholder_0= ruleStakeholder
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:957:5: this_Stakeholder_0= ruleStakeholder
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getActorAccess().getStakeholderParserRuleCall_0(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleStakeholder_in_ruleActor2129);
+                    pushFollow(FOLLOW_ruleStakeholder_in_ruleActor1912);
                     this_Stakeholder_0=ruleStakeholder();
                     _fsp--;
 
@@ -2643,12 +2260,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1106:5: this_Attacker_1= ruleAttacker
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:967:5: this_Attacker_1= ruleAttacker
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getActorAccess().getAttackerParserRuleCall_1(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleAttacker_in_ruleActor2156);
+                    pushFollow(FOLLOW_ruleAttacker_in_ruleActor1939);
                     this_Attacker_1=ruleAttacker();
                     _fsp--;
 
@@ -2682,7 +2299,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleStakeholder
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1122:1: entryRuleStakeholder returns [EObject current=null] : iv_ruleStakeholder= ruleStakeholder EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:983:1: entryRuleStakeholder returns [EObject current=null] : iv_ruleStakeholder= ruleStakeholder EOF ;
     public final EObject entryRuleStakeholder() throws RecognitionException {
         EObject current = null;
 
@@ -2690,16 +2307,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1123:2: (iv_ruleStakeholder= ruleStakeholder EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1124:2: iv_ruleStakeholder= ruleStakeholder EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:984:2: (iv_ruleStakeholder= ruleStakeholder EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:985:2: iv_ruleStakeholder= ruleStakeholder EOF
             {
              currentNode = createCompositeNode(grammarAccess.getStakeholderRule(), currentNode); 
-            pushFollow(FOLLOW_ruleStakeholder_in_entryRuleStakeholder2191);
+            pushFollow(FOLLOW_ruleStakeholder_in_entryRuleStakeholder1974);
             iv_ruleStakeholder=ruleStakeholder();
             _fsp--;
 
              current =iv_ruleStakeholder; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleStakeholder2201); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleStakeholder1984); 
 
             }
 
@@ -2717,7 +2334,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleStakeholder
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1131:1: ruleStakeholder returns [EObject current=null] : ( 'actor' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:992:1: ruleStakeholder returns [EObject current=null] : ( 'actor' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleStakeholder() throws RecognitionException {
         EObject current = null;
 
@@ -2726,24 +2343,24 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1136:6: ( ( 'actor' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1137:1: ( 'actor' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:997:6: ( ( 'actor' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:998:1: ( 'actor' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1137:1: ( 'actor' ( (lv_name_1_0= RULE_ID ) ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1137:3: 'actor' ( (lv_name_1_0= RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:998:1: ( 'actor' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:998:3: 'actor' ( (lv_name_1_0= RULE_ID ) )
             {
-            match(input,21,FOLLOW_21_in_ruleStakeholder2236); 
+            match(input,21,FOLLOW_21_in_ruleStakeholder2019); 
 
                     createLeafNode(grammarAccess.getStakeholderAccess().getActorKeyword_0(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1141:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1142:1: (lv_name_1_0= RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1002:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1003:1: (lv_name_1_0= RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1142:1: (lv_name_1_0= RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1143:3: lv_name_1_0= RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1003:1: (lv_name_1_0= RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1004:3: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleStakeholder2253); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleStakeholder2036); 
 
             			createLeafNode(grammarAccess.getStakeholderAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
             		
@@ -2792,7 +2409,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleAttacker
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1173:1: entryRuleAttacker returns [EObject current=null] : iv_ruleAttacker= ruleAttacker EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1034:1: entryRuleAttacker returns [EObject current=null] : iv_ruleAttacker= ruleAttacker EOF ;
     public final EObject entryRuleAttacker() throws RecognitionException {
         EObject current = null;
 
@@ -2800,16 +2417,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1174:2: (iv_ruleAttacker= ruleAttacker EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1175:2: iv_ruleAttacker= ruleAttacker EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1035:2: (iv_ruleAttacker= ruleAttacker EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1036:2: iv_ruleAttacker= ruleAttacker EOF
             {
              currentNode = createCompositeNode(grammarAccess.getAttackerRule(), currentNode); 
-            pushFollow(FOLLOW_ruleAttacker_in_entryRuleAttacker2294);
+            pushFollow(FOLLOW_ruleAttacker_in_entryRuleAttacker2077);
             iv_ruleAttacker=ruleAttacker();
             _fsp--;
 
              current =iv_ruleAttacker; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAttacker2304); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAttacker2087); 
 
             }
 
@@ -2827,7 +2444,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleAttacker
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1182:1: ruleAttacker returns [EObject current=null] : ( 'attacker' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1043:1: ruleAttacker returns [EObject current=null] : ( 'attacker' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleAttacker() throws RecognitionException {
         EObject current = null;
 
@@ -2836,24 +2453,24 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1187:6: ( ( 'attacker' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1188:1: ( 'attacker' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1048:6: ( ( 'attacker' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1049:1: ( 'attacker' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1188:1: ( 'attacker' ( (lv_name_1_0= RULE_ID ) ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1188:3: 'attacker' ( (lv_name_1_0= RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1049:1: ( 'attacker' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1049:3: 'attacker' ( (lv_name_1_0= RULE_ID ) )
             {
-            match(input,22,FOLLOW_22_in_ruleAttacker2339); 
+            match(input,22,FOLLOW_22_in_ruleAttacker2122); 
 
                     createLeafNode(grammarAccess.getAttackerAccess().getAttackerKeyword_0(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1192:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1193:1: (lv_name_1_0= RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1053:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1054:1: (lv_name_1_0= RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1193:1: (lv_name_1_0= RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1194:3: lv_name_1_0= RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1054:1: (lv_name_1_0= RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1055:3: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleAttacker2356); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleAttacker2139); 
 
             			createLeafNode(grammarAccess.getAttackerAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
             		
@@ -2902,7 +2519,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleProcess
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1224:1: entryRuleProcess returns [EObject current=null] : iv_ruleProcess= ruleProcess EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1085:1: entryRuleProcess returns [EObject current=null] : iv_ruleProcess= ruleProcess EOF ;
     public final EObject entryRuleProcess() throws RecognitionException {
         EObject current = null;
 
@@ -2910,16 +2527,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1225:2: (iv_ruleProcess= ruleProcess EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1226:2: iv_ruleProcess= ruleProcess EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1086:2: (iv_ruleProcess= ruleProcess EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1087:2: iv_ruleProcess= ruleProcess EOF
             {
              currentNode = createCompositeNode(grammarAccess.getProcessRule(), currentNode); 
-            pushFollow(FOLLOW_ruleProcess_in_entryRuleProcess2397);
+            pushFollow(FOLLOW_ruleProcess_in_entryRuleProcess2180);
             iv_ruleProcess=ruleProcess();
             _fsp--;
 
              current =iv_ruleProcess; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleProcess2407); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleProcess2190); 
 
             }
 
@@ -2937,7 +2554,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleProcess
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1233:1: ruleProcess returns [EObject current=null] : (this_NaturalProcess_0= ruleNaturalProcess | this_HumanActivity_1= ruleHumanActivity ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1094:1: ruleProcess returns [EObject current=null] : (this_NaturalProcess_0= ruleNaturalProcess | this_HumanActivity_1= ruleHumanActivity ) ;
     public final EObject ruleProcess() throws RecognitionException {
         EObject current = null;
 
@@ -2949,33 +2566,33 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1238:6: ( (this_NaturalProcess_0= ruleNaturalProcess | this_HumanActivity_1= ruleHumanActivity ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1239:1: (this_NaturalProcess_0= ruleNaturalProcess | this_HumanActivity_1= ruleHumanActivity )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1099:6: ( (this_NaturalProcess_0= ruleNaturalProcess | this_HumanActivity_1= ruleHumanActivity ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1100:1: (this_NaturalProcess_0= ruleNaturalProcess | this_HumanActivity_1= ruleHumanActivity )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1239:1: (this_NaturalProcess_0= ruleNaturalProcess | this_HumanActivity_1= ruleHumanActivity )
-            int alt12=2;
-            int LA12_0 = input.LA(1);
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1100:1: (this_NaturalProcess_0= ruleNaturalProcess | this_HumanActivity_1= ruleHumanActivity )
+            int alt10=2;
+            int LA10_0 = input.LA(1);
 
-            if ( (LA12_0==23) ) {
-                alt12=1;
+            if ( (LA10_0==23) ) {
+                alt10=1;
             }
-            else if ( (LA12_0==26) ) {
-                alt12=2;
+            else if ( (LA10_0==26) ) {
+                alt10=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("1239:1: (this_NaturalProcess_0= ruleNaturalProcess | this_HumanActivity_1= ruleHumanActivity )", 12, 0, input);
+                    new NoViableAltException("1100:1: (this_NaturalProcess_0= ruleNaturalProcess | this_HumanActivity_1= ruleHumanActivity )", 10, 0, input);
 
                 throw nvae;
             }
-            switch (alt12) {
+            switch (alt10) {
                 case 1 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1240:5: this_NaturalProcess_0= ruleNaturalProcess
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1101:5: this_NaturalProcess_0= ruleNaturalProcess
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getProcessAccess().getNaturalProcessParserRuleCall_0(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleNaturalProcess_in_ruleProcess2454);
+                    pushFollow(FOLLOW_ruleNaturalProcess_in_ruleProcess2237);
                     this_NaturalProcess_0=ruleNaturalProcess();
                     _fsp--;
 
@@ -2987,12 +2604,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1250:5: this_HumanActivity_1= ruleHumanActivity
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1111:5: this_HumanActivity_1= ruleHumanActivity
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getProcessAccess().getHumanActivityParserRuleCall_1(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleHumanActivity_in_ruleProcess2481);
+                    pushFollow(FOLLOW_ruleHumanActivity_in_ruleProcess2264);
                     this_HumanActivity_1=ruleHumanActivity();
                     _fsp--;
 
@@ -3026,7 +2643,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleNaturalProcess
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1266:1: entryRuleNaturalProcess returns [EObject current=null] : iv_ruleNaturalProcess= ruleNaturalProcess EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1127:1: entryRuleNaturalProcess returns [EObject current=null] : iv_ruleNaturalProcess= ruleNaturalProcess EOF ;
     public final EObject entryRuleNaturalProcess() throws RecognitionException {
         EObject current = null;
 
@@ -3034,16 +2651,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1267:2: (iv_ruleNaturalProcess= ruleNaturalProcess EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1268:2: iv_ruleNaturalProcess= ruleNaturalProcess EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1128:2: (iv_ruleNaturalProcess= ruleNaturalProcess EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1129:2: iv_ruleNaturalProcess= ruleNaturalProcess EOF
             {
              currentNode = createCompositeNode(grammarAccess.getNaturalProcessRule(), currentNode); 
-            pushFollow(FOLLOW_ruleNaturalProcess_in_entryRuleNaturalProcess2516);
+            pushFollow(FOLLOW_ruleNaturalProcess_in_entryRuleNaturalProcess2299);
             iv_ruleNaturalProcess=ruleNaturalProcess();
             _fsp--;
 
              current =iv_ruleNaturalProcess; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNaturalProcess2526); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNaturalProcess2309); 
 
             }
 
@@ -3061,7 +2678,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleNaturalProcess
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1275:1: ruleNaturalProcess returns [EObject current=null] : ( 'process' ( (lv_name_1_0= RULE_ID ) ) ( '{' ( ( RULE_ID ) )* '}' )? ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1136:1: ruleNaturalProcess returns [EObject current=null] : ( 'process' ( (lv_name_1_0= RULE_ID ) ) ( '{' ( ( RULE_ID ) )* '}' )? ) ;
     public final EObject ruleNaturalProcess() throws RecognitionException {
         EObject current = null;
 
@@ -3070,24 +2687,24 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1280:6: ( ( 'process' ( (lv_name_1_0= RULE_ID ) ) ( '{' ( ( RULE_ID ) )* '}' )? ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1281:1: ( 'process' ( (lv_name_1_0= RULE_ID ) ) ( '{' ( ( RULE_ID ) )* '}' )? )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1141:6: ( ( 'process' ( (lv_name_1_0= RULE_ID ) ) ( '{' ( ( RULE_ID ) )* '}' )? ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1142:1: ( 'process' ( (lv_name_1_0= RULE_ID ) ) ( '{' ( ( RULE_ID ) )* '}' )? )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1281:1: ( 'process' ( (lv_name_1_0= RULE_ID ) ) ( '{' ( ( RULE_ID ) )* '}' )? )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1281:3: 'process' ( (lv_name_1_0= RULE_ID ) ) ( '{' ( ( RULE_ID ) )* '}' )?
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1142:1: ( 'process' ( (lv_name_1_0= RULE_ID ) ) ( '{' ( ( RULE_ID ) )* '}' )? )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1142:3: 'process' ( (lv_name_1_0= RULE_ID ) ) ( '{' ( ( RULE_ID ) )* '}' )?
             {
-            match(input,23,FOLLOW_23_in_ruleNaturalProcess2561); 
+            match(input,23,FOLLOW_23_in_ruleNaturalProcess2344); 
 
                     createLeafNode(grammarAccess.getNaturalProcessAccess().getProcessKeyword_0(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1285:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1286:1: (lv_name_1_0= RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1146:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1147:1: (lv_name_1_0= RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1286:1: (lv_name_1_0= RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1287:3: lv_name_1_0= RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1147:1: (lv_name_1_0= RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1148:3: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNaturalProcess2578); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNaturalProcess2361); 
 
             			createLeafNode(grammarAccess.getNaturalProcessAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
             		
@@ -3113,38 +2730,38 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1309:2: ( '{' ( ( RULE_ID ) )* '}' )?
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1170:2: ( '{' ( ( RULE_ID ) )* '}' )?
+            int alt12=2;
+            int LA12_0 = input.LA(1);
 
-            if ( (LA14_0==24) ) {
-                alt14=1;
+            if ( (LA12_0==24) ) {
+                alt12=1;
             }
-            switch (alt14) {
+            switch (alt12) {
                 case 1 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1309:4: '{' ( ( RULE_ID ) )* '}'
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1170:4: '{' ( ( RULE_ID ) )* '}'
                     {
-                    match(input,24,FOLLOW_24_in_ruleNaturalProcess2594); 
+                    match(input,24,FOLLOW_24_in_ruleNaturalProcess2377); 
 
                             createLeafNode(grammarAccess.getNaturalProcessAccess().getLeftCurlyBracketKeyword_2_0(), null); 
                         
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1313:1: ( ( RULE_ID ) )*
-                    loop13:
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1174:1: ( ( RULE_ID ) )*
+                    loop11:
                     do {
-                        int alt13=2;
-                        int LA13_0 = input.LA(1);
+                        int alt11=2;
+                        int LA11_0 = input.LA(1);
 
-                        if ( (LA13_0==RULE_ID) ) {
-                            alt13=1;
+                        if ( (LA11_0==RULE_ID) ) {
+                            alt11=1;
                         }
 
 
-                        switch (alt13) {
+                        switch (alt11) {
                     	case 1 :
-                    	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1314:1: ( RULE_ID )
+                    	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1175:1: ( RULE_ID )
                     	    {
-                    	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1314:1: ( RULE_ID )
-                    	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1315:3: RULE_ID
+                    	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1175:1: ( RULE_ID )
+                    	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1176:3: RULE_ID
                     	    {
 
                     	    			if (current==null) {
@@ -3152,7 +2769,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     	    	            associateNodeWithAstElement(currentNode, current);
                     	    	        }
                     	            
-                    	    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNaturalProcess2612); 
+                    	    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNaturalProcess2395); 
 
                     	    		createLeafNode(grammarAccess.getNaturalProcessAccess().getActivitiesProcessCrossReference_2_1_0(), "activities"); 
                     	    	
@@ -3164,11 +2781,11 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop13;
+                    	    break loop11;
                         }
                     } while (true);
 
-                    match(input,25,FOLLOW_25_in_ruleNaturalProcess2623); 
+                    match(input,25,FOLLOW_25_in_ruleNaturalProcess2406); 
 
                             createLeafNode(grammarAccess.getNaturalProcessAccess().getRightCurlyBracketKeyword_2_2(), null); 
                         
@@ -3201,7 +2818,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleHumanActivity
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1339:1: entryRuleHumanActivity returns [EObject current=null] : iv_ruleHumanActivity= ruleHumanActivity EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1200:1: entryRuleHumanActivity returns [EObject current=null] : iv_ruleHumanActivity= ruleHumanActivity EOF ;
     public final EObject entryRuleHumanActivity() throws RecognitionException {
         EObject current = null;
 
@@ -3209,16 +2826,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1340:2: (iv_ruleHumanActivity= ruleHumanActivity EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1341:2: iv_ruleHumanActivity= ruleHumanActivity EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1201:2: (iv_ruleHumanActivity= ruleHumanActivity EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1202:2: iv_ruleHumanActivity= ruleHumanActivity EOF
             {
              currentNode = createCompositeNode(grammarAccess.getHumanActivityRule(), currentNode); 
-            pushFollow(FOLLOW_ruleHumanActivity_in_entryRuleHumanActivity2661);
+            pushFollow(FOLLOW_ruleHumanActivity_in_entryRuleHumanActivity2444);
             iv_ruleHumanActivity=ruleHumanActivity();
             _fsp--;
 
              current =iv_ruleHumanActivity; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleHumanActivity2671); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleHumanActivity2454); 
 
             }
 
@@ -3236,7 +2853,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleHumanActivity
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1348:1: ruleHumanActivity returns [EObject current=null] : ( () 'activity' ( (lv_name_2_0= RULE_ID ) ) ( (lv_actions_3_0= ruleAction ) )* ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1209:1: ruleHumanActivity returns [EObject current=null] : ( () 'activity' ( (lv_name_2_0= RULE_ID ) ) ( (lv_actions_3_0= ruleAction ) )* ) ;
     public final EObject ruleHumanActivity() throws RecognitionException {
         EObject current = null;
 
@@ -3247,14 +2864,14 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1353:6: ( ( () 'activity' ( (lv_name_2_0= RULE_ID ) ) ( (lv_actions_3_0= ruleAction ) )* ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1354:1: ( () 'activity' ( (lv_name_2_0= RULE_ID ) ) ( (lv_actions_3_0= ruleAction ) )* )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1214:6: ( ( () 'activity' ( (lv_name_2_0= RULE_ID ) ) ( (lv_actions_3_0= ruleAction ) )* ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1215:1: ( () 'activity' ( (lv_name_2_0= RULE_ID ) ) ( (lv_actions_3_0= ruleAction ) )* )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1354:1: ( () 'activity' ( (lv_name_2_0= RULE_ID ) ) ( (lv_actions_3_0= ruleAction ) )* )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1354:2: () 'activity' ( (lv_name_2_0= RULE_ID ) ) ( (lv_actions_3_0= ruleAction ) )*
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1215:1: ( () 'activity' ( (lv_name_2_0= RULE_ID ) ) ( (lv_actions_3_0= ruleAction ) )* )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1215:2: () 'activity' ( (lv_name_2_0= RULE_ID ) ) ( (lv_actions_3_0= ruleAction ) )*
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1354:2: ()
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1355:5: 
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1215:2: ()
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1216:5: 
             {
              
                     temp=factory.create(grammarAccess.getHumanActivityAccess().getActivityAction_0().getType().getClassifier());
@@ -3269,18 +2886,18 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,26,FOLLOW_26_in_ruleHumanActivity2715); 
+            match(input,26,FOLLOW_26_in_ruleHumanActivity2498); 
 
                     createLeafNode(grammarAccess.getHumanActivityAccess().getActivityKeyword_1(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1369:1: ( (lv_name_2_0= RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1370:1: (lv_name_2_0= RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1230:1: ( (lv_name_2_0= RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1231:1: (lv_name_2_0= RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1370:1: (lv_name_2_0= RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1371:3: lv_name_2_0= RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1231:1: (lv_name_2_0= RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1232:3: lv_name_2_0= RULE_ID
             {
             lv_name_2_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleHumanActivity2732); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleHumanActivity2515); 
 
             			createLeafNode(grammarAccess.getHumanActivityAccess().getNameIDTerminalRuleCall_2_0(), "name"); 
             		
@@ -3306,28 +2923,28 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1393:2: ( (lv_actions_3_0= ruleAction ) )*
-            loop15:
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1254:2: ( (lv_actions_3_0= ruleAction ) )*
+            loop13:
             do {
-                int alt15=2;
-                int LA15_0 = input.LA(1);
+                int alt13=2;
+                int LA13_0 = input.LA(1);
 
-                if ( (LA15_0==27) ) {
-                    alt15=1;
+                if ( (LA13_0==27) ) {
+                    alt13=1;
                 }
 
 
-                switch (alt15) {
+                switch (alt13) {
             	case 1 :
-            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1394:1: (lv_actions_3_0= ruleAction )
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1255:1: (lv_actions_3_0= ruleAction )
             	    {
-            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1394:1: (lv_actions_3_0= ruleAction )
-            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1395:3: lv_actions_3_0= ruleAction
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1255:1: (lv_actions_3_0= ruleAction )
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1256:3: lv_actions_3_0= ruleAction
             	    {
             	     
             	    	        currentNode=createCompositeNode(grammarAccess.getHumanActivityAccess().getActionsActionParserRuleCall_3_0(), currentNode); 
             	    	    
-            	    pushFollow(FOLLOW_ruleAction_in_ruleHumanActivity2758);
+            	    pushFollow(FOLLOW_ruleAction_in_ruleHumanActivity2541);
             	    lv_actions_3_0=ruleAction();
             	    _fsp--;
 
@@ -3356,7 +2973,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop15;
+            	    break loop13;
                 }
             } while (true);
 
@@ -3383,7 +3000,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleAction
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1425:1: entryRuleAction returns [EObject current=null] : iv_ruleAction= ruleAction EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1286:1: entryRuleAction returns [EObject current=null] : iv_ruleAction= ruleAction EOF ;
     public final EObject entryRuleAction() throws RecognitionException {
         EObject current = null;
 
@@ -3391,16 +3008,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1426:2: (iv_ruleAction= ruleAction EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1427:2: iv_ruleAction= ruleAction EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1287:2: (iv_ruleAction= ruleAction EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1288:2: iv_ruleAction= ruleAction EOF
             {
              currentNode = createCompositeNode(grammarAccess.getActionRule(), currentNode); 
-            pushFollow(FOLLOW_ruleAction_in_entryRuleAction2795);
+            pushFollow(FOLLOW_ruleAction_in_entryRuleAction2578);
             iv_ruleAction=ruleAction();
             _fsp--;
 
              current =iv_ruleAction; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAction2805); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAction2588); 
 
             }
 
@@ -3418,7 +3035,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleAction
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1434:1: ruleAction returns [EObject current=null] : ( 'action' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1295:1: ruleAction returns [EObject current=null] : ( 'action' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleAction() throws RecognitionException {
         EObject current = null;
 
@@ -3427,24 +3044,24 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1439:6: ( ( 'action' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1440:1: ( 'action' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1300:6: ( ( 'action' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1301:1: ( 'action' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1440:1: ( 'action' ( (lv_name_1_0= RULE_ID ) ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1440:3: 'action' ( (lv_name_1_0= RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1301:1: ( 'action' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1301:3: 'action' ( (lv_name_1_0= RULE_ID ) )
             {
-            match(input,27,FOLLOW_27_in_ruleAction2840); 
+            match(input,27,FOLLOW_27_in_ruleAction2623); 
 
                     createLeafNode(grammarAccess.getActionAccess().getActionKeyword_0(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1444:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1445:1: (lv_name_1_0= RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1305:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1306:1: (lv_name_1_0= RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1445:1: (lv_name_1_0= RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1446:3: lv_name_1_0= RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1306:1: (lv_name_1_0= RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1307:3: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleAction2857); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleAction2640); 
 
             			createLeafNode(grammarAccess.getActionAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
             		
@@ -3493,7 +3110,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleResource
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1476:1: entryRuleResource returns [EObject current=null] : iv_ruleResource= ruleResource EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1337:1: entryRuleResource returns [EObject current=null] : iv_ruleResource= ruleResource EOF ;
     public final EObject entryRuleResource() throws RecognitionException {
         EObject current = null;
 
@@ -3501,16 +3118,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1477:2: (iv_ruleResource= ruleResource EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1478:2: iv_ruleResource= ruleResource EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1338:2: (iv_ruleResource= ruleResource EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1339:2: iv_ruleResource= ruleResource EOF
             {
              currentNode = createCompositeNode(grammarAccess.getResourceRule(), currentNode); 
-            pushFollow(FOLLOW_ruleResource_in_entryRuleResource2898);
+            pushFollow(FOLLOW_ruleResource_in_entryRuleResource2681);
             iv_ruleResource=ruleResource();
             _fsp--;
 
              current =iv_ruleResource; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleResource2908); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleResource2691); 
 
             }
 
@@ -3528,7 +3145,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleResource
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1485:1: ruleResource returns [EObject current=null] : ( ( 'resource' ( (lv_name_1_0= RULE_ID ) ) ) | this_Asset_2= ruleAsset ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1346:1: ruleResource returns [EObject current=null] : ( ( 'resource' ( (lv_name_1_0= RULE_ID ) ) ) | this_Asset_2= ruleAsset ) ;
     public final EObject ruleResource() throws RecognitionException {
         EObject current = null;
 
@@ -3539,44 +3156,44 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1490:6: ( ( ( 'resource' ( (lv_name_1_0= RULE_ID ) ) ) | this_Asset_2= ruleAsset ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1491:1: ( ( 'resource' ( (lv_name_1_0= RULE_ID ) ) ) | this_Asset_2= ruleAsset )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1351:6: ( ( ( 'resource' ( (lv_name_1_0= RULE_ID ) ) ) | this_Asset_2= ruleAsset ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1352:1: ( ( 'resource' ( (lv_name_1_0= RULE_ID ) ) ) | this_Asset_2= ruleAsset )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1491:1: ( ( 'resource' ( (lv_name_1_0= RULE_ID ) ) ) | this_Asset_2= ruleAsset )
-            int alt16=2;
-            int LA16_0 = input.LA(1);
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1352:1: ( ( 'resource' ( (lv_name_1_0= RULE_ID ) ) ) | this_Asset_2= ruleAsset )
+            int alt14=2;
+            int LA14_0 = input.LA(1);
 
-            if ( (LA16_0==28) ) {
-                alt16=1;
+            if ( (LA14_0==28) ) {
+                alt14=1;
             }
-            else if ( (LA16_0==29) ) {
-                alt16=2;
+            else if ( (LA14_0==29) ) {
+                alt14=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("1491:1: ( ( 'resource' ( (lv_name_1_0= RULE_ID ) ) ) | this_Asset_2= ruleAsset )", 16, 0, input);
+                    new NoViableAltException("1352:1: ( ( 'resource' ( (lv_name_1_0= RULE_ID ) ) ) | this_Asset_2= ruleAsset )", 14, 0, input);
 
                 throw nvae;
             }
-            switch (alt16) {
+            switch (alt14) {
                 case 1 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1491:2: ( 'resource' ( (lv_name_1_0= RULE_ID ) ) )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1352:2: ( 'resource' ( (lv_name_1_0= RULE_ID ) ) )
                     {
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1491:2: ( 'resource' ( (lv_name_1_0= RULE_ID ) ) )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1491:4: 'resource' ( (lv_name_1_0= RULE_ID ) )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1352:2: ( 'resource' ( (lv_name_1_0= RULE_ID ) ) )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1352:4: 'resource' ( (lv_name_1_0= RULE_ID ) )
                     {
-                    match(input,28,FOLLOW_28_in_ruleResource2944); 
+                    match(input,28,FOLLOW_28_in_ruleResource2727); 
 
                             createLeafNode(grammarAccess.getResourceAccess().getResourceKeyword_0_0(), null); 
                         
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1495:1: ( (lv_name_1_0= RULE_ID ) )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1496:1: (lv_name_1_0= RULE_ID )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1356:1: ( (lv_name_1_0= RULE_ID ) )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1357:1: (lv_name_1_0= RULE_ID )
                     {
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1496:1: (lv_name_1_0= RULE_ID )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1497:3: lv_name_1_0= RULE_ID
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1357:1: (lv_name_1_0= RULE_ID )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1358:3: lv_name_1_0= RULE_ID
                     {
                     lv_name_1_0=(Token)input.LT(1);
-                    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleResource2961); 
+                    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleResource2744); 
 
                     			createLeafNode(grammarAccess.getResourceAccess().getNameIDTerminalRuleCall_0_1_0(), "name"); 
                     		
@@ -3609,12 +3226,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1521:5: this_Asset_2= ruleAsset
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1382:5: this_Asset_2= ruleAsset
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getResourceAccess().getAssetParserRuleCall_1(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleAsset_in_ruleResource2995);
+                    pushFollow(FOLLOW_ruleAsset_in_ruleResource2778);
                     this_Asset_2=ruleAsset();
                     _fsp--;
 
@@ -3648,7 +3265,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleAsset
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1537:1: entryRuleAsset returns [EObject current=null] : iv_ruleAsset= ruleAsset EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1398:1: entryRuleAsset returns [EObject current=null] : iv_ruleAsset= ruleAsset EOF ;
     public final EObject entryRuleAsset() throws RecognitionException {
         EObject current = null;
 
@@ -3656,16 +3273,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1538:2: (iv_ruleAsset= ruleAsset EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1539:2: iv_ruleAsset= ruleAsset EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1399:2: (iv_ruleAsset= ruleAsset EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1400:2: iv_ruleAsset= ruleAsset EOF
             {
              currentNode = createCompositeNode(grammarAccess.getAssetRule(), currentNode); 
-            pushFollow(FOLLOW_ruleAsset_in_entryRuleAsset3030);
+            pushFollow(FOLLOW_ruleAsset_in_entryRuleAsset2813);
             iv_ruleAsset=ruleAsset();
             _fsp--;
 
              current =iv_ruleAsset; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAsset3040); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAsset2823); 
 
             }
 
@@ -3683,7 +3300,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleAsset
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1546:1: ruleAsset returns [EObject current=null] : ( 'asset' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1407:1: ruleAsset returns [EObject current=null] : ( 'asset' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleAsset() throws RecognitionException {
         EObject current = null;
 
@@ -3692,24 +3309,24 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1551:6: ( ( 'asset' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1552:1: ( 'asset' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1412:6: ( ( 'asset' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1413:1: ( 'asset' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1552:1: ( 'asset' ( (lv_name_1_0= RULE_ID ) ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1552:3: 'asset' ( (lv_name_1_0= RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1413:1: ( 'asset' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1413:3: 'asset' ( (lv_name_1_0= RULE_ID ) )
             {
-            match(input,29,FOLLOW_29_in_ruleAsset3075); 
+            match(input,29,FOLLOW_29_in_ruleAsset2858); 
 
                     createLeafNode(grammarAccess.getAssetAccess().getAssetKeyword_0(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1556:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1557:1: (lv_name_1_0= RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1417:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1418:1: (lv_name_1_0= RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1557:1: (lv_name_1_0= RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1558:3: lv_name_1_0= RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1418:1: (lv_name_1_0= RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1419:3: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleAsset3092); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleAsset2875); 
 
             			createLeafNode(grammarAccess.getAssetAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
             		
@@ -3758,7 +3375,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleRelationship
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1588:1: entryRuleRelationship returns [EObject current=null] : iv_ruleRelationship= ruleRelationship EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1449:1: entryRuleRelationship returns [EObject current=null] : iv_ruleRelationship= ruleRelationship EOF ;
     public final EObject entryRuleRelationship() throws RecognitionException {
         EObject current = null;
 
@@ -3766,16 +3383,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1589:2: (iv_ruleRelationship= ruleRelationship EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1590:2: iv_ruleRelationship= ruleRelationship EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1450:2: (iv_ruleRelationship= ruleRelationship EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1451:2: iv_ruleRelationship= ruleRelationship EOF
             {
              currentNode = createCompositeNode(grammarAccess.getRelationshipRule(), currentNode); 
-            pushFollow(FOLLOW_ruleRelationship_in_entryRuleRelationship3133);
+            pushFollow(FOLLOW_ruleRelationship_in_entryRuleRelationship2916);
             iv_ruleRelationship=ruleRelationship();
             _fsp--;
 
              current =iv_ruleRelationship; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRelationship3143); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRelationship2926); 
 
             }
 
@@ -3793,7 +3410,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleRelationship
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1597:1: ruleRelationship returns [EObject current=null] : (this_Wants_0= ruleWants | this_Does_1= ruleDoes | this_Decomposes_2= ruleDecomposes | this_Trusts_3= ruleTrusts | this_Delegates_4= ruleDelegates | this_Contributes_5= ruleContributes | this_Fulfils_6= ruleFulfils | this_Provides_7= ruleProvides | this_Consumes_8= ruleConsumes | this_Exploits_9= ruleExploits | this_Damages_10= ruleDamages | this_Attacks_11= ruleAttacks | this_Argues_12= ruleArgues ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1458:1: ruleRelationship returns [EObject current=null] : (this_Wants_0= ruleWants | this_Does_1= ruleDoes | this_Decomposes_2= ruleDecomposes | this_Trusts_3= ruleTrusts | this_Delegates_4= ruleDelegates | this_Contributes_5= ruleContributes | this_Fulfils_6= ruleFulfils | this_Provides_7= ruleProvides | this_Consumes_8= ruleConsumes | this_Exploits_9= ruleExploits | this_Damages_10= ruleDamages | this_Attacks_11= ruleAttacks | this_Argues_12= ruleArgues ) ;
     public final EObject ruleRelationship() throws RecognitionException {
         EObject current = null;
 
@@ -3827,36 +3444,36 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1602:6: ( (this_Wants_0= ruleWants | this_Does_1= ruleDoes | this_Decomposes_2= ruleDecomposes | this_Trusts_3= ruleTrusts | this_Delegates_4= ruleDelegates | this_Contributes_5= ruleContributes | this_Fulfils_6= ruleFulfils | this_Provides_7= ruleProvides | this_Consumes_8= ruleConsumes | this_Exploits_9= ruleExploits | this_Damages_10= ruleDamages | this_Attacks_11= ruleAttacks | this_Argues_12= ruleArgues ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1603:1: (this_Wants_0= ruleWants | this_Does_1= ruleDoes | this_Decomposes_2= ruleDecomposes | this_Trusts_3= ruleTrusts | this_Delegates_4= ruleDelegates | this_Contributes_5= ruleContributes | this_Fulfils_6= ruleFulfils | this_Provides_7= ruleProvides | this_Consumes_8= ruleConsumes | this_Exploits_9= ruleExploits | this_Damages_10= ruleDamages | this_Attacks_11= ruleAttacks | this_Argues_12= ruleArgues )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1463:6: ( (this_Wants_0= ruleWants | this_Does_1= ruleDoes | this_Decomposes_2= ruleDecomposes | this_Trusts_3= ruleTrusts | this_Delegates_4= ruleDelegates | this_Contributes_5= ruleContributes | this_Fulfils_6= ruleFulfils | this_Provides_7= ruleProvides | this_Consumes_8= ruleConsumes | this_Exploits_9= ruleExploits | this_Damages_10= ruleDamages | this_Attacks_11= ruleAttacks | this_Argues_12= ruleArgues ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1464:1: (this_Wants_0= ruleWants | this_Does_1= ruleDoes | this_Decomposes_2= ruleDecomposes | this_Trusts_3= ruleTrusts | this_Delegates_4= ruleDelegates | this_Contributes_5= ruleContributes | this_Fulfils_6= ruleFulfils | this_Provides_7= ruleProvides | this_Consumes_8= ruleConsumes | this_Exploits_9= ruleExploits | this_Damages_10= ruleDamages | this_Attacks_11= ruleAttacks | this_Argues_12= ruleArgues )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1603:1: (this_Wants_0= ruleWants | this_Does_1= ruleDoes | this_Decomposes_2= ruleDecomposes | this_Trusts_3= ruleTrusts | this_Delegates_4= ruleDelegates | this_Contributes_5= ruleContributes | this_Fulfils_6= ruleFulfils | this_Provides_7= ruleProvides | this_Consumes_8= ruleConsumes | this_Exploits_9= ruleExploits | this_Damages_10= ruleDamages | this_Attacks_11= ruleAttacks | this_Argues_12= ruleArgues )
-            int alt17=13;
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1464:1: (this_Wants_0= ruleWants | this_Does_1= ruleDoes | this_Decomposes_2= ruleDecomposes | this_Trusts_3= ruleTrusts | this_Delegates_4= ruleDelegates | this_Contributes_5= ruleContributes | this_Fulfils_6= ruleFulfils | this_Provides_7= ruleProvides | this_Consumes_8= ruleConsumes | this_Exploits_9= ruleExploits | this_Damages_10= ruleDamages | this_Attacks_11= ruleAttacks | this_Argues_12= ruleArgues )
+            int alt15=13;
             switch ( input.LA(1) ) {
             case 30:
                 {
-                alt17=1;
+                alt15=1;
                 }
                 break;
             case 33:
                 {
-                alt17=2;
+                alt15=2;
                 }
                 break;
             case 45:
             case 46:
                 {
-                alt17=3;
+                alt15=3;
                 }
                 break;
             case 34:
                 {
-                alt17=4;
+                alt15=4;
                 }
                 break;
             case 35:
                 {
-                alt17=5;
+                alt15=5;
                 }
                 break;
             case 47:
@@ -3864,59 +3481,59 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             case 49:
             case 50:
                 {
-                alt17=6;
+                alt15=6;
                 }
                 break;
             case 51:
                 {
-                alt17=7;
+                alt15=7;
                 }
                 break;
             case 36:
                 {
-                alt17=8;
+                alt15=8;
                 }
                 break;
             case 37:
                 {
-                alt17=9;
+                alt15=9;
                 }
                 break;
             case 38:
                 {
-                alt17=10;
+                alt15=10;
                 }
                 break;
             case 39:
                 {
-                alt17=11;
+                alt15=11;
                 }
                 break;
             case 40:
                 {
-                alt17=12;
+                alt15=12;
                 }
                 break;
             case 41:
                 {
-                alt17=13;
+                alt15=13;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("1603:1: (this_Wants_0= ruleWants | this_Does_1= ruleDoes | this_Decomposes_2= ruleDecomposes | this_Trusts_3= ruleTrusts | this_Delegates_4= ruleDelegates | this_Contributes_5= ruleContributes | this_Fulfils_6= ruleFulfils | this_Provides_7= ruleProvides | this_Consumes_8= ruleConsumes | this_Exploits_9= ruleExploits | this_Damages_10= ruleDamages | this_Attacks_11= ruleAttacks | this_Argues_12= ruleArgues )", 17, 0, input);
+                    new NoViableAltException("1464:1: (this_Wants_0= ruleWants | this_Does_1= ruleDoes | this_Decomposes_2= ruleDecomposes | this_Trusts_3= ruleTrusts | this_Delegates_4= ruleDelegates | this_Contributes_5= ruleContributes | this_Fulfils_6= ruleFulfils | this_Provides_7= ruleProvides | this_Consumes_8= ruleConsumes | this_Exploits_9= ruleExploits | this_Damages_10= ruleDamages | this_Attacks_11= ruleAttacks | this_Argues_12= ruleArgues )", 15, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt17) {
+            switch (alt15) {
                 case 1 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1604:5: this_Wants_0= ruleWants
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1465:5: this_Wants_0= ruleWants
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getRelationshipAccess().getWantsParserRuleCall_0(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleWants_in_ruleRelationship3190);
+                    pushFollow(FOLLOW_ruleWants_in_ruleRelationship2973);
                     this_Wants_0=ruleWants();
                     _fsp--;
 
@@ -3928,12 +3545,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1614:5: this_Does_1= ruleDoes
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1475:5: this_Does_1= ruleDoes
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getRelationshipAccess().getDoesParserRuleCall_1(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleDoes_in_ruleRelationship3217);
+                    pushFollow(FOLLOW_ruleDoes_in_ruleRelationship3000);
                     this_Does_1=ruleDoes();
                     _fsp--;
 
@@ -3945,12 +3562,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1624:5: this_Decomposes_2= ruleDecomposes
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1485:5: this_Decomposes_2= ruleDecomposes
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getRelationshipAccess().getDecomposesParserRuleCall_2(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleDecomposes_in_ruleRelationship3244);
+                    pushFollow(FOLLOW_ruleDecomposes_in_ruleRelationship3027);
                     this_Decomposes_2=ruleDecomposes();
                     _fsp--;
 
@@ -3962,12 +3579,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1634:5: this_Trusts_3= ruleTrusts
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1495:5: this_Trusts_3= ruleTrusts
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getRelationshipAccess().getTrustsParserRuleCall_3(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleTrusts_in_ruleRelationship3271);
+                    pushFollow(FOLLOW_ruleTrusts_in_ruleRelationship3054);
                     this_Trusts_3=ruleTrusts();
                     _fsp--;
 
@@ -3979,12 +3596,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1644:5: this_Delegates_4= ruleDelegates
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1505:5: this_Delegates_4= ruleDelegates
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getRelationshipAccess().getDelegatesParserRuleCall_4(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleDelegates_in_ruleRelationship3298);
+                    pushFollow(FOLLOW_ruleDelegates_in_ruleRelationship3081);
                     this_Delegates_4=ruleDelegates();
                     _fsp--;
 
@@ -3996,12 +3613,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1654:5: this_Contributes_5= ruleContributes
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1515:5: this_Contributes_5= ruleContributes
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getRelationshipAccess().getContributesParserRuleCall_5(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleContributes_in_ruleRelationship3325);
+                    pushFollow(FOLLOW_ruleContributes_in_ruleRelationship3108);
                     this_Contributes_5=ruleContributes();
                     _fsp--;
 
@@ -4013,12 +3630,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1664:5: this_Fulfils_6= ruleFulfils
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1525:5: this_Fulfils_6= ruleFulfils
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getRelationshipAccess().getFulfilsParserRuleCall_6(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleFulfils_in_ruleRelationship3352);
+                    pushFollow(FOLLOW_ruleFulfils_in_ruleRelationship3135);
                     this_Fulfils_6=ruleFulfils();
                     _fsp--;
 
@@ -4030,12 +3647,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1674:5: this_Provides_7= ruleProvides
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1535:5: this_Provides_7= ruleProvides
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getRelationshipAccess().getProvidesParserRuleCall_7(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleProvides_in_ruleRelationship3379);
+                    pushFollow(FOLLOW_ruleProvides_in_ruleRelationship3162);
                     this_Provides_7=ruleProvides();
                     _fsp--;
 
@@ -4047,12 +3664,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1684:5: this_Consumes_8= ruleConsumes
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1545:5: this_Consumes_8= ruleConsumes
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getRelationshipAccess().getConsumesParserRuleCall_8(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleConsumes_in_ruleRelationship3406);
+                    pushFollow(FOLLOW_ruleConsumes_in_ruleRelationship3189);
                     this_Consumes_8=ruleConsumes();
                     _fsp--;
 
@@ -4064,12 +3681,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1694:5: this_Exploits_9= ruleExploits
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1555:5: this_Exploits_9= ruleExploits
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getRelationshipAccess().getExploitsParserRuleCall_9(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleExploits_in_ruleRelationship3433);
+                    pushFollow(FOLLOW_ruleExploits_in_ruleRelationship3216);
                     this_Exploits_9=ruleExploits();
                     _fsp--;
 
@@ -4081,12 +3698,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 11 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1704:5: this_Damages_10= ruleDamages
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1565:5: this_Damages_10= ruleDamages
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getRelationshipAccess().getDamagesParserRuleCall_10(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleDamages_in_ruleRelationship3460);
+                    pushFollow(FOLLOW_ruleDamages_in_ruleRelationship3243);
                     this_Damages_10=ruleDamages();
                     _fsp--;
 
@@ -4098,12 +3715,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 12 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1714:5: this_Attacks_11= ruleAttacks
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1575:5: this_Attacks_11= ruleAttacks
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getRelationshipAccess().getAttacksParserRuleCall_11(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleAttacks_in_ruleRelationship3487);
+                    pushFollow(FOLLOW_ruleAttacks_in_ruleRelationship3270);
                     this_Attacks_11=ruleAttacks();
                     _fsp--;
 
@@ -4115,12 +3732,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 13 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1724:5: this_Argues_12= ruleArgues
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1585:5: this_Argues_12= ruleArgues
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getRelationshipAccess().getArguesParserRuleCall_12(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleArgues_in_ruleRelationship3514);
+                    pushFollow(FOLLOW_ruleArgues_in_ruleRelationship3297);
                     this_Argues_12=ruleArgues();
                     _fsp--;
 
@@ -4154,7 +3771,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleWants
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1740:1: entryRuleWants returns [EObject current=null] : iv_ruleWants= ruleWants EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1601:1: entryRuleWants returns [EObject current=null] : iv_ruleWants= ruleWants EOF ;
     public final EObject entryRuleWants() throws RecognitionException {
         EObject current = null;
 
@@ -4162,16 +3779,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1741:2: (iv_ruleWants= ruleWants EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1742:2: iv_ruleWants= ruleWants EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1602:2: (iv_ruleWants= ruleWants EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1603:2: iv_ruleWants= ruleWants EOF
             {
              currentNode = createCompositeNode(grammarAccess.getWantsRule(), currentNode); 
-            pushFollow(FOLLOW_ruleWants_in_entryRuleWants3549);
+            pushFollow(FOLLOW_ruleWants_in_entryRuleWants3332);
             iv_ruleWants=ruleWants();
             _fsp--;
 
              current =iv_ruleWants; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleWants3559); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleWants3342); 
 
             }
 
@@ -4189,7 +3806,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleWants
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1749:1: ruleWants returns [EObject current=null] : ( ( (lv_type_0_0= 'wants' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1610:1: ruleWants returns [EObject current=null] : ( ( (lv_type_0_0= 'wants' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) ;
     public final EObject ruleWants() throws RecognitionException {
         EObject current = null;
 
@@ -4198,20 +3815,20 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1754:6: ( ( ( (lv_type_0_0= 'wants' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1755:1: ( ( (lv_type_0_0= 'wants' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1615:6: ( ( ( (lv_type_0_0= 'wants' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1616:1: ( ( (lv_type_0_0= 'wants' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1755:1: ( ( (lv_type_0_0= 'wants' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1755:2: ( (lv_type_0_0= 'wants' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')'
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1616:1: ( ( (lv_type_0_0= 'wants' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1616:2: ( (lv_type_0_0= 'wants' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')'
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1755:2: ( (lv_type_0_0= 'wants' ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1756:1: (lv_type_0_0= 'wants' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1616:2: ( (lv_type_0_0= 'wants' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1617:1: (lv_type_0_0= 'wants' )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1756:1: (lv_type_0_0= 'wants' )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1757:3: lv_type_0_0= 'wants'
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1617:1: (lv_type_0_0= 'wants' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1618:3: lv_type_0_0= 'wants'
             {
             lv_type_0_0=(Token)input.LT(1);
-            match(input,30,FOLLOW_30_in_ruleWants3602); 
+            match(input,30,FOLLOW_30_in_ruleWants3385); 
 
                     createLeafNode(grammarAccess.getWantsAccess().getTypeWantsKeyword_0_0(), "type"); 
                 
@@ -4233,15 +3850,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,31,FOLLOW_31_in_ruleWants3625); 
+            match(input,31,FOLLOW_31_in_ruleWants3408); 
 
                     createLeafNode(grammarAccess.getWantsAccess().getLeftParenthesisKeyword_1(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1780:1: ( ( RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1781:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1641:1: ( ( RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1642:1: ( RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1781:1: ( RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1782:3: RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1642:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1643:3: RULE_ID
             {
 
             			if (current==null) {
@@ -4249,7 +3866,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleWants3643); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleWants3426); 
 
             		createLeafNode(grammarAccess.getWantsAccess().getSourceActorCrossReference_2_0(), "source"); 
             	
@@ -4259,15 +3876,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,14,FOLLOW_14_in_ruleWants3653); 
+            match(input,14,FOLLOW_14_in_ruleWants3436); 
 
                     createLeafNode(grammarAccess.getWantsAccess().getCommaKeyword_3(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1798:1: ( ( RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1799:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1659:1: ( ( RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1660:1: ( RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1799:1: ( RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1800:3: RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1660:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1661:3: RULE_ID
             {
 
             			if (current==null) {
@@ -4275,7 +3892,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleWants3671); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleWants3454); 
 
             		createLeafNode(grammarAccess.getWantsAccess().getTargetRequirementCrossReference_4_0(), "target"); 
             	
@@ -4285,7 +3902,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,32,FOLLOW_32_in_ruleWants3681); 
+            match(input,32,FOLLOW_32_in_ruleWants3464); 
 
                     createLeafNode(grammarAccess.getWantsAccess().getRightParenthesisKeyword_5(), null); 
                 
@@ -4312,7 +3929,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleDoes
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1824:1: entryRuleDoes returns [EObject current=null] : iv_ruleDoes= ruleDoes EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1685:1: entryRuleDoes returns [EObject current=null] : iv_ruleDoes= ruleDoes EOF ;
     public final EObject entryRuleDoes() throws RecognitionException {
         EObject current = null;
 
@@ -4320,16 +3937,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1825:2: (iv_ruleDoes= ruleDoes EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1826:2: iv_ruleDoes= ruleDoes EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1686:2: (iv_ruleDoes= ruleDoes EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1687:2: iv_ruleDoes= ruleDoes EOF
             {
              currentNode = createCompositeNode(grammarAccess.getDoesRule(), currentNode); 
-            pushFollow(FOLLOW_ruleDoes_in_entryRuleDoes3717);
+            pushFollow(FOLLOW_ruleDoes_in_entryRuleDoes3500);
             iv_ruleDoes=ruleDoes();
             _fsp--;
 
              current =iv_ruleDoes; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDoes3727); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDoes3510); 
 
             }
 
@@ -4347,7 +3964,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleDoes
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1833:1: ruleDoes returns [EObject current=null] : ( ( (lv_type_0_0= 'does' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1694:1: ruleDoes returns [EObject current=null] : ( ( (lv_type_0_0= 'does' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) ;
     public final EObject ruleDoes() throws RecognitionException {
         EObject current = null;
 
@@ -4356,20 +3973,20 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1838:6: ( ( ( (lv_type_0_0= 'does' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1839:1: ( ( (lv_type_0_0= 'does' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1699:6: ( ( ( (lv_type_0_0= 'does' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1700:1: ( ( (lv_type_0_0= 'does' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1839:1: ( ( (lv_type_0_0= 'does' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1839:2: ( (lv_type_0_0= 'does' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')'
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1700:1: ( ( (lv_type_0_0= 'does' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1700:2: ( (lv_type_0_0= 'does' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')'
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1839:2: ( (lv_type_0_0= 'does' ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1840:1: (lv_type_0_0= 'does' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1700:2: ( (lv_type_0_0= 'does' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1701:1: (lv_type_0_0= 'does' )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1840:1: (lv_type_0_0= 'does' )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1841:3: lv_type_0_0= 'does'
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1701:1: (lv_type_0_0= 'does' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1702:3: lv_type_0_0= 'does'
             {
             lv_type_0_0=(Token)input.LT(1);
-            match(input,33,FOLLOW_33_in_ruleDoes3770); 
+            match(input,33,FOLLOW_33_in_ruleDoes3553); 
 
                     createLeafNode(grammarAccess.getDoesAccess().getTypeDoesKeyword_0_0(), "type"); 
                 
@@ -4391,15 +4008,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,31,FOLLOW_31_in_ruleDoes3793); 
+            match(input,31,FOLLOW_31_in_ruleDoes3576); 
 
                     createLeafNode(grammarAccess.getDoesAccess().getLeftParenthesisKeyword_1(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1864:1: ( ( RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1865:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1725:1: ( ( RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1726:1: ( RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1865:1: ( RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1866:3: RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1726:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1727:3: RULE_ID
             {
 
             			if (current==null) {
@@ -4407,7 +4024,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDoes3811); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDoes3594); 
 
             		createLeafNode(grammarAccess.getDoesAccess().getSourceActorCrossReference_2_0(), "source"); 
             	
@@ -4417,15 +4034,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,14,FOLLOW_14_in_ruleDoes3821); 
+            match(input,14,FOLLOW_14_in_ruleDoes3604); 
 
                     createLeafNode(grammarAccess.getDoesAccess().getCommaKeyword_3(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1882:1: ( ( RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1883:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1743:1: ( ( RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1744:1: ( RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1883:1: ( RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1884:3: RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1744:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1745:3: RULE_ID
             {
 
             			if (current==null) {
@@ -4433,7 +4050,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDoes3839); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDoes3622); 
 
             		createLeafNode(grammarAccess.getDoesAccess().getTargetActivityCrossReference_4_0(), "target"); 
             	
@@ -4443,7 +4060,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,32,FOLLOW_32_in_ruleDoes3849); 
+            match(input,32,FOLLOW_32_in_ruleDoes3632); 
 
                     createLeafNode(grammarAccess.getDoesAccess().getRightParenthesisKeyword_5(), null); 
                 
@@ -4470,7 +4087,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleDecomposes
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1908:1: entryRuleDecomposes returns [EObject current=null] : iv_ruleDecomposes= ruleDecomposes EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1769:1: entryRuleDecomposes returns [EObject current=null] : iv_ruleDecomposes= ruleDecomposes EOF ;
     public final EObject entryRuleDecomposes() throws RecognitionException {
         EObject current = null;
 
@@ -4478,16 +4095,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1909:2: (iv_ruleDecomposes= ruleDecomposes EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1910:2: iv_ruleDecomposes= ruleDecomposes EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1770:2: (iv_ruleDecomposes= ruleDecomposes EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1771:2: iv_ruleDecomposes= ruleDecomposes EOF
             {
              currentNode = createCompositeNode(grammarAccess.getDecomposesRule(), currentNode); 
-            pushFollow(FOLLOW_ruleDecomposes_in_entryRuleDecomposes3885);
+            pushFollow(FOLLOW_ruleDecomposes_in_entryRuleDecomposes3668);
             iv_ruleDecomposes=ruleDecomposes();
             _fsp--;
 
              current =iv_ruleDecomposes; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDecomposes3895); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDecomposes3678); 
 
             }
 
@@ -4505,7 +4122,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleDecomposes
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1917:1: ruleDecomposes returns [EObject current=null] : ( ( (lv_type_0_0= ruleDecomposesType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1778:1: ruleDecomposes returns [EObject current=null] : ( ( (lv_type_0_0= ruleDecomposesType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) ;
     public final EObject ruleDecomposes() throws RecognitionException {
         EObject current = null;
 
@@ -4515,22 +4132,22 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1922:6: ( ( ( (lv_type_0_0= ruleDecomposesType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1923:1: ( ( (lv_type_0_0= ruleDecomposesType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1783:6: ( ( ( (lv_type_0_0= ruleDecomposesType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1784:1: ( ( (lv_type_0_0= ruleDecomposesType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1923:1: ( ( (lv_type_0_0= ruleDecomposesType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1923:2: ( (lv_type_0_0= ruleDecomposesType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')'
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1784:1: ( ( (lv_type_0_0= ruleDecomposesType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1784:2: ( (lv_type_0_0= ruleDecomposesType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')'
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1923:2: ( (lv_type_0_0= ruleDecomposesType ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1924:1: (lv_type_0_0= ruleDecomposesType )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1784:2: ( (lv_type_0_0= ruleDecomposesType ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1785:1: (lv_type_0_0= ruleDecomposesType )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1924:1: (lv_type_0_0= ruleDecomposesType )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1925:3: lv_type_0_0= ruleDecomposesType
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1785:1: (lv_type_0_0= ruleDecomposesType )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1786:3: lv_type_0_0= ruleDecomposesType
             {
              
             	        currentNode=createCompositeNode(grammarAccess.getDecomposesAccess().getTypeDecomposesTypeEnumRuleCall_0_0(), currentNode); 
             	    
-            pushFollow(FOLLOW_ruleDecomposesType_in_ruleDecomposes3941);
+            pushFollow(FOLLOW_ruleDecomposesType_in_ruleDecomposes3724);
             lv_type_0_0=ruleDecomposesType();
             _fsp--;
 
@@ -4557,15 +4174,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,31,FOLLOW_31_in_ruleDecomposes3951); 
+            match(input,31,FOLLOW_31_in_ruleDecomposes3734); 
 
                     createLeafNode(grammarAccess.getDecomposesAccess().getLeftParenthesisKeyword_1(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1951:1: ( ( RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1952:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1812:1: ( ( RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1813:1: ( RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1952:1: ( RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1953:3: RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1813:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1814:3: RULE_ID
             {
 
             			if (current==null) {
@@ -4573,7 +4190,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDecomposes3969); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDecomposes3752); 
 
             		createLeafNode(grammarAccess.getDecomposesAccess().getSourceRequirementCrossReference_2_0(), "source"); 
             	
@@ -4583,15 +4200,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,14,FOLLOW_14_in_ruleDecomposes3979); 
+            match(input,14,FOLLOW_14_in_ruleDecomposes3762); 
 
                     createLeafNode(grammarAccess.getDecomposesAccess().getCommaKeyword_3(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1969:1: ( ( RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1970:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1830:1: ( ( RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1831:1: ( RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1970:1: ( RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1971:3: RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1831:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1832:3: RULE_ID
             {
 
             			if (current==null) {
@@ -4599,7 +4216,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDecomposes3997); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDecomposes3780); 
 
             		createLeafNode(grammarAccess.getDecomposesAccess().getTargetRequirementCrossReference_4_0(), "target"); 
             	
@@ -4609,7 +4226,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,32,FOLLOW_32_in_ruleDecomposes4007); 
+            match(input,32,FOLLOW_32_in_ruleDecomposes3790); 
 
                     createLeafNode(grammarAccess.getDecomposesAccess().getRightParenthesisKeyword_5(), null); 
                 
@@ -4636,7 +4253,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleTrusts
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1995:1: entryRuleTrusts returns [EObject current=null] : iv_ruleTrusts= ruleTrusts EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1856:1: entryRuleTrusts returns [EObject current=null] : iv_ruleTrusts= ruleTrusts EOF ;
     public final EObject entryRuleTrusts() throws RecognitionException {
         EObject current = null;
 
@@ -4644,16 +4261,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1996:2: (iv_ruleTrusts= ruleTrusts EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1997:2: iv_ruleTrusts= ruleTrusts EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1857:2: (iv_ruleTrusts= ruleTrusts EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1858:2: iv_ruleTrusts= ruleTrusts EOF
             {
              currentNode = createCompositeNode(grammarAccess.getTrustsRule(), currentNode); 
-            pushFollow(FOLLOW_ruleTrusts_in_entryRuleTrusts4043);
+            pushFollow(FOLLOW_ruleTrusts_in_entryRuleTrusts3826);
             iv_ruleTrusts=ruleTrusts();
             _fsp--;
 
              current =iv_ruleTrusts; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTrusts4053); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTrusts3836); 
 
             }
 
@@ -4671,7 +4288,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleTrusts
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2004:1: ruleTrusts returns [EObject current=null] : ( ( (lv_type_0_0= 'trusts' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )? ')' ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1865:1: ruleTrusts returns [EObject current=null] : ( ( (lv_type_0_0= 'trusts' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )? ')' ) ;
     public final EObject ruleTrusts() throws RecognitionException {
         EObject current = null;
 
@@ -4680,20 +4297,20 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2009:6: ( ( ( (lv_type_0_0= 'trusts' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )? ')' ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2010:1: ( ( (lv_type_0_0= 'trusts' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )? ')' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1870:6: ( ( ( (lv_type_0_0= 'trusts' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )? ')' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1871:1: ( ( (lv_type_0_0= 'trusts' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )? ')' )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2010:1: ( ( (lv_type_0_0= 'trusts' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )? ')' )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2010:2: ( (lv_type_0_0= 'trusts' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )? ')'
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1871:1: ( ( (lv_type_0_0= 'trusts' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )? ')' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1871:2: ( (lv_type_0_0= 'trusts' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )? ')'
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2010:2: ( (lv_type_0_0= 'trusts' ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2011:1: (lv_type_0_0= 'trusts' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1871:2: ( (lv_type_0_0= 'trusts' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1872:1: (lv_type_0_0= 'trusts' )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2011:1: (lv_type_0_0= 'trusts' )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2012:3: lv_type_0_0= 'trusts'
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1872:1: (lv_type_0_0= 'trusts' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1873:3: lv_type_0_0= 'trusts'
             {
             lv_type_0_0=(Token)input.LT(1);
-            match(input,34,FOLLOW_34_in_ruleTrusts4096); 
+            match(input,34,FOLLOW_34_in_ruleTrusts3879); 
 
                     createLeafNode(grammarAccess.getTrustsAccess().getTypeTrustsKeyword_0_0(), "type"); 
                 
@@ -4715,15 +4332,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,31,FOLLOW_31_in_ruleTrusts4119); 
+            match(input,31,FOLLOW_31_in_ruleTrusts3902); 
 
                     createLeafNode(grammarAccess.getTrustsAccess().getLeftParenthesisKeyword_1(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2035:1: ( ( RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2036:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1896:1: ( ( RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1897:1: ( RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2036:1: ( RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2037:3: RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1897:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1898:3: RULE_ID
             {
 
             			if (current==null) {
@@ -4731,7 +4348,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleTrusts4137); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleTrusts3920); 
 
             		createLeafNode(grammarAccess.getTrustsAccess().getSourceActorCrossReference_2_0(), "source"); 
             	
@@ -4741,15 +4358,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,14,FOLLOW_14_in_ruleTrusts4147); 
+            match(input,14,FOLLOW_14_in_ruleTrusts3930); 
 
                     createLeafNode(grammarAccess.getTrustsAccess().getCommaKeyword_3(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2053:1: ( ( RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2054:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1914:1: ( ( RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1915:1: ( RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2054:1: ( RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2055:3: RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1915:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1916:3: RULE_ID
             {
 
             			if (current==null) {
@@ -4757,7 +4374,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleTrusts4165); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleTrusts3948); 
 
             		createLeafNode(grammarAccess.getTrustsAccess().getTargetActorCrossReference_4_0(), "target"); 
             	
@@ -4767,26 +4384,26 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2067:2: ( ',' ( ( RULE_ID ) ) )?
-            int alt18=2;
-            int LA18_0 = input.LA(1);
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1928:2: ( ',' ( ( RULE_ID ) ) )?
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA18_0==14) ) {
-                alt18=1;
+            if ( (LA16_0==14) ) {
+                alt16=1;
             }
-            switch (alt18) {
+            switch (alt16) {
                 case 1 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2067:4: ',' ( ( RULE_ID ) )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1928:4: ',' ( ( RULE_ID ) )
                     {
-                    match(input,14,FOLLOW_14_in_ruleTrusts4176); 
+                    match(input,14,FOLLOW_14_in_ruleTrusts3959); 
 
                             createLeafNode(grammarAccess.getTrustsAccess().getCommaKeyword_5_0(), null); 
                         
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2071:1: ( ( RULE_ID ) )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2072:1: ( RULE_ID )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1932:1: ( ( RULE_ID ) )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1933:1: ( RULE_ID )
                     {
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2072:1: ( RULE_ID )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2073:3: RULE_ID
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1933:1: ( RULE_ID )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1934:3: RULE_ID
                     {
 
                     			if (current==null) {
@@ -4794,7 +4411,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     	            associateNodeWithAstElement(currentNode, current);
                     	        }
                             
-                    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleTrusts4194); 
+                    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleTrusts3977); 
 
                     		createLeafNode(grammarAccess.getTrustsAccess().getEntityThingCrossReference_5_1_0(), "entity"); 
                     	
@@ -4810,7 +4427,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,32,FOLLOW_32_in_ruleTrusts4206); 
+            match(input,32,FOLLOW_32_in_ruleTrusts3989); 
 
                     createLeafNode(grammarAccess.getTrustsAccess().getRightParenthesisKeyword_6(), null); 
                 
@@ -4837,7 +4454,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleDelegates
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2097:1: entryRuleDelegates returns [EObject current=null] : iv_ruleDelegates= ruleDelegates EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1958:1: entryRuleDelegates returns [EObject current=null] : iv_ruleDelegates= ruleDelegates EOF ;
     public final EObject entryRuleDelegates() throws RecognitionException {
         EObject current = null;
 
@@ -4845,16 +4462,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2098:2: (iv_ruleDelegates= ruleDelegates EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2099:2: iv_ruleDelegates= ruleDelegates EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1959:2: (iv_ruleDelegates= ruleDelegates EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1960:2: iv_ruleDelegates= ruleDelegates EOF
             {
              currentNode = createCompositeNode(grammarAccess.getDelegatesRule(), currentNode); 
-            pushFollow(FOLLOW_ruleDelegates_in_entryRuleDelegates4242);
+            pushFollow(FOLLOW_ruleDelegates_in_entryRuleDelegates4025);
             iv_ruleDelegates=ruleDelegates();
             _fsp--;
 
              current =iv_ruleDelegates; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDelegates4252); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDelegates4035); 
 
             }
 
@@ -4872,7 +4489,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleDelegates
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2106:1: ruleDelegates returns [EObject current=null] : ( ( (lv_type_0_0= 'delegates' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )? ')' ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1967:1: ruleDelegates returns [EObject current=null] : ( ( (lv_type_0_0= 'delegates' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )? ')' ) ;
     public final EObject ruleDelegates() throws RecognitionException {
         EObject current = null;
 
@@ -4881,20 +4498,20 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2111:6: ( ( ( (lv_type_0_0= 'delegates' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )? ')' ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2112:1: ( ( (lv_type_0_0= 'delegates' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )? ')' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1972:6: ( ( ( (lv_type_0_0= 'delegates' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )? ')' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1973:1: ( ( (lv_type_0_0= 'delegates' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )? ')' )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2112:1: ( ( (lv_type_0_0= 'delegates' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )? ')' )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2112:2: ( (lv_type_0_0= 'delegates' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )? ')'
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1973:1: ( ( (lv_type_0_0= 'delegates' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )? ')' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1973:2: ( (lv_type_0_0= 'delegates' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )? ')'
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2112:2: ( (lv_type_0_0= 'delegates' ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2113:1: (lv_type_0_0= 'delegates' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1973:2: ( (lv_type_0_0= 'delegates' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1974:1: (lv_type_0_0= 'delegates' )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2113:1: (lv_type_0_0= 'delegates' )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2114:3: lv_type_0_0= 'delegates'
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1974:1: (lv_type_0_0= 'delegates' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1975:3: lv_type_0_0= 'delegates'
             {
             lv_type_0_0=(Token)input.LT(1);
-            match(input,35,FOLLOW_35_in_ruleDelegates4295); 
+            match(input,35,FOLLOW_35_in_ruleDelegates4078); 
 
                     createLeafNode(grammarAccess.getDelegatesAccess().getTypeDelegatesKeyword_0_0(), "type"); 
                 
@@ -4916,15 +4533,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,31,FOLLOW_31_in_ruleDelegates4318); 
+            match(input,31,FOLLOW_31_in_ruleDelegates4101); 
 
                     createLeafNode(grammarAccess.getDelegatesAccess().getLeftParenthesisKeyword_1(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2137:1: ( ( RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2138:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1998:1: ( ( RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1999:1: ( RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2138:1: ( RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2139:3: RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1999:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2000:3: RULE_ID
             {
 
             			if (current==null) {
@@ -4932,7 +4549,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDelegates4336); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDelegates4119); 
 
             		createLeafNode(grammarAccess.getDelegatesAccess().getSourceActorCrossReference_2_0(), "source"); 
             	
@@ -4942,15 +4559,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,14,FOLLOW_14_in_ruleDelegates4346); 
+            match(input,14,FOLLOW_14_in_ruleDelegates4129); 
 
                     createLeafNode(grammarAccess.getDelegatesAccess().getCommaKeyword_3(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2155:1: ( ( RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2156:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2016:1: ( ( RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2017:1: ( RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2156:1: ( RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2157:3: RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2017:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2018:3: RULE_ID
             {
 
             			if (current==null) {
@@ -4958,7 +4575,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDelegates4364); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDelegates4147); 
 
             		createLeafNode(grammarAccess.getDelegatesAccess().getTargetActorCrossReference_4_0(), "target"); 
             	
@@ -4968,26 +4585,26 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2169:2: ( ',' ( ( RULE_ID ) ) )?
-            int alt19=2;
-            int LA19_0 = input.LA(1);
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2030:2: ( ',' ( ( RULE_ID ) ) )?
+            int alt17=2;
+            int LA17_0 = input.LA(1);
 
-            if ( (LA19_0==14) ) {
-                alt19=1;
+            if ( (LA17_0==14) ) {
+                alt17=1;
             }
-            switch (alt19) {
+            switch (alt17) {
                 case 1 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2169:4: ',' ( ( RULE_ID ) )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2030:4: ',' ( ( RULE_ID ) )
                     {
-                    match(input,14,FOLLOW_14_in_ruleDelegates4375); 
+                    match(input,14,FOLLOW_14_in_ruleDelegates4158); 
 
                             createLeafNode(grammarAccess.getDelegatesAccess().getCommaKeyword_5_0(), null); 
                         
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2173:1: ( ( RULE_ID ) )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2174:1: ( RULE_ID )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2034:1: ( ( RULE_ID ) )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2035:1: ( RULE_ID )
                     {
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2174:1: ( RULE_ID )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2175:3: RULE_ID
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2035:1: ( RULE_ID )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2036:3: RULE_ID
                     {
 
                     			if (current==null) {
@@ -4995,7 +4612,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     	            associateNodeWithAstElement(currentNode, current);
                     	        }
                             
-                    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDelegates4393); 
+                    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDelegates4176); 
 
                     		createLeafNode(grammarAccess.getDelegatesAccess().getEntityThingCrossReference_5_1_0(), "entity"); 
                     	
@@ -5011,7 +4628,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,32,FOLLOW_32_in_ruleDelegates4405); 
+            match(input,32,FOLLOW_32_in_ruleDelegates4188); 
 
                     createLeafNode(grammarAccess.getDelegatesAccess().getRightParenthesisKeyword_6(), null); 
                 
@@ -5038,7 +4655,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleContributes
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2199:1: entryRuleContributes returns [EObject current=null] : iv_ruleContributes= ruleContributes EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2060:1: entryRuleContributes returns [EObject current=null] : iv_ruleContributes= ruleContributes EOF ;
     public final EObject entryRuleContributes() throws RecognitionException {
         EObject current = null;
 
@@ -5046,16 +4663,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2200:2: (iv_ruleContributes= ruleContributes EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2201:2: iv_ruleContributes= ruleContributes EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2061:2: (iv_ruleContributes= ruleContributes EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2062:2: iv_ruleContributes= ruleContributes EOF
             {
              currentNode = createCompositeNode(grammarAccess.getContributesRule(), currentNode); 
-            pushFollow(FOLLOW_ruleContributes_in_entryRuleContributes4441);
+            pushFollow(FOLLOW_ruleContributes_in_entryRuleContributes4224);
             iv_ruleContributes=ruleContributes();
             _fsp--;
 
              current =iv_ruleContributes; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleContributes4451); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleContributes4234); 
 
             }
 
@@ -5073,7 +4690,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleContributes
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2208:1: ruleContributes returns [EObject current=null] : ( ( (lv_type_0_0= ruleContributesType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2069:1: ruleContributes returns [EObject current=null] : ( ( (lv_type_0_0= ruleContributesType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) ;
     public final EObject ruleContributes() throws RecognitionException {
         EObject current = null;
 
@@ -5083,22 +4700,22 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2213:6: ( ( ( (lv_type_0_0= ruleContributesType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2214:1: ( ( (lv_type_0_0= ruleContributesType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2074:6: ( ( ( (lv_type_0_0= ruleContributesType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2075:1: ( ( (lv_type_0_0= ruleContributesType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2214:1: ( ( (lv_type_0_0= ruleContributesType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2214:2: ( (lv_type_0_0= ruleContributesType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')'
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2075:1: ( ( (lv_type_0_0= ruleContributesType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2075:2: ( (lv_type_0_0= ruleContributesType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')'
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2214:2: ( (lv_type_0_0= ruleContributesType ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2215:1: (lv_type_0_0= ruleContributesType )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2075:2: ( (lv_type_0_0= ruleContributesType ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2076:1: (lv_type_0_0= ruleContributesType )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2215:1: (lv_type_0_0= ruleContributesType )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2216:3: lv_type_0_0= ruleContributesType
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2076:1: (lv_type_0_0= ruleContributesType )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2077:3: lv_type_0_0= ruleContributesType
             {
              
             	        currentNode=createCompositeNode(grammarAccess.getContributesAccess().getTypeContributesTypeEnumRuleCall_0_0(), currentNode); 
             	    
-            pushFollow(FOLLOW_ruleContributesType_in_ruleContributes4497);
+            pushFollow(FOLLOW_ruleContributesType_in_ruleContributes4280);
             lv_type_0_0=ruleContributesType();
             _fsp--;
 
@@ -5125,15 +4742,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,31,FOLLOW_31_in_ruleContributes4507); 
+            match(input,31,FOLLOW_31_in_ruleContributes4290); 
 
                     createLeafNode(grammarAccess.getContributesAccess().getLeftParenthesisKeyword_1(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2242:1: ( ( RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2243:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2103:1: ( ( RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2104:1: ( RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2243:1: ( RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2244:3: RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2104:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2105:3: RULE_ID
             {
 
             			if (current==null) {
@@ -5141,7 +4758,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleContributes4525); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleContributes4308); 
 
             		createLeafNode(grammarAccess.getContributesAccess().getSourceRequirementCrossReference_2_0(), "source"); 
             	
@@ -5151,15 +4768,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,14,FOLLOW_14_in_ruleContributes4535); 
+            match(input,14,FOLLOW_14_in_ruleContributes4318); 
 
                     createLeafNode(grammarAccess.getContributesAccess().getCommaKeyword_3(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2260:1: ( ( RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2261:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2121:1: ( ( RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2122:1: ( RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2261:1: ( RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2262:3: RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2122:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2123:3: RULE_ID
             {
 
             			if (current==null) {
@@ -5167,7 +4784,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleContributes4553); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleContributes4336); 
 
             		createLeafNode(grammarAccess.getContributesAccess().getTargetRequirementCrossReference_4_0(), "target"); 
             	
@@ -5177,7 +4794,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,32,FOLLOW_32_in_ruleContributes4563); 
+            match(input,32,FOLLOW_32_in_ruleContributes4346); 
 
                     createLeafNode(grammarAccess.getContributesAccess().getRightParenthesisKeyword_5(), null); 
                 
@@ -5204,7 +4821,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleFulfils
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2286:1: entryRuleFulfils returns [EObject current=null] : iv_ruleFulfils= ruleFulfils EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2147:1: entryRuleFulfils returns [EObject current=null] : iv_ruleFulfils= ruleFulfils EOF ;
     public final EObject entryRuleFulfils() throws RecognitionException {
         EObject current = null;
 
@@ -5212,16 +4829,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2287:2: (iv_ruleFulfils= ruleFulfils EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2288:2: iv_ruleFulfils= ruleFulfils EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2148:2: (iv_ruleFulfils= ruleFulfils EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2149:2: iv_ruleFulfils= ruleFulfils EOF
             {
              currentNode = createCompositeNode(grammarAccess.getFulfilsRule(), currentNode); 
-            pushFollow(FOLLOW_ruleFulfils_in_entryRuleFulfils4599);
+            pushFollow(FOLLOW_ruleFulfils_in_entryRuleFulfils4382);
             iv_ruleFulfils=ruleFulfils();
             _fsp--;
 
              current =iv_ruleFulfils; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFulfils4609); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFulfils4392); 
 
             }
 
@@ -5239,7 +4856,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleFulfils
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2295:1: ruleFulfils returns [EObject current=null] : ( ( (lv_type_0_0= ruleFulfilsType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2156:1: ruleFulfils returns [EObject current=null] : ( ( (lv_type_0_0= ruleFulfilsType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) ;
     public final EObject ruleFulfils() throws RecognitionException {
         EObject current = null;
 
@@ -5249,22 +4866,22 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2300:6: ( ( ( (lv_type_0_0= ruleFulfilsType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2301:1: ( ( (lv_type_0_0= ruleFulfilsType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2161:6: ( ( ( (lv_type_0_0= ruleFulfilsType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2162:1: ( ( (lv_type_0_0= ruleFulfilsType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2301:1: ( ( (lv_type_0_0= ruleFulfilsType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2301:2: ( (lv_type_0_0= ruleFulfilsType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')'
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2162:1: ( ( (lv_type_0_0= ruleFulfilsType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2162:2: ( (lv_type_0_0= ruleFulfilsType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')'
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2301:2: ( (lv_type_0_0= ruleFulfilsType ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2302:1: (lv_type_0_0= ruleFulfilsType )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2162:2: ( (lv_type_0_0= ruleFulfilsType ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2163:1: (lv_type_0_0= ruleFulfilsType )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2302:1: (lv_type_0_0= ruleFulfilsType )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2303:3: lv_type_0_0= ruleFulfilsType
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2163:1: (lv_type_0_0= ruleFulfilsType )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2164:3: lv_type_0_0= ruleFulfilsType
             {
              
             	        currentNode=createCompositeNode(grammarAccess.getFulfilsAccess().getTypeFulfilsTypeEnumRuleCall_0_0(), currentNode); 
             	    
-            pushFollow(FOLLOW_ruleFulfilsType_in_ruleFulfils4655);
+            pushFollow(FOLLOW_ruleFulfilsType_in_ruleFulfils4438);
             lv_type_0_0=ruleFulfilsType();
             _fsp--;
 
@@ -5291,15 +4908,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,31,FOLLOW_31_in_ruleFulfils4665); 
+            match(input,31,FOLLOW_31_in_ruleFulfils4448); 
 
                     createLeafNode(grammarAccess.getFulfilsAccess().getLeftParenthesisKeyword_1(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2329:1: ( ( RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2330:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2190:1: ( ( RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2191:1: ( RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2330:1: ( RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2331:3: RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2191:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2192:3: RULE_ID
             {
 
             			if (current==null) {
@@ -5307,7 +4924,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFulfils4683); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFulfils4466); 
 
             		createLeafNode(grammarAccess.getFulfilsAccess().getSourceProcessCrossReference_2_0(), "source"); 
             	
@@ -5317,15 +4934,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,14,FOLLOW_14_in_ruleFulfils4693); 
+            match(input,14,FOLLOW_14_in_ruleFulfils4476); 
 
                     createLeafNode(grammarAccess.getFulfilsAccess().getCommaKeyword_3(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2347:1: ( ( RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2348:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2208:1: ( ( RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2209:1: ( RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2348:1: ( RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2349:3: RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2209:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2210:3: RULE_ID
             {
 
             			if (current==null) {
@@ -5333,7 +4950,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFulfils4711); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFulfils4494); 
 
             		createLeafNode(grammarAccess.getFulfilsAccess().getTargetPropositionCrossReference_4_0(), "target"); 
             	
@@ -5343,7 +4960,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,32,FOLLOW_32_in_ruleFulfils4721); 
+            match(input,32,FOLLOW_32_in_ruleFulfils4504); 
 
                     createLeafNode(grammarAccess.getFulfilsAccess().getRightParenthesisKeyword_5(), null); 
                 
@@ -5370,7 +4987,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleProvides
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2373:1: entryRuleProvides returns [EObject current=null] : iv_ruleProvides= ruleProvides EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2234:1: entryRuleProvides returns [EObject current=null] : iv_ruleProvides= ruleProvides EOF ;
     public final EObject entryRuleProvides() throws RecognitionException {
         EObject current = null;
 
@@ -5378,16 +4995,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2374:2: (iv_ruleProvides= ruleProvides EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2375:2: iv_ruleProvides= ruleProvides EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2235:2: (iv_ruleProvides= ruleProvides EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2236:2: iv_ruleProvides= ruleProvides EOF
             {
              currentNode = createCompositeNode(grammarAccess.getProvidesRule(), currentNode); 
-            pushFollow(FOLLOW_ruleProvides_in_entryRuleProvides4757);
+            pushFollow(FOLLOW_ruleProvides_in_entryRuleProvides4540);
             iv_ruleProvides=ruleProvides();
             _fsp--;
 
              current =iv_ruleProvides; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleProvides4767); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleProvides4550); 
 
             }
 
@@ -5405,7 +5022,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleProvides
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2382:1: ruleProvides returns [EObject current=null] : ( ( (lv_type_0_0= 'provides' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2243:1: ruleProvides returns [EObject current=null] : ( ( (lv_type_0_0= 'provides' ) ) '(' ( ( ( RULE_ID ) ) | ( ( RULE_ID ) ) ) ',' ( ( RULE_ID ) ) ')' ) ;
     public final EObject ruleProvides() throws RecognitionException {
         EObject current = null;
 
@@ -5414,20 +5031,20 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2387:6: ( ( ( (lv_type_0_0= 'provides' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2388:1: ( ( (lv_type_0_0= 'provides' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2248:6: ( ( ( (lv_type_0_0= 'provides' ) ) '(' ( ( ( RULE_ID ) ) | ( ( RULE_ID ) ) ) ',' ( ( RULE_ID ) ) ')' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2249:1: ( ( (lv_type_0_0= 'provides' ) ) '(' ( ( ( RULE_ID ) ) | ( ( RULE_ID ) ) ) ',' ( ( RULE_ID ) ) ')' )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2388:1: ( ( (lv_type_0_0= 'provides' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2388:2: ( (lv_type_0_0= 'provides' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')'
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2249:1: ( ( (lv_type_0_0= 'provides' ) ) '(' ( ( ( RULE_ID ) ) | ( ( RULE_ID ) ) ) ',' ( ( RULE_ID ) ) ')' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2249:2: ( (lv_type_0_0= 'provides' ) ) '(' ( ( ( RULE_ID ) ) | ( ( RULE_ID ) ) ) ',' ( ( RULE_ID ) ) ')'
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2388:2: ( (lv_type_0_0= 'provides' ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2389:1: (lv_type_0_0= 'provides' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2249:2: ( (lv_type_0_0= 'provides' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2250:1: (lv_type_0_0= 'provides' )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2389:1: (lv_type_0_0= 'provides' )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2390:3: lv_type_0_0= 'provides'
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2250:1: (lv_type_0_0= 'provides' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2251:3: lv_type_0_0= 'provides'
             {
             lv_type_0_0=(Token)input.LT(1);
-            match(input,36,FOLLOW_36_in_ruleProvides4810); 
+            match(input,36,FOLLOW_36_in_ruleProvides4593); 
 
                     createLeafNode(grammarAccess.getProvidesAccess().getTypeProvidesKeyword_0_0(), "type"); 
                 
@@ -5449,41 +5066,92 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,31,FOLLOW_31_in_ruleProvides4833); 
+            match(input,31,FOLLOW_31_in_ruleProvides4616); 
 
                     createLeafNode(grammarAccess.getProvidesAccess().getLeftParenthesisKeyword_1(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2413:1: ( ( RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2414:1: ( RULE_ID )
-            {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2414:1: ( RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2415:3: RULE_ID
-            {
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2274:1: ( ( ( RULE_ID ) ) | ( ( RULE_ID ) ) )
+            int alt18=2;
+            int LA18_0 = input.LA(1);
 
-            			if (current==null) {
-            	            current = factory.create(grammarAccess.getProvidesRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
-            	        }
-                    
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleProvides4851); 
+            if ( (LA18_0==RULE_ID) ) {
+                alt18=1;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("2274:1: ( ( ( RULE_ID ) ) | ( ( RULE_ID ) ) )", 18, 0, input);
 
-            		createLeafNode(grammarAccess.getProvidesAccess().getSourceProcessCrossReference_2_0(), "source"); 
-            	
+                throw nvae;
+            }
+            switch (alt18) {
+                case 1 :
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2274:2: ( ( RULE_ID ) )
+                    {
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2274:2: ( ( RULE_ID ) )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2275:1: ( RULE_ID )
+                    {
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2275:1: ( RULE_ID )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2276:3: RULE_ID
+                    {
+
+                    			if (current==null) {
+                    	            current = factory.create(grammarAccess.getProvidesRule().getType().getClassifier());
+                    	            associateNodeWithAstElement(currentNode, current);
+                    	        }
+                            
+                    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleProvides4635); 
+
+                    		createLeafNode(grammarAccess.getProvidesAccess().getSourceProcessCrossReference_2_0_0(), "source"); 
+                    	
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2289:6: ( ( RULE_ID ) )
+                    {
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2289:6: ( ( RULE_ID ) )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2290:1: ( RULE_ID )
+                    {
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2290:1: ( RULE_ID )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2291:3: RULE_ID
+                    {
+
+                    			if (current==null) {
+                    	            current = factory.create(grammarAccess.getProvidesRule().getType().getClassifier());
+                    	            associateNodeWithAstElement(currentNode, current);
+                    	        }
+                            
+                    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleProvides4659); 
+
+                    		createLeafNode(grammarAccess.getProvidesAccess().getSourceActorCrossReference_2_1_0(), "source"); 
+                    	
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
 
             }
 
-
-            }
-
-            match(input,14,FOLLOW_14_in_ruleProvides4861); 
+            match(input,14,FOLLOW_14_in_ruleProvides4670); 
 
                     createLeafNode(grammarAccess.getProvidesAccess().getCommaKeyword_3(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2431:1: ( ( RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2432:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2307:1: ( ( RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2308:1: ( RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2432:1: ( RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2433:3: RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2308:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2309:3: RULE_ID
             {
 
             			if (current==null) {
@@ -5491,7 +5159,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleProvides4879); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleProvides4688); 
 
             		createLeafNode(grammarAccess.getProvidesAccess().getTargetResourceCrossReference_4_0(), "target"); 
             	
@@ -5501,7 +5169,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,32,FOLLOW_32_in_ruleProvides4889); 
+            match(input,32,FOLLOW_32_in_ruleProvides4698); 
 
                     createLeafNode(grammarAccess.getProvidesAccess().getRightParenthesisKeyword_5(), null); 
                 
@@ -5528,7 +5196,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleConsumes
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2457:1: entryRuleConsumes returns [EObject current=null] : iv_ruleConsumes= ruleConsumes EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2333:1: entryRuleConsumes returns [EObject current=null] : iv_ruleConsumes= ruleConsumes EOF ;
     public final EObject entryRuleConsumes() throws RecognitionException {
         EObject current = null;
 
@@ -5536,16 +5204,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2458:2: (iv_ruleConsumes= ruleConsumes EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2459:2: iv_ruleConsumes= ruleConsumes EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2334:2: (iv_ruleConsumes= ruleConsumes EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2335:2: iv_ruleConsumes= ruleConsumes EOF
             {
              currentNode = createCompositeNode(grammarAccess.getConsumesRule(), currentNode); 
-            pushFollow(FOLLOW_ruleConsumes_in_entryRuleConsumes4925);
+            pushFollow(FOLLOW_ruleConsumes_in_entryRuleConsumes4734);
             iv_ruleConsumes=ruleConsumes();
             _fsp--;
 
              current =iv_ruleConsumes; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleConsumes4935); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleConsumes4744); 
 
             }
 
@@ -5563,7 +5231,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleConsumes
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2466:1: ruleConsumes returns [EObject current=null] : ( ( (lv_type_0_0= 'consumes' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2342:1: ruleConsumes returns [EObject current=null] : ( ( (lv_type_0_0= 'consumes' ) ) '(' ( ( ( RULE_ID ) ) | ( ( RULE_ID ) ) ) ',' ( ( RULE_ID ) ) ')' ) ;
     public final EObject ruleConsumes() throws RecognitionException {
         EObject current = null;
 
@@ -5572,20 +5240,20 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2471:6: ( ( ( (lv_type_0_0= 'consumes' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2472:1: ( ( (lv_type_0_0= 'consumes' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2347:6: ( ( ( (lv_type_0_0= 'consumes' ) ) '(' ( ( ( RULE_ID ) ) | ( ( RULE_ID ) ) ) ',' ( ( RULE_ID ) ) ')' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2348:1: ( ( (lv_type_0_0= 'consumes' ) ) '(' ( ( ( RULE_ID ) ) | ( ( RULE_ID ) ) ) ',' ( ( RULE_ID ) ) ')' )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2472:1: ( ( (lv_type_0_0= 'consumes' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2472:2: ( (lv_type_0_0= 'consumes' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')'
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2348:1: ( ( (lv_type_0_0= 'consumes' ) ) '(' ( ( ( RULE_ID ) ) | ( ( RULE_ID ) ) ) ',' ( ( RULE_ID ) ) ')' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2348:2: ( (lv_type_0_0= 'consumes' ) ) '(' ( ( ( RULE_ID ) ) | ( ( RULE_ID ) ) ) ',' ( ( RULE_ID ) ) ')'
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2472:2: ( (lv_type_0_0= 'consumes' ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2473:1: (lv_type_0_0= 'consumes' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2348:2: ( (lv_type_0_0= 'consumes' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2349:1: (lv_type_0_0= 'consumes' )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2473:1: (lv_type_0_0= 'consumes' )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2474:3: lv_type_0_0= 'consumes'
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2349:1: (lv_type_0_0= 'consumes' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2350:3: lv_type_0_0= 'consumes'
             {
             lv_type_0_0=(Token)input.LT(1);
-            match(input,37,FOLLOW_37_in_ruleConsumes4978); 
+            match(input,37,FOLLOW_37_in_ruleConsumes4787); 
 
                     createLeafNode(grammarAccess.getConsumesAccess().getTypeConsumesKeyword_0_0(), "type"); 
                 
@@ -5607,41 +5275,92 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,31,FOLLOW_31_in_ruleConsumes5001); 
+            match(input,31,FOLLOW_31_in_ruleConsumes4810); 
 
                     createLeafNode(grammarAccess.getConsumesAccess().getLeftParenthesisKeyword_1(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2497:1: ( ( RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2498:1: ( RULE_ID )
-            {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2498:1: ( RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2499:3: RULE_ID
-            {
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2373:1: ( ( ( RULE_ID ) ) | ( ( RULE_ID ) ) )
+            int alt19=2;
+            int LA19_0 = input.LA(1);
 
-            			if (current==null) {
-            	            current = factory.create(grammarAccess.getConsumesRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
-            	        }
-                    
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleConsumes5019); 
+            if ( (LA19_0==RULE_ID) ) {
+                alt19=1;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("2373:1: ( ( ( RULE_ID ) ) | ( ( RULE_ID ) ) )", 19, 0, input);
 
-            		createLeafNode(grammarAccess.getConsumesAccess().getSourceProcessCrossReference_2_0(), "source"); 
-            	
+                throw nvae;
+            }
+            switch (alt19) {
+                case 1 :
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2373:2: ( ( RULE_ID ) )
+                    {
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2373:2: ( ( RULE_ID ) )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2374:1: ( RULE_ID )
+                    {
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2374:1: ( RULE_ID )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2375:3: RULE_ID
+                    {
+
+                    			if (current==null) {
+                    	            current = factory.create(grammarAccess.getConsumesRule().getType().getClassifier());
+                    	            associateNodeWithAstElement(currentNode, current);
+                    	        }
+                            
+                    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleConsumes4829); 
+
+                    		createLeafNode(grammarAccess.getConsumesAccess().getSourceProcessCrossReference_2_0_0(), "source"); 
+                    	
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2388:6: ( ( RULE_ID ) )
+                    {
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2388:6: ( ( RULE_ID ) )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2389:1: ( RULE_ID )
+                    {
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2389:1: ( RULE_ID )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2390:3: RULE_ID
+                    {
+
+                    			if (current==null) {
+                    	            current = factory.create(grammarAccess.getConsumesRule().getType().getClassifier());
+                    	            associateNodeWithAstElement(currentNode, current);
+                    	        }
+                            
+                    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleConsumes4853); 
+
+                    		createLeafNode(grammarAccess.getConsumesAccess().getSourceActorCrossReference_2_1_0(), "source"); 
+                    	
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
 
             }
 
-
-            }
-
-            match(input,14,FOLLOW_14_in_ruleConsumes5029); 
+            match(input,14,FOLLOW_14_in_ruleConsumes4864); 
 
                     createLeafNode(grammarAccess.getConsumesAccess().getCommaKeyword_3(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2515:1: ( ( RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2516:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2406:1: ( ( RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2407:1: ( RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2516:1: ( RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2517:3: RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2407:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2408:3: RULE_ID
             {
 
             			if (current==null) {
@@ -5649,7 +5368,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleConsumes5047); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleConsumes4882); 
 
             		createLeafNode(grammarAccess.getConsumesAccess().getTargetResourceCrossReference_4_0(), "target"); 
             	
@@ -5659,7 +5378,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,32,FOLLOW_32_in_ruleConsumes5057); 
+            match(input,32,FOLLOW_32_in_ruleConsumes4892); 
 
                     createLeafNode(grammarAccess.getConsumesAccess().getRightParenthesisKeyword_5(), null); 
                 
@@ -5686,7 +5405,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleExploits
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2541:1: entryRuleExploits returns [EObject current=null] : iv_ruleExploits= ruleExploits EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2432:1: entryRuleExploits returns [EObject current=null] : iv_ruleExploits= ruleExploits EOF ;
     public final EObject entryRuleExploits() throws RecognitionException {
         EObject current = null;
 
@@ -5694,16 +5413,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2542:2: (iv_ruleExploits= ruleExploits EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2543:2: iv_ruleExploits= ruleExploits EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2433:2: (iv_ruleExploits= ruleExploits EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2434:2: iv_ruleExploits= ruleExploits EOF
             {
              currentNode = createCompositeNode(grammarAccess.getExploitsRule(), currentNode); 
-            pushFollow(FOLLOW_ruleExploits_in_entryRuleExploits5093);
+            pushFollow(FOLLOW_ruleExploits_in_entryRuleExploits4928);
             iv_ruleExploits=ruleExploits();
             _fsp--;
 
              current =iv_ruleExploits; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleExploits5103); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleExploits4938); 
 
             }
 
@@ -5721,7 +5440,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleExploits
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2550:1: ruleExploits returns [EObject current=null] : ( ( (lv_type_0_0= 'exploits' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2441:1: ruleExploits returns [EObject current=null] : ( ( (lv_type_0_0= 'exploits' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) ;
     public final EObject ruleExploits() throws RecognitionException {
         EObject current = null;
 
@@ -5730,20 +5449,20 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2555:6: ( ( ( (lv_type_0_0= 'exploits' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2556:1: ( ( (lv_type_0_0= 'exploits' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2446:6: ( ( ( (lv_type_0_0= 'exploits' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2447:1: ( ( (lv_type_0_0= 'exploits' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2556:1: ( ( (lv_type_0_0= 'exploits' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2556:2: ( (lv_type_0_0= 'exploits' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')'
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2447:1: ( ( (lv_type_0_0= 'exploits' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2447:2: ( (lv_type_0_0= 'exploits' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')'
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2556:2: ( (lv_type_0_0= 'exploits' ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2557:1: (lv_type_0_0= 'exploits' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2447:2: ( (lv_type_0_0= 'exploits' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2448:1: (lv_type_0_0= 'exploits' )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2557:1: (lv_type_0_0= 'exploits' )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2558:3: lv_type_0_0= 'exploits'
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2448:1: (lv_type_0_0= 'exploits' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2449:3: lv_type_0_0= 'exploits'
             {
             lv_type_0_0=(Token)input.LT(1);
-            match(input,38,FOLLOW_38_in_ruleExploits5146); 
+            match(input,38,FOLLOW_38_in_ruleExploits4981); 
 
                     createLeafNode(grammarAccess.getExploitsAccess().getTypeExploitsKeyword_0_0(), "type"); 
                 
@@ -5765,15 +5484,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,31,FOLLOW_31_in_ruleExploits5169); 
+            match(input,31,FOLLOW_31_in_ruleExploits5004); 
 
                     createLeafNode(grammarAccess.getExploitsAccess().getLeftParenthesisKeyword_1(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2581:1: ( ( RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2582:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2472:1: ( ( RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2473:1: ( RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2582:1: ( RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2583:3: RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2473:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2474:3: RULE_ID
             {
 
             			if (current==null) {
@@ -5781,7 +5500,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleExploits5187); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleExploits5022); 
 
             		createLeafNode(grammarAccess.getExploitsAccess().getSourceAttackerCrossReference_2_0(), "source"); 
             	
@@ -5791,15 +5510,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,14,FOLLOW_14_in_ruleExploits5197); 
+            match(input,14,FOLLOW_14_in_ruleExploits5032); 
 
                     createLeafNode(grammarAccess.getExploitsAccess().getCommaKeyword_3(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2599:1: ( ( RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2600:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2490:1: ( ( RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2491:1: ( RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2600:1: ( RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2601:3: RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2491:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2492:3: RULE_ID
             {
 
             			if (current==null) {
@@ -5807,7 +5526,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleExploits5215); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleExploits5050); 
 
             		createLeafNode(grammarAccess.getExploitsAccess().getTargetProcessCrossReference_4_0(), "target"); 
             	
@@ -5817,7 +5536,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,32,FOLLOW_32_in_ruleExploits5225); 
+            match(input,32,FOLLOW_32_in_ruleExploits5060); 
 
                     createLeafNode(grammarAccess.getExploitsAccess().getRightParenthesisKeyword_5(), null); 
                 
@@ -5844,7 +5563,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleDamages
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2625:1: entryRuleDamages returns [EObject current=null] : iv_ruleDamages= ruleDamages EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2516:1: entryRuleDamages returns [EObject current=null] : iv_ruleDamages= ruleDamages EOF ;
     public final EObject entryRuleDamages() throws RecognitionException {
         EObject current = null;
 
@@ -5852,16 +5571,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2626:2: (iv_ruleDamages= ruleDamages EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2627:2: iv_ruleDamages= ruleDamages EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2517:2: (iv_ruleDamages= ruleDamages EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2518:2: iv_ruleDamages= ruleDamages EOF
             {
              currentNode = createCompositeNode(grammarAccess.getDamagesRule(), currentNode); 
-            pushFollow(FOLLOW_ruleDamages_in_entryRuleDamages5261);
+            pushFollow(FOLLOW_ruleDamages_in_entryRuleDamages5096);
             iv_ruleDamages=ruleDamages();
             _fsp--;
 
              current =iv_ruleDamages; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDamages5271); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDamages5106); 
 
             }
 
@@ -5879,7 +5598,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleDamages
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2634:1: ruleDamages returns [EObject current=null] : ( ( (lv_type_0_0= 'damages' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2525:1: ruleDamages returns [EObject current=null] : ( ( (lv_type_0_0= 'damages' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) ;
     public final EObject ruleDamages() throws RecognitionException {
         EObject current = null;
 
@@ -5888,20 +5607,20 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2639:6: ( ( ( (lv_type_0_0= 'damages' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2640:1: ( ( (lv_type_0_0= 'damages' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2530:6: ( ( ( (lv_type_0_0= 'damages' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2531:1: ( ( (lv_type_0_0= 'damages' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2640:1: ( ( (lv_type_0_0= 'damages' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2640:2: ( (lv_type_0_0= 'damages' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')'
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2531:1: ( ( (lv_type_0_0= 'damages' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2531:2: ( (lv_type_0_0= 'damages' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')'
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2640:2: ( (lv_type_0_0= 'damages' ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2641:1: (lv_type_0_0= 'damages' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2531:2: ( (lv_type_0_0= 'damages' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2532:1: (lv_type_0_0= 'damages' )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2641:1: (lv_type_0_0= 'damages' )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2642:3: lv_type_0_0= 'damages'
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2532:1: (lv_type_0_0= 'damages' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2533:3: lv_type_0_0= 'damages'
             {
             lv_type_0_0=(Token)input.LT(1);
-            match(input,39,FOLLOW_39_in_ruleDamages5314); 
+            match(input,39,FOLLOW_39_in_ruleDamages5149); 
 
                     createLeafNode(grammarAccess.getDamagesAccess().getTypeDamagesKeyword_0_0(), "type"); 
                 
@@ -5923,15 +5642,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,31,FOLLOW_31_in_ruleDamages5337); 
+            match(input,31,FOLLOW_31_in_ruleDamages5172); 
 
                     createLeafNode(grammarAccess.getDamagesAccess().getLeftParenthesisKeyword_1(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2665:1: ( ( RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2666:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2556:1: ( ( RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2557:1: ( RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2666:1: ( RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2667:3: RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2557:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2558:3: RULE_ID
             {
 
             			if (current==null) {
@@ -5939,7 +5658,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDamages5355); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDamages5190); 
 
             		createLeafNode(grammarAccess.getDamagesAccess().getSourceAttackerCrossReference_2_0(), "source"); 
             	
@@ -5949,15 +5668,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,14,FOLLOW_14_in_ruleDamages5365); 
+            match(input,14,FOLLOW_14_in_ruleDamages5200); 
 
                     createLeafNode(grammarAccess.getDamagesAccess().getCommaKeyword_3(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2683:1: ( ( RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2684:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2574:1: ( ( RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2575:1: ( RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2684:1: ( RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2685:3: RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2575:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2576:3: RULE_ID
             {
 
             			if (current==null) {
@@ -5965,7 +5684,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDamages5383); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDamages5218); 
 
             		createLeafNode(grammarAccess.getDamagesAccess().getTargetAssetCrossReference_4_0(), "target"); 
             	
@@ -5975,7 +5694,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,32,FOLLOW_32_in_ruleDamages5393); 
+            match(input,32,FOLLOW_32_in_ruleDamages5228); 
 
                     createLeafNode(grammarAccess.getDamagesAccess().getRightParenthesisKeyword_5(), null); 
                 
@@ -6002,7 +5721,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleAttacks
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2709:1: entryRuleAttacks returns [EObject current=null] : iv_ruleAttacks= ruleAttacks EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2600:1: entryRuleAttacks returns [EObject current=null] : iv_ruleAttacks= ruleAttacks EOF ;
     public final EObject entryRuleAttacks() throws RecognitionException {
         EObject current = null;
 
@@ -6010,16 +5729,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2710:2: (iv_ruleAttacks= ruleAttacks EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2711:2: iv_ruleAttacks= ruleAttacks EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2601:2: (iv_ruleAttacks= ruleAttacks EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2602:2: iv_ruleAttacks= ruleAttacks EOF
             {
              currentNode = createCompositeNode(grammarAccess.getAttacksRule(), currentNode); 
-            pushFollow(FOLLOW_ruleAttacks_in_entryRuleAttacks5429);
+            pushFollow(FOLLOW_ruleAttacks_in_entryRuleAttacks5264);
             iv_ruleAttacks=ruleAttacks();
             _fsp--;
 
              current =iv_ruleAttacks; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAttacks5439); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAttacks5274); 
 
             }
 
@@ -6037,7 +5756,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleAttacks
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2718:1: ruleAttacks returns [EObject current=null] : ( ( (lv_type_0_0= 'attacks' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2609:1: ruleAttacks returns [EObject current=null] : ( ( (lv_type_0_0= 'attacks' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) ;
     public final EObject ruleAttacks() throws RecognitionException {
         EObject current = null;
 
@@ -6046,20 +5765,20 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2723:6: ( ( ( (lv_type_0_0= 'attacks' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2724:1: ( ( (lv_type_0_0= 'attacks' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2614:6: ( ( ( (lv_type_0_0= 'attacks' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2615:1: ( ( (lv_type_0_0= 'attacks' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2724:1: ( ( (lv_type_0_0= 'attacks' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2724:2: ( (lv_type_0_0= 'attacks' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')'
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2615:1: ( ( (lv_type_0_0= 'attacks' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2615:2: ( (lv_type_0_0= 'attacks' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')'
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2724:2: ( (lv_type_0_0= 'attacks' ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2725:1: (lv_type_0_0= 'attacks' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2615:2: ( (lv_type_0_0= 'attacks' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2616:1: (lv_type_0_0= 'attacks' )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2725:1: (lv_type_0_0= 'attacks' )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2726:3: lv_type_0_0= 'attacks'
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2616:1: (lv_type_0_0= 'attacks' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2617:3: lv_type_0_0= 'attacks'
             {
             lv_type_0_0=(Token)input.LT(1);
-            match(input,40,FOLLOW_40_in_ruleAttacks5482); 
+            match(input,40,FOLLOW_40_in_ruleAttacks5317); 
 
                     createLeafNode(grammarAccess.getAttacksAccess().getTypeAttacksKeyword_0_0(), "type"); 
                 
@@ -6081,15 +5800,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,31,FOLLOW_31_in_ruleAttacks5505); 
+            match(input,31,FOLLOW_31_in_ruleAttacks5340); 
 
                     createLeafNode(grammarAccess.getAttacksAccess().getLeftParenthesisKeyword_1(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2749:1: ( ( RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2750:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2640:1: ( ( RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2641:1: ( RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2750:1: ( RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2751:3: RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2641:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2642:3: RULE_ID
             {
 
             			if (current==null) {
@@ -6097,7 +5816,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleAttacks5523); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleAttacks5358); 
 
             		createLeafNode(grammarAccess.getAttacksAccess().getSourceAttackerCrossReference_2_0(), "source"); 
             	
@@ -6107,15 +5826,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,14,FOLLOW_14_in_ruleAttacks5533); 
+            match(input,14,FOLLOW_14_in_ruleAttacks5368); 
 
                     createLeafNode(grammarAccess.getAttacksAccess().getCommaKeyword_3(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2767:1: ( ( RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2768:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2658:1: ( ( RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2659:1: ( RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2768:1: ( RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2769:3: RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2659:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2660:3: RULE_ID
             {
 
             			if (current==null) {
@@ -6123,7 +5842,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleAttacks5551); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleAttacks5386); 
 
             		createLeafNode(grammarAccess.getAttacksAccess().getTargetProcessCrossReference_4_0(), "target"); 
             	
@@ -6133,7 +5852,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,32,FOLLOW_32_in_ruleAttacks5561); 
+            match(input,32,FOLLOW_32_in_ruleAttacks5396); 
 
                     createLeafNode(grammarAccess.getAttacksAccess().getRightParenthesisKeyword_5(), null); 
                 
@@ -6160,7 +5879,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleArgues
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2793:1: entryRuleArgues returns [EObject current=null] : iv_ruleArgues= ruleArgues EOF ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2684:1: entryRuleArgues returns [EObject current=null] : iv_ruleArgues= ruleArgues EOF ;
     public final EObject entryRuleArgues() throws RecognitionException {
         EObject current = null;
 
@@ -6168,16 +5887,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2794:2: (iv_ruleArgues= ruleArgues EOF )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2795:2: iv_ruleArgues= ruleArgues EOF
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2685:2: (iv_ruleArgues= ruleArgues EOF )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2686:2: iv_ruleArgues= ruleArgues EOF
             {
              currentNode = createCompositeNode(grammarAccess.getArguesRule(), currentNode); 
-            pushFollow(FOLLOW_ruleArgues_in_entryRuleArgues5597);
+            pushFollow(FOLLOW_ruleArgues_in_entryRuleArgues5432);
             iv_ruleArgues=ruleArgues();
             _fsp--;
 
              current =iv_ruleArgues; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleArgues5607); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleArgues5442); 
 
             }
 
@@ -6195,7 +5914,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleArgues
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2802:1: ruleArgues returns [EObject current=null] : ( ( (lv_type_0_0= 'argues' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2693:1: ruleArgues returns [EObject current=null] : ( ( (lv_type_0_0= 'argues' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) ;
     public final EObject ruleArgues() throws RecognitionException {
         EObject current = null;
 
@@ -6204,20 +5923,20 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2807:6: ( ( ( (lv_type_0_0= 'argues' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2808:1: ( ( (lv_type_0_0= 'argues' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2698:6: ( ( ( (lv_type_0_0= 'argues' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2699:1: ( ( (lv_type_0_0= 'argues' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2808:1: ( ( (lv_type_0_0= 'argues' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2808:2: ( (lv_type_0_0= 'argues' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')'
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2699:1: ( ( (lv_type_0_0= 'argues' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2699:2: ( (lv_type_0_0= 'argues' ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')'
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2808:2: ( (lv_type_0_0= 'argues' ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2809:1: (lv_type_0_0= 'argues' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2699:2: ( (lv_type_0_0= 'argues' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2700:1: (lv_type_0_0= 'argues' )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2809:1: (lv_type_0_0= 'argues' )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2810:3: lv_type_0_0= 'argues'
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2700:1: (lv_type_0_0= 'argues' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2701:3: lv_type_0_0= 'argues'
             {
             lv_type_0_0=(Token)input.LT(1);
-            match(input,41,FOLLOW_41_in_ruleArgues5650); 
+            match(input,41,FOLLOW_41_in_ruleArgues5485); 
 
                     createLeafNode(grammarAccess.getArguesAccess().getTypeArguesKeyword_0_0(), "type"); 
                 
@@ -6239,15 +5958,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,31,FOLLOW_31_in_ruleArgues5673); 
+            match(input,31,FOLLOW_31_in_ruleArgues5508); 
 
                     createLeafNode(grammarAccess.getArguesAccess().getLeftParenthesisKeyword_1(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2833:1: ( ( RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2834:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2724:1: ( ( RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2725:1: ( RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2834:1: ( RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2835:3: RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2725:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2726:3: RULE_ID
             {
 
             			if (current==null) {
@@ -6255,7 +5974,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleArgues5691); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleArgues5526); 
 
             		createLeafNode(grammarAccess.getArguesAccess().getSourcePropositionCrossReference_2_0(), "source"); 
             	
@@ -6265,15 +5984,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,14,FOLLOW_14_in_ruleArgues5701); 
+            match(input,14,FOLLOW_14_in_ruleArgues5536); 
 
                     createLeafNode(grammarAccess.getArguesAccess().getCommaKeyword_3(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2851:1: ( ( RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2852:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2742:1: ( ( RULE_ID ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2743:1: ( RULE_ID )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2852:1: ( RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2853:3: RULE_ID
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2743:1: ( RULE_ID )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2744:3: RULE_ID
             {
 
             			if (current==null) {
@@ -6281,7 +6000,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleArgues5719); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleArgues5554); 
 
             		createLeafNode(grammarAccess.getArguesAccess().getTargetPropositionCrossReference_4_0(), "target"); 
             	
@@ -6291,7 +6010,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,32,FOLLOW_32_in_ruleArgues5729); 
+            match(input,32,FOLLOW_32_in_ruleArgues5564); 
 
                     createLeafNode(grammarAccess.getArguesAccess().getRightParenthesisKeyword_5(), null); 
                 
@@ -6318,16 +6037,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleDomainType
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2877:1: ruleDomainType returns [Enumerator current=null] : ( ( 'S' ) | ( 'R' ) | ( 'W' ) ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2768:1: ruleDomainType returns [Enumerator current=null] : ( ( 'S' ) | ( 'R' ) | ( 'W' ) ) ;
     public final Enumerator ruleDomainType() throws RecognitionException {
         Enumerator current = null;
 
          setCurrentLookahead(); resetLookahead(); 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2881:6: ( ( ( 'S' ) | ( 'R' ) | ( 'W' ) ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2882:1: ( ( 'S' ) | ( 'R' ) | ( 'W' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2772:6: ( ( ( 'S' ) | ( 'R' ) | ( 'W' ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2773:1: ( ( 'S' ) | ( 'R' ) | ( 'W' ) )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2882:1: ( ( 'S' ) | ( 'R' ) | ( 'W' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2773:1: ( ( 'S' ) | ( 'R' ) | ( 'W' ) )
             int alt20=3;
             switch ( input.LA(1) ) {
             case 42:
@@ -6347,19 +6066,19 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("2882:1: ( ( 'S' ) | ( 'R' ) | ( 'W' ) )", 20, 0, input);
+                    new NoViableAltException("2773:1: ( ( 'S' ) | ( 'R' ) | ( 'W' ) )", 20, 0, input);
 
                 throw nvae;
             }
 
             switch (alt20) {
                 case 1 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2882:2: ( 'S' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2773:2: ( 'S' )
                     {
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2882:2: ( 'S' )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2882:4: 'S'
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2773:2: ( 'S' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2773:4: 'S'
                     {
-                    match(input,42,FOLLOW_42_in_ruleDomainType5777); 
+                    match(input,42,FOLLOW_42_in_ruleDomainType5612); 
 
                             current = grammarAccess.getDomainTypeAccess().getSpecificationEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getDomainTypeAccess().getSpecificationEnumLiteralDeclaration_0(), null); 
@@ -6371,12 +6090,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2888:6: ( 'R' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2779:6: ( 'R' )
                     {
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2888:6: ( 'R' )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2888:8: 'R'
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2779:6: ( 'R' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2779:8: 'R'
                     {
-                    match(input,43,FOLLOW_43_in_ruleDomainType5792); 
+                    match(input,43,FOLLOW_43_in_ruleDomainType5627); 
 
                             current = grammarAccess.getDomainTypeAccess().getRequirementEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getDomainTypeAccess().getRequirementEnumLiteralDeclaration_1(), null); 
@@ -6388,12 +6107,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2894:6: ( 'W' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2785:6: ( 'W' )
                     {
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2894:6: ( 'W' )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2894:8: 'W'
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2785:6: ( 'W' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2785:8: 'W'
                     {
-                    match(input,44,FOLLOW_44_in_ruleDomainType5807); 
+                    match(input,44,FOLLOW_44_in_ruleDomainType5642); 
 
                             current = grammarAccess.getDomainTypeAccess().getWorldEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getDomainTypeAccess().getWorldEnumLiteralDeclaration_2(), null); 
@@ -6427,16 +6146,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleDecomposesType
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2904:1: ruleDecomposesType returns [Enumerator current=null] : ( ( 'and' ) | ( 'or' ) ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2795:1: ruleDecomposesType returns [Enumerator current=null] : ( ( 'and' ) | ( 'or' ) ) ;
     public final Enumerator ruleDecomposesType() throws RecognitionException {
         Enumerator current = null;
 
          setCurrentLookahead(); resetLookahead(); 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2908:6: ( ( ( 'and' ) | ( 'or' ) ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2909:1: ( ( 'and' ) | ( 'or' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2799:6: ( ( ( 'and' ) | ( 'or' ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2800:1: ( ( 'and' ) | ( 'or' ) )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2909:1: ( ( 'and' ) | ( 'or' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2800:1: ( ( 'and' ) | ( 'or' ) )
             int alt21=2;
             int LA21_0 = input.LA(1);
 
@@ -6448,18 +6167,18 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("2909:1: ( ( 'and' ) | ( 'or' ) )", 21, 0, input);
+                    new NoViableAltException("2800:1: ( ( 'and' ) | ( 'or' ) )", 21, 0, input);
 
                 throw nvae;
             }
             switch (alt21) {
                 case 1 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2909:2: ( 'and' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2800:2: ( 'and' )
                     {
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2909:2: ( 'and' )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2909:4: 'and'
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2800:2: ( 'and' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2800:4: 'and'
                     {
-                    match(input,45,FOLLOW_45_in_ruleDecomposesType5850); 
+                    match(input,45,FOLLOW_45_in_ruleDecomposesType5685); 
 
                             current = grammarAccess.getDecomposesTypeAccess().getANDEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getDecomposesTypeAccess().getANDEnumLiteralDeclaration_0(), null); 
@@ -6471,12 +6190,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2915:6: ( 'or' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2806:6: ( 'or' )
                     {
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2915:6: ( 'or' )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2915:8: 'or'
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2806:6: ( 'or' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2806:8: 'or'
                     {
-                    match(input,46,FOLLOW_46_in_ruleDecomposesType5865); 
+                    match(input,46,FOLLOW_46_in_ruleDecomposesType5700); 
 
                             current = grammarAccess.getDecomposesTypeAccess().getOREnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getDecomposesTypeAccess().getOREnumLiteralDeclaration_1(), null); 
@@ -6510,16 +6229,16 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleContributesType
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2925:1: ruleContributesType returns [Enumerator current=null] : ( ( '-' ) | ( '+' ) | ( '--' ) | ( '++' ) ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2816:1: ruleContributesType returns [Enumerator current=null] : ( ( '-' ) | ( '+' ) | ( '--' ) | ( '++' ) ) ;
     public final Enumerator ruleContributesType() throws RecognitionException {
         Enumerator current = null;
 
          setCurrentLookahead(); resetLookahead(); 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2929:6: ( ( ( '-' ) | ( '+' ) | ( '--' ) | ( '++' ) ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2930:1: ( ( '-' ) | ( '+' ) | ( '--' ) | ( '++' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2820:6: ( ( ( '-' ) | ( '+' ) | ( '--' ) | ( '++' ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2821:1: ( ( '-' ) | ( '+' ) | ( '--' ) | ( '++' ) )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2930:1: ( ( '-' ) | ( '+' ) | ( '--' ) | ( '++' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2821:1: ( ( '-' ) | ( '+' ) | ( '--' ) | ( '++' ) )
             int alt22=4;
             switch ( input.LA(1) ) {
             case 47:
@@ -6544,19 +6263,19 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("2930:1: ( ( '-' ) | ( '+' ) | ( '--' ) | ( '++' ) )", 22, 0, input);
+                    new NoViableAltException("2821:1: ( ( '-' ) | ( '+' ) | ( '--' ) | ( '++' ) )", 22, 0, input);
 
                 throw nvae;
             }
 
             switch (alt22) {
                 case 1 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2930:2: ( '-' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2821:2: ( '-' )
                     {
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2930:2: ( '-' )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2930:4: '-'
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2821:2: ( '-' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2821:4: '-'
                     {
-                    match(input,47,FOLLOW_47_in_ruleContributesType5908); 
+                    match(input,47,FOLLOW_47_in_ruleContributesType5743); 
 
                             current = grammarAccess.getContributesTypeAccess().getHURTEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getContributesTypeAccess().getHURTEnumLiteralDeclaration_0(), null); 
@@ -6568,12 +6287,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2936:6: ( '+' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2827:6: ( '+' )
                     {
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2936:6: ( '+' )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2936:8: '+'
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2827:6: ( '+' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2827:8: '+'
                     {
-                    match(input,48,FOLLOW_48_in_ruleContributesType5923); 
+                    match(input,48,FOLLOW_48_in_ruleContributesType5758); 
 
                             current = grammarAccess.getContributesTypeAccess().getHELPEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getContributesTypeAccess().getHELPEnumLiteralDeclaration_1(), null); 
@@ -6585,12 +6304,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2942:6: ( '--' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2833:6: ( '--' )
                     {
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2942:6: ( '--' )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2942:8: '--'
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2833:6: ( '--' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2833:8: '--'
                     {
-                    match(input,49,FOLLOW_49_in_ruleContributesType5938); 
+                    match(input,49,FOLLOW_49_in_ruleContributesType5773); 
 
                             current = grammarAccess.getContributesTypeAccess().getBREAKEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getContributesTypeAccess().getBREAKEnumLiteralDeclaration_2(), null); 
@@ -6602,12 +6321,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2948:6: ( '++' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2839:6: ( '++' )
                     {
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2948:6: ( '++' )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2948:8: '++'
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2839:6: ( '++' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2839:8: '++'
                     {
-                    match(input,50,FOLLOW_50_in_ruleContributesType5953); 
+                    match(input,50,FOLLOW_50_in_ruleContributesType5788); 
 
                             current = grammarAccess.getContributesTypeAccess().getMAKEEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getContributesTypeAccess().getMAKEEnumLiteralDeclaration_3(), null); 
@@ -6641,19 +6360,19 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleFulfilsType
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2958:1: ruleFulfilsType returns [Enumerator current=null] : ( 'fulfils' ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2849:1: ruleFulfilsType returns [Enumerator current=null] : ( 'fulfils' ) ;
     public final Enumerator ruleFulfilsType() throws RecognitionException {
         Enumerator current = null;
 
          setCurrentLookahead(); resetLookahead(); 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2962:6: ( ( 'fulfils' ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2963:1: ( 'fulfils' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2853:6: ( ( 'fulfils' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2854:1: ( 'fulfils' )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2963:1: ( 'fulfils' )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2963:3: 'fulfils'
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2854:1: ( 'fulfils' )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:2854:3: 'fulfils'
             {
-            match(input,51,FOLLOW_51_in_ruleFulfilsType5995); 
+            match(input,51,FOLLOW_51_in_ruleFulfilsType5830); 
 
                     current = grammarAccess.getFulfilsTypeAccess().getFulfilsEnumLiteralDeclaration().getEnumLiteral().getInstance();
                     createLeafNode(grammarAccess.getFulfilsTypeAccess().getFulfilsEnumLiteralDeclaration(), null); 
@@ -6690,244 +6409,239 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleWorld_in_ruleSituation176 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleWorld_in_entryRuleWorld212 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleWorld222 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePhysicalWorld_in_ruleWorld277 = new BitSet(new long[]{0x000FE3FE40000012L});
-    public static final BitSet FOLLOW_ruleBeliefWorld_in_ruleWorld299 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEvent_in_entryRuleEvent338 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEvent348 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_ruleEvent383 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleEvent400 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleObject_in_entryRuleObject441 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleObject451 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEntity_in_ruleObject498 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRelationship_in_ruleObject525 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProposition_in_ruleObject552 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePhysicalWorld_in_entryRulePhysicalWorld587 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePhysicalWorld597 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEntity_in_rulePhysicalWorld652 = new BitSet(new long[]{0x0000000034E00002L});
-    public static final BitSet FOLLOW_ruleBeliefWorld_in_entryRuleBeliefWorld689 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBeliefWorld699 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDomain_in_ruleBeliefWorld755 = new BitSet(new long[]{0x000FE3FE40000012L});
-    public static final BitSet FOLLOW_ruleRelationship_in_ruleBeliefWorld782 = new BitSet(new long[]{0x000FE3FE40000012L});
-    public static final BitSet FOLLOW_ruleDomain_in_entryRuleDomain820 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDomain830 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDomain872 = new BitSet(new long[]{0x00001C0000000000L});
-    public static final BitSet FOLLOW_ruleDomainType_in_ruleDomain898 = new BitSet(new long[]{0x00000000001F8000L});
-    public static final BitSet FOLLOW_ruleProposition_in_ruleDomain919 = new BitSet(new long[]{0x0000000000004002L});
-    public static final BitSet FOLLOW_14_in_ruleDomain930 = new BitSet(new long[]{0x00000000001F8000L});
-    public static final BitSet FOLLOW_ruleProposition_in_ruleDomain951 = new BitSet(new long[]{0x0000000000004002L});
-    public static final BitSet FOLLOW_ruleProposition_in_entryRuleProposition989 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleProposition999 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDomainAssumption_in_ruleProposition1046 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRequirement_in_ruleProposition1073 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleArgument_in_ruleProposition1100 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRequirement_in_entryRuleRequirement1135 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRequirement1145 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFunctionalRequirement_in_ruleRequirement1192 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSecurityRequirement_in_ruleRequirement1219 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAntiRequirement_in_ruleRequirement1246 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualityRequirement_in_ruleRequirement1273 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDomainAssumption_in_entryRuleDomainAssumption1308 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDomainAssumption1318 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_ruleDomainAssumption1353 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDomainAssumption1370 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFunctionalRequirement_in_entryRuleFunctionalRequirement1411 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFunctionalRequirement1421 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_ruleFunctionalRequirement1456 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleFunctionalRequirement1473 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSecurityRequirement_in_entryRuleSecurityRequirement1514 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSecurityRequirement1524 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_ruleSecurityRequirement1559 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleSecurityRequirement1576 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAntiRequirement_in_entryRuleAntiRequirement1617 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAntiRequirement1627 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_ruleAntiRequirement1662 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleAntiRequirement1679 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualityRequirement_in_entryRuleQualityRequirement1720 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleQualityRequirement1730 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_ruleQualityRequirement1765 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleQualityRequirement1782 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleArgument_in_entryRuleArgument1823 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleArgument1833 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_ruleArgument1868 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleArgument1885 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEntity_in_entryRuleEntity1926 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEntity1936 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleActor_in_ruleEntity1983 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProcess_in_ruleEntity2010 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleResource_in_ruleEntity2037 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleActor_in_entryRuleActor2072 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleActor2082 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStakeholder_in_ruleActor2129 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAttacker_in_ruleActor2156 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStakeholder_in_entryRuleStakeholder2191 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleStakeholder2201 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_ruleStakeholder2236 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleStakeholder2253 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAttacker_in_entryRuleAttacker2294 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAttacker2304 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_ruleAttacker2339 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleAttacker2356 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProcess_in_entryRuleProcess2397 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleProcess2407 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNaturalProcess_in_ruleProcess2454 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHumanActivity_in_ruleProcess2481 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNaturalProcess_in_entryRuleNaturalProcess2516 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNaturalProcess2526 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_ruleNaturalProcess2561 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleNaturalProcess2578 = new BitSet(new long[]{0x0000000001000002L});
-    public static final BitSet FOLLOW_24_in_ruleNaturalProcess2594 = new BitSet(new long[]{0x0000000002000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleNaturalProcess2612 = new BitSet(new long[]{0x0000000002000010L});
-    public static final BitSet FOLLOW_25_in_ruleNaturalProcess2623 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHumanActivity_in_entryRuleHumanActivity2661 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleHumanActivity2671 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_ruleHumanActivity2715 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleHumanActivity2732 = new BitSet(new long[]{0x0000000008000002L});
-    public static final BitSet FOLLOW_ruleAction_in_ruleHumanActivity2758 = new BitSet(new long[]{0x0000000008000002L});
-    public static final BitSet FOLLOW_ruleAction_in_entryRuleAction2795 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAction2805 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_ruleAction2840 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleAction2857 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleResource_in_entryRuleResource2898 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleResource2908 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_ruleResource2944 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleResource2961 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAsset_in_ruleResource2995 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAsset_in_entryRuleAsset3030 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAsset3040 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_ruleAsset3075 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleAsset3092 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRelationship_in_entryRuleRelationship3133 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRelationship3143 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWants_in_ruleRelationship3190 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDoes_in_ruleRelationship3217 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDecomposes_in_ruleRelationship3244 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTrusts_in_ruleRelationship3271 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDelegates_in_ruleRelationship3298 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleContributes_in_ruleRelationship3325 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFulfils_in_ruleRelationship3352 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProvides_in_ruleRelationship3379 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConsumes_in_ruleRelationship3406 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExploits_in_ruleRelationship3433 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDamages_in_ruleRelationship3460 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAttacks_in_ruleRelationship3487 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleArgues_in_ruleRelationship3514 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWants_in_entryRuleWants3549 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleWants3559 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_ruleWants3602 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_31_in_ruleWants3625 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleWants3643 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleWants3653 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleWants3671 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleWants3681 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDoes_in_entryRuleDoes3717 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDoes3727 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_ruleDoes3770 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_31_in_ruleDoes3793 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDoes3811 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleDoes3821 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDoes3839 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleDoes3849 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDecomposes_in_entryRuleDecomposes3885 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDecomposes3895 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDecomposesType_in_ruleDecomposes3941 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_31_in_ruleDecomposes3951 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDecomposes3969 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleDecomposes3979 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDecomposes3997 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleDecomposes4007 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTrusts_in_entryRuleTrusts4043 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTrusts4053 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_ruleTrusts4096 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_31_in_ruleTrusts4119 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleTrusts4137 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleTrusts4147 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleTrusts4165 = new BitSet(new long[]{0x0000000100004000L});
-    public static final BitSet FOLLOW_14_in_ruleTrusts4176 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleTrusts4194 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleTrusts4206 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDelegates_in_entryRuleDelegates4242 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDelegates4252 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_ruleDelegates4295 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_31_in_ruleDelegates4318 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDelegates4336 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleDelegates4346 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDelegates4364 = new BitSet(new long[]{0x0000000100004000L});
-    public static final BitSet FOLLOW_14_in_ruleDelegates4375 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDelegates4393 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleDelegates4405 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleContributes_in_entryRuleContributes4441 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleContributes4451 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleContributesType_in_ruleContributes4497 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_31_in_ruleContributes4507 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleContributes4525 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleContributes4535 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleContributes4553 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleContributes4563 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFulfils_in_entryRuleFulfils4599 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFulfils4609 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFulfilsType_in_ruleFulfils4655 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_31_in_ruleFulfils4665 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleFulfils4683 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleFulfils4693 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleFulfils4711 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleFulfils4721 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProvides_in_entryRuleProvides4757 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleProvides4767 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_ruleProvides4810 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_31_in_ruleProvides4833 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleProvides4851 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleProvides4861 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleProvides4879 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleProvides4889 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConsumes_in_entryRuleConsumes4925 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleConsumes4935 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_ruleConsumes4978 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_31_in_ruleConsumes5001 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleConsumes5019 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleConsumes5029 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleConsumes5047 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleConsumes5057 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExploits_in_entryRuleExploits5093 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleExploits5103 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_ruleExploits5146 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_31_in_ruleExploits5169 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleExploits5187 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleExploits5197 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleExploits5215 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleExploits5225 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDamages_in_entryRuleDamages5261 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDamages5271 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_ruleDamages5314 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_31_in_ruleDamages5337 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDamages5355 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleDamages5365 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDamages5383 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleDamages5393 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAttacks_in_entryRuleAttacks5429 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAttacks5439 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_ruleAttacks5482 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_31_in_ruleAttacks5505 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleAttacks5523 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleAttacks5533 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleAttacks5551 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleAttacks5561 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleArgues_in_entryRuleArgues5597 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleArgues5607 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_ruleArgues5650 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_31_in_ruleArgues5673 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleArgues5691 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleArgues5701 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleArgues5719 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleArgues5729 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_ruleDomainType5777 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_ruleDomainType5792 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_ruleDomainType5807 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_45_in_ruleDecomposesType5850 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_46_in_ruleDecomposesType5865 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_ruleContributesType5908 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_ruleContributesType5923 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_ruleContributesType5938 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_50_in_ruleContributesType5953 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_51_in_ruleFulfilsType5995 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEntity_in_ruleWorld278 = new BitSet(new long[]{0x000FE3FE74E00012L});
+    public static final BitSet FOLLOW_ruleDomain_in_ruleWorld305 = new BitSet(new long[]{0x000FE3FE74E00012L});
+    public static final BitSet FOLLOW_ruleRelationship_in_ruleWorld332 = new BitSet(new long[]{0x000FE3FE74E00012L});
+    public static final BitSet FOLLOW_ruleEvent_in_entryRuleEvent372 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEvent382 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_ruleEvent417 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleEvent434 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleObject_in_entryRuleObject475 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleObject485 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEntity_in_ruleObject532 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRelationship_in_ruleObject559 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProposition_in_ruleObject586 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDomain_in_entryRuleDomain621 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDomain631 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleDomain673 = new BitSet(new long[]{0x00001C0000000000L});
+    public static final BitSet FOLLOW_ruleDomainType_in_ruleDomain699 = new BitSet(new long[]{0x00000000001FC002L});
+    public static final BitSet FOLLOW_14_in_ruleDomain711 = new BitSet(new long[]{0x00000000001F8000L});
+    public static final BitSet FOLLOW_ruleProposition_in_ruleDomain734 = new BitSet(new long[]{0x00000000001FC002L});
+    public static final BitSet FOLLOW_ruleProposition_in_entryRuleProposition772 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleProposition782 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDomainAssumption_in_ruleProposition829 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRequirement_in_ruleProposition856 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleArgument_in_ruleProposition883 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRequirement_in_entryRuleRequirement918 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRequirement928 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFunctionalRequirement_in_ruleRequirement975 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSecurityRequirement_in_ruleRequirement1002 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAntiRequirement_in_ruleRequirement1029 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualityRequirement_in_ruleRequirement1056 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDomainAssumption_in_entryRuleDomainAssumption1091 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDomainAssumption1101 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_ruleDomainAssumption1136 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleDomainAssumption1153 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFunctionalRequirement_in_entryRuleFunctionalRequirement1194 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFunctionalRequirement1204 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_ruleFunctionalRequirement1239 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleFunctionalRequirement1256 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSecurityRequirement_in_entryRuleSecurityRequirement1297 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSecurityRequirement1307 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_ruleSecurityRequirement1342 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleSecurityRequirement1359 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAntiRequirement_in_entryRuleAntiRequirement1400 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAntiRequirement1410 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_ruleAntiRequirement1445 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleAntiRequirement1462 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualityRequirement_in_entryRuleQualityRequirement1503 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleQualityRequirement1513 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_ruleQualityRequirement1548 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleQualityRequirement1565 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleArgument_in_entryRuleArgument1606 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleArgument1616 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_ruleArgument1651 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleArgument1668 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEntity_in_entryRuleEntity1709 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEntity1719 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleActor_in_ruleEntity1766 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProcess_in_ruleEntity1793 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleResource_in_ruleEntity1820 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleActor_in_entryRuleActor1855 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleActor1865 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStakeholder_in_ruleActor1912 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAttacker_in_ruleActor1939 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStakeholder_in_entryRuleStakeholder1974 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleStakeholder1984 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_ruleStakeholder2019 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleStakeholder2036 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAttacker_in_entryRuleAttacker2077 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAttacker2087 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_ruleAttacker2122 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleAttacker2139 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProcess_in_entryRuleProcess2180 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleProcess2190 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNaturalProcess_in_ruleProcess2237 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHumanActivity_in_ruleProcess2264 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNaturalProcess_in_entryRuleNaturalProcess2299 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNaturalProcess2309 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_ruleNaturalProcess2344 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleNaturalProcess2361 = new BitSet(new long[]{0x0000000001000002L});
+    public static final BitSet FOLLOW_24_in_ruleNaturalProcess2377 = new BitSet(new long[]{0x0000000002000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleNaturalProcess2395 = new BitSet(new long[]{0x0000000002000010L});
+    public static final BitSet FOLLOW_25_in_ruleNaturalProcess2406 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHumanActivity_in_entryRuleHumanActivity2444 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleHumanActivity2454 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_ruleHumanActivity2498 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleHumanActivity2515 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_ruleAction_in_ruleHumanActivity2541 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_ruleAction_in_entryRuleAction2578 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAction2588 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_ruleAction2623 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleAction2640 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleResource_in_entryRuleResource2681 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleResource2691 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_ruleResource2727 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleResource2744 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAsset_in_ruleResource2778 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAsset_in_entryRuleAsset2813 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAsset2823 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_ruleAsset2858 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleAsset2875 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRelationship_in_entryRuleRelationship2916 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRelationship2926 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWants_in_ruleRelationship2973 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDoes_in_ruleRelationship3000 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDecomposes_in_ruleRelationship3027 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTrusts_in_ruleRelationship3054 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDelegates_in_ruleRelationship3081 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleContributes_in_ruleRelationship3108 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFulfils_in_ruleRelationship3135 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProvides_in_ruleRelationship3162 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConsumes_in_ruleRelationship3189 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExploits_in_ruleRelationship3216 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDamages_in_ruleRelationship3243 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAttacks_in_ruleRelationship3270 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleArgues_in_ruleRelationship3297 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWants_in_entryRuleWants3332 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleWants3342 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_ruleWants3385 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleWants3408 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleWants3426 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleWants3436 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleWants3454 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_ruleWants3464 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDoes_in_entryRuleDoes3500 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDoes3510 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_ruleDoes3553 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleDoes3576 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleDoes3594 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleDoes3604 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleDoes3622 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_ruleDoes3632 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDecomposes_in_entryRuleDecomposes3668 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDecomposes3678 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDecomposesType_in_ruleDecomposes3724 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleDecomposes3734 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleDecomposes3752 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleDecomposes3762 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleDecomposes3780 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_ruleDecomposes3790 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTrusts_in_entryRuleTrusts3826 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTrusts3836 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_ruleTrusts3879 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleTrusts3902 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleTrusts3920 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleTrusts3930 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleTrusts3948 = new BitSet(new long[]{0x0000000100004000L});
+    public static final BitSet FOLLOW_14_in_ruleTrusts3959 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleTrusts3977 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_ruleTrusts3989 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDelegates_in_entryRuleDelegates4025 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDelegates4035 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_ruleDelegates4078 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleDelegates4101 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleDelegates4119 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleDelegates4129 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleDelegates4147 = new BitSet(new long[]{0x0000000100004000L});
+    public static final BitSet FOLLOW_14_in_ruleDelegates4158 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleDelegates4176 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_ruleDelegates4188 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleContributes_in_entryRuleContributes4224 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleContributes4234 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleContributesType_in_ruleContributes4280 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleContributes4290 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleContributes4308 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleContributes4318 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleContributes4336 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_ruleContributes4346 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFulfils_in_entryRuleFulfils4382 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFulfils4392 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFulfilsType_in_ruleFulfils4438 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleFulfils4448 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleFulfils4466 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleFulfils4476 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleFulfils4494 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_ruleFulfils4504 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProvides_in_entryRuleProvides4540 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleProvides4550 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_ruleProvides4593 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleProvides4616 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleProvides4635 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleProvides4659 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleProvides4670 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleProvides4688 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_ruleProvides4698 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConsumes_in_entryRuleConsumes4734 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleConsumes4744 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_ruleConsumes4787 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleConsumes4810 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleConsumes4829 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleConsumes4853 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleConsumes4864 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleConsumes4882 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_ruleConsumes4892 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExploits_in_entryRuleExploits4928 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleExploits4938 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_ruleExploits4981 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleExploits5004 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleExploits5022 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleExploits5032 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleExploits5050 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_ruleExploits5060 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDamages_in_entryRuleDamages5096 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDamages5106 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_ruleDamages5149 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleDamages5172 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleDamages5190 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleDamages5200 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleDamages5218 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_ruleDamages5228 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAttacks_in_entryRuleAttacks5264 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAttacks5274 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_ruleAttacks5317 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleAttacks5340 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleAttacks5358 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleAttacks5368 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleAttacks5386 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_ruleAttacks5396 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleArgues_in_entryRuleArgues5432 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleArgues5442 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_ruleArgues5485 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleArgues5508 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleArgues5526 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleArgues5536 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleArgues5554 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_ruleArgues5564 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_ruleDomainType5612 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_ruleDomainType5627 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_ruleDomainType5642 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_45_in_ruleDecomposesType5685 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_46_in_ruleDecomposesType5700 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_ruleContributesType5743 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_ruleContributesType5758 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_ruleContributesType5773 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_50_in_ruleContributesType5788 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_51_in_ruleFulfilsType5830 = new BitSet(new long[]{0x0000000000000002L});
 
 }

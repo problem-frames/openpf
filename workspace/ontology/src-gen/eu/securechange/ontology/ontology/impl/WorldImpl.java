@@ -5,19 +5,25 @@
  */
 package eu.securechange.ontology.ontology.impl;
 
-import eu.securechange.ontology.ontology.BeliefWorld;
+import eu.securechange.ontology.ontology.Domain;
+import eu.securechange.ontology.ontology.Entity;
 import eu.securechange.ontology.ontology.OntologyPackage;
-import eu.securechange.ontology.ontology.PhysicalWorld;
+import eu.securechange.ontology.ontology.Relationship;
 import eu.securechange.ontology.ontology.World;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,8 +32,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link eu.securechange.ontology.ontology.impl.WorldImpl#getPhysical <em>Physical</em>}</li>
- *   <li>{@link eu.securechange.ontology.ontology.impl.WorldImpl#getBelief <em>Belief</em>}</li>
+ *   <li>{@link eu.securechange.ontology.ontology.impl.WorldImpl#getEntities <em>Entities</em>}</li>
+ *   <li>{@link eu.securechange.ontology.ontology.impl.WorldImpl#getDomains <em>Domains</em>}</li>
+ *   <li>{@link eu.securechange.ontology.ontology.impl.WorldImpl#getRelationships <em>Relationships</em>}</li>
  * </ul>
  * </p>
  *
@@ -36,234 +43,198 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class WorldImpl extends MinimalEObjectImpl.Container implements World
 {
   /**
-   * The cached value of the '{@link #getPhysical() <em>Physical</em>}' containment reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getEntities() <em>Entities</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPhysical()
-   * @generated
-   * @ordered
-   */
-  protected PhysicalWorld physical;
+	 * @see #getEntities()
+	 * @generated
+	 * @ordered
+	 */
+  protected EList<Entity> entities;
 
   /**
-   * The cached value of the '{@link #getBelief() <em>Belief</em>}' containment reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getDomains() <em>Domains</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getBelief()
-   * @generated
-   * @ordered
-   */
-  protected BeliefWorld belief;
+	 * @see #getDomains()
+	 * @generated
+	 * @ordered
+	 */
+  protected EList<Domain> domains;
 
   /**
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getRelationships() <em>Relationships</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @see #getRelationships()
+	 * @generated
+	 * @ordered
+	 */
+  protected EList<Relationship> relationships;
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
   protected WorldImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return OntologyPackage.Literals.WORLD;
-  }
+		return OntologyPackage.Literals.WORLD;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public PhysicalWorld getPhysical()
+	 * @generated
+	 */
+  public EList<Entity> getEntities()
   {
-    return physical;
-  }
+		if (entities == null) {
+			entities = new EObjectContainmentEList<Entity>(Entity.class, this, OntologyPackage.WORLD__ENTITIES);
+		}
+		return entities;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetPhysical(PhysicalWorld newPhysical, NotificationChain msgs)
+	 * @generated
+	 */
+  public EList<Domain> getDomains()
   {
-    PhysicalWorld oldPhysical = physical;
-    physical = newPhysical;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OntologyPackage.WORLD__PHYSICAL, oldPhysical, newPhysical);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
+		if (domains == null) {
+			domains = new EObjectContainmentEList<Domain>(Domain.class, this, OntologyPackage.WORLD__DOMAINS);
+		}
+		return domains;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setPhysical(PhysicalWorld newPhysical)
+	 * @generated
+	 */
+  public EList<Relationship> getRelationships()
   {
-    if (newPhysical != physical)
-    {
-      NotificationChain msgs = null;
-      if (physical != null)
-        msgs = ((InternalEObject)physical).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OntologyPackage.WORLD__PHYSICAL, null, msgs);
-      if (newPhysical != null)
-        msgs = ((InternalEObject)newPhysical).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OntologyPackage.WORLD__PHYSICAL, null, msgs);
-      msgs = basicSetPhysical(newPhysical, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OntologyPackage.WORLD__PHYSICAL, newPhysical, newPhysical));
-  }
+		if (relationships == null) {
+			relationships = new EObjectContainmentEList<Relationship>(Relationship.class, this, OntologyPackage.WORLD__RELATIONSHIPS);
+		}
+		return relationships;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public BeliefWorld getBelief()
-  {
-    return belief;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetBelief(BeliefWorld newBelief, NotificationChain msgs)
-  {
-    BeliefWorld oldBelief = belief;
-    belief = newBelief;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OntologyPackage.WORLD__BELIEF, oldBelief, newBelief);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setBelief(BeliefWorld newBelief)
-  {
-    if (newBelief != belief)
-    {
-      NotificationChain msgs = null;
-      if (belief != null)
-        msgs = ((InternalEObject)belief).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OntologyPackage.WORLD__BELIEF, null, msgs);
-      if (newBelief != null)
-        msgs = ((InternalEObject)newBelief).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OntologyPackage.WORLD__BELIEF, null, msgs);
-      msgs = basicSetBelief(newBelief, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OntologyPackage.WORLD__BELIEF, newBelief, newBelief));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    switch (featureID)
-    {
-      case OntologyPackage.WORLD__PHYSICAL:
-        return basicSetPhysical(null, msgs);
-      case OntologyPackage.WORLD__BELIEF:
-        return basicSetBelief(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
+		switch (featureID) {
+			case OntologyPackage.WORLD__ENTITIES:
+				return ((InternalEList<?>)getEntities()).basicRemove(otherEnd, msgs);
+			case OntologyPackage.WORLD__DOMAINS:
+				return ((InternalEList<?>)getDomains()).basicRemove(otherEnd, msgs);
+			case OntologyPackage.WORLD__RELATIONSHIPS:
+				return ((InternalEList<?>)getRelationships()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case OntologyPackage.WORLD__PHYSICAL:
-        return getPhysical();
-      case OntologyPackage.WORLD__BELIEF:
-        return getBelief();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case OntologyPackage.WORLD__ENTITIES:
+				return getEntities();
+			case OntologyPackage.WORLD__DOMAINS:
+				return getDomains();
+			case OntologyPackage.WORLD__RELATIONSHIPS:
+				return getRelationships();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case OntologyPackage.WORLD__PHYSICAL:
-        setPhysical((PhysicalWorld)newValue);
-        return;
-      case OntologyPackage.WORLD__BELIEF:
-        setBelief((BeliefWorld)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case OntologyPackage.WORLD__ENTITIES:
+				getEntities().clear();
+				getEntities().addAll((Collection<? extends Entity>)newValue);
+				return;
+			case OntologyPackage.WORLD__DOMAINS:
+				getDomains().clear();
+				getDomains().addAll((Collection<? extends Domain>)newValue);
+				return;
+			case OntologyPackage.WORLD__RELATIONSHIPS:
+				getRelationships().clear();
+				getRelationships().addAll((Collection<? extends Relationship>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case OntologyPackage.WORLD__PHYSICAL:
-        setPhysical((PhysicalWorld)null);
-        return;
-      case OntologyPackage.WORLD__BELIEF:
-        setBelief((BeliefWorld)null);
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case OntologyPackage.WORLD__ENTITIES:
+				getEntities().clear();
+				return;
+			case OntologyPackage.WORLD__DOMAINS:
+				getDomains().clear();
+				return;
+			case OntologyPackage.WORLD__RELATIONSHIPS:
+				getRelationships().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case OntologyPackage.WORLD__PHYSICAL:
-        return physical != null;
-      case OntologyPackage.WORLD__BELIEF:
-        return belief != null;
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case OntologyPackage.WORLD__ENTITIES:
+				return entities != null && !entities.isEmpty();
+			case OntologyPackage.WORLD__DOMAINS:
+				return domains != null && !domains.isEmpty();
+			case OntologyPackage.WORLD__RELATIONSHIPS:
+				return relationships != null && !relationships.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
 
 } //WorldImpl

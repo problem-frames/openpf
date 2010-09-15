@@ -22,24 +22,24 @@ import org.eclipse.emf.ecore.EClass;
 public class QualityRequirementImpl extends RequirementImpl implements QualityRequirement
 {
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected QualityRequirementImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return OntologyPackage.Literals.QUALITY_REQUIREMENT;
-  }
+		return OntologyPackage.Literals.QUALITY_REQUIREMENT;
+	}
 
 } //QualityRequirementImpl

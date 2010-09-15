@@ -36,7 +36,9 @@
       <plugin id="lpg.runtime.java"/>
       <plugin id="net.sourceforge.lpg.lpgjavaruntime"/>
       <plugin id="ontology"/>
+      <plugin id="ontology.edit"/>
       <plugin id="ontology.ui"/>
+      <plugin id="ontology.viatraplugin"/>
       <plugin id="org.antlr.runtime"/>
       <plugin id="org.aopalliance"/>
       <plugin id="org.apache.ant"/>
@@ -115,16 +117,20 @@
       <plugin id="org.eclipse.ecf.provider.filetransfer"/>
       <plugin id="org.eclipse.ecf.provider.filetransfer.ssl" fragment="true"/>
       <plugin id="org.eclipse.ecf.ssl" fragment="true"/>
+      <plugin id="org.eclipse.emf"/>
       <plugin id="org.eclipse.emf.codegen"/>
       <plugin id="org.eclipse.emf.codegen.ecore"/>
       <plugin id="org.eclipse.emf.common"/>
       <plugin id="org.eclipse.emf.common.ui"/>
+      <plugin id="org.eclipse.emf.converter"/>
       <plugin id="org.eclipse.emf.ecore"/>
       <plugin id="org.eclipse.emf.ecore.change"/>
       <plugin id="org.eclipse.emf.ecore.edit"/>
       <plugin id="org.eclipse.emf.ecore.xmi"/>
       <plugin id="org.eclipse.emf.edit"/>
       <plugin id="org.eclipse.emf.edit.ui"/>
+      <plugin id="org.eclipse.emf.exporter"/>
+      <plugin id="org.eclipse.emf.importer"/>
       <plugin id="org.eclipse.emf.mapping.ecore2xml"/>
       <plugin id="org.eclipse.emf.mwe.core"/>
       <plugin id="org.eclipse.emf.mwe.utils"/>
@@ -171,6 +177,8 @@
       <plugin id="org.eclipse.gef"/>
       <plugin id="org.eclipse.gmf.codegen"/>
       <plugin id="org.eclipse.gmf.common"/>
+      <plugin id="org.eclipse.gmf.graphdef"/>
+      <plugin id="org.eclipse.gmf.map"/>
       <plugin id="org.eclipse.gmf.runtime.common.core"/>
       <plugin id="org.eclipse.gmf.runtime.common.ui"/>
       <plugin id="org.eclipse.gmf.runtime.common.ui.action"/>
@@ -203,6 +211,7 @@
       <plugin id="org.eclipse.gmf.runtime.gef.ui"/>
       <plugin id="org.eclipse.gmf.runtime.notation"/>
       <plugin id="org.eclipse.gmf.runtime.notation.providers"/>
+      <plugin id="org.eclipse.gmf.tooldef"/>
       <plugin id="org.eclipse.gmf.validate"/>
       <plugin id="org.eclipse.gmf.xpand"/>
       <plugin id="org.eclipse.gmf.xpand.qvtlibrary"/>
@@ -282,6 +291,7 @@
       <plugin id="org.eclipse.ui.win32" fragment="true"/>
       <plugin id="org.eclipse.ui.workbench"/>
       <plugin id="org.eclipse.ui.workbench.texteditor"/>
+      <plugin id="org.eclipse.uml2"/>
       <plugin id="org.eclipse.uml2.common"/>
       <plugin id="org.eclipse.uml2.uml"/>
       <plugin id="org.eclipse.update.configurator"/>
@@ -289,7 +299,31 @@
       <plugin id="org.eclipse.update.core.linux" fragment="true"/>
       <plugin id="org.eclipse.update.core.win32" fragment="true"/>
       <plugin id="org.eclipse.update.ui"/>
+      <plugin id="org.eclipse.viatra2.core2"/>
+      <plugin id="org.eclipse.viatra2.editor"/>
+      <plugin id="org.eclipse.viatra2.editor.text"/>
+      <plugin id="org.eclipse.viatra2.emfsupport"/>
+      <plugin id="org.eclipse.viatra2.emfsupport.gui"/>
+      <plugin id="org.eclipse.viatra2.emfsupport.viatradsmecore"/>
+      <plugin id="org.eclipse.viatra2.gtasm.interpreter"/>
+      <plugin id="org.eclipse.viatra2.gtasm.model"/>
+      <plugin id="org.eclipse.viatra2.gtasm.patternmatcher"/>
+      <plugin id="org.eclipse.viatra2.gtasm.patternmatcher.impl"/>
+      <plugin id="org.eclipse.viatra2.gtasm.patternmatcher.incremental"/>
+      <plugin id="org.eclipse.viatra2.gtasm.patternmatcher.incremental.parallel"/>
+      <plugin id="org.eclipse.viatra2.gtasm.trigger"/>
+      <plugin id="org.eclipse.viatra2.gui"/>
+      <plugin id="org.eclipse.viatra2.imports.ecoremeta"/>
+      <plugin id="org.eclipse.viatra2.imports.uml2"/>
+      <plugin id="org.eclipse.viatra2.imports.vtml"/>
+      <plugin id="org.eclipse.viatra2.loaders.vtcl_lpgparser"/>
+      <plugin id="org.eclipse.viatra2.viatraDSM"/>
+      <plugin id="org.eclipse.viatra2.viatraDSM.demo"/>
+      <plugin id="org.eclipse.viatra2.viatraDSM.gmf"/>
       <plugin id="org.eclipse.xpand"/>
+      <plugin id="org.eclipse.xsd"/>
+      <plugin id="org.eclipse.xsd.ecore.exporter"/>
+      <plugin id="org.eclipse.xsd.ecore.importer"/>
       <plugin id="org.eclipse.xtend"/>
       <plugin id="org.eclipse.xtend.typesystem.emf"/>
       <plugin id="org.eclipse.xtext"/>

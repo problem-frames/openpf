@@ -6,7 +6,7 @@ Situation:
 	("model" time=ID ":")? world=World;
 
 World:
-	{World} (physical=PhysicalWorld)? (belief=BeliefWorld)?;
+	{World} (entities+=Entity | domains+=Domain | relationships+=Relationship)*;
 
 Thing:
 	Object | Event;
@@ -17,14 +17,8 @@ Event:
 Object:
 	Entity | Relationship | Proposition;
 
-PhysicalWorld:
-	{PhysicalWorld} (entities+=Entity)*;
-
-BeliefWorld:
-	{BeliefWorld} (domains+=Domain | relationships+=Relationship)*;
-
 Domain:
-	name=ID type=DomainType properties+=Proposition ("," properties+=Proposition)*;
+	name=ID type=DomainType ((",")? properties+=Proposition)*;
 
 enum DomainType:
 	Specification="S" | Requirement="R" | World="W";
@@ -117,10 +111,10 @@ enum FulfilsType:
 	Fulfils="fulfils";
 
 Provides:
-	type="provides" "(" source=[Process] "," target=[Resource] ")";
+	type="provides" "(" (source=[Process]|source=[Actor]) "," target=[Resource] ")";
 
 Consumes:
-	type="consumes" "(" source=[Process] "," target=[Resource] ")";
+	type="consumes" "(" (source=[Process]|source=[Actor]) "," target=[Resource] ")";
 
 Exploits:
 	type="exploits" "(" source=[Attacker] "," target=[Process] ")";

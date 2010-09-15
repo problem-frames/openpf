@@ -22,24 +22,24 @@ import org.eclipse.emf.ecore.EClass;
 public class SecurityRequirementImpl extends RequirementImpl implements SecurityRequirement
 {
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected SecurityRequirementImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return OntologyPackage.Literals.SECURITY_REQUIREMENT;
-  }
+		return OntologyPackage.Literals.SECURITY_REQUIREMENT;
+	}
 
 } //SecurityRequirementImpl

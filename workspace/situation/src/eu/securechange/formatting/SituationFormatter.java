@@ -29,7 +29,7 @@ public class SituationFormatter extends AbstractDeclarativeFormatter {
 //	    c.setLinewrap().before(f.getEntityRule());
 	    c.setLinewrap().before(f.getRelationshipRule());
 	    c.setSpace("\n    ").before(f.getEntityAccess().getTypeAssignment_0());	    
-	    c.setNoSpace().before(f.getDomainAccess().getCommaKeyword_3_0());	    
+	    c.setNoSpace().before(f.getDomainAccess().getCommaKeyword_2_0());	    
 	    c.setNoSpace().before(f.getSituationAccess().getColonKeyword_0_2());	    
 	    c.setNoSpace().before(f.getRelationshipAccess().getCommaKeyword_3());	    
 	    c.setNoSpace().before(f.getRelationshipAccess().getRightParenthesisKeyword_5());	    

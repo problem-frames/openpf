@@ -22,24 +22,24 @@ import org.eclipse.emf.ecore.EClass;
 public class DomainAssumptionImpl extends PropositionImpl implements DomainAssumption
 {
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected DomainAssumptionImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return OntologyPackage.Literals.DOMAIN_ASSUMPTION;
-  }
+		return OntologyPackage.Literals.DOMAIN_ASSUMPTION;
+	}
 
 } //DomainAssumptionImpl

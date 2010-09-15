@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="istar" uid="i* tools" id="core.openre" application="org.eclipse.ui.ide.workbench" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true">
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
+   </launcherArgs>
+
+   <launcher name="pf">
+      <solaris/>
+      <win useIco="false">
+         <bmp/>
+      </win>
+   </launcher>
+
+   <plugins>
+      <plugin id="PF2EC"/>
+      <plugin id="PF2EC.ui"/>
+      <plugin id="com.google.collect"/>
+      <plugin id="com.google.inject"/>
+      <plugin id="com.ibm.icu"/>
+      <plugin id="core"/>
+      <plugin id="event"/>
+      <plugin id="event.edit"/>
+      <plugin id="event.editor"/>
+      <plugin id="event.generator"/>
+      <plugin id="event.ui"/>
+      <plugin id="javax.servlet"/>
+      <plugin id="javax.servlet.jsp"/>
+      <plugin id="javax.transaction" fragment="true"/>
+      <plugin id="javax.xml"/>
+      <plugin id="lpg.runtime.java"/>
+      <plugin id="net.sourceforge.lpg.lpgjavaruntime"/>
+      <plugin id="ontology"/>
+      <plugin id="ontology.edit"/>
+      <plugin id="ontology.ui"/>
+      <plugin id="ontology.viatraplugin"/>
+      <plugin id="org.antlr.runtime"/>
+      <plugin id="org.aopalliance"/>
+      <plugin id="org.apache.ant"/>
+      <plugin id="org.apache.batik.bridge"/>
+      <plugin id="org.apache.batik.css"/>
+      <plugin id="org.apache.batik.dom"/>
+      <plugin id="org.apache.batik.dom.svg"/>
+      <plugin id="org.apache.batik.ext.awt"/>
+      <plugin id="org.apache.batik.parser"/>
+      <plugin id="org.apache.batik.pdf"/>
+      <plugin id="org.apache.batik.svggen"/>
+      <plugin id="org.apache.batik.transcoder"/>
+      <plugin id="org.apache.batik.util"/>
+      <plugin id="org.apache.batik.util.gui"/>
+      <plugin id="org.apache.batik.xml"/>
+      <plugin id="org.apache.commons.cli"/>
+      <plugin id="org.apache.commons.el"/>
+      <plugin id="org.apache.commons.lang"/>
+      <plugin id="org.apache.commons.logging"/>
+      <plugin id="org.apache.jasper"/>
+      <plugin id="org.apache.log4j"/>
+      <plugin id="org.apache.lucene"/>
+      <plugin id="org.apache.lucene.analysis"/>
+      <plugin id="org.apache.xerces"/>
+      <plugin id="org.apache.xml.resolver"/>
+      <plugin id="org.apache.xml.serializer"/>
+      <plugin id="org.eclipse.acceleo.common"/>
+      <plugin id="org.eclipse.acceleo.engine"/>
+      <plugin id="org.eclipse.acceleo.model"/>
+      <plugin id="org.eclipse.acceleo.profiler"/>
+      <plugin id="org.eclipse.acceleo.traceability" fragment="true"/>
+      <plugin id="org.eclipse.acceleo.traceability.model"/>
+      <plugin id="org.eclipse.ant.core"/>
+      <plugin id="org.eclipse.ant.launching"/>
+      <plugin id="org.eclipse.ant.ui"/>
+      <plugin id="org.eclipse.compare"/>
+      <plugin id="org.eclipse.compare.core"/>
+      <plugin id="org.eclipse.compare.win32" fragment="true"/>
+      <plugin id="org.eclipse.core.commands"/>
+      <plugin id="org.eclipse.core.contenttype"/>
+      <plugin id="org.eclipse.core.databinding"/>
+      <plugin id="org.eclipse.core.databinding.beans"/>
+      <plugin id="org.eclipse.core.databinding.observable"/>
+      <plugin id="org.eclipse.core.databinding.property"/>
+      <plugin id="org.eclipse.core.expressions"/>
+      <plugin id="org.eclipse.core.externaltools"/>
+      <plugin id="org.eclipse.core.filebuffers"/>
+      <plugin id="org.eclipse.core.filesystem"/>
+      <plugin id="org.eclipse.core.filesystem.linux.ppc" fragment="true"/>
+      <plugin id="org.eclipse.core.filesystem.linux.x86" fragment="true"/>
+      <plugin id="org.eclipse.core.filesystem.linux.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.core.filesystem.macosx" fragment="true"/>
+      <plugin id="org.eclipse.core.filesystem.solaris.sparc" fragment="true"/>
+      <plugin id="org.eclipse.core.filesystem.win32.x86" fragment="true"/>
+      <plugin id="org.eclipse.core.filesystem.win32.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.core.jobs"/>
+      <plugin id="org.eclipse.core.net"/>
+      <plugin id="org.eclipse.core.net.linux.x86" fragment="true"/>
+      <plugin id="org.eclipse.core.net.linux.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.core.net.win32.x86" fragment="true"/>
+      <plugin id="org.eclipse.core.net.win32.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.core.resources"/>
+      <plugin id="org.eclipse.core.resources.win32.x86" fragment="true"/>
+      <plugin id="org.eclipse.core.runtime"/>
+      <plugin id="org.eclipse.core.runtime.compatibility"/>
+      <plugin id="org.eclipse.core.runtime.compatibility.auth"/>
+      <plugin id="org.eclipse.core.runtime.compatibility.registry" fragment="true"/>
+      <plugin id="org.eclipse.core.variables"/>
+      <plugin id="org.eclipse.debug.core"/>
+      <plugin id="org.eclipse.debug.ui"/>
+      <plugin id="org.eclipse.draw2d"/>
+      <plugin id="org.eclipse.draw2d.doc.isv"/>
+      <plugin id="org.eclipse.ecf"/>
+      <plugin id="org.eclipse.ecf.filetransfer"/>
+      <plugin id="org.eclipse.ecf.identity"/>
+      <plugin id="org.eclipse.ecf.provider.filetransfer"/>
+      <plugin id="org.eclipse.ecf.provider.filetransfer.ssl" fragment="true"/>
+      <plugin id="org.eclipse.ecf.ssl" fragment="true"/>
+      <plugin id="org.eclipse.emf"/>
+      <plugin id="org.eclipse.emf.codegen"/>
+      <plugin id="org.eclipse.emf.codegen.ecore"/>
+      <plugin id="org.eclipse.emf.common"/>
+      <plugin id="org.eclipse.emf.common.ui"/>
+      <plugin id="org.eclipse.emf.converter"/>
+      <plugin id="org.eclipse.emf.ecore"/>
+      <plugin id="org.eclipse.emf.ecore.change"/>
+      <plugin id="org.eclipse.emf.ecore.edit"/>
+      <plugin id="org.eclipse.emf.ecore.xmi"/>
+      <plugin id="org.eclipse.emf.edit"/>
+      <plugin id="org.eclipse.emf.edit.ui"/>
+      <plugin id="org.eclipse.emf.exporter"/>
+      <plugin id="org.eclipse.emf.importer"/>
+      <plugin id="org.eclipse.emf.mapping.ecore2xml"/>
+      <plugin id="org.eclipse.emf.mwe.core"/>
+      <plugin id="org.eclipse.emf.mwe.utils"/>
+      <plugin id="org.eclipse.emf.mwe2.language"/>
+      <plugin id="org.eclipse.emf.mwe2.launch"/>
+      <plugin id="org.eclipse.emf.mwe2.runtime"/>
+      <plugin id="org.eclipse.emf.transaction"/>
+      <plugin id="org.eclipse.emf.validation"/>
+      <plugin id="org.eclipse.emf.workspace"/>
+      <plugin id="org.eclipse.equinox.app"/>
+      <plugin id="org.eclipse.equinox.common"/>
+      <plugin id="org.eclipse.equinox.concurrent"/>
+      <plugin id="org.eclipse.equinox.frameworkadmin"/>
+      <plugin id="org.eclipse.equinox.frameworkadmin.equinox"/>
+      <plugin id="org.eclipse.equinox.http.jetty"/>
+      <plugin id="org.eclipse.equinox.http.servlet"/>
+      <plugin id="org.eclipse.equinox.launcher"/>
+      <plugin id="org.eclipse.equinox.launcher.cocoa.macosx" fragment="true"/>
+      <plugin id="org.eclipse.equinox.launcher.cocoa.macosx.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.equinox.launcher.gtk.linux.x86" fragment="true"/>
+      <plugin id="org.eclipse.equinox.launcher.gtk.linux.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.equinox.p2.artifact.repository"/>
+      <plugin id="org.eclipse.equinox.p2.core"/>
+      <plugin id="org.eclipse.equinox.p2.director"/>
+      <plugin id="org.eclipse.equinox.p2.director.app"/>
+      <plugin id="org.eclipse.equinox.p2.engine"/>
+      <plugin id="org.eclipse.equinox.p2.garbagecollector"/>
+      <plugin id="org.eclipse.equinox.p2.jarprocessor"/>
+      <plugin id="org.eclipse.equinox.p2.metadata"/>
+      <plugin id="org.eclipse.equinox.p2.metadata.generator"/>
+      <plugin id="org.eclipse.equinox.p2.metadata.repository"/>
+      <plugin id="org.eclipse.equinox.p2.publisher"/>
+      <plugin id="org.eclipse.equinox.p2.repository"/>
+      <plugin id="org.eclipse.equinox.p2.repository.tools"/>
+      <plugin id="org.eclipse.equinox.p2.touchpoint.eclipse"/>
+      <plugin id="org.eclipse.equinox.p2.updatesite"/>
+      <plugin id="org.eclipse.equinox.preferences"/>
+      <plugin id="org.eclipse.equinox.registry"/>
+      <plugin id="org.eclipse.equinox.security"/>
+      <plugin id="org.eclipse.equinox.security.macosx" fragment="true"/>
+      <plugin id="org.eclipse.equinox.security.win32.x86" fragment="true"/>
+      <plugin id="org.eclipse.equinox.simpleconfigurator"/>
+      <plugin id="org.eclipse.equinox.simpleconfigurator.manipulator"/>
+      <plugin id="org.eclipse.gef"/>
+      <plugin id="org.eclipse.gmf.codegen"/>
+      <plugin id="org.eclipse.gmf.common"/>
+      <plugin id="org.eclipse.gmf.graphdef"/>
+      <plugin id="org.eclipse.gmf.map"/>
+      <plugin id="org.eclipse.gmf.runtime.common.core"/>
+      <plugin id="org.eclipse.gmf.runtime.common.ui"/>
+      <plugin id="org.eclipse.gmf.runtime.common.ui.action"/>
+      <plugin id="org.eclipse.gmf.runtime.common.ui.action.ide"/>
+      <plugin id="org.eclipse.gmf.runtime.common.ui.printing"/>
+      <plugin id="org.eclipse.gmf.runtime.common.ui.printing.win32" fragment="true"/>
+      <plugin id="org.eclipse.gmf.runtime.common.ui.services"/>
+      <plugin id="org.eclipse.gmf.runtime.common.ui.services.action"/>
+      <plugin id="org.eclipse.gmf.runtime.common.ui.services.properties"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.core"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.ui"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.ui.actions"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.ui.printing"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.ui.printing.render"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.ui.properties"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.ui.providers"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.ui.providers.ide"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.ui.render"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.ui.resources.editor"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide"/>
+      <plugin id="org.eclipse.gmf.runtime.draw2d.ui"/>
+      <plugin id="org.eclipse.gmf.runtime.draw2d.ui.render"/>
+      <plugin id="org.eclipse.gmf.runtime.draw2d.ui.render.awt"/>
+      <plugin id="org.eclipse.gmf.runtime.emf.clipboard.core"/>
+      <plugin id="org.eclipse.gmf.runtime.emf.commands.core"/>
+      <plugin id="org.eclipse.gmf.runtime.emf.core"/>
+      <plugin id="org.eclipse.gmf.runtime.emf.type.core"/>
+      <plugin id="org.eclipse.gmf.runtime.emf.ui"/>
+      <plugin id="org.eclipse.gmf.runtime.emf.ui.properties"/>
+      <plugin id="org.eclipse.gmf.runtime.gef.ui"/>
+      <plugin id="org.eclipse.gmf.runtime.notation"/>
+      <plugin id="org.eclipse.gmf.runtime.notation.providers"/>
+      <plugin id="org.eclipse.gmf.tooldef"/>
+      <plugin id="org.eclipse.gmf.validate"/>
+      <plugin id="org.eclipse.gmf.xpand"/>
+      <plugin id="org.eclipse.gmf.xpand.qvtlibrary"/>
+      <plugin id="org.eclipse.help"/>
+      <plugin id="org.eclipse.help.base"/>
+      <plugin id="org.eclipse.help.ui"/>
+      <plugin id="org.eclipse.jdt.compiler.apt" fragment="true"/>
+      <plugin id="org.eclipse.jdt.compiler.tool" fragment="true"/>
+      <plugin id="org.eclipse.jdt.core"/>
+      <plugin id="org.eclipse.jdt.core.manipulation"/>
+      <plugin id="org.eclipse.jdt.debug"/>
+      <plugin id="org.eclipse.jdt.debug.ui"/>
+      <plugin id="org.eclipse.jdt.junit"/>
+      <plugin id="org.eclipse.jdt.junit.core"/>
+      <plugin id="org.eclipse.jdt.junit.runtime"/>
+      <plugin id="org.eclipse.jdt.launching"/>
+      <plugin id="org.eclipse.jdt.launching.macosx"/>
+      <plugin id="org.eclipse.jdt.launching.ui.macosx"/>
+      <plugin id="org.eclipse.jdt.ui"/>
+      <plugin id="org.eclipse.jface"/>
+      <plugin id="org.eclipse.jface.databinding"/>
+      <plugin id="org.eclipse.jface.text"/>
+      <plugin id="org.eclipse.ltk.core.refactoring"/>
+      <plugin id="org.eclipse.ltk.ui.refactoring"/>
+      <plugin id="org.eclipse.m2m.qvt.oml"/>
+      <plugin id="org.eclipse.m2m.qvt.oml.common"/>
+      <plugin id="org.eclipse.m2m.qvt.oml.cst.parser"/>
+      <plugin id="org.eclipse.m2m.qvt.oml.ecore.imperativeocl"/>
+      <plugin id="org.eclipse.m2m.qvt.oml.emf.util"/>
+      <plugin id="org.eclipse.m2m.qvt.oml.project"/>
+      <plugin id="org.eclipse.m2m.qvt.oml.runtime"/>
+      <plugin id="org.eclipse.ocl"/>
+      <plugin id="org.eclipse.ocl.ecore"/>
+      <plugin id="org.eclipse.osgi"/>
+      <plugin id="org.eclipse.osgi.services"/>
+      <plugin id="org.eclipse.pde.build"/>
+      <plugin id="org.eclipse.pde.core"/>
+      <plugin id="org.eclipse.platform"/>
+      <plugin id="org.eclipse.search"/>
+      <plugin id="org.eclipse.swt"/>
+      <plugin id="org.eclipse.swt.carbon.macosx" fragment="true"/>
+      <plugin id="org.eclipse.swt.cocoa.macosx" fragment="true"/>
+      <plugin id="org.eclipse.swt.cocoa.macosx.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.swt.gtk.linux.ppc" fragment="true"/>
+      <plugin id="org.eclipse.swt.gtk.linux.s390" fragment="true"/>
+      <plugin id="org.eclipse.swt.gtk.linux.s390x" fragment="true"/>
+      <plugin id="org.eclipse.swt.gtk.linux.x86" fragment="true"/>
+      <plugin id="org.eclipse.swt.gtk.linux.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.swt.gtk.solaris.sparc" fragment="true"/>
+      <plugin id="org.eclipse.swt.gtk.solaris.x86" fragment="true"/>
+      <plugin id="org.eclipse.swt.motif.aix.ppc" fragment="true"/>
+      <plugin id="org.eclipse.swt.motif.linux.x86" fragment="true"/>
+      <plugin id="org.eclipse.swt.motif.solaris.sparc" fragment="true"/>
+      <plugin id="org.eclipse.swt.win32.win32.x86" fragment="true"/>
+      <plugin id="org.eclipse.swt.win32.win32.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.swtbot.ant.optional.junit3" fragment="true"/>
+      <plugin id="org.eclipse.swtbot.ant.optional.junit4" fragment="true"/>
+      <plugin id="org.eclipse.team.core"/>
+      <plugin id="org.eclipse.team.ui"/>
+      <plugin id="org.eclipse.text"/>
+      <plugin id="org.eclipse.ui"/>
+      <plugin id="org.eclipse.ui.carbon" fragment="true"/>
+      <plugin id="org.eclipse.ui.cheatsheets"/>
+      <plugin id="org.eclipse.ui.cocoa" fragment="true"/>
+      <plugin id="org.eclipse.ui.console"/>
+      <plugin id="org.eclipse.ui.editors"/>
+      <plugin id="org.eclipse.ui.externaltools"/>
+      <plugin id="org.eclipse.ui.forms"/>
+      <plugin id="org.eclipse.ui.ide"/>
+      <plugin id="org.eclipse.ui.ide.application"/>
+      <plugin id="org.eclipse.ui.intro"/>
+      <plugin id="org.eclipse.ui.intro.universal"/>
+      <plugin id="org.eclipse.ui.navigator"/>
+      <plugin id="org.eclipse.ui.navigator.resources"/>
+      <plugin id="org.eclipse.ui.views"/>
+      <plugin id="org.eclipse.ui.views.properties.tabbed"/>
+      <plugin id="org.eclipse.ui.win32" fragment="true"/>
+      <plugin id="org.eclipse.ui.workbench"/>
+      <plugin id="org.eclipse.ui.workbench.texteditor"/>
+      <plugin id="org.eclipse.uml2"/>
+      <plugin id="org.eclipse.uml2.common"/>
+      <plugin id="org.eclipse.uml2.uml"/>
+      <plugin id="org.eclipse.update.configurator"/>
+      <plugin id="org.eclipse.update.core"/>
+      <plugin id="org.eclipse.update.core.linux" fragment="true"/>
+      <plugin id="org.eclipse.update.core.win32" fragment="true"/>
+      <plugin id="org.eclipse.update.ui"/>
+      <plugin id="org.eclipse.viatra2.core2"/>
+      <plugin id="org.eclipse.viatra2.editor"/>
+      <plugin id="org.eclipse.viatra2.editor.text"/>
+      <plugin id="org.eclipse.viatra2.emfsupport"/>
+      <plugin id="org.eclipse.viatra2.emfsupport.gui"/>
+      <plugin id="org.eclipse.viatra2.emfsupport.viatradsmecore"/>
+      <plugin id="org.eclipse.viatra2.gtasm.interpreter"/>
+      <plugin id="org.eclipse.viatra2.gtasm.model"/>
+      <plugin id="org.eclipse.viatra2.gtasm.patternmatcher"/>
+      <plugin id="org.eclipse.viatra2.gtasm.patternmatcher.impl"/>
+      <plugin id="org.eclipse.viatra2.gtasm.patternmatcher.incremental"/>
+      <plugin id="org.eclipse.viatra2.gtasm.patternmatcher.incremental.parallel"/>
+      <plugin id="org.eclipse.viatra2.gtasm.trigger"/>
+      <plugin id="org.eclipse.viatra2.gui"/>
+      <plugin id="org.eclipse.viatra2.imports.ecoremeta"/>
+      <plugin id="org.eclipse.viatra2.imports.uml2"/>
+      <plugin id="org.eclipse.viatra2.imports.vtml"/>
+      <plugin id="org.eclipse.viatra2.loaders.vtcl_lpgparser"/>
+      <plugin id="org.eclipse.viatra2.viatraDSM"/>
+      <plugin id="org.eclipse.viatra2.viatraDSM.demo"/>
+      <plugin id="org.eclipse.viatra2.viatraDSM.gmf"/>
+      <plugin id="org.eclipse.xpand"/>
+      <plugin id="org.eclipse.xsd"/>
+      <plugin id="org.eclipse.xsd.ecore.exporter"/>
+      <plugin id="org.eclipse.xsd.ecore.importer"/>
+      <plugin id="org.eclipse.xtend"/>
+      <plugin id="org.eclipse.xtend.typesystem.emf"/>
+      <plugin id="org.eclipse.xtext"/>
+      <plugin id="org.eclipse.xtext.builder"/>
+      <plugin id="org.eclipse.xtext.common.types"/>
+      <plugin id="org.eclipse.xtext.generator"/>
+      <plugin id="org.eclipse.xtext.gmf.glue"/>
+      <plugin id="org.eclipse.xtext.logging" fragment="true"/>
+      <plugin id="org.eclipse.xtext.ui"/>
+      <plugin id="org.eclipse.xtext.ui.shared"/>
+      <plugin id="org.eclipse.xtext.util"/>
+      <plugin id="org.eclipse.xtext.xtend"/>
+      <plugin id="org.hamcrest.core"/>
+      <plugin id="org.junit"/>
+      <plugin id="org.junit4"/>
+      <plugin id="org.mortbay.jetty.server"/>
+      <plugin id="org.mortbay.jetty.util"/>
+      <plugin id="org.sat4j.core"/>
+      <plugin id="org.sat4j.pb"/>
+      <plugin id="org.w3c.css.sac"/>
+      <plugin id="org.w3c.dom.events"/>
+      <plugin id="org.w3c.dom.smil"/>
+      <plugin id="org.w3c.dom.svg"/>
+      <plugin id="pf2situation"/>
+      <plugin id="pf2situation.ui"/>
+      <plugin id="problem"/>
+      <plugin id="problem.diagram"/>
+      <plugin id="problem.diagram.extensions"/>
+      <plugin id="problem.edit"/>
+      <plugin id="problem.editor"/>
+      <plugin id="problem.generator"/>
+      <plugin id="problem.ui"/>
+      <plugin id="situation"/>
+      <plugin id="situation.diagram"/>
+      <plugin id="situation.diagram.extensions"/>
+      <plugin id="situation.edit"/>
+      <plugin id="situation.editor"/>
+      <plugin id="situation.generator"/>
+      <plugin id="situation.ui"/>
+      <plugin id="uncal"/>
+      <plugin id="uncal.generator"/>
+      <plugin id="uncal.ui"/>
+   </plugins>
+
+   <features>
+      <feature id="problem.feature" version="1.0.0.qualifier"/>
+      <feature id="org.eclipse.rcp" version="3.6.0.v20100519-9OArFKvFtsd7WLUKh-DcYTS"/>
+      <feature id="org.eclipse.platform" version="3.6.0.v20100602-9gF78GpqFt6trOGhL60z0oEx3fz-JKNwxPY"/>
+      <feature id="org.eclipse.xtext.runtime" version="1.0.0.v201006170321"/>
+      <feature id="org.eclipse.xtext.sdk" version="1.0.0.v201006170321"/>
+      <feature id="org.eclipse.xtext.xbase" version="1.0.0.v201006170321"/>
+      <feature id="org.eclipse.xtext.docs" version="1.0.0.v201006170321"/>
+      <feature id="org.eclipse.xtext.examples" version="1.0.0.v201006170321"/>
+      <feature id="org.eclipse.xtext.examples.source" version="1.0.0.v201006170321"/>
+      <feature id="org.eclipse.xtext.runtime.source" version="1.0.0.v201006170321"/>
+      <feature id="org.eclipse.xtext.sdk.source" version="1.0.0.v201006170321"/>
+      <feature id="org.eclipse.xtext.ui" version="1.0.0.v201006170321"/>
+      <feature id="org.eclipse.xtext.ui.source" version="1.0.0.v201006170321"/>
+      <feature id="org.eclipse.xtext.xbase.source" version="1.0.0.v201006170321"/>
+      <feature id="org.eclipse.gef" version="3.6.0.v20100519-2050-777B-81A2Bz-69793A8B83447"/>
+      <feature id="org.eclipse.draw2d" version="3.6.0.v20100519-2050-45-7w3121163602336"/>
+      <feature id="org.eclipse.gmf" version="1.4.0.v20100603-2230-7d98-FYnmMCGUhhvqV4nR2tsgWcV"/>
+      <feature id="org.eclipse.ocl" version="3.0.0.v201005061704-79-7G9oB5855J7O8P9D"/>
+      <feature id="org.eclipse.emf.cdo" version="3.0.0.v20100614-1657"/>
+      <feature id="org.eclipse.emf.cdo.epp" version="3.0.0.v20100614-1657"/>
+      <feature id="org.eclipse.emf.cdo.server" version="3.0.0.v20100614-1657"/>
+      <feature id="org.eclipse.emf.codegen" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.codegen.ecore" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.codegen.ecore.source" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.codegen.ecore.ui" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.codegen.ecore.ui.source" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.codegen.source" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.codegen.ui" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.codegen.ui.source" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.common" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.common.source" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.common.ui" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.common.ui.source" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.compare" version="1.1.0.v201006150400"/>
+      <feature id="org.eclipse.emf.compare.doc" version="1.1.0.v201006150400"/>
+      <feature id="org.eclipse.emf.compare.sdk" version="1.1.0.v201006150400"/>
+      <feature id="org.eclipse.emf.compare.source" version="1.1.0.v201006150400"/>
+      <feature id="org.eclipse.emf.converter" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.converter.source" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.databinding" version="1.2.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.databinding.edit" version="1.2.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.databinding.edit.source" version="1.2.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.databinding.source" version="1.2.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.doc" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.doc.source" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.ecore" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.ecore.edit" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.ecore.edit.source" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.ecore.editor" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.ecore.editor.source" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.ecore.source" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.ecoretools" version="0.10.0.v20100615-1639"/>
+      <feature id="org.eclipse.emf.ecoretools.doc" version="0.10.0.v20100615-1639"/>
+      <feature id="org.eclipse.emf.ecoretools.sdk" version="0.10.0.v20100615-1639"/>
+      <feature id="org.eclipse.emf.ecoretools.source" version="0.10.0.v20100615-1639"/>
+      <feature id="org.eclipse.emf.ecoretools.utils" version="0.10.0.v20100601-1628"/>
+      <feature id="org.eclipse.emf.ecoretools.utils.source" version="0.10.0.v20100601-1628"/>
+      <feature id="org.eclipse.emf.edit" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.edit.source" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.edit.ui" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.edit.ui.source" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.eef.edt" version="0.8.0.v201006150818-18s-FCB-_faOoi_WCpD85JCB8x42"/>
+      <feature id="org.eclipse.emf.eef.runtime" version="0.8.0.v201006150818-177-7w312117261929"/>
+      <feature id="org.eclipse.emf.eef.runtime.source" version="0.8.0.v201006150818-177-7w312117261929"/>
+      <feature id="org.eclipse.emf.mapping" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.mapping.ecore" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.mapping.ecore.editor" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.mapping.ecore.editor.source" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.mapping.ecore.source" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.mapping.source" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.mapping.ui" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.mapping.ui.source" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.mint" version="0.9.0.v201006142335"/>
+      <feature id="org.eclipse.emf.mint.doc" version="0.9.0.v201006142335"/>
+      <feature id="org.eclipse.emf.mint.sdk" version="0.9.0.v201006142335"/>
+      <feature id="org.eclipse.emf.mint.source" version="0.9.0.v201006142335"/>
+      <feature id="org.eclipse.emf.mwe.ui" version="1.0.0.v201006150535"/>
+      <feature id="org.eclipse.emf.query" version="1.4.0.v20100428-2315-218Z7w311A142A1142"/>
+      <feature id="org.eclipse.emf.query.doc" version="1.4.0.v20100428-2315-33-8s733L466A3AE72"/>
+      <feature id="org.eclipse.emf.query.ocl" version="1.4.0.v20100428-2315-3--7w311A232602735"/>
+      <feature id="org.eclipse.emf.query.ocl.source" version="1.4.0.v20100428-2315-3--7w311A232602735"/>
+      <feature id="org.eclipse.emf.query.sdk" version="1.4.0.v20100428-2315-67J-95GFz01DOIuNNRTWK_NPj507"/>
+      <feature id="org.eclipse.emf.query.source" version="1.4.0.v20100428-2315-218Z7w311A142A1142"/>
+      <feature id="org.eclipse.emf.sdk" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.source" version="2.6.0.v20100614-1136"/>
+      <feature id="org.eclipse.emf.teneo.eclipselink" version="1.1.0.v201006151458"/>
+      <feature id="org.eclipse.emf.teneo.hibernate" version="1.1.2.v201006151458"/>
+      <feature id="org.eclipse.emf.transaction" version="1.4.0.v20100428-2315-377-8s734C3E7D15D6B"/>
+      <feature id="org.eclipse.emf.transaction.doc" version="1.4.0.v20100428-2315-358Z8s733L466F3C6D4"/>
+      <feature id="org.eclipse.emf.transaction.sdk" version="1.4.0.v20100428-2315-777N-9AZP-D1aQtjUklrYl0eU20D"/>
+      <feature id="org.eclipse.emf.transaction.source" version="1.4.0.v20100428-2315-377-8s734C3E7D15D6B"/>
+      <feature id="org.eclipse.emf.validation" version="1.4.0.v20100428-2315-479-9oB56N5BBR6LCA6"/>
+      <feature id="org.eclipse.emf.validation.doc" version="1.4.0.v20100428-2315-35-8s733L466F3B769"/>
+      <feature id="org.eclipse.emf.validation.ocl" version="1.4.0.v20100428-2315-23-7w3121133502768"/>
+      <feature id="org.eclipse.emf.validation.ocl.source" version="1.4.0.v20100428-2315-23-7w3121133502768"/>
+      <feature id="org.eclipse.emf.validation.sdk" version="1.4.0.v20100428-2315-67J-96SGR35WNqZRZfmQnghI6uFA"/>
+      <feature id="org.eclipse.emf.validation.source" version="1.4.0.v20100428-2315-479-9oB56N5BBR6LCA6"/>
+      <feature id="org.eclipse.emf.workspace" version="1.4.0.v20100428-2315-36-8s734C367E3CBC7"/>
+      <feature id="org.eclipse.emf.workspace.doc" version="1.4.0.v20100428-2315-22-7w311A1238292A"/>
+      <feature id="org.eclipse.emf.workspace.source" version="1.4.0.v20100428-2315-36-8s734C367E3CBC7"/>
+      <feature id="org.eclipse.xtend" version="1.0.0.v201006150611"/>
+      <feature id="org.eclipse.xpand" version="1.0.0.v201006150611"/>
+      <feature id="org.eclipse.xpand.doc" version="1.0.0.v201006150611"/>
+      <feature id="org.eclipse.xpand.examples" version="1.0.0.v201006150611"/>
+      <feature id="org.eclipse.xpand.examples.source" version="1.0.0.v201006150611"/>
+      <feature id="org.eclipse.xpand.incremental" version="1.0.0.v201006150611"/>
+      <feature id="org.eclipse.xpand.incremental.source" version="1.0.0.v201006150611"/>
+      <feature id="org.eclipse.xpand.sdk" version="1.0.0.v201006150611"/>
+      <feature id="org.eclipse.xpand.source" version="1.0.0.v201006150611"/>
+      <feature id="org.eclipse.xpand.ui" version="1.0.0.v201006150611"/>
+      <feature id="org.eclipse.xpand.ui.source" version="1.0.0.v201006150611"/>
+      <feature id="org.eclipse.xtend.dependencies" version="1.0.0.v201006150611"/>
+      <feature id="org.eclipse.xtend.source" version="1.0.0.v201006150611"/>
+      <feature id="org.eclipse.xtend.typesystem.emf" version="1.0.0.v201006150611"/>
+      <feature id="org.eclipse.xtend.typesystem.emf.source" version="1.0.0.v201006150611"/>
+      <feature id="org.eclipse.xtend.typesystem.uml2" version="1.0.0.v201006150611"/>
+      <feature id="org.eclipse.xtend.typesystem.uml2.source" version="1.0.0.v201006150611"/>
+      <feature id="org.eclipse.xtend.typesystem.xsd" version="1.0.0.v201006150611"/>
+      <feature id="org.eclipse.xtend.typesystem.xsd.source" version="1.0.0.v201006150611"/>
+      <feature id="org.eclipse.xtend.ui" version="1.0.0.v201006150611"/>
+      <feature id="org.eclipse.xtend.ui.source" version="1.0.0.v201006150611"/>
+   </features>
+
+
+</product>

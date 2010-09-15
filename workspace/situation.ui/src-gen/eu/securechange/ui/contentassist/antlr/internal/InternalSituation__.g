@@ -47,25 +47,25 @@ T47 : '(' ;
 T48 : ',' ;
 T49 : ')' ;
 
-// $ANTLR src "../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g" 1326
+// $ANTLR src "../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g" 1280
 RULE_ID : ('#' ~('#')+ '#'|'^'? ('a'..'z'|'A'..'Z'|'_'|'.') ('a'..'z'|'A'..'Z'|'_'|'0'..'9'|'.')*);
 
-// $ANTLR src "../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g" 1328
+// $ANTLR src "../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g" 1282
 RULE_INT : ('0'..'9')+;
 
-// $ANTLR src "../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g" 1330
+// $ANTLR src "../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g" 1284
 RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\'');
 
-// $ANTLR src "../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g" 1332
+// $ANTLR src "../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g" 1286
 RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 
-// $ANTLR src "../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g" 1334
+// $ANTLR src "../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g" 1288
 RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
-// $ANTLR src "../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g" 1336
+// $ANTLR src "../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g" 1290
 RULE_WS : (' '|'\t'|'\r'|'\n')+;
 
-// $ANTLR src "../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g" 1338
+// $ANTLR src "../situation.ui/src-gen/eu/securechange/ui/contentassist/antlr/internal/InternalSituation.g" 1292
 RULE_ANY_OTHER : .;
 
 

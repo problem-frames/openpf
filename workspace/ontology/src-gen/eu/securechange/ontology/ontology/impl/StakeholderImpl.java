@@ -22,24 +22,24 @@ import org.eclipse.emf.ecore.EClass;
 public class StakeholderImpl extends ActorImpl implements Stakeholder
 {
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected StakeholderImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return OntologyPackage.Literals.STAKEHOLDER;
-  }
+		return OntologyPackage.Literals.STAKEHOLDER;
+	}
 
 } //StakeholderImpl

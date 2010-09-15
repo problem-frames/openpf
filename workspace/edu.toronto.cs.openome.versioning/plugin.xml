@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.3"?>
+<plugin>
+   
+     <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="edu.toronto.cs.openome.versioning.handlers.EditorCommitHandler"
+            id="openome_commit4_cmd"
+            name="openome_commit4_cmd">
+      </command>
+      <command
+            defaultHandler="edu.toronto.cs.openome.versioning.handlers.DiagramCommitHandler"
+            id="openome_commit5_cmd"
+            name="openome_commit5_cmd">
+      </command>
+      <command
+            defaultHandler="edu.toronto.cs.openome.versioning.handlers.CheckoutLatestHandler"
+            id="openome_checkout_latest_cmd"
+            name="openome_checkout_latest_cmd">
+      </command>
+      </extension>
+
+   <extension 
+		id="openome_versioning_menus"
+		point="org.eclipse.ui.menus">
+	
+		<menuContribution 
+			locationURI="menu:openome_top_menu?after=additions">
+			
+   			<menu
+         		id="openome_versioning_main_menu"
+         		label="Versioning">
+         		<command 
+					commandId="openome_commit4_cmd"
+					icon="icons/sample.gif"
+					id="openome_commit4_menu"
+					label="Commit Model (alg 4)"
+					tooltip="Commit all model elements to the model repository, saving the edit sequence"
+					mnemonic="C">
+				</command>
+				<command 
+					commandId="openome_commit5_cmd"
+					icon="icons/sample.gif"
+					id="openome_commit5_menu"
+					label="Commit Model (alg 5)"
+					tooltip="Commit all model elements to the model repository, using only the current state of the model"
+					mnemonic="C">
+				</command>
+           <command
+                 commandId="openome_checkout_latest_cmd"
+                 id="openome_checkout_latest_menu"
+                 label="Checkout Latest"
+                 mnemonic="L"
+                 tooltip="Checkout latest version">
+           </command>
+   			</menu>
+		</menuContribution>
+	</extension>
+
+</plugin>

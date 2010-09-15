@@ -800,10 +800,10 @@ public class InternalSituationLexer extends Lexer {
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:720:9: ( ( '#' (~ ( '#' ) )+ '#' | ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '.' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '.' )* ) )
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:720:11: ( '#' (~ ( '#' ) )+ '#' | ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '.' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '.' )* )
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:696:9: ( ( '#' (~ ( '#' ) )+ '#' | ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '.' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '.' )* ) )
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:696:11: ( '#' (~ ( '#' ) )+ '#' | ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '.' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '.' )* )
             {
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:720:11: ( '#' (~ ( '#' ) )+ '#' | ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '.' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '.' )* )
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:696:11: ( '#' (~ ( '#' ) )+ '#' | ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '.' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '.' )* )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -815,16 +815,16 @@ public class InternalSituationLexer extends Lexer {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("720:11: ( '#' (~ ( '#' ) )+ '#' | ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '.' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '.' )* )", 4, 0, input);
+                    new NoViableAltException("696:11: ( '#' (~ ( '#' ) )+ '#' | ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '.' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '.' )* )", 4, 0, input);
 
                 throw nvae;
             }
             switch (alt4) {
                 case 1 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:720:12: '#' (~ ( '#' ) )+ '#'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:696:12: '#' (~ ( '#' ) )+ '#'
                     {
                     match('#'); 
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:720:16: (~ ( '#' ) )+
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:696:16: (~ ( '#' ) )+
                     int cnt1=0;
                     loop1:
                     do {
@@ -838,7 +838,7 @@ public class InternalSituationLexer extends Lexer {
 
                         switch (alt1) {
                     	case 1 :
-                    	    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:720:16: ~ ( '#' )
+                    	    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:696:16: ~ ( '#' )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\"')||(input.LA(1)>='$' && input.LA(1)<='\uFFFE') ) {
                     	        input.consume();
@@ -868,9 +868,9 @@ public class InternalSituationLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:720:28: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '.' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '.' )*
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:696:28: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '.' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '.' )*
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:720:28: ( '^' )?
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:696:28: ( '^' )?
                     int alt2=2;
                     int LA2_0 = input.LA(1);
 
@@ -879,7 +879,7 @@ public class InternalSituationLexer extends Lexer {
                     }
                     switch (alt2) {
                         case 1 :
-                            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:720:28: '^'
+                            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:696:28: '^'
                             {
                             match('^'); 
 
@@ -898,7 +898,7 @@ public class InternalSituationLexer extends Lexer {
                         recover(mse);    throw mse;
                     }
 
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:720:61: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '.' )*
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:696:61: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '.' )*
                     loop3:
                     do {
                         int alt3=2;
@@ -952,10 +952,10 @@ public class InternalSituationLexer extends Lexer {
     public final void mRULE_INT() throws RecognitionException {
         try {
             int _type = RULE_INT;
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:722:10: ( ( '0' .. '9' )+ )
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:722:12: ( '0' .. '9' )+
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:698:10: ( ( '0' .. '9' )+ )
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:698:12: ( '0' .. '9' )+
             {
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:722:12: ( '0' .. '9' )+
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:698:12: ( '0' .. '9' )+
             int cnt5=0;
             loop5:
             do {
@@ -969,7 +969,7 @@ public class InternalSituationLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:722:13: '0' .. '9'
+            	    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:698:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -999,10 +999,10 @@ public class InternalSituationLexer extends Lexer {
     public final void mRULE_STRING() throws RecognitionException {
         try {
             int _type = RULE_STRING;
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:724:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:724:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:700:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:700:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:724:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:700:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -1014,16 +1014,16 @@ public class InternalSituationLexer extends Lexer {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("724:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )", 8, 0, input);
+                    new NoViableAltException("700:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )", 8, 0, input);
 
                 throw nvae;
             }
             switch (alt8) {
                 case 1 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:724:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:700:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:724:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:700:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop6:
                     do {
                         int alt6=3;
@@ -1039,7 +1039,7 @@ public class InternalSituationLexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:724:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
+                    	    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:700:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
@@ -1056,7 +1056,7 @@ public class InternalSituationLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:724:62: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:700:62: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFE') ) {
                     	        input.consume();
@@ -1082,10 +1082,10 @@ public class InternalSituationLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:724:82: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:700:82: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:724:87: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:700:87: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop7:
                     do {
                         int alt7=3;
@@ -1101,7 +1101,7 @@ public class InternalSituationLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:724:88: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
+                    	    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:700:88: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
@@ -1118,7 +1118,7 @@ public class InternalSituationLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:724:129: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:700:129: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFE') ) {
                     	        input.consume();
@@ -1160,12 +1160,12 @@ public class InternalSituationLexer extends Lexer {
     public final void mRULE_ML_COMMENT() throws RecognitionException {
         try {
             int _type = RULE_ML_COMMENT;
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:726:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:726:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:702:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:702:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:726:24: ( options {greedy=false; } : . )*
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:702:24: ( options {greedy=false; } : . )*
             loop9:
             do {
                 int alt9=2;
@@ -1190,7 +1190,7 @@ public class InternalSituationLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:726:52: .
+            	    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:702:52: .
             	    {
             	    matchAny(); 
 
@@ -1218,12 +1218,12 @@ public class InternalSituationLexer extends Lexer {
     public final void mRULE_SL_COMMENT() throws RecognitionException {
         try {
             int _type = RULE_SL_COMMENT;
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:728:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:728:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:704:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:704:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:728:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:704:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop10:
             do {
                 int alt10=2;
@@ -1236,7 +1236,7 @@ public class InternalSituationLexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:728:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:704:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFE') ) {
             	        input.consume();
@@ -1257,7 +1257,7 @@ public class InternalSituationLexer extends Lexer {
                 }
             } while (true);
 
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:728:40: ( ( '\\r' )? '\\n' )?
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:704:40: ( ( '\\r' )? '\\n' )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1266,9 +1266,9 @@ public class InternalSituationLexer extends Lexer {
             }
             switch (alt12) {
                 case 1 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:728:41: ( '\\r' )? '\\n'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:704:41: ( '\\r' )? '\\n'
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:728:41: ( '\\r' )?
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:704:41: ( '\\r' )?
                     int alt11=2;
                     int LA11_0 = input.LA(1);
 
@@ -1277,7 +1277,7 @@ public class InternalSituationLexer extends Lexer {
                     }
                     switch (alt11) {
                         case 1 :
-                            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:728:41: '\\r'
+                            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:704:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1307,10 +1307,10 @@ public class InternalSituationLexer extends Lexer {
     public final void mRULE_WS() throws RecognitionException {
         try {
             int _type = RULE_WS;
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:730:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:730:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:706:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:706:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:730:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:706:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt13=0;
             loop13:
             do {
@@ -1363,8 +1363,8 @@ public class InternalSituationLexer extends Lexer {
     public final void mRULE_ANY_OTHER() throws RecognitionException {
         try {
             int _type = RULE_ANY_OTHER;
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:732:16: ( . )
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:732:18: .
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:708:16: ( . )
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:708:18: .
             {
             matchAny(); 
 

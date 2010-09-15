@@ -5,7 +5,7 @@ Situation: ("model" time=ID ":")? (things+=Thing)*;
 Thing: Entity | Relationship | Domain;
 Entity: type=EntityType name=ID;
 Relationship: type=RelationshipType "(" source=[Thing] "," target=[Thing] ")";
-Domain: name=ID type=DomainType properties+=Entity ("," properties+=Entity)*;
+Domain: name=ID type=DomainType ((",")? properties+=Entity)*;
 enum EntityType: 
     DomainAssumption="DA" | Function="FR" | Security="SR" | Anti="AR" | QualityProposition="Q" | Argument="A"
   | Actor="actor" | Action="action" | Attacker="attacker" | Process="process" | Activity="activity" | Resource="resource" | Asset="asset" 

@@ -22,24 +22,24 @@ import org.eclipse.emf.ecore.EClass;
 public class HumanActivityImpl extends ProcessImpl implements HumanActivity
 {
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected HumanActivityImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return OntologyPackage.Literals.HUMAN_ACTIVITY;
-  }
+		return OntologyPackage.Literals.HUMAN_ACTIVITY;
+	}
 
 } //HumanActivityImpl

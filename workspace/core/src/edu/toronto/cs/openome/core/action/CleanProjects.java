@@ -6,6 +6,7 @@ import java.util.Vector;
 
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
+import org.eclipse.core.commands.IHandler;
 import org.eclipse.core.commands.IHandlerListener;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IWorkspace;
@@ -18,8 +19,6 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.osgi.framework.debug.Debug;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchWindow;
-import org.eclipse.core.commands.IHandler;
-
 
 import edu.toronto.cs.openome.core.convertor.IGenerator;
 

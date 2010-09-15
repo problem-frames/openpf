@@ -22,24 +22,24 @@ import org.eclipse.emf.ecore.EClass;
 public class RequirementImpl extends PropositionImpl implements Requirement
 {
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected RequirementImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return OntologyPackage.Literals.REQUIREMENT;
-  }
+		return OntologyPackage.Literals.REQUIREMENT;
+	}
 
 } //RequirementImpl

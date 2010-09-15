@@ -4,7 +4,9 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ontology/src-gen"
     editDirectory="/ontology.edit/src" editorDirectory="/ontology.editor/src" modelPluginID="ontology"
     forceOverwrite="true" modelName="Ontology" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
-    complianceLevel="5.0" copyrightFields="false" editPluginID="ontology.edit" editorPluginID="ontology.editor">
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    editPluginID="ontology.edit" editorPluginID="ontology.editor">
+  <foreignModel>Ontology.ecore</foreignModel>
   <genPackages prefix="Ontology" basePackage="eu.securechange.ontology" disposableProviderFactory="true"
       ecorePackage="Ontology.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="Ontology.ecore#//DomainType">
@@ -30,21 +32,15 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ontology.ecore#//Situation/world"/>
     </genClasses>
     <genClasses ecoreClass="Ontology.ecore#//World">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ontology.ecore#//World/physical"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ontology.ecore#//World/belief"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ontology.ecore#//World/entities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ontology.ecore#//World/domains"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ontology.ecore#//World/relationships"/>
     </genClasses>
     <genClasses ecoreClass="Ontology.ecore#//Thing"/>
     <genClasses ecoreClass="Ontology.ecore#//Event">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ontology.ecore#//Event/name"/>
     </genClasses>
     <genClasses ecoreClass="Ontology.ecore#//Object"/>
-    <genClasses ecoreClass="Ontology.ecore#//PhysicalWorld">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ontology.ecore#//PhysicalWorld/entities"/>
-    </genClasses>
-    <genClasses ecoreClass="Ontology.ecore#//BeliefWorld">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ontology.ecore#//BeliefWorld/domains"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ontology.ecore#//BeliefWorld/relationships"/>
-    </genClasses>
     <genClasses ecoreClass="Ontology.ecore#//Domain">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ontology.ecore#//Domain/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ontology.ecore#//Domain/type"/>

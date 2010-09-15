@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: istar.ui
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0
+Bundle-SymbolicName: istar.ui; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: istar;visibility:=reexport,
+ org.eclipse.xtext.ui,
+ org.eclipse.ui.editors;bundle-version="3.5.0",
+ org.eclipse.ui.ide;bundle-version="3.5.0",
+ org.eclipse.xtext.ui.shared,
+ org.eclipse.ui,
+ org.antlr.runtime,
+ org.eclipse.xtext.builder,
+ edu.toronto.cs.openome_model,
+ edu.toronto.cs.openome_model.diagram
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: uk.ac.open.istar.ui,
+ uk.ac.open.istar.ui.contentassist,
+ uk.ac.open.istar.ui.contentassist.antlr,
+ uk.ac.open.istar.ui.contentassist.antlr.internal,
+ uk.ac.open.istar.ui.internal,
+ uk.ac.open.istar.ui.labeling,
+ uk.ac.open.istar.ui.outline,
+ uk.ac.open.istar.ui.quickfix
+Bundle-Activator: uk.ac.open.istar.ui.internal.IstarActivator

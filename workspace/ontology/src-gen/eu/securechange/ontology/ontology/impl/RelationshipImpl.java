@@ -22,24 +22,24 @@ import org.eclipse.emf.ecore.EClass;
 public class RelationshipImpl extends ObjectImpl implements Relationship
 {
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected RelationshipImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return OntologyPackage.Literals.RELATIONSHIP;
-  }
+		return OntologyPackage.Literals.RELATIONSHIP;
+	}
 
 } //RelationshipImpl

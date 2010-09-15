@@ -14,7 +14,6 @@ import eu.securechange.ontology.ontology.Argument;
 import eu.securechange.ontology.ontology.Asset;
 import eu.securechange.ontology.ontology.Attacker;
 import eu.securechange.ontology.ontology.Attacks;
-import eu.securechange.ontology.ontology.BeliefWorld;
 import eu.securechange.ontology.ontology.Consumes;
 import eu.securechange.ontology.ontology.Contributes;
 import eu.securechange.ontology.ontology.ContributesType;
@@ -36,7 +35,6 @@ import eu.securechange.ontology.ontology.HumanActivity;
 import eu.securechange.ontology.ontology.NaturalProcess;
 import eu.securechange.ontology.ontology.OntologyFactory;
 import eu.securechange.ontology.ontology.OntologyPackage;
-import eu.securechange.ontology.ontology.PhysicalWorld;
 import eu.securechange.ontology.ontology.Proposition;
 import eu.securechange.ontology.ontology.Provides;
 import eu.securechange.ontology.ontology.QualityRequirement;
@@ -69,700 +67,670 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
 public class OntologyFactoryImpl extends EFactoryImpl implements OntologyFactory
 {
   /**
-   * Creates the default factory implementation.
-   * <!-- begin-user-doc -->
+	 * Creates the default factory implementation.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public static OntologyFactory init()
   {
-    try
-    {
-      OntologyFactory theOntologyFactory = (OntologyFactory)EPackage.Registry.INSTANCE.getEFactory("http://securechange.eu/ontology"); 
-      if (theOntologyFactory != null)
-      {
-        return theOntologyFactory;
-      }
-    }
-    catch (Exception exception)
-    {
-      EcorePlugin.INSTANCE.log(exception);
-    }
-    return new OntologyFactoryImpl();
-  }
+		try {
+			OntologyFactory theOntologyFactory = (OntologyFactory)EPackage.Registry.INSTANCE.getEFactory("http://securechange.eu/ontology"); 
+			if (theOntologyFactory != null) {
+				return theOntologyFactory;
+			}
+		}
+		catch (Exception exception) {
+			EcorePlugin.INSTANCE.log(exception);
+		}
+		return new OntologyFactoryImpl();
+	}
 
   /**
-   * Creates an instance of the factory.
-   * <!-- begin-user-doc -->
+	 * Creates an instance of the factory.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public OntologyFactoryImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EObject create(EClass eClass)
   {
-    switch (eClass.getClassifierID())
-    {
-      case OntologyPackage.SITUATION: return createSituation();
-      case OntologyPackage.WORLD: return createWorld();
-      case OntologyPackage.THING: return createThing();
-      case OntologyPackage.EVENT: return createEvent();
-      case OntologyPackage.OBJECT: return createObject();
-      case OntologyPackage.PHYSICAL_WORLD: return createPhysicalWorld();
-      case OntologyPackage.BELIEF_WORLD: return createBeliefWorld();
-      case OntologyPackage.DOMAIN: return createDomain();
-      case OntologyPackage.PROPOSITION: return createProposition();
-      case OntologyPackage.REQUIREMENT: return createRequirement();
-      case OntologyPackage.DOMAIN_ASSUMPTION: return createDomainAssumption();
-      case OntologyPackage.FUNCTIONAL_REQUIREMENT: return createFunctionalRequirement();
-      case OntologyPackage.SECURITY_REQUIREMENT: return createSecurityRequirement();
-      case OntologyPackage.ANTI_REQUIREMENT: return createAntiRequirement();
-      case OntologyPackage.QUALITY_REQUIREMENT: return createQualityRequirement();
-      case OntologyPackage.ARGUMENT: return createArgument();
-      case OntologyPackage.ENTITY: return createEntity();
-      case OntologyPackage.ACTOR: return createActor();
-      case OntologyPackage.STAKEHOLDER: return createStakeholder();
-      case OntologyPackage.ATTACKER: return createAttacker();
-      case OntologyPackage.PROCESS: return createProcess();
-      case OntologyPackage.NATURAL_PROCESS: return createNaturalProcess();
-      case OntologyPackage.HUMAN_ACTIVITY: return createHumanActivity();
-      case OntologyPackage.ACTION: return createAction();
-      case OntologyPackage.RESOURCE: return createResource();
-      case OntologyPackage.ASSET: return createAsset();
-      case OntologyPackage.RELATIONSHIP: return createRelationship();
-      case OntologyPackage.WANTS: return createWants();
-      case OntologyPackage.DOES: return createDoes();
-      case OntologyPackage.DECOMPOSES: return createDecomposes();
-      case OntologyPackage.TRUSTS: return createTrusts();
-      case OntologyPackage.DELEGATES: return createDelegates();
-      case OntologyPackage.CONTRIBUTES: return createContributes();
-      case OntologyPackage.FULFILS: return createFulfils();
-      case OntologyPackage.PROVIDES: return createProvides();
-      case OntologyPackage.CONSUMES: return createConsumes();
-      case OntologyPackage.EXPLOITS: return createExploits();
-      case OntologyPackage.DAMAGES: return createDamages();
-      case OntologyPackage.ATTACKS: return createAttacks();
-      case OntologyPackage.ARGUES: return createArgues();
-      case OntologyPackage.ACTIVITY: return createActivity();
-      default:
-        throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-    }
-  }
+		switch (eClass.getClassifierID()) {
+			case OntologyPackage.SITUATION: return createSituation();
+			case OntologyPackage.WORLD: return createWorld();
+			case OntologyPackage.THING: return createThing();
+			case OntologyPackage.EVENT: return createEvent();
+			case OntologyPackage.OBJECT: return createObject();
+			case OntologyPackage.DOMAIN: return createDomain();
+			case OntologyPackage.PROPOSITION: return createProposition();
+			case OntologyPackage.REQUIREMENT: return createRequirement();
+			case OntologyPackage.DOMAIN_ASSUMPTION: return createDomainAssumption();
+			case OntologyPackage.FUNCTIONAL_REQUIREMENT: return createFunctionalRequirement();
+			case OntologyPackage.SECURITY_REQUIREMENT: return createSecurityRequirement();
+			case OntologyPackage.ANTI_REQUIREMENT: return createAntiRequirement();
+			case OntologyPackage.QUALITY_REQUIREMENT: return createQualityRequirement();
+			case OntologyPackage.ARGUMENT: return createArgument();
+			case OntologyPackage.ENTITY: return createEntity();
+			case OntologyPackage.ACTOR: return createActor();
+			case OntologyPackage.STAKEHOLDER: return createStakeholder();
+			case OntologyPackage.ATTACKER: return createAttacker();
+			case OntologyPackage.PROCESS: return createProcess();
+			case OntologyPackage.NATURAL_PROCESS: return createNaturalProcess();
+			case OntologyPackage.HUMAN_ACTIVITY: return createHumanActivity();
+			case OntologyPackage.ACTION: return createAction();
+			case OntologyPackage.RESOURCE: return createResource();
+			case OntologyPackage.ASSET: return createAsset();
+			case OntologyPackage.RELATIONSHIP: return createRelationship();
+			case OntologyPackage.WANTS: return createWants();
+			case OntologyPackage.DOES: return createDoes();
+			case OntologyPackage.DECOMPOSES: return createDecomposes();
+			case OntologyPackage.TRUSTS: return createTrusts();
+			case OntologyPackage.DELEGATES: return createDelegates();
+			case OntologyPackage.CONTRIBUTES: return createContributes();
+			case OntologyPackage.FULFILS: return createFulfils();
+			case OntologyPackage.PROVIDES: return createProvides();
+			case OntologyPackage.CONSUMES: return createConsumes();
+			case OntologyPackage.EXPLOITS: return createExploits();
+			case OntologyPackage.DAMAGES: return createDamages();
+			case OntologyPackage.ATTACKS: return createAttacks();
+			case OntologyPackage.ARGUES: return createArgues();
+			case OntologyPackage.ACTIVITY: return createActivity();
+			default:
+				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object createFromString(EDataType eDataType, String initialValue)
   {
-    switch (eDataType.getClassifierID())
-    {
-      case OntologyPackage.DOMAIN_TYPE:
-        return createDomainTypeFromString(eDataType, initialValue);
-      case OntologyPackage.DECOMPOSES_TYPE:
-        return createDecomposesTypeFromString(eDataType, initialValue);
-      case OntologyPackage.CONTRIBUTES_TYPE:
-        return createContributesTypeFromString(eDataType, initialValue);
-      case OntologyPackage.FULFILS_TYPE:
-        return createFulfilsTypeFromString(eDataType, initialValue);
-      default:
-        throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-    }
-  }
+		switch (eDataType.getClassifierID()) {
+			case OntologyPackage.DOMAIN_TYPE:
+				return createDomainTypeFromString(eDataType, initialValue);
+			case OntologyPackage.DECOMPOSES_TYPE:
+				return createDecomposesTypeFromString(eDataType, initialValue);
+			case OntologyPackage.CONTRIBUTES_TYPE:
+				return createContributesTypeFromString(eDataType, initialValue);
+			case OntologyPackage.FULFILS_TYPE:
+				return createFulfilsTypeFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public String convertToString(EDataType eDataType, Object instanceValue)
   {
-    switch (eDataType.getClassifierID())
-    {
-      case OntologyPackage.DOMAIN_TYPE:
-        return convertDomainTypeToString(eDataType, instanceValue);
-      case OntologyPackage.DECOMPOSES_TYPE:
-        return convertDecomposesTypeToString(eDataType, instanceValue);
-      case OntologyPackage.CONTRIBUTES_TYPE:
-        return convertContributesTypeToString(eDataType, instanceValue);
-      case OntologyPackage.FULFILS_TYPE:
-        return convertFulfilsTypeToString(eDataType, instanceValue);
-      default:
-        throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-    }
-  }
+		switch (eDataType.getClassifierID()) {
+			case OntologyPackage.DOMAIN_TYPE:
+				return convertDomainTypeToString(eDataType, instanceValue);
+			case OntologyPackage.DECOMPOSES_TYPE:
+				return convertDecomposesTypeToString(eDataType, instanceValue);
+			case OntologyPackage.CONTRIBUTES_TYPE:
+				return convertContributesTypeToString(eDataType, instanceValue);
+			case OntologyPackage.FULFILS_TYPE:
+				return convertFulfilsTypeToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Situation createSituation()
   {
-    SituationImpl situation = new SituationImpl();
-    return situation;
-  }
+		SituationImpl situation = new SituationImpl();
+		return situation;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public World createWorld()
   {
-    WorldImpl world = new WorldImpl();
-    return world;
-  }
+		WorldImpl world = new WorldImpl();
+		return world;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Thing createThing()
   {
-    ThingImpl thing = new ThingImpl();
-    return thing;
-  }
+		ThingImpl thing = new ThingImpl();
+		return thing;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Event createEvent()
   {
-    EventImpl event = new EventImpl();
-    return event;
-  }
+		EventImpl event = new EventImpl();
+		return event;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public eu.securechange.ontology.ontology.Object createObject()
   {
-    ObjectImpl object = new ObjectImpl();
-    return object;
-  }
+		ObjectImpl object = new ObjectImpl();
+		return object;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public PhysicalWorld createPhysicalWorld()
-  {
-    PhysicalWorldImpl physicalWorld = new PhysicalWorldImpl();
-    return physicalWorld;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public BeliefWorld createBeliefWorld()
-  {
-    BeliefWorldImpl beliefWorld = new BeliefWorldImpl();
-    return beliefWorld;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Domain createDomain()
   {
-    DomainImpl domain = new DomainImpl();
-    return domain;
-  }
+		DomainImpl domain = new DomainImpl();
+		return domain;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Proposition createProposition()
   {
-    PropositionImpl proposition = new PropositionImpl();
-    return proposition;
-  }
+		PropositionImpl proposition = new PropositionImpl();
+		return proposition;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Requirement createRequirement()
   {
-    RequirementImpl requirement = new RequirementImpl();
-    return requirement;
-  }
+		RequirementImpl requirement = new RequirementImpl();
+		return requirement;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public DomainAssumption createDomainAssumption()
   {
-    DomainAssumptionImpl domainAssumption = new DomainAssumptionImpl();
-    return domainAssumption;
-  }
+		DomainAssumptionImpl domainAssumption = new DomainAssumptionImpl();
+		return domainAssumption;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public FunctionalRequirement createFunctionalRequirement()
   {
-    FunctionalRequirementImpl functionalRequirement = new FunctionalRequirementImpl();
-    return functionalRequirement;
-  }
+		FunctionalRequirementImpl functionalRequirement = new FunctionalRequirementImpl();
+		return functionalRequirement;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public SecurityRequirement createSecurityRequirement()
   {
-    SecurityRequirementImpl securityRequirement = new SecurityRequirementImpl();
-    return securityRequirement;
-  }
+		SecurityRequirementImpl securityRequirement = new SecurityRequirementImpl();
+		return securityRequirement;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public AntiRequirement createAntiRequirement()
   {
-    AntiRequirementImpl antiRequirement = new AntiRequirementImpl();
-    return antiRequirement;
-  }
+		AntiRequirementImpl antiRequirement = new AntiRequirementImpl();
+		return antiRequirement;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public QualityRequirement createQualityRequirement()
   {
-    QualityRequirementImpl qualityRequirement = new QualityRequirementImpl();
-    return qualityRequirement;
-  }
+		QualityRequirementImpl qualityRequirement = new QualityRequirementImpl();
+		return qualityRequirement;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Argument createArgument()
   {
-    ArgumentImpl argument = new ArgumentImpl();
-    return argument;
-  }
+		ArgumentImpl argument = new ArgumentImpl();
+		return argument;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Entity createEntity()
   {
-    EntityImpl entity = new EntityImpl();
-    return entity;
-  }
+		EntityImpl entity = new EntityImpl();
+		return entity;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Actor createActor()
   {
-    ActorImpl actor = new ActorImpl();
-    return actor;
-  }
+		ActorImpl actor = new ActorImpl();
+		return actor;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Stakeholder createStakeholder()
   {
-    StakeholderImpl stakeholder = new StakeholderImpl();
-    return stakeholder;
-  }
+		StakeholderImpl stakeholder = new StakeholderImpl();
+		return stakeholder;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Attacker createAttacker()
   {
-    AttackerImpl attacker = new AttackerImpl();
-    return attacker;
-  }
+		AttackerImpl attacker = new AttackerImpl();
+		return attacker;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public eu.securechange.ontology.ontology.Process createProcess()
   {
-    ProcessImpl process = new ProcessImpl();
-    return process;
-  }
+		ProcessImpl process = new ProcessImpl();
+		return process;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public NaturalProcess createNaturalProcess()
   {
-    NaturalProcessImpl naturalProcess = new NaturalProcessImpl();
-    return naturalProcess;
-  }
+		NaturalProcessImpl naturalProcess = new NaturalProcessImpl();
+		return naturalProcess;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public HumanActivity createHumanActivity()
   {
-    HumanActivityImpl humanActivity = new HumanActivityImpl();
-    return humanActivity;
-  }
+		HumanActivityImpl humanActivity = new HumanActivityImpl();
+		return humanActivity;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Action createAction()
   {
-    ActionImpl action = new ActionImpl();
-    return action;
-  }
+		ActionImpl action = new ActionImpl();
+		return action;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Resource createResource()
   {
-    ResourceImpl resource = new ResourceImpl();
-    return resource;
-  }
+		ResourceImpl resource = new ResourceImpl();
+		return resource;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Asset createAsset()
   {
-    AssetImpl asset = new AssetImpl();
-    return asset;
-  }
+		AssetImpl asset = new AssetImpl();
+		return asset;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Relationship createRelationship()
   {
-    RelationshipImpl relationship = new RelationshipImpl();
-    return relationship;
-  }
+		RelationshipImpl relationship = new RelationshipImpl();
+		return relationship;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Wants createWants()
   {
-    WantsImpl wants = new WantsImpl();
-    return wants;
-  }
+		WantsImpl wants = new WantsImpl();
+		return wants;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Does createDoes()
   {
-    DoesImpl does = new DoesImpl();
-    return does;
-  }
+		DoesImpl does = new DoesImpl();
+		return does;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Decomposes createDecomposes()
   {
-    DecomposesImpl decomposes = new DecomposesImpl();
-    return decomposes;
-  }
+		DecomposesImpl decomposes = new DecomposesImpl();
+		return decomposes;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Trusts createTrusts()
   {
-    TrustsImpl trusts = new TrustsImpl();
-    return trusts;
-  }
+		TrustsImpl trusts = new TrustsImpl();
+		return trusts;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Delegates createDelegates()
   {
-    DelegatesImpl delegates = new DelegatesImpl();
-    return delegates;
-  }
+		DelegatesImpl delegates = new DelegatesImpl();
+		return delegates;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Contributes createContributes()
   {
-    ContributesImpl contributes = new ContributesImpl();
-    return contributes;
-  }
+		ContributesImpl contributes = new ContributesImpl();
+		return contributes;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Fulfils createFulfils()
   {
-    FulfilsImpl fulfils = new FulfilsImpl();
-    return fulfils;
-  }
+		FulfilsImpl fulfils = new FulfilsImpl();
+		return fulfils;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Provides createProvides()
   {
-    ProvidesImpl provides = new ProvidesImpl();
-    return provides;
-  }
+		ProvidesImpl provides = new ProvidesImpl();
+		return provides;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Consumes createConsumes()
   {
-    ConsumesImpl consumes = new ConsumesImpl();
-    return consumes;
-  }
+		ConsumesImpl consumes = new ConsumesImpl();
+		return consumes;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Exploits createExploits()
   {
-    ExploitsImpl exploits = new ExploitsImpl();
-    return exploits;
-  }
+		ExploitsImpl exploits = new ExploitsImpl();
+		return exploits;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Damages createDamages()
   {
-    DamagesImpl damages = new DamagesImpl();
-    return damages;
-  }
+		DamagesImpl damages = new DamagesImpl();
+		return damages;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Attacks createAttacks()
   {
-    AttacksImpl attacks = new AttacksImpl();
-    return attacks;
-  }
+		AttacksImpl attacks = new AttacksImpl();
+		return attacks;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Argues createArgues()
   {
-    ArguesImpl argues = new ArguesImpl();
-    return argues;
-  }
+		ArguesImpl argues = new ArguesImpl();
+		return argues;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Activity createActivity()
   {
-    ActivityImpl activity = new ActivityImpl();
-    return activity;
-  }
+		ActivityImpl activity = new ActivityImpl();
+		return activity;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public DomainType createDomainTypeFromString(EDataType eDataType, String initialValue)
   {
-    DomainType result = DomainType.get(initialValue);
-    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-    return result;
-  }
+		DomainType result = DomainType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public String convertDomainTypeToString(EDataType eDataType, Object instanceValue)
   {
-    return instanceValue == null ? null : instanceValue.toString();
-  }
+		return instanceValue == null ? null : instanceValue.toString();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public DecomposesType createDecomposesTypeFromString(EDataType eDataType, String initialValue)
   {
-    DecomposesType result = DecomposesType.get(initialValue);
-    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-    return result;
-  }
+		DecomposesType result = DecomposesType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public String convertDecomposesTypeToString(EDataType eDataType, Object instanceValue)
   {
-    return instanceValue == null ? null : instanceValue.toString();
-  }
+		return instanceValue == null ? null : instanceValue.toString();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public ContributesType createContributesTypeFromString(EDataType eDataType, String initialValue)
   {
-    ContributesType result = ContributesType.get(initialValue);
-    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-    return result;
-  }
+		ContributesType result = ContributesType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public String convertContributesTypeToString(EDataType eDataType, Object instanceValue)
   {
-    return instanceValue == null ? null : instanceValue.toString();
-  }
+		return instanceValue == null ? null : instanceValue.toString();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public FulfilsType createFulfilsTypeFromString(EDataType eDataType, String initialValue)
   {
-    FulfilsType result = FulfilsType.get(initialValue);
-    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-    return result;
-  }
+		FulfilsType result = FulfilsType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public String convertFulfilsTypeToString(EDataType eDataType, Object instanceValue)
   {
-    return instanceValue == null ? null : instanceValue.toString();
-  }
+		return instanceValue == null ? null : instanceValue.toString();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public OntologyPackage getOntologyPackage()
   {
-    return (OntologyPackage)getEPackage();
-  }
+		return (OntologyPackage)getEPackage();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @deprecated
-   * @generated
-   */
+	 * @deprecated
+	 * @generated
+	 */
   @Deprecated
   public static OntologyPackage getPackage()
   {
-    return OntologyPackage.eINSTANCE;
-  }
+		return OntologyPackage.eINSTANCE;
+	}
 
 } //OntologyFactoryImpl

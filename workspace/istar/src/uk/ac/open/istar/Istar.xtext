@@ -1,0 +1,67 @@
+grammar uk.ac.open.istar.Istar with org.eclipse.xtext.common.Terminals
+import "platform:/resource/openome_model/model/openome_model.ecore"
+
+Model: {Model}
+  "istar" (name=ID)? ":" 
+    (containers+=Container	
+   | intentions+=Intention
+   | decompositions+=Decomposition
+   | dependencies+=Dependency
+   | contributions+=Contribution
+   | associations+=Association)*
+  ;
+  	
+Container: Actor | Agent | Role | Position;
+
+Actor: "actor" name=ID 
+   (is_a+=[Actor] | is_part_of+=[Actor])*
+   ("{" 
+     (intentions+=Intention)* 
+    "}")?
+;
+Agent: "agent" name=ID
+   ("{" 
+     (intentions+=Intention)* 
+    "}")?
+  ;
+Role: "role" name=ID
+   ("{" 
+     (intentions+=Intention)* 
+    "}")?
+  ;
+Position: "position" name=ID
+   ("{" 
+     (intentions+=Intention)* 
+    "}")?
+  ;
+
+Intention: Goal | Softgoal | Task | Resource | Belief;
+
+Goal: "goal" name=ID 
+ ("{"
+   (decompositions+=[Decomposition])*
+  "}"
+ )?;
+Softgoal: "soft" name=ID;
+Task: "task" name=ID;
+Resource: "resource" name=ID;
+Belief: "belief" name=ID;
+
+Link: Association | Dependency | Decomposition | Contribution;
+Dependable: Intention | Container;
+Association: source=[Container] "~~>" target=[Container];
+Dependency: dependencyFrom=[Dependable] "~>" 
+			dependencyTo=[Dependable];
+Decomposition: AndDecomposition | OrDecomposition;
+AndDecomposition: target=[Intention] "<-(and)-" source=[Intention];
+OrDecomposition: target=[Intention] "<-(or)-" source=[Intention];
+Contribution: AndContribution | OrContribution 
+  | HelpContribution | HurtContribution | MakeContribution | BreakContribution;
+AndContribution: source=[Intention] "-(and)->" target=[Intention];
+OrContribution: source=[Intention] "-(or)->" target=[Intention];
+HelpContribution: source=[Intention] "-(+)->" target=[Intention];
+MakeContribution: source=[Intention] "-(++)->" target=[Intention];
+HurtContribution: source=[Intention] "-(-)->" target=[Intention];
+BreakContribution: source=[Intention] "-(--)->" target=[Intention];
+
+terminal ID: ('#' (!('#'))+ '#') | ('^'? ('a'..'z' | 'A'..'Z' | '_' | '.') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9' | '.')*);

@@ -16,6 +16,7 @@ import org.eclipse.ui.PlatformUI;
  * TODO To change the template for this generated type comment go to
  * Window - Preferences - Java - Code Style - Code Templates
  */
+@SuppressWarnings("deprecation")
 public class App implements IPlatformRunnable {
 
 	public static void main(String[] args) {

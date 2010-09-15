@@ -87,9 +87,9 @@ public class I18n {
 			display.disposeExec(new Runnable() {
 				public void run() {
 					if (fgImageRegistry != null) {
-						Map map= fgImageRegistry;
+						Map<ImageDescriptor, Image> map= fgImageRegistry;
 						fgImageRegistry= null;
-						Iterator e= map.values().iterator();
+						Iterator<Image> e= map.values().iterator();
 						while (e.hasNext()) {
 							Image image= (Image) e.next();
 							if (!image.isDisposed())

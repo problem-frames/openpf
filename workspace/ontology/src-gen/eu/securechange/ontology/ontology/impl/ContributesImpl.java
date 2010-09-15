@@ -35,278 +35,270 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ContributesImpl extends RelationshipImpl implements Contributes
 {
   /**
-   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
-   * @generated
-   * @ordered
-   */
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
   protected static final ContributesType TYPE_EDEFAULT = ContributesType.HURT;
 
   /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
-   * @generated
-   * @ordered
-   */
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
   protected ContributesType type = TYPE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSource()
-   * @generated
-   * @ordered
-   */
+	 * @see #getSource()
+	 * @generated
+	 * @ordered
+	 */
   protected Requirement source;
 
   /**
-   * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTarget()
-   * @generated
-   * @ordered
-   */
+	 * @see #getTarget()
+	 * @generated
+	 * @ordered
+	 */
   protected Requirement target;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected ContributesImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return OntologyPackage.Literals.CONTRIBUTES;
-  }
+		return OntologyPackage.Literals.CONTRIBUTES;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public ContributesType getType()
   {
-    return type;
-  }
+		return type;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setType(ContributesType newType)
   {
-    ContributesType oldType = type;
-    type = newType == null ? TYPE_EDEFAULT : newType;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OntologyPackage.CONTRIBUTES__TYPE, oldType, type));
-  }
+		ContributesType oldType = type;
+		type = newType == null ? TYPE_EDEFAULT : newType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OntologyPackage.CONTRIBUTES__TYPE, oldType, type));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Requirement getSource()
   {
-    if (source != null && source.eIsProxy())
-    {
-      InternalEObject oldSource = (InternalEObject)source;
-      source = (Requirement)eResolveProxy(oldSource);
-      if (source != oldSource)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, OntologyPackage.CONTRIBUTES__SOURCE, oldSource, source));
-      }
-    }
-    return source;
-  }
+		if (source != null && source.eIsProxy()) {
+			InternalEObject oldSource = (InternalEObject)source;
+			source = (Requirement)eResolveProxy(oldSource);
+			if (source != oldSource) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, OntologyPackage.CONTRIBUTES__SOURCE, oldSource, source));
+			}
+		}
+		return source;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Requirement basicGetSource()
   {
-    return source;
-  }
+		return source;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setSource(Requirement newSource)
   {
-    Requirement oldSource = source;
-    source = newSource;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OntologyPackage.CONTRIBUTES__SOURCE, oldSource, source));
-  }
+		Requirement oldSource = source;
+		source = newSource;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OntologyPackage.CONTRIBUTES__SOURCE, oldSource, source));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Requirement getTarget()
   {
-    if (target != null && target.eIsProxy())
-    {
-      InternalEObject oldTarget = (InternalEObject)target;
-      target = (Requirement)eResolveProxy(oldTarget);
-      if (target != oldTarget)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, OntologyPackage.CONTRIBUTES__TARGET, oldTarget, target));
-      }
-    }
-    return target;
-  }
+		if (target != null && target.eIsProxy()) {
+			InternalEObject oldTarget = (InternalEObject)target;
+			target = (Requirement)eResolveProxy(oldTarget);
+			if (target != oldTarget) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, OntologyPackage.CONTRIBUTES__TARGET, oldTarget, target));
+			}
+		}
+		return target;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Requirement basicGetTarget()
   {
-    return target;
-  }
+		return target;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setTarget(Requirement newTarget)
   {
-    Requirement oldTarget = target;
-    target = newTarget;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OntologyPackage.CONTRIBUTES__TARGET, oldTarget, target));
-  }
+		Requirement oldTarget = target;
+		target = newTarget;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OntologyPackage.CONTRIBUTES__TARGET, oldTarget, target));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case OntologyPackage.CONTRIBUTES__TYPE:
-        return getType();
-      case OntologyPackage.CONTRIBUTES__SOURCE:
-        if (resolve) return getSource();
-        return basicGetSource();
-      case OntologyPackage.CONTRIBUTES__TARGET:
-        if (resolve) return getTarget();
-        return basicGetTarget();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case OntologyPackage.CONTRIBUTES__TYPE:
+				return getType();
+			case OntologyPackage.CONTRIBUTES__SOURCE:
+				if (resolve) return getSource();
+				return basicGetSource();
+			case OntologyPackage.CONTRIBUTES__TARGET:
+				if (resolve) return getTarget();
+				return basicGetTarget();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case OntologyPackage.CONTRIBUTES__TYPE:
-        setType((ContributesType)newValue);
-        return;
-      case OntologyPackage.CONTRIBUTES__SOURCE:
-        setSource((Requirement)newValue);
-        return;
-      case OntologyPackage.CONTRIBUTES__TARGET:
-        setTarget((Requirement)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case OntologyPackage.CONTRIBUTES__TYPE:
+				setType((ContributesType)newValue);
+				return;
+			case OntologyPackage.CONTRIBUTES__SOURCE:
+				setSource((Requirement)newValue);
+				return;
+			case OntologyPackage.CONTRIBUTES__TARGET:
+				setTarget((Requirement)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case OntologyPackage.CONTRIBUTES__TYPE:
-        setType(TYPE_EDEFAULT);
-        return;
-      case OntologyPackage.CONTRIBUTES__SOURCE:
-        setSource((Requirement)null);
-        return;
-      case OntologyPackage.CONTRIBUTES__TARGET:
-        setTarget((Requirement)null);
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case OntologyPackage.CONTRIBUTES__TYPE:
+				setType(TYPE_EDEFAULT);
+				return;
+			case OntologyPackage.CONTRIBUTES__SOURCE:
+				setSource((Requirement)null);
+				return;
+			case OntologyPackage.CONTRIBUTES__TARGET:
+				setTarget((Requirement)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case OntologyPackage.CONTRIBUTES__TYPE:
-        return type != TYPE_EDEFAULT;
-      case OntologyPackage.CONTRIBUTES__SOURCE:
-        return source != null;
-      case OntologyPackage.CONTRIBUTES__TARGET:
-        return target != null;
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case OntologyPackage.CONTRIBUTES__TYPE:
+				return type != TYPE_EDEFAULT;
+			case OntologyPackage.CONTRIBUTES__SOURCE:
+				return source != null;
+			case OntologyPackage.CONTRIBUTES__TARGET:
+				return target != null;
+		}
+		return super.eIsSet(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public String toString()
   {
-    if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (type: ");
-    result.append(type);
-    result.append(')');
-    return result.toString();
-  }
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (type: ");
+		result.append(type);
+		result.append(')');
+		return result.toString();
+	}
 
 } //ContributesImpl

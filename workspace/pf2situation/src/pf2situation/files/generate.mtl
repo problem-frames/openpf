@@ -15,24 +15,50 @@ model [d.name.toString()/]:
    resource [dom.name/]
    [/if]
    [if (dom.type.toString() ='D')]      
-   process [dom.name/]
+   activity [dom.name/]
    [/if]
    [if (dom.type.toString() ='P')]      
    process [dom.name/]
    [/if]
    [if (dom.type.toString() ='M')]      
-   process [dom.name/]
+   activity [dom.name/]
    [/if]
 [/for]
 Requirements R [if (d.nodes->select(dom: Node | dom.type.toString()='R')-> size() >0) ]
- FR [d.nodes->select(dom: Node | dom.type.toString()='R')->collect(name)->sep(',\n   FR')/] [/if]
+ FR [d.nodes->select(dom: Node | dom.type.toString()='R')->collect(name)->sep(',\n   FR')/]
+ [/if]
 [for (dom: Node | d.nodes)]
    [if (dom.type.toString() ='M')]
-wants(System, [dom.name/])
+does(System, [dom.name/])
  [for (name: String| d.nodes->select(dom: Node | dom.type.toString()='R')->collect(name))]
 fulfils([dom.name/], [name/]) 
  [/for]
    [/if]
 [/for]      
+[for (link: Link | d.links)]
+   [if (link.type.toString() ='--')]
+[if (link.phenomena->size()=0)]
+[if (link.from.type='B' and link.to.type='B')]  
+delegates([link.from.name/], [link.to.name/])
+[else]
+   resource [link.from.name/][link.to.name/]Interface
+provides([link.from.name/], [link.from.name/][link.to.name/]Interface)
+consumes([link.to.name/], [link.from.name/][link.to.name/]Interface)
+[/if]
+[else]
+[if (link.from.type='B' and link.to.type='B')]  
+ [for (phenomenon: Phenomenon | link.phenomena)]
+delegates([link.from.name/], [link.to.name/], [phenomenon.name/])
+ [/for]
+[else]
+ [for (phenomenon: Phenomenon | link.phenomena)]
+provides([link.from.name/], [phenomenon.name/])
+consumes([link.to.name/], [phenomenon.name/])
+ [/for]
+[/if]
+[/if]
+   [/if]
+[/for]      
+
 [/file]	
 [/template]

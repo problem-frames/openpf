@@ -24,24 +24,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class ThingImpl extends MinimalEObjectImpl.Container implements Thing
 {
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected ThingImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return OntologyPackage.Literals.THING;
-  }
+		return OntologyPackage.Literals.THING;
+	}
 
 } //ThingImpl

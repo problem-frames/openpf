@@ -17,6 +17,7 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 /**
  * The main plugin class to be used in the desktop.
  */
+@SuppressWarnings("deprecation")
 public class Plugin extends AbstractUIPlugin implements IStartup {
 	private static Plugin plugin;
 	private static boolean prefsInit = false;
@@ -27,7 +28,7 @@ public class Plugin extends AbstractUIPlugin implements IStartup {
             resources = ResourceBundle.getBundle("core", 
             		Locale.getDefault(),
             		Plugin.class.getClassLoader());
-            for (Enumeration i = resources.getKeys(); i.hasMoreElements(); ) {
+            for (Enumeration<?> i = resources.getKeys(); i.hasMoreElements(); ) {
             	String key = (String)i.nextElement();
             	String val = resources.getString(key);
             	System.setProperty(IConstants.PREFIX + key, val);

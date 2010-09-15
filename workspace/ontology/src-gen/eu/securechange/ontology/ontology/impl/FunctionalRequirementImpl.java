@@ -22,24 +22,24 @@ import org.eclipse.emf.ecore.EClass;
 public class FunctionalRequirementImpl extends RequirementImpl implements FunctionalRequirement
 {
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected FunctionalRequirementImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return OntologyPackage.Literals.FUNCTIONAL_REQUIREMENT;
-  }
+		return OntologyPackage.Literals.FUNCTIONAL_REQUIREMENT;
+	}
 
 } //FunctionalRequirementImpl

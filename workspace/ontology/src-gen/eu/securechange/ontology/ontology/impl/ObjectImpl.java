@@ -21,24 +21,24 @@ import org.eclipse.emf.ecore.EClass;
 public class ObjectImpl extends ThingImpl implements eu.securechange.ontology.ontology.Object
 {
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected ObjectImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return OntologyPackage.Literals.OBJECT;
-  }
+		return OntologyPackage.Literals.OBJECT;
+	}
 
 } //ObjectImpl

@@ -34,278 +34,270 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ArguesImpl extends RelationshipImpl implements Argues
 {
   /**
-   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
-   * @generated
-   * @ordered
-   */
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
   protected static final String TYPE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
-   * @generated
-   * @ordered
-   */
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
   protected String type = TYPE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSource()
-   * @generated
-   * @ordered
-   */
+	 * @see #getSource()
+	 * @generated
+	 * @ordered
+	 */
   protected Proposition source;
 
   /**
-   * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTarget()
-   * @generated
-   * @ordered
-   */
+	 * @see #getTarget()
+	 * @generated
+	 * @ordered
+	 */
   protected Proposition target;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected ArguesImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return OntologyPackage.Literals.ARGUES;
-  }
+		return OntologyPackage.Literals.ARGUES;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public String getType()
   {
-    return type;
-  }
+		return type;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setType(String newType)
   {
-    String oldType = type;
-    type = newType;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OntologyPackage.ARGUES__TYPE, oldType, type));
-  }
+		String oldType = type;
+		type = newType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OntologyPackage.ARGUES__TYPE, oldType, type));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Proposition getSource()
   {
-    if (source != null && source.eIsProxy())
-    {
-      InternalEObject oldSource = (InternalEObject)source;
-      source = (Proposition)eResolveProxy(oldSource);
-      if (source != oldSource)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, OntologyPackage.ARGUES__SOURCE, oldSource, source));
-      }
-    }
-    return source;
-  }
+		if (source != null && source.eIsProxy()) {
+			InternalEObject oldSource = (InternalEObject)source;
+			source = (Proposition)eResolveProxy(oldSource);
+			if (source != oldSource) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, OntologyPackage.ARGUES__SOURCE, oldSource, source));
+			}
+		}
+		return source;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Proposition basicGetSource()
   {
-    return source;
-  }
+		return source;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setSource(Proposition newSource)
   {
-    Proposition oldSource = source;
-    source = newSource;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OntologyPackage.ARGUES__SOURCE, oldSource, source));
-  }
+		Proposition oldSource = source;
+		source = newSource;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OntologyPackage.ARGUES__SOURCE, oldSource, source));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Proposition getTarget()
   {
-    if (target != null && target.eIsProxy())
-    {
-      InternalEObject oldTarget = (InternalEObject)target;
-      target = (Proposition)eResolveProxy(oldTarget);
-      if (target != oldTarget)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, OntologyPackage.ARGUES__TARGET, oldTarget, target));
-      }
-    }
-    return target;
-  }
+		if (target != null && target.eIsProxy()) {
+			InternalEObject oldTarget = (InternalEObject)target;
+			target = (Proposition)eResolveProxy(oldTarget);
+			if (target != oldTarget) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, OntologyPackage.ARGUES__TARGET, oldTarget, target));
+			}
+		}
+		return target;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Proposition basicGetTarget()
   {
-    return target;
-  }
+		return target;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setTarget(Proposition newTarget)
   {
-    Proposition oldTarget = target;
-    target = newTarget;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OntologyPackage.ARGUES__TARGET, oldTarget, target));
-  }
+		Proposition oldTarget = target;
+		target = newTarget;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OntologyPackage.ARGUES__TARGET, oldTarget, target));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case OntologyPackage.ARGUES__TYPE:
-        return getType();
-      case OntologyPackage.ARGUES__SOURCE:
-        if (resolve) return getSource();
-        return basicGetSource();
-      case OntologyPackage.ARGUES__TARGET:
-        if (resolve) return getTarget();
-        return basicGetTarget();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case OntologyPackage.ARGUES__TYPE:
+				return getType();
+			case OntologyPackage.ARGUES__SOURCE:
+				if (resolve) return getSource();
+				return basicGetSource();
+			case OntologyPackage.ARGUES__TARGET:
+				if (resolve) return getTarget();
+				return basicGetTarget();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case OntologyPackage.ARGUES__TYPE:
-        setType((String)newValue);
-        return;
-      case OntologyPackage.ARGUES__SOURCE:
-        setSource((Proposition)newValue);
-        return;
-      case OntologyPackage.ARGUES__TARGET:
-        setTarget((Proposition)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case OntologyPackage.ARGUES__TYPE:
+				setType((String)newValue);
+				return;
+			case OntologyPackage.ARGUES__SOURCE:
+				setSource((Proposition)newValue);
+				return;
+			case OntologyPackage.ARGUES__TARGET:
+				setTarget((Proposition)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case OntologyPackage.ARGUES__TYPE:
-        setType(TYPE_EDEFAULT);
-        return;
-      case OntologyPackage.ARGUES__SOURCE:
-        setSource((Proposition)null);
-        return;
-      case OntologyPackage.ARGUES__TARGET:
-        setTarget((Proposition)null);
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case OntologyPackage.ARGUES__TYPE:
+				setType(TYPE_EDEFAULT);
+				return;
+			case OntologyPackage.ARGUES__SOURCE:
+				setSource((Proposition)null);
+				return;
+			case OntologyPackage.ARGUES__TARGET:
+				setTarget((Proposition)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case OntologyPackage.ARGUES__TYPE:
-        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-      case OntologyPackage.ARGUES__SOURCE:
-        return source != null;
-      case OntologyPackage.ARGUES__TARGET:
-        return target != null;
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case OntologyPackage.ARGUES__TYPE:
+				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+			case OntologyPackage.ARGUES__SOURCE:
+				return source != null;
+			case OntologyPackage.ARGUES__TARGET:
+				return target != null;
+		}
+		return super.eIsSet(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public String toString()
   {
-    if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (type: ");
-    result.append(type);
-    result.append(')');
-    return result.toString();
-  }
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (type: ");
+		result.append(type);
+		result.append(')');
+		return result.toString();
+	}
 
 } //ArguesImpl

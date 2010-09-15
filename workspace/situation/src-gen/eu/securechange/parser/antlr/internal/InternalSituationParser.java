@@ -787,26 +787,24 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleDomain
-    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:376:1: ruleDomain returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleDomainType ) ) ( (lv_properties_2_0= ruleEntity ) ) ( ',' ( (lv_properties_4_0= ruleEntity ) ) )* ) ;
+    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:376:1: ruleDomain returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleDomainType ) ) ( ( ',' )? ( (lv_properties_3_0= ruleEntity ) ) )* ) ;
     public final EObject ruleDomain() throws RecognitionException {
         EObject current = null;
 
         Token lv_name_0_0=null;
         Enumerator lv_type_1_0 = null;
 
-        EObject lv_properties_2_0 = null;
-
-        EObject lv_properties_4_0 = null;
+        EObject lv_properties_3_0 = null;
 
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:381:6: ( ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleDomainType ) ) ( (lv_properties_2_0= ruleEntity ) ) ( ',' ( (lv_properties_4_0= ruleEntity ) ) )* ) )
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:382:1: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleDomainType ) ) ( (lv_properties_2_0= ruleEntity ) ) ( ',' ( (lv_properties_4_0= ruleEntity ) ) )* )
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:381:6: ( ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleDomainType ) ) ( ( ',' )? ( (lv_properties_3_0= ruleEntity ) ) )* ) )
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:382:1: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleDomainType ) ) ( ( ',' )? ( (lv_properties_3_0= ruleEntity ) ) )* )
             {
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:382:1: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleDomainType ) ) ( (lv_properties_2_0= ruleEntity ) ) ( ',' ( (lv_properties_4_0= ruleEntity ) ) )* )
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:382:2: ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleDomainType ) ) ( (lv_properties_2_0= ruleEntity ) ) ( ',' ( (lv_properties_4_0= ruleEntity ) ) )*
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:382:1: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleDomainType ) ) ( ( ',' )? ( (lv_properties_3_0= ruleEntity ) ) )* )
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:382:2: ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleDomainType ) ) ( ( ',' )? ( (lv_properties_3_0= ruleEntity ) ) )*
             {
             // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:382:2: ( (lv_name_0_0= RULE_ID ) )
             // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:383:1: (lv_name_0_0= RULE_ID )
@@ -877,72 +875,209 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:430:2: ( (lv_properties_2_0= ruleEntity ) )
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:431:1: (lv_properties_2_0= ruleEntity )
-            {
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:431:1: (lv_properties_2_0= ruleEntity )
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:432:3: lv_properties_2_0= ruleEntity
-            {
-             
-            	        currentNode=createCompositeNode(grammarAccess.getDomainAccess().getPropertiesEntityParserRuleCall_2_0(), currentNode); 
-            	    
-            pushFollow(FOLLOW_ruleEntity_in_ruleDomain730);
-            lv_properties_2_0=ruleEntity();
-            _fsp--;
-
-
-            	        if (current==null) {
-            	            current = factory.create(grammarAccess.getDomainRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode.getParent(), current);
-            	        }
-            	        try {
-            	       		add(
-            	       			current, 
-            	       			"properties",
-            	        		lv_properties_2_0, 
-            	        		"Entity", 
-            	        		currentNode);
-            	        } catch (ValueConverterException vce) {
-            				handleValueConverterException(vce);
-            	        }
-            	        currentNode = currentNode.getParent();
-            	    
-
-            }
-
-
-            }
-
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:454:2: ( ',' ( (lv_properties_4_0= ruleEntity ) ) )*
-            loop4:
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:430:2: ( ( ',' )? ( (lv_properties_3_0= ruleEntity ) ) )*
+            loop5:
             do {
-                int alt4=2;
-                int LA4_0 = input.LA(1);
+                int alt5=2;
+                switch ( input.LA(1) ) {
+                case 16:
+                    {
+                    int LA5_2 = input.LA(2);
 
-                if ( (LA4_0==14) ) {
-                    alt4=1;
+                    if ( (LA5_2==RULE_ID) ) {
+                        alt5=1;
+                    }
+
+
+                    }
+                    break;
+                case 17:
+                    {
+                    int LA5_3 = input.LA(2);
+
+                    if ( (LA5_3==RULE_ID) ) {
+                        alt5=1;
+                    }
+
+
+                    }
+                    break;
+                case 18:
+                    {
+                    int LA5_4 = input.LA(2);
+
+                    if ( (LA5_4==RULE_ID) ) {
+                        alt5=1;
+                    }
+
+
+                    }
+                    break;
+                case 19:
+                    {
+                    int LA5_5 = input.LA(2);
+
+                    if ( (LA5_5==RULE_ID) ) {
+                        alt5=1;
+                    }
+
+
+                    }
+                    break;
+                case 20:
+                    {
+                    int LA5_6 = input.LA(2);
+
+                    if ( (LA5_6==RULE_ID) ) {
+                        alt5=1;
+                    }
+
+
+                    }
+                    break;
+                case 21:
+                    {
+                    int LA5_7 = input.LA(2);
+
+                    if ( (LA5_7==RULE_ID) ) {
+                        alt5=1;
+                    }
+
+
+                    }
+                    break;
+                case 22:
+                    {
+                    int LA5_8 = input.LA(2);
+
+                    if ( (LA5_8==RULE_ID) ) {
+                        alt5=1;
+                    }
+
+
+                    }
+                    break;
+                case 23:
+                    {
+                    int LA5_9 = input.LA(2);
+
+                    if ( (LA5_9==RULE_ID) ) {
+                        alt5=1;
+                    }
+
+
+                    }
+                    break;
+                case 24:
+                    {
+                    int LA5_10 = input.LA(2);
+
+                    if ( (LA5_10==RULE_ID) ) {
+                        alt5=1;
+                    }
+
+
+                    }
+                    break;
+                case 25:
+                    {
+                    int LA5_11 = input.LA(2);
+
+                    if ( (LA5_11==RULE_ID) ) {
+                        alt5=1;
+                    }
+
+
+                    }
+                    break;
+                case 26:
+                    {
+                    int LA5_12 = input.LA(2);
+
+                    if ( (LA5_12==RULE_ID) ) {
+                        alt5=1;
+                    }
+
+
+                    }
+                    break;
+                case 27:
+                    {
+                    int LA5_13 = input.LA(2);
+
+                    if ( (LA5_13==RULE_ID) ) {
+                        alt5=1;
+                    }
+
+
+                    }
+                    break;
+                case 28:
+                    {
+                    int LA5_14 = input.LA(2);
+
+                    if ( (LA5_14==RULE_ID) ) {
+                        alt5=1;
+                    }
+
+
+                    }
+                    break;
+                case 29:
+                    {
+                    int LA5_15 = input.LA(2);
+
+                    if ( (LA5_15==RULE_ID) ) {
+                        alt5=1;
+                    }
+
+
+                    }
+                    break;
+                case 14:
+                    {
+                    alt5=1;
+                    }
+                    break;
+
                 }
 
-
-                switch (alt4) {
+                switch (alt5) {
             	case 1 :
-            	    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:454:4: ',' ( (lv_properties_4_0= ruleEntity ) )
+            	    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:430:3: ( ',' )? ( (lv_properties_3_0= ruleEntity ) )
             	    {
-            	    match(input,14,FOLLOW_14_in_ruleDomain741); 
+            	    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:430:3: ( ',' )?
+            	    int alt4=2;
+            	    int LA4_0 = input.LA(1);
 
-            	            createLeafNode(grammarAccess.getDomainAccess().getCommaKeyword_3_0(), null); 
-            	        
-            	    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:458:1: ( (lv_properties_4_0= ruleEntity ) )
-            	    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:459:1: (lv_properties_4_0= ruleEntity )
+            	    if ( (LA4_0==14) ) {
+            	        alt4=1;
+            	    }
+            	    switch (alt4) {
+            	        case 1 :
+            	            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:430:5: ','
+            	            {
+            	            match(input,14,FOLLOW_14_in_ruleDomain721); 
+
+            	                    createLeafNode(grammarAccess.getDomainAccess().getCommaKeyword_2_0(), null); 
+            	                
+
+            	            }
+            	            break;
+
+            	    }
+
+            	    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:434:3: ( (lv_properties_3_0= ruleEntity ) )
+            	    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:435:1: (lv_properties_3_0= ruleEntity )
             	    {
-            	    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:459:1: (lv_properties_4_0= ruleEntity )
-            	    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:460:3: lv_properties_4_0= ruleEntity
+            	    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:435:1: (lv_properties_3_0= ruleEntity )
+            	    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:436:3: lv_properties_3_0= ruleEntity
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getDomainAccess().getPropertiesEntityParserRuleCall_3_1_0(), currentNode); 
+            	    	        currentNode=createCompositeNode(grammarAccess.getDomainAccess().getPropertiesEntityParserRuleCall_2_1_0(), currentNode); 
             	    	    
-            	    pushFollow(FOLLOW_ruleEntity_in_ruleDomain762);
-            	    lv_properties_4_0=ruleEntity();
+            	    pushFollow(FOLLOW_ruleEntity_in_ruleDomain744);
+            	    lv_properties_3_0=ruleEntity();
             	    _fsp--;
 
 
@@ -954,7 +1089,7 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
             	    	       		add(
             	    	       			current, 
             	    	       			"properties",
-            	    	        		lv_properties_4_0, 
+            	    	        		lv_properties_3_0, 
             	    	        		"Entity", 
             	    	        		currentNode);
             	    	        } catch (ValueConverterException vce) {
@@ -973,7 +1108,7 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop4;
+            	    break loop5;
                 }
             } while (true);
 
@@ -1000,103 +1135,103 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleEntityType
-    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:490:1: ruleEntityType returns [Enumerator current=null] : ( ( 'DA' ) | ( 'FR' ) | ( 'SR' ) | ( 'AR' ) | ( 'Q' ) | ( 'A' ) | ( 'actor' ) | ( 'action' ) | ( 'attacker' ) | ( 'process' ) | ( 'activity' ) | ( 'resource' ) | ( 'asset' ) | ( 'event' ) ) ;
+    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:466:1: ruleEntityType returns [Enumerator current=null] : ( ( 'DA' ) | ( 'FR' ) | ( 'SR' ) | ( 'AR' ) | ( 'Q' ) | ( 'A' ) | ( 'actor' ) | ( 'action' ) | ( 'attacker' ) | ( 'process' ) | ( 'activity' ) | ( 'resource' ) | ( 'asset' ) | ( 'event' ) ) ;
     public final Enumerator ruleEntityType() throws RecognitionException {
         Enumerator current = null;
 
          setCurrentLookahead(); resetLookahead(); 
         try {
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:494:6: ( ( ( 'DA' ) | ( 'FR' ) | ( 'SR' ) | ( 'AR' ) | ( 'Q' ) | ( 'A' ) | ( 'actor' ) | ( 'action' ) | ( 'attacker' ) | ( 'process' ) | ( 'activity' ) | ( 'resource' ) | ( 'asset' ) | ( 'event' ) ) )
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:495:1: ( ( 'DA' ) | ( 'FR' ) | ( 'SR' ) | ( 'AR' ) | ( 'Q' ) | ( 'A' ) | ( 'actor' ) | ( 'action' ) | ( 'attacker' ) | ( 'process' ) | ( 'activity' ) | ( 'resource' ) | ( 'asset' ) | ( 'event' ) )
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:470:6: ( ( ( 'DA' ) | ( 'FR' ) | ( 'SR' ) | ( 'AR' ) | ( 'Q' ) | ( 'A' ) | ( 'actor' ) | ( 'action' ) | ( 'attacker' ) | ( 'process' ) | ( 'activity' ) | ( 'resource' ) | ( 'asset' ) | ( 'event' ) ) )
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:471:1: ( ( 'DA' ) | ( 'FR' ) | ( 'SR' ) | ( 'AR' ) | ( 'Q' ) | ( 'A' ) | ( 'actor' ) | ( 'action' ) | ( 'attacker' ) | ( 'process' ) | ( 'activity' ) | ( 'resource' ) | ( 'asset' ) | ( 'event' ) )
             {
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:495:1: ( ( 'DA' ) | ( 'FR' ) | ( 'SR' ) | ( 'AR' ) | ( 'Q' ) | ( 'A' ) | ( 'actor' ) | ( 'action' ) | ( 'attacker' ) | ( 'process' ) | ( 'activity' ) | ( 'resource' ) | ( 'asset' ) | ( 'event' ) )
-            int alt5=14;
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:471:1: ( ( 'DA' ) | ( 'FR' ) | ( 'SR' ) | ( 'AR' ) | ( 'Q' ) | ( 'A' ) | ( 'actor' ) | ( 'action' ) | ( 'attacker' ) | ( 'process' ) | ( 'activity' ) | ( 'resource' ) | ( 'asset' ) | ( 'event' ) )
+            int alt6=14;
             switch ( input.LA(1) ) {
             case 16:
                 {
-                alt5=1;
+                alt6=1;
                 }
                 break;
             case 17:
                 {
-                alt5=2;
+                alt6=2;
                 }
                 break;
             case 18:
                 {
-                alt5=3;
+                alt6=3;
                 }
                 break;
             case 19:
                 {
-                alt5=4;
+                alt6=4;
                 }
                 break;
             case 20:
                 {
-                alt5=5;
+                alt6=5;
                 }
                 break;
             case 21:
                 {
-                alt5=6;
+                alt6=6;
                 }
                 break;
             case 22:
                 {
-                alt5=7;
+                alt6=7;
                 }
                 break;
             case 23:
                 {
-                alt5=8;
+                alt6=8;
                 }
                 break;
             case 24:
                 {
-                alt5=9;
+                alt6=9;
                 }
                 break;
             case 25:
                 {
-                alt5=10;
+                alt6=10;
                 }
                 break;
             case 26:
                 {
-                alt5=11;
+                alt6=11;
                 }
                 break;
             case 27:
                 {
-                alt5=12;
+                alt6=12;
                 }
                 break;
             case 28:
                 {
-                alt5=13;
+                alt6=13;
                 }
                 break;
             case 29:
                 {
-                alt5=14;
+                alt6=14;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("495:1: ( ( 'DA' ) | ( 'FR' ) | ( 'SR' ) | ( 'AR' ) | ( 'Q' ) | ( 'A' ) | ( 'actor' ) | ( 'action' ) | ( 'attacker' ) | ( 'process' ) | ( 'activity' ) | ( 'resource' ) | ( 'asset' ) | ( 'event' ) )", 5, 0, input);
+                    new NoViableAltException("471:1: ( ( 'DA' ) | ( 'FR' ) | ( 'SR' ) | ( 'AR' ) | ( 'Q' ) | ( 'A' ) | ( 'actor' ) | ( 'action' ) | ( 'attacker' ) | ( 'process' ) | ( 'activity' ) | ( 'resource' ) | ( 'asset' ) | ( 'event' ) )", 6, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt5) {
+            switch (alt6) {
                 case 1 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:495:2: ( 'DA' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:471:2: ( 'DA' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:495:2: ( 'DA' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:495:4: 'DA'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:471:2: ( 'DA' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:471:4: 'DA'
                     {
-                    match(input,16,FOLLOW_16_in_ruleEntityType812); 
+                    match(input,16,FOLLOW_16_in_ruleEntityType794); 
 
                             current = grammarAccess.getEntityTypeAccess().getDomainAssumptionEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getEntityTypeAccess().getDomainAssumptionEnumLiteralDeclaration_0(), null); 
@@ -1108,12 +1243,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:501:6: ( 'FR' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:477:6: ( 'FR' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:501:6: ( 'FR' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:501:8: 'FR'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:477:6: ( 'FR' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:477:8: 'FR'
                     {
-                    match(input,17,FOLLOW_17_in_ruleEntityType827); 
+                    match(input,17,FOLLOW_17_in_ruleEntityType809); 
 
                             current = grammarAccess.getEntityTypeAccess().getFunctionEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getEntityTypeAccess().getFunctionEnumLiteralDeclaration_1(), null); 
@@ -1125,12 +1260,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:507:6: ( 'SR' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:483:6: ( 'SR' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:507:6: ( 'SR' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:507:8: 'SR'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:483:6: ( 'SR' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:483:8: 'SR'
                     {
-                    match(input,18,FOLLOW_18_in_ruleEntityType842); 
+                    match(input,18,FOLLOW_18_in_ruleEntityType824); 
 
                             current = grammarAccess.getEntityTypeAccess().getSecurityEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getEntityTypeAccess().getSecurityEnumLiteralDeclaration_2(), null); 
@@ -1142,12 +1277,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:513:6: ( 'AR' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:489:6: ( 'AR' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:513:6: ( 'AR' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:513:8: 'AR'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:489:6: ( 'AR' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:489:8: 'AR'
                     {
-                    match(input,19,FOLLOW_19_in_ruleEntityType857); 
+                    match(input,19,FOLLOW_19_in_ruleEntityType839); 
 
                             current = grammarAccess.getEntityTypeAccess().getAntiEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getEntityTypeAccess().getAntiEnumLiteralDeclaration_3(), null); 
@@ -1159,12 +1294,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:519:6: ( 'Q' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:495:6: ( 'Q' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:519:6: ( 'Q' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:519:8: 'Q'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:495:6: ( 'Q' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:495:8: 'Q'
                     {
-                    match(input,20,FOLLOW_20_in_ruleEntityType872); 
+                    match(input,20,FOLLOW_20_in_ruleEntityType854); 
 
                             current = grammarAccess.getEntityTypeAccess().getQualityPropositionEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getEntityTypeAccess().getQualityPropositionEnumLiteralDeclaration_4(), null); 
@@ -1176,12 +1311,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:525:6: ( 'A' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:501:6: ( 'A' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:525:6: ( 'A' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:525:8: 'A'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:501:6: ( 'A' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:501:8: 'A'
                     {
-                    match(input,21,FOLLOW_21_in_ruleEntityType887); 
+                    match(input,21,FOLLOW_21_in_ruleEntityType869); 
 
                             current = grammarAccess.getEntityTypeAccess().getArgumentEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getEntityTypeAccess().getArgumentEnumLiteralDeclaration_5(), null); 
@@ -1193,12 +1328,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:531:6: ( 'actor' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:507:6: ( 'actor' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:531:6: ( 'actor' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:531:8: 'actor'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:507:6: ( 'actor' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:507:8: 'actor'
                     {
-                    match(input,22,FOLLOW_22_in_ruleEntityType902); 
+                    match(input,22,FOLLOW_22_in_ruleEntityType884); 
 
                             current = grammarAccess.getEntityTypeAccess().getActorEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getEntityTypeAccess().getActorEnumLiteralDeclaration_6(), null); 
@@ -1210,12 +1345,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:537:6: ( 'action' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:513:6: ( 'action' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:537:6: ( 'action' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:537:8: 'action'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:513:6: ( 'action' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:513:8: 'action'
                     {
-                    match(input,23,FOLLOW_23_in_ruleEntityType917); 
+                    match(input,23,FOLLOW_23_in_ruleEntityType899); 
 
                             current = grammarAccess.getEntityTypeAccess().getActionEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getEntityTypeAccess().getActionEnumLiteralDeclaration_7(), null); 
@@ -1227,12 +1362,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:543:6: ( 'attacker' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:519:6: ( 'attacker' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:543:6: ( 'attacker' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:543:8: 'attacker'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:519:6: ( 'attacker' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:519:8: 'attacker'
                     {
-                    match(input,24,FOLLOW_24_in_ruleEntityType932); 
+                    match(input,24,FOLLOW_24_in_ruleEntityType914); 
 
                             current = grammarAccess.getEntityTypeAccess().getAttackerEnumLiteralDeclaration_8().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getEntityTypeAccess().getAttackerEnumLiteralDeclaration_8(), null); 
@@ -1244,12 +1379,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:549:6: ( 'process' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:525:6: ( 'process' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:549:6: ( 'process' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:549:8: 'process'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:525:6: ( 'process' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:525:8: 'process'
                     {
-                    match(input,25,FOLLOW_25_in_ruleEntityType947); 
+                    match(input,25,FOLLOW_25_in_ruleEntityType929); 
 
                             current = grammarAccess.getEntityTypeAccess().getProcessEnumLiteralDeclaration_9().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getEntityTypeAccess().getProcessEnumLiteralDeclaration_9(), null); 
@@ -1261,12 +1396,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 11 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:555:6: ( 'activity' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:531:6: ( 'activity' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:555:6: ( 'activity' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:555:8: 'activity'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:531:6: ( 'activity' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:531:8: 'activity'
                     {
-                    match(input,26,FOLLOW_26_in_ruleEntityType962); 
+                    match(input,26,FOLLOW_26_in_ruleEntityType944); 
 
                             current = grammarAccess.getEntityTypeAccess().getActivityEnumLiteralDeclaration_10().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getEntityTypeAccess().getActivityEnumLiteralDeclaration_10(), null); 
@@ -1278,12 +1413,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 12 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:561:6: ( 'resource' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:537:6: ( 'resource' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:561:6: ( 'resource' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:561:8: 'resource'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:537:6: ( 'resource' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:537:8: 'resource'
                     {
-                    match(input,27,FOLLOW_27_in_ruleEntityType977); 
+                    match(input,27,FOLLOW_27_in_ruleEntityType959); 
 
                             current = grammarAccess.getEntityTypeAccess().getResourceEnumLiteralDeclaration_11().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getEntityTypeAccess().getResourceEnumLiteralDeclaration_11(), null); 
@@ -1295,12 +1430,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 13 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:567:6: ( 'asset' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:543:6: ( 'asset' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:567:6: ( 'asset' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:567:8: 'asset'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:543:6: ( 'asset' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:543:8: 'asset'
                     {
-                    match(input,28,FOLLOW_28_in_ruleEntityType992); 
+                    match(input,28,FOLLOW_28_in_ruleEntityType974); 
 
                             current = grammarAccess.getEntityTypeAccess().getAssetEnumLiteralDeclaration_12().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getEntityTypeAccess().getAssetEnumLiteralDeclaration_12(), null); 
@@ -1312,12 +1447,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 14 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:573:6: ( 'event' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:549:6: ( 'event' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:573:6: ( 'event' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:573:8: 'event'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:549:6: ( 'event' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:549:8: 'event'
                     {
-                    match(input,29,FOLLOW_29_in_ruleEntityType1007); 
+                    match(input,29,FOLLOW_29_in_ruleEntityType989); 
 
                             current = grammarAccess.getEntityTypeAccess().getEventEnumLiteralDeclaration_13().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getEntityTypeAccess().getEventEnumLiteralDeclaration_13(), null); 
@@ -1351,48 +1486,48 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleDomainType
-    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:583:1: ruleDomainType returns [Enumerator current=null] : ( ( 'S' ) | ( 'R' ) | ( 'W' ) ) ;
+    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:559:1: ruleDomainType returns [Enumerator current=null] : ( ( 'S' ) | ( 'R' ) | ( 'W' ) ) ;
     public final Enumerator ruleDomainType() throws RecognitionException {
         Enumerator current = null;
 
          setCurrentLookahead(); resetLookahead(); 
         try {
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:587:6: ( ( ( 'S' ) | ( 'R' ) | ( 'W' ) ) )
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:588:1: ( ( 'S' ) | ( 'R' ) | ( 'W' ) )
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:563:6: ( ( ( 'S' ) | ( 'R' ) | ( 'W' ) ) )
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:564:1: ( ( 'S' ) | ( 'R' ) | ( 'W' ) )
             {
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:588:1: ( ( 'S' ) | ( 'R' ) | ( 'W' ) )
-            int alt6=3;
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:564:1: ( ( 'S' ) | ( 'R' ) | ( 'W' ) )
+            int alt7=3;
             switch ( input.LA(1) ) {
             case 30:
                 {
-                alt6=1;
+                alt7=1;
                 }
                 break;
             case 31:
                 {
-                alt6=2;
+                alt7=2;
                 }
                 break;
             case 32:
                 {
-                alt6=3;
+                alt7=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("588:1: ( ( 'S' ) | ( 'R' ) | ( 'W' ) )", 6, 0, input);
+                    new NoViableAltException("564:1: ( ( 'S' ) | ( 'R' ) | ( 'W' ) )", 7, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt6) {
+            switch (alt7) {
                 case 1 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:588:2: ( 'S' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:564:2: ( 'S' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:588:2: ( 'S' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:588:4: 'S'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:564:2: ( 'S' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:564:4: 'S'
                     {
-                    match(input,30,FOLLOW_30_in_ruleDomainType1050); 
+                    match(input,30,FOLLOW_30_in_ruleDomainType1032); 
 
                             current = grammarAccess.getDomainTypeAccess().getSpecificationEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getDomainTypeAccess().getSpecificationEnumLiteralDeclaration_0(), null); 
@@ -1404,12 +1539,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:594:6: ( 'R' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:570:6: ( 'R' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:594:6: ( 'R' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:594:8: 'R'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:570:6: ( 'R' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:570:8: 'R'
                     {
-                    match(input,31,FOLLOW_31_in_ruleDomainType1065); 
+                    match(input,31,FOLLOW_31_in_ruleDomainType1047); 
 
                             current = grammarAccess.getDomainTypeAccess().getRequirementEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getDomainTypeAccess().getRequirementEnumLiteralDeclaration_1(), null); 
@@ -1421,12 +1556,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:600:6: ( 'W' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:576:6: ( 'W' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:600:6: ( 'W' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:600:8: 'W'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:576:6: ( 'W' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:576:8: 'W'
                     {
-                    match(input,32,FOLLOW_32_in_ruleDomainType1080); 
+                    match(input,32,FOLLOW_32_in_ruleDomainType1062); 
 
                             current = grammarAccess.getDomainTypeAccess().getWorldEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getDomainTypeAccess().getWorldEnumLiteralDeclaration_2(), null); 
@@ -1460,118 +1595,118 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleRelationshipType
-    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:610:1: ruleRelationshipType returns [Enumerator current=null] : ( ( 'wants' ) | ( 'does' ) | ( 'and' ) | ( 'or' ) | ( 'trusts' ) | ( 'delegates' ) | ( '-' ) | ( '+' ) | ( '--' ) | ( '++' ) | ( 'fulfils' ) | ( 'provides' ) | ( 'consumes' ) | ( 'exploits' ) | ( 'damages' ) | ( 'attacks' ) | ( 'argues' ) ) ;
+    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:586:1: ruleRelationshipType returns [Enumerator current=null] : ( ( 'wants' ) | ( 'does' ) | ( 'and' ) | ( 'or' ) | ( 'trusts' ) | ( 'delegates' ) | ( '-' ) | ( '+' ) | ( '--' ) | ( '++' ) | ( 'fulfils' ) | ( 'provides' ) | ( 'consumes' ) | ( 'exploits' ) | ( 'damages' ) | ( 'attacks' ) | ( 'argues' ) ) ;
     public final Enumerator ruleRelationshipType() throws RecognitionException {
         Enumerator current = null;
 
          setCurrentLookahead(); resetLookahead(); 
         try {
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:614:6: ( ( ( 'wants' ) | ( 'does' ) | ( 'and' ) | ( 'or' ) | ( 'trusts' ) | ( 'delegates' ) | ( '-' ) | ( '+' ) | ( '--' ) | ( '++' ) | ( 'fulfils' ) | ( 'provides' ) | ( 'consumes' ) | ( 'exploits' ) | ( 'damages' ) | ( 'attacks' ) | ( 'argues' ) ) )
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:615:1: ( ( 'wants' ) | ( 'does' ) | ( 'and' ) | ( 'or' ) | ( 'trusts' ) | ( 'delegates' ) | ( '-' ) | ( '+' ) | ( '--' ) | ( '++' ) | ( 'fulfils' ) | ( 'provides' ) | ( 'consumes' ) | ( 'exploits' ) | ( 'damages' ) | ( 'attacks' ) | ( 'argues' ) )
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:590:6: ( ( ( 'wants' ) | ( 'does' ) | ( 'and' ) | ( 'or' ) | ( 'trusts' ) | ( 'delegates' ) | ( '-' ) | ( '+' ) | ( '--' ) | ( '++' ) | ( 'fulfils' ) | ( 'provides' ) | ( 'consumes' ) | ( 'exploits' ) | ( 'damages' ) | ( 'attacks' ) | ( 'argues' ) ) )
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:591:1: ( ( 'wants' ) | ( 'does' ) | ( 'and' ) | ( 'or' ) | ( 'trusts' ) | ( 'delegates' ) | ( '-' ) | ( '+' ) | ( '--' ) | ( '++' ) | ( 'fulfils' ) | ( 'provides' ) | ( 'consumes' ) | ( 'exploits' ) | ( 'damages' ) | ( 'attacks' ) | ( 'argues' ) )
             {
-            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:615:1: ( ( 'wants' ) | ( 'does' ) | ( 'and' ) | ( 'or' ) | ( 'trusts' ) | ( 'delegates' ) | ( '-' ) | ( '+' ) | ( '--' ) | ( '++' ) | ( 'fulfils' ) | ( 'provides' ) | ( 'consumes' ) | ( 'exploits' ) | ( 'damages' ) | ( 'attacks' ) | ( 'argues' ) )
-            int alt7=17;
+            // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:591:1: ( ( 'wants' ) | ( 'does' ) | ( 'and' ) | ( 'or' ) | ( 'trusts' ) | ( 'delegates' ) | ( '-' ) | ( '+' ) | ( '--' ) | ( '++' ) | ( 'fulfils' ) | ( 'provides' ) | ( 'consumes' ) | ( 'exploits' ) | ( 'damages' ) | ( 'attacks' ) | ( 'argues' ) )
+            int alt8=17;
             switch ( input.LA(1) ) {
             case 33:
                 {
-                alt7=1;
+                alt8=1;
                 }
                 break;
             case 34:
                 {
-                alt7=2;
+                alt8=2;
                 }
                 break;
             case 35:
                 {
-                alt7=3;
+                alt8=3;
                 }
                 break;
             case 36:
                 {
-                alt7=4;
+                alt8=4;
                 }
                 break;
             case 37:
                 {
-                alt7=5;
+                alt8=5;
                 }
                 break;
             case 38:
                 {
-                alt7=6;
+                alt8=6;
                 }
                 break;
             case 39:
                 {
-                alt7=7;
+                alt8=7;
                 }
                 break;
             case 40:
                 {
-                alt7=8;
+                alt8=8;
                 }
                 break;
             case 41:
                 {
-                alt7=9;
+                alt8=9;
                 }
                 break;
             case 42:
                 {
-                alt7=10;
+                alt8=10;
                 }
                 break;
             case 43:
                 {
-                alt7=11;
+                alt8=11;
                 }
                 break;
             case 44:
                 {
-                alt7=12;
+                alt8=12;
                 }
                 break;
             case 45:
                 {
-                alt7=13;
+                alt8=13;
                 }
                 break;
             case 46:
                 {
-                alt7=14;
+                alt8=14;
                 }
                 break;
             case 47:
                 {
-                alt7=15;
+                alt8=15;
                 }
                 break;
             case 48:
                 {
-                alt7=16;
+                alt8=16;
                 }
                 break;
             case 49:
                 {
-                alt7=17;
+                alt8=17;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("615:1: ( ( 'wants' ) | ( 'does' ) | ( 'and' ) | ( 'or' ) | ( 'trusts' ) | ( 'delegates' ) | ( '-' ) | ( '+' ) | ( '--' ) | ( '++' ) | ( 'fulfils' ) | ( 'provides' ) | ( 'consumes' ) | ( 'exploits' ) | ( 'damages' ) | ( 'attacks' ) | ( 'argues' ) )", 7, 0, input);
+                    new NoViableAltException("591:1: ( ( 'wants' ) | ( 'does' ) | ( 'and' ) | ( 'or' ) | ( 'trusts' ) | ( 'delegates' ) | ( '-' ) | ( '+' ) | ( '--' ) | ( '++' ) | ( 'fulfils' ) | ( 'provides' ) | ( 'consumes' ) | ( 'exploits' ) | ( 'damages' ) | ( 'attacks' ) | ( 'argues' ) )", 8, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt7) {
+            switch (alt8) {
                 case 1 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:615:2: ( 'wants' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:591:2: ( 'wants' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:615:2: ( 'wants' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:615:4: 'wants'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:591:2: ( 'wants' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:591:4: 'wants'
                     {
-                    match(input,33,FOLLOW_33_in_ruleRelationshipType1123); 
+                    match(input,33,FOLLOW_33_in_ruleRelationshipType1105); 
 
                             current = grammarAccess.getRelationshipTypeAccess().getWantsEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getRelationshipTypeAccess().getWantsEnumLiteralDeclaration_0(), null); 
@@ -1583,12 +1718,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:621:6: ( 'does' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:597:6: ( 'does' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:621:6: ( 'does' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:621:8: 'does'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:597:6: ( 'does' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:597:8: 'does'
                     {
-                    match(input,34,FOLLOW_34_in_ruleRelationshipType1138); 
+                    match(input,34,FOLLOW_34_in_ruleRelationshipType1120); 
 
                             current = grammarAccess.getRelationshipTypeAccess().getDoesEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getRelationshipTypeAccess().getDoesEnumLiteralDeclaration_1(), null); 
@@ -1600,12 +1735,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:627:6: ( 'and' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:603:6: ( 'and' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:627:6: ( 'and' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:627:8: 'and'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:603:6: ( 'and' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:603:8: 'and'
                     {
-                    match(input,35,FOLLOW_35_in_ruleRelationshipType1153); 
+                    match(input,35,FOLLOW_35_in_ruleRelationshipType1135); 
 
                             current = grammarAccess.getRelationshipTypeAccess().getANDEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getRelationshipTypeAccess().getANDEnumLiteralDeclaration_2(), null); 
@@ -1617,12 +1752,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:633:6: ( 'or' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:609:6: ( 'or' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:633:6: ( 'or' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:633:8: 'or'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:609:6: ( 'or' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:609:8: 'or'
                     {
-                    match(input,36,FOLLOW_36_in_ruleRelationshipType1168); 
+                    match(input,36,FOLLOW_36_in_ruleRelationshipType1150); 
 
                             current = grammarAccess.getRelationshipTypeAccess().getOREnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getRelationshipTypeAccess().getOREnumLiteralDeclaration_3(), null); 
@@ -1634,12 +1769,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:639:6: ( 'trusts' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:615:6: ( 'trusts' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:639:6: ( 'trusts' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:639:8: 'trusts'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:615:6: ( 'trusts' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:615:8: 'trusts'
                     {
-                    match(input,37,FOLLOW_37_in_ruleRelationshipType1183); 
+                    match(input,37,FOLLOW_37_in_ruleRelationshipType1165); 
 
                             current = grammarAccess.getRelationshipTypeAccess().getTRUSTEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getRelationshipTypeAccess().getTRUSTEnumLiteralDeclaration_4(), null); 
@@ -1651,12 +1786,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:645:6: ( 'delegates' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:621:6: ( 'delegates' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:645:6: ( 'delegates' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:645:8: 'delegates'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:621:6: ( 'delegates' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:621:8: 'delegates'
                     {
-                    match(input,38,FOLLOW_38_in_ruleRelationshipType1198); 
+                    match(input,38,FOLLOW_38_in_ruleRelationshipType1180); 
 
                             current = grammarAccess.getRelationshipTypeAccess().getDELEGATEEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getRelationshipTypeAccess().getDELEGATEEnumLiteralDeclaration_5(), null); 
@@ -1668,12 +1803,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:651:6: ( '-' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:627:6: ( '-' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:651:6: ( '-' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:651:8: '-'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:627:6: ( '-' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:627:8: '-'
                     {
-                    match(input,39,FOLLOW_39_in_ruleRelationshipType1213); 
+                    match(input,39,FOLLOW_39_in_ruleRelationshipType1195); 
 
                             current = grammarAccess.getRelationshipTypeAccess().getHURTEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getRelationshipTypeAccess().getHURTEnumLiteralDeclaration_6(), null); 
@@ -1685,12 +1820,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:657:6: ( '+' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:633:6: ( '+' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:657:6: ( '+' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:657:8: '+'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:633:6: ( '+' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:633:8: '+'
                     {
-                    match(input,40,FOLLOW_40_in_ruleRelationshipType1228); 
+                    match(input,40,FOLLOW_40_in_ruleRelationshipType1210); 
 
                             current = grammarAccess.getRelationshipTypeAccess().getHELPEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getRelationshipTypeAccess().getHELPEnumLiteralDeclaration_7(), null); 
@@ -1702,12 +1837,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:663:6: ( '--' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:639:6: ( '--' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:663:6: ( '--' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:663:8: '--'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:639:6: ( '--' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:639:8: '--'
                     {
-                    match(input,41,FOLLOW_41_in_ruleRelationshipType1243); 
+                    match(input,41,FOLLOW_41_in_ruleRelationshipType1225); 
 
                             current = grammarAccess.getRelationshipTypeAccess().getBREAKEnumLiteralDeclaration_8().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getRelationshipTypeAccess().getBREAKEnumLiteralDeclaration_8(), null); 
@@ -1719,12 +1854,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:669:6: ( '++' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:645:6: ( '++' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:669:6: ( '++' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:669:8: '++'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:645:6: ( '++' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:645:8: '++'
                     {
-                    match(input,42,FOLLOW_42_in_ruleRelationshipType1258); 
+                    match(input,42,FOLLOW_42_in_ruleRelationshipType1240); 
 
                             current = grammarAccess.getRelationshipTypeAccess().getMAKEEnumLiteralDeclaration_9().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getRelationshipTypeAccess().getMAKEEnumLiteralDeclaration_9(), null); 
@@ -1736,12 +1871,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 11 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:675:6: ( 'fulfils' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:651:6: ( 'fulfils' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:675:6: ( 'fulfils' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:675:8: 'fulfils'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:651:6: ( 'fulfils' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:651:8: 'fulfils'
                     {
-                    match(input,43,FOLLOW_43_in_ruleRelationshipType1273); 
+                    match(input,43,FOLLOW_43_in_ruleRelationshipType1255); 
 
                             current = grammarAccess.getRelationshipTypeAccess().getFulfilsEnumLiteralDeclaration_10().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getRelationshipTypeAccess().getFulfilsEnumLiteralDeclaration_10(), null); 
@@ -1753,12 +1888,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 12 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:681:6: ( 'provides' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:657:6: ( 'provides' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:681:6: ( 'provides' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:681:8: 'provides'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:657:6: ( 'provides' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:657:8: 'provides'
                     {
-                    match(input,44,FOLLOW_44_in_ruleRelationshipType1288); 
+                    match(input,44,FOLLOW_44_in_ruleRelationshipType1270); 
 
                             current = grammarAccess.getRelationshipTypeAccess().getProvidesEnumLiteralDeclaration_11().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getRelationshipTypeAccess().getProvidesEnumLiteralDeclaration_11(), null); 
@@ -1770,12 +1905,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 13 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:687:6: ( 'consumes' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:663:6: ( 'consumes' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:687:6: ( 'consumes' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:687:8: 'consumes'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:663:6: ( 'consumes' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:663:8: 'consumes'
                     {
-                    match(input,45,FOLLOW_45_in_ruleRelationshipType1303); 
+                    match(input,45,FOLLOW_45_in_ruleRelationshipType1285); 
 
                             current = grammarAccess.getRelationshipTypeAccess().getConsumesEnumLiteralDeclaration_12().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getRelationshipTypeAccess().getConsumesEnumLiteralDeclaration_12(), null); 
@@ -1787,12 +1922,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 14 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:693:6: ( 'exploits' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:669:6: ( 'exploits' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:693:6: ( 'exploits' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:693:8: 'exploits'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:669:6: ( 'exploits' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:669:8: 'exploits'
                     {
-                    match(input,46,FOLLOW_46_in_ruleRelationshipType1318); 
+                    match(input,46,FOLLOW_46_in_ruleRelationshipType1300); 
 
                             current = grammarAccess.getRelationshipTypeAccess().getExploitsEnumLiteralDeclaration_13().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getRelationshipTypeAccess().getExploitsEnumLiteralDeclaration_13(), null); 
@@ -1804,12 +1939,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 15 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:699:6: ( 'damages' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:675:6: ( 'damages' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:699:6: ( 'damages' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:699:8: 'damages'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:675:6: ( 'damages' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:675:8: 'damages'
                     {
-                    match(input,47,FOLLOW_47_in_ruleRelationshipType1333); 
+                    match(input,47,FOLLOW_47_in_ruleRelationshipType1315); 
 
                             current = grammarAccess.getRelationshipTypeAccess().getDamagesEnumLiteralDeclaration_14().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getRelationshipTypeAccess().getDamagesEnumLiteralDeclaration_14(), null); 
@@ -1821,12 +1956,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 16 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:705:6: ( 'attacks' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:681:6: ( 'attacks' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:705:6: ( 'attacks' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:705:8: 'attacks'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:681:6: ( 'attacks' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:681:8: 'attacks'
                     {
-                    match(input,48,FOLLOW_48_in_ruleRelationshipType1348); 
+                    match(input,48,FOLLOW_48_in_ruleRelationshipType1330); 
 
                             current = grammarAccess.getRelationshipTypeAccess().getAttacksEnumLiteralDeclaration_15().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getRelationshipTypeAccess().getAttacksEnumLiteralDeclaration_15(), null); 
@@ -1838,12 +1973,12 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 17 :
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:711:6: ( 'argues' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:687:6: ( 'argues' )
                     {
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:711:6: ( 'argues' )
-                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:711:8: 'argues'
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:687:6: ( 'argues' )
+                    // ../situation/src-gen/eu/securechange/parser/antlr/internal/InternalSituation.g:687:8: 'argues'
                     {
-                    match(input,49,FOLLOW_49_in_ruleRelationshipType1363); 
+                    match(input,49,FOLLOW_49_in_ruleRelationshipType1345); 
 
                             current = grammarAccess.getRelationshipTypeAccess().getArguesEnumLiteralDeclaration_16().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getRelationshipTypeAccess().getArguesEnumLiteralDeclaration_16(), null); 
@@ -1904,43 +2039,42 @@ public class InternalSituationParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleDomain_in_entryRuleDomain631 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleDomain641 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleDomain683 = new BitSet(new long[]{0x00000001C0000000L});
-    public static final BitSet FOLLOW_ruleDomainType_in_ruleDomain709 = new BitSet(new long[]{0x000000003FFF0000L});
-    public static final BitSet FOLLOW_ruleEntity_in_ruleDomain730 = new BitSet(new long[]{0x0000000000004002L});
-    public static final BitSet FOLLOW_14_in_ruleDomain741 = new BitSet(new long[]{0x000000003FFF0000L});
-    public static final BitSet FOLLOW_ruleEntity_in_ruleDomain762 = new BitSet(new long[]{0x0000000000004002L});
-    public static final BitSet FOLLOW_16_in_ruleEntityType812 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_ruleEntityType827 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_ruleEntityType842 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_ruleEntityType857 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_ruleEntityType872 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_ruleEntityType887 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_ruleEntityType902 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_ruleEntityType917 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_ruleEntityType932 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_ruleEntityType947 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_ruleEntityType962 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_ruleEntityType977 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_ruleEntityType992 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_ruleEntityType1007 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_ruleDomainType1050 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_ruleDomainType1065 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_ruleDomainType1080 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_ruleRelationshipType1123 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_ruleRelationshipType1138 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_ruleRelationshipType1153 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_ruleRelationshipType1168 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_ruleRelationshipType1183 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_ruleRelationshipType1198 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_ruleRelationshipType1213 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_ruleRelationshipType1228 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_ruleRelationshipType1243 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_ruleRelationshipType1258 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_ruleRelationshipType1273 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_ruleRelationshipType1288 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_45_in_ruleRelationshipType1303 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_46_in_ruleRelationshipType1318 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_ruleRelationshipType1333 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_ruleRelationshipType1348 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_ruleRelationshipType1363 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDomainType_in_ruleDomain709 = new BitSet(new long[]{0x000000003FFF4002L});
+    public static final BitSet FOLLOW_14_in_ruleDomain721 = new BitSet(new long[]{0x000000003FFF0000L});
+    public static final BitSet FOLLOW_ruleEntity_in_ruleDomain744 = new BitSet(new long[]{0x000000003FFF4002L});
+    public static final BitSet FOLLOW_16_in_ruleEntityType794 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_ruleEntityType809 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_ruleEntityType824 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_ruleEntityType839 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_ruleEntityType854 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_ruleEntityType869 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_ruleEntityType884 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_ruleEntityType899 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_ruleEntityType914 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_ruleEntityType929 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_ruleEntityType944 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_ruleEntityType959 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_ruleEntityType974 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_ruleEntityType989 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_ruleDomainType1032 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_ruleDomainType1047 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_ruleDomainType1062 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_ruleRelationshipType1105 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_ruleRelationshipType1120 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_ruleRelationshipType1135 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_ruleRelationshipType1150 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_ruleRelationshipType1165 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_ruleRelationshipType1180 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_ruleRelationshipType1195 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_ruleRelationshipType1210 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_ruleRelationshipType1225 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_ruleRelationshipType1240 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_ruleRelationshipType1255 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_ruleRelationshipType1270 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_45_in_ruleRelationshipType1285 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_46_in_ruleRelationshipType1300 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_ruleRelationshipType1315 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_ruleRelationshipType1330 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_ruleRelationshipType1345 = new BitSet(new long[]{0x0000000000000002L});
 
 }

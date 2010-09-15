@@ -46,7 +46,7 @@ public class SituationParser extends AbstractContentAssistParser {
 					put(grammarAccess.getEntityAccess().getGroup(), "rule__Entity__Group__0");
 					put(grammarAccess.getRelationshipAccess().getGroup(), "rule__Relationship__Group__0");
 					put(grammarAccess.getDomainAccess().getGroup(), "rule__Domain__Group__0");
-					put(grammarAccess.getDomainAccess().getGroup_3(), "rule__Domain__Group_3__0");
+					put(grammarAccess.getDomainAccess().getGroup_2(), "rule__Domain__Group_2__0");
 					put(grammarAccess.getSituationAccess().getTimeAssignment_0_1(), "rule__Situation__TimeAssignment_0_1");
 					put(grammarAccess.getSituationAccess().getThingsAssignment_1(), "rule__Situation__ThingsAssignment_1");
 					put(grammarAccess.getEntityAccess().getTypeAssignment_0(), "rule__Entity__TypeAssignment_0");
@@ -56,8 +56,7 @@ public class SituationParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRelationshipAccess().getTargetAssignment_4(), "rule__Relationship__TargetAssignment_4");
 					put(grammarAccess.getDomainAccess().getNameAssignment_0(), "rule__Domain__NameAssignment_0");
 					put(grammarAccess.getDomainAccess().getTypeAssignment_1(), "rule__Domain__TypeAssignment_1");
-					put(grammarAccess.getDomainAccess().getPropertiesAssignment_2(), "rule__Domain__PropertiesAssignment_2");
-					put(grammarAccess.getDomainAccess().getPropertiesAssignment_3_1(), "rule__Domain__PropertiesAssignment_3_1");
+					put(grammarAccess.getDomainAccess().getPropertiesAssignment_2_1(), "rule__Domain__PropertiesAssignment_2_1");
 				}
 			};
 		}

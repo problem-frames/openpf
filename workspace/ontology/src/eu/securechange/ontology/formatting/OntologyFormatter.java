@@ -34,7 +34,7 @@ public class OntologyFormatter extends AbstractDeclarativeFormatter {
 		c.setSpace("\n\t").before(f.getPropositionRule());
 		c.setSpace("\n\t\t").before(f.getActionRule());
 		c.setNoSpace().before(f.getSituationAccess().getColonKeyword_0_2());
-		c.setNoSpace().before(f.getDomainAccess().getCommaKeyword_3_0());
+		c.setNoSpace().before(f.getDomainAccess().getCommaKeyword_2_0());
 		c.setNoSpace().before(f.getWantsAccess().getCommaKeyword_3());
 		c.setNoSpace()
 				.before(f.getWantsAccess().getRightParenthesisKeyword_5());

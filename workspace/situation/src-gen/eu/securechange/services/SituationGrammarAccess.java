@@ -172,18 +172,16 @@ public class SituationGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
 		private final Assignment cTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cTypeDomainTypeEnumRuleCall_1_0 = (RuleCall)cTypeAssignment_1.eContents().get(0);
-		private final Assignment cPropertiesAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cPropertiesEntityParserRuleCall_2_0 = (RuleCall)cPropertiesAssignment_2.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cCommaKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cPropertiesAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cPropertiesEntityParserRuleCall_3_1_0 = (RuleCall)cPropertiesAssignment_3_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cPropertiesAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cPropertiesEntityParserRuleCall_2_1_0 = (RuleCall)cPropertiesAssignment_2_1.eContents().get(0);
 		
 		//Domain:
-		//	name=ID type=DomainType properties+=Entity ("," properties+=Entity)*;
+		//	name=ID type=DomainType (","? properties+=Entity)*;
 		public ParserRule getRule() { return rule; }
 
-		//name=ID type=DomainType properties+=Entity ("," properties+=Entity)*
+		//name=ID type=DomainType (","? properties+=Entity)*
 		public Group getGroup() { return cGroup; }
 
 		//name=ID
@@ -198,23 +196,17 @@ public class SituationGrammarAccess extends AbstractGrammarElementFinder {
 		//DomainType
 		public RuleCall getTypeDomainTypeEnumRuleCall_1_0() { return cTypeDomainTypeEnumRuleCall_1_0; }
 
-		//properties+=Entity
-		public Assignment getPropertiesAssignment_2() { return cPropertiesAssignment_2; }
+		//(","? properties+=Entity)*
+		public Group getGroup_2() { return cGroup_2; }
 
-		//Entity
-		public RuleCall getPropertiesEntityParserRuleCall_2_0() { return cPropertiesEntityParserRuleCall_2_0; }
-
-		//("," properties+=Entity)*
-		public Group getGroup_3() { return cGroup_3; }
-
-		//","
-		public Keyword getCommaKeyword_3_0() { return cCommaKeyword_3_0; }
+		//","?
+		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
 
 		//properties+=Entity
-		public Assignment getPropertiesAssignment_3_1() { return cPropertiesAssignment_3_1; }
+		public Assignment getPropertiesAssignment_2_1() { return cPropertiesAssignment_2_1; }
 
 		//Entity
-		public RuleCall getPropertiesEntityParserRuleCall_3_1_0() { return cPropertiesEntityParserRuleCall_3_1_0; }
+		public RuleCall getPropertiesEntityParserRuleCall_2_1_0() { return cPropertiesEntityParserRuleCall_2_1_0; }
 	}
 	
 	
@@ -606,7 +598,7 @@ public class SituationGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Domain:
-	//	name=ID type=DomainType properties+=Entity ("," properties+=Entity)*;
+	//	name=ID type=DomainType (","? properties+=Entity)*;
 	public DomainElements getDomainAccess() {
 		return (pDomain != null) ? pDomain : (pDomain = new DomainElements());
 	}

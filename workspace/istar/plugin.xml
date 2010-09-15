@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<plugin>
+
+  <extension point="core.example">
+      <example file="open_account.istar"/>
+      <example file="open_account.oom"/>
+      <example file="open_account.ood"/>
+      <example file="Istar1.xtext"/>
+      <example file="Istar2.xtext"/>
+      <example file="openome_model.ecore"/>
+  </extension>
+
+</plugin>

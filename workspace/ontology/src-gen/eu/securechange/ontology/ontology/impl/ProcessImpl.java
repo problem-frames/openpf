@@ -21,24 +21,24 @@ import org.eclipse.emf.ecore.EClass;
 public class ProcessImpl extends EntityImpl implements eu.securechange.ontology.ontology.Process
 {
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected ProcessImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return OntologyPackage.Literals.PROCESS;
-  }
+		return OntologyPackage.Literals.PROCESS;
+	}
 
 } //ProcessImpl
