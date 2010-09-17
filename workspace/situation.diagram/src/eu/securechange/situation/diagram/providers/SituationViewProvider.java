@@ -454,8 +454,8 @@ public class SituationViewProvider extends AbstractProvider implements
 		label6001.setLayoutConstraint(NotationFactory.eINSTANCE
 				.createLocation());
 		Location location6001 = (Location) label6001.getLayoutConstraint();
-		location6001.setX(0);
-		location6001.setY(40);
+		location6001.setX(10);
+		location6001.setY(10);
 		return edge;
 	}
 

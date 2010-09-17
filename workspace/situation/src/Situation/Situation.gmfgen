@@ -207,7 +207,8 @@
             classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class RelationshipLabelFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public RelationshipLabelFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;Relationship&quot;);&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
           <attributes
               xsi:type="gmfgen:LabelOffsetAttributes"
-              y="40"/>
+              x="10"
+              y="10"/>
         </viewmap>
         <modelFacet
             xsi:type="gmfgen:FeatureLabelModelFacet"

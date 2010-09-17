@@ -86,7 +86,7 @@ public class RelationshipTypeEditPart extends LabelEditPart implements
 		registerSnapBackPosition(
 				SituationVisualIDRegistry
 						.getType(eu.securechange.situation.diagram.edit.parts.RelationshipTypeEditPart.VISUAL_ID),
-				new Point(0, 40));
+				new Point(10, 10));
 	}
 
 	/**

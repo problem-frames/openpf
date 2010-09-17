@@ -6,32 +6,32 @@ model [d.name.toString()/]:
    actor System
 [for (dom: Node | d.nodes)]
    [if (dom.type.toString() ='B')]      
-   actor [dom.name/]
+   actor #:[dom.name/]:[dom.description/]#
    [/if]
    [if (dom.type.toString() ='C')]      
-   process [dom.name/]
+   process #:[dom.name/]:[dom.description/]#
    [/if]
    [if (dom.type.toString() ='X')]      
-   resource [dom.name/]
+   resource #:[dom.name/]:[dom.description/]#
    [/if]
    [if (dom.type.toString() ='D')]      
-   activity [dom.name/]
+   activity #:[dom.name/]:[dom.description/]#
    [/if]
    [if (dom.type.toString() ='P')]      
-   process [dom.name/]
+   process #:[dom.name/]:[dom.description/]#
    [/if]
    [if (dom.type.toString() ='M')]      
-   activity [dom.name/]
+   activity #:[dom.name/]:[dom.description/]#
    [/if]
 [/for]
 Requirements R [if (d.nodes->select(dom: Node | dom.type.toString()='R')-> size() >0) ]
- FR [d.nodes->select(dom: Node | dom.type.toString()='R')->collect(name)->sep(',\n   FR')/]
+ FR #[d.nodes->select(dom: Node | dom.type.toString()='R')->collect(':'+name+':'+description)->sep('#,\n   FR #')/]#
  [/if]
 [for (dom: Node | d.nodes)]
    [if (dom.type.toString() ='M')]
-does(System, [dom.name/])
- [for (name: String| d.nodes->select(dom: Node | dom.type.toString()='R')->collect(name))]
-fulfils([dom.name/], [name/]) 
+does(System, #:[dom.name/]:[dom.description/]#)
+ [for (name: String| d.nodes->select(dom: Node | dom.type.toString()='R')->collect(':'+name+':'+description))]
+fulfils(#:[dom.name/]:[dom.description/]#, #[name/]#) 
  [/for]
    [/if]
 [/for]      
@@ -39,22 +39,22 @@ fulfils([dom.name/], [name/])
    [if (link.type.toString() ='--')]
 [if (link.phenomena->size()=0)]
 [if (link.from.type='B' and link.to.type='B')]  
-delegates([link.from.name/], [link.to.name/])
+delegates(#:[link.from.name/]:[link.from.description/]#, #:[link.to.name/]:[link.to.description/]#)
 [else]
    resource [link.from.name/][link.to.name/]Interface
-provides([link.from.name/], [link.from.name/][link.to.name/]Interface)
-consumes([link.to.name/], [link.from.name/][link.to.name/]Interface)
+provides(#:[link.from.name/]:[link.from.description/]#, [link.from.name/][link.to.name/]Interface)
+consumes(#:[link.to.name/]:[link.to.description/]#, [link.from.name/][link.to.name/]Interface)
 [/if]
 [else]
 [if (link.from.type='B' and link.to.type='B')]  
  [for (phenomenon: Phenomenon | link.phenomena)]
-delegates([link.from.name/], [link.to.name/], [phenomenon.name/])
+delegates(#:[link.from.name/]:[link.from.description/]#, #:[link.to.name/]:[link.to.description/]#, [phenomenon.name/])
  [/for]
 [else]
  [for (phenomenon: Phenomenon | link.phenomena)]
   resource [phenomenon.name/]
-provides([link.from.name/], [phenomenon.name/])
-consumes([link.to.name/], [phenomenon.name/])
+provides(#:[link.from.name/]:[link.from.description/]#, [phenomenon.name/])
+consumes(#:[link.to.name/]:[link.to.description/]#, [phenomenon.name/])
  [/for]
 [/if]
 [/if]

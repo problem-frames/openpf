@@ -34,7 +34,7 @@ public class ActorActorCompartmentCanonicalEditPolicy extends
 	 * @generated
 	 */
 	protected EStructuralFeature getFeatureToSynchronize() {
-		return openome_modelPackage.eINSTANCE
+		return edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
 				.getContainer_Intentions();
 	}
 

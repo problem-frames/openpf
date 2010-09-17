@@ -1,4 +1,0 @@
-import uk::ac::open::istar2::istar;
-
-sortedGreetings(Model this) :
-	this.greetings.sortBy(g|g.name.toLowerCase());

@@ -25,6 +25,7 @@
       <plugin id="ch.qos.logback.classic"/>
       <plugin id="ch.qos.logback.core"/>
       <plugin id="ch.qos.logback.slf4j" fragment="true"/>
+      <plugin id="change"/>
       <plugin id="com.google.collect"/>
       <plugin id="com.google.inject"/>
       <plugin id="com.ibm.icu"/>
@@ -46,11 +47,9 @@
       <plugin id="hu.bme.mit.viatra2.viatraDSM.skypesim"/>
       <plugin id="hu.optxware.emf2viatra.core"/>
       <plugin id="istar"/>
+      <plugin id="istar.diagram.extensions"/>
       <plugin id="istar.generator"/>
       <plugin id="istar.ui"/>
-      <plugin id="istar2"/>
-      <plugin id="istar2.generator"/>
-      <plugin id="istar2.ui"/>
       <plugin id="javax.servlet"/>
       <plugin id="javax.servlet.jsp"/>
       <plugin id="javax.xml"/>

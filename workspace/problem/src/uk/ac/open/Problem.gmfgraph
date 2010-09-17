@@ -46,7 +46,8 @@
         name="InterfaceFigure">
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
-          name="InterfaceFigure">
+          name="InterfaceFigure"
+          lineWidth="2">
         <children
             xsi:type="gmfgraph:Label"
             name="InterfaceNameFigure"/>

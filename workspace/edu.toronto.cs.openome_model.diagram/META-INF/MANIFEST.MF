@@ -39,7 +39,8 @@ Require-Bundle: org.eclipse.core.expressions,
  org.eclipse.gef;visibility:=reexport,
  openome_model,
  org.eclipse.ui,
- org.junit4
+ org.junit4,
+ org.eclipse.xtext.gmf.glue;visibility:=reexport
 Eclipse-LazyStart: true
 Import-Package: junit.framework,
  org.eclipse.gmf.runtime.notation,

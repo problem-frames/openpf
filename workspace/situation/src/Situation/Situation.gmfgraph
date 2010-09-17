@@ -99,5 +99,13 @@
   <labels
       name="RelationshipLabel"
       figure="RelationshipLabelFigure"
-      elementIcon="false"/>
+      elementIcon="false">
+    <facets
+        xsi:type="gmfgraph:AlignmentFacet"
+        alignment="CENTER"/>
+    <facets
+        xsi:type="gmfgraph:LabelOffsetFacet"
+        x="10"
+        y="10"/>
+  </labels>
 </gmfgraph:Canvas>

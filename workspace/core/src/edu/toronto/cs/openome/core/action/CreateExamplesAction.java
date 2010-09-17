@@ -61,7 +61,12 @@ public class CreateExamplesAction extends ExtensionReader implements
 						folder.create(IResource.FORCE, true, null);
 					} catch (Exception e) {}
 				}
-				InputStream stream = FileLocator.openStream(bundle, new Path("samples/" + filename), false);
+				InputStream stream = null;
+				try {
+					stream = FileLocator.openStream(bundle, new Path("samples/" + filename), false);
+				} catch (IOException e) {
+					stream = FileLocator.openStream(bundle, new Path(filename), false);
+				}
 				IFile file;
 				if (folder == null)
 					file = project.getFile(name);
@@ -71,7 +76,8 @@ public class CreateExamplesAction extends ExtensionReader implements
 				if (!file.exists())
 					file.create(stream, false, null);
 				} catch (Exception e) {}
-				stream.close();
+				if (stream!=null)
+					stream.close();
 			}		
 		} catch (IOException e) {
 			e.printStackTrace();

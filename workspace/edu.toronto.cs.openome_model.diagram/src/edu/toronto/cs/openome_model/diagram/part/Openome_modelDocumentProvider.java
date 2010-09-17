@@ -54,6 +54,7 @@ import org.eclipse.osgi.util.NLS;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.part.FileEditorInput;
+import org.eclipse.xtext.gmf.glue.editingdomain.XtextNodeModelReconciler;
 
 /**
  * @generated
@@ -163,6 +164,9 @@ public class Openome_modelDocumentProvider extends AbstractDocumentProvider
 				.getInstance().createEditingDomain();
 		editingDomain
 				.setID("edu.toronto.cs.openome_model.diagram.EditingDomain"); //$NON-NLS-1$
+		// ITEMIS CHANGE BEGIN: Add node model reconciler
+		XtextNodeModelReconciler.adapt(editingDomain);
+		// ITEMIS CHANGE END
 		final NotificationFilter diagramResourceModifiedFilter = NotificationFilter
 				.createNotifierFilter(editingDomain.getResourceSet())
 				.and(NotificationFilter.createEventTypeFilter(Notification.ADD))

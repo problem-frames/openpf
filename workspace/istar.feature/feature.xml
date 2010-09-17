@@ -213,35 +213,7 @@
          unpack="false"/>
 
    <plugin
-         id="istar2"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="istar2.generator"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="istar2.ui"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="Istar2situation"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="Istar2situation.ui"
+         id="istar.diagram.extensions"
          download-size="0"
          install-size="0"
          version="0.0.0"
