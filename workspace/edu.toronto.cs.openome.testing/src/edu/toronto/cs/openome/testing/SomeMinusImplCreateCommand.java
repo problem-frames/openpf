@@ -15,7 +15,7 @@ import edu.toronto.cs.openome_model.impl.MakeContributionImpl;
 import edu.toronto.cs.openome_model.impl.ModelImpl;
 import edu.toronto.cs.openome_model.impl.SoftgoalImpl;
 import edu.toronto.cs.openome_model.impl.SomeMinusContributionImpl;
-import edu.toronto.cs.openome_model.impl.Openome_modelFactoryImpl;
+import edu.toronto.cs.openome_model.impl.openome_modelFactoryImpl;
 
 public class SomeMinusImplCreateCommand implements Command {
 	
@@ -31,7 +31,7 @@ public class SomeMinusImplCreateCommand implements Command {
 	/*
 	 * A factory that can create any class Impl
 	 */
-	private static Openome_modelFactoryImpl factory = new Openome_modelFactoryImpl();
+	private static openome_modelFactoryImpl factory = new openome_modelFactoryImpl();
 	
 	/**
 	 * Command to add an actor inside a model

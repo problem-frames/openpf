@@ -23,7 +23,14 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Openome_modelFactoryImpl extends EFactoryImpl implements openome_modelFactory {
+public class openome_modelFactoryImpl extends EFactoryImpl implements openome_modelFactory {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final String copyright = "Copyright 2001-2008 University of Toronto";
+
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
@@ -40,7 +47,7 @@ public class Openome_modelFactoryImpl extends EFactoryImpl implements openome_mo
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Openome_modelFactoryImpl();
+		return new openome_modelFactoryImpl();
 	}
 
 	/**
@@ -49,7 +56,7 @@ public class Openome_modelFactoryImpl extends EFactoryImpl implements openome_mo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Openome_modelFactoryImpl() {
+	public openome_modelFactoryImpl() {
 		super();
 	}
 

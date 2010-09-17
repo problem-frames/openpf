@@ -39,6 +39,13 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  */
 public class ContributionImpl extends LinkImpl implements Contribution {
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final String copyright = "Copyright 2001-2008 University of Toronto";
+
+	/**
 	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -128,33 +135,11 @@ public class ContributionImpl extends LinkImpl implements Contribution {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTarget(Intention newTarget, NotificationChain msgs) {
+	public void setTarget(Intention newTarget) {
 		Intention oldTarget = target;
 		target = newTarget;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, openome_modelPackage.CONTRIBUTION__TARGET, oldTarget, newTarget);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTarget(Intention newTarget) {
-		if (newTarget != target) {
-			NotificationChain msgs = null;
-			if (target != null)
-				msgs = ((InternalEObject)target).eInverseRemove(this, openome_modelPackage.INTENTION__CONTRIBUTES_FROM, Intention.class, msgs);
-			if (newTarget != null)
-				msgs = ((InternalEObject)newTarget).eInverseAdd(this, openome_modelPackage.INTENTION__CONTRIBUTES_FROM, Intention.class, msgs);
-			msgs = basicSetTarget(newTarget, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, openome_modelPackage.CONTRIBUTION__TARGET, newTarget, newTarget));
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, openome_modelPackage.CONTRIBUTION__TARGET, oldTarget, target));
 	}
 
 	/**
@@ -229,33 +214,11 @@ public class ContributionImpl extends LinkImpl implements Contribution {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSource(Intention newSource, NotificationChain msgs) {
+	public void setSource(Intention newSource) {
 		Intention oldSource = source;
 		source = newSource;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, openome_modelPackage.CONTRIBUTION__SOURCE, oldSource, newSource);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSource(Intention newSource) {
-		if (newSource != source) {
-			NotificationChain msgs = null;
-			if (source != null)
-				msgs = ((InternalEObject)source).eInverseRemove(this, openome_modelPackage.INTENTION__CONTRIBUTES_TO, Intention.class, msgs);
-			if (newSource != null)
-				msgs = ((InternalEObject)newSource).eInverseAdd(this, openome_modelPackage.INTENTION__CONTRIBUTES_TO, Intention.class, msgs);
-			msgs = basicSetSource(newSource, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, openome_modelPackage.CONTRIBUTION__SOURCE, newSource, newSource));
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, openome_modelPackage.CONTRIBUTION__SOURCE, oldSource, source));
 	}
 
 	/**
@@ -287,18 +250,10 @@ public class ContributionImpl extends LinkImpl implements Contribution {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case openome_modelPackage.CONTRIBUTION__TARGET:
-				if (target != null)
-					msgs = ((InternalEObject)target).eInverseRemove(this, openome_modelPackage.INTENTION__CONTRIBUTES_FROM, Intention.class, msgs);
-				return basicSetTarget((Intention)otherEnd, msgs);
 			case openome_modelPackage.CONTRIBUTION__MODEL:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetModel((Model)otherEnd, msgs);
-			case openome_modelPackage.CONTRIBUTION__SOURCE:
-				if (source != null)
-					msgs = ((InternalEObject)source).eInverseRemove(this, openome_modelPackage.INTENTION__CONTRIBUTES_TO, Intention.class, msgs);
-				return basicSetSource((Intention)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -311,12 +266,8 @@ public class ContributionImpl extends LinkImpl implements Contribution {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case openome_modelPackage.CONTRIBUTION__TARGET:
-				return basicSetTarget(null, msgs);
 			case openome_modelPackage.CONTRIBUTION__MODEL:
 				return basicSetModel(null, msgs);
-			case openome_modelPackage.CONTRIBUTION__SOURCE:
-				return basicSetSource(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

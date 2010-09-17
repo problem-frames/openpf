@@ -30,6 +30,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -65,6 +66,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class IntentionImpl extends DependableImpl implements Intention {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final String copyright = "Copyright 2001-2008 University of Toronto";
+
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -818,7 +826,7 @@ public class IntentionImpl extends DependableImpl implements Intention {
 	 */
 	public EList<Contribution> getContributesTo() {
 		if (contributesTo == null) {
-			contributesTo = new EObjectWithInverseResolvingEList<Contribution>(Contribution.class, this, openome_modelPackage.INTENTION__CONTRIBUTES_TO, openome_modelPackage.CONTRIBUTION__SOURCE);
+			contributesTo = new EObjectResolvingEList<Contribution>(Contribution.class, this, openome_modelPackage.INTENTION__CONTRIBUTES_TO);
 		}
 		return contributesTo;
 	}
@@ -830,7 +838,7 @@ public class IntentionImpl extends DependableImpl implements Intention {
 	 */
 	public EList<Contribution> getContributesFrom() {
 		if (contributesFrom == null) {
-			contributesFrom = new EObjectWithInverseResolvingEList<Contribution>(Contribution.class, this, openome_modelPackage.INTENTION__CONTRIBUTES_FROM, openome_modelPackage.CONTRIBUTION__TARGET);
+			contributesFrom = new EObjectResolvingEList<Contribution>(Contribution.class, this, openome_modelPackage.INTENTION__CONTRIBUTES_FROM);
 		}
 		return contributesFrom;
 	}
@@ -844,18 +852,10 @@ public class IntentionImpl extends DependableImpl implements Intention {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case openome_modelPackage.INTENTION__DECOMPOSITIONS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDecompositions()).basicAdd(otherEnd, msgs);
-			case openome_modelPackage.INTENTION__PARENT_DECOMPOSITIONS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getParentDecompositions()).basicAdd(otherEnd, msgs);
 			case openome_modelPackage.INTENTION__CONTAINER:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetContainer((Container)otherEnd, msgs);
-			case openome_modelPackage.INTENTION__CONTRIBUTES_TO:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getContributesTo()).basicAdd(otherEnd, msgs);
-			case openome_modelPackage.INTENTION__CONTRIBUTES_FROM:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getContributesFrom()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -870,16 +870,8 @@ public class IntentionImpl extends DependableImpl implements Intention {
 		switch (featureID) {
 			case openome_modelPackage.INTENTION__PROPERTY:
 				return ((InternalEList<?>)getProperty()).basicRemove(otherEnd, msgs);
-			case openome_modelPackage.INTENTION__DECOMPOSITIONS:
-				return ((InternalEList<?>)getDecompositions()).basicRemove(otherEnd, msgs);
-			case openome_modelPackage.INTENTION__PARENT_DECOMPOSITIONS:
-				return ((InternalEList<?>)getParentDecompositions()).basicRemove(otherEnd, msgs);
 			case openome_modelPackage.INTENTION__CONTAINER:
 				return basicSetContainer(null, msgs);
-			case openome_modelPackage.INTENTION__CONTRIBUTES_TO:
-				return ((InternalEList<?>)getContributesTo()).basicRemove(otherEnd, msgs);
-			case openome_modelPackage.INTENTION__CONTRIBUTES_FROM:
-				return ((InternalEList<?>)getContributesFrom()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -1154,17 +1146,17 @@ public class IntentionImpl extends DependableImpl implements Intention {
 		result.append(sequential);
 		result.append(", parallel: ");
 		result.append(parallel);
-		result.append(", qualitativeReasoningCombinedLabel: ");
+		result.append(", QualitativeReasoningCombinedLabel: ");
 		result.append(qualitativeReasoningCombinedLabel);
-		result.append(", qualitativeReasoningSatisfiedLabel: ");
+		result.append(", QualitativeReasoningSatisfiedLabel: ");
 		result.append(qualitativeReasoningSatisfiedLabel);
-		result.append(", qualitativeReasoningDenialLabel: ");
+		result.append(", QualitativeReasoningDenialLabel: ");
 		result.append(qualitativeReasoningDenialLabel);
-		result.append(", quantitativeReasoningCombinedLabel: ");
+		result.append(", QuantitativeReasoningCombinedLabel: ");
 		result.append(quantitativeReasoningCombinedLabel);
-		result.append(", quantitativeReasoningDeniedLabel: ");
+		result.append(", QuantitativeReasoningDeniedLabel: ");
 		result.append(quantitativeReasoningDeniedLabel);
-		result.append(", quantitativeReasoningSatisfiedLabel: ");
+		result.append(", QuantitativeReasoningSatisfiedLabel: ");
 		result.append(quantitativeReasoningSatisfiedLabel);
 		result.append(')');
 		return result.toString();

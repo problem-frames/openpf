@@ -10,7 +10,7 @@ import edu.toronto.cs.openome_model.EvaluationLabel;
 import edu.toronto.cs.openome_model.Intention;
 import edu.toronto.cs.openome_model.openome_modelPackage;
 import edu.toronto.cs.openome_model.impl.ModelImpl;
-import edu.toronto.cs.openome_model.impl.Openome_modelFactoryImpl;
+import edu.toronto.cs.openome_model.impl.openome_modelFactoryImpl;
 
 public class SetAlternativeCommand implements Command {
 	private Alternative alternative;
@@ -18,7 +18,7 @@ public class SetAlternativeCommand implements Command {
 	/*
 	 * A factory that can create any class Impl
 	 */
-	private static Openome_modelFactoryImpl factory = new Openome_modelFactoryImpl();
+	private static openome_modelFactoryImpl factory = new openome_modelFactoryImpl();
 	
 	public SetAlternativeCommand(Alternative alt) {
 		alternative = alt;

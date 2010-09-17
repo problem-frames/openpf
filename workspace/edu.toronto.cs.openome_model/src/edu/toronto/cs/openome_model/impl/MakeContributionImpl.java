@@ -25,6 +25,13 @@ import org.eclipse.emf.ecore.EClass;
  */
 public class MakeContributionImpl extends ContributionImpl implements MakeContribution {
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final String copyright = "Copyright 2001-2008 University of Toronto";
+
+	/**
 	 * The default value of the '{@link #getContributionType() <em>Contribution Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

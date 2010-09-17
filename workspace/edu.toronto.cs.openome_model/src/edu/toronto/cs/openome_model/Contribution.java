@@ -27,8 +27,14 @@ package edu.toronto.cs.openome_model;
  */
 public interface Contribution extends Link {
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String copyright = "Copyright 2001-2008 University of Toronto";
+
+	/**
 	 * Returns the value of the '<em><b>Target</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link edu.toronto.cs.openome_model.Intention#getContributesFrom <em>Contributes From</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Target</em>' reference isn't clear,
@@ -38,8 +44,7 @@ public interface Contribution extends Link {
 	 * @return the value of the '<em>Target</em>' reference.
 	 * @see #setTarget(Intention)
 	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getContribution_Target()
-	 * @see edu.toronto.cs.openome_model.Intention#getContributesFrom
-	 * @model opposite="contributesFrom"
+	 * @model
 	 * @generated
 	 */
 	Intention getTarget();
@@ -84,7 +89,6 @@ public interface Contribution extends Link {
 
 	/**
 	 * Returns the value of the '<em><b>Source</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link edu.toronto.cs.openome_model.Intention#getContributesTo <em>Contributes To</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Source</em>' reference isn't clear,
@@ -94,8 +98,7 @@ public interface Contribution extends Link {
 	 * @return the value of the '<em>Source</em>' reference.
 	 * @see #setSource(Intention)
 	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getContribution_Source()
-	 * @see edu.toronto.cs.openome_model.Intention#getContributesTo
-	 * @model opposite="contributesTo"
+	 * @model
 	 * @generated
 	 */
 	Intention getSource();

@@ -25,6 +25,13 @@ public class ResourceImpl extends IntentionImpl implements Resource {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public static final String copyright = "Copyright 2001-2008 University of Toronto";
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	protected ResourceImpl() {
 		super();
 	}

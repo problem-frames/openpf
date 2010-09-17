@@ -10,7 +10,7 @@ import edu.toronto.cs.openome_model.impl.ContainerImpl;
 import edu.toronto.cs.openome_model.impl.GoalImpl;
 import edu.toronto.cs.openome_model.impl.ModelImpl;
 import edu.toronto.cs.openome_model.impl.ResourceImpl;
-import edu.toronto.cs.openome_model.impl.Openome_modelFactoryImpl;
+import edu.toronto.cs.openome_model.impl.openome_modelFactoryImpl;
 
 public class ResourceImplCreateCommand implements Command {
 	
@@ -29,7 +29,7 @@ public class ResourceImplCreateCommand implements Command {
 	/*
 	 * A factory that can create any class Impl
 	 */
-	private static Openome_modelFactoryImpl factory = new Openome_modelFactoryImpl();
+	private static openome_modelFactoryImpl factory = new openome_modelFactoryImpl();
 	
 	/**
 	 * Command to add an actor inside a model

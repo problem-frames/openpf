@@ -29,6 +29,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class SoftgoalImpl extends IntentionImpl implements Softgoal {
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final String copyright = "Copyright 2001-2008 University of Toronto";
+
+	/**
 	 * The default value of the '{@link #getTopic() <em>Topic</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -156,7 +163,7 @@ public class SoftgoalImpl extends IntentionImpl implements Softgoal {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (topic: ");
+		result.append(" (Topic: ");
 		result.append(topic);
 		result.append(')');
 		return result.toString();

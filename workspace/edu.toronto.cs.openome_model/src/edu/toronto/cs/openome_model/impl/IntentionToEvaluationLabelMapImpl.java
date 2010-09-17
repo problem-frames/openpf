@@ -38,6 +38,13 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  */
 public class IntentionToEvaluationLabelMapImpl extends EObjectImpl implements BasicEMap.Entry<Intention,EvaluationLabel> {
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final String copyright = "Copyright 2001-2008 University of Toronto";
+
+	/**
 	 * The cached value of the '{@link #getTypedKey() <em>Key</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

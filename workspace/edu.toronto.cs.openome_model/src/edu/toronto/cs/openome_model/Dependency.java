@@ -28,8 +28,14 @@ package edu.toronto.cs.openome_model;
  */
 public interface Dependency extends Link {
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String copyright = "Copyright 2001-2008 University of Toronto";
+
+	/**
 	 * Returns the value of the '<em><b>Dependency From</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link edu.toronto.cs.openome_model.Dependable#getDependencyTo <em>Dependency To</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Dependency From</em>' reference isn't clear,
@@ -39,8 +45,7 @@ public interface Dependency extends Link {
 	 * @return the value of the '<em>Dependency From</em>' reference.
 	 * @see #setDependencyFrom(Dependable)
 	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getDependency_DependencyFrom()
-	 * @see edu.toronto.cs.openome_model.Dependable#getDependencyTo
-	 * @model opposite="dependencyTo"
+	 * @model
 	 * @generated
 	 */
 	Dependable getDependencyFrom();
@@ -57,7 +62,6 @@ public interface Dependency extends Link {
 
 	/**
 	 * Returns the value of the '<em><b>Dependency To</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link edu.toronto.cs.openome_model.Dependable#getDependencyFrom <em>Dependency From</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Dependency To</em>' reference isn't clear,
@@ -67,8 +71,7 @@ public interface Dependency extends Link {
 	 * @return the value of the '<em>Dependency To</em>' reference.
 	 * @see #setDependencyTo(Dependable)
 	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getDependency_DependencyTo()
-	 * @see edu.toronto.cs.openome_model.Dependable#getDependencyFrom
-	 * @model opposite="dependencyFrom"
+	 * @model
 	 * @generated
 	 */
 	Dependable getDependencyTo();

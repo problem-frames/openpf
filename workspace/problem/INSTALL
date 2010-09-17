@@ -2,12 +2,40 @@ Eclipse Modeling tools installed
  * install Modeling components
 	 * EMF/GMF tool
 	 * xtext tool
+	   * Use case: create a new XText project
+	     * use EBNF production rules to express the syntax
+	     * call the associated MWE2 engine to generate model in src-gen folder and ui code in another
+	       plugin  
 	 * acceleo tool   
  * littlejil tool by UMass
    http://laser.cs.umass.edu/eclipse/visualjil
    http://laser.cs.umass.edu/eclipse/ljanalysis/
+   Use case: Importing the littlejil model
+     * Currently just remember to add the "littlejil-1.5.dtd" locally to the DTD specification of the
+       XML document;
+     * The property editor is template driven way to elicit a FSM.
+     * The property is checked only after one associate the events appeared in the FSM with the 
+       process steps. 
  * Viatra2 tool by BME
    http://viatra.inf.mit.bme.hu/update/R3.1
+   Use case: Importing the Model
+     * creating a new ModelSpace, with both Viatra EMF importer and core selected
+     * Switching to the Viatra perspective
+     * dragging an Ecore metamodel into the ModelSpace 
+     * right clicking on the model space and select Native Ecore model importer
+     * selecting the model file
+   Use case: Create an incremental transformation
+     * create a new .vtcl to enter the pattern/trigger/precondition/action/postcondition rules
+   Use case: model transformation
+     * any change now, including importing the model and modifying the model through the
+       Properties view, can now be automated by the transformation rules
+   Note 1. The difference between action and postcondition is that the action may be
+   detailed imperative steps, while postcondition just update the result as
+   one single transformation declaratively;
+   Note 2. The difference with/without the @Trigger annotation is that the action will be recursively
+   applied to the model as long as it results in matching the triggering conditions (This sounds like
+   an event) while no Trigger will only recognizes static patterns;
+   Note 3. The syntax of patterns is very much like Prolog, they can be nested by the "find" pattern.
  * SWTBot  
    http://download.eclipse.org/technology/swtbot/helios/dev-build/update-site
  * OpenOME tool

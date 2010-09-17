@@ -50,6 +50,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public abstract class ContainerImpl extends DependableImpl implements Container {
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final String copyright = "Copyright 2001-2008 University of Toronto";
+
+	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

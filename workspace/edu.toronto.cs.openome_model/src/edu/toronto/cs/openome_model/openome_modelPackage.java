@@ -28,6 +28,13 @@ import org.eclipse.emf.ecore.EReference;
  */
 public interface openome_modelPackage extends EPackage {
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String copyright = "Copyright 2001-2008 University of Toronto";
+
+	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -57,14 +64,14 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	openome_modelPackage eINSTANCE = edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl.init();
+	openome_modelPackage eINSTANCE = edu.toronto.cs.openome_model.impl.openome_modelPackageImpl.init();
 
 	/**
 	 * The meta object id for the '{@link edu.toronto.cs.openome_model.impl.DependableImpl <em>Dependable</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.DependableImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getDependable()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getDependable()
 	 * @generated
 	 */
 	int DEPENDABLE = 20;
@@ -101,7 +108,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.ContainerImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getContainer()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getContainer()
 	 * @generated
 	 */
 	int CONTAINER = 16;
@@ -192,7 +199,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.ActorImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getActor()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getActor()
 	 * @generated
 	 */
 	int ACTOR = 0;
@@ -310,7 +317,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.AgentImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getAgent()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getAgent()
 	 * @generated
 	 */
 	int AGENT = 1;
@@ -428,7 +435,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.LinkImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getLink()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getLink()
 	 * @generated
 	 */
 	int LINK = 18;
@@ -447,7 +454,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.DecompositionImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getDecomposition()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getDecomposition()
 	 * @generated
 	 */
 	int DECOMPOSITION = 4;
@@ -493,7 +500,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.AndDecompositionImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getAndDecomposition()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getAndDecomposition()
 	 * @generated
 	 */
 	int AND_DECOMPOSITION = 2;
@@ -539,7 +546,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.ContributionImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getContribution()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getContribution()
 	 * @generated
 	 */
 	int CONTRIBUTION = 3;
@@ -594,7 +601,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.DependencyImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getDependency()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getDependency()
 	 * @generated
 	 */
 	int DEPENDENCY = 5;
@@ -658,7 +665,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.IntentionImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getIntention()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getIntention()
 	 * @generated
 	 */
 	int INTENTION = 7;
@@ -857,7 +864,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.GoalImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getGoal()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getGoal()
 	 * @generated
 	 */
 	int GOAL = 6;
@@ -1056,7 +1063,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.ModelImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getModel()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getModel()
 	 * @generated
 	 */
 	int MODEL = 8;
@@ -1156,7 +1163,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.OrDecompositionImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getOrDecomposition()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getOrDecomposition()
 	 * @generated
 	 */
 	int OR_DECOMPOSITION = 9;
@@ -1202,7 +1209,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.PositionImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getPosition()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getPosition()
 	 * @generated
 	 */
 	int POSITION = 10;
@@ -1302,7 +1309,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.PropertyImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getProperty()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getProperty()
 	 * @generated
 	 */
 	int PROPERTY = 11;
@@ -1339,7 +1346,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.ResourceImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getResource()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getResource()
 	 * @generated
 	 */
 	int RESOURCE = 12;
@@ -1538,7 +1545,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.RoleImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getRole()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getRole()
 	 * @generated
 	 */
 	int ROLE = 13;
@@ -1629,7 +1636,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.SoftgoalImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getSoftgoal()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getSoftgoal()
 	 * @generated
 	 */
 	int SOFTGOAL = 14;
@@ -1837,7 +1844,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.TaskImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getTask()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getTask()
 	 * @generated
 	 */
 	int TASK = 15;
@@ -2036,7 +2043,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.BeliefImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getBelief()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getBelief()
 	 * @generated
 	 */
 	int BELIEF = 17;
@@ -2235,7 +2242,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.CorrelationImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getCorrelation()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getCorrelation()
 	 * @generated
 	 */
 	int CORRELATION = 19;
@@ -2272,7 +2279,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.HelpContributionImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getHelpContribution()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getHelpContribution()
 	 * @generated
 	 */
 	int HELP_CONTRIBUTION = 21;
@@ -2336,7 +2343,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.HurtContributionImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getHurtContribution()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getHurtContribution()
 	 * @generated
 	 */
 	int HURT_CONTRIBUTION = 22;
@@ -2400,7 +2407,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.MakeContributionImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getMakeContribution()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getMakeContribution()
 	 * @generated
 	 */
 	int MAKE_CONTRIBUTION = 23;
@@ -2464,7 +2471,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.BreakContributionImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getBreakContribution()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getBreakContribution()
 	 * @generated
 	 */
 	int BREAK_CONTRIBUTION = 24;
@@ -2528,7 +2535,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.SomePlusContributionImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getSomePlusContribution()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getSomePlusContribution()
 	 * @generated
 	 */
 	int SOME_PLUS_CONTRIBUTION = 25;
@@ -2592,7 +2599,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.SomeMinusContributionImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getSomeMinusContribution()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getSomeMinusContribution()
 	 * @generated
 	 */
 	int SOME_MINUS_CONTRIBUTION = 26;
@@ -2656,7 +2663,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.UnknownContributionImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getUnknownContribution()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getUnknownContribution()
 	 * @generated
 	 */
 	int UNKNOWN_CONTRIBUTION = 27;
@@ -2720,7 +2727,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.AndContributionImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getAndContribution()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getAndContribution()
 	 * @generated
 	 */
 	int AND_CONTRIBUTION = 28;
@@ -2784,7 +2791,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.OrContributionImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getOrContribution()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getOrContribution()
 	 * @generated
 	 */
 	int OR_CONTRIBUTION = 29;
@@ -2848,7 +2855,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.AssociationImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getAssociation()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getAssociation()
 	 * @generated
 	 */
 	int ASSOCIATION = 30;
@@ -2885,7 +2892,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.IsAAssociationImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getIsAAssociation()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getIsAAssociation()
 	 * @generated
 	 */
 	int IS_AASSOCIATION = 31;
@@ -2931,7 +2938,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.CoversAssociationImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getCoversAssociation()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getCoversAssociation()
 	 * @generated
 	 */
 	int COVERS_ASSOCIATION = 32;
@@ -2977,7 +2984,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.IsPartOfAssociationImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getIsPartOfAssociation()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getIsPartOfAssociation()
 	 * @generated
 	 */
 	int IS_PART_OF_ASSOCIATION = 33;
@@ -3023,7 +3030,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.OccupiesAssociationImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getOccupiesAssociation()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getOccupiesAssociation()
 	 * @generated
 	 */
 	int OCCUPIES_ASSOCIATION = 34;
@@ -3069,7 +3076,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.PlaysAssociationImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getPlaysAssociation()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getPlaysAssociation()
 	 * @generated
 	 */
 	int PLAYS_ASSOCIATION = 35;
@@ -3115,7 +3122,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.INSAssociationImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getINSAssociation()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getINSAssociation()
 	 * @generated
 	 */
 	int INS_ASSOCIATION = 36;
@@ -3161,7 +3168,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.AlternativeImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getAlternative()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getAlternative()
 	 * @generated
 	 */
 	int ALTERNATIVE = 37;
@@ -3216,7 +3223,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.impl.IntentionToEvaluationLabelMapImpl
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getIntentionToEvaluationLabelMap()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getIntentionToEvaluationLabelMap()
 	 * @generated
 	 */
 	int INTENTION_TO_EVALUATION_LABEL_MAP = 38;
@@ -3253,7 +3260,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.EvaluationLabel
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getEvaluationLabel()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getEvaluationLabel()
 	 * @generated
 	 */
 	int EVALUATION_LABEL = 39;
@@ -3263,7 +3270,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.GoalModelingContributionType
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getGoalModelingContributionType()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getGoalModelingContributionType()
 	 * @generated
 	 */
 	int GOAL_MODELING_CONTRIBUTION_TYPE = 40;
@@ -3273,7 +3280,7 @@ public interface openome_modelPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see edu.toronto.cs.openome_model.GoalModelingContributionSymmetry
-	 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getGoalModelingContributionSymmetry()
+	 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getGoalModelingContributionSymmetry()
 	 * @generated
 	 */
 	int GOAL_MODELING_CONTRIBUTION_SYMMETRY = 41;
@@ -4630,7 +4637,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.ActorImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getActor()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getActor()
 		 * @generated
 		 */
 		EClass ACTOR = eINSTANCE.getActor();
@@ -4664,7 +4671,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.AgentImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getAgent()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getAgent()
 		 * @generated
 		 */
 		EClass AGENT = eINSTANCE.getAgent();
@@ -4698,7 +4705,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.AndDecompositionImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getAndDecomposition()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getAndDecomposition()
 		 * @generated
 		 */
 		EClass AND_DECOMPOSITION = eINSTANCE.getAndDecomposition();
@@ -4708,7 +4715,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.ContributionImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getContribution()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getContribution()
 		 * @generated
 		 */
 		EClass CONTRIBUTION = eINSTANCE.getContribution();
@@ -4750,7 +4757,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.DecompositionImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getDecomposition()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getDecomposition()
 		 * @generated
 		 */
 		EClass DECOMPOSITION = eINSTANCE.getDecomposition();
@@ -4784,7 +4791,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.DependencyImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getDependency()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getDependency()
 		 * @generated
 		 */
 		EClass DEPENDENCY = eINSTANCE.getDependency();
@@ -4834,7 +4841,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.GoalImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getGoal()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getGoal()
 		 * @generated
 		 */
 		EClass GOAL = eINSTANCE.getGoal();
@@ -4844,7 +4851,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.IntentionImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getIntention()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getIntention()
 		 * @generated
 		 */
 		EClass INTENTION = eINSTANCE.getIntention();
@@ -4998,7 +5005,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.ModelImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getModel()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getModel()
 		 * @generated
 		 */
 		EClass MODEL = eINSTANCE.getModel();
@@ -5080,7 +5087,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.OrDecompositionImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getOrDecomposition()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getOrDecomposition()
 		 * @generated
 		 */
 		EClass OR_DECOMPOSITION = eINSTANCE.getOrDecomposition();
@@ -5090,7 +5097,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.PositionImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getPosition()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getPosition()
 		 * @generated
 		 */
 		EClass POSITION = eINSTANCE.getPosition();
@@ -5108,7 +5115,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.PropertyImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getProperty()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getProperty()
 		 * @generated
 		 */
 		EClass PROPERTY = eINSTANCE.getProperty();
@@ -5134,7 +5141,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.ResourceImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getResource()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getResource()
 		 * @generated
 		 */
 		EClass RESOURCE = eINSTANCE.getResource();
@@ -5144,7 +5151,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.RoleImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getRole()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getRole()
 		 * @generated
 		 */
 		EClass ROLE = eINSTANCE.getRole();
@@ -5154,7 +5161,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.SoftgoalImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getSoftgoal()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getSoftgoal()
 		 * @generated
 		 */
 		EClass SOFTGOAL = eINSTANCE.getSoftgoal();
@@ -5172,7 +5179,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.TaskImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getTask()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getTask()
 		 * @generated
 		 */
 		EClass TASK = eINSTANCE.getTask();
@@ -5182,7 +5189,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.ContainerImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getContainer()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getContainer()
 		 * @generated
 		 */
 		EClass CONTAINER = eINSTANCE.getContainer();
@@ -5240,7 +5247,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.BeliefImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getBelief()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getBelief()
 		 * @generated
 		 */
 		EClass BELIEF = eINSTANCE.getBelief();
@@ -5250,7 +5257,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.LinkImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getLink()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getLink()
 		 * @generated
 		 */
 		EClass LINK = eINSTANCE.getLink();
@@ -5260,7 +5267,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.CorrelationImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getCorrelation()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getCorrelation()
 		 * @generated
 		 */
 		EClass CORRELATION = eINSTANCE.getCorrelation();
@@ -5286,7 +5293,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.DependableImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getDependable()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getDependable()
 		 * @generated
 		 */
 		EClass DEPENDABLE = eINSTANCE.getDependable();
@@ -5312,7 +5319,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.HelpContributionImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getHelpContribution()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getHelpContribution()
 		 * @generated
 		 */
 		EClass HELP_CONTRIBUTION = eINSTANCE.getHelpContribution();
@@ -5330,7 +5337,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.HurtContributionImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getHurtContribution()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getHurtContribution()
 		 * @generated
 		 */
 		EClass HURT_CONTRIBUTION = eINSTANCE.getHurtContribution();
@@ -5348,7 +5355,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.MakeContributionImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getMakeContribution()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getMakeContribution()
 		 * @generated
 		 */
 		EClass MAKE_CONTRIBUTION = eINSTANCE.getMakeContribution();
@@ -5366,7 +5373,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.BreakContributionImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getBreakContribution()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getBreakContribution()
 		 * @generated
 		 */
 		EClass BREAK_CONTRIBUTION = eINSTANCE.getBreakContribution();
@@ -5384,7 +5391,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.SomePlusContributionImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getSomePlusContribution()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getSomePlusContribution()
 		 * @generated
 		 */
 		EClass SOME_PLUS_CONTRIBUTION = eINSTANCE.getSomePlusContribution();
@@ -5402,7 +5409,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.SomeMinusContributionImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getSomeMinusContribution()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getSomeMinusContribution()
 		 * @generated
 		 */
 		EClass SOME_MINUS_CONTRIBUTION = eINSTANCE.getSomeMinusContribution();
@@ -5420,7 +5427,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.UnknownContributionImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getUnknownContribution()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getUnknownContribution()
 		 * @generated
 		 */
 		EClass UNKNOWN_CONTRIBUTION = eINSTANCE.getUnknownContribution();
@@ -5438,7 +5445,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.AndContributionImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getAndContribution()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getAndContribution()
 		 * @generated
 		 */
 		EClass AND_CONTRIBUTION = eINSTANCE.getAndContribution();
@@ -5456,7 +5463,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.OrContributionImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getOrContribution()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getOrContribution()
 		 * @generated
 		 */
 		EClass OR_CONTRIBUTION = eINSTANCE.getOrContribution();
@@ -5474,7 +5481,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.AssociationImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getAssociation()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getAssociation()
 		 * @generated
 		 */
 		EClass ASSOCIATION = eINSTANCE.getAssociation();
@@ -5500,7 +5507,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.IsAAssociationImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getIsAAssociation()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getIsAAssociation()
 		 * @generated
 		 */
 		EClass IS_AASSOCIATION = eINSTANCE.getIsAAssociation();
@@ -5518,7 +5525,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.CoversAssociationImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getCoversAssociation()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getCoversAssociation()
 		 * @generated
 		 */
 		EClass COVERS_ASSOCIATION = eINSTANCE.getCoversAssociation();
@@ -5536,7 +5543,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.IsPartOfAssociationImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getIsPartOfAssociation()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getIsPartOfAssociation()
 		 * @generated
 		 */
 		EClass IS_PART_OF_ASSOCIATION = eINSTANCE.getIsPartOfAssociation();
@@ -5554,7 +5561,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.OccupiesAssociationImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getOccupiesAssociation()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getOccupiesAssociation()
 		 * @generated
 		 */
 		EClass OCCUPIES_ASSOCIATION = eINSTANCE.getOccupiesAssociation();
@@ -5572,7 +5579,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.PlaysAssociationImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getPlaysAssociation()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getPlaysAssociation()
 		 * @generated
 		 */
 		EClass PLAYS_ASSOCIATION = eINSTANCE.getPlaysAssociation();
@@ -5590,7 +5597,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.INSAssociationImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getINSAssociation()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getINSAssociation()
 		 * @generated
 		 */
 		EClass INS_ASSOCIATION = eINSTANCE.getINSAssociation();
@@ -5608,7 +5615,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.AlternativeImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getAlternative()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getAlternative()
 		 * @generated
 		 */
 		EClass ALTERNATIVE = eINSTANCE.getAlternative();
@@ -5650,7 +5657,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.impl.IntentionToEvaluationLabelMapImpl
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getIntentionToEvaluationLabelMap()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getIntentionToEvaluationLabelMap()
 		 * @generated
 		 */
 		EClass INTENTION_TO_EVALUATION_LABEL_MAP = eINSTANCE.getIntentionToEvaluationLabelMap();
@@ -5676,7 +5683,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.EvaluationLabel
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getEvaluationLabel()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getEvaluationLabel()
 		 * @generated
 		 */
 		EEnum EVALUATION_LABEL = eINSTANCE.getEvaluationLabel();
@@ -5686,7 +5693,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.GoalModelingContributionType
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getGoalModelingContributionType()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getGoalModelingContributionType()
 		 * @generated
 		 */
 		EEnum GOAL_MODELING_CONTRIBUTION_TYPE = eINSTANCE.getGoalModelingContributionType();
@@ -5696,7 +5703,7 @@ public interface openome_modelPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see edu.toronto.cs.openome_model.GoalModelingContributionSymmetry
-		 * @see edu.toronto.cs.openome_model.impl.Openome_modelPackageImpl#getGoalModelingContributionSymmetry()
+		 * @see edu.toronto.cs.openome_model.impl.openome_modelPackageImpl#getGoalModelingContributionSymmetry()
 		 * @generated
 		 */
 		EEnum GOAL_MODELING_CONTRIBUTION_SYMMETRY = eINSTANCE.getGoalModelingContributionSymmetry();

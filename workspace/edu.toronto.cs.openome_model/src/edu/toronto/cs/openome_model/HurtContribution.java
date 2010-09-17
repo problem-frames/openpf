@@ -24,6 +24,13 @@ package edu.toronto.cs.openome_model;
  */
 public interface HurtContribution extends Contribution {
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String copyright = "Copyright 2001-2008 University of Toronto";
+
+	/**
 	 * Returns the value of the '<em><b>Contribution Type</b></em>' attribute.
 	 * The default value is <code>"Hurt"</code>.
 	 * <!-- begin-user-doc -->

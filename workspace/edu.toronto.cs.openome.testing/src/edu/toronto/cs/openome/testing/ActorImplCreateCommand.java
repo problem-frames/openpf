@@ -6,7 +6,7 @@ import org.eclipse.emf.common.command.Command;
 
 import edu.toronto.cs.openome_model.impl.ActorImpl;
 import edu.toronto.cs.openome_model.impl.ModelImpl;
-import edu.toronto.cs.openome_model.impl.Openome_modelFactoryImpl;
+import edu.toronto.cs.openome_model.impl.openome_modelFactoryImpl;
 
 public class ActorImplCreateCommand implements Command {
 	
@@ -23,7 +23,7 @@ public class ActorImplCreateCommand implements Command {
 	/*
 	 * A factory that can create any class Impl
 	 */
-	private static Openome_modelFactoryImpl factory = new Openome_modelFactoryImpl();
+	private static openome_modelFactoryImpl factory = new openome_modelFactoryImpl();
 	
 	/**
 	 * Command to add an actor inside a model

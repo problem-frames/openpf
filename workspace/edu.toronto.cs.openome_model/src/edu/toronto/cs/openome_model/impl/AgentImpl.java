@@ -40,6 +40,13 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  */
 public class AgentImpl extends ContainerImpl implements Agent {
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final String copyright = "Copyright 2001-2008 University of Toronto";
+
+	/**
 	 * The cached value of the '{@link #getPlays() <em>Plays</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

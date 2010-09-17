@@ -42,6 +42,13 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Intention extends Dependable {
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String copyright = "Copyright 2001-2008 University of Toronto";
+
+	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -221,7 +228,6 @@ public interface Intention extends Dependable {
 	/**
 	 * Returns the value of the '<em><b>Decompositions</b></em>' reference list.
 	 * The list contents are of type {@link edu.toronto.cs.openome_model.Decomposition}.
-	 * It is bidirectional and its opposite is '{@link edu.toronto.cs.openome_model.Decomposition#getSource <em>Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Decompositions</em>' reference list isn't clear,
@@ -232,8 +238,7 @@ public interface Intention extends Dependable {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Decompositions</em>' reference list.
 	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getIntention_Decompositions()
-	 * @see edu.toronto.cs.openome_model.Decomposition#getSource
-	 * @model opposite="source"
+	 * @model
 	 * @generated
 	 */
 	EList<Decomposition> getDecompositions();
@@ -241,7 +246,6 @@ public interface Intention extends Dependable {
 	/**
 	 * Returns the value of the '<em><b>Parent Decompositions</b></em>' reference list.
 	 * The list contents are of type {@link edu.toronto.cs.openome_model.Decomposition}.
-	 * It is bidirectional and its opposite is '{@link edu.toronto.cs.openome_model.Decomposition#getTarget <em>Target</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Parent Decompositions</em>' reference list isn't clear,
@@ -252,8 +256,7 @@ public interface Intention extends Dependable {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parent Decompositions</em>' reference list.
 	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getIntention_ParentDecompositions()
-	 * @see edu.toronto.cs.openome_model.Decomposition#getTarget
-	 * @model opposite="target"
+	 * @model
 	 * @generated
 	 */
 	EList<Decomposition> getParentDecompositions();
@@ -454,7 +457,6 @@ public interface Intention extends Dependable {
 	/**
 	 * Returns the value of the '<em><b>Contributes To</b></em>' reference list.
 	 * The list contents are of type {@link edu.toronto.cs.openome_model.Contribution}.
-	 * It is bidirectional and its opposite is '{@link edu.toronto.cs.openome_model.Contribution#getSource <em>Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Contributes To</em>' reference list isn't clear,
@@ -463,8 +465,7 @@ public interface Intention extends Dependable {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Contributes To</em>' reference list.
 	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getIntention_ContributesTo()
-	 * @see edu.toronto.cs.openome_model.Contribution#getSource
-	 * @model opposite="source"
+	 * @model
 	 * @generated
 	 */
 	EList<Contribution> getContributesTo();
@@ -472,7 +473,6 @@ public interface Intention extends Dependable {
 	/**
 	 * Returns the value of the '<em><b>Contributes From</b></em>' reference list.
 	 * The list contents are of type {@link edu.toronto.cs.openome_model.Contribution}.
-	 * It is bidirectional and its opposite is '{@link edu.toronto.cs.openome_model.Contribution#getTarget <em>Target</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Contributes From</em>' reference list isn't clear,
@@ -481,8 +481,7 @@ public interface Intention extends Dependable {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Contributes From</em>' reference list.
 	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getIntention_ContributesFrom()
-	 * @see edu.toronto.cs.openome_model.Contribution#getTarget
-	 * @model opposite="target"
+	 * @model
 	 * @generated
 	 */
 	EList<Contribution> getContributesFrom();

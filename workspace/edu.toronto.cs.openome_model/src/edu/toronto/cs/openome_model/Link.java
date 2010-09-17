@@ -19,4 +19,11 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Link extends EObject {
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String copyright = "Copyright 2001-2008 University of Toronto";
+
 } // Link

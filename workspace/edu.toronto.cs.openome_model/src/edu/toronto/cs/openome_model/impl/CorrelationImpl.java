@@ -32,6 +32,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class CorrelationImpl extends LinkImpl implements Correlation {
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final String copyright = "Copyright 2001-2008 University of Toronto";
+
+	/**
 	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

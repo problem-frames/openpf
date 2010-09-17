@@ -80,6 +80,13 @@ public enum EvaluationLabel implements Enumerator {
 	CONFLICT(0, "Conflict", "Conflict");
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final String copyright = "Copyright 2001-2008 University of Toronto";
+
+	/**
 	 * The '<em><b>None</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>

@@ -24,6 +24,13 @@ package edu.toronto.cs.openome_model;
  */
 public interface IsPartOfAssociation extends Association {
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String copyright = "Copyright 2001-2008 University of Toronto";
+
+	/**
 	 * Returns the value of the '<em><b>Label</b></em>' attribute.
 	 * The default value is <code>"Is part of"</code>.
 	 * <!-- begin-user-doc -->

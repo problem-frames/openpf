@@ -1,13 +1,12 @@
 /**
  * Copyright 2001-2008 University of Toronto
- *
- * $Id$
  */
 package edu.toronto.cs.openome_model.util;
 
 import edu.toronto.cs.openome_model.*;
 
 import java.util.Map;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -23,7 +22,14 @@ import org.eclipse.emf.ecore.EObject;
  * @see edu.toronto.cs.openome_model.openome_modelPackage
  * @generated
  */
-public class Openome_modelAdapterFactory extends AdapterFactoryImpl {
+public class openome_modelAdapterFactory extends AdapterFactoryImpl {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final String copyright = "Copyright 2001-2008 University of Toronto";
+
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
@@ -38,7 +44,7 @@ public class Openome_modelAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Openome_modelAdapterFactory() {
+	public openome_modelAdapterFactory() {
 		if (modelPackage == null) {
 			modelPackage = openome_modelPackage.eINSTANCE;
 		}
@@ -69,8 +75,8 @@ public class Openome_modelAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Openome_modelSwitch<Adapter> modelSwitch =
-		new Openome_modelSwitch<Adapter>() {
+	protected openome_modelSwitch<Adapter> modelSwitch =
+		new openome_modelSwitch<Adapter>() {
 			@Override
 			public Adapter caseActor(Actor object) {
 				return createActorAdapter();

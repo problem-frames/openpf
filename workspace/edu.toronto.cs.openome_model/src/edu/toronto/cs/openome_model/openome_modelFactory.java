@@ -1,7 +1,5 @@
 /**
  * Copyright 2001-2008 University of Toronto
- *
- * $Id$
  */
 package edu.toronto.cs.openome_model;
 
@@ -17,12 +15,19 @@ import org.eclipse.emf.ecore.EFactory;
  */
 public interface openome_modelFactory extends EFactory {
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String copyright = "Copyright 2001-2008 University of Toronto";
+
+	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	openome_modelFactory eINSTANCE = edu.toronto.cs.openome_model.impl.Openome_modelFactoryImpl.init();
+	openome_modelFactory eINSTANCE = edu.toronto.cs.openome_model.impl.openome_modelFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Actor</em>'.

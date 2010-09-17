@@ -25,6 +25,13 @@ public class OrDecompositionImpl extends DecompositionImpl implements OrDecompos
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public static final String copyright = "Copyright 2001-2008 University of Toronto";
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	protected OrDecompositionImpl() {
 		super();
 	}

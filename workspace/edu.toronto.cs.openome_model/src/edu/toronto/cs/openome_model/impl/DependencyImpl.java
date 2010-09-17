@@ -39,6 +39,13 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  */
 public class DependencyImpl extends LinkImpl implements Dependency {
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final String copyright = "Copyright 2001-2008 University of Toronto";
+
+	/**
 	 * The cached value of the '{@link #getDependencyFrom() <em>Dependency From</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -148,33 +155,11 @@ public class DependencyImpl extends LinkImpl implements Dependency {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDependencyFrom(Dependable newDependencyFrom, NotificationChain msgs) {
+	public void setDependencyFrom(Dependable newDependencyFrom) {
 		Dependable oldDependencyFrom = dependencyFrom;
 		dependencyFrom = newDependencyFrom;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, openome_modelPackage.DEPENDENCY__DEPENDENCY_FROM, oldDependencyFrom, newDependencyFrom);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDependencyFrom(Dependable newDependencyFrom) {
-		if (newDependencyFrom != dependencyFrom) {
-			NotificationChain msgs = null;
-			if (dependencyFrom != null)
-				msgs = ((InternalEObject)dependencyFrom).eInverseRemove(this, openome_modelPackage.DEPENDABLE__DEPENDENCY_TO, Dependable.class, msgs);
-			if (newDependencyFrom != null)
-				msgs = ((InternalEObject)newDependencyFrom).eInverseAdd(this, openome_modelPackage.DEPENDABLE__DEPENDENCY_TO, Dependable.class, msgs);
-			msgs = basicSetDependencyFrom(newDependencyFrom, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, openome_modelPackage.DEPENDENCY__DEPENDENCY_FROM, newDependencyFrom, newDependencyFrom));
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, openome_modelPackage.DEPENDENCY__DEPENDENCY_FROM, oldDependencyFrom, dependencyFrom));
 	}
 
 	/**
@@ -208,33 +193,11 @@ public class DependencyImpl extends LinkImpl implements Dependency {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDependencyTo(Dependable newDependencyTo, NotificationChain msgs) {
+	public void setDependencyTo(Dependable newDependencyTo) {
 		Dependable oldDependencyTo = dependencyTo;
 		dependencyTo = newDependencyTo;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, openome_modelPackage.DEPENDENCY__DEPENDENCY_TO, oldDependencyTo, newDependencyTo);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDependencyTo(Dependable newDependencyTo) {
-		if (newDependencyTo != dependencyTo) {
-			NotificationChain msgs = null;
-			if (dependencyTo != null)
-				msgs = ((InternalEObject)dependencyTo).eInverseRemove(this, openome_modelPackage.DEPENDABLE__DEPENDENCY_FROM, Dependable.class, msgs);
-			if (newDependencyTo != null)
-				msgs = ((InternalEObject)newDependencyTo).eInverseAdd(this, openome_modelPackage.DEPENDABLE__DEPENDENCY_FROM, Dependable.class, msgs);
-			msgs = basicSetDependencyTo(newDependencyTo, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, openome_modelPackage.DEPENDENCY__DEPENDENCY_TO, newDependencyTo, newDependencyTo));
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, openome_modelPackage.DEPENDENCY__DEPENDENCY_TO, oldDependencyTo, dependencyTo));
 	}
 
 	/**
@@ -328,14 +291,6 @@ public class DependencyImpl extends LinkImpl implements Dependency {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case openome_modelPackage.DEPENDENCY__DEPENDENCY_FROM:
-				if (dependencyFrom != null)
-					msgs = ((InternalEObject)dependencyFrom).eInverseRemove(this, openome_modelPackage.DEPENDABLE__DEPENDENCY_TO, Dependable.class, msgs);
-				return basicSetDependencyFrom((Dependable)otherEnd, msgs);
-			case openome_modelPackage.DEPENDENCY__DEPENDENCY_TO:
-				if (dependencyTo != null)
-					msgs = ((InternalEObject)dependencyTo).eInverseRemove(this, openome_modelPackage.DEPENDABLE__DEPENDENCY_FROM, Dependable.class, msgs);
-				return basicSetDependencyTo((Dependable)otherEnd, msgs);
 			case openome_modelPackage.DEPENDENCY__MODEL:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
@@ -352,10 +307,6 @@ public class DependencyImpl extends LinkImpl implements Dependency {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case openome_modelPackage.DEPENDENCY__DEPENDENCY_FROM:
-				return basicSetDependencyFrom(null, msgs);
-			case openome_modelPackage.DEPENDENCY__DEPENDENCY_TO:
-				return basicSetDependencyTo(null, msgs);
 			case openome_modelPackage.DEPENDENCY__MODEL:
 				return basicSetModel(null, msgs);
 		}

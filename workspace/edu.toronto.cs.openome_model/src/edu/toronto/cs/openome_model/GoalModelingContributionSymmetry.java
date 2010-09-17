@@ -52,6 +52,13 @@ public enum GoalModelingContributionSymmetry implements Enumerator {
 	DEN(1, "Den", "Den");
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final String copyright = "Copyright 2001-2008 University of Toronto";
+
+	/**
 	 * The '<em><b>Both</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>

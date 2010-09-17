@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -38,6 +39,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public abstract class DependableImpl extends EObjectImpl implements Dependable {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final String copyright = "Copyright 2001-2008 University of Toronto";
+
 	/**
 	 * The cached value of the '{@link #getDependencyFrom() <em>Dependency From</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -84,7 +92,7 @@ public abstract class DependableImpl extends EObjectImpl implements Dependable {
 	 */
 	public EList<Dependency> getDependencyFrom() {
 		if (dependencyFrom == null) {
-			dependencyFrom = new EObjectWithInverseResolvingEList<Dependency>(Dependency.class, this, openome_modelPackage.DEPENDABLE__DEPENDENCY_FROM, openome_modelPackage.DEPENDENCY__DEPENDENCY_TO);
+			dependencyFrom = new EObjectResolvingEList<Dependency>(Dependency.class, this, openome_modelPackage.DEPENDABLE__DEPENDENCY_FROM);
 		}
 		return dependencyFrom;
 	}
@@ -96,42 +104,9 @@ public abstract class DependableImpl extends EObjectImpl implements Dependable {
 	 */
 	public EList<Dependency> getDependencyTo() {
 		if (dependencyTo == null) {
-			dependencyTo = new EObjectWithInverseResolvingEList<Dependency>(Dependency.class, this, openome_modelPackage.DEPENDABLE__DEPENDENCY_TO, openome_modelPackage.DEPENDENCY__DEPENDENCY_FROM);
+			dependencyTo = new EObjectResolvingEList<Dependency>(Dependency.class, this, openome_modelPackage.DEPENDABLE__DEPENDENCY_TO);
 		}
 		return dependencyTo;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case openome_modelPackage.DEPENDABLE__DEPENDENCY_FROM:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDependencyFrom()).basicAdd(otherEnd, msgs);
-			case openome_modelPackage.DEPENDABLE__DEPENDENCY_TO:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDependencyTo()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case openome_modelPackage.DEPENDABLE__DEPENDENCY_FROM:
-				return ((InternalEList<?>)getDependencyFrom()).basicRemove(otherEnd, msgs);
-			case openome_modelPackage.DEPENDABLE__DEPENDENCY_TO:
-				return ((InternalEList<?>)getDependencyTo()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

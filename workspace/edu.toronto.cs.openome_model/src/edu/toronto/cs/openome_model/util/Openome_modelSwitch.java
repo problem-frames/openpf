@@ -1,15 +1,13 @@
 /**
  * Copyright 2001-2008 University of Toronto
- *
- * $Id$
  */
 package edu.toronto.cs.openome_model.util;
 
 import edu.toronto.cs.openome_model.*;
 
 import java.util.List;
-
 import java.util.Map;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 
@@ -26,7 +24,14 @@ import org.eclipse.emf.ecore.EObject;
  * @see edu.toronto.cs.openome_model.openome_modelPackage
  * @generated
  */
-public class Openome_modelSwitch<T> {
+public class openome_modelSwitch<T> {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final String copyright = "Copyright 2001-2008 University of Toronto";
+
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
@@ -41,7 +46,7 @@ public class Openome_modelSwitch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Openome_modelSwitch() {
+	public openome_modelSwitch() {
 		if (modelPackage == null) {
 			modelPackage = openome_modelPackage.eINSTANCE;
 		}

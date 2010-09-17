@@ -25,6 +25,13 @@ public class AndDecompositionImpl extends DecompositionImpl implements AndDecomp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public static final String copyright = "Copyright 2001-2008 University of Toronto";
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	protected AndDecompositionImpl() {
 		super();
 	}

@@ -32,6 +32,12 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  */
 public class PositionImpl extends ContainerImpl implements Position {
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final String copyright = "Copyright 2001-2008 University of Toronto";
+	/**
 	 * The cached value of the '{@link #getCovers() <em>Covers</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

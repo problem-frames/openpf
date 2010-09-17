@@ -27,6 +27,13 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Actor extends Container {
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String copyright = "Copyright 2001-2008 University of Toronto";
+
+	/**
 	 * Returns the value of the '<em><b>Is a</b></em>' reference list.
 	 * The list contents are of type {@link edu.toronto.cs.openome_model.Actor}.
 	 * <!-- begin-user-doc -->

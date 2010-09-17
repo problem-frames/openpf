@@ -36,6 +36,13 @@ import edu.toronto.cs.openome_model.impl.ModelImpl;
  */
 public interface Alternative extends EObject {
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String copyright = "Copyright 2001-2008 University of Toronto";
+
+	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->

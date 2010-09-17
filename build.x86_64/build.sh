@@ -1,7 +1,7 @@
 #!/bin/bash
 #-----------------------------------------------------------
 PROJECT=problem
-PRODUCT=pf
+PRODUCT=situation
 IDE=$HOME/IDE
 VERSION=3.6pf
 export ECLIPSE_HOME=$IDE/sdk/$VERSION/eclipse

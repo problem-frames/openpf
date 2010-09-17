@@ -72,6 +72,13 @@ public enum GoalModelingContributionType implements Enumerator {
 	MINUS_MINUS(4, "MinusMinus", "--");
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final String copyright = "Copyright 2001-2008 University of Toronto";
+
+	/**
 	 * The '<em><b>None</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>

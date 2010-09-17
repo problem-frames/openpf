@@ -24,6 +24,13 @@ package edu.toronto.cs.openome_model;
  */
 public interface Softgoal extends Intention {
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String copyright = "Copyright 2001-2008 University of Toronto";
+
+	/**
 	 * Returns the value of the '<em><b>Topic</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>

@@ -24,6 +24,13 @@ package edu.toronto.cs.openome_model;
  */
 public interface IsAAssociation extends Association {
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String copyright = "Copyright 2001-2008 University of Toronto";
+
+	/**
 	 * Returns the value of the '<em><b>Label</b></em>' attribute.
 	 * The default value is <code>"ISA"</code>.
 	 * <!-- begin-user-doc -->

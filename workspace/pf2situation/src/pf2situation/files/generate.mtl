@@ -1,5 +1,5 @@
 [comment encoding = UTF-8 /]
-[module generate('http://open.ac.uk/problem')/]
+[module generate('/problem/src-gen/uk/ac/open/Problem.ecore')/]
 [template public generate(d: ProblemDiagram)]
 [file (d.name.toString().concat('.situation'), false)]
 model [d.name.toString()/]: 
@@ -52,6 +52,7 @@ delegates([link.from.name/], [link.to.name/], [phenomenon.name/])
  [/for]
 [else]
  [for (phenomenon: Phenomenon | link.phenomena)]
+  resource [phenomenon.name/]
 provides([link.from.name/], [phenomenon.name/])
 consumes([link.to.name/], [phenomenon.name/])
  [/for]

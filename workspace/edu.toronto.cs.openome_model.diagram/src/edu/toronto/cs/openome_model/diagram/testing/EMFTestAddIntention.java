@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import edu.toronto.cs.openome_model.impl.GoalImpl;
 import edu.toronto.cs.openome_model.impl.ModelImpl;
-import edu.toronto.cs.openome_model.impl.Openome_modelFactoryImpl;
+import edu.toronto.cs.openome_model.impl.openome_modelFactoryImpl;
 
 /**
  * Examines the case of adding an intention into the model
@@ -16,7 +16,7 @@ public class EMFTestAddIntention {
 	/*
 	 * A factory that can create any class Impl
 	 */
-	private static Openome_modelFactoryImpl factory = new Openome_modelFactoryImpl();
+	private static openome_modelFactoryImpl factory = new openome_modelFactoryImpl();
 	
 	/*
 	 * The main model we are using

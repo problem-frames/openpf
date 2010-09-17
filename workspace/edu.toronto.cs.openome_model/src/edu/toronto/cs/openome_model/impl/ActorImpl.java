@@ -34,6 +34,13 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  */
 public class ActorImpl extends ContainerImpl implements Actor {
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final String copyright = "Copyright 2001-2008 University of Toronto";
+
+	/**
 	 * The cached value of the '{@link #getIs_a() <em>Is a</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

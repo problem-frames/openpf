@@ -22,6 +22,9 @@
       <plugin id="Istar2situation.ui"/>
       <plugin id="PF2EC"/>
       <plugin id="PF2EC.ui"/>
+      <plugin id="ch.qos.logback.classic"/>
+      <plugin id="ch.qos.logback.core"/>
+      <plugin id="ch.qos.logback.slf4j" fragment="true"/>
       <plugin id="com.google.collect"/>
       <plugin id="com.google.inject"/>
       <plugin id="com.ibm.icu"/>
@@ -50,7 +53,6 @@
       <plugin id="istar2.ui"/>
       <plugin id="javax.servlet"/>
       <plugin id="javax.servlet.jsp"/>
-      <plugin id="javax.transaction" fragment="true"/>
       <plugin id="javax.xml"/>
       <plugin id="lpg.runtime.java"/>
       <plugin id="molhado"/>
@@ -58,7 +60,6 @@
       <plugin id="ontology"/>
       <plugin id="ontology.edit"/>
       <plugin id="ontology.ui"/>
-      <plugin id="ontology.viatraplugin" fragment=""/>
       <plugin id="openome_model"/>
       <plugin id="openome_model.figures"/>
       <plugin id="org.antlr.runtime"/>
@@ -377,6 +378,7 @@
       <plugin id="org.mortbay.jetty.util"/>
       <plugin id="org.sat4j.core"/>
       <plugin id="org.sat4j.pb"/>
+      <plugin id="org.slf4j.api"/>
       <plugin id="org.w3c.css.sac"/>
       <plugin id="org.w3c.dom.events"/>
       <plugin id="org.w3c.dom.smil"/>
