@@ -1,9 +1,7 @@
 #!/bin/bash
 #-----------------------------------------------------------
 PROJECT=problem
-#PRODUCT=pf-littlejil
-#PRODUCT=pf
-PRODUCT=situation
+PRODUCT=pf
 IDE=$HOME/IDE
 VERSION=3.6pf
 export ECLIPSE_HOME=$IDE/sdk/$VERSION/eclipse
@@ -15,12 +13,20 @@ PROJECT_FILE=$PROJECT
 #/software/git-1.6.0.3/bin/git svn rebase
 \ls ../workspace > workspace.plugins.txt
 /usr/bin/xsltproc product.xsl ../workspace/$PROJECT_FILE/$PRODUCT_FILE > product.plugins.txt
+/usr/bin/xsltproc feature.xsl ../workspace/$PROJECT_FILE/$PRODUCT_FILE > product.features.txt
 files=`awk -f intersect.awk`
+feature_files=`awk -f feature_intersect.awk`
 rm -rf $BUILD_HOME
 mkdir -p $BUILD_HOME/features
 mkdir -p $BUILD_HOME/plugins
 cd $BUILD_HOME/plugins
 for f in $files;  do
+  echo $f
+  ln -sf $PRODUCT_HOME/workspace/$f .
+done
+cd -
+cd $BUILD_HOME/features
+for f in $feature_files;  do
   echo $f
   ln -sf $PRODUCT_HOME/workspace/$f .
 done

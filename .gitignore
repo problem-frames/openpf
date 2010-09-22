@@ -7,5 +7,7 @@ workspace/*/@dot.log
 workspace/*/\@dot
 workspace/*/\@dot.log
 workspace/*/javaCompiler...args
+workspace/*/*.jar
+workspace/*/*.zip
 *.log
 00*

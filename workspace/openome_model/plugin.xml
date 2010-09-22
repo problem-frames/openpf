@@ -15,7 +15,7 @@
    </activityPatternBinding>
    </extension>
 
-
+<!-- // remove for the demo of securechange
    <extension point="core.example">
       <example file="pattern/README"/>
       <example file="pattern/openome_model.ecore"/>
@@ -28,6 +28,7 @@
       <example file="pattern/openaccount-after.png"/>
       <example file="pattern/openaccount-attack.png"/>
    </extension>    
+   -->
    <extension point="core.generator">
       <generator id="EMF model generation" 
       	class="codegen.EMFProjectsGeneration"/>

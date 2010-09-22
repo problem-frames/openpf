@@ -7,11 +7,15 @@ Bundle-Vendor: Yijun Yu
 Require-Bundle: util,
  org.eclipse.emf.ecore,
  core
-Bundle-ActivationPolicy: lazy
-Export-Package: action,
+Export-Package: .,
+ action,
  codegen,
  convertor,
  model,
+ org.javacc,
+ org.javacc.jjdoc,
+ org.javacc.jjtree,
+ org.javacc.parser,
  parser
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 

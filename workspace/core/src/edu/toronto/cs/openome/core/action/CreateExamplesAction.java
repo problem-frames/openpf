@@ -57,9 +57,11 @@ public class CreateExamplesAction extends ExtensionReader implements
 					pathName = pathName + string + "/";
 					folder = project.getFolder(pathName);
 					try {
-					if (!folder.exists())
-						folder.create(IResource.FORCE, true, null);
-					} catch (Exception e) {}
+						if (!folder.exists())
+							folder.create(IResource.FORCE, true, null);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
 				}
 				InputStream stream = null;
 				try {
@@ -73,9 +75,11 @@ public class CreateExamplesAction extends ExtensionReader implements
 				else
 					file = folder.getFile(words[words.length - 1]);
 				try {
-				if (!file.exists())
-					file.create(stream, false, null);
-				} catch (Exception e) {}
+					if (!file.exists())
+						file.create(stream, false, null);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 				if (stream!=null)
 					stream.close();
 			}		

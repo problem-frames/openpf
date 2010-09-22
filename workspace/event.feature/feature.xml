@@ -17,26 +17,6 @@
       [Enter License Description here.]
    </license>
 
-   <includes
-         id="org.eclipse.platform"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.xtext.sdk"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.xpand"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.xtend"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.emf"
-         version="0.0.0"/>
-
    <requires>
       <import plugin="org.eclipse.xtext"/>
       <import plugin="org.eclipse.xtext.util"/>
@@ -88,21 +68,7 @@
          unpack="false"/>
 
    <plugin
-         id="event.generator"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="event.ui"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="core"
          download-size="0"
          install-size="0"
          version="0.0.0"

@@ -1,47 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/problem.feature_1.0.0.qualifier.jar" id="problem.feature" version="1.0.0.qualifier">
+   <description name="Requirements Engineering Tools Provided by The Open University" url="http://sead1.open.ac.uk/openre">
+      The update site contains a number of Eclipse plugins to support the requirements engineering research at the Software Engineering And Design group, The Open University.
+   </description>
+   <feature url="features/problem.feature_1.0.0.201009220718.jar" id="problem.feature" version="1.0.0.201009220718">
       <category name="RE_Tools"/>
    </feature>
-   <feature url="features/istar.feature_1.0.0.qualifier.jar" id="istar.feature" version="1.0.0.qualifier">
+   <feature url="features/istar.feature_1.0.0.201009220718.jar" id="istar.feature" version="1.0.0.201009220718">
       <category name="RE_Tools"/>
    </feature>
-   <feature url="features/process.feature_1.0.0.qualifier.jar" id="process.feature" version="1.0.0.qualifier">
+   <feature url="features/situation.feature_1.0.0.201009220730.jar" id="situation.feature" version="1.0.0.201009220730">
+      <category name="SecureChange_Addons"/>
+   </feature>
+   <feature url="features/event.feature_1.0.0.201009220730.jar" id="event.feature" version="1.0.0.201009220730">
       <category name="RE_Tools"/>
    </feature>
-   <feature url="features/situation.feature_1.0.0.qualifier.jar" id="situation.feature" version="1.0.0.qualifier">
-      <category name="RE_Tools"/>
+   <feature url="features/change.feature_1.0.0.jar" id="change.feature" version="1.0.0">
+      <category name="SecureChange_Addons"/>
    </feature>
-   <feature url="features/event.feature_1.0.0.qualifier.jar" id="event.feature" version="1.0.0.qualifier">
-      <category name="RE_Tools"/>
-   </feature>
-   <feature url="features/org.eclipse.emf_2.6.0.v20100614-1136.jar" id="org.eclipse.emf" version="2.6.0.v20100614-1136">
+   <feature url="features/core.feature_1.0.0.jar" id="core.feature" version="1.0.0">
       <category name="EnablingTools"/>
    </feature>
-   <feature url="features/org.eclipse.gef_3.6.0.v20100519-2050-777B-81A2Bz-69793A8B83447.jar" id="org.eclipse.gef" version="3.6.0.v20100519-2050-777B-81A2Bz-69793A8B83447">
-      <category name="EnablingTools"/>
+   <feature url="features/ontology.feature_1.0.0.201009220718.jar" id="ontology.feature" version="1.0.0.201009220718">
+      <category name="SecureChange_Addons"/>
    </feature>
-   <feature url="features/org.eclipse.draw2d_3.6.0.v20100519-2050-45-7w3121163602336.jar" id="org.eclipse.draw2d" version="3.6.0.v20100519-2050-45-7w3121163602336">
-      <category name="EnablingTools"/>
-   </feature>
-   <feature url="features/org.eclipse.gmf_1.4.0.v20100603-2230-7d98-FYnmMCGUhhvqV4nR2tsgWcV.jar" id="org.eclipse.gmf" version="1.4.0.v20100603-2230-7d98-FYnmMCGUhhvqV4nR2tsgWcV">
-      <category name="EnablingTools"/>
-   </feature>
-   <feature url="features/org.eclipse.xtext.sdk_1.0.0.v201006170321.jar" id="org.eclipse.xtext.sdk" version="1.0.0.v201006170321">
-      <category name="EnablingTools"/>
+   <feature url="features/uncal.feature_1.0.0.201009220718.jar" id="uncal.feature" version="1.0.0.201009220718">
+      <category name="NII_Addons"/>
    </feature>
    <feature url="features/org.eclipse.platform_3.6.0.v20100602-9gF78GpqFt6trOGhL60z0oEx3fz-JKNwxPY.jar" id="org.eclipse.platform" version="3.6.0.v20100602-9gF78GpqFt6trOGhL60z0oEx3fz-JKNwxPY">
-      <category name="EnablingTools"/>
+      <category name="Platform"/>
    </feature>
-   <feature url="features/org.eclipse.rcp_3.6.0.v20100519-9OArFKvFtsd7WLUKh-DcYTS.jar" id="org.eclipse.rcp" version="3.6.0.v20100519-9OArFKvFtsd7WLUKh-DcYTS">
-      <category name="EnablingTools"/>
+   <feature url="features/org.eclipse.emf_2.6.0.v20100614-1136.jar" id="org.eclipse.emf" version="2.6.0.v20100614-1136">
+      <category name="Platform"/>
    </feature>
-   <feature url="features/org.eclipse.pde_3.6.0.v20100525-7b7mFKtFEx2XmfZ4_B7NUJA.jar" id="org.eclipse.pde" version="3.6.0.v20100525-7b7mFKtFEx2XmfZ4_B7NUJA">
-      <category name="EnablingTools"/>
+   <feature url="features/org.eclipse.jdt_3.6.0.v20100526-0800-7z8XFUJFMTfCWGoVuHImpms9H155.jar" id="org.eclipse.jdt" version="3.6.0.v20100526-0800-7z8XFUJFMTfCWGoVuHImpms9H155">
+      <category name="Platform"/>
+   </feature>
+   <feature url="features/org.eclipse.xtext.runtime_1.0.0.v201006170321.jar" id="org.eclipse.xtext.runtime" version="1.0.0.v201006170321">
+      <category name="Platform"/>
+   </feature>
+   <feature url="features/org.eclipse.xtext.ui_1.0.0.v201006170321.jar" id="org.eclipse.xtext.ui" version="1.0.0.v201006170321">
+      <category name="Platform"/>
+   </feature>
+   <feature url="features/org.eclipse.xtend.dependencies_1.0.0.v201006150611.jar" id="org.eclipse.xtend.dependencies" version="1.0.0.v201006150611">
+      <category name="Platform"/>
+   </feature>
+   <feature url="features/org.eclipse.xtend.typesystem.emf_1.0.0.v201006150611.jar" id="org.eclipse.xtend.typesystem.emf" version="1.0.0.v201006150611">
+      <category name="Platform"/>
+   </feature>
+   <feature url="features/org.eclipse.xtend.ui_1.0.0.v201006150611.jar" id="org.eclipse.xtend.ui" version="1.0.0.v201006150611">
+      <category name="Platform"/>
+   </feature>
+   <feature url="features/org.eclipse.xpand_1.0.0.v201006150611.jar" id="org.eclipse.xpand" version="1.0.0.v201006150611">
+      <category name="Platform"/>
+   </feature>
+   <feature url="features/org.eclipse.xpand.ui_1.0.0.v201006150611.jar" id="org.eclipse.xpand.ui" version="1.0.0.v201006150611">
+      <category name="Platform"/>
+   </feature>
+   <feature url="features/org.eclipse.emf.mwe.ui_1.0.0.v201006150535.jar" id="org.eclipse.emf.mwe.ui" version="1.0.0.v201006150535">
+      <category name="Platform"/>
+   </feature>
+   <feature url="features/xtext.feature_1.0.0.201009220718.jar" id="xtext.feature" version="1.0.0.201009220718">
+      <category name="Platform"/>
+   </feature>
+   <feature url="features/org.eclipse.mylyn.bugzilla_feature_3.4.0.v20100608-0100-e3x.jar" id="org.eclipse.mylyn.bugzilla_feature" version="3.4.0.v20100608-0100-e3x">
+      <category name="Platform"/>
+   </feature>
+   <feature url="features/org.eclipse.mylyn.context_feature_3.4.0.v20100608-0100-e3x.jar" id="org.eclipse.mylyn.context_feature" version="3.4.0.v20100608-0100-e3x">
+      <category name="Platform"/>
+   </feature>
+   <feature url="features/org.eclipse.mylyn.ide_feature_3.4.0.v20100608-0100-e3x.jar" id="org.eclipse.mylyn.ide_feature" version="3.4.0.v20100608-0100-e3x">
+      <category name="Platform"/>
+   </feature>
+   <feature url="features/org.eclipse.mylyn.java_feature_3.4.0.v20100608-0100-e3x.jar" id="org.eclipse.mylyn.java_feature" version="3.4.0.v20100608-0100-e3x">
+      <category name="Platform"/>
+   </feature>
+   <feature url="features/org.eclipse.mylyn_feature_3.4.0.v20100608-0100-e3x.jar" id="org.eclipse.mylyn_feature" version="3.4.0.v20100608-0100-e3x">
+      <category name="Platform"/>
+   </feature>
+   <feature url="features/org.eclipse.cvs_1.2.0.v20100427-7B77FKs8sF7B77SDX4GW85.jar" id="org.eclipse.cvs" version="1.2.0.v20100427-7B77FKs8sF7B77SDX4GW85">
+      <category name="Platform"/>
+   </feature>
+   <feature url="features/org.eclipse.emf.validation_1.4.0.v20100428-2315-479-9oB56N5BBR6LCA6.jar" id="org.eclipse.emf.validation" version="1.4.0.v20100428-2315-479-9oB56N5BBR6LCA6">
+      <category name="Platform"/>
+   </feature>
+   <feature url="features/org.eclipse.emf.transaction_1.4.0.v20100428-2315-377-8s734C3E7D15D6B.jar" id="org.eclipse.emf.transaction" version="1.4.0.v20100428-2315-377-8s734C3E7D15D6B">
+      <category name="Platform"/>
+   </feature>
+   <feature url="features/org.eclipse.emf.workspace_1.4.0.v20100428-2315-36-8s734C367E3CBC7.jar" id="org.eclipse.emf.workspace" version="1.4.0.v20100428-2315-36-8s734C367E3CBC7">
+      <category name="Platform"/>
+   </feature>
+   <feature url="features/org.eclipse.gef_3.6.0.v20100519-2050-777B-81A2Bz-69793A8B83447.jar" id="org.eclipse.gef" version="3.6.0.v20100519-2050-777B-81A2Bz-69793A8B83447">
+      <category name="Platform"/>
+   </feature>
+   <feature url="features/org.eclipse.gmf_1.4.0.v20100603-2230-7d98-FYnmMCGUhhvqV4nR2tsgWcV.jar" id="org.eclipse.gmf" version="1.4.0.v20100603-2230-7d98-FYnmMCGUhhvqV4nR2tsgWcV">
+      <category name="Platform"/>
+   </feature>
+   <feature url="features/org.eclipse.ocl_3.0.0.v201005061704-79-7G9oB5855J7O8P9D.jar" id="org.eclipse.ocl" version="3.0.0.v201005061704-79-7G9oB5855J7O8P9D">
+      <category name="Platform"/>
+   </feature>
+   <feature url="features/org.eclipse.swtbot_2.0.0.595-dev-e36.jar" id="org.eclipse.swtbot" version="2.0.0.595-dev-e36">
+      <category name="Platform"/>
+   </feature>
+   <feature url="features/org.eclipse.swtbot.eclipse_2.0.0.595-dev-e36.jar" id="org.eclipse.swtbot.eclipse" version="2.0.0.595-dev-e36">
+      <category name="Platform"/>
    </feature>
    <feature url="features/org.eclipse.acceleo_3.0.0.v201006150906.jar" id="org.eclipse.acceleo" version="3.0.0.v201006150906">
-      <category name="EnablingTools"/>
+      <category name="Platform"/>
+   </feature>
+   <feature url="features/org.eclipse.acceleo.runtime_3.0.0.v201006150906.jar" id="org.eclipse.acceleo.runtime" version="3.0.0.v201006150906">
+      <category name="Platform"/>
+   </feature>
+   <feature url="features/org.eclipse.pde_3.6.0.v20100525-7b7mFKtFEx2XmfZ4_B7NUJA.jar" id="org.eclipse.pde" version="3.6.0.v20100525-7b7mFKtFEx2XmfZ4_B7NUJA">
+      <category name="Platform"/>
+   </feature>
+   <feature url="features/situation.m2m.feature_1.0.0.jar" id="situation.m2m.feature" version="1.0.0">
+      <category name="SecureChange_Addons"/>
    </feature>
    <category-def name="RE_Tools" label="Open Requirements Engineering Tools"/>
-   <category-def name="EnablingTools" label="Enabling Tools"/>
+   <category-def name="EnablingTools" label="Enabling Tools">
+      <description>
+         Addons on Problem Frames
+      </description>
+   </category-def>
+   <category-def name="SecureChange_Addons" label="eu.securechange.tools.wp3"/>
+   <category-def name="NII_Addons" label="NII_Addons"/>
+   <category-def name="Platform" label="Platform"/>
 </site>

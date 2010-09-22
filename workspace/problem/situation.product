@@ -7,36 +7,30 @@
    </configIni>
 
    <launcherArgs>
+      <vmArgs>-Xms256m -Xmx1024m -XX:MaxPermSize=256m</vmArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
    </launcherArgs>
 
-   <launcher name="pf">
+   <launcher name="situation">
       <solaris/>
       <win useIco="false">
          <bmp/>
       </win>
    </launcher>
 
+   <vm>
+   </vm>
+
    <plugins>
       <plugin id="Istar2situation"/>
       <plugin id="Istar2situation.ui"/>
       <plugin id="PF2EC"/>
       <plugin id="PF2EC.ui"/>
-      <!--
-      <plugin id="ch.qos.logback.classic"/>
-      <plugin id="ch.qos.logback.core"/>
-      <plugin id="ch.qos.logback.slf4j" fragment="true"/>
-      -->
       <plugin id="change"/>
       <plugin id="com.google.collect"/>
       <plugin id="com.google.inject"/>
       <plugin id="com.ibm.icu"/>
       <plugin id="core"/>
-      <!--
-      <plugin id="edu.toronto.cs.openome.conversion"/>
-      <plugin id="edu.toronto.cs.openome.evaluation"/>
-      <plugin id="edu.toronto.cs.openome.testing"/>
-      -->
       <plugin id="edu.toronto.cs.openome.versioning"/>
       <plugin id="edu.toronto.cs.openome_model"/>
       <plugin id="edu.toronto.cs.openome_model.diagram"/>
@@ -63,9 +57,7 @@
       <plugin id="ontology"/>
       <plugin id="ontology.edit"/>
       <plugin id="ontology.ui"/>
-      <!--
       <plugin id="openome_model"/>
-      -->
       <plugin id="openome_model.figures"/>
       <plugin id="org.antlr.runtime"/>
       <plugin id="org.aopalliance"/>
@@ -94,11 +86,34 @@
       <plugin id="org.apache.xml.resolver"/>
       <plugin id="org.apache.xml.serializer"/>
       <plugin id="org.eclipse.acceleo.common"/>
+      <plugin id="org.eclipse.acceleo.common.source"/>
+      <plugin id="org.eclipse.acceleo.compatibility"/>
+      <plugin id="org.eclipse.acceleo.compatibility.source"/>
+      <plugin id="org.eclipse.acceleo.compatibility.ui"/>
+      <plugin id="org.eclipse.acceleo.compatibility.ui.source"/>
+      <plugin id="org.eclipse.acceleo.doc"/>
       <plugin id="org.eclipse.acceleo.engine"/>
+      <plugin id="org.eclipse.acceleo.engine.source"/>
+      <plugin id="org.eclipse.acceleo.examples"/>
+      <plugin id="org.eclipse.acceleo.ide.ui"/>
+      <plugin id="org.eclipse.acceleo.ide.ui.source"/>
       <plugin id="org.eclipse.acceleo.model"/>
+      <plugin id="org.eclipse.acceleo.model.edit"/>
+      <plugin id="org.eclipse.acceleo.model.edit.source"/>
+      <plugin id="org.eclipse.acceleo.model.source"/>
+      <plugin id="org.eclipse.acceleo.parser"/>
+      <plugin id="org.eclipse.acceleo.parser.source"/>
       <plugin id="org.eclipse.acceleo.profiler"/>
+      <plugin id="org.eclipse.acceleo.profiler.edit"/>
+      <plugin id="org.eclipse.acceleo.profiler.edit.source"/>
+      <plugin id="org.eclipse.acceleo.profiler.editor"/>
+      <plugin id="org.eclipse.acceleo.profiler.editor.source"/>
+      <plugin id="org.eclipse.acceleo.profiler.source"/>
       <plugin id="org.eclipse.acceleo.traceability" fragment="true"/>
       <plugin id="org.eclipse.acceleo.traceability.model"/>
+      <plugin id="org.eclipse.acceleo.traceability.model.source"/>
+      <plugin id="org.eclipse.acceleo.traceability.source"/>
+      <plugin id="org.eclipse.acceleo.ui.capabilities"/>
       <plugin id="org.eclipse.ant.core"/>
       <plugin id="org.eclipse.ant.launching"/>
       <plugin id="org.eclipse.ant.ui"/>
@@ -154,6 +169,7 @@
       <plugin id="org.eclipse.emf.ecore"/>
       <plugin id="org.eclipse.emf.ecore.change"/>
       <plugin id="org.eclipse.emf.ecore.edit"/>
+      <plugin id="org.eclipse.emf.ecore.editor"/>
       <plugin id="org.eclipse.emf.ecore.xmi"/>
       <plugin id="org.eclipse.emf.edit"/>
       <plugin id="org.eclipse.emf.edit.ui"/>
@@ -173,9 +189,6 @@
       <plugin id="org.eclipse.equinox.concurrent"/>
       <plugin id="org.eclipse.equinox.frameworkadmin"/>
       <plugin id="org.eclipse.equinox.frameworkadmin.equinox"/>
-      <!--
-      <plugin id="org.eclipse.equinox.http.jetty"/>
-      -->
       <plugin id="org.eclipse.equinox.http.servlet"/>
       <plugin id="org.eclipse.equinox.launcher"/>
       <plugin id="org.eclipse.equinox.launcher.cocoa.macosx" fragment="true"/>
@@ -381,15 +394,8 @@
       <plugin id="org.hamcrest.text"/>
       <plugin id="org.junit"/>
       <plugin id="org.junit4"/>
-      <!--
-      <plugin id="org.mortbay.jetty.server"/>
-      <plugin id="org.mortbay.jetty.util"/>
-      -->
       <plugin id="org.sat4j.core"/>
       <plugin id="org.sat4j.pb"/>
-      <!--
-      <plugin id="org.slf4j.api"/>
-      -->
       <plugin id="org.w3c.css.sac"/>
       <plugin id="org.w3c.dom.events"/>
       <plugin id="org.w3c.dom.smil"/>

@@ -72,34 +72,14 @@
    </extension>
 	
  <extension
-       id="openome"
-       point="org.eclipse.core.runtime.products">
-    <product
-          application="org.eclipse.ui.ide.workbench"
-          name="Core">
-       <property
-             name="aboutText"
-             value="An open-source requirements engineering tool">
-       </property>
-       <property
-             name="aboutImage"
-             value="icons/eclipse_lg.gif">
-       </property>
-       <property
-             name="appName"
-             value="Core">
-       </property>
-    </product>
- </extension>
- <extension
        id="openre"
        point="org.eclipse.core.runtime.products">
     <product
           application="org.eclipse.ui.ide.workbench"
-          name="ProblemFrames">
+          name="Problem Analysis Tool">
        <property
              name="appName"
-             value="ProblemFrames">
+             value="Problem Analysis Tool">
        </property>
        <property
              name="preferenceCustomization"
