@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="change.feature"
-      label="Feature"
-      version="1.0.0"
+      label="Example files for integration with Viatra"
+      version="1.0.0.qualifier"
       provider-name="The Open University">
 
    <description url="http://www.example.com/description">
@@ -27,7 +27,7 @@
          id="change"
          download-size="0"
          install-size="0"
-         version="1.0.0"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>

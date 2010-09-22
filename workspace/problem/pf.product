@@ -274,8 +274,8 @@
       <plugin id="org.eclipse.jdt.junit.core"/>
       <plugin id="org.eclipse.jdt.junit.runtime"/>
       <plugin id="org.eclipse.jdt.launching"/>
-      <plugin id="org.eclipse.jdt.launching.macosx"/>
-      <plugin id="org.eclipse.jdt.launching.ui.macosx"/>
+      <plugin id="org.eclipse.jdt.launching.macosx" fragment=""/>
+      <plugin id="org.eclipse.jdt.launching.ui.macosx" fragment=""/>
       <plugin id="org.eclipse.jdt.ui"/>
       <plugin id="org.eclipse.jface"/>
       <plugin id="org.eclipse.jface.databinding"/>
@@ -428,8 +428,6 @@
 
    <features>
       <feature id="org.eclipse.platform" version="3.6.0.v20100602-9gF78GpqFt6trOGhL60z0oEx3fz-JKNwxPY"/>
-      <feature id="core.feature" version="1.0.0"/>
-      <feature id="change.feature" version="1.0.0"/>
       <feature id="org.eclipse.emf" version="2.6.0.v20100614-1136"/>
       <feature id="org.eclipse.jdt" version="3.6.0.v20100526-0800-7z8XFUJFMTfCWGoVuHImpms9H155"/>
       <feature id="org.eclipse.xtext.runtime" version="1.0.0.v201006170321"/>
@@ -447,23 +445,25 @@
       <feature id="org.eclipse.mylyn.java_feature" version="3.4.0.v20100608-0100-e3x"/>
       <feature id="org.eclipse.mylyn.team_feature" version="3.4.0.v20100608-0100-e3x"/>
       <feature id="org.eclipse.mylyn.context_feature" version="3.4.0.v20100608-0100-e3x"/>
-      <feature id="xtext.feature" version="1.0.0.qualifier"/>
-      <feature id="event.feature" version="1.0.0.qualifier"/>
-      <feature id="ontology.feature" version="1.0.0.qualifier"/>
       <feature id="org.eclipse.emf.validation" version="1.4.0.v20100428-2315-479-9oB56N5BBR6LCA6"/>
       <feature id="org.eclipse.emf.transaction" version="1.4.0.v20100428-2315-377-8s734C3E7D15D6B"/>
       <feature id="org.eclipse.emf.workspace" version="1.4.0.v20100428-2315-36-8s734C367E3CBC7"/>
       <feature id="org.eclipse.gef" version="3.6.0.v20100519-2050-777B-81A2Bz-69793A8B83447"/>
       <feature id="org.eclipse.gmf" version="1.4.0.v20100603-2230-7d98-FYnmMCGUhhvqV4nR2tsgWcV"/>
-      <feature id="situation.feature" version="1.0.0.qualifier"/>
       <feature id="org.eclipse.ocl" version="3.0.0.v201005061704-79-7G9oB5855J7O8P9D"/>
-      <feature id="problem.feature" version="1.0.0.qualifier"/>
       <feature id="org.eclipse.swtbot" version="2.0.0.595-dev-e36"/>
       <feature id="org.eclipse.swtbot.eclipse" version="2.0.0.595-dev-e36"/>
-      <feature id="istar.feature" version="1.0.0.qualifier"/>
       <feature id="org.eclipse.acceleo" version="3.0.0.v201006150906"/>
       <feature id="org.eclipse.acceleo.runtime" version="3.0.0.v201006150906"/>
       <feature id="org.eclipse.pde" version="3.6.0.v20100525-7b7mFKtFEx2XmfZ4_B7NUJA"/>
+      <feature id="change.feature" version="1.0.0.qualifier"/>
+      <feature id="xtext.feature" version="1.0.0.qualifier"/>
+      <feature id="event.feature" version="1.0.0.qualifier"/>
+      <feature id="ontology.feature" version="1.0.0.qualifier"/>
+      <feature id="situation.feature" version="1.0.0.qualifier"/>
+      <feature id="problem.feature" version="1.0.0.qualifier"/>
+      <feature id="istar.feature" version="1.0.0.qualifier"/>
+      <feature id="core.feature" version="1.0.0.qualifier"/>
       <feature id="situation.m2m.feature" version="1.0.0"/>
    </features>
 
