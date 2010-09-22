@@ -33,12 +33,14 @@
       <example file="binary/linux.x86/decreasoner"/>
       <example file="binary/linux.x86/solvers/relsat"/>
       <example file="binary/linux.x86/solvers/walksat"/>
+<!-- not ready yet
       <example file="binary/linux.x86_64/decreasoner"/>
       <example file="binary/linux.x86_64/solvers/relsat"/>
       <example file="binary/linux.x86_64/solvers/walksat"/>
       <example file="binary/win32/decreasoner"/>
       <example file="binary/win32/solvers/relsat"/>
       <example file="binary/win32/solvers/walksat"/>
+-->
       <example file="examples/AkmanEtAl2004/ZooTest1.e"/>
       <example file="examples/AkmanEtAl2004/ZooTest1.txt"/>
       <example file="examples/AkmanEtAl2004/ZooTest2.e"/>
