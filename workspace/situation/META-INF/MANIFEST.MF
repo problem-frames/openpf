@@ -6,18 +6,18 @@ Bundle-Version: 1.0.0
 Bundle-SymbolicName: situation; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext,
- org.eclipse.xtext.generator;resolution:=optional,
- org.apache.commons.logging;resolution:=optional,
- org.eclipse.emf.codegen.ecore;resolution:=optional,
- org.eclipse.emf.mwe.utils;resolution:=optional,
- org.eclipse.emf.mwe2.launch;resolution:=optional,
- com.ibm.icu;resolution:=optional,
- org.eclipse.xtext.xtend;resolution:=optional,
+ org.eclipse.xtext.generator,
+ org.apache.commons.logging,
+ org.eclipse.emf.codegen.ecore,
+ org.eclipse.emf.mwe.utils,
+ org.eclipse.emf.mwe2.launch,
+ com.ibm.icu,
+ org.eclipse.xtext.xtend,
  org.eclipse.xtext.util,
  org.eclipse.emf.ecore,
  org.eclipse.emf.common,
  org.antlr.runtime,
- core;bundle-version="1.0.0"
+ core
 Import-Package: eu.securechange.situation,
  org.apache.log4j
 Bundle-RequiredExecutionEnvironment: J2SE-1.5

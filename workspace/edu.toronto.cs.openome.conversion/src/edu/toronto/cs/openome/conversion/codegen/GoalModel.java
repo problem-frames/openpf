@@ -1,8 +1,5 @@
 package edu.toronto.cs.openome.conversion.codegen;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Enumeration;
@@ -24,12 +21,19 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
-import codegen.IStar;
-
-import edu.toronto.cs.openome_model.*;
-
 import util.Computing;
 import util.SortArrayList;
+import codegen.IStar;
+import edu.toronto.cs.openome_model.Container;
+import edu.toronto.cs.openome_model.Contribution;
+import edu.toronto.cs.openome_model.Decomposition;
+import edu.toronto.cs.openome_model.Dependency;
+import edu.toronto.cs.openome_model.EvaluationLabel;
+import edu.toronto.cs.openome_model.Intention;
+import edu.toronto.cs.openome_model.Model;
+import edu.toronto.cs.openome_model.Softgoal;
+import edu.toronto.cs.openome_model.openome_modelFactory;
+import edu.toronto.cs.openome_model.openome_modelPackage;
 
 /**
  * @author Yijun Yu

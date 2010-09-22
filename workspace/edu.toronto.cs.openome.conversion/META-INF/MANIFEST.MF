@@ -4,23 +4,17 @@ Bundle-Name: Conversion Plug-in for OpenOME
 Bundle-SymbolicName: edu.toronto.cs.openome.conversion;singleton:=true
 Bundle-Version: 1.0.0
 Bundle-Vendor: University Of Toronto
-Require-Bundle: q7,
- util,
- edu.toronto.cs.openome_model,
+Require-Bundle: edu.toronto.cs.openome_model,
  org.eclipse.gmf.codegen,
  org.junit,
  org.sat4j.core,
  core,
+ q7,
+ util,
  org.eclipse.core.runtime;bundle-version="3.6.0"
 Export-Package: edu.toronto.cs.openome.conversion.action,
  edu.toronto.cs.openome.conversion.codegen,
  edu.toronto.cs.openome.conversion.convertor,
  edu.toronto.cs.openome.conversion.parser,
  edu.toronto.cs.openome.conversion.service
-Import-Package: edu.toronto.cs.openome.conversion.action,
- org.eclipse.core.runtime,
- org.osgi.framework,
- org.sat4j.minisat,
- org.sat4j.reader,
- org.sat4j.specs
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

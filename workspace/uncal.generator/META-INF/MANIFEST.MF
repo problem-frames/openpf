@@ -8,9 +8,9 @@ Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xpand;visibility:=reexport,
  org.eclipse.xtend;visibility:=reexport,
  org.eclipse.xtext;visibility:=reexport,
- org.eclipse.emf.mwe2.launch;resolution:=optional,
+ org.eclipse.emf.mwe2.launch,
  org.eclipse.emf.mwe.utils;visibility:=reexport,
  org.eclipse.xtend.typesystem.emf;visibility:=reexport,
- uncal;bundle-version="1.0.0"
+ uncal
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: J2SE-1.5

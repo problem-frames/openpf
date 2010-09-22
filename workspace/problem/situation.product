@@ -22,17 +22,21 @@
       <plugin id="Istar2situation.ui"/>
       <plugin id="PF2EC"/>
       <plugin id="PF2EC.ui"/>
+      <!--
       <plugin id="ch.qos.logback.classic"/>
       <plugin id="ch.qos.logback.core"/>
       <plugin id="ch.qos.logback.slf4j" fragment="true"/>
+      -->
       <plugin id="change"/>
       <plugin id="com.google.collect"/>
       <plugin id="com.google.inject"/>
       <plugin id="com.ibm.icu"/>
       <plugin id="core"/>
+      <!--
       <plugin id="edu.toronto.cs.openome.conversion"/>
       <plugin id="edu.toronto.cs.openome.evaluation"/>
       <plugin id="edu.toronto.cs.openome.testing"/>
+      -->
       <plugin id="edu.toronto.cs.openome.versioning"/>
       <plugin id="edu.toronto.cs.openome_model"/>
       <plugin id="edu.toronto.cs.openome_model.diagram"/>
@@ -59,7 +63,9 @@
       <plugin id="ontology"/>
       <plugin id="ontology.edit"/>
       <plugin id="ontology.ui"/>
+      <!--
       <plugin id="openome_model"/>
+      -->
       <plugin id="openome_model.figures"/>
       <plugin id="org.antlr.runtime"/>
       <plugin id="org.aopalliance"/>
@@ -167,7 +173,9 @@
       <plugin id="org.eclipse.equinox.concurrent"/>
       <plugin id="org.eclipse.equinox.frameworkadmin"/>
       <plugin id="org.eclipse.equinox.frameworkadmin.equinox"/>
+      <!--
       <plugin id="org.eclipse.equinox.http.jetty"/>
+      -->
       <plugin id="org.eclipse.equinox.http.servlet"/>
       <plugin id="org.eclipse.equinox.launcher"/>
       <plugin id="org.eclipse.equinox.launcher.cocoa.macosx" fragment="true"/>
@@ -373,11 +381,15 @@
       <plugin id="org.hamcrest.text"/>
       <plugin id="org.junit"/>
       <plugin id="org.junit4"/>
+      <!--
       <plugin id="org.mortbay.jetty.server"/>
       <plugin id="org.mortbay.jetty.util"/>
+      -->
       <plugin id="org.sat4j.core"/>
       <plugin id="org.sat4j.pb"/>
+      <!--
       <plugin id="org.slf4j.api"/>
+      -->
       <plugin id="org.w3c.css.sac"/>
       <plugin id="org.w3c.dom.events"/>
       <plugin id="org.w3c.dom.smil"/>
