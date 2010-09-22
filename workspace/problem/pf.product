@@ -32,8 +32,8 @@
       <plugin id="com.ibm.icu"/>
       <plugin id="core"/>
       <plugin id="edu.toronto.cs.openome.conversion"/>
-      <plugin id="edu.toronto.cs.openome.testing"/>
       <plugin id="edu.toronto.cs.openome.evaluation"/>
+      <plugin id="edu.toronto.cs.openome.testing"/>
       <plugin id="edu.toronto.cs.openome.versioning"/>
       <plugin id="edu.toronto.cs.openome_model"/>
       <plugin id="edu.toronto.cs.openome_model.diagram"/>
@@ -464,7 +464,7 @@
       <feature id="org.eclipse.acceleo" version="3.0.0.v201006150906"/>
       <feature id="org.eclipse.acceleo.runtime" version="3.0.0.v201006150906"/>
       <feature id="org.eclipse.pde" version="3.6.0.v20100525-7b7mFKtFEx2XmfZ4_B7NUJA"/>
-      <feature id="situation.m2m.feature" version="1.0.0.qualifier"/>
+      <feature id="situation.m2m.feature" version="1.0.0"/>
    </features>
 
 
