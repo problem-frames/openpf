@@ -1,0 +1,3029 @@
+Created by PLY version 3.3 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> topformulas
+Rule 1     topformulas -> topformula
+Rule 2     topformulas -> topformulas topformula
+Rule 3     topformula -> NUMBER COLON formula PERIOD
+Rule 4     topformula -> NAME COLON formula PERIOD
+Rule 5     topformula -> formula PERIOD
+Rule 6     formula -> NAME
+Rule 7     formula -> NUMBER
+Rule 8     formula -> NAME LPAREN RPAREN
+Rule 9     formula -> NAME LPAREN arguments RPAREN
+Rule 10    formula -> formula PLUS formula
+Rule 11    formula -> formula MINUS formula
+Rule 12    formula -> formula TIMES formula
+Rule 13    formula -> formula DIVIDE formula
+Rule 14    formula -> formula RAISE formula
+Rule 15    formula -> formula REMAINDER formula
+Rule 16    formula -> PLUS formula
+Rule 17    formula -> MINUS formula
+Rule 18    formula -> formula LT formula
+Rule 19    formula -> formula LE formula
+Rule 20    formula -> formula EQ formula
+Rule 21    formula -> formula NE formula
+Rule 22    formula -> formula GE formula
+Rule 23    formula -> formula GT formula
+Rule 24    formula -> NOT formula
+Rule 25    formula -> formula OR formula
+Rule 26    formula -> formula AND formula
+Rule 27    formula -> formula IMPLIES formula
+Rule 28    formula -> formula EQUIV formula
+Rule 29    formula -> LBRACKET names RBRACKET formula
+Rule 30    formula -> LCURLY names RCURLY formula
+Rule 31    formula -> LPAREN formula RPAREN
+Rule 32    names -> NAME
+Rule 33    names -> names COMMA NAME
+Rule 34    arguments -> formula
+Rule 35    arguments -> arguments COMMA formula
+
+Terminals, with rules where they appear
+
+AND                  : 26
+COLON                : 3 4
+COMMA                : 33 35
+DIVIDE               : 13
+EQ                   : 20
+EQUIV                : 28
+GE                   : 22
+GT                   : 23
+IMPLIES              : 27
+LBRACKET             : 29
+LCURLY               : 30
+LE                   : 19
+LPAREN               : 8 9 31
+LT                   : 18
+MINUS                : 11 17
+NAME                 : 4 6 8 9 32 33
+NE                   : 21
+NOT                  : 24
+NUMBER               : 3 7
+OR                   : 25
+PERIOD               : 3 4 5
+PLUS                 : 10 16
+RAISE                : 14
+RBRACKET             : 29
+RCURLY               : 30
+REMAINDER            : 15
+RPAREN               : 8 9 31
+TIMES                : 12
+error                : 
+
+Nonterminals, with rules where they appear
+
+arguments            : 9 35
+formula              : 3 4 5 10 10 11 11 12 12 13 13 14 14 15 15 16 17 18 18 19 19 20 20 21 21 22 22 23 23 24 25 25 26 26 27 27 28 28 29 30 31 34 35
+names                : 29 30 33
+topformula           : 1 2
+topformulas          : 2 0
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . topformulas
+    (1) topformulas -> . topformula
+    (2) topformulas -> . topformulas topformula
+    (3) topformula -> . NUMBER COLON formula PERIOD
+    (4) topformula -> . NAME COLON formula PERIOD
+    (5) topformula -> . formula PERIOD
+    (6) formula -> . NAME
+    (7) formula -> . NUMBER
+    (8) formula -> . NAME LPAREN RPAREN
+    (9) formula -> . NAME LPAREN arguments RPAREN
+    (10) formula -> . formula PLUS formula
+    (11) formula -> . formula MINUS formula
+    (12) formula -> . formula TIMES formula
+    (13) formula -> . formula DIVIDE formula
+    (14) formula -> . formula RAISE formula
+    (15) formula -> . formula REMAINDER formula
+    (16) formula -> . PLUS formula
+    (17) formula -> . MINUS formula
+    (18) formula -> . formula LT formula
+    (19) formula -> . formula LE formula
+    (20) formula -> . formula EQ formula
+    (21) formula -> . formula NE formula
+    (22) formula -> . formula GE formula
+    (23) formula -> . formula GT formula
+    (24) formula -> . NOT formula
+    (25) formula -> . formula OR formula
+    (26) formula -> . formula AND formula
+    (27) formula -> . formula IMPLIES formula
+    (28) formula -> . formula EQUIV formula
+    (29) formula -> . LBRACKET names RBRACKET formula
+    (30) formula -> . LCURLY names RCURLY formula
+    (31) formula -> . LPAREN formula RPAREN
+
+    NUMBER          shift and go to state 1
+    NAME            shift and go to state 10
+    PLUS            shift and go to state 5
+    MINUS           shift and go to state 4
+    NOT             shift and go to state 11
+    LBRACKET        shift and go to state 2
+    LCURLY          shift and go to state 3
+    LPAREN          shift and go to state 7
+
+    formula                        shift and go to state 8
+    topformulas                    shift and go to state 9
+    topformula                     shift and go to state 6
+
+state 1
+
+    (3) topformula -> NUMBER . COLON formula PERIOD
+    (7) formula -> NUMBER .
+
+    COLON           shift and go to state 12
+    PERIOD          reduce using rule 7 (formula -> NUMBER .)
+    PLUS            reduce using rule 7 (formula -> NUMBER .)
+    MINUS           reduce using rule 7 (formula -> NUMBER .)
+    TIMES           reduce using rule 7 (formula -> NUMBER .)
+    DIVIDE          reduce using rule 7 (formula -> NUMBER .)
+    RAISE           reduce using rule 7 (formula -> NUMBER .)
+    REMAINDER       reduce using rule 7 (formula -> NUMBER .)
+    LT              reduce using rule 7 (formula -> NUMBER .)
+    LE              reduce using rule 7 (formula -> NUMBER .)
+    EQ              reduce using rule 7 (formula -> NUMBER .)
+    NE              reduce using rule 7 (formula -> NUMBER .)
+    GE              reduce using rule 7 (formula -> NUMBER .)
+    GT              reduce using rule 7 (formula -> NUMBER .)
+    OR              reduce using rule 7 (formula -> NUMBER .)
+    AND             reduce using rule 7 (formula -> NUMBER .)
+    IMPLIES         reduce using rule 7 (formula -> NUMBER .)
+    EQUIV           reduce using rule 7 (formula -> NUMBER .)
+
+
+state 2
+
+    (29) formula -> LBRACKET . names RBRACKET formula
+    (32) names -> . NAME
+    (33) names -> . names COMMA NAME
+
+    NAME            shift and go to state 13
+
+    names                          shift and go to state 14
+
+state 3
+
+    (30) formula -> LCURLY . names RCURLY formula
+    (32) names -> . NAME
+    (33) names -> . names COMMA NAME
+
+    NAME            shift and go to state 13
+
+    names                          shift and go to state 15
+
+state 4
+
+    (17) formula -> MINUS . formula
+    (6) formula -> . NAME
+    (7) formula -> . NUMBER
+    (8) formula -> . NAME LPAREN RPAREN
+    (9) formula -> . NAME LPAREN arguments RPAREN
+    (10) formula -> . formula PLUS formula
+    (11) formula -> . formula MINUS formula
+    (12) formula -> . formula TIMES formula
+    (13) formula -> . formula DIVIDE formula
+    (14) formula -> . formula RAISE formula
+    (15) formula -> . formula REMAINDER formula
+    (16) formula -> . PLUS formula
+    (17) formula -> . MINUS formula
+    (18) formula -> . formula LT formula
+    (19) formula -> . formula LE formula
+    (20) formula -> . formula EQ formula
+    (21) formula -> . formula NE formula
+    (22) formula -> . formula GE formula
+    (23) formula -> . formula GT formula
+    (24) formula -> . NOT formula
+    (25) formula -> . formula OR formula
+    (26) formula -> . formula AND formula
+    (27) formula -> . formula IMPLIES formula
+    (28) formula -> . formula EQUIV formula
+    (29) formula -> . LBRACKET names RBRACKET formula
+    (30) formula -> . LCURLY names RCURLY formula
+    (31) formula -> . LPAREN formula RPAREN
+
+    NAME            shift and go to state 18
+    NUMBER          shift and go to state 16
+    PLUS            shift and go to state 5
+    MINUS           shift and go to state 4
+    NOT             shift and go to state 11
+    LBRACKET        shift and go to state 2
+    LCURLY          shift and go to state 3
+    LPAREN          shift and go to state 7
+
+    formula                        shift and go to state 17
+
+state 5
+
+    (16) formula -> PLUS . formula
+    (6) formula -> . NAME
+    (7) formula -> . NUMBER
+    (8) formula -> . NAME LPAREN RPAREN
+    (9) formula -> . NAME LPAREN arguments RPAREN
+    (10) formula -> . formula PLUS formula
+    (11) formula -> . formula MINUS formula
+    (12) formula -> . formula TIMES formula
+    (13) formula -> . formula DIVIDE formula
+    (14) formula -> . formula RAISE formula
+    (15) formula -> . formula REMAINDER formula
+    (16) formula -> . PLUS formula
+    (17) formula -> . MINUS formula
+    (18) formula -> . formula LT formula
+    (19) formula -> . formula LE formula
+    (20) formula -> . formula EQ formula
+    (21) formula -> . formula NE formula
+    (22) formula -> . formula GE formula
+    (23) formula -> . formula GT formula
+    (24) formula -> . NOT formula
+    (25) formula -> . formula OR formula
+    (26) formula -> . formula AND formula
+    (27) formula -> . formula IMPLIES formula
+    (28) formula -> . formula EQUIV formula
+    (29) formula -> . LBRACKET names RBRACKET formula
+    (30) formula -> . LCURLY names RCURLY formula
+    (31) formula -> . LPAREN formula RPAREN
+
+    NAME            shift and go to state 18
+    NUMBER          shift and go to state 16
+    PLUS            shift and go to state 5
+    MINUS           shift and go to state 4
+    NOT             shift and go to state 11
+    LBRACKET        shift and go to state 2
+    LCURLY          shift and go to state 3
+    LPAREN          shift and go to state 7
+
+    formula                        shift and go to state 19
+
+state 6
+
+    (1) topformulas -> topformula .
+
+    NUMBER          reduce using rule 1 (topformulas -> topformula .)
+    NAME            reduce using rule 1 (topformulas -> topformula .)
+    PLUS            reduce using rule 1 (topformulas -> topformula .)
+    MINUS           reduce using rule 1 (topformulas -> topformula .)
+    NOT             reduce using rule 1 (topformulas -> topformula .)
+    LBRACKET        reduce using rule 1 (topformulas -> topformula .)
+    LCURLY          reduce using rule 1 (topformulas -> topformula .)
+    LPAREN          reduce using rule 1 (topformulas -> topformula .)
+    $end            reduce using rule 1 (topformulas -> topformula .)
+
+
+state 7
+
+    (31) formula -> LPAREN . formula RPAREN
+    (6) formula -> . NAME
+    (7) formula -> . NUMBER
+    (8) formula -> . NAME LPAREN RPAREN
+    (9) formula -> . NAME LPAREN arguments RPAREN
+    (10) formula -> . formula PLUS formula
+    (11) formula -> . formula MINUS formula
+    (12) formula -> . formula TIMES formula
+    (13) formula -> . formula DIVIDE formula
+    (14) formula -> . formula RAISE formula
+    (15) formula -> . formula REMAINDER formula
+    (16) formula -> . PLUS formula
+    (17) formula -> . MINUS formula
+    (18) formula -> . formula LT formula
+    (19) formula -> . formula LE formula
+    (20) formula -> . formula EQ formula
+    (21) formula -> . formula NE formula
+    (22) formula -> . formula GE formula
+    (23) formula -> . formula GT formula
+    (24) formula -> . NOT formula
+    (25) formula -> . formula OR formula
+    (26) formula -> . formula AND formula
+    (27) formula -> . formula IMPLIES formula
+    (28) formula -> . formula EQUIV formula
+    (29) formula -> . LBRACKET names RBRACKET formula
+    (30) formula -> . LCURLY names RCURLY formula
+    (31) formula -> . LPAREN formula RPAREN
+
+    NAME            shift and go to state 18
+    NUMBER          shift and go to state 16
+    PLUS            shift and go to state 5
+    MINUS           shift and go to state 4
+    NOT             shift and go to state 11
+    LBRACKET        shift and go to state 2
+    LCURLY          shift and go to state 3
+    LPAREN          shift and go to state 7
+
+    formula                        shift and go to state 20
+
+state 8
+
+    (5) topformula -> formula . PERIOD
+    (10) formula -> formula . PLUS formula
+    (11) formula -> formula . MINUS formula
+    (12) formula -> formula . TIMES formula
+    (13) formula -> formula . DIVIDE formula
+    (14) formula -> formula . RAISE formula
+    (15) formula -> formula . REMAINDER formula
+    (18) formula -> formula . LT formula
+    (19) formula -> formula . LE formula
+    (20) formula -> formula . EQ formula
+    (21) formula -> formula . NE formula
+    (22) formula -> formula . GE formula
+    (23) formula -> formula . GT formula
+    (25) formula -> formula . OR formula
+    (26) formula -> formula . AND formula
+    (27) formula -> formula . IMPLIES formula
+    (28) formula -> formula . EQUIV formula
+
+    PERIOD          shift and go to state 27
+    PLUS            shift and go to state 31
+    MINUS           shift and go to state 35
+    TIMES           shift and go to state 28
+    DIVIDE          shift and go to state 25
+    RAISE           shift and go to state 37
+    REMAINDER       shift and go to state 34
+    LT              shift and go to state 29
+    LE              shift and go to state 23
+    EQ              shift and go to state 26
+    NE              shift and go to state 36
+    GE              shift and go to state 24
+    GT              shift and go to state 30
+    OR              shift and go to state 22
+    AND             shift and go to state 21
+    IMPLIES         shift and go to state 32
+    EQUIV           shift and go to state 33
+
+
+state 9
+
+    (0) S' -> topformulas .
+    (2) topformulas -> topformulas . topformula
+    (3) topformula -> . NUMBER COLON formula PERIOD
+    (4) topformula -> . NAME COLON formula PERIOD
+    (5) topformula -> . formula PERIOD
+    (6) formula -> . NAME
+    (7) formula -> . NUMBER
+    (8) formula -> . NAME LPAREN RPAREN
+    (9) formula -> . NAME LPAREN arguments RPAREN
+    (10) formula -> . formula PLUS formula
+    (11) formula -> . formula MINUS formula
+    (12) formula -> . formula TIMES formula
+    (13) formula -> . formula DIVIDE formula
+    (14) formula -> . formula RAISE formula
+    (15) formula -> . formula REMAINDER formula
+    (16) formula -> . PLUS formula
+    (17) formula -> . MINUS formula
+    (18) formula -> . formula LT formula
+    (19) formula -> . formula LE formula
+    (20) formula -> . formula EQ formula
+    (21) formula -> . formula NE formula
+    (22) formula -> . formula GE formula
+    (23) formula -> . formula GT formula
+    (24) formula -> . NOT formula
+    (25) formula -> . formula OR formula
+    (26) formula -> . formula AND formula
+    (27) formula -> . formula IMPLIES formula
+    (28) formula -> . formula EQUIV formula
+    (29) formula -> . LBRACKET names RBRACKET formula
+    (30) formula -> . LCURLY names RCURLY formula
+    (31) formula -> . LPAREN formula RPAREN
+
+    NUMBER          shift and go to state 1
+    NAME            shift and go to state 10
+    PLUS            shift and go to state 5
+    MINUS           shift and go to state 4
+    NOT             shift and go to state 11
+    LBRACKET        shift and go to state 2
+    LCURLY          shift and go to state 3
+    LPAREN          shift and go to state 7
+
+    formula                        shift and go to state 8
+    topformula                     shift and go to state 38
+
+state 10
+
+    (4) topformula -> NAME . COLON formula PERIOD
+    (6) formula -> NAME .
+    (8) formula -> NAME . LPAREN RPAREN
+    (9) formula -> NAME . LPAREN arguments RPAREN
+
+    COLON           shift and go to state 39
+    PERIOD          reduce using rule 6 (formula -> NAME .)
+    PLUS            reduce using rule 6 (formula -> NAME .)
+    MINUS           reduce using rule 6 (formula -> NAME .)
+    TIMES           reduce using rule 6 (formula -> NAME .)
+    DIVIDE          reduce using rule 6 (formula -> NAME .)
+    RAISE           reduce using rule 6 (formula -> NAME .)
+    REMAINDER       reduce using rule 6 (formula -> NAME .)
+    LT              reduce using rule 6 (formula -> NAME .)
+    LE              reduce using rule 6 (formula -> NAME .)
+    EQ              reduce using rule 6 (formula -> NAME .)
+    NE              reduce using rule 6 (formula -> NAME .)
+    GE              reduce using rule 6 (formula -> NAME .)
+    GT              reduce using rule 6 (formula -> NAME .)
+    OR              reduce using rule 6 (formula -> NAME .)
+    AND             reduce using rule 6 (formula -> NAME .)
+    IMPLIES         reduce using rule 6 (formula -> NAME .)
+    EQUIV           reduce using rule 6 (formula -> NAME .)
+    LPAREN          shift and go to state 40
+
+
+state 11
+
+    (24) formula -> NOT . formula
+    (6) formula -> . NAME
+    (7) formula -> . NUMBER
+    (8) formula -> . NAME LPAREN RPAREN
+    (9) formula -> . NAME LPAREN arguments RPAREN
+    (10) formula -> . formula PLUS formula
+    (11) formula -> . formula MINUS formula
+    (12) formula -> . formula TIMES formula
+    (13) formula -> . formula DIVIDE formula
+    (14) formula -> . formula RAISE formula
+    (15) formula -> . formula REMAINDER formula
+    (16) formula -> . PLUS formula
+    (17) formula -> . MINUS formula
+    (18) formula -> . formula LT formula
+    (19) formula -> . formula LE formula
+    (20) formula -> . formula EQ formula
+    (21) formula -> . formula NE formula
+    (22) formula -> . formula GE formula
+    (23) formula -> . formula GT formula
+    (24) formula -> . NOT formula
+    (25) formula -> . formula OR formula
+    (26) formula -> . formula AND formula
+    (27) formula -> . formula IMPLIES formula
+    (28) formula -> . formula EQUIV formula
+    (29) formula -> . LBRACKET names RBRACKET formula
+    (30) formula -> . LCURLY names RCURLY formula
+    (31) formula -> . LPAREN formula RPAREN
+
+    NAME            shift and go to state 18
+    NUMBER          shift and go to state 16
+    PLUS            shift and go to state 5
+    MINUS           shift and go to state 4
+    NOT             shift and go to state 11
+    LBRACKET        shift and go to state 2
+    LCURLY          shift and go to state 3
+    LPAREN          shift and go to state 7
+
+    formula                        shift and go to state 41
+
+state 12
+
+    (3) topformula -> NUMBER COLON . formula PERIOD
+    (6) formula -> . NAME
+    (7) formula -> . NUMBER
+    (8) formula -> . NAME LPAREN RPAREN
+    (9) formula -> . NAME LPAREN arguments RPAREN
+    (10) formula -> . formula PLUS formula
+    (11) formula -> . formula MINUS formula
+    (12) formula -> . formula TIMES formula
+    (13) formula -> . formula DIVIDE formula
+    (14) formula -> . formula RAISE formula
+    (15) formula -> . formula REMAINDER formula
+    (16) formula -> . PLUS formula
+    (17) formula -> . MINUS formula
+    (18) formula -> . formula LT formula
+    (19) formula -> . formula LE formula
+    (20) formula -> . formula EQ formula
+    (21) formula -> . formula NE formula
+    (22) formula -> . formula GE formula
+    (23) formula -> . formula GT formula
+    (24) formula -> . NOT formula
+    (25) formula -> . formula OR formula
+    (26) formula -> . formula AND formula
+    (27) formula -> . formula IMPLIES formula
+    (28) formula -> . formula EQUIV formula
+    (29) formula -> . LBRACKET names RBRACKET formula
+    (30) formula -> . LCURLY names RCURLY formula
+    (31) formula -> . LPAREN formula RPAREN
+
+    NAME            shift and go to state 18
+    NUMBER          shift and go to state 16
+    PLUS            shift and go to state 5
+    MINUS           shift and go to state 4
+    NOT             shift and go to state 11
+    LBRACKET        shift and go to state 2
+    LCURLY          shift and go to state 3
+    LPAREN          shift and go to state 7
+
+    formula                        shift and go to state 42
+
+state 13
+
+    (32) names -> NAME .
+
+    RCURLY          reduce using rule 32 (names -> NAME .)
+    COMMA           reduce using rule 32 (names -> NAME .)
+    RBRACKET        reduce using rule 32 (names -> NAME .)
+
+
+state 14
+
+    (29) formula -> LBRACKET names . RBRACKET formula
+    (33) names -> names . COMMA NAME
+
+    RBRACKET        shift and go to state 44
+    COMMA           shift and go to state 43
+
+
+state 15
+
+    (30) formula -> LCURLY names . RCURLY formula
+    (33) names -> names . COMMA NAME
+
+    RCURLY          shift and go to state 45
+    COMMA           shift and go to state 43
+
+
+state 16
+
+    (7) formula -> NUMBER .
+
+    PLUS            reduce using rule 7 (formula -> NUMBER .)
+    MINUS           reduce using rule 7 (formula -> NUMBER .)
+    TIMES           reduce using rule 7 (formula -> NUMBER .)
+    DIVIDE          reduce using rule 7 (formula -> NUMBER .)
+    RAISE           reduce using rule 7 (formula -> NUMBER .)
+    REMAINDER       reduce using rule 7 (formula -> NUMBER .)
+    LT              reduce using rule 7 (formula -> NUMBER .)
+    LE              reduce using rule 7 (formula -> NUMBER .)
+    EQ              reduce using rule 7 (formula -> NUMBER .)
+    NE              reduce using rule 7 (formula -> NUMBER .)
+    GE              reduce using rule 7 (formula -> NUMBER .)
+    GT              reduce using rule 7 (formula -> NUMBER .)
+    OR              reduce using rule 7 (formula -> NUMBER .)
+    AND             reduce using rule 7 (formula -> NUMBER .)
+    IMPLIES         reduce using rule 7 (formula -> NUMBER .)
+    EQUIV           reduce using rule 7 (formula -> NUMBER .)
+    PERIOD          reduce using rule 7 (formula -> NUMBER .)
+    RPAREN          reduce using rule 7 (formula -> NUMBER .)
+    COMMA           reduce using rule 7 (formula -> NUMBER .)
+
+
+state 17
+
+    (17) formula -> MINUS formula .
+    (10) formula -> formula . PLUS formula
+    (11) formula -> formula . MINUS formula
+    (12) formula -> formula . TIMES formula
+    (13) formula -> formula . DIVIDE formula
+    (14) formula -> formula . RAISE formula
+    (15) formula -> formula . REMAINDER formula
+    (18) formula -> formula . LT formula
+    (19) formula -> formula . LE formula
+    (20) formula -> formula . EQ formula
+    (21) formula -> formula . NE formula
+    (22) formula -> formula . GE formula
+    (23) formula -> formula . GT formula
+    (25) formula -> formula . OR formula
+    (26) formula -> formula . AND formula
+    (27) formula -> formula . IMPLIES formula
+    (28) formula -> formula . EQUIV formula
+
+    PLUS            reduce using rule 17 (formula -> MINUS formula .)
+    MINUS           reduce using rule 17 (formula -> MINUS formula .)
+    LT              reduce using rule 17 (formula -> MINUS formula .)
+    LE              reduce using rule 17 (formula -> MINUS formula .)
+    EQ              reduce using rule 17 (formula -> MINUS formula .)
+    NE              reduce using rule 17 (formula -> MINUS formula .)
+    GE              reduce using rule 17 (formula -> MINUS formula .)
+    GT              reduce using rule 17 (formula -> MINUS formula .)
+    OR              reduce using rule 17 (formula -> MINUS formula .)
+    AND             reduce using rule 17 (formula -> MINUS formula .)
+    IMPLIES         reduce using rule 17 (formula -> MINUS formula .)
+    EQUIV           reduce using rule 17 (formula -> MINUS formula .)
+    PERIOD          reduce using rule 17 (formula -> MINUS formula .)
+    RPAREN          reduce using rule 17 (formula -> MINUS formula .)
+    COMMA           reduce using rule 17 (formula -> MINUS formula .)
+    TIMES           shift and go to state 28
+    DIVIDE          shift and go to state 25
+    RAISE           shift and go to state 37
+    REMAINDER       shift and go to state 34
+
+  ! TIMES           [ reduce using rule 17 (formula -> MINUS formula .) ]
+  ! DIVIDE          [ reduce using rule 17 (formula -> MINUS formula .) ]
+  ! RAISE           [ reduce using rule 17 (formula -> MINUS formula .) ]
+  ! REMAINDER       [ reduce using rule 17 (formula -> MINUS formula .) ]
+  ! PLUS            [ shift and go to state 31 ]
+  ! MINUS           [ shift and go to state 35 ]
+  ! LT              [ shift and go to state 29 ]
+  ! LE              [ shift and go to state 23 ]
+  ! EQ              [ shift and go to state 26 ]
+  ! NE              [ shift and go to state 36 ]
+  ! GE              [ shift and go to state 24 ]
+  ! GT              [ shift and go to state 30 ]
+  ! OR              [ shift and go to state 22 ]
+  ! AND             [ shift and go to state 21 ]
+  ! IMPLIES         [ shift and go to state 32 ]
+  ! EQUIV           [ shift and go to state 33 ]
+
+
+state 18
+
+    (6) formula -> NAME .
+    (8) formula -> NAME . LPAREN RPAREN
+    (9) formula -> NAME . LPAREN arguments RPAREN
+
+    PLUS            reduce using rule 6 (formula -> NAME .)
+    MINUS           reduce using rule 6 (formula -> NAME .)
+    TIMES           reduce using rule 6 (formula -> NAME .)
+    DIVIDE          reduce using rule 6 (formula -> NAME .)
+    RAISE           reduce using rule 6 (formula -> NAME .)
+    REMAINDER       reduce using rule 6 (formula -> NAME .)
+    LT              reduce using rule 6 (formula -> NAME .)
+    LE              reduce using rule 6 (formula -> NAME .)
+    EQ              reduce using rule 6 (formula -> NAME .)
+    NE              reduce using rule 6 (formula -> NAME .)
+    GE              reduce using rule 6 (formula -> NAME .)
+    GT              reduce using rule 6 (formula -> NAME .)
+    OR              reduce using rule 6 (formula -> NAME .)
+    AND             reduce using rule 6 (formula -> NAME .)
+    IMPLIES         reduce using rule 6 (formula -> NAME .)
+    EQUIV           reduce using rule 6 (formula -> NAME .)
+    PERIOD          reduce using rule 6 (formula -> NAME .)
+    RPAREN          reduce using rule 6 (formula -> NAME .)
+    COMMA           reduce using rule 6 (formula -> NAME .)
+    LPAREN          shift and go to state 40
+
+
+state 19
+
+    (16) formula -> PLUS formula .
+    (10) formula -> formula . PLUS formula
+    (11) formula -> formula . MINUS formula
+    (12) formula -> formula . TIMES formula
+    (13) formula -> formula . DIVIDE formula
+    (14) formula -> formula . RAISE formula
+    (15) formula -> formula . REMAINDER formula
+    (18) formula -> formula . LT formula
+    (19) formula -> formula . LE formula
+    (20) formula -> formula . EQ formula
+    (21) formula -> formula . NE formula
+    (22) formula -> formula . GE formula
+    (23) formula -> formula . GT formula
+    (25) formula -> formula . OR formula
+    (26) formula -> formula . AND formula
+    (27) formula -> formula . IMPLIES formula
+    (28) formula -> formula . EQUIV formula
+
+    PLUS            reduce using rule 16 (formula -> PLUS formula .)
+    MINUS           reduce using rule 16 (formula -> PLUS formula .)
+    LT              reduce using rule 16 (formula -> PLUS formula .)
+    LE              reduce using rule 16 (formula -> PLUS formula .)
+    EQ              reduce using rule 16 (formula -> PLUS formula .)
+    NE              reduce using rule 16 (formula -> PLUS formula .)
+    GE              reduce using rule 16 (formula -> PLUS formula .)
+    GT              reduce using rule 16 (formula -> PLUS formula .)
+    OR              reduce using rule 16 (formula -> PLUS formula .)
+    AND             reduce using rule 16 (formula -> PLUS formula .)
+    IMPLIES         reduce using rule 16 (formula -> PLUS formula .)
+    EQUIV           reduce using rule 16 (formula -> PLUS formula .)
+    PERIOD          reduce using rule 16 (formula -> PLUS formula .)
+    RPAREN          reduce using rule 16 (formula -> PLUS formula .)
+    COMMA           reduce using rule 16 (formula -> PLUS formula .)
+    TIMES           shift and go to state 28
+    DIVIDE          shift and go to state 25
+    RAISE           shift and go to state 37
+    REMAINDER       shift and go to state 34
+
+  ! TIMES           [ reduce using rule 16 (formula -> PLUS formula .) ]
+  ! DIVIDE          [ reduce using rule 16 (formula -> PLUS formula .) ]
+  ! RAISE           [ reduce using rule 16 (formula -> PLUS formula .) ]
+  ! REMAINDER       [ reduce using rule 16 (formula -> PLUS formula .) ]
+  ! PLUS            [ shift and go to state 31 ]
+  ! MINUS           [ shift and go to state 35 ]
+  ! LT              [ shift and go to state 29 ]
+  ! LE              [ shift and go to state 23 ]
+  ! EQ              [ shift and go to state 26 ]
+  ! NE              [ shift and go to state 36 ]
+  ! GE              [ shift and go to state 24 ]
+  ! GT              [ shift and go to state 30 ]
+  ! OR              [ shift and go to state 22 ]
+  ! AND             [ shift and go to state 21 ]
+  ! IMPLIES         [ shift and go to state 32 ]
+  ! EQUIV           [ shift and go to state 33 ]
+
+
+state 20
+
+    (31) formula -> LPAREN formula . RPAREN
+    (10) formula -> formula . PLUS formula
+    (11) formula -> formula . MINUS formula
+    (12) formula -> formula . TIMES formula
+    (13) formula -> formula . DIVIDE formula
+    (14) formula -> formula . RAISE formula
+    (15) formula -> formula . REMAINDER formula
+    (18) formula -> formula . LT formula
+    (19) formula -> formula . LE formula
+    (20) formula -> formula . EQ formula
+    (21) formula -> formula . NE formula
+    (22) formula -> formula . GE formula
+    (23) formula -> formula . GT formula
+    (25) formula -> formula . OR formula
+    (26) formula -> formula . AND formula
+    (27) formula -> formula . IMPLIES formula
+    (28) formula -> formula . EQUIV formula
+
+    RPAREN          shift and go to state 46
+    PLUS            shift and go to state 31
+    MINUS           shift and go to state 35
+    TIMES           shift and go to state 28
+    DIVIDE          shift and go to state 25
+    RAISE           shift and go to state 37
+    REMAINDER       shift and go to state 34
+    LT              shift and go to state 29
+    LE              shift and go to state 23
+    EQ              shift and go to state 26
+    NE              shift and go to state 36
+    GE              shift and go to state 24
+    GT              shift and go to state 30
+    OR              shift and go to state 22
+    AND             shift and go to state 21
+    IMPLIES         shift and go to state 32
+    EQUIV           shift and go to state 33
+
+
+state 21
+
+    (26) formula -> formula AND . formula
+    (6) formula -> . NAME
+    (7) formula -> . NUMBER
+    (8) formula -> . NAME LPAREN RPAREN
+    (9) formula -> . NAME LPAREN arguments RPAREN
+    (10) formula -> . formula PLUS formula
+    (11) formula -> . formula MINUS formula
+    (12) formula -> . formula TIMES formula
+    (13) formula -> . formula DIVIDE formula
+    (14) formula -> . formula RAISE formula
+    (15) formula -> . formula REMAINDER formula
+    (16) formula -> . PLUS formula
+    (17) formula -> . MINUS formula
+    (18) formula -> . formula LT formula
+    (19) formula -> . formula LE formula
+    (20) formula -> . formula EQ formula
+    (21) formula -> . formula NE formula
+    (22) formula -> . formula GE formula
+    (23) formula -> . formula GT formula
+    (24) formula -> . NOT formula
+    (25) formula -> . formula OR formula
+    (26) formula -> . formula AND formula
+    (27) formula -> . formula IMPLIES formula
+    (28) formula -> . formula EQUIV formula
+    (29) formula -> . LBRACKET names RBRACKET formula
+    (30) formula -> . LCURLY names RCURLY formula
+    (31) formula -> . LPAREN formula RPAREN
+
+    NAME            shift and go to state 18
+    NUMBER          shift and go to state 16
+    PLUS            shift and go to state 5
+    MINUS           shift and go to state 4
+    NOT             shift and go to state 11
+    LBRACKET        shift and go to state 2
+    LCURLY          shift and go to state 3
+    LPAREN          shift and go to state 7
+
+    formula                        shift and go to state 47
+
+state 22
+
+    (25) formula -> formula OR . formula
+    (6) formula -> . NAME
+    (7) formula -> . NUMBER
+    (8) formula -> . NAME LPAREN RPAREN
+    (9) formula -> . NAME LPAREN arguments RPAREN
+    (10) formula -> . formula PLUS formula
+    (11) formula -> . formula MINUS formula
+    (12) formula -> . formula TIMES formula
+    (13) formula -> . formula DIVIDE formula
+    (14) formula -> . formula RAISE formula
+    (15) formula -> . formula REMAINDER formula
+    (16) formula -> . PLUS formula
+    (17) formula -> . MINUS formula
+    (18) formula -> . formula LT formula
+    (19) formula -> . formula LE formula
+    (20) formula -> . formula EQ formula
+    (21) formula -> . formula NE formula
+    (22) formula -> . formula GE formula
+    (23) formula -> . formula GT formula
+    (24) formula -> . NOT formula
+    (25) formula -> . formula OR formula
+    (26) formula -> . formula AND formula
+    (27) formula -> . formula IMPLIES formula
+    (28) formula -> . formula EQUIV formula
+    (29) formula -> . LBRACKET names RBRACKET formula
+    (30) formula -> . LCURLY names RCURLY formula
+    (31) formula -> . LPAREN formula RPAREN
+
+    NAME            shift and go to state 18
+    NUMBER          shift and go to state 16
+    PLUS            shift and go to state 5
+    MINUS           shift and go to state 4
+    NOT             shift and go to state 11
+    LBRACKET        shift and go to state 2
+    LCURLY          shift and go to state 3
+    LPAREN          shift and go to state 7
+
+    formula                        shift and go to state 48
+
+state 23
+
+    (19) formula -> formula LE . formula
+    (6) formula -> . NAME
+    (7) formula -> . NUMBER
+    (8) formula -> . NAME LPAREN RPAREN
+    (9) formula -> . NAME LPAREN arguments RPAREN
+    (10) formula -> . formula PLUS formula
+    (11) formula -> . formula MINUS formula
+    (12) formula -> . formula TIMES formula
+    (13) formula -> . formula DIVIDE formula
+    (14) formula -> . formula RAISE formula
+    (15) formula -> . formula REMAINDER formula
+    (16) formula -> . PLUS formula
+    (17) formula -> . MINUS formula
+    (18) formula -> . formula LT formula
+    (19) formula -> . formula LE formula
+    (20) formula -> . formula EQ formula
+    (21) formula -> . formula NE formula
+    (22) formula -> . formula GE formula
+    (23) formula -> . formula GT formula
+    (24) formula -> . NOT formula
+    (25) formula -> . formula OR formula
+    (26) formula -> . formula AND formula
+    (27) formula -> . formula IMPLIES formula
+    (28) formula -> . formula EQUIV formula
+    (29) formula -> . LBRACKET names RBRACKET formula
+    (30) formula -> . LCURLY names RCURLY formula
+    (31) formula -> . LPAREN formula RPAREN
+
+    NAME            shift and go to state 18
+    NUMBER          shift and go to state 16
+    PLUS            shift and go to state 5
+    MINUS           shift and go to state 4
+    NOT             shift and go to state 11
+    LBRACKET        shift and go to state 2
+    LCURLY          shift and go to state 3
+    LPAREN          shift and go to state 7
+
+    formula                        shift and go to state 49
+
+state 24
+
+    (22) formula -> formula GE . formula
+    (6) formula -> . NAME
+    (7) formula -> . NUMBER
+    (8) formula -> . NAME LPAREN RPAREN
+    (9) formula -> . NAME LPAREN arguments RPAREN
+    (10) formula -> . formula PLUS formula
+    (11) formula -> . formula MINUS formula
+    (12) formula -> . formula TIMES formula
+    (13) formula -> . formula DIVIDE formula
+    (14) formula -> . formula RAISE formula
+    (15) formula -> . formula REMAINDER formula
+    (16) formula -> . PLUS formula
+    (17) formula -> . MINUS formula
+    (18) formula -> . formula LT formula
+    (19) formula -> . formula LE formula
+    (20) formula -> . formula EQ formula
+    (21) formula -> . formula NE formula
+    (22) formula -> . formula GE formula
+    (23) formula -> . formula GT formula
+    (24) formula -> . NOT formula
+    (25) formula -> . formula OR formula
+    (26) formula -> . formula AND formula
+    (27) formula -> . formula IMPLIES formula
+    (28) formula -> . formula EQUIV formula
+    (29) formula -> . LBRACKET names RBRACKET formula
+    (30) formula -> . LCURLY names RCURLY formula
+    (31) formula -> . LPAREN formula RPAREN
+
+    NAME            shift and go to state 18
+    NUMBER          shift and go to state 16
+    PLUS            shift and go to state 5
+    MINUS           shift and go to state 4
+    NOT             shift and go to state 11
+    LBRACKET        shift and go to state 2
+    LCURLY          shift and go to state 3
+    LPAREN          shift and go to state 7
+
+    formula                        shift and go to state 50
+
+state 25
+
+    (13) formula -> formula DIVIDE . formula
+    (6) formula -> . NAME
+    (7) formula -> . NUMBER
+    (8) formula -> . NAME LPAREN RPAREN
+    (9) formula -> . NAME LPAREN arguments RPAREN
+    (10) formula -> . formula PLUS formula
+    (11) formula -> . formula MINUS formula
+    (12) formula -> . formula TIMES formula
+    (13) formula -> . formula DIVIDE formula
+    (14) formula -> . formula RAISE formula
+    (15) formula -> . formula REMAINDER formula
+    (16) formula -> . PLUS formula
+    (17) formula -> . MINUS formula
+    (18) formula -> . formula LT formula
+    (19) formula -> . formula LE formula
+    (20) formula -> . formula EQ formula
+    (21) formula -> . formula NE formula
+    (22) formula -> . formula GE formula
+    (23) formula -> . formula GT formula
+    (24) formula -> . NOT formula
+    (25) formula -> . formula OR formula
+    (26) formula -> . formula AND formula
+    (27) formula -> . formula IMPLIES formula
+    (28) formula -> . formula EQUIV formula
+    (29) formula -> . LBRACKET names RBRACKET formula
+    (30) formula -> . LCURLY names RCURLY formula
+    (31) formula -> . LPAREN formula RPAREN
+
+    NAME            shift and go to state 18
+    NUMBER          shift and go to state 16
+    PLUS            shift and go to state 5
+    MINUS           shift and go to state 4
+    NOT             shift and go to state 11
+    LBRACKET        shift and go to state 2
+    LCURLY          shift and go to state 3
+    LPAREN          shift and go to state 7
+
+    formula                        shift and go to state 51
+
+state 26
+
+    (20) formula -> formula EQ . formula
+    (6) formula -> . NAME
+    (7) formula -> . NUMBER
+    (8) formula -> . NAME LPAREN RPAREN
+    (9) formula -> . NAME LPAREN arguments RPAREN
+    (10) formula -> . formula PLUS formula
+    (11) formula -> . formula MINUS formula
+    (12) formula -> . formula TIMES formula
+    (13) formula -> . formula DIVIDE formula
+    (14) formula -> . formula RAISE formula
+    (15) formula -> . formula REMAINDER formula
+    (16) formula -> . PLUS formula
+    (17) formula -> . MINUS formula
+    (18) formula -> . formula LT formula
+    (19) formula -> . formula LE formula
+    (20) formula -> . formula EQ formula
+    (21) formula -> . formula NE formula
+    (22) formula -> . formula GE formula
+    (23) formula -> . formula GT formula
+    (24) formula -> . NOT formula
+    (25) formula -> . formula OR formula
+    (26) formula -> . formula AND formula
+    (27) formula -> . formula IMPLIES formula
+    (28) formula -> . formula EQUIV formula
+    (29) formula -> . LBRACKET names RBRACKET formula
+    (30) formula -> . LCURLY names RCURLY formula
+    (31) formula -> . LPAREN formula RPAREN
+
+    NAME            shift and go to state 18
+    NUMBER          shift and go to state 16
+    PLUS            shift and go to state 5
+    MINUS           shift and go to state 4
+    NOT             shift and go to state 11
+    LBRACKET        shift and go to state 2
+    LCURLY          shift and go to state 3
+    LPAREN          shift and go to state 7
+
+    formula                        shift and go to state 52
+
+state 27
+
+    (5) topformula -> formula PERIOD .
+
+    NUMBER          reduce using rule 5 (topformula -> formula PERIOD .)
+    NAME            reduce using rule 5 (topformula -> formula PERIOD .)
+    PLUS            reduce using rule 5 (topformula -> formula PERIOD .)
+    MINUS           reduce using rule 5 (topformula -> formula PERIOD .)
+    NOT             reduce using rule 5 (topformula -> formula PERIOD .)
+    LBRACKET        reduce using rule 5 (topformula -> formula PERIOD .)
+    LCURLY          reduce using rule 5 (topformula -> formula PERIOD .)
+    LPAREN          reduce using rule 5 (topformula -> formula PERIOD .)
+    $end            reduce using rule 5 (topformula -> formula PERIOD .)
+
+
+state 28
+
+    (12) formula -> formula TIMES . formula
+    (6) formula -> . NAME
+    (7) formula -> . NUMBER
+    (8) formula -> . NAME LPAREN RPAREN
+    (9) formula -> . NAME LPAREN arguments RPAREN
+    (10) formula -> . formula PLUS formula
+    (11) formula -> . formula MINUS formula
+    (12) formula -> . formula TIMES formula
+    (13) formula -> . formula DIVIDE formula
+    (14) formula -> . formula RAISE formula
+    (15) formula -> . formula REMAINDER formula
+    (16) formula -> . PLUS formula
+    (17) formula -> . MINUS formula
+    (18) formula -> . formula LT formula
+    (19) formula -> . formula LE formula
+    (20) formula -> . formula EQ formula
+    (21) formula -> . formula NE formula
+    (22) formula -> . formula GE formula
+    (23) formula -> . formula GT formula
+    (24) formula -> . NOT formula
+    (25) formula -> . formula OR formula
+    (26) formula -> . formula AND formula
+    (27) formula -> . formula IMPLIES formula
+    (28) formula -> . formula EQUIV formula
+    (29) formula -> . LBRACKET names RBRACKET formula
+    (30) formula -> . LCURLY names RCURLY formula
+    (31) formula -> . LPAREN formula RPAREN
+
+    NAME            shift and go to state 18
+    NUMBER          shift and go to state 16
+    PLUS            shift and go to state 5
+    MINUS           shift and go to state 4
+    NOT             shift and go to state 11
+    LBRACKET        shift and go to state 2
+    LCURLY          shift and go to state 3
+    LPAREN          shift and go to state 7
+
+    formula                        shift and go to state 53
+
+state 29
+
+    (18) formula -> formula LT . formula
+    (6) formula -> . NAME
+    (7) formula -> . NUMBER
+    (8) formula -> . NAME LPAREN RPAREN
+    (9) formula -> . NAME LPAREN arguments RPAREN
+    (10) formula -> . formula PLUS formula
+    (11) formula -> . formula MINUS formula
+    (12) formula -> . formula TIMES formula
+    (13) formula -> . formula DIVIDE formula
+    (14) formula -> . formula RAISE formula
+    (15) formula -> . formula REMAINDER formula
+    (16) formula -> . PLUS formula
+    (17) formula -> . MINUS formula
+    (18) formula -> . formula LT formula
+    (19) formula -> . formula LE formula
+    (20) formula -> . formula EQ formula
+    (21) formula -> . formula NE formula
+    (22) formula -> . formula GE formula
+    (23) formula -> . formula GT formula
+    (24) formula -> . NOT formula
+    (25) formula -> . formula OR formula
+    (26) formula -> . formula AND formula
+    (27) formula -> . formula IMPLIES formula
+    (28) formula -> . formula EQUIV formula
+    (29) formula -> . LBRACKET names RBRACKET formula
+    (30) formula -> . LCURLY names RCURLY formula
+    (31) formula -> . LPAREN formula RPAREN
+
+    NAME            shift and go to state 18
+    NUMBER          shift and go to state 16
+    PLUS            shift and go to state 5
+    MINUS           shift and go to state 4
+    NOT             shift and go to state 11
+    LBRACKET        shift and go to state 2
+    LCURLY          shift and go to state 3
+    LPAREN          shift and go to state 7
+
+    formula                        shift and go to state 54
+
+state 30
+
+    (23) formula -> formula GT . formula
+    (6) formula -> . NAME
+    (7) formula -> . NUMBER
+    (8) formula -> . NAME LPAREN RPAREN
+    (9) formula -> . NAME LPAREN arguments RPAREN
+    (10) formula -> . formula PLUS formula
+    (11) formula -> . formula MINUS formula
+    (12) formula -> . formula TIMES formula
+    (13) formula -> . formula DIVIDE formula
+    (14) formula -> . formula RAISE formula
+    (15) formula -> . formula REMAINDER formula
+    (16) formula -> . PLUS formula
+    (17) formula -> . MINUS formula
+    (18) formula -> . formula LT formula
+    (19) formula -> . formula LE formula
+    (20) formula -> . formula EQ formula
+    (21) formula -> . formula NE formula
+    (22) formula -> . formula GE formula
+    (23) formula -> . formula GT formula
+    (24) formula -> . NOT formula
+    (25) formula -> . formula OR formula
+    (26) formula -> . formula AND formula
+    (27) formula -> . formula IMPLIES formula
+    (28) formula -> . formula EQUIV formula
+    (29) formula -> . LBRACKET names RBRACKET formula
+    (30) formula -> . LCURLY names RCURLY formula
+    (31) formula -> . LPAREN formula RPAREN
+
+    NAME            shift and go to state 18
+    NUMBER          shift and go to state 16
+    PLUS            shift and go to state 5
+    MINUS           shift and go to state 4
+    NOT             shift and go to state 11
+    LBRACKET        shift and go to state 2
+    LCURLY          shift and go to state 3
+    LPAREN          shift and go to state 7
+
+    formula                        shift and go to state 55
+
+state 31
+
+    (10) formula -> formula PLUS . formula
+    (6) formula -> . NAME
+    (7) formula -> . NUMBER
+    (8) formula -> . NAME LPAREN RPAREN
+    (9) formula -> . NAME LPAREN arguments RPAREN
+    (10) formula -> . formula PLUS formula
+    (11) formula -> . formula MINUS formula
+    (12) formula -> . formula TIMES formula
+    (13) formula -> . formula DIVIDE formula
+    (14) formula -> . formula RAISE formula
+    (15) formula -> . formula REMAINDER formula
+    (16) formula -> . PLUS formula
+    (17) formula -> . MINUS formula
+    (18) formula -> . formula LT formula
+    (19) formula -> . formula LE formula
+    (20) formula -> . formula EQ formula
+    (21) formula -> . formula NE formula
+    (22) formula -> . formula GE formula
+    (23) formula -> . formula GT formula
+    (24) formula -> . NOT formula
+    (25) formula -> . formula OR formula
+    (26) formula -> . formula AND formula
+    (27) formula -> . formula IMPLIES formula
+    (28) formula -> . formula EQUIV formula
+    (29) formula -> . LBRACKET names RBRACKET formula
+    (30) formula -> . LCURLY names RCURLY formula
+    (31) formula -> . LPAREN formula RPAREN
+
+    NAME            shift and go to state 18
+    NUMBER          shift and go to state 16
+    PLUS            shift and go to state 5
+    MINUS           shift and go to state 4
+    NOT             shift and go to state 11
+    LBRACKET        shift and go to state 2
+    LCURLY          shift and go to state 3
+    LPAREN          shift and go to state 7
+
+    formula                        shift and go to state 56
+
+state 32
+
+    (27) formula -> formula IMPLIES . formula
+    (6) formula -> . NAME
+    (7) formula -> . NUMBER
+    (8) formula -> . NAME LPAREN RPAREN
+    (9) formula -> . NAME LPAREN arguments RPAREN
+    (10) formula -> . formula PLUS formula
+    (11) formula -> . formula MINUS formula
+    (12) formula -> . formula TIMES formula
+    (13) formula -> . formula DIVIDE formula
+    (14) formula -> . formula RAISE formula
+    (15) formula -> . formula REMAINDER formula
+    (16) formula -> . PLUS formula
+    (17) formula -> . MINUS formula
+    (18) formula -> . formula LT formula
+    (19) formula -> . formula LE formula
+    (20) formula -> . formula EQ formula
+    (21) formula -> . formula NE formula
+    (22) formula -> . formula GE formula
+    (23) formula -> . formula GT formula
+    (24) formula -> . NOT formula
+    (25) formula -> . formula OR formula
+    (26) formula -> . formula AND formula
+    (27) formula -> . formula IMPLIES formula
+    (28) formula -> . formula EQUIV formula
+    (29) formula -> . LBRACKET names RBRACKET formula
+    (30) formula -> . LCURLY names RCURLY formula
+    (31) formula -> . LPAREN formula RPAREN
+
+    NAME            shift and go to state 18
+    NUMBER          shift and go to state 16
+    PLUS            shift and go to state 5
+    MINUS           shift and go to state 4
+    NOT             shift and go to state 11
+    LBRACKET        shift and go to state 2
+    LCURLY          shift and go to state 3
+    LPAREN          shift and go to state 7
+
+    formula                        shift and go to state 57
+
+state 33
+
+    (28) formula -> formula EQUIV . formula
+    (6) formula -> . NAME
+    (7) formula -> . NUMBER
+    (8) formula -> . NAME LPAREN RPAREN
+    (9) formula -> . NAME LPAREN arguments RPAREN
+    (10) formula -> . formula PLUS formula
+    (11) formula -> . formula MINUS formula
+    (12) formula -> . formula TIMES formula
+    (13) formula -> . formula DIVIDE formula
+    (14) formula -> . formula RAISE formula
+    (15) formula -> . formula REMAINDER formula
+    (16) formula -> . PLUS formula
+    (17) formula -> . MINUS formula
+    (18) formula -> . formula LT formula
+    (19) formula -> . formula LE formula
+    (20) formula -> . formula EQ formula
+    (21) formula -> . formula NE formula
+    (22) formula -> . formula GE formula
+    (23) formula -> . formula GT formula
+    (24) formula -> . NOT formula
+    (25) formula -> . formula OR formula
+    (26) formula -> . formula AND formula
+    (27) formula -> . formula IMPLIES formula
+    (28) formula -> . formula EQUIV formula
+    (29) formula -> . LBRACKET names RBRACKET formula
+    (30) formula -> . LCURLY names RCURLY formula
+    (31) formula -> . LPAREN formula RPAREN
+
+    NAME            shift and go to state 18
+    NUMBER          shift and go to state 16
+    PLUS            shift and go to state 5
+    MINUS           shift and go to state 4
+    NOT             shift and go to state 11
+    LBRACKET        shift and go to state 2
+    LCURLY          shift and go to state 3
+    LPAREN          shift and go to state 7
+
+    formula                        shift and go to state 58
+
+state 34
+
+    (15) formula -> formula REMAINDER . formula
+    (6) formula -> . NAME
+    (7) formula -> . NUMBER
+    (8) formula -> . NAME LPAREN RPAREN
+    (9) formula -> . NAME LPAREN arguments RPAREN
+    (10) formula -> . formula PLUS formula
+    (11) formula -> . formula MINUS formula
+    (12) formula -> . formula TIMES formula
+    (13) formula -> . formula DIVIDE formula
+    (14) formula -> . formula RAISE formula
+    (15) formula -> . formula REMAINDER formula
+    (16) formula -> . PLUS formula
+    (17) formula -> . MINUS formula
+    (18) formula -> . formula LT formula
+    (19) formula -> . formula LE formula
+    (20) formula -> . formula EQ formula
+    (21) formula -> . formula NE formula
+    (22) formula -> . formula GE formula
+    (23) formula -> . formula GT formula
+    (24) formula -> . NOT formula
+    (25) formula -> . formula OR formula
+    (26) formula -> . formula AND formula
+    (27) formula -> . formula IMPLIES formula
+    (28) formula -> . formula EQUIV formula
+    (29) formula -> . LBRACKET names RBRACKET formula
+    (30) formula -> . LCURLY names RCURLY formula
+    (31) formula -> . LPAREN formula RPAREN
+
+    NAME            shift and go to state 18
+    NUMBER          shift and go to state 16
+    PLUS            shift and go to state 5
+    MINUS           shift and go to state 4
+    NOT             shift and go to state 11
+    LBRACKET        shift and go to state 2
+    LCURLY          shift and go to state 3
+    LPAREN          shift and go to state 7
+
+    formula                        shift and go to state 59
+
+state 35
+
+    (11) formula -> formula MINUS . formula
+    (6) formula -> . NAME
+    (7) formula -> . NUMBER
+    (8) formula -> . NAME LPAREN RPAREN
+    (9) formula -> . NAME LPAREN arguments RPAREN
+    (10) formula -> . formula PLUS formula
+    (11) formula -> . formula MINUS formula
+    (12) formula -> . formula TIMES formula
+    (13) formula -> . formula DIVIDE formula
+    (14) formula -> . formula RAISE formula
+    (15) formula -> . formula REMAINDER formula
+    (16) formula -> . PLUS formula
+    (17) formula -> . MINUS formula
+    (18) formula -> . formula LT formula
+    (19) formula -> . formula LE formula
+    (20) formula -> . formula EQ formula
+    (21) formula -> . formula NE formula
+    (22) formula -> . formula GE formula
+    (23) formula -> . formula GT formula
+    (24) formula -> . NOT formula
+    (25) formula -> . formula OR formula
+    (26) formula -> . formula AND formula
+    (27) formula -> . formula IMPLIES formula
+    (28) formula -> . formula EQUIV formula
+    (29) formula -> . LBRACKET names RBRACKET formula
+    (30) formula -> . LCURLY names RCURLY formula
+    (31) formula -> . LPAREN formula RPAREN
+
+    NAME            shift and go to state 18
+    NUMBER          shift and go to state 16
+    PLUS            shift and go to state 5
+    MINUS           shift and go to state 4
+    NOT             shift and go to state 11
+    LBRACKET        shift and go to state 2
+    LCURLY          shift and go to state 3
+    LPAREN          shift and go to state 7
+
+    formula                        shift and go to state 60
+
+state 36
+
+    (21) formula -> formula NE . formula
+    (6) formula -> . NAME
+    (7) formula -> . NUMBER
+    (8) formula -> . NAME LPAREN RPAREN
+    (9) formula -> . NAME LPAREN arguments RPAREN
+    (10) formula -> . formula PLUS formula
+    (11) formula -> . formula MINUS formula
+    (12) formula -> . formula TIMES formula
+    (13) formula -> . formula DIVIDE formula
+    (14) formula -> . formula RAISE formula
+    (15) formula -> . formula REMAINDER formula
+    (16) formula -> . PLUS formula
+    (17) formula -> . MINUS formula
+    (18) formula -> . formula LT formula
+    (19) formula -> . formula LE formula
+    (20) formula -> . formula EQ formula
+    (21) formula -> . formula NE formula
+    (22) formula -> . formula GE formula
+    (23) formula -> . formula GT formula
+    (24) formula -> . NOT formula
+    (25) formula -> . formula OR formula
+    (26) formula -> . formula AND formula
+    (27) formula -> . formula IMPLIES formula
+    (28) formula -> . formula EQUIV formula
+    (29) formula -> . LBRACKET names RBRACKET formula
+    (30) formula -> . LCURLY names RCURLY formula
+    (31) formula -> . LPAREN formula RPAREN
+
+    NAME            shift and go to state 18
+    NUMBER          shift and go to state 16
+    PLUS            shift and go to state 5
+    MINUS           shift and go to state 4
+    NOT             shift and go to state 11
+    LBRACKET        shift and go to state 2
+    LCURLY          shift and go to state 3
+    LPAREN          shift and go to state 7
+
+    formula                        shift and go to state 61
+
+state 37
+
+    (14) formula -> formula RAISE . formula
+    (6) formula -> . NAME
+    (7) formula -> . NUMBER
+    (8) formula -> . NAME LPAREN RPAREN
+    (9) formula -> . NAME LPAREN arguments RPAREN
+    (10) formula -> . formula PLUS formula
+    (11) formula -> . formula MINUS formula
+    (12) formula -> . formula TIMES formula
+    (13) formula -> . formula DIVIDE formula
+    (14) formula -> . formula RAISE formula
+    (15) formula -> . formula REMAINDER formula
+    (16) formula -> . PLUS formula
+    (17) formula -> . MINUS formula
+    (18) formula -> . formula LT formula
+    (19) formula -> . formula LE formula
+    (20) formula -> . formula EQ formula
+    (21) formula -> . formula NE formula
+    (22) formula -> . formula GE formula
+    (23) formula -> . formula GT formula
+    (24) formula -> . NOT formula
+    (25) formula -> . formula OR formula
+    (26) formula -> . formula AND formula
+    (27) formula -> . formula IMPLIES formula
+    (28) formula -> . formula EQUIV formula
+    (29) formula -> . LBRACKET names RBRACKET formula
+    (30) formula -> . LCURLY names RCURLY formula
+    (31) formula -> . LPAREN formula RPAREN
+
+    NAME            shift and go to state 18
+    NUMBER          shift and go to state 16
+    PLUS            shift and go to state 5
+    MINUS           shift and go to state 4
+    NOT             shift and go to state 11
+    LBRACKET        shift and go to state 2
+    LCURLY          shift and go to state 3
+    LPAREN          shift and go to state 7
+
+    formula                        shift and go to state 62
+
+state 38
+
+    (2) topformulas -> topformulas topformula .
+
+    NUMBER          reduce using rule 2 (topformulas -> topformulas topformula .)
+    NAME            reduce using rule 2 (topformulas -> topformulas topformula .)
+    PLUS            reduce using rule 2 (topformulas -> topformulas topformula .)
+    MINUS           reduce using rule 2 (topformulas -> topformulas topformula .)
+    NOT             reduce using rule 2 (topformulas -> topformulas topformula .)
+    LBRACKET        reduce using rule 2 (topformulas -> topformulas topformula .)
+    LCURLY          reduce using rule 2 (topformulas -> topformulas topformula .)
+    LPAREN          reduce using rule 2 (topformulas -> topformulas topformula .)
+    $end            reduce using rule 2 (topformulas -> topformulas topformula .)
+
+
+state 39
+
+    (4) topformula -> NAME COLON . formula PERIOD
+    (6) formula -> . NAME
+    (7) formula -> . NUMBER
+    (8) formula -> . NAME LPAREN RPAREN
+    (9) formula -> . NAME LPAREN arguments RPAREN
+    (10) formula -> . formula PLUS formula
+    (11) formula -> . formula MINUS formula
+    (12) formula -> . formula TIMES formula
+    (13) formula -> . formula DIVIDE formula
+    (14) formula -> . formula RAISE formula
+    (15) formula -> . formula REMAINDER formula
+    (16) formula -> . PLUS formula
+    (17) formula -> . MINUS formula
+    (18) formula -> . formula LT formula
+    (19) formula -> . formula LE formula
+    (20) formula -> . formula EQ formula
+    (21) formula -> . formula NE formula
+    (22) formula -> . formula GE formula
+    (23) formula -> . formula GT formula
+    (24) formula -> . NOT formula
+    (25) formula -> . formula OR formula
+    (26) formula -> . formula AND formula
+    (27) formula -> . formula IMPLIES formula
+    (28) formula -> . formula EQUIV formula
+    (29) formula -> . LBRACKET names RBRACKET formula
+    (30) formula -> . LCURLY names RCURLY formula
+    (31) formula -> . LPAREN formula RPAREN
+
+    NAME            shift and go to state 18
+    NUMBER          shift and go to state 16
+    PLUS            shift and go to state 5
+    MINUS           shift and go to state 4
+    NOT             shift and go to state 11
+    LBRACKET        shift and go to state 2
+    LCURLY          shift and go to state 3
+    LPAREN          shift and go to state 7
+
+    formula                        shift and go to state 63
+
+state 40
+
+    (8) formula -> NAME LPAREN . RPAREN
+    (9) formula -> NAME LPAREN . arguments RPAREN
+    (34) arguments -> . formula
+    (35) arguments -> . arguments COMMA formula
+    (6) formula -> . NAME
+    (7) formula -> . NUMBER
+    (8) formula -> . NAME LPAREN RPAREN
+    (9) formula -> . NAME LPAREN arguments RPAREN
+    (10) formula -> . formula PLUS formula
+    (11) formula -> . formula MINUS formula
+    (12) formula -> . formula TIMES formula
+    (13) formula -> . formula DIVIDE formula
+    (14) formula -> . formula RAISE formula
+    (15) formula -> . formula REMAINDER formula
+    (16) formula -> . PLUS formula
+    (17) formula -> . MINUS formula
+    (18) formula -> . formula LT formula
+    (19) formula -> . formula LE formula
+    (20) formula -> . formula EQ formula
+    (21) formula -> . formula NE formula
+    (22) formula -> . formula GE formula
+    (23) formula -> . formula GT formula
+    (24) formula -> . NOT formula
+    (25) formula -> . formula OR formula
+    (26) formula -> . formula AND formula
+    (27) formula -> . formula IMPLIES formula
+    (28) formula -> . formula EQUIV formula
+    (29) formula -> . LBRACKET names RBRACKET formula
+    (30) formula -> . LCURLY names RCURLY formula
+    (31) formula -> . LPAREN formula RPAREN
+
+    RPAREN          shift and go to state 64
+    NAME            shift and go to state 18
+    NUMBER          shift and go to state 16
+    PLUS            shift and go to state 5
+    MINUS           shift and go to state 4
+    NOT             shift and go to state 11
+    LBRACKET        shift and go to state 2
+    LCURLY          shift and go to state 3
+    LPAREN          shift and go to state 7
+
+    formula                        shift and go to state 66
+    arguments                      shift and go to state 65
+
+state 41
+
+    (24) formula -> NOT formula .
+    (10) formula -> formula . PLUS formula
+    (11) formula -> formula . MINUS formula
+    (12) formula -> formula . TIMES formula
+    (13) formula -> formula . DIVIDE formula
+    (14) formula -> formula . RAISE formula
+    (15) formula -> formula . REMAINDER formula
+    (18) formula -> formula . LT formula
+    (19) formula -> formula . LE formula
+    (20) formula -> formula . EQ formula
+    (21) formula -> formula . NE formula
+    (22) formula -> formula . GE formula
+    (23) formula -> formula . GT formula
+    (25) formula -> formula . OR formula
+    (26) formula -> formula . AND formula
+    (27) formula -> formula . IMPLIES formula
+    (28) formula -> formula . EQUIV formula
+
+    PLUS            reduce using rule 24 (formula -> NOT formula .)
+    MINUS           reduce using rule 24 (formula -> NOT formula .)
+    TIMES           reduce using rule 24 (formula -> NOT formula .)
+    DIVIDE          reduce using rule 24 (formula -> NOT formula .)
+    RAISE           reduce using rule 24 (formula -> NOT formula .)
+    REMAINDER       reduce using rule 24 (formula -> NOT formula .)
+    LT              reduce using rule 24 (formula -> NOT formula .)
+    LE              reduce using rule 24 (formula -> NOT formula .)
+    EQ              reduce using rule 24 (formula -> NOT formula .)
+    NE              reduce using rule 24 (formula -> NOT formula .)
+    GE              reduce using rule 24 (formula -> NOT formula .)
+    GT              reduce using rule 24 (formula -> NOT formula .)
+    OR              reduce using rule 24 (formula -> NOT formula .)
+    AND             reduce using rule 24 (formula -> NOT formula .)
+    IMPLIES         reduce using rule 24 (formula -> NOT formula .)
+    EQUIV           reduce using rule 24 (formula -> NOT formula .)
+    PERIOD          reduce using rule 24 (formula -> NOT formula .)
+    RPAREN          reduce using rule 24 (formula -> NOT formula .)
+    COMMA           reduce using rule 24 (formula -> NOT formula .)
+
+  ! PLUS            [ shift and go to state 31 ]
+  ! MINUS           [ shift and go to state 35 ]
+  ! TIMES           [ shift and go to state 28 ]
+  ! DIVIDE          [ shift and go to state 25 ]
+  ! RAISE           [ shift and go to state 37 ]
+  ! REMAINDER       [ shift and go to state 34 ]
+  ! LT              [ shift and go to state 29 ]
+  ! LE              [ shift and go to state 23 ]
+  ! EQ              [ shift and go to state 26 ]
+  ! NE              [ shift and go to state 36 ]
+  ! GE              [ shift and go to state 24 ]
+  ! GT              [ shift and go to state 30 ]
+  ! OR              [ shift and go to state 22 ]
+  ! AND             [ shift and go to state 21 ]
+  ! IMPLIES         [ shift and go to state 32 ]
+  ! EQUIV           [ shift and go to state 33 ]
+
+
+state 42
+
+    (3) topformula -> NUMBER COLON formula . PERIOD
+    (10) formula -> formula . PLUS formula
+    (11) formula -> formula . MINUS formula
+    (12) formula -> formula . TIMES formula
+    (13) formula -> formula . DIVIDE formula
+    (14) formula -> formula . RAISE formula
+    (15) formula -> formula . REMAINDER formula
+    (18) formula -> formula . LT formula
+    (19) formula -> formula . LE formula
+    (20) formula -> formula . EQ formula
+    (21) formula -> formula . NE formula
+    (22) formula -> formula . GE formula
+    (23) formula -> formula . GT formula
+    (25) formula -> formula . OR formula
+    (26) formula -> formula . AND formula
+    (27) formula -> formula . IMPLIES formula
+    (28) formula -> formula . EQUIV formula
+
+    PERIOD          shift and go to state 67
+    PLUS            shift and go to state 31
+    MINUS           shift and go to state 35
+    TIMES           shift and go to state 28
+    DIVIDE          shift and go to state 25
+    RAISE           shift and go to state 37
+    REMAINDER       shift and go to state 34
+    LT              shift and go to state 29
+    LE              shift and go to state 23
+    EQ              shift and go to state 26
+    NE              shift and go to state 36
+    GE              shift and go to state 24
+    GT              shift and go to state 30
+    OR              shift and go to state 22
+    AND             shift and go to state 21
+    IMPLIES         shift and go to state 32
+    EQUIV           shift and go to state 33
+
+
+state 43
+
+    (33) names -> names COMMA . NAME
+
+    NAME            shift and go to state 68
+
+
+state 44
+
+    (29) formula -> LBRACKET names RBRACKET . formula
+    (6) formula -> . NAME
+    (7) formula -> . NUMBER
+    (8) formula -> . NAME LPAREN RPAREN
+    (9) formula -> . NAME LPAREN arguments RPAREN
+    (10) formula -> . formula PLUS formula
+    (11) formula -> . formula MINUS formula
+    (12) formula -> . formula TIMES formula
+    (13) formula -> . formula DIVIDE formula
+    (14) formula -> . formula RAISE formula
+    (15) formula -> . formula REMAINDER formula
+    (16) formula -> . PLUS formula
+    (17) formula -> . MINUS formula
+    (18) formula -> . formula LT formula
+    (19) formula -> . formula LE formula
+    (20) formula -> . formula EQ formula
+    (21) formula -> . formula NE formula
+    (22) formula -> . formula GE formula
+    (23) formula -> . formula GT formula
+    (24) formula -> . NOT formula
+    (25) formula -> . formula OR formula
+    (26) formula -> . formula AND formula
+    (27) formula -> . formula IMPLIES formula
+    (28) formula -> . formula EQUIV formula
+    (29) formula -> . LBRACKET names RBRACKET formula
+    (30) formula -> . LCURLY names RCURLY formula
+    (31) formula -> . LPAREN formula RPAREN
+
+    NAME            shift and go to state 18
+    NUMBER          shift and go to state 16
+    PLUS            shift and go to state 5
+    MINUS           shift and go to state 4
+    NOT             shift and go to state 11
+    LBRACKET        shift and go to state 2
+    LCURLY          shift and go to state 3
+    LPAREN          shift and go to state 7
+
+    formula                        shift and go to state 69
+
+state 45
+
+    (30) formula -> LCURLY names RCURLY . formula
+    (6) formula -> . NAME
+    (7) formula -> . NUMBER
+    (8) formula -> . NAME LPAREN RPAREN
+    (9) formula -> . NAME LPAREN arguments RPAREN
+    (10) formula -> . formula PLUS formula
+    (11) formula -> . formula MINUS formula
+    (12) formula -> . formula TIMES formula
+    (13) formula -> . formula DIVIDE formula
+    (14) formula -> . formula RAISE formula
+    (15) formula -> . formula REMAINDER formula
+    (16) formula -> . PLUS formula
+    (17) formula -> . MINUS formula
+    (18) formula -> . formula LT formula
+    (19) formula -> . formula LE formula
+    (20) formula -> . formula EQ formula
+    (21) formula -> . formula NE formula
+    (22) formula -> . formula GE formula
+    (23) formula -> . formula GT formula
+    (24) formula -> . NOT formula
+    (25) formula -> . formula OR formula
+    (26) formula -> . formula AND formula
+    (27) formula -> . formula IMPLIES formula
+    (28) formula -> . formula EQUIV formula
+    (29) formula -> . LBRACKET names RBRACKET formula
+    (30) formula -> . LCURLY names RCURLY formula
+    (31) formula -> . LPAREN formula RPAREN
+
+    NAME            shift and go to state 18
+    NUMBER          shift and go to state 16
+    PLUS            shift and go to state 5
+    MINUS           shift and go to state 4
+    NOT             shift and go to state 11
+    LBRACKET        shift and go to state 2
+    LCURLY          shift and go to state 3
+    LPAREN          shift and go to state 7
+
+    formula                        shift and go to state 70
+
+state 46
+
+    (31) formula -> LPAREN formula RPAREN .
+
+    PLUS            reduce using rule 31 (formula -> LPAREN formula RPAREN .)
+    MINUS           reduce using rule 31 (formula -> LPAREN formula RPAREN .)
+    TIMES           reduce using rule 31 (formula -> LPAREN formula RPAREN .)
+    DIVIDE          reduce using rule 31 (formula -> LPAREN formula RPAREN .)
+    RAISE           reduce using rule 31 (formula -> LPAREN formula RPAREN .)
+    REMAINDER       reduce using rule 31 (formula -> LPAREN formula RPAREN .)
+    LT              reduce using rule 31 (formula -> LPAREN formula RPAREN .)
+    LE              reduce using rule 31 (formula -> LPAREN formula RPAREN .)
+    EQ              reduce using rule 31 (formula -> LPAREN formula RPAREN .)
+    NE              reduce using rule 31 (formula -> LPAREN formula RPAREN .)
+    GE              reduce using rule 31 (formula -> LPAREN formula RPAREN .)
+    GT              reduce using rule 31 (formula -> LPAREN formula RPAREN .)
+    OR              reduce using rule 31 (formula -> LPAREN formula RPAREN .)
+    AND             reduce using rule 31 (formula -> LPAREN formula RPAREN .)
+    IMPLIES         reduce using rule 31 (formula -> LPAREN formula RPAREN .)
+    EQUIV           reduce using rule 31 (formula -> LPAREN formula RPAREN .)
+    PERIOD          reduce using rule 31 (formula -> LPAREN formula RPAREN .)
+    RPAREN          reduce using rule 31 (formula -> LPAREN formula RPAREN .)
+    COMMA           reduce using rule 31 (formula -> LPAREN formula RPAREN .)
+
+
+state 47
+
+    (26) formula -> formula AND formula .
+    (10) formula -> formula . PLUS formula
+    (11) formula -> formula . MINUS formula
+    (12) formula -> formula . TIMES formula
+    (13) formula -> formula . DIVIDE formula
+    (14) formula -> formula . RAISE formula
+    (15) formula -> formula . REMAINDER formula
+    (18) formula -> formula . LT formula
+    (19) formula -> formula . LE formula
+    (20) formula -> formula . EQ formula
+    (21) formula -> formula . NE formula
+    (22) formula -> formula . GE formula
+    (23) formula -> formula . GT formula
+    (25) formula -> formula . OR formula
+    (26) formula -> formula . AND formula
+    (27) formula -> formula . IMPLIES formula
+    (28) formula -> formula . EQUIV formula
+
+    OR              reduce using rule 26 (formula -> formula AND formula .)
+    AND             reduce using rule 26 (formula -> formula AND formula .)
+    IMPLIES         reduce using rule 26 (formula -> formula AND formula .)
+    EQUIV           reduce using rule 26 (formula -> formula AND formula .)
+    PERIOD          reduce using rule 26 (formula -> formula AND formula .)
+    RPAREN          reduce using rule 26 (formula -> formula AND formula .)
+    COMMA           reduce using rule 26 (formula -> formula AND formula .)
+    PLUS            shift and go to state 31
+    MINUS           shift and go to state 35
+    TIMES           shift and go to state 28
+    DIVIDE          shift and go to state 25
+    RAISE           shift and go to state 37
+    REMAINDER       shift and go to state 34
+    LT              shift and go to state 29
+    LE              shift and go to state 23
+    EQ              shift and go to state 26
+    NE              shift and go to state 36
+    GE              shift and go to state 24
+    GT              shift and go to state 30
+
+  ! PLUS            [ reduce using rule 26 (formula -> formula AND formula .) ]
+  ! MINUS           [ reduce using rule 26 (formula -> formula AND formula .) ]
+  ! TIMES           [ reduce using rule 26 (formula -> formula AND formula .) ]
+  ! DIVIDE          [ reduce using rule 26 (formula -> formula AND formula .) ]
+  ! RAISE           [ reduce using rule 26 (formula -> formula AND formula .) ]
+  ! REMAINDER       [ reduce using rule 26 (formula -> formula AND formula .) ]
+  ! LT              [ reduce using rule 26 (formula -> formula AND formula .) ]
+  ! LE              [ reduce using rule 26 (formula -> formula AND formula .) ]
+  ! EQ              [ reduce using rule 26 (formula -> formula AND formula .) ]
+  ! NE              [ reduce using rule 26 (formula -> formula AND formula .) ]
+  ! GE              [ reduce using rule 26 (formula -> formula AND formula .) ]
+  ! GT              [ reduce using rule 26 (formula -> formula AND formula .) ]
+  ! OR              [ shift and go to state 22 ]
+  ! AND             [ shift and go to state 21 ]
+  ! IMPLIES         [ shift and go to state 32 ]
+  ! EQUIV           [ shift and go to state 33 ]
+
+
+state 48
+
+    (25) formula -> formula OR formula .
+    (10) formula -> formula . PLUS formula
+    (11) formula -> formula . MINUS formula
+    (12) formula -> formula . TIMES formula
+    (13) formula -> formula . DIVIDE formula
+    (14) formula -> formula . RAISE formula
+    (15) formula -> formula . REMAINDER formula
+    (18) formula -> formula . LT formula
+    (19) formula -> formula . LE formula
+    (20) formula -> formula . EQ formula
+    (21) formula -> formula . NE formula
+    (22) formula -> formula . GE formula
+    (23) formula -> formula . GT formula
+    (25) formula -> formula . OR formula
+    (26) formula -> formula . AND formula
+    (27) formula -> formula . IMPLIES formula
+    (28) formula -> formula . EQUIV formula
+
+    OR              reduce using rule 25 (formula -> formula OR formula .)
+    IMPLIES         reduce using rule 25 (formula -> formula OR formula .)
+    EQUIV           reduce using rule 25 (formula -> formula OR formula .)
+    PERIOD          reduce using rule 25 (formula -> formula OR formula .)
+    RPAREN          reduce using rule 25 (formula -> formula OR formula .)
+    COMMA           reduce using rule 25 (formula -> formula OR formula .)
+    PLUS            shift and go to state 31
+    MINUS           shift and go to state 35
+    TIMES           shift and go to state 28
+    DIVIDE          shift and go to state 25
+    RAISE           shift and go to state 37
+    REMAINDER       shift and go to state 34
+    LT              shift and go to state 29
+    LE              shift and go to state 23
+    EQ              shift and go to state 26
+    NE              shift and go to state 36
+    GE              shift and go to state 24
+    GT              shift and go to state 30
+    AND             shift and go to state 21
+
+  ! PLUS            [ reduce using rule 25 (formula -> formula OR formula .) ]
+  ! MINUS           [ reduce using rule 25 (formula -> formula OR formula .) ]
+  ! TIMES           [ reduce using rule 25 (formula -> formula OR formula .) ]
+  ! DIVIDE          [ reduce using rule 25 (formula -> formula OR formula .) ]
+  ! RAISE           [ reduce using rule 25 (formula -> formula OR formula .) ]
+  ! REMAINDER       [ reduce using rule 25 (formula -> formula OR formula .) ]
+  ! LT              [ reduce using rule 25 (formula -> formula OR formula .) ]
+  ! LE              [ reduce using rule 25 (formula -> formula OR formula .) ]
+  ! EQ              [ reduce using rule 25 (formula -> formula OR formula .) ]
+  ! NE              [ reduce using rule 25 (formula -> formula OR formula .) ]
+  ! GE              [ reduce using rule 25 (formula -> formula OR formula .) ]
+  ! GT              [ reduce using rule 25 (formula -> formula OR formula .) ]
+  ! AND             [ reduce using rule 25 (formula -> formula OR formula .) ]
+  ! OR              [ shift and go to state 22 ]
+  ! IMPLIES         [ shift and go to state 32 ]
+  ! EQUIV           [ shift and go to state 33 ]
+
+
+state 49
+
+    (19) formula -> formula LE formula .
+    (10) formula -> formula . PLUS formula
+    (11) formula -> formula . MINUS formula
+    (12) formula -> formula . TIMES formula
+    (13) formula -> formula . DIVIDE formula
+    (14) formula -> formula . RAISE formula
+    (15) formula -> formula . REMAINDER formula
+    (18) formula -> formula . LT formula
+    (19) formula -> formula . LE formula
+    (20) formula -> formula . EQ formula
+    (21) formula -> formula . NE formula
+    (22) formula -> formula . GE formula
+    (23) formula -> formula . GT formula
+    (25) formula -> formula . OR formula
+    (26) formula -> formula . AND formula
+    (27) formula -> formula . IMPLIES formula
+    (28) formula -> formula . EQUIV formula
+
+    LT              reduce using rule 19 (formula -> formula LE formula .)
+    LE              reduce using rule 19 (formula -> formula LE formula .)
+    EQ              reduce using rule 19 (formula -> formula LE formula .)
+    NE              reduce using rule 19 (formula -> formula LE formula .)
+    GE              reduce using rule 19 (formula -> formula LE formula .)
+    GT              reduce using rule 19 (formula -> formula LE formula .)
+    OR              reduce using rule 19 (formula -> formula LE formula .)
+    AND             reduce using rule 19 (formula -> formula LE formula .)
+    IMPLIES         reduce using rule 19 (formula -> formula LE formula .)
+    EQUIV           reduce using rule 19 (formula -> formula LE formula .)
+    PERIOD          reduce using rule 19 (formula -> formula LE formula .)
+    RPAREN          reduce using rule 19 (formula -> formula LE formula .)
+    COMMA           reduce using rule 19 (formula -> formula LE formula .)
+    PLUS            shift and go to state 31
+    MINUS           shift and go to state 35
+    TIMES           shift and go to state 28
+    DIVIDE          shift and go to state 25
+    RAISE           shift and go to state 37
+    REMAINDER       shift and go to state 34
+
+  ! PLUS            [ reduce using rule 19 (formula -> formula LE formula .) ]
+  ! MINUS           [ reduce using rule 19 (formula -> formula LE formula .) ]
+  ! TIMES           [ reduce using rule 19 (formula -> formula LE formula .) ]
+  ! DIVIDE          [ reduce using rule 19 (formula -> formula LE formula .) ]
+  ! RAISE           [ reduce using rule 19 (formula -> formula LE formula .) ]
+  ! REMAINDER       [ reduce using rule 19 (formula -> formula LE formula .) ]
+  ! LT              [ shift and go to state 29 ]
+  ! LE              [ shift and go to state 23 ]
+  ! EQ              [ shift and go to state 26 ]
+  ! NE              [ shift and go to state 36 ]
+  ! GE              [ shift and go to state 24 ]
+  ! GT              [ shift and go to state 30 ]
+  ! OR              [ shift and go to state 22 ]
+  ! AND             [ shift and go to state 21 ]
+  ! IMPLIES         [ shift and go to state 32 ]
+  ! EQUIV           [ shift and go to state 33 ]
+
+
+state 50
+
+    (22) formula -> formula GE formula .
+    (10) formula -> formula . PLUS formula
+    (11) formula -> formula . MINUS formula
+    (12) formula -> formula . TIMES formula
+    (13) formula -> formula . DIVIDE formula
+    (14) formula -> formula . RAISE formula
+    (15) formula -> formula . REMAINDER formula
+    (18) formula -> formula . LT formula
+    (19) formula -> formula . LE formula
+    (20) formula -> formula . EQ formula
+    (21) formula -> formula . NE formula
+    (22) formula -> formula . GE formula
+    (23) formula -> formula . GT formula
+    (25) formula -> formula . OR formula
+    (26) formula -> formula . AND formula
+    (27) formula -> formula . IMPLIES formula
+    (28) formula -> formula . EQUIV formula
+
+    LT              reduce using rule 22 (formula -> formula GE formula .)
+    LE              reduce using rule 22 (formula -> formula GE formula .)
+    EQ              reduce using rule 22 (formula -> formula GE formula .)
+    NE              reduce using rule 22 (formula -> formula GE formula .)
+    GE              reduce using rule 22 (formula -> formula GE formula .)
+    GT              reduce using rule 22 (formula -> formula GE formula .)
+    OR              reduce using rule 22 (formula -> formula GE formula .)
+    AND             reduce using rule 22 (formula -> formula GE formula .)
+    IMPLIES         reduce using rule 22 (formula -> formula GE formula .)
+    EQUIV           reduce using rule 22 (formula -> formula GE formula .)
+    PERIOD          reduce using rule 22 (formula -> formula GE formula .)
+    RPAREN          reduce using rule 22 (formula -> formula GE formula .)
+    COMMA           reduce using rule 22 (formula -> formula GE formula .)
+    PLUS            shift and go to state 31
+    MINUS           shift and go to state 35
+    TIMES           shift and go to state 28
+    DIVIDE          shift and go to state 25
+    RAISE           shift and go to state 37
+    REMAINDER       shift and go to state 34
+
+  ! PLUS            [ reduce using rule 22 (formula -> formula GE formula .) ]
+  ! MINUS           [ reduce using rule 22 (formula -> formula GE formula .) ]
+  ! TIMES           [ reduce using rule 22 (formula -> formula GE formula .) ]
+  ! DIVIDE          [ reduce using rule 22 (formula -> formula GE formula .) ]
+  ! RAISE           [ reduce using rule 22 (formula -> formula GE formula .) ]
+  ! REMAINDER       [ reduce using rule 22 (formula -> formula GE formula .) ]
+  ! LT              [ shift and go to state 29 ]
+  ! LE              [ shift and go to state 23 ]
+  ! EQ              [ shift and go to state 26 ]
+  ! NE              [ shift and go to state 36 ]
+  ! GE              [ shift and go to state 24 ]
+  ! GT              [ shift and go to state 30 ]
+  ! OR              [ shift and go to state 22 ]
+  ! AND             [ shift and go to state 21 ]
+  ! IMPLIES         [ shift and go to state 32 ]
+  ! EQUIV           [ shift and go to state 33 ]
+
+
+state 51
+
+    (13) formula -> formula DIVIDE formula .
+    (10) formula -> formula . PLUS formula
+    (11) formula -> formula . MINUS formula
+    (12) formula -> formula . TIMES formula
+    (13) formula -> formula . DIVIDE formula
+    (14) formula -> formula . RAISE formula
+    (15) formula -> formula . REMAINDER formula
+    (18) formula -> formula . LT formula
+    (19) formula -> formula . LE formula
+    (20) formula -> formula . EQ formula
+    (21) formula -> formula . NE formula
+    (22) formula -> formula . GE formula
+    (23) formula -> formula . GT formula
+    (25) formula -> formula . OR formula
+    (26) formula -> formula . AND formula
+    (27) formula -> formula . IMPLIES formula
+    (28) formula -> formula . EQUIV formula
+
+    PLUS            reduce using rule 13 (formula -> formula DIVIDE formula .)
+    MINUS           reduce using rule 13 (formula -> formula DIVIDE formula .)
+    TIMES           reduce using rule 13 (formula -> formula DIVIDE formula .)
+    DIVIDE          reduce using rule 13 (formula -> formula DIVIDE formula .)
+    RAISE           reduce using rule 13 (formula -> formula DIVIDE formula .)
+    REMAINDER       reduce using rule 13 (formula -> formula DIVIDE formula .)
+    LT              reduce using rule 13 (formula -> formula DIVIDE formula .)
+    LE              reduce using rule 13 (formula -> formula DIVIDE formula .)
+    EQ              reduce using rule 13 (formula -> formula DIVIDE formula .)
+    NE              reduce using rule 13 (formula -> formula DIVIDE formula .)
+    GE              reduce using rule 13 (formula -> formula DIVIDE formula .)
+    GT              reduce using rule 13 (formula -> formula DIVIDE formula .)
+    OR              reduce using rule 13 (formula -> formula DIVIDE formula .)
+    AND             reduce using rule 13 (formula -> formula DIVIDE formula .)
+    IMPLIES         reduce using rule 13 (formula -> formula DIVIDE formula .)
+    EQUIV           reduce using rule 13 (formula -> formula DIVIDE formula .)
+    PERIOD          reduce using rule 13 (formula -> formula DIVIDE formula .)
+    RPAREN          reduce using rule 13 (formula -> formula DIVIDE formula .)
+    COMMA           reduce using rule 13 (formula -> formula DIVIDE formula .)
+
+  ! PLUS            [ shift and go to state 31 ]
+  ! MINUS           [ shift and go to state 35 ]
+  ! TIMES           [ shift and go to state 28 ]
+  ! DIVIDE          [ shift and go to state 25 ]
+  ! RAISE           [ shift and go to state 37 ]
+  ! REMAINDER       [ shift and go to state 34 ]
+  ! LT              [ shift and go to state 29 ]
+  ! LE              [ shift and go to state 23 ]
+  ! EQ              [ shift and go to state 26 ]
+  ! NE              [ shift and go to state 36 ]
+  ! GE              [ shift and go to state 24 ]
+  ! GT              [ shift and go to state 30 ]
+  ! OR              [ shift and go to state 22 ]
+  ! AND             [ shift and go to state 21 ]
+  ! IMPLIES         [ shift and go to state 32 ]
+  ! EQUIV           [ shift and go to state 33 ]
+
+
+state 52
+
+    (20) formula -> formula EQ formula .
+    (10) formula -> formula . PLUS formula
+    (11) formula -> formula . MINUS formula
+    (12) formula -> formula . TIMES formula
+    (13) formula -> formula . DIVIDE formula
+    (14) formula -> formula . RAISE formula
+    (15) formula -> formula . REMAINDER formula
+    (18) formula -> formula . LT formula
+    (19) formula -> formula . LE formula
+    (20) formula -> formula . EQ formula
+    (21) formula -> formula . NE formula
+    (22) formula -> formula . GE formula
+    (23) formula -> formula . GT formula
+    (25) formula -> formula . OR formula
+    (26) formula -> formula . AND formula
+    (27) formula -> formula . IMPLIES formula
+    (28) formula -> formula . EQUIV formula
+
+    EQ              reduce using rule 20 (formula -> formula EQ formula .)
+    NE              reduce using rule 20 (formula -> formula EQ formula .)
+    OR              reduce using rule 20 (formula -> formula EQ formula .)
+    AND             reduce using rule 20 (formula -> formula EQ formula .)
+    IMPLIES         reduce using rule 20 (formula -> formula EQ formula .)
+    EQUIV           reduce using rule 20 (formula -> formula EQ formula .)
+    PERIOD          reduce using rule 20 (formula -> formula EQ formula .)
+    RPAREN          reduce using rule 20 (formula -> formula EQ formula .)
+    COMMA           reduce using rule 20 (formula -> formula EQ formula .)
+    PLUS            shift and go to state 31
+    MINUS           shift and go to state 35
+    TIMES           shift and go to state 28
+    DIVIDE          shift and go to state 25
+    RAISE           shift and go to state 37
+    REMAINDER       shift and go to state 34
+    LT              shift and go to state 29
+    LE              shift and go to state 23
+    GE              shift and go to state 24
+    GT              shift and go to state 30
+
+  ! PLUS            [ reduce using rule 20 (formula -> formula EQ formula .) ]
+  ! MINUS           [ reduce using rule 20 (formula -> formula EQ formula .) ]
+  ! TIMES           [ reduce using rule 20 (formula -> formula EQ formula .) ]
+  ! DIVIDE          [ reduce using rule 20 (formula -> formula EQ formula .) ]
+  ! RAISE           [ reduce using rule 20 (formula -> formula EQ formula .) ]
+  ! REMAINDER       [ reduce using rule 20 (formula -> formula EQ formula .) ]
+  ! LT              [ reduce using rule 20 (formula -> formula EQ formula .) ]
+  ! LE              [ reduce using rule 20 (formula -> formula EQ formula .) ]
+  ! GE              [ reduce using rule 20 (formula -> formula EQ formula .) ]
+  ! GT              [ reduce using rule 20 (formula -> formula EQ formula .) ]
+  ! EQ              [ shift and go to state 26 ]
+  ! NE              [ shift and go to state 36 ]
+  ! OR              [ shift and go to state 22 ]
+  ! AND             [ shift and go to state 21 ]
+  ! IMPLIES         [ shift and go to state 32 ]
+  ! EQUIV           [ shift and go to state 33 ]
+
+
+state 53
+
+    (12) formula -> formula TIMES formula .
+    (10) formula -> formula . PLUS formula
+    (11) formula -> formula . MINUS formula
+    (12) formula -> formula . TIMES formula
+    (13) formula -> formula . DIVIDE formula
+    (14) formula -> formula . RAISE formula
+    (15) formula -> formula . REMAINDER formula
+    (18) formula -> formula . LT formula
+    (19) formula -> formula . LE formula
+    (20) formula -> formula . EQ formula
+    (21) formula -> formula . NE formula
+    (22) formula -> formula . GE formula
+    (23) formula -> formula . GT formula
+    (25) formula -> formula . OR formula
+    (26) formula -> formula . AND formula
+    (27) formula -> formula . IMPLIES formula
+    (28) formula -> formula . EQUIV formula
+
+    PLUS            reduce using rule 12 (formula -> formula TIMES formula .)
+    MINUS           reduce using rule 12 (formula -> formula TIMES formula .)
+    TIMES           reduce using rule 12 (formula -> formula TIMES formula .)
+    DIVIDE          reduce using rule 12 (formula -> formula TIMES formula .)
+    RAISE           reduce using rule 12 (formula -> formula TIMES formula .)
+    REMAINDER       reduce using rule 12 (formula -> formula TIMES formula .)
+    LT              reduce using rule 12 (formula -> formula TIMES formula .)
+    LE              reduce using rule 12 (formula -> formula TIMES formula .)
+    EQ              reduce using rule 12 (formula -> formula TIMES formula .)
+    NE              reduce using rule 12 (formula -> formula TIMES formula .)
+    GE              reduce using rule 12 (formula -> formula TIMES formula .)
+    GT              reduce using rule 12 (formula -> formula TIMES formula .)
+    OR              reduce using rule 12 (formula -> formula TIMES formula .)
+    AND             reduce using rule 12 (formula -> formula TIMES formula .)
+    IMPLIES         reduce using rule 12 (formula -> formula TIMES formula .)
+    EQUIV           reduce using rule 12 (formula -> formula TIMES formula .)
+    PERIOD          reduce using rule 12 (formula -> formula TIMES formula .)
+    RPAREN          reduce using rule 12 (formula -> formula TIMES formula .)
+    COMMA           reduce using rule 12 (formula -> formula TIMES formula .)
+
+  ! PLUS            [ shift and go to state 31 ]
+  ! MINUS           [ shift and go to state 35 ]
+  ! TIMES           [ shift and go to state 28 ]
+  ! DIVIDE          [ shift and go to state 25 ]
+  ! RAISE           [ shift and go to state 37 ]
+  ! REMAINDER       [ shift and go to state 34 ]
+  ! LT              [ shift and go to state 29 ]
+  ! LE              [ shift and go to state 23 ]
+  ! EQ              [ shift and go to state 26 ]
+  ! NE              [ shift and go to state 36 ]
+  ! GE              [ shift and go to state 24 ]
+  ! GT              [ shift and go to state 30 ]
+  ! OR              [ shift and go to state 22 ]
+  ! AND             [ shift and go to state 21 ]
+  ! IMPLIES         [ shift and go to state 32 ]
+  ! EQUIV           [ shift and go to state 33 ]
+
+
+state 54
+
+    (18) formula -> formula LT formula .
+    (10) formula -> formula . PLUS formula
+    (11) formula -> formula . MINUS formula
+    (12) formula -> formula . TIMES formula
+    (13) formula -> formula . DIVIDE formula
+    (14) formula -> formula . RAISE formula
+    (15) formula -> formula . REMAINDER formula
+    (18) formula -> formula . LT formula
+    (19) formula -> formula . LE formula
+    (20) formula -> formula . EQ formula
+    (21) formula -> formula . NE formula
+    (22) formula -> formula . GE formula
+    (23) formula -> formula . GT formula
+    (25) formula -> formula . OR formula
+    (26) formula -> formula . AND formula
+    (27) formula -> formula . IMPLIES formula
+    (28) formula -> formula . EQUIV formula
+
+    LT              reduce using rule 18 (formula -> formula LT formula .)
+    LE              reduce using rule 18 (formula -> formula LT formula .)
+    EQ              reduce using rule 18 (formula -> formula LT formula .)
+    NE              reduce using rule 18 (formula -> formula LT formula .)
+    GE              reduce using rule 18 (formula -> formula LT formula .)
+    GT              reduce using rule 18 (formula -> formula LT formula .)
+    OR              reduce using rule 18 (formula -> formula LT formula .)
+    AND             reduce using rule 18 (formula -> formula LT formula .)
+    IMPLIES         reduce using rule 18 (formula -> formula LT formula .)
+    EQUIV           reduce using rule 18 (formula -> formula LT formula .)
+    PERIOD          reduce using rule 18 (formula -> formula LT formula .)
+    RPAREN          reduce using rule 18 (formula -> formula LT formula .)
+    COMMA           reduce using rule 18 (formula -> formula LT formula .)
+    PLUS            shift and go to state 31
+    MINUS           shift and go to state 35
+    TIMES           shift and go to state 28
+    DIVIDE          shift and go to state 25
+    RAISE           shift and go to state 37
+    REMAINDER       shift and go to state 34
+
+  ! PLUS            [ reduce using rule 18 (formula -> formula LT formula .) ]
+  ! MINUS           [ reduce using rule 18 (formula -> formula LT formula .) ]
+  ! TIMES           [ reduce using rule 18 (formula -> formula LT formula .) ]
+  ! DIVIDE          [ reduce using rule 18 (formula -> formula LT formula .) ]
+  ! RAISE           [ reduce using rule 18 (formula -> formula LT formula .) ]
+  ! REMAINDER       [ reduce using rule 18 (formula -> formula LT formula .) ]
+  ! LT              [ shift and go to state 29 ]
+  ! LE              [ shift and go to state 23 ]
+  ! EQ              [ shift and go to state 26 ]
+  ! NE              [ shift and go to state 36 ]
+  ! GE              [ shift and go to state 24 ]
+  ! GT              [ shift and go to state 30 ]
+  ! OR              [ shift and go to state 22 ]
+  ! AND             [ shift and go to state 21 ]
+  ! IMPLIES         [ shift and go to state 32 ]
+  ! EQUIV           [ shift and go to state 33 ]
+
+
+state 55
+
+    (23) formula -> formula GT formula .
+    (10) formula -> formula . PLUS formula
+    (11) formula -> formula . MINUS formula
+    (12) formula -> formula . TIMES formula
+    (13) formula -> formula . DIVIDE formula
+    (14) formula -> formula . RAISE formula
+    (15) formula -> formula . REMAINDER formula
+    (18) formula -> formula . LT formula
+    (19) formula -> formula . LE formula
+    (20) formula -> formula . EQ formula
+    (21) formula -> formula . NE formula
+    (22) formula -> formula . GE formula
+    (23) formula -> formula . GT formula
+    (25) formula -> formula . OR formula
+    (26) formula -> formula . AND formula
+    (27) formula -> formula . IMPLIES formula
+    (28) formula -> formula . EQUIV formula
+
+    LT              reduce using rule 23 (formula -> formula GT formula .)
+    LE              reduce using rule 23 (formula -> formula GT formula .)
+    EQ              reduce using rule 23 (formula -> formula GT formula .)
+    NE              reduce using rule 23 (formula -> formula GT formula .)
+    GE              reduce using rule 23 (formula -> formula GT formula .)
+    GT              reduce using rule 23 (formula -> formula GT formula .)
+    OR              reduce using rule 23 (formula -> formula GT formula .)
+    AND             reduce using rule 23 (formula -> formula GT formula .)
+    IMPLIES         reduce using rule 23 (formula -> formula GT formula .)
+    EQUIV           reduce using rule 23 (formula -> formula GT formula .)
+    PERIOD          reduce using rule 23 (formula -> formula GT formula .)
+    RPAREN          reduce using rule 23 (formula -> formula GT formula .)
+    COMMA           reduce using rule 23 (formula -> formula GT formula .)
+    PLUS            shift and go to state 31
+    MINUS           shift and go to state 35
+    TIMES           shift and go to state 28
+    DIVIDE          shift and go to state 25
+    RAISE           shift and go to state 37
+    REMAINDER       shift and go to state 34
+
+  ! PLUS            [ reduce using rule 23 (formula -> formula GT formula .) ]
+  ! MINUS           [ reduce using rule 23 (formula -> formula GT formula .) ]
+  ! TIMES           [ reduce using rule 23 (formula -> formula GT formula .) ]
+  ! DIVIDE          [ reduce using rule 23 (formula -> formula GT formula .) ]
+  ! RAISE           [ reduce using rule 23 (formula -> formula GT formula .) ]
+  ! REMAINDER       [ reduce using rule 23 (formula -> formula GT formula .) ]
+  ! LT              [ shift and go to state 29 ]
+  ! LE              [ shift and go to state 23 ]
+  ! EQ              [ shift and go to state 26 ]
+  ! NE              [ shift and go to state 36 ]
+  ! GE              [ shift and go to state 24 ]
+  ! GT              [ shift and go to state 30 ]
+  ! OR              [ shift and go to state 22 ]
+  ! AND             [ shift and go to state 21 ]
+  ! IMPLIES         [ shift and go to state 32 ]
+  ! EQUIV           [ shift and go to state 33 ]
+
+
+state 56
+
+    (10) formula -> formula PLUS formula .
+    (10) formula -> formula . PLUS formula
+    (11) formula -> formula . MINUS formula
+    (12) formula -> formula . TIMES formula
+    (13) formula -> formula . DIVIDE formula
+    (14) formula -> formula . RAISE formula
+    (15) formula -> formula . REMAINDER formula
+    (18) formula -> formula . LT formula
+    (19) formula -> formula . LE formula
+    (20) formula -> formula . EQ formula
+    (21) formula -> formula . NE formula
+    (22) formula -> formula . GE formula
+    (23) formula -> formula . GT formula
+    (25) formula -> formula . OR formula
+    (26) formula -> formula . AND formula
+    (27) formula -> formula . IMPLIES formula
+    (28) formula -> formula . EQUIV formula
+
+    PLUS            reduce using rule 10 (formula -> formula PLUS formula .)
+    MINUS           reduce using rule 10 (formula -> formula PLUS formula .)
+    LT              reduce using rule 10 (formula -> formula PLUS formula .)
+    LE              reduce using rule 10 (formula -> formula PLUS formula .)
+    EQ              reduce using rule 10 (formula -> formula PLUS formula .)
+    NE              reduce using rule 10 (formula -> formula PLUS formula .)
+    GE              reduce using rule 10 (formula -> formula PLUS formula .)
+    GT              reduce using rule 10 (formula -> formula PLUS formula .)
+    OR              reduce using rule 10 (formula -> formula PLUS formula .)
+    AND             reduce using rule 10 (formula -> formula PLUS formula .)
+    IMPLIES         reduce using rule 10 (formula -> formula PLUS formula .)
+    EQUIV           reduce using rule 10 (formula -> formula PLUS formula .)
+    PERIOD          reduce using rule 10 (formula -> formula PLUS formula .)
+    RPAREN          reduce using rule 10 (formula -> formula PLUS formula .)
+    COMMA           reduce using rule 10 (formula -> formula PLUS formula .)
+    TIMES           shift and go to state 28
+    DIVIDE          shift and go to state 25
+    RAISE           shift and go to state 37
+    REMAINDER       shift and go to state 34
+
+  ! TIMES           [ reduce using rule 10 (formula -> formula PLUS formula .) ]
+  ! DIVIDE          [ reduce using rule 10 (formula -> formula PLUS formula .) ]
+  ! RAISE           [ reduce using rule 10 (formula -> formula PLUS formula .) ]
+  ! REMAINDER       [ reduce using rule 10 (formula -> formula PLUS formula .) ]
+  ! PLUS            [ shift and go to state 31 ]
+  ! MINUS           [ shift and go to state 35 ]
+  ! LT              [ shift and go to state 29 ]
+  ! LE              [ shift and go to state 23 ]
+  ! EQ              [ shift and go to state 26 ]
+  ! NE              [ shift and go to state 36 ]
+  ! GE              [ shift and go to state 24 ]
+  ! GT              [ shift and go to state 30 ]
+  ! OR              [ shift and go to state 22 ]
+  ! AND             [ shift and go to state 21 ]
+  ! IMPLIES         [ shift and go to state 32 ]
+  ! EQUIV           [ shift and go to state 33 ]
+
+
+state 57
+
+    (27) formula -> formula IMPLIES formula .
+    (10) formula -> formula . PLUS formula
+    (11) formula -> formula . MINUS formula
+    (12) formula -> formula . TIMES formula
+    (13) formula -> formula . DIVIDE formula
+    (14) formula -> formula . RAISE formula
+    (15) formula -> formula . REMAINDER formula
+    (18) formula -> formula . LT formula
+    (19) formula -> formula . LE formula
+    (20) formula -> formula . EQ formula
+    (21) formula -> formula . NE formula
+    (22) formula -> formula . GE formula
+    (23) formula -> formula . GT formula
+    (25) formula -> formula . OR formula
+    (26) formula -> formula . AND formula
+    (27) formula -> formula . IMPLIES formula
+    (28) formula -> formula . EQUIV formula
+
+    IMPLIES         reduce using rule 27 (formula -> formula IMPLIES formula .)
+    EQUIV           reduce using rule 27 (formula -> formula IMPLIES formula .)
+    PERIOD          reduce using rule 27 (formula -> formula IMPLIES formula .)
+    RPAREN          reduce using rule 27 (formula -> formula IMPLIES formula .)
+    COMMA           reduce using rule 27 (formula -> formula IMPLIES formula .)
+    PLUS            shift and go to state 31
+    MINUS           shift and go to state 35
+    TIMES           shift and go to state 28
+    DIVIDE          shift and go to state 25
+    RAISE           shift and go to state 37
+    REMAINDER       shift and go to state 34
+    LT              shift and go to state 29
+    LE              shift and go to state 23
+    EQ              shift and go to state 26
+    NE              shift and go to state 36
+    GE              shift and go to state 24
+    GT              shift and go to state 30
+    OR              shift and go to state 22
+    AND             shift and go to state 21
+
+  ! PLUS            [ reduce using rule 27 (formula -> formula IMPLIES formula .) ]
+  ! MINUS           [ reduce using rule 27 (formula -> formula IMPLIES formula .) ]
+  ! TIMES           [ reduce using rule 27 (formula -> formula IMPLIES formula .) ]
+  ! DIVIDE          [ reduce using rule 27 (formula -> formula IMPLIES formula .) ]
+  ! RAISE           [ reduce using rule 27 (formula -> formula IMPLIES formula .) ]
+  ! REMAINDER       [ reduce using rule 27 (formula -> formula IMPLIES formula .) ]
+  ! LT              [ reduce using rule 27 (formula -> formula IMPLIES formula .) ]
+  ! LE              [ reduce using rule 27 (formula -> formula IMPLIES formula .) ]
+  ! EQ              [ reduce using rule 27 (formula -> formula IMPLIES formula .) ]
+  ! NE              [ reduce using rule 27 (formula -> formula IMPLIES formula .) ]
+  ! GE              [ reduce using rule 27 (formula -> formula IMPLIES formula .) ]
+  ! GT              [ reduce using rule 27 (formula -> formula IMPLIES formula .) ]
+  ! OR              [ reduce using rule 27 (formula -> formula IMPLIES formula .) ]
+  ! AND             [ reduce using rule 27 (formula -> formula IMPLIES formula .) ]
+  ! IMPLIES         [ shift and go to state 32 ]
+  ! EQUIV           [ shift and go to state 33 ]
+
+
+state 58
+
+    (28) formula -> formula EQUIV formula .
+    (10) formula -> formula . PLUS formula
+    (11) formula -> formula . MINUS formula
+    (12) formula -> formula . TIMES formula
+    (13) formula -> formula . DIVIDE formula
+    (14) formula -> formula . RAISE formula
+    (15) formula -> formula . REMAINDER formula
+    (18) formula -> formula . LT formula
+    (19) formula -> formula . LE formula
+    (20) formula -> formula . EQ formula
+    (21) formula -> formula . NE formula
+    (22) formula -> formula . GE formula
+    (23) formula -> formula . GT formula
+    (25) formula -> formula . OR formula
+    (26) formula -> formula . AND formula
+    (27) formula -> formula . IMPLIES formula
+    (28) formula -> formula . EQUIV formula
+
+    IMPLIES         reduce using rule 28 (formula -> formula EQUIV formula .)
+    EQUIV           reduce using rule 28 (formula -> formula EQUIV formula .)
+    PERIOD          reduce using rule 28 (formula -> formula EQUIV formula .)
+    RPAREN          reduce using rule 28 (formula -> formula EQUIV formula .)
+    COMMA           reduce using rule 28 (formula -> formula EQUIV formula .)
+    PLUS            shift and go to state 31
+    MINUS           shift and go to state 35
+    TIMES           shift and go to state 28
+    DIVIDE          shift and go to state 25
+    RAISE           shift and go to state 37
+    REMAINDER       shift and go to state 34
+    LT              shift and go to state 29
+    LE              shift and go to state 23
+    EQ              shift and go to state 26
+    NE              shift and go to state 36
+    GE              shift and go to state 24
+    GT              shift and go to state 30
+    OR              shift and go to state 22
+    AND             shift and go to state 21
+
+  ! PLUS            [ reduce using rule 28 (formula -> formula EQUIV formula .) ]
+  ! MINUS           [ reduce using rule 28 (formula -> formula EQUIV formula .) ]
+  ! TIMES           [ reduce using rule 28 (formula -> formula EQUIV formula .) ]
+  ! DIVIDE          [ reduce using rule 28 (formula -> formula EQUIV formula .) ]
+  ! RAISE           [ reduce using rule 28 (formula -> formula EQUIV formula .) ]
+  ! REMAINDER       [ reduce using rule 28 (formula -> formula EQUIV formula .) ]
+  ! LT              [ reduce using rule 28 (formula -> formula EQUIV formula .) ]
+  ! LE              [ reduce using rule 28 (formula -> formula EQUIV formula .) ]
+  ! EQ              [ reduce using rule 28 (formula -> formula EQUIV formula .) ]
+  ! NE              [ reduce using rule 28 (formula -> formula EQUIV formula .) ]
+  ! GE              [ reduce using rule 28 (formula -> formula EQUIV formula .) ]
+  ! GT              [ reduce using rule 28 (formula -> formula EQUIV formula .) ]
+  ! OR              [ reduce using rule 28 (formula -> formula EQUIV formula .) ]
+  ! AND             [ reduce using rule 28 (formula -> formula EQUIV formula .) ]
+  ! IMPLIES         [ shift and go to state 32 ]
+  ! EQUIV           [ shift and go to state 33 ]
+
+
+state 59
+
+    (15) formula -> formula REMAINDER formula .
+    (10) formula -> formula . PLUS formula
+    (11) formula -> formula . MINUS formula
+    (12) formula -> formula . TIMES formula
+    (13) formula -> formula . DIVIDE formula
+    (14) formula -> formula . RAISE formula
+    (15) formula -> formula . REMAINDER formula
+    (18) formula -> formula . LT formula
+    (19) formula -> formula . LE formula
+    (20) formula -> formula . EQ formula
+    (21) formula -> formula . NE formula
+    (22) formula -> formula . GE formula
+    (23) formula -> formula . GT formula
+    (25) formula -> formula . OR formula
+    (26) formula -> formula . AND formula
+    (27) formula -> formula . IMPLIES formula
+    (28) formula -> formula . EQUIV formula
+
+    PLUS            reduce using rule 15 (formula -> formula REMAINDER formula .)
+    MINUS           reduce using rule 15 (formula -> formula REMAINDER formula .)
+    TIMES           reduce using rule 15 (formula -> formula REMAINDER formula .)
+    DIVIDE          reduce using rule 15 (formula -> formula REMAINDER formula .)
+    RAISE           reduce using rule 15 (formula -> formula REMAINDER formula .)
+    REMAINDER       reduce using rule 15 (formula -> formula REMAINDER formula .)
+    LT              reduce using rule 15 (formula -> formula REMAINDER formula .)
+    LE              reduce using rule 15 (formula -> formula REMAINDER formula .)
+    EQ              reduce using rule 15 (formula -> formula REMAINDER formula .)
+    NE              reduce using rule 15 (formula -> formula REMAINDER formula .)
+    GE              reduce using rule 15 (formula -> formula REMAINDER formula .)
+    GT              reduce using rule 15 (formula -> formula REMAINDER formula .)
+    OR              reduce using rule 15 (formula -> formula REMAINDER formula .)
+    AND             reduce using rule 15 (formula -> formula REMAINDER formula .)
+    IMPLIES         reduce using rule 15 (formula -> formula REMAINDER formula .)
+    EQUIV           reduce using rule 15 (formula -> formula REMAINDER formula .)
+    PERIOD          reduce using rule 15 (formula -> formula REMAINDER formula .)
+    RPAREN          reduce using rule 15 (formula -> formula REMAINDER formula .)
+    COMMA           reduce using rule 15 (formula -> formula REMAINDER formula .)
+
+  ! PLUS            [ shift and go to state 31 ]
+  ! MINUS           [ shift and go to state 35 ]
+  ! TIMES           [ shift and go to state 28 ]
+  ! DIVIDE          [ shift and go to state 25 ]
+  ! RAISE           [ shift and go to state 37 ]
+  ! REMAINDER       [ shift and go to state 34 ]
+  ! LT              [ shift and go to state 29 ]
+  ! LE              [ shift and go to state 23 ]
+  ! EQ              [ shift and go to state 26 ]
+  ! NE              [ shift and go to state 36 ]
+  ! GE              [ shift and go to state 24 ]
+  ! GT              [ shift and go to state 30 ]
+  ! OR              [ shift and go to state 22 ]
+  ! AND             [ shift and go to state 21 ]
+  ! IMPLIES         [ shift and go to state 32 ]
+  ! EQUIV           [ shift and go to state 33 ]
+
+
+state 60
+
+    (11) formula -> formula MINUS formula .
+    (10) formula -> formula . PLUS formula
+    (11) formula -> formula . MINUS formula
+    (12) formula -> formula . TIMES formula
+    (13) formula -> formula . DIVIDE formula
+    (14) formula -> formula . RAISE formula
+    (15) formula -> formula . REMAINDER formula
+    (18) formula -> formula . LT formula
+    (19) formula -> formula . LE formula
+    (20) formula -> formula . EQ formula
+    (21) formula -> formula . NE formula
+    (22) formula -> formula . GE formula
+    (23) formula -> formula . GT formula
+    (25) formula -> formula . OR formula
+    (26) formula -> formula . AND formula
+    (27) formula -> formula . IMPLIES formula
+    (28) formula -> formula . EQUIV formula
+
+    PLUS            reduce using rule 11 (formula -> formula MINUS formula .)
+    MINUS           reduce using rule 11 (formula -> formula MINUS formula .)
+    LT              reduce using rule 11 (formula -> formula MINUS formula .)
+    LE              reduce using rule 11 (formula -> formula MINUS formula .)
+    EQ              reduce using rule 11 (formula -> formula MINUS formula .)
+    NE              reduce using rule 11 (formula -> formula MINUS formula .)
+    GE              reduce using rule 11 (formula -> formula MINUS formula .)
+    GT              reduce using rule 11 (formula -> formula MINUS formula .)
+    OR              reduce using rule 11 (formula -> formula MINUS formula .)
+    AND             reduce using rule 11 (formula -> formula MINUS formula .)
+    IMPLIES         reduce using rule 11 (formula -> formula MINUS formula .)
+    EQUIV           reduce using rule 11 (formula -> formula MINUS formula .)
+    PERIOD          reduce using rule 11 (formula -> formula MINUS formula .)
+    RPAREN          reduce using rule 11 (formula -> formula MINUS formula .)
+    COMMA           reduce using rule 11 (formula -> formula MINUS formula .)
+    TIMES           shift and go to state 28
+    DIVIDE          shift and go to state 25
+    RAISE           shift and go to state 37
+    REMAINDER       shift and go to state 34
+
+  ! TIMES           [ reduce using rule 11 (formula -> formula MINUS formula .) ]
+  ! DIVIDE          [ reduce using rule 11 (formula -> formula MINUS formula .) ]
+  ! RAISE           [ reduce using rule 11 (formula -> formula MINUS formula .) ]
+  ! REMAINDER       [ reduce using rule 11 (formula -> formula MINUS formula .) ]
+  ! PLUS            [ shift and go to state 31 ]
+  ! MINUS           [ shift and go to state 35 ]
+  ! LT              [ shift and go to state 29 ]
+  ! LE              [ shift and go to state 23 ]
+  ! EQ              [ shift and go to state 26 ]
+  ! NE              [ shift and go to state 36 ]
+  ! GE              [ shift and go to state 24 ]
+  ! GT              [ shift and go to state 30 ]
+  ! OR              [ shift and go to state 22 ]
+  ! AND             [ shift and go to state 21 ]
+  ! IMPLIES         [ shift and go to state 32 ]
+  ! EQUIV           [ shift and go to state 33 ]
+
+
+state 61
+
+    (21) formula -> formula NE formula .
+    (10) formula -> formula . PLUS formula
+    (11) formula -> formula . MINUS formula
+    (12) formula -> formula . TIMES formula
+    (13) formula -> formula . DIVIDE formula
+    (14) formula -> formula . RAISE formula
+    (15) formula -> formula . REMAINDER formula
+    (18) formula -> formula . LT formula
+    (19) formula -> formula . LE formula
+    (20) formula -> formula . EQ formula
+    (21) formula -> formula . NE formula
+    (22) formula -> formula . GE formula
+    (23) formula -> formula . GT formula
+    (25) formula -> formula . OR formula
+    (26) formula -> formula . AND formula
+    (27) formula -> formula . IMPLIES formula
+    (28) formula -> formula . EQUIV formula
+
+    EQ              reduce using rule 21 (formula -> formula NE formula .)
+    NE              reduce using rule 21 (formula -> formula NE formula .)
+    OR              reduce using rule 21 (formula -> formula NE formula .)
+    AND             reduce using rule 21 (formula -> formula NE formula .)
+    IMPLIES         reduce using rule 21 (formula -> formula NE formula .)
+    EQUIV           reduce using rule 21 (formula -> formula NE formula .)
+    PERIOD          reduce using rule 21 (formula -> formula NE formula .)
+    RPAREN          reduce using rule 21 (formula -> formula NE formula .)
+    COMMA           reduce using rule 21 (formula -> formula NE formula .)
+    PLUS            shift and go to state 31
+    MINUS           shift and go to state 35
+    TIMES           shift and go to state 28
+    DIVIDE          shift and go to state 25
+    RAISE           shift and go to state 37
+    REMAINDER       shift and go to state 34
+    LT              shift and go to state 29
+    LE              shift and go to state 23
+    GE              shift and go to state 24
+    GT              shift and go to state 30
+
+  ! PLUS            [ reduce using rule 21 (formula -> formula NE formula .) ]
+  ! MINUS           [ reduce using rule 21 (formula -> formula NE formula .) ]
+  ! TIMES           [ reduce using rule 21 (formula -> formula NE formula .) ]
+  ! DIVIDE          [ reduce using rule 21 (formula -> formula NE formula .) ]
+  ! RAISE           [ reduce using rule 21 (formula -> formula NE formula .) ]
+  ! REMAINDER       [ reduce using rule 21 (formula -> formula NE formula .) ]
+  ! LT              [ reduce using rule 21 (formula -> formula NE formula .) ]
+  ! LE              [ reduce using rule 21 (formula -> formula NE formula .) ]
+  ! GE              [ reduce using rule 21 (formula -> formula NE formula .) ]
+  ! GT              [ reduce using rule 21 (formula -> formula NE formula .) ]
+  ! EQ              [ shift and go to state 26 ]
+  ! NE              [ shift and go to state 36 ]
+  ! OR              [ shift and go to state 22 ]
+  ! AND             [ shift and go to state 21 ]
+  ! IMPLIES         [ shift and go to state 32 ]
+  ! EQUIV           [ shift and go to state 33 ]
+
+
+state 62
+
+    (14) formula -> formula RAISE formula .
+    (10) formula -> formula . PLUS formula
+    (11) formula -> formula . MINUS formula
+    (12) formula -> formula . TIMES formula
+    (13) formula -> formula . DIVIDE formula
+    (14) formula -> formula . RAISE formula
+    (15) formula -> formula . REMAINDER formula
+    (18) formula -> formula . LT formula
+    (19) formula -> formula . LE formula
+    (20) formula -> formula . EQ formula
+    (21) formula -> formula . NE formula
+    (22) formula -> formula . GE formula
+    (23) formula -> formula . GT formula
+    (25) formula -> formula . OR formula
+    (26) formula -> formula . AND formula
+    (27) formula -> formula . IMPLIES formula
+    (28) formula -> formula . EQUIV formula
+
+    PLUS            reduce using rule 14 (formula -> formula RAISE formula .)
+    MINUS           reduce using rule 14 (formula -> formula RAISE formula .)
+    TIMES           reduce using rule 14 (formula -> formula RAISE formula .)
+    DIVIDE          reduce using rule 14 (formula -> formula RAISE formula .)
+    RAISE           reduce using rule 14 (formula -> formula RAISE formula .)
+    REMAINDER       reduce using rule 14 (formula -> formula RAISE formula .)
+    LT              reduce using rule 14 (formula -> formula RAISE formula .)
+    LE              reduce using rule 14 (formula -> formula RAISE formula .)
+    EQ              reduce using rule 14 (formula -> formula RAISE formula .)
+    NE              reduce using rule 14 (formula -> formula RAISE formula .)
+    GE              reduce using rule 14 (formula -> formula RAISE formula .)
+    GT              reduce using rule 14 (formula -> formula RAISE formula .)
+    OR              reduce using rule 14 (formula -> formula RAISE formula .)
+    AND             reduce using rule 14 (formula -> formula RAISE formula .)
+    IMPLIES         reduce using rule 14 (formula -> formula RAISE formula .)
+    EQUIV           reduce using rule 14 (formula -> formula RAISE formula .)
+    PERIOD          reduce using rule 14 (formula -> formula RAISE formula .)
+    RPAREN          reduce using rule 14 (formula -> formula RAISE formula .)
+    COMMA           reduce using rule 14 (formula -> formula RAISE formula .)
+
+  ! PLUS            [ shift and go to state 31 ]
+  ! MINUS           [ shift and go to state 35 ]
+  ! TIMES           [ shift and go to state 28 ]
+  ! DIVIDE          [ shift and go to state 25 ]
+  ! RAISE           [ shift and go to state 37 ]
+  ! REMAINDER       [ shift and go to state 34 ]
+  ! LT              [ shift and go to state 29 ]
+  ! LE              [ shift and go to state 23 ]
+  ! EQ              [ shift and go to state 26 ]
+  ! NE              [ shift and go to state 36 ]
+  ! GE              [ shift and go to state 24 ]
+  ! GT              [ shift and go to state 30 ]
+  ! OR              [ shift and go to state 22 ]
+  ! AND             [ shift and go to state 21 ]
+  ! IMPLIES         [ shift and go to state 32 ]
+  ! EQUIV           [ shift and go to state 33 ]
+
+
+state 63
+
+    (4) topformula -> NAME COLON formula . PERIOD
+    (10) formula -> formula . PLUS formula
+    (11) formula -> formula . MINUS formula
+    (12) formula -> formula . TIMES formula
+    (13) formula -> formula . DIVIDE formula
+    (14) formula -> formula . RAISE formula
+    (15) formula -> formula . REMAINDER formula
+    (18) formula -> formula . LT formula
+    (19) formula -> formula . LE formula
+    (20) formula -> formula . EQ formula
+    (21) formula -> formula . NE formula
+    (22) formula -> formula . GE formula
+    (23) formula -> formula . GT formula
+    (25) formula -> formula . OR formula
+    (26) formula -> formula . AND formula
+    (27) formula -> formula . IMPLIES formula
+    (28) formula -> formula . EQUIV formula
+
+    PERIOD          shift and go to state 71
+    PLUS            shift and go to state 31
+    MINUS           shift and go to state 35
+    TIMES           shift and go to state 28
+    DIVIDE          shift and go to state 25
+    RAISE           shift and go to state 37
+    REMAINDER       shift and go to state 34
+    LT              shift and go to state 29
+    LE              shift and go to state 23
+    EQ              shift and go to state 26
+    NE              shift and go to state 36
+    GE              shift and go to state 24
+    GT              shift and go to state 30
+    OR              shift and go to state 22
+    AND             shift and go to state 21
+    IMPLIES         shift and go to state 32
+    EQUIV           shift and go to state 33
+
+
+state 64
+
+    (8) formula -> NAME LPAREN RPAREN .
+
+    PLUS            reduce using rule 8 (formula -> NAME LPAREN RPAREN .)
+    MINUS           reduce using rule 8 (formula -> NAME LPAREN RPAREN .)
+    TIMES           reduce using rule 8 (formula -> NAME LPAREN RPAREN .)
+    DIVIDE          reduce using rule 8 (formula -> NAME LPAREN RPAREN .)
+    RAISE           reduce using rule 8 (formula -> NAME LPAREN RPAREN .)
+    REMAINDER       reduce using rule 8 (formula -> NAME LPAREN RPAREN .)
+    LT              reduce using rule 8 (formula -> NAME LPAREN RPAREN .)
+    LE              reduce using rule 8 (formula -> NAME LPAREN RPAREN .)
+    EQ              reduce using rule 8 (formula -> NAME LPAREN RPAREN .)
+    NE              reduce using rule 8 (formula -> NAME LPAREN RPAREN .)
+    GE              reduce using rule 8 (formula -> NAME LPAREN RPAREN .)
+    GT              reduce using rule 8 (formula -> NAME LPAREN RPAREN .)
+    OR              reduce using rule 8 (formula -> NAME LPAREN RPAREN .)
+    AND             reduce using rule 8 (formula -> NAME LPAREN RPAREN .)
+    IMPLIES         reduce using rule 8 (formula -> NAME LPAREN RPAREN .)
+    EQUIV           reduce using rule 8 (formula -> NAME LPAREN RPAREN .)
+    PERIOD          reduce using rule 8 (formula -> NAME LPAREN RPAREN .)
+    RPAREN          reduce using rule 8 (formula -> NAME LPAREN RPAREN .)
+    COMMA           reduce using rule 8 (formula -> NAME LPAREN RPAREN .)
+
+
+state 65
+
+    (9) formula -> NAME LPAREN arguments . RPAREN
+    (35) arguments -> arguments . COMMA formula
+
+    RPAREN          shift and go to state 72
+    COMMA           shift and go to state 73
+
+
+state 66
+
+    (34) arguments -> formula .
+    (10) formula -> formula . PLUS formula
+    (11) formula -> formula . MINUS formula
+    (12) formula -> formula . TIMES formula
+    (13) formula -> formula . DIVIDE formula
+    (14) formula -> formula . RAISE formula
+    (15) formula -> formula . REMAINDER formula
+    (18) formula -> formula . LT formula
+    (19) formula -> formula . LE formula
+    (20) formula -> formula . EQ formula
+    (21) formula -> formula . NE formula
+    (22) formula -> formula . GE formula
+    (23) formula -> formula . GT formula
+    (25) formula -> formula . OR formula
+    (26) formula -> formula . AND formula
+    (27) formula -> formula . IMPLIES formula
+    (28) formula -> formula . EQUIV formula
+
+    RPAREN          reduce using rule 34 (arguments -> formula .)
+    COMMA           reduce using rule 34 (arguments -> formula .)
+    PLUS            shift and go to state 31
+    MINUS           shift and go to state 35
+    TIMES           shift and go to state 28
+    DIVIDE          shift and go to state 25
+    RAISE           shift and go to state 37
+    REMAINDER       shift and go to state 34
+    LT              shift and go to state 29
+    LE              shift and go to state 23
+    EQ              shift and go to state 26
+    NE              shift and go to state 36
+    GE              shift and go to state 24
+    GT              shift and go to state 30
+    OR              shift and go to state 22
+    AND             shift and go to state 21
+    IMPLIES         shift and go to state 32
+    EQUIV           shift and go to state 33
+
+
+state 67
+
+    (3) topformula -> NUMBER COLON formula PERIOD .
+
+    NUMBER          reduce using rule 3 (topformula -> NUMBER COLON formula PERIOD .)
+    NAME            reduce using rule 3 (topformula -> NUMBER COLON formula PERIOD .)
+    PLUS            reduce using rule 3 (topformula -> NUMBER COLON formula PERIOD .)
+    MINUS           reduce using rule 3 (topformula -> NUMBER COLON formula PERIOD .)
+    NOT             reduce using rule 3 (topformula -> NUMBER COLON formula PERIOD .)
+    LBRACKET        reduce using rule 3 (topformula -> NUMBER COLON formula PERIOD .)
+    LCURLY          reduce using rule 3 (topformula -> NUMBER COLON formula PERIOD .)
+    LPAREN          reduce using rule 3 (topformula -> NUMBER COLON formula PERIOD .)
+    $end            reduce using rule 3 (topformula -> NUMBER COLON formula PERIOD .)
+
+
+state 68
+
+    (33) names -> names COMMA NAME .
+
+    RCURLY          reduce using rule 33 (names -> names COMMA NAME .)
+    COMMA           reduce using rule 33 (names -> names COMMA NAME .)
+    RBRACKET        reduce using rule 33 (names -> names COMMA NAME .)
+
+
+state 69
+
+    (29) formula -> LBRACKET names RBRACKET formula .
+    (10) formula -> formula . PLUS formula
+    (11) formula -> formula . MINUS formula
+    (12) formula -> formula . TIMES formula
+    (13) formula -> formula . DIVIDE formula
+    (14) formula -> formula . RAISE formula
+    (15) formula -> formula . REMAINDER formula
+    (18) formula -> formula . LT formula
+    (19) formula -> formula . LE formula
+    (20) formula -> formula . EQ formula
+    (21) formula -> formula . NE formula
+    (22) formula -> formula . GE formula
+    (23) formula -> formula . GT formula
+    (25) formula -> formula . OR formula
+    (26) formula -> formula . AND formula
+    (27) formula -> formula . IMPLIES formula
+    (28) formula -> formula . EQUIV formula
+
+    PERIOD          reduce using rule 29 (formula -> LBRACKET names RBRACKET formula .)
+    RPAREN          reduce using rule 29 (formula -> LBRACKET names RBRACKET formula .)
+    COMMA           reduce using rule 29 (formula -> LBRACKET names RBRACKET formula .)
+    PLUS            shift and go to state 31
+    MINUS           shift and go to state 35
+    TIMES           shift and go to state 28
+    DIVIDE          shift and go to state 25
+    RAISE           shift and go to state 37
+    REMAINDER       shift and go to state 34
+    LT              shift and go to state 29
+    LE              shift and go to state 23
+    EQ              shift and go to state 26
+    NE              shift and go to state 36
+    GE              shift and go to state 24
+    GT              shift and go to state 30
+    OR              shift and go to state 22
+    AND             shift and go to state 21
+    IMPLIES         shift and go to state 32
+    EQUIV           shift and go to state 33
+
+  ! PLUS            [ reduce using rule 29 (formula -> LBRACKET names RBRACKET formula .) ]
+  ! MINUS           [ reduce using rule 29 (formula -> LBRACKET names RBRACKET formula .) ]
+  ! TIMES           [ reduce using rule 29 (formula -> LBRACKET names RBRACKET formula .) ]
+  ! DIVIDE          [ reduce using rule 29 (formula -> LBRACKET names RBRACKET formula .) ]
+  ! RAISE           [ reduce using rule 29 (formula -> LBRACKET names RBRACKET formula .) ]
+  ! REMAINDER       [ reduce using rule 29 (formula -> LBRACKET names RBRACKET formula .) ]
+  ! LT              [ reduce using rule 29 (formula -> LBRACKET names RBRACKET formula .) ]
+  ! LE              [ reduce using rule 29 (formula -> LBRACKET names RBRACKET formula .) ]
+  ! EQ              [ reduce using rule 29 (formula -> LBRACKET names RBRACKET formula .) ]
+  ! NE              [ reduce using rule 29 (formula -> LBRACKET names RBRACKET formula .) ]
+  ! GE              [ reduce using rule 29 (formula -> LBRACKET names RBRACKET formula .) ]
+  ! GT              [ reduce using rule 29 (formula -> LBRACKET names RBRACKET formula .) ]
+  ! OR              [ reduce using rule 29 (formula -> LBRACKET names RBRACKET formula .) ]
+  ! AND             [ reduce using rule 29 (formula -> LBRACKET names RBRACKET formula .) ]
+  ! IMPLIES         [ reduce using rule 29 (formula -> LBRACKET names RBRACKET formula .) ]
+  ! EQUIV           [ reduce using rule 29 (formula -> LBRACKET names RBRACKET formula .) ]
+
+
+state 70
+
+    (30) formula -> LCURLY names RCURLY formula .
+    (10) formula -> formula . PLUS formula
+    (11) formula -> formula . MINUS formula
+    (12) formula -> formula . TIMES formula
+    (13) formula -> formula . DIVIDE formula
+    (14) formula -> formula . RAISE formula
+    (15) formula -> formula . REMAINDER formula
+    (18) formula -> formula . LT formula
+    (19) formula -> formula . LE formula
+    (20) formula -> formula . EQ formula
+    (21) formula -> formula . NE formula
+    (22) formula -> formula . GE formula
+    (23) formula -> formula . GT formula
+    (25) formula -> formula . OR formula
+    (26) formula -> formula . AND formula
+    (27) formula -> formula . IMPLIES formula
+    (28) formula -> formula . EQUIV formula
+
+    PERIOD          reduce using rule 30 (formula -> LCURLY names RCURLY formula .)
+    RPAREN          reduce using rule 30 (formula -> LCURLY names RCURLY formula .)
+    COMMA           reduce using rule 30 (formula -> LCURLY names RCURLY formula .)
+    PLUS            shift and go to state 31
+    MINUS           shift and go to state 35
+    TIMES           shift and go to state 28
+    DIVIDE          shift and go to state 25
+    RAISE           shift and go to state 37
+    REMAINDER       shift and go to state 34
+    LT              shift and go to state 29
+    LE              shift and go to state 23
+    EQ              shift and go to state 26
+    NE              shift and go to state 36
+    GE              shift and go to state 24
+    GT              shift and go to state 30
+    OR              shift and go to state 22
+    AND             shift and go to state 21
+    IMPLIES         shift and go to state 32
+    EQUIV           shift and go to state 33
+
+  ! PLUS            [ reduce using rule 30 (formula -> LCURLY names RCURLY formula .) ]
+  ! MINUS           [ reduce using rule 30 (formula -> LCURLY names RCURLY formula .) ]
+  ! TIMES           [ reduce using rule 30 (formula -> LCURLY names RCURLY formula .) ]
+  ! DIVIDE          [ reduce using rule 30 (formula -> LCURLY names RCURLY formula .) ]
+  ! RAISE           [ reduce using rule 30 (formula -> LCURLY names RCURLY formula .) ]
+  ! REMAINDER       [ reduce using rule 30 (formula -> LCURLY names RCURLY formula .) ]
+  ! LT              [ reduce using rule 30 (formula -> LCURLY names RCURLY formula .) ]
+  ! LE              [ reduce using rule 30 (formula -> LCURLY names RCURLY formula .) ]
+  ! EQ              [ reduce using rule 30 (formula -> LCURLY names RCURLY formula .) ]
+  ! NE              [ reduce using rule 30 (formula -> LCURLY names RCURLY formula .) ]
+  ! GE              [ reduce using rule 30 (formula -> LCURLY names RCURLY formula .) ]
+  ! GT              [ reduce using rule 30 (formula -> LCURLY names RCURLY formula .) ]
+  ! OR              [ reduce using rule 30 (formula -> LCURLY names RCURLY formula .) ]
+  ! AND             [ reduce using rule 30 (formula -> LCURLY names RCURLY formula .) ]
+  ! IMPLIES         [ reduce using rule 30 (formula -> LCURLY names RCURLY formula .) ]
+  ! EQUIV           [ reduce using rule 30 (formula -> LCURLY names RCURLY formula .) ]
+
+
+state 71
+
+    (4) topformula -> NAME COLON formula PERIOD .
+
+    NUMBER          reduce using rule 4 (topformula -> NAME COLON formula PERIOD .)
+    NAME            reduce using rule 4 (topformula -> NAME COLON formula PERIOD .)
+    PLUS            reduce using rule 4 (topformula -> NAME COLON formula PERIOD .)
+    MINUS           reduce using rule 4 (topformula -> NAME COLON formula PERIOD .)
+    NOT             reduce using rule 4 (topformula -> NAME COLON formula PERIOD .)
+    LBRACKET        reduce using rule 4 (topformula -> NAME COLON formula PERIOD .)
+    LCURLY          reduce using rule 4 (topformula -> NAME COLON formula PERIOD .)
+    LPAREN          reduce using rule 4 (topformula -> NAME COLON formula PERIOD .)
+    $end            reduce using rule 4 (topformula -> NAME COLON formula PERIOD .)
+
+
+state 72
+
+    (9) formula -> NAME LPAREN arguments RPAREN .
+
+    PLUS            reduce using rule 9 (formula -> NAME LPAREN arguments RPAREN .)
+    MINUS           reduce using rule 9 (formula -> NAME LPAREN arguments RPAREN .)
+    TIMES           reduce using rule 9 (formula -> NAME LPAREN arguments RPAREN .)
+    DIVIDE          reduce using rule 9 (formula -> NAME LPAREN arguments RPAREN .)
+    RAISE           reduce using rule 9 (formula -> NAME LPAREN arguments RPAREN .)
+    REMAINDER       reduce using rule 9 (formula -> NAME LPAREN arguments RPAREN .)
+    LT              reduce using rule 9 (formula -> NAME LPAREN arguments RPAREN .)
+    LE              reduce using rule 9 (formula -> NAME LPAREN arguments RPAREN .)
+    EQ              reduce using rule 9 (formula -> NAME LPAREN arguments RPAREN .)
+    NE              reduce using rule 9 (formula -> NAME LPAREN arguments RPAREN .)
+    GE              reduce using rule 9 (formula -> NAME LPAREN arguments RPAREN .)
+    GT              reduce using rule 9 (formula -> NAME LPAREN arguments RPAREN .)
+    OR              reduce using rule 9 (formula -> NAME LPAREN arguments RPAREN .)
+    AND             reduce using rule 9 (formula -> NAME LPAREN arguments RPAREN .)
+    IMPLIES         reduce using rule 9 (formula -> NAME LPAREN arguments RPAREN .)
+    EQUIV           reduce using rule 9 (formula -> NAME LPAREN arguments RPAREN .)
+    PERIOD          reduce using rule 9 (formula -> NAME LPAREN arguments RPAREN .)
+    RPAREN          reduce using rule 9 (formula -> NAME LPAREN arguments RPAREN .)
+    COMMA           reduce using rule 9 (formula -> NAME LPAREN arguments RPAREN .)
+
+
+state 73
+
+    (35) arguments -> arguments COMMA . formula
+    (6) formula -> . NAME
+    (7) formula -> . NUMBER
+    (8) formula -> . NAME LPAREN RPAREN
+    (9) formula -> . NAME LPAREN arguments RPAREN
+    (10) formula -> . formula PLUS formula
+    (11) formula -> . formula MINUS formula
+    (12) formula -> . formula TIMES formula
+    (13) formula -> . formula DIVIDE formula
+    (14) formula -> . formula RAISE formula
+    (15) formula -> . formula REMAINDER formula
+    (16) formula -> . PLUS formula
+    (17) formula -> . MINUS formula
+    (18) formula -> . formula LT formula
+    (19) formula -> . formula LE formula
+    (20) formula -> . formula EQ formula
+    (21) formula -> . formula NE formula
+    (22) formula -> . formula GE formula
+    (23) formula -> . formula GT formula
+    (24) formula -> . NOT formula
+    (25) formula -> . formula OR formula
+    (26) formula -> . formula AND formula
+    (27) formula -> . formula IMPLIES formula
+    (28) formula -> . formula EQUIV formula
+    (29) formula -> . LBRACKET names RBRACKET formula
+    (30) formula -> . LCURLY names RCURLY formula
+    (31) formula -> . LPAREN formula RPAREN
+
+    NAME            shift and go to state 18
+    NUMBER          shift and go to state 16
+    PLUS            shift and go to state 5
+    MINUS           shift and go to state 4
+    NOT             shift and go to state 11
+    LBRACKET        shift and go to state 2
+    LCURLY          shift and go to state 3
+    LPAREN          shift and go to state 7
+
+    formula                        shift and go to state 74
+
+state 74
+
+    (35) arguments -> arguments COMMA formula .
+    (10) formula -> formula . PLUS formula
+    (11) formula -> formula . MINUS formula
+    (12) formula -> formula . TIMES formula
+    (13) formula -> formula . DIVIDE formula
+    (14) formula -> formula . RAISE formula
+    (15) formula -> formula . REMAINDER formula
+    (18) formula -> formula . LT formula
+    (19) formula -> formula . LE formula
+    (20) formula -> formula . EQ formula
+    (21) formula -> formula . NE formula
+    (22) formula -> formula . GE formula
+    (23) formula -> formula . GT formula
+    (25) formula -> formula . OR formula
+    (26) formula -> formula . AND formula
+    (27) formula -> formula . IMPLIES formula
+    (28) formula -> formula . EQUIV formula
+
+    RPAREN          reduce using rule 35 (arguments -> arguments COMMA formula .)
+    COMMA           reduce using rule 35 (arguments -> arguments COMMA formula .)
+    PLUS            shift and go to state 31
+    MINUS           shift and go to state 35
+    TIMES           shift and go to state 28
+    DIVIDE          shift and go to state 25
+    RAISE           shift and go to state 37
+    REMAINDER       shift and go to state 34
+    LT              shift and go to state 29
+    LE              shift and go to state 23
+    EQ              shift and go to state 26
+    NE              shift and go to state 36
+    GE              shift and go to state 24
+    GT              shift and go to state 30
+    OR              shift and go to state 22
+    AND             shift and go to state 21
+    IMPLIES         shift and go to state 32
+    EQUIV           shift and go to state 33
+

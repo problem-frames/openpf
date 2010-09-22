@@ -9,7 +9,7 @@
 # IBM - Initial implementation
 #
 cd software
-unzip MiniSat_v1.14_src.zip
-cd MiniSat_v1.14
+tar xvfz minisat-2.2.0.tar.gz
+cd minisat-2.2.0
 make rs
 mv minisat_static ../../solvers

@@ -9,9 +9,9 @@
 # IBM - Initial implementation
 #
 cd software/relsat-dist
-tar -zxvf relsat_2.00.tar.gz
+tar -xvf relsat_2.02.tar
 # g++296
-sed -e 's/CC = xlC/CC = g++/g' Makefile >Makefile1
+sed -e 's/CC = xlC/CC = g++/g' Makefile.linux >Makefile1
 sed -e 's/CFLAGS = -DNDEBUG -O3 -Q -+ -I\.\/gmp/CFLAGS = -static -DNDEBUG/g' Makefile1 >Makefile2
 sed -e 's/LIBS = -lm \.\/gmp\/libgmp.a/LIBS = -lm \/usr\/lib\/libgmp.a/g' Makefile2 >Makefile3
 make -f Makefile3

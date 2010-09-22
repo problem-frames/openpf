@@ -10,6 +10,6 @@
 #
 cd software
 tar -zxvf walksat-dist.tgz
-cd walksat-dist
+cd Walksat_v47
 make
 mv walksat ../../solvers

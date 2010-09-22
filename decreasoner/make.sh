@@ -8,5 +8,6 @@
 # Contributors: 
 # IBM - Initial implementation
 #
-gcc -static -O2 -g -Wall decreasoner.c -o decreasoner
+#gcc -static -O2 -g -Wall decreasoner.c -o decreasoner
+gcc -O2 -g -Wall decreasoner.c -o decreasoner
 #gcc -static -pg -g -Wall decreasoner.c -o decreasoner
