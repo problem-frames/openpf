@@ -1,0 +1,67 @@
+Copyright (c) 2005 IBM Corporation and others.
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Common Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/cpl-v10.html
+
+Contributors: 
+IBM - Initial implementation
+
+=========================
+INSTALLATION INSTRUCTIONS
+=========================
+
+(1) Download the following files:
+
+- decreasoner.tar.gz
+
+- one or more SAT solvers
+relsat_2.00.tar.gz (recommended)
+available from http://www.almaden.ibm.com/cs/people/bayardo/resources.html
+
+walksat-dist.tgz (optional)
+available from http://www.cs.washington.edu/homes/kautz/walksat/
+
+MiniSat_v1.14_src.zip (optional)
+available from http://www.cs.chalmers.se/Cs/Research/FormalMethods/MiniSat/Main.html
+
+- ply-1.6.tar.gz (or higher)
+available from http://www.dabeaz.com/ply/
+
+(2 Linux) Under Linux, do:
+
+$ tar -zxvf decreasoner.tar.gz
+$ mv relsat_2.00.tar.gz decreasoner/software/relsat-dist
+$ mv walksat-dist.tgz decreasoner/software
+$ mv MiniSat_v1.14_src.zip decreasoner/software
+$ mv ply-1.6.tar.gz decreasoner/software
+$ cd decreasoner
+$ ./make.sh
+$ ./makeply.sh
+$ ./makerelsat_linux.sh
+$ ./makewalksat_linux.sh
+$ ./makeminisat_linux.sh
+
+(2 Windows Cygwin) Under Cygwin in Windows, do:
+
+$ tar -zxvf decreasoner.tar.gz
+$ mv relsat_2.00.tar.gz decreasoner/software/relsat-dist
+$ mv walksat-dist.tgz decreasoner/software
+$ mv MiniSat_v1.14_src.zip decreasoner/software
+$ mv ply-1.6.tar.gz decreasoner/software
+$ cd decreasoner
+$ ./make.sh
+$ ./makeply.sh
+$ ./makerelsat_cygwin.sh
+$ ./makewalksat_cygwin.sh
+$ ./makeminisat_cygwin.sh
+
+====================
+RUNNING DEC REASONER
+====================
+
+You can run a simple test by typing the following:
+
+$ python
+>>> import decreasoner
+>>> decreasoner.test()
