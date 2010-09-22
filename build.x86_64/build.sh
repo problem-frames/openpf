@@ -24,6 +24,12 @@ for f in $files;  do
   echo $f
   ln -sf $PRODUCT_HOME/workspace/$f .
 done
+cd -
+cd $BUILD_HOME/features
+for f in $feature_files;  do
+  echo $f
+  ln -sf $PRODUCT_HOME/workspace/$f .
+done
 rm -rf $BUILD_HOME/I.$PRODUCT/*
 cd -
 cp -r $ECLIPSE_HOME/configuration .
