@@ -16,8 +16,6 @@
       <example file="Situation.xtext"/>
       <example file="a.situation"/>
       <example file="D3.2.pdf"/>
-      <example file="Situation.ecore"/>
-      <example file="Ontology.ecore"/>
   </extension>
 
 </plugin>

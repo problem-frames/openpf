@@ -12,6 +12,7 @@
   </extension>
 
   <extension point="core.example">
+  	  <example file="EventCalculus.xtext"/>
       <example file="sit1.e"/>
       <example file="sit2.e"/>
       <example file="sit3.e"/>

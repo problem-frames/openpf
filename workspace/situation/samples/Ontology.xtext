@@ -18,7 +18,7 @@ Object:
 	Entity | Relationship | Proposition;
 
 Domain:
-	name=ID type=DomainType properties+=Proposition ("," properties+=Proposition)*;
+	name=ID type=DomainType ((",")? properties+=Proposition)*;
 
 enum DomainType:
 	Specification="S" | Requirement="R" | World="W";

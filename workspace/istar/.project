@@ -31,4 +31,11 @@
 		<nature>org.eclipse.pde.PluginNature</nature>
 		<nature>org.eclipse.xtext.ui.shared.xtextNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/uk/ac/open/istar/Istar.xtext</name>
+			<type>1</type>
+			<location>PROJECT_LOC/samples/Istar.xtext_grammar</location>
+		</link>
+	</linkedResources>
 </projectDescription>

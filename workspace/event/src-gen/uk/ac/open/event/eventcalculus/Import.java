@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link uk.ac.open.event.eventcalculus.Import#getPath <em>Path</em>}</li>
+ *   <li>{@link uk.ac.open.event.eventcalculus.Import#getImportURI <em>Import URI</em>}</li>
  * </ul>
  * </p>
  *
@@ -26,29 +26,29 @@ import org.eclipse.emf.ecore.EObject;
 public interface Import extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Path</b></em>' containment reference.
+   * Returns the value of the '<em><b>Import URI</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Path</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Import URI</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Path</em>' containment reference.
-   * @see #setPath(Path)
-   * @see uk.ac.open.event.eventcalculus.EventcalculusPackage#getImport_Path()
-   * @model containment="true"
+   * @return the value of the '<em>Import URI</em>' attribute.
+   * @see #setImportURI(String)
+   * @see uk.ac.open.event.eventcalculus.EventcalculusPackage#getImport_ImportURI()
+   * @model
    * @generated
    */
-  Path getPath();
+  String getImportURI();
 
   /**
-   * Sets the value of the '{@link uk.ac.open.event.eventcalculus.Import#getPath <em>Path</em>}' containment reference.
+   * Sets the value of the '{@link uk.ac.open.event.eventcalculus.Import#getImportURI <em>Import URI</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Path</em>' containment reference.
-   * @see #getPath()
+   * @param value the new value of the '<em>Import URI</em>' attribute.
+   * @see #getImportURI()
    * @generated
    */
-  void setPath(Path value);
+  void setImportURI(String value);
 
 } // Import

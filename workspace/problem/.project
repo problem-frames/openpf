@@ -31,4 +31,16 @@
 		<nature>org.eclipse.pde.PluginNature</nature>
 		<nature>org.eclipse.xtext.ui.shared.xtextNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/uk/ac/open/Problem.ecore</name>
+			<type>1</type>
+			<locationURI>PROJECT_LOC/src-gen/uk/ac/open/Problem.ecore</locationURI>
+		</link>
+		<link>
+			<name>src/uk/ac/open/Problem.xtext</name>
+			<type>1</type>
+			<locationURI>PROJECT_LOC/samples/Problem.xtext</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>

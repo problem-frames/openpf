@@ -54,20 +54,6 @@
          unpack="false"/>
 
    <plugin
-         id="event.edit"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="event.editor"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="event.ui"
          download-size="0"
          install-size="0"

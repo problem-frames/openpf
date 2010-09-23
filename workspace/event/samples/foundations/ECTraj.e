@@ -21,6 +21,24 @@
 ;   publisher = "Springer",
 ; }
 ;
+sort boolean
+sort integer
+reified sort predicate
+reified sort function
+
+sort time: integer
+sort offset: integer
+
+reified sort fluent
+reified sort event
+reified sort fluent2
+
+predicate Happens(event,time)
+predicate HoldsAt(fluent,time)
+predicate ReleasedAt(fluent,time)
+predicate Initiates(event,fluent,time)
+predicate Terminates(event,fluent,time)
+predicate Releases(event,fluent,time)
 
 predicate Clipped(time,fluent,time)
 predicate Declipped(time,fluent,time)

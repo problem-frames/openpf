@@ -23,6 +23,10 @@
 ;   publisher = "Springer",
 ; }
 ;
+sort boolean
+sort integer
+reified sort predicate
+reified sort function
 
 sort time: integer
 sort offset: integer

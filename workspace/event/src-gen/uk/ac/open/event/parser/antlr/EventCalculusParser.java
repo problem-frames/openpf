@@ -42,7 +42,7 @@ public class EventCalculusParser extends org.eclipse.xtext.parser.antlr.Abstract
 	
 	@Override 
 	protected String getDefaultRuleName() {
-		return "Knowledge";
+		return "Model";
 	}
 	
 	public EventCalculusGrammarAccess getGrammarAccess() {

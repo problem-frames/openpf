@@ -25,4 +25,26 @@
 		<nature>org.eclipse.pde.PluginNature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>littlejil.dtd</name>
+			<type>1</type>
+			<locationURI>PROJECT_LOC/samples/littlejil-1.5.dtd</locationURI>
+		</link>
+		<link>
+			<name>littlejil.genmodel</name>
+			<type>1</type>
+			<locationURI>PROJECT_LOC/samples/littlejil.genmodel</locationURI>
+		</link>
+		<link>
+			<name>littlejil.xsd</name>
+			<type>1</type>
+			<locationURI>PROJECT_LOC/samples/littlejil.xsd</locationURI>
+		</link>
+		<link>
+			<name>namespace.ecore</name>
+			<type>1</type>
+			<locationURI>PROJECT_LOC/samples/namespace.ecore</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>

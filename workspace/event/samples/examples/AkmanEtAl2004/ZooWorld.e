@@ -17,16 +17,47 @@
 ;   pages = "105--140",
 ; }
 ;
+sort boolean
+sort integer
+reified sort predicate
+reified sort function
+
+sort time: integer
+sort offset: integer
+
+reified sort fluent
+reified sort event
+reified sort event1
+reified sort event2
+
+predicate Happens(event,time)
+predicate HoldsAt(fluent,time)
+predicate ReleasedAt(fluent,time)
+predicate Initiates(event,fluent,time)
+predicate Terminates(event,fluent,time)
+predicate Releases(event,fluent,time)
+predicate Trajectory(fluent,time,fluent,offset)
+predicate Accessible(position,position,time)
 
 sort position: integer
+sort position1: integer
+sort position2: integer
+
+
 sort location
 sort cage: location
 sort gate
+sort gate1
+sort gate2
 sort animal
+sort animal1
+sort animal2
 sort elephant: animal
 sort horse: animal
 sort dog: animal
 sort human: animal
+sort human1: animal
+sort human2: animal
 sort species
 
 function Loc(position): location
@@ -34,7 +65,7 @@ function Side1(gate): position
 function Side2(gate): position
 function Species(animal): species
 
-predicate Accessible(position,position,time)
+;predicate Accessible(position,position,time)
 predicate Adult(animal)
 predicate Large(animal)
 predicate LargeSpecies(species)
@@ -71,7 +102,6 @@ LargeSpecies(HumanSpecies).
 LargeSpecies(ElephantSpecies).
 LargeSpecies(HorseSpecies).
 !LargeSpecies(DogSpecies).
-
 [event,animal,time]
 HoldsAt(DoneBy(event,animal),time) <->
 (Happens(event,time) &
@@ -338,7 +368,7 @@ Accessible(position1,position2,time) <->
 (Neighbor(position1,position2) &
  !{gate} Sides(position1,position2,gate) &
          !HoldsAt(Opened(gate),time)).
-
+         
 [animal,position1,position2,time]
 (position1!=position2 &
  HoldsAt(Pos(animal,position1),time) &
@@ -432,7 +462,6 @@ Neighbor(position1,position2) <->
  (position2=7 & position1=8) |
  (position1=4 & position2=7) |
  (position2=4 & position1=7)).
-
 Side1(GateAO)=4.
 Side2(GateAO)=7.
 

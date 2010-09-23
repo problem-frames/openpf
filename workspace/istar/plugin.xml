@@ -7,7 +7,6 @@
       <example file="open_account.istar"/>
       <example file="open_account.ood"/>
       <example file="Istar.xtext_grammar"/>
-      <example file="openome_model.ecore"/>
   </extension>
 
 </plugin>

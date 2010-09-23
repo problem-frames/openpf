@@ -68,31 +68,43 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
   {
     switch (eClass.getClassifierID())
     {
-      case EventcalculusPackage.KNOWLEDGE: return createKnowledge();
-      case EventcalculusPackage.RULE: return createRule();
-      case EventcalculusPackage.VAR_DECL: return createVarDecl();
-      case EventcalculusPackage.INT_TERM: return createIntTerm();
-      case EventcalculusPackage.CONST_TERM: return createConstTerm();
-      case EventcalculusPackage.VAR_TERM: return createVarTerm();
-      case EventcalculusPackage.INT_EXPR: return createIntExpr();
-      case EventcalculusPackage.BINARY_INT_EXPR: return createBinaryIntExpr();
-      case EventcalculusPackage.TEMPORAL_PREDICATE: return createTemporalPredicate();
-      case EventcalculusPackage.BOOL_EXPR: return createBoolExpr();
-      case EventcalculusPackage.UNARY_BOOL_EXPR: return createUnaryBoolExpr();
-      case EventcalculusPackage.BINARY_BOOL_EXPR: return createBinaryBoolExpr();
-      case EventcalculusPackage.ENTITY: return createEntity();
-      case EventcalculusPackage.SORT: return createSort();
+      case EventcalculusPackage.MODEL: return createModel();
       case EventcalculusPackage.IMPORT: return createImport();
-      case EventcalculusPackage.VAR: return createVar();
-      case EventcalculusPackage.FLUENT: return createFluent();
-      case EventcalculusPackage.EVENT: return createEvent();
-      case EventcalculusPackage.TERM: return createTerm();
-      case EventcalculusPackage.HOLDS_AT: return createHoldsAt();
-      case EventcalculusPackage.HAPPENS: return createHappens();
-      case EventcalculusPackage.INITIATES: return createInitiates();
-      case EventcalculusPackage.TERMINATES: return createTerminates();
-      case EventcalculusPackage.PATH: return createPath();
-      case EventcalculusPackage.FILE: return createFile();
+      case EventcalculusPackage.DECLARATION: return createDeclaration();
+      case EventcalculusPackage.DEF_SORT: return createDefSort();
+      case EventcalculusPackage.DEF_RANGE: return createDefRange();
+      case EventcalculusPackage.DEF_OPTION: return createDefOption();
+      case EventcalculusPackage.DEF_COMPLETION: return createDefCompletion();
+      case EventcalculusPackage.DEF_NON_INERTIA: return createDefNonInertia();
+      case EventcalculusPackage.STATEMENT: return createStatement();
+      case EventcalculusPackage.SORT_DEFINITION: return createSortDefinition();
+      case EventcalculusPackage.DEFINITION: return createDefinition();
+      case EventcalculusPackage.DECLARED_PARAMETER: return createDeclaredParameter();
+      case EventcalculusPackage.EXPRESSION: return createExpression();
+      case EventcalculusPackage.QUALIFIER: return createQualifier();
+      case EventcalculusPackage.EXISTS: return createExists();
+      case EventcalculusPackage.FORALL: return createForall();
+      case EventcalculusPackage.TERMINAL_EXPRESSION: return createTerminalExpression();
+      case EventcalculusPackage.ASSIGN_PLUS: return createAssignPlus();
+      case EventcalculusPackage.ASSIGN_MIN: return createAssignMin();
+      case EventcalculusPackage.OR: return createOr();
+      case EventcalculusPackage.AND: return createAnd();
+      case EventcalculusPackage.REL_NOT_EQ: return createRelNotEq();
+      case EventcalculusPackage.REL_EQ_EQ: return createRelEqEq();
+      case EventcalculusPackage.REL_LT_EQ: return createRelLtEq();
+      case EventcalculusPackage.REL_GT_EQ: return createRelGtEq();
+      case EventcalculusPackage.REL_EQ: return createRelEq();
+      case EventcalculusPackage.REL_LT: return createRelLt();
+      case EventcalculusPackage.REL_GT: return createRelGt();
+      case EventcalculusPackage.PLUS: return createPlus();
+      case EventcalculusPackage.MINUS: return createMinus();
+      case EventcalculusPackage.MULTI: return createMulti();
+      case EventcalculusPackage.DIV: return createDiv();
+      case EventcalculusPackage.POW: return createPow();
+      case EventcalculusPackage.FUNCTION_REF: return createFunctionRef();
+      case EventcalculusPackage.INT_LITERAL: return createIntLiteral();
+      case EventcalculusPackage.STRING_LITERAL: return createStringLiteral();
+      case EventcalculusPackage.BOOLEAN_LITERAL: return createBooleanLiteral();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -108,12 +120,8 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
   {
     switch (eDataType.getClassifierID())
     {
-      case EventcalculusPackage.BINARY_INT_OP:
-        return createBinaryIntOpFromString(eDataType, initialValue);
-      case EventcalculusPackage.UNARY_BOOL_OP:
-        return createUnaryBoolOpFromString(eDataType, initialValue);
-      case EventcalculusPackage.BINARY_BOOL_OP:
-        return createBinaryBoolOpFromString(eDataType, initialValue);
+      case EventcalculusPackage.UNAR_OP:
+        return createUnarOpFromString(eDataType, initialValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -129,12 +137,8 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
   {
     switch (eDataType.getClassifierID())
     {
-      case EventcalculusPackage.BINARY_INT_OP:
-        return convertBinaryIntOpToString(eDataType, instanceValue);
-      case EventcalculusPackage.UNARY_BOOL_OP:
-        return convertUnaryBoolOpToString(eDataType, instanceValue);
-      case EventcalculusPackage.BINARY_BOOL_OP:
-        return convertBinaryBoolOpToString(eDataType, instanceValue);
+      case EventcalculusPackage.UNAR_OP:
+        return convertUnarOpToString(eDataType, instanceValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -145,153 +149,10 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
-  public Knowledge createKnowledge()
+  public Model createModel()
   {
-    KnowledgeImpl knowledge = new KnowledgeImpl();
-    return knowledge;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Rule createRule()
-  {
-    RuleImpl rule = new RuleImpl();
-    return rule;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public VarDecl createVarDecl()
-  {
-    VarDeclImpl varDecl = new VarDeclImpl();
-    return varDecl;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public IntTerm createIntTerm()
-  {
-    IntTermImpl intTerm = new IntTermImpl();
-    return intTerm;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ConstTerm createConstTerm()
-  {
-    ConstTermImpl constTerm = new ConstTermImpl();
-    return constTerm;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public VarTerm createVarTerm()
-  {
-    VarTermImpl varTerm = new VarTermImpl();
-    return varTerm;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public IntExpr createIntExpr()
-  {
-    IntExprImpl intExpr = new IntExprImpl();
-    return intExpr;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public BinaryIntExpr createBinaryIntExpr()
-  {
-    BinaryIntExprImpl binaryIntExpr = new BinaryIntExprImpl();
-    return binaryIntExpr;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public TemporalPredicate createTemporalPredicate()
-  {
-    TemporalPredicateImpl temporalPredicate = new TemporalPredicateImpl();
-    return temporalPredicate;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public BoolExpr createBoolExpr()
-  {
-    BoolExprImpl boolExpr = new BoolExprImpl();
-    return boolExpr;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public UnaryBoolExpr createUnaryBoolExpr()
-  {
-    UnaryBoolExprImpl unaryBoolExpr = new UnaryBoolExprImpl();
-    return unaryBoolExpr;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public BinaryBoolExpr createBinaryBoolExpr()
-  {
-    BinaryBoolExprImpl binaryBoolExpr = new BinaryBoolExprImpl();
-    return binaryBoolExpr;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Entity createEntity()
-  {
-    EntityImpl entity = new EntityImpl();
-    return entity;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Sort createSort()
-  {
-    SortImpl sort = new SortImpl();
-    return sort;
+    ModelImpl model = new ModelImpl();
+    return model;
   }
 
   /**
@@ -310,10 +171,10 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
-  public Var createVar()
+  public Declaration createDeclaration()
   {
-    VarImpl var = new VarImpl();
-    return var;
+    DeclarationImpl declaration = new DeclarationImpl();
+    return declaration;
   }
 
   /**
@@ -321,10 +182,10 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
-  public Fluent createFluent()
+  public DefSort createDefSort()
   {
-    FluentImpl fluent = new FluentImpl();
-    return fluent;
+    DefSortImpl defSort = new DefSortImpl();
+    return defSort;
   }
 
   /**
@@ -332,10 +193,10 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
-  public Event createEvent()
+  public DefRange createDefRange()
   {
-    EventImpl event = new EventImpl();
-    return event;
+    DefRangeImpl defRange = new DefRangeImpl();
+    return defRange;
   }
 
   /**
@@ -343,10 +204,10 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
-  public Term createTerm()
+  public DefOption createDefOption()
   {
-    TermImpl term = new TermImpl();
-    return term;
+    DefOptionImpl defOption = new DefOptionImpl();
+    return defOption;
   }
 
   /**
@@ -354,10 +215,10 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
-  public HoldsAt createHoldsAt()
+  public DefCompletion createDefCompletion()
   {
-    HoldsAtImpl holdsAt = new HoldsAtImpl();
-    return holdsAt;
+    DefCompletionImpl defCompletion = new DefCompletionImpl();
+    return defCompletion;
   }
 
   /**
@@ -365,10 +226,10 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
-  public Happens createHappens()
+  public DefNonInertia createDefNonInertia()
   {
-    HappensImpl happens = new HappensImpl();
-    return happens;
+    DefNonInertiaImpl defNonInertia = new DefNonInertiaImpl();
+    return defNonInertia;
   }
 
   /**
@@ -376,10 +237,10 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
-  public Initiates createInitiates()
+  public Statement createStatement()
   {
-    InitiatesImpl initiates = new InitiatesImpl();
-    return initiates;
+    StatementImpl statement = new StatementImpl();
+    return statement;
   }
 
   /**
@@ -387,10 +248,10 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
-  public Terminates createTerminates()
+  public SortDefinition createSortDefinition()
   {
-    TerminatesImpl terminates = new TerminatesImpl();
-    return terminates;
+    SortDefinitionImpl sortDefinition = new SortDefinitionImpl();
+    return sortDefinition;
   }
 
   /**
@@ -398,10 +259,10 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
-  public Path createPath()
+  public Definition createDefinition()
   {
-    PathImpl path = new PathImpl();
-    return path;
+    DefinitionImpl definition = new DefinitionImpl();
+    return definition;
   }
 
   /**
@@ -409,10 +270,10 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
-  public File createFile()
+  public DeclaredParameter createDeclaredParameter()
   {
-    FileImpl file = new FileImpl();
-    return file;
+    DeclaredParameterImpl declaredParameter = new DeclaredParameterImpl();
+    return declaredParameter;
   }
 
   /**
@@ -420,9 +281,284 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
-  public BinaryIntOp createBinaryIntOpFromString(EDataType eDataType, String initialValue)
+  public Expression createExpression()
   {
-    BinaryIntOp result = BinaryIntOp.get(initialValue);
+    ExpressionImpl expression = new ExpressionImpl();
+    return expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Qualifier createQualifier()
+  {
+    QualifierImpl qualifier = new QualifierImpl();
+    return qualifier;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Exists createExists()
+  {
+    ExistsImpl exists = new ExistsImpl();
+    return exists;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Forall createForall()
+  {
+    ForallImpl forall = new ForallImpl();
+    return forall;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TerminalExpression createTerminalExpression()
+  {
+    TerminalExpressionImpl terminalExpression = new TerminalExpressionImpl();
+    return terminalExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AssignPlus createAssignPlus()
+  {
+    AssignPlusImpl assignPlus = new AssignPlusImpl();
+    return assignPlus;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AssignMin createAssignMin()
+  {
+    AssignMinImpl assignMin = new AssignMinImpl();
+    return assignMin;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Or createOr()
+  {
+    OrImpl or = new OrImpl();
+    return or;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public And createAnd()
+  {
+    AndImpl and = new AndImpl();
+    return and;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RelNotEq createRelNotEq()
+  {
+    RelNotEqImpl relNotEq = new RelNotEqImpl();
+    return relNotEq;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RelEqEq createRelEqEq()
+  {
+    RelEqEqImpl relEqEq = new RelEqEqImpl();
+    return relEqEq;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RelLtEq createRelLtEq()
+  {
+    RelLtEqImpl relLtEq = new RelLtEqImpl();
+    return relLtEq;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RelGtEq createRelGtEq()
+  {
+    RelGtEqImpl relGtEq = new RelGtEqImpl();
+    return relGtEq;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RelEq createRelEq()
+  {
+    RelEqImpl relEq = new RelEqImpl();
+    return relEq;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RelLt createRelLt()
+  {
+    RelLtImpl relLt = new RelLtImpl();
+    return relLt;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RelGt createRelGt()
+  {
+    RelGtImpl relGt = new RelGtImpl();
+    return relGt;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Plus createPlus()
+  {
+    PlusImpl plus = new PlusImpl();
+    return plus;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Minus createMinus()
+  {
+    MinusImpl minus = new MinusImpl();
+    return minus;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Multi createMulti()
+  {
+    MultiImpl multi = new MultiImpl();
+    return multi;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Div createDiv()
+  {
+    DivImpl div = new DivImpl();
+    return div;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Pow createPow()
+  {
+    PowImpl pow = new PowImpl();
+    return pow;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FunctionRef createFunctionRef()
+  {
+    FunctionRefImpl functionRef = new FunctionRefImpl();
+    return functionRef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IntLiteral createIntLiteral()
+  {
+    IntLiteralImpl intLiteral = new IntLiteralImpl();
+    return intLiteral;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public StringLiteral createStringLiteral()
+  {
+    StringLiteralImpl stringLiteral = new StringLiteralImpl();
+    return stringLiteral;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BooleanLiteral createBooleanLiteral()
+  {
+    BooleanLiteralImpl booleanLiteral = new BooleanLiteralImpl();
+    return booleanLiteral;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public UnarOp createUnarOpFromString(EDataType eDataType, String initialValue)
+  {
+    UnarOp result = UnarOp.get(initialValue);
     if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
     return result;
   }
@@ -432,51 +568,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertBinaryIntOpToString(EDataType eDataType, Object instanceValue)
-  {
-    return instanceValue == null ? null : instanceValue.toString();
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public UnaryBoolOp createUnaryBoolOpFromString(EDataType eDataType, String initialValue)
-  {
-    UnaryBoolOp result = UnaryBoolOp.get(initialValue);
-    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-    return result;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String convertUnaryBoolOpToString(EDataType eDataType, Object instanceValue)
-  {
-    return instanceValue == null ? null : instanceValue.toString();
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public BinaryBoolOp createBinaryBoolOpFromString(EDataType eDataType, String initialValue)
-  {
-    BinaryBoolOp result = BinaryBoolOp.get(initialValue);
-    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-    return result;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String convertBinaryBoolOpToString(EDataType eDataType, Object instanceValue)
+  public String convertUnarOpToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }

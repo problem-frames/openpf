@@ -26,130 +26,13 @@ public interface EventcalculusFactory extends EFactory
   EventcalculusFactory eINSTANCE = uk.ac.open.event.eventcalculus.impl.EventcalculusFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Knowledge</em>'.
+   * Returns a new object of class '<em>Model</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Knowledge</em>'.
+   * @return a new object of class '<em>Model</em>'.
    * @generated
    */
-  Knowledge createKnowledge();
-
-  /**
-   * Returns a new object of class '<em>Rule</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Rule</em>'.
-   * @generated
-   */
-  Rule createRule();
-
-  /**
-   * Returns a new object of class '<em>Var Decl</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Var Decl</em>'.
-   * @generated
-   */
-  VarDecl createVarDecl();
-
-  /**
-   * Returns a new object of class '<em>Int Term</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Int Term</em>'.
-   * @generated
-   */
-  IntTerm createIntTerm();
-
-  /**
-   * Returns a new object of class '<em>Const Term</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Const Term</em>'.
-   * @generated
-   */
-  ConstTerm createConstTerm();
-
-  /**
-   * Returns a new object of class '<em>Var Term</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Var Term</em>'.
-   * @generated
-   */
-  VarTerm createVarTerm();
-
-  /**
-   * Returns a new object of class '<em>Int Expr</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Int Expr</em>'.
-   * @generated
-   */
-  IntExpr createIntExpr();
-
-  /**
-   * Returns a new object of class '<em>Binary Int Expr</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Binary Int Expr</em>'.
-   * @generated
-   */
-  BinaryIntExpr createBinaryIntExpr();
-
-  /**
-   * Returns a new object of class '<em>Temporal Predicate</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Temporal Predicate</em>'.
-   * @generated
-   */
-  TemporalPredicate createTemporalPredicate();
-
-  /**
-   * Returns a new object of class '<em>Bool Expr</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Bool Expr</em>'.
-   * @generated
-   */
-  BoolExpr createBoolExpr();
-
-  /**
-   * Returns a new object of class '<em>Unary Bool Expr</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Unary Bool Expr</em>'.
-   * @generated
-   */
-  UnaryBoolExpr createUnaryBoolExpr();
-
-  /**
-   * Returns a new object of class '<em>Binary Bool Expr</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Binary Bool Expr</em>'.
-   * @generated
-   */
-  BinaryBoolExpr createBinaryBoolExpr();
-
-  /**
-   * Returns a new object of class '<em>Entity</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Entity</em>'.
-   * @generated
-   */
-  Entity createEntity();
-
-  /**
-   * Returns a new object of class '<em>Sort</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Sort</em>'.
-   * @generated
-   */
-  Sort createSort();
+  Model createModel();
 
   /**
    * Returns a new object of class '<em>Import</em>'.
@@ -161,94 +44,319 @@ public interface EventcalculusFactory extends EFactory
   Import createImport();
 
   /**
-   * Returns a new object of class '<em>Var</em>'.
+   * Returns a new object of class '<em>Declaration</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Var</em>'.
+   * @return a new object of class '<em>Declaration</em>'.
    * @generated
    */
-  Var createVar();
+  Declaration createDeclaration();
 
   /**
-   * Returns a new object of class '<em>Fluent</em>'.
+   * Returns a new object of class '<em>Def Sort</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Fluent</em>'.
+   * @return a new object of class '<em>Def Sort</em>'.
    * @generated
    */
-  Fluent createFluent();
+  DefSort createDefSort();
 
   /**
-   * Returns a new object of class '<em>Event</em>'.
+   * Returns a new object of class '<em>Def Range</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Event</em>'.
+   * @return a new object of class '<em>Def Range</em>'.
    * @generated
    */
-  Event createEvent();
+  DefRange createDefRange();
 
   /**
-   * Returns a new object of class '<em>Term</em>'.
+   * Returns a new object of class '<em>Def Option</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Term</em>'.
+   * @return a new object of class '<em>Def Option</em>'.
    * @generated
    */
-  Term createTerm();
+  DefOption createDefOption();
 
   /**
-   * Returns a new object of class '<em>Holds At</em>'.
+   * Returns a new object of class '<em>Def Completion</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Holds At</em>'.
+   * @return a new object of class '<em>Def Completion</em>'.
    * @generated
    */
-  HoldsAt createHoldsAt();
+  DefCompletion createDefCompletion();
 
   /**
-   * Returns a new object of class '<em>Happens</em>'.
+   * Returns a new object of class '<em>Def Non Inertia</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Happens</em>'.
+   * @return a new object of class '<em>Def Non Inertia</em>'.
    * @generated
    */
-  Happens createHappens();
+  DefNonInertia createDefNonInertia();
 
   /**
-   * Returns a new object of class '<em>Initiates</em>'.
+   * Returns a new object of class '<em>Statement</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Initiates</em>'.
+   * @return a new object of class '<em>Statement</em>'.
    * @generated
    */
-  Initiates createInitiates();
+  Statement createStatement();
 
   /**
-   * Returns a new object of class '<em>Terminates</em>'.
+   * Returns a new object of class '<em>Sort Definition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Terminates</em>'.
+   * @return a new object of class '<em>Sort Definition</em>'.
    * @generated
    */
-  Terminates createTerminates();
+  SortDefinition createSortDefinition();
 
   /**
-   * Returns a new object of class '<em>Path</em>'.
+   * Returns a new object of class '<em>Definition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Path</em>'.
+   * @return a new object of class '<em>Definition</em>'.
    * @generated
    */
-  Path createPath();
+  Definition createDefinition();
 
   /**
-   * Returns a new object of class '<em>File</em>'.
+   * Returns a new object of class '<em>Declared Parameter</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>File</em>'.
+   * @return a new object of class '<em>Declared Parameter</em>'.
    * @generated
    */
-  File createFile();
+  DeclaredParameter createDeclaredParameter();
+
+  /**
+   * Returns a new object of class '<em>Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Expression</em>'.
+   * @generated
+   */
+  Expression createExpression();
+
+  /**
+   * Returns a new object of class '<em>Qualifier</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Qualifier</em>'.
+   * @generated
+   */
+  Qualifier createQualifier();
+
+  /**
+   * Returns a new object of class '<em>Exists</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Exists</em>'.
+   * @generated
+   */
+  Exists createExists();
+
+  /**
+   * Returns a new object of class '<em>Forall</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Forall</em>'.
+   * @generated
+   */
+  Forall createForall();
+
+  /**
+   * Returns a new object of class '<em>Terminal Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Terminal Expression</em>'.
+   * @generated
+   */
+  TerminalExpression createTerminalExpression();
+
+  /**
+   * Returns a new object of class '<em>Assign Plus</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Assign Plus</em>'.
+   * @generated
+   */
+  AssignPlus createAssignPlus();
+
+  /**
+   * Returns a new object of class '<em>Assign Min</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Assign Min</em>'.
+   * @generated
+   */
+  AssignMin createAssignMin();
+
+  /**
+   * Returns a new object of class '<em>Or</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Or</em>'.
+   * @generated
+   */
+  Or createOr();
+
+  /**
+   * Returns a new object of class '<em>And</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>And</em>'.
+   * @generated
+   */
+  And createAnd();
+
+  /**
+   * Returns a new object of class '<em>Rel Not Eq</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Rel Not Eq</em>'.
+   * @generated
+   */
+  RelNotEq createRelNotEq();
+
+  /**
+   * Returns a new object of class '<em>Rel Eq Eq</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Rel Eq Eq</em>'.
+   * @generated
+   */
+  RelEqEq createRelEqEq();
+
+  /**
+   * Returns a new object of class '<em>Rel Lt Eq</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Rel Lt Eq</em>'.
+   * @generated
+   */
+  RelLtEq createRelLtEq();
+
+  /**
+   * Returns a new object of class '<em>Rel Gt Eq</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Rel Gt Eq</em>'.
+   * @generated
+   */
+  RelGtEq createRelGtEq();
+
+  /**
+   * Returns a new object of class '<em>Rel Eq</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Rel Eq</em>'.
+   * @generated
+   */
+  RelEq createRelEq();
+
+  /**
+   * Returns a new object of class '<em>Rel Lt</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Rel Lt</em>'.
+   * @generated
+   */
+  RelLt createRelLt();
+
+  /**
+   * Returns a new object of class '<em>Rel Gt</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Rel Gt</em>'.
+   * @generated
+   */
+  RelGt createRelGt();
+
+  /**
+   * Returns a new object of class '<em>Plus</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Plus</em>'.
+   * @generated
+   */
+  Plus createPlus();
+
+  /**
+   * Returns a new object of class '<em>Minus</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Minus</em>'.
+   * @generated
+   */
+  Minus createMinus();
+
+  /**
+   * Returns a new object of class '<em>Multi</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Multi</em>'.
+   * @generated
+   */
+  Multi createMulti();
+
+  /**
+   * Returns a new object of class '<em>Div</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Div</em>'.
+   * @generated
+   */
+  Div createDiv();
+
+  /**
+   * Returns a new object of class '<em>Pow</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Pow</em>'.
+   * @generated
+   */
+  Pow createPow();
+
+  /**
+   * Returns a new object of class '<em>Function Ref</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Function Ref</em>'.
+   * @generated
+   */
+  FunctionRef createFunctionRef();
+
+  /**
+   * Returns a new object of class '<em>Int Literal</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Int Literal</em>'.
+   * @generated
+   */
+  IntLiteral createIntLiteral();
+
+  /**
+   * Returns a new object of class '<em>String Literal</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>String Literal</em>'.
+   * @generated
+   */
+  StringLiteral createStringLiteral();
+
+  /**
+   * Returns a new object of class '<em>Boolean Literal</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Boolean Literal</em>'.
+   * @generated
+   */
+  BooleanLiteral createBooleanLiteral();
 
   /**
    * Returns the package supported by this factory.

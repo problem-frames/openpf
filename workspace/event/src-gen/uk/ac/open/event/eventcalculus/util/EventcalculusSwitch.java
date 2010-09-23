@@ -95,111 +95,10 @@ public class EventcalculusSwitch<T>
   {
     switch (classifierID)
     {
-      case EventcalculusPackage.KNOWLEDGE:
+      case EventcalculusPackage.MODEL:
       {
-        Knowledge knowledge = (Knowledge)theEObject;
-        T result = caseKnowledge(knowledge);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EventcalculusPackage.RULE:
-      {
-        Rule rule = (Rule)theEObject;
-        T result = caseRule(rule);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EventcalculusPackage.VAR_DECL:
-      {
-        VarDecl varDecl = (VarDecl)theEObject;
-        T result = caseVarDecl(varDecl);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EventcalculusPackage.INT_TERM:
-      {
-        IntTerm intTerm = (IntTerm)theEObject;
-        T result = caseIntTerm(intTerm);
-        if (result == null) result = caseIntExpr(intTerm);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EventcalculusPackage.CONST_TERM:
-      {
-        ConstTerm constTerm = (ConstTerm)theEObject;
-        T result = caseConstTerm(constTerm);
-        if (result == null) result = caseIntTerm(constTerm);
-        if (result == null) result = caseIntExpr(constTerm);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EventcalculusPackage.VAR_TERM:
-      {
-        VarTerm varTerm = (VarTerm)theEObject;
-        T result = caseVarTerm(varTerm);
-        if (result == null) result = caseIntTerm(varTerm);
-        if (result == null) result = caseIntExpr(varTerm);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EventcalculusPackage.INT_EXPR:
-      {
-        IntExpr intExpr = (IntExpr)theEObject;
-        T result = caseIntExpr(intExpr);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EventcalculusPackage.BINARY_INT_EXPR:
-      {
-        BinaryIntExpr binaryIntExpr = (BinaryIntExpr)theEObject;
-        T result = caseBinaryIntExpr(binaryIntExpr);
-        if (result == null) result = caseIntExpr(binaryIntExpr);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EventcalculusPackage.TEMPORAL_PREDICATE:
-      {
-        TemporalPredicate temporalPredicate = (TemporalPredicate)theEObject;
-        T result = caseTemporalPredicate(temporalPredicate);
-        if (result == null) result = caseBoolExpr(temporalPredicate);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EventcalculusPackage.BOOL_EXPR:
-      {
-        BoolExpr boolExpr = (BoolExpr)theEObject;
-        T result = caseBoolExpr(boolExpr);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EventcalculusPackage.UNARY_BOOL_EXPR:
-      {
-        UnaryBoolExpr unaryBoolExpr = (UnaryBoolExpr)theEObject;
-        T result = caseUnaryBoolExpr(unaryBoolExpr);
-        if (result == null) result = caseBoolExpr(unaryBoolExpr);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EventcalculusPackage.BINARY_BOOL_EXPR:
-      {
-        BinaryBoolExpr binaryBoolExpr = (BinaryBoolExpr)theEObject;
-        T result = caseBinaryBoolExpr(binaryBoolExpr);
-        if (result == null) result = caseBoolExpr(binaryBoolExpr);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EventcalculusPackage.ENTITY:
-      {
-        Entity entity = (Entity)theEObject;
-        T result = caseEntity(entity);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EventcalculusPackage.SORT:
-      {
-        Sort sort = (Sort)theEObject;
-        T result = caseSort(sort);
-        if (result == null) result = caseEntity(sort);
+        Model model = (Model)theEObject;
+        T result = caseModel(model);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -210,83 +109,304 @@ public class EventcalculusSwitch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EventcalculusPackage.VAR:
+      case EventcalculusPackage.DECLARATION:
       {
-        Var var = (Var)theEObject;
-        T result = caseVar(var);
+        Declaration declaration = (Declaration)theEObject;
+        T result = caseDeclaration(declaration);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EventcalculusPackage.FLUENT:
+      case EventcalculusPackage.DEF_SORT:
       {
-        Fluent fluent = (Fluent)theEObject;
-        T result = caseFluent(fluent);
-        if (result == null) result = caseEntity(fluent);
+        DefSort defSort = (DefSort)theEObject;
+        T result = caseDefSort(defSort);
+        if (result == null) result = caseDeclaration(defSort);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EventcalculusPackage.EVENT:
+      case EventcalculusPackage.DEF_RANGE:
       {
-        Event event = (Event)theEObject;
-        T result = caseEvent(event);
-        if (result == null) result = caseEntity(event);
+        DefRange defRange = (DefRange)theEObject;
+        T result = caseDefRange(defRange);
+        if (result == null) result = caseDeclaration(defRange);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EventcalculusPackage.TERM:
+      case EventcalculusPackage.DEF_OPTION:
       {
-        Term term = (Term)theEObject;
-        T result = caseTerm(term);
+        DefOption defOption = (DefOption)theEObject;
+        T result = caseDefOption(defOption);
+        if (result == null) result = caseDeclaration(defOption);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EventcalculusPackage.HOLDS_AT:
+      case EventcalculusPackage.DEF_COMPLETION:
       {
-        HoldsAt holdsAt = (HoldsAt)theEObject;
-        T result = caseHoldsAt(holdsAt);
-        if (result == null) result = caseTemporalPredicate(holdsAt);
-        if (result == null) result = caseBoolExpr(holdsAt);
+        DefCompletion defCompletion = (DefCompletion)theEObject;
+        T result = caseDefCompletion(defCompletion);
+        if (result == null) result = caseDeclaration(defCompletion);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EventcalculusPackage.HAPPENS:
+      case EventcalculusPackage.DEF_NON_INERTIA:
       {
-        Happens happens = (Happens)theEObject;
-        T result = caseHappens(happens);
-        if (result == null) result = caseTemporalPredicate(happens);
-        if (result == null) result = caseBoolExpr(happens);
+        DefNonInertia defNonInertia = (DefNonInertia)theEObject;
+        T result = caseDefNonInertia(defNonInertia);
+        if (result == null) result = caseDeclaration(defNonInertia);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EventcalculusPackage.INITIATES:
+      case EventcalculusPackage.STATEMENT:
       {
-        Initiates initiates = (Initiates)theEObject;
-        T result = caseInitiates(initiates);
-        if (result == null) result = caseTemporalPredicate(initiates);
-        if (result == null) result = caseBoolExpr(initiates);
+        Statement statement = (Statement)theEObject;
+        T result = caseStatement(statement);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EventcalculusPackage.TERMINATES:
+      case EventcalculusPackage.SORT_DEFINITION:
       {
-        Terminates terminates = (Terminates)theEObject;
-        T result = caseTerminates(terminates);
-        if (result == null) result = caseTemporalPredicate(terminates);
-        if (result == null) result = caseBoolExpr(terminates);
+        SortDefinition sortDefinition = (SortDefinition)theEObject;
+        T result = caseSortDefinition(sortDefinition);
+        if (result == null) result = caseStatement(sortDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EventcalculusPackage.PATH:
+      case EventcalculusPackage.DEFINITION:
       {
-        Path path = (Path)theEObject;
-        T result = casePath(path);
+        Definition definition = (Definition)theEObject;
+        T result = caseDefinition(definition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EventcalculusPackage.FILE:
+      case EventcalculusPackage.DECLARED_PARAMETER:
       {
-        File file = (File)theEObject;
-        T result = caseFile(file);
+        DeclaredParameter declaredParameter = (DeclaredParameter)theEObject;
+        T result = caseDeclaredParameter(declaredParameter);
+        if (result == null) result = caseExpression(declaredParameter);
+        if (result == null) result = caseStatement(declaredParameter);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EventcalculusPackage.EXPRESSION:
+      {
+        Expression expression = (Expression)theEObject;
+        T result = caseExpression(expression);
+        if (result == null) result = caseStatement(expression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EventcalculusPackage.QUALIFIER:
+      {
+        Qualifier qualifier = (Qualifier)theEObject;
+        T result = caseQualifier(qualifier);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EventcalculusPackage.EXISTS:
+      {
+        Exists exists = (Exists)theEObject;
+        T result = caseExists(exists);
+        if (result == null) result = caseQualifier(exists);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EventcalculusPackage.FORALL:
+      {
+        Forall forall = (Forall)theEObject;
+        T result = caseForall(forall);
+        if (result == null) result = caseQualifier(forall);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EventcalculusPackage.TERMINAL_EXPRESSION:
+      {
+        TerminalExpression terminalExpression = (TerminalExpression)theEObject;
+        T result = caseTerminalExpression(terminalExpression);
+        if (result == null) result = caseExpression(terminalExpression);
+        if (result == null) result = caseStatement(terminalExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EventcalculusPackage.ASSIGN_PLUS:
+      {
+        AssignPlus assignPlus = (AssignPlus)theEObject;
+        T result = caseAssignPlus(assignPlus);
+        if (result == null) result = caseExpression(assignPlus);
+        if (result == null) result = caseStatement(assignPlus);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EventcalculusPackage.ASSIGN_MIN:
+      {
+        AssignMin assignMin = (AssignMin)theEObject;
+        T result = caseAssignMin(assignMin);
+        if (result == null) result = caseExpression(assignMin);
+        if (result == null) result = caseStatement(assignMin);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EventcalculusPackage.OR:
+      {
+        Or or = (Or)theEObject;
+        T result = caseOr(or);
+        if (result == null) result = caseExpression(or);
+        if (result == null) result = caseStatement(or);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EventcalculusPackage.AND:
+      {
+        And and = (And)theEObject;
+        T result = caseAnd(and);
+        if (result == null) result = caseExpression(and);
+        if (result == null) result = caseStatement(and);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EventcalculusPackage.REL_NOT_EQ:
+      {
+        RelNotEq relNotEq = (RelNotEq)theEObject;
+        T result = caseRelNotEq(relNotEq);
+        if (result == null) result = caseExpression(relNotEq);
+        if (result == null) result = caseStatement(relNotEq);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EventcalculusPackage.REL_EQ_EQ:
+      {
+        RelEqEq relEqEq = (RelEqEq)theEObject;
+        T result = caseRelEqEq(relEqEq);
+        if (result == null) result = caseExpression(relEqEq);
+        if (result == null) result = caseStatement(relEqEq);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EventcalculusPackage.REL_LT_EQ:
+      {
+        RelLtEq relLtEq = (RelLtEq)theEObject;
+        T result = caseRelLtEq(relLtEq);
+        if (result == null) result = caseExpression(relLtEq);
+        if (result == null) result = caseStatement(relLtEq);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EventcalculusPackage.REL_GT_EQ:
+      {
+        RelGtEq relGtEq = (RelGtEq)theEObject;
+        T result = caseRelGtEq(relGtEq);
+        if (result == null) result = caseExpression(relGtEq);
+        if (result == null) result = caseStatement(relGtEq);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EventcalculusPackage.REL_EQ:
+      {
+        RelEq relEq = (RelEq)theEObject;
+        T result = caseRelEq(relEq);
+        if (result == null) result = caseExpression(relEq);
+        if (result == null) result = caseStatement(relEq);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EventcalculusPackage.REL_LT:
+      {
+        RelLt relLt = (RelLt)theEObject;
+        T result = caseRelLt(relLt);
+        if (result == null) result = caseExpression(relLt);
+        if (result == null) result = caseStatement(relLt);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EventcalculusPackage.REL_GT:
+      {
+        RelGt relGt = (RelGt)theEObject;
+        T result = caseRelGt(relGt);
+        if (result == null) result = caseExpression(relGt);
+        if (result == null) result = caseStatement(relGt);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EventcalculusPackage.PLUS:
+      {
+        Plus plus = (Plus)theEObject;
+        T result = casePlus(plus);
+        if (result == null) result = caseExpression(plus);
+        if (result == null) result = caseStatement(plus);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EventcalculusPackage.MINUS:
+      {
+        Minus minus = (Minus)theEObject;
+        T result = caseMinus(minus);
+        if (result == null) result = caseExpression(minus);
+        if (result == null) result = caseStatement(minus);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EventcalculusPackage.MULTI:
+      {
+        Multi multi = (Multi)theEObject;
+        T result = caseMulti(multi);
+        if (result == null) result = caseExpression(multi);
+        if (result == null) result = caseStatement(multi);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EventcalculusPackage.DIV:
+      {
+        Div div = (Div)theEObject;
+        T result = caseDiv(div);
+        if (result == null) result = caseExpression(div);
+        if (result == null) result = caseStatement(div);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EventcalculusPackage.POW:
+      {
+        Pow pow = (Pow)theEObject;
+        T result = casePow(pow);
+        if (result == null) result = caseExpression(pow);
+        if (result == null) result = caseStatement(pow);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EventcalculusPackage.FUNCTION_REF:
+      {
+        FunctionRef functionRef = (FunctionRef)theEObject;
+        T result = caseFunctionRef(functionRef);
+        if (result == null) result = caseExpression(functionRef);
+        if (result == null) result = caseStatement(functionRef);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EventcalculusPackage.INT_LITERAL:
+      {
+        IntLiteral intLiteral = (IntLiteral)theEObject;
+        T result = caseIntLiteral(intLiteral);
+        if (result == null) result = caseTerminalExpression(intLiteral);
+        if (result == null) result = caseExpression(intLiteral);
+        if (result == null) result = caseStatement(intLiteral);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EventcalculusPackage.STRING_LITERAL:
+      {
+        StringLiteral stringLiteral = (StringLiteral)theEObject;
+        T result = caseStringLiteral(stringLiteral);
+        if (result == null) result = caseTerminalExpression(stringLiteral);
+        if (result == null) result = caseExpression(stringLiteral);
+        if (result == null) result = caseStatement(stringLiteral);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EventcalculusPackage.BOOLEAN_LITERAL:
+      {
+        BooleanLiteral booleanLiteral = (BooleanLiteral)theEObject;
+        T result = caseBooleanLiteral(booleanLiteral);
+        if (result == null) result = caseTerminalExpression(booleanLiteral);
+        if (result == null) result = caseExpression(booleanLiteral);
+        if (result == null) result = caseStatement(booleanLiteral);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -295,225 +415,17 @@ public class EventcalculusSwitch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Knowledge</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Model</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Knowledge</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Model</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseKnowledge(Knowledge object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Rule</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Rule</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseRule(Rule object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Var Decl</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Var Decl</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseVarDecl(VarDecl object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Int Term</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Int Term</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseIntTerm(IntTerm object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Const Term</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Const Term</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseConstTerm(ConstTerm object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Var Term</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Var Term</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseVarTerm(VarTerm object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Int Expr</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Int Expr</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseIntExpr(IntExpr object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Binary Int Expr</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Binary Int Expr</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseBinaryIntExpr(BinaryIntExpr object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Temporal Predicate</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Temporal Predicate</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseTemporalPredicate(TemporalPredicate object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Bool Expr</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Bool Expr</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseBoolExpr(BoolExpr object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Unary Bool Expr</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Unary Bool Expr</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseUnaryBoolExpr(UnaryBoolExpr object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Binary Bool Expr</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Binary Bool Expr</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseBinaryBoolExpr(BinaryBoolExpr object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Entity</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Entity</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseEntity(Entity object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Sort</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Sort</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseSort(Sort object)
+  public T caseModel(Model object)
   {
     return null;
   }
@@ -535,161 +447,561 @@ public class EventcalculusSwitch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Var</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Declaration</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Var</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Declaration</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseVar(Var object)
+  public T caseDeclaration(Declaration object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Fluent</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Def Sort</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Fluent</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Def Sort</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseFluent(Fluent object)
+  public T caseDefSort(DefSort object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Event</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Def Range</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Event</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Def Range</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseEvent(Event object)
+  public T caseDefRange(DefRange object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Term</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Def Option</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Term</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Def Option</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseTerm(Term object)
+  public T caseDefOption(DefOption object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Holds At</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Def Completion</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Holds At</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Def Completion</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseHoldsAt(HoldsAt object)
+  public T caseDefCompletion(DefCompletion object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Happens</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Def Non Inertia</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Happens</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Def Non Inertia</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseHappens(Happens object)
+  public T caseDefNonInertia(DefNonInertia object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Initiates</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Statement</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Initiates</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Statement</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseInitiates(Initiates object)
+  public T caseStatement(Statement object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Terminates</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Sort Definition</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Terminates</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Sort Definition</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseTerminates(Terminates object)
+  public T caseSortDefinition(SortDefinition object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Path</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Definition</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Path</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Definition</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casePath(Path object)
+  public T caseDefinition(Definition object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>File</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Declared Parameter</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>File</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Declared Parameter</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseFile(File object)
+  public T caseDeclaredParameter(DeclaredParameter object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseExpression(Expression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Qualifier</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Qualifier</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseQualifier(Qualifier object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Exists</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Exists</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseExists(Exists object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Forall</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Forall</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseForall(Forall object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Terminal Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Terminal Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTerminalExpression(TerminalExpression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Assign Plus</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Assign Plus</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAssignPlus(AssignPlus object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Assign Min</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Assign Min</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAssignMin(AssignMin object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Or</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Or</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseOr(Or object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>And</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>And</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAnd(And object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Rel Not Eq</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Rel Not Eq</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRelNotEq(RelNotEq object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Rel Eq Eq</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Rel Eq Eq</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRelEqEq(RelEqEq object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Rel Lt Eq</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Rel Lt Eq</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRelLtEq(RelLtEq object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Rel Gt Eq</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Rel Gt Eq</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRelGtEq(RelGtEq object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Rel Eq</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Rel Eq</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRelEq(RelEq object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Rel Lt</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Rel Lt</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRelLt(RelLt object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Rel Gt</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Rel Gt</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRelGt(RelGt object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Plus</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Plus</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePlus(Plus object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Minus</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Minus</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMinus(Minus object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Multi</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Multi</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMulti(Multi object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Div</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Div</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDiv(Div object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Pow</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Pow</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePow(Pow object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Function Ref</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Function Ref</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFunctionRef(FunctionRef object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Int Literal</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Int Literal</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIntLiteral(IntLiteral object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>String Literal</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>String Literal</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStringLiteral(StringLiteral object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Boolean Literal</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Boolean Literal</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBooleanLiteral(BooleanLiteral object)
   {
     return null;
   }
