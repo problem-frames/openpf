@@ -23,339 +23,333 @@ import org.eclipse.emf.common.util.Enumerator;
 public enum NodeType implements Enumerator
 {
   /**
-   * The '<em><b>REQUIREMENT</b></em>' literal object.
-   * <!-- begin-user-doc -->
+	 * The '<em><b>REQUIREMENT</b></em>' literal object.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #REQUIREMENT_VALUE
-   * @generated
-   * @ordered
-   */
+	 * @see #REQUIREMENT_VALUE
+	 * @generated
+	 * @ordered
+	 */
   REQUIREMENT(0, "REQUIREMENT", "R"),
 
   /**
-   * The '<em><b>MACHINE</b></em>' literal object.
-   * <!-- begin-user-doc -->
+	 * The '<em><b>MACHINE</b></em>' literal object.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #MACHINE_VALUE
-   * @generated
-   * @ordered
-   */
+	 * @see #MACHINE_VALUE
+	 * @generated
+	 * @ordered
+	 */
   MACHINE(1, "MACHINE", "M"),
 
   /**
-   * The '<em><b>BIDDABLE</b></em>' literal object.
-   * <!-- begin-user-doc -->
+	 * The '<em><b>BIDDABLE</b></em>' literal object.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #BIDDABLE_VALUE
-   * @generated
-   * @ordered
-   */
+	 * @see #BIDDABLE_VALUE
+	 * @generated
+	 * @ordered
+	 */
   BIDDABLE(2, "BIDDABLE", "B"),
 
   /**
-   * The '<em><b>LEXICAL</b></em>' literal object.
-   * <!-- begin-user-doc -->
+	 * The '<em><b>LEXICAL</b></em>' literal object.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #LEXICAL_VALUE
-   * @generated
-   * @ordered
-   */
+	 * @see #LEXICAL_VALUE
+	 * @generated
+	 * @ordered
+	 */
   LEXICAL(3, "LEXICAL", "X"),
 
   /**
-   * The '<em><b>CAUSAL</b></em>' literal object.
-   * <!-- begin-user-doc -->
+	 * The '<em><b>CAUSAL</b></em>' literal object.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #CAUSAL_VALUE
-   * @generated
-   * @ordered
-   */
+	 * @see #CAUSAL_VALUE
+	 * @generated
+	 * @ordered
+	 */
   CAUSAL(4, "CAUSAL", "C"),
 
   /**
-   * The '<em><b>DESIGNED</b></em>' literal object.
-   * <!-- begin-user-doc -->
+	 * The '<em><b>DESIGNED</b></em>' literal object.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #DESIGNED_VALUE
-   * @generated
-   * @ordered
-   */
+	 * @see #DESIGNED_VALUE
+	 * @generated
+	 * @ordered
+	 */
   DESIGNED(5, "DESIGNED", "D"),
 
   /**
-   * The '<em><b>PHYSICAL</b></em>' literal object.
-   * <!-- begin-user-doc -->
+	 * The '<em><b>PHYSICAL</b></em>' literal object.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #PHYSICAL_VALUE
-   * @generated
-   * @ordered
-   */
+	 * @see #PHYSICAL_VALUE
+	 * @generated
+	 * @ordered
+	 */
   PHYSICAL(6, "PHYSICAL", "P");
 
   /**
-   * The '<em><b>REQUIREMENT</b></em>' literal value.
-   * <!-- begin-user-doc -->
+	 * The '<em><b>REQUIREMENT</b></em>' literal value.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>REQUIREMENT</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #REQUIREMENT
-   * @model literal="R"
-   * @generated
-   * @ordered
-   */
+	 * @see #REQUIREMENT
+	 * @model literal="R"
+	 * @generated
+	 * @ordered
+	 */
   public static final int REQUIREMENT_VALUE = 0;
 
   /**
-   * The '<em><b>MACHINE</b></em>' literal value.
-   * <!-- begin-user-doc -->
+	 * The '<em><b>MACHINE</b></em>' literal value.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>MACHINE</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #MACHINE
-   * @model literal="M"
-   * @generated
-   * @ordered
-   */
+	 * @see #MACHINE
+	 * @model literal="M"
+	 * @generated
+	 * @ordered
+	 */
   public static final int MACHINE_VALUE = 1;
 
   /**
-   * The '<em><b>BIDDABLE</b></em>' literal value.
-   * <!-- begin-user-doc -->
+	 * The '<em><b>BIDDABLE</b></em>' literal value.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>BIDDABLE</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #BIDDABLE
-   * @model literal="B"
-   * @generated
-   * @ordered
-   */
+	 * @see #BIDDABLE
+	 * @model literal="B"
+	 * @generated
+	 * @ordered
+	 */
   public static final int BIDDABLE_VALUE = 2;
 
   /**
-   * The '<em><b>LEXICAL</b></em>' literal value.
-   * <!-- begin-user-doc -->
+	 * The '<em><b>LEXICAL</b></em>' literal value.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>LEXICAL</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #LEXICAL
-   * @model literal="X"
-   * @generated
-   * @ordered
-   */
+	 * @see #LEXICAL
+	 * @model literal="X"
+	 * @generated
+	 * @ordered
+	 */
   public static final int LEXICAL_VALUE = 3;
 
   /**
-   * The '<em><b>CAUSAL</b></em>' literal value.
-   * <!-- begin-user-doc -->
+	 * The '<em><b>CAUSAL</b></em>' literal value.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>CAUSAL</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #CAUSAL
-   * @model literal="C"
-   * @generated
-   * @ordered
-   */
+	 * @see #CAUSAL
+	 * @model literal="C"
+	 * @generated
+	 * @ordered
+	 */
   public static final int CAUSAL_VALUE = 4;
 
   /**
-   * The '<em><b>DESIGNED</b></em>' literal value.
-   * <!-- begin-user-doc -->
+	 * The '<em><b>DESIGNED</b></em>' literal value.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>DESIGNED</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #DESIGNED
-   * @model literal="D"
-   * @generated
-   * @ordered
-   */
+	 * @see #DESIGNED
+	 * @model literal="D"
+	 * @generated
+	 * @ordered
+	 */
   public static final int DESIGNED_VALUE = 5;
 
   /**
-   * The '<em><b>PHYSICAL</b></em>' literal value.
-   * <!-- begin-user-doc -->
+	 * The '<em><b>PHYSICAL</b></em>' literal value.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>PHYSICAL</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #PHYSICAL
-   * @model literal="P"
-   * @generated
-   * @ordered
-   */
+	 * @see #PHYSICAL
+	 * @model literal="P"
+	 * @generated
+	 * @ordered
+	 */
   public static final int PHYSICAL_VALUE = 6;
 
   /**
-   * An array of all the '<em><b>Node Type</b></em>' enumerators.
-   * <!-- begin-user-doc -->
+	 * An array of all the '<em><b>Node Type</b></em>' enumerators.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private static final NodeType[] VALUES_ARRAY =
-    new NodeType[]
-    {
-      REQUIREMENT,
-      MACHINE,
-      BIDDABLE,
-      LEXICAL,
-      CAUSAL,
-      DESIGNED,
-      PHYSICAL,
-    };
+    new NodeType[] {
+			REQUIREMENT,
+			MACHINE,
+			BIDDABLE,
+			LEXICAL,
+			CAUSAL,
+			DESIGNED,
+			PHYSICAL,
+		};
 
   /**
-   * A public read-only list of all the '<em><b>Node Type</b></em>' enumerators.
-   * <!-- begin-user-doc -->
+	 * A public read-only list of all the '<em><b>Node Type</b></em>' enumerators.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public static final List<NodeType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>Node Type</b></em>' literal with the specified literal value.
-   * <!-- begin-user-doc -->
+	 * Returns the '<em><b>Node Type</b></em>' literal with the specified literal value.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public static NodeType get(String literal)
   {
-    for (int i = 0; i < VALUES_ARRAY.length; ++i)
-    {
-      NodeType result = VALUES_ARRAY[i];
-      if (result.toString().equals(literal))
-      {
-        return result;
-      }
-    }
-    return null;
-  }
+		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+			NodeType result = VALUES_ARRAY[i];
+			if (result.toString().equals(literal)) {
+				return result;
+			}
+		}
+		return null;
+	}
 
   /**
-   * Returns the '<em><b>Node Type</b></em>' literal with the specified name.
-   * <!-- begin-user-doc -->
+	 * Returns the '<em><b>Node Type</b></em>' literal with the specified name.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public static NodeType getByName(String name)
   {
-    for (int i = 0; i < VALUES_ARRAY.length; ++i)
-    {
-      NodeType result = VALUES_ARRAY[i];
-      if (result.getName().equals(name))
-      {
-        return result;
-      }
-    }
-    return null;
-  }
+		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+			NodeType result = VALUES_ARRAY[i];
+			if (result.getName().equals(name)) {
+				return result;
+			}
+		}
+		return null;
+	}
 
   /**
-   * Returns the '<em><b>Node Type</b></em>' literal with the specified integer value.
-   * <!-- begin-user-doc -->
+	 * Returns the '<em><b>Node Type</b></em>' literal with the specified integer value.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public static NodeType get(int value)
   {
-    switch (value)
-    {
-      case REQUIREMENT_VALUE: return REQUIREMENT;
-      case MACHINE_VALUE: return MACHINE;
-      case BIDDABLE_VALUE: return BIDDABLE;
-      case LEXICAL_VALUE: return LEXICAL;
-      case CAUSAL_VALUE: return CAUSAL;
-      case DESIGNED_VALUE: return DESIGNED;
-      case PHYSICAL_VALUE: return PHYSICAL;
-    }
-    return null;
-  }
+		switch (value) {
+			case REQUIREMENT_VALUE: return REQUIREMENT;
+			case MACHINE_VALUE: return MACHINE;
+			case BIDDABLE_VALUE: return BIDDABLE;
+			case LEXICAL_VALUE: return LEXICAL;
+			case CAUSAL_VALUE: return CAUSAL;
+			case DESIGNED_VALUE: return DESIGNED;
+			case PHYSICAL_VALUE: return PHYSICAL;
+		}
+		return null;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private final int value;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private final String name;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private final String literal;
 
   /**
-   * Only this class can construct instances.
-   * <!-- begin-user-doc -->
+	 * Only this class can construct instances.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private NodeType(int value, String name, String literal)
   {
-    this.value = value;
-    this.name = name;
-    this.literal = literal;
-  }
+		this.value = value;
+		this.name = name;
+		this.literal = literal;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public int getValue()
   {
-    return value;
-  }
+	  return value;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public String getName()
   {
-    return name;
-  }
+	  return name;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public String getLiteral()
   {
-    return literal;
-  }
+	  return literal;
+	}
 
   /**
-   * Returns the literal value of the enumerator, which is its string representation.
-   * <!-- begin-user-doc -->
+	 * Returns the literal value of the enumerator, which is its string representation.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public String toString()
   {
-    return literal;
-  }
+		return literal;
+	}
   
 } //NodeType

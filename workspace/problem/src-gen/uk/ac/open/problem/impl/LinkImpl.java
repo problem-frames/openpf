@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import uk.ac.open.problem.Concern;
 import uk.ac.open.problem.Link;
 import uk.ac.open.problem.LinkType;
 import uk.ac.open.problem.Node;
@@ -39,6 +40,7 @@ import uk.ac.open.problem.ProblemPackage;
  *   <li>{@link uk.ac.open.problem.impl.LinkImpl#getTo <em>To</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.LinkImpl#getPhenomena <em>Phenomena</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.LinkImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link uk.ac.open.problem.impl.LinkImpl#getConcerns <em>Concerns</em>}</li>
  * </ul>
  * </p>
  *
@@ -47,385 +49,411 @@ import uk.ac.open.problem.ProblemPackage;
 public class LinkImpl extends MinimalEObjectImpl.Container implements Link
 {
   /**
-   * The cached value of the '{@link #getFrom() <em>From</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getFrom() <em>From</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getFrom()
-   * @generated
-   * @ordered
-   */
+	 * @see #getFrom()
+	 * @generated
+	 * @ordered
+	 */
   protected Node from;
 
   /**
-   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
-   * @generated
-   * @ordered
-   */
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
   protected static final LinkType TYPE_EDEFAULT = LinkType.INTERFACE;
 
   /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
-   * @generated
-   * @ordered
-   */
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
   protected LinkType type = TYPE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getTo() <em>To</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getTo() <em>To</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTo()
-   * @generated
-   * @ordered
-   */
+	 * @see #getTo()
+	 * @generated
+	 * @ordered
+	 */
   protected Node to;
 
   /**
-   * The cached value of the '{@link #getPhenomena() <em>Phenomena</em>}' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getPhenomena() <em>Phenomena</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPhenomena()
-   * @generated
-   * @ordered
-   */
+	 * @see #getPhenomena()
+	 * @generated
+	 * @ordered
+	 */
   protected EList<Phenomenon> phenomena;
 
   /**
-   * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDescription()
-   * @generated
-   * @ordered
-   */
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
   protected static final String DESCRIPTION_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDescription()
-   * @generated
-   * @ordered
-   */
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
   protected String description = DESCRIPTION_EDEFAULT;
 
   /**
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getConcerns() <em>Concerns</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  protected LinkImpl()
-  {
-    super();
-  }
+	 * @see #getConcerns()
+	 * @generated
+	 * @ordered
+	 */
+  protected EList<Concern> concerns;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
+  protected LinkImpl()
+  {
+		super();
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return ProblemPackage.Literals.LINK;
-  }
+		return ProblemPackage.Literals.LINK;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Node getFrom()
   {
-    if (from != null && from.eIsProxy())
-    {
-      InternalEObject oldFrom = (InternalEObject)from;
-      from = (Node)eResolveProxy(oldFrom);
-      if (from != oldFrom)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, ProblemPackage.LINK__FROM, oldFrom, from));
-      }
-    }
-    return from;
-  }
+		if (from != null && from.eIsProxy()) {
+			InternalEObject oldFrom = (InternalEObject)from;
+			from = (Node)eResolveProxy(oldFrom);
+			if (from != oldFrom) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ProblemPackage.LINK__FROM, oldFrom, from));
+			}
+		}
+		return from;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Node basicGetFrom()
   {
-    return from;
-  }
+		return from;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setFrom(Node newFrom)
   {
-    Node oldFrom = from;
-    from = newFrom;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.LINK__FROM, oldFrom, from));
-  }
+		Node oldFrom = from;
+		from = newFrom;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.LINK__FROM, oldFrom, from));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public LinkType getType()
   {
-    return type;
-  }
+		return type;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setType(LinkType newType)
   {
-    LinkType oldType = type;
-    type = newType == null ? TYPE_EDEFAULT : newType;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.LINK__TYPE, oldType, type));
-  }
+		LinkType oldType = type;
+		type = newType == null ? TYPE_EDEFAULT : newType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.LINK__TYPE, oldType, type));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Node getTo()
   {
-    if (to != null && to.eIsProxy())
-    {
-      InternalEObject oldTo = (InternalEObject)to;
-      to = (Node)eResolveProxy(oldTo);
-      if (to != oldTo)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, ProblemPackage.LINK__TO, oldTo, to));
-      }
-    }
-    return to;
-  }
+		if (to != null && to.eIsProxy()) {
+			InternalEObject oldTo = (InternalEObject)to;
+			to = (Node)eResolveProxy(oldTo);
+			if (to != oldTo) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ProblemPackage.LINK__TO, oldTo, to));
+			}
+		}
+		return to;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Node basicGetTo()
   {
-    return to;
-  }
+		return to;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setTo(Node newTo)
   {
-    Node oldTo = to;
-    to = newTo;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.LINK__TO, oldTo, to));
-  }
+		Node oldTo = to;
+		to = newTo;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.LINK__TO, oldTo, to));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public EList<Phenomenon> getPhenomena()
   {
-    if (phenomena == null)
-    {
-      phenomena = new EObjectContainmentEList<Phenomenon>(Phenomenon.class, this, ProblemPackage.LINK__PHENOMENA);
-    }
-    return phenomena;
-  }
+		if (phenomena == null) {
+			phenomena = new EObjectContainmentEList<Phenomenon>(Phenomenon.class, this, ProblemPackage.LINK__PHENOMENA);
+		}
+		return phenomena;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public String getDescription()
   {
-    return description;
-  }
+		return description;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setDescription(String newDescription)
   {
-    String oldDescription = description;
-    description = newDescription;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.LINK__DESCRIPTION, oldDescription, description));
-  }
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.LINK__DESCRIPTION, oldDescription, description));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
+  public EList<Concern> getConcerns()
+  {
+		if (concerns == null) {
+			concerns = new EObjectContainmentEList<Concern>(Concern.class, this, ProblemPackage.LINK__CONCERNS);
+		}
+		return concerns;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    switch (featureID)
-    {
-      case ProblemPackage.LINK__PHENOMENA:
-        return ((InternalEList<?>)getPhenomena()).basicRemove(otherEnd, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
+		switch (featureID) {
+			case ProblemPackage.LINK__PHENOMENA:
+				return ((InternalEList<?>)getPhenomena()).basicRemove(otherEnd, msgs);
+			case ProblemPackage.LINK__CONCERNS:
+				return ((InternalEList<?>)getConcerns()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case ProblemPackage.LINK__FROM:
-        if (resolve) return getFrom();
-        return basicGetFrom();
-      case ProblemPackage.LINK__TYPE:
-        return getType();
-      case ProblemPackage.LINK__TO:
-        if (resolve) return getTo();
-        return basicGetTo();
-      case ProblemPackage.LINK__PHENOMENA:
-        return getPhenomena();
-      case ProblemPackage.LINK__DESCRIPTION:
-        return getDescription();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case ProblemPackage.LINK__FROM:
+				if (resolve) return getFrom();
+				return basicGetFrom();
+			case ProblemPackage.LINK__TYPE:
+				return getType();
+			case ProblemPackage.LINK__TO:
+				if (resolve) return getTo();
+				return basicGetTo();
+			case ProblemPackage.LINK__PHENOMENA:
+				return getPhenomena();
+			case ProblemPackage.LINK__DESCRIPTION:
+				return getDescription();
+			case ProblemPackage.LINK__CONCERNS:
+				return getConcerns();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case ProblemPackage.LINK__FROM:
-        setFrom((Node)newValue);
-        return;
-      case ProblemPackage.LINK__TYPE:
-        setType((LinkType)newValue);
-        return;
-      case ProblemPackage.LINK__TO:
-        setTo((Node)newValue);
-        return;
-      case ProblemPackage.LINK__PHENOMENA:
-        getPhenomena().clear();
-        getPhenomena().addAll((Collection<? extends Phenomenon>)newValue);
-        return;
-      case ProblemPackage.LINK__DESCRIPTION:
-        setDescription((String)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case ProblemPackage.LINK__FROM:
+				setFrom((Node)newValue);
+				return;
+			case ProblemPackage.LINK__TYPE:
+				setType((LinkType)newValue);
+				return;
+			case ProblemPackage.LINK__TO:
+				setTo((Node)newValue);
+				return;
+			case ProblemPackage.LINK__PHENOMENA:
+				getPhenomena().clear();
+				getPhenomena().addAll((Collection<? extends Phenomenon>)newValue);
+				return;
+			case ProblemPackage.LINK__DESCRIPTION:
+				setDescription((String)newValue);
+				return;
+			case ProblemPackage.LINK__CONCERNS:
+				getConcerns().clear();
+				getConcerns().addAll((Collection<? extends Concern>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case ProblemPackage.LINK__FROM:
-        setFrom((Node)null);
-        return;
-      case ProblemPackage.LINK__TYPE:
-        setType(TYPE_EDEFAULT);
-        return;
-      case ProblemPackage.LINK__TO:
-        setTo((Node)null);
-        return;
-      case ProblemPackage.LINK__PHENOMENA:
-        getPhenomena().clear();
-        return;
-      case ProblemPackage.LINK__DESCRIPTION:
-        setDescription(DESCRIPTION_EDEFAULT);
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case ProblemPackage.LINK__FROM:
+				setFrom((Node)null);
+				return;
+			case ProblemPackage.LINK__TYPE:
+				setType(TYPE_EDEFAULT);
+				return;
+			case ProblemPackage.LINK__TO:
+				setTo((Node)null);
+				return;
+			case ProblemPackage.LINK__PHENOMENA:
+				getPhenomena().clear();
+				return;
+			case ProblemPackage.LINK__DESCRIPTION:
+				setDescription(DESCRIPTION_EDEFAULT);
+				return;
+			case ProblemPackage.LINK__CONCERNS:
+				getConcerns().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case ProblemPackage.LINK__FROM:
-        return from != null;
-      case ProblemPackage.LINK__TYPE:
-        return type != TYPE_EDEFAULT;
-      case ProblemPackage.LINK__TO:
-        return to != null;
-      case ProblemPackage.LINK__PHENOMENA:
-        return phenomena != null && !phenomena.isEmpty();
-      case ProblemPackage.LINK__DESCRIPTION:
-        return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case ProblemPackage.LINK__FROM:
+				return from != null;
+			case ProblemPackage.LINK__TYPE:
+				return type != TYPE_EDEFAULT;
+			case ProblemPackage.LINK__TO:
+				return to != null;
+			case ProblemPackage.LINK__PHENOMENA:
+				return phenomena != null && !phenomena.isEmpty();
+			case ProblemPackage.LINK__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+			case ProblemPackage.LINK__CONCERNS:
+				return concerns != null && !concerns.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public String toString()
   {
-    if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (type: ");
-    result.append(type);
-    result.append(", description: ");
-    result.append(description);
-    result.append(')');
-    return result.toString();
-  }
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (type: ");
+		result.append(type);
+		result.append(", description: ");
+		result.append(description);
+		result.append(')');
+		return result.toString();
+	}
 
 } //LinkImpl

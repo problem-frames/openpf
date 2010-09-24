@@ -5,6 +5,8 @@ generate problem "http://open.ac.uk/problem"
 ProblemDiagram: "problem:" name=ID ("for" highlight=[Node])?
 	((nodes+=Node | links+=Link))*;
 
+Concern: "concern" name=STRING;
+
 Node:
 	name=ID (type=NodeType)?
 	((":")? description=STRING)?
@@ -13,7 +15,8 @@ Node:
 	(subproblem+=ProblemDiagram
 	| "see" "domain" problemNodeRef+=[Node]
 	| "see" "problem" problemRef+=[ProblemDiagram]
-	| "see" href+=STRING)*
+	| "see" href+=STRING
+	| concerns+=Concern)*
 	"}")?;
 
 enum NodeType:
@@ -28,7 +31,8 @@ enum PhenomenonType:
 Link:
 	from=[Node] (type=LinkType) to=[Node] ('{' phenomena+=Phenomenon (',' phenomena+=Phenomenon)*
 	'}')?
-	((":")? description=STRING)?;
+	((":")? description=STRING)?
+	("{" (concerns+=Concern)* "}")?;
 
 enum LinkType:
 	INTERFACE="--" | REFERENCE="~~" | CONSTRAINT="~>";

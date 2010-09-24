@@ -32,9 +32,10 @@ protected class ThisRootNode extends RootToken {
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
 			case 0: return new ProblemDiagram_Group(this, this, 0, inst);
-			case 1: return new Node_Group(this, this, 1, inst);
-			case 2: return new Phenomenon_Group(this, this, 2, inst);
-			case 3: return new Link_Group(this, this, 3, inst);
+			case 1: return new Concern_Group(this, this, 1, inst);
+			case 2: return new Node_Group(this, this, 2, inst);
+			case 3: return new Phenomenon_Group(this, this, 3, inst);
+			case 4: return new Link_Group(this, this, 4, inst);
 			default: return null;
 		}	
 	}	
@@ -340,18 +341,113 @@ protected class ProblemDiagram_LinksAssignment_3_1 extends AssignmentToken  {
 /************ end Rule ProblemDiagram ****************/
 
 
+/************ begin Rule Concern ****************
+ *
+ * Concern:
+ * 	"concern" name=STRING;
+ *
+ **/
+
+// "concern" name=STRING
+protected class Concern_Group extends GroupToken {
+	
+	public Concern_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Group getGrammarElement() {
+		return grammarAccess.getConcernAccess().getGroup();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new Concern_NameAssignment_1(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+    @Override
+	public IEObjectConsumer tryConsume() {
+		if(getEObject().eClass() != grammarAccess.getConcernRule().getType().getClassifier())
+			return null;
+		return eObjectConsumer;
+	}
+
+}
+
+// "concern"
+protected class Concern_ConcernKeyword_0 extends KeywordToken  {
+	
+	public Concern_ConcernKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Keyword getGrammarElement() {
+		return grammarAccess.getConcernAccess().getConcernKeyword_0();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			default: return lastRuleCallOrigin.createFollowerAfterReturn(this, index, index, inst);
+		}	
+	}
+
+}
+
+// name=STRING
+protected class Concern_NameAssignment_1 extends AssignmentToken  {
+	
+	public Concern_NameAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Assignment getGrammarElement() {
+		return grammarAccess.getConcernAccess().getNameAssignment_1();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new Concern_ConcernKeyword_0(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+    @Override	
+	public IEObjectConsumer tryConsume() {
+		if((value = eObjectConsumer.getConsumable("name",true)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("name");
+		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getConcernAccess().getNameSTRINGTerminalRuleCall_1_0(), value, null)) {
+			type = AssignmentType.TERMINAL_RULE_CALL;
+			element = grammarAccess.getConcernAccess().getNameSTRINGTerminalRuleCall_1_0();
+			return obj;
+		}
+		return null;
+	}
+
+}
+
+
+/************ end Rule Concern ****************/
+
+
 /************ begin Rule Node ****************
  *
  * Node:
  * 	name=ID type=NodeType? (":"? description=STRING)? ("{" (hiddenPhenomena+=Phenomenon (","
- * 	hiddenPhenomena+=Phenomenon)*)? (subproblem+=ProblemDiagram //	| "see" "problem" problemRef+=[ProblemDiagram|QUALIFIED_NAME]
- * 	| "see" "domain" problemNodeRef+=[Node] | "see" "problem" problemRef+=[ProblemDiagram] | "see" href+=STRING)* "}")?;
+ * 	hiddenPhenomena+=Phenomenon)*)? (subproblem+=ProblemDiagram | "see" "domain" problemNodeRef+=[Node] | "see" "problem"
+ * 	problemRef+=[ProblemDiagram] | "see" href+=STRING | concerns+=Concern)* "}")?;
  *
  **/
 
 // name=ID type=NodeType? (":"? description=STRING)? ("{" (hiddenPhenomena+=Phenomenon ("," hiddenPhenomena+=Phenomenon)*)?
-// (subproblem+=ProblemDiagram //	| "see" "problem" problemRef+=[ProblemDiagram|QUALIFIED_NAME]
-// | "see" "domain" problemNodeRef+=[Node] | "see" "problem" problemRef+=[ProblemDiagram] | "see" href+=STRING)* "}")?
+// (subproblem+=ProblemDiagram | "see" "domain" problemNodeRef+=[Node] | "see" "problem" problemRef+=[ProblemDiagram] |
+// "see" href+=STRING | concerns+=Concern)* "}")?
 protected class Node_Group extends GroupToken {
 	
 	public Node_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -508,8 +604,8 @@ protected class Node_DescriptionAssignment_2_1 extends AssignmentToken  {
 }
 
 
-// ("{" (hiddenPhenomena+=Phenomenon ("," hiddenPhenomena+=Phenomenon)*)? (subproblem+=ProblemDiagram //	| "see" "problem" problemRef+=[ProblemDiagram|QUALIFIED_NAME]
-// | "see" "domain" problemNodeRef+=[Node] | "see" "problem" problemRef+=[ProblemDiagram] | "see" href+=STRING)* "}")?
+// ("{" (hiddenPhenomena+=Phenomenon ("," hiddenPhenomena+=Phenomenon)*)? (subproblem+=ProblemDiagram | "see" "domain"
+// problemNodeRef+=[Node] | "see" "problem" problemRef+=[ProblemDiagram] | "see" href+=STRING | concerns+=Concern)* "}")?
 protected class Node_Group_3 extends GroupToken {
 	
 	public Node_Group_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -717,8 +813,8 @@ protected class Node_HiddenPhenomenaAssignment_3_1_1_1 extends AssignmentToken  
 
 
 
-// (subproblem+=ProblemDiagram //	| "see" "problem" problemRef+=[ProblemDiagram|QUALIFIED_NAME]
-// | "see" "domain" problemNodeRef+=[Node] | "see" "problem" problemRef+=[ProblemDiagram] | "see" href+=STRING)*
+// (subproblem+=ProblemDiagram | "see" "domain" problemNodeRef+=[Node] | "see" "problem" problemRef+=[ProblemDiagram] |
+// "see" href+=STRING | concerns+=Concern)*
 protected class Node_Alternatives_3_2 extends AlternativesToken {
 
 	public Node_Alternatives_3_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -737,6 +833,7 @@ protected class Node_Alternatives_3_2 extends AlternativesToken {
 			case 1: return new Node_Group_3_2_1(lastRuleCallOrigin, this, 1, inst);
 			case 2: return new Node_Group_3_2_2(lastRuleCallOrigin, this, 2, inst);
 			case 3: return new Node_Group_3_2_3(lastRuleCallOrigin, this, 3, inst);
+			case 4: return new Node_ConcernsAssignment_3_2_4(lastRuleCallOrigin, this, 4, inst);
 			default: return null;
 		}	
 	}
@@ -1084,6 +1181,54 @@ protected class Node_HrefAssignment_3_2_3_1 extends AssignmentToken  {
 }
 
 
+// concerns+=Concern
+protected class Node_ConcernsAssignment_3_2_4 extends AssignmentToken  {
+	
+	public Node_ConcernsAssignment_3_2_4(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Assignment getGrammarElement() {
+		return grammarAccess.getNodeAccess().getConcernsAssignment_3_2_4();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new Concern_Group(this, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+    @Override	
+	public IEObjectConsumer tryConsume() {
+		if((value = eObjectConsumer.getConsumable("concerns",true)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("concerns");
+		if(value instanceof EObject) { // org::eclipse::xtext::impl::RuleCallImpl
+			IEObjectConsumer param = createEObjectConsumer((EObject)value);
+			if(param.isInstanceOf(grammarAccess.getConcernRule().getType().getClassifier())) {
+				type = AssignmentType.PARSER_RULE_CALL;
+				element = grammarAccess.getNodeAccess().getConcernsConcernParserRuleCall_3_2_4_0(); 
+				consumed = obj;
+				return param;
+			}
+		}
+		return null;
+	}
+
+    @Override
+	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
+		if(value == inst.getEObject() && !inst.isConsumed()) return null;
+		switch(index) {
+			case 0: return new Node_Alternatives_3_2(lastRuleCallOrigin, next, actIndex, consumed);
+			case 1: return new Node_Group_3_1(lastRuleCallOrigin, next, actIndex, consumed);
+			case 2: return new Node_LeftCurlyBracketKeyword_3_0(lastRuleCallOrigin, next, actIndex, consumed);
+			default: return null;
+		}	
+	}	
+}
+
 
 // "}"
 protected class Node_RightCurlyBracketKeyword_3_3 extends KeywordToken  {
@@ -1317,12 +1462,12 @@ protected class Phenomenon_DescriptionAssignment_3_1 extends AssignmentToken  {
  *
  * Link:
  * 	from=[Node] type=LinkType to=[Node] ("{" phenomena+=Phenomenon ("," phenomena+=Phenomenon)* "}")? (":"?
- * 	description=STRING)?;
+ * 	description=STRING)? ("{" concerns+=Concern* "}")?;
  *
  **/
 
 // from=[Node] type=LinkType to=[Node] ("{" phenomena+=Phenomenon ("," phenomena+=Phenomenon)* "}")? (":"?
-// description=STRING)?
+// description=STRING)? ("{" concerns+=Concern* "}")?
 protected class Link_Group extends GroupToken {
 	
 	public Link_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1337,9 +1482,10 @@ protected class Link_Group extends GroupToken {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Link_Group_4(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new Link_Group_3(lastRuleCallOrigin, this, 1, inst);
-			case 2: return new Link_ToAssignment_2(lastRuleCallOrigin, this, 2, inst);
+			case 0: return new Link_Group_5(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new Link_Group_4(lastRuleCallOrigin, this, 1, inst);
+			case 2: return new Link_Group_3(lastRuleCallOrigin, this, 2, inst);
+			case 3: return new Link_ToAssignment_2(lastRuleCallOrigin, this, 3, inst);
 			default: return null;
 		}	
 	}
@@ -1719,6 +1865,122 @@ protected class Link_DescriptionAssignment_4_1 extends AssignmentToken  {
 			return obj;
 		}
 		return null;
+	}
+
+}
+
+
+// ("{" concerns+=Concern* "}")?
+protected class Link_Group_5 extends GroupToken {
+	
+	public Link_Group_5(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Group getGrammarElement() {
+		return grammarAccess.getLinkAccess().getGroup_5();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new Link_RightCurlyBracketKeyword_5_2(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+}
+
+// "{"
+protected class Link_LeftCurlyBracketKeyword_5_0 extends KeywordToken  {
+	
+	public Link_LeftCurlyBracketKeyword_5_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Keyword getGrammarElement() {
+		return grammarAccess.getLinkAccess().getLeftCurlyBracketKeyword_5_0();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new Link_Group_4(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new Link_Group_3(lastRuleCallOrigin, this, 1, inst);
+			case 2: return new Link_ToAssignment_2(lastRuleCallOrigin, this, 2, inst);
+			default: return null;
+		}	
+	}
+
+}
+
+// concerns+=Concern*
+protected class Link_ConcernsAssignment_5_1 extends AssignmentToken  {
+	
+	public Link_ConcernsAssignment_5_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Assignment getGrammarElement() {
+		return grammarAccess.getLinkAccess().getConcernsAssignment_5_1();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new Concern_Group(this, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+    @Override	
+	public IEObjectConsumer tryConsume() {
+		if((value = eObjectConsumer.getConsumable("concerns",false)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("concerns");
+		if(value instanceof EObject) { // org::eclipse::xtext::impl::RuleCallImpl
+			IEObjectConsumer param = createEObjectConsumer((EObject)value);
+			if(param.isInstanceOf(grammarAccess.getConcernRule().getType().getClassifier())) {
+				type = AssignmentType.PARSER_RULE_CALL;
+				element = grammarAccess.getLinkAccess().getConcernsConcernParserRuleCall_5_1_0(); 
+				consumed = obj;
+				return param;
+			}
+		}
+		return null;
+	}
+
+    @Override
+	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
+		if(value == inst.getEObject() && !inst.isConsumed()) return null;
+		switch(index) {
+			case 0: return new Link_ConcernsAssignment_5_1(lastRuleCallOrigin, next, actIndex, consumed);
+			case 1: return new Link_LeftCurlyBracketKeyword_5_0(lastRuleCallOrigin, next, actIndex, consumed);
+			default: return null;
+		}	
+	}	
+}
+
+// "}"
+protected class Link_RightCurlyBracketKeyword_5_2 extends KeywordToken  {
+	
+	public Link_RightCurlyBracketKeyword_5_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Keyword getGrammarElement() {
+		return grammarAccess.getLinkAccess().getRightCurlyBracketKeyword_5_2();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new Link_ConcernsAssignment_5_1(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
 	}
 
 }

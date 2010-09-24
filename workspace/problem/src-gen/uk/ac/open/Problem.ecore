@@ -11,6 +11,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="links" upperBound="-1"
         eType="#//Link" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Concern">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Node">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//NodeType"/>
@@ -25,6 +28,8 @@
         upperBound="-1" eType="#//ProblemDiagram"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="href" unique="false" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="concerns" upperBound="-1"
+        eType="#//Concern" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="NodeType">
     <eLiterals name="REQUIREMENT" literal="R"/>
@@ -53,6 +58,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="phenomena" upperBound="-1"
         eType="#//Phenomenon" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="concerns" upperBound="-1"
+        eType="#//Concern" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="LinkType">
     <eLiterals name="INTERFACE" literal="--"/>

@@ -25,230 +25,236 @@ import uk.ac.open.problem.*;
 public class ProblemFactoryImpl extends EFactoryImpl implements ProblemFactory
 {
   /**
-   * Creates the default factory implementation.
-   * <!-- begin-user-doc -->
+	 * Creates the default factory implementation.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public static ProblemFactory init()
   {
-    try
-    {
-      ProblemFactory theProblemFactory = (ProblemFactory)EPackage.Registry.INSTANCE.getEFactory("http://open.ac.uk/problem"); 
-      if (theProblemFactory != null)
-      {
-        return theProblemFactory;
-      }
-    }
-    catch (Exception exception)
-    {
-      EcorePlugin.INSTANCE.log(exception);
-    }
-    return new ProblemFactoryImpl();
-  }
+		try {
+			ProblemFactory theProblemFactory = (ProblemFactory)EPackage.Registry.INSTANCE.getEFactory("http://open.ac.uk/problem"); 
+			if (theProblemFactory != null) {
+				return theProblemFactory;
+			}
+		}
+		catch (Exception exception) {
+			EcorePlugin.INSTANCE.log(exception);
+		}
+		return new ProblemFactoryImpl();
+	}
 
   /**
-   * Creates an instance of the factory.
-   * <!-- begin-user-doc -->
+	 * Creates an instance of the factory.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public ProblemFactoryImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EObject create(EClass eClass)
   {
-    switch (eClass.getClassifierID())
-    {
-      case ProblemPackage.PROBLEM_DIAGRAM: return createProblemDiagram();
-      case ProblemPackage.NODE: return createNode();
-      case ProblemPackage.PHENOMENON: return createPhenomenon();
-      case ProblemPackage.LINK: return createLink();
-      default:
-        throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-    }
-  }
+		switch (eClass.getClassifierID()) {
+			case ProblemPackage.PROBLEM_DIAGRAM: return createProblemDiagram();
+			case ProblemPackage.CONCERN: return createConcern();
+			case ProblemPackage.NODE: return createNode();
+			case ProblemPackage.PHENOMENON: return createPhenomenon();
+			case ProblemPackage.LINK: return createLink();
+			default:
+				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object createFromString(EDataType eDataType, String initialValue)
   {
-    switch (eDataType.getClassifierID())
-    {
-      case ProblemPackage.NODE_TYPE:
-        return createNodeTypeFromString(eDataType, initialValue);
-      case ProblemPackage.PHENOMENON_TYPE:
-        return createPhenomenonTypeFromString(eDataType, initialValue);
-      case ProblemPackage.LINK_TYPE:
-        return createLinkTypeFromString(eDataType, initialValue);
-      default:
-        throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-    }
-  }
+		switch (eDataType.getClassifierID()) {
+			case ProblemPackage.NODE_TYPE:
+				return createNodeTypeFromString(eDataType, initialValue);
+			case ProblemPackage.PHENOMENON_TYPE:
+				return createPhenomenonTypeFromString(eDataType, initialValue);
+			case ProblemPackage.LINK_TYPE:
+				return createLinkTypeFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public String convertToString(EDataType eDataType, Object instanceValue)
   {
-    switch (eDataType.getClassifierID())
-    {
-      case ProblemPackage.NODE_TYPE:
-        return convertNodeTypeToString(eDataType, instanceValue);
-      case ProblemPackage.PHENOMENON_TYPE:
-        return convertPhenomenonTypeToString(eDataType, instanceValue);
-      case ProblemPackage.LINK_TYPE:
-        return convertLinkTypeToString(eDataType, instanceValue);
-      default:
-        throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-    }
-  }
+		switch (eDataType.getClassifierID()) {
+			case ProblemPackage.NODE_TYPE:
+				return convertNodeTypeToString(eDataType, instanceValue);
+			case ProblemPackage.PHENOMENON_TYPE:
+				return convertPhenomenonTypeToString(eDataType, instanceValue);
+			case ProblemPackage.LINK_TYPE:
+				return convertLinkTypeToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public ProblemDiagram createProblemDiagram()
   {
-    ProblemDiagramImpl problemDiagram = new ProblemDiagramImpl();
-    return problemDiagram;
-  }
+		ProblemDiagramImpl problemDiagram = new ProblemDiagramImpl();
+		return problemDiagram;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
+  public Concern createConcern()
+  {
+		ConcernImpl concern = new ConcernImpl();
+		return concern;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
   public Node createNode()
   {
-    NodeImpl node = new NodeImpl();
-    return node;
-  }
+		NodeImpl node = new NodeImpl();
+		return node;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Phenomenon createPhenomenon()
   {
-    PhenomenonImpl phenomenon = new PhenomenonImpl();
-    return phenomenon;
-  }
+		PhenomenonImpl phenomenon = new PhenomenonImpl();
+		return phenomenon;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Link createLink()
   {
-    LinkImpl link = new LinkImpl();
-    return link;
-  }
+		LinkImpl link = new LinkImpl();
+		return link;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public NodeType createNodeTypeFromString(EDataType eDataType, String initialValue)
   {
-    NodeType result = NodeType.get(initialValue);
-    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-    return result;
-  }
+		NodeType result = NodeType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public String convertNodeTypeToString(EDataType eDataType, Object instanceValue)
   {
-    return instanceValue == null ? null : instanceValue.toString();
-  }
+		return instanceValue == null ? null : instanceValue.toString();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public PhenomenonType createPhenomenonTypeFromString(EDataType eDataType, String initialValue)
   {
-    PhenomenonType result = PhenomenonType.get(initialValue);
-    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-    return result;
-  }
+		PhenomenonType result = PhenomenonType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public String convertPhenomenonTypeToString(EDataType eDataType, Object instanceValue)
   {
-    return instanceValue == null ? null : instanceValue.toString();
-  }
+		return instanceValue == null ? null : instanceValue.toString();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public LinkType createLinkTypeFromString(EDataType eDataType, String initialValue)
   {
-    LinkType result = LinkType.get(initialValue);
-    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-    return result;
-  }
+		LinkType result = LinkType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public String convertLinkTypeToString(EDataType eDataType, Object instanceValue)
   {
-    return instanceValue == null ? null : instanceValue.toString();
-  }
+		return instanceValue == null ? null : instanceValue.toString();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public ProblemPackage getProblemPackage()
   {
-    return (ProblemPackage)getEPackage();
-  }
+		return (ProblemPackage)getEPackage();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @deprecated
-   * @generated
-   */
+	 * @deprecated
+	 * @generated
+	 */
   @Deprecated
   public static ProblemPackage getPackage()
   {
-    return ProblemPackage.eINSTANCE;
-  }
+		return ProblemPackage.eINSTANCE;
+	}
 
 } //ProblemFactoryImpl

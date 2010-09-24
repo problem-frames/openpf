@@ -18,56 +18,65 @@ import org.eclipse.emf.ecore.EFactory;
 public interface ProblemFactory extends EFactory
 {
   /**
-   * The singleton instance of the factory.
-   * <!-- begin-user-doc -->
+	 * The singleton instance of the factory.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   ProblemFactory eINSTANCE = uk.ac.open.problem.impl.ProblemFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Diagram</em>'.
-   * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Diagram</em>'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Diagram</em>'.
-   * @generated
-   */
+	 * @return a new object of class '<em>Diagram</em>'.
+	 * @generated
+	 */
   ProblemDiagram createProblemDiagram();
 
   /**
-   * Returns a new object of class '<em>Node</em>'.
-   * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Concern</em>'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Node</em>'.
-   * @generated
-   */
+	 * @return a new object of class '<em>Concern</em>'.
+	 * @generated
+	 */
+  Concern createConcern();
+
+  /**
+	 * Returns a new object of class '<em>Node</em>'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Node</em>'.
+	 * @generated
+	 */
   Node createNode();
 
   /**
-   * Returns a new object of class '<em>Phenomenon</em>'.
-   * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Phenomenon</em>'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Phenomenon</em>'.
-   * @generated
-   */
+	 * @return a new object of class '<em>Phenomenon</em>'.
+	 * @generated
+	 */
   Phenomenon createPhenomenon();
 
   /**
-   * Returns a new object of class '<em>Link</em>'.
-   * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Link</em>'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Link</em>'.
-   * @generated
-   */
+	 * @return a new object of class '<em>Link</em>'.
+	 * @generated
+	 */
   Link createLink();
 
   /**
-   * Returns the package supported by this factory.
-   * <!-- begin-user-doc -->
+	 * Returns the package supported by this factory.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the package supported by this factory.
-   * @generated
-   */
+	 * @return the package supported by this factory.
+	 * @generated
+	 */
   ProblemPackage getProblemPackage();
 
 } //ProblemFactory

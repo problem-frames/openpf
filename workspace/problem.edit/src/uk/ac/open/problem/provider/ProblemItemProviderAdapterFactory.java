@@ -99,6 +99,29 @@ public class ProblemItemProviderAdapterFactory extends ProblemAdapterFactory imp
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link uk.ac.open.problem.Concern} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ConcernItemProvider concernItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link uk.ac.open.problem.Concern}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createConcernAdapter() {
+		if (concernItemProvider == null) {
+			concernItemProvider = new ConcernItemProvider(this);
+		}
+
+		return concernItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link uk.ac.open.problem.Node} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -267,6 +290,7 @@ public class ProblemItemProviderAdapterFactory extends ProblemAdapterFactory imp
 	 */
 	public void dispose() {
 		if (problemDiagramItemProvider != null) problemDiagramItemProvider.dispose();
+		if (concernItemProvider != null) concernItemProvider.dispose();
 		if (nodeItemProvider != null) nodeItemProvider.dispose();
 		if (phenomenonItemProvider != null) phenomenonItemProvider.dispose();
 		if (linkItemProvider != null) linkItemProvider.dispose();

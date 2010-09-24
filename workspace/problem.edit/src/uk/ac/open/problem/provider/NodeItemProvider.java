@@ -220,6 +220,7 @@ public class NodeItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ProblemPackage.Literals.NODE__HIDDEN_PHENOMENA);
 			childrenFeatures.add(ProblemPackage.Literals.NODE__SUBPROBLEM);
+			childrenFeatures.add(ProblemPackage.Literals.NODE__CONCERNS);
 		}
 		return childrenFeatures;
 	}
@@ -282,6 +283,7 @@ public class NodeItemProvider
 				return;
 			case ProblemPackage.NODE__HIDDEN_PHENOMENA:
 			case ProblemPackage.NODE__SUBPROBLEM:
+			case ProblemPackage.NODE__CONCERNS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -308,6 +310,11 @@ public class NodeItemProvider
 			(createChildParameter
 				(ProblemPackage.Literals.NODE__SUBPROBLEM,
 				 ProblemFactory.eINSTANCE.createProblemDiagram()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ProblemPackage.Literals.NODE__CONCERNS,
+				 ProblemFactory.eINSTANCE.createConcern()));
 	}
 
 	/**

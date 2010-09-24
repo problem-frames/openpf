@@ -9,50 +9,51 @@ import org.eclipse.xtext.parser.antlr.Lexer;
 
 T12 : 'problem:' ;
 T13 : 'for' ;
-T14 : ':' ;
-T15 : '{' ;
-T16 : ',' ;
-T17 : 'see' ;
-T18 : 'domain' ;
-T19 : 'problem' ;
-T20 : '}' ;
-T21 : '!' ;
-T22 : 'R' ;
-T23 : 'M' ;
-T24 : 'B' ;
-T25 : 'X' ;
-T26 : 'C' ;
-T27 : 'D' ;
-T28 : 'P' ;
-T29 : 'phenomenon' ;
-T30 : 'event' ;
-T31 : 'state' ;
-T32 : '--' ;
-T33 : '~~' ;
-T34 : '~>' ;
+T14 : 'concern' ;
+T15 : ':' ;
+T16 : '{' ;
+T17 : ',' ;
+T18 : 'see' ;
+T19 : 'domain' ;
+T20 : 'problem' ;
+T21 : '}' ;
+T22 : '!' ;
+T23 : 'R' ;
+T24 : 'M' ;
+T25 : 'B' ;
+T26 : 'X' ;
+T27 : 'C' ;
+T28 : 'D' ;
+T29 : 'P' ;
+T30 : 'phenomenon' ;
+T31 : 'event' ;
+T32 : 'state' ;
+T33 : '--' ;
+T34 : '~~' ;
+T35 : '~>' ;
 
-// $ANTLR src "../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g" 841
+// $ANTLR src "../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g" 949
 RULE_ID : ('#' ~('#')+ '#'|'^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*);
 
-// $ANTLR src "../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g" 843
+// $ANTLR src "../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g" 951
 RULE_QUALIFIED_NAME : RULE_ID ('.' RULE_ID)*;
 
-// $ANTLR src "../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g" 845
+// $ANTLR src "../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g" 953
 RULE_INT : ('0'..'9')+;
 
-// $ANTLR src "../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g" 847
+// $ANTLR src "../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g" 955
 RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\'');
 
-// $ANTLR src "../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g" 849
+// $ANTLR src "../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g" 957
 RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 
-// $ANTLR src "../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g" 851
+// $ANTLR src "../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g" 959
 RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
-// $ANTLR src "../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g" 853
+// $ANTLR src "../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g" 961
 RULE_WS : (' '|'\t'|'\r'|'\n')+;
 
-// $ANTLR src "../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g" 855
+// $ANTLR src "../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g" 963
 RULE_ANY_OTHER : .;
 
 

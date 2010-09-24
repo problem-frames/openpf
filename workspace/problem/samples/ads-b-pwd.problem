@@ -1,58 +1,48 @@
 problem:
 TheADS_Bproblem
-MSoD R
-:"Maintain the Safety Distance" {
+
+Operator -- CWP {
+	event EnterWeatherInfo,
+	state GetInformed
+} "a" {
+	concern "I am not sure here!"
+}
+
+CWP -- CP "g"
+
+GPS -- Aircrafts "b"
+
+ADS_B -- Aircrafts "c"
+
+ADS_B -- CP "d"
+
+CP -- Display "f"
+
+CP -- Aircrafts "e"
+
+MSoD ~> Aircrafts "r"
+
+MSoD "Maintain the Safety Distance" {
 see "/Examples/event/sit1.ec"
 see "/Examples/event/sit2.ec"
 see "/Examples/event/sit3.ec"
 see "/Examples/event/sit4.ec"
 see "/Examples/istar/open_account.ood" // just a demo
 }
-CP M 
-:"Central Processor" { 
+CP M "Central Processor" { 
 problem: TheCentralProcessorProblem for CPU
 
-CPU M
-:"Central Processing Unit"
+CPU M "Central Processing Unit"
 }
 
-ADS_B C
-:"Ground Receivers"
+ADS_B C "Ground Receivers"
 
-Display C
-:"ATC Display"
+Display C "ATC Display"
 
-Operator B
-:"ATC Operator"
+Operator B "ATC Operator"
 
-GPS B
-:"Satellites"
+GPS B "Satellites"
 
 Aircrafts C
 
-CWP X
-:"Controller Working Position"
-
-Operator -- CWP
-:"a"
-
-CWP -- CP
-:"g"
-
-GPS -- Aircrafts
-:"b"
-
-ADS_B -- Aircrafts
-:"c"
-
-ADS_B -- CP
-:"d"
-
-CP -- Display
-:"f"
-
-CP -- Aircrafts
-:"e"
-
-MSoD ~> Aircrafts
-:"r"
+CWP X "Controller Working Position"
