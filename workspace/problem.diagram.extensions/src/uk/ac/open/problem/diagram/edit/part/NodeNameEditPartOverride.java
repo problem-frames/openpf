@@ -21,9 +21,6 @@ public class NodeNameEditPartOverride extends NodeNameEditPart {
 					new EObjectAdapter(parserElement),
 					getParserOptions().intValue());
 		}
-		if (text == null || text.length() == 0) {
-			text = defaultText;
-		}
 		text = strip_hash(text);
 		return text;
 	}
