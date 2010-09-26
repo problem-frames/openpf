@@ -8,13 +8,14 @@ import org.eclipse.draw2d.PositionConstants;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
+import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.widgets.Display;
 
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.NodeType;
-
+import uk.ac.open.problem.diagram.part.ProblemDiagramEditorPlugin;
 /**
  * 
  * @author yy66
@@ -69,13 +70,17 @@ public class EntityFigure extends Shape {
 	}	
 	
 	private void createContents() {
-
 		fFigureEntityName = new WrappingLabel();
 		fFigureEntityName.setText("");
 		fFigureEntityName.setAlignment(PositionConstants.CENTER);
 		fFigureEntityName.setTextAlignment(PositionConstants.CENTER);
 		fFigureEntityName.setTextUnderline(true);
-		fFigureEntityName.setFont(FFIGUREENTITYNAME_FONT);
+		IPreferenceStore store = ProblemDiagramEditorPlugin.getInstance().getPreferenceStore();
+		boolean FIX_FONT = store.getDefaultBoolean("Fixed font");
+		if (FIX_FONT) {
+			fFigureEntityName.setFont(FFIGUREENTITYNAME_FONT);			
+		} else 
+			fFigureEntityName.setTextUnderline(true);
 		if (highlight) {
 			fFigureEntityName.setForegroundColor(ColorConstants.white);
 			fFigureEntityName.setBackgroundColor(ColorConstants.black);
@@ -93,7 +98,8 @@ public class EntityFigure extends Shape {
 		fFigureEntityDescription = new WrappingLabel();
 		fFigureEntityDescription.setText("");
 		fFigureEntityDescription.setTextWrap(true);
-		fFigureEntityDescription.setFont(FFIGUREENTITYDESCRIPTION_FONT);
+		if (FIX_FONT)
+			fFigureEntityDescription.setFont(FFIGUREENTITYDESCRIPTION_FONT);
 		fFigureEntityDescription.setAlignment(PositionConstants.LEFT);
 		fFigureEntityDescription.setTextAlignment(PositionConstants.LEFT);
 		if (highlight) {

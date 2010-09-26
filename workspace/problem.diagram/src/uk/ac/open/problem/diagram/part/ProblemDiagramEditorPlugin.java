@@ -77,7 +77,7 @@ public class ProblemDiagramEditorPlugin extends AbstractUIPlugin {
 	}
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
 	public void start(BundleContext context) throws Exception {
 		super.start(context);
