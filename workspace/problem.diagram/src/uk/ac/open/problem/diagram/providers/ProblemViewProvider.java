@@ -27,6 +27,7 @@ import org.eclipse.gmf.runtime.notation.DecorationNode;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.FontStyle;
+import org.eclipse.gmf.runtime.notation.Location;
 import org.eclipse.gmf.runtime.notation.MeasurementUnit;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.NotationFactory;
@@ -43,8 +44,10 @@ import org.eclipse.swt.graphics.FontData;
 
 import uk.ac.open.problem.diagram.edit.parts.Link2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Link3EditPart;
+import uk.ac.open.problem.diagram.edit.parts.Link4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.LinkDescription2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.LinkDescription3EditPart;
+import uk.ac.open.problem.diagram.edit.parts.LinkDescription4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.LinkDescriptionEditPart;
 import uk.ac.open.problem.diagram.edit.parts.LinkEditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node2EditPart;
@@ -53,12 +56,14 @@ import uk.ac.open.problem.diagram.edit.parts.Node4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node5EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node6EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node7EditPart;
+import uk.ac.open.problem.diagram.edit.parts.Node8EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeDescription2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeDescription3EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeDescription4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeDescription5EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeDescription6EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeDescription7EditPart;
+import uk.ac.open.problem.diagram.edit.parts.NodeDescription8EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeDescriptionEditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeEditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeName2EditPart;
@@ -66,6 +71,7 @@ import uk.ac.open.problem.diagram.edit.parts.NodeName3EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeName4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeName5EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeName6EditPart;
+import uk.ac.open.problem.diagram.edit.parts.NodeName7EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeNameDescriptionEditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeNameEditPart;
 import uk.ac.open.problem.diagram.edit.parts.ProblemDiagramEditPart;
@@ -170,6 +176,7 @@ public class ProblemViewProvider extends AbstractProvider implements
 				case Node5EditPart.VISUAL_ID:
 				case Node6EditPart.VISUAL_ID:
 				case Node7EditPart.VISUAL_ID:
+				case Node8EditPart.VISUAL_ID:
 					if (domainElement == null
 							|| visualID != ProblemVisualIDRegistry
 									.getNodeVisualID(op.getContainerView(),
@@ -188,7 +195,8 @@ public class ProblemViewProvider extends AbstractProvider implements
 				|| Node4EditPart.VISUAL_ID == visualID
 				|| Node5EditPart.VISUAL_ID == visualID
 				|| Node6EditPart.VISUAL_ID == visualID
-				|| Node7EditPart.VISUAL_ID == visualID;
+				|| Node7EditPart.VISUAL_ID == visualID
+				|| Node8EditPart.VISUAL_ID == visualID;
 	}
 
 	/**
@@ -266,6 +274,9 @@ public class ProblemViewProvider extends AbstractProvider implements
 		case Node7EditPart.VISUAL_ID:
 			return createNode_2007(domainElement, containerView, index,
 					persisted, preferencesHint);
+		case Node8EditPart.VISUAL_ID:
+			return createNode_2009(domainElement, containerView, index,
+					persisted, preferencesHint);
 		}
 		// can't happen, provided #provides(CreateNodeViewOperation) is correct
 		return null;
@@ -288,6 +299,9 @@ public class ProblemViewProvider extends AbstractProvider implements
 					containerView, index, persisted, preferencesHint);
 		case Link3EditPart.VISUAL_ID:
 			return createLink_4003(getSemanticElement(semanticAdapter),
+					containerView, index, persisted, preferencesHint);
+		case Link4EditPart.VISUAL_ID:
+			return createLink_4004(getSemanticElement(semanticAdapter),
 					containerView, index, persisted, preferencesHint);
 		}
 		// can never happen, provided #provides(CreateEdgeViewOperation) is correct
@@ -641,6 +655,53 @@ public class ProblemViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
+	public Node createNode_2009(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(ProblemVisualIDRegistry.getType(Node8EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		stampShortcut(containerView, node);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5017 = createLabel(node,
+				ProblemVisualIDRegistry.getType(NodeName7EditPart.VISUAL_ID));
+		Node label5018 = createLabel(node,
+				ProblemVisualIDRegistry
+						.getType(NodeDescription8EditPart.VISUAL_ID));
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
 	public Edge createLink_4001(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Connector edge = NotationFactory.eINSTANCE.createConnector();
@@ -691,6 +752,9 @@ public class ProblemViewProvider extends AbstractProvider implements
 						.getType(LinkDescriptionEditPart.VISUAL_ID));
 		label6001.setLayoutConstraint(NotationFactory.eINSTANCE
 				.createLocation());
+		Location location6001 = (Location) label6001.getLayoutConstraint();
+		location6001.setX(10);
+		location6001.setY(10);
 		return edge;
 	}
 
@@ -747,6 +811,9 @@ public class ProblemViewProvider extends AbstractProvider implements
 						.getType(LinkDescription2EditPart.VISUAL_ID));
 		label6002.setLayoutConstraint(NotationFactory.eINSTANCE
 				.createLocation());
+		Location location6002 = (Location) label6002.getLayoutConstraint();
+		location6002.setX(10);
+		location6002.setY(10);
 		return edge;
 	}
 
@@ -803,6 +870,68 @@ public class ProblemViewProvider extends AbstractProvider implements
 						.getType(LinkDescription3EditPart.VISUAL_ID));
 		label6003.setLayoutConstraint(NotationFactory.eINSTANCE
 				.createLocation());
+		Location location6003 = (Location) label6003.getLayoutConstraint();
+		location6003.setX(10);
+		location6003.setY(10);
+		return edge;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Edge createLink_4004(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Connector edge = NotationFactory.eINSTANCE.createConnector();
+		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
+		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
+				.createRelativeBendpoints();
+		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
+				2);
+		points.add(new RelativeBendpoint());
+		points.add(new RelativeBendpoint());
+		bendpoints.setPoints(points);
+		edge.setBendpoints(bendpoints);
+		ViewUtil.insertChildView(containerView, edge, index, persisted);
+		edge.setType(ProblemVisualIDRegistry.getType(Link4EditPart.VISUAL_ID));
+		edge.setElement(domainElement);
+		// initializePreferences
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(edge,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle edgeFontStyle = (FontStyle) edge
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (edgeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			edgeFontStyle.setFontName(fontData.getName());
+			edgeFontStyle.setFontHeight(fontData.getHeight());
+			edgeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			edgeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			edgeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		Routing routing = Routing.get(prefStore
+				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
+		if (routing != null) {
+			ViewUtil.setStructuralFeatureValue(edge,
+					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
+					routing);
+		}
+		Node label6004 = createLabel(edge,
+				ProblemVisualIDRegistry
+						.getType(LinkDescription4EditPart.VISUAL_ID));
+		label6004.setLayoutConstraint(NotationFactory.eINSTANCE
+				.createLocation());
+		Location location6004 = (Location) label6004.getLayoutConstraint();
+		location6004.setX(10);
+		location6004.setY(10);
 		return edge;
 	}
 

@@ -13,7 +13,6 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import uk.ac.open.problem.Concern;
 import uk.ac.open.problem.Link;
 import uk.ac.open.problem.LinkType;
 import uk.ac.open.problem.Node;
@@ -38,13 +37,6 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 	 * @generated
 	 */
   private EClass problemDiagramEClass = null;
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  private EClass concernEClass = null;
 
   /**
 	 * <!-- begin-user-doc -->
@@ -206,26 +198,6 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getConcern()
-  {
-		return concernEClass;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EAttribute getConcern_Name()
-  {
-		return (EAttribute)concernEClass.getEStructuralFeatures().get(0);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
   public EClass getNode()
   {
 		return nodeEClass;
@@ -309,16 +281,6 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
   public EAttribute getNode_Href()
   {
 		return (EAttribute)nodeEClass.getEStructuralFeatures().get(7);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EReference getNode_Concerns()
-  {
-		return (EReference)nodeEClass.getEStructuralFeatures().get(8);
 	}
 
   /**
@@ -436,16 +398,6 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getLink_Concerns()
-  {
-		return (EReference)linkEClass.getEStructuralFeatures().get(5);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
   public EEnum getNodeType()
   {
 		return nodeTypeEEnum;
@@ -507,9 +459,6 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 		createEReference(problemDiagramEClass, PROBLEM_DIAGRAM__NODES);
 		createEReference(problemDiagramEClass, PROBLEM_DIAGRAM__LINKS);
 
-		concernEClass = createEClass(CONCERN);
-		createEAttribute(concernEClass, CONCERN__NAME);
-
 		nodeEClass = createEClass(NODE);
 		createEAttribute(nodeEClass, NODE__NAME);
 		createEAttribute(nodeEClass, NODE__TYPE);
@@ -519,7 +468,6 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 		createEReference(nodeEClass, NODE__PROBLEM_NODE_REF);
 		createEReference(nodeEClass, NODE__PROBLEM_REF);
 		createEAttribute(nodeEClass, NODE__HREF);
-		createEReference(nodeEClass, NODE__CONCERNS);
 
 		phenomenonEClass = createEClass(PHENOMENON);
 		createEAttribute(phenomenonEClass, PHENOMENON__TYPE);
@@ -533,7 +481,6 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 		createEReference(linkEClass, LINK__TO);
 		createEReference(linkEClass, LINK__PHENOMENA);
 		createEAttribute(linkEClass, LINK__DESCRIPTION);
-		createEReference(linkEClass, LINK__CONCERNS);
 
 		// Create enums
 		nodeTypeEEnum = createEEnum(NODE_TYPE);
@@ -578,9 +525,6 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 		initEReference(getProblemDiagram_Nodes(), this.getNode(), null, "nodes", null, 0, -1, ProblemDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProblemDiagram_Links(), this.getLink(), null, "links", null, 0, -1, ProblemDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(concernEClass, Concern.class, "Concern", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getConcern_Name(), ecorePackage.getEString(), "name", null, 0, 1, Concern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(nodeEClass, Node.class, "Node", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNode_Name(), ecorePackage.getEString(), "name", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNode_Type(), this.getNodeType(), "type", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -590,7 +534,6 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 		initEReference(getNode_ProblemNodeRef(), this.getNode(), null, "problemNodeRef", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getNode_ProblemRef(), this.getProblemDiagram(), null, "problemRef", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNode_Href(), ecorePackage.getEString(), "href", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNode_Concerns(), this.getConcern(), null, "concerns", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(phenomenonEClass, Phenomenon.class, "Phenomenon", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPhenomenon_Type(), this.getPhenomenonType(), "type", null, 0, 1, Phenomenon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -604,7 +547,6 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 		initEReference(getLink_To(), this.getNode(), null, "to", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLink_Phenomena(), this.getPhenomenon(), null, "phenomena", null, 0, -1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLink_Description(), ecorePackage.getEString(), "description", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLink_Concerns(), this.getConcern(), null, "concerns", null, 0, -1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(nodeTypeEEnum, NodeType.class, "NodeType");
@@ -615,6 +557,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 		addEEnumLiteral(nodeTypeEEnum, NodeType.CAUSAL);
 		addEEnumLiteral(nodeTypeEEnum, NodeType.DESIGNED);
 		addEEnumLiteral(nodeTypeEEnum, NodeType.PHYSICAL);
+		addEEnumLiteral(nodeTypeEEnum, NodeType.CONCERN);
 
 		initEEnum(phenomenonTypeEEnum, PhenomenonType.class, "PhenomenonType");
 		addEEnumLiteral(phenomenonTypeEEnum, PhenomenonType.UNSPECIFIED);
@@ -625,6 +568,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 		addEEnumLiteral(linkTypeEEnum, LinkType.INTERFACE);
 		addEEnumLiteral(linkTypeEEnum, LinkType.REFERENCE);
 		addEEnumLiteral(linkTypeEEnum, LinkType.CONSTRAINT);
+		addEEnumLiteral(linkTypeEEnum, LinkType.CONCERN);
 
 		// Create resource
 		createResource(eNS_URI);

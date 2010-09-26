@@ -154,7 +154,7 @@ public class ProblemDiagramEditorUtil {
 
 	/**
 	 * This method should be called within a workspace modify operation since it creates resources.
-	 * @generated
+	 * @generated NOT
 	 */
 	public static Resource createDiagram(URI diagramURI, URI modelURI,
 			IProgressMonitor progressMonitor) {
@@ -187,16 +187,15 @@ public class ProblemDiagramEditorUtil {
 				}
 
 				try {
+					// FIXME this can introduce errors
+//					modelResource
+//							.save(uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil
+//									.getSaveOptions());
 					diagramResource
-					.save(uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil
-							.getSaveOptions());
-					modelResource
 							.save(uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil
 									.getSaveOptions());
-				} catch (IConcreteSyntaxValidator.InvalidConcreteSyntaxException e) {
-					ProblemDiagramEditorPlugin.getInstance().logError(
-							"Unable to store the concrete syntax", e); //$NON-NLS-1$
 				} catch (IOException e) {
+
 					ProblemDiagramEditorPlugin.getInstance().logError(
 							"Unable to store model and diagram resources", e); //$NON-NLS-1$
 				}

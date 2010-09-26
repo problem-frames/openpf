@@ -5,10 +5,8 @@ package edu.toronto.cs.openome.conversion.codegen;
 
 import java.io.StringBufferInputStream;
 
-import org.eclipse.emf.common.util.URI;
-
+import junit.framework.TestCase;
 import model.IStarElement;
-
 import parser.Q7;
 import util.Computing;
 import edu.toronto.cs.openome_model.Container;
@@ -16,7 +14,6 @@ import edu.toronto.cs.openome_model.Model;
 import edu.toronto.cs.openome_model.Task;
 import edu.toronto.cs.openome_model.openome_modelFactory;
 import edu.toronto.cs.openome_model.openome_modelPackage;
-import junit.framework.TestCase;
 
 /**
  * @author yy66
@@ -161,6 +158,5 @@ public class GoalModelTest extends TestCase {
 		return n;
 	}
 	public void testFetchURI() {
-		URI uri = GoalModel.fetchURI("C:\\work\\project\\ome\\runtime-openome.product\\Examples\\q7\\aspects\\t.oom"); 		
 	}
 }

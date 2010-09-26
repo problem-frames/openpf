@@ -41,6 +41,7 @@ import org.eclipse.gmf.runtime.notation.View;
 import uk.ac.open.problem.ProblemPackage;
 import uk.ac.open.problem.diagram.edit.parts.Link2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Link3EditPart;
+import uk.ac.open.problem.diagram.edit.parts.Link4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.LinkEditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node3EditPart;
@@ -48,6 +49,7 @@ import uk.ac.open.problem.diagram.edit.parts.Node4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node5EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node6EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node7EditPart;
+import uk.ac.open.problem.diagram.edit.parts.Node8EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeEditPart;
 import uk.ac.open.problem.diagram.edit.parts.ProblemDiagramEditPart;
 import uk.ac.open.problem.diagram.part.ProblemDiagramUpdater;
@@ -104,6 +106,7 @@ public class ProblemDiagramCanonicalEditPolicy extends CanonicalEditPolicy {
 		case Node5EditPart.VISUAL_ID:
 		case Node6EditPart.VISUAL_ID:
 		case Node7EditPart.VISUAL_ID:
+		case Node8EditPart.VISUAL_ID:
 			return true;
 		}
 		return false;
@@ -396,6 +399,17 @@ public class ProblemDiagramCanonicalEditPolicy extends CanonicalEditPolicy {
 			}
 			break;
 		}
+		case Node8EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(ProblemDiagramUpdater
+						.getNode_2009ContainedLinks(view));
+			}
+			if (!domain2NotationMap.containsKey(view.getElement())
+					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
+				domain2NotationMap.put(view.getElement(), view);
+			}
+			break;
+		}
 		case LinkEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(ProblemDiagramUpdater
@@ -422,6 +436,17 @@ public class ProblemDiagramCanonicalEditPolicy extends CanonicalEditPolicy {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(ProblemDiagramUpdater
 						.getLink_4003ContainedLinks(view));
+			}
+			if (!domain2NotationMap.containsKey(view.getElement())
+					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
+				domain2NotationMap.put(view.getElement(), view);
+			}
+			break;
+		}
+		case Link4EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(ProblemDiagramUpdater
+						.getLink_4004ContainedLinks(view));
 			}
 			if (!domain2NotationMap.containsKey(view.getElement())
 					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$

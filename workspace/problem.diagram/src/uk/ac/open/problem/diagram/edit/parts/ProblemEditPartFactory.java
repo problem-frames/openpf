@@ -95,6 +95,15 @@ public class ProblemEditPartFactory implements EditPartFactory {
 			case NodeDescription7EditPart.VISUAL_ID:
 				return new NodeDescription7EditPart(view);
 
+			case Node8EditPart.VISUAL_ID:
+				return new Node8EditPart(view);
+
+			case NodeName7EditPart.VISUAL_ID:
+				return new NodeName7EditPart(view);
+
+			case NodeDescription8EditPart.VISUAL_ID:
+				return new NodeDescription8EditPart(view);
+
 			case LinkEditPart.VISUAL_ID:
 				return new LinkEditPart(view);
 
@@ -112,6 +121,12 @@ public class ProblemEditPartFactory implements EditPartFactory {
 
 			case LinkDescription3EditPart.VISUAL_ID:
 				return new LinkDescription3EditPart(view);
+
+			case Link4EditPart.VISUAL_ID:
+				return new Link4EditPart(view);
+
+			case LinkDescription4EditPart.VISUAL_ID:
+				return new LinkDescription4EditPart(view);
 
 			}
 		}

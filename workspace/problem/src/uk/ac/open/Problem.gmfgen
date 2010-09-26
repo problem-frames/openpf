@@ -662,6 +662,95 @@
         </modelFacet>
       </labels>
     </topLevelNodes>
+    <topLevelNodes
+        visualID="2009"
+        editPartClassName="Node8EditPart"
+        itemSemanticEditPolicyClassName="Node8ItemSemanticEditPolicy"
+        notationViewFactoryClassName="NodeViewFactory"
+        canonicalEditPolicyClassName="Node8CanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="Node8GraphicalNodeEditPolicy"
+        createCommandClassName="Node8CreateCommand">
+      <diagramRunTimeClass
+          href="../../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType
+          xsi:type="gmfgen:SpecializationType"
+          metamodelType="//@diagram/@topLevelNodes.0/@elementType"/>
+      <viewmap
+          xsi:type="gmfgen:InnerClassViewmap"
+          className="EntityFigure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class EntityFigure extends org.eclipse.draw2d.Ellipse {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureEntityName; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureEntityDescription; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public EntityFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.GridLayout layoutThis = new org.eclipse.draw2d.GridLayout();&#xA;&#x9;layoutThis.numColumns = 1;&#xA;&#x9;layoutThis.makeColumnsEqualWidth = true;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;this.setLineStyle(org.eclipse.draw2d.Graphics.LINE_DASH);&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureEntityName = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureEntityName.setText(&quot;&quot;);&#xA;&#xA;fFigureEntityName.setFont(FFIGUREENTITYNAME_FONT);&#xA;&#xA;&#xA;&#xA;&#xA;org.eclipse.draw2d.GridData constraintFFigureEntityName = new org.eclipse.draw2d.GridData();&#xA;constraintFFigureEntityName.verticalAlignment = org.eclipse.draw2d.GridData.BEGINNING;&#xA;constraintFFigureEntityName.horizontalAlignment = org.eclipse.draw2d.GridData.CENTER;&#xA;constraintFFigureEntityName.horizontalIndent = 40;&#xA;constraintFFigureEntityName.horizontalSpan = 1;&#xA;constraintFFigureEntityName.verticalSpan = 1;&#xA;constraintFFigureEntityName.grabExcessHorizontalSpace = true;&#xA;constraintFFigureEntityName.grabExcessVerticalSpace = true;&#xA;this.add(fFigureEntityName, constraintFFigureEntityName);&#xA;&#xA;&#xA;&#xA;&#xA;fFigureEntityDescription = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureEntityDescription.setText(&quot;&quot;);&#xA;&#xA;fFigureEntityDescription.setFont(FFIGUREENTITYDESCRIPTION_FONT);&#xA;&#xA;&#xA;&#xA;&#xA;org.eclipse.draw2d.GridData constraintFFigureEntityDescription = new org.eclipse.draw2d.GridData();&#xA;constraintFFigureEntityDescription.verticalAlignment = org.eclipse.draw2d.GridData.CENTER;&#xA;constraintFFigureEntityDescription.horizontalAlignment = org.eclipse.draw2d.GridData.CENTER;&#xA;constraintFFigureEntityDescription.horizontalIndent = 40;&#xA;constraintFFigureEntityDescription.horizontalSpan = 1;&#xA;constraintFFigureEntityDescription.verticalSpan = 2;&#xA;constraintFFigureEntityDescription.grabExcessHorizontalSpace = true;&#xA;constraintFFigureEntityDescription.grabExcessVerticalSpace = true;&#xA;this.add(fFigureEntityDescription, constraintFFigureEntityDescription);&#xA;&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureEntityName() {&#xA;&#x9;&#x9;return fFigureEntityName;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureEntityDescription() {&#xA;&#x9;&#x9;return fFigureEntityDescription;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Font FFIGUREENTITYNAME_FONT = new org.eclipse.swt.graphics.Font(org.eclipse.swt.widgets.Display.getCurrent(), org.eclipse.swt.widgets.Display.getDefault().getSystemFont().getFontData()[0].getName(), 9, org.eclipse.swt.SWT.NORMAL);&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Font FFIGUREENTITYDESCRIPTION_FONT = new org.eclipse.swt.graphics.Font(org.eclipse.swt.widgets.Display.getCurrent(), org.eclipse.swt.widgets.Display.getDefault().getSystemFont().getFontData()[0].getName(), 6, org.eclipse.swt.SWT.ITALIC);&#xA;&#xA;">
+        <attributes
+            xsi:type="gmfgen:DefaultSizeAttributes"
+            width="100"
+            height="62"/>
+      </viewmap>
+      <modelFacet
+          modelElementSelector="//@expressionProviders/@providers.0/@expressions.14">
+        <metaClass
+            href="Problem.genmodel#//problem/Node"/>
+        <containmentMetaFeature
+            href="Problem.genmodel#//problem/ProblemDiagram/nodes"/>
+        <childMetaFeature
+            href="Problem.genmodel#//problem/ProblemDiagram/nodes"/>
+        <modelElementInitializer
+            xsi:type="gmfgen:GenFeatureSeqInitializer">
+          <initializers
+              xsi:type="gmfgen:GenFeatureValueSpec"
+              value="//@expressionProviders/@providers.0/@expressions.15">
+            <feature
+                href="Problem.genmodel#//problem/Node/type"/>
+          </initializers>
+        </modelElementInitializer>
+      </modelFacet>
+      <labels
+          visualID="5017"
+          editPartClassName="NodeName7EditPart"
+          itemSemanticEditPolicyClassName="NodeName7ItemSemanticEditPolicy"
+          notationViewFactoryClassName="NodeNameViewFactory">
+        <diagramRunTimeClass
+            href="../../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigureEntityName"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel">
+          <attributes
+              xsi:type="gmfgen:StyleAttributes"
+              fixedFont="true"/>
+        </viewmap>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0">
+          <metaFeatures
+              href="Problem.genmodel#//problem/Node/name"/>
+          <editableMetaFeatures
+              href="Problem.genmodel#//problem/Node/name"/>
+        </modelFacet>
+      </labels>
+      <labels
+          visualID="5018"
+          editPartClassName="NodeDescription8EditPart"
+          itemSemanticEditPolicyClassName="NodeDescription8ItemSemanticEditPolicy"
+          notationViewFactoryClassName="NodeDescriptionViewFactory">
+        <diagramRunTimeClass
+            href="../../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigureEntityDescription"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel">
+          <attributes
+              xsi:type="gmfgen:StyleAttributes"
+              fixedFont="true"/>
+        </viewmap>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0">
+          <metaFeatures
+              href="Problem.genmodel#//problem/Node/description"/>
+          <editableMetaFeatures
+              href="Problem.genmodel#//problem/Node/description"/>
+        </modelFacet>
+      </labels>
+    </topLevelNodes>
     <links
         visualID="4001"
         editPartClassName="LinkEditPart"
@@ -680,7 +769,7 @@
           classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ConstraintFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureConstraintNameFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ConstraintFigure() {&#xA;&#x9;&#x9;this.setLineStyle(org.eclipse.draw2d.Graphics.LINE_DASH);&#xA;&#xA;&#x9;&#x9;createContents();&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureConstraintNameFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureConstraintNameFigure.setText(&quot;&quot;);&#xA;&#xA;this.add(fFigureConstraintNameFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolylineDecoration df = new org.eclipse.draw2d.PolylineDecoration();&#xA;&#x9;df.setForegroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;&#x9;df.setBackgroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureConstraintNameFigure() {&#xA;&#x9;&#x9;return fFigureConstraintNameFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
       <modelFacet
           xsi:type="gmfgen:TypeLinkModelFacet"
-          modelElementSelector="//@expressionProviders/@providers.0/@expressions.14">
+          modelElementSelector="//@expressionProviders/@providers.0/@expressions.16">
         <metaClass
             href="Problem.genmodel#//problem/Link"/>
         <containmentMetaFeature
@@ -691,7 +780,7 @@
             xsi:type="gmfgen:GenFeatureSeqInitializer">
           <initializers
               xsi:type="gmfgen:GenFeatureValueSpec"
-              value="//@expressionProviders/@providers.0/@expressions.15">
+              value="//@expressionProviders/@providers.0/@expressions.17">
             <feature
                 href="Problem.genmodel#//problem/Link/type"/>
           </initializers>
@@ -713,7 +802,9 @@
             getterName="getFigureConstraintNameFigure"
             figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel">
           <attributes
-              xsi:type="gmfgen:LabelOffsetAttributes"/>
+              xsi:type="gmfgen:LabelOffsetAttributes"
+              x="10"
+              y="10"/>
         </viewmap>
         <modelFacet
             xsi:type="gmfgen:FeatureLabelModelFacet"
@@ -743,7 +834,7 @@
           classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ReferenceFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureReferenceNameFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ReferenceFigure() {&#xA;&#x9;&#x9;this.setLineStyle(org.eclipse.draw2d.Graphics.LINE_DASH);&#xA;&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureReferenceNameFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureReferenceNameFigure.setText(&quot;&quot;);&#xA;&#xA;this.add(fFigureReferenceNameFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureReferenceNameFigure() {&#xA;&#x9;&#x9;return fFigureReferenceNameFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
       <modelFacet
           xsi:type="gmfgen:TypeLinkModelFacet"
-          modelElementSelector="//@expressionProviders/@providers.0/@expressions.16">
+          modelElementSelector="//@expressionProviders/@providers.0/@expressions.18">
         <metaClass
             href="Problem.genmodel#//problem/Link"/>
         <containmentMetaFeature
@@ -754,7 +845,7 @@
             xsi:type="gmfgen:GenFeatureSeqInitializer">
           <initializers
               xsi:type="gmfgen:GenFeatureValueSpec"
-              value="//@expressionProviders/@providers.0/@expressions.17">
+              value="//@expressionProviders/@providers.0/@expressions.19">
             <feature
                 href="Problem.genmodel#//problem/Link/type"/>
           </initializers>
@@ -776,7 +867,9 @@
             getterName="getFigureReferenceNameFigure"
             figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel">
           <attributes
-              xsi:type="gmfgen:LabelOffsetAttributes"/>
+              xsi:type="gmfgen:LabelOffsetAttributes"
+              x="10"
+              y="10"/>
         </viewmap>
         <modelFacet
             xsi:type="gmfgen:FeatureLabelModelFacet"
@@ -803,10 +896,10 @@
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="InterfaceFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class InterfaceFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureInterfaceNameFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public InterfaceFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureInterfaceNameFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureInterfaceNameFigure.setText(&quot;&quot;);&#xA;&#xA;this.add(fFigureInterfaceNameFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureInterfaceNameFigure() {&#xA;&#x9;&#x9;return fFigureInterfaceNameFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class InterfaceFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureInterfaceNameFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public InterfaceFigure() {&#xA;&#x9;&#x9;this.setLineWidth(2);&#xA;&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureInterfaceNameFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureInterfaceNameFigure.setText(&quot;&quot;);&#xA;&#xA;this.add(fFigureInterfaceNameFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureInterfaceNameFigure() {&#xA;&#x9;&#x9;return fFigureInterfaceNameFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
       <modelFacet
           xsi:type="gmfgen:TypeLinkModelFacet"
-          modelElementSelector="//@expressionProviders/@providers.0/@expressions.18">
+          modelElementSelector="//@expressionProviders/@providers.0/@expressions.20">
         <metaClass
             href="Problem.genmodel#//problem/Link"/>
         <containmentMetaFeature
@@ -817,7 +910,7 @@
             xsi:type="gmfgen:GenFeatureSeqInitializer">
           <initializers
               xsi:type="gmfgen:GenFeatureValueSpec"
-              value="//@expressionProviders/@providers.0/@expressions.19">
+              value="//@expressionProviders/@providers.0/@expressions.21">
             <feature
                 href="Problem.genmodel#//problem/Link/type"/>
           </initializers>
@@ -839,7 +932,74 @@
             getterName="getFigureInterfaceNameFigure"
             figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel">
           <attributes
-              xsi:type="gmfgen:LabelOffsetAttributes"/>
+              xsi:type="gmfgen:LabelOffsetAttributes"
+              x="10"
+              y="10"/>
+        </viewmap>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0">
+          <metaFeatures
+              href="Problem.genmodel#//problem/Link/description"/>
+          <editableMetaFeatures
+              href="Problem.genmodel#//problem/Link/description"/>
+        </modelFacet>
+      </labels>
+    </links>
+    <links
+        visualID="4004"
+        editPartClassName="Link4EditPart"
+        itemSemanticEditPolicyClassName="Link4ItemSemanticEditPolicy"
+        notationViewFactoryClassName="LinkViewFactory"
+        createCommandClassName="Link4CreateCommand"
+        reorientCommandClassName="Link4ReorientCommand">
+      <diagramRunTimeClass
+          href="../../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType
+          xsi:type="gmfgen:SpecializationType"
+          metamodelType="//@diagram/@links.0/@elementType"/>
+      <viewmap
+          xsi:type="gmfgen:InnerClassViewmap"
+          className="ConcernFigure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ConcernFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureConcernNameFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ConcernFigure() {&#xA;&#x9;&#x9;this.setLineWidth(2);&#xA;this.setLineStyle(org.eclipse.draw2d.Graphics.LINE_DASHDOT);&#xA;&#xA;&#x9;&#x9;createContents();&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureConcernNameFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureConcernNameFigure.setText(&quot;&quot;);&#xA;&#xA;this.add(fFigureConcernNameFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolylineDecoration df = new org.eclipse.draw2d.PolylineDecoration();&#xA;&#x9;df.setForegroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;&#x9;df.setBackgroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureConcernNameFigure() {&#xA;&#x9;&#x9;return fFigureConcernNameFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <modelFacet
+          xsi:type="gmfgen:TypeLinkModelFacet"
+          modelElementSelector="//@expressionProviders/@providers.0/@expressions.22">
+        <metaClass
+            href="Problem.genmodel#//problem/Link"/>
+        <containmentMetaFeature
+            href="Problem.genmodel#//problem/ProblemDiagram/links"/>
+        <childMetaFeature
+            href="Problem.genmodel#//problem/ProblemDiagram/links"/>
+        <modelElementInitializer
+            xsi:type="gmfgen:GenFeatureSeqInitializer">
+          <initializers
+              xsi:type="gmfgen:GenFeatureValueSpec"
+              value="//@expressionProviders/@providers.0/@expressions.23">
+            <feature
+                href="Problem.genmodel#//problem/Link/type"/>
+          </initializers>
+        </modelElementInitializer>
+        <sourceMetaFeature
+            href="Problem.genmodel#//problem/Link/from"/>
+        <targetMetaFeature
+            href="Problem.genmodel#//problem/Link/to"/>
+      </modelFacet>
+      <labels
+          visualID="6004"
+          editPartClassName="LinkDescription4EditPart"
+          itemSemanticEditPolicyClassName="LinkDescription4ItemSemanticEditPolicy"
+          notationViewFactoryClassName="LinkDescriptionViewFactory">
+        <diagramRunTimeClass
+            href="../../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigureConcernNameFigure"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel">
+          <attributes
+              xsi:type="gmfgen:LabelOffsetAttributes"
+              x="10"
+              y="10"/>
         </viewmap>
         <modelFacet
             xsi:type="gmfgen:FeatureLabelModelFacet"
@@ -904,6 +1064,13 @@
             largeIconPath="/problem/icons/obj16/rq_obj.gif"
             smallIconPath="/problem/icons/obj16/rq_obj.gif"
             genNodes="//@diagram/@topLevelNodes.0"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Concern Description"
+            description="Create New Concern Description"
+            largeIconPath="/problem/icons/obj16/cn_obj.gif"
+            smallIconPath="/problem/icons/obj16/cn_obj.gif"
+            genNodes="//@diagram/@topLevelNodes.7"/>
       </groups>
       <groups
           title="link"
@@ -929,6 +1096,13 @@
             largeIconPath="/problem/icons/obj16/rqc_obj.gif"
             smallIconPath="/problem/icons/obj16/rqc_obj.gif"
             genLinks="//@diagram/@links.0"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Concern"
+            description="Create New Link to Concern"
+            largeIconPath="/problem/icons/obj16/rqc_obj.gif"
+            smallIconPath="/problem/icons/obj16/rqc_obj.gif"
+            genLinks="//@diagram/@links.3"/>
       </groups>
     </palette>
     <preferencePages
@@ -991,6 +1165,9 @@
         child="//@diagram/@topLevelNodes.6"/>
     <childReferences
         parent="//@diagram"
+        child="//@diagram/@topLevelNodes.7"/>
+    <childReferences
+        parent="//@diagram"
         child="//@diagram/@links.0"
         groupName="links"
         groupIcon="icons/linksNavigatorGroup.gif"/>
@@ -1080,6 +1257,18 @@
         groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.0"
+        child="//@diagram/@topLevelNodes.7"
+        referenceType="out_target"
+        groupName="target"
+        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.7"
+        child="//@diagram/@links.0"
+        referenceType="in_source"
+        groupName="incoming links"
+        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.0"
         child="//@diagram/@topLevelNodes.0"
         referenceType="in_source"
         groupName="source"
@@ -1158,6 +1347,18 @@
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@topLevelNodes.6"
+        child="//@diagram/@links.0"
+        referenceType="out_target"
+        groupName="outgoing links"
+        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.0"
+        child="//@diagram/@topLevelNodes.7"
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.7"
         child="//@diagram/@links.0"
         referenceType="out_target"
         groupName="outgoing links"
@@ -1253,6 +1454,18 @@
         groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.1"
+        child="//@diagram/@topLevelNodes.7"
+        referenceType="out_target"
+        groupName="target"
+        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.7"
+        child="//@diagram/@links.1"
+        referenceType="in_source"
+        groupName="incoming links"
+        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.1"
         child="//@diagram/@topLevelNodes.0"
         referenceType="in_source"
         groupName="source"
@@ -1331,6 +1544,18 @@
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@topLevelNodes.6"
+        child="//@diagram/@links.1"
+        referenceType="out_target"
+        groupName="outgoing links"
+        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.1"
+        child="//@diagram/@topLevelNodes.7"
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.7"
         child="//@diagram/@links.1"
         referenceType="out_target"
         groupName="outgoing links"
@@ -1426,6 +1651,18 @@
         groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.2"
+        child="//@diagram/@topLevelNodes.7"
+        referenceType="out_target"
+        groupName="target"
+        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.7"
+        child="//@diagram/@links.2"
+        referenceType="in_source"
+        groupName="incoming links"
+        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.2"
         child="//@diagram/@topLevelNodes.0"
         referenceType="in_source"
         groupName="source"
@@ -1505,6 +1742,215 @@
     <childReferences
         parent="//@diagram/@topLevelNodes.6"
         child="//@diagram/@links.2"
+        referenceType="out_target"
+        groupName="outgoing links"
+        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.2"
+        child="//@diagram/@topLevelNodes.7"
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.7"
+        child="//@diagram/@links.2"
+        referenceType="out_target"
+        groupName="outgoing links"
+        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram"
+        child="//@diagram/@links.3"
+        groupName="links"
+        groupIcon="icons/linksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.3"
+        child="//@diagram/@topLevelNodes.0"
+        referenceType="out_target"
+        groupName="target"
+        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.0"
+        child="//@diagram/@links.3"
+        referenceType="in_source"
+        groupName="incoming links"
+        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.3"
+        child="//@diagram/@topLevelNodes.1"
+        referenceType="out_target"
+        groupName="target"
+        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.1"
+        child="//@diagram/@links.3"
+        referenceType="in_source"
+        groupName="incoming links"
+        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.3"
+        child="//@diagram/@topLevelNodes.2"
+        referenceType="out_target"
+        groupName="target"
+        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.2"
+        child="//@diagram/@links.3"
+        referenceType="in_source"
+        groupName="incoming links"
+        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.3"
+        child="//@diagram/@topLevelNodes.3"
+        referenceType="out_target"
+        groupName="target"
+        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.3"
+        child="//@diagram/@links.3"
+        referenceType="in_source"
+        groupName="incoming links"
+        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.3"
+        child="//@diagram/@topLevelNodes.4"
+        referenceType="out_target"
+        groupName="target"
+        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.4"
+        child="//@diagram/@links.3"
+        referenceType="in_source"
+        groupName="incoming links"
+        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.3"
+        child="//@diagram/@topLevelNodes.5"
+        referenceType="out_target"
+        groupName="target"
+        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.5"
+        child="//@diagram/@links.3"
+        referenceType="in_source"
+        groupName="incoming links"
+        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.3"
+        child="//@diagram/@topLevelNodes.6"
+        referenceType="out_target"
+        groupName="target"
+        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.6"
+        child="//@diagram/@links.3"
+        referenceType="in_source"
+        groupName="incoming links"
+        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.3"
+        child="//@diagram/@topLevelNodes.7"
+        referenceType="out_target"
+        groupName="target"
+        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.7"
+        child="//@diagram/@links.3"
+        referenceType="in_source"
+        groupName="incoming links"
+        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.3"
+        child="//@diagram/@topLevelNodes.0"
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.0"
+        child="//@diagram/@links.3"
+        referenceType="out_target"
+        groupName="outgoing links"
+        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.3"
+        child="//@diagram/@topLevelNodes.1"
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.1"
+        child="//@diagram/@links.3"
+        referenceType="out_target"
+        groupName="outgoing links"
+        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.3"
+        child="//@diagram/@topLevelNodes.2"
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.2"
+        child="//@diagram/@links.3"
+        referenceType="out_target"
+        groupName="outgoing links"
+        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.3"
+        child="//@diagram/@topLevelNodes.3"
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.3"
+        child="//@diagram/@links.3"
+        referenceType="out_target"
+        groupName="outgoing links"
+        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.3"
+        child="//@diagram/@topLevelNodes.4"
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.4"
+        child="//@diagram/@links.3"
+        referenceType="out_target"
+        groupName="outgoing links"
+        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.3"
+        child="//@diagram/@topLevelNodes.5"
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.5"
+        child="//@diagram/@links.3"
+        referenceType="out_target"
+        groupName="outgoing links"
+        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.3"
+        child="//@diagram/@topLevelNodes.6"
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.6"
+        child="//@diagram/@links.3"
+        referenceType="out_target"
+        groupName="outgoing links"
+        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.3"
+        child="//@diagram/@topLevelNodes.7"
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.7"
+        child="//@diagram/@links.3"
         referenceType="out_target"
         groupName="outgoing links"
         groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
@@ -1571,6 +2017,11 @@
           body="NodeType::PHYSICAL"/>
       <expressions
           xsi:type="gmfgen:GenConstraint"
+          body="self.type = NodeType::CONCERN"/>
+      <expressions
+          body="NodeType::CONCERN"/>
+      <expressions
+          xsi:type="gmfgen:GenConstraint"
           body="self.type = LinkType::CONSTRAINT"/>
       <expressions
           body="LinkType::CONSTRAINT"/>
@@ -1584,13 +2035,18 @@
           body="self.type = LinkType::INTERFACE"/>
       <expressions
           body="LinkType::INTERFACE"/>
+      <expressions
+          xsi:type="gmfgen:GenConstraint"
+          body="self.type = LinkType::CONCERN"/>
+      <expressions
+          body="LinkType::CONCERN"/>
     </providers>
   </expressionProviders>
   <labelParsers
       extensibleViaService="true">
     <implementations
         xsi:type="gmfgen:PredefinedParser"
-        uses="//@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.0/@labels.1/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.1/@modelFacet //@diagram/@topLevelNodes.2/@labels.0/@modelFacet //@diagram/@topLevelNodes.2/@labels.1/@modelFacet //@diagram/@topLevelNodes.3/@labels.0/@modelFacet //@diagram/@topLevelNodes.3/@labels.1/@modelFacet //@diagram/@topLevelNodes.4/@labels.0/@modelFacet //@diagram/@topLevelNodes.4/@labels.1/@modelFacet //@diagram/@topLevelNodes.5/@labels.0/@modelFacet //@diagram/@topLevelNodes.5/@labels.1/@modelFacet //@diagram/@topLevelNodes.6/@labels.0/@modelFacet //@diagram/@topLevelNodes.6/@labels.1/@modelFacet //@diagram/@links.0/@labels.0/@modelFacet //@diagram/@links.1/@labels.0/@modelFacet //@diagram/@links.2/@labels.0/@modelFacet"/>
+        uses="//@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.0/@labels.1/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.1/@modelFacet //@diagram/@topLevelNodes.2/@labels.0/@modelFacet //@diagram/@topLevelNodes.2/@labels.1/@modelFacet //@diagram/@topLevelNodes.3/@labels.0/@modelFacet //@diagram/@topLevelNodes.3/@labels.1/@modelFacet //@diagram/@topLevelNodes.4/@labels.0/@modelFacet //@diagram/@topLevelNodes.4/@labels.1/@modelFacet //@diagram/@topLevelNodes.5/@labels.0/@modelFacet //@diagram/@topLevelNodes.5/@labels.1/@modelFacet //@diagram/@topLevelNodes.6/@labels.0/@modelFacet //@diagram/@topLevelNodes.6/@labels.1/@modelFacet //@diagram/@topLevelNodes.7/@labels.0/@modelFacet //@diagram/@topLevelNodes.7/@labels.1/@modelFacet //@diagram/@links.0/@labels.0/@modelFacet //@diagram/@links.1/@labels.0/@modelFacet //@diagram/@links.2/@labels.0/@modelFacet //@diagram/@links.3/@labels.0/@modelFacet"/>
   </labelParsers>
   <contextMenus
       context="//@diagram">

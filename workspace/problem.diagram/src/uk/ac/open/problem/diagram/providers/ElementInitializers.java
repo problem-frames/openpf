@@ -146,15 +146,15 @@ public class ElementInitializers {
 	/**
 	 * @generated
 	 */
-	public void init_Link_4001(Link instance) {
+	public void init_Node_2009(Node instance) {
 		try {
 			Object value_0 = ProblemOCLFactory.getExpression(15,
-					ProblemPackage.eINSTANCE.getLink(), null)
+					ProblemPackage.eINSTANCE.getNode(), null)
 					.evaluate(instance);
 
 			value_0 = ProblemAbstractExpression.performCast(value_0,
-					ProblemPackage.eINSTANCE.getLinkType());
-			instance.setType((LinkType) value_0);
+					ProblemPackage.eINSTANCE.getNodeType());
+			instance.setType((NodeType) value_0);
 		} catch (RuntimeException e) {
 			ProblemDiagramEditorPlugin.getInstance().logError(
 					"Element initialization failed", e); //$NON-NLS-1$						
@@ -164,7 +164,7 @@ public class ElementInitializers {
 	/**
 	 * @generated
 	 */
-	public void init_Link_4002(Link instance) {
+	public void init_Link_4001(Link instance) {
 		try {
 			Object value_0 = ProblemOCLFactory.getExpression(17,
 					ProblemPackage.eINSTANCE.getLink(), null)
@@ -182,9 +182,45 @@ public class ElementInitializers {
 	/**
 	 * @generated
 	 */
-	public void init_Link_4003(Link instance) {
+	public void init_Link_4002(Link instance) {
 		try {
 			Object value_0 = ProblemOCLFactory.getExpression(19,
+					ProblemPackage.eINSTANCE.getLink(), null)
+					.evaluate(instance);
+
+			value_0 = ProblemAbstractExpression.performCast(value_0,
+					ProblemPackage.eINSTANCE.getLinkType());
+			instance.setType((LinkType) value_0);
+		} catch (RuntimeException e) {
+			ProblemDiagramEditorPlugin.getInstance().logError(
+					"Element initialization failed", e); //$NON-NLS-1$						
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	public void init_Link_4003(Link instance) {
+		try {
+			Object value_0 = ProblemOCLFactory.getExpression(21,
+					ProblemPackage.eINSTANCE.getLink(), null)
+					.evaluate(instance);
+
+			value_0 = ProblemAbstractExpression.performCast(value_0,
+					ProblemPackage.eINSTANCE.getLinkType());
+			instance.setType((LinkType) value_0);
+		} catch (RuntimeException e) {
+			ProblemDiagramEditorPlugin.getInstance().logError(
+					"Element initialization failed", e); //$NON-NLS-1$						
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	public void init_Link_4004(Link instance) {
+		try {
+			Object value_0 = ProblemOCLFactory.getExpression(23,
 					ProblemPackage.eINSTANCE.getLink(), null)
 					.evaluate(instance);
 

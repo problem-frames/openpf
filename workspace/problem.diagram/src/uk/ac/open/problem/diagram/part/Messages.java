@@ -333,6 +333,16 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
+	public static String ConcernDescription8CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ConcernDescription8CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
 	public static String Interface1CreationTool_title;
 
 	/**
@@ -359,6 +369,16 @@ public class Messages extends NLS {
 	 * @generated
 	 */
 	public static String Constraint3CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Concern4CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Concern4CreationTool_desc;
 
 	/**
 	 * @generated
@@ -399,6 +419,16 @@ public class Messages extends NLS {
 	 * @generated
 	 */
 	public static String NavigatorGroupName_Node_2002_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Link_4004_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Link_4004_source;
 
 	/**
 	 * @generated
@@ -459,6 +489,16 @@ public class Messages extends NLS {
 	 * @generated
 	 */
 	public static String NavigatorGroupName_Link_4002_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Node_2009_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Node_2009_outgoinglinks;
 
 	/**
 	 * @generated

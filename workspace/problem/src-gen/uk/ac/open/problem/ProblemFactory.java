@@ -35,15 +35,6 @@ public interface ProblemFactory extends EFactory
   ProblemDiagram createProblemDiagram();
 
   /**
-	 * Returns a new object of class '<em>Concern</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Concern</em>'.
-	 * @generated
-	 */
-  Concern createConcern();
-
-  /**
 	 * Returns a new object of class '<em>Node</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

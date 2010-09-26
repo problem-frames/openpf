@@ -16,6 +16,7 @@ import org.eclipse.gmf.runtime.notation.View;
 import uk.ac.open.problem.ProblemPackage;
 import uk.ac.open.problem.diagram.edit.parts.LinkDescription2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.LinkDescription3EditPart;
+import uk.ac.open.problem.diagram.edit.parts.LinkDescription4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.LinkDescriptionEditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeDescription2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeDescription3EditPart;
@@ -23,12 +24,14 @@ import uk.ac.open.problem.diagram.edit.parts.NodeDescription4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeDescription5EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeDescription6EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeDescription7EditPart;
+import uk.ac.open.problem.diagram.edit.parts.NodeDescription8EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeDescriptionEditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeName2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeName3EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeName4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeName5EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeName6EditPart;
+import uk.ac.open.problem.diagram.edit.parts.NodeName7EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeNameDescriptionEditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeNameEditPart;
 import uk.ac.open.problem.diagram.parsers.MessageFormatParser;
@@ -337,6 +340,48 @@ public class ProblemParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
+	private IParser nodeName_5017Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getNodeName_5017Parser() {
+		if (nodeName_5017Parser == null) {
+			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
+					.getNode_Name() };
+			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
+					.getNode_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features,
+					editableFeatures);
+			nodeName_5017Parser = parser;
+		}
+		return nodeName_5017Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser nodeDescription_5018Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getNodeDescription_5018Parser() {
+		if (nodeDescription_5018Parser == null) {
+			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
+					.getNode_Description() };
+			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
+					.getNode_Description() };
+			MessageFormatParser parser = new MessageFormatParser(features,
+					editableFeatures);
+			nodeDescription_5018Parser = parser;
+		}
+		return nodeDescription_5018Parser;
+	}
+
+	/**
+	 * @generated
+	 */
 	private IParser linkDescription_6001Parser;
 
 	/**
@@ -400,6 +445,27 @@ public class ProblemParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
+	private IParser linkDescription_6004Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getLinkDescription_6004Parser() {
+		if (linkDescription_6004Parser == null) {
+			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
+					.getLink_Description() };
+			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
+					.getLink_Description() };
+			MessageFormatParser parser = new MessageFormatParser(features,
+					editableFeatures);
+			linkDescription_6004Parser = parser;
+		}
+		return linkDescription_6004Parser;
+	}
+
+	/**
+	 * @generated
+	 */
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
 		case NodeNameDescriptionEditPart.VISUAL_ID:
@@ -430,12 +496,18 @@ public class ProblemParserProvider extends AbstractProvider implements
 			return getNodeName_5013Parser();
 		case NodeDescription7EditPart.VISUAL_ID:
 			return getNodeDescription_5014Parser();
+		case NodeName7EditPart.VISUAL_ID:
+			return getNodeName_5017Parser();
+		case NodeDescription8EditPart.VISUAL_ID:
+			return getNodeDescription_5018Parser();
 		case LinkDescriptionEditPart.VISUAL_ID:
 			return getLinkDescription_6001Parser();
 		case LinkDescription2EditPart.VISUAL_ID:
 			return getLinkDescription_6002Parser();
 		case LinkDescription3EditPart.VISUAL_ID:
 			return getLinkDescription_6003Parser();
+		case LinkDescription4EditPart.VISUAL_ID:
+			return getLinkDescription_6004Parser();
 		}
 		return null;
 	}

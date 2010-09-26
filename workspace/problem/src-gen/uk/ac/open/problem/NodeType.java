@@ -90,7 +90,17 @@ public enum NodeType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  PHYSICAL(6, "PHYSICAL", "P");
+  PHYSICAL(6, "PHYSICAL", "P"),
+
+  /**
+	 * The '<em><b>CONCERN</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see #CONCERN_VALUE
+	 * @generated
+	 * @ordered
+	 */
+  CONCERN(7, "CONCERN", "?");
 
   /**
 	 * The '<em><b>REQUIREMENT</b></em>' literal value.
@@ -198,6 +208,21 @@ public enum NodeType implements Enumerator
   public static final int PHYSICAL_VALUE = 6;
 
   /**
+	 * The '<em><b>CONCERN</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>CONCERN</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+	 * @see #CONCERN
+	 * @model literal="?"
+	 * @generated
+	 * @ordered
+	 */
+  public static final int CONCERN_VALUE = 7;
+
+  /**
 	 * An array of all the '<em><b>Node Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -212,6 +237,7 @@ public enum NodeType implements Enumerator
 			CAUSAL,
 			DESIGNED,
 			PHYSICAL,
+			CONCERN,
 		};
 
   /**
@@ -272,6 +298,7 @@ public enum NodeType implements Enumerator
 			case CAUSAL_VALUE: return CAUSAL;
 			case DESIGNED_VALUE: return DESIGNED;
 			case PHYSICAL_VALUE: return PHYSICAL;
+			case CONCERN_VALUE: return CONCERN;
 		}
 		return null;
 	}

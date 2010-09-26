@@ -66,11 +66,12 @@ public class ProblemEditor extends UncalEditor {
 			if (o instanceof ProblemDiagram) {
 				updateID((ProblemDiagram) o);
 			}
-			if (o instanceof Node) {
-				updateID((Node) o);
-			}
 		}
-
+		try {
+			xtextResource.save(null);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}		
 		String newfile = filename.substring(0, filename.lastIndexOf("."))
 				+ ".problem";
 		URI modelURI = URI.createURI(newfile);
@@ -78,17 +79,14 @@ public class ProblemEditor extends UncalEditor {
 			ProblemDiagramEditorUtil.createDiagram(diagramURI, modelURI,
 					new NullProgressMonitor());
 		}
-		try {
-			xtextResource.save(null);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
 	}
 	private static void updateID(ProblemDiagram o) {
 		String name = o.getName();
 		if (name.indexOf(" ") >= 0 && name.indexOf("#") <0 ) {
-			System.out.println(name);
 			o.setName("#" + name + "#");
+		}
+		for (Node n: o.getNodes()) {
+			updateID(n);
 		}
 	}
 	

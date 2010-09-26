@@ -65,7 +65,6 @@ public class ProblemFactoryImpl extends EFactoryImpl implements ProblemFactory
   {
 		switch (eClass.getClassifierID()) {
 			case ProblemPackage.PROBLEM_DIAGRAM: return createProblemDiagram();
-			case ProblemPackage.CONCERN: return createConcern();
 			case ProblemPackage.NODE: return createNode();
 			case ProblemPackage.PHENOMENON: return createPhenomenon();
 			case ProblemPackage.LINK: return createLink();
@@ -123,17 +122,6 @@ public class ProblemFactoryImpl extends EFactoryImpl implements ProblemFactory
   {
 		ProblemDiagramImpl problemDiagram = new ProblemDiagramImpl();
 		return problemDiagram;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public Concern createConcern()
-  {
-		ConcernImpl concern = new ConcernImpl();
-		return concern;
 	}
 
   /**

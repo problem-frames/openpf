@@ -38,7 +38,7 @@ public class ProblemOCLFactory {
 	 * @generated
 	 */
 	protected ProblemOCLFactory() {
-		this.expressions = new ProblemAbstractExpression[20];
+		this.expressions = new ProblemAbstractExpression[24];
 	}
 
 	/**
@@ -71,12 +71,16 @@ public class ProblemOCLFactory {
 					"NodeType::CAUSAL", //$NON-NLS-1$
 					"self.type = NodeType::PHYSICAL", //$NON-NLS-1$
 					"NodeType::PHYSICAL", //$NON-NLS-1$
+					"self.type = NodeType::CONCERN", //$NON-NLS-1$
+					"NodeType::CONCERN", //$NON-NLS-1$
 					"self.type = LinkType::CONSTRAINT", //$NON-NLS-1$
 					"LinkType::CONSTRAINT", //$NON-NLS-1$
 					"self.type = LinkType::REFERENCE", //$NON-NLS-1$
 					"LinkType::REFERENCE", //$NON-NLS-1$
 					"self.type = LinkType::INTERFACE", //$NON-NLS-1$
 					"LinkType::INTERFACE", //$NON-NLS-1$
+					"self.type = LinkType::CONCERN", //$NON-NLS-1$
+					"LinkType::CONCERN", //$NON-NLS-1$
 			};
 			cached.expressions[index] = getExpression(
 					exprBodies[index],

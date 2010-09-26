@@ -100,6 +100,19 @@
             path="icons/obj16/rq_obj.gif"
             bundle="problem"/>
       </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Concern Description"
+          description="Create New Concern Description">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/obj16/cn_obj.gif"
+            bundle="problem"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/obj16/cn_obj.gif"
+            bundle="problem"/>
+      </tools>
     </tools>
     <tools
         xsi:type="gmftool:ToolGroup"
@@ -135,6 +148,19 @@
           xsi:type="gmftool:CreationTool"
           title="Constraint"
           description="Create new Requirement Constraint">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/obj16/rqc_obj.gif"
+            bundle="problem"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/obj16/rqc_obj.gif"
+            bundle="problem"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Concern"
+          description="Create New Link to Concern">
         <smallIcon
             xsi:type="gmftool:BundleImage"
             path="icons/obj16/rqc_obj.gif"

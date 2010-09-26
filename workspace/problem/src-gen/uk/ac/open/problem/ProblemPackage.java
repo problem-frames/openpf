@@ -116,34 +116,6 @@ public interface ProblemPackage extends EPackage
   int PROBLEM_DIAGRAM_FEATURE_COUNT = 4;
 
   /**
-	 * The meta object id for the '{@link uk.ac.open.problem.impl.ConcernImpl <em>Concern</em>}' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see uk.ac.open.problem.impl.ConcernImpl
-	 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getConcern()
-	 * @generated
-	 */
-  int CONCERN = 1;
-
-  /**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int CONCERN__NAME = 0;
-
-  /**
-	 * The number of structural features of the '<em>Concern</em>' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int CONCERN_FEATURE_COUNT = 1;
-
-  /**
 	 * The meta object id for the '{@link uk.ac.open.problem.impl.NodeImpl <em>Node</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -151,7 +123,7 @@ public interface ProblemPackage extends EPackage
 	 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getNode()
 	 * @generated
 	 */
-  int NODE = 2;
+  int NODE = 1;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -226,22 +198,13 @@ public interface ProblemPackage extends EPackage
   int NODE__HREF = 7;
 
   /**
-	 * The feature id for the '<em><b>Concerns</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int NODE__CONCERNS = 8;
-
-  /**
 	 * The number of structural features of the '<em>Node</em>' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int NODE_FEATURE_COUNT = 9;
+  int NODE_FEATURE_COUNT = 8;
 
   /**
 	 * The meta object id for the '{@link uk.ac.open.problem.impl.PhenomenonImpl <em>Phenomenon</em>}' class.
@@ -251,7 +214,7 @@ public interface ProblemPackage extends EPackage
 	 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getPhenomenon()
 	 * @generated
 	 */
-  int PHENOMENON = 3;
+  int PHENOMENON = 2;
 
   /**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -306,7 +269,7 @@ public interface ProblemPackage extends EPackage
 	 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getLink()
 	 * @generated
 	 */
-  int LINK = 4;
+  int LINK = 3;
 
   /**
 	 * The feature id for the '<em><b>From</b></em>' reference.
@@ -354,22 +317,13 @@ public interface ProblemPackage extends EPackage
   int LINK__DESCRIPTION = 4;
 
   /**
-	 * The feature id for the '<em><b>Concerns</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int LINK__CONCERNS = 5;
-
-  /**
 	 * The number of structural features of the '<em>Link</em>' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int LINK_FEATURE_COUNT = 6;
+  int LINK_FEATURE_COUNT = 5;
 
   /**
 	 * The meta object id for the '{@link uk.ac.open.problem.NodeType <em>Node Type</em>}' enum.
@@ -379,7 +333,7 @@ public interface ProblemPackage extends EPackage
 	 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getNodeType()
 	 * @generated
 	 */
-  int NODE_TYPE = 5;
+  int NODE_TYPE = 4;
 
   /**
 	 * The meta object id for the '{@link uk.ac.open.problem.PhenomenonType <em>Phenomenon Type</em>}' enum.
@@ -389,7 +343,7 @@ public interface ProblemPackage extends EPackage
 	 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getPhenomenonType()
 	 * @generated
 	 */
-  int PHENOMENON_TYPE = 6;
+  int PHENOMENON_TYPE = 5;
 
   /**
 	 * The meta object id for the '{@link uk.ac.open.problem.LinkType <em>Link Type</em>}' enum.
@@ -399,7 +353,7 @@ public interface ProblemPackage extends EPackage
 	 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getLinkType()
 	 * @generated
 	 */
-  int LINK_TYPE = 7;
+  int LINK_TYPE = 6;
 
 
   /**
@@ -455,27 +409,6 @@ public interface ProblemPackage extends EPackage
 	 * @generated
 	 */
   EReference getProblemDiagram_Links();
-
-  /**
-	 * Returns the meta object for class '{@link uk.ac.open.problem.Concern <em>Concern</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Concern</em>'.
-	 * @see uk.ac.open.problem.Concern
-	 * @generated
-	 */
-  EClass getConcern();
-
-  /**
-	 * Returns the meta object for the attribute '{@link uk.ac.open.problem.Concern#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see uk.ac.open.problem.Concern#getName()
-	 * @see #getConcern()
-	 * @generated
-	 */
-  EAttribute getConcern_Name();
 
   /**
 	 * Returns the meta object for class '{@link uk.ac.open.problem.Node <em>Node</em>}'.
@@ -574,17 +507,6 @@ public interface ProblemPackage extends EPackage
 	 * @generated
 	 */
   EAttribute getNode_Href();
-
-  /**
-	 * Returns the meta object for the containment reference list '{@link uk.ac.open.problem.Node#getConcerns <em>Concerns</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Concerns</em>'.
-	 * @see uk.ac.open.problem.Node#getConcerns()
-	 * @see #getNode()
-	 * @generated
-	 */
-  EReference getNode_Concerns();
 
   /**
 	 * Returns the meta object for class '{@link uk.ac.open.problem.Phenomenon <em>Phenomenon</em>}'.
@@ -706,17 +628,6 @@ public interface ProblemPackage extends EPackage
   EAttribute getLink_Description();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link uk.ac.open.problem.Link#getConcerns <em>Concerns</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Concerns</em>'.
-	 * @see uk.ac.open.problem.Link#getConcerns()
-	 * @see #getLink()
-	 * @generated
-	 */
-  EReference getLink_Concerns();
-
-  /**
 	 * Returns the meta object for enum '{@link uk.ac.open.problem.NodeType <em>Node Type</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -812,24 +723,6 @@ public interface ProblemPackage extends EPackage
     EReference PROBLEM_DIAGRAM__LINKS = eINSTANCE.getProblemDiagram_Links();
 
     /**
-		 * The meta object literal for the '{@link uk.ac.open.problem.impl.ConcernImpl <em>Concern</em>}' class.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @see uk.ac.open.problem.impl.ConcernImpl
-		 * @see uk.ac.open.problem.impl.ProblemPackageImpl#getConcern()
-		 * @generated
-		 */
-    EClass CONCERN = eINSTANCE.getConcern();
-
-    /**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    EAttribute CONCERN__NAME = eINSTANCE.getConcern_Name();
-
-    /**
 		 * The meta object literal for the '{@link uk.ac.open.problem.impl.NodeImpl <em>Node</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -902,14 +795,6 @@ public interface ProblemPackage extends EPackage
 		 * @generated
 		 */
     EAttribute NODE__HREF = eINSTANCE.getNode_Href();
-
-    /**
-		 * The meta object literal for the '<em><b>Concerns</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    EReference NODE__CONCERNS = eINSTANCE.getNode_Concerns();
 
     /**
 		 * The meta object literal for the '{@link uk.ac.open.problem.impl.PhenomenonImpl <em>Phenomenon</em>}' class.
@@ -1002,14 +887,6 @@ public interface ProblemPackage extends EPackage
 		 * @generated
 		 */
     EAttribute LINK__DESCRIPTION = eINSTANCE.getLink_Description();
-
-    /**
-		 * The meta object literal for the '<em><b>Concerns</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    EReference LINK__CONCERNS = eINSTANCE.getLink_Concerns();
 
     /**
 		 * The meta object literal for the '{@link uk.ac.open.problem.NodeType <em>Node Type</em>}' enum.

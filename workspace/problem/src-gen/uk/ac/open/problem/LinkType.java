@@ -50,7 +50,17 @@ public enum LinkType implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  CONSTRAINT(2, "CONSTRAINT", "~>");
+  CONSTRAINT(2, "CONSTRAINT", "~>"),
+
+  /**
+	 * The '<em><b>CONCERN</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see #CONCERN_VALUE
+	 * @generated
+	 * @ordered
+	 */
+  CONCERN(3, "CONCERN", "->");
 
   /**
 	 * The '<em><b>INTERFACE</b></em>' literal value.
@@ -98,6 +108,21 @@ public enum LinkType implements Enumerator
   public static final int CONSTRAINT_VALUE = 2;
 
   /**
+	 * The '<em><b>CONCERN</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>CONCERN</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+	 * @see #CONCERN
+	 * @model literal="->"
+	 * @generated
+	 * @ordered
+	 */
+  public static final int CONCERN_VALUE = 3;
+
+  /**
 	 * An array of all the '<em><b>Link Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -108,6 +133,7 @@ public enum LinkType implements Enumerator
 			INTERFACE,
 			REFERENCE,
 			CONSTRAINT,
+			CONCERN,
 		};
 
   /**
@@ -164,6 +190,7 @@ public enum LinkType implements Enumerator
 			case INTERFACE_VALUE: return INTERFACE;
 			case REFERENCE_VALUE: return REFERENCE;
 			case CONSTRAINT_VALUE: return CONSTRAINT;
+			case CONCERN_VALUE: return CONCERN;
 		}
 		return null;
 	}

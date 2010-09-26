@@ -9,6 +9,7 @@ import fluid.FluidError;
 /**
  * 
  */
+@SuppressWarnings("rawtypes")
 public class VersionedIRHashMap extends AbstractMap implements Map {
 
   /**

@@ -44,6 +44,7 @@ public class ProblemPaletteFactory {
 		paletteContainer.add(createLexicalDomain5CreationTool());
 		paletteContainer.add(createPhysicalDomain6CreationTool());
 		paletteContainer.add(createRequirement7CreationTool());
+		paletteContainer.add(createConcernDescription8CreationTool());
 		return paletteContainer;
 	}
 
@@ -59,6 +60,7 @@ public class ProblemPaletteFactory {
 		paletteContainer.add(createInterface1CreationTool());
 		paletteContainer.add(createReference2CreationTool());
 		paletteContainer.add(createConstraint3CreationTool());
+		paletteContainer.add(createConcern4CreationTool());
 		return paletteContainer;
 	}
 
@@ -177,6 +179,22 @@ public class ProblemPaletteFactory {
 	/**
 	 * @generated
 	 */
+	private ToolEntry createConcernDescription8CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(
+				Messages.ConcernDescription8CreationTool_title,
+				Messages.ConcernDescription8CreationTool_desc,
+				Collections.singletonList(ProblemElementTypes.Node_2009));
+		entry.setId("createConcernDescription8CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ProblemDiagramEditorPlugin
+				.findImageDescriptor("/problem/icons/obj16/cn_obj.gif")); //$NON-NLS-1$
+		entry.setLargeIcon(ProblemDiagramEditorPlugin
+				.findImageDescriptor("/problem/icons/obj16/cn_obj.gif")); //$NON-NLS-1$
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
 	private ToolEntry createInterface1CreationTool() {
 		LinkToolEntry entry = new LinkToolEntry(
 				Messages.Interface1CreationTool_title,
@@ -215,6 +233,22 @@ public class ProblemPaletteFactory {
 				Messages.Constraint3CreationTool_desc,
 				Collections.singletonList(ProblemElementTypes.Link_4001));
 		entry.setId("createConstraint3CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ProblemDiagramEditorPlugin
+				.findImageDescriptor("/problem/icons/obj16/rqc_obj.gif")); //$NON-NLS-1$
+		entry.setLargeIcon(ProblemDiagramEditorPlugin
+				.findImageDescriptor("/problem/icons/obj16/rqc_obj.gif")); //$NON-NLS-1$
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createConcern4CreationTool() {
+		LinkToolEntry entry = new LinkToolEntry(
+				Messages.Concern4CreationTool_title,
+				Messages.Concern4CreationTool_desc,
+				Collections.singletonList(ProblemElementTypes.Link_4004));
+		entry.setId("createConcern4CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ProblemDiagramEditorPlugin
 				.findImageDescriptor("/problem/icons/obj16/rqc_obj.gif")); //$NON-NLS-1$
 		entry.setLargeIcon(ProblemDiagramEditorPlugin

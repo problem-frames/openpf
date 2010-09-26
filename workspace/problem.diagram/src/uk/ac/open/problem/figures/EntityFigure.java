@@ -6,14 +6,12 @@ import org.eclipse.draw2d.GridData;
 import org.eclipse.draw2d.GridLayout;
 import org.eclipse.draw2d.PositionConstants;
 import org.eclipse.draw2d.Shape;
-import org.eclipse.draw2d.geometry.Point;
 import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.widgets.Display;
 
-import uk.ac.open.problem.Concern;
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.NodeType;
 
@@ -113,13 +111,6 @@ public class EntityFigure extends Shape {
 		constraintFFigureEntityDescription.grabExcessVerticalSpace = true;
 		this.add(fFigureEntityDescription,
 				constraintFFigureEntityDescription);
-		int init_height=this.getLocation().y + getSize().height;
-		for (Concern c: node.getConcerns()) {
-			WrappingLabel concern = new WrappingLabel(c.getName());
-			concern.setLocation(new Point(this.getLocation().x + this.getSize().width,
-					 init_height )) ;
-			init_height += concern.getSize().height;
-		}
  	}
 
 	private boolean myUseLocalCoordinates = false;
@@ -131,6 +122,11 @@ public class EntityFigure extends Shape {
 		myUseLocalCoordinates = useLocalCoordinates;
 	}
 	public WrappingLabel getFigureEntityName() {
+		String text = fFigureEntityName.getText();
+		if (text.startsWith("#")
+				&& text.endsWith("#")) {
+			fFigureEntityName.setText(text.substring(1, text.length()-2));
+		}
 		return fFigureEntityName;
 	}
 	public WrappingLabel getFigureEntityDescription() {
@@ -166,11 +162,15 @@ public class EntityFigure extends Shape {
 
 //		System.out.println(node.getType().getName());
 		if (node != null && node.getType() == NodeType.REQUIREMENT) {
-			this.setLineWidth(1);
+			this.setLineWidth(2);
 			this.setLineStyle(Graphics.LINE_DASH);
 			graphics.drawOval(r);
+		} else if (node != null && node.getType() == NodeType.CONCERN) {
+			this.setLineWidth(2);
+			this.setLineStyle(Graphics.LINE_DASHDOT);
+			graphics.drawRoundRectangle(r, inset1, inset2);
 		} else {
-			this.setLineWidth(1);
+			this.setLineWidth(2);
 			this.setLineStyle(Graphics.LINE_SOLID);
 			// draw the line for designed domain
 			if (node != null && node.getType() == NodeType.DESIGNED)

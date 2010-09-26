@@ -174,7 +174,6 @@ public class LinkItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ProblemPackage.Literals.LINK__PHENOMENA);
-			childrenFeatures.add(ProblemPackage.Literals.LINK__CONCERNS);
 		}
 		return childrenFeatures;
 	}
@@ -235,7 +234,6 @@ public class LinkItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ProblemPackage.LINK__PHENOMENA:
-			case ProblemPackage.LINK__CONCERNS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -257,11 +255,6 @@ public class LinkItemProvider
 			(createChildParameter
 				(ProblemPackage.Literals.LINK__PHENOMENA,
 				 ProblemFactory.eINSTANCE.createPhenomenon()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ProblemPackage.Literals.LINK__CONCERNS,
-				 ProblemFactory.eINSTANCE.createConcern()));
 	}
 
 	/**

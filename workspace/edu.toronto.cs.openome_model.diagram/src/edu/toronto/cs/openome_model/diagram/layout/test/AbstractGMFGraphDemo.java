@@ -117,9 +117,11 @@ public abstract class AbstractGMFGraphDemo {
 	 * @param e the edge
 	 * @return the connection
 	 */
+	@SuppressWarnings("unchecked")
 	static PolylineConnection connection(Edge e) {
 		PolylineConnection conn = new PolylineConnection();
 		conn.setConnectionRouter(new BendpointConnectionRouter());
+		@SuppressWarnings("rawtypes")
 		List bends = new ArrayList();
 		NodeList nodes = e.vNodes;
 		if (nodes != null) {

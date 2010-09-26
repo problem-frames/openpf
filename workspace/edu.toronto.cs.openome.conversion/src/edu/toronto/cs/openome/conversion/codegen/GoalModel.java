@@ -876,7 +876,6 @@ public class GoalModel extends IStar {
 							sg.isSoftGoal = true;
 						add_link(sg, hg, p.op); 
 					}
-					break;
 				}
 			}
 		}				

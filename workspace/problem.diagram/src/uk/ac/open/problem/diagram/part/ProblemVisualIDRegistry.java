@@ -12,8 +12,10 @@ import uk.ac.open.problem.ProblemDiagram;
 import uk.ac.open.problem.ProblemPackage;
 import uk.ac.open.problem.diagram.edit.parts.Link2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Link3EditPart;
+import uk.ac.open.problem.diagram.edit.parts.Link4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.LinkDescription2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.LinkDescription3EditPart;
+import uk.ac.open.problem.diagram.edit.parts.LinkDescription4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.LinkDescriptionEditPart;
 import uk.ac.open.problem.diagram.edit.parts.LinkEditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node2EditPart;
@@ -22,12 +24,14 @@ import uk.ac.open.problem.diagram.edit.parts.Node4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node5EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node6EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node7EditPart;
+import uk.ac.open.problem.diagram.edit.parts.Node8EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeDescription2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeDescription3EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeDescription4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeDescription5EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeDescription6EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeDescription7EditPart;
+import uk.ac.open.problem.diagram.edit.parts.NodeDescription8EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeDescriptionEditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeEditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeName2EditPart;
@@ -35,6 +39,7 @@ import uk.ac.open.problem.diagram.edit.parts.NodeName3EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeName4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeName5EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeName6EditPart;
+import uk.ac.open.problem.diagram.edit.parts.NodeName7EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeNameDescriptionEditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeNameEditPart;
 import uk.ac.open.problem.diagram.edit.parts.ProblemDiagramEditPart;
@@ -184,6 +189,11 @@ public class ProblemVisualIDRegistry {
 					&& isNode_2007((Node) domainElement)) {
 				return Node7EditPart.VISUAL_ID;
 			}
+			if (ProblemPackage.eINSTANCE.getNode().isSuperTypeOf(
+					domainElement.eClass())
+					&& isNode_2009((Node) domainElement)) {
+				return Node8EditPart.VISUAL_ID;
+			}
 			break;
 		}
 		return -1;
@@ -230,6 +240,9 @@ public class ProblemVisualIDRegistry {
 				return true;
 			}
 			if (Node7EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Node8EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -289,6 +302,14 @@ public class ProblemVisualIDRegistry {
 				return true;
 			}
 			break;
+		case Node8EditPart.VISUAL_ID:
+			if (NodeName7EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (NodeDescription8EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
 		case LinkEditPart.VISUAL_ID:
 			if (LinkDescriptionEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
@@ -301,6 +322,11 @@ public class ProblemVisualIDRegistry {
 			break;
 		case Link3EditPart.VISUAL_ID:
 			if (LinkDescription3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Link4EditPart.VISUAL_ID:
+			if (LinkDescription4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -329,6 +355,11 @@ public class ProblemVisualIDRegistry {
 				domainElement.eClass())
 				&& isLink_4003((Link) domainElement)) {
 			return Link3EditPart.VISUAL_ID;
+		}
+		if (ProblemPackage.eINSTANCE.getLink().isSuperTypeOf(
+				domainElement.eClass())
+				&& isLink_4004((Link) domainElement)) {
+			return Link4EditPart.VISUAL_ID;
 		}
 		return -1;
 	}
@@ -416,9 +447,9 @@ public class ProblemVisualIDRegistry {
 	/**
 	 * @generated
 	 */
-	private static boolean isLink_4001(Link domainElement) {
+	private static boolean isNode_2009(Node domainElement) {
 		Object result = ProblemOCLFactory.getExpression(14,
-				ProblemPackage.eINSTANCE.getLink(), null).evaluate(
+				ProblemPackage.eINSTANCE.getNode(), null).evaluate(
 				domainElement);
 		return result instanceof Boolean && ((Boolean) result).booleanValue();
 	}
@@ -426,7 +457,7 @@ public class ProblemVisualIDRegistry {
 	/**
 	 * @generated
 	 */
-	private static boolean isLink_4002(Link domainElement) {
+	private static boolean isLink_4001(Link domainElement) {
 		Object result = ProblemOCLFactory.getExpression(16,
 				ProblemPackage.eINSTANCE.getLink(), null).evaluate(
 				domainElement);
@@ -436,8 +467,28 @@ public class ProblemVisualIDRegistry {
 	/**
 	 * @generated
 	 */
-	private static boolean isLink_4003(Link domainElement) {
+	private static boolean isLink_4002(Link domainElement) {
 		Object result = ProblemOCLFactory.getExpression(18,
+				ProblemPackage.eINSTANCE.getLink(), null).evaluate(
+				domainElement);
+		return result instanceof Boolean && ((Boolean) result).booleanValue();
+	}
+
+	/**
+	 * @generated
+	 */
+	private static boolean isLink_4003(Link domainElement) {
+		Object result = ProblemOCLFactory.getExpression(20,
+				ProblemPackage.eINSTANCE.getLink(), null).evaluate(
+				domainElement);
+		return result instanceof Boolean && ((Boolean) result).booleanValue();
+	}
+
+	/**
+	 * @generated
+	 */
+	private static boolean isLink_4004(Link domainElement) {
+		Object result = ProblemOCLFactory.getExpression(22,
 				ProblemPackage.eINSTANCE.getLink(), null).evaluate(
 				domainElement);
 		return result instanceof Boolean && ((Boolean) result).booleanValue();

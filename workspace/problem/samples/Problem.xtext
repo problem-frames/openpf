@@ -5,8 +5,6 @@ generate problem "http://open.ac.uk/problem"
 ProblemDiagram: "problem:" name=ID ("for" highlight=[Node])?
 	((nodes+=Node | links+=Link))*;
 
-Concern: "concern" name=STRING;
-
 Node:
 	name=ID (type=NodeType)?
 	((":")? description=STRING)?
@@ -15,12 +13,11 @@ Node:
 	(subproblem+=ProblemDiagram
 	| "see" "domain" problemNodeRef+=[Node]
 	| "see" "problem" problemRef+=[ProblemDiagram]
-	| "see" href+=STRING
-	| concerns+=Concern)*
+	| "see" href+=STRING)*
 	"}")?;
 
 enum NodeType:
-	REQUIREMENT="R" | MACHINE="M" | BIDDABLE="B" | LEXICAL="X" | CAUSAL="C" | DESIGNED="D" | PHYSICAL="P";
+	REQUIREMENT="R" | MACHINE="M" | BIDDABLE="B" | LEXICAL="X" | CAUSAL="C" | DESIGNED="D" | PHYSICAL="P" | CONCERN="?";
 
 Phenomenon:
 	(type=PhenomenonType)? (isControlled?="!")? name=ID ((":")? description=STRING)?;
@@ -31,11 +28,10 @@ enum PhenomenonType:
 Link:
 	from=[Node] (type=LinkType) to=[Node] ('{' phenomena+=Phenomenon (',' phenomena+=Phenomenon)*
 	'}')?
-	((":")? description=STRING)?
-	("{" (concerns+=Concern)* "}")?;
+	((":")? description=STRING)?;
 
 enum LinkType:
-	INTERFACE="--" | REFERENCE="~~" | CONSTRAINT="~>";
+	INTERFACE="--" | REFERENCE="~~" | CONSTRAINT="~>" | CONCERN="->";
 
 terminal ID: ('#' (!('#'))+ '#') |
   ('^'? ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*);

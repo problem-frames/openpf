@@ -192,57 +192,6 @@ ruleProblemDiagram returns [EObject current=null]
 
 
 
-// Entry rule entryRuleConcern
-entryRuleConcern returns [EObject current=null] 
-	:
-	{ currentNode = createCompositeNode(grammarAccess.getConcernRule(), currentNode); }
-	 iv_ruleConcern=ruleConcern 
-	 { $current=$iv_ruleConcern.current; } 
-	 EOF 
-;
-
-// Rule Concern
-ruleConcern returns [EObject current=null] 
-    @init { EObject temp=null; setCurrentLookahead(); resetLookahead(); 
-    }
-    @after { resetLookahead(); 
-    	lastConsumedNode = currentNode;
-    }:
-(	'concern' 
-    {
-        createLeafNode(grammarAccess.getConcernAccess().getConcernKeyword_0(), null); 
-    }
-(
-(
-		lv_name_1_0=RULE_STRING
-		{
-			createLeafNode(grammarAccess.getConcernAccess().getNameSTRINGTerminalRuleCall_1_0(), "name"); 
-		}
-		{
-	        if ($current==null) {
-	            $current = factory.create(grammarAccess.getConcernRule().getType().getClassifier());
-	            associateNodeWithAstElement(currentNode, $current);
-	        }
-	        try {
-	       		set(
-	       			$current, 
-	       			"name",
-	        		lv_name_1_0, 
-	        		"STRING", 
-	        		lastConsumedNode);
-	        } catch (ValueConverterException vce) {
-				handleValueConverterException(vce);
-	        }
-	    }
-
-)
-))
-;
-
-
-
-
-
 // Entry rule entryRuleNode
 entryRuleNode returns [EObject current=null] 
 	:
@@ -490,32 +439,7 @@ ruleNode returns [EObject current=null]
 	    }
 
 )
-))
-    |(
-(
-		{ 
-	        currentNode=createCompositeNode(grammarAccess.getNodeAccess().getConcernsConcernParserRuleCall_3_2_4_0(), currentNode); 
-	    }
-		lv_concerns_17_0=ruleConcern		{
-	        if ($current==null) {
-	            $current = factory.create(grammarAccess.getNodeRule().getType().getClassifier());
-	            associateNodeWithAstElement(currentNode.getParent(), $current);
-	        }
-	        try {
-	       		add(
-	       			$current, 
-	       			"concerns",
-	        		lv_concerns_17_0, 
-	        		"Concern", 
-	        		currentNode);
-	        } catch (ValueConverterException vce) {
-				handleValueConverterException(vce);
-	        }
-	        currentNode = currentNode.getParent();
-	    }
-
-)
-))*	'}' 
+)))*	'}' 
     {
         createLeafNode(grammarAccess.getNodeAccess().getRightCurlyBracketKeyword_3_3(), null); 
     }
@@ -802,39 +726,7 @@ ruleLink returns [EObject current=null]
 	    }
 
 )
-))?(	'{' 
-    {
-        createLeafNode(grammarAccess.getLinkAccess().getLeftCurlyBracketKeyword_5_0(), null); 
-    }
-(
-(
-		{ 
-	        currentNode=createCompositeNode(grammarAccess.getLinkAccess().getConcernsConcernParserRuleCall_5_1_0(), currentNode); 
-	    }
-		lv_concerns_11_0=ruleConcern		{
-	        if ($current==null) {
-	            $current = factory.create(grammarAccess.getLinkRule().getType().getClassifier());
-	            associateNodeWithAstElement(currentNode.getParent(), $current);
-	        }
-	        try {
-	       		add(
-	       			$current, 
-	       			"concerns",
-	        		lv_concerns_11_0, 
-	        		"Concern", 
-	        		currentNode);
-	        } catch (ValueConverterException vce) {
-				handleValueConverterException(vce);
-	        }
-	        currentNode = currentNode.getParent();
-	    }
-
-)
-)*	'}' 
-    {
-        createLeafNode(grammarAccess.getLinkAccess().getRightCurlyBracketKeyword_5_2(), null); 
-    }
-)?)
+))?)
 ;
 
 
@@ -887,6 +779,12 @@ ruleNodeType returns [Enumerator current=null]
 	{
         $current = grammarAccess.getNodeTypeAccess().getPHYSICALEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
         createLeafNode(grammarAccess.getNodeTypeAccess().getPHYSICALEnumLiteralDeclaration_6(), null); 
+    }
+)
+    |(	'?' 
+	{
+        $current = grammarAccess.getNodeTypeAccess().getCONCERNEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
+        createLeafNode(grammarAccess.getNodeTypeAccess().getCONCERNEnumLiteralDeclaration_7(), null); 
     }
 ));
 
@@ -941,6 +839,12 @@ ruleLinkType returns [Enumerator current=null]
 	{
         $current = grammarAccess.getLinkTypeAccess().getCONSTRAINTEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
         createLeafNode(grammarAccess.getLinkTypeAccess().getCONSTRAINTEnumLiteralDeclaration_2(), null); 
+    }
+)
+    |(	'->' 
+	{
+        $current = grammarAccess.getLinkTypeAccess().getCONCERNEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+        createLeafNode(grammarAccess.getLinkTypeAccess().getCONCERNEnumLiteralDeclaration_3(), null); 
     }
 ));
 

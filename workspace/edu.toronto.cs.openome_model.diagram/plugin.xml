@@ -886,6 +886,7 @@
          schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
          sequence="F5"/>
    </extension>
+<!--
    <extension
          point="org.eclipse.gmf.runtime.diagram.ui.layoutProviders">
       <layoutProvider
@@ -895,6 +896,7 @@
          </Priority>
       </layoutProvider>
    </extension>
+-->
    <extension
          point="org.eclipse.ui.menus">
       <menuContribution

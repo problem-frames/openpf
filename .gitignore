@@ -9,5 +9,6 @@ workspace/*/\@dot.log
 workspace/*/javaCompiler...args
 workspace/*/*.jar
 workspace/*/*.zip
+workspace/.JETEmitters
 *.log
 00*

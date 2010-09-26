@@ -349,6 +349,14 @@ public class ProblemBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
+		public boolean canCreateLink_4004(ProblemDiagram container,
+				Node source, Node target) {
+			return canExistLink_4004(container, null, source, target);
+		}
+
+		/**
+		 * @generated
+		 */
 		public boolean canExistLink_4001(ProblemDiagram container,
 				Link linkInstance, Node source, Node target) {
 			return true;
@@ -366,6 +374,14 @@ public class ProblemBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		 * @generated
 		 */
 		public boolean canExistLink_4003(ProblemDiagram container,
+				Link linkInstance, Node source, Node target) {
+			return true;
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canExistLink_4004(ProblemDiagram container,
 				Link linkInstance, Node source, Node target) {
 			return true;
 		}

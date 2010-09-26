@@ -23,7 +23,6 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import uk.ac.open.problem.Concern;
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.NodeType;
 import uk.ac.open.problem.Phenomenon;
@@ -45,7 +44,6 @@ import uk.ac.open.problem.ProblemPackage;
  *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getProblemNodeRef <em>Problem Node Ref</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getProblemRef <em>Problem Ref</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getHref <em>Href</em>}</li>
- *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getConcerns <em>Concerns</em>}</li>
  * </ul>
  * </p>
  *
@@ -162,16 +160,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 	 * @ordered
 	 */
   protected EList<String> href;
-
-  /**
-	 * The cached value of the '{@link #getConcerns() <em>Concerns</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see #getConcerns()
-	 * @generated
-	 * @ordered
-	 */
-  protected EList<Concern> concerns;
 
   /**
 	 * <!-- begin-user-doc -->
@@ -333,19 +321,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EList<Concern> getConcerns()
-  {
-		if (concerns == null) {
-			concerns = new EObjectContainmentEList<Concern>(Concern.class, this, ProblemPackage.NODE__CONCERNS);
-		}
-		return concerns;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -354,8 +329,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 				return ((InternalEList<?>)getHiddenPhenomena()).basicRemove(otherEnd, msgs);
 			case ProblemPackage.NODE__SUBPROBLEM:
 				return ((InternalEList<?>)getSubproblem()).basicRemove(otherEnd, msgs);
-			case ProblemPackage.NODE__CONCERNS:
-				return ((InternalEList<?>)getConcerns()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -385,8 +358,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 				return getProblemRef();
 			case ProblemPackage.NODE__HREF:
 				return getHref();
-			case ProblemPackage.NODE__CONCERNS:
-				return getConcerns();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -430,10 +401,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 				getHref().clear();
 				getHref().addAll((Collection<? extends String>)newValue);
 				return;
-			case ProblemPackage.NODE__CONCERNS:
-				getConcerns().clear();
-				getConcerns().addAll((Collection<? extends Concern>)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -471,9 +438,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 			case ProblemPackage.NODE__HREF:
 				getHref().clear();
 				return;
-			case ProblemPackage.NODE__CONCERNS:
-				getConcerns().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -503,8 +467,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 				return problemRef != null && !problemRef.isEmpty();
 			case ProblemPackage.NODE__HREF:
 				return href != null && !href.isEmpty();
-			case ProblemPackage.NODE__CONCERNS:
-				return concerns != null && !concerns.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

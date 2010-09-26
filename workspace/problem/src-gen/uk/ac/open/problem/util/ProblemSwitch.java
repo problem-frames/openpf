@@ -97,12 +97,6 @@ public class ProblemSwitch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ProblemPackage.CONCERN: {
-				Concern concern = (Concern)theEObject;
-				T result = caseConcern(concern);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ProblemPackage.NODE: {
 				Node node = (Node)theEObject;
 				T result = caseNode(node);
@@ -137,22 +131,6 @@ public class ProblemSwitch<T>
 	 * @generated
 	 */
   public T caseProblemDiagram(ProblemDiagram object)
-  {
-		return null;
-	}
-
-  /**
-	 * Returns the result of interpreting the object as an instance of '<em>Concern</em>'.
-	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Concern</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-  public T caseConcern(Concern object)
   {
 		return null;
 	}

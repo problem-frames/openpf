@@ -27,6 +27,7 @@ import uk.ac.open.problem.diagram.edit.parts.Node4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node5EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node6EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node7EditPart;
+import uk.ac.open.problem.diagram.edit.parts.Node8EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeEditPart;
 import uk.ac.open.problem.diagram.edit.parts.ProblemDiagramEditPart;
 import uk.ac.open.problem.diagram.part.Messages;
@@ -44,7 +45,7 @@ public class ProblemModelingAssistantProvider extends ModelingAssistantProvider 
 		IGraphicalEditPart editPart = (IGraphicalEditPart) host
 				.getAdapter(IGraphicalEditPart.class);
 		if (editPart instanceof ProblemDiagramEditPart) {
-			ArrayList<IElementType> types = new ArrayList<IElementType>(7);
+			ArrayList<IElementType> types = new ArrayList<IElementType>(8);
 			types.add(ProblemElementTypes.Node_2001);
 			types.add(ProblemElementTypes.Node_2002);
 			types.add(ProblemElementTypes.Node_2003);
@@ -52,6 +53,7 @@ public class ProblemModelingAssistantProvider extends ModelingAssistantProvider 
 			types.add(ProblemElementTypes.Node_2005);
 			types.add(ProblemElementTypes.Node_2006);
 			types.add(ProblemElementTypes.Node_2007);
+			types.add(ProblemElementTypes.Node_2009);
 			return types;
 		}
 		return Collections.EMPTY_LIST;
@@ -84,6 +86,9 @@ public class ProblemModelingAssistantProvider extends ModelingAssistantProvider 
 		if (sourceEditPart instanceof Node7EditPart) {
 			return ((Node7EditPart) sourceEditPart).getMARelTypesOnSource();
 		}
+		if (sourceEditPart instanceof Node8EditPart) {
+			return ((Node8EditPart) sourceEditPart).getMARelTypesOnSource();
+		}
 		return Collections.EMPTY_LIST;
 	}
 
@@ -113,6 +118,9 @@ public class ProblemModelingAssistantProvider extends ModelingAssistantProvider 
 		}
 		if (targetEditPart instanceof Node7EditPart) {
 			return ((Node7EditPart) targetEditPart).getMARelTypesOnTarget();
+		}
+		if (targetEditPart instanceof Node8EditPart) {
+			return ((Node8EditPart) targetEditPart).getMARelTypesOnTarget();
 		}
 		return Collections.EMPTY_LIST;
 	}
@@ -154,6 +162,10 @@ public class ProblemModelingAssistantProvider extends ModelingAssistantProvider 
 			return ((Node7EditPart) sourceEditPart)
 					.getMARelTypesOnSourceAndTarget(targetEditPart);
 		}
+		if (sourceEditPart instanceof Node8EditPart) {
+			return ((Node8EditPart) sourceEditPart)
+					.getMARelTypesOnSourceAndTarget(targetEditPart);
+		}
 		return Collections.EMPTY_LIST;
 	}
 
@@ -192,6 +204,10 @@ public class ProblemModelingAssistantProvider extends ModelingAssistantProvider 
 			return ((Node7EditPart) targetEditPart)
 					.getMATypesForSource(relationshipType);
 		}
+		if (targetEditPart instanceof Node8EditPart) {
+			return ((Node8EditPart) targetEditPart)
+					.getMATypesForSource(relationshipType);
+		}
 		return Collections.EMPTY_LIST;
 	}
 
@@ -228,6 +244,10 @@ public class ProblemModelingAssistantProvider extends ModelingAssistantProvider 
 		}
 		if (sourceEditPart instanceof Node7EditPart) {
 			return ((Node7EditPart) sourceEditPart)
+					.getMATypesForTarget(relationshipType);
+		}
+		if (sourceEditPart instanceof Node8EditPart) {
+			return ((Node8EditPart) sourceEditPart)
 					.getMATypesForTarget(relationshipType);
 		}
 		return Collections.EMPTY_LIST;

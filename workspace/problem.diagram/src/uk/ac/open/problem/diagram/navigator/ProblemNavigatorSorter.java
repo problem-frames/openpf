@@ -12,7 +12,7 @@ public class ProblemNavigatorSorter extends ViewerSorter {
 	/**
 	 * @generated
 	 */
-	private static final int GROUP_CATEGORY = 4005;
+	private static final int GROUP_CATEGORY = 4006;
 
 	/**
 	 * @generated

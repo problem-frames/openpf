@@ -81,30 +81,6 @@ public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getLinksLinkParserRuleCall_3_1_0() { return cLinksLinkParserRuleCall_3_1_0; }
 	}
 
-	public class ConcernElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Concern");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cConcernKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameSTRINGTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		
-		//Concern:
-		//	"concern" name=STRING;
-		public ParserRule getRule() { return rule; }
-
-		//"concern" name=STRING
-		public Group getGroup() { return cGroup; }
-
-		//"concern"
-		public Keyword getConcernKeyword_0() { return cConcernKeyword_0; }
-
-		//name=STRING
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-
-		//STRING
-		public RuleCall getNameSTRINGTerminalRuleCall_1_0() { return cNameSTRINGTerminalRuleCall_1_0; }
-	}
-
 	public class NodeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Node");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -144,19 +120,17 @@ public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSeeKeyword_3_2_3_0 = (Keyword)cGroup_3_2_3.eContents().get(0);
 		private final Assignment cHrefAssignment_3_2_3_1 = (Assignment)cGroup_3_2_3.eContents().get(1);
 		private final RuleCall cHrefSTRINGTerminalRuleCall_3_2_3_1_0 = (RuleCall)cHrefAssignment_3_2_3_1.eContents().get(0);
-		private final Assignment cConcernsAssignment_3_2_4 = (Assignment)cAlternatives_3_2.eContents().get(4);
-		private final RuleCall cConcernsConcernParserRuleCall_3_2_4_0 = (RuleCall)cConcernsAssignment_3_2_4.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_3_3 = (Keyword)cGroup_3.eContents().get(3);
 		
 		//Node:
 		//	name=ID type=NodeType? (":"? description=STRING)? ("{" (hiddenPhenomena+=Phenomenon (","
 		//	hiddenPhenomena+=Phenomenon)*)? (subproblem+=ProblemDiagram | "see" "domain" problemNodeRef+=[Node] | "see" "problem"
-		//	problemRef+=[ProblemDiagram] | "see" href+=STRING | concerns+=Concern)* "}")?;
+		//	problemRef+=[ProblemDiagram] | "see" href+=STRING)* "}")?;
 		public ParserRule getRule() { return rule; }
 
 		//name=ID type=NodeType? (":"? description=STRING)? ("{" (hiddenPhenomena+=Phenomenon ("," hiddenPhenomena+=Phenomenon)*)?
 		//(subproblem+=ProblemDiagram | "see" "domain" problemNodeRef+=[Node] | "see" "problem" problemRef+=[ProblemDiagram] |
-		//"see" href+=STRING | concerns+=Concern)* "}")?
+		//"see" href+=STRING)* "}")?
 		public Group getGroup() { return cGroup; }
 
 		//name=ID
@@ -184,7 +158,7 @@ public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getDescriptionSTRINGTerminalRuleCall_2_1_0() { return cDescriptionSTRINGTerminalRuleCall_2_1_0; }
 
 		//("{" (hiddenPhenomena+=Phenomenon ("," hiddenPhenomena+=Phenomenon)*)? (subproblem+=ProblemDiagram | "see" "domain"
-		//problemNodeRef+=[Node] | "see" "problem" problemRef+=[ProblemDiagram] | "see" href+=STRING | concerns+=Concern)* "}")?
+		//problemNodeRef+=[Node] | "see" "problem" problemRef+=[ProblemDiagram] | "see" href+=STRING)* "}")?
 		public Group getGroup_3() { return cGroup_3; }
 
 		//"{"
@@ -212,7 +186,7 @@ public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getHiddenPhenomenaPhenomenonParserRuleCall_3_1_1_1_0() { return cHiddenPhenomenaPhenomenonParserRuleCall_3_1_1_1_0; }
 
 		//(subproblem+=ProblemDiagram | "see" "domain" problemNodeRef+=[Node] | "see" "problem" problemRef+=[ProblemDiagram] |
-		//"see" href+=STRING | concerns+=Concern)*
+		//"see" href+=STRING)*
 		public Alternatives getAlternatives_3_2() { return cAlternatives_3_2; }
 
 		//subproblem+=ProblemDiagram
@@ -268,12 +242,6 @@ public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 
 		//STRING
 		public RuleCall getHrefSTRINGTerminalRuleCall_3_2_3_1_0() { return cHrefSTRINGTerminalRuleCall_3_2_3_1_0; }
-
-		//concerns+=Concern
-		public Assignment getConcernsAssignment_3_2_4() { return cConcernsAssignment_3_2_4; }
-
-		//Concern
-		public RuleCall getConcernsConcernParserRuleCall_3_2_4_0() { return cConcernsConcernParserRuleCall_3_2_4_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_3_3() { return cRightCurlyBracketKeyword_3_3; }
@@ -355,19 +323,14 @@ public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cColonKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
 		private final Assignment cDescriptionAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
 		private final RuleCall cDescriptionSTRINGTerminalRuleCall_4_1_0 = (RuleCall)cDescriptionAssignment_4_1.eContents().get(0);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cLeftCurlyBracketKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cConcernsAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cConcernsConcernParserRuleCall_5_1_0 = (RuleCall)cConcernsAssignment_5_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5_2 = (Keyword)cGroup_5.eContents().get(2);
 		
 		//Link:
 		//	from=[Node] type=LinkType to=[Node] ("{" phenomena+=Phenomenon ("," phenomena+=Phenomenon)* "}")? (":"?
-		//	description=STRING)? ("{" concerns+=Concern* "}")?;
+		//	description=STRING)?;
 		public ParserRule getRule() { return rule; }
 
 		//from=[Node] type=LinkType to=[Node] ("{" phenomena+=Phenomenon ("," phenomena+=Phenomenon)* "}")? (":"?
-		//description=STRING)? ("{" concerns+=Concern* "}")?
+		//description=STRING)?
 		public Group getGroup() { return cGroup; }
 
 		//from=[Node]
@@ -432,21 +395,6 @@ public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 
 		//STRING
 		public RuleCall getDescriptionSTRINGTerminalRuleCall_4_1_0() { return cDescriptionSTRINGTerminalRuleCall_4_1_0; }
-
-		//("{" concerns+=Concern* "}")?
-		public Group getGroup_5() { return cGroup_5; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_5_0() { return cLeftCurlyBracketKeyword_5_0; }
-
-		//concerns+=Concern*
-		public Assignment getConcernsAssignment_5_1() { return cConcernsAssignment_5_1; }
-
-		//Concern
-		public RuleCall getConcernsConcernParserRuleCall_5_1_0() { return cConcernsConcernParserRuleCall_5_1_0; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_5_2() { return cRightCurlyBracketKeyword_5_2; }
 	}
 	
 	
@@ -467,12 +415,14 @@ public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cDESIGNEDDKeyword_5_0 = (Keyword)cDESIGNEDEnumLiteralDeclaration_5.eContents().get(0);
 		private final EnumLiteralDeclaration cPHYSICALEnumLiteralDeclaration_6 = (EnumLiteralDeclaration)cAlternatives.eContents().get(6);
 		private final Keyword cPHYSICALPKeyword_6_0 = (Keyword)cPHYSICALEnumLiteralDeclaration_6.eContents().get(0);
+		private final EnumLiteralDeclaration cCONCERNEnumLiteralDeclaration_7 = (EnumLiteralDeclaration)cAlternatives.eContents().get(7);
+		private final Keyword cCONCERNQuestionMarkKeyword_7_0 = (Keyword)cCONCERNEnumLiteralDeclaration_7.eContents().get(0);
 		
 		//enum NodeType:
-		//	REQUIREMENT="R" | MACHINE="M" | BIDDABLE="B" | LEXICAL="X" | CAUSAL="C" | DESIGNED="D" | PHYSICAL="P";
+		//	REQUIREMENT="R" | MACHINE="M" | BIDDABLE="B" | LEXICAL="X" | CAUSAL="C" | DESIGNED="D" | PHYSICAL="P" | CONCERN="?";
 		public EnumRule getRule() { return rule; }
 
-		//REQUIREMENT="R" | MACHINE="M" | BIDDABLE="B" | LEXICAL="X" | CAUSAL="C" | DESIGNED="D" | PHYSICAL="P"
+		//REQUIREMENT="R" | MACHINE="M" | BIDDABLE="B" | LEXICAL="X" | CAUSAL="C" | DESIGNED="D" | PHYSICAL="P" | CONCERN="?"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//REQUIREMENT="R"
@@ -516,6 +466,12 @@ public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 
 		//"P"
 		public Keyword getPHYSICALPKeyword_6_0() { return cPHYSICALPKeyword_6_0; }
+
+		//CONCERN="?"
+		public EnumLiteralDeclaration getCONCERNEnumLiteralDeclaration_7() { return cCONCERNEnumLiteralDeclaration_7; }
+
+		//"?"
+		public Keyword getCONCERNQuestionMarkKeyword_7_0() { return cCONCERNQuestionMarkKeyword_7_0; }
 	}
 
 	public class PhenomenonTypeElements extends AbstractEnumRuleElementFinder {
@@ -563,12 +519,14 @@ public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cREFERENCETildeTildeKeyword_1_0 = (Keyword)cREFERENCEEnumLiteralDeclaration_1.eContents().get(0);
 		private final EnumLiteralDeclaration cCONSTRAINTEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
 		private final Keyword cCONSTRAINTTildeGreaterThanSignKeyword_2_0 = (Keyword)cCONSTRAINTEnumLiteralDeclaration_2.eContents().get(0);
+		private final EnumLiteralDeclaration cCONCERNEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
+		private final Keyword cCONCERNHyphenMinusGreaterThanSignKeyword_3_0 = (Keyword)cCONCERNEnumLiteralDeclaration_3.eContents().get(0);
 		
 		//enum LinkType:
-		//	INTERFACE="--" | REFERENCE="~~" | CONSTRAINT="~>";
+		//	INTERFACE="--" | REFERENCE="~~" | CONSTRAINT="~>" | CONCERN="->";
 		public EnumRule getRule() { return rule; }
 
-		//INTERFACE="--" | REFERENCE="~~" | CONSTRAINT="~>"
+		//INTERFACE="--" | REFERENCE="~~" | CONSTRAINT="~>" | CONCERN="->"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//INTERFACE="--"
@@ -588,10 +546,15 @@ public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 
 		//"~>"
 		public Keyword getCONSTRAINTTildeGreaterThanSignKeyword_2_0() { return cCONSTRAINTTildeGreaterThanSignKeyword_2_0; }
+
+		//CONCERN="->"
+		public EnumLiteralDeclaration getCONCERNEnumLiteralDeclaration_3() { return cCONCERNEnumLiteralDeclaration_3; }
+
+		//"->"
+		public Keyword getCONCERNHyphenMinusGreaterThanSignKeyword_3_0() { return cCONCERNHyphenMinusGreaterThanSignKeyword_3_0; }
 	}
 	
 	private ProblemDiagramElements pProblemDiagram;
-	private ConcernElements pConcern;
 	private NodeElements pNode;
 	private NodeTypeElements unknownRuleNodeType;
 	private PhenomenonElements pPhenomenon;
@@ -632,20 +595,10 @@ public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 		return getProblemDiagramAccess().getRule();
 	}
 
-	//Concern:
-	//	"concern" name=STRING;
-	public ConcernElements getConcernAccess() {
-		return (pConcern != null) ? pConcern : (pConcern = new ConcernElements());
-	}
-	
-	public ParserRule getConcernRule() {
-		return getConcernAccess().getRule();
-	}
-
 	//Node:
 	//	name=ID type=NodeType? (":"? description=STRING)? ("{" (hiddenPhenomena+=Phenomenon (","
 	//	hiddenPhenomena+=Phenomenon)*)? (subproblem+=ProblemDiagram | "see" "domain" problemNodeRef+=[Node] | "see" "problem"
-	//	problemRef+=[ProblemDiagram] | "see" href+=STRING | concerns+=Concern)* "}")?;
+	//	problemRef+=[ProblemDiagram] | "see" href+=STRING)* "}")?;
 	public NodeElements getNodeAccess() {
 		return (pNode != null) ? pNode : (pNode = new NodeElements());
 	}
@@ -655,7 +608,7 @@ public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum NodeType:
-	//	REQUIREMENT="R" | MACHINE="M" | BIDDABLE="B" | LEXICAL="X" | CAUSAL="C" | DESIGNED="D" | PHYSICAL="P";
+	//	REQUIREMENT="R" | MACHINE="M" | BIDDABLE="B" | LEXICAL="X" | CAUSAL="C" | DESIGNED="D" | PHYSICAL="P" | CONCERN="?";
 	public NodeTypeElements getNodeTypeAccess() {
 		return (unknownRuleNodeType != null) ? unknownRuleNodeType : (unknownRuleNodeType = new NodeTypeElements());
 	}
@@ -686,7 +639,7 @@ public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 
 	//Link:
 	//	from=[Node] type=LinkType to=[Node] ("{" phenomena+=Phenomenon ("," phenomena+=Phenomenon)* "}")? (":"?
-	//	description=STRING)? ("{" concerns+=Concern* "}")?;
+	//	description=STRING)?;
 	public LinkElements getLinkAccess() {
 		return (pLink != null) ? pLink : (pLink = new LinkElements());
 	}
@@ -696,7 +649,7 @@ public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum LinkType:
-	//	INTERFACE="--" | REFERENCE="~~" | CONSTRAINT="~>";
+	//	INTERFACE="--" | REFERENCE="~~" | CONSTRAINT="~>" | CONCERN="->";
 	public LinkTypeElements getLinkTypeAccess() {
 		return (unknownRuleLinkType != null) ? unknownRuleLinkType : (unknownRuleLinkType = new LinkTypeElements());
 	}

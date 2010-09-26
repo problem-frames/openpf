@@ -19,6 +19,7 @@ import org.eclipse.swt.graphics.Image;
 import uk.ac.open.problem.ProblemPackage;
 import uk.ac.open.problem.diagram.edit.parts.Link2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Link3EditPart;
+import uk.ac.open.problem.diagram.edit.parts.Link4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.LinkEditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node3EditPart;
@@ -26,6 +27,7 @@ import uk.ac.open.problem.diagram.edit.parts.Node4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node5EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node6EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node7EditPart;
+import uk.ac.open.problem.diagram.edit.parts.Node8EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeEditPart;
 import uk.ac.open.problem.diagram.edit.parts.ProblemDiagramEditPart;
 import uk.ac.open.problem.diagram.part.ProblemDiagramEditorPlugin;
@@ -92,6 +94,11 @@ public class ProblemElementTypes {
 	/**
 	 * @generated
 	 */
+	public static final IElementType Node_2009 = getElementType("problem.diagram.Node_2009"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
 	public static final IElementType Link_4001 = getElementType("problem.diagram.Link_4001"); //$NON-NLS-1$
 
 	/**
@@ -103,6 +110,11 @@ public class ProblemElementTypes {
 	 * @generated
 	 */
 	public static final IElementType Link_4003 = getElementType("problem.diagram.Link_4003"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Link_4004 = getElementType("problem.diagram.Link_4004"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -232,11 +244,15 @@ public class ProblemElementTypes {
 
 			elements.put(Node_2007, ProblemPackage.eINSTANCE.getNode());
 
+			elements.put(Node_2009, ProblemPackage.eINSTANCE.getNode());
+
 			elements.put(Link_4001, ProblemPackage.eINSTANCE.getLink());
 
 			elements.put(Link_4002, ProblemPackage.eINSTANCE.getLink());
 
 			elements.put(Link_4003, ProblemPackage.eINSTANCE.getLink());
+
+			elements.put(Link_4004, ProblemPackage.eINSTANCE.getLink());
 		}
 		return (ENamedElement) elements.get(type);
 	}
@@ -262,9 +278,11 @@ public class ProblemElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Node_2005);
 			KNOWN_ELEMENT_TYPES.add(Node_2006);
 			KNOWN_ELEMENT_TYPES.add(Node_2007);
+			KNOWN_ELEMENT_TYPES.add(Node_2009);
 			KNOWN_ELEMENT_TYPES.add(Link_4001);
 			KNOWN_ELEMENT_TYPES.add(Link_4002);
 			KNOWN_ELEMENT_TYPES.add(Link_4003);
+			KNOWN_ELEMENT_TYPES.add(Link_4004);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -290,12 +308,16 @@ public class ProblemElementTypes {
 			return Node_2006;
 		case Node7EditPart.VISUAL_ID:
 			return Node_2007;
+		case Node8EditPart.VISUAL_ID:
+			return Node_2009;
 		case LinkEditPart.VISUAL_ID:
 			return Link_4001;
 		case Link2EditPart.VISUAL_ID:
 			return Link_4002;
 		case Link3EditPart.VISUAL_ID:
 			return Link_4003;
+		case Link4EditPart.VISUAL_ID:
+			return Link_4004;
 		}
 		return null;
 	}

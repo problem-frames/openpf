@@ -117,6 +117,7 @@ public class Link3EditPart extends ConnectionNodeEditPart implements
 		 * @generated
 		 */
 		public InterfaceFigure() {
+			this.setLineWidth(2);
 
 			createContents();
 		}

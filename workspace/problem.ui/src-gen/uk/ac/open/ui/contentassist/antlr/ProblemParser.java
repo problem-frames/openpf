@@ -44,7 +44,6 @@ public class ProblemParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLinkTypeAccess().getAlternatives(), "rule__LinkType__Alternatives");
 					put(grammarAccess.getProblemDiagramAccess().getGroup(), "rule__ProblemDiagram__Group__0");
 					put(grammarAccess.getProblemDiagramAccess().getGroup_2(), "rule__ProblemDiagram__Group_2__0");
-					put(grammarAccess.getConcernAccess().getGroup(), "rule__Concern__Group__0");
 					put(grammarAccess.getNodeAccess().getGroup(), "rule__Node__Group__0");
 					put(grammarAccess.getNodeAccess().getGroup_2(), "rule__Node__Group_2__0");
 					put(grammarAccess.getNodeAccess().getGroup_3(), "rule__Node__Group_3__0");
@@ -59,12 +58,10 @@ public class ProblemParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLinkAccess().getGroup_3(), "rule__Link__Group_3__0");
 					put(grammarAccess.getLinkAccess().getGroup_3_2(), "rule__Link__Group_3_2__0");
 					put(grammarAccess.getLinkAccess().getGroup_4(), "rule__Link__Group_4__0");
-					put(grammarAccess.getLinkAccess().getGroup_5(), "rule__Link__Group_5__0");
 					put(grammarAccess.getProblemDiagramAccess().getNameAssignment_1(), "rule__ProblemDiagram__NameAssignment_1");
 					put(grammarAccess.getProblemDiagramAccess().getHighlightAssignment_2_1(), "rule__ProblemDiagram__HighlightAssignment_2_1");
 					put(grammarAccess.getProblemDiagramAccess().getNodesAssignment_3_0(), "rule__ProblemDiagram__NodesAssignment_3_0");
 					put(grammarAccess.getProblemDiagramAccess().getLinksAssignment_3_1(), "rule__ProblemDiagram__LinksAssignment_3_1");
-					put(grammarAccess.getConcernAccess().getNameAssignment_1(), "rule__Concern__NameAssignment_1");
 					put(grammarAccess.getNodeAccess().getNameAssignment_0(), "rule__Node__NameAssignment_0");
 					put(grammarAccess.getNodeAccess().getTypeAssignment_1(), "rule__Node__TypeAssignment_1");
 					put(grammarAccess.getNodeAccess().getDescriptionAssignment_2_1(), "rule__Node__DescriptionAssignment_2_1");
@@ -74,7 +71,6 @@ public class ProblemParser extends AbstractContentAssistParser {
 					put(grammarAccess.getNodeAccess().getProblemNodeRefAssignment_3_2_1_2(), "rule__Node__ProblemNodeRefAssignment_3_2_1_2");
 					put(grammarAccess.getNodeAccess().getProblemRefAssignment_3_2_2_2(), "rule__Node__ProblemRefAssignment_3_2_2_2");
 					put(grammarAccess.getNodeAccess().getHrefAssignment_3_2_3_1(), "rule__Node__HrefAssignment_3_2_3_1");
-					put(grammarAccess.getNodeAccess().getConcernsAssignment_3_2_4(), "rule__Node__ConcernsAssignment_3_2_4");
 					put(grammarAccess.getPhenomenonAccess().getTypeAssignment_0(), "rule__Phenomenon__TypeAssignment_0");
 					put(grammarAccess.getPhenomenonAccess().getIsControlledAssignment_1(), "rule__Phenomenon__IsControlledAssignment_1");
 					put(grammarAccess.getPhenomenonAccess().getNameAssignment_2(), "rule__Phenomenon__NameAssignment_2");
@@ -85,7 +81,6 @@ public class ProblemParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLinkAccess().getPhenomenaAssignment_3_1(), "rule__Link__PhenomenaAssignment_3_1");
 					put(grammarAccess.getLinkAccess().getPhenomenaAssignment_3_2_1(), "rule__Link__PhenomenaAssignment_3_2_1");
 					put(grammarAccess.getLinkAccess().getDescriptionAssignment_4_1(), "rule__Link__DescriptionAssignment_4_1");
-					put(grammarAccess.getLinkAccess().getConcernsAssignment_5_1(), "rule__Link__ConcernsAssignment_5_1");
 				}
 			};
 		}

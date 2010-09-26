@@ -22,7 +22,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link uk.ac.open.problem.Link#getTo <em>To</em>}</li>
  *   <li>{@link uk.ac.open.problem.Link#getPhenomena <em>Phenomena</em>}</li>
  *   <li>{@link uk.ac.open.problem.Link#getDescription <em>Description</em>}</li>
- *   <li>{@link uk.ac.open.problem.Link#getConcerns <em>Concerns</em>}</li>
  * </ul>
  * </p>
  *
@@ -154,21 +153,5 @@ public interface Link extends EObject
 	 * @generated
 	 */
   void setDescription(String value);
-
-  /**
-	 * Returns the value of the '<em><b>Concerns</b></em>' containment reference list.
-	 * The list contents are of type {@link uk.ac.open.problem.Concern}.
-	 * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Concerns</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-	 * @return the value of the '<em>Concerns</em>' containment reference list.
-	 * @see uk.ac.open.problem.ProblemPackage#getLink_Concerns()
-	 * @model containment="true"
-	 * @generated
-	 */
-  EList<Concern> getConcerns();
 
 } // Link

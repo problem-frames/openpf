@@ -11,7 +11,7 @@
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Keyword" value="problem:"/>
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.8"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
         </elements>
         <elements xsi:type="xtext:Group" cardinality="?">
           <elements xsi:type="xtext:Keyword" value="for"/>
@@ -20,28 +20,17 @@
               <type metamodel="/0/@metamodelDeclarations.0">
                 <classifier xsi:type="ecore:EClass" href="http://open.ac.uk/problem#//Node"/>
               </type>
-              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.8"/>
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
             </terminal>
           </elements>
         </elements>
         <elements xsi:type="xtext:Alternatives" cardinality="*">
           <elements xsi:type="xtext:Assignment" feature="nodes" operator="+=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.2"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.1"/>
           </elements>
           <elements xsi:type="xtext:Assignment" feature="links" operator="+=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.6"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.5"/>
           </elements>
-        </elements>
-      </alternatives>
-    </rules>
-    <rules xsi:type="xtext:ParserRule" name="Concern">
-      <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://open.ac.uk/problem#//Concern"/>
-      </type>
-      <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Keyword" value="concern"/>
-        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
         </elements>
       </alternatives>
     </rules>
@@ -51,10 +40,10 @@
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.8"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
         </elements>
         <elements xsi:type="xtext:Assignment" cardinality="?" feature="type" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.2"/>
         </elements>
         <elements xsi:type="xtext:Group" cardinality="?">
           <elements xsi:type="xtext:Keyword" cardinality="?" value=":"/>
@@ -66,12 +55,12 @@
           <elements xsi:type="xtext:Keyword" value="{"/>
           <elements xsi:type="xtext:Group" cardinality="?">
             <elements xsi:type="xtext:Assignment" feature="hiddenPhenomena" operator="+=">
-              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
             </elements>
             <elements xsi:type="xtext:Group" cardinality="*">
               <elements xsi:type="xtext:Keyword" value=","/>
               <elements xsi:type="xtext:Assignment" feature="hiddenPhenomena" operator="+=">
-                <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
+                <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
               </elements>
             </elements>
           </elements>
@@ -87,7 +76,7 @@
                   <type metamodel="/0/@metamodelDeclarations.0">
                     <classifier xsi:type="ecore:EClass" href="http://open.ac.uk/problem#//Node"/>
                   </type>
-                  <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.8"/>
+                  <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
                 </terminal>
               </elements>
             </elements>
@@ -99,7 +88,7 @@
                   <type metamodel="/0/@metamodelDeclarations.0">
                     <classifier xsi:type="ecore:EClass" href="http://open.ac.uk/problem#//ProblemDiagram"/>
                   </type>
-                  <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.8"/>
+                  <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
                 </terminal>
               </elements>
             </elements>
@@ -108,9 +97,6 @@
               <elements xsi:type="xtext:Assignment" feature="href" operator="+=">
                 <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
               </elements>
-            </elements>
-            <elements xsi:type="xtext:Assignment" feature="concerns" operator="+=">
-              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.1"/>
             </elements>
           </elements>
           <elements xsi:type="xtext:Keyword" value="}"/>
@@ -150,6 +136,10 @@
           <enumLiteral href="http://open.ac.uk/problem#//NodeType/PHYSICAL"/>
           <literal value="P"/>
         </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://open.ac.uk/problem#//NodeType/CONCERN"/>
+          <literal value="?"/>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Phenomenon">
@@ -158,13 +148,13 @@
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Assignment" cardinality="?" feature="type" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.5"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
         </elements>
         <elements xsi:type="xtext:Assignment" cardinality="?" feature="isControlled" operator="?=">
           <terminal xsi:type="xtext:Keyword" value="!"/>
         </elements>
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.8"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
         </elements>
         <elements xsi:type="xtext:Group" cardinality="?">
           <elements xsi:type="xtext:Keyword" cardinality="?" value=":"/>
@@ -203,29 +193,29 @@
             <type metamodel="/0/@metamodelDeclarations.0">
               <classifier xsi:type="ecore:EClass" href="http://open.ac.uk/problem#//Node"/>
             </type>
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.8"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
           </terminal>
         </elements>
         <elements xsi:type="xtext:Assignment" feature="type" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.6"/>
         </elements>
         <elements xsi:type="xtext:Assignment" feature="to" operator="=">
           <terminal xsi:type="xtext:CrossReference">
             <type metamodel="/0/@metamodelDeclarations.0">
               <classifier xsi:type="ecore:EClass" href="http://open.ac.uk/problem#//Node"/>
             </type>
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.8"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
           </terminal>
         </elements>
         <elements xsi:type="xtext:Group" cardinality="?">
           <elements xsi:type="xtext:Keyword" value="{"/>
           <elements xsi:type="xtext:Assignment" feature="phenomena" operator="+=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
           </elements>
           <elements xsi:type="xtext:Group" cardinality="*">
             <elements xsi:type="xtext:Keyword" value=","/>
             <elements xsi:type="xtext:Assignment" feature="phenomena" operator="+=">
-              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
             </elements>
           </elements>
           <elements xsi:type="xtext:Keyword" value="}"/>
@@ -235,13 +225,6 @@
           <elements xsi:type="xtext:Assignment" feature="description" operator="=">
             <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
           </elements>
-        </elements>
-        <elements xsi:type="xtext:Group" cardinality="?">
-          <elements xsi:type="xtext:Keyword" value="{"/>
-          <elements xsi:type="xtext:Assignment" cardinality="*" feature="concerns" operator="+=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.1"/>
-          </elements>
-          <elements xsi:type="xtext:Keyword" value="}"/>
         </elements>
       </alternatives>
     </rules>
@@ -261,6 +244,10 @@
         <elements xsi:type="xtext:EnumLiteralDeclaration">
           <enumLiteral href="http://open.ac.uk/problem#//LinkType/CONSTRAINT"/>
           <literal value="~>"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://open.ac.uk/problem#//LinkType/CONCERN"/>
+          <literal value="->"/>
         </elements>
       </alternatives>
     </rules>
@@ -312,10 +299,10 @@
         <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.8"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
         <elements xsi:type="xtext:Group" cardinality="*">
           <elements xsi:type="xtext:Keyword" value="."/>
-          <elements xsi:type="xtext:RuleCall" rule="/0/@rules.8"/>
+          <elements xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
         </elements>
       </alternatives>
     </rules>

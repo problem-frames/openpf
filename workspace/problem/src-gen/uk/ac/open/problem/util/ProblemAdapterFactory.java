@@ -78,10 +78,6 @@ public class ProblemAdapterFactory extends AdapterFactoryImpl
 				return createProblemDiagramAdapter();
 			}
 			@Override
-			public Adapter caseConcern(Concern object) {
-				return createConcernAdapter();
-			}
-			@Override
 			public Adapter caseNode(Node object) {
 				return createNodeAdapter();
 			}
@@ -125,21 +121,6 @@ public class ProblemAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
   public Adapter createProblemDiagramAdapter()
-  {
-		return null;
-	}
-
-  /**
-	 * Creates a new adapter for an object of class '{@link uk.ac.open.problem.Concern <em>Concern</em>}'.
-	 * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uk.ac.open.problem.Concern
-	 * @generated
-	 */
-  public Adapter createConcernAdapter()
   {
 		return null;
 	}

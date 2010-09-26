@@ -25,7 +25,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link uk.ac.open.problem.Node#getProblemNodeRef <em>Problem Node Ref</em>}</li>
  *   <li>{@link uk.ac.open.problem.Node#getProblemRef <em>Problem Ref</em>}</li>
  *   <li>{@link uk.ac.open.problem.Node#getHref <em>Href</em>}</li>
- *   <li>{@link uk.ac.open.problem.Node#getConcerns <em>Concerns</em>}</li>
  * </ul>
  * </p>
  *
@@ -195,21 +194,5 @@ public interface Node extends EObject
 	 * @generated
 	 */
   EList<String> getHref();
-
-  /**
-	 * Returns the value of the '<em><b>Concerns</b></em>' containment reference list.
-	 * The list contents are of type {@link uk.ac.open.problem.Concern}.
-	 * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Concerns</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-	 * @return the value of the '<em>Concerns</em>' containment reference list.
-	 * @see uk.ac.open.problem.ProblemPackage#getNode_Concerns()
-	 * @model containment="true"
-	 * @generated
-	 */
-  EList<Concern> getConcerns();
 
 } // Node

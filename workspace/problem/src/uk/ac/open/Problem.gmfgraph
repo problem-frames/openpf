@@ -96,6 +96,27 @@
       <accessors
           figure="//@figures.0/@descriptors.3/@actualFigure/@children.1"/>
     </descriptors>
+    <descriptors
+        name="ConcernFigure">
+      <actualFigure
+          xsi:type="gmfgraph:PolylineConnection"
+          name="ConcernFigure"
+          lineWidth="2"
+          lineKind="LINE_DASHDOT"
+          targetDecoration="//@figures.0/@figures.0">
+        <children
+            xsi:type="gmfgraph:PolylineDecoration"
+            name=""
+            lineWidth="2"
+            lineKind="LINE_DASHDOT"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="ConcernNameFigure"/>
+      </actualFigure>
+      <accessors
+          accessor="getFigureConcernNameFigure"
+          figure="//@figures.0/@descriptors.4/@actualFigure/@children.1"/>
+    </descriptors>
   </figures>
   <nodes
       name="Entity"
@@ -116,6 +137,9 @@
   <connections
       name="Reference"
       figure="ReferenceFigure"/>
+  <connections
+      name="Concern"
+      figure="ConcernFigure"/>
   <labels
       name="InterfaceName"
       figure="InterfaceFigure"
@@ -126,7 +150,9 @@
         xsi:type="gmfgraph:AlignmentFacet"
         alignment="CENTER"/>
     <facets
-        xsi:type="gmfgraph:LabelOffsetFacet"/>
+        xsi:type="gmfgraph:LabelOffsetFacet"
+        x="10"
+        y="10"/>
   </labels>
   <labels
       name="ConstraintName"
@@ -138,7 +164,9 @@
         xsi:type="gmfgraph:AlignmentFacet"
         alignment="CENTER"/>
     <facets
-        xsi:type="gmfgraph:LabelOffsetFacet"/>
+        xsi:type="gmfgraph:LabelOffsetFacet"
+        x="10"
+        y="10"/>
   </labels>
   <labels
       name="ReferenceName"
@@ -150,7 +178,23 @@
         xsi:type="gmfgraph:AlignmentFacet"
         alignment="CENTER"/>
     <facets
-        xsi:type="gmfgraph:LabelOffsetFacet"/>
+        xsi:type="gmfgraph:LabelOffsetFacet"
+        x="10"
+        y="10"/>
+  </labels>
+  <labels
+      name="ConcernName"
+      figure="ConcernFigure"
+      elementIcon="false"
+      accessor="//@figures.0/@descriptors.4/@accessors.0"
+      container="//@figures.0/@descriptors.4/@accessors.0">
+    <facets
+        xsi:type="gmfgraph:AlignmentFacet"
+        alignment="CENTER"/>
+    <facets
+        xsi:type="gmfgraph:LabelOffsetFacet"
+        x="10"
+        y="10"/>
   </labels>
   <labels
       name="Name"

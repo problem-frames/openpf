@@ -18,6 +18,7 @@ import uk.ac.open.problem.ProblemDiagram;
 import uk.ac.open.problem.ProblemPackage;
 import uk.ac.open.problem.diagram.edit.parts.Link2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Link3EditPart;
+import uk.ac.open.problem.diagram.edit.parts.Link4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.LinkEditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node3EditPart;
@@ -25,6 +26,7 @@ import uk.ac.open.problem.diagram.edit.parts.Node4EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node5EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node6EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node7EditPart;
+import uk.ac.open.problem.diagram.edit.parts.Node8EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeEditPart;
 import uk.ac.open.problem.diagram.edit.parts.ProblemDiagramEditPart;
 import uk.ac.open.problem.diagram.providers.ProblemElementTypes;
@@ -87,6 +89,10 @@ public class ProblemDiagramUpdater {
 				result.add(new ProblemNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == Node8EditPart.VISUAL_ID) {
+				result.add(new ProblemNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -112,12 +118,16 @@ public class ProblemDiagramUpdater {
 			return getNode_2006ContainedLinks(view);
 		case Node7EditPart.VISUAL_ID:
 			return getNode_2007ContainedLinks(view);
+		case Node8EditPart.VISUAL_ID:
+			return getNode_2009ContainedLinks(view);
 		case LinkEditPart.VISUAL_ID:
 			return getLink_4001ContainedLinks(view);
 		case Link2EditPart.VISUAL_ID:
 			return getLink_4002ContainedLinks(view);
 		case Link3EditPart.VISUAL_ID:
 			return getLink_4003ContainedLinks(view);
+		case Link4EditPart.VISUAL_ID:
+			return getLink_4004ContainedLinks(view);
 		}
 		return Collections.emptyList();
 	}
@@ -141,12 +151,16 @@ public class ProblemDiagramUpdater {
 			return getNode_2006IncomingLinks(view);
 		case Node7EditPart.VISUAL_ID:
 			return getNode_2007IncomingLinks(view);
+		case Node8EditPart.VISUAL_ID:
+			return getNode_2009IncomingLinks(view);
 		case LinkEditPart.VISUAL_ID:
 			return getLink_4001IncomingLinks(view);
 		case Link2EditPart.VISUAL_ID:
 			return getLink_4002IncomingLinks(view);
 		case Link3EditPart.VISUAL_ID:
 			return getLink_4003IncomingLinks(view);
+		case Link4EditPart.VISUAL_ID:
+			return getLink_4004IncomingLinks(view);
 		}
 		return Collections.emptyList();
 	}
@@ -170,12 +184,16 @@ public class ProblemDiagramUpdater {
 			return getNode_2006OutgoingLinks(view);
 		case Node7EditPart.VISUAL_ID:
 			return getNode_2007OutgoingLinks(view);
+		case Node8EditPart.VISUAL_ID:
+			return getNode_2009OutgoingLinks(view);
 		case LinkEditPart.VISUAL_ID:
 			return getLink_4001OutgoingLinks(view);
 		case Link2EditPart.VISUAL_ID:
 			return getLink_4002OutgoingLinks(view);
 		case Link3EditPart.VISUAL_ID:
 			return getLink_4003OutgoingLinks(view);
+		case Link4EditPart.VISUAL_ID:
+			return getLink_4004OutgoingLinks(view);
 		}
 		return Collections.emptyList();
 	}
@@ -190,6 +208,7 @@ public class ProblemDiagramUpdater {
 		result.addAll(getContainedTypeModelFacetLinks_Link_4001(modelElement));
 		result.addAll(getContainedTypeModelFacetLinks_Link_4002(modelElement));
 		result.addAll(getContainedTypeModelFacetLinks_Link_4003(modelElement));
+		result.addAll(getContainedTypeModelFacetLinks_Link_4004(modelElement));
 		return result;
 	}
 
@@ -252,6 +271,14 @@ public class ProblemDiagramUpdater {
 	/**
 	 * @generated
 	 */
+	public static List<ProblemLinkDescriptor> getNode_2009ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
 	public static List<ProblemLinkDescriptor> getLink_4001ContainedLinks(
 			View view) {
 		return Collections.emptyList();
@@ -276,6 +303,14 @@ public class ProblemDiagramUpdater {
 	/**
 	 * @generated
 	 */
+	public static List<ProblemLinkDescriptor> getLink_4004ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
 	public static List<ProblemLinkDescriptor> getNode_2001IncomingLinks(
 			View view) {
 		Node modelElement = (Node) view.getElement();
@@ -287,6 +322,8 @@ public class ProblemDiagramUpdater {
 		result.addAll(getIncomingTypeModelFacetLinks_Link_4002(modelElement,
 				crossReferences));
 		result.addAll(getIncomingTypeModelFacetLinks_Link_4003(modelElement,
+				crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_Link_4004(modelElement,
 				crossReferences));
 		return result;
 	}
@@ -306,6 +343,8 @@ public class ProblemDiagramUpdater {
 				crossReferences));
 		result.addAll(getIncomingTypeModelFacetLinks_Link_4003(modelElement,
 				crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_Link_4004(modelElement,
+				crossReferences));
 		return result;
 	}
 
@@ -323,6 +362,8 @@ public class ProblemDiagramUpdater {
 		result.addAll(getIncomingTypeModelFacetLinks_Link_4002(modelElement,
 				crossReferences));
 		result.addAll(getIncomingTypeModelFacetLinks_Link_4003(modelElement,
+				crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_Link_4004(modelElement,
 				crossReferences));
 		return result;
 	}
@@ -342,6 +383,8 @@ public class ProblemDiagramUpdater {
 				crossReferences));
 		result.addAll(getIncomingTypeModelFacetLinks_Link_4003(modelElement,
 				crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_Link_4004(modelElement,
+				crossReferences));
 		return result;
 	}
 
@@ -359,6 +402,8 @@ public class ProblemDiagramUpdater {
 		result.addAll(getIncomingTypeModelFacetLinks_Link_4002(modelElement,
 				crossReferences));
 		result.addAll(getIncomingTypeModelFacetLinks_Link_4003(modelElement,
+				crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_Link_4004(modelElement,
 				crossReferences));
 		return result;
 	}
@@ -378,6 +423,8 @@ public class ProblemDiagramUpdater {
 				crossReferences));
 		result.addAll(getIncomingTypeModelFacetLinks_Link_4003(modelElement,
 				crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_Link_4004(modelElement,
+				crossReferences));
 		return result;
 	}
 
@@ -395,6 +442,28 @@ public class ProblemDiagramUpdater {
 		result.addAll(getIncomingTypeModelFacetLinks_Link_4002(modelElement,
 				crossReferences));
 		result.addAll(getIncomingTypeModelFacetLinks_Link_4003(modelElement,
+				crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_Link_4004(modelElement,
+				crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<ProblemLinkDescriptor> getNode_2009IncomingLinks(
+			View view) {
+		Node modelElement = (Node) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<ProblemLinkDescriptor> result = new LinkedList<ProblemLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Link_4001(modelElement,
+				crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_Link_4002(modelElement,
+				crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_Link_4003(modelElement,
+				crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_Link_4004(modelElement,
 				crossReferences));
 		return result;
 	}
@@ -426,6 +495,14 @@ public class ProblemDiagramUpdater {
 	/**
 	 * @generated
 	 */
+	public static List<ProblemLinkDescriptor> getLink_4004IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
 	public static List<ProblemLinkDescriptor> getNode_2001OutgoingLinks(
 			View view) {
 		Node modelElement = (Node) view.getElement();
@@ -433,6 +510,7 @@ public class ProblemDiagramUpdater {
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4001(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4002(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4003(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_Link_4004(modelElement));
 		return result;
 	}
 
@@ -446,6 +524,7 @@ public class ProblemDiagramUpdater {
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4001(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4002(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4003(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_Link_4004(modelElement));
 		return result;
 	}
 
@@ -459,6 +538,7 @@ public class ProblemDiagramUpdater {
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4001(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4002(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4003(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_Link_4004(modelElement));
 		return result;
 	}
 
@@ -472,6 +552,7 @@ public class ProblemDiagramUpdater {
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4001(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4002(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4003(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_Link_4004(modelElement));
 		return result;
 	}
 
@@ -485,6 +566,7 @@ public class ProblemDiagramUpdater {
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4001(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4002(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4003(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_Link_4004(modelElement));
 		return result;
 	}
 
@@ -498,6 +580,7 @@ public class ProblemDiagramUpdater {
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4001(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4002(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4003(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_Link_4004(modelElement));
 		return result;
 	}
 
@@ -511,6 +594,21 @@ public class ProblemDiagramUpdater {
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4001(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4002(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4003(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_Link_4004(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<ProblemLinkDescriptor> getNode_2009OutgoingLinks(
+			View view) {
+		Node modelElement = (Node) view.getElement();
+		LinkedList<ProblemLinkDescriptor> result = new LinkedList<ProblemLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Link_4001(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_Link_4002(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_Link_4003(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_Link_4004(modelElement));
 		return result;
 	}
 
@@ -534,6 +632,14 @@ public class ProblemDiagramUpdater {
 	 * @generated
 	 */
 	public static List<ProblemLinkDescriptor> getLink_4003OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<ProblemLinkDescriptor> getLink_4004OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -616,6 +722,31 @@ public class ProblemDiagramUpdater {
 	/**
 	 * @generated
 	 */
+	private static Collection<ProblemLinkDescriptor> getContainedTypeModelFacetLinks_Link_4004(
+			ProblemDiagram container) {
+		LinkedList<ProblemLinkDescriptor> result = new LinkedList<ProblemLinkDescriptor>();
+		for (Iterator<?> links = container.getLinks().iterator(); links
+				.hasNext();) {
+			EObject linkObject = (EObject) links.next();
+			if (false == linkObject instanceof Link) {
+				continue;
+			}
+			Link link = (Link) linkObject;
+			if (Link4EditPart.VISUAL_ID != ProblemVisualIDRegistry
+					.getLinkWithClassVisualID(link)) {
+				continue;
+			}
+			Node dst = link.getTo();
+			Node src = link.getFrom();
+			result.add(new ProblemLinkDescriptor(src, dst, link,
+					ProblemElementTypes.Link_4004, Link4EditPart.VISUAL_ID));
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
 	private static Collection<ProblemLinkDescriptor> getIncomingTypeModelFacetLinks_Link_4001(
 			Node target,
 			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
@@ -690,6 +821,33 @@ public class ProblemDiagramUpdater {
 			Node src = link.getFrom();
 			result.add(new ProblemLinkDescriptor(src, target, link,
 					ProblemElementTypes.Link_4003, Link3EditPart.VISUAL_ID));
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	private static Collection<ProblemLinkDescriptor> getIncomingTypeModelFacetLinks_Link_4004(
+			Node target,
+			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
+		LinkedList<ProblemLinkDescriptor> result = new LinkedList<ProblemLinkDescriptor>();
+		Collection<EStructuralFeature.Setting> settings = crossReferences
+				.get(target);
+		for (EStructuralFeature.Setting setting : settings) {
+			if (setting.getEStructuralFeature() != ProblemPackage.eINSTANCE
+					.getLink_To()
+					|| false == setting.getEObject() instanceof Link) {
+				continue;
+			}
+			Link link = (Link) setting.getEObject();
+			if (Link4EditPart.VISUAL_ID != ProblemVisualIDRegistry
+					.getLinkWithClassVisualID(link)) {
+				continue;
+			}
+			Node src = link.getFrom();
+			result.add(new ProblemLinkDescriptor(src, target, link,
+					ProblemElementTypes.Link_4004, Link4EditPart.VISUAL_ID));
 		}
 		return result;
 	}
@@ -813,6 +971,47 @@ public class ProblemDiagramUpdater {
 			}
 			result.add(new ProblemLinkDescriptor(src, dst, link,
 					ProblemElementTypes.Link_4003, Link3EditPart.VISUAL_ID));
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	private static Collection<ProblemLinkDescriptor> getOutgoingTypeModelFacetLinks_Link_4004(
+			Node source) {
+		ProblemDiagram container = null;
+		// Find container element for the link.
+		// Climb up by containment hierarchy starting from the source
+		// and return the first element that is instance of the container class.
+		for (EObject element = source; element != null && container == null; element = element
+				.eContainer()) {
+			if (element instanceof ProblemDiagram) {
+				container = (ProblemDiagram) element;
+			}
+		}
+		if (container == null) {
+			return Collections.emptyList();
+		}
+		LinkedList<ProblemLinkDescriptor> result = new LinkedList<ProblemLinkDescriptor>();
+		for (Iterator<?> links = container.getLinks().iterator(); links
+				.hasNext();) {
+			EObject linkObject = (EObject) links.next();
+			if (false == linkObject instanceof Link) {
+				continue;
+			}
+			Link link = (Link) linkObject;
+			if (Link4EditPart.VISUAL_ID != ProblemVisualIDRegistry
+					.getLinkWithClassVisualID(link)) {
+				continue;
+			}
+			Node dst = link.getTo();
+			Node src = link.getFrom();
+			if (src != source) {
+				continue;
+			}
+			result.add(new ProblemLinkDescriptor(src, dst, link,
+					ProblemElementTypes.Link_4004, Link4EditPart.VISUAL_ID));
 		}
 		return result;
 	}
