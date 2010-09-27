@@ -560,6 +560,7 @@ public class Node8EditPart extends ShapeNodeEditPart {
 	static final Font FFIGUREENTITYDESCRIPTION_FONT = new Font(
 			Display.getCurrent(), Display.getDefault().getSystemFont()
 					.getFontData()[0].getName(), 6, SWT.ITALIC);
+
 	/**
 	 * @generated NOT
 	 */
@@ -656,6 +657,5 @@ public class Node8EditPart extends ShapeNodeEditPart {
 				node);
 		return primaryShape = figure;
 	}
-
 
 }

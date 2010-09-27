@@ -20,6 +20,7 @@
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
           name="ReferenceFigure"
+          lineWidth="2"
           lineKind="LINE_DASH">
         <children
             xsi:type="gmfgraph:Label"
@@ -33,6 +34,7 @@
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
           name="ConstraintFigure"
+          lineWidth="2"
           lineKind="LINE_DASH"
           targetDecoration="//@figures.0/@figures.0">
         <children

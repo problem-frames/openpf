@@ -188,9 +188,9 @@ public class ProblemDiagramEditorUtil {
 
 				try {
 					// FIXME this can introduce errors
-//					modelResource
-//							.save(uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil
-//									.getSaveOptions());
+					//					modelResource
+					//							.save(uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil
+					//									.getSaveOptions());
 					diagramResource
 							.save(uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil
 									.getSaveOptions());

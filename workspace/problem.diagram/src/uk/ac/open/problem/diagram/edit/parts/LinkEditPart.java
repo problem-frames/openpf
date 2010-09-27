@@ -121,6 +121,7 @@ public class LinkEditPart extends ConnectionNodeEditPart implements
 		 * @generated
 		 */
 		public ConstraintFigure() {
+			this.setLineWidth(2);
 			this.setLineStyle(Graphics.LINE_DASH);
 
 			createContents();

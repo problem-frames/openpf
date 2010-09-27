@@ -31,10 +31,12 @@ public class ProblemDiagramEditPart extends DiagramEditPart {
 	public static final int VISUAL_ID = 1000;
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
 	public ProblemDiagramEditPart(View view) {
 		super(view);
+//		//FIXME
+//		refresh();
 	}
 
 	/**

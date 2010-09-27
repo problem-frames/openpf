@@ -118,6 +118,7 @@ public class Link2EditPart extends ConnectionNodeEditPart implements
 		 * @generated
 		 */
 		public ReferenceFigure() {
+			this.setLineWidth(2);
 			this.setLineStyle(Graphics.LINE_DASH);
 
 			createContents();
