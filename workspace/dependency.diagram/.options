@@ -1,0 +1,7 @@
+# Tracing options for the dependency.diagram plug-in
+
+# Common issues
+dependency.diagram/debug=false
+
+# Visual IDs
+dependency.diagram/debug/visualID=false

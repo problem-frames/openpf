@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
+      <?gmfgen generated="true"?>
+      <fileTypes type="text" extension="dependency_diagram"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser" id="resource-factory">
+      <?gmfgen generated="true"?>
+      <parser
+         type="dependency_diagram"
+         class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
+      </parser>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors" id="gmf-editor">
+      <?gmfgen generated="true"?>
+      <editor
+         id="uk.ac.open.dependency.dependency.diagram.part.DependencyDiagramEditorID"
+         name="%editorName"
+         icon="icons/obj16/DependencyDiagramFile.gif"
+         extensions="dependency_diagram"
+         default="true"
+         class="uk.ac.open.dependency.dependency.diagram.part.DependencyDiagramEditor"
+         matchingStrategy="uk.ac.open.dependency.dependency.diagram.part.DependencyMatchingStrategy"
+         contributorClass="uk.ac.open.dependency.dependency.diagram.part.DependencyDiagramActionBarContributor">
+      </editor>
+   </extension>
+   
+   <extension point="org.eclipse.ui.contexts" id="ui-context">
+      <?gmfgen generated="true"?>
+      <context
+         description="%context.description"
+         id="uk.ac.open.dependency.dependency.diagram.ui.diagramContext"
+         name="%context.name"
+         parentId="org.eclipse.gmf.runtime.diagram.ui.diagramContext">
+      </context>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards" id="creation-wizard">
+      <?gmfgen generated="true"?>
+  	  <wizard
+  	     name="%newWizardName"
+  	     icon="icons/obj16/DependencyDiagramFile.gif"
+  	     category="org.eclipse.ui.Examples"
+  	     class="uk.ac.open.dependency.dependency.diagram.part.DependencyCreationWizard"
+  	     id="uk.ac.open.dependency.dependency.diagram.part.DependencyCreationWizardID">
+  	  	 <description>%newWizardDesc</description>  
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.popupMenus" id="init-diagram-action">
+      <?gmfgen generated="true"?>
+      <objectContribution
+            id="dependency.diagram.InitDiagram"
+            nameFilter="*.dependency"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="%initDiagramActionLabel"
+               class="uk.ac.open.dependency.dependency.diagram.part.DependencyInitDiagramFileAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="dependency.diagram.InitDiagramAction">
+         </action>
+      </objectContribution>
+   </extension>
+	
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.action.globalActionHandlerProviders" id="global-actions">
+      <?gmfgen generated="true"?>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
+         id="DependencyPresentation">
+         <Priority name="Lowest"/>
+         <ViewId id="uk.ac.open.dependency.dependency.diagram.part.DependencyDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="delete"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+               <GlobalActionId actionId="save"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
+         id="DependencyPresentationIDE">
+         <Priority name="Lowest"/>
+         <ViewId id="uk.ac.open.dependency.dependency.diagram.part.DependencyDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="bookmark"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
+            id="DependencyRender">
+         <Priority name="Lowest"/>
+         <ViewId id="uk.ac.open.dependency.dependency.diagram.part.DependencyDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="cut"/>
+               <GlobalActionId actionId="copy"/>
+               <GlobalActionId actionId="paste"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+   </extension>
+
+
+   <extension point="org.eclipse.core.runtime.preferences" id="prefs">
+      <?gmfgen generated="true"?>
+      <initializer class="uk.ac.open.dependency.dependency.diagram.preferences.DiagramPreferenceInitializer"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.preferencePages" id="prefpages">
+      <?gmfgen generated="true"?>
+      <page
+            id="dependency.diagram.general"
+            name="%prefpage.dependency.diagram.general"
+            class="uk.ac.open.dependency.dependency.diagram.preferences.DiagramGeneralPreferencePage">
+      </page>
+      <page
+            id="dependency.diagram.appearance"
+            name="%prefpage.dependency.diagram.appearance"
+            category="dependency.diagram.general"
+            class="uk.ac.open.dependency.dependency.diagram.preferences.DiagramAppearancePreferencePage">
+      </page>
+      <page
+            id="dependency.diagram.connections"
+            name="%prefpage.dependency.diagram.connections"
+            category="dependency.diagram.general"
+            class="uk.ac.open.dependency.dependency.diagram.preferences.DiagramConnectionsPreferencePage">
+      </page>
+      <page
+            id="dependency.diagram.printing"
+            name="%prefpage.dependency.diagram.printing"
+            category="dependency.diagram.general"
+            class="uk.ac.open.dependency.dependency.diagram.preferences.DiagramPrintingPreferencePage">
+      </page>
+      <page
+            id="dependency.diagram.rulersAndGrid"
+            name="%prefpage.dependency.diagram.rulersAndGrid"
+            category="dependency.diagram.general"
+            class="uk.ac.open.dependency.dependency.diagram.preferences.DiagramRulersAndGridPreferencePage">
+      </page>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor" id="prop-contrib">
+      <?gmfgen generated="true"?>
+      <propertyContributor
+            contributorId="dependency.diagram"
+            labelProvider="uk.ac.open.dependency.dependency.diagram.sheet.DependencySheetLabelProvider">
+         <propertyCategory category="domain"/>
+         <propertyCategory category="visual"/>
+         <propertyCategory category="extra"/>
+      </propertyContributor>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs">
+      <?gmfgen generated="true"?>   
+      <propertyTabs contributorId="dependency.diagram">
+         <propertyTab
+             category="visual"
+             id="property.tab.AppearancePropertySection"
+             label="%tab.appearance"/>
+          <propertyTab
+             category="visual"
+             id="property.tab.DiagramPropertySection"
+             label="%tab.diagram"/>
+          <propertyTab
+             category="domain"
+             id="property.tab.domain"
+             label="%tab.domain"/>
+      </propertyTabs>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections" id="propsections">
+      <?gmfgen generated="true"?>   
+      <propertySections contributorId="dependency.diagram">
+         <propertySection id="property.section.ConnectorAppearancePropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ConnectionEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ConnectionAppearancePropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>
+         <propertySection id="property.section.ShapeColorAndFontPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ShapeEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ShapeColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection> 
+         <propertySection id="property.section.DiagramColorsAndFontsPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.DiagramColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>     
+         <propertySection id="property.section.RulerGridPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.grid.RulerGridPropertySection" 
+            tab="property.tab.DiagramPropertySection">
+         </propertySection>     
+         <propertySection
+            id="property.section.domain" 
+            tab="property.tab.domain"
+            class="uk.ac.open.dependency.dependency.diagram.sheet.DependencyPropertySection">
+            <input type="org.eclipse.gmf.runtime.notation.View"/>
+            <input type="org.eclipse.gef.EditPart"/>
+            <input type="uk.ac.open.dependency.dependency.diagram.navigator.DependencyAbstractNavigatorItem"/>
+         </propertySection>
+      </propertySections>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders" id="view-provider">
+      <?gmfgen generated="true"?>
+      <viewProvider class="uk.ac.open.dependency.dependency.diagram.providers.DependencyViewProvider">
+         <Priority name="Lowest"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Dependency"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002"/>
+      </viewProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders" id="ep-provider">
+      <?gmfgen generated="true"?>
+      <editpartProvider class="uk.ac.open.dependency.dependency.diagram.providers.DependencyEditPartProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Diagram" id="generated-diagram">
+            <method name="getType()" value="Dependency"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
+            <method name="getType()" value="2001"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
+            <method name="getType()" value="4001,4002"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
+            <method name="getType()" value="5001"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
+            <method name="getType()" value=""/>
+         </object>
+         <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
+      </editpartProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
+      <?gmfgen generated="true"?>
+      <modelingAssistantProvider class="uk.ac.open.dependency.dependency.diagram.providers.DependencyModelingAssistantProvider">
+         <Priority name="Lowest"/>
+         <object class="uk.ac.open.dependency.dependency.diagram.edit.parts.ModelEditPart" id="Model_1000"/>
+         <object class="uk.ac.open.dependency.dependency.diagram.edit.parts.NodeEditPart" id="Node_2001"/>
+         <context elements="Model_1000,Node_2001"/>
+      </modelingAssistantProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders" id="icon-provider">
+      <?gmfgen generated="true"?>
+      <IconProvider class="uk.ac.open.dependency.dependency.diagram.providers.DependencyIconProvider">
+         <Priority name="Low"/>
+      </IconProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes" id="element-types">
+      <?gmfgen generated="true"?>
+      <metamodel nsURI="http://www.Dependency">
+         <metamodelType
+               id="dependency.diagram.Model_1000"
+               name="%metatype.name.Model_1000"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Model"
+               edithelper="uk.ac.open.dependency.dependency.diagram.edit.helpers.ModelEditHelper">
+            <param name="semanticHint" value="1000"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.Dependency">
+         <metamodelType
+               id="dependency.diagram.Node_2001"
+               name="%metatype.name.Node_2001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Node"
+               edithelper="uk.ac.open.dependency.dependency.diagram.edit.helpers.NodeEditHelper">
+            <param name="semanticHint" value="2001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.Dependency">
+         <metamodelType
+               id="dependency.diagram.Coupling_4001"
+               name="%metatype.name.Coupling_4001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Coupling"
+               edithelper="uk.ac.open.dependency.dependency.diagram.edit.helpers.CouplingEditHelper">
+            <param name="semanticHint" value="4001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.Dependency">
+         <metamodelType
+               id="dependency.diagram.Precedence_4002"
+               name="%metatype.name.Precedence_4002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Precedence"
+               edithelper="uk.ac.open.dependency.dependency.diagram.edit.helpers.PrecedenceEditHelper">
+            <param name="semanticHint" value="4002"/>
+         </metamodelType>
+      </metamodel>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
+      <?gmfgen generated="true"?>
+      <clientContext id="dependency.diagram.TypeContext">
+         <enablement>
+            <test
+               property="org.eclipse.gmf.runtime.emf.core.editingDomain"
+               value="dependency.diagram.EditingDomain"/>
+         </enablement>
+      </clientContext> 
+      <binding context="dependency.diagram.TypeContext">
+         <elementType ref="dependency.diagram.Model_1000"/>
+         <elementType ref="dependency.diagram.Node_2001"/>
+         <elementType ref="dependency.diagram.Coupling_4001"/>
+         <elementType ref="dependency.diagram.Precedence_4002"/>
+         <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
+      </binding>
+   </extension>
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isURIEditorInput">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="dependency.diagram.URIEditorInputPropertyTester"
+           type="org.eclipse.emf.common.ui.URIEditorInput"
+           namespace="dependency.diagram"
+           properties="isURIEditorInput"
+           class="uk.ac.open.dependency.dependency.diagram.part.DependencyUriEditorInputTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.ui.navigator.viewer" id="navigator-viewbinding">
+      <?gmfgen generated="true"?>
+      <viewerContentBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <contentExtension pattern="dependency.diagram.resourceContent"/>
+			<contentExtension pattern="dependency.diagram.domainResourceContent"/>
+            <contentExtension pattern="dependency.diagram.navigatorLinkHelper"/>
+         </includes>
+      </viewerContentBinding>
+      <viewerActionBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <actionExtension pattern="dependency.diagram.navigatorActionProvider"/>
+         </includes>
+      </viewerActionBinding>
+   </extension>
+
+   <extension point="org.eclipse.ui.navigator.navigatorContent" id="navigator-content">
+      <?gmfgen generated="true"?>
+      <navigatorContent
+            id="dependency.diagram.resourceContent" 
+            name="%navigatorContentName" 
+            priority="normal" 
+            contentProvider="uk.ac.open.dependency.dependency.diagram.navigator.DependencyNavigatorContentProvider" 
+            labelProvider="uk.ac.open.dependency.dependency.diagram.navigator.DependencyNavigatorLabelProvider"
+            icon="icons/obj16/DependencyDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="dependency_diagram"/>
+               </and>
+               <instanceof value="uk.ac.open.dependency.dependency.diagram.navigator.DependencyAbstractNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <or>
+         	   <instanceof value="uk.ac.open.dependency.dependency.diagram.navigator.DependencyAbstractNavigatorItem"/>
+            </or>
+         </possibleChildren>
+         <commonSorter 
+               id="dependency.diagram.navigatorSorter" 
+               class="uk.ac.open.dependency.dependency.diagram.navigator.DependencyNavigatorSorter">
+            <parentExpression>
+               <or>
+	              <and>
+    	             <instanceof value="org.eclipse.core.resources.IFile"/>
+        	         <test property="org.eclipse.core.resources.extension" value="dependency_diagram"/>
+                  </and>
+                  <instanceof value="uk.ac.open.dependency.dependency.diagram.navigator.DependencyAbstractNavigatorItem"/>
+               </or>
+            </parentExpression>
+         </commonSorter>
+      </navigatorContent>
+      <navigatorContent
+            id="dependency.diagram.domainResourceContent" 
+            name="%domainNavigatorContentName" 
+            priority="normal" 
+            contentProvider="uk.ac.open.dependency.dependency.diagram.navigator.DependencyDomainNavigatorContentProvider" 
+            labelProvider="uk.ac.open.dependency.dependency.diagram.navigator.DependencyDomainNavigatorLabelProvider"
+            icon="icons/obj16/DependencyDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="dependency"/>
+               </and>
+               <instanceof value="uk.ac.open.dependency.dependency.diagram.navigator.DependencyDomainNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <instanceof value="uk.ac.open.dependency.dependency.diagram.navigator.DependencyDomainNavigatorItem"/>
+         </possibleChildren>
+      </navigatorContent>
+      <actionProvider
+            id="dependency.diagram.navigatorActionProvider"
+            class="uk.ac.open.dependency.dependency.diagram.navigator.DependencyNavigatorActionProvider">
+         <enablement>
+            <or>
+               <instanceof value="uk.ac.open.dependency.dependency.diagram.navigator.DependencyAbstractNavigatorItem"/>
+            </or>
+         </enablement>
+      </actionProvider>
+   </extension>
+   
+	   <extension point="org.eclipse.ui.navigator.linkHelper" id="navigator-linkhelper">
+      <?gmfgen generated="true"?>
+      <linkHelper
+            id="dependency.diagram.navigatorLinkHelper"
+            class="uk.ac.open.dependency.dependency.diagram.navigator.DependencyNavigatorLinkHelper">
+         <editorInputEnablement>
+            <and>
+               <instanceof value="org.eclipse.emf.common.ui.URIEditorInput"/>
+               <test property="dependency.diagram.isURIEditorInput"/>
+            </and>
+         </editorInputEnablement>
+         <selectionEnablement>
+            <instanceof value="uk.ac.open.dependency.dependency.diagram.navigator.DependencyAbstractNavigatorItem"/>
+         </selectionEnablement>
+      </linkHelper>
+   </extension>
+   <extension point="org.eclipse.ui.commands" id="update-cmd">
+      <?gmfgen generated="true"?>
+      <command
+         categoryId="org.eclipse.ui.category.edit"
+         defaultHandler="uk.ac.open.dependency.dependency.diagram.part.DependencyDiagramUpdateCommand"
+         description="%update.diagram.description"
+         id="uk.ac.open.dependency.dependency.diagram.updateDiagram"
+         name="%update.diagram.name"/>
+   </extension>
+   
+   <extension point="org.eclipse.ui.bindings" id="update-cmd-binding">
+      <?gmfgen generated="true"?>
+      <key 
+         commandId="uk.ac.open.dependency.dependency.diagram.updateDiagram"
+         contextId="uk.ac.open.dependency.dependency.diagram.ui.diagramContext"
+         schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+         sequence="F5"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.menus" id="context-menus">
+      <?gmfgen generated="true"?>
+      <!-- menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=">
+      </menuContribution>
+      <menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar?after=">
+      </menuContribution -->
+      <menuContribution locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
+         <command commandId="dependency.diagram.LoadResourceAction">
+            <visibleWhen>
+               <and>
+                  <with variable="activePartId"><equals value="uk.ac.open.dependency.dependency.diagram.part.DependencyDiagramEditorID"/></with>
+                  <with variable="selection"><iterate ifEmpty="false"> 
+                     <instanceof value="uk.ac.open.dependency.dependency.diagram.edit.parts.ModelEditPart"/>
+                  </iterate></with>
+               </and>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands" id="menu-commands">
+      <?gmfgen generated="true"?>
+      <category id="uk.ac.open.dependency.dependency.diagram.part.DependencyDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
+      <command id="dependency.diagram.LoadResourceAction"
+         name="Load Resource"
+         categoryId="uk.ac.open.dependency.dependency.diagram.part.DependencyDiagramEditorID"
+         defaultHandler="uk.ac.open.dependency.dependency.diagram.part.LoadResourceAction"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.handlers" id="menu-handlers">
+      <?gmfgen generated="true"?>
+   </extension>
+<extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders" id="parser-provider">
+      <?gmfgen generated="true"?>
+      <ParserProvider class="uk.ac.open.dependency.dependency.diagram.providers.DependencyParserProvider">
+         <Priority name="Lowest"/>
+      </ParserProvider>
+   </extension>
+
+
+   <!-- optionally, specify keybindings -->
+</plugin>

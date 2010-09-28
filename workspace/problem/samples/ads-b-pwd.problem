@@ -23,10 +23,10 @@ TA ? "Trust assumption:
 ADS-B functions correctly!"
 
 MSoD "Maintain the Safety Distance" {
-see "/Examples/event/sit1.ec"
-see "/Examples/event/sit2.ec"
-see "/Examples/event/sit3.ec"
-see "/Examples/event/sit4.ec"
+see "/Examples/event/sit1.e"
+see "/Examples/event/sit2.e"
+see "/Examples/event/sit3.e"
+see "/Examples/event/sit4.e"
 see "/Examples/istar/open_account.ood" // just a demo
 }
 

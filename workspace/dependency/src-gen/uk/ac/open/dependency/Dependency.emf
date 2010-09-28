@@ -1,0 +1,29 @@
+@namespace(uri="http://www.Dependency", prefix="uk.ac.open.dependency.dependency")
+@gmf(foo="bar")
+package dependency;
+
+@gmf.diagram(foo="bar")
+class Model {
+  val Node[*] nodes;
+  val Dependency[*] dependencies;
+}
+
+@gmf.node(label="name", icon="false")
+class Node {
+  attr String name;
+  !unique attr String[*] referrence;
+}
+
+class Dependency {
+  ref Node from;
+  ref Node to;
+}
+
+@gmf.link(source="from", target="to", style="dash", width="2")
+class Coupling extends Dependency {
+}
+
+@gmf.link(source="from", target="to", style="dot", width="2", target.decoration="arrow")
+class Precedence extends Dependency {
+}
+

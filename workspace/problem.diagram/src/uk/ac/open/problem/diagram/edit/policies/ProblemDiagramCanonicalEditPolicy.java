@@ -530,7 +530,7 @@ public class ProblemDiagramCanonicalEditPolicy extends CanonicalConnectionEditPo
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<ProblemLinkDescriptor> childDescriptors = ProblemDiagramUpdater
 				.getContainedLinks(viewObject);
-		for (ProblemNodeDescriptor d : childDescriptors) {
+		for (ProblemLinkDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
 		return result;

@@ -170,11 +170,17 @@ public class EntityFigure extends Shape {
 		if (node != null && node.getType() == NodeType.REQUIREMENT) {
 			this.setLineWidth(2);
 			this.setLineStyle(Graphics.LINE_DASH);
-			graphics.drawOval(r);
+			if (isHighlight())
+				graphics.fillOval(r);
+			else
+				graphics.drawOval(r);
 		} else if (node != null && node.getType() == NodeType.CONCERN) {
 			this.setLineWidth(2);
 			this.setLineStyle(Graphics.LINE_DASHDOT);
-			graphics.drawRoundRectangle(r, inset1, inset2);
+			if (isHighlight())
+				graphics.fillRoundRectangle(r, inset1, inset2);
+			else
+				graphics.drawRoundRectangle(r, inset1, inset2);
 		} else {
 			this.setLineWidth(2);
 			this.setLineStyle(Graphics.LINE_SOLID);
@@ -187,7 +193,10 @@ public class EntityFigure extends Shape {
 			t.x = r.x + r.width - 22;
 			t.y = r.y + r.height - 22;
 			if (node != null && node.getType() != NodeType.REQUIREMENT) {
-				graphics.drawRectangle(r);
+				if (isHighlight())
+					graphics.fillRectangle(r);
+				else
+					graphics.drawRectangle(r);
 				if (node.getType() == NodeType.MACHINE) {
 					r.x += inset1;
 					r.y += inset1;

@@ -31,6 +31,11 @@
       <plugin id="com.google.inject"/>
       <plugin id="com.ibm.icu"/>
       <plugin id="core"/>
+      <plugin id="dependency"/>
+      <plugin id="dependency.diagram"/>
+      <plugin id="dependency.diagram.extensions"/>
+      <plugin id="dependency.edit"/>
+      <plugin id="dependency.ui"/>
       <plugin id="edu.toronto.cs.openome.conversion"/>
       <plugin id="edu.toronto.cs.openome.evaluation"/>
       <plugin id="edu.toronto.cs.openome.testing"/>
@@ -40,8 +45,8 @@
       <plugin id="edu.toronto.cs.openome_model.edit"/>
       <plugin id="edu.toronto.cs.openome_model.editor"/>
       <plugin id="event"/>
-      <plugin id="event.edit"/>
-      <plugin id="event.editor"/>
+      <plugin id="event.edit" fragment=""/>
+      <plugin id="event.editor" fragment=""/>
       <plugin id="event.generator"/>
       <plugin id="event.ui"/>
       <plugin id="hu.bme.mit.viatra2.viatraDSM.grabats2009live"/>
@@ -274,8 +279,8 @@
       <plugin id="org.eclipse.jdt.junit.core"/>
       <plugin id="org.eclipse.jdt.junit.runtime"/>
       <plugin id="org.eclipse.jdt.launching"/>
-      <plugin id="org.eclipse.jdt.launching.macosx" fragment=""/>
-      <plugin id="org.eclipse.jdt.launching.ui.macosx" fragment=""/>
+      <plugin id="org.eclipse.jdt.launching.macosx"/>
+      <plugin id="org.eclipse.jdt.launching.ui.macosx"/>
       <plugin id="org.eclipse.jdt.ui"/>
       <plugin id="org.eclipse.jface"/>
       <plugin id="org.eclipse.jface.databinding"/>
@@ -465,6 +470,7 @@
       <feature id="istar.feature" version="1.0.0.qualifier"/>
       <feature id="core.feature" version="1.0.0.qualifier"/>
       <feature id="situation.m2m.feature" version="1.0.0"/>
+      <feature id="dependency.feature" version="1.0.0.qualifier"/>
    </features>
 
 

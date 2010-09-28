@@ -1,0 +1,10 @@
+= Install =
+http://www.scharf.gr/eclipse/emfatic/update/
+http://download.eclipse.org/modeling/gmt/epsilon/updates/
+or install it offline
+= Requirements =
+
+ * dependency graph between requirements editor
+ * double click on a node, one EMF model can be opened
+ * infer the dependency from a set of problem frames
+ * double click on a link, two models are compared

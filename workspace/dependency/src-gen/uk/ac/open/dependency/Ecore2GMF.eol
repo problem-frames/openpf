@@ -1,0 +1,5 @@
+-- Add bold font to actionLabel
+var nodeLabel = GmfGraph!Label.
+	selectOne(l|l.name='NodeLabelFigure');
+nodeLabel.font = new GmfGraph!BasicFont;
+nodeLabel.font.style = GmfGraph!FontStyle#BOLD;
