@@ -23,7 +23,7 @@ import org.eclipse.gmf.runtime.diagram.ui.commands.ICommandProxy;
 import org.eclipse.gmf.runtime.diagram.ui.commands.SetBoundsCommand;
 import org.eclipse.gmf.runtime.diagram.ui.commands.SetViewMutabilityCommand;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
-import org.eclipse.gmf.runtime.diagram.ui.editpolicies.CanonicalEditPolicy;
+import org.eclipse.gmf.runtime.diagram.ui.editpolicies.CanonicalConnectionEditPolicy;
 import org.eclipse.gmf.runtime.diagram.ui.l10n.DiagramUIMessages;
 import org.eclipse.gmf.runtime.diagram.ui.requests.CreateConnectionViewRequest;
 import org.eclipse.gmf.runtime.diagram.ui.requests.CreateViewRequest;
@@ -38,6 +38,7 @@ import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.Size;
 import org.eclipse.gmf.runtime.notation.View;
 
+import uk.ac.open.problem.Link;
 import uk.ac.open.problem.ProblemPackage;
 import uk.ac.open.problem.diagram.edit.parts.Link2EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Link3EditPart;
@@ -58,9 +59,9 @@ import uk.ac.open.problem.diagram.part.ProblemNodeDescriptor;
 import uk.ac.open.problem.diagram.part.ProblemVisualIDRegistry;
 
 /**
- * @generated
+ * @generated NOT
  */
-public class ProblemDiagramCanonicalEditPolicy extends CanonicalEditPolicy {
+public class ProblemDiagramCanonicalEditPolicy extends CanonicalConnectionEditPolicy {
 
 	/**
 	 * @generated
@@ -516,6 +517,39 @@ public class ProblemDiagramCanonicalEditPolicy extends CanonicalEditPolicy {
 		if (view != null) {
 			return (EditPart) getHost().getViewer().getEditPartRegistry()
 					.get(view);
+		}
+		return null;
+	}
+
+	/**
+	 * bug id #314670
+	 */
+	@Override
+	protected List<EObject> getSemanticConnectionsList() {
+		View viewObject = (View) getHost().getModel();
+		LinkedList<EObject> result = new LinkedList<EObject>();
+		List<ProblemLinkDescriptor> childDescriptors = ProblemDiagramUpdater
+				.getContainedLinks(viewObject);
+		for (ProblemNodeDescriptor d : childDescriptors) {
+			result.add(d.getModelElement());
+		}
+		return result;
+	}
+
+	@Override
+	protected EObject getSourceElement(EObject relationship) {
+		if (relationship instanceof Link) {
+			Link l = (Link) relationship;
+			return l.getFrom();
+		}
+		return null;
+	}
+
+	@Override
+	protected EObject getTargetElement(EObject relationship) {
+		if (relationship instanceof Link) {
+			Link l = (Link) relationship;
+			return l.getTo();
 		}
 		return null;
 	}
