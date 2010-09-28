@@ -17,6 +17,7 @@ import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IWorkspace;
+import org.eclipse.core.resources.ResourceAttributes;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.FileLocator;
@@ -64,10 +65,12 @@ public class CreateExamplesAction extends ExtensionReader implements
 					}
 				}
 				InputStream stream = null;
+				Path path = new Path("samples/" + filename);
 				try {
-					stream = FileLocator.openStream(bundle, new Path("samples/" + filename), false);
+					stream = FileLocator.openStream(bundle, path, false);
 				} catch (IOException e) {
-					stream = FileLocator.openStream(bundle, new Path(filename), false);
+					path = new Path(filename);
+					stream = FileLocator.openStream(bundle, path, false);
 				}
 				IFile file;
 				if (folder == null)
@@ -77,6 +80,11 @@ public class CreateExamplesAction extends ExtensionReader implements
 				try {
 					if (!file.exists())
 						file.create(stream, false, null);
+					if (filename.startsWith("bin")) {
+						ResourceAttributes attributes = new ResourceAttributes();
+						attributes.setExecutable(true);
+						file.setResourceAttributes(attributes);
+					}
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

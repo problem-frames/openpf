@@ -26,11 +26,10 @@
       <example file="parsetab.pyc"/>
       <example file="yacc.py"/>
       <example file="yacc.pyc"/>
-      <example file="examples/list"/>
-      <example file="examples/log"/>
-      <example file="binary/macosx/decreasoner"/>
-      <example file="binary/macosx/solvers/relsat"/>
-      <example file="binary/macosx/solvers/walksat"/>
+      <example file="solvers/placeholder"/>
+      <example file="binary/macosx.x86_64/decreasoner"/>
+      <example file="binary/macosx.x86_64/solvers/relsat"/>
+      <example file="binary/macosx.x86_64/solvers/walksat"/>
       <example file="binary/linux.x86/decreasoner"/>
       <example file="binary/linux.x86/solvers/relsat"/>
       <example file="binary/linux.x86/solvers/walksat"/>
