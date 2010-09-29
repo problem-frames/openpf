@@ -25,9 +25,13 @@ import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
 
+import org.eclipse.swt.graphics.Font;
+import org.eclipse.swt.widgets.Display;
 import uk.ac.open.dependency.dependency.diagram.edit.policies.NodeItemSemanticEditPolicy;
+import uk.ac.open.dependency.dependency.diagram.edit.policies.OpenDiagramEditPolicy;
 import uk.ac.open.dependency.dependency.diagram.part.DependencyVisualIDRegistry;
 import uk.ac.open.dependency.dependency.diagram.providers.DependencyElementTypes;
 
@@ -58,17 +62,17 @@ public class NodeEditPart extends ShapeNodeEditPart {
 		super(view);
 	}
 
-//	/**
-//	 * @generated
-//	 */
-//	protected void createDefaultEditPolicies() {
-//		super.createDefaultEditPolicies();
-//		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-//				new NodeItemSemanticEditPolicy());
-//		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
-//		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
-//		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
-//	}
+	//	/**
+	//	 * @generated
+	//	 */
+	//	protected void createDefaultEditPolicies() {
+	//		super.createDefaultEditPolicies();
+	//		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
+	//				new NodeItemSemanticEditPolicy());
+	//		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
+	//		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
+	//		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
+	//	}
 
 	/**
 	 * @generated
@@ -344,6 +348,8 @@ public class NodeEditPart extends ShapeNodeEditPart {
 			fFigureNodeLabelFigure = new WrappingLabel();
 			fFigureNodeLabelFigure.setText("Node");
 
+			fFigureNodeLabelFigure.setFont(FFIGURENODELABELFIGURE_FONT);
+
 			this.add(fFigureNodeLabelFigure);
 
 		}
@@ -356,6 +362,14 @@ public class NodeEditPart extends ShapeNodeEditPart {
 		}
 
 	}
+
+	/**
+	 * @generated
+	 */
+	static final Font FFIGURENODELABELFIGURE_FONT = new Font(
+			Display.getCurrent(), Display.getDefault().getSystemFont()
+					.getFontData()[0].getName(), 9, SWT.BOLD);
+
 	/**
 	 * @generated NOT
 	 */
@@ -367,7 +381,7 @@ public class NodeEditPart extends ShapeNodeEditPart {
 		installEditPolicy(EditPolicyRoles.OPEN_ROLE,
 				new OpenDiagramEditPolicy());
 		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
-//		removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
+		//		removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
 	}
 
 }

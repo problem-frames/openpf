@@ -260,6 +260,31 @@ public class DependencyNavigatorContentProvider implements
 			return result.toArray();
 		}
 
+		case ModelEditPart.VISUAL_ID: {
+			LinkedList<DependencyAbstractNavigatorItem> result = new LinkedList<DependencyAbstractNavigatorItem>();
+			Diagram sv = (Diagram) view;
+			DependencyNavigatorGroup links = new DependencyNavigatorGroup(
+					Messages.NavigatorGroupName_Model_1000_links,
+					"icons/linksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					DependencyVisualIDRegistry.getType(NodeEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
+					DependencyVisualIDRegistry
+							.getType(CouplingEditPart.VISUAL_ID));
+			links.addChildren(createNavigatorItems(connectedViews, links, false));
+			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
+					DependencyVisualIDRegistry
+							.getType(PrecedenceEditPart.VISUAL_ID));
+			links.addChildren(createNavigatorItems(connectedViews, links, false));
+			if (!links.isEmpty()) {
+				result.add(links);
+			}
+			return result.toArray();
+		}
+
 		case CouplingEditPart.VISUAL_ID: {
 			LinkedList<DependencyAbstractNavigatorItem> result = new LinkedList<DependencyAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
@@ -310,31 +335,6 @@ public class DependencyNavigatorContentProvider implements
 			}
 			if (!source.isEmpty()) {
 				result.add(source);
-			}
-			return result.toArray();
-		}
-
-		case ModelEditPart.VISUAL_ID: {
-			LinkedList<DependencyAbstractNavigatorItem> result = new LinkedList<DependencyAbstractNavigatorItem>();
-			Diagram sv = (Diagram) view;
-			DependencyNavigatorGroup links = new DependencyNavigatorGroup(
-					Messages.NavigatorGroupName_Model_1000_links,
-					"icons/linksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					DependencyVisualIDRegistry.getType(NodeEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
-					DependencyVisualIDRegistry
-							.getType(CouplingEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
-					DependencyVisualIDRegistry
-							.getType(PrecedenceEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			if (!links.isEmpty()) {
-				result.add(links);
 			}
 			return result.toArray();
 		}

@@ -187,9 +187,9 @@ public class DependencyDiagramEditorUtil {
 				}
 
 				try {
-//					modelResource
-//							.save(uk.ac.open.dependency.dependency.diagram.part.DependencyDiagramEditorUtil
-//									.getSaveOptions());
+					//					modelResource
+					//							.save(uk.ac.open.dependency.dependency.diagram.part.DependencyDiagramEditorUtil
+					//									.getSaveOptions());
 					diagramResource
 							.save(uk.ac.open.dependency.dependency.diagram.part.DependencyDiagramEditorUtil
 									.getSaveOptions());

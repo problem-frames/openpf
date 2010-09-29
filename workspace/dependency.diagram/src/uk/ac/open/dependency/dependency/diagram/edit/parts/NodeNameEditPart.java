@@ -176,11 +176,7 @@ public class NodeNameEditPart extends CompartmentEditPart implements
 	 * @generated
 	 */
 	protected Image getLabelIcon() {
-		EObject parserElement = getParserElement();
-		if (parserElement == null) {
-			return null;
-		}
-		return DependencyElementTypes.getImage(parserElement.eClass());
+		return null;
 	}
 
 	/**

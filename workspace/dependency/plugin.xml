@@ -13,6 +13,13 @@
 
   <extension point="core.example">
       <example file="JLB.dependency"/>
+      <example file="JLB.dependency_diagram"/>
+      <example file="JLB_F1.problem"/>
+      <example file="JLB_F1.problem_diagram"/>
+      <example file="JLB_F2.problem"/>
+      <example file="JLB_F2.problem_diagram"/>
+      <example file="JLB_SR.problem"/>
+      <example file="JLB_SR.problem_diagram"/>
   </extension>
 
 </plugin>

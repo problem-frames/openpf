@@ -1,5 +1,15 @@
-F1 { see "/Examples/dependency/JLB_F1.problem" }
-F2 { see "/Examples/dependency/JLB_F2.problem" }
-SR { see "/Examples/dependency/JLB_SR.problem" }
-F1 -- SR
+F1 -- SR 
+
 F2 -- SR
+
+F1 {
+//see "/Examples/dependency/JLB_F1.problem"
+see "/Examples/dependency/JLB_F1.problem_diagram" }
+
+F2 {
+//see "/Examples/dependency/JLB_F2.problem"
+see "/Examples/dependency/JLB_F2.problem_diagram" }
+
+SR {
+//see "/Examples/dependency/JLB_SR.problem"
+see "/Examples/dependency/JLB_SR.problem_diagram" }

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dependency="http://www.Dependency" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_AoT5MMtSEd-0FcSldd_asg" type="Dependency" name="JLB.dependency_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_4l7hsctSEd-MKaKUXyqmTg" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_4l9W4MtSEd-MKaKUXyqmTg" type="5001"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_4l7hsstSEd-MKaKUXyqmTg"/>
+    <element xmi:type="dependency:Node" href="/Examples/dependency/JLB.dependency#//@nodes.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4l7hs8tSEd-MKaKUXyqmTg" x="27" y="18" width="46" height="37"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_4l998MtSEd-MKaKUXyqmTg" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_4l9988tSEd-MKaKUXyqmTg" type="5001"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_4l998ctSEd-MKaKUXyqmTg"/>
+    <element xmi:type="dependency:Node" href="/Examples/dependency/JLB.dependency#//@nodes.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4l998stSEd-MKaKUXyqmTg" x="207" y="18"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_4l999MtSEd-MKaKUXyqmTg" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_4l-lAMtSEd-MKaKUXyqmTg" type="5001"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_4l999ctSEd-MKaKUXyqmTg"/>
+    <element xmi:type="dependency:Node" href="/Examples/dependency/JLB.dependency#//@nodes.2"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4l999stSEd-MKaKUXyqmTg" x="117" y="90"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_AoT5MctSEd-0FcSldd_asg"/>
+  <element xmi:type="dependency:Model" href="/Examples/dependency/JLB.dependency#/"/>
+  <edges xmi:type="notation:Connector" xmi:id="_qZ_DkMtWEd-dhsKRSCePcw" type="4001" source="_4l7hsctSEd-MKaKUXyqmTg" target="_4l999MtSEd-MKaKUXyqmTg">
+    <styles xmi:type="notation:FontStyle" xmi:id="_qZ_DkctWEd-dhsKRSCePcw" fontName="Lucida Grande"/>
+    <element xmi:type="dependency:Coupling" href="/Examples/dependency/JLB.dependency#//@dependencies.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qZ_DkstWEd-dhsKRSCePcw" points="[21, 19, -66, -55]$[67, 57, -20, -17]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_qaXeEMtWEd-dhsKRSCePcw" type="4001" source="_4l998MtSEd-MKaKUXyqmTg" target="_4l999MtSEd-MKaKUXyqmTg">
+    <styles xmi:type="notation:FontStyle" xmi:id="_qaXeEctWEd-dhsKRSCePcw" fontName="Lucida Grande"/>
+    <element xmi:type="dependency:Coupling" href="/Examples/dependency/JLB.dependency#//@dependencies.1"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qaXeEstWEd-dhsKRSCePcw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+</notation:Diagram>

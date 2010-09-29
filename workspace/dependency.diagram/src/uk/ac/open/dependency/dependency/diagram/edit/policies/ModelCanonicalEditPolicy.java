@@ -347,7 +347,7 @@ public class ModelCanonicalEditPolicy extends CanonicalConnectionEditPolicy {
 	private Diagram getDiagram() {
 		return ((View) getHost().getModel()).getDiagram();
 	}
-	
+
 	/**
 	 * bug id #314670
 	 */
@@ -379,5 +379,5 @@ public class ModelCanonicalEditPolicy extends CanonicalConnectionEditPolicy {
 			return l.getTo();
 		}
 		return null;
-	}	
+	}
 }

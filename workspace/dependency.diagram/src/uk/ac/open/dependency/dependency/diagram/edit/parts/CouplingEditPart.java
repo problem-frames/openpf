@@ -8,7 +8,8 @@ import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx;
 import org.eclipse.gmf.runtime.notation.View;
 
-import uk.ac.open.dependency.dependency.diagram.edit.policies.CouplingItemSemanticEditPolicy;
+import uk.ac.open.dependency.dependency.diagram.edit.policies.NodeItemSemanticEditPolicy;
+import uk.ac.open.dependency.dependency.diagram.edit.policies.OpenDiagramEditPolicy;
 
 /**
  * @generated
@@ -26,15 +27,6 @@ public class CouplingEditPart extends ConnectionNodeEditPart implements
 	 */
 	public CouplingEditPart(View view) {
 		super(view);
-	}
-
-	/**
-	 * @generated
-	 */
-	protected void createDefaultEditPolicies() {
-		super.createDefaultEditPolicies();
-		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new CouplingItemSemanticEditPolicy());
 	}
 
 	/**
@@ -71,6 +63,17 @@ public class CouplingEditPart extends ConnectionNodeEditPart implements
 
 		}
 
+	}
+
+	/**
+	 * @generated NOT
+	 */
+	protected void createDefaultEditPolicies() {
+		super.createDefaultEditPolicies();
+		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
+				new NodeItemSemanticEditPolicy());
+		installEditPolicy(EditPolicyRoles.OPEN_ROLE,
+				new OpenDiagramEditPolicy());
 	}
 
 }

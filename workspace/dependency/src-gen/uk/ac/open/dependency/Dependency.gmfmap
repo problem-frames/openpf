@@ -26,7 +26,8 @@
           href="Dependency.gmfgraph#Node"/>
     </ownedChild>
   </nodes>
-  <links>
+  <links
+      relatedDiagrams="//@diagram">
     <domainMetaElement
         href="Dependency.ecore#//Coupling"/>
     <containmentFeature
@@ -43,7 +44,8 @@
         xsi:type="ecore:EReference"
         href="Dependency.ecore#//Dependency/to"/>
   </links>
-  <links>
+  <links
+      relatedDiagrams="//@diagram">
     <domainMetaElement
         href="Dependency.ecore#//Precedence"/>
     <containmentFeature

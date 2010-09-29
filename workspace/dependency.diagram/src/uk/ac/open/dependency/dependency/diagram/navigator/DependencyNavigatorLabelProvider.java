@@ -88,15 +88,15 @@ public class DependencyNavigatorLabelProvider extends LabelProvider implements
 		case NodeEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?TopLevelNode?http://www.Dependency?Node", DependencyElementTypes.Node_2001); //$NON-NLS-1$
+		case ModelEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Diagram?http://www.Dependency?Model", DependencyElementTypes.Model_1000); //$NON-NLS-1$
 		case CouplingEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?http://www.Dependency?Coupling", DependencyElementTypes.Coupling_4001); //$NON-NLS-1$
 		case PrecedenceEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?http://www.Dependency?Precedence", DependencyElementTypes.Precedence_4002); //$NON-NLS-1$
-		case ModelEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Diagram?http://www.Dependency?Model", DependencyElementTypes.Model_1000); //$NON-NLS-1$
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -151,12 +151,12 @@ public class DependencyNavigatorLabelProvider extends LabelProvider implements
 		switch (DependencyVisualIDRegistry.getVisualID(view)) {
 		case NodeEditPart.VISUAL_ID:
 			return getNode_2001Text(view);
+		case ModelEditPart.VISUAL_ID:
+			return getModel_1000Text(view);
 		case CouplingEditPart.VISUAL_ID:
 			return getCoupling_4001Text(view);
 		case PrecedenceEditPart.VISUAL_ID:
 			return getPrecedence_4002Text(view);
-		case ModelEditPart.VISUAL_ID:
-			return getModel_1000Text(view);
 		}
 		return getUnknownElementText(view);
 	}

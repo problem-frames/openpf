@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:problem="http://open.ac.uk/problem">
+  <notation:Diagram xmi:id="_gqcjgMtTEd-MKaKUXyqmTg" type="Problem" name="JLB_F1.problem_diagram" measurementUnit="Pixel">
+    <children xmi:type="notation:Shape" xmi:id="_Z4pGQMtYEd-3A-ygqpSw0w" type="2001" fontName="Lucida Grande">
+      <children xmi:type="notation:DecorationNode" xmi:id="_Z4ptUMtYEd-3A-ygqpSw0w" type="5001"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_Z4ptUctYEd-3A-ygqpSw0w" type="5002"/>
+      <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_Z4pGQctYEd-3A-ygqpSw0w" diagramLink="_fcZpwMtYEd-3A-ygqpSw0w"/>
+      <element xmi:type="problem:Node" href="/Examples/dependency/JLB_F1.problem#JLB_F1.F1"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Z4pGQstYEd-3A-ygqpSw0w"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_gqdKkMtTEd-MKaKUXyqmTg"/>
+    <element xmi:type="problem:ProblemDiagram" href="/Examples/dependency/JLB_F1.problem#JLB_F1"/>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_fcZpwMtYEd-3A-ygqpSw0w" type="Problem" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_fcZpwctYEd-3A-ygqpSw0w"/>
+    <element xmi:type="problem:ProblemDiagram" href="/Examples/dependency/JLB_F1.problem#JLB_F1.F1.The system shall find a room for any proposal of meeting by any participant"/>
+  </notation:Diagram>
+</xmi:XMI>
