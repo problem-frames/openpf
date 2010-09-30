@@ -553,4 +553,10 @@ public class ProblemDiagramCanonicalEditPolicy extends CanonicalConnectionEditPo
 		}
 		return null;
 	}
+
+	@Override
+	protected boolean shouldDeleteView(View view) {
+		return true;
+//		return ViewUtil.resolveSemanticElement(view) == null;
+	}
 }
