@@ -468,9 +468,11 @@
       <feature id="core.feature" version="1.0.0.qualifier"/>
       <feature id="situation.m2m.feature" version="1.0.0"/>
       <feature id="dependency.feature" version="1.0.0.qualifier"/>
+<!--
       <feature id="org.eclipse.emf" version="2.6.1.v20100914-1218"/>
       <feature id="org.eclipse.gef" version="3.6.1.v20100908-1100-777B181A3Bz-6B663E7974242"/>
       <feature id="org.eclipse.gmf" version="1.4.1.v20100909-1300-7d9A78FYnmMD7VBZOqOghp2tsgXc"/>
+-->
    </features>
 
 
