@@ -1,5 +1,6 @@
 package uk.ac.open.dependency.dependency.diagram.part;
 
+import org.eclipse.emf.edit.ui.action.ValidateAction;
 import org.eclipse.gmf.runtime.diagram.ui.parts.DiagramActionBarContributor;
 import org.eclipse.jface.action.GroupMarker;
 import org.eclipse.jface.action.IAction;
@@ -29,7 +30,8 @@ public class DependencyDiagramActionBarContributor extends
 	}
 
 	/**
-	 * @generated
+	 * @generated NOT
+	 * The ValidationAction does not require an argument
 	 */
 	public void init(IActionBars bars, IWorkbenchPage page) {
 		super.init(bars, page);
@@ -44,7 +46,7 @@ public class DependencyDiagramActionBarContributor extends
 		if (editMenu.find("validationGroup") == null) { //$NON-NLS-1$
 			editMenu.add(new GroupMarker("validationGroup")); //$NON-NLS-1$
 		}
-		IAction validateAction = new ValidateAction(page);
+		IAction validateAction = new ValidateAction();
 		editMenu.appendToGroup("validationGroup", validateAction); //$NON-NLS-1$
 	}
 }
