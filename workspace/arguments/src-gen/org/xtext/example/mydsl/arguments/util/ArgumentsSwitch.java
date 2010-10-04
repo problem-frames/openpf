@@ -95,17 +95,10 @@ public class ArgumentsSwitch<T>
   {
     switch (classifierID)
     {
-      case ArgumentsPackage.ARGUMENT:
+      case ArgumentsPackage.ARG:
       {
-        Argument argument = (Argument)theEObject;
-        T result = caseArgument(argument);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case ArgumentsPackage.REBUTTAL:
-      {
-        Rebuttal rebuttal = (Rebuttal)theEObject;
-        T result = caseRebuttal(rebuttal);
+        Arg arg = (Arg)theEObject;
+        T result = caseArg(arg);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -116,17 +109,10 @@ public class ArgumentsSwitch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case ArgumentsPackage.WSTATEMENT:
+      case ArgumentsPackage.REC_ARG:
       {
-        wStatement wStatement = (wStatement)theEObject;
-        T result = casewStatement(wStatement);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case ArgumentsPackage.RSTATEMENT:
-      {
-        rStatement rStatement = (rStatement)theEObject;
-        T result = caserStatement(rStatement);
+        RecArg recArg = (RecArg)theEObject;
+        T result = caseRecArg(recArg);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -135,33 +121,17 @@ public class ArgumentsSwitch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Argument</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Arg</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Argument</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Arg</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseArgument(Argument object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Rebuttal</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Rebuttal</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseRebuttal(Rebuttal object)
+  public T caseArg(Arg object)
   {
     return null;
   }
@@ -183,33 +153,17 @@ public class ArgumentsSwitch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>wStatement</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Rec Arg</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>wStatement</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Rec Arg</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casewStatement(wStatement object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>rStatement</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>rStatement</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caserStatement(rStatement object)
+  public T caseRecArg(RecArg object)
   {
     return null;
   }

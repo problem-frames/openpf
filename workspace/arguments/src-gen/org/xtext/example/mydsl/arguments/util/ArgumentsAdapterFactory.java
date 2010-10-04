@@ -78,14 +78,9 @@ public class ArgumentsAdapterFactory extends AdapterFactoryImpl
     new ArgumentsSwitch<Adapter>()
     {
       @Override
-      public Adapter caseArgument(Argument object)
+      public Adapter caseArg(Arg object)
       {
-        return createArgumentAdapter();
-      }
-      @Override
-      public Adapter caseRebuttal(Rebuttal object)
-      {
-        return createRebuttalAdapter();
+        return createArgAdapter();
       }
       @Override
       public Adapter casegStatement(gStatement object)
@@ -93,14 +88,9 @@ public class ArgumentsAdapterFactory extends AdapterFactoryImpl
         return creategStatementAdapter();
       }
       @Override
-      public Adapter casewStatement(wStatement object)
+      public Adapter caseRecArg(RecArg object)
       {
-        return createwStatementAdapter();
-      }
-      @Override
-      public Adapter caserStatement(rStatement object)
-      {
-        return createrStatementAdapter();
+        return createRecArgAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -125,31 +115,16 @@ public class ArgumentsAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.arguments.Argument <em>Argument</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.arguments.Arg <em>Arg</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.example.mydsl.arguments.Argument
+   * @see org.xtext.example.mydsl.arguments.Arg
    * @generated
    */
-  public Adapter createArgumentAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.arguments.Rebuttal <em>Rebuttal</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.mydsl.arguments.Rebuttal
-   * @generated
-   */
-  public Adapter createRebuttalAdapter()
+  public Adapter createArgAdapter()
   {
     return null;
   }
@@ -170,31 +145,16 @@ public class ArgumentsAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.arguments.wStatement <em>wStatement</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.arguments.RecArg <em>Rec Arg</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.example.mydsl.arguments.wStatement
+   * @see org.xtext.example.mydsl.arguments.RecArg
    * @generated
    */
-  public Adapter createwStatementAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.arguments.rStatement <em>rStatement</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.mydsl.arguments.rStatement
-   * @generated
-   */
-  public Adapter createrStatementAdapter()
+  public Adapter createRecArgAdapter()
   {
     return null;
   }

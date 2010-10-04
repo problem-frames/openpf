@@ -37,26 +37,22 @@ public class ArgumentsParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
-					put(grammarAccess.getArgumentAccess().getGroup(), "rule__Argument__Group__0");
-					put(grammarAccess.getRebuttalAccess().getGroup(), "rule__Rebuttal__Group__0");
+					put(grammarAccess.getArgAccess().getAlternatives_5(), "rule__Arg__Alternatives_5");
+					put(grammarAccess.getArgAccess().getGroup(), "rule__Arg__Group__0");
+					put(grammarAccess.getArgAccess().getGroup_5_1(), "rule__Arg__Group_5_1__0");
+					put(grammarAccess.getArgAccess().getGroup_9(), "rule__Arg__Group_9__0");
 					put(grammarAccess.getGStatementAccess().getGroup(), "rule__GStatement__Group__0");
-					put(grammarAccess.getWStatementAccess().getGroup(), "rule__WStatement__Group__0");
-					put(grammarAccess.getRStatementAccess().getGroup(), "rule__RStatement__Group__0");
-					put(grammarAccess.getArgumentAccess().getCnameAssignment_1(), "rule__Argument__CnameAssignment_1");
-					put(grammarAccess.getArgumentAccess().getClaimstrAssignment_2(), "rule__Argument__ClaimstrAssignment_2");
-					put(grammarAccess.getArgumentAccess().getGnameAssignment_4(), "rule__Argument__GnameAssignment_4");
-					put(grammarAccess.getArgumentAccess().getGroundstatementsAssignment_6(), "rule__Argument__GroundstatementsAssignment_6");
-					put(grammarAccess.getArgumentAccess().getWnameAssignment_9(), "rule__Argument__WnameAssignment_9");
-					put(grammarAccess.getArgumentAccess().getWarrantstatementsAssignment_11(), "rule__Argument__WarrantstatementsAssignment_11");
-					put(grammarAccess.getRebuttalAccess().getAnameAssignment_1(), "rule__Rebuttal__AnameAssignment_1");
-					put(grammarAccess.getRebuttalAccess().getRnameAssignment_3(), "rule__Rebuttal__RnameAssignment_3");
-					put(grammarAccess.getRebuttalAccess().getRebuttalstatementsAssignment_5(), "rule__Rebuttal__RebuttalstatementsAssignment_5");
-					put(grammarAccess.getGStatementAccess().getNameAssignment_1(), "rule__GStatement__NameAssignment_1");
+					put(grammarAccess.getRecArgAccess().getGroup(), "rule__RecArg__Group__0");
+					put(grammarAccess.getArgAccess().getGroundstatementsAssignment_2(), "rule__Arg__GroundstatementsAssignment_2");
+					put(grammarAccess.getArgAccess().getGroundstatementsAssignment_5_0(), "rule__Arg__GroundstatementsAssignment_5_0");
+					put(grammarAccess.getArgAccess().getInnerAssignment_5_1_1(), "rule__Arg__InnerAssignment_5_1_1");
+					put(grammarAccess.getArgAccess().getGroundstatementsAssignment_8(), "rule__Arg__GroundstatementsAssignment_8");
+					put(grammarAccess.getArgAccess().getGroundstatementsAssignment_9_2(), "rule__Arg__GroundstatementsAssignment_9_2");
+					put(grammarAccess.getGStatementAccess().getNameAssignment_0(), "rule__GStatement__NameAssignment_0");
 					put(grammarAccess.getGStatementAccess().getGroundstrAssignment_2(), "rule__GStatement__GroundstrAssignment_2");
-					put(grammarAccess.getWStatementAccess().getNameAssignment_1(), "rule__WStatement__NameAssignment_1");
-					put(grammarAccess.getWStatementAccess().getGroundstrAssignment_2(), "rule__WStatement__GroundstrAssignment_2");
-					put(grammarAccess.getRStatementAccess().getNameAssignment_1(), "rule__RStatement__NameAssignment_1");
-					put(grammarAccess.getRStatementAccess().getGroundstrAssignment_2(), "rule__RStatement__GroundstrAssignment_2");
+					put(grammarAccess.getRecArgAccess().getGroundstatementsAssignment_2(), "rule__RecArg__GroundstatementsAssignment_2");
+					put(grammarAccess.getRecArgAccess().getGroundstatementsAssignment_5(), "rule__RecArg__GroundstatementsAssignment_5");
+					put(grammarAccess.getRecArgAccess().getGroundstatementsAssignment_8(), "rule__RecArg__GroundstatementsAssignment_8");
 				}
 			};
 		}
@@ -67,7 +63,7 @@ public class ArgumentsParser extends AbstractContentAssistParser {
 	protected Collection<FollowElement> getFollowElements(AbstractInternalContentAssistParser parser) {
 		try {
 			org.xtext.example.mydsl.ui.contentassist.antlr.internal.InternalArgumentsParser typedParser = (org.xtext.example.mydsl.ui.contentassist.antlr.internal.InternalArgumentsParser) parser;
-			typedParser.entryRuleArgument();
+			typedParser.entryRuleArg();
 			return typedParser.getFollowElements();
 		} catch(RecognitionException ex) {
 			throw new RuntimeException(ex);

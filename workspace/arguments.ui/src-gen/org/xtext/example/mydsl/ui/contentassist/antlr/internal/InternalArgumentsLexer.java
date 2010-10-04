@@ -13,20 +13,25 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalArgumentsLexer extends Lexer {
     public static final int RULE_ID=4;
-    public static final int RULE_STRING=5;
     public static final int RULE_ANY_OTHER=10;
+    public static final int Tokens=22;
+    public static final int EOF=-1;
+    public static final int RULE_SL_COMMENT=8;
+    public static final int T21=21;
+    public static final int T20=20;
+    public static final int RULE_ML_COMMENT=7;
+    public static final int RULE_STRING=5;
     public static final int RULE_INT=6;
     public static final int T11=11;
     public static final int T12=12;
     public static final int T13=13;
     public static final int T14=14;
-    public static final int T15=15;
     public static final int RULE_WS=9;
-    public static final int Tokens=17;
+    public static final int T15=15;
     public static final int T16=16;
-    public static final int RULE_SL_COMMENT=8;
-    public static final int EOF=-1;
-    public static final int RULE_ML_COMMENT=7;
+    public static final int T17=17;
+    public static final int T18=18;
+    public static final int T19=19;
     public InternalArgumentsLexer() {;} 
     public InternalArgumentsLexer(CharStream input) {
         super(input);
@@ -37,10 +42,10 @@ public class InternalArgumentsLexer extends Lexer {
     public final void mT11() throws RecognitionException {
         try {
             int _type = T11;
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:10:5: ( 'claim' )
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:10:7: 'claim'
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:10:5: ( 'given' )
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:10:7: 'given'
             {
-            match("claim"); 
+            match("given"); 
 
 
             }
@@ -75,10 +80,11 @@ public class InternalArgumentsLexer extends Lexer {
     public final void mT13() throws RecognitionException {
         try {
             int _type = T13;
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:12:5: ( '(' )
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:12:7: '('
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:12:5: ( 'warranted' )
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:12:7: 'warranted'
             {
-            match('('); 
+            match("warranted"); 
+
 
             }
 
@@ -93,10 +99,11 @@ public class InternalArgumentsLexer extends Lexer {
     public final void mT14() throws RecognitionException {
         try {
             int _type = T14;
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:13:5: ( ')' )
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:13:7: ')'
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:13:5: ( 'by' )
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:13:7: 'by'
             {
-            match(')'); 
+            match("by"); 
+
 
             }
 
@@ -111,10 +118,10 @@ public class InternalArgumentsLexer extends Lexer {
     public final void mT15() throws RecognitionException {
         try {
             int _type = T15;
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:14:5: ( 'warrants' )
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:14:7: 'warrants'
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:14:5: ( 'thus' )
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:14:7: 'thus'
             {
-            match("warrants"); 
+            match("thus"); 
 
 
             }
@@ -130,10 +137,10 @@ public class InternalArgumentsLexer extends Lexer {
     public final void mT16() throws RecognitionException {
         try {
             int _type = T16;
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:15:5: ( 'statement' )
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:15:7: 'statement'
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:15:5: ( 'claim' )
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:15:7: 'claim'
             {
-            match("statement"); 
+            match("claim"); 
 
 
             }
@@ -145,14 +152,105 @@ public class InternalArgumentsLexer extends Lexer {
     }
     // $ANTLR end T16
 
+    // $ANTLR start T17
+    public final void mT17() throws RecognitionException {
+        try {
+            int _type = T17;
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:16:5: ( '.' )
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:16:7: '.'
+            {
+            match('.'); 
+
+            }
+
+            this.type = _type;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end T17
+
+    // $ANTLR start T18
+    public final void mT18() throws RecognitionException {
+        try {
+            int _type = T18;
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:17:5: ( '(' )
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:17:7: '('
+            {
+            match('('); 
+
+            }
+
+            this.type = _type;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end T18
+
+    // $ANTLR start T19
+    public final void mT19() throws RecognitionException {
+        try {
+            int _type = T19;
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:18:5: ( ')' )
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:18:7: ')'
+            {
+            match(')'); 
+
+            }
+
+            this.type = _type;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end T19
+
+    // $ANTLR start T20
+    public final void mT20() throws RecognitionException {
+        try {
+            int _type = T20;
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:19:5: ( 'rebutted' )
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:19:7: 'rebutted'
+            {
+            match("rebutted"); 
+
+
+            }
+
+            this.type = _type;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end T20
+
+    // $ANTLR start T21
+    public final void mT21() throws RecognitionException {
+        try {
+            int _type = T21;
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:20:5: ( ':' )
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:20:7: ':'
+            {
+            match(':'); 
+
+            }
+
+            this.type = _type;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end T21
+
     // $ANTLR start RULE_ID
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1061:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1061:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1300:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1300:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1061:11: ( '^' )?
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1300:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -161,7 +259,7 @@ public class InternalArgumentsLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1061:11: '^'
+                    // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1300:11: '^'
                     {
                     match('^'); 
 
@@ -180,7 +278,7 @@ public class InternalArgumentsLexer extends Lexer {
                 recover(mse);    throw mse;
             }
 
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1061:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1300:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -228,10 +326,10 @@ public class InternalArgumentsLexer extends Lexer {
     public final void mRULE_INT() throws RecognitionException {
         try {
             int _type = RULE_INT;
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1063:10: ( ( '0' .. '9' )+ )
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1063:12: ( '0' .. '9' )+
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1302:10: ( ( '0' .. '9' )+ )
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1302:12: ( '0' .. '9' )+
             {
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1063:12: ( '0' .. '9' )+
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1302:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -245,7 +343,7 @@ public class InternalArgumentsLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1063:13: '0' .. '9'
+            	    // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1302:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -275,10 +373,10 @@ public class InternalArgumentsLexer extends Lexer {
     public final void mRULE_STRING() throws RecognitionException {
         try {
             int _type = RULE_STRING;
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1065:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1065:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1304:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1304:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1065:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1304:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -290,16 +388,16 @@ public class InternalArgumentsLexer extends Lexer {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("1065:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )", 6, 0, input);
+                    new NoViableAltException("1304:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )", 6, 0, input);
 
                 throw nvae;
             }
             switch (alt6) {
                 case 1 :
-                    // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1065:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1304:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1065:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1304:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -315,7 +413,7 @@ public class InternalArgumentsLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1065:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
+                    	    // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1304:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
@@ -332,7 +430,7 @@ public class InternalArgumentsLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1065:62: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1304:62: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFE') ) {
                     	        input.consume();
@@ -358,10 +456,10 @@ public class InternalArgumentsLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1065:82: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1304:82: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1065:87: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1304:87: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -377,7 +475,7 @@ public class InternalArgumentsLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1065:88: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
+                    	    // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1304:88: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
@@ -394,7 +492,7 @@ public class InternalArgumentsLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1065:129: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1304:129: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFE') ) {
                     	        input.consume();
@@ -436,12 +534,12 @@ public class InternalArgumentsLexer extends Lexer {
     public final void mRULE_ML_COMMENT() throws RecognitionException {
         try {
             int _type = RULE_ML_COMMENT;
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1067:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1067:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1306:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1306:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1067:24: ( options {greedy=false; } : . )*
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1306:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -466,7 +564,7 @@ public class InternalArgumentsLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1067:52: .
+            	    // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1306:52: .
             	    {
             	    matchAny(); 
 
@@ -494,12 +592,12 @@ public class InternalArgumentsLexer extends Lexer {
     public final void mRULE_SL_COMMENT() throws RecognitionException {
         try {
             int _type = RULE_SL_COMMENT;
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1069:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1069:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1308:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1308:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1069:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1308:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -512,7 +610,7 @@ public class InternalArgumentsLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1069:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1308:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFE') ) {
             	        input.consume();
@@ -533,7 +631,7 @@ public class InternalArgumentsLexer extends Lexer {
                 }
             } while (true);
 
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1069:40: ( ( '\\r' )? '\\n' )?
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1308:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -542,9 +640,9 @@ public class InternalArgumentsLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1069:41: ( '\\r' )? '\\n'
+                    // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1308:41: ( '\\r' )? '\\n'
                     {
-                    // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1069:41: ( '\\r' )?
+                    // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1308:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -553,7 +651,7 @@ public class InternalArgumentsLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1069:41: '\\r'
+                            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1308:41: '\\r'
                             {
                             match('\r'); 
 
@@ -583,10 +681,10 @@ public class InternalArgumentsLexer extends Lexer {
     public final void mRULE_WS() throws RecognitionException {
         try {
             int _type = RULE_WS;
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1071:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1071:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1310:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1310:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1071:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1310:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -639,8 +737,8 @@ public class InternalArgumentsLexer extends Lexer {
     public final void mRULE_ANY_OTHER() throws RecognitionException {
         try {
             int _type = RULE_ANY_OTHER;
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1073:16: ( . )
-            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1073:18: .
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1312:16: ( . )
+            // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1312:18: .
             {
             matchAny(); 
 
@@ -654,260 +752,339 @@ public class InternalArgumentsLexer extends Lexer {
     // $ANTLR end RULE_ANY_OTHER
 
     public void mTokens() throws RecognitionException {
-        // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1:8: ( T11 | T12 | T13 | T14 | T15 | T16 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt12=13;
+        // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1:8: ( T11 | T12 | T13 | T14 | T15 | T16 | T17 | T18 | T19 | T20 | T21 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt12=18;
         int LA12_0 = input.LA(1);
 
-        if ( (LA12_0=='c') ) {
-            int LA12_1 = input.LA(2);
+        if ( (LA12_0=='g') ) {
+            switch ( input.LA(2) ) {
+            case 'r':
+                {
+                int LA12_19 = input.LA(3);
 
-            if ( (LA12_1=='l') ) {
-                int LA12_15 = input.LA(3);
+                if ( (LA12_19=='o') ) {
+                    int LA12_36 = input.LA(4);
 
-                if ( (LA12_15=='a') ) {
-                    int LA12_27 = input.LA(4);
+                    if ( (LA12_36=='u') ) {
+                        int LA12_43 = input.LA(5);
 
-                    if ( (LA12_27=='i') ) {
-                        int LA12_31 = input.LA(5);
+                        if ( (LA12_43=='n') ) {
+                            int LA12_49 = input.LA(6);
 
-                        if ( (LA12_31=='m') ) {
-                            int LA12_35 = input.LA(6);
+                            if ( (LA12_49=='d') ) {
+                                int LA12_55 = input.LA(7);
 
-                            if ( ((LA12_35>='0' && LA12_35<='9')||(LA12_35>='A' && LA12_35<='Z')||LA12_35=='_'||(LA12_35>='a' && LA12_35<='z')) ) {
-                                alt12=7;
-                            }
-                            else {
-                                alt12=1;}
-                        }
-                        else {
-                            alt12=7;}
-                    }
-                    else {
-                        alt12=7;}
-                }
-                else {
-                    alt12=7;}
-            }
-            else {
-                alt12=7;}
-        }
-        else if ( (LA12_0=='g') ) {
-            int LA12_2 = input.LA(2);
+                                if ( (LA12_55=='s') ) {
+                                    int LA12_60 = input.LA(8);
 
-            if ( (LA12_2=='r') ) {
-                int LA12_17 = input.LA(3);
-
-                if ( (LA12_17=='o') ) {
-                    int LA12_28 = input.LA(4);
-
-                    if ( (LA12_28=='u') ) {
-                        int LA12_32 = input.LA(5);
-
-                        if ( (LA12_32=='n') ) {
-                            int LA12_36 = input.LA(6);
-
-                            if ( (LA12_36=='d') ) {
-                                int LA12_40 = input.LA(7);
-
-                                if ( (LA12_40=='s') ) {
-                                    int LA12_43 = input.LA(8);
-
-                                    if ( ((LA12_43>='0' && LA12_43<='9')||(LA12_43>='A' && LA12_43<='Z')||LA12_43=='_'||(LA12_43>='a' && LA12_43<='z')) ) {
-                                        alt12=7;
+                                    if ( ((LA12_60>='0' && LA12_60<='9')||(LA12_60>='A' && LA12_60<='Z')||LA12_60=='_'||(LA12_60>='a' && LA12_60<='z')) ) {
+                                        alt12=12;
                                     }
                                     else {
                                         alt12=2;}
                                 }
                                 else {
-                                    alt12=7;}
+                                    alt12=12;}
                             }
                             else {
-                                alt12=7;}
+                                alt12=12;}
                         }
                         else {
-                            alt12=7;}
+                            alt12=12;}
                     }
                     else {
-                        alt12=7;}
+                        alt12=12;}
                 }
                 else {
-                    alt12=7;}
-            }
-            else {
-                alt12=7;}
-        }
-        else if ( (LA12_0=='(') ) {
-            alt12=3;
-        }
-        else if ( (LA12_0==')') ) {
-            alt12=4;
-        }
-        else if ( (LA12_0=='w') ) {
-            int LA12_5 = input.LA(2);
-
-            if ( (LA12_5=='a') ) {
-                int LA12_20 = input.LA(3);
-
-                if ( (LA12_20=='r') ) {
-                    int LA12_29 = input.LA(4);
-
-                    if ( (LA12_29=='r') ) {
-                        int LA12_33 = input.LA(5);
-
-                        if ( (LA12_33=='a') ) {
-                            int LA12_37 = input.LA(6);
-
-                            if ( (LA12_37=='n') ) {
-                                int LA12_41 = input.LA(7);
-
-                                if ( (LA12_41=='t') ) {
-                                    int LA12_44 = input.LA(8);
-
-                                    if ( (LA12_44=='s') ) {
-                                        int LA12_47 = input.LA(9);
-
-                                        if ( ((LA12_47>='0' && LA12_47<='9')||(LA12_47>='A' && LA12_47<='Z')||LA12_47=='_'||(LA12_47>='a' && LA12_47<='z')) ) {
-                                            alt12=7;
-                                        }
-                                        else {
-                                            alt12=5;}
-                                    }
-                                    else {
-                                        alt12=7;}
-                                }
-                                else {
-                                    alt12=7;}
-                            }
-                            else {
-                                alt12=7;}
-                        }
-                        else {
-                            alt12=7;}
-                    }
-                    else {
-                        alt12=7;}
-                }
-                else {
-                    alt12=7;}
-            }
-            else {
-                alt12=7;}
-        }
-        else if ( (LA12_0=='s') ) {
-            int LA12_6 = input.LA(2);
-
-            if ( (LA12_6=='t') ) {
-                int LA12_21 = input.LA(3);
-
-                if ( (LA12_21=='a') ) {
-                    int LA12_30 = input.LA(4);
-
-                    if ( (LA12_30=='t') ) {
-                        int LA12_34 = input.LA(5);
-
-                        if ( (LA12_34=='e') ) {
-                            int LA12_38 = input.LA(6);
-
-                            if ( (LA12_38=='m') ) {
-                                int LA12_42 = input.LA(7);
-
-                                if ( (LA12_42=='e') ) {
-                                    int LA12_45 = input.LA(8);
-
-                                    if ( (LA12_45=='n') ) {
-                                        int LA12_48 = input.LA(9);
-
-                                        if ( (LA12_48=='t') ) {
-                                            int LA12_50 = input.LA(10);
-
-                                            if ( ((LA12_50>='0' && LA12_50<='9')||(LA12_50>='A' && LA12_50<='Z')||LA12_50=='_'||(LA12_50>='a' && LA12_50<='z')) ) {
-                                                alt12=7;
-                                            }
-                                            else {
-                                                alt12=6;}
-                                        }
-                                        else {
-                                            alt12=7;}
-                                    }
-                                    else {
-                                        alt12=7;}
-                                }
-                                else {
-                                    alt12=7;}
-                            }
-                            else {
-                                alt12=7;}
-                        }
-                        else {
-                            alt12=7;}
-                    }
-                    else {
-                        alt12=7;}
-                }
-                else {
-                    alt12=7;}
-            }
-            else {
-                alt12=7;}
-        }
-        else if ( (LA12_0=='^') ) {
-            int LA12_7 = input.LA(2);
-
-            if ( ((LA12_7>='A' && LA12_7<='Z')||LA12_7=='_'||(LA12_7>='a' && LA12_7<='z')) ) {
-                alt12=7;
-            }
-            else {
-                alt12=13;}
-        }
-        else if ( ((LA12_0>='A' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='b')||(LA12_0>='d' && LA12_0<='f')||(LA12_0>='h' && LA12_0<='r')||(LA12_0>='t' && LA12_0<='v')||(LA12_0>='x' && LA12_0<='z')) ) {
-            alt12=7;
-        }
-        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {
-            alt12=8;
-        }
-        else if ( (LA12_0=='\"') ) {
-            int LA12_10 = input.LA(2);
-
-            if ( ((LA12_10>='\u0000' && LA12_10<='\uFFFE')) ) {
-                alt12=9;
-            }
-            else {
-                alt12=13;}
-        }
-        else if ( (LA12_0=='\'') ) {
-            int LA12_11 = input.LA(2);
-
-            if ( ((LA12_11>='\u0000' && LA12_11<='\uFFFE')) ) {
-                alt12=9;
-            }
-            else {
-                alt12=13;}
-        }
-        else if ( (LA12_0=='/') ) {
-            switch ( input.LA(2) ) {
-            case '*':
-                {
-                alt12=10;
+                    alt12=12;}
                 }
                 break;
-            case '/':
+            case 'i':
                 {
-                alt12=11;
+                int LA12_20 = input.LA(3);
+
+                if ( (LA12_20=='v') ) {
+                    int LA12_37 = input.LA(4);
+
+                    if ( (LA12_37=='e') ) {
+                        int LA12_44 = input.LA(5);
+
+                        if ( (LA12_44=='n') ) {
+                            int LA12_50 = input.LA(6);
+
+                            if ( ((LA12_50>='0' && LA12_50<='9')||(LA12_50>='A' && LA12_50<='Z')||LA12_50=='_'||(LA12_50>='a' && LA12_50<='z')) ) {
+                                alt12=12;
+                            }
+                            else {
+                                alt12=1;}
+                        }
+                        else {
+                            alt12=12;}
+                    }
+                    else {
+                        alt12=12;}
+                }
+                else {
+                    alt12=12;}
                 }
                 break;
             default:
-                alt12=13;}
+                alt12=12;}
+
+        }
+        else if ( (LA12_0=='w') ) {
+            int LA12_2 = input.LA(2);
+
+            if ( (LA12_2=='a') ) {
+                int LA12_22 = input.LA(3);
+
+                if ( (LA12_22=='r') ) {
+                    int LA12_38 = input.LA(4);
+
+                    if ( (LA12_38=='r') ) {
+                        int LA12_45 = input.LA(5);
+
+                        if ( (LA12_45=='a') ) {
+                            int LA12_51 = input.LA(6);
+
+                            if ( (LA12_51=='n') ) {
+                                int LA12_57 = input.LA(7);
+
+                                if ( (LA12_57=='t') ) {
+                                    int LA12_61 = input.LA(8);
+
+                                    if ( (LA12_61=='e') ) {
+                                        int LA12_64 = input.LA(9);
+
+                                        if ( (LA12_64=='d') ) {
+                                            int LA12_66 = input.LA(10);
+
+                                            if ( ((LA12_66>='0' && LA12_66<='9')||(LA12_66>='A' && LA12_66<='Z')||LA12_66=='_'||(LA12_66>='a' && LA12_66<='z')) ) {
+                                                alt12=12;
+                                            }
+                                            else {
+                                                alt12=3;}
+                                        }
+                                        else {
+                                            alt12=12;}
+                                    }
+                                    else {
+                                        alt12=12;}
+                                }
+                                else {
+                                    alt12=12;}
+                            }
+                            else {
+                                alt12=12;}
+                        }
+                        else {
+                            alt12=12;}
+                    }
+                    else {
+                        alt12=12;}
+                }
+                else {
+                    alt12=12;}
+            }
+            else {
+                alt12=12;}
+        }
+        else if ( (LA12_0=='b') ) {
+            int LA12_3 = input.LA(2);
+
+            if ( (LA12_3=='y') ) {
+                int LA12_23 = input.LA(3);
+
+                if ( ((LA12_23>='0' && LA12_23<='9')||(LA12_23>='A' && LA12_23<='Z')||LA12_23=='_'||(LA12_23>='a' && LA12_23<='z')) ) {
+                    alt12=12;
+                }
+                else {
+                    alt12=4;}
+            }
+            else {
+                alt12=12;}
+        }
+        else if ( (LA12_0=='t') ) {
+            int LA12_4 = input.LA(2);
+
+            if ( (LA12_4=='h') ) {
+                int LA12_24 = input.LA(3);
+
+                if ( (LA12_24=='u') ) {
+                    int LA12_40 = input.LA(4);
+
+                    if ( (LA12_40=='s') ) {
+                        int LA12_46 = input.LA(5);
+
+                        if ( ((LA12_46>='0' && LA12_46<='9')||(LA12_46>='A' && LA12_46<='Z')||LA12_46=='_'||(LA12_46>='a' && LA12_46<='z')) ) {
+                            alt12=12;
+                        }
+                        else {
+                            alt12=5;}
+                    }
+                    else {
+                        alt12=12;}
+                }
+                else {
+                    alt12=12;}
+            }
+            else {
+                alt12=12;}
+        }
+        else if ( (LA12_0=='c') ) {
+            int LA12_5 = input.LA(2);
+
+            if ( (LA12_5=='l') ) {
+                int LA12_25 = input.LA(3);
+
+                if ( (LA12_25=='a') ) {
+                    int LA12_41 = input.LA(4);
+
+                    if ( (LA12_41=='i') ) {
+                        int LA12_47 = input.LA(5);
+
+                        if ( (LA12_47=='m') ) {
+                            int LA12_53 = input.LA(6);
+
+                            if ( ((LA12_53>='0' && LA12_53<='9')||(LA12_53>='A' && LA12_53<='Z')||LA12_53=='_'||(LA12_53>='a' && LA12_53<='z')) ) {
+                                alt12=12;
+                            }
+                            else {
+                                alt12=6;}
+                        }
+                        else {
+                            alt12=12;}
+                    }
+                    else {
+                        alt12=12;}
+                }
+                else {
+                    alt12=12;}
+            }
+            else {
+                alt12=12;}
+        }
+        else if ( (LA12_0=='.') ) {
+            alt12=7;
+        }
+        else if ( (LA12_0=='(') ) {
+            alt12=8;
+        }
+        else if ( (LA12_0==')') ) {
+            alt12=9;
+        }
+        else if ( (LA12_0=='r') ) {
+            int LA12_9 = input.LA(2);
+
+            if ( (LA12_9=='e') ) {
+                int LA12_29 = input.LA(3);
+
+                if ( (LA12_29=='b') ) {
+                    int LA12_42 = input.LA(4);
+
+                    if ( (LA12_42=='u') ) {
+                        int LA12_48 = input.LA(5);
+
+                        if ( (LA12_48=='t') ) {
+                            int LA12_54 = input.LA(6);
+
+                            if ( (LA12_54=='t') ) {
+                                int LA12_59 = input.LA(7);
+
+                                if ( (LA12_59=='e') ) {
+                                    int LA12_62 = input.LA(8);
+
+                                    if ( (LA12_62=='d') ) {
+                                        int LA12_65 = input.LA(9);
+
+                                        if ( ((LA12_65>='0' && LA12_65<='9')||(LA12_65>='A' && LA12_65<='Z')||LA12_65=='_'||(LA12_65>='a' && LA12_65<='z')) ) {
+                                            alt12=12;
+                                        }
+                                        else {
+                                            alt12=10;}
+                                    }
+                                    else {
+                                        alt12=12;}
+                                }
+                                else {
+                                    alt12=12;}
+                            }
+                            else {
+                                alt12=12;}
+                        }
+                        else {
+                            alt12=12;}
+                    }
+                    else {
+                        alt12=12;}
+                }
+                else {
+                    alt12=12;}
+            }
+            else {
+                alt12=12;}
+        }
+        else if ( (LA12_0==':') ) {
+            alt12=11;
+        }
+        else if ( (LA12_0=='^') ) {
+            int LA12_11 = input.LA(2);
+
+            if ( ((LA12_11>='A' && LA12_11<='Z')||LA12_11=='_'||(LA12_11>='a' && LA12_11<='z')) ) {
+                alt12=12;
+            }
+            else {
+                alt12=18;}
+        }
+        else if ( ((LA12_0>='A' && LA12_0<='Z')||LA12_0=='_'||LA12_0=='a'||(LA12_0>='d' && LA12_0<='f')||(LA12_0>='h' && LA12_0<='q')||LA12_0=='s'||(LA12_0>='u' && LA12_0<='v')||(LA12_0>='x' && LA12_0<='z')) ) {
+            alt12=12;
+        }
+        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {
+            alt12=13;
+        }
+        else if ( (LA12_0=='\"') ) {
+            int LA12_14 = input.LA(2);
+
+            if ( ((LA12_14>='\u0000' && LA12_14<='\uFFFE')) ) {
+                alt12=14;
+            }
+            else {
+                alt12=18;}
+        }
+        else if ( (LA12_0=='\'') ) {
+            int LA12_15 = input.LA(2);
+
+            if ( ((LA12_15>='\u0000' && LA12_15<='\uFFFE')) ) {
+                alt12=14;
+            }
+            else {
+                alt12=18;}
+        }
+        else if ( (LA12_0=='/') ) {
+            switch ( input.LA(2) ) {
+            case '/':
+                {
+                alt12=16;
+                }
+                break;
+            case '*':
+                {
+                alt12=15;
+                }
+                break;
+            default:
+                alt12=18;}
 
         }
         else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {
-            alt12=12;
+            alt12=17;
         }
-        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='*' && LA12_0<='.')||(LA12_0>=':' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||(LA12_0>='{' && LA12_0<='\uFFFE')) ) {
-            alt12=13;
+        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='*' && LA12_0<='-')||(LA12_0>=';' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||(LA12_0>='{' && LA12_0<='\uFFFE')) ) {
+            alt12=18;
         }
         else {
             NoViableAltException nvae =
-                new NoViableAltException("1:1: Tokens : ( T11 | T12 | T13 | T14 | T15 | T16 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );", 12, 0, input);
+                new NoViableAltException("1:1: Tokens : ( T11 | T12 | T13 | T14 | T15 | T16 | T17 | T18 | T19 | T20 | T21 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );", 12, 0, input);
 
             throw nvae;
         }
@@ -955,49 +1132,84 @@ public class InternalArgumentsLexer extends Lexer {
                 }
                 break;
             case 7 :
-                // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1:34: RULE_ID
+                // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1:34: T17
+                {
+                mT17(); 
+
+                }
+                break;
+            case 8 :
+                // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1:38: T18
+                {
+                mT18(); 
+
+                }
+                break;
+            case 9 :
+                // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1:42: T19
+                {
+                mT19(); 
+
+                }
+                break;
+            case 10 :
+                // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1:46: T20
+                {
+                mT20(); 
+
+                }
+                break;
+            case 11 :
+                // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1:50: T21
+                {
+                mT21(); 
+
+                }
+                break;
+            case 12 :
+                // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1:54: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 8 :
-                // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1:42: RULE_INT
+            case 13 :
+                // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1:62: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 9 :
-                // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1:51: RULE_STRING
+            case 14 :
+                // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1:71: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 10 :
-                // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1:63: RULE_ML_COMMENT
+            case 15 :
+                // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1:83: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 11 :
-                // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1:79: RULE_SL_COMMENT
+            case 16 :
+                // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1:99: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 12 :
-                // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1:95: RULE_WS
+            case 17 :
+                // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1:115: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 13 :
-                // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1:103: RULE_ANY_OTHER
+            case 18 :
+                // ../arguments.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalArguments.g:1:123: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 

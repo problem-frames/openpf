@@ -17,172 +17,140 @@ import org.eclipse.xtext.common.services.TerminalsGrammarAccess;
 public class ArgumentsGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
-	public class ArgumentElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Argument");
+	public class ArgElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Arg");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cClaimKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cCnameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cCnameIDTerminalRuleCall_1_0 = (RuleCall)cCnameAssignment_1.eContents().get(0);
-		private final Assignment cClaimstrAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cClaimstrSTRINGTerminalRuleCall_2_0 = (RuleCall)cClaimstrAssignment_2.eContents().get(0);
-		private final Keyword cGroundsKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cGnameAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cGnameIDTerminalRuleCall_4_0 = (RuleCall)cGnameAssignment_4.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cGroundstatementsAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cGroundstatementsGStatementParserRuleCall_6_0 = (RuleCall)cGroundstatementsAssignment_6.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Keyword cWarrantsKeyword_8 = (Keyword)cGroup.eContents().get(8);
-		private final Assignment cWnameAssignment_9 = (Assignment)cGroup.eContents().get(9);
-		private final RuleCall cWnameIDTerminalRuleCall_9_0 = (RuleCall)cWnameAssignment_9.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_10 = (Keyword)cGroup.eContents().get(10);
-		private final Assignment cWarrantstatementsAssignment_11 = (Assignment)cGroup.eContents().get(11);
-		private final RuleCall cWarrantstatementsWStatementParserRuleCall_11_0 = (RuleCall)cWarrantstatementsAssignment_11.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_12 = (Keyword)cGroup.eContents().get(12);
+		private final Keyword cGivenKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cGroundsKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cGroundstatementsAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cGroundstatementsGStatementParserRuleCall_2_0 = (RuleCall)cGroundstatementsAssignment_2.eContents().get(0);
+		private final Keyword cWarrantedKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cByKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Alternatives cAlternatives_5 = (Alternatives)cGroup.eContents().get(5);
+		private final Assignment cGroundstatementsAssignment_5_0 = (Assignment)cAlternatives_5.eContents().get(0);
+		private final RuleCall cGroundstatementsGStatementParserRuleCall_5_0_0 = (RuleCall)cGroundstatementsAssignment_5_0.eContents().get(0);
+		private final Group cGroup_5_1 = (Group)cAlternatives_5.eContents().get(1);
+		private final Keyword cLeftParenthesisKeyword_5_1_0 = (Keyword)cGroup_5_1.eContents().get(0);
+		private final Assignment cInnerAssignment_5_1_1 = (Assignment)cGroup_5_1.eContents().get(1);
+		private final RuleCall cInnerRecArgParserRuleCall_5_1_1_0 = (RuleCall)cInnerAssignment_5_1_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_5_1_2 = (Keyword)cGroup_5_1.eContents().get(2);
+		private final Keyword cThusKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cClaimKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cGroundstatementsAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cGroundstatementsGStatementParserRuleCall_8_0 = (RuleCall)cGroundstatementsAssignment_8.eContents().get(0);
+		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
+		private final Keyword cRebuttedKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
+		private final Keyword cByKeyword_9_1 = (Keyword)cGroup_9.eContents().get(1);
+		private final Assignment cGroundstatementsAssignment_9_2 = (Assignment)cGroup_9.eContents().get(2);
+		private final RuleCall cGroundstatementsGStatementParserRuleCall_9_2_0 = (RuleCall)cGroundstatementsAssignment_9_2.eContents().get(0);
+		private final Keyword cFullStopKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
-		//Argument:
-		//	"claim" cname=ID claimstr=STRING "grounds" gname=ID "(" groundstatements+=gStatement* ")" "warrants" wname=ID "("
-		//	warrantstatements+=wStatement* ")";
+		//Arg:
+		//	"given" "grounds" groundstatements+=gStatement+ "warranted" "by" (groundstatements+=gStatement+ | "(" inner=RecArg
+		//	")") "thus" "claim" groundstatements+=gStatement+ ("rebutted" "by" groundstatements+=gStatement+)? ".";
 		public ParserRule getRule() { return rule; }
 
-		//"claim" cname=ID claimstr=STRING "grounds" gname=ID "(" groundstatements+=gStatement* ")" "warrants" wname=ID "("
-		//warrantstatements+=wStatement* ")"
+		//"given" "grounds" groundstatements+=gStatement+ "warranted" "by" (groundstatements+=gStatement+ | "(" inner=RecArg ")")
+		//"thus" "claim" groundstatements+=gStatement+ ("rebutted" "by" groundstatements+=gStatement+)? "."
 		public Group getGroup() { return cGroup; }
 
-		//"claim"
-		public Keyword getClaimKeyword_0() { return cClaimKeyword_0; }
-
-		//cname=ID
-		public Assignment getCnameAssignment_1() { return cCnameAssignment_1; }
-
-		//ID
-		public RuleCall getCnameIDTerminalRuleCall_1_0() { return cCnameIDTerminalRuleCall_1_0; }
-
-		//claimstr=STRING
-		public Assignment getClaimstrAssignment_2() { return cClaimstrAssignment_2; }
-
-		//STRING
-		public RuleCall getClaimstrSTRINGTerminalRuleCall_2_0() { return cClaimstrSTRINGTerminalRuleCall_2_0; }
+		//"given"
+		public Keyword getGivenKeyword_0() { return cGivenKeyword_0; }
 
 		//"grounds"
-		public Keyword getGroundsKeyword_3() { return cGroundsKeyword_3; }
+		public Keyword getGroundsKeyword_1() { return cGroundsKeyword_1; }
 
-		//gname=ID
-		public Assignment getGnameAssignment_4() { return cGnameAssignment_4; }
-
-		//ID
-		public RuleCall getGnameIDTerminalRuleCall_4_0() { return cGnameIDTerminalRuleCall_4_0; }
-
-		//"("
-		public Keyword getLeftParenthesisKeyword_5() { return cLeftParenthesisKeyword_5; }
-
-		//groundstatements+=gStatement*
-		public Assignment getGroundstatementsAssignment_6() { return cGroundstatementsAssignment_6; }
+		//groundstatements+=gStatement+
+		public Assignment getGroundstatementsAssignment_2() { return cGroundstatementsAssignment_2; }
 
 		//gStatement
-		public RuleCall getGroundstatementsGStatementParserRuleCall_6_0() { return cGroundstatementsGStatementParserRuleCall_6_0; }
+		public RuleCall getGroundstatementsGStatementParserRuleCall_2_0() { return cGroundstatementsGStatementParserRuleCall_2_0; }
 
-		//")"
-		public Keyword getRightParenthesisKeyword_7() { return cRightParenthesisKeyword_7; }
+		//"warranted"
+		public Keyword getWarrantedKeyword_3() { return cWarrantedKeyword_3; }
 
-		//"warrants"
-		public Keyword getWarrantsKeyword_8() { return cWarrantsKeyword_8; }
+		//"by"
+		public Keyword getByKeyword_4() { return cByKeyword_4; }
 
-		//wname=ID
-		public Assignment getWnameAssignment_9() { return cWnameAssignment_9; }
+		//groundstatements+=gStatement+ | "(" inner=RecArg ")"
+		public Alternatives getAlternatives_5() { return cAlternatives_5; }
 
-		//ID
-		public RuleCall getWnameIDTerminalRuleCall_9_0() { return cWnameIDTerminalRuleCall_9_0; }
+		//groundstatements+=gStatement+
+		public Assignment getGroundstatementsAssignment_5_0() { return cGroundstatementsAssignment_5_0; }
 
-		//"("
-		public Keyword getLeftParenthesisKeyword_10() { return cLeftParenthesisKeyword_10; }
+		//gStatement
+		public RuleCall getGroundstatementsGStatementParserRuleCall_5_0_0() { return cGroundstatementsGStatementParserRuleCall_5_0_0; }
 
-		//warrantstatements+=wStatement*
-		public Assignment getWarrantstatementsAssignment_11() { return cWarrantstatementsAssignment_11; }
-
-		//wStatement
-		public RuleCall getWarrantstatementsWStatementParserRuleCall_11_0() { return cWarrantstatementsWStatementParserRuleCall_11_0; }
-
-		//")"
-		public Keyword getRightParenthesisKeyword_12() { return cRightParenthesisKeyword_12; }
-	}
-
-	public class RebuttalElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Rebuttal");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cArgumentKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cAnameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cAnameArgumentParserRuleCall_1_0 = (RuleCall)cAnameAssignment_1.eContents().get(0);
-		private final Keyword cRebuttalsKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cRnameAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cRnameIDTerminalRuleCall_3_0 = (RuleCall)cRnameAssignment_3.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cRebuttalstatementsAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cRebuttalstatementsRStatementParserRuleCall_5_0 = (RuleCall)cRebuttalstatementsAssignment_5.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		
-		//Rebuttal:
-		//	"argument" aname=Argument "rebuttals" rname=ID "(" rebuttalstatements+=rStatement* ")";
-		public ParserRule getRule() { return rule; }
-
-		//"argument" aname=Argument "rebuttals" rname=ID "(" rebuttalstatements+=rStatement* ")"
-		public Group getGroup() { return cGroup; }
-
-		//"argument"
-		public Keyword getArgumentKeyword_0() { return cArgumentKeyword_0; }
-
-		//aname=Argument
-		public Assignment getAnameAssignment_1() { return cAnameAssignment_1; }
-
-		//Argument
-		public RuleCall getAnameArgumentParserRuleCall_1_0() { return cAnameArgumentParserRuleCall_1_0; }
-
-		//"rebuttals"
-		public Keyword getRebuttalsKeyword_2() { return cRebuttalsKeyword_2; }
-
-		//rname=ID
-		public Assignment getRnameAssignment_3() { return cRnameAssignment_3; }
-
-		//ID
-		public RuleCall getRnameIDTerminalRuleCall_3_0() { return cRnameIDTerminalRuleCall_3_0; }
+		//"(" inner=RecArg ")"
+		public Group getGroup_5_1() { return cGroup_5_1; }
 
 		//"("
-		public Keyword getLeftParenthesisKeyword_4() { return cLeftParenthesisKeyword_4; }
+		public Keyword getLeftParenthesisKeyword_5_1_0() { return cLeftParenthesisKeyword_5_1_0; }
 
-		//rebuttalstatements+=rStatement*
-		public Assignment getRebuttalstatementsAssignment_5() { return cRebuttalstatementsAssignment_5; }
+		//inner=RecArg
+		public Assignment getInnerAssignment_5_1_1() { return cInnerAssignment_5_1_1; }
 
-		//rStatement
-		public RuleCall getRebuttalstatementsRStatementParserRuleCall_5_0() { return cRebuttalstatementsRStatementParserRuleCall_5_0; }
+		//RecArg
+		public RuleCall getInnerRecArgParserRuleCall_5_1_1_0() { return cInnerRecArgParserRuleCall_5_1_1_0; }
 
 		//")"
-		public Keyword getRightParenthesisKeyword_6() { return cRightParenthesisKeyword_6; }
+		public Keyword getRightParenthesisKeyword_5_1_2() { return cRightParenthesisKeyword_5_1_2; }
+
+		//"thus"
+		public Keyword getThusKeyword_6() { return cThusKeyword_6; }
+
+		//"claim"
+		public Keyword getClaimKeyword_7() { return cClaimKeyword_7; }
+
+		//groundstatements+=gStatement+
+		public Assignment getGroundstatementsAssignment_8() { return cGroundstatementsAssignment_8; }
+
+		//gStatement
+		public RuleCall getGroundstatementsGStatementParserRuleCall_8_0() { return cGroundstatementsGStatementParserRuleCall_8_0; }
+
+		//("rebutted" "by" groundstatements+=gStatement+)?
+		public Group getGroup_9() { return cGroup_9; }
+
+		//"rebutted"
+		public Keyword getRebuttedKeyword_9_0() { return cRebuttedKeyword_9_0; }
+
+		//"by"
+		public Keyword getByKeyword_9_1() { return cByKeyword_9_1; }
+
+		//groundstatements+=gStatement+
+		public Assignment getGroundstatementsAssignment_9_2() { return cGroundstatementsAssignment_9_2; }
+
+		//gStatement
+		public RuleCall getGroundstatementsGStatementParserRuleCall_9_2_0() { return cGroundstatementsGStatementParserRuleCall_9_2_0; }
+
+		//"."
+		public Keyword getFullStopKeyword_10() { return cFullStopKeyword_10; }
 	}
 
 	public class GStatementElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "gStatement");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cStatementKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cGroundstrAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cGroundstrSTRINGTerminalRuleCall_2_0 = (RuleCall)cGroundstrAssignment_2.eContents().get(0);
 		
 		//gStatement:
-		//	"statement" name=ID groundstr=STRING;
+		//	name=ID ":" groundstr=STRING;
 		public ParserRule getRule() { return rule; }
 
-		//"statement" name=ID groundstr=STRING
+		//name=ID ":" groundstr=STRING
 		public Group getGroup() { return cGroup; }
 
-		//"statement"
-		public Keyword getStatementKeyword_0() { return cStatementKeyword_0; }
-
 		//name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
+
+		//":"
+		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
 
 		//groundstr=STRING
 		public Assignment getGroundstrAssignment_2() { return cGroundstrAssignment_2; }
@@ -191,76 +159,91 @@ public class ArgumentsGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getGroundstrSTRINGTerminalRuleCall_2_0() { return cGroundstrSTRINGTerminalRuleCall_2_0; }
 	}
 
-	public class WStatementElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "wStatement");
+	public class RecArgElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RecArg");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cStatementKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Assignment cGroundstrAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cGroundstrSTRINGTerminalRuleCall_2_0 = (RuleCall)cGroundstrAssignment_2.eContents().get(0);
+		private final Keyword cGivenKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cGroundsKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cGroundstatementsAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cGroundstatementsGStatementParserRuleCall_2_0 = (RuleCall)cGroundstatementsAssignment_2.eContents().get(0);
+		private final Keyword cWarrantedKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cByKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cGroundstatementsAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cGroundstatementsGStatementParserRuleCall_5_0 = (RuleCall)cGroundstatementsAssignment_5.eContents().get(0);
+		private final Keyword cThusKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cClaimKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cGroundstatementsAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cGroundstatementsGStatementParserRuleCall_8_0 = (RuleCall)cGroundstatementsAssignment_8.eContents().get(0);
 		
+		/// *
+		//Argument:
+		//	"claim" cname=ID ":" claimstr=STRING
+		//	"grounds" gname=ID "(" (groundstatements+=gStatement)* ")"
+		//	"warrants" wname=ID "(" (warrantstatements+=wStatement)* ")"
+		//	;
+		//
+		//Rebuttal:
+		//	"argument" aname=Argument
+		//	"rebuttals" rname=ID "(" (rebuttalstatements+=rStatement)* ")";
+		//
+		//gStatement:
+		//	"statement" name=ID ":" groundstr=STRING;
+		//	
 		//wStatement:
-		//	"statement" name=ID groundstr=STRING;
-		public ParserRule getRule() { return rule; }
-
-		//"statement" name=ID groundstr=STRING
-		public Group getGroup() { return cGroup; }
-
-		//"statement"
-		public Keyword getStatementKeyword_0() { return cStatementKeyword_0; }
-
-		//name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
-
-		//groundstr=STRING
-		public Assignment getGroundstrAssignment_2() { return cGroundstrAssignment_2; }
-
-		//STRING
-		public RuleCall getGroundstrSTRINGTerminalRuleCall_2_0() { return cGroundstrSTRINGTerminalRuleCall_2_0; }
-	}
-
-	public class RStatementElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "rStatement");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cStatementKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Assignment cGroundstrAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cGroundstrSTRINGTerminalRuleCall_2_0 = (RuleCall)cGroundstrAssignment_2.eContents().get(0);
-		
+		//	"statement" name=ID ":" groundstr=STRING;
+		//
 		//rStatement:
-		//	"statement" name=ID groundstr=STRING;
+		//	"statement" name=ID ":" groundstr=STRING;
+		// * /RecArg:
+		//	"given" "grounds" groundstatements+=gStatement+ "warranted" "by" groundstatements+=gStatement+ "thus" "claim"
+		//	groundstatements+=gStatement+;
 		public ParserRule getRule() { return rule; }
 
-		//"statement" name=ID groundstr=STRING
+		//"given" "grounds" groundstatements+=gStatement+ "warranted" "by" groundstatements+=gStatement+ "thus" "claim"
+		//groundstatements+=gStatement+
 		public Group getGroup() { return cGroup; }
 
-		//"statement"
-		public Keyword getStatementKeyword_0() { return cStatementKeyword_0; }
+		//"given"
+		public Keyword getGivenKeyword_0() { return cGivenKeyword_0; }
 
-		//name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		//"grounds"
+		public Keyword getGroundsKeyword_1() { return cGroundsKeyword_1; }
 
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		//groundstatements+=gStatement+
+		public Assignment getGroundstatementsAssignment_2() { return cGroundstatementsAssignment_2; }
 
-		//groundstr=STRING
-		public Assignment getGroundstrAssignment_2() { return cGroundstrAssignment_2; }
+		//gStatement
+		public RuleCall getGroundstatementsGStatementParserRuleCall_2_0() { return cGroundstatementsGStatementParserRuleCall_2_0; }
 
-		//STRING
-		public RuleCall getGroundstrSTRINGTerminalRuleCall_2_0() { return cGroundstrSTRINGTerminalRuleCall_2_0; }
+		//"warranted"
+		public Keyword getWarrantedKeyword_3() { return cWarrantedKeyword_3; }
+
+		//"by"
+		public Keyword getByKeyword_4() { return cByKeyword_4; }
+
+		//groundstatements+=gStatement+
+		public Assignment getGroundstatementsAssignment_5() { return cGroundstatementsAssignment_5; }
+
+		//gStatement
+		public RuleCall getGroundstatementsGStatementParserRuleCall_5_0() { return cGroundstatementsGStatementParserRuleCall_5_0; }
+
+		//"thus"
+		public Keyword getThusKeyword_6() { return cThusKeyword_6; }
+
+		//"claim"
+		public Keyword getClaimKeyword_7() { return cClaimKeyword_7; }
+
+		//groundstatements+=gStatement+
+		public Assignment getGroundstatementsAssignment_8() { return cGroundstatementsAssignment_8; }
+
+		//gStatement
+		public RuleCall getGroundstatementsGStatementParserRuleCall_8_0() { return cGroundstatementsGStatementParserRuleCall_8_0; }
 	}
 	
 	
-	private ArgumentElements pArgument;
-	private RebuttalElements pRebuttal;
+	private ArgElements pArg;
 	private GStatementElements pGStatement;
-	private WStatementElements pWStatement;
-	private RStatementElements pRStatement;
+	private RecArgElements pRecArg;
 	
 	private final GrammarProvider grammarProvider;
 
@@ -283,29 +266,19 @@ public class ArgumentsGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
-	//Argument:
-	//	"claim" cname=ID claimstr=STRING "grounds" gname=ID "(" groundstatements+=gStatement* ")" "warrants" wname=ID "("
-	//	warrantstatements+=wStatement* ")";
-	public ArgumentElements getArgumentAccess() {
-		return (pArgument != null) ? pArgument : (pArgument = new ArgumentElements());
+	//Arg:
+	//	"given" "grounds" groundstatements+=gStatement+ "warranted" "by" (groundstatements+=gStatement+ | "(" inner=RecArg
+	//	")") "thus" "claim" groundstatements+=gStatement+ ("rebutted" "by" groundstatements+=gStatement+)? ".";
+	public ArgElements getArgAccess() {
+		return (pArg != null) ? pArg : (pArg = new ArgElements());
 	}
 	
-	public ParserRule getArgumentRule() {
-		return getArgumentAccess().getRule();
-	}
-
-	//Rebuttal:
-	//	"argument" aname=Argument "rebuttals" rname=ID "(" rebuttalstatements+=rStatement* ")";
-	public RebuttalElements getRebuttalAccess() {
-		return (pRebuttal != null) ? pRebuttal : (pRebuttal = new RebuttalElements());
-	}
-	
-	public ParserRule getRebuttalRule() {
-		return getRebuttalAccess().getRule();
+	public ParserRule getArgRule() {
+		return getArgAccess().getRule();
 	}
 
 	//gStatement:
-	//	"statement" name=ID groundstr=STRING;
+	//	name=ID ":" groundstr=STRING;
 	public GStatementElements getGStatementAccess() {
 		return (pGStatement != null) ? pGStatement : (pGStatement = new GStatementElements());
 	}
@@ -314,24 +287,34 @@ public class ArgumentsGrammarAccess extends AbstractGrammarElementFinder {
 		return getGStatementAccess().getRule();
 	}
 
+	/// *
+	//Argument:
+	//	"claim" cname=ID ":" claimstr=STRING
+	//	"grounds" gname=ID "(" (groundstatements+=gStatement)* ")"
+	//	"warrants" wname=ID "(" (warrantstatements+=wStatement)* ")"
+	//	;
+	//
+	//Rebuttal:
+	//	"argument" aname=Argument
+	//	"rebuttals" rname=ID "(" (rebuttalstatements+=rStatement)* ")";
+	//
+	//gStatement:
+	//	"statement" name=ID ":" groundstr=STRING;
+	//	
 	//wStatement:
-	//	"statement" name=ID groundstr=STRING;
-	public WStatementElements getWStatementAccess() {
-		return (pWStatement != null) ? pWStatement : (pWStatement = new WStatementElements());
-	}
-	
-	public ParserRule getWStatementRule() {
-		return getWStatementAccess().getRule();
-	}
-
+	//	"statement" name=ID ":" groundstr=STRING;
+	//
 	//rStatement:
-	//	"statement" name=ID groundstr=STRING;
-	public RStatementElements getRStatementAccess() {
-		return (pRStatement != null) ? pRStatement : (pRStatement = new RStatementElements());
+	//	"statement" name=ID ":" groundstr=STRING;
+	// * /RecArg:
+	//	"given" "grounds" groundstatements+=gStatement+ "warranted" "by" groundstatements+=gStatement+ "thus" "claim"
+	//	groundstatements+=gStatement+;
+	public RecArgElements getRecArgAccess() {
+		return (pRecArg != null) ? pRecArg : (pRecArg = new RecArgElements());
 	}
 	
-	public ParserRule getRStatementRule() {
-		return getRStatementAccess().getRule();
+	public ParserRule getRecArgRule() {
+		return getRecArgAccess().getRule();
 	}
 
 	//terminal ID:

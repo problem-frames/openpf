@@ -7,32 +7,37 @@ package org.xtext.example.mydsl.parser.antlr.internal;
 import org.eclipse.xtext.parser.antlr.Lexer;
 }
 
-T11 : 'claim' ;
+T11 : 'given' ;
 T12 : 'grounds' ;
-T13 : '(' ;
-T14 : ')' ;
-T15 : 'warrants' ;
-T16 : 'statement' ;
+T13 : 'warranted' ;
+T14 : 'by' ;
+T15 : '(' ;
+T16 : ')' ;
+T17 : 'thus' ;
+T18 : 'claim' ;
+T19 : 'rebutted' ;
+T20 : '.' ;
+T21 : ':' ;
 
-// $ANTLR src "../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g" 498
+// $ANTLR src "../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g" 458
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
-// $ANTLR src "../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g" 500
+// $ANTLR src "../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g" 460
 RULE_INT : ('0'..'9')+;
 
-// $ANTLR src "../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g" 502
+// $ANTLR src "../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g" 462
 RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\'');
 
-// $ANTLR src "../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g" 504
+// $ANTLR src "../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g" 464
 RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 
-// $ANTLR src "../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g" 506
+// $ANTLR src "../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g" 466
 RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
-// $ANTLR src "../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g" 508
+// $ANTLR src "../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g" 468
 RULE_WS : (' '|'\t'|'\r'|'\n')+;
 
-// $ANTLR src "../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g" 510
+// $ANTLR src "../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g" 470
 RULE_ANY_OTHER : .;
 
 

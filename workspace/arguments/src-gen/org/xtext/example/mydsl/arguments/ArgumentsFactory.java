@@ -26,22 +26,13 @@ public interface ArgumentsFactory extends EFactory
   ArgumentsFactory eINSTANCE = org.xtext.example.mydsl.arguments.impl.ArgumentsFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Argument</em>'.
+   * Returns a new object of class '<em>Arg</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Argument</em>'.
+   * @return a new object of class '<em>Arg</em>'.
    * @generated
    */
-  Argument createArgument();
-
-  /**
-   * Returns a new object of class '<em>Rebuttal</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Rebuttal</em>'.
-   * @generated
-   */
-  Rebuttal createRebuttal();
+  Arg createArg();
 
   /**
    * Returns a new object of class '<em>gStatement</em>'.
@@ -53,22 +44,13 @@ public interface ArgumentsFactory extends EFactory
   gStatement creategStatement();
 
   /**
-   * Returns a new object of class '<em>wStatement</em>'.
+   * Returns a new object of class '<em>Rec Arg</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>wStatement</em>'.
+   * @return a new object of class '<em>Rec Arg</em>'.
    * @generated
    */
-  wStatement createwStatement();
-
-  /**
-   * Returns a new object of class '<em>rStatement</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>rStatement</em>'.
-   * @generated
-   */
-  rStatement createrStatement();
+  RecArg createRecArg();
 
   /**
    * Returns the package supported by this factory.

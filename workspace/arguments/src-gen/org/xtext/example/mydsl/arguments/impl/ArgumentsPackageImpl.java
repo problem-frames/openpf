@@ -12,13 +12,11 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import org.xtext.example.mydsl.arguments.Argument;
+import org.xtext.example.mydsl.arguments.Arg;
 import org.xtext.example.mydsl.arguments.ArgumentsFactory;
 import org.xtext.example.mydsl.arguments.ArgumentsPackage;
-import org.xtext.example.mydsl.arguments.Rebuttal;
+import org.xtext.example.mydsl.arguments.RecArg;
 import org.xtext.example.mydsl.arguments.gStatement;
-import org.xtext.example.mydsl.arguments.rStatement;
-import org.xtext.example.mydsl.arguments.wStatement;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,14 +31,7 @@ public class ArgumentsPackageImpl extends EPackageImpl implements ArgumentsPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass argumentEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass rebuttalEClass = null;
+  private EClass argEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -54,14 +45,7 @@ public class ArgumentsPackageImpl extends EPackageImpl implements ArgumentsPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass wStatementEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass rStatementEClass = null;
+  private EClass recArgEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -131,9 +115,9 @@ public class ArgumentsPackageImpl extends EPackageImpl implements ArgumentsPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getArgument()
+  public EClass getArg()
   {
-    return argumentEClass;
+    return argEClass;
   }
 
   /**
@@ -141,9 +125,9 @@ public class ArgumentsPackageImpl extends EPackageImpl implements ArgumentsPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getArgument_Cname()
+  public EReference getArg_Groundstatements()
   {
-    return (EAttribute)argumentEClass.getEStructuralFeatures().get(0);
+    return (EReference)argEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -151,89 +135,9 @@ public class ArgumentsPackageImpl extends EPackageImpl implements ArgumentsPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getArgument_Claimstr()
+  public EReference getArg_Inner()
   {
-    return (EAttribute)argumentEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getArgument_Gname()
-  {
-    return (EAttribute)argumentEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getArgument_Groundstatements()
-  {
-    return (EReference)argumentEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getArgument_Wname()
-  {
-    return (EAttribute)argumentEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getArgument_Warrantstatements()
-  {
-    return (EReference)argumentEClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getRebuttal()
-  {
-    return rebuttalEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getRebuttal_Aname()
-  {
-    return (EReference)rebuttalEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getRebuttal_Rname()
-  {
-    return (EAttribute)rebuttalEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getRebuttal_Rebuttalstatements()
-  {
-    return (EReference)rebuttalEClass.getEStructuralFeatures().get(2);
+    return (EReference)argEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -271,9 +175,9 @@ public class ArgumentsPackageImpl extends EPackageImpl implements ArgumentsPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getwStatement()
+  public EClass getRecArg()
   {
-    return wStatementEClass;
+    return recArgEClass;
   }
 
   /**
@@ -281,49 +185,9 @@ public class ArgumentsPackageImpl extends EPackageImpl implements ArgumentsPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getwStatement_Name()
+  public EReference getRecArg_Groundstatements()
   {
-    return (EAttribute)wStatementEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getwStatement_Groundstr()
-  {
-    return (EAttribute)wStatementEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getrStatement()
-  {
-    return rStatementEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getrStatement_Name()
-  {
-    return (EAttribute)rStatementEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getrStatement_Groundstr()
-  {
-    return (EAttribute)rStatementEClass.getEStructuralFeatures().get(1);
+    return (EReference)recArgEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -356,30 +220,16 @@ public class ArgumentsPackageImpl extends EPackageImpl implements ArgumentsPacka
     isCreated = true;
 
     // Create classes and their features
-    argumentEClass = createEClass(ARGUMENT);
-    createEAttribute(argumentEClass, ARGUMENT__CNAME);
-    createEAttribute(argumentEClass, ARGUMENT__CLAIMSTR);
-    createEAttribute(argumentEClass, ARGUMENT__GNAME);
-    createEReference(argumentEClass, ARGUMENT__GROUNDSTATEMENTS);
-    createEAttribute(argumentEClass, ARGUMENT__WNAME);
-    createEReference(argumentEClass, ARGUMENT__WARRANTSTATEMENTS);
-
-    rebuttalEClass = createEClass(REBUTTAL);
-    createEReference(rebuttalEClass, REBUTTAL__ANAME);
-    createEAttribute(rebuttalEClass, REBUTTAL__RNAME);
-    createEReference(rebuttalEClass, REBUTTAL__REBUTTALSTATEMENTS);
+    argEClass = createEClass(ARG);
+    createEReference(argEClass, ARG__GROUNDSTATEMENTS);
+    createEReference(argEClass, ARG__INNER);
 
     gStatementEClass = createEClass(GSTATEMENT);
     createEAttribute(gStatementEClass, GSTATEMENT__NAME);
     createEAttribute(gStatementEClass, GSTATEMENT__GROUNDSTR);
 
-    wStatementEClass = createEClass(WSTATEMENT);
-    createEAttribute(wStatementEClass, WSTATEMENT__NAME);
-    createEAttribute(wStatementEClass, WSTATEMENT__GROUNDSTR);
-
-    rStatementEClass = createEClass(RSTATEMENT);
-    createEAttribute(rStatementEClass, RSTATEMENT__NAME);
-    createEAttribute(rStatementEClass, RSTATEMENT__GROUNDSTR);
+    recArgEClass = createEClass(REC_ARG);
+    createEReference(recArgEClass, REC_ARG__GROUNDSTATEMENTS);
   }
 
   /**
@@ -413,30 +263,16 @@ public class ArgumentsPackageImpl extends EPackageImpl implements ArgumentsPacka
     // Add supertypes to classes
 
     // Initialize classes and features; add operations and parameters
-    initEClass(argumentEClass, Argument.class, "Argument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getArgument_Cname(), ecorePackage.getEString(), "cname", null, 0, 1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getArgument_Claimstr(), ecorePackage.getEString(), "claimstr", null, 0, 1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getArgument_Gname(), ecorePackage.getEString(), "gname", null, 0, 1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getArgument_Groundstatements(), this.getgStatement(), null, "groundstatements", null, 0, -1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getArgument_Wname(), ecorePackage.getEString(), "wname", null, 0, 1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getArgument_Warrantstatements(), this.getwStatement(), null, "warrantstatements", null, 0, -1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(rebuttalEClass, Rebuttal.class, "Rebuttal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getRebuttal_Aname(), this.getArgument(), null, "aname", null, 0, 1, Rebuttal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRebuttal_Rname(), ecorePackage.getEString(), "rname", null, 0, 1, Rebuttal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getRebuttal_Rebuttalstatements(), this.getrStatement(), null, "rebuttalstatements", null, 0, -1, Rebuttal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(argEClass, Arg.class, "Arg", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getArg_Groundstatements(), this.getgStatement(), null, "groundstatements", null, 0, -1, Arg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getArg_Inner(), this.getRecArg(), null, "inner", null, 0, 1, Arg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(gStatementEClass, gStatement.class, "gStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getgStatement_Name(), ecorePackage.getEString(), "name", null, 0, 1, gStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getgStatement_Groundstr(), ecorePackage.getEString(), "groundstr", null, 0, 1, gStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(wStatementEClass, wStatement.class, "wStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getwStatement_Name(), ecorePackage.getEString(), "name", null, 0, 1, wStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getwStatement_Groundstr(), ecorePackage.getEString(), "groundstr", null, 0, 1, wStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(rStatementEClass, rStatement.class, "rStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getrStatement_Name(), ecorePackage.getEString(), "name", null, 0, 1, rStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getrStatement_Groundstr(), ecorePackage.getEString(), "groundstr", null, 0, 1, rStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(recArgEClass, RecArg.class, "RecArg", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getRecArg_Groundstatements(), this.getgStatement(), null, "groundstatements", null, 0, -1, RecArg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

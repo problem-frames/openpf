@@ -3,33 +3,18 @@
     xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="arguments"
     nsURI="http://www.xtext.org/example/mydsl/Arguments" nsPrefix="arguments">
-  <eClassifiers xsi:type="ecore:EClass" name="Argument">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="claimstr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Arg">
     <eStructuralFeatures xsi:type="ecore:EReference" name="groundstatements" upperBound="-1"
         eType="#//gStatement" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="wname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="warrantstatements" upperBound="-1"
-        eType="#//wStatement" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Rebuttal">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="aname" eType="#//Argument"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inner" eType="#//RecArg"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="rebuttalstatements" upperBound="-1"
-        eType="#//rStatement" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="gStatement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="groundstr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="wStatement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="groundstr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="rStatement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="groundstr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RecArg">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="groundstatements" upperBound="-1"
+        eType="#//gStatement" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

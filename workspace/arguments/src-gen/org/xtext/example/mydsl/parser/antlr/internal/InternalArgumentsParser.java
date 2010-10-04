@@ -24,7 +24,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalArgumentsParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'claim'", "'grounds'", "'('", "')'", "'warrants'", "'statement'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'given'", "'grounds'", "'warranted'", "'by'", "'('", "')'", "'thus'", "'claim'", "'rebutted'", "'.'", "':'"
     };
     public static final int RULE_ID=4;
     public static final int RULE_STRING=5;
@@ -62,7 +62,7 @@ public class InternalArgumentsParser extends AbstractInternalAntlrParser {
         
         @Override
         protected String getFirstRuleName() {
-        	return "Argument";	
+        	return "Arg";	
        	}
        	
        	@Override
@@ -72,25 +72,25 @@ public class InternalArgumentsParser extends AbstractInternalAntlrParser {
 
 
 
-    // $ANTLR start entryRuleArgument
-    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:77:1: entryRuleArgument returns [EObject current=null] : iv_ruleArgument= ruleArgument EOF ;
-    public final EObject entryRuleArgument() throws RecognitionException {
+    // $ANTLR start entryRuleArg
+    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:77:1: entryRuleArg returns [EObject current=null] : iv_ruleArg= ruleArg EOF ;
+    public final EObject entryRuleArg() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleArgument = null;
+        EObject iv_ruleArg = null;
 
 
         try {
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:78:2: (iv_ruleArgument= ruleArgument EOF )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:79:2: iv_ruleArgument= ruleArgument EOF
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:78:2: (iv_ruleArg= ruleArg EOF )
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:79:2: iv_ruleArg= ruleArg EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getArgumentRule(), currentNode); 
-            pushFollow(FOLLOW_ruleArgument_in_entryRuleArgument75);
-            iv_ruleArgument=ruleArgument();
+             currentNode = createCompositeNode(grammarAccess.getArgRule(), currentNode); 
+            pushFollow(FOLLOW_ruleArg_in_entryRuleArg75);
+            iv_ruleArg=ruleArg();
             _fsp--;
 
-             current =iv_ruleArgument; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleArgument85); 
+             current =iv_ruleArg; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleArg85); 
 
             }
 
@@ -104,178 +104,78 @@ public class InternalArgumentsParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleArgument
+    // $ANTLR end entryRuleArg
 
 
-    // $ANTLR start ruleArgument
-    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:86:1: ruleArgument returns [EObject current=null] : ( 'claim' ( (lv_cname_1_0= RULE_ID ) ) ( (lv_claimstr_2_0= RULE_STRING ) ) 'grounds' ( (lv_gname_4_0= RULE_ID ) ) '(' ( (lv_groundstatements_6_0= rulegStatement ) )* ')' 'warrants' ( (lv_wname_9_0= RULE_ID ) ) '(' ( (lv_warrantstatements_11_0= rulewStatement ) )* ')' ) ;
-    public final EObject ruleArgument() throws RecognitionException {
+    // $ANTLR start ruleArg
+    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:86:1: ruleArg returns [EObject current=null] : ( 'given' 'grounds' ( (lv_groundstatements_2_0= rulegStatement ) )+ 'warranted' 'by' ( ( (lv_groundstatements_5_0= rulegStatement ) )+ | ( '(' ( (lv_inner_7_0= ruleRecArg ) ) ')' ) ) 'thus' 'claim' ( (lv_groundstatements_11_0= rulegStatement ) )+ ( 'rebutted' 'by' ( (lv_groundstatements_14_0= rulegStatement ) )+ )? '.' ) ;
+    public final EObject ruleArg() throws RecognitionException {
         EObject current = null;
 
-        Token lv_cname_1_0=null;
-        Token lv_claimstr_2_0=null;
-        Token lv_gname_4_0=null;
-        Token lv_wname_9_0=null;
-        EObject lv_groundstatements_6_0 = null;
+        EObject lv_groundstatements_2_0 = null;
 
-        EObject lv_warrantstatements_11_0 = null;
+        EObject lv_groundstatements_5_0 = null;
+
+        EObject lv_inner_7_0 = null;
+
+        EObject lv_groundstatements_11_0 = null;
+
+        EObject lv_groundstatements_14_0 = null;
 
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:91:6: ( ( 'claim' ( (lv_cname_1_0= RULE_ID ) ) ( (lv_claimstr_2_0= RULE_STRING ) ) 'grounds' ( (lv_gname_4_0= RULE_ID ) ) '(' ( (lv_groundstatements_6_0= rulegStatement ) )* ')' 'warrants' ( (lv_wname_9_0= RULE_ID ) ) '(' ( (lv_warrantstatements_11_0= rulewStatement ) )* ')' ) )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:92:1: ( 'claim' ( (lv_cname_1_0= RULE_ID ) ) ( (lv_claimstr_2_0= RULE_STRING ) ) 'grounds' ( (lv_gname_4_0= RULE_ID ) ) '(' ( (lv_groundstatements_6_0= rulegStatement ) )* ')' 'warrants' ( (lv_wname_9_0= RULE_ID ) ) '(' ( (lv_warrantstatements_11_0= rulewStatement ) )* ')' )
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:91:6: ( ( 'given' 'grounds' ( (lv_groundstatements_2_0= rulegStatement ) )+ 'warranted' 'by' ( ( (lv_groundstatements_5_0= rulegStatement ) )+ | ( '(' ( (lv_inner_7_0= ruleRecArg ) ) ')' ) ) 'thus' 'claim' ( (lv_groundstatements_11_0= rulegStatement ) )+ ( 'rebutted' 'by' ( (lv_groundstatements_14_0= rulegStatement ) )+ )? '.' ) )
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:92:1: ( 'given' 'grounds' ( (lv_groundstatements_2_0= rulegStatement ) )+ 'warranted' 'by' ( ( (lv_groundstatements_5_0= rulegStatement ) )+ | ( '(' ( (lv_inner_7_0= ruleRecArg ) ) ')' ) ) 'thus' 'claim' ( (lv_groundstatements_11_0= rulegStatement ) )+ ( 'rebutted' 'by' ( (lv_groundstatements_14_0= rulegStatement ) )+ )? '.' )
             {
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:92:1: ( 'claim' ( (lv_cname_1_0= RULE_ID ) ) ( (lv_claimstr_2_0= RULE_STRING ) ) 'grounds' ( (lv_gname_4_0= RULE_ID ) ) '(' ( (lv_groundstatements_6_0= rulegStatement ) )* ')' 'warrants' ( (lv_wname_9_0= RULE_ID ) ) '(' ( (lv_warrantstatements_11_0= rulewStatement ) )* ')' )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:92:3: 'claim' ( (lv_cname_1_0= RULE_ID ) ) ( (lv_claimstr_2_0= RULE_STRING ) ) 'grounds' ( (lv_gname_4_0= RULE_ID ) ) '(' ( (lv_groundstatements_6_0= rulegStatement ) )* ')' 'warrants' ( (lv_wname_9_0= RULE_ID ) ) '(' ( (lv_warrantstatements_11_0= rulewStatement ) )* ')'
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:92:1: ( 'given' 'grounds' ( (lv_groundstatements_2_0= rulegStatement ) )+ 'warranted' 'by' ( ( (lv_groundstatements_5_0= rulegStatement ) )+ | ( '(' ( (lv_inner_7_0= ruleRecArg ) ) ')' ) ) 'thus' 'claim' ( (lv_groundstatements_11_0= rulegStatement ) )+ ( 'rebutted' 'by' ( (lv_groundstatements_14_0= rulegStatement ) )+ )? '.' )
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:92:3: 'given' 'grounds' ( (lv_groundstatements_2_0= rulegStatement ) )+ 'warranted' 'by' ( ( (lv_groundstatements_5_0= rulegStatement ) )+ | ( '(' ( (lv_inner_7_0= ruleRecArg ) ) ')' ) ) 'thus' 'claim' ( (lv_groundstatements_11_0= rulegStatement ) )+ ( 'rebutted' 'by' ( (lv_groundstatements_14_0= rulegStatement ) )+ )? '.'
             {
-            match(input,11,FOLLOW_11_in_ruleArgument120); 
+            match(input,11,FOLLOW_11_in_ruleArg120); 
 
-                    createLeafNode(grammarAccess.getArgumentAccess().getClaimKeyword_0(), null); 
+                    createLeafNode(grammarAccess.getArgAccess().getGivenKeyword_0(), null); 
                 
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:96:1: ( (lv_cname_1_0= RULE_ID ) )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:97:1: (lv_cname_1_0= RULE_ID )
-            {
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:97:1: (lv_cname_1_0= RULE_ID )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:98:3: lv_cname_1_0= RULE_ID
-            {
-            lv_cname_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleArgument137); 
+            match(input,12,FOLLOW_12_in_ruleArg130); 
 
-            			createLeafNode(grammarAccess.getArgumentAccess().getCnameIDTerminalRuleCall_1_0(), "cname"); 
-            		
-
-            	        if (current==null) {
-            	            current = factory.create(grammarAccess.getArgumentRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
-            	        }
-            	        try {
-            	       		set(
-            	       			current, 
-            	       			"cname",
-            	        		lv_cname_1_0, 
-            	        		"ID", 
-            	        		lastConsumedNode);
-            	        } catch (ValueConverterException vce) {
-            				handleValueConverterException(vce);
-            	        }
-            	    
-
-            }
-
-
-            }
-
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:120:2: ( (lv_claimstr_2_0= RULE_STRING ) )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:121:1: (lv_claimstr_2_0= RULE_STRING )
-            {
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:121:1: (lv_claimstr_2_0= RULE_STRING )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:122:3: lv_claimstr_2_0= RULE_STRING
-            {
-            lv_claimstr_2_0=(Token)input.LT(1);
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleArgument159); 
-
-            			createLeafNode(grammarAccess.getArgumentAccess().getClaimstrSTRINGTerminalRuleCall_2_0(), "claimstr"); 
-            		
-
-            	        if (current==null) {
-            	            current = factory.create(grammarAccess.getArgumentRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
-            	        }
-            	        try {
-            	       		set(
-            	       			current, 
-            	       			"claimstr",
-            	        		lv_claimstr_2_0, 
-            	        		"STRING", 
-            	        		lastConsumedNode);
-            	        } catch (ValueConverterException vce) {
-            				handleValueConverterException(vce);
-            	        }
-            	    
-
-            }
-
-
-            }
-
-            match(input,12,FOLLOW_12_in_ruleArgument174); 
-
-                    createLeafNode(grammarAccess.getArgumentAccess().getGroundsKeyword_3(), null); 
+                    createLeafNode(grammarAccess.getArgAccess().getGroundsKeyword_1(), null); 
                 
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:148:1: ( (lv_gname_4_0= RULE_ID ) )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:149:1: (lv_gname_4_0= RULE_ID )
-            {
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:149:1: (lv_gname_4_0= RULE_ID )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:150:3: lv_gname_4_0= RULE_ID
-            {
-            lv_gname_4_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleArgument191); 
-
-            			createLeafNode(grammarAccess.getArgumentAccess().getGnameIDTerminalRuleCall_4_0(), "gname"); 
-            		
-
-            	        if (current==null) {
-            	            current = factory.create(grammarAccess.getArgumentRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
-            	        }
-            	        try {
-            	       		set(
-            	       			current, 
-            	       			"gname",
-            	        		lv_gname_4_0, 
-            	        		"ID", 
-            	        		lastConsumedNode);
-            	        } catch (ValueConverterException vce) {
-            				handleValueConverterException(vce);
-            	        }
-            	    
-
-            }
-
-
-            }
-
-            match(input,13,FOLLOW_13_in_ruleArgument206); 
-
-                    createLeafNode(grammarAccess.getArgumentAccess().getLeftParenthesisKeyword_5(), null); 
-                
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:176:1: ( (lv_groundstatements_6_0= rulegStatement ) )*
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:100:1: ( (lv_groundstatements_2_0= rulegStatement ) )+
+            int cnt1=0;
             loop1:
             do {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==16) ) {
+                if ( (LA1_0==RULE_ID) ) {
                     alt1=1;
                 }
 
 
                 switch (alt1) {
             	case 1 :
-            	    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:177:1: (lv_groundstatements_6_0= rulegStatement )
+            	    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:101:1: (lv_groundstatements_2_0= rulegStatement )
             	    {
-            	    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:177:1: (lv_groundstatements_6_0= rulegStatement )
-            	    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:178:3: lv_groundstatements_6_0= rulegStatement
+            	    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:101:1: (lv_groundstatements_2_0= rulegStatement )
+            	    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:102:3: lv_groundstatements_2_0= rulegStatement
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getArgumentAccess().getGroundstatementsGStatementParserRuleCall_6_0(), currentNode); 
+            	    	        currentNode=createCompositeNode(grammarAccess.getArgAccess().getGroundstatementsGStatementParserRuleCall_2_0(), currentNode); 
             	    	    
-            	    pushFollow(FOLLOW_rulegStatement_in_ruleArgument227);
-            	    lv_groundstatements_6_0=rulegStatement();
+            	    pushFollow(FOLLOW_rulegStatement_in_ruleArg151);
+            	    lv_groundstatements_2_0=rulegStatement();
             	    _fsp--;
 
 
             	    	        if (current==null) {
-            	    	            current = factory.create(grammarAccess.getArgumentRule().getType().getClassifier());
+            	    	            current = factory.create(grammarAccess.getArgRule().getType().getClassifier());
             	    	            associateNodeWithAstElement(currentNode.getParent(), current);
             	    	        }
             	    	        try {
             	    	       		add(
             	    	       			current, 
             	    	       			"groundstatements",
-            	    	        		lv_groundstatements_6_0, 
+            	    	        		lv_groundstatements_2_0, 
             	    	        		"gStatement", 
             	    	        		currentNode);
             	    	        } catch (ValueConverterException vce) {
@@ -291,91 +191,208 @@ public class InternalArgumentsParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop1;
+            	    if ( cnt1 >= 1 ) break loop1;
+                        EarlyExitException eee =
+                            new EarlyExitException(1, input);
+                        throw eee;
                 }
+                cnt1++;
             } while (true);
 
-            match(input,14,FOLLOW_14_in_ruleArgument238); 
+            match(input,13,FOLLOW_13_in_ruleArg162); 
 
-                    createLeafNode(grammarAccess.getArgumentAccess().getRightParenthesisKeyword_7(), null); 
+                    createLeafNode(grammarAccess.getArgAccess().getWarrantedKeyword_3(), null); 
                 
-            match(input,15,FOLLOW_15_in_ruleArgument248); 
+            match(input,14,FOLLOW_14_in_ruleArg172); 
 
-                    createLeafNode(grammarAccess.getArgumentAccess().getWarrantsKeyword_8(), null); 
+                    createLeafNode(grammarAccess.getArgAccess().getByKeyword_4(), null); 
                 
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:208:1: ( (lv_wname_9_0= RULE_ID ) )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:209:1: (lv_wname_9_0= RULE_ID )
-            {
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:209:1: (lv_wname_9_0= RULE_ID )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:210:3: lv_wname_9_0= RULE_ID
-            {
-            lv_wname_9_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleArgument265); 
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:132:1: ( ( (lv_groundstatements_5_0= rulegStatement ) )+ | ( '(' ( (lv_inner_7_0= ruleRecArg ) ) ')' ) )
+            int alt3=2;
+            int LA3_0 = input.LA(1);
 
-            			createLeafNode(grammarAccess.getArgumentAccess().getWnameIDTerminalRuleCall_9_0(), "wname"); 
-            		
+            if ( (LA3_0==RULE_ID) ) {
+                alt3=1;
+            }
+            else if ( (LA3_0==15) ) {
+                alt3=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("132:1: ( ( (lv_groundstatements_5_0= rulegStatement ) )+ | ( '(' ( (lv_inner_7_0= ruleRecArg ) ) ')' ) )", 3, 0, input);
 
-            	        if (current==null) {
-            	            current = factory.create(grammarAccess.getArgumentRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
-            	        }
-            	        try {
-            	       		set(
-            	       			current, 
-            	       			"wname",
-            	        		lv_wname_9_0, 
-            	        		"ID", 
-            	        		lastConsumedNode);
-            	        } catch (ValueConverterException vce) {
-            				handleValueConverterException(vce);
-            	        }
-            	    
+                throw nvae;
+            }
+            switch (alt3) {
+                case 1 :
+                    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:132:2: ( (lv_groundstatements_5_0= rulegStatement ) )+
+                    {
+                    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:132:2: ( (lv_groundstatements_5_0= rulegStatement ) )+
+                    int cnt2=0;
+                    loop2:
+                    do {
+                        int alt2=2;
+                        int LA2_0 = input.LA(1);
+
+                        if ( (LA2_0==RULE_ID) ) {
+                            alt2=1;
+                        }
+
+
+                        switch (alt2) {
+                    	case 1 :
+                    	    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:133:1: (lv_groundstatements_5_0= rulegStatement )
+                    	    {
+                    	    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:133:1: (lv_groundstatements_5_0= rulegStatement )
+                    	    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:134:3: lv_groundstatements_5_0= rulegStatement
+                    	    {
+                    	     
+                    	    	        currentNode=createCompositeNode(grammarAccess.getArgAccess().getGroundstatementsGStatementParserRuleCall_5_0_0(), currentNode); 
+                    	    	    
+                    	    pushFollow(FOLLOW_rulegStatement_in_ruleArg194);
+                    	    lv_groundstatements_5_0=rulegStatement();
+                    	    _fsp--;
+
+
+                    	    	        if (current==null) {
+                    	    	            current = factory.create(grammarAccess.getArgRule().getType().getClassifier());
+                    	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+                    	    	        }
+                    	    	        try {
+                    	    	       		add(
+                    	    	       			current, 
+                    	    	       			"groundstatements",
+                    	    	        		lv_groundstatements_5_0, 
+                    	    	        		"gStatement", 
+                    	    	        		currentNode);
+                    	    	        } catch (ValueConverterException vce) {
+                    	    				handleValueConverterException(vce);
+                    	    	        }
+                    	    	        currentNode = currentNode.getParent();
+                    	    	    
+
+                    	    }
+
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    if ( cnt2 >= 1 ) break loop2;
+                                EarlyExitException eee =
+                                    new EarlyExitException(2, input);
+                                throw eee;
+                        }
+                        cnt2++;
+                    } while (true);
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:157:6: ( '(' ( (lv_inner_7_0= ruleRecArg ) ) ')' )
+                    {
+                    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:157:6: ( '(' ( (lv_inner_7_0= ruleRecArg ) ) ')' )
+                    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:157:8: '(' ( (lv_inner_7_0= ruleRecArg ) ) ')'
+                    {
+                    match(input,15,FOLLOW_15_in_ruleArg212); 
+
+                            createLeafNode(grammarAccess.getArgAccess().getLeftParenthesisKeyword_5_1_0(), null); 
+                        
+                    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:161:1: ( (lv_inner_7_0= ruleRecArg ) )
+                    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:162:1: (lv_inner_7_0= ruleRecArg )
+                    {
+                    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:162:1: (lv_inner_7_0= ruleRecArg )
+                    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:163:3: lv_inner_7_0= ruleRecArg
+                    {
+                     
+                    	        currentNode=createCompositeNode(grammarAccess.getArgAccess().getInnerRecArgParserRuleCall_5_1_1_0(), currentNode); 
+                    	    
+                    pushFollow(FOLLOW_ruleRecArg_in_ruleArg233);
+                    lv_inner_7_0=ruleRecArg();
+                    _fsp--;
+
+
+                    	        if (current==null) {
+                    	            current = factory.create(grammarAccess.getArgRule().getType().getClassifier());
+                    	            associateNodeWithAstElement(currentNode.getParent(), current);
+                    	        }
+                    	        try {
+                    	       		set(
+                    	       			current, 
+                    	       			"inner",
+                    	        		lv_inner_7_0, 
+                    	        		"RecArg", 
+                    	        		currentNode);
+                    	        } catch (ValueConverterException vce) {
+                    				handleValueConverterException(vce);
+                    	        }
+                    	        currentNode = currentNode.getParent();
+                    	    
+
+                    }
+
+
+                    }
+
+                    match(input,16,FOLLOW_16_in_ruleArg243); 
+
+                            createLeafNode(grammarAccess.getArgAccess().getRightParenthesisKeyword_5_1_2(), null); 
+                        
+
+                    }
+
+
+                    }
+                    break;
 
             }
 
+            match(input,17,FOLLOW_17_in_ruleArg255); 
 
-            }
-
-            match(input,13,FOLLOW_13_in_ruleArgument280); 
-
-                    createLeafNode(grammarAccess.getArgumentAccess().getLeftParenthesisKeyword_10(), null); 
+                    createLeafNode(grammarAccess.getArgAccess().getThusKeyword_6(), null); 
                 
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:236:1: ( (lv_warrantstatements_11_0= rulewStatement ) )*
-            loop2:
+            match(input,18,FOLLOW_18_in_ruleArg265); 
+
+                    createLeafNode(grammarAccess.getArgAccess().getClaimKeyword_7(), null); 
+                
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:197:1: ( (lv_groundstatements_11_0= rulegStatement ) )+
+            int cnt4=0;
+            loop4:
             do {
-                int alt2=2;
-                int LA2_0 = input.LA(1);
+                int alt4=2;
+                int LA4_0 = input.LA(1);
 
-                if ( (LA2_0==16) ) {
-                    alt2=1;
+                if ( (LA4_0==RULE_ID) ) {
+                    alt4=1;
                 }
 
 
-                switch (alt2) {
+                switch (alt4) {
             	case 1 :
-            	    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:237:1: (lv_warrantstatements_11_0= rulewStatement )
+            	    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:198:1: (lv_groundstatements_11_0= rulegStatement )
             	    {
-            	    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:237:1: (lv_warrantstatements_11_0= rulewStatement )
-            	    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:238:3: lv_warrantstatements_11_0= rulewStatement
+            	    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:198:1: (lv_groundstatements_11_0= rulegStatement )
+            	    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:199:3: lv_groundstatements_11_0= rulegStatement
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getArgumentAccess().getWarrantstatementsWStatementParserRuleCall_11_0(), currentNode); 
+            	    	        currentNode=createCompositeNode(grammarAccess.getArgAccess().getGroundstatementsGStatementParserRuleCall_8_0(), currentNode); 
             	    	    
-            	    pushFollow(FOLLOW_rulewStatement_in_ruleArgument301);
-            	    lv_warrantstatements_11_0=rulewStatement();
+            	    pushFollow(FOLLOW_rulegStatement_in_ruleArg286);
+            	    lv_groundstatements_11_0=rulegStatement();
             	    _fsp--;
 
 
             	    	        if (current==null) {
-            	    	            current = factory.create(grammarAccess.getArgumentRule().getType().getClassifier());
+            	    	            current = factory.create(grammarAccess.getArgRule().getType().getClassifier());
             	    	            associateNodeWithAstElement(currentNode.getParent(), current);
             	    	        }
             	    	        try {
             	    	       		add(
             	    	       			current, 
-            	    	       			"warrantstatements",
-            	    	        		lv_warrantstatements_11_0, 
-            	    	        		"wStatement", 
+            	    	       			"groundstatements",
+            	    	        		lv_groundstatements_11_0, 
+            	    	        		"gStatement", 
             	    	        		currentNode);
             	    	        } catch (ValueConverterException vce) {
             	    				handleValueConverterException(vce);
@@ -390,13 +407,101 @@ public class InternalArgumentsParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop2;
+            	    if ( cnt4 >= 1 ) break loop4;
+                        EarlyExitException eee =
+                            new EarlyExitException(4, input);
+                        throw eee;
                 }
+                cnt4++;
             } while (true);
 
-            match(input,14,FOLLOW_14_in_ruleArgument312); 
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:221:3: ( 'rebutted' 'by' ( (lv_groundstatements_14_0= rulegStatement ) )+ )?
+            int alt6=2;
+            int LA6_0 = input.LA(1);
 
-                    createLeafNode(grammarAccess.getArgumentAccess().getRightParenthesisKeyword_12(), null); 
+            if ( (LA6_0==19) ) {
+                alt6=1;
+            }
+            switch (alt6) {
+                case 1 :
+                    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:221:5: 'rebutted' 'by' ( (lv_groundstatements_14_0= rulegStatement ) )+
+                    {
+                    match(input,19,FOLLOW_19_in_ruleArg298); 
+
+                            createLeafNode(grammarAccess.getArgAccess().getRebuttedKeyword_9_0(), null); 
+                        
+                    match(input,14,FOLLOW_14_in_ruleArg308); 
+
+                            createLeafNode(grammarAccess.getArgAccess().getByKeyword_9_1(), null); 
+                        
+                    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:229:1: ( (lv_groundstatements_14_0= rulegStatement ) )+
+                    int cnt5=0;
+                    loop5:
+                    do {
+                        int alt5=2;
+                        int LA5_0 = input.LA(1);
+
+                        if ( (LA5_0==RULE_ID) ) {
+                            alt5=1;
+                        }
+
+
+                        switch (alt5) {
+                    	case 1 :
+                    	    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:230:1: (lv_groundstatements_14_0= rulegStatement )
+                    	    {
+                    	    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:230:1: (lv_groundstatements_14_0= rulegStatement )
+                    	    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:231:3: lv_groundstatements_14_0= rulegStatement
+                    	    {
+                    	     
+                    	    	        currentNode=createCompositeNode(grammarAccess.getArgAccess().getGroundstatementsGStatementParserRuleCall_9_2_0(), currentNode); 
+                    	    	    
+                    	    pushFollow(FOLLOW_rulegStatement_in_ruleArg329);
+                    	    lv_groundstatements_14_0=rulegStatement();
+                    	    _fsp--;
+
+
+                    	    	        if (current==null) {
+                    	    	            current = factory.create(grammarAccess.getArgRule().getType().getClassifier());
+                    	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+                    	    	        }
+                    	    	        try {
+                    	    	       		add(
+                    	    	       			current, 
+                    	    	       			"groundstatements",
+                    	    	        		lv_groundstatements_14_0, 
+                    	    	        		"gStatement", 
+                    	    	        		currentNode);
+                    	    	        } catch (ValueConverterException vce) {
+                    	    				handleValueConverterException(vce);
+                    	    	        }
+                    	    	        currentNode = currentNode.getParent();
+                    	    	    
+
+                    	    }
+
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    if ( cnt5 >= 1 ) break loop5;
+                                EarlyExitException eee =
+                                    new EarlyExitException(5, input);
+                                throw eee;
+                        }
+                        cnt5++;
+                    } while (true);
+
+
+                    }
+                    break;
+
+            }
+
+            match(input,20,FOLLOW_20_in_ruleArg342); 
+
+                    createLeafNode(grammarAccess.getArgAccess().getFullStopKeyword_10(), null); 
                 
 
             }
@@ -417,11 +522,11 @@ public class InternalArgumentsParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleArgument
+    // $ANTLR end ruleArg
 
 
     // $ANTLR start entryRulegStatement
-    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:274:1: entryRulegStatement returns [EObject current=null] : iv_rulegStatement= rulegStatement EOF ;
+    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:265:1: entryRulegStatement returns [EObject current=null] : iv_rulegStatement= rulegStatement EOF ;
     public final EObject entryRulegStatement() throws RecognitionException {
         EObject current = null;
 
@@ -429,16 +534,16 @@ public class InternalArgumentsParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:275:2: (iv_rulegStatement= rulegStatement EOF )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:276:2: iv_rulegStatement= rulegStatement EOF
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:266:2: (iv_rulegStatement= rulegStatement EOF )
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:267:2: iv_rulegStatement= rulegStatement EOF
             {
              currentNode = createCompositeNode(grammarAccess.getGStatementRule(), currentNode); 
-            pushFollow(FOLLOW_rulegStatement_in_entryRulegStatement350);
+            pushFollow(FOLLOW_rulegStatement_in_entryRulegStatement378);
             iv_rulegStatement=rulegStatement();
             _fsp--;
 
              current =iv_rulegStatement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulegStatement360); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulegStatement388); 
 
             }
 
@@ -456,36 +561,32 @@ public class InternalArgumentsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start rulegStatement
-    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:283:1: rulegStatement returns [EObject current=null] : ( 'statement' ( (lv_name_1_0= RULE_ID ) ) ( (lv_groundstr_2_0= RULE_STRING ) ) ) ;
+    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:274:1: rulegStatement returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ':' ( (lv_groundstr_2_0= RULE_STRING ) ) ) ;
     public final EObject rulegStatement() throws RecognitionException {
         EObject current = null;
 
-        Token lv_name_1_0=null;
+        Token lv_name_0_0=null;
         Token lv_groundstr_2_0=null;
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:288:6: ( ( 'statement' ( (lv_name_1_0= RULE_ID ) ) ( (lv_groundstr_2_0= RULE_STRING ) ) ) )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:289:1: ( 'statement' ( (lv_name_1_0= RULE_ID ) ) ( (lv_groundstr_2_0= RULE_STRING ) ) )
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:279:6: ( ( ( (lv_name_0_0= RULE_ID ) ) ':' ( (lv_groundstr_2_0= RULE_STRING ) ) ) )
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:280:1: ( ( (lv_name_0_0= RULE_ID ) ) ':' ( (lv_groundstr_2_0= RULE_STRING ) ) )
             {
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:289:1: ( 'statement' ( (lv_name_1_0= RULE_ID ) ) ( (lv_groundstr_2_0= RULE_STRING ) ) )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:289:3: 'statement' ( (lv_name_1_0= RULE_ID ) ) ( (lv_groundstr_2_0= RULE_STRING ) )
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:280:1: ( ( (lv_name_0_0= RULE_ID ) ) ':' ( (lv_groundstr_2_0= RULE_STRING ) ) )
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:280:2: ( (lv_name_0_0= RULE_ID ) ) ':' ( (lv_groundstr_2_0= RULE_STRING ) )
             {
-            match(input,16,FOLLOW_16_in_rulegStatement395); 
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:280:2: ( (lv_name_0_0= RULE_ID ) )
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:281:1: (lv_name_0_0= RULE_ID )
+            {
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:281:1: (lv_name_0_0= RULE_ID )
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:282:3: lv_name_0_0= RULE_ID
+            {
+            lv_name_0_0=(Token)input.LT(1);
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rulegStatement430); 
 
-                    createLeafNode(grammarAccess.getGStatementAccess().getStatementKeyword_0(), null); 
-                
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:293:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:294:1: (lv_name_1_0= RULE_ID )
-            {
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:294:1: (lv_name_1_0= RULE_ID )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:295:3: lv_name_1_0= RULE_ID
-            {
-            lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rulegStatement412); 
-
-            			createLeafNode(grammarAccess.getGStatementAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
+            			createLeafNode(grammarAccess.getGStatementAccess().getNameIDTerminalRuleCall_0_0(), "name"); 
             		
 
             	        if (current==null) {
@@ -496,7 +597,7 @@ public class InternalArgumentsParser extends AbstractInternalAntlrParser {
             	       		set(
             	       			current, 
             	       			"name",
-            	        		lv_name_1_0, 
+            	        		lv_name_0_0, 
             	        		"ID", 
             	        		lastConsumedNode);
             	        } catch (ValueConverterException vce) {
@@ -509,14 +610,18 @@ public class InternalArgumentsParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:317:2: ( (lv_groundstr_2_0= RULE_STRING ) )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:318:1: (lv_groundstr_2_0= RULE_STRING )
+            match(input,21,FOLLOW_21_in_rulegStatement445); 
+
+                    createLeafNode(grammarAccess.getGStatementAccess().getColonKeyword_1(), null); 
+                
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:308:1: ( (lv_groundstr_2_0= RULE_STRING ) )
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:309:1: (lv_groundstr_2_0= RULE_STRING )
             {
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:318:1: (lv_groundstr_2_0= RULE_STRING )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:319:3: lv_groundstr_2_0= RULE_STRING
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:309:1: (lv_groundstr_2_0= RULE_STRING )
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:310:3: lv_groundstr_2_0= RULE_STRING
             {
             lv_groundstr_2_0=(Token)input.LT(1);
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulegStatement434); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulegStatement462); 
 
             			createLeafNode(grammarAccess.getGStatementAccess().getGroundstrSTRINGTerminalRuleCall_2_0(), "groundstr"); 
             		
@@ -564,25 +669,25 @@ public class InternalArgumentsParser extends AbstractInternalAntlrParser {
     // $ANTLR end rulegStatement
 
 
-    // $ANTLR start entryRulewStatement
-    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:349:1: entryRulewStatement returns [EObject current=null] : iv_rulewStatement= rulewStatement EOF ;
-    public final EObject entryRulewStatement() throws RecognitionException {
+    // $ANTLR start entryRuleRecArg
+    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:340:1: entryRuleRecArg returns [EObject current=null] : iv_ruleRecArg= ruleRecArg EOF ;
+    public final EObject entryRuleRecArg() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_rulewStatement = null;
+        EObject iv_ruleRecArg = null;
 
 
         try {
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:350:2: (iv_rulewStatement= rulewStatement EOF )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:351:2: iv_rulewStatement= rulewStatement EOF
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:341:2: (iv_ruleRecArg= ruleRecArg EOF )
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:342:2: iv_ruleRecArg= ruleRecArg EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getWStatementRule(), currentNode); 
-            pushFollow(FOLLOW_rulewStatement_in_entryRulewStatement475);
-            iv_rulewStatement=rulewStatement();
+             currentNode = createCompositeNode(grammarAccess.getRecArgRule(), currentNode); 
+            pushFollow(FOLLOW_ruleRecArg_in_entryRuleRecArg503);
+            iv_ruleRecArg=ruleRecArg();
             _fsp--;
 
-             current =iv_rulewStatement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulewStatement485); 
+             current =iv_ruleRecArg; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRecArg513); 
 
             }
 
@@ -596,95 +701,230 @@ public class InternalArgumentsParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRulewStatement
+    // $ANTLR end entryRuleRecArg
 
 
-    // $ANTLR start rulewStatement
-    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:358:1: rulewStatement returns [EObject current=null] : ( 'statement' ( (lv_name_1_0= RULE_ID ) ) ( (lv_groundstr_2_0= RULE_STRING ) ) ) ;
-    public final EObject rulewStatement() throws RecognitionException {
+    // $ANTLR start ruleRecArg
+    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:349:1: ruleRecArg returns [EObject current=null] : ( 'given' 'grounds' ( (lv_groundstatements_2_0= rulegStatement ) )+ 'warranted' 'by' ( (lv_groundstatements_5_0= rulegStatement ) )+ 'thus' 'claim' ( (lv_groundstatements_8_0= rulegStatement ) )+ ) ;
+    public final EObject ruleRecArg() throws RecognitionException {
         EObject current = null;
 
-        Token lv_name_1_0=null;
-        Token lv_groundstr_2_0=null;
+        EObject lv_groundstatements_2_0 = null;
+
+        EObject lv_groundstatements_5_0 = null;
+
+        EObject lv_groundstatements_8_0 = null;
+
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:363:6: ( ( 'statement' ( (lv_name_1_0= RULE_ID ) ) ( (lv_groundstr_2_0= RULE_STRING ) ) ) )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:364:1: ( 'statement' ( (lv_name_1_0= RULE_ID ) ) ( (lv_groundstr_2_0= RULE_STRING ) ) )
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:354:6: ( ( 'given' 'grounds' ( (lv_groundstatements_2_0= rulegStatement ) )+ 'warranted' 'by' ( (lv_groundstatements_5_0= rulegStatement ) )+ 'thus' 'claim' ( (lv_groundstatements_8_0= rulegStatement ) )+ ) )
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:355:1: ( 'given' 'grounds' ( (lv_groundstatements_2_0= rulegStatement ) )+ 'warranted' 'by' ( (lv_groundstatements_5_0= rulegStatement ) )+ 'thus' 'claim' ( (lv_groundstatements_8_0= rulegStatement ) )+ )
             {
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:364:1: ( 'statement' ( (lv_name_1_0= RULE_ID ) ) ( (lv_groundstr_2_0= RULE_STRING ) ) )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:364:3: 'statement' ( (lv_name_1_0= RULE_ID ) ) ( (lv_groundstr_2_0= RULE_STRING ) )
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:355:1: ( 'given' 'grounds' ( (lv_groundstatements_2_0= rulegStatement ) )+ 'warranted' 'by' ( (lv_groundstatements_5_0= rulegStatement ) )+ 'thus' 'claim' ( (lv_groundstatements_8_0= rulegStatement ) )+ )
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:355:3: 'given' 'grounds' ( (lv_groundstatements_2_0= rulegStatement ) )+ 'warranted' 'by' ( (lv_groundstatements_5_0= rulegStatement ) )+ 'thus' 'claim' ( (lv_groundstatements_8_0= rulegStatement ) )+
             {
-            match(input,16,FOLLOW_16_in_rulewStatement520); 
+            match(input,11,FOLLOW_11_in_ruleRecArg548); 
 
-                    createLeafNode(grammarAccess.getWStatementAccess().getStatementKeyword_0(), null); 
+                    createLeafNode(grammarAccess.getRecArgAccess().getGivenKeyword_0(), null); 
                 
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:368:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:369:1: (lv_name_1_0= RULE_ID )
-            {
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:369:1: (lv_name_1_0= RULE_ID )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:370:3: lv_name_1_0= RULE_ID
-            {
-            lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rulewStatement537); 
+            match(input,12,FOLLOW_12_in_ruleRecArg558); 
 
-            			createLeafNode(grammarAccess.getWStatementAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
-            		
+                    createLeafNode(grammarAccess.getRecArgAccess().getGroundsKeyword_1(), null); 
+                
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:363:1: ( (lv_groundstatements_2_0= rulegStatement ) )+
+            int cnt7=0;
+            loop7:
+            do {
+                int alt7=2;
+                int LA7_0 = input.LA(1);
 
-            	        if (current==null) {
-            	            current = factory.create(grammarAccess.getWStatementRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
-            	        }
-            	        try {
-            	       		set(
-            	       			current, 
-            	       			"name",
-            	        		lv_name_1_0, 
-            	        		"ID", 
-            	        		lastConsumedNode);
-            	        } catch (ValueConverterException vce) {
-            				handleValueConverterException(vce);
-            	        }
-            	    
-
-            }
+                if ( (LA7_0==RULE_ID) ) {
+                    alt7=1;
+                }
 
 
-            }
-
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:392:2: ( (lv_groundstr_2_0= RULE_STRING ) )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:393:1: (lv_groundstr_2_0= RULE_STRING )
-            {
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:393:1: (lv_groundstr_2_0= RULE_STRING )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:394:3: lv_groundstr_2_0= RULE_STRING
-            {
-            lv_groundstr_2_0=(Token)input.LT(1);
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulewStatement559); 
-
-            			createLeafNode(grammarAccess.getWStatementAccess().getGroundstrSTRINGTerminalRuleCall_2_0(), "groundstr"); 
-            		
-
-            	        if (current==null) {
-            	            current = factory.create(grammarAccess.getWStatementRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
-            	        }
-            	        try {
-            	       		set(
-            	       			current, 
-            	       			"groundstr",
-            	        		lv_groundstr_2_0, 
-            	        		"STRING", 
-            	        		lastConsumedNode);
-            	        } catch (ValueConverterException vce) {
-            				handleValueConverterException(vce);
-            	        }
-            	    
-
-            }
+                switch (alt7) {
+            	case 1 :
+            	    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:364:1: (lv_groundstatements_2_0= rulegStatement )
+            	    {
+            	    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:364:1: (lv_groundstatements_2_0= rulegStatement )
+            	    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:365:3: lv_groundstatements_2_0= rulegStatement
+            	    {
+            	     
+            	    	        currentNode=createCompositeNode(grammarAccess.getRecArgAccess().getGroundstatementsGStatementParserRuleCall_2_0(), currentNode); 
+            	    	    
+            	    pushFollow(FOLLOW_rulegStatement_in_ruleRecArg579);
+            	    lv_groundstatements_2_0=rulegStatement();
+            	    _fsp--;
 
 
-            }
+            	    	        if (current==null) {
+            	    	            current = factory.create(grammarAccess.getRecArgRule().getType().getClassifier());
+            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	    	        }
+            	    	        try {
+            	    	       		add(
+            	    	       			current, 
+            	    	       			"groundstatements",
+            	    	        		lv_groundstatements_2_0, 
+            	    	        		"gStatement", 
+            	    	        		currentNode);
+            	    	        } catch (ValueConverterException vce) {
+            	    				handleValueConverterException(vce);
+            	    	        }
+            	    	        currentNode = currentNode.getParent();
+            	    	    
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    if ( cnt7 >= 1 ) break loop7;
+                        EarlyExitException eee =
+                            new EarlyExitException(7, input);
+                        throw eee;
+                }
+                cnt7++;
+            } while (true);
+
+            match(input,13,FOLLOW_13_in_ruleRecArg590); 
+
+                    createLeafNode(grammarAccess.getRecArgAccess().getWarrantedKeyword_3(), null); 
+                
+            match(input,14,FOLLOW_14_in_ruleRecArg600); 
+
+                    createLeafNode(grammarAccess.getRecArgAccess().getByKeyword_4(), null); 
+                
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:395:1: ( (lv_groundstatements_5_0= rulegStatement ) )+
+            int cnt8=0;
+            loop8:
+            do {
+                int alt8=2;
+                int LA8_0 = input.LA(1);
+
+                if ( (LA8_0==RULE_ID) ) {
+                    alt8=1;
+                }
+
+
+                switch (alt8) {
+            	case 1 :
+            	    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:396:1: (lv_groundstatements_5_0= rulegStatement )
+            	    {
+            	    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:396:1: (lv_groundstatements_5_0= rulegStatement )
+            	    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:397:3: lv_groundstatements_5_0= rulegStatement
+            	    {
+            	     
+            	    	        currentNode=createCompositeNode(grammarAccess.getRecArgAccess().getGroundstatementsGStatementParserRuleCall_5_0(), currentNode); 
+            	    	    
+            	    pushFollow(FOLLOW_rulegStatement_in_ruleRecArg621);
+            	    lv_groundstatements_5_0=rulegStatement();
+            	    _fsp--;
+
+
+            	    	        if (current==null) {
+            	    	            current = factory.create(grammarAccess.getRecArgRule().getType().getClassifier());
+            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	    	        }
+            	    	        try {
+            	    	       		add(
+            	    	       			current, 
+            	    	       			"groundstatements",
+            	    	        		lv_groundstatements_5_0, 
+            	    	        		"gStatement", 
+            	    	        		currentNode);
+            	    	        } catch (ValueConverterException vce) {
+            	    				handleValueConverterException(vce);
+            	    	        }
+            	    	        currentNode = currentNode.getParent();
+            	    	    
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    if ( cnt8 >= 1 ) break loop8;
+                        EarlyExitException eee =
+                            new EarlyExitException(8, input);
+                        throw eee;
+                }
+                cnt8++;
+            } while (true);
+
+            match(input,17,FOLLOW_17_in_ruleRecArg632); 
+
+                    createLeafNode(grammarAccess.getRecArgAccess().getThusKeyword_6(), null); 
+                
+            match(input,18,FOLLOW_18_in_ruleRecArg642); 
+
+                    createLeafNode(grammarAccess.getRecArgAccess().getClaimKeyword_7(), null); 
+                
+            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:427:1: ( (lv_groundstatements_8_0= rulegStatement ) )+
+            int cnt9=0;
+            loop9:
+            do {
+                int alt9=2;
+                int LA9_0 = input.LA(1);
+
+                if ( (LA9_0==RULE_ID) ) {
+                    alt9=1;
+                }
+
+
+                switch (alt9) {
+            	case 1 :
+            	    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:428:1: (lv_groundstatements_8_0= rulegStatement )
+            	    {
+            	    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:428:1: (lv_groundstatements_8_0= rulegStatement )
+            	    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:429:3: lv_groundstatements_8_0= rulegStatement
+            	    {
+            	     
+            	    	        currentNode=createCompositeNode(grammarAccess.getRecArgAccess().getGroundstatementsGStatementParserRuleCall_8_0(), currentNode); 
+            	    	    
+            	    pushFollow(FOLLOW_rulegStatement_in_ruleRecArg663);
+            	    lv_groundstatements_8_0=rulegStatement();
+            	    _fsp--;
+
+
+            	    	        if (current==null) {
+            	    	            current = factory.create(grammarAccess.getRecArgRule().getType().getClassifier());
+            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	    	        }
+            	    	        try {
+            	    	       		add(
+            	    	       			current, 
+            	    	       			"groundstatements",
+            	    	        		lv_groundstatements_8_0, 
+            	    	        		"gStatement", 
+            	    	        		currentNode);
+            	    	        } catch (ValueConverterException vce) {
+            	    				handleValueConverterException(vce);
+            	    	        }
+            	    	        currentNode = currentNode.getParent();
+            	    	    
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    if ( cnt9 >= 1 ) break loop9;
+                        EarlyExitException eee =
+                            new EarlyExitException(9, input);
+                        throw eee;
+                }
+                cnt9++;
+            } while (true);
 
 
             }
@@ -705,184 +945,44 @@ public class InternalArgumentsParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end rulewStatement
-
-
-    // $ANTLR start entryRulerStatement
-    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:424:1: entryRulerStatement returns [EObject current=null] : iv_rulerStatement= rulerStatement EOF ;
-    public final EObject entryRulerStatement() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_rulerStatement = null;
-
-
-        try {
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:425:2: (iv_rulerStatement= rulerStatement EOF )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:426:2: iv_rulerStatement= rulerStatement EOF
-            {
-             currentNode = createCompositeNode(grammarAccess.getRStatementRule(), currentNode); 
-            pushFollow(FOLLOW_rulerStatement_in_entryRulerStatement600);
-            iv_rulerStatement=rulerStatement();
-            _fsp--;
-
-             current =iv_rulerStatement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulerStatement610); 
-
-            }
-
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end entryRulerStatement
-
-
-    // $ANTLR start rulerStatement
-    // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:433:1: rulerStatement returns [EObject current=null] : ( 'statement' ( (lv_name_1_0= RULE_ID ) ) ( (lv_groundstr_2_0= RULE_STRING ) ) ) ;
-    public final EObject rulerStatement() throws RecognitionException {
-        EObject current = null;
-
-        Token lv_name_1_0=null;
-        Token lv_groundstr_2_0=null;
-
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
-            
-        try {
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:438:6: ( ( 'statement' ( (lv_name_1_0= RULE_ID ) ) ( (lv_groundstr_2_0= RULE_STRING ) ) ) )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:439:1: ( 'statement' ( (lv_name_1_0= RULE_ID ) ) ( (lv_groundstr_2_0= RULE_STRING ) ) )
-            {
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:439:1: ( 'statement' ( (lv_name_1_0= RULE_ID ) ) ( (lv_groundstr_2_0= RULE_STRING ) ) )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:439:3: 'statement' ( (lv_name_1_0= RULE_ID ) ) ( (lv_groundstr_2_0= RULE_STRING ) )
-            {
-            match(input,16,FOLLOW_16_in_rulerStatement645); 
-
-                    createLeafNode(grammarAccess.getRStatementAccess().getStatementKeyword_0(), null); 
-                
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:443:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:444:1: (lv_name_1_0= RULE_ID )
-            {
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:444:1: (lv_name_1_0= RULE_ID )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:445:3: lv_name_1_0= RULE_ID
-            {
-            lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rulerStatement662); 
-
-            			createLeafNode(grammarAccess.getRStatementAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
-            		
-
-            	        if (current==null) {
-            	            current = factory.create(grammarAccess.getRStatementRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
-            	        }
-            	        try {
-            	       		set(
-            	       			current, 
-            	       			"name",
-            	        		lv_name_1_0, 
-            	        		"ID", 
-            	        		lastConsumedNode);
-            	        } catch (ValueConverterException vce) {
-            				handleValueConverterException(vce);
-            	        }
-            	    
-
-            }
-
-
-            }
-
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:467:2: ( (lv_groundstr_2_0= RULE_STRING ) )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:468:1: (lv_groundstr_2_0= RULE_STRING )
-            {
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:468:1: (lv_groundstr_2_0= RULE_STRING )
-            // ../arguments/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalArguments.g:469:3: lv_groundstr_2_0= RULE_STRING
-            {
-            lv_groundstr_2_0=(Token)input.LT(1);
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulerStatement684); 
-
-            			createLeafNode(grammarAccess.getRStatementAccess().getGroundstrSTRINGTerminalRuleCall_2_0(), "groundstr"); 
-            		
-
-            	        if (current==null) {
-            	            current = factory.create(grammarAccess.getRStatementRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
-            	        }
-            	        try {
-            	       		set(
-            	       			current, 
-            	       			"groundstr",
-            	        		lv_groundstr_2_0, 
-            	        		"STRING", 
-            	        		lastConsumedNode);
-            	        } catch (ValueConverterException vce) {
-            				handleValueConverterException(vce);
-            	        }
-            	    
-
-            }
-
-
-            }
-
-
-            }
-
-
-            }
-
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end rulerStatement
+    // $ANTLR end ruleRecArg
 
 
  
 
-    public static final BitSet FOLLOW_ruleArgument_in_entryRuleArgument75 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleArgument85 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_ruleArgument120 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleArgument137 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleArgument159 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleArgument174 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleArgument191 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_ruleArgument206 = new BitSet(new long[]{0x0000000000014000L});
-    public static final BitSet FOLLOW_rulegStatement_in_ruleArgument227 = new BitSet(new long[]{0x0000000000014000L});
-    public static final BitSet FOLLOW_14_in_ruleArgument238 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_ruleArgument248 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleArgument265 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_ruleArgument280 = new BitSet(new long[]{0x0000000000014000L});
-    public static final BitSet FOLLOW_rulewStatement_in_ruleArgument301 = new BitSet(new long[]{0x0000000000014000L});
-    public static final BitSet FOLLOW_14_in_ruleArgument312 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulegStatement_in_entryRulegStatement350 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulegStatement360 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rulegStatement395 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulegStatement412 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rulegStatement434 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulewStatement_in_entryRulewStatement475 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulewStatement485 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rulewStatement520 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulewStatement537 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rulewStatement559 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulerStatement_in_entryRulerStatement600 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulerStatement610 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rulerStatement645 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulerStatement662 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rulerStatement684 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleArg_in_entryRuleArg75 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleArg85 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_11_in_ruleArg120 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_ruleArg130 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rulegStatement_in_ruleArg151 = new BitSet(new long[]{0x0000000000002010L});
+    public static final BitSet FOLLOW_13_in_ruleArg162 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleArg172 = new BitSet(new long[]{0x0000000000008010L});
+    public static final BitSet FOLLOW_rulegStatement_in_ruleArg194 = new BitSet(new long[]{0x0000000000020010L});
+    public static final BitSet FOLLOW_15_in_ruleArg212 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_ruleRecArg_in_ruleArg233 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleArg243 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleArg255 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_ruleArg265 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rulegStatement_in_ruleArg286 = new BitSet(new long[]{0x0000000000180010L});
+    public static final BitSet FOLLOW_19_in_ruleArg298 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleArg308 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rulegStatement_in_ruleArg329 = new BitSet(new long[]{0x0000000000100010L});
+    public static final BitSet FOLLOW_20_in_ruleArg342 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulegStatement_in_entryRulegStatement378 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulegStatement388 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulegStatement430 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_rulegStatement445 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rulegStatement462 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRecArg_in_entryRuleRecArg503 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRecArg513 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_11_in_ruleRecArg548 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_ruleRecArg558 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rulegStatement_in_ruleRecArg579 = new BitSet(new long[]{0x0000000000002010L});
+    public static final BitSet FOLLOW_13_in_ruleRecArg590 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleRecArg600 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rulegStatement_in_ruleRecArg621 = new BitSet(new long[]{0x0000000000020010L});
+    public static final BitSet FOLLOW_17_in_ruleRecArg632 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_ruleRecArg642 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rulegStatement_in_ruleRecArg663 = new BitSet(new long[]{0x0000000000000012L});
 
 }

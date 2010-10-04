@@ -67,11 +67,9 @@ public class ArgumentsFactoryImpl extends EFactoryImpl implements ArgumentsFacto
   {
     switch (eClass.getClassifierID())
     {
-      case ArgumentsPackage.ARGUMENT: return createArgument();
-      case ArgumentsPackage.REBUTTAL: return createRebuttal();
+      case ArgumentsPackage.ARG: return createArg();
       case ArgumentsPackage.GSTATEMENT: return creategStatement();
-      case ArgumentsPackage.WSTATEMENT: return createwStatement();
-      case ArgumentsPackage.RSTATEMENT: return createrStatement();
+      case ArgumentsPackage.REC_ARG: return createRecArg();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -82,21 +80,10 @@ public class ArgumentsFactoryImpl extends EFactoryImpl implements ArgumentsFacto
    * <!-- end-user-doc -->
    * @generated
    */
-  public Argument createArgument()
+  public Arg createArg()
   {
-    ArgumentImpl argument = new ArgumentImpl();
-    return argument;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Rebuttal createRebuttal()
-  {
-    RebuttalImpl rebuttal = new RebuttalImpl();
-    return rebuttal;
+    ArgImpl arg = new ArgImpl();
+    return arg;
   }
 
   /**
@@ -115,21 +102,10 @@ public class ArgumentsFactoryImpl extends EFactoryImpl implements ArgumentsFacto
    * <!-- end-user-doc -->
    * @generated
    */
-  public wStatement createwStatement()
+  public RecArg createRecArg()
   {
-    wStatementImpl wStatement = new wStatementImpl();
-    return wStatement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public rStatement createrStatement()
-  {
-    rStatementImpl rStatement = new rStatementImpl();
-    return rStatement;
+    RecArgImpl recArg = new RecArgImpl();
+    return recArg;
   }
 
   /**

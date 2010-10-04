@@ -2,8 +2,24 @@ grammar org.xtext.example.mydsl.Arguments with org.eclipse.xtext.common.Terminal
 
 generate arguments "http://www.xtext.org/example/mydsl/Arguments"
 
+Arg:
+	"given" "grounds" (groundstatements+=gStatement)+ 
+	"warranted" "by" ((groundstatements+=gStatement)+ | ("(" inner=RecArg")"))
+	"thus" "claim"  (groundstatements+=gStatement)+ 
+	("rebutted" "by" (groundstatements+=gStatement)+)? ".";
+
+gStatement:
+	 name=ID ":" groundstr=STRING;
+
+RecArg:
+	"given" "grounds" (groundstatements+=gStatement)+ 
+	"warranted" "by" (groundstatements+=gStatement)+ 
+	"thus" "claim"  (groundstatements+=gStatement)+ ;
+
+
+/*
 Argument:
-	"claim" cname=ID claimstr=STRING
+	"claim" cname=ID ":" claimstr=STRING
 	"grounds" gname=ID "(" (groundstatements+=gStatement)* ")"
 	"warrants" wname=ID "(" (warrantstatements+=wStatement)* ")"
 	;
@@ -13,10 +29,11 @@ Rebuttal:
 	"rebuttals" rname=ID "(" (rebuttalstatements+=rStatement)* ")";
 
 gStatement:
-	"statement" name=ID groundstr=STRING;
+	"statement" name=ID ":" groundstr=STRING;
 	
 wStatement:
-	"statement" name=ID groundstr=STRING;
+	"statement" name=ID ":" groundstr=STRING;
 
 rStatement:
-	"statement" name=ID groundstr=STRING;
+	"statement" name=ID ":" groundstr=STRING;
+*/
