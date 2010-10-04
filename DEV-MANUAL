@@ -1,1 +1,28 @@
-ad
+Creating a new xtext plug-in project in OpenPF
+==============================================
+
+1. File -> New -> Project ->  Xtext -> Xtext Project 
+1.1. Project Name: <AddName>
+1.2.Language Name: <AddName> -- the name must have initial capital
+1.3. Language Extensions: <AddExtension>
+1.4. Finish
+
+--  Three projects will be created: one with the name of project, one with .ui extension, and one with .generator extension
+
+2. Edit the file projectname\src\Languagename\LanguageName.xtext
+
+3. Right the .mwe2 file -> Run As -> MWE2 Workflow
+
+4. Create a new folder called 'samples' in the project folder. Create a file with a randon name, but with the extension chosen in step 1.3.
+
+5. Open projectname\plugin.xml, go to plugin.xml tab, and add the following fragment, where XX.XX is the name of the random file created in Step 4.
+
+  <extension point="core.example">
+      <example file="XX.XX"/> 
+  </extension>
+
+6. Open problem\plugin.xml, go to Dependencies tab, Click Add.., the chose the project.
+
+7. Click on overview of problem\plugin.xml, and click Launch an Eclipse application.
+
+
