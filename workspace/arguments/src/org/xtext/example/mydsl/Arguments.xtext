@@ -1,0 +1,22 @@
+grammar org.xtext.example.mydsl.Arguments with org.eclipse.xtext.common.Terminals
+
+generate arguments "http://www.xtext.org/example/mydsl/Arguments"
+
+Argument:
+	"claim" cname=ID claimstr=STRING
+	"grounds" gname=ID "(" (groundstatements+=gStatement)* ")"
+	"warrants" wname=ID "(" (warrantstatements+=wStatement)* ")"
+	;
+
+Rebuttal:
+	"argument" aname=Argument
+	"rebuttals" rname=ID "(" (rebuttalstatements+=rStatement)* ")";
+
+gStatement:
+	"statement" name=ID groundstr=STRING;
+	
+wStatement:
+	"statement" name=ID groundstr=STRING;
+
+rStatement:
+	"statement" name=ID groundstr=STRING;

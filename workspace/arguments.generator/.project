@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>istar</name>
+	<name>arguments.generator</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -20,22 +20,9 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
-		<buildCommand>
-			<name>org.eclipse.xtext.ui.shared.xtextBuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
 	</buildSpec>
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.pde.PluginNature</nature>
-		<nature>org.eclipse.xtext.ui.shared.xtextNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>src/uk/ac/open/istar/Istar.xtext</name>
-			<type>1</type>
-			<locationURI>PROJECT_LOC/samples/Istar.xtext_grammar</locationURI>
-		</link>
-	</linkedResources>
 </projectDescription>
