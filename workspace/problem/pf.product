@@ -26,6 +26,9 @@
       <plugin id="Istar2situation.ui"/>
       <plugin id="PF2EC"/>
       <plugin id="PF2EC.ui"/>
+      <plugin id="arguments"/>
+      <plugin id="arguments.generator"/>
+      <plugin id="arguments.ui"/>
       <plugin id="ch.qos.logback.classic"/>
       <plugin id="ch.qos.logback.core"/>
       <plugin id="ch.qos.logback.slf4j" fragment="true"/>
@@ -487,6 +490,7 @@
       <feature id="org.eclipse.emf" version="2.6.0.v20100614-1136"/>
       <feature id="org.eclipse.gef" version="3.6.0.v20100519-2050-777B-81A2Bz-69793A8B83447"/>
       <feature id="org.eclipse.gmf" version="1.4.0.v20100603-2230-7d98-FYnmMCGUhhvqV4nR2tsgWcV"/>
+      <feature id="Arguments" version="1.0.0.qualifier"/>
    </features>
 
 
