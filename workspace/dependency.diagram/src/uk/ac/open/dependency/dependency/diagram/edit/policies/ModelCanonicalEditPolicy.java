@@ -386,7 +386,7 @@ public class ModelCanonicalEditPolicy extends CanonicalConnectionEditPolicy {
 	@Override
 	protected boolean shouldDeleteView(View view) {
 		return true;
-//		return ViewUtil.resolveSemanticElement(view) == null;
+		//		return ViewUtil.resolveSemanticElement(view) == null;
 	}
-	
+
 }

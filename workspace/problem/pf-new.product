@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="Problem Analysis Tool" uid="ProblemAnalysisTool" id="core.openre" application="org.eclipse.ui.ide.workbench" version="1.0.0" useFeatures="true" includeLaunchers="true">
+<product name="Problem Analysis Tool" uid="ProblemAnalysisTool" id="core.openre" application="org.eclipse.ui.ide.workbench" version="1.0.0" useFeatures="false" includeLaunchers="true">
 
    <configIni use="default">
    </configIni>
@@ -36,6 +36,7 @@
       <plugin id="dependency.diagram.extensions"/>
       <plugin id="dependency.edit"/>
       <plugin id="dependency.ui"/>
+      <plugin id="dependency.validate"/>
       <plugin id="edu.toronto.cs.openome.conversion"/>
       <plugin id="edu.toronto.cs.openome.evaluation"/>
       <plugin id="edu.toronto.cs.openome.testing"/>
@@ -183,7 +184,9 @@
       <plugin id="org.eclipse.emf.edit.ui"/>
       <plugin id="org.eclipse.emf.exporter"/>
       <plugin id="org.eclipse.emf.importer"/>
+      <plugin id="org.eclipse.emf.mapping"/>
       <plugin id="org.eclipse.emf.mapping.ecore2xml"/>
+      <plugin id="org.eclipse.emf.mapping.xsd2ecore"/>
       <plugin id="org.eclipse.emf.mwe.core"/>
       <plugin id="org.eclipse.emf.mwe.utils"/>
       <plugin id="org.eclipse.emf.mwe2.language"/>
@@ -191,7 +194,19 @@
       <plugin id="org.eclipse.emf.mwe2.runtime"/>
       <plugin id="org.eclipse.emf.transaction"/>
       <plugin id="org.eclipse.emf.validation"/>
+      <plugin id="org.eclipse.emf.validation.ui"/>
+      <plugin id="org.eclipse.emf.validation.ui.ide"/>
       <plugin id="org.eclipse.emf.workspace"/>
+      <plugin id="org.eclipse.epsilon.antlr"/>
+      <plugin id="org.eclipse.epsilon.common.dt"/>
+      <plugin id="org.eclipse.epsilon.commons"/>
+      <plugin id="org.eclipse.epsilon.dependencies"/>
+      <plugin id="org.eclipse.epsilon.emc.emf"/>
+      <plugin id="org.eclipse.epsilon.eol.dt"/>
+      <plugin id="org.eclipse.epsilon.eol.engine"/>
+      <plugin id="org.eclipse.epsilon.erl.engine"/>
+      <plugin id="org.eclipse.epsilon.evl.emf.validation"/>
+      <plugin id="org.eclipse.epsilon.evl.engine"/>
       <plugin id="org.eclipse.equinox.app"/>
       <plugin id="org.eclipse.equinox.common"/>
       <plugin id="org.eclipse.equinox.concurrent"/>
@@ -381,6 +396,7 @@
       <plugin id="org.eclipse.xsd"/>
       <plugin id="org.eclipse.xsd.ecore.exporter"/>
       <plugin id="org.eclipse.xsd.ecore.importer"/>
+      <plugin id="org.eclipse.xsd.edit"/>
       <plugin id="org.eclipse.xtend"/>
       <plugin id="org.eclipse.xtend.typesystem.emf"/>
       <plugin id="org.eclipse.xtext"/>
@@ -471,6 +487,10 @@
       <feature id="org.eclipse.emf" version="2.6.1.v20100914-1218"/>
       <feature id="org.eclipse.gef" version="3.6.1.v20100908-1100-777B181A3Bz-6B663E7974242"/>
       <feature id="org.eclipse.gmf" version="1.4.1.v20100909-1300-7d9A78FYnmMD7VBZOqOghp2tsgXc"/>
+      <feature id="org.eclipse.epsilon.evl.emf.validation.feature" version="0.8.9.201004151115"/>
+      <feature id="org.eclipse.epsilon.feature" version="0.8.9.201004151115"/>
+      <feature id="org.eclipse.epsilon.hutn.feature" version="0.7.9.201004151115"/>
+      <feature id="org.eclipse.xsd" version="2.6.0.v20100614-1136"/>
    </features>
 
 

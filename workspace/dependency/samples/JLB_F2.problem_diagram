@@ -1,5 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:problem="http://open.ac.uk/problem" xmi:id="_G-jswMtWEd-YKPSpA0HS6A" type="Problem" name="JLB_F2.problem_diagram" measurementUnit="Pixel">
-  <styles xmi:type="notation:DiagramStyle" xmi:id="_G-jswctWEd-YKPSpA0HS6A"/>
-  <element xmi:type="problem:ProblemDiagram" href="/Examples/dependency/JLB_F2.problem#JLB_F1"/>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:problem="http://open.ac.uk/problem" xmi:id="_rT114M9KEd-Ky_ZvSZ38kA" type="Problem" name="JLB_F2.problem_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_rs3Z4M9KEd-Ky_ZvSZ38kA" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rs3Z489KEd-Ky_ZvSZ38kA" type="5001"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_rs3Z5M9KEd-Ky_ZvSZ38kA" type="5002"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_rs3Z4c9KEd-Ky_ZvSZ38kA"/>
+    <element xmi:type="problem:Node" href="/Examples/dependency/JLB_F2.problem#JLB_F2.F2"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rs3Z4s9KEd-Ky_ZvSZ38kA" x="585" y="63"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_rs4A8M9KEd-Ky_ZvSZ38kA" type="2002" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rs4A889KEd-Ky_ZvSZ38kA" type="5003"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_rs4A9M9KEd-Ky_ZvSZ38kA" type="5004"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_rs4A8c9KEd-Ky_ZvSZ38kA"/>
+    <element xmi:type="problem:Node" href="/Examples/dependency/JLB_F2.problem#JLB_F2.MR"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rs4A8s9KEd-Ky_ZvSZ38kA" x="27" y="63"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_rs4A9c9KEd-Ky_ZvSZ38kA" type="2003" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rs4oAs9KEd-Ky_ZvSZ38kA" type="5005"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_rs4oA89KEd-Ky_ZvSZ38kA" type="5006"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_rs4oAM9KEd-Ky_ZvSZ38kA"/>
+    <element xmi:type="problem:Node" href="/Examples/dependency/JLB_F2.problem#JLB_F2.MS"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rs4oAc9KEd-Ky_ZvSZ38kA" x="207" y="144"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_rs4oBM9KEd-Ky_ZvSZ38kA" type="2002" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rs4oB89KEd-Ky_ZvSZ38kA" type="5003"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_rs4oCM9KEd-Ky_ZvSZ38kA" type="5004"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_rs4oBc9KEd-Ky_ZvSZ38kA"/>
+    <element xmi:type="problem:Node" href="/Examples/dependency/JLB_F2.problem#JLB_F2.MT"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rs4oBs9KEd-Ky_ZvSZ38kA" x="396" y="63"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_rs5PEM9KEd-Ky_ZvSZ38kA" type="2004" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rs5PE89KEd-Ky_ZvSZ38kA" type="5007"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_rs5PFM9KEd-Ky_ZvSZ38kA" type="5008"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_rs5PEc9KEd-Ky_ZvSZ38kA"/>
+    <element xmi:type="problem:Node" href="/Examples/dependency/JLB_F2.problem#JLB_F2.AP"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rs5PEs9KEd-Ky_ZvSZ38kA" x="396" y="180"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_rs6dMM9KEd-Ky_ZvSZ38kA" type="2002" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rs6dM89KEd-Ky_ZvSZ38kA" type="5003"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_rs6dNM9KEd-Ky_ZvSZ38kA" type="5004"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_rs6dMc9KEd-Ky_ZvSZ38kA"/>
+    <element xmi:type="problem:Node" href="/Examples/dependency/JLB_F2.problem#JLB_F2.PL"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rs6dMs9KEd-Ky_ZvSZ38kA" x="27" y="261"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_rT114c9KEd-Ky_ZvSZ38kA"/>
+  <element xmi:type="problem:ProblemDiagram" href="/Examples/dependency/JLB_F2.problem#JLB_F2"/>
+  <edges xmi:type="notation:Connector" xmi:id="_rtDAEM9KEd-Ky_ZvSZ38kA" type="4001" source="_rs4oBM9KEd-Ky_ZvSZ38kA" target="_rs3Z4M9KEd-Ky_ZvSZ38kA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rtDAE89KEd-Ky_ZvSZ38kA" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_rtDAFM9KEd-Ky_ZvSZ38kA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_rtDAEc9KEd-Ky_ZvSZ38kA" fontName="Lucida Grande"/>
+    <element xmi:type="problem:Link" href="/Examples/dependency/JLB_F2.problem#//@links.6"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_rtDAEs9KEd-Ky_ZvSZ38kA" points="[0, 0, -194, 0]$[94, 0, -100, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_rtE1QM9KEd-Ky_ZvSZ38kA" type="4002" source="_rs6dMM9KEd-Ky_ZvSZ38kA" target="_rs3Z4M9KEd-Ky_ZvSZ38kA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rtE1Q89KEd-Ky_ZvSZ38kA" type="6002">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_rtE1RM9KEd-Ky_ZvSZ38kA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_rtE1Qc9KEd-Ky_ZvSZ38kA" fontName="Lucida Grande"/>
+    <element xmi:type="problem:Link" href="/Examples/dependency/JLB_F2.problem#//@links.5"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_rtE1Qs9KEd-Ky_ZvSZ38kA" points="[0, 0, -558, 197]$[397, 0, -161, 197]$[458, -182, -100, 15]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_rtGDYM9KEd-Ky_ZvSZ38kA" type="4002" source="_rs4A8M9KEd-Ky_ZvSZ38kA" target="_rs3Z4M9KEd-Ky_ZvSZ38kA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rtGqcM9KEd-Ky_ZvSZ38kA" type="6002">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_rtGqcc9KEd-Ky_ZvSZ38kA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_rtGDYc9KEd-Ky_ZvSZ38kA" fontName="Lucida Grande"/>
+    <element xmi:type="problem:Link" href="/Examples/dependency/JLB_F2.problem#//@links.7"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_rtGDYs9KEd-Ky_ZvSZ38kA" points="[0, 0, -545, -16]$[251, -60, -294, -76]$[384, -60, -161, -76]$[445, 0, -100, -16]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_rtH4kM9KEd-Ky_ZvSZ38kA" type="4003" source="_rs4A8M9KEd-Ky_ZvSZ38kA" target="_rs4oBM9KEd-Ky_ZvSZ38kA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rtH4k89KEd-Ky_ZvSZ38kA" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_rtH4lM9KEd-Ky_ZvSZ38kA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_rtH4kc9KEd-Ky_ZvSZ38kA" fontName="Lucida Grande"/>
+    <element xmi:type="problem:Link" href="/Examples/dependency/JLB_F2.problem#//@links.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_rtH4ks9KEd-Ky_ZvSZ38kA" points="[0, 0, -251, 0]$[251, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_rtJtwM9KEd-Ky_ZvSZ38kA" type="4003" source="_rs4A9c9KEd-Ky_ZvSZ38kA" target="_rs4oBM9KEd-Ky_ZvSZ38kA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rtJtw89KEd-Ky_ZvSZ38kA" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_rtJtxM9KEd-Ky_ZvSZ38kA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_rtJtwc9KEd-Ky_ZvSZ38kA" fontName="Lucida Grande"/>
+    <element xmi:type="problem:Link" href="/Examples/dependency/JLB_F2.problem#//@links.1"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_rtJtws9KEd-Ky_ZvSZ38kA" points="[0, 0, -60, 54]$[60, -54, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_rtK74M9KEd-Ky_ZvSZ38kA" type="4003" source="_rs4A8M9KEd-Ky_ZvSZ38kA" target="_rs4A9c9KEd-Ky_ZvSZ38kA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rtLi8M9KEd-Ky_ZvSZ38kA" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_rtLi8c9KEd-Ky_ZvSZ38kA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_rtK74c9KEd-Ky_ZvSZ38kA" fontName="Lucida Grande"/>
+    <element xmi:type="problem:Link" href="/Examples/dependency/JLB_F2.problem#//@links.2"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_rtK74s9KEd-Ky_ZvSZ38kA" points="[0, 0, -60, -54]$[60, 54, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_rtMxEM9KEd-Ky_ZvSZ38kA" type="4003" source="_rs4A9c9KEd-Ky_ZvSZ38kA" target="_rs5PEM9KEd-Ky_ZvSZ38kA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rtMxE89KEd-Ky_ZvSZ38kA" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_rtMxFM9KEd-Ky_ZvSZ38kA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_rtMxEc9KEd-Ky_ZvSZ38kA" fontName="Lucida Grande"/>
+    <element xmi:type="problem:Link" href="/Examples/dependency/JLB_F2.problem#//@links.3"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_rtMxEs9KEd-Ky_ZvSZ38kA" points="[0, 0, -60, -32]$[60, 32, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_rtRCgM9KEd-Ky_ZvSZ38kA" type="4003" source="_rs6dMM9KEd-Ky_ZvSZ38kA" target="_rs4A9c9KEd-Ky_ZvSZ38kA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rtRCg89KEd-Ky_ZvSZ38kA" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_rtRpkM9KEd-Ky_ZvSZ38kA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_rtRCgc9KEd-Ky_ZvSZ38kA" fontName="Lucida Grande"/>
+    <element xmi:type="problem:Link" href="/Examples/dependency/JLB_F2.problem#//@links.4"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_rtRCgs9KEd-Ky_ZvSZ38kA" points="[0, 0, -73, 92]$[73, -92, 0, 0]"/>
+  </edges>
 </notation:Diagram>

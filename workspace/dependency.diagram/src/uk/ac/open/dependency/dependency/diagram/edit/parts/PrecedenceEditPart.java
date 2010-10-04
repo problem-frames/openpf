@@ -12,6 +12,7 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import uk.ac.open.dependency.dependency.diagram.edit.policies.NodeItemSemanticEditPolicy;
 import uk.ac.open.dependency.dependency.diagram.edit.policies.OpenDiagramEditPolicy;
+import uk.ac.open.dependency.dependency.diagram.edit.policies.PrecedenceItemSemanticEditPolicy;
 
 /**
  * @generated

@@ -221,41 +221,29 @@ public class DependencyNavigatorContentProvider implements
 	private Object[] getViewChildren(View view, Object parentElement) {
 		switch (DependencyVisualIDRegistry.getVisualID(view)) {
 
-		case NodeEditPart.VISUAL_ID: {
+		case PrecedenceEditPart.VISUAL_ID: {
 			LinkedList<DependencyAbstractNavigatorItem> result = new LinkedList<DependencyAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			DependencyNavigatorGroup incominglinks = new DependencyNavigatorGroup(
-					Messages.NavigatorGroupName_Node_2001_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			DependencyNavigatorGroup outgoinglinks = new DependencyNavigatorGroup(
-					Messages.NavigatorGroupName_Node_2001_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Edge sv = (Edge) view;
+			DependencyNavigatorGroup target = new DependencyNavigatorGroup(
+					Messages.NavigatorGroupName_Precedence_4002_target,
+					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			DependencyNavigatorGroup source = new DependencyNavigatorGroup(
+					Messages.NavigatorGroupName_Precedence_4002_source,
+					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					DependencyVisualIDRegistry
-							.getType(CouplingEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					DependencyVisualIDRegistry
-							.getType(CouplingEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					DependencyVisualIDRegistry
-							.getType(PrecedenceEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					DependencyVisualIDRegistry
-							.getType(PrecedenceEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					DependencyVisualIDRegistry.getType(NodeEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					DependencyVisualIDRegistry.getType(NodeEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			if (!target.isEmpty()) {
+				result.add(target);
 			}
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
+			if (!source.isEmpty()) {
+				result.add(source);
 			}
 			return result.toArray();
 		}
@@ -312,29 +300,41 @@ public class DependencyNavigatorContentProvider implements
 			return result.toArray();
 		}
 
-		case PrecedenceEditPart.VISUAL_ID: {
+		case NodeEditPart.VISUAL_ID: {
 			LinkedList<DependencyAbstractNavigatorItem> result = new LinkedList<DependencyAbstractNavigatorItem>();
-			Edge sv = (Edge) view;
-			DependencyNavigatorGroup target = new DependencyNavigatorGroup(
-					Messages.NavigatorGroupName_Precedence_4002_target,
-					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			DependencyNavigatorGroup source = new DependencyNavigatorGroup(
-					Messages.NavigatorGroupName_Precedence_4002_source,
-					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Node sv = (Node) view;
+			DependencyNavigatorGroup incominglinks = new DependencyNavigatorGroup(
+					Messages.NavigatorGroupName_Node_2001_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			DependencyNavigatorGroup outgoinglinks = new DependencyNavigatorGroup(
+					Messages.NavigatorGroupName_Node_2001_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					DependencyVisualIDRegistry.getType(NodeEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					DependencyVisualIDRegistry.getType(NodeEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			if (!target.isEmpty()) {
-				result.add(target);
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					DependencyVisualIDRegistry
+							.getType(CouplingEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					DependencyVisualIDRegistry
+							.getType(CouplingEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					DependencyVisualIDRegistry
+							.getType(PrecedenceEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					DependencyVisualIDRegistry
+							.getType(PrecedenceEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
 			}
-			if (!source.isEmpty()) {
-				result.add(source);
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
 			}
 			return result.toArray();
 		}

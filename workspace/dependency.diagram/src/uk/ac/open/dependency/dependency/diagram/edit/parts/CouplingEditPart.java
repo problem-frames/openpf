@@ -8,6 +8,7 @@ import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx;
 import org.eclipse.gmf.runtime.notation.View;
 
+import uk.ac.open.dependency.dependency.diagram.edit.policies.CouplingItemSemanticEditPolicy;
 import uk.ac.open.dependency.dependency.diagram.edit.policies.NodeItemSemanticEditPolicy;
 import uk.ac.open.dependency.dependency.diagram.edit.policies.OpenDiagramEditPolicy;
 

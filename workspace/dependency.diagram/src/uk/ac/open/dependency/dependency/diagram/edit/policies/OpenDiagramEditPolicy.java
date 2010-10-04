@@ -100,7 +100,7 @@ public class OpenDiagramEditPolicy extends OpenEditPolicy {
 			if (element instanceof Node) {
 				Node node = (Node) element;
 				showReferences(node);
-			} else if (element instanceof Dependency){
+			} else if (element instanceof Dependency) {
 				Dependency link = (Dependency) element;
 				showReferences(link.getFrom());
 				showReferences(link.getTo());
