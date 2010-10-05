@@ -27,7 +27,6 @@
       <plugin id="PF2EC"/>
       <plugin id="PF2EC.ui"/>
       <plugin id="argument"/>
-      <plugin id="argument.generator"/>
       <plugin id="argument.ui"/>
       <plugin id="ch.qos.logback.classic"/>
       <plugin id="ch.qos.logback.core"/>
