@@ -1,0 +1,16 @@
+grammar uk.ac.open.argument.Argument with org.eclipse.xtext.common.Terminals
+generate argument "http://www.ac.uk/open/argument/Argument"
+
+Arg:
+	"given" "grounds" (groundstatements+=gStatement)+ 
+	"warranted" "by" ((groundstatements+=gStatement)+ | ("(" inner=RecArg")"))
+	"thus" "claim"  (groundstatements+=gStatement)+ 
+	("rebutted" "by" (groundstatements+=gStatement)+)? ".";
+
+gStatement:
+	 name=ID ":" groundstr=STRING;
+
+RecArg:
+	"given" "grounds" (groundstatements+=gStatement)+ 
+	"warranted" "by" (groundstatements+=gStatement)+ 
+	"thus" "claim"  (groundstatements+=gStatement)+ ;

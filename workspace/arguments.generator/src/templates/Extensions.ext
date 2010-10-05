@@ -1,4 +1,0 @@
-import org::xtext::example::mydsl::arguments;
-
-sortedGreetings(Model this) :
-	this.greetings.sortBy(g|g.name.toLowerCase());
