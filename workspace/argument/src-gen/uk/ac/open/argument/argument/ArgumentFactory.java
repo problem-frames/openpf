@@ -26,31 +26,22 @@ public interface ArgumentFactory extends EFactory
   ArgumentFactory eINSTANCE = uk.ac.open.argument.argument.impl.ArgumentFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Arg</em>'.
+   * Returns a new object of class '<em>Argument</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Arg</em>'.
+   * @return a new object of class '<em>Argument</em>'.
    * @generated
    */
-  Arg createArg();
+  Argument createArgument();
 
   /**
-   * Returns a new object of class '<em>gStatement</em>'.
+   * Returns a new object of class '<em>Statement</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>gStatement</em>'.
+   * @return a new object of class '<em>Statement</em>'.
    * @generated
    */
-  gStatement creategStatement();
-
-  /**
-   * Returns a new object of class '<em>Rec Arg</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Rec Arg</em>'.
-   * @generated
-   */
-  RecArg createRecArg();
+  Statement createStatement();
 
   /**
    * Returns the package supported by this factory.

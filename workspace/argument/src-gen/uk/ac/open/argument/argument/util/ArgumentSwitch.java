@@ -95,24 +95,17 @@ public class ArgumentSwitch<T>
   {
     switch (classifierID)
     {
-      case ArgumentPackage.ARG:
+      case ArgumentPackage.ARGUMENT:
       {
-        Arg arg = (Arg)theEObject;
-        T result = caseArg(arg);
+        Argument argument = (Argument)theEObject;
+        T result = caseArgument(argument);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case ArgumentPackage.GSTATEMENT:
+      case ArgumentPackage.STATEMENT:
       {
-        gStatement gStatement = (gStatement)theEObject;
-        T result = casegStatement(gStatement);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case ArgumentPackage.REC_ARG:
-      {
-        RecArg recArg = (RecArg)theEObject;
-        T result = caseRecArg(recArg);
+        Statement statement = (Statement)theEObject;
+        T result = caseStatement(statement);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -121,49 +114,33 @@ public class ArgumentSwitch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Arg</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Argument</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Arg</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Argument</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseArg(Arg object)
+  public T caseArgument(Argument object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>gStatement</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Statement</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>gStatement</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Statement</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casegStatement(gStatement object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Rec Arg</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Rec Arg</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseRecArg(RecArg object)
+  public T caseStatement(Statement object)
   {
     return null;
   }

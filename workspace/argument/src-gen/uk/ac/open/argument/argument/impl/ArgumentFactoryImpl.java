@@ -67,9 +67,8 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
   {
     switch (eClass.getClassifierID())
     {
-      case ArgumentPackage.ARG: return createArg();
-      case ArgumentPackage.GSTATEMENT: return creategStatement();
-      case ArgumentPackage.REC_ARG: return createRecArg();
+      case ArgumentPackage.ARGUMENT: return createArgument();
+      case ArgumentPackage.STATEMENT: return createStatement();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -80,10 +79,10 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Arg createArg()
+  public Argument createArgument()
   {
-    ArgImpl arg = new ArgImpl();
-    return arg;
+    ArgumentImpl argument = new ArgumentImpl();
+    return argument;
   }
 
   /**
@@ -91,21 +90,10 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public gStatement creategStatement()
+  public Statement createStatement()
   {
-    gStatementImpl gStatement = new gStatementImpl();
-    return gStatement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public RecArg createRecArg()
-  {
-    RecArgImpl recArg = new RecArgImpl();
-    return recArg;
+    StatementImpl statement = new StatementImpl();
+    return statement;
   }
 
   /**

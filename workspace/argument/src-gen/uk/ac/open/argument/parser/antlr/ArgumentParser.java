@@ -42,7 +42,7 @@ public class ArgumentParser extends org.eclipse.xtext.parser.antlr.AbstractAntlr
 	
 	@Override 
 	protected String getDefaultRuleName() {
-		return "Arg";
+		return "Argument";
 	}
 	
 	public ArgumentGrammarAccess getGrammarAccess() {

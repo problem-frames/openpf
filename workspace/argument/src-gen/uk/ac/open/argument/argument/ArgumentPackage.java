@@ -60,51 +60,32 @@ public interface ArgumentPackage extends EPackage
   ArgumentPackage eINSTANCE = uk.ac.open.argument.argument.impl.ArgumentPackageImpl.init();
 
   /**
-   * The meta object id for the '{@link uk.ac.open.argument.argument.impl.ArgImpl <em>Arg</em>}' class.
+   * The meta object id for the '{@link uk.ac.open.argument.argument.impl.ArgumentImpl <em>Argument</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see uk.ac.open.argument.argument.impl.ArgImpl
-   * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getArg()
+   * @see uk.ac.open.argument.argument.impl.ArgumentImpl
+   * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getArgument()
    * @generated
    */
-  int ARG = 0;
+  int ARGUMENT = 0;
 
   /**
-   * The feature id for the '<em><b>Groundstatements</b></em>' containment reference list.
+   * The feature id for the '<em><b>Grounds</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ARG__GROUNDSTATEMENTS = 0;
+  int ARGUMENT__GROUNDS = 0;
 
   /**
-   * The feature id for the '<em><b>Inner</b></em>' containment reference.
+   * The feature id for the '<em><b>Warrants</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ARG__INNER = 1;
-
-  /**
-   * The number of structural features of the '<em>Arg</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ARG_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link uk.ac.open.argument.argument.impl.gStatementImpl <em>gStatement</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see uk.ac.open.argument.argument.impl.gStatementImpl
-   * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getgStatement()
-   * @generated
-   */
-  int GSTATEMENT = 1;
+  int ARGUMENT__WARRANTS = 1;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -113,139 +94,189 @@ public interface ArgumentPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GSTATEMENT__NAME = 0;
+  int ARGUMENT__NAME = 2;
 
   /**
-   * The feature id for the '<em><b>Groundstr</b></em>' attribute.
+   * The feature id for the '<em><b>Str</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GSTATEMENT__GROUNDSTR = 1;
+  int ARGUMENT__STR = 3;
 
   /**
-   * The number of structural features of the '<em>gStatement</em>' class.
+   * The feature id for the '<em><b>Rebutts</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GSTATEMENT_FEATURE_COUNT = 2;
+  int ARGUMENT__REBUTTS = 4;
 
   /**
-   * The meta object id for the '{@link uk.ac.open.argument.argument.impl.RecArgImpl <em>Rec Arg</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see uk.ac.open.argument.argument.impl.RecArgImpl
-   * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getRecArg()
-   * @generated
-   */
-  int REC_ARG = 2;
-
-  /**
-   * The feature id for the '<em><b>Groundstatements</b></em>' containment reference list.
+   * The number of structural features of the '<em>Argument</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int REC_ARG__GROUNDSTATEMENTS = 0;
+  int ARGUMENT_FEATURE_COUNT = 5;
 
   /**
-   * The number of structural features of the '<em>Rec Arg</em>' class.
+   * The meta object id for the '{@link uk.ac.open.argument.argument.impl.StatementImpl <em>Statement</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see uk.ac.open.argument.argument.impl.StatementImpl
+   * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getStatement()
+   * @generated
+   */
+  int STATEMENT = 1;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int REC_ARG_FEATURE_COUNT = 1;
-
+  int STATEMENT__NAME = 0;
 
   /**
-   * Returns the meta object for class '{@link uk.ac.open.argument.argument.Arg <em>Arg</em>}'.
+   * The feature id for the '<em><b>Str</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Arg</em>'.
-   * @see uk.ac.open.argument.argument.Arg
    * @generated
+   * @ordered
    */
-  EClass getArg();
+  int STATEMENT__STR = 1;
 
   /**
-   * Returns the meta object for the containment reference list '{@link uk.ac.open.argument.argument.Arg#getGroundstatements <em>Groundstatements</em>}'.
+   * The feature id for the '<em><b>Rebutts</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Groundstatements</em>'.
-   * @see uk.ac.open.argument.argument.Arg#getGroundstatements()
-   * @see #getArg()
    * @generated
+   * @ordered
    */
-  EReference getArg_Groundstatements();
+  int STATEMENT__REBUTTS = 2;
 
   /**
-   * Returns the meta object for the containment reference '{@link uk.ac.open.argument.argument.Arg#getInner <em>Inner</em>}'.
+   * The number of structural features of the '<em>Statement</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Inner</em>'.
-   * @see uk.ac.open.argument.argument.Arg#getInner()
-   * @see #getArg()
    * @generated
+   * @ordered
    */
-  EReference getArg_Inner();
+  int STATEMENT_FEATURE_COUNT = 3;
+
 
   /**
-   * Returns the meta object for class '{@link uk.ac.open.argument.argument.gStatement <em>gStatement</em>}'.
+   * Returns the meta object for class '{@link uk.ac.open.argument.argument.Argument <em>Argument</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>gStatement</em>'.
-   * @see uk.ac.open.argument.argument.gStatement
+   * @return the meta object for class '<em>Argument</em>'.
+   * @see uk.ac.open.argument.argument.Argument
    * @generated
    */
-  EClass getgStatement();
+  EClass getArgument();
 
   /**
-   * Returns the meta object for the attribute '{@link uk.ac.open.argument.argument.gStatement#getName <em>Name</em>}'.
+   * Returns the meta object for the containment reference list '{@link uk.ac.open.argument.argument.Argument#getGrounds <em>Grounds</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Grounds</em>'.
+   * @see uk.ac.open.argument.argument.Argument#getGrounds()
+   * @see #getArgument()
+   * @generated
+   */
+  EReference getArgument_Grounds();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link uk.ac.open.argument.argument.Argument#getWarrants <em>Warrants</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Warrants</em>'.
+   * @see uk.ac.open.argument.argument.Argument#getWarrants()
+   * @see #getArgument()
+   * @generated
+   */
+  EReference getArgument_Warrants();
+
+  /**
+   * Returns the meta object for the attribute '{@link uk.ac.open.argument.argument.Argument#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see uk.ac.open.argument.argument.gStatement#getName()
-   * @see #getgStatement()
+   * @see uk.ac.open.argument.argument.Argument#getName()
+   * @see #getArgument()
    * @generated
    */
-  EAttribute getgStatement_Name();
+  EAttribute getArgument_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link uk.ac.open.argument.argument.gStatement#getGroundstr <em>Groundstr</em>}'.
+   * Returns the meta object for the attribute '{@link uk.ac.open.argument.argument.Argument#getStr <em>Str</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Groundstr</em>'.
-   * @see uk.ac.open.argument.argument.gStatement#getGroundstr()
-   * @see #getgStatement()
+   * @return the meta object for the attribute '<em>Str</em>'.
+   * @see uk.ac.open.argument.argument.Argument#getStr()
+   * @see #getArgument()
    * @generated
    */
-  EAttribute getgStatement_Groundstr();
+  EAttribute getArgument_Str();
 
   /**
-   * Returns the meta object for class '{@link uk.ac.open.argument.argument.RecArg <em>Rec Arg</em>}'.
+   * Returns the meta object for the containment reference list '{@link uk.ac.open.argument.argument.Argument#getRebutts <em>Rebutts</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Rec Arg</em>'.
-   * @see uk.ac.open.argument.argument.RecArg
+   * @return the meta object for the containment reference list '<em>Rebutts</em>'.
+   * @see uk.ac.open.argument.argument.Argument#getRebutts()
+   * @see #getArgument()
    * @generated
    */
-  EClass getRecArg();
+  EReference getArgument_Rebutts();
 
   /**
-   * Returns the meta object for the containment reference list '{@link uk.ac.open.argument.argument.RecArg#getGroundstatements <em>Groundstatements</em>}'.
+   * Returns the meta object for class '{@link uk.ac.open.argument.argument.Statement <em>Statement</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Groundstatements</em>'.
-   * @see uk.ac.open.argument.argument.RecArg#getGroundstatements()
-   * @see #getRecArg()
+   * @return the meta object for class '<em>Statement</em>'.
+   * @see uk.ac.open.argument.argument.Statement
    * @generated
    */
-  EReference getRecArg_Groundstatements();
+  EClass getStatement();
+
+  /**
+   * Returns the meta object for the attribute '{@link uk.ac.open.argument.argument.Statement#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see uk.ac.open.argument.argument.Statement#getName()
+   * @see #getStatement()
+   * @generated
+   */
+  EAttribute getStatement_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link uk.ac.open.argument.argument.Statement#getStr <em>Str</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Str</em>'.
+   * @see uk.ac.open.argument.argument.Statement#getStr()
+   * @see #getStatement()
+   * @generated
+   */
+  EAttribute getStatement_Str();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link uk.ac.open.argument.argument.Statement#getRebutts <em>Rebutts</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Rebutts</em>'.
+   * @see uk.ac.open.argument.argument.Statement#getRebutts()
+   * @see #getStatement()
+   * @generated
+   */
+  EReference getStatement_Rebutts();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -271,40 +302,30 @@ public interface ArgumentPackage extends EPackage
   interface Literals
   {
     /**
-     * The meta object literal for the '{@link uk.ac.open.argument.argument.impl.ArgImpl <em>Arg</em>}' class.
+     * The meta object literal for the '{@link uk.ac.open.argument.argument.impl.ArgumentImpl <em>Argument</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see uk.ac.open.argument.argument.impl.ArgImpl
-     * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getArg()
+     * @see uk.ac.open.argument.argument.impl.ArgumentImpl
+     * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getArgument()
      * @generated
      */
-    EClass ARG = eINSTANCE.getArg();
+    EClass ARGUMENT = eINSTANCE.getArgument();
 
     /**
-     * The meta object literal for the '<em><b>Groundstatements</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Grounds</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ARG__GROUNDSTATEMENTS = eINSTANCE.getArg_Groundstatements();
+    EReference ARGUMENT__GROUNDS = eINSTANCE.getArgument_Grounds();
 
     /**
-     * The meta object literal for the '<em><b>Inner</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Warrants</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ARG__INNER = eINSTANCE.getArg_Inner();
-
-    /**
-     * The meta object literal for the '{@link uk.ac.open.argument.argument.impl.gStatementImpl <em>gStatement</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see uk.ac.open.argument.argument.impl.gStatementImpl
-     * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getgStatement()
-     * @generated
-     */
-    EClass GSTATEMENT = eINSTANCE.getgStatement();
+    EReference ARGUMENT__WARRANTS = eINSTANCE.getArgument_Warrants();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -312,33 +333,57 @@ public interface ArgumentPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute GSTATEMENT__NAME = eINSTANCE.getgStatement_Name();
+    EAttribute ARGUMENT__NAME = eINSTANCE.getArgument_Name();
 
     /**
-     * The meta object literal for the '<em><b>Groundstr</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Str</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute GSTATEMENT__GROUNDSTR = eINSTANCE.getgStatement_Groundstr();
+    EAttribute ARGUMENT__STR = eINSTANCE.getArgument_Str();
 
     /**
-     * The meta object literal for the '{@link uk.ac.open.argument.argument.impl.RecArgImpl <em>Rec Arg</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see uk.ac.open.argument.argument.impl.RecArgImpl
-     * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getRecArg()
-     * @generated
-     */
-    EClass REC_ARG = eINSTANCE.getRecArg();
-
-    /**
-     * The meta object literal for the '<em><b>Groundstatements</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Rebutts</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference REC_ARG__GROUNDSTATEMENTS = eINSTANCE.getRecArg_Groundstatements();
+    EReference ARGUMENT__REBUTTS = eINSTANCE.getArgument_Rebutts();
+
+    /**
+     * The meta object literal for the '{@link uk.ac.open.argument.argument.impl.StatementImpl <em>Statement</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see uk.ac.open.argument.argument.impl.StatementImpl
+     * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getStatement()
+     * @generated
+     */
+    EClass STATEMENT = eINSTANCE.getStatement();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STATEMENT__NAME = eINSTANCE.getStatement_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Str</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STATEMENT__STR = eINSTANCE.getStatement_Str();
+
+    /**
+     * The meta object literal for the '<em><b>Rebutts</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STATEMENT__REBUTTS = eINSTANCE.getStatement_Rebutts();
 
   }
 

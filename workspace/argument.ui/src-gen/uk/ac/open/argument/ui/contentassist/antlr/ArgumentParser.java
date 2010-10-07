@@ -37,22 +37,23 @@ public class ArgumentParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
-					put(grammarAccess.getArgAccess().getAlternatives_5(), "rule__Arg__Alternatives_5");
-					put(grammarAccess.getArgAccess().getGroup(), "rule__Arg__Group__0");
-					put(grammarAccess.getArgAccess().getGroup_5_1(), "rule__Arg__Group_5_1__0");
-					put(grammarAccess.getArgAccess().getGroup_9(), "rule__Arg__Group_9__0");
-					put(grammarAccess.getGStatementAccess().getGroup(), "rule__GStatement__Group__0");
-					put(grammarAccess.getRecArgAccess().getGroup(), "rule__RecArg__Group__0");
-					put(grammarAccess.getArgAccess().getGroundstatementsAssignment_2(), "rule__Arg__GroundstatementsAssignment_2");
-					put(grammarAccess.getArgAccess().getGroundstatementsAssignment_5_0(), "rule__Arg__GroundstatementsAssignment_5_0");
-					put(grammarAccess.getArgAccess().getInnerAssignment_5_1_1(), "rule__Arg__InnerAssignment_5_1_1");
-					put(grammarAccess.getArgAccess().getGroundstatementsAssignment_8(), "rule__Arg__GroundstatementsAssignment_8");
-					put(grammarAccess.getArgAccess().getGroundstatementsAssignment_9_2(), "rule__Arg__GroundstatementsAssignment_9_2");
-					put(grammarAccess.getGStatementAccess().getNameAssignment_0(), "rule__GStatement__NameAssignment_0");
-					put(grammarAccess.getGStatementAccess().getGroundstrAssignment_2(), "rule__GStatement__GroundstrAssignment_2");
-					put(grammarAccess.getRecArgAccess().getGroundstatementsAssignment_2(), "rule__RecArg__GroundstatementsAssignment_2");
-					put(grammarAccess.getRecArgAccess().getGroundstatementsAssignment_5(), "rule__RecArg__GroundstatementsAssignment_5");
-					put(grammarAccess.getRecArgAccess().getGroundstatementsAssignment_8(), "rule__RecArg__GroundstatementsAssignment_8");
+					put(grammarAccess.getArgumentAccess().getAlternatives_1_1(), "rule__Argument__Alternatives_1_1");
+					put(grammarAccess.getArgumentAccess().getGroup(), "rule__Argument__Group__0");
+					put(grammarAccess.getArgumentAccess().getGroup_0(), "rule__Argument__Group_0__0");
+					put(grammarAccess.getArgumentAccess().getGroup_1(), "rule__Argument__Group_1__0");
+					put(grammarAccess.getArgumentAccess().getGroup_1_1_1(), "rule__Argument__Group_1_1_1__0");
+					put(grammarAccess.getArgumentAccess().getGroup_6(), "rule__Argument__Group_6__0");
+					put(grammarAccess.getStatementAccess().getGroup(), "rule__Statement__Group__0");
+					put(grammarAccess.getStatementAccess().getGroup_3(), "rule__Statement__Group_3__0");
+					put(grammarAccess.getArgumentAccess().getGroundsAssignment_0_1(), "rule__Argument__GroundsAssignment_0_1");
+					put(grammarAccess.getArgumentAccess().getWarrantsAssignment_1_1_0(), "rule__Argument__WarrantsAssignment_1_1_0");
+					put(grammarAccess.getArgumentAccess().getWarrantsAssignment_1_1_1_1(), "rule__Argument__WarrantsAssignment_1_1_1_1");
+					put(grammarAccess.getArgumentAccess().getNameAssignment_3(), "rule__Argument__NameAssignment_3");
+					put(grammarAccess.getArgumentAccess().getStrAssignment_5(), "rule__Argument__StrAssignment_5");
+					put(grammarAccess.getArgumentAccess().getRebuttsAssignment_6_1(), "rule__Argument__RebuttsAssignment_6_1");
+					put(grammarAccess.getStatementAccess().getNameAssignment_0(), "rule__Statement__NameAssignment_0");
+					put(grammarAccess.getStatementAccess().getStrAssignment_2(), "rule__Statement__StrAssignment_2");
+					put(grammarAccess.getStatementAccess().getRebuttsAssignment_3_1(), "rule__Statement__RebuttsAssignment_3_1");
 				}
 			};
 		}
@@ -63,7 +64,7 @@ public class ArgumentParser extends AbstractContentAssistParser {
 	protected Collection<FollowElement> getFollowElements(AbstractInternalContentAssistParser parser) {
 		try {
 			uk.ac.open.argument.ui.contentassist.antlr.internal.InternalArgumentParser typedParser = (uk.ac.open.argument.ui.contentassist.antlr.internal.InternalArgumentParser) parser;
-			typedParser.entryRuleArg();
+			typedParser.entryRuleArgument();
 			return typedParser.getFollowElements();
 		} catch(RecognitionException ex) {
 			throw new RuntimeException(ex);

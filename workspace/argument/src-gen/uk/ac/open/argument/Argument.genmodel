@@ -7,16 +7,17 @@
     complianceLevel="5.0" copyrightFields="false" editPluginID="argument.edit" editorPluginID="argument.editor">
   <genPackages prefix="Argument" basePackage="uk.ac.open.argument" disposableProviderFactory="true"
       ecorePackage="Argument.ecore#/">
-    <genClasses ecoreClass="Argument.ecore#//Arg">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//Arg/groundstatements"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//Arg/inner"/>
+    <genClasses ecoreClass="Argument.ecore#//Argument">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//Argument/grounds"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//Argument/warrants"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Argument/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Argument/str"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//Argument/rebutts"/>
     </genClasses>
-    <genClasses ecoreClass="Argument.ecore#//gStatement">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//gStatement/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//gStatement/groundstr"/>
-    </genClasses>
-    <genClasses ecoreClass="Argument.ecore#//RecArg">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//RecArg/groundstatements"/>
+    <genClasses ecoreClass="Argument.ecore#//Statement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Statement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Statement/str"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//Statement/rebutts"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

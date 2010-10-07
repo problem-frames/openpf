@@ -78,19 +78,14 @@ public class ArgumentAdapterFactory extends AdapterFactoryImpl
     new ArgumentSwitch<Adapter>()
     {
       @Override
-      public Adapter caseArg(Arg object)
+      public Adapter caseArgument(Argument object)
       {
-        return createArgAdapter();
+        return createArgumentAdapter();
       }
       @Override
-      public Adapter casegStatement(gStatement object)
+      public Adapter caseStatement(Statement object)
       {
-        return creategStatementAdapter();
-      }
-      @Override
-      public Adapter caseRecArg(RecArg object)
-      {
-        return createRecArgAdapter();
+        return createStatementAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -115,46 +110,31 @@ public class ArgumentAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.Arg <em>Arg</em>}'.
+   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.Argument <em>Argument</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see uk.ac.open.argument.argument.Arg
+   * @see uk.ac.open.argument.argument.Argument
    * @generated
    */
-  public Adapter createArgAdapter()
+  public Adapter createArgumentAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.gStatement <em>gStatement</em>}'.
+   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.Statement <em>Statement</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see uk.ac.open.argument.argument.gStatement
+   * @see uk.ac.open.argument.argument.Statement
    * @generated
    */
-  public Adapter creategStatementAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.RecArg <em>Rec Arg</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see uk.ac.open.argument.argument.RecArg
-   * @generated
-   */
-  public Adapter createRecArgAdapter()
+  public Adapter createStatementAdapter()
   {
     return null;
   }

@@ -10,5 +10,6 @@ workspace/*/javaCompiler...args
 workspace/*/*.jar
 workspace/*/*.zip
 workspace/.JETEmitters
+workspace/*/.settings
 *.log
 00*
