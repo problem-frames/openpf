@@ -14,6 +14,13 @@
   <extension point="core.example">
       <example file="Argument.xtext"/>
       <example file="x.argument"/>
+      <example file="AP-RECV2.argument"/>
+      <example file="AP-RECV.argument"/>
+      <example file="AP-XMIT.argument"/>
+      <example file="M-POSREPORT.argument"/>
+      <example file="R1-rebuttal.argument"/>
+      <example file="R-SEND.argument"/>
+      <example file="second-iteration.argument"/>
   </extension>
 
 </plugin>
