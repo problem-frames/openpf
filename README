@@ -66,8 +66,8 @@ http-proxy-port = 80
     * Install the SWTBot testing tools
 	http://download.eclipse.org/technology/swtbot/helios/dev-build/update-site
     * Install LittleJil plugins:
-	http://laser.cs.umass.edu/documentation/vjinstall/
-	http://laser.cs.umass.edu/documentation/ljainstall/
+	http://laser.cs.umass.edu/eclipse/visualjil/
+	http://laser.cs.umass.edu/eclipse/ljanalysis
 	http://laser.cs.umass.edu/documentation/propelinstall/
 	
   * open and run the product:
@@ -79,6 +79,6 @@ http-proxy-port = 80
     build.sh 
   * It is now continously integrated (any svn commit of the workspace will trigger a rebuilt of the binaries)
 
-Enjoy,
+Enjoy Problem Solving,
 
 Yijun Yu
