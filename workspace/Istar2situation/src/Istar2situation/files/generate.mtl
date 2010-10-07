@@ -2,10 +2,10 @@
 [module generate('/openome_model/model/openome_model.ecore')/]
 [template public generate(m: Model)]
 [file (m.name.toString().concat('.situation'), false)]
-[if m.name]
-model [m.name/]:
-[else]
+[if m.name.equalsIgnoreCase('')]
 model unamed:
+[else]
+model [m.name/]:
 [/if]
 [for (n: Container| m.containers)]
    actor [n.name/]

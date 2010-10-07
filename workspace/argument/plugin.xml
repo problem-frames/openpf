@@ -11,8 +11,9 @@
 	
   </extension>
 
-
-
-
+  <extension point="core.example">
+      <example file="Argument.xtext"/>
+      <example file="x.argument"/>
+  </extension>
 
 </plugin>

@@ -1,5 +1,4 @@
-Creating a new xtext plug-in project in OpenPF
-==============================================
+= Creating a new xtext plug-in project in OpenPF =
 
 1. File -> New -> Project ->  Xtext -> Xtext Project 
 1.1. Project Name: <AddName>

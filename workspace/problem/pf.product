@@ -28,8 +28,8 @@
       <plugin id="PF2EC.ui"/>
       <plugin id="argument"/>
       <plugin id="argument.ui"/>
-      <plugin id="ch.qos.logback.classic"/>
-      <plugin id="ch.qos.logback.core"/>
+      <plugin id="ch.qos.logback.classic" fragment=""/>
+      <plugin id="ch.qos.logback.core" fragment=""/>
       <plugin id="ch.qos.logback.slf4j" fragment="true"/>
       <plugin id="change"/>
       <plugin id="com.google.collect"/>
@@ -54,15 +54,15 @@
       <plugin id="event.editor" fragment=""/>
       <plugin id="event.generator"/>
       <plugin id="event.ui"/>
-      <plugin id="hu.bme.mit.viatra2.viatraDSM.grabats2009live"/>
-      <plugin id="hu.bme.mit.viatra2.viatraDSM.skypesim"/>
-      <plugin id="hu.optxware.emf2viatra.core"/>
+      <plugin id="hu.bme.mit.viatra2.viatraDSM.grabats2009live" fragment=""/>
+      <plugin id="hu.bme.mit.viatra2.viatraDSM.skypesim" fragment=""/>
+      <plugin id="hu.optxware.emf2viatra.core" fragment=""/>
       <plugin id="istar"/>
       <plugin id="istar.diagram.extensions"/>
       <plugin id="istar.generator"/>
       <plugin id="istar.ui"/>
-      <plugin id="javax.activation"/>
-      <plugin id="javax.mail.glassfish"/>
+      <plugin id="javax.activation" fragment=""/>
+      <plugin id="javax.mail.glassfish" fragment=""/>
       <plugin id="javax.servlet"/>
       <plugin id="javax.servlet.jsp"/>
       <plugin id="javax.xml"/>
@@ -292,8 +292,8 @@
       <plugin id="org.eclipse.jdt.junit.core"/>
       <plugin id="org.eclipse.jdt.junit.runtime"/>
       <plugin id="org.eclipse.jdt.launching"/>
-      <plugin id="org.eclipse.jdt.launching.macosx"/>
-      <plugin id="org.eclipse.jdt.launching.ui.macosx"/>
+      <plugin id="org.eclipse.jdt.launching.macosx" fragment=""/>
+      <plugin id="org.eclipse.jdt.launching.ui.macosx" fragment=""/>
       <plugin id="org.eclipse.jdt.ui"/>
       <plugin id="org.eclipse.jface"/>
       <plugin id="org.eclipse.jface.databinding"/>
@@ -307,7 +307,7 @@
       <plugin id="org.eclipse.m2m.qvt.oml.emf.util"/>
       <plugin id="org.eclipse.m2m.qvt.oml.project"/>
       <plugin id="org.eclipse.m2m.qvt.oml.runtime"/>
-      <plugin id="org.eclipse.net4j.jms.api"/>
+      <plugin id="org.eclipse.net4j.jms.api" fragment=""/>
       <plugin id="org.eclipse.ocl"/>
       <plugin id="org.eclipse.ocl.ecore"/>
       <plugin id="org.eclipse.osgi"/>
@@ -367,30 +367,30 @@
       <plugin id="org.eclipse.update.core.linux" fragment="true"/>
       <plugin id="org.eclipse.update.core.win32" fragment="true"/>
       <plugin id="org.eclipse.update.ui"/>
-      <plugin id="org.eclipse.viatra2.core2"/>
-      <plugin id="org.eclipse.viatra2.editor"/>
-      <plugin id="org.eclipse.viatra2.editor.text"/>
-      <plugin id="org.eclipse.viatra2.gtasm.interpreter"/>
-      <plugin id="org.eclipse.viatra2.gtasm.interpreter.impl"/>
-      <plugin id="org.eclipse.viatra2.gtasm.interpreter.term"/>
-      <plugin id="org.eclipse.viatra2.gtasm.model"/>
-      <plugin id="org.eclipse.viatra2.gtasm.patternmatcher"/>
-      <plugin id="org.eclipse.viatra2.gtasm.patternmatcher.impl"/>
-      <plugin id="org.eclipse.viatra2.gtasm.patternmatcher.incremental"/>
-      <plugin id="org.eclipse.viatra2.gtasm.patternmatcher.incremental.rete"/>
-      <plugin id="org.eclipse.viatra2.gtasm.trigger"/>
-      <plugin id="org.eclipse.viatra2.gtasm.typing.model"/>
-      <plugin id="org.eclipse.viatra2.gui"/>
-      <plugin id="org.eclipse.viatra2.gui.patterns"/>
-      <plugin id="org.eclipse.viatra2.help"/>
-      <plugin id="org.eclipse.viatra2.imports.uml2.galileo"/>
-      <plugin id="org.eclipse.viatra2.imports.vtml"/>
-      <plugin id="org.eclipse.viatra2.loaders.vtcl_lpgparser"/>
-      <plugin id="org.eclipse.viatra2.natives.strings"/>
-      <plugin id="org.eclipse.viatra2.viatraDSM"/>
-      <plugin id="org.eclipse.viatra2.viatraDSM.demo"/>
-      <plugin id="org.eclipse.viatra2.viatraDSM.gmf"/>
-      <plugin id="org.eclipse.viatra2.visualisation"/>
+      <plugin id="org.eclipse.viatra2.core2" fragment=""/>
+      <plugin id="org.eclipse.viatra2.editor" fragment=""/>
+      <plugin id="org.eclipse.viatra2.editor.text" fragment=""/>
+      <plugin id="org.eclipse.viatra2.gtasm.interpreter" fragment=""/>
+      <plugin id="org.eclipse.viatra2.gtasm.interpreter.impl" fragment=""/>
+      <plugin id="org.eclipse.viatra2.gtasm.interpreter.term" fragment=""/>
+      <plugin id="org.eclipse.viatra2.gtasm.model" fragment=""/>
+      <plugin id="org.eclipse.viatra2.gtasm.patternmatcher" fragment=""/>
+      <plugin id="org.eclipse.viatra2.gtasm.patternmatcher.impl" fragment=""/>
+      <plugin id="org.eclipse.viatra2.gtasm.patternmatcher.incremental" fragment=""/>
+      <plugin id="org.eclipse.viatra2.gtasm.patternmatcher.incremental.rete" fragment=""/>
+      <plugin id="org.eclipse.viatra2.gtasm.trigger" fragment=""/>
+      <plugin id="org.eclipse.viatra2.gtasm.typing.model" fragment=""/>
+      <plugin id="org.eclipse.viatra2.gui" fragment=""/>
+      <plugin id="org.eclipse.viatra2.gui.patterns" fragment=""/>
+      <plugin id="org.eclipse.viatra2.help" fragment=""/>
+      <plugin id="org.eclipse.viatra2.imports.uml2.galileo" fragment=""/>
+      <plugin id="org.eclipse.viatra2.imports.vtml" fragment=""/>
+      <plugin id="org.eclipse.viatra2.loaders.vtcl_lpgparser" fragment=""/>
+      <plugin id="org.eclipse.viatra2.natives.strings" fragment=""/>
+      <plugin id="org.eclipse.viatra2.viatraDSM" fragment=""/>
+      <plugin id="org.eclipse.viatra2.viatraDSM.demo" fragment=""/>
+      <plugin id="org.eclipse.viatra2.viatraDSM.gmf" fragment=""/>
+      <plugin id="org.eclipse.viatra2.visualisation" fragment=""/>
       <plugin id="org.eclipse.xpand"/>
       <plugin id="org.eclipse.xsd"/>
       <plugin id="org.eclipse.xsd.ecore.exporter"/>
@@ -408,8 +408,8 @@
       <plugin id="org.eclipse.xtext.ui.shared"/>
       <plugin id="org.eclipse.xtext.util"/>
       <plugin id="org.eclipse.xtext.xtend"/>
-      <plugin id="org.eclipse.zest.core"/>
-      <plugin id="org.eclipse.zest.layouts"/>
+      <plugin id="org.eclipse.zest.core" fragment=""/>
+      <plugin id="org.eclipse.zest.layouts" fragment=""/>
       <plugin id="org.hamcrest"/>
       <plugin id="org.hamcrest.core"/>
       <plugin id="org.hamcrest.integration"/>
@@ -421,7 +421,7 @@
       <plugin id="org.mortbay.jetty.util"/>
       <plugin id="org.sat4j.core"/>
       <plugin id="org.sat4j.pb"/>
-      <plugin id="org.slf4j.api"/>
+      <plugin id="org.slf4j.api" fragment=""/>
       <plugin id="org.w3c.css.sac"/>
       <plugin id="org.w3c.dom.events"/>
       <plugin id="org.w3c.dom.smil"/>
@@ -450,46 +450,46 @@
    </plugins>
 
    <features>
-      <feature id="org.eclipse.platform" version="3.6.0.v20100602-9gF78GpqFt6trOGhL60z0oEx3fz-JKNwxPY"/>
-      <feature id="org.eclipse.jdt" version="3.6.0.v20100526-0800-7z8XFUJFMTfCWGoVuHImpms9H155"/>
-      <feature id="org.eclipse.xtext.runtime" version="1.0.0.v201006170321"/>
-      <feature id="org.eclipse.xtext.ui" version="1.0.0.v201006170321"/>
-      <feature id="org.eclipse.xtend.dependencies" version="1.0.0.v201006150611"/>
-      <feature id="org.eclipse.xtend.typesystem.emf" version="1.0.0.v201006150611"/>
-      <feature id="org.eclipse.xtend.ui" version="1.0.0.v201006150611"/>
-      <feature id="org.eclipse.xpand" version="1.0.0.v201006150611"/>
-      <feature id="org.eclipse.xpand.ui" version="1.0.0.v201006150611"/>
-      <feature id="org.eclipse.emf.mwe.ui" version="1.0.0.v201006150535"/>
-      <feature id="org.eclipse.mylyn_feature" version="3.4.0.v20100608-0100-e3x"/>
-      <feature id="org.eclipse.mylyn.ide_feature" version="3.4.0.v20100608-0100-e3x"/>
-      <feature id="org.eclipse.mylyn.bugzilla_feature" version="3.4.0.v20100608-0100-e3x"/>
-      <feature id="org.eclipse.cvs" version="1.2.0.v20100427-7B77FKs8sF7B77SDX4GW85"/>
-      <feature id="org.eclipse.mylyn.java_feature" version="3.4.0.v20100608-0100-e3x"/>
-      <feature id="org.eclipse.mylyn.team_feature" version="3.4.0.v20100608-0100-e3x"/>
-      <feature id="org.eclipse.mylyn.context_feature" version="3.4.0.v20100608-0100-e3x"/>
-      <feature id="org.eclipse.emf.validation" version="1.4.0.v20100428-2315-479-9oB56N5BBR6LCA6"/>
-      <feature id="org.eclipse.emf.transaction" version="1.4.0.v20100428-2315-377-8s734C3E7D15D6B"/>
-      <feature id="org.eclipse.emf.workspace" version="1.4.0.v20100428-2315-36-8s734C367E3CBC7"/>
-      <feature id="org.eclipse.ocl" version="3.0.0.v201005061704-79-7G9oB5855J7O8P9D"/>
-      <feature id="org.eclipse.swtbot" version="2.0.0.595-dev-e36"/>
-      <feature id="org.eclipse.swtbot.eclipse" version="2.0.0.595-dev-e36"/>
-      <feature id="org.eclipse.acceleo" version="3.0.0.v201006150906"/>
-      <feature id="org.eclipse.acceleo.runtime" version="3.0.0.v201006150906"/>
-      <feature id="org.eclipse.pde" version="3.6.0.v20100525-7b7mFKtFEx2XmfZ4_B7NUJA"/>
-      <feature id="change.feature" version="1.0.0.qualifier"/>
-      <feature id="xtext.feature" version="1.0.0.qualifier"/>
-      <feature id="event.feature" version="1.0.0.qualifier"/>
-      <feature id="ontology.feature" version="1.0.0.qualifier"/>
-      <feature id="situation.feature" version="1.0.0.qualifier"/>
-      <feature id="problem.feature" version="1.0.0.qualifier"/>
-      <feature id="istar.feature" version="1.0.0.qualifier"/>
-      <feature id="core.feature" version="1.0.0.qualifier"/>
-      <feature id="situation.m2m.feature" version="1.0.0"/>
-      <feature id="dependency.feature" version="1.0.0.qualifier"/>
-      <feature id="org.eclipse.emf" version="2.6.0.v20100614-1136"/>
-      <feature id="org.eclipse.gef" version="3.6.0.v20100519-2050-777B-81A2Bz-69793A8B83447"/>
-      <feature id="org.eclipse.gmf" version="1.4.0.v20100603-2230-7d98-FYnmMCGUhhvqV4nR2tsgWcV"/>
-      <feature id="argument.feature" version="1.0.0.qualifier"/>
+      <feature id="org.eclipse.platform"/>
+      <feature id="org.eclipse.jdt"/>
+      <feature id="org.eclipse.xtext.runtime"/>
+      <feature id="org.eclipse.xtext.ui"/>
+      <feature id="org.eclipse.xtend.dependencies"/>
+      <feature id="org.eclipse.xtend.typesystem.emf"/>
+      <feature id="org.eclipse.xtend.ui"/>
+      <feature id="org.eclipse.xpand"/>
+      <feature id="org.eclipse.xpand.ui"/>
+      <feature id="org.eclipse.emf.mwe.ui"/>
+      <feature id="org.eclipse.mylyn_feature"/>
+      <feature id="org.eclipse.mylyn.ide_feature"/>
+      <feature id="org.eclipse.mylyn.bugzilla_feature"/>
+      <feature id="org.eclipse.cvs"/>
+      <feature id="org.eclipse.mylyn.java_feature"/>
+      <feature id="org.eclipse.mylyn.team_feature"/>
+      <feature id="org.eclipse.mylyn.context_feature"/>
+      <feature id="org.eclipse.emf.validation"/>
+      <feature id="org.eclipse.emf.transaction"/>
+      <feature id="org.eclipse.emf.workspace"/>
+      <feature id="org.eclipse.ocl"/>
+      <feature id="org.eclipse.swtbot"/>
+      <feature id="org.eclipse.swtbot.eclipse"/>
+      <feature id="org.eclipse.acceleo"/>
+      <feature id="org.eclipse.acceleo.runtime"/>
+      <feature id="org.eclipse.pde"/>
+      <feature id="change.feature"/>
+      <feature id="xtext.feature"/>
+      <feature id="event.feature"/>
+      <feature id="ontology.feature"/>
+      <feature id="situation.feature"/>
+      <feature id="problem.feature"/>
+      <feature id="istar.feature"/>
+      <feature id="core.feature"/>
+      <feature id="situation.m2m.feature"/>
+      <feature id="dependency.feature"/>
+      <feature id="org.eclipse.emf"/>
+      <feature id="org.eclipse.gef"/>
+      <feature id="org.eclipse.gmf"/>
+      <feature id="argument.feature"/>
    </features>
 
 

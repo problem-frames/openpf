@@ -60,6 +60,11 @@ http-proxy-port = 80
 	Acceleo
 	Xtext 
 	GMF
+    * Install the epsilon/emfatic tools 
+	http://www.scharf.gr/eclipse/emfatic/update/
+	http://download.eclipse.org/modeling/gmt/epsilon/updates/
+    * Install the SWTBot testing tools
+	http://download.eclipse.org/technology/swtbot/helios/dev-build/update-site
     * Install LittleJil plugins:
 	http://laser.cs.umass.edu/documentation/vjinstall/
 	http://laser.cs.umass.edu/documentation/ljainstall/
