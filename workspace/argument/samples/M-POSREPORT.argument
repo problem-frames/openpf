@@ -1,0 +1,11 @@
+//Fig. 15. Argument for M!POSREPORT -> ATC!HASPOS.
+//==========================================
+given grounds
+ "Machine sends accurate pos. to ATC"
+thus claim
+ "Position receipt confirmed"
+rebutted by
+ R1.9: "M sabotaged - pos. wrong. (SR1)"
+ R1.10: "Network sabotaged - no xmit (SR1)"
+ R1.11: "ATC sabotaged - no display. (SR2)"
+

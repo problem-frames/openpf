@@ -1,0 +1,10 @@
+//Fig. 13. Argument for AP!XMIT -> R!SEND
+//================================
+given grounds
+ "ADS-B transmission areceived"
+thus claim
+ "Position are sent to M"
+rebutted by
+ R1.4: "Receiver is sabotaged. (SR2)"
+ R1.5: "Transmissions are jammed. (SR2)"
+

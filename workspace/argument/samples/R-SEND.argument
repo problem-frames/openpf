@@ -1,0 +1,11 @@
+//Fig. 14. Argument for R!SEND -> M!POSREPORT.
+//=======================================
+given grounds
+ "Rcvr sends accurate position to Machine"
+thus claim
+ "Positions sent to ATC"
+rebutted by
+ R1.6: "Rcvr sabotaged - pos. wrong. (SR1)"
+ R1.7: "Network sabotaged - no xmit. (SR2)"
+ R1.8: "Machine sabotaged - no send. (SR2)"
+

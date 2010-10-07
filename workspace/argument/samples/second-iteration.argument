@@ -1,0 +1,16 @@
+//Fig. 18. Arguments for the second iteration.
+//==================================
+given grounds
+ "Received GPS positions are accurate"
+warranted by
+ "Calculations are accurate"
+thus claim
+ "Accurate positions are transmitted"
+rebutted by
+R1.1: "Airplane's GPS sabotaged. (SR2)"
+R1.2: "ADS-B Transmitter sabotaged. (SR2)"
+R1.3: "Aircrew xmits wrong pos/ID. (SR1)"
+ M2.1: "Verify pos using multilateration"
+  R2.1.1: "Source good for bad position"
+  R2.1.2: "Timing good for bad position"
+  R2.1.3: "Incorrect position computed"

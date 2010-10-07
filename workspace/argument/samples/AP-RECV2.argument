@@ -1,0 +1,9 @@
+//Fig. 16. Argument for AP!RECV.
+//=========================
+given grounds
+ "GPS satellites are operational"
+thus claim
+ "Aircraft receives GPS signals"
+rebutted by
+ R1.12: "GPS jammed. (SR2)"
+

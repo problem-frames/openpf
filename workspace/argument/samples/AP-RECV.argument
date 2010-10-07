@@ -1,0 +1,13 @@
+//Fig. 12. Argument for AP!RECV-> AP!XMIT
+//=================================
+given grounds
+ "Received GPS positions are accurate (AP!RECV & assumptions)"
+warranted by
+ "Calculations are accurate (assumption)"
+thus claim
+ "Airplanes transmit accurate positions (AP!XMIT)"
+rebutted by
+R1.1: "Airplane's GPS sabotaged. (SR2)"
+R1.2: "ADS-B Transmitter sabotaged. (SR2)"
+R1.3: "Aircrew xmits wrong pos/ID. (SR1)"
+
