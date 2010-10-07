@@ -63,12 +63,16 @@ http-proxy-port = 80
     * Install the epsilon/emfatic tools 
 	http://www.scharf.gr/eclipse/emfatic/update/
 	http://download.eclipse.org/modeling/gmt/epsilon/updates/
+    * Install Viatra2 tools
+        http://viatra.inf.mit.bme.hu/update/R3.1
     * Install the SWTBot testing tools
 	http://download.eclipse.org/technology/swtbot/helios/dev-build/update-site
     * Install LittleJil plugins:
 	http://laser.cs.umass.edu/eclipse/visualjil/
 	http://laser.cs.umass.edu/eclipse/ljanalysis
 	http://laser.cs.umass.edu/documentation/propelinstall/
+	* It has a dependency on WST
+		http://download.eclipse.org/webtools/downloads/drops/R3.2.2/R-3.2.2-20100915173744
 	
   * open and run the product:
     Project Explorer > problem > Double click at the pf.product file > Testing > Launch an Eclipse Application
