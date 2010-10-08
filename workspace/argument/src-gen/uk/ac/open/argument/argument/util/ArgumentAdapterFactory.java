@@ -78,14 +78,39 @@ public class ArgumentAdapterFactory extends AdapterFactoryImpl
     new ArgumentSwitch<Adapter>()
     {
       @Override
-      public Adapter caseArgument(Argument object)
+      public Adapter caseArgumentDiagram(ArgumentDiagram object)
       {
-        return createArgumentAdapter();
+        return createArgumentDiagramAdapter();
       }
       @Override
-      public Adapter caseStatement(Statement object)
+      public Adapter caseNode(Node object)
       {
-        return createStatementAdapter();
+        return createNodeAdapter();
+      }
+      @Override
+      public Adapter caseLink(Link object)
+      {
+        return createLinkAdapter();
+      }
+      @Override
+      public Adapter caseExpression(Expression object)
+      {
+        return createExpressionAdapter();
+      }
+      @Override
+      public Adapter caseNodeLiteral(NodeLiteral object)
+      {
+        return createNodeLiteralAdapter();
+      }
+      @Override
+      public Adapter caseSplitCommas(SplitCommas object)
+      {
+        return createSplitCommasAdapter();
+      }
+      @Override
+      public Adapter caseSplitConnective(SplitConnective object)
+      {
+        return createSplitConnectiveAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -110,31 +135,106 @@ public class ArgumentAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.Argument <em>Argument</em>}'.
+   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.ArgumentDiagram <em>Diagram</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see uk.ac.open.argument.argument.Argument
+   * @see uk.ac.open.argument.argument.ArgumentDiagram
    * @generated
    */
-  public Adapter createArgumentAdapter()
+  public Adapter createArgumentDiagramAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.Statement <em>Statement</em>}'.
+   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.Node <em>Node</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see uk.ac.open.argument.argument.Statement
+   * @see uk.ac.open.argument.argument.Node
    * @generated
    */
-  public Adapter createStatementAdapter()
+  public Adapter createNodeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.Link <em>Link</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.argument.argument.Link
+   * @generated
+   */
+  public Adapter createLinkAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.Expression <em>Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.argument.argument.Expression
+   * @generated
+   */
+  public Adapter createExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.NodeLiteral <em>Node Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.argument.argument.NodeLiteral
+   * @generated
+   */
+  public Adapter createNodeLiteralAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.SplitCommas <em>Split Commas</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.argument.argument.SplitCommas
+   * @generated
+   */
+  public Adapter createSplitCommasAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.SplitConnective <em>Split Connective</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.argument.argument.SplitConnective
+   * @generated
+   */
+  public Adapter createSplitConnectiveAdapter()
   {
     return null;
   }

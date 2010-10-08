@@ -37,23 +37,35 @@ public class ArgumentParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
-					put(grammarAccess.getArgumentAccess().getAlternatives_1_1(), "rule__Argument__Alternatives_1_1");
-					put(grammarAccess.getArgumentAccess().getGroup(), "rule__Argument__Group__0");
-					put(grammarAccess.getArgumentAccess().getGroup_0(), "rule__Argument__Group_0__0");
-					put(grammarAccess.getArgumentAccess().getGroup_1(), "rule__Argument__Group_1__0");
-					put(grammarAccess.getArgumentAccess().getGroup_1_1_1(), "rule__Argument__Group_1_1_1__0");
-					put(grammarAccess.getArgumentAccess().getGroup_6(), "rule__Argument__Group_6__0");
-					put(grammarAccess.getStatementAccess().getGroup(), "rule__Statement__Group__0");
-					put(grammarAccess.getStatementAccess().getGroup_3(), "rule__Statement__Group_3__0");
-					put(grammarAccess.getArgumentAccess().getGroundsAssignment_0_1(), "rule__Argument__GroundsAssignment_0_1");
-					put(grammarAccess.getArgumentAccess().getWarrantsAssignment_1_1_0(), "rule__Argument__WarrantsAssignment_1_1_0");
-					put(grammarAccess.getArgumentAccess().getWarrantsAssignment_1_1_1_1(), "rule__Argument__WarrantsAssignment_1_1_1_1");
-					put(grammarAccess.getArgumentAccess().getNameAssignment_3(), "rule__Argument__NameAssignment_3");
-					put(grammarAccess.getArgumentAccess().getStrAssignment_5(), "rule__Argument__StrAssignment_5");
-					put(grammarAccess.getArgumentAccess().getRebuttsAssignment_6_1(), "rule__Argument__RebuttsAssignment_6_1");
-					put(grammarAccess.getStatementAccess().getNameAssignment_0(), "rule__Statement__NameAssignment_0");
-					put(grammarAccess.getStatementAccess().getStrAssignment_2(), "rule__Statement__StrAssignment_2");
-					put(grammarAccess.getStatementAccess().getRebuttsAssignment_3_1(), "rule__Statement__RebuttsAssignment_3_1");
+					put(grammarAccess.getArgumentDiagramAccess().getAlternatives_3(), "rule__ArgumentDiagram__Alternatives_3");
+					put(grammarAccess.getSplitParenthesesAccess().getAlternatives(), "rule__SplitParentheses__Alternatives");
+					put(grammarAccess.getNodeTypeAccess().getAlternatives(), "rule__NodeType__Alternatives");
+					put(grammarAccess.getConnectiveTypeAccess().getAlternatives(), "rule__ConnectiveType__Alternatives");
+					put(grammarAccess.getLinkTypeAccess().getAlternatives(), "rule__LinkType__Alternatives");
+					put(grammarAccess.getArgumentDiagramAccess().getGroup(), "rule__ArgumentDiagram__Group__0");
+					put(grammarAccess.getArgumentDiagramAccess().getGroup_2(), "rule__ArgumentDiagram__Group_2__0");
+					put(grammarAccess.getNodeAccess().getGroup(), "rule__Node__Group__0");
+					put(grammarAccess.getNodeAccess().getGroup_2(), "rule__Node__Group_2__0");
+					put(grammarAccess.getLinkAccess().getGroup(), "rule__Link__Group__0");
+					put(grammarAccess.getSplitCommasAccess().getGroup(), "rule__SplitCommas__Group__0");
+					put(grammarAccess.getSplitCommasAccess().getGroup_1(), "rule__SplitCommas__Group_1__0");
+					put(grammarAccess.getSplitConnectiveAccess().getGroup(), "rule__SplitConnective__Group__0");
+					put(grammarAccess.getSplitConnectiveAccess().getGroup_1(), "rule__SplitConnective__Group_1__0");
+					put(grammarAccess.getSplitParenthesesAccess().getGroup_1(), "rule__SplitParentheses__Group_1__0");
+					put(grammarAccess.getArgumentDiagramAccess().getNameAssignment_1(), "rule__ArgumentDiagram__NameAssignment_1");
+					put(grammarAccess.getArgumentDiagramAccess().getHighlightAssignment_2_1(), "rule__ArgumentDiagram__HighlightAssignment_2_1");
+					put(grammarAccess.getArgumentDiagramAccess().getNodesAssignment_3_0(), "rule__ArgumentDiagram__NodesAssignment_3_0");
+					put(grammarAccess.getArgumentDiagramAccess().getLinksAssignment_3_1(), "rule__ArgumentDiagram__LinksAssignment_3_1");
+					put(grammarAccess.getNodeAccess().getNameAssignment_0(), "rule__Node__NameAssignment_0");
+					put(grammarAccess.getNodeAccess().getTypeAssignment_1(), "rule__Node__TypeAssignment_1");
+					put(grammarAccess.getNodeAccess().getDescriptionAssignment_2_1(), "rule__Node__DescriptionAssignment_2_1");
+					put(grammarAccess.getLinkAccess().getAfromAssignment_0(), "rule__Link__AfromAssignment_0");
+					put(grammarAccess.getLinkAccess().getLinkAssignment_1(), "rule__Link__LinkAssignment_1");
+					put(grammarAccess.getLinkAccess().getToNode1Assignment_2(), "rule__Link__ToNode1Assignment_2");
+					put(grammarAccess.getSplitCommasAccess().getRightAssignment_1_2(), "rule__SplitCommas__RightAssignment_1_2");
+					put(grammarAccess.getSplitConnectiveAccess().getConnectiveAssignment_1_1(), "rule__SplitConnective__ConnectiveAssignment_1_1");
+					put(grammarAccess.getSplitConnectiveAccess().getRightAssignment_1_2(), "rule__SplitConnective__RightAssignment_1_2");
+					put(grammarAccess.getNodeLiteralAccess().getValueAssignment(), "rule__NodeLiteral__ValueAssignment");
 				}
 			};
 		}
@@ -64,7 +76,7 @@ public class ArgumentParser extends AbstractContentAssistParser {
 	protected Collection<FollowElement> getFollowElements(AbstractInternalContentAssistParser parser) {
 		try {
 			uk.ac.open.argument.ui.contentassist.antlr.internal.InternalArgumentParser typedParser = (uk.ac.open.argument.ui.contentassist.antlr.internal.InternalArgumentParser) parser;
-			typedParser.entryRuleArgument();
+			typedParser.entryRuleArgumentDiagram();
 			return typedParser.getFollowElements();
 		} catch(RecognitionException ex) {
 			throw new RuntimeException(ex);

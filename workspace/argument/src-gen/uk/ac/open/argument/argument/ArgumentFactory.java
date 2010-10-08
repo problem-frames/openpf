@@ -26,22 +26,67 @@ public interface ArgumentFactory extends EFactory
   ArgumentFactory eINSTANCE = uk.ac.open.argument.argument.impl.ArgumentFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Argument</em>'.
+   * Returns a new object of class '<em>Diagram</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Argument</em>'.
+   * @return a new object of class '<em>Diagram</em>'.
    * @generated
    */
-  Argument createArgument();
+  ArgumentDiagram createArgumentDiagram();
 
   /**
-   * Returns a new object of class '<em>Statement</em>'.
+   * Returns a new object of class '<em>Node</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Statement</em>'.
+   * @return a new object of class '<em>Node</em>'.
    * @generated
    */
-  Statement createStatement();
+  Node createNode();
+
+  /**
+   * Returns a new object of class '<em>Link</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Link</em>'.
+   * @generated
+   */
+  Link createLink();
+
+  /**
+   * Returns a new object of class '<em>Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Expression</em>'.
+   * @generated
+   */
+  Expression createExpression();
+
+  /**
+   * Returns a new object of class '<em>Node Literal</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Node Literal</em>'.
+   * @generated
+   */
+  NodeLiteral createNodeLiteral();
+
+  /**
+   * Returns a new object of class '<em>Split Commas</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Split Commas</em>'.
+   * @generated
+   */
+  SplitCommas createSplitCommas();
+
+  /**
+   * Returns a new object of class '<em>Split Connective</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Split Connective</em>'.
+   * @generated
+   */
+  SplitConnective createSplitConnective();
 
   /**
    * Returns the package supported by this factory.

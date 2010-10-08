@@ -1,12 +1,39 @@
 grammar uk.ac.open.argument.Argument with org.eclipse.xtext.common.Terminals
 generate argument "http://www.ac.uk/open/argument/Argument"
 
-Argument:
-   ("given grounds" (grounds+=Statement)+ )?
-   ("warranted by" (warrants+=Statement | "(" warrants+=Argument ")" )+ )?
-   "thus claim"  name=ID ":" str=STRING
-   ("rebutted by" (rebutts+=Statement)+)?;
-   
-Statement:
-   name=ID ":" str=STRING
-   ("rebutted by" (rebutts+=Statement)+)?;
+ArgumentDiagram: "argument:" name=ID ("for" highlight=[Node])?
+	((nodes+=Node | links+=Link))*;
+
+Node:
+	name=ID (type=NodeType)?
+	((":")? description=STRING)?;
+
+enum NodeType:
+	CLAIM="C" | WARRANT="W" | GROUND="G" | REBUTTAL="R" | MITIGATION="M" | ARGUMENT="A";
+
+Link: 
+    (afrom=[Node] link=LinkType toNode1=SplitCommas);
+
+SplitCommas returns Expression:
+ SplitConnective ({SplitCommas.left=current} ',' right=SplitConnective)*;
+
+SplitConnective returns Expression:
+ SplitParentheses ({SplitConnective.left=current} connective=ConnectiveType right=SplitParentheses)*;
+ 
+enum ConnectiveType:
+	AND="and" | OR="or";
+
+SplitParentheses returns Expression:
+ NodeLiteral |
+ '(' SplitCommas ')';
+
+NodeLiteral:
+ value=[Node];
+
+enum LinkType:
+	ARGUES="argues" | REBUTS="rebuts" | MITIGATES="mitigates";
+
+terminal ID: ('#' (!('#'))+ '#') |
+  ('^'? ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*);
+  
+terminal QUALIFIED_NAME : ID ('.' ID)*;  

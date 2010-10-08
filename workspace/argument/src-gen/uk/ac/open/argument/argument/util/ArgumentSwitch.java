@@ -95,17 +95,55 @@ public class ArgumentSwitch<T>
   {
     switch (classifierID)
     {
-      case ArgumentPackage.ARGUMENT:
+      case ArgumentPackage.ARGUMENT_DIAGRAM:
       {
-        Argument argument = (Argument)theEObject;
-        T result = caseArgument(argument);
+        ArgumentDiagram argumentDiagram = (ArgumentDiagram)theEObject;
+        T result = caseArgumentDiagram(argumentDiagram);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case ArgumentPackage.STATEMENT:
+      case ArgumentPackage.NODE:
       {
-        Statement statement = (Statement)theEObject;
-        T result = caseStatement(statement);
+        Node node = (Node)theEObject;
+        T result = caseNode(node);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ArgumentPackage.LINK:
+      {
+        Link link = (Link)theEObject;
+        T result = caseLink(link);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ArgumentPackage.EXPRESSION:
+      {
+        Expression expression = (Expression)theEObject;
+        T result = caseExpression(expression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ArgumentPackage.NODE_LITERAL:
+      {
+        NodeLiteral nodeLiteral = (NodeLiteral)theEObject;
+        T result = caseNodeLiteral(nodeLiteral);
+        if (result == null) result = caseExpression(nodeLiteral);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ArgumentPackage.SPLIT_COMMAS:
+      {
+        SplitCommas splitCommas = (SplitCommas)theEObject;
+        T result = caseSplitCommas(splitCommas);
+        if (result == null) result = caseExpression(splitCommas);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ArgumentPackage.SPLIT_CONNECTIVE:
+      {
+        SplitConnective splitConnective = (SplitConnective)theEObject;
+        T result = caseSplitConnective(splitConnective);
+        if (result == null) result = caseExpression(splitConnective);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -114,33 +152,113 @@ public class ArgumentSwitch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Argument</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Diagram</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Argument</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Diagram</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseArgument(Argument object)
+  public T caseArgumentDiagram(ArgumentDiagram object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Statement</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Node</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Statement</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Node</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseStatement(Statement object)
+  public T caseNode(Node object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Link</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Link</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLink(Link object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseExpression(Expression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Node Literal</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Node Literal</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseNodeLiteral(NodeLiteral object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Split Commas</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Split Commas</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSplitCommas(SplitCommas object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Split Connective</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Split Connective</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSplitConnective(SplitConnective object)
   {
     return null;
   }

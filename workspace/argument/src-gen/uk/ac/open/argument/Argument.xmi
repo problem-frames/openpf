@@ -4,65 +4,259 @@
     <metamodelDeclarations xsi:type="xtext:GeneratedMetamodel" name="argument">
       <ePackage href="http://www.ac.uk/open/argument/Argument#/"/>
     </metamodelDeclarations>
-    <rules xsi:type="xtext:ParserRule" name="Argument">
+    <rules xsi:type="xtext:ParserRule" name="ArgumentDiagram">
       <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/argument/Argument#//Argument"/>
+        <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/argument/Argument#//ArgumentDiagram"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Group" cardinality="?">
-          <elements xsi:type="xtext:Keyword" value="given grounds"/>
-          <elements xsi:type="xtext:Assignment" cardinality="+" feature="grounds" operator="+=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.1"/>
-          </elements>
-        </elements>
-        <elements xsi:type="xtext:Group" cardinality="?">
-          <elements xsi:type="xtext:Keyword" value="warranted by"/>
-          <elements xsi:type="xtext:Alternatives" cardinality="+">
-            <elements xsi:type="xtext:Assignment" feature="warrants" operator="+=">
-              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.1"/>
-            </elements>
-            <elements xsi:type="xtext:Group">
-              <elements xsi:type="xtext:Keyword" value="("/>
-              <elements xsi:type="xtext:Assignment" feature="warrants" operator="+=">
-                <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.0"/>
-              </elements>
-              <elements xsi:type="xtext:Keyword" value=")"/>
-            </elements>
-          </elements>
-        </elements>
-        <elements xsi:type="xtext:Keyword" value="thus claim"/>
+        <elements xsi:type="xtext:Keyword" value="argument:"/>
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-        </elements>
-        <elements xsi:type="xtext:Keyword" value=":"/>
-        <elements xsi:type="xtext:Assignment" feature="str" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
         </elements>
         <elements xsi:type="xtext:Group" cardinality="?">
-          <elements xsi:type="xtext:Keyword" value="rebutted by"/>
-          <elements xsi:type="xtext:Assignment" cardinality="+" feature="rebutts" operator="+=">
+          <elements xsi:type="xtext:Keyword" value="for"/>
+          <elements xsi:type="xtext:Assignment" feature="highlight" operator="=">
+            <terminal xsi:type="xtext:CrossReference">
+              <type metamodel="/0/@metamodelDeclarations.0">
+                <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/argument/Argument#//Node"/>
+              </type>
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
+            </terminal>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Alternatives" cardinality="*">
+          <elements xsi:type="xtext:Assignment" feature="nodes" operator="+=">
             <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.1"/>
+          </elements>
+          <elements xsi:type="xtext:Assignment" feature="links" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
           </elements>
         </elements>
       </alternatives>
     </rules>
-    <rules xsi:type="xtext:ParserRule" name="Statement">
+    <rules xsi:type="xtext:ParserRule" name="Node">
       <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/argument/Argument#//Statement"/>
+        <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/argument/Argument#//Node"/>
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
         </elements>
-        <elements xsi:type="xtext:Keyword" value=":"/>
-        <elements xsi:type="xtext:Assignment" feature="str" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="type" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.2"/>
         </elements>
         <elements xsi:type="xtext:Group" cardinality="?">
-          <elements xsi:type="xtext:Keyword" value="rebutted by"/>
-          <elements xsi:type="xtext:Assignment" cardinality="+" feature="rebutts" operator="+=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.1"/>
+          <elements xsi:type="xtext:Keyword" cardinality="?" value=":"/>
+          <elements xsi:type="xtext:Assignment" feature="description" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
           </elements>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:EnumRule" name="NodeType">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EEnum" href="http://www.ac.uk/open/argument/Argument#//NodeType"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.ac.uk/open/argument/Argument#//NodeType/CLAIM"/>
+          <literal value="C"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.ac.uk/open/argument/Argument#//NodeType/WARRANT"/>
+          <literal value="W"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.ac.uk/open/argument/Argument#//NodeType/GROUND"/>
+          <literal value="G"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.ac.uk/open/argument/Argument#//NodeType/REBUTTAL"/>
+          <literal value="R"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.ac.uk/open/argument/Argument#//NodeType/MITIGATION"/>
+          <literal value="M"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.ac.uk/open/argument/Argument#//NodeType/ARGUMENT"/>
+          <literal value="A"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Link">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/argument/Argument#//Link"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" feature="afrom" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.0">
+              <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/argument/Argument#//Node"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="link" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.9"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="toNode1" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="SplitCommas">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/argument/Argument#//Expression"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.5"/>
+        <elements xsi:type="xtext:Group" cardinality="*">
+          <elements xsi:type="xtext:Action" feature="left" operator="=">
+            <type metamodel="/0/@metamodelDeclarations.0">
+              <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/argument/Argument#//SplitCommas"/>
+            </type>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value=","/>
+          <elements xsi:type="xtext:Assignment" feature="right" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.5"/>
+          </elements>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="SplitConnective">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/argument/Argument#//Expression"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
+        <elements xsi:type="xtext:Group" cardinality="*">
+          <elements xsi:type="xtext:Action" feature="left" operator="=">
+            <type metamodel="/0/@metamodelDeclarations.0">
+              <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/argument/Argument#//SplitConnective"/>
+            </type>
+          </elements>
+          <elements xsi:type="xtext:Assignment" feature="connective" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.6"/>
+          </elements>
+          <elements xsi:type="xtext:Assignment" feature="right" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
+          </elements>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:EnumRule" name="ConnectiveType">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EEnum" href="http://www.ac.uk/open/argument/Argument#//ConnectiveType"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.ac.uk/open/argument/Argument#//ConnectiveType/AND"/>
+          <literal value="and"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.ac.uk/open/argument/Argument#//ConnectiveType/OR"/>
+          <literal value="or"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="SplitParentheses">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/argument/Argument#//Expression"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.8"/>
+        <elements xsi:type="xtext:Group">
+          <elements xsi:type="xtext:Keyword" value="("/>
+          <elements xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
+          <elements xsi:type="xtext:Keyword" value=")"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="NodeLiteral">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/argument/Argument#//NodeLiteral"/>
+      </type>
+      <alternatives xsi:type="xtext:Assignment" feature="value" operator="=">
+        <terminal xsi:type="xtext:CrossReference">
+          <type metamodel="/0/@metamodelDeclarations.0">
+            <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/argument/Argument#//Node"/>
+          </type>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
+        </terminal>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:EnumRule" name="LinkType">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EEnum" href="http://www.ac.uk/open/argument/Argument#//LinkType"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.ac.uk/open/argument/Argument#//LinkType/ARGUES"/>
+          <literal value="argues"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.ac.uk/open/argument/Argument#//LinkType/REBUTS"/>
+          <literal value="rebuts"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.ac.uk/open/argument/Argument#//LinkType/MITIGATES"/>
+          <literal value="mitigates"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:TerminalRule" name="ID">
+      <type metamodel="/1/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:Group">
+          <elements xsi:type="xtext:Keyword" value="#"/>
+          <elements xsi:type="xtext:NegatedToken" cardinality="+">
+            <terminal xsi:type="xtext:Keyword" value="#"/>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value="#"/>
+        </elements>
+        <elements xsi:type="xtext:Group">
+          <elements xsi:type="xtext:Keyword" cardinality="?" value="^"/>
+          <elements xsi:type="xtext:Alternatives">
+            <elements xsi:type="xtext:CharacterRange">
+              <left value="a"/>
+              <right value="z"/>
+            </elements>
+            <elements xsi:type="xtext:CharacterRange">
+              <left value="A"/>
+              <right value="Z"/>
+            </elements>
+            <elements xsi:type="xtext:Keyword" value="_"/>
+          </elements>
+          <elements xsi:type="xtext:Alternatives" cardinality="*">
+            <elements xsi:type="xtext:CharacterRange">
+              <left value="a"/>
+              <right value="z"/>
+            </elements>
+            <elements xsi:type="xtext:CharacterRange">
+              <left value="A"/>
+              <right value="Z"/>
+            </elements>
+            <elements xsi:type="xtext:Keyword" value="_"/>
+            <elements xsi:type="xtext:CharacterRange">
+              <left value="0"/>
+              <right value="9"/>
+            </elements>
+          </elements>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:TerminalRule" name="QUALIFIED_NAME">
+      <type metamodel="/1/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
+        <elements xsi:type="xtext:Group" cardinality="*">
+          <elements xsi:type="xtext:Keyword" value="."/>
+          <elements xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
         </elements>
       </alternatives>
     </rules>

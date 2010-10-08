@@ -1,0 +1,32 @@
+argument: test
+
+G2 G "Valid credentials are given only to HR members"
+
+G3 G "Credential are given in person"
+
+G4 W "Credential administrators are honest and reliable"
+
+C1 C "Credential administration is correct"
+
+R1 R "HR member is dishonets"
+
+C2 C "HR credentials provided --> HR member"
+
+M1 M "XXX"
+
+R4 R "YYY"
+
+A1 A 
+
+A2 A
+
+A1 argues G3 and G2, (G4 or G2) or G3, C1 //(given ground G3 warranted by G4 thus claims C1)
+
+R1 rebuts A1 // (A1 is rebutted by R1)
+
+A2 argues G2, A1, C2 // (given ground G2 warranted by A1 thus claims C2)
+
+M1 mitigates R1 // (R1 is mitigated by M1)
+
+R4 rebuts M1 // (M1 is rebutted by R4)
+
