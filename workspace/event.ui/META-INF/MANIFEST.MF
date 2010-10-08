@@ -1,19 +1,17 @@
 Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: event.ui
-Bundle-Vendor: Yijun Yu
-Bundle-Version: 1.0.0
-Bundle-SymbolicName: event.ui; singleton:=true
-Bundle-ActivationPolicy: lazy
-Require-Bundle: event;visibility:=reexport,
- org.eclipse.ui.editors;bundle-version="3.5.0",
- org.eclipse.ui.ide;bundle-version="3.5.0",
- org.eclipse.xtext.ui,
- org.eclipse.xtext.ui.shared,
- org.eclipse.ui,
- org.eclipse.xtext.builder,
- org.antlr.runtime
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Import-Package: org.apache.log4j
 Export-Package: uk.ac.open.event.ui.contentassist.antlr
+Require-Bundle: event;visibility:=reexport,org.eclipse.ui.editors;bund
+ le-version="3.5.0",org.eclipse.ui.ide;bundle-version="3.5.0",org.ecli
+ pse.xtext.ui,org.eclipse.xtext.ui.shared,org.eclipse.ui,org.eclipse.x
+ text.builder,org.antlr.runtime
+Bundle-Vendor: Yijun Yu
+Bundle-ActivationPolicy: lazy
+Bundle-Version: 1.0.0
+Bundle-Name: event.ui
 Bundle-Activator: uk.ac.open.event.ui.internal.EventCalculusActivator
+Bundle-ManifestVersion: 2
+Import-Package: org.apache.log4j
+Bundle-SymbolicName: event.ui; singleton:=true
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+
+

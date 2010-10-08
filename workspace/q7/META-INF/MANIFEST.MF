@@ -1,21 +1,12 @@
 Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: Q7 Plug-in
-Bundle-SymbolicName: q7;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Export-Package: .,action,codegen,convertor,model,org.javacc,org.javacc
+ .jjdoc,org.javacc.jjtree,org.javacc.parser,parser
+Require-Bundle: util,org.eclipse.emf.ecore,core
 Bundle-Vendor: Yijun Yu
-Require-Bundle: util,
- org.eclipse.emf.ecore,
- core
-Export-Package: .,
- action,
- codegen,
- convertor,
- model,
- org.javacc,
- org.javacc.jjdoc,
- org.javacc.jjtree,
- org.javacc.parser,
- parser
+Bundle-Version: 1.0.0.201010080232
+Bundle-Name: Q7 Plug-in
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: q7;singleton:=true
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+
 

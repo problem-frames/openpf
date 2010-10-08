@@ -1,52 +1,35 @@
 Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: Evaluation Plug-in
-Bundle-SymbolicName: edu.toronto.cs.openome.evaluation;singleton:=true
-Bundle-Version: 1.0.0
-Require-Bundle: org.sat4j.core,
- edu.toronto.cs.openome_model.diagram,
- edu.toronto.cs.openome_model.editor,
- edu.toronto.cs.openome.conversion,
- util,
- org.eclipse.gmf.runtime.diagram.core,
- org.eclipse.gmf.runtime.diagram.ui;visibility:=reexport,
- org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide,
- org.eclipse.core.runtime,
- org.eclipse.ui,
- core
+Export-Package: edu.toronto.cs.openome.evaluation.SATSolver,edu.toront
+ o.cs.openome.evaluation.commands; uses:="edu.toronto.cs.openome.evalu
+ ation.qualitativeinteractivereasoning,  org.eclipse.emf.common.comman
+ d,  org.eclipse.swt.widgets,  edu.toronto.cs.openome_model",edu.toron
+ to.cs.openome.evaluation.gui; uses:="org.eclipse.jface.viewers,  org.
+ eclipse.swt.graphics,  org.eclipse.ui.dialogs,  org.eclipse.swt.widge
+ ts,  edu.toronto.cs.openome_model,  org.eclipse.gmf.runtime.diagram.u
+ i.internal.commands",edu.toronto.cs.openome.evaluation.handlers; uses
+ :="edu.toronto.cs.openome_model.impl,  org.eclipse.emf.common.command
+ ,  org.eclipse.core.commands,  org.eclipse.gmf.runtime.diagram.ui.par
+ ts",edu.toronto.cs.openome.evaluation.qualitativeinteractivereasoning
+ ; uses:="edu.toronto.cs.openome_model.impl,  org.eclipse.core.runtime
+ ,  org.eclipse.gmf.runtime.diagram.ui.menus,  org.eclipse.gmf.runtime
+ .diagram.ui.commands,  org.eclipse.emf.common.command,  edu.toronto.c
+ s.openome_model,  org.eclipse.gmf.runtime.diagram.ui.parts,  org.ecli
+ pse.gmf.runtime.common.core.command,  edu.toronto.cs.openome.evaluati
+ on.reasoning,  org.eclipse.gmf.runtime.common.ui.dialogs,  org.eclips
+ e.jface.viewers,  org.eclipse.ui.dialogs,  org.eclipse.swt.widgets,  
+ org.eclipse.gmf.runtime.diagram.ui.internal.commands",edu.toronto.cs.
+ openome.evaluation.reasoning;uses:="edu.toronto.cs.openome_model.impl
+ ,org.eclipse.emf.common.command,edu.toronto.cs.openome_model"
+Require-Bundle: org.sat4j.core,edu.toronto.cs.openome_model.diagram,ed
+ u.toronto.cs.openome_model.editor,edu.toronto.cs.openome.conversion,u
+ til,org.eclipse.gmf.runtime.diagram.core,org.eclipse.gmf.runtime.diag
+ ram.ui;visibility:=reexport,org.eclipse.gmf.runtime.diagram.ui.resour
+ ces.editor.ide,org.eclipse.core.runtime,org.eclipse.ui,core
 Bundle-ActivationPolicy: lazy
-Export-Package: edu.toronto.cs.openome.evaluation.SATSolver,
- edu.toronto.cs.openome.evaluation.commands;
-  uses:="edu.toronto.cs.openome.evaluation.qualitativeinteractivereasoning,
-   org.eclipse.emf.common.command,
-   org.eclipse.swt.widgets,
-   edu.toronto.cs.openome_model",
- edu.toronto.cs.openome.evaluation.gui;
-  uses:="org.eclipse.jface.viewers,
-   org.eclipse.swt.graphics,
-   org.eclipse.ui.dialogs,
-   org.eclipse.swt.widgets,
-   edu.toronto.cs.openome_model,
-   org.eclipse.gmf.runtime.diagram.ui.internal.commands",
- edu.toronto.cs.openome.evaluation.handlers;
-  uses:="edu.toronto.cs.openome_model.impl,
-   org.eclipse.emf.common.command,
-   org.eclipse.core.commands,
-   org.eclipse.gmf.runtime.diagram.ui.parts",
- edu.toronto.cs.openome.evaluation.qualitativeinteractivereasoning;
-  uses:="edu.toronto.cs.openome_model.impl,
-   org.eclipse.core.runtime,
-   org.eclipse.gmf.runtime.diagram.ui.menus,
-   org.eclipse.gmf.runtime.diagram.ui.commands,
-   org.eclipse.emf.common.command,
-   edu.toronto.cs.openome_model,
-   org.eclipse.gmf.runtime.diagram.ui.parts,
-   org.eclipse.gmf.runtime.common.core.command,
-   edu.toronto.cs.openome.evaluation.reasoning,
-   org.eclipse.gmf.runtime.common.ui.dialogs,
-   org.eclipse.jface.viewers,
-   org.eclipse.ui.dialogs,
-   org.eclipse.swt.widgets,
-   org.eclipse.gmf.runtime.diagram.ui.internal.commands",
- edu.toronto.cs.openome.evaluation.reasoning;uses:="edu.toronto.cs.openome_model.impl,org.eclipse.emf.common.command,edu.toronto.cs.openome_model"
+Bundle-Version: 1.0.0
+Bundle-Name: Evaluation Plug-in
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: edu.toronto.cs.openome.evaluation;singleton:=true
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+
+

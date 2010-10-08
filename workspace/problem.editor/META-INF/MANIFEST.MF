@@ -1,18 +1,19 @@
 Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: %pluginName
-Bundle-SymbolicName: problem.editor;singleton:=true
-Bundle-Version: 1.0.0
+Export-Package: uk.ac.open.problem.presentation
+Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .
-Bundle-Activator: uk.ac.open.problem.presentation.ProblemEditorPlugin$Implementation
-Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: uk.ac.open.problem.presentation
-Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.core.resources;visibility:=reexport,
- problem.edit;visibility:=reexport,
- org.eclipse.emf.ecore.xmi;visibility:=reexport,
- org.eclipse.emf.edit.ui;visibility:=reexport,
- org.eclipse.ui.ide;visibility:=reexport
-Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.core.runtime,org.eclipse.core.resources;vi
+ sibility:=reexport,problem.edit;visibility:=reexport,org.eclipse.emf.
+ ecore.xmi;visibility:=reexport,org.eclipse.emf.edit.ui;visibility:=re
+ export,org.eclipse.ui.ide;visibility:=reexport
+Bundle-Vendor: %providerName
+Bundle-Version: 1.0.0
+Bundle-ManifestVersion: 2
+Bundle-Activator: uk.ac.open.problem.presentation.ProblemEditorPlugin$
+ Implementation
+Bundle-SymbolicName: problem.editor;singleton:=true
+
+

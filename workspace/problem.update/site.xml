@@ -3,127 +3,294 @@
    <description name="Requirements Engineering Tools Provided by The Open University" url="http://sead1.open.ac.uk/openre">
       The update site contains a number of Eclipse plugins to support the requirements engineering research at the Software Engineering And Design group, The Open University.
    </description>
-   <feature url="features/problem.feature_1.0.0.201009220718.jar" id="problem.feature" version="1.0.0.201009220718">
+   <feature url="features/argument.feature_1.0.0.qualifier.jar" id="argument.feature" version="1.0.0.qualifier">
       <category name="RE_Tools"/>
    </feature>
-   <feature url="features/istar.feature_1.0.0.201009220718.jar" id="istar.feature" version="1.0.0.201009220718">
+   <feature url="features/core.feature_1.0.0.qualifier.jar" id="core.feature" version="1.0.0.qualifier">
+      <category name="Platform"/>
+   </feature>
+   <feature url="features/dependency.feature_1.0.0.qualifier.jar" id="dependency.feature" version="1.0.0.qualifier">
       <category name="RE_Tools"/>
    </feature>
-   <feature url="features/situation.feature_1.0.0.201009220730.jar" id="situation.feature" version="1.0.0.201009220730">
-      <category name="SecureChange_Addons"/>
-   </feature>
-   <feature url="features/event.feature_1.0.0.201009220730.jar" id="event.feature" version="1.0.0.201009220730">
+   <feature url="features/event.feature_1.0.0.qualifier.jar" id="event.feature" version="1.0.0.qualifier">
       <category name="RE_Tools"/>
    </feature>
-   <feature url="features/change.feature_1.0.0.jar" id="change.feature" version="1.0.0">
-      <category name="SecureChange_Addons"/>
+   <feature url="features/hu.optxware.emf2viatra.feature_0.0.1.jar" id="hu.optxware.emf2viatra.feature" version="0.0.1">
+      <category name="Viatra"/>
    </feature>
-   <feature url="features/core.feature_1.0.0.jar" id="core.feature" version="1.0.0">
-      <category name="EnablingTools"/>
+   <feature url="features/istar.feature_1.0.0.qualifier.jar" id="istar.feature" version="1.0.0.qualifier">
+      <category name="RE_Tools"/>
    </feature>
-   <feature url="features/ontology.feature_1.0.0.201009220718.jar" id="ontology.feature" version="1.0.0.201009220718">
-      <category name="SecureChange_Addons"/>
+   <feature url="features/laser.littlejil.check.feature_0.0.3.jar" id="laser.littlejil.check.feature" version="0.0.3">
+      <category name="Little-JIL"/>
    </feature>
-   <feature url="features/uncal.feature_1.0.0.201009220718.jar" id="uncal.feature" version="1.0.0.201009220718">
-      <category name="NII_Addons"/>
+   <feature url="features/laser.littlejil.search.feature_0.0.1.jar" id="laser.littlejil.search.feature" version="0.0.1">
+      <category name="Little-JIL"/>
    </feature>
-   <feature url="features/org.eclipse.platform_3.6.0.v20100602-9gF78GpqFt6trOGhL60z0oEx3fz-JKNwxPY.jar" id="org.eclipse.platform" version="3.6.0.v20100602-9gF78GpqFt6trOGhL60z0oEx3fz-JKNwxPY">
-      <category name="Platform"/>
+   <feature url="features/laser.visualjil.eclipse.assistants.feature_1.0.1.jar" id="laser.visualjil.eclipse.assistants.feature" version="1.0.1">
+      <category name="Little-JIL"/>
    </feature>
-   <feature url="features/org.eclipse.emf_2.6.0.v20100614-1136.jar" id="org.eclipse.emf" version="2.6.0.v20100614-1136">
-      <category name="Platform"/>
+   <feature url="features/laser.visualjil.eclipse.romeo.feature_1.0.1.jar" id="laser.visualjil.eclipse.romeo.feature" version="1.0.1">
+      <category name="Little-JIL"/>
    </feature>
-   <feature url="features/org.eclipse.jdt_3.6.0.v20100526-0800-7z8XFUJFMTfCWGoVuHImpms9H155.jar" id="org.eclipse.jdt" version="3.6.0.v20100526-0800-7z8XFUJFMTfCWGoVuHImpms9H155">
-      <category name="Platform"/>
+   <feature url="features/laser.visualjil.feature_0.4.5.jar" id="laser.visualjil.feature" version="0.4.5">
+      <category name="Little-JIL"/>
    </feature>
-   <feature url="features/org.eclipse.xtext.runtime_1.0.0.v201006170321.jar" id="org.eclipse.xtext.runtime" version="1.0.0.v201006170321">
-      <category name="Platform"/>
+   <feature url="features/laser.visualjil.javabeans.feature_1.0.2.jar" id="laser.visualjil.javabeans.feature" version="1.0.2">
+      <category name="Little-JIL"/>
    </feature>
-   <feature url="features/org.eclipse.xtext.ui_1.0.0.v201006170321.jar" id="org.eclipse.xtext.ui" version="1.0.0.v201006170321">
-      <category name="Platform"/>
+   <feature url="features/laser.visualjil.jgrid.feature_0.0.3.jar" id="laser.visualjil.jgrid.feature" version="0.0.3">
+      <category name="Little-JIL"/>
    </feature>
-   <feature url="features/org.eclipse.xtend.dependencies_1.0.0.v201006150611.jar" id="org.eclipse.xtend.dependencies" version="1.0.0.v201006150611">
-      <category name="Platform"/>
+   <feature url="features/laser.visualjil.jsim.feature_0.0.1.jar" id="laser.visualjil.jsim.feature" version="0.0.1">
+      <category name="Little-JIL"/>
    </feature>
-   <feature url="features/org.eclipse.xtend.typesystem.emf_1.0.0.v201006150611.jar" id="org.eclipse.xtend.typesystem.emf" version="1.0.0.v201006150611">
-      <category name="Platform"/>
+   <feature url="features/laser.visualjil.serialimporter.feature_1.0.3.jar" id="laser.visualjil.serialimporter.feature" version="1.0.3">
+      <category name="Little-JIL"/>
    </feature>
-   <feature url="features/org.eclipse.xtend.ui_1.0.0.v201006150611.jar" id="org.eclipse.xtend.ui" version="1.0.0.v201006150611">
-      <category name="Platform"/>
+   <feature url="features/laser.visualjil.vsrm.feature_0.0.3.jar" id="laser.visualjil.vsrm.feature" version="0.0.3">
+      <category name="Little-JIL"/>
    </feature>
-   <feature url="features/org.eclipse.xpand_1.0.0.v201006150611.jar" id="org.eclipse.xpand" version="1.0.0.v201006150611">
-      <category name="Platform"/>
+   <feature url="features/littlejil.analysis.eclipse.feature_0.0.12.jar" id="littlejil.analysis.eclipse.feature" version="0.0.12">
+      <category name="Little-JIL"/>
    </feature>
-   <feature url="features/org.eclipse.xpand.ui_1.0.0.v201006150611.jar" id="org.eclipse.xpand.ui" version="1.0.0.v201006150611">
-      <category name="Platform"/>
+   <feature url="features/org.eclipse.acceleo.runtime_3.0.1.v201009150438.jar" id="org.eclipse.acceleo.runtime" version="3.0.1.v201009150438">
+      <category name="Eclipse_Features"/>
    </feature>
-   <feature url="features/org.eclipse.emf.mwe.ui_1.0.0.v201006150535.jar" id="org.eclipse.emf.mwe.ui" version="1.0.0.v201006150535">
-      <category name="Platform"/>
-   </feature>
-   <feature url="features/xtext.feature_1.0.0.201009220718.jar" id="xtext.feature" version="1.0.0.201009220718">
-      <category name="Platform"/>
-   </feature>
-   <feature url="features/org.eclipse.mylyn.bugzilla_feature_3.4.0.v20100608-0100-e3x.jar" id="org.eclipse.mylyn.bugzilla_feature" version="3.4.0.v20100608-0100-e3x">
-      <category name="Platform"/>
-   </feature>
-   <feature url="features/org.eclipse.mylyn.context_feature_3.4.0.v20100608-0100-e3x.jar" id="org.eclipse.mylyn.context_feature" version="3.4.0.v20100608-0100-e3x">
-      <category name="Platform"/>
-   </feature>
-   <feature url="features/org.eclipse.mylyn.ide_feature_3.4.0.v20100608-0100-e3x.jar" id="org.eclipse.mylyn.ide_feature" version="3.4.0.v20100608-0100-e3x">
-      <category name="Platform"/>
-   </feature>
-   <feature url="features/org.eclipse.mylyn.java_feature_3.4.0.v20100608-0100-e3x.jar" id="org.eclipse.mylyn.java_feature" version="3.4.0.v20100608-0100-e3x">
-      <category name="Platform"/>
-   </feature>
-   <feature url="features/org.eclipse.mylyn_feature_3.4.0.v20100608-0100-e3x.jar" id="org.eclipse.mylyn_feature" version="3.4.0.v20100608-0100-e3x">
-      <category name="Platform"/>
+   <feature url="features/org.eclipse.acceleo_3.0.1.v201009150438.jar" id="org.eclipse.acceleo" version="3.0.1.v201009150438">
+      <category name="Eclipse_Features"/>
    </feature>
    <feature url="features/org.eclipse.cvs_1.2.0.v20100427-7B77FKs8sF7B77SDX4GW85.jar" id="org.eclipse.cvs" version="1.2.0.v20100427-7B77FKs8sF7B77SDX4GW85">
-      <category name="Platform"/>
+      <category name="Eclipse_Features"/>
    </feature>
-   <feature url="features/org.eclipse.emf.validation_1.4.0.v20100428-2315-479-9oB56N5BBR6LCA6.jar" id="org.eclipse.emf.validation" version="1.4.0.v20100428-2315-479-9oB56N5BBR6LCA6">
-      <category name="Platform"/>
+   <feature url="features/org.eclipse.draw2d_3.6.1.v20100908-1100-4507w31211A2403131.jar" id="org.eclipse.draw2d" version="3.6.1.v20100908-1100-4507w31211A2403131">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.emf.codegen.ecore.ui_2.6.0.v20100914-1218.jar" id="org.eclipse.emf.codegen.ecore.ui" version="2.6.0.v20100914-1218">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.emf.codegen.ecore_2.6.1.v20100914-1218.jar" id="org.eclipse.emf.codegen.ecore" version="2.6.1.v20100914-1218">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/problem.feature_1.0.0.qualifier.jar" id="problem.feature" version="1.0.0.qualifier">
+      <category name="RE_Tools"/>
+   </feature>
+   <feature url="features/org.eclipse.emf.codegen.ui_2.6.0.v20100914-1218.jar" id="org.eclipse.emf.codegen.ui" version="2.6.0.v20100914-1218">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.emf.codegen_2.6.0.v20100914-1218.jar" id="org.eclipse.emf.codegen" version="2.6.0.v20100914-1218">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.emf.common.ui_2.6.0.v20100914-1218.jar" id="org.eclipse.emf.common.ui" version="2.6.0.v20100914-1218">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.emf.common_2.6.0.v20100914-1218.jar" id="org.eclipse.emf.common" version="2.6.0.v20100914-1218">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.emf.converter_2.6.0.v20100914-1218.jar" id="org.eclipse.emf.converter" version="2.6.0.v20100914-1218">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.emf.databinding.edit_1.2.0.v20100914-1218.jar" id="org.eclipse.emf.databinding.edit" version="1.2.0.v20100914-1218">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.emf.databinding_1.2.0.v20100914-1218.jar" id="org.eclipse.emf.databinding" version="1.2.0.v20100914-1218">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.emf.ecore.edit_2.6.0.v20100914-1218.jar" id="org.eclipse.emf.ecore.edit" version="2.6.0.v20100914-1218">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.emf.ecore.editor_2.6.0.v20100914-1218.jar" id="org.eclipse.emf.ecore.editor" version="2.6.0.v20100914-1218">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.emf.ecore_2.6.1.v20100914-1218.jar" id="org.eclipse.emf.ecore" version="2.6.1.v20100914-1218">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.emf.edit.ui_2.6.0.v20100914-1218.jar" id="org.eclipse.emf.edit.ui" version="2.6.0.v20100914-1218">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.emf.edit_2.6.0.v20100914-1218.jar" id="org.eclipse.emf.edit" version="2.6.0.v20100914-1218">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.emf.mapping.ecore.editor_2.6.0.v20100914-1218.jar" id="org.eclipse.emf.mapping.ecore.editor" version="2.6.0.v20100914-1218">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.emf.mapping.ecore_2.6.0.v20100914-1218.jar" id="org.eclipse.emf.mapping.ecore" version="2.6.0.v20100914-1218">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.emf.mapping.ui_2.6.0.v20100914-1218.jar" id="org.eclipse.emf.mapping.ui" version="2.6.0.v20100914-1218">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.emf.mapping_2.6.0.v20100914-1218.jar" id="org.eclipse.emf.mapping" version="2.6.0.v20100914-1218">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.emf.mwe.ui_1.0.0.v201008251122.jar" id="org.eclipse.emf.mwe.ui" version="1.0.0.v201008251122">
+      <category name="Eclipse_Features"/>
    </feature>
    <feature url="features/org.eclipse.emf.transaction_1.4.0.v20100428-2315-377-8s734C3E7D15D6B.jar" id="org.eclipse.emf.transaction" version="1.4.0.v20100428-2315-377-8s734C3E7D15D6B">
-      <category name="Platform"/>
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.emf.validation_1.4.0.v20100428-2315-479-9oB56N5BBR6LCA6.jar" id="org.eclipse.emf.validation" version="1.4.0.v20100428-2315-479-9oB56N5BBR6LCA6">
+      <category name="Eclipse_Features"/>
    </feature>
    <feature url="features/org.eclipse.emf.workspace_1.4.0.v20100428-2315-36-8s734C367E3CBC7.jar" id="org.eclipse.emf.workspace" version="1.4.0.v20100428-2315-36-8s734C367E3CBC7">
-      <category name="Platform"/>
+      <category name="Eclipse_Features"/>
    </feature>
-   <feature url="features/org.eclipse.gef_3.6.0.v20100519-2050-777B-81A2Bz-69793A8B83447.jar" id="org.eclipse.gef" version="3.6.0.v20100519-2050-777B-81A2Bz-69793A8B83447">
-      <category name="Platform"/>
+   <feature url="features/org.eclipse.emf_2.6.1.v20100914-1218.jar" id="org.eclipse.emf" version="2.6.1.v20100914-1218">
+      <category name="Eclipse_Features"/>
    </feature>
-   <feature url="features/org.eclipse.gmf_1.4.0.v20100603-2230-7d98-FYnmMCGUhhvqV4nR2tsgWcV.jar" id="org.eclipse.gmf" version="1.4.0.v20100603-2230-7d98-FYnmMCGUhhvqV4nR2tsgWcV">
-      <category name="Platform"/>
+   <feature url="features/org.eclipse.equinox.p2.user.ui_2.0.0.v20100503-897HFZ-FdHjO2NQo0sD_Nt.jar" id="org.eclipse.equinox.p2.user.ui" version="2.0.0.v20100503-897HFZ-FdHjO2NQo0sD_Nt">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.gef_3.6.1.v20100908-1100-777B181A3Bz-6B663E7974242.jar" id="org.eclipse.gef" version="3.6.1.v20100908-1100-777B181A3Bz-6B663E7974242">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.gmf.runtime.notation_1.4.1.v20100909-1000-37708s73533F5C1479I.jar" id="org.eclipse.gmf.runtime.notation" version="1.4.1.v20100909-1000-37708s73533F5C1479I">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.gmf.runtime.thirdparty_1.4.0.v20100521-1113-7P8W5FHV2CNOiy0niXURaw311A16.jar" id="org.eclipse.gmf.runtime.thirdparty" version="1.4.0.v20100521-1113-7P8W5FHV2CNOiy0niXURaw311A16">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.gmf_1.4.1.v20100909-1300-7d9A78FYnmMD7VBZOqOghp2tsgXc.jar" id="org.eclipse.gmf" version="1.4.1.v20100909-1300-7d9A78FYnmMD7VBZOqOghp2tsgXc">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.help_1.2.0.v20100427-7e7jEKFEx2XlnZinYPtgz03.jar" id="org.eclipse.help" version="1.2.0.v20100427-7e7jEKFEx2XlnZinYPtgz03">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.jdt_3.6.0.v20100526-0800-7z8XFUJFMTfCWGoVuHImpms9H155.jar" id="org.eclipse.jdt" version="3.6.0.v20100526-0800-7z8XFUJFMTfCWGoVuHImpms9H155">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.mylyn.bugzilla_3.4.0.v20100608-0100-e3x.jar" id="org.eclipse.mylyn.bugzilla_feature" version="3.4.0.v20100608-0100-e3x">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.mylyn.context_3.4.0.v20100608-0100-e3x.jar" id="org.eclipse.mylyn.context_feature" version="3.4.0.v20100608-0100-e3x">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.mylyn.ide_3.4.0.v20100608-0100-e3x.jar" id="org.eclipse.mylyn.ide_feature" version="3.4.0.v20100608-0100-e3x">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.mylyn.java_3.4.0.v20100608-0100-e3x.jar" id="org.eclipse.mylyn.java_feature" version="3.4.0.v20100608-0100-e3x">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.mylyn.team_3.4.0.v20100608-0100-e3x.jar" id="org.eclipse.mylyn.team_feature" version="3.4.0.v20100608-0100-e3x">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.mylyn_3.4.0.v20100608-0100-e3x.jar" id="org.eclipse.mylyn_feature" version="3.4.0.v20100608-0100-e3x">
+      <category name="Eclipse_Features"/>
    </feature>
    <feature url="features/org.eclipse.ocl_3.0.0.v201005061704-79-7G9oB5855J7O8P9D.jar" id="org.eclipse.ocl" version="3.0.0.v201005061704-79-7G9oB5855J7O8P9D">
-      <category name="Platform"/>
+      <category name="Eclipse_Features"/>
    </feature>
-   <feature url="features/org.eclipse.swtbot_2.0.0.595-dev-e36.jar" id="org.eclipse.swtbot" version="2.0.0.595-dev-e36">
-      <category name="Platform"/>
+   <feature url="features/org.eclipse.pde_3.6.0.v20100525-7b7mFKtFEx2XmfZ4B7NUJA.jar" id="org.eclipse.pde" version="3.6.0.v20100525-7b7mFKtFEx2XmfZ4_B7NUJA">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.platform_3.6.0.v20100602-9gF78GpqFt6trOGhL60z0oEx3fz-JKNwxPY.jar" id="org.eclipse.platform" version="3.6.0.v20100602-9gF78GpqFt6trOGhL60z0oEx3fz-JKNwxPY">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.rcp_3.6.0.v20100519-9OArFKvFtsd7WLUKh-DcYTS.jar" id="org.eclipse.rcp" version="3.6.0.v20100519-9OArFKvFtsd7WLUKh-DcYTS">
+      <category name="Eclipse_Features"/>
    </feature>
    <feature url="features/org.eclipse.swtbot.eclipse_2.0.0.595-dev-e36.jar" id="org.eclipse.swtbot.eclipse" version="2.0.0.595-dev-e36">
-      <category name="Platform"/>
+      <category name="Eclipse_Features"/>
    </feature>
-   <feature url="features/org.eclipse.acceleo_3.0.0.v201006150906.jar" id="org.eclipse.acceleo" version="3.0.0.v201006150906">
-      <category name="Platform"/>
+   <feature url="features/org.eclipse.swtbot_2.0.0.595-dev-e36.jar" id="org.eclipse.swtbot" version="2.0.0.595-dev-e36">
+      <category name="Eclipse_Features"/>
    </feature>
-   <feature url="features/org.eclipse.acceleo.runtime_3.0.0.v201006150906.jar" id="org.eclipse.acceleo.runtime" version="3.0.0.v201006150906">
-      <category name="Platform"/>
+   <feature url="features/org.eclipse.viatra2.feature.visualisation_3.1.0.20100316.jar" id="org.eclipse.viatra2.feature.visualisation" version="3.1.0.20100316">
+      <category name="Viatra"/>
    </feature>
-   <feature url="features/org.eclipse.pde_3.6.0.v20100525-7b7mFKtFEx2XmfZ4_B7NUJA.jar" id="org.eclipse.pde" version="3.6.0.v20100525-7b7mFKtFEx2XmfZ4_B7NUJA">
-      <category name="Platform"/>
+   <feature url="features/org.eclipse.wst.common_core.feature_3.2.2.v201008091400-7B7DFElF7RZHOZJ6W0PsNJ.jar" id="org.eclipse.wst.common_core.feature" version="3.2.2.v201008091400-7B7DFElF7RZHOZJ6W0PsNJ">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.wst.common_ui.feature_3.2.2.v201008091400-7C78FPhEdhO_mXde7kbap_K7X1Qt.jar" id="org.eclipse.wst.common_ui.feature" version="3.2.2.v201008091400-7C78FPhEdhO_mXde7kbap_K7X1Qt">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.wst.xml_3.2.2.v201008170029-7C7OFXYF7RZHQHI5PyJwPT.jar" id="org.eclipse.wst.xml_core.feature" version="3.2.2.v201008170029-7C7OFXYF7RZHQHI5PyJwPT">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.xpand.ui_1.0.0.v201006150611.jar" id="org.eclipse.xpand.ui" version="1.0.0.v201006150611">
+      <category name="XTEXT_1.0.0"/>
+   </feature>
+   <feature url="features/org.eclipse.xpand_1.0.0.v201006150611.jar" id="org.eclipse.xpand" version="1.0.0.v201006150611">
+      <category name="XTEXT_1.0.0"/>
+   </feature>
+   <feature url="features/org.eclipse.xtend.dependencies_1.0.0.v201006150611.jar" id="org.eclipse.xtend.dependencies" version="1.0.0.v201008251147">
+      <category name="XTEXT_1.0.0"/>
+   </feature>
+   <feature url="features/org.eclipse.xtend.typesystem.emf_1.0.0.v201006150611.jar" id="org.eclipse.xtend.typesystem.emf" version="1.0.0.v201006150611">
+      <category name="XTEXT_1.0.0"/>
+   </feature>
+   <feature url="features/org.eclipse.xtend.ui_1.0.0.v201006150611.jar" id="org.eclipse.xtend.ui" version="1.0.0.v201006150611">
+      <category name="XTEXT_1.0.0"/>
+   </feature>
+   <feature url="features/org.eclipse.xtend_1.0.0.v201006150611.jar" id="org.eclipse.xtend" version="1.0.0.v201006150611">
+      <category name="XTEXT_1.0.0"/>
+   </feature>
+   <feature url="features/org.eclipse.xtext.runtime_1.0.0.v201006170321.jar" id="org.eclipse.xtext.runtime" version="1.0.0.v201006170321">
+      <category name="XTEXT_1.0.0"/>
+   </feature>
+   <feature url="features/org.eclipse.xtext.ui_1.0.0.v201006170321.jar" id="org.eclipse.xtext.ui" version="1.0.0.v201006170321">
+      <category name="XTEXT_1.0.0"/>
+   </feature>
+   <feature url="features/org.eclipse.xpand.ui_1.0.1.v201008251147.jar" id="org.eclipse.xpand.ui" version="1.0.1.v201008251147">
+      <category name="XTEXT_1.0.1"/>
+   </feature>
+   <feature url="features/org.eclipse.xpand_1.0.1.v201008251147.jar" id="org.eclipse.xpand" version="1.0.1.v201008251147">
+      <category name="XTEXT_1.0.1"/>
+   </feature>
+   <feature url="features/org.eclipse.xtend.dependencies_1.0.1.v201008251147.jar" id="org.eclipse.xtend.dependencies" version="1.0.1.v201008251147">
+      <category name="XTEXT_1.0.1"/>
+   </feature>
+   <feature url="features/org.eclipse.xtend.typesystem.emf_1.0.1.v201008251147.jar" id="org.eclipse.xtend.typesystem.emf" version="1.0.1.v201008251147">
+      <category name="XTEXT_1.0.1"/>
+   </feature>
+   <feature url="features/org.eclipse.xtend.ui_1.0.1.v201008251147.jar" id="org.eclipse.xtend.ui" version="1.0.1.v201008251147">
+      <category name="XTEXT_1.0.1"/>
+   </feature>
+   <feature url="features/org.eclipse.xtend_1.0.1.v201008251147.jar" id="org.eclipse.xtend" version="1.0.1.v201008251147">
+      <category name="XTEXT_1.0.1"/>
+   </feature>
+   <feature url="features/org.eclipse.xtext.runtime_1.0.1.v201008251220.jar" id="org.eclipse.xtext.runtime" version="1.0.1.v201008251220">
+      <category name="XTEXT_1.0.1"/>
+   </feature>
+   <feature url="features/org.eclipse.xtext.ui_1.0.1.v201008251220.jar" id="org.eclipse.xtext.ui" version="1.0.1.v201008251220">
+      <category name="XTEXT_1.0.1"/>
+   </feature>
+   <feature url="features/process.feature_1.0.0.qualifier.jar" id="process.feature" version="1.0.0.qualifier">
+      <category name="RE_Tools"/>
+   </feature>
+   <feature url="features/situation.feature_1.0.0.qualifier.jar" id="situation.feature" version="1.0.0.qualifier">
+      <category name="Secure_Change_AddOns"/>
+   </feature>
+   <feature url="features/ontology.feature_1.0.0.qualifier.jar" id="ontology.feature" version="1.0.0.qualifier">
+      <category name="Secure_Change_AddOns"/>
    </feature>
    <feature url="features/situation.m2m.feature_1.0.0.jar" id="situation.m2m.feature" version="1.0.0">
-      <category name="SecureChange_Addons"/>
+      <category name="Secure_Change_AddOns"/>
    </feature>
-   <category-def name="RE_Tools" label="Open Requirements Engineering Tools"/>
-   <category-def name="EnablingTools" label="Enabling Tools">
-      <description>
-         Addons on Problem Frames
-      </description>
-   </category-def>
-   <category-def name="SecureChange_Addons" label="eu.securechange.tools.wp3"/>
-   <category-def name="NII_Addons" label="NII_Addons"/>
-   <category-def name="Platform" label="Platform"/>
+   <feature url="features/xtext.feature_1.0.0.qualifier.jar" id="xtext.feature" version="1.0.0.qualifier">
+      <category name="Eclipse_Features"/>
+   </feature>
+   <feature url="features/org.eclipse.viatra2.feature.dsm_3.0.5.20100323.jar" id="org.eclipse.viatra2.feature.dsm" version="3.0.5.20100323">
+      <category name="Viatra"/>
+   </feature>
+   <feature url="features/org.eclipse.viatra2.feature.core_3.1.0.20100316.jar" id="org.eclipse.viatra2.feature.core" version="3.1.0.20100316">
+      <category name="Viatra"/>
+   </feature>
+   <feature url="features/org.eclipse.viatra2.gui.pattern_3.1.0.20100316.jar" id="org.eclipse.viatra2.gui.pattern" version="3.1.0.20100316">
+      <category name="Viatra"/>
+   </feature>
+   <feature url="features/org.eclipse.viatra2.feature.strings_3.1.0.20100316.jar" id="org.eclipse.viatra2.feature.strings" version="3.1.0.20100316">
+      <category name="Viatra"/>
+   </feature>
+   <feature url="features/change.feature_1.0.0.qualifier.jar" id="change.feature" version="1.0.0.qualifier">
+      <category name="Secure_Change_AddOns"/>
+   </feature>
+   <category-def name="Platform" label="Platform Utilities that might be installed already"/>
+   <category-def name="RE_Tools" label="Requirements Engineering Tools"/>
+   <category-def name="Secure_Change_AddOns" label="SecureChange AddOns"/>
+   <category-def name="Viatra" label="Viatra2 Features"/>
+   <category-def name="Little-JIL" label="Little-JIL Features"/>
+   <category-def name="Eclipse_Features" label="Eclipse Supporting Features"/>
+   <category-def name="XTEXT_1.0.1" label="XTEXT features 1.0.1"/>
+   <category-def name="XTEXT_1.0.0" label="XTEXT features 1.0.0"/>
 </site>

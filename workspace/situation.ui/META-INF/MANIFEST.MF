@@ -1,30 +1,20 @@
 Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: situation.ui
-Bundle-Vendor: The Open University
-Bundle-Version: 1.0.0
-Bundle-SymbolicName: situation.ui; singleton:=true
-Bundle-ActivationPolicy: lazy
-Require-Bundle: org.eclipse.ui.editors;bundle-version="3.5.0",
- org.eclipse.ui.ide;bundle-version="3.5.0",
- org.eclipse.ui,
- org.antlr.runtime,
- org.eclipse.core.runtime,
- org.eclipse.core.resources,
- org.eclipse.xtend,
- org.eclipse.xpand,
- com.ibm.icu,
- org.eclipse.xtext,
- org.eclipse.xtext.generator,
- org.eclipse.xtend.typesystem.emf,
- org.apache.commons.logging,
- org.eclipse.emf.codegen.ecore,
- org.eclipse.xtext.ui,
- org.eclipse.xtext.ui.shared,
- org.eclipse.xtext.builder,
- situation.diagram,
- situation
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Require-Bundle: org.eclipse.ui.editors;bundle-version="3.5.0",org.ecli
+ pse.ui.ide;bundle-version="3.5.0",org.eclipse.ui,org.antlr.runtime,or
+ g.eclipse.core.runtime,org.eclipse.core.resources,org.eclipse.xtend,o
+ rg.eclipse.xpand,com.ibm.icu,org.eclipse.xtext,org.eclipse.xtext.gene
+ rator,org.eclipse.xtend.typesystem.emf,org.apache.commons.logging,org
+ .eclipse.emf.codegen.ecore,org.eclipse.xtext.ui,org.eclipse.xtext.ui.
+ shared,org.eclipse.xtext.builder,situation.diagram,situation
 Export-Package: eu.securechange.ui.contentassist.antlr
-Import-Package: org.apache.log4j
+Bundle-Vendor: The Open University
+Bundle-ActivationPolicy: lazy
+Bundle-Version: 1.0.0
+Bundle-Name: situation.ui
+Bundle-ManifestVersion: 2
 Bundle-Activator: eu.securechange.ui.internal.SituationActivator
+Bundle-SymbolicName: situation.ui; singleton:=true
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+
+

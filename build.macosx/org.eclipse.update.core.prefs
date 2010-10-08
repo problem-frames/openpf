@@ -1,0 +1,3 @@
+org.eclipse.update.core.proxy.enable=true
+org.eclipse.update.core.proxy.port=80
+org.eclipse.update.core.proxy.host=wwwcache.open.ac.uk

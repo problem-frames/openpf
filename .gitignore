@@ -11,5 +11,6 @@ workspace/*/*.jar
 workspace/*/*.zip
 workspace/.JETEmitters
 workspace/*/.settings
+workspace/*/feature.temp.folder
 *.log
 00*

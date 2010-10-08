@@ -1,11 +1,11 @@
 Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: Change
-Bundle-SymbolicName: change;singleton:=true
-Bundle-Version: 1.0.0
-Bundle-Activator: change.Activator
-Require-Bundle: org.eclipse.ui,
- org.eclipse.core.runtime,
- core
+Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,core
 Bundle-ActivationPolicy: lazy
+Bundle-Version: 1.0.0
+Bundle-Name: Change
+Bundle-ManifestVersion: 2
+Bundle-Activator: change.Activator
+Bundle-SymbolicName: change;singleton:=true
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+
+

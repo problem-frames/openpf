@@ -29,9 +29,11 @@
       <plugin id="antlr.plugin"/>
       <plugin id="argument"/>
       <plugin id="argument.ui"/>
+      <!--
       <plugin id="ch.qos.logback.classic" fragment=""/>
       <plugin id="ch.qos.logback.core" fragment=""/>
       <plugin id="ch.qos.logback.slf4j" fragment="true"/>
+      -->
       <plugin id="change"/>
       <plugin id="com.google.collect"/>
       <plugin id="com.google.inject"/>
@@ -129,7 +131,9 @@
       <plugin id="org.apache.xml.resolver"/>
       <plugin id="org.apache.xml.serializer"/>
       <plugin id="org.apache.xmlrpc"/>
+      <!--
       <plugin id="org.easymock"/>
+      -->
       <plugin id="org.eclipse.acceleo.common"/>
       <plugin id="org.eclipse.acceleo.common.source"/>
       <plugin id="org.eclipse.acceleo.compatibility"/>
@@ -612,7 +616,12 @@
 
    <features>
       <feature id="org.eclipse.platform"/>
+      <feature id="core.feature"/>
+      <feature id="change.feature"/>
       <feature id="org.eclipse.jdt"/>
+      <feature id="org.eclipse.emf"/>
+      <feature id="org.eclipse.gef"/>
+      <feature id="org.eclipse.gmf"/>
       <feature id="org.eclipse.xtext.runtime"/>
       <feature id="org.eclipse.xtext.ui"/>
       <feature id="org.eclipse.xtend.dependencies"/>
@@ -634,23 +643,23 @@
       <feature id="org.eclipse.ocl"/>
       <feature id="org.eclipse.swtbot"/>
       <feature id="org.eclipse.swtbot.eclipse"/>
-      <feature id="org.eclipse.acceleo"/>
-      <feature id="org.eclipse.acceleo.runtime"/>
-      <feature id="org.eclipse.pde"/>
-      <feature id="change.feature"/>
+      <!--
       <feature id="xtext.feature"/>
       <feature id="event.feature"/>
+      <feature id="argument.feature"/>
       <feature id="ontology.feature"/>
+      <feature id="org.eclipse.pde"/>
       <feature id="situation.feature"/>
+      <feature id="org.eclipse.acceleo"/>
+      <feature id="org.eclipse.acceleo.runtime"/>
       <feature id="problem.feature"/>
+      -->
+      <!--
       <feature id="istar.feature"/>
-      <feature id="core.feature"/>
       <feature id="situation.m2m.feature"/>
       <feature id="dependency.feature"/>
-      <feature id="org.eclipse.emf"/>
-      <feature id="org.eclipse.gef"/>
-      <feature id="org.eclipse.gmf"/>
-      <feature id="argument.feature"/>
+      -->
+      <!--
       <feature id="laser.littlejil.check.feature"/>
       <feature id="laser.littlejil.search.feature"/>
       <feature id="laser.visualjil.eclipse.assistants.feature"/>
@@ -675,9 +684,10 @@
       <feature id="org.eclipse.viatra2.feature.strings"/>
       <feature id="org.eclipse.viatra2.feature.visualisation"/>
       <feature id="org.eclipse.viatra2.gui.pattern"/>
-      <feature id="org.eclipse.xsd.sdk" version="2.6.0.v20100914-1218"/>
-      <feature id="org.eclipse.emf.doc" version="2.6.0.v20100914-1218"/>
-      <feature id="org.eclipse.uml2" version="3.1.1.v201008191505"/>
+      <feature id="org.eclipse.xsd.sdk"/>
+      <feature id="org.eclipse.emf.doc"/>
+      <feature id="org.eclipse.uml2"/>
+      -->
    </features>
 
 
