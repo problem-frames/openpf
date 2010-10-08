@@ -29,11 +29,9 @@
       <plugin id="antlr.plugin"/>
       <plugin id="argument"/>
       <plugin id="argument.ui"/>
-      <!--
       <plugin id="ch.qos.logback.classic" fragment=""/>
       <plugin id="ch.qos.logback.core" fragment=""/>
       <plugin id="ch.qos.logback.slf4j" fragment="true"/>
-      -->
       <plugin id="change"/>
       <plugin id="com.google.collect"/>
       <plugin id="com.google.inject"/>
@@ -131,9 +129,7 @@
       <plugin id="org.apache.xml.resolver"/>
       <plugin id="org.apache.xml.serializer"/>
       <plugin id="org.apache.xmlrpc"/>
-      <!--
       <plugin id="org.easymock"/>
-      -->
       <plugin id="org.eclipse.acceleo.common"/>
       <plugin id="org.eclipse.acceleo.common.source"/>
       <plugin id="org.eclipse.acceleo.compatibility"/>
@@ -643,7 +639,6 @@
       <feature id="org.eclipse.ocl"/>
       <feature id="org.eclipse.swtbot"/>
       <feature id="org.eclipse.swtbot.eclipse"/>
-      <!--
       <feature id="xtext.feature"/>
       <feature id="event.feature"/>
       <feature id="argument.feature"/>
@@ -653,13 +648,9 @@
       <feature id="org.eclipse.acceleo"/>
       <feature id="org.eclipse.acceleo.runtime"/>
       <feature id="problem.feature"/>
-      -->
-      <!--
       <feature id="istar.feature"/>
       <feature id="situation.m2m.feature"/>
       <feature id="dependency.feature"/>
-      -->
-      <!--
       <feature id="laser.littlejil.check.feature"/>
       <feature id="laser.littlejil.search.feature"/>
       <feature id="laser.visualjil.eclipse.assistants.feature"/>
@@ -687,8 +678,6 @@
       <feature id="org.eclipse.xsd.sdk"/>
       <feature id="org.eclipse.emf.doc"/>
       <feature id="org.eclipse.uml2"/>
-      -->
    </features>
-
 
 </product>
