@@ -32,12 +32,19 @@
     <genClasses ecoreClass="EventCalculus.ecore#//DefOption">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EventCalculus.ecore#//DefOption/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EventCalculus.ecore#//DefOption/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EventCalculus.ecore#//DefOption/value2"/>
     </genClasses>
     <genClasses ecoreClass="EventCalculus.ecore#//DefCompletion">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//DefCompletion/name"/>
     </genClasses>
     <genClasses ecoreClass="EventCalculus.ecore#//DefNonInertia">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//DefNonInertia/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//DefNonInertia/names"/>
+    </genClasses>
+    <genClasses ecoreClass="EventCalculus.ecore#//DefXor">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//DefXor/names"/>
+    </genClasses>
+    <genClasses ecoreClass="EventCalculus.ecore#//DefMutex">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//DefMutex/names"/>
     </genClasses>
     <genClasses ecoreClass="EventCalculus.ecore#//Statement"/>
     <genClasses ecoreClass="EventCalculus.ecore#//SortDefinition">
@@ -53,6 +60,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//DeclaredParameter/name"/>
     </genClasses>
     <genClasses ecoreClass="EventCalculus.ecore#//Expression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EventCalculus.ecore#//Expression/label"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//Expression/qualifiers"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//Expression/expr"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EventCalculus.ecore#//Expression/op"/>

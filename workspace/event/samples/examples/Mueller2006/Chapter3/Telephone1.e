@@ -17,8 +17,26 @@
 ; }
 ;
 
-load foundations/Root.e
-load foundations/EC.e
+;load foundations/Root.e
+;load foundations/EC.e
+sort boolean
+sort integer
+reified sort predicate
+reified sort function
+
+sort time: integer
+sort offset: integer
+
+reified sort fluent
+reified sort event
+
+predicate Happens(event,time)
+predicate HoldsAt(fluent,time)
+predicate ReleasedAt(fluent,time)
+predicate Initiates(event,fluent,time)
+predicate Terminates(event,fluent,time)
+predicate Releases(event,fluent,time)
+predicate Trajectory(fluent,time,fluent,offset)
 
 sort agent
 sort phone
@@ -54,6 +72,8 @@ Initiates(SetDown(agent,phone),Idle(phone),time).
 [agent,phone,time]
 HoldsAt(DialTone(phone),time) ->
 Terminates(SetDown(agent,phone),DialTone(phone),time).
+
+phone phone1, phone2
 
 [agent,phone1,phone2,time]
 HoldsAt(DialTone(phone1),time) &
@@ -141,10 +161,10 @@ HoldsAt(Disconnected(phone),time) ->
 Terminates(SetDown(agent,phone),Disconnected(phone),time).
 
 ; Delta
-
-Delta: Happens(PickUp(Agent1,Phone1),0).
-Delta: Happens(Dial(Agent1,Phone1,Phone2),1).
-Delta: Happens(PickUp(Agent2,Phone2),2).
+;
+;Delta: Happens(PickUp(Agent1,Phone1),0).
+;Delta: Happens(Dial(Agent1,Phone1,Phone2),1).
+;Delta: Happens(PickUp(Agent2,Phone2),2).
 
 ; Gamma
 
@@ -155,7 +175,7 @@ Delta: Happens(PickUp(Agent2,Phone2),2).
 [phone1,phone2] !HoldsAt(Connected(phone1,phone2),0).
 [phone] !HoldsAt(Disconnected(phone),0).
 
-completion Delta Happens
+;completion Delta Happens
 
 range time 0 3
 range offset 1 1

@@ -27,9 +27,27 @@
 ;   publisher = "Morgan Kaufmann/Elsevier",
 ; }
 ;
+;
+;load foundations/Root.e
+;load foundations/EC.e
+sort boolean
+sort integer
+reified sort predicate
+reified sort function
 
-load foundations/Root.e
-load foundations/EC.e
+sort time: integer
+sort offset: integer
+
+reified sort fluent
+reified sort event
+
+predicate Happens(event,time)
+predicate HoldsAt(fluent,time)
+predicate ReleasedAt(fluent,time)
+predicate Initiates(event,fluent,time)
+predicate Terminates(event,fluent,time)
+predicate Releases(event,fluent,time)
+predicate Trajectory(fluent,time,fluent,offset)
 
 sort object
 sort agent: object
@@ -74,7 +92,7 @@ Initiates(AddPlan(agent,belief,plan),Plan(agent,belief,plan),time).
 ; A6
 [agent,belief,plan,time]
 Terminates(DropPlan(agent,belief,plan),Plan(agent,belief,plan),time).
-
+surface surface1, surface2, surface3
 [agent,surface1,surface2,time]
 HoldsAt(On(agent,surface1),time) &
 HoldsAt(CanJump(surface1,surface2),time) ->
@@ -143,6 +161,7 @@ Terminates(Eat(agent,food),Believe(agent,belief),time).
 
 ; Delta
 
+plan plan1
 ; A7
 [agent,belief,plan,time]
 HoldsAt(Goal(agent,belief),time) &

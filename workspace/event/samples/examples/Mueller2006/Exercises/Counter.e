@@ -26,8 +26,26 @@
 ; }
 ;
 
-load foundations/Root.e
-load foundations/EC.e
+;load foundations/Root.e
+;load foundations/EC.e
+sort boolean
+sort integer
+reified sort predicate
+reified sort function
+
+sort time: integer
+sort offset: integer
+
+reified sort fluent
+reified sort event
+
+predicate Happens(event,time)
+predicate HoldsAt(fluent,time)
+predicate ReleasedAt(fluent,time)
+predicate Initiates(event,fluent,time)
+predicate Terminates(event,fluent,time)
+predicate Releases(event,fluent,time)
+predicate Trajectory(fluent,time,fluent,offset)
 
 sort counter
 counter Counter1
@@ -40,19 +58,20 @@ fluent True(counter)
 fluent InputLine(counter)
 noninertial InputLine
 
-Delta: [counter,time]
-!HoldsAt(True(counter),time) &
-HoldsAt(InputLine(counter),time) ->
-Happens(FalseToTrue(counter),time).
+;Delta: [counter,time]
+;!HoldsAt(True(counter),time) &
+;HoldsAt(InputLine(counter),time) ->
+;Happens(FalseToTrue(counter),time).
 
-Delta: [counter,time]
-HoldsAt(True(counter),time) &
-!HoldsAt(InputLine(counter),time) ->
-Happens(TrueToFalse(counter),time).
+;Delta: [counter,time]
+;HoldsAt(True(counter),time) &
+;!HoldsAt(InputLine(counter),time) ->
+;Happens(TrueToFalse(counter),time).
 
 [counter,time] Initiates(FalseToTrue(counter),True(counter),time).
 
 [counter,time] Terminates(TrueToFalse(counter),True(counter),time).
+integer integer1, integer2
 
 [counter,integer1,integer2,time]
 HoldsAt(Count(counter,integer1),time) &

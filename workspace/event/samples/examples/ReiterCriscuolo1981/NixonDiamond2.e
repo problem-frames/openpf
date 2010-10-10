@@ -42,8 +42,26 @@
 ; }
 ;
 
-load foundations/Root.e
-load foundations/EC.e
+;load foundations/Root.e
+;load foundations/EC.e
+sort boolean
+sort integer
+reified sort predicate
+reified sort function
+
+sort time: integer
+sort offset: integer
+
+reified sort fluent
+reified sort event
+
+predicate Happens(event,time)
+predicate HoldsAt(fluent,time)
+predicate ReleasedAt(fluent,time)
+predicate Initiates(event,fluent,time)
+predicate Terminates(event,fluent,time)
+predicate Releases(event,fluent,time)
+predicate Trajectory(fluent,time,fluent,offset)
 
 sort x
 
@@ -60,12 +78,12 @@ Quaker(John).
 
 [x] Republican(x) & !Ab1(x) -> !Pacifist(x).
 [x] Quaker(x) & !Ab2(x) -> Pacifist(x).
-Theta: [x] Republican(x) -> Ab2(x).
+;Theta: [x] Republican(x) -> Ab2(x).
 
 range time 0 0
 range offset 1 1
 
-completion Theta Ab1
-completion Theta Ab2
+;completion Theta Ab1
+;completion Theta Ab2
 
 ; End of file.

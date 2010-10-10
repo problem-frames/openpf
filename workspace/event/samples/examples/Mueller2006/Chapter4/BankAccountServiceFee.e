@@ -16,11 +16,29 @@
 ;   publisher = "Morgan Kaufmann/Elsevier",
 ; }
 ;
+;
+;option modeldiff on
+;
+;load foundations/Root.e
+;load foundations/EC.e
+sort boolean
+sort integer
+reified sort predicate
+reified sort function
 
-option modeldiff on
+sort time: integer
+sort offset: integer
 
-load foundations/Root.e
-load foundations/EC.e
+reified sort fluent
+reified sort event
+
+predicate Happens(event,time)
+predicate HoldsAt(fluent,time)
+predicate ReleasedAt(fluent,time)
+predicate Initiates(event,fluent,time)
+predicate Terminates(event,fluent,time)
+predicate Releases(event,fluent,time)
+predicate Trajectory(fluent,time,fluent,offset)
 
 sort account
 sort value: integer
@@ -39,7 +57,8 @@ event MonthlyReset(account)
 event ChargeServiceFee(account)
 
 ; Sigma
-
+account account1, account2
+value value1, value2, value3, value4
 [account1,account2,value1,value2,value3,value4,time]
 HoldsAt(Balance(account1,value1),time) &
 HoldsAt(Balance(account2,value2),time) &

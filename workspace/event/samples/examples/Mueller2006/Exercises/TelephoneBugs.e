@@ -18,9 +18,27 @@
 ;   publisher = "Morgan Kaufmann/Elsevier",
 ; }
 ;
+;
+;load foundations/Root.e
+;load foundations/EC.e
+sort boolean
+sort integer
+reified sort predicate
+reified sort function
 
-load foundations/Root.e
-load foundations/EC.e
+sort time: integer
+sort offset: integer
+
+reified sort fluent
+reified sort event
+
+predicate Happens(event,time)
+predicate HoldsAt(fluent,time)
+predicate ReleasedAt(fluent,time)
+predicate Initiates(event,fluent,time)
+predicate Terminates(event,fluent,time)
+predicate Releases(event,fluent,time)
+predicate Trajectory(fluent,time,fluent,offset)
 
 sort agent
 sort phone
@@ -167,7 +185,7 @@ Happens(PickUp(Agent2,Phone2),5).
 
 [phone,time]
 !HoldsAt(Ringing(phone,phone),time).
-
+phone phone1, phone2
 [phone1,phone2,time]
 HoldsAt(Ringing(phone1,phone2),time) &
 phone1!=phone2 ->
@@ -181,7 +199,7 @@ HoldsAt(Connected(phone1,phone2),time) &
 phone1!=phone2 ->
 !HoldsAt(Connected(phone2,phone1),time).
 
-mutex Idle, DialTone, BusySignal, Disconnected
+;mutex Idle, DialTone, BusySignal, Disconnected
 
 [phone1,phone2,time]
 HoldsAt(Idle(phone1),time) ->

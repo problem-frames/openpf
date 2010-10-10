@@ -23,6 +23,7 @@ import uk.ac.open.event.eventcalculus.EventcalculusPackage;
  * <ul>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.DefOptionImpl#getName <em>Name</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.DefOptionImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link uk.ac.open.event.eventcalculus.impl.DefOptionImpl#getValue2 <em>Value2</em>}</li>
  * </ul>
  * </p>
  *
@@ -69,6 +70,26 @@ public class DefOptionImpl extends DeclarationImpl implements DefOption
    * @ordered
    */
   protected int value = VALUE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getValue2() <em>Value2</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getValue2()
+   * @generated
+   * @ordered
+   */
+  protected static final String VALUE2_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getValue2() <em>Value2</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getValue2()
+   * @generated
+   * @ordered
+   */
+  protected String value2 = VALUE2_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -142,6 +163,29 @@ public class DefOptionImpl extends DeclarationImpl implements DefOption
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getValue2()
+  {
+    return value2;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setValue2(String newValue2)
+  {
+    String oldValue2 = value2;
+    value2 = newValue2;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EventcalculusPackage.DEF_OPTION__VALUE2, oldValue2, value2));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -151,6 +195,8 @@ public class DefOptionImpl extends DeclarationImpl implements DefOption
         return getName();
       case EventcalculusPackage.DEF_OPTION__VALUE:
         return getValue();
+      case EventcalculusPackage.DEF_OPTION__VALUE2:
+        return getValue2();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -170,6 +216,9 @@ public class DefOptionImpl extends DeclarationImpl implements DefOption
         return;
       case EventcalculusPackage.DEF_OPTION__VALUE:
         setValue((Integer)newValue);
+        return;
+      case EventcalculusPackage.DEF_OPTION__VALUE2:
+        setValue2((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -191,6 +240,9 @@ public class DefOptionImpl extends DeclarationImpl implements DefOption
       case EventcalculusPackage.DEF_OPTION__VALUE:
         setValue(VALUE_EDEFAULT);
         return;
+      case EventcalculusPackage.DEF_OPTION__VALUE2:
+        setValue2(VALUE2_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -209,6 +261,8 @@ public class DefOptionImpl extends DeclarationImpl implements DefOption
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case EventcalculusPackage.DEF_OPTION__VALUE:
         return value != VALUE_EDEFAULT;
+      case EventcalculusPackage.DEF_OPTION__VALUE2:
+        return VALUE2_EDEFAULT == null ? value2 != null : !VALUE2_EDEFAULT.equals(value2);
     }
     return super.eIsSet(featureID);
   }
@@ -228,6 +282,8 @@ public class DefOptionImpl extends DeclarationImpl implements DefOption
     result.append(name);
     result.append(", value: ");
     result.append(value);
+    result.append(", value2: ");
+    result.append(value2);
     result.append(')');
     return result.toString();
   }

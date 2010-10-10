@@ -19,11 +19,29 @@
 ; }
 ;
 ;
+;
+;option modeldiff on
+;
+;load foundations/Root.e
+;load foundations/EC.e
+sort boolean
+sort integer
+reified sort predicate
+reified sort function
 
-option modeldiff on
+sort time: integer
+sort offset: integer
 
-load foundations/Root.e
-load foundations/EC.e
+reified sort fluent
+reified sort event
+
+predicate Happens(event,time)
+predicate HoldsAt(fluent,time)
+predicate ReleasedAt(fluent,time)
+predicate Initiates(event,fluent,time)
+predicate Terminates(event,fluent,time)
+predicate Releases(event,fluent,time)
+predicate Trajectory(fluent,time,fluent,offset)
 
 sort object
 sort agent: object
@@ -41,7 +59,7 @@ fluent InRoom(object,room)
 fluent Holding(agent,object)
 
 ; Sigma
-
+room room1, room2
 [agent,room1,room2,time]
 Initiates(Walk(agent,room1,room2),InRoom(agent,room2),time).
 

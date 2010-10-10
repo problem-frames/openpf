@@ -19,11 +19,29 @@
 ;   publisher = "AAAI Press",
 ; }
 ;
+;
+;option trajectory on
+;
+;load foundations/Root.e
+;load foundations/EC.e
+sort boolean
+sort integer
+reified sort predicate
+reified sort function
 
-option trajectory on
+sort time: integer
+sort offset: integer
 
-load foundations/Root.e
-load foundations/EC.e
+reified sort fluent
+reified sort event
+
+predicate Happens(event,time)
+predicate HoldsAt(fluent,time)
+predicate ReleasedAt(fluent,time)
+predicate Initiates(event,fluent,time)
+predicate Terminates(event,fluent,time)
+predicate Releases(event,fluent,time)
+predicate Trajectory(fluent,time,fluent,offset)
 
 sort object
 sort height: integer
@@ -32,7 +50,8 @@ fluent Height(object,height)
 fluent Falling(object)
 event StartFalling(object)
 event HitsGround(object)
-
+sort height1: integer
+sort height2: integer
 [object,height1,height2,time]
 HoldsAt(Height(object,height1),time) &
 HoldsAt(Height(object,height2),time) ->

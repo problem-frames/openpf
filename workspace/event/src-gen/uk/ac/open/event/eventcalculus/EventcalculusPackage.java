@@ -274,13 +274,22 @@ public interface EventcalculusPackage extends EPackage
   int DEF_OPTION__VALUE = DECLARATION_FEATURE_COUNT + 1;
 
   /**
+   * The feature id for the '<em><b>Value2</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEF_OPTION__VALUE2 = DECLARATION_FEATURE_COUNT + 2;
+
+  /**
    * The number of structural features of the '<em>Def Option</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DEF_OPTION_FEATURE_COUNT = DECLARATION_FEATURE_COUNT + 2;
+  int DEF_OPTION_FEATURE_COUNT = DECLARATION_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link uk.ac.open.event.eventcalculus.impl.DefCompletionImpl <em>Def Completion</em>}' class.
@@ -321,13 +330,13 @@ public interface EventcalculusPackage extends EPackage
   int DEF_NON_INERTIA = 7;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' reference.
+   * The feature id for the '<em><b>Names</b></em>' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DEF_NON_INERTIA__NAME = DECLARATION_FEATURE_COUNT + 0;
+  int DEF_NON_INERTIA__NAMES = DECLARATION_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Def Non Inertia</em>' class.
@@ -339,6 +348,62 @@ public interface EventcalculusPackage extends EPackage
   int DEF_NON_INERTIA_FEATURE_COUNT = DECLARATION_FEATURE_COUNT + 1;
 
   /**
+   * The meta object id for the '{@link uk.ac.open.event.eventcalculus.impl.DefXorImpl <em>Def Xor</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see uk.ac.open.event.eventcalculus.impl.DefXorImpl
+   * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getDefXor()
+   * @generated
+   */
+  int DEF_XOR = 8;
+
+  /**
+   * The feature id for the '<em><b>Names</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEF_XOR__NAMES = DECLARATION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Def Xor</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEF_XOR_FEATURE_COUNT = DECLARATION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link uk.ac.open.event.eventcalculus.impl.DefMutexImpl <em>Def Mutex</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see uk.ac.open.event.eventcalculus.impl.DefMutexImpl
+   * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getDefMutex()
+   * @generated
+   */
+  int DEF_MUTEX = 9;
+
+  /**
+   * The feature id for the '<em><b>Names</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEF_MUTEX__NAMES = DECLARATION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Def Mutex</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEF_MUTEX_FEATURE_COUNT = DECLARATION_FEATURE_COUNT + 1;
+
+  /**
    * The meta object id for the '{@link uk.ac.open.event.eventcalculus.impl.StatementImpl <em>Statement</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -346,7 +411,7 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getStatement()
    * @generated
    */
-  int STATEMENT = 8;
+  int STATEMENT = 10;
 
   /**
    * The number of structural features of the '<em>Statement</em>' class.
@@ -365,7 +430,7 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getSortDefinition()
    * @generated
    */
-  int SORT_DEFINITION = 9;
+  int SORT_DEFINITION = 11;
 
   /**
    * The feature id for the '<em><b>Sort</b></em>' reference.
@@ -402,7 +467,7 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getDefinition()
    * @generated
    */
-  int DEFINITION = 10;
+  int DEFINITION = 12;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -448,7 +513,16 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getExpression()
    * @generated
    */
-  int EXPRESSION = 12;
+  int EXPRESSION = 14;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION__LABEL = STATEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Qualifiers</b></em>' containment reference list.
@@ -457,7 +531,7 @@ public interface EventcalculusPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXPRESSION__QUALIFIERS = STATEMENT_FEATURE_COUNT + 0;
+  int EXPRESSION__QUALIFIERS = STATEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Expr</b></em>' containment reference.
@@ -466,7 +540,7 @@ public interface EventcalculusPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXPRESSION__EXPR = STATEMENT_FEATURE_COUNT + 1;
+  int EXPRESSION__EXPR = STATEMENT_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -475,7 +549,7 @@ public interface EventcalculusPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXPRESSION__OP = STATEMENT_FEATURE_COUNT + 2;
+  int EXPRESSION__OP = STATEMENT_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Right</b></em>' containment reference.
@@ -484,7 +558,7 @@ public interface EventcalculusPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXPRESSION__RIGHT = STATEMENT_FEATURE_COUNT + 3;
+  int EXPRESSION__RIGHT = STATEMENT_FEATURE_COUNT + 4;
 
   /**
    * The number of structural features of the '<em>Expression</em>' class.
@@ -493,7 +567,7 @@ public interface EventcalculusPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXPRESSION_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 4;
+  int EXPRESSION_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 5;
 
   /**
    * The meta object id for the '{@link uk.ac.open.event.eventcalculus.impl.DeclaredParameterImpl <em>Declared Parameter</em>}' class.
@@ -503,7 +577,16 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getDeclaredParameter()
    * @generated
    */
-  int DECLARED_PARAMETER = 11;
+  int DECLARED_PARAMETER = 13;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DECLARED_PARAMETER__LABEL = EXPRESSION__LABEL;
 
   /**
    * The feature id for the '<em><b>Qualifiers</b></em>' containment reference list.
@@ -567,7 +650,7 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getQualifier()
    * @generated
    */
-  int QUALIFIER = 13;
+  int QUALIFIER = 15;
 
   /**
    * The feature id for the '<em><b>Names</b></em>' containment reference list.
@@ -595,7 +678,7 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getExists()
    * @generated
    */
-  int EXISTS = 14;
+  int EXISTS = 16;
 
   /**
    * The feature id for the '<em><b>Names</b></em>' containment reference list.
@@ -623,7 +706,7 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getForall()
    * @generated
    */
-  int FORALL = 15;
+  int FORALL = 17;
 
   /**
    * The feature id for the '<em><b>Names</b></em>' containment reference list.
@@ -651,7 +734,16 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getTerminalExpression()
    * @generated
    */
-  int TERMINAL_EXPRESSION = 16;
+  int TERMINAL_EXPRESSION = 18;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TERMINAL_EXPRESSION__LABEL = EXPRESSION__LABEL;
 
   /**
    * The feature id for the '<em><b>Qualifiers</b></em>' containment reference list.
@@ -706,7 +798,16 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getAssignPlus()
    * @generated
    */
-  int ASSIGN_PLUS = 17;
+  int ASSIGN_PLUS = 19;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSIGN_PLUS__LABEL = EXPRESSION__LABEL;
 
   /**
    * The feature id for the '<em><b>Qualifiers</b></em>' containment reference list.
@@ -770,7 +871,16 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getAssignMin()
    * @generated
    */
-  int ASSIGN_MIN = 18;
+  int ASSIGN_MIN = 20;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSIGN_MIN__LABEL = EXPRESSION__LABEL;
 
   /**
    * The feature id for the '<em><b>Qualifiers</b></em>' containment reference list.
@@ -834,7 +944,16 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getOr()
    * @generated
    */
-  int OR = 19;
+  int OR = 21;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OR__LABEL = EXPRESSION__LABEL;
 
   /**
    * The feature id for the '<em><b>Qualifiers</b></em>' containment reference list.
@@ -898,7 +1017,16 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getAnd()
    * @generated
    */
-  int AND = 20;
+  int AND = 22;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AND__LABEL = EXPRESSION__LABEL;
 
   /**
    * The feature id for the '<em><b>Qualifiers</b></em>' containment reference list.
@@ -962,7 +1090,16 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getRelNotEq()
    * @generated
    */
-  int REL_NOT_EQ = 21;
+  int REL_NOT_EQ = 23;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REL_NOT_EQ__LABEL = EXPRESSION__LABEL;
 
   /**
    * The feature id for the '<em><b>Qualifiers</b></em>' containment reference list.
@@ -1026,7 +1163,16 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getRelEqEq()
    * @generated
    */
-  int REL_EQ_EQ = 22;
+  int REL_EQ_EQ = 24;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REL_EQ_EQ__LABEL = EXPRESSION__LABEL;
 
   /**
    * The feature id for the '<em><b>Qualifiers</b></em>' containment reference list.
@@ -1090,7 +1236,16 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getRelLtEq()
    * @generated
    */
-  int REL_LT_EQ = 23;
+  int REL_LT_EQ = 25;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REL_LT_EQ__LABEL = EXPRESSION__LABEL;
 
   /**
    * The feature id for the '<em><b>Qualifiers</b></em>' containment reference list.
@@ -1154,7 +1309,16 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getRelGtEq()
    * @generated
    */
-  int REL_GT_EQ = 24;
+  int REL_GT_EQ = 26;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REL_GT_EQ__LABEL = EXPRESSION__LABEL;
 
   /**
    * The feature id for the '<em><b>Qualifiers</b></em>' containment reference list.
@@ -1218,7 +1382,16 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getRelEq()
    * @generated
    */
-  int REL_EQ = 25;
+  int REL_EQ = 27;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REL_EQ__LABEL = EXPRESSION__LABEL;
 
   /**
    * The feature id for the '<em><b>Qualifiers</b></em>' containment reference list.
@@ -1282,7 +1455,16 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getRelLt()
    * @generated
    */
-  int REL_LT = 26;
+  int REL_LT = 28;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REL_LT__LABEL = EXPRESSION__LABEL;
 
   /**
    * The feature id for the '<em><b>Qualifiers</b></em>' containment reference list.
@@ -1346,7 +1528,16 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getRelGt()
    * @generated
    */
-  int REL_GT = 27;
+  int REL_GT = 29;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REL_GT__LABEL = EXPRESSION__LABEL;
 
   /**
    * The feature id for the '<em><b>Qualifiers</b></em>' containment reference list.
@@ -1410,7 +1601,16 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getPlus()
    * @generated
    */
-  int PLUS = 28;
+  int PLUS = 30;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PLUS__LABEL = EXPRESSION__LABEL;
 
   /**
    * The feature id for the '<em><b>Qualifiers</b></em>' containment reference list.
@@ -1474,7 +1674,16 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getMinus()
    * @generated
    */
-  int MINUS = 29;
+  int MINUS = 31;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MINUS__LABEL = EXPRESSION__LABEL;
 
   /**
    * The feature id for the '<em><b>Qualifiers</b></em>' containment reference list.
@@ -1538,7 +1747,16 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getMulti()
    * @generated
    */
-  int MULTI = 30;
+  int MULTI = 32;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTI__LABEL = EXPRESSION__LABEL;
 
   /**
    * The feature id for the '<em><b>Qualifiers</b></em>' containment reference list.
@@ -1602,7 +1820,16 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getDiv()
    * @generated
    */
-  int DIV = 31;
+  int DIV = 33;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIV__LABEL = EXPRESSION__LABEL;
 
   /**
    * The feature id for the '<em><b>Qualifiers</b></em>' containment reference list.
@@ -1666,7 +1893,16 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getPow()
    * @generated
    */
-  int POW = 32;
+  int POW = 34;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POW__LABEL = EXPRESSION__LABEL;
 
   /**
    * The feature id for the '<em><b>Qualifiers</b></em>' containment reference list.
@@ -1730,7 +1966,16 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getFunctionRef()
    * @generated
    */
-  int FUNCTION_REF = 33;
+  int FUNCTION_REF = 35;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTION_REF__LABEL = EXPRESSION__LABEL;
 
   /**
    * The feature id for the '<em><b>Qualifiers</b></em>' containment reference list.
@@ -1803,7 +2048,16 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getIntLiteral()
    * @generated
    */
-  int INT_LITERAL = 34;
+  int INT_LITERAL = 36;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INT_LITERAL__LABEL = TERMINAL_EXPRESSION__LABEL;
 
   /**
    * The feature id for the '<em><b>Qualifiers</b></em>' containment reference list.
@@ -1867,7 +2121,16 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getStringLiteral()
    * @generated
    */
-  int STRING_LITERAL = 35;
+  int STRING_LITERAL = 37;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING_LITERAL__LABEL = TERMINAL_EXPRESSION__LABEL;
 
   /**
    * The feature id for the '<em><b>Qualifiers</b></em>' containment reference list.
@@ -1931,7 +2194,16 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getBooleanLiteral()
    * @generated
    */
-  int BOOLEAN_LITERAL = 36;
+  int BOOLEAN_LITERAL = 38;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOLEAN_LITERAL__LABEL = TERMINAL_EXPRESSION__LABEL;
 
   /**
    * The feature id for the '<em><b>Qualifiers</b></em>' containment reference list.
@@ -1995,7 +2267,7 @@ public interface EventcalculusPackage extends EPackage
    * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getUnarOp()
    * @generated
    */
-  int UNAR_OP = 37;
+  int UNAR_OP = 39;
 
 
   /**
@@ -2191,6 +2463,17 @@ public interface EventcalculusPackage extends EPackage
   EAttribute getDefOption_Value();
 
   /**
+   * Returns the meta object for the attribute '{@link uk.ac.open.event.eventcalculus.DefOption#getValue2 <em>Value2</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value2</em>'.
+   * @see uk.ac.open.event.eventcalculus.DefOption#getValue2()
+   * @see #getDefOption()
+   * @generated
+   */
+  EAttribute getDefOption_Value2();
+
+  /**
    * Returns the meta object for class '{@link uk.ac.open.event.eventcalculus.DefCompletion <em>Def Completion</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2222,15 +2505,57 @@ public interface EventcalculusPackage extends EPackage
   EClass getDefNonInertia();
 
   /**
-   * Returns the meta object for the reference '{@link uk.ac.open.event.eventcalculus.DefNonInertia#getName <em>Name</em>}'.
+   * Returns the meta object for the reference list '{@link uk.ac.open.event.eventcalculus.DefNonInertia#getNames <em>Names</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Name</em>'.
-   * @see uk.ac.open.event.eventcalculus.DefNonInertia#getName()
+   * @return the meta object for the reference list '<em>Names</em>'.
+   * @see uk.ac.open.event.eventcalculus.DefNonInertia#getNames()
    * @see #getDefNonInertia()
    * @generated
    */
-  EReference getDefNonInertia_Name();
+  EReference getDefNonInertia_Names();
+
+  /**
+   * Returns the meta object for class '{@link uk.ac.open.event.eventcalculus.DefXor <em>Def Xor</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Def Xor</em>'.
+   * @see uk.ac.open.event.eventcalculus.DefXor
+   * @generated
+   */
+  EClass getDefXor();
+
+  /**
+   * Returns the meta object for the reference list '{@link uk.ac.open.event.eventcalculus.DefXor#getNames <em>Names</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference list '<em>Names</em>'.
+   * @see uk.ac.open.event.eventcalculus.DefXor#getNames()
+   * @see #getDefXor()
+   * @generated
+   */
+  EReference getDefXor_Names();
+
+  /**
+   * Returns the meta object for class '{@link uk.ac.open.event.eventcalculus.DefMutex <em>Def Mutex</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Def Mutex</em>'.
+   * @see uk.ac.open.event.eventcalculus.DefMutex
+   * @generated
+   */
+  EClass getDefMutex();
+
+  /**
+   * Returns the meta object for the reference list '{@link uk.ac.open.event.eventcalculus.DefMutex#getNames <em>Names</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference list '<em>Names</em>'.
+   * @see uk.ac.open.event.eventcalculus.DefMutex#getNames()
+   * @see #getDefMutex()
+   * @generated
+   */
+  EReference getDefMutex_Names();
 
   /**
    * Returns the meta object for class '{@link uk.ac.open.event.eventcalculus.Statement <em>Statement</em>}'.
@@ -2347,6 +2672,17 @@ public interface EventcalculusPackage extends EPackage
    * @generated
    */
   EClass getExpression();
+
+  /**
+   * Returns the meta object for the attribute '{@link uk.ac.open.event.eventcalculus.Expression#getLabel <em>Label</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Label</em>'.
+   * @see uk.ac.open.event.eventcalculus.Expression#getLabel()
+   * @see #getExpression()
+   * @generated
+   */
+  EAttribute getExpression_Label();
 
   /**
    * Returns the meta object for the containment reference list '{@link uk.ac.open.event.eventcalculus.Expression#getQualifiers <em>Qualifiers</em>}'.
@@ -3064,6 +3400,14 @@ public interface EventcalculusPackage extends EPackage
     EAttribute DEF_OPTION__VALUE = eINSTANCE.getDefOption_Value();
 
     /**
+     * The meta object literal for the '<em><b>Value2</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DEF_OPTION__VALUE2 = eINSTANCE.getDefOption_Value2();
+
+    /**
      * The meta object literal for the '{@link uk.ac.open.event.eventcalculus.impl.DefCompletionImpl <em>Def Completion</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3092,12 +3436,48 @@ public interface EventcalculusPackage extends EPackage
     EClass DEF_NON_INERTIA = eINSTANCE.getDefNonInertia();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Names</b></em>' reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference DEF_NON_INERTIA__NAME = eINSTANCE.getDefNonInertia_Name();
+    EReference DEF_NON_INERTIA__NAMES = eINSTANCE.getDefNonInertia_Names();
+
+    /**
+     * The meta object literal for the '{@link uk.ac.open.event.eventcalculus.impl.DefXorImpl <em>Def Xor</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see uk.ac.open.event.eventcalculus.impl.DefXorImpl
+     * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getDefXor()
+     * @generated
+     */
+    EClass DEF_XOR = eINSTANCE.getDefXor();
+
+    /**
+     * The meta object literal for the '<em><b>Names</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DEF_XOR__NAMES = eINSTANCE.getDefXor_Names();
+
+    /**
+     * The meta object literal for the '{@link uk.ac.open.event.eventcalculus.impl.DefMutexImpl <em>Def Mutex</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see uk.ac.open.event.eventcalculus.impl.DefMutexImpl
+     * @see uk.ac.open.event.eventcalculus.impl.EventcalculusPackageImpl#getDefMutex()
+     * @generated
+     */
+    EClass DEF_MUTEX = eINSTANCE.getDefMutex();
+
+    /**
+     * The meta object literal for the '<em><b>Names</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DEF_MUTEX__NAMES = eINSTANCE.getDefMutex_Names();
 
     /**
      * The meta object literal for the '{@link uk.ac.open.event.eventcalculus.impl.StatementImpl <em>Statement</em>}' class.
@@ -3196,6 +3576,14 @@ public interface EventcalculusPackage extends EPackage
      * @generated
      */
     EClass EXPRESSION = eINSTANCE.getExpression();
+
+    /**
+     * The meta object literal for the '<em><b>Label</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EXPRESSION__LABEL = eINSTANCE.getExpression_Label();
 
     /**
      * The meta object literal for the '<em><b>Qualifiers</b></em>' containment reference list feature.

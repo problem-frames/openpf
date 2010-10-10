@@ -156,6 +156,22 @@ public class EventcalculusSwitch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case EventcalculusPackage.DEF_XOR:
+      {
+        DefXor defXor = (DefXor)theEObject;
+        T result = caseDefXor(defXor);
+        if (result == null) result = caseDeclaration(defXor);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EventcalculusPackage.DEF_MUTEX:
+      {
+        DefMutex defMutex = (DefMutex)theEObject;
+        T result = caseDefMutex(defMutex);
+        if (result == null) result = caseDeclaration(defMutex);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case EventcalculusPackage.STATEMENT:
       {
         Statement statement = (Statement)theEObject;
@@ -538,6 +554,38 @@ public class EventcalculusSwitch<T>
    * @generated
    */
   public T caseDefNonInertia(DefNonInertia object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Def Xor</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Def Xor</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDefXor(DefXor object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Def Mutex</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Def Mutex</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDefMutex(DefMutex object)
   {
     return null;
   }

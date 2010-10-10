@@ -36,11 +36,29 @@
 ;   publisher = "Morgan Kaufmann/Elsevier",
 ; }
 ;
+;
+;option modeldiff on
+;
+;load foundations/Root.e
+;load foundations/EC.e
+sort boolean
+sort integer
+reified sort predicate
+reified sort function
 
-option modeldiff on
+sort time: integer
+sort offset: integer
 
-load foundations/Root.e
-load foundations/EC.e
+reified sort fluent
+reified sort event
+
+predicate Happens(event,time)
+predicate HoldsAt(fluent,time)
+predicate ReleasedAt(fluent,time)
+predicate Initiates(event,fluent,time)
+predicate Terminates(event,fluent,time)
+predicate Releases(event,fluent,time)
+predicate Trajectory(fluent,time,fluent,offset)
 
 sort activity
 sort condition
@@ -72,97 +90,97 @@ Terminates(End(activity),Active(activity),time).
 ; Delta
 
 ; A; B
-Delta: [time]
-!HoldsAt(Active(B),time) &
-!HoldsAt(Completed(A),time-1) &
-HoldsAt(Completed(A),time) ->
-Happens(Start(B),time).
-
-; B; AND-split C1, C2, C3
-Delta: [time]
-!HoldsAt(Active(C1),time) &
-!HoldsAt(Completed(B),time-1) &
-HoldsAt(Completed(B),time) ->
-Happens(Start(C1),time).
-
-Delta: [time]
-!HoldsAt(Active(C2),time) &
-!HoldsAt(Completed(B),time-1) &
-HoldsAt(Completed(B),time) ->
-Happens(Start(C2),time).
-
-Delta: [time]
-!HoldsAt(Active(C3),time) &
-!HoldsAt(Completed(B),time-1) &
-HoldsAt(Completed(B),time) ->
-Happens(Start(C3),time).
-
-; AND-join C1, C2, C3; D
-Delta: [time]
-!HoldsAt(Active(D),time) &
-((!HoldsAt(Completed(C1),time-1) & HoldsAt(Completed(C1),time))|
- (!HoldsAt(Completed(C2),time-1) & HoldsAt(Completed(C2),time))|
- (!HoldsAt(Completed(C3),time-1) & HoldsAt(Completed(C3),time))) &
-HoldsAt(Completed(C1),time) &
-HoldsAt(Completed(C2),time) &
-HoldsAt(Completed(C3),time) ->
-Happens(Start(D),time).
-
-; D; XOR-split E1, E2, E3
-Delta: [time]
-!HoldsAt(Active(E1),time) &
-!HoldsAt(Completed(D),time-1) &
-HoldsAt(Completed(D),time) &
-HoldsAt(Condition(E1C),time) ->
-Happens(Start(E1),time).
-
-Delta: [time]
-!HoldsAt(Active(E2),time) &
-!HoldsAt(Completed(D),time-1) &
-HoldsAt(Completed(D),time) &
-HoldsAt(Condition(E2C),time) ->
-Happens(Start(E2),time).
-
-Delta: [time]
-!HoldsAt(Active(E3),time) &
-!HoldsAt(Completed(D),time-1) &
-HoldsAt(Completed(D),time) &
-HoldsAt(Condition(E3C),time) ->
-Happens(Start(E3),time).
-
-; XOR-join E1, E2, E3; F
-Delta: [time]
-!HoldsAt(Active(F),time) &
-((!HoldsAt(Completed(E1),time-1) & HoldsAt(Completed(E1),time))|
- (!HoldsAt(Completed(E2),time-1) & HoldsAt(Completed(E2),time))|
- (!HoldsAt(Completed(E3),time-1) & HoldsAt(Completed(E3),time))) ->
-Happens(Start(F),time).
-
-; while (FC) F; G
-Delta: [time]
-!HoldsAt(Active(F),time) &
-!HoldsAt(Completed(F),time-1) &
-HoldsAt(Completed(F),time) &
-HoldsAt(Condition(FC),time) ->
-Happens(Start(F),time).
-
-Delta: [time]
-!HoldsAt(Active(G),time) &
-!HoldsAt(Completed(F),time-1) &
-HoldsAt(Completed(F),time) &
-!HoldsAt(Condition(FC),time) ->
-Happens(Start(G),time).
-
-Delta: Happens(Start(A),0).
-Delta: Happens(End(A),1).
-Delta: Happens(End(B),3).
-Delta: Happens(End(C1),5).
-Delta: Happens(End(C2),6).
-Delta: Happens(End(C3),7).
-Delta: Happens(End(D),9).
-Delta: Happens(End(E2),11).
-Delta: Happens(End(F),13).
-Delta: Happens(End(F),15).
+;Delta: [time]
+;!HoldsAt(Active(B),time) &
+;!HoldsAt(Completed(A),time-1) &
+;HoldsAt(Completed(A),time) ->
+;Happens(Start(B),time).
+;
+;; B; AND-split C1, C2, C3
+;Delta: [time]
+;!HoldsAt(Active(C1),time) &
+;!HoldsAt(Completed(B),time-1) &
+;HoldsAt(Completed(B),time) ->
+;Happens(Start(C1),time).
+;
+;Delta: [time]
+;!HoldsAt(Active(C2),time) &
+;!HoldsAt(Completed(B),time-1) &
+;HoldsAt(Completed(B),time) ->
+;Happens(Start(C2),time).
+;
+;Delta: [time]
+;!HoldsAt(Active(C3),time) &
+;!HoldsAt(Completed(B),time-1) &
+;HoldsAt(Completed(B),time) ->
+;Happens(Start(C3),time).
+;
+;; AND-join C1, C2, C3; D
+;Delta: [time]
+;!HoldsAt(Active(D),time) &
+;((!HoldsAt(Completed(C1),time-1) & HoldsAt(Completed(C1),time))|
+; (!HoldsAt(Completed(C2),time-1) & HoldsAt(Completed(C2),time))|
+; (!HoldsAt(Completed(C3),time-1) & HoldsAt(Completed(C3),time))) &
+;HoldsAt(Completed(C1),time) &
+;HoldsAt(Completed(C2),time) &
+;HoldsAt(Completed(C3),time) ->
+;Happens(Start(D),time).
+;
+;; D; XOR-split E1, E2, E3
+;Delta: [time]
+;!HoldsAt(Active(E1),time) &
+;!HoldsAt(Completed(D),time-1) &
+;HoldsAt(Completed(D),time) &
+;HoldsAt(Condition(E1C),time) ->
+;Happens(Start(E1),time).
+;
+;Delta: [time]
+;!HoldsAt(Active(E2),time) &
+;!HoldsAt(Completed(D),time-1) &
+;HoldsAt(Completed(D),time) &
+;HoldsAt(Condition(E2C),time) ->
+;Happens(Start(E2),time).
+;
+;Delta: [time]
+;!HoldsAt(Active(E3),time) &
+;!HoldsAt(Completed(D),time-1) &
+;HoldsAt(Completed(D),time) &
+;HoldsAt(Condition(E3C),time) ->
+;Happens(Start(E3),time).
+;
+;; XOR-join E1, E2, E3; F
+;Delta: [time]
+;!HoldsAt(Active(F),time) &
+;((!HoldsAt(Completed(E1),time-1) & HoldsAt(Completed(E1),time))|
+; (!HoldsAt(Completed(E2),time-1) & HoldsAt(Completed(E2),time))|
+; (!HoldsAt(Completed(E3),time-1) & HoldsAt(Completed(E3),time))) ->
+;Happens(Start(F),time).
+;
+;; while (FC) F; G
+;Delta: [time]
+;!HoldsAt(Active(F),time) &
+;!HoldsAt(Completed(F),time-1) &
+;HoldsAt(Completed(F),time) &
+;HoldsAt(Condition(FC),time) ->
+;Happens(Start(F),time).
+;
+;Delta: [time]
+;!HoldsAt(Active(G),time) &
+;!HoldsAt(Completed(F),time-1) &
+;HoldsAt(Completed(F),time) &
+;!HoldsAt(Condition(FC),time) ->
+;Happens(Start(G),time).
+;
+;Delta: Happens(Start(A),0).
+;Delta: Happens(End(A),1).
+;Delta: Happens(End(B),3).
+;Delta: Happens(End(C1),5).
+;Delta: Happens(End(C2),6).
+;Delta: Happens(End(C3),7).
+;Delta: Happens(End(D),9).
+;Delta: Happens(End(E2),11).
+;Delta: Happens(End(F),13).
+;Delta: Happens(End(F),15).
 
 ; Gamma
 
@@ -173,7 +191,7 @@ Delta: Happens(End(F),15).
 [time] time=10 <-> HoldsAt(Condition(E2C),time).
 [time] !HoldsAt(Condition(E3C),time).
 
-completion Delta Happens
+;completion Delta Happens
 
 range time 0 18
 range offset 1 1

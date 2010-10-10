@@ -17,8 +17,26 @@
 ; }
 ;
 
-load foundations/Root.e
-load foundations/EC.e
+;load foundations/Root.e
+;load foundations/EC.e
+sort boolean
+sort integer
+reified sort predicate
+reified sort function
+
+sort time: integer
+sort offset: integer
+
+reified sort fluent
+reified sort event
+
+predicate Happens(event,time)
+predicate HoldsAt(fluent,time)
+predicate ReleasedAt(fluent,time)
+predicate Initiates(event,fluent,time)
+predicate Terminates(event,fluent,time)
+predicate Releases(event,fluent,time)
+predicate Trajectory(fluent,time,fluent,offset)
 
 sort object
 sort agent: object
@@ -36,7 +54,8 @@ physobj Box, Newspaper
 room Kitchen, LivingRoom
 
 ; Sigma
-
+sort physobj1: object
+sort physobj2: object
 ; RS10
 [agent,physobj1,physobj2,room,time]
 HoldsAt(IN(agent,room),time) &
@@ -61,6 +80,7 @@ Initiates(MOVE(agent,physobj1,physobj2,room),IN(physobj1,room),time).
 HoldsAt(IN(agent,room),time) ->
 Terminates(MOVE(agent,physobj1,physobj2,room),IN(physobj1,physobj2),time).
 
+room room1, room2
 ; RS14
 [agent,room1,room2,time]
 HoldsAt(IN(agent,room1),time) ->
@@ -108,6 +128,7 @@ Happens(MOVE(Lisa,Lisa,Kitchen,LivingRoom),4).
 ; RS1
 [object,time] !HoldsAt(IN(object,object),time).
 
+object object1, object2, object3
 ; RS2
 [object1,object2,time]
 HoldsAt(IN(object1,object2),time) ->

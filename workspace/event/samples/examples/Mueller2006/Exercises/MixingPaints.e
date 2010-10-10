@@ -17,8 +17,26 @@
 ; }
 ;
 
-load foundations/Root.e
-load foundations/EC.e
+;load foundations/Root.e
+;load foundations/EC.e
+sort boolean
+sort integer
+reified sort predicate
+reified sort function
+
+sort time: integer
+sort offset: integer
+
+reified sort fluent
+reified sort event
+
+predicate Happens(event,time)
+predicate HoldsAt(fluent,time)
+predicate ReleasedAt(fluent,time)
+predicate Initiates(event,fluent,time)
+predicate Terminates(event,fluent,time)
+predicate Releases(event,fluent,time)
+predicate Trajectory(fluent,time,fluent,offset)
 
 sort palette
 sort color
@@ -34,6 +52,7 @@ fluent OnPalette(palette,color)
 !Happens(PlaceOnPalette(palette,Blue),time) ->
 Initiates(PlaceOnPalette(palette,color),OnPalette(palette,color),time).
 
+color color1, color2
 [palette,color1,color2,time]
 Happens(PlaceOnPalette(palette,Yellow),time) &
 color1 = Blue &
@@ -61,25 +80,25 @@ HoldsAt(OnPalette(palette,color1),time) &
 HoldsAt(OnPalette(palette,color2),time) ->
 color1 = color2.
 
-; (1) place green over red
-HoldsAt(OnPalette(Palette1,Red),0).
-Delta: Happens(PlaceOnPalette(Palette1,Green),0).
-
-; (2) place yellow+blue over green
-Delta: Happens(PlaceOnPalette(Palette1,Yellow),1).
-Delta: Happens(PlaceOnPalette(Palette1,Blue),1).
-
-; (3) place yellow
-Delta: Happens(PlaceOnPalette(Palette1,Yellow),2).
-
-; (4) place blue
-Delta: Happens(PlaceOnPalette(Palette1,Blue),3).
-
-; (5) place green
-Delta: Happens(PlaceOnPalette(Palette1,Yellow),4).
-Delta: Happens(PlaceOnPalette(Palette1,Blue),4).
-
-completion Delta Happens
+;; (1) place green over red
+;HoldsAt(OnPalette(Palette1,Red),0).
+;Delta: Happens(PlaceOnPalette(Palette1,Green),0).
+;
+;; (2) place yellow+blue over green
+;Delta: Happens(PlaceOnPalette(Palette1,Yellow),1).
+;Delta: Happens(PlaceOnPalette(Palette1,Blue),1).
+;
+;; (3) place yellow
+;Delta: Happens(PlaceOnPalette(Palette1,Yellow),2).
+;
+;; (4) place blue
+;Delta: Happens(PlaceOnPalette(Palette1,Blue),3).
+;
+;; (5) place green
+;Delta: Happens(PlaceOnPalette(Palette1,Yellow),4).
+;Delta: Happens(PlaceOnPalette(Palette1,Blue),4).
+;
+;completion Delta Happens
 
 range time 0 5
 range offset 1 1

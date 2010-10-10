@@ -19,14 +19,33 @@
 ; }
 ;
 
-option trajectory on
+;option trajectory on
+;
+;load foundations/Root.e
+;load foundations/EC.e
+sort boolean
+sort integer
+reified sort predicate
+reified sort function
 
-load foundations/Root.e
-load foundations/EC.e
+sort time: integer
+sort offset: integer
+
+reified sort fluent
+reified sort event
+
+predicate Happens(event,time)
+predicate HoldsAt(fluent,time)
+predicate ReleasedAt(fluent,time)
+predicate Initiates(event,fluent,time)
+predicate Terminates(event,fluent,time)
+predicate Releases(event,fluent,time)
+predicate Trajectory(fluent,time,fluent,offset)
 
 sort object
 sort height: integer
-
+sort height1: integer
+sort height2: integer
 fluent Height(object,height)
 fluent Falling(object)
 event StartFalling(object)

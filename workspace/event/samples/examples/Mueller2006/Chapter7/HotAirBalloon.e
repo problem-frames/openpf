@@ -26,12 +26,51 @@
 ; }
 ;
 
-option encoding 3
-option trajectory on
+;option encoding 3
+;option trajectory on
+;
+;load foundations/Root.e
+;load foundations/EC.e
+sort boolean
+sort integer
+reified sort predicate
+reified sort function
 
-load foundations/Root.e
-load foundations/EC.e
+sort time: integer
+sort offset: integer
 
+reified sort fluent
+reified sort event
+
+predicate Happens(event,time)
+predicate HoldsAt(fluent,time)
+predicate ReleasedAt(fluent,time)
+predicate Initiates(event,fluent,time)
+predicate Terminates(event,fluent,time)
+predicate Releases(event,fluent,time)
+
+predicate Clipped(time,fluent,time)
+predicate Declipped(time,fluent,time)
+
+predicate Trajectory(fluent,time,fluent,offset)
+predicate AntiTrajectory(fluent,time,fluent,offset)
+
+fluent fluent2
+[event,fluent,fluent2,offset,time]
+Happens(event,time) &
+Initiates(event,fluent,time) &
+0 < offset &
+Trajectory(fluent,time,fluent2,offset) &
+!Clipped(time,fluent,time+offset) ->
+HoldsAt(fluent2,time+offset).
+
+[event,fluent,fluent2,offset,time]
+Happens(event,time) &
+Terminates(event,fluent,time) &
+0 < offset &
+AntiTrajectory(fluent,time,fluent2,offset) &
+!Declipped(time,fluent,time+offset) ->
+HoldsAt(fluent2,time+offset).
 sort balloon
 sort agent
 sort height: integer
@@ -56,11 +95,11 @@ Terminates(TurnOffHeater(agent,balloon),HeaterOn(balloon),time).
 
 ; Delta
 
-Delta: Happens(TurnOnHeater(Nathan,Balloon),0).
-Delta: Happens(TurnOffHeater(Nathan,Balloon),2).
+;Delta: Happens(TurnOnHeater(Nathan,Balloon),0).
+;Delta: Happens(TurnOffHeater(Nathan,Balloon),2).
 
 ; Psi
-
+height height1, height2
 [balloon,height1,height2,time]
 HoldsAt(Height(balloon,height1),time) &
 HoldsAt(Height(balloon,height2),time) ->
@@ -85,7 +124,7 @@ HoldsAt(Height(Balloon,0),0).
 ; added:
 !HoldsAt(HeaterOn(Balloon),0).
 
-completion Delta Happens
+;completion Delta Happens
 
 range time 0 3
 range height 0 2

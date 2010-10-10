@@ -16,12 +16,51 @@
 ;   publisher = "Morgan Kaufmann/Elsevier",
 ; }
 ;
+;
+;option modeldiff on
+;
+;load foundations/Root.e
+;load foundations/EC.e
+sort boolean
+sort integer
+reified sort predicate
+reified sort function
 
-option modeldiff on
+sort time: integer
+sort offset: integer
 
-load foundations/Root.e
-load foundations/EC.e
+reified sort fluent
+reified sort event
 
+predicate Happens(event,time)
+predicate HoldsAt(fluent,time)
+predicate ReleasedAt(fluent,time)
+predicate Initiates(event,fluent,time)
+predicate Terminates(event,fluent,time)
+predicate Releases(event,fluent,time)
+
+predicate Clipped(time,fluent,time)
+predicate Declipped(time,fluent,time)
+
+predicate Trajectory(fluent,time,fluent,offset)
+predicate AntiTrajectory(fluent,time,fluent,offset)
+
+fluent fluent2
+[event,fluent,fluent2,offset,time]
+Happens(event,time) &
+Initiates(event,fluent,time) &
+0 < offset &
+Trajectory(fluent,time,fluent2,offset) &
+!Clipped(time,fluent,time+offset) ->
+HoldsAt(fluent2,time+offset).
+
+[event,fluent,fluent2,offset,time]
+Happens(event,time) &
+Terminates(event,fluent,time) &
+0 < offset &
+AntiTrajectory(fluent,time,fluent2,offset) &
+!Declipped(time,fluent,time+offset) ->
+HoldsAt(fluent2,time+offset).
 sort dealer
 sort wheel
 sort value: integer
@@ -39,7 +78,7 @@ event Reset(dealer,wheel)
 [wheel,time]
 {value}
 HoldsAt(WheelNumberDeterminer(wheel,value),time).
-
+value value1, value2
 [wheel,value1,value2,time]
 HoldsAt(WheelNumberDeterminer(wheel,value1),time) &
 HoldsAt(WheelNumberDeterminer(wheel,value2),time) ->

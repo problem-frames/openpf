@@ -28,10 +28,51 @@
 ; }
 ;
 
-option renaming off
+;option renaming off
+;
+;load foundations/Root.e
+;load foundations/EC.e
 
-load foundations/Root.e
-load foundations/EC.e
+sort boolean
+sort integer
+reified sort predicate
+reified sort function
+
+sort time: integer
+sort offset: integer
+
+reified sort fluent
+reified sort event
+
+predicate Happens(event,time)
+predicate HoldsAt(fluent,time)
+predicate ReleasedAt(fluent,time)
+predicate Initiates(event,fluent,time)
+predicate Terminates(event,fluent,time)
+predicate Releases(event,fluent,time)
+
+predicate Clipped(time,fluent,time)
+predicate Declipped(time,fluent,time)
+
+predicate Trajectory(fluent,time,fluent,offset)
+predicate AntiTrajectory(fluent,time,fluent,offset)
+
+fluent fluent2
+[event,fluent,fluent2,offset,time]
+Happens(event,time) &
+Initiates(event,fluent,time) &
+0 < offset &
+Trajectory(fluent,time,fluent2,offset) &
+!Clipped(time,fluent,time+offset) ->
+HoldsAt(fluent2,time+offset).
+
+[event,fluent,fluent2,offset,time]
+Happens(event,time) &
+Terminates(event,fluent,time) &
+0 < offset &
+AntiTrajectory(fluent,time,fluent2,offset) &
+!Declipped(time,fluent,time+offset) ->
+HoldsAt(fluent2,time+offset).
 
 sort coord: integer
 
@@ -62,7 +103,7 @@ event MoveLeftWheel(robot)
 event MoveRightWheel(robot)
 
 ; Sigma
-
+direction direction1, direction2
 [robot,direction1,direction2,time]
 !Happens(MoveRightWheel(robot),time) &
 HoldsAt(Direction(robot,direction1),time) &
@@ -85,6 +126,7 @@ Initiates(MoveRightWheel(robot),Direction(robot,direction2),time).
 HoldsAt(Direction(robot,direction),time) ->
 Terminates(MoveRightWheel(robot),Direction(robot,direction),time).
 
+coord coord1, coord2, coord3, coord4
 [robot,direction,coord1,coord2,coord3,coord4,time]
 Happens(MoveLeftWheel(robot),time) &
 HoldsAt(Location(robot,coord1,coord2),time) &

@@ -20,10 +20,12 @@ import uk.ac.open.event.eventcalculus.BooleanLiteral;
 import uk.ac.open.event.eventcalculus.Declaration;
 import uk.ac.open.event.eventcalculus.DeclaredParameter;
 import uk.ac.open.event.eventcalculus.DefCompletion;
+import uk.ac.open.event.eventcalculus.DefMutex;
 import uk.ac.open.event.eventcalculus.DefNonInertia;
 import uk.ac.open.event.eventcalculus.DefOption;
 import uk.ac.open.event.eventcalculus.DefRange;
 import uk.ac.open.event.eventcalculus.DefSort;
+import uk.ac.open.event.eventcalculus.DefXor;
 import uk.ac.open.event.eventcalculus.Definition;
 import uk.ac.open.event.eventcalculus.Div;
 import uk.ac.open.event.eventcalculus.EventcalculusFactory;
@@ -117,6 +119,20 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * @generated
    */
   private EClass defNonInertiaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass defXorEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass defMutexEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -576,6 +592,16 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getDefOption_Value2()
+  {
+    return (EAttribute)defOptionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getDefCompletion()
   {
     return defCompletionEClass;
@@ -606,9 +632,49 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getDefNonInertia_Name()
+  public EReference getDefNonInertia_Names()
   {
     return (EReference)defNonInertiaEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDefXor()
+  {
+    return defXorEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDefXor_Names()
+  {
+    return (EReference)defXorEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDefMutex()
+  {
+    return defMutexEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDefMutex_Names()
+  {
+    return (EReference)defMutexEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -726,9 +792,9 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getExpression_Qualifiers()
+  public EAttribute getExpression_Label()
   {
-    return (EReference)expressionEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)expressionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -736,7 +802,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getExpression_Expr()
+  public EReference getExpression_Qualifiers()
   {
     return (EReference)expressionEClass.getEStructuralFeatures().get(1);
   }
@@ -746,9 +812,19 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getExpression_Expr()
+  {
+    return (EReference)expressionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EAttribute getExpression_Op()
   {
-    return (EAttribute)expressionEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)expressionEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -758,7 +834,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    */
   public EReference getExpression_Right()
   {
-    return (EReference)expressionEClass.getEStructuralFeatures().get(3);
+    return (EReference)expressionEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1284,12 +1360,19 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
     defOptionEClass = createEClass(DEF_OPTION);
     createEAttribute(defOptionEClass, DEF_OPTION__NAME);
     createEAttribute(defOptionEClass, DEF_OPTION__VALUE);
+    createEAttribute(defOptionEClass, DEF_OPTION__VALUE2);
 
     defCompletionEClass = createEClass(DEF_COMPLETION);
     createEReference(defCompletionEClass, DEF_COMPLETION__NAME);
 
     defNonInertiaEClass = createEClass(DEF_NON_INERTIA);
-    createEReference(defNonInertiaEClass, DEF_NON_INERTIA__NAME);
+    createEReference(defNonInertiaEClass, DEF_NON_INERTIA__NAMES);
+
+    defXorEClass = createEClass(DEF_XOR);
+    createEReference(defXorEClass, DEF_XOR__NAMES);
+
+    defMutexEClass = createEClass(DEF_MUTEX);
+    createEReference(defMutexEClass, DEF_MUTEX__NAMES);
 
     statementEClass = createEClass(STATEMENT);
 
@@ -1306,6 +1389,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
     createEReference(declaredParameterEClass, DECLARED_PARAMETER__NAME);
 
     expressionEClass = createEClass(EXPRESSION);
+    createEAttribute(expressionEClass, EXPRESSION__LABEL);
     createEReference(expressionEClass, EXPRESSION__QUALIFIERS);
     createEReference(expressionEClass, EXPRESSION__EXPR);
     createEAttribute(expressionEClass, EXPRESSION__OP);
@@ -1419,6 +1503,8 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
     defOptionEClass.getESuperTypes().add(this.getDeclaration());
     defCompletionEClass.getESuperTypes().add(this.getDeclaration());
     defNonInertiaEClass.getESuperTypes().add(this.getDeclaration());
+    defXorEClass.getESuperTypes().add(this.getDeclaration());
+    defMutexEClass.getESuperTypes().add(this.getDeclaration());
     sortDefinitionEClass.getESuperTypes().add(this.getStatement());
     declaredParameterEClass.getESuperTypes().add(this.getExpression());
     expressionEClass.getESuperTypes().add(this.getStatement());
@@ -1470,12 +1556,19 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
     initEClass(defOptionEClass, DefOption.class, "DefOption", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getDefOption_Name(), ecorePackage.getEString(), "name", null, 0, 1, DefOption.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDefOption_Value(), ecorePackage.getEInt(), "value", null, 0, 1, DefOption.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDefOption_Value2(), ecorePackage.getEString(), "value2", null, 0, 1, DefOption.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(defCompletionEClass, DefCompletion.class, "DefCompletion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getDefCompletion_Name(), this.getDefinition(), null, "name", null, 0, 1, DefCompletion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(defNonInertiaEClass, DefNonInertia.class, "DefNonInertia", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getDefNonInertia_Name(), this.getDefinition(), null, "name", null, 0, 1, DefNonInertia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDefNonInertia_Names(), this.getDefinition(), null, "names", null, 0, -1, DefNonInertia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(defXorEClass, DefXor.class, "DefXor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDefXor_Names(), this.getDefinition(), null, "names", null, 0, -1, DefXor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(defMutexEClass, DefMutex.class, "DefMutex", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDefMutex_Names(), this.getDefinition(), null, "names", null, 0, -1, DefMutex.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(statementEClass, Statement.class, "Statement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1492,6 +1585,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
     initEReference(getDeclaredParameter_Name(), ecorePackage.getEObject(), null, "name", null, 0, 1, DeclaredParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getExpression_Label(), ecorePackage.getEString(), "label", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getExpression_Qualifiers(), this.getQualifier(), null, "qualifiers", null, 0, -1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getExpression_Expr(), this.getExpression(), null, "expr", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getExpression_Op(), this.getUnarOp(), "op", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -15,12 +15,30 @@
 ;   address = "San Francisco",
 ;   publisher = "Morgan Kaufmann/Elsevier",
 ; }
+;;
 ;
+;option timediff off
+;
+;load foundations/Root.e
+;load foundations/EC.e
+sort boolean
+sort integer
+reified sort predicate
+reified sort function
 
-option timediff off
+sort time: integer
+sort offset: integer
 
-load foundations/Root.e
-load foundations/EC.e
+reified sort fluent
+reified sort event
+
+predicate Happens(event,time)
+predicate HoldsAt(fluent,time)
+predicate ReleasedAt(fluent,time)
+predicate Initiates(event,fluent,time)
+predicate Terminates(event,fluent,time)
+predicate Releases(event,fluent,time)
+predicate Trajectory(fluent,time,fluent,offset)
 
 sort agent
 
@@ -31,9 +49,9 @@ event WakeUp(agent)
 
 agent James
 !HoldsAt(Awake(James),0).
-Delta: Happens(WakeUp(James),0).
+;Delta: Happens(WakeUp(James),0).
 
-completion Delta Happens
+;completion Delta Happens
 
 range time 0 1
 range offset 1 1

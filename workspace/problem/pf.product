@@ -614,6 +614,7 @@
       <feature id="org.eclipse.platform"/>
       <feature id="core.feature"/>
       <feature id="change.feature"/>
+      <!--
       <feature id="org.eclipse.jdt"/>
       <feature id="org.eclipse.emf"/>
       <feature id="org.eclipse.gef"/>

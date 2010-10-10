@@ -9,21 +9,21 @@ import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Def Non Inertia</b></em>'.
+ * A representation of the model object '<em><b>Def Xor</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link uk.ac.open.event.eventcalculus.DefNonInertia#getNames <em>Names</em>}</li>
+ *   <li>{@link uk.ac.open.event.eventcalculus.DefXor#getNames <em>Names</em>}</li>
  * </ul>
  * </p>
  *
- * @see uk.ac.open.event.eventcalculus.EventcalculusPackage#getDefNonInertia()
+ * @see uk.ac.open.event.eventcalculus.EventcalculusPackage#getDefXor()
  * @model
  * @generated
  */
-public interface DefNonInertia extends Declaration
+public interface DefXor extends Declaration
 {
   /**
    * Returns the value of the '<em><b>Names</b></em>' reference list.
@@ -35,10 +35,10 @@ public interface DefNonInertia extends Declaration
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Names</em>' reference list.
-   * @see uk.ac.open.event.eventcalculus.EventcalculusPackage#getDefNonInertia_Names()
+   * @see uk.ac.open.event.eventcalculus.EventcalculusPackage#getDefXor_Names()
    * @model
    * @generated
    */
   EList<Definition> getNames();
 
-} // DefNonInertia
+} // DefXor

@@ -16,14 +16,43 @@
 ;   school = "Program in Media Arts and Sciences, School of Architecture and Planning, Massachusetts Institute of Technology",
 ; }
 ;
+sort boolean
+sort integer
+reified sort predicate
+reified sort function
+
+sort time: integer
+sort offset: integer
+
+reified sort fluent
+reified sort event
+
+predicate Happens(event,time)
+predicate HoldsAt(fluent,time)
+predicate ReleasedAt(fluent,time)
+predicate Initiates(event,fluent,time)
+predicate Terminates(event,fluent,time)
+predicate Releases(event,fluent,time)
+predicate Trajectory(fluent,time,fluent,offset)
+
 
 ; sorts
 sort object
+sort object1
+sort object2
 sort xcoord: integer
+sort xcoord1: integer
+sort xcoord2: integer
 sort ycoord: integer
+sort ycoord1: integer
+sort ycoord2: integer
 sort grid
 sort shape
+sort shape1
+sort shape2
 sort color
+sort color1
+sort color2
 
 ; constants
 shape Round,Square

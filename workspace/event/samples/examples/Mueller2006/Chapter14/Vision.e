@@ -28,17 +28,34 @@
 ; }
 ;
 
-option modeldiff on
+sort boolean
+sort integer
+reified sort predicate
+reified sort function
 
-load foundations/Root.e
-load foundations/EC.e
+sort time: integer
+sort offset: integer
+
+reified sort fluent
+reified sort event
+
+predicate Happens(event,time)
+predicate HoldsAt(fluent,time)
+predicate ReleasedAt(fluent,time)
+predicate Initiates(event,fluent,time)
+predicate Terminates(event,fluent,time)
+predicate Releases(event,fluent,time)
+predicate Trajectory(fluent,time,fluent,offset)
 
 sort object
 sort shape
 sort aspect
 
+object object1
 object Object1
+aspect aspect1, aspect2, aspect3
 aspect Aspect1, Aspect2, Aspect3
+shape shape1, shape2
 shape Shape1, Shape2
 
 predicate Shape(object,shape)
@@ -47,7 +64,6 @@ fluent Aspect(object,aspect)
 event Change(object,aspect,aspect)
 
 ; Sigma
-
 [object,aspect1,aspect2,shape,time]
 HoldsAt(Aspect(object,aspect1),time) &
 Shape(object,shape) &

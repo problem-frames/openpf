@@ -13,24 +13,24 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
-import uk.ac.open.event.eventcalculus.DefNonInertia;
+import uk.ac.open.event.eventcalculus.DefXor;
 import uk.ac.open.event.eventcalculus.Definition;
 import uk.ac.open.event.eventcalculus.EventcalculusPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Def Non Inertia</b></em>'.
+ * An implementation of the model object '<em><b>Def Xor</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link uk.ac.open.event.eventcalculus.impl.DefNonInertiaImpl#getNames <em>Names</em>}</li>
+ *   <li>{@link uk.ac.open.event.eventcalculus.impl.DefXorImpl#getNames <em>Names</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class DefNonInertiaImpl extends DeclarationImpl implements DefNonInertia
+public class DefXorImpl extends DeclarationImpl implements DefXor
 {
   /**
    * The cached value of the '{@link #getNames() <em>Names</em>}' reference list.
@@ -47,7 +47,7 @@ public class DefNonInertiaImpl extends DeclarationImpl implements DefNonInertia
    * <!-- end-user-doc -->
    * @generated
    */
-  protected DefNonInertiaImpl()
+  protected DefXorImpl()
   {
     super();
   }
@@ -60,7 +60,7 @@ public class DefNonInertiaImpl extends DeclarationImpl implements DefNonInertia
   @Override
   protected EClass eStaticClass()
   {
-    return EventcalculusPackage.Literals.DEF_NON_INERTIA;
+    return EventcalculusPackage.Literals.DEF_XOR;
   }
 
   /**
@@ -72,7 +72,7 @@ public class DefNonInertiaImpl extends DeclarationImpl implements DefNonInertia
   {
     if (names == null)
     {
-      names = new EObjectResolvingEList<Definition>(Definition.class, this, EventcalculusPackage.DEF_NON_INERTIA__NAMES);
+      names = new EObjectResolvingEList<Definition>(Definition.class, this, EventcalculusPackage.DEF_XOR__NAMES);
     }
     return names;
   }
@@ -87,7 +87,7 @@ public class DefNonInertiaImpl extends DeclarationImpl implements DefNonInertia
   {
     switch (featureID)
     {
-      case EventcalculusPackage.DEF_NON_INERTIA__NAMES:
+      case EventcalculusPackage.DEF_XOR__NAMES:
         return getNames();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -104,7 +104,7 @@ public class DefNonInertiaImpl extends DeclarationImpl implements DefNonInertia
   {
     switch (featureID)
     {
-      case EventcalculusPackage.DEF_NON_INERTIA__NAMES:
+      case EventcalculusPackage.DEF_XOR__NAMES:
         getNames().clear();
         getNames().addAll((Collection<? extends Definition>)newValue);
         return;
@@ -122,7 +122,7 @@ public class DefNonInertiaImpl extends DeclarationImpl implements DefNonInertia
   {
     switch (featureID)
     {
-      case EventcalculusPackage.DEF_NON_INERTIA__NAMES:
+      case EventcalculusPackage.DEF_XOR__NAMES:
         getNames().clear();
         return;
     }
@@ -139,10 +139,10 @@ public class DefNonInertiaImpl extends DeclarationImpl implements DefNonInertia
   {
     switch (featureID)
     {
-      case EventcalculusPackage.DEF_NON_INERTIA__NAMES:
+      case EventcalculusPackage.DEF_XOR__NAMES:
         return names != null && !names.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //DefNonInertiaImpl
+} //DefXorImpl

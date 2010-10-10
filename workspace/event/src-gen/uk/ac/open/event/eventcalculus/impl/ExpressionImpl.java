@@ -32,6 +32,7 @@ import uk.ac.open.event.eventcalculus.UnarOp;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link uk.ac.open.event.eventcalculus.impl.ExpressionImpl#getLabel <em>Label</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.ExpressionImpl#getQualifiers <em>Qualifiers</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.ExpressionImpl#getExpr <em>Expr</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.ExpressionImpl#getOp <em>Op</em>}</li>
@@ -43,6 +44,26 @@ import uk.ac.open.event.eventcalculus.UnarOp;
  */
 public class ExpressionImpl extends StatementImpl implements Expression
 {
+  /**
+   * The default value of the '{@link #getLabel() <em>Label</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLabel()
+   * @generated
+   * @ordered
+   */
+  protected static final String LABEL_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getLabel() <em>Label</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLabel()
+   * @generated
+   * @ordered
+   */
+  protected String label = LABEL_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getQualifiers() <em>Qualifiers</em>}' containment reference list.
    * <!-- begin-user-doc -->
@@ -112,6 +133,29 @@ public class ExpressionImpl extends StatementImpl implements Expression
   protected EClass eStaticClass()
   {
     return EventcalculusPackage.Literals.EXPRESSION;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getLabel()
+  {
+    return label;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setLabel(String newLabel)
+  {
+    String oldLabel = label;
+    label = newLabel;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EventcalculusPackage.EXPRESSION__LABEL, oldLabel, label));
   }
 
   /**
@@ -277,6 +321,8 @@ public class ExpressionImpl extends StatementImpl implements Expression
   {
     switch (featureID)
     {
+      case EventcalculusPackage.EXPRESSION__LABEL:
+        return getLabel();
       case EventcalculusPackage.EXPRESSION__QUALIFIERS:
         return getQualifiers();
       case EventcalculusPackage.EXPRESSION__EXPR:
@@ -300,6 +346,9 @@ public class ExpressionImpl extends StatementImpl implements Expression
   {
     switch (featureID)
     {
+      case EventcalculusPackage.EXPRESSION__LABEL:
+        setLabel((String)newValue);
+        return;
       case EventcalculusPackage.EXPRESSION__QUALIFIERS:
         getQualifiers().clear();
         getQualifiers().addAll((Collection<? extends Qualifier>)newValue);
@@ -327,6 +376,9 @@ public class ExpressionImpl extends StatementImpl implements Expression
   {
     switch (featureID)
     {
+      case EventcalculusPackage.EXPRESSION__LABEL:
+        setLabel(LABEL_EDEFAULT);
+        return;
       case EventcalculusPackage.EXPRESSION__QUALIFIERS:
         getQualifiers().clear();
         return;
@@ -353,6 +405,8 @@ public class ExpressionImpl extends StatementImpl implements Expression
   {
     switch (featureID)
     {
+      case EventcalculusPackage.EXPRESSION__LABEL:
+        return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
       case EventcalculusPackage.EXPRESSION__QUALIFIERS:
         return qualifiers != null && !qualifiers.isEmpty();
       case EventcalculusPackage.EXPRESSION__EXPR:
@@ -376,7 +430,9 @@ public class ExpressionImpl extends StatementImpl implements Expression
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (op: ");
+    result.append(" (label: ");
+    result.append(label);
+    result.append(", op: ");
     result.append(op);
     result.append(')');
     return result.toString();

@@ -17,8 +17,26 @@
 ; }
 ;
 
-load foundations/Root.e
-load foundations/EC.e
+;load foundations/Root.e
+;load foundations/EC.e
+sort boolean
+sort integer
+reified sort predicate
+reified sort function
+
+sort time: integer
+sort offset: integer
+
+reified sort fluent
+reified sort event
+
+predicate Happens(event,time)
+predicate HoldsAt(fluent,time)
+predicate ReleasedAt(fluent,time)
+predicate Initiates(event,fluent,time)
+predicate Terminates(event,fluent,time)
+predicate Releases(event,fluent,time)
+predicate Trajectory(fluent,time,fluent,offset)
 
 sort agent
 sort phone
@@ -38,7 +56,7 @@ event SetDown(agent,phone)
 event Dial(agent,phone,phone)
 
 ; Sigma
-
+phone phone1, phone2
 [agent,phone,time]
 HoldsAt(Idle(phone),time) ->
 Initiates(PickUp(agent,phone),DialTone(phone),time).
@@ -164,7 +182,7 @@ HoldsAt(Connected(phone1,phone2),time) &
 phone1!=phone2 ->
 !HoldsAt(Connected(phone2,phone1),time).
 
-mutex Idle, DialTone, BusySignal, Disconnected
+;mutex Idle, DialTone, BusySignal, Disconnected
 
 [phone1,phone2,time]
 HoldsAt(Idle(phone1),time) ->

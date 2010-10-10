@@ -1,22 +1,22 @@
 problem: JLB_F1
 
-DR -- MR
+DR--MR
 
-MR -- MS
+MR--MS
 
-MS -- AT
+MS--AT
 
-MS -- MP
+MS--MP
 
-MP -- PR
+MP--PR
 
-AT -- PR
+AT--PR
 
-MR ~~ F1
+MR~~F1
 
-MS ~> F1
+MS~>F1
 
-MP ~~ F1
+MP~~F1
 
 F1 "The system shall find 
 a room for any proposal of 

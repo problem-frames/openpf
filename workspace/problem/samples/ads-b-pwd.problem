@@ -31,7 +31,6 @@ see "/Examples/istar/open_account.ood" // just a demo
 }
 
 CP M "Central Processor" { problem: TheCentralProcessorProblem for CPU
-
 CPU M "Central Processing Unit" }
 
 ADS_B C "Ground Receivers"

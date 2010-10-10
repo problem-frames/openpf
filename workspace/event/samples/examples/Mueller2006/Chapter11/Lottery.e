@@ -24,11 +24,29 @@
 ;   publisher = "Morgan Kaufmann/Elsevier",
 ; }
 ;
+;
+;option modeldiff on
+;
+;load foundations/Root.e
+;load foundations/EC.e
+sort boolean
+sort integer
+reified sort predicate
+reified sort function
 
-option modeldiff on
+sort time: integer
+sort offset: integer
 
-load foundations/Root.e
-load foundations/EC.e
+reified sort fluent
+reified sort event
+
+predicate Happens(event,time)
+predicate HoldsAt(fluent,time)
+predicate ReleasedAt(fluent,time)
+predicate Initiates(event,fluent,time)
+predicate Terminates(event,fluent,time)
+predicate Releases(event,fluent,time)
+predicate Trajectory(fluent,time,fluent,offset)
 
 sort agent
 sort aboutevent
@@ -51,7 +69,7 @@ event AddHappyFor(agent,agent,aboutevent)
 
 [agent,aboutevent,time]
 Initiates(AddJoy(agent,aboutevent),Joy(agent,aboutevent),time).
-
+agent agent1, agent2
 [agent1,agent2,aboutevent,time]
 Initiates(AddHappyFor(agent1,agent2,aboutevent),
           HappyFor(agent1,agent2,aboutevent),
@@ -70,7 +88,7 @@ HoldsAt(Desirability(agent,agent,aboutevent,desirability),time) &
 desirability=1 &
 HoldsAt(Believe(agent,aboutevent),time) ->
 Happens(AddJoy(agent,aboutevent),time).
-
+desirability desirability1, desirability2
 [agent1,agent2,aboutevent,desirability1,desirability2,time]
 !HoldsAt(HappyFor(agent1,agent2,aboutevent),time) &
 HoldsAt(Desirability(agent1,agent2,aboutevent,desirability1),time) &
@@ -112,7 +130,7 @@ desirability1 = desirability2.
 completion Happens
 
 range time 0 3
-range desirability -1 1
+;range desirability -1 1
 range offset 1 1
 
 ; End of file.

@@ -98,6 +98,24 @@ public interface EventcalculusFactory extends EFactory
   DefNonInertia createDefNonInertia();
 
   /**
+   * Returns a new object of class '<em>Def Xor</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Def Xor</em>'.
+   * @generated
+   */
+  DefXor createDefXor();
+
+  /**
+   * Returns a new object of class '<em>Def Mutex</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Def Mutex</em>'.
+   * @generated
+   */
+  DefMutex createDefMutex();
+
+  /**
    * Returns a new object of class '<em>Statement</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

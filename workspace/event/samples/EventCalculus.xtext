@@ -12,7 +12,7 @@ Import:
 	importURI=STRING;
 
 Declaration:
-	DefSort | DefRange | DefOption | DefCompletion | DefNonInertia;
+	DefSort | DefRange | DefOption | DefCompletion | DefNonInertia | DefXor | DefMutex;
 
 DefSort:
 	(reified='reified')? 'sort' name=ID (':' type=ID)?;
@@ -21,13 +21,20 @@ DefRange:
 	'range' name=[DefSort] min=INT max=INT;
 
 DefOption:
-	'option' name=ID value=INT;
+  	  'option' name=ID value=INT
+	| 'option' name=ID value2=ID;
 
 DefCompletion:
-	'completion' name=[Definition];
+	'completion' 'Theta'? name=[Definition];
 
 DefNonInertia:
-	'noninertial' name=[Definition];
+	'noninertial' names+=[Definition] (',' names+=[Definition])*;
+
+DefXor:
+	'xor' names+=[Definition] (',' names+=[Definition])*;
+
+DefMutex:
+	'mutex' names+=[Definition] (',' names+=[Definition])*;
 
 Statement:
 	SortDefinition | Expression '.';
@@ -42,7 +49,7 @@ DeclaredParameter:
 	name=[DefSort] | name=[Definition];
 
 Expression:
-	(qualifiers+=Qualifier)* expr=AssignmentOp;
+	(label=ID ':')? (qualifiers+=Qualifier)* expr=AssignmentOp;
 
 Qualifier: Exists | Forall;
 
@@ -98,7 +105,7 @@ FQN:
 	ID ('.' ID)*;
 
 terminal INT returns ecore::EInt:
-	'0' | ('1'..'9' ('0'..'9')*);
+	'0' | '-'? ('1'..'9' ('0'..'9')*);
 
 terminal BOOLEAN returns ecore::EBoolean:
 	'true' | 'false';

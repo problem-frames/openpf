@@ -39,6 +39,7 @@ public class EventCalculusParser extends AbstractContentAssistParser {
 				{
 					put(grammarAccess.getModelAccess().getAlternatives_1(), "rule__Model__Alternatives_1");
 					put(grammarAccess.getDeclarationAccess().getAlternatives(), "rule__Declaration__Alternatives");
+					put(grammarAccess.getDefOptionAccess().getAlternatives(), "rule__DefOption__Alternatives");
 					put(grammarAccess.getStatementAccess().getAlternatives(), "rule__Statement__Alternatives");
 					put(grammarAccess.getDeclaredParameterAccess().getAlternatives(), "rule__DeclaredParameter__Alternatives");
 					put(grammarAccess.getQualifierAccess().getAlternatives(), "rule__Qualifier__Alternatives");
@@ -53,9 +54,15 @@ public class EventCalculusParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDefSortAccess().getGroup(), "rule__DefSort__Group__0");
 					put(grammarAccess.getDefSortAccess().getGroup_3(), "rule__DefSort__Group_3__0");
 					put(grammarAccess.getDefRangeAccess().getGroup(), "rule__DefRange__Group__0");
-					put(grammarAccess.getDefOptionAccess().getGroup(), "rule__DefOption__Group__0");
+					put(grammarAccess.getDefOptionAccess().getGroup_0(), "rule__DefOption__Group_0__0");
+					put(grammarAccess.getDefOptionAccess().getGroup_1(), "rule__DefOption__Group_1__0");
 					put(grammarAccess.getDefCompletionAccess().getGroup(), "rule__DefCompletion__Group__0");
 					put(grammarAccess.getDefNonInertiaAccess().getGroup(), "rule__DefNonInertia__Group__0");
+					put(grammarAccess.getDefNonInertiaAccess().getGroup_2(), "rule__DefNonInertia__Group_2__0");
+					put(grammarAccess.getDefXorAccess().getGroup(), "rule__DefXor__Group__0");
+					put(grammarAccess.getDefXorAccess().getGroup_2(), "rule__DefXor__Group_2__0");
+					put(grammarAccess.getDefMutexAccess().getGroup(), "rule__DefMutex__Group__0");
+					put(grammarAccess.getDefMutexAccess().getGroup_2(), "rule__DefMutex__Group_2__0");
 					put(grammarAccess.getStatementAccess().getGroup_1(), "rule__Statement__Group_1__0");
 					put(grammarAccess.getSortDefinitionAccess().getGroup(), "rule__SortDefinition__Group__0");
 					put(grammarAccess.getSortDefinitionAccess().getGroup_2(), "rule__SortDefinition__Group_2__0");
@@ -64,6 +71,7 @@ public class EventCalculusParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDefinitionAccess().getGroup_1_2(), "rule__Definition__Group_1_2__0");
 					put(grammarAccess.getDefinitionAccess().getGroup_2(), "rule__Definition__Group_2__0");
 					put(grammarAccess.getExpressionAccess().getGroup(), "rule__Expression__Group__0");
+					put(grammarAccess.getExpressionAccess().getGroup_0(), "rule__Expression__Group_0__0");
 					put(grammarAccess.getExistsAccess().getGroup(), "rule__Exists__Group__0");
 					put(grammarAccess.getExistsAccess().getGroup_2(), "rule__Exists__Group_2__0");
 					put(grammarAccess.getForallAccess().getGroup(), "rule__Forall__Group__0");
@@ -117,10 +125,17 @@ public class EventCalculusParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDefRangeAccess().getNameAssignment_1(), "rule__DefRange__NameAssignment_1");
 					put(grammarAccess.getDefRangeAccess().getMinAssignment_2(), "rule__DefRange__MinAssignment_2");
 					put(grammarAccess.getDefRangeAccess().getMaxAssignment_3(), "rule__DefRange__MaxAssignment_3");
-					put(grammarAccess.getDefOptionAccess().getNameAssignment_1(), "rule__DefOption__NameAssignment_1");
-					put(grammarAccess.getDefOptionAccess().getValueAssignment_2(), "rule__DefOption__ValueAssignment_2");
-					put(grammarAccess.getDefCompletionAccess().getNameAssignment_1(), "rule__DefCompletion__NameAssignment_1");
-					put(grammarAccess.getDefNonInertiaAccess().getNameAssignment_1(), "rule__DefNonInertia__NameAssignment_1");
+					put(grammarAccess.getDefOptionAccess().getNameAssignment_0_1(), "rule__DefOption__NameAssignment_0_1");
+					put(grammarAccess.getDefOptionAccess().getValueAssignment_0_2(), "rule__DefOption__ValueAssignment_0_2");
+					put(grammarAccess.getDefOptionAccess().getNameAssignment_1_1(), "rule__DefOption__NameAssignment_1_1");
+					put(grammarAccess.getDefOptionAccess().getValue2Assignment_1_2(), "rule__DefOption__Value2Assignment_1_2");
+					put(grammarAccess.getDefCompletionAccess().getNameAssignment_2(), "rule__DefCompletion__NameAssignment_2");
+					put(grammarAccess.getDefNonInertiaAccess().getNamesAssignment_1(), "rule__DefNonInertia__NamesAssignment_1");
+					put(grammarAccess.getDefNonInertiaAccess().getNamesAssignment_2_1(), "rule__DefNonInertia__NamesAssignment_2_1");
+					put(grammarAccess.getDefXorAccess().getNamesAssignment_1(), "rule__DefXor__NamesAssignment_1");
+					put(grammarAccess.getDefXorAccess().getNamesAssignment_2_1(), "rule__DefXor__NamesAssignment_2_1");
+					put(grammarAccess.getDefMutexAccess().getNamesAssignment_1(), "rule__DefMutex__NamesAssignment_1");
+					put(grammarAccess.getDefMutexAccess().getNamesAssignment_2_1(), "rule__DefMutex__NamesAssignment_2_1");
 					put(grammarAccess.getSortDefinitionAccess().getSortAssignment_0(), "rule__SortDefinition__SortAssignment_0");
 					put(grammarAccess.getSortDefinitionAccess().getDefinitionsAssignment_1(), "rule__SortDefinition__DefinitionsAssignment_1");
 					put(grammarAccess.getSortDefinitionAccess().getDefinitionsAssignment_2_1(), "rule__SortDefinition__DefinitionsAssignment_2_1");
@@ -130,8 +145,9 @@ public class EventCalculusParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDefinitionAccess().getReturnAssignment_2_1(), "rule__Definition__ReturnAssignment_2_1");
 					put(grammarAccess.getDeclaredParameterAccess().getNameAssignment_0(), "rule__DeclaredParameter__NameAssignment_0");
 					put(grammarAccess.getDeclaredParameterAccess().getNameAssignment_1(), "rule__DeclaredParameter__NameAssignment_1");
-					put(grammarAccess.getExpressionAccess().getQualifiersAssignment_0(), "rule__Expression__QualifiersAssignment_0");
-					put(grammarAccess.getExpressionAccess().getExprAssignment_1(), "rule__Expression__ExprAssignment_1");
+					put(grammarAccess.getExpressionAccess().getLabelAssignment_0_0(), "rule__Expression__LabelAssignment_0_0");
+					put(grammarAccess.getExpressionAccess().getQualifiersAssignment_1(), "rule__Expression__QualifiersAssignment_1");
+					put(grammarAccess.getExpressionAccess().getExprAssignment_2(), "rule__Expression__ExprAssignment_2");
 					put(grammarAccess.getExistsAccess().getNamesAssignment_1(), "rule__Exists__NamesAssignment_1");
 					put(grammarAccess.getExistsAccess().getNamesAssignment_2_1(), "rule__Exists__NamesAssignment_2_1");
 					put(grammarAccess.getForallAccess().getNamesAssignment_1(), "rule__Forall__NamesAssignment_1");

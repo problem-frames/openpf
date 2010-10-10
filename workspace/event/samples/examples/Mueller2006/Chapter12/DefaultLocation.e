@@ -16,9 +16,27 @@
 ;   publisher = "Morgan Kaufmann/Elsevier",
 ; }
 ;
+;
+;load foundations/Root.e
+;load foundations/EC.e
+sort boolean
+sort integer
+reified sort predicate
+reified sort function
 
-load foundations/Root.e
-load foundations/EC.e
+sort time: integer
+sort offset: integer
+
+reified sort fluent
+reified sort event
+
+predicate Happens(event,time)
+predicate HoldsAt(fluent,time)
+predicate ReleasedAt(fluent,time)
+predicate Initiates(event,fluent,time)
+predicate Terminates(event,fluent,time)
+predicate Releases(event,fluent,time)
+predicate Trajectory(fluent,time,fluent,offset)
 
 sort object
 sort agent: object
@@ -42,7 +60,8 @@ predicate Ab1(device,time)
 predicate Ab2(room,time)
 
 ; Sigma
-
+room room1, room2
+event event1, event2
 [agent,room1,room2,time]
 Initiates(Walk(agent,room1,room2),InRoom(agent,room2),time).
 
@@ -73,8 +92,8 @@ event1=event2.
 
 ; Theta
 
-Theta: [device,time] HoldsAt(BrokenSwitch(device),time) -> Ab1(device,time).
-Theta: [device,time] !HoldsAt(PluggedIn(device),time) -> Ab1(device,time).
+;Theta: [device,time] HoldsAt(BrokenSwitch(device),time) -> Ab1(device,time).
+;Theta: [device,time] !HoldsAt(PluggedIn(device),time) -> Ab1(device,time).
 
 ; Psi
 
@@ -102,9 +121,9 @@ HoldsAt(InRoom(Nathan,Kitchen),0).
 ; for two TVs:
 ;[tv,time] !HoldsAt(InRoom(tv,Kitchen),time).
 ;[tv,time] {room} HoldsAt(InRoom(tv,room),time).
-
-completion Theta Ab1
-completion Theta Ab2
+;
+;completion Theta Ab1
+;completion Theta Ab2
 
 range time 0 2
 range offset 1 1

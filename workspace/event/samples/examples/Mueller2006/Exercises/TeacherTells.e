@@ -17,10 +17,28 @@
 ; }
 ;
 
-option modeldiff on
+;option modeldiff on
+;
+;load foundations/Root.e
+;load foundations/EC.e
+sort boolean
+sort integer
+reified sort predicate
+reified sort function
 
-load foundations/Root.e
-load foundations/EC.e
+sort time: integer
+sort offset: integer
+
+reified sort fluent
+reified sort event
+
+predicate Happens(event,time)
+predicate HoldsAt(fluent,time)
+predicate ReleasedAt(fluent,time)
+predicate Initiates(event,fluent,time)
+predicate Terminates(event,fluent,time)
+predicate Releases(event,fluent,time)
+predicate Trajectory(fluent,time,fluent,offset)
 
 sort agent
 sort room
@@ -37,7 +55,7 @@ fluent Know(agent,fact)
 event Tell(agent,agent,fact)
 
 ; Sigma
-
+agent agent1, agent2
 [agent1,agent2,fact,time]
 ({room} HoldsAt(InRoom(agent1,room),time) &
         HoldsAt(InRoom(agent2,room),time)) &
@@ -49,7 +67,7 @@ Initiates(Tell(agent1,agent2,fact),Know(agent2,fact),time).
 Happens(Tell(Teacher,Student,Fact1),0).
 
 ; Psi
-
+room room1, room2
 [agent,room1,room2,time]
 HoldsAt(InRoom(agent,room1),time) &
 HoldsAt(InRoom(agent,room2),time) ->

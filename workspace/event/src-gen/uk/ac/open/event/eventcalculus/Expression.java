@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link uk.ac.open.event.eventcalculus.Expression#getLabel <em>Label</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.Expression#getQualifiers <em>Qualifiers</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.Expression#getExpr <em>Expr</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.Expression#getOp <em>Op</em>}</li>
@@ -28,6 +29,32 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Expression extends Statement
 {
+  /**
+   * Returns the value of the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Label</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Label</em>' attribute.
+   * @see #setLabel(String)
+   * @see uk.ac.open.event.eventcalculus.EventcalculusPackage#getExpression_Label()
+   * @model
+   * @generated
+   */
+  String getLabel();
+
+  /**
+   * Sets the value of the '{@link uk.ac.open.event.eventcalculus.Expression#getLabel <em>Label</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Label</em>' attribute.
+   * @see #getLabel()
+   * @generated
+   */
+  void setLabel(String value);
+
   /**
    * Returns the value of the '<em><b>Qualifiers</b></em>' containment reference list.
    * The list contents are of type {@link uk.ac.open.event.eventcalculus.Qualifier}.

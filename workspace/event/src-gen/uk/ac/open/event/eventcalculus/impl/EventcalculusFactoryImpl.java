@@ -76,6 +76,8 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
       case EventcalculusPackage.DEF_OPTION: return createDefOption();
       case EventcalculusPackage.DEF_COMPLETION: return createDefCompletion();
       case EventcalculusPackage.DEF_NON_INERTIA: return createDefNonInertia();
+      case EventcalculusPackage.DEF_XOR: return createDefXor();
+      case EventcalculusPackage.DEF_MUTEX: return createDefMutex();
       case EventcalculusPackage.STATEMENT: return createStatement();
       case EventcalculusPackage.SORT_DEFINITION: return createSortDefinition();
       case EventcalculusPackage.DEFINITION: return createDefinition();
@@ -230,6 +232,28 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
   {
     DefNonInertiaImpl defNonInertia = new DefNonInertiaImpl();
     return defNonInertia;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DefXor createDefXor()
+  {
+    DefXorImpl defXor = new DefXorImpl();
+    return defXor;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DefMutex createDefMutex()
+  {
+    DefMutexImpl defMutex = new DefMutexImpl();
+    return defMutex;
   }
 
   /**

@@ -17,6 +17,7 @@
 ;   pages = "105--140",
 ; }
 ;
+option encoding 3
 sort boolean
 sort integer
 reified sort predicate

@@ -16,6 +16,7 @@ package uk.ac.open.event.eventcalculus;
  * <ul>
  *   <li>{@link uk.ac.open.event.eventcalculus.DefOption#getName <em>Name</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.DefOption#getValue <em>Value</em>}</li>
+ *   <li>{@link uk.ac.open.event.eventcalculus.DefOption#getValue2 <em>Value2</em>}</li>
  * </ul>
  * </p>
  *
@@ -76,5 +77,31 @@ public interface DefOption extends Declaration
    * @generated
    */
   void setValue(int value);
+
+  /**
+   * Returns the value of the '<em><b>Value2</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Value2</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Value2</em>' attribute.
+   * @see #setValue2(String)
+   * @see uk.ac.open.event.eventcalculus.EventcalculusPackage#getDefOption_Value2()
+   * @model
+   * @generated
+   */
+  String getValue2();
+
+  /**
+   * Sets the value of the '{@link uk.ac.open.event.eventcalculus.DefOption#getValue2 <em>Value2</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Value2</em>' attribute.
+   * @see #getValue2()
+   * @generated
+   */
+  void setValue2(String value);
 
 } // DefOption

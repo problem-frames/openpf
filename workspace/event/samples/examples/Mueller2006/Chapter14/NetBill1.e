@@ -28,10 +28,28 @@
 ; }
 ;
 
-option modeldiff on
+;option modeldiff on
 
-load foundations/Root.e
-load foundations/EC.e
+;load foundations/Root.e
+;load foundations/EC.e
+sort boolean
+sort integer
+reified sort predicate
+reified sort function
+
+sort time: integer
+sort offset: integer
+
+reified sort fluent
+reified sort event
+
+predicate Happens(event,time)
+predicate HoldsAt(fluent,time)
+predicate ReleasedAt(fluent,time)
+predicate Initiates(event,fluent,time)
+predicate Terminates(event,fluent,time)
+predicate Releases(event,fluent,time)
+predicate Trajectory(fluent,time,fluent,offset)
 
 sort agent
 agent MusicStore, Jen
@@ -65,6 +83,8 @@ event Deliver(agent,agent,product)
 event SendEPO(agent,agent,amount)
 
 ; Sigma
+agent agent1, agent2
+fluent f1, f2
 
 [agent1,agent2,f,time]
 Initiates(CreateC(agent1,agent2,f),C(agent1,agent2,f),time).
@@ -122,41 +142,41 @@ Initiates(RequestPurchase(agent1,agent2,product,amount),
           time).
 
 ; Delta
+;
+;Delta: [time]
+;HoldsAt(CC(MusicStore,Jen,PurchaseRequestedJenMusicStoreBritneyCD1,DeliveredMusicStoreJenBritneyCD),time) &
+;HoldsAt(PurchaseRequested(Jen,MusicStore,BritneyCD,1),time) ->
+;Happens(CreateC(MusicStore,Jen,DeliveredMusicStoreJenBritneyCD),time).
+;
+;Delta: [time]
+;HoldsAt(CC(MusicStore,Jen,PurchaseRequestedJenMusicStoreBritneyCD1,DeliveredMusicStoreJenBritneyCD),time) &
+;HoldsAt(PurchaseRequested(Jen, MusicStore, BritneyCD, 1),time) ->
+;Happens(DischargeCC(MusicStore,Jen,PurchaseRequestedJenMusicStoreBritneyCD1,DeliveredMusicStoreJenBritneyCD),time).
 
-Delta: [time]
-HoldsAt(CC(MusicStore,Jen,PurchaseRequestedJenMusicStoreBritneyCD1,DeliveredMusicStoreJenBritneyCD),time) &
-HoldsAt(PurchaseRequested(Jen,MusicStore,BritneyCD,1),time) ->
-Happens(CreateC(MusicStore,Jen,DeliveredMusicStoreJenBritneyCD),time).
-
-Delta: [time]
-HoldsAt(CC(MusicStore,Jen,PurchaseRequestedJenMusicStoreBritneyCD1,DeliveredMusicStoreJenBritneyCD),time) &
-HoldsAt(PurchaseRequested(Jen, MusicStore, BritneyCD, 1),time) ->
-Happens(DischargeCC(MusicStore,Jen,PurchaseRequestedJenMusicStoreBritneyCD1,DeliveredMusicStoreJenBritneyCD),time).
-
-Delta: [time]
-HoldsAt(CC(Jen, MusicStore, DeliveredMusicStoreJenBritneyCD, EPOSentJenMusicStore1),time) &
-HoldsAt(Delivered(MusicStore,Jen,BritneyCD),time) ->
-Happens(CreateC(Jen,MusicStore,EPOSentJenMusicStore1),time).
-
-Delta: [time]
-HoldsAt(CC(Jen, MusicStore, DeliveredMusicStoreJenBritneyCD, EPOSentJenMusicStore1),time) &
-HoldsAt(Delivered(MusicStore,Jen,BritneyCD),time) ->
-Happens(DischargeCC(Jen,MusicStore,DeliveredMusicStoreJenBritneyCD, EPOSentJenMusicStore1),time).
-
-Delta: [time]
-HoldsAt(C(MusicStore,Jen,DeliveredMusicStoreJenBritneyCD),time) &
-HoldsAt(Delivered(MusicStore,Jen,BritneyCD),time) ->
-Happens(DischargeC(MusicStore,Jen,DeliveredMusicStoreJenBritneyCD),time).
-
-Delta: [time]
-HoldsAt(C(Jen,MusicStore,EPOSentJenMusicStore1),time) &
-HoldsAt(EPOSent(Jen,MusicStore,1),time) ->
-Happens(DischargeC(Jen,MusicStore,EPOSentJenMusicStore1),time).
-
-Delta: Happens(SendQuote(MusicStore,Jen,BritneyCD,1),0).
-Delta: Happens(RequestPurchase(Jen,MusicStore,BritneyCD,1),1).
-Delta: Happens(Deliver(MusicStore,Jen,BritneyCD),3).
-Delta: Happens(SendEPO(Jen,MusicStore,1),5).
+;Delta: [time]
+;HoldsAt(CC(Jen, MusicStore, DeliveredMusicStoreJenBritneyCD, EPOSentJenMusicStore1),time) &
+;HoldsAt(Delivered(MusicStore,Jen,BritneyCD),time) ->
+;Happens(CreateC(Jen,MusicStore,EPOSentJenMusicStore1),time).
+;
+;Delta: [time]
+;HoldsAt(CC(Jen, MusicStore, DeliveredMusicStoreJenBritneyCD, EPOSentJenMusicStore1),time) &
+;HoldsAt(Delivered(MusicStore,Jen,BritneyCD),time) ->
+;Happens(DischargeCC(Jen,MusicStore,DeliveredMusicStoreJenBritneyCD, EPOSentJenMusicStore1),time).
+;
+;Delta: [time]
+;HoldsAt(C(MusicStore,Jen,DeliveredMusicStoreJenBritneyCD),time) &
+;HoldsAt(Delivered(MusicStore,Jen,BritneyCD),time) ->
+;Happens(DischargeC(MusicStore,Jen,DeliveredMusicStoreJenBritneyCD),time).
+;
+;Delta: [time]
+;HoldsAt(C(Jen,MusicStore,EPOSentJenMusicStore1),time) &
+;HoldsAt(EPOSent(Jen,MusicStore,1),time) ->
+;Happens(DischargeC(Jen,MusicStore,EPOSentJenMusicStore1),time).
+;
+;Delta: Happens(SendQuote(MusicStore,Jen,BritneyCD,1),0).
+;Delta: Happens(RequestPurchase(Jen,MusicStore,BritneyCD,1),1).
+;Delta: Happens(Deliver(MusicStore,Jen,BritneyCD),3).
+;Delta: Happens(SendEPO(Jen,MusicStore,1),5).
 
 ; Gamma
 
@@ -178,7 +198,7 @@ Delta: Happens(SendEPO(Jen,MusicStore,1),5).
 [agent1,agent2,amount]
 !HoldsAt(EPOSent(agent1,agent2,amount),0).
 
-completion Delta Happens
+;completion Delta Happens
 
 range time 0 7
 range offset 1 1

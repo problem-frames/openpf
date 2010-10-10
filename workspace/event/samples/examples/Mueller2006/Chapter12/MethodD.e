@@ -18,9 +18,27 @@
 ;   publisher = "Morgan Kaufmann/Elsevier",
 ; }
 ;
+;
+;load foundations/Root.e
+;load foundations/EC.e
+sort boolean
+sort integer
+reified sort predicate
+reified sort function
 
-load foundations/Root.e
-load foundations/EC.e
+sort time: integer
+sort offset: integer
+
+reified sort fluent
+reified sort event
+
+predicate Happens(event,time)
+predicate HoldsAt(fluent,time)
+predicate ReleasedAt(fluent,time)
+predicate Initiates(event,fluent,time)
+predicate Terminates(event,fluent,time)
+predicate Releases(event,fluent,time)
+predicate Trajectory(fluent,time,fluent,offset)
 
 sort object
 
@@ -48,14 +66,14 @@ HoldsAt(R(A),0).
 HoldsAt(P(B),0).
 !HoldsAt(R(B),0).
 
-Theta: 
-[object,time]
-HoldsAt(R(object),time) -> Ab1(object,time).
+;Theta: 
+;[object,time]
+;HoldsAt(R(object),time) -> Ab1(object,time).
 
 range time 0 0
 range offset 1 1
 
-completion Theta Ab1
-completion Theta Ab2
+;completion Theta Ab1
+;completion Theta Ab2
 
 ; End of file.
