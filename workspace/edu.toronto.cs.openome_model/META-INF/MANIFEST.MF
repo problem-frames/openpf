@@ -1,8 +1,9 @@
 Manifest-Version: 1.0
-Require-Bundle: org.eclipse.core.runtime,org.eclipse.emf.ecore;visibil
- ity:=reexport
-Export-Package: edu.toronto.cs.openome_model,edu.toronto.cs.openome_mo
- del.impl,edu.toronto.cs.openome_model.util
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport
+Export-Package: edu.toronto.cs.openome_model,
+ edu.toronto.cs.openome_model.impl,
+ edu.toronto.cs.openome_model.util
 Bundle-Vendor: %providerName
 Eclipse-LazyStart: true
 Bundle-ClassPath: .

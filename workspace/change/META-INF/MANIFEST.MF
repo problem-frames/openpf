@@ -1,5 +1,7 @@
 Manifest-Version: 1.0
-Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,core
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ core
 Bundle-ActivationPolicy: lazy
 Bundle-Version: 1.0.0
 Bundle-Name: Change

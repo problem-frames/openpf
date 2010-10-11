@@ -5,9 +5,11 @@ Eclipse-JREBundle: true
 Bundle-Name: %pluginName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Require-Bundle: org.eclipse.gmf.runtime.draw2d.ui,org.eclipse.gmf.runt
- ime.draw2d.ui.render;visibility:=reexport,org.eclipse.draw2d,org.ecli
- pse.core.runtime,org.eclipse.emf.workspace;visibility:=reexport
+Require-Bundle: org.eclipse.gmf.runtime.draw2d.ui,
+ org.eclipse.gmf.runtime.draw2d.ui.render;visibility:=reexport,
+ org.eclipse.draw2d,
+ org.eclipse.core.runtime,
+ org.eclipse.emf.workspace;visibility:=reexport
 Bundle-Vendor: %providerName
 Bundle-Version: 1.0.0
 Bundle-ManifestVersion: 2

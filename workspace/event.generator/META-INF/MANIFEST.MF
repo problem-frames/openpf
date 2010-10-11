@@ -1,12 +1,12 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: event.generator
-Bundle-Vendor: My Company
+Bundle-Vendor: The Open University
 Bundle-Version: 1.0.0
 Bundle-SymbolicName: event.generator; singleton:=true
 Eclipse-RegisterBuddy: org.eclipse.xtext.log4j
 Bundle-ActivationPolicy: lazy
-Require-Bundle:  event;visibility:=reexport,
+Require-Bundle: event;visibility:=reexport,
  org.eclipse.xpand;visibility:=reexport,
  org.eclipse.xtend;visibility:=reexport,
  org.eclipse.xtext;visibility:=reexport,

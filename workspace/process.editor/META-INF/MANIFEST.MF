@@ -1,18 +1,22 @@
 Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: %pluginName
-Bundle-SymbolicName: process.editor;singleton:=true
-Bundle-Version: 1.0.0
+Export-Package: org.w3.namespace.presentation
+Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .
-Bundle-Activator: org.w3.namespace.presentation.LittlejilEditorPlugin$Implementation
-Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: org.w3.namespace.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  process.edit;visibility:=reexport,
+ process;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.eclipse.emf.edit.ui;visibility:=reexport,
  org.eclipse.ui.ide;visibility:=reexport
-Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Bundle-Version: 1.0.0
+Bundle-ManifestVersion: 2
+Bundle-Activator: org.w3.namespace.presentation.LittlejilEditorPlugin$
+ Implementation
+Bundle-SymbolicName: process.editor;singleton:=true
+
+

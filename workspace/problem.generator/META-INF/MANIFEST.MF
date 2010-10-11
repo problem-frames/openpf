@@ -1,9 +1,12 @@
 Manifest-Version: 1.0
-Require-Bundle:  problem;visibility:=reexport,org.eclipse.xpand;visibi
- lity:=reexport,org.eclipse.xtend;visibility:=reexport,org.eclipse.xte
- xt;visibility:=reexport,org.eclipse.emf.mwe.core;visibility:=reexport
- ,org.eclipse.emf.mwe.utils;visibility:=reexport,org.eclipse.xtend.typ
- esystem.emf;visibility:=reexport,org.eclipse.core.runtime
+Require-Bundle: problem;visibility:=reexport,
+ org.eclipse.xpand;visibility:=reexport,
+ org.eclipse.xtend;visibility:=reexport,
+ org.eclipse.xtext;visibility:=reexport,
+ org.eclipse.emf.mwe.core;visibility:=reexport,
+ org.eclipse.emf.mwe.utils;visibility:=reexport,
+ org.eclipse.xtend.typesystem.emf;visibility:=reexport,
+ org.eclipse.core.runtime
 Bundle-Vendor: The Open University
 Bundle-Version: 1.0.0.201010080232
 Bundle-Name: problem.generator

@@ -1,4 +1,4 @@
-Manifest-Version: 1.0
+Manifest-Version: 1.
 Bundle-ManifestVersion: 2
 Bundle-Name: Xtext DSL Example UI 
 Bundle-SymbolicName: org.eclipse.xtext.example.fowlerdsl.ui;singleton:=true
