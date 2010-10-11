@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="Problem Analysis Tool" uid="openre" id="core.openre" application="org.eclipse.ui.ide.workbench" version="1.0.0" useFeatures="true" includeLaunchers="true">
+<product name="Problem Analysis Tool" uid="openre" id="core.openre" application="org.eclipse.ui.ide.workbench" version="1.0.0" useFeatures="false" includeLaunchers="true">
 
    <configIni use="default">
    </configIni>
@@ -29,9 +29,6 @@
       <plugin id="antlr.plugin"/>
       <plugin id="argument"/>
       <plugin id="argument.ui"/>
-      <plugin id="ch.qos.logback.classic" fragment=""/>
-      <plugin id="ch.qos.logback.core" fragment=""/>
-      <plugin id="ch.qos.logback.slf4j" fragment="true"/>
       <plugin id="change"/>
       <plugin id="com.google.collect"/>
       <plugin id="com.google.inject"/>
@@ -60,8 +57,6 @@
       <plugin id="istar.diagram.extensions"/>
       <plugin id="istar.generator"/>
       <plugin id="istar.ui"/>
-      <plugin id="javax.activation" fragment=""/>
-      <plugin id="javax.mail.glassfish" fragment=""/>
       <plugin id="javax.servlet"/>
       <plugin id="javax.servlet.jsp"/>
       <plugin id="javax.xml"/>
@@ -69,7 +64,7 @@
       <plugin id="laser.flavers.plugin"/>
       <plugin id="laser.juliette.archive"/>
       <plugin id="laser.littlejil"/>
-      <plugin id="laser.littlejil.analysis.ui"/>
+      <plugin id="laser.littlejil.analysis.ui" fragment=""/>
       <plugin id="laser.littlejil.eclipse.check"/>
       <plugin id="laser.littlejil.eclipse.search"/>
       <plugin id="laser.littlejil.standardtypesplugin"/>
@@ -86,14 +81,14 @@
       <plugin id="laser.visualjil.serialimporter"/>
       <plugin id="laser.visualjil.vsrm"/>
       <plugin id="littlejil.analysis.fsv"/>
-      <plugin id="littlejil.analysis.fta"/>
+      <plugin id="littlejil.analysis.fta" fragment=""/>
       <plugin id="littlejil.analysis.help"/>
       <plugin id="littlejil.analysis.trace"/>
       <plugin id="littlejil.analysis.trace.visualization"/>
       <plugin id="littlejil.analysis.translator"/>
       <plugin id="lpg.runtime.java"/>
       <plugin id="molhado"/>
-      <plugin id="net.sourceforge.lpg.lpgjavaruntime"/>
+      <plugin id="net.sourceforge.lpg.lpgjavaruntime" fragment=""/>
       <plugin id="ontology"/>
       <plugin id="ontology.edit"/>
       <plugin id="ontology.ui"/>
@@ -129,36 +124,36 @@
       <plugin id="org.apache.xml.resolver"/>
       <plugin id="org.apache.xml.serializer"/>
       <plugin id="org.apache.xmlrpc"/>
-      <plugin id="org.easymock"/>
+      <plugin id="org.easymock" fragment=""/>
       <plugin id="org.eclipse.acceleo.common"/>
-      <plugin id="org.eclipse.acceleo.common.source"/>
+      <plugin id="org.eclipse.acceleo.common.source" fragment=""/>
       <plugin id="org.eclipse.acceleo.compatibility"/>
-      <plugin id="org.eclipse.acceleo.compatibility.source"/>
+      <plugin id="org.eclipse.acceleo.compatibility.source" fragment=""/>
       <plugin id="org.eclipse.acceleo.compatibility.ui"/>
-      <plugin id="org.eclipse.acceleo.compatibility.ui.source"/>
+      <plugin id="org.eclipse.acceleo.compatibility.ui.source" fragment=""/>
       <plugin id="org.eclipse.acceleo.doc"/>
       <plugin id="org.eclipse.acceleo.engine"/>
-      <plugin id="org.eclipse.acceleo.engine.source"/>
-      <plugin id="org.eclipse.acceleo.examples"/>
+      <plugin id="org.eclipse.acceleo.engine.source" fragment=""/>
+      <plugin id="org.eclipse.acceleo.examples" fragment=""/>
       <plugin id="org.eclipse.acceleo.ide.ui"/>
-      <plugin id="org.eclipse.acceleo.ide.ui.source"/>
+      <plugin id="org.eclipse.acceleo.ide.ui.source" fragment=""/>
       <plugin id="org.eclipse.acceleo.model"/>
       <plugin id="org.eclipse.acceleo.model.edit"/>
-      <plugin id="org.eclipse.acceleo.model.edit.source"/>
-      <plugin id="org.eclipse.acceleo.model.source"/>
+      <plugin id="org.eclipse.acceleo.model.edit.source" fragment=""/>
+      <plugin id="org.eclipse.acceleo.model.source" fragment=""/>
       <plugin id="org.eclipse.acceleo.parser"/>
-      <plugin id="org.eclipse.acceleo.parser.source"/>
+      <plugin id="org.eclipse.acceleo.parser.source" fragment=""/>
       <plugin id="org.eclipse.acceleo.profiler"/>
       <plugin id="org.eclipse.acceleo.profiler.edit"/>
-      <plugin id="org.eclipse.acceleo.profiler.edit.source"/>
+      <plugin id="org.eclipse.acceleo.profiler.edit.source" fragment=""/>
       <plugin id="org.eclipse.acceleo.profiler.editor"/>
-      <plugin id="org.eclipse.acceleo.profiler.editor.source"/>
-      <plugin id="org.eclipse.acceleo.profiler.source"/>
+      <plugin id="org.eclipse.acceleo.profiler.editor.source" fragment=""/>
+      <plugin id="org.eclipse.acceleo.profiler.source" fragment=""/>
       <plugin id="org.eclipse.acceleo.traceability" fragment="true"/>
       <plugin id="org.eclipse.acceleo.traceability.model"/>
-      <plugin id="org.eclipse.acceleo.traceability.model.source"/>
-      <plugin id="org.eclipse.acceleo.traceability.source"/>
-      <plugin id="org.eclipse.acceleo.ui.capabilities"/>
+      <plugin id="org.eclipse.acceleo.traceability.model.source" fragment=""/>
+      <plugin id="org.eclipse.acceleo.traceability.source" fragment=""/>
+      <plugin id="org.eclipse.acceleo.ui.capabilities" fragment=""/>
       <plugin id="org.eclipse.ant.core"/>
       <plugin id="org.eclipse.ant.launching"/>
       <plugin id="org.eclipse.ant.ui"/>
@@ -247,7 +242,7 @@
       <plugin id="org.eclipse.emf.mwe.ui.simpleEditor"/>
       <plugin id="org.eclipse.emf.mwe.utils"/>
       <plugin id="org.eclipse.emf.mwe2.language"/>
-      <plugin id="org.eclipse.emf.mwe2.language.ui"/>
+      <plugin id="org.eclipse.emf.mwe2.language.ui" fragment=""/>
       <plugin id="org.eclipse.emf.mwe2.launch"/>
       <plugin id="org.eclipse.emf.mwe2.runtime"/>
       <plugin id="org.eclipse.emf.transaction"/>
@@ -311,10 +306,10 @@
       <plugin id="org.eclipse.equinox.util"/>
       <plugin id="org.eclipse.gef"/>
       <plugin id="org.eclipse.gmf"/>
-      <plugin id="org.eclipse.gmf.codegen"/>
-      <plugin id="org.eclipse.gmf.common"/>
-      <plugin id="org.eclipse.gmf.graphdef"/>
-      <plugin id="org.eclipse.gmf.map"/>
+      <plugin id="org.eclipse.gmf.codegen" fragment=""/>
+      <plugin id="org.eclipse.gmf.common" fragment=""/>
+      <plugin id="org.eclipse.gmf.graphdef" fragment=""/>
+      <plugin id="org.eclipse.gmf.map" fragment=""/>
       <plugin id="org.eclipse.gmf.runtime.common.core"/>
       <plugin id="org.eclipse.gmf.runtime.common.ui"/>
       <plugin id="org.eclipse.gmf.runtime.common.ui.action"/>
@@ -353,10 +348,9 @@
       <plugin id="org.eclipse.gmf.runtime.notation"/>
       <plugin id="org.eclipse.gmf.runtime.notation.edit"/>
       <plugin id="org.eclipse.gmf.runtime.notation.providers"/>
-      <plugin id="org.eclipse.gmf.tooldef"/>
-      <plugin id="org.eclipse.gmf.validate"/>
-      <plugin id="org.eclipse.gmf.xpand"/>
-      <plugin id="org.eclipse.gmf.xpand.qvtlibrary"/>
+      <plugin id="org.eclipse.gmf.tooldef" fragment=""/>
+      <plugin id="org.eclipse.gmf.validate" fragment=""/>
+      <plugin id="org.eclipse.gmf.xpand" fragment=""/>
       <plugin id="org.eclipse.help"/>
       <plugin id="org.eclipse.help.appserver"/>
       <plugin id="org.eclipse.help.base"/>
@@ -378,8 +372,8 @@
       <plugin id="org.eclipse.jdt.junit.runtime"/>
       <plugin id="org.eclipse.jdt.junit4.runtime"/>
       <plugin id="org.eclipse.jdt.launching"/>
-      <plugin id="org.eclipse.jdt.launching.macosx" fragment=""/>
-      <plugin id="org.eclipse.jdt.launching.ui.macosx" fragment=""/>
+      <plugin id="org.eclipse.jdt.launching.macosx"/>
+      <plugin id="org.eclipse.jdt.launching.ui.macosx"/>
       <plugin id="org.eclipse.jdt.ui"/>
       <plugin id="org.eclipse.jem.util"/>
       <plugin id="org.eclipse.jface"/>
@@ -389,13 +383,6 @@
       <plugin id="org.eclipse.jsch.ui"/>
       <plugin id="org.eclipse.ltk.core.refactoring"/>
       <plugin id="org.eclipse.ltk.ui.refactoring"/>
-      <plugin id="org.eclipse.m2m.qvt.oml"/>
-      <plugin id="org.eclipse.m2m.qvt.oml.common"/>
-      <plugin id="org.eclipse.m2m.qvt.oml.cst.parser"/>
-      <plugin id="org.eclipse.m2m.qvt.oml.ecore.imperativeocl"/>
-      <plugin id="org.eclipse.m2m.qvt.oml.emf.util"/>
-      <plugin id="org.eclipse.m2m.qvt.oml.project"/>
-      <plugin id="org.eclipse.m2m.qvt.oml.runtime"/>
       <plugin id="org.eclipse.mylyn"/>
       <plugin id="org.eclipse.mylyn.bugzilla.core"/>
       <plugin id="org.eclipse.mylyn.bugzilla.ide"/>
@@ -529,8 +516,8 @@
       <plugin id="org.eclipse.viatra2.natives.strings"/>
       <plugin id="org.eclipse.viatra2.viatraDSM"/>
       <plugin id="org.eclipse.viatra2.viatraDSM.demo"/>
-      <plugin id="org.eclipse.viatra2.viatraDSM.gmf"/>
-      <plugin id="org.eclipse.viatra2.visualisation"/>
+      <plugin id="org.eclipse.viatra2.viatraDSM.gmf" fragment=""/>
+      <plugin id="org.eclipse.viatra2.visualisation" fragment=""/>
       <plugin id="org.eclipse.wst.common.core"/>
       <plugin id="org.eclipse.wst.common.emf"/>
       <plugin id="org.eclipse.wst.common.emfworkbench.integration"/>
@@ -564,8 +551,6 @@
       <plugin id="org.eclipse.xtext.util"/>
       <plugin id="org.eclipse.xtext.xtend"/>
       <plugin id="org.eclipse.xtext.xtext.ui"/>
-      <plugin id="org.eclipse.zest.core"/>
-      <plugin id="org.eclipse.zest.layouts"/>
       <plugin id="org.hamcrest"/>
       <plugin id="org.hamcrest.core"/>
       <plugin id="org.hamcrest.integration"/>
@@ -667,7 +652,6 @@
       <feature id="org.eclipse.wst.common_ui.feature"/>
       <feature id="org.eclipse.wst.common.fproj"/>
       <feature id="org.eclipse.wst.server_core.feature"/>
-      <feature id="org.eclipse.gmf.tooling"/>
       <feature id="org.eclipse.wst.xml_core.feature"/>
       <feature id="hu.optxware.emf2viatra.feature"/>
       <feature id="org.eclipse.viatra2.feature.core"/>
@@ -679,5 +663,6 @@
       <feature id="org.eclipse.emf.doc"/>
       <feature id="org.eclipse.uml2"/>
    </features>
+
 
 </product>
