@@ -13,6 +13,7 @@ workspace/*/*.zip
 workspace/.JETEmitters
 workspace/*/.settings
 workspace/*/feature.temp.folder
+workspace/*/screenshots
 test/configuration
 *.log
 00*
