@@ -5,8 +5,7 @@ Bundle-ClassPath: .
 Bundle-Name: %pluginName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Require-Bundle: org.eclipse.core.runtime,
- process;visibility:=reexport,
+Require-Bundle: org.eclipse.core.runtime,process;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport
 Bundle-Vendor: %providerName
 Bundle-Version: 1.0.0

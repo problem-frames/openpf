@@ -1,21 +1,15 @@
 Manifest-Version: 1.0
-Require-Bundle: org.eclipse.ui,
- org.eclipse.core.runtime,
- org.eclipse.core.resources,
- pf2situation,
- org.eclipse.emf.ecore,
- org.eclipse.emf.ecore.xmi,
- org.eclipse.ocl,
- org.eclipse.ocl.ecore,
- org.eclipse.acceleo.model,
+Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.co
+ re.resources,pf2situation,org.eclipse.emf.ecore,org.eclipse.emf.ecore
+ .xmi,org.eclipse.ocl,org.eclipse.ocl.ecore,org.eclipse.acceleo.model,
  org.eclipse.acceleo.engine
 Bundle-Vendor: Eclipse Modeling Project
-Eclipse-LazyStart: true
 Bundle-ActivationPolicy: lazy
+Eclipse-LazyStart: true
 Bundle-Version: 1.0.0.201010080232
 Bundle-Name: Acceleo Pf2situation Module IDE Plug-in
-Bundle-Activator: pf2situation.ui.Activator
 Bundle-ManifestVersion: 2
+Bundle-Activator: pf2situation.ui.Activator
 Bundle-SymbolicName: pf2situation.ui;singleton:=true
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 

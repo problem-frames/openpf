@@ -124,7 +124,9 @@
       <plugin id="org.apache.xml.resolver"/>
       <plugin id="org.apache.xml.serializer"/>
       <plugin id="org.apache.xmlrpc"/>
+      <!--
       <plugin id="org.easymock"/>
+      -->
       <plugin id="org.eclipse.acceleo.common"/>
       <plugin id="org.eclipse.acceleo.compatibility"/>
       <plugin id="org.eclipse.acceleo.compatibility.ui"/>
@@ -614,6 +616,7 @@
       <feature id="org.eclipse.emf.validation"/>
       <feature id="org.eclipse.emf.transaction"/>
       <feature id="org.eclipse.emf.workspace"/>
+      <feature id="org.eclipse.gmf.tooling"/>
       <feature id="org.eclipse.ocl"/>
       <feature id="org.eclipse.swtbot"/>
       <feature id="org.eclipse.swtbot.eclipse"/>

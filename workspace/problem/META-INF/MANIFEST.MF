@@ -1,39 +1,24 @@
 Manifest-Version: 1.0
-Require-Bundle: org.eclipse.xtext,
- org.eclipse.xtext.generator,
- org.apache.commons.logging,
- org.eclipse.emf.codegen.ecore,
- org.eclipse.emf.mwe.utils,
- org.eclipse.emf.mwe.core,
- com.ibm.icu,
- org.eclipse.xtext.xtend,
- org.eclipse.xtext.util,
- org.eclipse.emf.ecore,
- org.eclipse.emf.common,
- org.antlr.runtime,
- org.eclipse.draw2d;visibility:=reexport,
- org.eclipse.gmf.runtime.draw2d.ui;visibility:=reexport,
- core,
- org.eclipse.emf.mwe2.launch,
- org.apache.log4j
-Export-Package: uk.ac.open,
- uk.ac.open.formatting,
- uk.ac.open.parseTreeConstruction,
- uk.ac.open.parser.antlr,
- uk.ac.open.parser.antlr.internal,
- uk.ac.open.problem,
- uk.ac.open.problem.impl,
- uk.ac.open.problem.util,
- uk.ac.open.scoping,
- uk.ac.open.services,
- uk.ac.open.validation
+Export-Package: uk.ac.open,uk.ac.open.formatting,uk.ac.open.parseTreeC
+ onstruction,uk.ac.open.parser.antlr,uk.ac.open.parser.antlr.internal,
+ uk.ac.open.problem,uk.ac.open.problem.impl,uk.ac.open.problem.util,uk
+ .ac.open.scoping,uk.ac.open.services,uk.ac.open.validation
+Require-Bundle: org.eclipse.xtext,org.eclipse.xtext.generator,org.apac
+ he.commons.logging,org.eclipse.emf.codegen.ecore,org.eclipse.emf.mwe.
+ utils,org.eclipse.emf.mwe.core,com.ibm.icu,org.eclipse.xtext.xtend,or
+ g.eclipse.xtext.util,org.eclipse.emf.ecore,org.eclipse.emf.common,org
+ .antlr.runtime,org.eclipse.draw2d;visibility:=reexport,org.eclipse.gm
+ f.runtime.draw2d.ui;visibility:=reexport,core,org.eclipse.emf.mwe2.la
+ unch,org.apache.log4j,org.eclipse.swtbot.eclipse.core,org.eclipse.swt
+ bot.eclipse.finder,org.eclipse.swtbot.junit4_x,org.hamcrest,org.junit
+ 4,org.apache.log4j,org.eclipse.ui 
 Bundle-Vendor: The Open University
 Bundle-ActivationPolicy: lazy
 Bundle-Version: 1.0.0.201010080232
 Bundle-Name: problem
 Bundle-ManifestVersion: 2
-Bundle-SymbolicName: problem; singleton:=true
 Import-Package: org.apache.log4j
+Bundle-SymbolicName: problem; singleton:=true
 Eclipse-RegisterBuddy: org.eclipse.xtext.log4j
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 

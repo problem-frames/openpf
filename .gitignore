@@ -1,3 +1,4 @@
+junit-workspace
 runtime-*
 *.class
 workspace/*/bin
@@ -12,5 +13,6 @@ workspace/*/*.zip
 workspace/.JETEmitters
 workspace/*/.settings
 workspace/*/feature.temp.folder
+test/configuration
 *.log
 00*

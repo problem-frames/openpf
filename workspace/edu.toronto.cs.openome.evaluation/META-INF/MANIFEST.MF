@@ -1,4 +1,9 @@
 Manifest-Version: 1.0
+Require-Bundle: org.sat4j.core,edu.toronto.cs.openome_model.diagram,ed
+ u.toronto.cs.openome_model.editor,edu.toronto.cs.openome.conversion,u
+ til,org.eclipse.gmf.runtime.diagram.core,org.eclipse.gmf.runtime.diag
+ ram.ui;visibility:=reexport,org.eclipse.gmf.runtime.diagram.ui.resour
+ ces.editor.ide,org.eclipse.core.runtime,org.eclipse.ui,core
 Export-Package: edu.toronto.cs.openome.evaluation.SATSolver,edu.toront
  o.cs.openome.evaluation.commands; uses:="edu.toronto.cs.openome.evalu
  ation.qualitativeinteractivereasoning,  org.eclipse.emf.common.comman
@@ -20,20 +25,11 @@ Export-Package: edu.toronto.cs.openome.evaluation.SATSolver,edu.toront
  org.eclipse.gmf.runtime.diagram.ui.internal.commands",edu.toronto.cs.
  openome.evaluation.reasoning;uses:="edu.toronto.cs.openome_model.impl
  ,org.eclipse.emf.common.command,edu.toronto.cs.openome_model"
-Require-Bundle: org.sat4j.core,
- edu.toronto.cs.openome_model.diagram,
- edu.toronto.cs.openome_model.editor,
- edu.toronto.cs.openome.conversion,
- util,
- org.eclipse.gmf.runtime.diagram.core,
- org.eclipse.gmf.runtime.diagram.ui;visibility:=reexport,
- org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide,
- org.eclipse.core.runtime,
- org.eclipse.ui,
- core
 Bundle-ActivationPolicy: lazy
 Bundle-Version: 1.0.0
 Bundle-Name: Evaluation Plug-in
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: edu.toronto.cs.openome.evaluation;singleton:=true
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+
+

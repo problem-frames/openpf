@@ -1,0 +1,103 @@
+[comment encoding = UTF-8 /]
+[module generate('http://open.ac.uk/problem')/]
+[template public generate(d: ProblemDiagram)]
+[file (d.name.toString().concat('.ec'), false)]
+load foundations/Root.e
+load foundations/EC.e	
+
+fluent true()
+fluent false()
+    [for (dom: Node | d.nodes)]
+      [for (hidden: Phenomenon | dom.hiddenPhenomena)]
+       [if (hidden.type.toString() ='state')]      
+fluent [hidden.name/]_[dom.name/]()
+       [/if]
+       [/for]
+      [/for]
+      [for (interface: Link | d.links)]
+      [for (shared: Phenomenon | interface.phenomena)]
+		[if (shared.type.toString() = 'event')]  
+event [shared.name/]_[interface.description/]()
+        [/if]
+		[if (shared.toString() = 'state')]      
+fluent [shared.name/]_[interface.description/]()
+        [/if]
+      [/for]
+    [/for]	
+    [for (dom: Node | d.nodes)]
+     [if (dom.type.toString() <> 'R')]
+;--[dom.name/]--
+['['/]time[']'/]
+HoldsAt(true(), time)
+      [for (interface: Link | d.links)]
+       [if (interface.to = dom)]
+        [for (shared: Phenomenon | interface.phenomena)]     
+  		 [if (shared.type.toString() = 'event')]  
+&Happens([shared.name/]_[interface.description/](),time)
+         [/if]
+		[if (shared.toString() = 'state')]      
+&HoldsAt([shared.name/]_[interface.description/](),time)
+        [/if]
+        [/for]
+        [/if]
+       [/for]
+        ->
+HoldsAt(true(), time+1)
+      [for (interface: Link | d.links)]
+       [if (interface.from = dom)]
+        [for (shared: Phenomenon | interface.phenomena)]     
+  		 [if (shared.type.toString() = 'event')]  
+&Happens([shared.name/]_[interface.description/](),time+1)
+         [/if]
+		[if (shared.toString() = 'state')]      
+&HoldsAt([shared.name/]_[interface.description/](),time+1)
+        [/if]
+        [/for]
+        [/if]
+      [/for].       
+     [/if]
+   [/for]
+   [for (dom: Node | d.nodes)]
+     [if (dom.type.toString() = 'R')]
+;--[dom.name/]--
+['['/]time[']'/]
+HoldsAt(true(), time)
+      [for (interface: Link | d.links)]
+       [if (interface.to = dom and interface.type.toString() = '~~')]
+        [for (shared: Phenomenon | interface.phenomena)]     
+  		 [if (shared.type.toString() = 'event')]  
+&Happens([shared.name/]_[interface.description/](),time)
+         [/if]
+		[if (shared.toString() = 'state')]      
+&HoldsAt([shared.name/]_[interface.description/](),time)
+        [/if]
+        [/for]
+        [/if]
+       [/for].       
+     [/if]
+   [/for]
+['['/]time[']'/]
+   !(
+HoldsAt(true(), time+1)
+   [for (dom: Node | d.nodes)]
+     [if (dom.type.toString() = 'R')]
+;--[dom.name/]--
+      [for (interface: Link | d.links)]
+       [if (interface.to = dom and interface.type.toString() = '~>')]
+        [for (shared: Phenomenon | interface.phenomena)]     
+  		 [if (shared.type.toString() = 'event')]  
+&Happens([shared.name/]_[interface.description/](),time+1)
+         [/if]
+		[if (shared.toString() = 'state')]      
+&HoldsAt([shared.name/]_[interface.description/](),time+1)
+        [/if]
+        [/for]
+        [/if]
+       [/for]
+     [/if]
+   [/for]
+   ).
+range time 0 3
+range offset 1 2	
+[/file]	
+[/template]
