@@ -1,0 +1,44 @@
+Testcase 1:
+Create the example project and check that the files have been created.
+
+Testcase 2:
+Check the syntax of the example files, making sure that they are all correct.
+
+Testcase 3:
+Create a new empty file, save it, check that the file has been created. Check the syntax of the empty file, make sure that it is syntactically acceptable.
+
+Testcase 4:
+Create a new empty file, add various elements of a diagram, save the file, check that the file has been saved with all the elements. Check the syntax of the empty file, make sure that it is syntactically acceptable.
+
+Open an existing example file, make some correct changes, save the file, check that the file has been saved with the changes. Check the syntax of the empty file, make sure that it is syntactically acceptable.
+
+Testcase 5:
+Create a new empty file, add various elements of a diagram containing syntactically incorrect elements, save the file, check that the file has been saved with all the elements. Check the syntax of the empty file, make sure that it is syntactically not acceptable.
+
+Open an existing example file, make some incorrect correct changes, save the file, check that the file has been saved with the changes. Check the syntax of the empty file, make sure that it is syntactically acceptable.
+
+Testcase 6:
+Create a new empty diagram in the graph editing mode, save and close the diagram, making sure that empty diagram has been saved appropriately, and is syntactically acceptable.
+
+Create a new empty diagram in the graph editing mode, make correct changes, save and close the diagram, making sure that the edit has been saved appropriately, and is syntactically acceptable.
+
+Create a new empty diagram in the graph editing mode, make incorrect changes, save and close the diagram, making sure that the edit has been saved appropriately, and is syntactically not acceptable.
+
+Testcase 7:
+Create a file, make some changes, save it. Then delete it, making sure that the file has been deleted.
+
+Testcase 8:
+Open an example file, open the diagram of the same file, dirty the file by adding/removing elements, and switch to the diagram. Check that the edit has been reflected in the diagram.
+
+Open an example file, open the diagram of the same file, dirty the diagram by by adding/removing elements, and switch to the file. Check that the edit has been reflected in the file.
+
+Testcase 9:
+Open an example file, open the diagram of the same file, move some diagram element, and save the diagram. Reopen the diagram to make sure that the position of the diagram elements in the canvas have been saved appropriately.
+
+Testcase 10:
+Create a new diagram, add every element of the diagram from the palette, making sure that each element added is saved correctly. 
+
+Testcase 11:
+Open an existing diagram, and export to various output format including png, eps and pdf, making sure that correct output is produced.
+
+
