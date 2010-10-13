@@ -12,5 +12,6 @@ Bundle-Name: Core Plug-in
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: core;singleton:=true
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Activator: edu.toronto.cs.openome.core.plugin.Activator
 
 
