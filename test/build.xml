@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="problem" default="suite" basedir=".">
+    <property name="eclipse-home" value="${eclipse.home}"/>
+    <property name="all.buildId" value="2.0.0.595-dev-e36" />
+    <property name="plugin-name" value="problem" />
+    <property name="plugin-name" value="org.eclipse.swtbot.eclipse.finder.test" />
+    <property name="library-file" value="${eclipse.home}/plugins/org.eclipse.swtbot.eclipse.junit4.headless_${all.buildId}/library.xml"/>
+    <property name="os" value="macosx" />
+    <property name="ws" value="cocoa" />
+    <property name="arch" value="x86_64" />
+
+<target name="suite">
+    	<condition property="jvmOption" value="-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts">
+		<os family="mac" />
+	</condition>
+    	<ant target="swtbot-test" antfile="${library-file}" dir="${eclipse.home}">
+	    <property name="data-dir" value="../workspace" />
+            <property name="testApplication" value="org.eclipse.ui.ide.workbench" />
+	    <!--
+            <property name="testProduct" value="core.openre" />
+	    -->
+            <property name="plugin-name" value="${plugin-name}" />
+            <property name="data-dir" value="${temp-workspace}" />
+            <property name="classname" value="uk.ac.open.CreateProblemExamplesTest" />
+            <property name="vmargs" value=" -Xms128M -Xmx368M -XX:MaxPermSize=256M ${jvmOption}" />
+	    <property name="junit-report-output" value="${user.home}/results" />
+        </ant>
+</target>
+</project>

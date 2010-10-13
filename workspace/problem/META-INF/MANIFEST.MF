@@ -1,25 +1,45 @@
 Manifest-Version: 1.0
-Export-Package: uk.ac.open,uk.ac.open.formatting,uk.ac.open.parseTreeC
- onstruction,uk.ac.open.parser.antlr,uk.ac.open.parser.antlr.internal,
- uk.ac.open.problem,uk.ac.open.problem.impl,uk.ac.open.problem.util,uk
- .ac.open.scoping,uk.ac.open.services,uk.ac.open.validation
-Require-Bundle: org.eclipse.xtext,org.eclipse.xtext.generator,org.apac
- he.commons.logging,org.eclipse.emf.codegen.ecore,org.eclipse.emf.mwe.
- utils,org.eclipse.emf.mwe.core,com.ibm.icu,org.eclipse.xtext.xtend,or
- g.eclipse.xtext.util,org.eclipse.emf.ecore,org.eclipse.emf.common,org
- .antlr.runtime,org.eclipse.draw2d;visibility:=reexport,org.eclipse.gm
- f.runtime.draw2d.ui;visibility:=reexport,core,org.eclipse.emf.mwe2.la
- unch,org.apache.log4j,org.eclipse.swtbot.eclipse.core,org.eclipse.swt
- bot.eclipse.finder,org.eclipse.swtbot.junit4_x,org.hamcrest,org.junit
- 4,org.apache.log4j,org.eclipse.ui 
-Bundle-Vendor: The Open University
+Export-Package: uk.ac.open,
+ uk.ac.open.formatting,
+ uk.ac.open.parseTreeConstruction,
+ uk.ac.open.parser.antlr,
+ uk.ac.open.parser.antlr.internal,
+ uk.ac.open.problem,
+ uk.ac.open.problem.impl,
+ uk.ac.open.problem.util
+Require-Bundle: org.eclipse.core.resources,
+ com.ibm.icu,
+ core,
+ org.antlr.runtime,
+ org.apache.commons.logging,
+ org.apache.log4j,
+ org.apache.log4j,
+ org.eclipse.draw2d;visibility:=reexport,
+ org.eclipse.emf.codegen.ecore,
+ org.eclipse.emf.common,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.mwe.core,
+ org.eclipse.emf.mwe.utils,
+ org.eclipse.emf.mwe2.launch,
+ org.eclipse.gmf.runtime.draw2d.ui;visibility:=reexport,
+ org.eclipse.swtbot.eclipse.core,
+ org.eclipse.swtbot.eclipse.finder,
+ org.eclipse.swtbot.junit4_x,
+ org.eclipse.ui,
+ org.eclipse.xtext,
+ org.eclipse.xtext.generator,
+ org.eclipse.xtext.util,
+ org.eclipse.xtext.xtend,
+ org.hamcrest,
+ org.junit4
 Bundle-ActivationPolicy: lazy
 Bundle-Version: 1.0.0.201010080232
 Bundle-Name: problem
 Bundle-ManifestVersion: 2
 Import-Package: org.apache.log4j
 Bundle-SymbolicName: problem; singleton:=true
+Bundle-Vendor: The Open University
 Eclipse-RegisterBuddy: org.eclipse.xtext.log4j
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 
 

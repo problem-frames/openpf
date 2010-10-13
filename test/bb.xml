@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="testsuite" default="run" basedir=".">
+    <property name="all.buildId" value="2.0.0.595-dev-e36" />
+    <property name="plugin-under-test" value="problem" />
+    <property name="eclipse-home" value="${eclipse.home}"/>
+    <property name="plugin-name" value="problem" />
+    <property name="os" value="macosx" />
+    <property name="ws" value="cocoa" />
+    <property name="arch" value="x86_64" />
+    <property name="library-file" value="${eclipse.home}/plugins/org.eclipse.swtbot.eclipse.junit4.headless_${all.buildId}/library.xml"/>
+
+	<target name="init">
+		<tstamp />
+		<delete>
+			<fileset dir="${eclipse.home}" includes="org*.xml" />
+		</delete>
+	</target>
+
+    <target name="suite">
+    	<condition property="jvmOption" value="-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts">
+		<os family="mac" />
+	</condition>
+
+    	<property name="temp-workspace" value="workspace" />
+        <delete dir="${temp-workspace}" quiet="true" />
+
+    	<!-- remove junit3 fragment -->
+    	<delete dir="${eclipse.home}/plugins/org.eclipse.swtbot.eclipse.junit3.headless_${all.buildId}" />
+    	<delete dir="${eclipse.home}/plugins" includes="org.eclipse.swtbot.ant.optional.junit3_${all.buildId}.jar"/>
+
+    	<ant target="swtbot-test" antfile="${library-file}" dir="${eclipse.home}">
+            <property name="data-dir" value="${temp-workspace}" />
+            <property name="testApplication" value="org.eclipse.ui.ide.workbench" />
+            <property name="plugin-name" value="${plugin-name}" />
+            <property name="classname" value="uk.ac.open.CreateProblemExamplesTest" />
+            <property name="vmargs" value=" -Xms128M -Xmx368M -XX:MaxPermSize=256M ${jvmOption}" />
+
+        </ant>
+    </target>
+
+	<target name="run" depends="init, suite">
+        <ant target="collect" antfile="${library-file}" dir="${eclipse.home}">
+            <property name="includes" value="*.xml" />
+            <property name="output-file" value="${plugin-name}.xml" />
+        </ant>
+    </target>
+
+</project>
+

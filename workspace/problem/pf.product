@@ -124,9 +124,6 @@
       <plugin id="org.apache.xml.resolver"/>
       <plugin id="org.apache.xml.serializer"/>
       <plugin id="org.apache.xmlrpc"/>
-      <!--
-      <plugin id="org.easymock"/>
-      -->
       <plugin id="org.eclipse.acceleo.common"/>
       <plugin id="org.eclipse.acceleo.compatibility"/>
       <plugin id="org.eclipse.acceleo.compatibility.ui"/>
@@ -141,7 +138,7 @@
       <plugin id="org.eclipse.acceleo.profiler.editor"/>
       <plugin id="org.eclipse.acceleo.traceability" fragment="true"/>
       <plugin id="org.eclipse.acceleo.traceability.model"/>
-      <plugin id="org.eclipse.acceleo.ui.capabilities"/>
+      <plugin id="org.eclipse.acceleo.ui.capabilities" fragment=""/>
       <plugin id="org.eclipse.ant.core"/>
       <plugin id="org.eclipse.ant.launching"/>
       <plugin id="org.eclipse.ant.ui"/>
@@ -230,7 +227,7 @@
       <plugin id="org.eclipse.emf.mwe.ui.simpleEditor"/>
       <plugin id="org.eclipse.emf.mwe.utils"/>
       <plugin id="org.eclipse.emf.mwe2.language"/>
-      <plugin id="org.eclipse.emf.mwe2.language.ui"/>
+      <plugin id="org.eclipse.emf.mwe2.language.ui" fragment=""/>
       <plugin id="org.eclipse.emf.mwe2.launch"/>
       <plugin id="org.eclipse.emf.mwe2.runtime"/>
       <plugin id="org.eclipse.emf.transaction"/>
@@ -584,9 +581,9 @@
       <plugin id="situation.editor"/>
       <plugin id="situation.generator"/>
       <plugin id="situation.ui"/>
-      <plugin id="uncal"/>
-      <plugin id="uncal.generator"/>
-      <plugin id="uncal.ui"/>
+      <plugin id="uncal" fragment=""/>
+      <plugin id="uncal.generator" fragment=""/>
+      <plugin id="uncal.ui" fragment=""/>
       <plugin id="util"/>
    </plugins>
 
