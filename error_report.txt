@@ -1,0 +1,93 @@
+Hi Thun and Yijun,
+
+I have tried my luck with today's version of the situation modeling tool from sead1, and I have run into some problems.
+
+1. First, after starting situation.exe, the Error Log immediately shows a number of errors like this:
+"Could not install bundle plugins/org.eclipse.xtext.ecore_1.0.1.v201008251220.jar   Bundle "org.eclipse.xtext.ecore" version "1.0.1.v201008251220" has already been installed from: reference:file:plugins/org.eclipse.xtext.ecore_1.0.1.v201008251220.jar"
+(and the same for a lot of other plugins)
+
+2. When I issue Open / Generate Example Model, an empty project called Examples is created, only containing a folder called argument. The UserGuide gave me the impression that there should be example files already in here. There are no new entries in the Error Log.
+
+3. If I create a new Situation Diagram using File / New, the .situation and .situation_diagram files are created. The Project Explorer shows an item "<Unresolved domain element Visual_ID = Situation>" as a child of the diagram. And even using the palette, I can't create a Domain or Entity in the diagram. No new Error Log entries appear.
+
+4. If I create a problem diagram, no underlying .problem file appears (and editing doesn't work here either). Dropping graphical elements from the palette does not work either. A lot of warnings like this appear in the Error Log:
+"Warning NLS unused message: Domain2CreationTool_desc in: messages"
+And finally there is also an exception in the log:
+
+eclipse.buildId=unknown
+java.version=1.6.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=hu_HU
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+Error
+Thu Oct 07 11:39:37 CEST 2010
+Unable to set charset for file /Examples/argument/default.problem
+
+org.eclipse.core.internal.resources.ResourceException: Resource '/Examples/argument/default.problem' does not exist.
+at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:326)
+at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:200)
+at org.eclipse.core.internal.resources.File.setCharset(File.java:444)
+at uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil.setCharset(Unknown Source)
+at uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil.createDiagram(Unknown Source)
+at uk.ac.open.problem.diagram.part.ProblemCreationWizard$2.execute(Unknown Source)
+at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:106)
+at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1975)
+at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
+at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:464)
+at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:372)
+at org.eclipse.jface.wizard.WizardDialog.run(WizardDialog.java:1008)
+at uk.ac.open.problem.diagram.part.ProblemCreationWizard.performFinish(Unknown Source)
+at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:811)
+at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:430)
+at org.eclipse.jface.dialogs.Dialog$2.widgetSelected(Dialog.java:624)
+at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:234)
+at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4066)
+at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3657)
+at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+at org.eclipse.jface.window.Window.open(Window.java:801)
+at org.eclipse.ui.internal.handlers.WizardHandler$New.executeHandler(WizardHandler.java:254)
+at org.eclipse.ui.internal.handlers.WizardHandler.execute(WizardHandler.java:274)
+at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:293)
+at org.eclipse.core.commands.Command.executeWithChecks(Command.java:476)
+at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508)
+at org.eclipse.ui.internal.handlers.HandlerService.executeCommand(HandlerService.java:169)
+at org.eclipse.ui.internal.handlers.SlaveHandlerService.executeCommand(SlaveHandlerService.java:241)
+at org.eclipse.ui.internal.actions.CommandAction.runWithEvent(CommandAction.java:157)
+at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4066)
+at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3657)
+at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2629)
+at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2593)
+at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2427)
+at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:670)
+at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:663)
+at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:115)
+at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:369)
+at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:619)
+at org.eclipse.equinox.launcher.Main.basicRun(Main.java:574)
+at org.eclipse.equinox.launcher.Main.run(Main.java:1407)
+
+5. Dependency diagram works the exact same way as Problem diagram, with a very similar exception.
+
+Thanks for going through the trouble of creating a useful tool! I hope these reports will be helpful to you.
+
+Cheers,
+Gábor
+

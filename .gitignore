@@ -17,5 +17,6 @@ workspace/*/screenshots
 test/configuration
 test/workspace
 test/p2
+test/screenshots
 *.log
 00*
