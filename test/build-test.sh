@@ -1,5 +1,5 @@
 cd ../workspace/problem
-rm problem_*.jar
+rm -f problem_*.jar
 eant clean
 eant build.update.jar
 rm -f $HOME/IDE/pf-3.6.product/eclipse/plugins/problem_*.jar

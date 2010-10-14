@@ -5,14 +5,27 @@
     <property name="plugin-name" value="problem" />
     <property name="plugin-name" value="org.eclipse.swtbot.eclipse.finder.test" />
     <property name="library-file" value="${eclipse.home}/plugins/org.eclipse.swtbot.eclipse.junit4.headless_${all.buildId}/library.xml"/>
-    <property name="os" value="macosx" />
-    <property name="ws" value="cocoa" />
-    <property name="arch" value="x86_64" />
 
   <target name="suite">
     	<condition property="jvmOption" value="-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts">
 		<os family="mac" />
 	</condition>
+    	<condition property="jvmOption" value="">
+	    <not>
+		<os family="mac" />
+	    </not>
+	</condition>
+    	<condition property="os" value="macosx"> <os family="mac" /> </condition>
+    	<condition property="os" value="linux"> <os family="unix" /> </condition>
+    	<condition property="ws" value="cocoa"> <os family="mac" /> </condition>
+    	<condition property="ws" value="gtk"> <os family="unix" /> </condition>
+    	<condition property="arch" value="x86_64"> <or> <os family="mac" /> <os family="unix" /> </or></condition>
+    	<property name="temp-workspace" value="${user.home}/workspace" />
+        <delete dir="${temp-workspace}" quiet="true" />
+    	<!-- remove junit3 fragment -->
+    	<delete dir="${eclipse-home}/plugins/org.eclipse.swtbot.eclipse.junit3.headless_${all.buildId}" />
+    	<delete dir="${eclipse-home}/plugins" includes="org.eclipse.swtbot.ant.optional.junit3_${all.buildId}.jar"/>
+
     	<ant target="swtbot-test" antfile="${library-file}" dir="${eclipse.home}">
 	    <property name="data-dir" value="${user.home}/workspace" />
             <property name="testApplication" value="org.eclipse.ui.ide.workbench" />
