@@ -26,8 +26,9 @@
       <plugin id="Istar2situation.ui"/>
       <plugin id="PF2EC"/>
       <plugin id="PF2EC.ui"/>
-      <plugin id="antlr.plugin"/>
+      <plugin id="antlr.plugin" fragment=""/>
       <plugin id="argument"/>
+      <plugin id="argument.diagram"/>
       <plugin id="argument.ui"/>
       <plugin id="change"/>
       <plugin id="com.google.collect"/>
@@ -50,9 +51,9 @@
       <plugin id="edu.toronto.cs.openome_model.editor"/>
       <plugin id="event"/>
       <plugin id="event.ui"/>
-      <plugin id="hu.bme.mit.viatra2.viatraDSM.grabats2009live"/>
-      <plugin id="hu.bme.mit.viatra2.viatraDSM.skypesim"/>
-      <plugin id="hu.optxware.emf2viatra.core"/>
+      <plugin id="hu.bme.mit.viatra2.viatraDSM.grabats2009live" fragment=""/>
+      <plugin id="hu.bme.mit.viatra2.viatraDSM.skypesim" fragment=""/>
+      <plugin id="hu.optxware.emf2viatra.core" fragment=""/>
       <plugin id="istar"/>
       <plugin id="istar.diagram.extensions"/>
       <plugin id="istar.generator"/>
@@ -61,31 +62,31 @@
       <plugin id="javax.servlet.jsp"/>
       <plugin id="javax.xml"/>
       <plugin id="javax.xml.bind"/>
-      <plugin id="laser.flavers.plugin"/>
-      <plugin id="laser.juliette.archive"/>
-      <plugin id="laser.littlejil"/>
-      <plugin id="laser.littlejil.analysis.ui"/>
-      <plugin id="laser.littlejil.eclipse.check"/>
-      <plugin id="laser.littlejil.eclipse.search"/>
-      <plugin id="laser.littlejil.standardtypesplugin"/>
-      <plugin id="laser.propel"/>
-      <plugin id="laser.visualjil"/>
-      <plugin id="laser.visualjil.eclipse.assistants"/>
-      <plugin id="laser.visualjil.javabeans"/>
-      <plugin id="laser.visualjil.jgrid"/>
-      <plugin id="laser.visualjil.jsim"/>
-      <plugin id="laser.visualjil.julexporter"/>
-      <plugin id="laser.visualjil.julimporter"/>
-      <plugin id="laser.visualjil.project"/>
-      <plugin id="laser.visualjil.romeo"/>
-      <plugin id="laser.visualjil.serialimporter"/>
-      <plugin id="laser.visualjil.vsrm"/>
-      <plugin id="littlejil.analysis.fsv"/>
-      <plugin id="littlejil.analysis.fta"/>
-      <plugin id="littlejil.analysis.help"/>
-      <plugin id="littlejil.analysis.trace"/>
-      <plugin id="littlejil.analysis.trace.visualization"/>
-      <plugin id="littlejil.analysis.translator"/>
+      <plugin id="laser.flavers.plugin" fragment=""/>
+      <plugin id="laser.juliette.archive" fragment=""/>
+      <plugin id="laser.littlejil" fragment=""/>
+      <plugin id="laser.littlejil.analysis.ui" fragment=""/>
+      <plugin id="laser.littlejil.eclipse.check" fragment=""/>
+      <plugin id="laser.littlejil.eclipse.search" fragment=""/>
+      <plugin id="laser.littlejil.standardtypesplugin" fragment=""/>
+      <plugin id="laser.propel" fragment=""/>
+      <plugin id="laser.visualjil" fragment=""/>
+      <plugin id="laser.visualjil.eclipse.assistants" fragment=""/>
+      <plugin id="laser.visualjil.javabeans" fragment=""/>
+      <plugin id="laser.visualjil.jgrid" fragment=""/>
+      <plugin id="laser.visualjil.jsim" fragment=""/>
+      <plugin id="laser.visualjil.julexporter" fragment=""/>
+      <plugin id="laser.visualjil.julimporter" fragment=""/>
+      <plugin id="laser.visualjil.project" fragment=""/>
+      <plugin id="laser.visualjil.romeo" fragment=""/>
+      <plugin id="laser.visualjil.serialimporter" fragment=""/>
+      <plugin id="laser.visualjil.vsrm" fragment=""/>
+      <plugin id="littlejil.analysis.fsv" fragment=""/>
+      <plugin id="littlejil.analysis.fta" fragment=""/>
+      <plugin id="littlejil.analysis.help" fragment=""/>
+      <plugin id="littlejil.analysis.trace" fragment=""/>
+      <plugin id="littlejil.analysis.trace.visualization" fragment=""/>
+      <plugin id="littlejil.analysis.translator" fragment=""/>
       <plugin id="lpg.runtime.java"/>
       <plugin id="molhado"/>
       <plugin id="net.sourceforge.lpg.lpgjavaruntime"/>
@@ -358,10 +359,10 @@
       <plugin id="org.eclipse.jdt.junit.runtime"/>
       <plugin id="org.eclipse.jdt.junit4.runtime"/>
       <plugin id="org.eclipse.jdt.launching"/>
-      <plugin id="org.eclipse.jdt.launching.macosx"/>
-      <plugin id="org.eclipse.jdt.launching.ui.macosx"/>
+      <plugin id="org.eclipse.jdt.launching.macosx" fragment=""/>
+      <plugin id="org.eclipse.jdt.launching.ui.macosx" fragment=""/>
       <plugin id="org.eclipse.jdt.ui"/>
-      <plugin id="org.eclipse.jem.util"/>
+      <plugin id="org.eclipse.jem.util" fragment=""/>
       <plugin id="org.eclipse.jface"/>
       <plugin id="org.eclipse.jface.databinding"/>
       <plugin id="org.eclipse.jface.text"/>
@@ -486,40 +487,40 @@
       <plugin id="org.eclipse.update.core.win32" fragment="true"/>
       <plugin id="org.eclipse.update.scheduler"/>
       <plugin id="org.eclipse.update.ui"/>
-      <plugin id="org.eclipse.viatra2.core2"/>
-      <plugin id="org.eclipse.viatra2.editor"/>
-      <plugin id="org.eclipse.viatra2.editor.text"/>
-      <plugin id="org.eclipse.viatra2.gtasm.interpreter"/>
-      <plugin id="org.eclipse.viatra2.gtasm.interpreter.impl"/>
-      <plugin id="org.eclipse.viatra2.gtasm.interpreter.term"/>
-      <plugin id="org.eclipse.viatra2.gtasm.model"/>
-      <plugin id="org.eclipse.viatra2.gtasm.patternmatcher"/>
-      <plugin id="org.eclipse.viatra2.gtasm.patternmatcher.impl"/>
-      <plugin id="org.eclipse.viatra2.gtasm.patternmatcher.incremental"/>
-      <plugin id="org.eclipse.viatra2.gtasm.patternmatcher.incremental.rete"/>
-      <plugin id="org.eclipse.viatra2.gtasm.trigger"/>
-      <plugin id="org.eclipse.viatra2.gtasm.typing.model"/>
-      <plugin id="org.eclipse.viatra2.gui"/>
-      <plugin id="org.eclipse.viatra2.gui.patterns"/>
-      <plugin id="org.eclipse.viatra2.help"/>
-      <plugin id="org.eclipse.viatra2.imports.uml2.galileo"/>
-      <plugin id="org.eclipse.viatra2.imports.vtml"/>
-      <plugin id="org.eclipse.viatra2.loaders.vtcl_lpgparser"/>
-      <plugin id="org.eclipse.viatra2.natives.strings"/>
-      <plugin id="org.eclipse.viatra2.viatraDSM"/>
-      <plugin id="org.eclipse.viatra2.viatraDSM.demo"/>
-      <plugin id="org.eclipse.viatra2.viatraDSM.gmf"/>
-      <plugin id="org.eclipse.viatra2.visualisation"/>
-      <plugin id="org.eclipse.wst.common.core"/>
-      <plugin id="org.eclipse.wst.common.emf"/>
-      <plugin id="org.eclipse.wst.common.emfworkbench.integration"/>
-      <plugin id="org.eclipse.wst.common.environment"/>
-      <plugin id="org.eclipse.wst.common.frameworks"/>
-      <plugin id="org.eclipse.wst.common.project.facet.core"/>
-      <plugin id="org.eclipse.wst.common.uriresolver"/>
-      <plugin id="org.eclipse.wst.sse.core"/>
-      <plugin id="org.eclipse.wst.validation"/>
-      <plugin id="org.eclipse.wst.xml.core"/>
+      <plugin id="org.eclipse.viatra2.core2" fragment=""/>
+      <plugin id="org.eclipse.viatra2.editor" fragment=""/>
+      <plugin id="org.eclipse.viatra2.editor.text" fragment=""/>
+      <plugin id="org.eclipse.viatra2.gtasm.interpreter" fragment=""/>
+      <plugin id="org.eclipse.viatra2.gtasm.interpreter.impl" fragment=""/>
+      <plugin id="org.eclipse.viatra2.gtasm.interpreter.term" fragment=""/>
+      <plugin id="org.eclipse.viatra2.gtasm.model" fragment=""/>
+      <plugin id="org.eclipse.viatra2.gtasm.patternmatcher" fragment=""/>
+      <plugin id="org.eclipse.viatra2.gtasm.patternmatcher.impl" fragment=""/>
+      <plugin id="org.eclipse.viatra2.gtasm.patternmatcher.incremental" fragment=""/>
+      <plugin id="org.eclipse.viatra2.gtasm.patternmatcher.incremental.rete" fragment=""/>
+      <plugin id="org.eclipse.viatra2.gtasm.trigger" fragment=""/>
+      <plugin id="org.eclipse.viatra2.gtasm.typing.model" fragment=""/>
+      <plugin id="org.eclipse.viatra2.gui" fragment=""/>
+      <plugin id="org.eclipse.viatra2.gui.patterns" fragment=""/>
+      <plugin id="org.eclipse.viatra2.help" fragment=""/>
+      <plugin id="org.eclipse.viatra2.imports.uml2.galileo" fragment=""/>
+      <plugin id="org.eclipse.viatra2.imports.vtml" fragment=""/>
+      <plugin id="org.eclipse.viatra2.loaders.vtcl_lpgparser" fragment=""/>
+      <plugin id="org.eclipse.viatra2.natives.strings" fragment=""/>
+      <plugin id="org.eclipse.viatra2.viatraDSM" fragment=""/>
+      <plugin id="org.eclipse.viatra2.viatraDSM.demo" fragment=""/>
+      <plugin id="org.eclipse.viatra2.viatraDSM.gmf" fragment=""/>
+      <plugin id="org.eclipse.viatra2.visualisation" fragment=""/>
+      <plugin id="org.eclipse.wst.common.core" fragment=""/>
+      <plugin id="org.eclipse.wst.common.emf" fragment=""/>
+      <plugin id="org.eclipse.wst.common.emfworkbench.integration" fragment=""/>
+      <plugin id="org.eclipse.wst.common.environment" fragment=""/>
+      <plugin id="org.eclipse.wst.common.frameworks" fragment=""/>
+      <plugin id="org.eclipse.wst.common.project.facet.core" fragment=""/>
+      <plugin id="org.eclipse.wst.common.uriresolver" fragment=""/>
+      <plugin id="org.eclipse.wst.sse.core" fragment=""/>
+      <plugin id="org.eclipse.wst.validation" fragment=""/>
+      <plugin id="org.eclipse.wst.xml.core" fragment=""/>
       <plugin id="org.eclipse.xpand"/>
       <plugin id="org.eclipse.xpand.activities"/>
       <plugin id="org.eclipse.xpand.ui"/>
@@ -543,8 +544,8 @@
       <plugin id="org.eclipse.xtext.util"/>
       <plugin id="org.eclipse.xtext.xtend"/>
       <plugin id="org.eclipse.xtext.xtext.ui"/>
-      <plugin id="org.eclipse.zest.core"/>
-      <plugin id="org.eclipse.zest.layouts"/>
+      <plugin id="org.eclipse.zest.core" fragment=""/>
+      <plugin id="org.eclipse.zest.layouts" fragment=""/>
       <plugin id="org.hamcrest"/>
       <plugin id="org.hamcrest.core"/>
       <plugin id="org.hamcrest.integration"/>

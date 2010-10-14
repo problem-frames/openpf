@@ -1,10 +1,18 @@
 //Fig. 13. Argument for AP!XMIT -> R!SEND
 //================================
-given grounds
- "ADS-B transmission areceived"
-thus claim
- "Position are sent to M"
-rebutted by
- R1.4: "Receiver is sabotaged. (SR2)"
- R1.5: "Transmissions are jammed. (SR2)"
+argument: AP_XMIT
+
+G1 G "ADS-B transmission areceived"
+
+C1 C "Position are sent to M"
+
+A1 A
+
+A1 argues G1, C1 //(given grounds G1 thus claim C1)
+
+R14 R "Receiver is sabotaged. (SR2)"
+
+R15 R "Transmissions are jammed. (SR2)"
+
+A1 rebutted by R14, R15 //(A1 is rebutted by R14, R15)
 

@@ -23,7 +23,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalArgumentParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_QUALIFIED_NAME", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'C'", "'W'", "'G'", "'R'", "'M'", "'A'", "'and'", "'or'", "'argues'", "'rebuts'", "'mitigates'", "'argument:'", "'for'", "':'", "','", "'('", "')'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_QUALIFIED_NAME", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'C'", "'W'", "'G'", "'R'", "'M'", "'A'", "'and'", "'or'", "'argues'", "'rebutted by'", "'mitigated by'", "'argument:'", "'for'", "':'", "','", "'('", "')'"
     };
     public static final int RULE_ID=4;
     public static final int RULE_STRING=5;
@@ -1184,13 +1184,13 @@ public class InternalArgumentParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__LinkType__Alternatives
-    // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:434:1: rule__LinkType__Alternatives : ( ( ( 'argues' ) ) | ( ( 'rebuts' ) ) | ( ( 'mitigates' ) ) );
+    // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:434:1: rule__LinkType__Alternatives : ( ( ( 'argues' ) ) | ( ( 'rebutted by' ) ) | ( ( 'mitigated by' ) ) );
     public final void rule__LinkType__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:438:1: ( ( ( 'argues' ) ) | ( ( 'rebuts' ) ) | ( ( 'mitigates' ) ) )
+            // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:438:1: ( ( ( 'argues' ) ) | ( ( 'rebutted by' ) ) | ( ( 'mitigated by' ) ) )
             int alt5=3;
             switch ( input.LA(1) ) {
             case 20:
@@ -1210,7 +1210,7 @@ public class InternalArgumentParser extends AbstractInternalContentAssistParser 
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("434:1: rule__LinkType__Alternatives : ( ( ( 'argues' ) ) | ( ( 'rebuts' ) ) | ( ( 'mitigates' ) ) );", 5, 0, input);
+                    new NoViableAltException("434:1: rule__LinkType__Alternatives : ( ( ( 'argues' ) ) | ( ( 'rebutted by' ) ) | ( ( 'mitigated by' ) ) );", 5, 0, input);
 
                 throw nvae;
             }
@@ -1238,14 +1238,14 @@ public class InternalArgumentParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 2 :
-                    // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:446:6: ( ( 'rebuts' ) )
+                    // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:446:6: ( ( 'rebutted by' ) )
                     {
-                    // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:446:6: ( ( 'rebuts' ) )
-                    // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:447:1: ( 'rebuts' )
+                    // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:446:6: ( ( 'rebutted by' ) )
+                    // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:447:1: ( 'rebutted by' )
                     {
                      before(grammarAccess.getLinkTypeAccess().getREBUTSEnumLiteralDeclaration_1()); 
-                    // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:448:1: ( 'rebuts' )
-                    // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:448:3: 'rebuts'
+                    // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:448:1: ( 'rebutted by' )
+                    // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:448:3: 'rebutted by'
                     {
                     match(input,21,FOLLOW_21_in_rule__LinkType__Alternatives919); 
 
@@ -1259,14 +1259,14 @@ public class InternalArgumentParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 3 :
-                    // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:453:6: ( ( 'mitigates' ) )
+                    // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:453:6: ( ( 'mitigated by' ) )
                     {
-                    // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:453:6: ( ( 'mitigates' ) )
-                    // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:454:1: ( 'mitigates' )
+                    // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:453:6: ( ( 'mitigated by' ) )
+                    // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:454:1: ( 'mitigated by' )
                     {
                      before(grammarAccess.getLinkTypeAccess().getMITIGATESEnumLiteralDeclaration_2()); 
-                    // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:455:1: ( 'mitigates' )
-                    // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:455:3: 'mitigates'
+                    // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:455:1: ( 'mitigated by' )
+                    // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:455:3: 'mitigated by'
                     {
                     match(input,22,FOLLOW_22_in_rule__LinkType__Alternatives940); 
 

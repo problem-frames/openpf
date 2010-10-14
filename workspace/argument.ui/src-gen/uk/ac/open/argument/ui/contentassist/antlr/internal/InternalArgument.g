@@ -445,14 +445,14 @@ rule__LinkType__Alternatives
 
     |(
 { before(grammarAccess.getLinkTypeAccess().getREBUTSEnumLiteralDeclaration_1()); }
-(	'rebuts' 
+(	'rebutted by' 
 )
 { after(grammarAccess.getLinkTypeAccess().getREBUTSEnumLiteralDeclaration_1()); }
 )
 
     |(
 { before(grammarAccess.getLinkTypeAccess().getMITIGATESEnumLiteralDeclaration_2()); }
-(	'mitigates' 
+(	'mitigated by' 
 )
 { after(grammarAccess.getLinkTypeAccess().getMITIGATESEnumLiteralDeclaration_2()); }
 )

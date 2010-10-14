@@ -388,15 +388,15 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 		private final EnumLiteralDeclaration cARGUESEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cARGUESArguesKeyword_0_0 = (Keyword)cARGUESEnumLiteralDeclaration_0.eContents().get(0);
 		private final EnumLiteralDeclaration cREBUTSEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cREBUTSRebutsKeyword_1_0 = (Keyword)cREBUTSEnumLiteralDeclaration_1.eContents().get(0);
+		private final Keyword cREBUTSRebuttedByKeyword_1_0 = (Keyword)cREBUTSEnumLiteralDeclaration_1.eContents().get(0);
 		private final EnumLiteralDeclaration cMITIGATESEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
-		private final Keyword cMITIGATESMitigatesKeyword_2_0 = (Keyword)cMITIGATESEnumLiteralDeclaration_2.eContents().get(0);
+		private final Keyword cMITIGATESMitigatedByKeyword_2_0 = (Keyword)cMITIGATESEnumLiteralDeclaration_2.eContents().get(0);
 		
 		//enum LinkType:
-		//	ARGUES="argues" | REBUTS="rebuts" | MITIGATES="mitigates";
+		//	ARGUES="argues" | REBUTS="rebutted by" | MITIGATES="mitigated by";
 		public EnumRule getRule() { return rule; }
 
-		//ARGUES="argues" | REBUTS="rebuts" | MITIGATES="mitigates"
+		//ARGUES="argues" | REBUTS="rebutted by" | MITIGATES="mitigated by"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//ARGUES="argues"
@@ -405,17 +405,17 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 		//"argues"
 		public Keyword getARGUESArguesKeyword_0_0() { return cARGUESArguesKeyword_0_0; }
 
-		//REBUTS="rebuts"
+		//REBUTS="rebutted by"
 		public EnumLiteralDeclaration getREBUTSEnumLiteralDeclaration_1() { return cREBUTSEnumLiteralDeclaration_1; }
 
-		//"rebuts"
-		public Keyword getREBUTSRebutsKeyword_1_0() { return cREBUTSRebutsKeyword_1_0; }
+		//"rebutted by"
+		public Keyword getREBUTSRebuttedByKeyword_1_0() { return cREBUTSRebuttedByKeyword_1_0; }
 
-		//MITIGATES="mitigates"
+		//MITIGATES="mitigated by"
 		public EnumLiteralDeclaration getMITIGATESEnumLiteralDeclaration_2() { return cMITIGATESEnumLiteralDeclaration_2; }
 
-		//"mitigates"
-		public Keyword getMITIGATESMitigatesKeyword_2_0() { return cMITIGATESMitigatesKeyword_2_0; }
+		//"mitigated by"
+		public Keyword getMITIGATESMitigatedByKeyword_2_0() { return cMITIGATESMitigatedByKeyword_2_0; }
 	}
 	
 	private ArgumentDiagramElements pArgumentDiagram;
@@ -543,7 +543,7 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum LinkType:
-	//	ARGUES="argues" | REBUTS="rebuts" | MITIGATES="mitigates";
+	//	ARGUES="argues" | REBUTS="rebutted by" | MITIGATES="mitigated by";
 	public LinkTypeElements getLinkTypeAccess() {
 		return (unknownRuleLinkType != null) ? unknownRuleLinkType : (unknownRuleLinkType = new LinkTypeElements());
 	}

@@ -40,8 +40,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="LinkType">
     <eLiterals name="ARGUES" literal="argues"/>
-    <eLiterals name="REBUTS" value="1" literal="rebuts"/>
-    <eLiterals name="MITIGATES" value="2" literal="mitigates"/>
+    <eLiterals name="REBUTS" value="1" literal="rebutted by"/>
+    <eLiterals name="MITIGATES" value="2" literal="mitigated by"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SplitCommas" eSuperTypes="#//Expression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="#//Expression"

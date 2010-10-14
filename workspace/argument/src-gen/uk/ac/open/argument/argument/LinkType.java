@@ -40,7 +40,7 @@ public enum LinkType implements Enumerator
    * @generated
    * @ordered
    */
-  REBUTS(1, "REBUTS", "rebuts"),
+  REBUTS(1, "REBUTS", "rebutted by"),
 
   /**
    * The '<em><b>MITIGATES</b></em>' literal object.
@@ -50,7 +50,7 @@ public enum LinkType implements Enumerator
    * @generated
    * @ordered
    */
-  MITIGATES(2, "MITIGATES", "mitigates");
+  MITIGATES(2, "MITIGATES", "mitigated by");
 
   /**
    * The '<em><b>ARGUES</b></em>' literal value.
@@ -76,7 +76,7 @@ public enum LinkType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #REBUTS
-   * @model literal="rebuts"
+   * @model literal="rebutted by"
    * @generated
    * @ordered
    */
@@ -91,7 +91,7 @@ public enum LinkType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #MITIGATES
-   * @model literal="mitigates"
+   * @model literal="mitigated by"
    * @generated
    * @ordered
    */

@@ -1,14 +1,19 @@
 //Fig. 8. Argument against rebuttal R1
 //============================
-given grounds
- G5: "uses of HR creds are logged"
-  and
- G6: "uses of HR creds from outside are emailed"
- warranted by
-  G7: "these actions increase the likelihood
+argument: R1rebuttal
+
+G5 G "uses of HR creds are logged"
+
+G6 G "uses of HR creds from outside are emailed"
+
+G7 W "these actions increase the likelihood
    of detecting improper use of creds"
-   and
-  G8: "the employee does not want to get caught"
- thus claim
-  C2: "HR members will not sell their credentials".
+
+G8 W "the employee does not want to get caught"
+
+C2 C "HR members will not sell their credentials"
+
+A1 A
+
+A1 argues (G5 and G6), (G7 and G8), C2  //(given grounds G5 and G6 warranted by G7 and G8 thus claim C2)
 

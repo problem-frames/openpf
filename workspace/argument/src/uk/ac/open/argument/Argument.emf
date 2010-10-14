@@ -1,0 +1,62 @@
+@namespace(uri="http://www.ac.uk/open/argument/Argument", prefix="argument")
+@gmf(foo="bar")
+package argument;
+@gmf.diagram(foo="bar")
+class ArgumentDiagram {
+  attr String name;
+  ref Node highlight;
+  val Node[*] nodes;
+  val Link[*] links;
+}
+@gmf.node(label="name", icon="false")
+class Node {
+  attr String name;
+  attr NodeType type;
+  attr String description;
+}
+
+enum NodeType {
+  CLAIM = 0;
+  WARRANT = 1;
+  GROUND = 2;
+  REBUTTAL = 3;
+  MITIGATION = 4;
+  ARGUMENT = 5;
+}
+
+class Link {
+  ref Node afrom;
+  attr LinkType link;
+  val Expression toNode1;
+}
+
+@gmf.node(label="name", icon="false")
+class Expression {
+}
+
+enum ConnectiveType {
+  AND = 0;
+  OR = 1;
+}
+
+class NodeLiteral extends Expression {
+  ref Node value;
+}
+
+enum LinkType {
+  ARGUES = 0;
+  REBUTS = 1;
+  MITIGATES = 2;
+}
+
+class SplitCommas extends Expression {
+  val Expression left;
+  val Expression right;
+}
+
+class SplitConnective extends Expression {
+  val Expression left;
+  attr ConnectiveType connective;
+  val Expression right;
+}
+

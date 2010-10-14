@@ -324,10 +324,10 @@ public class InternalArgumentLexer extends Lexer {
     public final void mT27() throws RecognitionException {
         try {
             int _type = T27;
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:25:5: ( 'rebuts' )
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:25:7: 'rebuts'
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:25:5: ( 'rebutted by' )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:25:7: 'rebutted by'
             {
-            match("rebuts"); 
+            match("rebutted by"); 
 
 
             }
@@ -343,10 +343,10 @@ public class InternalArgumentLexer extends Lexer {
     public final void mT28() throws RecognitionException {
         try {
             int _type = T28;
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:26:5: ( 'mitigates' )
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:26:7: 'mitigates'
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:26:5: ( 'mitigated by' )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:26:7: 'mitigated by'
             {
-            match("mitigates"); 
+            match("mitigated by"); 
 
 
             }
@@ -1174,25 +1174,26 @@ public class InternalArgumentLexer extends Lexer {
         "\1\uffff\2\33\4\uffff\1\43\1\44\1\45\1\46\1\47\1\50\3\33\2\30\1"+
         "\33\1\uffff\3\30\2\uffff\2\33\1\uffff\1\33\1\uffff\1\33\12\uffff"+
         "\1\66\2\33\1\uffff\1\33\5\uffff\1\33\1\73\1\74\1\uffff\4\33\2\uffff"+
-        "\7\33\1\110\1\111\2\33\2\uffff\3\33\1\uffff\1\117\1\uffff";
+        "\7\33\1\110\3\33\1\uffff\5\33\2\uffff\1\33\1\uffff";
     static final String DFA15_eofS =
-        "\120\uffff";
+        "\122\uffff";
     static final String DFA15_minS =
         "\1\0\2\56\4\uffff\11\56\1\0\1\101\1\56\1\uffff\2\0\1\52\2\uffff"+
         "\2\56\1\uffff\1\56\1\uffff\1\56\12\uffff\3\56\1\0\1\56\5\uffff\3"+
-        "\56\1\uffff\4\56\2\uffff\13\56\2\uffff\3\56\1\uffff\1\56\1\uffff";
+        "\56\1\uffff\4\56\2\uffff\13\56\1\uffff\3\56\1\40\1\56\2\uffff\1"+
+        "\40\1\uffff";
     static final String DFA15_maxS =
         "\1\ufffe\2\172\4\uffff\11\172\1\ufffe\2\172\1\uffff\2\ufffe\1\57"+
         "\2\uffff\2\172\1\uffff\1\172\1\uffff\1\172\12\uffff\3\172\1\ufffe"+
-        "\1\172\5\uffff\3\172\1\uffff\2\172\1\56\1\172\2\uffff\13\172\2\uffff"+
-        "\3\172\1\uffff\1\172\1\uffff";
+        "\1\172\5\uffff\3\172\1\uffff\2\172\1\56\1\172\2\uffff\13\172\1\uffff"+
+        "\5\172\2\uffff\1\172\1\uffff";
     static final String DFA15_acceptS =
         "\3\uffff\1\3\1\4\1\5\1\6\14\uffff\1\24\3\uffff\1\30\1\31\2\uffff"+
         "\1\22\1\uffff\1\23\1\uffff\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1"+
         "\13\1\14\5\uffff\1\24\1\25\1\26\1\27\1\30\3\uffff\1\16\4\uffff\1"+
-        "\15\1\2\13\uffff\1\17\1\20\3\uffff\1\1\1\uffff\1\21";
+        "\15\1\2\13\uffff\1\17\5\uffff\1\1\1\20\1\uffff\1\21";
     static final String DFA15_specialS =
-        "\120\uffff}>";
+        "\122\uffff}>";
     static final String[] DFA15_transitionS = {
             "\11\30\2\27\2\30\1\27\22\30\1\27\1\30\1\24\1\20\3\30\1\25\1"+
             "\5\1\6\2\30\1\4\2\30\1\26\12\23\1\3\6\30\1\14\1\22\1\7\3\22"+
@@ -1280,28 +1281,34 @@ public class InternalArgumentLexer extends Lexer {
             "\1\103\25\34",
             "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\22\34"+
             "\1\104\7\34",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\22\34"+
-            "\1\105\7\34",
+            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\23\34"+
+            "\1\105\6\34",
             "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\1\106"+
             "\31\34",
             "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\15\34"+
             "\1\107\14\34",
             "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\4\34"+
+            "\1\111\25\34",
             "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\23\34"+
             "\1\112\6\34",
             "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\23\34"+
             "\1\113\6\34",
             "",
-            "",
+            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\3\34"+
+            "\1\114\26\34",
             "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\4\34"+
-            "\1\114\25\34",
-            "\1\35\1\uffff\12\34\1\115\6\uffff\32\34\4\uffff\1\34\1\uffff"+
+            "\1\115\25\34",
+            "\1\35\1\uffff\12\34\1\116\6\uffff\32\34\4\uffff\1\34\1\uffff"+
             "\32\34",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\22\34"+
-            "\1\116\7\34",
+            "\1\117\15\uffff\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34"+
+            "\1\uffff\32\34",
+            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\3\34"+
+            "\1\120\26\34",
             "",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "",
+            "\1\121\15\uffff\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34"+
+            "\1\uffff\32\34",
             ""
     };
 

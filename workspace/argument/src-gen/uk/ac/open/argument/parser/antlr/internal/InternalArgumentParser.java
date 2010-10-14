@@ -25,7 +25,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalArgumentParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_QUALIFIED_NAME", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'argument:'", "'for'", "':'", "','", "'('", "')'", "'C'", "'W'", "'G'", "'R'", "'M'", "'A'", "'and'", "'or'", "'argues'", "'rebuts'", "'mitigates'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_QUALIFIED_NAME", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'argument:'", "'for'", "':'", "','", "'('", "')'", "'C'", "'W'", "'G'", "'R'", "'M'", "'A'", "'and'", "'or'", "'argues'", "'rebutted by'", "'mitigated by'"
     };
     public static final int RULE_ID=4;
     public static final int RULE_STRING=5;
@@ -1601,16 +1601,16 @@ public class InternalArgumentParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleLinkType
-    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:705:1: ruleLinkType returns [Enumerator current=null] : ( ( 'argues' ) | ( 'rebuts' ) | ( 'mitigates' ) ) ;
+    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:705:1: ruleLinkType returns [Enumerator current=null] : ( ( 'argues' ) | ( 'rebutted by' ) | ( 'mitigated by' ) ) ;
     public final Enumerator ruleLinkType() throws RecognitionException {
         Enumerator current = null;
 
          setCurrentLookahead(); resetLookahead(); 
         try {
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:709:6: ( ( ( 'argues' ) | ( 'rebuts' ) | ( 'mitigates' ) ) )
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:710:1: ( ( 'argues' ) | ( 'rebuts' ) | ( 'mitigates' ) )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:709:6: ( ( ( 'argues' ) | ( 'rebutted by' ) | ( 'mitigated by' ) ) )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:710:1: ( ( 'argues' ) | ( 'rebutted by' ) | ( 'mitigated by' ) )
             {
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:710:1: ( ( 'argues' ) | ( 'rebuts' ) | ( 'mitigates' ) )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:710:1: ( ( 'argues' ) | ( 'rebutted by' ) | ( 'mitigated by' ) )
             int alt11=3;
             switch ( input.LA(1) ) {
             case 26:
@@ -1630,7 +1630,7 @@ public class InternalArgumentParser extends AbstractInternalAntlrParser {
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("710:1: ( ( 'argues' ) | ( 'rebuts' ) | ( 'mitigates' ) )", 11, 0, input);
+                    new NoViableAltException("710:1: ( ( 'argues' ) | ( 'rebutted by' ) | ( 'mitigated by' ) )", 11, 0, input);
 
                 throw nvae;
             }
@@ -1654,10 +1654,10 @@ public class InternalArgumentParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:716:6: ( 'rebuts' )
+                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:716:6: ( 'rebutted by' )
                     {
-                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:716:6: ( 'rebuts' )
-                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:716:8: 'rebuts'
+                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:716:6: ( 'rebutted by' )
+                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:716:8: 'rebutted by'
                     {
                     match(input,27,FOLLOW_27_in_ruleLinkType1256); 
 
@@ -1671,10 +1671,10 @@ public class InternalArgumentParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:722:6: ( 'mitigates' )
+                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:722:6: ( 'mitigated by' )
                     {
-                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:722:6: ( 'mitigates' )
-                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:722:8: 'mitigates'
+                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:722:6: ( 'mitigated by' )
+                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:722:8: 'mitigated by'
                     {
                     match(input,28,FOLLOW_28_in_ruleLinkType1271); 
 

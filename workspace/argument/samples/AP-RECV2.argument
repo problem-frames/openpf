@@ -1,9 +1,16 @@
 //Fig. 16. Argument for AP!RECV.
 //=========================
-given grounds
- "GPS satellites are operational"
-thus claim
- "Aircraft receives GPS signals"
-rebutted by
- R1.12: "GPS jammed. (SR2)"
+argument: AP_RECV
+
+G1 G "GPS satellites are operational"
+
+C1 C "Aircraft receives GPS signals"
+
+R112 R "GPS jammed. (SR2)"
+
+A1 A
+
+A1 argues G1, C1 //(given grounds G1 thus claim C1)
+
+A1 rebutted by R112 //(A1 is rebutted by R112)
 

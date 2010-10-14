@@ -713,13 +713,13 @@ ruleLinkType returns [Enumerator current=null]
         createLeafNode(grammarAccess.getLinkTypeAccess().getARGUESEnumLiteralDeclaration_0(), null); 
     }
 )
-    |(	'rebuts' 
+    |(	'rebutted by' 
 	{
         $current = grammarAccess.getLinkTypeAccess().getREBUTSEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
         createLeafNode(grammarAccess.getLinkTypeAccess().getREBUTSEnumLiteralDeclaration_1(), null); 
     }
 )
-    |(	'mitigates' 
+    |(	'mitigated by' 
 	{
         $current = grammarAccess.getLinkTypeAccess().getMITIGATESEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
         createLeafNode(grammarAccess.getLinkTypeAccess().getMITIGATESEnumLiteralDeclaration_2(), null); 

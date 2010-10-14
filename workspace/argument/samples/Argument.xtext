@@ -31,7 +31,7 @@ NodeLiteral:
  value=[Node];
 
 enum LinkType:
-	ARGUES="argues" | REBUTS="rebuts" | MITIGATES="mitigates";
+	ARGUES="argues" | REBUTS="rebutted by" | MITIGATES="mitigated by";
 
 terminal ID: ('#' (!('#'))+ '#') |
   ('^'? ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*);

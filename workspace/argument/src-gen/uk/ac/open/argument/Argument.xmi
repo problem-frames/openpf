@@ -197,11 +197,11 @@
         </elements>
         <elements xsi:type="xtext:EnumLiteralDeclaration">
           <enumLiteral href="http://www.ac.uk/open/argument/Argument#//LinkType/REBUTS"/>
-          <literal value="rebuts"/>
+          <literal value="rebutted by"/>
         </elements>
         <elements xsi:type="xtext:EnumLiteralDeclaration">
           <enumLiteral href="http://www.ac.uk/open/argument/Argument#//LinkType/MITIGATES"/>
-          <literal value="mitigates"/>
+          <literal value="mitigated by"/>
         </elements>
       </alternatives>
     </rules>

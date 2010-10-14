@@ -22,8 +22,8 @@ T23 : 'A' ;
 T24 : 'and' ;
 T25 : 'or' ;
 T26 : 'argues' ;
-T27 : 'rebuts' ;
-T28 : 'mitigates' ;
+T27 : 'rebutted by' ;
+T28 : 'mitigated by' ;
 
 // $ANTLR src "../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g" 731
 RULE_ID : ('#' ~('#')+ '#'|'^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*);
