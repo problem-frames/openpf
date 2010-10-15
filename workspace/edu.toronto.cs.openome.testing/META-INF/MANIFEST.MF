@@ -13,8 +13,8 @@ Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.sw
 Bundle-ActivationPolicy: lazy
 Bundle-Version: 1.0.0
 Bundle-Name: Testing Plug-in
-Bundle-ManifestVersion: 2
 Bundle-Activator: edu.toronto.cs.openome.testing.Activator
+Bundle-ManifestVersion: 2
 Bundle-SymbolicName: edu.toronto.cs.openome.testing
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 
