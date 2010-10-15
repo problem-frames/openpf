@@ -1,16 +1,16 @@
 Manifest-Version: 1.0
-Require-Bundle: org.eclipse.core.runtime,edu.toronto.cs.openome_model,
- org.eclipse.ui,org.eclipse.ocl.ecore,org.apache.log4j
 Export-Package: fluid,fluid.control,fluid.display,fluid.display.exampl
  es,fluid.history,fluid.ir,fluid.java,fluid.java.control,fluid.java.op
  erator,fluid.java.template,fluid.java.util,fluid.parse,fluid.template
  ,fluid.tree,fluid.unparse,fluid.util,fluid.version,molhadoref,sc,sc.d
  ocument,sc.xml
+Require-Bundle: org.eclipse.core.runtime,edu.toronto.cs.openome_model,
+ org.eclipse.ui,org.eclipse.ocl.ecore,org.apache.log4j
 Bundle-Version: 1.0.0.201010080232
-Bundle-Name: molhado
 Bundle-Localization: plugin
-Bundle-ManifestVersion: 2
+Bundle-Name: molhado
 Bundle-Activator: molhadoref.Activator
+Bundle-ManifestVersion: 2
 Bundle-SymbolicName: molhado; singleton:=true
 
 
