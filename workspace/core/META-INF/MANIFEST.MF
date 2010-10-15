@@ -10,8 +10,8 @@ Bundle-ActivationPolicy: lazy
 Bundle-Version: 1.0.0
 Bundle-Name: Core Plug-in
 Bundle-ManifestVersion: 2
+Bundle-Activator: edu.toronto.cs.openome.core.plugin.Activator
 Bundle-SymbolicName: core;singleton:=true
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Bundle-Activator: edu.toronto.cs.openome.core.plugin.Activator
 
 

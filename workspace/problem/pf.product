@@ -28,7 +28,9 @@
       <plugin id="PF2EC.ui"/>
       <plugin id="antlr.plugin" fragment=""/>
       <plugin id="argument"/>
+      <plugin id="argument.edit"/>
       <plugin id="argument.diagram"/>
+      <plugin id="argument.diagram.extensions"/>
       <plugin id="argument.ui"/>
       <plugin id="change"/>
       <plugin id="com.google.collect"/>
