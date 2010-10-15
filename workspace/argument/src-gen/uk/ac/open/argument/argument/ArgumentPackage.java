@@ -7,7 +7,6 @@ package uk.ac.open.argument.argument;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -135,22 +134,13 @@ public interface ArgumentPackage extends EPackage
   int NODE__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NODE__TYPE = 1;
-
-  /**
    * The feature id for the '<em><b>Description</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NODE__DESCRIPTION = 2;
+  int NODE__DESCRIPTION = 1;
 
   /**
    * The number of structural features of the '<em>Node</em>' class.
@@ -159,7 +149,145 @@ public interface ArgumentPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NODE_FEATURE_COUNT = 3;
+  int NODE_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link uk.ac.open.argument.argument.impl.ArgumentImpl <em>Argument</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see uk.ac.open.argument.argument.impl.ArgumentImpl
+   * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getArgument()
+   * @generated
+   */
+  int ARGUMENT = 2;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARGUMENT__NAME = NODE__NAME;
+
+  /**
+   * The feature id for the '<em><b>Description</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARGUMENT__DESCRIPTION = NODE__DESCRIPTION;
+
+  /**
+   * The feature id for the '<em><b>Claim</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARGUMENT__CLAIM = NODE_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Grounds</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARGUMENT__GROUNDS = NODE_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Warrants</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARGUMENT__WARRANTS = NODE_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>Argument</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARGUMENT_FEATURE_COUNT = NODE_FEATURE_COUNT + 3;
+
+  /**
+   * The meta object id for the '{@link uk.ac.open.argument.argument.impl.FactImpl <em>Fact</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see uk.ac.open.argument.argument.impl.FactImpl
+   * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getFact()
+   * @generated
+   */
+  int FACT = 3;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACT__NAME = NODE__NAME;
+
+  /**
+   * The feature id for the '<em><b>Description</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACT__DESCRIPTION = NODE__DESCRIPTION;
+
+  /**
+   * The number of structural features of the '<em>Fact</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACT_FEATURE_COUNT = NODE_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link uk.ac.open.argument.argument.impl.ClaimImpl <em>Claim</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see uk.ac.open.argument.argument.impl.ClaimImpl
+   * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getClaim()
+   * @generated
+   */
+  int CLAIM = 4;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLAIM__NAME = NODE__NAME;
+
+  /**
+   * The feature id for the '<em><b>Description</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLAIM__DESCRIPTION = NODE__DESCRIPTION;
+
+  /**
+   * The number of structural features of the '<em>Claim</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLAIM_FEATURE_COUNT = NODE_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link uk.ac.open.argument.argument.impl.LinkImpl <em>Link</em>}' class.
@@ -169,34 +297,25 @@ public interface ArgumentPackage extends EPackage
    * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getLink()
    * @generated
    */
-  int LINK = 2;
+  int LINK = 5;
 
   /**
-   * The feature id for the '<em><b>Afrom</b></em>' reference.
+   * The feature id for the '<em><b>From</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LINK__AFROM = 0;
+  int LINK__FROM = 0;
 
   /**
-   * The feature id for the '<em><b>Link</b></em>' attribute.
+   * The feature id for the '<em><b>To</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LINK__LINK = 1;
-
-  /**
-   * The feature id for the '<em><b>To Node1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LINK__TO_NODE1 = 2;
+  int LINK__TO = 1;
 
   /**
    * The number of structural features of the '<em>Link</em>' class.
@@ -205,167 +324,81 @@ public interface ArgumentPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LINK_FEATURE_COUNT = 3;
+  int LINK_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link uk.ac.open.argument.argument.impl.ExpressionImpl <em>Expression</em>}' class.
+   * The meta object id for the '{@link uk.ac.open.argument.argument.impl.RebutsImpl <em>Rebuts</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see uk.ac.open.argument.argument.impl.ExpressionImpl
-   * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getExpression()
+   * @see uk.ac.open.argument.argument.impl.RebutsImpl
+   * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getRebuts()
    * @generated
    */
-  int EXPRESSION = 3;
+  int REBUTS = 6;
 
   /**
-   * The number of structural features of the '<em>Expression</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRESSION_FEATURE_COUNT = 0;
-
-  /**
-   * The meta object id for the '{@link uk.ac.open.argument.argument.impl.NodeLiteralImpl <em>Node Literal</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see uk.ac.open.argument.argument.impl.NodeLiteralImpl
-   * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getNodeLiteral()
-   * @generated
-   */
-  int NODE_LITERAL = 4;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' reference.
+   * The feature id for the '<em><b>From</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NODE_LITERAL__VALUE = EXPRESSION_FEATURE_COUNT + 0;
+  int REBUTS__FROM = LINK__FROM;
 
   /**
-   * The number of structural features of the '<em>Node Literal</em>' class.
+   * The feature id for the '<em><b>To</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NODE_LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+  int REBUTS__TO = LINK__TO;
 
   /**
-   * The meta object id for the '{@link uk.ac.open.argument.argument.impl.SplitCommasImpl <em>Split Commas</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see uk.ac.open.argument.argument.impl.SplitCommasImpl
-   * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getSplitCommas()
-   * @generated
-   */
-  int SPLIT_COMMAS = 5;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * The number of structural features of the '<em>Rebuts</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SPLIT_COMMAS__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+  int REBUTS_FEATURE_COUNT = LINK_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * The meta object id for the '{@link uk.ac.open.argument.argument.impl.MitigatesImpl <em>Mitigates</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see uk.ac.open.argument.argument.impl.MitigatesImpl
+   * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getMitigates()
+   * @generated
+   */
+  int MITIGATES = 7;
+
+  /**
+   * The feature id for the '<em><b>From</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SPLIT_COMMAS__RIGHT = EXPRESSION_FEATURE_COUNT + 1;
+  int MITIGATES__FROM = LINK__FROM;
 
   /**
-   * The number of structural features of the '<em>Split Commas</em>' class.
+   * The feature id for the '<em><b>To</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SPLIT_COMMAS_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+  int MITIGATES__TO = LINK__TO;
 
   /**
-   * The meta object id for the '{@link uk.ac.open.argument.argument.impl.SplitConnectiveImpl <em>Split Connective</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see uk.ac.open.argument.argument.impl.SplitConnectiveImpl
-   * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getSplitConnective()
-   * @generated
-   */
-  int SPLIT_CONNECTIVE = 6;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * The number of structural features of the '<em>Mitigates</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SPLIT_CONNECTIVE__LEFT = EXPRESSION_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Connective</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SPLIT_CONNECTIVE__CONNECTIVE = EXPRESSION_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SPLIT_CONNECTIVE__RIGHT = EXPRESSION_FEATURE_COUNT + 2;
-
-  /**
-   * The number of structural features of the '<em>Split Connective</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SPLIT_CONNECTIVE_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
-
-  /**
-   * The meta object id for the '{@link uk.ac.open.argument.argument.NodeType <em>Node Type</em>}' enum.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see uk.ac.open.argument.argument.NodeType
-   * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getNodeType()
-   * @generated
-   */
-  int NODE_TYPE = 7;
-
-  /**
-   * The meta object id for the '{@link uk.ac.open.argument.argument.ConnectiveType <em>Connective Type</em>}' enum.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see uk.ac.open.argument.argument.ConnectiveType
-   * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getConnectiveType()
-   * @generated
-   */
-  int CONNECTIVE_TYPE = 8;
-
-  /**
-   * The meta object id for the '{@link uk.ac.open.argument.argument.LinkType <em>Link Type</em>}' enum.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see uk.ac.open.argument.argument.LinkType
-   * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getLinkType()
-   * @generated
-   */
-  int LINK_TYPE = 9;
+  int MITIGATES_FEATURE_COUNT = LINK_FEATURE_COUNT + 0;
 
 
   /**
@@ -444,17 +477,6 @@ public interface ArgumentPackage extends EPackage
   EAttribute getNode_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link uk.ac.open.argument.argument.Node#getType <em>Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Type</em>'.
-   * @see uk.ac.open.argument.argument.Node#getType()
-   * @see #getNode()
-   * @generated
-   */
-  EAttribute getNode_Type();
-
-  /**
    * Returns the meta object for the attribute '{@link uk.ac.open.argument.argument.Node#getDescription <em>Description</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -464,6 +486,69 @@ public interface ArgumentPackage extends EPackage
    * @generated
    */
   EAttribute getNode_Description();
+
+  /**
+   * Returns the meta object for class '{@link uk.ac.open.argument.argument.Argument <em>Argument</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Argument</em>'.
+   * @see uk.ac.open.argument.argument.Argument
+   * @generated
+   */
+  EClass getArgument();
+
+  /**
+   * Returns the meta object for the containment reference '{@link uk.ac.open.argument.argument.Argument#getClaim <em>Claim</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Claim</em>'.
+   * @see uk.ac.open.argument.argument.Argument#getClaim()
+   * @see #getArgument()
+   * @generated
+   */
+  EReference getArgument_Claim();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link uk.ac.open.argument.argument.Argument#getGrounds <em>Grounds</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Grounds</em>'.
+   * @see uk.ac.open.argument.argument.Argument#getGrounds()
+   * @see #getArgument()
+   * @generated
+   */
+  EReference getArgument_Grounds();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link uk.ac.open.argument.argument.Argument#getWarrants <em>Warrants</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Warrants</em>'.
+   * @see uk.ac.open.argument.argument.Argument#getWarrants()
+   * @see #getArgument()
+   * @generated
+   */
+  EReference getArgument_Warrants();
+
+  /**
+   * Returns the meta object for class '{@link uk.ac.open.argument.argument.Fact <em>Fact</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Fact</em>'.
+   * @see uk.ac.open.argument.argument.Fact
+   * @generated
+   */
+  EClass getFact();
+
+  /**
+   * Returns the meta object for class '{@link uk.ac.open.argument.argument.Claim <em>Claim</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Claim</em>'.
+   * @see uk.ac.open.argument.argument.Claim
+   * @generated
+   */
+  EClass getClaim();
 
   /**
    * Returns the meta object for class '{@link uk.ac.open.argument.argument.Link <em>Link</em>}'.
@@ -476,173 +561,46 @@ public interface ArgumentPackage extends EPackage
   EClass getLink();
 
   /**
-   * Returns the meta object for the reference '{@link uk.ac.open.argument.argument.Link#getAfrom <em>Afrom</em>}'.
+   * Returns the meta object for the reference '{@link uk.ac.open.argument.argument.Link#getFrom <em>From</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Afrom</em>'.
-   * @see uk.ac.open.argument.argument.Link#getAfrom()
+   * @return the meta object for the reference '<em>From</em>'.
+   * @see uk.ac.open.argument.argument.Link#getFrom()
    * @see #getLink()
    * @generated
    */
-  EReference getLink_Afrom();
+  EReference getLink_From();
 
   /**
-   * Returns the meta object for the attribute '{@link uk.ac.open.argument.argument.Link#getLink <em>Link</em>}'.
+   * Returns the meta object for the reference '{@link uk.ac.open.argument.argument.Link#getTo <em>To</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Link</em>'.
-   * @see uk.ac.open.argument.argument.Link#getLink()
+   * @return the meta object for the reference '<em>To</em>'.
+   * @see uk.ac.open.argument.argument.Link#getTo()
    * @see #getLink()
    * @generated
    */
-  EAttribute getLink_Link();
+  EReference getLink_To();
 
   /**
-   * Returns the meta object for the containment reference '{@link uk.ac.open.argument.argument.Link#getToNode1 <em>To Node1</em>}'.
+   * Returns the meta object for class '{@link uk.ac.open.argument.argument.Rebuts <em>Rebuts</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>To Node1</em>'.
-   * @see uk.ac.open.argument.argument.Link#getToNode1()
-   * @see #getLink()
+   * @return the meta object for class '<em>Rebuts</em>'.
+   * @see uk.ac.open.argument.argument.Rebuts
    * @generated
    */
-  EReference getLink_ToNode1();
+  EClass getRebuts();
 
   /**
-   * Returns the meta object for class '{@link uk.ac.open.argument.argument.Expression <em>Expression</em>}'.
+   * Returns the meta object for class '{@link uk.ac.open.argument.argument.Mitigates <em>Mitigates</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Expression</em>'.
-   * @see uk.ac.open.argument.argument.Expression
+   * @return the meta object for class '<em>Mitigates</em>'.
+   * @see uk.ac.open.argument.argument.Mitigates
    * @generated
    */
-  EClass getExpression();
-
-  /**
-   * Returns the meta object for class '{@link uk.ac.open.argument.argument.NodeLiteral <em>Node Literal</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Node Literal</em>'.
-   * @see uk.ac.open.argument.argument.NodeLiteral
-   * @generated
-   */
-  EClass getNodeLiteral();
-
-  /**
-   * Returns the meta object for the reference '{@link uk.ac.open.argument.argument.NodeLiteral#getValue <em>Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Value</em>'.
-   * @see uk.ac.open.argument.argument.NodeLiteral#getValue()
-   * @see #getNodeLiteral()
-   * @generated
-   */
-  EReference getNodeLiteral_Value();
-
-  /**
-   * Returns the meta object for class '{@link uk.ac.open.argument.argument.SplitCommas <em>Split Commas</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Split Commas</em>'.
-   * @see uk.ac.open.argument.argument.SplitCommas
-   * @generated
-   */
-  EClass getSplitCommas();
-
-  /**
-   * Returns the meta object for the containment reference '{@link uk.ac.open.argument.argument.SplitCommas#getLeft <em>Left</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Left</em>'.
-   * @see uk.ac.open.argument.argument.SplitCommas#getLeft()
-   * @see #getSplitCommas()
-   * @generated
-   */
-  EReference getSplitCommas_Left();
-
-  /**
-   * Returns the meta object for the containment reference '{@link uk.ac.open.argument.argument.SplitCommas#getRight <em>Right</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Right</em>'.
-   * @see uk.ac.open.argument.argument.SplitCommas#getRight()
-   * @see #getSplitCommas()
-   * @generated
-   */
-  EReference getSplitCommas_Right();
-
-  /**
-   * Returns the meta object for class '{@link uk.ac.open.argument.argument.SplitConnective <em>Split Connective</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Split Connective</em>'.
-   * @see uk.ac.open.argument.argument.SplitConnective
-   * @generated
-   */
-  EClass getSplitConnective();
-
-  /**
-   * Returns the meta object for the containment reference '{@link uk.ac.open.argument.argument.SplitConnective#getLeft <em>Left</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Left</em>'.
-   * @see uk.ac.open.argument.argument.SplitConnective#getLeft()
-   * @see #getSplitConnective()
-   * @generated
-   */
-  EReference getSplitConnective_Left();
-
-  /**
-   * Returns the meta object for the attribute '{@link uk.ac.open.argument.argument.SplitConnective#getConnective <em>Connective</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Connective</em>'.
-   * @see uk.ac.open.argument.argument.SplitConnective#getConnective()
-   * @see #getSplitConnective()
-   * @generated
-   */
-  EAttribute getSplitConnective_Connective();
-
-  /**
-   * Returns the meta object for the containment reference '{@link uk.ac.open.argument.argument.SplitConnective#getRight <em>Right</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Right</em>'.
-   * @see uk.ac.open.argument.argument.SplitConnective#getRight()
-   * @see #getSplitConnective()
-   * @generated
-   */
-  EReference getSplitConnective_Right();
-
-  /**
-   * Returns the meta object for enum '{@link uk.ac.open.argument.argument.NodeType <em>Node Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>Node Type</em>'.
-   * @see uk.ac.open.argument.argument.NodeType
-   * @generated
-   */
-  EEnum getNodeType();
-
-  /**
-   * Returns the meta object for enum '{@link uk.ac.open.argument.argument.ConnectiveType <em>Connective Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>Connective Type</em>'.
-   * @see uk.ac.open.argument.argument.ConnectiveType
-   * @generated
-   */
-  EEnum getConnectiveType();
-
-  /**
-   * Returns the meta object for enum '{@link uk.ac.open.argument.argument.LinkType <em>Link Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>Link Type</em>'.
-   * @see uk.ac.open.argument.argument.LinkType
-   * @generated
-   */
-  EEnum getLinkType();
+  EClass getMitigates();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -728,20 +686,66 @@ public interface ArgumentPackage extends EPackage
     EAttribute NODE__NAME = eINSTANCE.getNode_Name();
 
     /**
-     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute NODE__TYPE = eINSTANCE.getNode_Type();
-
-    /**
      * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EAttribute NODE__DESCRIPTION = eINSTANCE.getNode_Description();
+
+    /**
+     * The meta object literal for the '{@link uk.ac.open.argument.argument.impl.ArgumentImpl <em>Argument</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see uk.ac.open.argument.argument.impl.ArgumentImpl
+     * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getArgument()
+     * @generated
+     */
+    EClass ARGUMENT = eINSTANCE.getArgument();
+
+    /**
+     * The meta object literal for the '<em><b>Claim</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ARGUMENT__CLAIM = eINSTANCE.getArgument_Claim();
+
+    /**
+     * The meta object literal for the '<em><b>Grounds</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ARGUMENT__GROUNDS = eINSTANCE.getArgument_Grounds();
+
+    /**
+     * The meta object literal for the '<em><b>Warrants</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ARGUMENT__WARRANTS = eINSTANCE.getArgument_Warrants();
+
+    /**
+     * The meta object literal for the '{@link uk.ac.open.argument.argument.impl.FactImpl <em>Fact</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see uk.ac.open.argument.argument.impl.FactImpl
+     * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getFact()
+     * @generated
+     */
+    EClass FACT = eINSTANCE.getFact();
+
+    /**
+     * The meta object literal for the '{@link uk.ac.open.argument.argument.impl.ClaimImpl <em>Claim</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see uk.ac.open.argument.argument.impl.ClaimImpl
+     * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getClaim()
+     * @generated
+     */
+    EClass CLAIM = eINSTANCE.getClaim();
 
     /**
      * The meta object literal for the '{@link uk.ac.open.argument.argument.impl.LinkImpl <em>Link</em>}' class.
@@ -754,146 +758,40 @@ public interface ArgumentPackage extends EPackage
     EClass LINK = eINSTANCE.getLink();
 
     /**
-     * The meta object literal for the '<em><b>Afrom</b></em>' reference feature.
+     * The meta object literal for the '<em><b>From</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference LINK__AFROM = eINSTANCE.getLink_Afrom();
+    EReference LINK__FROM = eINSTANCE.getLink_From();
 
     /**
-     * The meta object literal for the '<em><b>Link</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>To</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute LINK__LINK = eINSTANCE.getLink_Link();
+    EReference LINK__TO = eINSTANCE.getLink_To();
 
     /**
-     * The meta object literal for the '<em><b>To Node1</b></em>' containment reference feature.
+     * The meta object literal for the '{@link uk.ac.open.argument.argument.impl.RebutsImpl <em>Rebuts</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see uk.ac.open.argument.argument.impl.RebutsImpl
+     * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getRebuts()
      * @generated
      */
-    EReference LINK__TO_NODE1 = eINSTANCE.getLink_ToNode1();
+    EClass REBUTS = eINSTANCE.getRebuts();
 
     /**
-     * The meta object literal for the '{@link uk.ac.open.argument.argument.impl.ExpressionImpl <em>Expression</em>}' class.
+     * The meta object literal for the '{@link uk.ac.open.argument.argument.impl.MitigatesImpl <em>Mitigates</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see uk.ac.open.argument.argument.impl.ExpressionImpl
-     * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getExpression()
+     * @see uk.ac.open.argument.argument.impl.MitigatesImpl
+     * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getMitigates()
      * @generated
      */
-    EClass EXPRESSION = eINSTANCE.getExpression();
-
-    /**
-     * The meta object literal for the '{@link uk.ac.open.argument.argument.impl.NodeLiteralImpl <em>Node Literal</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see uk.ac.open.argument.argument.impl.NodeLiteralImpl
-     * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getNodeLiteral()
-     * @generated
-     */
-    EClass NODE_LITERAL = eINSTANCE.getNodeLiteral();
-
-    /**
-     * The meta object literal for the '<em><b>Value</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference NODE_LITERAL__VALUE = eINSTANCE.getNodeLiteral_Value();
-
-    /**
-     * The meta object literal for the '{@link uk.ac.open.argument.argument.impl.SplitCommasImpl <em>Split Commas</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see uk.ac.open.argument.argument.impl.SplitCommasImpl
-     * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getSplitCommas()
-     * @generated
-     */
-    EClass SPLIT_COMMAS = eINSTANCE.getSplitCommas();
-
-    /**
-     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference SPLIT_COMMAS__LEFT = eINSTANCE.getSplitCommas_Left();
-
-    /**
-     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference SPLIT_COMMAS__RIGHT = eINSTANCE.getSplitCommas_Right();
-
-    /**
-     * The meta object literal for the '{@link uk.ac.open.argument.argument.impl.SplitConnectiveImpl <em>Split Connective</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see uk.ac.open.argument.argument.impl.SplitConnectiveImpl
-     * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getSplitConnective()
-     * @generated
-     */
-    EClass SPLIT_CONNECTIVE = eINSTANCE.getSplitConnective();
-
-    /**
-     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference SPLIT_CONNECTIVE__LEFT = eINSTANCE.getSplitConnective_Left();
-
-    /**
-     * The meta object literal for the '<em><b>Connective</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute SPLIT_CONNECTIVE__CONNECTIVE = eINSTANCE.getSplitConnective_Connective();
-
-    /**
-     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference SPLIT_CONNECTIVE__RIGHT = eINSTANCE.getSplitConnective_Right();
-
-    /**
-     * The meta object literal for the '{@link uk.ac.open.argument.argument.NodeType <em>Node Type</em>}' enum.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see uk.ac.open.argument.argument.NodeType
-     * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getNodeType()
-     * @generated
-     */
-    EEnum NODE_TYPE = eINSTANCE.getNodeType();
-
-    /**
-     * The meta object literal for the '{@link uk.ac.open.argument.argument.ConnectiveType <em>Connective Type</em>}' enum.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see uk.ac.open.argument.argument.ConnectiveType
-     * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getConnectiveType()
-     * @generated
-     */
-    EEnum CONNECTIVE_TYPE = eINSTANCE.getConnectiveType();
-
-    /**
-     * The meta object literal for the '{@link uk.ac.open.argument.argument.LinkType <em>Link Type</em>}' enum.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see uk.ac.open.argument.argument.LinkType
-     * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getLinkType()
-     * @generated
-     */
-    EEnum LINK_TYPE = eINSTANCE.getLinkType();
+    EClass MITIGATES = eINSTANCE.getMitigates();
 
   }
 

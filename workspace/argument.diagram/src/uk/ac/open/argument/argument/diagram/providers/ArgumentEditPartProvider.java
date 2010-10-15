@@ -13,7 +13,6 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDiagramEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentEditPartFactory;
-import uk.ac.open.argument.argument.diagram.edit.parts.FreeformLayerEditPart;
 import uk.ac.open.argument.argument.diagram.part.ArgumentVisualIDRegistry;
 
 /**

@@ -7,23 +7,6 @@
     complianceLevel="5.0" copyrightFields="false" editPluginID="argument.edit" editorPluginID="argument.editor">
   <genPackages prefix="Argument" basePackage="uk.ac.open.argument" disposableProviderFactory="true"
       ecorePackage="Argument.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Argument.ecore#//NodeType">
-      <genEnumLiterals ecoreEnumLiteral="Argument.ecore#//NodeType/CLAIM"/>
-      <genEnumLiterals ecoreEnumLiteral="Argument.ecore#//NodeType/WARRANT"/>
-      <genEnumLiterals ecoreEnumLiteral="Argument.ecore#//NodeType/GROUND"/>
-      <genEnumLiterals ecoreEnumLiteral="Argument.ecore#//NodeType/REBUTTAL"/>
-      <genEnumLiterals ecoreEnumLiteral="Argument.ecore#//NodeType/MITIGATION"/>
-      <genEnumLiterals ecoreEnumLiteral="Argument.ecore#//NodeType/ARGUMENT"/>
-    </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Argument.ecore#//ConnectiveType">
-      <genEnumLiterals ecoreEnumLiteral="Argument.ecore#//ConnectiveType/AND"/>
-      <genEnumLiterals ecoreEnumLiteral="Argument.ecore#//ConnectiveType/OR"/>
-    </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Argument.ecore#//LinkType">
-      <genEnumLiterals ecoreEnumLiteral="Argument.ecore#//LinkType/ARGUES"/>
-      <genEnumLiterals ecoreEnumLiteral="Argument.ecore#//LinkType/REBUTS"/>
-      <genEnumLiterals ecoreEnumLiteral="Argument.ecore#//LinkType/MITIGATES"/>
-    </genEnums>
     <genClasses ecoreClass="Argument.ecore#//ArgumentDiagram">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//ArgumentDiagram/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Argument.ecore#//ArgumentDiagram/highlight"/>
@@ -32,26 +15,20 @@
     </genClasses>
     <genClasses ecoreClass="Argument.ecore#//Node">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Node/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Node/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Node/description"/>
     </genClasses>
+    <genClasses ecoreClass="Argument.ecore#//Argument">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//Argument/claim"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//Argument/grounds"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//Argument/warrants"/>
+    </genClasses>
+    <genClasses ecoreClass="Argument.ecore#//Fact"/>
+    <genClasses ecoreClass="Argument.ecore#//Claim"/>
     <genClasses ecoreClass="Argument.ecore#//Link">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Argument.ecore#//Link/afrom"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Link/link"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//Link/toNode1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Argument.ecore#//Link/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Argument.ecore#//Link/to"/>
     </genClasses>
-    <genClasses ecoreClass="Argument.ecore#//Expression"/>
-    <genClasses ecoreClass="Argument.ecore#//NodeLiteral">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Argument.ecore#//NodeLiteral/value"/>
-    </genClasses>
-    <genClasses ecoreClass="Argument.ecore#//SplitCommas">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//SplitCommas/left"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//SplitCommas/right"/>
-    </genClasses>
-    <genClasses ecoreClass="Argument.ecore#//SplitConnective">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//SplitConnective/left"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//SplitConnective/connective"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//SplitConnective/right"/>
-    </genClasses>
+    <genClasses ecoreClass="Argument.ecore#//Rebuts"/>
+    <genClasses ecoreClass="Argument.ecore#//Mitigates"/>
   </genPackages>
 </genmodel:GenModel>

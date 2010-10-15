@@ -21,7 +21,11 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.dialogs.ElementListSelectionDialog;
 
+import uk.ac.open.argument.argument.diagram.edit.parts.Argument2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentWarrantsCompartment2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentWarrantsCompartmentEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDiagramEditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentEditPart;
 import uk.ac.open.argument.argument.diagram.part.ArgumentDiagramEditorPlugin;
 import uk.ac.open.argument.argument.diagram.part.Messages;
 
@@ -38,8 +42,32 @@ public class ArgumentModelingAssistantProvider extends
 		IGraphicalEditPart editPart = (IGraphicalEditPart) host
 				.getAdapter(IGraphicalEditPart.class);
 		if (editPart instanceof ArgumentDiagramEditPart) {
+			ArrayList<IElementType> types = new ArrayList<IElementType>(3);
+			types.add(ArgumentElementTypes.Argument_2001);
+			types.add(ArgumentElementTypes.Fact_2002);
+			types.add(ArgumentElementTypes.Claim_2003);
+			return types;
+		}
+		if (editPart instanceof ArgumentEditPart) {
+			ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+			types.add(ArgumentElementTypes.Claim_3001);
+			types.add(ArgumentElementTypes.Fact_3002);
+			return types;
+		}
+		if (editPart instanceof Argument2EditPart) {
+			ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+			types.add(ArgumentElementTypes.Claim_3001);
+			types.add(ArgumentElementTypes.Fact_3002);
+			return types;
+		}
+		if (editPart instanceof ArgumentArgumentWarrantsCompartmentEditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(1);
-			types.add(ArgumentElementTypes.Node_2001);
+			types.add(ArgumentElementTypes.Argument_3003);
+			return types;
+		}
+		if (editPart instanceof ArgumentArgumentWarrantsCompartment2EditPart) {
+			ArrayList<IElementType> types = new ArrayList<IElementType>(1);
+			types.add(ArgumentElementTypes.Argument_3003);
 			return types;
 		}
 		return Collections.EMPTY_LIST;
@@ -51,6 +79,12 @@ public class ArgumentModelingAssistantProvider extends
 	public List getRelTypesOnSource(IAdaptable source) {
 		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source
 				.getAdapter(IGraphicalEditPart.class);
+		if (sourceEditPart instanceof ArgumentEditPart) {
+			return ((ArgumentEditPart) sourceEditPart).getMARelTypesOnSource();
+		}
+		if (sourceEditPart instanceof Argument2EditPart) {
+			return ((Argument2EditPart) sourceEditPart).getMARelTypesOnSource();
+		}
 		return Collections.EMPTY_LIST;
 	}
 
@@ -60,6 +94,12 @@ public class ArgumentModelingAssistantProvider extends
 	public List getRelTypesOnTarget(IAdaptable target) {
 		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target
 				.getAdapter(IGraphicalEditPart.class);
+		if (targetEditPart instanceof ArgumentEditPart) {
+			return ((ArgumentEditPart) targetEditPart).getMARelTypesOnTarget();
+		}
+		if (targetEditPart instanceof Argument2EditPart) {
+			return ((Argument2EditPart) targetEditPart).getMARelTypesOnTarget();
+		}
 		return Collections.EMPTY_LIST;
 	}
 
@@ -72,6 +112,14 @@ public class ArgumentModelingAssistantProvider extends
 				.getAdapter(IGraphicalEditPart.class);
 		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target
 				.getAdapter(IGraphicalEditPart.class);
+		if (sourceEditPart instanceof ArgumentEditPart) {
+			return ((ArgumentEditPart) sourceEditPart)
+					.getMARelTypesOnSourceAndTarget(targetEditPart);
+		}
+		if (sourceEditPart instanceof Argument2EditPart) {
+			return ((Argument2EditPart) sourceEditPart)
+					.getMARelTypesOnSourceAndTarget(targetEditPart);
+		}
 		return Collections.EMPTY_LIST;
 	}
 
@@ -82,6 +130,14 @@ public class ArgumentModelingAssistantProvider extends
 			IElementType relationshipType) {
 		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target
 				.getAdapter(IGraphicalEditPart.class);
+		if (targetEditPart instanceof ArgumentEditPart) {
+			return ((ArgumentEditPart) targetEditPart)
+					.getMATypesForSource(relationshipType);
+		}
+		if (targetEditPart instanceof Argument2EditPart) {
+			return ((Argument2EditPart) targetEditPart)
+					.getMATypesForSource(relationshipType);
+		}
 		return Collections.EMPTY_LIST;
 	}
 
@@ -92,6 +148,14 @@ public class ArgumentModelingAssistantProvider extends
 			IElementType relationshipType) {
 		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source
 				.getAdapter(IGraphicalEditPart.class);
+		if (sourceEditPart instanceof ArgumentEditPart) {
+			return ((ArgumentEditPart) sourceEditPart)
+					.getMATypesForTarget(relationshipType);
+		}
+		if (sourceEditPart instanceof Argument2EditPart) {
+			return ((Argument2EditPart) sourceEditPart)
+					.getMATypesForTarget(relationshipType);
+		}
 		return Collections.EMPTY_LIST;
 	}
 

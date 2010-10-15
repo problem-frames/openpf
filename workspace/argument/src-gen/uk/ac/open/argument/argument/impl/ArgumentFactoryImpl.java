@@ -6,7 +6,6 @@
 package uk.ac.open.argument.argument.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -70,55 +69,14 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
     {
       case ArgumentPackage.ARGUMENT_DIAGRAM: return createArgumentDiagram();
       case ArgumentPackage.NODE: return createNode();
+      case ArgumentPackage.ARGUMENT: return createArgument();
+      case ArgumentPackage.FACT: return createFact();
+      case ArgumentPackage.CLAIM: return createClaim();
       case ArgumentPackage.LINK: return createLink();
-      case ArgumentPackage.EXPRESSION: return createExpression();
-      case ArgumentPackage.NODE_LITERAL: return createNodeLiteral();
-      case ArgumentPackage.SPLIT_COMMAS: return createSplitCommas();
-      case ArgumentPackage.SPLIT_CONNECTIVE: return createSplitConnective();
+      case ArgumentPackage.REBUTS: return createRebuts();
+      case ArgumentPackage.MITIGATES: return createMitigates();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-    }
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public Object createFromString(EDataType eDataType, String initialValue)
-  {
-    switch (eDataType.getClassifierID())
-    {
-      case ArgumentPackage.NODE_TYPE:
-        return createNodeTypeFromString(eDataType, initialValue);
-      case ArgumentPackage.CONNECTIVE_TYPE:
-        return createConnectiveTypeFromString(eDataType, initialValue);
-      case ArgumentPackage.LINK_TYPE:
-        return createLinkTypeFromString(eDataType, initialValue);
-      default:
-        throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-    }
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String convertToString(EDataType eDataType, Object instanceValue)
-  {
-    switch (eDataType.getClassifierID())
-    {
-      case ArgumentPackage.NODE_TYPE:
-        return convertNodeTypeToString(eDataType, instanceValue);
-      case ArgumentPackage.CONNECTIVE_TYPE:
-        return convertConnectiveTypeToString(eDataType, instanceValue);
-      case ArgumentPackage.LINK_TYPE:
-        return convertLinkTypeToString(eDataType, instanceValue);
-      default:
-        throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
   }
 
@@ -149,6 +107,39 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public Argument createArgument()
+  {
+    ArgumentImpl argument = new ArgumentImpl();
+    return argument;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Fact createFact()
+  {
+    FactImpl fact = new FactImpl();
+    return fact;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Claim createClaim()
+  {
+    ClaimImpl claim = new ClaimImpl();
+    return claim;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Link createLink()
   {
     LinkImpl link = new LinkImpl();
@@ -160,10 +151,10 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Expression createExpression()
+  public Rebuts createRebuts()
   {
-    ExpressionImpl expression = new ExpressionImpl();
-    return expression;
+    RebutsImpl rebuts = new RebutsImpl();
+    return rebuts;
   }
 
   /**
@@ -171,98 +162,10 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public NodeLiteral createNodeLiteral()
+  public Mitigates createMitigates()
   {
-    NodeLiteralImpl nodeLiteral = new NodeLiteralImpl();
-    return nodeLiteral;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public SplitCommas createSplitCommas()
-  {
-    SplitCommasImpl splitCommas = new SplitCommasImpl();
-    return splitCommas;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public SplitConnective createSplitConnective()
-  {
-    SplitConnectiveImpl splitConnective = new SplitConnectiveImpl();
-    return splitConnective;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NodeType createNodeTypeFromString(EDataType eDataType, String initialValue)
-  {
-    NodeType result = NodeType.get(initialValue);
-    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-    return result;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String convertNodeTypeToString(EDataType eDataType, Object instanceValue)
-  {
-    return instanceValue == null ? null : instanceValue.toString();
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ConnectiveType createConnectiveTypeFromString(EDataType eDataType, String initialValue)
-  {
-    ConnectiveType result = ConnectiveType.get(initialValue);
-    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-    return result;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String convertConnectiveTypeToString(EDataType eDataType, Object instanceValue)
-  {
-    return instanceValue == null ? null : instanceValue.toString();
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LinkType createLinkTypeFromString(EDataType eDataType, String initialValue)
-  {
-    LinkType result = LinkType.get(initialValue);
-    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-    return result;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String convertLinkTypeToString(EDataType eDataType, Object instanceValue)
-  {
-    return instanceValue == null ? null : instanceValue.toString();
+    MitigatesImpl mitigates = new MitigatesImpl();
+    return mitigates;
   }
 
   /**

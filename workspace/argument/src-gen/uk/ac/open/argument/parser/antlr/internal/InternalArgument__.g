@@ -9,44 +9,41 @@ import org.eclipse.xtext.parser.antlr.Lexer;
 
 T12 : 'argument:' ;
 T13 : 'for' ;
-T14 : ':' ;
-T15 : ',' ;
-T16 : '(' ;
-T17 : ')' ;
-T18 : 'C' ;
-T19 : 'W' ;
-T20 : 'G' ;
-T21 : 'R' ;
-T22 : 'M' ;
-T23 : 'A' ;
-T24 : 'and' ;
-T25 : 'or' ;
-T26 : 'argues' ;
-T27 : 'rebutted by' ;
-T28 : 'mitigated by' ;
-
-// $ANTLR src "../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g" 731
-RULE_ID : ('#' ~('#')+ '#'|'^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*);
-
-// $ANTLR src "../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g" 733
-RULE_QUALIFIED_NAME : RULE_ID ('.' RULE_ID)*;
+T14 : 'A' ;
+T15 : '{' ;
+T16 : 'claim' ;
+T17 : 'supported by' ;
+T18 : ',' ;
+T19 : 'warranted by' ;
+T20 : '}' ;
+T21 : ':' ;
+T22 : 'G' ;
+T23 : 'C' ;
+T24 : 'rebuts' ;
+T25 : 'mitigates' ;
 
 // $ANTLR src "../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g" 735
-RULE_INT : ('0'..'9')+;
+RULE_ID : ('#' ~('#')+ '#'|'^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*);
 
 // $ANTLR src "../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g" 737
-RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\'');
+RULE_QUALIFIED_NAME : RULE_ID ('.' RULE_ID)*;
 
 // $ANTLR src "../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g" 739
-RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
+RULE_INT : ('0'..'9')+;
 
 // $ANTLR src "../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g" 741
-RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
+RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\'');
 
 // $ANTLR src "../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g" 743
-RULE_WS : (' '|'\t'|'\r'|'\n')+;
+RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 
 // $ANTLR src "../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g" 745
+RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
+
+// $ANTLR src "../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g" 747
+RULE_WS : (' '|'\t'|'\r'|'\n')+;
+
+// $ANTLR src "../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g" 749
 RULE_ANY_OTHER : .;
 
 

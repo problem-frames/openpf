@@ -52,7 +52,6 @@ import org.eclipse.ui.part.FileEditorInput;
 import uk.ac.open.argument.argument.ArgumentDiagram;
 import uk.ac.open.argument.argument.ArgumentFactory;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDiagramEditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.FreeformLayerEditPart;
 
 /**
  * @generated

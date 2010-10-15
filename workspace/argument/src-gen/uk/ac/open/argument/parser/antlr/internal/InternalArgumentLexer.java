@@ -14,11 +14,8 @@ import java.util.ArrayList;
 public class InternalArgumentLexer extends Lexer {
     public static final int RULE_ID=4;
     public static final int RULE_ANY_OTHER=11;
-    public static final int T28=28;
-    public static final int T27=27;
-    public static final int T26=26;
     public static final int T25=25;
-    public static final int Tokens=29;
+    public static final int Tokens=26;
     public static final int T24=24;
     public static final int EOF=-1;
     public static final int RULE_SL_COMMENT=9;
@@ -87,10 +84,10 @@ public class InternalArgumentLexer extends Lexer {
     public final void mT14() throws RecognitionException {
         try {
             int _type = T14;
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:12:5: ( ':' )
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:12:7: ':'
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:12:5: ( 'A' )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:12:7: 'A'
             {
-            match(':'); 
+            match('A'); 
 
             }
 
@@ -105,10 +102,10 @@ public class InternalArgumentLexer extends Lexer {
     public final void mT15() throws RecognitionException {
         try {
             int _type = T15;
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:13:5: ( ',' )
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:13:7: ','
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:13:5: ( '{' )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:13:7: '{'
             {
-            match(','); 
+            match('{'); 
 
             }
 
@@ -123,10 +120,11 @@ public class InternalArgumentLexer extends Lexer {
     public final void mT16() throws RecognitionException {
         try {
             int _type = T16;
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:14:5: ( '(' )
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:14:7: '('
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:14:5: ( 'claim' )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:14:7: 'claim'
             {
-            match('('); 
+            match("claim"); 
+
 
             }
 
@@ -141,10 +139,11 @@ public class InternalArgumentLexer extends Lexer {
     public final void mT17() throws RecognitionException {
         try {
             int _type = T17;
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:15:5: ( ')' )
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:15:7: ')'
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:15:5: ( 'supported by' )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:15:7: 'supported by'
             {
-            match(')'); 
+            match("supported by"); 
+
 
             }
 
@@ -159,10 +158,10 @@ public class InternalArgumentLexer extends Lexer {
     public final void mT18() throws RecognitionException {
         try {
             int _type = T18;
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:16:5: ( 'C' )
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:16:7: 'C'
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:16:5: ( ',' )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:16:7: ','
             {
-            match('C'); 
+            match(','); 
 
             }
 
@@ -177,10 +176,11 @@ public class InternalArgumentLexer extends Lexer {
     public final void mT19() throws RecognitionException {
         try {
             int _type = T19;
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:17:5: ( 'W' )
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:17:7: 'W'
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:17:5: ( 'warranted by' )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:17:7: 'warranted by'
             {
-            match('W'); 
+            match("warranted by"); 
+
 
             }
 
@@ -195,10 +195,10 @@ public class InternalArgumentLexer extends Lexer {
     public final void mT20() throws RecognitionException {
         try {
             int _type = T20;
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:18:5: ( 'G' )
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:18:7: 'G'
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:18:5: ( '}' )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:18:7: '}'
             {
-            match('G'); 
+            match('}'); 
 
             }
 
@@ -213,10 +213,10 @@ public class InternalArgumentLexer extends Lexer {
     public final void mT21() throws RecognitionException {
         try {
             int _type = T21;
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:19:5: ( 'R' )
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:19:7: 'R'
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:19:5: ( ':' )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:19:7: ':'
             {
-            match('R'); 
+            match(':'); 
 
             }
 
@@ -231,10 +231,10 @@ public class InternalArgumentLexer extends Lexer {
     public final void mT22() throws RecognitionException {
         try {
             int _type = T22;
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:20:5: ( 'M' )
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:20:7: 'M'
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:20:5: ( 'G' )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:20:7: 'G'
             {
-            match('M'); 
+            match('G'); 
 
             }
 
@@ -249,10 +249,10 @@ public class InternalArgumentLexer extends Lexer {
     public final void mT23() throws RecognitionException {
         try {
             int _type = T23;
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:21:5: ( 'A' )
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:21:7: 'A'
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:21:5: ( 'C' )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:21:7: 'C'
             {
-            match('A'); 
+            match('C'); 
 
             }
 
@@ -267,10 +267,10 @@ public class InternalArgumentLexer extends Lexer {
     public final void mT24() throws RecognitionException {
         try {
             int _type = T24;
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:22:5: ( 'and' )
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:22:7: 'and'
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:22:5: ( 'rebuts' )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:22:7: 'rebuts'
             {
-            match("and"); 
+            match("rebuts"); 
 
 
             }
@@ -286,10 +286,10 @@ public class InternalArgumentLexer extends Lexer {
     public final void mT25() throws RecognitionException {
         try {
             int _type = T25;
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:23:5: ( 'or' )
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:23:7: 'or'
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:23:5: ( 'mitigates' )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:23:7: 'mitigates'
             {
-            match("or"); 
+            match("mitigates"); 
 
 
             }
@@ -301,71 +301,14 @@ public class InternalArgumentLexer extends Lexer {
     }
     // $ANTLR end T25
 
-    // $ANTLR start T26
-    public final void mT26() throws RecognitionException {
-        try {
-            int _type = T26;
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:24:5: ( 'argues' )
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:24:7: 'argues'
-            {
-            match("argues"); 
-
-
-            }
-
-            this.type = _type;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end T26
-
-    // $ANTLR start T27
-    public final void mT27() throws RecognitionException {
-        try {
-            int _type = T27;
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:25:5: ( 'rebutted by' )
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:25:7: 'rebutted by'
-            {
-            match("rebutted by"); 
-
-
-            }
-
-            this.type = _type;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end T27
-
-    // $ANTLR start T28
-    public final void mT28() throws RecognitionException {
-        try {
-            int _type = T28;
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:26:5: ( 'mitigated by' )
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:26:7: 'mitigated by'
-            {
-            match("mitigated by"); 
-
-
-            }
-
-            this.type = _type;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end T28
-
     // $ANTLR start RULE_ID
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:731:9: ( ( '#' (~ ( '#' ) )+ '#' | ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* ) )
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:731:11: ( '#' (~ ( '#' ) )+ '#' | ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:735:9: ( ( '#' (~ ( '#' ) )+ '#' | ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* ) )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:735:11: ( '#' (~ ( '#' ) )+ '#' | ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
             {
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:731:11: ( '#' (~ ( '#' ) )+ '#' | ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:735:11: ( '#' (~ ( '#' ) )+ '#' | ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -377,16 +320,16 @@ public class InternalArgumentLexer extends Lexer {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("731:11: ( '#' (~ ( '#' ) )+ '#' | ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )", 4, 0, input);
+                    new NoViableAltException("735:11: ( '#' (~ ( '#' ) )+ '#' | ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )", 4, 0, input);
 
                 throw nvae;
             }
             switch (alt4) {
                 case 1 :
-                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:731:12: '#' (~ ( '#' ) )+ '#'
+                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:735:12: '#' (~ ( '#' ) )+ '#'
                     {
                     match('#'); 
-                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:731:16: (~ ( '#' ) )+
+                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:735:16: (~ ( '#' ) )+
                     int cnt1=0;
                     loop1:
                     do {
@@ -400,7 +343,7 @@ public class InternalArgumentLexer extends Lexer {
 
                         switch (alt1) {
                     	case 1 :
-                    	    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:731:16: ~ ( '#' )
+                    	    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:735:16: ~ ( '#' )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\"')||(input.LA(1)>='$' && input.LA(1)<='\uFFFE') ) {
                     	        input.consume();
@@ -430,9 +373,9 @@ public class InternalArgumentLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:731:28: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:735:28: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
                     {
-                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:731:28: ( '^' )?
+                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:735:28: ( '^' )?
                     int alt2=2;
                     int LA2_0 = input.LA(1);
 
@@ -441,7 +384,7 @@ public class InternalArgumentLexer extends Lexer {
                     }
                     switch (alt2) {
                         case 1 :
-                            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:731:28: '^'
+                            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:735:28: '^'
                             {
                             match('^'); 
 
@@ -460,7 +403,7 @@ public class InternalArgumentLexer extends Lexer {
                         recover(mse);    throw mse;
                     }
 
-                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:731:57: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:735:57: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
                     loop3:
                     do {
                         int alt3=2;
@@ -514,11 +457,11 @@ public class InternalArgumentLexer extends Lexer {
     public final void mRULE_QUALIFIED_NAME() throws RecognitionException {
         try {
             int _type = RULE_QUALIFIED_NAME;
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:733:21: ( RULE_ID ( '.' RULE_ID )* )
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:733:23: RULE_ID ( '.' RULE_ID )*
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:737:21: ( RULE_ID ( '.' RULE_ID )* )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:737:23: RULE_ID ( '.' RULE_ID )*
             {
             mRULE_ID(); 
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:733:31: ( '.' RULE_ID )*
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:737:31: ( '.' RULE_ID )*
             loop5:
             do {
                 int alt5=2;
@@ -531,7 +474,7 @@ public class InternalArgumentLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:733:32: '.' RULE_ID
+            	    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:737:32: '.' RULE_ID
             	    {
             	    match('.'); 
             	    mRULE_ID(); 
@@ -558,10 +501,10 @@ public class InternalArgumentLexer extends Lexer {
     public final void mRULE_INT() throws RecognitionException {
         try {
             int _type = RULE_INT;
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:735:10: ( ( '0' .. '9' )+ )
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:735:12: ( '0' .. '9' )+
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:739:10: ( ( '0' .. '9' )+ )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:739:12: ( '0' .. '9' )+
             {
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:735:12: ( '0' .. '9' )+
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:739:12: ( '0' .. '9' )+
             int cnt6=0;
             loop6:
             do {
@@ -575,7 +518,7 @@ public class InternalArgumentLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:735:13: '0' .. '9'
+            	    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:739:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -605,10 +548,10 @@ public class InternalArgumentLexer extends Lexer {
     public final void mRULE_STRING() throws RecognitionException {
         try {
             int _type = RULE_STRING;
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:737:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:737:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:741:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:741:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:737:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:741:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -620,16 +563,16 @@ public class InternalArgumentLexer extends Lexer {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("737:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )", 9, 0, input);
+                    new NoViableAltException("741:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )", 9, 0, input);
 
                 throw nvae;
             }
             switch (alt9) {
                 case 1 :
-                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:737:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:741:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:737:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:741:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop7:
                     do {
                         int alt7=3;
@@ -645,7 +588,7 @@ public class InternalArgumentLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:737:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
+                    	    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:741:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
@@ -662,7 +605,7 @@ public class InternalArgumentLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:737:62: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:741:62: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFE') ) {
                     	        input.consume();
@@ -688,10 +631,10 @@ public class InternalArgumentLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:737:82: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:741:82: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:737:87: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:741:87: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop8:
                     do {
                         int alt8=3;
@@ -707,7 +650,7 @@ public class InternalArgumentLexer extends Lexer {
 
                         switch (alt8) {
                     	case 1 :
-                    	    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:737:88: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
+                    	    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:741:88: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
@@ -724,7 +667,7 @@ public class InternalArgumentLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:737:129: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:741:129: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFE') ) {
                     	        input.consume();
@@ -766,12 +709,12 @@ public class InternalArgumentLexer extends Lexer {
     public final void mRULE_ML_COMMENT() throws RecognitionException {
         try {
             int _type = RULE_ML_COMMENT;
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:739:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:739:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:743:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:743:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:739:24: ( options {greedy=false; } : . )*
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:743:24: ( options {greedy=false; } : . )*
             loop10:
             do {
                 int alt10=2;
@@ -796,7 +739,7 @@ public class InternalArgumentLexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:739:52: .
+            	    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:743:52: .
             	    {
             	    matchAny(); 
 
@@ -824,12 +767,12 @@ public class InternalArgumentLexer extends Lexer {
     public final void mRULE_SL_COMMENT() throws RecognitionException {
         try {
             int _type = RULE_SL_COMMENT;
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:741:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:741:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:745:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:745:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:741:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:745:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop11:
             do {
                 int alt11=2;
@@ -842,7 +785,7 @@ public class InternalArgumentLexer extends Lexer {
 
                 switch (alt11) {
             	case 1 :
-            	    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:741:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:745:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFE') ) {
             	        input.consume();
@@ -863,7 +806,7 @@ public class InternalArgumentLexer extends Lexer {
                 }
             } while (true);
 
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:741:40: ( ( '\\r' )? '\\n' )?
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:745:40: ( ( '\\r' )? '\\n' )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -872,9 +815,9 @@ public class InternalArgumentLexer extends Lexer {
             }
             switch (alt13) {
                 case 1 :
-                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:741:41: ( '\\r' )? '\\n'
+                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:745:41: ( '\\r' )? '\\n'
                     {
-                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:741:41: ( '\\r' )?
+                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:745:41: ( '\\r' )?
                     int alt12=2;
                     int LA12_0 = input.LA(1);
 
@@ -883,7 +826,7 @@ public class InternalArgumentLexer extends Lexer {
                     }
                     switch (alt12) {
                         case 1 :
-                            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:741:41: '\\r'
+                            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:745:41: '\\r'
                             {
                             match('\r'); 
 
@@ -913,10 +856,10 @@ public class InternalArgumentLexer extends Lexer {
     public final void mRULE_WS() throws RecognitionException {
         try {
             int _type = RULE_WS;
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:743:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:743:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:747:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:747:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:743:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:747:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt14=0;
             loop14:
             do {
@@ -969,8 +912,8 @@ public class InternalArgumentLexer extends Lexer {
     public final void mRULE_ANY_OTHER() throws RecognitionException {
         try {
             int _type = RULE_ANY_OTHER;
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:745:16: ( . )
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:745:18: .
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:749:16: ( . )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:749:18: .
             {
             matchAny(); 
 
@@ -984,8 +927,8 @@ public class InternalArgumentLexer extends Lexer {
     // $ANTLR end RULE_ANY_OTHER
 
     public void mTokens() throws RecognitionException {
-        // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:1:8: ( T12 | T13 | T14 | T15 | T16 | T17 | T18 | T19 | T20 | T21 | T22 | T23 | T24 | T25 | T26 | T27 | T28 | RULE_ID | RULE_QUALIFIED_NAME | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt15=25;
+        // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:1:8: ( T12 | T13 | T14 | T15 | T16 | T17 | T18 | T19 | T20 | T21 | T22 | T23 | T24 | T25 | RULE_ID | RULE_QUALIFIED_NAME | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt15=22;
         alt15 = dfa15.predict(input);
         switch (alt15) {
             case 1 :
@@ -1087,77 +1030,56 @@ public class InternalArgumentLexer extends Lexer {
                 }
                 break;
             case 15 :
-                // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:1:66: T26
-                {
-                mT26(); 
-
-                }
-                break;
-            case 16 :
-                // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:1:70: T27
-                {
-                mT27(); 
-
-                }
-                break;
-            case 17 :
-                // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:1:74: T28
-                {
-                mT28(); 
-
-                }
-                break;
-            case 18 :
-                // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:1:78: RULE_ID
+                // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:1:66: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 19 :
-                // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:1:86: RULE_QUALIFIED_NAME
+            case 16 :
+                // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:1:74: RULE_QUALIFIED_NAME
                 {
                 mRULE_QUALIFIED_NAME(); 
 
                 }
                 break;
-            case 20 :
-                // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:1:106: RULE_INT
+            case 17 :
+                // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:1:94: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 21 :
-                // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:1:115: RULE_STRING
+            case 18 :
+                // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:1:103: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 22 :
-                // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:1:127: RULE_ML_COMMENT
+            case 19 :
+                // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:1:115: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 23 :
-                // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:1:143: RULE_SL_COMMENT
+            case 20 :
+                // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:1:131: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 24 :
-                // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:1:159: RULE_WS
+            case 21 :
+                // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:1:147: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 25 :
-                // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:1:167: RULE_ANY_OTHER
+            case 22 :
+                // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:1:155: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1171,144 +1093,170 @@ public class InternalArgumentLexer extends Lexer {
 
     protected DFA15 dfa15 = new DFA15(this);
     static final String DFA15_eotS =
-        "\1\uffff\2\33\4\uffff\1\43\1\44\1\45\1\46\1\47\1\50\3\33\2\30\1"+
-        "\33\1\uffff\3\30\2\uffff\2\33\1\uffff\1\33\1\uffff\1\33\12\uffff"+
-        "\1\66\2\33\1\uffff\1\33\5\uffff\1\33\1\73\1\74\1\uffff\4\33\2\uffff"+
-        "\7\33\1\110\3\33\1\uffff\5\33\2\uffff\1\33\1\uffff";
+        "\1\uffff\2\32\1\35\1\uffff\2\32\1\uffff\1\32\2\uffff\1\45\1\46\2"+
+        "\32\2\27\1\32\1\uffff\3\27\2\uffff\2\32\2\uffff\1\32\2\uffff\2\32"+
+        "\1\uffff\1\32\4\uffff\2\32\1\uffff\1\32\5\uffff\1\32\1\71\7\32\1"+
+        "\uffff\6\32\1\106\5\32\1\uffff\2\32\1\116\4\32\1\uffff\5\32\1\uffff"+
+        "\2\32\1\132\3\uffff";
     static final String DFA15_eofS =
-        "\122\uffff";
+        "\133\uffff";
     static final String DFA15_minS =
-        "\1\0\2\56\4\uffff\11\56\1\0\1\101\1\56\1\uffff\2\0\1\52\2\uffff"+
-        "\2\56\1\uffff\1\56\1\uffff\1\56\12\uffff\3\56\1\0\1\56\5\uffff\3"+
-        "\56\1\uffff\4\56\2\uffff\13\56\1\uffff\3\56\1\40\1\56\2\uffff\1"+
-        "\40\1\uffff";
+        "\1\0\3\56\1\uffff\2\56\1\uffff\1\56\2\uffff\4\56\1\0\1\101\1\56"+
+        "\1\uffff\2\0\1\52\2\uffff\2\56\2\uffff\1\56\2\uffff\2\56\1\uffff"+
+        "\1\56\4\uffff\2\56\1\0\1\56\5\uffff\11\56\1\uffff\14\56\1\uffff"+
+        "\7\56\1\uffff\5\56\1\uffff\2\40\1\56\3\uffff";
     static final String DFA15_maxS =
-        "\1\ufffe\2\172\4\uffff\11\172\1\ufffe\2\172\1\uffff\2\ufffe\1\57"+
-        "\2\uffff\2\172\1\uffff\1\172\1\uffff\1\172\12\uffff\3\172\1\ufffe"+
-        "\1\172\5\uffff\3\172\1\uffff\2\172\1\56\1\172\2\uffff\13\172\1\uffff"+
-        "\5\172\2\uffff\1\172\1\uffff";
+        "\1\ufffe\3\172\1\uffff\2\172\1\uffff\1\172\2\uffff\4\172\1\ufffe"+
+        "\2\172\1\uffff\2\ufffe\1\57\2\uffff\2\172\2\uffff\1\172\2\uffff"+
+        "\2\172\1\uffff\1\172\4\uffff\2\172\1\ufffe\1\172\5\uffff\7\172\1"+
+        "\56\1\172\1\uffff\14\172\1\uffff\7\172\1\uffff\5\172\1\uffff\3\172"+
+        "\3\uffff";
     static final String DFA15_acceptS =
-        "\3\uffff\1\3\1\4\1\5\1\6\14\uffff\1\24\3\uffff\1\30\1\31\2\uffff"+
-        "\1\22\1\uffff\1\23\1\uffff\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1"+
-        "\13\1\14\5\uffff\1\24\1\25\1\26\1\27\1\30\3\uffff\1\16\4\uffff\1"+
-        "\15\1\2\13\uffff\1\17\5\uffff\1\1\1\20\1\uffff\1\21";
+        "\4\uffff\1\4\2\uffff\1\7\1\uffff\1\11\1\12\7\uffff\1\21\3\uffff"+
+        "\1\25\1\26\2\uffff\1\17\1\20\1\uffff\1\3\1\4\2\uffff\1\7\1\uffff"+
+        "\1\11\1\12\1\13\1\14\4\uffff\1\21\1\22\1\23\1\24\1\25\11\uffff\1"+
+        "\2\14\uffff\1\5\7\uffff\1\15\5\uffff\1\1\3\uffff\1\6\1\10\1\16";
     static final String DFA15_specialS =
-        "\122\uffff}>";
+        "\133\uffff}>";
     static final String[] DFA15_transitionS = {
-            "\11\30\2\27\2\30\1\27\22\30\1\27\1\30\1\24\1\20\3\30\1\25\1"+
-            "\5\1\6\2\30\1\4\2\30\1\26\12\23\1\3\6\30\1\14\1\22\1\7\3\22"+
-            "\1\11\5\22\1\13\4\22\1\12\4\22\1\10\3\22\3\30\1\21\1\22\1\30"+
-            "\1\1\4\22\1\2\6\22\1\17\1\22\1\15\2\22\1\16\10\22\uff84\30",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\15\34"+
-            "\1\32\3\34\1\31\10\34",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\16\34"+
-            "\1\36\13\34",
+            "\11\27\2\26\2\27\1\26\22\27\1\26\1\27\1\23\1\17\3\27\1\24\4"+
+            "\27\1\7\2\27\1\25\12\22\1\12\6\27\1\3\1\21\1\14\3\21\1\13\23"+
+            "\21\3\27\1\20\1\21\1\27\1\1\1\21\1\5\2\21\1\2\6\21\1\16\4\21"+
+            "\1\15\1\6\3\21\1\10\3\21\1\4\1\27\1\11\uff81\27",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\21\31"+
+            "\1\30\10\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\16\31"+
+            "\1\34\13\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\13\31"+
+            "\1\37\16\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\24\31"+
+            "\1\40\5\31",
+            "",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\1\42"+
+            "\31\31",
+            "",
+            "",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\4\31"+
+            "\1\47\25\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\10\31"+
+            "\1\50\21\31",
+            "\43\51\1\uffff\uffdb\51",
+            "\32\52\4\uffff\1\52\1\uffff\32\52",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "",
+            "\uffff\54",
+            "\uffff\54",
+            "\1\55\4\uffff\1\56",
+            "",
+            "",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\6\31"+
+            "\1\60\23\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "",
+            "",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\21\31"+
+            "\1\61\10\31",
+            "",
+            "",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\1\62"+
+            "\31\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\17\31"+
+            "\1\63\12\31",
+            "",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\21\31"+
+            "\1\64\10\31",
             "",
             "",
             "",
             "",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\21\34"+
-            "\1\51\10\34",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\4\34"+
-            "\1\52\25\34",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\10\34"+
-            "\1\53\21\34",
-            "\43\54\1\uffff\uffdb\54",
-            "\32\55\4\uffff\1\55\1\uffff\32\55",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
-            "",
-            "\uffff\57",
-            "\uffff\57",
-            "\1\60\4\uffff\1\61",
-            "",
-            "",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\6\34"+
-            "\1\63\23\34",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\3\34"+
-            "\1\64\26\34",
-            "",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
-            "",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\21\34"+
-            "\1\65\10\34",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\1\31"+
+            "\1\65\30\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\23\31"+
+            "\1\66\6\31",
+            "\43\51\1\67\uffdb\51",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
             "",
             "",
             "",
             "",
             "",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\24\31"+
+            "\1\70\5\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\10\31"+
+            "\1\72\21\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\17\31"+
+            "\1\73\12\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\21\31"+
+            "\1\74\10\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\24\31"+
+            "\1\75\5\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\10\31"+
+            "\1\76\21\31",
+            "\1\33",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\14\31"+
+            "\1\77\15\31",
+            "",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\14\31"+
+            "\1\100\15\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\16\31"+
+            "\1\101\13\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\1\102"+
+            "\31\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\23\31"+
+            "\1\103\6\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\6\31"+
+            "\1\104\23\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\4\31"+
+            "\1\105\25\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\21\31"+
+            "\1\107\10\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\15\31"+
+            "\1\110\14\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\22\31"+
+            "\1\111\7\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\1\112"+
+            "\31\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\15\31"+
+            "\1\113\14\31",
+            "",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\23\31"+
+            "\1\114\6\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\23\31"+
+            "\1\115\6\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\23\31"+
+            "\1\117\6\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\23\31"+
+            "\1\120\6\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\4\31"+
+            "\1\121\25\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\4\31"+
+            "\1\122\25\31",
+            "",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\4\31"+
+            "\1\123\25\31",
+            "\1\33\1\uffff\12\31\1\124\6\uffff\32\31\4\uffff\1\31\1\uffff"+
+            "\32\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\3\31"+
+            "\1\125\26\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\3\31"+
+            "\1\126\26\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\22\31"+
+            "\1\127\7\31",
+            "",
+            "\1\130\15\uffff\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31"+
+            "\1\uffff\32\31",
+            "\1\131\15\uffff\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31"+
+            "\1\uffff\32\31",
+            "\1\33\1\uffff\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
             "",
             "",
-            "",
-            "",
-            "",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\1\34"+
-            "\1\67\30\34",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\23\34"+
-            "\1\70\6\34",
-            "\43\54\1\71\uffdb\54",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\24\34"+
-            "\1\72\5\34",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
-            "",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\24\34"+
-            "\1\75\5\34",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\10\34"+
-            "\1\76\21\34",
-            "\1\35",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\4\34"+
-            "\1\100\7\34\1\77\15\34",
-            "",
-            "",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\23\34"+
-            "\1\101\6\34",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\6\34"+
-            "\1\102\23\34",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\4\34"+
-            "\1\103\25\34",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\22\34"+
-            "\1\104\7\34",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\23\34"+
-            "\1\105\6\34",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\1\106"+
-            "\31\34",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\15\34"+
-            "\1\107\14\34",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\4\34"+
-            "\1\111\25\34",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\23\34"+
-            "\1\112\6\34",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\23\34"+
-            "\1\113\6\34",
-            "",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\3\34"+
-            "\1\114\26\34",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\4\34"+
-            "\1\115\25\34",
-            "\1\35\1\uffff\12\34\1\116\6\uffff\32\34\4\uffff\1\34\1\uffff"+
-            "\32\34",
-            "\1\117\15\uffff\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34"+
-            "\1\uffff\32\34",
-            "\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\3\34"+
-            "\1\120\26\34",
-            "",
-            "",
-            "\1\121\15\uffff\1\35\1\uffff\12\34\7\uffff\32\34\4\uffff\1\34"+
-            "\1\uffff\32\34",
             ""
     };
 
@@ -1342,7 +1290,7 @@ public class InternalArgumentLexer extends Lexer {
             this.transition = DFA15_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T12 | T13 | T14 | T15 | T16 | T17 | T18 | T19 | T20 | T21 | T22 | T23 | T24 | T25 | T26 | T27 | T28 | RULE_ID | RULE_QUALIFIED_NAME | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T12 | T13 | T14 | T15 | T16 | T17 | T18 | T19 | T20 | T21 | T22 | T23 | T24 | T25 | RULE_ID | RULE_QUALIFIED_NAME | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
     }
  

@@ -253,22 +253,82 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String Node1CreationTool_title;
+	public static String Argument1CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Node1CreationTool_desc;
+	public static String Argument1CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String Link1CreationTool_title;
+	public static String Claim2CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Link1CreationTool_desc;
+	public static String Claim2CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Fact3CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Fact3CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Mitigates1CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Mitigates1CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Rebuts2CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Rebuts2CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String ArgumentArgumentClaimCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ArgumentArgumentGroundsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ArgumentArgumentWarrantsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ArgumentArgumentClaimCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ArgumentArgumentGroundsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ArgumentArgumentWarrantsCompartment2EditPart_title;
 
 	/**
 	 * @generated
@@ -278,17 +338,47 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Node_2001_outgoinglinks;
+	public static String NavigatorGroupName_Mitigates_4002_target;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Link_4001_source;
+	public static String NavigatorGroupName_Mitigates_4002_source;
 
 	/**
 	 * @generated
 	 */
 	public static String NavigatorGroupName_ArgumentDiagram_1000_links;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Rebuts_4001_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Rebuts_4001_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Argument_2001_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Argument_2001_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Argument_3003_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Argument_3003_outgoinglinks;
 
 	/**
 	 * @generated

@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link uk.ac.open.argument.argument.Node#getName <em>Name</em>}</li>
- *   <li>{@link uk.ac.open.argument.argument.Node#getType <em>Type</em>}</li>
  *   <li>{@link uk.ac.open.argument.argument.Node#getDescription <em>Description</em>}</li>
  * </ul>
  * </p>
@@ -52,35 +51,6 @@ public interface Node extends EObject
    * @generated
    */
   void setName(String value);
-
-  /**
-   * Returns the value of the '<em><b>Type</b></em>' attribute.
-   * The literals are from the enumeration {@link uk.ac.open.argument.argument.NodeType}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Type</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Type</em>' attribute.
-   * @see uk.ac.open.argument.argument.NodeType
-   * @see #setType(NodeType)
-   * @see uk.ac.open.argument.argument.ArgumentPackage#getNode_Type()
-   * @model
-   * @generated
-   */
-  NodeType getType();
-
-  /**
-   * Sets the value of the '{@link uk.ac.open.argument.argument.Node#getType <em>Type</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Type</em>' attribute.
-   * @see uk.ac.open.argument.argument.NodeType
-   * @see #getType()
-   * @generated
-   */
-  void setType(NodeType value);
 
   /**
    * Returns the value of the '<em><b>Description</b></em>' attribute.

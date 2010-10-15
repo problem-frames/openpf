@@ -7,7 +7,9 @@ import org.eclipse.gmf.runtime.emf.commands.core.commands.DuplicateEObjectsComma
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest;
 
-import uk.ac.open.argument.argument.diagram.edit.commands.NodeCreateCommand;
+import uk.ac.open.argument.argument.diagram.edit.commands.ArgumentCreateCommand;
+import uk.ac.open.argument.argument.diagram.edit.commands.ClaimCreateCommand;
+import uk.ac.open.argument.argument.diagram.edit.commands.FactCreateCommand;
 import uk.ac.open.argument.argument.diagram.providers.ArgumentElementTypes;
 
 /**
@@ -27,8 +29,14 @@ public class ArgumentDiagramItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (ArgumentElementTypes.Node_2001 == req.getElementType()) {
-			return getGEFWrapper(new NodeCreateCommand(req));
+		if (ArgumentElementTypes.Argument_2001 == req.getElementType()) {
+			return getGEFWrapper(new ArgumentCreateCommand(req));
+		}
+		if (ArgumentElementTypes.Fact_2002 == req.getElementType()) {
+			return getGEFWrapper(new FactCreateCommand(req));
+		}
+		if (ArgumentElementTypes.Claim_2003 == req.getElementType()) {
+			return getGEFWrapper(new ClaimCreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}

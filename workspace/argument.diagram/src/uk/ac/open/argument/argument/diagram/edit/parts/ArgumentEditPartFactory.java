@@ -32,14 +32,65 @@ public class ArgumentEditPartFactory implements EditPartFactory {
 			case ArgumentDiagramEditPart.VISUAL_ID:
 				return new ArgumentDiagramEditPart(view);
 
-			case NodeEditPart.VISUAL_ID:
-				return new NodeEditPart(view);
+			case ArgumentEditPart.VISUAL_ID:
+				return new ArgumentEditPart(view);
 
-			case NodeNameEditPart.VISUAL_ID:
-				return new NodeNameEditPart(view);
+			case ArgumentNameEditPart.VISUAL_ID:
+				return new ArgumentNameEditPart(view);
 
-			case LinkEditPart.VISUAL_ID:
-				return new LinkEditPart(view);
+			case FactEditPart.VISUAL_ID:
+				return new FactEditPart(view);
+
+			case FactNameEditPart.VISUAL_ID:
+				return new FactNameEditPart(view);
+
+			case ClaimEditPart.VISUAL_ID:
+				return new ClaimEditPart(view);
+
+			case ClaimNameEditPart.VISUAL_ID:
+				return new ClaimNameEditPart(view);
+
+			case Claim2EditPart.VISUAL_ID:
+				return new Claim2EditPart(view);
+
+			case ClaimName2EditPart.VISUAL_ID:
+				return new ClaimName2EditPart(view);
+
+			case Fact2EditPart.VISUAL_ID:
+				return new Fact2EditPart(view);
+
+			case FactName2EditPart.VISUAL_ID:
+				return new FactName2EditPart(view);
+
+			case Argument2EditPart.VISUAL_ID:
+				return new Argument2EditPart(view);
+
+			case ArgumentName2EditPart.VISUAL_ID:
+				return new ArgumentName2EditPart(view);
+
+			case ArgumentArgumentClaimCompartmentEditPart.VISUAL_ID:
+				return new ArgumentArgumentClaimCompartmentEditPart(view);
+
+			case ArgumentArgumentGroundsCompartmentEditPart.VISUAL_ID:
+				return new ArgumentArgumentGroundsCompartmentEditPart(view);
+
+			case ArgumentArgumentWarrantsCompartmentEditPart.VISUAL_ID:
+				return new ArgumentArgumentWarrantsCompartmentEditPart(view);
+
+			case ArgumentArgumentClaimCompartment2EditPart.VISUAL_ID:
+				return new ArgumentArgumentClaimCompartment2EditPart(view);
+
+			case ArgumentArgumentGroundsCompartment2EditPart.VISUAL_ID:
+				return new ArgumentArgumentGroundsCompartment2EditPart(view);
+
+			case ArgumentArgumentWarrantsCompartment2EditPart.VISUAL_ID:
+				return new ArgumentArgumentWarrantsCompartment2EditPart(view);
+
+			case RebutsEditPart.VISUAL_ID:
+				return new RebutsEditPart(view);
+
+			case MitigatesEditPart.VISUAL_ID:
+				return new MitigatesEditPart(view);
 
 			}
 		}

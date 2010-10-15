@@ -15,9 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link uk.ac.open.argument.argument.Link#getAfrom <em>Afrom</em>}</li>
- *   <li>{@link uk.ac.open.argument.argument.Link#getLink <em>Link</em>}</li>
- *   <li>{@link uk.ac.open.argument.argument.Link#getToNode1 <em>To Node1</em>}</li>
+ *   <li>{@link uk.ac.open.argument.argument.Link#getFrom <em>From</em>}</li>
+ *   <li>{@link uk.ac.open.argument.argument.Link#getTo <em>To</em>}</li>
  * </ul>
  * </p>
  *
@@ -28,84 +27,55 @@ import org.eclipse.emf.ecore.EObject;
 public interface Link extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Afrom</b></em>' reference.
+   * Returns the value of the '<em><b>From</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Afrom</em>' reference isn't clear,
+   * If the meaning of the '<em>From</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Afrom</em>' reference.
-   * @see #setAfrom(Node)
-   * @see uk.ac.open.argument.argument.ArgumentPackage#getLink_Afrom()
+   * @return the value of the '<em>From</em>' reference.
+   * @see #setFrom(Argument)
+   * @see uk.ac.open.argument.argument.ArgumentPackage#getLink_From()
    * @model
    * @generated
    */
-  Node getAfrom();
+  Argument getFrom();
 
   /**
-   * Sets the value of the '{@link uk.ac.open.argument.argument.Link#getAfrom <em>Afrom</em>}' reference.
+   * Sets the value of the '{@link uk.ac.open.argument.argument.Link#getFrom <em>From</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Afrom</em>' reference.
-   * @see #getAfrom()
+   * @param value the new value of the '<em>From</em>' reference.
+   * @see #getFrom()
    * @generated
    */
-  void setAfrom(Node value);
+  void setFrom(Argument value);
 
   /**
-   * Returns the value of the '<em><b>Link</b></em>' attribute.
-   * The literals are from the enumeration {@link uk.ac.open.argument.argument.LinkType}.
+   * Returns the value of the '<em><b>To</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Link</em>' attribute isn't clear,
+   * If the meaning of the '<em>To</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Link</em>' attribute.
-   * @see uk.ac.open.argument.argument.LinkType
-   * @see #setLink(LinkType)
-   * @see uk.ac.open.argument.argument.ArgumentPackage#getLink_Link()
+   * @return the value of the '<em>To</em>' reference.
+   * @see #setTo(Argument)
+   * @see uk.ac.open.argument.argument.ArgumentPackage#getLink_To()
    * @model
    * @generated
    */
-  LinkType getLink();
+  Argument getTo();
 
   /**
-   * Sets the value of the '{@link uk.ac.open.argument.argument.Link#getLink <em>Link</em>}' attribute.
+   * Sets the value of the '{@link uk.ac.open.argument.argument.Link#getTo <em>To</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Link</em>' attribute.
-   * @see uk.ac.open.argument.argument.LinkType
-   * @see #getLink()
+   * @param value the new value of the '<em>To</em>' reference.
+   * @see #getTo()
    * @generated
    */
-  void setLink(LinkType value);
-
-  /**
-   * Returns the value of the '<em><b>To Node1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>To Node1</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>To Node1</em>' containment reference.
-   * @see #setToNode1(Expression)
-   * @see uk.ac.open.argument.argument.ArgumentPackage#getLink_ToNode1()
-   * @model containment="true"
-   * @generated
-   */
-  Expression getToNode1();
-
-  /**
-   * Sets the value of the '{@link uk.ac.open.argument.argument.Link#getToNode1 <em>To Node1</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>To Node1</em>' containment reference.
-   * @see #getToNode1()
-   * @generated
-   */
-  void setToNode1(Expression value);
+  void setTo(Argument value);
 
 } // Link

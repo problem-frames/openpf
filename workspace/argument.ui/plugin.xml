@@ -6,7 +6,7 @@
     <extension
             point="org.eclipse.ui.editors">
         <editor
-            class="uk.ac.open.argument.ui.ArgumentExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
+            class="uk.ac.open.argument.ui.ArgumentExecutableExtensionFactory:uk.ac.open.argument.ui.ArgumentEditor"
             contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
             default="true"
             extensions="argument"

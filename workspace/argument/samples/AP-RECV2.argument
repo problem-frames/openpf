@@ -10,7 +10,10 @@ R112 R "GPS jammed. (SR2)"
 
 A1 A
 
-A1 argues G1, C1 //(given grounds G1 thus claim C1)
+//(given grounds G1 thus claim C1)
+A1 claims C1 
 
-A1 rebutted by R112 //(A1 is rebutted by R112)
+G1 supports A1
 
+//(A1 is rebutted by R112)
+R112 rebuts A1 

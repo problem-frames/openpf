@@ -44,6 +44,33 @@ public interface ArgumentFactory extends EFactory
   Node createNode();
 
   /**
+   * Returns a new object of class '<em>Argument</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Argument</em>'.
+   * @generated
+   */
+  Argument createArgument();
+
+  /**
+   * Returns a new object of class '<em>Fact</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Fact</em>'.
+   * @generated
+   */
+  Fact createFact();
+
+  /**
+   * Returns a new object of class '<em>Claim</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Claim</em>'.
+   * @generated
+   */
+  Claim createClaim();
+
+  /**
    * Returns a new object of class '<em>Link</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -53,40 +80,22 @@ public interface ArgumentFactory extends EFactory
   Link createLink();
 
   /**
-   * Returns a new object of class '<em>Expression</em>'.
+   * Returns a new object of class '<em>Rebuts</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Expression</em>'.
+   * @return a new object of class '<em>Rebuts</em>'.
    * @generated
    */
-  Expression createExpression();
+  Rebuts createRebuts();
 
   /**
-   * Returns a new object of class '<em>Node Literal</em>'.
+   * Returns a new object of class '<em>Mitigates</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Node Literal</em>'.
+   * @return a new object of class '<em>Mitigates</em>'.
    * @generated
    */
-  NodeLiteral createNodeLiteral();
-
-  /**
-   * Returns a new object of class '<em>Split Commas</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Split Commas</em>'.
-   * @generated
-   */
-  SplitCommas createSplitCommas();
-
-  /**
-   * Returns a new object of class '<em>Split Connective</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Split Connective</em>'.
-   * @generated
-   */
-  SplitConnective createSplitConnective();
+  Mitigates createMitigates();
 
   /**
    * Returns the package supported by this factory.

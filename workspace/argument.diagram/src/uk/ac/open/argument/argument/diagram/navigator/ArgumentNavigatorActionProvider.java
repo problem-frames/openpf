@@ -1,7 +1,5 @@
 package uk.ac.open.argument.argument.diagram.navigator;
 
-import java.util.Iterator;
-
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.emf.common.ui.URIEditorInput;
 import org.eclipse.emf.common.util.URI;
@@ -25,7 +23,6 @@ import org.eclipse.ui.navigator.ICommonViewerWorkbenchSite;
 import org.eclipse.ui.part.FileEditorInput;
 
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDiagramEditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.FreeformLayerEditPart;
 import uk.ac.open.argument.argument.diagram.part.ArgumentDiagramEditor;
 import uk.ac.open.argument.argument.diagram.part.ArgumentDiagramEditorPlugin;
 import uk.ac.open.argument.argument.diagram.part.ArgumentVisualIDRegistry;

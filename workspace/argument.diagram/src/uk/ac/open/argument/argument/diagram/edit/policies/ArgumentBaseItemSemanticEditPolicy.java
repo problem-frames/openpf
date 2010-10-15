@@ -31,10 +31,10 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipReques
 import org.eclipse.gmf.runtime.emf.type.core.requests.SetRequest;
 import org.eclipse.gmf.runtime.notation.View;
 
+import uk.ac.open.argument.argument.Argument;
 import uk.ac.open.argument.argument.ArgumentDiagram;
-import uk.ac.open.argument.argument.Link;
-import uk.ac.open.argument.argument.Node;
-import uk.ac.open.argument.argument.SplitCommas;
+import uk.ac.open.argument.argument.Mitigates;
+import uk.ac.open.argument.argument.Rebuts;
 import uk.ac.open.argument.argument.diagram.edit.helpers.ArgumentBaseEditHelper;
 import uk.ac.open.argument.argument.diagram.part.ArgumentDiagramEditorPlugin;
 import uk.ac.open.argument.argument.diagram.part.ArgumentVisualIDRegistry;
@@ -326,16 +326,32 @@ public class ArgumentBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canCreateLink_4001(ArgumentDiagram container,
-				Node source, SplitCommas target) {
-			return canExistLink_4001(container, null, source, target);
+		public boolean canCreateRebuts_4001(ArgumentDiagram container,
+				Argument source, Argument target) {
+			return canExistRebuts_4001(container, null, source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canExistLink_4001(ArgumentDiagram container,
-				Link linkInstance, Node source, SplitCommas target) {
+		public boolean canCreateMitigates_4002(ArgumentDiagram container,
+				Argument source, Argument target) {
+			return canExistMitigates_4002(container, null, source, target);
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canExistRebuts_4001(ArgumentDiagram container,
+				Rebuts linkInstance, Argument source, Argument target) {
+			return true;
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canExistMitigates_4002(ArgumentDiagram container,
+				Mitigates linkInstance, Argument source, Argument target) {
 			return true;
 		}
 	}

@@ -1,7 +1,5 @@
 package uk.ac.open.argument.argument.diagram.navigator;
 
-import java.util.Iterator;
-
 import org.eclipse.core.resources.IFile;
 import org.eclipse.emf.common.ui.URIEditorInput;
 import org.eclipse.emf.common.util.URI;

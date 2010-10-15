@@ -9,10 +9,7 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Export-Package: uk.ac.open.argument.argument.diagram.edit.parts,
  uk.ac.open.argument.argument.diagram.part,
- uk.ac.open.argument.argument.diagram.providers,
- argument.diagram.edit.parts,
- argument.diagram.part,
- argument.diagram.providers
+ uk.ac.open.argument.argument.diagram.providers
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources,
  org.eclipse.core.expressions,
@@ -35,9 +32,10 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.gmf.runtime.diagram.ui.resources.editor,
  org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide,
  org.eclipse.draw2d;visibility:=reexport,
+ org.eclipse.gmf.runtime.draw2d.ui;visibility:=reexport,
  argument;visibility:=reexport,
  argument.edit;visibility:=reexport,
  org.eclipse.gef;visibility:=reexport,
- org.eclipse.gmf.runtime.draw2d.ui;visibility:=reexport
+ org.eclipse.xtext.gmf.glue;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: J2SE-1.5

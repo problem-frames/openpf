@@ -14,7 +14,15 @@ R111 R "ATC sabotaged - no display. (SR2)"
 
 A1 A
 
-A1 argues G1, C1 //(given grounds G1 thus claim C1)
+//(given grounds G1 thus claim C1)
+A1 claims C1 
 
-A1 rebutted by R19, R110, R111 //(A1 is rebutted by R19, R110, R111)
+G1 supports A1
+
+//(A1 is rebutted by R19, R110, R111)
+R19 rebuts A1
+
+R110 rebuts A1 
+
+R111 rebuts A1 
 

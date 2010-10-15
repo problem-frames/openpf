@@ -51,7 +51,22 @@
       </wizard>
    </extension>
 
-
+   <extension point="org.eclipse.ui.popupMenus" id="init-diagram-action">
+      <?gmfgen generated="true"?>
+      <objectContribution
+            id="argument.diagram.InitDiagram"
+            nameFilter="*.argument"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="%initDiagramActionLabel"
+               class="uk.ac.open.argument.argument.diagram.part.ArgumentInitDiagramFileAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="argument.diagram.InitDiagramAction">
+         </action>
+      </objectContribution>
+   </extension>
+	
    <extension point="org.eclipse.gmf.runtime.common.ui.services.action.globalActionHandlerProviders" id="global-actions">
       <?gmfgen generated="true"?>
       <GlobalActionHandlerProvider
@@ -198,8 +213,8 @@
       <viewProvider class="uk.ac.open.argument.argument.diagram.providers.ArgumentViewProvider">
          <Priority name="Lowest"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Argument"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,2003,3001,3002,3003"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002"/>
       </viewProvider>
    </extension>
 
@@ -211,16 +226,16 @@
             <method name="getType()" value="Argument"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
-            <method name="getType()" value="2001"/>
+            <method name="getType()" value="2001,2002,2003,3001,3002,3003"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
-            <method name="getType()" value="4001"/>
+            <method name="getType()" value="4001,4002"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
-            <method name="getType()" value="5001"/>
+            <method name="getType()" value="5004,5005,5006,5001,5002,5003"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
-            <method name="getType()" value=""/>
+            <method name="getType()" value="7001,7002,7003,7004,7005,7006"/>
          </object>
          <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
       </editpartProvider>
@@ -231,8 +246,10 @@
       <modelingAssistantProvider class="uk.ac.open.argument.argument.diagram.providers.ArgumentModelingAssistantProvider">
          <Priority name="Lowest"/>
          <object class="uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDiagramEditPart" id="ArgumentDiagram_1000"/>
-         <object class="uk.ac.open.argument.argument.diagram.edit.parts.NodeEditPart" id="Node_2001"/>
-         <context elements="ArgumentDiagram_1000,Node_2001"/>
+         <object class="uk.ac.open.argument.argument.diagram.edit.parts.ArgumentEditPart" id="Argument_2001"/>
+         <object class="uk.ac.open.argument.argument.diagram.edit.parts.FactEditPart" id="Fact_2002"/>
+         <object class="uk.ac.open.argument.argument.diagram.edit.parts.ClaimEditPart" id="Claim_2003"/>
+         <context elements="ArgumentDiagram_1000,Argument_2001,Fact_2002,Claim_2003"/>
       </modelingAssistantProvider>
    </extension>
 
@@ -241,6 +258,13 @@
       <IconProvider class="uk.ac.open.argument.argument.diagram.providers.ArgumentIconProvider">
          <Priority name="Low"/>
       </IconProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders" id="parser-provider">
+      <?gmfgen generated="true"?>
+      <ParserProvider class="uk.ac.open.argument.argument.diagram.providers.ArgumentParserProvider">
+         <Priority name="Lowest"/>
+      </ParserProvider>
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes" id="element-types">
@@ -257,22 +281,79 @@
       </metamodel>
       <metamodel nsURI="http://www.ac.uk/open/argument/Argument">
          <metamodelType
-               id="argument.diagram.Node_2001"
-               name="%metatype.name.Node_2001"
+               id="argument.diagram.Argument_2001"
+               name="%metatype.name.Argument_2001"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="Node"
-               edithelper="uk.ac.open.argument.argument.diagram.edit.helpers.NodeEditHelper">
+               eclass="Argument"
+               edithelper="uk.ac.open.argument.argument.diagram.edit.helpers.ArgumentEditHelper">
             <param name="semanticHint" value="2001"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://www.ac.uk/open/argument/Argument">
+         <specializationType
+               id="argument.diagram.Fact_2002"
+               name="%metatype.name.Fact_2002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="argument.diagram.Fact_3002"/>
+            <param name="semanticHint" value="2002"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.ac.uk/open/argument/Argument">
+         <specializationType
+               id="argument.diagram.Claim_2003"
+               name="%metatype.name.Claim_2003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="argument.diagram.Claim_3001"/>
+            <param name="semanticHint" value="2003"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.ac.uk/open/argument/Argument">
          <metamodelType
-               id="argument.diagram.Link_4001"
-               name="%metatype.name.Link_4001"
+               id="argument.diagram.Claim_3001"
+               name="%metatype.name.Claim_3001"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="Link"
-               edithelper="uk.ac.open.argument.argument.diagram.edit.helpers.LinkEditHelper">
+               eclass="Claim"
+               edithelper="uk.ac.open.argument.argument.diagram.edit.helpers.ClaimEditHelper">
+            <param name="semanticHint" value="3001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.ac.uk/open/argument/Argument">
+         <metamodelType
+               id="argument.diagram.Fact_3002"
+               name="%metatype.name.Fact_3002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Fact"
+               edithelper="uk.ac.open.argument.argument.diagram.edit.helpers.FactEditHelper">
+            <param name="semanticHint" value="3002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.ac.uk/open/argument/Argument">
+         <specializationType
+               id="argument.diagram.Argument_3003"
+               name="%metatype.name.Argument_3003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="argument.diagram.Argument_2001"/>
+            <param name="semanticHint" value="3003"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.ac.uk/open/argument/Argument">
+         <metamodelType
+               id="argument.diagram.Rebuts_4001"
+               name="%metatype.name.Rebuts_4001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Rebuts"
+               edithelper="uk.ac.open.argument.argument.diagram.edit.helpers.RebutsEditHelper">
             <param name="semanticHint" value="4001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.ac.uk/open/argument/Argument">
+         <metamodelType
+               id="argument.diagram.Mitigates_4002"
+               name="%metatype.name.Mitigates_4002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Mitigates"
+               edithelper="uk.ac.open.argument.argument.diagram.edit.helpers.MitigatesEditHelper">
+            <param name="semanticHint" value="4002"/>
          </metamodelType>
       </metamodel>
    </extension>
@@ -288,8 +369,14 @@
       </clientContext> 
       <binding context="argument.diagram.TypeContext">
          <elementType ref="argument.diagram.ArgumentDiagram_1000"/>
-         <elementType ref="argument.diagram.Node_2001"/>
-         <elementType ref="argument.diagram.Link_4001"/>
+         <elementType ref="argument.diagram.Argument_2001"/>
+         <elementType ref="argument.diagram.Fact_2002"/>
+         <elementType ref="argument.diagram.Claim_2003"/>
+         <elementType ref="argument.diagram.Claim_3001"/>
+         <elementType ref="argument.diagram.Fact_3002"/>
+         <elementType ref="argument.diagram.Argument_3003"/>
+         <elementType ref="argument.diagram.Rebuts_4001"/>
+         <elementType ref="argument.diagram.Mitigates_4002"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
       </binding>
    </extension>
@@ -457,29 +544,6 @@
    <extension point="org.eclipse.ui.handlers" id="menu-handlers">
       <?gmfgen generated="true"?>
    </extension>
-<extension point="org.eclipse.ui.popupMenus" id="init-diagram-action">
-      <?gmfgen generated="true"?>
-      <objectContribution
-            id="argument.diagram.InitDiagram"
-            nameFilter="*.argument"
-            objectClass="org.eclipse.core.resources.IFile">
-         <action
-               label="%initDiagramActionLabel"
-               class="uk.ac.open.argument.argument.diagram.part.ArgumentInitDiagramFileAction"
-               menubarPath="additions"
-               enablesFor="1"
-               id="argument.diagram.InitDiagramAction">
-         </action>
-      </objectContribution>
-   </extension>
-
-<extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders" id="parser-provider">
-      <?gmfgen generated="true"?>
-      <ParserProvider class="uk.ac.open.argument.argument.diagram.providers.ArgumentParserProvider">
-         <Priority name="Lowest"/>
-      </ParserProvider>
-   </extension>
-
 
    <!-- optionally, specify keybindings -->
 </plugin>

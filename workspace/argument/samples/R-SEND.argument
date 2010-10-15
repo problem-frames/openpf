@@ -14,7 +14,15 @@ R18 R "Machine sabotaged - no send. (SR2)"
 
 A1 A
 
-A1 argues G1, C1 //(given grounds G1 thus claim C1)
+//(given grounds G1 thus claim C1)
+A1 claims C1 
 
-A1 rebutted by R16, R17, R18 //(A1 is rebutted by R16, R17, R18)
+G1 supports A1
+
+//(A1 is rebutted by R16, R17, R18)
+R16 rebuts A1
+
+R17 rebuts A1
+
+R18 rebuts A1
 

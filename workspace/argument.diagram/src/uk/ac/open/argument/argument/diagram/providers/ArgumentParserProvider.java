@@ -14,7 +14,12 @@ import org.eclipse.gmf.runtime.emf.ui.services.parser.ParserHintAdapter;
 import org.eclipse.gmf.runtime.notation.View;
 
 import uk.ac.open.argument.argument.ArgumentPackage;
-import uk.ac.open.argument.argument.diagram.edit.parts.NodeNameEditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentName2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameEditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ClaimName2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ClaimNameEditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.FactName2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.FactNameEditPart;
 import uk.ac.open.argument.argument.diagram.parsers.MessageFormatParser;
 import uk.ac.open.argument.argument.diagram.part.ArgumentVisualIDRegistry;
 
@@ -27,19 +32,109 @@ public class ArgumentParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser nodeName_5001Parser;
+	private IParser argumentName_5004Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getNodeName_5001Parser() {
-		if (nodeName_5001Parser == null) {
+	private IParser getArgumentName_5004Parser() {
+		if (argumentName_5004Parser == null) {
 			EAttribute[] features = new EAttribute[] { ArgumentPackage.eINSTANCE
 					.getNode_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			nodeName_5001Parser = parser;
+			argumentName_5004Parser = parser;
 		}
-		return nodeName_5001Parser;
+		return argumentName_5004Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser factName_5005Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getFactName_5005Parser() {
+		if (factName_5005Parser == null) {
+			EAttribute[] features = new EAttribute[] { ArgumentPackage.eINSTANCE
+					.getNode_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			factName_5005Parser = parser;
+		}
+		return factName_5005Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser claimName_5006Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getClaimName_5006Parser() {
+		if (claimName_5006Parser == null) {
+			EAttribute[] features = new EAttribute[] { ArgumentPackage.eINSTANCE
+					.getNode_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			claimName_5006Parser = parser;
+		}
+		return claimName_5006Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser claimName_5001Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getClaimName_5001Parser() {
+		if (claimName_5001Parser == null) {
+			EAttribute[] features = new EAttribute[] { ArgumentPackage.eINSTANCE
+					.getNode_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			claimName_5001Parser = parser;
+		}
+		return claimName_5001Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser factName_5002Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getFactName_5002Parser() {
+		if (factName_5002Parser == null) {
+			EAttribute[] features = new EAttribute[] { ArgumentPackage.eINSTANCE
+					.getNode_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			factName_5002Parser = parser;
+		}
+		return factName_5002Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser argumentName_5003Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getArgumentName_5003Parser() {
+		if (argumentName_5003Parser == null) {
+			EAttribute[] features = new EAttribute[] { ArgumentPackage.eINSTANCE
+					.getNode_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			argumentName_5003Parser = parser;
+		}
+		return argumentName_5003Parser;
 	}
 
 	/**
@@ -47,8 +142,18 @@ public class ArgumentParserProvider extends AbstractProvider implements
 	 */
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
-		case NodeNameEditPart.VISUAL_ID:
-			return getNodeName_5001Parser();
+		case ArgumentNameEditPart.VISUAL_ID:
+			return getArgumentName_5004Parser();
+		case FactNameEditPart.VISUAL_ID:
+			return getFactName_5005Parser();
+		case ClaimNameEditPart.VISUAL_ID:
+			return getClaimName_5006Parser();
+		case ClaimName2EditPart.VISUAL_ID:
+			return getClaimName_5001Parser();
+		case FactName2EditPart.VISUAL_ID:
+			return getFactName_5002Parser();
+		case ArgumentName2EditPart.VISUAL_ID:
+			return getArgumentName_5003Parser();
 		}
 		return null;
 	}

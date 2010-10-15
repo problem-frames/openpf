@@ -1,7 +1,9 @@
 package uk.ac.open.argument.argument.diagram.part;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
 import org.eclipse.gef.Tool;
 import org.eclipse.gef.palette.PaletteContainer;
 import org.eclipse.gef.palette.PaletteDrawer;
@@ -10,6 +12,7 @@ import org.eclipse.gef.palette.ToolEntry;
 import org.eclipse.gmf.runtime.diagram.ui.tools.UnspecifiedTypeConnectionTool;
 import org.eclipse.gmf.runtime.diagram.ui.tools.UnspecifiedTypeCreationTool;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
+
 import uk.ac.open.argument.argument.diagram.providers.ArgumentElementTypes;
 
 /**
@@ -33,7 +36,9 @@ public class ArgumentPaletteFactory {
 		PaletteDrawer paletteContainer = new PaletteDrawer(
 				Messages.Objects1Group_title);
 		paletteContainer.setId("createObjects1Group"); //$NON-NLS-1$
-		paletteContainer.add(createNode1CreationTool());
+		paletteContainer.add(createArgument1CreationTool());
+		paletteContainer.add(createClaim2CreationTool());
+		paletteContainer.add(createFact3CreationTool());
 		return paletteContainer;
 	}
 
@@ -45,21 +50,24 @@ public class ArgumentPaletteFactory {
 		PaletteDrawer paletteContainer = new PaletteDrawer(
 				Messages.Connections2Group_title);
 		paletteContainer.setId("createConnections2Group"); //$NON-NLS-1$
-		paletteContainer.add(createLink1CreationTool());
+		paletteContainer.add(createMitigates1CreationTool());
+		paletteContainer.add(createRebuts2CreationTool());
 		return paletteContainer;
 	}
 
 	/**
 	 * @generated
 	 */
-	private ToolEntry createNode1CreationTool() {
+	private ToolEntry createArgument1CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(ArgumentElementTypes.Argument_2001);
+		types.add(ArgumentElementTypes.Argument_3003);
 		NodeToolEntry entry = new NodeToolEntry(
-				Messages.Node1CreationTool_title,
-				Messages.Node1CreationTool_desc,
-				Collections.singletonList(ArgumentElementTypes.Node_2001));
-		entry.setId("createNode1CreationTool"); //$NON-NLS-1$
+				Messages.Argument1CreationTool_title,
+				Messages.Argument1CreationTool_desc, types);
+		entry.setId("createArgument1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ArgumentElementTypes
-				.getImageDescriptor(ArgumentElementTypes.Node_2001));
+				.getImageDescriptor(ArgumentElementTypes.Argument_2001));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -67,14 +75,63 @@ public class ArgumentPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createLink1CreationTool() {
-		LinkToolEntry entry = new LinkToolEntry(
-				Messages.Link1CreationTool_title,
-				Messages.Link1CreationTool_desc,
-				Collections.singletonList(ArgumentElementTypes.Link_4001));
-		entry.setId("createLink1CreationTool"); //$NON-NLS-1$
+	private ToolEntry createClaim2CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(ArgumentElementTypes.Claim_3001);
+		types.add(ArgumentElementTypes.Claim_2003);
+		NodeToolEntry entry = new NodeToolEntry(
+				Messages.Claim2CreationTool_title,
+				Messages.Claim2CreationTool_desc, types);
+		entry.setId("createClaim2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ArgumentElementTypes
-				.getImageDescriptor(ArgumentElementTypes.Link_4001));
+				.getImageDescriptor(ArgumentElementTypes.Claim_3001));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createFact3CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(ArgumentElementTypes.Fact_3002);
+		types.add(ArgumentElementTypes.Fact_2002);
+		NodeToolEntry entry = new NodeToolEntry(
+				Messages.Fact3CreationTool_title,
+				Messages.Fact3CreationTool_desc, types);
+		entry.setId("createFact3CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ArgumentElementTypes
+				.getImageDescriptor(ArgumentElementTypes.Fact_3002));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createMitigates1CreationTool() {
+		LinkToolEntry entry = new LinkToolEntry(
+				Messages.Mitigates1CreationTool_title,
+				Messages.Mitigates1CreationTool_desc,
+				Collections.singletonList(ArgumentElementTypes.Mitigates_4002));
+		entry.setId("createMitigates1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ArgumentElementTypes
+				.getImageDescriptor(ArgumentElementTypes.Mitigates_4002));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createRebuts2CreationTool() {
+		LinkToolEntry entry = new LinkToolEntry(
+				Messages.Rebuts2CreationTool_title,
+				Messages.Rebuts2CreationTool_desc,
+				Collections.singletonList(ArgumentElementTypes.Rebuts_4001));
+		entry.setId("createRebuts2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ArgumentElementTypes
+				.getImageDescriptor(ArgumentElementTypes.Rebuts_4001));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -136,5 +193,4 @@ public class ArgumentPaletteFactory {
 			return tool;
 		}
 	}
-
 }
