@@ -1,0 +1,27 @@
+ = An Open Requirements Engineering Tool =
+
+ == User's Manual == 
+
+ * Click at the toolbar button with an icon showing multiple paint frames, 
+   a new project Examples will be created
+   * Open > Generate Example Project
+ * Select a file with ".problem" extension under the Examples project folder
+	* You can also create your own problem frames by either editing a file
+	  with the ".problem" extension, or 
+	* by creating a new diagram using the Problem Diagram editor
+ * Edit:
+	* The syntax highlighting text editor makes sure you are entering a
+	  valid problem diagram textually. If you save the text, a diagram will 
+	  be created
+ 	* Inside the graphical editor, edit the name and description of the domains by clicking and editing
+		* You can also open up the properties editor (right click) to change the domain types
+		* You can edit any node as a subproblem diagram using double click at the node
+ * Save when you are using the text editor
+    * If it is saved from the .problem editor
+	 * The file with ".problem_diagram" extension will be generated for the GMF diagram
+
+ * The subfolder "situation" contains a prototype (minimal graphical) language for the WP3 metamodel
+   in the securechange.eu project.
+   We are improving the presentation of the language so it is easier to use.
+
+ * We are working on integrating i*/OpenOME and SI* once all the tools are in sync with Helios
