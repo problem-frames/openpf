@@ -8,11 +8,11 @@ Node:
 	Argument | Claim | Fact;
 
 Argument: name=ID "A"
-	'{'
+	('{'
 		'claim' claim=Claim
 		('supported by' (','? grounds+=Fact)*)?
 		('warranted by' (','? warrants+=Argument)*)?
-	'}'	
+	'}'	)?
 	":"? description=STRING?
 ;
 

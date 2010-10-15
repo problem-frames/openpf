@@ -287,18 +287,18 @@ ruleArgument returns [EObject current=null]
     {
         createLeafNode(grammarAccess.getArgumentAccess().getAKeyword_1(), null); 
     }
-	'{' 
+(	'{' 
     {
-        createLeafNode(grammarAccess.getArgumentAccess().getLeftCurlyBracketKeyword_2(), null); 
+        createLeafNode(grammarAccess.getArgumentAccess().getLeftCurlyBracketKeyword_2_0(), null); 
     }
 	'claim' 
     {
-        createLeafNode(grammarAccess.getArgumentAccess().getClaimKeyword_3(), null); 
+        createLeafNode(grammarAccess.getArgumentAccess().getClaimKeyword_2_1(), null); 
     }
 (
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getArgumentAccess().getClaimClaimParserRuleCall_4_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getArgumentAccess().getClaimClaimParserRuleCall_2_2_0(), currentNode); 
 	    }
 		lv_claim_4_0=ruleClaim		{
 	        if ($current==null) {
@@ -321,16 +321,16 @@ ruleArgument returns [EObject current=null]
 )
 )(	'supported by' 
     {
-        createLeafNode(grammarAccess.getArgumentAccess().getSupportedByKeyword_5_0(), null); 
+        createLeafNode(grammarAccess.getArgumentAccess().getSupportedByKeyword_2_3_0(), null); 
     }
 ((	',' 
     {
-        createLeafNode(grammarAccess.getArgumentAccess().getCommaKeyword_5_1_0(), null); 
+        createLeafNode(grammarAccess.getArgumentAccess().getCommaKeyword_2_3_1_0(), null); 
     }
 )?(
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getArgumentAccess().getGroundsFactParserRuleCall_5_1_1_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getArgumentAccess().getGroundsFactParserRuleCall_2_3_1_1_0(), currentNode); 
 	    }
 		lv_grounds_7_0=ruleFact		{
 	        if ($current==null) {
@@ -353,16 +353,16 @@ ruleArgument returns [EObject current=null]
 )
 ))*)?(	'warranted by' 
     {
-        createLeafNode(grammarAccess.getArgumentAccess().getWarrantedByKeyword_6_0(), null); 
+        createLeafNode(grammarAccess.getArgumentAccess().getWarrantedByKeyword_2_4_0(), null); 
     }
 ((	',' 
     {
-        createLeafNode(grammarAccess.getArgumentAccess().getCommaKeyword_6_1_0(), null); 
+        createLeafNode(grammarAccess.getArgumentAccess().getCommaKeyword_2_4_1_0(), null); 
     }
 )?(
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getArgumentAccess().getWarrantsArgumentParserRuleCall_6_1_1_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getArgumentAccess().getWarrantsArgumentParserRuleCall_2_4_1_1_0(), currentNode); 
 	    }
 		lv_warrants_10_0=ruleArgument		{
 	        if ($current==null) {
@@ -385,17 +385,17 @@ ruleArgument returns [EObject current=null]
 )
 ))*)?	'}' 
     {
-        createLeafNode(grammarAccess.getArgumentAccess().getRightCurlyBracketKeyword_7(), null); 
+        createLeafNode(grammarAccess.getArgumentAccess().getRightCurlyBracketKeyword_2_5(), null); 
     }
-(	':' 
+)?(	':' 
     {
-        createLeafNode(grammarAccess.getArgumentAccess().getColonKeyword_8(), null); 
+        createLeafNode(grammarAccess.getArgumentAccess().getColonKeyword_3(), null); 
     }
 )?(
 (
 		lv_description_13_0=RULE_STRING
 		{
-			createLeafNode(grammarAccess.getArgumentAccess().getDescriptionSTRINGTerminalRuleCall_9_0(), "description"); 
+			createLeafNode(grammarAccess.getArgumentAccess().getDescriptionSTRINGTerminalRuleCall_4_0(), "description"); 
 		}
 		{
 	        if ($current==null) {

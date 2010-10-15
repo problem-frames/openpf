@@ -55,30 +55,32 @@
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.8"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value="A"/>
-        <elements xsi:type="xtext:Keyword" value="{"/>
-        <elements xsi:type="xtext:Keyword" value="claim"/>
-        <elements xsi:type="xtext:Assignment" feature="claim" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
-        </elements>
         <elements xsi:type="xtext:Group" cardinality="?">
-          <elements xsi:type="xtext:Keyword" value="supported by"/>
-          <elements xsi:type="xtext:Group" cardinality="*">
-            <elements xsi:type="xtext:Keyword" cardinality="?" value=","/>
-            <elements xsi:type="xtext:Assignment" feature="grounds" operator="+=">
-              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
+          <elements xsi:type="xtext:Keyword" value="{"/>
+          <elements xsi:type="xtext:Keyword" value="claim"/>
+          <elements xsi:type="xtext:Assignment" feature="claim" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="?">
+            <elements xsi:type="xtext:Keyword" value="supported by"/>
+            <elements xsi:type="xtext:Group" cardinality="*">
+              <elements xsi:type="xtext:Keyword" cardinality="?" value=","/>
+              <elements xsi:type="xtext:Assignment" feature="grounds" operator="+=">
+                <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
+              </elements>
             </elements>
           </elements>
-        </elements>
-        <elements xsi:type="xtext:Group" cardinality="?">
-          <elements xsi:type="xtext:Keyword" value="warranted by"/>
-          <elements xsi:type="xtext:Group" cardinality="*">
-            <elements xsi:type="xtext:Keyword" cardinality="?" value=","/>
-            <elements xsi:type="xtext:Assignment" feature="warrants" operator="+=">
-              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.2"/>
+          <elements xsi:type="xtext:Group" cardinality="?">
+            <elements xsi:type="xtext:Keyword" value="warranted by"/>
+            <elements xsi:type="xtext:Group" cardinality="*">
+              <elements xsi:type="xtext:Keyword" cardinality="?" value=","/>
+              <elements xsi:type="xtext:Assignment" feature="warrants" operator="+=">
+                <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.2"/>
+              </elements>
             </elements>
           </elements>
+          <elements xsi:type="xtext:Keyword" value="}"/>
         </elements>
-        <elements xsi:type="xtext:Keyword" value="}"/>
         <elements xsi:type="xtext:Keyword" cardinality="?" value=":"/>
         <elements xsi:type="xtext:Assignment" cardinality="?" feature="description" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
