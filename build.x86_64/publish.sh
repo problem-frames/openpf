@@ -1,4 +1,12 @@
+#!/bin/bash
+# see http://wiki.eclipse.org/Equinox/p2/Publisher
 ECLIPSE_HOME=$HOME/IDE/pf-3.6.product/eclipse
+SITEXML=file:/$HOME/build/cruisecontrol-bin-2.8.3/projects/openpf/workspace/problem.update/site.xml 
 BUILT_REPO=$HOME/eclipse.build/update-3.6
+CATEGORYXML=file:/$HOME/build/cruisecontrol-bin-2.8.3/projects/openpf/workspace/problem.update/category.xml 
+
+java -cp $ECLIPSE_HOME/plugins/org.eclipse.equinox.launcher_*.jar org.eclipse.core.launcher.Main -application org.eclipse.equinox.p2.publisher.UpdateSitePublisher -metadataRepository file://home/share/sead/pf/update -artifactRepository file://home/share/sead/pf/update -source $SITEXML -configs cocoa.macosx.x86_64 -configs gtk.linux.x86_64 -compress -publishArtifacts
+
 java -cp $ECLIPSE_HOME/plugins/org.eclipse.equinox.launcher_*.jar org.eclipse.core.launcher.Main -application org.eclipse.equinox.p2.publisher.FeaturesAndBundlesPublisher -metadataRepository file://home/share/sead/pf/update -artifactRepository file://home/share/sead/pf/update -source $BUILD_REPO -configs cocoa.macosx.x86_64 -compress -publishArtifacts
-java -cp $ECLIPSE_HOME/plugins/org.eclipse.equinox.launcher_*.jar org.eclipse.core.launcher.Main -application org.eclipse.equinox.p2.publisher.CategoryPublisher -metadataRepository file://home/share/sead/pf/update -categoryDefinition file:/$HOME/build/cruisecontrol-bin-2.8.3/projects/openpf/workspace/problem.update/category.xml -categoryQualifier -compress
+
+java -cp $ECLIPSE_HOME/plugins/org.eclipse.equinox.launcher_*.jar org.eclipse.core.launcher.Main -application org.eclipse.equinox.p2.publisher.CategoryPublisher -metadataRepository file://home/share/sead/pf/update -categoryDefinition $CATEGORYXML -categoryQualifier -compress
