@@ -1,26 +1,35 @@
 //Fig. 12. Argument for AP!RECV-> AP!XMIT
 //=================================
 argument: AP_RECV
-//(given grounds G1 warranted by W1 thus claim C1) 
-A1 claims C1 
-
-G1 supports C1
-
-W1 warrants C1
 // (A1 is rebutted by R11, R12, R13)
 
 R11 rebuts A1
 
 R12 rebuts A1
 
-R13 rebuts A1 G1 G  "Received GPS positions are accurate (AP!RECV & assumptions)"
+R13 rebuts A1
 
-W1 G "Calculations are accurate (assumption)"
+M1 mitigates R13
 
-C1 C "Airplanes transmit accurate positions (AP!XMIT)"
+//(given grounds G1 warranted by W1 thus claim C1) 
+A1 A {
+	claim C1 C "Airplanes transmit accurate positions (AP!XMIT)"
+	supported by G1 G  "Received GPS positions are accurate (AP!RECV & assumptions)"
+	warranted by W1 A {
+		claim WC1 C "Calculations are accurate (assumption)"
+	}
+}
 
-A1 A R11 G "Airplane's GPS sabotaged. (SR2)"
+R11 A {
+	claim AR11 C "Airplane's GPS sabotaged. (SR2)"
+}
 
-R12 G "ADS-B Transmitter sabotaged. (SR2)"
+R12 A {
+	claim AR12 C "ADS-B Transmitter sabotaged. (SR2)"
+}
 
-R13 G "Aircrew xmits wrong pos/ID. (SR1)"
+R13 A {
+	claim AR13 C "Aircrew xmits wrong pos/ID. (SR1)"
+}
+
+M1 A { claim MC1 C "I like your argument" }
