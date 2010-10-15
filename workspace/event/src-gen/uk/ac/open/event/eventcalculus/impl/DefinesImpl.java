@@ -8,45 +8,54 @@ package uk.ac.open.event.eventcalculus.impl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import uk.ac.open.event.eventcalculus.DeclaredParameter;
+import uk.ac.open.event.eventcalculus.Defines;
 import uk.ac.open.event.eventcalculus.EventcalculusPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Declared Parameter</b></em>'.
+ * An implementation of the model object '<em><b>Defines</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link uk.ac.open.event.eventcalculus.impl.DeclaredParameterImpl#getName <em>Name</em>}</li>
+ *   <li>{@link uk.ac.open.event.eventcalculus.impl.DefinesImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class DeclaredParameterImpl extends ExpressionImpl implements DeclaredParameter
+public class DefinesImpl extends MinimalEObjectImpl.Container implements Defines
 {
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' reference.
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getName()
    * @generated
    * @ordered
    */
-  protected EObject name;
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected DeclaredParameterImpl()
+  protected DefinesImpl()
   {
     super();
   }
@@ -59,7 +68,7 @@ public class DeclaredParameterImpl extends ExpressionImpl implements DeclaredPar
   @Override
   protected EClass eStaticClass()
   {
-    return EventcalculusPackage.Literals.DECLARED_PARAMETER;
+    return EventcalculusPackage.Literals.DEFINES;
   }
 
   /**
@@ -67,27 +76,7 @@ public class DeclaredParameterImpl extends ExpressionImpl implements DeclaredPar
    * <!-- end-user-doc -->
    * @generated
    */
-  public EObject getName()
-  {
-    if (name != null && name.eIsProxy())
-    {
-      InternalEObject oldName = (InternalEObject)name;
-      name = eResolveProxy(oldName);
-      if (name != oldName)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, EventcalculusPackage.DECLARED_PARAMETER__NAME, oldName, name));
-      }
-    }
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EObject basicGetName()
+  public String getName()
   {
     return name;
   }
@@ -97,12 +86,12 @@ public class DeclaredParameterImpl extends ExpressionImpl implements DeclaredPar
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(EObject newName)
+  public void setName(String newName)
   {
-    EObject oldName = name;
+    String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EventcalculusPackage.DECLARED_PARAMETER__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, EventcalculusPackage.DEFINES__NAME, oldName, name));
   }
 
   /**
@@ -115,9 +104,8 @@ public class DeclaredParameterImpl extends ExpressionImpl implements DeclaredPar
   {
     switch (featureID)
     {
-      case EventcalculusPackage.DECLARED_PARAMETER__NAME:
-        if (resolve) return getName();
-        return basicGetName();
+      case EventcalculusPackage.DEFINES__NAME:
+        return getName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -132,8 +120,8 @@ public class DeclaredParameterImpl extends ExpressionImpl implements DeclaredPar
   {
     switch (featureID)
     {
-      case EventcalculusPackage.DECLARED_PARAMETER__NAME:
-        setName((EObject)newValue);
+      case EventcalculusPackage.DEFINES__NAME:
+        setName((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -149,8 +137,8 @@ public class DeclaredParameterImpl extends ExpressionImpl implements DeclaredPar
   {
     switch (featureID)
     {
-      case EventcalculusPackage.DECLARED_PARAMETER__NAME:
-        setName((EObject)null);
+      case EventcalculusPackage.DEFINES__NAME:
+        setName(NAME_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -166,10 +154,27 @@ public class DeclaredParameterImpl extends ExpressionImpl implements DeclaredPar
   {
     switch (featureID)
     {
-      case EventcalculusPackage.DECLARED_PARAMETER__NAME:
-        return name != null;
+      case EventcalculusPackage.DEFINES__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
     }
     return super.eIsSet(featureID);
   }
 
-} //DeclaredParameterImpl
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (name: ");
+    result.append(name);
+    result.append(')');
+    return result.toString();
+  }
+
+} //DefinesImpl

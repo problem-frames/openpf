@@ -88,9 +88,19 @@ public class EventcalculusAdapterFactory extends AdapterFactoryImpl
         return createImportAdapter();
       }
       @Override
+      public Adapter caseAnnotation(Annotation object)
+      {
+        return createAnnotationAdapter();
+      }
+      @Override
       public Adapter caseDeclaration(Declaration object)
       {
         return createDeclarationAdapter();
+      }
+      @Override
+      public Adapter caseDefines(Defines object)
+      {
+        return createDefinesAdapter();
       }
       @Override
       public Adapter caseDefSort(DefSort object)
@@ -133,6 +143,11 @@ public class EventcalculusAdapterFactory extends AdapterFactoryImpl
         return createStatementAdapter();
       }
       @Override
+      public Adapter caseLabeledExpression(LabeledExpression object)
+      {
+        return createLabeledExpressionAdapter();
+      }
+      @Override
       public Adapter caseSortDefinition(SortDefinition object)
       {
         return createSortDefinitionAdapter();
@@ -141,11 +156,6 @@ public class EventcalculusAdapterFactory extends AdapterFactoryImpl
       public Adapter caseDefinition(Definition object)
       {
         return createDefinitionAdapter();
-      }
-      @Override
-      public Adapter caseDeclaredParameter(DeclaredParameter object)
-      {
-        return createDeclaredParameterAdapter();
       }
       @Override
       public Adapter caseExpression(Expression object)
@@ -158,14 +168,9 @@ public class EventcalculusAdapterFactory extends AdapterFactoryImpl
         return createQualifierAdapter();
       }
       @Override
-      public Adapter caseExists(Exists object)
+      public Adapter caseParameters(Parameters object)
       {
-        return createExistsAdapter();
-      }
-      @Override
-      public Adapter caseForall(Forall object)
-      {
-        return createForallAdapter();
+        return createParametersAdapter();
       }
       @Override
       public Adapter caseTerminalExpression(TerminalExpression object)
@@ -325,6 +330,21 @@ public class EventcalculusAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.event.eventcalculus.Annotation <em>Annotation</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.event.eventcalculus.Annotation
+   * @generated
+   */
+  public Adapter createAnnotationAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link uk.ac.open.event.eventcalculus.Declaration <em>Declaration</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -335,6 +355,21 @@ public class EventcalculusAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDeclarationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.event.eventcalculus.Defines <em>Defines</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.event.eventcalculus.Defines
+   * @generated
+   */
+  public Adapter createDefinesAdapter()
   {
     return null;
   }
@@ -460,6 +495,21 @@ public class EventcalculusAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.event.eventcalculus.LabeledExpression <em>Labeled Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.event.eventcalculus.LabeledExpression
+   * @generated
+   */
+  public Adapter createLabeledExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link uk.ac.open.event.eventcalculus.SortDefinition <em>Sort Definition</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -485,21 +535,6 @@ public class EventcalculusAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDefinitionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link uk.ac.open.event.eventcalculus.DeclaredParameter <em>Declared Parameter</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see uk.ac.open.event.eventcalculus.DeclaredParameter
-   * @generated
-   */
-  public Adapter createDeclaredParameterAdapter()
   {
     return null;
   }
@@ -535,31 +570,16 @@ public class EventcalculusAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link uk.ac.open.event.eventcalculus.Exists <em>Exists</em>}'.
+   * Creates a new adapter for an object of class '{@link uk.ac.open.event.eventcalculus.Parameters <em>Parameters</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see uk.ac.open.event.eventcalculus.Exists
+   * @see uk.ac.open.event.eventcalculus.Parameters
    * @generated
    */
-  public Adapter createExistsAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link uk.ac.open.event.eventcalculus.Forall <em>Forall</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see uk.ac.open.event.eventcalculus.Forall
-   * @generated
-   */
-  public Adapter createForallAdapter()
+  public Adapter createParametersAdapter()
   {
     return null;
   }

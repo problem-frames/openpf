@@ -8,30 +8,29 @@ package uk.ac.open.event.eventcalculus.impl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import uk.ac.open.event.eventcalculus.DefCompletion;
-import uk.ac.open.event.eventcalculus.Definition;
+import uk.ac.open.event.eventcalculus.ANNOTATION_TYPE;
+import uk.ac.open.event.eventcalculus.Annotation;
 import uk.ac.open.event.eventcalculus.EventcalculusPackage;
-import uk.ac.open.event.eventcalculus.LabelType;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Def Completion</b></em>'.
+ * An implementation of the model object '<em><b>Annotation</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link uk.ac.open.event.eventcalculus.impl.DefCompletionImpl#getType <em>Type</em>}</li>
- *   <li>{@link uk.ac.open.event.eventcalculus.impl.DefCompletionImpl#getLabel <em>Label</em>}</li>
+ *   <li>{@link uk.ac.open.event.eventcalculus.impl.AnnotationImpl#getType <em>Type</em>}</li>
+ *   <li>{@link uk.ac.open.event.eventcalculus.impl.AnnotationImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class DefCompletionImpl extends DeclarationImpl implements DefCompletion
+public class AnnotationImpl extends MinimalEObjectImpl.Container implements Annotation
 {
   /**
    * The default value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -41,7 +40,7 @@ public class DefCompletionImpl extends DeclarationImpl implements DefCompletion
    * @generated
    * @ordered
    */
-  protected static final LabelType TYPE_EDEFAULT = LabelType.T;
+  protected static final ANNOTATION_TYPE TYPE_EDEFAULT = ANNOTATION_TYPE.G;
 
   /**
    * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -51,24 +50,34 @@ public class DefCompletionImpl extends DeclarationImpl implements DefCompletion
    * @generated
    * @ordered
    */
-  protected LabelType type = TYPE_EDEFAULT;
+  protected ANNOTATION_TYPE type = TYPE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getLabel() <em>Label</em>}' reference.
+   * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getLabel()
+   * @see #getValue()
    * @generated
    * @ordered
    */
-  protected Definition label;
+  protected static final String VALUE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getValue()
+   * @generated
+   * @ordered
+   */
+  protected String value = VALUE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected DefCompletionImpl()
+  protected AnnotationImpl()
   {
     super();
   }
@@ -81,7 +90,7 @@ public class DefCompletionImpl extends DeclarationImpl implements DefCompletion
   @Override
   protected EClass eStaticClass()
   {
-    return EventcalculusPackage.Literals.DEF_COMPLETION;
+    return EventcalculusPackage.Literals.ANNOTATION;
   }
 
   /**
@@ -89,7 +98,7 @@ public class DefCompletionImpl extends DeclarationImpl implements DefCompletion
    * <!-- end-user-doc -->
    * @generated
    */
-  public LabelType getType()
+  public ANNOTATION_TYPE getType()
   {
     return type;
   }
@@ -99,12 +108,12 @@ public class DefCompletionImpl extends DeclarationImpl implements DefCompletion
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setType(LabelType newType)
+  public void setType(ANNOTATION_TYPE newType)
   {
-    LabelType oldType = type;
+    ANNOTATION_TYPE oldType = type;
     type = newType == null ? TYPE_EDEFAULT : newType;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EventcalculusPackage.DEF_COMPLETION__TYPE, oldType, type));
+      eNotify(new ENotificationImpl(this, Notification.SET, EventcalculusPackage.ANNOTATION__TYPE, oldType, type));
   }
 
   /**
@@ -112,19 +121,9 @@ public class DefCompletionImpl extends DeclarationImpl implements DefCompletion
    * <!-- end-user-doc -->
    * @generated
    */
-  public Definition getLabel()
+  public String getValue()
   {
-    if (label != null && label.eIsProxy())
-    {
-      InternalEObject oldLabel = (InternalEObject)label;
-      label = (Definition)eResolveProxy(oldLabel);
-      if (label != oldLabel)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, EventcalculusPackage.DEF_COMPLETION__LABEL, oldLabel, label));
-      }
-    }
-    return label;
+    return value;
   }
 
   /**
@@ -132,22 +131,12 @@ public class DefCompletionImpl extends DeclarationImpl implements DefCompletion
    * <!-- end-user-doc -->
    * @generated
    */
-  public Definition basicGetLabel()
+  public void setValue(String newValue)
   {
-    return label;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setLabel(Definition newLabel)
-  {
-    Definition oldLabel = label;
-    label = newLabel;
+    String oldValue = value;
+    value = newValue;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EventcalculusPackage.DEF_COMPLETION__LABEL, oldLabel, label));
+      eNotify(new ENotificationImpl(this, Notification.SET, EventcalculusPackage.ANNOTATION__VALUE, oldValue, value));
   }
 
   /**
@@ -160,11 +149,10 @@ public class DefCompletionImpl extends DeclarationImpl implements DefCompletion
   {
     switch (featureID)
     {
-      case EventcalculusPackage.DEF_COMPLETION__TYPE:
+      case EventcalculusPackage.ANNOTATION__TYPE:
         return getType();
-      case EventcalculusPackage.DEF_COMPLETION__LABEL:
-        if (resolve) return getLabel();
-        return basicGetLabel();
+      case EventcalculusPackage.ANNOTATION__VALUE:
+        return getValue();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -179,11 +167,11 @@ public class DefCompletionImpl extends DeclarationImpl implements DefCompletion
   {
     switch (featureID)
     {
-      case EventcalculusPackage.DEF_COMPLETION__TYPE:
-        setType((LabelType)newValue);
+      case EventcalculusPackage.ANNOTATION__TYPE:
+        setType((ANNOTATION_TYPE)newValue);
         return;
-      case EventcalculusPackage.DEF_COMPLETION__LABEL:
-        setLabel((Definition)newValue);
+      case EventcalculusPackage.ANNOTATION__VALUE:
+        setValue((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -199,11 +187,11 @@ public class DefCompletionImpl extends DeclarationImpl implements DefCompletion
   {
     switch (featureID)
     {
-      case EventcalculusPackage.DEF_COMPLETION__TYPE:
+      case EventcalculusPackage.ANNOTATION__TYPE:
         setType(TYPE_EDEFAULT);
         return;
-      case EventcalculusPackage.DEF_COMPLETION__LABEL:
-        setLabel((Definition)null);
+      case EventcalculusPackage.ANNOTATION__VALUE:
+        setValue(VALUE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -219,10 +207,10 @@ public class DefCompletionImpl extends DeclarationImpl implements DefCompletion
   {
     switch (featureID)
     {
-      case EventcalculusPackage.DEF_COMPLETION__TYPE:
+      case EventcalculusPackage.ANNOTATION__TYPE:
         return type != TYPE_EDEFAULT;
-      case EventcalculusPackage.DEF_COMPLETION__LABEL:
-        return label != null;
+      case EventcalculusPackage.ANNOTATION__VALUE:
+        return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
     }
     return super.eIsSet(featureID);
   }
@@ -240,8 +228,10 @@ public class DefCompletionImpl extends DeclarationImpl implements DefCompletion
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (type: ");
     result.append(type);
+    result.append(", value: ");
+    result.append(value);
     result.append(')');
     return result.toString();
   }
 
-} //DefCompletionImpl
+} //AnnotationImpl

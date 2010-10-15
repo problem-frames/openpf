@@ -35,12 +35,12 @@ public interface FunctionRef extends Expression
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Func</em>' containment reference.
-   * @see #setFunc(DeclaredParameter)
+   * @see #setFunc(Expression)
    * @see uk.ac.open.event.eventcalculus.EventcalculusPackage#getFunctionRef_Func()
    * @model containment="true"
    * @generated
    */
-  DeclaredParameter getFunc();
+  Expression getFunc();
 
   /**
    * Sets the value of the '{@link uk.ac.open.event.eventcalculus.FunctionRef#getFunc <em>Func</em>}' containment reference.
@@ -50,7 +50,7 @@ public interface FunctionRef extends Expression
    * @see #getFunc()
    * @generated
    */
-  void setFunc(DeclaredParameter value);
+  void setFunc(Expression value);
 
   /**
    * Returns the value of the '<em><b>Args</b></em>' containment reference list.

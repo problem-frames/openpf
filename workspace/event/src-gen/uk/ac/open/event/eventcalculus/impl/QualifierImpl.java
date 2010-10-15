@@ -5,23 +5,19 @@
  */
 package uk.ac.open.event.eventcalculus.impl;
 
-import java.util.Collection;
-
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
-import uk.ac.open.event.eventcalculus.DeclaredParameter;
 import uk.ac.open.event.eventcalculus.EventcalculusPackage;
+import uk.ac.open.event.eventcalculus.Parameters;
 import uk.ac.open.event.eventcalculus.Qualifier;
+import uk.ac.open.event.eventcalculus.UnaryOp;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +26,8 @@ import uk.ac.open.event.eventcalculus.Qualifier;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link uk.ac.open.event.eventcalculus.impl.QualifierImpl#getNames <em>Names</em>}</li>
+ *   <li>{@link uk.ac.open.event.eventcalculus.impl.QualifierImpl#getOp <em>Op</em>}</li>
+ *   <li>{@link uk.ac.open.event.eventcalculus.impl.QualifierImpl#getParameters <em>Parameters</em>}</li>
  * </ul>
  * </p>
  *
@@ -39,14 +36,34 @@ import uk.ac.open.event.eventcalculus.Qualifier;
 public class QualifierImpl extends MinimalEObjectImpl.Container implements Qualifier
 {
   /**
-   * The cached value of the '{@link #getNames() <em>Names</em>}' containment reference list.
+   * The default value of the '{@link #getOp() <em>Op</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNames()
+   * @see #getOp()
    * @generated
    * @ordered
    */
-  protected EList<DeclaredParameter> names;
+  protected static final UnaryOp OP_EDEFAULT = UnaryOp.NOT;
+
+  /**
+   * The cached value of the '{@link #getOp() <em>Op</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getOp()
+   * @generated
+   * @ordered
+   */
+  protected UnaryOp op = OP_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getParameters() <em>Parameters</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getParameters()
+   * @generated
+   * @ordered
+   */
+  protected Parameters parameters;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,13 +91,70 @@ public class QualifierImpl extends MinimalEObjectImpl.Container implements Quali
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<DeclaredParameter> getNames()
+  public UnaryOp getOp()
   {
-    if (names == null)
+    return op;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setOp(UnaryOp newOp)
+  {
+    UnaryOp oldOp = op;
+    op = newOp == null ? OP_EDEFAULT : newOp;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EventcalculusPackage.QUALIFIER__OP, oldOp, op));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Parameters getParameters()
+  {
+    return parameters;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetParameters(Parameters newParameters, NotificationChain msgs)
+  {
+    Parameters oldParameters = parameters;
+    parameters = newParameters;
+    if (eNotificationRequired())
     {
-      names = new EObjectContainmentEList<DeclaredParameter>(DeclaredParameter.class, this, EventcalculusPackage.QUALIFIER__NAMES);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EventcalculusPackage.QUALIFIER__PARAMETERS, oldParameters, newParameters);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
     }
-    return names;
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setParameters(Parameters newParameters)
+  {
+    if (newParameters != parameters)
+    {
+      NotificationChain msgs = null;
+      if (parameters != null)
+        msgs = ((InternalEObject)parameters).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EventcalculusPackage.QUALIFIER__PARAMETERS, null, msgs);
+      if (newParameters != null)
+        msgs = ((InternalEObject)newParameters).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EventcalculusPackage.QUALIFIER__PARAMETERS, null, msgs);
+      msgs = basicSetParameters(newParameters, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EventcalculusPackage.QUALIFIER__PARAMETERS, newParameters, newParameters));
   }
 
   /**
@@ -93,8 +167,8 @@ public class QualifierImpl extends MinimalEObjectImpl.Container implements Quali
   {
     switch (featureID)
     {
-      case EventcalculusPackage.QUALIFIER__NAMES:
-        return ((InternalEList<?>)getNames()).basicRemove(otherEnd, msgs);
+      case EventcalculusPackage.QUALIFIER__PARAMETERS:
+        return basicSetParameters(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -109,8 +183,10 @@ public class QualifierImpl extends MinimalEObjectImpl.Container implements Quali
   {
     switch (featureID)
     {
-      case EventcalculusPackage.QUALIFIER__NAMES:
-        return getNames();
+      case EventcalculusPackage.QUALIFIER__OP:
+        return getOp();
+      case EventcalculusPackage.QUALIFIER__PARAMETERS:
+        return getParameters();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -120,15 +196,16 @@ public class QualifierImpl extends MinimalEObjectImpl.Container implements Quali
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case EventcalculusPackage.QUALIFIER__NAMES:
-        getNames().clear();
-        getNames().addAll((Collection<? extends DeclaredParameter>)newValue);
+      case EventcalculusPackage.QUALIFIER__OP:
+        setOp((UnaryOp)newValue);
+        return;
+      case EventcalculusPackage.QUALIFIER__PARAMETERS:
+        setParameters((Parameters)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -144,8 +221,11 @@ public class QualifierImpl extends MinimalEObjectImpl.Container implements Quali
   {
     switch (featureID)
     {
-      case EventcalculusPackage.QUALIFIER__NAMES:
-        getNames().clear();
+      case EventcalculusPackage.QUALIFIER__OP:
+        setOp(OP_EDEFAULT);
+        return;
+      case EventcalculusPackage.QUALIFIER__PARAMETERS:
+        setParameters((Parameters)null);
         return;
     }
     super.eUnset(featureID);
@@ -161,10 +241,29 @@ public class QualifierImpl extends MinimalEObjectImpl.Container implements Quali
   {
     switch (featureID)
     {
-      case EventcalculusPackage.QUALIFIER__NAMES:
-        return names != null && !names.isEmpty();
+      case EventcalculusPackage.QUALIFIER__OP:
+        return op != OP_EDEFAULT;
+      case EventcalculusPackage.QUALIFIER__PARAMETERS:
+        return parameters != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (op: ");
+    result.append(op);
+    result.append(')');
+    return result.toString();
   }
 
 } //QualifierImpl

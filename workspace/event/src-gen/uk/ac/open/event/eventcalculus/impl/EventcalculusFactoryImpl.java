@@ -70,7 +70,9 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
     {
       case EventcalculusPackage.MODEL: return createModel();
       case EventcalculusPackage.IMPORT: return createImport();
+      case EventcalculusPackage.ANNOTATION: return createAnnotation();
       case EventcalculusPackage.DECLARATION: return createDeclaration();
+      case EventcalculusPackage.DEFINES: return createDefines();
       case EventcalculusPackage.DEF_SORT: return createDefSort();
       case EventcalculusPackage.DEF_RANGE: return createDefRange();
       case EventcalculusPackage.DEF_OPTION: return createDefOption();
@@ -79,13 +81,12 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
       case EventcalculusPackage.DEF_XOR: return createDefXor();
       case EventcalculusPackage.DEF_MUTEX: return createDefMutex();
       case EventcalculusPackage.STATEMENT: return createStatement();
+      case EventcalculusPackage.LABELED_EXPRESSION: return createLabeledExpression();
       case EventcalculusPackage.SORT_DEFINITION: return createSortDefinition();
       case EventcalculusPackage.DEFINITION: return createDefinition();
-      case EventcalculusPackage.DECLARED_PARAMETER: return createDeclaredParameter();
       case EventcalculusPackage.EXPRESSION: return createExpression();
       case EventcalculusPackage.QUALIFIER: return createQualifier();
-      case EventcalculusPackage.EXISTS: return createExists();
-      case EventcalculusPackage.FORALL: return createForall();
+      case EventcalculusPackage.PARAMETERS: return createParameters();
       case EventcalculusPackage.TERMINAL_EXPRESSION: return createTerminalExpression();
       case EventcalculusPackage.ASSIGN_PLUS: return createAssignPlus();
       case EventcalculusPackage.ASSIGN_MIN: return createAssignMin();
@@ -122,8 +123,12 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
   {
     switch (eDataType.getClassifierID())
     {
-      case EventcalculusPackage.UNAR_OP:
-        return createUnarOpFromString(eDataType, initialValue);
+      case EventcalculusPackage.ANNOTATION_TYPE:
+        return createANNOTATION_TYPEFromString(eDataType, initialValue);
+      case EventcalculusPackage.LABEL_TYPE:
+        return createLabelTypeFromString(eDataType, initialValue);
+      case EventcalculusPackage.UNARY_OP:
+        return createUnaryOpFromString(eDataType, initialValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -139,8 +144,12 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
   {
     switch (eDataType.getClassifierID())
     {
-      case EventcalculusPackage.UNAR_OP:
-        return convertUnarOpToString(eDataType, instanceValue);
+      case EventcalculusPackage.ANNOTATION_TYPE:
+        return convertANNOTATION_TYPEToString(eDataType, instanceValue);
+      case EventcalculusPackage.LABEL_TYPE:
+        return convertLabelTypeToString(eDataType, instanceValue);
+      case EventcalculusPackage.UNARY_OP:
+        return convertUnaryOpToString(eDataType, instanceValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -173,10 +182,32 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  public Annotation createAnnotation()
+  {
+    AnnotationImpl annotation = new AnnotationImpl();
+    return annotation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Declaration createDeclaration()
   {
     DeclarationImpl declaration = new DeclarationImpl();
     return declaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Defines createDefines()
+  {
+    DefinesImpl defines = new DefinesImpl();
+    return defines;
   }
 
   /**
@@ -272,6 +303,17 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  public LabeledExpression createLabeledExpression()
+  {
+    LabeledExpressionImpl labeledExpression = new LabeledExpressionImpl();
+    return labeledExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public SortDefinition createSortDefinition()
   {
     SortDefinitionImpl sortDefinition = new SortDefinitionImpl();
@@ -287,17 +329,6 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
   {
     DefinitionImpl definition = new DefinitionImpl();
     return definition;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public DeclaredParameter createDeclaredParameter()
-  {
-    DeclaredParameterImpl declaredParameter = new DeclaredParameterImpl();
-    return declaredParameter;
   }
 
   /**
@@ -327,21 +358,10 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
-  public Exists createExists()
+  public Parameters createParameters()
   {
-    ExistsImpl exists = new ExistsImpl();
-    return exists;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Forall createForall()
-  {
-    ForallImpl forall = new ForallImpl();
-    return forall;
+    ParametersImpl parameters = new ParametersImpl();
+    return parameters;
   }
 
   /**
@@ -580,9 +600,9 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
-  public UnarOp createUnarOpFromString(EDataType eDataType, String initialValue)
+  public ANNOTATION_TYPE createANNOTATION_TYPEFromString(EDataType eDataType, String initialValue)
   {
-    UnarOp result = UnarOp.get(initialValue);
+    ANNOTATION_TYPE result = ANNOTATION_TYPE.get(initialValue);
     if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
     return result;
   }
@@ -592,7 +612,51 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertUnarOpToString(EDataType eDataType, Object instanceValue)
+  public String convertANNOTATION_TYPEToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LabelType createLabelTypeFromString(EDataType eDataType, String initialValue)
+  {
+    LabelType result = LabelType.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertLabelTypeToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public UnaryOp createUnaryOpFromString(EDataType eDataType, String initialValue)
+  {
+    UnaryOp result = UnaryOp.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertUnaryOpToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }

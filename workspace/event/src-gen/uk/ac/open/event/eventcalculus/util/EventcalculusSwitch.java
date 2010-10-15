@@ -109,10 +109,24 @@ public class EventcalculusSwitch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case EventcalculusPackage.ANNOTATION:
+      {
+        Annotation annotation = (Annotation)theEObject;
+        T result = caseAnnotation(annotation);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case EventcalculusPackage.DECLARATION:
       {
         Declaration declaration = (Declaration)theEObject;
         T result = caseDeclaration(declaration);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EventcalculusPackage.DEFINES:
+      {
+        Defines defines = (Defines)theEObject;
+        T result = caseDefines(defines);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -121,6 +135,7 @@ public class EventcalculusSwitch<T>
         DefSort defSort = (DefSort)theEObject;
         T result = caseDefSort(defSort);
         if (result == null) result = caseDeclaration(defSort);
+        if (result == null) result = caseDefines(defSort);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -179,6 +194,14 @@ public class EventcalculusSwitch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case EventcalculusPackage.LABELED_EXPRESSION:
+      {
+        LabeledExpression labeledExpression = (LabeledExpression)theEObject;
+        T result = caseLabeledExpression(labeledExpression);
+        if (result == null) result = caseStatement(labeledExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case EventcalculusPackage.SORT_DEFINITION:
       {
         SortDefinition sortDefinition = (SortDefinition)theEObject;
@@ -191,15 +214,7 @@ public class EventcalculusSwitch<T>
       {
         Definition definition = (Definition)theEObject;
         T result = caseDefinition(definition);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EventcalculusPackage.DECLARED_PARAMETER:
-      {
-        DeclaredParameter declaredParameter = (DeclaredParameter)theEObject;
-        T result = caseDeclaredParameter(declaredParameter);
-        if (result == null) result = caseExpression(declaredParameter);
-        if (result == null) result = caseStatement(declaredParameter);
+        if (result == null) result = caseDefines(definition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -207,7 +222,6 @@ public class EventcalculusSwitch<T>
       {
         Expression expression = (Expression)theEObject;
         T result = caseExpression(expression);
-        if (result == null) result = caseStatement(expression);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -218,19 +232,10 @@ public class EventcalculusSwitch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EventcalculusPackage.EXISTS:
+      case EventcalculusPackage.PARAMETERS:
       {
-        Exists exists = (Exists)theEObject;
-        T result = caseExists(exists);
-        if (result == null) result = caseQualifier(exists);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EventcalculusPackage.FORALL:
-      {
-        Forall forall = (Forall)theEObject;
-        T result = caseForall(forall);
-        if (result == null) result = caseQualifier(forall);
+        Parameters parameters = (Parameters)theEObject;
+        T result = caseParameters(parameters);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -239,7 +244,6 @@ public class EventcalculusSwitch<T>
         TerminalExpression terminalExpression = (TerminalExpression)theEObject;
         T result = caseTerminalExpression(terminalExpression);
         if (result == null) result = caseExpression(terminalExpression);
-        if (result == null) result = caseStatement(terminalExpression);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -248,7 +252,6 @@ public class EventcalculusSwitch<T>
         AssignPlus assignPlus = (AssignPlus)theEObject;
         T result = caseAssignPlus(assignPlus);
         if (result == null) result = caseExpression(assignPlus);
-        if (result == null) result = caseStatement(assignPlus);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -257,7 +260,6 @@ public class EventcalculusSwitch<T>
         AssignMin assignMin = (AssignMin)theEObject;
         T result = caseAssignMin(assignMin);
         if (result == null) result = caseExpression(assignMin);
-        if (result == null) result = caseStatement(assignMin);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -266,7 +268,6 @@ public class EventcalculusSwitch<T>
         Or or = (Or)theEObject;
         T result = caseOr(or);
         if (result == null) result = caseExpression(or);
-        if (result == null) result = caseStatement(or);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -275,7 +276,6 @@ public class EventcalculusSwitch<T>
         And and = (And)theEObject;
         T result = caseAnd(and);
         if (result == null) result = caseExpression(and);
-        if (result == null) result = caseStatement(and);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -284,7 +284,6 @@ public class EventcalculusSwitch<T>
         RelNotEq relNotEq = (RelNotEq)theEObject;
         T result = caseRelNotEq(relNotEq);
         if (result == null) result = caseExpression(relNotEq);
-        if (result == null) result = caseStatement(relNotEq);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -293,7 +292,6 @@ public class EventcalculusSwitch<T>
         RelEqEq relEqEq = (RelEqEq)theEObject;
         T result = caseRelEqEq(relEqEq);
         if (result == null) result = caseExpression(relEqEq);
-        if (result == null) result = caseStatement(relEqEq);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -302,7 +300,6 @@ public class EventcalculusSwitch<T>
         RelLtEq relLtEq = (RelLtEq)theEObject;
         T result = caseRelLtEq(relLtEq);
         if (result == null) result = caseExpression(relLtEq);
-        if (result == null) result = caseStatement(relLtEq);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -311,7 +308,6 @@ public class EventcalculusSwitch<T>
         RelGtEq relGtEq = (RelGtEq)theEObject;
         T result = caseRelGtEq(relGtEq);
         if (result == null) result = caseExpression(relGtEq);
-        if (result == null) result = caseStatement(relGtEq);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -320,7 +316,6 @@ public class EventcalculusSwitch<T>
         RelEq relEq = (RelEq)theEObject;
         T result = caseRelEq(relEq);
         if (result == null) result = caseExpression(relEq);
-        if (result == null) result = caseStatement(relEq);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -329,7 +324,6 @@ public class EventcalculusSwitch<T>
         RelLt relLt = (RelLt)theEObject;
         T result = caseRelLt(relLt);
         if (result == null) result = caseExpression(relLt);
-        if (result == null) result = caseStatement(relLt);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -338,7 +332,6 @@ public class EventcalculusSwitch<T>
         RelGt relGt = (RelGt)theEObject;
         T result = caseRelGt(relGt);
         if (result == null) result = caseExpression(relGt);
-        if (result == null) result = caseStatement(relGt);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -347,7 +340,6 @@ public class EventcalculusSwitch<T>
         Plus plus = (Plus)theEObject;
         T result = casePlus(plus);
         if (result == null) result = caseExpression(plus);
-        if (result == null) result = caseStatement(plus);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -356,7 +348,6 @@ public class EventcalculusSwitch<T>
         Minus minus = (Minus)theEObject;
         T result = caseMinus(minus);
         if (result == null) result = caseExpression(minus);
-        if (result == null) result = caseStatement(minus);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -365,7 +356,6 @@ public class EventcalculusSwitch<T>
         Multi multi = (Multi)theEObject;
         T result = caseMulti(multi);
         if (result == null) result = caseExpression(multi);
-        if (result == null) result = caseStatement(multi);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -374,7 +364,6 @@ public class EventcalculusSwitch<T>
         Div div = (Div)theEObject;
         T result = caseDiv(div);
         if (result == null) result = caseExpression(div);
-        if (result == null) result = caseStatement(div);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -383,7 +372,6 @@ public class EventcalculusSwitch<T>
         Pow pow = (Pow)theEObject;
         T result = casePow(pow);
         if (result == null) result = caseExpression(pow);
-        if (result == null) result = caseStatement(pow);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -392,7 +380,6 @@ public class EventcalculusSwitch<T>
         FunctionRef functionRef = (FunctionRef)theEObject;
         T result = caseFunctionRef(functionRef);
         if (result == null) result = caseExpression(functionRef);
-        if (result == null) result = caseStatement(functionRef);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -402,7 +389,6 @@ public class EventcalculusSwitch<T>
         T result = caseIntLiteral(intLiteral);
         if (result == null) result = caseTerminalExpression(intLiteral);
         if (result == null) result = caseExpression(intLiteral);
-        if (result == null) result = caseStatement(intLiteral);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -412,7 +398,6 @@ public class EventcalculusSwitch<T>
         T result = caseStringLiteral(stringLiteral);
         if (result == null) result = caseTerminalExpression(stringLiteral);
         if (result == null) result = caseExpression(stringLiteral);
-        if (result == null) result = caseStatement(stringLiteral);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -422,7 +407,6 @@ public class EventcalculusSwitch<T>
         T result = caseBooleanLiteral(booleanLiteral);
         if (result == null) result = caseTerminalExpression(booleanLiteral);
         if (result == null) result = caseExpression(booleanLiteral);
-        if (result == null) result = caseStatement(booleanLiteral);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -463,6 +447,22 @@ public class EventcalculusSwitch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Annotation</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Annotation</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAnnotation(Annotation object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Declaration</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -474,6 +474,22 @@ public class EventcalculusSwitch<T>
    * @generated
    */
   public T caseDeclaration(Declaration object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Defines</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Defines</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDefines(Defines object)
   {
     return null;
   }
@@ -607,6 +623,22 @@ public class EventcalculusSwitch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Labeled Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Labeled Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLabeledExpression(LabeledExpression object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Sort Definition</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -634,22 +666,6 @@ public class EventcalculusSwitch<T>
    * @generated
    */
   public T caseDefinition(Definition object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Declared Parameter</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Declared Parameter</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseDeclaredParameter(DeclaredParameter object)
   {
     return null;
   }
@@ -687,33 +703,17 @@ public class EventcalculusSwitch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Exists</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Parameters</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Exists</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Parameters</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseExists(Exists object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Forall</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Forall</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseForall(Forall object)
+  public T caseParameters(Parameters object)
   {
     return null;
   }

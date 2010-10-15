@@ -15,7 +15,6 @@ package uk.ac.open.event.eventcalculus;
  * The following features are supported:
  * <ul>
  *   <li>{@link uk.ac.open.event.eventcalculus.DefSort#getReified <em>Reified</em>}</li>
- *   <li>{@link uk.ac.open.event.eventcalculus.DefSort#getName <em>Name</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.DefSort#getType <em>Type</em>}</li>
  * </ul>
  * </p>
@@ -24,7 +23,7 @@ package uk.ac.open.event.eventcalculus;
  * @model
  * @generated
  */
-public interface DefSort extends Declaration
+public interface DefSort extends Declaration, Defines
 {
   /**
    * Returns the value of the '<em><b>Reified</b></em>' attribute.
@@ -51,32 +50,6 @@ public interface DefSort extends Declaration
    * @generated
    */
   void setReified(String value);
-
-  /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Name</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see uk.ac.open.event.eventcalculus.EventcalculusPackage#getDefSort_Name()
-   * @model
-   * @generated
-   */
-  String getName();
-
-  /**
-   * Sets the value of the '{@link uk.ac.open.event.eventcalculus.DefSort#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
-   * @generated
-   */
-  void setName(String value);
 
   /**
    * Returns the value of the '<em><b>Type</b></em>' attribute.

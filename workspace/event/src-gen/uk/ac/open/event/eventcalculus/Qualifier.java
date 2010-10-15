@@ -5,8 +5,6 @@
  */
 package uk.ac.open.event.eventcalculus;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -17,7 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link uk.ac.open.event.eventcalculus.Qualifier#getNames <em>Names</em>}</li>
+ *   <li>{@link uk.ac.open.event.eventcalculus.Qualifier#getOp <em>Op</em>}</li>
+ *   <li>{@link uk.ac.open.event.eventcalculus.Qualifier#getParameters <em>Parameters</em>}</li>
  * </ul>
  * </p>
  *
@@ -28,19 +27,58 @@ import org.eclipse.emf.ecore.EObject;
 public interface Qualifier extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Names</b></em>' containment reference list.
-   * The list contents are of type {@link uk.ac.open.event.eventcalculus.DeclaredParameter}.
+   * Returns the value of the '<em><b>Op</b></em>' attribute.
+   * The literals are from the enumeration {@link uk.ac.open.event.eventcalculus.UnaryOp}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Names</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Op</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Names</em>' containment reference list.
-   * @see uk.ac.open.event.eventcalculus.EventcalculusPackage#getQualifier_Names()
+   * @return the value of the '<em>Op</em>' attribute.
+   * @see uk.ac.open.event.eventcalculus.UnaryOp
+   * @see #setOp(UnaryOp)
+   * @see uk.ac.open.event.eventcalculus.EventcalculusPackage#getQualifier_Op()
+   * @model
+   * @generated
+   */
+  UnaryOp getOp();
+
+  /**
+   * Sets the value of the '{@link uk.ac.open.event.eventcalculus.Qualifier#getOp <em>Op</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Op</em>' attribute.
+   * @see uk.ac.open.event.eventcalculus.UnaryOp
+   * @see #getOp()
+   * @generated
+   */
+  void setOp(UnaryOp value);
+
+  /**
+   * Returns the value of the '<em><b>Parameters</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Parameters</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Parameters</em>' containment reference.
+   * @see #setParameters(Parameters)
+   * @see uk.ac.open.event.eventcalculus.EventcalculusPackage#getQualifier_Parameters()
    * @model containment="true"
    * @generated
    */
-  EList<DeclaredParameter> getNames();
+  Parameters getParameters();
+
+  /**
+   * Sets the value of the '{@link uk.ac.open.event.eventcalculus.Qualifier#getParameters <em>Parameters</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Parameters</em>' containment reference.
+   * @see #getParameters()
+   * @generated
+   */
+  void setParameters(Parameters value);
 
 } // Qualifier

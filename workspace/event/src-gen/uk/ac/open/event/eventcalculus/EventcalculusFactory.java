@@ -44,6 +44,15 @@ public interface EventcalculusFactory extends EFactory
   Import createImport();
 
   /**
+   * Returns a new object of class '<em>Annotation</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Annotation</em>'.
+   * @generated
+   */
+  Annotation createAnnotation();
+
+  /**
    * Returns a new object of class '<em>Declaration</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -51,6 +60,15 @@ public interface EventcalculusFactory extends EFactory
    * @generated
    */
   Declaration createDeclaration();
+
+  /**
+   * Returns a new object of class '<em>Defines</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Defines</em>'.
+   * @generated
+   */
+  Defines createDefines();
 
   /**
    * Returns a new object of class '<em>Def Sort</em>'.
@@ -125,6 +143,15 @@ public interface EventcalculusFactory extends EFactory
   Statement createStatement();
 
   /**
+   * Returns a new object of class '<em>Labeled Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Labeled Expression</em>'.
+   * @generated
+   */
+  LabeledExpression createLabeledExpression();
+
+  /**
    * Returns a new object of class '<em>Sort Definition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -141,15 +168,6 @@ public interface EventcalculusFactory extends EFactory
    * @generated
    */
   Definition createDefinition();
-
-  /**
-   * Returns a new object of class '<em>Declared Parameter</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Declared Parameter</em>'.
-   * @generated
-   */
-  DeclaredParameter createDeclaredParameter();
 
   /**
    * Returns a new object of class '<em>Expression</em>'.
@@ -170,22 +188,13 @@ public interface EventcalculusFactory extends EFactory
   Qualifier createQualifier();
 
   /**
-   * Returns a new object of class '<em>Exists</em>'.
+   * Returns a new object of class '<em>Parameters</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Exists</em>'.
+   * @return a new object of class '<em>Parameters</em>'.
    * @generated
    */
-  Exists createExists();
-
-  /**
-   * Returns a new object of class '<em>Forall</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Forall</em>'.
-   * @generated
-   */
-  Forall createForall();
+  Parameters createParameters();
 
   /**
    * Returns a new object of class '<em>Terminal Expression</em>'.

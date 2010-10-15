@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import uk.ac.open.event.eventcalculus.DefSort;
+import uk.ac.open.event.eventcalculus.Defines;
 import uk.ac.open.event.eventcalculus.EventcalculusPackage;
 
 /**
@@ -21,8 +22,8 @@ import uk.ac.open.event.eventcalculus.EventcalculusPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link uk.ac.open.event.eventcalculus.impl.DefSortImpl#getReified <em>Reified</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.DefSortImpl#getName <em>Name</em>}</li>
+ *   <li>{@link uk.ac.open.event.eventcalculus.impl.DefSortImpl#getReified <em>Reified</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.DefSortImpl#getType <em>Type</em>}</li>
  * </ul>
  * </p>
@@ -31,26 +32,6 @@ import uk.ac.open.event.eventcalculus.EventcalculusPackage;
  */
 public class DefSortImpl extends DeclarationImpl implements DefSort
 {
-  /**
-   * The default value of the '{@link #getReified() <em>Reified</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getReified()
-   * @generated
-   * @ordered
-   */
-  protected static final String REIFIED_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getReified() <em>Reified</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getReified()
-   * @generated
-   * @ordered
-   */
-  protected String reified = REIFIED_EDEFAULT;
-
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -70,6 +51,26 @@ public class DefSortImpl extends DeclarationImpl implements DefSort
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getReified() <em>Reified</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getReified()
+   * @generated
+   * @ordered
+   */
+  protected static final String REIFIED_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getReified() <em>Reified</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getReified()
+   * @generated
+   * @ordered
+   */
+  protected String reified = REIFIED_EDEFAULT;
 
   /**
    * The default value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -117,29 +118,6 @@ public class DefSortImpl extends DeclarationImpl implements DefSort
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getReified()
-  {
-    return reified;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setReified(String newReified)
-  {
-    String oldReified = reified;
-    reified = newReified;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EventcalculusPackage.DEF_SORT__REIFIED, oldReified, reified));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public String getName()
   {
     return name;
@@ -156,6 +134,29 @@ public class DefSortImpl extends DeclarationImpl implements DefSort
     name = newName;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, EventcalculusPackage.DEF_SORT__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getReified()
+  {
+    return reified;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setReified(String newReified)
+  {
+    String oldReified = reified;
+    reified = newReified;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EventcalculusPackage.DEF_SORT__REIFIED, oldReified, reified));
   }
 
   /**
@@ -191,10 +192,10 @@ public class DefSortImpl extends DeclarationImpl implements DefSort
   {
     switch (featureID)
     {
-      case EventcalculusPackage.DEF_SORT__REIFIED:
-        return getReified();
       case EventcalculusPackage.DEF_SORT__NAME:
         return getName();
+      case EventcalculusPackage.DEF_SORT__REIFIED:
+        return getReified();
       case EventcalculusPackage.DEF_SORT__TYPE:
         return getType();
     }
@@ -211,11 +212,11 @@ public class DefSortImpl extends DeclarationImpl implements DefSort
   {
     switch (featureID)
     {
-      case EventcalculusPackage.DEF_SORT__REIFIED:
-        setReified((String)newValue);
-        return;
       case EventcalculusPackage.DEF_SORT__NAME:
         setName((String)newValue);
+        return;
+      case EventcalculusPackage.DEF_SORT__REIFIED:
+        setReified((String)newValue);
         return;
       case EventcalculusPackage.DEF_SORT__TYPE:
         setType((String)newValue);
@@ -234,11 +235,11 @@ public class DefSortImpl extends DeclarationImpl implements DefSort
   {
     switch (featureID)
     {
-      case EventcalculusPackage.DEF_SORT__REIFIED:
-        setReified(REIFIED_EDEFAULT);
-        return;
       case EventcalculusPackage.DEF_SORT__NAME:
         setName(NAME_EDEFAULT);
+        return;
+      case EventcalculusPackage.DEF_SORT__REIFIED:
+        setReified(REIFIED_EDEFAULT);
         return;
       case EventcalculusPackage.DEF_SORT__TYPE:
         setType(TYPE_EDEFAULT);
@@ -257,14 +258,52 @@ public class DefSortImpl extends DeclarationImpl implements DefSort
   {
     switch (featureID)
     {
-      case EventcalculusPackage.DEF_SORT__REIFIED:
-        return REIFIED_EDEFAULT == null ? reified != null : !REIFIED_EDEFAULT.equals(reified);
       case EventcalculusPackage.DEF_SORT__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case EventcalculusPackage.DEF_SORT__REIFIED:
+        return REIFIED_EDEFAULT == null ? reified != null : !REIFIED_EDEFAULT.equals(reified);
       case EventcalculusPackage.DEF_SORT__TYPE:
         return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
+  {
+    if (baseClass == Defines.class)
+    {
+      switch (derivedFeatureID)
+      {
+        case EventcalculusPackage.DEF_SORT__NAME: return EventcalculusPackage.DEFINES__NAME;
+        default: return -1;
+      }
+    }
+    return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass)
+  {
+    if (baseClass == Defines.class)
+    {
+      switch (baseFeatureID)
+      {
+        case EventcalculusPackage.DEFINES__NAME: return EventcalculusPackage.DEF_SORT__NAME;
+        default: return -1;
+      }
+    }
+    return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
   }
 
   /**
@@ -278,10 +317,10 @@ public class DefSortImpl extends DeclarationImpl implements DefSort
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (reified: ");
-    result.append(reified);
-    result.append(", name: ");
+    result.append(" (name: ");
     result.append(name);
+    result.append(", reified: ");
+    result.append(reified);
     result.append(", type: ");
     result.append(type);
     result.append(')');

@@ -11,60 +11,80 @@ Import:
 	'load'
 	importURI=STRING;
 
+Annotation: ';' '#' type=ANNOTATION_TYPE (value=STRING | value='not')?;
+
+enum ANNOTATION_TYPE: G='generated' | A='author';
+
 Declaration:
 	DefSort | DefRange | DefOption | DefCompletion | DefNonInertia | DefXor | DefMutex;
 
+Defines: DefSort | Definition;
+
 DefSort:
+	(annotations+=Annotation)*
 	(reified='reified')? 'sort' name=ID (':' type=ID)?;
 
 DefRange:
+	(annotations+=Annotation)*
 	'range' name=[DefSort] min=INT max=INT;
 
 DefOption:
-  	  'option' name=ID value=INT
-	| 'option' name=ID value2=ID;
+	(annotations+=Annotation)*
+  	(  'option' name=ID value=INT
+	| 'option' name=ID value2=ID);
 
 DefCompletion:
-	'completion' 'Theta'? name=[Definition];
+	(annotations+=Annotation)*
+	'completion' type=LabelType? label=[Definition];
 
 DefNonInertia:
+	(annotations+=Annotation)*
 	'noninertial' names+=[Definition] (',' names+=[Definition])*;
 
 DefXor:
+	(annotations+=Annotation)*
 	'xor' names+=[Definition] (',' names+=[Definition])*;
 
 DefMutex:
+	(annotations+=Annotation)*
 	'mutex' names+=[Definition] (',' names+=[Definition])*;
 
-Statement:
-	SortDefinition | Expression '.';
+Statement: SortDefinition | LabeledExpression;
+
+LabeledExpression:
+	(annotations+=Annotation)*
+	(name=LabelType ':')? 
+	expr=Expression '.';
+
+enum LabelType: T='Theta' | D='Delta';
 
 SortDefinition:
 	sort=[DefSort] definitions+=Definition (',' definitions+=Definition)*;
 	
 Definition:
-	name=ID ('(' (args+=DeclaredParameter)? (',' args+=DeclaredParameter)* ')')? (':' return+=DeclaredParameter)?;
+	name=ID ('(' (args+=[Defines])? (',' args+=[Defines])* ')')? (':' return+=[Defines])?;
 	
-DeclaredParameter:
-	name=[DefSort] | name=[Definition];
-
 Expression:
-	(label=ID ':')? (qualifiers+=Qualifier)* expr=AssignmentOp;
+	expr=AssignmentOp | 
+	qualifiers=Qualifier expr=Expression;
 
 Qualifier: Exists | Forall;
 
-Exists: "{" names+=DeclaredParameter ("," names+=DeclaredParameter)* "}";
+Parameters: names+=[Defines] ("," names+=[Defines])*;
 
-Forall: "[" names+=DeclaredParameter ("," names+=DeclaredParameter)* "]";
+Exists returns Qualifier: (op=UnaryOp)? '{' parameters=Parameters '}';
+
+Forall returns Qualifier: (op=UnaryOp)? '[' parameters=Parameters ']';
 
 AssignmentOp returns Expression:
-	OrExp (({AssignPlus.left=current} '->' | {AssignMin.left=current} '<->') (qualifiers+=Qualifier)* right=OrExp)?;
+	OrExp (({AssignPlus.left=current} '->' | {AssignMin.left=current} '<->') 
+		q=Qualifier? right=OrExp)?;
 
 OrExp returns Expression:
-	AndExp ({Or.left=current} '|' (qualifiers+=Qualifier)* right=AndExp)*;
+	AndExp ({Or.left=current} '|' q=Qualifier? right=AndExp)*;
 
 AndExp returns Expression:
-	Relational ({And.left=current} '&' (qualifiers+=Qualifier)* right=Relational)*;
+	Relational ({And.left=current} '&' q=Qualifier? right=Relational)*;
 
 Relational returns Expression:
 	Addition (({RelNotEq.left=current} '!=' | {RelEqEq.left=current} '==' | {RelLtEq.left=current} '>=' |
@@ -81,16 +101,16 @@ Power returns Expression:
 	UnaryExpr (({Pow.left=current} '^') right=UnaryExpr)*;
 
 UnaryExpr returns Expression:
-	(op=UnarOp)? (qualifiers+=Qualifier)* right=PrePrimaryExpr;
+	(op=UnaryOp)? right=PrePrimaryExpr;
 
-enum UnarOp:
+enum UnaryOp:
 	NOT='!';
 
 PrePrimaryExpr returns Expression:
-	TerminalExpression | AbstractRef | '(' Expression ')';
+	TerminalExpression | AbstractRef | '(' Expression ')' | '-' n=INT;
 
 AbstractRef returns Expression:
-	DeclaredParameter
+	define=[Defines]
 		(
 			({FunctionRef.func=current} ('(' (args+=Expression)? (',' args+=Expression)*')') ) 
 		)?;
@@ -105,7 +125,7 @@ FQN:
 	ID ('.' ID)*;
 
 terminal INT returns ecore::EInt:
-	'0' | '-'? ('1'..'9' ('0'..'9')*);
+	'0' | '1'..'9' ('0'..'9')*;
 
 terminal BOOLEAN returns ecore::EBoolean:
 	'true' | 'false';
@@ -120,11 +140,7 @@ terminal STRING:
 terminal ML_COMMENT:
 	'/*'->'*/';
 
-terminal SL_COMMENT:
-	';' !('\n' | '\r')* ('\r'? '\n')?;
-
-terminal WS:
-	(' ' | '\t' | '\r' | '\n')+;
-
+terminal SL_COMMENT: ';' !('\n'|'\r'|'#')* ('\r'? '\n')?;
+terminal WS: (' ' | '\t' | '\r' | '\n')+;
 terminal ANY_OTHER:
 	.;

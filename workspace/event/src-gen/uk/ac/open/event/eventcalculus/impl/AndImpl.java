@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import uk.ac.open.event.eventcalculus.And;
 import uk.ac.open.event.eventcalculus.EventcalculusPackage;
 import uk.ac.open.event.eventcalculus.Expression;
+import uk.ac.open.event.eventcalculus.Qualifier;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,6 +26,7 @@ import uk.ac.open.event.eventcalculus.Expression;
  * The following features are implemented:
  * <ul>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.AndImpl#getLeft <em>Left</em>}</li>
+ *   <li>{@link uk.ac.open.event.eventcalculus.impl.AndImpl#getQ <em>Q</em>}</li>
  * </ul>
  * </p>
  *
@@ -41,6 +43,16 @@ public class AndImpl extends ExpressionImpl implements And
    * @ordered
    */
   protected Expression left;
+
+  /**
+   * The cached value of the '{@link #getQ() <em>Q</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getQ()
+   * @generated
+   * @ordered
+   */
+  protected Qualifier q;
 
   /**
    * <!-- begin-user-doc -->
@@ -116,6 +128,54 @@ public class AndImpl extends ExpressionImpl implements And
    * <!-- end-user-doc -->
    * @generated
    */
+  public Qualifier getQ()
+  {
+    return q;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetQ(Qualifier newQ, NotificationChain msgs)
+  {
+    Qualifier oldQ = q;
+    q = newQ;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EventcalculusPackage.AND__Q, oldQ, newQ);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setQ(Qualifier newQ)
+  {
+    if (newQ != q)
+    {
+      NotificationChain msgs = null;
+      if (q != null)
+        msgs = ((InternalEObject)q).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EventcalculusPackage.AND__Q, null, msgs);
+      if (newQ != null)
+        msgs = ((InternalEObject)newQ).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EventcalculusPackage.AND__Q, null, msgs);
+      msgs = basicSetQ(newQ, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EventcalculusPackage.AND__Q, newQ, newQ));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -123,6 +183,8 @@ public class AndImpl extends ExpressionImpl implements And
     {
       case EventcalculusPackage.AND__LEFT:
         return basicSetLeft(null, msgs);
+      case EventcalculusPackage.AND__Q:
+        return basicSetQ(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -139,6 +201,8 @@ public class AndImpl extends ExpressionImpl implements And
     {
       case EventcalculusPackage.AND__LEFT:
         return getLeft();
+      case EventcalculusPackage.AND__Q:
+        return getQ();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -155,6 +219,9 @@ public class AndImpl extends ExpressionImpl implements And
     {
       case EventcalculusPackage.AND__LEFT:
         setLeft((Expression)newValue);
+        return;
+      case EventcalculusPackage.AND__Q:
+        setQ((Qualifier)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -173,6 +240,9 @@ public class AndImpl extends ExpressionImpl implements And
       case EventcalculusPackage.AND__LEFT:
         setLeft((Expression)null);
         return;
+      case EventcalculusPackage.AND__Q:
+        setQ((Qualifier)null);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -189,6 +259,8 @@ public class AndImpl extends ExpressionImpl implements And
     {
       case EventcalculusPackage.AND__LEFT:
         return left != null;
+      case EventcalculusPackage.AND__Q:
+        return q != null;
     }
     return super.eIsSet(featureID);
   }

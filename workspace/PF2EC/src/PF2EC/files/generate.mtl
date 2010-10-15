@@ -1,12 +1,32 @@
 [comment encoding = UTF-8 /]
 [module generate('http://open.ac.uk/problem')/]
 [template public generate(d: ProblemDiagram)]
-[file (d.name.toString().concat('.ec'), false)]
-load foundations/Root.e
-load foundations/EC.e	
+[file (d.name.toString().concat('.e'), false)]
+sort boolean
+sort integer
+reified sort predicate
+reified sort function
+sort time: integer
+sort offset: integer
 
-fluent true()
-fluent false()
+reified sort fluent
+reified sort event
+
+predicate Happens(event,time)
+predicate HoldsAt(fluent,time)
+predicate ReleasedAt(fluent,time)
+predicate Initiates(event,fluent,time)
+predicate Terminates(event,fluent,time)
+predicate Releases(event,fluent,time)
+predicate Trajectory(fluent,time,fluent,offset)
+
+fluent True()
+fluent False()
+
+reified sort domain
+[for (dom: Node | d.nodes) ]
+predicate [dom.name/](domain,time)
+[/for]
     [for (dom: Node | d.nodes)]
       [for (hidden: Phenomenon | dom.hiddenPhenomena)]
        [if (hidden.type.toString() ='state')]      
@@ -24,10 +44,23 @@ fluent [shared.name/]_[interface.description/]()
         [/if]
       [/for]
     [/for]	
+[for (dom: Node | d.nodes) ]
+['['/] time, domain [']'/] [dom.name/] (domain,  time) 
+  <-> HoldsAt(Truee(), time) 
+      [for (dom: Node | d.nodes)]
+      [for (hidden: Phenomenon | dom.hiddenPhenomena)]
+       [if (hidden.type.toString() ='state')]      
+& [hidden.name/]_[dom.name/]()
+       [/if]
+       [/for]
+      [/for]
+[/for]
+
+
     [for (dom: Node | d.nodes)]
      [if (dom.type.toString() <> 'R')]
 ;--[dom.name/]--
-['['/]time[']'/]
+['['/]time, [dom.name/] [']'/]
 HoldsAt(true(), time)
       [for (interface: Link | d.links)]
        [if (interface.to = dom)]

@@ -20,7 +20,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import uk.ac.open.event.eventcalculus.DeclaredParameter;
 import uk.ac.open.event.eventcalculus.EventcalculusPackage;
 import uk.ac.open.event.eventcalculus.Expression;
 import uk.ac.open.event.eventcalculus.FunctionRef;
@@ -49,7 +48,7 @@ public class FunctionRefImpl extends ExpressionImpl implements FunctionRef
    * @generated
    * @ordered
    */
-  protected DeclaredParameter func;
+  protected Expression func;
 
   /**
    * The cached value of the '{@link #getArgs() <em>Args</em>}' containment reference list.
@@ -87,7 +86,7 @@ public class FunctionRefImpl extends ExpressionImpl implements FunctionRef
    * <!-- end-user-doc -->
    * @generated
    */
-  public DeclaredParameter getFunc()
+  public Expression getFunc()
   {
     return func;
   }
@@ -97,9 +96,9 @@ public class FunctionRefImpl extends ExpressionImpl implements FunctionRef
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetFunc(DeclaredParameter newFunc, NotificationChain msgs)
+  public NotificationChain basicSetFunc(Expression newFunc, NotificationChain msgs)
   {
-    DeclaredParameter oldFunc = func;
+    Expression oldFunc = func;
     func = newFunc;
     if (eNotificationRequired())
     {
@@ -114,7 +113,7 @@ public class FunctionRefImpl extends ExpressionImpl implements FunctionRef
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setFunc(DeclaredParameter newFunc)
+  public void setFunc(Expression newFunc)
   {
     if (newFunc != func)
     {
@@ -192,7 +191,7 @@ public class FunctionRefImpl extends ExpressionImpl implements FunctionRef
     switch (featureID)
     {
       case EventcalculusPackage.FUNCTION_REF__FUNC:
-        setFunc((DeclaredParameter)newValue);
+        setFunc((Expression)newValue);
         return;
       case EventcalculusPackage.FUNCTION_REF__ARGS:
         getArgs().clear();
@@ -213,7 +212,7 @@ public class FunctionRefImpl extends ExpressionImpl implements FunctionRef
     switch (featureID)
     {
       case EventcalculusPackage.FUNCTION_REF__FUNC:
-        setFunc((DeclaredParameter)null);
+        setFunc((Expression)null);
         return;
       case EventcalculusPackage.FUNCTION_REF__ARGS:
         getArgs().clear();
