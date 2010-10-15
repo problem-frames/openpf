@@ -5,22 +5,14 @@
  */
 package uk.ac.open.event.eventcalculus.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
-import uk.ac.open.event.eventcalculus.Annotation;
 import uk.ac.open.event.eventcalculus.EventcalculusPackage;
 import uk.ac.open.event.eventcalculus.Expression;
 import uk.ac.open.event.eventcalculus.LabelType;
@@ -33,7 +25,6 @@ import uk.ac.open.event.eventcalculus.LabeledExpression;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link uk.ac.open.event.eventcalculus.impl.LabeledExpressionImpl#getAnnotations <em>Annotations</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.LabeledExpressionImpl#getName <em>Name</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.LabeledExpressionImpl#getExpr <em>Expr</em>}</li>
  * </ul>
@@ -43,16 +34,6 @@ import uk.ac.open.event.eventcalculus.LabeledExpression;
  */
 public class LabeledExpressionImpl extends StatementImpl implements LabeledExpression
 {
-  /**
-   * The cached value of the '{@link #getAnnotations() <em>Annotations</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getAnnotations()
-   * @generated
-   * @ordered
-   */
-  protected EList<Annotation> annotations;
-
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -102,20 +83,6 @@ public class LabeledExpressionImpl extends StatementImpl implements LabeledExpre
   protected EClass eStaticClass()
   {
     return EventcalculusPackage.Literals.LABELED_EXPRESSION;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<Annotation> getAnnotations()
-  {
-    if (annotations == null)
-    {
-      annotations = new EObjectContainmentEList<Annotation>(Annotation.class, this, EventcalculusPackage.LABELED_EXPRESSION__ANNOTATIONS);
-    }
-    return annotations;
   }
 
   /**
@@ -199,8 +166,6 @@ public class LabeledExpressionImpl extends StatementImpl implements LabeledExpre
   {
     switch (featureID)
     {
-      case EventcalculusPackage.LABELED_EXPRESSION__ANNOTATIONS:
-        return ((InternalEList<?>)getAnnotations()).basicRemove(otherEnd, msgs);
       case EventcalculusPackage.LABELED_EXPRESSION__EXPR:
         return basicSetExpr(null, msgs);
     }
@@ -217,8 +182,6 @@ public class LabeledExpressionImpl extends StatementImpl implements LabeledExpre
   {
     switch (featureID)
     {
-      case EventcalculusPackage.LABELED_EXPRESSION__ANNOTATIONS:
-        return getAnnotations();
       case EventcalculusPackage.LABELED_EXPRESSION__NAME:
         return getName();
       case EventcalculusPackage.LABELED_EXPRESSION__EXPR:
@@ -232,16 +195,11 @@ public class LabeledExpressionImpl extends StatementImpl implements LabeledExpre
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case EventcalculusPackage.LABELED_EXPRESSION__ANNOTATIONS:
-        getAnnotations().clear();
-        getAnnotations().addAll((Collection<? extends Annotation>)newValue);
-        return;
       case EventcalculusPackage.LABELED_EXPRESSION__NAME:
         setName((LabelType)newValue);
         return;
@@ -262,9 +220,6 @@ public class LabeledExpressionImpl extends StatementImpl implements LabeledExpre
   {
     switch (featureID)
     {
-      case EventcalculusPackage.LABELED_EXPRESSION__ANNOTATIONS:
-        getAnnotations().clear();
-        return;
       case EventcalculusPackage.LABELED_EXPRESSION__NAME:
         setName(NAME_EDEFAULT);
         return;
@@ -285,8 +240,6 @@ public class LabeledExpressionImpl extends StatementImpl implements LabeledExpre
   {
     switch (featureID)
     {
-      case EventcalculusPackage.LABELED_EXPRESSION__ANNOTATIONS:
-        return annotations != null && !annotations.isEmpty();
       case EventcalculusPackage.LABELED_EXPRESSION__NAME:
         return name != NAME_EDEFAULT;
       case EventcalculusPackage.LABELED_EXPRESSION__EXPR:

@@ -2860,11 +2860,11 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
                 if ( (LA4_1==RULE_ID) ) {
                     int LA4_2 = input.LA(3);
 
-                    if ( (LA4_2==RULE_INT) ) {
-                        alt4=1;
-                    }
-                    else if ( (LA4_2==RULE_ID) ) {
+                    if ( (LA4_2==RULE_ID) ) {
                         alt4=2;
+                    }
+                    else if ( (LA4_2==RULE_INT) ) {
+                        alt4=1;
                     }
                     else {
                         NoViableAltException nvae =
@@ -2961,33 +2961,7 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
         try {
             // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:1114:1: ( ( ruleSortDefinition ) | ( ruleLabeledExpression ) )
             int alt5=2;
-            int LA5_0 = input.LA(1);
-
-            if ( (LA5_0==RULE_ID) ) {
-                int LA5_1 = input.LA(2);
-
-                if ( ((LA5_1>=29 && LA5_1<=30)||(LA5_1>=36 && LA5_1<=51)) ) {
-                    alt5=2;
-                }
-                else if ( (LA5_1==RULE_ID) ) {
-                    alt5=1;
-                }
-                else {
-                    NoViableAltException nvae =
-                        new NoViableAltException("1110:1: rule__Statement__Alternatives : ( ( ruleSortDefinition ) | ( ruleLabeledExpression ) );", 5, 1, input);
-
-                    throw nvae;
-                }
-            }
-            else if ( (LA5_0==RULE_STRING||(LA5_0>=RULE_INT && LA5_0<=RULE_BOOLEAN)||LA5_0==12||(LA5_0>=15 && LA5_0<=16)||LA5_0==18||LA5_0==30||LA5_0==32||LA5_0==34||LA5_0==48) ) {
-                alt5=2;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("1110:1: rule__Statement__Alternatives : ( ( ruleSortDefinition ) | ( ruleLabeledExpression ) );", 5, 0, input);
-
-                throw nvae;
-            }
+            alt5 = dfa5.predict(input);
             switch (alt5) {
                 case 1 :
                     // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:1115:1: ( ruleSortDefinition )
@@ -3173,11 +3147,11 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
                 {
                 int LA7_1 = input.LA(2);
 
-                if ( (LA7_1==34) ) {
-                    alt7=2;
-                }
-                else if ( (LA7_1==32) ) {
+                if ( (LA7_1==32) ) {
                     alt7=1;
+                }
+                else if ( (LA7_1==34) ) {
+                    alt7=2;
                 }
                 else {
                     NoViableAltException nvae =
@@ -4820,15 +4794,15 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
             if ( (LA18_0==RULE_STRING) ) {
                 int LA18_1 = input.LA(2);
 
-                if ( (LA18_1==48) ) {
+                if ( (LA18_1==EOF||(LA18_1>=RULE_STRING && LA18_1<=RULE_BOOLEAN)||LA18_1==12||(LA18_1>=15 && LA18_1<=16)||LA18_1==18||LA18_1==20||(LA18_1>=22 && LA18_1<=25)||(LA18_1>=27 && LA18_1<=28)||LA18_1==30||LA18_1==32||LA18_1==34||LA18_1==53) ) {
+                    alt18=1;
+                }
+                else if ( (LA18_1==48) ) {
                     int LA18_4 = input.LA(3);
 
                     if ( (LA18_4==RULE_INT) ) {
                         alt18=1;
                     }
-                }
-                else if ( (LA18_1==EOF||(LA18_1>=RULE_STRING && LA18_1<=RULE_BOOLEAN)||LA18_1==12||(LA18_1>=15 && LA18_1<=16)||LA18_1==18||LA18_1==20||(LA18_1>=22 && LA18_1<=25)||(LA18_1>=27 && LA18_1<=28)||LA18_1==30||LA18_1==32||LA18_1==34||LA18_1==53) ) {
-                    alt18=1;
                 }
             }
             else if ( (LA18_0==52) ) {
@@ -8899,30 +8873,48 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__SortDefinition__Group__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3170:1: rule__SortDefinition__Group__0__Impl : ( ( rule__SortDefinition__SortAssignment_0 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3170:1: rule__SortDefinition__Group__0__Impl : ( ( rule__SortDefinition__AnnotationsAssignment_0 )* ) ;
     public final void rule__SortDefinition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3174:1: ( ( ( rule__SortDefinition__SortAssignment_0 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3175:1: ( ( rule__SortDefinition__SortAssignment_0 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3174:1: ( ( ( rule__SortDefinition__AnnotationsAssignment_0 )* ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3175:1: ( ( rule__SortDefinition__AnnotationsAssignment_0 )* )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3175:1: ( ( rule__SortDefinition__SortAssignment_0 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3176:1: ( rule__SortDefinition__SortAssignment_0 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3175:1: ( ( rule__SortDefinition__AnnotationsAssignment_0 )* )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3176:1: ( rule__SortDefinition__AnnotationsAssignment_0 )*
             {
-             before(grammarAccess.getSortDefinitionAccess().getSortAssignment_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3177:1: ( rule__SortDefinition__SortAssignment_0 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3177:2: rule__SortDefinition__SortAssignment_0
-            {
-            pushFollow(FOLLOW_rule__SortDefinition__SortAssignment_0_in_rule__SortDefinition__Group__0__Impl6542);
-            rule__SortDefinition__SortAssignment_0();
-            _fsp--;
+             before(grammarAccess.getSortDefinitionAccess().getAnnotationsAssignment_0()); 
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3177:1: ( rule__SortDefinition__AnnotationsAssignment_0 )*
+            loop34:
+            do {
+                int alt34=2;
+                int LA34_0 = input.LA(1);
+
+                if ( (LA34_0==18) ) {
+                    alt34=1;
+                }
 
 
-            }
+                switch (alt34) {
+            	case 1 :
+            	    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3177:2: rule__SortDefinition__AnnotationsAssignment_0
+            	    {
+            	    pushFollow(FOLLOW_rule__SortDefinition__AnnotationsAssignment_0_in_rule__SortDefinition__Group__0__Impl6542);
+            	    rule__SortDefinition__AnnotationsAssignment_0();
+            	    _fsp--;
 
-             after(grammarAccess.getSortDefinitionAccess().getSortAssignment_0()); 
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop34;
+                }
+            } while (true);
+
+             after(grammarAccess.getSortDefinitionAccess().getAnnotationsAssignment_0()); 
 
             }
 
@@ -8954,11 +8946,11 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
             // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3191:1: ( rule__SortDefinition__Group__1__Impl rule__SortDefinition__Group__2 )
             // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3192:2: rule__SortDefinition__Group__1__Impl rule__SortDefinition__Group__2
             {
-            pushFollow(FOLLOW_rule__SortDefinition__Group__1__Impl_in_rule__SortDefinition__Group__16572);
+            pushFollow(FOLLOW_rule__SortDefinition__Group__1__Impl_in_rule__SortDefinition__Group__16573);
             rule__SortDefinition__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__SortDefinition__Group__2_in_rule__SortDefinition__Group__16575);
+            pushFollow(FOLLOW_rule__SortDefinition__Group__2_in_rule__SortDefinition__Group__16576);
             rule__SortDefinition__Group__2();
             _fsp--;
 
@@ -8981,30 +8973,30 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__SortDefinition__Group__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3199:1: rule__SortDefinition__Group__1__Impl : ( ( rule__SortDefinition__DefinitionsAssignment_1 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3199:1: rule__SortDefinition__Group__1__Impl : ( ( rule__SortDefinition__SortAssignment_1 ) ) ;
     public final void rule__SortDefinition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3203:1: ( ( ( rule__SortDefinition__DefinitionsAssignment_1 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3204:1: ( ( rule__SortDefinition__DefinitionsAssignment_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3203:1: ( ( ( rule__SortDefinition__SortAssignment_1 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3204:1: ( ( rule__SortDefinition__SortAssignment_1 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3204:1: ( ( rule__SortDefinition__DefinitionsAssignment_1 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3205:1: ( rule__SortDefinition__DefinitionsAssignment_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3204:1: ( ( rule__SortDefinition__SortAssignment_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3205:1: ( rule__SortDefinition__SortAssignment_1 )
             {
-             before(grammarAccess.getSortDefinitionAccess().getDefinitionsAssignment_1()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3206:1: ( rule__SortDefinition__DefinitionsAssignment_1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3206:2: rule__SortDefinition__DefinitionsAssignment_1
+             before(grammarAccess.getSortDefinitionAccess().getSortAssignment_1()); 
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3206:1: ( rule__SortDefinition__SortAssignment_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3206:2: rule__SortDefinition__SortAssignment_1
             {
-            pushFollow(FOLLOW_rule__SortDefinition__DefinitionsAssignment_1_in_rule__SortDefinition__Group__1__Impl6602);
-            rule__SortDefinition__DefinitionsAssignment_1();
+            pushFollow(FOLLOW_rule__SortDefinition__SortAssignment_1_in_rule__SortDefinition__Group__1__Impl6603);
+            rule__SortDefinition__SortAssignment_1();
             _fsp--;
 
 
             }
 
-             after(grammarAccess.getSortDefinitionAccess().getDefinitionsAssignment_1()); 
+             after(grammarAccess.getSortDefinitionAccess().getSortAssignment_1()); 
 
             }
 
@@ -9027,17 +9019,21 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__SortDefinition__Group__2
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3216:1: rule__SortDefinition__Group__2 : rule__SortDefinition__Group__2__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3216:1: rule__SortDefinition__Group__2 : rule__SortDefinition__Group__2__Impl rule__SortDefinition__Group__3 ;
     public final void rule__SortDefinition__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3220:1: ( rule__SortDefinition__Group__2__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3221:2: rule__SortDefinition__Group__2__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3220:1: ( rule__SortDefinition__Group__2__Impl rule__SortDefinition__Group__3 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3221:2: rule__SortDefinition__Group__2__Impl rule__SortDefinition__Group__3
             {
-            pushFollow(FOLLOW_rule__SortDefinition__Group__2__Impl_in_rule__SortDefinition__Group__26632);
+            pushFollow(FOLLOW_rule__SortDefinition__Group__2__Impl_in_rule__SortDefinition__Group__26633);
             rule__SortDefinition__Group__2__Impl();
+            _fsp--;
+
+            pushFollow(FOLLOW_rule__SortDefinition__Group__3_in_rule__SortDefinition__Group__26636);
+            rule__SortDefinition__Group__3();
             _fsp--;
 
 
@@ -9059,48 +9055,30 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__SortDefinition__Group__2__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3227:1: rule__SortDefinition__Group__2__Impl : ( ( rule__SortDefinition__Group_2__0 )* ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3228:1: rule__SortDefinition__Group__2__Impl : ( ( rule__SortDefinition__DefinitionsAssignment_2 ) ) ;
     public final void rule__SortDefinition__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3231:1: ( ( ( rule__SortDefinition__Group_2__0 )* ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3232:1: ( ( rule__SortDefinition__Group_2__0 )* )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3232:1: ( ( ( rule__SortDefinition__DefinitionsAssignment_2 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3233:1: ( ( rule__SortDefinition__DefinitionsAssignment_2 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3232:1: ( ( rule__SortDefinition__Group_2__0 )* )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3233:1: ( rule__SortDefinition__Group_2__0 )*
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3233:1: ( ( rule__SortDefinition__DefinitionsAssignment_2 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3234:1: ( rule__SortDefinition__DefinitionsAssignment_2 )
             {
-             before(grammarAccess.getSortDefinitionAccess().getGroup_2()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3234:1: ( rule__SortDefinition__Group_2__0 )*
-            loop34:
-            do {
-                int alt34=2;
-                int LA34_0 = input.LA(1);
-
-                if ( (LA34_0==26) ) {
-                    alt34=1;
-                }
+             before(grammarAccess.getSortDefinitionAccess().getDefinitionsAssignment_2()); 
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3235:1: ( rule__SortDefinition__DefinitionsAssignment_2 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3235:2: rule__SortDefinition__DefinitionsAssignment_2
+            {
+            pushFollow(FOLLOW_rule__SortDefinition__DefinitionsAssignment_2_in_rule__SortDefinition__Group__2__Impl6663);
+            rule__SortDefinition__DefinitionsAssignment_2();
+            _fsp--;
 
 
-                switch (alt34) {
-            	case 1 :
-            	    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3234:2: rule__SortDefinition__Group_2__0
-            	    {
-            	    pushFollow(FOLLOW_rule__SortDefinition__Group_2__0_in_rule__SortDefinition__Group__2__Impl6659);
-            	    rule__SortDefinition__Group_2__0();
-            	    _fsp--;
+            }
 
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop34;
-                }
-            } while (true);
-
-             after(grammarAccess.getSortDefinitionAccess().getGroup_2()); 
+             after(grammarAccess.getSortDefinitionAccess().getDefinitionsAssignment_2()); 
 
             }
 
@@ -9122,22 +9100,18 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
     // $ANTLR end rule__SortDefinition__Group__2__Impl
 
 
-    // $ANTLR start rule__SortDefinition__Group_2__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3250:1: rule__SortDefinition__Group_2__0 : rule__SortDefinition__Group_2__0__Impl rule__SortDefinition__Group_2__1 ;
-    public final void rule__SortDefinition__Group_2__0() throws RecognitionException {
+    // $ANTLR start rule__SortDefinition__Group__3
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3245:1: rule__SortDefinition__Group__3 : rule__SortDefinition__Group__3__Impl ;
+    public final void rule__SortDefinition__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3254:1: ( rule__SortDefinition__Group_2__0__Impl rule__SortDefinition__Group_2__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3255:2: rule__SortDefinition__Group_2__0__Impl rule__SortDefinition__Group_2__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3249:1: ( rule__SortDefinition__Group__3__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3250:2: rule__SortDefinition__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__SortDefinition__Group_2__0__Impl_in_rule__SortDefinition__Group_2__06696);
-            rule__SortDefinition__Group_2__0__Impl();
-            _fsp--;
-
-            pushFollow(FOLLOW_rule__SortDefinition__Group_2__1_in_rule__SortDefinition__Group_2__06699);
-            rule__SortDefinition__Group_2__1();
+            pushFollow(FOLLOW_rule__SortDefinition__Group__3__Impl_in_rule__SortDefinition__Group__36693);
+            rule__SortDefinition__Group__3__Impl();
             _fsp--;
 
 
@@ -9155,103 +9129,52 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end rule__SortDefinition__Group_2__0
+    // $ANTLR end rule__SortDefinition__Group__3
 
 
-    // $ANTLR start rule__SortDefinition__Group_2__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3262:1: rule__SortDefinition__Group_2__0__Impl : ( ',' ) ;
-    public final void rule__SortDefinition__Group_2__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3266:1: ( ( ',' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3267:1: ( ',' )
-            {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3267:1: ( ',' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3268:1: ','
-            {
-             before(grammarAccess.getSortDefinitionAccess().getCommaKeyword_2_0()); 
-            match(input,26,FOLLOW_26_in_rule__SortDefinition__Group_2__0__Impl6727); 
-             after(grammarAccess.getSortDefinitionAccess().getCommaKeyword_2_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__SortDefinition__Group_2__0__Impl
-
-
-    // $ANTLR start rule__SortDefinition__Group_2__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3281:1: rule__SortDefinition__Group_2__1 : rule__SortDefinition__Group_2__1__Impl ;
-    public final void rule__SortDefinition__Group_2__1() throws RecognitionException {
+    // $ANTLR start rule__SortDefinition__Group__3__Impl
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3256:1: rule__SortDefinition__Group__3__Impl : ( ( rule__SortDefinition__Group_3__0 )* ) ;
+    public final void rule__SortDefinition__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3285:1: ( rule__SortDefinition__Group_2__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3286:2: rule__SortDefinition__Group_2__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3260:1: ( ( ( rule__SortDefinition__Group_3__0 )* ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3261:1: ( ( rule__SortDefinition__Group_3__0 )* )
             {
-            pushFollow(FOLLOW_rule__SortDefinition__Group_2__1__Impl_in_rule__SortDefinition__Group_2__16758);
-            rule__SortDefinition__Group_2__1__Impl();
-            _fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__SortDefinition__Group_2__1
-
-
-    // $ANTLR start rule__SortDefinition__Group_2__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3292:1: rule__SortDefinition__Group_2__1__Impl : ( ( rule__SortDefinition__DefinitionsAssignment_2_1 ) ) ;
-    public final void rule__SortDefinition__Group_2__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3296:1: ( ( ( rule__SortDefinition__DefinitionsAssignment_2_1 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3297:1: ( ( rule__SortDefinition__DefinitionsAssignment_2_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3261:1: ( ( rule__SortDefinition__Group_3__0 )* )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3262:1: ( rule__SortDefinition__Group_3__0 )*
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3297:1: ( ( rule__SortDefinition__DefinitionsAssignment_2_1 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3298:1: ( rule__SortDefinition__DefinitionsAssignment_2_1 )
-            {
-             before(grammarAccess.getSortDefinitionAccess().getDefinitionsAssignment_2_1()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3299:1: ( rule__SortDefinition__DefinitionsAssignment_2_1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3299:2: rule__SortDefinition__DefinitionsAssignment_2_1
-            {
-            pushFollow(FOLLOW_rule__SortDefinition__DefinitionsAssignment_2_1_in_rule__SortDefinition__Group_2__1__Impl6785);
-            rule__SortDefinition__DefinitionsAssignment_2_1();
-            _fsp--;
+             before(grammarAccess.getSortDefinitionAccess().getGroup_3()); 
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3263:1: ( rule__SortDefinition__Group_3__0 )*
+            loop35:
+            do {
+                int alt35=2;
+                int LA35_0 = input.LA(1);
+
+                if ( (LA35_0==26) ) {
+                    alt35=1;
+                }
 
 
-            }
+                switch (alt35) {
+            	case 1 :
+            	    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3263:2: rule__SortDefinition__Group_3__0
+            	    {
+            	    pushFollow(FOLLOW_rule__SortDefinition__Group_3__0_in_rule__SortDefinition__Group__3__Impl6720);
+            	    rule__SortDefinition__Group_3__0();
+            	    _fsp--;
 
-             after(grammarAccess.getSortDefinitionAccess().getDefinitionsAssignment_2_1()); 
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop35;
+                }
+            } while (true);
+
+             after(grammarAccess.getSortDefinitionAccess().getGroup_3()); 
 
             }
 
@@ -9270,24 +9193,175 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end rule__SortDefinition__Group_2__1__Impl
+    // $ANTLR end rule__SortDefinition__Group__3__Impl
+
+
+    // $ANTLR start rule__SortDefinition__Group_3__0
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3281:1: rule__SortDefinition__Group_3__0 : rule__SortDefinition__Group_3__0__Impl rule__SortDefinition__Group_3__1 ;
+    public final void rule__SortDefinition__Group_3__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3285:1: ( rule__SortDefinition__Group_3__0__Impl rule__SortDefinition__Group_3__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3286:2: rule__SortDefinition__Group_3__0__Impl rule__SortDefinition__Group_3__1
+            {
+            pushFollow(FOLLOW_rule__SortDefinition__Group_3__0__Impl_in_rule__SortDefinition__Group_3__06759);
+            rule__SortDefinition__Group_3__0__Impl();
+            _fsp--;
+
+            pushFollow(FOLLOW_rule__SortDefinition__Group_3__1_in_rule__SortDefinition__Group_3__06762);
+            rule__SortDefinition__Group_3__1();
+            _fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end rule__SortDefinition__Group_3__0
+
+
+    // $ANTLR start rule__SortDefinition__Group_3__0__Impl
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3293:1: rule__SortDefinition__Group_3__0__Impl : ( ',' ) ;
+    public final void rule__SortDefinition__Group_3__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3297:1: ( ( ',' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3298:1: ( ',' )
+            {
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3298:1: ( ',' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3299:1: ','
+            {
+             before(grammarAccess.getSortDefinitionAccess().getCommaKeyword_3_0()); 
+            match(input,26,FOLLOW_26_in_rule__SortDefinition__Group_3__0__Impl6790); 
+             after(grammarAccess.getSortDefinitionAccess().getCommaKeyword_3_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end rule__SortDefinition__Group_3__0__Impl
+
+
+    // $ANTLR start rule__SortDefinition__Group_3__1
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3312:1: rule__SortDefinition__Group_3__1 : rule__SortDefinition__Group_3__1__Impl ;
+    public final void rule__SortDefinition__Group_3__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3316:1: ( rule__SortDefinition__Group_3__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3317:2: rule__SortDefinition__Group_3__1__Impl
+            {
+            pushFollow(FOLLOW_rule__SortDefinition__Group_3__1__Impl_in_rule__SortDefinition__Group_3__16821);
+            rule__SortDefinition__Group_3__1__Impl();
+            _fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end rule__SortDefinition__Group_3__1
+
+
+    // $ANTLR start rule__SortDefinition__Group_3__1__Impl
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3323:1: rule__SortDefinition__Group_3__1__Impl : ( ( rule__SortDefinition__DefinitionsAssignment_3_1 ) ) ;
+    public final void rule__SortDefinition__Group_3__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3327:1: ( ( ( rule__SortDefinition__DefinitionsAssignment_3_1 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3328:1: ( ( rule__SortDefinition__DefinitionsAssignment_3_1 ) )
+            {
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3328:1: ( ( rule__SortDefinition__DefinitionsAssignment_3_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3329:1: ( rule__SortDefinition__DefinitionsAssignment_3_1 )
+            {
+             before(grammarAccess.getSortDefinitionAccess().getDefinitionsAssignment_3_1()); 
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3330:1: ( rule__SortDefinition__DefinitionsAssignment_3_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3330:2: rule__SortDefinition__DefinitionsAssignment_3_1
+            {
+            pushFollow(FOLLOW_rule__SortDefinition__DefinitionsAssignment_3_1_in_rule__SortDefinition__Group_3__1__Impl6848);
+            rule__SortDefinition__DefinitionsAssignment_3_1();
+            _fsp--;
+
+
+            }
+
+             after(grammarAccess.getSortDefinitionAccess().getDefinitionsAssignment_3_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end rule__SortDefinition__Group_3__1__Impl
 
 
     // $ANTLR start rule__Definition__Group__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3313:1: rule__Definition__Group__0 : rule__Definition__Group__0__Impl rule__Definition__Group__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3344:1: rule__Definition__Group__0 : rule__Definition__Group__0__Impl rule__Definition__Group__1 ;
     public final void rule__Definition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3317:1: ( rule__Definition__Group__0__Impl rule__Definition__Group__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3318:2: rule__Definition__Group__0__Impl rule__Definition__Group__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3348:1: ( rule__Definition__Group__0__Impl rule__Definition__Group__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3349:2: rule__Definition__Group__0__Impl rule__Definition__Group__1
             {
-            pushFollow(FOLLOW_rule__Definition__Group__0__Impl_in_rule__Definition__Group__06819);
+            pushFollow(FOLLOW_rule__Definition__Group__0__Impl_in_rule__Definition__Group__06882);
             rule__Definition__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Definition__Group__1_in_rule__Definition__Group__06822);
+            pushFollow(FOLLOW_rule__Definition__Group__1_in_rule__Definition__Group__06885);
             rule__Definition__Group__1();
             _fsp--;
 
@@ -9310,23 +9384,23 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Definition__Group__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3325:1: rule__Definition__Group__0__Impl : ( ( rule__Definition__NameAssignment_0 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3356:1: rule__Definition__Group__0__Impl : ( ( rule__Definition__NameAssignment_0 ) ) ;
     public final void rule__Definition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3329:1: ( ( ( rule__Definition__NameAssignment_0 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3330:1: ( ( rule__Definition__NameAssignment_0 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3360:1: ( ( ( rule__Definition__NameAssignment_0 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3361:1: ( ( rule__Definition__NameAssignment_0 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3330:1: ( ( rule__Definition__NameAssignment_0 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3331:1: ( rule__Definition__NameAssignment_0 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3361:1: ( ( rule__Definition__NameAssignment_0 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3362:1: ( rule__Definition__NameAssignment_0 )
             {
              before(grammarAccess.getDefinitionAccess().getNameAssignment_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3332:1: ( rule__Definition__NameAssignment_0 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3332:2: rule__Definition__NameAssignment_0
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3363:1: ( rule__Definition__NameAssignment_0 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3363:2: rule__Definition__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__Definition__NameAssignment_0_in_rule__Definition__Group__0__Impl6849);
+            pushFollow(FOLLOW_rule__Definition__NameAssignment_0_in_rule__Definition__Group__0__Impl6912);
             rule__Definition__NameAssignment_0();
             _fsp--;
 
@@ -9356,20 +9430,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Definition__Group__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3342:1: rule__Definition__Group__1 : rule__Definition__Group__1__Impl rule__Definition__Group__2 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3373:1: rule__Definition__Group__1 : rule__Definition__Group__1__Impl rule__Definition__Group__2 ;
     public final void rule__Definition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3346:1: ( rule__Definition__Group__1__Impl rule__Definition__Group__2 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3347:2: rule__Definition__Group__1__Impl rule__Definition__Group__2
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3377:1: ( rule__Definition__Group__1__Impl rule__Definition__Group__2 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3378:2: rule__Definition__Group__1__Impl rule__Definition__Group__2
             {
-            pushFollow(FOLLOW_rule__Definition__Group__1__Impl_in_rule__Definition__Group__16879);
+            pushFollow(FOLLOW_rule__Definition__Group__1__Impl_in_rule__Definition__Group__16942);
             rule__Definition__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Definition__Group__2_in_rule__Definition__Group__16882);
+            pushFollow(FOLLOW_rule__Definition__Group__2_in_rule__Definition__Group__16945);
             rule__Definition__Group__2();
             _fsp--;
 
@@ -9392,56 +9466,56 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Definition__Group__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3354:1: rule__Definition__Group__1__Impl : ( ( rule__Definition__Group_1__0 )? ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3385:1: rule__Definition__Group__1__Impl : ( ( rule__Definition__Group_1__0 )? ) ;
     public final void rule__Definition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3358:1: ( ( ( rule__Definition__Group_1__0 )? ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3359:1: ( ( rule__Definition__Group_1__0 )? )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3389:1: ( ( ( rule__Definition__Group_1__0 )? ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3390:1: ( ( rule__Definition__Group_1__0 )? )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3359:1: ( ( rule__Definition__Group_1__0 )? )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3360:1: ( rule__Definition__Group_1__0 )?
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3390:1: ( ( rule__Definition__Group_1__0 )? )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3391:1: ( rule__Definition__Group_1__0 )?
             {
              before(grammarAccess.getDefinitionAccess().getGroup_1()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3361:1: ( rule__Definition__Group_1__0 )?
-            int alt35=2;
-            int LA35_0 = input.LA(1);
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3392:1: ( rule__Definition__Group_1__0 )?
+            int alt36=2;
+            int LA36_0 = input.LA(1);
 
-            if ( (LA35_0==30) ) {
-                int LA35_1 = input.LA(2);
+            if ( (LA36_0==30) ) {
+                int LA36_1 = input.LA(2);
 
-                if ( (LA35_1==RULE_ID) ) {
-                    int LA35_3 = input.LA(3);
+                if ( (LA36_1==RULE_ID) ) {
+                    int LA36_3 = input.LA(3);
 
-                    if ( (LA35_3==31) ) {
-                        int LA35_5 = input.LA(4);
+                    if ( (LA36_3==26) ) {
+                        alt36=1;
+                    }
+                    else if ( (LA36_3==31) ) {
+                        int LA36_5 = input.LA(4);
 
-                        if ( (LA35_5==48) ) {
-                            int LA35_6 = input.LA(5);
+                        if ( (LA36_5==EOF||(LA36_5>=RULE_STRING && LA36_5<=RULE_BOOLEAN)||LA36_5==12||(LA36_5>=15 && LA36_5<=16)||LA36_5==18||(LA36_5>=20 && LA36_5<=28)||LA36_5==30||LA36_5==32||LA36_5==34||LA36_5==53) ) {
+                            alt36=1;
+                        }
+                        else if ( (LA36_5==48) ) {
+                            int LA36_6 = input.LA(5);
 
-                            if ( (LA35_6==RULE_INT) ) {
-                                alt35=1;
+                            if ( (LA36_6==RULE_INT) ) {
+                                alt36=1;
                             }
                         }
-                        else if ( (LA35_5==EOF||(LA35_5>=RULE_STRING && LA35_5<=RULE_BOOLEAN)||LA35_5==12||(LA35_5>=15 && LA35_5<=16)||LA35_5==18||(LA35_5>=20 && LA35_5<=28)||LA35_5==30||LA35_5==32||LA35_5==34||LA35_5==53) ) {
-                            alt35=1;
-                        }
-                    }
-                    else if ( (LA35_3==26) ) {
-                        alt35=1;
                     }
                 }
-                else if ( (LA35_1==26||LA35_1==31) ) {
-                    alt35=1;
+                else if ( (LA36_1==26||LA36_1==31) ) {
+                    alt36=1;
                 }
             }
-            switch (alt35) {
+            switch (alt36) {
                 case 1 :
-                    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3361:2: rule__Definition__Group_1__0
+                    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3392:2: rule__Definition__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__Definition__Group_1__0_in_rule__Definition__Group__1__Impl6909);
+                    pushFollow(FOLLOW_rule__Definition__Group_1__0_in_rule__Definition__Group__1__Impl6972);
                     rule__Definition__Group_1__0();
                     _fsp--;
 
@@ -9474,16 +9548,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Definition__Group__2
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3371:1: rule__Definition__Group__2 : rule__Definition__Group__2__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3402:1: rule__Definition__Group__2 : rule__Definition__Group__2__Impl ;
     public final void rule__Definition__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3375:1: ( rule__Definition__Group__2__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3376:2: rule__Definition__Group__2__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3406:1: ( rule__Definition__Group__2__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3407:2: rule__Definition__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Definition__Group__2__Impl_in_rule__Definition__Group__26940);
+            pushFollow(FOLLOW_rule__Definition__Group__2__Impl_in_rule__Definition__Group__27003);
             rule__Definition__Group__2__Impl();
             _fsp--;
 
@@ -9506,31 +9580,31 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Definition__Group__2__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3382:1: rule__Definition__Group__2__Impl : ( ( rule__Definition__Group_2__0 )? ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3413:1: rule__Definition__Group__2__Impl : ( ( rule__Definition__Group_2__0 )? ) ;
     public final void rule__Definition__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3386:1: ( ( ( rule__Definition__Group_2__0 )? ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3387:1: ( ( rule__Definition__Group_2__0 )? )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3417:1: ( ( ( rule__Definition__Group_2__0 )? ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3418:1: ( ( rule__Definition__Group_2__0 )? )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3387:1: ( ( rule__Definition__Group_2__0 )? )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3388:1: ( rule__Definition__Group_2__0 )?
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3418:1: ( ( rule__Definition__Group_2__0 )? )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3419:1: ( rule__Definition__Group_2__0 )?
             {
              before(grammarAccess.getDefinitionAccess().getGroup_2()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3389:1: ( rule__Definition__Group_2__0 )?
-            int alt36=2;
-            int LA36_0 = input.LA(1);
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3420:1: ( rule__Definition__Group_2__0 )?
+            int alt37=2;
+            int LA37_0 = input.LA(1);
 
-            if ( (LA36_0==21) ) {
-                alt36=1;
+            if ( (LA37_0==21) ) {
+                alt37=1;
             }
-            switch (alt36) {
+            switch (alt37) {
                 case 1 :
-                    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3389:2: rule__Definition__Group_2__0
+                    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3420:2: rule__Definition__Group_2__0
                     {
-                    pushFollow(FOLLOW_rule__Definition__Group_2__0_in_rule__Definition__Group__2__Impl6967);
+                    pushFollow(FOLLOW_rule__Definition__Group_2__0_in_rule__Definition__Group__2__Impl7030);
                     rule__Definition__Group_2__0();
                     _fsp--;
 
@@ -9563,20 +9637,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Definition__Group_1__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3405:1: rule__Definition__Group_1__0 : rule__Definition__Group_1__0__Impl rule__Definition__Group_1__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3436:1: rule__Definition__Group_1__0 : rule__Definition__Group_1__0__Impl rule__Definition__Group_1__1 ;
     public final void rule__Definition__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3409:1: ( rule__Definition__Group_1__0__Impl rule__Definition__Group_1__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3410:2: rule__Definition__Group_1__0__Impl rule__Definition__Group_1__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3440:1: ( rule__Definition__Group_1__0__Impl rule__Definition__Group_1__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3441:2: rule__Definition__Group_1__0__Impl rule__Definition__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Definition__Group_1__0__Impl_in_rule__Definition__Group_1__07004);
+            pushFollow(FOLLOW_rule__Definition__Group_1__0__Impl_in_rule__Definition__Group_1__07067);
             rule__Definition__Group_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Definition__Group_1__1_in_rule__Definition__Group_1__07007);
+            pushFollow(FOLLOW_rule__Definition__Group_1__1_in_rule__Definition__Group_1__07070);
             rule__Definition__Group_1__1();
             _fsp--;
 
@@ -9599,20 +9673,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Definition__Group_1__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3417:1: rule__Definition__Group_1__0__Impl : ( '(' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3448:1: rule__Definition__Group_1__0__Impl : ( '(' ) ;
     public final void rule__Definition__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3421:1: ( ( '(' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3422:1: ( '(' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3452:1: ( ( '(' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3453:1: ( '(' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3422:1: ( '(' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3423:1: '('
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3453:1: ( '(' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3454:1: '('
             {
              before(grammarAccess.getDefinitionAccess().getLeftParenthesisKeyword_1_0()); 
-            match(input,30,FOLLOW_30_in_rule__Definition__Group_1__0__Impl7035); 
+            match(input,30,FOLLOW_30_in_rule__Definition__Group_1__0__Impl7098); 
              after(grammarAccess.getDefinitionAccess().getLeftParenthesisKeyword_1_0()); 
 
             }
@@ -9636,20 +9710,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Definition__Group_1__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3436:1: rule__Definition__Group_1__1 : rule__Definition__Group_1__1__Impl rule__Definition__Group_1__2 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3467:1: rule__Definition__Group_1__1 : rule__Definition__Group_1__1__Impl rule__Definition__Group_1__2 ;
     public final void rule__Definition__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3440:1: ( rule__Definition__Group_1__1__Impl rule__Definition__Group_1__2 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3441:2: rule__Definition__Group_1__1__Impl rule__Definition__Group_1__2
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3471:1: ( rule__Definition__Group_1__1__Impl rule__Definition__Group_1__2 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3472:2: rule__Definition__Group_1__1__Impl rule__Definition__Group_1__2
             {
-            pushFollow(FOLLOW_rule__Definition__Group_1__1__Impl_in_rule__Definition__Group_1__17066);
+            pushFollow(FOLLOW_rule__Definition__Group_1__1__Impl_in_rule__Definition__Group_1__17129);
             rule__Definition__Group_1__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Definition__Group_1__2_in_rule__Definition__Group_1__17069);
+            pushFollow(FOLLOW_rule__Definition__Group_1__2_in_rule__Definition__Group_1__17132);
             rule__Definition__Group_1__2();
             _fsp--;
 
@@ -9672,31 +9746,31 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Definition__Group_1__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3448:1: rule__Definition__Group_1__1__Impl : ( ( rule__Definition__ArgsAssignment_1_1 )? ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3479:1: rule__Definition__Group_1__1__Impl : ( ( rule__Definition__ArgsAssignment_1_1 )? ) ;
     public final void rule__Definition__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3452:1: ( ( ( rule__Definition__ArgsAssignment_1_1 )? ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3453:1: ( ( rule__Definition__ArgsAssignment_1_1 )? )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3483:1: ( ( ( rule__Definition__ArgsAssignment_1_1 )? ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3484:1: ( ( rule__Definition__ArgsAssignment_1_1 )? )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3453:1: ( ( rule__Definition__ArgsAssignment_1_1 )? )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3454:1: ( rule__Definition__ArgsAssignment_1_1 )?
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3484:1: ( ( rule__Definition__ArgsAssignment_1_1 )? )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3485:1: ( rule__Definition__ArgsAssignment_1_1 )?
             {
              before(grammarAccess.getDefinitionAccess().getArgsAssignment_1_1()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3455:1: ( rule__Definition__ArgsAssignment_1_1 )?
-            int alt37=2;
-            int LA37_0 = input.LA(1);
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3486:1: ( rule__Definition__ArgsAssignment_1_1 )?
+            int alt38=2;
+            int LA38_0 = input.LA(1);
 
-            if ( (LA37_0==RULE_ID) ) {
-                alt37=1;
+            if ( (LA38_0==RULE_ID) ) {
+                alt38=1;
             }
-            switch (alt37) {
+            switch (alt38) {
                 case 1 :
-                    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3455:2: rule__Definition__ArgsAssignment_1_1
+                    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3486:2: rule__Definition__ArgsAssignment_1_1
                     {
-                    pushFollow(FOLLOW_rule__Definition__ArgsAssignment_1_1_in_rule__Definition__Group_1__1__Impl7096);
+                    pushFollow(FOLLOW_rule__Definition__ArgsAssignment_1_1_in_rule__Definition__Group_1__1__Impl7159);
                     rule__Definition__ArgsAssignment_1_1();
                     _fsp--;
 
@@ -9729,20 +9803,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Definition__Group_1__2
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3465:1: rule__Definition__Group_1__2 : rule__Definition__Group_1__2__Impl rule__Definition__Group_1__3 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3496:1: rule__Definition__Group_1__2 : rule__Definition__Group_1__2__Impl rule__Definition__Group_1__3 ;
     public final void rule__Definition__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3469:1: ( rule__Definition__Group_1__2__Impl rule__Definition__Group_1__3 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3470:2: rule__Definition__Group_1__2__Impl rule__Definition__Group_1__3
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3500:1: ( rule__Definition__Group_1__2__Impl rule__Definition__Group_1__3 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3501:2: rule__Definition__Group_1__2__Impl rule__Definition__Group_1__3
             {
-            pushFollow(FOLLOW_rule__Definition__Group_1__2__Impl_in_rule__Definition__Group_1__27127);
+            pushFollow(FOLLOW_rule__Definition__Group_1__2__Impl_in_rule__Definition__Group_1__27190);
             rule__Definition__Group_1__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Definition__Group_1__3_in_rule__Definition__Group_1__27130);
+            pushFollow(FOLLOW_rule__Definition__Group_1__3_in_rule__Definition__Group_1__27193);
             rule__Definition__Group_1__3();
             _fsp--;
 
@@ -9765,35 +9839,35 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Definition__Group_1__2__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3477:1: rule__Definition__Group_1__2__Impl : ( ( rule__Definition__Group_1_2__0 )* ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3508:1: rule__Definition__Group_1__2__Impl : ( ( rule__Definition__Group_1_2__0 )* ) ;
     public final void rule__Definition__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3481:1: ( ( ( rule__Definition__Group_1_2__0 )* ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3482:1: ( ( rule__Definition__Group_1_2__0 )* )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3512:1: ( ( ( rule__Definition__Group_1_2__0 )* ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3513:1: ( ( rule__Definition__Group_1_2__0 )* )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3482:1: ( ( rule__Definition__Group_1_2__0 )* )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3483:1: ( rule__Definition__Group_1_2__0 )*
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3513:1: ( ( rule__Definition__Group_1_2__0 )* )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3514:1: ( rule__Definition__Group_1_2__0 )*
             {
              before(grammarAccess.getDefinitionAccess().getGroup_1_2()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3484:1: ( rule__Definition__Group_1_2__0 )*
-            loop38:
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3515:1: ( rule__Definition__Group_1_2__0 )*
+            loop39:
             do {
-                int alt38=2;
-                int LA38_0 = input.LA(1);
+                int alt39=2;
+                int LA39_0 = input.LA(1);
 
-                if ( (LA38_0==26) ) {
-                    alt38=1;
+                if ( (LA39_0==26) ) {
+                    alt39=1;
                 }
 
 
-                switch (alt38) {
+                switch (alt39) {
             	case 1 :
-            	    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3484:2: rule__Definition__Group_1_2__0
+            	    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3515:2: rule__Definition__Group_1_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__Definition__Group_1_2__0_in_rule__Definition__Group_1__2__Impl7157);
+            	    pushFollow(FOLLOW_rule__Definition__Group_1_2__0_in_rule__Definition__Group_1__2__Impl7220);
             	    rule__Definition__Group_1_2__0();
             	    _fsp--;
 
@@ -9802,7 +9876,7 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop38;
+            	    break loop39;
                 }
             } while (true);
 
@@ -9829,16 +9903,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Definition__Group_1__3
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3494:1: rule__Definition__Group_1__3 : rule__Definition__Group_1__3__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3525:1: rule__Definition__Group_1__3 : rule__Definition__Group_1__3__Impl ;
     public final void rule__Definition__Group_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3498:1: ( rule__Definition__Group_1__3__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3499:2: rule__Definition__Group_1__3__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3529:1: ( rule__Definition__Group_1__3__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3530:2: rule__Definition__Group_1__3__Impl
             {
-            pushFollow(FOLLOW_rule__Definition__Group_1__3__Impl_in_rule__Definition__Group_1__37188);
+            pushFollow(FOLLOW_rule__Definition__Group_1__3__Impl_in_rule__Definition__Group_1__37251);
             rule__Definition__Group_1__3__Impl();
             _fsp--;
 
@@ -9861,20 +9935,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Definition__Group_1__3__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3505:1: rule__Definition__Group_1__3__Impl : ( ')' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3536:1: rule__Definition__Group_1__3__Impl : ( ')' ) ;
     public final void rule__Definition__Group_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3509:1: ( ( ')' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3510:1: ( ')' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3540:1: ( ( ')' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3541:1: ( ')' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3510:1: ( ')' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3511:1: ')'
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3541:1: ( ')' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3542:1: ')'
             {
              before(grammarAccess.getDefinitionAccess().getRightParenthesisKeyword_1_3()); 
-            match(input,31,FOLLOW_31_in_rule__Definition__Group_1__3__Impl7216); 
+            match(input,31,FOLLOW_31_in_rule__Definition__Group_1__3__Impl7279); 
              after(grammarAccess.getDefinitionAccess().getRightParenthesisKeyword_1_3()); 
 
             }
@@ -9898,20 +9972,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Definition__Group_1_2__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3532:1: rule__Definition__Group_1_2__0 : rule__Definition__Group_1_2__0__Impl rule__Definition__Group_1_2__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3563:1: rule__Definition__Group_1_2__0 : rule__Definition__Group_1_2__0__Impl rule__Definition__Group_1_2__1 ;
     public final void rule__Definition__Group_1_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3536:1: ( rule__Definition__Group_1_2__0__Impl rule__Definition__Group_1_2__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3537:2: rule__Definition__Group_1_2__0__Impl rule__Definition__Group_1_2__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3567:1: ( rule__Definition__Group_1_2__0__Impl rule__Definition__Group_1_2__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3568:2: rule__Definition__Group_1_2__0__Impl rule__Definition__Group_1_2__1
             {
-            pushFollow(FOLLOW_rule__Definition__Group_1_2__0__Impl_in_rule__Definition__Group_1_2__07255);
+            pushFollow(FOLLOW_rule__Definition__Group_1_2__0__Impl_in_rule__Definition__Group_1_2__07318);
             rule__Definition__Group_1_2__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Definition__Group_1_2__1_in_rule__Definition__Group_1_2__07258);
+            pushFollow(FOLLOW_rule__Definition__Group_1_2__1_in_rule__Definition__Group_1_2__07321);
             rule__Definition__Group_1_2__1();
             _fsp--;
 
@@ -9934,20 +10008,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Definition__Group_1_2__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3544:1: rule__Definition__Group_1_2__0__Impl : ( ',' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3575:1: rule__Definition__Group_1_2__0__Impl : ( ',' ) ;
     public final void rule__Definition__Group_1_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3548:1: ( ( ',' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3549:1: ( ',' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3579:1: ( ( ',' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3580:1: ( ',' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3549:1: ( ',' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3550:1: ','
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3580:1: ( ',' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3581:1: ','
             {
              before(grammarAccess.getDefinitionAccess().getCommaKeyword_1_2_0()); 
-            match(input,26,FOLLOW_26_in_rule__Definition__Group_1_2__0__Impl7286); 
+            match(input,26,FOLLOW_26_in_rule__Definition__Group_1_2__0__Impl7349); 
              after(grammarAccess.getDefinitionAccess().getCommaKeyword_1_2_0()); 
 
             }
@@ -9971,16 +10045,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Definition__Group_1_2__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3563:1: rule__Definition__Group_1_2__1 : rule__Definition__Group_1_2__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3594:1: rule__Definition__Group_1_2__1 : rule__Definition__Group_1_2__1__Impl ;
     public final void rule__Definition__Group_1_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3567:1: ( rule__Definition__Group_1_2__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3568:2: rule__Definition__Group_1_2__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3598:1: ( rule__Definition__Group_1_2__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3599:2: rule__Definition__Group_1_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Definition__Group_1_2__1__Impl_in_rule__Definition__Group_1_2__17317);
+            pushFollow(FOLLOW_rule__Definition__Group_1_2__1__Impl_in_rule__Definition__Group_1_2__17380);
             rule__Definition__Group_1_2__1__Impl();
             _fsp--;
 
@@ -10003,23 +10077,23 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Definition__Group_1_2__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3574:1: rule__Definition__Group_1_2__1__Impl : ( ( rule__Definition__ArgsAssignment_1_2_1 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3605:1: rule__Definition__Group_1_2__1__Impl : ( ( rule__Definition__ArgsAssignment_1_2_1 ) ) ;
     public final void rule__Definition__Group_1_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3578:1: ( ( ( rule__Definition__ArgsAssignment_1_2_1 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3579:1: ( ( rule__Definition__ArgsAssignment_1_2_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3609:1: ( ( ( rule__Definition__ArgsAssignment_1_2_1 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3610:1: ( ( rule__Definition__ArgsAssignment_1_2_1 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3579:1: ( ( rule__Definition__ArgsAssignment_1_2_1 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3580:1: ( rule__Definition__ArgsAssignment_1_2_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3610:1: ( ( rule__Definition__ArgsAssignment_1_2_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3611:1: ( rule__Definition__ArgsAssignment_1_2_1 )
             {
              before(grammarAccess.getDefinitionAccess().getArgsAssignment_1_2_1()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3581:1: ( rule__Definition__ArgsAssignment_1_2_1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3581:2: rule__Definition__ArgsAssignment_1_2_1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3612:1: ( rule__Definition__ArgsAssignment_1_2_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3612:2: rule__Definition__ArgsAssignment_1_2_1
             {
-            pushFollow(FOLLOW_rule__Definition__ArgsAssignment_1_2_1_in_rule__Definition__Group_1_2__1__Impl7344);
+            pushFollow(FOLLOW_rule__Definition__ArgsAssignment_1_2_1_in_rule__Definition__Group_1_2__1__Impl7407);
             rule__Definition__ArgsAssignment_1_2_1();
             _fsp--;
 
@@ -10049,20 +10123,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Definition__Group_2__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3595:1: rule__Definition__Group_2__0 : rule__Definition__Group_2__0__Impl rule__Definition__Group_2__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3626:1: rule__Definition__Group_2__0 : rule__Definition__Group_2__0__Impl rule__Definition__Group_2__1 ;
     public final void rule__Definition__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3599:1: ( rule__Definition__Group_2__0__Impl rule__Definition__Group_2__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3600:2: rule__Definition__Group_2__0__Impl rule__Definition__Group_2__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3630:1: ( rule__Definition__Group_2__0__Impl rule__Definition__Group_2__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3631:2: rule__Definition__Group_2__0__Impl rule__Definition__Group_2__1
             {
-            pushFollow(FOLLOW_rule__Definition__Group_2__0__Impl_in_rule__Definition__Group_2__07378);
+            pushFollow(FOLLOW_rule__Definition__Group_2__0__Impl_in_rule__Definition__Group_2__07441);
             rule__Definition__Group_2__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Definition__Group_2__1_in_rule__Definition__Group_2__07381);
+            pushFollow(FOLLOW_rule__Definition__Group_2__1_in_rule__Definition__Group_2__07444);
             rule__Definition__Group_2__1();
             _fsp--;
 
@@ -10085,20 +10159,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Definition__Group_2__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3607:1: rule__Definition__Group_2__0__Impl : ( ':' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3638:1: rule__Definition__Group_2__0__Impl : ( ':' ) ;
     public final void rule__Definition__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3611:1: ( ( ':' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3612:1: ( ':' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3642:1: ( ( ':' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3643:1: ( ':' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3612:1: ( ':' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3613:1: ':'
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3643:1: ( ':' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3644:1: ':'
             {
              before(grammarAccess.getDefinitionAccess().getColonKeyword_2_0()); 
-            match(input,21,FOLLOW_21_in_rule__Definition__Group_2__0__Impl7409); 
+            match(input,21,FOLLOW_21_in_rule__Definition__Group_2__0__Impl7472); 
              after(grammarAccess.getDefinitionAccess().getColonKeyword_2_0()); 
 
             }
@@ -10122,16 +10196,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Definition__Group_2__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3626:1: rule__Definition__Group_2__1 : rule__Definition__Group_2__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3657:1: rule__Definition__Group_2__1 : rule__Definition__Group_2__1__Impl ;
     public final void rule__Definition__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3630:1: ( rule__Definition__Group_2__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3631:2: rule__Definition__Group_2__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3661:1: ( rule__Definition__Group_2__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3662:2: rule__Definition__Group_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Definition__Group_2__1__Impl_in_rule__Definition__Group_2__17440);
+            pushFollow(FOLLOW_rule__Definition__Group_2__1__Impl_in_rule__Definition__Group_2__17503);
             rule__Definition__Group_2__1__Impl();
             _fsp--;
 
@@ -10154,23 +10228,23 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Definition__Group_2__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3637:1: rule__Definition__Group_2__1__Impl : ( ( rule__Definition__ReturnAssignment_2_1 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3668:1: rule__Definition__Group_2__1__Impl : ( ( rule__Definition__ReturnAssignment_2_1 ) ) ;
     public final void rule__Definition__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3641:1: ( ( ( rule__Definition__ReturnAssignment_2_1 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3642:1: ( ( rule__Definition__ReturnAssignment_2_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3672:1: ( ( ( rule__Definition__ReturnAssignment_2_1 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3673:1: ( ( rule__Definition__ReturnAssignment_2_1 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3642:1: ( ( rule__Definition__ReturnAssignment_2_1 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3643:1: ( rule__Definition__ReturnAssignment_2_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3673:1: ( ( rule__Definition__ReturnAssignment_2_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3674:1: ( rule__Definition__ReturnAssignment_2_1 )
             {
              before(grammarAccess.getDefinitionAccess().getReturnAssignment_2_1()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3644:1: ( rule__Definition__ReturnAssignment_2_1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3644:2: rule__Definition__ReturnAssignment_2_1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3675:1: ( rule__Definition__ReturnAssignment_2_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3675:2: rule__Definition__ReturnAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__Definition__ReturnAssignment_2_1_in_rule__Definition__Group_2__1__Impl7467);
+            pushFollow(FOLLOW_rule__Definition__ReturnAssignment_2_1_in_rule__Definition__Group_2__1__Impl7530);
             rule__Definition__ReturnAssignment_2_1();
             _fsp--;
 
@@ -10200,20 +10274,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Expression__Group_1__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3658:1: rule__Expression__Group_1__0 : rule__Expression__Group_1__0__Impl rule__Expression__Group_1__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3689:1: rule__Expression__Group_1__0 : rule__Expression__Group_1__0__Impl rule__Expression__Group_1__1 ;
     public final void rule__Expression__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3662:1: ( rule__Expression__Group_1__0__Impl rule__Expression__Group_1__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3663:2: rule__Expression__Group_1__0__Impl rule__Expression__Group_1__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3693:1: ( rule__Expression__Group_1__0__Impl rule__Expression__Group_1__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3694:2: rule__Expression__Group_1__0__Impl rule__Expression__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Expression__Group_1__0__Impl_in_rule__Expression__Group_1__07501);
+            pushFollow(FOLLOW_rule__Expression__Group_1__0__Impl_in_rule__Expression__Group_1__07564);
             rule__Expression__Group_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Expression__Group_1__1_in_rule__Expression__Group_1__07504);
+            pushFollow(FOLLOW_rule__Expression__Group_1__1_in_rule__Expression__Group_1__07567);
             rule__Expression__Group_1__1();
             _fsp--;
 
@@ -10236,23 +10310,23 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Expression__Group_1__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3670:1: rule__Expression__Group_1__0__Impl : ( ( rule__Expression__QualifiersAssignment_1_0 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3701:1: rule__Expression__Group_1__0__Impl : ( ( rule__Expression__QualifiersAssignment_1_0 ) ) ;
     public final void rule__Expression__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3674:1: ( ( ( rule__Expression__QualifiersAssignment_1_0 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3675:1: ( ( rule__Expression__QualifiersAssignment_1_0 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3705:1: ( ( ( rule__Expression__QualifiersAssignment_1_0 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3706:1: ( ( rule__Expression__QualifiersAssignment_1_0 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3675:1: ( ( rule__Expression__QualifiersAssignment_1_0 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3676:1: ( rule__Expression__QualifiersAssignment_1_0 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3706:1: ( ( rule__Expression__QualifiersAssignment_1_0 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3707:1: ( rule__Expression__QualifiersAssignment_1_0 )
             {
              before(grammarAccess.getExpressionAccess().getQualifiersAssignment_1_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3677:1: ( rule__Expression__QualifiersAssignment_1_0 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3677:2: rule__Expression__QualifiersAssignment_1_0
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3708:1: ( rule__Expression__QualifiersAssignment_1_0 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3708:2: rule__Expression__QualifiersAssignment_1_0
             {
-            pushFollow(FOLLOW_rule__Expression__QualifiersAssignment_1_0_in_rule__Expression__Group_1__0__Impl7531);
+            pushFollow(FOLLOW_rule__Expression__QualifiersAssignment_1_0_in_rule__Expression__Group_1__0__Impl7594);
             rule__Expression__QualifiersAssignment_1_0();
             _fsp--;
 
@@ -10282,16 +10356,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Expression__Group_1__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3687:1: rule__Expression__Group_1__1 : rule__Expression__Group_1__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3718:1: rule__Expression__Group_1__1 : rule__Expression__Group_1__1__Impl ;
     public final void rule__Expression__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3691:1: ( rule__Expression__Group_1__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3692:2: rule__Expression__Group_1__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3722:1: ( rule__Expression__Group_1__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3723:2: rule__Expression__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Expression__Group_1__1__Impl_in_rule__Expression__Group_1__17561);
+            pushFollow(FOLLOW_rule__Expression__Group_1__1__Impl_in_rule__Expression__Group_1__17624);
             rule__Expression__Group_1__1__Impl();
             _fsp--;
 
@@ -10314,23 +10388,23 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Expression__Group_1__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3698:1: rule__Expression__Group_1__1__Impl : ( ( rule__Expression__ExprAssignment_1_1 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3729:1: rule__Expression__Group_1__1__Impl : ( ( rule__Expression__ExprAssignment_1_1 ) ) ;
     public final void rule__Expression__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3702:1: ( ( ( rule__Expression__ExprAssignment_1_1 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3703:1: ( ( rule__Expression__ExprAssignment_1_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3733:1: ( ( ( rule__Expression__ExprAssignment_1_1 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3734:1: ( ( rule__Expression__ExprAssignment_1_1 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3703:1: ( ( rule__Expression__ExprAssignment_1_1 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3704:1: ( rule__Expression__ExprAssignment_1_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3734:1: ( ( rule__Expression__ExprAssignment_1_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3735:1: ( rule__Expression__ExprAssignment_1_1 )
             {
              before(grammarAccess.getExpressionAccess().getExprAssignment_1_1()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3705:1: ( rule__Expression__ExprAssignment_1_1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3705:2: rule__Expression__ExprAssignment_1_1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3736:1: ( rule__Expression__ExprAssignment_1_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3736:2: rule__Expression__ExprAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__Expression__ExprAssignment_1_1_in_rule__Expression__Group_1__1__Impl7588);
+            pushFollow(FOLLOW_rule__Expression__ExprAssignment_1_1_in_rule__Expression__Group_1__1__Impl7651);
             rule__Expression__ExprAssignment_1_1();
             _fsp--;
 
@@ -10360,20 +10434,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Parameters__Group__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3719:1: rule__Parameters__Group__0 : rule__Parameters__Group__0__Impl rule__Parameters__Group__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3750:1: rule__Parameters__Group__0 : rule__Parameters__Group__0__Impl rule__Parameters__Group__1 ;
     public final void rule__Parameters__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3723:1: ( rule__Parameters__Group__0__Impl rule__Parameters__Group__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3724:2: rule__Parameters__Group__0__Impl rule__Parameters__Group__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3754:1: ( rule__Parameters__Group__0__Impl rule__Parameters__Group__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3755:2: rule__Parameters__Group__0__Impl rule__Parameters__Group__1
             {
-            pushFollow(FOLLOW_rule__Parameters__Group__0__Impl_in_rule__Parameters__Group__07622);
+            pushFollow(FOLLOW_rule__Parameters__Group__0__Impl_in_rule__Parameters__Group__07685);
             rule__Parameters__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Parameters__Group__1_in_rule__Parameters__Group__07625);
+            pushFollow(FOLLOW_rule__Parameters__Group__1_in_rule__Parameters__Group__07688);
             rule__Parameters__Group__1();
             _fsp--;
 
@@ -10396,23 +10470,23 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Parameters__Group__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3731:1: rule__Parameters__Group__0__Impl : ( ( rule__Parameters__NamesAssignment_0 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3762:1: rule__Parameters__Group__0__Impl : ( ( rule__Parameters__NamesAssignment_0 ) ) ;
     public final void rule__Parameters__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3735:1: ( ( ( rule__Parameters__NamesAssignment_0 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3736:1: ( ( rule__Parameters__NamesAssignment_0 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3766:1: ( ( ( rule__Parameters__NamesAssignment_0 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3767:1: ( ( rule__Parameters__NamesAssignment_0 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3736:1: ( ( rule__Parameters__NamesAssignment_0 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3737:1: ( rule__Parameters__NamesAssignment_0 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3767:1: ( ( rule__Parameters__NamesAssignment_0 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3768:1: ( rule__Parameters__NamesAssignment_0 )
             {
              before(grammarAccess.getParametersAccess().getNamesAssignment_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3738:1: ( rule__Parameters__NamesAssignment_0 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3738:2: rule__Parameters__NamesAssignment_0
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3769:1: ( rule__Parameters__NamesAssignment_0 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3769:2: rule__Parameters__NamesAssignment_0
             {
-            pushFollow(FOLLOW_rule__Parameters__NamesAssignment_0_in_rule__Parameters__Group__0__Impl7652);
+            pushFollow(FOLLOW_rule__Parameters__NamesAssignment_0_in_rule__Parameters__Group__0__Impl7715);
             rule__Parameters__NamesAssignment_0();
             _fsp--;
 
@@ -10442,16 +10516,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Parameters__Group__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3748:1: rule__Parameters__Group__1 : rule__Parameters__Group__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3779:1: rule__Parameters__Group__1 : rule__Parameters__Group__1__Impl ;
     public final void rule__Parameters__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3752:1: ( rule__Parameters__Group__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3753:2: rule__Parameters__Group__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3783:1: ( rule__Parameters__Group__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3784:2: rule__Parameters__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Parameters__Group__1__Impl_in_rule__Parameters__Group__17682);
+            pushFollow(FOLLOW_rule__Parameters__Group__1__Impl_in_rule__Parameters__Group__17745);
             rule__Parameters__Group__1__Impl();
             _fsp--;
 
@@ -10474,35 +10548,35 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Parameters__Group__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3759:1: rule__Parameters__Group__1__Impl : ( ( rule__Parameters__Group_1__0 )* ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3790:1: rule__Parameters__Group__1__Impl : ( ( rule__Parameters__Group_1__0 )* ) ;
     public final void rule__Parameters__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3763:1: ( ( ( rule__Parameters__Group_1__0 )* ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3764:1: ( ( rule__Parameters__Group_1__0 )* )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3794:1: ( ( ( rule__Parameters__Group_1__0 )* ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3795:1: ( ( rule__Parameters__Group_1__0 )* )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3764:1: ( ( rule__Parameters__Group_1__0 )* )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3765:1: ( rule__Parameters__Group_1__0 )*
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3795:1: ( ( rule__Parameters__Group_1__0 )* )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3796:1: ( rule__Parameters__Group_1__0 )*
             {
              before(grammarAccess.getParametersAccess().getGroup_1()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3766:1: ( rule__Parameters__Group_1__0 )*
-            loop39:
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3797:1: ( rule__Parameters__Group_1__0 )*
+            loop40:
             do {
-                int alt39=2;
-                int LA39_0 = input.LA(1);
+                int alt40=2;
+                int LA40_0 = input.LA(1);
 
-                if ( (LA39_0==26) ) {
-                    alt39=1;
+                if ( (LA40_0==26) ) {
+                    alt40=1;
                 }
 
 
-                switch (alt39) {
+                switch (alt40) {
             	case 1 :
-            	    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3766:2: rule__Parameters__Group_1__0
+            	    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3797:2: rule__Parameters__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__Parameters__Group_1__0_in_rule__Parameters__Group__1__Impl7709);
+            	    pushFollow(FOLLOW_rule__Parameters__Group_1__0_in_rule__Parameters__Group__1__Impl7772);
             	    rule__Parameters__Group_1__0();
             	    _fsp--;
 
@@ -10511,7 +10585,7 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop39;
+            	    break loop40;
                 }
             } while (true);
 
@@ -10538,20 +10612,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Parameters__Group_1__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3780:1: rule__Parameters__Group_1__0 : rule__Parameters__Group_1__0__Impl rule__Parameters__Group_1__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3811:1: rule__Parameters__Group_1__0 : rule__Parameters__Group_1__0__Impl rule__Parameters__Group_1__1 ;
     public final void rule__Parameters__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3784:1: ( rule__Parameters__Group_1__0__Impl rule__Parameters__Group_1__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3785:2: rule__Parameters__Group_1__0__Impl rule__Parameters__Group_1__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3815:1: ( rule__Parameters__Group_1__0__Impl rule__Parameters__Group_1__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3816:2: rule__Parameters__Group_1__0__Impl rule__Parameters__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Parameters__Group_1__0__Impl_in_rule__Parameters__Group_1__07744);
+            pushFollow(FOLLOW_rule__Parameters__Group_1__0__Impl_in_rule__Parameters__Group_1__07807);
             rule__Parameters__Group_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Parameters__Group_1__1_in_rule__Parameters__Group_1__07747);
+            pushFollow(FOLLOW_rule__Parameters__Group_1__1_in_rule__Parameters__Group_1__07810);
             rule__Parameters__Group_1__1();
             _fsp--;
 
@@ -10574,20 +10648,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Parameters__Group_1__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3792:1: rule__Parameters__Group_1__0__Impl : ( ',' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3823:1: rule__Parameters__Group_1__0__Impl : ( ',' ) ;
     public final void rule__Parameters__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3796:1: ( ( ',' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3797:1: ( ',' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3827:1: ( ( ',' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3828:1: ( ',' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3797:1: ( ',' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3798:1: ','
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3828:1: ( ',' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3829:1: ','
             {
              before(grammarAccess.getParametersAccess().getCommaKeyword_1_0()); 
-            match(input,26,FOLLOW_26_in_rule__Parameters__Group_1__0__Impl7775); 
+            match(input,26,FOLLOW_26_in_rule__Parameters__Group_1__0__Impl7838); 
              after(grammarAccess.getParametersAccess().getCommaKeyword_1_0()); 
 
             }
@@ -10611,16 +10685,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Parameters__Group_1__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3811:1: rule__Parameters__Group_1__1 : rule__Parameters__Group_1__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3842:1: rule__Parameters__Group_1__1 : rule__Parameters__Group_1__1__Impl ;
     public final void rule__Parameters__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3815:1: ( rule__Parameters__Group_1__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3816:2: rule__Parameters__Group_1__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3846:1: ( rule__Parameters__Group_1__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3847:2: rule__Parameters__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Parameters__Group_1__1__Impl_in_rule__Parameters__Group_1__17806);
+            pushFollow(FOLLOW_rule__Parameters__Group_1__1__Impl_in_rule__Parameters__Group_1__17869);
             rule__Parameters__Group_1__1__Impl();
             _fsp--;
 
@@ -10643,23 +10717,23 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Parameters__Group_1__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3822:1: rule__Parameters__Group_1__1__Impl : ( ( rule__Parameters__NamesAssignment_1_1 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3853:1: rule__Parameters__Group_1__1__Impl : ( ( rule__Parameters__NamesAssignment_1_1 ) ) ;
     public final void rule__Parameters__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3826:1: ( ( ( rule__Parameters__NamesAssignment_1_1 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3827:1: ( ( rule__Parameters__NamesAssignment_1_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3857:1: ( ( ( rule__Parameters__NamesAssignment_1_1 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3858:1: ( ( rule__Parameters__NamesAssignment_1_1 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3827:1: ( ( rule__Parameters__NamesAssignment_1_1 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3828:1: ( rule__Parameters__NamesAssignment_1_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3858:1: ( ( rule__Parameters__NamesAssignment_1_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3859:1: ( rule__Parameters__NamesAssignment_1_1 )
             {
              before(grammarAccess.getParametersAccess().getNamesAssignment_1_1()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3829:1: ( rule__Parameters__NamesAssignment_1_1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3829:2: rule__Parameters__NamesAssignment_1_1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3860:1: ( rule__Parameters__NamesAssignment_1_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3860:2: rule__Parameters__NamesAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__Parameters__NamesAssignment_1_1_in_rule__Parameters__Group_1__1__Impl7833);
+            pushFollow(FOLLOW_rule__Parameters__NamesAssignment_1_1_in_rule__Parameters__Group_1__1__Impl7896);
             rule__Parameters__NamesAssignment_1_1();
             _fsp--;
 
@@ -10689,20 +10763,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Exists__Group__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3843:1: rule__Exists__Group__0 : rule__Exists__Group__0__Impl rule__Exists__Group__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3874:1: rule__Exists__Group__0 : rule__Exists__Group__0__Impl rule__Exists__Group__1 ;
     public final void rule__Exists__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3847:1: ( rule__Exists__Group__0__Impl rule__Exists__Group__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3848:2: rule__Exists__Group__0__Impl rule__Exists__Group__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3878:1: ( rule__Exists__Group__0__Impl rule__Exists__Group__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3879:2: rule__Exists__Group__0__Impl rule__Exists__Group__1
             {
-            pushFollow(FOLLOW_rule__Exists__Group__0__Impl_in_rule__Exists__Group__07867);
+            pushFollow(FOLLOW_rule__Exists__Group__0__Impl_in_rule__Exists__Group__07930);
             rule__Exists__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Exists__Group__1_in_rule__Exists__Group__07870);
+            pushFollow(FOLLOW_rule__Exists__Group__1_in_rule__Exists__Group__07933);
             rule__Exists__Group__1();
             _fsp--;
 
@@ -10725,31 +10799,31 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Exists__Group__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3855:1: rule__Exists__Group__0__Impl : ( ( rule__Exists__OpAssignment_0 )? ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3886:1: rule__Exists__Group__0__Impl : ( ( rule__Exists__OpAssignment_0 )? ) ;
     public final void rule__Exists__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3859:1: ( ( ( rule__Exists__OpAssignment_0 )? ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3860:1: ( ( rule__Exists__OpAssignment_0 )? )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3890:1: ( ( ( rule__Exists__OpAssignment_0 )? ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3891:1: ( ( rule__Exists__OpAssignment_0 )? )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3860:1: ( ( rule__Exists__OpAssignment_0 )? )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3861:1: ( rule__Exists__OpAssignment_0 )?
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3891:1: ( ( rule__Exists__OpAssignment_0 )? )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3892:1: ( rule__Exists__OpAssignment_0 )?
             {
              before(grammarAccess.getExistsAccess().getOpAssignment_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3862:1: ( rule__Exists__OpAssignment_0 )?
-            int alt40=2;
-            int LA40_0 = input.LA(1);
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3893:1: ( rule__Exists__OpAssignment_0 )?
+            int alt41=2;
+            int LA41_0 = input.LA(1);
 
-            if ( (LA40_0==12) ) {
-                alt40=1;
+            if ( (LA41_0==12) ) {
+                alt41=1;
             }
-            switch (alt40) {
+            switch (alt41) {
                 case 1 :
-                    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3862:2: rule__Exists__OpAssignment_0
+                    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3893:2: rule__Exists__OpAssignment_0
                     {
-                    pushFollow(FOLLOW_rule__Exists__OpAssignment_0_in_rule__Exists__Group__0__Impl7897);
+                    pushFollow(FOLLOW_rule__Exists__OpAssignment_0_in_rule__Exists__Group__0__Impl7960);
                     rule__Exists__OpAssignment_0();
                     _fsp--;
 
@@ -10782,20 +10856,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Exists__Group__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3872:1: rule__Exists__Group__1 : rule__Exists__Group__1__Impl rule__Exists__Group__2 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3903:1: rule__Exists__Group__1 : rule__Exists__Group__1__Impl rule__Exists__Group__2 ;
     public final void rule__Exists__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3876:1: ( rule__Exists__Group__1__Impl rule__Exists__Group__2 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3877:2: rule__Exists__Group__1__Impl rule__Exists__Group__2
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3907:1: ( rule__Exists__Group__1__Impl rule__Exists__Group__2 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3908:2: rule__Exists__Group__1__Impl rule__Exists__Group__2
             {
-            pushFollow(FOLLOW_rule__Exists__Group__1__Impl_in_rule__Exists__Group__17928);
+            pushFollow(FOLLOW_rule__Exists__Group__1__Impl_in_rule__Exists__Group__17991);
             rule__Exists__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Exists__Group__2_in_rule__Exists__Group__17931);
+            pushFollow(FOLLOW_rule__Exists__Group__2_in_rule__Exists__Group__17994);
             rule__Exists__Group__2();
             _fsp--;
 
@@ -10818,20 +10892,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Exists__Group__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3884:1: rule__Exists__Group__1__Impl : ( '{' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3915:1: rule__Exists__Group__1__Impl : ( '{' ) ;
     public final void rule__Exists__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3888:1: ( ( '{' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3889:1: ( '{' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3919:1: ( ( '{' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3920:1: ( '{' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3889:1: ( '{' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3890:1: '{'
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3920:1: ( '{' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3921:1: '{'
             {
              before(grammarAccess.getExistsAccess().getLeftCurlyBracketKeyword_1()); 
-            match(input,32,FOLLOW_32_in_rule__Exists__Group__1__Impl7959); 
+            match(input,32,FOLLOW_32_in_rule__Exists__Group__1__Impl8022); 
              after(grammarAccess.getExistsAccess().getLeftCurlyBracketKeyword_1()); 
 
             }
@@ -10855,20 +10929,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Exists__Group__2
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3903:1: rule__Exists__Group__2 : rule__Exists__Group__2__Impl rule__Exists__Group__3 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3934:1: rule__Exists__Group__2 : rule__Exists__Group__2__Impl rule__Exists__Group__3 ;
     public final void rule__Exists__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3907:1: ( rule__Exists__Group__2__Impl rule__Exists__Group__3 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3908:2: rule__Exists__Group__2__Impl rule__Exists__Group__3
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3938:1: ( rule__Exists__Group__2__Impl rule__Exists__Group__3 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3939:2: rule__Exists__Group__2__Impl rule__Exists__Group__3
             {
-            pushFollow(FOLLOW_rule__Exists__Group__2__Impl_in_rule__Exists__Group__27990);
+            pushFollow(FOLLOW_rule__Exists__Group__2__Impl_in_rule__Exists__Group__28053);
             rule__Exists__Group__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Exists__Group__3_in_rule__Exists__Group__27993);
+            pushFollow(FOLLOW_rule__Exists__Group__3_in_rule__Exists__Group__28056);
             rule__Exists__Group__3();
             _fsp--;
 
@@ -10891,23 +10965,23 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Exists__Group__2__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3915:1: rule__Exists__Group__2__Impl : ( ( rule__Exists__ParametersAssignment_2 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3946:1: rule__Exists__Group__2__Impl : ( ( rule__Exists__ParametersAssignment_2 ) ) ;
     public final void rule__Exists__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3919:1: ( ( ( rule__Exists__ParametersAssignment_2 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3920:1: ( ( rule__Exists__ParametersAssignment_2 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3950:1: ( ( ( rule__Exists__ParametersAssignment_2 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3951:1: ( ( rule__Exists__ParametersAssignment_2 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3920:1: ( ( rule__Exists__ParametersAssignment_2 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3921:1: ( rule__Exists__ParametersAssignment_2 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3951:1: ( ( rule__Exists__ParametersAssignment_2 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3952:1: ( rule__Exists__ParametersAssignment_2 )
             {
              before(grammarAccess.getExistsAccess().getParametersAssignment_2()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3922:1: ( rule__Exists__ParametersAssignment_2 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3922:2: rule__Exists__ParametersAssignment_2
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3953:1: ( rule__Exists__ParametersAssignment_2 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3953:2: rule__Exists__ParametersAssignment_2
             {
-            pushFollow(FOLLOW_rule__Exists__ParametersAssignment_2_in_rule__Exists__Group__2__Impl8020);
+            pushFollow(FOLLOW_rule__Exists__ParametersAssignment_2_in_rule__Exists__Group__2__Impl8083);
             rule__Exists__ParametersAssignment_2();
             _fsp--;
 
@@ -10937,16 +11011,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Exists__Group__3
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3932:1: rule__Exists__Group__3 : rule__Exists__Group__3__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3963:1: rule__Exists__Group__3 : rule__Exists__Group__3__Impl ;
     public final void rule__Exists__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3936:1: ( rule__Exists__Group__3__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3937:2: rule__Exists__Group__3__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3967:1: ( rule__Exists__Group__3__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3968:2: rule__Exists__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__Exists__Group__3__Impl_in_rule__Exists__Group__38050);
+            pushFollow(FOLLOW_rule__Exists__Group__3__Impl_in_rule__Exists__Group__38113);
             rule__Exists__Group__3__Impl();
             _fsp--;
 
@@ -10969,20 +11043,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Exists__Group__3__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3943:1: rule__Exists__Group__3__Impl : ( '}' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3974:1: rule__Exists__Group__3__Impl : ( '}' ) ;
     public final void rule__Exists__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3947:1: ( ( '}' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3948:1: ( '}' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3978:1: ( ( '}' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3979:1: ( '}' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3948:1: ( '}' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3949:1: '}'
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3979:1: ( '}' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3980:1: '}'
             {
              before(grammarAccess.getExistsAccess().getRightCurlyBracketKeyword_3()); 
-            match(input,33,FOLLOW_33_in_rule__Exists__Group__3__Impl8078); 
+            match(input,33,FOLLOW_33_in_rule__Exists__Group__3__Impl8141); 
              after(grammarAccess.getExistsAccess().getRightCurlyBracketKeyword_3()); 
 
             }
@@ -11006,20 +11080,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Forall__Group__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3970:1: rule__Forall__Group__0 : rule__Forall__Group__0__Impl rule__Forall__Group__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4001:1: rule__Forall__Group__0 : rule__Forall__Group__0__Impl rule__Forall__Group__1 ;
     public final void rule__Forall__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3974:1: ( rule__Forall__Group__0__Impl rule__Forall__Group__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3975:2: rule__Forall__Group__0__Impl rule__Forall__Group__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4005:1: ( rule__Forall__Group__0__Impl rule__Forall__Group__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4006:2: rule__Forall__Group__0__Impl rule__Forall__Group__1
             {
-            pushFollow(FOLLOW_rule__Forall__Group__0__Impl_in_rule__Forall__Group__08117);
+            pushFollow(FOLLOW_rule__Forall__Group__0__Impl_in_rule__Forall__Group__08180);
             rule__Forall__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Forall__Group__1_in_rule__Forall__Group__08120);
+            pushFollow(FOLLOW_rule__Forall__Group__1_in_rule__Forall__Group__08183);
             rule__Forall__Group__1();
             _fsp--;
 
@@ -11042,31 +11116,31 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Forall__Group__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3982:1: rule__Forall__Group__0__Impl : ( ( rule__Forall__OpAssignment_0 )? ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4013:1: rule__Forall__Group__0__Impl : ( ( rule__Forall__OpAssignment_0 )? ) ;
     public final void rule__Forall__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3986:1: ( ( ( rule__Forall__OpAssignment_0 )? ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3987:1: ( ( rule__Forall__OpAssignment_0 )? )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4017:1: ( ( ( rule__Forall__OpAssignment_0 )? ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4018:1: ( ( rule__Forall__OpAssignment_0 )? )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3987:1: ( ( rule__Forall__OpAssignment_0 )? )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3988:1: ( rule__Forall__OpAssignment_0 )?
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4018:1: ( ( rule__Forall__OpAssignment_0 )? )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4019:1: ( rule__Forall__OpAssignment_0 )?
             {
              before(grammarAccess.getForallAccess().getOpAssignment_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3989:1: ( rule__Forall__OpAssignment_0 )?
-            int alt41=2;
-            int LA41_0 = input.LA(1);
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4020:1: ( rule__Forall__OpAssignment_0 )?
+            int alt42=2;
+            int LA42_0 = input.LA(1);
 
-            if ( (LA41_0==12) ) {
-                alt41=1;
+            if ( (LA42_0==12) ) {
+                alt42=1;
             }
-            switch (alt41) {
+            switch (alt42) {
                 case 1 :
-                    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3989:2: rule__Forall__OpAssignment_0
+                    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4020:2: rule__Forall__OpAssignment_0
                     {
-                    pushFollow(FOLLOW_rule__Forall__OpAssignment_0_in_rule__Forall__Group__0__Impl8147);
+                    pushFollow(FOLLOW_rule__Forall__OpAssignment_0_in_rule__Forall__Group__0__Impl8210);
                     rule__Forall__OpAssignment_0();
                     _fsp--;
 
@@ -11099,20 +11173,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Forall__Group__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:3999:1: rule__Forall__Group__1 : rule__Forall__Group__1__Impl rule__Forall__Group__2 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4030:1: rule__Forall__Group__1 : rule__Forall__Group__1__Impl rule__Forall__Group__2 ;
     public final void rule__Forall__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4003:1: ( rule__Forall__Group__1__Impl rule__Forall__Group__2 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4004:2: rule__Forall__Group__1__Impl rule__Forall__Group__2
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4034:1: ( rule__Forall__Group__1__Impl rule__Forall__Group__2 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4035:2: rule__Forall__Group__1__Impl rule__Forall__Group__2
             {
-            pushFollow(FOLLOW_rule__Forall__Group__1__Impl_in_rule__Forall__Group__18178);
+            pushFollow(FOLLOW_rule__Forall__Group__1__Impl_in_rule__Forall__Group__18241);
             rule__Forall__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Forall__Group__2_in_rule__Forall__Group__18181);
+            pushFollow(FOLLOW_rule__Forall__Group__2_in_rule__Forall__Group__18244);
             rule__Forall__Group__2();
             _fsp--;
 
@@ -11135,20 +11209,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Forall__Group__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4011:1: rule__Forall__Group__1__Impl : ( '[' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4042:1: rule__Forall__Group__1__Impl : ( '[' ) ;
     public final void rule__Forall__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4015:1: ( ( '[' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4016:1: ( '[' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4046:1: ( ( '[' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4047:1: ( '[' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4016:1: ( '[' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4017:1: '['
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4047:1: ( '[' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4048:1: '['
             {
              before(grammarAccess.getForallAccess().getLeftSquareBracketKeyword_1()); 
-            match(input,34,FOLLOW_34_in_rule__Forall__Group__1__Impl8209); 
+            match(input,34,FOLLOW_34_in_rule__Forall__Group__1__Impl8272); 
              after(grammarAccess.getForallAccess().getLeftSquareBracketKeyword_1()); 
 
             }
@@ -11172,20 +11246,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Forall__Group__2
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4030:1: rule__Forall__Group__2 : rule__Forall__Group__2__Impl rule__Forall__Group__3 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4061:1: rule__Forall__Group__2 : rule__Forall__Group__2__Impl rule__Forall__Group__3 ;
     public final void rule__Forall__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4034:1: ( rule__Forall__Group__2__Impl rule__Forall__Group__3 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4035:2: rule__Forall__Group__2__Impl rule__Forall__Group__3
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4065:1: ( rule__Forall__Group__2__Impl rule__Forall__Group__3 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4066:2: rule__Forall__Group__2__Impl rule__Forall__Group__3
             {
-            pushFollow(FOLLOW_rule__Forall__Group__2__Impl_in_rule__Forall__Group__28240);
+            pushFollow(FOLLOW_rule__Forall__Group__2__Impl_in_rule__Forall__Group__28303);
             rule__Forall__Group__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Forall__Group__3_in_rule__Forall__Group__28243);
+            pushFollow(FOLLOW_rule__Forall__Group__3_in_rule__Forall__Group__28306);
             rule__Forall__Group__3();
             _fsp--;
 
@@ -11208,23 +11282,23 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Forall__Group__2__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4042:1: rule__Forall__Group__2__Impl : ( ( rule__Forall__ParametersAssignment_2 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4073:1: rule__Forall__Group__2__Impl : ( ( rule__Forall__ParametersAssignment_2 ) ) ;
     public final void rule__Forall__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4046:1: ( ( ( rule__Forall__ParametersAssignment_2 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4047:1: ( ( rule__Forall__ParametersAssignment_2 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4077:1: ( ( ( rule__Forall__ParametersAssignment_2 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4078:1: ( ( rule__Forall__ParametersAssignment_2 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4047:1: ( ( rule__Forall__ParametersAssignment_2 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4048:1: ( rule__Forall__ParametersAssignment_2 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4078:1: ( ( rule__Forall__ParametersAssignment_2 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4079:1: ( rule__Forall__ParametersAssignment_2 )
             {
              before(grammarAccess.getForallAccess().getParametersAssignment_2()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4049:1: ( rule__Forall__ParametersAssignment_2 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4049:2: rule__Forall__ParametersAssignment_2
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4080:1: ( rule__Forall__ParametersAssignment_2 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4080:2: rule__Forall__ParametersAssignment_2
             {
-            pushFollow(FOLLOW_rule__Forall__ParametersAssignment_2_in_rule__Forall__Group__2__Impl8270);
+            pushFollow(FOLLOW_rule__Forall__ParametersAssignment_2_in_rule__Forall__Group__2__Impl8333);
             rule__Forall__ParametersAssignment_2();
             _fsp--;
 
@@ -11254,16 +11328,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Forall__Group__3
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4059:1: rule__Forall__Group__3 : rule__Forall__Group__3__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4090:1: rule__Forall__Group__3 : rule__Forall__Group__3__Impl ;
     public final void rule__Forall__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4063:1: ( rule__Forall__Group__3__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4064:2: rule__Forall__Group__3__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4094:1: ( rule__Forall__Group__3__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4095:2: rule__Forall__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__Forall__Group__3__Impl_in_rule__Forall__Group__38300);
+            pushFollow(FOLLOW_rule__Forall__Group__3__Impl_in_rule__Forall__Group__38363);
             rule__Forall__Group__3__Impl();
             _fsp--;
 
@@ -11286,20 +11360,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Forall__Group__3__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4070:1: rule__Forall__Group__3__Impl : ( ']' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4101:1: rule__Forall__Group__3__Impl : ( ']' ) ;
     public final void rule__Forall__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4074:1: ( ( ']' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4075:1: ( ']' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4105:1: ( ( ']' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4106:1: ( ']' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4075:1: ( ']' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4076:1: ']'
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4106:1: ( ']' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4107:1: ']'
             {
              before(grammarAccess.getForallAccess().getRightSquareBracketKeyword_3()); 
-            match(input,35,FOLLOW_35_in_rule__Forall__Group__3__Impl8328); 
+            match(input,35,FOLLOW_35_in_rule__Forall__Group__3__Impl8391); 
              after(grammarAccess.getForallAccess().getRightSquareBracketKeyword_3()); 
 
             }
@@ -11323,20 +11397,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AssignmentOp__Group__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4097:1: rule__AssignmentOp__Group__0 : rule__AssignmentOp__Group__0__Impl rule__AssignmentOp__Group__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4128:1: rule__AssignmentOp__Group__0 : rule__AssignmentOp__Group__0__Impl rule__AssignmentOp__Group__1 ;
     public final void rule__AssignmentOp__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4101:1: ( rule__AssignmentOp__Group__0__Impl rule__AssignmentOp__Group__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4102:2: rule__AssignmentOp__Group__0__Impl rule__AssignmentOp__Group__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4132:1: ( rule__AssignmentOp__Group__0__Impl rule__AssignmentOp__Group__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4133:2: rule__AssignmentOp__Group__0__Impl rule__AssignmentOp__Group__1
             {
-            pushFollow(FOLLOW_rule__AssignmentOp__Group__0__Impl_in_rule__AssignmentOp__Group__08367);
+            pushFollow(FOLLOW_rule__AssignmentOp__Group__0__Impl_in_rule__AssignmentOp__Group__08430);
             rule__AssignmentOp__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__AssignmentOp__Group__1_in_rule__AssignmentOp__Group__08370);
+            pushFollow(FOLLOW_rule__AssignmentOp__Group__1_in_rule__AssignmentOp__Group__08433);
             rule__AssignmentOp__Group__1();
             _fsp--;
 
@@ -11359,20 +11433,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AssignmentOp__Group__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4109:1: rule__AssignmentOp__Group__0__Impl : ( ruleOrExp ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4140:1: rule__AssignmentOp__Group__0__Impl : ( ruleOrExp ) ;
     public final void rule__AssignmentOp__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4113:1: ( ( ruleOrExp ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4114:1: ( ruleOrExp )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4144:1: ( ( ruleOrExp ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4145:1: ( ruleOrExp )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4114:1: ( ruleOrExp )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4115:1: ruleOrExp
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4145:1: ( ruleOrExp )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4146:1: ruleOrExp
             {
              before(grammarAccess.getAssignmentOpAccess().getOrExpParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleOrExp_in_rule__AssignmentOp__Group__0__Impl8397);
+            pushFollow(FOLLOW_ruleOrExp_in_rule__AssignmentOp__Group__0__Impl8460);
             ruleOrExp();
             _fsp--;
 
@@ -11399,16 +11473,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AssignmentOp__Group__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4126:1: rule__AssignmentOp__Group__1 : rule__AssignmentOp__Group__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4157:1: rule__AssignmentOp__Group__1 : rule__AssignmentOp__Group__1__Impl ;
     public final void rule__AssignmentOp__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4130:1: ( rule__AssignmentOp__Group__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4131:2: rule__AssignmentOp__Group__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4161:1: ( rule__AssignmentOp__Group__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4162:2: rule__AssignmentOp__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__AssignmentOp__Group__1__Impl_in_rule__AssignmentOp__Group__18426);
+            pushFollow(FOLLOW_rule__AssignmentOp__Group__1__Impl_in_rule__AssignmentOp__Group__18489);
             rule__AssignmentOp__Group__1__Impl();
             _fsp--;
 
@@ -11431,31 +11505,31 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AssignmentOp__Group__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4137:1: rule__AssignmentOp__Group__1__Impl : ( ( rule__AssignmentOp__Group_1__0 )? ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4168:1: rule__AssignmentOp__Group__1__Impl : ( ( rule__AssignmentOp__Group_1__0 )? ) ;
     public final void rule__AssignmentOp__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4141:1: ( ( ( rule__AssignmentOp__Group_1__0 )? ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4142:1: ( ( rule__AssignmentOp__Group_1__0 )? )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4172:1: ( ( ( rule__AssignmentOp__Group_1__0 )? ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4173:1: ( ( rule__AssignmentOp__Group_1__0 )? )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4142:1: ( ( rule__AssignmentOp__Group_1__0 )? )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4143:1: ( rule__AssignmentOp__Group_1__0 )?
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4173:1: ( ( rule__AssignmentOp__Group_1__0 )? )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4174:1: ( rule__AssignmentOp__Group_1__0 )?
             {
              before(grammarAccess.getAssignmentOpAccess().getGroup_1()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4144:1: ( rule__AssignmentOp__Group_1__0 )?
-            int alt42=2;
-            int LA42_0 = input.LA(1);
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4175:1: ( rule__AssignmentOp__Group_1__0 )?
+            int alt43=2;
+            int LA43_0 = input.LA(1);
 
-            if ( ((LA42_0>=36 && LA42_0<=37)) ) {
-                alt42=1;
+            if ( ((LA43_0>=36 && LA43_0<=37)) ) {
+                alt43=1;
             }
-            switch (alt42) {
+            switch (alt43) {
                 case 1 :
-                    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4144:2: rule__AssignmentOp__Group_1__0
+                    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4175:2: rule__AssignmentOp__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__AssignmentOp__Group_1__0_in_rule__AssignmentOp__Group__1__Impl8453);
+                    pushFollow(FOLLOW_rule__AssignmentOp__Group_1__0_in_rule__AssignmentOp__Group__1__Impl8516);
                     rule__AssignmentOp__Group_1__0();
                     _fsp--;
 
@@ -11488,20 +11562,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AssignmentOp__Group_1__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4158:1: rule__AssignmentOp__Group_1__0 : rule__AssignmentOp__Group_1__0__Impl rule__AssignmentOp__Group_1__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4189:1: rule__AssignmentOp__Group_1__0 : rule__AssignmentOp__Group_1__0__Impl rule__AssignmentOp__Group_1__1 ;
     public final void rule__AssignmentOp__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4162:1: ( rule__AssignmentOp__Group_1__0__Impl rule__AssignmentOp__Group_1__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4163:2: rule__AssignmentOp__Group_1__0__Impl rule__AssignmentOp__Group_1__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4193:1: ( rule__AssignmentOp__Group_1__0__Impl rule__AssignmentOp__Group_1__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4194:2: rule__AssignmentOp__Group_1__0__Impl rule__AssignmentOp__Group_1__1
             {
-            pushFollow(FOLLOW_rule__AssignmentOp__Group_1__0__Impl_in_rule__AssignmentOp__Group_1__08488);
+            pushFollow(FOLLOW_rule__AssignmentOp__Group_1__0__Impl_in_rule__AssignmentOp__Group_1__08551);
             rule__AssignmentOp__Group_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__AssignmentOp__Group_1__1_in_rule__AssignmentOp__Group_1__08491);
+            pushFollow(FOLLOW_rule__AssignmentOp__Group_1__1_in_rule__AssignmentOp__Group_1__08554);
             rule__AssignmentOp__Group_1__1();
             _fsp--;
 
@@ -11524,23 +11598,23 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AssignmentOp__Group_1__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4170:1: rule__AssignmentOp__Group_1__0__Impl : ( ( rule__AssignmentOp__Alternatives_1_0 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4201:1: rule__AssignmentOp__Group_1__0__Impl : ( ( rule__AssignmentOp__Alternatives_1_0 ) ) ;
     public final void rule__AssignmentOp__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4174:1: ( ( ( rule__AssignmentOp__Alternatives_1_0 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4175:1: ( ( rule__AssignmentOp__Alternatives_1_0 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4205:1: ( ( ( rule__AssignmentOp__Alternatives_1_0 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4206:1: ( ( rule__AssignmentOp__Alternatives_1_0 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4175:1: ( ( rule__AssignmentOp__Alternatives_1_0 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4176:1: ( rule__AssignmentOp__Alternatives_1_0 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4206:1: ( ( rule__AssignmentOp__Alternatives_1_0 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4207:1: ( rule__AssignmentOp__Alternatives_1_0 )
             {
              before(grammarAccess.getAssignmentOpAccess().getAlternatives_1_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4177:1: ( rule__AssignmentOp__Alternatives_1_0 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4177:2: rule__AssignmentOp__Alternatives_1_0
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4208:1: ( rule__AssignmentOp__Alternatives_1_0 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4208:2: rule__AssignmentOp__Alternatives_1_0
             {
-            pushFollow(FOLLOW_rule__AssignmentOp__Alternatives_1_0_in_rule__AssignmentOp__Group_1__0__Impl8518);
+            pushFollow(FOLLOW_rule__AssignmentOp__Alternatives_1_0_in_rule__AssignmentOp__Group_1__0__Impl8581);
             rule__AssignmentOp__Alternatives_1_0();
             _fsp--;
 
@@ -11570,20 +11644,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AssignmentOp__Group_1__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4187:1: rule__AssignmentOp__Group_1__1 : rule__AssignmentOp__Group_1__1__Impl rule__AssignmentOp__Group_1__2 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4218:1: rule__AssignmentOp__Group_1__1 : rule__AssignmentOp__Group_1__1__Impl rule__AssignmentOp__Group_1__2 ;
     public final void rule__AssignmentOp__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4191:1: ( rule__AssignmentOp__Group_1__1__Impl rule__AssignmentOp__Group_1__2 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4192:2: rule__AssignmentOp__Group_1__1__Impl rule__AssignmentOp__Group_1__2
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4222:1: ( rule__AssignmentOp__Group_1__1__Impl rule__AssignmentOp__Group_1__2 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4223:2: rule__AssignmentOp__Group_1__1__Impl rule__AssignmentOp__Group_1__2
             {
-            pushFollow(FOLLOW_rule__AssignmentOp__Group_1__1__Impl_in_rule__AssignmentOp__Group_1__18548);
+            pushFollow(FOLLOW_rule__AssignmentOp__Group_1__1__Impl_in_rule__AssignmentOp__Group_1__18611);
             rule__AssignmentOp__Group_1__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__AssignmentOp__Group_1__2_in_rule__AssignmentOp__Group_1__18551);
+            pushFollow(FOLLOW_rule__AssignmentOp__Group_1__2_in_rule__AssignmentOp__Group_1__18614);
             rule__AssignmentOp__Group_1__2();
             _fsp--;
 
@@ -11606,38 +11680,38 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AssignmentOp__Group_1__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4199:1: rule__AssignmentOp__Group_1__1__Impl : ( ( rule__AssignmentOp__QAssignment_1_1 )? ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4230:1: rule__AssignmentOp__Group_1__1__Impl : ( ( rule__AssignmentOp__QAssignment_1_1 )? ) ;
     public final void rule__AssignmentOp__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4203:1: ( ( ( rule__AssignmentOp__QAssignment_1_1 )? ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4204:1: ( ( rule__AssignmentOp__QAssignment_1_1 )? )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4234:1: ( ( ( rule__AssignmentOp__QAssignment_1_1 )? ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4235:1: ( ( rule__AssignmentOp__QAssignment_1_1 )? )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4204:1: ( ( rule__AssignmentOp__QAssignment_1_1 )? )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4205:1: ( rule__AssignmentOp__QAssignment_1_1 )?
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4235:1: ( ( rule__AssignmentOp__QAssignment_1_1 )? )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4236:1: ( rule__AssignmentOp__QAssignment_1_1 )?
             {
              before(grammarAccess.getAssignmentOpAccess().getQAssignment_1_1()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4206:1: ( rule__AssignmentOp__QAssignment_1_1 )?
-            int alt43=2;
-            int LA43_0 = input.LA(1);
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4237:1: ( rule__AssignmentOp__QAssignment_1_1 )?
+            int alt44=2;
+            int LA44_0 = input.LA(1);
 
-            if ( (LA43_0==12) ) {
-                int LA43_1 = input.LA(2);
+            if ( (LA44_0==12) ) {
+                int LA44_1 = input.LA(2);
 
-                if ( (LA43_1==32||LA43_1==34) ) {
-                    alt43=1;
+                if ( (LA44_1==32||LA44_1==34) ) {
+                    alt44=1;
                 }
             }
-            else if ( (LA43_0==32||LA43_0==34) ) {
-                alt43=1;
+            else if ( (LA44_0==32||LA44_0==34) ) {
+                alt44=1;
             }
-            switch (alt43) {
+            switch (alt44) {
                 case 1 :
-                    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4206:2: rule__AssignmentOp__QAssignment_1_1
+                    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4237:2: rule__AssignmentOp__QAssignment_1_1
                     {
-                    pushFollow(FOLLOW_rule__AssignmentOp__QAssignment_1_1_in_rule__AssignmentOp__Group_1__1__Impl8578);
+                    pushFollow(FOLLOW_rule__AssignmentOp__QAssignment_1_1_in_rule__AssignmentOp__Group_1__1__Impl8641);
                     rule__AssignmentOp__QAssignment_1_1();
                     _fsp--;
 
@@ -11670,16 +11744,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AssignmentOp__Group_1__2
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4216:1: rule__AssignmentOp__Group_1__2 : rule__AssignmentOp__Group_1__2__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4247:1: rule__AssignmentOp__Group_1__2 : rule__AssignmentOp__Group_1__2__Impl ;
     public final void rule__AssignmentOp__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4220:1: ( rule__AssignmentOp__Group_1__2__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4221:2: rule__AssignmentOp__Group_1__2__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4251:1: ( rule__AssignmentOp__Group_1__2__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4252:2: rule__AssignmentOp__Group_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__AssignmentOp__Group_1__2__Impl_in_rule__AssignmentOp__Group_1__28609);
+            pushFollow(FOLLOW_rule__AssignmentOp__Group_1__2__Impl_in_rule__AssignmentOp__Group_1__28672);
             rule__AssignmentOp__Group_1__2__Impl();
             _fsp--;
 
@@ -11702,23 +11776,23 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AssignmentOp__Group_1__2__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4227:1: rule__AssignmentOp__Group_1__2__Impl : ( ( rule__AssignmentOp__RightAssignment_1_2 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4258:1: rule__AssignmentOp__Group_1__2__Impl : ( ( rule__AssignmentOp__RightAssignment_1_2 ) ) ;
     public final void rule__AssignmentOp__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4231:1: ( ( ( rule__AssignmentOp__RightAssignment_1_2 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4232:1: ( ( rule__AssignmentOp__RightAssignment_1_2 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4262:1: ( ( ( rule__AssignmentOp__RightAssignment_1_2 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4263:1: ( ( rule__AssignmentOp__RightAssignment_1_2 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4232:1: ( ( rule__AssignmentOp__RightAssignment_1_2 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4233:1: ( rule__AssignmentOp__RightAssignment_1_2 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4263:1: ( ( rule__AssignmentOp__RightAssignment_1_2 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4264:1: ( rule__AssignmentOp__RightAssignment_1_2 )
             {
              before(grammarAccess.getAssignmentOpAccess().getRightAssignment_1_2()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4234:1: ( rule__AssignmentOp__RightAssignment_1_2 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4234:2: rule__AssignmentOp__RightAssignment_1_2
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4265:1: ( rule__AssignmentOp__RightAssignment_1_2 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4265:2: rule__AssignmentOp__RightAssignment_1_2
             {
-            pushFollow(FOLLOW_rule__AssignmentOp__RightAssignment_1_2_in_rule__AssignmentOp__Group_1__2__Impl8636);
+            pushFollow(FOLLOW_rule__AssignmentOp__RightAssignment_1_2_in_rule__AssignmentOp__Group_1__2__Impl8699);
             rule__AssignmentOp__RightAssignment_1_2();
             _fsp--;
 
@@ -11748,20 +11822,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AssignmentOp__Group_1_0_0__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4250:1: rule__AssignmentOp__Group_1_0_0__0 : rule__AssignmentOp__Group_1_0_0__0__Impl rule__AssignmentOp__Group_1_0_0__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4281:1: rule__AssignmentOp__Group_1_0_0__0 : rule__AssignmentOp__Group_1_0_0__0__Impl rule__AssignmentOp__Group_1_0_0__1 ;
     public final void rule__AssignmentOp__Group_1_0_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4254:1: ( rule__AssignmentOp__Group_1_0_0__0__Impl rule__AssignmentOp__Group_1_0_0__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4255:2: rule__AssignmentOp__Group_1_0_0__0__Impl rule__AssignmentOp__Group_1_0_0__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4285:1: ( rule__AssignmentOp__Group_1_0_0__0__Impl rule__AssignmentOp__Group_1_0_0__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4286:2: rule__AssignmentOp__Group_1_0_0__0__Impl rule__AssignmentOp__Group_1_0_0__1
             {
-            pushFollow(FOLLOW_rule__AssignmentOp__Group_1_0_0__0__Impl_in_rule__AssignmentOp__Group_1_0_0__08672);
+            pushFollow(FOLLOW_rule__AssignmentOp__Group_1_0_0__0__Impl_in_rule__AssignmentOp__Group_1_0_0__08735);
             rule__AssignmentOp__Group_1_0_0__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__AssignmentOp__Group_1_0_0__1_in_rule__AssignmentOp__Group_1_0_0__08675);
+            pushFollow(FOLLOW_rule__AssignmentOp__Group_1_0_0__1_in_rule__AssignmentOp__Group_1_0_0__08738);
             rule__AssignmentOp__Group_1_0_0__1();
             _fsp--;
 
@@ -11784,21 +11858,21 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AssignmentOp__Group_1_0_0__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4262:1: rule__AssignmentOp__Group_1_0_0__0__Impl : ( () ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4293:1: rule__AssignmentOp__Group_1_0_0__0__Impl : ( () ) ;
     public final void rule__AssignmentOp__Group_1_0_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4266:1: ( ( () ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4267:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4297:1: ( ( () ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4298:1: ( () )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4267:1: ( () )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4268:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4298:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4299:1: ()
             {
              before(grammarAccess.getAssignmentOpAccess().getAssignPlusLeftAction_1_0_0_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4269:1: ()
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4271:1: 
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4300:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4302:1: 
             {
             }
 
@@ -11821,16 +11895,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AssignmentOp__Group_1_0_0__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4281:1: rule__AssignmentOp__Group_1_0_0__1 : rule__AssignmentOp__Group_1_0_0__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4312:1: rule__AssignmentOp__Group_1_0_0__1 : rule__AssignmentOp__Group_1_0_0__1__Impl ;
     public final void rule__AssignmentOp__Group_1_0_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4285:1: ( rule__AssignmentOp__Group_1_0_0__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4286:2: rule__AssignmentOp__Group_1_0_0__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4316:1: ( rule__AssignmentOp__Group_1_0_0__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4317:2: rule__AssignmentOp__Group_1_0_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__AssignmentOp__Group_1_0_0__1__Impl_in_rule__AssignmentOp__Group_1_0_0__18733);
+            pushFollow(FOLLOW_rule__AssignmentOp__Group_1_0_0__1__Impl_in_rule__AssignmentOp__Group_1_0_0__18796);
             rule__AssignmentOp__Group_1_0_0__1__Impl();
             _fsp--;
 
@@ -11853,20 +11927,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AssignmentOp__Group_1_0_0__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4292:1: rule__AssignmentOp__Group_1_0_0__1__Impl : ( '->' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4323:1: rule__AssignmentOp__Group_1_0_0__1__Impl : ( '->' ) ;
     public final void rule__AssignmentOp__Group_1_0_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4296:1: ( ( '->' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4297:1: ( '->' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4327:1: ( ( '->' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4328:1: ( '->' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4297:1: ( '->' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4298:1: '->'
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4328:1: ( '->' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4329:1: '->'
             {
              before(grammarAccess.getAssignmentOpAccess().getHyphenMinusGreaterThanSignKeyword_1_0_0_1()); 
-            match(input,36,FOLLOW_36_in_rule__AssignmentOp__Group_1_0_0__1__Impl8761); 
+            match(input,36,FOLLOW_36_in_rule__AssignmentOp__Group_1_0_0__1__Impl8824); 
              after(grammarAccess.getAssignmentOpAccess().getHyphenMinusGreaterThanSignKeyword_1_0_0_1()); 
 
             }
@@ -11890,20 +11964,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AssignmentOp__Group_1_0_1__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4315:1: rule__AssignmentOp__Group_1_0_1__0 : rule__AssignmentOp__Group_1_0_1__0__Impl rule__AssignmentOp__Group_1_0_1__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4346:1: rule__AssignmentOp__Group_1_0_1__0 : rule__AssignmentOp__Group_1_0_1__0__Impl rule__AssignmentOp__Group_1_0_1__1 ;
     public final void rule__AssignmentOp__Group_1_0_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4319:1: ( rule__AssignmentOp__Group_1_0_1__0__Impl rule__AssignmentOp__Group_1_0_1__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4320:2: rule__AssignmentOp__Group_1_0_1__0__Impl rule__AssignmentOp__Group_1_0_1__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4350:1: ( rule__AssignmentOp__Group_1_0_1__0__Impl rule__AssignmentOp__Group_1_0_1__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4351:2: rule__AssignmentOp__Group_1_0_1__0__Impl rule__AssignmentOp__Group_1_0_1__1
             {
-            pushFollow(FOLLOW_rule__AssignmentOp__Group_1_0_1__0__Impl_in_rule__AssignmentOp__Group_1_0_1__08796);
+            pushFollow(FOLLOW_rule__AssignmentOp__Group_1_0_1__0__Impl_in_rule__AssignmentOp__Group_1_0_1__08859);
             rule__AssignmentOp__Group_1_0_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__AssignmentOp__Group_1_0_1__1_in_rule__AssignmentOp__Group_1_0_1__08799);
+            pushFollow(FOLLOW_rule__AssignmentOp__Group_1_0_1__1_in_rule__AssignmentOp__Group_1_0_1__08862);
             rule__AssignmentOp__Group_1_0_1__1();
             _fsp--;
 
@@ -11926,21 +12000,21 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AssignmentOp__Group_1_0_1__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4327:1: rule__AssignmentOp__Group_1_0_1__0__Impl : ( () ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4358:1: rule__AssignmentOp__Group_1_0_1__0__Impl : ( () ) ;
     public final void rule__AssignmentOp__Group_1_0_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4331:1: ( ( () ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4332:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4362:1: ( ( () ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4363:1: ( () )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4332:1: ( () )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4333:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4363:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4364:1: ()
             {
              before(grammarAccess.getAssignmentOpAccess().getAssignMinLeftAction_1_0_1_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4334:1: ()
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4336:1: 
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4365:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4367:1: 
             {
             }
 
@@ -11963,16 +12037,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AssignmentOp__Group_1_0_1__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4346:1: rule__AssignmentOp__Group_1_0_1__1 : rule__AssignmentOp__Group_1_0_1__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4377:1: rule__AssignmentOp__Group_1_0_1__1 : rule__AssignmentOp__Group_1_0_1__1__Impl ;
     public final void rule__AssignmentOp__Group_1_0_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4350:1: ( rule__AssignmentOp__Group_1_0_1__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4351:2: rule__AssignmentOp__Group_1_0_1__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4381:1: ( rule__AssignmentOp__Group_1_0_1__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4382:2: rule__AssignmentOp__Group_1_0_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__AssignmentOp__Group_1_0_1__1__Impl_in_rule__AssignmentOp__Group_1_0_1__18857);
+            pushFollow(FOLLOW_rule__AssignmentOp__Group_1_0_1__1__Impl_in_rule__AssignmentOp__Group_1_0_1__18920);
             rule__AssignmentOp__Group_1_0_1__1__Impl();
             _fsp--;
 
@@ -11995,20 +12069,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AssignmentOp__Group_1_0_1__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4357:1: rule__AssignmentOp__Group_1_0_1__1__Impl : ( '<->' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4388:1: rule__AssignmentOp__Group_1_0_1__1__Impl : ( '<->' ) ;
     public final void rule__AssignmentOp__Group_1_0_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4361:1: ( ( '<->' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4362:1: ( '<->' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4392:1: ( ( '<->' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4393:1: ( '<->' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4362:1: ( '<->' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4363:1: '<->'
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4393:1: ( '<->' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4394:1: '<->'
             {
              before(grammarAccess.getAssignmentOpAccess().getLessThanSignHyphenMinusGreaterThanSignKeyword_1_0_1_1()); 
-            match(input,37,FOLLOW_37_in_rule__AssignmentOp__Group_1_0_1__1__Impl8885); 
+            match(input,37,FOLLOW_37_in_rule__AssignmentOp__Group_1_0_1__1__Impl8948); 
              after(grammarAccess.getAssignmentOpAccess().getLessThanSignHyphenMinusGreaterThanSignKeyword_1_0_1_1()); 
 
             }
@@ -12032,20 +12106,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__OrExp__Group__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4380:1: rule__OrExp__Group__0 : rule__OrExp__Group__0__Impl rule__OrExp__Group__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4411:1: rule__OrExp__Group__0 : rule__OrExp__Group__0__Impl rule__OrExp__Group__1 ;
     public final void rule__OrExp__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4384:1: ( rule__OrExp__Group__0__Impl rule__OrExp__Group__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4385:2: rule__OrExp__Group__0__Impl rule__OrExp__Group__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4415:1: ( rule__OrExp__Group__0__Impl rule__OrExp__Group__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4416:2: rule__OrExp__Group__0__Impl rule__OrExp__Group__1
             {
-            pushFollow(FOLLOW_rule__OrExp__Group__0__Impl_in_rule__OrExp__Group__08920);
+            pushFollow(FOLLOW_rule__OrExp__Group__0__Impl_in_rule__OrExp__Group__08983);
             rule__OrExp__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__OrExp__Group__1_in_rule__OrExp__Group__08923);
+            pushFollow(FOLLOW_rule__OrExp__Group__1_in_rule__OrExp__Group__08986);
             rule__OrExp__Group__1();
             _fsp--;
 
@@ -12068,20 +12142,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__OrExp__Group__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4392:1: rule__OrExp__Group__0__Impl : ( ruleAndExp ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4423:1: rule__OrExp__Group__0__Impl : ( ruleAndExp ) ;
     public final void rule__OrExp__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4396:1: ( ( ruleAndExp ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4397:1: ( ruleAndExp )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4427:1: ( ( ruleAndExp ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4428:1: ( ruleAndExp )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4397:1: ( ruleAndExp )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4398:1: ruleAndExp
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4428:1: ( ruleAndExp )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4429:1: ruleAndExp
             {
              before(grammarAccess.getOrExpAccess().getAndExpParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleAndExp_in_rule__OrExp__Group__0__Impl8950);
+            pushFollow(FOLLOW_ruleAndExp_in_rule__OrExp__Group__0__Impl9013);
             ruleAndExp();
             _fsp--;
 
@@ -12108,16 +12182,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__OrExp__Group__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4409:1: rule__OrExp__Group__1 : rule__OrExp__Group__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4440:1: rule__OrExp__Group__1 : rule__OrExp__Group__1__Impl ;
     public final void rule__OrExp__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4413:1: ( rule__OrExp__Group__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4414:2: rule__OrExp__Group__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4444:1: ( rule__OrExp__Group__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4445:2: rule__OrExp__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__OrExp__Group__1__Impl_in_rule__OrExp__Group__18979);
+            pushFollow(FOLLOW_rule__OrExp__Group__1__Impl_in_rule__OrExp__Group__19042);
             rule__OrExp__Group__1__Impl();
             _fsp--;
 
@@ -12140,35 +12214,35 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__OrExp__Group__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4420:1: rule__OrExp__Group__1__Impl : ( ( rule__OrExp__Group_1__0 )* ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4451:1: rule__OrExp__Group__1__Impl : ( ( rule__OrExp__Group_1__0 )* ) ;
     public final void rule__OrExp__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4424:1: ( ( ( rule__OrExp__Group_1__0 )* ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4425:1: ( ( rule__OrExp__Group_1__0 )* )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4455:1: ( ( ( rule__OrExp__Group_1__0 )* ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4456:1: ( ( rule__OrExp__Group_1__0 )* )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4425:1: ( ( rule__OrExp__Group_1__0 )* )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4426:1: ( rule__OrExp__Group_1__0 )*
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4456:1: ( ( rule__OrExp__Group_1__0 )* )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4457:1: ( rule__OrExp__Group_1__0 )*
             {
              before(grammarAccess.getOrExpAccess().getGroup_1()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4427:1: ( rule__OrExp__Group_1__0 )*
-            loop44:
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4458:1: ( rule__OrExp__Group_1__0 )*
+            loop45:
             do {
-                int alt44=2;
-                int LA44_0 = input.LA(1);
+                int alt45=2;
+                int LA45_0 = input.LA(1);
 
-                if ( (LA44_0==38) ) {
-                    alt44=1;
+                if ( (LA45_0==38) ) {
+                    alt45=1;
                 }
 
 
-                switch (alt44) {
+                switch (alt45) {
             	case 1 :
-            	    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4427:2: rule__OrExp__Group_1__0
+            	    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4458:2: rule__OrExp__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__OrExp__Group_1__0_in_rule__OrExp__Group__1__Impl9006);
+            	    pushFollow(FOLLOW_rule__OrExp__Group_1__0_in_rule__OrExp__Group__1__Impl9069);
             	    rule__OrExp__Group_1__0();
             	    _fsp--;
 
@@ -12177,7 +12251,7 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop44;
+            	    break loop45;
                 }
             } while (true);
 
@@ -12204,20 +12278,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__OrExp__Group_1__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4441:1: rule__OrExp__Group_1__0 : rule__OrExp__Group_1__0__Impl rule__OrExp__Group_1__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4472:1: rule__OrExp__Group_1__0 : rule__OrExp__Group_1__0__Impl rule__OrExp__Group_1__1 ;
     public final void rule__OrExp__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4445:1: ( rule__OrExp__Group_1__0__Impl rule__OrExp__Group_1__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4446:2: rule__OrExp__Group_1__0__Impl rule__OrExp__Group_1__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4476:1: ( rule__OrExp__Group_1__0__Impl rule__OrExp__Group_1__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4477:2: rule__OrExp__Group_1__0__Impl rule__OrExp__Group_1__1
             {
-            pushFollow(FOLLOW_rule__OrExp__Group_1__0__Impl_in_rule__OrExp__Group_1__09041);
+            pushFollow(FOLLOW_rule__OrExp__Group_1__0__Impl_in_rule__OrExp__Group_1__09104);
             rule__OrExp__Group_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__OrExp__Group_1__1_in_rule__OrExp__Group_1__09044);
+            pushFollow(FOLLOW_rule__OrExp__Group_1__1_in_rule__OrExp__Group_1__09107);
             rule__OrExp__Group_1__1();
             _fsp--;
 
@@ -12240,21 +12314,21 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__OrExp__Group_1__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4453:1: rule__OrExp__Group_1__0__Impl : ( () ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4484:1: rule__OrExp__Group_1__0__Impl : ( () ) ;
     public final void rule__OrExp__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4457:1: ( ( () ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4458:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4488:1: ( ( () ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4489:1: ( () )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4458:1: ( () )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4459:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4489:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4490:1: ()
             {
              before(grammarAccess.getOrExpAccess().getOrLeftAction_1_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4460:1: ()
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4462:1: 
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4491:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4493:1: 
             {
             }
 
@@ -12277,20 +12351,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__OrExp__Group_1__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4472:1: rule__OrExp__Group_1__1 : rule__OrExp__Group_1__1__Impl rule__OrExp__Group_1__2 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4503:1: rule__OrExp__Group_1__1 : rule__OrExp__Group_1__1__Impl rule__OrExp__Group_1__2 ;
     public final void rule__OrExp__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4476:1: ( rule__OrExp__Group_1__1__Impl rule__OrExp__Group_1__2 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4477:2: rule__OrExp__Group_1__1__Impl rule__OrExp__Group_1__2
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4507:1: ( rule__OrExp__Group_1__1__Impl rule__OrExp__Group_1__2 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4508:2: rule__OrExp__Group_1__1__Impl rule__OrExp__Group_1__2
             {
-            pushFollow(FOLLOW_rule__OrExp__Group_1__1__Impl_in_rule__OrExp__Group_1__19102);
+            pushFollow(FOLLOW_rule__OrExp__Group_1__1__Impl_in_rule__OrExp__Group_1__19165);
             rule__OrExp__Group_1__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__OrExp__Group_1__2_in_rule__OrExp__Group_1__19105);
+            pushFollow(FOLLOW_rule__OrExp__Group_1__2_in_rule__OrExp__Group_1__19168);
             rule__OrExp__Group_1__2();
             _fsp--;
 
@@ -12313,20 +12387,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__OrExp__Group_1__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4484:1: rule__OrExp__Group_1__1__Impl : ( '|' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4515:1: rule__OrExp__Group_1__1__Impl : ( '|' ) ;
     public final void rule__OrExp__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4488:1: ( ( '|' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4489:1: ( '|' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4519:1: ( ( '|' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4520:1: ( '|' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4489:1: ( '|' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4490:1: '|'
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4520:1: ( '|' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4521:1: '|'
             {
              before(grammarAccess.getOrExpAccess().getVerticalLineKeyword_1_1()); 
-            match(input,38,FOLLOW_38_in_rule__OrExp__Group_1__1__Impl9133); 
+            match(input,38,FOLLOW_38_in_rule__OrExp__Group_1__1__Impl9196); 
              after(grammarAccess.getOrExpAccess().getVerticalLineKeyword_1_1()); 
 
             }
@@ -12350,20 +12424,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__OrExp__Group_1__2
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4503:1: rule__OrExp__Group_1__2 : rule__OrExp__Group_1__2__Impl rule__OrExp__Group_1__3 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4534:1: rule__OrExp__Group_1__2 : rule__OrExp__Group_1__2__Impl rule__OrExp__Group_1__3 ;
     public final void rule__OrExp__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4507:1: ( rule__OrExp__Group_1__2__Impl rule__OrExp__Group_1__3 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4508:2: rule__OrExp__Group_1__2__Impl rule__OrExp__Group_1__3
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4538:1: ( rule__OrExp__Group_1__2__Impl rule__OrExp__Group_1__3 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4539:2: rule__OrExp__Group_1__2__Impl rule__OrExp__Group_1__3
             {
-            pushFollow(FOLLOW_rule__OrExp__Group_1__2__Impl_in_rule__OrExp__Group_1__29164);
+            pushFollow(FOLLOW_rule__OrExp__Group_1__2__Impl_in_rule__OrExp__Group_1__29227);
             rule__OrExp__Group_1__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__OrExp__Group_1__3_in_rule__OrExp__Group_1__29167);
+            pushFollow(FOLLOW_rule__OrExp__Group_1__3_in_rule__OrExp__Group_1__29230);
             rule__OrExp__Group_1__3();
             _fsp--;
 
@@ -12386,38 +12460,38 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__OrExp__Group_1__2__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4515:1: rule__OrExp__Group_1__2__Impl : ( ( rule__OrExp__QAssignment_1_2 )? ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4546:1: rule__OrExp__Group_1__2__Impl : ( ( rule__OrExp__QAssignment_1_2 )? ) ;
     public final void rule__OrExp__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4519:1: ( ( ( rule__OrExp__QAssignment_1_2 )? ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4520:1: ( ( rule__OrExp__QAssignment_1_2 )? )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4550:1: ( ( ( rule__OrExp__QAssignment_1_2 )? ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4551:1: ( ( rule__OrExp__QAssignment_1_2 )? )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4520:1: ( ( rule__OrExp__QAssignment_1_2 )? )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4521:1: ( rule__OrExp__QAssignment_1_2 )?
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4551:1: ( ( rule__OrExp__QAssignment_1_2 )? )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4552:1: ( rule__OrExp__QAssignment_1_2 )?
             {
              before(grammarAccess.getOrExpAccess().getQAssignment_1_2()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4522:1: ( rule__OrExp__QAssignment_1_2 )?
-            int alt45=2;
-            int LA45_0 = input.LA(1);
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4553:1: ( rule__OrExp__QAssignment_1_2 )?
+            int alt46=2;
+            int LA46_0 = input.LA(1);
 
-            if ( (LA45_0==12) ) {
-                int LA45_1 = input.LA(2);
+            if ( (LA46_0==12) ) {
+                int LA46_1 = input.LA(2);
 
-                if ( (LA45_1==32||LA45_1==34) ) {
-                    alt45=1;
+                if ( (LA46_1==32||LA46_1==34) ) {
+                    alt46=1;
                 }
             }
-            else if ( (LA45_0==32||LA45_0==34) ) {
-                alt45=1;
+            else if ( (LA46_0==32||LA46_0==34) ) {
+                alt46=1;
             }
-            switch (alt45) {
+            switch (alt46) {
                 case 1 :
-                    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4522:2: rule__OrExp__QAssignment_1_2
+                    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4553:2: rule__OrExp__QAssignment_1_2
                     {
-                    pushFollow(FOLLOW_rule__OrExp__QAssignment_1_2_in_rule__OrExp__Group_1__2__Impl9194);
+                    pushFollow(FOLLOW_rule__OrExp__QAssignment_1_2_in_rule__OrExp__Group_1__2__Impl9257);
                     rule__OrExp__QAssignment_1_2();
                     _fsp--;
 
@@ -12450,16 +12524,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__OrExp__Group_1__3
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4532:1: rule__OrExp__Group_1__3 : rule__OrExp__Group_1__3__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4563:1: rule__OrExp__Group_1__3 : rule__OrExp__Group_1__3__Impl ;
     public final void rule__OrExp__Group_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4536:1: ( rule__OrExp__Group_1__3__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4537:2: rule__OrExp__Group_1__3__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4567:1: ( rule__OrExp__Group_1__3__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4568:2: rule__OrExp__Group_1__3__Impl
             {
-            pushFollow(FOLLOW_rule__OrExp__Group_1__3__Impl_in_rule__OrExp__Group_1__39225);
+            pushFollow(FOLLOW_rule__OrExp__Group_1__3__Impl_in_rule__OrExp__Group_1__39288);
             rule__OrExp__Group_1__3__Impl();
             _fsp--;
 
@@ -12482,23 +12556,23 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__OrExp__Group_1__3__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4543:1: rule__OrExp__Group_1__3__Impl : ( ( rule__OrExp__RightAssignment_1_3 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4574:1: rule__OrExp__Group_1__3__Impl : ( ( rule__OrExp__RightAssignment_1_3 ) ) ;
     public final void rule__OrExp__Group_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4547:1: ( ( ( rule__OrExp__RightAssignment_1_3 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4548:1: ( ( rule__OrExp__RightAssignment_1_3 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4578:1: ( ( ( rule__OrExp__RightAssignment_1_3 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4579:1: ( ( rule__OrExp__RightAssignment_1_3 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4548:1: ( ( rule__OrExp__RightAssignment_1_3 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4549:1: ( rule__OrExp__RightAssignment_1_3 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4579:1: ( ( rule__OrExp__RightAssignment_1_3 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4580:1: ( rule__OrExp__RightAssignment_1_3 )
             {
              before(grammarAccess.getOrExpAccess().getRightAssignment_1_3()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4550:1: ( rule__OrExp__RightAssignment_1_3 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4550:2: rule__OrExp__RightAssignment_1_3
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4581:1: ( rule__OrExp__RightAssignment_1_3 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4581:2: rule__OrExp__RightAssignment_1_3
             {
-            pushFollow(FOLLOW_rule__OrExp__RightAssignment_1_3_in_rule__OrExp__Group_1__3__Impl9252);
+            pushFollow(FOLLOW_rule__OrExp__RightAssignment_1_3_in_rule__OrExp__Group_1__3__Impl9315);
             rule__OrExp__RightAssignment_1_3();
             _fsp--;
 
@@ -12528,20 +12602,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AndExp__Group__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4568:1: rule__AndExp__Group__0 : rule__AndExp__Group__0__Impl rule__AndExp__Group__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4599:1: rule__AndExp__Group__0 : rule__AndExp__Group__0__Impl rule__AndExp__Group__1 ;
     public final void rule__AndExp__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4572:1: ( rule__AndExp__Group__0__Impl rule__AndExp__Group__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4573:2: rule__AndExp__Group__0__Impl rule__AndExp__Group__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4603:1: ( rule__AndExp__Group__0__Impl rule__AndExp__Group__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4604:2: rule__AndExp__Group__0__Impl rule__AndExp__Group__1
             {
-            pushFollow(FOLLOW_rule__AndExp__Group__0__Impl_in_rule__AndExp__Group__09290);
+            pushFollow(FOLLOW_rule__AndExp__Group__0__Impl_in_rule__AndExp__Group__09353);
             rule__AndExp__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__AndExp__Group__1_in_rule__AndExp__Group__09293);
+            pushFollow(FOLLOW_rule__AndExp__Group__1_in_rule__AndExp__Group__09356);
             rule__AndExp__Group__1();
             _fsp--;
 
@@ -12564,20 +12638,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AndExp__Group__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4580:1: rule__AndExp__Group__0__Impl : ( ruleRelational ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4611:1: rule__AndExp__Group__0__Impl : ( ruleRelational ) ;
     public final void rule__AndExp__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4584:1: ( ( ruleRelational ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4585:1: ( ruleRelational )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4615:1: ( ( ruleRelational ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4616:1: ( ruleRelational )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4585:1: ( ruleRelational )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4586:1: ruleRelational
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4616:1: ( ruleRelational )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4617:1: ruleRelational
             {
              before(grammarAccess.getAndExpAccess().getRelationalParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleRelational_in_rule__AndExp__Group__0__Impl9320);
+            pushFollow(FOLLOW_ruleRelational_in_rule__AndExp__Group__0__Impl9383);
             ruleRelational();
             _fsp--;
 
@@ -12604,16 +12678,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AndExp__Group__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4597:1: rule__AndExp__Group__1 : rule__AndExp__Group__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4628:1: rule__AndExp__Group__1 : rule__AndExp__Group__1__Impl ;
     public final void rule__AndExp__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4601:1: ( rule__AndExp__Group__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4602:2: rule__AndExp__Group__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4632:1: ( rule__AndExp__Group__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4633:2: rule__AndExp__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__AndExp__Group__1__Impl_in_rule__AndExp__Group__19349);
+            pushFollow(FOLLOW_rule__AndExp__Group__1__Impl_in_rule__AndExp__Group__19412);
             rule__AndExp__Group__1__Impl();
             _fsp--;
 
@@ -12636,35 +12710,35 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AndExp__Group__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4608:1: rule__AndExp__Group__1__Impl : ( ( rule__AndExp__Group_1__0 )* ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4639:1: rule__AndExp__Group__1__Impl : ( ( rule__AndExp__Group_1__0 )* ) ;
     public final void rule__AndExp__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4612:1: ( ( ( rule__AndExp__Group_1__0 )* ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4613:1: ( ( rule__AndExp__Group_1__0 )* )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4643:1: ( ( ( rule__AndExp__Group_1__0 )* ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4644:1: ( ( rule__AndExp__Group_1__0 )* )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4613:1: ( ( rule__AndExp__Group_1__0 )* )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4614:1: ( rule__AndExp__Group_1__0 )*
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4644:1: ( ( rule__AndExp__Group_1__0 )* )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4645:1: ( rule__AndExp__Group_1__0 )*
             {
              before(grammarAccess.getAndExpAccess().getGroup_1()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4615:1: ( rule__AndExp__Group_1__0 )*
-            loop46:
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4646:1: ( rule__AndExp__Group_1__0 )*
+            loop47:
             do {
-                int alt46=2;
-                int LA46_0 = input.LA(1);
+                int alt47=2;
+                int LA47_0 = input.LA(1);
 
-                if ( (LA46_0==39) ) {
-                    alt46=1;
+                if ( (LA47_0==39) ) {
+                    alt47=1;
                 }
 
 
-                switch (alt46) {
+                switch (alt47) {
             	case 1 :
-            	    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4615:2: rule__AndExp__Group_1__0
+            	    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4646:2: rule__AndExp__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__AndExp__Group_1__0_in_rule__AndExp__Group__1__Impl9376);
+            	    pushFollow(FOLLOW_rule__AndExp__Group_1__0_in_rule__AndExp__Group__1__Impl9439);
             	    rule__AndExp__Group_1__0();
             	    _fsp--;
 
@@ -12673,7 +12747,7 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop46;
+            	    break loop47;
                 }
             } while (true);
 
@@ -12700,20 +12774,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AndExp__Group_1__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4629:1: rule__AndExp__Group_1__0 : rule__AndExp__Group_1__0__Impl rule__AndExp__Group_1__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4660:1: rule__AndExp__Group_1__0 : rule__AndExp__Group_1__0__Impl rule__AndExp__Group_1__1 ;
     public final void rule__AndExp__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4633:1: ( rule__AndExp__Group_1__0__Impl rule__AndExp__Group_1__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4634:2: rule__AndExp__Group_1__0__Impl rule__AndExp__Group_1__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4664:1: ( rule__AndExp__Group_1__0__Impl rule__AndExp__Group_1__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4665:2: rule__AndExp__Group_1__0__Impl rule__AndExp__Group_1__1
             {
-            pushFollow(FOLLOW_rule__AndExp__Group_1__0__Impl_in_rule__AndExp__Group_1__09411);
+            pushFollow(FOLLOW_rule__AndExp__Group_1__0__Impl_in_rule__AndExp__Group_1__09474);
             rule__AndExp__Group_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__AndExp__Group_1__1_in_rule__AndExp__Group_1__09414);
+            pushFollow(FOLLOW_rule__AndExp__Group_1__1_in_rule__AndExp__Group_1__09477);
             rule__AndExp__Group_1__1();
             _fsp--;
 
@@ -12736,21 +12810,21 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AndExp__Group_1__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4641:1: rule__AndExp__Group_1__0__Impl : ( () ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4672:1: rule__AndExp__Group_1__0__Impl : ( () ) ;
     public final void rule__AndExp__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4645:1: ( ( () ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4646:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4676:1: ( ( () ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4677:1: ( () )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4646:1: ( () )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4647:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4677:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4678:1: ()
             {
              before(grammarAccess.getAndExpAccess().getAndLeftAction_1_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4648:1: ()
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4650:1: 
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4679:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4681:1: 
             {
             }
 
@@ -12773,20 +12847,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AndExp__Group_1__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4660:1: rule__AndExp__Group_1__1 : rule__AndExp__Group_1__1__Impl rule__AndExp__Group_1__2 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4691:1: rule__AndExp__Group_1__1 : rule__AndExp__Group_1__1__Impl rule__AndExp__Group_1__2 ;
     public final void rule__AndExp__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4664:1: ( rule__AndExp__Group_1__1__Impl rule__AndExp__Group_1__2 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4665:2: rule__AndExp__Group_1__1__Impl rule__AndExp__Group_1__2
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4695:1: ( rule__AndExp__Group_1__1__Impl rule__AndExp__Group_1__2 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4696:2: rule__AndExp__Group_1__1__Impl rule__AndExp__Group_1__2
             {
-            pushFollow(FOLLOW_rule__AndExp__Group_1__1__Impl_in_rule__AndExp__Group_1__19472);
+            pushFollow(FOLLOW_rule__AndExp__Group_1__1__Impl_in_rule__AndExp__Group_1__19535);
             rule__AndExp__Group_1__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__AndExp__Group_1__2_in_rule__AndExp__Group_1__19475);
+            pushFollow(FOLLOW_rule__AndExp__Group_1__2_in_rule__AndExp__Group_1__19538);
             rule__AndExp__Group_1__2();
             _fsp--;
 
@@ -12809,20 +12883,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AndExp__Group_1__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4672:1: rule__AndExp__Group_1__1__Impl : ( '&' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4703:1: rule__AndExp__Group_1__1__Impl : ( '&' ) ;
     public final void rule__AndExp__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4676:1: ( ( '&' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4677:1: ( '&' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4707:1: ( ( '&' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4708:1: ( '&' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4677:1: ( '&' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4678:1: '&'
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4708:1: ( '&' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4709:1: '&'
             {
              before(grammarAccess.getAndExpAccess().getAmpersandKeyword_1_1()); 
-            match(input,39,FOLLOW_39_in_rule__AndExp__Group_1__1__Impl9503); 
+            match(input,39,FOLLOW_39_in_rule__AndExp__Group_1__1__Impl9566); 
              after(grammarAccess.getAndExpAccess().getAmpersandKeyword_1_1()); 
 
             }
@@ -12846,20 +12920,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AndExp__Group_1__2
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4691:1: rule__AndExp__Group_1__2 : rule__AndExp__Group_1__2__Impl rule__AndExp__Group_1__3 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4722:1: rule__AndExp__Group_1__2 : rule__AndExp__Group_1__2__Impl rule__AndExp__Group_1__3 ;
     public final void rule__AndExp__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4695:1: ( rule__AndExp__Group_1__2__Impl rule__AndExp__Group_1__3 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4696:2: rule__AndExp__Group_1__2__Impl rule__AndExp__Group_1__3
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4726:1: ( rule__AndExp__Group_1__2__Impl rule__AndExp__Group_1__3 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4727:2: rule__AndExp__Group_1__2__Impl rule__AndExp__Group_1__3
             {
-            pushFollow(FOLLOW_rule__AndExp__Group_1__2__Impl_in_rule__AndExp__Group_1__29534);
+            pushFollow(FOLLOW_rule__AndExp__Group_1__2__Impl_in_rule__AndExp__Group_1__29597);
             rule__AndExp__Group_1__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__AndExp__Group_1__3_in_rule__AndExp__Group_1__29537);
+            pushFollow(FOLLOW_rule__AndExp__Group_1__3_in_rule__AndExp__Group_1__29600);
             rule__AndExp__Group_1__3();
             _fsp--;
 
@@ -12882,38 +12956,38 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AndExp__Group_1__2__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4703:1: rule__AndExp__Group_1__2__Impl : ( ( rule__AndExp__QAssignment_1_2 )? ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4734:1: rule__AndExp__Group_1__2__Impl : ( ( rule__AndExp__QAssignment_1_2 )? ) ;
     public final void rule__AndExp__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4707:1: ( ( ( rule__AndExp__QAssignment_1_2 )? ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4708:1: ( ( rule__AndExp__QAssignment_1_2 )? )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4738:1: ( ( ( rule__AndExp__QAssignment_1_2 )? ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4739:1: ( ( rule__AndExp__QAssignment_1_2 )? )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4708:1: ( ( rule__AndExp__QAssignment_1_2 )? )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4709:1: ( rule__AndExp__QAssignment_1_2 )?
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4739:1: ( ( rule__AndExp__QAssignment_1_2 )? )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4740:1: ( rule__AndExp__QAssignment_1_2 )?
             {
              before(grammarAccess.getAndExpAccess().getQAssignment_1_2()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4710:1: ( rule__AndExp__QAssignment_1_2 )?
-            int alt47=2;
-            int LA47_0 = input.LA(1);
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4741:1: ( rule__AndExp__QAssignment_1_2 )?
+            int alt48=2;
+            int LA48_0 = input.LA(1);
 
-            if ( (LA47_0==12) ) {
-                int LA47_1 = input.LA(2);
+            if ( (LA48_0==12) ) {
+                int LA48_1 = input.LA(2);
 
-                if ( (LA47_1==32||LA47_1==34) ) {
-                    alt47=1;
+                if ( (LA48_1==32||LA48_1==34) ) {
+                    alt48=1;
                 }
             }
-            else if ( (LA47_0==32||LA47_0==34) ) {
-                alt47=1;
+            else if ( (LA48_0==32||LA48_0==34) ) {
+                alt48=1;
             }
-            switch (alt47) {
+            switch (alt48) {
                 case 1 :
-                    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4710:2: rule__AndExp__QAssignment_1_2
+                    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4741:2: rule__AndExp__QAssignment_1_2
                     {
-                    pushFollow(FOLLOW_rule__AndExp__QAssignment_1_2_in_rule__AndExp__Group_1__2__Impl9564);
+                    pushFollow(FOLLOW_rule__AndExp__QAssignment_1_2_in_rule__AndExp__Group_1__2__Impl9627);
                     rule__AndExp__QAssignment_1_2();
                     _fsp--;
 
@@ -12946,16 +13020,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AndExp__Group_1__3
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4720:1: rule__AndExp__Group_1__3 : rule__AndExp__Group_1__3__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4751:1: rule__AndExp__Group_1__3 : rule__AndExp__Group_1__3__Impl ;
     public final void rule__AndExp__Group_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4724:1: ( rule__AndExp__Group_1__3__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4725:2: rule__AndExp__Group_1__3__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4755:1: ( rule__AndExp__Group_1__3__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4756:2: rule__AndExp__Group_1__3__Impl
             {
-            pushFollow(FOLLOW_rule__AndExp__Group_1__3__Impl_in_rule__AndExp__Group_1__39595);
+            pushFollow(FOLLOW_rule__AndExp__Group_1__3__Impl_in_rule__AndExp__Group_1__39658);
             rule__AndExp__Group_1__3__Impl();
             _fsp--;
 
@@ -12978,23 +13052,23 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AndExp__Group_1__3__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4731:1: rule__AndExp__Group_1__3__Impl : ( ( rule__AndExp__RightAssignment_1_3 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4762:1: rule__AndExp__Group_1__3__Impl : ( ( rule__AndExp__RightAssignment_1_3 ) ) ;
     public final void rule__AndExp__Group_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4735:1: ( ( ( rule__AndExp__RightAssignment_1_3 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4736:1: ( ( rule__AndExp__RightAssignment_1_3 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4766:1: ( ( ( rule__AndExp__RightAssignment_1_3 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4767:1: ( ( rule__AndExp__RightAssignment_1_3 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4736:1: ( ( rule__AndExp__RightAssignment_1_3 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4737:1: ( rule__AndExp__RightAssignment_1_3 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4767:1: ( ( rule__AndExp__RightAssignment_1_3 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4768:1: ( rule__AndExp__RightAssignment_1_3 )
             {
              before(grammarAccess.getAndExpAccess().getRightAssignment_1_3()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4738:1: ( rule__AndExp__RightAssignment_1_3 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4738:2: rule__AndExp__RightAssignment_1_3
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4769:1: ( rule__AndExp__RightAssignment_1_3 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4769:2: rule__AndExp__RightAssignment_1_3
             {
-            pushFollow(FOLLOW_rule__AndExp__RightAssignment_1_3_in_rule__AndExp__Group_1__3__Impl9622);
+            pushFollow(FOLLOW_rule__AndExp__RightAssignment_1_3_in_rule__AndExp__Group_1__3__Impl9685);
             rule__AndExp__RightAssignment_1_3();
             _fsp--;
 
@@ -13024,20 +13098,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4756:1: rule__Relational__Group__0 : rule__Relational__Group__0__Impl rule__Relational__Group__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4787:1: rule__Relational__Group__0 : rule__Relational__Group__0__Impl rule__Relational__Group__1 ;
     public final void rule__Relational__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4760:1: ( rule__Relational__Group__0__Impl rule__Relational__Group__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4761:2: rule__Relational__Group__0__Impl rule__Relational__Group__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4791:1: ( rule__Relational__Group__0__Impl rule__Relational__Group__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4792:2: rule__Relational__Group__0__Impl rule__Relational__Group__1
             {
-            pushFollow(FOLLOW_rule__Relational__Group__0__Impl_in_rule__Relational__Group__09660);
+            pushFollow(FOLLOW_rule__Relational__Group__0__Impl_in_rule__Relational__Group__09723);
             rule__Relational__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Relational__Group__1_in_rule__Relational__Group__09663);
+            pushFollow(FOLLOW_rule__Relational__Group__1_in_rule__Relational__Group__09726);
             rule__Relational__Group__1();
             _fsp--;
 
@@ -13060,20 +13134,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4768:1: rule__Relational__Group__0__Impl : ( ruleAddition ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4799:1: rule__Relational__Group__0__Impl : ( ruleAddition ) ;
     public final void rule__Relational__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4772:1: ( ( ruleAddition ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4773:1: ( ruleAddition )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4803:1: ( ( ruleAddition ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4804:1: ( ruleAddition )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4773:1: ( ruleAddition )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4774:1: ruleAddition
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4804:1: ( ruleAddition )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4805:1: ruleAddition
             {
              before(grammarAccess.getRelationalAccess().getAdditionParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleAddition_in_rule__Relational__Group__0__Impl9690);
+            pushFollow(FOLLOW_ruleAddition_in_rule__Relational__Group__0__Impl9753);
             ruleAddition();
             _fsp--;
 
@@ -13100,16 +13174,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4785:1: rule__Relational__Group__1 : rule__Relational__Group__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4816:1: rule__Relational__Group__1 : rule__Relational__Group__1__Impl ;
     public final void rule__Relational__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4789:1: ( rule__Relational__Group__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4790:2: rule__Relational__Group__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4820:1: ( rule__Relational__Group__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4821:2: rule__Relational__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Relational__Group__1__Impl_in_rule__Relational__Group__19719);
+            pushFollow(FOLLOW_rule__Relational__Group__1__Impl_in_rule__Relational__Group__19782);
             rule__Relational__Group__1__Impl();
             _fsp--;
 
@@ -13132,31 +13206,31 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4796:1: rule__Relational__Group__1__Impl : ( ( rule__Relational__Group_1__0 )? ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4827:1: rule__Relational__Group__1__Impl : ( ( rule__Relational__Group_1__0 )? ) ;
     public final void rule__Relational__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4800:1: ( ( ( rule__Relational__Group_1__0 )? ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4801:1: ( ( rule__Relational__Group_1__0 )? )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4831:1: ( ( ( rule__Relational__Group_1__0 )? ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4832:1: ( ( rule__Relational__Group_1__0 )? )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4801:1: ( ( rule__Relational__Group_1__0 )? )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4802:1: ( rule__Relational__Group_1__0 )?
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4832:1: ( ( rule__Relational__Group_1__0 )? )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4833:1: ( rule__Relational__Group_1__0 )?
             {
              before(grammarAccess.getRelationalAccess().getGroup_1()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4803:1: ( rule__Relational__Group_1__0 )?
-            int alt48=2;
-            int LA48_0 = input.LA(1);
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4834:1: ( rule__Relational__Group_1__0 )?
+            int alt49=2;
+            int LA49_0 = input.LA(1);
 
-            if ( ((LA48_0>=40 && LA48_0<=46)) ) {
-                alt48=1;
+            if ( ((LA49_0>=40 && LA49_0<=46)) ) {
+                alt49=1;
             }
-            switch (alt48) {
+            switch (alt49) {
                 case 1 :
-                    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4803:2: rule__Relational__Group_1__0
+                    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4834:2: rule__Relational__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__Relational__Group_1__0_in_rule__Relational__Group__1__Impl9746);
+                    pushFollow(FOLLOW_rule__Relational__Group_1__0_in_rule__Relational__Group__1__Impl9809);
                     rule__Relational__Group_1__0();
                     _fsp--;
 
@@ -13189,20 +13263,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4817:1: rule__Relational__Group_1__0 : rule__Relational__Group_1__0__Impl rule__Relational__Group_1__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4848:1: rule__Relational__Group_1__0 : rule__Relational__Group_1__0__Impl rule__Relational__Group_1__1 ;
     public final void rule__Relational__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4821:1: ( rule__Relational__Group_1__0__Impl rule__Relational__Group_1__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4822:2: rule__Relational__Group_1__0__Impl rule__Relational__Group_1__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4852:1: ( rule__Relational__Group_1__0__Impl rule__Relational__Group_1__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4853:2: rule__Relational__Group_1__0__Impl rule__Relational__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Relational__Group_1__0__Impl_in_rule__Relational__Group_1__09781);
+            pushFollow(FOLLOW_rule__Relational__Group_1__0__Impl_in_rule__Relational__Group_1__09844);
             rule__Relational__Group_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Relational__Group_1__1_in_rule__Relational__Group_1__09784);
+            pushFollow(FOLLOW_rule__Relational__Group_1__1_in_rule__Relational__Group_1__09847);
             rule__Relational__Group_1__1();
             _fsp--;
 
@@ -13225,23 +13299,23 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4829:1: rule__Relational__Group_1__0__Impl : ( ( rule__Relational__Alternatives_1_0 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4860:1: rule__Relational__Group_1__0__Impl : ( ( rule__Relational__Alternatives_1_0 ) ) ;
     public final void rule__Relational__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4833:1: ( ( ( rule__Relational__Alternatives_1_0 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4834:1: ( ( rule__Relational__Alternatives_1_0 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4864:1: ( ( ( rule__Relational__Alternatives_1_0 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4865:1: ( ( rule__Relational__Alternatives_1_0 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4834:1: ( ( rule__Relational__Alternatives_1_0 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4835:1: ( rule__Relational__Alternatives_1_0 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4865:1: ( ( rule__Relational__Alternatives_1_0 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4866:1: ( rule__Relational__Alternatives_1_0 )
             {
              before(grammarAccess.getRelationalAccess().getAlternatives_1_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4836:1: ( rule__Relational__Alternatives_1_0 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4836:2: rule__Relational__Alternatives_1_0
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4867:1: ( rule__Relational__Alternatives_1_0 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4867:2: rule__Relational__Alternatives_1_0
             {
-            pushFollow(FOLLOW_rule__Relational__Alternatives_1_0_in_rule__Relational__Group_1__0__Impl9811);
+            pushFollow(FOLLOW_rule__Relational__Alternatives_1_0_in_rule__Relational__Group_1__0__Impl9874);
             rule__Relational__Alternatives_1_0();
             _fsp--;
 
@@ -13271,16 +13345,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4846:1: rule__Relational__Group_1__1 : rule__Relational__Group_1__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4877:1: rule__Relational__Group_1__1 : rule__Relational__Group_1__1__Impl ;
     public final void rule__Relational__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4850:1: ( rule__Relational__Group_1__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4851:2: rule__Relational__Group_1__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4881:1: ( rule__Relational__Group_1__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4882:2: rule__Relational__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Relational__Group_1__1__Impl_in_rule__Relational__Group_1__19841);
+            pushFollow(FOLLOW_rule__Relational__Group_1__1__Impl_in_rule__Relational__Group_1__19904);
             rule__Relational__Group_1__1__Impl();
             _fsp--;
 
@@ -13303,23 +13377,23 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4857:1: rule__Relational__Group_1__1__Impl : ( ( rule__Relational__RightAssignment_1_1 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4888:1: rule__Relational__Group_1__1__Impl : ( ( rule__Relational__RightAssignment_1_1 ) ) ;
     public final void rule__Relational__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4861:1: ( ( ( rule__Relational__RightAssignment_1_1 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4862:1: ( ( rule__Relational__RightAssignment_1_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4892:1: ( ( ( rule__Relational__RightAssignment_1_1 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4893:1: ( ( rule__Relational__RightAssignment_1_1 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4862:1: ( ( rule__Relational__RightAssignment_1_1 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4863:1: ( rule__Relational__RightAssignment_1_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4893:1: ( ( rule__Relational__RightAssignment_1_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4894:1: ( rule__Relational__RightAssignment_1_1 )
             {
              before(grammarAccess.getRelationalAccess().getRightAssignment_1_1()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4864:1: ( rule__Relational__RightAssignment_1_1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4864:2: rule__Relational__RightAssignment_1_1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4895:1: ( rule__Relational__RightAssignment_1_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4895:2: rule__Relational__RightAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__Relational__RightAssignment_1_1_in_rule__Relational__Group_1__1__Impl9868);
+            pushFollow(FOLLOW_rule__Relational__RightAssignment_1_1_in_rule__Relational__Group_1__1__Impl9931);
             rule__Relational__RightAssignment_1_1();
             _fsp--;
 
@@ -13349,20 +13423,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1_0_0__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4878:1: rule__Relational__Group_1_0_0__0 : rule__Relational__Group_1_0_0__0__Impl rule__Relational__Group_1_0_0__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4909:1: rule__Relational__Group_1_0_0__0 : rule__Relational__Group_1_0_0__0__Impl rule__Relational__Group_1_0_0__1 ;
     public final void rule__Relational__Group_1_0_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4882:1: ( rule__Relational__Group_1_0_0__0__Impl rule__Relational__Group_1_0_0__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4883:2: rule__Relational__Group_1_0_0__0__Impl rule__Relational__Group_1_0_0__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4913:1: ( rule__Relational__Group_1_0_0__0__Impl rule__Relational__Group_1_0_0__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4914:2: rule__Relational__Group_1_0_0__0__Impl rule__Relational__Group_1_0_0__1
             {
-            pushFollow(FOLLOW_rule__Relational__Group_1_0_0__0__Impl_in_rule__Relational__Group_1_0_0__09902);
+            pushFollow(FOLLOW_rule__Relational__Group_1_0_0__0__Impl_in_rule__Relational__Group_1_0_0__09965);
             rule__Relational__Group_1_0_0__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Relational__Group_1_0_0__1_in_rule__Relational__Group_1_0_0__09905);
+            pushFollow(FOLLOW_rule__Relational__Group_1_0_0__1_in_rule__Relational__Group_1_0_0__09968);
             rule__Relational__Group_1_0_0__1();
             _fsp--;
 
@@ -13385,21 +13459,21 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1_0_0__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4890:1: rule__Relational__Group_1_0_0__0__Impl : ( () ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4921:1: rule__Relational__Group_1_0_0__0__Impl : ( () ) ;
     public final void rule__Relational__Group_1_0_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4894:1: ( ( () ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4895:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4925:1: ( ( () ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4926:1: ( () )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4895:1: ( () )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4896:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4926:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4927:1: ()
             {
              before(grammarAccess.getRelationalAccess().getRelNotEqLeftAction_1_0_0_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4897:1: ()
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4899:1: 
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4928:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4930:1: 
             {
             }
 
@@ -13422,16 +13496,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1_0_0__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4909:1: rule__Relational__Group_1_0_0__1 : rule__Relational__Group_1_0_0__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4940:1: rule__Relational__Group_1_0_0__1 : rule__Relational__Group_1_0_0__1__Impl ;
     public final void rule__Relational__Group_1_0_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4913:1: ( rule__Relational__Group_1_0_0__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4914:2: rule__Relational__Group_1_0_0__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4944:1: ( rule__Relational__Group_1_0_0__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4945:2: rule__Relational__Group_1_0_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__Relational__Group_1_0_0__1__Impl_in_rule__Relational__Group_1_0_0__19963);
+            pushFollow(FOLLOW_rule__Relational__Group_1_0_0__1__Impl_in_rule__Relational__Group_1_0_0__110026);
             rule__Relational__Group_1_0_0__1__Impl();
             _fsp--;
 
@@ -13454,20 +13528,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1_0_0__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4920:1: rule__Relational__Group_1_0_0__1__Impl : ( '!=' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4951:1: rule__Relational__Group_1_0_0__1__Impl : ( '!=' ) ;
     public final void rule__Relational__Group_1_0_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4924:1: ( ( '!=' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4925:1: ( '!=' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4955:1: ( ( '!=' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4956:1: ( '!=' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4925:1: ( '!=' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4926:1: '!='
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4956:1: ( '!=' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4957:1: '!='
             {
              before(grammarAccess.getRelationalAccess().getExclamationMarkEqualsSignKeyword_1_0_0_1()); 
-            match(input,40,FOLLOW_40_in_rule__Relational__Group_1_0_0__1__Impl9991); 
+            match(input,40,FOLLOW_40_in_rule__Relational__Group_1_0_0__1__Impl10054); 
              after(grammarAccess.getRelationalAccess().getExclamationMarkEqualsSignKeyword_1_0_0_1()); 
 
             }
@@ -13491,20 +13565,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1_0_1__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4943:1: rule__Relational__Group_1_0_1__0 : rule__Relational__Group_1_0_1__0__Impl rule__Relational__Group_1_0_1__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4974:1: rule__Relational__Group_1_0_1__0 : rule__Relational__Group_1_0_1__0__Impl rule__Relational__Group_1_0_1__1 ;
     public final void rule__Relational__Group_1_0_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4947:1: ( rule__Relational__Group_1_0_1__0__Impl rule__Relational__Group_1_0_1__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4948:2: rule__Relational__Group_1_0_1__0__Impl rule__Relational__Group_1_0_1__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4978:1: ( rule__Relational__Group_1_0_1__0__Impl rule__Relational__Group_1_0_1__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4979:2: rule__Relational__Group_1_0_1__0__Impl rule__Relational__Group_1_0_1__1
             {
-            pushFollow(FOLLOW_rule__Relational__Group_1_0_1__0__Impl_in_rule__Relational__Group_1_0_1__010026);
+            pushFollow(FOLLOW_rule__Relational__Group_1_0_1__0__Impl_in_rule__Relational__Group_1_0_1__010089);
             rule__Relational__Group_1_0_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Relational__Group_1_0_1__1_in_rule__Relational__Group_1_0_1__010029);
+            pushFollow(FOLLOW_rule__Relational__Group_1_0_1__1_in_rule__Relational__Group_1_0_1__010092);
             rule__Relational__Group_1_0_1__1();
             _fsp--;
 
@@ -13527,21 +13601,21 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1_0_1__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4955:1: rule__Relational__Group_1_0_1__0__Impl : ( () ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4986:1: rule__Relational__Group_1_0_1__0__Impl : ( () ) ;
     public final void rule__Relational__Group_1_0_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4959:1: ( ( () ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4960:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4990:1: ( ( () ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4991:1: ( () )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4960:1: ( () )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4961:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4991:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4992:1: ()
             {
              before(grammarAccess.getRelationalAccess().getRelEqEqLeftAction_1_0_1_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4962:1: ()
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4964:1: 
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4993:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4995:1: 
             {
             }
 
@@ -13564,16 +13638,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1_0_1__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4974:1: rule__Relational__Group_1_0_1__1 : rule__Relational__Group_1_0_1__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5005:1: rule__Relational__Group_1_0_1__1 : rule__Relational__Group_1_0_1__1__Impl ;
     public final void rule__Relational__Group_1_0_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4978:1: ( rule__Relational__Group_1_0_1__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4979:2: rule__Relational__Group_1_0_1__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5009:1: ( rule__Relational__Group_1_0_1__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5010:2: rule__Relational__Group_1_0_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Relational__Group_1_0_1__1__Impl_in_rule__Relational__Group_1_0_1__110087);
+            pushFollow(FOLLOW_rule__Relational__Group_1_0_1__1__Impl_in_rule__Relational__Group_1_0_1__110150);
             rule__Relational__Group_1_0_1__1__Impl();
             _fsp--;
 
@@ -13596,20 +13670,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1_0_1__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4985:1: rule__Relational__Group_1_0_1__1__Impl : ( '==' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5016:1: rule__Relational__Group_1_0_1__1__Impl : ( '==' ) ;
     public final void rule__Relational__Group_1_0_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4989:1: ( ( '==' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4990:1: ( '==' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5020:1: ( ( '==' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5021:1: ( '==' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4990:1: ( '==' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:4991:1: '=='
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5021:1: ( '==' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5022:1: '=='
             {
              before(grammarAccess.getRelationalAccess().getEqualsSignEqualsSignKeyword_1_0_1_1()); 
-            match(input,41,FOLLOW_41_in_rule__Relational__Group_1_0_1__1__Impl10115); 
+            match(input,41,FOLLOW_41_in_rule__Relational__Group_1_0_1__1__Impl10178); 
              after(grammarAccess.getRelationalAccess().getEqualsSignEqualsSignKeyword_1_0_1_1()); 
 
             }
@@ -13633,20 +13707,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1_0_2__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5008:1: rule__Relational__Group_1_0_2__0 : rule__Relational__Group_1_0_2__0__Impl rule__Relational__Group_1_0_2__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5039:1: rule__Relational__Group_1_0_2__0 : rule__Relational__Group_1_0_2__0__Impl rule__Relational__Group_1_0_2__1 ;
     public final void rule__Relational__Group_1_0_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5012:1: ( rule__Relational__Group_1_0_2__0__Impl rule__Relational__Group_1_0_2__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5013:2: rule__Relational__Group_1_0_2__0__Impl rule__Relational__Group_1_0_2__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5043:1: ( rule__Relational__Group_1_0_2__0__Impl rule__Relational__Group_1_0_2__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5044:2: rule__Relational__Group_1_0_2__0__Impl rule__Relational__Group_1_0_2__1
             {
-            pushFollow(FOLLOW_rule__Relational__Group_1_0_2__0__Impl_in_rule__Relational__Group_1_0_2__010150);
+            pushFollow(FOLLOW_rule__Relational__Group_1_0_2__0__Impl_in_rule__Relational__Group_1_0_2__010213);
             rule__Relational__Group_1_0_2__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Relational__Group_1_0_2__1_in_rule__Relational__Group_1_0_2__010153);
+            pushFollow(FOLLOW_rule__Relational__Group_1_0_2__1_in_rule__Relational__Group_1_0_2__010216);
             rule__Relational__Group_1_0_2__1();
             _fsp--;
 
@@ -13669,21 +13743,21 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1_0_2__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5020:1: rule__Relational__Group_1_0_2__0__Impl : ( () ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5051:1: rule__Relational__Group_1_0_2__0__Impl : ( () ) ;
     public final void rule__Relational__Group_1_0_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5024:1: ( ( () ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5025:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5055:1: ( ( () ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5056:1: ( () )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5025:1: ( () )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5026:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5056:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5057:1: ()
             {
              before(grammarAccess.getRelationalAccess().getRelLtEqLeftAction_1_0_2_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5027:1: ()
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5029:1: 
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5058:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5060:1: 
             {
             }
 
@@ -13706,16 +13780,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1_0_2__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5039:1: rule__Relational__Group_1_0_2__1 : rule__Relational__Group_1_0_2__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5070:1: rule__Relational__Group_1_0_2__1 : rule__Relational__Group_1_0_2__1__Impl ;
     public final void rule__Relational__Group_1_0_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5043:1: ( rule__Relational__Group_1_0_2__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5044:2: rule__Relational__Group_1_0_2__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5074:1: ( rule__Relational__Group_1_0_2__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5075:2: rule__Relational__Group_1_0_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Relational__Group_1_0_2__1__Impl_in_rule__Relational__Group_1_0_2__110211);
+            pushFollow(FOLLOW_rule__Relational__Group_1_0_2__1__Impl_in_rule__Relational__Group_1_0_2__110274);
             rule__Relational__Group_1_0_2__1__Impl();
             _fsp--;
 
@@ -13738,20 +13812,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1_0_2__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5050:1: rule__Relational__Group_1_0_2__1__Impl : ( '>=' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5081:1: rule__Relational__Group_1_0_2__1__Impl : ( '>=' ) ;
     public final void rule__Relational__Group_1_0_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5054:1: ( ( '>=' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5055:1: ( '>=' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5085:1: ( ( '>=' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5086:1: ( '>=' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5055:1: ( '>=' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5056:1: '>='
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5086:1: ( '>=' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5087:1: '>='
             {
              before(grammarAccess.getRelationalAccess().getGreaterThanSignEqualsSignKeyword_1_0_2_1()); 
-            match(input,42,FOLLOW_42_in_rule__Relational__Group_1_0_2__1__Impl10239); 
+            match(input,42,FOLLOW_42_in_rule__Relational__Group_1_0_2__1__Impl10302); 
              after(grammarAccess.getRelationalAccess().getGreaterThanSignEqualsSignKeyword_1_0_2_1()); 
 
             }
@@ -13775,20 +13849,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1_0_3__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5073:1: rule__Relational__Group_1_0_3__0 : rule__Relational__Group_1_0_3__0__Impl rule__Relational__Group_1_0_3__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5104:1: rule__Relational__Group_1_0_3__0 : rule__Relational__Group_1_0_3__0__Impl rule__Relational__Group_1_0_3__1 ;
     public final void rule__Relational__Group_1_0_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5077:1: ( rule__Relational__Group_1_0_3__0__Impl rule__Relational__Group_1_0_3__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5078:2: rule__Relational__Group_1_0_3__0__Impl rule__Relational__Group_1_0_3__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5108:1: ( rule__Relational__Group_1_0_3__0__Impl rule__Relational__Group_1_0_3__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5109:2: rule__Relational__Group_1_0_3__0__Impl rule__Relational__Group_1_0_3__1
             {
-            pushFollow(FOLLOW_rule__Relational__Group_1_0_3__0__Impl_in_rule__Relational__Group_1_0_3__010274);
+            pushFollow(FOLLOW_rule__Relational__Group_1_0_3__0__Impl_in_rule__Relational__Group_1_0_3__010337);
             rule__Relational__Group_1_0_3__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Relational__Group_1_0_3__1_in_rule__Relational__Group_1_0_3__010277);
+            pushFollow(FOLLOW_rule__Relational__Group_1_0_3__1_in_rule__Relational__Group_1_0_3__010340);
             rule__Relational__Group_1_0_3__1();
             _fsp--;
 
@@ -13811,21 +13885,21 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1_0_3__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5085:1: rule__Relational__Group_1_0_3__0__Impl : ( () ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5116:1: rule__Relational__Group_1_0_3__0__Impl : ( () ) ;
     public final void rule__Relational__Group_1_0_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5089:1: ( ( () ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5090:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5120:1: ( ( () ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5121:1: ( () )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5090:1: ( () )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5091:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5121:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5122:1: ()
             {
              before(grammarAccess.getRelationalAccess().getRelGtEqLeftAction_1_0_3_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5092:1: ()
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5094:1: 
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5123:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5125:1: 
             {
             }
 
@@ -13848,16 +13922,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1_0_3__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5104:1: rule__Relational__Group_1_0_3__1 : rule__Relational__Group_1_0_3__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5135:1: rule__Relational__Group_1_0_3__1 : rule__Relational__Group_1_0_3__1__Impl ;
     public final void rule__Relational__Group_1_0_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5108:1: ( rule__Relational__Group_1_0_3__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5109:2: rule__Relational__Group_1_0_3__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5139:1: ( rule__Relational__Group_1_0_3__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5140:2: rule__Relational__Group_1_0_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__Relational__Group_1_0_3__1__Impl_in_rule__Relational__Group_1_0_3__110335);
+            pushFollow(FOLLOW_rule__Relational__Group_1_0_3__1__Impl_in_rule__Relational__Group_1_0_3__110398);
             rule__Relational__Group_1_0_3__1__Impl();
             _fsp--;
 
@@ -13880,20 +13954,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1_0_3__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5115:1: rule__Relational__Group_1_0_3__1__Impl : ( '<=' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5146:1: rule__Relational__Group_1_0_3__1__Impl : ( '<=' ) ;
     public final void rule__Relational__Group_1_0_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5119:1: ( ( '<=' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5120:1: ( '<=' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5150:1: ( ( '<=' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5151:1: ( '<=' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5120:1: ( '<=' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5121:1: '<='
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5151:1: ( '<=' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5152:1: '<='
             {
              before(grammarAccess.getRelationalAccess().getLessThanSignEqualsSignKeyword_1_0_3_1()); 
-            match(input,43,FOLLOW_43_in_rule__Relational__Group_1_0_3__1__Impl10363); 
+            match(input,43,FOLLOW_43_in_rule__Relational__Group_1_0_3__1__Impl10426); 
              after(grammarAccess.getRelationalAccess().getLessThanSignEqualsSignKeyword_1_0_3_1()); 
 
             }
@@ -13917,20 +13991,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1_0_4__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5138:1: rule__Relational__Group_1_0_4__0 : rule__Relational__Group_1_0_4__0__Impl rule__Relational__Group_1_0_4__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5169:1: rule__Relational__Group_1_0_4__0 : rule__Relational__Group_1_0_4__0__Impl rule__Relational__Group_1_0_4__1 ;
     public final void rule__Relational__Group_1_0_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5142:1: ( rule__Relational__Group_1_0_4__0__Impl rule__Relational__Group_1_0_4__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5143:2: rule__Relational__Group_1_0_4__0__Impl rule__Relational__Group_1_0_4__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5173:1: ( rule__Relational__Group_1_0_4__0__Impl rule__Relational__Group_1_0_4__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5174:2: rule__Relational__Group_1_0_4__0__Impl rule__Relational__Group_1_0_4__1
             {
-            pushFollow(FOLLOW_rule__Relational__Group_1_0_4__0__Impl_in_rule__Relational__Group_1_0_4__010398);
+            pushFollow(FOLLOW_rule__Relational__Group_1_0_4__0__Impl_in_rule__Relational__Group_1_0_4__010461);
             rule__Relational__Group_1_0_4__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Relational__Group_1_0_4__1_in_rule__Relational__Group_1_0_4__010401);
+            pushFollow(FOLLOW_rule__Relational__Group_1_0_4__1_in_rule__Relational__Group_1_0_4__010464);
             rule__Relational__Group_1_0_4__1();
             _fsp--;
 
@@ -13953,21 +14027,21 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1_0_4__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5150:1: rule__Relational__Group_1_0_4__0__Impl : ( () ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5181:1: rule__Relational__Group_1_0_4__0__Impl : ( () ) ;
     public final void rule__Relational__Group_1_0_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5154:1: ( ( () ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5155:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5185:1: ( ( () ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5186:1: ( () )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5155:1: ( () )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5156:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5186:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5187:1: ()
             {
              before(grammarAccess.getRelationalAccess().getRelEqLeftAction_1_0_4_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5157:1: ()
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5159:1: 
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5188:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5190:1: 
             {
             }
 
@@ -13990,16 +14064,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1_0_4__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5169:1: rule__Relational__Group_1_0_4__1 : rule__Relational__Group_1_0_4__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5200:1: rule__Relational__Group_1_0_4__1 : rule__Relational__Group_1_0_4__1__Impl ;
     public final void rule__Relational__Group_1_0_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5173:1: ( rule__Relational__Group_1_0_4__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5174:2: rule__Relational__Group_1_0_4__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5204:1: ( rule__Relational__Group_1_0_4__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5205:2: rule__Relational__Group_1_0_4__1__Impl
             {
-            pushFollow(FOLLOW_rule__Relational__Group_1_0_4__1__Impl_in_rule__Relational__Group_1_0_4__110459);
+            pushFollow(FOLLOW_rule__Relational__Group_1_0_4__1__Impl_in_rule__Relational__Group_1_0_4__110522);
             rule__Relational__Group_1_0_4__1__Impl();
             _fsp--;
 
@@ -14022,20 +14096,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1_0_4__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5180:1: rule__Relational__Group_1_0_4__1__Impl : ( '=' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5211:1: rule__Relational__Group_1_0_4__1__Impl : ( '=' ) ;
     public final void rule__Relational__Group_1_0_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5184:1: ( ( '=' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5185:1: ( '=' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5215:1: ( ( '=' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5216:1: ( '=' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5185:1: ( '=' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5186:1: '='
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5216:1: ( '=' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5217:1: '='
             {
              before(grammarAccess.getRelationalAccess().getEqualsSignKeyword_1_0_4_1()); 
-            match(input,44,FOLLOW_44_in_rule__Relational__Group_1_0_4__1__Impl10487); 
+            match(input,44,FOLLOW_44_in_rule__Relational__Group_1_0_4__1__Impl10550); 
              after(grammarAccess.getRelationalAccess().getEqualsSignKeyword_1_0_4_1()); 
 
             }
@@ -14059,20 +14133,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1_0_5__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5203:1: rule__Relational__Group_1_0_5__0 : rule__Relational__Group_1_0_5__0__Impl rule__Relational__Group_1_0_5__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5234:1: rule__Relational__Group_1_0_5__0 : rule__Relational__Group_1_0_5__0__Impl rule__Relational__Group_1_0_5__1 ;
     public final void rule__Relational__Group_1_0_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5207:1: ( rule__Relational__Group_1_0_5__0__Impl rule__Relational__Group_1_0_5__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5208:2: rule__Relational__Group_1_0_5__0__Impl rule__Relational__Group_1_0_5__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5238:1: ( rule__Relational__Group_1_0_5__0__Impl rule__Relational__Group_1_0_5__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5239:2: rule__Relational__Group_1_0_5__0__Impl rule__Relational__Group_1_0_5__1
             {
-            pushFollow(FOLLOW_rule__Relational__Group_1_0_5__0__Impl_in_rule__Relational__Group_1_0_5__010522);
+            pushFollow(FOLLOW_rule__Relational__Group_1_0_5__0__Impl_in_rule__Relational__Group_1_0_5__010585);
             rule__Relational__Group_1_0_5__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Relational__Group_1_0_5__1_in_rule__Relational__Group_1_0_5__010525);
+            pushFollow(FOLLOW_rule__Relational__Group_1_0_5__1_in_rule__Relational__Group_1_0_5__010588);
             rule__Relational__Group_1_0_5__1();
             _fsp--;
 
@@ -14095,21 +14169,21 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1_0_5__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5215:1: rule__Relational__Group_1_0_5__0__Impl : ( () ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5246:1: rule__Relational__Group_1_0_5__0__Impl : ( () ) ;
     public final void rule__Relational__Group_1_0_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5219:1: ( ( () ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5220:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5250:1: ( ( () ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5251:1: ( () )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5220:1: ( () )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5221:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5251:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5252:1: ()
             {
              before(grammarAccess.getRelationalAccess().getRelLtLeftAction_1_0_5_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5222:1: ()
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5224:1: 
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5253:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5255:1: 
             {
             }
 
@@ -14132,16 +14206,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1_0_5__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5234:1: rule__Relational__Group_1_0_5__1 : rule__Relational__Group_1_0_5__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5265:1: rule__Relational__Group_1_0_5__1 : rule__Relational__Group_1_0_5__1__Impl ;
     public final void rule__Relational__Group_1_0_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5238:1: ( rule__Relational__Group_1_0_5__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5239:2: rule__Relational__Group_1_0_5__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5269:1: ( rule__Relational__Group_1_0_5__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5270:2: rule__Relational__Group_1_0_5__1__Impl
             {
-            pushFollow(FOLLOW_rule__Relational__Group_1_0_5__1__Impl_in_rule__Relational__Group_1_0_5__110583);
+            pushFollow(FOLLOW_rule__Relational__Group_1_0_5__1__Impl_in_rule__Relational__Group_1_0_5__110646);
             rule__Relational__Group_1_0_5__1__Impl();
             _fsp--;
 
@@ -14164,20 +14238,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1_0_5__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5245:1: rule__Relational__Group_1_0_5__1__Impl : ( '<' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5276:1: rule__Relational__Group_1_0_5__1__Impl : ( '<' ) ;
     public final void rule__Relational__Group_1_0_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5249:1: ( ( '<' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5250:1: ( '<' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5280:1: ( ( '<' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5281:1: ( '<' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5250:1: ( '<' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5251:1: '<'
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5281:1: ( '<' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5282:1: '<'
             {
              before(grammarAccess.getRelationalAccess().getLessThanSignKeyword_1_0_5_1()); 
-            match(input,45,FOLLOW_45_in_rule__Relational__Group_1_0_5__1__Impl10611); 
+            match(input,45,FOLLOW_45_in_rule__Relational__Group_1_0_5__1__Impl10674); 
              after(grammarAccess.getRelationalAccess().getLessThanSignKeyword_1_0_5_1()); 
 
             }
@@ -14201,20 +14275,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1_0_6__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5268:1: rule__Relational__Group_1_0_6__0 : rule__Relational__Group_1_0_6__0__Impl rule__Relational__Group_1_0_6__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5299:1: rule__Relational__Group_1_0_6__0 : rule__Relational__Group_1_0_6__0__Impl rule__Relational__Group_1_0_6__1 ;
     public final void rule__Relational__Group_1_0_6__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5272:1: ( rule__Relational__Group_1_0_6__0__Impl rule__Relational__Group_1_0_6__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5273:2: rule__Relational__Group_1_0_6__0__Impl rule__Relational__Group_1_0_6__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5303:1: ( rule__Relational__Group_1_0_6__0__Impl rule__Relational__Group_1_0_6__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5304:2: rule__Relational__Group_1_0_6__0__Impl rule__Relational__Group_1_0_6__1
             {
-            pushFollow(FOLLOW_rule__Relational__Group_1_0_6__0__Impl_in_rule__Relational__Group_1_0_6__010646);
+            pushFollow(FOLLOW_rule__Relational__Group_1_0_6__0__Impl_in_rule__Relational__Group_1_0_6__010709);
             rule__Relational__Group_1_0_6__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Relational__Group_1_0_6__1_in_rule__Relational__Group_1_0_6__010649);
+            pushFollow(FOLLOW_rule__Relational__Group_1_0_6__1_in_rule__Relational__Group_1_0_6__010712);
             rule__Relational__Group_1_0_6__1();
             _fsp--;
 
@@ -14237,21 +14311,21 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1_0_6__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5280:1: rule__Relational__Group_1_0_6__0__Impl : ( () ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5311:1: rule__Relational__Group_1_0_6__0__Impl : ( () ) ;
     public final void rule__Relational__Group_1_0_6__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5284:1: ( ( () ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5285:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5315:1: ( ( () ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5316:1: ( () )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5285:1: ( () )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5286:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5316:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5317:1: ()
             {
              before(grammarAccess.getRelationalAccess().getRelGtLeftAction_1_0_6_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5287:1: ()
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5289:1: 
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5318:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5320:1: 
             {
             }
 
@@ -14274,16 +14348,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1_0_6__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5299:1: rule__Relational__Group_1_0_6__1 : rule__Relational__Group_1_0_6__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5330:1: rule__Relational__Group_1_0_6__1 : rule__Relational__Group_1_0_6__1__Impl ;
     public final void rule__Relational__Group_1_0_6__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5303:1: ( rule__Relational__Group_1_0_6__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5304:2: rule__Relational__Group_1_0_6__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5334:1: ( rule__Relational__Group_1_0_6__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5335:2: rule__Relational__Group_1_0_6__1__Impl
             {
-            pushFollow(FOLLOW_rule__Relational__Group_1_0_6__1__Impl_in_rule__Relational__Group_1_0_6__110707);
+            pushFollow(FOLLOW_rule__Relational__Group_1_0_6__1__Impl_in_rule__Relational__Group_1_0_6__110770);
             rule__Relational__Group_1_0_6__1__Impl();
             _fsp--;
 
@@ -14306,20 +14380,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__Group_1_0_6__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5310:1: rule__Relational__Group_1_0_6__1__Impl : ( '>' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5341:1: rule__Relational__Group_1_0_6__1__Impl : ( '>' ) ;
     public final void rule__Relational__Group_1_0_6__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5314:1: ( ( '>' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5315:1: ( '>' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5345:1: ( ( '>' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5346:1: ( '>' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5315:1: ( '>' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5316:1: '>'
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5346:1: ( '>' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5347:1: '>'
             {
              before(grammarAccess.getRelationalAccess().getGreaterThanSignKeyword_1_0_6_1()); 
-            match(input,46,FOLLOW_46_in_rule__Relational__Group_1_0_6__1__Impl10735); 
+            match(input,46,FOLLOW_46_in_rule__Relational__Group_1_0_6__1__Impl10798); 
              after(grammarAccess.getRelationalAccess().getGreaterThanSignKeyword_1_0_6_1()); 
 
             }
@@ -14343,20 +14417,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Addition__Group__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5333:1: rule__Addition__Group__0 : rule__Addition__Group__0__Impl rule__Addition__Group__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5364:1: rule__Addition__Group__0 : rule__Addition__Group__0__Impl rule__Addition__Group__1 ;
     public final void rule__Addition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5337:1: ( rule__Addition__Group__0__Impl rule__Addition__Group__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5338:2: rule__Addition__Group__0__Impl rule__Addition__Group__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5368:1: ( rule__Addition__Group__0__Impl rule__Addition__Group__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5369:2: rule__Addition__Group__0__Impl rule__Addition__Group__1
             {
-            pushFollow(FOLLOW_rule__Addition__Group__0__Impl_in_rule__Addition__Group__010770);
+            pushFollow(FOLLOW_rule__Addition__Group__0__Impl_in_rule__Addition__Group__010833);
             rule__Addition__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Addition__Group__1_in_rule__Addition__Group__010773);
+            pushFollow(FOLLOW_rule__Addition__Group__1_in_rule__Addition__Group__010836);
             rule__Addition__Group__1();
             _fsp--;
 
@@ -14379,20 +14453,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Addition__Group__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5345:1: rule__Addition__Group__0__Impl : ( ruleMultiplication ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5376:1: rule__Addition__Group__0__Impl : ( ruleMultiplication ) ;
     public final void rule__Addition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5349:1: ( ( ruleMultiplication ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5350:1: ( ruleMultiplication )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5380:1: ( ( ruleMultiplication ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5381:1: ( ruleMultiplication )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5350:1: ( ruleMultiplication )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5351:1: ruleMultiplication
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5381:1: ( ruleMultiplication )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5382:1: ruleMultiplication
             {
              before(grammarAccess.getAdditionAccess().getMultiplicationParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleMultiplication_in_rule__Addition__Group__0__Impl10800);
+            pushFollow(FOLLOW_ruleMultiplication_in_rule__Addition__Group__0__Impl10863);
             ruleMultiplication();
             _fsp--;
 
@@ -14419,16 +14493,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Addition__Group__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5362:1: rule__Addition__Group__1 : rule__Addition__Group__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5393:1: rule__Addition__Group__1 : rule__Addition__Group__1__Impl ;
     public final void rule__Addition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5366:1: ( rule__Addition__Group__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5367:2: rule__Addition__Group__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5397:1: ( rule__Addition__Group__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5398:2: rule__Addition__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Addition__Group__1__Impl_in_rule__Addition__Group__110829);
+            pushFollow(FOLLOW_rule__Addition__Group__1__Impl_in_rule__Addition__Group__110892);
             rule__Addition__Group__1__Impl();
             _fsp--;
 
@@ -14451,35 +14525,35 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Addition__Group__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5373:1: rule__Addition__Group__1__Impl : ( ( rule__Addition__Group_1__0 )* ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5404:1: rule__Addition__Group__1__Impl : ( ( rule__Addition__Group_1__0 )* ) ;
     public final void rule__Addition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5377:1: ( ( ( rule__Addition__Group_1__0 )* ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5378:1: ( ( rule__Addition__Group_1__0 )* )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5408:1: ( ( ( rule__Addition__Group_1__0 )* ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5409:1: ( ( rule__Addition__Group_1__0 )* )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5378:1: ( ( rule__Addition__Group_1__0 )* )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5379:1: ( rule__Addition__Group_1__0 )*
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5409:1: ( ( rule__Addition__Group_1__0 )* )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5410:1: ( rule__Addition__Group_1__0 )*
             {
              before(grammarAccess.getAdditionAccess().getGroup_1()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5380:1: ( rule__Addition__Group_1__0 )*
-            loop49:
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5411:1: ( rule__Addition__Group_1__0 )*
+            loop50:
             do {
-                int alt49=2;
-                int LA49_0 = input.LA(1);
+                int alt50=2;
+                int LA50_0 = input.LA(1);
 
-                if ( ((LA49_0>=47 && LA49_0<=48)) ) {
-                    alt49=1;
+                if ( ((LA50_0>=47 && LA50_0<=48)) ) {
+                    alt50=1;
                 }
 
 
-                switch (alt49) {
+                switch (alt50) {
             	case 1 :
-            	    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5380:2: rule__Addition__Group_1__0
+            	    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5411:2: rule__Addition__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__Addition__Group_1__0_in_rule__Addition__Group__1__Impl10856);
+            	    pushFollow(FOLLOW_rule__Addition__Group_1__0_in_rule__Addition__Group__1__Impl10919);
             	    rule__Addition__Group_1__0();
             	    _fsp--;
 
@@ -14488,7 +14562,7 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop49;
+            	    break loop50;
                 }
             } while (true);
 
@@ -14515,20 +14589,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Addition__Group_1__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5394:1: rule__Addition__Group_1__0 : rule__Addition__Group_1__0__Impl rule__Addition__Group_1__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5425:1: rule__Addition__Group_1__0 : rule__Addition__Group_1__0__Impl rule__Addition__Group_1__1 ;
     public final void rule__Addition__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5398:1: ( rule__Addition__Group_1__0__Impl rule__Addition__Group_1__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5399:2: rule__Addition__Group_1__0__Impl rule__Addition__Group_1__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5429:1: ( rule__Addition__Group_1__0__Impl rule__Addition__Group_1__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5430:2: rule__Addition__Group_1__0__Impl rule__Addition__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Addition__Group_1__0__Impl_in_rule__Addition__Group_1__010891);
+            pushFollow(FOLLOW_rule__Addition__Group_1__0__Impl_in_rule__Addition__Group_1__010954);
             rule__Addition__Group_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Addition__Group_1__1_in_rule__Addition__Group_1__010894);
+            pushFollow(FOLLOW_rule__Addition__Group_1__1_in_rule__Addition__Group_1__010957);
             rule__Addition__Group_1__1();
             _fsp--;
 
@@ -14551,23 +14625,23 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Addition__Group_1__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5406:1: rule__Addition__Group_1__0__Impl : ( ( rule__Addition__Alternatives_1_0 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5437:1: rule__Addition__Group_1__0__Impl : ( ( rule__Addition__Alternatives_1_0 ) ) ;
     public final void rule__Addition__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5410:1: ( ( ( rule__Addition__Alternatives_1_0 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5411:1: ( ( rule__Addition__Alternatives_1_0 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5441:1: ( ( ( rule__Addition__Alternatives_1_0 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5442:1: ( ( rule__Addition__Alternatives_1_0 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5411:1: ( ( rule__Addition__Alternatives_1_0 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5412:1: ( rule__Addition__Alternatives_1_0 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5442:1: ( ( rule__Addition__Alternatives_1_0 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5443:1: ( rule__Addition__Alternatives_1_0 )
             {
              before(grammarAccess.getAdditionAccess().getAlternatives_1_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5413:1: ( rule__Addition__Alternatives_1_0 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5413:2: rule__Addition__Alternatives_1_0
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5444:1: ( rule__Addition__Alternatives_1_0 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5444:2: rule__Addition__Alternatives_1_0
             {
-            pushFollow(FOLLOW_rule__Addition__Alternatives_1_0_in_rule__Addition__Group_1__0__Impl10921);
+            pushFollow(FOLLOW_rule__Addition__Alternatives_1_0_in_rule__Addition__Group_1__0__Impl10984);
             rule__Addition__Alternatives_1_0();
             _fsp--;
 
@@ -14597,16 +14671,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Addition__Group_1__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5423:1: rule__Addition__Group_1__1 : rule__Addition__Group_1__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5454:1: rule__Addition__Group_1__1 : rule__Addition__Group_1__1__Impl ;
     public final void rule__Addition__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5427:1: ( rule__Addition__Group_1__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5428:2: rule__Addition__Group_1__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5458:1: ( rule__Addition__Group_1__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5459:2: rule__Addition__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Addition__Group_1__1__Impl_in_rule__Addition__Group_1__110951);
+            pushFollow(FOLLOW_rule__Addition__Group_1__1__Impl_in_rule__Addition__Group_1__111014);
             rule__Addition__Group_1__1__Impl();
             _fsp--;
 
@@ -14629,23 +14703,23 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Addition__Group_1__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5434:1: rule__Addition__Group_1__1__Impl : ( ( rule__Addition__RightAssignment_1_1 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5465:1: rule__Addition__Group_1__1__Impl : ( ( rule__Addition__RightAssignment_1_1 ) ) ;
     public final void rule__Addition__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5438:1: ( ( ( rule__Addition__RightAssignment_1_1 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5439:1: ( ( rule__Addition__RightAssignment_1_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5469:1: ( ( ( rule__Addition__RightAssignment_1_1 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5470:1: ( ( rule__Addition__RightAssignment_1_1 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5439:1: ( ( rule__Addition__RightAssignment_1_1 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5440:1: ( rule__Addition__RightAssignment_1_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5470:1: ( ( rule__Addition__RightAssignment_1_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5471:1: ( rule__Addition__RightAssignment_1_1 )
             {
              before(grammarAccess.getAdditionAccess().getRightAssignment_1_1()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5441:1: ( rule__Addition__RightAssignment_1_1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5441:2: rule__Addition__RightAssignment_1_1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5472:1: ( rule__Addition__RightAssignment_1_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5472:2: rule__Addition__RightAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__Addition__RightAssignment_1_1_in_rule__Addition__Group_1__1__Impl10978);
+            pushFollow(FOLLOW_rule__Addition__RightAssignment_1_1_in_rule__Addition__Group_1__1__Impl11041);
             rule__Addition__RightAssignment_1_1();
             _fsp--;
 
@@ -14675,20 +14749,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Addition__Group_1_0_0__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5455:1: rule__Addition__Group_1_0_0__0 : rule__Addition__Group_1_0_0__0__Impl rule__Addition__Group_1_0_0__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5486:1: rule__Addition__Group_1_0_0__0 : rule__Addition__Group_1_0_0__0__Impl rule__Addition__Group_1_0_0__1 ;
     public final void rule__Addition__Group_1_0_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5459:1: ( rule__Addition__Group_1_0_0__0__Impl rule__Addition__Group_1_0_0__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5460:2: rule__Addition__Group_1_0_0__0__Impl rule__Addition__Group_1_0_0__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5490:1: ( rule__Addition__Group_1_0_0__0__Impl rule__Addition__Group_1_0_0__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5491:2: rule__Addition__Group_1_0_0__0__Impl rule__Addition__Group_1_0_0__1
             {
-            pushFollow(FOLLOW_rule__Addition__Group_1_0_0__0__Impl_in_rule__Addition__Group_1_0_0__011012);
+            pushFollow(FOLLOW_rule__Addition__Group_1_0_0__0__Impl_in_rule__Addition__Group_1_0_0__011075);
             rule__Addition__Group_1_0_0__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Addition__Group_1_0_0__1_in_rule__Addition__Group_1_0_0__011015);
+            pushFollow(FOLLOW_rule__Addition__Group_1_0_0__1_in_rule__Addition__Group_1_0_0__011078);
             rule__Addition__Group_1_0_0__1();
             _fsp--;
 
@@ -14711,21 +14785,21 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Addition__Group_1_0_0__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5467:1: rule__Addition__Group_1_0_0__0__Impl : ( () ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5498:1: rule__Addition__Group_1_0_0__0__Impl : ( () ) ;
     public final void rule__Addition__Group_1_0_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5471:1: ( ( () ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5472:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5502:1: ( ( () ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5503:1: ( () )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5472:1: ( () )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5473:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5503:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5504:1: ()
             {
              before(grammarAccess.getAdditionAccess().getPlusLeftAction_1_0_0_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5474:1: ()
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5476:1: 
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5505:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5507:1: 
             {
             }
 
@@ -14748,16 +14822,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Addition__Group_1_0_0__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5486:1: rule__Addition__Group_1_0_0__1 : rule__Addition__Group_1_0_0__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5517:1: rule__Addition__Group_1_0_0__1 : rule__Addition__Group_1_0_0__1__Impl ;
     public final void rule__Addition__Group_1_0_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5490:1: ( rule__Addition__Group_1_0_0__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5491:2: rule__Addition__Group_1_0_0__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5521:1: ( rule__Addition__Group_1_0_0__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5522:2: rule__Addition__Group_1_0_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__Addition__Group_1_0_0__1__Impl_in_rule__Addition__Group_1_0_0__111073);
+            pushFollow(FOLLOW_rule__Addition__Group_1_0_0__1__Impl_in_rule__Addition__Group_1_0_0__111136);
             rule__Addition__Group_1_0_0__1__Impl();
             _fsp--;
 
@@ -14780,20 +14854,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Addition__Group_1_0_0__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5497:1: rule__Addition__Group_1_0_0__1__Impl : ( '+' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5528:1: rule__Addition__Group_1_0_0__1__Impl : ( '+' ) ;
     public final void rule__Addition__Group_1_0_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5501:1: ( ( '+' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5502:1: ( '+' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5532:1: ( ( '+' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5533:1: ( '+' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5502:1: ( '+' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5503:1: '+'
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5533:1: ( '+' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5534:1: '+'
             {
              before(grammarAccess.getAdditionAccess().getPlusSignKeyword_1_0_0_1()); 
-            match(input,47,FOLLOW_47_in_rule__Addition__Group_1_0_0__1__Impl11101); 
+            match(input,47,FOLLOW_47_in_rule__Addition__Group_1_0_0__1__Impl11164); 
              after(grammarAccess.getAdditionAccess().getPlusSignKeyword_1_0_0_1()); 
 
             }
@@ -14817,20 +14891,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Addition__Group_1_0_1__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5520:1: rule__Addition__Group_1_0_1__0 : rule__Addition__Group_1_0_1__0__Impl rule__Addition__Group_1_0_1__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5551:1: rule__Addition__Group_1_0_1__0 : rule__Addition__Group_1_0_1__0__Impl rule__Addition__Group_1_0_1__1 ;
     public final void rule__Addition__Group_1_0_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5524:1: ( rule__Addition__Group_1_0_1__0__Impl rule__Addition__Group_1_0_1__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5525:2: rule__Addition__Group_1_0_1__0__Impl rule__Addition__Group_1_0_1__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5555:1: ( rule__Addition__Group_1_0_1__0__Impl rule__Addition__Group_1_0_1__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5556:2: rule__Addition__Group_1_0_1__0__Impl rule__Addition__Group_1_0_1__1
             {
-            pushFollow(FOLLOW_rule__Addition__Group_1_0_1__0__Impl_in_rule__Addition__Group_1_0_1__011136);
+            pushFollow(FOLLOW_rule__Addition__Group_1_0_1__0__Impl_in_rule__Addition__Group_1_0_1__011199);
             rule__Addition__Group_1_0_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Addition__Group_1_0_1__1_in_rule__Addition__Group_1_0_1__011139);
+            pushFollow(FOLLOW_rule__Addition__Group_1_0_1__1_in_rule__Addition__Group_1_0_1__011202);
             rule__Addition__Group_1_0_1__1();
             _fsp--;
 
@@ -14853,21 +14927,21 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Addition__Group_1_0_1__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5532:1: rule__Addition__Group_1_0_1__0__Impl : ( () ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5563:1: rule__Addition__Group_1_0_1__0__Impl : ( () ) ;
     public final void rule__Addition__Group_1_0_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5536:1: ( ( () ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5537:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5567:1: ( ( () ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5568:1: ( () )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5537:1: ( () )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5538:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5568:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5569:1: ()
             {
              before(grammarAccess.getAdditionAccess().getMinusLeftAction_1_0_1_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5539:1: ()
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5541:1: 
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5570:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5572:1: 
             {
             }
 
@@ -14890,16 +14964,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Addition__Group_1_0_1__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5551:1: rule__Addition__Group_1_0_1__1 : rule__Addition__Group_1_0_1__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5582:1: rule__Addition__Group_1_0_1__1 : rule__Addition__Group_1_0_1__1__Impl ;
     public final void rule__Addition__Group_1_0_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5555:1: ( rule__Addition__Group_1_0_1__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5556:2: rule__Addition__Group_1_0_1__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5586:1: ( rule__Addition__Group_1_0_1__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5587:2: rule__Addition__Group_1_0_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Addition__Group_1_0_1__1__Impl_in_rule__Addition__Group_1_0_1__111197);
+            pushFollow(FOLLOW_rule__Addition__Group_1_0_1__1__Impl_in_rule__Addition__Group_1_0_1__111260);
             rule__Addition__Group_1_0_1__1__Impl();
             _fsp--;
 
@@ -14922,20 +14996,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Addition__Group_1_0_1__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5562:1: rule__Addition__Group_1_0_1__1__Impl : ( '-' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5593:1: rule__Addition__Group_1_0_1__1__Impl : ( '-' ) ;
     public final void rule__Addition__Group_1_0_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5566:1: ( ( '-' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5567:1: ( '-' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5597:1: ( ( '-' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5598:1: ( '-' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5567:1: ( '-' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5568:1: '-'
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5598:1: ( '-' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5599:1: '-'
             {
              before(grammarAccess.getAdditionAccess().getHyphenMinusKeyword_1_0_1_1()); 
-            match(input,48,FOLLOW_48_in_rule__Addition__Group_1_0_1__1__Impl11225); 
+            match(input,48,FOLLOW_48_in_rule__Addition__Group_1_0_1__1__Impl11288); 
              after(grammarAccess.getAdditionAccess().getHyphenMinusKeyword_1_0_1_1()); 
 
             }
@@ -14959,20 +15033,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Multiplication__Group__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5585:1: rule__Multiplication__Group__0 : rule__Multiplication__Group__0__Impl rule__Multiplication__Group__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5616:1: rule__Multiplication__Group__0 : rule__Multiplication__Group__0__Impl rule__Multiplication__Group__1 ;
     public final void rule__Multiplication__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5589:1: ( rule__Multiplication__Group__0__Impl rule__Multiplication__Group__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5590:2: rule__Multiplication__Group__0__Impl rule__Multiplication__Group__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5620:1: ( rule__Multiplication__Group__0__Impl rule__Multiplication__Group__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5621:2: rule__Multiplication__Group__0__Impl rule__Multiplication__Group__1
             {
-            pushFollow(FOLLOW_rule__Multiplication__Group__0__Impl_in_rule__Multiplication__Group__011260);
+            pushFollow(FOLLOW_rule__Multiplication__Group__0__Impl_in_rule__Multiplication__Group__011323);
             rule__Multiplication__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Multiplication__Group__1_in_rule__Multiplication__Group__011263);
+            pushFollow(FOLLOW_rule__Multiplication__Group__1_in_rule__Multiplication__Group__011326);
             rule__Multiplication__Group__1();
             _fsp--;
 
@@ -14995,20 +15069,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Multiplication__Group__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5597:1: rule__Multiplication__Group__0__Impl : ( rulePower ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5628:1: rule__Multiplication__Group__0__Impl : ( rulePower ) ;
     public final void rule__Multiplication__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5601:1: ( ( rulePower ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5602:1: ( rulePower )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5632:1: ( ( rulePower ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5633:1: ( rulePower )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5602:1: ( rulePower )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5603:1: rulePower
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5633:1: ( rulePower )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5634:1: rulePower
             {
              before(grammarAccess.getMultiplicationAccess().getPowerParserRuleCall_0()); 
-            pushFollow(FOLLOW_rulePower_in_rule__Multiplication__Group__0__Impl11290);
+            pushFollow(FOLLOW_rulePower_in_rule__Multiplication__Group__0__Impl11353);
             rulePower();
             _fsp--;
 
@@ -15035,16 +15109,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Multiplication__Group__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5614:1: rule__Multiplication__Group__1 : rule__Multiplication__Group__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5645:1: rule__Multiplication__Group__1 : rule__Multiplication__Group__1__Impl ;
     public final void rule__Multiplication__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5618:1: ( rule__Multiplication__Group__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5619:2: rule__Multiplication__Group__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5649:1: ( rule__Multiplication__Group__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5650:2: rule__Multiplication__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Multiplication__Group__1__Impl_in_rule__Multiplication__Group__111319);
+            pushFollow(FOLLOW_rule__Multiplication__Group__1__Impl_in_rule__Multiplication__Group__111382);
             rule__Multiplication__Group__1__Impl();
             _fsp--;
 
@@ -15067,35 +15141,35 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Multiplication__Group__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5625:1: rule__Multiplication__Group__1__Impl : ( ( rule__Multiplication__Group_1__0 )* ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5656:1: rule__Multiplication__Group__1__Impl : ( ( rule__Multiplication__Group_1__0 )* ) ;
     public final void rule__Multiplication__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5629:1: ( ( ( rule__Multiplication__Group_1__0 )* ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5630:1: ( ( rule__Multiplication__Group_1__0 )* )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5660:1: ( ( ( rule__Multiplication__Group_1__0 )* ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5661:1: ( ( rule__Multiplication__Group_1__0 )* )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5630:1: ( ( rule__Multiplication__Group_1__0 )* )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5631:1: ( rule__Multiplication__Group_1__0 )*
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5661:1: ( ( rule__Multiplication__Group_1__0 )* )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5662:1: ( rule__Multiplication__Group_1__0 )*
             {
              before(grammarAccess.getMultiplicationAccess().getGroup_1()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5632:1: ( rule__Multiplication__Group_1__0 )*
-            loop50:
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5663:1: ( rule__Multiplication__Group_1__0 )*
+            loop51:
             do {
-                int alt50=2;
-                int LA50_0 = input.LA(1);
+                int alt51=2;
+                int LA51_0 = input.LA(1);
 
-                if ( ((LA50_0>=49 && LA50_0<=50)) ) {
-                    alt50=1;
+                if ( ((LA51_0>=49 && LA51_0<=50)) ) {
+                    alt51=1;
                 }
 
 
-                switch (alt50) {
+                switch (alt51) {
             	case 1 :
-            	    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5632:2: rule__Multiplication__Group_1__0
+            	    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5663:2: rule__Multiplication__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__Multiplication__Group_1__0_in_rule__Multiplication__Group__1__Impl11346);
+            	    pushFollow(FOLLOW_rule__Multiplication__Group_1__0_in_rule__Multiplication__Group__1__Impl11409);
             	    rule__Multiplication__Group_1__0();
             	    _fsp--;
 
@@ -15104,7 +15178,7 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop50;
+            	    break loop51;
                 }
             } while (true);
 
@@ -15131,20 +15205,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Multiplication__Group_1__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5646:1: rule__Multiplication__Group_1__0 : rule__Multiplication__Group_1__0__Impl rule__Multiplication__Group_1__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5677:1: rule__Multiplication__Group_1__0 : rule__Multiplication__Group_1__0__Impl rule__Multiplication__Group_1__1 ;
     public final void rule__Multiplication__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5650:1: ( rule__Multiplication__Group_1__0__Impl rule__Multiplication__Group_1__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5651:2: rule__Multiplication__Group_1__0__Impl rule__Multiplication__Group_1__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5681:1: ( rule__Multiplication__Group_1__0__Impl rule__Multiplication__Group_1__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5682:2: rule__Multiplication__Group_1__0__Impl rule__Multiplication__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Multiplication__Group_1__0__Impl_in_rule__Multiplication__Group_1__011381);
+            pushFollow(FOLLOW_rule__Multiplication__Group_1__0__Impl_in_rule__Multiplication__Group_1__011444);
             rule__Multiplication__Group_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Multiplication__Group_1__1_in_rule__Multiplication__Group_1__011384);
+            pushFollow(FOLLOW_rule__Multiplication__Group_1__1_in_rule__Multiplication__Group_1__011447);
             rule__Multiplication__Group_1__1();
             _fsp--;
 
@@ -15167,23 +15241,23 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Multiplication__Group_1__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5658:1: rule__Multiplication__Group_1__0__Impl : ( ( rule__Multiplication__Alternatives_1_0 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5689:1: rule__Multiplication__Group_1__0__Impl : ( ( rule__Multiplication__Alternatives_1_0 ) ) ;
     public final void rule__Multiplication__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5662:1: ( ( ( rule__Multiplication__Alternatives_1_0 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5663:1: ( ( rule__Multiplication__Alternatives_1_0 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5693:1: ( ( ( rule__Multiplication__Alternatives_1_0 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5694:1: ( ( rule__Multiplication__Alternatives_1_0 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5663:1: ( ( rule__Multiplication__Alternatives_1_0 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5664:1: ( rule__Multiplication__Alternatives_1_0 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5694:1: ( ( rule__Multiplication__Alternatives_1_0 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5695:1: ( rule__Multiplication__Alternatives_1_0 )
             {
              before(grammarAccess.getMultiplicationAccess().getAlternatives_1_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5665:1: ( rule__Multiplication__Alternatives_1_0 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5665:2: rule__Multiplication__Alternatives_1_0
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5696:1: ( rule__Multiplication__Alternatives_1_0 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5696:2: rule__Multiplication__Alternatives_1_0
             {
-            pushFollow(FOLLOW_rule__Multiplication__Alternatives_1_0_in_rule__Multiplication__Group_1__0__Impl11411);
+            pushFollow(FOLLOW_rule__Multiplication__Alternatives_1_0_in_rule__Multiplication__Group_1__0__Impl11474);
             rule__Multiplication__Alternatives_1_0();
             _fsp--;
 
@@ -15213,16 +15287,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Multiplication__Group_1__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5675:1: rule__Multiplication__Group_1__1 : rule__Multiplication__Group_1__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5706:1: rule__Multiplication__Group_1__1 : rule__Multiplication__Group_1__1__Impl ;
     public final void rule__Multiplication__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5679:1: ( rule__Multiplication__Group_1__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5680:2: rule__Multiplication__Group_1__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5710:1: ( rule__Multiplication__Group_1__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5711:2: rule__Multiplication__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Multiplication__Group_1__1__Impl_in_rule__Multiplication__Group_1__111441);
+            pushFollow(FOLLOW_rule__Multiplication__Group_1__1__Impl_in_rule__Multiplication__Group_1__111504);
             rule__Multiplication__Group_1__1__Impl();
             _fsp--;
 
@@ -15245,23 +15319,23 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Multiplication__Group_1__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5686:1: rule__Multiplication__Group_1__1__Impl : ( ( rule__Multiplication__RightAssignment_1_1 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5717:1: rule__Multiplication__Group_1__1__Impl : ( ( rule__Multiplication__RightAssignment_1_1 ) ) ;
     public final void rule__Multiplication__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5690:1: ( ( ( rule__Multiplication__RightAssignment_1_1 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5691:1: ( ( rule__Multiplication__RightAssignment_1_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5721:1: ( ( ( rule__Multiplication__RightAssignment_1_1 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5722:1: ( ( rule__Multiplication__RightAssignment_1_1 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5691:1: ( ( rule__Multiplication__RightAssignment_1_1 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5692:1: ( rule__Multiplication__RightAssignment_1_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5722:1: ( ( rule__Multiplication__RightAssignment_1_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5723:1: ( rule__Multiplication__RightAssignment_1_1 )
             {
              before(grammarAccess.getMultiplicationAccess().getRightAssignment_1_1()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5693:1: ( rule__Multiplication__RightAssignment_1_1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5693:2: rule__Multiplication__RightAssignment_1_1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5724:1: ( rule__Multiplication__RightAssignment_1_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5724:2: rule__Multiplication__RightAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__Multiplication__RightAssignment_1_1_in_rule__Multiplication__Group_1__1__Impl11468);
+            pushFollow(FOLLOW_rule__Multiplication__RightAssignment_1_1_in_rule__Multiplication__Group_1__1__Impl11531);
             rule__Multiplication__RightAssignment_1_1();
             _fsp--;
 
@@ -15291,20 +15365,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Multiplication__Group_1_0_0__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5707:1: rule__Multiplication__Group_1_0_0__0 : rule__Multiplication__Group_1_0_0__0__Impl rule__Multiplication__Group_1_0_0__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5738:1: rule__Multiplication__Group_1_0_0__0 : rule__Multiplication__Group_1_0_0__0__Impl rule__Multiplication__Group_1_0_0__1 ;
     public final void rule__Multiplication__Group_1_0_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5711:1: ( rule__Multiplication__Group_1_0_0__0__Impl rule__Multiplication__Group_1_0_0__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5712:2: rule__Multiplication__Group_1_0_0__0__Impl rule__Multiplication__Group_1_0_0__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5742:1: ( rule__Multiplication__Group_1_0_0__0__Impl rule__Multiplication__Group_1_0_0__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5743:2: rule__Multiplication__Group_1_0_0__0__Impl rule__Multiplication__Group_1_0_0__1
             {
-            pushFollow(FOLLOW_rule__Multiplication__Group_1_0_0__0__Impl_in_rule__Multiplication__Group_1_0_0__011502);
+            pushFollow(FOLLOW_rule__Multiplication__Group_1_0_0__0__Impl_in_rule__Multiplication__Group_1_0_0__011565);
             rule__Multiplication__Group_1_0_0__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Multiplication__Group_1_0_0__1_in_rule__Multiplication__Group_1_0_0__011505);
+            pushFollow(FOLLOW_rule__Multiplication__Group_1_0_0__1_in_rule__Multiplication__Group_1_0_0__011568);
             rule__Multiplication__Group_1_0_0__1();
             _fsp--;
 
@@ -15327,21 +15401,21 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Multiplication__Group_1_0_0__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5719:1: rule__Multiplication__Group_1_0_0__0__Impl : ( () ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5750:1: rule__Multiplication__Group_1_0_0__0__Impl : ( () ) ;
     public final void rule__Multiplication__Group_1_0_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5723:1: ( ( () ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5724:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5754:1: ( ( () ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5755:1: ( () )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5724:1: ( () )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5725:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5755:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5756:1: ()
             {
              before(grammarAccess.getMultiplicationAccess().getMultiLeftAction_1_0_0_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5726:1: ()
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5728:1: 
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5757:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5759:1: 
             {
             }
 
@@ -15364,16 +15438,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Multiplication__Group_1_0_0__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5738:1: rule__Multiplication__Group_1_0_0__1 : rule__Multiplication__Group_1_0_0__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5769:1: rule__Multiplication__Group_1_0_0__1 : rule__Multiplication__Group_1_0_0__1__Impl ;
     public final void rule__Multiplication__Group_1_0_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5742:1: ( rule__Multiplication__Group_1_0_0__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5743:2: rule__Multiplication__Group_1_0_0__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5773:1: ( rule__Multiplication__Group_1_0_0__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5774:2: rule__Multiplication__Group_1_0_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__Multiplication__Group_1_0_0__1__Impl_in_rule__Multiplication__Group_1_0_0__111563);
+            pushFollow(FOLLOW_rule__Multiplication__Group_1_0_0__1__Impl_in_rule__Multiplication__Group_1_0_0__111626);
             rule__Multiplication__Group_1_0_0__1__Impl();
             _fsp--;
 
@@ -15396,20 +15470,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Multiplication__Group_1_0_0__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5749:1: rule__Multiplication__Group_1_0_0__1__Impl : ( '*' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5780:1: rule__Multiplication__Group_1_0_0__1__Impl : ( '*' ) ;
     public final void rule__Multiplication__Group_1_0_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5753:1: ( ( '*' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5754:1: ( '*' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5784:1: ( ( '*' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5785:1: ( '*' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5754:1: ( '*' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5755:1: '*'
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5785:1: ( '*' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5786:1: '*'
             {
              before(grammarAccess.getMultiplicationAccess().getAsteriskKeyword_1_0_0_1()); 
-            match(input,49,FOLLOW_49_in_rule__Multiplication__Group_1_0_0__1__Impl11591); 
+            match(input,49,FOLLOW_49_in_rule__Multiplication__Group_1_0_0__1__Impl11654); 
              after(grammarAccess.getMultiplicationAccess().getAsteriskKeyword_1_0_0_1()); 
 
             }
@@ -15433,20 +15507,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Multiplication__Group_1_0_1__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5772:1: rule__Multiplication__Group_1_0_1__0 : rule__Multiplication__Group_1_0_1__0__Impl rule__Multiplication__Group_1_0_1__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5803:1: rule__Multiplication__Group_1_0_1__0 : rule__Multiplication__Group_1_0_1__0__Impl rule__Multiplication__Group_1_0_1__1 ;
     public final void rule__Multiplication__Group_1_0_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5776:1: ( rule__Multiplication__Group_1_0_1__0__Impl rule__Multiplication__Group_1_0_1__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5777:2: rule__Multiplication__Group_1_0_1__0__Impl rule__Multiplication__Group_1_0_1__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5807:1: ( rule__Multiplication__Group_1_0_1__0__Impl rule__Multiplication__Group_1_0_1__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5808:2: rule__Multiplication__Group_1_0_1__0__Impl rule__Multiplication__Group_1_0_1__1
             {
-            pushFollow(FOLLOW_rule__Multiplication__Group_1_0_1__0__Impl_in_rule__Multiplication__Group_1_0_1__011626);
+            pushFollow(FOLLOW_rule__Multiplication__Group_1_0_1__0__Impl_in_rule__Multiplication__Group_1_0_1__011689);
             rule__Multiplication__Group_1_0_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Multiplication__Group_1_0_1__1_in_rule__Multiplication__Group_1_0_1__011629);
+            pushFollow(FOLLOW_rule__Multiplication__Group_1_0_1__1_in_rule__Multiplication__Group_1_0_1__011692);
             rule__Multiplication__Group_1_0_1__1();
             _fsp--;
 
@@ -15469,21 +15543,21 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Multiplication__Group_1_0_1__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5784:1: rule__Multiplication__Group_1_0_1__0__Impl : ( () ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5815:1: rule__Multiplication__Group_1_0_1__0__Impl : ( () ) ;
     public final void rule__Multiplication__Group_1_0_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5788:1: ( ( () ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5789:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5819:1: ( ( () ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5820:1: ( () )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5789:1: ( () )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5790:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5820:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5821:1: ()
             {
              before(grammarAccess.getMultiplicationAccess().getDivLeftAction_1_0_1_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5791:1: ()
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5793:1: 
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5822:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5824:1: 
             {
             }
 
@@ -15506,16 +15580,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Multiplication__Group_1_0_1__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5803:1: rule__Multiplication__Group_1_0_1__1 : rule__Multiplication__Group_1_0_1__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5834:1: rule__Multiplication__Group_1_0_1__1 : rule__Multiplication__Group_1_0_1__1__Impl ;
     public final void rule__Multiplication__Group_1_0_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5807:1: ( rule__Multiplication__Group_1_0_1__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5808:2: rule__Multiplication__Group_1_0_1__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5838:1: ( rule__Multiplication__Group_1_0_1__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5839:2: rule__Multiplication__Group_1_0_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Multiplication__Group_1_0_1__1__Impl_in_rule__Multiplication__Group_1_0_1__111687);
+            pushFollow(FOLLOW_rule__Multiplication__Group_1_0_1__1__Impl_in_rule__Multiplication__Group_1_0_1__111750);
             rule__Multiplication__Group_1_0_1__1__Impl();
             _fsp--;
 
@@ -15538,20 +15612,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Multiplication__Group_1_0_1__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5814:1: rule__Multiplication__Group_1_0_1__1__Impl : ( '/' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5845:1: rule__Multiplication__Group_1_0_1__1__Impl : ( '/' ) ;
     public final void rule__Multiplication__Group_1_0_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5818:1: ( ( '/' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5819:1: ( '/' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5849:1: ( ( '/' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5850:1: ( '/' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5819:1: ( '/' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5820:1: '/'
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5850:1: ( '/' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5851:1: '/'
             {
              before(grammarAccess.getMultiplicationAccess().getSolidusKeyword_1_0_1_1()); 
-            match(input,50,FOLLOW_50_in_rule__Multiplication__Group_1_0_1__1__Impl11715); 
+            match(input,50,FOLLOW_50_in_rule__Multiplication__Group_1_0_1__1__Impl11778); 
              after(grammarAccess.getMultiplicationAccess().getSolidusKeyword_1_0_1_1()); 
 
             }
@@ -15575,20 +15649,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Power__Group__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5837:1: rule__Power__Group__0 : rule__Power__Group__0__Impl rule__Power__Group__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5868:1: rule__Power__Group__0 : rule__Power__Group__0__Impl rule__Power__Group__1 ;
     public final void rule__Power__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5841:1: ( rule__Power__Group__0__Impl rule__Power__Group__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5842:2: rule__Power__Group__0__Impl rule__Power__Group__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5872:1: ( rule__Power__Group__0__Impl rule__Power__Group__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5873:2: rule__Power__Group__0__Impl rule__Power__Group__1
             {
-            pushFollow(FOLLOW_rule__Power__Group__0__Impl_in_rule__Power__Group__011750);
+            pushFollow(FOLLOW_rule__Power__Group__0__Impl_in_rule__Power__Group__011813);
             rule__Power__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Power__Group__1_in_rule__Power__Group__011753);
+            pushFollow(FOLLOW_rule__Power__Group__1_in_rule__Power__Group__011816);
             rule__Power__Group__1();
             _fsp--;
 
@@ -15611,20 +15685,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Power__Group__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5849:1: rule__Power__Group__0__Impl : ( ruleUnaryExpr ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5880:1: rule__Power__Group__0__Impl : ( ruleUnaryExpr ) ;
     public final void rule__Power__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5853:1: ( ( ruleUnaryExpr ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5854:1: ( ruleUnaryExpr )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5884:1: ( ( ruleUnaryExpr ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5885:1: ( ruleUnaryExpr )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5854:1: ( ruleUnaryExpr )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5855:1: ruleUnaryExpr
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5885:1: ( ruleUnaryExpr )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5886:1: ruleUnaryExpr
             {
              before(grammarAccess.getPowerAccess().getUnaryExprParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleUnaryExpr_in_rule__Power__Group__0__Impl11780);
+            pushFollow(FOLLOW_ruleUnaryExpr_in_rule__Power__Group__0__Impl11843);
             ruleUnaryExpr();
             _fsp--;
 
@@ -15651,16 +15725,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Power__Group__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5866:1: rule__Power__Group__1 : rule__Power__Group__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5897:1: rule__Power__Group__1 : rule__Power__Group__1__Impl ;
     public final void rule__Power__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5870:1: ( rule__Power__Group__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5871:2: rule__Power__Group__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5901:1: ( rule__Power__Group__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5902:2: rule__Power__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Power__Group__1__Impl_in_rule__Power__Group__111809);
+            pushFollow(FOLLOW_rule__Power__Group__1__Impl_in_rule__Power__Group__111872);
             rule__Power__Group__1__Impl();
             _fsp--;
 
@@ -15683,35 +15757,35 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Power__Group__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5877:1: rule__Power__Group__1__Impl : ( ( rule__Power__Group_1__0 )* ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5908:1: rule__Power__Group__1__Impl : ( ( rule__Power__Group_1__0 )* ) ;
     public final void rule__Power__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5881:1: ( ( ( rule__Power__Group_1__0 )* ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5882:1: ( ( rule__Power__Group_1__0 )* )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5912:1: ( ( ( rule__Power__Group_1__0 )* ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5913:1: ( ( rule__Power__Group_1__0 )* )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5882:1: ( ( rule__Power__Group_1__0 )* )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5883:1: ( rule__Power__Group_1__0 )*
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5913:1: ( ( rule__Power__Group_1__0 )* )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5914:1: ( rule__Power__Group_1__0 )*
             {
              before(grammarAccess.getPowerAccess().getGroup_1()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5884:1: ( rule__Power__Group_1__0 )*
-            loop51:
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5915:1: ( rule__Power__Group_1__0 )*
+            loop52:
             do {
-                int alt51=2;
-                int LA51_0 = input.LA(1);
+                int alt52=2;
+                int LA52_0 = input.LA(1);
 
-                if ( (LA51_0==51) ) {
-                    alt51=1;
+                if ( (LA52_0==51) ) {
+                    alt52=1;
                 }
 
 
-                switch (alt51) {
+                switch (alt52) {
             	case 1 :
-            	    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5884:2: rule__Power__Group_1__0
+            	    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5915:2: rule__Power__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__Power__Group_1__0_in_rule__Power__Group__1__Impl11836);
+            	    pushFollow(FOLLOW_rule__Power__Group_1__0_in_rule__Power__Group__1__Impl11899);
             	    rule__Power__Group_1__0();
             	    _fsp--;
 
@@ -15720,7 +15794,7 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop51;
+            	    break loop52;
                 }
             } while (true);
 
@@ -15747,20 +15821,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Power__Group_1__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5898:1: rule__Power__Group_1__0 : rule__Power__Group_1__0__Impl rule__Power__Group_1__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5929:1: rule__Power__Group_1__0 : rule__Power__Group_1__0__Impl rule__Power__Group_1__1 ;
     public final void rule__Power__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5902:1: ( rule__Power__Group_1__0__Impl rule__Power__Group_1__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5903:2: rule__Power__Group_1__0__Impl rule__Power__Group_1__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5933:1: ( rule__Power__Group_1__0__Impl rule__Power__Group_1__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5934:2: rule__Power__Group_1__0__Impl rule__Power__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Power__Group_1__0__Impl_in_rule__Power__Group_1__011871);
+            pushFollow(FOLLOW_rule__Power__Group_1__0__Impl_in_rule__Power__Group_1__011934);
             rule__Power__Group_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Power__Group_1__1_in_rule__Power__Group_1__011874);
+            pushFollow(FOLLOW_rule__Power__Group_1__1_in_rule__Power__Group_1__011937);
             rule__Power__Group_1__1();
             _fsp--;
 
@@ -15783,23 +15857,23 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Power__Group_1__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5910:1: rule__Power__Group_1__0__Impl : ( ( rule__Power__Group_1_0__0 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5941:1: rule__Power__Group_1__0__Impl : ( ( rule__Power__Group_1_0__0 ) ) ;
     public final void rule__Power__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5914:1: ( ( ( rule__Power__Group_1_0__0 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5915:1: ( ( rule__Power__Group_1_0__0 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5945:1: ( ( ( rule__Power__Group_1_0__0 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5946:1: ( ( rule__Power__Group_1_0__0 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5915:1: ( ( rule__Power__Group_1_0__0 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5916:1: ( rule__Power__Group_1_0__0 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5946:1: ( ( rule__Power__Group_1_0__0 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5947:1: ( rule__Power__Group_1_0__0 )
             {
              before(grammarAccess.getPowerAccess().getGroup_1_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5917:1: ( rule__Power__Group_1_0__0 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5917:2: rule__Power__Group_1_0__0
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5948:1: ( rule__Power__Group_1_0__0 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5948:2: rule__Power__Group_1_0__0
             {
-            pushFollow(FOLLOW_rule__Power__Group_1_0__0_in_rule__Power__Group_1__0__Impl11901);
+            pushFollow(FOLLOW_rule__Power__Group_1_0__0_in_rule__Power__Group_1__0__Impl11964);
             rule__Power__Group_1_0__0();
             _fsp--;
 
@@ -15829,16 +15903,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Power__Group_1__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5927:1: rule__Power__Group_1__1 : rule__Power__Group_1__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5958:1: rule__Power__Group_1__1 : rule__Power__Group_1__1__Impl ;
     public final void rule__Power__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5931:1: ( rule__Power__Group_1__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5932:2: rule__Power__Group_1__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5962:1: ( rule__Power__Group_1__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5963:2: rule__Power__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Power__Group_1__1__Impl_in_rule__Power__Group_1__111931);
+            pushFollow(FOLLOW_rule__Power__Group_1__1__Impl_in_rule__Power__Group_1__111994);
             rule__Power__Group_1__1__Impl();
             _fsp--;
 
@@ -15861,23 +15935,23 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Power__Group_1__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5938:1: rule__Power__Group_1__1__Impl : ( ( rule__Power__RightAssignment_1_1 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5969:1: rule__Power__Group_1__1__Impl : ( ( rule__Power__RightAssignment_1_1 ) ) ;
     public final void rule__Power__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5942:1: ( ( ( rule__Power__RightAssignment_1_1 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5943:1: ( ( rule__Power__RightAssignment_1_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5973:1: ( ( ( rule__Power__RightAssignment_1_1 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5974:1: ( ( rule__Power__RightAssignment_1_1 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5943:1: ( ( rule__Power__RightAssignment_1_1 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5944:1: ( rule__Power__RightAssignment_1_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5974:1: ( ( rule__Power__RightAssignment_1_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5975:1: ( rule__Power__RightAssignment_1_1 )
             {
              before(grammarAccess.getPowerAccess().getRightAssignment_1_1()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5945:1: ( rule__Power__RightAssignment_1_1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5945:2: rule__Power__RightAssignment_1_1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5976:1: ( rule__Power__RightAssignment_1_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5976:2: rule__Power__RightAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__Power__RightAssignment_1_1_in_rule__Power__Group_1__1__Impl11958);
+            pushFollow(FOLLOW_rule__Power__RightAssignment_1_1_in_rule__Power__Group_1__1__Impl12021);
             rule__Power__RightAssignment_1_1();
             _fsp--;
 
@@ -15907,20 +15981,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Power__Group_1_0__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5959:1: rule__Power__Group_1_0__0 : rule__Power__Group_1_0__0__Impl rule__Power__Group_1_0__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5990:1: rule__Power__Group_1_0__0 : rule__Power__Group_1_0__0__Impl rule__Power__Group_1_0__1 ;
     public final void rule__Power__Group_1_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5963:1: ( rule__Power__Group_1_0__0__Impl rule__Power__Group_1_0__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5964:2: rule__Power__Group_1_0__0__Impl rule__Power__Group_1_0__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5994:1: ( rule__Power__Group_1_0__0__Impl rule__Power__Group_1_0__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5995:2: rule__Power__Group_1_0__0__Impl rule__Power__Group_1_0__1
             {
-            pushFollow(FOLLOW_rule__Power__Group_1_0__0__Impl_in_rule__Power__Group_1_0__011992);
+            pushFollow(FOLLOW_rule__Power__Group_1_0__0__Impl_in_rule__Power__Group_1_0__012055);
             rule__Power__Group_1_0__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Power__Group_1_0__1_in_rule__Power__Group_1_0__011995);
+            pushFollow(FOLLOW_rule__Power__Group_1_0__1_in_rule__Power__Group_1_0__012058);
             rule__Power__Group_1_0__1();
             _fsp--;
 
@@ -15943,21 +16017,21 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Power__Group_1_0__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5971:1: rule__Power__Group_1_0__0__Impl : ( () ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6002:1: rule__Power__Group_1_0__0__Impl : ( () ) ;
     public final void rule__Power__Group_1_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5975:1: ( ( () ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5976:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6006:1: ( ( () ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6007:1: ( () )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5976:1: ( () )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5977:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6007:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6008:1: ()
             {
              before(grammarAccess.getPowerAccess().getPowLeftAction_1_0_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5978:1: ()
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5980:1: 
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6009:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6011:1: 
             {
             }
 
@@ -15980,16 +16054,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Power__Group_1_0__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5990:1: rule__Power__Group_1_0__1 : rule__Power__Group_1_0__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6021:1: rule__Power__Group_1_0__1 : rule__Power__Group_1_0__1__Impl ;
     public final void rule__Power__Group_1_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5994:1: ( rule__Power__Group_1_0__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:5995:2: rule__Power__Group_1_0__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6025:1: ( rule__Power__Group_1_0__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6026:2: rule__Power__Group_1_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__Power__Group_1_0__1__Impl_in_rule__Power__Group_1_0__112053);
+            pushFollow(FOLLOW_rule__Power__Group_1_0__1__Impl_in_rule__Power__Group_1_0__112116);
             rule__Power__Group_1_0__1__Impl();
             _fsp--;
 
@@ -16012,20 +16086,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Power__Group_1_0__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6001:1: rule__Power__Group_1_0__1__Impl : ( '^' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6032:1: rule__Power__Group_1_0__1__Impl : ( '^' ) ;
     public final void rule__Power__Group_1_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6005:1: ( ( '^' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6006:1: ( '^' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6036:1: ( ( '^' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6037:1: ( '^' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6006:1: ( '^' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6007:1: '^'
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6037:1: ( '^' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6038:1: '^'
             {
              before(grammarAccess.getPowerAccess().getCircumflexAccentKeyword_1_0_1()); 
-            match(input,51,FOLLOW_51_in_rule__Power__Group_1_0__1__Impl12081); 
+            match(input,51,FOLLOW_51_in_rule__Power__Group_1_0__1__Impl12144); 
              after(grammarAccess.getPowerAccess().getCircumflexAccentKeyword_1_0_1()); 
 
             }
@@ -16049,20 +16123,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__UnaryExpr__Group__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6024:1: rule__UnaryExpr__Group__0 : rule__UnaryExpr__Group__0__Impl rule__UnaryExpr__Group__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6055:1: rule__UnaryExpr__Group__0 : rule__UnaryExpr__Group__0__Impl rule__UnaryExpr__Group__1 ;
     public final void rule__UnaryExpr__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6028:1: ( rule__UnaryExpr__Group__0__Impl rule__UnaryExpr__Group__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6029:2: rule__UnaryExpr__Group__0__Impl rule__UnaryExpr__Group__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6059:1: ( rule__UnaryExpr__Group__0__Impl rule__UnaryExpr__Group__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6060:2: rule__UnaryExpr__Group__0__Impl rule__UnaryExpr__Group__1
             {
-            pushFollow(FOLLOW_rule__UnaryExpr__Group__0__Impl_in_rule__UnaryExpr__Group__012116);
+            pushFollow(FOLLOW_rule__UnaryExpr__Group__0__Impl_in_rule__UnaryExpr__Group__012179);
             rule__UnaryExpr__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__UnaryExpr__Group__1_in_rule__UnaryExpr__Group__012119);
+            pushFollow(FOLLOW_rule__UnaryExpr__Group__1_in_rule__UnaryExpr__Group__012182);
             rule__UnaryExpr__Group__1();
             _fsp--;
 
@@ -16085,31 +16159,31 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__UnaryExpr__Group__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6036:1: rule__UnaryExpr__Group__0__Impl : ( ( rule__UnaryExpr__OpAssignment_0 )? ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6067:1: rule__UnaryExpr__Group__0__Impl : ( ( rule__UnaryExpr__OpAssignment_0 )? ) ;
     public final void rule__UnaryExpr__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6040:1: ( ( ( rule__UnaryExpr__OpAssignment_0 )? ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6041:1: ( ( rule__UnaryExpr__OpAssignment_0 )? )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6071:1: ( ( ( rule__UnaryExpr__OpAssignment_0 )? ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6072:1: ( ( rule__UnaryExpr__OpAssignment_0 )? )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6041:1: ( ( rule__UnaryExpr__OpAssignment_0 )? )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6042:1: ( rule__UnaryExpr__OpAssignment_0 )?
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6072:1: ( ( rule__UnaryExpr__OpAssignment_0 )? )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6073:1: ( rule__UnaryExpr__OpAssignment_0 )?
             {
              before(grammarAccess.getUnaryExprAccess().getOpAssignment_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6043:1: ( rule__UnaryExpr__OpAssignment_0 )?
-            int alt52=2;
-            int LA52_0 = input.LA(1);
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6074:1: ( rule__UnaryExpr__OpAssignment_0 )?
+            int alt53=2;
+            int LA53_0 = input.LA(1);
 
-            if ( (LA52_0==12) ) {
-                alt52=1;
+            if ( (LA53_0==12) ) {
+                alt53=1;
             }
-            switch (alt52) {
+            switch (alt53) {
                 case 1 :
-                    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6043:2: rule__UnaryExpr__OpAssignment_0
+                    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6074:2: rule__UnaryExpr__OpAssignment_0
                     {
-                    pushFollow(FOLLOW_rule__UnaryExpr__OpAssignment_0_in_rule__UnaryExpr__Group__0__Impl12146);
+                    pushFollow(FOLLOW_rule__UnaryExpr__OpAssignment_0_in_rule__UnaryExpr__Group__0__Impl12209);
                     rule__UnaryExpr__OpAssignment_0();
                     _fsp--;
 
@@ -16142,16 +16216,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__UnaryExpr__Group__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6053:1: rule__UnaryExpr__Group__1 : rule__UnaryExpr__Group__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6084:1: rule__UnaryExpr__Group__1 : rule__UnaryExpr__Group__1__Impl ;
     public final void rule__UnaryExpr__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6057:1: ( rule__UnaryExpr__Group__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6058:2: rule__UnaryExpr__Group__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6088:1: ( rule__UnaryExpr__Group__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6089:2: rule__UnaryExpr__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__UnaryExpr__Group__1__Impl_in_rule__UnaryExpr__Group__112177);
+            pushFollow(FOLLOW_rule__UnaryExpr__Group__1__Impl_in_rule__UnaryExpr__Group__112240);
             rule__UnaryExpr__Group__1__Impl();
             _fsp--;
 
@@ -16174,23 +16248,23 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__UnaryExpr__Group__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6064:1: rule__UnaryExpr__Group__1__Impl : ( ( rule__UnaryExpr__RightAssignment_1 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6095:1: rule__UnaryExpr__Group__1__Impl : ( ( rule__UnaryExpr__RightAssignment_1 ) ) ;
     public final void rule__UnaryExpr__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6068:1: ( ( ( rule__UnaryExpr__RightAssignment_1 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6069:1: ( ( rule__UnaryExpr__RightAssignment_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6099:1: ( ( ( rule__UnaryExpr__RightAssignment_1 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6100:1: ( ( rule__UnaryExpr__RightAssignment_1 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6069:1: ( ( rule__UnaryExpr__RightAssignment_1 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6070:1: ( rule__UnaryExpr__RightAssignment_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6100:1: ( ( rule__UnaryExpr__RightAssignment_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6101:1: ( rule__UnaryExpr__RightAssignment_1 )
             {
              before(grammarAccess.getUnaryExprAccess().getRightAssignment_1()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6071:1: ( rule__UnaryExpr__RightAssignment_1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6071:2: rule__UnaryExpr__RightAssignment_1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6102:1: ( rule__UnaryExpr__RightAssignment_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6102:2: rule__UnaryExpr__RightAssignment_1
             {
-            pushFollow(FOLLOW_rule__UnaryExpr__RightAssignment_1_in_rule__UnaryExpr__Group__1__Impl12204);
+            pushFollow(FOLLOW_rule__UnaryExpr__RightAssignment_1_in_rule__UnaryExpr__Group__1__Impl12267);
             rule__UnaryExpr__RightAssignment_1();
             _fsp--;
 
@@ -16220,20 +16294,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__PrePrimaryExpr__Group_2__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6085:1: rule__PrePrimaryExpr__Group_2__0 : rule__PrePrimaryExpr__Group_2__0__Impl rule__PrePrimaryExpr__Group_2__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6116:1: rule__PrePrimaryExpr__Group_2__0 : rule__PrePrimaryExpr__Group_2__0__Impl rule__PrePrimaryExpr__Group_2__1 ;
     public final void rule__PrePrimaryExpr__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6089:1: ( rule__PrePrimaryExpr__Group_2__0__Impl rule__PrePrimaryExpr__Group_2__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6090:2: rule__PrePrimaryExpr__Group_2__0__Impl rule__PrePrimaryExpr__Group_2__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6120:1: ( rule__PrePrimaryExpr__Group_2__0__Impl rule__PrePrimaryExpr__Group_2__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6121:2: rule__PrePrimaryExpr__Group_2__0__Impl rule__PrePrimaryExpr__Group_2__1
             {
-            pushFollow(FOLLOW_rule__PrePrimaryExpr__Group_2__0__Impl_in_rule__PrePrimaryExpr__Group_2__012238);
+            pushFollow(FOLLOW_rule__PrePrimaryExpr__Group_2__0__Impl_in_rule__PrePrimaryExpr__Group_2__012301);
             rule__PrePrimaryExpr__Group_2__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__PrePrimaryExpr__Group_2__1_in_rule__PrePrimaryExpr__Group_2__012241);
+            pushFollow(FOLLOW_rule__PrePrimaryExpr__Group_2__1_in_rule__PrePrimaryExpr__Group_2__012304);
             rule__PrePrimaryExpr__Group_2__1();
             _fsp--;
 
@@ -16256,20 +16330,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__PrePrimaryExpr__Group_2__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6097:1: rule__PrePrimaryExpr__Group_2__0__Impl : ( '(' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6128:1: rule__PrePrimaryExpr__Group_2__0__Impl : ( '(' ) ;
     public final void rule__PrePrimaryExpr__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6101:1: ( ( '(' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6102:1: ( '(' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6132:1: ( ( '(' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6133:1: ( '(' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6102:1: ( '(' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6103:1: '('
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6133:1: ( '(' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6134:1: '('
             {
              before(grammarAccess.getPrePrimaryExprAccess().getLeftParenthesisKeyword_2_0()); 
-            match(input,30,FOLLOW_30_in_rule__PrePrimaryExpr__Group_2__0__Impl12269); 
+            match(input,30,FOLLOW_30_in_rule__PrePrimaryExpr__Group_2__0__Impl12332); 
              after(grammarAccess.getPrePrimaryExprAccess().getLeftParenthesisKeyword_2_0()); 
 
             }
@@ -16293,20 +16367,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__PrePrimaryExpr__Group_2__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6116:1: rule__PrePrimaryExpr__Group_2__1 : rule__PrePrimaryExpr__Group_2__1__Impl rule__PrePrimaryExpr__Group_2__2 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6147:1: rule__PrePrimaryExpr__Group_2__1 : rule__PrePrimaryExpr__Group_2__1__Impl rule__PrePrimaryExpr__Group_2__2 ;
     public final void rule__PrePrimaryExpr__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6120:1: ( rule__PrePrimaryExpr__Group_2__1__Impl rule__PrePrimaryExpr__Group_2__2 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6121:2: rule__PrePrimaryExpr__Group_2__1__Impl rule__PrePrimaryExpr__Group_2__2
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6151:1: ( rule__PrePrimaryExpr__Group_2__1__Impl rule__PrePrimaryExpr__Group_2__2 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6152:2: rule__PrePrimaryExpr__Group_2__1__Impl rule__PrePrimaryExpr__Group_2__2
             {
-            pushFollow(FOLLOW_rule__PrePrimaryExpr__Group_2__1__Impl_in_rule__PrePrimaryExpr__Group_2__112300);
+            pushFollow(FOLLOW_rule__PrePrimaryExpr__Group_2__1__Impl_in_rule__PrePrimaryExpr__Group_2__112363);
             rule__PrePrimaryExpr__Group_2__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__PrePrimaryExpr__Group_2__2_in_rule__PrePrimaryExpr__Group_2__112303);
+            pushFollow(FOLLOW_rule__PrePrimaryExpr__Group_2__2_in_rule__PrePrimaryExpr__Group_2__112366);
             rule__PrePrimaryExpr__Group_2__2();
             _fsp--;
 
@@ -16329,20 +16403,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__PrePrimaryExpr__Group_2__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6128:1: rule__PrePrimaryExpr__Group_2__1__Impl : ( ruleExpression ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6159:1: rule__PrePrimaryExpr__Group_2__1__Impl : ( ruleExpression ) ;
     public final void rule__PrePrimaryExpr__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6132:1: ( ( ruleExpression ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6133:1: ( ruleExpression )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6163:1: ( ( ruleExpression ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6164:1: ( ruleExpression )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6133:1: ( ruleExpression )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6134:1: ruleExpression
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6164:1: ( ruleExpression )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6165:1: ruleExpression
             {
              before(grammarAccess.getPrePrimaryExprAccess().getExpressionParserRuleCall_2_1()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__PrePrimaryExpr__Group_2__1__Impl12330);
+            pushFollow(FOLLOW_ruleExpression_in_rule__PrePrimaryExpr__Group_2__1__Impl12393);
             ruleExpression();
             _fsp--;
 
@@ -16369,16 +16443,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__PrePrimaryExpr__Group_2__2
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6145:1: rule__PrePrimaryExpr__Group_2__2 : rule__PrePrimaryExpr__Group_2__2__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6176:1: rule__PrePrimaryExpr__Group_2__2 : rule__PrePrimaryExpr__Group_2__2__Impl ;
     public final void rule__PrePrimaryExpr__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6149:1: ( rule__PrePrimaryExpr__Group_2__2__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6150:2: rule__PrePrimaryExpr__Group_2__2__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6180:1: ( rule__PrePrimaryExpr__Group_2__2__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6181:2: rule__PrePrimaryExpr__Group_2__2__Impl
             {
-            pushFollow(FOLLOW_rule__PrePrimaryExpr__Group_2__2__Impl_in_rule__PrePrimaryExpr__Group_2__212359);
+            pushFollow(FOLLOW_rule__PrePrimaryExpr__Group_2__2__Impl_in_rule__PrePrimaryExpr__Group_2__212422);
             rule__PrePrimaryExpr__Group_2__2__Impl();
             _fsp--;
 
@@ -16401,20 +16475,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__PrePrimaryExpr__Group_2__2__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6156:1: rule__PrePrimaryExpr__Group_2__2__Impl : ( ')' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6187:1: rule__PrePrimaryExpr__Group_2__2__Impl : ( ')' ) ;
     public final void rule__PrePrimaryExpr__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6160:1: ( ( ')' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6161:1: ( ')' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6191:1: ( ( ')' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6192:1: ( ')' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6161:1: ( ')' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6162:1: ')'
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6192:1: ( ')' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6193:1: ')'
             {
              before(grammarAccess.getPrePrimaryExprAccess().getRightParenthesisKeyword_2_2()); 
-            match(input,31,FOLLOW_31_in_rule__PrePrimaryExpr__Group_2__2__Impl12387); 
+            match(input,31,FOLLOW_31_in_rule__PrePrimaryExpr__Group_2__2__Impl12450); 
              after(grammarAccess.getPrePrimaryExprAccess().getRightParenthesisKeyword_2_2()); 
 
             }
@@ -16438,20 +16512,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__PrePrimaryExpr__Group_3__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6181:1: rule__PrePrimaryExpr__Group_3__0 : rule__PrePrimaryExpr__Group_3__0__Impl rule__PrePrimaryExpr__Group_3__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6212:1: rule__PrePrimaryExpr__Group_3__0 : rule__PrePrimaryExpr__Group_3__0__Impl rule__PrePrimaryExpr__Group_3__1 ;
     public final void rule__PrePrimaryExpr__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6185:1: ( rule__PrePrimaryExpr__Group_3__0__Impl rule__PrePrimaryExpr__Group_3__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6186:2: rule__PrePrimaryExpr__Group_3__0__Impl rule__PrePrimaryExpr__Group_3__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6216:1: ( rule__PrePrimaryExpr__Group_3__0__Impl rule__PrePrimaryExpr__Group_3__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6217:2: rule__PrePrimaryExpr__Group_3__0__Impl rule__PrePrimaryExpr__Group_3__1
             {
-            pushFollow(FOLLOW_rule__PrePrimaryExpr__Group_3__0__Impl_in_rule__PrePrimaryExpr__Group_3__012424);
+            pushFollow(FOLLOW_rule__PrePrimaryExpr__Group_3__0__Impl_in_rule__PrePrimaryExpr__Group_3__012487);
             rule__PrePrimaryExpr__Group_3__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__PrePrimaryExpr__Group_3__1_in_rule__PrePrimaryExpr__Group_3__012427);
+            pushFollow(FOLLOW_rule__PrePrimaryExpr__Group_3__1_in_rule__PrePrimaryExpr__Group_3__012490);
             rule__PrePrimaryExpr__Group_3__1();
             _fsp--;
 
@@ -16474,20 +16548,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__PrePrimaryExpr__Group_3__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6193:1: rule__PrePrimaryExpr__Group_3__0__Impl : ( '-' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6224:1: rule__PrePrimaryExpr__Group_3__0__Impl : ( '-' ) ;
     public final void rule__PrePrimaryExpr__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6197:1: ( ( '-' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6198:1: ( '-' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6228:1: ( ( '-' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6229:1: ( '-' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6198:1: ( '-' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6199:1: '-'
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6229:1: ( '-' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6230:1: '-'
             {
              before(grammarAccess.getPrePrimaryExprAccess().getHyphenMinusKeyword_3_0()); 
-            match(input,48,FOLLOW_48_in_rule__PrePrimaryExpr__Group_3__0__Impl12455); 
+            match(input,48,FOLLOW_48_in_rule__PrePrimaryExpr__Group_3__0__Impl12518); 
              after(grammarAccess.getPrePrimaryExprAccess().getHyphenMinusKeyword_3_0()); 
 
             }
@@ -16511,16 +16585,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__PrePrimaryExpr__Group_3__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6212:1: rule__PrePrimaryExpr__Group_3__1 : rule__PrePrimaryExpr__Group_3__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6243:1: rule__PrePrimaryExpr__Group_3__1 : rule__PrePrimaryExpr__Group_3__1__Impl ;
     public final void rule__PrePrimaryExpr__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6216:1: ( rule__PrePrimaryExpr__Group_3__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6217:2: rule__PrePrimaryExpr__Group_3__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6247:1: ( rule__PrePrimaryExpr__Group_3__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6248:2: rule__PrePrimaryExpr__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__PrePrimaryExpr__Group_3__1__Impl_in_rule__PrePrimaryExpr__Group_3__112486);
+            pushFollow(FOLLOW_rule__PrePrimaryExpr__Group_3__1__Impl_in_rule__PrePrimaryExpr__Group_3__112549);
             rule__PrePrimaryExpr__Group_3__1__Impl();
             _fsp--;
 
@@ -16543,23 +16617,23 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__PrePrimaryExpr__Group_3__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6223:1: rule__PrePrimaryExpr__Group_3__1__Impl : ( ( rule__PrePrimaryExpr__NAssignment_3_1 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6254:1: rule__PrePrimaryExpr__Group_3__1__Impl : ( ( rule__PrePrimaryExpr__NAssignment_3_1 ) ) ;
     public final void rule__PrePrimaryExpr__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6227:1: ( ( ( rule__PrePrimaryExpr__NAssignment_3_1 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6228:1: ( ( rule__PrePrimaryExpr__NAssignment_3_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6258:1: ( ( ( rule__PrePrimaryExpr__NAssignment_3_1 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6259:1: ( ( rule__PrePrimaryExpr__NAssignment_3_1 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6228:1: ( ( rule__PrePrimaryExpr__NAssignment_3_1 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6229:1: ( rule__PrePrimaryExpr__NAssignment_3_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6259:1: ( ( rule__PrePrimaryExpr__NAssignment_3_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6260:1: ( rule__PrePrimaryExpr__NAssignment_3_1 )
             {
              before(grammarAccess.getPrePrimaryExprAccess().getNAssignment_3_1()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6230:1: ( rule__PrePrimaryExpr__NAssignment_3_1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6230:2: rule__PrePrimaryExpr__NAssignment_3_1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6261:1: ( rule__PrePrimaryExpr__NAssignment_3_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6261:2: rule__PrePrimaryExpr__NAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__PrePrimaryExpr__NAssignment_3_1_in_rule__PrePrimaryExpr__Group_3__1__Impl12513);
+            pushFollow(FOLLOW_rule__PrePrimaryExpr__NAssignment_3_1_in_rule__PrePrimaryExpr__Group_3__1__Impl12576);
             rule__PrePrimaryExpr__NAssignment_3_1();
             _fsp--;
 
@@ -16589,20 +16663,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AbstractRef__Group__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6244:1: rule__AbstractRef__Group__0 : rule__AbstractRef__Group__0__Impl rule__AbstractRef__Group__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6275:1: rule__AbstractRef__Group__0 : rule__AbstractRef__Group__0__Impl rule__AbstractRef__Group__1 ;
     public final void rule__AbstractRef__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6248:1: ( rule__AbstractRef__Group__0__Impl rule__AbstractRef__Group__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6249:2: rule__AbstractRef__Group__0__Impl rule__AbstractRef__Group__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6279:1: ( rule__AbstractRef__Group__0__Impl rule__AbstractRef__Group__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6280:2: rule__AbstractRef__Group__0__Impl rule__AbstractRef__Group__1
             {
-            pushFollow(FOLLOW_rule__AbstractRef__Group__0__Impl_in_rule__AbstractRef__Group__012547);
+            pushFollow(FOLLOW_rule__AbstractRef__Group__0__Impl_in_rule__AbstractRef__Group__012610);
             rule__AbstractRef__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__AbstractRef__Group__1_in_rule__AbstractRef__Group__012550);
+            pushFollow(FOLLOW_rule__AbstractRef__Group__1_in_rule__AbstractRef__Group__012613);
             rule__AbstractRef__Group__1();
             _fsp--;
 
@@ -16625,23 +16699,23 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AbstractRef__Group__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6256:1: rule__AbstractRef__Group__0__Impl : ( ( rule__AbstractRef__DefineAssignment_0 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6287:1: rule__AbstractRef__Group__0__Impl : ( ( rule__AbstractRef__DefineAssignment_0 ) ) ;
     public final void rule__AbstractRef__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6260:1: ( ( ( rule__AbstractRef__DefineAssignment_0 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6261:1: ( ( rule__AbstractRef__DefineAssignment_0 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6291:1: ( ( ( rule__AbstractRef__DefineAssignment_0 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6292:1: ( ( rule__AbstractRef__DefineAssignment_0 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6261:1: ( ( rule__AbstractRef__DefineAssignment_0 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6262:1: ( rule__AbstractRef__DefineAssignment_0 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6292:1: ( ( rule__AbstractRef__DefineAssignment_0 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6293:1: ( rule__AbstractRef__DefineAssignment_0 )
             {
              before(grammarAccess.getAbstractRefAccess().getDefineAssignment_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6263:1: ( rule__AbstractRef__DefineAssignment_0 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6263:2: rule__AbstractRef__DefineAssignment_0
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6294:1: ( rule__AbstractRef__DefineAssignment_0 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6294:2: rule__AbstractRef__DefineAssignment_0
             {
-            pushFollow(FOLLOW_rule__AbstractRef__DefineAssignment_0_in_rule__AbstractRef__Group__0__Impl12577);
+            pushFollow(FOLLOW_rule__AbstractRef__DefineAssignment_0_in_rule__AbstractRef__Group__0__Impl12640);
             rule__AbstractRef__DefineAssignment_0();
             _fsp--;
 
@@ -16671,16 +16745,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AbstractRef__Group__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6273:1: rule__AbstractRef__Group__1 : rule__AbstractRef__Group__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6304:1: rule__AbstractRef__Group__1 : rule__AbstractRef__Group__1__Impl ;
     public final void rule__AbstractRef__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6277:1: ( rule__AbstractRef__Group__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6278:2: rule__AbstractRef__Group__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6308:1: ( rule__AbstractRef__Group__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6309:2: rule__AbstractRef__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__AbstractRef__Group__1__Impl_in_rule__AbstractRef__Group__112607);
+            pushFollow(FOLLOW_rule__AbstractRef__Group__1__Impl_in_rule__AbstractRef__Group__112670);
             rule__AbstractRef__Group__1__Impl();
             _fsp--;
 
@@ -16703,31 +16777,31 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AbstractRef__Group__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6284:1: rule__AbstractRef__Group__1__Impl : ( ( rule__AbstractRef__Group_1__0 )? ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6315:1: rule__AbstractRef__Group__1__Impl : ( ( rule__AbstractRef__Group_1__0 )? ) ;
     public final void rule__AbstractRef__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6288:1: ( ( ( rule__AbstractRef__Group_1__0 )? ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6289:1: ( ( rule__AbstractRef__Group_1__0 )? )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6319:1: ( ( ( rule__AbstractRef__Group_1__0 )? ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6320:1: ( ( rule__AbstractRef__Group_1__0 )? )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6289:1: ( ( rule__AbstractRef__Group_1__0 )? )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6290:1: ( rule__AbstractRef__Group_1__0 )?
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6320:1: ( ( rule__AbstractRef__Group_1__0 )? )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6321:1: ( rule__AbstractRef__Group_1__0 )?
             {
              before(grammarAccess.getAbstractRefAccess().getGroup_1()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6291:1: ( rule__AbstractRef__Group_1__0 )?
-            int alt53=2;
-            int LA53_0 = input.LA(1);
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6322:1: ( rule__AbstractRef__Group_1__0 )?
+            int alt54=2;
+            int LA54_0 = input.LA(1);
 
-            if ( (LA53_0==30) ) {
-                alt53=1;
+            if ( (LA54_0==30) ) {
+                alt54=1;
             }
-            switch (alt53) {
+            switch (alt54) {
                 case 1 :
-                    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6291:2: rule__AbstractRef__Group_1__0
+                    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6322:2: rule__AbstractRef__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__AbstractRef__Group_1__0_in_rule__AbstractRef__Group__1__Impl12634);
+                    pushFollow(FOLLOW_rule__AbstractRef__Group_1__0_in_rule__AbstractRef__Group__1__Impl12697);
                     rule__AbstractRef__Group_1__0();
                     _fsp--;
 
@@ -16760,20 +16834,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AbstractRef__Group_1__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6305:1: rule__AbstractRef__Group_1__0 : rule__AbstractRef__Group_1__0__Impl rule__AbstractRef__Group_1__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6336:1: rule__AbstractRef__Group_1__0 : rule__AbstractRef__Group_1__0__Impl rule__AbstractRef__Group_1__1 ;
     public final void rule__AbstractRef__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6309:1: ( rule__AbstractRef__Group_1__0__Impl rule__AbstractRef__Group_1__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6310:2: rule__AbstractRef__Group_1__0__Impl rule__AbstractRef__Group_1__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6340:1: ( rule__AbstractRef__Group_1__0__Impl rule__AbstractRef__Group_1__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6341:2: rule__AbstractRef__Group_1__0__Impl rule__AbstractRef__Group_1__1
             {
-            pushFollow(FOLLOW_rule__AbstractRef__Group_1__0__Impl_in_rule__AbstractRef__Group_1__012669);
+            pushFollow(FOLLOW_rule__AbstractRef__Group_1__0__Impl_in_rule__AbstractRef__Group_1__012732);
             rule__AbstractRef__Group_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__AbstractRef__Group_1__1_in_rule__AbstractRef__Group_1__012672);
+            pushFollow(FOLLOW_rule__AbstractRef__Group_1__1_in_rule__AbstractRef__Group_1__012735);
             rule__AbstractRef__Group_1__1();
             _fsp--;
 
@@ -16796,21 +16870,21 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AbstractRef__Group_1__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6317:1: rule__AbstractRef__Group_1__0__Impl : ( () ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6348:1: rule__AbstractRef__Group_1__0__Impl : ( () ) ;
     public final void rule__AbstractRef__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6321:1: ( ( () ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6322:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6352:1: ( ( () ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6353:1: ( () )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6322:1: ( () )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6323:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6353:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6354:1: ()
             {
              before(grammarAccess.getAbstractRefAccess().getFunctionRefFuncAction_1_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6324:1: ()
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6326:1: 
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6355:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6357:1: 
             {
             }
 
@@ -16833,16 +16907,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AbstractRef__Group_1__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6336:1: rule__AbstractRef__Group_1__1 : rule__AbstractRef__Group_1__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6367:1: rule__AbstractRef__Group_1__1 : rule__AbstractRef__Group_1__1__Impl ;
     public final void rule__AbstractRef__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6340:1: ( rule__AbstractRef__Group_1__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6341:2: rule__AbstractRef__Group_1__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6371:1: ( rule__AbstractRef__Group_1__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6372:2: rule__AbstractRef__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__AbstractRef__Group_1__1__Impl_in_rule__AbstractRef__Group_1__112730);
+            pushFollow(FOLLOW_rule__AbstractRef__Group_1__1__Impl_in_rule__AbstractRef__Group_1__112793);
             rule__AbstractRef__Group_1__1__Impl();
             _fsp--;
 
@@ -16865,23 +16939,23 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AbstractRef__Group_1__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6347:1: rule__AbstractRef__Group_1__1__Impl : ( ( rule__AbstractRef__Group_1_1__0 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6378:1: rule__AbstractRef__Group_1__1__Impl : ( ( rule__AbstractRef__Group_1_1__0 ) ) ;
     public final void rule__AbstractRef__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6351:1: ( ( ( rule__AbstractRef__Group_1_1__0 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6352:1: ( ( rule__AbstractRef__Group_1_1__0 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6382:1: ( ( ( rule__AbstractRef__Group_1_1__0 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6383:1: ( ( rule__AbstractRef__Group_1_1__0 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6352:1: ( ( rule__AbstractRef__Group_1_1__0 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6353:1: ( rule__AbstractRef__Group_1_1__0 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6383:1: ( ( rule__AbstractRef__Group_1_1__0 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6384:1: ( rule__AbstractRef__Group_1_1__0 )
             {
              before(grammarAccess.getAbstractRefAccess().getGroup_1_1()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6354:1: ( rule__AbstractRef__Group_1_1__0 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6354:2: rule__AbstractRef__Group_1_1__0
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6385:1: ( rule__AbstractRef__Group_1_1__0 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6385:2: rule__AbstractRef__Group_1_1__0
             {
-            pushFollow(FOLLOW_rule__AbstractRef__Group_1_1__0_in_rule__AbstractRef__Group_1__1__Impl12757);
+            pushFollow(FOLLOW_rule__AbstractRef__Group_1_1__0_in_rule__AbstractRef__Group_1__1__Impl12820);
             rule__AbstractRef__Group_1_1__0();
             _fsp--;
 
@@ -16911,20 +16985,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AbstractRef__Group_1_1__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6368:1: rule__AbstractRef__Group_1_1__0 : rule__AbstractRef__Group_1_1__0__Impl rule__AbstractRef__Group_1_1__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6399:1: rule__AbstractRef__Group_1_1__0 : rule__AbstractRef__Group_1_1__0__Impl rule__AbstractRef__Group_1_1__1 ;
     public final void rule__AbstractRef__Group_1_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6372:1: ( rule__AbstractRef__Group_1_1__0__Impl rule__AbstractRef__Group_1_1__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6373:2: rule__AbstractRef__Group_1_1__0__Impl rule__AbstractRef__Group_1_1__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6403:1: ( rule__AbstractRef__Group_1_1__0__Impl rule__AbstractRef__Group_1_1__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6404:2: rule__AbstractRef__Group_1_1__0__Impl rule__AbstractRef__Group_1_1__1
             {
-            pushFollow(FOLLOW_rule__AbstractRef__Group_1_1__0__Impl_in_rule__AbstractRef__Group_1_1__012791);
+            pushFollow(FOLLOW_rule__AbstractRef__Group_1_1__0__Impl_in_rule__AbstractRef__Group_1_1__012854);
             rule__AbstractRef__Group_1_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__AbstractRef__Group_1_1__1_in_rule__AbstractRef__Group_1_1__012794);
+            pushFollow(FOLLOW_rule__AbstractRef__Group_1_1__1_in_rule__AbstractRef__Group_1_1__012857);
             rule__AbstractRef__Group_1_1__1();
             _fsp--;
 
@@ -16947,20 +17021,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AbstractRef__Group_1_1__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6380:1: rule__AbstractRef__Group_1_1__0__Impl : ( '(' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6411:1: rule__AbstractRef__Group_1_1__0__Impl : ( '(' ) ;
     public final void rule__AbstractRef__Group_1_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6384:1: ( ( '(' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6385:1: ( '(' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6415:1: ( ( '(' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6416:1: ( '(' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6385:1: ( '(' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6386:1: '('
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6416:1: ( '(' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6417:1: '('
             {
              before(grammarAccess.getAbstractRefAccess().getLeftParenthesisKeyword_1_1_0()); 
-            match(input,30,FOLLOW_30_in_rule__AbstractRef__Group_1_1__0__Impl12822); 
+            match(input,30,FOLLOW_30_in_rule__AbstractRef__Group_1_1__0__Impl12885); 
              after(grammarAccess.getAbstractRefAccess().getLeftParenthesisKeyword_1_1_0()); 
 
             }
@@ -16984,20 +17058,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AbstractRef__Group_1_1__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6399:1: rule__AbstractRef__Group_1_1__1 : rule__AbstractRef__Group_1_1__1__Impl rule__AbstractRef__Group_1_1__2 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6430:1: rule__AbstractRef__Group_1_1__1 : rule__AbstractRef__Group_1_1__1__Impl rule__AbstractRef__Group_1_1__2 ;
     public final void rule__AbstractRef__Group_1_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6403:1: ( rule__AbstractRef__Group_1_1__1__Impl rule__AbstractRef__Group_1_1__2 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6404:2: rule__AbstractRef__Group_1_1__1__Impl rule__AbstractRef__Group_1_1__2
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6434:1: ( rule__AbstractRef__Group_1_1__1__Impl rule__AbstractRef__Group_1_1__2 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6435:2: rule__AbstractRef__Group_1_1__1__Impl rule__AbstractRef__Group_1_1__2
             {
-            pushFollow(FOLLOW_rule__AbstractRef__Group_1_1__1__Impl_in_rule__AbstractRef__Group_1_1__112853);
+            pushFollow(FOLLOW_rule__AbstractRef__Group_1_1__1__Impl_in_rule__AbstractRef__Group_1_1__112916);
             rule__AbstractRef__Group_1_1__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__AbstractRef__Group_1_1__2_in_rule__AbstractRef__Group_1_1__112856);
+            pushFollow(FOLLOW_rule__AbstractRef__Group_1_1__2_in_rule__AbstractRef__Group_1_1__112919);
             rule__AbstractRef__Group_1_1__2();
             _fsp--;
 
@@ -17020,31 +17094,31 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AbstractRef__Group_1_1__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6411:1: rule__AbstractRef__Group_1_1__1__Impl : ( ( rule__AbstractRef__ArgsAssignment_1_1_1 )? ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6442:1: rule__AbstractRef__Group_1_1__1__Impl : ( ( rule__AbstractRef__ArgsAssignment_1_1_1 )? ) ;
     public final void rule__AbstractRef__Group_1_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6415:1: ( ( ( rule__AbstractRef__ArgsAssignment_1_1_1 )? ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6416:1: ( ( rule__AbstractRef__ArgsAssignment_1_1_1 )? )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6446:1: ( ( ( rule__AbstractRef__ArgsAssignment_1_1_1 )? ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6447:1: ( ( rule__AbstractRef__ArgsAssignment_1_1_1 )? )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6416:1: ( ( rule__AbstractRef__ArgsAssignment_1_1_1 )? )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6417:1: ( rule__AbstractRef__ArgsAssignment_1_1_1 )?
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6447:1: ( ( rule__AbstractRef__ArgsAssignment_1_1_1 )? )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6448:1: ( rule__AbstractRef__ArgsAssignment_1_1_1 )?
             {
              before(grammarAccess.getAbstractRefAccess().getArgsAssignment_1_1_1()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6418:1: ( rule__AbstractRef__ArgsAssignment_1_1_1 )?
-            int alt54=2;
-            int LA54_0 = input.LA(1);
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6449:1: ( rule__AbstractRef__ArgsAssignment_1_1_1 )?
+            int alt55=2;
+            int LA55_0 = input.LA(1);
 
-            if ( ((LA54_0>=RULE_STRING && LA54_0<=RULE_BOOLEAN)||LA54_0==12||LA54_0==30||LA54_0==32||LA54_0==34||LA54_0==48) ) {
-                alt54=1;
+            if ( ((LA55_0>=RULE_STRING && LA55_0<=RULE_BOOLEAN)||LA55_0==12||LA55_0==30||LA55_0==32||LA55_0==34||LA55_0==48) ) {
+                alt55=1;
             }
-            switch (alt54) {
+            switch (alt55) {
                 case 1 :
-                    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6418:2: rule__AbstractRef__ArgsAssignment_1_1_1
+                    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6449:2: rule__AbstractRef__ArgsAssignment_1_1_1
                     {
-                    pushFollow(FOLLOW_rule__AbstractRef__ArgsAssignment_1_1_1_in_rule__AbstractRef__Group_1_1__1__Impl12883);
+                    pushFollow(FOLLOW_rule__AbstractRef__ArgsAssignment_1_1_1_in_rule__AbstractRef__Group_1_1__1__Impl12946);
                     rule__AbstractRef__ArgsAssignment_1_1_1();
                     _fsp--;
 
@@ -17077,20 +17151,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AbstractRef__Group_1_1__2
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6428:1: rule__AbstractRef__Group_1_1__2 : rule__AbstractRef__Group_1_1__2__Impl rule__AbstractRef__Group_1_1__3 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6459:1: rule__AbstractRef__Group_1_1__2 : rule__AbstractRef__Group_1_1__2__Impl rule__AbstractRef__Group_1_1__3 ;
     public final void rule__AbstractRef__Group_1_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6432:1: ( rule__AbstractRef__Group_1_1__2__Impl rule__AbstractRef__Group_1_1__3 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6433:2: rule__AbstractRef__Group_1_1__2__Impl rule__AbstractRef__Group_1_1__3
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6463:1: ( rule__AbstractRef__Group_1_1__2__Impl rule__AbstractRef__Group_1_1__3 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6464:2: rule__AbstractRef__Group_1_1__2__Impl rule__AbstractRef__Group_1_1__3
             {
-            pushFollow(FOLLOW_rule__AbstractRef__Group_1_1__2__Impl_in_rule__AbstractRef__Group_1_1__212914);
+            pushFollow(FOLLOW_rule__AbstractRef__Group_1_1__2__Impl_in_rule__AbstractRef__Group_1_1__212977);
             rule__AbstractRef__Group_1_1__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__AbstractRef__Group_1_1__3_in_rule__AbstractRef__Group_1_1__212917);
+            pushFollow(FOLLOW_rule__AbstractRef__Group_1_1__3_in_rule__AbstractRef__Group_1_1__212980);
             rule__AbstractRef__Group_1_1__3();
             _fsp--;
 
@@ -17113,35 +17187,35 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AbstractRef__Group_1_1__2__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6440:1: rule__AbstractRef__Group_1_1__2__Impl : ( ( rule__AbstractRef__Group_1_1_2__0 )* ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6471:1: rule__AbstractRef__Group_1_1__2__Impl : ( ( rule__AbstractRef__Group_1_1_2__0 )* ) ;
     public final void rule__AbstractRef__Group_1_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6444:1: ( ( ( rule__AbstractRef__Group_1_1_2__0 )* ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6445:1: ( ( rule__AbstractRef__Group_1_1_2__0 )* )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6475:1: ( ( ( rule__AbstractRef__Group_1_1_2__0 )* ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6476:1: ( ( rule__AbstractRef__Group_1_1_2__0 )* )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6445:1: ( ( rule__AbstractRef__Group_1_1_2__0 )* )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6446:1: ( rule__AbstractRef__Group_1_1_2__0 )*
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6476:1: ( ( rule__AbstractRef__Group_1_1_2__0 )* )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6477:1: ( rule__AbstractRef__Group_1_1_2__0 )*
             {
              before(grammarAccess.getAbstractRefAccess().getGroup_1_1_2()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6447:1: ( rule__AbstractRef__Group_1_1_2__0 )*
-            loop55:
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6478:1: ( rule__AbstractRef__Group_1_1_2__0 )*
+            loop56:
             do {
-                int alt55=2;
-                int LA55_0 = input.LA(1);
+                int alt56=2;
+                int LA56_0 = input.LA(1);
 
-                if ( (LA55_0==26) ) {
-                    alt55=1;
+                if ( (LA56_0==26) ) {
+                    alt56=1;
                 }
 
 
-                switch (alt55) {
+                switch (alt56) {
             	case 1 :
-            	    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6447:2: rule__AbstractRef__Group_1_1_2__0
+            	    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6478:2: rule__AbstractRef__Group_1_1_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__AbstractRef__Group_1_1_2__0_in_rule__AbstractRef__Group_1_1__2__Impl12944);
+            	    pushFollow(FOLLOW_rule__AbstractRef__Group_1_1_2__0_in_rule__AbstractRef__Group_1_1__2__Impl13007);
             	    rule__AbstractRef__Group_1_1_2__0();
             	    _fsp--;
 
@@ -17150,7 +17224,7 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop55;
+            	    break loop56;
                 }
             } while (true);
 
@@ -17177,16 +17251,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AbstractRef__Group_1_1__3
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6457:1: rule__AbstractRef__Group_1_1__3 : rule__AbstractRef__Group_1_1__3__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6488:1: rule__AbstractRef__Group_1_1__3 : rule__AbstractRef__Group_1_1__3__Impl ;
     public final void rule__AbstractRef__Group_1_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6461:1: ( rule__AbstractRef__Group_1_1__3__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6462:2: rule__AbstractRef__Group_1_1__3__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6492:1: ( rule__AbstractRef__Group_1_1__3__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6493:2: rule__AbstractRef__Group_1_1__3__Impl
             {
-            pushFollow(FOLLOW_rule__AbstractRef__Group_1_1__3__Impl_in_rule__AbstractRef__Group_1_1__312975);
+            pushFollow(FOLLOW_rule__AbstractRef__Group_1_1__3__Impl_in_rule__AbstractRef__Group_1_1__313038);
             rule__AbstractRef__Group_1_1__3__Impl();
             _fsp--;
 
@@ -17209,20 +17283,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AbstractRef__Group_1_1__3__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6468:1: rule__AbstractRef__Group_1_1__3__Impl : ( ')' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6499:1: rule__AbstractRef__Group_1_1__3__Impl : ( ')' ) ;
     public final void rule__AbstractRef__Group_1_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6472:1: ( ( ')' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6473:1: ( ')' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6503:1: ( ( ')' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6504:1: ( ')' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6473:1: ( ')' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6474:1: ')'
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6504:1: ( ')' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6505:1: ')'
             {
              before(grammarAccess.getAbstractRefAccess().getRightParenthesisKeyword_1_1_3()); 
-            match(input,31,FOLLOW_31_in_rule__AbstractRef__Group_1_1__3__Impl13003); 
+            match(input,31,FOLLOW_31_in_rule__AbstractRef__Group_1_1__3__Impl13066); 
              after(grammarAccess.getAbstractRefAccess().getRightParenthesisKeyword_1_1_3()); 
 
             }
@@ -17246,20 +17320,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AbstractRef__Group_1_1_2__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6495:1: rule__AbstractRef__Group_1_1_2__0 : rule__AbstractRef__Group_1_1_2__0__Impl rule__AbstractRef__Group_1_1_2__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6526:1: rule__AbstractRef__Group_1_1_2__0 : rule__AbstractRef__Group_1_1_2__0__Impl rule__AbstractRef__Group_1_1_2__1 ;
     public final void rule__AbstractRef__Group_1_1_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6499:1: ( rule__AbstractRef__Group_1_1_2__0__Impl rule__AbstractRef__Group_1_1_2__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6500:2: rule__AbstractRef__Group_1_1_2__0__Impl rule__AbstractRef__Group_1_1_2__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6530:1: ( rule__AbstractRef__Group_1_1_2__0__Impl rule__AbstractRef__Group_1_1_2__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6531:2: rule__AbstractRef__Group_1_1_2__0__Impl rule__AbstractRef__Group_1_1_2__1
             {
-            pushFollow(FOLLOW_rule__AbstractRef__Group_1_1_2__0__Impl_in_rule__AbstractRef__Group_1_1_2__013042);
+            pushFollow(FOLLOW_rule__AbstractRef__Group_1_1_2__0__Impl_in_rule__AbstractRef__Group_1_1_2__013105);
             rule__AbstractRef__Group_1_1_2__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__AbstractRef__Group_1_1_2__1_in_rule__AbstractRef__Group_1_1_2__013045);
+            pushFollow(FOLLOW_rule__AbstractRef__Group_1_1_2__1_in_rule__AbstractRef__Group_1_1_2__013108);
             rule__AbstractRef__Group_1_1_2__1();
             _fsp--;
 
@@ -17282,20 +17356,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AbstractRef__Group_1_1_2__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6507:1: rule__AbstractRef__Group_1_1_2__0__Impl : ( ',' ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6538:1: rule__AbstractRef__Group_1_1_2__0__Impl : ( ',' ) ;
     public final void rule__AbstractRef__Group_1_1_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6511:1: ( ( ',' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6512:1: ( ',' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6542:1: ( ( ',' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6543:1: ( ',' )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6512:1: ( ',' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6513:1: ','
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6543:1: ( ',' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6544:1: ','
             {
              before(grammarAccess.getAbstractRefAccess().getCommaKeyword_1_1_2_0()); 
-            match(input,26,FOLLOW_26_in_rule__AbstractRef__Group_1_1_2__0__Impl13073); 
+            match(input,26,FOLLOW_26_in_rule__AbstractRef__Group_1_1_2__0__Impl13136); 
              after(grammarAccess.getAbstractRefAccess().getCommaKeyword_1_1_2_0()); 
 
             }
@@ -17319,16 +17393,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AbstractRef__Group_1_1_2__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6526:1: rule__AbstractRef__Group_1_1_2__1 : rule__AbstractRef__Group_1_1_2__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6557:1: rule__AbstractRef__Group_1_1_2__1 : rule__AbstractRef__Group_1_1_2__1__Impl ;
     public final void rule__AbstractRef__Group_1_1_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6530:1: ( rule__AbstractRef__Group_1_1_2__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6531:2: rule__AbstractRef__Group_1_1_2__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6561:1: ( rule__AbstractRef__Group_1_1_2__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6562:2: rule__AbstractRef__Group_1_1_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__AbstractRef__Group_1_1_2__1__Impl_in_rule__AbstractRef__Group_1_1_2__113104);
+            pushFollow(FOLLOW_rule__AbstractRef__Group_1_1_2__1__Impl_in_rule__AbstractRef__Group_1_1_2__113167);
             rule__AbstractRef__Group_1_1_2__1__Impl();
             _fsp--;
 
@@ -17351,23 +17425,23 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AbstractRef__Group_1_1_2__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6537:1: rule__AbstractRef__Group_1_1_2__1__Impl : ( ( rule__AbstractRef__ArgsAssignment_1_1_2_1 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6568:1: rule__AbstractRef__Group_1_1_2__1__Impl : ( ( rule__AbstractRef__ArgsAssignment_1_1_2_1 ) ) ;
     public final void rule__AbstractRef__Group_1_1_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6541:1: ( ( ( rule__AbstractRef__ArgsAssignment_1_1_2_1 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6542:1: ( ( rule__AbstractRef__ArgsAssignment_1_1_2_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6572:1: ( ( ( rule__AbstractRef__ArgsAssignment_1_1_2_1 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6573:1: ( ( rule__AbstractRef__ArgsAssignment_1_1_2_1 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6542:1: ( ( rule__AbstractRef__ArgsAssignment_1_1_2_1 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6543:1: ( rule__AbstractRef__ArgsAssignment_1_1_2_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6573:1: ( ( rule__AbstractRef__ArgsAssignment_1_1_2_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6574:1: ( rule__AbstractRef__ArgsAssignment_1_1_2_1 )
             {
              before(grammarAccess.getAbstractRefAccess().getArgsAssignment_1_1_2_1()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6544:1: ( rule__AbstractRef__ArgsAssignment_1_1_2_1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6544:2: rule__AbstractRef__ArgsAssignment_1_1_2_1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6575:1: ( rule__AbstractRef__ArgsAssignment_1_1_2_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6575:2: rule__AbstractRef__ArgsAssignment_1_1_2_1
             {
-            pushFollow(FOLLOW_rule__AbstractRef__ArgsAssignment_1_1_2_1_in_rule__AbstractRef__Group_1_1_2__1__Impl13131);
+            pushFollow(FOLLOW_rule__AbstractRef__ArgsAssignment_1_1_2_1_in_rule__AbstractRef__Group_1_1_2__1__Impl13194);
             rule__AbstractRef__ArgsAssignment_1_1_2_1();
             _fsp--;
 
@@ -17397,20 +17471,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__TerminalExpression__Group_0__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6558:1: rule__TerminalExpression__Group_0__0 : rule__TerminalExpression__Group_0__0__Impl rule__TerminalExpression__Group_0__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6589:1: rule__TerminalExpression__Group_0__0 : rule__TerminalExpression__Group_0__0__Impl rule__TerminalExpression__Group_0__1 ;
     public final void rule__TerminalExpression__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6562:1: ( rule__TerminalExpression__Group_0__0__Impl rule__TerminalExpression__Group_0__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6563:2: rule__TerminalExpression__Group_0__0__Impl rule__TerminalExpression__Group_0__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6593:1: ( rule__TerminalExpression__Group_0__0__Impl rule__TerminalExpression__Group_0__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6594:2: rule__TerminalExpression__Group_0__0__Impl rule__TerminalExpression__Group_0__1
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_0__0__Impl_in_rule__TerminalExpression__Group_0__013165);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_0__0__Impl_in_rule__TerminalExpression__Group_0__013228);
             rule__TerminalExpression__Group_0__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_0__1_in_rule__TerminalExpression__Group_0__013168);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_0__1_in_rule__TerminalExpression__Group_0__013231);
             rule__TerminalExpression__Group_0__1();
             _fsp--;
 
@@ -17433,21 +17507,21 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__TerminalExpression__Group_0__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6570:1: rule__TerminalExpression__Group_0__0__Impl : ( () ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6601:1: rule__TerminalExpression__Group_0__0__Impl : ( () ) ;
     public final void rule__TerminalExpression__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6574:1: ( ( () ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6575:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6605:1: ( ( () ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6606:1: ( () )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6575:1: ( () )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6576:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6606:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6607:1: ()
             {
              before(grammarAccess.getTerminalExpressionAccess().getIntLiteralAction_0_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6577:1: ()
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6579:1: 
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6608:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6610:1: 
             {
             }
 
@@ -17470,16 +17544,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__TerminalExpression__Group_0__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6589:1: rule__TerminalExpression__Group_0__1 : rule__TerminalExpression__Group_0__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6620:1: rule__TerminalExpression__Group_0__1 : rule__TerminalExpression__Group_0__1__Impl ;
     public final void rule__TerminalExpression__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6593:1: ( rule__TerminalExpression__Group_0__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6594:2: rule__TerminalExpression__Group_0__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6624:1: ( rule__TerminalExpression__Group_0__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6625:2: rule__TerminalExpression__Group_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_0__1__Impl_in_rule__TerminalExpression__Group_0__113226);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_0__1__Impl_in_rule__TerminalExpression__Group_0__113289);
             rule__TerminalExpression__Group_0__1__Impl();
             _fsp--;
 
@@ -17502,23 +17576,23 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__TerminalExpression__Group_0__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6600:1: rule__TerminalExpression__Group_0__1__Impl : ( ( rule__TerminalExpression__ValueAssignment_0_1 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6631:1: rule__TerminalExpression__Group_0__1__Impl : ( ( rule__TerminalExpression__ValueAssignment_0_1 ) ) ;
     public final void rule__TerminalExpression__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6604:1: ( ( ( rule__TerminalExpression__ValueAssignment_0_1 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6605:1: ( ( rule__TerminalExpression__ValueAssignment_0_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6635:1: ( ( ( rule__TerminalExpression__ValueAssignment_0_1 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6636:1: ( ( rule__TerminalExpression__ValueAssignment_0_1 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6605:1: ( ( rule__TerminalExpression__ValueAssignment_0_1 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6606:1: ( rule__TerminalExpression__ValueAssignment_0_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6636:1: ( ( rule__TerminalExpression__ValueAssignment_0_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6637:1: ( rule__TerminalExpression__ValueAssignment_0_1 )
             {
              before(grammarAccess.getTerminalExpressionAccess().getValueAssignment_0_1()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6607:1: ( rule__TerminalExpression__ValueAssignment_0_1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6607:2: rule__TerminalExpression__ValueAssignment_0_1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6638:1: ( rule__TerminalExpression__ValueAssignment_0_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6638:2: rule__TerminalExpression__ValueAssignment_0_1
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__ValueAssignment_0_1_in_rule__TerminalExpression__Group_0__1__Impl13253);
+            pushFollow(FOLLOW_rule__TerminalExpression__ValueAssignment_0_1_in_rule__TerminalExpression__Group_0__1__Impl13316);
             rule__TerminalExpression__ValueAssignment_0_1();
             _fsp--;
 
@@ -17548,20 +17622,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__TerminalExpression__Group_1__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6621:1: rule__TerminalExpression__Group_1__0 : rule__TerminalExpression__Group_1__0__Impl rule__TerminalExpression__Group_1__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6652:1: rule__TerminalExpression__Group_1__0 : rule__TerminalExpression__Group_1__0__Impl rule__TerminalExpression__Group_1__1 ;
     public final void rule__TerminalExpression__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6625:1: ( rule__TerminalExpression__Group_1__0__Impl rule__TerminalExpression__Group_1__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6626:2: rule__TerminalExpression__Group_1__0__Impl rule__TerminalExpression__Group_1__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6656:1: ( rule__TerminalExpression__Group_1__0__Impl rule__TerminalExpression__Group_1__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6657:2: rule__TerminalExpression__Group_1__0__Impl rule__TerminalExpression__Group_1__1
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_1__0__Impl_in_rule__TerminalExpression__Group_1__013287);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_1__0__Impl_in_rule__TerminalExpression__Group_1__013350);
             rule__TerminalExpression__Group_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_1__1_in_rule__TerminalExpression__Group_1__013290);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_1__1_in_rule__TerminalExpression__Group_1__013353);
             rule__TerminalExpression__Group_1__1();
             _fsp--;
 
@@ -17584,21 +17658,21 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__TerminalExpression__Group_1__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6633:1: rule__TerminalExpression__Group_1__0__Impl : ( () ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6664:1: rule__TerminalExpression__Group_1__0__Impl : ( () ) ;
     public final void rule__TerminalExpression__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6637:1: ( ( () ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6638:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6668:1: ( ( () ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6669:1: ( () )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6638:1: ( () )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6639:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6669:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6670:1: ()
             {
              before(grammarAccess.getTerminalExpressionAccess().getStringLiteralAction_1_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6640:1: ()
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6642:1: 
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6671:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6673:1: 
             {
             }
 
@@ -17621,16 +17695,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__TerminalExpression__Group_1__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6652:1: rule__TerminalExpression__Group_1__1 : rule__TerminalExpression__Group_1__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6683:1: rule__TerminalExpression__Group_1__1 : rule__TerminalExpression__Group_1__1__Impl ;
     public final void rule__TerminalExpression__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6656:1: ( rule__TerminalExpression__Group_1__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6657:2: rule__TerminalExpression__Group_1__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6687:1: ( rule__TerminalExpression__Group_1__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6688:2: rule__TerminalExpression__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_1__1__Impl_in_rule__TerminalExpression__Group_1__113348);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_1__1__Impl_in_rule__TerminalExpression__Group_1__113411);
             rule__TerminalExpression__Group_1__1__Impl();
             _fsp--;
 
@@ -17653,23 +17727,23 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__TerminalExpression__Group_1__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6663:1: rule__TerminalExpression__Group_1__1__Impl : ( ( rule__TerminalExpression__ValueAssignment_1_1 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6694:1: rule__TerminalExpression__Group_1__1__Impl : ( ( rule__TerminalExpression__ValueAssignment_1_1 ) ) ;
     public final void rule__TerminalExpression__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6667:1: ( ( ( rule__TerminalExpression__ValueAssignment_1_1 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6668:1: ( ( rule__TerminalExpression__ValueAssignment_1_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6698:1: ( ( ( rule__TerminalExpression__ValueAssignment_1_1 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6699:1: ( ( rule__TerminalExpression__ValueAssignment_1_1 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6668:1: ( ( rule__TerminalExpression__ValueAssignment_1_1 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6669:1: ( rule__TerminalExpression__ValueAssignment_1_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6699:1: ( ( rule__TerminalExpression__ValueAssignment_1_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6700:1: ( rule__TerminalExpression__ValueAssignment_1_1 )
             {
              before(grammarAccess.getTerminalExpressionAccess().getValueAssignment_1_1()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6670:1: ( rule__TerminalExpression__ValueAssignment_1_1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6670:2: rule__TerminalExpression__ValueAssignment_1_1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6701:1: ( rule__TerminalExpression__ValueAssignment_1_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6701:2: rule__TerminalExpression__ValueAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__ValueAssignment_1_1_in_rule__TerminalExpression__Group_1__1__Impl13375);
+            pushFollow(FOLLOW_rule__TerminalExpression__ValueAssignment_1_1_in_rule__TerminalExpression__Group_1__1__Impl13438);
             rule__TerminalExpression__ValueAssignment_1_1();
             _fsp--;
 
@@ -17699,20 +17773,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__TerminalExpression__Group_2__0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6684:1: rule__TerminalExpression__Group_2__0 : rule__TerminalExpression__Group_2__0__Impl rule__TerminalExpression__Group_2__1 ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6715:1: rule__TerminalExpression__Group_2__0 : rule__TerminalExpression__Group_2__0__Impl rule__TerminalExpression__Group_2__1 ;
     public final void rule__TerminalExpression__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6688:1: ( rule__TerminalExpression__Group_2__0__Impl rule__TerminalExpression__Group_2__1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6689:2: rule__TerminalExpression__Group_2__0__Impl rule__TerminalExpression__Group_2__1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6719:1: ( rule__TerminalExpression__Group_2__0__Impl rule__TerminalExpression__Group_2__1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6720:2: rule__TerminalExpression__Group_2__0__Impl rule__TerminalExpression__Group_2__1
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_2__0__Impl_in_rule__TerminalExpression__Group_2__013409);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_2__0__Impl_in_rule__TerminalExpression__Group_2__013472);
             rule__TerminalExpression__Group_2__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_2__1_in_rule__TerminalExpression__Group_2__013412);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_2__1_in_rule__TerminalExpression__Group_2__013475);
             rule__TerminalExpression__Group_2__1();
             _fsp--;
 
@@ -17735,21 +17809,21 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__TerminalExpression__Group_2__0__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6696:1: rule__TerminalExpression__Group_2__0__Impl : ( () ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6727:1: rule__TerminalExpression__Group_2__0__Impl : ( () ) ;
     public final void rule__TerminalExpression__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6700:1: ( ( () ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6701:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6731:1: ( ( () ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6732:1: ( () )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6701:1: ( () )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6702:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6732:1: ( () )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6733:1: ()
             {
              before(grammarAccess.getTerminalExpressionAccess().getBooleanLiteralAction_2_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6703:1: ()
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6705:1: 
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6734:1: ()
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6736:1: 
             {
             }
 
@@ -17772,16 +17846,16 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__TerminalExpression__Group_2__1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6715:1: rule__TerminalExpression__Group_2__1 : rule__TerminalExpression__Group_2__1__Impl ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6746:1: rule__TerminalExpression__Group_2__1 : rule__TerminalExpression__Group_2__1__Impl ;
     public final void rule__TerminalExpression__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6719:1: ( rule__TerminalExpression__Group_2__1__Impl )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6720:2: rule__TerminalExpression__Group_2__1__Impl
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6750:1: ( rule__TerminalExpression__Group_2__1__Impl )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6751:2: rule__TerminalExpression__Group_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_2__1__Impl_in_rule__TerminalExpression__Group_2__113470);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_2__1__Impl_in_rule__TerminalExpression__Group_2__113533);
             rule__TerminalExpression__Group_2__1__Impl();
             _fsp--;
 
@@ -17804,23 +17878,23 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__TerminalExpression__Group_2__1__Impl
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6726:1: rule__TerminalExpression__Group_2__1__Impl : ( ( rule__TerminalExpression__ValueAssignment_2_1 ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6757:1: rule__TerminalExpression__Group_2__1__Impl : ( ( rule__TerminalExpression__ValueAssignment_2_1 ) ) ;
     public final void rule__TerminalExpression__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6730:1: ( ( ( rule__TerminalExpression__ValueAssignment_2_1 ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6731:1: ( ( rule__TerminalExpression__ValueAssignment_2_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6761:1: ( ( ( rule__TerminalExpression__ValueAssignment_2_1 ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6762:1: ( ( rule__TerminalExpression__ValueAssignment_2_1 ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6731:1: ( ( rule__TerminalExpression__ValueAssignment_2_1 ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6732:1: ( rule__TerminalExpression__ValueAssignment_2_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6762:1: ( ( rule__TerminalExpression__ValueAssignment_2_1 ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6763:1: ( rule__TerminalExpression__ValueAssignment_2_1 )
             {
              before(grammarAccess.getTerminalExpressionAccess().getValueAssignment_2_1()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6733:1: ( rule__TerminalExpression__ValueAssignment_2_1 )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6733:2: rule__TerminalExpression__ValueAssignment_2_1
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6764:1: ( rule__TerminalExpression__ValueAssignment_2_1 )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6764:2: rule__TerminalExpression__ValueAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__ValueAssignment_2_1_in_rule__TerminalExpression__Group_2__1__Impl13497);
+            pushFollow(FOLLOW_rule__TerminalExpression__ValueAssignment_2_1_in_rule__TerminalExpression__Group_2__1__Impl13560);
             rule__TerminalExpression__ValueAssignment_2_1();
             _fsp--;
 
@@ -17850,20 +17924,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Model__ImportsAssignment_0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6750:1: rule__Model__ImportsAssignment_0 : ( ruleImport ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6781:1: rule__Model__ImportsAssignment_0 : ( ruleImport ) ;
     public final void rule__Model__ImportsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6754:1: ( ( ruleImport ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6755:1: ( ruleImport )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6785:1: ( ( ruleImport ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6786:1: ( ruleImport )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6755:1: ( ruleImport )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6756:1: ruleImport
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6786:1: ( ruleImport )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6787:1: ruleImport
             {
              before(grammarAccess.getModelAccess().getImportsImportParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleImport_in_rule__Model__ImportsAssignment_013538);
+            pushFollow(FOLLOW_ruleImport_in_rule__Model__ImportsAssignment_013601);
             ruleImport();
             _fsp--;
 
@@ -17890,20 +17964,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Model__DeclarationsAssignment_1_0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6765:1: rule__Model__DeclarationsAssignment_1_0 : ( ruleDeclaration ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6796:1: rule__Model__DeclarationsAssignment_1_0 : ( ruleDeclaration ) ;
     public final void rule__Model__DeclarationsAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6769:1: ( ( ruleDeclaration ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6770:1: ( ruleDeclaration )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6800:1: ( ( ruleDeclaration ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6801:1: ( ruleDeclaration )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6770:1: ( ruleDeclaration )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6771:1: ruleDeclaration
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6801:1: ( ruleDeclaration )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6802:1: ruleDeclaration
             {
              before(grammarAccess.getModelAccess().getDeclarationsDeclarationParserRuleCall_1_0_0()); 
-            pushFollow(FOLLOW_ruleDeclaration_in_rule__Model__DeclarationsAssignment_1_013569);
+            pushFollow(FOLLOW_ruleDeclaration_in_rule__Model__DeclarationsAssignment_1_013632);
             ruleDeclaration();
             _fsp--;
 
@@ -17930,20 +18004,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Model__StatementsAssignment_1_1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6780:1: rule__Model__StatementsAssignment_1_1 : ( ruleStatement ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6811:1: rule__Model__StatementsAssignment_1_1 : ( ruleStatement ) ;
     public final void rule__Model__StatementsAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6784:1: ( ( ruleStatement ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6785:1: ( ruleStatement )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6815:1: ( ( ruleStatement ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6816:1: ( ruleStatement )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6785:1: ( ruleStatement )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6786:1: ruleStatement
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6816:1: ( ruleStatement )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6817:1: ruleStatement
             {
              before(grammarAccess.getModelAccess().getStatementsStatementParserRuleCall_1_1_0()); 
-            pushFollow(FOLLOW_ruleStatement_in_rule__Model__StatementsAssignment_1_113600);
+            pushFollow(FOLLOW_ruleStatement_in_rule__Model__StatementsAssignment_1_113663);
             ruleStatement();
             _fsp--;
 
@@ -17970,20 +18044,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Import__ImportURIAssignment_1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6795:1: rule__Import__ImportURIAssignment_1 : ( RULE_STRING ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6826:1: rule__Import__ImportURIAssignment_1 : ( RULE_STRING ) ;
     public final void rule__Import__ImportURIAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6799:1: ( ( RULE_STRING ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6800:1: ( RULE_STRING )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6830:1: ( ( RULE_STRING ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6831:1: ( RULE_STRING )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6800:1: ( RULE_STRING )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6801:1: RULE_STRING
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6831:1: ( RULE_STRING )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6832:1: RULE_STRING
             {
              before(grammarAccess.getImportAccess().getImportURISTRINGTerminalRuleCall_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Import__ImportURIAssignment_113631); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Import__ImportURIAssignment_113694); 
              after(grammarAccess.getImportAccess().getImportURISTRINGTerminalRuleCall_1_0()); 
 
             }
@@ -18007,20 +18081,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Annotation__TypeAssignment_2
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6810:1: rule__Annotation__TypeAssignment_2 : ( ruleANNOTATION_TYPE ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6841:1: rule__Annotation__TypeAssignment_2 : ( ruleANNOTATION_TYPE ) ;
     public final void rule__Annotation__TypeAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6814:1: ( ( ruleANNOTATION_TYPE ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6815:1: ( ruleANNOTATION_TYPE )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6845:1: ( ( ruleANNOTATION_TYPE ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6846:1: ( ruleANNOTATION_TYPE )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6815:1: ( ruleANNOTATION_TYPE )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6816:1: ruleANNOTATION_TYPE
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6846:1: ( ruleANNOTATION_TYPE )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6847:1: ruleANNOTATION_TYPE
             {
              before(grammarAccess.getAnnotationAccess().getTypeANNOTATION_TYPEEnumRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleANNOTATION_TYPE_in_rule__Annotation__TypeAssignment_213662);
+            pushFollow(FOLLOW_ruleANNOTATION_TYPE_in_rule__Annotation__TypeAssignment_213725);
             ruleANNOTATION_TYPE();
             _fsp--;
 
@@ -18047,20 +18121,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Annotation__ValueAssignment_3_0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6825:1: rule__Annotation__ValueAssignment_3_0 : ( RULE_STRING ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6856:1: rule__Annotation__ValueAssignment_3_0 : ( RULE_STRING ) ;
     public final void rule__Annotation__ValueAssignment_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6829:1: ( ( RULE_STRING ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6830:1: ( RULE_STRING )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6860:1: ( ( RULE_STRING ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6861:1: ( RULE_STRING )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6830:1: ( RULE_STRING )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6831:1: RULE_STRING
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6861:1: ( RULE_STRING )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6862:1: RULE_STRING
             {
              before(grammarAccess.getAnnotationAccess().getValueSTRINGTerminalRuleCall_3_0_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Annotation__ValueAssignment_3_013693); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Annotation__ValueAssignment_3_013756); 
              after(grammarAccess.getAnnotationAccess().getValueSTRINGTerminalRuleCall_3_0_0()); 
 
             }
@@ -18084,24 +18158,24 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Annotation__ValueAssignment_3_1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6840:1: rule__Annotation__ValueAssignment_3_1 : ( ( 'not' ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6871:1: rule__Annotation__ValueAssignment_3_1 : ( ( 'not' ) ) ;
     public final void rule__Annotation__ValueAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6844:1: ( ( ( 'not' ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6845:1: ( ( 'not' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6875:1: ( ( ( 'not' ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6876:1: ( ( 'not' ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6845:1: ( ( 'not' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6846:1: ( 'not' )
-            {
-             before(grammarAccess.getAnnotationAccess().getValueNotKeyword_3_1_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6847:1: ( 'not' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6848:1: 'not'
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6876:1: ( ( 'not' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6877:1: ( 'not' )
             {
              before(grammarAccess.getAnnotationAccess().getValueNotKeyword_3_1_0()); 
-            match(input,52,FOLLOW_52_in_rule__Annotation__ValueAssignment_3_113729); 
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6878:1: ( 'not' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6879:1: 'not'
+            {
+             before(grammarAccess.getAnnotationAccess().getValueNotKeyword_3_1_0()); 
+            match(input,52,FOLLOW_52_in_rule__Annotation__ValueAssignment_3_113792); 
              after(grammarAccess.getAnnotationAccess().getValueNotKeyword_3_1_0()); 
 
             }
@@ -18129,20 +18203,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__DefSort__AnnotationsAssignment_0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6863:1: rule__DefSort__AnnotationsAssignment_0 : ( ruleAnnotation ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6894:1: rule__DefSort__AnnotationsAssignment_0 : ( ruleAnnotation ) ;
     public final void rule__DefSort__AnnotationsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6867:1: ( ( ruleAnnotation ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6868:1: ( ruleAnnotation )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6898:1: ( ( ruleAnnotation ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6899:1: ( ruleAnnotation )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6868:1: ( ruleAnnotation )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6869:1: ruleAnnotation
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6899:1: ( ruleAnnotation )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6900:1: ruleAnnotation
             {
              before(grammarAccess.getDefSortAccess().getAnnotationsAnnotationParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleAnnotation_in_rule__DefSort__AnnotationsAssignment_013768);
+            pushFollow(FOLLOW_ruleAnnotation_in_rule__DefSort__AnnotationsAssignment_013831);
             ruleAnnotation();
             _fsp--;
 
@@ -18169,24 +18243,24 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__DefSort__ReifiedAssignment_1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6878:1: rule__DefSort__ReifiedAssignment_1 : ( ( 'reified' ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6909:1: rule__DefSort__ReifiedAssignment_1 : ( ( 'reified' ) ) ;
     public final void rule__DefSort__ReifiedAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6882:1: ( ( ( 'reified' ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6883:1: ( ( 'reified' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6913:1: ( ( ( 'reified' ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6914:1: ( ( 'reified' ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6883:1: ( ( 'reified' ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6884:1: ( 'reified' )
-            {
-             before(grammarAccess.getDefSortAccess().getReifiedReifiedKeyword_1_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6885:1: ( 'reified' )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6886:1: 'reified'
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6914:1: ( ( 'reified' ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6915:1: ( 'reified' )
             {
              before(grammarAccess.getDefSortAccess().getReifiedReifiedKeyword_1_0()); 
-            match(input,53,FOLLOW_53_in_rule__DefSort__ReifiedAssignment_113804); 
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6916:1: ( 'reified' )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6917:1: 'reified'
+            {
+             before(grammarAccess.getDefSortAccess().getReifiedReifiedKeyword_1_0()); 
+            match(input,53,FOLLOW_53_in_rule__DefSort__ReifiedAssignment_113867); 
              after(grammarAccess.getDefSortAccess().getReifiedReifiedKeyword_1_0()); 
 
             }
@@ -18214,20 +18288,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__DefSort__NameAssignment_3
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6901:1: rule__DefSort__NameAssignment_3 : ( RULE_ID ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6932:1: rule__DefSort__NameAssignment_3 : ( RULE_ID ) ;
     public final void rule__DefSort__NameAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6905:1: ( ( RULE_ID ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6906:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6936:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6937:1: ( RULE_ID )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6906:1: ( RULE_ID )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6907:1: RULE_ID
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6937:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6938:1: RULE_ID
             {
              before(grammarAccess.getDefSortAccess().getNameIDTerminalRuleCall_3_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DefSort__NameAssignment_313843); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DefSort__NameAssignment_313906); 
              after(grammarAccess.getDefSortAccess().getNameIDTerminalRuleCall_3_0()); 
 
             }
@@ -18251,20 +18325,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__DefSort__TypeAssignment_4_1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6916:1: rule__DefSort__TypeAssignment_4_1 : ( RULE_ID ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6947:1: rule__DefSort__TypeAssignment_4_1 : ( RULE_ID ) ;
     public final void rule__DefSort__TypeAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6920:1: ( ( RULE_ID ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6921:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6951:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6952:1: ( RULE_ID )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6921:1: ( RULE_ID )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6922:1: RULE_ID
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6952:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6953:1: RULE_ID
             {
              before(grammarAccess.getDefSortAccess().getTypeIDTerminalRuleCall_4_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DefSort__TypeAssignment_4_113874); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DefSort__TypeAssignment_4_113937); 
              after(grammarAccess.getDefSortAccess().getTypeIDTerminalRuleCall_4_1_0()); 
 
             }
@@ -18288,20 +18362,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__DefRange__AnnotationsAssignment_0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6931:1: rule__DefRange__AnnotationsAssignment_0 : ( ruleAnnotation ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6962:1: rule__DefRange__AnnotationsAssignment_0 : ( ruleAnnotation ) ;
     public final void rule__DefRange__AnnotationsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6935:1: ( ( ruleAnnotation ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6936:1: ( ruleAnnotation )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6966:1: ( ( ruleAnnotation ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6967:1: ( ruleAnnotation )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6936:1: ( ruleAnnotation )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6937:1: ruleAnnotation
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6967:1: ( ruleAnnotation )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6968:1: ruleAnnotation
             {
              before(grammarAccess.getDefRangeAccess().getAnnotationsAnnotationParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleAnnotation_in_rule__DefRange__AnnotationsAssignment_013905);
+            pushFollow(FOLLOW_ruleAnnotation_in_rule__DefRange__AnnotationsAssignment_013968);
             ruleAnnotation();
             _fsp--;
 
@@ -18328,24 +18402,24 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__DefRange__NameAssignment_2
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6946:1: rule__DefRange__NameAssignment_2 : ( ( RULE_ID ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6977:1: rule__DefRange__NameAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__DefRange__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6950:1: ( ( ( RULE_ID ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6951:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6981:1: ( ( ( RULE_ID ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6982:1: ( ( RULE_ID ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6951:1: ( ( RULE_ID ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6952:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6982:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6983:1: ( RULE_ID )
             {
              before(grammarAccess.getDefRangeAccess().getNameDefSortCrossReference_2_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6953:1: ( RULE_ID )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6954:1: RULE_ID
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6984:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6985:1: RULE_ID
             {
              before(grammarAccess.getDefRangeAccess().getNameDefSortIDTerminalRuleCall_2_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DefRange__NameAssignment_213940); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DefRange__NameAssignment_214003); 
              after(grammarAccess.getDefRangeAccess().getNameDefSortIDTerminalRuleCall_2_0_1()); 
 
             }
@@ -18373,20 +18447,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__DefRange__MinAssignment_3
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6965:1: rule__DefRange__MinAssignment_3 : ( RULE_INT ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6996:1: rule__DefRange__MinAssignment_3 : ( RULE_INT ) ;
     public final void rule__DefRange__MinAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6969:1: ( ( RULE_INT ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6970:1: ( RULE_INT )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7000:1: ( ( RULE_INT ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7001:1: ( RULE_INT )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6970:1: ( RULE_INT )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6971:1: RULE_INT
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7001:1: ( RULE_INT )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7002:1: RULE_INT
             {
              before(grammarAccess.getDefRangeAccess().getMinINTTerminalRuleCall_3_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__DefRange__MinAssignment_313975); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__DefRange__MinAssignment_314038); 
              after(grammarAccess.getDefRangeAccess().getMinINTTerminalRuleCall_3_0()); 
 
             }
@@ -18410,20 +18484,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__DefRange__MaxAssignment_4
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6980:1: rule__DefRange__MaxAssignment_4 : ( RULE_INT ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7011:1: rule__DefRange__MaxAssignment_4 : ( RULE_INT ) ;
     public final void rule__DefRange__MaxAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6984:1: ( ( RULE_INT ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6985:1: ( RULE_INT )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7015:1: ( ( RULE_INT ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7016:1: ( RULE_INT )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6985:1: ( RULE_INT )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6986:1: RULE_INT
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7016:1: ( RULE_INT )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7017:1: RULE_INT
             {
              before(grammarAccess.getDefRangeAccess().getMaxINTTerminalRuleCall_4_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__DefRange__MaxAssignment_414006); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__DefRange__MaxAssignment_414069); 
              after(grammarAccess.getDefRangeAccess().getMaxINTTerminalRuleCall_4_0()); 
 
             }
@@ -18447,20 +18521,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__DefOption__AnnotationsAssignment_0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6995:1: rule__DefOption__AnnotationsAssignment_0 : ( ruleAnnotation ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7026:1: rule__DefOption__AnnotationsAssignment_0 : ( ruleAnnotation ) ;
     public final void rule__DefOption__AnnotationsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:6999:1: ( ( ruleAnnotation ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7000:1: ( ruleAnnotation )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7030:1: ( ( ruleAnnotation ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7031:1: ( ruleAnnotation )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7000:1: ( ruleAnnotation )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7001:1: ruleAnnotation
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7031:1: ( ruleAnnotation )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7032:1: ruleAnnotation
             {
              before(grammarAccess.getDefOptionAccess().getAnnotationsAnnotationParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleAnnotation_in_rule__DefOption__AnnotationsAssignment_014037);
+            pushFollow(FOLLOW_ruleAnnotation_in_rule__DefOption__AnnotationsAssignment_014100);
             ruleAnnotation();
             _fsp--;
 
@@ -18487,20 +18561,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__DefOption__NameAssignment_1_0_1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7010:1: rule__DefOption__NameAssignment_1_0_1 : ( RULE_ID ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7041:1: rule__DefOption__NameAssignment_1_0_1 : ( RULE_ID ) ;
     public final void rule__DefOption__NameAssignment_1_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7014:1: ( ( RULE_ID ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7015:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7045:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7046:1: ( RULE_ID )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7015:1: ( RULE_ID )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7016:1: RULE_ID
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7046:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7047:1: RULE_ID
             {
              before(grammarAccess.getDefOptionAccess().getNameIDTerminalRuleCall_1_0_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DefOption__NameAssignment_1_0_114068); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DefOption__NameAssignment_1_0_114131); 
              after(grammarAccess.getDefOptionAccess().getNameIDTerminalRuleCall_1_0_1_0()); 
 
             }
@@ -18524,20 +18598,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__DefOption__ValueAssignment_1_0_2
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7025:1: rule__DefOption__ValueAssignment_1_0_2 : ( RULE_INT ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7056:1: rule__DefOption__ValueAssignment_1_0_2 : ( RULE_INT ) ;
     public final void rule__DefOption__ValueAssignment_1_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7029:1: ( ( RULE_INT ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7030:1: ( RULE_INT )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7060:1: ( ( RULE_INT ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7061:1: ( RULE_INT )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7030:1: ( RULE_INT )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7031:1: RULE_INT
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7061:1: ( RULE_INT )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7062:1: RULE_INT
             {
              before(grammarAccess.getDefOptionAccess().getValueINTTerminalRuleCall_1_0_2_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__DefOption__ValueAssignment_1_0_214099); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__DefOption__ValueAssignment_1_0_214162); 
              after(grammarAccess.getDefOptionAccess().getValueINTTerminalRuleCall_1_0_2_0()); 
 
             }
@@ -18561,20 +18635,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__DefOption__NameAssignment_1_1_1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7040:1: rule__DefOption__NameAssignment_1_1_1 : ( RULE_ID ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7071:1: rule__DefOption__NameAssignment_1_1_1 : ( RULE_ID ) ;
     public final void rule__DefOption__NameAssignment_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7044:1: ( ( RULE_ID ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7045:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7075:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7076:1: ( RULE_ID )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7045:1: ( RULE_ID )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7046:1: RULE_ID
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7076:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7077:1: RULE_ID
             {
              before(grammarAccess.getDefOptionAccess().getNameIDTerminalRuleCall_1_1_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DefOption__NameAssignment_1_1_114130); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DefOption__NameAssignment_1_1_114193); 
              after(grammarAccess.getDefOptionAccess().getNameIDTerminalRuleCall_1_1_1_0()); 
 
             }
@@ -18598,20 +18672,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__DefOption__Value2Assignment_1_1_2
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7055:1: rule__DefOption__Value2Assignment_1_1_2 : ( RULE_ID ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7086:1: rule__DefOption__Value2Assignment_1_1_2 : ( RULE_ID ) ;
     public final void rule__DefOption__Value2Assignment_1_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7059:1: ( ( RULE_ID ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7060:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7090:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7091:1: ( RULE_ID )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7060:1: ( RULE_ID )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7061:1: RULE_ID
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7091:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7092:1: RULE_ID
             {
              before(grammarAccess.getDefOptionAccess().getValue2IDTerminalRuleCall_1_1_2_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DefOption__Value2Assignment_1_1_214161); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DefOption__Value2Assignment_1_1_214224); 
              after(grammarAccess.getDefOptionAccess().getValue2IDTerminalRuleCall_1_1_2_0()); 
 
             }
@@ -18635,20 +18709,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__DefCompletion__AnnotationsAssignment_0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7070:1: rule__DefCompletion__AnnotationsAssignment_0 : ( ruleAnnotation ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7101:1: rule__DefCompletion__AnnotationsAssignment_0 : ( ruleAnnotation ) ;
     public final void rule__DefCompletion__AnnotationsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7074:1: ( ( ruleAnnotation ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7075:1: ( ruleAnnotation )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7105:1: ( ( ruleAnnotation ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7106:1: ( ruleAnnotation )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7075:1: ( ruleAnnotation )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7076:1: ruleAnnotation
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7106:1: ( ruleAnnotation )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7107:1: ruleAnnotation
             {
              before(grammarAccess.getDefCompletionAccess().getAnnotationsAnnotationParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleAnnotation_in_rule__DefCompletion__AnnotationsAssignment_014192);
+            pushFollow(FOLLOW_ruleAnnotation_in_rule__DefCompletion__AnnotationsAssignment_014255);
             ruleAnnotation();
             _fsp--;
 
@@ -18675,20 +18749,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__DefCompletion__TypeAssignment_2
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7085:1: rule__DefCompletion__TypeAssignment_2 : ( ruleLabelType ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7116:1: rule__DefCompletion__TypeAssignment_2 : ( ruleLabelType ) ;
     public final void rule__DefCompletion__TypeAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7089:1: ( ( ruleLabelType ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7090:1: ( ruleLabelType )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7120:1: ( ( ruleLabelType ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7121:1: ( ruleLabelType )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7090:1: ( ruleLabelType )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7091:1: ruleLabelType
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7121:1: ( ruleLabelType )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7122:1: ruleLabelType
             {
              before(grammarAccess.getDefCompletionAccess().getTypeLabelTypeEnumRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleLabelType_in_rule__DefCompletion__TypeAssignment_214223);
+            pushFollow(FOLLOW_ruleLabelType_in_rule__DefCompletion__TypeAssignment_214286);
             ruleLabelType();
             _fsp--;
 
@@ -18715,24 +18789,24 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__DefCompletion__LabelAssignment_3
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7100:1: rule__DefCompletion__LabelAssignment_3 : ( ( RULE_ID ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7131:1: rule__DefCompletion__LabelAssignment_3 : ( ( RULE_ID ) ) ;
     public final void rule__DefCompletion__LabelAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7104:1: ( ( ( RULE_ID ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7105:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7135:1: ( ( ( RULE_ID ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7136:1: ( ( RULE_ID ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7105:1: ( ( RULE_ID ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7106:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7136:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7137:1: ( RULE_ID )
             {
              before(grammarAccess.getDefCompletionAccess().getLabelDefinitionCrossReference_3_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7107:1: ( RULE_ID )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7108:1: RULE_ID
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7138:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7139:1: RULE_ID
             {
              before(grammarAccess.getDefCompletionAccess().getLabelDefinitionIDTerminalRuleCall_3_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DefCompletion__LabelAssignment_314258); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DefCompletion__LabelAssignment_314321); 
              after(grammarAccess.getDefCompletionAccess().getLabelDefinitionIDTerminalRuleCall_3_0_1()); 
 
             }
@@ -18760,20 +18834,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__DefNonInertia__AnnotationsAssignment_0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7119:1: rule__DefNonInertia__AnnotationsAssignment_0 : ( ruleAnnotation ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7150:1: rule__DefNonInertia__AnnotationsAssignment_0 : ( ruleAnnotation ) ;
     public final void rule__DefNonInertia__AnnotationsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7123:1: ( ( ruleAnnotation ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7124:1: ( ruleAnnotation )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7154:1: ( ( ruleAnnotation ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7155:1: ( ruleAnnotation )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7124:1: ( ruleAnnotation )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7125:1: ruleAnnotation
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7155:1: ( ruleAnnotation )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7156:1: ruleAnnotation
             {
              before(grammarAccess.getDefNonInertiaAccess().getAnnotationsAnnotationParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleAnnotation_in_rule__DefNonInertia__AnnotationsAssignment_014293);
+            pushFollow(FOLLOW_ruleAnnotation_in_rule__DefNonInertia__AnnotationsAssignment_014356);
             ruleAnnotation();
             _fsp--;
 
@@ -18800,24 +18874,24 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__DefNonInertia__NamesAssignment_2
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7134:1: rule__DefNonInertia__NamesAssignment_2 : ( ( RULE_ID ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7165:1: rule__DefNonInertia__NamesAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__DefNonInertia__NamesAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7138:1: ( ( ( RULE_ID ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7139:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7169:1: ( ( ( RULE_ID ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7170:1: ( ( RULE_ID ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7139:1: ( ( RULE_ID ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7140:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7170:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7171:1: ( RULE_ID )
             {
              before(grammarAccess.getDefNonInertiaAccess().getNamesDefinitionCrossReference_2_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7141:1: ( RULE_ID )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7142:1: RULE_ID
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7172:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7173:1: RULE_ID
             {
              before(grammarAccess.getDefNonInertiaAccess().getNamesDefinitionIDTerminalRuleCall_2_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DefNonInertia__NamesAssignment_214328); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DefNonInertia__NamesAssignment_214391); 
              after(grammarAccess.getDefNonInertiaAccess().getNamesDefinitionIDTerminalRuleCall_2_0_1()); 
 
             }
@@ -18845,24 +18919,24 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__DefNonInertia__NamesAssignment_3_1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7153:1: rule__DefNonInertia__NamesAssignment_3_1 : ( ( RULE_ID ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7184:1: rule__DefNonInertia__NamesAssignment_3_1 : ( ( RULE_ID ) ) ;
     public final void rule__DefNonInertia__NamesAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7157:1: ( ( ( RULE_ID ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7158:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7188:1: ( ( ( RULE_ID ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7189:1: ( ( RULE_ID ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7158:1: ( ( RULE_ID ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7159:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7189:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7190:1: ( RULE_ID )
             {
              before(grammarAccess.getDefNonInertiaAccess().getNamesDefinitionCrossReference_3_1_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7160:1: ( RULE_ID )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7161:1: RULE_ID
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7191:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7192:1: RULE_ID
             {
              before(grammarAccess.getDefNonInertiaAccess().getNamesDefinitionIDTerminalRuleCall_3_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DefNonInertia__NamesAssignment_3_114367); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DefNonInertia__NamesAssignment_3_114430); 
              after(grammarAccess.getDefNonInertiaAccess().getNamesDefinitionIDTerminalRuleCall_3_1_0_1()); 
 
             }
@@ -18890,20 +18964,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__DefXor__AnnotationsAssignment_0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7172:1: rule__DefXor__AnnotationsAssignment_0 : ( ruleAnnotation ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7203:1: rule__DefXor__AnnotationsAssignment_0 : ( ruleAnnotation ) ;
     public final void rule__DefXor__AnnotationsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7176:1: ( ( ruleAnnotation ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7177:1: ( ruleAnnotation )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7207:1: ( ( ruleAnnotation ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7208:1: ( ruleAnnotation )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7177:1: ( ruleAnnotation )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7178:1: ruleAnnotation
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7208:1: ( ruleAnnotation )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7209:1: ruleAnnotation
             {
              before(grammarAccess.getDefXorAccess().getAnnotationsAnnotationParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleAnnotation_in_rule__DefXor__AnnotationsAssignment_014402);
+            pushFollow(FOLLOW_ruleAnnotation_in_rule__DefXor__AnnotationsAssignment_014465);
             ruleAnnotation();
             _fsp--;
 
@@ -18930,24 +19004,24 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__DefXor__NamesAssignment_2
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7187:1: rule__DefXor__NamesAssignment_2 : ( ( RULE_ID ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7218:1: rule__DefXor__NamesAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__DefXor__NamesAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7191:1: ( ( ( RULE_ID ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7192:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7222:1: ( ( ( RULE_ID ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7223:1: ( ( RULE_ID ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7192:1: ( ( RULE_ID ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7193:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7223:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7224:1: ( RULE_ID )
             {
              before(grammarAccess.getDefXorAccess().getNamesDefinitionCrossReference_2_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7194:1: ( RULE_ID )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7195:1: RULE_ID
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7225:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7226:1: RULE_ID
             {
              before(grammarAccess.getDefXorAccess().getNamesDefinitionIDTerminalRuleCall_2_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DefXor__NamesAssignment_214437); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DefXor__NamesAssignment_214500); 
              after(grammarAccess.getDefXorAccess().getNamesDefinitionIDTerminalRuleCall_2_0_1()); 
 
             }
@@ -18975,24 +19049,24 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__DefXor__NamesAssignment_3_1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7206:1: rule__DefXor__NamesAssignment_3_1 : ( ( RULE_ID ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7237:1: rule__DefXor__NamesAssignment_3_1 : ( ( RULE_ID ) ) ;
     public final void rule__DefXor__NamesAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7210:1: ( ( ( RULE_ID ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7211:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7241:1: ( ( ( RULE_ID ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7242:1: ( ( RULE_ID ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7211:1: ( ( RULE_ID ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7212:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7242:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7243:1: ( RULE_ID )
             {
              before(grammarAccess.getDefXorAccess().getNamesDefinitionCrossReference_3_1_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7213:1: ( RULE_ID )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7214:1: RULE_ID
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7244:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7245:1: RULE_ID
             {
              before(grammarAccess.getDefXorAccess().getNamesDefinitionIDTerminalRuleCall_3_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DefXor__NamesAssignment_3_114476); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DefXor__NamesAssignment_3_114539); 
              after(grammarAccess.getDefXorAccess().getNamesDefinitionIDTerminalRuleCall_3_1_0_1()); 
 
             }
@@ -19020,20 +19094,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__DefMutex__AnnotationsAssignment_0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7225:1: rule__DefMutex__AnnotationsAssignment_0 : ( ruleAnnotation ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7256:1: rule__DefMutex__AnnotationsAssignment_0 : ( ruleAnnotation ) ;
     public final void rule__DefMutex__AnnotationsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7229:1: ( ( ruleAnnotation ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7230:1: ( ruleAnnotation )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7260:1: ( ( ruleAnnotation ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7261:1: ( ruleAnnotation )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7230:1: ( ruleAnnotation )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7231:1: ruleAnnotation
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7261:1: ( ruleAnnotation )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7262:1: ruleAnnotation
             {
              before(grammarAccess.getDefMutexAccess().getAnnotationsAnnotationParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleAnnotation_in_rule__DefMutex__AnnotationsAssignment_014511);
+            pushFollow(FOLLOW_ruleAnnotation_in_rule__DefMutex__AnnotationsAssignment_014574);
             ruleAnnotation();
             _fsp--;
 
@@ -19060,24 +19134,24 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__DefMutex__NamesAssignment_2
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7240:1: rule__DefMutex__NamesAssignment_2 : ( ( RULE_ID ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7271:1: rule__DefMutex__NamesAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__DefMutex__NamesAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7244:1: ( ( ( RULE_ID ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7245:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7275:1: ( ( ( RULE_ID ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7276:1: ( ( RULE_ID ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7245:1: ( ( RULE_ID ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7246:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7276:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7277:1: ( RULE_ID )
             {
              before(grammarAccess.getDefMutexAccess().getNamesDefinitionCrossReference_2_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7247:1: ( RULE_ID )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7248:1: RULE_ID
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7278:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7279:1: RULE_ID
             {
              before(grammarAccess.getDefMutexAccess().getNamesDefinitionIDTerminalRuleCall_2_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DefMutex__NamesAssignment_214546); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DefMutex__NamesAssignment_214609); 
              after(grammarAccess.getDefMutexAccess().getNamesDefinitionIDTerminalRuleCall_2_0_1()); 
 
             }
@@ -19105,24 +19179,24 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__DefMutex__NamesAssignment_3_1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7259:1: rule__DefMutex__NamesAssignment_3_1 : ( ( RULE_ID ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7290:1: rule__DefMutex__NamesAssignment_3_1 : ( ( RULE_ID ) ) ;
     public final void rule__DefMutex__NamesAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7263:1: ( ( ( RULE_ID ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7264:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7294:1: ( ( ( RULE_ID ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7295:1: ( ( RULE_ID ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7264:1: ( ( RULE_ID ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7265:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7295:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7296:1: ( RULE_ID )
             {
              before(grammarAccess.getDefMutexAccess().getNamesDefinitionCrossReference_3_1_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7266:1: ( RULE_ID )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7267:1: RULE_ID
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7297:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7298:1: RULE_ID
             {
              before(grammarAccess.getDefMutexAccess().getNamesDefinitionIDTerminalRuleCall_3_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DefMutex__NamesAssignment_3_114585); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DefMutex__NamesAssignment_3_114648); 
              after(grammarAccess.getDefMutexAccess().getNamesDefinitionIDTerminalRuleCall_3_1_0_1()); 
 
             }
@@ -19150,20 +19224,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__LabeledExpression__AnnotationsAssignment_0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7278:1: rule__LabeledExpression__AnnotationsAssignment_0 : ( ruleAnnotation ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7309:1: rule__LabeledExpression__AnnotationsAssignment_0 : ( ruleAnnotation ) ;
     public final void rule__LabeledExpression__AnnotationsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7282:1: ( ( ruleAnnotation ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7283:1: ( ruleAnnotation )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7313:1: ( ( ruleAnnotation ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7314:1: ( ruleAnnotation )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7283:1: ( ruleAnnotation )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7284:1: ruleAnnotation
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7314:1: ( ruleAnnotation )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7315:1: ruleAnnotation
             {
              before(grammarAccess.getLabeledExpressionAccess().getAnnotationsAnnotationParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleAnnotation_in_rule__LabeledExpression__AnnotationsAssignment_014620);
+            pushFollow(FOLLOW_ruleAnnotation_in_rule__LabeledExpression__AnnotationsAssignment_014683);
             ruleAnnotation();
             _fsp--;
 
@@ -19190,20 +19264,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__LabeledExpression__NameAssignment_1_0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7293:1: rule__LabeledExpression__NameAssignment_1_0 : ( ruleLabelType ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7324:1: rule__LabeledExpression__NameAssignment_1_0 : ( ruleLabelType ) ;
     public final void rule__LabeledExpression__NameAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7297:1: ( ( ruleLabelType ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7298:1: ( ruleLabelType )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7328:1: ( ( ruleLabelType ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7329:1: ( ruleLabelType )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7298:1: ( ruleLabelType )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7299:1: ruleLabelType
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7329:1: ( ruleLabelType )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7330:1: ruleLabelType
             {
              before(grammarAccess.getLabeledExpressionAccess().getNameLabelTypeEnumRuleCall_1_0_0()); 
-            pushFollow(FOLLOW_ruleLabelType_in_rule__LabeledExpression__NameAssignment_1_014651);
+            pushFollow(FOLLOW_ruleLabelType_in_rule__LabeledExpression__NameAssignment_1_014714);
             ruleLabelType();
             _fsp--;
 
@@ -19230,20 +19304,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__LabeledExpression__ExprAssignment_2
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7308:1: rule__LabeledExpression__ExprAssignment_2 : ( ruleExpression ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7339:1: rule__LabeledExpression__ExprAssignment_2 : ( ruleExpression ) ;
     public final void rule__LabeledExpression__ExprAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7312:1: ( ( ruleExpression ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7313:1: ( ruleExpression )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7343:1: ( ( ruleExpression ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7344:1: ( ruleExpression )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7313:1: ( ruleExpression )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7314:1: ruleExpression
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7344:1: ( ruleExpression )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7345:1: ruleExpression
             {
              before(grammarAccess.getLabeledExpressionAccess().getExprExpressionParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__LabeledExpression__ExprAssignment_214682);
+            pushFollow(FOLLOW_ruleExpression_in_rule__LabeledExpression__ExprAssignment_214745);
             ruleExpression();
             _fsp--;
 
@@ -19269,30 +19343,25 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
     // $ANTLR end rule__LabeledExpression__ExprAssignment_2
 
 
-    // $ANTLR start rule__SortDefinition__SortAssignment_0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7323:1: rule__SortDefinition__SortAssignment_0 : ( ( RULE_ID ) ) ;
-    public final void rule__SortDefinition__SortAssignment_0() throws RecognitionException {
+    // $ANTLR start rule__SortDefinition__AnnotationsAssignment_0
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7354:1: rule__SortDefinition__AnnotationsAssignment_0 : ( ruleAnnotation ) ;
+    public final void rule__SortDefinition__AnnotationsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7327:1: ( ( ( RULE_ID ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7328:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7358:1: ( ( ruleAnnotation ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7359:1: ( ruleAnnotation )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7328:1: ( ( RULE_ID ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7329:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7359:1: ( ruleAnnotation )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7360:1: ruleAnnotation
             {
-             before(grammarAccess.getSortDefinitionAccess().getSortDefSortCrossReference_0_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7330:1: ( RULE_ID )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7331:1: RULE_ID
-            {
-             before(grammarAccess.getSortDefinitionAccess().getSortDefSortIDTerminalRuleCall_0_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SortDefinition__SortAssignment_014717); 
-             after(grammarAccess.getSortDefinitionAccess().getSortDefSortIDTerminalRuleCall_0_0_1()); 
+             before(grammarAccess.getSortDefinitionAccess().getAnnotationsAnnotationParserRuleCall_0_0()); 
+            pushFollow(FOLLOW_ruleAnnotation_in_rule__SortDefinition__AnnotationsAssignment_014776);
+            ruleAnnotation();
+            _fsp--;
 
-            }
-
-             after(grammarAccess.getSortDefinitionAccess().getSortDefSortCrossReference_0_0()); 
+             after(grammarAccess.getSortDefinitionAccess().getAnnotationsAnnotationParserRuleCall_0_0()); 
 
             }
 
@@ -19311,28 +19380,73 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end rule__SortDefinition__SortAssignment_0
+    // $ANTLR end rule__SortDefinition__AnnotationsAssignment_0
 
 
-    // $ANTLR start rule__SortDefinition__DefinitionsAssignment_1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7342:1: rule__SortDefinition__DefinitionsAssignment_1 : ( ruleDefinition ) ;
-    public final void rule__SortDefinition__DefinitionsAssignment_1() throws RecognitionException {
+    // $ANTLR start rule__SortDefinition__SortAssignment_1
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7369:1: rule__SortDefinition__SortAssignment_1 : ( ( RULE_ID ) ) ;
+    public final void rule__SortDefinition__SortAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7346:1: ( ( ruleDefinition ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7347:1: ( ruleDefinition )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7373:1: ( ( ( RULE_ID ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7374:1: ( ( RULE_ID ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7347:1: ( ruleDefinition )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7348:1: ruleDefinition
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7374:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7375:1: ( RULE_ID )
             {
-             before(grammarAccess.getSortDefinitionAccess().getDefinitionsDefinitionParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleDefinition_in_rule__SortDefinition__DefinitionsAssignment_114752);
+             before(grammarAccess.getSortDefinitionAccess().getSortDefSortCrossReference_1_0()); 
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7376:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7377:1: RULE_ID
+            {
+             before(grammarAccess.getSortDefinitionAccess().getSortDefSortIDTerminalRuleCall_1_0_1()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SortDefinition__SortAssignment_114811); 
+             after(grammarAccess.getSortDefinitionAccess().getSortDefSortIDTerminalRuleCall_1_0_1()); 
+
+            }
+
+             after(grammarAccess.getSortDefinitionAccess().getSortDefSortCrossReference_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end rule__SortDefinition__SortAssignment_1
+
+
+    // $ANTLR start rule__SortDefinition__DefinitionsAssignment_2
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7388:1: rule__SortDefinition__DefinitionsAssignment_2 : ( ruleDefinition ) ;
+    public final void rule__SortDefinition__DefinitionsAssignment_2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7392:1: ( ( ruleDefinition ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7393:1: ( ruleDefinition )
+            {
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7393:1: ( ruleDefinition )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7394:1: ruleDefinition
+            {
+             before(grammarAccess.getSortDefinitionAccess().getDefinitionsDefinitionParserRuleCall_2_0()); 
+            pushFollow(FOLLOW_ruleDefinition_in_rule__SortDefinition__DefinitionsAssignment_214846);
             ruleDefinition();
             _fsp--;
 
-             after(grammarAccess.getSortDefinitionAccess().getDefinitionsDefinitionParserRuleCall_1_0()); 
+             after(grammarAccess.getSortDefinitionAccess().getDefinitionsDefinitionParserRuleCall_2_0()); 
 
             }
 
@@ -19351,28 +19465,28 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end rule__SortDefinition__DefinitionsAssignment_1
+    // $ANTLR end rule__SortDefinition__DefinitionsAssignment_2
 
 
-    // $ANTLR start rule__SortDefinition__DefinitionsAssignment_2_1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7357:1: rule__SortDefinition__DefinitionsAssignment_2_1 : ( ruleDefinition ) ;
-    public final void rule__SortDefinition__DefinitionsAssignment_2_1() throws RecognitionException {
+    // $ANTLR start rule__SortDefinition__DefinitionsAssignment_3_1
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7403:1: rule__SortDefinition__DefinitionsAssignment_3_1 : ( ruleDefinition ) ;
+    public final void rule__SortDefinition__DefinitionsAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7361:1: ( ( ruleDefinition ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7362:1: ( ruleDefinition )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7407:1: ( ( ruleDefinition ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7408:1: ( ruleDefinition )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7362:1: ( ruleDefinition )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7363:1: ruleDefinition
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7408:1: ( ruleDefinition )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7409:1: ruleDefinition
             {
-             before(grammarAccess.getSortDefinitionAccess().getDefinitionsDefinitionParserRuleCall_2_1_0()); 
-            pushFollow(FOLLOW_ruleDefinition_in_rule__SortDefinition__DefinitionsAssignment_2_114783);
+             before(grammarAccess.getSortDefinitionAccess().getDefinitionsDefinitionParserRuleCall_3_1_0()); 
+            pushFollow(FOLLOW_ruleDefinition_in_rule__SortDefinition__DefinitionsAssignment_3_114877);
             ruleDefinition();
             _fsp--;
 
-             after(grammarAccess.getSortDefinitionAccess().getDefinitionsDefinitionParserRuleCall_2_1_0()); 
+             after(grammarAccess.getSortDefinitionAccess().getDefinitionsDefinitionParserRuleCall_3_1_0()); 
 
             }
 
@@ -19391,24 +19505,24 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end rule__SortDefinition__DefinitionsAssignment_2_1
+    // $ANTLR end rule__SortDefinition__DefinitionsAssignment_3_1
 
 
     // $ANTLR start rule__Definition__NameAssignment_0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7372:1: rule__Definition__NameAssignment_0 : ( RULE_ID ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7418:1: rule__Definition__NameAssignment_0 : ( RULE_ID ) ;
     public final void rule__Definition__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7376:1: ( ( RULE_ID ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7377:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7422:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7423:1: ( RULE_ID )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7377:1: ( RULE_ID )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7378:1: RULE_ID
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7423:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7424:1: RULE_ID
             {
              before(grammarAccess.getDefinitionAccess().getNameIDTerminalRuleCall_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Definition__NameAssignment_014814); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Definition__NameAssignment_014908); 
              after(grammarAccess.getDefinitionAccess().getNameIDTerminalRuleCall_0_0()); 
 
             }
@@ -19432,24 +19546,24 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Definition__ArgsAssignment_1_1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7387:1: rule__Definition__ArgsAssignment_1_1 : ( ( RULE_ID ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7433:1: rule__Definition__ArgsAssignment_1_1 : ( ( RULE_ID ) ) ;
     public final void rule__Definition__ArgsAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7391:1: ( ( ( RULE_ID ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7392:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7437:1: ( ( ( RULE_ID ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7438:1: ( ( RULE_ID ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7392:1: ( ( RULE_ID ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7393:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7438:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7439:1: ( RULE_ID )
             {
              before(grammarAccess.getDefinitionAccess().getArgsDefinesCrossReference_1_1_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7394:1: ( RULE_ID )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7395:1: RULE_ID
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7440:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7441:1: RULE_ID
             {
              before(grammarAccess.getDefinitionAccess().getArgsDefinesIDTerminalRuleCall_1_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Definition__ArgsAssignment_1_114849); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Definition__ArgsAssignment_1_114943); 
              after(grammarAccess.getDefinitionAccess().getArgsDefinesIDTerminalRuleCall_1_1_0_1()); 
 
             }
@@ -19477,24 +19591,24 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Definition__ArgsAssignment_1_2_1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7406:1: rule__Definition__ArgsAssignment_1_2_1 : ( ( RULE_ID ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7452:1: rule__Definition__ArgsAssignment_1_2_1 : ( ( RULE_ID ) ) ;
     public final void rule__Definition__ArgsAssignment_1_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7410:1: ( ( ( RULE_ID ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7411:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7456:1: ( ( ( RULE_ID ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7457:1: ( ( RULE_ID ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7411:1: ( ( RULE_ID ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7412:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7457:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7458:1: ( RULE_ID )
             {
              before(grammarAccess.getDefinitionAccess().getArgsDefinesCrossReference_1_2_1_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7413:1: ( RULE_ID )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7414:1: RULE_ID
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7459:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7460:1: RULE_ID
             {
              before(grammarAccess.getDefinitionAccess().getArgsDefinesIDTerminalRuleCall_1_2_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Definition__ArgsAssignment_1_2_114888); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Definition__ArgsAssignment_1_2_114982); 
              after(grammarAccess.getDefinitionAccess().getArgsDefinesIDTerminalRuleCall_1_2_1_0_1()); 
 
             }
@@ -19522,24 +19636,24 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Definition__ReturnAssignment_2_1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7425:1: rule__Definition__ReturnAssignment_2_1 : ( ( RULE_ID ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7471:1: rule__Definition__ReturnAssignment_2_1 : ( ( RULE_ID ) ) ;
     public final void rule__Definition__ReturnAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7429:1: ( ( ( RULE_ID ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7430:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7475:1: ( ( ( RULE_ID ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7476:1: ( ( RULE_ID ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7430:1: ( ( RULE_ID ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7431:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7476:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7477:1: ( RULE_ID )
             {
              before(grammarAccess.getDefinitionAccess().getReturnDefinesCrossReference_2_1_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7432:1: ( RULE_ID )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7433:1: RULE_ID
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7478:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7479:1: RULE_ID
             {
              before(grammarAccess.getDefinitionAccess().getReturnDefinesIDTerminalRuleCall_2_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Definition__ReturnAssignment_2_114927); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Definition__ReturnAssignment_2_115021); 
              after(grammarAccess.getDefinitionAccess().getReturnDefinesIDTerminalRuleCall_2_1_0_1()); 
 
             }
@@ -19567,20 +19681,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Expression__ExprAssignment_0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7444:1: rule__Expression__ExprAssignment_0 : ( ruleAssignmentOp ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7490:1: rule__Expression__ExprAssignment_0 : ( ruleAssignmentOp ) ;
     public final void rule__Expression__ExprAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7448:1: ( ( ruleAssignmentOp ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7449:1: ( ruleAssignmentOp )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7494:1: ( ( ruleAssignmentOp ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7495:1: ( ruleAssignmentOp )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7449:1: ( ruleAssignmentOp )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7450:1: ruleAssignmentOp
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7495:1: ( ruleAssignmentOp )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7496:1: ruleAssignmentOp
             {
              before(grammarAccess.getExpressionAccess().getExprAssignmentOpParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleAssignmentOp_in_rule__Expression__ExprAssignment_014962);
+            pushFollow(FOLLOW_ruleAssignmentOp_in_rule__Expression__ExprAssignment_015056);
             ruleAssignmentOp();
             _fsp--;
 
@@ -19607,20 +19721,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Expression__QualifiersAssignment_1_0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7459:1: rule__Expression__QualifiersAssignment_1_0 : ( ruleQualifier ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7505:1: rule__Expression__QualifiersAssignment_1_0 : ( ruleQualifier ) ;
     public final void rule__Expression__QualifiersAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7463:1: ( ( ruleQualifier ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7464:1: ( ruleQualifier )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7509:1: ( ( ruleQualifier ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7510:1: ( ruleQualifier )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7464:1: ( ruleQualifier )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7465:1: ruleQualifier
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7510:1: ( ruleQualifier )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7511:1: ruleQualifier
             {
              before(grammarAccess.getExpressionAccess().getQualifiersQualifierParserRuleCall_1_0_0()); 
-            pushFollow(FOLLOW_ruleQualifier_in_rule__Expression__QualifiersAssignment_1_014993);
+            pushFollow(FOLLOW_ruleQualifier_in_rule__Expression__QualifiersAssignment_1_015087);
             ruleQualifier();
             _fsp--;
 
@@ -19647,20 +19761,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Expression__ExprAssignment_1_1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7474:1: rule__Expression__ExprAssignment_1_1 : ( ruleExpression ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7520:1: rule__Expression__ExprAssignment_1_1 : ( ruleExpression ) ;
     public final void rule__Expression__ExprAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7478:1: ( ( ruleExpression ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7479:1: ( ruleExpression )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7524:1: ( ( ruleExpression ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7525:1: ( ruleExpression )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7479:1: ( ruleExpression )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7480:1: ruleExpression
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7525:1: ( ruleExpression )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7526:1: ruleExpression
             {
              before(grammarAccess.getExpressionAccess().getExprExpressionParserRuleCall_1_1_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__Expression__ExprAssignment_1_115024);
+            pushFollow(FOLLOW_ruleExpression_in_rule__Expression__ExprAssignment_1_115118);
             ruleExpression();
             _fsp--;
 
@@ -19687,24 +19801,24 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Parameters__NamesAssignment_0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7489:1: rule__Parameters__NamesAssignment_0 : ( ( RULE_ID ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7535:1: rule__Parameters__NamesAssignment_0 : ( ( RULE_ID ) ) ;
     public final void rule__Parameters__NamesAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7493:1: ( ( ( RULE_ID ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7494:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7539:1: ( ( ( RULE_ID ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7540:1: ( ( RULE_ID ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7494:1: ( ( RULE_ID ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7495:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7540:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7541:1: ( RULE_ID )
             {
              before(grammarAccess.getParametersAccess().getNamesDefinesCrossReference_0_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7496:1: ( RULE_ID )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7497:1: RULE_ID
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7542:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7543:1: RULE_ID
             {
              before(grammarAccess.getParametersAccess().getNamesDefinesIDTerminalRuleCall_0_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Parameters__NamesAssignment_015059); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Parameters__NamesAssignment_015153); 
              after(grammarAccess.getParametersAccess().getNamesDefinesIDTerminalRuleCall_0_0_1()); 
 
             }
@@ -19732,24 +19846,24 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Parameters__NamesAssignment_1_1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7508:1: rule__Parameters__NamesAssignment_1_1 : ( ( RULE_ID ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7554:1: rule__Parameters__NamesAssignment_1_1 : ( ( RULE_ID ) ) ;
     public final void rule__Parameters__NamesAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7512:1: ( ( ( RULE_ID ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7513:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7558:1: ( ( ( RULE_ID ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7559:1: ( ( RULE_ID ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7513:1: ( ( RULE_ID ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7514:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7559:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7560:1: ( RULE_ID )
             {
              before(grammarAccess.getParametersAccess().getNamesDefinesCrossReference_1_1_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7515:1: ( RULE_ID )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7516:1: RULE_ID
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7561:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7562:1: RULE_ID
             {
              before(grammarAccess.getParametersAccess().getNamesDefinesIDTerminalRuleCall_1_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Parameters__NamesAssignment_1_115098); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Parameters__NamesAssignment_1_115192); 
              after(grammarAccess.getParametersAccess().getNamesDefinesIDTerminalRuleCall_1_1_0_1()); 
 
             }
@@ -19777,20 +19891,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Exists__OpAssignment_0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7527:1: rule__Exists__OpAssignment_0 : ( ruleUnaryOp ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7573:1: rule__Exists__OpAssignment_0 : ( ruleUnaryOp ) ;
     public final void rule__Exists__OpAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7531:1: ( ( ruleUnaryOp ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7532:1: ( ruleUnaryOp )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7577:1: ( ( ruleUnaryOp ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7578:1: ( ruleUnaryOp )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7532:1: ( ruleUnaryOp )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7533:1: ruleUnaryOp
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7578:1: ( ruleUnaryOp )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7579:1: ruleUnaryOp
             {
              before(grammarAccess.getExistsAccess().getOpUnaryOpEnumRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleUnaryOp_in_rule__Exists__OpAssignment_015133);
+            pushFollow(FOLLOW_ruleUnaryOp_in_rule__Exists__OpAssignment_015227);
             ruleUnaryOp();
             _fsp--;
 
@@ -19817,20 +19931,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Exists__ParametersAssignment_2
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7542:1: rule__Exists__ParametersAssignment_2 : ( ruleParameters ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7588:1: rule__Exists__ParametersAssignment_2 : ( ruleParameters ) ;
     public final void rule__Exists__ParametersAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7546:1: ( ( ruleParameters ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7547:1: ( ruleParameters )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7592:1: ( ( ruleParameters ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7593:1: ( ruleParameters )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7547:1: ( ruleParameters )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7548:1: ruleParameters
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7593:1: ( ruleParameters )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7594:1: ruleParameters
             {
              before(grammarAccess.getExistsAccess().getParametersParametersParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleParameters_in_rule__Exists__ParametersAssignment_215164);
+            pushFollow(FOLLOW_ruleParameters_in_rule__Exists__ParametersAssignment_215258);
             ruleParameters();
             _fsp--;
 
@@ -19857,20 +19971,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Forall__OpAssignment_0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7557:1: rule__Forall__OpAssignment_0 : ( ruleUnaryOp ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7603:1: rule__Forall__OpAssignment_0 : ( ruleUnaryOp ) ;
     public final void rule__Forall__OpAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7561:1: ( ( ruleUnaryOp ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7562:1: ( ruleUnaryOp )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7607:1: ( ( ruleUnaryOp ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7608:1: ( ruleUnaryOp )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7562:1: ( ruleUnaryOp )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7563:1: ruleUnaryOp
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7608:1: ( ruleUnaryOp )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7609:1: ruleUnaryOp
             {
              before(grammarAccess.getForallAccess().getOpUnaryOpEnumRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleUnaryOp_in_rule__Forall__OpAssignment_015195);
+            pushFollow(FOLLOW_ruleUnaryOp_in_rule__Forall__OpAssignment_015289);
             ruleUnaryOp();
             _fsp--;
 
@@ -19897,20 +20011,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Forall__ParametersAssignment_2
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7572:1: rule__Forall__ParametersAssignment_2 : ( ruleParameters ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7618:1: rule__Forall__ParametersAssignment_2 : ( ruleParameters ) ;
     public final void rule__Forall__ParametersAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7576:1: ( ( ruleParameters ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7577:1: ( ruleParameters )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7622:1: ( ( ruleParameters ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7623:1: ( ruleParameters )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7577:1: ( ruleParameters )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7578:1: ruleParameters
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7623:1: ( ruleParameters )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7624:1: ruleParameters
             {
              before(grammarAccess.getForallAccess().getParametersParametersParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleParameters_in_rule__Forall__ParametersAssignment_215226);
+            pushFollow(FOLLOW_ruleParameters_in_rule__Forall__ParametersAssignment_215320);
             ruleParameters();
             _fsp--;
 
@@ -19937,20 +20051,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AssignmentOp__QAssignment_1_1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7587:1: rule__AssignmentOp__QAssignment_1_1 : ( ruleQualifier ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7633:1: rule__AssignmentOp__QAssignment_1_1 : ( ruleQualifier ) ;
     public final void rule__AssignmentOp__QAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7591:1: ( ( ruleQualifier ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7592:1: ( ruleQualifier )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7637:1: ( ( ruleQualifier ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7638:1: ( ruleQualifier )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7592:1: ( ruleQualifier )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7593:1: ruleQualifier
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7638:1: ( ruleQualifier )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7639:1: ruleQualifier
             {
              before(grammarAccess.getAssignmentOpAccess().getQQualifierParserRuleCall_1_1_0()); 
-            pushFollow(FOLLOW_ruleQualifier_in_rule__AssignmentOp__QAssignment_1_115257);
+            pushFollow(FOLLOW_ruleQualifier_in_rule__AssignmentOp__QAssignment_1_115351);
             ruleQualifier();
             _fsp--;
 
@@ -19977,20 +20091,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AssignmentOp__RightAssignment_1_2
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7602:1: rule__AssignmentOp__RightAssignment_1_2 : ( ruleOrExp ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7648:1: rule__AssignmentOp__RightAssignment_1_2 : ( ruleOrExp ) ;
     public final void rule__AssignmentOp__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7606:1: ( ( ruleOrExp ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7607:1: ( ruleOrExp )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7652:1: ( ( ruleOrExp ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7653:1: ( ruleOrExp )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7607:1: ( ruleOrExp )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7608:1: ruleOrExp
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7653:1: ( ruleOrExp )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7654:1: ruleOrExp
             {
              before(grammarAccess.getAssignmentOpAccess().getRightOrExpParserRuleCall_1_2_0()); 
-            pushFollow(FOLLOW_ruleOrExp_in_rule__AssignmentOp__RightAssignment_1_215288);
+            pushFollow(FOLLOW_ruleOrExp_in_rule__AssignmentOp__RightAssignment_1_215382);
             ruleOrExp();
             _fsp--;
 
@@ -20017,20 +20131,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__OrExp__QAssignment_1_2
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7617:1: rule__OrExp__QAssignment_1_2 : ( ruleQualifier ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7663:1: rule__OrExp__QAssignment_1_2 : ( ruleQualifier ) ;
     public final void rule__OrExp__QAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7621:1: ( ( ruleQualifier ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7622:1: ( ruleQualifier )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7667:1: ( ( ruleQualifier ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7668:1: ( ruleQualifier )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7622:1: ( ruleQualifier )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7623:1: ruleQualifier
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7668:1: ( ruleQualifier )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7669:1: ruleQualifier
             {
              before(grammarAccess.getOrExpAccess().getQQualifierParserRuleCall_1_2_0()); 
-            pushFollow(FOLLOW_ruleQualifier_in_rule__OrExp__QAssignment_1_215319);
+            pushFollow(FOLLOW_ruleQualifier_in_rule__OrExp__QAssignment_1_215413);
             ruleQualifier();
             _fsp--;
 
@@ -20057,20 +20171,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__OrExp__RightAssignment_1_3
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7632:1: rule__OrExp__RightAssignment_1_3 : ( ruleAndExp ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7678:1: rule__OrExp__RightAssignment_1_3 : ( ruleAndExp ) ;
     public final void rule__OrExp__RightAssignment_1_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7636:1: ( ( ruleAndExp ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7637:1: ( ruleAndExp )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7682:1: ( ( ruleAndExp ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7683:1: ( ruleAndExp )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7637:1: ( ruleAndExp )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7638:1: ruleAndExp
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7683:1: ( ruleAndExp )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7684:1: ruleAndExp
             {
              before(grammarAccess.getOrExpAccess().getRightAndExpParserRuleCall_1_3_0()); 
-            pushFollow(FOLLOW_ruleAndExp_in_rule__OrExp__RightAssignment_1_315350);
+            pushFollow(FOLLOW_ruleAndExp_in_rule__OrExp__RightAssignment_1_315444);
             ruleAndExp();
             _fsp--;
 
@@ -20097,20 +20211,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AndExp__QAssignment_1_2
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7647:1: rule__AndExp__QAssignment_1_2 : ( ruleQualifier ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7693:1: rule__AndExp__QAssignment_1_2 : ( ruleQualifier ) ;
     public final void rule__AndExp__QAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7651:1: ( ( ruleQualifier ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7652:1: ( ruleQualifier )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7697:1: ( ( ruleQualifier ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7698:1: ( ruleQualifier )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7652:1: ( ruleQualifier )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7653:1: ruleQualifier
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7698:1: ( ruleQualifier )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7699:1: ruleQualifier
             {
              before(grammarAccess.getAndExpAccess().getQQualifierParserRuleCall_1_2_0()); 
-            pushFollow(FOLLOW_ruleQualifier_in_rule__AndExp__QAssignment_1_215381);
+            pushFollow(FOLLOW_ruleQualifier_in_rule__AndExp__QAssignment_1_215475);
             ruleQualifier();
             _fsp--;
 
@@ -20137,20 +20251,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AndExp__RightAssignment_1_3
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7662:1: rule__AndExp__RightAssignment_1_3 : ( ruleRelational ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7708:1: rule__AndExp__RightAssignment_1_3 : ( ruleRelational ) ;
     public final void rule__AndExp__RightAssignment_1_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7666:1: ( ( ruleRelational ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7667:1: ( ruleRelational )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7712:1: ( ( ruleRelational ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7713:1: ( ruleRelational )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7667:1: ( ruleRelational )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7668:1: ruleRelational
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7713:1: ( ruleRelational )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7714:1: ruleRelational
             {
              before(grammarAccess.getAndExpAccess().getRightRelationalParserRuleCall_1_3_0()); 
-            pushFollow(FOLLOW_ruleRelational_in_rule__AndExp__RightAssignment_1_315412);
+            pushFollow(FOLLOW_ruleRelational_in_rule__AndExp__RightAssignment_1_315506);
             ruleRelational();
             _fsp--;
 
@@ -20177,20 +20291,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Relational__RightAssignment_1_1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7677:1: rule__Relational__RightAssignment_1_1 : ( ruleAddition ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7723:1: rule__Relational__RightAssignment_1_1 : ( ruleAddition ) ;
     public final void rule__Relational__RightAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7681:1: ( ( ruleAddition ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7682:1: ( ruleAddition )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7727:1: ( ( ruleAddition ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7728:1: ( ruleAddition )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7682:1: ( ruleAddition )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7683:1: ruleAddition
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7728:1: ( ruleAddition )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7729:1: ruleAddition
             {
              before(grammarAccess.getRelationalAccess().getRightAdditionParserRuleCall_1_1_0()); 
-            pushFollow(FOLLOW_ruleAddition_in_rule__Relational__RightAssignment_1_115443);
+            pushFollow(FOLLOW_ruleAddition_in_rule__Relational__RightAssignment_1_115537);
             ruleAddition();
             _fsp--;
 
@@ -20217,20 +20331,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Addition__RightAssignment_1_1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7692:1: rule__Addition__RightAssignment_1_1 : ( ruleMultiplication ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7738:1: rule__Addition__RightAssignment_1_1 : ( ruleMultiplication ) ;
     public final void rule__Addition__RightAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7696:1: ( ( ruleMultiplication ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7697:1: ( ruleMultiplication )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7742:1: ( ( ruleMultiplication ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7743:1: ( ruleMultiplication )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7697:1: ( ruleMultiplication )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7698:1: ruleMultiplication
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7743:1: ( ruleMultiplication )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7744:1: ruleMultiplication
             {
              before(grammarAccess.getAdditionAccess().getRightMultiplicationParserRuleCall_1_1_0()); 
-            pushFollow(FOLLOW_ruleMultiplication_in_rule__Addition__RightAssignment_1_115474);
+            pushFollow(FOLLOW_ruleMultiplication_in_rule__Addition__RightAssignment_1_115568);
             ruleMultiplication();
             _fsp--;
 
@@ -20257,20 +20371,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Multiplication__RightAssignment_1_1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7707:1: rule__Multiplication__RightAssignment_1_1 : ( rulePower ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7753:1: rule__Multiplication__RightAssignment_1_1 : ( rulePower ) ;
     public final void rule__Multiplication__RightAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7711:1: ( ( rulePower ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7712:1: ( rulePower )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7757:1: ( ( rulePower ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7758:1: ( rulePower )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7712:1: ( rulePower )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7713:1: rulePower
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7758:1: ( rulePower )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7759:1: rulePower
             {
              before(grammarAccess.getMultiplicationAccess().getRightPowerParserRuleCall_1_1_0()); 
-            pushFollow(FOLLOW_rulePower_in_rule__Multiplication__RightAssignment_1_115505);
+            pushFollow(FOLLOW_rulePower_in_rule__Multiplication__RightAssignment_1_115599);
             rulePower();
             _fsp--;
 
@@ -20297,20 +20411,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__Power__RightAssignment_1_1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7722:1: rule__Power__RightAssignment_1_1 : ( ruleUnaryExpr ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7768:1: rule__Power__RightAssignment_1_1 : ( ruleUnaryExpr ) ;
     public final void rule__Power__RightAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7726:1: ( ( ruleUnaryExpr ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7727:1: ( ruleUnaryExpr )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7772:1: ( ( ruleUnaryExpr ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7773:1: ( ruleUnaryExpr )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7727:1: ( ruleUnaryExpr )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7728:1: ruleUnaryExpr
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7773:1: ( ruleUnaryExpr )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7774:1: ruleUnaryExpr
             {
              before(grammarAccess.getPowerAccess().getRightUnaryExprParserRuleCall_1_1_0()); 
-            pushFollow(FOLLOW_ruleUnaryExpr_in_rule__Power__RightAssignment_1_115536);
+            pushFollow(FOLLOW_ruleUnaryExpr_in_rule__Power__RightAssignment_1_115630);
             ruleUnaryExpr();
             _fsp--;
 
@@ -20337,20 +20451,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__UnaryExpr__OpAssignment_0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7737:1: rule__UnaryExpr__OpAssignment_0 : ( ruleUnaryOp ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7783:1: rule__UnaryExpr__OpAssignment_0 : ( ruleUnaryOp ) ;
     public final void rule__UnaryExpr__OpAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7741:1: ( ( ruleUnaryOp ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7742:1: ( ruleUnaryOp )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7787:1: ( ( ruleUnaryOp ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7788:1: ( ruleUnaryOp )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7742:1: ( ruleUnaryOp )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7743:1: ruleUnaryOp
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7788:1: ( ruleUnaryOp )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7789:1: ruleUnaryOp
             {
              before(grammarAccess.getUnaryExprAccess().getOpUnaryOpEnumRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleUnaryOp_in_rule__UnaryExpr__OpAssignment_015567);
+            pushFollow(FOLLOW_ruleUnaryOp_in_rule__UnaryExpr__OpAssignment_015661);
             ruleUnaryOp();
             _fsp--;
 
@@ -20377,20 +20491,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__UnaryExpr__RightAssignment_1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7752:1: rule__UnaryExpr__RightAssignment_1 : ( rulePrePrimaryExpr ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7798:1: rule__UnaryExpr__RightAssignment_1 : ( rulePrePrimaryExpr ) ;
     public final void rule__UnaryExpr__RightAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7756:1: ( ( rulePrePrimaryExpr ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7757:1: ( rulePrePrimaryExpr )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7802:1: ( ( rulePrePrimaryExpr ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7803:1: ( rulePrePrimaryExpr )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7757:1: ( rulePrePrimaryExpr )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7758:1: rulePrePrimaryExpr
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7803:1: ( rulePrePrimaryExpr )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7804:1: rulePrePrimaryExpr
             {
              before(grammarAccess.getUnaryExprAccess().getRightPrePrimaryExprParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_rulePrePrimaryExpr_in_rule__UnaryExpr__RightAssignment_115598);
+            pushFollow(FOLLOW_rulePrePrimaryExpr_in_rule__UnaryExpr__RightAssignment_115692);
             rulePrePrimaryExpr();
             _fsp--;
 
@@ -20417,20 +20531,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__PrePrimaryExpr__NAssignment_3_1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7767:1: rule__PrePrimaryExpr__NAssignment_3_1 : ( RULE_INT ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7813:1: rule__PrePrimaryExpr__NAssignment_3_1 : ( RULE_INT ) ;
     public final void rule__PrePrimaryExpr__NAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7771:1: ( ( RULE_INT ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7772:1: ( RULE_INT )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7817:1: ( ( RULE_INT ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7818:1: ( RULE_INT )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7772:1: ( RULE_INT )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7773:1: RULE_INT
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7818:1: ( RULE_INT )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7819:1: RULE_INT
             {
              before(grammarAccess.getPrePrimaryExprAccess().getNINTTerminalRuleCall_3_1_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__PrePrimaryExpr__NAssignment_3_115629); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__PrePrimaryExpr__NAssignment_3_115723); 
              after(grammarAccess.getPrePrimaryExprAccess().getNINTTerminalRuleCall_3_1_0()); 
 
             }
@@ -20454,24 +20568,24 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AbstractRef__DefineAssignment_0
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7782:1: rule__AbstractRef__DefineAssignment_0 : ( ( RULE_ID ) ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7828:1: rule__AbstractRef__DefineAssignment_0 : ( ( RULE_ID ) ) ;
     public final void rule__AbstractRef__DefineAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7786:1: ( ( ( RULE_ID ) ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7787:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7832:1: ( ( ( RULE_ID ) ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7833:1: ( ( RULE_ID ) )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7787:1: ( ( RULE_ID ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7788:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7833:1: ( ( RULE_ID ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7834:1: ( RULE_ID )
             {
              before(grammarAccess.getAbstractRefAccess().getDefineDefinesCrossReference_0_0()); 
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7789:1: ( RULE_ID )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7790:1: RULE_ID
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7835:1: ( RULE_ID )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7836:1: RULE_ID
             {
              before(grammarAccess.getAbstractRefAccess().getDefineDefinesIDTerminalRuleCall_0_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__AbstractRef__DefineAssignment_015664); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__AbstractRef__DefineAssignment_015758); 
              after(grammarAccess.getAbstractRefAccess().getDefineDefinesIDTerminalRuleCall_0_0_1()); 
 
             }
@@ -20499,20 +20613,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AbstractRef__ArgsAssignment_1_1_1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7801:1: rule__AbstractRef__ArgsAssignment_1_1_1 : ( ruleExpression ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7847:1: rule__AbstractRef__ArgsAssignment_1_1_1 : ( ruleExpression ) ;
     public final void rule__AbstractRef__ArgsAssignment_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7805:1: ( ( ruleExpression ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7806:1: ( ruleExpression )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7851:1: ( ( ruleExpression ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7852:1: ( ruleExpression )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7806:1: ( ruleExpression )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7807:1: ruleExpression
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7852:1: ( ruleExpression )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7853:1: ruleExpression
             {
              before(grammarAccess.getAbstractRefAccess().getArgsExpressionParserRuleCall_1_1_1_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__AbstractRef__ArgsAssignment_1_1_115699);
+            pushFollow(FOLLOW_ruleExpression_in_rule__AbstractRef__ArgsAssignment_1_1_115793);
             ruleExpression();
             _fsp--;
 
@@ -20539,20 +20653,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__AbstractRef__ArgsAssignment_1_1_2_1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7816:1: rule__AbstractRef__ArgsAssignment_1_1_2_1 : ( ruleExpression ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7862:1: rule__AbstractRef__ArgsAssignment_1_1_2_1 : ( ruleExpression ) ;
     public final void rule__AbstractRef__ArgsAssignment_1_1_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7820:1: ( ( ruleExpression ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7821:1: ( ruleExpression )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7866:1: ( ( ruleExpression ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7867:1: ( ruleExpression )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7821:1: ( ruleExpression )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7822:1: ruleExpression
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7867:1: ( ruleExpression )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7868:1: ruleExpression
             {
              before(grammarAccess.getAbstractRefAccess().getArgsExpressionParserRuleCall_1_1_2_1_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__AbstractRef__ArgsAssignment_1_1_2_115730);
+            pushFollow(FOLLOW_ruleExpression_in_rule__AbstractRef__ArgsAssignment_1_1_2_115824);
             ruleExpression();
             _fsp--;
 
@@ -20579,20 +20693,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__TerminalExpression__ValueAssignment_0_1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7831:1: rule__TerminalExpression__ValueAssignment_0_1 : ( RULE_INT ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7877:1: rule__TerminalExpression__ValueAssignment_0_1 : ( RULE_INT ) ;
     public final void rule__TerminalExpression__ValueAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7835:1: ( ( RULE_INT ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7836:1: ( RULE_INT )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7881:1: ( ( RULE_INT ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7882:1: ( RULE_INT )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7836:1: ( RULE_INT )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7837:1: RULE_INT
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7882:1: ( RULE_INT )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7883:1: RULE_INT
             {
              before(grammarAccess.getTerminalExpressionAccess().getValueINTTerminalRuleCall_0_1_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__TerminalExpression__ValueAssignment_0_115761); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__TerminalExpression__ValueAssignment_0_115855); 
              after(grammarAccess.getTerminalExpressionAccess().getValueINTTerminalRuleCall_0_1_0()); 
 
             }
@@ -20616,20 +20730,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__TerminalExpression__ValueAssignment_1_1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7846:1: rule__TerminalExpression__ValueAssignment_1_1 : ( RULE_STRING ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7892:1: rule__TerminalExpression__ValueAssignment_1_1 : ( RULE_STRING ) ;
     public final void rule__TerminalExpression__ValueAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7850:1: ( ( RULE_STRING ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7851:1: ( RULE_STRING )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7896:1: ( ( RULE_STRING ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7897:1: ( RULE_STRING )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7851:1: ( RULE_STRING )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7852:1: RULE_STRING
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7897:1: ( RULE_STRING )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7898:1: RULE_STRING
             {
              before(grammarAccess.getTerminalExpressionAccess().getValueSTRINGTerminalRuleCall_1_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TerminalExpression__ValueAssignment_1_115792); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TerminalExpression__ValueAssignment_1_115886); 
              after(grammarAccess.getTerminalExpressionAccess().getValueSTRINGTerminalRuleCall_1_1_0()); 
 
             }
@@ -20653,20 +20767,20 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start rule__TerminalExpression__ValueAssignment_2_1
-    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7861:1: rule__TerminalExpression__ValueAssignment_2_1 : ( RULE_BOOLEAN ) ;
+    // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7907:1: rule__TerminalExpression__ValueAssignment_2_1 : ( RULE_BOOLEAN ) ;
     public final void rule__TerminalExpression__ValueAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7865:1: ( ( RULE_BOOLEAN ) )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7866:1: ( RULE_BOOLEAN )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7911:1: ( ( RULE_BOOLEAN ) )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7912:1: ( RULE_BOOLEAN )
             {
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7866:1: ( RULE_BOOLEAN )
-            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7867:1: RULE_BOOLEAN
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7912:1: ( RULE_BOOLEAN )
+            // ../event.ui/src-gen/uk/ac/open/event/ui/contentassist/antlr/internal/InternalEventCalculus.g:7913:1: RULE_BOOLEAN
             {
              before(grammarAccess.getTerminalExpressionAccess().getValueBOOLEANTerminalRuleCall_2_1_0()); 
-            match(input,RULE_BOOLEAN,FOLLOW_RULE_BOOLEAN_in_rule__TerminalExpression__ValueAssignment_2_115823); 
+            match(input,RULE_BOOLEAN,FOLLOW_RULE_BOOLEAN_in_rule__TerminalExpression__ValueAssignment_2_115917); 
              after(grammarAccess.getTerminalExpressionAccess().getValueBOOLEANTerminalRuleCall_2_1_0()); 
 
             }
@@ -20691,6 +20805,7 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
 
     protected DFA1 dfa1 = new DFA1(this);
     protected DFA3 dfa3 = new DFA3(this);
+    protected DFA5 dfa5 = new DFA5(this);
     static final String DFA1_eotS =
         "\11\uffff";
     static final String DFA1_eofS =
@@ -20823,6 +20938,69 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
         }
         public String getDescription() {
             return "1035:1: rule__Declaration__Alternatives : ( ( ruleDefSort ) | ( ruleDefRange ) | ( ruleDefOption ) | ( ruleDefCompletion ) | ( ruleDefNonInertia ) | ( ruleDefXor ) | ( ruleDefMutex ) );";
+        }
+    }
+    static final String DFA5_eotS =
+        "\12\uffff";
+    static final String DFA5_eofS =
+        "\12\uffff";
+    static final String DFA5_minS =
+        "\1\4\1\23\1\5\1\uffff\1\15\1\uffff\4\4";
+    static final String DFA5_maxS =
+        "\1\60\1\23\1\63\1\uffff\1\16\1\uffff\2\64\1\63\1\60";
+    static final String DFA5_acceptS =
+        "\3\uffff\1\2\1\uffff\1\1\4\uffff";
+    static final String DFA5_specialS =
+        "\12\uffff}>";
+    static final String[] DFA5_transitionS = {
+            "\1\3\1\2\2\3\4\uffff\1\3\2\uffff\2\3\1\uffff\1\1\13\uffff\1"+
+            "\3\1\uffff\1\3\1\uffff\1\3\15\uffff\1\3",
+            "\1\4",
+            "\1\5\27\uffff\2\3\5\uffff\20\3",
+            "",
+            "\1\6\1\7",
+            "",
+            "\1\10\1\2\2\3\4\uffff\1\3\2\uffff\2\3\1\uffff\1\1\13\uffff\1"+
+            "\3\1\uffff\1\3\1\uffff\1\3\15\uffff\1\3\3\uffff\1\11",
+            "\1\10\1\2\2\3\4\uffff\1\3\2\uffff\2\3\1\uffff\1\1\13\uffff\1"+
+            "\3\1\uffff\1\3\1\uffff\1\3\15\uffff\1\3\3\uffff\1\11",
+            "\1\3\1\2\2\3\4\uffff\1\3\2\uffff\2\3\1\uffff\1\1\12\uffff\2"+
+            "\3\1\uffff\1\3\1\uffff\1\3\1\uffff\20\3",
+            "\1\3\1\2\2\3\4\uffff\1\3\2\uffff\2\3\1\uffff\1\1\13\uffff\1"+
+            "\3\1\uffff\1\3\1\uffff\1\3\15\uffff\1\3"
+    };
+
+    static final short[] DFA5_eot = DFA.unpackEncodedString(DFA5_eotS);
+    static final short[] DFA5_eof = DFA.unpackEncodedString(DFA5_eofS);
+    static final char[] DFA5_min = DFA.unpackEncodedStringToUnsignedChars(DFA5_minS);
+    static final char[] DFA5_max = DFA.unpackEncodedStringToUnsignedChars(DFA5_maxS);
+    static final short[] DFA5_accept = DFA.unpackEncodedString(DFA5_acceptS);
+    static final short[] DFA5_special = DFA.unpackEncodedString(DFA5_specialS);
+    static final short[][] DFA5_transition;
+
+    static {
+        int numStates = DFA5_transitionS.length;
+        DFA5_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA5_transition[i] = DFA.unpackEncodedString(DFA5_transitionS[i]);
+        }
+    }
+
+    class DFA5 extends DFA {
+
+        public DFA5(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 5;
+            this.eot = DFA5_eot;
+            this.eof = DFA5_eof;
+            this.min = DFA5_min;
+            this.max = DFA5_max;
+            this.accept = DFA5_accept;
+            this.special = DFA5_special;
+            this.transition = DFA5_transition;
+        }
+        public String getDescription() {
+            return "1110:1: rule__Statement__Alternatives : ( ( ruleSortDefinition ) | ( ruleLabeledExpression ) );";
         }
     }
  
@@ -21118,346 +21296,350 @@ public class InternalEventCalculusParser extends AbstractInternalContentAssistPa
     public static final BitSet FOLLOW_21_in_rule__LabeledExpression__Group_1__1__Impl6477 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__SortDefinition__Group__0__Impl_in_rule__SortDefinition__Group__06512 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_rule__SortDefinition__Group__1_in_rule__SortDefinition__Group__06515 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SortDefinition__SortAssignment_0_in_rule__SortDefinition__Group__0__Impl6542 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SortDefinition__Group__1__Impl_in_rule__SortDefinition__Group__16572 = new BitSet(new long[]{0x0000000004000002L});
-    public static final BitSet FOLLOW_rule__SortDefinition__Group__2_in_rule__SortDefinition__Group__16575 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SortDefinition__DefinitionsAssignment_1_in_rule__SortDefinition__Group__1__Impl6602 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SortDefinition__Group__2__Impl_in_rule__SortDefinition__Group__26632 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SortDefinition__Group_2__0_in_rule__SortDefinition__Group__2__Impl6659 = new BitSet(new long[]{0x0000000004000002L});
-    public static final BitSet FOLLOW_rule__SortDefinition__Group_2__0__Impl_in_rule__SortDefinition__Group_2__06696 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__SortDefinition__Group_2__1_in_rule__SortDefinition__Group_2__06699 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__SortDefinition__Group_2__0__Impl6727 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SortDefinition__Group_2__1__Impl_in_rule__SortDefinition__Group_2__16758 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SortDefinition__DefinitionsAssignment_2_1_in_rule__SortDefinition__Group_2__1__Impl6785 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Definition__Group__0__Impl_in_rule__Definition__Group__06819 = new BitSet(new long[]{0x0000000040200002L});
-    public static final BitSet FOLLOW_rule__Definition__Group__1_in_rule__Definition__Group__06822 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Definition__NameAssignment_0_in_rule__Definition__Group__0__Impl6849 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Definition__Group__1__Impl_in_rule__Definition__Group__16879 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_rule__Definition__Group__2_in_rule__Definition__Group__16882 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Definition__Group_1__0_in_rule__Definition__Group__1__Impl6909 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Definition__Group__2__Impl_in_rule__Definition__Group__26940 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Definition__Group_2__0_in_rule__Definition__Group__2__Impl6967 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Definition__Group_1__0__Impl_in_rule__Definition__Group_1__07004 = new BitSet(new long[]{0x0000000084000020L});
-    public static final BitSet FOLLOW_rule__Definition__Group_1__1_in_rule__Definition__Group_1__07007 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__Definition__Group_1__0__Impl7035 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Definition__Group_1__1__Impl_in_rule__Definition__Group_1__17066 = new BitSet(new long[]{0x0000000084000000L});
-    public static final BitSet FOLLOW_rule__Definition__Group_1__2_in_rule__Definition__Group_1__17069 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Definition__ArgsAssignment_1_1_in_rule__Definition__Group_1__1__Impl7096 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Definition__Group_1__2__Impl_in_rule__Definition__Group_1__27127 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_rule__Definition__Group_1__3_in_rule__Definition__Group_1__27130 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Definition__Group_1_2__0_in_rule__Definition__Group_1__2__Impl7157 = new BitSet(new long[]{0x0000000004000002L});
-    public static final BitSet FOLLOW_rule__Definition__Group_1__3__Impl_in_rule__Definition__Group_1__37188 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rule__Definition__Group_1__3__Impl7216 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Definition__Group_1_2__0__Impl_in_rule__Definition__Group_1_2__07255 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Definition__Group_1_2__1_in_rule__Definition__Group_1_2__07258 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__Definition__Group_1_2__0__Impl7286 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Definition__Group_1_2__1__Impl_in_rule__Definition__Group_1_2__17317 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Definition__ArgsAssignment_1_2_1_in_rule__Definition__Group_1_2__1__Impl7344 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Definition__Group_2__0__Impl_in_rule__Definition__Group_2__07378 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Definition__Group_2__1_in_rule__Definition__Group_2__07381 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__Definition__Group_2__0__Impl7409 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Definition__Group_2__1__Impl_in_rule__Definition__Group_2__17440 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Definition__ReturnAssignment_2_1_in_rule__Definition__Group_2__1__Impl7467 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__Group_1__0__Impl_in_rule__Expression__Group_1__07501 = new BitSet(new long[]{0x00010005400010F0L});
-    public static final BitSet FOLLOW_rule__Expression__Group_1__1_in_rule__Expression__Group_1__07504 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__QualifiersAssignment_1_0_in_rule__Expression__Group_1__0__Impl7531 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__Group_1__1__Impl_in_rule__Expression__Group_1__17561 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__ExprAssignment_1_1_in_rule__Expression__Group_1__1__Impl7588 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Parameters__Group__0__Impl_in_rule__Parameters__Group__07622 = new BitSet(new long[]{0x0000000004000002L});
-    public static final BitSet FOLLOW_rule__Parameters__Group__1_in_rule__Parameters__Group__07625 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Parameters__NamesAssignment_0_in_rule__Parameters__Group__0__Impl7652 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Parameters__Group__1__Impl_in_rule__Parameters__Group__17682 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Parameters__Group_1__0_in_rule__Parameters__Group__1__Impl7709 = new BitSet(new long[]{0x0000000004000002L});
-    public static final BitSet FOLLOW_rule__Parameters__Group_1__0__Impl_in_rule__Parameters__Group_1__07744 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Parameters__Group_1__1_in_rule__Parameters__Group_1__07747 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__Parameters__Group_1__0__Impl7775 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Parameters__Group_1__1__Impl_in_rule__Parameters__Group_1__17806 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Parameters__NamesAssignment_1_1_in_rule__Parameters__Group_1__1__Impl7833 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Exists__Group__0__Impl_in_rule__Exists__Group__07867 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__Exists__Group__1_in_rule__Exists__Group__07870 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Exists__OpAssignment_0_in_rule__Exists__Group__0__Impl7897 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Exists__Group__1__Impl_in_rule__Exists__Group__17928 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Exists__Group__2_in_rule__Exists__Group__17931 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__Exists__Group__1__Impl7959 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Exists__Group__2__Impl_in_rule__Exists__Group__27990 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_rule__Exists__Group__3_in_rule__Exists__Group__27993 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Exists__ParametersAssignment_2_in_rule__Exists__Group__2__Impl8020 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Exists__Group__3__Impl_in_rule__Exists__Group__38050 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__Exists__Group__3__Impl8078 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Forall__Group__0__Impl_in_rule__Forall__Group__08117 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_rule__Forall__Group__1_in_rule__Forall__Group__08120 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Forall__OpAssignment_0_in_rule__Forall__Group__0__Impl8147 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Forall__Group__1__Impl_in_rule__Forall__Group__18178 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Forall__Group__2_in_rule__Forall__Group__18181 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__Forall__Group__1__Impl8209 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Forall__Group__2__Impl_in_rule__Forall__Group__28240 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_rule__Forall__Group__3_in_rule__Forall__Group__28243 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Forall__ParametersAssignment_2_in_rule__Forall__Group__2__Impl8270 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Forall__Group__3__Impl_in_rule__Forall__Group__38300 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__Forall__Group__3__Impl8328 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AssignmentOp__Group__0__Impl_in_rule__AssignmentOp__Group__08367 = new BitSet(new long[]{0x0000003000000002L});
-    public static final BitSet FOLLOW_rule__AssignmentOp__Group__1_in_rule__AssignmentOp__Group__08370 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOrExp_in_rule__AssignmentOp__Group__0__Impl8397 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AssignmentOp__Group__1__Impl_in_rule__AssignmentOp__Group__18426 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AssignmentOp__Group_1__0_in_rule__AssignmentOp__Group__1__Impl8453 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AssignmentOp__Group_1__0__Impl_in_rule__AssignmentOp__Group_1__08488 = new BitSet(new long[]{0x00010005400010F0L});
-    public static final BitSet FOLLOW_rule__AssignmentOp__Group_1__1_in_rule__AssignmentOp__Group_1__08491 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AssignmentOp__Alternatives_1_0_in_rule__AssignmentOp__Group_1__0__Impl8518 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AssignmentOp__Group_1__1__Impl_in_rule__AssignmentOp__Group_1__18548 = new BitSet(new long[]{0x00010000400010F0L});
-    public static final BitSet FOLLOW_rule__AssignmentOp__Group_1__2_in_rule__AssignmentOp__Group_1__18551 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AssignmentOp__QAssignment_1_1_in_rule__AssignmentOp__Group_1__1__Impl8578 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AssignmentOp__Group_1__2__Impl_in_rule__AssignmentOp__Group_1__28609 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AssignmentOp__RightAssignment_1_2_in_rule__AssignmentOp__Group_1__2__Impl8636 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AssignmentOp__Group_1_0_0__0__Impl_in_rule__AssignmentOp__Group_1_0_0__08672 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_rule__AssignmentOp__Group_1_0_0__1_in_rule__AssignmentOp__Group_1_0_0__08675 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AssignmentOp__Group_1_0_0__1__Impl_in_rule__AssignmentOp__Group_1_0_0__18733 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__AssignmentOp__Group_1_0_0__1__Impl8761 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AssignmentOp__Group_1_0_1__0__Impl_in_rule__AssignmentOp__Group_1_0_1__08796 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_rule__AssignmentOp__Group_1_0_1__1_in_rule__AssignmentOp__Group_1_0_1__08799 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AssignmentOp__Group_1_0_1__1__Impl_in_rule__AssignmentOp__Group_1_0_1__18857 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_rule__AssignmentOp__Group_1_0_1__1__Impl8885 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OrExp__Group__0__Impl_in_rule__OrExp__Group__08920 = new BitSet(new long[]{0x0000004000000002L});
-    public static final BitSet FOLLOW_rule__OrExp__Group__1_in_rule__OrExp__Group__08923 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAndExp_in_rule__OrExp__Group__0__Impl8950 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OrExp__Group__1__Impl_in_rule__OrExp__Group__18979 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OrExp__Group_1__0_in_rule__OrExp__Group__1__Impl9006 = new BitSet(new long[]{0x0000004000000002L});
-    public static final BitSet FOLLOW_rule__OrExp__Group_1__0__Impl_in_rule__OrExp__Group_1__09041 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_rule__OrExp__Group_1__1_in_rule__OrExp__Group_1__09044 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OrExp__Group_1__1__Impl_in_rule__OrExp__Group_1__19102 = new BitSet(new long[]{0x00010005400010F0L});
-    public static final BitSet FOLLOW_rule__OrExp__Group_1__2_in_rule__OrExp__Group_1__19105 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_rule__OrExp__Group_1__1__Impl9133 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OrExp__Group_1__2__Impl_in_rule__OrExp__Group_1__29164 = new BitSet(new long[]{0x00010000400010F0L});
-    public static final BitSet FOLLOW_rule__OrExp__Group_1__3_in_rule__OrExp__Group_1__29167 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OrExp__QAssignment_1_2_in_rule__OrExp__Group_1__2__Impl9194 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OrExp__Group_1__3__Impl_in_rule__OrExp__Group_1__39225 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OrExp__RightAssignment_1_3_in_rule__OrExp__Group_1__3__Impl9252 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AndExp__Group__0__Impl_in_rule__AndExp__Group__09290 = new BitSet(new long[]{0x0000008000000002L});
-    public static final BitSet FOLLOW_rule__AndExp__Group__1_in_rule__AndExp__Group__09293 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRelational_in_rule__AndExp__Group__0__Impl9320 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AndExp__Group__1__Impl_in_rule__AndExp__Group__19349 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AndExp__Group_1__0_in_rule__AndExp__Group__1__Impl9376 = new BitSet(new long[]{0x0000008000000002L});
-    public static final BitSet FOLLOW_rule__AndExp__Group_1__0__Impl_in_rule__AndExp__Group_1__09411 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_rule__AndExp__Group_1__1_in_rule__AndExp__Group_1__09414 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AndExp__Group_1__1__Impl_in_rule__AndExp__Group_1__19472 = new BitSet(new long[]{0x00010005400010F0L});
-    public static final BitSet FOLLOW_rule__AndExp__Group_1__2_in_rule__AndExp__Group_1__19475 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_rule__AndExp__Group_1__1__Impl9503 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AndExp__Group_1__2__Impl_in_rule__AndExp__Group_1__29534 = new BitSet(new long[]{0x00010000400010F0L});
-    public static final BitSet FOLLOW_rule__AndExp__Group_1__3_in_rule__AndExp__Group_1__29537 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AndExp__QAssignment_1_2_in_rule__AndExp__Group_1__2__Impl9564 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AndExp__Group_1__3__Impl_in_rule__AndExp__Group_1__39595 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AndExp__RightAssignment_1_3_in_rule__AndExp__Group_1__3__Impl9622 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relational__Group__0__Impl_in_rule__Relational__Group__09660 = new BitSet(new long[]{0x00007F0000000002L});
-    public static final BitSet FOLLOW_rule__Relational__Group__1_in_rule__Relational__Group__09663 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAddition_in_rule__Relational__Group__0__Impl9690 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relational__Group__1__Impl_in_rule__Relational__Group__19719 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relational__Group_1__0_in_rule__Relational__Group__1__Impl9746 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relational__Group_1__0__Impl_in_rule__Relational__Group_1__09781 = new BitSet(new long[]{0x00010000400010F0L});
-    public static final BitSet FOLLOW_rule__Relational__Group_1__1_in_rule__Relational__Group_1__09784 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relational__Alternatives_1_0_in_rule__Relational__Group_1__0__Impl9811 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relational__Group_1__1__Impl_in_rule__Relational__Group_1__19841 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relational__RightAssignment_1_1_in_rule__Relational__Group_1__1__Impl9868 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relational__Group_1_0_0__0__Impl_in_rule__Relational__Group_1_0_0__09902 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_rule__Relational__Group_1_0_0__1_in_rule__Relational__Group_1_0_0__09905 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relational__Group_1_0_0__1__Impl_in_rule__Relational__Group_1_0_0__19963 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_rule__Relational__Group_1_0_0__1__Impl9991 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relational__Group_1_0_1__0__Impl_in_rule__Relational__Group_1_0_1__010026 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_rule__Relational__Group_1_0_1__1_in_rule__Relational__Group_1_0_1__010029 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relational__Group_1_0_1__1__Impl_in_rule__Relational__Group_1_0_1__110087 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__Relational__Group_1_0_1__1__Impl10115 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relational__Group_1_0_2__0__Impl_in_rule__Relational__Group_1_0_2__010150 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_rule__Relational__Group_1_0_2__1_in_rule__Relational__Group_1_0_2__010153 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relational__Group_1_0_2__1__Impl_in_rule__Relational__Group_1_0_2__110211 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_rule__Relational__Group_1_0_2__1__Impl10239 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relational__Group_1_0_3__0__Impl_in_rule__Relational__Group_1_0_3__010274 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_rule__Relational__Group_1_0_3__1_in_rule__Relational__Group_1_0_3__010277 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relational__Group_1_0_3__1__Impl_in_rule__Relational__Group_1_0_3__110335 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_rule__Relational__Group_1_0_3__1__Impl10363 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relational__Group_1_0_4__0__Impl_in_rule__Relational__Group_1_0_4__010398 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_rule__Relational__Group_1_0_4__1_in_rule__Relational__Group_1_0_4__010401 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relational__Group_1_0_4__1__Impl_in_rule__Relational__Group_1_0_4__110459 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_rule__Relational__Group_1_0_4__1__Impl10487 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relational__Group_1_0_5__0__Impl_in_rule__Relational__Group_1_0_5__010522 = new BitSet(new long[]{0x0000200000000000L});
-    public static final BitSet FOLLOW_rule__Relational__Group_1_0_5__1_in_rule__Relational__Group_1_0_5__010525 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relational__Group_1_0_5__1__Impl_in_rule__Relational__Group_1_0_5__110583 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_45_in_rule__Relational__Group_1_0_5__1__Impl10611 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relational__Group_1_0_6__0__Impl_in_rule__Relational__Group_1_0_6__010646 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_rule__Relational__Group_1_0_6__1_in_rule__Relational__Group_1_0_6__010649 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relational__Group_1_0_6__1__Impl_in_rule__Relational__Group_1_0_6__110707 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_46_in_rule__Relational__Group_1_0_6__1__Impl10735 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Addition__Group__0__Impl_in_rule__Addition__Group__010770 = new BitSet(new long[]{0x0001800000000002L});
-    public static final BitSet FOLLOW_rule__Addition__Group__1_in_rule__Addition__Group__010773 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMultiplication_in_rule__Addition__Group__0__Impl10800 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Addition__Group__1__Impl_in_rule__Addition__Group__110829 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Addition__Group_1__0_in_rule__Addition__Group__1__Impl10856 = new BitSet(new long[]{0x0001800000000002L});
-    public static final BitSet FOLLOW_rule__Addition__Group_1__0__Impl_in_rule__Addition__Group_1__010891 = new BitSet(new long[]{0x00010000400010F0L});
-    public static final BitSet FOLLOW_rule__Addition__Group_1__1_in_rule__Addition__Group_1__010894 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Addition__Alternatives_1_0_in_rule__Addition__Group_1__0__Impl10921 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Addition__Group_1__1__Impl_in_rule__Addition__Group_1__110951 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Addition__RightAssignment_1_1_in_rule__Addition__Group_1__1__Impl10978 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Addition__Group_1_0_0__0__Impl_in_rule__Addition__Group_1_0_0__011012 = new BitSet(new long[]{0x0000800000000000L});
-    public static final BitSet FOLLOW_rule__Addition__Group_1_0_0__1_in_rule__Addition__Group_1_0_0__011015 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Addition__Group_1_0_0__1__Impl_in_rule__Addition__Group_1_0_0__111073 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_rule__Addition__Group_1_0_0__1__Impl11101 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Addition__Group_1_0_1__0__Impl_in_rule__Addition__Group_1_0_1__011136 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_rule__Addition__Group_1_0_1__1_in_rule__Addition__Group_1_0_1__011139 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Addition__Group_1_0_1__1__Impl_in_rule__Addition__Group_1_0_1__111197 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_rule__Addition__Group_1_0_1__1__Impl11225 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Multiplication__Group__0__Impl_in_rule__Multiplication__Group__011260 = new BitSet(new long[]{0x0006000000000002L});
-    public static final BitSet FOLLOW_rule__Multiplication__Group__1_in_rule__Multiplication__Group__011263 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePower_in_rule__Multiplication__Group__0__Impl11290 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Multiplication__Group__1__Impl_in_rule__Multiplication__Group__111319 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Multiplication__Group_1__0_in_rule__Multiplication__Group__1__Impl11346 = new BitSet(new long[]{0x0006000000000002L});
-    public static final BitSet FOLLOW_rule__Multiplication__Group_1__0__Impl_in_rule__Multiplication__Group_1__011381 = new BitSet(new long[]{0x00010000400010F0L});
-    public static final BitSet FOLLOW_rule__Multiplication__Group_1__1_in_rule__Multiplication__Group_1__011384 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Multiplication__Alternatives_1_0_in_rule__Multiplication__Group_1__0__Impl11411 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Multiplication__Group_1__1__Impl_in_rule__Multiplication__Group_1__111441 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Multiplication__RightAssignment_1_1_in_rule__Multiplication__Group_1__1__Impl11468 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Multiplication__Group_1_0_0__0__Impl_in_rule__Multiplication__Group_1_0_0__011502 = new BitSet(new long[]{0x0002000000000000L});
-    public static final BitSet FOLLOW_rule__Multiplication__Group_1_0_0__1_in_rule__Multiplication__Group_1_0_0__011505 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Multiplication__Group_1_0_0__1__Impl_in_rule__Multiplication__Group_1_0_0__111563 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_rule__Multiplication__Group_1_0_0__1__Impl11591 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Multiplication__Group_1_0_1__0__Impl_in_rule__Multiplication__Group_1_0_1__011626 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_rule__Multiplication__Group_1_0_1__1_in_rule__Multiplication__Group_1_0_1__011629 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Multiplication__Group_1_0_1__1__Impl_in_rule__Multiplication__Group_1_0_1__111687 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_50_in_rule__Multiplication__Group_1_0_1__1__Impl11715 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Power__Group__0__Impl_in_rule__Power__Group__011750 = new BitSet(new long[]{0x0008000000000002L});
-    public static final BitSet FOLLOW_rule__Power__Group__1_in_rule__Power__Group__011753 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUnaryExpr_in_rule__Power__Group__0__Impl11780 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Power__Group__1__Impl_in_rule__Power__Group__111809 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Power__Group_1__0_in_rule__Power__Group__1__Impl11836 = new BitSet(new long[]{0x0008000000000002L});
-    public static final BitSet FOLLOW_rule__Power__Group_1__0__Impl_in_rule__Power__Group_1__011871 = new BitSet(new long[]{0x00010000400010F0L});
-    public static final BitSet FOLLOW_rule__Power__Group_1__1_in_rule__Power__Group_1__011874 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Power__Group_1_0__0_in_rule__Power__Group_1__0__Impl11901 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Power__Group_1__1__Impl_in_rule__Power__Group_1__111931 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Power__RightAssignment_1_1_in_rule__Power__Group_1__1__Impl11958 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Power__Group_1_0__0__Impl_in_rule__Power__Group_1_0__011992 = new BitSet(new long[]{0x0008000000000000L});
-    public static final BitSet FOLLOW_rule__Power__Group_1_0__1_in_rule__Power__Group_1_0__011995 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Power__Group_1_0__1__Impl_in_rule__Power__Group_1_0__112053 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_51_in_rule__Power__Group_1_0__1__Impl12081 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UnaryExpr__Group__0__Impl_in_rule__UnaryExpr__Group__012116 = new BitSet(new long[]{0x00010000400000F0L});
-    public static final BitSet FOLLOW_rule__UnaryExpr__Group__1_in_rule__UnaryExpr__Group__012119 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UnaryExpr__OpAssignment_0_in_rule__UnaryExpr__Group__0__Impl12146 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UnaryExpr__Group__1__Impl_in_rule__UnaryExpr__Group__112177 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UnaryExpr__RightAssignment_1_in_rule__UnaryExpr__Group__1__Impl12204 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrePrimaryExpr__Group_2__0__Impl_in_rule__PrePrimaryExpr__Group_2__012238 = new BitSet(new long[]{0x00010005400010F0L});
-    public static final BitSet FOLLOW_rule__PrePrimaryExpr__Group_2__1_in_rule__PrePrimaryExpr__Group_2__012241 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__PrePrimaryExpr__Group_2__0__Impl12269 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrePrimaryExpr__Group_2__1__Impl_in_rule__PrePrimaryExpr__Group_2__112300 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_rule__PrePrimaryExpr__Group_2__2_in_rule__PrePrimaryExpr__Group_2__112303 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__PrePrimaryExpr__Group_2__1__Impl12330 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrePrimaryExpr__Group_2__2__Impl_in_rule__PrePrimaryExpr__Group_2__212359 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rule__PrePrimaryExpr__Group_2__2__Impl12387 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrePrimaryExpr__Group_3__0__Impl_in_rule__PrePrimaryExpr__Group_3__012424 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__PrePrimaryExpr__Group_3__1_in_rule__PrePrimaryExpr__Group_3__012427 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_rule__PrePrimaryExpr__Group_3__0__Impl12455 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrePrimaryExpr__Group_3__1__Impl_in_rule__PrePrimaryExpr__Group_3__112486 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrePrimaryExpr__NAssignment_3_1_in_rule__PrePrimaryExpr__Group_3__1__Impl12513 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AbstractRef__Group__0__Impl_in_rule__AbstractRef__Group__012547 = new BitSet(new long[]{0x0000000040000002L});
-    public static final BitSet FOLLOW_rule__AbstractRef__Group__1_in_rule__AbstractRef__Group__012550 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AbstractRef__DefineAssignment_0_in_rule__AbstractRef__Group__0__Impl12577 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AbstractRef__Group__1__Impl_in_rule__AbstractRef__Group__112607 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AbstractRef__Group_1__0_in_rule__AbstractRef__Group__1__Impl12634 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AbstractRef__Group_1__0__Impl_in_rule__AbstractRef__Group_1__012669 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_rule__AbstractRef__Group_1__1_in_rule__AbstractRef__Group_1__012672 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AbstractRef__Group_1__1__Impl_in_rule__AbstractRef__Group_1__112730 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AbstractRef__Group_1_1__0_in_rule__AbstractRef__Group_1__1__Impl12757 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AbstractRef__Group_1_1__0__Impl_in_rule__AbstractRef__Group_1_1__012791 = new BitSet(new long[]{0x00010005C40010F0L});
-    public static final BitSet FOLLOW_rule__AbstractRef__Group_1_1__1_in_rule__AbstractRef__Group_1_1__012794 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__AbstractRef__Group_1_1__0__Impl12822 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AbstractRef__Group_1_1__1__Impl_in_rule__AbstractRef__Group_1_1__112853 = new BitSet(new long[]{0x0000000084000000L});
-    public static final BitSet FOLLOW_rule__AbstractRef__Group_1_1__2_in_rule__AbstractRef__Group_1_1__112856 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AbstractRef__ArgsAssignment_1_1_1_in_rule__AbstractRef__Group_1_1__1__Impl12883 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AbstractRef__Group_1_1__2__Impl_in_rule__AbstractRef__Group_1_1__212914 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_rule__AbstractRef__Group_1_1__3_in_rule__AbstractRef__Group_1_1__212917 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AbstractRef__Group_1_1_2__0_in_rule__AbstractRef__Group_1_1__2__Impl12944 = new BitSet(new long[]{0x0000000004000002L});
-    public static final BitSet FOLLOW_rule__AbstractRef__Group_1_1__3__Impl_in_rule__AbstractRef__Group_1_1__312975 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rule__AbstractRef__Group_1_1__3__Impl13003 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AbstractRef__Group_1_1_2__0__Impl_in_rule__AbstractRef__Group_1_1_2__013042 = new BitSet(new long[]{0x00010005400010F0L});
-    public static final BitSet FOLLOW_rule__AbstractRef__Group_1_1_2__1_in_rule__AbstractRef__Group_1_1_2__013045 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__AbstractRef__Group_1_1_2__0__Impl13073 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AbstractRef__Group_1_1_2__1__Impl_in_rule__AbstractRef__Group_1_1_2__113104 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AbstractRef__ArgsAssignment_1_1_2_1_in_rule__AbstractRef__Group_1_1_2__1__Impl13131 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_0__0__Impl_in_rule__TerminalExpression__Group_0__013165 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_0__1_in_rule__TerminalExpression__Group_0__013168 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_0__1__Impl_in_rule__TerminalExpression__Group_0__113226 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__ValueAssignment_0_1_in_rule__TerminalExpression__Group_0__1__Impl13253 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_1__0__Impl_in_rule__TerminalExpression__Group_1__013287 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_1__1_in_rule__TerminalExpression__Group_1__013290 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_1__1__Impl_in_rule__TerminalExpression__Group_1__113348 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__ValueAssignment_1_1_in_rule__TerminalExpression__Group_1__1__Impl13375 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_2__0__Impl_in_rule__TerminalExpression__Group_2__013409 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_2__1_in_rule__TerminalExpression__Group_2__013412 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_2__1__Impl_in_rule__TerminalExpression__Group_2__113470 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__ValueAssignment_2_1_in_rule__TerminalExpression__Group_2__1__Impl13497 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleImport_in_rule__Model__ImportsAssignment_013538 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDeclaration_in_rule__Model__DeclarationsAssignment_1_013569 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStatement_in_rule__Model__StatementsAssignment_1_113600 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Import__ImportURIAssignment_113631 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleANNOTATION_TYPE_in_rule__Annotation__TypeAssignment_213662 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Annotation__ValueAssignment_3_013693 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_rule__Annotation__ValueAssignment_3_113729 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnnotation_in_rule__DefSort__AnnotationsAssignment_013768 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_53_in_rule__DefSort__ReifiedAssignment_113804 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__DefSort__NameAssignment_313843 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__DefSort__TypeAssignment_4_113874 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnnotation_in_rule__DefRange__AnnotationsAssignment_013905 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__DefRange__NameAssignment_213940 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__DefRange__MinAssignment_313975 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__DefRange__MaxAssignment_414006 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnnotation_in_rule__DefOption__AnnotationsAssignment_014037 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__DefOption__NameAssignment_1_0_114068 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__DefOption__ValueAssignment_1_0_214099 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__DefOption__NameAssignment_1_1_114130 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__DefOption__Value2Assignment_1_1_214161 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnnotation_in_rule__DefCompletion__AnnotationsAssignment_014192 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLabelType_in_rule__DefCompletion__TypeAssignment_214223 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__DefCompletion__LabelAssignment_314258 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnnotation_in_rule__DefNonInertia__AnnotationsAssignment_014293 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__DefNonInertia__NamesAssignment_214328 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__DefNonInertia__NamesAssignment_3_114367 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnnotation_in_rule__DefXor__AnnotationsAssignment_014402 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__DefXor__NamesAssignment_214437 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__DefXor__NamesAssignment_3_114476 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnnotation_in_rule__DefMutex__AnnotationsAssignment_014511 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__DefMutex__NamesAssignment_214546 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__DefMutex__NamesAssignment_3_114585 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnnotation_in_rule__LabeledExpression__AnnotationsAssignment_014620 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLabelType_in_rule__LabeledExpression__NameAssignment_1_014651 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__LabeledExpression__ExprAssignment_214682 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SortDefinition__SortAssignment_014717 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDefinition_in_rule__SortDefinition__DefinitionsAssignment_114752 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDefinition_in_rule__SortDefinition__DefinitionsAssignment_2_114783 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Definition__NameAssignment_014814 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Definition__ArgsAssignment_1_114849 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Definition__ArgsAssignment_1_2_114888 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Definition__ReturnAssignment_2_114927 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAssignmentOp_in_rule__Expression__ExprAssignment_014962 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifier_in_rule__Expression__QualifiersAssignment_1_014993 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__Expression__ExprAssignment_1_115024 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Parameters__NamesAssignment_015059 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Parameters__NamesAssignment_1_115098 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUnaryOp_in_rule__Exists__OpAssignment_015133 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParameters_in_rule__Exists__ParametersAssignment_215164 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUnaryOp_in_rule__Forall__OpAssignment_015195 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParameters_in_rule__Forall__ParametersAssignment_215226 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifier_in_rule__AssignmentOp__QAssignment_1_115257 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOrExp_in_rule__AssignmentOp__RightAssignment_1_215288 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifier_in_rule__OrExp__QAssignment_1_215319 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAndExp_in_rule__OrExp__RightAssignment_1_315350 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifier_in_rule__AndExp__QAssignment_1_215381 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRelational_in_rule__AndExp__RightAssignment_1_315412 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAddition_in_rule__Relational__RightAssignment_1_115443 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMultiplication_in_rule__Addition__RightAssignment_1_115474 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePower_in_rule__Multiplication__RightAssignment_1_115505 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUnaryExpr_in_rule__Power__RightAssignment_1_115536 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUnaryOp_in_rule__UnaryExpr__OpAssignment_015567 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrePrimaryExpr_in_rule__UnaryExpr__RightAssignment_115598 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__PrePrimaryExpr__NAssignment_3_115629 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__AbstractRef__DefineAssignment_015664 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__AbstractRef__ArgsAssignment_1_1_115699 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__AbstractRef__ArgsAssignment_1_1_2_115730 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__TerminalExpression__ValueAssignment_0_115761 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__TerminalExpression__ValueAssignment_1_115792 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_BOOLEAN_in_rule__TerminalExpression__ValueAssignment_2_115823 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SortDefinition__AnnotationsAssignment_0_in_rule__SortDefinition__Group__0__Impl6542 = new BitSet(new long[]{0x0000000000040002L});
+    public static final BitSet FOLLOW_rule__SortDefinition__Group__1__Impl_in_rule__SortDefinition__Group__16573 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__SortDefinition__Group__2_in_rule__SortDefinition__Group__16576 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SortDefinition__SortAssignment_1_in_rule__SortDefinition__Group__1__Impl6603 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SortDefinition__Group__2__Impl_in_rule__SortDefinition__Group__26633 = new BitSet(new long[]{0x0000000004000002L});
+    public static final BitSet FOLLOW_rule__SortDefinition__Group__3_in_rule__SortDefinition__Group__26636 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SortDefinition__DefinitionsAssignment_2_in_rule__SortDefinition__Group__2__Impl6663 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SortDefinition__Group__3__Impl_in_rule__SortDefinition__Group__36693 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SortDefinition__Group_3__0_in_rule__SortDefinition__Group__3__Impl6720 = new BitSet(new long[]{0x0000000004000002L});
+    public static final BitSet FOLLOW_rule__SortDefinition__Group_3__0__Impl_in_rule__SortDefinition__Group_3__06759 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__SortDefinition__Group_3__1_in_rule__SortDefinition__Group_3__06762 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__SortDefinition__Group_3__0__Impl6790 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SortDefinition__Group_3__1__Impl_in_rule__SortDefinition__Group_3__16821 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SortDefinition__DefinitionsAssignment_3_1_in_rule__SortDefinition__Group_3__1__Impl6848 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Definition__Group__0__Impl_in_rule__Definition__Group__06882 = new BitSet(new long[]{0x0000000040200002L});
+    public static final BitSet FOLLOW_rule__Definition__Group__1_in_rule__Definition__Group__06885 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Definition__NameAssignment_0_in_rule__Definition__Group__0__Impl6912 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Definition__Group__1__Impl_in_rule__Definition__Group__16942 = new BitSet(new long[]{0x0000000000200002L});
+    public static final BitSet FOLLOW_rule__Definition__Group__2_in_rule__Definition__Group__16945 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Definition__Group_1__0_in_rule__Definition__Group__1__Impl6972 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Definition__Group__2__Impl_in_rule__Definition__Group__27003 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Definition__Group_2__0_in_rule__Definition__Group__2__Impl7030 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Definition__Group_1__0__Impl_in_rule__Definition__Group_1__07067 = new BitSet(new long[]{0x0000000084000020L});
+    public static final BitSet FOLLOW_rule__Definition__Group_1__1_in_rule__Definition__Group_1__07070 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__Definition__Group_1__0__Impl7098 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Definition__Group_1__1__Impl_in_rule__Definition__Group_1__17129 = new BitSet(new long[]{0x0000000084000000L});
+    public static final BitSet FOLLOW_rule__Definition__Group_1__2_in_rule__Definition__Group_1__17132 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Definition__ArgsAssignment_1_1_in_rule__Definition__Group_1__1__Impl7159 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Definition__Group_1__2__Impl_in_rule__Definition__Group_1__27190 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_rule__Definition__Group_1__3_in_rule__Definition__Group_1__27193 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Definition__Group_1_2__0_in_rule__Definition__Group_1__2__Impl7220 = new BitSet(new long[]{0x0000000004000002L});
+    public static final BitSet FOLLOW_rule__Definition__Group_1__3__Impl_in_rule__Definition__Group_1__37251 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__Definition__Group_1__3__Impl7279 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Definition__Group_1_2__0__Impl_in_rule__Definition__Group_1_2__07318 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Definition__Group_1_2__1_in_rule__Definition__Group_1_2__07321 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__Definition__Group_1_2__0__Impl7349 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Definition__Group_1_2__1__Impl_in_rule__Definition__Group_1_2__17380 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Definition__ArgsAssignment_1_2_1_in_rule__Definition__Group_1_2__1__Impl7407 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Definition__Group_2__0__Impl_in_rule__Definition__Group_2__07441 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Definition__Group_2__1_in_rule__Definition__Group_2__07444 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__Definition__Group_2__0__Impl7472 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Definition__Group_2__1__Impl_in_rule__Definition__Group_2__17503 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Definition__ReturnAssignment_2_1_in_rule__Definition__Group_2__1__Impl7530 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__Group_1__0__Impl_in_rule__Expression__Group_1__07564 = new BitSet(new long[]{0x00010005400010F0L});
+    public static final BitSet FOLLOW_rule__Expression__Group_1__1_in_rule__Expression__Group_1__07567 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__QualifiersAssignment_1_0_in_rule__Expression__Group_1__0__Impl7594 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__Group_1__1__Impl_in_rule__Expression__Group_1__17624 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__ExprAssignment_1_1_in_rule__Expression__Group_1__1__Impl7651 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Parameters__Group__0__Impl_in_rule__Parameters__Group__07685 = new BitSet(new long[]{0x0000000004000002L});
+    public static final BitSet FOLLOW_rule__Parameters__Group__1_in_rule__Parameters__Group__07688 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Parameters__NamesAssignment_0_in_rule__Parameters__Group__0__Impl7715 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Parameters__Group__1__Impl_in_rule__Parameters__Group__17745 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Parameters__Group_1__0_in_rule__Parameters__Group__1__Impl7772 = new BitSet(new long[]{0x0000000004000002L});
+    public static final BitSet FOLLOW_rule__Parameters__Group_1__0__Impl_in_rule__Parameters__Group_1__07807 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Parameters__Group_1__1_in_rule__Parameters__Group_1__07810 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__Parameters__Group_1__0__Impl7838 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Parameters__Group_1__1__Impl_in_rule__Parameters__Group_1__17869 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Parameters__NamesAssignment_1_1_in_rule__Parameters__Group_1__1__Impl7896 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Exists__Group__0__Impl_in_rule__Exists__Group__07930 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_rule__Exists__Group__1_in_rule__Exists__Group__07933 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Exists__OpAssignment_0_in_rule__Exists__Group__0__Impl7960 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Exists__Group__1__Impl_in_rule__Exists__Group__17991 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Exists__Group__2_in_rule__Exists__Group__17994 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Exists__Group__1__Impl8022 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Exists__Group__2__Impl_in_rule__Exists__Group__28053 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_rule__Exists__Group__3_in_rule__Exists__Group__28056 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Exists__ParametersAssignment_2_in_rule__Exists__Group__2__Impl8083 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Exists__Group__3__Impl_in_rule__Exists__Group__38113 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__Exists__Group__3__Impl8141 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Forall__Group__0__Impl_in_rule__Forall__Group__08180 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_rule__Forall__Group__1_in_rule__Forall__Group__08183 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Forall__OpAssignment_0_in_rule__Forall__Group__0__Impl8210 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Forall__Group__1__Impl_in_rule__Forall__Group__18241 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Forall__Group__2_in_rule__Forall__Group__18244 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__Forall__Group__1__Impl8272 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Forall__Group__2__Impl_in_rule__Forall__Group__28303 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_rule__Forall__Group__3_in_rule__Forall__Group__28306 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Forall__ParametersAssignment_2_in_rule__Forall__Group__2__Impl8333 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Forall__Group__3__Impl_in_rule__Forall__Group__38363 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__Forall__Group__3__Impl8391 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AssignmentOp__Group__0__Impl_in_rule__AssignmentOp__Group__08430 = new BitSet(new long[]{0x0000003000000002L});
+    public static final BitSet FOLLOW_rule__AssignmentOp__Group__1_in_rule__AssignmentOp__Group__08433 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOrExp_in_rule__AssignmentOp__Group__0__Impl8460 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AssignmentOp__Group__1__Impl_in_rule__AssignmentOp__Group__18489 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AssignmentOp__Group_1__0_in_rule__AssignmentOp__Group__1__Impl8516 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AssignmentOp__Group_1__0__Impl_in_rule__AssignmentOp__Group_1__08551 = new BitSet(new long[]{0x00010005400010F0L});
+    public static final BitSet FOLLOW_rule__AssignmentOp__Group_1__1_in_rule__AssignmentOp__Group_1__08554 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AssignmentOp__Alternatives_1_0_in_rule__AssignmentOp__Group_1__0__Impl8581 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AssignmentOp__Group_1__1__Impl_in_rule__AssignmentOp__Group_1__18611 = new BitSet(new long[]{0x00010000400010F0L});
+    public static final BitSet FOLLOW_rule__AssignmentOp__Group_1__2_in_rule__AssignmentOp__Group_1__18614 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AssignmentOp__QAssignment_1_1_in_rule__AssignmentOp__Group_1__1__Impl8641 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AssignmentOp__Group_1__2__Impl_in_rule__AssignmentOp__Group_1__28672 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AssignmentOp__RightAssignment_1_2_in_rule__AssignmentOp__Group_1__2__Impl8699 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AssignmentOp__Group_1_0_0__0__Impl_in_rule__AssignmentOp__Group_1_0_0__08735 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_rule__AssignmentOp__Group_1_0_0__1_in_rule__AssignmentOp__Group_1_0_0__08738 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AssignmentOp__Group_1_0_0__1__Impl_in_rule__AssignmentOp__Group_1_0_0__18796 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__AssignmentOp__Group_1_0_0__1__Impl8824 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AssignmentOp__Group_1_0_1__0__Impl_in_rule__AssignmentOp__Group_1_0_1__08859 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_rule__AssignmentOp__Group_1_0_1__1_in_rule__AssignmentOp__Group_1_0_1__08862 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AssignmentOp__Group_1_0_1__1__Impl_in_rule__AssignmentOp__Group_1_0_1__18920 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_rule__AssignmentOp__Group_1_0_1__1__Impl8948 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OrExp__Group__0__Impl_in_rule__OrExp__Group__08983 = new BitSet(new long[]{0x0000004000000002L});
+    public static final BitSet FOLLOW_rule__OrExp__Group__1_in_rule__OrExp__Group__08986 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAndExp_in_rule__OrExp__Group__0__Impl9013 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OrExp__Group__1__Impl_in_rule__OrExp__Group__19042 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OrExp__Group_1__0_in_rule__OrExp__Group__1__Impl9069 = new BitSet(new long[]{0x0000004000000002L});
+    public static final BitSet FOLLOW_rule__OrExp__Group_1__0__Impl_in_rule__OrExp__Group_1__09104 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_rule__OrExp__Group_1__1_in_rule__OrExp__Group_1__09107 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OrExp__Group_1__1__Impl_in_rule__OrExp__Group_1__19165 = new BitSet(new long[]{0x00010005400010F0L});
+    public static final BitSet FOLLOW_rule__OrExp__Group_1__2_in_rule__OrExp__Group_1__19168 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_rule__OrExp__Group_1__1__Impl9196 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OrExp__Group_1__2__Impl_in_rule__OrExp__Group_1__29227 = new BitSet(new long[]{0x00010000400010F0L});
+    public static final BitSet FOLLOW_rule__OrExp__Group_1__3_in_rule__OrExp__Group_1__29230 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OrExp__QAssignment_1_2_in_rule__OrExp__Group_1__2__Impl9257 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OrExp__Group_1__3__Impl_in_rule__OrExp__Group_1__39288 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OrExp__RightAssignment_1_3_in_rule__OrExp__Group_1__3__Impl9315 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AndExp__Group__0__Impl_in_rule__AndExp__Group__09353 = new BitSet(new long[]{0x0000008000000002L});
+    public static final BitSet FOLLOW_rule__AndExp__Group__1_in_rule__AndExp__Group__09356 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRelational_in_rule__AndExp__Group__0__Impl9383 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AndExp__Group__1__Impl_in_rule__AndExp__Group__19412 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AndExp__Group_1__0_in_rule__AndExp__Group__1__Impl9439 = new BitSet(new long[]{0x0000008000000002L});
+    public static final BitSet FOLLOW_rule__AndExp__Group_1__0__Impl_in_rule__AndExp__Group_1__09474 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_rule__AndExp__Group_1__1_in_rule__AndExp__Group_1__09477 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AndExp__Group_1__1__Impl_in_rule__AndExp__Group_1__19535 = new BitSet(new long[]{0x00010005400010F0L});
+    public static final BitSet FOLLOW_rule__AndExp__Group_1__2_in_rule__AndExp__Group_1__19538 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_rule__AndExp__Group_1__1__Impl9566 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AndExp__Group_1__2__Impl_in_rule__AndExp__Group_1__29597 = new BitSet(new long[]{0x00010000400010F0L});
+    public static final BitSet FOLLOW_rule__AndExp__Group_1__3_in_rule__AndExp__Group_1__29600 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AndExp__QAssignment_1_2_in_rule__AndExp__Group_1__2__Impl9627 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AndExp__Group_1__3__Impl_in_rule__AndExp__Group_1__39658 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AndExp__RightAssignment_1_3_in_rule__AndExp__Group_1__3__Impl9685 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relational__Group__0__Impl_in_rule__Relational__Group__09723 = new BitSet(new long[]{0x00007F0000000002L});
+    public static final BitSet FOLLOW_rule__Relational__Group__1_in_rule__Relational__Group__09726 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAddition_in_rule__Relational__Group__0__Impl9753 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relational__Group__1__Impl_in_rule__Relational__Group__19782 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relational__Group_1__0_in_rule__Relational__Group__1__Impl9809 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relational__Group_1__0__Impl_in_rule__Relational__Group_1__09844 = new BitSet(new long[]{0x00010000400010F0L});
+    public static final BitSet FOLLOW_rule__Relational__Group_1__1_in_rule__Relational__Group_1__09847 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relational__Alternatives_1_0_in_rule__Relational__Group_1__0__Impl9874 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relational__Group_1__1__Impl_in_rule__Relational__Group_1__19904 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relational__RightAssignment_1_1_in_rule__Relational__Group_1__1__Impl9931 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relational__Group_1_0_0__0__Impl_in_rule__Relational__Group_1_0_0__09965 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_rule__Relational__Group_1_0_0__1_in_rule__Relational__Group_1_0_0__09968 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relational__Group_1_0_0__1__Impl_in_rule__Relational__Group_1_0_0__110026 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__Relational__Group_1_0_0__1__Impl10054 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relational__Group_1_0_1__0__Impl_in_rule__Relational__Group_1_0_1__010089 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_rule__Relational__Group_1_0_1__1_in_rule__Relational__Group_1_0_1__010092 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relational__Group_1_0_1__1__Impl_in_rule__Relational__Group_1_0_1__110150 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__Relational__Group_1_0_1__1__Impl10178 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relational__Group_1_0_2__0__Impl_in_rule__Relational__Group_1_0_2__010213 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_rule__Relational__Group_1_0_2__1_in_rule__Relational__Group_1_0_2__010216 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relational__Group_1_0_2__1__Impl_in_rule__Relational__Group_1_0_2__110274 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_rule__Relational__Group_1_0_2__1__Impl10302 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relational__Group_1_0_3__0__Impl_in_rule__Relational__Group_1_0_3__010337 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_rule__Relational__Group_1_0_3__1_in_rule__Relational__Group_1_0_3__010340 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relational__Group_1_0_3__1__Impl_in_rule__Relational__Group_1_0_3__110398 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_rule__Relational__Group_1_0_3__1__Impl10426 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relational__Group_1_0_4__0__Impl_in_rule__Relational__Group_1_0_4__010461 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_rule__Relational__Group_1_0_4__1_in_rule__Relational__Group_1_0_4__010464 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relational__Group_1_0_4__1__Impl_in_rule__Relational__Group_1_0_4__110522 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_rule__Relational__Group_1_0_4__1__Impl10550 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relational__Group_1_0_5__0__Impl_in_rule__Relational__Group_1_0_5__010585 = new BitSet(new long[]{0x0000200000000000L});
+    public static final BitSet FOLLOW_rule__Relational__Group_1_0_5__1_in_rule__Relational__Group_1_0_5__010588 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relational__Group_1_0_5__1__Impl_in_rule__Relational__Group_1_0_5__110646 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_45_in_rule__Relational__Group_1_0_5__1__Impl10674 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relational__Group_1_0_6__0__Impl_in_rule__Relational__Group_1_0_6__010709 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_rule__Relational__Group_1_0_6__1_in_rule__Relational__Group_1_0_6__010712 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relational__Group_1_0_6__1__Impl_in_rule__Relational__Group_1_0_6__110770 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_46_in_rule__Relational__Group_1_0_6__1__Impl10798 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Addition__Group__0__Impl_in_rule__Addition__Group__010833 = new BitSet(new long[]{0x0001800000000002L});
+    public static final BitSet FOLLOW_rule__Addition__Group__1_in_rule__Addition__Group__010836 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMultiplication_in_rule__Addition__Group__0__Impl10863 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Addition__Group__1__Impl_in_rule__Addition__Group__110892 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Addition__Group_1__0_in_rule__Addition__Group__1__Impl10919 = new BitSet(new long[]{0x0001800000000002L});
+    public static final BitSet FOLLOW_rule__Addition__Group_1__0__Impl_in_rule__Addition__Group_1__010954 = new BitSet(new long[]{0x00010000400010F0L});
+    public static final BitSet FOLLOW_rule__Addition__Group_1__1_in_rule__Addition__Group_1__010957 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Addition__Alternatives_1_0_in_rule__Addition__Group_1__0__Impl10984 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Addition__Group_1__1__Impl_in_rule__Addition__Group_1__111014 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Addition__RightAssignment_1_1_in_rule__Addition__Group_1__1__Impl11041 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Addition__Group_1_0_0__0__Impl_in_rule__Addition__Group_1_0_0__011075 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_rule__Addition__Group_1_0_0__1_in_rule__Addition__Group_1_0_0__011078 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Addition__Group_1_0_0__1__Impl_in_rule__Addition__Group_1_0_0__111136 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_rule__Addition__Group_1_0_0__1__Impl11164 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Addition__Group_1_0_1__0__Impl_in_rule__Addition__Group_1_0_1__011199 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_rule__Addition__Group_1_0_1__1_in_rule__Addition__Group_1_0_1__011202 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Addition__Group_1_0_1__1__Impl_in_rule__Addition__Group_1_0_1__111260 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_rule__Addition__Group_1_0_1__1__Impl11288 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Multiplication__Group__0__Impl_in_rule__Multiplication__Group__011323 = new BitSet(new long[]{0x0006000000000002L});
+    public static final BitSet FOLLOW_rule__Multiplication__Group__1_in_rule__Multiplication__Group__011326 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePower_in_rule__Multiplication__Group__0__Impl11353 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Multiplication__Group__1__Impl_in_rule__Multiplication__Group__111382 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Multiplication__Group_1__0_in_rule__Multiplication__Group__1__Impl11409 = new BitSet(new long[]{0x0006000000000002L});
+    public static final BitSet FOLLOW_rule__Multiplication__Group_1__0__Impl_in_rule__Multiplication__Group_1__011444 = new BitSet(new long[]{0x00010000400010F0L});
+    public static final BitSet FOLLOW_rule__Multiplication__Group_1__1_in_rule__Multiplication__Group_1__011447 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Multiplication__Alternatives_1_0_in_rule__Multiplication__Group_1__0__Impl11474 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Multiplication__Group_1__1__Impl_in_rule__Multiplication__Group_1__111504 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Multiplication__RightAssignment_1_1_in_rule__Multiplication__Group_1__1__Impl11531 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Multiplication__Group_1_0_0__0__Impl_in_rule__Multiplication__Group_1_0_0__011565 = new BitSet(new long[]{0x0002000000000000L});
+    public static final BitSet FOLLOW_rule__Multiplication__Group_1_0_0__1_in_rule__Multiplication__Group_1_0_0__011568 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Multiplication__Group_1_0_0__1__Impl_in_rule__Multiplication__Group_1_0_0__111626 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_rule__Multiplication__Group_1_0_0__1__Impl11654 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Multiplication__Group_1_0_1__0__Impl_in_rule__Multiplication__Group_1_0_1__011689 = new BitSet(new long[]{0x0004000000000000L});
+    public static final BitSet FOLLOW_rule__Multiplication__Group_1_0_1__1_in_rule__Multiplication__Group_1_0_1__011692 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Multiplication__Group_1_0_1__1__Impl_in_rule__Multiplication__Group_1_0_1__111750 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_50_in_rule__Multiplication__Group_1_0_1__1__Impl11778 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Power__Group__0__Impl_in_rule__Power__Group__011813 = new BitSet(new long[]{0x0008000000000002L});
+    public static final BitSet FOLLOW_rule__Power__Group__1_in_rule__Power__Group__011816 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUnaryExpr_in_rule__Power__Group__0__Impl11843 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Power__Group__1__Impl_in_rule__Power__Group__111872 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Power__Group_1__0_in_rule__Power__Group__1__Impl11899 = new BitSet(new long[]{0x0008000000000002L});
+    public static final BitSet FOLLOW_rule__Power__Group_1__0__Impl_in_rule__Power__Group_1__011934 = new BitSet(new long[]{0x00010000400010F0L});
+    public static final BitSet FOLLOW_rule__Power__Group_1__1_in_rule__Power__Group_1__011937 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Power__Group_1_0__0_in_rule__Power__Group_1__0__Impl11964 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Power__Group_1__1__Impl_in_rule__Power__Group_1__111994 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Power__RightAssignment_1_1_in_rule__Power__Group_1__1__Impl12021 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Power__Group_1_0__0__Impl_in_rule__Power__Group_1_0__012055 = new BitSet(new long[]{0x0008000000000000L});
+    public static final BitSet FOLLOW_rule__Power__Group_1_0__1_in_rule__Power__Group_1_0__012058 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Power__Group_1_0__1__Impl_in_rule__Power__Group_1_0__112116 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_51_in_rule__Power__Group_1_0__1__Impl12144 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UnaryExpr__Group__0__Impl_in_rule__UnaryExpr__Group__012179 = new BitSet(new long[]{0x00010000400000F0L});
+    public static final BitSet FOLLOW_rule__UnaryExpr__Group__1_in_rule__UnaryExpr__Group__012182 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UnaryExpr__OpAssignment_0_in_rule__UnaryExpr__Group__0__Impl12209 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UnaryExpr__Group__1__Impl_in_rule__UnaryExpr__Group__112240 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UnaryExpr__RightAssignment_1_in_rule__UnaryExpr__Group__1__Impl12267 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrePrimaryExpr__Group_2__0__Impl_in_rule__PrePrimaryExpr__Group_2__012301 = new BitSet(new long[]{0x00010005400010F0L});
+    public static final BitSet FOLLOW_rule__PrePrimaryExpr__Group_2__1_in_rule__PrePrimaryExpr__Group_2__012304 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__PrePrimaryExpr__Group_2__0__Impl12332 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrePrimaryExpr__Group_2__1__Impl_in_rule__PrePrimaryExpr__Group_2__112363 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_rule__PrePrimaryExpr__Group_2__2_in_rule__PrePrimaryExpr__Group_2__112366 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__PrePrimaryExpr__Group_2__1__Impl12393 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrePrimaryExpr__Group_2__2__Impl_in_rule__PrePrimaryExpr__Group_2__212422 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__PrePrimaryExpr__Group_2__2__Impl12450 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrePrimaryExpr__Group_3__0__Impl_in_rule__PrePrimaryExpr__Group_3__012487 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__PrePrimaryExpr__Group_3__1_in_rule__PrePrimaryExpr__Group_3__012490 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_rule__PrePrimaryExpr__Group_3__0__Impl12518 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrePrimaryExpr__Group_3__1__Impl_in_rule__PrePrimaryExpr__Group_3__112549 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrePrimaryExpr__NAssignment_3_1_in_rule__PrePrimaryExpr__Group_3__1__Impl12576 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AbstractRef__Group__0__Impl_in_rule__AbstractRef__Group__012610 = new BitSet(new long[]{0x0000000040000002L});
+    public static final BitSet FOLLOW_rule__AbstractRef__Group__1_in_rule__AbstractRef__Group__012613 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AbstractRef__DefineAssignment_0_in_rule__AbstractRef__Group__0__Impl12640 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AbstractRef__Group__1__Impl_in_rule__AbstractRef__Group__112670 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AbstractRef__Group_1__0_in_rule__AbstractRef__Group__1__Impl12697 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AbstractRef__Group_1__0__Impl_in_rule__AbstractRef__Group_1__012732 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_rule__AbstractRef__Group_1__1_in_rule__AbstractRef__Group_1__012735 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AbstractRef__Group_1__1__Impl_in_rule__AbstractRef__Group_1__112793 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AbstractRef__Group_1_1__0_in_rule__AbstractRef__Group_1__1__Impl12820 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AbstractRef__Group_1_1__0__Impl_in_rule__AbstractRef__Group_1_1__012854 = new BitSet(new long[]{0x00010005C40010F0L});
+    public static final BitSet FOLLOW_rule__AbstractRef__Group_1_1__1_in_rule__AbstractRef__Group_1_1__012857 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__AbstractRef__Group_1_1__0__Impl12885 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AbstractRef__Group_1_1__1__Impl_in_rule__AbstractRef__Group_1_1__112916 = new BitSet(new long[]{0x0000000084000000L});
+    public static final BitSet FOLLOW_rule__AbstractRef__Group_1_1__2_in_rule__AbstractRef__Group_1_1__112919 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AbstractRef__ArgsAssignment_1_1_1_in_rule__AbstractRef__Group_1_1__1__Impl12946 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AbstractRef__Group_1_1__2__Impl_in_rule__AbstractRef__Group_1_1__212977 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_rule__AbstractRef__Group_1_1__3_in_rule__AbstractRef__Group_1_1__212980 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AbstractRef__Group_1_1_2__0_in_rule__AbstractRef__Group_1_1__2__Impl13007 = new BitSet(new long[]{0x0000000004000002L});
+    public static final BitSet FOLLOW_rule__AbstractRef__Group_1_1__3__Impl_in_rule__AbstractRef__Group_1_1__313038 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__AbstractRef__Group_1_1__3__Impl13066 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AbstractRef__Group_1_1_2__0__Impl_in_rule__AbstractRef__Group_1_1_2__013105 = new BitSet(new long[]{0x00010005400010F0L});
+    public static final BitSet FOLLOW_rule__AbstractRef__Group_1_1_2__1_in_rule__AbstractRef__Group_1_1_2__013108 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__AbstractRef__Group_1_1_2__0__Impl13136 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AbstractRef__Group_1_1_2__1__Impl_in_rule__AbstractRef__Group_1_1_2__113167 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AbstractRef__ArgsAssignment_1_1_2_1_in_rule__AbstractRef__Group_1_1_2__1__Impl13194 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_0__0__Impl_in_rule__TerminalExpression__Group_0__013228 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_0__1_in_rule__TerminalExpression__Group_0__013231 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_0__1__Impl_in_rule__TerminalExpression__Group_0__113289 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__ValueAssignment_0_1_in_rule__TerminalExpression__Group_0__1__Impl13316 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_1__0__Impl_in_rule__TerminalExpression__Group_1__013350 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_1__1_in_rule__TerminalExpression__Group_1__013353 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_1__1__Impl_in_rule__TerminalExpression__Group_1__113411 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__ValueAssignment_1_1_in_rule__TerminalExpression__Group_1__1__Impl13438 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_2__0__Impl_in_rule__TerminalExpression__Group_2__013472 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_2__1_in_rule__TerminalExpression__Group_2__013475 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_2__1__Impl_in_rule__TerminalExpression__Group_2__113533 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__ValueAssignment_2_1_in_rule__TerminalExpression__Group_2__1__Impl13560 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleImport_in_rule__Model__ImportsAssignment_013601 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDeclaration_in_rule__Model__DeclarationsAssignment_1_013632 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStatement_in_rule__Model__StatementsAssignment_1_113663 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Import__ImportURIAssignment_113694 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleANNOTATION_TYPE_in_rule__Annotation__TypeAssignment_213725 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Annotation__ValueAssignment_3_013756 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_rule__Annotation__ValueAssignment_3_113792 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnnotation_in_rule__DefSort__AnnotationsAssignment_013831 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_53_in_rule__DefSort__ReifiedAssignment_113867 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__DefSort__NameAssignment_313906 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__DefSort__TypeAssignment_4_113937 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnnotation_in_rule__DefRange__AnnotationsAssignment_013968 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__DefRange__NameAssignment_214003 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__DefRange__MinAssignment_314038 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__DefRange__MaxAssignment_414069 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnnotation_in_rule__DefOption__AnnotationsAssignment_014100 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__DefOption__NameAssignment_1_0_114131 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__DefOption__ValueAssignment_1_0_214162 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__DefOption__NameAssignment_1_1_114193 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__DefOption__Value2Assignment_1_1_214224 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnnotation_in_rule__DefCompletion__AnnotationsAssignment_014255 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLabelType_in_rule__DefCompletion__TypeAssignment_214286 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__DefCompletion__LabelAssignment_314321 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnnotation_in_rule__DefNonInertia__AnnotationsAssignment_014356 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__DefNonInertia__NamesAssignment_214391 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__DefNonInertia__NamesAssignment_3_114430 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnnotation_in_rule__DefXor__AnnotationsAssignment_014465 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__DefXor__NamesAssignment_214500 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__DefXor__NamesAssignment_3_114539 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnnotation_in_rule__DefMutex__AnnotationsAssignment_014574 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__DefMutex__NamesAssignment_214609 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__DefMutex__NamesAssignment_3_114648 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnnotation_in_rule__LabeledExpression__AnnotationsAssignment_014683 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLabelType_in_rule__LabeledExpression__NameAssignment_1_014714 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__LabeledExpression__ExprAssignment_214745 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnnotation_in_rule__SortDefinition__AnnotationsAssignment_014776 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SortDefinition__SortAssignment_114811 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDefinition_in_rule__SortDefinition__DefinitionsAssignment_214846 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDefinition_in_rule__SortDefinition__DefinitionsAssignment_3_114877 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Definition__NameAssignment_014908 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Definition__ArgsAssignment_1_114943 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Definition__ArgsAssignment_1_2_114982 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Definition__ReturnAssignment_2_115021 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAssignmentOp_in_rule__Expression__ExprAssignment_015056 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifier_in_rule__Expression__QualifiersAssignment_1_015087 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__Expression__ExprAssignment_1_115118 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Parameters__NamesAssignment_015153 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Parameters__NamesAssignment_1_115192 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUnaryOp_in_rule__Exists__OpAssignment_015227 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleParameters_in_rule__Exists__ParametersAssignment_215258 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUnaryOp_in_rule__Forall__OpAssignment_015289 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleParameters_in_rule__Forall__ParametersAssignment_215320 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifier_in_rule__AssignmentOp__QAssignment_1_115351 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOrExp_in_rule__AssignmentOp__RightAssignment_1_215382 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifier_in_rule__OrExp__QAssignment_1_215413 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAndExp_in_rule__OrExp__RightAssignment_1_315444 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifier_in_rule__AndExp__QAssignment_1_215475 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRelational_in_rule__AndExp__RightAssignment_1_315506 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAddition_in_rule__Relational__RightAssignment_1_115537 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMultiplication_in_rule__Addition__RightAssignment_1_115568 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePower_in_rule__Multiplication__RightAssignment_1_115599 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUnaryExpr_in_rule__Power__RightAssignment_1_115630 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUnaryOp_in_rule__UnaryExpr__OpAssignment_015661 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePrePrimaryExpr_in_rule__UnaryExpr__RightAssignment_115692 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__PrePrimaryExpr__NAssignment_3_115723 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__AbstractRef__DefineAssignment_015758 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__AbstractRef__ArgsAssignment_1_1_115793 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__AbstractRef__ArgsAssignment_1_1_2_115824 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__TerminalExpression__ValueAssignment_0_115855 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__TerminalExpression__ValueAssignment_1_115886 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_BOOLEAN_in_rule__TerminalExpression__ValueAssignment_2_115917 = new BitSet(new long[]{0x0000000000000002L});
 
 }

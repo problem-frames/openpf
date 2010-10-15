@@ -59,6 +59,7 @@ LabeledExpression:
 enum LabelType: T='Theta' | D='Delta';
 
 SortDefinition:
+	(annotations+=Annotation)*
 	sort=[DefSort] definitions+=Definition (',' definitions+=Definition)*;
 	
 Definition:

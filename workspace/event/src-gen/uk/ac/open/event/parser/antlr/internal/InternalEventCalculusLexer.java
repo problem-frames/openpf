@@ -850,10 +850,10 @@ public class InternalEventCalculusLexer extends Lexer {
     public final void mRULE_INT() throws RecognitionException {
         try {
             int _type = RULE_INT;
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3091:10: ( ( '0' | '1' .. '9' ( '0' .. '9' )* ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3091:12: ( '0' | '1' .. '9' ( '0' .. '9' )* )
+            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3115:10: ( ( '0' | '1' .. '9' ( '0' .. '9' )* ) )
+            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3115:12: ( '0' | '1' .. '9' ( '0' .. '9' )* )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3091:12: ( '0' | '1' .. '9' ( '0' .. '9' )* )
+            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3115:12: ( '0' | '1' .. '9' ( '0' .. '9' )* )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -865,23 +865,23 @@ public class InternalEventCalculusLexer extends Lexer {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("3091:12: ( '0' | '1' .. '9' ( '0' .. '9' )* )", 2, 0, input);
+                    new NoViableAltException("3115:12: ( '0' | '1' .. '9' ( '0' .. '9' )* )", 2, 0, input);
 
                 throw nvae;
             }
             switch (alt2) {
                 case 1 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3091:13: '0'
+                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3115:13: '0'
                     {
                     match('0'); 
 
                     }
                     break;
                 case 2 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3091:17: '1' .. '9' ( '0' .. '9' )*
+                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3115:17: '1' .. '9' ( '0' .. '9' )*
                     {
                     matchRange('1','9'); 
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3091:26: ( '0' .. '9' )*
+                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3115:26: ( '0' .. '9' )*
                     loop1:
                     do {
                         int alt1=2;
@@ -894,7 +894,7 @@ public class InternalEventCalculusLexer extends Lexer {
 
                         switch (alt1) {
                     	case 1 :
-                    	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3091:27: '0' .. '9'
+                    	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3115:27: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -926,10 +926,10 @@ public class InternalEventCalculusLexer extends Lexer {
     public final void mRULE_BOOLEAN() throws RecognitionException {
         try {
             int _type = RULE_BOOLEAN;
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3093:14: ( ( 'true' | 'false' ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3093:16: ( 'true' | 'false' )
+            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3117:14: ( ( 'true' | 'false' ) )
+            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3117:16: ( 'true' | 'false' )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3093:16: ( 'true' | 'false' )
+            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3117:16: ( 'true' | 'false' )
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -941,13 +941,13 @@ public class InternalEventCalculusLexer extends Lexer {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("3093:16: ( 'true' | 'false' )", 3, 0, input);
+                    new NoViableAltException("3117:16: ( 'true' | 'false' )", 3, 0, input);
 
                 throw nvae;
             }
             switch (alt3) {
                 case 1 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3093:17: 'true'
+                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3117:17: 'true'
                     {
                     match("true"); 
 
@@ -955,7 +955,7 @@ public class InternalEventCalculusLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3093:24: 'false'
+                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3117:24: 'false'
                     {
                     match("false"); 
 
@@ -979,8 +979,8 @@ public class InternalEventCalculusLexer extends Lexer {
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3095:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3095:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3119:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3119:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -992,7 +992,7 @@ public class InternalEventCalculusLexer extends Lexer {
                 recover(mse);    throw mse;
             }
 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3095:35: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3119:35: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop4:
             do {
                 int alt4=2;
@@ -1040,10 +1040,10 @@ public class InternalEventCalculusLexer extends Lexer {
     public final void mRULE_STRING() throws RecognitionException {
         try {
             int _type = RULE_STRING;
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3097:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3097:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3121:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3121:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3097:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3121:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -1055,16 +1055,16 @@ public class InternalEventCalculusLexer extends Lexer {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("3097:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )", 7, 0, input);
+                    new NoViableAltException("3121:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )", 7, 0, input);
 
                 throw nvae;
             }
             switch (alt7) {
                 case 1 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3097:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3121:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3097:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3121:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -1080,7 +1080,7 @@ public class InternalEventCalculusLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3097:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\\\' )
+                    	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3121:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -1097,7 +1097,7 @@ public class InternalEventCalculusLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3097:61: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3121:61: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFE') ) {
                     	        input.consume();
@@ -1123,10 +1123,10 @@ public class InternalEventCalculusLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3097:81: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3121:81: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3097:86: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3121:86: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop6:
                     do {
                         int alt6=3;
@@ -1142,7 +1142,7 @@ public class InternalEventCalculusLexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3097:87: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\\'' | '\\\\' )
+                    	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3121:87: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -1159,7 +1159,7 @@ public class InternalEventCalculusLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3097:128: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3121:128: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFE') ) {
                     	        input.consume();
@@ -1201,12 +1201,12 @@ public class InternalEventCalculusLexer extends Lexer {
     public final void mRULE_ML_COMMENT() throws RecognitionException {
         try {
             int _type = RULE_ML_COMMENT;
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3099:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3099:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3123:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3123:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3099:24: ( options {greedy=false; } : . )*
+            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3123:24: ( options {greedy=false; } : . )*
             loop8:
             do {
                 int alt8=2;
@@ -1231,7 +1231,7 @@ public class InternalEventCalculusLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3099:52: .
+            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3123:52: .
             	    {
             	    matchAny(); 
 
@@ -1259,11 +1259,11 @@ public class InternalEventCalculusLexer extends Lexer {
     public final void mRULE_SL_COMMENT() throws RecognitionException {
         try {
             int _type = RULE_SL_COMMENT;
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3101:17: ( ';' (~ ( ( '\\n' | '\\r' | '#' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3101:19: ';' (~ ( ( '\\n' | '\\r' | '#' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3125:17: ( ';' (~ ( ( '\\n' | '\\r' | '#' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3125:19: ';' (~ ( ( '\\n' | '\\r' | '#' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match(';'); 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3101:23: (~ ( ( '\\n' | '\\r' | '#' ) ) )*
+            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3125:23: (~ ( ( '\\n' | '\\r' | '#' ) ) )*
             loop9:
             do {
                 int alt9=2;
@@ -1276,7 +1276,7 @@ public class InternalEventCalculusLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3101:23: ~ ( ( '\\n' | '\\r' | '#' ) )
+            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3125:23: ~ ( ( '\\n' | '\\r' | '#' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\"')||(input.LA(1)>='$' && input.LA(1)<='\uFFFE') ) {
             	        input.consume();
@@ -1297,7 +1297,7 @@ public class InternalEventCalculusLexer extends Lexer {
                 }
             } while (true);
 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3101:43: ( ( '\\r' )? '\\n' )?
+            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3125:43: ( ( '\\r' )? '\\n' )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -1306,9 +1306,9 @@ public class InternalEventCalculusLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3101:44: ( '\\r' )? '\\n'
+                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3125:44: ( '\\r' )? '\\n'
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3101:44: ( '\\r' )?
+                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3125:44: ( '\\r' )?
                     int alt10=2;
                     int LA10_0 = input.LA(1);
 
@@ -1317,7 +1317,7 @@ public class InternalEventCalculusLexer extends Lexer {
                     }
                     switch (alt10) {
                         case 1 :
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3101:44: '\\r'
+                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3125:44: '\\r'
                             {
                             match('\r'); 
 
@@ -1347,10 +1347,10 @@ public class InternalEventCalculusLexer extends Lexer {
     public final void mRULE_WS() throws RecognitionException {
         try {
             int _type = RULE_WS;
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3103:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3103:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3127:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3127:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3103:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3127:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt12=0;
             loop12:
             do {
@@ -1403,8 +1403,8 @@ public class InternalEventCalculusLexer extends Lexer {
     public final void mRULE_ANY_OTHER() throws RecognitionException {
         try {
             int _type = RULE_ANY_OTHER;
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3105:16: ( . )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3105:18: .
+            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3129:16: ( . )
+            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3129:18: .
             {
             matchAny(); 
 

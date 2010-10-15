@@ -63,9 +63,10 @@
     <genClasses ecoreClass="EventCalculus.ecore#//DefMutex">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//DefMutex/names"/>
     </genClasses>
-    <genClasses ecoreClass="EventCalculus.ecore#//Statement"/>
+    <genClasses ecoreClass="EventCalculus.ecore#//Statement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//Statement/annotations"/>
+    </genClasses>
     <genClasses ecoreClass="EventCalculus.ecore#//LabeledExpression">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//LabeledExpression/annotations"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EventCalculus.ecore#//LabeledExpression/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EventCalculus.ecore#//LabeledExpression/expr"/>
     </genClasses>

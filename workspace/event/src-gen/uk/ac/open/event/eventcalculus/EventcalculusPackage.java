@@ -560,13 +560,22 @@ public interface EventcalculusPackage extends EPackage
   int STATEMENT = 12;
 
   /**
+   * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STATEMENT__ANNOTATIONS = 0;
+
+  /**
    * The number of structural features of the '<em>Statement</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STATEMENT_FEATURE_COUNT = 0;
+  int STATEMENT_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link uk.ac.open.event.eventcalculus.impl.LabeledExpressionImpl <em>Labeled Expression</em>}' class.
@@ -585,7 +594,7 @@ public interface EventcalculusPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LABELED_EXPRESSION__ANNOTATIONS = STATEMENT_FEATURE_COUNT + 0;
+  int LABELED_EXPRESSION__ANNOTATIONS = STATEMENT__ANNOTATIONS;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -594,7 +603,7 @@ public interface EventcalculusPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LABELED_EXPRESSION__NAME = STATEMENT_FEATURE_COUNT + 1;
+  int LABELED_EXPRESSION__NAME = STATEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Expr</b></em>' containment reference.
@@ -603,7 +612,7 @@ public interface EventcalculusPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LABELED_EXPRESSION__EXPR = STATEMENT_FEATURE_COUNT + 2;
+  int LABELED_EXPRESSION__EXPR = STATEMENT_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Labeled Expression</em>' class.
@@ -612,7 +621,7 @@ public interface EventcalculusPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LABELED_EXPRESSION_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 3;
+  int LABELED_EXPRESSION_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link uk.ac.open.event.eventcalculus.impl.SortDefinitionImpl <em>Sort Definition</em>}' class.
@@ -623,6 +632,15 @@ public interface EventcalculusPackage extends EPackage
    * @generated
    */
   int SORT_DEFINITION = 14;
+
+  /**
+   * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SORT_DEFINITION__ANNOTATIONS = STATEMENT__ANNOTATIONS;
 
   /**
    * The feature id for the '<em><b>Sort</b></em>' reference.
@@ -2986,6 +3004,17 @@ public interface EventcalculusPackage extends EPackage
   EClass getStatement();
 
   /**
+   * Returns the meta object for the containment reference list '{@link uk.ac.open.event.eventcalculus.Statement#getAnnotations <em>Annotations</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Annotations</em>'.
+   * @see uk.ac.open.event.eventcalculus.Statement#getAnnotations()
+   * @see #getStatement()
+   * @generated
+   */
+  EReference getStatement_Annotations();
+
+  /**
    * Returns the meta object for class '{@link uk.ac.open.event.eventcalculus.LabeledExpression <em>Labeled Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2994,17 +3023,6 @@ public interface EventcalculusPackage extends EPackage
    * @generated
    */
   EClass getLabeledExpression();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link uk.ac.open.event.eventcalculus.LabeledExpression#getAnnotations <em>Annotations</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Annotations</em>'.
-   * @see uk.ac.open.event.eventcalculus.LabeledExpression#getAnnotations()
-   * @see #getLabeledExpression()
-   * @generated
-   */
-  EReference getLabeledExpression_Annotations();
 
   /**
    * Returns the meta object for the attribute '{@link uk.ac.open.event.eventcalculus.LabeledExpression#getName <em>Name</em>}'.
@@ -4058,6 +4076,14 @@ public interface EventcalculusPackage extends EPackage
     EClass STATEMENT = eINSTANCE.getStatement();
 
     /**
+     * The meta object literal for the '<em><b>Annotations</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STATEMENT__ANNOTATIONS = eINSTANCE.getStatement_Annotations();
+
+    /**
      * The meta object literal for the '{@link uk.ac.open.event.eventcalculus.impl.LabeledExpressionImpl <em>Labeled Expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4066,14 +4092,6 @@ public interface EventcalculusPackage extends EPackage
      * @generated
      */
     EClass LABELED_EXPRESSION = eINSTANCE.getLabeledExpression();
-
-    /**
-     * The meta object literal for the '<em><b>Annotations</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference LABELED_EXPRESSION__ANNOTATIONS = eINSTANCE.getLabeledExpression_Annotations();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.

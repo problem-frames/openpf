@@ -72,7 +72,7 @@ public class EventCalculusParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLabeledExpressionAccess().getGroup(), "rule__LabeledExpression__Group__0");
 					put(grammarAccess.getLabeledExpressionAccess().getGroup_1(), "rule__LabeledExpression__Group_1__0");
 					put(grammarAccess.getSortDefinitionAccess().getGroup(), "rule__SortDefinition__Group__0");
-					put(grammarAccess.getSortDefinitionAccess().getGroup_2(), "rule__SortDefinition__Group_2__0");
+					put(grammarAccess.getSortDefinitionAccess().getGroup_3(), "rule__SortDefinition__Group_3__0");
 					put(grammarAccess.getDefinitionAccess().getGroup(), "rule__Definition__Group__0");
 					put(grammarAccess.getDefinitionAccess().getGroup_1(), "rule__Definition__Group_1__0");
 					put(grammarAccess.getDefinitionAccess().getGroup_1_2(), "rule__Definition__Group_1_2__0");
@@ -157,9 +157,10 @@ public class EventCalculusParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLabeledExpressionAccess().getAnnotationsAssignment_0(), "rule__LabeledExpression__AnnotationsAssignment_0");
 					put(grammarAccess.getLabeledExpressionAccess().getNameAssignment_1_0(), "rule__LabeledExpression__NameAssignment_1_0");
 					put(grammarAccess.getLabeledExpressionAccess().getExprAssignment_2(), "rule__LabeledExpression__ExprAssignment_2");
-					put(grammarAccess.getSortDefinitionAccess().getSortAssignment_0(), "rule__SortDefinition__SortAssignment_0");
-					put(grammarAccess.getSortDefinitionAccess().getDefinitionsAssignment_1(), "rule__SortDefinition__DefinitionsAssignment_1");
-					put(grammarAccess.getSortDefinitionAccess().getDefinitionsAssignment_2_1(), "rule__SortDefinition__DefinitionsAssignment_2_1");
+					put(grammarAccess.getSortDefinitionAccess().getAnnotationsAssignment_0(), "rule__SortDefinition__AnnotationsAssignment_0");
+					put(grammarAccess.getSortDefinitionAccess().getSortAssignment_1(), "rule__SortDefinition__SortAssignment_1");
+					put(grammarAccess.getSortDefinitionAccess().getDefinitionsAssignment_2(), "rule__SortDefinition__DefinitionsAssignment_2");
+					put(grammarAccess.getSortDefinitionAccess().getDefinitionsAssignment_3_1(), "rule__SortDefinition__DefinitionsAssignment_3_1");
 					put(grammarAccess.getDefinitionAccess().getNameAssignment_0(), "rule__Definition__NameAssignment_0");
 					put(grammarAccess.getDefinitionAccess().getArgsAssignment_1_1(), "rule__Definition__ArgsAssignment_1_1");
 					put(grammarAccess.getDefinitionAccess().getArgsAssignment_1_2_1(), "rule__Definition__ArgsAssignment_1_2_1");

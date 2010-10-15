@@ -1306,6 +1306,30 @@ ruleSortDefinition returns [EObject current=null]
     }:
 ((
 (
+		{ 
+	        currentNode=createCompositeNode(grammarAccess.getSortDefinitionAccess().getAnnotationsAnnotationParserRuleCall_0_0(), currentNode); 
+	    }
+		lv_annotations_0_0=ruleAnnotation		{
+	        if ($current==null) {
+	            $current = factory.create(grammarAccess.getSortDefinitionRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode.getParent(), $current);
+	        }
+	        try {
+	       		add(
+	       			$current, 
+	       			"annotations",
+	        		lv_annotations_0_0, 
+	        		"Annotation", 
+	        		currentNode);
+	        } catch (ValueConverterException vce) {
+				handleValueConverterException(vce);
+	        }
+	        currentNode = currentNode.getParent();
+	    }
+
+)
+)*(
+(
 		{
 			if ($current==null) {
 	            $current = factory.create(grammarAccess.getSortDefinitionRule().getType().getClassifier());
@@ -1314,16 +1338,16 @@ ruleSortDefinition returns [EObject current=null]
         }
 	RULE_ID
 	{
-		createLeafNode(grammarAccess.getSortDefinitionAccess().getSortDefSortCrossReference_0_0(), "sort"); 
+		createLeafNode(grammarAccess.getSortDefinitionAccess().getSortDefSortCrossReference_1_0(), "sort"); 
 	}
 
 )
 )(
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getSortDefinitionAccess().getDefinitionsDefinitionParserRuleCall_1_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getSortDefinitionAccess().getDefinitionsDefinitionParserRuleCall_2_0(), currentNode); 
 	    }
-		lv_definitions_1_0=ruleDefinition		{
+		lv_definitions_2_0=ruleDefinition		{
 	        if ($current==null) {
 	            $current = factory.create(grammarAccess.getSortDefinitionRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode.getParent(), $current);
@@ -1332,7 +1356,7 @@ ruleSortDefinition returns [EObject current=null]
 	       		add(
 	       			$current, 
 	       			"definitions",
-	        		lv_definitions_1_0, 
+	        		lv_definitions_2_0, 
 	        		"Definition", 
 	        		currentNode);
 	        } catch (ValueConverterException vce) {
@@ -1344,14 +1368,14 @@ ruleSortDefinition returns [EObject current=null]
 )
 )(	',' 
     {
-        createLeafNode(grammarAccess.getSortDefinitionAccess().getCommaKeyword_2_0(), null); 
+        createLeafNode(grammarAccess.getSortDefinitionAccess().getCommaKeyword_3_0(), null); 
     }
 (
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getSortDefinitionAccess().getDefinitionsDefinitionParserRuleCall_2_1_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getSortDefinitionAccess().getDefinitionsDefinitionParserRuleCall_3_1_0(), currentNode); 
 	    }
-		lv_definitions_3_0=ruleDefinition		{
+		lv_definitions_4_0=ruleDefinition		{
 	        if ($current==null) {
 	            $current = factory.create(grammarAccess.getSortDefinitionRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode.getParent(), $current);
@@ -1360,7 +1384,7 @@ ruleSortDefinition returns [EObject current=null]
 	       		add(
 	       			$current, 
 	       			"definitions",
-	        		lv_definitions_3_0, 
+	        		lv_definitions_4_0, 
 	        		"Definition", 
 	        		currentNode);
 	        } catch (ValueConverterException vce) {

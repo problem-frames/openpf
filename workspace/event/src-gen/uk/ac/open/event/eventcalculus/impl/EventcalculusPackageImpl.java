@@ -775,6 +775,16 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getStatement_Annotations()
+  {
+    return (EReference)statementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getLabeledExpression()
   {
     return labeledExpressionEClass;
@@ -785,19 +795,9 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getLabeledExpression_Annotations()
-  {
-    return (EReference)labeledExpressionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EAttribute getLabeledExpression_Name()
   {
-    return (EAttribute)labeledExpressionEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)labeledExpressionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -807,7 +807,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    */
   public EReference getLabeledExpression_Expr()
   {
-    return (EReference)labeledExpressionEClass.getEStructuralFeatures().get(2);
+    return (EReference)labeledExpressionEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1556,9 +1556,9 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
     createEReference(defMutexEClass, DEF_MUTEX__NAMES);
 
     statementEClass = createEClass(STATEMENT);
+    createEReference(statementEClass, STATEMENT__ANNOTATIONS);
 
     labeledExpressionEClass = createEClass(LABELED_EXPRESSION);
-    createEReference(labeledExpressionEClass, LABELED_EXPRESSION__ANNOTATIONS);
     createEAttribute(labeledExpressionEClass, LABELED_EXPRESSION__NAME);
     createEReference(labeledExpressionEClass, LABELED_EXPRESSION__EXPR);
 
@@ -1767,9 +1767,9 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
     initEReference(getDefMutex_Names(), this.getDefinition(), null, "names", null, 0, -1, DefMutex.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(statementEClass, Statement.class, "Statement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getStatement_Annotations(), this.getAnnotation(), null, "annotations", null, 0, -1, Statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(labeledExpressionEClass, LabeledExpression.class, "LabeledExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getLabeledExpression_Annotations(), this.getAnnotation(), null, "annotations", null, 0, -1, LabeledExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getLabeledExpression_Name(), this.getLabelType(), "name", null, 0, 1, LabeledExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getLabeledExpression_Expr(), this.getExpression(), null, "expr", null, 0, 1, LabeledExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

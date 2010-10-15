@@ -652,49 +652,57 @@ public class EventCalculusGrammarAccess extends AbstractGrammarElementFinder {
 	public class SortDefinitionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SortDefinition");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cSortAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final CrossReference cSortDefSortCrossReference_0_0 = (CrossReference)cSortAssignment_0.eContents().get(0);
-		private final RuleCall cSortDefSortIDTerminalRuleCall_0_0_1 = (RuleCall)cSortDefSortCrossReference_0_0.eContents().get(1);
-		private final Assignment cDefinitionsAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cDefinitionsDefinitionParserRuleCall_1_0 = (RuleCall)cDefinitionsAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cDefinitionsAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cDefinitionsDefinitionParserRuleCall_2_1_0 = (RuleCall)cDefinitionsAssignment_2_1.eContents().get(0);
+		private final Assignment cAnnotationsAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cAnnotationsAnnotationParserRuleCall_0_0 = (RuleCall)cAnnotationsAssignment_0.eContents().get(0);
+		private final Assignment cSortAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final CrossReference cSortDefSortCrossReference_1_0 = (CrossReference)cSortAssignment_1.eContents().get(0);
+		private final RuleCall cSortDefSortIDTerminalRuleCall_1_0_1 = (RuleCall)cSortDefSortCrossReference_1_0.eContents().get(1);
+		private final Assignment cDefinitionsAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cDefinitionsDefinitionParserRuleCall_2_0 = (RuleCall)cDefinitionsAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cCommaKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cDefinitionsAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cDefinitionsDefinitionParserRuleCall_3_1_0 = (RuleCall)cDefinitionsAssignment_3_1.eContents().get(0);
 		
 		//SortDefinition:
-		//	sort=[DefSort] definitions+=Definition ("," definitions+=Definition)*;
+		//	annotations+=Annotation* sort=[DefSort] definitions+=Definition ("," definitions+=Definition)*;
 		public ParserRule getRule() { return rule; }
 
-		//sort=[DefSort] definitions+=Definition ("," definitions+=Definition)*
+		//annotations+=Annotation* sort=[DefSort] definitions+=Definition ("," definitions+=Definition)*
 		public Group getGroup() { return cGroup; }
 
+		//annotations+=Annotation*
+		public Assignment getAnnotationsAssignment_0() { return cAnnotationsAssignment_0; }
+
+		//Annotation
+		public RuleCall getAnnotationsAnnotationParserRuleCall_0_0() { return cAnnotationsAnnotationParserRuleCall_0_0; }
+
 		//sort=[DefSort]
-		public Assignment getSortAssignment_0() { return cSortAssignment_0; }
+		public Assignment getSortAssignment_1() { return cSortAssignment_1; }
 
 		//[DefSort]
-		public CrossReference getSortDefSortCrossReference_0_0() { return cSortDefSortCrossReference_0_0; }
+		public CrossReference getSortDefSortCrossReference_1_0() { return cSortDefSortCrossReference_1_0; }
 
 		//ID
-		public RuleCall getSortDefSortIDTerminalRuleCall_0_0_1() { return cSortDefSortIDTerminalRuleCall_0_0_1; }
+		public RuleCall getSortDefSortIDTerminalRuleCall_1_0_1() { return cSortDefSortIDTerminalRuleCall_1_0_1; }
 
 		//definitions+=Definition
-		public Assignment getDefinitionsAssignment_1() { return cDefinitionsAssignment_1; }
+		public Assignment getDefinitionsAssignment_2() { return cDefinitionsAssignment_2; }
 
 		//Definition
-		public RuleCall getDefinitionsDefinitionParserRuleCall_1_0() { return cDefinitionsDefinitionParserRuleCall_1_0; }
+		public RuleCall getDefinitionsDefinitionParserRuleCall_2_0() { return cDefinitionsDefinitionParserRuleCall_2_0; }
 
 		//("," definitions+=Definition)*
-		public Group getGroup_2() { return cGroup_2; }
+		public Group getGroup_3() { return cGroup_3; }
 
 		//","
-		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
+		public Keyword getCommaKeyword_3_0() { return cCommaKeyword_3_0; }
 
 		//definitions+=Definition
-		public Assignment getDefinitionsAssignment_2_1() { return cDefinitionsAssignment_2_1; }
+		public Assignment getDefinitionsAssignment_3_1() { return cDefinitionsAssignment_3_1; }
 
 		//Definition
-		public RuleCall getDefinitionsDefinitionParserRuleCall_2_1_0() { return cDefinitionsDefinitionParserRuleCall_2_1_0; }
+		public RuleCall getDefinitionsDefinitionParserRuleCall_3_1_0() { return cDefinitionsDefinitionParserRuleCall_3_1_0; }
 	}
 
 	public class DefinitionElements extends AbstractParserRuleElementFinder {
@@ -1920,7 +1928,7 @@ public class EventCalculusGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//SortDefinition:
-	//	sort=[DefSort] definitions+=Definition ("," definitions+=Definition)*;
+	//	annotations+=Annotation* sort=[DefSort] definitions+=Definition ("," definitions+=Definition)*;
 	public SortDefinitionElements getSortDefinitionAccess() {
 		return (pSortDefinition != null) ? pSortDefinition : (pSortDefinition = new SortDefinitionElements());
 	}

@@ -59,7 +59,7 @@ public class AcceleoGeneratePF2ECAction extends ActionDelegate implements IActio
 	/**{@inheritDoc}
 	 *
 	 * @see org.eclipse.ui.actions.ActionDelegate#run(org.eclipse.jface.action.IAction)
-	 * @generated
+	 * @generated NOT
 	 */
 	public void run(IAction action) {
 		if (files != null) {
@@ -71,7 +71,7 @@ public class AcceleoGeneratePF2ECAction extends ActionDelegate implements IActio
 							IFile model = (IFile)filesIt.next();
 							URI modelURI = URI.createPlatformResourceURI(model.getFullPath().toString(), true);
 							try {
-								IContainer target = model.getProject().getFolder("src-gen");
+								IContainer target = model.getProject().getFolder("event");
 								GenerateAll generator = new GenerateAll(modelURI, target.getLocation().toFile(), getArguments());
 								generator.doGenerate(monitor);
 							} catch (IOException e) {

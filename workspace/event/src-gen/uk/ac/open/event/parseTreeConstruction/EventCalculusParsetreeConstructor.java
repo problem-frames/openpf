@@ -3021,11 +3021,11 @@ protected class LabeledExpression_FullStopKeyword_3 extends KeywordToken  {
 /************ begin Rule SortDefinition ****************
  *
  * SortDefinition:
- * 	sort=[DefSort] definitions+=Definition ("," definitions+=Definition)*;
+ * 	annotations+=Annotation* sort=[DefSort] definitions+=Definition ("," definitions+=Definition)*;
  *
  **/
 
-// sort=[DefSort] definitions+=Definition ("," definitions+=Definition)*
+// annotations+=Annotation* sort=[DefSort] definitions+=Definition ("," definitions+=Definition)*
 protected class SortDefinition_Group extends GroupToken {
 	
 	public SortDefinition_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -3040,8 +3040,8 @@ protected class SortDefinition_Group extends GroupToken {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new SortDefinition_Group_2(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new SortDefinition_DefinitionsAssignment_1(lastRuleCallOrigin, this, 1, inst);
+			case 0: return new SortDefinition_Group_3(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new SortDefinition_DefinitionsAssignment_2(lastRuleCallOrigin, this, 1, inst);
 			default: return null;
 		}	
 	}
@@ -3055,22 +3055,69 @@ protected class SortDefinition_Group extends GroupToken {
 
 }
 
-// sort=[DefSort]
-protected class SortDefinition_SortAssignment_0 extends AssignmentToken  {
+// annotations+=Annotation*
+protected class SortDefinition_AnnotationsAssignment_0 extends AssignmentToken  {
 	
-	public SortDefinition_SortAssignment_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public SortDefinition_AnnotationsAssignment_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getSortDefinitionAccess().getSortAssignment_0();
+		return grammarAccess.getSortDefinitionAccess().getAnnotationsAssignment_0();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			default: return lastRuleCallOrigin.createFollowerAfterReturn(this, index, index, inst);
+			case 0: return new Annotation_Group(this, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+    @Override	
+	public IEObjectConsumer tryConsume() {
+		if((value = eObjectConsumer.getConsumable("annotations",false)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("annotations");
+		if(value instanceof EObject) { // org::eclipse::xtext::impl::RuleCallImpl
+			IEObjectConsumer param = createEObjectConsumer((EObject)value);
+			if(param.isInstanceOf(grammarAccess.getAnnotationRule().getType().getClassifier())) {
+				type = AssignmentType.PARSER_RULE_CALL;
+				element = grammarAccess.getSortDefinitionAccess().getAnnotationsAnnotationParserRuleCall_0_0(); 
+				consumed = obj;
+				return param;
+			}
+		}
+		return null;
+	}
+
+    @Override
+	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
+		if(value == inst.getEObject() && !inst.isConsumed()) return null;
+		switch(index) {
+			case 0: return new SortDefinition_AnnotationsAssignment_0(lastRuleCallOrigin, next, actIndex, consumed);
+			default: return lastRuleCallOrigin.createFollowerAfterReturn(next, actIndex , index - 1, consumed);
+		}	
+	}	
+}
+
+// sort=[DefSort]
+protected class SortDefinition_SortAssignment_1 extends AssignmentToken  {
+	
+	public SortDefinition_SortAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Assignment getGrammarElement() {
+		return grammarAccess.getSortDefinitionAccess().getSortAssignment_1();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new SortDefinition_AnnotationsAssignment_0(lastRuleCallOrigin, this, 0, inst);
+			default: return lastRuleCallOrigin.createFollowerAfterReturn(this, index, index - 1, inst);
 		}	
 	}
 
@@ -3080,9 +3127,9 @@ protected class SortDefinition_SortAssignment_0 extends AssignmentToken  {
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("sort");
 		if(value instanceof EObject) { // org::eclipse::xtext::impl::CrossReferenceImpl
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
-			if(param.isInstanceOf(grammarAccess.getSortDefinitionAccess().getSortDefSortCrossReference_0_0().getType().getClassifier())) {
+			if(param.isInstanceOf(grammarAccess.getSortDefinitionAccess().getSortDefSortCrossReference_1_0().getType().getClassifier())) {
 				type = AssignmentType.CROSS_REFERENCE;
-				element = grammarAccess.getSortDefinitionAccess().getSortDefSortCrossReference_0_0(); 
+				element = grammarAccess.getSortDefinitionAccess().getSortDefSortCrossReference_1_0(); 
 				return obj;
 			}
 		}
@@ -3092,15 +3139,15 @@ protected class SortDefinition_SortAssignment_0 extends AssignmentToken  {
 }
 
 // definitions+=Definition
-protected class SortDefinition_DefinitionsAssignment_1 extends AssignmentToken  {
+protected class SortDefinition_DefinitionsAssignment_2 extends AssignmentToken  {
 	
-	public SortDefinition_DefinitionsAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public SortDefinition_DefinitionsAssignment_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getSortDefinitionAccess().getDefinitionsAssignment_1();
+		return grammarAccess.getSortDefinitionAccess().getDefinitionsAssignment_2();
 	}
 
     @Override
@@ -3119,7 +3166,7 @@ protected class SortDefinition_DefinitionsAssignment_1 extends AssignmentToken  
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
 			if(param.isInstanceOf(grammarAccess.getDefinitionRule().getType().getClassifier())) {
 				type = AssignmentType.PARSER_RULE_CALL;
-				element = grammarAccess.getSortDefinitionAccess().getDefinitionsDefinitionParserRuleCall_1_0(); 
+				element = grammarAccess.getSortDefinitionAccess().getDefinitionsDefinitionParserRuleCall_2_0(); 
 				consumed = obj;
 				return param;
 			}
@@ -3131,28 +3178,28 @@ protected class SortDefinition_DefinitionsAssignment_1 extends AssignmentToken  
 	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
 		if(value == inst.getEObject() && !inst.isConsumed()) return null;
 		switch(index) {
-			case 0: return new SortDefinition_SortAssignment_0(lastRuleCallOrigin, next, actIndex, consumed);
+			case 0: return new SortDefinition_SortAssignment_1(lastRuleCallOrigin, next, actIndex, consumed);
 			default: return null;
 		}	
 	}	
 }
 
 // ("," definitions+=Definition)*
-protected class SortDefinition_Group_2 extends GroupToken {
+protected class SortDefinition_Group_3 extends GroupToken {
 	
-	public SortDefinition_Group_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public SortDefinition_Group_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Group getGrammarElement() {
-		return grammarAccess.getSortDefinitionAccess().getGroup_2();
+		return grammarAccess.getSortDefinitionAccess().getGroup_3();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new SortDefinition_DefinitionsAssignment_2_1(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new SortDefinition_DefinitionsAssignment_3_1(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -3160,22 +3207,22 @@ protected class SortDefinition_Group_2 extends GroupToken {
 }
 
 // ","
-protected class SortDefinition_CommaKeyword_2_0 extends KeywordToken  {
+protected class SortDefinition_CommaKeyword_3_0 extends KeywordToken  {
 	
-	public SortDefinition_CommaKeyword_2_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public SortDefinition_CommaKeyword_3_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Keyword getGrammarElement() {
-		return grammarAccess.getSortDefinitionAccess().getCommaKeyword_2_0();
+		return grammarAccess.getSortDefinitionAccess().getCommaKeyword_3_0();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new SortDefinition_Group_2(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new SortDefinition_DefinitionsAssignment_1(lastRuleCallOrigin, this, 1, inst);
+			case 0: return new SortDefinition_Group_3(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new SortDefinition_DefinitionsAssignment_2(lastRuleCallOrigin, this, 1, inst);
 			default: return null;
 		}	
 	}
@@ -3183,15 +3230,15 @@ protected class SortDefinition_CommaKeyword_2_0 extends KeywordToken  {
 }
 
 // definitions+=Definition
-protected class SortDefinition_DefinitionsAssignment_2_1 extends AssignmentToken  {
+protected class SortDefinition_DefinitionsAssignment_3_1 extends AssignmentToken  {
 	
-	public SortDefinition_DefinitionsAssignment_2_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public SortDefinition_DefinitionsAssignment_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getSortDefinitionAccess().getDefinitionsAssignment_2_1();
+		return grammarAccess.getSortDefinitionAccess().getDefinitionsAssignment_3_1();
 	}
 
     @Override
@@ -3210,7 +3257,7 @@ protected class SortDefinition_DefinitionsAssignment_2_1 extends AssignmentToken
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
 			if(param.isInstanceOf(grammarAccess.getDefinitionRule().getType().getClassifier())) {
 				type = AssignmentType.PARSER_RULE_CALL;
-				element = grammarAccess.getSortDefinitionAccess().getDefinitionsDefinitionParserRuleCall_2_1_0(); 
+				element = grammarAccess.getSortDefinitionAccess().getDefinitionsDefinitionParserRuleCall_3_1_0(); 
 				consumed = obj;
 				return param;
 			}
@@ -3222,7 +3269,7 @@ protected class SortDefinition_DefinitionsAssignment_2_1 extends AssignmentToken
 	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
 		if(value == inst.getEObject() && !inst.isConsumed()) return null;
 		switch(index) {
-			case 0: return new SortDefinition_CommaKeyword_2_0(lastRuleCallOrigin, next, actIndex, consumed);
+			case 0: return new SortDefinition_CommaKeyword_3_0(lastRuleCallOrigin, next, actIndex, consumed);
 			default: return null;
 		}	
 	}	
