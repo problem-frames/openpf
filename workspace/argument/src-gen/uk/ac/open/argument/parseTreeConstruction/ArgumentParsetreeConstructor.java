@@ -522,13 +522,13 @@ protected class Node_FactParserRuleCall_2 extends RuleCallToken {
 /************ begin Rule Argument ****************
  *
  * Argument:
- * 	name=ID "A" ("{" "claim" claim=Claim ("supported by" (","? grounds+=Fact)*)? ("warranted by" (","?
- * 	warrants+=Argument)*)? "}")? ":"? description=STRING?;
+ * 	name=ID "A" ("{" "claim" claim=Claim ("supported by" (","? grounds+=Fact)*)? ("warranted by" (","? warrants+=Node)*)?
+ * 	"}")? ":"? description=STRING?;
  *
  **/
 
-// name=ID "A" ("{" "claim" claim=Claim ("supported by" (","? grounds+=Fact)*)? ("warranted by" (","?
-// warrants+=Argument)*)? "}")? ":"? description=STRING?
+// name=ID "A" ("{" "claim" claim=Claim ("supported by" (","? grounds+=Fact)*)? ("warranted by" (","? warrants+=Node)*)?
+// "}")? ":"? description=STRING?
 protected class Argument_Group extends GroupToken {
 	
 	public Argument_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -614,7 +614,7 @@ protected class Argument_AKeyword_1 extends KeywordToken  {
 
 }
 
-// ("{" "claim" claim=Claim ("supported by" (","? grounds+=Fact)*)? ("warranted by" (","? warrants+=Argument)*)? "}")?
+// ("{" "claim" claim=Claim ("supported by" (","? grounds+=Fact)*)? ("warranted by" (","? warrants+=Node)*)? "}")?
 protected class Argument_Group_2 extends GroupToken {
 	
 	public Argument_Group_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -841,7 +841,7 @@ protected class Argument_GroundsAssignment_2_3_1_1 extends AssignmentToken  {
 
 
 
-// ("warranted by" (","? warrants+=Argument)*)?
+// ("warranted by" (","? warrants+=Node)*)?
 protected class Argument_Group_2_4 extends GroupToken {
 	
 	public Argument_Group_2_4(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -886,7 +886,7 @@ protected class Argument_WarrantedByKeyword_2_4_0 extends KeywordToken  {
 
 }
 
-// (","? warrants+=Argument)*
+// (","? warrants+=Node)*
 protected class Argument_Group_2_4_1 extends GroupToken {
 	
 	public Argument_Group_2_4_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -908,7 +908,7 @@ protected class Argument_Group_2_4_1 extends GroupToken {
 
 }
 
-// warrants+=Argument
+// warrants+=Node
 protected class Argument_WarrantsAssignment_2_4_1_1 extends AssignmentToken  {
 	
 	public Argument_WarrantsAssignment_2_4_1_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -923,7 +923,7 @@ protected class Argument_WarrantsAssignment_2_4_1_1 extends AssignmentToken  {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Argument_Group(this, this, 0, inst);
+			case 0: return new Node_Alternatives(this, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -934,9 +934,9 @@ protected class Argument_WarrantsAssignment_2_4_1_1 extends AssignmentToken  {
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("warrants");
 		if(value instanceof EObject) { // org::eclipse::xtext::impl::RuleCallImpl
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
-			if(param.isInstanceOf(grammarAccess.getArgumentRule().getType().getClassifier())) {
+			if(param.isInstanceOf(grammarAccess.getNodeRule().getType().getClassifier())) {
 				type = AssignmentType.PARSER_RULE_CALL;
-				element = grammarAccess.getArgumentAccess().getWarrantsArgumentParserRuleCall_2_4_1_1_0(); 
+				element = grammarAccess.getArgumentAccess().getWarrantsNodeParserRuleCall_2_4_1_1_0(); 
 				consumed = obj;
 				return param;
 			}

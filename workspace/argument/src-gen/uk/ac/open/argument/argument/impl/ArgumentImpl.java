@@ -24,6 +24,7 @@ import uk.ac.open.argument.argument.Argument;
 import uk.ac.open.argument.argument.ArgumentPackage;
 import uk.ac.open.argument.argument.Claim;
 import uk.ac.open.argument.argument.Fact;
+import uk.ac.open.argument.argument.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -70,7 +71,7 @@ public class ArgumentImpl extends NodeImpl implements Argument
    * @generated
    * @ordered
    */
-  protected EList<Argument> warrants;
+  protected EList<Node> warrants;
 
   /**
    * <!-- begin-user-doc -->
@@ -160,11 +161,11 @@ public class ArgumentImpl extends NodeImpl implements Argument
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Argument> getWarrants()
+  public EList<Node> getWarrants()
   {
     if (warrants == null)
     {
-      warrants = new EObjectContainmentEList<Argument>(Argument.class, this, ArgumentPackage.ARGUMENT__WARRANTS);
+      warrants = new EObjectContainmentEList<Node>(Node.class, this, ArgumentPackage.ARGUMENT__WARRANTS);
     }
     return warrants;
   }
@@ -229,7 +230,7 @@ public class ArgumentImpl extends NodeImpl implements Argument
         return;
       case ArgumentPackage.ARGUMENT__WARRANTS:
         getWarrants().clear();
-        getWarrants().addAll((Collection<? extends Argument>)newValue);
+        getWarrants().addAll((Collection<? extends Node>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

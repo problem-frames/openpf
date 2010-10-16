@@ -34,8 +34,10 @@ import uk.ac.open.argument.argument.diagram.edit.parts.Argument2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDiagramEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.Claim2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.Claim3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ClaimEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.Fact2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.Fact3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.FactEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.RebutsEditPart;
@@ -306,6 +308,28 @@ public class ArgumentDiagramCanonicalEditPolicy extends CanonicalEditPolicy {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(ArgumentDiagramUpdater
 						.getArgument_3003ContainedLinks(view));
+			}
+			if (!domain2NotationMap.containsKey(view.getElement())
+					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
+				domain2NotationMap.put(view.getElement(), view);
+			}
+			break;
+		}
+		case Fact3EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(ArgumentDiagramUpdater
+						.getFact_3004ContainedLinks(view));
+			}
+			if (!domain2NotationMap.containsKey(view.getElement())
+					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
+				domain2NotationMap.put(view.getElement(), view);
+			}
+			break;
+		}
+		case Claim3EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(ArgumentDiagramUpdater
+						.getClaim_3005ContainedLinks(view));
 			}
 			if (!domain2NotationMap.containsKey(view.getElement())
 					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$

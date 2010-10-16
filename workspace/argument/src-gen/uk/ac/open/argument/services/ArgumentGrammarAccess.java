@@ -131,19 +131,19 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_2_4_1 = (Group)cGroup_2_4.eContents().get(1);
 		private final Keyword cCommaKeyword_2_4_1_0 = (Keyword)cGroup_2_4_1.eContents().get(0);
 		private final Assignment cWarrantsAssignment_2_4_1_1 = (Assignment)cGroup_2_4_1.eContents().get(1);
-		private final RuleCall cWarrantsArgumentParserRuleCall_2_4_1_1_0 = (RuleCall)cWarrantsAssignment_2_4_1_1.eContents().get(0);
+		private final RuleCall cWarrantsNodeParserRuleCall_2_4_1_1_0 = (RuleCall)cWarrantsAssignment_2_4_1_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_2_5 = (Keyword)cGroup_2.eContents().get(5);
 		private final Keyword cColonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cDescriptionAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cDescriptionSTRINGTerminalRuleCall_4_0 = (RuleCall)cDescriptionAssignment_4.eContents().get(0);
 		
 		//Argument:
-		//	name=ID "A" ("{" "claim" claim=Claim ("supported by" (","? grounds+=Fact)*)? ("warranted by" (","?
-		//	warrants+=Argument)*)? "}")? ":"? description=STRING?;
+		//	name=ID "A" ("{" "claim" claim=Claim ("supported by" (","? grounds+=Fact)*)? ("warranted by" (","? warrants+=Node)*)?
+		//	"}")? ":"? description=STRING?;
 		public ParserRule getRule() { return rule; }
 
-		//name=ID "A" ("{" "claim" claim=Claim ("supported by" (","? grounds+=Fact)*)? ("warranted by" (","?
-		//warrants+=Argument)*)? "}")? ":"? description=STRING?
+		//name=ID "A" ("{" "claim" claim=Claim ("supported by" (","? grounds+=Fact)*)? ("warranted by" (","? warrants+=Node)*)?
+		//"}")? ":"? description=STRING?
 		public Group getGroup() { return cGroup; }
 
 		//name=ID
@@ -155,7 +155,7 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 		//"A"
 		public Keyword getAKeyword_1() { return cAKeyword_1; }
 
-		//("{" "claim" claim=Claim ("supported by" (","? grounds+=Fact)*)? ("warranted by" (","? warrants+=Argument)*)? "}")?
+		//("{" "claim" claim=Claim ("supported by" (","? grounds+=Fact)*)? ("warranted by" (","? warrants+=Node)*)? "}")?
 		public Group getGroup_2() { return cGroup_2; }
 
 		//"{"
@@ -188,23 +188,23 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 		//Fact
 		public RuleCall getGroundsFactParserRuleCall_2_3_1_1_0() { return cGroundsFactParserRuleCall_2_3_1_1_0; }
 
-		//("warranted by" (","? warrants+=Argument)*)?
+		//("warranted by" (","? warrants+=Node)*)?
 		public Group getGroup_2_4() { return cGroup_2_4; }
 
 		//"warranted by"
 		public Keyword getWarrantedByKeyword_2_4_0() { return cWarrantedByKeyword_2_4_0; }
 
-		//(","? warrants+=Argument)*
+		//(","? warrants+=Node)*
 		public Group getGroup_2_4_1() { return cGroup_2_4_1; }
 
 		//","?
 		public Keyword getCommaKeyword_2_4_1_0() { return cCommaKeyword_2_4_1_0; }
 
-		//warrants+=Argument
+		//warrants+=Node
 		public Assignment getWarrantsAssignment_2_4_1_1() { return cWarrantsAssignment_2_4_1_1; }
 
-		//Argument
-		public RuleCall getWarrantsArgumentParserRuleCall_2_4_1_1_0() { return cWarrantsArgumentParserRuleCall_2_4_1_1_0; }
+		//Node
+		public RuleCall getWarrantsNodeParserRuleCall_2_4_1_1_0() { return cWarrantsNodeParserRuleCall_2_4_1_1_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_2_5() { return cRightCurlyBracketKeyword_2_5; }
@@ -453,8 +453,8 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Argument:
-	//	name=ID "A" ("{" "claim" claim=Claim ("supported by" (","? grounds+=Fact)*)? ("warranted by" (","?
-	//	warrants+=Argument)*)? "}")? ":"? description=STRING?;
+	//	name=ID "A" ("{" "claim" claim=Claim ("supported by" (","? grounds+=Fact)*)? ("warranted by" (","? warrants+=Node)*)?
+	//	"}")? ":"? description=STRING?;
 	public ArgumentElements getArgumentAccess() {
 		return (pArgument != null) ? pArgument : (pArgument = new ArgumentElements());
 	}

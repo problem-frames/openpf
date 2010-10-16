@@ -68,6 +68,18 @@ public class ArgumentEditPartFactory implements EditPartFactory {
 			case ArgumentName2EditPart.VISUAL_ID:
 				return new ArgumentName2EditPart(view);
 
+			case Fact3EditPart.VISUAL_ID:
+				return new Fact3EditPart(view);
+
+			case FactName3EditPart.VISUAL_ID:
+				return new FactName3EditPart(view);
+
+			case Claim3EditPart.VISUAL_ID:
+				return new Claim3EditPart(view);
+
+			case ClaimName3EditPart.VISUAL_ID:
+				return new ClaimName3EditPart(view);
+
 			case ArgumentArgumentClaimCompartmentEditPart.VISUAL_ID:
 				return new ArgumentArgumentClaimCompartmentEditPart(view);
 

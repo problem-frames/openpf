@@ -30,8 +30,10 @@ import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentWarrantsC
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDiagramEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.Claim2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.Claim3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ClaimEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.Fact2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.Fact3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.FactEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.RebutsEditPart;
@@ -163,10 +165,18 @@ public class ArgumentDiagramUpdater {
 		LinkedList<ArgumentNodeDescriptor> result = new LinkedList<ArgumentNodeDescriptor>();
 		for (Iterator<?> it = modelElement.getWarrants().iterator(); it
 				.hasNext();) {
-			Argument childElement = (Argument) it.next();
+			Node childElement = (Node) it.next();
 			int visualID = ArgumentVisualIDRegistry.getNodeVisualID(view,
 					childElement);
 			if (visualID == Argument2EditPart.VISUAL_ID) {
+				result.add(new ArgumentNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Fact3EditPart.VISUAL_ID) {
+				result.add(new ArgumentNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Claim3EditPart.VISUAL_ID) {
 				result.add(new ArgumentNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -242,10 +252,18 @@ public class ArgumentDiagramUpdater {
 		LinkedList<ArgumentNodeDescriptor> result = new LinkedList<ArgumentNodeDescriptor>();
 		for (Iterator<?> it = modelElement.getWarrants().iterator(); it
 				.hasNext();) {
-			Argument childElement = (Argument) it.next();
+			Node childElement = (Node) it.next();
 			int visualID = ArgumentVisualIDRegistry.getNodeVisualID(view,
 					childElement);
 			if (visualID == Argument2EditPart.VISUAL_ID) {
+				result.add(new ArgumentNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Fact3EditPart.VISUAL_ID) {
+				result.add(new ArgumentNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Claim3EditPart.VISUAL_ID) {
 				result.add(new ArgumentNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -272,6 +290,10 @@ public class ArgumentDiagramUpdater {
 			return getFact_3002ContainedLinks(view);
 		case Argument2EditPart.VISUAL_ID:
 			return getArgument_3003ContainedLinks(view);
+		case Fact3EditPart.VISUAL_ID:
+			return getFact_3004ContainedLinks(view);
+		case Claim3EditPart.VISUAL_ID:
+			return getClaim_3005ContainedLinks(view);
 		case RebutsEditPart.VISUAL_ID:
 			return getRebuts_4001ContainedLinks(view);
 		case MitigatesEditPart.VISUAL_ID:
@@ -297,6 +319,10 @@ public class ArgumentDiagramUpdater {
 			return getFact_3002IncomingLinks(view);
 		case Argument2EditPart.VISUAL_ID:
 			return getArgument_3003IncomingLinks(view);
+		case Fact3EditPart.VISUAL_ID:
+			return getFact_3004IncomingLinks(view);
+		case Claim3EditPart.VISUAL_ID:
+			return getClaim_3005IncomingLinks(view);
 		case RebutsEditPart.VISUAL_ID:
 			return getRebuts_4001IncomingLinks(view);
 		case MitigatesEditPart.VISUAL_ID:
@@ -322,6 +348,10 @@ public class ArgumentDiagramUpdater {
 			return getFact_3002OutgoingLinks(view);
 		case Argument2EditPart.VISUAL_ID:
 			return getArgument_3003OutgoingLinks(view);
+		case Fact3EditPart.VISUAL_ID:
+			return getFact_3004OutgoingLinks(view);
+		case Claim3EditPart.VISUAL_ID:
+			return getClaim_3005OutgoingLinks(view);
 		case RebutsEditPart.VISUAL_ID:
 			return getRebuts_4001OutgoingLinks(view);
 		case MitigatesEditPart.VISUAL_ID:
@@ -386,6 +416,22 @@ public class ArgumentDiagramUpdater {
 	 * @generated
 	 */
 	public static List<ArgumentLinkDescriptor> getArgument_3003ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<ArgumentLinkDescriptor> getFact_3004ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<ArgumentLinkDescriptor> getClaim_3005ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -473,6 +519,22 @@ public class ArgumentDiagramUpdater {
 	/**
 	 * @generated
 	 */
+	public static List<ArgumentLinkDescriptor> getFact_3004IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<ArgumentLinkDescriptor> getClaim_3005IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
 	public static List<ArgumentLinkDescriptor> getRebuts_4001IncomingLinks(
 			View view) {
 		return Collections.emptyList();
@@ -540,6 +602,22 @@ public class ArgumentDiagramUpdater {
 		result.addAll(getOutgoingTypeModelFacetLinks_Rebuts_4001(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_Mitigates_4002(modelElement));
 		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<ArgumentLinkDescriptor> getFact_3004OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<ArgumentLinkDescriptor> getClaim_3005OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
 	}
 
 	/**

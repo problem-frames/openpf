@@ -362,9 +362,9 @@ ruleArgument returns [EObject current=null]
 )?(
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getArgumentAccess().getWarrantsArgumentParserRuleCall_2_4_1_1_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getArgumentAccess().getWarrantsNodeParserRuleCall_2_4_1_1_0(), currentNode); 
 	    }
-		lv_warrants_10_0=ruleArgument		{
+		lv_warrants_10_0=ruleNode		{
 	        if ($current==null) {
 	            $current = factory.create(grammarAccess.getArgumentRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode.getParent(), $current);
@@ -374,7 +374,7 @@ ruleArgument returns [EObject current=null]
 	       			$current, 
 	       			"warrants",
 	        		lv_warrants_10_0, 
-	        		"Argument", 
+	        		"Node", 
 	        		currentNode);
 	        } catch (ValueConverterException vce) {
 				handleValueConverterException(vce);

@@ -47,13 +47,13 @@ import uk.ac.open.argument.argument.diagram.providers.ArgumentParserProvider;
 /**
  * @generated
  */
-public class ArgumentNameEditPart extends CompartmentEditPart implements
+public class ClaimName3EditPart extends CompartmentEditPart implements
 		ITextAwareEditPart {
 
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5006;
+	public static final int VISUAL_ID = 5004;
 
 	/**
 	 * @generated
@@ -78,7 +78,7 @@ public class ArgumentNameEditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public ArgumentNameEditPart(View view) {
+	public ClaimName3EditPart(View view) {
 		super(view);
 	}
 
@@ -295,10 +295,10 @@ public class ArgumentNameEditPart extends CompartmentEditPart implements
 		if (parser == null) {
 			parser = ArgumentParserProvider
 					.getParser(
-							ArgumentElementTypes.Argument_2001,
+							ArgumentElementTypes.Claim_3005,
 							getParserElement(),
 							ArgumentVisualIDRegistry
-									.getType(uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameEditPart.VISUAL_ID));
+									.getType(uk.ac.open.argument.argument.diagram.edit.parts.ClaimName3EditPart.VISUAL_ID));
 		}
 		return parser;
 	}

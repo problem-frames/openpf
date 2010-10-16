@@ -11,7 +11,7 @@ Argument: name=ID "A"
 	('{'
 		'claim' claim=Claim
 		('supported by' (','? grounds+=Fact)*)?
-		('warranted by' (','? warrants+=Argument)*)?
+		('warranted by' (','? warrants+=Node)*)?
 	'}'	)?
 	":"? description=STRING?
 ;

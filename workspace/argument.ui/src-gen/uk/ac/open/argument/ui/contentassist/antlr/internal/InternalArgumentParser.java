@@ -4702,24 +4702,24 @@ public class InternalArgumentParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Argument__WarrantsAssignment_2_4_1_1
-    // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:1790:1: rule__Argument__WarrantsAssignment_2_4_1_1 : ( ruleArgument ) ;
+    // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:1790:1: rule__Argument__WarrantsAssignment_2_4_1_1 : ( ruleNode ) ;
     public final void rule__Argument__WarrantsAssignment_2_4_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:1794:1: ( ( ruleArgument ) )
-            // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:1795:1: ( ruleArgument )
+            // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:1794:1: ( ( ruleNode ) )
+            // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:1795:1: ( ruleNode )
             {
-            // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:1795:1: ( ruleArgument )
-            // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:1796:1: ruleArgument
+            // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:1795:1: ( ruleNode )
+            // ../argument.ui/src-gen/uk/ac/open/argument/ui/contentassist/antlr/internal/InternalArgument.g:1796:1: ruleNode
             {
-             before(grammarAccess.getArgumentAccess().getWarrantsArgumentParserRuleCall_2_4_1_1_0()); 
-            pushFollow(FOLLOW_ruleArgument_in_rule__Argument__WarrantsAssignment_2_4_1_13563);
-            ruleArgument();
+             before(grammarAccess.getArgumentAccess().getWarrantsNodeParserRuleCall_2_4_1_1_0()); 
+            pushFollow(FOLLOW_ruleNode_in_rule__Argument__WarrantsAssignment_2_4_1_13563);
+            ruleNode();
             _fsp--;
 
-             after(grammarAccess.getArgumentAccess().getWarrantsArgumentParserRuleCall_2_4_1_1_0()); 
+             after(grammarAccess.getArgumentAccess().getWarrantsNodeParserRuleCall_2_4_1_1_0()); 
 
             }
 
@@ -5257,7 +5257,7 @@ public class InternalArgumentParser extends AbstractInternalContentAssistParser 
     public static final BitSet FOLLOW_RULE_ID_in_rule__Argument__NameAssignment_03470 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleClaim_in_rule__Argument__ClaimAssignment_2_23501 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleFact_in_rule__Argument__GroundsAssignment_2_3_1_13532 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleArgument_in_rule__Argument__WarrantsAssignment_2_4_1_13563 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNode_in_rule__Argument__WarrantsAssignment_2_4_1_13563 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_STRING_in_rule__Argument__DescriptionAssignment_43594 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_rule__Fact__NameAssignment_03625 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_STRING_in_rule__Fact__DescriptionAssignment_2_13656 = new BitSet(new long[]{0x0000000000000002L});

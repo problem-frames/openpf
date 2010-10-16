@@ -61,13 +61,17 @@ public class ArgumentModelingAssistantProvider extends
 			return types;
 		}
 		if (editPart instanceof ArgumentArgumentWarrantsCompartmentEditPart) {
-			ArrayList<IElementType> types = new ArrayList<IElementType>(1);
+			ArrayList<IElementType> types = new ArrayList<IElementType>(3);
 			types.add(ArgumentElementTypes.Argument_3003);
+			types.add(ArgumentElementTypes.Fact_3004);
+			types.add(ArgumentElementTypes.Claim_3005);
 			return types;
 		}
 		if (editPart instanceof ArgumentArgumentWarrantsCompartment2EditPart) {
-			ArrayList<IElementType> types = new ArrayList<IElementType>(1);
+			ArrayList<IElementType> types = new ArrayList<IElementType>(3);
 			types.add(ArgumentElementTypes.Argument_3003);
+			types.add(ArgumentElementTypes.Fact_3004);
+			types.add(ArgumentElementTypes.Claim_3005);
 			return types;
 		}
 		return Collections.EMPTY_LIST;

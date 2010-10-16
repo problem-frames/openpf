@@ -20,12 +20,16 @@ import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentName2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.Claim2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.Claim3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ClaimEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ClaimName2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ClaimName3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ClaimNameEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.Fact2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.Fact3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.FactEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.FactName2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.FactName3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.FactNameEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.RebutsEditPart;
@@ -168,6 +172,14 @@ public class ArgumentVisualIDRegistry {
 					domainElement.eClass())) {
 				return Argument2EditPart.VISUAL_ID;
 			}
+			if (ArgumentPackage.eINSTANCE.getFact().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Fact3EditPart.VISUAL_ID;
+			}
+			if (ArgumentPackage.eINSTANCE.getClaim().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Claim3EditPart.VISUAL_ID;
+			}
 			break;
 		case ArgumentArgumentClaimCompartment2EditPart.VISUAL_ID:
 			if (ArgumentPackage.eINSTANCE.getClaim().isSuperTypeOf(
@@ -185,6 +197,14 @@ public class ArgumentVisualIDRegistry {
 			if (ArgumentPackage.eINSTANCE.getArgument().isSuperTypeOf(
 					domainElement.eClass())) {
 				return Argument2EditPart.VISUAL_ID;
+			}
+			if (ArgumentPackage.eINSTANCE.getFact().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Fact3EditPart.VISUAL_ID;
+			}
+			if (ArgumentPackage.eINSTANCE.getClaim().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Claim3EditPart.VISUAL_ID;
 			}
 			break;
 		}
@@ -271,6 +291,16 @@ public class ArgumentVisualIDRegistry {
 				return true;
 			}
 			break;
+		case Fact3EditPart.VISUAL_ID:
+			if (FactName3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Claim3EditPart.VISUAL_ID:
+			if (ClaimName3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
 		case ArgumentArgumentClaimCompartmentEditPart.VISUAL_ID:
 			if (Claim2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
@@ -283,6 +313,12 @@ public class ArgumentVisualIDRegistry {
 			break;
 		case ArgumentArgumentWarrantsCompartmentEditPart.VISUAL_ID:
 			if (Argument2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fact3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Claim3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -298,6 +334,12 @@ public class ArgumentVisualIDRegistry {
 			break;
 		case ArgumentArgumentWarrantsCompartment2EditPart.VISUAL_ID:
 			if (Argument2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fact3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Claim3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;

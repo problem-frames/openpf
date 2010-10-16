@@ -76,8 +76,9 @@ public class ArgumentPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createClaim2CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
 		types.add(ArgumentElementTypes.Claim_3001);
+		types.add(ArgumentElementTypes.Claim_3005);
 		types.add(ArgumentElementTypes.Claim_2003);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Claim2CreationTool_title,
@@ -93,8 +94,9 @@ public class ArgumentPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createFact3CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
 		types.add(ArgumentElementTypes.Fact_3002);
+		types.add(ArgumentElementTypes.Fact_3004);
 		types.add(ArgumentElementTypes.Fact_2002);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Fact3CreationTool_title,

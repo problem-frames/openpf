@@ -1793,8 +1793,8 @@ rule__Argument__WarrantsAssignment_2_4_1_1
     }
 :
 (
-{ before(grammarAccess.getArgumentAccess().getWarrantsArgumentParserRuleCall_2_4_1_1_0()); }
-	ruleArgument{ after(grammarAccess.getArgumentAccess().getWarrantsArgumentParserRuleCall_2_4_1_1_0()); }
+{ before(grammarAccess.getArgumentAccess().getWarrantsNodeParserRuleCall_2_4_1_1_0()); }
+	ruleNode{ after(grammarAccess.getArgumentAccess().getWarrantsNodeParserRuleCall_2_4_1_1_0()); }
 )
 
 ;

@@ -53,7 +53,7 @@ public class ArgumentName2EditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5003;
+	public static final int VISUAL_ID = 5005;
 
 	/**
 	 * @generated

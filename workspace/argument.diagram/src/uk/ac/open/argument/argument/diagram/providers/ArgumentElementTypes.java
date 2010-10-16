@@ -21,8 +21,10 @@ import uk.ac.open.argument.argument.diagram.edit.parts.Argument2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDiagramEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.Claim2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.Claim3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ClaimEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.Fact2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.Fact3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.FactEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.RebutsEditPart;
@@ -86,6 +88,16 @@ public class ArgumentElementTypes {
 	 * @generated
 	 */
 	public static final IElementType Argument_3003 = getElementType("argument.diagram.Argument_3003"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Fact_3004 = getElementType("argument.diagram.Fact_3004"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Claim_3005 = getElementType("argument.diagram.Claim_3005"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -223,6 +235,10 @@ public class ArgumentElementTypes {
 
 			elements.put(Argument_3003, ArgumentPackage.eINSTANCE.getArgument());
 
+			elements.put(Fact_3004, ArgumentPackage.eINSTANCE.getFact());
+
+			elements.put(Claim_3005, ArgumentPackage.eINSTANCE.getClaim());
+
 			elements.put(Rebuts_4001, ArgumentPackage.eINSTANCE.getRebuts());
 
 			elements.put(Mitigates_4002,
@@ -251,6 +267,8 @@ public class ArgumentElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Claim_3001);
 			KNOWN_ELEMENT_TYPES.add(Fact_3002);
 			KNOWN_ELEMENT_TYPES.add(Argument_3003);
+			KNOWN_ELEMENT_TYPES.add(Fact_3004);
+			KNOWN_ELEMENT_TYPES.add(Claim_3005);
 			KNOWN_ELEMENT_TYPES.add(Rebuts_4001);
 			KNOWN_ELEMENT_TYPES.add(Mitigates_4002);
 		}
@@ -276,6 +294,10 @@ public class ArgumentElementTypes {
 			return Fact_3002;
 		case Argument2EditPart.VISUAL_ID:
 			return Argument_3003;
+		case Fact3EditPart.VISUAL_ID:
+			return Fact_3004;
+		case Claim3EditPart.VISUAL_ID:
+			return Claim_3005;
 		case RebutsEditPart.VISUAL_ID:
 			return Rebuts_4001;
 		case MitigatesEditPart.VISUAL_ID:

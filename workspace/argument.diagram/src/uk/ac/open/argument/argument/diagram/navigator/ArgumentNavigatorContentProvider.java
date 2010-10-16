@@ -33,8 +33,10 @@ import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentWarrantsC
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDiagramEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.Claim2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.Claim3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ClaimEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.Fact2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.Fact3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.FactEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.RebutsEditPart;
@@ -231,64 +233,41 @@ public class ArgumentNavigatorContentProvider implements ICommonContentProvider 
 	private Object[] getViewChildren(View view, Object parentElement) {
 		switch (ArgumentVisualIDRegistry.getVisualID(view)) {
 
-		case ArgumentEditPart.VISUAL_ID: {
+		case RebutsEditPart.VISUAL_ID: {
 			LinkedList<ArgumentAbstractNavigatorItem> result = new LinkedList<ArgumentAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			ArgumentNavigatorGroup incominglinks = new ArgumentNavigatorGroup(
-					Messages.NavigatorGroupName_Argument_2001_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			ArgumentNavigatorGroup outgoinglinks = new ArgumentNavigatorGroup(
-					Messages.NavigatorGroupName_Argument_2001_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Edge sv = (Edge) view;
+			ArgumentNavigatorGroup target = new ArgumentNavigatorGroup(
+					Messages.NavigatorGroupName_Rebuts_4001_target,
+					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			ArgumentNavigatorGroup source = new ArgumentNavigatorGroup(
+					Messages.NavigatorGroupName_Rebuts_4001_source,
+					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
-			connectedViews = getChildrenByType(
-					Collections.singleton(sv),
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
 					ArgumentVisualIDRegistry
-							.getType(ArgumentArgumentClaimCompartmentEditPart.VISUAL_ID));
-			connectedViews = getChildrenByType(connectedViews,
-					ArgumentVisualIDRegistry.getType(Claim2EditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(
-					Collections.singleton(sv),
-					ArgumentVisualIDRegistry
-							.getType(ArgumentArgumentGroundsCompartmentEditPart.VISUAL_ID));
-			connectedViews = getChildrenByType(connectedViews,
-					ArgumentVisualIDRegistry.getType(Fact2EditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(
-					Collections.singleton(sv),
-					ArgumentVisualIDRegistry
-							.getType(ArgumentArgumentWarrantsCompartmentEditPart.VISUAL_ID));
-			connectedViews = getChildrenByType(connectedViews,
+							.getType(ArgumentEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
 					ArgumentVisualIDRegistry
 							.getType(Argument2EditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					ArgumentVisualIDRegistry.getType(RebutsEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					ArgumentVisualIDRegistry.getType(RebutsEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					ArgumentVisualIDRegistry
-							.getType(MitigatesEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+							.getType(ArgumentEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					ArgumentVisualIDRegistry
-							.getType(MitigatesEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
+							.getType(Argument2EditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			if (!target.isEmpty()) {
+				result.add(target);
 			}
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
+			if (!source.isEmpty()) {
+				result.add(source);
 			}
 			return result.toArray();
 		}
@@ -326,6 +305,22 @@ public class ArgumentNavigatorContentProvider implements ICommonContentProvider 
 			connectedViews = getChildrenByType(connectedViews,
 					ArgumentVisualIDRegistry
 							.getType(Argument2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					ArgumentVisualIDRegistry
+							.getType(ArgumentArgumentWarrantsCompartment2EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					ArgumentVisualIDRegistry.getType(Fact3EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					ArgumentVisualIDRegistry
+							.getType(ArgumentArgumentWarrantsCompartment2EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					ArgumentVisualIDRegistry.getType(Claim3EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
@@ -388,45 +383,6 @@ public class ArgumentNavigatorContentProvider implements ICommonContentProvider 
 			return result.toArray();
 		}
 
-		case RebutsEditPart.VISUAL_ID: {
-			LinkedList<ArgumentAbstractNavigatorItem> result = new LinkedList<ArgumentAbstractNavigatorItem>();
-			Edge sv = (Edge) view;
-			ArgumentNavigatorGroup target = new ArgumentNavigatorGroup(
-					Messages.NavigatorGroupName_Rebuts_4001_target,
-					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			ArgumentNavigatorGroup source = new ArgumentNavigatorGroup(
-					Messages.NavigatorGroupName_Rebuts_4001_source,
-					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					ArgumentVisualIDRegistry
-							.getType(ArgumentEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					ArgumentVisualIDRegistry
-							.getType(Argument2EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					ArgumentVisualIDRegistry
-							.getType(ArgumentEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					ArgumentVisualIDRegistry
-							.getType(Argument2EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			if (!target.isEmpty()) {
-				result.add(target);
-			}
-			if (!source.isEmpty()) {
-				result.add(source);
-			}
-			return result.toArray();
-		}
-
 		case MitigatesEditPart.VISUAL_ID: {
 			LinkedList<ArgumentAbstractNavigatorItem> result = new LinkedList<ArgumentAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
@@ -462,6 +418,84 @@ public class ArgumentNavigatorContentProvider implements ICommonContentProvider 
 			}
 			if (!source.isEmpty()) {
 				result.add(source);
+			}
+			return result.toArray();
+		}
+
+		case ArgumentEditPart.VISUAL_ID: {
+			LinkedList<ArgumentAbstractNavigatorItem> result = new LinkedList<ArgumentAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			ArgumentNavigatorGroup incominglinks = new ArgumentNavigatorGroup(
+					Messages.NavigatorGroupName_Argument_2001_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			ArgumentNavigatorGroup outgoinglinks = new ArgumentNavigatorGroup(
+					Messages.NavigatorGroupName_Argument_2001_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					ArgumentVisualIDRegistry
+							.getType(ArgumentArgumentClaimCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					ArgumentVisualIDRegistry.getType(Claim2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					ArgumentVisualIDRegistry
+							.getType(ArgumentArgumentGroundsCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					ArgumentVisualIDRegistry.getType(Fact2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					ArgumentVisualIDRegistry
+							.getType(ArgumentArgumentWarrantsCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					ArgumentVisualIDRegistry
+							.getType(Argument2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					ArgumentVisualIDRegistry
+							.getType(ArgumentArgumentWarrantsCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					ArgumentVisualIDRegistry.getType(Fact3EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					ArgumentVisualIDRegistry
+							.getType(ArgumentArgumentWarrantsCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					ArgumentVisualIDRegistry.getType(Claim3EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					ArgumentVisualIDRegistry.getType(RebutsEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					ArgumentVisualIDRegistry.getType(RebutsEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					ArgumentVisualIDRegistry
+							.getType(MitigatesEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					ArgumentVisualIDRegistry
+							.getType(MitigatesEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
 			}
 			return result.toArray();
 		}
