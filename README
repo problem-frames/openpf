@@ -1,88 +1,47 @@
  = An Open Requirements Engineering Tool =
 
- == User's Manual == 
-
- * Click at the toolbar button with an icon showing multiple paint frames, 
-   a new project Examples will be created
-   * Open > Generate Example Project
- * Select a file with ".pf" extension under the Examples project folder
-	* You can also create your own problem frames by either editing a file
-	  with the ".pf" extension, or 
-	* by creating a new diagram using the Problem Diagram editor
- * Select a file with ".istar" extension under the Examples project folder
-	* You can also create your own i* diagrams by either editing a file
-	  with the ".istar" extension, or 
-	* by creating a new diagram using the OpenOME editor
- * Edit:
-	* The syntax highlighting text editor makes sure you are entering a
-	  valid problem diagram textually. If you save the text, a diagram will 
-	  be created
- 	* Inside the graphical editor, edit the name and description of the domains by clicking and editing
-		* You can also open up the properties editor (right click) to change the domain types
-		* You can edit any node as a subproblem diagram using double click at the node
- * Save when you are using the text editor
-    * If it is saved from the .pf editor
-	 * The file with ".problem" extension will be generated for the EMF model
-	 * The file with ".problem_diagram" extension will be generated for the GMF diagram
-	 * If the diagram file already exists, a SaveAs dialog will prompt you to avoid overwrite it
-    * If it is saved from the .istar editor
-	 * The file with ".oom" extension will be generated for the EMF model of OpenOME
-	 * The file with ".ood" extension will be generated for the GMF diagram of OpenOME
-	 * If the diagram file already exists, a SaveAs dialog will prompt you to avoid overwrite it
-
  == Developer's Manual ==
 
  * To develop OpenPF/OpenOME inside the Eclipse IDE, you need the following steps:
-  * checkout both the code for openpf and openome:
+  * checkout both the code for openpf:
     git svn clone -r HEAD https://computing-research.open.ac.uk/repos/openpf/trunk openpf
-    git svn clone -r HEAD https://se.cs.toronto.edu/svn/trac/ome/trunk/workspace ../openome-workspace
-	* Note for the checkout access, please ask Jennifer Horkoff <mailto:jenhork@cs.utoronto.ca> at the
-	  University of Toronto to get the permission
-	* Note if you are using a proxy server, to check out the code need to change the configuration file 
-          ~/.subversion/servers, for example:
+If you are behind a proxy server, you need to change the configuration file 
+$HOME/.subversion/servers, for example:
 [global]
 http-proxy-host = wwwcache.open.ac.uk
 http-proxy-port = 80
 
-  * Install an compatible Eclipse Modeling Tools IDE
-    Helios (Linux or the platform of your choice such as macosx-cocoa or win32)
-    download eclipse-modeling-helios-incubation-linux-gtk.tar.gz
-  * In the Help menu, select Install Modeling Components > xtext text-to-model and Acceleo model-to-text components
+  * Install the Eclipse IDE.  
+To simplify the development, we currently use the script IDE/pf-3.6.sh to install all necessary dependent products.
+
   * Run Eclipse
-    The following menu/dialog options are needed to build the system
+The following menu/dialog options are used to develop for the first time:
     * import the projects from the workspace
       File > Import ... >  General > Existing Projects into the workspace > Next > Browse > OK > Finish
-	* You may unselect PF2EC project as it is meant to be used inside a running OpenPF environment
     * change the compiler settings for the restricted API usages
       Window > Preferences > Java > Compiler > Errors/Warnings > Deprecated and restricted API > 
       Forbidden references (access rules) > Error => Warning > OK > Yes
-    * Select the following features from Help > Install Modeling component
-	Acceleo
-	Xtext 
-	GMF
-    * Install the epsilon/emfatic tools 
-	http://www.scharf.gr/eclipse/emfatic/update/
-	http://download.eclipse.org/modeling/gmt/epsilon/updates/
-    * Install Viatra2 tools
-        http://viatra.inf.mit.bme.hu/update/R3.1
-    * Install the SWTBot testing tools
-	http://download.eclipse.org/technology/swtbot/helios/dev-build/update-site
-    * Install LittleJil plugins:
-	http://laser.cs.umass.edu/eclipse/visualjil/
-	http://laser.cs.umass.edu/eclipse/ljanalysis
-	http://laser.cs.umass.edu/documentation/propelinstall/
-	* It has a dependency on WST
-		http://download.eclipse.org/webtools/downloads/drops/R3.2.2/R-3.2.2-20100915173744
-	
-  * open and run the product:
+
+  * Run the product:
     Project Explorer > problem > Double click at the pf.product file > Testing > Launch an Eclipse Application
 
  == Maintainer's Manual ==
-  * Run the headless script:
-    cd build.x86_64
+
+  * Run the headless script to build locally:
+    cd build.x86_64   (or cd build.macosx)
     build.sh 
-  * It is now continously integrated (any svn commit of the workspace will trigger a rebuilt of the binaries)
+
+  * It is now continously integrated on the sead1 server: any commit to subversion repository trunk/workspace will trigger a rebuilt of the binaries.
 
 Enjoy Problem Solving,
 
 Yijun Yu
+
+Appendix A. Checkout OpenOME
+
+  * Currently we are using one version of openome. You can checkout its latest
+development from:
+    git svn clone -r HEAD https://se.cs.toronto.edu/svn/trac/ome/trunk/workspace ../openome-workspace
+	* Note for the checkout access, please ask Jennifer Horkoff <mailto:jenhork@cs.utoronto.ca> at the
+	  University of Toronto to get the permission
+
