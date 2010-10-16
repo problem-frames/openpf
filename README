@@ -3,24 +3,30 @@
  == Developer's Manual ==
 
  * To develop OpenPF/OpenOME inside the Eclipse IDE, you need the following steps:
-  * checkout both the code for openpf:
+  * checkout the code for openpf:
     git svn clone -r HEAD https://computing-research.open.ac.uk/repos/openpf/trunk openpf
 If you are behind a proxy server, you need to change the configuration file 
 $HOME/.subversion/servers, for example:
 [global]
 http-proxy-host = wwwcache.open.ac.uk
 http-proxy-port = 80
+    * For the latest code of openome, see Appendix A.
 
   * Install the Eclipse IDE.  
-To simplify the development, we currently use the script IDE/pf-3.6.sh to install all necessary dependent products.
+To simplify the development, we currently use the script "IDE/pf-3.6.sh" to install all necessary dependent products. Alternative step please see Appendix B.
 
   * Run Eclipse
-The following menu/dialog options are used to develop for the first time:
-    * import the projects from the workspace
+    ./pf.sh (if you already installed the minimal set of plugins for the openpf
+development by following the above installation script; 
+or
+    ./develop (if you want to use the SDK preinstalled under $HOME/SDK/3.6pf 
+		folder). 
+
+    * The following menu/dialog options are used to develop for the first time:
+      * import the projects from the workspace
       File > Import ... >  General > Existing Projects into the workspace > Next > Browse > OK > Finish
-    * change the compiler settings for the restricted API usages
-      Window > Preferences > Java > Compiler > Errors/Warnings > Deprecated and restricted API > 
-      Forbidden references (access rules) > Error => Warning > OK > Yes
+      * change the compiler settings for the restricted API usages
+      Window > Preferences > Java > Compiler > Errors/Warnings > Deprecated and restricted API > Forbidden references (access rules) > Error => Warning > OK > Yes
 
   * Run the product:
     Project Explorer > problem > Double click at the pf.product file > Testing > Launch an Eclipse Application
@@ -45,3 +51,33 @@ development from:
 	* Note for the checkout access, please ask Jennifer Horkoff <mailto:jenhork@cs.utoronto.ca> at the
 	  University of Toronto to get the permission
 
+Appendix B. Full Installation of dependencies
+
+Here are a list of update sites that are necessary if you want to prepare the
+IDE yourself:
+
+ * Suppose you have installed the Modeling Tools, e.g., 
+eclipse-modeling-helios-incubation-linux-gtk.tar.gz
+
+ * Then you still need to do the following:
+    * Select the following features from Help > Install Modeling component
+	        Acceleo
+	        Xtext
+	        GMF
+    * Install the epsilon/emfatic tools
+	        http://www.scharf.gr/eclipse/emfatic/update/
+	        http://download.eclipse.org/modeling/gmt/epsilon/updates/
+    * Install Viatra2 tools
+	        http://viatra.inf.mit.bme.hu/update/R3.1
+    * Install the SWTBot testing tools
+	        http://download.eclipse.org/technology/swtbot/helios/dev-build/update-site
+    * Install LittleJil plugins:
+	        http://laser.cs.umass.edu/eclipse/visualjil/
+	        http://laser.cs.umass.edu/eclipse/ljanalysis
+	        http://laser.cs.umass.edu/documentation/propelinstall/
+        which has a dependency on WST
+                http://download.eclipse.org/webtools/downloads/drops/R3.2.2/R-3.2.2-20100915173744
+ * Alternatively, all these dependent plugins can be found at:
+   http://sead1.open.ac.uk/pf/development-kit/eclipse-SDK-more-required-products.zip
+   But you have to use the "IDE/pf-3.6.sh" to install it properly, unpack them
+to the dropsin folder won't work.
