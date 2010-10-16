@@ -27,55 +27,55 @@ import org.eclipse.emf.ecore.EObject;
 public interface Dependency extends EObject
 {
   /**
-	 * Returns the value of the '<em><b>From</b></em>' reference.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>From</b></em>' reference.
+   * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>From</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>From</em>' reference.
-	 * @see #setFrom(Node)
-	 * @see uk.ac.open.dependency.dependency.DependencyPackage#getDependency_From()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>From</em>' reference.
+   * @see #setFrom(Node)
+   * @see uk.ac.open.dependency.dependency.DependencyPackage#getDependency_From()
+   * @model
+   * @generated
+   */
   Node getFrom();
 
   /**
-	 * Sets the value of the '{@link uk.ac.open.dependency.dependency.Dependency#getFrom <em>From</em>}' reference.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link uk.ac.open.dependency.dependency.Dependency#getFrom <em>From</em>}' reference.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>From</em>' reference.
-	 * @see #getFrom()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>From</em>' reference.
+   * @see #getFrom()
+   * @generated
+   */
   void setFrom(Node value);
 
   /**
-	 * Returns the value of the '<em><b>To</b></em>' reference.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>To</b></em>' reference.
+   * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>To</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>To</em>' reference.
-	 * @see #setTo(Node)
-	 * @see uk.ac.open.dependency.dependency.DependencyPackage#getDependency_To()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>To</em>' reference.
+   * @see #setTo(Node)
+   * @see uk.ac.open.dependency.dependency.DependencyPackage#getDependency_To()
+   * @model
+   * @generated
+   */
   Node getTo();
 
   /**
-	 * Sets the value of the '{@link uk.ac.open.dependency.dependency.Dependency#getTo <em>To</em>}' reference.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link uk.ac.open.dependency.dependency.Dependency#getTo <em>To</em>}' reference.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>To</em>' reference.
-	 * @see #getTo()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>To</em>' reference.
+   * @see #getTo()
+   * @generated
+   */
   void setTo(Node value);
 
 } // Dependency

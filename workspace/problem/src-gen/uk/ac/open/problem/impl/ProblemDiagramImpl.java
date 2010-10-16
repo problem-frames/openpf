@@ -45,294 +45,303 @@ import uk.ac.open.problem.ProblemPackage;
 public class ProblemDiagramImpl extends MinimalEObjectImpl.Container implements ProblemDiagram
 {
   /**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
   protected static final String NAME_EDEFAULT = null;
 
   /**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
   protected String name = NAME_EDEFAULT;
 
   /**
-	 * The cached value of the '{@link #getHighlight() <em>Highlight</em>}' reference.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getHighlight() <em>Highlight</em>}' reference.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getHighlight()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getHighlight()
+   * @generated
+   * @ordered
+   */
   protected Node highlight;
 
   /**
-	 * The cached value of the '{@link #getNodes() <em>Nodes</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getNodes() <em>Nodes</em>}' containment reference list.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getNodes()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getNodes()
+   * @generated
+   * @ordered
+   */
   protected EList<Node> nodes;
 
   /**
-	 * The cached value of the '{@link #getLinks() <em>Links</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getLinks() <em>Links</em>}' containment reference list.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getLinks()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getLinks()
+   * @generated
+   * @ordered
+   */
   protected EList<Link> links;
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected ProblemDiagramImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   protected EClass eStaticClass()
   {
-		return ProblemPackage.Literals.PROBLEM_DIAGRAM;
-	}
+    return ProblemPackage.Literals.PROBLEM_DIAGRAM;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public String getName()
   {
-		return name;
-	}
+    return name;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public void setName(String newName)
   {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.PROBLEM_DIAGRAM__NAME, oldName, name));
-	}
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.PROBLEM_DIAGRAM__NAME, oldName, name));
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Node getHighlight()
   {
-		if (highlight != null && highlight.eIsProxy()) {
-			InternalEObject oldHighlight = (InternalEObject)highlight;
-			highlight = (Node)eResolveProxy(oldHighlight);
-			if (highlight != oldHighlight) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ProblemPackage.PROBLEM_DIAGRAM__HIGHLIGHT, oldHighlight, highlight));
-			}
-		}
-		return highlight;
-	}
+    if (highlight != null && highlight.eIsProxy())
+    {
+      InternalEObject oldHighlight = (InternalEObject)highlight;
+      highlight = (Node)eResolveProxy(oldHighlight);
+      if (highlight != oldHighlight)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, ProblemPackage.PROBLEM_DIAGRAM__HIGHLIGHT, oldHighlight, highlight));
+      }
+    }
+    return highlight;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Node basicGetHighlight()
   {
-		return highlight;
-	}
+    return highlight;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public void setHighlight(Node newHighlight)
   {
-		Node oldHighlight = highlight;
-		highlight = newHighlight;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.PROBLEM_DIAGRAM__HIGHLIGHT, oldHighlight, highlight));
-	}
+    Node oldHighlight = highlight;
+    highlight = newHighlight;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.PROBLEM_DIAGRAM__HIGHLIGHT, oldHighlight, highlight));
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EList<Node> getNodes()
   {
-		if (nodes == null) {
-			nodes = new EObjectContainmentEList<Node>(Node.class, this, ProblemPackage.PROBLEM_DIAGRAM__NODES);
-		}
-		return nodes;
-	}
+    if (nodes == null)
+    {
+      nodes = new EObjectContainmentEList<Node>(Node.class, this, ProblemPackage.PROBLEM_DIAGRAM__NODES);
+    }
+    return nodes;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EList<Link> getLinks()
   {
-		if (links == null) {
-			links = new EObjectContainmentEList<Link>(Link.class, this, ProblemPackage.PROBLEM_DIAGRAM__LINKS);
-		}
-		return links;
-	}
+    if (links == null)
+    {
+      links = new EObjectContainmentEList<Link>(Link.class, this, ProblemPackage.PROBLEM_DIAGRAM__LINKS);
+    }
+    return links;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-		switch (featureID) {
-			case ProblemPackage.PROBLEM_DIAGRAM__NODES:
-				return ((InternalEList<?>)getNodes()).basicRemove(otherEnd, msgs);
-			case ProblemPackage.PROBLEM_DIAGRAM__LINKS:
-				return ((InternalEList<?>)getLinks()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    switch (featureID)
+    {
+      case ProblemPackage.PROBLEM_DIAGRAM__NODES:
+        return ((InternalEList<?>)getNodes()).basicRemove(otherEnd, msgs);
+      case ProblemPackage.PROBLEM_DIAGRAM__LINKS:
+        return ((InternalEList<?>)getLinks()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-		switch (featureID) {
-			case ProblemPackage.PROBLEM_DIAGRAM__NAME:
-				return getName();
-			case ProblemPackage.PROBLEM_DIAGRAM__HIGHLIGHT:
-				if (resolve) return getHighlight();
-				return basicGetHighlight();
-			case ProblemPackage.PROBLEM_DIAGRAM__NODES:
-				return getNodes();
-			case ProblemPackage.PROBLEM_DIAGRAM__LINKS:
-				return getLinks();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    switch (featureID)
+    {
+      case ProblemPackage.PROBLEM_DIAGRAM__NAME:
+        return getName();
+      case ProblemPackage.PROBLEM_DIAGRAM__HIGHLIGHT:
+        if (resolve) return getHighlight();
+        return basicGetHighlight();
+      case ProblemPackage.PROBLEM_DIAGRAM__NODES:
+        return getNodes();
+      case ProblemPackage.PROBLEM_DIAGRAM__LINKS:
+        return getLinks();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
-		switch (featureID) {
-			case ProblemPackage.PROBLEM_DIAGRAM__NAME:
-				setName((String)newValue);
-				return;
-			case ProblemPackage.PROBLEM_DIAGRAM__HIGHLIGHT:
-				setHighlight((Node)newValue);
-				return;
-			case ProblemPackage.PROBLEM_DIAGRAM__NODES:
-				getNodes().clear();
-				getNodes().addAll((Collection<? extends Node>)newValue);
-				return;
-			case ProblemPackage.PROBLEM_DIAGRAM__LINKS:
-				getLinks().clear();
-				getLinks().addAll((Collection<? extends Link>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    switch (featureID)
+    {
+      case ProblemPackage.PROBLEM_DIAGRAM__NAME:
+        setName((String)newValue);
+        return;
+      case ProblemPackage.PROBLEM_DIAGRAM__HIGHLIGHT:
+        setHighlight((Node)newValue);
+        return;
+      case ProblemPackage.PROBLEM_DIAGRAM__NODES:
+        getNodes().clear();
+        getNodes().addAll((Collection<? extends Node>)newValue);
+        return;
+      case ProblemPackage.PROBLEM_DIAGRAM__LINKS:
+        getLinks().clear();
+        getLinks().addAll((Collection<? extends Link>)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public void eUnset(int featureID)
   {
-		switch (featureID) {
-			case ProblemPackage.PROBLEM_DIAGRAM__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case ProblemPackage.PROBLEM_DIAGRAM__HIGHLIGHT:
-				setHighlight((Node)null);
-				return;
-			case ProblemPackage.PROBLEM_DIAGRAM__NODES:
-				getNodes().clear();
-				return;
-			case ProblemPackage.PROBLEM_DIAGRAM__LINKS:
-				getLinks().clear();
-				return;
-		}
-		super.eUnset(featureID);
-	}
+    switch (featureID)
+    {
+      case ProblemPackage.PROBLEM_DIAGRAM__NAME:
+        setName(NAME_EDEFAULT);
+        return;
+      case ProblemPackage.PROBLEM_DIAGRAM__HIGHLIGHT:
+        setHighlight((Node)null);
+        return;
+      case ProblemPackage.PROBLEM_DIAGRAM__NODES:
+        getNodes().clear();
+        return;
+      case ProblemPackage.PROBLEM_DIAGRAM__LINKS:
+        getLinks().clear();
+        return;
+    }
+    super.eUnset(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public boolean eIsSet(int featureID)
   {
-		switch (featureID) {
-			case ProblemPackage.PROBLEM_DIAGRAM__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case ProblemPackage.PROBLEM_DIAGRAM__HIGHLIGHT:
-				return highlight != null;
-			case ProblemPackage.PROBLEM_DIAGRAM__NODES:
-				return nodes != null && !nodes.isEmpty();
-			case ProblemPackage.PROBLEM_DIAGRAM__LINKS:
-				return links != null && !links.isEmpty();
-		}
-		return super.eIsSet(featureID);
-	}
+    switch (featureID)
+    {
+      case ProblemPackage.PROBLEM_DIAGRAM__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case ProblemPackage.PROBLEM_DIAGRAM__HIGHLIGHT:
+        return highlight != null;
+      case ProblemPackage.PROBLEM_DIAGRAM__NODES:
+        return nodes != null && !nodes.isEmpty();
+      case ProblemPackage.PROBLEM_DIAGRAM__LINKS:
+        return links != null && !links.isEmpty();
+    }
+    return super.eIsSet(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public String toString()
   {
-		if (eIsProxy()) return super.toString();
+    if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
-	}
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (name: ");
+    result.append(name);
+    result.append(')');
+    return result.toString();
+  }
 
 } //ProblemDiagramImpl

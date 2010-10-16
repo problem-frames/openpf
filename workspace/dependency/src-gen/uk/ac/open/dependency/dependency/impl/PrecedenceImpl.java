@@ -22,24 +22,24 @@ import uk.ac.open.dependency.dependency.Precedence;
 public class PrecedenceImpl extends DependencyImpl implements Precedence
 {
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected PrecedenceImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   protected EClass eStaticClass()
   {
-		return DependencyPackage.Literals.PRECEDENCE;
-	}
+    return DependencyPackage.Literals.PRECEDENCE;
+  }
 
 } //PrecedenceImpl

@@ -165,7 +165,7 @@ public class Openome_modelDiagramEditorUtil {
 
 	/**
 	 * This method should be called within a workspace modify operation since it creates resources.
-	 * @generated
+	 * @generated NOT
 	 */
 	public static Resource createDiagram(URI diagramURI, URI modelURI,
 			IProgressMonitor progressMonitor) {
@@ -189,7 +189,7 @@ public class Openome_modelDiagramEditorUtil {
 					throws ExecutionException {
 				edu.toronto.cs.openome_model.Model model = createInitialModel();
 				attachModelToResource(model, modelResource);
-
+				model.setName("default");
 				Diagram diagram = ViewService
 						.createDiagram(
 								model,

@@ -24,130 +24,134 @@ import uk.ac.open.dependency.dependency.*;
 public class DependencyFactoryImpl extends EFactoryImpl implements DependencyFactory
 {
   /**
-	 * Creates the default factory implementation.
-	 * <!-- begin-user-doc -->
+   * Creates the default factory implementation.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public static DependencyFactory init()
   {
-		try {
-			DependencyFactory theDependencyFactory = (DependencyFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.Dependency"); 
-			if (theDependencyFactory != null) {
-				return theDependencyFactory;
-			}
-		}
-		catch (Exception exception) {
-			EcorePlugin.INSTANCE.log(exception);
-		}
-		return new DependencyFactoryImpl();
-	}
+    try
+    {
+      DependencyFactory theDependencyFactory = (DependencyFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.Dependency"); 
+      if (theDependencyFactory != null)
+      {
+        return theDependencyFactory;
+      }
+    }
+    catch (Exception exception)
+    {
+      EcorePlugin.INSTANCE.log(exception);
+    }
+    return new DependencyFactoryImpl();
+  }
 
   /**
-	 * Creates an instance of the factory.
-	 * <!-- begin-user-doc -->
+   * Creates an instance of the factory.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public DependencyFactoryImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public EObject create(EClass eClass)
   {
-		switch (eClass.getClassifierID()) {
-			case DependencyPackage.MODEL: return createModel();
-			case DependencyPackage.NODE: return createNode();
-			case DependencyPackage.DEPENDENCY: return createDependency();
-			case DependencyPackage.COUPLING: return createCoupling();
-			case DependencyPackage.PRECEDENCE: return createPrecedence();
-			default:
-				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-		}
-	}
+    switch (eClass.getClassifierID())
+    {
+      case DependencyPackage.MODEL: return createModel();
+      case DependencyPackage.NODE: return createNode();
+      case DependencyPackage.DEPENDENCY: return createDependency();
+      case DependencyPackage.COUPLING: return createCoupling();
+      case DependencyPackage.PRECEDENCE: return createPrecedence();
+      default:
+        throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Model createModel()
   {
-		ModelImpl model = new ModelImpl();
-		return model;
-	}
+    ModelImpl model = new ModelImpl();
+    return model;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Node createNode()
   {
-		NodeImpl node = new NodeImpl();
-		return node;
-	}
+    NodeImpl node = new NodeImpl();
+    return node;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Dependency createDependency()
   {
-		DependencyImpl dependency = new DependencyImpl();
-		return dependency;
-	}
+    DependencyImpl dependency = new DependencyImpl();
+    return dependency;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Coupling createCoupling()
   {
-		CouplingImpl coupling = new CouplingImpl();
-		return coupling;
-	}
+    CouplingImpl coupling = new CouplingImpl();
+    return coupling;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Precedence createPrecedence()
   {
-		PrecedenceImpl precedence = new PrecedenceImpl();
-		return precedence;
-	}
+    PrecedenceImpl precedence = new PrecedenceImpl();
+    return precedence;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public DependencyPackage getDependencyPackage()
   {
-		return (DependencyPackage)getEPackage();
-	}
+    return (DependencyPackage)getEPackage();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @deprecated
-	 * @generated
-	 */
+   * @deprecated
+   * @generated
+   */
   @Deprecated
   public static DependencyPackage getPackage()
   {
-		return DependencyPackage.eINSTANCE;
-	}
+    return DependencyPackage.eINSTANCE;
+  }
 
 } //DependencyFactoryImpl

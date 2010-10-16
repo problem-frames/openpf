@@ -9,6 +9,7 @@
   <genPackages prefix="Dependency" basePackage="uk.ac.open.dependency" disposableProviderFactory="true"
       ecorePackage="Dependency.ecore#/">
     <genClasses ecoreClass="Dependency.ecore#//Model">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dependency.ecore#//Model/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dependency.ecore#//Model/nodes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dependency.ecore#//Model/dependencies"/>
     </genClasses>

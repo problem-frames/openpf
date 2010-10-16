@@ -176,10 +176,10 @@ public class DependencyDiagramEditorUtil {
 					throws ExecutionException {
 				Model model = createInitialModel();
 				attachModelToResource(model, modelResource);
-
+				model.setName("default");
 				Diagram diagram = ViewService.createDiagram(model,
 						ModelEditPart.MODEL_ID,
-						DependencyDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT);
+						DependencyDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT);				
 				if (diagram != null) {
 					diagramResource.getContents().add(diagram);
 					diagram.setName(diagramName);
@@ -187,9 +187,9 @@ public class DependencyDiagramEditorUtil {
 				}
 
 				try {
-					//					modelResource
-					//							.save(uk.ac.open.dependency.dependency.diagram.part.DependencyDiagramEditorUtil
-					//									.getSaveOptions());
+					modelResource
+							.save(uk.ac.open.dependency.dependency.diagram.part.DependencyDiagramEditorUtil
+									.getSaveOptions());
 					diagramResource
 							.save(uk.ac.open.dependency.dependency.diagram.part.DependencyDiagramEditorUtil
 									.getSaveOptions());

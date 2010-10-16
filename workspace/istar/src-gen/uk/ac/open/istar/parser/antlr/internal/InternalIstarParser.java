@@ -108,7 +108,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleModel
-    // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:86:1: ruleModel returns [EObject current=null] : ( () 'istar' ( (lv_name_2_0= RULE_ID ) )? ':' ( ( (lv_containers_4_0= ruleContainer ) ) | ( (lv_intentions_5_0= ruleIntention ) ) | ( (lv_decompositions_6_0= ruleDecomposition ) ) | ( (lv_dependencies_7_0= ruleDependency ) ) | ( (lv_contributions_8_0= ruleContribution ) ) | ( (lv_associations_9_0= ruleAssociation ) ) )* ) ;
+    // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:86:1: ruleModel returns [EObject current=null] : ( () ( 'istar' ( (lv_name_2_0= RULE_ID ) ) )? ':' ( ( (lv_containers_4_0= ruleContainer ) ) | ( (lv_intentions_5_0= ruleIntention ) ) | ( (lv_decompositions_6_0= ruleDecomposition ) ) | ( (lv_dependencies_7_0= ruleDependency ) ) | ( (lv_contributions_8_0= ruleContribution ) ) | ( (lv_associations_9_0= ruleAssociation ) ) )* ) ;
     public final EObject ruleModel() throws RecognitionException {
         EObject current = null;
 
@@ -129,11 +129,11 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:91:6: ( ( () 'istar' ( (lv_name_2_0= RULE_ID ) )? ':' ( ( (lv_containers_4_0= ruleContainer ) ) | ( (lv_intentions_5_0= ruleIntention ) ) | ( (lv_decompositions_6_0= ruleDecomposition ) ) | ( (lv_dependencies_7_0= ruleDependency ) ) | ( (lv_contributions_8_0= ruleContribution ) ) | ( (lv_associations_9_0= ruleAssociation ) ) )* ) )
-            // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:92:1: ( () 'istar' ( (lv_name_2_0= RULE_ID ) )? ':' ( ( (lv_containers_4_0= ruleContainer ) ) | ( (lv_intentions_5_0= ruleIntention ) ) | ( (lv_decompositions_6_0= ruleDecomposition ) ) | ( (lv_dependencies_7_0= ruleDependency ) ) | ( (lv_contributions_8_0= ruleContribution ) ) | ( (lv_associations_9_0= ruleAssociation ) ) )* )
+            // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:91:6: ( ( () ( 'istar' ( (lv_name_2_0= RULE_ID ) ) )? ':' ( ( (lv_containers_4_0= ruleContainer ) ) | ( (lv_intentions_5_0= ruleIntention ) ) | ( (lv_decompositions_6_0= ruleDecomposition ) ) | ( (lv_dependencies_7_0= ruleDependency ) ) | ( (lv_contributions_8_0= ruleContribution ) ) | ( (lv_associations_9_0= ruleAssociation ) ) )* ) )
+            // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:92:1: ( () ( 'istar' ( (lv_name_2_0= RULE_ID ) ) )? ':' ( ( (lv_containers_4_0= ruleContainer ) ) | ( (lv_intentions_5_0= ruleIntention ) ) | ( (lv_decompositions_6_0= ruleDecomposition ) ) | ( (lv_dependencies_7_0= ruleDependency ) ) | ( (lv_contributions_8_0= ruleContribution ) ) | ( (lv_associations_9_0= ruleAssociation ) ) )* )
             {
-            // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:92:1: ( () 'istar' ( (lv_name_2_0= RULE_ID ) )? ':' ( ( (lv_containers_4_0= ruleContainer ) ) | ( (lv_intentions_5_0= ruleIntention ) ) | ( (lv_decompositions_6_0= ruleDecomposition ) ) | ( (lv_dependencies_7_0= ruleDependency ) ) | ( (lv_contributions_8_0= ruleContribution ) ) | ( (lv_associations_9_0= ruleAssociation ) ) )* )
-            // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:92:2: () 'istar' ( (lv_name_2_0= RULE_ID ) )? ':' ( ( (lv_containers_4_0= ruleContainer ) ) | ( (lv_intentions_5_0= ruleIntention ) ) | ( (lv_decompositions_6_0= ruleDecomposition ) ) | ( (lv_dependencies_7_0= ruleDependency ) ) | ( (lv_contributions_8_0= ruleContribution ) ) | ( (lv_associations_9_0= ruleAssociation ) ) )*
+            // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:92:1: ( () ( 'istar' ( (lv_name_2_0= RULE_ID ) ) )? ':' ( ( (lv_containers_4_0= ruleContainer ) ) | ( (lv_intentions_5_0= ruleIntention ) ) | ( (lv_decompositions_6_0= ruleDecomposition ) ) | ( (lv_dependencies_7_0= ruleDependency ) ) | ( (lv_contributions_8_0= ruleContribution ) ) | ( (lv_associations_9_0= ruleAssociation ) ) )* )
+            // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:92:2: () ( 'istar' ( (lv_name_2_0= RULE_ID ) ) )? ':' ( ( (lv_containers_4_0= ruleContainer ) ) | ( (lv_intentions_5_0= ruleIntention ) ) | ( (lv_decompositions_6_0= ruleDecomposition ) ) | ( (lv_dependencies_7_0= ruleDependency ) ) | ( (lv_contributions_8_0= ruleContribution ) ) | ( (lv_associations_9_0= ruleAssociation ) ) )*
             {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:92:2: ()
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:93:5: 
@@ -151,28 +151,31 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,11,FollowSets000.FOLLOW_11_in_ruleModel129); 
-
-                    createLeafNode(grammarAccess.getModelAccess().getIstarKeyword_1(), null); 
-                
-            // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:107:1: ( (lv_name_2_0= RULE_ID ) )?
+            // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:103:2: ( 'istar' ( (lv_name_2_0= RULE_ID ) ) )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
-            if ( (LA1_0==RULE_ID) ) {
+            if ( (LA1_0==11) ) {
                 alt1=1;
             }
             switch (alt1) {
                 case 1 :
+                    // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:103:4: 'istar' ( (lv_name_2_0= RULE_ID ) )
+                    {
+                    match(input,11,FollowSets000.FOLLOW_11_in_ruleModel130); 
+
+                            createLeafNode(grammarAccess.getModelAccess().getIstarKeyword_1_0(), null); 
+                        
+                    // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:107:1: ( (lv_name_2_0= RULE_ID ) )
                     // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:108:1: (lv_name_2_0= RULE_ID )
                     {
                     // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:108:1: (lv_name_2_0= RULE_ID )
                     // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:109:3: lv_name_2_0= RULE_ID
                     {
                     lv_name_2_0=(Token)input.LT(1);
-                    match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleModel146); 
+                    match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleModel147); 
 
-                    			createLeafNode(grammarAccess.getModelAccess().getNameIDTerminalRuleCall_2_0(), "name"); 
+                    			createLeafNode(grammarAccess.getModelAccess().getNameIDTerminalRuleCall_1_1_0(), "name"); 
                     		
 
                     	        if (current==null) {
@@ -195,13 +198,16 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
 
 
                     }
+
+
+                    }
                     break;
 
             }
 
-            match(input,12,FollowSets000.FOLLOW_12_in_ruleModel162); 
+            match(input,12,FollowSets000.FOLLOW_12_in_ruleModel164); 
 
-                    createLeafNode(grammarAccess.getModelAccess().getColonKeyword_3(), null); 
+                    createLeafNode(grammarAccess.getModelAccess().getColonKeyword_2(), null); 
                 
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:135:1: ( ( (lv_containers_4_0= ruleContainer ) ) | ( (lv_intentions_5_0= ruleIntention ) ) | ( (lv_decompositions_6_0= ruleDecomposition ) ) | ( (lv_dependencies_7_0= ruleDependency ) ) | ( (lv_contributions_8_0= ruleContribution ) ) | ( (lv_associations_9_0= ruleAssociation ) ) )*
             loop2:
@@ -233,15 +239,15 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                         alt2=6;
                         }
                         break;
-                    case 25:
-                        {
-                        alt2=4;
-                        }
-                        break;
                     case 26:
                     case 27:
                         {
                         alt2=3;
+                        }
+                        break;
+                    case 25:
+                        {
+                        alt2=4;
                         }
                         break;
                     case 28:
@@ -273,9 +279,9 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             	    // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:137:3: lv_containers_4_0= ruleContainer
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getContainersContainerParserRuleCall_4_0_0(), currentNode); 
+            	    	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getContainersContainerParserRuleCall_3_0_0(), currentNode); 
             	    	    
-            	    pushFollow(FollowSets000.FOLLOW_ruleContainer_in_ruleModel184);
+            	    pushFollow(FollowSets000.FOLLOW_ruleContainer_in_ruleModel186);
             	    lv_containers_4_0=ruleContainer();
             	    _fsp--;
 
@@ -315,9 +321,9 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             	    // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:162:3: lv_intentions_5_0= ruleIntention
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getIntentionsIntentionParserRuleCall_4_1_0(), currentNode); 
+            	    	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getIntentionsIntentionParserRuleCall_3_1_0(), currentNode); 
             	    	    
-            	    pushFollow(FollowSets000.FOLLOW_ruleIntention_in_ruleModel211);
+            	    pushFollow(FollowSets000.FOLLOW_ruleIntention_in_ruleModel213);
             	    lv_intentions_5_0=ruleIntention();
             	    _fsp--;
 
@@ -357,9 +363,9 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             	    // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:187:3: lv_decompositions_6_0= ruleDecomposition
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getDecompositionsDecompositionParserRuleCall_4_2_0(), currentNode); 
+            	    	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getDecompositionsDecompositionParserRuleCall_3_2_0(), currentNode); 
             	    	    
-            	    pushFollow(FollowSets000.FOLLOW_ruleDecomposition_in_ruleModel238);
+            	    pushFollow(FollowSets000.FOLLOW_ruleDecomposition_in_ruleModel240);
             	    lv_decompositions_6_0=ruleDecomposition();
             	    _fsp--;
 
@@ -399,9 +405,9 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             	    // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:212:3: lv_dependencies_7_0= ruleDependency
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getDependenciesDependencyParserRuleCall_4_3_0(), currentNode); 
+            	    	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getDependenciesDependencyParserRuleCall_3_3_0(), currentNode); 
             	    	    
-            	    pushFollow(FollowSets000.FOLLOW_ruleDependency_in_ruleModel265);
+            	    pushFollow(FollowSets000.FOLLOW_ruleDependency_in_ruleModel267);
             	    lv_dependencies_7_0=ruleDependency();
             	    _fsp--;
 
@@ -441,9 +447,9 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             	    // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:237:3: lv_contributions_8_0= ruleContribution
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getContributionsContributionParserRuleCall_4_4_0(), currentNode); 
+            	    	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getContributionsContributionParserRuleCall_3_4_0(), currentNode); 
             	    	    
-            	    pushFollow(FollowSets000.FOLLOW_ruleContribution_in_ruleModel292);
+            	    pushFollow(FollowSets000.FOLLOW_ruleContribution_in_ruleModel294);
             	    lv_contributions_8_0=ruleContribution();
             	    _fsp--;
 
@@ -483,9 +489,9 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             	    // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:262:3: lv_associations_9_0= ruleAssociation
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getAssociationsAssociationParserRuleCall_4_5_0(), currentNode); 
+            	    	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getAssociationsAssociationParserRuleCall_3_5_0(), currentNode); 
             	    	    
-            	    pushFollow(FollowSets000.FOLLOW_ruleAssociation_in_ruleModel319);
+            	    pushFollow(FollowSets000.FOLLOW_ruleAssociation_in_ruleModel321);
             	    lv_associations_9_0=ruleAssociation();
             	    _fsp--;
 
@@ -556,12 +562,12 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:294:2: iv_ruleContainer= ruleContainer EOF
             {
              currentNode = createCompositeNode(grammarAccess.getContainerRule(), currentNode); 
-            pushFollow(FollowSets000.FOLLOW_ruleContainer_in_entryRuleContainer357);
+            pushFollow(FollowSets000.FOLLOW_ruleContainer_in_entryRuleContainer359);
             iv_ruleContainer=ruleContainer();
             _fsp--;
 
              current =iv_ruleContainer; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleContainer367); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleContainer369); 
 
             }
 
@@ -635,7 +641,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                      
                             currentNode=createCompositeNode(grammarAccess.getContainerAccess().getActorParserRuleCall_0(), currentNode); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleActor_in_ruleContainer414);
+                    pushFollow(FollowSets000.FOLLOW_ruleActor_in_ruleContainer416);
                     this_Actor_0=ruleActor();
                     _fsp--;
 
@@ -652,7 +658,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                      
                             currentNode=createCompositeNode(grammarAccess.getContainerAccess().getAgentParserRuleCall_1(), currentNode); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleAgent_in_ruleContainer441);
+                    pushFollow(FollowSets000.FOLLOW_ruleAgent_in_ruleContainer443);
                     this_Agent_1=ruleAgent();
                     _fsp--;
 
@@ -669,7 +675,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                      
                             currentNode=createCompositeNode(grammarAccess.getContainerAccess().getRoleParserRuleCall_2(), currentNode); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleRole_in_ruleContainer468);
+                    pushFollow(FollowSets000.FOLLOW_ruleRole_in_ruleContainer470);
                     this_Role_2=ruleRole();
                     _fsp--;
 
@@ -686,7 +692,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                      
                             currentNode=createCompositeNode(grammarAccess.getContainerAccess().getPositionParserRuleCall_3(), currentNode); 
                         
-                    pushFollow(FollowSets000.FOLLOW_rulePosition_in_ruleContainer495);
+                    pushFollow(FollowSets000.FOLLOW_rulePosition_in_ruleContainer497);
                     this_Position_3=rulePosition();
                     _fsp--;
 
@@ -732,12 +738,12 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:356:2: iv_ruleActor= ruleActor EOF
             {
              currentNode = createCompositeNode(grammarAccess.getActorRule(), currentNode); 
-            pushFollow(FollowSets000.FOLLOW_ruleActor_in_entryRuleActor530);
+            pushFollow(FollowSets000.FOLLOW_ruleActor_in_entryRuleActor532);
             iv_ruleActor=ruleActor();
             _fsp--;
 
              current =iv_ruleActor; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleActor540); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleActor542); 
 
             }
 
@@ -772,7 +778,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:369:1: ( 'actor' ( (lv_name_1_0= RULE_ID ) ) ( ( ( RULE_ID ) ) | ( ( RULE_ID ) ) )* ( '{' ( (lv_intentions_5_0= ruleIntention ) )* '}' )? )
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:369:3: 'actor' ( (lv_name_1_0= RULE_ID ) ) ( ( ( RULE_ID ) ) | ( ( RULE_ID ) ) )* ( '{' ( (lv_intentions_5_0= ruleIntention ) )* '}' )?
             {
-            match(input,13,FollowSets000.FOLLOW_13_in_ruleActor575); 
+            match(input,13,FollowSets000.FOLLOW_13_in_ruleActor577); 
 
                     createLeafNode(grammarAccess.getActorAccess().getActorKeyword_0(), null); 
                 
@@ -783,7 +789,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:375:3: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleActor592); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleActor594); 
 
             			createLeafNode(grammarAccess.getActorAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
             		
@@ -842,7 +848,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             	    	            associateNodeWithAstElement(currentNode, current);
             	    	        }
             	            
-            	    match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleActor616); 
+            	    match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleActor618); 
 
             	    		createLeafNode(grammarAccess.getActorAccess().getIs_aActorCrossReference_2_0_0(), "is_a"); 
             	    	
@@ -870,7 +876,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             	    	            associateNodeWithAstElement(currentNode, current);
             	    	        }
             	            
-            	    match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleActor640); 
+            	    match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleActor642); 
 
             	    		createLeafNode(grammarAccess.getActorAccess().getIs_part_ofActorCrossReference_2_1_0(), "is_part_of"); 
             	    	
@@ -900,7 +906,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:426:6: '{' ( (lv_intentions_5_0= ruleIntention ) )* '}'
                     {
-                    match(input,14,FollowSets000.FOLLOW_14_in_ruleActor653); 
+                    match(input,14,FollowSets000.FOLLOW_14_in_ruleActor655); 
 
                             createLeafNode(grammarAccess.getActorAccess().getLeftCurlyBracketKeyword_3_0(), null); 
                         
@@ -925,7 +931,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                     	     
                     	    	        currentNode=createCompositeNode(grammarAccess.getActorAccess().getIntentionsIntentionParserRuleCall_3_1_0(), currentNode); 
                     	    	    
-                    	    pushFollow(FollowSets000.FOLLOW_ruleIntention_in_ruleActor674);
+                    	    pushFollow(FollowSets000.FOLLOW_ruleIntention_in_ruleActor676);
                     	    lv_intentions_5_0=ruleIntention();
                     	    _fsp--;
 
@@ -958,7 +964,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    match(input,15,FollowSets000.FOLLOW_15_in_ruleActor685); 
+                    match(input,15,FollowSets000.FOLLOW_15_in_ruleActor687); 
 
                             createLeafNode(grammarAccess.getActorAccess().getRightCurlyBracketKeyword_3_2(), null); 
                         
@@ -1003,12 +1009,12 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:468:2: iv_ruleAgent= ruleAgent EOF
             {
              currentNode = createCompositeNode(grammarAccess.getAgentRule(), currentNode); 
-            pushFollow(FollowSets000.FOLLOW_ruleAgent_in_entryRuleAgent723);
+            pushFollow(FollowSets000.FOLLOW_ruleAgent_in_entryRuleAgent725);
             iv_ruleAgent=ruleAgent();
             _fsp--;
 
              current =iv_ruleAgent; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleAgent733); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleAgent735); 
 
             }
 
@@ -1043,7 +1049,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:481:1: ( 'agent' ( (lv_name_1_0= RULE_ID ) ) ( '{' ( (lv_intentions_3_0= ruleIntention ) )* '}' )? )
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:481:3: 'agent' ( (lv_name_1_0= RULE_ID ) ) ( '{' ( (lv_intentions_3_0= ruleIntention ) )* '}' )?
             {
-            match(input,16,FollowSets000.FOLLOW_16_in_ruleAgent768); 
+            match(input,16,FollowSets000.FOLLOW_16_in_ruleAgent770); 
 
                     createLeafNode(grammarAccess.getAgentAccess().getAgentKeyword_0(), null); 
                 
@@ -1054,7 +1060,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:487:3: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleAgent785); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleAgent787); 
 
             			createLeafNode(grammarAccess.getAgentAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
             		
@@ -1091,7 +1097,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:509:4: '{' ( (lv_intentions_3_0= ruleIntention ) )* '}'
                     {
-                    match(input,14,FollowSets000.FOLLOW_14_in_ruleAgent801); 
+                    match(input,14,FollowSets000.FOLLOW_14_in_ruleAgent803); 
 
                             createLeafNode(grammarAccess.getAgentAccess().getLeftCurlyBracketKeyword_2_0(), null); 
                         
@@ -1116,7 +1122,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                     	     
                     	    	        currentNode=createCompositeNode(grammarAccess.getAgentAccess().getIntentionsIntentionParserRuleCall_2_1_0(), currentNode); 
                     	    	    
-                    	    pushFollow(FollowSets000.FOLLOW_ruleIntention_in_ruleAgent822);
+                    	    pushFollow(FollowSets000.FOLLOW_ruleIntention_in_ruleAgent824);
                     	    lv_intentions_3_0=ruleIntention();
                     	    _fsp--;
 
@@ -1149,7 +1155,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    match(input,15,FollowSets000.FOLLOW_15_in_ruleAgent833); 
+                    match(input,15,FollowSets000.FOLLOW_15_in_ruleAgent835); 
 
                             createLeafNode(grammarAccess.getAgentAccess().getRightCurlyBracketKeyword_2_2(), null); 
                         
@@ -1194,12 +1200,12 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:551:2: iv_ruleRole= ruleRole EOF
             {
              currentNode = createCompositeNode(grammarAccess.getRoleRule(), currentNode); 
-            pushFollow(FollowSets000.FOLLOW_ruleRole_in_entryRuleRole871);
+            pushFollow(FollowSets000.FOLLOW_ruleRole_in_entryRuleRole873);
             iv_ruleRole=ruleRole();
             _fsp--;
 
              current =iv_ruleRole; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleRole881); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleRole883); 
 
             }
 
@@ -1234,7 +1240,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:564:1: ( 'role' ( (lv_name_1_0= RULE_ID ) ) ( '{' ( (lv_intentions_3_0= ruleIntention ) )* '}' )? )
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:564:3: 'role' ( (lv_name_1_0= RULE_ID ) ) ( '{' ( (lv_intentions_3_0= ruleIntention ) )* '}' )?
             {
-            match(input,17,FollowSets000.FOLLOW_17_in_ruleRole916); 
+            match(input,17,FollowSets000.FOLLOW_17_in_ruleRole918); 
 
                     createLeafNode(grammarAccess.getRoleAccess().getRoleKeyword_0(), null); 
                 
@@ -1245,7 +1251,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:570:3: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleRole933); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleRole935); 
 
             			createLeafNode(grammarAccess.getRoleAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
             		
@@ -1282,7 +1288,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:592:4: '{' ( (lv_intentions_3_0= ruleIntention ) )* '}'
                     {
-                    match(input,14,FollowSets000.FOLLOW_14_in_ruleRole949); 
+                    match(input,14,FollowSets000.FOLLOW_14_in_ruleRole951); 
 
                             createLeafNode(grammarAccess.getRoleAccess().getLeftCurlyBracketKeyword_2_0(), null); 
                         
@@ -1307,7 +1313,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                     	     
                     	    	        currentNode=createCompositeNode(grammarAccess.getRoleAccess().getIntentionsIntentionParserRuleCall_2_1_0(), currentNode); 
                     	    	    
-                    	    pushFollow(FollowSets000.FOLLOW_ruleIntention_in_ruleRole970);
+                    	    pushFollow(FollowSets000.FOLLOW_ruleIntention_in_ruleRole972);
                     	    lv_intentions_3_0=ruleIntention();
                     	    _fsp--;
 
@@ -1340,7 +1346,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    match(input,15,FollowSets000.FOLLOW_15_in_ruleRole981); 
+                    match(input,15,FollowSets000.FOLLOW_15_in_ruleRole983); 
 
                             createLeafNode(grammarAccess.getRoleAccess().getRightCurlyBracketKeyword_2_2(), null); 
                         
@@ -1385,12 +1391,12 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:634:2: iv_rulePosition= rulePosition EOF
             {
              currentNode = createCompositeNode(grammarAccess.getPositionRule(), currentNode); 
-            pushFollow(FollowSets000.FOLLOW_rulePosition_in_entryRulePosition1019);
+            pushFollow(FollowSets000.FOLLOW_rulePosition_in_entryRulePosition1021);
             iv_rulePosition=rulePosition();
             _fsp--;
 
              current =iv_rulePosition; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRulePosition1029); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRulePosition1031); 
 
             }
 
@@ -1425,7 +1431,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:647:1: ( 'position' ( (lv_name_1_0= RULE_ID ) ) ( '{' ( (lv_intentions_3_0= ruleIntention ) )* '}' )? )
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:647:3: 'position' ( (lv_name_1_0= RULE_ID ) ) ( '{' ( (lv_intentions_3_0= ruleIntention ) )* '}' )?
             {
-            match(input,18,FollowSets000.FOLLOW_18_in_rulePosition1064); 
+            match(input,18,FollowSets000.FOLLOW_18_in_rulePosition1066); 
 
                     createLeafNode(grammarAccess.getPositionAccess().getPositionKeyword_0(), null); 
                 
@@ -1436,7 +1442,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:653:3: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rulePosition1081); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rulePosition1083); 
 
             			createLeafNode(grammarAccess.getPositionAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
             		
@@ -1473,7 +1479,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:675:4: '{' ( (lv_intentions_3_0= ruleIntention ) )* '}'
                     {
-                    match(input,14,FollowSets000.FOLLOW_14_in_rulePosition1097); 
+                    match(input,14,FollowSets000.FOLLOW_14_in_rulePosition1099); 
 
                             createLeafNode(grammarAccess.getPositionAccess().getLeftCurlyBracketKeyword_2_0(), null); 
                         
@@ -1498,7 +1504,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                     	     
                     	    	        currentNode=createCompositeNode(grammarAccess.getPositionAccess().getIntentionsIntentionParserRuleCall_2_1_0(), currentNode); 
                     	    	    
-                    	    pushFollow(FollowSets000.FOLLOW_ruleIntention_in_rulePosition1118);
+                    	    pushFollow(FollowSets000.FOLLOW_ruleIntention_in_rulePosition1120);
                     	    lv_intentions_3_0=ruleIntention();
                     	    _fsp--;
 
@@ -1531,7 +1537,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    match(input,15,FollowSets000.FOLLOW_15_in_rulePosition1129); 
+                    match(input,15,FollowSets000.FOLLOW_15_in_rulePosition1131); 
 
                             createLeafNode(grammarAccess.getPositionAccess().getRightCurlyBracketKeyword_2_2(), null); 
                         
@@ -1576,12 +1582,12 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:717:2: iv_ruleIntention= ruleIntention EOF
             {
              currentNode = createCompositeNode(grammarAccess.getIntentionRule(), currentNode); 
-            pushFollow(FollowSets000.FOLLOW_ruleIntention_in_entryRuleIntention1167);
+            pushFollow(FollowSets000.FOLLOW_ruleIntention_in_entryRuleIntention1169);
             iv_ruleIntention=ruleIntention();
             _fsp--;
 
              current =iv_ruleIntention; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleIntention1177); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleIntention1179); 
 
             }
 
@@ -1662,7 +1668,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                      
                             currentNode=createCompositeNode(grammarAccess.getIntentionAccess().getGoalParserRuleCall_0(), currentNode); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleGoal_in_ruleIntention1224);
+                    pushFollow(FollowSets000.FOLLOW_ruleGoal_in_ruleIntention1226);
                     this_Goal_0=ruleGoal();
                     _fsp--;
 
@@ -1679,7 +1685,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                      
                             currentNode=createCompositeNode(grammarAccess.getIntentionAccess().getSoftgoalParserRuleCall_1(), currentNode); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleSoftgoal_in_ruleIntention1251);
+                    pushFollow(FollowSets000.FOLLOW_ruleSoftgoal_in_ruleIntention1253);
                     this_Softgoal_1=ruleSoftgoal();
                     _fsp--;
 
@@ -1696,7 +1702,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                      
                             currentNode=createCompositeNode(grammarAccess.getIntentionAccess().getTaskParserRuleCall_2(), currentNode); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleTask_in_ruleIntention1278);
+                    pushFollow(FollowSets000.FOLLOW_ruleTask_in_ruleIntention1280);
                     this_Task_2=ruleTask();
                     _fsp--;
 
@@ -1713,7 +1719,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                      
                             currentNode=createCompositeNode(grammarAccess.getIntentionAccess().getResourceParserRuleCall_3(), currentNode); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleResource_in_ruleIntention1305);
+                    pushFollow(FollowSets000.FOLLOW_ruleResource_in_ruleIntention1307);
                     this_Resource_3=ruleResource();
                     _fsp--;
 
@@ -1730,7 +1736,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                      
                             currentNode=createCompositeNode(grammarAccess.getIntentionAccess().getBeliefParserRuleCall_4(), currentNode); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleBelief_in_ruleIntention1332);
+                    pushFollow(FollowSets000.FOLLOW_ruleBelief_in_ruleIntention1334);
                     this_Belief_4=ruleBelief();
                     _fsp--;
 
@@ -1776,12 +1782,12 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:789:2: iv_ruleGoal= ruleGoal EOF
             {
              currentNode = createCompositeNode(grammarAccess.getGoalRule(), currentNode); 
-            pushFollow(FollowSets000.FOLLOW_ruleGoal_in_entryRuleGoal1367);
+            pushFollow(FollowSets000.FOLLOW_ruleGoal_in_entryRuleGoal1369);
             iv_ruleGoal=ruleGoal();
             _fsp--;
 
              current =iv_ruleGoal; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleGoal1377); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleGoal1379); 
 
             }
 
@@ -1814,7 +1820,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:802:1: ( 'goal' ( (lv_name_1_0= RULE_ID ) ) ( '{' ( ( RULE_ID ) )* '}' )? )
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:802:3: 'goal' ( (lv_name_1_0= RULE_ID ) ) ( '{' ( ( RULE_ID ) )* '}' )?
             {
-            match(input,19,FollowSets000.FOLLOW_19_in_ruleGoal1412); 
+            match(input,19,FollowSets000.FOLLOW_19_in_ruleGoal1414); 
 
                     createLeafNode(grammarAccess.getGoalAccess().getGoalKeyword_0(), null); 
                 
@@ -1825,7 +1831,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:808:3: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleGoal1429); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleGoal1431); 
 
             			createLeafNode(grammarAccess.getGoalAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
             		
@@ -1862,7 +1868,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:830:4: '{' ( ( RULE_ID ) )* '}'
                     {
-                    match(input,14,FollowSets000.FOLLOW_14_in_ruleGoal1445); 
+                    match(input,14,FollowSets000.FOLLOW_14_in_ruleGoal1447); 
 
                             createLeafNode(grammarAccess.getGoalAccess().getLeftCurlyBracketKeyword_2_0(), null); 
                         
@@ -1890,7 +1896,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                     	    	            associateNodeWithAstElement(currentNode, current);
                     	    	        }
                     	            
-                    	    match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleGoal1463); 
+                    	    match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleGoal1465); 
 
                     	    		createLeafNode(grammarAccess.getGoalAccess().getDecompositionsDecompositionCrossReference_2_1_0(), "decompositions"); 
                     	    	
@@ -1906,7 +1912,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    match(input,15,FollowSets000.FOLLOW_15_in_ruleGoal1474); 
+                    match(input,15,FollowSets000.FOLLOW_15_in_ruleGoal1476); 
 
                             createLeafNode(grammarAccess.getGoalAccess().getRightCurlyBracketKeyword_2_2(), null); 
                         
@@ -1951,12 +1957,12 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:862:2: iv_ruleSoftgoal= ruleSoftgoal EOF
             {
              currentNode = createCompositeNode(grammarAccess.getSoftgoalRule(), currentNode); 
-            pushFollow(FollowSets000.FOLLOW_ruleSoftgoal_in_entryRuleSoftgoal1512);
+            pushFollow(FollowSets000.FOLLOW_ruleSoftgoal_in_entryRuleSoftgoal1514);
             iv_ruleSoftgoal=ruleSoftgoal();
             _fsp--;
 
              current =iv_ruleSoftgoal; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleSoftgoal1522); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleSoftgoal1524); 
 
             }
 
@@ -1989,7 +1995,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:875:1: ( 'soft' ( (lv_name_1_0= RULE_ID ) ) )
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:875:3: 'soft' ( (lv_name_1_0= RULE_ID ) )
             {
-            match(input,20,FollowSets000.FOLLOW_20_in_ruleSoftgoal1557); 
+            match(input,20,FollowSets000.FOLLOW_20_in_ruleSoftgoal1559); 
 
                     createLeafNode(grammarAccess.getSoftgoalAccess().getSoftKeyword_0(), null); 
                 
@@ -2000,7 +2006,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:881:3: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleSoftgoal1574); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleSoftgoal1576); 
 
             			createLeafNode(grammarAccess.getSoftgoalAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
             		
@@ -2061,12 +2067,12 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:913:2: iv_ruleTask= ruleTask EOF
             {
              currentNode = createCompositeNode(grammarAccess.getTaskRule(), currentNode); 
-            pushFollow(FollowSets000.FOLLOW_ruleTask_in_entryRuleTask1615);
+            pushFollow(FollowSets000.FOLLOW_ruleTask_in_entryRuleTask1617);
             iv_ruleTask=ruleTask();
             _fsp--;
 
              current =iv_ruleTask; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleTask1625); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleTask1627); 
 
             }
 
@@ -2099,7 +2105,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:926:1: ( 'task' ( (lv_name_1_0= RULE_ID ) ) )
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:926:3: 'task' ( (lv_name_1_0= RULE_ID ) )
             {
-            match(input,21,FollowSets000.FOLLOW_21_in_ruleTask1660); 
+            match(input,21,FollowSets000.FOLLOW_21_in_ruleTask1662); 
 
                     createLeafNode(grammarAccess.getTaskAccess().getTaskKeyword_0(), null); 
                 
@@ -2110,7 +2116,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:932:3: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleTask1677); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleTask1679); 
 
             			createLeafNode(grammarAccess.getTaskAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
             		
@@ -2171,12 +2177,12 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:964:2: iv_ruleResource= ruleResource EOF
             {
              currentNode = createCompositeNode(grammarAccess.getResourceRule(), currentNode); 
-            pushFollow(FollowSets000.FOLLOW_ruleResource_in_entryRuleResource1718);
+            pushFollow(FollowSets000.FOLLOW_ruleResource_in_entryRuleResource1720);
             iv_ruleResource=ruleResource();
             _fsp--;
 
              current =iv_ruleResource; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleResource1728); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleResource1730); 
 
             }
 
@@ -2209,7 +2215,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:977:1: ( 'resource' ( (lv_name_1_0= RULE_ID ) ) )
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:977:3: 'resource' ( (lv_name_1_0= RULE_ID ) )
             {
-            match(input,22,FollowSets000.FOLLOW_22_in_ruleResource1763); 
+            match(input,22,FollowSets000.FOLLOW_22_in_ruleResource1765); 
 
                     createLeafNode(grammarAccess.getResourceAccess().getResourceKeyword_0(), null); 
                 
@@ -2220,7 +2226,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:983:3: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleResource1780); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleResource1782); 
 
             			createLeafNode(grammarAccess.getResourceAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
             		
@@ -2281,12 +2287,12 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:1015:2: iv_ruleBelief= ruleBelief EOF
             {
              currentNode = createCompositeNode(grammarAccess.getBeliefRule(), currentNode); 
-            pushFollow(FollowSets000.FOLLOW_ruleBelief_in_entryRuleBelief1821);
+            pushFollow(FollowSets000.FOLLOW_ruleBelief_in_entryRuleBelief1823);
             iv_ruleBelief=ruleBelief();
             _fsp--;
 
              current =iv_ruleBelief; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleBelief1831); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleBelief1833); 
 
             }
 
@@ -2319,7 +2325,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:1028:1: ( 'belief' ( (lv_name_1_0= RULE_ID ) ) )
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:1028:3: 'belief' ( (lv_name_1_0= RULE_ID ) )
             {
-            match(input,23,FollowSets000.FOLLOW_23_in_ruleBelief1866); 
+            match(input,23,FollowSets000.FOLLOW_23_in_ruleBelief1868); 
 
                     createLeafNode(grammarAccess.getBeliefAccess().getBeliefKeyword_0(), null); 
                 
@@ -2330,7 +2336,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:1034:3: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleBelief1883); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleBelief1885); 
 
             			createLeafNode(grammarAccess.getBeliefAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
             		
@@ -2391,12 +2397,12 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:1070:2: iv_ruleAssociation= ruleAssociation EOF
             {
              currentNode = createCompositeNode(grammarAccess.getAssociationRule(), currentNode); 
-            pushFollow(FollowSets000.FOLLOW_ruleAssociation_in_entryRuleAssociation1928);
+            pushFollow(FollowSets000.FOLLOW_ruleAssociation_in_entryRuleAssociation1930);
             iv_ruleAssociation=ruleAssociation();
             _fsp--;
 
              current =iv_ruleAssociation; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleAssociation1938); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleAssociation1940); 
 
             }
 
@@ -2439,7 +2445,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleAssociation1981); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleAssociation1983); 
 
             		createLeafNode(grammarAccess.getAssociationAccess().getSourceContainerCrossReference_0_0(), "source"); 
             	
@@ -2449,7 +2455,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,24,FollowSets000.FOLLOW_24_in_ruleAssociation1991); 
+            match(input,24,FollowSets000.FOLLOW_24_in_ruleAssociation1993); 
 
                     createLeafNode(grammarAccess.getAssociationAccess().getTildeTildeGreaterThanSignKeyword_1(), null); 
                 
@@ -2465,7 +2471,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleAssociation2009); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleAssociation2011); 
 
             		createLeafNode(grammarAccess.getAssociationAccess().getTargetContainerCrossReference_2_0(), "target"); 
             	
@@ -2510,12 +2516,12 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:1125:2: iv_ruleDependency= ruleDependency EOF
             {
              currentNode = createCompositeNode(grammarAccess.getDependencyRule(), currentNode); 
-            pushFollow(FollowSets000.FOLLOW_ruleDependency_in_entryRuleDependency2045);
+            pushFollow(FollowSets000.FOLLOW_ruleDependency_in_entryRuleDependency2047);
             iv_ruleDependency=ruleDependency();
             _fsp--;
 
              current =iv_ruleDependency; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleDependency2055); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleDependency2057); 
 
             }
 
@@ -2558,7 +2564,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleDependency2098); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleDependency2100); 
 
             		createLeafNode(grammarAccess.getDependencyAccess().getDependencyFromDependableCrossReference_0_0(), "dependencyFrom"); 
             	
@@ -2568,7 +2574,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,25,FollowSets000.FOLLOW_25_in_ruleDependency2108); 
+            match(input,25,FollowSets000.FOLLOW_25_in_ruleDependency2110); 
 
                     createLeafNode(grammarAccess.getDependencyAccess().getTildeGreaterThanSignKeyword_1(), null); 
                 
@@ -2584,7 +2590,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleDependency2126); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleDependency2128); 
 
             		createLeafNode(grammarAccess.getDependencyAccess().getDependencyToDependableCrossReference_2_0(), "dependencyTo"); 
             	
@@ -2629,12 +2635,12 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:1180:2: iv_ruleDecomposition= ruleDecomposition EOF
             {
              currentNode = createCompositeNode(grammarAccess.getDecompositionRule(), currentNode); 
-            pushFollow(FollowSets000.FOLLOW_ruleDecomposition_in_entryRuleDecomposition2162);
+            pushFollow(FollowSets000.FOLLOW_ruleDecomposition_in_entryRuleDecomposition2164);
             iv_ruleDecomposition=ruleDecomposition();
             _fsp--;
 
              current =iv_ruleDecomposition; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleDecomposition2172); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleDecomposition2174); 
 
             }
 
@@ -2700,7 +2706,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                      
                             currentNode=createCompositeNode(grammarAccess.getDecompositionAccess().getAndDecompositionParserRuleCall_0(), currentNode); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleAndDecomposition_in_ruleDecomposition2219);
+                    pushFollow(FollowSets000.FOLLOW_ruleAndDecomposition_in_ruleDecomposition2221);
                     this_AndDecomposition_0=ruleAndDecomposition();
                     _fsp--;
 
@@ -2717,7 +2723,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                      
                             currentNode=createCompositeNode(grammarAccess.getDecompositionAccess().getOrDecompositionParserRuleCall_1(), currentNode); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleOrDecomposition_in_ruleDecomposition2246);
+                    pushFollow(FollowSets000.FOLLOW_ruleOrDecomposition_in_ruleDecomposition2248);
                     this_OrDecomposition_1=ruleOrDecomposition();
                     _fsp--;
 
@@ -2763,12 +2769,12 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:1222:2: iv_ruleAndDecomposition= ruleAndDecomposition EOF
             {
              currentNode = createCompositeNode(grammarAccess.getAndDecompositionRule(), currentNode); 
-            pushFollow(FollowSets000.FOLLOW_ruleAndDecomposition_in_entryRuleAndDecomposition2281);
+            pushFollow(FollowSets000.FOLLOW_ruleAndDecomposition_in_entryRuleAndDecomposition2283);
             iv_ruleAndDecomposition=ruleAndDecomposition();
             _fsp--;
 
              current =iv_ruleAndDecomposition; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleAndDecomposition2291); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleAndDecomposition2293); 
 
             }
 
@@ -2811,7 +2817,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleAndDecomposition2334); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleAndDecomposition2336); 
 
             		createLeafNode(grammarAccess.getAndDecompositionAccess().getTargetIntentionCrossReference_0_0(), "target"); 
             	
@@ -2821,7 +2827,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,26,FollowSets000.FOLLOW_26_in_ruleAndDecomposition2344); 
+            match(input,26,FollowSets000.FOLLOW_26_in_ruleAndDecomposition2346); 
 
                     createLeafNode(grammarAccess.getAndDecompositionAccess().getAndKeyword_1(), null); 
                 
@@ -2837,7 +2843,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleAndDecomposition2362); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleAndDecomposition2364); 
 
             		createLeafNode(grammarAccess.getAndDecompositionAccess().getSourceIntentionCrossReference_2_0(), "source"); 
             	
@@ -2882,12 +2888,12 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:1277:2: iv_ruleOrDecomposition= ruleOrDecomposition EOF
             {
              currentNode = createCompositeNode(grammarAccess.getOrDecompositionRule(), currentNode); 
-            pushFollow(FollowSets000.FOLLOW_ruleOrDecomposition_in_entryRuleOrDecomposition2398);
+            pushFollow(FollowSets000.FOLLOW_ruleOrDecomposition_in_entryRuleOrDecomposition2400);
             iv_ruleOrDecomposition=ruleOrDecomposition();
             _fsp--;
 
              current =iv_ruleOrDecomposition; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleOrDecomposition2408); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleOrDecomposition2410); 
 
             }
 
@@ -2930,7 +2936,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleOrDecomposition2451); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleOrDecomposition2453); 
 
             		createLeafNode(grammarAccess.getOrDecompositionAccess().getTargetIntentionCrossReference_0_0(), "target"); 
             	
@@ -2940,7 +2946,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,27,FollowSets000.FOLLOW_27_in_ruleOrDecomposition2461); 
+            match(input,27,FollowSets000.FOLLOW_27_in_ruleOrDecomposition2463); 
 
                     createLeafNode(grammarAccess.getOrDecompositionAccess().getOrKeyword_1(), null); 
                 
@@ -2956,7 +2962,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleOrDecomposition2479); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleOrDecomposition2481); 
 
             		createLeafNode(grammarAccess.getOrDecompositionAccess().getSourceIntentionCrossReference_2_0(), "source"); 
             	
@@ -3001,12 +3007,12 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:1332:2: iv_ruleContribution= ruleContribution EOF
             {
              currentNode = createCompositeNode(grammarAccess.getContributionRule(), currentNode); 
-            pushFollow(FollowSets000.FOLLOW_ruleContribution_in_entryRuleContribution2515);
+            pushFollow(FollowSets000.FOLLOW_ruleContribution_in_entryRuleContribution2517);
             iv_ruleContribution=ruleContribution();
             _fsp--;
 
              current =iv_ruleContribution; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleContribution2525); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleContribution2527); 
 
             }
 
@@ -3104,7 +3110,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                      
                             currentNode=createCompositeNode(grammarAccess.getContributionAccess().getAndContributionParserRuleCall_0(), currentNode); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleAndContribution_in_ruleContribution2572);
+                    pushFollow(FollowSets000.FOLLOW_ruleAndContribution_in_ruleContribution2574);
                     this_AndContribution_0=ruleAndContribution();
                     _fsp--;
 
@@ -3121,7 +3127,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                      
                             currentNode=createCompositeNode(grammarAccess.getContributionAccess().getOrContributionParserRuleCall_1(), currentNode); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleOrContribution_in_ruleContribution2599);
+                    pushFollow(FollowSets000.FOLLOW_ruleOrContribution_in_ruleContribution2601);
                     this_OrContribution_1=ruleOrContribution();
                     _fsp--;
 
@@ -3138,7 +3144,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                      
                             currentNode=createCompositeNode(grammarAccess.getContributionAccess().getHelpContributionParserRuleCall_2(), currentNode); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleHelpContribution_in_ruleContribution2626);
+                    pushFollow(FollowSets000.FOLLOW_ruleHelpContribution_in_ruleContribution2628);
                     this_HelpContribution_2=ruleHelpContribution();
                     _fsp--;
 
@@ -3155,7 +3161,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                      
                             currentNode=createCompositeNode(grammarAccess.getContributionAccess().getHurtContributionParserRuleCall_3(), currentNode); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleHurtContribution_in_ruleContribution2653);
+                    pushFollow(FollowSets000.FOLLOW_ruleHurtContribution_in_ruleContribution2655);
                     this_HurtContribution_3=ruleHurtContribution();
                     _fsp--;
 
@@ -3172,7 +3178,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                      
                             currentNode=createCompositeNode(grammarAccess.getContributionAccess().getMakeContributionParserRuleCall_4(), currentNode); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleMakeContribution_in_ruleContribution2680);
+                    pushFollow(FollowSets000.FOLLOW_ruleMakeContribution_in_ruleContribution2682);
                     this_MakeContribution_4=ruleMakeContribution();
                     _fsp--;
 
@@ -3189,7 +3195,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
                      
                             currentNode=createCompositeNode(grammarAccess.getContributionAccess().getBreakContributionParserRuleCall_5(), currentNode); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleBreakContribution_in_ruleContribution2707);
+                    pushFollow(FollowSets000.FOLLOW_ruleBreakContribution_in_ruleContribution2709);
                     this_BreakContribution_5=ruleBreakContribution();
                     _fsp--;
 
@@ -3235,12 +3241,12 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:1414:2: iv_ruleAndContribution= ruleAndContribution EOF
             {
              currentNode = createCompositeNode(grammarAccess.getAndContributionRule(), currentNode); 
-            pushFollow(FollowSets000.FOLLOW_ruleAndContribution_in_entryRuleAndContribution2742);
+            pushFollow(FollowSets000.FOLLOW_ruleAndContribution_in_entryRuleAndContribution2744);
             iv_ruleAndContribution=ruleAndContribution();
             _fsp--;
 
              current =iv_ruleAndContribution; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleAndContribution2752); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleAndContribution2754); 
 
             }
 
@@ -3283,7 +3289,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleAndContribution2795); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleAndContribution2797); 
 
             		createLeafNode(grammarAccess.getAndContributionAccess().getSourceIntentionCrossReference_0_0(), "source"); 
             	
@@ -3293,7 +3299,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,28,FollowSets000.FOLLOW_28_in_ruleAndContribution2805); 
+            match(input,28,FollowSets000.FOLLOW_28_in_ruleAndContribution2807); 
 
                     createLeafNode(grammarAccess.getAndContributionAccess().getAndKeyword_1(), null); 
                 
@@ -3309,7 +3315,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleAndContribution2823); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleAndContribution2825); 
 
             		createLeafNode(grammarAccess.getAndContributionAccess().getTargetIntentionCrossReference_2_0(), "target"); 
             	
@@ -3354,12 +3360,12 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:1469:2: iv_ruleOrContribution= ruleOrContribution EOF
             {
              currentNode = createCompositeNode(grammarAccess.getOrContributionRule(), currentNode); 
-            pushFollow(FollowSets000.FOLLOW_ruleOrContribution_in_entryRuleOrContribution2859);
+            pushFollow(FollowSets000.FOLLOW_ruleOrContribution_in_entryRuleOrContribution2861);
             iv_ruleOrContribution=ruleOrContribution();
             _fsp--;
 
              current =iv_ruleOrContribution; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleOrContribution2869); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleOrContribution2871); 
 
             }
 
@@ -3402,7 +3408,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleOrContribution2912); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleOrContribution2914); 
 
             		createLeafNode(grammarAccess.getOrContributionAccess().getSourceIntentionCrossReference_0_0(), "source"); 
             	
@@ -3412,7 +3418,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,29,FollowSets000.FOLLOW_29_in_ruleOrContribution2922); 
+            match(input,29,FollowSets000.FOLLOW_29_in_ruleOrContribution2924); 
 
                     createLeafNode(grammarAccess.getOrContributionAccess().getOrKeyword_1(), null); 
                 
@@ -3428,7 +3434,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleOrContribution2940); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleOrContribution2942); 
 
             		createLeafNode(grammarAccess.getOrContributionAccess().getTargetIntentionCrossReference_2_0(), "target"); 
             	
@@ -3473,12 +3479,12 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:1524:2: iv_ruleHelpContribution= ruleHelpContribution EOF
             {
              currentNode = createCompositeNode(grammarAccess.getHelpContributionRule(), currentNode); 
-            pushFollow(FollowSets000.FOLLOW_ruleHelpContribution_in_entryRuleHelpContribution2976);
+            pushFollow(FollowSets000.FOLLOW_ruleHelpContribution_in_entryRuleHelpContribution2978);
             iv_ruleHelpContribution=ruleHelpContribution();
             _fsp--;
 
              current =iv_ruleHelpContribution; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleHelpContribution2986); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleHelpContribution2988); 
 
             }
 
@@ -3521,7 +3527,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleHelpContribution3029); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleHelpContribution3031); 
 
             		createLeafNode(grammarAccess.getHelpContributionAccess().getSourceIntentionCrossReference_0_0(), "source"); 
             	
@@ -3531,7 +3537,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,30,FollowSets000.FOLLOW_30_in_ruleHelpContribution3039); 
+            match(input,30,FollowSets000.FOLLOW_30_in_ruleHelpContribution3041); 
 
                     createLeafNode(grammarAccess.getHelpContributionAccess().getHyphenMinusLeftParenthesisPlusSignRightParenthesisHyphenMinusGreaterThanSignKeyword_1(), null); 
                 
@@ -3547,7 +3553,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleHelpContribution3057); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleHelpContribution3059); 
 
             		createLeafNode(grammarAccess.getHelpContributionAccess().getTargetIntentionCrossReference_2_0(), "target"); 
             	
@@ -3592,12 +3598,12 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:1579:2: iv_ruleMakeContribution= ruleMakeContribution EOF
             {
              currentNode = createCompositeNode(grammarAccess.getMakeContributionRule(), currentNode); 
-            pushFollow(FollowSets000.FOLLOW_ruleMakeContribution_in_entryRuleMakeContribution3093);
+            pushFollow(FollowSets000.FOLLOW_ruleMakeContribution_in_entryRuleMakeContribution3095);
             iv_ruleMakeContribution=ruleMakeContribution();
             _fsp--;
 
              current =iv_ruleMakeContribution; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleMakeContribution3103); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleMakeContribution3105); 
 
             }
 
@@ -3640,7 +3646,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleMakeContribution3146); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleMakeContribution3148); 
 
             		createLeafNode(grammarAccess.getMakeContributionAccess().getSourceIntentionCrossReference_0_0(), "source"); 
             	
@@ -3650,7 +3656,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,31,FollowSets000.FOLLOW_31_in_ruleMakeContribution3156); 
+            match(input,31,FollowSets000.FOLLOW_31_in_ruleMakeContribution3158); 
 
                     createLeafNode(grammarAccess.getMakeContributionAccess().getHyphenMinusLeftParenthesisPlusSignPlusSignRightParenthesisHyphenMinusGreaterThanSignKeyword_1(), null); 
                 
@@ -3666,7 +3672,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleMakeContribution3174); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleMakeContribution3176); 
 
             		createLeafNode(grammarAccess.getMakeContributionAccess().getTargetIntentionCrossReference_2_0(), "target"); 
             	
@@ -3711,12 +3717,12 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:1634:2: iv_ruleHurtContribution= ruleHurtContribution EOF
             {
              currentNode = createCompositeNode(grammarAccess.getHurtContributionRule(), currentNode); 
-            pushFollow(FollowSets000.FOLLOW_ruleHurtContribution_in_entryRuleHurtContribution3210);
+            pushFollow(FollowSets000.FOLLOW_ruleHurtContribution_in_entryRuleHurtContribution3212);
             iv_ruleHurtContribution=ruleHurtContribution();
             _fsp--;
 
              current =iv_ruleHurtContribution; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleHurtContribution3220); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleHurtContribution3222); 
 
             }
 
@@ -3759,7 +3765,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleHurtContribution3263); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleHurtContribution3265); 
 
             		createLeafNode(grammarAccess.getHurtContributionAccess().getSourceIntentionCrossReference_0_0(), "source"); 
             	
@@ -3769,7 +3775,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,32,FollowSets000.FOLLOW_32_in_ruleHurtContribution3273); 
+            match(input,32,FollowSets000.FOLLOW_32_in_ruleHurtContribution3275); 
 
                     createLeafNode(grammarAccess.getHurtContributionAccess().getHyphenMinusLeftParenthesisHyphenMinusRightParenthesisHyphenMinusGreaterThanSignKeyword_1(), null); 
                 
@@ -3785,7 +3791,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleHurtContribution3291); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleHurtContribution3293); 
 
             		createLeafNode(grammarAccess.getHurtContributionAccess().getTargetIntentionCrossReference_2_0(), "target"); 
             	
@@ -3830,12 +3836,12 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             // ../istar/src-gen/uk/ac/open/istar/parser/antlr/internal/InternalIstar.g:1689:2: iv_ruleBreakContribution= ruleBreakContribution EOF
             {
              currentNode = createCompositeNode(grammarAccess.getBreakContributionRule(), currentNode); 
-            pushFollow(FollowSets000.FOLLOW_ruleBreakContribution_in_entryRuleBreakContribution3327);
+            pushFollow(FollowSets000.FOLLOW_ruleBreakContribution_in_entryRuleBreakContribution3329);
             iv_ruleBreakContribution=ruleBreakContribution();
             _fsp--;
 
              current =iv_ruleBreakContribution; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleBreakContribution3337); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleBreakContribution3339); 
 
             }
 
@@ -3878,7 +3884,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleBreakContribution3380); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleBreakContribution3382); 
 
             		createLeafNode(grammarAccess.getBreakContributionAccess().getSourceIntentionCrossReference_0_0(), "source"); 
             	
@@ -3888,7 +3894,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,33,FollowSets000.FOLLOW_33_in_ruleBreakContribution3390); 
+            match(input,33,FollowSets000.FOLLOW_33_in_ruleBreakContribution3392); 
 
                     createLeafNode(grammarAccess.getBreakContributionAccess().getHyphenMinusLeftParenthesisHyphenMinusHyphenMinusRightParenthesisHyphenMinusGreaterThanSignKeyword_1(), null); 
                 
@@ -3904,7 +3910,7 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleBreakContribution3408); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleBreakContribution3410); 
 
             		createLeafNode(grammarAccess.getBreakContributionAccess().getTargetIntentionCrossReference_2_0(), "target"); 
             	
@@ -3942,143 +3948,143 @@ public class InternalIstarParser extends AbstractInternalAntlrParser {
     private static class FollowSets000 {
         public static final BitSet FOLLOW_ruleModel_in_entryRuleModel75 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_EOF_in_entryRuleModel85 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_11_in_ruleModel129 = new BitSet(new long[]{0x0000000000001010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleModel146 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleModel162 = new BitSet(new long[]{0x0000000000FF2012L});
-        public static final BitSet FOLLOW_ruleContainer_in_ruleModel184 = new BitSet(new long[]{0x0000000000FF2012L});
-        public static final BitSet FOLLOW_ruleIntention_in_ruleModel211 = new BitSet(new long[]{0x0000000000FF2012L});
-        public static final BitSet FOLLOW_ruleDecomposition_in_ruleModel238 = new BitSet(new long[]{0x0000000000FF2012L});
-        public static final BitSet FOLLOW_ruleDependency_in_ruleModel265 = new BitSet(new long[]{0x0000000000FF2012L});
-        public static final BitSet FOLLOW_ruleContribution_in_ruleModel292 = new BitSet(new long[]{0x0000000000FF2012L});
-        public static final BitSet FOLLOW_ruleAssociation_in_ruleModel319 = new BitSet(new long[]{0x0000000000FF2012L});
-        public static final BitSet FOLLOW_ruleContainer_in_entryRuleContainer357 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleContainer367 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleActor_in_ruleContainer414 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAgent_in_ruleContainer441 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleRole_in_ruleContainer468 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulePosition_in_ruleContainer495 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleActor_in_entryRuleActor530 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleActor540 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_13_in_ruleActor575 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleActor592 = new BitSet(new long[]{0x0000000000004012L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleActor616 = new BitSet(new long[]{0x0000000000004012L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleActor640 = new BitSet(new long[]{0x0000000000004012L});
-        public static final BitSet FOLLOW_14_in_ruleActor653 = new BitSet(new long[]{0x0000000000F88000L});
-        public static final BitSet FOLLOW_ruleIntention_in_ruleActor674 = new BitSet(new long[]{0x0000000000F88000L});
-        public static final BitSet FOLLOW_15_in_ruleActor685 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAgent_in_entryRuleAgent723 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleAgent733 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_16_in_ruleAgent768 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleAgent785 = new BitSet(new long[]{0x0000000000004002L});
-        public static final BitSet FOLLOW_14_in_ruleAgent801 = new BitSet(new long[]{0x0000000000F88000L});
-        public static final BitSet FOLLOW_ruleIntention_in_ruleAgent822 = new BitSet(new long[]{0x0000000000F88000L});
-        public static final BitSet FOLLOW_15_in_ruleAgent833 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleRole_in_entryRuleRole871 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleRole881 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_17_in_ruleRole916 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleRole933 = new BitSet(new long[]{0x0000000000004002L});
-        public static final BitSet FOLLOW_14_in_ruleRole949 = new BitSet(new long[]{0x0000000000F88000L});
-        public static final BitSet FOLLOW_ruleIntention_in_ruleRole970 = new BitSet(new long[]{0x0000000000F88000L});
-        public static final BitSet FOLLOW_15_in_ruleRole981 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulePosition_in_entryRulePosition1019 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRulePosition1029 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_18_in_rulePosition1064 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_rulePosition1081 = new BitSet(new long[]{0x0000000000004002L});
-        public static final BitSet FOLLOW_14_in_rulePosition1097 = new BitSet(new long[]{0x0000000000F88000L});
-        public static final BitSet FOLLOW_ruleIntention_in_rulePosition1118 = new BitSet(new long[]{0x0000000000F88000L});
-        public static final BitSet FOLLOW_15_in_rulePosition1129 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleIntention_in_entryRuleIntention1167 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleIntention1177 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleGoal_in_ruleIntention1224 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleSoftgoal_in_ruleIntention1251 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleTask_in_ruleIntention1278 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleResource_in_ruleIntention1305 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleBelief_in_ruleIntention1332 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleGoal_in_entryRuleGoal1367 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleGoal1377 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_19_in_ruleGoal1412 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleGoal1429 = new BitSet(new long[]{0x0000000000004002L});
-        public static final BitSet FOLLOW_14_in_ruleGoal1445 = new BitSet(new long[]{0x0000000000008010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleGoal1463 = new BitSet(new long[]{0x0000000000008010L});
-        public static final BitSet FOLLOW_15_in_ruleGoal1474 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleSoftgoal_in_entryRuleSoftgoal1512 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleSoftgoal1522 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_20_in_ruleSoftgoal1557 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleSoftgoal1574 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleTask_in_entryRuleTask1615 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleTask1625 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_21_in_ruleTask1660 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleTask1677 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleResource_in_entryRuleResource1718 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleResource1728 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_22_in_ruleResource1763 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleResource1780 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleBelief_in_entryRuleBelief1821 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleBelief1831 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_23_in_ruleBelief1866 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleBelief1883 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAssociation_in_entryRuleAssociation1928 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleAssociation1938 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleAssociation1981 = new BitSet(new long[]{0x0000000001000000L});
-        public static final BitSet FOLLOW_24_in_ruleAssociation1991 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleAssociation2009 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleDependency_in_entryRuleDependency2045 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleDependency2055 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleDependency2098 = new BitSet(new long[]{0x0000000002000000L});
-        public static final BitSet FOLLOW_25_in_ruleDependency2108 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleDependency2126 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleDecomposition_in_entryRuleDecomposition2162 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleDecomposition2172 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAndDecomposition_in_ruleDecomposition2219 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleOrDecomposition_in_ruleDecomposition2246 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAndDecomposition_in_entryRuleAndDecomposition2281 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleAndDecomposition2291 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleAndDecomposition2334 = new BitSet(new long[]{0x0000000004000000L});
-        public static final BitSet FOLLOW_26_in_ruleAndDecomposition2344 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleAndDecomposition2362 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleOrDecomposition_in_entryRuleOrDecomposition2398 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleOrDecomposition2408 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleOrDecomposition2451 = new BitSet(new long[]{0x0000000008000000L});
-        public static final BitSet FOLLOW_27_in_ruleOrDecomposition2461 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleOrDecomposition2479 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleContribution_in_entryRuleContribution2515 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleContribution2525 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAndContribution_in_ruleContribution2572 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleOrContribution_in_ruleContribution2599 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleHelpContribution_in_ruleContribution2626 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleHurtContribution_in_ruleContribution2653 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleMakeContribution_in_ruleContribution2680 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleBreakContribution_in_ruleContribution2707 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAndContribution_in_entryRuleAndContribution2742 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleAndContribution2752 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleAndContribution2795 = new BitSet(new long[]{0x0000000010000000L});
-        public static final BitSet FOLLOW_28_in_ruleAndContribution2805 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleAndContribution2823 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleOrContribution_in_entryRuleOrContribution2859 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleOrContribution2869 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleOrContribution2912 = new BitSet(new long[]{0x0000000020000000L});
-        public static final BitSet FOLLOW_29_in_ruleOrContribution2922 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleOrContribution2940 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleHelpContribution_in_entryRuleHelpContribution2976 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleHelpContribution2986 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleHelpContribution3029 = new BitSet(new long[]{0x0000000040000000L});
-        public static final BitSet FOLLOW_30_in_ruleHelpContribution3039 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleHelpContribution3057 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleMakeContribution_in_entryRuleMakeContribution3093 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleMakeContribution3103 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleMakeContribution3146 = new BitSet(new long[]{0x0000000080000000L});
-        public static final BitSet FOLLOW_31_in_ruleMakeContribution3156 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleMakeContribution3174 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleHurtContribution_in_entryRuleHurtContribution3210 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleHurtContribution3220 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleHurtContribution3263 = new BitSet(new long[]{0x0000000100000000L});
-        public static final BitSet FOLLOW_32_in_ruleHurtContribution3273 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleHurtContribution3291 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleBreakContribution_in_entryRuleBreakContribution3327 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleBreakContribution3337 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleBreakContribution3380 = new BitSet(new long[]{0x0000000200000000L});
-        public static final BitSet FOLLOW_33_in_ruleBreakContribution3390 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleBreakContribution3408 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_11_in_ruleModel130 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleModel147 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleModel164 = new BitSet(new long[]{0x0000000000FF2012L});
+        public static final BitSet FOLLOW_ruleContainer_in_ruleModel186 = new BitSet(new long[]{0x0000000000FF2012L});
+        public static final BitSet FOLLOW_ruleIntention_in_ruleModel213 = new BitSet(new long[]{0x0000000000FF2012L});
+        public static final BitSet FOLLOW_ruleDecomposition_in_ruleModel240 = new BitSet(new long[]{0x0000000000FF2012L});
+        public static final BitSet FOLLOW_ruleDependency_in_ruleModel267 = new BitSet(new long[]{0x0000000000FF2012L});
+        public static final BitSet FOLLOW_ruleContribution_in_ruleModel294 = new BitSet(new long[]{0x0000000000FF2012L});
+        public static final BitSet FOLLOW_ruleAssociation_in_ruleModel321 = new BitSet(new long[]{0x0000000000FF2012L});
+        public static final BitSet FOLLOW_ruleContainer_in_entryRuleContainer359 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleContainer369 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleActor_in_ruleContainer416 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleAgent_in_ruleContainer443 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleRole_in_ruleContainer470 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulePosition_in_ruleContainer497 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleActor_in_entryRuleActor532 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleActor542 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_13_in_ruleActor577 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleActor594 = new BitSet(new long[]{0x0000000000004012L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleActor618 = new BitSet(new long[]{0x0000000000004012L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleActor642 = new BitSet(new long[]{0x0000000000004012L});
+        public static final BitSet FOLLOW_14_in_ruleActor655 = new BitSet(new long[]{0x0000000000F88000L});
+        public static final BitSet FOLLOW_ruleIntention_in_ruleActor676 = new BitSet(new long[]{0x0000000000F88000L});
+        public static final BitSet FOLLOW_15_in_ruleActor687 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleAgent_in_entryRuleAgent725 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleAgent735 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_16_in_ruleAgent770 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleAgent787 = new BitSet(new long[]{0x0000000000004002L});
+        public static final BitSet FOLLOW_14_in_ruleAgent803 = new BitSet(new long[]{0x0000000000F88000L});
+        public static final BitSet FOLLOW_ruleIntention_in_ruleAgent824 = new BitSet(new long[]{0x0000000000F88000L});
+        public static final BitSet FOLLOW_15_in_ruleAgent835 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleRole_in_entryRuleRole873 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleRole883 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_17_in_ruleRole918 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleRole935 = new BitSet(new long[]{0x0000000000004002L});
+        public static final BitSet FOLLOW_14_in_ruleRole951 = new BitSet(new long[]{0x0000000000F88000L});
+        public static final BitSet FOLLOW_ruleIntention_in_ruleRole972 = new BitSet(new long[]{0x0000000000F88000L});
+        public static final BitSet FOLLOW_15_in_ruleRole983 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulePosition_in_entryRulePosition1021 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRulePosition1031 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_18_in_rulePosition1066 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_ID_in_rulePosition1083 = new BitSet(new long[]{0x0000000000004002L});
+        public static final BitSet FOLLOW_14_in_rulePosition1099 = new BitSet(new long[]{0x0000000000F88000L});
+        public static final BitSet FOLLOW_ruleIntention_in_rulePosition1120 = new BitSet(new long[]{0x0000000000F88000L});
+        public static final BitSet FOLLOW_15_in_rulePosition1131 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleIntention_in_entryRuleIntention1169 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleIntention1179 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleGoal_in_ruleIntention1226 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleSoftgoal_in_ruleIntention1253 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleTask_in_ruleIntention1280 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleResource_in_ruleIntention1307 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleBelief_in_ruleIntention1334 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleGoal_in_entryRuleGoal1369 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleGoal1379 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_19_in_ruleGoal1414 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleGoal1431 = new BitSet(new long[]{0x0000000000004002L});
+        public static final BitSet FOLLOW_14_in_ruleGoal1447 = new BitSet(new long[]{0x0000000000008010L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleGoal1465 = new BitSet(new long[]{0x0000000000008010L});
+        public static final BitSet FOLLOW_15_in_ruleGoal1476 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleSoftgoal_in_entryRuleSoftgoal1514 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleSoftgoal1524 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_20_in_ruleSoftgoal1559 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleSoftgoal1576 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleTask_in_entryRuleTask1617 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleTask1627 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_21_in_ruleTask1662 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleTask1679 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleResource_in_entryRuleResource1720 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleResource1730 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_22_in_ruleResource1765 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleResource1782 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleBelief_in_entryRuleBelief1823 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleBelief1833 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_23_in_ruleBelief1868 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleBelief1885 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleAssociation_in_entryRuleAssociation1930 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleAssociation1940 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleAssociation1983 = new BitSet(new long[]{0x0000000001000000L});
+        public static final BitSet FOLLOW_24_in_ruleAssociation1993 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleAssociation2011 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleDependency_in_entryRuleDependency2047 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleDependency2057 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleDependency2100 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_25_in_ruleDependency2110 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleDependency2128 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleDecomposition_in_entryRuleDecomposition2164 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleDecomposition2174 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleAndDecomposition_in_ruleDecomposition2221 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleOrDecomposition_in_ruleDecomposition2248 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleAndDecomposition_in_entryRuleAndDecomposition2283 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleAndDecomposition2293 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleAndDecomposition2336 = new BitSet(new long[]{0x0000000004000000L});
+        public static final BitSet FOLLOW_26_in_ruleAndDecomposition2346 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleAndDecomposition2364 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleOrDecomposition_in_entryRuleOrDecomposition2400 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleOrDecomposition2410 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleOrDecomposition2453 = new BitSet(new long[]{0x0000000008000000L});
+        public static final BitSet FOLLOW_27_in_ruleOrDecomposition2463 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleOrDecomposition2481 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleContribution_in_entryRuleContribution2517 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleContribution2527 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleAndContribution_in_ruleContribution2574 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleOrContribution_in_ruleContribution2601 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleHelpContribution_in_ruleContribution2628 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleHurtContribution_in_ruleContribution2655 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleMakeContribution_in_ruleContribution2682 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleBreakContribution_in_ruleContribution2709 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleAndContribution_in_entryRuleAndContribution2744 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleAndContribution2754 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleAndContribution2797 = new BitSet(new long[]{0x0000000010000000L});
+        public static final BitSet FOLLOW_28_in_ruleAndContribution2807 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleAndContribution2825 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleOrContribution_in_entryRuleOrContribution2861 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleOrContribution2871 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleOrContribution2914 = new BitSet(new long[]{0x0000000020000000L});
+        public static final BitSet FOLLOW_29_in_ruleOrContribution2924 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleOrContribution2942 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleHelpContribution_in_entryRuleHelpContribution2978 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleHelpContribution2988 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleHelpContribution3031 = new BitSet(new long[]{0x0000000040000000L});
+        public static final BitSet FOLLOW_30_in_ruleHelpContribution3041 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleHelpContribution3059 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleMakeContribution_in_entryRuleMakeContribution3095 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleMakeContribution3105 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleMakeContribution3148 = new BitSet(new long[]{0x0000000080000000L});
+        public static final BitSet FOLLOW_31_in_ruleMakeContribution3158 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleMakeContribution3176 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleHurtContribution_in_entryRuleHurtContribution3212 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleHurtContribution3222 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleHurtContribution3265 = new BitSet(new long[]{0x0000000100000000L});
+        public static final BitSet FOLLOW_32_in_ruleHurtContribution3275 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleHurtContribution3293 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleBreakContribution_in_entryRuleBreakContribution3329 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleBreakContribution3339 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleBreakContribution3382 = new BitSet(new long[]{0x0000000200000000L});
+        public static final BitSet FOLLOW_33_in_ruleBreakContribution3392 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleBreakContribution3410 = new BitSet(new long[]{0x0000000000000002L});
     }
 
 

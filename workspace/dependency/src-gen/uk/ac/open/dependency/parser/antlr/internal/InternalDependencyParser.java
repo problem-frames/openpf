@@ -24,7 +24,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalDependencyParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'{'", "'see'", "'}'", "'--'", "'->'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'graph'", "'{'", "'see'", "'}'", "'--'", "'->'"
     };
     public static final int RULE_ID=4;
     public static final int RULE_STRING=5;
@@ -108,56 +108,114 @@ public class InternalDependencyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleModel
-    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:86:1: ruleModel returns [EObject current=null] : ( ( (lv_nodes_0_0= ruleNode ) ) | ( (lv_dependencies_1_0= ruleDependency ) ) )* ;
+    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:86:1: ruleModel returns [EObject current=null] : ( ( 'graph' ( (lv_name_1_0= RULE_ID ) ) )? ( ( (lv_nodes_2_0= ruleNode ) ) | ( (lv_dependencies_3_0= ruleDependency ) ) )* ) ;
     public final EObject ruleModel() throws RecognitionException {
         EObject current = null;
 
-        EObject lv_nodes_0_0 = null;
+        Token lv_name_1_0=null;
+        EObject lv_nodes_2_0 = null;
 
-        EObject lv_dependencies_1_0 = null;
+        EObject lv_dependencies_3_0 = null;
 
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:91:6: ( ( ( (lv_nodes_0_0= ruleNode ) ) | ( (lv_dependencies_1_0= ruleDependency ) ) )* )
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:92:1: ( ( (lv_nodes_0_0= ruleNode ) ) | ( (lv_dependencies_1_0= ruleDependency ) ) )*
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:91:6: ( ( ( 'graph' ( (lv_name_1_0= RULE_ID ) ) )? ( ( (lv_nodes_2_0= ruleNode ) ) | ( (lv_dependencies_3_0= ruleDependency ) ) )* ) )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:92:1: ( ( 'graph' ( (lv_name_1_0= RULE_ID ) ) )? ( ( (lv_nodes_2_0= ruleNode ) ) | ( (lv_dependencies_3_0= ruleDependency ) ) )* )
             {
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:92:1: ( ( (lv_nodes_0_0= ruleNode ) ) | ( (lv_dependencies_1_0= ruleDependency ) ) )*
-            loop1:
-            do {
-                int alt1=3;
-                int LA1_0 = input.LA(1);
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:92:1: ( ( 'graph' ( (lv_name_1_0= RULE_ID ) ) )? ( ( (lv_nodes_2_0= ruleNode ) ) | ( (lv_dependencies_3_0= ruleDependency ) ) )* )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:92:2: ( 'graph' ( (lv_name_1_0= RULE_ID ) ) )? ( ( (lv_nodes_2_0= ruleNode ) ) | ( (lv_dependencies_3_0= ruleDependency ) ) )*
+            {
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:92:2: ( 'graph' ( (lv_name_1_0= RULE_ID ) ) )?
+            int alt1=2;
+            int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==RULE_ID) ) {
-                    int LA1_2 = input.LA(2);
+            if ( (LA1_0==11) ) {
+                alt1=1;
+            }
+            switch (alt1) {
+                case 1 :
+                    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:92:4: 'graph' ( (lv_name_1_0= RULE_ID ) )
+                    {
+                    match(input,11,FOLLOW_11_in_ruleModel121); 
 
-                    if ( ((LA1_2>=14 && LA1_2<=15)) ) {
-                        alt1=2;
+                            createLeafNode(grammarAccess.getModelAccess().getGraphKeyword_0_0(), null); 
+                        
+                    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:96:1: ( (lv_name_1_0= RULE_ID ) )
+                    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:97:1: (lv_name_1_0= RULE_ID )
+                    {
+                    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:97:1: (lv_name_1_0= RULE_ID )
+                    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:98:3: lv_name_1_0= RULE_ID
+                    {
+                    lv_name_1_0=(Token)input.LT(1);
+                    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleModel138); 
+
+                    			createLeafNode(grammarAccess.getModelAccess().getNameIDTerminalRuleCall_0_1_0(), "name"); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = factory.create(grammarAccess.getModelRule().getType().getClassifier());
+                    	            associateNodeWithAstElement(currentNode, current);
+                    	        }
+                    	        try {
+                    	       		set(
+                    	       			current, 
+                    	       			"name",
+                    	        		lv_name_1_0, 
+                    	        		"ID", 
+                    	        		lastConsumedNode);
+                    	        } catch (ValueConverterException vce) {
+                    				handleValueConverterException(vce);
+                    	        }
+                    	    
+
                     }
-                    else if ( (LA1_2==EOF||LA1_2==RULE_ID||LA1_2==11) ) {
-                        alt1=1;
+
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:120:4: ( ( (lv_nodes_2_0= ruleNode ) ) | ( (lv_dependencies_3_0= ruleDependency ) ) )*
+            loop2:
+            do {
+                int alt2=3;
+                int LA2_0 = input.LA(1);
+
+                if ( (LA2_0==RULE_ID) ) {
+                    int LA2_2 = input.LA(2);
+
+                    if ( ((LA2_2>=15 && LA2_2<=16)) ) {
+                        alt2=2;
+                    }
+                    else if ( (LA2_2==EOF||LA2_2==RULE_ID||LA2_2==12) ) {
+                        alt2=1;
                     }
 
 
                 }
 
 
-                switch (alt1) {
+                switch (alt2) {
             	case 1 :
-            	    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:92:2: ( (lv_nodes_0_0= ruleNode ) )
+            	    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:120:5: ( (lv_nodes_2_0= ruleNode ) )
             	    {
-            	    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:92:2: ( (lv_nodes_0_0= ruleNode ) )
-            	    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:93:1: (lv_nodes_0_0= ruleNode )
+            	    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:120:5: ( (lv_nodes_2_0= ruleNode ) )
+            	    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:121:1: (lv_nodes_2_0= ruleNode )
             	    {
-            	    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:93:1: (lv_nodes_0_0= ruleNode )
-            	    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:94:3: lv_nodes_0_0= ruleNode
+            	    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:121:1: (lv_nodes_2_0= ruleNode )
+            	    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:122:3: lv_nodes_2_0= ruleNode
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getNodesNodeParserRuleCall_0_0(), currentNode); 
+            	    	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getNodesNodeParserRuleCall_1_0_0(), currentNode); 
             	    	    
-            	    pushFollow(FOLLOW_ruleNode_in_ruleModel131);
-            	    lv_nodes_0_0=ruleNode();
+            	    pushFollow(FOLLOW_ruleNode_in_ruleModel167);
+            	    lv_nodes_2_0=ruleNode();
             	    _fsp--;
 
 
@@ -169,7 +227,7 @@ public class InternalDependencyParser extends AbstractInternalAntlrParser {
             	    	       		add(
             	    	       			current, 
             	    	       			"nodes",
-            	    	        		lv_nodes_0_0, 
+            	    	        		lv_nodes_2_0, 
             	    	        		"Node", 
             	    	        		currentNode);
             	    	        } catch (ValueConverterException vce) {
@@ -187,19 +245,19 @@ public class InternalDependencyParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:117:6: ( (lv_dependencies_1_0= ruleDependency ) )
+            	    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:145:6: ( (lv_dependencies_3_0= ruleDependency ) )
             	    {
-            	    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:117:6: ( (lv_dependencies_1_0= ruleDependency ) )
-            	    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:118:1: (lv_dependencies_1_0= ruleDependency )
+            	    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:145:6: ( (lv_dependencies_3_0= ruleDependency ) )
+            	    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:146:1: (lv_dependencies_3_0= ruleDependency )
             	    {
-            	    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:118:1: (lv_dependencies_1_0= ruleDependency )
-            	    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:119:3: lv_dependencies_1_0= ruleDependency
+            	    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:146:1: (lv_dependencies_3_0= ruleDependency )
+            	    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:147:3: lv_dependencies_3_0= ruleDependency
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getDependenciesDependencyParserRuleCall_1_0(), currentNode); 
+            	    	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getDependenciesDependencyParserRuleCall_1_1_0(), currentNode); 
             	    	    
-            	    pushFollow(FOLLOW_ruleDependency_in_ruleModel158);
-            	    lv_dependencies_1_0=ruleDependency();
+            	    pushFollow(FOLLOW_ruleDependency_in_ruleModel194);
+            	    lv_dependencies_3_0=ruleDependency();
             	    _fsp--;
 
 
@@ -211,7 +269,7 @@ public class InternalDependencyParser extends AbstractInternalAntlrParser {
             	    	       		add(
             	    	       			current, 
             	    	       			"dependencies",
-            	    	        		lv_dependencies_1_0, 
+            	    	        		lv_dependencies_3_0, 
             	    	        		"Dependency", 
             	    	        		currentNode);
             	    	        } catch (ValueConverterException vce) {
@@ -230,9 +288,12 @@ public class InternalDependencyParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop1;
+            	    break loop2;
                 }
             } while (true);
+
+
+            }
 
 
             }
@@ -254,7 +315,7 @@ public class InternalDependencyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleNode
-    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:149:1: entryRuleNode returns [EObject current=null] : iv_ruleNode= ruleNode EOF ;
+    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:177:1: entryRuleNode returns [EObject current=null] : iv_ruleNode= ruleNode EOF ;
     public final EObject entryRuleNode() throws RecognitionException {
         EObject current = null;
 
@@ -262,16 +323,16 @@ public class InternalDependencyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:150:2: (iv_ruleNode= ruleNode EOF )
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:151:2: iv_ruleNode= ruleNode EOF
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:178:2: (iv_ruleNode= ruleNode EOF )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:179:2: iv_ruleNode= ruleNode EOF
             {
              currentNode = createCompositeNode(grammarAccess.getNodeRule(), currentNode); 
-            pushFollow(FOLLOW_ruleNode_in_entryRuleNode195);
+            pushFollow(FOLLOW_ruleNode_in_entryRuleNode232);
             iv_ruleNode=ruleNode();
             _fsp--;
 
              current =iv_ruleNode; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNode205); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNode242); 
 
             }
 
@@ -289,7 +350,7 @@ public class InternalDependencyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleNode
-    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:158:1: ruleNode returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ( '{' ( 'see' ( (lv_referrence_3_0= RULE_STRING ) ) )* '}' )? ) ;
+    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:186:1: ruleNode returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ( '{' ( 'see' ( (lv_referrence_3_0= RULE_STRING ) ) )* '}' )? ) ;
     public final EObject ruleNode() throws RecognitionException {
         EObject current = null;
 
@@ -299,20 +360,20 @@ public class InternalDependencyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:163:6: ( ( ( (lv_name_0_0= RULE_ID ) ) ( '{' ( 'see' ( (lv_referrence_3_0= RULE_STRING ) ) )* '}' )? ) )
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:164:1: ( ( (lv_name_0_0= RULE_ID ) ) ( '{' ( 'see' ( (lv_referrence_3_0= RULE_STRING ) ) )* '}' )? )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:191:6: ( ( ( (lv_name_0_0= RULE_ID ) ) ( '{' ( 'see' ( (lv_referrence_3_0= RULE_STRING ) ) )* '}' )? ) )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:192:1: ( ( (lv_name_0_0= RULE_ID ) ) ( '{' ( 'see' ( (lv_referrence_3_0= RULE_STRING ) ) )* '}' )? )
             {
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:164:1: ( ( (lv_name_0_0= RULE_ID ) ) ( '{' ( 'see' ( (lv_referrence_3_0= RULE_STRING ) ) )* '}' )? )
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:164:2: ( (lv_name_0_0= RULE_ID ) ) ( '{' ( 'see' ( (lv_referrence_3_0= RULE_STRING ) ) )* '}' )?
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:192:1: ( ( (lv_name_0_0= RULE_ID ) ) ( '{' ( 'see' ( (lv_referrence_3_0= RULE_STRING ) ) )* '}' )? )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:192:2: ( (lv_name_0_0= RULE_ID ) ) ( '{' ( 'see' ( (lv_referrence_3_0= RULE_STRING ) ) )* '}' )?
             {
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:164:2: ( (lv_name_0_0= RULE_ID ) )
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:165:1: (lv_name_0_0= RULE_ID )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:192:2: ( (lv_name_0_0= RULE_ID ) )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:193:1: (lv_name_0_0= RULE_ID )
             {
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:165:1: (lv_name_0_0= RULE_ID )
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:166:3: lv_name_0_0= RULE_ID
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:193:1: (lv_name_0_0= RULE_ID )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:194:3: lv_name_0_0= RULE_ID
             {
             lv_name_0_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNode247); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNode284); 
 
             			createLeafNode(grammarAccess.getNodeAccess().getNameIDTerminalRuleCall_0_0(), "name"); 
             		
@@ -338,48 +399,48 @@ public class InternalDependencyParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:188:2: ( '{' ( 'see' ( (lv_referrence_3_0= RULE_STRING ) ) )* '}' )?
-            int alt3=2;
-            int LA3_0 = input.LA(1);
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:216:2: ( '{' ( 'see' ( (lv_referrence_3_0= RULE_STRING ) ) )* '}' )?
+            int alt4=2;
+            int LA4_0 = input.LA(1);
 
-            if ( (LA3_0==11) ) {
-                alt3=1;
+            if ( (LA4_0==12) ) {
+                alt4=1;
             }
-            switch (alt3) {
+            switch (alt4) {
                 case 1 :
-                    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:188:4: '{' ( 'see' ( (lv_referrence_3_0= RULE_STRING ) ) )* '}'
+                    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:216:4: '{' ( 'see' ( (lv_referrence_3_0= RULE_STRING ) ) )* '}'
                     {
-                    match(input,11,FOLLOW_11_in_ruleNode263); 
+                    match(input,12,FOLLOW_12_in_ruleNode300); 
 
                             createLeafNode(grammarAccess.getNodeAccess().getLeftCurlyBracketKeyword_1_0(), null); 
                         
-                    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:192:1: ( 'see' ( (lv_referrence_3_0= RULE_STRING ) ) )*
-                    loop2:
+                    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:220:1: ( 'see' ( (lv_referrence_3_0= RULE_STRING ) ) )*
+                    loop3:
                     do {
-                        int alt2=2;
-                        int LA2_0 = input.LA(1);
+                        int alt3=2;
+                        int LA3_0 = input.LA(1);
 
-                        if ( (LA2_0==12) ) {
-                            alt2=1;
+                        if ( (LA3_0==13) ) {
+                            alt3=1;
                         }
 
 
-                        switch (alt2) {
+                        switch (alt3) {
                     	case 1 :
-                    	    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:192:3: 'see' ( (lv_referrence_3_0= RULE_STRING ) )
+                    	    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:220:3: 'see' ( (lv_referrence_3_0= RULE_STRING ) )
                     	    {
-                    	    match(input,12,FOLLOW_12_in_ruleNode274); 
+                    	    match(input,13,FOLLOW_13_in_ruleNode311); 
 
                     	            createLeafNode(grammarAccess.getNodeAccess().getSeeKeyword_1_1_0(), null); 
                     	        
-                    	    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:196:1: ( (lv_referrence_3_0= RULE_STRING ) )
-                    	    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:197:1: (lv_referrence_3_0= RULE_STRING )
+                    	    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:224:1: ( (lv_referrence_3_0= RULE_STRING ) )
+                    	    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:225:1: (lv_referrence_3_0= RULE_STRING )
                     	    {
-                    	    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:197:1: (lv_referrence_3_0= RULE_STRING )
-                    	    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:198:3: lv_referrence_3_0= RULE_STRING
+                    	    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:225:1: (lv_referrence_3_0= RULE_STRING )
+                    	    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:226:3: lv_referrence_3_0= RULE_STRING
                     	    {
                     	    lv_referrence_3_0=(Token)input.LT(1);
-                    	    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleNode291); 
+                    	    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleNode328); 
 
                     	    			createLeafNode(grammarAccess.getNodeAccess().getReferrenceSTRINGTerminalRuleCall_1_1_1_0(), "referrence"); 
                     	    		
@@ -410,11 +471,11 @@ public class InternalDependencyParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop2;
+                    	    break loop3;
                         }
                     } while (true);
 
-                    match(input,13,FOLLOW_13_in_ruleNode308); 
+                    match(input,14,FOLLOW_14_in_ruleNode345); 
 
                             createLeafNode(grammarAccess.getNodeAccess().getRightCurlyBracketKeyword_1_2(), null); 
                         
@@ -447,7 +508,7 @@ public class InternalDependencyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleDependency
-    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:232:1: entryRuleDependency returns [EObject current=null] : iv_ruleDependency= ruleDependency EOF ;
+    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:260:1: entryRuleDependency returns [EObject current=null] : iv_ruleDependency= ruleDependency EOF ;
     public final EObject entryRuleDependency() throws RecognitionException {
         EObject current = null;
 
@@ -455,16 +516,16 @@ public class InternalDependencyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:233:2: (iv_ruleDependency= ruleDependency EOF )
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:234:2: iv_ruleDependency= ruleDependency EOF
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:261:2: (iv_ruleDependency= ruleDependency EOF )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:262:2: iv_ruleDependency= ruleDependency EOF
             {
              currentNode = createCompositeNode(grammarAccess.getDependencyRule(), currentNode); 
-            pushFollow(FOLLOW_ruleDependency_in_entryRuleDependency346);
+            pushFollow(FOLLOW_ruleDependency_in_entryRuleDependency383);
             iv_ruleDependency=ruleDependency();
             _fsp--;
 
              current =iv_ruleDependency; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDependency356); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDependency393); 
 
             }
 
@@ -482,7 +543,7 @@ public class InternalDependencyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleDependency
-    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:241:1: ruleDependency returns [EObject current=null] : (this_Coupling_0= ruleCoupling | this_Precedence_1= rulePrecedence ) ;
+    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:269:1: ruleDependency returns [EObject current=null] : (this_Coupling_0= ruleCoupling | this_Precedence_1= rulePrecedence ) ;
     public final EObject ruleDependency() throws RecognitionException {
         EObject current = null;
 
@@ -494,43 +555,43 @@ public class InternalDependencyParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:246:6: ( (this_Coupling_0= ruleCoupling | this_Precedence_1= rulePrecedence ) )
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:247:1: (this_Coupling_0= ruleCoupling | this_Precedence_1= rulePrecedence )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:274:6: ( (this_Coupling_0= ruleCoupling | this_Precedence_1= rulePrecedence ) )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:275:1: (this_Coupling_0= ruleCoupling | this_Precedence_1= rulePrecedence )
             {
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:247:1: (this_Coupling_0= ruleCoupling | this_Precedence_1= rulePrecedence )
-            int alt4=2;
-            int LA4_0 = input.LA(1);
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:275:1: (this_Coupling_0= ruleCoupling | this_Precedence_1= rulePrecedence )
+            int alt5=2;
+            int LA5_0 = input.LA(1);
 
-            if ( (LA4_0==RULE_ID) ) {
-                int LA4_1 = input.LA(2);
+            if ( (LA5_0==RULE_ID) ) {
+                int LA5_1 = input.LA(2);
 
-                if ( (LA4_1==14) ) {
-                    alt4=1;
+                if ( (LA5_1==16) ) {
+                    alt5=2;
                 }
-                else if ( (LA4_1==15) ) {
-                    alt4=2;
+                else if ( (LA5_1==15) ) {
+                    alt5=1;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("247:1: (this_Coupling_0= ruleCoupling | this_Precedence_1= rulePrecedence )", 4, 1, input);
+                        new NoViableAltException("275:1: (this_Coupling_0= ruleCoupling | this_Precedence_1= rulePrecedence )", 5, 1, input);
 
                     throw nvae;
                 }
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("247:1: (this_Coupling_0= ruleCoupling | this_Precedence_1= rulePrecedence )", 4, 0, input);
+                    new NoViableAltException("275:1: (this_Coupling_0= ruleCoupling | this_Precedence_1= rulePrecedence )", 5, 0, input);
 
                 throw nvae;
             }
-            switch (alt4) {
+            switch (alt5) {
                 case 1 :
-                    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:248:5: this_Coupling_0= ruleCoupling
+                    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:276:5: this_Coupling_0= ruleCoupling
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getDependencyAccess().getCouplingParserRuleCall_0(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleCoupling_in_ruleDependency403);
+                    pushFollow(FOLLOW_ruleCoupling_in_ruleDependency440);
                     this_Coupling_0=ruleCoupling();
                     _fsp--;
 
@@ -542,12 +603,12 @@ public class InternalDependencyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:258:5: this_Precedence_1= rulePrecedence
+                    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:286:5: this_Precedence_1= rulePrecedence
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getDependencyAccess().getPrecedenceParserRuleCall_1(), currentNode); 
                         
-                    pushFollow(FOLLOW_rulePrecedence_in_ruleDependency430);
+                    pushFollow(FOLLOW_rulePrecedence_in_ruleDependency467);
                     this_Precedence_1=rulePrecedence();
                     _fsp--;
 
@@ -581,7 +642,7 @@ public class InternalDependencyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleCoupling
-    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:274:1: entryRuleCoupling returns [EObject current=null] : iv_ruleCoupling= ruleCoupling EOF ;
+    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:302:1: entryRuleCoupling returns [EObject current=null] : iv_ruleCoupling= ruleCoupling EOF ;
     public final EObject entryRuleCoupling() throws RecognitionException {
         EObject current = null;
 
@@ -589,16 +650,16 @@ public class InternalDependencyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:275:2: (iv_ruleCoupling= ruleCoupling EOF )
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:276:2: iv_ruleCoupling= ruleCoupling EOF
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:303:2: (iv_ruleCoupling= ruleCoupling EOF )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:304:2: iv_ruleCoupling= ruleCoupling EOF
             {
              currentNode = createCompositeNode(grammarAccess.getCouplingRule(), currentNode); 
-            pushFollow(FOLLOW_ruleCoupling_in_entryRuleCoupling465);
+            pushFollow(FOLLOW_ruleCoupling_in_entryRuleCoupling502);
             iv_ruleCoupling=ruleCoupling();
             _fsp--;
 
              current =iv_ruleCoupling; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCoupling475); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCoupling512); 
 
             }
 
@@ -616,24 +677,24 @@ public class InternalDependencyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleCoupling
-    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:283:1: ruleCoupling returns [EObject current=null] : ( ( ( RULE_ID ) ) '--' ( ( RULE_ID ) ) ) ;
+    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:311:1: ruleCoupling returns [EObject current=null] : ( ( ( RULE_ID ) ) '--' ( ( RULE_ID ) ) ) ;
     public final EObject ruleCoupling() throws RecognitionException {
         EObject current = null;
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:288:6: ( ( ( ( RULE_ID ) ) '--' ( ( RULE_ID ) ) ) )
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:289:1: ( ( ( RULE_ID ) ) '--' ( ( RULE_ID ) ) )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:316:6: ( ( ( ( RULE_ID ) ) '--' ( ( RULE_ID ) ) ) )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:317:1: ( ( ( RULE_ID ) ) '--' ( ( RULE_ID ) ) )
             {
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:289:1: ( ( ( RULE_ID ) ) '--' ( ( RULE_ID ) ) )
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:289:2: ( ( RULE_ID ) ) '--' ( ( RULE_ID ) )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:317:1: ( ( ( RULE_ID ) ) '--' ( ( RULE_ID ) ) )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:317:2: ( ( RULE_ID ) ) '--' ( ( RULE_ID ) )
             {
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:289:2: ( ( RULE_ID ) )
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:290:1: ( RULE_ID )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:317:2: ( ( RULE_ID ) )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:318:1: ( RULE_ID )
             {
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:290:1: ( RULE_ID )
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:291:3: RULE_ID
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:318:1: ( RULE_ID )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:319:3: RULE_ID
             {
 
             			if (current==null) {
@@ -641,7 +702,7 @@ public class InternalDependencyParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleCoupling518); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleCoupling555); 
 
             		createLeafNode(grammarAccess.getCouplingAccess().getFromNodeCrossReference_0_0(), "from"); 
             	
@@ -651,15 +712,15 @@ public class InternalDependencyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,14,FOLLOW_14_in_ruleCoupling528); 
+            match(input,15,FOLLOW_15_in_ruleCoupling565); 
 
                     createLeafNode(grammarAccess.getCouplingAccess().getHyphenMinusHyphenMinusKeyword_1(), null); 
                 
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:307:1: ( ( RULE_ID ) )
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:308:1: ( RULE_ID )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:335:1: ( ( RULE_ID ) )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:336:1: ( RULE_ID )
             {
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:308:1: ( RULE_ID )
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:309:3: RULE_ID
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:336:1: ( RULE_ID )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:337:3: RULE_ID
             {
 
             			if (current==null) {
@@ -667,7 +728,7 @@ public class InternalDependencyParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleCoupling546); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleCoupling583); 
 
             		createLeafNode(grammarAccess.getCouplingAccess().getToNodeCrossReference_2_0(), "to"); 
             	
@@ -700,7 +761,7 @@ public class InternalDependencyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRulePrecedence
-    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:329:1: entryRulePrecedence returns [EObject current=null] : iv_rulePrecedence= rulePrecedence EOF ;
+    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:357:1: entryRulePrecedence returns [EObject current=null] : iv_rulePrecedence= rulePrecedence EOF ;
     public final EObject entryRulePrecedence() throws RecognitionException {
         EObject current = null;
 
@@ -708,16 +769,16 @@ public class InternalDependencyParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:330:2: (iv_rulePrecedence= rulePrecedence EOF )
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:331:2: iv_rulePrecedence= rulePrecedence EOF
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:358:2: (iv_rulePrecedence= rulePrecedence EOF )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:359:2: iv_rulePrecedence= rulePrecedence EOF
             {
              currentNode = createCompositeNode(grammarAccess.getPrecedenceRule(), currentNode); 
-            pushFollow(FOLLOW_rulePrecedence_in_entryRulePrecedence582);
+            pushFollow(FOLLOW_rulePrecedence_in_entryRulePrecedence619);
             iv_rulePrecedence=rulePrecedence();
             _fsp--;
 
              current =iv_rulePrecedence; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePrecedence592); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulePrecedence629); 
 
             }
 
@@ -735,24 +796,24 @@ public class InternalDependencyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start rulePrecedence
-    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:338:1: rulePrecedence returns [EObject current=null] : ( ( ( RULE_ID ) ) '->' ( ( RULE_ID ) ) ) ;
+    // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:366:1: rulePrecedence returns [EObject current=null] : ( ( ( RULE_ID ) ) '->' ( ( RULE_ID ) ) ) ;
     public final EObject rulePrecedence() throws RecognitionException {
         EObject current = null;
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:343:6: ( ( ( ( RULE_ID ) ) '->' ( ( RULE_ID ) ) ) )
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:344:1: ( ( ( RULE_ID ) ) '->' ( ( RULE_ID ) ) )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:371:6: ( ( ( ( RULE_ID ) ) '->' ( ( RULE_ID ) ) ) )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:372:1: ( ( ( RULE_ID ) ) '->' ( ( RULE_ID ) ) )
             {
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:344:1: ( ( ( RULE_ID ) ) '->' ( ( RULE_ID ) ) )
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:344:2: ( ( RULE_ID ) ) '->' ( ( RULE_ID ) )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:372:1: ( ( ( RULE_ID ) ) '->' ( ( RULE_ID ) ) )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:372:2: ( ( RULE_ID ) ) '->' ( ( RULE_ID ) )
             {
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:344:2: ( ( RULE_ID ) )
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:345:1: ( RULE_ID )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:372:2: ( ( RULE_ID ) )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:373:1: ( RULE_ID )
             {
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:345:1: ( RULE_ID )
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:346:3: RULE_ID
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:373:1: ( RULE_ID )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:374:3: RULE_ID
             {
 
             			if (current==null) {
@@ -760,7 +821,7 @@ public class InternalDependencyParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePrecedence635); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePrecedence672); 
 
             		createLeafNode(grammarAccess.getPrecedenceAccess().getFromNodeCrossReference_0_0(), "from"); 
             	
@@ -770,15 +831,15 @@ public class InternalDependencyParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,15,FOLLOW_15_in_rulePrecedence645); 
+            match(input,16,FOLLOW_16_in_rulePrecedence682); 
 
                     createLeafNode(grammarAccess.getPrecedenceAccess().getHyphenMinusGreaterThanSignKeyword_1(), null); 
                 
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:362:1: ( ( RULE_ID ) )
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:363:1: ( RULE_ID )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:390:1: ( ( RULE_ID ) )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:391:1: ( RULE_ID )
             {
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:363:1: ( RULE_ID )
-            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:364:3: RULE_ID
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:391:1: ( RULE_ID )
+            // ../dependency/src-gen/uk/ac/open/dependency/parser/antlr/internal/InternalDependency.g:392:3: RULE_ID
             {
 
             			if (current==null) {
@@ -786,7 +847,7 @@ public class InternalDependencyParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePrecedence663); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePrecedence700); 
 
             		createLeafNode(grammarAccess.getPrecedenceAccess().getToNodeCrossReference_2_0(), "to"); 
             	
@@ -822,28 +883,30 @@ public class InternalDependencyParser extends AbstractInternalAntlrParser {
 
     public static final BitSet FOLLOW_ruleModel_in_entryRuleModel75 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleModel85 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNode_in_ruleModel131 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_ruleDependency_in_ruleModel158 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_ruleNode_in_entryRuleNode195 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNode205 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleNode247 = new BitSet(new long[]{0x0000000000000802L});
-    public static final BitSet FOLLOW_11_in_ruleNode263 = new BitSet(new long[]{0x0000000000003000L});
-    public static final BitSet FOLLOW_12_in_ruleNode274 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleNode291 = new BitSet(new long[]{0x0000000000003000L});
-    public static final BitSet FOLLOW_13_in_ruleNode308 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDependency_in_entryRuleDependency346 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDependency356 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCoupling_in_ruleDependency403 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrecedence_in_ruleDependency430 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCoupling_in_entryRuleCoupling465 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCoupling475 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleCoupling518 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleCoupling528 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleCoupling546 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrecedence_in_entryRulePrecedence582 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePrecedence592 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulePrecedence635 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_rulePrecedence645 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulePrecedence663 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_11_in_ruleModel121 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleModel138 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_ruleNode_in_ruleModel167 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_ruleDependency_in_ruleModel194 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_ruleNode_in_entryRuleNode232 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNode242 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleNode284 = new BitSet(new long[]{0x0000000000001002L});
+    public static final BitSet FOLLOW_12_in_ruleNode300 = new BitSet(new long[]{0x0000000000006000L});
+    public static final BitSet FOLLOW_13_in_ruleNode311 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleNode328 = new BitSet(new long[]{0x0000000000006000L});
+    public static final BitSet FOLLOW_14_in_ruleNode345 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDependency_in_entryRuleDependency383 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDependency393 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCoupling_in_ruleDependency440 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePrecedence_in_ruleDependency467 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCoupling_in_entryRuleCoupling502 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCoupling512 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleCoupling555 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleCoupling565 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleCoupling583 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePrecedence_in_entryRulePrecedence619 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePrecedence629 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePrecedence672 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_rulePrecedence682 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePrecedence700 = new BitSet(new long[]{0x0000000000000002L});
 
 }

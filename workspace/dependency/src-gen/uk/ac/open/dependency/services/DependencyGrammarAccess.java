@@ -19,30 +19,50 @@ public class DependencyGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public class ModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Model");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Assignment cNodesAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
-		private final RuleCall cNodesNodeParserRuleCall_0_0 = (RuleCall)cNodesAssignment_0.eContents().get(0);
-		private final Assignment cDependenciesAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
-		private final RuleCall cDependenciesDependencyParserRuleCall_1_0 = (RuleCall)cDependenciesAssignment_1.eContents().get(0);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
+		private final Keyword cGraphKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
+		private final Assignment cNameAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_0_1_0 = (RuleCall)cNameAssignment_0_1.eContents().get(0);
+		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
+		private final Assignment cNodesAssignment_1_0 = (Assignment)cAlternatives_1.eContents().get(0);
+		private final RuleCall cNodesNodeParserRuleCall_1_0_0 = (RuleCall)cNodesAssignment_1_0.eContents().get(0);
+		private final Assignment cDependenciesAssignment_1_1 = (Assignment)cAlternatives_1.eContents().get(1);
+		private final RuleCall cDependenciesDependencyParserRuleCall_1_1_0 = (RuleCall)cDependenciesAssignment_1_1.eContents().get(0);
 		
 		//Model:
-		//	(nodes+=Node | dependencies+=Dependency)*;
+		//	("graph" name=ID)? (nodes+=Node | dependencies+=Dependency)*;
 		public ParserRule getRule() { return rule; }
 
+		//("graph" name=ID)? (nodes+=Node | dependencies+=Dependency)*
+		public Group getGroup() { return cGroup; }
+
+		//("graph" name=ID)?
+		public Group getGroup_0() { return cGroup_0; }
+
+		//"graph"
+		public Keyword getGraphKeyword_0_0() { return cGraphKeyword_0_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_0_1() { return cNameAssignment_0_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_0_1_0() { return cNameIDTerminalRuleCall_0_1_0; }
+
 		//(nodes+=Node | dependencies+=Dependency)*
-		public Alternatives getAlternatives() { return cAlternatives; }
+		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 
 		//nodes+=Node
-		public Assignment getNodesAssignment_0() { return cNodesAssignment_0; }
+		public Assignment getNodesAssignment_1_0() { return cNodesAssignment_1_0; }
 
 		//Node
-		public RuleCall getNodesNodeParserRuleCall_0_0() { return cNodesNodeParserRuleCall_0_0; }
+		public RuleCall getNodesNodeParserRuleCall_1_0_0() { return cNodesNodeParserRuleCall_1_0_0; }
 
 		//dependencies+=Dependency
-		public Assignment getDependenciesAssignment_1() { return cDependenciesAssignment_1; }
+		public Assignment getDependenciesAssignment_1_1() { return cDependenciesAssignment_1_1; }
 
 		//Dependency
-		public RuleCall getDependenciesDependencyParserRuleCall_1_0() { return cDependenciesDependencyParserRuleCall_1_0; }
+		public RuleCall getDependenciesDependencyParserRuleCall_1_1_0() { return cDependenciesDependencyParserRuleCall_1_1_0; }
 	}
 
 	public class NodeElements extends AbstractParserRuleElementFinder {
@@ -223,7 +243,7 @@ public class DependencyGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Model:
-	//	(nodes+=Node | dependencies+=Dependency)*;
+	//	("graph" name=ID)? (nodes+=Node | dependencies+=Dependency)*;
 	public ModelElements getModelAccess() {
 		return (pModel != null) ? pModel : (pModel = new ModelElements());
 	}

@@ -23,7 +23,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalIstarParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'istar'", "':'", "'actor'", "'{'", "'}'", "'agent'", "'role'", "'position'", "'goal'", "'soft'", "'task'", "'resource'", "'belief'", "'~~>'", "'~>'", "'<-(and)-'", "'<-(or)-'", "'-(and)->'", "'-(or)->'", "'-(+)->'", "'-(++)->'", "'-(-)->'", "'-(--)->'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "':'", "'istar'", "'actor'", "'{'", "'}'", "'agent'", "'role'", "'position'", "'goal'", "'soft'", "'task'", "'resource'", "'belief'", "'~~>'", "'~>'", "'<-(and)-'", "'<-(or)-'", "'-(and)->'", "'-(or)->'", "'-(+)->'", "'-(++)->'", "'-(-)->'", "'-(--)->'"
     };
     public static final int RULE_ID=4;
     public static final int RULE_STRING=6;
@@ -1863,14 +1863,14 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
     // $ANTLR end ruleBreakContribution
 
 
-    // $ANTLR start rule__Model__Alternatives_4
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:737:1: rule__Model__Alternatives_4 : ( ( ( rule__Model__ContainersAssignment_4_0 ) ) | ( ( rule__Model__IntentionsAssignment_4_1 ) ) | ( ( rule__Model__DecompositionsAssignment_4_2 ) ) | ( ( rule__Model__DependenciesAssignment_4_3 ) ) | ( ( rule__Model__ContributionsAssignment_4_4 ) ) | ( ( rule__Model__AssociationsAssignment_4_5 ) ) );
-    public final void rule__Model__Alternatives_4() throws RecognitionException {
+    // $ANTLR start rule__Model__Alternatives_3
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:737:1: rule__Model__Alternatives_3 : ( ( ( rule__Model__ContainersAssignment_3_0 ) ) | ( ( rule__Model__IntentionsAssignment_3_1 ) ) | ( ( rule__Model__DecompositionsAssignment_3_2 ) ) | ( ( rule__Model__DependenciesAssignment_3_3 ) ) | ( ( rule__Model__ContributionsAssignment_3_4 ) ) | ( ( rule__Model__AssociationsAssignment_3_5 ) ) );
+    public final void rule__Model__Alternatives_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:741:1: ( ( ( rule__Model__ContainersAssignment_4_0 ) ) | ( ( rule__Model__IntentionsAssignment_4_1 ) ) | ( ( rule__Model__DecompositionsAssignment_4_2 ) ) | ( ( rule__Model__DependenciesAssignment_4_3 ) ) | ( ( rule__Model__ContributionsAssignment_4_4 ) ) | ( ( rule__Model__AssociationsAssignment_4_5 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:741:1: ( ( ( rule__Model__ContainersAssignment_3_0 ) ) | ( ( rule__Model__IntentionsAssignment_3_1 ) ) | ( ( rule__Model__DecompositionsAssignment_3_2 ) ) | ( ( rule__Model__DependenciesAssignment_3_3 ) ) | ( ( rule__Model__ContributionsAssignment_3_4 ) ) | ( ( rule__Model__AssociationsAssignment_3_5 ) ) )
             int alt1=6;
             switch ( input.LA(1) ) {
             case 13:
@@ -1893,6 +1893,12 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
             case RULE_ID:
                 {
                 switch ( input.LA(2) ) {
+                case 26:
+                case 27:
+                    {
+                    alt1=3;
+                    }
+                    break;
                 case 28:
                 case 29:
                 case 30:
@@ -1903,10 +1909,9 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
                     alt1=5;
                     }
                     break;
-                case 26:
-                case 27:
+                case 25:
                     {
-                    alt1=3;
+                    alt1=4;
                     }
                     break;
                 case 24:
@@ -1914,14 +1919,9 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
                     alt1=6;
                     }
                     break;
-                case 25:
-                    {
-                    alt1=4;
-                    }
-                    break;
                 default:
                     NoViableAltException nvae =
-                        new NoViableAltException("737:1: rule__Model__Alternatives_4 : ( ( ( rule__Model__ContainersAssignment_4_0 ) ) | ( ( rule__Model__IntentionsAssignment_4_1 ) ) | ( ( rule__Model__DecompositionsAssignment_4_2 ) ) | ( ( rule__Model__DependenciesAssignment_4_3 ) ) | ( ( rule__Model__ContributionsAssignment_4_4 ) ) | ( ( rule__Model__AssociationsAssignment_4_5 ) ) );", 1, 3, input);
+                        new NoViableAltException("737:1: rule__Model__Alternatives_3 : ( ( ( rule__Model__ContainersAssignment_3_0 ) ) | ( ( rule__Model__IntentionsAssignment_3_1 ) ) | ( ( rule__Model__DecompositionsAssignment_3_2 ) ) | ( ( rule__Model__DependenciesAssignment_3_3 ) ) | ( ( rule__Model__ContributionsAssignment_3_4 ) ) | ( ( rule__Model__AssociationsAssignment_3_5 ) ) );", 1, 3, input);
 
                     throw nvae;
                 }
@@ -1930,30 +1930,30 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("737:1: rule__Model__Alternatives_4 : ( ( ( rule__Model__ContainersAssignment_4_0 ) ) | ( ( rule__Model__IntentionsAssignment_4_1 ) ) | ( ( rule__Model__DecompositionsAssignment_4_2 ) ) | ( ( rule__Model__DependenciesAssignment_4_3 ) ) | ( ( rule__Model__ContributionsAssignment_4_4 ) ) | ( ( rule__Model__AssociationsAssignment_4_5 ) ) );", 1, 0, input);
+                    new NoViableAltException("737:1: rule__Model__Alternatives_3 : ( ( ( rule__Model__ContainersAssignment_3_0 ) ) | ( ( rule__Model__IntentionsAssignment_3_1 ) ) | ( ( rule__Model__DecompositionsAssignment_3_2 ) ) | ( ( rule__Model__DependenciesAssignment_3_3 ) ) | ( ( rule__Model__ContributionsAssignment_3_4 ) ) | ( ( rule__Model__AssociationsAssignment_3_5 ) ) );", 1, 0, input);
 
                 throw nvae;
             }
 
             switch (alt1) {
                 case 1 :
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:742:1: ( ( rule__Model__ContainersAssignment_4_0 ) )
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:742:1: ( ( rule__Model__ContainersAssignment_3_0 ) )
                     {
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:742:1: ( ( rule__Model__ContainersAssignment_4_0 ) )
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:743:1: ( rule__Model__ContainersAssignment_4_0 )
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:742:1: ( ( rule__Model__ContainersAssignment_3_0 ) )
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:743:1: ( rule__Model__ContainersAssignment_3_0 )
                     {
-                     before(grammarAccess.getModelAccess().getContainersAssignment_4_0()); 
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:744:1: ( rule__Model__ContainersAssignment_4_0 )
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:744:2: rule__Model__ContainersAssignment_4_0
+                     before(grammarAccess.getModelAccess().getContainersAssignment_3_0()); 
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:744:1: ( rule__Model__ContainersAssignment_3_0 )
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:744:2: rule__Model__ContainersAssignment_3_0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__Model__ContainersAssignment_4_0_in_rule__Model__Alternatives_41514);
-                    rule__Model__ContainersAssignment_4_0();
+                    pushFollow(FollowSets000.FOLLOW_rule__Model__ContainersAssignment_3_0_in_rule__Model__Alternatives_31514);
+                    rule__Model__ContainersAssignment_3_0();
                     _fsp--;
 
 
                     }
 
-                     after(grammarAccess.getModelAccess().getContainersAssignment_4_0()); 
+                     after(grammarAccess.getModelAccess().getContainersAssignment_3_0()); 
 
                     }
 
@@ -1961,23 +1961,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:748:6: ( ( rule__Model__IntentionsAssignment_4_1 ) )
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:748:6: ( ( rule__Model__IntentionsAssignment_3_1 ) )
                     {
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:748:6: ( ( rule__Model__IntentionsAssignment_4_1 ) )
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:749:1: ( rule__Model__IntentionsAssignment_4_1 )
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:748:6: ( ( rule__Model__IntentionsAssignment_3_1 ) )
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:749:1: ( rule__Model__IntentionsAssignment_3_1 )
                     {
-                     before(grammarAccess.getModelAccess().getIntentionsAssignment_4_1()); 
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:750:1: ( rule__Model__IntentionsAssignment_4_1 )
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:750:2: rule__Model__IntentionsAssignment_4_1
+                     before(grammarAccess.getModelAccess().getIntentionsAssignment_3_1()); 
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:750:1: ( rule__Model__IntentionsAssignment_3_1 )
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:750:2: rule__Model__IntentionsAssignment_3_1
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__Model__IntentionsAssignment_4_1_in_rule__Model__Alternatives_41532);
-                    rule__Model__IntentionsAssignment_4_1();
+                    pushFollow(FollowSets000.FOLLOW_rule__Model__IntentionsAssignment_3_1_in_rule__Model__Alternatives_31532);
+                    rule__Model__IntentionsAssignment_3_1();
                     _fsp--;
 
 
                     }
 
-                     after(grammarAccess.getModelAccess().getIntentionsAssignment_4_1()); 
+                     after(grammarAccess.getModelAccess().getIntentionsAssignment_3_1()); 
 
                     }
 
@@ -1985,23 +1985,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:754:6: ( ( rule__Model__DecompositionsAssignment_4_2 ) )
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:754:6: ( ( rule__Model__DecompositionsAssignment_3_2 ) )
                     {
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:754:6: ( ( rule__Model__DecompositionsAssignment_4_2 ) )
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:755:1: ( rule__Model__DecompositionsAssignment_4_2 )
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:754:6: ( ( rule__Model__DecompositionsAssignment_3_2 ) )
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:755:1: ( rule__Model__DecompositionsAssignment_3_2 )
                     {
-                     before(grammarAccess.getModelAccess().getDecompositionsAssignment_4_2()); 
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:756:1: ( rule__Model__DecompositionsAssignment_4_2 )
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:756:2: rule__Model__DecompositionsAssignment_4_2
+                     before(grammarAccess.getModelAccess().getDecompositionsAssignment_3_2()); 
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:756:1: ( rule__Model__DecompositionsAssignment_3_2 )
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:756:2: rule__Model__DecompositionsAssignment_3_2
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__Model__DecompositionsAssignment_4_2_in_rule__Model__Alternatives_41550);
-                    rule__Model__DecompositionsAssignment_4_2();
+                    pushFollow(FollowSets000.FOLLOW_rule__Model__DecompositionsAssignment_3_2_in_rule__Model__Alternatives_31550);
+                    rule__Model__DecompositionsAssignment_3_2();
                     _fsp--;
 
 
                     }
 
-                     after(grammarAccess.getModelAccess().getDecompositionsAssignment_4_2()); 
+                     after(grammarAccess.getModelAccess().getDecompositionsAssignment_3_2()); 
 
                     }
 
@@ -2009,23 +2009,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:760:6: ( ( rule__Model__DependenciesAssignment_4_3 ) )
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:760:6: ( ( rule__Model__DependenciesAssignment_3_3 ) )
                     {
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:760:6: ( ( rule__Model__DependenciesAssignment_4_3 ) )
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:761:1: ( rule__Model__DependenciesAssignment_4_3 )
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:760:6: ( ( rule__Model__DependenciesAssignment_3_3 ) )
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:761:1: ( rule__Model__DependenciesAssignment_3_3 )
                     {
-                     before(grammarAccess.getModelAccess().getDependenciesAssignment_4_3()); 
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:762:1: ( rule__Model__DependenciesAssignment_4_3 )
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:762:2: rule__Model__DependenciesAssignment_4_3
+                     before(grammarAccess.getModelAccess().getDependenciesAssignment_3_3()); 
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:762:1: ( rule__Model__DependenciesAssignment_3_3 )
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:762:2: rule__Model__DependenciesAssignment_3_3
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__Model__DependenciesAssignment_4_3_in_rule__Model__Alternatives_41568);
-                    rule__Model__DependenciesAssignment_4_3();
+                    pushFollow(FollowSets000.FOLLOW_rule__Model__DependenciesAssignment_3_3_in_rule__Model__Alternatives_31568);
+                    rule__Model__DependenciesAssignment_3_3();
                     _fsp--;
 
 
                     }
 
-                     after(grammarAccess.getModelAccess().getDependenciesAssignment_4_3()); 
+                     after(grammarAccess.getModelAccess().getDependenciesAssignment_3_3()); 
 
                     }
 
@@ -2033,23 +2033,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:766:6: ( ( rule__Model__ContributionsAssignment_4_4 ) )
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:766:6: ( ( rule__Model__ContributionsAssignment_3_4 ) )
                     {
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:766:6: ( ( rule__Model__ContributionsAssignment_4_4 ) )
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:767:1: ( rule__Model__ContributionsAssignment_4_4 )
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:766:6: ( ( rule__Model__ContributionsAssignment_3_4 ) )
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:767:1: ( rule__Model__ContributionsAssignment_3_4 )
                     {
-                     before(grammarAccess.getModelAccess().getContributionsAssignment_4_4()); 
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:768:1: ( rule__Model__ContributionsAssignment_4_4 )
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:768:2: rule__Model__ContributionsAssignment_4_4
+                     before(grammarAccess.getModelAccess().getContributionsAssignment_3_4()); 
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:768:1: ( rule__Model__ContributionsAssignment_3_4 )
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:768:2: rule__Model__ContributionsAssignment_3_4
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__Model__ContributionsAssignment_4_4_in_rule__Model__Alternatives_41586);
-                    rule__Model__ContributionsAssignment_4_4();
+                    pushFollow(FollowSets000.FOLLOW_rule__Model__ContributionsAssignment_3_4_in_rule__Model__Alternatives_31586);
+                    rule__Model__ContributionsAssignment_3_4();
                     _fsp--;
 
 
                     }
 
-                     after(grammarAccess.getModelAccess().getContributionsAssignment_4_4()); 
+                     after(grammarAccess.getModelAccess().getContributionsAssignment_3_4()); 
 
                     }
 
@@ -2057,23 +2057,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 6 :
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:772:6: ( ( rule__Model__AssociationsAssignment_4_5 ) )
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:772:6: ( ( rule__Model__AssociationsAssignment_3_5 ) )
                     {
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:772:6: ( ( rule__Model__AssociationsAssignment_4_5 ) )
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:773:1: ( rule__Model__AssociationsAssignment_4_5 )
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:772:6: ( ( rule__Model__AssociationsAssignment_3_5 ) )
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:773:1: ( rule__Model__AssociationsAssignment_3_5 )
                     {
-                     before(grammarAccess.getModelAccess().getAssociationsAssignment_4_5()); 
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:774:1: ( rule__Model__AssociationsAssignment_4_5 )
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:774:2: rule__Model__AssociationsAssignment_4_5
+                     before(grammarAccess.getModelAccess().getAssociationsAssignment_3_5()); 
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:774:1: ( rule__Model__AssociationsAssignment_3_5 )
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:774:2: rule__Model__AssociationsAssignment_3_5
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__Model__AssociationsAssignment_4_5_in_rule__Model__Alternatives_41604);
-                    rule__Model__AssociationsAssignment_4_5();
+                    pushFollow(FollowSets000.FOLLOW_rule__Model__AssociationsAssignment_3_5_in_rule__Model__Alternatives_31604);
+                    rule__Model__AssociationsAssignment_3_5();
                     _fsp--;
 
 
                     }
 
-                     after(grammarAccess.getModelAccess().getAssociationsAssignment_4_5()); 
+                     after(grammarAccess.getModelAccess().getAssociationsAssignment_3_5()); 
 
                     }
 
@@ -2094,7 +2094,7 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end rule__Model__Alternatives_4
+    // $ANTLR end rule__Model__Alternatives_3
 
 
     // $ANTLR start rule__Container__Alternatives
@@ -2560,14 +2560,9 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
             if ( (LA6_0==RULE_ID) ) {
                 switch ( input.LA(2) ) {
-                case 32:
+                case 31:
                     {
-                    alt6=4;
-                    }
-                    break;
-                case 29:
-                    {
-                    alt6=2;
+                    alt6=5;
                     }
                     break;
                 case 33:
@@ -2575,9 +2570,14 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
                     alt6=6;
                     }
                     break;
-                case 31:
+                case 30:
                     {
-                    alt6=5;
+                    alt6=3;
+                    }
+                    break;
+                case 32:
+                    {
+                    alt6=4;
                     }
                     break;
                 case 28:
@@ -2585,9 +2585,9 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
                     alt6=1;
                     }
                     break;
-                case 30:
+                case 29:
                     {
-                    alt6=3;
+                    alt6=2;
                     }
                     break;
                 default:
@@ -2840,21 +2840,41 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Model__Group__1__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:994:1: rule__Model__Group__1__Impl : ( 'istar' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:994:1: rule__Model__Group__1__Impl : ( ( rule__Model__Group_1__0 )? ) ;
     public final void rule__Model__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:998:1: ( ( 'istar' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:999:1: ( 'istar' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:998:1: ( ( ( rule__Model__Group_1__0 )? ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:999:1: ( ( rule__Model__Group_1__0 )? )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:999:1: ( 'istar' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1000:1: 'istar'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:999:1: ( ( rule__Model__Group_1__0 )? )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1000:1: ( rule__Model__Group_1__0 )?
             {
-             before(grammarAccess.getModelAccess().getIstarKeyword_1()); 
-            match(input,11,FollowSets000.FOLLOW_11_in_rule__Model__Group__1__Impl2129); 
-             after(grammarAccess.getModelAccess().getIstarKeyword_1()); 
+             before(grammarAccess.getModelAccess().getGroup_1()); 
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1001:1: ( rule__Model__Group_1__0 )?
+            int alt7=2;
+            int LA7_0 = input.LA(1);
+
+            if ( (LA7_0==12) ) {
+                alt7=1;
+            }
+            switch (alt7) {
+                case 1 :
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1001:2: rule__Model__Group_1__0
+                    {
+                    pushFollow(FollowSets000.FOLLOW_rule__Model__Group_1__0_in_rule__Model__Group__1__Impl2128);
+                    rule__Model__Group_1__0();
+                    _fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getModelAccess().getGroup_1()); 
 
             }
 
@@ -2877,20 +2897,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Model__Group__2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1013:1: rule__Model__Group__2 : rule__Model__Group__2__Impl rule__Model__Group__3 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1011:1: rule__Model__Group__2 : rule__Model__Group__2__Impl rule__Model__Group__3 ;
     public final void rule__Model__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1017:1: ( rule__Model__Group__2__Impl rule__Model__Group__3 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1018:2: rule__Model__Group__2__Impl rule__Model__Group__3
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1015:1: ( rule__Model__Group__2__Impl rule__Model__Group__3 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1016:2: rule__Model__Group__2__Impl rule__Model__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__22160);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__22159);
             rule__Model__Group__2__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__3_in_rule__Model__Group__22163);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__3_in_rule__Model__Group__22162);
             rule__Model__Group__3();
             _fsp--;
 
@@ -2913,41 +2933,21 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Model__Group__2__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1025:1: rule__Model__Group__2__Impl : ( ( rule__Model__NameAssignment_2 )? ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1023:1: rule__Model__Group__2__Impl : ( ':' ) ;
     public final void rule__Model__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1029:1: ( ( ( rule__Model__NameAssignment_2 )? ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1030:1: ( ( rule__Model__NameAssignment_2 )? )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1027:1: ( ( ':' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1028:1: ( ':' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1030:1: ( ( rule__Model__NameAssignment_2 )? )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1031:1: ( rule__Model__NameAssignment_2 )?
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1028:1: ( ':' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1029:1: ':'
             {
-             before(grammarAccess.getModelAccess().getNameAssignment_2()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1032:1: ( rule__Model__NameAssignment_2 )?
-            int alt7=2;
-            int LA7_0 = input.LA(1);
-
-            if ( (LA7_0==RULE_ID) ) {
-                alt7=1;
-            }
-            switch (alt7) {
-                case 1 :
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1032:2: rule__Model__NameAssignment_2
-                    {
-                    pushFollow(FollowSets000.FOLLOW_rule__Model__NameAssignment_2_in_rule__Model__Group__2__Impl2190);
-                    rule__Model__NameAssignment_2();
-                    _fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getModelAccess().getNameAssignment_2()); 
+             before(grammarAccess.getModelAccess().getColonKeyword_2()); 
+            match(input,11,FollowSets000.FOLLOW_11_in_rule__Model__Group__2__Impl2190); 
+             after(grammarAccess.getModelAccess().getColonKeyword_2()); 
 
             }
 
@@ -2970,21 +2970,17 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Model__Group__3
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1042:1: rule__Model__Group__3 : rule__Model__Group__3__Impl rule__Model__Group__4 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1042:1: rule__Model__Group__3 : rule__Model__Group__3__Impl ;
     public final void rule__Model__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1046:1: ( rule__Model__Group__3__Impl rule__Model__Group__4 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1047:2: rule__Model__Group__3__Impl rule__Model__Group__4
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1046:1: ( rule__Model__Group__3__Impl )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1047:2: rule__Model__Group__3__Impl
             {
             pushFollow(FollowSets000.FOLLOW_rule__Model__Group__3__Impl_in_rule__Model__Group__32221);
             rule__Model__Group__3__Impl();
-            _fsp--;
-
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__4_in_rule__Model__Group__32224);
-            rule__Model__Group__4();
             _fsp--;
 
 
@@ -3006,21 +3002,48 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Model__Group__3__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1054:1: rule__Model__Group__3__Impl : ( ':' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1053:1: rule__Model__Group__3__Impl : ( ( rule__Model__Alternatives_3 )* ) ;
     public final void rule__Model__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1058:1: ( ( ':' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1059:1: ( ':' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1057:1: ( ( ( rule__Model__Alternatives_3 )* ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1058:1: ( ( rule__Model__Alternatives_3 )* )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1059:1: ( ':' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1060:1: ':'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1058:1: ( ( rule__Model__Alternatives_3 )* )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1059:1: ( rule__Model__Alternatives_3 )*
             {
-             before(grammarAccess.getModelAccess().getColonKeyword_3()); 
-            match(input,12,FollowSets000.FOLLOW_12_in_rule__Model__Group__3__Impl2252); 
-             after(grammarAccess.getModelAccess().getColonKeyword_3()); 
+             before(grammarAccess.getModelAccess().getAlternatives_3()); 
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1060:1: ( rule__Model__Alternatives_3 )*
+            loop8:
+            do {
+                int alt8=2;
+                int LA8_0 = input.LA(1);
+
+                if ( (LA8_0==RULE_ID||LA8_0==13||(LA8_0>=16 && LA8_0<=23)) ) {
+                    alt8=1;
+                }
+
+
+                switch (alt8) {
+            	case 1 :
+            	    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1060:2: rule__Model__Alternatives_3
+            	    {
+            	    pushFollow(FollowSets000.FOLLOW_rule__Model__Alternatives_3_in_rule__Model__Group__3__Impl2248);
+            	    rule__Model__Alternatives_3();
+            	    _fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop8;
+                }
+            } while (true);
+
+             after(grammarAccess.getModelAccess().getAlternatives_3()); 
 
             }
 
@@ -3042,18 +3065,22 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
     // $ANTLR end rule__Model__Group__3__Impl
 
 
-    // $ANTLR start rule__Model__Group__4
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1073:1: rule__Model__Group__4 : rule__Model__Group__4__Impl ;
-    public final void rule__Model__Group__4() throws RecognitionException {
+    // $ANTLR start rule__Model__Group_1__0
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1078:1: rule__Model__Group_1__0 : rule__Model__Group_1__0__Impl rule__Model__Group_1__1 ;
+    public final void rule__Model__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1077:1: ( rule__Model__Group__4__Impl )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1078:2: rule__Model__Group__4__Impl
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1082:1: ( rule__Model__Group_1__0__Impl rule__Model__Group_1__1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1083:2: rule__Model__Group_1__0__Impl rule__Model__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__4__Impl_in_rule__Model__Group__42283);
-            rule__Model__Group__4__Impl();
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group_1__0__Impl_in_rule__Model__Group_1__02287);
+            rule__Model__Group_1__0__Impl();
+            _fsp--;
+
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group_1__1_in_rule__Model__Group_1__02290);
+            rule__Model__Group_1__1();
             _fsp--;
 
 
@@ -3071,52 +3098,25 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end rule__Model__Group__4
+    // $ANTLR end rule__Model__Group_1__0
 
 
-    // $ANTLR start rule__Model__Group__4__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1084:1: rule__Model__Group__4__Impl : ( ( rule__Model__Alternatives_4 )* ) ;
-    public final void rule__Model__Group__4__Impl() throws RecognitionException {
+    // $ANTLR start rule__Model__Group_1__0__Impl
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1090:1: rule__Model__Group_1__0__Impl : ( 'istar' ) ;
+    public final void rule__Model__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1088:1: ( ( ( rule__Model__Alternatives_4 )* ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1089:1: ( ( rule__Model__Alternatives_4 )* )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1094:1: ( ( 'istar' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1095:1: ( 'istar' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1089:1: ( ( rule__Model__Alternatives_4 )* )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1090:1: ( rule__Model__Alternatives_4 )*
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1095:1: ( 'istar' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1096:1: 'istar'
             {
-             before(grammarAccess.getModelAccess().getAlternatives_4()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1091:1: ( rule__Model__Alternatives_4 )*
-            loop8:
-            do {
-                int alt8=2;
-                int LA8_0 = input.LA(1);
-
-                if ( (LA8_0==RULE_ID||LA8_0==13||(LA8_0>=16 && LA8_0<=23)) ) {
-                    alt8=1;
-                }
-
-
-                switch (alt8) {
-            	case 1 :
-            	    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1091:2: rule__Model__Alternatives_4
-            	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__Model__Alternatives_4_in_rule__Model__Group__4__Impl2310);
-            	    rule__Model__Alternatives_4();
-            	    _fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop8;
-                }
-            } while (true);
-
-             after(grammarAccess.getModelAccess().getAlternatives_4()); 
+             before(grammarAccess.getModelAccess().getIstarKeyword_1_0()); 
+            match(input,12,FollowSets000.FOLLOW_12_in_rule__Model__Group_1__0__Impl2318); 
+             after(grammarAccess.getModelAccess().getIstarKeyword_1_0()); 
 
             }
 
@@ -3135,24 +3135,102 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end rule__Model__Group__4__Impl
+    // $ANTLR end rule__Model__Group_1__0__Impl
+
+
+    // $ANTLR start rule__Model__Group_1__1
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1109:1: rule__Model__Group_1__1 : rule__Model__Group_1__1__Impl ;
+    public final void rule__Model__Group_1__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1113:1: ( rule__Model__Group_1__1__Impl )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1114:2: rule__Model__Group_1__1__Impl
+            {
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group_1__1__Impl_in_rule__Model__Group_1__12349);
+            rule__Model__Group_1__1__Impl();
+            _fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end rule__Model__Group_1__1
+
+
+    // $ANTLR start rule__Model__Group_1__1__Impl
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1120:1: rule__Model__Group_1__1__Impl : ( ( rule__Model__NameAssignment_1_1 ) ) ;
+    public final void rule__Model__Group_1__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1124:1: ( ( ( rule__Model__NameAssignment_1_1 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1125:1: ( ( rule__Model__NameAssignment_1_1 ) )
+            {
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1125:1: ( ( rule__Model__NameAssignment_1_1 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1126:1: ( rule__Model__NameAssignment_1_1 )
+            {
+             before(grammarAccess.getModelAccess().getNameAssignment_1_1()); 
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1127:1: ( rule__Model__NameAssignment_1_1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1127:2: rule__Model__NameAssignment_1_1
+            {
+            pushFollow(FollowSets000.FOLLOW_rule__Model__NameAssignment_1_1_in_rule__Model__Group_1__1__Impl2376);
+            rule__Model__NameAssignment_1_1();
+            _fsp--;
+
+
+            }
+
+             after(grammarAccess.getModelAccess().getNameAssignment_1_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end rule__Model__Group_1__1__Impl
 
 
     // $ANTLR start rule__Actor__Group__0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1111:1: rule__Actor__Group__0 : rule__Actor__Group__0__Impl rule__Actor__Group__1 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1141:1: rule__Actor__Group__0 : rule__Actor__Group__0__Impl rule__Actor__Group__1 ;
     public final void rule__Actor__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1115:1: ( rule__Actor__Group__0__Impl rule__Actor__Group__1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1116:2: rule__Actor__Group__0__Impl rule__Actor__Group__1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1145:1: ( rule__Actor__Group__0__Impl rule__Actor__Group__1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1146:2: rule__Actor__Group__0__Impl rule__Actor__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Actor__Group__0__Impl_in_rule__Actor__Group__02351);
+            pushFollow(FollowSets000.FOLLOW_rule__Actor__Group__0__Impl_in_rule__Actor__Group__02410);
             rule__Actor__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Actor__Group__1_in_rule__Actor__Group__02354);
+            pushFollow(FollowSets000.FOLLOW_rule__Actor__Group__1_in_rule__Actor__Group__02413);
             rule__Actor__Group__1();
             _fsp--;
 
@@ -3175,20 +3253,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Actor__Group__0__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1123:1: rule__Actor__Group__0__Impl : ( 'actor' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1153:1: rule__Actor__Group__0__Impl : ( 'actor' ) ;
     public final void rule__Actor__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1127:1: ( ( 'actor' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1128:1: ( 'actor' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1157:1: ( ( 'actor' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1158:1: ( 'actor' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1128:1: ( 'actor' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1129:1: 'actor'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1158:1: ( 'actor' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1159:1: 'actor'
             {
              before(grammarAccess.getActorAccess().getActorKeyword_0()); 
-            match(input,13,FollowSets000.FOLLOW_13_in_rule__Actor__Group__0__Impl2382); 
+            match(input,13,FollowSets000.FOLLOW_13_in_rule__Actor__Group__0__Impl2441); 
              after(grammarAccess.getActorAccess().getActorKeyword_0()); 
 
             }
@@ -3212,20 +3290,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Actor__Group__1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1142:1: rule__Actor__Group__1 : rule__Actor__Group__1__Impl rule__Actor__Group__2 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1172:1: rule__Actor__Group__1 : rule__Actor__Group__1__Impl rule__Actor__Group__2 ;
     public final void rule__Actor__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1146:1: ( rule__Actor__Group__1__Impl rule__Actor__Group__2 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1147:2: rule__Actor__Group__1__Impl rule__Actor__Group__2
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1176:1: ( rule__Actor__Group__1__Impl rule__Actor__Group__2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1177:2: rule__Actor__Group__1__Impl rule__Actor__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Actor__Group__1__Impl_in_rule__Actor__Group__12413);
+            pushFollow(FollowSets000.FOLLOW_rule__Actor__Group__1__Impl_in_rule__Actor__Group__12472);
             rule__Actor__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Actor__Group__2_in_rule__Actor__Group__12416);
+            pushFollow(FollowSets000.FOLLOW_rule__Actor__Group__2_in_rule__Actor__Group__12475);
             rule__Actor__Group__2();
             _fsp--;
 
@@ -3248,23 +3326,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Actor__Group__1__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1154:1: rule__Actor__Group__1__Impl : ( ( rule__Actor__NameAssignment_1 ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1184:1: rule__Actor__Group__1__Impl : ( ( rule__Actor__NameAssignment_1 ) ) ;
     public final void rule__Actor__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1158:1: ( ( ( rule__Actor__NameAssignment_1 ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1159:1: ( ( rule__Actor__NameAssignment_1 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1188:1: ( ( ( rule__Actor__NameAssignment_1 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1189:1: ( ( rule__Actor__NameAssignment_1 ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1159:1: ( ( rule__Actor__NameAssignment_1 ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1160:1: ( rule__Actor__NameAssignment_1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1189:1: ( ( rule__Actor__NameAssignment_1 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1190:1: ( rule__Actor__NameAssignment_1 )
             {
              before(grammarAccess.getActorAccess().getNameAssignment_1()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1161:1: ( rule__Actor__NameAssignment_1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1161:2: rule__Actor__NameAssignment_1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1191:1: ( rule__Actor__NameAssignment_1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1191:2: rule__Actor__NameAssignment_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Actor__NameAssignment_1_in_rule__Actor__Group__1__Impl2443);
+            pushFollow(FollowSets000.FOLLOW_rule__Actor__NameAssignment_1_in_rule__Actor__Group__1__Impl2502);
             rule__Actor__NameAssignment_1();
             _fsp--;
 
@@ -3294,20 +3372,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Actor__Group__2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1171:1: rule__Actor__Group__2 : rule__Actor__Group__2__Impl rule__Actor__Group__3 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1201:1: rule__Actor__Group__2 : rule__Actor__Group__2__Impl rule__Actor__Group__3 ;
     public final void rule__Actor__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1175:1: ( rule__Actor__Group__2__Impl rule__Actor__Group__3 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1176:2: rule__Actor__Group__2__Impl rule__Actor__Group__3
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1205:1: ( rule__Actor__Group__2__Impl rule__Actor__Group__3 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1206:2: rule__Actor__Group__2__Impl rule__Actor__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Actor__Group__2__Impl_in_rule__Actor__Group__22473);
+            pushFollow(FollowSets000.FOLLOW_rule__Actor__Group__2__Impl_in_rule__Actor__Group__22532);
             rule__Actor__Group__2__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Actor__Group__3_in_rule__Actor__Group__22476);
+            pushFollow(FollowSets000.FOLLOW_rule__Actor__Group__3_in_rule__Actor__Group__22535);
             rule__Actor__Group__3();
             _fsp--;
 
@@ -3330,20 +3408,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Actor__Group__2__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1183:1: rule__Actor__Group__2__Impl : ( ( rule__Actor__Alternatives_2 )* ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1213:1: rule__Actor__Group__2__Impl : ( ( rule__Actor__Alternatives_2 )* ) ;
     public final void rule__Actor__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1187:1: ( ( ( rule__Actor__Alternatives_2 )* ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1188:1: ( ( rule__Actor__Alternatives_2 )* )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1217:1: ( ( ( rule__Actor__Alternatives_2 )* ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1218:1: ( ( rule__Actor__Alternatives_2 )* )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1188:1: ( ( rule__Actor__Alternatives_2 )* )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1189:1: ( rule__Actor__Alternatives_2 )*
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1218:1: ( ( rule__Actor__Alternatives_2 )* )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1219:1: ( rule__Actor__Alternatives_2 )*
             {
              before(grammarAccess.getActorAccess().getAlternatives_2()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1190:1: ( rule__Actor__Alternatives_2 )*
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1220:1: ( rule__Actor__Alternatives_2 )*
             loop9:
             do {
                 int alt9=2;
@@ -3362,9 +3440,9 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
                 switch (alt9) {
             	case 1 :
-            	    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1190:2: rule__Actor__Alternatives_2
+            	    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1220:2: rule__Actor__Alternatives_2
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__Actor__Alternatives_2_in_rule__Actor__Group__2__Impl2503);
+            	    pushFollow(FollowSets000.FOLLOW_rule__Actor__Alternatives_2_in_rule__Actor__Group__2__Impl2562);
             	    rule__Actor__Alternatives_2();
             	    _fsp--;
 
@@ -3400,16 +3478,16 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Actor__Group__3
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1200:1: rule__Actor__Group__3 : rule__Actor__Group__3__Impl ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1230:1: rule__Actor__Group__3 : rule__Actor__Group__3__Impl ;
     public final void rule__Actor__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1204:1: ( rule__Actor__Group__3__Impl )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1205:2: rule__Actor__Group__3__Impl
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1234:1: ( rule__Actor__Group__3__Impl )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1235:2: rule__Actor__Group__3__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Actor__Group__3__Impl_in_rule__Actor__Group__32534);
+            pushFollow(FollowSets000.FOLLOW_rule__Actor__Group__3__Impl_in_rule__Actor__Group__32593);
             rule__Actor__Group__3__Impl();
             _fsp--;
 
@@ -3432,20 +3510,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Actor__Group__3__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1211:1: rule__Actor__Group__3__Impl : ( ( rule__Actor__Group_3__0 )? ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1241:1: rule__Actor__Group__3__Impl : ( ( rule__Actor__Group_3__0 )? ) ;
     public final void rule__Actor__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1215:1: ( ( ( rule__Actor__Group_3__0 )? ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1216:1: ( ( rule__Actor__Group_3__0 )? )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1245:1: ( ( ( rule__Actor__Group_3__0 )? ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1246:1: ( ( rule__Actor__Group_3__0 )? )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1216:1: ( ( rule__Actor__Group_3__0 )? )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1217:1: ( rule__Actor__Group_3__0 )?
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1246:1: ( ( rule__Actor__Group_3__0 )? )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1247:1: ( rule__Actor__Group_3__0 )?
             {
              before(grammarAccess.getActorAccess().getGroup_3()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1218:1: ( rule__Actor__Group_3__0 )?
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1248:1: ( rule__Actor__Group_3__0 )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -3454,9 +3532,9 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
             }
             switch (alt10) {
                 case 1 :
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1218:2: rule__Actor__Group_3__0
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1248:2: rule__Actor__Group_3__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__Actor__Group_3__0_in_rule__Actor__Group__3__Impl2561);
+                    pushFollow(FollowSets000.FOLLOW_rule__Actor__Group_3__0_in_rule__Actor__Group__3__Impl2620);
                     rule__Actor__Group_3__0();
                     _fsp--;
 
@@ -3489,20 +3567,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Actor__Group_3__0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1236:1: rule__Actor__Group_3__0 : rule__Actor__Group_3__0__Impl rule__Actor__Group_3__1 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1266:1: rule__Actor__Group_3__0 : rule__Actor__Group_3__0__Impl rule__Actor__Group_3__1 ;
     public final void rule__Actor__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1240:1: ( rule__Actor__Group_3__0__Impl rule__Actor__Group_3__1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1241:2: rule__Actor__Group_3__0__Impl rule__Actor__Group_3__1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1270:1: ( rule__Actor__Group_3__0__Impl rule__Actor__Group_3__1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1271:2: rule__Actor__Group_3__0__Impl rule__Actor__Group_3__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Actor__Group_3__0__Impl_in_rule__Actor__Group_3__02600);
+            pushFollow(FollowSets000.FOLLOW_rule__Actor__Group_3__0__Impl_in_rule__Actor__Group_3__02659);
             rule__Actor__Group_3__0__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Actor__Group_3__1_in_rule__Actor__Group_3__02603);
+            pushFollow(FollowSets000.FOLLOW_rule__Actor__Group_3__1_in_rule__Actor__Group_3__02662);
             rule__Actor__Group_3__1();
             _fsp--;
 
@@ -3525,20 +3603,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Actor__Group_3__0__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1248:1: rule__Actor__Group_3__0__Impl : ( '{' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1278:1: rule__Actor__Group_3__0__Impl : ( '{' ) ;
     public final void rule__Actor__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1252:1: ( ( '{' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1253:1: ( '{' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1282:1: ( ( '{' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1283:1: ( '{' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1253:1: ( '{' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1254:1: '{'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1283:1: ( '{' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1284:1: '{'
             {
              before(grammarAccess.getActorAccess().getLeftCurlyBracketKeyword_3_0()); 
-            match(input,14,FollowSets000.FOLLOW_14_in_rule__Actor__Group_3__0__Impl2631); 
+            match(input,14,FollowSets000.FOLLOW_14_in_rule__Actor__Group_3__0__Impl2690); 
              after(grammarAccess.getActorAccess().getLeftCurlyBracketKeyword_3_0()); 
 
             }
@@ -3562,20 +3640,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Actor__Group_3__1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1267:1: rule__Actor__Group_3__1 : rule__Actor__Group_3__1__Impl rule__Actor__Group_3__2 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1297:1: rule__Actor__Group_3__1 : rule__Actor__Group_3__1__Impl rule__Actor__Group_3__2 ;
     public final void rule__Actor__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1271:1: ( rule__Actor__Group_3__1__Impl rule__Actor__Group_3__2 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1272:2: rule__Actor__Group_3__1__Impl rule__Actor__Group_3__2
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1301:1: ( rule__Actor__Group_3__1__Impl rule__Actor__Group_3__2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1302:2: rule__Actor__Group_3__1__Impl rule__Actor__Group_3__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Actor__Group_3__1__Impl_in_rule__Actor__Group_3__12662);
+            pushFollow(FollowSets000.FOLLOW_rule__Actor__Group_3__1__Impl_in_rule__Actor__Group_3__12721);
             rule__Actor__Group_3__1__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Actor__Group_3__2_in_rule__Actor__Group_3__12665);
+            pushFollow(FollowSets000.FOLLOW_rule__Actor__Group_3__2_in_rule__Actor__Group_3__12724);
             rule__Actor__Group_3__2();
             _fsp--;
 
@@ -3598,20 +3676,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Actor__Group_3__1__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1279:1: rule__Actor__Group_3__1__Impl : ( ( rule__Actor__IntentionsAssignment_3_1 )* ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1309:1: rule__Actor__Group_3__1__Impl : ( ( rule__Actor__IntentionsAssignment_3_1 )* ) ;
     public final void rule__Actor__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1283:1: ( ( ( rule__Actor__IntentionsAssignment_3_1 )* ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1284:1: ( ( rule__Actor__IntentionsAssignment_3_1 )* )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1313:1: ( ( ( rule__Actor__IntentionsAssignment_3_1 )* ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1314:1: ( ( rule__Actor__IntentionsAssignment_3_1 )* )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1284:1: ( ( rule__Actor__IntentionsAssignment_3_1 )* )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1285:1: ( rule__Actor__IntentionsAssignment_3_1 )*
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1314:1: ( ( rule__Actor__IntentionsAssignment_3_1 )* )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1315:1: ( rule__Actor__IntentionsAssignment_3_1 )*
             {
              before(grammarAccess.getActorAccess().getIntentionsAssignment_3_1()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1286:1: ( rule__Actor__IntentionsAssignment_3_1 )*
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1316:1: ( rule__Actor__IntentionsAssignment_3_1 )*
             loop11:
             do {
                 int alt11=2;
@@ -3624,9 +3702,9 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
                 switch (alt11) {
             	case 1 :
-            	    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1286:2: rule__Actor__IntentionsAssignment_3_1
+            	    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1316:2: rule__Actor__IntentionsAssignment_3_1
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__Actor__IntentionsAssignment_3_1_in_rule__Actor__Group_3__1__Impl2692);
+            	    pushFollow(FollowSets000.FOLLOW_rule__Actor__IntentionsAssignment_3_1_in_rule__Actor__Group_3__1__Impl2751);
             	    rule__Actor__IntentionsAssignment_3_1();
             	    _fsp--;
 
@@ -3662,16 +3740,16 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Actor__Group_3__2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1296:1: rule__Actor__Group_3__2 : rule__Actor__Group_3__2__Impl ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1326:1: rule__Actor__Group_3__2 : rule__Actor__Group_3__2__Impl ;
     public final void rule__Actor__Group_3__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1300:1: ( rule__Actor__Group_3__2__Impl )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1301:2: rule__Actor__Group_3__2__Impl
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1330:1: ( rule__Actor__Group_3__2__Impl )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1331:2: rule__Actor__Group_3__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Actor__Group_3__2__Impl_in_rule__Actor__Group_3__22723);
+            pushFollow(FollowSets000.FOLLOW_rule__Actor__Group_3__2__Impl_in_rule__Actor__Group_3__22782);
             rule__Actor__Group_3__2__Impl();
             _fsp--;
 
@@ -3694,20 +3772,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Actor__Group_3__2__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1307:1: rule__Actor__Group_3__2__Impl : ( '}' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1337:1: rule__Actor__Group_3__2__Impl : ( '}' ) ;
     public final void rule__Actor__Group_3__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1311:1: ( ( '}' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1312:1: ( '}' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1341:1: ( ( '}' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1342:1: ( '}' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1312:1: ( '}' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1313:1: '}'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1342:1: ( '}' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1343:1: '}'
             {
              before(grammarAccess.getActorAccess().getRightCurlyBracketKeyword_3_2()); 
-            match(input,15,FollowSets000.FOLLOW_15_in_rule__Actor__Group_3__2__Impl2751); 
+            match(input,15,FollowSets000.FOLLOW_15_in_rule__Actor__Group_3__2__Impl2810); 
              after(grammarAccess.getActorAccess().getRightCurlyBracketKeyword_3_2()); 
 
             }
@@ -3731,20 +3809,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Agent__Group__0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1332:1: rule__Agent__Group__0 : rule__Agent__Group__0__Impl rule__Agent__Group__1 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1362:1: rule__Agent__Group__0 : rule__Agent__Group__0__Impl rule__Agent__Group__1 ;
     public final void rule__Agent__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1336:1: ( rule__Agent__Group__0__Impl rule__Agent__Group__1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1337:2: rule__Agent__Group__0__Impl rule__Agent__Group__1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1366:1: ( rule__Agent__Group__0__Impl rule__Agent__Group__1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1367:2: rule__Agent__Group__0__Impl rule__Agent__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Agent__Group__0__Impl_in_rule__Agent__Group__02788);
+            pushFollow(FollowSets000.FOLLOW_rule__Agent__Group__0__Impl_in_rule__Agent__Group__02847);
             rule__Agent__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Agent__Group__1_in_rule__Agent__Group__02791);
+            pushFollow(FollowSets000.FOLLOW_rule__Agent__Group__1_in_rule__Agent__Group__02850);
             rule__Agent__Group__1();
             _fsp--;
 
@@ -3767,20 +3845,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Agent__Group__0__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1344:1: rule__Agent__Group__0__Impl : ( 'agent' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1374:1: rule__Agent__Group__0__Impl : ( 'agent' ) ;
     public final void rule__Agent__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1348:1: ( ( 'agent' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1349:1: ( 'agent' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1378:1: ( ( 'agent' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1379:1: ( 'agent' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1349:1: ( 'agent' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1350:1: 'agent'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1379:1: ( 'agent' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1380:1: 'agent'
             {
              before(grammarAccess.getAgentAccess().getAgentKeyword_0()); 
-            match(input,16,FollowSets000.FOLLOW_16_in_rule__Agent__Group__0__Impl2819); 
+            match(input,16,FollowSets000.FOLLOW_16_in_rule__Agent__Group__0__Impl2878); 
              after(grammarAccess.getAgentAccess().getAgentKeyword_0()); 
 
             }
@@ -3804,20 +3882,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Agent__Group__1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1363:1: rule__Agent__Group__1 : rule__Agent__Group__1__Impl rule__Agent__Group__2 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1393:1: rule__Agent__Group__1 : rule__Agent__Group__1__Impl rule__Agent__Group__2 ;
     public final void rule__Agent__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1367:1: ( rule__Agent__Group__1__Impl rule__Agent__Group__2 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1368:2: rule__Agent__Group__1__Impl rule__Agent__Group__2
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1397:1: ( rule__Agent__Group__1__Impl rule__Agent__Group__2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1398:2: rule__Agent__Group__1__Impl rule__Agent__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Agent__Group__1__Impl_in_rule__Agent__Group__12850);
+            pushFollow(FollowSets000.FOLLOW_rule__Agent__Group__1__Impl_in_rule__Agent__Group__12909);
             rule__Agent__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Agent__Group__2_in_rule__Agent__Group__12853);
+            pushFollow(FollowSets000.FOLLOW_rule__Agent__Group__2_in_rule__Agent__Group__12912);
             rule__Agent__Group__2();
             _fsp--;
 
@@ -3840,23 +3918,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Agent__Group__1__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1375:1: rule__Agent__Group__1__Impl : ( ( rule__Agent__NameAssignment_1 ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1405:1: rule__Agent__Group__1__Impl : ( ( rule__Agent__NameAssignment_1 ) ) ;
     public final void rule__Agent__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1379:1: ( ( ( rule__Agent__NameAssignment_1 ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1380:1: ( ( rule__Agent__NameAssignment_1 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1409:1: ( ( ( rule__Agent__NameAssignment_1 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1410:1: ( ( rule__Agent__NameAssignment_1 ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1380:1: ( ( rule__Agent__NameAssignment_1 ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1381:1: ( rule__Agent__NameAssignment_1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1410:1: ( ( rule__Agent__NameAssignment_1 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1411:1: ( rule__Agent__NameAssignment_1 )
             {
              before(grammarAccess.getAgentAccess().getNameAssignment_1()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1382:1: ( rule__Agent__NameAssignment_1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1382:2: rule__Agent__NameAssignment_1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1412:1: ( rule__Agent__NameAssignment_1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1412:2: rule__Agent__NameAssignment_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Agent__NameAssignment_1_in_rule__Agent__Group__1__Impl2880);
+            pushFollow(FollowSets000.FOLLOW_rule__Agent__NameAssignment_1_in_rule__Agent__Group__1__Impl2939);
             rule__Agent__NameAssignment_1();
             _fsp--;
 
@@ -3886,16 +3964,16 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Agent__Group__2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1392:1: rule__Agent__Group__2 : rule__Agent__Group__2__Impl ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1422:1: rule__Agent__Group__2 : rule__Agent__Group__2__Impl ;
     public final void rule__Agent__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1396:1: ( rule__Agent__Group__2__Impl )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1397:2: rule__Agent__Group__2__Impl
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1426:1: ( rule__Agent__Group__2__Impl )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1427:2: rule__Agent__Group__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Agent__Group__2__Impl_in_rule__Agent__Group__22910);
+            pushFollow(FollowSets000.FOLLOW_rule__Agent__Group__2__Impl_in_rule__Agent__Group__22969);
             rule__Agent__Group__2__Impl();
             _fsp--;
 
@@ -3918,20 +3996,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Agent__Group__2__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1403:1: rule__Agent__Group__2__Impl : ( ( rule__Agent__Group_2__0 )? ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1433:1: rule__Agent__Group__2__Impl : ( ( rule__Agent__Group_2__0 )? ) ;
     public final void rule__Agent__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1407:1: ( ( ( rule__Agent__Group_2__0 )? ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1408:1: ( ( rule__Agent__Group_2__0 )? )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1437:1: ( ( ( rule__Agent__Group_2__0 )? ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1438:1: ( ( rule__Agent__Group_2__0 )? )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1408:1: ( ( rule__Agent__Group_2__0 )? )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1409:1: ( rule__Agent__Group_2__0 )?
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1438:1: ( ( rule__Agent__Group_2__0 )? )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1439:1: ( rule__Agent__Group_2__0 )?
             {
              before(grammarAccess.getAgentAccess().getGroup_2()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1410:1: ( rule__Agent__Group_2__0 )?
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1440:1: ( rule__Agent__Group_2__0 )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -3940,9 +4018,9 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
             }
             switch (alt12) {
                 case 1 :
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1410:2: rule__Agent__Group_2__0
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1440:2: rule__Agent__Group_2__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__Agent__Group_2__0_in_rule__Agent__Group__2__Impl2937);
+                    pushFollow(FollowSets000.FOLLOW_rule__Agent__Group_2__0_in_rule__Agent__Group__2__Impl2996);
                     rule__Agent__Group_2__0();
                     _fsp--;
 
@@ -3975,20 +4053,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Agent__Group_2__0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1426:1: rule__Agent__Group_2__0 : rule__Agent__Group_2__0__Impl rule__Agent__Group_2__1 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1456:1: rule__Agent__Group_2__0 : rule__Agent__Group_2__0__Impl rule__Agent__Group_2__1 ;
     public final void rule__Agent__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1430:1: ( rule__Agent__Group_2__0__Impl rule__Agent__Group_2__1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1431:2: rule__Agent__Group_2__0__Impl rule__Agent__Group_2__1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1460:1: ( rule__Agent__Group_2__0__Impl rule__Agent__Group_2__1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1461:2: rule__Agent__Group_2__0__Impl rule__Agent__Group_2__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Agent__Group_2__0__Impl_in_rule__Agent__Group_2__02974);
+            pushFollow(FollowSets000.FOLLOW_rule__Agent__Group_2__0__Impl_in_rule__Agent__Group_2__03033);
             rule__Agent__Group_2__0__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Agent__Group_2__1_in_rule__Agent__Group_2__02977);
+            pushFollow(FollowSets000.FOLLOW_rule__Agent__Group_2__1_in_rule__Agent__Group_2__03036);
             rule__Agent__Group_2__1();
             _fsp--;
 
@@ -4011,20 +4089,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Agent__Group_2__0__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1438:1: rule__Agent__Group_2__0__Impl : ( '{' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1468:1: rule__Agent__Group_2__0__Impl : ( '{' ) ;
     public final void rule__Agent__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1442:1: ( ( '{' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1443:1: ( '{' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1472:1: ( ( '{' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1473:1: ( '{' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1443:1: ( '{' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1444:1: '{'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1473:1: ( '{' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1474:1: '{'
             {
              before(grammarAccess.getAgentAccess().getLeftCurlyBracketKeyword_2_0()); 
-            match(input,14,FollowSets000.FOLLOW_14_in_rule__Agent__Group_2__0__Impl3005); 
+            match(input,14,FollowSets000.FOLLOW_14_in_rule__Agent__Group_2__0__Impl3064); 
              after(grammarAccess.getAgentAccess().getLeftCurlyBracketKeyword_2_0()); 
 
             }
@@ -4048,20 +4126,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Agent__Group_2__1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1457:1: rule__Agent__Group_2__1 : rule__Agent__Group_2__1__Impl rule__Agent__Group_2__2 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1487:1: rule__Agent__Group_2__1 : rule__Agent__Group_2__1__Impl rule__Agent__Group_2__2 ;
     public final void rule__Agent__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1461:1: ( rule__Agent__Group_2__1__Impl rule__Agent__Group_2__2 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1462:2: rule__Agent__Group_2__1__Impl rule__Agent__Group_2__2
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1491:1: ( rule__Agent__Group_2__1__Impl rule__Agent__Group_2__2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1492:2: rule__Agent__Group_2__1__Impl rule__Agent__Group_2__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Agent__Group_2__1__Impl_in_rule__Agent__Group_2__13036);
+            pushFollow(FollowSets000.FOLLOW_rule__Agent__Group_2__1__Impl_in_rule__Agent__Group_2__13095);
             rule__Agent__Group_2__1__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Agent__Group_2__2_in_rule__Agent__Group_2__13039);
+            pushFollow(FollowSets000.FOLLOW_rule__Agent__Group_2__2_in_rule__Agent__Group_2__13098);
             rule__Agent__Group_2__2();
             _fsp--;
 
@@ -4084,20 +4162,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Agent__Group_2__1__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1469:1: rule__Agent__Group_2__1__Impl : ( ( rule__Agent__IntentionsAssignment_2_1 )* ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1499:1: rule__Agent__Group_2__1__Impl : ( ( rule__Agent__IntentionsAssignment_2_1 )* ) ;
     public final void rule__Agent__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1473:1: ( ( ( rule__Agent__IntentionsAssignment_2_1 )* ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1474:1: ( ( rule__Agent__IntentionsAssignment_2_1 )* )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1503:1: ( ( ( rule__Agent__IntentionsAssignment_2_1 )* ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1504:1: ( ( rule__Agent__IntentionsAssignment_2_1 )* )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1474:1: ( ( rule__Agent__IntentionsAssignment_2_1 )* )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1475:1: ( rule__Agent__IntentionsAssignment_2_1 )*
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1504:1: ( ( rule__Agent__IntentionsAssignment_2_1 )* )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1505:1: ( rule__Agent__IntentionsAssignment_2_1 )*
             {
              before(grammarAccess.getAgentAccess().getIntentionsAssignment_2_1()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1476:1: ( rule__Agent__IntentionsAssignment_2_1 )*
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1506:1: ( rule__Agent__IntentionsAssignment_2_1 )*
             loop13:
             do {
                 int alt13=2;
@@ -4110,9 +4188,9 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
                 switch (alt13) {
             	case 1 :
-            	    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1476:2: rule__Agent__IntentionsAssignment_2_1
+            	    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1506:2: rule__Agent__IntentionsAssignment_2_1
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__Agent__IntentionsAssignment_2_1_in_rule__Agent__Group_2__1__Impl3066);
+            	    pushFollow(FollowSets000.FOLLOW_rule__Agent__IntentionsAssignment_2_1_in_rule__Agent__Group_2__1__Impl3125);
             	    rule__Agent__IntentionsAssignment_2_1();
             	    _fsp--;
 
@@ -4148,16 +4226,16 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Agent__Group_2__2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1486:1: rule__Agent__Group_2__2 : rule__Agent__Group_2__2__Impl ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1516:1: rule__Agent__Group_2__2 : rule__Agent__Group_2__2__Impl ;
     public final void rule__Agent__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1490:1: ( rule__Agent__Group_2__2__Impl )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1491:2: rule__Agent__Group_2__2__Impl
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1520:1: ( rule__Agent__Group_2__2__Impl )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1521:2: rule__Agent__Group_2__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Agent__Group_2__2__Impl_in_rule__Agent__Group_2__23097);
+            pushFollow(FollowSets000.FOLLOW_rule__Agent__Group_2__2__Impl_in_rule__Agent__Group_2__23156);
             rule__Agent__Group_2__2__Impl();
             _fsp--;
 
@@ -4180,20 +4258,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Agent__Group_2__2__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1497:1: rule__Agent__Group_2__2__Impl : ( '}' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1527:1: rule__Agent__Group_2__2__Impl : ( '}' ) ;
     public final void rule__Agent__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1501:1: ( ( '}' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1502:1: ( '}' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1531:1: ( ( '}' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1532:1: ( '}' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1502:1: ( '}' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1503:1: '}'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1532:1: ( '}' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1533:1: '}'
             {
              before(grammarAccess.getAgentAccess().getRightCurlyBracketKeyword_2_2()); 
-            match(input,15,FollowSets000.FOLLOW_15_in_rule__Agent__Group_2__2__Impl3125); 
+            match(input,15,FollowSets000.FOLLOW_15_in_rule__Agent__Group_2__2__Impl3184); 
              after(grammarAccess.getAgentAccess().getRightCurlyBracketKeyword_2_2()); 
 
             }
@@ -4217,20 +4295,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Role__Group__0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1522:1: rule__Role__Group__0 : rule__Role__Group__0__Impl rule__Role__Group__1 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1552:1: rule__Role__Group__0 : rule__Role__Group__0__Impl rule__Role__Group__1 ;
     public final void rule__Role__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1526:1: ( rule__Role__Group__0__Impl rule__Role__Group__1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1527:2: rule__Role__Group__0__Impl rule__Role__Group__1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1556:1: ( rule__Role__Group__0__Impl rule__Role__Group__1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1557:2: rule__Role__Group__0__Impl rule__Role__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Role__Group__0__Impl_in_rule__Role__Group__03162);
+            pushFollow(FollowSets000.FOLLOW_rule__Role__Group__0__Impl_in_rule__Role__Group__03221);
             rule__Role__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Role__Group__1_in_rule__Role__Group__03165);
+            pushFollow(FollowSets000.FOLLOW_rule__Role__Group__1_in_rule__Role__Group__03224);
             rule__Role__Group__1();
             _fsp--;
 
@@ -4253,20 +4331,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Role__Group__0__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1534:1: rule__Role__Group__0__Impl : ( 'role' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1564:1: rule__Role__Group__0__Impl : ( 'role' ) ;
     public final void rule__Role__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1538:1: ( ( 'role' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1539:1: ( 'role' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1568:1: ( ( 'role' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1569:1: ( 'role' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1539:1: ( 'role' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1540:1: 'role'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1569:1: ( 'role' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1570:1: 'role'
             {
              before(grammarAccess.getRoleAccess().getRoleKeyword_0()); 
-            match(input,17,FollowSets000.FOLLOW_17_in_rule__Role__Group__0__Impl3193); 
+            match(input,17,FollowSets000.FOLLOW_17_in_rule__Role__Group__0__Impl3252); 
              after(grammarAccess.getRoleAccess().getRoleKeyword_0()); 
 
             }
@@ -4290,20 +4368,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Role__Group__1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1553:1: rule__Role__Group__1 : rule__Role__Group__1__Impl rule__Role__Group__2 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1583:1: rule__Role__Group__1 : rule__Role__Group__1__Impl rule__Role__Group__2 ;
     public final void rule__Role__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1557:1: ( rule__Role__Group__1__Impl rule__Role__Group__2 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1558:2: rule__Role__Group__1__Impl rule__Role__Group__2
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1587:1: ( rule__Role__Group__1__Impl rule__Role__Group__2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1588:2: rule__Role__Group__1__Impl rule__Role__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Role__Group__1__Impl_in_rule__Role__Group__13224);
+            pushFollow(FollowSets000.FOLLOW_rule__Role__Group__1__Impl_in_rule__Role__Group__13283);
             rule__Role__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Role__Group__2_in_rule__Role__Group__13227);
+            pushFollow(FollowSets000.FOLLOW_rule__Role__Group__2_in_rule__Role__Group__13286);
             rule__Role__Group__2();
             _fsp--;
 
@@ -4326,23 +4404,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Role__Group__1__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1565:1: rule__Role__Group__1__Impl : ( ( rule__Role__NameAssignment_1 ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1595:1: rule__Role__Group__1__Impl : ( ( rule__Role__NameAssignment_1 ) ) ;
     public final void rule__Role__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1569:1: ( ( ( rule__Role__NameAssignment_1 ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1570:1: ( ( rule__Role__NameAssignment_1 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1599:1: ( ( ( rule__Role__NameAssignment_1 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1600:1: ( ( rule__Role__NameAssignment_1 ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1570:1: ( ( rule__Role__NameAssignment_1 ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1571:1: ( rule__Role__NameAssignment_1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1600:1: ( ( rule__Role__NameAssignment_1 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1601:1: ( rule__Role__NameAssignment_1 )
             {
              before(grammarAccess.getRoleAccess().getNameAssignment_1()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1572:1: ( rule__Role__NameAssignment_1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1572:2: rule__Role__NameAssignment_1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1602:1: ( rule__Role__NameAssignment_1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1602:2: rule__Role__NameAssignment_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Role__NameAssignment_1_in_rule__Role__Group__1__Impl3254);
+            pushFollow(FollowSets000.FOLLOW_rule__Role__NameAssignment_1_in_rule__Role__Group__1__Impl3313);
             rule__Role__NameAssignment_1();
             _fsp--;
 
@@ -4372,16 +4450,16 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Role__Group__2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1582:1: rule__Role__Group__2 : rule__Role__Group__2__Impl ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1612:1: rule__Role__Group__2 : rule__Role__Group__2__Impl ;
     public final void rule__Role__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1586:1: ( rule__Role__Group__2__Impl )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1587:2: rule__Role__Group__2__Impl
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1616:1: ( rule__Role__Group__2__Impl )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1617:2: rule__Role__Group__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Role__Group__2__Impl_in_rule__Role__Group__23284);
+            pushFollow(FollowSets000.FOLLOW_rule__Role__Group__2__Impl_in_rule__Role__Group__23343);
             rule__Role__Group__2__Impl();
             _fsp--;
 
@@ -4404,20 +4482,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Role__Group__2__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1593:1: rule__Role__Group__2__Impl : ( ( rule__Role__Group_2__0 )? ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1623:1: rule__Role__Group__2__Impl : ( ( rule__Role__Group_2__0 )? ) ;
     public final void rule__Role__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1597:1: ( ( ( rule__Role__Group_2__0 )? ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1598:1: ( ( rule__Role__Group_2__0 )? )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1627:1: ( ( ( rule__Role__Group_2__0 )? ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1628:1: ( ( rule__Role__Group_2__0 )? )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1598:1: ( ( rule__Role__Group_2__0 )? )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1599:1: ( rule__Role__Group_2__0 )?
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1628:1: ( ( rule__Role__Group_2__0 )? )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1629:1: ( rule__Role__Group_2__0 )?
             {
              before(grammarAccess.getRoleAccess().getGroup_2()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1600:1: ( rule__Role__Group_2__0 )?
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1630:1: ( rule__Role__Group_2__0 )?
             int alt14=2;
             int LA14_0 = input.LA(1);
 
@@ -4426,9 +4504,9 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
             }
             switch (alt14) {
                 case 1 :
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1600:2: rule__Role__Group_2__0
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1630:2: rule__Role__Group_2__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__Role__Group_2__0_in_rule__Role__Group__2__Impl3311);
+                    pushFollow(FollowSets000.FOLLOW_rule__Role__Group_2__0_in_rule__Role__Group__2__Impl3370);
                     rule__Role__Group_2__0();
                     _fsp--;
 
@@ -4461,20 +4539,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Role__Group_2__0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1616:1: rule__Role__Group_2__0 : rule__Role__Group_2__0__Impl rule__Role__Group_2__1 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1646:1: rule__Role__Group_2__0 : rule__Role__Group_2__0__Impl rule__Role__Group_2__1 ;
     public final void rule__Role__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1620:1: ( rule__Role__Group_2__0__Impl rule__Role__Group_2__1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1621:2: rule__Role__Group_2__0__Impl rule__Role__Group_2__1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1650:1: ( rule__Role__Group_2__0__Impl rule__Role__Group_2__1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1651:2: rule__Role__Group_2__0__Impl rule__Role__Group_2__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Role__Group_2__0__Impl_in_rule__Role__Group_2__03348);
+            pushFollow(FollowSets000.FOLLOW_rule__Role__Group_2__0__Impl_in_rule__Role__Group_2__03407);
             rule__Role__Group_2__0__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Role__Group_2__1_in_rule__Role__Group_2__03351);
+            pushFollow(FollowSets000.FOLLOW_rule__Role__Group_2__1_in_rule__Role__Group_2__03410);
             rule__Role__Group_2__1();
             _fsp--;
 
@@ -4497,20 +4575,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Role__Group_2__0__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1628:1: rule__Role__Group_2__0__Impl : ( '{' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1658:1: rule__Role__Group_2__0__Impl : ( '{' ) ;
     public final void rule__Role__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1632:1: ( ( '{' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1633:1: ( '{' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1662:1: ( ( '{' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1663:1: ( '{' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1633:1: ( '{' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1634:1: '{'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1663:1: ( '{' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1664:1: '{'
             {
              before(grammarAccess.getRoleAccess().getLeftCurlyBracketKeyword_2_0()); 
-            match(input,14,FollowSets000.FOLLOW_14_in_rule__Role__Group_2__0__Impl3379); 
+            match(input,14,FollowSets000.FOLLOW_14_in_rule__Role__Group_2__0__Impl3438); 
              after(grammarAccess.getRoleAccess().getLeftCurlyBracketKeyword_2_0()); 
 
             }
@@ -4534,20 +4612,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Role__Group_2__1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1647:1: rule__Role__Group_2__1 : rule__Role__Group_2__1__Impl rule__Role__Group_2__2 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1677:1: rule__Role__Group_2__1 : rule__Role__Group_2__1__Impl rule__Role__Group_2__2 ;
     public final void rule__Role__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1651:1: ( rule__Role__Group_2__1__Impl rule__Role__Group_2__2 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1652:2: rule__Role__Group_2__1__Impl rule__Role__Group_2__2
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1681:1: ( rule__Role__Group_2__1__Impl rule__Role__Group_2__2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1682:2: rule__Role__Group_2__1__Impl rule__Role__Group_2__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Role__Group_2__1__Impl_in_rule__Role__Group_2__13410);
+            pushFollow(FollowSets000.FOLLOW_rule__Role__Group_2__1__Impl_in_rule__Role__Group_2__13469);
             rule__Role__Group_2__1__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Role__Group_2__2_in_rule__Role__Group_2__13413);
+            pushFollow(FollowSets000.FOLLOW_rule__Role__Group_2__2_in_rule__Role__Group_2__13472);
             rule__Role__Group_2__2();
             _fsp--;
 
@@ -4570,20 +4648,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Role__Group_2__1__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1659:1: rule__Role__Group_2__1__Impl : ( ( rule__Role__IntentionsAssignment_2_1 )* ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1689:1: rule__Role__Group_2__1__Impl : ( ( rule__Role__IntentionsAssignment_2_1 )* ) ;
     public final void rule__Role__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1663:1: ( ( ( rule__Role__IntentionsAssignment_2_1 )* ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1664:1: ( ( rule__Role__IntentionsAssignment_2_1 )* )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1693:1: ( ( ( rule__Role__IntentionsAssignment_2_1 )* ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1694:1: ( ( rule__Role__IntentionsAssignment_2_1 )* )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1664:1: ( ( rule__Role__IntentionsAssignment_2_1 )* )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1665:1: ( rule__Role__IntentionsAssignment_2_1 )*
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1694:1: ( ( rule__Role__IntentionsAssignment_2_1 )* )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1695:1: ( rule__Role__IntentionsAssignment_2_1 )*
             {
              before(grammarAccess.getRoleAccess().getIntentionsAssignment_2_1()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1666:1: ( rule__Role__IntentionsAssignment_2_1 )*
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1696:1: ( rule__Role__IntentionsAssignment_2_1 )*
             loop15:
             do {
                 int alt15=2;
@@ -4596,9 +4674,9 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
                 switch (alt15) {
             	case 1 :
-            	    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1666:2: rule__Role__IntentionsAssignment_2_1
+            	    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1696:2: rule__Role__IntentionsAssignment_2_1
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__Role__IntentionsAssignment_2_1_in_rule__Role__Group_2__1__Impl3440);
+            	    pushFollow(FollowSets000.FOLLOW_rule__Role__IntentionsAssignment_2_1_in_rule__Role__Group_2__1__Impl3499);
             	    rule__Role__IntentionsAssignment_2_1();
             	    _fsp--;
 
@@ -4634,16 +4712,16 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Role__Group_2__2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1676:1: rule__Role__Group_2__2 : rule__Role__Group_2__2__Impl ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1706:1: rule__Role__Group_2__2 : rule__Role__Group_2__2__Impl ;
     public final void rule__Role__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1680:1: ( rule__Role__Group_2__2__Impl )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1681:2: rule__Role__Group_2__2__Impl
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1710:1: ( rule__Role__Group_2__2__Impl )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1711:2: rule__Role__Group_2__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Role__Group_2__2__Impl_in_rule__Role__Group_2__23471);
+            pushFollow(FollowSets000.FOLLOW_rule__Role__Group_2__2__Impl_in_rule__Role__Group_2__23530);
             rule__Role__Group_2__2__Impl();
             _fsp--;
 
@@ -4666,20 +4744,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Role__Group_2__2__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1687:1: rule__Role__Group_2__2__Impl : ( '}' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1717:1: rule__Role__Group_2__2__Impl : ( '}' ) ;
     public final void rule__Role__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1691:1: ( ( '}' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1692:1: ( '}' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1721:1: ( ( '}' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1722:1: ( '}' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1692:1: ( '}' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1693:1: '}'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1722:1: ( '}' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1723:1: '}'
             {
              before(grammarAccess.getRoleAccess().getRightCurlyBracketKeyword_2_2()); 
-            match(input,15,FollowSets000.FOLLOW_15_in_rule__Role__Group_2__2__Impl3499); 
+            match(input,15,FollowSets000.FOLLOW_15_in_rule__Role__Group_2__2__Impl3558); 
              after(grammarAccess.getRoleAccess().getRightCurlyBracketKeyword_2_2()); 
 
             }
@@ -4703,20 +4781,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Position__Group__0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1712:1: rule__Position__Group__0 : rule__Position__Group__0__Impl rule__Position__Group__1 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1742:1: rule__Position__Group__0 : rule__Position__Group__0__Impl rule__Position__Group__1 ;
     public final void rule__Position__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1716:1: ( rule__Position__Group__0__Impl rule__Position__Group__1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1717:2: rule__Position__Group__0__Impl rule__Position__Group__1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1746:1: ( rule__Position__Group__0__Impl rule__Position__Group__1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1747:2: rule__Position__Group__0__Impl rule__Position__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Position__Group__0__Impl_in_rule__Position__Group__03536);
+            pushFollow(FollowSets000.FOLLOW_rule__Position__Group__0__Impl_in_rule__Position__Group__03595);
             rule__Position__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Position__Group__1_in_rule__Position__Group__03539);
+            pushFollow(FollowSets000.FOLLOW_rule__Position__Group__1_in_rule__Position__Group__03598);
             rule__Position__Group__1();
             _fsp--;
 
@@ -4739,20 +4817,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Position__Group__0__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1724:1: rule__Position__Group__0__Impl : ( 'position' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1754:1: rule__Position__Group__0__Impl : ( 'position' ) ;
     public final void rule__Position__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1728:1: ( ( 'position' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1729:1: ( 'position' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1758:1: ( ( 'position' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1759:1: ( 'position' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1729:1: ( 'position' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1730:1: 'position'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1759:1: ( 'position' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1760:1: 'position'
             {
              before(grammarAccess.getPositionAccess().getPositionKeyword_0()); 
-            match(input,18,FollowSets000.FOLLOW_18_in_rule__Position__Group__0__Impl3567); 
+            match(input,18,FollowSets000.FOLLOW_18_in_rule__Position__Group__0__Impl3626); 
              after(grammarAccess.getPositionAccess().getPositionKeyword_0()); 
 
             }
@@ -4776,20 +4854,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Position__Group__1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1743:1: rule__Position__Group__1 : rule__Position__Group__1__Impl rule__Position__Group__2 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1773:1: rule__Position__Group__1 : rule__Position__Group__1__Impl rule__Position__Group__2 ;
     public final void rule__Position__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1747:1: ( rule__Position__Group__1__Impl rule__Position__Group__2 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1748:2: rule__Position__Group__1__Impl rule__Position__Group__2
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1777:1: ( rule__Position__Group__1__Impl rule__Position__Group__2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1778:2: rule__Position__Group__1__Impl rule__Position__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Position__Group__1__Impl_in_rule__Position__Group__13598);
+            pushFollow(FollowSets000.FOLLOW_rule__Position__Group__1__Impl_in_rule__Position__Group__13657);
             rule__Position__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Position__Group__2_in_rule__Position__Group__13601);
+            pushFollow(FollowSets000.FOLLOW_rule__Position__Group__2_in_rule__Position__Group__13660);
             rule__Position__Group__2();
             _fsp--;
 
@@ -4812,23 +4890,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Position__Group__1__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1755:1: rule__Position__Group__1__Impl : ( ( rule__Position__NameAssignment_1 ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1785:1: rule__Position__Group__1__Impl : ( ( rule__Position__NameAssignment_1 ) ) ;
     public final void rule__Position__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1759:1: ( ( ( rule__Position__NameAssignment_1 ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1760:1: ( ( rule__Position__NameAssignment_1 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1789:1: ( ( ( rule__Position__NameAssignment_1 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1790:1: ( ( rule__Position__NameAssignment_1 ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1760:1: ( ( rule__Position__NameAssignment_1 ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1761:1: ( rule__Position__NameAssignment_1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1790:1: ( ( rule__Position__NameAssignment_1 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1791:1: ( rule__Position__NameAssignment_1 )
             {
              before(grammarAccess.getPositionAccess().getNameAssignment_1()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1762:1: ( rule__Position__NameAssignment_1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1762:2: rule__Position__NameAssignment_1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1792:1: ( rule__Position__NameAssignment_1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1792:2: rule__Position__NameAssignment_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Position__NameAssignment_1_in_rule__Position__Group__1__Impl3628);
+            pushFollow(FollowSets000.FOLLOW_rule__Position__NameAssignment_1_in_rule__Position__Group__1__Impl3687);
             rule__Position__NameAssignment_1();
             _fsp--;
 
@@ -4858,16 +4936,16 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Position__Group__2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1772:1: rule__Position__Group__2 : rule__Position__Group__2__Impl ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1802:1: rule__Position__Group__2 : rule__Position__Group__2__Impl ;
     public final void rule__Position__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1776:1: ( rule__Position__Group__2__Impl )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1777:2: rule__Position__Group__2__Impl
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1806:1: ( rule__Position__Group__2__Impl )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1807:2: rule__Position__Group__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Position__Group__2__Impl_in_rule__Position__Group__23658);
+            pushFollow(FollowSets000.FOLLOW_rule__Position__Group__2__Impl_in_rule__Position__Group__23717);
             rule__Position__Group__2__Impl();
             _fsp--;
 
@@ -4890,20 +4968,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Position__Group__2__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1783:1: rule__Position__Group__2__Impl : ( ( rule__Position__Group_2__0 )? ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1813:1: rule__Position__Group__2__Impl : ( ( rule__Position__Group_2__0 )? ) ;
     public final void rule__Position__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1787:1: ( ( ( rule__Position__Group_2__0 )? ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1788:1: ( ( rule__Position__Group_2__0 )? )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1817:1: ( ( ( rule__Position__Group_2__0 )? ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1818:1: ( ( rule__Position__Group_2__0 )? )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1788:1: ( ( rule__Position__Group_2__0 )? )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1789:1: ( rule__Position__Group_2__0 )?
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1818:1: ( ( rule__Position__Group_2__0 )? )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1819:1: ( rule__Position__Group_2__0 )?
             {
              before(grammarAccess.getPositionAccess().getGroup_2()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1790:1: ( rule__Position__Group_2__0 )?
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1820:1: ( rule__Position__Group_2__0 )?
             int alt16=2;
             int LA16_0 = input.LA(1);
 
@@ -4912,9 +4990,9 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
             }
             switch (alt16) {
                 case 1 :
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1790:2: rule__Position__Group_2__0
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1820:2: rule__Position__Group_2__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__Position__Group_2__0_in_rule__Position__Group__2__Impl3685);
+                    pushFollow(FollowSets000.FOLLOW_rule__Position__Group_2__0_in_rule__Position__Group__2__Impl3744);
                     rule__Position__Group_2__0();
                     _fsp--;
 
@@ -4947,20 +5025,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Position__Group_2__0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1806:1: rule__Position__Group_2__0 : rule__Position__Group_2__0__Impl rule__Position__Group_2__1 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1836:1: rule__Position__Group_2__0 : rule__Position__Group_2__0__Impl rule__Position__Group_2__1 ;
     public final void rule__Position__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1810:1: ( rule__Position__Group_2__0__Impl rule__Position__Group_2__1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1811:2: rule__Position__Group_2__0__Impl rule__Position__Group_2__1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1840:1: ( rule__Position__Group_2__0__Impl rule__Position__Group_2__1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1841:2: rule__Position__Group_2__0__Impl rule__Position__Group_2__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Position__Group_2__0__Impl_in_rule__Position__Group_2__03722);
+            pushFollow(FollowSets000.FOLLOW_rule__Position__Group_2__0__Impl_in_rule__Position__Group_2__03781);
             rule__Position__Group_2__0__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Position__Group_2__1_in_rule__Position__Group_2__03725);
+            pushFollow(FollowSets000.FOLLOW_rule__Position__Group_2__1_in_rule__Position__Group_2__03784);
             rule__Position__Group_2__1();
             _fsp--;
 
@@ -4983,20 +5061,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Position__Group_2__0__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1818:1: rule__Position__Group_2__0__Impl : ( '{' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1848:1: rule__Position__Group_2__0__Impl : ( '{' ) ;
     public final void rule__Position__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1822:1: ( ( '{' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1823:1: ( '{' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1852:1: ( ( '{' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1853:1: ( '{' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1823:1: ( '{' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1824:1: '{'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1853:1: ( '{' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1854:1: '{'
             {
              before(grammarAccess.getPositionAccess().getLeftCurlyBracketKeyword_2_0()); 
-            match(input,14,FollowSets000.FOLLOW_14_in_rule__Position__Group_2__0__Impl3753); 
+            match(input,14,FollowSets000.FOLLOW_14_in_rule__Position__Group_2__0__Impl3812); 
              after(grammarAccess.getPositionAccess().getLeftCurlyBracketKeyword_2_0()); 
 
             }
@@ -5020,20 +5098,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Position__Group_2__1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1837:1: rule__Position__Group_2__1 : rule__Position__Group_2__1__Impl rule__Position__Group_2__2 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1867:1: rule__Position__Group_2__1 : rule__Position__Group_2__1__Impl rule__Position__Group_2__2 ;
     public final void rule__Position__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1841:1: ( rule__Position__Group_2__1__Impl rule__Position__Group_2__2 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1842:2: rule__Position__Group_2__1__Impl rule__Position__Group_2__2
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1871:1: ( rule__Position__Group_2__1__Impl rule__Position__Group_2__2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1872:2: rule__Position__Group_2__1__Impl rule__Position__Group_2__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Position__Group_2__1__Impl_in_rule__Position__Group_2__13784);
+            pushFollow(FollowSets000.FOLLOW_rule__Position__Group_2__1__Impl_in_rule__Position__Group_2__13843);
             rule__Position__Group_2__1__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Position__Group_2__2_in_rule__Position__Group_2__13787);
+            pushFollow(FollowSets000.FOLLOW_rule__Position__Group_2__2_in_rule__Position__Group_2__13846);
             rule__Position__Group_2__2();
             _fsp--;
 
@@ -5056,20 +5134,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Position__Group_2__1__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1849:1: rule__Position__Group_2__1__Impl : ( ( rule__Position__IntentionsAssignment_2_1 )* ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1879:1: rule__Position__Group_2__1__Impl : ( ( rule__Position__IntentionsAssignment_2_1 )* ) ;
     public final void rule__Position__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1853:1: ( ( ( rule__Position__IntentionsAssignment_2_1 )* ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1854:1: ( ( rule__Position__IntentionsAssignment_2_1 )* )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1883:1: ( ( ( rule__Position__IntentionsAssignment_2_1 )* ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1884:1: ( ( rule__Position__IntentionsAssignment_2_1 )* )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1854:1: ( ( rule__Position__IntentionsAssignment_2_1 )* )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1855:1: ( rule__Position__IntentionsAssignment_2_1 )*
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1884:1: ( ( rule__Position__IntentionsAssignment_2_1 )* )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1885:1: ( rule__Position__IntentionsAssignment_2_1 )*
             {
              before(grammarAccess.getPositionAccess().getIntentionsAssignment_2_1()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1856:1: ( rule__Position__IntentionsAssignment_2_1 )*
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1886:1: ( rule__Position__IntentionsAssignment_2_1 )*
             loop17:
             do {
                 int alt17=2;
@@ -5082,9 +5160,9 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
                 switch (alt17) {
             	case 1 :
-            	    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1856:2: rule__Position__IntentionsAssignment_2_1
+            	    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1886:2: rule__Position__IntentionsAssignment_2_1
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__Position__IntentionsAssignment_2_1_in_rule__Position__Group_2__1__Impl3814);
+            	    pushFollow(FollowSets000.FOLLOW_rule__Position__IntentionsAssignment_2_1_in_rule__Position__Group_2__1__Impl3873);
             	    rule__Position__IntentionsAssignment_2_1();
             	    _fsp--;
 
@@ -5120,16 +5198,16 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Position__Group_2__2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1866:1: rule__Position__Group_2__2 : rule__Position__Group_2__2__Impl ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1896:1: rule__Position__Group_2__2 : rule__Position__Group_2__2__Impl ;
     public final void rule__Position__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1870:1: ( rule__Position__Group_2__2__Impl )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1871:2: rule__Position__Group_2__2__Impl
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1900:1: ( rule__Position__Group_2__2__Impl )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1901:2: rule__Position__Group_2__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Position__Group_2__2__Impl_in_rule__Position__Group_2__23845);
+            pushFollow(FollowSets000.FOLLOW_rule__Position__Group_2__2__Impl_in_rule__Position__Group_2__23904);
             rule__Position__Group_2__2__Impl();
             _fsp--;
 
@@ -5152,20 +5230,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Position__Group_2__2__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1877:1: rule__Position__Group_2__2__Impl : ( '}' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1907:1: rule__Position__Group_2__2__Impl : ( '}' ) ;
     public final void rule__Position__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1881:1: ( ( '}' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1882:1: ( '}' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1911:1: ( ( '}' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1912:1: ( '}' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1882:1: ( '}' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1883:1: '}'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1912:1: ( '}' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1913:1: '}'
             {
              before(grammarAccess.getPositionAccess().getRightCurlyBracketKeyword_2_2()); 
-            match(input,15,FollowSets000.FOLLOW_15_in_rule__Position__Group_2__2__Impl3873); 
+            match(input,15,FollowSets000.FOLLOW_15_in_rule__Position__Group_2__2__Impl3932); 
              after(grammarAccess.getPositionAccess().getRightCurlyBracketKeyword_2_2()); 
 
             }
@@ -5189,20 +5267,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Goal__Group__0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1902:1: rule__Goal__Group__0 : rule__Goal__Group__0__Impl rule__Goal__Group__1 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1932:1: rule__Goal__Group__0 : rule__Goal__Group__0__Impl rule__Goal__Group__1 ;
     public final void rule__Goal__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1906:1: ( rule__Goal__Group__0__Impl rule__Goal__Group__1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1907:2: rule__Goal__Group__0__Impl rule__Goal__Group__1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1936:1: ( rule__Goal__Group__0__Impl rule__Goal__Group__1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1937:2: rule__Goal__Group__0__Impl rule__Goal__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Goal__Group__0__Impl_in_rule__Goal__Group__03910);
+            pushFollow(FollowSets000.FOLLOW_rule__Goal__Group__0__Impl_in_rule__Goal__Group__03969);
             rule__Goal__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Goal__Group__1_in_rule__Goal__Group__03913);
+            pushFollow(FollowSets000.FOLLOW_rule__Goal__Group__1_in_rule__Goal__Group__03972);
             rule__Goal__Group__1();
             _fsp--;
 
@@ -5225,20 +5303,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Goal__Group__0__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1914:1: rule__Goal__Group__0__Impl : ( 'goal' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1944:1: rule__Goal__Group__0__Impl : ( 'goal' ) ;
     public final void rule__Goal__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1918:1: ( ( 'goal' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1919:1: ( 'goal' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1948:1: ( ( 'goal' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1949:1: ( 'goal' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1919:1: ( 'goal' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1920:1: 'goal'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1949:1: ( 'goal' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1950:1: 'goal'
             {
              before(grammarAccess.getGoalAccess().getGoalKeyword_0()); 
-            match(input,19,FollowSets000.FOLLOW_19_in_rule__Goal__Group__0__Impl3941); 
+            match(input,19,FollowSets000.FOLLOW_19_in_rule__Goal__Group__0__Impl4000); 
              after(grammarAccess.getGoalAccess().getGoalKeyword_0()); 
 
             }
@@ -5262,20 +5340,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Goal__Group__1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1933:1: rule__Goal__Group__1 : rule__Goal__Group__1__Impl rule__Goal__Group__2 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1963:1: rule__Goal__Group__1 : rule__Goal__Group__1__Impl rule__Goal__Group__2 ;
     public final void rule__Goal__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1937:1: ( rule__Goal__Group__1__Impl rule__Goal__Group__2 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1938:2: rule__Goal__Group__1__Impl rule__Goal__Group__2
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1967:1: ( rule__Goal__Group__1__Impl rule__Goal__Group__2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1968:2: rule__Goal__Group__1__Impl rule__Goal__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Goal__Group__1__Impl_in_rule__Goal__Group__13972);
+            pushFollow(FollowSets000.FOLLOW_rule__Goal__Group__1__Impl_in_rule__Goal__Group__14031);
             rule__Goal__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Goal__Group__2_in_rule__Goal__Group__13975);
+            pushFollow(FollowSets000.FOLLOW_rule__Goal__Group__2_in_rule__Goal__Group__14034);
             rule__Goal__Group__2();
             _fsp--;
 
@@ -5298,23 +5376,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Goal__Group__1__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1945:1: rule__Goal__Group__1__Impl : ( ( rule__Goal__NameAssignment_1 ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1975:1: rule__Goal__Group__1__Impl : ( ( rule__Goal__NameAssignment_1 ) ) ;
     public final void rule__Goal__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1949:1: ( ( ( rule__Goal__NameAssignment_1 ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1950:1: ( ( rule__Goal__NameAssignment_1 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1979:1: ( ( ( rule__Goal__NameAssignment_1 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1980:1: ( ( rule__Goal__NameAssignment_1 ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1950:1: ( ( rule__Goal__NameAssignment_1 ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1951:1: ( rule__Goal__NameAssignment_1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1980:1: ( ( rule__Goal__NameAssignment_1 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1981:1: ( rule__Goal__NameAssignment_1 )
             {
              before(grammarAccess.getGoalAccess().getNameAssignment_1()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1952:1: ( rule__Goal__NameAssignment_1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1952:2: rule__Goal__NameAssignment_1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1982:1: ( rule__Goal__NameAssignment_1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1982:2: rule__Goal__NameAssignment_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Goal__NameAssignment_1_in_rule__Goal__Group__1__Impl4002);
+            pushFollow(FollowSets000.FOLLOW_rule__Goal__NameAssignment_1_in_rule__Goal__Group__1__Impl4061);
             rule__Goal__NameAssignment_1();
             _fsp--;
 
@@ -5344,16 +5422,16 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Goal__Group__2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1962:1: rule__Goal__Group__2 : rule__Goal__Group__2__Impl ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1992:1: rule__Goal__Group__2 : rule__Goal__Group__2__Impl ;
     public final void rule__Goal__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1966:1: ( rule__Goal__Group__2__Impl )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1967:2: rule__Goal__Group__2__Impl
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1996:1: ( rule__Goal__Group__2__Impl )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1997:2: rule__Goal__Group__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Goal__Group__2__Impl_in_rule__Goal__Group__24032);
+            pushFollow(FollowSets000.FOLLOW_rule__Goal__Group__2__Impl_in_rule__Goal__Group__24091);
             rule__Goal__Group__2__Impl();
             _fsp--;
 
@@ -5376,20 +5454,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Goal__Group__2__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1973:1: rule__Goal__Group__2__Impl : ( ( rule__Goal__Group_2__0 )? ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2003:1: rule__Goal__Group__2__Impl : ( ( rule__Goal__Group_2__0 )? ) ;
     public final void rule__Goal__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1977:1: ( ( ( rule__Goal__Group_2__0 )? ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1978:1: ( ( rule__Goal__Group_2__0 )? )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2007:1: ( ( ( rule__Goal__Group_2__0 )? ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2008:1: ( ( rule__Goal__Group_2__0 )? )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1978:1: ( ( rule__Goal__Group_2__0 )? )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1979:1: ( rule__Goal__Group_2__0 )?
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2008:1: ( ( rule__Goal__Group_2__0 )? )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2009:1: ( rule__Goal__Group_2__0 )?
             {
              before(grammarAccess.getGoalAccess().getGroup_2()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1980:1: ( rule__Goal__Group_2__0 )?
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2010:1: ( rule__Goal__Group_2__0 )?
             int alt18=2;
             int LA18_0 = input.LA(1);
 
@@ -5398,9 +5476,9 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
             }
             switch (alt18) {
                 case 1 :
-                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1980:2: rule__Goal__Group_2__0
+                    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2010:2: rule__Goal__Group_2__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__Goal__Group_2__0_in_rule__Goal__Group__2__Impl4059);
+                    pushFollow(FollowSets000.FOLLOW_rule__Goal__Group_2__0_in_rule__Goal__Group__2__Impl4118);
                     rule__Goal__Group_2__0();
                     _fsp--;
 
@@ -5433,20 +5511,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Goal__Group_2__0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:1996:1: rule__Goal__Group_2__0 : rule__Goal__Group_2__0__Impl rule__Goal__Group_2__1 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2026:1: rule__Goal__Group_2__0 : rule__Goal__Group_2__0__Impl rule__Goal__Group_2__1 ;
     public final void rule__Goal__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2000:1: ( rule__Goal__Group_2__0__Impl rule__Goal__Group_2__1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2001:2: rule__Goal__Group_2__0__Impl rule__Goal__Group_2__1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2030:1: ( rule__Goal__Group_2__0__Impl rule__Goal__Group_2__1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2031:2: rule__Goal__Group_2__0__Impl rule__Goal__Group_2__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Goal__Group_2__0__Impl_in_rule__Goal__Group_2__04096);
+            pushFollow(FollowSets000.FOLLOW_rule__Goal__Group_2__0__Impl_in_rule__Goal__Group_2__04155);
             rule__Goal__Group_2__0__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Goal__Group_2__1_in_rule__Goal__Group_2__04099);
+            pushFollow(FollowSets000.FOLLOW_rule__Goal__Group_2__1_in_rule__Goal__Group_2__04158);
             rule__Goal__Group_2__1();
             _fsp--;
 
@@ -5469,20 +5547,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Goal__Group_2__0__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2008:1: rule__Goal__Group_2__0__Impl : ( '{' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2038:1: rule__Goal__Group_2__0__Impl : ( '{' ) ;
     public final void rule__Goal__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2012:1: ( ( '{' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2013:1: ( '{' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2042:1: ( ( '{' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2043:1: ( '{' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2013:1: ( '{' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2014:1: '{'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2043:1: ( '{' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2044:1: '{'
             {
              before(grammarAccess.getGoalAccess().getLeftCurlyBracketKeyword_2_0()); 
-            match(input,14,FollowSets000.FOLLOW_14_in_rule__Goal__Group_2__0__Impl4127); 
+            match(input,14,FollowSets000.FOLLOW_14_in_rule__Goal__Group_2__0__Impl4186); 
              after(grammarAccess.getGoalAccess().getLeftCurlyBracketKeyword_2_0()); 
 
             }
@@ -5506,20 +5584,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Goal__Group_2__1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2027:1: rule__Goal__Group_2__1 : rule__Goal__Group_2__1__Impl rule__Goal__Group_2__2 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2057:1: rule__Goal__Group_2__1 : rule__Goal__Group_2__1__Impl rule__Goal__Group_2__2 ;
     public final void rule__Goal__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2031:1: ( rule__Goal__Group_2__1__Impl rule__Goal__Group_2__2 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2032:2: rule__Goal__Group_2__1__Impl rule__Goal__Group_2__2
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2061:1: ( rule__Goal__Group_2__1__Impl rule__Goal__Group_2__2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2062:2: rule__Goal__Group_2__1__Impl rule__Goal__Group_2__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Goal__Group_2__1__Impl_in_rule__Goal__Group_2__14158);
+            pushFollow(FollowSets000.FOLLOW_rule__Goal__Group_2__1__Impl_in_rule__Goal__Group_2__14217);
             rule__Goal__Group_2__1__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Goal__Group_2__2_in_rule__Goal__Group_2__14161);
+            pushFollow(FollowSets000.FOLLOW_rule__Goal__Group_2__2_in_rule__Goal__Group_2__14220);
             rule__Goal__Group_2__2();
             _fsp--;
 
@@ -5542,20 +5620,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Goal__Group_2__1__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2039:1: rule__Goal__Group_2__1__Impl : ( ( rule__Goal__DecompositionsAssignment_2_1 )* ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2069:1: rule__Goal__Group_2__1__Impl : ( ( rule__Goal__DecompositionsAssignment_2_1 )* ) ;
     public final void rule__Goal__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2043:1: ( ( ( rule__Goal__DecompositionsAssignment_2_1 )* ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2044:1: ( ( rule__Goal__DecompositionsAssignment_2_1 )* )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2073:1: ( ( ( rule__Goal__DecompositionsAssignment_2_1 )* ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2074:1: ( ( rule__Goal__DecompositionsAssignment_2_1 )* )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2044:1: ( ( rule__Goal__DecompositionsAssignment_2_1 )* )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2045:1: ( rule__Goal__DecompositionsAssignment_2_1 )*
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2074:1: ( ( rule__Goal__DecompositionsAssignment_2_1 )* )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2075:1: ( rule__Goal__DecompositionsAssignment_2_1 )*
             {
              before(grammarAccess.getGoalAccess().getDecompositionsAssignment_2_1()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2046:1: ( rule__Goal__DecompositionsAssignment_2_1 )*
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2076:1: ( rule__Goal__DecompositionsAssignment_2_1 )*
             loop19:
             do {
                 int alt19=2;
@@ -5568,9 +5646,9 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
                 switch (alt19) {
             	case 1 :
-            	    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2046:2: rule__Goal__DecompositionsAssignment_2_1
+            	    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2076:2: rule__Goal__DecompositionsAssignment_2_1
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__Goal__DecompositionsAssignment_2_1_in_rule__Goal__Group_2__1__Impl4188);
+            	    pushFollow(FollowSets000.FOLLOW_rule__Goal__DecompositionsAssignment_2_1_in_rule__Goal__Group_2__1__Impl4247);
             	    rule__Goal__DecompositionsAssignment_2_1();
             	    _fsp--;
 
@@ -5606,16 +5684,16 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Goal__Group_2__2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2056:1: rule__Goal__Group_2__2 : rule__Goal__Group_2__2__Impl ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2086:1: rule__Goal__Group_2__2 : rule__Goal__Group_2__2__Impl ;
     public final void rule__Goal__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2060:1: ( rule__Goal__Group_2__2__Impl )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2061:2: rule__Goal__Group_2__2__Impl
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2090:1: ( rule__Goal__Group_2__2__Impl )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2091:2: rule__Goal__Group_2__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Goal__Group_2__2__Impl_in_rule__Goal__Group_2__24219);
+            pushFollow(FollowSets000.FOLLOW_rule__Goal__Group_2__2__Impl_in_rule__Goal__Group_2__24278);
             rule__Goal__Group_2__2__Impl();
             _fsp--;
 
@@ -5638,20 +5716,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Goal__Group_2__2__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2067:1: rule__Goal__Group_2__2__Impl : ( '}' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2097:1: rule__Goal__Group_2__2__Impl : ( '}' ) ;
     public final void rule__Goal__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2071:1: ( ( '}' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2072:1: ( '}' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2101:1: ( ( '}' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2102:1: ( '}' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2072:1: ( '}' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2073:1: '}'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2102:1: ( '}' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2103:1: '}'
             {
              before(grammarAccess.getGoalAccess().getRightCurlyBracketKeyword_2_2()); 
-            match(input,15,FollowSets000.FOLLOW_15_in_rule__Goal__Group_2__2__Impl4247); 
+            match(input,15,FollowSets000.FOLLOW_15_in_rule__Goal__Group_2__2__Impl4306); 
              after(grammarAccess.getGoalAccess().getRightCurlyBracketKeyword_2_2()); 
 
             }
@@ -5675,20 +5753,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Softgoal__Group__0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2092:1: rule__Softgoal__Group__0 : rule__Softgoal__Group__0__Impl rule__Softgoal__Group__1 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2122:1: rule__Softgoal__Group__0 : rule__Softgoal__Group__0__Impl rule__Softgoal__Group__1 ;
     public final void rule__Softgoal__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2096:1: ( rule__Softgoal__Group__0__Impl rule__Softgoal__Group__1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2097:2: rule__Softgoal__Group__0__Impl rule__Softgoal__Group__1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2126:1: ( rule__Softgoal__Group__0__Impl rule__Softgoal__Group__1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2127:2: rule__Softgoal__Group__0__Impl rule__Softgoal__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Softgoal__Group__0__Impl_in_rule__Softgoal__Group__04284);
+            pushFollow(FollowSets000.FOLLOW_rule__Softgoal__Group__0__Impl_in_rule__Softgoal__Group__04343);
             rule__Softgoal__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Softgoal__Group__1_in_rule__Softgoal__Group__04287);
+            pushFollow(FollowSets000.FOLLOW_rule__Softgoal__Group__1_in_rule__Softgoal__Group__04346);
             rule__Softgoal__Group__1();
             _fsp--;
 
@@ -5711,20 +5789,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Softgoal__Group__0__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2104:1: rule__Softgoal__Group__0__Impl : ( 'soft' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2134:1: rule__Softgoal__Group__0__Impl : ( 'soft' ) ;
     public final void rule__Softgoal__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2108:1: ( ( 'soft' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2109:1: ( 'soft' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2138:1: ( ( 'soft' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2139:1: ( 'soft' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2109:1: ( 'soft' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2110:1: 'soft'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2139:1: ( 'soft' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2140:1: 'soft'
             {
              before(grammarAccess.getSoftgoalAccess().getSoftKeyword_0()); 
-            match(input,20,FollowSets000.FOLLOW_20_in_rule__Softgoal__Group__0__Impl4315); 
+            match(input,20,FollowSets000.FOLLOW_20_in_rule__Softgoal__Group__0__Impl4374); 
              after(grammarAccess.getSoftgoalAccess().getSoftKeyword_0()); 
 
             }
@@ -5748,16 +5826,16 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Softgoal__Group__1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2123:1: rule__Softgoal__Group__1 : rule__Softgoal__Group__1__Impl ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2153:1: rule__Softgoal__Group__1 : rule__Softgoal__Group__1__Impl ;
     public final void rule__Softgoal__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2127:1: ( rule__Softgoal__Group__1__Impl )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2128:2: rule__Softgoal__Group__1__Impl
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2157:1: ( rule__Softgoal__Group__1__Impl )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2158:2: rule__Softgoal__Group__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Softgoal__Group__1__Impl_in_rule__Softgoal__Group__14346);
+            pushFollow(FollowSets000.FOLLOW_rule__Softgoal__Group__1__Impl_in_rule__Softgoal__Group__14405);
             rule__Softgoal__Group__1__Impl();
             _fsp--;
 
@@ -5780,23 +5858,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Softgoal__Group__1__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2134:1: rule__Softgoal__Group__1__Impl : ( ( rule__Softgoal__NameAssignment_1 ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2164:1: rule__Softgoal__Group__1__Impl : ( ( rule__Softgoal__NameAssignment_1 ) ) ;
     public final void rule__Softgoal__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2138:1: ( ( ( rule__Softgoal__NameAssignment_1 ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2139:1: ( ( rule__Softgoal__NameAssignment_1 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2168:1: ( ( ( rule__Softgoal__NameAssignment_1 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2169:1: ( ( rule__Softgoal__NameAssignment_1 ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2139:1: ( ( rule__Softgoal__NameAssignment_1 ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2140:1: ( rule__Softgoal__NameAssignment_1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2169:1: ( ( rule__Softgoal__NameAssignment_1 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2170:1: ( rule__Softgoal__NameAssignment_1 )
             {
              before(grammarAccess.getSoftgoalAccess().getNameAssignment_1()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2141:1: ( rule__Softgoal__NameAssignment_1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2141:2: rule__Softgoal__NameAssignment_1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2171:1: ( rule__Softgoal__NameAssignment_1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2171:2: rule__Softgoal__NameAssignment_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Softgoal__NameAssignment_1_in_rule__Softgoal__Group__1__Impl4373);
+            pushFollow(FollowSets000.FOLLOW_rule__Softgoal__NameAssignment_1_in_rule__Softgoal__Group__1__Impl4432);
             rule__Softgoal__NameAssignment_1();
             _fsp--;
 
@@ -5826,20 +5904,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Task__Group__0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2155:1: rule__Task__Group__0 : rule__Task__Group__0__Impl rule__Task__Group__1 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2185:1: rule__Task__Group__0 : rule__Task__Group__0__Impl rule__Task__Group__1 ;
     public final void rule__Task__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2159:1: ( rule__Task__Group__0__Impl rule__Task__Group__1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2160:2: rule__Task__Group__0__Impl rule__Task__Group__1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2189:1: ( rule__Task__Group__0__Impl rule__Task__Group__1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2190:2: rule__Task__Group__0__Impl rule__Task__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Task__Group__0__Impl_in_rule__Task__Group__04407);
+            pushFollow(FollowSets000.FOLLOW_rule__Task__Group__0__Impl_in_rule__Task__Group__04466);
             rule__Task__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Task__Group__1_in_rule__Task__Group__04410);
+            pushFollow(FollowSets000.FOLLOW_rule__Task__Group__1_in_rule__Task__Group__04469);
             rule__Task__Group__1();
             _fsp--;
 
@@ -5862,20 +5940,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Task__Group__0__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2167:1: rule__Task__Group__0__Impl : ( 'task' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2197:1: rule__Task__Group__0__Impl : ( 'task' ) ;
     public final void rule__Task__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2171:1: ( ( 'task' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2172:1: ( 'task' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2201:1: ( ( 'task' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2202:1: ( 'task' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2172:1: ( 'task' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2173:1: 'task'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2202:1: ( 'task' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2203:1: 'task'
             {
              before(grammarAccess.getTaskAccess().getTaskKeyword_0()); 
-            match(input,21,FollowSets000.FOLLOW_21_in_rule__Task__Group__0__Impl4438); 
+            match(input,21,FollowSets000.FOLLOW_21_in_rule__Task__Group__0__Impl4497); 
              after(grammarAccess.getTaskAccess().getTaskKeyword_0()); 
 
             }
@@ -5899,16 +5977,16 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Task__Group__1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2186:1: rule__Task__Group__1 : rule__Task__Group__1__Impl ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2216:1: rule__Task__Group__1 : rule__Task__Group__1__Impl ;
     public final void rule__Task__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2190:1: ( rule__Task__Group__1__Impl )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2191:2: rule__Task__Group__1__Impl
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2220:1: ( rule__Task__Group__1__Impl )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2221:2: rule__Task__Group__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Task__Group__1__Impl_in_rule__Task__Group__14469);
+            pushFollow(FollowSets000.FOLLOW_rule__Task__Group__1__Impl_in_rule__Task__Group__14528);
             rule__Task__Group__1__Impl();
             _fsp--;
 
@@ -5931,23 +6009,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Task__Group__1__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2197:1: rule__Task__Group__1__Impl : ( ( rule__Task__NameAssignment_1 ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2227:1: rule__Task__Group__1__Impl : ( ( rule__Task__NameAssignment_1 ) ) ;
     public final void rule__Task__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2201:1: ( ( ( rule__Task__NameAssignment_1 ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2202:1: ( ( rule__Task__NameAssignment_1 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2231:1: ( ( ( rule__Task__NameAssignment_1 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2232:1: ( ( rule__Task__NameAssignment_1 ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2202:1: ( ( rule__Task__NameAssignment_1 ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2203:1: ( rule__Task__NameAssignment_1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2232:1: ( ( rule__Task__NameAssignment_1 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2233:1: ( rule__Task__NameAssignment_1 )
             {
              before(grammarAccess.getTaskAccess().getNameAssignment_1()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2204:1: ( rule__Task__NameAssignment_1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2204:2: rule__Task__NameAssignment_1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2234:1: ( rule__Task__NameAssignment_1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2234:2: rule__Task__NameAssignment_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Task__NameAssignment_1_in_rule__Task__Group__1__Impl4496);
+            pushFollow(FollowSets000.FOLLOW_rule__Task__NameAssignment_1_in_rule__Task__Group__1__Impl4555);
             rule__Task__NameAssignment_1();
             _fsp--;
 
@@ -5977,20 +6055,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Resource__Group__0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2218:1: rule__Resource__Group__0 : rule__Resource__Group__0__Impl rule__Resource__Group__1 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2248:1: rule__Resource__Group__0 : rule__Resource__Group__0__Impl rule__Resource__Group__1 ;
     public final void rule__Resource__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2222:1: ( rule__Resource__Group__0__Impl rule__Resource__Group__1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2223:2: rule__Resource__Group__0__Impl rule__Resource__Group__1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2252:1: ( rule__Resource__Group__0__Impl rule__Resource__Group__1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2253:2: rule__Resource__Group__0__Impl rule__Resource__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Resource__Group__0__Impl_in_rule__Resource__Group__04530);
+            pushFollow(FollowSets000.FOLLOW_rule__Resource__Group__0__Impl_in_rule__Resource__Group__04589);
             rule__Resource__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Resource__Group__1_in_rule__Resource__Group__04533);
+            pushFollow(FollowSets000.FOLLOW_rule__Resource__Group__1_in_rule__Resource__Group__04592);
             rule__Resource__Group__1();
             _fsp--;
 
@@ -6013,20 +6091,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Resource__Group__0__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2230:1: rule__Resource__Group__0__Impl : ( 'resource' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2260:1: rule__Resource__Group__0__Impl : ( 'resource' ) ;
     public final void rule__Resource__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2234:1: ( ( 'resource' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2235:1: ( 'resource' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2264:1: ( ( 'resource' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2265:1: ( 'resource' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2235:1: ( 'resource' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2236:1: 'resource'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2265:1: ( 'resource' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2266:1: 'resource'
             {
              before(grammarAccess.getResourceAccess().getResourceKeyword_0()); 
-            match(input,22,FollowSets000.FOLLOW_22_in_rule__Resource__Group__0__Impl4561); 
+            match(input,22,FollowSets000.FOLLOW_22_in_rule__Resource__Group__0__Impl4620); 
              after(grammarAccess.getResourceAccess().getResourceKeyword_0()); 
 
             }
@@ -6050,16 +6128,16 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Resource__Group__1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2249:1: rule__Resource__Group__1 : rule__Resource__Group__1__Impl ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2279:1: rule__Resource__Group__1 : rule__Resource__Group__1__Impl ;
     public final void rule__Resource__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2253:1: ( rule__Resource__Group__1__Impl )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2254:2: rule__Resource__Group__1__Impl
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2283:1: ( rule__Resource__Group__1__Impl )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2284:2: rule__Resource__Group__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Resource__Group__1__Impl_in_rule__Resource__Group__14592);
+            pushFollow(FollowSets000.FOLLOW_rule__Resource__Group__1__Impl_in_rule__Resource__Group__14651);
             rule__Resource__Group__1__Impl();
             _fsp--;
 
@@ -6082,23 +6160,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Resource__Group__1__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2260:1: rule__Resource__Group__1__Impl : ( ( rule__Resource__NameAssignment_1 ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2290:1: rule__Resource__Group__1__Impl : ( ( rule__Resource__NameAssignment_1 ) ) ;
     public final void rule__Resource__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2264:1: ( ( ( rule__Resource__NameAssignment_1 ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2265:1: ( ( rule__Resource__NameAssignment_1 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2294:1: ( ( ( rule__Resource__NameAssignment_1 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2295:1: ( ( rule__Resource__NameAssignment_1 ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2265:1: ( ( rule__Resource__NameAssignment_1 ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2266:1: ( rule__Resource__NameAssignment_1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2295:1: ( ( rule__Resource__NameAssignment_1 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2296:1: ( rule__Resource__NameAssignment_1 )
             {
              before(grammarAccess.getResourceAccess().getNameAssignment_1()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2267:1: ( rule__Resource__NameAssignment_1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2267:2: rule__Resource__NameAssignment_1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2297:1: ( rule__Resource__NameAssignment_1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2297:2: rule__Resource__NameAssignment_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Resource__NameAssignment_1_in_rule__Resource__Group__1__Impl4619);
+            pushFollow(FollowSets000.FOLLOW_rule__Resource__NameAssignment_1_in_rule__Resource__Group__1__Impl4678);
             rule__Resource__NameAssignment_1();
             _fsp--;
 
@@ -6128,20 +6206,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Belief__Group__0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2281:1: rule__Belief__Group__0 : rule__Belief__Group__0__Impl rule__Belief__Group__1 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2311:1: rule__Belief__Group__0 : rule__Belief__Group__0__Impl rule__Belief__Group__1 ;
     public final void rule__Belief__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2285:1: ( rule__Belief__Group__0__Impl rule__Belief__Group__1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2286:2: rule__Belief__Group__0__Impl rule__Belief__Group__1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2315:1: ( rule__Belief__Group__0__Impl rule__Belief__Group__1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2316:2: rule__Belief__Group__0__Impl rule__Belief__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Belief__Group__0__Impl_in_rule__Belief__Group__04653);
+            pushFollow(FollowSets000.FOLLOW_rule__Belief__Group__0__Impl_in_rule__Belief__Group__04712);
             rule__Belief__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Belief__Group__1_in_rule__Belief__Group__04656);
+            pushFollow(FollowSets000.FOLLOW_rule__Belief__Group__1_in_rule__Belief__Group__04715);
             rule__Belief__Group__1();
             _fsp--;
 
@@ -6164,20 +6242,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Belief__Group__0__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2293:1: rule__Belief__Group__0__Impl : ( 'belief' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2323:1: rule__Belief__Group__0__Impl : ( 'belief' ) ;
     public final void rule__Belief__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2297:1: ( ( 'belief' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2298:1: ( 'belief' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2327:1: ( ( 'belief' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2328:1: ( 'belief' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2298:1: ( 'belief' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2299:1: 'belief'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2328:1: ( 'belief' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2329:1: 'belief'
             {
              before(grammarAccess.getBeliefAccess().getBeliefKeyword_0()); 
-            match(input,23,FollowSets000.FOLLOW_23_in_rule__Belief__Group__0__Impl4684); 
+            match(input,23,FollowSets000.FOLLOW_23_in_rule__Belief__Group__0__Impl4743); 
              after(grammarAccess.getBeliefAccess().getBeliefKeyword_0()); 
 
             }
@@ -6201,16 +6279,16 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Belief__Group__1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2312:1: rule__Belief__Group__1 : rule__Belief__Group__1__Impl ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2342:1: rule__Belief__Group__1 : rule__Belief__Group__1__Impl ;
     public final void rule__Belief__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2316:1: ( rule__Belief__Group__1__Impl )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2317:2: rule__Belief__Group__1__Impl
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2346:1: ( rule__Belief__Group__1__Impl )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2347:2: rule__Belief__Group__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Belief__Group__1__Impl_in_rule__Belief__Group__14715);
+            pushFollow(FollowSets000.FOLLOW_rule__Belief__Group__1__Impl_in_rule__Belief__Group__14774);
             rule__Belief__Group__1__Impl();
             _fsp--;
 
@@ -6233,23 +6311,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Belief__Group__1__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2323:1: rule__Belief__Group__1__Impl : ( ( rule__Belief__NameAssignment_1 ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2353:1: rule__Belief__Group__1__Impl : ( ( rule__Belief__NameAssignment_1 ) ) ;
     public final void rule__Belief__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2327:1: ( ( ( rule__Belief__NameAssignment_1 ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2328:1: ( ( rule__Belief__NameAssignment_1 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2357:1: ( ( ( rule__Belief__NameAssignment_1 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2358:1: ( ( rule__Belief__NameAssignment_1 ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2328:1: ( ( rule__Belief__NameAssignment_1 ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2329:1: ( rule__Belief__NameAssignment_1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2358:1: ( ( rule__Belief__NameAssignment_1 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2359:1: ( rule__Belief__NameAssignment_1 )
             {
              before(grammarAccess.getBeliefAccess().getNameAssignment_1()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2330:1: ( rule__Belief__NameAssignment_1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2330:2: rule__Belief__NameAssignment_1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2360:1: ( rule__Belief__NameAssignment_1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2360:2: rule__Belief__NameAssignment_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Belief__NameAssignment_1_in_rule__Belief__Group__1__Impl4742);
+            pushFollow(FollowSets000.FOLLOW_rule__Belief__NameAssignment_1_in_rule__Belief__Group__1__Impl4801);
             rule__Belief__NameAssignment_1();
             _fsp--;
 
@@ -6279,20 +6357,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Association__Group__0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2344:1: rule__Association__Group__0 : rule__Association__Group__0__Impl rule__Association__Group__1 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2374:1: rule__Association__Group__0 : rule__Association__Group__0__Impl rule__Association__Group__1 ;
     public final void rule__Association__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2348:1: ( rule__Association__Group__0__Impl rule__Association__Group__1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2349:2: rule__Association__Group__0__Impl rule__Association__Group__1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2378:1: ( rule__Association__Group__0__Impl rule__Association__Group__1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2379:2: rule__Association__Group__0__Impl rule__Association__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Association__Group__0__Impl_in_rule__Association__Group__04776);
+            pushFollow(FollowSets000.FOLLOW_rule__Association__Group__0__Impl_in_rule__Association__Group__04835);
             rule__Association__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Association__Group__1_in_rule__Association__Group__04779);
+            pushFollow(FollowSets000.FOLLOW_rule__Association__Group__1_in_rule__Association__Group__04838);
             rule__Association__Group__1();
             _fsp--;
 
@@ -6315,23 +6393,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Association__Group__0__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2356:1: rule__Association__Group__0__Impl : ( ( rule__Association__SourceAssignment_0 ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2386:1: rule__Association__Group__0__Impl : ( ( rule__Association__SourceAssignment_0 ) ) ;
     public final void rule__Association__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2360:1: ( ( ( rule__Association__SourceAssignment_0 ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2361:1: ( ( rule__Association__SourceAssignment_0 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2390:1: ( ( ( rule__Association__SourceAssignment_0 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2391:1: ( ( rule__Association__SourceAssignment_0 ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2361:1: ( ( rule__Association__SourceAssignment_0 ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2362:1: ( rule__Association__SourceAssignment_0 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2391:1: ( ( rule__Association__SourceAssignment_0 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2392:1: ( rule__Association__SourceAssignment_0 )
             {
              before(grammarAccess.getAssociationAccess().getSourceAssignment_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2363:1: ( rule__Association__SourceAssignment_0 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2363:2: rule__Association__SourceAssignment_0
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2393:1: ( rule__Association__SourceAssignment_0 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2393:2: rule__Association__SourceAssignment_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Association__SourceAssignment_0_in_rule__Association__Group__0__Impl4806);
+            pushFollow(FollowSets000.FOLLOW_rule__Association__SourceAssignment_0_in_rule__Association__Group__0__Impl4865);
             rule__Association__SourceAssignment_0();
             _fsp--;
 
@@ -6361,20 +6439,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Association__Group__1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2373:1: rule__Association__Group__1 : rule__Association__Group__1__Impl rule__Association__Group__2 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2403:1: rule__Association__Group__1 : rule__Association__Group__1__Impl rule__Association__Group__2 ;
     public final void rule__Association__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2377:1: ( rule__Association__Group__1__Impl rule__Association__Group__2 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2378:2: rule__Association__Group__1__Impl rule__Association__Group__2
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2407:1: ( rule__Association__Group__1__Impl rule__Association__Group__2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2408:2: rule__Association__Group__1__Impl rule__Association__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Association__Group__1__Impl_in_rule__Association__Group__14836);
+            pushFollow(FollowSets000.FOLLOW_rule__Association__Group__1__Impl_in_rule__Association__Group__14895);
             rule__Association__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Association__Group__2_in_rule__Association__Group__14839);
+            pushFollow(FollowSets000.FOLLOW_rule__Association__Group__2_in_rule__Association__Group__14898);
             rule__Association__Group__2();
             _fsp--;
 
@@ -6397,20 +6475,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Association__Group__1__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2385:1: rule__Association__Group__1__Impl : ( '~~>' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2415:1: rule__Association__Group__1__Impl : ( '~~>' ) ;
     public final void rule__Association__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2389:1: ( ( '~~>' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2390:1: ( '~~>' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2419:1: ( ( '~~>' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2420:1: ( '~~>' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2390:1: ( '~~>' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2391:1: '~~>'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2420:1: ( '~~>' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2421:1: '~~>'
             {
              before(grammarAccess.getAssociationAccess().getTildeTildeGreaterThanSignKeyword_1()); 
-            match(input,24,FollowSets000.FOLLOW_24_in_rule__Association__Group__1__Impl4867); 
+            match(input,24,FollowSets000.FOLLOW_24_in_rule__Association__Group__1__Impl4926); 
              after(grammarAccess.getAssociationAccess().getTildeTildeGreaterThanSignKeyword_1()); 
 
             }
@@ -6434,16 +6512,16 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Association__Group__2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2404:1: rule__Association__Group__2 : rule__Association__Group__2__Impl ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2434:1: rule__Association__Group__2 : rule__Association__Group__2__Impl ;
     public final void rule__Association__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2408:1: ( rule__Association__Group__2__Impl )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2409:2: rule__Association__Group__2__Impl
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2438:1: ( rule__Association__Group__2__Impl )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2439:2: rule__Association__Group__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Association__Group__2__Impl_in_rule__Association__Group__24898);
+            pushFollow(FollowSets000.FOLLOW_rule__Association__Group__2__Impl_in_rule__Association__Group__24957);
             rule__Association__Group__2__Impl();
             _fsp--;
 
@@ -6466,23 +6544,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Association__Group__2__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2415:1: rule__Association__Group__2__Impl : ( ( rule__Association__TargetAssignment_2 ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2445:1: rule__Association__Group__2__Impl : ( ( rule__Association__TargetAssignment_2 ) ) ;
     public final void rule__Association__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2419:1: ( ( ( rule__Association__TargetAssignment_2 ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2420:1: ( ( rule__Association__TargetAssignment_2 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2449:1: ( ( ( rule__Association__TargetAssignment_2 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2450:1: ( ( rule__Association__TargetAssignment_2 ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2420:1: ( ( rule__Association__TargetAssignment_2 ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2421:1: ( rule__Association__TargetAssignment_2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2450:1: ( ( rule__Association__TargetAssignment_2 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2451:1: ( rule__Association__TargetAssignment_2 )
             {
              before(grammarAccess.getAssociationAccess().getTargetAssignment_2()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2422:1: ( rule__Association__TargetAssignment_2 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2422:2: rule__Association__TargetAssignment_2
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2452:1: ( rule__Association__TargetAssignment_2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2452:2: rule__Association__TargetAssignment_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Association__TargetAssignment_2_in_rule__Association__Group__2__Impl4925);
+            pushFollow(FollowSets000.FOLLOW_rule__Association__TargetAssignment_2_in_rule__Association__Group__2__Impl4984);
             rule__Association__TargetAssignment_2();
             _fsp--;
 
@@ -6512,20 +6590,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Dependency__Group__0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2438:1: rule__Dependency__Group__0 : rule__Dependency__Group__0__Impl rule__Dependency__Group__1 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2468:1: rule__Dependency__Group__0 : rule__Dependency__Group__0__Impl rule__Dependency__Group__1 ;
     public final void rule__Dependency__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2442:1: ( rule__Dependency__Group__0__Impl rule__Dependency__Group__1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2443:2: rule__Dependency__Group__0__Impl rule__Dependency__Group__1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2472:1: ( rule__Dependency__Group__0__Impl rule__Dependency__Group__1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2473:2: rule__Dependency__Group__0__Impl rule__Dependency__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Dependency__Group__0__Impl_in_rule__Dependency__Group__04961);
+            pushFollow(FollowSets000.FOLLOW_rule__Dependency__Group__0__Impl_in_rule__Dependency__Group__05020);
             rule__Dependency__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Dependency__Group__1_in_rule__Dependency__Group__04964);
+            pushFollow(FollowSets000.FOLLOW_rule__Dependency__Group__1_in_rule__Dependency__Group__05023);
             rule__Dependency__Group__1();
             _fsp--;
 
@@ -6548,23 +6626,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Dependency__Group__0__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2450:1: rule__Dependency__Group__0__Impl : ( ( rule__Dependency__DependencyFromAssignment_0 ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2480:1: rule__Dependency__Group__0__Impl : ( ( rule__Dependency__DependencyFromAssignment_0 ) ) ;
     public final void rule__Dependency__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2454:1: ( ( ( rule__Dependency__DependencyFromAssignment_0 ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2455:1: ( ( rule__Dependency__DependencyFromAssignment_0 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2484:1: ( ( ( rule__Dependency__DependencyFromAssignment_0 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2485:1: ( ( rule__Dependency__DependencyFromAssignment_0 ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2455:1: ( ( rule__Dependency__DependencyFromAssignment_0 ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2456:1: ( rule__Dependency__DependencyFromAssignment_0 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2485:1: ( ( rule__Dependency__DependencyFromAssignment_0 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2486:1: ( rule__Dependency__DependencyFromAssignment_0 )
             {
              before(grammarAccess.getDependencyAccess().getDependencyFromAssignment_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2457:1: ( rule__Dependency__DependencyFromAssignment_0 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2457:2: rule__Dependency__DependencyFromAssignment_0
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2487:1: ( rule__Dependency__DependencyFromAssignment_0 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2487:2: rule__Dependency__DependencyFromAssignment_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Dependency__DependencyFromAssignment_0_in_rule__Dependency__Group__0__Impl4991);
+            pushFollow(FollowSets000.FOLLOW_rule__Dependency__DependencyFromAssignment_0_in_rule__Dependency__Group__0__Impl5050);
             rule__Dependency__DependencyFromAssignment_0();
             _fsp--;
 
@@ -6594,20 +6672,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Dependency__Group__1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2467:1: rule__Dependency__Group__1 : rule__Dependency__Group__1__Impl rule__Dependency__Group__2 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2497:1: rule__Dependency__Group__1 : rule__Dependency__Group__1__Impl rule__Dependency__Group__2 ;
     public final void rule__Dependency__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2471:1: ( rule__Dependency__Group__1__Impl rule__Dependency__Group__2 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2472:2: rule__Dependency__Group__1__Impl rule__Dependency__Group__2
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2501:1: ( rule__Dependency__Group__1__Impl rule__Dependency__Group__2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2502:2: rule__Dependency__Group__1__Impl rule__Dependency__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Dependency__Group__1__Impl_in_rule__Dependency__Group__15021);
+            pushFollow(FollowSets000.FOLLOW_rule__Dependency__Group__1__Impl_in_rule__Dependency__Group__15080);
             rule__Dependency__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Dependency__Group__2_in_rule__Dependency__Group__15024);
+            pushFollow(FollowSets000.FOLLOW_rule__Dependency__Group__2_in_rule__Dependency__Group__15083);
             rule__Dependency__Group__2();
             _fsp--;
 
@@ -6630,20 +6708,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Dependency__Group__1__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2479:1: rule__Dependency__Group__1__Impl : ( '~>' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2509:1: rule__Dependency__Group__1__Impl : ( '~>' ) ;
     public final void rule__Dependency__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2483:1: ( ( '~>' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2484:1: ( '~>' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2513:1: ( ( '~>' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2514:1: ( '~>' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2484:1: ( '~>' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2485:1: '~>'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2514:1: ( '~>' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2515:1: '~>'
             {
              before(grammarAccess.getDependencyAccess().getTildeGreaterThanSignKeyword_1()); 
-            match(input,25,FollowSets000.FOLLOW_25_in_rule__Dependency__Group__1__Impl5052); 
+            match(input,25,FollowSets000.FOLLOW_25_in_rule__Dependency__Group__1__Impl5111); 
              after(grammarAccess.getDependencyAccess().getTildeGreaterThanSignKeyword_1()); 
 
             }
@@ -6667,16 +6745,16 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Dependency__Group__2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2498:1: rule__Dependency__Group__2 : rule__Dependency__Group__2__Impl ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2528:1: rule__Dependency__Group__2 : rule__Dependency__Group__2__Impl ;
     public final void rule__Dependency__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2502:1: ( rule__Dependency__Group__2__Impl )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2503:2: rule__Dependency__Group__2__Impl
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2532:1: ( rule__Dependency__Group__2__Impl )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2533:2: rule__Dependency__Group__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Dependency__Group__2__Impl_in_rule__Dependency__Group__25083);
+            pushFollow(FollowSets000.FOLLOW_rule__Dependency__Group__2__Impl_in_rule__Dependency__Group__25142);
             rule__Dependency__Group__2__Impl();
             _fsp--;
 
@@ -6699,23 +6777,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Dependency__Group__2__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2509:1: rule__Dependency__Group__2__Impl : ( ( rule__Dependency__DependencyToAssignment_2 ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2539:1: rule__Dependency__Group__2__Impl : ( ( rule__Dependency__DependencyToAssignment_2 ) ) ;
     public final void rule__Dependency__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2513:1: ( ( ( rule__Dependency__DependencyToAssignment_2 ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2514:1: ( ( rule__Dependency__DependencyToAssignment_2 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2543:1: ( ( ( rule__Dependency__DependencyToAssignment_2 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2544:1: ( ( rule__Dependency__DependencyToAssignment_2 ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2514:1: ( ( rule__Dependency__DependencyToAssignment_2 ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2515:1: ( rule__Dependency__DependencyToAssignment_2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2544:1: ( ( rule__Dependency__DependencyToAssignment_2 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2545:1: ( rule__Dependency__DependencyToAssignment_2 )
             {
              before(grammarAccess.getDependencyAccess().getDependencyToAssignment_2()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2516:1: ( rule__Dependency__DependencyToAssignment_2 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2516:2: rule__Dependency__DependencyToAssignment_2
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2546:1: ( rule__Dependency__DependencyToAssignment_2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2546:2: rule__Dependency__DependencyToAssignment_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Dependency__DependencyToAssignment_2_in_rule__Dependency__Group__2__Impl5110);
+            pushFollow(FollowSets000.FOLLOW_rule__Dependency__DependencyToAssignment_2_in_rule__Dependency__Group__2__Impl5169);
             rule__Dependency__DependencyToAssignment_2();
             _fsp--;
 
@@ -6745,20 +6823,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__AndDecomposition__Group__0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2532:1: rule__AndDecomposition__Group__0 : rule__AndDecomposition__Group__0__Impl rule__AndDecomposition__Group__1 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2562:1: rule__AndDecomposition__Group__0 : rule__AndDecomposition__Group__0__Impl rule__AndDecomposition__Group__1 ;
     public final void rule__AndDecomposition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2536:1: ( rule__AndDecomposition__Group__0__Impl rule__AndDecomposition__Group__1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2537:2: rule__AndDecomposition__Group__0__Impl rule__AndDecomposition__Group__1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2566:1: ( rule__AndDecomposition__Group__0__Impl rule__AndDecomposition__Group__1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2567:2: rule__AndDecomposition__Group__0__Impl rule__AndDecomposition__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AndDecomposition__Group__0__Impl_in_rule__AndDecomposition__Group__05146);
+            pushFollow(FollowSets000.FOLLOW_rule__AndDecomposition__Group__0__Impl_in_rule__AndDecomposition__Group__05205);
             rule__AndDecomposition__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AndDecomposition__Group__1_in_rule__AndDecomposition__Group__05149);
+            pushFollow(FollowSets000.FOLLOW_rule__AndDecomposition__Group__1_in_rule__AndDecomposition__Group__05208);
             rule__AndDecomposition__Group__1();
             _fsp--;
 
@@ -6781,23 +6859,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__AndDecomposition__Group__0__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2544:1: rule__AndDecomposition__Group__0__Impl : ( ( rule__AndDecomposition__TargetAssignment_0 ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2574:1: rule__AndDecomposition__Group__0__Impl : ( ( rule__AndDecomposition__TargetAssignment_0 ) ) ;
     public final void rule__AndDecomposition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2548:1: ( ( ( rule__AndDecomposition__TargetAssignment_0 ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2549:1: ( ( rule__AndDecomposition__TargetAssignment_0 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2578:1: ( ( ( rule__AndDecomposition__TargetAssignment_0 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2579:1: ( ( rule__AndDecomposition__TargetAssignment_0 ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2549:1: ( ( rule__AndDecomposition__TargetAssignment_0 ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2550:1: ( rule__AndDecomposition__TargetAssignment_0 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2579:1: ( ( rule__AndDecomposition__TargetAssignment_0 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2580:1: ( rule__AndDecomposition__TargetAssignment_0 )
             {
              before(grammarAccess.getAndDecompositionAccess().getTargetAssignment_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2551:1: ( rule__AndDecomposition__TargetAssignment_0 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2551:2: rule__AndDecomposition__TargetAssignment_0
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2581:1: ( rule__AndDecomposition__TargetAssignment_0 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2581:2: rule__AndDecomposition__TargetAssignment_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AndDecomposition__TargetAssignment_0_in_rule__AndDecomposition__Group__0__Impl5176);
+            pushFollow(FollowSets000.FOLLOW_rule__AndDecomposition__TargetAssignment_0_in_rule__AndDecomposition__Group__0__Impl5235);
             rule__AndDecomposition__TargetAssignment_0();
             _fsp--;
 
@@ -6827,20 +6905,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__AndDecomposition__Group__1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2561:1: rule__AndDecomposition__Group__1 : rule__AndDecomposition__Group__1__Impl rule__AndDecomposition__Group__2 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2591:1: rule__AndDecomposition__Group__1 : rule__AndDecomposition__Group__1__Impl rule__AndDecomposition__Group__2 ;
     public final void rule__AndDecomposition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2565:1: ( rule__AndDecomposition__Group__1__Impl rule__AndDecomposition__Group__2 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2566:2: rule__AndDecomposition__Group__1__Impl rule__AndDecomposition__Group__2
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2595:1: ( rule__AndDecomposition__Group__1__Impl rule__AndDecomposition__Group__2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2596:2: rule__AndDecomposition__Group__1__Impl rule__AndDecomposition__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AndDecomposition__Group__1__Impl_in_rule__AndDecomposition__Group__15206);
+            pushFollow(FollowSets000.FOLLOW_rule__AndDecomposition__Group__1__Impl_in_rule__AndDecomposition__Group__15265);
             rule__AndDecomposition__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AndDecomposition__Group__2_in_rule__AndDecomposition__Group__15209);
+            pushFollow(FollowSets000.FOLLOW_rule__AndDecomposition__Group__2_in_rule__AndDecomposition__Group__15268);
             rule__AndDecomposition__Group__2();
             _fsp--;
 
@@ -6863,20 +6941,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__AndDecomposition__Group__1__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2573:1: rule__AndDecomposition__Group__1__Impl : ( '<-(and)-' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2603:1: rule__AndDecomposition__Group__1__Impl : ( '<-(and)-' ) ;
     public final void rule__AndDecomposition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2577:1: ( ( '<-(and)-' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2578:1: ( '<-(and)-' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2607:1: ( ( '<-(and)-' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2608:1: ( '<-(and)-' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2578:1: ( '<-(and)-' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2579:1: '<-(and)-'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2608:1: ( '<-(and)-' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2609:1: '<-(and)-'
             {
              before(grammarAccess.getAndDecompositionAccess().getAndKeyword_1()); 
-            match(input,26,FollowSets000.FOLLOW_26_in_rule__AndDecomposition__Group__1__Impl5237); 
+            match(input,26,FollowSets000.FOLLOW_26_in_rule__AndDecomposition__Group__1__Impl5296); 
              after(grammarAccess.getAndDecompositionAccess().getAndKeyword_1()); 
 
             }
@@ -6900,16 +6978,16 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__AndDecomposition__Group__2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2592:1: rule__AndDecomposition__Group__2 : rule__AndDecomposition__Group__2__Impl ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2622:1: rule__AndDecomposition__Group__2 : rule__AndDecomposition__Group__2__Impl ;
     public final void rule__AndDecomposition__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2596:1: ( rule__AndDecomposition__Group__2__Impl )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2597:2: rule__AndDecomposition__Group__2__Impl
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2626:1: ( rule__AndDecomposition__Group__2__Impl )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2627:2: rule__AndDecomposition__Group__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AndDecomposition__Group__2__Impl_in_rule__AndDecomposition__Group__25268);
+            pushFollow(FollowSets000.FOLLOW_rule__AndDecomposition__Group__2__Impl_in_rule__AndDecomposition__Group__25327);
             rule__AndDecomposition__Group__2__Impl();
             _fsp--;
 
@@ -6932,23 +7010,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__AndDecomposition__Group__2__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2603:1: rule__AndDecomposition__Group__2__Impl : ( ( rule__AndDecomposition__SourceAssignment_2 ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2633:1: rule__AndDecomposition__Group__2__Impl : ( ( rule__AndDecomposition__SourceAssignment_2 ) ) ;
     public final void rule__AndDecomposition__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2607:1: ( ( ( rule__AndDecomposition__SourceAssignment_2 ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2608:1: ( ( rule__AndDecomposition__SourceAssignment_2 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2637:1: ( ( ( rule__AndDecomposition__SourceAssignment_2 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2638:1: ( ( rule__AndDecomposition__SourceAssignment_2 ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2608:1: ( ( rule__AndDecomposition__SourceAssignment_2 ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2609:1: ( rule__AndDecomposition__SourceAssignment_2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2638:1: ( ( rule__AndDecomposition__SourceAssignment_2 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2639:1: ( rule__AndDecomposition__SourceAssignment_2 )
             {
              before(grammarAccess.getAndDecompositionAccess().getSourceAssignment_2()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2610:1: ( rule__AndDecomposition__SourceAssignment_2 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2610:2: rule__AndDecomposition__SourceAssignment_2
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2640:1: ( rule__AndDecomposition__SourceAssignment_2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2640:2: rule__AndDecomposition__SourceAssignment_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AndDecomposition__SourceAssignment_2_in_rule__AndDecomposition__Group__2__Impl5295);
+            pushFollow(FollowSets000.FOLLOW_rule__AndDecomposition__SourceAssignment_2_in_rule__AndDecomposition__Group__2__Impl5354);
             rule__AndDecomposition__SourceAssignment_2();
             _fsp--;
 
@@ -6978,20 +7056,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__OrDecomposition__Group__0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2626:1: rule__OrDecomposition__Group__0 : rule__OrDecomposition__Group__0__Impl rule__OrDecomposition__Group__1 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2656:1: rule__OrDecomposition__Group__0 : rule__OrDecomposition__Group__0__Impl rule__OrDecomposition__Group__1 ;
     public final void rule__OrDecomposition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2630:1: ( rule__OrDecomposition__Group__0__Impl rule__OrDecomposition__Group__1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2631:2: rule__OrDecomposition__Group__0__Impl rule__OrDecomposition__Group__1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2660:1: ( rule__OrDecomposition__Group__0__Impl rule__OrDecomposition__Group__1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2661:2: rule__OrDecomposition__Group__0__Impl rule__OrDecomposition__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__OrDecomposition__Group__0__Impl_in_rule__OrDecomposition__Group__05331);
+            pushFollow(FollowSets000.FOLLOW_rule__OrDecomposition__Group__0__Impl_in_rule__OrDecomposition__Group__05390);
             rule__OrDecomposition__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__OrDecomposition__Group__1_in_rule__OrDecomposition__Group__05334);
+            pushFollow(FollowSets000.FOLLOW_rule__OrDecomposition__Group__1_in_rule__OrDecomposition__Group__05393);
             rule__OrDecomposition__Group__1();
             _fsp--;
 
@@ -7014,23 +7092,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__OrDecomposition__Group__0__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2638:1: rule__OrDecomposition__Group__0__Impl : ( ( rule__OrDecomposition__TargetAssignment_0 ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2668:1: rule__OrDecomposition__Group__0__Impl : ( ( rule__OrDecomposition__TargetAssignment_0 ) ) ;
     public final void rule__OrDecomposition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2642:1: ( ( ( rule__OrDecomposition__TargetAssignment_0 ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2643:1: ( ( rule__OrDecomposition__TargetAssignment_0 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2672:1: ( ( ( rule__OrDecomposition__TargetAssignment_0 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2673:1: ( ( rule__OrDecomposition__TargetAssignment_0 ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2643:1: ( ( rule__OrDecomposition__TargetAssignment_0 ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2644:1: ( rule__OrDecomposition__TargetAssignment_0 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2673:1: ( ( rule__OrDecomposition__TargetAssignment_0 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2674:1: ( rule__OrDecomposition__TargetAssignment_0 )
             {
              before(grammarAccess.getOrDecompositionAccess().getTargetAssignment_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2645:1: ( rule__OrDecomposition__TargetAssignment_0 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2645:2: rule__OrDecomposition__TargetAssignment_0
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2675:1: ( rule__OrDecomposition__TargetAssignment_0 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2675:2: rule__OrDecomposition__TargetAssignment_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__OrDecomposition__TargetAssignment_0_in_rule__OrDecomposition__Group__0__Impl5361);
+            pushFollow(FollowSets000.FOLLOW_rule__OrDecomposition__TargetAssignment_0_in_rule__OrDecomposition__Group__0__Impl5420);
             rule__OrDecomposition__TargetAssignment_0();
             _fsp--;
 
@@ -7060,20 +7138,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__OrDecomposition__Group__1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2655:1: rule__OrDecomposition__Group__1 : rule__OrDecomposition__Group__1__Impl rule__OrDecomposition__Group__2 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2685:1: rule__OrDecomposition__Group__1 : rule__OrDecomposition__Group__1__Impl rule__OrDecomposition__Group__2 ;
     public final void rule__OrDecomposition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2659:1: ( rule__OrDecomposition__Group__1__Impl rule__OrDecomposition__Group__2 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2660:2: rule__OrDecomposition__Group__1__Impl rule__OrDecomposition__Group__2
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2689:1: ( rule__OrDecomposition__Group__1__Impl rule__OrDecomposition__Group__2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2690:2: rule__OrDecomposition__Group__1__Impl rule__OrDecomposition__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__OrDecomposition__Group__1__Impl_in_rule__OrDecomposition__Group__15391);
+            pushFollow(FollowSets000.FOLLOW_rule__OrDecomposition__Group__1__Impl_in_rule__OrDecomposition__Group__15450);
             rule__OrDecomposition__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__OrDecomposition__Group__2_in_rule__OrDecomposition__Group__15394);
+            pushFollow(FollowSets000.FOLLOW_rule__OrDecomposition__Group__2_in_rule__OrDecomposition__Group__15453);
             rule__OrDecomposition__Group__2();
             _fsp--;
 
@@ -7096,20 +7174,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__OrDecomposition__Group__1__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2667:1: rule__OrDecomposition__Group__1__Impl : ( '<-(or)-' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2697:1: rule__OrDecomposition__Group__1__Impl : ( '<-(or)-' ) ;
     public final void rule__OrDecomposition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2671:1: ( ( '<-(or)-' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2672:1: ( '<-(or)-' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2701:1: ( ( '<-(or)-' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2702:1: ( '<-(or)-' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2672:1: ( '<-(or)-' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2673:1: '<-(or)-'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2702:1: ( '<-(or)-' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2703:1: '<-(or)-'
             {
              before(grammarAccess.getOrDecompositionAccess().getOrKeyword_1()); 
-            match(input,27,FollowSets000.FOLLOW_27_in_rule__OrDecomposition__Group__1__Impl5422); 
+            match(input,27,FollowSets000.FOLLOW_27_in_rule__OrDecomposition__Group__1__Impl5481); 
              after(grammarAccess.getOrDecompositionAccess().getOrKeyword_1()); 
 
             }
@@ -7133,16 +7211,16 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__OrDecomposition__Group__2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2686:1: rule__OrDecomposition__Group__2 : rule__OrDecomposition__Group__2__Impl ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2716:1: rule__OrDecomposition__Group__2 : rule__OrDecomposition__Group__2__Impl ;
     public final void rule__OrDecomposition__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2690:1: ( rule__OrDecomposition__Group__2__Impl )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2691:2: rule__OrDecomposition__Group__2__Impl
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2720:1: ( rule__OrDecomposition__Group__2__Impl )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2721:2: rule__OrDecomposition__Group__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__OrDecomposition__Group__2__Impl_in_rule__OrDecomposition__Group__25453);
+            pushFollow(FollowSets000.FOLLOW_rule__OrDecomposition__Group__2__Impl_in_rule__OrDecomposition__Group__25512);
             rule__OrDecomposition__Group__2__Impl();
             _fsp--;
 
@@ -7165,23 +7243,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__OrDecomposition__Group__2__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2697:1: rule__OrDecomposition__Group__2__Impl : ( ( rule__OrDecomposition__SourceAssignment_2 ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2727:1: rule__OrDecomposition__Group__2__Impl : ( ( rule__OrDecomposition__SourceAssignment_2 ) ) ;
     public final void rule__OrDecomposition__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2701:1: ( ( ( rule__OrDecomposition__SourceAssignment_2 ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2702:1: ( ( rule__OrDecomposition__SourceAssignment_2 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2731:1: ( ( ( rule__OrDecomposition__SourceAssignment_2 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2732:1: ( ( rule__OrDecomposition__SourceAssignment_2 ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2702:1: ( ( rule__OrDecomposition__SourceAssignment_2 ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2703:1: ( rule__OrDecomposition__SourceAssignment_2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2732:1: ( ( rule__OrDecomposition__SourceAssignment_2 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2733:1: ( rule__OrDecomposition__SourceAssignment_2 )
             {
              before(grammarAccess.getOrDecompositionAccess().getSourceAssignment_2()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2704:1: ( rule__OrDecomposition__SourceAssignment_2 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2704:2: rule__OrDecomposition__SourceAssignment_2
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2734:1: ( rule__OrDecomposition__SourceAssignment_2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2734:2: rule__OrDecomposition__SourceAssignment_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__OrDecomposition__SourceAssignment_2_in_rule__OrDecomposition__Group__2__Impl5480);
+            pushFollow(FollowSets000.FOLLOW_rule__OrDecomposition__SourceAssignment_2_in_rule__OrDecomposition__Group__2__Impl5539);
             rule__OrDecomposition__SourceAssignment_2();
             _fsp--;
 
@@ -7211,20 +7289,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__AndContribution__Group__0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2720:1: rule__AndContribution__Group__0 : rule__AndContribution__Group__0__Impl rule__AndContribution__Group__1 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2750:1: rule__AndContribution__Group__0 : rule__AndContribution__Group__0__Impl rule__AndContribution__Group__1 ;
     public final void rule__AndContribution__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2724:1: ( rule__AndContribution__Group__0__Impl rule__AndContribution__Group__1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2725:2: rule__AndContribution__Group__0__Impl rule__AndContribution__Group__1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2754:1: ( rule__AndContribution__Group__0__Impl rule__AndContribution__Group__1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2755:2: rule__AndContribution__Group__0__Impl rule__AndContribution__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AndContribution__Group__0__Impl_in_rule__AndContribution__Group__05516);
+            pushFollow(FollowSets000.FOLLOW_rule__AndContribution__Group__0__Impl_in_rule__AndContribution__Group__05575);
             rule__AndContribution__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AndContribution__Group__1_in_rule__AndContribution__Group__05519);
+            pushFollow(FollowSets000.FOLLOW_rule__AndContribution__Group__1_in_rule__AndContribution__Group__05578);
             rule__AndContribution__Group__1();
             _fsp--;
 
@@ -7247,23 +7325,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__AndContribution__Group__0__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2732:1: rule__AndContribution__Group__0__Impl : ( ( rule__AndContribution__SourceAssignment_0 ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2762:1: rule__AndContribution__Group__0__Impl : ( ( rule__AndContribution__SourceAssignment_0 ) ) ;
     public final void rule__AndContribution__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2736:1: ( ( ( rule__AndContribution__SourceAssignment_0 ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2737:1: ( ( rule__AndContribution__SourceAssignment_0 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2766:1: ( ( ( rule__AndContribution__SourceAssignment_0 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2767:1: ( ( rule__AndContribution__SourceAssignment_0 ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2737:1: ( ( rule__AndContribution__SourceAssignment_0 ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2738:1: ( rule__AndContribution__SourceAssignment_0 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2767:1: ( ( rule__AndContribution__SourceAssignment_0 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2768:1: ( rule__AndContribution__SourceAssignment_0 )
             {
              before(grammarAccess.getAndContributionAccess().getSourceAssignment_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2739:1: ( rule__AndContribution__SourceAssignment_0 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2739:2: rule__AndContribution__SourceAssignment_0
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2769:1: ( rule__AndContribution__SourceAssignment_0 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2769:2: rule__AndContribution__SourceAssignment_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AndContribution__SourceAssignment_0_in_rule__AndContribution__Group__0__Impl5546);
+            pushFollow(FollowSets000.FOLLOW_rule__AndContribution__SourceAssignment_0_in_rule__AndContribution__Group__0__Impl5605);
             rule__AndContribution__SourceAssignment_0();
             _fsp--;
 
@@ -7293,20 +7371,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__AndContribution__Group__1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2749:1: rule__AndContribution__Group__1 : rule__AndContribution__Group__1__Impl rule__AndContribution__Group__2 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2779:1: rule__AndContribution__Group__1 : rule__AndContribution__Group__1__Impl rule__AndContribution__Group__2 ;
     public final void rule__AndContribution__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2753:1: ( rule__AndContribution__Group__1__Impl rule__AndContribution__Group__2 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2754:2: rule__AndContribution__Group__1__Impl rule__AndContribution__Group__2
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2783:1: ( rule__AndContribution__Group__1__Impl rule__AndContribution__Group__2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2784:2: rule__AndContribution__Group__1__Impl rule__AndContribution__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AndContribution__Group__1__Impl_in_rule__AndContribution__Group__15576);
+            pushFollow(FollowSets000.FOLLOW_rule__AndContribution__Group__1__Impl_in_rule__AndContribution__Group__15635);
             rule__AndContribution__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AndContribution__Group__2_in_rule__AndContribution__Group__15579);
+            pushFollow(FollowSets000.FOLLOW_rule__AndContribution__Group__2_in_rule__AndContribution__Group__15638);
             rule__AndContribution__Group__2();
             _fsp--;
 
@@ -7329,20 +7407,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__AndContribution__Group__1__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2761:1: rule__AndContribution__Group__1__Impl : ( '-(and)->' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2791:1: rule__AndContribution__Group__1__Impl : ( '-(and)->' ) ;
     public final void rule__AndContribution__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2765:1: ( ( '-(and)->' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2766:1: ( '-(and)->' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2795:1: ( ( '-(and)->' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2796:1: ( '-(and)->' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2766:1: ( '-(and)->' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2767:1: '-(and)->'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2796:1: ( '-(and)->' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2797:1: '-(and)->'
             {
              before(grammarAccess.getAndContributionAccess().getAndKeyword_1()); 
-            match(input,28,FollowSets000.FOLLOW_28_in_rule__AndContribution__Group__1__Impl5607); 
+            match(input,28,FollowSets000.FOLLOW_28_in_rule__AndContribution__Group__1__Impl5666); 
              after(grammarAccess.getAndContributionAccess().getAndKeyword_1()); 
 
             }
@@ -7366,16 +7444,16 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__AndContribution__Group__2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2780:1: rule__AndContribution__Group__2 : rule__AndContribution__Group__2__Impl ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2810:1: rule__AndContribution__Group__2 : rule__AndContribution__Group__2__Impl ;
     public final void rule__AndContribution__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2784:1: ( rule__AndContribution__Group__2__Impl )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2785:2: rule__AndContribution__Group__2__Impl
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2814:1: ( rule__AndContribution__Group__2__Impl )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2815:2: rule__AndContribution__Group__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AndContribution__Group__2__Impl_in_rule__AndContribution__Group__25638);
+            pushFollow(FollowSets000.FOLLOW_rule__AndContribution__Group__2__Impl_in_rule__AndContribution__Group__25697);
             rule__AndContribution__Group__2__Impl();
             _fsp--;
 
@@ -7398,23 +7476,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__AndContribution__Group__2__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2791:1: rule__AndContribution__Group__2__Impl : ( ( rule__AndContribution__TargetAssignment_2 ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2821:1: rule__AndContribution__Group__2__Impl : ( ( rule__AndContribution__TargetAssignment_2 ) ) ;
     public final void rule__AndContribution__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2795:1: ( ( ( rule__AndContribution__TargetAssignment_2 ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2796:1: ( ( rule__AndContribution__TargetAssignment_2 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2825:1: ( ( ( rule__AndContribution__TargetAssignment_2 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2826:1: ( ( rule__AndContribution__TargetAssignment_2 ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2796:1: ( ( rule__AndContribution__TargetAssignment_2 ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2797:1: ( rule__AndContribution__TargetAssignment_2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2826:1: ( ( rule__AndContribution__TargetAssignment_2 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2827:1: ( rule__AndContribution__TargetAssignment_2 )
             {
              before(grammarAccess.getAndContributionAccess().getTargetAssignment_2()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2798:1: ( rule__AndContribution__TargetAssignment_2 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2798:2: rule__AndContribution__TargetAssignment_2
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2828:1: ( rule__AndContribution__TargetAssignment_2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2828:2: rule__AndContribution__TargetAssignment_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AndContribution__TargetAssignment_2_in_rule__AndContribution__Group__2__Impl5665);
+            pushFollow(FollowSets000.FOLLOW_rule__AndContribution__TargetAssignment_2_in_rule__AndContribution__Group__2__Impl5724);
             rule__AndContribution__TargetAssignment_2();
             _fsp--;
 
@@ -7444,20 +7522,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__OrContribution__Group__0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2814:1: rule__OrContribution__Group__0 : rule__OrContribution__Group__0__Impl rule__OrContribution__Group__1 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2844:1: rule__OrContribution__Group__0 : rule__OrContribution__Group__0__Impl rule__OrContribution__Group__1 ;
     public final void rule__OrContribution__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2818:1: ( rule__OrContribution__Group__0__Impl rule__OrContribution__Group__1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2819:2: rule__OrContribution__Group__0__Impl rule__OrContribution__Group__1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2848:1: ( rule__OrContribution__Group__0__Impl rule__OrContribution__Group__1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2849:2: rule__OrContribution__Group__0__Impl rule__OrContribution__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__OrContribution__Group__0__Impl_in_rule__OrContribution__Group__05701);
+            pushFollow(FollowSets000.FOLLOW_rule__OrContribution__Group__0__Impl_in_rule__OrContribution__Group__05760);
             rule__OrContribution__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__OrContribution__Group__1_in_rule__OrContribution__Group__05704);
+            pushFollow(FollowSets000.FOLLOW_rule__OrContribution__Group__1_in_rule__OrContribution__Group__05763);
             rule__OrContribution__Group__1();
             _fsp--;
 
@@ -7480,23 +7558,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__OrContribution__Group__0__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2826:1: rule__OrContribution__Group__0__Impl : ( ( rule__OrContribution__SourceAssignment_0 ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2856:1: rule__OrContribution__Group__0__Impl : ( ( rule__OrContribution__SourceAssignment_0 ) ) ;
     public final void rule__OrContribution__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2830:1: ( ( ( rule__OrContribution__SourceAssignment_0 ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2831:1: ( ( rule__OrContribution__SourceAssignment_0 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2860:1: ( ( ( rule__OrContribution__SourceAssignment_0 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2861:1: ( ( rule__OrContribution__SourceAssignment_0 ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2831:1: ( ( rule__OrContribution__SourceAssignment_0 ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2832:1: ( rule__OrContribution__SourceAssignment_0 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2861:1: ( ( rule__OrContribution__SourceAssignment_0 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2862:1: ( rule__OrContribution__SourceAssignment_0 )
             {
              before(grammarAccess.getOrContributionAccess().getSourceAssignment_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2833:1: ( rule__OrContribution__SourceAssignment_0 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2833:2: rule__OrContribution__SourceAssignment_0
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2863:1: ( rule__OrContribution__SourceAssignment_0 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2863:2: rule__OrContribution__SourceAssignment_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__OrContribution__SourceAssignment_0_in_rule__OrContribution__Group__0__Impl5731);
+            pushFollow(FollowSets000.FOLLOW_rule__OrContribution__SourceAssignment_0_in_rule__OrContribution__Group__0__Impl5790);
             rule__OrContribution__SourceAssignment_0();
             _fsp--;
 
@@ -7526,20 +7604,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__OrContribution__Group__1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2843:1: rule__OrContribution__Group__1 : rule__OrContribution__Group__1__Impl rule__OrContribution__Group__2 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2873:1: rule__OrContribution__Group__1 : rule__OrContribution__Group__1__Impl rule__OrContribution__Group__2 ;
     public final void rule__OrContribution__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2847:1: ( rule__OrContribution__Group__1__Impl rule__OrContribution__Group__2 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2848:2: rule__OrContribution__Group__1__Impl rule__OrContribution__Group__2
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2877:1: ( rule__OrContribution__Group__1__Impl rule__OrContribution__Group__2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2878:2: rule__OrContribution__Group__1__Impl rule__OrContribution__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__OrContribution__Group__1__Impl_in_rule__OrContribution__Group__15761);
+            pushFollow(FollowSets000.FOLLOW_rule__OrContribution__Group__1__Impl_in_rule__OrContribution__Group__15820);
             rule__OrContribution__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__OrContribution__Group__2_in_rule__OrContribution__Group__15764);
+            pushFollow(FollowSets000.FOLLOW_rule__OrContribution__Group__2_in_rule__OrContribution__Group__15823);
             rule__OrContribution__Group__2();
             _fsp--;
 
@@ -7562,20 +7640,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__OrContribution__Group__1__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2855:1: rule__OrContribution__Group__1__Impl : ( '-(or)->' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2885:1: rule__OrContribution__Group__1__Impl : ( '-(or)->' ) ;
     public final void rule__OrContribution__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2859:1: ( ( '-(or)->' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2860:1: ( '-(or)->' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2889:1: ( ( '-(or)->' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2890:1: ( '-(or)->' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2860:1: ( '-(or)->' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2861:1: '-(or)->'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2890:1: ( '-(or)->' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2891:1: '-(or)->'
             {
              before(grammarAccess.getOrContributionAccess().getOrKeyword_1()); 
-            match(input,29,FollowSets000.FOLLOW_29_in_rule__OrContribution__Group__1__Impl5792); 
+            match(input,29,FollowSets000.FOLLOW_29_in_rule__OrContribution__Group__1__Impl5851); 
              after(grammarAccess.getOrContributionAccess().getOrKeyword_1()); 
 
             }
@@ -7599,16 +7677,16 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__OrContribution__Group__2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2874:1: rule__OrContribution__Group__2 : rule__OrContribution__Group__2__Impl ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2904:1: rule__OrContribution__Group__2 : rule__OrContribution__Group__2__Impl ;
     public final void rule__OrContribution__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2878:1: ( rule__OrContribution__Group__2__Impl )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2879:2: rule__OrContribution__Group__2__Impl
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2908:1: ( rule__OrContribution__Group__2__Impl )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2909:2: rule__OrContribution__Group__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__OrContribution__Group__2__Impl_in_rule__OrContribution__Group__25823);
+            pushFollow(FollowSets000.FOLLOW_rule__OrContribution__Group__2__Impl_in_rule__OrContribution__Group__25882);
             rule__OrContribution__Group__2__Impl();
             _fsp--;
 
@@ -7631,23 +7709,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__OrContribution__Group__2__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2885:1: rule__OrContribution__Group__2__Impl : ( ( rule__OrContribution__TargetAssignment_2 ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2915:1: rule__OrContribution__Group__2__Impl : ( ( rule__OrContribution__TargetAssignment_2 ) ) ;
     public final void rule__OrContribution__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2889:1: ( ( ( rule__OrContribution__TargetAssignment_2 ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2890:1: ( ( rule__OrContribution__TargetAssignment_2 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2919:1: ( ( ( rule__OrContribution__TargetAssignment_2 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2920:1: ( ( rule__OrContribution__TargetAssignment_2 ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2890:1: ( ( rule__OrContribution__TargetAssignment_2 ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2891:1: ( rule__OrContribution__TargetAssignment_2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2920:1: ( ( rule__OrContribution__TargetAssignment_2 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2921:1: ( rule__OrContribution__TargetAssignment_2 )
             {
              before(grammarAccess.getOrContributionAccess().getTargetAssignment_2()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2892:1: ( rule__OrContribution__TargetAssignment_2 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2892:2: rule__OrContribution__TargetAssignment_2
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2922:1: ( rule__OrContribution__TargetAssignment_2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2922:2: rule__OrContribution__TargetAssignment_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__OrContribution__TargetAssignment_2_in_rule__OrContribution__Group__2__Impl5850);
+            pushFollow(FollowSets000.FOLLOW_rule__OrContribution__TargetAssignment_2_in_rule__OrContribution__Group__2__Impl5909);
             rule__OrContribution__TargetAssignment_2();
             _fsp--;
 
@@ -7677,20 +7755,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__HelpContribution__Group__0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2908:1: rule__HelpContribution__Group__0 : rule__HelpContribution__Group__0__Impl rule__HelpContribution__Group__1 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2938:1: rule__HelpContribution__Group__0 : rule__HelpContribution__Group__0__Impl rule__HelpContribution__Group__1 ;
     public final void rule__HelpContribution__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2912:1: ( rule__HelpContribution__Group__0__Impl rule__HelpContribution__Group__1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2913:2: rule__HelpContribution__Group__0__Impl rule__HelpContribution__Group__1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2942:1: ( rule__HelpContribution__Group__0__Impl rule__HelpContribution__Group__1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2943:2: rule__HelpContribution__Group__0__Impl rule__HelpContribution__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__HelpContribution__Group__0__Impl_in_rule__HelpContribution__Group__05886);
+            pushFollow(FollowSets000.FOLLOW_rule__HelpContribution__Group__0__Impl_in_rule__HelpContribution__Group__05945);
             rule__HelpContribution__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__HelpContribution__Group__1_in_rule__HelpContribution__Group__05889);
+            pushFollow(FollowSets000.FOLLOW_rule__HelpContribution__Group__1_in_rule__HelpContribution__Group__05948);
             rule__HelpContribution__Group__1();
             _fsp--;
 
@@ -7713,23 +7791,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__HelpContribution__Group__0__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2920:1: rule__HelpContribution__Group__0__Impl : ( ( rule__HelpContribution__SourceAssignment_0 ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2950:1: rule__HelpContribution__Group__0__Impl : ( ( rule__HelpContribution__SourceAssignment_0 ) ) ;
     public final void rule__HelpContribution__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2924:1: ( ( ( rule__HelpContribution__SourceAssignment_0 ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2925:1: ( ( rule__HelpContribution__SourceAssignment_0 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2954:1: ( ( ( rule__HelpContribution__SourceAssignment_0 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2955:1: ( ( rule__HelpContribution__SourceAssignment_0 ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2925:1: ( ( rule__HelpContribution__SourceAssignment_0 ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2926:1: ( rule__HelpContribution__SourceAssignment_0 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2955:1: ( ( rule__HelpContribution__SourceAssignment_0 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2956:1: ( rule__HelpContribution__SourceAssignment_0 )
             {
              before(grammarAccess.getHelpContributionAccess().getSourceAssignment_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2927:1: ( rule__HelpContribution__SourceAssignment_0 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2927:2: rule__HelpContribution__SourceAssignment_0
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2957:1: ( rule__HelpContribution__SourceAssignment_0 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2957:2: rule__HelpContribution__SourceAssignment_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__HelpContribution__SourceAssignment_0_in_rule__HelpContribution__Group__0__Impl5916);
+            pushFollow(FollowSets000.FOLLOW_rule__HelpContribution__SourceAssignment_0_in_rule__HelpContribution__Group__0__Impl5975);
             rule__HelpContribution__SourceAssignment_0();
             _fsp--;
 
@@ -7759,20 +7837,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__HelpContribution__Group__1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2937:1: rule__HelpContribution__Group__1 : rule__HelpContribution__Group__1__Impl rule__HelpContribution__Group__2 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2967:1: rule__HelpContribution__Group__1 : rule__HelpContribution__Group__1__Impl rule__HelpContribution__Group__2 ;
     public final void rule__HelpContribution__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2941:1: ( rule__HelpContribution__Group__1__Impl rule__HelpContribution__Group__2 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2942:2: rule__HelpContribution__Group__1__Impl rule__HelpContribution__Group__2
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2971:1: ( rule__HelpContribution__Group__1__Impl rule__HelpContribution__Group__2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2972:2: rule__HelpContribution__Group__1__Impl rule__HelpContribution__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__HelpContribution__Group__1__Impl_in_rule__HelpContribution__Group__15946);
+            pushFollow(FollowSets000.FOLLOW_rule__HelpContribution__Group__1__Impl_in_rule__HelpContribution__Group__16005);
             rule__HelpContribution__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__HelpContribution__Group__2_in_rule__HelpContribution__Group__15949);
+            pushFollow(FollowSets000.FOLLOW_rule__HelpContribution__Group__2_in_rule__HelpContribution__Group__16008);
             rule__HelpContribution__Group__2();
             _fsp--;
 
@@ -7795,20 +7873,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__HelpContribution__Group__1__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2949:1: rule__HelpContribution__Group__1__Impl : ( '-(+)->' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2979:1: rule__HelpContribution__Group__1__Impl : ( '-(+)->' ) ;
     public final void rule__HelpContribution__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2953:1: ( ( '-(+)->' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2954:1: ( '-(+)->' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2983:1: ( ( '-(+)->' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2984:1: ( '-(+)->' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2954:1: ( '-(+)->' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2955:1: '-(+)->'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2984:1: ( '-(+)->' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2985:1: '-(+)->'
             {
              before(grammarAccess.getHelpContributionAccess().getHyphenMinusLeftParenthesisPlusSignRightParenthesisHyphenMinusGreaterThanSignKeyword_1()); 
-            match(input,30,FollowSets000.FOLLOW_30_in_rule__HelpContribution__Group__1__Impl5977); 
+            match(input,30,FollowSets000.FOLLOW_30_in_rule__HelpContribution__Group__1__Impl6036); 
              after(grammarAccess.getHelpContributionAccess().getHyphenMinusLeftParenthesisPlusSignRightParenthesisHyphenMinusGreaterThanSignKeyword_1()); 
 
             }
@@ -7832,16 +7910,16 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__HelpContribution__Group__2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2968:1: rule__HelpContribution__Group__2 : rule__HelpContribution__Group__2__Impl ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2998:1: rule__HelpContribution__Group__2 : rule__HelpContribution__Group__2__Impl ;
     public final void rule__HelpContribution__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2972:1: ( rule__HelpContribution__Group__2__Impl )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2973:2: rule__HelpContribution__Group__2__Impl
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3002:1: ( rule__HelpContribution__Group__2__Impl )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3003:2: rule__HelpContribution__Group__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__HelpContribution__Group__2__Impl_in_rule__HelpContribution__Group__26008);
+            pushFollow(FollowSets000.FOLLOW_rule__HelpContribution__Group__2__Impl_in_rule__HelpContribution__Group__26067);
             rule__HelpContribution__Group__2__Impl();
             _fsp--;
 
@@ -7864,23 +7942,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__HelpContribution__Group__2__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2979:1: rule__HelpContribution__Group__2__Impl : ( ( rule__HelpContribution__TargetAssignment_2 ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3009:1: rule__HelpContribution__Group__2__Impl : ( ( rule__HelpContribution__TargetAssignment_2 ) ) ;
     public final void rule__HelpContribution__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2983:1: ( ( ( rule__HelpContribution__TargetAssignment_2 ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2984:1: ( ( rule__HelpContribution__TargetAssignment_2 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3013:1: ( ( ( rule__HelpContribution__TargetAssignment_2 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3014:1: ( ( rule__HelpContribution__TargetAssignment_2 ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2984:1: ( ( rule__HelpContribution__TargetAssignment_2 ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2985:1: ( rule__HelpContribution__TargetAssignment_2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3014:1: ( ( rule__HelpContribution__TargetAssignment_2 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3015:1: ( rule__HelpContribution__TargetAssignment_2 )
             {
              before(grammarAccess.getHelpContributionAccess().getTargetAssignment_2()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2986:1: ( rule__HelpContribution__TargetAssignment_2 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:2986:2: rule__HelpContribution__TargetAssignment_2
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3016:1: ( rule__HelpContribution__TargetAssignment_2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3016:2: rule__HelpContribution__TargetAssignment_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__HelpContribution__TargetAssignment_2_in_rule__HelpContribution__Group__2__Impl6035);
+            pushFollow(FollowSets000.FOLLOW_rule__HelpContribution__TargetAssignment_2_in_rule__HelpContribution__Group__2__Impl6094);
             rule__HelpContribution__TargetAssignment_2();
             _fsp--;
 
@@ -7910,20 +7988,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__MakeContribution__Group__0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3002:1: rule__MakeContribution__Group__0 : rule__MakeContribution__Group__0__Impl rule__MakeContribution__Group__1 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3032:1: rule__MakeContribution__Group__0 : rule__MakeContribution__Group__0__Impl rule__MakeContribution__Group__1 ;
     public final void rule__MakeContribution__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3006:1: ( rule__MakeContribution__Group__0__Impl rule__MakeContribution__Group__1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3007:2: rule__MakeContribution__Group__0__Impl rule__MakeContribution__Group__1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3036:1: ( rule__MakeContribution__Group__0__Impl rule__MakeContribution__Group__1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3037:2: rule__MakeContribution__Group__0__Impl rule__MakeContribution__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MakeContribution__Group__0__Impl_in_rule__MakeContribution__Group__06071);
+            pushFollow(FollowSets000.FOLLOW_rule__MakeContribution__Group__0__Impl_in_rule__MakeContribution__Group__06130);
             rule__MakeContribution__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__MakeContribution__Group__1_in_rule__MakeContribution__Group__06074);
+            pushFollow(FollowSets000.FOLLOW_rule__MakeContribution__Group__1_in_rule__MakeContribution__Group__06133);
             rule__MakeContribution__Group__1();
             _fsp--;
 
@@ -7946,23 +8024,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__MakeContribution__Group__0__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3014:1: rule__MakeContribution__Group__0__Impl : ( ( rule__MakeContribution__SourceAssignment_0 ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3044:1: rule__MakeContribution__Group__0__Impl : ( ( rule__MakeContribution__SourceAssignment_0 ) ) ;
     public final void rule__MakeContribution__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3018:1: ( ( ( rule__MakeContribution__SourceAssignment_0 ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3019:1: ( ( rule__MakeContribution__SourceAssignment_0 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3048:1: ( ( ( rule__MakeContribution__SourceAssignment_0 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3049:1: ( ( rule__MakeContribution__SourceAssignment_0 ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3019:1: ( ( rule__MakeContribution__SourceAssignment_0 ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3020:1: ( rule__MakeContribution__SourceAssignment_0 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3049:1: ( ( rule__MakeContribution__SourceAssignment_0 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3050:1: ( rule__MakeContribution__SourceAssignment_0 )
             {
              before(grammarAccess.getMakeContributionAccess().getSourceAssignment_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3021:1: ( rule__MakeContribution__SourceAssignment_0 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3021:2: rule__MakeContribution__SourceAssignment_0
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3051:1: ( rule__MakeContribution__SourceAssignment_0 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3051:2: rule__MakeContribution__SourceAssignment_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MakeContribution__SourceAssignment_0_in_rule__MakeContribution__Group__0__Impl6101);
+            pushFollow(FollowSets000.FOLLOW_rule__MakeContribution__SourceAssignment_0_in_rule__MakeContribution__Group__0__Impl6160);
             rule__MakeContribution__SourceAssignment_0();
             _fsp--;
 
@@ -7992,20 +8070,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__MakeContribution__Group__1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3031:1: rule__MakeContribution__Group__1 : rule__MakeContribution__Group__1__Impl rule__MakeContribution__Group__2 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3061:1: rule__MakeContribution__Group__1 : rule__MakeContribution__Group__1__Impl rule__MakeContribution__Group__2 ;
     public final void rule__MakeContribution__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3035:1: ( rule__MakeContribution__Group__1__Impl rule__MakeContribution__Group__2 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3036:2: rule__MakeContribution__Group__1__Impl rule__MakeContribution__Group__2
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3065:1: ( rule__MakeContribution__Group__1__Impl rule__MakeContribution__Group__2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3066:2: rule__MakeContribution__Group__1__Impl rule__MakeContribution__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MakeContribution__Group__1__Impl_in_rule__MakeContribution__Group__16131);
+            pushFollow(FollowSets000.FOLLOW_rule__MakeContribution__Group__1__Impl_in_rule__MakeContribution__Group__16190);
             rule__MakeContribution__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__MakeContribution__Group__2_in_rule__MakeContribution__Group__16134);
+            pushFollow(FollowSets000.FOLLOW_rule__MakeContribution__Group__2_in_rule__MakeContribution__Group__16193);
             rule__MakeContribution__Group__2();
             _fsp--;
 
@@ -8028,20 +8106,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__MakeContribution__Group__1__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3043:1: rule__MakeContribution__Group__1__Impl : ( '-(++)->' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3073:1: rule__MakeContribution__Group__1__Impl : ( '-(++)->' ) ;
     public final void rule__MakeContribution__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3047:1: ( ( '-(++)->' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3048:1: ( '-(++)->' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3077:1: ( ( '-(++)->' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3078:1: ( '-(++)->' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3048:1: ( '-(++)->' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3049:1: '-(++)->'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3078:1: ( '-(++)->' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3079:1: '-(++)->'
             {
              before(grammarAccess.getMakeContributionAccess().getHyphenMinusLeftParenthesisPlusSignPlusSignRightParenthesisHyphenMinusGreaterThanSignKeyword_1()); 
-            match(input,31,FollowSets000.FOLLOW_31_in_rule__MakeContribution__Group__1__Impl6162); 
+            match(input,31,FollowSets000.FOLLOW_31_in_rule__MakeContribution__Group__1__Impl6221); 
              after(grammarAccess.getMakeContributionAccess().getHyphenMinusLeftParenthesisPlusSignPlusSignRightParenthesisHyphenMinusGreaterThanSignKeyword_1()); 
 
             }
@@ -8065,16 +8143,16 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__MakeContribution__Group__2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3062:1: rule__MakeContribution__Group__2 : rule__MakeContribution__Group__2__Impl ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3092:1: rule__MakeContribution__Group__2 : rule__MakeContribution__Group__2__Impl ;
     public final void rule__MakeContribution__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3066:1: ( rule__MakeContribution__Group__2__Impl )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3067:2: rule__MakeContribution__Group__2__Impl
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3096:1: ( rule__MakeContribution__Group__2__Impl )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3097:2: rule__MakeContribution__Group__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MakeContribution__Group__2__Impl_in_rule__MakeContribution__Group__26193);
+            pushFollow(FollowSets000.FOLLOW_rule__MakeContribution__Group__2__Impl_in_rule__MakeContribution__Group__26252);
             rule__MakeContribution__Group__2__Impl();
             _fsp--;
 
@@ -8097,23 +8175,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__MakeContribution__Group__2__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3073:1: rule__MakeContribution__Group__2__Impl : ( ( rule__MakeContribution__TargetAssignment_2 ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3103:1: rule__MakeContribution__Group__2__Impl : ( ( rule__MakeContribution__TargetAssignment_2 ) ) ;
     public final void rule__MakeContribution__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3077:1: ( ( ( rule__MakeContribution__TargetAssignment_2 ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3078:1: ( ( rule__MakeContribution__TargetAssignment_2 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3107:1: ( ( ( rule__MakeContribution__TargetAssignment_2 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3108:1: ( ( rule__MakeContribution__TargetAssignment_2 ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3078:1: ( ( rule__MakeContribution__TargetAssignment_2 ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3079:1: ( rule__MakeContribution__TargetAssignment_2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3108:1: ( ( rule__MakeContribution__TargetAssignment_2 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3109:1: ( rule__MakeContribution__TargetAssignment_2 )
             {
              before(grammarAccess.getMakeContributionAccess().getTargetAssignment_2()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3080:1: ( rule__MakeContribution__TargetAssignment_2 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3080:2: rule__MakeContribution__TargetAssignment_2
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3110:1: ( rule__MakeContribution__TargetAssignment_2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3110:2: rule__MakeContribution__TargetAssignment_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MakeContribution__TargetAssignment_2_in_rule__MakeContribution__Group__2__Impl6220);
+            pushFollow(FollowSets000.FOLLOW_rule__MakeContribution__TargetAssignment_2_in_rule__MakeContribution__Group__2__Impl6279);
             rule__MakeContribution__TargetAssignment_2();
             _fsp--;
 
@@ -8143,20 +8221,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__HurtContribution__Group__0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3096:1: rule__HurtContribution__Group__0 : rule__HurtContribution__Group__0__Impl rule__HurtContribution__Group__1 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3126:1: rule__HurtContribution__Group__0 : rule__HurtContribution__Group__0__Impl rule__HurtContribution__Group__1 ;
     public final void rule__HurtContribution__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3100:1: ( rule__HurtContribution__Group__0__Impl rule__HurtContribution__Group__1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3101:2: rule__HurtContribution__Group__0__Impl rule__HurtContribution__Group__1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3130:1: ( rule__HurtContribution__Group__0__Impl rule__HurtContribution__Group__1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3131:2: rule__HurtContribution__Group__0__Impl rule__HurtContribution__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__HurtContribution__Group__0__Impl_in_rule__HurtContribution__Group__06256);
+            pushFollow(FollowSets000.FOLLOW_rule__HurtContribution__Group__0__Impl_in_rule__HurtContribution__Group__06315);
             rule__HurtContribution__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__HurtContribution__Group__1_in_rule__HurtContribution__Group__06259);
+            pushFollow(FollowSets000.FOLLOW_rule__HurtContribution__Group__1_in_rule__HurtContribution__Group__06318);
             rule__HurtContribution__Group__1();
             _fsp--;
 
@@ -8179,23 +8257,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__HurtContribution__Group__0__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3108:1: rule__HurtContribution__Group__0__Impl : ( ( rule__HurtContribution__SourceAssignment_0 ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3138:1: rule__HurtContribution__Group__0__Impl : ( ( rule__HurtContribution__SourceAssignment_0 ) ) ;
     public final void rule__HurtContribution__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3112:1: ( ( ( rule__HurtContribution__SourceAssignment_0 ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3113:1: ( ( rule__HurtContribution__SourceAssignment_0 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3142:1: ( ( ( rule__HurtContribution__SourceAssignment_0 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3143:1: ( ( rule__HurtContribution__SourceAssignment_0 ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3113:1: ( ( rule__HurtContribution__SourceAssignment_0 ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3114:1: ( rule__HurtContribution__SourceAssignment_0 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3143:1: ( ( rule__HurtContribution__SourceAssignment_0 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3144:1: ( rule__HurtContribution__SourceAssignment_0 )
             {
              before(grammarAccess.getHurtContributionAccess().getSourceAssignment_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3115:1: ( rule__HurtContribution__SourceAssignment_0 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3115:2: rule__HurtContribution__SourceAssignment_0
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3145:1: ( rule__HurtContribution__SourceAssignment_0 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3145:2: rule__HurtContribution__SourceAssignment_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__HurtContribution__SourceAssignment_0_in_rule__HurtContribution__Group__0__Impl6286);
+            pushFollow(FollowSets000.FOLLOW_rule__HurtContribution__SourceAssignment_0_in_rule__HurtContribution__Group__0__Impl6345);
             rule__HurtContribution__SourceAssignment_0();
             _fsp--;
 
@@ -8225,20 +8303,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__HurtContribution__Group__1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3125:1: rule__HurtContribution__Group__1 : rule__HurtContribution__Group__1__Impl rule__HurtContribution__Group__2 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3155:1: rule__HurtContribution__Group__1 : rule__HurtContribution__Group__1__Impl rule__HurtContribution__Group__2 ;
     public final void rule__HurtContribution__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3129:1: ( rule__HurtContribution__Group__1__Impl rule__HurtContribution__Group__2 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3130:2: rule__HurtContribution__Group__1__Impl rule__HurtContribution__Group__2
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3159:1: ( rule__HurtContribution__Group__1__Impl rule__HurtContribution__Group__2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3160:2: rule__HurtContribution__Group__1__Impl rule__HurtContribution__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__HurtContribution__Group__1__Impl_in_rule__HurtContribution__Group__16316);
+            pushFollow(FollowSets000.FOLLOW_rule__HurtContribution__Group__1__Impl_in_rule__HurtContribution__Group__16375);
             rule__HurtContribution__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__HurtContribution__Group__2_in_rule__HurtContribution__Group__16319);
+            pushFollow(FollowSets000.FOLLOW_rule__HurtContribution__Group__2_in_rule__HurtContribution__Group__16378);
             rule__HurtContribution__Group__2();
             _fsp--;
 
@@ -8261,20 +8339,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__HurtContribution__Group__1__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3137:1: rule__HurtContribution__Group__1__Impl : ( '-(-)->' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3167:1: rule__HurtContribution__Group__1__Impl : ( '-(-)->' ) ;
     public final void rule__HurtContribution__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3141:1: ( ( '-(-)->' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3142:1: ( '-(-)->' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3171:1: ( ( '-(-)->' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3172:1: ( '-(-)->' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3142:1: ( '-(-)->' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3143:1: '-(-)->'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3172:1: ( '-(-)->' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3173:1: '-(-)->'
             {
              before(grammarAccess.getHurtContributionAccess().getHyphenMinusLeftParenthesisHyphenMinusRightParenthesisHyphenMinusGreaterThanSignKeyword_1()); 
-            match(input,32,FollowSets000.FOLLOW_32_in_rule__HurtContribution__Group__1__Impl6347); 
+            match(input,32,FollowSets000.FOLLOW_32_in_rule__HurtContribution__Group__1__Impl6406); 
              after(grammarAccess.getHurtContributionAccess().getHyphenMinusLeftParenthesisHyphenMinusRightParenthesisHyphenMinusGreaterThanSignKeyword_1()); 
 
             }
@@ -8298,16 +8376,16 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__HurtContribution__Group__2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3156:1: rule__HurtContribution__Group__2 : rule__HurtContribution__Group__2__Impl ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3186:1: rule__HurtContribution__Group__2 : rule__HurtContribution__Group__2__Impl ;
     public final void rule__HurtContribution__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3160:1: ( rule__HurtContribution__Group__2__Impl )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3161:2: rule__HurtContribution__Group__2__Impl
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3190:1: ( rule__HurtContribution__Group__2__Impl )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3191:2: rule__HurtContribution__Group__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__HurtContribution__Group__2__Impl_in_rule__HurtContribution__Group__26378);
+            pushFollow(FollowSets000.FOLLOW_rule__HurtContribution__Group__2__Impl_in_rule__HurtContribution__Group__26437);
             rule__HurtContribution__Group__2__Impl();
             _fsp--;
 
@@ -8330,23 +8408,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__HurtContribution__Group__2__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3167:1: rule__HurtContribution__Group__2__Impl : ( ( rule__HurtContribution__TargetAssignment_2 ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3197:1: rule__HurtContribution__Group__2__Impl : ( ( rule__HurtContribution__TargetAssignment_2 ) ) ;
     public final void rule__HurtContribution__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3171:1: ( ( ( rule__HurtContribution__TargetAssignment_2 ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3172:1: ( ( rule__HurtContribution__TargetAssignment_2 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3201:1: ( ( ( rule__HurtContribution__TargetAssignment_2 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3202:1: ( ( rule__HurtContribution__TargetAssignment_2 ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3172:1: ( ( rule__HurtContribution__TargetAssignment_2 ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3173:1: ( rule__HurtContribution__TargetAssignment_2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3202:1: ( ( rule__HurtContribution__TargetAssignment_2 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3203:1: ( rule__HurtContribution__TargetAssignment_2 )
             {
              before(grammarAccess.getHurtContributionAccess().getTargetAssignment_2()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3174:1: ( rule__HurtContribution__TargetAssignment_2 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3174:2: rule__HurtContribution__TargetAssignment_2
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3204:1: ( rule__HurtContribution__TargetAssignment_2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3204:2: rule__HurtContribution__TargetAssignment_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__HurtContribution__TargetAssignment_2_in_rule__HurtContribution__Group__2__Impl6405);
+            pushFollow(FollowSets000.FOLLOW_rule__HurtContribution__TargetAssignment_2_in_rule__HurtContribution__Group__2__Impl6464);
             rule__HurtContribution__TargetAssignment_2();
             _fsp--;
 
@@ -8376,20 +8454,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BreakContribution__Group__0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3190:1: rule__BreakContribution__Group__0 : rule__BreakContribution__Group__0__Impl rule__BreakContribution__Group__1 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3220:1: rule__BreakContribution__Group__0 : rule__BreakContribution__Group__0__Impl rule__BreakContribution__Group__1 ;
     public final void rule__BreakContribution__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3194:1: ( rule__BreakContribution__Group__0__Impl rule__BreakContribution__Group__1 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3195:2: rule__BreakContribution__Group__0__Impl rule__BreakContribution__Group__1
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3224:1: ( rule__BreakContribution__Group__0__Impl rule__BreakContribution__Group__1 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3225:2: rule__BreakContribution__Group__0__Impl rule__BreakContribution__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__BreakContribution__Group__0__Impl_in_rule__BreakContribution__Group__06441);
+            pushFollow(FollowSets000.FOLLOW_rule__BreakContribution__Group__0__Impl_in_rule__BreakContribution__Group__06500);
             rule__BreakContribution__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__BreakContribution__Group__1_in_rule__BreakContribution__Group__06444);
+            pushFollow(FollowSets000.FOLLOW_rule__BreakContribution__Group__1_in_rule__BreakContribution__Group__06503);
             rule__BreakContribution__Group__1();
             _fsp--;
 
@@ -8412,23 +8490,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BreakContribution__Group__0__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3202:1: rule__BreakContribution__Group__0__Impl : ( ( rule__BreakContribution__SourceAssignment_0 ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3232:1: rule__BreakContribution__Group__0__Impl : ( ( rule__BreakContribution__SourceAssignment_0 ) ) ;
     public final void rule__BreakContribution__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3206:1: ( ( ( rule__BreakContribution__SourceAssignment_0 ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3207:1: ( ( rule__BreakContribution__SourceAssignment_0 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3236:1: ( ( ( rule__BreakContribution__SourceAssignment_0 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3237:1: ( ( rule__BreakContribution__SourceAssignment_0 ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3207:1: ( ( rule__BreakContribution__SourceAssignment_0 ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3208:1: ( rule__BreakContribution__SourceAssignment_0 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3237:1: ( ( rule__BreakContribution__SourceAssignment_0 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3238:1: ( rule__BreakContribution__SourceAssignment_0 )
             {
              before(grammarAccess.getBreakContributionAccess().getSourceAssignment_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3209:1: ( rule__BreakContribution__SourceAssignment_0 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3209:2: rule__BreakContribution__SourceAssignment_0
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3239:1: ( rule__BreakContribution__SourceAssignment_0 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3239:2: rule__BreakContribution__SourceAssignment_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__BreakContribution__SourceAssignment_0_in_rule__BreakContribution__Group__0__Impl6471);
+            pushFollow(FollowSets000.FOLLOW_rule__BreakContribution__SourceAssignment_0_in_rule__BreakContribution__Group__0__Impl6530);
             rule__BreakContribution__SourceAssignment_0();
             _fsp--;
 
@@ -8458,20 +8536,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BreakContribution__Group__1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3219:1: rule__BreakContribution__Group__1 : rule__BreakContribution__Group__1__Impl rule__BreakContribution__Group__2 ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3249:1: rule__BreakContribution__Group__1 : rule__BreakContribution__Group__1__Impl rule__BreakContribution__Group__2 ;
     public final void rule__BreakContribution__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3223:1: ( rule__BreakContribution__Group__1__Impl rule__BreakContribution__Group__2 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3224:2: rule__BreakContribution__Group__1__Impl rule__BreakContribution__Group__2
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3253:1: ( rule__BreakContribution__Group__1__Impl rule__BreakContribution__Group__2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3254:2: rule__BreakContribution__Group__1__Impl rule__BreakContribution__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__BreakContribution__Group__1__Impl_in_rule__BreakContribution__Group__16501);
+            pushFollow(FollowSets000.FOLLOW_rule__BreakContribution__Group__1__Impl_in_rule__BreakContribution__Group__16560);
             rule__BreakContribution__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__BreakContribution__Group__2_in_rule__BreakContribution__Group__16504);
+            pushFollow(FollowSets000.FOLLOW_rule__BreakContribution__Group__2_in_rule__BreakContribution__Group__16563);
             rule__BreakContribution__Group__2();
             _fsp--;
 
@@ -8494,20 +8572,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BreakContribution__Group__1__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3231:1: rule__BreakContribution__Group__1__Impl : ( '-(--)->' ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3261:1: rule__BreakContribution__Group__1__Impl : ( '-(--)->' ) ;
     public final void rule__BreakContribution__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3235:1: ( ( '-(--)->' ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3236:1: ( '-(--)->' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3265:1: ( ( '-(--)->' ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3266:1: ( '-(--)->' )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3236:1: ( '-(--)->' )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3237:1: '-(--)->'
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3266:1: ( '-(--)->' )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3267:1: '-(--)->'
             {
              before(grammarAccess.getBreakContributionAccess().getHyphenMinusLeftParenthesisHyphenMinusHyphenMinusRightParenthesisHyphenMinusGreaterThanSignKeyword_1()); 
-            match(input,33,FollowSets000.FOLLOW_33_in_rule__BreakContribution__Group__1__Impl6532); 
+            match(input,33,FollowSets000.FOLLOW_33_in_rule__BreakContribution__Group__1__Impl6591); 
              after(grammarAccess.getBreakContributionAccess().getHyphenMinusLeftParenthesisHyphenMinusHyphenMinusRightParenthesisHyphenMinusGreaterThanSignKeyword_1()); 
 
             }
@@ -8531,16 +8609,16 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BreakContribution__Group__2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3250:1: rule__BreakContribution__Group__2 : rule__BreakContribution__Group__2__Impl ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3280:1: rule__BreakContribution__Group__2 : rule__BreakContribution__Group__2__Impl ;
     public final void rule__BreakContribution__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3254:1: ( rule__BreakContribution__Group__2__Impl )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3255:2: rule__BreakContribution__Group__2__Impl
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3284:1: ( rule__BreakContribution__Group__2__Impl )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3285:2: rule__BreakContribution__Group__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__BreakContribution__Group__2__Impl_in_rule__BreakContribution__Group__26563);
+            pushFollow(FollowSets000.FOLLOW_rule__BreakContribution__Group__2__Impl_in_rule__BreakContribution__Group__26622);
             rule__BreakContribution__Group__2__Impl();
             _fsp--;
 
@@ -8563,23 +8641,23 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BreakContribution__Group__2__Impl
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3261:1: rule__BreakContribution__Group__2__Impl : ( ( rule__BreakContribution__TargetAssignment_2 ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3291:1: rule__BreakContribution__Group__2__Impl : ( ( rule__BreakContribution__TargetAssignment_2 ) ) ;
     public final void rule__BreakContribution__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3265:1: ( ( ( rule__BreakContribution__TargetAssignment_2 ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3266:1: ( ( rule__BreakContribution__TargetAssignment_2 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3295:1: ( ( ( rule__BreakContribution__TargetAssignment_2 ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3296:1: ( ( rule__BreakContribution__TargetAssignment_2 ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3266:1: ( ( rule__BreakContribution__TargetAssignment_2 ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3267:1: ( rule__BreakContribution__TargetAssignment_2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3296:1: ( ( rule__BreakContribution__TargetAssignment_2 ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3297:1: ( rule__BreakContribution__TargetAssignment_2 )
             {
              before(grammarAccess.getBreakContributionAccess().getTargetAssignment_2()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3268:1: ( rule__BreakContribution__TargetAssignment_2 )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3268:2: rule__BreakContribution__TargetAssignment_2
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3298:1: ( rule__BreakContribution__TargetAssignment_2 )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3298:2: rule__BreakContribution__TargetAssignment_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__BreakContribution__TargetAssignment_2_in_rule__BreakContribution__Group__2__Impl6590);
+            pushFollow(FollowSets000.FOLLOW_rule__BreakContribution__TargetAssignment_2_in_rule__BreakContribution__Group__2__Impl6649);
             rule__BreakContribution__TargetAssignment_2();
             _fsp--;
 
@@ -8608,22 +8686,22 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
     // $ANTLR end rule__BreakContribution__Group__2__Impl
 
 
-    // $ANTLR start rule__Model__NameAssignment_2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3285:1: rule__Model__NameAssignment_2 : ( RULE_ID ) ;
-    public final void rule__Model__NameAssignment_2() throws RecognitionException {
+    // $ANTLR start rule__Model__NameAssignment_1_1
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3315:1: rule__Model__NameAssignment_1_1 : ( RULE_ID ) ;
+    public final void rule__Model__NameAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3289:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3290:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3319:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3320:1: ( RULE_ID )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3290:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3291:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3320:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3321:1: RULE_ID
             {
-             before(grammarAccess.getModelAccess().getNameIDTerminalRuleCall_2_0()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Model__NameAssignment_26631); 
-             after(grammarAccess.getModelAccess().getNameIDTerminalRuleCall_2_0()); 
+             before(grammarAccess.getModelAccess().getNameIDTerminalRuleCall_1_1_0()); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Model__NameAssignment_1_16690); 
+             after(grammarAccess.getModelAccess().getNameIDTerminalRuleCall_1_1_0()); 
 
             }
 
@@ -8642,28 +8720,28 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end rule__Model__NameAssignment_2
+    // $ANTLR end rule__Model__NameAssignment_1_1
 
 
-    // $ANTLR start rule__Model__ContainersAssignment_4_0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3300:1: rule__Model__ContainersAssignment_4_0 : ( ruleContainer ) ;
-    public final void rule__Model__ContainersAssignment_4_0() throws RecognitionException {
+    // $ANTLR start rule__Model__ContainersAssignment_3_0
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3330:1: rule__Model__ContainersAssignment_3_0 : ( ruleContainer ) ;
+    public final void rule__Model__ContainersAssignment_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3304:1: ( ( ruleContainer ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3305:1: ( ruleContainer )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3334:1: ( ( ruleContainer ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3335:1: ( ruleContainer )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3305:1: ( ruleContainer )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3306:1: ruleContainer
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3335:1: ( ruleContainer )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3336:1: ruleContainer
             {
-             before(grammarAccess.getModelAccess().getContainersContainerParserRuleCall_4_0_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleContainer_in_rule__Model__ContainersAssignment_4_06662);
+             before(grammarAccess.getModelAccess().getContainersContainerParserRuleCall_3_0_0()); 
+            pushFollow(FollowSets000.FOLLOW_ruleContainer_in_rule__Model__ContainersAssignment_3_06721);
             ruleContainer();
             _fsp--;
 
-             after(grammarAccess.getModelAccess().getContainersContainerParserRuleCall_4_0_0()); 
+             after(grammarAccess.getModelAccess().getContainersContainerParserRuleCall_3_0_0()); 
 
             }
 
@@ -8682,28 +8760,28 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end rule__Model__ContainersAssignment_4_0
+    // $ANTLR end rule__Model__ContainersAssignment_3_0
 
 
-    // $ANTLR start rule__Model__IntentionsAssignment_4_1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3315:1: rule__Model__IntentionsAssignment_4_1 : ( ruleIntention ) ;
-    public final void rule__Model__IntentionsAssignment_4_1() throws RecognitionException {
+    // $ANTLR start rule__Model__IntentionsAssignment_3_1
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3345:1: rule__Model__IntentionsAssignment_3_1 : ( ruleIntention ) ;
+    public final void rule__Model__IntentionsAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3319:1: ( ( ruleIntention ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3320:1: ( ruleIntention )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3349:1: ( ( ruleIntention ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3350:1: ( ruleIntention )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3320:1: ( ruleIntention )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3321:1: ruleIntention
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3350:1: ( ruleIntention )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3351:1: ruleIntention
             {
-             before(grammarAccess.getModelAccess().getIntentionsIntentionParserRuleCall_4_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleIntention_in_rule__Model__IntentionsAssignment_4_16693);
+             before(grammarAccess.getModelAccess().getIntentionsIntentionParserRuleCall_3_1_0()); 
+            pushFollow(FollowSets000.FOLLOW_ruleIntention_in_rule__Model__IntentionsAssignment_3_16752);
             ruleIntention();
             _fsp--;
 
-             after(grammarAccess.getModelAccess().getIntentionsIntentionParserRuleCall_4_1_0()); 
+             after(grammarAccess.getModelAccess().getIntentionsIntentionParserRuleCall_3_1_0()); 
 
             }
 
@@ -8722,28 +8800,28 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end rule__Model__IntentionsAssignment_4_1
+    // $ANTLR end rule__Model__IntentionsAssignment_3_1
 
 
-    // $ANTLR start rule__Model__DecompositionsAssignment_4_2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3330:1: rule__Model__DecompositionsAssignment_4_2 : ( ruleDecomposition ) ;
-    public final void rule__Model__DecompositionsAssignment_4_2() throws RecognitionException {
+    // $ANTLR start rule__Model__DecompositionsAssignment_3_2
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3360:1: rule__Model__DecompositionsAssignment_3_2 : ( ruleDecomposition ) ;
+    public final void rule__Model__DecompositionsAssignment_3_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3334:1: ( ( ruleDecomposition ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3335:1: ( ruleDecomposition )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3364:1: ( ( ruleDecomposition ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3365:1: ( ruleDecomposition )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3335:1: ( ruleDecomposition )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3336:1: ruleDecomposition
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3365:1: ( ruleDecomposition )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3366:1: ruleDecomposition
             {
-             before(grammarAccess.getModelAccess().getDecompositionsDecompositionParserRuleCall_4_2_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleDecomposition_in_rule__Model__DecompositionsAssignment_4_26724);
+             before(grammarAccess.getModelAccess().getDecompositionsDecompositionParserRuleCall_3_2_0()); 
+            pushFollow(FollowSets000.FOLLOW_ruleDecomposition_in_rule__Model__DecompositionsAssignment_3_26783);
             ruleDecomposition();
             _fsp--;
 
-             after(grammarAccess.getModelAccess().getDecompositionsDecompositionParserRuleCall_4_2_0()); 
+             after(grammarAccess.getModelAccess().getDecompositionsDecompositionParserRuleCall_3_2_0()); 
 
             }
 
@@ -8762,28 +8840,28 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end rule__Model__DecompositionsAssignment_4_2
+    // $ANTLR end rule__Model__DecompositionsAssignment_3_2
 
 
-    // $ANTLR start rule__Model__DependenciesAssignment_4_3
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3345:1: rule__Model__DependenciesAssignment_4_3 : ( ruleDependency ) ;
-    public final void rule__Model__DependenciesAssignment_4_3() throws RecognitionException {
+    // $ANTLR start rule__Model__DependenciesAssignment_3_3
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3375:1: rule__Model__DependenciesAssignment_3_3 : ( ruleDependency ) ;
+    public final void rule__Model__DependenciesAssignment_3_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3349:1: ( ( ruleDependency ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3350:1: ( ruleDependency )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3379:1: ( ( ruleDependency ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3380:1: ( ruleDependency )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3350:1: ( ruleDependency )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3351:1: ruleDependency
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3380:1: ( ruleDependency )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3381:1: ruleDependency
             {
-             before(grammarAccess.getModelAccess().getDependenciesDependencyParserRuleCall_4_3_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleDependency_in_rule__Model__DependenciesAssignment_4_36755);
+             before(grammarAccess.getModelAccess().getDependenciesDependencyParserRuleCall_3_3_0()); 
+            pushFollow(FollowSets000.FOLLOW_ruleDependency_in_rule__Model__DependenciesAssignment_3_36814);
             ruleDependency();
             _fsp--;
 
-             after(grammarAccess.getModelAccess().getDependenciesDependencyParserRuleCall_4_3_0()); 
+             after(grammarAccess.getModelAccess().getDependenciesDependencyParserRuleCall_3_3_0()); 
 
             }
 
@@ -8802,28 +8880,28 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end rule__Model__DependenciesAssignment_4_3
+    // $ANTLR end rule__Model__DependenciesAssignment_3_3
 
 
-    // $ANTLR start rule__Model__ContributionsAssignment_4_4
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3360:1: rule__Model__ContributionsAssignment_4_4 : ( ruleContribution ) ;
-    public final void rule__Model__ContributionsAssignment_4_4() throws RecognitionException {
+    // $ANTLR start rule__Model__ContributionsAssignment_3_4
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3390:1: rule__Model__ContributionsAssignment_3_4 : ( ruleContribution ) ;
+    public final void rule__Model__ContributionsAssignment_3_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3364:1: ( ( ruleContribution ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3365:1: ( ruleContribution )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3394:1: ( ( ruleContribution ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3395:1: ( ruleContribution )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3365:1: ( ruleContribution )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3366:1: ruleContribution
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3395:1: ( ruleContribution )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3396:1: ruleContribution
             {
-             before(grammarAccess.getModelAccess().getContributionsContributionParserRuleCall_4_4_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleContribution_in_rule__Model__ContributionsAssignment_4_46786);
+             before(grammarAccess.getModelAccess().getContributionsContributionParserRuleCall_3_4_0()); 
+            pushFollow(FollowSets000.FOLLOW_ruleContribution_in_rule__Model__ContributionsAssignment_3_46845);
             ruleContribution();
             _fsp--;
 
-             after(grammarAccess.getModelAccess().getContributionsContributionParserRuleCall_4_4_0()); 
+             after(grammarAccess.getModelAccess().getContributionsContributionParserRuleCall_3_4_0()); 
 
             }
 
@@ -8842,28 +8920,28 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end rule__Model__ContributionsAssignment_4_4
+    // $ANTLR end rule__Model__ContributionsAssignment_3_4
 
 
-    // $ANTLR start rule__Model__AssociationsAssignment_4_5
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3375:1: rule__Model__AssociationsAssignment_4_5 : ( ruleAssociation ) ;
-    public final void rule__Model__AssociationsAssignment_4_5() throws RecognitionException {
+    // $ANTLR start rule__Model__AssociationsAssignment_3_5
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3405:1: rule__Model__AssociationsAssignment_3_5 : ( ruleAssociation ) ;
+    public final void rule__Model__AssociationsAssignment_3_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3379:1: ( ( ruleAssociation ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3380:1: ( ruleAssociation )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3409:1: ( ( ruleAssociation ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3410:1: ( ruleAssociation )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3380:1: ( ruleAssociation )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3381:1: ruleAssociation
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3410:1: ( ruleAssociation )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3411:1: ruleAssociation
             {
-             before(grammarAccess.getModelAccess().getAssociationsAssociationParserRuleCall_4_5_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleAssociation_in_rule__Model__AssociationsAssignment_4_56817);
+             before(grammarAccess.getModelAccess().getAssociationsAssociationParserRuleCall_3_5_0()); 
+            pushFollow(FollowSets000.FOLLOW_ruleAssociation_in_rule__Model__AssociationsAssignment_3_56876);
             ruleAssociation();
             _fsp--;
 
-             after(grammarAccess.getModelAccess().getAssociationsAssociationParserRuleCall_4_5_0()); 
+             after(grammarAccess.getModelAccess().getAssociationsAssociationParserRuleCall_3_5_0()); 
 
             }
 
@@ -8882,24 +8960,24 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end rule__Model__AssociationsAssignment_4_5
+    // $ANTLR end rule__Model__AssociationsAssignment_3_5
 
 
     // $ANTLR start rule__Actor__NameAssignment_1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3390:1: rule__Actor__NameAssignment_1 : ( RULE_ID ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3420:1: rule__Actor__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Actor__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3394:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3395:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3424:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3425:1: ( RULE_ID )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3395:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3396:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3425:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3426:1: RULE_ID
             {
              before(grammarAccess.getActorAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Actor__NameAssignment_16848); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Actor__NameAssignment_16907); 
              after(grammarAccess.getActorAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -8923,24 +9001,24 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Actor__Is_aAssignment_2_0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3405:1: rule__Actor__Is_aAssignment_2_0 : ( ( RULE_ID ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3435:1: rule__Actor__Is_aAssignment_2_0 : ( ( RULE_ID ) ) ;
     public final void rule__Actor__Is_aAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3409:1: ( ( ( RULE_ID ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3410:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3439:1: ( ( ( RULE_ID ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3440:1: ( ( RULE_ID ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3410:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3411:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3440:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3441:1: ( RULE_ID )
             {
              before(grammarAccess.getActorAccess().getIs_aActorCrossReference_2_0_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3412:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3413:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3442:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3443:1: RULE_ID
             {
              before(grammarAccess.getActorAccess().getIs_aActorIDTerminalRuleCall_2_0_0_1()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Actor__Is_aAssignment_2_06883); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Actor__Is_aAssignment_2_06942); 
              after(grammarAccess.getActorAccess().getIs_aActorIDTerminalRuleCall_2_0_0_1()); 
 
             }
@@ -8968,24 +9046,24 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Actor__Is_part_ofAssignment_2_1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3424:1: rule__Actor__Is_part_ofAssignment_2_1 : ( ( RULE_ID ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3454:1: rule__Actor__Is_part_ofAssignment_2_1 : ( ( RULE_ID ) ) ;
     public final void rule__Actor__Is_part_ofAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3428:1: ( ( ( RULE_ID ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3429:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3458:1: ( ( ( RULE_ID ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3459:1: ( ( RULE_ID ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3429:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3430:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3459:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3460:1: ( RULE_ID )
             {
              before(grammarAccess.getActorAccess().getIs_part_ofActorCrossReference_2_1_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3431:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3432:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3461:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3462:1: RULE_ID
             {
              before(grammarAccess.getActorAccess().getIs_part_ofActorIDTerminalRuleCall_2_1_0_1()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Actor__Is_part_ofAssignment_2_16922); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Actor__Is_part_ofAssignment_2_16981); 
              after(grammarAccess.getActorAccess().getIs_part_ofActorIDTerminalRuleCall_2_1_0_1()); 
 
             }
@@ -9013,20 +9091,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Actor__IntentionsAssignment_3_1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3443:1: rule__Actor__IntentionsAssignment_3_1 : ( ruleIntention ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3473:1: rule__Actor__IntentionsAssignment_3_1 : ( ruleIntention ) ;
     public final void rule__Actor__IntentionsAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3447:1: ( ( ruleIntention ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3448:1: ( ruleIntention )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3477:1: ( ( ruleIntention ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3478:1: ( ruleIntention )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3448:1: ( ruleIntention )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3449:1: ruleIntention
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3478:1: ( ruleIntention )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3479:1: ruleIntention
             {
              before(grammarAccess.getActorAccess().getIntentionsIntentionParserRuleCall_3_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleIntention_in_rule__Actor__IntentionsAssignment_3_16957);
+            pushFollow(FollowSets000.FOLLOW_ruleIntention_in_rule__Actor__IntentionsAssignment_3_17016);
             ruleIntention();
             _fsp--;
 
@@ -9053,20 +9131,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Agent__NameAssignment_1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3458:1: rule__Agent__NameAssignment_1 : ( RULE_ID ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3488:1: rule__Agent__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Agent__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3462:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3463:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3492:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3493:1: ( RULE_ID )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3463:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3464:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3493:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3494:1: RULE_ID
             {
              before(grammarAccess.getAgentAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Agent__NameAssignment_16988); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Agent__NameAssignment_17047); 
              after(grammarAccess.getAgentAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -9090,20 +9168,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Agent__IntentionsAssignment_2_1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3473:1: rule__Agent__IntentionsAssignment_2_1 : ( ruleIntention ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3503:1: rule__Agent__IntentionsAssignment_2_1 : ( ruleIntention ) ;
     public final void rule__Agent__IntentionsAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3477:1: ( ( ruleIntention ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3478:1: ( ruleIntention )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3507:1: ( ( ruleIntention ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3508:1: ( ruleIntention )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3478:1: ( ruleIntention )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3479:1: ruleIntention
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3508:1: ( ruleIntention )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3509:1: ruleIntention
             {
              before(grammarAccess.getAgentAccess().getIntentionsIntentionParserRuleCall_2_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleIntention_in_rule__Agent__IntentionsAssignment_2_17019);
+            pushFollow(FollowSets000.FOLLOW_ruleIntention_in_rule__Agent__IntentionsAssignment_2_17078);
             ruleIntention();
             _fsp--;
 
@@ -9130,20 +9208,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Role__NameAssignment_1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3488:1: rule__Role__NameAssignment_1 : ( RULE_ID ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3518:1: rule__Role__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Role__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3492:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3493:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3522:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3523:1: ( RULE_ID )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3493:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3494:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3523:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3524:1: RULE_ID
             {
              before(grammarAccess.getRoleAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Role__NameAssignment_17050); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Role__NameAssignment_17109); 
              after(grammarAccess.getRoleAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -9167,20 +9245,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Role__IntentionsAssignment_2_1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3503:1: rule__Role__IntentionsAssignment_2_1 : ( ruleIntention ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3533:1: rule__Role__IntentionsAssignment_2_1 : ( ruleIntention ) ;
     public final void rule__Role__IntentionsAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3507:1: ( ( ruleIntention ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3508:1: ( ruleIntention )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3537:1: ( ( ruleIntention ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3538:1: ( ruleIntention )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3508:1: ( ruleIntention )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3509:1: ruleIntention
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3538:1: ( ruleIntention )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3539:1: ruleIntention
             {
              before(grammarAccess.getRoleAccess().getIntentionsIntentionParserRuleCall_2_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleIntention_in_rule__Role__IntentionsAssignment_2_17081);
+            pushFollow(FollowSets000.FOLLOW_ruleIntention_in_rule__Role__IntentionsAssignment_2_17140);
             ruleIntention();
             _fsp--;
 
@@ -9207,20 +9285,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Position__NameAssignment_1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3518:1: rule__Position__NameAssignment_1 : ( RULE_ID ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3548:1: rule__Position__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Position__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3522:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3523:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3552:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3553:1: ( RULE_ID )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3523:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3524:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3553:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3554:1: RULE_ID
             {
              before(grammarAccess.getPositionAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Position__NameAssignment_17112); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Position__NameAssignment_17171); 
              after(grammarAccess.getPositionAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -9244,20 +9322,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Position__IntentionsAssignment_2_1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3533:1: rule__Position__IntentionsAssignment_2_1 : ( ruleIntention ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3563:1: rule__Position__IntentionsAssignment_2_1 : ( ruleIntention ) ;
     public final void rule__Position__IntentionsAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3537:1: ( ( ruleIntention ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3538:1: ( ruleIntention )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3567:1: ( ( ruleIntention ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3568:1: ( ruleIntention )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3538:1: ( ruleIntention )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3539:1: ruleIntention
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3568:1: ( ruleIntention )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3569:1: ruleIntention
             {
              before(grammarAccess.getPositionAccess().getIntentionsIntentionParserRuleCall_2_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleIntention_in_rule__Position__IntentionsAssignment_2_17143);
+            pushFollow(FollowSets000.FOLLOW_ruleIntention_in_rule__Position__IntentionsAssignment_2_17202);
             ruleIntention();
             _fsp--;
 
@@ -9284,20 +9362,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Goal__NameAssignment_1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3548:1: rule__Goal__NameAssignment_1 : ( RULE_ID ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3578:1: rule__Goal__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Goal__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3552:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3553:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3582:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3583:1: ( RULE_ID )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3553:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3554:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3583:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3584:1: RULE_ID
             {
              before(grammarAccess.getGoalAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Goal__NameAssignment_17174); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Goal__NameAssignment_17233); 
              after(grammarAccess.getGoalAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -9321,24 +9399,24 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Goal__DecompositionsAssignment_2_1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3563:1: rule__Goal__DecompositionsAssignment_2_1 : ( ( RULE_ID ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3593:1: rule__Goal__DecompositionsAssignment_2_1 : ( ( RULE_ID ) ) ;
     public final void rule__Goal__DecompositionsAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3567:1: ( ( ( RULE_ID ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3568:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3597:1: ( ( ( RULE_ID ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3598:1: ( ( RULE_ID ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3568:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3569:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3598:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3599:1: ( RULE_ID )
             {
              before(grammarAccess.getGoalAccess().getDecompositionsDecompositionCrossReference_2_1_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3570:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3571:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3600:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3601:1: RULE_ID
             {
              before(grammarAccess.getGoalAccess().getDecompositionsDecompositionIDTerminalRuleCall_2_1_0_1()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Goal__DecompositionsAssignment_2_17209); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Goal__DecompositionsAssignment_2_17268); 
              after(grammarAccess.getGoalAccess().getDecompositionsDecompositionIDTerminalRuleCall_2_1_0_1()); 
 
             }
@@ -9366,20 +9444,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Softgoal__NameAssignment_1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3582:1: rule__Softgoal__NameAssignment_1 : ( RULE_ID ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3612:1: rule__Softgoal__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Softgoal__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3586:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3587:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3616:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3617:1: ( RULE_ID )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3587:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3588:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3617:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3618:1: RULE_ID
             {
              before(grammarAccess.getSoftgoalAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Softgoal__NameAssignment_17244); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Softgoal__NameAssignment_17303); 
              after(grammarAccess.getSoftgoalAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -9403,20 +9481,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Task__NameAssignment_1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3597:1: rule__Task__NameAssignment_1 : ( RULE_ID ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3627:1: rule__Task__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Task__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3601:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3602:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3631:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3632:1: ( RULE_ID )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3602:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3603:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3632:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3633:1: RULE_ID
             {
              before(grammarAccess.getTaskAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Task__NameAssignment_17275); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Task__NameAssignment_17334); 
              after(grammarAccess.getTaskAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -9440,20 +9518,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Resource__NameAssignment_1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3612:1: rule__Resource__NameAssignment_1 : ( RULE_ID ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3642:1: rule__Resource__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Resource__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3616:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3617:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3646:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3647:1: ( RULE_ID )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3617:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3618:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3647:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3648:1: RULE_ID
             {
              before(grammarAccess.getResourceAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Resource__NameAssignment_17306); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Resource__NameAssignment_17365); 
              after(grammarAccess.getResourceAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -9477,20 +9555,20 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Belief__NameAssignment_1
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3627:1: rule__Belief__NameAssignment_1 : ( RULE_ID ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3657:1: rule__Belief__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Belief__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3631:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3632:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3661:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3662:1: ( RULE_ID )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3632:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3633:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3662:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3663:1: RULE_ID
             {
              before(grammarAccess.getBeliefAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Belief__NameAssignment_17337); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Belief__NameAssignment_17396); 
              after(grammarAccess.getBeliefAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -9514,24 +9592,24 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Association__SourceAssignment_0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3642:1: rule__Association__SourceAssignment_0 : ( ( RULE_ID ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3672:1: rule__Association__SourceAssignment_0 : ( ( RULE_ID ) ) ;
     public final void rule__Association__SourceAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3646:1: ( ( ( RULE_ID ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3647:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3676:1: ( ( ( RULE_ID ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3677:1: ( ( RULE_ID ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3647:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3648:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3677:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3678:1: ( RULE_ID )
             {
              before(grammarAccess.getAssociationAccess().getSourceContainerCrossReference_0_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3649:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3650:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3679:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3680:1: RULE_ID
             {
              before(grammarAccess.getAssociationAccess().getSourceContainerIDTerminalRuleCall_0_0_1()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Association__SourceAssignment_07372); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Association__SourceAssignment_07431); 
              after(grammarAccess.getAssociationAccess().getSourceContainerIDTerminalRuleCall_0_0_1()); 
 
             }
@@ -9559,24 +9637,24 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Association__TargetAssignment_2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3661:1: rule__Association__TargetAssignment_2 : ( ( RULE_ID ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3691:1: rule__Association__TargetAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__Association__TargetAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3665:1: ( ( ( RULE_ID ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3666:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3695:1: ( ( ( RULE_ID ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3696:1: ( ( RULE_ID ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3666:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3667:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3696:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3697:1: ( RULE_ID )
             {
              before(grammarAccess.getAssociationAccess().getTargetContainerCrossReference_2_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3668:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3669:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3698:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3699:1: RULE_ID
             {
              before(grammarAccess.getAssociationAccess().getTargetContainerIDTerminalRuleCall_2_0_1()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Association__TargetAssignment_27411); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Association__TargetAssignment_27470); 
              after(grammarAccess.getAssociationAccess().getTargetContainerIDTerminalRuleCall_2_0_1()); 
 
             }
@@ -9604,24 +9682,24 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Dependency__DependencyFromAssignment_0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3680:1: rule__Dependency__DependencyFromAssignment_0 : ( ( RULE_ID ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3710:1: rule__Dependency__DependencyFromAssignment_0 : ( ( RULE_ID ) ) ;
     public final void rule__Dependency__DependencyFromAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3684:1: ( ( ( RULE_ID ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3685:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3714:1: ( ( ( RULE_ID ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3715:1: ( ( RULE_ID ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3685:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3686:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3715:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3716:1: ( RULE_ID )
             {
              before(grammarAccess.getDependencyAccess().getDependencyFromDependableCrossReference_0_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3687:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3688:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3717:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3718:1: RULE_ID
             {
              before(grammarAccess.getDependencyAccess().getDependencyFromDependableIDTerminalRuleCall_0_0_1()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Dependency__DependencyFromAssignment_07450); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Dependency__DependencyFromAssignment_07509); 
              after(grammarAccess.getDependencyAccess().getDependencyFromDependableIDTerminalRuleCall_0_0_1()); 
 
             }
@@ -9649,24 +9727,24 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Dependency__DependencyToAssignment_2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3699:1: rule__Dependency__DependencyToAssignment_2 : ( ( RULE_ID ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3729:1: rule__Dependency__DependencyToAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__Dependency__DependencyToAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3703:1: ( ( ( RULE_ID ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3704:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3733:1: ( ( ( RULE_ID ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3734:1: ( ( RULE_ID ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3704:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3705:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3734:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3735:1: ( RULE_ID )
             {
              before(grammarAccess.getDependencyAccess().getDependencyToDependableCrossReference_2_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3706:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3707:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3736:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3737:1: RULE_ID
             {
              before(grammarAccess.getDependencyAccess().getDependencyToDependableIDTerminalRuleCall_2_0_1()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Dependency__DependencyToAssignment_27489); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Dependency__DependencyToAssignment_27548); 
              after(grammarAccess.getDependencyAccess().getDependencyToDependableIDTerminalRuleCall_2_0_1()); 
 
             }
@@ -9694,24 +9772,24 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__AndDecomposition__TargetAssignment_0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3718:1: rule__AndDecomposition__TargetAssignment_0 : ( ( RULE_ID ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3748:1: rule__AndDecomposition__TargetAssignment_0 : ( ( RULE_ID ) ) ;
     public final void rule__AndDecomposition__TargetAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3722:1: ( ( ( RULE_ID ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3723:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3752:1: ( ( ( RULE_ID ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3753:1: ( ( RULE_ID ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3723:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3724:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3753:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3754:1: ( RULE_ID )
             {
              before(grammarAccess.getAndDecompositionAccess().getTargetIntentionCrossReference_0_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3725:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3726:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3755:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3756:1: RULE_ID
             {
              before(grammarAccess.getAndDecompositionAccess().getTargetIntentionIDTerminalRuleCall_0_0_1()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__AndDecomposition__TargetAssignment_07528); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__AndDecomposition__TargetAssignment_07587); 
              after(grammarAccess.getAndDecompositionAccess().getTargetIntentionIDTerminalRuleCall_0_0_1()); 
 
             }
@@ -9739,24 +9817,24 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__AndDecomposition__SourceAssignment_2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3737:1: rule__AndDecomposition__SourceAssignment_2 : ( ( RULE_ID ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3767:1: rule__AndDecomposition__SourceAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__AndDecomposition__SourceAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3741:1: ( ( ( RULE_ID ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3742:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3771:1: ( ( ( RULE_ID ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3772:1: ( ( RULE_ID ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3742:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3743:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3772:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3773:1: ( RULE_ID )
             {
              before(grammarAccess.getAndDecompositionAccess().getSourceIntentionCrossReference_2_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3744:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3745:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3774:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3775:1: RULE_ID
             {
              before(grammarAccess.getAndDecompositionAccess().getSourceIntentionIDTerminalRuleCall_2_0_1()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__AndDecomposition__SourceAssignment_27567); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__AndDecomposition__SourceAssignment_27626); 
              after(grammarAccess.getAndDecompositionAccess().getSourceIntentionIDTerminalRuleCall_2_0_1()); 
 
             }
@@ -9784,24 +9862,24 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__OrDecomposition__TargetAssignment_0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3756:1: rule__OrDecomposition__TargetAssignment_0 : ( ( RULE_ID ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3786:1: rule__OrDecomposition__TargetAssignment_0 : ( ( RULE_ID ) ) ;
     public final void rule__OrDecomposition__TargetAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3760:1: ( ( ( RULE_ID ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3761:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3790:1: ( ( ( RULE_ID ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3791:1: ( ( RULE_ID ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3761:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3762:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3791:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3792:1: ( RULE_ID )
             {
              before(grammarAccess.getOrDecompositionAccess().getTargetIntentionCrossReference_0_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3763:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3764:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3793:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3794:1: RULE_ID
             {
              before(grammarAccess.getOrDecompositionAccess().getTargetIntentionIDTerminalRuleCall_0_0_1()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__OrDecomposition__TargetAssignment_07606); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__OrDecomposition__TargetAssignment_07665); 
              after(grammarAccess.getOrDecompositionAccess().getTargetIntentionIDTerminalRuleCall_0_0_1()); 
 
             }
@@ -9829,24 +9907,24 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__OrDecomposition__SourceAssignment_2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3775:1: rule__OrDecomposition__SourceAssignment_2 : ( ( RULE_ID ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3805:1: rule__OrDecomposition__SourceAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__OrDecomposition__SourceAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3779:1: ( ( ( RULE_ID ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3780:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3809:1: ( ( ( RULE_ID ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3810:1: ( ( RULE_ID ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3780:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3781:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3810:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3811:1: ( RULE_ID )
             {
              before(grammarAccess.getOrDecompositionAccess().getSourceIntentionCrossReference_2_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3782:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3783:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3812:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3813:1: RULE_ID
             {
              before(grammarAccess.getOrDecompositionAccess().getSourceIntentionIDTerminalRuleCall_2_0_1()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__OrDecomposition__SourceAssignment_27645); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__OrDecomposition__SourceAssignment_27704); 
              after(grammarAccess.getOrDecompositionAccess().getSourceIntentionIDTerminalRuleCall_2_0_1()); 
 
             }
@@ -9874,24 +9952,24 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__AndContribution__SourceAssignment_0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3794:1: rule__AndContribution__SourceAssignment_0 : ( ( RULE_ID ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3824:1: rule__AndContribution__SourceAssignment_0 : ( ( RULE_ID ) ) ;
     public final void rule__AndContribution__SourceAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3798:1: ( ( ( RULE_ID ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3799:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3828:1: ( ( ( RULE_ID ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3829:1: ( ( RULE_ID ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3799:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3800:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3829:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3830:1: ( RULE_ID )
             {
              before(grammarAccess.getAndContributionAccess().getSourceIntentionCrossReference_0_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3801:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3802:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3831:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3832:1: RULE_ID
             {
              before(grammarAccess.getAndContributionAccess().getSourceIntentionIDTerminalRuleCall_0_0_1()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__AndContribution__SourceAssignment_07684); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__AndContribution__SourceAssignment_07743); 
              after(grammarAccess.getAndContributionAccess().getSourceIntentionIDTerminalRuleCall_0_0_1()); 
 
             }
@@ -9919,24 +9997,24 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__AndContribution__TargetAssignment_2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3813:1: rule__AndContribution__TargetAssignment_2 : ( ( RULE_ID ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3843:1: rule__AndContribution__TargetAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__AndContribution__TargetAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3817:1: ( ( ( RULE_ID ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3818:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3847:1: ( ( ( RULE_ID ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3848:1: ( ( RULE_ID ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3818:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3819:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3848:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3849:1: ( RULE_ID )
             {
              before(grammarAccess.getAndContributionAccess().getTargetIntentionCrossReference_2_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3820:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3821:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3850:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3851:1: RULE_ID
             {
              before(grammarAccess.getAndContributionAccess().getTargetIntentionIDTerminalRuleCall_2_0_1()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__AndContribution__TargetAssignment_27723); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__AndContribution__TargetAssignment_27782); 
              after(grammarAccess.getAndContributionAccess().getTargetIntentionIDTerminalRuleCall_2_0_1()); 
 
             }
@@ -9964,24 +10042,24 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__OrContribution__SourceAssignment_0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3832:1: rule__OrContribution__SourceAssignment_0 : ( ( RULE_ID ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3862:1: rule__OrContribution__SourceAssignment_0 : ( ( RULE_ID ) ) ;
     public final void rule__OrContribution__SourceAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3836:1: ( ( ( RULE_ID ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3837:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3866:1: ( ( ( RULE_ID ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3867:1: ( ( RULE_ID ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3837:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3838:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3867:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3868:1: ( RULE_ID )
             {
              before(grammarAccess.getOrContributionAccess().getSourceIntentionCrossReference_0_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3839:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3840:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3869:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3870:1: RULE_ID
             {
              before(grammarAccess.getOrContributionAccess().getSourceIntentionIDTerminalRuleCall_0_0_1()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__OrContribution__SourceAssignment_07762); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__OrContribution__SourceAssignment_07821); 
              after(grammarAccess.getOrContributionAccess().getSourceIntentionIDTerminalRuleCall_0_0_1()); 
 
             }
@@ -10009,24 +10087,24 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__OrContribution__TargetAssignment_2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3851:1: rule__OrContribution__TargetAssignment_2 : ( ( RULE_ID ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3881:1: rule__OrContribution__TargetAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__OrContribution__TargetAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3855:1: ( ( ( RULE_ID ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3856:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3885:1: ( ( ( RULE_ID ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3886:1: ( ( RULE_ID ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3856:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3857:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3886:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3887:1: ( RULE_ID )
             {
              before(grammarAccess.getOrContributionAccess().getTargetIntentionCrossReference_2_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3858:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3859:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3888:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3889:1: RULE_ID
             {
              before(grammarAccess.getOrContributionAccess().getTargetIntentionIDTerminalRuleCall_2_0_1()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__OrContribution__TargetAssignment_27801); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__OrContribution__TargetAssignment_27860); 
              after(grammarAccess.getOrContributionAccess().getTargetIntentionIDTerminalRuleCall_2_0_1()); 
 
             }
@@ -10054,24 +10132,24 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__HelpContribution__SourceAssignment_0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3870:1: rule__HelpContribution__SourceAssignment_0 : ( ( RULE_ID ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3900:1: rule__HelpContribution__SourceAssignment_0 : ( ( RULE_ID ) ) ;
     public final void rule__HelpContribution__SourceAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3874:1: ( ( ( RULE_ID ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3875:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3904:1: ( ( ( RULE_ID ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3905:1: ( ( RULE_ID ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3875:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3876:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3905:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3906:1: ( RULE_ID )
             {
              before(grammarAccess.getHelpContributionAccess().getSourceIntentionCrossReference_0_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3877:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3878:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3907:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3908:1: RULE_ID
             {
              before(grammarAccess.getHelpContributionAccess().getSourceIntentionIDTerminalRuleCall_0_0_1()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__HelpContribution__SourceAssignment_07840); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__HelpContribution__SourceAssignment_07899); 
              after(grammarAccess.getHelpContributionAccess().getSourceIntentionIDTerminalRuleCall_0_0_1()); 
 
             }
@@ -10099,24 +10177,24 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__HelpContribution__TargetAssignment_2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3889:1: rule__HelpContribution__TargetAssignment_2 : ( ( RULE_ID ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3919:1: rule__HelpContribution__TargetAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__HelpContribution__TargetAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3893:1: ( ( ( RULE_ID ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3894:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3923:1: ( ( ( RULE_ID ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3924:1: ( ( RULE_ID ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3894:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3895:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3924:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3925:1: ( RULE_ID )
             {
              before(grammarAccess.getHelpContributionAccess().getTargetIntentionCrossReference_2_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3896:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3897:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3926:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3927:1: RULE_ID
             {
              before(grammarAccess.getHelpContributionAccess().getTargetIntentionIDTerminalRuleCall_2_0_1()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__HelpContribution__TargetAssignment_27879); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__HelpContribution__TargetAssignment_27938); 
              after(grammarAccess.getHelpContributionAccess().getTargetIntentionIDTerminalRuleCall_2_0_1()); 
 
             }
@@ -10144,24 +10222,24 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__MakeContribution__SourceAssignment_0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3908:1: rule__MakeContribution__SourceAssignment_0 : ( ( RULE_ID ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3938:1: rule__MakeContribution__SourceAssignment_0 : ( ( RULE_ID ) ) ;
     public final void rule__MakeContribution__SourceAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3912:1: ( ( ( RULE_ID ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3913:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3942:1: ( ( ( RULE_ID ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3943:1: ( ( RULE_ID ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3913:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3914:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3943:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3944:1: ( RULE_ID )
             {
              before(grammarAccess.getMakeContributionAccess().getSourceIntentionCrossReference_0_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3915:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3916:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3945:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3946:1: RULE_ID
             {
              before(grammarAccess.getMakeContributionAccess().getSourceIntentionIDTerminalRuleCall_0_0_1()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__MakeContribution__SourceAssignment_07918); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__MakeContribution__SourceAssignment_07977); 
              after(grammarAccess.getMakeContributionAccess().getSourceIntentionIDTerminalRuleCall_0_0_1()); 
 
             }
@@ -10189,24 +10267,24 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__MakeContribution__TargetAssignment_2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3927:1: rule__MakeContribution__TargetAssignment_2 : ( ( RULE_ID ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3957:1: rule__MakeContribution__TargetAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__MakeContribution__TargetAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3931:1: ( ( ( RULE_ID ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3932:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3961:1: ( ( ( RULE_ID ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3962:1: ( ( RULE_ID ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3932:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3933:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3962:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3963:1: ( RULE_ID )
             {
              before(grammarAccess.getMakeContributionAccess().getTargetIntentionCrossReference_2_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3934:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3935:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3964:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3965:1: RULE_ID
             {
              before(grammarAccess.getMakeContributionAccess().getTargetIntentionIDTerminalRuleCall_2_0_1()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__MakeContribution__TargetAssignment_27957); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__MakeContribution__TargetAssignment_28016); 
              after(grammarAccess.getMakeContributionAccess().getTargetIntentionIDTerminalRuleCall_2_0_1()); 
 
             }
@@ -10234,24 +10312,24 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__HurtContribution__SourceAssignment_0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3946:1: rule__HurtContribution__SourceAssignment_0 : ( ( RULE_ID ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3976:1: rule__HurtContribution__SourceAssignment_0 : ( ( RULE_ID ) ) ;
     public final void rule__HurtContribution__SourceAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3950:1: ( ( ( RULE_ID ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3951:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3980:1: ( ( ( RULE_ID ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3981:1: ( ( RULE_ID ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3951:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3952:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3981:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3982:1: ( RULE_ID )
             {
              before(grammarAccess.getHurtContributionAccess().getSourceIntentionCrossReference_0_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3953:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3954:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3983:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3984:1: RULE_ID
             {
              before(grammarAccess.getHurtContributionAccess().getSourceIntentionIDTerminalRuleCall_0_0_1()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__HurtContribution__SourceAssignment_07996); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__HurtContribution__SourceAssignment_08055); 
              after(grammarAccess.getHurtContributionAccess().getSourceIntentionIDTerminalRuleCall_0_0_1()); 
 
             }
@@ -10279,24 +10357,24 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__HurtContribution__TargetAssignment_2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3965:1: rule__HurtContribution__TargetAssignment_2 : ( ( RULE_ID ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3995:1: rule__HurtContribution__TargetAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__HurtContribution__TargetAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3969:1: ( ( ( RULE_ID ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3970:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3999:1: ( ( ( RULE_ID ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:4000:1: ( ( RULE_ID ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3970:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3971:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:4000:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:4001:1: ( RULE_ID )
             {
              before(grammarAccess.getHurtContributionAccess().getTargetIntentionCrossReference_2_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3972:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3973:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:4002:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:4003:1: RULE_ID
             {
              before(grammarAccess.getHurtContributionAccess().getTargetIntentionIDTerminalRuleCall_2_0_1()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__HurtContribution__TargetAssignment_28035); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__HurtContribution__TargetAssignment_28094); 
              after(grammarAccess.getHurtContributionAccess().getTargetIntentionIDTerminalRuleCall_2_0_1()); 
 
             }
@@ -10324,24 +10402,24 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BreakContribution__SourceAssignment_0
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3984:1: rule__BreakContribution__SourceAssignment_0 : ( ( RULE_ID ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:4014:1: rule__BreakContribution__SourceAssignment_0 : ( ( RULE_ID ) ) ;
     public final void rule__BreakContribution__SourceAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3988:1: ( ( ( RULE_ID ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3989:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:4018:1: ( ( ( RULE_ID ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:4019:1: ( ( RULE_ID ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3989:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3990:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:4019:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:4020:1: ( RULE_ID )
             {
              before(grammarAccess.getBreakContributionAccess().getSourceIntentionCrossReference_0_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3991:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:3992:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:4021:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:4022:1: RULE_ID
             {
              before(grammarAccess.getBreakContributionAccess().getSourceIntentionIDTerminalRuleCall_0_0_1()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__BreakContribution__SourceAssignment_08074); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__BreakContribution__SourceAssignment_08133); 
              after(grammarAccess.getBreakContributionAccess().getSourceIntentionIDTerminalRuleCall_0_0_1()); 
 
             }
@@ -10369,24 +10447,24 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BreakContribution__TargetAssignment_2
-    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:4003:1: rule__BreakContribution__TargetAssignment_2 : ( ( RULE_ID ) ) ;
+    // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:4033:1: rule__BreakContribution__TargetAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__BreakContribution__TargetAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:4007:1: ( ( ( RULE_ID ) ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:4008:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:4037:1: ( ( ( RULE_ID ) ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:4038:1: ( ( RULE_ID ) )
             {
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:4008:1: ( ( RULE_ID ) )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:4009:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:4038:1: ( ( RULE_ID ) )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:4039:1: ( RULE_ID )
             {
              before(grammarAccess.getBreakContributionAccess().getTargetIntentionCrossReference_2_0()); 
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:4010:1: ( RULE_ID )
-            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:4011:1: RULE_ID
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:4040:1: ( RULE_ID )
+            // ../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g:4041:1: RULE_ID
             {
              before(grammarAccess.getBreakContributionAccess().getTargetIntentionIDTerminalRuleCall_2_0_1()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__BreakContribution__TargetAssignment_28113); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__BreakContribution__TargetAssignment_28172); 
              after(grammarAccess.getBreakContributionAccess().getTargetIntentionIDTerminalRuleCall_2_0_1()); 
 
             }
@@ -10489,12 +10567,12 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_ruleBreakContribution_in_entryRuleBreakContribution1445 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_EOF_in_entryRuleBreakContribution1452 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__BreakContribution__Group__0_in_ruleBreakContribution1478 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__ContainersAssignment_4_0_in_rule__Model__Alternatives_41514 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__IntentionsAssignment_4_1_in_rule__Model__Alternatives_41532 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__DecompositionsAssignment_4_2_in_rule__Model__Alternatives_41550 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__DependenciesAssignment_4_3_in_rule__Model__Alternatives_41568 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__ContributionsAssignment_4_4_in_rule__Model__Alternatives_41586 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__AssociationsAssignment_4_5_in_rule__Model__Alternatives_41604 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__ContainersAssignment_3_0_in_rule__Model__Alternatives_31514 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__IntentionsAssignment_3_1_in_rule__Model__Alternatives_31532 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__DecompositionsAssignment_3_2_in_rule__Model__Alternatives_31550 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__DependenciesAssignment_3_3_in_rule__Model__Alternatives_31568 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__ContributionsAssignment_3_4_in_rule__Model__Alternatives_31586 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__AssociationsAssignment_3_5_in_rule__Model__Alternatives_31604 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleActor_in_rule__Container__Alternatives1637 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleAgent_in_rule__Container__Alternatives1654 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleRole_in_rule__Container__Alternatives1671 = new BitSet(new long[]{0x0000000000000002L});
@@ -10514,245 +10592,247 @@ public class InternalIstarParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_ruleHurtContribution_in_rule__Contribution__Alternatives1973 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleMakeContribution_in_rule__Contribution__Alternatives1990 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleBreakContribution_in_rule__Contribution__Alternatives2007 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__02037 = new BitSet(new long[]{0x0000000000000800L});
+        public static final BitSet FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__02037 = new BitSet(new long[]{0x0000000000001800L});
         public static final BitSet FOLLOW_rule__Model__Group__1_in_rule__Model__Group__02040 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__12098 = new BitSet(new long[]{0x0000000000001010L});
+        public static final BitSet FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__12098 = new BitSet(new long[]{0x0000000000000800L});
         public static final BitSet FOLLOW_rule__Model__Group__2_in_rule__Model__Group__12101 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_11_in_rule__Model__Group__1__Impl2129 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__22160 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_rule__Model__Group__3_in_rule__Model__Group__22163 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__NameAssignment_2_in_rule__Model__Group__2__Impl2190 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group__3__Impl_in_rule__Model__Group__32221 = new BitSet(new long[]{0x0000000000FF2012L});
-        public static final BitSet FOLLOW_rule__Model__Group__4_in_rule__Model__Group__32224 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_12_in_rule__Model__Group__3__Impl2252 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group__4__Impl_in_rule__Model__Group__42283 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Alternatives_4_in_rule__Model__Group__4__Impl2310 = new BitSet(new long[]{0x0000000000FF2012L});
-        public static final BitSet FOLLOW_rule__Actor__Group__0__Impl_in_rule__Actor__Group__02351 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_rule__Actor__Group__1_in_rule__Actor__Group__02354 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_13_in_rule__Actor__Group__0__Impl2382 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Actor__Group__1__Impl_in_rule__Actor__Group__12413 = new BitSet(new long[]{0x0000000000004012L});
-        public static final BitSet FOLLOW_rule__Actor__Group__2_in_rule__Actor__Group__12416 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Actor__NameAssignment_1_in_rule__Actor__Group__1__Impl2443 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Actor__Group__2__Impl_in_rule__Actor__Group__22473 = new BitSet(new long[]{0x0000000000004002L});
-        public static final BitSet FOLLOW_rule__Actor__Group__3_in_rule__Actor__Group__22476 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Actor__Alternatives_2_in_rule__Actor__Group__2__Impl2503 = new BitSet(new long[]{0x0000000000000012L});
-        public static final BitSet FOLLOW_rule__Actor__Group__3__Impl_in_rule__Actor__Group__32534 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Actor__Group_3__0_in_rule__Actor__Group__3__Impl2561 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Actor__Group_3__0__Impl_in_rule__Actor__Group_3__02600 = new BitSet(new long[]{0x0000000000F88000L});
-        public static final BitSet FOLLOW_rule__Actor__Group_3__1_in_rule__Actor__Group_3__02603 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_14_in_rule__Actor__Group_3__0__Impl2631 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Actor__Group_3__1__Impl_in_rule__Actor__Group_3__12662 = new BitSet(new long[]{0x0000000000008000L});
-        public static final BitSet FOLLOW_rule__Actor__Group_3__2_in_rule__Actor__Group_3__12665 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Actor__IntentionsAssignment_3_1_in_rule__Actor__Group_3__1__Impl2692 = new BitSet(new long[]{0x0000000000F80002L});
-        public static final BitSet FOLLOW_rule__Actor__Group_3__2__Impl_in_rule__Actor__Group_3__22723 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_15_in_rule__Actor__Group_3__2__Impl2751 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Agent__Group__0__Impl_in_rule__Agent__Group__02788 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_rule__Agent__Group__1_in_rule__Agent__Group__02791 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_16_in_rule__Agent__Group__0__Impl2819 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Agent__Group__1__Impl_in_rule__Agent__Group__12850 = new BitSet(new long[]{0x0000000000004002L});
-        public static final BitSet FOLLOW_rule__Agent__Group__2_in_rule__Agent__Group__12853 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Agent__NameAssignment_1_in_rule__Agent__Group__1__Impl2880 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Agent__Group__2__Impl_in_rule__Agent__Group__22910 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Agent__Group_2__0_in_rule__Agent__Group__2__Impl2937 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Agent__Group_2__0__Impl_in_rule__Agent__Group_2__02974 = new BitSet(new long[]{0x0000000000F88000L});
-        public static final BitSet FOLLOW_rule__Agent__Group_2__1_in_rule__Agent__Group_2__02977 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_14_in_rule__Agent__Group_2__0__Impl3005 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Agent__Group_2__1__Impl_in_rule__Agent__Group_2__13036 = new BitSet(new long[]{0x0000000000008000L});
-        public static final BitSet FOLLOW_rule__Agent__Group_2__2_in_rule__Agent__Group_2__13039 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Agent__IntentionsAssignment_2_1_in_rule__Agent__Group_2__1__Impl3066 = new BitSet(new long[]{0x0000000000F80002L});
-        public static final BitSet FOLLOW_rule__Agent__Group_2__2__Impl_in_rule__Agent__Group_2__23097 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_15_in_rule__Agent__Group_2__2__Impl3125 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Role__Group__0__Impl_in_rule__Role__Group__03162 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_rule__Role__Group__1_in_rule__Role__Group__03165 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_17_in_rule__Role__Group__0__Impl3193 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Role__Group__1__Impl_in_rule__Role__Group__13224 = new BitSet(new long[]{0x0000000000004002L});
-        public static final BitSet FOLLOW_rule__Role__Group__2_in_rule__Role__Group__13227 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Role__NameAssignment_1_in_rule__Role__Group__1__Impl3254 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Role__Group__2__Impl_in_rule__Role__Group__23284 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Role__Group_2__0_in_rule__Role__Group__2__Impl3311 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Role__Group_2__0__Impl_in_rule__Role__Group_2__03348 = new BitSet(new long[]{0x0000000000F88000L});
-        public static final BitSet FOLLOW_rule__Role__Group_2__1_in_rule__Role__Group_2__03351 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_14_in_rule__Role__Group_2__0__Impl3379 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Role__Group_2__1__Impl_in_rule__Role__Group_2__13410 = new BitSet(new long[]{0x0000000000008000L});
-        public static final BitSet FOLLOW_rule__Role__Group_2__2_in_rule__Role__Group_2__13413 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Role__IntentionsAssignment_2_1_in_rule__Role__Group_2__1__Impl3440 = new BitSet(new long[]{0x0000000000F80002L});
-        public static final BitSet FOLLOW_rule__Role__Group_2__2__Impl_in_rule__Role__Group_2__23471 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_15_in_rule__Role__Group_2__2__Impl3499 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Position__Group__0__Impl_in_rule__Position__Group__03536 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_rule__Position__Group__1_in_rule__Position__Group__03539 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_18_in_rule__Position__Group__0__Impl3567 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Position__Group__1__Impl_in_rule__Position__Group__13598 = new BitSet(new long[]{0x0000000000004002L});
-        public static final BitSet FOLLOW_rule__Position__Group__2_in_rule__Position__Group__13601 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Position__NameAssignment_1_in_rule__Position__Group__1__Impl3628 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Position__Group__2__Impl_in_rule__Position__Group__23658 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Position__Group_2__0_in_rule__Position__Group__2__Impl3685 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Position__Group_2__0__Impl_in_rule__Position__Group_2__03722 = new BitSet(new long[]{0x0000000000F88000L});
-        public static final BitSet FOLLOW_rule__Position__Group_2__1_in_rule__Position__Group_2__03725 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_14_in_rule__Position__Group_2__0__Impl3753 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Position__Group_2__1__Impl_in_rule__Position__Group_2__13784 = new BitSet(new long[]{0x0000000000008000L});
-        public static final BitSet FOLLOW_rule__Position__Group_2__2_in_rule__Position__Group_2__13787 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Position__IntentionsAssignment_2_1_in_rule__Position__Group_2__1__Impl3814 = new BitSet(new long[]{0x0000000000F80002L});
-        public static final BitSet FOLLOW_rule__Position__Group_2__2__Impl_in_rule__Position__Group_2__23845 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_15_in_rule__Position__Group_2__2__Impl3873 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Goal__Group__0__Impl_in_rule__Goal__Group__03910 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_rule__Goal__Group__1_in_rule__Goal__Group__03913 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_19_in_rule__Goal__Group__0__Impl3941 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Goal__Group__1__Impl_in_rule__Goal__Group__13972 = new BitSet(new long[]{0x0000000000004002L});
-        public static final BitSet FOLLOW_rule__Goal__Group__2_in_rule__Goal__Group__13975 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Goal__NameAssignment_1_in_rule__Goal__Group__1__Impl4002 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Goal__Group__2__Impl_in_rule__Goal__Group__24032 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Goal__Group_2__0_in_rule__Goal__Group__2__Impl4059 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Goal__Group_2__0__Impl_in_rule__Goal__Group_2__04096 = new BitSet(new long[]{0x0000000000008010L});
-        public static final BitSet FOLLOW_rule__Goal__Group_2__1_in_rule__Goal__Group_2__04099 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_14_in_rule__Goal__Group_2__0__Impl4127 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Goal__Group_2__1__Impl_in_rule__Goal__Group_2__14158 = new BitSet(new long[]{0x0000000000008000L});
-        public static final BitSet FOLLOW_rule__Goal__Group_2__2_in_rule__Goal__Group_2__14161 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Goal__DecompositionsAssignment_2_1_in_rule__Goal__Group_2__1__Impl4188 = new BitSet(new long[]{0x0000000000000012L});
-        public static final BitSet FOLLOW_rule__Goal__Group_2__2__Impl_in_rule__Goal__Group_2__24219 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_15_in_rule__Goal__Group_2__2__Impl4247 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Softgoal__Group__0__Impl_in_rule__Softgoal__Group__04284 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_rule__Softgoal__Group__1_in_rule__Softgoal__Group__04287 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_20_in_rule__Softgoal__Group__0__Impl4315 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Softgoal__Group__1__Impl_in_rule__Softgoal__Group__14346 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Softgoal__NameAssignment_1_in_rule__Softgoal__Group__1__Impl4373 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Task__Group__0__Impl_in_rule__Task__Group__04407 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_rule__Task__Group__1_in_rule__Task__Group__04410 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_21_in_rule__Task__Group__0__Impl4438 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Task__Group__1__Impl_in_rule__Task__Group__14469 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Task__NameAssignment_1_in_rule__Task__Group__1__Impl4496 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Resource__Group__0__Impl_in_rule__Resource__Group__04530 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_rule__Resource__Group__1_in_rule__Resource__Group__04533 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_22_in_rule__Resource__Group__0__Impl4561 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Resource__Group__1__Impl_in_rule__Resource__Group__14592 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Resource__NameAssignment_1_in_rule__Resource__Group__1__Impl4619 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Belief__Group__0__Impl_in_rule__Belief__Group__04653 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_rule__Belief__Group__1_in_rule__Belief__Group__04656 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_23_in_rule__Belief__Group__0__Impl4684 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Belief__Group__1__Impl_in_rule__Belief__Group__14715 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Belief__NameAssignment_1_in_rule__Belief__Group__1__Impl4742 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Association__Group__0__Impl_in_rule__Association__Group__04776 = new BitSet(new long[]{0x0000000001000000L});
-        public static final BitSet FOLLOW_rule__Association__Group__1_in_rule__Association__Group__04779 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Association__SourceAssignment_0_in_rule__Association__Group__0__Impl4806 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Association__Group__1__Impl_in_rule__Association__Group__14836 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_rule__Association__Group__2_in_rule__Association__Group__14839 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_24_in_rule__Association__Group__1__Impl4867 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Association__Group__2__Impl_in_rule__Association__Group__24898 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Association__TargetAssignment_2_in_rule__Association__Group__2__Impl4925 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Dependency__Group__0__Impl_in_rule__Dependency__Group__04961 = new BitSet(new long[]{0x0000000002000000L});
-        public static final BitSet FOLLOW_rule__Dependency__Group__1_in_rule__Dependency__Group__04964 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Dependency__DependencyFromAssignment_0_in_rule__Dependency__Group__0__Impl4991 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Dependency__Group__1__Impl_in_rule__Dependency__Group__15021 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_rule__Dependency__Group__2_in_rule__Dependency__Group__15024 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_25_in_rule__Dependency__Group__1__Impl5052 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Dependency__Group__2__Impl_in_rule__Dependency__Group__25083 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Dependency__DependencyToAssignment_2_in_rule__Dependency__Group__2__Impl5110 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AndDecomposition__Group__0__Impl_in_rule__AndDecomposition__Group__05146 = new BitSet(new long[]{0x0000000004000000L});
-        public static final BitSet FOLLOW_rule__AndDecomposition__Group__1_in_rule__AndDecomposition__Group__05149 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AndDecomposition__TargetAssignment_0_in_rule__AndDecomposition__Group__0__Impl5176 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AndDecomposition__Group__1__Impl_in_rule__AndDecomposition__Group__15206 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_rule__AndDecomposition__Group__2_in_rule__AndDecomposition__Group__15209 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_26_in_rule__AndDecomposition__Group__1__Impl5237 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AndDecomposition__Group__2__Impl_in_rule__AndDecomposition__Group__25268 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AndDecomposition__SourceAssignment_2_in_rule__AndDecomposition__Group__2__Impl5295 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__OrDecomposition__Group__0__Impl_in_rule__OrDecomposition__Group__05331 = new BitSet(new long[]{0x0000000008000000L});
-        public static final BitSet FOLLOW_rule__OrDecomposition__Group__1_in_rule__OrDecomposition__Group__05334 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__OrDecomposition__TargetAssignment_0_in_rule__OrDecomposition__Group__0__Impl5361 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__OrDecomposition__Group__1__Impl_in_rule__OrDecomposition__Group__15391 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_rule__OrDecomposition__Group__2_in_rule__OrDecomposition__Group__15394 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_27_in_rule__OrDecomposition__Group__1__Impl5422 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__OrDecomposition__Group__2__Impl_in_rule__OrDecomposition__Group__25453 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__OrDecomposition__SourceAssignment_2_in_rule__OrDecomposition__Group__2__Impl5480 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AndContribution__Group__0__Impl_in_rule__AndContribution__Group__05516 = new BitSet(new long[]{0x0000000010000000L});
-        public static final BitSet FOLLOW_rule__AndContribution__Group__1_in_rule__AndContribution__Group__05519 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AndContribution__SourceAssignment_0_in_rule__AndContribution__Group__0__Impl5546 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AndContribution__Group__1__Impl_in_rule__AndContribution__Group__15576 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_rule__AndContribution__Group__2_in_rule__AndContribution__Group__15579 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_28_in_rule__AndContribution__Group__1__Impl5607 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AndContribution__Group__2__Impl_in_rule__AndContribution__Group__25638 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AndContribution__TargetAssignment_2_in_rule__AndContribution__Group__2__Impl5665 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__OrContribution__Group__0__Impl_in_rule__OrContribution__Group__05701 = new BitSet(new long[]{0x0000000020000000L});
-        public static final BitSet FOLLOW_rule__OrContribution__Group__1_in_rule__OrContribution__Group__05704 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__OrContribution__SourceAssignment_0_in_rule__OrContribution__Group__0__Impl5731 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__OrContribution__Group__1__Impl_in_rule__OrContribution__Group__15761 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_rule__OrContribution__Group__2_in_rule__OrContribution__Group__15764 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_29_in_rule__OrContribution__Group__1__Impl5792 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__OrContribution__Group__2__Impl_in_rule__OrContribution__Group__25823 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__OrContribution__TargetAssignment_2_in_rule__OrContribution__Group__2__Impl5850 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__HelpContribution__Group__0__Impl_in_rule__HelpContribution__Group__05886 = new BitSet(new long[]{0x0000000040000000L});
-        public static final BitSet FOLLOW_rule__HelpContribution__Group__1_in_rule__HelpContribution__Group__05889 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__HelpContribution__SourceAssignment_0_in_rule__HelpContribution__Group__0__Impl5916 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__HelpContribution__Group__1__Impl_in_rule__HelpContribution__Group__15946 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_rule__HelpContribution__Group__2_in_rule__HelpContribution__Group__15949 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_30_in_rule__HelpContribution__Group__1__Impl5977 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__HelpContribution__Group__2__Impl_in_rule__HelpContribution__Group__26008 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__HelpContribution__TargetAssignment_2_in_rule__HelpContribution__Group__2__Impl6035 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MakeContribution__Group__0__Impl_in_rule__MakeContribution__Group__06071 = new BitSet(new long[]{0x0000000080000000L});
-        public static final BitSet FOLLOW_rule__MakeContribution__Group__1_in_rule__MakeContribution__Group__06074 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MakeContribution__SourceAssignment_0_in_rule__MakeContribution__Group__0__Impl6101 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MakeContribution__Group__1__Impl_in_rule__MakeContribution__Group__16131 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_rule__MakeContribution__Group__2_in_rule__MakeContribution__Group__16134 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_31_in_rule__MakeContribution__Group__1__Impl6162 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MakeContribution__Group__2__Impl_in_rule__MakeContribution__Group__26193 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MakeContribution__TargetAssignment_2_in_rule__MakeContribution__Group__2__Impl6220 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__HurtContribution__Group__0__Impl_in_rule__HurtContribution__Group__06256 = new BitSet(new long[]{0x0000000100000000L});
-        public static final BitSet FOLLOW_rule__HurtContribution__Group__1_in_rule__HurtContribution__Group__06259 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__HurtContribution__SourceAssignment_0_in_rule__HurtContribution__Group__0__Impl6286 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__HurtContribution__Group__1__Impl_in_rule__HurtContribution__Group__16316 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_rule__HurtContribution__Group__2_in_rule__HurtContribution__Group__16319 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_32_in_rule__HurtContribution__Group__1__Impl6347 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__HurtContribution__Group__2__Impl_in_rule__HurtContribution__Group__26378 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__HurtContribution__TargetAssignment_2_in_rule__HurtContribution__Group__2__Impl6405 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__BreakContribution__Group__0__Impl_in_rule__BreakContribution__Group__06441 = new BitSet(new long[]{0x0000000200000000L});
-        public static final BitSet FOLLOW_rule__BreakContribution__Group__1_in_rule__BreakContribution__Group__06444 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__BreakContribution__SourceAssignment_0_in_rule__BreakContribution__Group__0__Impl6471 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__BreakContribution__Group__1__Impl_in_rule__BreakContribution__Group__16501 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_rule__BreakContribution__Group__2_in_rule__BreakContribution__Group__16504 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_33_in_rule__BreakContribution__Group__1__Impl6532 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__BreakContribution__Group__2__Impl_in_rule__BreakContribution__Group__26563 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__BreakContribution__TargetAssignment_2_in_rule__BreakContribution__Group__2__Impl6590 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Model__NameAssignment_26631 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleContainer_in_rule__Model__ContainersAssignment_4_06662 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleIntention_in_rule__Model__IntentionsAssignment_4_16693 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleDecomposition_in_rule__Model__DecompositionsAssignment_4_26724 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleDependency_in_rule__Model__DependenciesAssignment_4_36755 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleContribution_in_rule__Model__ContributionsAssignment_4_46786 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAssociation_in_rule__Model__AssociationsAssignment_4_56817 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Actor__NameAssignment_16848 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Actor__Is_aAssignment_2_06883 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Actor__Is_part_ofAssignment_2_16922 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleIntention_in_rule__Actor__IntentionsAssignment_3_16957 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Agent__NameAssignment_16988 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleIntention_in_rule__Agent__IntentionsAssignment_2_17019 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Role__NameAssignment_17050 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleIntention_in_rule__Role__IntentionsAssignment_2_17081 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Position__NameAssignment_17112 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleIntention_in_rule__Position__IntentionsAssignment_2_17143 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Goal__NameAssignment_17174 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Goal__DecompositionsAssignment_2_17209 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Softgoal__NameAssignment_17244 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Task__NameAssignment_17275 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Resource__NameAssignment_17306 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Belief__NameAssignment_17337 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Association__SourceAssignment_07372 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Association__TargetAssignment_27411 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Dependency__DependencyFromAssignment_07450 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Dependency__DependencyToAssignment_27489 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__AndDecomposition__TargetAssignment_07528 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__AndDecomposition__SourceAssignment_27567 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__OrDecomposition__TargetAssignment_07606 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__OrDecomposition__SourceAssignment_27645 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__AndContribution__SourceAssignment_07684 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__AndContribution__TargetAssignment_27723 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__OrContribution__SourceAssignment_07762 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__OrContribution__TargetAssignment_27801 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__HelpContribution__SourceAssignment_07840 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__HelpContribution__TargetAssignment_27879 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__MakeContribution__SourceAssignment_07918 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__MakeContribution__TargetAssignment_27957 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__HurtContribution__SourceAssignment_07996 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__HurtContribution__TargetAssignment_28035 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__BreakContribution__SourceAssignment_08074 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__BreakContribution__TargetAssignment_28113 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__Group_1__0_in_rule__Model__Group__1__Impl2128 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__22159 = new BitSet(new long[]{0x0000000000FF2012L});
+        public static final BitSet FOLLOW_rule__Model__Group__3_in_rule__Model__Group__22162 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_11_in_rule__Model__Group__2__Impl2190 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__Group__3__Impl_in_rule__Model__Group__32221 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__Alternatives_3_in_rule__Model__Group__3__Impl2248 = new BitSet(new long[]{0x0000000000FF2012L});
+        public static final BitSet FOLLOW_rule__Model__Group_1__0__Impl_in_rule__Model__Group_1__02287 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__Model__Group_1__1_in_rule__Model__Group_1__02290 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_12_in_rule__Model__Group_1__0__Impl2318 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__Group_1__1__Impl_in_rule__Model__Group_1__12349 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__NameAssignment_1_1_in_rule__Model__Group_1__1__Impl2376 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Actor__Group__0__Impl_in_rule__Actor__Group__02410 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__Actor__Group__1_in_rule__Actor__Group__02413 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_13_in_rule__Actor__Group__0__Impl2441 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Actor__Group__1__Impl_in_rule__Actor__Group__12472 = new BitSet(new long[]{0x0000000000004012L});
+        public static final BitSet FOLLOW_rule__Actor__Group__2_in_rule__Actor__Group__12475 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Actor__NameAssignment_1_in_rule__Actor__Group__1__Impl2502 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Actor__Group__2__Impl_in_rule__Actor__Group__22532 = new BitSet(new long[]{0x0000000000004002L});
+        public static final BitSet FOLLOW_rule__Actor__Group__3_in_rule__Actor__Group__22535 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Actor__Alternatives_2_in_rule__Actor__Group__2__Impl2562 = new BitSet(new long[]{0x0000000000000012L});
+        public static final BitSet FOLLOW_rule__Actor__Group__3__Impl_in_rule__Actor__Group__32593 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Actor__Group_3__0_in_rule__Actor__Group__3__Impl2620 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Actor__Group_3__0__Impl_in_rule__Actor__Group_3__02659 = new BitSet(new long[]{0x0000000000F88000L});
+        public static final BitSet FOLLOW_rule__Actor__Group_3__1_in_rule__Actor__Group_3__02662 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_14_in_rule__Actor__Group_3__0__Impl2690 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Actor__Group_3__1__Impl_in_rule__Actor__Group_3__12721 = new BitSet(new long[]{0x0000000000008000L});
+        public static final BitSet FOLLOW_rule__Actor__Group_3__2_in_rule__Actor__Group_3__12724 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Actor__IntentionsAssignment_3_1_in_rule__Actor__Group_3__1__Impl2751 = new BitSet(new long[]{0x0000000000F80002L});
+        public static final BitSet FOLLOW_rule__Actor__Group_3__2__Impl_in_rule__Actor__Group_3__22782 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_15_in_rule__Actor__Group_3__2__Impl2810 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Agent__Group__0__Impl_in_rule__Agent__Group__02847 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__Agent__Group__1_in_rule__Agent__Group__02850 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_16_in_rule__Agent__Group__0__Impl2878 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Agent__Group__1__Impl_in_rule__Agent__Group__12909 = new BitSet(new long[]{0x0000000000004002L});
+        public static final BitSet FOLLOW_rule__Agent__Group__2_in_rule__Agent__Group__12912 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Agent__NameAssignment_1_in_rule__Agent__Group__1__Impl2939 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Agent__Group__2__Impl_in_rule__Agent__Group__22969 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Agent__Group_2__0_in_rule__Agent__Group__2__Impl2996 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Agent__Group_2__0__Impl_in_rule__Agent__Group_2__03033 = new BitSet(new long[]{0x0000000000F88000L});
+        public static final BitSet FOLLOW_rule__Agent__Group_2__1_in_rule__Agent__Group_2__03036 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_14_in_rule__Agent__Group_2__0__Impl3064 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Agent__Group_2__1__Impl_in_rule__Agent__Group_2__13095 = new BitSet(new long[]{0x0000000000008000L});
+        public static final BitSet FOLLOW_rule__Agent__Group_2__2_in_rule__Agent__Group_2__13098 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Agent__IntentionsAssignment_2_1_in_rule__Agent__Group_2__1__Impl3125 = new BitSet(new long[]{0x0000000000F80002L});
+        public static final BitSet FOLLOW_rule__Agent__Group_2__2__Impl_in_rule__Agent__Group_2__23156 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_15_in_rule__Agent__Group_2__2__Impl3184 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Role__Group__0__Impl_in_rule__Role__Group__03221 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__Role__Group__1_in_rule__Role__Group__03224 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_17_in_rule__Role__Group__0__Impl3252 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Role__Group__1__Impl_in_rule__Role__Group__13283 = new BitSet(new long[]{0x0000000000004002L});
+        public static final BitSet FOLLOW_rule__Role__Group__2_in_rule__Role__Group__13286 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Role__NameAssignment_1_in_rule__Role__Group__1__Impl3313 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Role__Group__2__Impl_in_rule__Role__Group__23343 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Role__Group_2__0_in_rule__Role__Group__2__Impl3370 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Role__Group_2__0__Impl_in_rule__Role__Group_2__03407 = new BitSet(new long[]{0x0000000000F88000L});
+        public static final BitSet FOLLOW_rule__Role__Group_2__1_in_rule__Role__Group_2__03410 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_14_in_rule__Role__Group_2__0__Impl3438 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Role__Group_2__1__Impl_in_rule__Role__Group_2__13469 = new BitSet(new long[]{0x0000000000008000L});
+        public static final BitSet FOLLOW_rule__Role__Group_2__2_in_rule__Role__Group_2__13472 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Role__IntentionsAssignment_2_1_in_rule__Role__Group_2__1__Impl3499 = new BitSet(new long[]{0x0000000000F80002L});
+        public static final BitSet FOLLOW_rule__Role__Group_2__2__Impl_in_rule__Role__Group_2__23530 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_15_in_rule__Role__Group_2__2__Impl3558 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Position__Group__0__Impl_in_rule__Position__Group__03595 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__Position__Group__1_in_rule__Position__Group__03598 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_18_in_rule__Position__Group__0__Impl3626 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Position__Group__1__Impl_in_rule__Position__Group__13657 = new BitSet(new long[]{0x0000000000004002L});
+        public static final BitSet FOLLOW_rule__Position__Group__2_in_rule__Position__Group__13660 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Position__NameAssignment_1_in_rule__Position__Group__1__Impl3687 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Position__Group__2__Impl_in_rule__Position__Group__23717 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Position__Group_2__0_in_rule__Position__Group__2__Impl3744 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Position__Group_2__0__Impl_in_rule__Position__Group_2__03781 = new BitSet(new long[]{0x0000000000F88000L});
+        public static final BitSet FOLLOW_rule__Position__Group_2__1_in_rule__Position__Group_2__03784 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_14_in_rule__Position__Group_2__0__Impl3812 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Position__Group_2__1__Impl_in_rule__Position__Group_2__13843 = new BitSet(new long[]{0x0000000000008000L});
+        public static final BitSet FOLLOW_rule__Position__Group_2__2_in_rule__Position__Group_2__13846 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Position__IntentionsAssignment_2_1_in_rule__Position__Group_2__1__Impl3873 = new BitSet(new long[]{0x0000000000F80002L});
+        public static final BitSet FOLLOW_rule__Position__Group_2__2__Impl_in_rule__Position__Group_2__23904 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_15_in_rule__Position__Group_2__2__Impl3932 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Goal__Group__0__Impl_in_rule__Goal__Group__03969 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__Goal__Group__1_in_rule__Goal__Group__03972 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_19_in_rule__Goal__Group__0__Impl4000 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Goal__Group__1__Impl_in_rule__Goal__Group__14031 = new BitSet(new long[]{0x0000000000004002L});
+        public static final BitSet FOLLOW_rule__Goal__Group__2_in_rule__Goal__Group__14034 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Goal__NameAssignment_1_in_rule__Goal__Group__1__Impl4061 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Goal__Group__2__Impl_in_rule__Goal__Group__24091 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Goal__Group_2__0_in_rule__Goal__Group__2__Impl4118 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Goal__Group_2__0__Impl_in_rule__Goal__Group_2__04155 = new BitSet(new long[]{0x0000000000008010L});
+        public static final BitSet FOLLOW_rule__Goal__Group_2__1_in_rule__Goal__Group_2__04158 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_14_in_rule__Goal__Group_2__0__Impl4186 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Goal__Group_2__1__Impl_in_rule__Goal__Group_2__14217 = new BitSet(new long[]{0x0000000000008000L});
+        public static final BitSet FOLLOW_rule__Goal__Group_2__2_in_rule__Goal__Group_2__14220 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Goal__DecompositionsAssignment_2_1_in_rule__Goal__Group_2__1__Impl4247 = new BitSet(new long[]{0x0000000000000012L});
+        public static final BitSet FOLLOW_rule__Goal__Group_2__2__Impl_in_rule__Goal__Group_2__24278 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_15_in_rule__Goal__Group_2__2__Impl4306 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Softgoal__Group__0__Impl_in_rule__Softgoal__Group__04343 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__Softgoal__Group__1_in_rule__Softgoal__Group__04346 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_20_in_rule__Softgoal__Group__0__Impl4374 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Softgoal__Group__1__Impl_in_rule__Softgoal__Group__14405 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Softgoal__NameAssignment_1_in_rule__Softgoal__Group__1__Impl4432 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Task__Group__0__Impl_in_rule__Task__Group__04466 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__Task__Group__1_in_rule__Task__Group__04469 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_21_in_rule__Task__Group__0__Impl4497 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Task__Group__1__Impl_in_rule__Task__Group__14528 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Task__NameAssignment_1_in_rule__Task__Group__1__Impl4555 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Resource__Group__0__Impl_in_rule__Resource__Group__04589 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__Resource__Group__1_in_rule__Resource__Group__04592 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_22_in_rule__Resource__Group__0__Impl4620 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Resource__Group__1__Impl_in_rule__Resource__Group__14651 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Resource__NameAssignment_1_in_rule__Resource__Group__1__Impl4678 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Belief__Group__0__Impl_in_rule__Belief__Group__04712 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__Belief__Group__1_in_rule__Belief__Group__04715 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_23_in_rule__Belief__Group__0__Impl4743 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Belief__Group__1__Impl_in_rule__Belief__Group__14774 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Belief__NameAssignment_1_in_rule__Belief__Group__1__Impl4801 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Association__Group__0__Impl_in_rule__Association__Group__04835 = new BitSet(new long[]{0x0000000001000000L});
+        public static final BitSet FOLLOW_rule__Association__Group__1_in_rule__Association__Group__04838 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Association__SourceAssignment_0_in_rule__Association__Group__0__Impl4865 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Association__Group__1__Impl_in_rule__Association__Group__14895 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__Association__Group__2_in_rule__Association__Group__14898 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_24_in_rule__Association__Group__1__Impl4926 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Association__Group__2__Impl_in_rule__Association__Group__24957 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Association__TargetAssignment_2_in_rule__Association__Group__2__Impl4984 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Dependency__Group__0__Impl_in_rule__Dependency__Group__05020 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_rule__Dependency__Group__1_in_rule__Dependency__Group__05023 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Dependency__DependencyFromAssignment_0_in_rule__Dependency__Group__0__Impl5050 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Dependency__Group__1__Impl_in_rule__Dependency__Group__15080 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__Dependency__Group__2_in_rule__Dependency__Group__15083 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_25_in_rule__Dependency__Group__1__Impl5111 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Dependency__Group__2__Impl_in_rule__Dependency__Group__25142 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Dependency__DependencyToAssignment_2_in_rule__Dependency__Group__2__Impl5169 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AndDecomposition__Group__0__Impl_in_rule__AndDecomposition__Group__05205 = new BitSet(new long[]{0x0000000004000000L});
+        public static final BitSet FOLLOW_rule__AndDecomposition__Group__1_in_rule__AndDecomposition__Group__05208 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AndDecomposition__TargetAssignment_0_in_rule__AndDecomposition__Group__0__Impl5235 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AndDecomposition__Group__1__Impl_in_rule__AndDecomposition__Group__15265 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__AndDecomposition__Group__2_in_rule__AndDecomposition__Group__15268 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_26_in_rule__AndDecomposition__Group__1__Impl5296 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AndDecomposition__Group__2__Impl_in_rule__AndDecomposition__Group__25327 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AndDecomposition__SourceAssignment_2_in_rule__AndDecomposition__Group__2__Impl5354 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__OrDecomposition__Group__0__Impl_in_rule__OrDecomposition__Group__05390 = new BitSet(new long[]{0x0000000008000000L});
+        public static final BitSet FOLLOW_rule__OrDecomposition__Group__1_in_rule__OrDecomposition__Group__05393 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__OrDecomposition__TargetAssignment_0_in_rule__OrDecomposition__Group__0__Impl5420 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__OrDecomposition__Group__1__Impl_in_rule__OrDecomposition__Group__15450 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__OrDecomposition__Group__2_in_rule__OrDecomposition__Group__15453 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_27_in_rule__OrDecomposition__Group__1__Impl5481 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__OrDecomposition__Group__2__Impl_in_rule__OrDecomposition__Group__25512 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__OrDecomposition__SourceAssignment_2_in_rule__OrDecomposition__Group__2__Impl5539 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AndContribution__Group__0__Impl_in_rule__AndContribution__Group__05575 = new BitSet(new long[]{0x0000000010000000L});
+        public static final BitSet FOLLOW_rule__AndContribution__Group__1_in_rule__AndContribution__Group__05578 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AndContribution__SourceAssignment_0_in_rule__AndContribution__Group__0__Impl5605 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AndContribution__Group__1__Impl_in_rule__AndContribution__Group__15635 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__AndContribution__Group__2_in_rule__AndContribution__Group__15638 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_28_in_rule__AndContribution__Group__1__Impl5666 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AndContribution__Group__2__Impl_in_rule__AndContribution__Group__25697 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AndContribution__TargetAssignment_2_in_rule__AndContribution__Group__2__Impl5724 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__OrContribution__Group__0__Impl_in_rule__OrContribution__Group__05760 = new BitSet(new long[]{0x0000000020000000L});
+        public static final BitSet FOLLOW_rule__OrContribution__Group__1_in_rule__OrContribution__Group__05763 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__OrContribution__SourceAssignment_0_in_rule__OrContribution__Group__0__Impl5790 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__OrContribution__Group__1__Impl_in_rule__OrContribution__Group__15820 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__OrContribution__Group__2_in_rule__OrContribution__Group__15823 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_29_in_rule__OrContribution__Group__1__Impl5851 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__OrContribution__Group__2__Impl_in_rule__OrContribution__Group__25882 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__OrContribution__TargetAssignment_2_in_rule__OrContribution__Group__2__Impl5909 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__HelpContribution__Group__0__Impl_in_rule__HelpContribution__Group__05945 = new BitSet(new long[]{0x0000000040000000L});
+        public static final BitSet FOLLOW_rule__HelpContribution__Group__1_in_rule__HelpContribution__Group__05948 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__HelpContribution__SourceAssignment_0_in_rule__HelpContribution__Group__0__Impl5975 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__HelpContribution__Group__1__Impl_in_rule__HelpContribution__Group__16005 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__HelpContribution__Group__2_in_rule__HelpContribution__Group__16008 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_30_in_rule__HelpContribution__Group__1__Impl6036 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__HelpContribution__Group__2__Impl_in_rule__HelpContribution__Group__26067 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__HelpContribution__TargetAssignment_2_in_rule__HelpContribution__Group__2__Impl6094 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MakeContribution__Group__0__Impl_in_rule__MakeContribution__Group__06130 = new BitSet(new long[]{0x0000000080000000L});
+        public static final BitSet FOLLOW_rule__MakeContribution__Group__1_in_rule__MakeContribution__Group__06133 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MakeContribution__SourceAssignment_0_in_rule__MakeContribution__Group__0__Impl6160 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MakeContribution__Group__1__Impl_in_rule__MakeContribution__Group__16190 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__MakeContribution__Group__2_in_rule__MakeContribution__Group__16193 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_31_in_rule__MakeContribution__Group__1__Impl6221 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MakeContribution__Group__2__Impl_in_rule__MakeContribution__Group__26252 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MakeContribution__TargetAssignment_2_in_rule__MakeContribution__Group__2__Impl6279 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__HurtContribution__Group__0__Impl_in_rule__HurtContribution__Group__06315 = new BitSet(new long[]{0x0000000100000000L});
+        public static final BitSet FOLLOW_rule__HurtContribution__Group__1_in_rule__HurtContribution__Group__06318 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__HurtContribution__SourceAssignment_0_in_rule__HurtContribution__Group__0__Impl6345 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__HurtContribution__Group__1__Impl_in_rule__HurtContribution__Group__16375 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__HurtContribution__Group__2_in_rule__HurtContribution__Group__16378 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_32_in_rule__HurtContribution__Group__1__Impl6406 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__HurtContribution__Group__2__Impl_in_rule__HurtContribution__Group__26437 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__HurtContribution__TargetAssignment_2_in_rule__HurtContribution__Group__2__Impl6464 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__BreakContribution__Group__0__Impl_in_rule__BreakContribution__Group__06500 = new BitSet(new long[]{0x0000000200000000L});
+        public static final BitSet FOLLOW_rule__BreakContribution__Group__1_in_rule__BreakContribution__Group__06503 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__BreakContribution__SourceAssignment_0_in_rule__BreakContribution__Group__0__Impl6530 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__BreakContribution__Group__1__Impl_in_rule__BreakContribution__Group__16560 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__BreakContribution__Group__2_in_rule__BreakContribution__Group__16563 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_33_in_rule__BreakContribution__Group__1__Impl6591 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__BreakContribution__Group__2__Impl_in_rule__BreakContribution__Group__26622 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__BreakContribution__TargetAssignment_2_in_rule__BreakContribution__Group__2__Impl6649 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Model__NameAssignment_1_16690 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleContainer_in_rule__Model__ContainersAssignment_3_06721 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleIntention_in_rule__Model__IntentionsAssignment_3_16752 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleDecomposition_in_rule__Model__DecompositionsAssignment_3_26783 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleDependency_in_rule__Model__DependenciesAssignment_3_36814 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleContribution_in_rule__Model__ContributionsAssignment_3_46845 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleAssociation_in_rule__Model__AssociationsAssignment_3_56876 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Actor__NameAssignment_16907 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Actor__Is_aAssignment_2_06942 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Actor__Is_part_ofAssignment_2_16981 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleIntention_in_rule__Actor__IntentionsAssignment_3_17016 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Agent__NameAssignment_17047 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleIntention_in_rule__Agent__IntentionsAssignment_2_17078 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Role__NameAssignment_17109 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleIntention_in_rule__Role__IntentionsAssignment_2_17140 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Position__NameAssignment_17171 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleIntention_in_rule__Position__IntentionsAssignment_2_17202 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Goal__NameAssignment_17233 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Goal__DecompositionsAssignment_2_17268 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Softgoal__NameAssignment_17303 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Task__NameAssignment_17334 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Resource__NameAssignment_17365 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Belief__NameAssignment_17396 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Association__SourceAssignment_07431 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Association__TargetAssignment_27470 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Dependency__DependencyFromAssignment_07509 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Dependency__DependencyToAssignment_27548 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__AndDecomposition__TargetAssignment_07587 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__AndDecomposition__SourceAssignment_27626 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__OrDecomposition__TargetAssignment_07665 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__OrDecomposition__SourceAssignment_27704 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__AndContribution__SourceAssignment_07743 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__AndContribution__TargetAssignment_27782 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__OrContribution__SourceAssignment_07821 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__OrContribution__TargetAssignment_27860 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__HelpContribution__SourceAssignment_07899 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__HelpContribution__TargetAssignment_27938 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__MakeContribution__SourceAssignment_07977 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__MakeContribution__TargetAssignment_28016 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__HurtContribution__SourceAssignment_08055 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__HurtContribution__TargetAssignment_28094 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__BreakContribution__SourceAssignment_08133 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__BreakContribution__TargetAssignment_28172 = new BitSet(new long[]{0x0000000000000002L});
     }
 
 

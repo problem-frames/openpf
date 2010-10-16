@@ -100,15 +100,15 @@ ruleModel returns [EObject current=null]
     currentNode = newNode; 
         associateNodeWithAstElement(currentNode, $current); 
     }
-)	'istar' 
+)(	'istar' 
     {
-        createLeafNode(grammarAccess.getModelAccess().getIstarKeyword_1(), null); 
+        createLeafNode(grammarAccess.getModelAccess().getIstarKeyword_1_0(), null); 
     }
 (
 (
 		lv_name_2_0=RULE_ID
 		{
-			createLeafNode(grammarAccess.getModelAccess().getNameIDTerminalRuleCall_2_0(), "name"); 
+			createLeafNode(grammarAccess.getModelAccess().getNameIDTerminalRuleCall_1_1_0(), "name"); 
 		}
 		{
 	        if ($current==null) {
@@ -128,14 +128,14 @@ ruleModel returns [EObject current=null]
 	    }
 
 )
-)?	':' 
+))?	':' 
     {
-        createLeafNode(grammarAccess.getModelAccess().getColonKeyword_3(), null); 
+        createLeafNode(grammarAccess.getModelAccess().getColonKeyword_2(), null); 
     }
 ((
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getContainersContainerParserRuleCall_4_0_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getContainersContainerParserRuleCall_3_0_0(), currentNode); 
 	    }
 		lv_containers_4_0=ruleContainer		{
 	        if ($current==null) {
@@ -160,7 +160,7 @@ ruleModel returns [EObject current=null]
     |(
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getIntentionsIntentionParserRuleCall_4_1_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getIntentionsIntentionParserRuleCall_3_1_0(), currentNode); 
 	    }
 		lv_intentions_5_0=ruleIntention		{
 	        if ($current==null) {
@@ -185,7 +185,7 @@ ruleModel returns [EObject current=null]
     |(
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getDecompositionsDecompositionParserRuleCall_4_2_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getDecompositionsDecompositionParserRuleCall_3_2_0(), currentNode); 
 	    }
 		lv_decompositions_6_0=ruleDecomposition		{
 	        if ($current==null) {
@@ -210,7 +210,7 @@ ruleModel returns [EObject current=null]
     |(
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getDependenciesDependencyParserRuleCall_4_3_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getDependenciesDependencyParserRuleCall_3_3_0(), currentNode); 
 	    }
 		lv_dependencies_7_0=ruleDependency		{
 	        if ($current==null) {
@@ -235,7 +235,7 @@ ruleModel returns [EObject current=null]
     |(
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getContributionsContributionParserRuleCall_4_4_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getContributionsContributionParserRuleCall_3_4_0(), currentNode); 
 	    }
 		lv_contributions_8_0=ruleContribution		{
 	        if ($current==null) {
@@ -260,7 +260,7 @@ ruleModel returns [EObject current=null]
     |(
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getAssociationsAssociationParserRuleCall_4_5_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getAssociationsAssociationParserRuleCall_3_5_0(), currentNode); 
 	    }
 		lv_associations_9_0=ruleAssociation		{
 	        if ($current==null) {

@@ -176,7 +176,7 @@ public class ArgumentDiagramEditorUtil {
 					IProgressMonitor monitor, IAdaptable info)
 					throws ExecutionException {
 				ArgumentDiagram model = createInitialModel();
-				model.setName("unnamed");
+				model.setName("default");
 				attachModelToResource(model, modelResource);
 
 				Diagram diagram = ViewService.createDiagram(model,

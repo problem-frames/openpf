@@ -176,7 +176,7 @@ public class ProblemDiagramEditorUtil {
 					throws ExecutionException {
 				ProblemDiagram model = createInitialModel();
 				attachModelToResource(model, modelResource);
-
+				model.setName("default");
 				Diagram diagram = ViewService.createDiagram(model,
 						ProblemDiagramEditPart.MODEL_ID,
 						ProblemDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT);
@@ -187,10 +187,9 @@ public class ProblemDiagramEditorUtil {
 				}
 
 				try {
-					// FIXME this can introduce errors
-					//					modelResource
-					//							.save(uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil
-					//									.getSaveOptions());
+					modelResource
+							.save(uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil
+									.getSaveOptions());
 					diagramResource
 							.save(uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil
 									.getSaveOptions());

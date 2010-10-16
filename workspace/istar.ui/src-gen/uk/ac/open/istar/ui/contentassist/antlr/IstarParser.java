@@ -37,7 +37,7 @@ public class IstarParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
-					put(grammarAccess.getModelAccess().getAlternatives_4(), "rule__Model__Alternatives_4");
+					put(grammarAccess.getModelAccess().getAlternatives_3(), "rule__Model__Alternatives_3");
 					put(grammarAccess.getContainerAccess().getAlternatives(), "rule__Container__Alternatives");
 					put(grammarAccess.getActorAccess().getAlternatives_2(), "rule__Actor__Alternatives_2");
 					put(grammarAccess.getIntentionAccess().getAlternatives(), "rule__Intention__Alternatives");
@@ -46,6 +46,7 @@ public class IstarParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDecompositionAccess().getAlternatives(), "rule__Decomposition__Alternatives");
 					put(grammarAccess.getContributionAccess().getAlternatives(), "rule__Contribution__Alternatives");
 					put(grammarAccess.getModelAccess().getGroup(), "rule__Model__Group__0");
+					put(grammarAccess.getModelAccess().getGroup_1(), "rule__Model__Group_1__0");
 					put(grammarAccess.getActorAccess().getGroup(), "rule__Actor__Group__0");
 					put(grammarAccess.getActorAccess().getGroup_3(), "rule__Actor__Group_3__0");
 					put(grammarAccess.getAgentAccess().getGroup(), "rule__Agent__Group__0");
@@ -70,13 +71,13 @@ public class IstarParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMakeContributionAccess().getGroup(), "rule__MakeContribution__Group__0");
 					put(grammarAccess.getHurtContributionAccess().getGroup(), "rule__HurtContribution__Group__0");
 					put(grammarAccess.getBreakContributionAccess().getGroup(), "rule__BreakContribution__Group__0");
-					put(grammarAccess.getModelAccess().getNameAssignment_2(), "rule__Model__NameAssignment_2");
-					put(grammarAccess.getModelAccess().getContainersAssignment_4_0(), "rule__Model__ContainersAssignment_4_0");
-					put(grammarAccess.getModelAccess().getIntentionsAssignment_4_1(), "rule__Model__IntentionsAssignment_4_1");
-					put(grammarAccess.getModelAccess().getDecompositionsAssignment_4_2(), "rule__Model__DecompositionsAssignment_4_2");
-					put(grammarAccess.getModelAccess().getDependenciesAssignment_4_3(), "rule__Model__DependenciesAssignment_4_3");
-					put(grammarAccess.getModelAccess().getContributionsAssignment_4_4(), "rule__Model__ContributionsAssignment_4_4");
-					put(grammarAccess.getModelAccess().getAssociationsAssignment_4_5(), "rule__Model__AssociationsAssignment_4_5");
+					put(grammarAccess.getModelAccess().getNameAssignment_1_1(), "rule__Model__NameAssignment_1_1");
+					put(grammarAccess.getModelAccess().getContainersAssignment_3_0(), "rule__Model__ContainersAssignment_3_0");
+					put(grammarAccess.getModelAccess().getIntentionsAssignment_3_1(), "rule__Model__IntentionsAssignment_3_1");
+					put(grammarAccess.getModelAccess().getDecompositionsAssignment_3_2(), "rule__Model__DecompositionsAssignment_3_2");
+					put(grammarAccess.getModelAccess().getDependenciesAssignment_3_3(), "rule__Model__DependenciesAssignment_3_3");
+					put(grammarAccess.getModelAccess().getContributionsAssignment_3_4(), "rule__Model__ContributionsAssignment_3_4");
+					put(grammarAccess.getModelAccess().getAssociationsAssignment_3_5(), "rule__Model__AssociationsAssignment_3_5");
 					put(grammarAccess.getActorAccess().getNameAssignment_1(), "rule__Actor__NameAssignment_1");
 					put(grammarAccess.getActorAccess().getIs_aAssignment_2_0(), "rule__Actor__Is_aAssignment_2_0");
 					put(grammarAccess.getActorAccess().getIs_part_ofAssignment_2_1(), "rule__Actor__Is_part_ofAssignment_2_1");

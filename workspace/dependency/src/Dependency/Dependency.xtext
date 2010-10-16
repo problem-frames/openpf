@@ -2,7 +2,7 @@ grammar uk.ac.open.dependency.Dependency with org.eclipse.xtext.common.Terminals
 
 generate dependency "http://www.Dependency"
 
-Model:
+Model: ('graph' name=ID)?
 	(nodes+=Node | dependencies+=Dependency)*;
 
 Node:

@@ -2,7 +2,7 @@ grammar uk.ac.open.istar.Istar with org.eclipse.xtext.common.Terminals
 import "platform:/resource/openome_model/model/openome_model.ecore"
 
 Model: {Model}
-  "istar" (name=ID)? ":" 
+  ("istar" name=ID)? ":" 
     (containers+=Container	
    | intentions+=Intention
    | decompositions+=Decomposition

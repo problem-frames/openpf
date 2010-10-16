@@ -21,87 +21,91 @@ public class IstarGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Model");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cModelAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cIstarKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cColonKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Alternatives cAlternatives_4 = (Alternatives)cGroup.eContents().get(4);
-		private final Assignment cContainersAssignment_4_0 = (Assignment)cAlternatives_4.eContents().get(0);
-		private final RuleCall cContainersContainerParserRuleCall_4_0_0 = (RuleCall)cContainersAssignment_4_0.eContents().get(0);
-		private final Assignment cIntentionsAssignment_4_1 = (Assignment)cAlternatives_4.eContents().get(1);
-		private final RuleCall cIntentionsIntentionParserRuleCall_4_1_0 = (RuleCall)cIntentionsAssignment_4_1.eContents().get(0);
-		private final Assignment cDecompositionsAssignment_4_2 = (Assignment)cAlternatives_4.eContents().get(2);
-		private final RuleCall cDecompositionsDecompositionParserRuleCall_4_2_0 = (RuleCall)cDecompositionsAssignment_4_2.eContents().get(0);
-		private final Assignment cDependenciesAssignment_4_3 = (Assignment)cAlternatives_4.eContents().get(3);
-		private final RuleCall cDependenciesDependencyParserRuleCall_4_3_0 = (RuleCall)cDependenciesAssignment_4_3.eContents().get(0);
-		private final Assignment cContributionsAssignment_4_4 = (Assignment)cAlternatives_4.eContents().get(4);
-		private final RuleCall cContributionsContributionParserRuleCall_4_4_0 = (RuleCall)cContributionsAssignment_4_4.eContents().get(0);
-		private final Assignment cAssociationsAssignment_4_5 = (Assignment)cAlternatives_4.eContents().get(5);
-		private final RuleCall cAssociationsAssociationParserRuleCall_4_5_0 = (RuleCall)cAssociationsAssignment_4_5.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cIstarKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cNameAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_1_0 = (RuleCall)cNameAssignment_1_1.eContents().get(0);
+		private final Keyword cColonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Alternatives cAlternatives_3 = (Alternatives)cGroup.eContents().get(3);
+		private final Assignment cContainersAssignment_3_0 = (Assignment)cAlternatives_3.eContents().get(0);
+		private final RuleCall cContainersContainerParserRuleCall_3_0_0 = (RuleCall)cContainersAssignment_3_0.eContents().get(0);
+		private final Assignment cIntentionsAssignment_3_1 = (Assignment)cAlternatives_3.eContents().get(1);
+		private final RuleCall cIntentionsIntentionParserRuleCall_3_1_0 = (RuleCall)cIntentionsAssignment_3_1.eContents().get(0);
+		private final Assignment cDecompositionsAssignment_3_2 = (Assignment)cAlternatives_3.eContents().get(2);
+		private final RuleCall cDecompositionsDecompositionParserRuleCall_3_2_0 = (RuleCall)cDecompositionsAssignment_3_2.eContents().get(0);
+		private final Assignment cDependenciesAssignment_3_3 = (Assignment)cAlternatives_3.eContents().get(3);
+		private final RuleCall cDependenciesDependencyParserRuleCall_3_3_0 = (RuleCall)cDependenciesAssignment_3_3.eContents().get(0);
+		private final Assignment cContributionsAssignment_3_4 = (Assignment)cAlternatives_3.eContents().get(4);
+		private final RuleCall cContributionsContributionParserRuleCall_3_4_0 = (RuleCall)cContributionsAssignment_3_4.eContents().get(0);
+		private final Assignment cAssociationsAssignment_3_5 = (Assignment)cAlternatives_3.eContents().get(5);
+		private final RuleCall cAssociationsAssociationParserRuleCall_3_5_0 = (RuleCall)cAssociationsAssignment_3_5.eContents().get(0);
 		
 		//Model:
-		//	{Model} "istar" name=ID? ":" (containers+=Container | intentions+=Intention | decompositions+=Decomposition |
+		//	{Model} ("istar" name=ID)? ":" (containers+=Container | intentions+=Intention | decompositions+=Decomposition |
 		//	dependencies+=Dependency | contributions+=Contribution | associations+=Association)*;
 		public ParserRule getRule() { return rule; }
 
-		//{Model} "istar" name=ID? ":" (containers+=Container | intentions+=Intention | decompositions+=Decomposition |
+		//{Model} ("istar" name=ID)? ":" (containers+=Container | intentions+=Intention | decompositions+=Decomposition |
 		//dependencies+=Dependency | contributions+=Contribution | associations+=Association)*
 		public Group getGroup() { return cGroup; }
 
 		//{Model}
 		public Action getModelAction_0() { return cModelAction_0; }
 
-		//"istar"
-		public Keyword getIstarKeyword_1() { return cIstarKeyword_1; }
+		//("istar" name=ID)?
+		public Group getGroup_1() { return cGroup_1; }
 
-		//name=ID?
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		//"istar"
+		public Keyword getIstarKeyword_1_0() { return cIstarKeyword_1_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1_1() { return cNameAssignment_1_1; }
 
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
+		public RuleCall getNameIDTerminalRuleCall_1_1_0() { return cNameIDTerminalRuleCall_1_1_0; }
 
 		//":"
-		public Keyword getColonKeyword_3() { return cColonKeyword_3; }
+		public Keyword getColonKeyword_2() { return cColonKeyword_2; }
 
 		//(containers+=Container | intentions+=Intention | decompositions+=Decomposition | dependencies+=Dependency |
 		//contributions+=Contribution | associations+=Association)*
-		public Alternatives getAlternatives_4() { return cAlternatives_4; }
+		public Alternatives getAlternatives_3() { return cAlternatives_3; }
 
 		//containers+=Container
-		public Assignment getContainersAssignment_4_0() { return cContainersAssignment_4_0; }
+		public Assignment getContainersAssignment_3_0() { return cContainersAssignment_3_0; }
 
 		//Container
-		public RuleCall getContainersContainerParserRuleCall_4_0_0() { return cContainersContainerParserRuleCall_4_0_0; }
+		public RuleCall getContainersContainerParserRuleCall_3_0_0() { return cContainersContainerParserRuleCall_3_0_0; }
 
 		//intentions+=Intention
-		public Assignment getIntentionsAssignment_4_1() { return cIntentionsAssignment_4_1; }
+		public Assignment getIntentionsAssignment_3_1() { return cIntentionsAssignment_3_1; }
 
 		//Intention
-		public RuleCall getIntentionsIntentionParserRuleCall_4_1_0() { return cIntentionsIntentionParserRuleCall_4_1_0; }
+		public RuleCall getIntentionsIntentionParserRuleCall_3_1_0() { return cIntentionsIntentionParserRuleCall_3_1_0; }
 
 		//decompositions+=Decomposition
-		public Assignment getDecompositionsAssignment_4_2() { return cDecompositionsAssignment_4_2; }
+		public Assignment getDecompositionsAssignment_3_2() { return cDecompositionsAssignment_3_2; }
 
 		//Decomposition
-		public RuleCall getDecompositionsDecompositionParserRuleCall_4_2_0() { return cDecompositionsDecompositionParserRuleCall_4_2_0; }
+		public RuleCall getDecompositionsDecompositionParserRuleCall_3_2_0() { return cDecompositionsDecompositionParserRuleCall_3_2_0; }
 
 		//dependencies+=Dependency
-		public Assignment getDependenciesAssignment_4_3() { return cDependenciesAssignment_4_3; }
+		public Assignment getDependenciesAssignment_3_3() { return cDependenciesAssignment_3_3; }
 
 		//Dependency
-		public RuleCall getDependenciesDependencyParserRuleCall_4_3_0() { return cDependenciesDependencyParserRuleCall_4_3_0; }
+		public RuleCall getDependenciesDependencyParserRuleCall_3_3_0() { return cDependenciesDependencyParserRuleCall_3_3_0; }
 
 		//contributions+=Contribution
-		public Assignment getContributionsAssignment_4_4() { return cContributionsAssignment_4_4; }
+		public Assignment getContributionsAssignment_3_4() { return cContributionsAssignment_3_4; }
 
 		//Contribution
-		public RuleCall getContributionsContributionParserRuleCall_4_4_0() { return cContributionsContributionParserRuleCall_4_4_0; }
+		public RuleCall getContributionsContributionParserRuleCall_3_4_0() { return cContributionsContributionParserRuleCall_3_4_0; }
 
 		//associations+=Association
-		public Assignment getAssociationsAssignment_4_5() { return cAssociationsAssignment_4_5; }
+		public Assignment getAssociationsAssignment_3_5() { return cAssociationsAssignment_3_5; }
 
 		//Association
-		public RuleCall getAssociationsAssociationParserRuleCall_4_5_0() { return cAssociationsAssociationParserRuleCall_4_5_0; }
+		public RuleCall getAssociationsAssociationParserRuleCall_3_5_0() { return cAssociationsAssociationParserRuleCall_3_5_0; }
 	}
 
 	public class ContainerElements extends AbstractParserRuleElementFinder {
@@ -1067,7 +1071,7 @@ public class IstarGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Model:
-	//	{Model} "istar" name=ID? ":" (containers+=Container | intentions+=Intention | decompositions+=Decomposition |
+	//	{Model} ("istar" name=ID)? ":" (containers+=Container | intentions+=Intention | decompositions+=Decomposition |
 	//	dependencies+=Dependency | contributions+=Contribution | associations+=Association)*;
 	public ModelElements getModelAccess() {
 		return (pModel != null) ? pModel : (pModel = new ModelElements());

@@ -7,8 +7,8 @@ package uk.ac.open.istar.ui.contentassist.antlr.internal;
 import org.eclipse.xtext.ui.editor.contentassist.antlr.internal.Lexer;
 }
 
-T11 : 'istar' ;
-T12 : ':' ;
+T11 : ':' ;
+T12 : 'istar' ;
 T13 : 'actor' ;
 T14 : '{' ;
 T15 : '}' ;
@@ -31,25 +31,25 @@ T31 : '-(++)->' ;
 T32 : '-(-)->' ;
 T33 : '-(--)->' ;
 
-// $ANTLR src "../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g" 4023
+// $ANTLR src "../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g" 4053
 RULE_ID : ('#' ~('#')+ '#'|'^'? ('a'..'z'|'A'..'Z'|'_'|'.') ('a'..'z'|'A'..'Z'|'_'|'0'..'9'|'.')*);
 
-// $ANTLR src "../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g" 4025
+// $ANTLR src "../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g" 4055
 RULE_INT : ('0'..'9')+;
 
-// $ANTLR src "../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g" 4027
+// $ANTLR src "../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g" 4057
 RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\'');
 
-// $ANTLR src "../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g" 4029
+// $ANTLR src "../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g" 4059
 RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 
-// $ANTLR src "../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g" 4031
+// $ANTLR src "../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g" 4061
 RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
-// $ANTLR src "../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g" 4033
+// $ANTLR src "../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g" 4063
 RULE_WS : (' '|'\t'|'\r'|'\n')+;
 
-// $ANTLR src "../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g" 4035
+// $ANTLR src "../istar.ui/src-gen/uk/ac/open/istar/ui/contentassist/antlr/internal/InternalIstar.g" 4065
 RULE_ANY_OTHER : .;
 
 

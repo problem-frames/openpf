@@ -37,15 +37,18 @@ public class DependencyParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
-					put(grammarAccess.getModelAccess().getAlternatives(), "rule__Model__Alternatives");
+					put(grammarAccess.getModelAccess().getAlternatives_1(), "rule__Model__Alternatives_1");
 					put(grammarAccess.getDependencyAccess().getAlternatives(), "rule__Dependency__Alternatives");
+					put(grammarAccess.getModelAccess().getGroup(), "rule__Model__Group__0");
+					put(grammarAccess.getModelAccess().getGroup_0(), "rule__Model__Group_0__0");
 					put(grammarAccess.getNodeAccess().getGroup(), "rule__Node__Group__0");
 					put(grammarAccess.getNodeAccess().getGroup_1(), "rule__Node__Group_1__0");
 					put(grammarAccess.getNodeAccess().getGroup_1_1(), "rule__Node__Group_1_1__0");
 					put(grammarAccess.getCouplingAccess().getGroup(), "rule__Coupling__Group__0");
 					put(grammarAccess.getPrecedenceAccess().getGroup(), "rule__Precedence__Group__0");
-					put(grammarAccess.getModelAccess().getNodesAssignment_0(), "rule__Model__NodesAssignment_0");
-					put(grammarAccess.getModelAccess().getDependenciesAssignment_1(), "rule__Model__DependenciesAssignment_1");
+					put(grammarAccess.getModelAccess().getNameAssignment_0_1(), "rule__Model__NameAssignment_0_1");
+					put(grammarAccess.getModelAccess().getNodesAssignment_1_0(), "rule__Model__NodesAssignment_1_0");
+					put(grammarAccess.getModelAccess().getDependenciesAssignment_1_1(), "rule__Model__DependenciesAssignment_1_1");
 					put(grammarAccess.getNodeAccess().getNameAssignment_0(), "rule__Node__NameAssignment_0");
 					put(grammarAccess.getNodeAccess().getReferrenceAssignment_1_1_1(), "rule__Node__ReferrenceAssignment_1_1_1");
 					put(grammarAccess.getCouplingAccess().getFromAssignment_0(), "rule__Coupling__FromAssignment_0");

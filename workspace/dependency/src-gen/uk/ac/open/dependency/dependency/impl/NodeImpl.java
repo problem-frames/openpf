@@ -38,183 +38,188 @@ import uk.ac.open.dependency.dependency.Node;
 public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 {
   /**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
   protected static final String NAME_EDEFAULT = null;
 
   /**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
   protected String name = NAME_EDEFAULT;
 
   /**
-	 * The cached value of the '{@link #getReferrence() <em>Referrence</em>}' attribute list.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getReferrence() <em>Referrence</em>}' attribute list.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getReferrence()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getReferrence()
+   * @generated
+   * @ordered
+   */
   protected EList<String> referrence;
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected NodeImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   protected EClass eStaticClass()
   {
-		return DependencyPackage.Literals.NODE;
-	}
+    return DependencyPackage.Literals.NODE;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public String getName()
   {
-		return name;
-	}
+    return name;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public void setName(String newName)
   {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, DependencyPackage.NODE__NAME, oldName, name));
-	}
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DependencyPackage.NODE__NAME, oldName, name));
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EList<String> getReferrence()
   {
-		if (referrence == null) {
-			referrence = new EDataTypeEList<String>(String.class, this, DependencyPackage.NODE__REFERRENCE);
-		}
-		return referrence;
-	}
+    if (referrence == null)
+    {
+      referrence = new EDataTypeEList<String>(String.class, this, DependencyPackage.NODE__REFERRENCE);
+    }
+    return referrence;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-		switch (featureID) {
-			case DependencyPackage.NODE__NAME:
-				return getName();
-			case DependencyPackage.NODE__REFERRENCE:
-				return getReferrence();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    switch (featureID)
+    {
+      case DependencyPackage.NODE__NAME:
+        return getName();
+      case DependencyPackage.NODE__REFERRENCE:
+        return getReferrence();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
-		switch (featureID) {
-			case DependencyPackage.NODE__NAME:
-				setName((String)newValue);
-				return;
-			case DependencyPackage.NODE__REFERRENCE:
-				getReferrence().clear();
-				getReferrence().addAll((Collection<? extends String>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    switch (featureID)
+    {
+      case DependencyPackage.NODE__NAME:
+        setName((String)newValue);
+        return;
+      case DependencyPackage.NODE__REFERRENCE:
+        getReferrence().clear();
+        getReferrence().addAll((Collection<? extends String>)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public void eUnset(int featureID)
   {
-		switch (featureID) {
-			case DependencyPackage.NODE__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case DependencyPackage.NODE__REFERRENCE:
-				getReferrence().clear();
-				return;
-		}
-		super.eUnset(featureID);
-	}
+    switch (featureID)
+    {
+      case DependencyPackage.NODE__NAME:
+        setName(NAME_EDEFAULT);
+        return;
+      case DependencyPackage.NODE__REFERRENCE:
+        getReferrence().clear();
+        return;
+    }
+    super.eUnset(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public boolean eIsSet(int featureID)
   {
-		switch (featureID) {
-			case DependencyPackage.NODE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case DependencyPackage.NODE__REFERRENCE:
-				return referrence != null && !referrence.isEmpty();
-		}
-		return super.eIsSet(featureID);
-	}
+    switch (featureID)
+    {
+      case DependencyPackage.NODE__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case DependencyPackage.NODE__REFERRENCE:
+        return referrence != null && !referrence.isEmpty();
+    }
+    return super.eIsSet(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public String toString()
   {
-		if (eIsProxy()) return super.toString();
+    if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", referrence: ");
-		result.append(referrence);
-		result.append(')');
-		return result.toString();
-	}
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (name: ");
+    result.append(name);
+    result.append(", referrence: ");
+    result.append(referrence);
+    result.append(')');
+    return result.toString();
+  }
 
 } //NodeImpl

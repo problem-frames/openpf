@@ -18,65 +18,65 @@ import org.eclipse.emf.ecore.EFactory;
 public interface DependencyFactory extends EFactory
 {
   /**
-	 * The singleton instance of the factory.
-	 * <!-- begin-user-doc -->
+   * The singleton instance of the factory.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   DependencyFactory eINSTANCE = uk.ac.open.dependency.dependency.impl.DependencyFactoryImpl.init();
 
   /**
-	 * Returns a new object of class '<em>Model</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns a new object of class '<em>Model</em>'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Model</em>'.
-	 * @generated
-	 */
+   * @return a new object of class '<em>Model</em>'.
+   * @generated
+   */
   Model createModel();
 
   /**
-	 * Returns a new object of class '<em>Node</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns a new object of class '<em>Node</em>'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Node</em>'.
-	 * @generated
-	 */
+   * @return a new object of class '<em>Node</em>'.
+   * @generated
+   */
   Node createNode();
 
   /**
-	 * Returns a new object of class '<em>Dependency</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns a new object of class '<em>Dependency</em>'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Dependency</em>'.
-	 * @generated
-	 */
+   * @return a new object of class '<em>Dependency</em>'.
+   * @generated
+   */
   Dependency createDependency();
 
   /**
-	 * Returns a new object of class '<em>Coupling</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns a new object of class '<em>Coupling</em>'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Coupling</em>'.
-	 * @generated
-	 */
+   * @return a new object of class '<em>Coupling</em>'.
+   * @generated
+   */
   Coupling createCoupling();
 
   /**
-	 * Returns a new object of class '<em>Precedence</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns a new object of class '<em>Precedence</em>'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Precedence</em>'.
-	 * @generated
-	 */
+   * @return a new object of class '<em>Precedence</em>'.
+   * @generated
+   */
   Precedence createPrecedence();
 
   /**
-	 * Returns the package supported by this factory.
-	 * <!-- begin-user-doc -->
+   * Returns the package supported by this factory.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the package supported by this factory.
-	 * @generated
-	 */
+   * @return the package supported by this factory.
+   * @generated
+   */
   DependencyPackage getDependencyPackage();
 
 } //DependencyFactory

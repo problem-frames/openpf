@@ -156,7 +156,7 @@ public class SituationDiagramEditorUtil {
 
 	/**
 	 * This method should be called within a workspace modify operation since it creates resources.
-	 * @generated
+	 * @generated NOT
 	 */
 	public static Resource createDiagram(URI diagramURI, URI modelURI,
 			IProgressMonitor progressMonitor) {
@@ -183,6 +183,7 @@ public class SituationDiagramEditorUtil {
 				Diagram diagram = ViewService.createDiagram(model,
 						SituationEditPart.MODEL_ID,
 						SituationDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT);
+				diagram.setName("default");
 				if (diagram != null) {
 					diagramResource.getContents().add(diagram);
 					diagram.setName(diagramName);

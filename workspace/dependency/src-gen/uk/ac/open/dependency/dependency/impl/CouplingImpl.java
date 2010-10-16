@@ -22,24 +22,24 @@ import uk.ac.open.dependency.dependency.DependencyPackage;
 public class CouplingImpl extends DependencyImpl implements Coupling
 {
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected CouplingImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   protected EClass eStaticClass()
   {
-		return DependencyPackage.Literals.COUPLING;
-	}
+    return DependencyPackage.Literals.COUPLING;
+  }
 
 } //CouplingImpl

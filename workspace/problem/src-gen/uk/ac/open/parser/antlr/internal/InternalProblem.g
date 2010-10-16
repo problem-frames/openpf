@@ -90,15 +90,15 @@ ruleProblemDiagram returns [EObject current=null]
     @after { resetLookahead(); 
     	lastConsumedNode = currentNode;
     }:
-(	'problem:' 
+((	'problem:' 
     {
-        createLeafNode(grammarAccess.getProblemDiagramAccess().getProblemKeyword_0(), null); 
+        createLeafNode(grammarAccess.getProblemDiagramAccess().getProblemKeyword_0_0(), null); 
     }
 (
 (
 		lv_name_1_0=RULE_ID
 		{
-			createLeafNode(grammarAccess.getProblemDiagramAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
+			createLeafNode(grammarAccess.getProblemDiagramAccess().getNameIDTerminalRuleCall_0_1_0(), "name"); 
 		}
 		{
 	        if ($current==null) {
@@ -118,9 +118,9 @@ ruleProblemDiagram returns [EObject current=null]
 	    }
 
 )
-)(	'for' 
+))?(	'for' 
     {
-        createLeafNode(grammarAccess.getProblemDiagramAccess().getForKeyword_2_0(), null); 
+        createLeafNode(grammarAccess.getProblemDiagramAccess().getForKeyword_1_0(), null); 
     }
 (
 (
@@ -132,14 +132,14 @@ ruleProblemDiagram returns [EObject current=null]
         }
 	RULE_ID
 	{
-		createLeafNode(grammarAccess.getProblemDiagramAccess().getHighlightNodeCrossReference_2_1_0(), "highlight"); 
+		createLeafNode(grammarAccess.getProblemDiagramAccess().getHighlightNodeCrossReference_1_1_0(), "highlight"); 
 	}
 
 )
 ))?((
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getProblemDiagramAccess().getNodesNodeParserRuleCall_3_0_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getProblemDiagramAccess().getNodesNodeParserRuleCall_2_0_0(), currentNode); 
 	    }
 		lv_nodes_4_0=ruleNode		{
 	        if ($current==null) {
@@ -164,7 +164,7 @@ ruleProblemDiagram returns [EObject current=null]
     |(
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getProblemDiagramAccess().getLinksLinkParserRuleCall_3_1_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getProblemDiagramAccess().getLinksLinkParserRuleCall_2_1_0(), currentNode); 
 	    }
 		lv_links_5_0=ruleLink		{
 	        if ($current==null) {

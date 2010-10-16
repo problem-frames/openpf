@@ -31,7 +31,7 @@ protected class ThisRootNode extends RootToken {
 	@Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Model_Alternatives(this, this, 0, inst);
+			case 0: return new Model_Group(this, this, 0, inst);
 			case 1: return new Node_Group(this, this, 1, inst);
 			case 2: return new Dependency_Alternatives(this, this, 2, inst);
 			case 3: return new Coupling_Group(this, this, 3, inst);
@@ -45,27 +45,135 @@ protected class ThisRootNode extends RootToken {
 /************ begin Rule Model ****************
  *
  * Model:
- * 	(nodes+=Node | dependencies+=Dependency)*;
+ * 	("graph" name=ID)? (nodes+=Node | dependencies+=Dependency)*;
  *
  **/
 
-// (nodes+=Node | dependencies+=Dependency)*
-protected class Model_Alternatives extends AlternativesToken {
-
-	public Model_Alternatives(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+// ("graph" name=ID)? (nodes+=Node | dependencies+=Dependency)*
+protected class Model_Group extends GroupToken {
+	
+	public Model_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
-	public Alternatives getGrammarElement() {
-		return grammarAccess.getModelAccess().getAlternatives();
+	public Group getGrammarElement() {
+		return grammarAccess.getModelAccess().getGroup();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Model_NodesAssignment_0(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new Model_DependenciesAssignment_1(lastRuleCallOrigin, this, 1, inst);
+			case 0: return new Model_Alternatives_1(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new Model_Group_0(lastRuleCallOrigin, this, 1, inst);
+			default: return lastRuleCallOrigin.createFollowerAfterReturn(this, index, index - 2, inst);
+		}	
+	}
+
+    @Override
+	public IEObjectConsumer tryConsume() {
+		if(getEObject().eClass() != grammarAccess.getModelRule().getType().getClassifier())
+			return null;
+		return eObjectConsumer;
+	}
+
+}
+
+// ("graph" name=ID)?
+protected class Model_Group_0 extends GroupToken {
+	
+	public Model_Group_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Group getGrammarElement() {
+		return grammarAccess.getModelAccess().getGroup_0();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new Model_NameAssignment_0_1(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+}
+
+// "graph"
+protected class Model_GraphKeyword_0_0 extends KeywordToken  {
+	
+	public Model_GraphKeyword_0_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Keyword getGrammarElement() {
+		return grammarAccess.getModelAccess().getGraphKeyword_0_0();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			default: return lastRuleCallOrigin.createFollowerAfterReturn(this, index, index, inst);
+		}	
+	}
+
+}
+
+// name=ID
+protected class Model_NameAssignment_0_1 extends AssignmentToken  {
+	
+	public Model_NameAssignment_0_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Assignment getGrammarElement() {
+		return grammarAccess.getModelAccess().getNameAssignment_0_1();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new Model_GraphKeyword_0_0(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+    @Override	
+	public IEObjectConsumer tryConsume() {
+		if((value = eObjectConsumer.getConsumable("name",false)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("name");
+		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getModelAccess().getNameIDTerminalRuleCall_0_1_0(), value, null)) {
+			type = AssignmentType.TERMINAL_RULE_CALL;
+			element = grammarAccess.getModelAccess().getNameIDTerminalRuleCall_0_1_0();
+			return obj;
+		}
+		return null;
+	}
+
+}
+
+
+// (nodes+=Node | dependencies+=Dependency)*
+protected class Model_Alternatives_1 extends AlternativesToken {
+
+	public Model_Alternatives_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Alternatives getGrammarElement() {
+		return grammarAccess.getModelAccess().getAlternatives_1();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new Model_NodesAssignment_1_0(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new Model_DependenciesAssignment_1_1(lastRuleCallOrigin, this, 1, inst);
 			default: return null;
 		}	
 	}
@@ -73,15 +181,15 @@ protected class Model_Alternatives extends AlternativesToken {
 }
 
 // nodes+=Node
-protected class Model_NodesAssignment_0 extends AssignmentToken  {
+protected class Model_NodesAssignment_1_0 extends AssignmentToken  {
 	
-	public Model_NodesAssignment_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public Model_NodesAssignment_1_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getModelAccess().getNodesAssignment_0();
+		return grammarAccess.getModelAccess().getNodesAssignment_1_0();
 	}
 
     @Override
@@ -100,7 +208,7 @@ protected class Model_NodesAssignment_0 extends AssignmentToken  {
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
 			if(param.isInstanceOf(grammarAccess.getNodeRule().getType().getClassifier())) {
 				type = AssignmentType.PARSER_RULE_CALL;
-				element = grammarAccess.getModelAccess().getNodesNodeParserRuleCall_0_0(); 
+				element = grammarAccess.getModelAccess().getNodesNodeParserRuleCall_1_0_0(); 
 				consumed = obj;
 				return param;
 			}
@@ -112,22 +220,23 @@ protected class Model_NodesAssignment_0 extends AssignmentToken  {
 	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
 		if(value == inst.getEObject() && !inst.isConsumed()) return null;
 		switch(index) {
-			case 0: return new Model_Alternatives(lastRuleCallOrigin, next, actIndex, consumed);
-			default: return lastRuleCallOrigin.createFollowerAfterReturn(next, actIndex , index - 1, consumed);
+			case 0: return new Model_Alternatives_1(lastRuleCallOrigin, next, actIndex, consumed);
+			case 1: return new Model_Group_0(lastRuleCallOrigin, next, actIndex, consumed);
+			default: return lastRuleCallOrigin.createFollowerAfterReturn(next, actIndex , index - 2, consumed);
 		}	
 	}	
 }
 
 // dependencies+=Dependency
-protected class Model_DependenciesAssignment_1 extends AssignmentToken  {
+protected class Model_DependenciesAssignment_1_1 extends AssignmentToken  {
 	
-	public Model_DependenciesAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public Model_DependenciesAssignment_1_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getModelAccess().getDependenciesAssignment_1();
+		return grammarAccess.getModelAccess().getDependenciesAssignment_1_1();
 	}
 
     @Override
@@ -146,7 +255,7 @@ protected class Model_DependenciesAssignment_1 extends AssignmentToken  {
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
 			if(param.isInstanceOf(grammarAccess.getDependencyRule().getType().getClassifier())) {
 				type = AssignmentType.PARSER_RULE_CALL;
-				element = grammarAccess.getModelAccess().getDependenciesDependencyParserRuleCall_1_0(); 
+				element = grammarAccess.getModelAccess().getDependenciesDependencyParserRuleCall_1_1_0(); 
 				consumed = obj;
 				return param;
 			}
@@ -158,11 +267,13 @@ protected class Model_DependenciesAssignment_1 extends AssignmentToken  {
 	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
 		if(value == inst.getEObject() && !inst.isConsumed()) return null;
 		switch(index) {
-			case 0: return new Model_Alternatives(lastRuleCallOrigin, next, actIndex, consumed);
-			default: return lastRuleCallOrigin.createFollowerAfterReturn(next, actIndex , index - 1, consumed);
+			case 0: return new Model_Alternatives_1(lastRuleCallOrigin, next, actIndex, consumed);
+			case 1: return new Model_Group_0(lastRuleCallOrigin, next, actIndex, consumed);
+			default: return lastRuleCallOrigin.createFollowerAfterReturn(next, actIndex , index - 2, consumed);
 		}	
 	}	
 }
+
 
 
 /************ end Rule Model ****************/

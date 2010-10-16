@@ -89,12 +89,40 @@ ruleModel returns [EObject current=null]
     @after { resetLookahead(); 
     	lastConsumedNode = currentNode;
     }:
-((
+((	'graph' 
+    {
+        createLeafNode(grammarAccess.getModelAccess().getGraphKeyword_0_0(), null); 
+    }
+(
+(
+		lv_name_1_0=RULE_ID
+		{
+			createLeafNode(grammarAccess.getModelAccess().getNameIDTerminalRuleCall_0_1_0(), "name"); 
+		}
+		{
+	        if ($current==null) {
+	            $current = factory.create(grammarAccess.getModelRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode, $current);
+	        }
+	        try {
+	       		set(
+	       			$current, 
+	       			"name",
+	        		lv_name_1_0, 
+	        		"ID", 
+	        		lastConsumedNode);
+	        } catch (ValueConverterException vce) {
+				handleValueConverterException(vce);
+	        }
+	    }
+
+)
+))?((
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getNodesNodeParserRuleCall_0_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getNodesNodeParserRuleCall_1_0_0(), currentNode); 
 	    }
-		lv_nodes_0_0=ruleNode		{
+		lv_nodes_2_0=ruleNode		{
 	        if ($current==null) {
 	            $current = factory.create(grammarAccess.getModelRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode.getParent(), $current);
@@ -103,7 +131,7 @@ ruleModel returns [EObject current=null]
 	       		add(
 	       			$current, 
 	       			"nodes",
-	        		lv_nodes_0_0, 
+	        		lv_nodes_2_0, 
 	        		"Node", 
 	        		currentNode);
 	        } catch (ValueConverterException vce) {
@@ -117,9 +145,9 @@ ruleModel returns [EObject current=null]
     |(
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getDependenciesDependencyParserRuleCall_1_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getDependenciesDependencyParserRuleCall_1_1_0(), currentNode); 
 	    }
-		lv_dependencies_1_0=ruleDependency		{
+		lv_dependencies_3_0=ruleDependency		{
 	        if ($current==null) {
 	            $current = factory.create(grammarAccess.getModelRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode.getParent(), $current);
@@ -128,7 +156,7 @@ ruleModel returns [EObject current=null]
 	       		add(
 	       			$current, 
 	       			"dependencies",
-	        		lv_dependencies_1_0, 
+	        		lv_dependencies_3_0, 
 	        		"Dependency", 
 	        		currentNode);
 	        } catch (ValueConverterException vce) {
@@ -138,7 +166,7 @@ ruleModel returns [EObject current=null]
 	    }
 
 )
-))*
+))*)
 ;
 
 
