@@ -189,7 +189,6 @@ public class Openome_modelDiagramEditorUtil {
 					throws ExecutionException {
 				edu.toronto.cs.openome_model.Model model = createInitialModel();
 				attachModelToResource(model, modelResource);
-				model.setName("default");
 				Diagram diagram = ViewService
 						.createDiagram(
 								model,
@@ -202,9 +201,12 @@ public class Openome_modelDiagramEditorUtil {
 				}
 
 				try {
-					modelResource
+					if (modelResource.getURI().toFileString()==null) {
+						model.setName("default");
+						modelResource
 							.save(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorUtil
 									.getSaveOptions());
+					}
 					diagramResource
 							.save(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorUtil
 									.getSaveOptions());

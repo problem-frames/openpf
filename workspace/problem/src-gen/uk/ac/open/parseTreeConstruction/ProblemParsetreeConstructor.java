@@ -44,11 +44,11 @@ protected class ThisRootNode extends RootToken {
 /************ begin Rule ProblemDiagram ****************
  *
  * ProblemDiagram:
- * 	("problem:" name=ID)? ("for" highlight=[Node])? (nodes+=Node | links+=Link)*;
+ * 	"problem:" name=ID ("for" highlight=[Node])? (nodes+=Node | links+=Link)*;
  *
  **/
 
-// ("problem:" name=ID)? ("for" highlight=[Node])? (nodes+=Node | links+=Link)*
+// "problem:" name=ID ("for" highlight=[Node])? (nodes+=Node | links+=Link)*
 protected class ProblemDiagram_Group extends GroupToken {
 	
 	public ProblemDiagram_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -63,10 +63,10 @@ protected class ProblemDiagram_Group extends GroupToken {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new ProblemDiagram_Alternatives_2(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new ProblemDiagram_Group_1(lastRuleCallOrigin, this, 1, inst);
-			case 2: return new ProblemDiagram_Group_0(lastRuleCallOrigin, this, 2, inst);
-			default: return lastRuleCallOrigin.createFollowerAfterReturn(this, index, index - 3, inst);
+			case 0: return new ProblemDiagram_Alternatives_3(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new ProblemDiagram_Group_2(lastRuleCallOrigin, this, 1, inst);
+			case 2: return new ProblemDiagram_NameAssignment_1(lastRuleCallOrigin, this, 2, inst);
+			default: return null;
 		}	
 	}
 
@@ -79,38 +79,16 @@ protected class ProblemDiagram_Group extends GroupToken {
 
 }
 
-// ("problem:" name=ID)?
-protected class ProblemDiagram_Group_0 extends GroupToken {
-	
-	public ProblemDiagram_Group_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Group getGrammarElement() {
-		return grammarAccess.getProblemDiagramAccess().getGroup_0();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new ProblemDiagram_NameAssignment_0_1(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-}
-
 // "problem:"
-protected class ProblemDiagram_ProblemKeyword_0_0 extends KeywordToken  {
+protected class ProblemDiagram_ProblemKeyword_0 extends KeywordToken  {
 	
-	public ProblemDiagram_ProblemKeyword_0_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public ProblemDiagram_ProblemKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Keyword getGrammarElement() {
-		return grammarAccess.getProblemDiagramAccess().getProblemKeyword_0_0();
+		return grammarAccess.getProblemDiagramAccess().getProblemKeyword_0();
 	}
 
     @Override
@@ -123,32 +101,32 @@ protected class ProblemDiagram_ProblemKeyword_0_0 extends KeywordToken  {
 }
 
 // name=ID
-protected class ProblemDiagram_NameAssignment_0_1 extends AssignmentToken  {
+protected class ProblemDiagram_NameAssignment_1 extends AssignmentToken  {
 	
-	public ProblemDiagram_NameAssignment_0_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public ProblemDiagram_NameAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getProblemDiagramAccess().getNameAssignment_0_1();
+		return grammarAccess.getProblemDiagramAccess().getNameAssignment_1();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new ProblemDiagram_ProblemKeyword_0_0(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new ProblemDiagram_ProblemKeyword_0(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
 
     @Override	
 	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("name",false)) == null) return null;
+		if((value = eObjectConsumer.getConsumable("name",true)) == null) return null;
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("name");
-		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getProblemDiagramAccess().getNameIDTerminalRuleCall_0_1_0(), value, null)) {
+		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getProblemDiagramAccess().getNameIDTerminalRuleCall_1_0(), value, null)) {
 			type = AssignmentType.TERMINAL_RULE_CALL;
-			element = grammarAccess.getProblemDiagramAccess().getNameIDTerminalRuleCall_0_1_0();
+			element = grammarAccess.getProblemDiagramAccess().getNameIDTerminalRuleCall_1_0();
 			return obj;
 		}
 		return null;
@@ -156,23 +134,22 @@ protected class ProblemDiagram_NameAssignment_0_1 extends AssignmentToken  {
 
 }
 
-
 // ("for" highlight=[Node])?
-protected class ProblemDiagram_Group_1 extends GroupToken {
+protected class ProblemDiagram_Group_2 extends GroupToken {
 	
-	public ProblemDiagram_Group_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public ProblemDiagram_Group_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Group getGrammarElement() {
-		return grammarAccess.getProblemDiagramAccess().getGroup_1();
+		return grammarAccess.getProblemDiagramAccess().getGroup_2();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new ProblemDiagram_HighlightAssignment_1_1(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new ProblemDiagram_HighlightAssignment_2_1(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -180,43 +157,43 @@ protected class ProblemDiagram_Group_1 extends GroupToken {
 }
 
 // "for"
-protected class ProblemDiagram_ForKeyword_1_0 extends KeywordToken  {
+protected class ProblemDiagram_ForKeyword_2_0 extends KeywordToken  {
 	
-	public ProblemDiagram_ForKeyword_1_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public ProblemDiagram_ForKeyword_2_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Keyword getGrammarElement() {
-		return grammarAccess.getProblemDiagramAccess().getForKeyword_1_0();
+		return grammarAccess.getProblemDiagramAccess().getForKeyword_2_0();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new ProblemDiagram_Group_0(lastRuleCallOrigin, this, 0, inst);
-			default: return lastRuleCallOrigin.createFollowerAfterReturn(this, index, index - 1, inst);
+			case 0: return new ProblemDiagram_NameAssignment_1(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
 		}	
 	}
 
 }
 
 // highlight=[Node]
-protected class ProblemDiagram_HighlightAssignment_1_1 extends AssignmentToken  {
+protected class ProblemDiagram_HighlightAssignment_2_1 extends AssignmentToken  {
 	
-	public ProblemDiagram_HighlightAssignment_1_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public ProblemDiagram_HighlightAssignment_2_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getProblemDiagramAccess().getHighlightAssignment_1_1();
+		return grammarAccess.getProblemDiagramAccess().getHighlightAssignment_2_1();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new ProblemDiagram_ForKeyword_1_0(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new ProblemDiagram_ForKeyword_2_0(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -227,9 +204,9 @@ protected class ProblemDiagram_HighlightAssignment_1_1 extends AssignmentToken  
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("highlight");
 		if(value instanceof EObject) { // org::eclipse::xtext::impl::CrossReferenceImpl
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
-			if(param.isInstanceOf(grammarAccess.getProblemDiagramAccess().getHighlightNodeCrossReference_1_1_0().getType().getClassifier())) {
+			if(param.isInstanceOf(grammarAccess.getProblemDiagramAccess().getHighlightNodeCrossReference_2_1_0().getType().getClassifier())) {
 				type = AssignmentType.CROSS_REFERENCE;
-				element = grammarAccess.getProblemDiagramAccess().getHighlightNodeCrossReference_1_1_0(); 
+				element = grammarAccess.getProblemDiagramAccess().getHighlightNodeCrossReference_2_1_0(); 
 				return obj;
 			}
 		}
@@ -240,22 +217,22 @@ protected class ProblemDiagram_HighlightAssignment_1_1 extends AssignmentToken  
 
 
 // (nodes+=Node | links+=Link)*
-protected class ProblemDiagram_Alternatives_2 extends AlternativesToken {
+protected class ProblemDiagram_Alternatives_3 extends AlternativesToken {
 
-	public ProblemDiagram_Alternatives_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public ProblemDiagram_Alternatives_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Alternatives getGrammarElement() {
-		return grammarAccess.getProblemDiagramAccess().getAlternatives_2();
+		return grammarAccess.getProblemDiagramAccess().getAlternatives_3();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new ProblemDiagram_NodesAssignment_2_0(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new ProblemDiagram_LinksAssignment_2_1(lastRuleCallOrigin, this, 1, inst);
+			case 0: return new ProblemDiagram_NodesAssignment_3_0(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new ProblemDiagram_LinksAssignment_3_1(lastRuleCallOrigin, this, 1, inst);
 			default: return null;
 		}	
 	}
@@ -263,15 +240,15 @@ protected class ProblemDiagram_Alternatives_2 extends AlternativesToken {
 }
 
 // nodes+=Node
-protected class ProblemDiagram_NodesAssignment_2_0 extends AssignmentToken  {
+protected class ProblemDiagram_NodesAssignment_3_0 extends AssignmentToken  {
 	
-	public ProblemDiagram_NodesAssignment_2_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public ProblemDiagram_NodesAssignment_3_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getProblemDiagramAccess().getNodesAssignment_2_0();
+		return grammarAccess.getProblemDiagramAccess().getNodesAssignment_3_0();
 	}
 
     @Override
@@ -290,7 +267,7 @@ protected class ProblemDiagram_NodesAssignment_2_0 extends AssignmentToken  {
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
 			if(param.isInstanceOf(grammarAccess.getNodeRule().getType().getClassifier())) {
 				type = AssignmentType.PARSER_RULE_CALL;
-				element = grammarAccess.getProblemDiagramAccess().getNodesNodeParserRuleCall_2_0_0(); 
+				element = grammarAccess.getProblemDiagramAccess().getNodesNodeParserRuleCall_3_0_0(); 
 				consumed = obj;
 				return param;
 			}
@@ -302,24 +279,24 @@ protected class ProblemDiagram_NodesAssignment_2_0 extends AssignmentToken  {
 	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
 		if(value == inst.getEObject() && !inst.isConsumed()) return null;
 		switch(index) {
-			case 0: return new ProblemDiagram_Alternatives_2(lastRuleCallOrigin, next, actIndex, consumed);
-			case 1: return new ProblemDiagram_Group_1(lastRuleCallOrigin, next, actIndex, consumed);
-			case 2: return new ProblemDiagram_Group_0(lastRuleCallOrigin, next, actIndex, consumed);
-			default: return lastRuleCallOrigin.createFollowerAfterReturn(next, actIndex , index - 3, consumed);
+			case 0: return new ProblemDiagram_Alternatives_3(lastRuleCallOrigin, next, actIndex, consumed);
+			case 1: return new ProblemDiagram_Group_2(lastRuleCallOrigin, next, actIndex, consumed);
+			case 2: return new ProblemDiagram_NameAssignment_1(lastRuleCallOrigin, next, actIndex, consumed);
+			default: return null;
 		}	
 	}	
 }
 
 // links+=Link
-protected class ProblemDiagram_LinksAssignment_2_1 extends AssignmentToken  {
+protected class ProblemDiagram_LinksAssignment_3_1 extends AssignmentToken  {
 	
-	public ProblemDiagram_LinksAssignment_2_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public ProblemDiagram_LinksAssignment_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getProblemDiagramAccess().getLinksAssignment_2_1();
+		return grammarAccess.getProblemDiagramAccess().getLinksAssignment_3_1();
 	}
 
     @Override
@@ -338,7 +315,7 @@ protected class ProblemDiagram_LinksAssignment_2_1 extends AssignmentToken  {
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
 			if(param.isInstanceOf(grammarAccess.getLinkRule().getType().getClassifier())) {
 				type = AssignmentType.PARSER_RULE_CALL;
-				element = grammarAccess.getProblemDiagramAccess().getLinksLinkParserRuleCall_2_1_0(); 
+				element = grammarAccess.getProblemDiagramAccess().getLinksLinkParserRuleCall_3_1_0(); 
 				consumed = obj;
 				return param;
 			}
@@ -350,10 +327,10 @@ protected class ProblemDiagram_LinksAssignment_2_1 extends AssignmentToken  {
 	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
 		if(value == inst.getEObject() && !inst.isConsumed()) return null;
 		switch(index) {
-			case 0: return new ProblemDiagram_Alternatives_2(lastRuleCallOrigin, next, actIndex, consumed);
-			case 1: return new ProblemDiagram_Group_1(lastRuleCallOrigin, next, actIndex, consumed);
-			case 2: return new ProblemDiagram_Group_0(lastRuleCallOrigin, next, actIndex, consumed);
-			default: return lastRuleCallOrigin.createFollowerAfterReturn(next, actIndex , index - 3, consumed);
+			case 0: return new ProblemDiagram_Alternatives_3(lastRuleCallOrigin, next, actIndex, consumed);
+			case 1: return new ProblemDiagram_Group_2(lastRuleCallOrigin, next, actIndex, consumed);
+			case 2: return new ProblemDiagram_NameAssignment_1(lastRuleCallOrigin, next, actIndex, consumed);
+			default: return null;
 		}	
 	}	
 }

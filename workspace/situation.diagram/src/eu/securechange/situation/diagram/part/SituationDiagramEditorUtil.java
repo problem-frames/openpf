@@ -183,7 +183,6 @@ public class SituationDiagramEditorUtil {
 				Diagram diagram = ViewService.createDiagram(model,
 						SituationEditPart.MODEL_ID,
 						SituationDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT);
-				diagram.setName("default");
 				if (diagram != null) {
 					diagramResource.getContents().add(diagram);
 					diagram.setName(diagramName);
@@ -191,9 +190,11 @@ public class SituationDiagramEditorUtil {
 				}
 
 				try {
-					modelResource
+					if (modelResource.getURI().toFileString()==null) {
+						modelResource
 							.save(eu.securechange.situation.diagram.part.SituationDiagramEditorUtil
 									.getSaveOptions());
+					}
 					diagramResource
 							.save(eu.securechange.situation.diagram.part.SituationDiagramEditorUtil
 									.getSaveOptions());

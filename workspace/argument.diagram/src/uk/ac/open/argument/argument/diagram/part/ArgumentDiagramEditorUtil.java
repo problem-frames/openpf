@@ -1,5 +1,6 @@
 package uk.ac.open.argument.argument.diagram.part;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.HashMap;
@@ -176,7 +177,6 @@ public class ArgumentDiagramEditorUtil {
 					IProgressMonitor monitor, IAdaptable info)
 					throws ExecutionException {
 				ArgumentDiagram model = createInitialModel();
-				model.setName("default");
 				attachModelToResource(model, modelResource);
 
 				Diagram diagram = ViewService.createDiagram(model,
@@ -187,16 +187,17 @@ public class ArgumentDiagramEditorUtil {
 					diagram.setName(diagramName);
 					diagram.setElement(model);
 				}
-
 				try {
-					modelResource
+					if (modelResource.getURI().toFileString()==null) {
+						model.setName("default");
+						modelResource
 							.save(uk.ac.open.argument.argument.diagram.part.ArgumentDiagramEditorUtil
-									.getSaveOptions());
+										.getSaveOptions());
+					}
 					diagramResource
 							.save(uk.ac.open.argument.argument.diagram.part.ArgumentDiagramEditorUtil
 									.getSaveOptions());
 				} catch (IOException e) {
-
 					ArgumentDiagramEditorPlugin.getInstance().logError(
 							"Unable to store model and diagram resources", e); //$NON-NLS-1$
 				}

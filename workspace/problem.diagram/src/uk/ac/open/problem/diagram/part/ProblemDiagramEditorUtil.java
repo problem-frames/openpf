@@ -11,6 +11,7 @@ import java.util.Set;
 
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.commands.operations.OperationHistoryFactory;
+import org.eclipse.core.internal.resources.ResourceException;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.ResourcesPlugin;
@@ -48,7 +49,6 @@ import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.FileEditorInput;
-import org.eclipse.xtext.validation.IConcreteSyntaxValidator;
 
 import uk.ac.open.problem.ProblemDiagram;
 import uk.ac.open.problem.ProblemFactory;
@@ -176,7 +176,6 @@ public class ProblemDiagramEditorUtil {
 					throws ExecutionException {
 				ProblemDiagram model = createInitialModel();
 				attachModelToResource(model, modelResource);
-				model.setName("default");
 				Diagram diagram = ViewService.createDiagram(model,
 						ProblemDiagramEditPart.MODEL_ID,
 						ProblemDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT);
@@ -187,17 +186,21 @@ public class ProblemDiagramEditorUtil {
 				}
 
 				try {
-					modelResource
+					if (modelResource.getURI().toFileString()==null) {
+						model.setName("default");
+						modelResource
 							.save(uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil
 									.getSaveOptions());
+//						setCharset(WorkspaceSynchronizer.getFile(modelResource));
+					}
 					diagramResource
 							.save(uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil
 									.getSaveOptions());
+//					setCharset(WorkspaceSynchronizer.getFile(diagramResource));
 				} catch (IOException e) {
-
 					ProblemDiagramEditorPlugin.getInstance().logError(
 							"Unable to store model and diagram resources", e); //$NON-NLS-1$
-				}
+					}
 				return CommandResult.newOKCommandResult();
 			}
 		};
@@ -208,8 +211,6 @@ public class ProblemDiagramEditorUtil {
 			ProblemDiagramEditorPlugin.getInstance().logError(
 					"Unable to create model and diagram", e); //$NON-NLS-1$
 		}
-		setCharset(WorkspaceSynchronizer.getFile(modelResource));
-		setCharset(WorkspaceSynchronizer.getFile(diagramResource));
 		return diagramResource;
 	}
 

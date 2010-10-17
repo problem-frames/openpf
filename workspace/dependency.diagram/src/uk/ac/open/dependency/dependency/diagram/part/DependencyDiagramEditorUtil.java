@@ -176,7 +176,6 @@ public class DependencyDiagramEditorUtil {
 					throws ExecutionException {
 				Model model = createInitialModel();
 				attachModelToResource(model, modelResource);
-				model.setName("default");
 				Diagram diagram = ViewService.createDiagram(model,
 						ModelEditPart.MODEL_ID,
 						DependencyDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT);				
@@ -187,9 +186,12 @@ public class DependencyDiagramEditorUtil {
 				}
 
 				try {
-					modelResource
+					if (modelResource.getURI().toFileString()==null) {
+						model.setName("default");
+						modelResource
 							.save(uk.ac.open.dependency.dependency.diagram.part.DependencyDiagramEditorUtil
 									.getSaveOptions());
+					}
 					diagramResource
 							.save(uk.ac.open.dependency.dependency.diagram.part.DependencyDiagramEditorUtil
 									.getSaveOptions());

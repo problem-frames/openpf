@@ -2,7 +2,7 @@ grammar uk.ac.open.Problem with org.eclipse.xtext.common.Terminals
 
 generate problem "http://open.ac.uk/problem"
 
-ProblemDiagram: ("problem:" name=ID)? ("for" highlight=[Node])?
+ProblemDiagram: "problem:" name=ID ("for" highlight=[Node])?
 	((nodes+=Node | links+=Link))*;
 
 Node:
