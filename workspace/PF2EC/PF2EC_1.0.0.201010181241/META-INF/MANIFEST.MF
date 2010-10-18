@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Export-Package: PF2EC.files
+Require-Bundle: org.eclipse.core.runtime, org.eclipse.emf.ecore,org.ec
+ lipse.emf.ecore,org.eclipse.emf.ecore.xmi,org.eclipse.ocl,org.eclipse
+ .ocl.ecore,org.eclipse.acceleo.model,org.eclipse.acceleo.engine
+Bundle-Vendor: Eclipse Modeling Project
+Eclipse-LazyStart: true
+Bundle-ActivationPolicy: lazy
+Bundle-Version: 1.0.0.201010181241
+Bundle-Name: Acceleo PF2EC Module Runtime Plug-in
+Bundle-Activator: PF2EC.Activator
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: PF2EC
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+
+

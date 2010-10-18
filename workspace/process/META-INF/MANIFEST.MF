@@ -1,14 +1,14 @@
 Manifest-Version: 1.0
+Export-Package: org.w3.namespace,org.w3.namespace.impl,org.w3.namespac
+ e.util,process
 Require-Bundle: org.eclipse.core.runtime,org.eclipse.emf.ecore;visibil
  ity:=reexport,org.eclipse.emf.ecore.xmi;visibility:=reexport,org.ecli
  pse.ui;bundle-version="3.6.0",core;bundle-version="1.0.0"
-Export-Package: org.w3.namespace,org.w3.namespace.impl,org.w3.namespac
- e.util,process
 Bundle-Vendor: %providerName
 Bundle-ActivationPolicy: lazy
 Bundle-Version: 1.0.0
-Bundle-Localization: plugin
 Bundle-Name: %pluginName
+Bundle-Localization: plugin
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: process;singleton:=true
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

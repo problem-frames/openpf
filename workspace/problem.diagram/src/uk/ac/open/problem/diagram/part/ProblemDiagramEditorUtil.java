@@ -191,12 +191,10 @@ public class ProblemDiagramEditorUtil {
 						modelResource
 							.save(uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil
 									.getSaveOptions());
-//						setCharset(WorkspaceSynchronizer.getFile(modelResource));
 					}
 					diagramResource
 							.save(uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil
 									.getSaveOptions());
-//					setCharset(WorkspaceSynchronizer.getFile(diagramResource));
 				} catch (IOException e) {
 					ProblemDiagramEditorPlugin.getInstance().logError(
 							"Unable to store model and diagram resources", e); //$NON-NLS-1$

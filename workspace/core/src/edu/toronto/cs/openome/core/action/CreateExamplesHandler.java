@@ -94,22 +94,16 @@ public class CreateExamplesHandler extends ExtensionReader implements org.eclips
 	}
 
 	public void addHandlerListener(IHandlerListener handlerListener) {
-		// TODO Auto-generated method stub
-		
 	}
 
 	public boolean isEnabled() {
-		// TODO Auto-generated method stub
 		return true;
 	}
 
 	public boolean isHandled() {
-		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	public void removeHandlerListener(IHandlerListener handlerListener) {
-		// TODO Auto-generated method stub
-		
 	}
 }

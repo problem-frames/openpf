@@ -210,8 +210,8 @@ public class DependencyDiagramEditorUtil {
 			DependencyDiagramEditorPlugin.getInstance().logError(
 					"Unable to create model and diagram", e); //$NON-NLS-1$
 		}
-		setCharset(WorkspaceSynchronizer.getFile(modelResource));
-		setCharset(WorkspaceSynchronizer.getFile(diagramResource));
+//		setCharset(WorkspaceSynchronizer.getFile(modelResource));
+//		setCharset(WorkspaceSynchronizer.getFile(diagramResource));
 		return diagramResource;
 	}
 
