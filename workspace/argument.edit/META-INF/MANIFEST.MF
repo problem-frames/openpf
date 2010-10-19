@@ -1,5 +1,6 @@
 Manifest-Version: 1.0
-Export-Package: uk.ac.open.argument.argument.provider
+Export-Package: uk,uk.ac,uk.ac.open,uk.ac.open.argument,uk.ac.open.arg
+ ument.argument,uk.ac.open.argument.argument.provider
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .
 Bundle-Name: %pluginName

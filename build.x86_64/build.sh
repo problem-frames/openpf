@@ -3,14 +3,13 @@
 PROJECT=problem
 PRODUCT=pf
 IDE=$HOME/IDE
-VERSION=3.6pf
-export ECLIPSE_HOME=$IDE/sdk/$VERSION/eclipse
+VERSION=3.6
+export ECLIPSE_HOME=$IDE/$PRODUCT-$VERSION.product/eclipse
 export BUILD_HOME=$HOME/eclipse.build
 export PRODUCT_HOME=$(cd ..; pwd)
 #-----------------------------------------------------------
 PRODUCT_FILE=$PRODUCT.product
 PROJECT_FILE=$PROJECT
-#/software/git-1.6.0.3/bin/git svn rebase
 \ls ../workspace > workspace.plugins.txt
 /usr/bin/xsltproc product.xsl ../workspace/$PROJECT_FILE/$PRODUCT_FILE > product.plugins.txt
 /usr/bin/xsltproc feature.xsl ../workspace/$PROJECT_FILE/$PRODUCT_FILE > product.features.txt
@@ -33,7 +32,8 @@ done
 rm -rf $BUILD_HOME/I.$PRODUCT/*
 cd -
 cp -r $ECLIPSE_HOME/configuration .
-sed -e "s/MYPRODUCT/\/$PROJECT_FILE\/$PRODUCT_FILE/" productBuild.properties  | sed -e "s/MYVERSION/$VERSION/" | sed -e "s/PRODUCT/$PRODUCT/" > build.properties
+sed -e "s/MYPRODUCT/\/$PROJECT_FILE\/$PRODUCT_FILE/" productBuild.properties  |
+sed -e "s/MYVERSION/$PRODUCT-$VERSION.product/" | sed -e "s/PRODUCT/$PRODUCT/" > build.properties
 cp $ECLIPSE_HOME/plugins/org.eclipse.pde.build_*/scripts/productBuild/productBuild.xml build.xml
 $ECLIPSE_HOME/eclipse -configuration configuration -nosplash -application org.eclipse.ant.core.antRunner -Dbuilder=. $*
 if [ $? ]; then
