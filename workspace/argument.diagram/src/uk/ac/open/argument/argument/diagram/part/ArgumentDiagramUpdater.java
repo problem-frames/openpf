@@ -15,23 +15,17 @@ import org.eclipse.gmf.runtime.notation.View;
 import uk.ac.open.argument.argument.Argument;
 import uk.ac.open.argument.argument.ArgumentDiagram;
 import uk.ac.open.argument.argument.ArgumentPackage;
-import uk.ac.open.argument.argument.Claim;
 import uk.ac.open.argument.argument.Fact;
 import uk.ac.open.argument.argument.Mitigates;
 import uk.ac.open.argument.argument.Node;
 import uk.ac.open.argument.argument.Rebuts;
 import uk.ac.open.argument.argument.diagram.edit.parts.Argument2EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentClaimCompartment2EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentClaimCompartmentEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentGroundsCompartment2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentGroundsCompartmentEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentWarrantsCompartment2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentWarrantsCompartmentEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDiagramEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentEditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.Claim2EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.Claim3EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.ClaimEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.Fact2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.Fact3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.FactEditPart;
@@ -51,18 +45,14 @@ public class ArgumentDiagramUpdater {
 		switch (ArgumentVisualIDRegistry.getVisualID(view)) {
 		case ArgumentDiagramEditPart.VISUAL_ID:
 			return getArgumentDiagram_1000SemanticChildren(view);
-		case ArgumentArgumentClaimCompartmentEditPart.VISUAL_ID:
-			return getArgumentArgumentClaimCompartment_7001SemanticChildren(view);
 		case ArgumentArgumentGroundsCompartmentEditPart.VISUAL_ID:
-			return getArgumentArgumentGroundsCompartment_7002SemanticChildren(view);
+			return getArgumentArgumentGroundsCompartment_7001SemanticChildren(view);
 		case ArgumentArgumentWarrantsCompartmentEditPart.VISUAL_ID:
-			return getArgumentArgumentWarrantsCompartment_7003SemanticChildren(view);
-		case ArgumentArgumentClaimCompartment2EditPart.VISUAL_ID:
-			return getArgumentArgumentClaimCompartment_7004SemanticChildren(view);
+			return getArgumentArgumentWarrantsCompartment_7002SemanticChildren(view);
 		case ArgumentArgumentGroundsCompartment2EditPart.VISUAL_ID:
-			return getArgumentArgumentGroundsCompartment_7005SemanticChildren(view);
+			return getArgumentArgumentGroundsCompartment_7003SemanticChildren(view);
 		case ArgumentArgumentWarrantsCompartment2EditPart.VISUAL_ID:
-			return getArgumentArgumentWarrantsCompartment_7006SemanticChildren(view);
+			return getArgumentArgumentWarrantsCompartment_7004SemanticChildren(view);
 		}
 		return Collections.emptyList();
 	}
@@ -89,10 +79,6 @@ public class ArgumentDiagramUpdater {
 				result.add(new ArgumentNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == ClaimEditPart.VISUAL_ID) {
-				result.add(new ArgumentNodeDescriptor(childElement, visualID));
-				continue;
-			}
 		}
 		return result;
 	}
@@ -100,32 +86,7 @@ public class ArgumentDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ArgumentNodeDescriptor> getArgumentArgumentClaimCompartment_7001SemanticChildren(
-			View view) {
-		if (false == view.eContainer() instanceof View) {
-			return Collections.emptyList();
-		}
-		View containerView = (View) view.eContainer();
-		if (!containerView.isSetElement()) {
-			return Collections.emptyList();
-		}
-		Argument modelElement = (Argument) containerView.getElement();
-		LinkedList<ArgumentNodeDescriptor> result = new LinkedList<ArgumentNodeDescriptor>();
-		{
-			Claim childElement = modelElement.getClaim();
-			int visualID = ArgumentVisualIDRegistry.getNodeVisualID(view,
-					childElement);
-			if (visualID == Claim2EditPart.VISUAL_ID) {
-				result.add(new ArgumentNodeDescriptor(childElement, visualID));
-			}
-		}
-		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<ArgumentNodeDescriptor> getArgumentArgumentGroundsCompartment_7002SemanticChildren(
+	public static List<ArgumentNodeDescriptor> getArgumentArgumentGroundsCompartment_7001SemanticChildren(
 			View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
@@ -152,7 +113,7 @@ public class ArgumentDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ArgumentNodeDescriptor> getArgumentArgumentWarrantsCompartment_7003SemanticChildren(
+	public static List<ArgumentNodeDescriptor> getArgumentArgumentWarrantsCompartment_7002SemanticChildren(
 			View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
@@ -176,10 +137,6 @@ public class ArgumentDiagramUpdater {
 				result.add(new ArgumentNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Claim3EditPart.VISUAL_ID) {
-				result.add(new ArgumentNodeDescriptor(childElement, visualID));
-				continue;
-			}
 		}
 		return result;
 	}
@@ -187,32 +144,7 @@ public class ArgumentDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ArgumentNodeDescriptor> getArgumentArgumentClaimCompartment_7004SemanticChildren(
-			View view) {
-		if (false == view.eContainer() instanceof View) {
-			return Collections.emptyList();
-		}
-		View containerView = (View) view.eContainer();
-		if (!containerView.isSetElement()) {
-			return Collections.emptyList();
-		}
-		Argument modelElement = (Argument) containerView.getElement();
-		LinkedList<ArgumentNodeDescriptor> result = new LinkedList<ArgumentNodeDescriptor>();
-		{
-			Claim childElement = modelElement.getClaim();
-			int visualID = ArgumentVisualIDRegistry.getNodeVisualID(view,
-					childElement);
-			if (visualID == Claim2EditPart.VISUAL_ID) {
-				result.add(new ArgumentNodeDescriptor(childElement, visualID));
-			}
-		}
-		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<ArgumentNodeDescriptor> getArgumentArgumentGroundsCompartment_7005SemanticChildren(
+	public static List<ArgumentNodeDescriptor> getArgumentArgumentGroundsCompartment_7003SemanticChildren(
 			View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
@@ -239,7 +171,7 @@ public class ArgumentDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ArgumentNodeDescriptor> getArgumentArgumentWarrantsCompartment_7006SemanticChildren(
+	public static List<ArgumentNodeDescriptor> getArgumentArgumentWarrantsCompartment_7004SemanticChildren(
 			View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
@@ -260,10 +192,6 @@ public class ArgumentDiagramUpdater {
 				continue;
 			}
 			if (visualID == Fact3EditPart.VISUAL_ID) {
-				result.add(new ArgumentNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Claim3EditPart.VISUAL_ID) {
 				result.add(new ArgumentNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -282,18 +210,12 @@ public class ArgumentDiagramUpdater {
 			return getArgument_2001ContainedLinks(view);
 		case FactEditPart.VISUAL_ID:
 			return getFact_2002ContainedLinks(view);
-		case ClaimEditPart.VISUAL_ID:
-			return getClaim_2003ContainedLinks(view);
-		case Claim2EditPart.VISUAL_ID:
-			return getClaim_3001ContainedLinks(view);
 		case Fact2EditPart.VISUAL_ID:
-			return getFact_3002ContainedLinks(view);
+			return getFact_3001ContainedLinks(view);
 		case Argument2EditPart.VISUAL_ID:
-			return getArgument_3003ContainedLinks(view);
+			return getArgument_3002ContainedLinks(view);
 		case Fact3EditPart.VISUAL_ID:
-			return getFact_3004ContainedLinks(view);
-		case Claim3EditPart.VISUAL_ID:
-			return getClaim_3005ContainedLinks(view);
+			return getFact_3003ContainedLinks(view);
 		case RebutsEditPart.VISUAL_ID:
 			return getRebuts_4001ContainedLinks(view);
 		case MitigatesEditPart.VISUAL_ID:
@@ -311,18 +233,12 @@ public class ArgumentDiagramUpdater {
 			return getArgument_2001IncomingLinks(view);
 		case FactEditPart.VISUAL_ID:
 			return getFact_2002IncomingLinks(view);
-		case ClaimEditPart.VISUAL_ID:
-			return getClaim_2003IncomingLinks(view);
-		case Claim2EditPart.VISUAL_ID:
-			return getClaim_3001IncomingLinks(view);
 		case Fact2EditPart.VISUAL_ID:
-			return getFact_3002IncomingLinks(view);
+			return getFact_3001IncomingLinks(view);
 		case Argument2EditPart.VISUAL_ID:
-			return getArgument_3003IncomingLinks(view);
+			return getArgument_3002IncomingLinks(view);
 		case Fact3EditPart.VISUAL_ID:
-			return getFact_3004IncomingLinks(view);
-		case Claim3EditPart.VISUAL_ID:
-			return getClaim_3005IncomingLinks(view);
+			return getFact_3003IncomingLinks(view);
 		case RebutsEditPart.VISUAL_ID:
 			return getRebuts_4001IncomingLinks(view);
 		case MitigatesEditPart.VISUAL_ID:
@@ -340,18 +256,12 @@ public class ArgumentDiagramUpdater {
 			return getArgument_2001OutgoingLinks(view);
 		case FactEditPart.VISUAL_ID:
 			return getFact_2002OutgoingLinks(view);
-		case ClaimEditPart.VISUAL_ID:
-			return getClaim_2003OutgoingLinks(view);
-		case Claim2EditPart.VISUAL_ID:
-			return getClaim_3001OutgoingLinks(view);
 		case Fact2EditPart.VISUAL_ID:
-			return getFact_3002OutgoingLinks(view);
+			return getFact_3001OutgoingLinks(view);
 		case Argument2EditPart.VISUAL_ID:
-			return getArgument_3003OutgoingLinks(view);
+			return getArgument_3002OutgoingLinks(view);
 		case Fact3EditPart.VISUAL_ID:
-			return getFact_3004OutgoingLinks(view);
-		case Claim3EditPart.VISUAL_ID:
-			return getClaim_3005OutgoingLinks(view);
+			return getFact_3003OutgoingLinks(view);
 		case RebutsEditPart.VISUAL_ID:
 			return getRebuts_4001OutgoingLinks(view);
 		case MitigatesEditPart.VISUAL_ID:
@@ -391,7 +301,7 @@ public class ArgumentDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ArgumentLinkDescriptor> getClaim_2003ContainedLinks(
+	public static List<ArgumentLinkDescriptor> getFact_3001ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -399,7 +309,7 @@ public class ArgumentDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ArgumentLinkDescriptor> getClaim_3001ContainedLinks(
+	public static List<ArgumentLinkDescriptor> getArgument_3002ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -407,31 +317,7 @@ public class ArgumentDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ArgumentLinkDescriptor> getFact_3002ContainedLinks(
-			View view) {
-		return Collections.emptyList();
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<ArgumentLinkDescriptor> getArgument_3003ContainedLinks(
-			View view) {
-		return Collections.emptyList();
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<ArgumentLinkDescriptor> getFact_3004ContainedLinks(
-			View view) {
-		return Collections.emptyList();
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<ArgumentLinkDescriptor> getClaim_3005ContainedLinks(
+	public static List<ArgumentLinkDescriptor> getFact_3003ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -479,7 +365,7 @@ public class ArgumentDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ArgumentLinkDescriptor> getClaim_2003IncomingLinks(
+	public static List<ArgumentLinkDescriptor> getFact_3001IncomingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -487,23 +373,7 @@ public class ArgumentDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ArgumentLinkDescriptor> getClaim_3001IncomingLinks(
-			View view) {
-		return Collections.emptyList();
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<ArgumentLinkDescriptor> getFact_3002IncomingLinks(
-			View view) {
-		return Collections.emptyList();
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<ArgumentLinkDescriptor> getArgument_3003IncomingLinks(
+	public static List<ArgumentLinkDescriptor> getArgument_3002IncomingLinks(
 			View view) {
 		Argument modelElement = (Argument) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
@@ -519,15 +389,7 @@ public class ArgumentDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ArgumentLinkDescriptor> getFact_3004IncomingLinks(
-			View view) {
-		return Collections.emptyList();
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<ArgumentLinkDescriptor> getClaim_3005IncomingLinks(
+	public static List<ArgumentLinkDescriptor> getFact_3003IncomingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -571,7 +433,7 @@ public class ArgumentDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ArgumentLinkDescriptor> getClaim_2003OutgoingLinks(
+	public static List<ArgumentLinkDescriptor> getFact_3001OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -579,23 +441,7 @@ public class ArgumentDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ArgumentLinkDescriptor> getClaim_3001OutgoingLinks(
-			View view) {
-		return Collections.emptyList();
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<ArgumentLinkDescriptor> getFact_3002OutgoingLinks(
-			View view) {
-		return Collections.emptyList();
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<ArgumentLinkDescriptor> getArgument_3003OutgoingLinks(
+	public static List<ArgumentLinkDescriptor> getArgument_3002OutgoingLinks(
 			View view) {
 		Argument modelElement = (Argument) view.getElement();
 		LinkedList<ArgumentLinkDescriptor> result = new LinkedList<ArgumentLinkDescriptor>();
@@ -607,15 +453,7 @@ public class ArgumentDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ArgumentLinkDescriptor> getFact_3004OutgoingLinks(
-			View view) {
-		return Collections.emptyList();
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<ArgumentLinkDescriptor> getClaim_3005OutgoingLinks(
+	public static List<ArgumentLinkDescriptor> getFact_3003OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
 	}

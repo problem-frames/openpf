@@ -180,22 +180,13 @@ public interface ArgumentPackage extends EPackage
   int ARGUMENT__DESCRIPTION = NODE__DESCRIPTION;
 
   /**
-   * The feature id for the '<em><b>Claim</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ARGUMENT__CLAIM = NODE_FEATURE_COUNT + 0;
-
-  /**
    * The feature id for the '<em><b>Grounds</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ARGUMENT__GROUNDS = NODE_FEATURE_COUNT + 1;
+  int ARGUMENT__GROUNDS = NODE_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Warrants</b></em>' containment reference list.
@@ -204,7 +195,7 @@ public interface ArgumentPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ARGUMENT__WARRANTS = NODE_FEATURE_COUNT + 2;
+  int ARGUMENT__WARRANTS = NODE_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Argument</em>' class.
@@ -213,7 +204,7 @@ public interface ArgumentPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ARGUMENT_FEATURE_COUNT = NODE_FEATURE_COUNT + 3;
+  int ARGUMENT_FEATURE_COUNT = NODE_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link uk.ac.open.argument.argument.impl.FactImpl <em>Fact</em>}' class.
@@ -253,43 +244,6 @@ public interface ArgumentPackage extends EPackage
   int FACT_FEATURE_COUNT = NODE_FEATURE_COUNT + 0;
 
   /**
-   * The meta object id for the '{@link uk.ac.open.argument.argument.impl.ClaimImpl <em>Claim</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see uk.ac.open.argument.argument.impl.ClaimImpl
-   * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getClaim()
-   * @generated
-   */
-  int CLAIM = 4;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CLAIM__NAME = NODE__NAME;
-
-  /**
-   * The feature id for the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CLAIM__DESCRIPTION = NODE__DESCRIPTION;
-
-  /**
-   * The number of structural features of the '<em>Claim</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CLAIM_FEATURE_COUNT = NODE_FEATURE_COUNT + 0;
-
-  /**
    * The meta object id for the '{@link uk.ac.open.argument.argument.impl.LinkImpl <em>Link</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -297,7 +251,7 @@ public interface ArgumentPackage extends EPackage
    * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getLink()
    * @generated
    */
-  int LINK = 5;
+  int LINK = 4;
 
   /**
    * The feature id for the '<em><b>From</b></em>' reference.
@@ -334,7 +288,7 @@ public interface ArgumentPackage extends EPackage
    * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getRebuts()
    * @generated
    */
-  int REBUTS = 6;
+  int REBUTS = 5;
 
   /**
    * The feature id for the '<em><b>From</b></em>' reference.
@@ -371,7 +325,7 @@ public interface ArgumentPackage extends EPackage
    * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getMitigates()
    * @generated
    */
-  int MITIGATES = 7;
+  int MITIGATES = 6;
 
   /**
    * The feature id for the '<em><b>From</b></em>' reference.
@@ -498,17 +452,6 @@ public interface ArgumentPackage extends EPackage
   EClass getArgument();
 
   /**
-   * Returns the meta object for the containment reference '{@link uk.ac.open.argument.argument.Argument#getClaim <em>Claim</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Claim</em>'.
-   * @see uk.ac.open.argument.argument.Argument#getClaim()
-   * @see #getArgument()
-   * @generated
-   */
-  EReference getArgument_Claim();
-
-  /**
    * Returns the meta object for the containment reference list '{@link uk.ac.open.argument.argument.Argument#getGrounds <em>Grounds</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -539,16 +482,6 @@ public interface ArgumentPackage extends EPackage
    * @generated
    */
   EClass getFact();
-
-  /**
-   * Returns the meta object for class '{@link uk.ac.open.argument.argument.Claim <em>Claim</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Claim</em>'.
-   * @see uk.ac.open.argument.argument.Claim
-   * @generated
-   */
-  EClass getClaim();
 
   /**
    * Returns the meta object for class '{@link uk.ac.open.argument.argument.Link <em>Link</em>}'.
@@ -704,14 +637,6 @@ public interface ArgumentPackage extends EPackage
     EClass ARGUMENT = eINSTANCE.getArgument();
 
     /**
-     * The meta object literal for the '<em><b>Claim</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference ARGUMENT__CLAIM = eINSTANCE.getArgument_Claim();
-
-    /**
      * The meta object literal for the '<em><b>Grounds</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -736,16 +661,6 @@ public interface ArgumentPackage extends EPackage
      * @generated
      */
     EClass FACT = eINSTANCE.getFact();
-
-    /**
-     * The meta object literal for the '{@link uk.ac.open.argument.argument.impl.ClaimImpl <em>Claim</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see uk.ac.open.argument.argument.impl.ClaimImpl
-     * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getClaim()
-     * @generated
-     */
-    EClass CLAIM = eINSTANCE.getClaim();
 
     /**
      * The meta object literal for the '{@link uk.ac.open.argument.argument.impl.LinkImpl <em>Link</em>}' class.

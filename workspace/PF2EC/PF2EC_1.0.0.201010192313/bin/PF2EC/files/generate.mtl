@@ -1,0 +1,74 @@
+[comment encoding = UTF-8 /]
+[module generate('http://open.ac.uk/problem')/]
+[template public generate(d: ProblemDiagram)]
+[file (d.name.toString().concat('TestCase.e'), false)]
+; load foundations/Root.e
+sort boolean
+sort integer
+; load foundations/EC.e
+reified sort predicate
+reified sort function
+sort time: integer
+sort offset: integer
+
+reified sort fluent
+reified sort event
+
+predicate Happens(event,time)
+predicate HoldsAt(fluent,time)
+predicate ReleasedAt(fluent,time)
+predicate Initiates(event,fluent,time)
+predicate Terminates(event,fluent,time)
+predicate Releases(event,fluent,time)
+predicate Trajectory(fluent,time,fluent,offset)
+
+; specific for the PF2EC generation
+reified sort domain
+[for (dom: Node | d.nodes) ]
+predicate [dom.name/](domain,time)
+[/for]
+    [for (dom: Node | d.nodes)]
+      [for (hidden: Phenomenon | dom.hiddenPhenomena)]
+       [if (hidden.type.toString() ='state')]      
+fluent [hidden.name/]_[dom.name/]()
+       [/if]
+       [/for]
+      [/for]
+      [for (interface: Link | d.links)]
+      [for (shared: Phenomenon | interface.phenomena)]
+		[if (shared.type.toString() = 'event')]  
+event [shared.name/]_[interface.description/]()
+        [/if]
+		[if (shared.toString() = 'state')]      
+fluent [shared.name/]_[interface.description/]()
+        [/if]
+      [/for]
+    [/for]	
+[for (dom: Node | d.nodes) ]
+['['/] domain, time [']'/] [dom.name/] (domain,  time) 
+; [protected ('for ' + dom.name) ]
+; <-> 
+; please update the rules involving hidden phenomena
+; [dom.hiddenPhenomena->select(state: Phenomenon | state.type.toString()='state')
+	->collect('HoldsAt('+name+'_' +dom.name+'(),time)')
+	->sep('\n; ')/]
+; and shared phenomena from the domain
+; [for (inter: Link | d.links) ][d.links->select(interface: Link| interface = inter and interface.from = dom).phenomena
+	->select(event: Phenomenon | event.type.toString()='event')
+	->collect('Happens('+name+'_' +inter.description+'(),time)')
+		->sep('\n; ')/][/for]
+; and shared phenomena to the domain
+; [for (inter: Link | d.links) ][d.links->select(interface: Link| interface = inter and interface.to = dom).phenomena
+		->select(event: Phenomenon | event.type.toString()='event')
+		->collect('Happens('+name+'_' +inter.description+'(),time)')
+		->sep('\n; ')/][/for]
+; [/protected]
+.
+[/for]
+[d.nodes->select(dom: Node | dom.type.toString()<>'M' and dom.type.toString()<>'R')->collect('[domain,time]' + name + '(domain, time)')->sep(' & ')/]
+& ! ( [d.nodes->select(dom: Node | dom.type.toString()='M')->collect('[domain,time]' + name + '(domain, time)')->sep(' & ')/]
+& [d.nodes->select(dom: Node | dom.type.toString()='R')->collect('[domain,time]' + name + '(domain, time)')->sep(' & ')/]).
+range time 0 3
+range offset 1 2	
+[/file]	
+[/template]

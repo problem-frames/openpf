@@ -24,7 +24,7 @@ public class ArgumentArgumentWarrantsCompartmentEditPart extends
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 7003;
+	public static final int VISUAL_ID = 7002;
 
 	/**
 	 * @generated

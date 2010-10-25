@@ -25,7 +25,7 @@ public class ArgumentArgumentGroundsCompartment2EditPart extends
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 7005;
+	public static final int VISUAL_ID = 7003;
 
 	/**
 	 * @generated

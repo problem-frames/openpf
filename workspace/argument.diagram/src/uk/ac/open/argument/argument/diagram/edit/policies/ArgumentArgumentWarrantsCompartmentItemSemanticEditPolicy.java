@@ -4,7 +4,6 @@ import org.eclipse.gef.commands.Command;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 
 import uk.ac.open.argument.argument.diagram.edit.commands.Argument2CreateCommand;
-import uk.ac.open.argument.argument.diagram.edit.commands.Claim3CreateCommand;
 import uk.ac.open.argument.argument.diagram.edit.commands.Fact3CreateCommand;
 import uk.ac.open.argument.argument.diagram.providers.ArgumentElementTypes;
 
@@ -25,14 +24,11 @@ public class ArgumentArgumentWarrantsCompartmentItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (ArgumentElementTypes.Argument_3003 == req.getElementType()) {
+		if (ArgumentElementTypes.Argument_3002 == req.getElementType()) {
 			return getGEFWrapper(new Argument2CreateCommand(req));
 		}
-		if (ArgumentElementTypes.Fact_3004 == req.getElementType()) {
+		if (ArgumentElementTypes.Fact_3003 == req.getElementType()) {
 			return getGEFWrapper(new Fact3CreateCommand(req));
-		}
-		if (ArgumentElementTypes.Claim_3005 == req.getElementType()) {
-			return getGEFWrapper(new Claim3CreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}

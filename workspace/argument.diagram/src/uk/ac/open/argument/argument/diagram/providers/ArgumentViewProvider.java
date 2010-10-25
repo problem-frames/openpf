@@ -43,8 +43,6 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.FontData;
 
 import uk.ac.open.argument.argument.diagram.edit.parts.Argument2EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentClaimCompartment2EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentClaimCompartmentEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentGroundsCompartment2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentGroundsCompartmentEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentWarrantsCompartment2EditPart;
@@ -53,12 +51,6 @@ import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDiagramEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentName2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameEditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.Claim2EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.Claim3EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.ClaimEditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.ClaimName2EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.ClaimName3EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.ClaimNameEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.Fact2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.Fact3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.FactEditPart;
@@ -163,13 +155,10 @@ public class ArgumentViewProvider extends AbstractProvider implements
 				}
 				switch (visualID) {
 				case ArgumentEditPart.VISUAL_ID:
-				case Claim2EditPart.VISUAL_ID:
 				case Fact2EditPart.VISUAL_ID:
 				case FactEditPart.VISUAL_ID:
-				case ClaimEditPart.VISUAL_ID:
 				case Argument2EditPart.VISUAL_ID:
 				case Fact3EditPart.VISUAL_ID:
-				case Claim3EditPart.VISUAL_ID:
 					if (domainElement == null
 							|| visualID != ArgumentVisualIDRegistry
 									.getNodeVisualID(op.getContainerView(),
@@ -184,12 +173,9 @@ public class ArgumentViewProvider extends AbstractProvider implements
 		}
 		return ArgumentEditPart.VISUAL_ID == visualID
 				|| FactEditPart.VISUAL_ID == visualID
-				|| ClaimEditPart.VISUAL_ID == visualID
-				|| Claim2EditPart.VISUAL_ID == visualID
 				|| Fact2EditPart.VISUAL_ID == visualID
 				|| Argument2EditPart.VISUAL_ID == visualID
-				|| Fact3EditPart.VISUAL_ID == visualID
-				|| Claim3EditPart.VISUAL_ID == visualID;
+				|| Fact3EditPart.VISUAL_ID == visualID;
 	}
 
 	/**
@@ -252,23 +238,14 @@ public class ArgumentViewProvider extends AbstractProvider implements
 		case FactEditPart.VISUAL_ID:
 			return createFact_2002(domainElement, containerView, index,
 					persisted, preferencesHint);
-		case ClaimEditPart.VISUAL_ID:
-			return createClaim_2003(domainElement, containerView, index,
-					persisted, preferencesHint);
-		case Claim2EditPart.VISUAL_ID:
-			return createClaim_3001(domainElement, containerView, index,
-					persisted, preferencesHint);
 		case Fact2EditPart.VISUAL_ID:
-			return createFact_3002(domainElement, containerView, index,
+			return createFact_3001(domainElement, containerView, index,
 					persisted, preferencesHint);
 		case Argument2EditPart.VISUAL_ID:
-			return createArgument_3003(domainElement, containerView, index,
+			return createArgument_3002(domainElement, containerView, index,
 					persisted, preferencesHint);
 		case Fact3EditPart.VISUAL_ID:
-			return createFact_3004(domainElement, containerView, index,
-					persisted, preferencesHint);
-		case Claim3EditPart.VISUAL_ID:
-			return createClaim_3005(domainElement, containerView, index,
+			return createFact_3003(domainElement, containerView, index,
 					persisted, preferencesHint);
 		}
 		// can't happen, provided #provides(CreateNodeViewOperation) is correct
@@ -337,14 +314,9 @@ public class ArgumentViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5006 = createLabel(node,
+		Node label5004 = createLabel(node,
 				ArgumentVisualIDRegistry
 						.getType(ArgumentNameEditPart.VISUAL_ID));
-		createCompartment(
-				node,
-				ArgumentVisualIDRegistry
-						.getType(ArgumentArgumentClaimCompartmentEditPart.VISUAL_ID),
-				true, false, true, true);
 		createCompartment(
 				node,
 				ArgumentVisualIDRegistry
@@ -397,7 +369,7 @@ public class ArgumentViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5007 = createLabel(node,
+		Node label5005 = createLabel(node,
 				ArgumentVisualIDRegistry.getType(FactNameEditPart.VISUAL_ID));
 		return node;
 	}
@@ -405,94 +377,7 @@ public class ArgumentViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createClaim_2003(EObject domainElement, View containerView,
-			int index, boolean persisted, PreferencesHint preferencesHint) {
-		Shape node = NotationFactory.eINSTANCE.createShape();
-		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(ArgumentVisualIDRegistry.getType(ClaimEditPart.VISUAL_ID));
-		ViewUtil.insertChildView(containerView, node, index, persisted);
-		node.setElement(domainElement);
-		stampShortcut(containerView, node);
-		// initializeFromPreferences 
-		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
-				.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
-		FontStyle nodeFontStyle = (FontStyle) node
-				.getStyle(NotationPackage.Literals.FONT_STYLE);
-		if (nodeFontStyle != null) {
-			FontData fontData = PreferenceConverter.getFontData(prefStore,
-					IPreferenceConstants.PREF_DEFAULT_FONT);
-			nodeFontStyle.setFontName(fontData.getName());
-			nodeFontStyle.setFontHeight(fontData.getHeight());
-			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
-			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
-			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
-					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
-			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
-					.intValue());
-		}
-		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5008 = createLabel(node,
-				ArgumentVisualIDRegistry.getType(ClaimNameEditPart.VISUAL_ID));
-		return node;
-	}
-
-	/**
-	 * @generated
-	 */
-	public Node createClaim_3001(EObject domainElement, View containerView,
-			int index, boolean persisted, PreferencesHint preferencesHint) {
-		Shape node = NotationFactory.eINSTANCE.createShape();
-		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(ArgumentVisualIDRegistry.getType(Claim2EditPart.VISUAL_ID));
-		ViewUtil.insertChildView(containerView, node, index, persisted);
-		node.setElement(domainElement);
-		// initializeFromPreferences 
-		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
-				.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
-		FontStyle nodeFontStyle = (FontStyle) node
-				.getStyle(NotationPackage.Literals.FONT_STYLE);
-		if (nodeFontStyle != null) {
-			FontData fontData = PreferenceConverter.getFontData(prefStore,
-					IPreferenceConstants.PREF_DEFAULT_FONT);
-			nodeFontStyle.setFontName(fontData.getName());
-			nodeFontStyle.setFontHeight(fontData.getHeight());
-			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
-			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
-			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
-					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
-			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
-					.intValue());
-		}
-		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5001 = createLabel(node,
-				ArgumentVisualIDRegistry.getType(ClaimName2EditPart.VISUAL_ID));
-		return node;
-	}
-
-	/**
-	 * @generated
-	 */
-	public Node createFact_3002(EObject domainElement, View containerView,
+	public Node createFact_3001(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
@@ -527,7 +412,7 @@ public class ArgumentViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5002 = createLabel(node,
+		Node label5001 = createLabel(node,
 				ArgumentVisualIDRegistry.getType(FactName2EditPart.VISUAL_ID));
 		return node;
 	}
@@ -535,7 +420,7 @@ public class ArgumentViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createArgument_3003(EObject domainElement, View containerView,
+	public Node createArgument_3002(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.getStyles().add(
@@ -573,14 +458,9 @@ public class ArgumentViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5005 = createLabel(node,
+		Node label5003 = createLabel(node,
 				ArgumentVisualIDRegistry
 						.getType(ArgumentName2EditPart.VISUAL_ID));
-		createCompartment(
-				node,
-				ArgumentVisualIDRegistry
-						.getType(ArgumentArgumentClaimCompartment2EditPart.VISUAL_ID),
-				true, false, true, true);
 		createCompartment(
 				node,
 				ArgumentVisualIDRegistry
@@ -597,7 +477,7 @@ public class ArgumentViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createFact_3004(EObject domainElement, View containerView,
+	public Node createFact_3003(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
@@ -632,51 +512,8 @@ public class ArgumentViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5003 = createLabel(node,
+		Node label5002 = createLabel(node,
 				ArgumentVisualIDRegistry.getType(FactName3EditPart.VISUAL_ID));
-		return node;
-	}
-
-	/**
-	 * @generated
-	 */
-	public Node createClaim_3005(EObject domainElement, View containerView,
-			int index, boolean persisted, PreferencesHint preferencesHint) {
-		Shape node = NotationFactory.eINSTANCE.createShape();
-		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(ArgumentVisualIDRegistry.getType(Claim3EditPart.VISUAL_ID));
-		ViewUtil.insertChildView(containerView, node, index, persisted);
-		node.setElement(domainElement);
-		// initializeFromPreferences 
-		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
-				.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
-		FontStyle nodeFontStyle = (FontStyle) node
-				.getStyle(NotationPackage.Literals.FONT_STYLE);
-		if (nodeFontStyle != null) {
-			FontData fontData = PreferenceConverter.getFontData(prefStore,
-					IPreferenceConstants.PREF_DEFAULT_FONT);
-			nodeFontStyle.setFontName(fontData.getName());
-			nodeFontStyle.setFontHeight(fontData.getHeight());
-			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
-			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
-			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
-					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
-			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
-					.intValue());
-		}
-		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5004 = createLabel(node,
-				ArgumentVisualIDRegistry.getType(ClaimName3EditPart.VISUAL_ID));
 		return node;
 	}
 

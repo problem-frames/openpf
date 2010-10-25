@@ -16,14 +16,14 @@ public class ArgumentArgumentGroundsCompartment2ItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public ArgumentArgumentGroundsCompartment2ItemSemanticEditPolicy() {
-		super(ArgumentElementTypes.Argument_3003);
+		super(ArgumentElementTypes.Argument_3002);
 	}
 
 	/**
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (ArgumentElementTypes.Fact_3002 == req.getElementType()) {
+		if (ArgumentElementTypes.Fact_3001 == req.getElementType()) {
 			return getGEFWrapper(new Fact2CreateCommand(req));
 		}
 		return super.getCreateCommand(req);

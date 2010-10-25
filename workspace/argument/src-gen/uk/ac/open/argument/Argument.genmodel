@@ -18,12 +18,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Node/description"/>
     </genClasses>
     <genClasses ecoreClass="Argument.ecore#//Argument">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//Argument/claim"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//Argument/grounds"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//Argument/warrants"/>
     </genClasses>
     <genClasses ecoreClass="Argument.ecore#//Fact"/>
-    <genClasses ecoreClass="Argument.ecore#//Claim"/>
     <genClasses ecoreClass="Argument.ecore#//Link">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Argument.ecore#//Link/from"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Argument.ecore#//Link/to"/>

@@ -45,7 +45,7 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3003;
+	public static final int VISUAL_ID = 3002;
 
 	/**
 	 * @generated
@@ -129,14 +129,6 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 					.getFigureArgumentLabelFigure());
 			return true;
 		}
-		if (childEditPart instanceof ArgumentArgumentClaimCompartment2EditPart) {
-			IFigure pane = getPrimaryShape()
-					.getArgumentClaimCompartmentFigure();
-			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.add(((ArgumentArgumentClaimCompartment2EditPart) childEditPart)
-					.getFigure());
-			return true;
-		}
 		if (childEditPart instanceof ArgumentArgumentGroundsCompartment2EditPart) {
 			IFigure pane = getPrimaryShape()
 					.getArgumentGroundsCompartmentFigure();
@@ -161,14 +153,6 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
 		if (childEditPart instanceof ArgumentName2EditPart) {
-			return true;
-		}
-		if (childEditPart instanceof ArgumentArgumentClaimCompartment2EditPart) {
-			IFigure pane = getPrimaryShape()
-					.getArgumentClaimCompartmentFigure();
-			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.remove(((ArgumentArgumentClaimCompartment2EditPart) childEditPart)
-					.getFigure());
 			return true;
 		}
 		if (childEditPart instanceof ArgumentArgumentGroundsCompartment2EditPart) {
@@ -214,9 +198,6 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
-		if (editPart instanceof ArgumentArgumentClaimCompartment2EditPart) {
-			return getPrimaryShape().getArgumentClaimCompartmentFigure();
-		}
 		if (editPart instanceof ArgumentArgumentGroundsCompartment2EditPart) {
 			return getPrimaryShape().getArgumentGroundsCompartmentFigure();
 		}
@@ -358,10 +339,10 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
 		if (relationshipType == ArgumentElementTypes.Rebuts_4001) {
 			types.add(ArgumentElementTypes.Argument_2001);
-			types.add(ArgumentElementTypes.Argument_3003);
+			types.add(ArgumentElementTypes.Argument_3002);
 		} else if (relationshipType == ArgumentElementTypes.Mitigates_4002) {
 			types.add(ArgumentElementTypes.Argument_2001);
-			types.add(ArgumentElementTypes.Argument_3003);
+			types.add(ArgumentElementTypes.Argument_3002);
 		}
 		return types;
 	}
@@ -383,10 +364,10 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
 		if (relationshipType == ArgumentElementTypes.Rebuts_4001) {
 			types.add(ArgumentElementTypes.Argument_2001);
-			types.add(ArgumentElementTypes.Argument_3003);
+			types.add(ArgumentElementTypes.Argument_3002);
 		} else if (relationshipType == ArgumentElementTypes.Mitigates_4002) {
 			types.add(ArgumentElementTypes.Argument_2001);
-			types.add(ArgumentElementTypes.Argument_3003);
+			types.add(ArgumentElementTypes.Argument_3002);
 		}
 		return types;
 	}
@@ -401,11 +382,7 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 					.getCreateElementRequestAdapter();
 			IElementType type = (IElementType) adapter
 					.getAdapter(IElementType.class);
-			if (type == ArgumentElementTypes.Claim_3001) {
-				return getChildBySemanticHint(ArgumentVisualIDRegistry
-						.getType(ArgumentArgumentClaimCompartment2EditPart.VISUAL_ID));
-			}
-			if (type == ArgumentElementTypes.Fact_3002) {
+			if (type == ArgumentElementTypes.Fact_3001) {
 				return getChildBySemanticHint(ArgumentVisualIDRegistry
 						.getType(ArgumentArgumentGroundsCompartment2EditPart.VISUAL_ID));
 			}
@@ -422,10 +399,6 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 		 * @generated
 		 */
 		private WrappingLabel fFigureArgumentLabelFigure;
-		/**
-		 * @generated
-		 */
-		private RectangleFigure fArgumentClaimCompartmentFigure;
 		/**
 		 * @generated
 		 */
@@ -459,11 +432,6 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 
 			this.add(fFigureArgumentLabelFigure);
 
-			fArgumentClaimCompartmentFigure = new RectangleFigure();
-			fArgumentClaimCompartmentFigure.setOutline(false);
-
-			this.add(fArgumentClaimCompartmentFigure);
-
 			fArgumentGroundsCompartmentFigure = new RectangleFigure();
 			fArgumentGroundsCompartmentFigure.setOutline(false);
 
@@ -481,13 +449,6 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 		 */
 		public WrappingLabel getFigureArgumentLabelFigure() {
 			return fFigureArgumentLabelFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public RectangleFigure getArgumentClaimCompartmentFigure() {
-			return fArgumentClaimCompartmentFigure;
 		}
 
 		/**

@@ -20,7 +20,7 @@ public class Fact3ItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public Fact3ItemSemanticEditPolicy() {
-		super(ArgumentElementTypes.Fact_3004);
+		super(ArgumentElementTypes.Fact_3003);
 	}
 
 	/**

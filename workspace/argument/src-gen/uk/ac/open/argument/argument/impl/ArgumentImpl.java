@@ -7,7 +7,6 @@ package uk.ac.open.argument.argument.impl;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -15,14 +14,11 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import uk.ac.open.argument.argument.Argument;
 import uk.ac.open.argument.argument.ArgumentPackage;
-import uk.ac.open.argument.argument.Claim;
 import uk.ac.open.argument.argument.Fact;
 import uk.ac.open.argument.argument.Node;
 
@@ -33,7 +29,6 @@ import uk.ac.open.argument.argument.Node;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link uk.ac.open.argument.argument.impl.ArgumentImpl#getClaim <em>Claim</em>}</li>
  *   <li>{@link uk.ac.open.argument.argument.impl.ArgumentImpl#getGrounds <em>Grounds</em>}</li>
  *   <li>{@link uk.ac.open.argument.argument.impl.ArgumentImpl#getWarrants <em>Warrants</em>}</li>
  * </ul>
@@ -43,16 +38,6 @@ import uk.ac.open.argument.argument.Node;
  */
 public class ArgumentImpl extends NodeImpl implements Argument
 {
-  /**
-   * The cached value of the '{@link #getClaim() <em>Claim</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getClaim()
-   * @generated
-   * @ordered
-   */
-  protected Claim claim;
-
   /**
    * The cached value of the '{@link #getGrounds() <em>Grounds</em>}' containment reference list.
    * <!-- begin-user-doc -->
@@ -99,54 +84,6 @@ public class ArgumentImpl extends NodeImpl implements Argument
    * <!-- end-user-doc -->
    * @generated
    */
-  public Claim getClaim()
-  {
-    return claim;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetClaim(Claim newClaim, NotificationChain msgs)
-  {
-    Claim oldClaim = claim;
-    claim = newClaim;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ArgumentPackage.ARGUMENT__CLAIM, oldClaim, newClaim);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setClaim(Claim newClaim)
-  {
-    if (newClaim != claim)
-    {
-      NotificationChain msgs = null;
-      if (claim != null)
-        msgs = ((InternalEObject)claim).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ArgumentPackage.ARGUMENT__CLAIM, null, msgs);
-      if (newClaim != null)
-        msgs = ((InternalEObject)newClaim).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ArgumentPackage.ARGUMENT__CLAIM, null, msgs);
-      msgs = basicSetClaim(newClaim, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.ARGUMENT__CLAIM, newClaim, newClaim));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EList<Fact> getGrounds()
   {
     if (grounds == null)
@@ -180,8 +117,6 @@ public class ArgumentImpl extends NodeImpl implements Argument
   {
     switch (featureID)
     {
-      case ArgumentPackage.ARGUMENT__CLAIM:
-        return basicSetClaim(null, msgs);
       case ArgumentPackage.ARGUMENT__GROUNDS:
         return ((InternalEList<?>)getGrounds()).basicRemove(otherEnd, msgs);
       case ArgumentPackage.ARGUMENT__WARRANTS:
@@ -200,8 +135,6 @@ public class ArgumentImpl extends NodeImpl implements Argument
   {
     switch (featureID)
     {
-      case ArgumentPackage.ARGUMENT__CLAIM:
-        return getClaim();
       case ArgumentPackage.ARGUMENT__GROUNDS:
         return getGrounds();
       case ArgumentPackage.ARGUMENT__WARRANTS:
@@ -221,9 +154,6 @@ public class ArgumentImpl extends NodeImpl implements Argument
   {
     switch (featureID)
     {
-      case ArgumentPackage.ARGUMENT__CLAIM:
-        setClaim((Claim)newValue);
-        return;
       case ArgumentPackage.ARGUMENT__GROUNDS:
         getGrounds().clear();
         getGrounds().addAll((Collection<? extends Fact>)newValue);
@@ -246,9 +176,6 @@ public class ArgumentImpl extends NodeImpl implements Argument
   {
     switch (featureID)
     {
-      case ArgumentPackage.ARGUMENT__CLAIM:
-        setClaim((Claim)null);
-        return;
       case ArgumentPackage.ARGUMENT__GROUNDS:
         getGrounds().clear();
         return;
@@ -269,8 +196,6 @@ public class ArgumentImpl extends NodeImpl implements Argument
   {
     switch (featureID)
     {
-      case ArgumentPackage.ARGUMENT__CLAIM:
-        return claim != null;
       case ArgumentPackage.ARGUMENT__GROUNDS:
         return grounds != null && !grounds.isEmpty();
       case ArgumentPackage.ARGUMENT__WARRANTS:

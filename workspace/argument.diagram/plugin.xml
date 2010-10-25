@@ -213,7 +213,7 @@
       <viewProvider class="uk.ac.open.argument.argument.diagram.providers.ArgumentViewProvider">
          <Priority name="Lowest"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Argument"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,2003,3001,3002,3003,3004,3005"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,3001,3002,3003"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002"/>
       </viewProvider>
    </extension>
@@ -226,16 +226,16 @@
             <method name="getType()" value="Argument"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
-            <method name="getType()" value="2001,2002,2003,3001,3002,3003,3004,3005"/>
+            <method name="getType()" value="2001,2002,3001,3002,3003"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
             <method name="getType()" value="4001,4002"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
-            <method name="getType()" value="5006,5007,5008,5001,5002,5005,5003,5004"/>
+            <method name="getType()" value="5004,5005,5001,5003,5002"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
-            <method name="getType()" value="7001,7002,7003,7004,7005,7006"/>
+            <method name="getType()" value="7001,7002,7003,7004"/>
          </object>
          <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
       </editpartProvider>
@@ -248,8 +248,7 @@
          <object class="uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDiagramEditPart" id="ArgumentDiagram_1000"/>
          <object class="uk.ac.open.argument.argument.diagram.edit.parts.ArgumentEditPart" id="Argument_2001"/>
          <object class="uk.ac.open.argument.argument.diagram.edit.parts.FactEditPart" id="Fact_2002"/>
-         <object class="uk.ac.open.argument.argument.diagram.edit.parts.ClaimEditPart" id="Claim_2003"/>
-         <context elements="ArgumentDiagram_1000,Argument_2001,Fact_2002,Claim_2003"/>
+         <context elements="ArgumentDiagram_1000,Argument_2001,Fact_2002"/>
       </modelingAssistantProvider>
    </extension>
 
@@ -294,64 +293,36 @@
                id="argument.diagram.Fact_2002"
                name="%metatype.name.Fact_2002"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="argument.diagram.Fact_3002"/>
+            <specializes id="argument.diagram.Fact_3001"/>
             <param name="semanticHint" value="2002"/>
          </specializationType>
       </metamodel>
       <metamodel nsURI="http://www.ac.uk/open/argument/Argument">
-         <specializationType
-               id="argument.diagram.Claim_2003"
-               name="%metatype.name.Claim_2003"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="argument.diagram.Claim_3001"/>
-            <param name="semanticHint" value="2003"/>
-         </specializationType>
-      </metamodel>
-      <metamodel nsURI="http://www.ac.uk/open/argument/Argument">
          <metamodelType
-               id="argument.diagram.Claim_3001"
-               name="%metatype.name.Claim_3001"
+               id="argument.diagram.Fact_3001"
+               name="%metatype.name.Fact_3001"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="Claim"
-               edithelper="uk.ac.open.argument.argument.diagram.edit.helpers.ClaimEditHelper">
+               eclass="Fact"
+               edithelper="uk.ac.open.argument.argument.diagram.edit.helpers.FactEditHelper">
             <param name="semanticHint" value="3001"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://www.ac.uk/open/argument/Argument">
-         <metamodelType
-               id="argument.diagram.Fact_3002"
-               name="%metatype.name.Fact_3002"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="Fact"
-               edithelper="uk.ac.open.argument.argument.diagram.edit.helpers.FactEditHelper">
-            <param name="semanticHint" value="3002"/>
-         </metamodelType>
-      </metamodel>
-      <metamodel nsURI="http://www.ac.uk/open/argument/Argument">
          <specializationType
-               id="argument.diagram.Argument_3003"
-               name="%metatype.name.Argument_3003"
+               id="argument.diagram.Argument_3002"
+               name="%metatype.name.Argument_3002"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="argument.diagram.Argument_2001"/>
+            <param name="semanticHint" value="3002"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.ac.uk/open/argument/Argument">
+         <specializationType
+               id="argument.diagram.Fact_3003"
+               name="%metatype.name.Fact_3003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="argument.diagram.Fact_3001"/>
             <param name="semanticHint" value="3003"/>
-         </specializationType>
-      </metamodel>
-      <metamodel nsURI="http://www.ac.uk/open/argument/Argument">
-         <specializationType
-               id="argument.diagram.Fact_3004"
-               name="%metatype.name.Fact_3004"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="argument.diagram.Fact_3002"/>
-            <param name="semanticHint" value="3004"/>
-         </specializationType>
-      </metamodel>
-      <metamodel nsURI="http://www.ac.uk/open/argument/Argument">
-         <specializationType
-               id="argument.diagram.Claim_3005"
-               name="%metatype.name.Claim_3005"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="argument.diagram.Claim_3001"/>
-            <param name="semanticHint" value="3005"/>
          </specializationType>
       </metamodel>
       <metamodel nsURI="http://www.ac.uk/open/argument/Argument">
@@ -389,12 +360,9 @@
          <elementType ref="argument.diagram.ArgumentDiagram_1000"/>
          <elementType ref="argument.diagram.Argument_2001"/>
          <elementType ref="argument.diagram.Fact_2002"/>
-         <elementType ref="argument.diagram.Claim_2003"/>
-         <elementType ref="argument.diagram.Claim_3001"/>
-         <elementType ref="argument.diagram.Fact_3002"/>
-         <elementType ref="argument.diagram.Argument_3003"/>
-         <elementType ref="argument.diagram.Fact_3004"/>
-         <elementType ref="argument.diagram.Claim_3005"/>
+         <elementType ref="argument.diagram.Fact_3001"/>
+         <elementType ref="argument.diagram.Argument_3002"/>
+         <elementType ref="argument.diagram.Fact_3003"/>
          <elementType ref="argument.diagram.Rebuts_4001"/>
          <elementType ref="argument.diagram.Mitigates_4002"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>

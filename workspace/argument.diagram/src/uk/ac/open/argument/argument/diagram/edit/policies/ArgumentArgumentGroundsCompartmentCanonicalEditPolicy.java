@@ -47,7 +47,7 @@ public class ArgumentArgumentGroundsCompartmentCanonicalEditPolicy extends
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<ArgumentNodeDescriptor> childDescriptors = ArgumentDiagramUpdater
-				.getArgumentArgumentGroundsCompartment_7002SemanticChildren(viewObject);
+				.getArgumentArgumentGroundsCompartment_7001SemanticChildren(viewObject);
 		for (ArgumentNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -80,7 +80,7 @@ public class ArgumentArgumentGroundsCompartmentCanonicalEditPolicy extends
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<ArgumentNodeDescriptor> childDescriptors = ArgumentDiagramUpdater
-				.getArgumentArgumentGroundsCompartment_7002SemanticChildren((View) getHost()
+				.getArgumentArgumentGroundsCompartment_7001SemanticChildren((View) getHost()
 						.getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours

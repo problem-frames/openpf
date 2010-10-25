@@ -34,7 +34,7 @@ public class Fact2EditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3002;
+	public static final int VISUAL_ID = 3001;
 
 	/**
 	 * @generated

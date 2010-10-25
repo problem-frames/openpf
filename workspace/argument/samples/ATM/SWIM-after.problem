@@ -1,0 +1,46 @@
+//AMAN After SWIM
+//=================================
+argument: AMAN_After_SWIM 
+
+A2 rebuts A1 
+
+A1 A {	
+	supported by
+	G1 G "AMAN is a closed system (F1)"
+	G2 G "Physical location of AMAN is protected (F2)"
+	warranted by 
+	W1 G "If AMAN is closed and procted, then it is secure (F3)"
+} "AMAN system is secure (C1) -- Round #1" 
+
+A2 A {supported by
+	  G3 G "SWIM network will be introduced (F)"
+	  G4 G "SWIM connetcs AMANs all over Europe (F)"
+	  G5 G "SWIM data will be shared (F)"
+	  warranted by 
+	  W2 G "AMAN+SWIM is not a closed system"} "AMAN is no longer secure (C2) -- Round #2"
+	  	
+A3 mitigates A2
+
+A4 mitigates A2
+
+A5 mitigates A2
+
+A3 A {supported by
+	  G6 G "SWIM adaptor is tamper-proof"
+	  G7 G "SWIM-Box is secure"
+	  G8 G "Data cables cannot be cut"} "Physical infracture is secure -- Round #3"
+
+A4 A {supported by
+      G9 G "People working with SWIM data will be vetted"} "SWIM personnel are trustworthy -- Round #3"
+
+A5 A {supported by
+	  G10 G "Only authorised users can access SWIM data"
+	  G11 G "User authorisation policies are managed by several managers"
+	  G12 G "Access level according to user role in organisation"} "Access to SWIM data will be restricted -- Round #3"
+
+A6 A {supported by
+	G13 G "Data own does not know who is using their data and how"
+} "Data owner loses control over their data in SWIM -- Round #4"
+
+A6 rebuts A5
+		  	

@@ -53,7 +53,7 @@ public class FactNameEditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5007;
+	public static final int VISUAL_ID = 5005;
 
 	/**
 	 * @generated

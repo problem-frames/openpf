@@ -22,7 +22,6 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import uk.ac.open.argument.argument.ArgumentPackage;
 import uk.ac.open.argument.argument.diagram.edit.parts.Argument2EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.Claim3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.Fact3EditPart;
 import uk.ac.open.argument.argument.diagram.part.ArgumentDiagramUpdater;
 import uk.ac.open.argument.argument.diagram.part.ArgumentNodeDescriptor;
@@ -49,7 +48,7 @@ public class ArgumentArgumentWarrantsCompartment2CanonicalEditPolicy extends
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<ArgumentNodeDescriptor> childDescriptors = ArgumentDiagramUpdater
-				.getArgumentArgumentWarrantsCompartment_7006SemanticChildren(viewObject);
+				.getArgumentArgumentWarrantsCompartment_7004SemanticChildren(viewObject);
 		for (ArgumentNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -71,8 +70,7 @@ public class ArgumentArgumentWarrantsCompartment2CanonicalEditPolicy extends
 	private boolean isMyDiagramElement(View view) {
 		int visualID = ArgumentVisualIDRegistry.getVisualID(view);
 		return visualID == Argument2EditPart.VISUAL_ID
-				|| visualID == Fact3EditPart.VISUAL_ID
-				|| visualID == Claim3EditPart.VISUAL_ID;
+				|| visualID == Fact3EditPart.VISUAL_ID;
 	}
 
 	/**
@@ -84,7 +82,7 @@ public class ArgumentArgumentWarrantsCompartment2CanonicalEditPolicy extends
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<ArgumentNodeDescriptor> childDescriptors = ArgumentDiagramUpdater
-				.getArgumentArgumentWarrantsCompartment_7006SemanticChildren((View) getHost()
+				.getArgumentArgumentWarrantsCompartment_7004SemanticChildren((View) getHost()
 						.getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours

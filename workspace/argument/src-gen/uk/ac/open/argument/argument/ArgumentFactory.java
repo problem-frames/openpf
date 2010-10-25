@@ -62,15 +62,6 @@ public interface ArgumentFactory extends EFactory
   Fact createFact();
 
   /**
-   * Returns a new object of class '<em>Claim</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Claim</em>'.
-   * @generated
-   */
-  Claim createClaim();
-
-  /**
    * Returns a new object of class '<em>Link</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

@@ -20,9 +20,6 @@ import uk.ac.open.argument.argument.ArgumentPackage;
 import uk.ac.open.argument.argument.diagram.edit.parts.Argument2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDiagramEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentEditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.Claim2EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.Claim3EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.ClaimEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.Fact2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.Fact3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.FactEditPart;
@@ -68,42 +65,22 @@ public class ArgumentElementTypes {
 	 * @generated
 	 */
 	public static final IElementType Fact_2002 = getElementType("argument.diagram.Fact_2002"); //$NON-NLS-1$
-
 	/**
 	 * @generated
 	 */
-	public static final IElementType Claim_2003 = getElementType("argument.diagram.Claim_2003"); //$NON-NLS-1$
-
+	public static final IElementType Fact_3001 = getElementType("argument.diagram.Fact_3001"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType Claim_3001 = getElementType("argument.diagram.Claim_3001"); //$NON-NLS-1$
-
+	public static final IElementType Argument_3002 = getElementType("argument.diagram.Argument_3002"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType Fact_3002 = getElementType("argument.diagram.Fact_3002"); //$NON-NLS-1$
-
-	/**
-	 * @generated
-	 */
-	public static final IElementType Argument_3003 = getElementType("argument.diagram.Argument_3003"); //$NON-NLS-1$
-
-	/**
-	 * @generated
-	 */
-	public static final IElementType Fact_3004 = getElementType("argument.diagram.Fact_3004"); //$NON-NLS-1$
-
-	/**
-	 * @generated
-	 */
-	public static final IElementType Claim_3005 = getElementType("argument.diagram.Claim_3005"); //$NON-NLS-1$
-
+	public static final IElementType Fact_3003 = getElementType("argument.diagram.Fact_3003"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
 	public static final IElementType Rebuts_4001 = getElementType("argument.diagram.Rebuts_4001"); //$NON-NLS-1$
-
 	/**
 	 * @generated
 	 */
@@ -227,17 +204,11 @@ public class ArgumentElementTypes {
 
 			elements.put(Fact_2002, ArgumentPackage.eINSTANCE.getFact());
 
-			elements.put(Claim_2003, ArgumentPackage.eINSTANCE.getClaim());
+			elements.put(Fact_3001, ArgumentPackage.eINSTANCE.getFact());
 
-			elements.put(Claim_3001, ArgumentPackage.eINSTANCE.getClaim());
+			elements.put(Argument_3002, ArgumentPackage.eINSTANCE.getArgument());
 
-			elements.put(Fact_3002, ArgumentPackage.eINSTANCE.getFact());
-
-			elements.put(Argument_3003, ArgumentPackage.eINSTANCE.getArgument());
-
-			elements.put(Fact_3004, ArgumentPackage.eINSTANCE.getFact());
-
-			elements.put(Claim_3005, ArgumentPackage.eINSTANCE.getClaim());
+			elements.put(Fact_3003, ArgumentPackage.eINSTANCE.getFact());
 
 			elements.put(Rebuts_4001, ArgumentPackage.eINSTANCE.getRebuts());
 
@@ -263,12 +234,9 @@ public class ArgumentElementTypes {
 			KNOWN_ELEMENT_TYPES.add(ArgumentDiagram_1000);
 			KNOWN_ELEMENT_TYPES.add(Argument_2001);
 			KNOWN_ELEMENT_TYPES.add(Fact_2002);
-			KNOWN_ELEMENT_TYPES.add(Claim_2003);
-			KNOWN_ELEMENT_TYPES.add(Claim_3001);
-			KNOWN_ELEMENT_TYPES.add(Fact_3002);
-			KNOWN_ELEMENT_TYPES.add(Argument_3003);
-			KNOWN_ELEMENT_TYPES.add(Fact_3004);
-			KNOWN_ELEMENT_TYPES.add(Claim_3005);
+			KNOWN_ELEMENT_TYPES.add(Fact_3001);
+			KNOWN_ELEMENT_TYPES.add(Argument_3002);
+			KNOWN_ELEMENT_TYPES.add(Fact_3003);
 			KNOWN_ELEMENT_TYPES.add(Rebuts_4001);
 			KNOWN_ELEMENT_TYPES.add(Mitigates_4002);
 		}
@@ -286,18 +254,12 @@ public class ArgumentElementTypes {
 			return Argument_2001;
 		case FactEditPart.VISUAL_ID:
 			return Fact_2002;
-		case ClaimEditPart.VISUAL_ID:
-			return Claim_2003;
-		case Claim2EditPart.VISUAL_ID:
-			return Claim_3001;
 		case Fact2EditPart.VISUAL_ID:
-			return Fact_3002;
+			return Fact_3001;
 		case Argument2EditPart.VISUAL_ID:
-			return Argument_3003;
+			return Argument_3002;
 		case Fact3EditPart.VISUAL_ID:
-			return Fact_3004;
-		case Claim3EditPart.VISUAL_ID:
-			return Claim_3005;
+			return Fact_3003;
 		case RebutsEditPart.VISUAL_ID:
 			return Rebuts_4001;
 		case MitigatesEditPart.VISUAL_ID:

@@ -1,13 +1,13 @@
 Manifest-Version: 1.0
-Export-Package: uk,uk.ac,uk.ac.open,uk.ac.open.event,uk.ac.open.event.
- contentassist,uk.ac.open.event.contentassist.antlr,uk.ac.open.event.c
- ontentassist.antlr.internal;x-internal:=true,uk.ac.open.event.interna
- l;x-internal:=true,uk.ac.open.event.labeling,uk.ac.open.event.outline
- ,uk.ac.open.event.ui,uk.ac.open.event.ui.contentassist,uk.ac.open.eve
- nt.ui.contentassist.antlr,uk.ac.open.event.ui.contentassist.antlr.int
- ernal;x-internal:=true,uk.ac.open.event.ui.internal;x-internal:=true,
- uk.ac.open.event.ui.labeling,uk.ac.open.event.ui.outline,uk.ac.open.e
- vent.ui.quickfix,uk.ac.open.groundtram
+Export-Package: uk.ac.open.event.ui,
+ uk.ac.open.event.ui.contentassist,
+ uk.ac.open.event.ui.contentassist.antlr,
+ uk.ac.open.event.ui.contentassist.antlr.internal;x-internal:=true,
+ uk.ac.open.event.ui.internal;x-internal:=true,
+ uk.ac.open.event.ui.labeling,
+ uk.ac.open.event.ui.outline,
+ uk.ac.open.event.ui.quickfix,
+ uk.ac.open.groundtram
 Require-Bundle: event;visibility:=reexport,org.eclipse.ui.editors;bund
  le-version="3.5.0",org.eclipse.ui.ide;bundle-version="3.5.0",org.ecli
  pse.xtext.ui,org.eclipse.xtext.ui.shared,org.eclipse.ui,org.eclipse.x

@@ -89,24 +89,20 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Node");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cArgumentParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cClaimParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cFactParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cFactParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//Node:
-		//	Argument | Claim | Fact;
+		//	Argument | Fact;
 		public ParserRule getRule() { return rule; }
 
-		//Argument | Claim | Fact
+		//Argument | Fact
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//Argument
 		public RuleCall getArgumentParserRuleCall_0() { return cArgumentParserRuleCall_0; }
 
-		//Claim
-		public RuleCall getClaimParserRuleCall_1() { return cClaimParserRuleCall_1; }
-
 		//Fact
-		public RuleCall getFactParserRuleCall_2() { return cFactParserRuleCall_2; }
+		public RuleCall getFactParserRuleCall_1() { return cFactParserRuleCall_1; }
 	}
 
 	public class ArgumentElements extends AbstractParserRuleElementFinder {
@@ -117,33 +113,30 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cAKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
 		private final Keyword cLeftCurlyBracketKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Keyword cClaimKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
-		private final Assignment cClaimAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
-		private final RuleCall cClaimClaimParserRuleCall_2_2_0 = (RuleCall)cClaimAssignment_2_2.eContents().get(0);
-		private final Group cGroup_2_3 = (Group)cGroup_2.eContents().get(3);
-		private final Keyword cSupportedByKeyword_2_3_0 = (Keyword)cGroup_2_3.eContents().get(0);
-		private final Group cGroup_2_3_1 = (Group)cGroup_2_3.eContents().get(1);
-		private final Keyword cCommaKeyword_2_3_1_0 = (Keyword)cGroup_2_3_1.eContents().get(0);
-		private final Assignment cGroundsAssignment_2_3_1_1 = (Assignment)cGroup_2_3_1.eContents().get(1);
-		private final RuleCall cGroundsFactParserRuleCall_2_3_1_1_0 = (RuleCall)cGroundsAssignment_2_3_1_1.eContents().get(0);
-		private final Group cGroup_2_4 = (Group)cGroup_2.eContents().get(4);
-		private final Keyword cWarrantedByKeyword_2_4_0 = (Keyword)cGroup_2_4.eContents().get(0);
-		private final Group cGroup_2_4_1 = (Group)cGroup_2_4.eContents().get(1);
-		private final Keyword cCommaKeyword_2_4_1_0 = (Keyword)cGroup_2_4_1.eContents().get(0);
-		private final Assignment cWarrantsAssignment_2_4_1_1 = (Assignment)cGroup_2_4_1.eContents().get(1);
-		private final RuleCall cWarrantsNodeParserRuleCall_2_4_1_1_0 = (RuleCall)cWarrantsAssignment_2_4_1_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_2_5 = (Keyword)cGroup_2.eContents().get(5);
+		private final Group cGroup_2_1 = (Group)cGroup_2.eContents().get(1);
+		private final Keyword cSupportedByKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
+		private final Group cGroup_2_1_1 = (Group)cGroup_2_1.eContents().get(1);
+		private final Keyword cCommaKeyword_2_1_1_0 = (Keyword)cGroup_2_1_1.eContents().get(0);
+		private final Assignment cGroundsAssignment_2_1_1_1 = (Assignment)cGroup_2_1_1.eContents().get(1);
+		private final RuleCall cGroundsFactParserRuleCall_2_1_1_1_0 = (RuleCall)cGroundsAssignment_2_1_1_1.eContents().get(0);
+		private final Group cGroup_2_2 = (Group)cGroup_2.eContents().get(2);
+		private final Keyword cWarrantedByKeyword_2_2_0 = (Keyword)cGroup_2_2.eContents().get(0);
+		private final Group cGroup_2_2_1 = (Group)cGroup_2_2.eContents().get(1);
+		private final Keyword cCommaKeyword_2_2_1_0 = (Keyword)cGroup_2_2_1.eContents().get(0);
+		private final Assignment cWarrantsAssignment_2_2_1_1 = (Assignment)cGroup_2_2_1.eContents().get(1);
+		private final RuleCall cWarrantsNodeParserRuleCall_2_2_1_1_0 = (RuleCall)cWarrantsAssignment_2_2_1_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_2_3 = (Keyword)cGroup_2.eContents().get(3);
 		private final Keyword cColonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cDescriptionAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cDescriptionSTRINGTerminalRuleCall_4_0 = (RuleCall)cDescriptionAssignment_4.eContents().get(0);
 		
 		//Argument:
-		//	name=ID "A" ("{" "claim" claim=Claim ("supported by" (","? grounds+=Fact)*)? ("warranted by" (","? warrants+=Node)*)?
-		//	"}")? ":"? description=STRING?;
+		//	name=ID "A" ("{" //'claim' claim=Claim
+		//	("supported by" (","? grounds+=Fact)*)? ("warranted by" (","? warrants+=Node)*)? "}")? ":"? description=STRING?;
 		public ParserRule getRule() { return rule; }
 
-		//name=ID "A" ("{" "claim" claim=Claim ("supported by" (","? grounds+=Fact)*)? ("warranted by" (","? warrants+=Node)*)?
-		//"}")? ":"? description=STRING?
+		//name=ID "A" ("{" //'claim' claim=Claim
+		//("supported by" (","? grounds+=Fact)*)? ("warranted by" (","? warrants+=Node)*)? "}")? ":"? description=STRING?
 		public Group getGroup() { return cGroup; }
 
 		//name=ID
@@ -155,59 +148,51 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 		//"A"
 		public Keyword getAKeyword_1() { return cAKeyword_1; }
 
-		//("{" "claim" claim=Claim ("supported by" (","? grounds+=Fact)*)? ("warranted by" (","? warrants+=Node)*)? "}")?
+		//("{" //'claim' claim=Claim
+		//("supported by" (","? grounds+=Fact)*)? ("warranted by" (","? warrants+=Node)*)? "}")?
 		public Group getGroup_2() { return cGroup_2; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_2_0() { return cLeftCurlyBracketKeyword_2_0; }
 
-		//"claim"
-		public Keyword getClaimKeyword_2_1() { return cClaimKeyword_2_1; }
-
-		//claim=Claim
-		public Assignment getClaimAssignment_2_2() { return cClaimAssignment_2_2; }
-
-		//Claim
-		public RuleCall getClaimClaimParserRuleCall_2_2_0() { return cClaimClaimParserRuleCall_2_2_0; }
-
 		//("supported by" (","? grounds+=Fact)*)?
-		public Group getGroup_2_3() { return cGroup_2_3; }
+		public Group getGroup_2_1() { return cGroup_2_1; }
 
 		//"supported by"
-		public Keyword getSupportedByKeyword_2_3_0() { return cSupportedByKeyword_2_3_0; }
+		public Keyword getSupportedByKeyword_2_1_0() { return cSupportedByKeyword_2_1_0; }
 
 		//(","? grounds+=Fact)*
-		public Group getGroup_2_3_1() { return cGroup_2_3_1; }
+		public Group getGroup_2_1_1() { return cGroup_2_1_1; }
 
 		//","?
-		public Keyword getCommaKeyword_2_3_1_0() { return cCommaKeyword_2_3_1_0; }
+		public Keyword getCommaKeyword_2_1_1_0() { return cCommaKeyword_2_1_1_0; }
 
 		//grounds+=Fact
-		public Assignment getGroundsAssignment_2_3_1_1() { return cGroundsAssignment_2_3_1_1; }
+		public Assignment getGroundsAssignment_2_1_1_1() { return cGroundsAssignment_2_1_1_1; }
 
 		//Fact
-		public RuleCall getGroundsFactParserRuleCall_2_3_1_1_0() { return cGroundsFactParserRuleCall_2_3_1_1_0; }
+		public RuleCall getGroundsFactParserRuleCall_2_1_1_1_0() { return cGroundsFactParserRuleCall_2_1_1_1_0; }
 
 		//("warranted by" (","? warrants+=Node)*)?
-		public Group getGroup_2_4() { return cGroup_2_4; }
+		public Group getGroup_2_2() { return cGroup_2_2; }
 
 		//"warranted by"
-		public Keyword getWarrantedByKeyword_2_4_0() { return cWarrantedByKeyword_2_4_0; }
+		public Keyword getWarrantedByKeyword_2_2_0() { return cWarrantedByKeyword_2_2_0; }
 
 		//(","? warrants+=Node)*
-		public Group getGroup_2_4_1() { return cGroup_2_4_1; }
+		public Group getGroup_2_2_1() { return cGroup_2_2_1; }
 
 		//","?
-		public Keyword getCommaKeyword_2_4_1_0() { return cCommaKeyword_2_4_1_0; }
+		public Keyword getCommaKeyword_2_2_1_0() { return cCommaKeyword_2_2_1_0; }
 
 		//warrants+=Node
-		public Assignment getWarrantsAssignment_2_4_1_1() { return cWarrantsAssignment_2_4_1_1; }
+		public Assignment getWarrantsAssignment_2_2_1_1() { return cWarrantsAssignment_2_2_1_1; }
 
 		//Node
-		public RuleCall getWarrantsNodeParserRuleCall_2_4_1_1_0() { return cWarrantsNodeParserRuleCall_2_4_1_1_0; }
+		public RuleCall getWarrantsNodeParserRuleCall_2_2_1_1_0() { return cWarrantsNodeParserRuleCall_2_2_1_1_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_2_5() { return cRightCurlyBracketKeyword_2_5; }
+		public Keyword getRightCurlyBracketKeyword_2_3() { return cRightCurlyBracketKeyword_2_3; }
 
 		//":"?
 		public Keyword getColonKeyword_3() { return cColonKeyword_3; }
@@ -259,52 +244,14 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getDescriptionSTRINGTerminalRuleCall_2_1_0() { return cDescriptionSTRINGTerminalRuleCall_2_1_0; }
 	}
 
-	public class ClaimElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Claim");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
-		private final Keyword cCKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cColonKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cDescriptionAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cDescriptionSTRINGTerminalRuleCall_2_1_0 = (RuleCall)cDescriptionAssignment_2_1.eContents().get(0);
-		
-		//Claim:
-		//	name=ID "C" (":"? description=STRING)?;
-		public ParserRule getRule() { return rule; }
-
-		//name=ID "C" (":"? description=STRING)?
-		public Group getGroup() { return cGroup; }
-
-		//name=ID
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
-
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
-
-		//"C"
-		public Keyword getCKeyword_1() { return cCKeyword_1; }
-
-		//(":"? description=STRING)?
-		public Group getGroup_2() { return cGroup_2; }
-
-		//":"?
-		public Keyword getColonKeyword_2_0() { return cColonKeyword_2_0; }
-
-		//description=STRING
-		public Assignment getDescriptionAssignment_2_1() { return cDescriptionAssignment_2_1; }
-
-		//STRING
-		public RuleCall getDescriptionSTRINGTerminalRuleCall_2_1_0() { return cDescriptionSTRINGTerminalRuleCall_2_1_0; }
-	}
-
 	public class LinkElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Link");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cRebutsParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cMitigatesParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
+		////Claim: (name=ID "C"
+		////	((":")? description=STRING)?);
 		//Link:
 		//	Rebuts | Mitigates;
 		public ParserRule getRule() { return rule; }
@@ -404,7 +351,6 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 	private NodeElements pNode;
 	private ArgumentElements pArgument;
 	private FactElements pFact;
-	private ClaimElements pClaim;
 	private LinkElements pLink;
 	private RebutsElements pRebuts;
 	private MitigatesElements pMitigates;
@@ -443,7 +389,7 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Node:
-	//	Argument | Claim | Fact;
+	//	Argument | Fact;
 	public NodeElements getNodeAccess() {
 		return (pNode != null) ? pNode : (pNode = new NodeElements());
 	}
@@ -453,8 +399,8 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Argument:
-	//	name=ID "A" ("{" "claim" claim=Claim ("supported by" (","? grounds+=Fact)*)? ("warranted by" (","? warrants+=Node)*)?
-	//	"}")? ":"? description=STRING?;
+	//	name=ID "A" ("{" //'claim' claim=Claim
+	//	("supported by" (","? grounds+=Fact)*)? ("warranted by" (","? warrants+=Node)*)? "}")? ":"? description=STRING?;
 	public ArgumentElements getArgumentAccess() {
 		return (pArgument != null) ? pArgument : (pArgument = new ArgumentElements());
 	}
@@ -473,16 +419,8 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 		return getFactAccess().getRule();
 	}
 
-	//Claim:
-	//	name=ID "C" (":"? description=STRING)?;
-	public ClaimElements getClaimAccess() {
-		return (pClaim != null) ? pClaim : (pClaim = new ClaimElements());
-	}
-	
-	public ParserRule getClaimRule() {
-		return getClaimAccess().getRule();
-	}
-
+	////Claim: (name=ID "C"
+	////	((":")? description=STRING)?);
 	//Link:
 	//	Rebuts | Mitigates;
 	public LinkElements getLinkAccess() {

@@ -71,7 +71,6 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
       case ArgumentPackage.NODE: return createNode();
       case ArgumentPackage.ARGUMENT: return createArgument();
       case ArgumentPackage.FACT: return createFact();
-      case ArgumentPackage.CLAIM: return createClaim();
       case ArgumentPackage.LINK: return createLink();
       case ArgumentPackage.REBUTS: return createRebuts();
       case ArgumentPackage.MITIGATES: return createMitigates();
@@ -122,17 +121,6 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
   {
     FactImpl fact = new FactImpl();
     return fact;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Claim createClaim()
-  {
-    ClaimImpl claim = new ClaimImpl();
-    return claim;
   }
 
   /**

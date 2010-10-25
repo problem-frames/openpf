@@ -125,14 +125,6 @@ public class ArgumentSwitch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case ArgumentPackage.CLAIM:
-      {
-        Claim claim = (Claim)theEObject;
-        T result = caseClaim(claim);
-        if (result == null) result = caseNode(claim);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case ArgumentPackage.LINK:
       {
         Link link = (Link)theEObject;
@@ -220,22 +212,6 @@ public class ArgumentSwitch<T>
    * @generated
    */
   public T caseFact(Fact object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Claim</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Claim</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseClaim(Claim object)
   {
     return null;
   }

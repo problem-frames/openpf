@@ -53,7 +53,7 @@ public class FactName3EditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5003;
+	public static final int VISUAL_ID = 5002;
 
 	/**
 	 * @generated
@@ -295,7 +295,7 @@ public class FactName3EditPart extends CompartmentEditPart implements
 		if (parser == null) {
 			parser = ArgumentParserProvider
 					.getParser(
-							ArgumentElementTypes.Fact_3004,
+							ArgumentElementTypes.Fact_3003,
 							getParserElement(),
 							ArgumentVisualIDRegistry
 									.getType(uk.ac.open.argument.argument.diagram.edit.parts.FactName3EditPart.VISUAL_ID));

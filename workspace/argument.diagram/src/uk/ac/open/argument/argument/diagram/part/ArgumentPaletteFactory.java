@@ -37,8 +37,7 @@ public class ArgumentPaletteFactory {
 				Messages.Objects1Group_title);
 		paletteContainer.setId("createObjects1Group"); //$NON-NLS-1$
 		paletteContainer.add(createArgument1CreationTool());
-		paletteContainer.add(createClaim2CreationTool());
-		paletteContainer.add(createFact3CreationTool());
+		paletteContainer.add(createFact2CreationTool());
 		return paletteContainer;
 	}
 
@@ -61,7 +60,7 @@ public class ArgumentPaletteFactory {
 	private ToolEntry createArgument1CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
 		types.add(ArgumentElementTypes.Argument_2001);
-		types.add(ArgumentElementTypes.Argument_3003);
+		types.add(ArgumentElementTypes.Argument_3002);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Argument1CreationTool_title,
 				Messages.Argument1CreationTool_desc, types);
@@ -75,35 +74,17 @@ public class ArgumentPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createClaim2CreationTool() {
+	private ToolEntry createFact2CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
-		types.add(ArgumentElementTypes.Claim_3001);
-		types.add(ArgumentElementTypes.Claim_3005);
-		types.add(ArgumentElementTypes.Claim_2003);
-		NodeToolEntry entry = new NodeToolEntry(
-				Messages.Claim2CreationTool_title,
-				Messages.Claim2CreationTool_desc, types);
-		entry.setId("createClaim2CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(ArgumentElementTypes
-				.getImageDescriptor(ArgumentElementTypes.Claim_3001));
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	 * @generated
-	 */
-	private ToolEntry createFact3CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
-		types.add(ArgumentElementTypes.Fact_3002);
-		types.add(ArgumentElementTypes.Fact_3004);
+		types.add(ArgumentElementTypes.Fact_3001);
+		types.add(ArgumentElementTypes.Fact_3003);
 		types.add(ArgumentElementTypes.Fact_2002);
 		NodeToolEntry entry = new NodeToolEntry(
-				Messages.Fact3CreationTool_title,
-				Messages.Fact3CreationTool_desc, types);
-		entry.setId("createFact3CreationTool"); //$NON-NLS-1$
+				Messages.Fact2CreationTool_title,
+				Messages.Fact2CreationTool_desc, types);
+		entry.setId("createFact2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ArgumentElementTypes
-				.getImageDescriptor(ArgumentElementTypes.Fact_3002));
+				.getImageDescriptor(ArgumentElementTypes.Fact_3001));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}

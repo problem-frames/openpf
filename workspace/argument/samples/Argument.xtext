@@ -5,11 +5,11 @@ ArgumentDiagram: ("argument:" name=ID)? ("for" highlight=[Node])?
 	((nodes+=Node | links+=Link))*;
 
 Node: 
-	Argument | Claim | Fact;
+	Argument | Fact;
 
 Argument: name=ID "A"
 	('{'
-		'claim' claim=Claim
+		//'claim' claim=Claim
 		('supported by' (','? grounds+=Fact)*)?
 		('warranted by' (','? warrants+=Node)*)?
 	'}'	)?
@@ -19,8 +19,8 @@ Argument: name=ID "A"
 Fact: (name=ID "G"
 	((":")? description=STRING)?);
 
-Claim: (name=ID "C"
-	((":")? description=STRING)?);
+//Claim: (name=ID "C"
+//	((":")? description=STRING)?);
 
 Link: (Rebuts |Mitigates);
 

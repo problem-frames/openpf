@@ -263,22 +263,12 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String Claim2CreationTool_title;
+	public static String Fact2CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Claim2CreationTool_desc;
-
-	/**
-	 * @generated
-	 */
-	public static String Fact3CreationTool_title;
-
-	/**
-	 * @generated
-	 */
-	public static String Fact3CreationTool_desc;
+	public static String Fact2CreationTool_desc;
 
 	/**
 	 * @generated
@@ -303,22 +293,12 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String ArgumentArgumentClaimCompartmentEditPart_title;
-
-	/**
-	 * @generated
-	 */
 	public static String ArgumentArgumentGroundsCompartmentEditPart_title;
 
 	/**
 	 * @generated
 	 */
 	public static String ArgumentArgumentWarrantsCompartmentEditPart_title;
-
-	/**
-	 * @generated
-	 */
-	public static String ArgumentArgumentClaimCompartment2EditPart_title;
 
 	/**
 	 * @generated
@@ -334,21 +314,6 @@ public class Messages extends NLS {
 	 * @generated
 	 */
 	public static String CommandName_OpenDiagram;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_Mitigates_4002_target;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_Mitigates_4002_source;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_ArgumentDiagram_1000_links;
 
 	/**
 	 * @generated
@@ -373,12 +338,27 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Argument_3003_incominglinks;
+	public static String NavigatorGroupName_Argument_3002_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Argument_3003_outgoinglinks;
+	public static String NavigatorGroupName_Argument_3002_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_ArgumentDiagram_1000_links;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Mitigates_4002_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Mitigates_4002_source;
 
 	/**
 	 * @generated

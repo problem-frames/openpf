@@ -224,11 +224,6 @@ public class ArgumentDiagramItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ArgumentPackage.Literals.ARGUMENT_DIAGRAM__NODES,
-				 ArgumentFactory.eINSTANCE.createClaim()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(ArgumentPackage.Literals.ARGUMENT_DIAGRAM__LINKS,
 				 ArgumentFactory.eINSTANCE.createLink()));
 

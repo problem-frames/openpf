@@ -44,18 +44,6 @@ public class ArgumentEditPartFactory implements EditPartFactory {
 			case FactNameEditPart.VISUAL_ID:
 				return new FactNameEditPart(view);
 
-			case ClaimEditPart.VISUAL_ID:
-				return new ClaimEditPart(view);
-
-			case ClaimNameEditPart.VISUAL_ID:
-				return new ClaimNameEditPart(view);
-
-			case Claim2EditPart.VISUAL_ID:
-				return new Claim2EditPart(view);
-
-			case ClaimName2EditPart.VISUAL_ID:
-				return new ClaimName2EditPart(view);
-
 			case Fact2EditPart.VISUAL_ID:
 				return new Fact2EditPart(view);
 
@@ -74,23 +62,11 @@ public class ArgumentEditPartFactory implements EditPartFactory {
 			case FactName3EditPart.VISUAL_ID:
 				return new FactName3EditPart(view);
 
-			case Claim3EditPart.VISUAL_ID:
-				return new Claim3EditPart(view);
-
-			case ClaimName3EditPart.VISUAL_ID:
-				return new ClaimName3EditPart(view);
-
-			case ArgumentArgumentClaimCompartmentEditPart.VISUAL_ID:
-				return new ArgumentArgumentClaimCompartmentEditPart(view);
-
 			case ArgumentArgumentGroundsCompartmentEditPart.VISUAL_ID:
 				return new ArgumentArgumentGroundsCompartmentEditPart(view);
 
 			case ArgumentArgumentWarrantsCompartmentEditPart.VISUAL_ID:
 				return new ArgumentArgumentWarrantsCompartmentEditPart(view);
-
-			case ArgumentArgumentClaimCompartment2EditPart.VISUAL_ID:
-				return new ArgumentArgumentClaimCompartment2EditPart(view);
 
 			case ArgumentArgumentGroundsCompartment2EditPart.VISUAL_ID:
 				return new ArgumentArgumentGroundsCompartment2EditPart(view);

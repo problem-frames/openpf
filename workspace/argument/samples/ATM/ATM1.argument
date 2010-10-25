@@ -1,0 +1,29 @@
+argument:SWIM1 
+
+R1 rebuts A1
+ 
+ R2 rebuts A1
+ 
+ R3 rebuts A1 A2 mitigates R1
+ 
+ A3 mitigates R2 
+ 
+ A1 A {supported by 
+F1 G "The AMAN system is controlled by a new trustable operator Sequence Manager (F1)" 
+F2 G "Sequence Manager reports to Sector Team about sequences (F2)" 
+F3 G "AMAN interacts with the FDP, CNS, and Meteo services to collect all info (F3)" //the Airport Operators priorities, the Airlines priorities, the Meteo condition, and the aircraft position 
+F4 G "The actors are interconnected by the SWIM (F4)"
+ warranted by 
+ DK1 G "If the members of the Sector Team obtain important information it may become available to a potential attacker. (DK1)"} 
+ "The ATM system remains secure after introducing AMAN (C1) -- round #1"
+ 
+ R1 A {supported by
+F5 G  "The Sequence Manager can have malicious intent (R1)" 
+ } "Rebuttal on F1 -- round #2"
+ 
+ R2 A {supported by F6 G "Sector Team members obtain critical information not related to their tasks (R3)"} "Rebuttal on F4 -- round #2"
+ 
+ R3 A {supported by F7 G "Attackers eavesdrop on the SWIM network (R3)"} "Rebuttal on C1 -- round #2" 
+ A2 A {supported by F8 G "Sequence Manager has clearance for being malicious (M1)"} "Mitigates R1 -- round #3"
+ 
+ A3 A {supported by F9 G "RBAC policies will stop unauthorised access (M2)"} "Mitigates R2 -- round #3"

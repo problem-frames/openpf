@@ -12,24 +12,17 @@ R13 rebuts A1
 M1 mitigates R13
 
 //(given grounds G1 warranted by W1 thus claim C1) 
-A1 A {
-	claim C1 C "Airplanes transmit accurate positions (AP!XMIT)"
+A1 A {	
 	supported by G1 G  "Received GPS positions are accurate (AP!RECV & assumptions)"
-	warranted by W1 A {
-		claim WC1 C "Calculations are accurate (assumption)"
-	}
-}
+	warranted by W1 A "Calculations are accurate (assumption)"
+} "Airplanes transmit accurate positions (AP!XMIT)"
 
-R11 A {
-	claim AR11 C "Airplane's GPS sabotaged. (SR2)"
-}
+R11 A "Airplane's GPS sabotaged. (SR2)"
 
-R12 A {
-	claim AR12 C "ADS-B Transmitter sabotaged. (SR2)"
-}
 
-R13 A {
-	claim AR13 C "Aircrew xmits wrong pos/ID. (SR1)"
-}
+R12 A "ADS-B Transmitter sabotaged. (SR2)"
 
-M1 A { claim MC1 C "I like your argument" }
+
+M1 A "I like your argument" 
+
+R13 A "Aircrew xmits wrong pos/ID. (SR1)"

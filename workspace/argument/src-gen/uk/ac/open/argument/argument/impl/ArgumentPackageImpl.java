@@ -16,7 +16,6 @@ import uk.ac.open.argument.argument.Argument;
 import uk.ac.open.argument.argument.ArgumentDiagram;
 import uk.ac.open.argument.argument.ArgumentFactory;
 import uk.ac.open.argument.argument.ArgumentPackage;
-import uk.ac.open.argument.argument.Claim;
 import uk.ac.open.argument.argument.Fact;
 import uk.ac.open.argument.argument.Link;
 import uk.ac.open.argument.argument.Mitigates;
@@ -58,13 +57,6 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * @generated
    */
   private EClass factEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass claimEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -245,7 +237,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getArgument_Claim()
+  public EReference getArgument_Grounds()
   {
     return (EReference)argumentEClass.getEStructuralFeatures().get(0);
   }
@@ -255,19 +247,9 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getArgument_Grounds()
-  {
-    return (EReference)argumentEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getArgument_Warrants()
   {
-    return (EReference)argumentEClass.getEStructuralFeatures().get(2);
+    return (EReference)argumentEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -278,16 +260,6 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
   public EClass getFact()
   {
     return factEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getClaim()
-  {
-    return claimEClass;
   }
 
   /**
@@ -381,13 +353,10 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
     createEAttribute(nodeEClass, NODE__DESCRIPTION);
 
     argumentEClass = createEClass(ARGUMENT);
-    createEReference(argumentEClass, ARGUMENT__CLAIM);
     createEReference(argumentEClass, ARGUMENT__GROUNDS);
     createEReference(argumentEClass, ARGUMENT__WARRANTS);
 
     factEClass = createEClass(FACT);
-
-    claimEClass = createEClass(CLAIM);
 
     linkEClass = createEClass(LINK);
     createEReference(linkEClass, LINK__FROM);
@@ -429,7 +398,6 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
     // Add supertypes to classes
     argumentEClass.getESuperTypes().add(this.getNode());
     factEClass.getESuperTypes().add(this.getNode());
-    claimEClass.getESuperTypes().add(this.getNode());
     rebutsEClass.getESuperTypes().add(this.getLink());
     mitigatesEClass.getESuperTypes().add(this.getLink());
 
@@ -445,13 +413,10 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
     initEAttribute(getNode_Description(), ecorePackage.getEString(), "description", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(argumentEClass, Argument.class, "Argument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getArgument_Claim(), this.getClaim(), null, "claim", null, 0, 1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getArgument_Grounds(), this.getFact(), null, "grounds", null, 0, -1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getArgument_Warrants(), this.getNode(), null, "warrants", null, 0, -1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(factEClass, Fact.class, "Fact", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(claimEClass, Claim.class, "Claim", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(linkEClass, Link.class, "Link", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getLink_From(), this.getArgument(), null, "from", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -23,7 +23,7 @@ public class ArgumentArgumentGroundsCompartmentItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (ArgumentElementTypes.Fact_3002 == req.getElementType()) {
+		if (ArgumentElementTypes.Fact_3001 == req.getElementType()) {
 			return getGEFWrapper(new Fact2CreateCommand(req));
 		}
 		return super.getCreateCommand(req);

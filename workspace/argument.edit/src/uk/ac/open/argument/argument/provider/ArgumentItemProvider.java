@@ -78,7 +78,6 @@ public class ArgumentItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ArgumentPackage.Literals.ARGUMENT__CLAIM);
 			childrenFeatures.add(ArgumentPackage.Literals.ARGUMENT__GROUNDS);
 			childrenFeatures.add(ArgumentPackage.Literals.ARGUMENT__WARRANTS);
 		}
@@ -135,7 +134,6 @@ public class ArgumentItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Argument.class)) {
-			case ArgumentPackage.ARGUMENT__CLAIM:
 			case ArgumentPackage.ARGUMENT__GROUNDS:
 			case ArgumentPackage.ARGUMENT__WARRANTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -157,18 +155,46 @@ public class ArgumentItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ArgumentPackage.Literals.ARGUMENT__CLAIM,
-				 ArgumentFactory.eINSTANCE.createClaim()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(ArgumentPackage.Literals.ARGUMENT__GROUNDS,
 				 ArgumentFactory.eINSTANCE.createFact()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(ArgumentPackage.Literals.ARGUMENT__WARRANTS,
+				 ArgumentFactory.eINSTANCE.createNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArgumentPackage.Literals.ARGUMENT__WARRANTS,
 				 ArgumentFactory.eINSTANCE.createArgument()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArgumentPackage.Literals.ARGUMENT__WARRANTS,
+				 ArgumentFactory.eINSTANCE.createFact()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == ArgumentPackage.Literals.ARGUMENT__GROUNDS ||
+			childFeature == ArgumentPackage.Literals.ARGUMENT__WARRANTS;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

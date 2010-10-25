@@ -42,36 +42,31 @@ public class ArgumentModelingAssistantProvider extends
 		IGraphicalEditPart editPart = (IGraphicalEditPart) host
 				.getAdapter(IGraphicalEditPart.class);
 		if (editPart instanceof ArgumentDiagramEditPart) {
-			ArrayList<IElementType> types = new ArrayList<IElementType>(3);
+			ArrayList<IElementType> types = new ArrayList<IElementType>(2);
 			types.add(ArgumentElementTypes.Argument_2001);
 			types.add(ArgumentElementTypes.Fact_2002);
-			types.add(ArgumentElementTypes.Claim_2003);
 			return types;
 		}
 		if (editPart instanceof ArgumentEditPart) {
-			ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-			types.add(ArgumentElementTypes.Claim_3001);
-			types.add(ArgumentElementTypes.Fact_3002);
+			ArrayList<IElementType> types = new ArrayList<IElementType>(1);
+			types.add(ArgumentElementTypes.Fact_3001);
 			return types;
 		}
 		if (editPart instanceof Argument2EditPart) {
-			ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-			types.add(ArgumentElementTypes.Claim_3001);
-			types.add(ArgumentElementTypes.Fact_3002);
+			ArrayList<IElementType> types = new ArrayList<IElementType>(1);
+			types.add(ArgumentElementTypes.Fact_3001);
 			return types;
 		}
 		if (editPart instanceof ArgumentArgumentWarrantsCompartmentEditPart) {
-			ArrayList<IElementType> types = new ArrayList<IElementType>(3);
-			types.add(ArgumentElementTypes.Argument_3003);
-			types.add(ArgumentElementTypes.Fact_3004);
-			types.add(ArgumentElementTypes.Claim_3005);
+			ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+			types.add(ArgumentElementTypes.Argument_3002);
+			types.add(ArgumentElementTypes.Fact_3003);
 			return types;
 		}
 		if (editPart instanceof ArgumentArgumentWarrantsCompartment2EditPart) {
-			ArrayList<IElementType> types = new ArrayList<IElementType>(3);
-			types.add(ArgumentElementTypes.Argument_3003);
-			types.add(ArgumentElementTypes.Fact_3004);
-			types.add(ArgumentElementTypes.Claim_3005);
+			ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+			types.add(ArgumentElementTypes.Argument_3002);
+			types.add(ArgumentElementTypes.Fact_3003);
 			return types;
 		}
 		return Collections.EMPTY_LIST;

@@ -1,0 +1,11 @@
+[comment encoding = UTF-8 /]
+[module generate('http://www.ac.uk/open/argument/Argument')/]
+[template public generate(d: ArgumentDiagram)]
+[file (d.name.toString().concat('.e'), false)]
+
+[for (dom: Node | d.nodes) ]
+predicate [dom.name/](domain,time)
+[/for]	
+[/file]
+	
+[/template]

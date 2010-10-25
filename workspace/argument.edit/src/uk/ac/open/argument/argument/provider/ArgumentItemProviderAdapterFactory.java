@@ -168,29 +168,6 @@ public class ArgumentItemProviderAdapterFactory extends ArgumentAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link uk.ac.open.argument.argument.Claim} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ClaimItemProvider claimItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link uk.ac.open.argument.argument.Claim}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createClaimAdapter() {
-		if (claimItemProvider == null) {
-			claimItemProvider = new ClaimItemProvider(this);
-		}
-
-		return claimItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link uk.ac.open.argument.argument.Link} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -362,7 +339,6 @@ public class ArgumentItemProviderAdapterFactory extends ArgumentAdapterFactory i
 		if (nodeItemProvider != null) nodeItemProvider.dispose();
 		if (argumentItemProvider != null) argumentItemProvider.dispose();
 		if (factItemProvider != null) factItemProvider.dispose();
-		if (claimItemProvider != null) claimItemProvider.dispose();
 		if (linkItemProvider != null) linkItemProvider.dispose();
 		if (rebutsItemProvider != null) rebutsItemProvider.dispose();
 		if (mitigatesItemProvider != null) mitigatesItemProvider.dispose();

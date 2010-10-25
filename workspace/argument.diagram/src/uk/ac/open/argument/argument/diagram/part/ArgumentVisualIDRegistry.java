@@ -9,8 +9,6 @@ import org.eclipse.gmf.runtime.notation.View;
 import uk.ac.open.argument.argument.ArgumentDiagram;
 import uk.ac.open.argument.argument.ArgumentPackage;
 import uk.ac.open.argument.argument.diagram.edit.parts.Argument2EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentClaimCompartment2EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentClaimCompartmentEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentGroundsCompartment2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentGroundsCompartmentEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentWarrantsCompartment2EditPart;
@@ -19,12 +17,6 @@ import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDiagramEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentName2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameEditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.Claim2EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.Claim3EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.ClaimEditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.ClaimName2EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.ClaimName3EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.ClaimNameEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.Fact2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.Fact3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.FactEditPart;
@@ -150,16 +142,6 @@ public class ArgumentVisualIDRegistry {
 					domainElement.eClass())) {
 				return FactEditPart.VISUAL_ID;
 			}
-			if (ArgumentPackage.eINSTANCE.getClaim().isSuperTypeOf(
-					domainElement.eClass())) {
-				return ClaimEditPart.VISUAL_ID;
-			}
-			break;
-		case ArgumentArgumentClaimCompartmentEditPart.VISUAL_ID:
-			if (ArgumentPackage.eINSTANCE.getClaim().isSuperTypeOf(
-					domainElement.eClass())) {
-				return Claim2EditPart.VISUAL_ID;
-			}
 			break;
 		case ArgumentArgumentGroundsCompartmentEditPart.VISUAL_ID:
 			if (ArgumentPackage.eINSTANCE.getFact().isSuperTypeOf(
@@ -176,16 +158,6 @@ public class ArgumentVisualIDRegistry {
 					domainElement.eClass())) {
 				return Fact3EditPart.VISUAL_ID;
 			}
-			if (ArgumentPackage.eINSTANCE.getClaim().isSuperTypeOf(
-					domainElement.eClass())) {
-				return Claim3EditPart.VISUAL_ID;
-			}
-			break;
-		case ArgumentArgumentClaimCompartment2EditPart.VISUAL_ID:
-			if (ArgumentPackage.eINSTANCE.getClaim().isSuperTypeOf(
-					domainElement.eClass())) {
-				return Claim2EditPart.VISUAL_ID;
-			}
 			break;
 		case ArgumentArgumentGroundsCompartment2EditPart.VISUAL_ID:
 			if (ArgumentPackage.eINSTANCE.getFact().isSuperTypeOf(
@@ -201,10 +173,6 @@ public class ArgumentVisualIDRegistry {
 			if (ArgumentPackage.eINSTANCE.getFact().isSuperTypeOf(
 					domainElement.eClass())) {
 				return Fact3EditPart.VISUAL_ID;
-			}
-			if (ArgumentPackage.eINSTANCE.getClaim().isSuperTypeOf(
-					domainElement.eClass())) {
-				return Claim3EditPart.VISUAL_ID;
 			}
 			break;
 		}
@@ -239,15 +207,9 @@ public class ArgumentVisualIDRegistry {
 			if (FactEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (ClaimEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
 			break;
 		case ArgumentEditPart.VISUAL_ID:
 			if (ArgumentNameEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (ArgumentArgumentClaimCompartmentEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (ArgumentArgumentGroundsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
@@ -262,16 +224,6 @@ public class ArgumentVisualIDRegistry {
 				return true;
 			}
 			break;
-		case ClaimEditPart.VISUAL_ID:
-			if (ClaimNameEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Claim2EditPart.VISUAL_ID:
-			if (ClaimName2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
 		case Fact2EditPart.VISUAL_ID:
 			if (FactName2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
@@ -279,9 +231,6 @@ public class ArgumentVisualIDRegistry {
 			break;
 		case Argument2EditPart.VISUAL_ID:
 			if (ArgumentName2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (ArgumentArgumentClaimCompartment2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (ArgumentArgumentGroundsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
@@ -293,16 +242,6 @@ public class ArgumentVisualIDRegistry {
 			break;
 		case Fact3EditPart.VISUAL_ID:
 			if (FactName3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Claim3EditPart.VISUAL_ID:
-			if (ClaimName3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case ArgumentArgumentClaimCompartmentEditPart.VISUAL_ID:
-			if (Claim2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -318,14 +257,6 @@ public class ArgumentVisualIDRegistry {
 			if (Fact3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Claim3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case ArgumentArgumentClaimCompartment2EditPart.VISUAL_ID:
-			if (Claim2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
 			break;
 		case ArgumentArgumentGroundsCompartment2EditPart.VISUAL_ID:
 			if (Fact2EditPart.VISUAL_ID == nodeVisualID) {
@@ -337,9 +268,6 @@ public class ArgumentVisualIDRegistry {
 				return true;
 			}
 			if (Fact3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Claim3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;

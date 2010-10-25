@@ -29,4 +29,3 @@ Bundle-Activator: uk.ac.open.argument.argument.diagram.part.ArgumentDi
  agramEditorPlugin
 Bundle-SymbolicName: argument.diagram; singleton:=true
 
-

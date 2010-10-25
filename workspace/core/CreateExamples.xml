@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet
+      title="Create the Examples project">
+   <intro>
+      <description>
+         <b>You can create a project called &quot;Examples&quot; by</b>
+      </description>
+   </intro>
+   <item
+         title="Click on the button">
+      <description>
+         <b>Click on the &lt;img src=&quot;example.gif&quot;/&gt; button</b>
+      </description>
+   </item>
+</cheatsheet>
