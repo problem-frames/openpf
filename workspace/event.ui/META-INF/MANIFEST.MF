@@ -1,25 +1,21 @@
 Manifest-Version: 1.0
-Export-Package: uk.ac.open.event.ui,
- uk.ac.open.event.ui.contentassist,
- uk.ac.open.event.ui.contentassist.antlr,
- uk.ac.open.event.ui.contentassist.antlr.internal;x-internal:=true,
- uk.ac.open.event.ui.internal;x-internal:=true,
- uk.ac.open.event.ui.labeling,
- uk.ac.open.event.ui.outline,
- uk.ac.open.event.ui.quickfix,
- uk.ac.open.groundtram
 Require-Bundle: event;visibility:=reexport,org.eclipse.ui.editors;bund
  le-version="3.5.0",org.eclipse.ui.ide;bundle-version="3.5.0",org.ecli
  pse.xtext.ui,org.eclipse.xtext.ui.shared,org.eclipse.ui,org.eclipse.x
  text.builder,org.antlr.runtime
+Export-Package: uk.ac.open.event.ui,uk.ac.open.event.ui.contentassist,
+ uk.ac.open.event.ui.contentassist.antlr,uk.ac.open.event.ui.contentas
+ sist.antlr.internal;x-internal:=true,uk.ac.open.event.ui.internal;x-i
+ nternal:=true,uk.ac.open.event.ui.labeling,uk.ac.open.event.ui.outlin
+ e,uk.ac.open.event.ui.quickfix,uk.ac.open.groundtram
 Bundle-Vendor: Yijun Yu
 Bundle-ActivationPolicy: lazy
 Bundle-Version: 1.0.0
 Bundle-Name: event.ui
-Bundle-Activator: uk.ac.open.event.ui.internal.EventCalculusActivator
 Bundle-ManifestVersion: 2
-Import-Package: org.apache.log4j
+Bundle-Activator: uk.ac.open.event.ui.internal.EventCalculusActivator
 Bundle-SymbolicName: event.ui; singleton:=true
+Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 
 

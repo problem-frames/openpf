@@ -4,12 +4,6 @@
 <product name="Problem Analysis Tool" uid="openre" id="core.openre" application="org.eclipse.ui.ide.workbench" version="1.0.0" useFeatures="true" includeLaunchers="true">
 
    <configIni use="default">
-<!--
-      <macosx>/problem/config.ini</macosx>
-      <linux>/problem/config.ini</linux>
-      <solaris>/problem/config.ini</solaris>
-      <win32>/problem/config.ini</win32>
--->
    </configIni>
 
    <launcherArgs>
@@ -95,6 +89,8 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <plugin id="argument.diagram.extensions"/>
       <plugin id="argument.edit"/>
       <plugin id="argument.ui"/>
+      <plugin id="argument2ec"/>
+      <plugin id="argument2ec.ui"/>
       <plugin id="change"/>
       <plugin id="com.google.collect"/>
       <plugin id="com.google.inject"/>
@@ -447,8 +443,8 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <plugin id="org.eclipse.jdt.junit.runtime"/>
       <plugin id="org.eclipse.jdt.junit4.runtime"/>
       <plugin id="org.eclipse.jdt.launching"/>
-      <plugin id="org.eclipse.jdt.launching.macosx"/>
-      <plugin id="org.eclipse.jdt.launching.ui.macosx"/>
+      <plugin id="org.eclipse.jdt.launching.macosx" fragment=""/>
+      <plugin id="org.eclipse.jdt.launching.ui.macosx" fragment=""/>
       <plugin id="org.eclipse.jdt.ui"/>
       <plugin id="org.eclipse.jem.util"/>
       <plugin id="org.eclipse.jface"/>
