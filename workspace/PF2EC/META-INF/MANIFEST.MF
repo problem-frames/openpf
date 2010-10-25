@@ -1,11 +1,12 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Acceleo PF2EC Module Runtime Plug-in
-Bundle-SymbolicName: PF2EC
+Bundle-SymbolicName: PF2EC;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: PF2EC.Activator
 Bundle-Vendor: Eclipse Modeling Project
-Require-Bundle: org.eclipse.core.runtime, 
+Require-Bundle: core,
+ org.eclipse.core.runtime, 
  org.eclipse.emf.ecore,
  org.eclipse.emf.ecore,
  org.eclipse.emf.ecore.xmi,

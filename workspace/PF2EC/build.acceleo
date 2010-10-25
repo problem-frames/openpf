@@ -21,7 +21,7 @@
 	<target name="post.gather.bin.parts">
 		<acceleoCompiler 
 			sourceFolders="${target.folder}" 
-			dependencies="">
+			dependencies="${target.folder}/../core;">
 		</acceleoCompiler>
 	</target>	
 

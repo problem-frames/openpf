@@ -24,17 +24,17 @@ predicate Trajectory(fluent,time,fluent,offset)
 
 ; specific for the PF2EC generation
 reified sort domain
-[for (dom: Node | d.nodes) ]
+    [for (dom: Node | d.nodes) ]
 predicate [dom.name/](domain,time)
-[/for]
+    [/for]
     [for (dom: Node | d.nodes)]
       [for (hidden: Phenomenon | dom.hiddenPhenomena)]
        [if (hidden.type.toString() ='state')]      
 fluent [hidden.name/]_[dom.name/]()
        [/if]
-       [/for]
       [/for]
-      [for (interface: Link | d.links)]
+    [/for]
+    [for (interface: Link | d.links)]
       [for (shared: Phenomenon | interface.phenomena)]
 		[if (shared.type.toString() = 'event')]  
 event [shared.name/]_[interface.description/]()

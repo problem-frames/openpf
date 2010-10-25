@@ -7,31 +7,39 @@
     <package 
        uri = "http://open.ac.uk/problem" 
        class = "uk.ac.open.problem.ProblemPackage"
-       genModel = "uk/ac/open/problem/Problem.genmodel" /> 
-	
+       genModel = "uk/ac/open/problem/Problem.genmodel" /> 	
   </extension>
+  
   <extension point="core.example">
-      <example file="CommandedBehaviour.problem"/>
-      <example file="CommandedBehaviour.png"/>
-      <example file="InformationDisplay.problem"/>
-      <example file="InformationDisplay.png"/>
-      <example file="RequiredBehaviour.problem"/>
-      <example file="RequiredBehaviour.png"/>
-      <example file="Transformation.problem"/>
-      <example file="Transformation.png"/>
-      <example file="Workpiece.problem"/>
-      <example file="Workpiece.png"/>
-      <example file="LightController.problem"/>
-      <example file="SluiceGateInteractive.problem"/>
-      <example file="SluiceGateTimed.problem"/>
-      <example file="zooturnstile1.problem"/>
-      <example file="ads-b-pwd.problem"/>
-      <example file="ads-b-pwd-attack.problem"/>
-      <example file="library.problem"/>
-      <example file="openpf.problem"/>
-      <example file="SecuReqEngforEvolvingSys.pdf"/>
+      <!-- local -->
+      <example file="Jackson/CommandedBehaviour.problem"/>
+      <example file="Jackson/CommandedBehaviour.png"/>
+      <example file="Jackson/InformationDisplay.problem"/>
+      <example file="Jackson/InformationDisplay.png"/>
+      <example file="Jackson/RequiredBehaviour.problem"/>
+      <example file="Jackson/RequiredBehaviour.png"/>
+      <example file="Jackson/Transformation.problem"/>
+      <example file="Jackson/Transformation.png"/>
+      <example file="Jackson/Workpiece.problem"/>
+      <example file="Jackson/Workpiece.png"/>
+      <example file="Jackson/LightController.problem"/>
+      <example file="Jackson/SluiceGateInteractive.problem"/>
+      <example file="Jackson/SluiceGateTimed.problem"/>
+      <example file="Jackson/zooturnstile1.problem"/>
+      <example file="ADS-B/ads-b-pwd.problem"/>
+      <example file="ADS-B/ads-b-pwd-attack.problem"/>
+      <example file="Jackson/library.problem"/>
+      <example file="OpenPF/openpf.problem"/>
+      <example file="OpenPF/openpf-1.problem"/>
+      <example file="OpenPF/openpf-1.TestCase.e"/>
+      <example file="SecureChange/SecuReqEngforEvolvingSys.pdf"/>
+      <example file="SecureChange/Tun10SSIRI.pdf"/>
       <example file="Problem.xtext"/>
       <example file="Problem.ecore"/>
-      <example file="Tun10SSIRI.pdf"/>
+      <!-- in protected area -->
+      <example file="http://computing-research.open.ac.uk/trac/openpf/raw-attachment/wiki/examples/AMAN-Before.problem"/>
+      <example file="http://computing-research.open.ac.uk/trac/openpf/raw-attachment/wiki/examples/SWIMNetwork.problem"/>
+      <!-- in public area -->
+      <example file="http://mcs.open.ac.uk/yy66/paper/problems.dir"/>
   </extension>
 </plugin>

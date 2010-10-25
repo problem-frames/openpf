@@ -1,0 +1,25 @@
+problem: AMANBefore 
+
+LA -- AB // shared phenomena
+ {event NewReaderRecord } "a"
+
+AB -- LB // shared phenomena
+ {event commands} "b"
+
+Sec ~~ LB // reference phenomena
+ {state PersonalDetails } "g"
+
+Sec ~> LA // constraint phenomena
+ {state MembershipDetails} "h"
+
+AB M
+"AMAN Before"
+
+Sec // requirement
+"Protection of FDD info"
+
+LB C 
+"Legacy System B"
+
+LA C
+"Legacy Systen A"

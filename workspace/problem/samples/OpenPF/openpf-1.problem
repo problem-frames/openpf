@@ -1,0 +1,27 @@
+problem:  TestCase1
+
+ExampleCreator -- User {
+	event ClickFrameButton
+} "a"
+
+ExampleCreator--PF { 
+	event CreateFolder,
+	event CreateFile
+} "b"
+	
+
+Req~~User {
+	event ClickFrameButton	
+} "c"
+
+Req~>PF {
+	state FileExists
+} "d"
+
+Req "Create Example Folder"
+
+User B 
+
+PF X "Project Folder"
+
+ExampleCreator M

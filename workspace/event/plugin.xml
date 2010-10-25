@@ -13,11 +13,6 @@
 
   <extension point="core.example">
   	  <example file="EventCalculus.xtext"/>
-      <example file="openpf-1.problem"/>
-      <example file="sit1.e"/>
-      <example file="sit2.e"/>
-      <example file="sit3.e"/>
-      <example file="sit4.e"/>
       <example file="COPYRIGHT"/>
       <example file="decreasoner.py"/>
       <example file="decreasoner.pyc"/>
@@ -42,6 +37,12 @@
       <example file="binary/win32/solvers/relsat"/>
       <example file="binary/win32/solvers/walksat"/>
 -->
+      <example file="examples/OpenPF/openpf-1.problem"/>
+      <example file="examples/OpenPF/openpf-1.TestCase.e"/>
+      <example file="examples/SecureChange/sit1.e"/>
+      <example file="examples/SecureChange/sit2.e"/>
+      <example file="examples/SecureChange/sit3.e"/>
+      <example file="examples/SecureChange/sit4.e"/>
       <example file="examples/AkmanEtAl2004/ZooTest1.e"/>
       <example file="examples/AkmanEtAl2004/ZooTest1.txt"/>
       <example file="examples/AkmanEtAl2004/ZooTest2.e"/>
