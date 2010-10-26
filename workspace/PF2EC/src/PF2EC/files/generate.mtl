@@ -51,17 +51,26 @@ fluent [shared.name/]_[interface.description/]()
 ; please update the rules involving hidden phenomena
 ; [dom.hiddenPhenomena->select(state: Phenomenon | state.type.toString()='state')
 	->collect('HoldsAt('+name+'_' +dom.name+'(),time)')
-	->sep('\n; ')/]
-; and shared phenomena from the domain
+	->sep('\\n; ')/]
+; &
 ; [for (inter: Link | d.links) ][d.links->select(interface: Link| interface = inter and interface.from = dom).phenomena
 	->select(event: Phenomenon | event.type.toString()='event')
 	->collect('Happens('+name+'_' +inter.description+'(),time)')
-		->sep('\n; ')/][/for]
-; and shared phenomena to the domain
+		->sep('\\n; ')/][/for]
+; [for (inter: Link | d.links) ][d.links->select(interface: Link| interface = inter and interface.from = dom).phenomena
+	->select(event: Phenomenon | event.type.toString()='state')
+	->collect('HoldsAt('+name+'_' +inter.description+'(),time)')
+		->sep('\\n; ')/][/for]
+; ->
+; &
 ; [for (inter: Link | d.links) ][d.links->select(interface: Link| interface = inter and interface.to = dom).phenomena
 		->select(event: Phenomenon | event.type.toString()='event')
-		->collect('Happens('+name+'_' +inter.description+'(),time)')
-		->sep('\n; ')/][/for]
+		->collect('Happens('+name+'_' +inter.description+'(),time+1)')
+		->sep('\\n; ')/][/for]
+; [for (inter: Link | d.links) ][d.links->select(interface: Link| interface = inter and interface.to = dom).phenomena
+		->select(event: Phenomenon | event.type.toString()='state')
+		->collect('Happens('+name+'_' +inter.description+'(),time+1)')
+		->sep('\\n; ')/][/for]
 ; [/protected]
 .
 [/for]
