@@ -1,17 +1,17 @@
 problem: #Information Display#
 
-DRW :"Display Real World" 
+IM -- RW "b"
 
-IM M :"Information Machine" 
+IM -- Dis "c"
 
-Dis C :"Display" 
+RW ~~ DRW "a"
 
-RW C : "Real World"
+Dis ~> DRW "d"
 
-IM -- RW : "b"
+DRW "Display Real World" 
 
-IM -- Dis : "c"
+IM M "Information Machine" 
 
-DRW ~~ RW : "a"
+Dis C "Display"
 
-DRW ~> Dis : "d"
+RW C "Real World"

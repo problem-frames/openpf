@@ -1,13 +1,11 @@
 problem: #Required Behavior#
 
-RB R :"Required Behavior" 
+CD~>RB "a"
 
-CM M :"Control Machine" 
+CM--CD "b"
 
-CD C :"Controlled Domain" 
+RB "Required Behavior"
 
-RB ~> CD
-:"a"
+CM M "Control Machine"
 
-CM -- CD
-:"b"
+CD C "Controlled Domain"

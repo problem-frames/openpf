@@ -11,9 +11,9 @@ import java.util.Set;
 
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.commands.operations.OperationHistoryFactory;
-import org.eclipse.core.internal.resources.ResourceException;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IResource;
+import org.eclipse.core.resources.IWorkspace;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IAdaptable;
@@ -22,20 +22,23 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.SubProgressMonitor;
+import org.eclipse.emf.common.ui.editor.ProblemEditorPart;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
-import org.eclipse.emf.workspace.util.WorkspaceSynchronizer;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gmf.runtime.common.core.command.CommandResult;
+import org.eclipse.gmf.runtime.diagram.core.preferences.PreferencesHint;
 import org.eclipse.gmf.runtime.diagram.core.services.ViewService;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IPrimaryEditPart;
+import org.eclipse.gmf.runtime.diagram.ui.image.ImageFileFormat;
 import org.eclipse.gmf.runtime.diagram.ui.parts.IDiagramGraphicalViewer;
 import org.eclipse.gmf.runtime.diagram.ui.parts.IDiagramWorkbenchPart;
+import org.eclipse.gmf.runtime.diagram.ui.render.util.CopyToImageUtil;
 import org.eclipse.gmf.runtime.emf.commands.core.command.AbstractTransactionalCommand;
 import org.eclipse.gmf.runtime.emf.core.GMFEditingDomainFactory;
 import org.eclipse.gmf.runtime.emf.core.util.EMFCoreUtil;
@@ -45,9 +48,12 @@ import org.eclipse.jface.dialogs.IDialogSettings;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.swt.widgets.Shell;
+import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IWorkbenchPage;
+import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
+import org.eclipse.ui.ide.IDE;
 import org.eclipse.ui.part.FileEditorInput;
 
 import uk.ac.open.problem.ProblemDiagram;
@@ -153,7 +159,9 @@ public class ProblemDiagramEditorUtil {
 	}
 
 	/**
-	 * This method should be called within a workspace modify operation since it creates resources.
+	 * This method should be called within a workspace modify operation since it
+	 * creates resources.
+	 * 
 	 * @generated NOT
 	 */
 	public static Resource createDiagram(URI diagramURI, URI modelURI,
@@ -186,11 +194,11 @@ public class ProblemDiagramEditorUtil {
 				}
 
 				try {
-					if (modelResource.getURI().toFileString()==null) {
+					if (modelResource.getURI().toFileString() == null) {
 						model.setName("default");
 						modelResource
-							.save(uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil
-									.getSaveOptions());
+								.save(uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil
+										.getSaveOptions());
 					}
 					diagramResource
 							.save(uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil
@@ -198,7 +206,7 @@ public class ProblemDiagramEditorUtil {
 				} catch (IOException e) {
 					ProblemDiagramEditorPlugin.getInstance().logError(
 							"Unable to store model and diagram resources", e); //$NON-NLS-1$
-					}
+				}
 				return CommandResult.newOKCommandResult();
 			}
 		};
@@ -209,13 +217,68 @@ public class ProblemDiagramEditorUtil {
 			ProblemDiagramEditorPlugin.getInstance().logError(
 					"Unable to create model and diagram", e); //$NON-NLS-1$
 		}
+		IEditorPart openEditor = null;
+		IWorkbenchWindow dw = PlatformUI.getWorkbench()
+				.getActiveWorkbenchWindow();
+		try {
+			if (dw != null) {
+				IWorkbenchPage page = dw.getActivePage();
+				if (page != null) {
+					IWorkspace ws = ResourcesPlugin.getWorkspace();
+					IFile file = ws.getRoot().getFile(
+							new Path(diagramResource.getURI().toFileString()));
+					openEditor = IDE.openEditor(page, file, true);
+				}
+			}
+		} catch (PartInitException e) {
+		}
+		saveDiagramToImages(diagramResource, modelResource, openEditor);
 		return diagramResource;
 	}
 
+	private static void saveDiagramToImages(final Resource diagramResource,
+			final Resource modelResource, IEditorPart openEditor) {
+		try {
+			if (openEditor != null) {
+				IPath pdf_path = ResourcesPlugin
+						.getWorkspace()
+						.getRoot()
+						.getLocation()
+						.append("/"
+								+ modelResource.getURI()
+										.appendFileExtension("pdf")
+										.toFileString());
+				IPath png_path = ResourcesPlugin
+				.getWorkspace()
+				.getRoot()
+				.getLocation()
+				.append("/"
+						+ modelResource.getURI()
+								.appendFileExtension("png")
+								.toFileString());
+				CopyToImageUtil util = new CopyToImageUtil();
+				Diagram diagram = (Diagram) ((ProblemDiagramEditor) openEditor)
+						.getDiagram();
+				IProgressMonitor monitor = new NullProgressMonitor();
+				ImageFileFormat format = ImageFileFormat.PDF;
+				PreferencesHint preferencesHint = ProblemDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT;
+				util.copyToImage(diagram, pdf_path, format, monitor, preferencesHint);
+				util.copyToImage(diagram, png_path, format, monitor, preferencesHint);
+				openEditor.dispose();
+			}
+		} catch (PartInitException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (CoreException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
 	/**
-	 * Create a new instance of domain element associated with canvas.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Create a new instance of domain element associated with canvas. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	private static ProblemDiagram createInitialModel() {
@@ -223,9 +286,9 @@ public class ProblemDiagramEditorUtil {
 	}
 
 	/**
-	 * Store model element in the resource.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Store model element in the resource. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	private static void attachModelToResource(ProblemDiagram model,
@@ -277,7 +340,8 @@ public class ProblemDiagramEditorUtil {
 		@SuppressWarnings("unchecked")
 		List<EditPart> associatedParts = viewer.findEditPartsForElement(
 				elementID, IGraphicalEditPart.class);
-		// perform the possible hierarchy disjoint -> take the top-most parts only
+		// perform the possible hierarchy disjoint -> take the top-most parts
+		// only
 		for (EditPart nextPart : associatedParts) {
 			EditPart parentPart = nextPart.getParent();
 			while (parentPart != null && !associatedParts.contains(parentPart)) {
@@ -360,12 +424,16 @@ public class ProblemDiagramEditorUtil {
 		public final Map<EObject, View> getElement2ViewMap() {
 			if (element2ViewMap == null) {
 				element2ViewMap = new HashMap<EObject, View>();
-				// map possible notation elements to itself as these can't be found by view.getElement()
+				// map possible notation elements to itself as these can't be
+				// found by view.getElement()
 				for (EObject element : elementSet) {
 					if (element instanceof View) {
 						View view = (View) element;
 						if (view.getDiagram() == scope.getDiagram()) {
-							element2ViewMap.put(element, view); // take only those that part of our diagram
+							element2ViewMap.put(element, view); // take only
+																// those that
+																// part of our
+																// diagram
 						}
 					}
 				}
@@ -411,6 +479,6 @@ public class ProblemDiagramEditorUtil {
 			}
 			return complete;
 		}
-	} //LazyElement2ViewMap	
+	} // LazyElement2ViewMap
 
 }
