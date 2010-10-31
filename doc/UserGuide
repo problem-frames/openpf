@@ -2,13 +2,13 @@
 
  == User's Manual == 
 
- * Click at the toolbar button with an icon showing multiple paint frames, 
-   a new project Examples will be created
-   * Open > Generate Example Project
+ * The first time you run OpenPF, an Examples project will be created with a number of examples to start with.
+	 * If you happen to deleted some files in the Examples project, or you want to fetch the latest new examples, 
+	   click at the toolbar button with an icon showing multiple paint frames, 
+	   a new project Examples will be created, or select the "Open > Generate Example Project" menu.
  * Select a file with ".problem" extension under the Examples project folder
-	* You can also create your own problem frames by either editing a file
-	  with the ".problem" extension, or 
-	* by creating a new diagram using the Problem Diagram editor
+	* You can also create your own problem frames by either editing a file with the ".problem" extension, or 
+	  by creating a new diagram using the Problem Diagram editor
  * Edit:
 	* The syntax highlighting text editor makes sure you are entering a
 	  valid problem diagram textually. If you save the text, a diagram will 
@@ -19,9 +19,13 @@
  * Save when you are using the text editor
     * If it is saved from the .problem editor
 	 * The file with ".problem_diagram" extension will be generated for the GMF diagram
-
  * The subfolder "situation" contains a prototype (minimal graphical) language for the WP3 metamodel
    in the securechange.eu project.
    We are improving the presentation of the language so it is easier to use.
-
  * We are working on integrating i*/OpenOME and SI* once all the tools are in sync with Helios
+
+ * There is also an experimental support to use the OpenPF remotely through a Web browser
+	* points your browser to 
+		https://computing-research.open.ac.uk/trac/openpf/wiki/examples
+	* Look at the examples in the wiki, you need to contact y.yu@open.ac.uk or t.t.tun@open.ac.uk
+          to gain permission to use the wiki system.
