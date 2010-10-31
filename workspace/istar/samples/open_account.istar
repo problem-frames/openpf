@@ -1,4 +1,4 @@
-istar:
+istar OpenAccount:
   role Manager {
 	  goal #Manage Money#	  
 	  goal #Check Credit#        
