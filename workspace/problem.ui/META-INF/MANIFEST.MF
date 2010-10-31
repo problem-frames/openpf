@@ -21,7 +21,8 @@ Require-Bundle: org.eclipse.ui.editors;bundle-version="3.5.0",
  org.eclipse.emf.codegen.ecore,
  org.eclipse.xtext.ui,
  org.eclipse.xtext.ui.shared,
- org.eclipse.xtext.builder
+ org.eclipse.xtext.builder,
+ core;bundle-version="1.0.0"
 Bundle-Vendor: The Open University
 Bundle-Version: 1.0.0
 Bundle-ManifestVersion: 2
