@@ -16,7 +16,6 @@ import uk.ac.open.problem.Node;
 import uk.ac.open.problem.ProblemDiagram;
 import uk.ac.open.problem.ProblemFactory;
 import uk.ac.open.problem.diagram.providers.ElementInitializers;
-import uk.ac.open.problem.diagram.providers.ProblemElementTypes;
 
 /**
  * @generated

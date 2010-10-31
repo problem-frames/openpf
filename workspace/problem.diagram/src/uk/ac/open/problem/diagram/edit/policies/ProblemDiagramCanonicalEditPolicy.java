@@ -9,7 +9,11 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IAdaptable;
+import org.eclipse.core.runtime.IPath;
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.draw2d.geometry.Point;
 import org.eclipse.draw2d.geometry.Rectangle;
@@ -17,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.commands.Command;
+import org.eclipse.gmf.runtime.diagram.core.preferences.PreferencesHint;
 import org.eclipse.gmf.runtime.diagram.core.util.ViewUtil;
 import org.eclipse.gmf.runtime.diagram.ui.commands.DeferredLayoutCommand;
 import org.eclipse.gmf.runtime.diagram.ui.commands.ICommandProxy;
@@ -24,7 +29,9 @@ import org.eclipse.gmf.runtime.diagram.ui.commands.SetBoundsCommand;
 import org.eclipse.gmf.runtime.diagram.ui.commands.SetViewMutabilityCommand;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.CanonicalConnectionEditPolicy;
+import org.eclipse.gmf.runtime.diagram.ui.image.ImageFileFormat;
 import org.eclipse.gmf.runtime.diagram.ui.l10n.DiagramUIMessages;
+import org.eclipse.gmf.runtime.diagram.ui.render.util.CopyToImageUtil;
 import org.eclipse.gmf.runtime.diagram.ui.requests.CreateConnectionViewRequest;
 import org.eclipse.gmf.runtime.diagram.ui.requests.CreateViewRequest;
 import org.eclipse.gmf.runtime.diagram.ui.requests.RequestConstants;
@@ -53,6 +60,8 @@ import uk.ac.open.problem.diagram.edit.parts.Node7EditPart;
 import uk.ac.open.problem.diagram.edit.parts.Node8EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeEditPart;
 import uk.ac.open.problem.diagram.edit.parts.ProblemDiagramEditPart;
+import uk.ac.open.problem.diagram.part.ProblemDiagramEditorPlugin;
+import uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil;
 import uk.ac.open.problem.diagram.part.ProblemDiagramUpdater;
 import uk.ac.open.problem.diagram.part.ProblemLinkDescriptor;
 import uk.ac.open.problem.diagram.part.ProblemNodeDescriptor;
@@ -114,7 +123,7 @@ public class ProblemDiagramCanonicalEditPolicy extends CanonicalConnectionEditPo
 	}
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
 	protected void refreshSemantic() {
 		if (resolveSemanticElement() == null) {
@@ -249,6 +258,25 @@ public class ProblemDiagramCanonicalEditPolicy extends CanonicalConnectionEditPo
 		createdViews.addAll(createdConnectionViews);
 
 		makeViewsImmutable(createdViews);
+
+		Diagram diagram  = getDiagram();
+		IPath pdf_path = ProblemDiagramEditorUtil.pdf_paths.get(diagram);
+		IPath png_path = ProblemDiagramEditorUtil.png_paths.get(diagram);
+		if (pdf_path!=null && png_path!=null) {
+			CopyToImageUtil util = new CopyToImageUtil();
+			IProgressMonitor monitor = new NullProgressMonitor();
+			ImageFileFormat pdf_format = ImageFileFormat.PDF;
+			ImageFileFormat png_format = ImageFileFormat.PNG;
+			PreferencesHint preferencesHint = ProblemDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT;
+			System.out.println(host().getEditingDomain());
+	 		try {
+				util.copyToImage(diagram, pdf_path, pdf_format, monitor, preferencesHint);
+				util.copyToImage(diagram, png_path, png_format, monitor, preferencesHint);
+			} catch (CoreException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}		
+		}
 	}
 
 	/**

@@ -65,6 +65,9 @@ import uk.ac.open.problem.diagram.edit.parts.ProblemDiagramEditPart;
  */
 public class ProblemDiagramEditorUtil {
 
+	public static HashMap<Diagram, IPath> pdf_paths = new HashMap<Diagram, IPath>();
+	public static HashMap<Diagram, IPath> png_paths = new HashMap<Diagram, IPath>();
+
 	/**
 	 * @generated
 	 */
@@ -158,6 +161,10 @@ public class ProblemDiagramEditorUtil {
 		dialog.open();
 	}
 
+	public static IWorkbenchWindow dw = null;
+
+	static IEditorPart openEditor = null;
+
 	/**
 	 * This method should be called within a workspace modify operation since it
 	 * creates resources.
@@ -217,61 +224,67 @@ public class ProblemDiagramEditorUtil {
 			ProblemDiagramEditorPlugin.getInstance().logError(
 					"Unable to create model and diagram", e); //$NON-NLS-1$
 		}
-		IEditorPart openEditor = null;
-		IWorkbenchWindow dw = PlatformUI.getWorkbench()
-				.getActiveWorkbenchWindow();
-		try {
-			if (dw != null) {
-				IWorkbenchPage page = dw.getActivePage();
-				if (page != null) {
-					IWorkspace ws = ResourcesPlugin.getWorkspace();
-					IFile file = ws.getRoot().getFile(
-							new Path(diagramResource.getURI().toFileString()));
-					openEditor = IDE.openEditor(page, file, true);
+		PlatformUI.getWorkbench().getDisplay().syncExec(new Runnable() {
+			public void run() {
+				try {
+					dw = PlatformUI.getWorkbench().getActiveWorkbenchWindow();
+					if (dw != null) {
+						IWorkbenchPage page = dw.getActivePage();
+						if (page != null) {
+							IWorkspace ws = ResourcesPlugin.getWorkspace();
+							IFile file = ws.getRoot().getFile(
+									new Path(diagramResource.getURI()
+											.toFileString()));
+							openEditor = IDE.openEditor(page, file, true);
+						}
+					}
+				} catch (PartInitException e) {
 				}
 			}
-		} catch (PartInitException e) {
-		}
+		});
 		saveDiagramToImages(diagramResource, modelResource, openEditor);
 		return diagramResource;
 	}
 
-	private static void saveDiagramToImages(final Resource diagramResource,
+	public static void saveDiagramToImages(final Resource diagramResource,
 			final Resource modelResource, IEditorPart openEditor) {
-		try {
-			if (openEditor != null) {
-				IPath pdf_path = ResourcesPlugin
-						.getWorkspace()
-						.getRoot()
-						.getLocation()
-						.append("/"
-								+ modelResource.getURI()
-										.appendFileExtension("pdf")
-										.toFileString());
-				IPath png_path = ResourcesPlugin
-				.getWorkspace()
-				.getRoot()
-				.getLocation()
-				.append("/"
-						+ modelResource.getURI()
-								.appendFileExtension("png")
-								.toFileString());
-				CopyToImageUtil util = new CopyToImageUtil();
-				Diagram diagram = (Diagram) ((ProblemDiagramEditor) openEditor)
-						.getDiagram();
-				IProgressMonitor monitor = new NullProgressMonitor();
-				ImageFileFormat format = ImageFileFormat.PDF;
-				PreferencesHint preferencesHint = ProblemDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT;
-				util.copyToImage(diagram, pdf_path, format, monitor, preferencesHint);
-				util.copyToImage(diagram, png_path, format, monitor, preferencesHint);
-				openEditor.dispose();
-			}
-		} catch (PartInitException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (CoreException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		if (openEditor != null) {
+			final Diagram diagram = (Diagram) ((ProblemDiagramEditor) openEditor)
+					.getDiagram();
+			PlatformUI.getWorkbench().getDisplay().syncExec(new Runnable() {
+				public void run() {
+					IPath pdf_path = ResourcesPlugin
+							.getWorkspace()
+							.getRoot()
+							.getLocation()
+							.append("/"
+									+ modelResource.getURI()
+											.appendFileExtension("pdf")
+											.toFileString());
+					IPath png_path = ResourcesPlugin
+							.getWorkspace()
+							.getRoot()
+							.getLocation()
+							.append("/"
+									+ modelResource.getURI()
+											.appendFileExtension("png")
+											.toFileString());
+					IProgressMonitor monitor = new NullProgressMonitor();
+					ImageFileFormat pdf_format = ImageFileFormat.PDF;
+					ImageFileFormat png_format = ImageFileFormat.PNG;
+					PreferencesHint preferencesHint = ProblemDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT;
+					final CopyToImageUtil util = new CopyToImageUtil();
+					try {
+						util.copyToImage(diagram, pdf_path, pdf_format,
+								monitor, preferencesHint);
+						util.copyToImage(diagram, png_path, png_format,
+								monitor, preferencesHint);
+					} catch (CoreException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+			});
 		}
 	}
 

@@ -1,8 +1,6 @@
 package uk.ac.open.problem.diagram.expressions;
 
-import java.lang.ref.WeakReference;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.Map;
 
 import org.eclipse.core.runtime.IStatus;
@@ -12,16 +10,10 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.ocl.Environment;
 import org.eclipse.ocl.EvaluationEnvironment;
 import org.eclipse.ocl.ParserException;
-import org.eclipse.ocl.Query;
 import org.eclipse.ocl.ecore.EcoreFactory;
 import org.eclipse.ocl.ecore.OCL.Helper;
-import org.eclipse.ocl.expressions.OCLExpression;
-import org.eclipse.ocl.expressions.OperationCallExp;
-import org.eclipse.ocl.expressions.Variable;
-import org.eclipse.ocl.helper.OCLHelper;
 import org.eclipse.ocl.options.ParsingOptions;
-import org.eclipse.ocl.utilities.AbstractVisitor;
-import org.eclipse.ocl.utilities.PredefinedType;
+
 import uk.ac.open.problem.diagram.part.ProblemDiagramEditorPlugin;
 
 /**

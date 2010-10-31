@@ -19,6 +19,7 @@ import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
+
 import uk.ac.open.problem.diagram.edit.policies.ProblemBaseItemSemanticEditPolicy;
 import uk.ac.open.problem.diagram.expressions.ProblemOCLFactory;
 import uk.ac.open.problem.diagram.providers.ElementInitializers;

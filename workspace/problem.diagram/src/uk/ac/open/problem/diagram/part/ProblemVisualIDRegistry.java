@@ -43,7 +43,6 @@ import uk.ac.open.problem.diagram.edit.parts.NodeName7EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeNameDescriptionEditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeNameEditPart;
 import uk.ac.open.problem.diagram.edit.parts.ProblemDiagramEditPart;
-import uk.ac.open.problem.diagram.expressions.ProblemAbstractExpression;
 import uk.ac.open.problem.diagram.expressions.ProblemOCLFactory;
 
 /**

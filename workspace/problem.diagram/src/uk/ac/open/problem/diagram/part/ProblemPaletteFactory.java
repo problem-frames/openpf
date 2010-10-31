@@ -1,6 +1,5 @@
 package uk.ac.open.problem.diagram.part;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -11,8 +10,8 @@ import org.eclipse.gef.palette.PaletteRoot;
 import org.eclipse.gef.palette.ToolEntry;
 import org.eclipse.gmf.runtime.diagram.ui.tools.UnspecifiedTypeConnectionTool;
 import org.eclipse.gmf.runtime.diagram.ui.tools.UnspecifiedTypeCreationTool;
-
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
+
 import uk.ac.open.problem.diagram.providers.ProblemElementTypes;
 
 /**
