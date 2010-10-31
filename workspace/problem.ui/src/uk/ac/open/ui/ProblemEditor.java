@@ -197,7 +197,7 @@ public class ProblemEditor extends UncalEditor implements Runnable {
 			o.setName("#" + name + "#");
 		}
 	}
-
+	
 	public ProblemEditor() {
 		super();
 		Thread runner = new Thread(this);
@@ -206,6 +206,11 @@ public class ProblemEditor extends UncalEditor implements Runnable {
 	
 	public void run() {
 		while (true) {
+			try {
+				ResourcesPlugin.getWorkspace().getRoot().getProject("Examples").refreshLocal(IResource.DEPTH_INFINITE, null);
+			} catch (CoreException e1) {
+				e1.printStackTrace();
+			}
 			for (IResource add: added) {
 				ProblemEditor.saveModel(add);
 			}
