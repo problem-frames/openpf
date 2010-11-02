@@ -4,6 +4,7 @@ import org.eclipse.gef.commands.Command;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 
 import uk.ac.open.argument.argument.diagram.edit.commands.Argument2CreateCommand;
+import uk.ac.open.argument.argument.diagram.edit.commands.Fact2CreateCommand;
 import uk.ac.open.argument.argument.diagram.edit.commands.Fact3CreateCommand;
 import uk.ac.open.argument.argument.diagram.providers.ArgumentElementTypes;
 

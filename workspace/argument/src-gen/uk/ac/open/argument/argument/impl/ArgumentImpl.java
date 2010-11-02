@@ -7,12 +7,15 @@ package uk.ac.open.argument.argument.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -29,6 +32,7 @@ import uk.ac.open.argument.argument.Node;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link uk.ac.open.argument.argument.impl.ArgumentImpl#getRound <em>Round</em>}</li>
  *   <li>{@link uk.ac.open.argument.argument.impl.ArgumentImpl#getGrounds <em>Grounds</em>}</li>
  *   <li>{@link uk.ac.open.argument.argument.impl.ArgumentImpl#getWarrants <em>Warrants</em>}</li>
  * </ul>
@@ -38,6 +42,26 @@ import uk.ac.open.argument.argument.Node;
  */
 public class ArgumentImpl extends NodeImpl implements Argument
 {
+  /**
+   * The default value of the '{@link #getRound() <em>Round</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRound()
+   * @generated
+   * @ordered
+   */
+  protected static final String ROUND_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getRound() <em>Round</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRound()
+   * @generated
+   * @ordered
+   */
+  protected String round = ROUND_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getGrounds() <em>Grounds</em>}' containment reference list.
    * <!-- begin-user-doc -->
@@ -77,6 +101,29 @@ public class ArgumentImpl extends NodeImpl implements Argument
   protected EClass eStaticClass()
   {
     return ArgumentPackage.Literals.ARGUMENT;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getRound()
+  {
+    return round;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRound(String newRound)
+  {
+    String oldRound = round;
+    round = newRound;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.ARGUMENT__ROUND, oldRound, round));
   }
 
   /**
@@ -135,6 +182,8 @@ public class ArgumentImpl extends NodeImpl implements Argument
   {
     switch (featureID)
     {
+      case ArgumentPackage.ARGUMENT__ROUND:
+        return getRound();
       case ArgumentPackage.ARGUMENT__GROUNDS:
         return getGrounds();
       case ArgumentPackage.ARGUMENT__WARRANTS:
@@ -154,6 +203,9 @@ public class ArgumentImpl extends NodeImpl implements Argument
   {
     switch (featureID)
     {
+      case ArgumentPackage.ARGUMENT__ROUND:
+        setRound((String)newValue);
+        return;
       case ArgumentPackage.ARGUMENT__GROUNDS:
         getGrounds().clear();
         getGrounds().addAll((Collection<? extends Fact>)newValue);
@@ -176,6 +228,9 @@ public class ArgumentImpl extends NodeImpl implements Argument
   {
     switch (featureID)
     {
+      case ArgumentPackage.ARGUMENT__ROUND:
+        setRound(ROUND_EDEFAULT);
+        return;
       case ArgumentPackage.ARGUMENT__GROUNDS:
         getGrounds().clear();
         return;
@@ -196,12 +251,31 @@ public class ArgumentImpl extends NodeImpl implements Argument
   {
     switch (featureID)
     {
+      case ArgumentPackage.ARGUMENT__ROUND:
+        return ROUND_EDEFAULT == null ? round != null : !ROUND_EDEFAULT.equals(round);
       case ArgumentPackage.ARGUMENT__GROUNDS:
         return grounds != null && !grounds.isEmpty();
       case ArgumentPackage.ARGUMENT__WARRANTS:
         return warrants != null && !warrants.isEmpty();
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (round: ");
+    result.append(round);
+    result.append(')');
+    return result.toString();
   }
 
 } //ArgumentImpl

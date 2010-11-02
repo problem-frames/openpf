@@ -35,6 +35,7 @@ import uk.ac.open.argument.argument.Argument;
 import uk.ac.open.argument.argument.ArgumentDiagram;
 import uk.ac.open.argument.argument.Mitigates;
 import uk.ac.open.argument.argument.Rebuts;
+import uk.ac.open.argument.argument.Restores;
 import uk.ac.open.argument.argument.diagram.edit.helpers.ArgumentBaseEditHelper;
 import uk.ac.open.argument.argument.diagram.part.ArgumentDiagramEditorPlugin;
 import uk.ac.open.argument.argument.diagram.part.ArgumentVisualIDRegistry;
@@ -342,6 +343,14 @@ public class ArgumentBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
+		public boolean canCreateRestores_4003(ArgumentDiagram container,
+				Argument source, Argument target) {
+			return canExistRestores_4003(container, null, source, target);
+		}
+
+		/**
+		 * @generated
+		 */
 		public boolean canExistRebuts_4001(ArgumentDiagram container,
 				Rebuts linkInstance, Argument source, Argument target) {
 			return true;
@@ -352,6 +361,14 @@ public class ArgumentBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		 */
 		public boolean canExistMitigates_4002(ArgumentDiagram container,
 				Mitigates linkInstance, Argument source, Argument target) {
+			return true;
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canExistRestores_4003(ArgumentDiagram container,
+				Restores linkInstance, Argument source, Argument target) {
 			return true;
 		}
 	}

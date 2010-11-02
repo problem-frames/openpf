@@ -9,7 +9,7 @@ Node:
 
 Argument: name=ID "A"
 	('{'
-		//'claim' claim=Claim
+		('round' round=STRING)?
 		('supported by' (','? grounds+=Fact)*)?
 		('warranted by' (','? warrants+=Node)*)?
 	'}'	)?
@@ -22,13 +22,16 @@ Fact: (name=ID "G"
 //Claim: (name=ID "C"
 //	((":")? description=STRING)?);
 
-Link: (Rebuts |Mitigates);
+Link: (Rebuts | Mitigates | Restores);
 
 Rebuts:
 (from=[Argument] "rebuts" to=[Argument]);
 
 Mitigates:
 (from=[Argument] "mitigates" to=[Argument]);
+
+Restores:
+(from=[Argument] "restores" to=[Argument]);
 
 terminal ID: ('#' (!('#'))+ '#') |
   ('^'? ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*);

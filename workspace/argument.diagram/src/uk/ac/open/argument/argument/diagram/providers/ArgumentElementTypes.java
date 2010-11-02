@@ -25,6 +25,7 @@ import uk.ac.open.argument.argument.diagram.edit.parts.Fact3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.FactEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.RebutsEditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.RestoresEditPart;
 import uk.ac.open.argument.argument.diagram.part.ArgumentDiagramEditorPlugin;
 
 /**
@@ -69,14 +70,17 @@ public class ArgumentElementTypes {
 	 * @generated
 	 */
 	public static final IElementType Fact_3001 = getElementType("argument.diagram.Fact_3001"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
 	public static final IElementType Argument_3002 = getElementType("argument.diagram.Argument_3002"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
 	public static final IElementType Fact_3003 = getElementType("argument.diagram.Fact_3003"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
@@ -85,6 +89,11 @@ public class ArgumentElementTypes {
 	 * @generated
 	 */
 	public static final IElementType Mitigates_4002 = getElementType("argument.diagram.Mitigates_4002"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Restores_4003 = getElementType("argument.diagram.Restores_4003"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -214,6 +223,8 @@ public class ArgumentElementTypes {
 
 			elements.put(Mitigates_4002,
 					ArgumentPackage.eINSTANCE.getMitigates());
+
+			elements.put(Restores_4003, ArgumentPackage.eINSTANCE.getRestores());
 		}
 		return (ENamedElement) elements.get(type);
 	}
@@ -239,6 +250,7 @@ public class ArgumentElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Fact_3003);
 			KNOWN_ELEMENT_TYPES.add(Rebuts_4001);
 			KNOWN_ELEMENT_TYPES.add(Mitigates_4002);
+			KNOWN_ELEMENT_TYPES.add(Restores_4003);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -264,6 +276,8 @@ public class ArgumentElementTypes {
 			return Rebuts_4001;
 		case MitigatesEditPart.VISUAL_ID:
 			return Mitigates_4002;
+		case RestoresEditPart.VISUAL_ID:
+			return Restores_4003;
 		}
 		return null;
 	}

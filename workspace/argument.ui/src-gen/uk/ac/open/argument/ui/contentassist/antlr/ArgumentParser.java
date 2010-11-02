@@ -46,20 +46,23 @@ public class ArgumentParser extends AbstractContentAssistParser {
 					put(grammarAccess.getArgumentAccess().getGroup(), "rule__Argument__Group__0");
 					put(grammarAccess.getArgumentAccess().getGroup_2(), "rule__Argument__Group_2__0");
 					put(grammarAccess.getArgumentAccess().getGroup_2_1(), "rule__Argument__Group_2_1__0");
-					put(grammarAccess.getArgumentAccess().getGroup_2_1_1(), "rule__Argument__Group_2_1_1__0");
 					put(grammarAccess.getArgumentAccess().getGroup_2_2(), "rule__Argument__Group_2_2__0");
 					put(grammarAccess.getArgumentAccess().getGroup_2_2_1(), "rule__Argument__Group_2_2_1__0");
+					put(grammarAccess.getArgumentAccess().getGroup_2_3(), "rule__Argument__Group_2_3__0");
+					put(grammarAccess.getArgumentAccess().getGroup_2_3_1(), "rule__Argument__Group_2_3_1__0");
 					put(grammarAccess.getFactAccess().getGroup(), "rule__Fact__Group__0");
 					put(grammarAccess.getFactAccess().getGroup_2(), "rule__Fact__Group_2__0");
 					put(grammarAccess.getRebutsAccess().getGroup(), "rule__Rebuts__Group__0");
 					put(grammarAccess.getMitigatesAccess().getGroup(), "rule__Mitigates__Group__0");
+					put(grammarAccess.getRestoresAccess().getGroup(), "rule__Restores__Group__0");
 					put(grammarAccess.getArgumentDiagramAccess().getNameAssignment_0_1(), "rule__ArgumentDiagram__NameAssignment_0_1");
 					put(grammarAccess.getArgumentDiagramAccess().getHighlightAssignment_1_1(), "rule__ArgumentDiagram__HighlightAssignment_1_1");
 					put(grammarAccess.getArgumentDiagramAccess().getNodesAssignment_2_0(), "rule__ArgumentDiagram__NodesAssignment_2_0");
 					put(grammarAccess.getArgumentDiagramAccess().getLinksAssignment_2_1(), "rule__ArgumentDiagram__LinksAssignment_2_1");
 					put(grammarAccess.getArgumentAccess().getNameAssignment_0(), "rule__Argument__NameAssignment_0");
-					put(grammarAccess.getArgumentAccess().getGroundsAssignment_2_1_1_1(), "rule__Argument__GroundsAssignment_2_1_1_1");
-					put(grammarAccess.getArgumentAccess().getWarrantsAssignment_2_2_1_1(), "rule__Argument__WarrantsAssignment_2_2_1_1");
+					put(grammarAccess.getArgumentAccess().getRoundAssignment_2_1_1(), "rule__Argument__RoundAssignment_2_1_1");
+					put(grammarAccess.getArgumentAccess().getGroundsAssignment_2_2_1_1(), "rule__Argument__GroundsAssignment_2_2_1_1");
+					put(grammarAccess.getArgumentAccess().getWarrantsAssignment_2_3_1_1(), "rule__Argument__WarrantsAssignment_2_3_1_1");
 					put(grammarAccess.getArgumentAccess().getDescriptionAssignment_4(), "rule__Argument__DescriptionAssignment_4");
 					put(grammarAccess.getFactAccess().getNameAssignment_0(), "rule__Fact__NameAssignment_0");
 					put(grammarAccess.getFactAccess().getDescriptionAssignment_2_1(), "rule__Fact__DescriptionAssignment_2_1");
@@ -67,6 +70,8 @@ public class ArgumentParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRebutsAccess().getToAssignment_2(), "rule__Rebuts__ToAssignment_2");
 					put(grammarAccess.getMitigatesAccess().getFromAssignment_0(), "rule__Mitigates__FromAssignment_0");
 					put(grammarAccess.getMitigatesAccess().getToAssignment_2(), "rule__Mitigates__ToAssignment_2");
+					put(grammarAccess.getRestoresAccess().getFromAssignment_0(), "rule__Restores__FromAssignment_0");
+					put(grammarAccess.getRestoresAccess().getToAssignment_2(), "rule__Restores__ToAssignment_2");
 				}
 			};
 		}

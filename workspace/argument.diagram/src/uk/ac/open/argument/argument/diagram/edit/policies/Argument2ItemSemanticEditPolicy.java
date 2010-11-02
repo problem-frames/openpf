@@ -19,6 +19,8 @@ import uk.ac.open.argument.argument.diagram.edit.commands.MitigatesCreateCommand
 import uk.ac.open.argument.argument.diagram.edit.commands.MitigatesReorientCommand;
 import uk.ac.open.argument.argument.diagram.edit.commands.RebutsCreateCommand;
 import uk.ac.open.argument.argument.diagram.edit.commands.RebutsReorientCommand;
+import uk.ac.open.argument.argument.diagram.edit.commands.RestoresCreateCommand;
+import uk.ac.open.argument.argument.diagram.edit.commands.RestoresReorientCommand;
 import uk.ac.open.argument.argument.diagram.edit.parts.Argument2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentGroundsCompartment2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentWarrantsCompartment2EditPart;
@@ -26,6 +28,7 @@ import uk.ac.open.argument.argument.diagram.edit.parts.Fact2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.Fact3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.RebutsEditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.RestoresEditPart;
 import uk.ac.open.argument.argument.diagram.part.ArgumentVisualIDRegistry;
 import uk.ac.open.argument.argument.diagram.providers.ArgumentElementTypes;
 
@@ -66,6 +69,13 @@ public class Argument2ItemSemanticEditPolicy extends
 				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
 				continue;
 			}
+			if (ArgumentVisualIDRegistry.getVisualID(incomingLink) == RestoresEditPart.VISUAL_ID) {
+				DestroyElementRequest r = new DestroyElementRequest(
+						incomingLink.getElement(), false);
+				cmd.add(new DestroyElementCommand(r));
+				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
+				continue;
+			}
 		}
 		for (Iterator<?> it = view.getSourceEdges().iterator(); it.hasNext();) {
 			Edge outgoingLink = (Edge) it.next();
@@ -77,6 +87,13 @@ public class Argument2ItemSemanticEditPolicy extends
 				continue;
 			}
 			if (ArgumentVisualIDRegistry.getVisualID(outgoingLink) == MitigatesEditPart.VISUAL_ID) {
+				DestroyElementRequest r = new DestroyElementRequest(
+						outgoingLink.getElement(), false);
+				cmd.add(new DestroyElementCommand(r));
+				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
+				continue;
+			}
+			if (ArgumentVisualIDRegistry.getVisualID(outgoingLink) == RestoresEditPart.VISUAL_ID) {
 				DestroyElementRequest r = new DestroyElementRequest(
 						outgoingLink.getElement(), false);
 				cmd.add(new DestroyElementCommand(r));
@@ -147,6 +164,15 @@ public class Argument2ItemSemanticEditPolicy extends
 										incomingLink));
 								continue;
 							}
+							if (ArgumentVisualIDRegistry
+									.getVisualID(incomingLink) == RestoresEditPart.VISUAL_ID) {
+								DestroyElementRequest r = new DestroyElementRequest(
+										incomingLink.getElement(), false);
+								cmd.add(new DestroyElementCommand(r));
+								cmd.add(new DeleteCommand(getEditingDomain(),
+										incomingLink));
+								continue;
+							}
 						}
 						for (Iterator<?> it = cnode.getSourceEdges().iterator(); it
 								.hasNext();) {
@@ -162,6 +188,15 @@ public class Argument2ItemSemanticEditPolicy extends
 							}
 							if (ArgumentVisualIDRegistry
 									.getVisualID(outgoingLink) == MitigatesEditPart.VISUAL_ID) {
+								DestroyElementRequest r = new DestroyElementRequest(
+										outgoingLink.getElement(), false);
+								cmd.add(new DestroyElementCommand(r));
+								cmd.add(new DeleteCommand(getEditingDomain(),
+										outgoingLink));
+								continue;
+							}
+							if (ArgumentVisualIDRegistry
+									.getVisualID(outgoingLink) == RestoresEditPart.VISUAL_ID) {
 								DestroyElementRequest r = new DestroyElementRequest(
 										outgoingLink.getElement(), false);
 								cmd.add(new DestroyElementCommand(r));
@@ -213,6 +248,10 @@ public class Argument2ItemSemanticEditPolicy extends
 			return getGEFWrapper(new MitigatesCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
+		if (ArgumentElementTypes.Restores_4003 == req.getElementType()) {
+			return getGEFWrapper(new RestoresCreateCommand(req,
+					req.getSource(), req.getTarget()));
+		}
 		return null;
 	}
 
@@ -227,6 +266,10 @@ public class Argument2ItemSemanticEditPolicy extends
 		}
 		if (ArgumentElementTypes.Mitigates_4002 == req.getElementType()) {
 			return getGEFWrapper(new MitigatesCreateCommand(req,
+					req.getSource(), req.getTarget()));
+		}
+		if (ArgumentElementTypes.Restores_4003 == req.getElementType()) {
+			return getGEFWrapper(new RestoresCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
 		return null;
@@ -245,6 +288,8 @@ public class Argument2ItemSemanticEditPolicy extends
 			return getGEFWrapper(new RebutsReorientCommand(req));
 		case MitigatesEditPart.VISUAL_ID:
 			return getGEFWrapper(new MitigatesReorientCommand(req));
+		case RestoresEditPart.VISUAL_ID:
+			return getGEFWrapper(new RestoresReorientCommand(req));
 		}
 		return super.getReorientRelationshipCommand(req);
 	}

@@ -162,9 +162,6 @@ public class ArgumentDocumentProvider extends AbstractDocumentProvider
 		TransactionalEditingDomain editingDomain = DiagramEditingDomainFactory
 				.getInstance().createEditingDomain();
 		editingDomain.setID("argument.diagram.EditingDomain"); //$NON-NLS-1$
-		// ITEMIS CHANGE BEGIN: Add node model reconciler
-		XtextNodeModelReconciler.adapt(editingDomain);
-		// ITEMIS CHANGE END
 		final NotificationFilter diagramResourceModifiedFilter = NotificationFilter
 				.createNotifierFilter(editingDomain.getResourceSet())
 				.and(NotificationFilter.createEventTypeFilter(Notification.ADD))

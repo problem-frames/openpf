@@ -18,18 +18,26 @@ import org.eclipse.ui.navigator.ICommonLabelProvider;
 
 import uk.ac.open.argument.argument.ArgumentDiagram;
 import uk.ac.open.argument.argument.diagram.edit.parts.Argument2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDescriptionRound2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDescriptionRoundEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDiagramEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentName2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameDescriptionRound2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameDescriptionRoundEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.Fact2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.Fact3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.FactEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.FactName2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.FactName3EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.FactNameDescription2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.FactNameDescription3EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.FactNameDescriptionEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.FactNameEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.RebutsEditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.RestoresEditPart;
 import uk.ac.open.argument.argument.diagram.part.ArgumentDiagramEditorPlugin;
 import uk.ac.open.argument.argument.diagram.part.ArgumentVisualIDRegistry;
 import uk.ac.open.argument.argument.diagram.providers.ArgumentElementTypes;
@@ -94,30 +102,33 @@ public class ArgumentNavigatorLabelProvider extends LabelProvider implements
 	 */
 	public Image getImage(View view) {
 		switch (ArgumentVisualIDRegistry.getVisualID(view)) {
-		case ArgumentDiagramEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Diagram?http://www.ac.uk/open/argument/Argument?ArgumentDiagram", ArgumentElementTypes.ArgumentDiagram_1000); //$NON-NLS-1$
-		case FactEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://www.ac.uk/open/argument/Argument?Fact", ArgumentElementTypes.Fact_2002); //$NON-NLS-1$
-		case Fact2EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://www.ac.uk/open/argument/Argument?Fact", ArgumentElementTypes.Fact_3001); //$NON-NLS-1$
-		case ArgumentEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://www.ac.uk/open/argument/Argument?Argument", ArgumentElementTypes.Argument_2001); //$NON-NLS-1$
 		case RebutsEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?http://www.ac.uk/open/argument/Argument?Rebuts", ArgumentElementTypes.Rebuts_4001); //$NON-NLS-1$
 		case MitigatesEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?http://www.ac.uk/open/argument/Argument?Mitigates", ArgumentElementTypes.Mitigates_4002); //$NON-NLS-1$
-		case Argument2EditPart.VISUAL_ID:
+		case FactEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://www.ac.uk/open/argument/Argument?Argument", ArgumentElementTypes.Argument_3002); //$NON-NLS-1$
+					"Navigator?TopLevelNode?http://www.ac.uk/open/argument/Argument?Fact", ArgumentElementTypes.Fact_2002); //$NON-NLS-1$
+		case ArgumentDiagramEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Diagram?http://www.ac.uk/open/argument/Argument?ArgumentDiagram", ArgumentElementTypes.ArgumentDiagram_1000); //$NON-NLS-1$
 		case Fact3EditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Node?http://www.ac.uk/open/argument/Argument?Fact", ArgumentElementTypes.Fact_3003); //$NON-NLS-1$
+		case RestoresEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?http://www.ac.uk/open/argument/Argument?Restores", ArgumentElementTypes.Restores_4003); //$NON-NLS-1$
+		case Fact2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://www.ac.uk/open/argument/Argument?Fact", ArgumentElementTypes.Fact_3001); //$NON-NLS-1$
+		case Argument2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://www.ac.uk/open/argument/Argument?Argument", ArgumentElementTypes.Argument_3002); //$NON-NLS-1$
+		case ArgumentEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?http://www.ac.uk/open/argument/Argument?Argument", ArgumentElementTypes.Argument_2001); //$NON-NLS-1$
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -170,22 +181,24 @@ public class ArgumentNavigatorLabelProvider extends LabelProvider implements
 			return getUnresolvedDomainElementProxyText(view);
 		}
 		switch (ArgumentVisualIDRegistry.getVisualID(view)) {
-		case ArgumentDiagramEditPart.VISUAL_ID:
-			return getArgumentDiagram_1000Text(view);
-		case FactEditPart.VISUAL_ID:
-			return getFact_2002Text(view);
-		case Fact2EditPart.VISUAL_ID:
-			return getFact_3001Text(view);
-		case ArgumentEditPart.VISUAL_ID:
-			return getArgument_2001Text(view);
 		case RebutsEditPart.VISUAL_ID:
 			return getRebuts_4001Text(view);
 		case MitigatesEditPart.VISUAL_ID:
 			return getMitigates_4002Text(view);
-		case Argument2EditPart.VISUAL_ID:
-			return getArgument_3002Text(view);
+		case FactEditPart.VISUAL_ID:
+			return getFact_2002Text(view);
+		case ArgumentDiagramEditPart.VISUAL_ID:
+			return getArgumentDiagram_1000Text(view);
 		case Fact3EditPart.VISUAL_ID:
 			return getFact_3003Text(view);
+		case RestoresEditPart.VISUAL_ID:
+			return getRestores_4003Text(view);
+		case Fact2EditPart.VISUAL_ID:
+			return getFact_3001Text(view);
+		case Argument2EditPart.VISUAL_ID:
+			return getArgument_3002Text(view);
+		case ArgumentEditPart.VISUAL_ID:
+			return getArgument_2001Text(view);
 		}
 		return getUnknownElementText(view);
 	}
@@ -201,11 +214,12 @@ public class ArgumentNavigatorLabelProvider extends LabelProvider implements
 	 * @generated
 	 */
 	private String getArgument_2001Text(View view) {
-		IParser parser = ArgumentParserProvider.getParser(
-				ArgumentElementTypes.Argument_2001,
-				view.getElement() != null ? view.getElement() : view,
-				ArgumentVisualIDRegistry
-						.getType(ArgumentNameEditPart.VISUAL_ID));
+		IParser parser = ArgumentParserProvider
+				.getParser(
+						ArgumentElementTypes.Argument_2001,
+						view.getElement() != null ? view.getElement() : view,
+						ArgumentVisualIDRegistry
+								.getType(ArgumentNameDescriptionRoundEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
 					view.getElement() != null ? view.getElement() : view),
@@ -213,45 +227,6 @@ public class ArgumentNavigatorLabelProvider extends LabelProvider implements
 		} else {
 			ArgumentDiagramEditorPlugin.getInstance().logError(
 					"Parser was not found for label " + 5004); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getFact_3001Text(View view) {
-		IParser parser = ArgumentParserProvider.getParser(
-				ArgumentElementTypes.Fact_3001,
-				view.getElement() != null ? view.getElement() : view,
-				ArgumentVisualIDRegistry.getType(FactName2EditPart.VISUAL_ID));
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(
-					view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			ArgumentDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5001); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getArgument_3002Text(View view) {
-		IParser parser = ArgumentParserProvider.getParser(
-				ArgumentElementTypes.Argument_3002,
-				view.getElement() != null ? view.getElement() : view,
-				ArgumentVisualIDRegistry
-						.getType(ArgumentName2EditPart.VISUAL_ID));
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(
-					view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			ArgumentDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5003); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -274,6 +249,67 @@ public class ArgumentNavigatorLabelProvider extends LabelProvider implements
 	/**
 	 * @generated
 	 */
+	private String getFact_3001Text(View view) {
+		IParser parser = ArgumentParserProvider.getParser(
+				ArgumentElementTypes.Fact_3001,
+				view.getElement() != null ? view.getElement() : view,
+				ArgumentVisualIDRegistry
+						.getType(FactNameDescription2EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			ArgumentDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5001); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getFact_3003Text(View view) {
+		IParser parser = ArgumentParserProvider.getParser(
+				ArgumentElementTypes.Fact_3003,
+				view.getElement() != null ? view.getElement() : view,
+				ArgumentVisualIDRegistry
+						.getType(FactNameDescription3EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			ArgumentDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5002); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getArgument_3002Text(View view) {
+		IParser parser = ArgumentParserProvider
+				.getParser(
+						ArgumentElementTypes.Argument_3002,
+						view.getElement() != null ? view.getElement() : view,
+						ArgumentVisualIDRegistry
+								.getType(ArgumentNameDescriptionRound2EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			ArgumentDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5003); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
 	private String getMitigates_4002Text(View view) {
 		return ""; //$NON-NLS-1$
 	}
@@ -285,7 +321,8 @@ public class ArgumentNavigatorLabelProvider extends LabelProvider implements
 		IParser parser = ArgumentParserProvider.getParser(
 				ArgumentElementTypes.Fact_2002,
 				view.getElement() != null ? view.getElement() : view,
-				ArgumentVisualIDRegistry.getType(FactNameEditPart.VISUAL_ID));
+				ArgumentVisualIDRegistry
+						.getType(FactNameDescriptionEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
 					view.getElement() != null ? view.getElement() : view),
@@ -300,20 +337,8 @@ public class ArgumentNavigatorLabelProvider extends LabelProvider implements
 	/**
 	 * @generated
 	 */
-	private String getFact_3003Text(View view) {
-		IParser parser = ArgumentParserProvider.getParser(
-				ArgumentElementTypes.Fact_3003,
-				view.getElement() != null ? view.getElement() : view,
-				ArgumentVisualIDRegistry.getType(FactName3EditPart.VISUAL_ID));
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(
-					view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			ArgumentDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5002); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
+	private String getRestores_4003Text(View view) {
+		return ""; //$NON-NLS-1$
 	}
 
 	/**

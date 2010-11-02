@@ -14,10 +14,17 @@ import org.eclipse.gmf.runtime.emf.ui.services.parser.ParserHintAdapter;
 import org.eclipse.gmf.runtime.notation.View;
 
 import uk.ac.open.argument.argument.ArgumentPackage;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDescriptionRound2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDescriptionRoundEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentName2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameDescriptionRound2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameDescriptionRoundEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.FactName2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.FactName3EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.FactNameDescription2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.FactNameDescription3EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.FactNameDescriptionEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.FactNameEditPart;
 import uk.ac.open.argument.argument.diagram.parsers.MessageFormatParser;
 import uk.ac.open.argument.argument.diagram.part.ArgumentVisualIDRegistry;
@@ -31,91 +38,98 @@ public class ArgumentParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser argumentDescription_5004Parser;
+	private IParser argumentNameDescriptionRound_5004Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getArgumentDescription_5004Parser() {
-		if (argumentDescription_5004Parser == null) {
-			EAttribute[] features = new EAttribute[] { ArgumentPackage.eINSTANCE
-					.getNode_Description() };
+	private IParser getArgumentNameDescriptionRound_5004Parser() {
+		if (argumentNameDescriptionRound_5004Parser == null) {
+			EAttribute[] features = new EAttribute[] {
+					ArgumentPackage.eINSTANCE.getNode_Name(),
+					ArgumentPackage.eINSTANCE.getNode_Description(),
+					ArgumentPackage.eINSTANCE.getArgument_Round() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			argumentDescription_5004Parser = parser;
+			argumentNameDescriptionRound_5004Parser = parser;
 		}
-		return argumentDescription_5004Parser;
+		return argumentNameDescriptionRound_5004Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser factDescription_5005Parser;
+	private IParser factNameDescription_5005Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getFactDescription_5005Parser() {
-		if (factDescription_5005Parser == null) {
-			EAttribute[] features = new EAttribute[] { ArgumentPackage.eINSTANCE
-					.getNode_Description() };
+	private IParser getFactNameDescription_5005Parser() {
+		if (factNameDescription_5005Parser == null) {
+			EAttribute[] features = new EAttribute[] {
+					ArgumentPackage.eINSTANCE.getNode_Name(),
+					ArgumentPackage.eINSTANCE.getNode_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			factDescription_5005Parser = parser;
+			factNameDescription_5005Parser = parser;
 		}
-		return factDescription_5005Parser;
+		return factNameDescription_5005Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser factDescription_5001Parser;
+	private IParser factNameDescription_5001Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getFactDescription_5001Parser() {
-		if (factDescription_5001Parser == null) {
-			EAttribute[] features = new EAttribute[] { ArgumentPackage.eINSTANCE
-					.getNode_Description() };
+	private IParser getFactNameDescription_5001Parser() {
+		if (factNameDescription_5001Parser == null) {
+			EAttribute[] features = new EAttribute[] {
+					ArgumentPackage.eINSTANCE.getNode_Name(),
+					ArgumentPackage.eINSTANCE.getNode_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			factDescription_5001Parser = parser;
+			factNameDescription_5001Parser = parser;
 		}
-		return factDescription_5001Parser;
+		return factNameDescription_5001Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser argumentDescription_5003Parser;
+	private IParser argumentNameDescriptionRound_5003Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getArgumentDescription_5003Parser() {
-		if (argumentDescription_5003Parser == null) {
-			EAttribute[] features = new EAttribute[] { ArgumentPackage.eINSTANCE
-					.getNode_Description() };
+	private IParser getArgumentNameDescriptionRound_5003Parser() {
+		if (argumentNameDescriptionRound_5003Parser == null) {
+			EAttribute[] features = new EAttribute[] {
+					ArgumentPackage.eINSTANCE.getNode_Name(),
+					ArgumentPackage.eINSTANCE.getNode_Description(),
+					ArgumentPackage.eINSTANCE.getArgument_Round() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			argumentDescription_5003Parser = parser;
+			argumentNameDescriptionRound_5003Parser = parser;
 		}
-		return argumentDescription_5003Parser;
+		return argumentNameDescriptionRound_5003Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser factDescription_5002Parser;
+	private IParser factNameDescription_5002Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getFactDescription_5002Parser() {
-		if (factDescription_5002Parser == null) {
-			EAttribute[] features = new EAttribute[] { ArgumentPackage.eINSTANCE
-					.getNode_Description() };
+	private IParser getFactNameDescription_5002Parser() {
+		if (factNameDescription_5002Parser == null) {
+			EAttribute[] features = new EAttribute[] {
+					ArgumentPackage.eINSTANCE.getNode_Name(),
+					ArgumentPackage.eINSTANCE.getNode_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			factDescription_5002Parser = parser;
+			factNameDescription_5002Parser = parser;
 		}
-		return factDescription_5002Parser;
+		return factNameDescription_5002Parser;
 	}
 
 	/**
@@ -123,16 +137,16 @@ public class ArgumentParserProvider extends AbstractProvider implements
 	 */
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
-		case ArgumentNameEditPart.VISUAL_ID:
-			return getArgumentDescription_5004Parser();
-		case FactNameEditPart.VISUAL_ID:
-			return getFactDescription_5005Parser();
-		case FactName2EditPart.VISUAL_ID:
-			return getFactDescription_5001Parser();
-		case ArgumentName2EditPart.VISUAL_ID:
-			return getArgumentDescription_5003Parser();
-		case FactName3EditPart.VISUAL_ID:
-			return getFactDescription_5002Parser();
+		case ArgumentNameDescriptionRoundEditPart.VISUAL_ID:
+			return getArgumentNameDescriptionRound_5004Parser();
+		case FactNameDescriptionEditPart.VISUAL_ID:
+			return getFactNameDescription_5005Parser();
+		case FactNameDescription2EditPart.VISUAL_ID:
+			return getFactNameDescription_5001Parser();
+		case ArgumentNameDescriptionRound2EditPart.VISUAL_ID:
+			return getArgumentNameDescriptionRound_5003Parser();
+		case FactNameDescription3EditPart.VISUAL_ID:
+			return getFactNameDescription_5002Parser();
 		}
 		return null;
 	}

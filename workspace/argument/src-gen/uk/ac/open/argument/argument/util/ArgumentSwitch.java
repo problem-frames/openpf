@@ -148,6 +148,14 @@ public class ArgumentSwitch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case ArgumentPackage.RESTORES:
+      {
+        Restores restores = (Restores)theEObject;
+        T result = caseRestores(restores);
+        if (result == null) result = caseLink(restores);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       default: return defaultCase(theEObject);
     }
   }
@@ -260,6 +268,22 @@ public class ArgumentSwitch<T>
    * @generated
    */
   public T caseMitigates(Mitigates object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Restores</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Restores</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRestores(Restores object)
   {
     return null;
   }

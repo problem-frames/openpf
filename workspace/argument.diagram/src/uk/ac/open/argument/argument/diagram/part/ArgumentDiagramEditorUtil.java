@@ -188,11 +188,12 @@ public class ArgumentDiagramEditorUtil {
 				}
 
 				try {
-					if (modelResource.getURI().toFileString()==null) {
+					if (modelResource.getURI().toFileString() == null) {
 						model.setName("default");
 						modelResource
-						.save(uk.ac.open.argument.argument.diagram.part.ArgumentDiagramEditorUtil
-									.getSaveOptions());}
+								.save(uk.ac.open.argument.argument.diagram.part.ArgumentDiagramEditorUtil
+										.getSaveOptions());
+					}
 					diagramResource
 							.save(uk.ac.open.argument.argument.diagram.part.ArgumentDiagramEditorUtil
 									.getSaveOptions());

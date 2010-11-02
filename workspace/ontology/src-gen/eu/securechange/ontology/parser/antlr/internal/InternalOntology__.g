@@ -9,65 +9,47 @@ import org.eclipse.xtext.parser.antlr.Lexer;
 
 T11 : 'model' ;
 T12 : ':' ;
-T13 : 'event' ;
+T13 : 'SG' ;
 T14 : ',' ;
-T15 : 'DA' ;
-T16 : 'FR' ;
-T17 : 'SR' ;
-T18 : 'AR' ;
-T19 : 'Q' ;
-T20 : 'A' ;
-T21 : 'actor' ;
-T22 : 'attacker' ;
-T23 : 'process' ;
-T24 : '{' ;
-T25 : '}' ;
-T26 : 'activity' ;
-T27 : 'action' ;
-T28 : 'resource' ;
-T29 : 'asset' ;
-T30 : 'wants' ;
-T31 : '(' ;
-T32 : ')' ;
-T33 : 'does' ;
-T34 : 'trusts' ;
-T35 : 'delegates' ;
-T36 : 'provides' ;
-T37 : 'consumes' ;
-T38 : 'exploits' ;
-T39 : 'damages' ;
-T40 : 'attacks' ;
-T41 : 'argues' ;
-T42 : 'S' ;
-T43 : 'R' ;
-T44 : 'W' ;
-T45 : 'and' ;
-T46 : 'or' ;
-T47 : '-' ;
-T48 : '+' ;
-T49 : '--' ;
-T50 : '++' ;
-T51 : 'fulfils' ;
+T15 : 'R' ;
+T16 : 'AR' ;
+T17 : 'Ar' ;
+T18 : 'An' ;
+T19 : 'As' ;
+T20 : 'Re' ;
+T21 : 'Ak' ;
+T22 : '(' ;
+T23 : ')' ;
+T24 : 'carries out' ;
+T25 : 'delegates' ;
+T26 : 'fulfils' ;
+T27 : 'provides' ;
+T28 : 'trusts' ;
+T29 : 'wants' ;
+T30 : 'damages' ;
+T31 : 'attacks' ;
+T32 : 'argues' ;
+T33 : 'interfaces' ;
 
-// $ANTLR src "../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g" 2863
+// $ANTLR src "../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g" 1359
 RULE_ID : ('#' ~('#')+ '#'|'^'? ('a'..'z'|'A'..'Z'|'_'|'.') ('a'..'z'|'A'..'Z'|'_'|'0'..'9'|'.')*);
 
-// $ANTLR src "../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g" 2865
+// $ANTLR src "../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g" 1361
 RULE_INT : ('0'..'9')+;
 
-// $ANTLR src "../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g" 2867
+// $ANTLR src "../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g" 1363
 RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\'');
 
-// $ANTLR src "../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g" 2869
+// $ANTLR src "../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g" 1365
 RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 
-// $ANTLR src "../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g" 2871
+// $ANTLR src "../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g" 1367
 RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
-// $ANTLR src "../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g" 2873
+// $ANTLR src "../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g" 1369
 RULE_WS : (' '|'\t'|'\r'|'\n')+;
 
-// $ANTLR src "../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g" 2875
+// $ANTLR src "../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g" 1371
 RULE_ANY_OTHER : .;
 
 

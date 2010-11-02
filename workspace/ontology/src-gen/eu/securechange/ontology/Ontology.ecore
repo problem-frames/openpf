@@ -9,143 +9,51 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="World">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
-        eType="#//Entity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="goals" upperBound="-1"
+        eType="#//Goal" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="domains" upperBound="-1"
         eType="#//Domain" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="relationships" upperBound="-1"
         eType="#//Relationship" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Thing"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Event" eSuperTypes="#//Thing">
+  <eClassifiers xsi:type="ecore:EClass" name="Goal">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Object" eSuperTypes="#//Thing"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Domain">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//DomainType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
         eType="#//Proposition" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="DomainType">
-    <eLiterals name="Specification" literal="S"/>
-    <eLiterals name="Requirement" value="1" literal="R"/>
-    <eLiterals name="World" value="2" literal="W"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SecurityGoal" eSuperTypes="#//Goal"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Requirement" eSuperTypes="#//Goal"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AntiRequirement" eSuperTypes="#//Goal"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Domain">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
+        eType="#//Proposition" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Proposition" eSuperTypes="#//Object">
+  <eClassifiers xsi:type="ecore:EClass" name="Actor" eSuperTypes="#//Domain"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Action" eSuperTypes="#//Domain"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Asset" eSuperTypes="#//Domain"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Resource" eSuperTypes="#//Domain"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Attacker" eSuperTypes="#//Domain"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Proposition">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Requirement" eSuperTypes="#//Proposition"/>
-  <eClassifiers xsi:type="ecore:EClass" name="DomainAssumption" eSuperTypes="#//Proposition"/>
-  <eClassifiers xsi:type="ecore:EClass" name="FunctionalRequirement" eSuperTypes="#//Requirement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SecurityRequirement" eSuperTypes="#//Requirement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="AntiRequirement" eSuperTypes="#//Requirement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="QualityRequirement" eSuperTypes="#//Requirement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Argument" eSuperTypes="#//Proposition"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Entity" eSuperTypes="#//Object"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Actor" eSuperTypes="#//Entity">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Relationship">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//RelType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//World"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//World"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Stakeholder" eSuperTypes="#//Actor"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Attacker" eSuperTypes="#//Actor"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Process" eSuperTypes="#//Entity"/>
-  <eClassifiers xsi:type="ecore:EClass" name="NaturalProcess" eSuperTypes="#//Process">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="activities" unique="false"
-        upperBound="-1" eType="#//Process"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="HumanActivity" eSuperTypes="#//Process"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Action">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Resource" eSuperTypes="#//Entity">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Asset" eSuperTypes="#//Resource"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Relationship" eSuperTypes="#//Object"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Wants" eSuperTypes="#//Relationship">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Actor"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Requirement"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Does" eSuperTypes="#//Relationship">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Actor"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Activity"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Decomposes" eSuperTypes="#//Relationship">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//DecomposesType"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Requirement"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Requirement"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="DecomposesType">
-    <eLiterals name="AND" literal="and"/>
-    <eLiterals name="OR" value="1" literal="or"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Trusts" eSuperTypes="#//Relationship">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Actor"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Actor"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entity" eType="#//Thing"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Delegates" eSuperTypes="#//Relationship">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Actor"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Actor"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entity" eType="#//Thing"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Contributes" eSuperTypes="#//Relationship">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ContributesType"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Requirement"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Requirement"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="ContributesType">
-    <eLiterals name="HURT" literal="-"/>
-    <eLiterals name="HELP" value="1" literal="+"/>
-    <eLiterals name="BREAK" value="2" literal="--"/>
-    <eLiterals name="MAKE" value="3" literal="++"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Fulfils" eSuperTypes="#//Relationship">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//FulfilsType"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Process"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Proposition"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="FulfilsType">
-    <eLiterals name="Fulfils" literal="fulfils"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Provides" eSuperTypes="#//Relationship">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Entity"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Resource"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Consumes" eSuperTypes="#//Relationship">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Entity"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Resource"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Exploits" eSuperTypes="#//Relationship">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Attacker"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Process"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Damages" eSuperTypes="#//Relationship">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Attacker"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Asset"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Attacks" eSuperTypes="#//Relationship">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Attacker"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Process"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Argues" eSuperTypes="#//Relationship">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Proposition"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Proposition"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Activity" eSuperTypes="#//HumanActivity">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="actions" upperBound="-1"
-        eType="#//Action" containment="true"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="RelType">
+    <eLiterals name="CARRIESOUT" literal="carries out"/>
+    <eLiterals name="DELEGATES" value="1" literal="delegates"/>
+    <eLiterals name="FULFILS" value="2" literal="fulfils"/>
+    <eLiterals name="PROVIDES" value="3" literal="provides"/>
+    <eLiterals name="TRUSTS" value="4" literal="trusts"/>
+    <eLiterals name="WANTS" value="5" literal="wants"/>
+    <eLiterals name="DAMAGES" value="6" literal="damages"/>
+    <eLiterals name="ATTACKS" value="7" literal="attacks"/>
+    <eLiterals name="ARGUES" value="8" literal="argues"/>
+    <eLiterals name="INTERFACES" value="9" literal="interfaces"/>
   </eClassifiers>
 </ecore:EPackage>

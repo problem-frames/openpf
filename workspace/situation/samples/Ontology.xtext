@@ -6,127 +6,87 @@ Situation:
 	("model" time=ID ":")? world=World;
 
 World:
-	{World} (entities+=Entity | domains+=Domain | relationships+=Relationship)*;
+	{World} (goals+=Goal | domains+=Domain | relationships+=Relationship)*;
 
-Thing:
-	Object | Event;
+Goal: SecurityGoal | Requirement | AntiRequirement;
 
-Event:
-	"event" name=ID;
+SecurityGoal: name=ID type="SG" ((",")? properties+=Proposition)*;
 
-Object:
-	Entity | Relationship | Proposition;
+Requirement: name=ID type="R" ((",")? properties+=Proposition)*; 
 
+AntiRequirement: name=ID type="AR" ((",")? properties+=Proposition)*;
+ 
 Domain:
-	name=ID type=DomainType ((",")? properties+=Proposition)*;
+	Actor | Action | Asset | Resource | Attacker;
 
-enum DomainType:
-	Specification="S" | Requirement="R" | World="W";
+Actor:	
+	name=ID type="Ar" ((",")? properties+=Proposition)*;
+
+Action:	
+	name=ID type="An" ((",")? properties+=Proposition)*;
+
+Asset:	
+	name=ID type="As" ((",")? properties+=Proposition)*;
+	
+Resource:	
+	name=ID type="Re" ((",")? properties+=Proposition)*;
+
+Attacker:	
+	name=ID type="Ak" ((",")? properties+=Proposition)*;
 
 Proposition:
-	DomainAssumption | Requirement | Argument;
-
-Requirement: FunctionalRequirement | SecurityRequirement | AntiRequirement | QualityRequirement;
-
-DomainAssumption:
-	"DA" name=ID;
-
-FunctionalRequirement:
-	"FR" name=ID;
-
-SecurityRequirement:
-	"SR" name=ID;
-
-AntiRequirement:
-	"AR" name=ID;
-
-QualityRequirement:
-	"Q" name=ID;
-
-Argument:
-	"A" name=ID;
-
-Entity:
-	Actor | Process | Resource;
-
-Actor:
-	Stakeholder | Attacker;
-
-Stakeholder:
-	"actor" name=ID;
-
-Attacker:
-	"attacker" name=ID;
-
-Process:
-	NaturalProcess | HumanActivity;
-
-NaturalProcess:
-	"process" name=ID ("{" (activities+=[Process])* "}")?;
-
-HumanActivity:
-	{Activity} "activity" name=ID (actions+=Action)*;
-
-Action:
-	"action" name=ID;
-
-Resource:
-	"resource" name=ID | Asset;
-
-Asset:
-	"asset" name=ID;
+	name=STRING;
 
 Relationship:
-	Wants | Does | Decomposes | Trusts | Delegates | Contributes | Fulfils | Provides | Consumes |
-	Exploits | Damages | Attacks | Argues;
+    type=RelType "(" source=[World] "," target=[World] ")";
+//	CarriesOut | Depends | Fulfils | Provides |  Trusts | Wants | Uses | Damages | Attacks | Argues | Interfaces;
 
-Wants:
-	type="wants" "(" source=[Actor] "," target=[Requirement] ")";
+enum RelType: CARRIESOUT="carries out" | 
+	DELEGATES="delegates" | 
+	FULFILS="fulfils" | 
+	PROVIDES="provides" | 
+	TRUSTS="trusts" | 
+	WANTS="wants" | 
+	DAMAGES ="damages" |
+	ATTACKS="attacks" |
+	ARGUES ="argues" | 
+	INTERFACES="interfaces";
 
-Does:
-	type="does" "(" source=[Actor] "," target=[Activity] ")";
-
-Decomposes:
-	type=DecomposesType "(" source=[Requirement] "," target=[Requirement] ")";
-
-enum DecomposesType:
-	AND="and" | OR="or";
-
-Trusts:
-	type="trusts" "(" source=[Actor] "," target=[Actor] ("," entity=[Thing])? ")";
-
-Delegates:
-	type="delegates" "(" source=[Actor] "," target=[Actor] ("," entity=[Thing])? ")";
-
-Contributes:
-	type=ContributesType "(" source=[Requirement] "," target=[Requirement] ")";
-
-enum ContributesType:
-	HURT="-" | HELP="+" | BREAK="--" | MAKE="++";
-
-Fulfils:
-	type=FulfilsType "(" source=[Process] "," target=[Proposition] ")";
-
-enum FulfilsType:
-	Fulfils="fulfils";
-
-Provides:
-	type="provides" "(" (source=[Process]|source=[Actor]) "," target=[Resource] ")";
-
-Consumes:
-	type="consumes" "(" (source=[Process]|source=[Actor]) "," target=[Resource] ")";
-
-Exploits:
-	type="exploits" "(" source=[Attacker] "," target=[Process] ")";
-
-Damages:
-	type="damages" "(" source=[Attacker] "," target=[Asset] ")";
-
-Attacks:
-	type="attacks" "(" source=[Attacker] "," target=[Process] ")";
-
-Argues:
-	type="argues" "(" source=[Proposition] "," target=[Proposition] ")";
+//Relationship1:
+//	CarriesOut | Depends | Fulfils | Provides |  Trusts | Wants | Uses | Damages | Attacks | Argues | Interfaces;
+//
+//CarriesOut:
+//	type="carries out" "(" source=[Actor] "," target=[Action] ")";
+//
+//Depends:
+//	type="delegates" "(" source=[Actor] "," target=[Actor] ("," entity=[World])? ")";
+//
+//Fulfils:
+//	type="fulfils" "(" source=[Action] "," target=[Proposition] ")";
+//
+//Provides:
+//	type="provides" "(" (source=[Action]|source=[Actor]) "," target=[Resource] ")";
+//
+//Trusts:
+//	type="trusts" "(" source=[Actor] "," target=[Actor] ("," entity=[World])? ")";
+//
+//Wants:
+//	type="wants" "(" source=[Actor] "," target=[Requirement] ")";
+//
+//Uses:
+//	type="uses" "(" source=[Actor] "," target=[Resource] ")";
+//
+//Damages:
+//	type="damages" "(" source=[Attacker] "," target=[Asset] ")";
+//
+//Attacks:
+//	type="attacks" "(" source=[Attacker] "," target=[Action] ")";
+//
+//Argues:
+//	type="argues" "(" source=[Proposition] "," target=[Proposition] ")";
+//
+//Interfaces:
+//	type="interfaces" "(" source=[Domain] "," target=[Domain] ")";
 
 terminal ID:
 	('#' (!('#'))+ '#') | ('^'? ('a'..'z' | 'A'..'Z' | '_' | '.') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9' | '.')*);

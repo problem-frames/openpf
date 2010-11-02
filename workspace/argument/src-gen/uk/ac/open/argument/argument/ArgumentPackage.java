@@ -180,13 +180,22 @@ public interface ArgumentPackage extends EPackage
   int ARGUMENT__DESCRIPTION = NODE__DESCRIPTION;
 
   /**
+   * The feature id for the '<em><b>Round</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARGUMENT__ROUND = NODE_FEATURE_COUNT + 0;
+
+  /**
    * The feature id for the '<em><b>Grounds</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ARGUMENT__GROUNDS = NODE_FEATURE_COUNT + 0;
+  int ARGUMENT__GROUNDS = NODE_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Warrants</b></em>' containment reference list.
@@ -195,7 +204,7 @@ public interface ArgumentPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ARGUMENT__WARRANTS = NODE_FEATURE_COUNT + 1;
+  int ARGUMENT__WARRANTS = NODE_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Argument</em>' class.
@@ -204,7 +213,7 @@ public interface ArgumentPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ARGUMENT_FEATURE_COUNT = NODE_FEATURE_COUNT + 2;
+  int ARGUMENT_FEATURE_COUNT = NODE_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link uk.ac.open.argument.argument.impl.FactImpl <em>Fact</em>}' class.
@@ -354,6 +363,43 @@ public interface ArgumentPackage extends EPackage
    */
   int MITIGATES_FEATURE_COUNT = LINK_FEATURE_COUNT + 0;
 
+  /**
+   * The meta object id for the '{@link uk.ac.open.argument.argument.impl.RestoresImpl <em>Restores</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see uk.ac.open.argument.argument.impl.RestoresImpl
+   * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getRestores()
+   * @generated
+   */
+  int RESTORES = 7;
+
+  /**
+   * The feature id for the '<em><b>From</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RESTORES__FROM = LINK__FROM;
+
+  /**
+   * The feature id for the '<em><b>To</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RESTORES__TO = LINK__TO;
+
+  /**
+   * The number of structural features of the '<em>Restores</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RESTORES_FEATURE_COUNT = LINK_FEATURE_COUNT + 0;
+
 
   /**
    * Returns the meta object for class '{@link uk.ac.open.argument.argument.ArgumentDiagram <em>Diagram</em>}'.
@@ -452,6 +498,17 @@ public interface ArgumentPackage extends EPackage
   EClass getArgument();
 
   /**
+   * Returns the meta object for the attribute '{@link uk.ac.open.argument.argument.Argument#getRound <em>Round</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Round</em>'.
+   * @see uk.ac.open.argument.argument.Argument#getRound()
+   * @see #getArgument()
+   * @generated
+   */
+  EAttribute getArgument_Round();
+
+  /**
    * Returns the meta object for the containment reference list '{@link uk.ac.open.argument.argument.Argument#getGrounds <em>Grounds</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -534,6 +591,16 @@ public interface ArgumentPackage extends EPackage
    * @generated
    */
   EClass getMitigates();
+
+  /**
+   * Returns the meta object for class '{@link uk.ac.open.argument.argument.Restores <em>Restores</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Restores</em>'.
+   * @see uk.ac.open.argument.argument.Restores
+   * @generated
+   */
+  EClass getRestores();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -637,6 +704,14 @@ public interface ArgumentPackage extends EPackage
     EClass ARGUMENT = eINSTANCE.getArgument();
 
     /**
+     * The meta object literal for the '<em><b>Round</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ARGUMENT__ROUND = eINSTANCE.getArgument_Round();
+
+    /**
      * The meta object literal for the '<em><b>Grounds</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -707,6 +782,16 @@ public interface ArgumentPackage extends EPackage
      * @generated
      */
     EClass MITIGATES = eINSTANCE.getMitigates();
+
+    /**
+     * The meta object literal for the '{@link uk.ac.open.argument.argument.impl.RestoresImpl <em>Restores</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see uk.ac.open.argument.argument.impl.RestoresImpl
+     * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getRestores()
+     * @generated
+     */
+    EClass RESTORES = eINSTANCE.getRestores();
 
   }
 

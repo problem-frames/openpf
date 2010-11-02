@@ -109,9 +109,9 @@ public class Fact2EditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof FactName2EditPart) {
-			((FactName2EditPart) childEditPart).setLabel(getPrimaryShape()
-					.getFigureFactLabelFigure());
+		if (childEditPart instanceof FactNameDescription2EditPart) {
+			((FactNameDescription2EditPart) childEditPart)
+					.setLabel(getPrimaryShape().getFigureFactLabelFigure());
 			return true;
 		}
 		return false;
@@ -121,7 +121,7 @@ public class Fact2EditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof FactName2EditPart) {
+		if (childEditPart instanceof FactNameDescription2EditPart) {
 			return true;
 		}
 		return false;
@@ -245,7 +245,7 @@ public class Fact2EditPart extends ShapeNodeEditPart {
 	 */
 	public EditPart getPrimaryChildEditPart() {
 		return getChildBySemanticHint(ArgumentVisualIDRegistry
-				.getType(FactName2EditPart.VISUAL_ID));
+				.getType(FactNameDescription2EditPart.VISUAL_ID));
 	}
 
 	/**

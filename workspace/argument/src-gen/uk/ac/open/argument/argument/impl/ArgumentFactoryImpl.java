@@ -74,6 +74,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
       case ArgumentPackage.LINK: return createLink();
       case ArgumentPackage.REBUTS: return createRebuts();
       case ArgumentPackage.MITIGATES: return createMitigates();
+      case ArgumentPackage.RESTORES: return createRestores();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -154,6 +155,17 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
   {
     MitigatesImpl mitigates = new MitigatesImpl();
     return mitigates;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Restores createRestores()
+  {
+    RestoresImpl restores = new RestoresImpl();
+    return restores;
   }
 
   /**

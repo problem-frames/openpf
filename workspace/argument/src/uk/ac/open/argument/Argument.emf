@@ -15,22 +15,17 @@ class Node {
   attr String description;
 }
 
-@gmf.node(label="name", icon="false")
+@gmf.node(label="description, round", icon="false")
 class Argument extends Node {
-  @gmf.compartment(foo="bar")
-  val Claim claim;
+  attr String round;
   @gmf.compartment(foo="bar")
   val Fact[*] grounds;
   @gmf.compartment(foo="bar")
-  val Argument[*] warrants;
+  val Node[*] warrants;
 }
 
 @gmf.node(label="name", icon="false")
 class Fact extends Node {
-}
-
-@gmf.node(label="name", icon="false")
-class Claim extends Node {
 }
 
 class Link {
@@ -38,11 +33,15 @@ class Link {
   ref Argument to;
 }
 
-@gmf.link(source="from", target="to", style="dot", width="2", target.decoration="arrow")
+@gmf.link(source="from", target="to", style="dot", width="2", color="255,0,0", target.decoration="arrow")
 class Rebuts extends Link {
 }
 
-@gmf.link(source="from", target="to", style="solid", width="2", target.decoration="arrow")
+@gmf.link(source="from", target="to", style="solid", width="2", color="0,0,255", target.decoration="arrow")
 class Mitigates extends Link {
+}
+
+@gmf.link(source="from", target="to", style="solid", width="2", color="0,255,0", target.decoration="arrow")
+class Restores extends Link {
 }
 

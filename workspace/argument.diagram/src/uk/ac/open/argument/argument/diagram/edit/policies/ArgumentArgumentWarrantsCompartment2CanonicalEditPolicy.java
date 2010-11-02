@@ -22,6 +22,7 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import uk.ac.open.argument.argument.ArgumentPackage;
 import uk.ac.open.argument.argument.diagram.edit.parts.Argument2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.Fact2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.Fact3EditPart;
 import uk.ac.open.argument.argument.diagram.part.ArgumentDiagramUpdater;
 import uk.ac.open.argument.argument.diagram.part.ArgumentNodeDescriptor;

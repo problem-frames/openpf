@@ -51,6 +51,7 @@ public class ArgumentPaletteFactory {
 		paletteContainer.setId("createConnections2Group"); //$NON-NLS-1$
 		paletteContainer.add(createMitigates1CreationTool());
 		paletteContainer.add(createRebuts2CreationTool());
+		paletteContainer.add(createRestores3CreationTool());
 		return paletteContainer;
 	}
 
@@ -115,6 +116,21 @@ public class ArgumentPaletteFactory {
 		entry.setId("createRebuts2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ArgumentElementTypes
 				.getImageDescriptor(ArgumentElementTypes.Rebuts_4001));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createRestores3CreationTool() {
+		LinkToolEntry entry = new LinkToolEntry(
+				Messages.Restores3CreationTool_title,
+				Messages.Restores3CreationTool_desc,
+				Collections.singletonList(ArgumentElementTypes.Restores_4003));
+		entry.setId("createRestores3CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ArgumentElementTypes
+				.getImageDescriptor(ArgumentElementTypes.Restores_4003));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}

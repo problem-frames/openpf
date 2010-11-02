@@ -18,6 +18,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Node/description"/>
     </genClasses>
     <genClasses ecoreClass="Argument.ecore#//Argument">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Argument/round"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//Argument/grounds"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//Argument/warrants"/>
     </genClasses>
@@ -28,5 +29,6 @@
     </genClasses>
     <genClasses ecoreClass="Argument.ecore#//Rebuts"/>
     <genClasses ecoreClass="Argument.ecore#//Mitigates"/>
+    <genClasses ecoreClass="Argument.ecore#//Restores"/>
   </genPackages>
 </genmodel:GenModel>

@@ -21,6 +21,7 @@ import uk.ac.open.argument.argument.Link;
 import uk.ac.open.argument.argument.Mitigates;
 import uk.ac.open.argument.argument.Node;
 import uk.ac.open.argument.argument.Rebuts;
+import uk.ac.open.argument.argument.Restores;
 
 /**
  * <!-- begin-user-doc -->
@@ -78,6 +79,13 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * @generated
    */
   private EClass mitigatesEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass restoresEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -237,9 +245,19 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getArgument_Round()
+  {
+    return (EAttribute)argumentEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getArgument_Grounds()
   {
-    return (EReference)argumentEClass.getEStructuralFeatures().get(0);
+    return (EReference)argumentEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -249,7 +267,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    */
   public EReference getArgument_Warrants()
   {
-    return (EReference)argumentEClass.getEStructuralFeatures().get(1);
+    return (EReference)argumentEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -317,6 +335,16 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getRestores()
+  {
+    return restoresEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public ArgumentFactory getArgumentFactory()
   {
     return (ArgumentFactory)getEFactoryInstance();
@@ -353,6 +381,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
     createEAttribute(nodeEClass, NODE__DESCRIPTION);
 
     argumentEClass = createEClass(ARGUMENT);
+    createEAttribute(argumentEClass, ARGUMENT__ROUND);
     createEReference(argumentEClass, ARGUMENT__GROUNDS);
     createEReference(argumentEClass, ARGUMENT__WARRANTS);
 
@@ -365,6 +394,8 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
     rebutsEClass = createEClass(REBUTS);
 
     mitigatesEClass = createEClass(MITIGATES);
+
+    restoresEClass = createEClass(RESTORES);
   }
 
   /**
@@ -400,6 +431,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
     factEClass.getESuperTypes().add(this.getNode());
     rebutsEClass.getESuperTypes().add(this.getLink());
     mitigatesEClass.getESuperTypes().add(this.getLink());
+    restoresEClass.getESuperTypes().add(this.getLink());
 
     // Initialize classes and features; add operations and parameters
     initEClass(argumentDiagramEClass, ArgumentDiagram.class, "ArgumentDiagram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -413,6 +445,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
     initEAttribute(getNode_Description(), ecorePackage.getEString(), "description", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(argumentEClass, Argument.class, "Argument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getArgument_Round(), ecorePackage.getEString(), "round", null, 0, 1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getArgument_Grounds(), this.getFact(), null, "grounds", null, 0, -1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getArgument_Warrants(), this.getNode(), null, "warrants", null, 0, -1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -425,6 +458,8 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
     initEClass(rebutsEClass, Rebuts.class, "Rebuts", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(mitigatesEClass, Mitigates.class, "Mitigates", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(restoresEClass, Restores.class, "Restores", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     // Create resource
     createResource(eNS_URI);

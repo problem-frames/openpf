@@ -124,9 +124,9 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof ArgumentName2EditPart) {
-			((ArgumentName2EditPart) childEditPart).setLabel(getPrimaryShape()
-					.getFigureArgumentLabelFigure());
+		if (childEditPart instanceof ArgumentNameDescriptionRound2EditPart) {
+			((ArgumentNameDescriptionRound2EditPart) childEditPart)
+					.setLabel(getPrimaryShape().getFigureArgumentLabelFigure());
 			return true;
 		}
 		if (childEditPart instanceof ArgumentArgumentGroundsCompartment2EditPart) {
@@ -152,7 +152,7 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof ArgumentName2EditPart) {
+		if (childEditPart instanceof ArgumentNameDescriptionRound2EditPart) {
 			return true;
 		}
 		if (childEditPart instanceof ArgumentArgumentGroundsCompartment2EditPart) {
@@ -298,16 +298,17 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 	 */
 	public EditPart getPrimaryChildEditPart() {
 		return getChildBySemanticHint(ArgumentVisualIDRegistry
-				.getType(ArgumentName2EditPart.VISUAL_ID));
+				.getType(ArgumentNameDescriptionRound2EditPart.VISUAL_ID));
 	}
 
 	/**
 	 * @generated
 	 */
 	public List<IElementType> getMARelTypesOnSource() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
 		types.add(ArgumentElementTypes.Rebuts_4001);
 		types.add(ArgumentElementTypes.Mitigates_4002);
+		types.add(ArgumentElementTypes.Restores_4003);
 		return types;
 	}
 
@@ -329,6 +330,12 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 		if (targetEditPart instanceof uk.ac.open.argument.argument.diagram.edit.parts.Argument2EditPart) {
 			types.add(ArgumentElementTypes.Mitigates_4002);
 		}
+		if (targetEditPart instanceof ArgumentEditPart) {
+			types.add(ArgumentElementTypes.Restores_4003);
+		}
+		if (targetEditPart instanceof uk.ac.open.argument.argument.diagram.edit.parts.Argument2EditPart) {
+			types.add(ArgumentElementTypes.Restores_4003);
+		}
 		return types;
 	}
 
@@ -343,6 +350,9 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 		} else if (relationshipType == ArgumentElementTypes.Mitigates_4002) {
 			types.add(ArgumentElementTypes.Argument_2001);
 			types.add(ArgumentElementTypes.Argument_3002);
+		} else if (relationshipType == ArgumentElementTypes.Restores_4003) {
+			types.add(ArgumentElementTypes.Argument_2001);
+			types.add(ArgumentElementTypes.Argument_3002);
 		}
 		return types;
 	}
@@ -351,9 +361,10 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	public List<IElementType> getMARelTypesOnTarget() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
 		types.add(ArgumentElementTypes.Rebuts_4001);
 		types.add(ArgumentElementTypes.Mitigates_4002);
+		types.add(ArgumentElementTypes.Restores_4003);
 		return types;
 	}
 
@@ -366,6 +377,9 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 			types.add(ArgumentElementTypes.Argument_2001);
 			types.add(ArgumentElementTypes.Argument_3002);
 		} else if (relationshipType == ArgumentElementTypes.Mitigates_4002) {
+			types.add(ArgumentElementTypes.Argument_2001);
+			types.add(ArgumentElementTypes.Argument_3002);
+		} else if (relationshipType == ArgumentElementTypes.Restores_4003) {
 			types.add(ArgumentElementTypes.Argument_2001);
 			types.add(ArgumentElementTypes.Argument_3002);
 		}

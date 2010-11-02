@@ -47,18 +47,26 @@ import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentGroundsCo
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentGroundsCompartmentEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentWarrantsCompartment2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentWarrantsCompartmentEditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDescriptionRound2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDescriptionRoundEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDiagramEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentName2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameDescriptionRound2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameDescriptionRoundEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.Fact2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.Fact3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.FactEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.FactName2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.FactName3EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.FactNameDescription2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.FactNameDescription3EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.FactNameDescriptionEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.FactNameEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.RebutsEditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.RestoresEditPart;
 import uk.ac.open.argument.argument.diagram.part.ArgumentVisualIDRegistry;
 
 /**
@@ -267,6 +275,9 @@ public class ArgumentViewProvider extends AbstractProvider implements
 		case MitigatesEditPart.VISUAL_ID:
 			return createMitigates_4002(getSemanticElement(semanticAdapter),
 					containerView, index, persisted, preferencesHint);
+		case RestoresEditPart.VISUAL_ID:
+			return createRestores_4003(getSemanticElement(semanticAdapter),
+					containerView, index, persisted, preferencesHint);
 		}
 		// can never happen, provided #provides(CreateEdgeViewOperation) is correct
 		return null;
@@ -314,9 +325,10 @@ public class ArgumentViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5004 = createLabel(node,
+		Node label5004 = createLabel(
+				node,
 				ArgumentVisualIDRegistry
-						.getType(ArgumentNameEditPart.VISUAL_ID));
+						.getType(ArgumentNameDescriptionRoundEditPart.VISUAL_ID));
 		createCompartment(
 				node,
 				ArgumentVisualIDRegistry
@@ -370,7 +382,8 @@ public class ArgumentViewProvider extends AbstractProvider implements
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
 		Node label5005 = createLabel(node,
-				ArgumentVisualIDRegistry.getType(FactNameEditPart.VISUAL_ID));
+				ArgumentVisualIDRegistry
+						.getType(FactNameDescriptionEditPart.VISUAL_ID));
 		return node;
 	}
 
@@ -413,7 +426,8 @@ public class ArgumentViewProvider extends AbstractProvider implements
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
 		Node label5001 = createLabel(node,
-				ArgumentVisualIDRegistry.getType(FactName2EditPart.VISUAL_ID));
+				ArgumentVisualIDRegistry
+						.getType(FactNameDescription2EditPart.VISUAL_ID));
 		return node;
 	}
 
@@ -458,9 +472,10 @@ public class ArgumentViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5003 = createLabel(node,
+		Node label5003 = createLabel(
+				node,
 				ArgumentVisualIDRegistry
-						.getType(ArgumentName2EditPart.VISUAL_ID));
+						.getType(ArgumentNameDescriptionRound2EditPart.VISUAL_ID));
 		createCompartment(
 				node,
 				ArgumentVisualIDRegistry
@@ -513,7 +528,8 @@ public class ArgumentViewProvider extends AbstractProvider implements
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
 		Node label5002 = createLabel(node,
-				ArgumentVisualIDRegistry.getType(FactName3EditPart.VISUAL_ID));
+				ArgumentVisualIDRegistry
+						.getType(FactNameDescription3EditPart.VISUAL_ID));
 		return node;
 	}
 
@@ -522,7 +538,8 @@ public class ArgumentViewProvider extends AbstractProvider implements
 	 */
 	public Edge createRebuts_4001(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
-		Connector edge = NotationFactory.eINSTANCE.createConnector();
+		Edge edge = NotationFactory.eINSTANCE.createEdge();
+		edge.getStyles().add(NotationFactory.eINSTANCE.createRoutingStyle());
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
 				.createRelativeBendpoints();
@@ -538,12 +555,6 @@ public class ArgumentViewProvider extends AbstractProvider implements
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
 				.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
 		FontStyle edgeFontStyle = (FontStyle) edge
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (edgeFontStyle != null) {
@@ -573,7 +584,8 @@ public class ArgumentViewProvider extends AbstractProvider implements
 	 */
 	public Edge createMitigates_4002(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
-		Connector edge = NotationFactory.eINSTANCE.createConnector();
+		Edge edge = NotationFactory.eINSTANCE.createEdge();
+		edge.getStyles().add(NotationFactory.eINSTANCE.createRoutingStyle());
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
 				.createRelativeBendpoints();
@@ -590,12 +602,53 @@ public class ArgumentViewProvider extends AbstractProvider implements
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
 				.getPreferenceStore();
+		FontStyle edgeFontStyle = (FontStyle) edge
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (edgeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			edgeFontStyle.setFontName(fontData.getName());
+			edgeFontStyle.setFontHeight(fontData.getHeight());
+			edgeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			edgeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			edgeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		Routing routing = Routing.get(prefStore
+				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
+		if (routing != null) {
+			ViewUtil.setStructuralFeatureValue(edge,
+					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
+					routing);
+		}
+		return edge;
+	}
 
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+	/**
+	 * @generated
+	 */
+	public Edge createRestores_4003(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Edge edge = NotationFactory.eINSTANCE.createEdge();
+		edge.getStyles().add(NotationFactory.eINSTANCE.createRoutingStyle());
+		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
+		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
+				.createRelativeBendpoints();
+		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
+				2);
+		points.add(new RelativeBendpoint());
+		points.add(new RelativeBendpoint());
+		bendpoints.setPoints(points);
+		edge.setBendpoints(bendpoints);
+		ViewUtil.insertChildView(containerView, edge, index, persisted);
+		edge.setType(ArgumentVisualIDRegistry
+				.getType(RestoresEditPart.VISUAL_ID));
+		edge.setElement(domainElement);
+		// initializePreferences
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
 		FontStyle edgeFontStyle = (FontStyle) edge
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (edgeFontStyle != null) {

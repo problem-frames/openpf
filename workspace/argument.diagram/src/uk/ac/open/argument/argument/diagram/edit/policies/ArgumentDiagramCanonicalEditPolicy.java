@@ -38,6 +38,7 @@ import uk.ac.open.argument.argument.diagram.edit.parts.Fact3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.FactEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.RebutsEditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.RestoresEditPart;
 import uk.ac.open.argument.argument.diagram.part.ArgumentDiagramUpdater;
 import uk.ac.open.argument.argument.diagram.part.ArgumentLinkDescriptor;
 import uk.ac.open.argument.argument.diagram.part.ArgumentNodeDescriptor;
@@ -315,6 +316,17 @@ public class ArgumentDiagramCanonicalEditPolicy extends CanonicalEditPolicy {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(ArgumentDiagramUpdater
 						.getMitigates_4002ContainedLinks(view));
+			}
+			if (!domain2NotationMap.containsKey(view.getElement())
+					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
+				domain2NotationMap.put(view.getElement(), view);
+			}
+			break;
+		}
+		case RestoresEditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(ArgumentDiagramUpdater
+						.getRestores_4003ContainedLinks(view));
 			}
 			if (!domain2NotationMap.containsKey(view.getElement())
 					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$

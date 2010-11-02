@@ -89,6 +89,15 @@ public interface ArgumentFactory extends EFactory
   Mitigates createMitigates();
 
   /**
+   * Returns a new object of class '<em>Restores</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Restores</em>'.
+   * @generated
+   */
+  Restores createRestores();
+
+  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

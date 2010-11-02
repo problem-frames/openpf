@@ -10,6 +10,7 @@ import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx;
 import org.eclipse.gmf.runtime.notation.View;
 
+import org.eclipse.swt.graphics.Color;
 import uk.ac.open.argument.argument.diagram.edit.policies.RebutsItemSemanticEditPolicy;
 
 /**
@@ -70,6 +71,7 @@ public class RebutsEditPart extends ConnectionNodeEditPart implements
 		public RebutsFigure() {
 			this.setLineWidth(2);
 			this.setLineStyle(Graphics.LINE_DOT);
+			this.setForegroundColor(THIS_FORE);
 
 			setTargetDecoration(createTargetDecoration());
 		}
@@ -83,5 +85,10 @@ public class RebutsEditPart extends ConnectionNodeEditPart implements
 		}
 
 	}
+
+	/**
+	 * @generated
+	 */
+	static final Color THIS_FORE = new Color(null, 255, 0, 0);
 
 }
