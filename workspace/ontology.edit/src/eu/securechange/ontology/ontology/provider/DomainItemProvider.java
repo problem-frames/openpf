@@ -210,41 +210,6 @@ public class DomainItemProvider
 			(createChildParameter
 				(OntologyPackage.Literals.DOMAIN__PROPERTIES,
 				 OntologyFactory.eINSTANCE.createProposition()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OntologyPackage.Literals.DOMAIN__PROPERTIES,
-				 OntologyFactory.eINSTANCE.createRequirement()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OntologyPackage.Literals.DOMAIN__PROPERTIES,
-				 OntologyFactory.eINSTANCE.createDomainAssumption()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OntologyPackage.Literals.DOMAIN__PROPERTIES,
-				 OntologyFactory.eINSTANCE.createFunctionalRequirement()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OntologyPackage.Literals.DOMAIN__PROPERTIES,
-				 OntologyFactory.eINSTANCE.createSecurityRequirement()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OntologyPackage.Literals.DOMAIN__PROPERTIES,
-				 OntologyFactory.eINSTANCE.createAntiRequirement()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OntologyPackage.Literals.DOMAIN__PROPERTIES,
-				 OntologyFactory.eINSTANCE.createQualityRequirement()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OntologyPackage.Literals.DOMAIN__PROPERTIES,
-				 OntologyFactory.eINSTANCE.createArgument()));
 	}
 
 	/**

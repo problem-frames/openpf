@@ -29,7 +29,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * @generated
  */
 public class AntiRequirementItemProvider
-	extends RequirementItemProvider
+	extends GoalItemProvider
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,

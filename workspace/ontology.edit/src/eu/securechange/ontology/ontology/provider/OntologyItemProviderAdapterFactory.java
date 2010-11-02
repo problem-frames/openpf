@@ -122,118 +122,49 @@ public class OntologyItemProviderAdapterFactory extends OntologyAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Thing} instances.
+	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Goal} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ThingItemProvider thingItemProvider;
+	protected GoalItemProvider goalItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.Thing}.
+	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.Goal}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createThingAdapter() {
-		if (thingItemProvider == null) {
-			thingItemProvider = new ThingItemProvider(this);
+	public Adapter createGoalAdapter() {
+		if (goalItemProvider == null) {
+			goalItemProvider = new GoalItemProvider(this);
 		}
 
-		return thingItemProvider;
+		return goalItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Event} instances.
+	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.SecurityGoal} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EventItemProvider eventItemProvider;
+	protected SecurityGoalItemProvider securityGoalItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.Event}.
+	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.SecurityGoal}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createEventAdapter() {
-		if (eventItemProvider == null) {
-			eventItemProvider = new EventItemProvider(this);
+	public Adapter createSecurityGoalAdapter() {
+		if (securityGoalItemProvider == null) {
+			securityGoalItemProvider = new SecurityGoalItemProvider(this);
 		}
 
-		return eventItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Object} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ObjectItemProvider objectItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.Object}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createObjectAdapter() {
-		if (objectItemProvider == null) {
-			objectItemProvider = new ObjectItemProvider(this);
-		}
-
-		return objectItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Domain} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DomainItemProvider domainItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.Domain}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDomainAdapter() {
-		if (domainItemProvider == null) {
-			domainItemProvider = new DomainItemProvider(this);
-		}
-
-		return domainItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Proposition} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PropositionItemProvider propositionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.Proposition}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createPropositionAdapter() {
-		if (propositionItemProvider == null) {
-			propositionItemProvider = new PropositionItemProvider(this);
-		}
-
-		return propositionItemProvider;
+		return securityGoalItemProvider;
 	}
 
 	/**
@@ -260,75 +191,6 @@ public class OntologyItemProviderAdapterFactory extends OntologyAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.DomainAssumption} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DomainAssumptionItemProvider domainAssumptionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.DomainAssumption}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDomainAssumptionAdapter() {
-		if (domainAssumptionItemProvider == null) {
-			domainAssumptionItemProvider = new DomainAssumptionItemProvider(this);
-		}
-
-		return domainAssumptionItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.FunctionalRequirement} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FunctionalRequirementItemProvider functionalRequirementItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.FunctionalRequirement}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFunctionalRequirementAdapter() {
-		if (functionalRequirementItemProvider == null) {
-			functionalRequirementItemProvider = new FunctionalRequirementItemProvider(this);
-		}
-
-		return functionalRequirementItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.SecurityRequirement} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SecurityRequirementItemProvider securityRequirementItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.SecurityRequirement}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSecurityRequirementAdapter() {
-		if (securityRequirementItemProvider == null) {
-			securityRequirementItemProvider = new SecurityRequirementItemProvider(this);
-		}
-
-		return securityRequirementItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.AntiRequirement} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -352,72 +214,26 @@ public class OntologyItemProviderAdapterFactory extends OntologyAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.QualityRequirement} instances.
+	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Domain} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected QualityRequirementItemProvider qualityRequirementItemProvider;
+	protected DomainItemProvider domainItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.QualityRequirement}.
+	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.Domain}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createQualityRequirementAdapter() {
-		if (qualityRequirementItemProvider == null) {
-			qualityRequirementItemProvider = new QualityRequirementItemProvider(this);
+	public Adapter createDomainAdapter() {
+		if (domainItemProvider == null) {
+			domainItemProvider = new DomainItemProvider(this);
 		}
 
-		return qualityRequirementItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Argument} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ArgumentItemProvider argumentItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.Argument}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createArgumentAdapter() {
-		if (argumentItemProvider == null) {
-			argumentItemProvider = new ArgumentItemProvider(this);
-		}
-
-		return argumentItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Entity} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected EntityItemProvider entityItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.Entity}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createEntityAdapter() {
-		if (entityItemProvider == null) {
-			entityItemProvider = new EntityItemProvider(this);
-		}
-
-		return entityItemProvider;
+		return domainItemProvider;
 	}
 
 	/**
@@ -444,121 +260,6 @@ public class OntologyItemProviderAdapterFactory extends OntologyAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Stakeholder} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected StakeholderItemProvider stakeholderItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.Stakeholder}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createStakeholderAdapter() {
-		if (stakeholderItemProvider == null) {
-			stakeholderItemProvider = new StakeholderItemProvider(this);
-		}
-
-		return stakeholderItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Attacker} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AttackerItemProvider attackerItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.Attacker}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAttackerAdapter() {
-		if (attackerItemProvider == null) {
-			attackerItemProvider = new AttackerItemProvider(this);
-		}
-
-		return attackerItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Process} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ProcessItemProvider processItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.Process}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createProcessAdapter() {
-		if (processItemProvider == null) {
-			processItemProvider = new ProcessItemProvider(this);
-		}
-
-		return processItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.NaturalProcess} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected NaturalProcessItemProvider naturalProcessItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.NaturalProcess}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNaturalProcessAdapter() {
-		if (naturalProcessItemProvider == null) {
-			naturalProcessItemProvider = new NaturalProcessItemProvider(this);
-		}
-
-		return naturalProcessItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.HumanActivity} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected HumanActivityItemProvider humanActivityItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.HumanActivity}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createHumanActivityAdapter() {
-		if (humanActivityItemProvider == null) {
-			humanActivityItemProvider = new HumanActivityItemProvider(this);
-		}
-
-		return humanActivityItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Action} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -579,29 +280,6 @@ public class OntologyItemProviderAdapterFactory extends OntologyAdapterFactory i
 		}
 
 		return actionItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Resource} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ResourceItemProvider resourceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.Resource}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createResourceAdapter() {
-		if (resourceItemProvider == null) {
-			resourceItemProvider = new ResourceItemProvider(this);
-		}
-
-		return resourceItemProvider;
 	}
 
 	/**
@@ -628,6 +306,75 @@ public class OntologyItemProviderAdapterFactory extends OntologyAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Resource} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ResourceItemProvider resourceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.Resource}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createResourceAdapter() {
+		if (resourceItemProvider == null) {
+			resourceItemProvider = new ResourceItemProvider(this);
+		}
+
+		return resourceItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Attacker} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AttackerItemProvider attackerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.Attacker}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAttackerAdapter() {
+		if (attackerItemProvider == null) {
+			attackerItemProvider = new AttackerItemProvider(this);
+		}
+
+		return attackerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Proposition} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PropositionItemProvider propositionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.Proposition}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPropositionAdapter() {
+		if (propositionItemProvider == null) {
+			propositionItemProvider = new PropositionItemProvider(this);
+		}
+
+		return propositionItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Relationship} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -648,328 +395,6 @@ public class OntologyItemProviderAdapterFactory extends OntologyAdapterFactory i
 		}
 
 		return relationshipItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Wants} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected WantsItemProvider wantsItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.Wants}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createWantsAdapter() {
-		if (wantsItemProvider == null) {
-			wantsItemProvider = new WantsItemProvider(this);
-		}
-
-		return wantsItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Does} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DoesItemProvider doesItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.Does}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDoesAdapter() {
-		if (doesItemProvider == null) {
-			doesItemProvider = new DoesItemProvider(this);
-		}
-
-		return doesItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Decomposes} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DecomposesItemProvider decomposesItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.Decomposes}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDecomposesAdapter() {
-		if (decomposesItemProvider == null) {
-			decomposesItemProvider = new DecomposesItemProvider(this);
-		}
-
-		return decomposesItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Trusts} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TrustsItemProvider trustsItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.Trusts}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTrustsAdapter() {
-		if (trustsItemProvider == null) {
-			trustsItemProvider = new TrustsItemProvider(this);
-		}
-
-		return trustsItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Delegates} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DelegatesItemProvider delegatesItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.Delegates}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDelegatesAdapter() {
-		if (delegatesItemProvider == null) {
-			delegatesItemProvider = new DelegatesItemProvider(this);
-		}
-
-		return delegatesItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Contributes} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ContributesItemProvider contributesItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.Contributes}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createContributesAdapter() {
-		if (contributesItemProvider == null) {
-			contributesItemProvider = new ContributesItemProvider(this);
-		}
-
-		return contributesItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Fulfils} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FulfilsItemProvider fulfilsItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.Fulfils}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFulfilsAdapter() {
-		if (fulfilsItemProvider == null) {
-			fulfilsItemProvider = new FulfilsItemProvider(this);
-		}
-
-		return fulfilsItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Provides} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ProvidesItemProvider providesItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.Provides}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createProvidesAdapter() {
-		if (providesItemProvider == null) {
-			providesItemProvider = new ProvidesItemProvider(this);
-		}
-
-		return providesItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Consumes} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ConsumesItemProvider consumesItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.Consumes}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createConsumesAdapter() {
-		if (consumesItemProvider == null) {
-			consumesItemProvider = new ConsumesItemProvider(this);
-		}
-
-		return consumesItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Exploits} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ExploitsItemProvider exploitsItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.Exploits}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createExploitsAdapter() {
-		if (exploitsItemProvider == null) {
-			exploitsItemProvider = new ExploitsItemProvider(this);
-		}
-
-		return exploitsItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Damages} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DamagesItemProvider damagesItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.Damages}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDamagesAdapter() {
-		if (damagesItemProvider == null) {
-			damagesItemProvider = new DamagesItemProvider(this);
-		}
-
-		return damagesItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Attacks} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AttacksItemProvider attacksItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.Attacks}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAttacksAdapter() {
-		if (attacksItemProvider == null) {
-			attacksItemProvider = new AttacksItemProvider(this);
-		}
-
-		return attacksItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Argues} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ArguesItemProvider arguesItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.Argues}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createArguesAdapter() {
-		if (arguesItemProvider == null) {
-			arguesItemProvider = new ArguesItemProvider(this);
-		}
-
-		return arguesItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link eu.securechange.ontology.ontology.Activity} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ActivityItemProvider activityItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link eu.securechange.ontology.ontology.Activity}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createActivityAdapter() {
-		if (activityItemProvider == null) {
-			activityItemProvider = new ActivityItemProvider(this);
-		}
-
-		return activityItemProvider;
 	}
 
 	/**
@@ -1073,43 +498,18 @@ public class OntologyItemProviderAdapterFactory extends OntologyAdapterFactory i
 	public void dispose() {
 		if (situationItemProvider != null) situationItemProvider.dispose();
 		if (worldItemProvider != null) worldItemProvider.dispose();
-		if (thingItemProvider != null) thingItemProvider.dispose();
-		if (eventItemProvider != null) eventItemProvider.dispose();
-		if (objectItemProvider != null) objectItemProvider.dispose();
-		if (domainItemProvider != null) domainItemProvider.dispose();
-		if (propositionItemProvider != null) propositionItemProvider.dispose();
+		if (goalItemProvider != null) goalItemProvider.dispose();
+		if (securityGoalItemProvider != null) securityGoalItemProvider.dispose();
 		if (requirementItemProvider != null) requirementItemProvider.dispose();
-		if (domainAssumptionItemProvider != null) domainAssumptionItemProvider.dispose();
-		if (functionalRequirementItemProvider != null) functionalRequirementItemProvider.dispose();
-		if (securityRequirementItemProvider != null) securityRequirementItemProvider.dispose();
 		if (antiRequirementItemProvider != null) antiRequirementItemProvider.dispose();
-		if (qualityRequirementItemProvider != null) qualityRequirementItemProvider.dispose();
-		if (argumentItemProvider != null) argumentItemProvider.dispose();
-		if (entityItemProvider != null) entityItemProvider.dispose();
+		if (domainItemProvider != null) domainItemProvider.dispose();
 		if (actorItemProvider != null) actorItemProvider.dispose();
-		if (stakeholderItemProvider != null) stakeholderItemProvider.dispose();
-		if (attackerItemProvider != null) attackerItemProvider.dispose();
-		if (processItemProvider != null) processItemProvider.dispose();
-		if (naturalProcessItemProvider != null) naturalProcessItemProvider.dispose();
-		if (humanActivityItemProvider != null) humanActivityItemProvider.dispose();
 		if (actionItemProvider != null) actionItemProvider.dispose();
-		if (resourceItemProvider != null) resourceItemProvider.dispose();
 		if (assetItemProvider != null) assetItemProvider.dispose();
+		if (resourceItemProvider != null) resourceItemProvider.dispose();
+		if (attackerItemProvider != null) attackerItemProvider.dispose();
+		if (propositionItemProvider != null) propositionItemProvider.dispose();
 		if (relationshipItemProvider != null) relationshipItemProvider.dispose();
-		if (wantsItemProvider != null) wantsItemProvider.dispose();
-		if (doesItemProvider != null) doesItemProvider.dispose();
-		if (decomposesItemProvider != null) decomposesItemProvider.dispose();
-		if (trustsItemProvider != null) trustsItemProvider.dispose();
-		if (delegatesItemProvider != null) delegatesItemProvider.dispose();
-		if (contributesItemProvider != null) contributesItemProvider.dispose();
-		if (fulfilsItemProvider != null) fulfilsItemProvider.dispose();
-		if (providesItemProvider != null) providesItemProvider.dispose();
-		if (consumesItemProvider != null) consumesItemProvider.dispose();
-		if (exploitsItemProvider != null) exploitsItemProvider.dispose();
-		if (damagesItemProvider != null) damagesItemProvider.dispose();
-		if (attacksItemProvider != null) attacksItemProvider.dispose();
-		if (arguesItemProvider != null) arguesItemProvider.dispose();
-		if (activityItemProvider != null) activityItemProvider.dispose();
 	}
 
 }

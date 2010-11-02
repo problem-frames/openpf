@@ -13,13 +13,7 @@
 
   <extension point="core.example">
       <example file="Argument.xtext"/>
-      <example file="AP-RECV2.argument"/>
-      <example file="AP-RECV.argument"/>
-      <example file="AP-XMIT.argument"/>
-      <example file="M-POSREPORT.argument"/>
-      <example file="R1-rebuttal.argument"/>
-      <example file="R-SEND.argument"/>
-      <example file="second-iteration.argument"/>
+      <example file="http://computing-research.open.ac.uk/trac/openre/raw-attachment/wiki/Examples/argument.dir"/>
   </extension>
 
 </plugin>

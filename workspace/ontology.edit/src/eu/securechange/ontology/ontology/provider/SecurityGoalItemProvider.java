@@ -7,6 +7,8 @@
 package eu.securechange.ontology.ontology.provider;
 
 
+import eu.securechange.ontology.ontology.SecurityGoal;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -21,13 +23,13 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
 /**
- * This is the item provider adapter for a {@link eu.securechange.ontology.ontology.Entity} object.
+ * This is the item provider adapter for a {@link eu.securechange.ontology.ontology.SecurityGoal} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class EntityItemProvider
-	extends ObjectItemProvider
+public class SecurityGoalItemProvider
+	extends GoalItemProvider
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -40,7 +42,7 @@ public class EntityItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EntityItemProvider(AdapterFactory adapterFactory) {
+	public SecurityGoalItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -60,14 +62,14 @@ public class EntityItemProvider
 	}
 
 	/**
-	 * This returns Entity.gif.
+	 * This returns SecurityGoal.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Entity"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/SecurityGoal"));
 	}
 
 	/**
@@ -78,7 +80,10 @@ public class EntityItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Entity_type");
+		String label = ((SecurityGoal)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_SecurityGoal_type") :
+			getString("_UI_SecurityGoal_type") + " " + label;
 	}
 
 	/**

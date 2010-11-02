@@ -29,7 +29,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * @generated
  */
 public class AttackerItemProvider
-	extends ActorItemProvider
+	extends DomainItemProvider
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
