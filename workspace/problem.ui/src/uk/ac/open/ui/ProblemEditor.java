@@ -22,8 +22,6 @@ import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.swt.widgets.Display;
-import org.eclipse.ui.PlatformUI;
 import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.resource.XtextResourceSet;
 
@@ -216,7 +214,7 @@ public class ProblemEditor extends UncalEditor implements Runnable {
 			}
 			added.clear();
 			try {
-				Thread.sleep(2000);
+				Thread.sleep(200); // 0.2 seconds maybe too short, but 2 seconds seem to be too long!
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
