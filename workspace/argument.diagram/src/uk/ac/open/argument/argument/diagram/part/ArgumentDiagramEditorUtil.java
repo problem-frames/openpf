@@ -52,11 +52,12 @@ import org.eclipse.ui.part.FileEditorInput;
 import uk.ac.open.argument.argument.ArgumentDiagram;
 import uk.ac.open.argument.argument.ArgumentFactory;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDiagramEditPart;
+import uk.ac.open.problem.diagram.part.ImageDiagramUtil;
 
 /**
  * @generated
  */
-public class ArgumentDiagramEditorUtil {
+public class ArgumentDiagramEditorUtil extends ImageDiagramUtil {
 
 	/**
 	 * @generated
@@ -214,6 +215,8 @@ public class ArgumentDiagramEditorUtil {
 		}
 		setCharset(WorkspaceSynchronizer.getFile(modelResource));
 		setCharset(WorkspaceSynchronizer.getFile(diagramResource));
+		
+		saveDiagramToImages(diagramResource, modelResource);
 		return diagramResource;
 	}
 

@@ -43,7 +43,7 @@ public abstract class ImageDiagramEditor extends XtextEditor implements Runnable
 		saveModel(filename);
 	}
 
-	private void saveModel(String filename) {
+	protected void saveModel(String filename) {
 		XtextResourceSet resourceSet = new XtextResourceSet();
 		resourceSet.addLoadOption(XtextResource.OPTION_RESOLVE_ALL,
 				Boolean.TRUE);
