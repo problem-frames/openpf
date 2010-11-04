@@ -1775,4 +1775,5 @@ public class ProblemEditor
 	protected boolean showOutlineView() {
 		return true;
 	}
+
 }

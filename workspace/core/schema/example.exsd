@@ -1,16 +1,21 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="core">
+<schema targetNamespace="core" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appInfo>
          <meta.schema plugin="core" id="example" name="Example Extension Point"/>
       </appInfo>
       <documentation>
-         [Enter description of this extension point.]
+         This extension point is for plugins to populate their examples into the &quot;Examples&quot; project when the &quot;Create Examples Project&quot; action is invoked.
       </documentation>
    </annotation>
 
    <element name="extension">
+      <annotation>
+         <appInfo>
+            <meta.element />
+         </appInfo>
+      </annotation>
       <complexType>
          <sequence>
             <element ref="example" minOccurs="1" maxOccurs="unbounded"/>
@@ -51,6 +56,13 @@
                </documentation>
             </annotation>
          </attribute>
+         <attribute name="href" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
       </complexType>
    </element>
 
@@ -68,7 +80,9 @@
          <meta.section type="examples"/>
       </appInfo>
       <documentation>
-         [Enter extension point usage example here.]
+         &lt;extension point=&quot;core.example&quot;&gt;
+      &lt;example file=&quot;path/to/example_file&quot; href=&quot;URL_to_remote_file&quot; /&gt;
+&lt;/extension&gt;
       </documentation>
    </annotation>
 
@@ -77,7 +91,7 @@
          <meta.section type="apiInfo"/>
       </appInfo>
       <documentation>
-         [Enter API information here.]
+         No special API is required other than the extension point.
       </documentation>
    </annotation>
 
@@ -86,7 +100,7 @@
          <meta.section type="implementation"/>
       </appInfo>
       <documentation>
-         [Enter information about supplied implementation of this extension point.]
+         Only when the corresponding file in the Examples project does not exist, the implementation of the core plugin takes care of fetching the remote files of each extension from the URI when possible, otherwise tries to fetch the local files inside the plugin bundle. If such a file does not exist either in the bundle or remotely, it will not complain.
       </documentation>
    </annotation>
 
@@ -95,7 +109,7 @@
          <meta.section type="copyright"/>
       </appInfo>
       <documentation>
-         
+         Yijun Yu (copyright) 2006-2010
       </documentation>
    </annotation>
 

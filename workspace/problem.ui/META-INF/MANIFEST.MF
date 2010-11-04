@@ -1,5 +1,6 @@
 Manifest-Version: 1.0
-Export-Package: uk.ac.open.ui.contentassist.antlr
+Export-Package: uk.ac.open.ui,
+ uk.ac.open.ui.contentassist.antlr
 Bundle-ActivationPolicy: lazy
 Bundle-Name: problem.ui
 Bundle-RequiredExecutionEnvironment: J2SE-1.5

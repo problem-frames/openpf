@@ -2,6 +2,9 @@
 <?eclipse version="3.0"?>
 
 <plugin>
+   <extension point="org.eclipse.ui.startup">
+     <startup class="uk.ac.open.dependency.ui.DependencyStartup"/>
+   </extension>
 
     <extension
             point="org.eclipse.ui.editors">

@@ -13,7 +13,6 @@ import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.commands.operations.OperationHistoryFactory;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IResource;
-import org.eclipse.core.resources.IWorkspace;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IAdaptable;
@@ -22,7 +21,6 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.SubProgressMonitor;
-import org.eclipse.emf.common.ui.editor.ProblemEditorPart;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -30,15 +28,12 @@ import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gmf.runtime.common.core.command.CommandResult;
-import org.eclipse.gmf.runtime.diagram.core.preferences.PreferencesHint;
 import org.eclipse.gmf.runtime.diagram.core.services.ViewService;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IPrimaryEditPart;
-import org.eclipse.gmf.runtime.diagram.ui.image.ImageFileFormat;
 import org.eclipse.gmf.runtime.diagram.ui.parts.IDiagramGraphicalViewer;
 import org.eclipse.gmf.runtime.diagram.ui.parts.IDiagramWorkbenchPart;
-import org.eclipse.gmf.runtime.diagram.ui.render.util.CopyToImageUtil;
 import org.eclipse.gmf.runtime.emf.commands.core.command.AbstractTransactionalCommand;
 import org.eclipse.gmf.runtime.emf.core.GMFEditingDomainFactory;
 import org.eclipse.gmf.runtime.emf.core.util.EMFCoreUtil;
@@ -48,12 +43,9 @@ import org.eclipse.jface.dialogs.IDialogSettings;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IWorkbenchPage;
-import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
-import org.eclipse.ui.ide.IDE;
 import org.eclipse.ui.part.FileEditorInput;
 
 import uk.ac.open.problem.ProblemDiagram;
@@ -63,7 +55,7 @@ import uk.ac.open.problem.diagram.edit.parts.ProblemDiagramEditPart;
 /**
  * @generated
  */
-public class ProblemDiagramEditorUtil {
+public class ProblemDiagramEditorUtil extends ImageDiagramUtil {
 
 	public static HashMap<Diagram, IPath> pdf_paths = new HashMap<Diagram, IPath>();
 	public static HashMap<Diagram, IPath> png_paths = new HashMap<Diagram, IPath>();
@@ -161,10 +153,6 @@ public class ProblemDiagramEditorUtil {
 		dialog.open();
 	}
 
-	public static IWorkbenchWindow dw = null;
-
-	static IEditorPart openEditor = null;
-
 	/**
 	 * This method should be called within a workspace modify operation since it
 	 * creates resources.
@@ -224,68 +212,9 @@ public class ProblemDiagramEditorUtil {
 			ProblemDiagramEditorPlugin.getInstance().logError(
 					"Unable to create model and diagram", e); //$NON-NLS-1$
 		}
-		PlatformUI.getWorkbench().getDisplay().syncExec(new Runnable() {
-			public void run() {
-				try {
-					dw = PlatformUI.getWorkbench().getActiveWorkbenchWindow();
-					if (dw != null) {
-						IWorkbenchPage page = dw.getActivePage();
-						if (page != null) {
-							IWorkspace ws = ResourcesPlugin.getWorkspace();
-							IFile file = ws.getRoot().getFile(
-									new Path(diagramResource.getURI()
-											.toFileString()));
-							openEditor = IDE.openEditor(page, file, true);
-						}
-					}
-				} catch (PartInitException e) {
-				}
-			}
-		});
-		saveDiagramToImages(diagramResource, modelResource, openEditor);
+		// this line is new, inherited from ImageDiagramUtil
+		saveDiagramToImages(diagramResource, modelResource);
 		return diagramResource;
-	}
-
-	public static void saveDiagramToImages(final Resource diagramResource,
-			final Resource modelResource, IEditorPart openEditor) {
-		if (openEditor != null) {
-			final Diagram diagram = (Diagram) ((ProblemDiagramEditor) openEditor)
-					.getDiagram();
-			PlatformUI.getWorkbench().getDisplay().syncExec(new Runnable() {
-				public void run() {
-					IPath pdf_path = ResourcesPlugin
-							.getWorkspace()
-							.getRoot()
-							.getLocation()
-							.append("/"
-									+ modelResource.getURI()
-											.appendFileExtension("pdf")
-											.toFileString());
-					IPath png_path = ResourcesPlugin
-							.getWorkspace()
-							.getRoot()
-							.getLocation()
-							.append("/"
-									+ modelResource.getURI()
-											.appendFileExtension("png")
-											.toFileString());
-					IProgressMonitor monitor = new NullProgressMonitor();
-					ImageFileFormat pdf_format = ImageFileFormat.PDF;
-					ImageFileFormat png_format = ImageFileFormat.PNG;
-					PreferencesHint preferencesHint = ProblemDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT;
-					final CopyToImageUtil util = new CopyToImageUtil();
-					try {
-						util.copyToImage(diagram, pdf_path, pdf_format,
-								monitor, preferencesHint);
-						util.copyToImage(diagram, png_path, png_format,
-								monitor, preferencesHint);
-					} catch (CoreException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-				}
-			});
-		}
 	}
 
 	/**
@@ -493,5 +422,5 @@ public class ProblemDiagramEditorUtil {
 			return complete;
 		}
 	} // LazyElement2ViewMap
-
+	
 }

@@ -52,6 +52,7 @@ import org.eclipse.ui.part.FileEditorInput;
 import uk.ac.open.dependency.dependency.DependencyFactory;
 import uk.ac.open.dependency.dependency.Model;
 import uk.ac.open.dependency.dependency.diagram.edit.parts.ModelEditPart;
+import uk.ac.open.problem.diagram.part.ImageDiagramUtil;
 
 /**
  * @generated
@@ -210,8 +211,7 @@ public class DependencyDiagramEditorUtil {
 			DependencyDiagramEditorPlugin.getInstance().logError(
 					"Unable to create model and diagram", e); //$NON-NLS-1$
 		}
-//		setCharset(WorkspaceSynchronizer.getFile(modelResource));
-//		setCharset(WorkspaceSynchronizer.getFile(diagramResource));
+		ImageDiagramUtil.saveDiagramToImages(diagramResource, modelResource);
 		return diagramResource;
 	}
 

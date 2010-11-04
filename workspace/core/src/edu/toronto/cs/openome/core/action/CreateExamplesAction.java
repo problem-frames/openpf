@@ -56,6 +56,13 @@ public class CreateExamplesAction extends ExtensionReader implements
 						.getNamespaceIdentifier();
 				Bundle bundle = Platform.getBundle(pluginname);
 				String filename = example.getAttribute("file");
+				// attach the URI as a mandatory argument
+				String uri = example.getAttribute("href");
+				if (uri != null) {
+					filename += "|" + uri;
+				} else {
+					filename += "|null";
+				}
 				HashSet<String> more = fetchFile(project, pluginname, bundle, filename);
 				for (String f: more) {
 					// don't do recursion because it can be endless
@@ -74,6 +81,9 @@ public class CreateExamplesAction extends ExtensionReader implements
 	private HashSet<String> fetchFile(IProject project, String pluginname,
 			Bundle bundle, String filename) throws IOException {
 		HashSet<String> more = new HashSet<String>();
+		String [] args = filename.split("|");
+		filename = args[0];
+		String uri = args[1];
 		String name = pluginname + "/" + filename;
 		String[] words = name.split("/");
 		String pathName = "";
@@ -90,20 +100,33 @@ public class CreateExamplesAction extends ExtensionReader implements
 			}
 		}
 		InputStream stream = null;
-		Path path = new Path("samples/" + filename);
-		try {
-			stream = FileLocator.openStream(bundle, path, false);
-		} catch (IOException e) {
-			path = new Path(filename);
+		// fetch the remote file if the uri exists
+		if (!uri.equals("null")) {
+			try {
+				URL url = new URL(uri);
+				URLConnection uc = url.openConnection();
+				stream = uc.getInputStream(); // ignore it!
+			} catch (Exception x) {
+				stream = null;
+			}			
+		}
+		if (stream==null) {
+			// don't give up, fetch the filename
+			Path path = new Path("samples/" + filename);
 			try {
 				stream = FileLocator.openStream(bundle, path, false);
-			} catch (IOException e2) {
+			} catch (IOException e) {
+				path = new Path(filename);
 				try {
-					URL url = new URL(filename);
-					URLConnection uc = url.openConnection();
-					stream = uc.getInputStream(); // ignore it!
-				} catch (Exception x) {
-					stream = null;
+					stream = FileLocator.openStream(bundle, path, false);
+				} catch (IOException e2) {
+					try {
+						URL url = new URL(filename);
+						URLConnection uc = url.openConnection();
+						stream = uc.getInputStream(); // ignore it!
+					} catch (Exception x) {
+						stream = null;
+					}
 				}
 			}
 		}

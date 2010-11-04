@@ -18,7 +18,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.xtext.ui.editor.XtextEditor;
+
+import uk.ac.open.ui.ImageDiagramEditor;
 
 /**
  * The class extends the xtext editor with an additional behavior: 
@@ -57,7 +58,13 @@ import org.eclipse.xtext.ui.editor.XtextEditor;
  * @see uk.ac.open.PFEditor.diagram.part.ProblemEditor#doSave()
  * @see uk.ac.open.event.EventCalculusEditor#doSave()
  */
-public class UncalEditor extends XtextEditor {
+public abstract class UncalEditor extends ImageDiagramEditor {
+
+	protected UncalEditor() {
+		super();
+	}
+
+
 	static protected String ROOT = "&problem";
 	
 	/**
