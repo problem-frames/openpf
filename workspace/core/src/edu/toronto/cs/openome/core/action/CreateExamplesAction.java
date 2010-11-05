@@ -83,7 +83,9 @@ public class CreateExamplesAction extends ExtensionReader implements
 		HashSet<String> more = new HashSet<String>();
 		String [] args = filename.split("\\|");
 		filename = args[0];
-		String uri = args[1];
+		String uri = "null";
+		if (args.length > 1)
+		 uri = args[1];
 		String name = pluginname + "/" + filename;
 		String[] words = name.split("/");
 		String pathName = "";

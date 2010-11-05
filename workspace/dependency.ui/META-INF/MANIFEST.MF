@@ -10,7 +10,8 @@ Require-Bundle: dependency;visibility:=reexport,
  dependency.diagram;bundle-version="1.0.0",
  dependency.diagram.extensions;bundle-version="1.0.0",
  problem;bundle-version="1.0.0",
- problem.ui;bundle-version="1.0.0"
+ problem.ui;bundle-version="1.0.0",
+ core;bundle-version="1.0.0"
 Export-Package: uk.ac.open.dependency.ui,uk.ac.open.dependency.ui.cont
  entassist,uk.ac.open.dependency.ui.contentassist.antlr,uk.ac.open.dep
  endency.ui.contentassist.antlr.internal,uk.ac.open.dependency.ui.inte
