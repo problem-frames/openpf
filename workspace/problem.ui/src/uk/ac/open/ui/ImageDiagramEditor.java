@@ -188,7 +188,7 @@ public abstract class ImageDiagramEditor extends XtextEditor implements Runnable
 			}
 			added.clear();
 			try {
-				Thread.sleep(200); // 0.2 seconds maybe too short, but 2 seconds
+				Thread.sleep(1000); // 0.2 seconds maybe too short, but 2 seconds
 									// seem to be too long!
 			} catch (InterruptedException e) {
 				e.printStackTrace();
