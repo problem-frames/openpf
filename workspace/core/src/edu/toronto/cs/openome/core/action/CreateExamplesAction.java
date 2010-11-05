@@ -81,7 +81,7 @@ public class CreateExamplesAction extends ExtensionReader implements
 	private HashSet<String> fetchFile(IProject project, String pluginname,
 			Bundle bundle, String filename) throws IOException {
 		HashSet<String> more = new HashSet<String>();
-		String [] args = filename.split("|");
+		String [] args = filename.split("\\|");
 		filename = args[0];
 		String uri = args[1];
 		String name = pluginname + "/" + filename;
