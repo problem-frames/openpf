@@ -7,49 +7,67 @@ package eu.securechange.ontology.ui.contentassist.antlr.internal;
 import org.eclipse.xtext.ui.editor.contentassist.antlr.internal.Lexer;
 }
 
-T11 : 'carries out' ;
-T12 : 'delegates' ;
-T13 : 'fulfils' ;
-T14 : 'provides' ;
-T15 : 'trusts' ;
-T16 : 'wants' ;
-T17 : 'damages' ;
-T18 : 'attacks' ;
-T19 : 'argues' ;
-T20 : 'interfaces' ;
+T11 : 'fulfils' ;
+T12 : 'S' ;
+T13 : 'R' ;
+T14 : 'W' ;
+T15 : 'and' ;
+T16 : 'or' ;
+T17 : '-' ;
+T18 : '+' ;
+T19 : '--' ;
+T20 : '++' ;
 T21 : 'model' ;
 T22 : ':' ;
-T23 : ',' ;
-T24 : '(' ;
-T25 : ')' ;
-T26 : 'SG' ;
-T27 : 'R' ;
+T23 : 'event' ;
+T24 : ',' ;
+T25 : 'DA' ;
+T26 : 'FR' ;
+T27 : 'SR' ;
 T28 : 'AR' ;
-T29 : 'Ar' ;
-T30 : 'An' ;
-T31 : 'As' ;
-T32 : 'Re' ;
-T33 : 'Ak' ;
+T29 : 'Q' ;
+T30 : 'A' ;
+T31 : 'actor' ;
+T32 : 'attacker' ;
+T33 : 'process' ;
+T34 : '{' ;
+T35 : '}' ;
+T36 : 'activity' ;
+T37 : 'action' ;
+T38 : 'resource' ;
+T39 : 'asset' ;
+T40 : '(' ;
+T41 : ')' ;
+T42 : 'wants' ;
+T43 : 'does' ;
+T44 : 'trusts' ;
+T45 : 'delegates' ;
+T46 : 'provides' ;
+T47 : 'consumes' ;
+T48 : 'exploits' ;
+T49 : 'damages' ;
+T50 : 'attacks' ;
+T51 : 'argues' ;
 
-// $ANTLR src "../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g" 2870
+// $ANTLR src "../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g" 6946
 RULE_ID : ('#' ~('#')+ '#'|'^'? ('a'..'z'|'A'..'Z'|'_'|'.') ('a'..'z'|'A'..'Z'|'_'|'0'..'9'|'.')*);
 
-// $ANTLR src "../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g" 2872
+// $ANTLR src "../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g" 6948
 RULE_INT : ('0'..'9')+;
 
-// $ANTLR src "../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g" 2874
+// $ANTLR src "../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g" 6950
 RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\'');
 
-// $ANTLR src "../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g" 2876
+// $ANTLR src "../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g" 6952
 RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 
-// $ANTLR src "../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g" 2878
+// $ANTLR src "../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g" 6954
 RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
-// $ANTLR src "../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g" 2880
+// $ANTLR src "../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g" 6956
 RULE_WS : (' '|'\t'|'\r'|'\n')+;
 
-// $ANTLR src "../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g" 2882
+// $ANTLR src "../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g" 6958
 RULE_ANY_OTHER : .;
 
 

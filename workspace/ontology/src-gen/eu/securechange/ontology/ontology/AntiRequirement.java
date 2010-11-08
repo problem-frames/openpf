@@ -16,6 +16,6 @@ package eu.securechange.ontology.ontology;
  * @model
  * @generated
  */
-public interface AntiRequirement extends Goal
+public interface AntiRequirement extends Requirement
 {
 } // AntiRequirement

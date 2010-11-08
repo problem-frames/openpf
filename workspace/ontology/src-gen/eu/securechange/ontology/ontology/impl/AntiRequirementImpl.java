@@ -19,27 +19,27 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class AntiRequirementImpl extends GoalImpl implements AntiRequirement
+public class AntiRequirementImpl extends RequirementImpl implements AntiRequirement
 {
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected AntiRequirementImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return OntologyPackage.Literals.ANTI_REQUIREMENT;
-  }
+		return OntologyPackage.Literals.ANTI_REQUIREMENT;
+	}
 
 } //AntiRequirementImpl

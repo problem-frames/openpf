@@ -29,7 +29,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * @generated
  */
 public class AssetItemProvider
-	extends DomainItemProvider
+	extends ResourceItemProvider
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,

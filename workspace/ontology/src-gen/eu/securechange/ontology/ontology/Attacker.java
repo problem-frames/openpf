@@ -16,6 +16,6 @@ package eu.securechange.ontology.ontology;
  * @model
  * @generated
  */
-public interface Attacker extends Domain
+public interface Attacker extends Actor
 {
 } // Attacker

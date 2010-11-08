@@ -16,6 +16,6 @@ package eu.securechange.ontology.ontology;
  * @model
  * @generated
  */
-public interface Asset extends Domain
+public interface Asset extends Resource
 {
 } // Asset

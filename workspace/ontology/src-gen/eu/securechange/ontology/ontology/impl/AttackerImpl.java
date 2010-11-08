@@ -19,27 +19,27 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class AttackerImpl extends DomainImpl implements Attacker
+public class AttackerImpl extends ActorImpl implements Attacker
 {
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected AttackerImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return OntologyPackage.Literals.ATTACKER;
-  }
+		return OntologyPackage.Literals.ATTACKER;
+	}
 
 } //AttackerImpl
