@@ -1,3 +1,6 @@
+!/qualifier/ {
+ print $0
+}
 /qualifier/ {
   split($2, a, /qualifier/)
   split(a[1], b, /"/)
@@ -7,7 +10,4 @@
   split(c[2], d, ".jar")
   gsub(/qualifier/, d[1], $0)
   print $0
-}
-!/qualifier/ {
- print $0
 }
