@@ -3,3 +3,5 @@ binary
 content.jar
 features
 plugins
+site.xml
+category.xml
