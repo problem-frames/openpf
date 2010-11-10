@@ -22,8 +22,6 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import uk.ac.open.argument.argument.ArgumentPackage;
 import uk.ac.open.argument.argument.diagram.edit.parts.Argument2EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.Fact2EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.Fact3EditPart;
 import uk.ac.open.argument.argument.diagram.part.ArgumentDiagramUpdater;
 import uk.ac.open.argument.argument.diagram.part.ArgumentNodeDescriptor;
 import uk.ac.open.argument.argument.diagram.part.ArgumentVisualIDRegistry;
@@ -69,9 +67,8 @@ public class ArgumentArgumentWarrantsCompartment2CanonicalEditPolicy extends
 	 * @generated
 	 */
 	private boolean isMyDiagramElement(View view) {
-		int visualID = ArgumentVisualIDRegistry.getVisualID(view);
-		return visualID == Argument2EditPart.VISUAL_ID
-				|| visualID == Fact3EditPart.VISUAL_ID;
+		return Argument2EditPart.VISUAL_ID == ArgumentVisualIDRegistry
+				.getVisualID(view);
 	}
 
 	/**

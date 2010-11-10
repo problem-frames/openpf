@@ -35,32 +35,26 @@ public class ArgumentEditPartFactory implements EditPartFactory {
 			case ArgumentEditPart.VISUAL_ID:
 				return new ArgumentEditPart(view);
 
-			case ArgumentNameDescriptionRoundEditPart.VISUAL_ID:
-				return new ArgumentNameDescriptionRoundEditPart(view);
+			case ArgumentDescriptionRoundEditPart.VISUAL_ID:
+				return new ArgumentDescriptionRoundEditPart(view);
 
 			case FactEditPart.VISUAL_ID:
 				return new FactEditPart(view);
 
-			case FactNameDescriptionEditPart.VISUAL_ID:
-				return new FactNameDescriptionEditPart(view);
+			case FactNameEditPart.VISUAL_ID:
+				return new FactNameEditPart(view);
 
 			case Fact2EditPart.VISUAL_ID:
 				return new Fact2EditPart(view);
 
-			case FactNameDescription2EditPart.VISUAL_ID:
-				return new FactNameDescription2EditPart(view);
+			case FactName2EditPart.VISUAL_ID:
+				return new FactName2EditPart(view);
 
 			case Argument2EditPart.VISUAL_ID:
 				return new Argument2EditPart(view);
 
-			case ArgumentNameDescriptionRound2EditPart.VISUAL_ID:
-				return new ArgumentNameDescriptionRound2EditPart(view);
-
-			case Fact3EditPart.VISUAL_ID:
-				return new Fact3EditPart(view);
-
-			case FactNameDescription3EditPart.VISUAL_ID:
-				return new FactNameDescription3EditPart(view);
+			case ArgumentDescriptionRound2EditPart.VISUAL_ID:
+				return new ArgumentDescriptionRound2EditPart(view);
 
 			case ArgumentArgumentGroundsCompartmentEditPart.VISUAL_ID:
 				return new ArgumentArgumentGroundsCompartmentEditPart(view);
@@ -80,8 +74,11 @@ public class ArgumentEditPartFactory implements EditPartFactory {
 			case MitigatesEditPart.VISUAL_ID:
 				return new MitigatesEditPart(view);
 
-			case RestoresEditPart.VISUAL_ID:
-				return new RestoresEditPart(view);
+			case FactOriginEditPart.VISUAL_ID:
+				return new FactOriginEditPart(view);
+
+			case WrappingLabelEditPart.VISUAL_ID:
+				return new WrappingLabelEditPart(view);
 
 			}
 		}

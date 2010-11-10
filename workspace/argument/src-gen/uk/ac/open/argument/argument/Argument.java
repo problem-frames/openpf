@@ -71,7 +71,7 @@ public interface Argument extends Node
 
   /**
    * Returns the value of the '<em><b>Warrants</b></em>' containment reference list.
-   * The list contents are of type {@link uk.ac.open.argument.argument.Node}.
+   * The list contents are of type {@link uk.ac.open.argument.argument.Argument}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Warrants</em>' containment reference list isn't clear,
@@ -83,6 +83,6 @@ public interface Argument extends Node
    * @model containment="true"
    * @generated
    */
-  EList<Node> getWarrants();
+  EList<Argument> getWarrants();
 
 } // Argument

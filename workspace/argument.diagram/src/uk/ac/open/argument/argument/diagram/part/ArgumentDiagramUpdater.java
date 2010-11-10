@@ -5,8 +5,8 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 
+import java.util.Map;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EcoreUtil;
@@ -19,7 +19,6 @@ import uk.ac.open.argument.argument.Fact;
 import uk.ac.open.argument.argument.Mitigates;
 import uk.ac.open.argument.argument.Node;
 import uk.ac.open.argument.argument.Rebuts;
-import uk.ac.open.argument.argument.Restores;
 import uk.ac.open.argument.argument.diagram.edit.parts.Argument2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentGroundsCompartment2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentGroundsCompartmentEditPart;
@@ -28,11 +27,10 @@ import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentWarrantsC
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDiagramEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.Fact2EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.Fact3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.FactEditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.FactOriginEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.RebutsEditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.RestoresEditPart;
 import uk.ac.open.argument.argument.diagram.providers.ArgumentElementTypes;
 
 /**
@@ -128,14 +126,10 @@ public class ArgumentDiagramUpdater {
 		LinkedList<ArgumentNodeDescriptor> result = new LinkedList<ArgumentNodeDescriptor>();
 		for (Iterator<?> it = modelElement.getWarrants().iterator(); it
 				.hasNext();) {
-			Node childElement = (Node) it.next();
+			Argument childElement = (Argument) it.next();
 			int visualID = ArgumentVisualIDRegistry.getNodeVisualID(view,
 					childElement);
 			if (visualID == Argument2EditPart.VISUAL_ID) {
-				result.add(new ArgumentNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Fact3EditPart.VISUAL_ID) {
 				result.add(new ArgumentNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -186,14 +180,10 @@ public class ArgumentDiagramUpdater {
 		LinkedList<ArgumentNodeDescriptor> result = new LinkedList<ArgumentNodeDescriptor>();
 		for (Iterator<?> it = modelElement.getWarrants().iterator(); it
 				.hasNext();) {
-			Node childElement = (Node) it.next();
+			Argument childElement = (Argument) it.next();
 			int visualID = ArgumentVisualIDRegistry.getNodeVisualID(view,
 					childElement);
 			if (visualID == Argument2EditPart.VISUAL_ID) {
-				result.add(new ArgumentNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Fact3EditPart.VISUAL_ID) {
 				result.add(new ArgumentNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -216,14 +206,10 @@ public class ArgumentDiagramUpdater {
 			return getFact_3001ContainedLinks(view);
 		case Argument2EditPart.VISUAL_ID:
 			return getArgument_3002ContainedLinks(view);
-		case Fact3EditPart.VISUAL_ID:
-			return getFact_3003ContainedLinks(view);
 		case RebutsEditPart.VISUAL_ID:
 			return getRebuts_4001ContainedLinks(view);
 		case MitigatesEditPart.VISUAL_ID:
 			return getMitigates_4002ContainedLinks(view);
-		case RestoresEditPart.VISUAL_ID:
-			return getRestores_4003ContainedLinks(view);
 		}
 		return Collections.emptyList();
 	}
@@ -241,14 +227,10 @@ public class ArgumentDiagramUpdater {
 			return getFact_3001IncomingLinks(view);
 		case Argument2EditPart.VISUAL_ID:
 			return getArgument_3002IncomingLinks(view);
-		case Fact3EditPart.VISUAL_ID:
-			return getFact_3003IncomingLinks(view);
 		case RebutsEditPart.VISUAL_ID:
 			return getRebuts_4001IncomingLinks(view);
 		case MitigatesEditPart.VISUAL_ID:
 			return getMitigates_4002IncomingLinks(view);
-		case RestoresEditPart.VISUAL_ID:
-			return getRestores_4003IncomingLinks(view);
 		}
 		return Collections.emptyList();
 	}
@@ -266,14 +248,10 @@ public class ArgumentDiagramUpdater {
 			return getFact_3001OutgoingLinks(view);
 		case Argument2EditPart.VISUAL_ID:
 			return getArgument_3002OutgoingLinks(view);
-		case Fact3EditPart.VISUAL_ID:
-			return getFact_3003OutgoingLinks(view);
 		case RebutsEditPart.VISUAL_ID:
 			return getRebuts_4001OutgoingLinks(view);
 		case MitigatesEditPart.VISUAL_ID:
 			return getMitigates_4002OutgoingLinks(view);
-		case RestoresEditPart.VISUAL_ID:
-			return getRestores_4003OutgoingLinks(view);
 		}
 		return Collections.emptyList();
 	}
@@ -287,7 +265,6 @@ public class ArgumentDiagramUpdater {
 		LinkedList<ArgumentLinkDescriptor> result = new LinkedList<ArgumentLinkDescriptor>();
 		result.addAll(getContainedTypeModelFacetLinks_Rebuts_4001(modelElement));
 		result.addAll(getContainedTypeModelFacetLinks_Mitigates_4002(modelElement));
-		result.addAll(getContainedTypeModelFacetLinks_Restores_4003(modelElement));
 		return result;
 	}
 
@@ -304,7 +281,10 @@ public class ArgumentDiagramUpdater {
 	 */
 	public static List<ArgumentLinkDescriptor> getFact_2002ContainedLinks(
 			View view) {
-		return Collections.emptyList();
+		Fact modelElement = (Fact) view.getElement();
+		LinkedList<ArgumentLinkDescriptor> result = new LinkedList<ArgumentLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Fact_Origin_4003(modelElement));
+		return result;
 	}
 
 	/**
@@ -312,21 +292,16 @@ public class ArgumentDiagramUpdater {
 	 */
 	public static List<ArgumentLinkDescriptor> getFact_3001ContainedLinks(
 			View view) {
-		return Collections.emptyList();
+		Fact modelElement = (Fact) view.getElement();
+		LinkedList<ArgumentLinkDescriptor> result = new LinkedList<ArgumentLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Fact_Origin_4003(modelElement));
+		return result;
 	}
 
 	/**
 	 * @generated
 	 */
 	public static List<ArgumentLinkDescriptor> getArgument_3002ContainedLinks(
-			View view) {
-		return Collections.emptyList();
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<ArgumentLinkDescriptor> getFact_3003ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -350,14 +325,6 @@ public class ArgumentDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ArgumentLinkDescriptor> getRestores_4003ContainedLinks(
-			View view) {
-		return Collections.emptyList();
-	}
-
-	/**
-	 * @generated
-	 */
 	public static List<ArgumentLinkDescriptor> getArgument_2001IncomingLinks(
 			View view) {
 		Argument modelElement = (Argument) view.getElement();
@@ -368,7 +335,7 @@ public class ArgumentDiagramUpdater {
 				crossReferences));
 		result.addAll(getIncomingTypeModelFacetLinks_Mitigates_4002(
 				modelElement, crossReferences));
-		result.addAll(getIncomingTypeModelFacetLinks_Restores_4003(
+		result.addAll(getIncomingFeatureModelFacetLinks_Fact_Origin_4003(
 				modelElement, crossReferences));
 		return result;
 	}
@@ -378,7 +345,13 @@ public class ArgumentDiagramUpdater {
 	 */
 	public static List<ArgumentLinkDescriptor> getFact_2002IncomingLinks(
 			View view) {
-		return Collections.emptyList();
+		Fact modelElement = (Fact) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<ArgumentLinkDescriptor> result = new LinkedList<ArgumentLinkDescriptor>();
+		result.addAll(getIncomingFeatureModelFacetLinks_Fact_Origin_4003(
+				modelElement, crossReferences));
+		return result;
 	}
 
 	/**
@@ -386,7 +359,13 @@ public class ArgumentDiagramUpdater {
 	 */
 	public static List<ArgumentLinkDescriptor> getFact_3001IncomingLinks(
 			View view) {
-		return Collections.emptyList();
+		Fact modelElement = (Fact) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<ArgumentLinkDescriptor> result = new LinkedList<ArgumentLinkDescriptor>();
+		result.addAll(getIncomingFeatureModelFacetLinks_Fact_Origin_4003(
+				modelElement, crossReferences));
+		return result;
 	}
 
 	/**
@@ -402,17 +381,9 @@ public class ArgumentDiagramUpdater {
 				crossReferences));
 		result.addAll(getIncomingTypeModelFacetLinks_Mitigates_4002(
 				modelElement, crossReferences));
-		result.addAll(getIncomingTypeModelFacetLinks_Restores_4003(
+		result.addAll(getIncomingFeatureModelFacetLinks_Fact_Origin_4003(
 				modelElement, crossReferences));
 		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<ArgumentLinkDescriptor> getFact_3003IncomingLinks(
-			View view) {
-		return Collections.emptyList();
 	}
 
 	/**
@@ -434,21 +405,12 @@ public class ArgumentDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ArgumentLinkDescriptor> getRestores_4003IncomingLinks(
-			View view) {
-		return Collections.emptyList();
-	}
-
-	/**
-	 * @generated
-	 */
 	public static List<ArgumentLinkDescriptor> getArgument_2001OutgoingLinks(
 			View view) {
 		Argument modelElement = (Argument) view.getElement();
 		LinkedList<ArgumentLinkDescriptor> result = new LinkedList<ArgumentLinkDescriptor>();
 		result.addAll(getOutgoingTypeModelFacetLinks_Rebuts_4001(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_Mitigates_4002(modelElement));
-		result.addAll(getOutgoingTypeModelFacetLinks_Restores_4003(modelElement));
 		return result;
 	}
 
@@ -457,7 +419,10 @@ public class ArgumentDiagramUpdater {
 	 */
 	public static List<ArgumentLinkDescriptor> getFact_2002OutgoingLinks(
 			View view) {
-		return Collections.emptyList();
+		Fact modelElement = (Fact) view.getElement();
+		LinkedList<ArgumentLinkDescriptor> result = new LinkedList<ArgumentLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Fact_Origin_4003(modelElement));
+		return result;
 	}
 
 	/**
@@ -465,7 +430,10 @@ public class ArgumentDiagramUpdater {
 	 */
 	public static List<ArgumentLinkDescriptor> getFact_3001OutgoingLinks(
 			View view) {
-		return Collections.emptyList();
+		Fact modelElement = (Fact) view.getElement();
+		LinkedList<ArgumentLinkDescriptor> result = new LinkedList<ArgumentLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Fact_Origin_4003(modelElement));
+		return result;
 	}
 
 	/**
@@ -477,16 +445,7 @@ public class ArgumentDiagramUpdater {
 		LinkedList<ArgumentLinkDescriptor> result = new LinkedList<ArgumentLinkDescriptor>();
 		result.addAll(getOutgoingTypeModelFacetLinks_Rebuts_4001(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_Mitigates_4002(modelElement));
-		result.addAll(getOutgoingTypeModelFacetLinks_Restores_4003(modelElement));
 		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<ArgumentLinkDescriptor> getFact_3003OutgoingLinks(
-			View view) {
-		return Collections.emptyList();
 	}
 
 	/**
@@ -501,14 +460,6 @@ public class ArgumentDiagramUpdater {
 	 * @generated
 	 */
 	public static List<ArgumentLinkDescriptor> getMitigates_4002OutgoingLinks(
-			View view) {
-		return Collections.emptyList();
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<ArgumentLinkDescriptor> getRestores_4003OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -560,32 +511,6 @@ public class ArgumentDiagramUpdater {
 			result.add(new ArgumentLinkDescriptor(src, dst, link,
 					ArgumentElementTypes.Mitigates_4002,
 					MitigatesEditPart.VISUAL_ID));
-		}
-		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	private static Collection<ArgumentLinkDescriptor> getContainedTypeModelFacetLinks_Restores_4003(
-			ArgumentDiagram container) {
-		LinkedList<ArgumentLinkDescriptor> result = new LinkedList<ArgumentLinkDescriptor>();
-		for (Iterator<?> links = container.getLinks().iterator(); links
-				.hasNext();) {
-			EObject linkObject = (EObject) links.next();
-			if (false == linkObject instanceof Restores) {
-				continue;
-			}
-			Restores link = (Restores) linkObject;
-			if (RestoresEditPart.VISUAL_ID != ArgumentVisualIDRegistry
-					.getLinkWithClassVisualID(link)) {
-				continue;
-			}
-			Argument dst = link.getTo();
-			Argument src = link.getFrom();
-			result.add(new ArgumentLinkDescriptor(src, dst, link,
-					ArgumentElementTypes.Restores_4003,
-					RestoresEditPart.VISUAL_ID));
 		}
 		return result;
 	}
@@ -648,27 +573,19 @@ public class ArgumentDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection<ArgumentLinkDescriptor> getIncomingTypeModelFacetLinks_Restores_4003(
-			Argument target,
+	private static Collection<ArgumentLinkDescriptor> getIncomingFeatureModelFacetLinks_Fact_Origin_4003(
+			Node target,
 			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
 		LinkedList<ArgumentLinkDescriptor> result = new LinkedList<ArgumentLinkDescriptor>();
 		Collection<EStructuralFeature.Setting> settings = crossReferences
 				.get(target);
 		for (EStructuralFeature.Setting setting : settings) {
-			if (setting.getEStructuralFeature() != ArgumentPackage.eINSTANCE
-					.getLink_To()
-					|| false == setting.getEObject() instanceof Restores) {
-				continue;
+			if (setting.getEStructuralFeature() == ArgumentPackage.eINSTANCE
+					.getFact_Origin()) {
+				result.add(new ArgumentLinkDescriptor(setting.getEObject(),
+						target, ArgumentElementTypes.FactOrigin_4003,
+						FactOriginEditPart.VISUAL_ID));
 			}
-			Restores link = (Restores) setting.getEObject();
-			if (RestoresEditPart.VISUAL_ID != ArgumentVisualIDRegistry
-					.getLinkWithClassVisualID(link)) {
-				continue;
-			}
-			Argument src = link.getFrom();
-			result.add(new ArgumentLinkDescriptor(src, target, link,
-					ArgumentElementTypes.Restores_4003,
-					RestoresEditPart.VISUAL_ID));
 		}
 		return result;
 	}
@@ -759,42 +676,16 @@ public class ArgumentDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection<ArgumentLinkDescriptor> getOutgoingTypeModelFacetLinks_Restores_4003(
-			Argument source) {
-		ArgumentDiagram container = null;
-		// Find container element for the link.
-		// Climb up by containment hierarchy starting from the source
-		// and return the first element that is instance of the container class.
-		for (EObject element = source; element != null && container == null; element = element
-				.eContainer()) {
-			if (element instanceof ArgumentDiagram) {
-				container = (ArgumentDiagram) element;
-			}
-		}
-		if (container == null) {
-			return Collections.emptyList();
-		}
+	private static Collection<ArgumentLinkDescriptor> getOutgoingFeatureModelFacetLinks_Fact_Origin_4003(
+			Fact source) {
 		LinkedList<ArgumentLinkDescriptor> result = new LinkedList<ArgumentLinkDescriptor>();
-		for (Iterator<?> links = container.getLinks().iterator(); links
-				.hasNext();) {
-			EObject linkObject = (EObject) links.next();
-			if (false == linkObject instanceof Restores) {
-				continue;
-			}
-			Restores link = (Restores) linkObject;
-			if (RestoresEditPart.VISUAL_ID != ArgumentVisualIDRegistry
-					.getLinkWithClassVisualID(link)) {
-				continue;
-			}
-			Argument dst = link.getTo();
-			Argument src = link.getFrom();
-			if (src != source) {
-				continue;
-			}
-			result.add(new ArgumentLinkDescriptor(src, dst, link,
-					ArgumentElementTypes.Restores_4003,
-					RestoresEditPart.VISUAL_ID));
+		Node destination = source.getOrigin();
+		if (destination == null) {
+			return result;
 		}
+		result.add(new ArgumentLinkDescriptor(source, destination,
+				ArgumentElementTypes.FactOrigin_4003,
+				FactOriginEditPart.VISUAL_ID));
 		return result;
 	}
 

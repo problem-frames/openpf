@@ -1,4 +1,5 @@
 grammar uk.ac.open.argument.Argument with org.eclipse.xtext.common.Terminals
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 generate argument "http://www.ac.uk/open/argument/Argument"
 
 ArgumentDiagram: ("argument:" name=ID)? ("for" highlight=[Node])?
@@ -8,30 +9,68 @@ Node:
 	Argument | Fact;
 
 Argument: name=ID "A"
+	":"? description=STRING? 
 	('{'
 		('round' round=STRING)?
 		('supported by' (','? grounds+=Fact)*)?
-		('warranted by' (','? warrants+=Node)*)?
-	'}'	)?
-	":"? description=STRING?
-;
+		('warranted by' (','? warrants+=Argument)*)?
+	'}')?;
 
 Fact: (name=ID "G"
-	((":")? description=STRING)?);
+	((":")? description=STRING expr=Expression ('replacing' origin=[Node])? )?);
 
-//Claim: (name=ID "C"
-//	((":")? description=STRING)?);
+Expression:
+	expr=AssignmentOp;
+		
+AssignmentOp returns Expression:
+	OrExp (({AssignPlus.left=current} '->' | {AssignMin.left=current} '<->') right=OrExp)?;
 
-Link: (Rebuts | Mitigates | Restores);
+OrExp returns Expression:
+	AndExp ({Or.left=current} '|' right=AndExp)*;
 
-Rebuts:
-(from=[Argument] "rebuts" to=[Argument]);
+AndExp returns Expression:
+	Relational ({And.left=current} '&' right=Relational)*;
 
-Mitigates:
-(from=[Argument] "mitigates" to=[Argument]);
+Relational returns Expression:
+	Addition (({RelNotEq.left=current} '!=' | {RelEqEq.left=current} '==' | {RelLtEq.left=current} '>=' |
+	{RelGtEq.left=current} '<=' |
+	{RelEq.left=current} '=' | {RelLt.left=current} '<' | {RelGt.left=current} '>') right=Addition)?;
 
-Restores:
-(from=[Argument] "restores" to=[Argument]);
+Addition returns Expression:
+	Multiplication (({Plus.left=current} '+' | {Minus.left=current} '-') right=Multiplication)*;
+
+Multiplication returns Expression:
+	Power (({Multi.left=current} '*' | {Div.left=current} '/') right=Power)*;
+
+Power returns Expression:
+	UnaryExpr (({Pow.left=current} '^') right=UnaryExpr)*;
+
+UnaryExpr returns Expression:
+	(op=UnaryOp)? right=PrePrimaryExpr;
+
+enum UnaryOp:
+	NOT='!';
+
+PrePrimaryExpr returns Expression:
+	TerminalExpression | '(' Expression ')' | '-' n=INT;
+
+TerminalExpression:
+	  {IntLiteral} value=INT 
+	| {StringLiteral} value=STRING 
+	| {BooleanLiteral} value=BOOLEAN 
+	| fact=[Node];
+
+Link: Rebuts | Mitigates;
+
+Rebuts: from=[Argument] "rebutted by" to=[Argument];
+
+Mitigates: from=[Argument] "mitigated by" to=[Argument];
+
+terminal INT returns ecore::EInt:
+	'0' | '1'..'9' ('0'..'9')*;
+
+terminal BOOLEAN returns ecore::EBoolean:
+	'true' | 'false';
 
 terminal ID: ('#' (!('#'))+ '#') |
   ('^'? ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*);

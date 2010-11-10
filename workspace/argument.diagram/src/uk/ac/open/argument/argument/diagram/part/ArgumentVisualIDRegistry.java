@@ -17,22 +17,14 @@ import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDescriptionRound2
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDescriptionRoundEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDiagramEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentEditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentName2EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameDescriptionRound2EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameDescriptionRoundEditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.Fact2EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.Fact3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.FactEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.FactName2EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.FactName3EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.FactNameDescription2EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.FactNameDescription3EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.FactNameDescriptionEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.FactNameEditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.FactOriginEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.RebutsEditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.RestoresEditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.WrappingLabelEditPart;
 
 /**
  * This registry is used to determine which type of visual object should be
@@ -162,10 +154,6 @@ public class ArgumentVisualIDRegistry {
 					domainElement.eClass())) {
 				return Argument2EditPart.VISUAL_ID;
 			}
-			if (ArgumentPackage.eINSTANCE.getFact().isSuperTypeOf(
-					domainElement.eClass())) {
-				return Fact3EditPart.VISUAL_ID;
-			}
 			break;
 		case ArgumentArgumentGroundsCompartment2EditPart.VISUAL_ID:
 			if (ArgumentPackage.eINSTANCE.getFact().isSuperTypeOf(
@@ -177,10 +165,6 @@ public class ArgumentVisualIDRegistry {
 			if (ArgumentPackage.eINSTANCE.getArgument().isSuperTypeOf(
 					domainElement.eClass())) {
 				return Argument2EditPart.VISUAL_ID;
-			}
-			if (ArgumentPackage.eINSTANCE.getFact().isSuperTypeOf(
-					domainElement.eClass())) {
-				return Fact3EditPart.VISUAL_ID;
 			}
 			break;
 		}
@@ -217,7 +201,7 @@ public class ArgumentVisualIDRegistry {
 			}
 			break;
 		case ArgumentEditPart.VISUAL_ID:
-			if (ArgumentNameDescriptionRoundEditPart.VISUAL_ID == nodeVisualID) {
+			if (ArgumentDescriptionRoundEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (ArgumentArgumentGroundsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
@@ -228,28 +212,23 @@ public class ArgumentVisualIDRegistry {
 			}
 			break;
 		case FactEditPart.VISUAL_ID:
-			if (FactNameDescriptionEditPart.VISUAL_ID == nodeVisualID) {
+			if (FactNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
 		case Fact2EditPart.VISUAL_ID:
-			if (FactNameDescription2EditPart.VISUAL_ID == nodeVisualID) {
+			if (FactName2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
 		case Argument2EditPart.VISUAL_ID:
-			if (ArgumentNameDescriptionRound2EditPart.VISUAL_ID == nodeVisualID) {
+			if (ArgumentDescriptionRound2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (ArgumentArgumentGroundsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (ArgumentArgumentWarrantsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Fact3EditPart.VISUAL_ID:
-			if (FactNameDescription3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -262,9 +241,6 @@ public class ArgumentVisualIDRegistry {
 			if (Argument2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Fact3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
 			break;
 		case ArgumentArgumentGroundsCompartment2EditPart.VISUAL_ID:
 			if (Fact2EditPart.VISUAL_ID == nodeVisualID) {
@@ -275,7 +251,9 @@ public class ArgumentVisualIDRegistry {
 			if (Argument2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Fact3EditPart.VISUAL_ID == nodeVisualID) {
+			break;
+		case FactOriginEditPart.VISUAL_ID:
+			if (WrappingLabelEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -297,10 +275,6 @@ public class ArgumentVisualIDRegistry {
 		if (ArgumentPackage.eINSTANCE.getMitigates().isSuperTypeOf(
 				domainElement.eClass())) {
 			return MitigatesEditPart.VISUAL_ID;
-		}
-		if (ArgumentPackage.eINSTANCE.getRestores().isSuperTypeOf(
-				domainElement.eClass())) {
-			return RestoresEditPart.VISUAL_ID;
 		}
 		return -1;
 	}

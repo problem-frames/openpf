@@ -1,22 +1,42 @@
+RULE_BOOLEAN=7
 RULE_ID=4
 RULE_STRING=5
-RULE_ANY_OTHER=11
-RULE_INT=7
-RULE_QUALIFIED_NAME=6
-RULE_WS=10
-RULE_SL_COMMENT=9
-RULE_ML_COMMENT=8
-'}'=17
-'restores'=25
-'G'=22
-'{'=16
-'round'=18
-'mitigates'=24
-'supported by'=19
-'argument:'=12
-'A'=14
-'for'=13
-':'=15
-','=20
-'warranted by'=21
-'rebuts'=23
+RULE_ANY_OTHER=12
+RULE_INT=6
+RULE_QUALIFIED_NAME=8
+RULE_WS=11
+RULE_SL_COMMENT=10
+RULE_ML_COMMENT=9
+'!'=13
+'|'=28
+'>='=32
+'replacing'=25
+'/'=40
+'=='=31
+'>'=36
+'='=34
+'argument:'=14
+'mitigated by'=45
+'for'=15
+'<->'=27
+'+'=37
+')'=43
+'warranted by'=23
+'^'=41
+'->'=26
+'}'=19
+'rebutted by'=44
+'G'=24
+'{'=18
+'<='=33
+'round'=20
+'supported by'=21
+'!='=30
+'<'=35
+'A'=16
+'('=42
+':'=17
+'*'=39
+'-'=38
+','=22
+'&'=29

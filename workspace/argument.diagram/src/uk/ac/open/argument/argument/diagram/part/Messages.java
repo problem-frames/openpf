@@ -283,22 +283,22 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String Rebuts2CreationTool_title;
+	public static String Origin2CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Rebuts2CreationTool_desc;
+	public static String Origin2CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String Restores3CreationTool_title;
+	public static String Rebuts3CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Restores3CreationTool_desc;
+	public static String Rebuts3CreationTool_desc;
 
 	/**
 	 * @generated
@@ -328,12 +328,27 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Rebuts_4001_target;
+	public static String NavigatorGroupName_FactOrigin_4003_target;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Rebuts_4001_source;
+	public static String NavigatorGroupName_FactOrigin_4003_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_ArgumentDiagram_1000_links;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Fact_2002_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Fact_2002_outgoinglinks;
 
 	/**
 	 * @generated
@@ -348,27 +363,12 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_ArgumentDiagram_1000_links;
+	public static String NavigatorGroupName_Rebuts_4001_target;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Argument_3002_incominglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_Argument_3002_outgoinglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_Restores_4003_target;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_Restores_4003_source;
+	public static String NavigatorGroupName_Rebuts_4001_source;
 
 	/**
 	 * @generated
@@ -379,6 +379,26 @@ public class Messages extends NLS {
 	 * @generated
 	 */
 	public static String NavigatorGroupName_Mitigates_4002_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Fact_3001_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Fact_3001_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Argument_3002_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Argument_3002_outgoinglinks;
 
 	/**
 	 * @generated

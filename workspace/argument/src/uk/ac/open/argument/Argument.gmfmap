@@ -2,13 +2,13 @@
 <gmfmap:Mapping xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:gmfmap="http://www.eclipse.org/gmf/2008/mappings"
     xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
   <nodes>
     <containmentFeature
         href="Argument.ecore#//ArgumentDiagram/nodes"/>
-    <ownedChild>
+    <ownedChild
+        relatedDiagrams="//@diagram">
       <domainMetaElement
           href="Argument.ecore#//Argument"/>
       <labelMappings
@@ -16,13 +16,37 @@
         <diagramLabel
             href="Argument.gmfgraph#ArgumentLabel"/>
         <features
-            href="Argument.ecore#//Node/name"/>
+            href="Argument.ecore#//Node/description"/>
+        <features
+            href="Argument.ecore#//Argument/round"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
           href="Argument.gmftool#//@palette/@tools.0/@tools.0"/>
       <diagramNode
           href="Argument.gmfgraph#Argument"/>
+      <children
+          compartment="//@nodes.0/@ownedChild/@compartments.0"
+          referencedChild="//@nodes.1/@ownedChild">
+        <containmentFeature
+            href="Argument.ecore#//Argument/grounds"/>
+      </children>
+      <children
+          compartment="//@nodes.0/@ownedChild/@compartments.1"
+          referencedChild="//@nodes.0/@ownedChild">
+        <containmentFeature
+            href="Argument.ecore#//Argument/warrants"/>
+      </children>
+      <compartments
+          children="//@nodes.0/@ownedChild/@children.0">
+        <compartment
+            href="Argument.gmfgraph#ArgumentGroundsCompartment"/>
+      </compartments>
+      <compartments
+          children="//@nodes.0/@ownedChild/@children.1">
+        <compartment
+            href="Argument.gmfgraph#ArgumentWarrantsCompartment"/>
+      </compartments>
     </ownedChild>
   </nodes>
   <nodes>
@@ -30,51 +54,11 @@
         href="Argument.ecore#//ArgumentDiagram/nodes"/>
     <ownedChild>
       <domainMetaElement
-          href="Argument.ecore#//Mitigation"/>
+          href="Argument.ecore#//Fact"/>
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
-            href="Argument.gmfgraph#MitigationLabel"/>
-        <features
-            href="Argument.ecore#//Node/name"/>
-      </labelMappings>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="Argument.gmftool#//@palette/@tools.0/@tools.5"/>
-      <diagramNode
-          href="Argument.gmfgraph#Mitigation"/>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <containmentFeature
-        href="Argument.ecore#//ArgumentDiagram/nodes"/>
-    <ownedChild>
-      <domainMetaElement
-          href="Argument.ecore#//Ground"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="Argument.gmfgraph#GroundLabel"/>
-        <features
-            href="Argument.ecore#//Node/name"/>
-      </labelMappings>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="Argument.gmftool#//@palette/@tools.0/@tools.3"/>
-      <diagramNode
-          href="Argument.gmfgraph#Ground"/>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <containmentFeature
-        href="Argument.ecore#//ArgumentDiagram/nodes"/>
-    <ownedChild>
-      <domainMetaElement
-          href="Argument.ecore#//Claim"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="Argument.gmfgraph#ClaimLabel"/>
+            href="Argument.gmfgraph#FactLabel"/>
         <features
             href="Argument.ecore#//Node/name"/>
       </labelMappings>
@@ -82,154 +66,9 @@
           xsi:type="gmftool:CreationTool"
           href="Argument.gmftool#//@palette/@tools.0/@tools.1"/>
       <diagramNode
-          href="Argument.gmfgraph#Claim"/>
+          href="Argument.gmfgraph#Fact"/>
     </ownedChild>
   </nodes>
-  <nodes>
-    <containmentFeature
-        href="Argument.ecore#//ArgumentDiagram/nodes"/>
-    <ownedChild>
-      <domainMetaElement
-          href="Argument.ecore#//GroundArgument"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="Argument.gmfgraph#GroundArgumentLabel"/>
-        <features
-            href="Argument.ecore#//Node/name"/>
-      </labelMappings>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="Argument.gmftool#//@palette/@tools.0/@tools.4"/>
-      <diagramNode
-          href="Argument.gmfgraph#GroundArgument"/>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <containmentFeature
-        href="Argument.ecore#//ArgumentDiagram/nodes"/>
-    <ownedChild>
-      <domainMetaElement
-          href="Argument.ecore#//ClaimMitigation"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="Argument.gmfgraph#ClaimMitigationLabel"/>
-        <features
-            href="Argument.ecore#//Node/name"/>
-      </labelMappings>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="Argument.gmftool#//@palette/@tools.0/@tools.2"/>
-      <diagramNode
-          href="Argument.gmfgraph#ClaimMitigation"/>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <containmentFeature
-        href="Argument.ecore#//ArgumentDiagram/nodes"/>
-    <ownedChild>
-      <domainMetaElement
-          href="Argument.ecore#//Node"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="Argument.gmfgraph#NodeLabel"/>
-        <features
-            href="Argument.ecore#//Node/name"/>
-      </labelMappings>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="Argument.gmftool#//@palette/@tools.0/@tools.6"/>
-      <diagramNode
-          href="Argument.gmfgraph#Node"/>
-    </ownedChild>
-  </nodes>
-  <links>
-    <domainMetaElement
-        href="Argument.ecore#//Claims"/>
-    <containmentFeature
-        href="Argument.ecore#//ArgumentDiagram/links"/>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="Argument.gmftool#//@palette/@tools.1/@tools.0"/>
-    <diagramLink
-        href="Argument.gmfgraph#Claims"/>
-    <sourceMetaFeature
-        xsi:type="ecore:EReference"
-        href="Argument.ecore#//Claims/from"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="Argument.ecore#//Claims/to"/>
-  </links>
-  <links>
-    <domainMetaElement
-        href="Argument.ecore#//Supports"/>
-    <containmentFeature
-        href="Argument.ecore#//ArgumentDiagram/links"/>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="Argument.gmftool#//@palette/@tools.1/@tools.3"/>
-    <diagramLink
-        href="Argument.gmfgraph#Supports"/>
-    <sourceMetaFeature
-        xsi:type="ecore:EReference"
-        href="Argument.ecore#//Supports/from"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="Argument.ecore#//Supports/to"/>
-  </links>
-  <links>
-    <domainMetaElement
-        href="Argument.ecore#//Warrants"/>
-    <containmentFeature
-        href="Argument.ecore#//ArgumentDiagram/links"/>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="Argument.gmftool#//@palette/@tools.1/@tools.4"/>
-    <diagramLink
-        href="Argument.gmfgraph#Warrants"/>
-    <sourceMetaFeature
-        xsi:type="ecore:EReference"
-        href="Argument.ecore#//Warrants/from"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="Argument.ecore#//Warrants/to"/>
-  </links>
-  <links>
-    <domainMetaElement
-        href="Argument.ecore#//Rebuts"/>
-    <containmentFeature
-        href="Argument.ecore#//ArgumentDiagram/links"/>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="Argument.gmftool#//@palette/@tools.1/@tools.2"/>
-    <diagramLink
-        href="Argument.gmfgraph#Rebuts"/>
-    <sourceMetaFeature
-        xsi:type="ecore:EReference"
-        href="Argument.ecore#//Rebuts/from"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="Argument.ecore#//Rebuts/to"/>
-  </links>
-  <links>
-    <domainMetaElement
-        href="Argument.ecore#//Mitigates"/>
-    <containmentFeature
-        href="Argument.ecore#//ArgumentDiagram/links"/>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="Argument.gmftool#//@palette/@tools.1/@tools.1"/>
-    <diagramLink
-        href="Argument.gmfgraph#Mitigates"/>
-    <sourceMetaFeature
-        xsi:type="ecore:EReference"
-        href="Argument.ecore#//Mitigates/from"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="Argument.ecore#//Mitigates/to"/>
-  </links>
   <diagram>
     <diagramCanvas
         href="Argument.gmfgraph#argument"/>

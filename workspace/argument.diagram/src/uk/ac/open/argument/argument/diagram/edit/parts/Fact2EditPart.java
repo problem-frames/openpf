@@ -1,5 +1,8 @@
 package uk.ac.open.argument.argument.diagram.edit.parts;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;
 import org.eclipse.draw2d.RoundedRectangle;
@@ -18,6 +21,7 @@ import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
+import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
@@ -25,6 +29,7 @@ import org.eclipse.swt.graphics.Color;
 
 import uk.ac.open.argument.argument.diagram.edit.policies.Fact2ItemSemanticEditPolicy;
 import uk.ac.open.argument.argument.diagram.part.ArgumentVisualIDRegistry;
+import uk.ac.open.argument.argument.diagram.providers.ArgumentElementTypes;
 
 /**
  * @generated
@@ -109,9 +114,9 @@ public class Fact2EditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof FactNameDescription2EditPart) {
-			((FactNameDescription2EditPart) childEditPart)
-					.setLabel(getPrimaryShape().getFigureFactLabelFigure());
+		if (childEditPart instanceof FactName2EditPart) {
+			((FactName2EditPart) childEditPart).setLabel(getPrimaryShape()
+					.getFigureFactLabelFigure());
 			return true;
 		}
 		return false;
@@ -121,7 +126,7 @@ public class Fact2EditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof FactNameDescription2EditPart) {
+		if (childEditPart instanceof FactName2EditPart) {
 			return true;
 		}
 		return false;
@@ -245,7 +250,72 @@ public class Fact2EditPart extends ShapeNodeEditPart {
 	 */
 	public EditPart getPrimaryChildEditPart() {
 		return getChildBySemanticHint(ArgumentVisualIDRegistry
-				.getType(FactNameDescription2EditPart.VISUAL_ID));
+				.getType(FactName2EditPart.VISUAL_ID));
+	}
+
+	/**
+	 * @generated
+	 */
+	public List<IElementType> getMARelTypesOnSource() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(1);
+		types.add(ArgumentElementTypes.FactOrigin_4003);
+		return types;
+	}
+
+	/**
+	 * @generated
+	 */
+	public List<IElementType> getMARelTypesOnSourceAndTarget(
+			IGraphicalEditPart targetEditPart) {
+		LinkedList<IElementType> types = new LinkedList<IElementType>();
+		if (targetEditPart instanceof ArgumentEditPart) {
+			types.add(ArgumentElementTypes.FactOrigin_4003);
+		}
+		if (targetEditPart instanceof FactEditPart) {
+			types.add(ArgumentElementTypes.FactOrigin_4003);
+		}
+		if (targetEditPart instanceof uk.ac.open.argument.argument.diagram.edit.parts.Fact2EditPart) {
+			types.add(ArgumentElementTypes.FactOrigin_4003);
+		}
+		if (targetEditPart instanceof Argument2EditPart) {
+			types.add(ArgumentElementTypes.FactOrigin_4003);
+		}
+		return types;
+	}
+
+	/**
+	 * @generated
+	 */
+	public List<IElementType> getMATypesForTarget(IElementType relationshipType) {
+		LinkedList<IElementType> types = new LinkedList<IElementType>();
+		if (relationshipType == ArgumentElementTypes.FactOrigin_4003) {
+			types.add(ArgumentElementTypes.Argument_2001);
+			types.add(ArgumentElementTypes.Fact_2002);
+			types.add(ArgumentElementTypes.Fact_3001);
+			types.add(ArgumentElementTypes.Argument_3002);
+		}
+		return types;
+	}
+
+	/**
+	 * @generated
+	 */
+	public List<IElementType> getMARelTypesOnTarget() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(1);
+		types.add(ArgumentElementTypes.FactOrigin_4003);
+		return types;
+	}
+
+	/**
+	 * @generated
+	 */
+	public List<IElementType> getMATypesForSource(IElementType relationshipType) {
+		LinkedList<IElementType> types = new LinkedList<IElementType>();
+		if (relationshipType == ArgumentElementTypes.FactOrigin_4003) {
+			types.add(ArgumentElementTypes.Fact_2002);
+			types.add(ArgumentElementTypes.Fact_3001);
+		}
+		return types;
 	}
 
 	/**

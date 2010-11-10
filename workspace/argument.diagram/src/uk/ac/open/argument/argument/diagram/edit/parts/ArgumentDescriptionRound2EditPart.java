@@ -53,7 +53,7 @@ public class ArgumentDescriptionRound2EditPart extends CompartmentEditPart
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5003;
+	public static final int VISUAL_ID = 5002;
 
 	/**
 	 * @generated
@@ -504,7 +504,7 @@ public class ArgumentDescriptionRound2EditPart extends CompartmentEditPart
 	 * @generated
 	 */
 	private View getFontStyleOwnerView() {
-		return getPrimaryView();
+		return (View) getModel();
 	}
 
 	/**

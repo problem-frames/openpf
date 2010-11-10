@@ -43,8 +43,8 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Rebuts"
-          description="Create new Rebuts">
+          title="Origin"
+          description="Create new Origin">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -52,8 +52,8 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Restores"
-          description="Create new Restores">
+          title="Rebuts"
+          description="Create new Rebuts">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon

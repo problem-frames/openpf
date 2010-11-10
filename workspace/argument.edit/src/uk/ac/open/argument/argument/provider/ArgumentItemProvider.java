@@ -15,12 +15,14 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import uk.ac.open.argument.argument.Argument;
@@ -62,8 +64,31 @@ public class ArgumentItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addRoundPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Round feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRoundPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Argument_round_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Argument_round_feature", "_UI_Argument_type"),
+				 ArgumentPackage.Literals.ARGUMENT__ROUND,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -134,6 +159,9 @@ public class ArgumentItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Argument.class)) {
+			case ArgumentPackage.ARGUMENT__ROUND:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 			case ArgumentPackage.ARGUMENT__GROUNDS:
 			case ArgumentPackage.ARGUMENT__WARRANTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -161,40 +189,7 @@ public class ArgumentItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ArgumentPackage.Literals.ARGUMENT__WARRANTS,
-				 ArgumentFactory.eINSTANCE.createNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ArgumentPackage.Literals.ARGUMENT__WARRANTS,
 				 ArgumentFactory.eINSTANCE.createArgument()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ArgumentPackage.Literals.ARGUMENT__WARRANTS,
-				 ArgumentFactory.eINSTANCE.createFact()));
-	}
-
-	/**
-	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
-		Object childFeature = feature;
-		Object childObject = child;
-
-		boolean qualify =
-			childFeature == ArgumentPackage.Literals.ARGUMENT__GROUNDS ||
-			childFeature == ArgumentPackage.Literals.ARGUMENT__WARRANTS;
-
-		if (qualify) {
-			return getString
-				("_UI_CreateChild_text2",
-				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-		}
-		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

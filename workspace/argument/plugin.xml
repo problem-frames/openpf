@@ -13,6 +13,7 @@
 
   <extension point="core.example">
       <example file="Argument.xtext"/>
+      <example file="ATM1.argument" href="http://computing-research.open.ac.uk/trac/openre/raw-attachment/wiki/Examples/argument/SecureChange/ATM1/ATM1.argument" />
       <example file="http://computing-research.open.ac.uk/trac/openre/raw-attachment/wiki/Examples/argument.dir"/>
   </extension>
 

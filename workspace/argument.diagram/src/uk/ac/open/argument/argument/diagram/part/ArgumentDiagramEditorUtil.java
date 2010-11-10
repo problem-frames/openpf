@@ -153,7 +153,9 @@ public class ArgumentDiagramEditorUtil extends ImageDiagramUtil {
 	}
 
 	/**
-	 * This method should be called within a workspace modify operation since it creates resources.
+	 * This method should be called within a workspace modify operation since it
+	 * creates resources.
+	 * 
 	 * @generated NOT
 	 */
 	public static Resource createDiagram(URI diagramURI, URI modelURI,
@@ -215,15 +217,14 @@ public class ArgumentDiagramEditorUtil extends ImageDiagramUtil {
 		}
 		setCharset(WorkspaceSynchronizer.getFile(modelResource));
 		setCharset(WorkspaceSynchronizer.getFile(diagramResource));
-		
 		saveDiagramToImages(diagramResource, modelResource);
 		return diagramResource;
 	}
 
 	/**
-	 * Create a new instance of domain element associated with canvas.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Create a new instance of domain element associated with canvas. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	private static ArgumentDiagram createInitialModel() {
@@ -232,8 +233,8 @@ public class ArgumentDiagramEditorUtil extends ImageDiagramUtil {
 
 	/**
 	 * Store model element in the resource.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @generated
 	 */
 	private static void attachModelToResource(ArgumentDiagram model,
@@ -336,7 +337,9 @@ public class ArgumentDiagramEditorUtil extends ImageDiagramUtil {
 	}
 
 	/**
-	 * XXX This is quite suspicious code (especially editPartTmpHolder) and likely to be removed soon
+	 * XXX This is quite suspicious code (especially editPartTmpHolder) and
+	 * likely to be removed soon
+	 * 
 	 * @generated
 	 */
 	public static class LazyElement2ViewMap {
@@ -420,6 +423,6 @@ public class ArgumentDiagramEditorUtil extends ImageDiagramUtil {
 			}
 			return complete;
 		}
-	} //LazyElement2ViewMap	
+	} // LazyElement2ViewMap
 
 }

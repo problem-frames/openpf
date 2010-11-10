@@ -15,17 +15,35 @@ class Node {
   attr String description;
 }
 
-@gmf.node(label="name, :, description, round", icon="false")
+@gmf.node(label="description, round", icon="false")
 class Argument extends Node {
   attr String round;
   @gmf.compartment(foo="bar")
   val Fact[*] grounds;
   @gmf.compartment(foo="bar")
-  val Node[*] warrants;
+  val Argument[*] warrants;
 }
 
-@gmf.node(label="name, description", icon="false")
+@gmf.node(label="description", icon="false")
 class Fact extends Node {
+  val Expression expr;
+  @gmf.link(target="origin", style="dash", width="2", color="0,255,0", target.decoration="arrow")
+  ref Node origin;
+}
+
+class Expression {
+  val Expression expr;
+  attr UnaryOp ~op;
+  val Expression right;
+  attr int n;
+}
+
+enum UnaryOp {
+  NOT = 0;
+}
+
+class TerminalExpression extends Expression {
+  ref Node fact;
 }
 
 class Link {
@@ -41,7 +59,79 @@ class Rebuts extends Link {
 class Mitigates extends Link {
 }
 
-@gmf.link(source="from", target="to", style="solid", width="2", color="0,255,0", target.decoration="arrow")
-class Restores extends Link {
+class AssignPlus extends Expression {
+  val Expression left;
+}
+
+class AssignMin extends Expression {
+  val Expression left;
+}
+
+class Or extends Expression {
+  val Expression left;
+}
+
+class And extends Expression {
+  val Expression left;
+}
+
+class RelNotEq extends Expression {
+  val Expression left;
+}
+
+class RelEqEq extends Expression {
+  val Expression left;
+}
+
+class RelLtEq extends Expression {
+  val Expression left;
+}
+
+class RelGtEq extends Expression {
+  val Expression left;
+}
+
+class RelEq extends Expression {
+  val Expression left;
+}
+
+class RelLt extends Expression {
+  val Expression left;
+}
+
+class RelGt extends Expression {
+  val Expression left;
+}
+
+class Plus extends Expression {
+  val Expression left;
+}
+
+class Minus extends Expression {
+  val Expression left;
+}
+
+class Multi extends Expression {
+  val Expression left;
+}
+
+class Div extends Expression {
+  val Expression left;
+}
+
+class Pow extends Expression {
+  val Expression left;
+}
+
+class IntLiteral extends TerminalExpression {
+  attr int value;
+}
+
+class StringLiteral extends TerminalExpression {
+  attr String value;
+}
+
+class BooleanLiteral extends TerminalExpression {
+  attr boolean value;
 }
 

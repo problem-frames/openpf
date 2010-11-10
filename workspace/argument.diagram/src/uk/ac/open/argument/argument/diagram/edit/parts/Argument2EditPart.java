@@ -3,7 +3,6 @@ package uk.ac.open.argument.argument.diagram.edit.parts;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;
 import org.eclipse.draw2d.RectangleFigure;
@@ -30,7 +29,10 @@ import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.graphics.Font;
+import org.eclipse.swt.widgets.Display;
 
 import uk.ac.open.argument.argument.diagram.edit.policies.Argument2ItemSemanticEditPolicy;
 import uk.ac.open.argument.argument.diagram.edit.policies.OpenDiagramEditPolicy;
@@ -124,8 +126,8 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof ArgumentNameDescriptionRound2EditPart) {
-			((ArgumentNameDescriptionRound2EditPart) childEditPart)
+		if (childEditPart instanceof ArgumentDescriptionRound2EditPart) {
+			((ArgumentDescriptionRound2EditPart) childEditPart)
 					.setLabel(getPrimaryShape().getFigureArgumentLabelFigure());
 			return true;
 		}
@@ -152,7 +154,7 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof ArgumentNameDescriptionRound2EditPart) {
+		if (childEditPart instanceof ArgumentDescriptionRound2EditPart) {
 			return true;
 		}
 		if (childEditPart instanceof ArgumentArgumentGroundsCompartment2EditPart) {
@@ -298,17 +300,16 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 	 */
 	public EditPart getPrimaryChildEditPart() {
 		return getChildBySemanticHint(ArgumentVisualIDRegistry
-				.getType(ArgumentNameDescriptionRound2EditPart.VISUAL_ID));
+				.getType(ArgumentDescriptionRound2EditPart.VISUAL_ID));
 	}
 
 	/**
 	 * @generated
 	 */
 	public List<IElementType> getMARelTypesOnSource() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
 		types.add(ArgumentElementTypes.Rebuts_4001);
 		types.add(ArgumentElementTypes.Mitigates_4002);
-		types.add(ArgumentElementTypes.Restores_4003);
 		return types;
 	}
 
@@ -330,12 +331,6 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 		if (targetEditPart instanceof uk.ac.open.argument.argument.diagram.edit.parts.Argument2EditPart) {
 			types.add(ArgumentElementTypes.Mitigates_4002);
 		}
-		if (targetEditPart instanceof ArgumentEditPart) {
-			types.add(ArgumentElementTypes.Restores_4003);
-		}
-		if (targetEditPart instanceof uk.ac.open.argument.argument.diagram.edit.parts.Argument2EditPart) {
-			types.add(ArgumentElementTypes.Restores_4003);
-		}
 		return types;
 	}
 
@@ -350,9 +345,6 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 		} else if (relationshipType == ArgumentElementTypes.Mitigates_4002) {
 			types.add(ArgumentElementTypes.Argument_2001);
 			types.add(ArgumentElementTypes.Argument_3002);
-		} else if (relationshipType == ArgumentElementTypes.Restores_4003) {
-			types.add(ArgumentElementTypes.Argument_2001);
-			types.add(ArgumentElementTypes.Argument_3002);
 		}
 		return types;
 	}
@@ -364,7 +356,7 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
 		types.add(ArgumentElementTypes.Rebuts_4001);
 		types.add(ArgumentElementTypes.Mitigates_4002);
-		types.add(ArgumentElementTypes.Restores_4003);
+		types.add(ArgumentElementTypes.FactOrigin_4003);
 		return types;
 	}
 
@@ -379,9 +371,9 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 		} else if (relationshipType == ArgumentElementTypes.Mitigates_4002) {
 			types.add(ArgumentElementTypes.Argument_2001);
 			types.add(ArgumentElementTypes.Argument_3002);
-		} else if (relationshipType == ArgumentElementTypes.Restores_4003) {
-			types.add(ArgumentElementTypes.Argument_2001);
-			types.add(ArgumentElementTypes.Argument_3002);
+		} else if (relationshipType == ArgumentElementTypes.FactOrigin_4003) {
+			types.add(ArgumentElementTypes.Fact_2002);
+			types.add(ArgumentElementTypes.Fact_3001);
 		}
 		return types;
 	}
@@ -441,6 +433,9 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 
 			fFigureArgumentLabelFigure = new WrappingLabel();
 			fFigureArgumentLabelFigure.setText("Argument");
+
+			fFigureArgumentLabelFigure.setFont(FFIGUREARGUMENTLABELFIGURE_FONT);
+
 			fFigureArgumentLabelFigure.setMaximumSize(new Dimension(
 					getMapMode().DPtoLP(10000), getMapMode().DPtoLP(50)));
 
@@ -480,5 +475,12 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 		}
 
 	}
+
+	/**
+	 * @generated
+	 */
+	static final Font FFIGUREARGUMENTLABELFIGURE_FONT = new Font(
+			Display.getCurrent(), Display.getDefault().getSystemFont()
+					.getFontData()[0].getName(), 9, SWT.BOLD);
 
 }

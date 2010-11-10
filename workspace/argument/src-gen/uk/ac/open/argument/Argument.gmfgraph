@@ -13,7 +13,7 @@
         name="MitigatesFigureTargetDecoration"/>
     <figures
         xsi:type="gmfgraph:PolylineDecoration"
-        name="RestoresFigureTargetDecoration"/>
+        name="FactOriginFigureTargetDecoration"/>
     <descriptors
         name="ArgumentFigure">
       <actualFigure
@@ -34,6 +34,9 @@
           <maximumSize
               dx="10000"
               dy="50"/>
+          <font
+              xsi:type="gmfgraph:BasicFont"
+              style="BOLD"/>
         </children>
         <children
             xsi:type="gmfgraph:Rectangle"
@@ -102,16 +105,23 @@
       </actualFigure>
     </descriptors>
     <descriptors
-        name="RestoresFigure">
+        name="FactOriginFigure">
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
-          name="RestoresFigure"
+          name="FactOriginFigure"
           lineWidth="2"
+          lineKind="LINE_DASH"
           targetDecoration="//@figures.0/@figures.2">
         <foregroundColor
             xsi:type="gmfgraph:RGBColor"
             green="255"/>
       </actualFigure>
+    </descriptors>
+    <descriptors
+        name="FactOriginExternalLabelFigure">
+      <actualFigure
+          xsi:type="gmfgraph:Label"
+          name="FactOriginExternalLabel"/>
     </descriptors>
   </figures>
   <nodes
@@ -127,8 +137,8 @@
       name="Mitigates"
       figure="MitigatesFigure"/>
   <connections
-      name="Restores"
-      figure="RestoresFigure"/>
+      name="FactOrigin"
+      figure="FactOriginFigure"/>
   <compartments
       name="ArgumentGroundsCompartment"
       figure="ArgumentFigure"
@@ -147,4 +157,8 @@
       name="FactLabel"
       figure="FactFigure"
       accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels
+      name="FactOriginExternalLabel"
+      figure="FactOriginExternalLabelFigure"
+      elementIcon="false"/>
 </gmfgraph:Canvas>

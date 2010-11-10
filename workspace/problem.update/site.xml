@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <description name="Requirements Engineering Tools Provided by The Open University" url="http://sead1.open.ac.uk/openre"> The update site contains a number of Eclipse plugins to support the requirements engineering research at the Software Engineering And Design group, The Open University.
+   <description name="Requirements Engineering Tools Provided by The Open University" url="http://sead1.open.ac.uk/openre">
+      The update site contains a number of Eclipse plugins to support the requirements engineering research at the Software Engineering And Design group, The Open University.
    </description>
    <feature url="features/problem.feature_1.0.0.201011081728.jar" id="problem.feature" version="1.0.0.201011081728">
    <feature url="features/problem.feature_1.0.0.201011081728.jar" id="problem.feature" version="1.0.0.201011081728">

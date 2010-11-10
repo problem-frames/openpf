@@ -33,9 +33,10 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import uk.ac.open.argument.argument.Argument;
 import uk.ac.open.argument.argument.ArgumentDiagram;
+import uk.ac.open.argument.argument.Fact;
 import uk.ac.open.argument.argument.Mitigates;
+import uk.ac.open.argument.argument.Node;
 import uk.ac.open.argument.argument.Rebuts;
-import uk.ac.open.argument.argument.Restores;
 import uk.ac.open.argument.argument.diagram.edit.helpers.ArgumentBaseEditHelper;
 import uk.ac.open.argument.argument.diagram.part.ArgumentDiagramEditorPlugin;
 import uk.ac.open.argument.argument.diagram.part.ArgumentVisualIDRegistry;
@@ -343,9 +344,14 @@ public class ArgumentBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canCreateRestores_4003(ArgumentDiagram container,
-				Argument source, Argument target) {
-			return canExistRestores_4003(container, null, source, target);
+		public boolean canCreateFactOrigin_4003(Fact source, Node target) {
+			if (source != null) {
+				if (source.getOrigin() != null) {
+					return false;
+				}
+			}
+
+			return canExistFactOrigin_4003(source, target);
 		}
 
 		/**
@@ -367,8 +373,7 @@ public class ArgumentBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canExistRestores_4003(ArgumentDiagram container,
-				Restores linkInstance, Argument source, Argument target) {
+		public boolean canExistFactOrigin_4003(Fact source, Node target) {
 			return true;
 		}
 	}
