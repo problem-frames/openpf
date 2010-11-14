@@ -433,9 +433,6 @@ public class ArgumentEditPart extends ShapeNodeEditPart {
 
 			fFigureArgumentLabelFigure = new WrappingLabel();
 			fFigureArgumentLabelFigure.setText("Argument");
-
-			fFigureArgumentLabelFigure.setFont(FFIGUREARGUMENTLABELFIGURE_FONT);
-
 			fFigureArgumentLabelFigure.setMaximumSize(new Dimension(
 					getMapMode().DPtoLP(10000), getMapMode().DPtoLP(50)));
 
@@ -475,12 +472,5 @@ public class ArgumentEditPart extends ShapeNodeEditPart {
 		}
 
 	}
-
-	/**
-	 * @generated
-	 */
-	static final Font FFIGUREARGUMENTLABELFIGURE_FONT = new Font(
-			Display.getCurrent(), Display.getDefault().getSystemFont()
-					.getFontData()[0].getName(), 9, SWT.BOLD);
 
 }

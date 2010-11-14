@@ -13,9 +13,14 @@
       <domainMetaElement
           href="Argument.ecore#//Argument"/>
       <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
+          xsi:type="gmfmap:FeatureLabelMapping"
+          viewPattern="{0}: {1} #{2}"
+          editorPattern="{0}: {1} #{2}"
+          editPattern="{0}: {1} #{2}">
         <diagramLabel
             href="Argument.gmfgraph#ArgumentLabel"/>
+        <features
+            href="Argument.ecore#//Node/name"/>
         <features
             href="Argument.ecore#//Node/description"/>
         <features
@@ -57,11 +62,18 @@
       <domainMetaElement
           href="Argument.ecore#//Fact"/>
       <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
+          xsi:type="gmfmap:FeatureLabelMapping"
+          viewPattern="{0}: {1}: {2}"
+          editorPattern="{0}: {1}: {2}"
+          editPattern="{0}: {1}: {2}">
         <diagramLabel
             href="Argument.gmfgraph#FactLabel"/>
         <features
+            href="Argument.ecore#//Node/name"/>
+        <features
             href="Argument.ecore#//Node/description"/>
+        <features
+            href="Argument.ecore#//Fact/expr"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"

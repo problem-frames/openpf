@@ -7,36 +7,17 @@ RULE_QUALIFIED_NAME=8
 RULE_WS=11
 RULE_SL_COMMENT=10
 RULE_ML_COMMENT=9
-'!'=45
-'|'=27
-'>='=31
-'replacing'=24
-'/'=39
-'=='=30
-'>'=35
-'='=33
-'argument:'=13
-'mitigated by'=44
-'for'=14
-'<->'=26
-'+'=36
-')'=42
-'warranted by'=21
-'^'=40
-'->'=25
 '}'=22
-'rebutted by'=43
+'replacing'=24
+'rebutted by'=25
 'G'=23
 '{'=17
-'<='=32
 'round'=18
 'supported by'=19
-'!='=29
-'<'=34
+'argument:'=13
 'A'=15
-'('=41
+'mitigated by'=26
+'for'=14
 ':'=16
-'*'=38
-'-'=37
 ','=20
-'&'=28
+'warranted by'=21

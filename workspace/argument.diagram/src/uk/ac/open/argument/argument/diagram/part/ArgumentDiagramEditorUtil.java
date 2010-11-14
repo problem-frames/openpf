@@ -55,7 +55,7 @@ import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDiagramEditPart;
 import uk.ac.open.problem.diagram.part.ImageDiagramUtil;
 
 /**
- * @generated
+ * @generated NOT
  */
 public class ArgumentDiagramEditorUtil extends ImageDiagramUtil {
 

@@ -26,30 +26,30 @@ package uk.ac.open.argument.argument;
 public interface Fact extends Node
 {
   /**
-   * Returns the value of the '<em><b>Expr</b></em>' containment reference.
+   * Returns the value of the '<em><b>Expr</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Expr</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Expr</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Expr</em>' containment reference.
-   * @see #setExpr(Expression)
+   * @return the value of the '<em>Expr</em>' attribute.
+   * @see #setExpr(String)
    * @see uk.ac.open.argument.argument.ArgumentPackage#getFact_Expr()
-   * @model containment="true"
+   * @model
    * @generated
    */
-  Expression getExpr();
+  String getExpr();
 
   /**
-   * Sets the value of the '{@link uk.ac.open.argument.argument.Fact#getExpr <em>Expr</em>}' containment reference.
+   * Sets the value of the '{@link uk.ac.open.argument.argument.Fact#getExpr <em>Expr</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Expr</em>' containment reference.
+   * @param value the new value of the '<em>Expr</em>' attribute.
    * @see #getExpr()
    * @generated
    */
-  void setExpr(Expression value);
+  void setExpr(String value);
 
   /**
    * Returns the value of the '<em><b>Origin</b></em>' reference.

@@ -15,38 +15,42 @@ Argument: name=ID "A"
 		('supported by' (','? grounds+=Fact)*)?
 		('warranted by' (','? warrants+=Argument)*)?
 	'}')?;
-
+/*
 Fact: (name=ID "G"
 	((":")? description=STRING expr=Expression ('replacing' origin=[Node])? )?);
-
+*/
+Fact: (name=ID "G"
+	((":")? description=STRING expr=STRING ('replacing' origin=[Node])? )?);
+/*
 Expression:
-	expr=AssignmentOp;
+	assign=AssignmentOp;
 		
 AssignmentOp returns Expression:
-	OrExp (({AssignPlus.left=current} '->' | {AssignMin.left=current} '<->') right=OrExp)?;
+	OrExp (({AssignPlus.left=current} aop='->' | {AssignMin.left=current} aop='<->') right=OrExp)?;
 
 OrExp returns Expression:
-	AndExp ({Or.left=current} '|' right=AndExp)*;
+	AndExp ({Or.left=current} or_op='|' right=AndExp)*;
 
 AndExp returns Expression:
-	Relational ({And.left=current} '&' right=Relational)*;
+	Relational ({And.left=current} and_op='&' right=Relational)*;
 
 Relational returns Expression:
-	Addition (({RelNotEq.left=current} '!=' | {RelEqEq.left=current} '==' | {RelLtEq.left=current} '>=' |
-	{RelGtEq.left=current} '<=' |
-	{RelEq.left=current} '=' | {RelLt.left=current} '<' | {RelGt.left=current} '>') right=Addition)?;
+	Addition (({RelNotEq.left=current} rel_op='!=' | {RelEqEq.left=current} rel_op='==' 
+	| {RelLtEq.left=current} rel_op='>=' | {RelGtEq.left=current} rel_op='<=' 
+	| {RelEq.left=current} rel_op='=' | {RelLt.left=current} rel_op='<' 
+	| {RelGt.left=current} rel_op='>') right=Addition)?;
 
 Addition returns Expression:
-	Multiplication (({Plus.left=current} '+' | {Minus.left=current} '-') right=Multiplication)*;
+	Multiplication (({Plus.left=current} add_op='+' | {Minus.left=current} add_op='-') right=Multiplication)*;
 
 Multiplication returns Expression:
-	Power (({Multi.left=current} '*' | {Div.left=current} '/') right=Power)*;
+	Power (({Multi.left=current} mul_op='*' | {Div.left=current} mul_op='/') right=Power)*;
 
 Power returns Expression:
-	UnaryExpr (({Pow.left=current} '^') right=UnaryExpr)*;
+	UnaryExpr (({Pow.left=current} pow_op='^') right=UnaryExpr)*;
 
 UnaryExpr returns Expression:
-	(op=UnaryOp)? right=PrePrimaryExpr;
+	(uop?=UnaryOp)? right=PrePrimaryExpr;
 
 enum UnaryOp:
 	NOT='!';
@@ -58,8 +62,8 @@ TerminalExpression:
 	  {IntLiteral} value=INT 
 	| {StringLiteral} value=STRING 
 	| {BooleanLiteral} value=BOOLEAN 
-	| fact=[Node];
-
+	| {Node} value=[Node];
+*/
 Link: Rebuts | Mitigates;
 
 Rebuts: from=[Argument] "rebutted by" to=[Argument];

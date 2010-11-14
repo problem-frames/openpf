@@ -94,30 +94,30 @@ public class ArgumentNavigatorLabelProvider extends LabelProvider implements
 	 */
 	public Image getImage(View view) {
 		switch (ArgumentVisualIDRegistry.getVisualID(view)) {
-		case FactOriginEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Link?http://www.ac.uk/open/argument/Argument?Fact?origin", ArgumentElementTypes.FactOrigin_4003); //$NON-NLS-1$
-		case MitigatesEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Link?http://www.ac.uk/open/argument/Argument?Mitigates", ArgumentElementTypes.Mitigates_4002); //$NON-NLS-1$
 		case Argument2EditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Node?http://www.ac.uk/open/argument/Argument?Argument", ArgumentElementTypes.Argument_3002); //$NON-NLS-1$
-		case RebutsEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Link?http://www.ac.uk/open/argument/Argument?Rebuts", ArgumentElementTypes.Rebuts_4001); //$NON-NLS-1$
-		case FactEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://www.ac.uk/open/argument/Argument?Fact", ArgumentElementTypes.Fact_2002); //$NON-NLS-1$
 		case Fact2EditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Node?http://www.ac.uk/open/argument/Argument?Fact", ArgumentElementTypes.Fact_3001); //$NON-NLS-1$
 		case ArgumentEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?TopLevelNode?http://www.ac.uk/open/argument/Argument?Argument", ArgumentElementTypes.Argument_2001); //$NON-NLS-1$
+		case FactEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?http://www.ac.uk/open/argument/Argument?Fact", ArgumentElementTypes.Fact_2002); //$NON-NLS-1$
 		case ArgumentDiagramEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Diagram?http://www.ac.uk/open/argument/Argument?ArgumentDiagram", ArgumentElementTypes.ArgumentDiagram_1000); //$NON-NLS-1$
+		case RebutsEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?http://www.ac.uk/open/argument/Argument?Rebuts", ArgumentElementTypes.Rebuts_4001); //$NON-NLS-1$
+		case FactOriginEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?http://www.ac.uk/open/argument/Argument?Fact?origin", ArgumentElementTypes.FactOrigin_4003); //$NON-NLS-1$
+		case MitigatesEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?http://www.ac.uk/open/argument/Argument?Mitigates", ArgumentElementTypes.Mitigates_4002); //$NON-NLS-1$
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -170,22 +170,22 @@ public class ArgumentNavigatorLabelProvider extends LabelProvider implements
 			return getUnresolvedDomainElementProxyText(view);
 		}
 		switch (ArgumentVisualIDRegistry.getVisualID(view)) {
-		case FactOriginEditPart.VISUAL_ID:
-			return getFactOrigin_4003Text(view);
-		case MitigatesEditPart.VISUAL_ID:
-			return getMitigates_4002Text(view);
 		case Argument2EditPart.VISUAL_ID:
 			return getArgument_3002Text(view);
-		case RebutsEditPart.VISUAL_ID:
-			return getRebuts_4001Text(view);
-		case FactEditPart.VISUAL_ID:
-			return getFact_2002Text(view);
 		case Fact2EditPart.VISUAL_ID:
 			return getFact_3001Text(view);
 		case ArgumentEditPart.VISUAL_ID:
 			return getArgument_2001Text(view);
+		case FactEditPart.VISUAL_ID:
+			return getFact_2002Text(view);
 		case ArgumentDiagramEditPart.VISUAL_ID:
 			return getArgumentDiagram_1000Text(view);
+		case RebutsEditPart.VISUAL_ID:
+			return getRebuts_4001Text(view);
+		case FactOriginEditPart.VISUAL_ID:
+			return getFactOrigin_4003Text(view);
+		case MitigatesEditPart.VISUAL_ID:
+			return getMitigates_4002Text(view);
 		}
 		return getUnknownElementText(view);
 	}

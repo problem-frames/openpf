@@ -34,9 +34,6 @@
           <maximumSize
               dx="10000"
               dy="50"/>
-          <font
-              xsi:type="gmfgraph:BasicFont"
-              style="BOLD"/>
         </children>
         <children
             xsi:type="gmfgraph:Rectangle"
@@ -152,10 +149,12 @@
   <labels
       name="ArgumentLabel"
       figure="ArgumentFigure"
+      elementIcon="false"
       accessor="//@figures.0/@descriptors.0/@accessors.0"/>
   <labels
       name="FactLabel"
       figure="FactFigure"
+      elementIcon="false"
       accessor="//@figures.0/@descriptors.1/@accessors.0"/>
   <labels
       name="FactOriginExternalLabel"

@@ -1,11 +1,28 @@
 [comment encoding = UTF-8 /]
 [module generate('http://www.ac.uk/open/argument/Argument')/]
-[template public generate(d: ArgumentDiagram)]
-[file (d.name.toString().concat('.e'), false)]
 
-[for (dom: Node | d.nodes) ]
-predicate [dom.name/](domain,time)
+[template public generate(d: ArgumentDiagram) post (trim())]
+[file (d.name.toString().concat('.e'), false)]
+;load foundations/Root.e
+sort boolean
+sort integer
+sort fluent
+sort time: integer
+range time 1 2
+
+; The following propositions are genenerated from the id of facts and arguments
+[for (n: Node | d.nodes) ]
+boolean [n.name/]
+[n.name/].
 [/for]	
+
+; Define these facts and arguments by the expressions
+[for (a: Argument | d.nodes) ]
+  [for (f: Fact | a.eAllContents(Fact))]
+boolean [f.name/]
+[f.name/] <-> ([f.expr/]).
+  [/for]
+[/for]
 [/file]
 	
 [/template]

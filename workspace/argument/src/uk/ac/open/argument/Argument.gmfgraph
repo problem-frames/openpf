@@ -5,6 +5,15 @@
     xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="argument">
   <figures
       name="Default">
+    <figures
+        xsi:type="gmfgraph:PolylineDecoration"
+        name="RebutsFigureTargetDecoration"/>
+    <figures
+        xsi:type="gmfgraph:PolylineDecoration"
+        name="MitigatesFigureTargetDecoration"/>
+    <figures
+        xsi:type="gmfgraph:PolylineDecoration"
+        name="FactOriginFigureTargetDecoration"/>
     <descriptors
         name="ArgumentFigure">
       <actualFigure
@@ -25,9 +34,6 @@
           <maximumSize
               dx="10000"
               dy="50"/>
-          <font
-              xsi:type="gmfgraph:BasicFont"
-              style="BOLD"/>
         </children>
         <children
             xsi:type="gmfgraph:Rectangle"
@@ -70,6 +76,50 @@
           accessor="getFigureFactLabelFigure"
           figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
     </descriptors>
+    <descriptors
+        name="RebutsFigure">
+      <actualFigure
+          xsi:type="gmfgraph:PolylineConnection"
+          name="RebutsFigure"
+          lineWidth="2"
+          lineKind="LINE_DOT"
+          targetDecoration="//@figures.0/@figures.0">
+        <foregroundColor
+            xsi:type="gmfgraph:RGBColor"
+            red="255"/>
+      </actualFigure>
+    </descriptors>
+    <descriptors
+        name="MitigatesFigure">
+      <actualFigure
+          xsi:type="gmfgraph:PolylineConnection"
+          name="MitigatesFigure"
+          lineWidth="2"
+          targetDecoration="//@figures.0/@figures.1">
+        <foregroundColor
+            xsi:type="gmfgraph:RGBColor"
+            blue="255"/>
+      </actualFigure>
+    </descriptors>
+    <descriptors
+        name="FactOriginFigure">
+      <actualFigure
+          xsi:type="gmfgraph:PolylineConnection"
+          name="FactOriginFigure"
+          lineWidth="2"
+          lineKind="LINE_DASH"
+          targetDecoration="//@figures.0/@figures.2">
+        <foregroundColor
+            xsi:type="gmfgraph:RGBColor"
+            green="255"/>
+      </actualFigure>
+    </descriptors>
+    <descriptors
+        name="FactOriginExternalLabelFigure">
+      <actualFigure
+          xsi:type="gmfgraph:Label"
+          name="FactOriginExternalLabel"/>
+    </descriptors>
   </figures>
   <nodes
       name="Argument"
@@ -77,6 +127,15 @@
   <nodes
       name="Fact"
       figure="FactFigure"/>
+  <connections
+      name="Rebuts"
+      figure="RebutsFigure"/>
+  <connections
+      name="Mitigates"
+      figure="MitigatesFigure"/>
+  <connections
+      name="FactOrigin"
+      figure="FactOriginFigure"/>
   <compartments
       name="ArgumentGroundsCompartment"
       figure="ArgumentFigure"
@@ -95,4 +154,8 @@
       name="FactLabel"
       figure="FactFigure"
       accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels
+      name="FactOriginExternalLabel"
+      figure="FactOriginExternalLabelFigure"
+      elementIcon="false"/>
 </gmfgraph:Canvas>

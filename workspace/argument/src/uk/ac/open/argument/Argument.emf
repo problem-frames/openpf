@@ -10,7 +10,8 @@ class ArgumentDiagram {
   val Link[*] links;
 }
 
-class Node {
+class Node extends TerminalExpression {
+  ref Node value;
   attr String name;
   attr String description;
 }
@@ -32,8 +33,8 @@ class Fact extends Node {
 }
 
 class Expression {
-  val Expression expr;
-  attr UnaryOp ~op;
+  val Expression assign;
+  attr boolean uop;
   val Expression right;
   attr int n;
 }
@@ -43,7 +44,6 @@ enum UnaryOp {
 }
 
 class TerminalExpression extends Expression {
-  ref Node fact;
 }
 
 class Link {
@@ -61,66 +61,82 @@ class Mitigates extends Link {
 
 class AssignPlus extends Expression {
   val Expression left;
+  attr String aop;
 }
 
 class AssignMin extends Expression {
   val Expression left;
+  attr String aop;
 }
 
 class Or extends Expression {
   val Expression left;
+  attr String or_op;
 }
 
 class And extends Expression {
   val Expression left;
+  attr String and_op;
 }
 
 class RelNotEq extends Expression {
   val Expression left;
+  attr String rel_op;
 }
 
 class RelEqEq extends Expression {
   val Expression left;
+  attr String rel_op;
 }
 
 class RelLtEq extends Expression {
   val Expression left;
+  attr String rel_op;
 }
 
 class RelGtEq extends Expression {
   val Expression left;
+  attr String rel_op;
 }
 
 class RelEq extends Expression {
   val Expression left;
+  attr String rel_op;
 }
 
 class RelLt extends Expression {
   val Expression left;
+  attr String rel_op;
 }
 
 class RelGt extends Expression {
   val Expression left;
+  attr String rel_op;
 }
 
 class Plus extends Expression {
   val Expression left;
+  attr String add_op;
 }
 
 class Minus extends Expression {
   val Expression left;
+  attr String add_op;
 }
 
 class Multi extends Expression {
   val Expression left;
+  attr String mul_op;
 }
 
 class Div extends Expression {
   val Expression left;
+  attr String mul_op;
 }
 
 class Pow extends Expression {
   val Expression left;
+  attr String pow_op;
 }
 
 class IntLiteral extends TerminalExpression {

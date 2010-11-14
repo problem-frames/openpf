@@ -6,7 +6,6 @@
 package uk.ac.open.argument.argument.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -14,7 +13,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import uk.ac.open.argument.argument.ArgumentPackage;
-import uk.ac.open.argument.argument.Expression;
 import uk.ac.open.argument.argument.Fact;
 import uk.ac.open.argument.argument.Node;
 
@@ -35,14 +33,24 @@ import uk.ac.open.argument.argument.Node;
 public class FactImpl extends NodeImpl implements Fact
 {
   /**
-   * The cached value of the '{@link #getExpr() <em>Expr</em>}' containment reference.
+   * The default value of the '{@link #getExpr() <em>Expr</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getExpr()
    * @generated
    * @ordered
    */
-  protected Expression expr;
+  protected static final String EXPR_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getExpr() <em>Expr</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getExpr()
+   * @generated
+   * @ordered
+   */
+  protected String expr = EXPR_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getOrigin() <em>Origin</em>}' reference.
@@ -80,7 +88,7 @@ public class FactImpl extends NodeImpl implements Fact
    * <!-- end-user-doc -->
    * @generated
    */
-  public Expression getExpr()
+  public String getExpr()
   {
     return expr;
   }
@@ -90,37 +98,12 @@ public class FactImpl extends NodeImpl implements Fact
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetExpr(Expression newExpr, NotificationChain msgs)
+  public void setExpr(String newExpr)
   {
-    Expression oldExpr = expr;
+    String oldExpr = expr;
     expr = newExpr;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ArgumentPackage.FACT__EXPR, oldExpr, newExpr);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setExpr(Expression newExpr)
-  {
-    if (newExpr != expr)
-    {
-      NotificationChain msgs = null;
-      if (expr != null)
-        msgs = ((InternalEObject)expr).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ArgumentPackage.FACT__EXPR, null, msgs);
-      if (newExpr != null)
-        msgs = ((InternalEObject)newExpr).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ArgumentPackage.FACT__EXPR, null, msgs);
-      msgs = basicSetExpr(newExpr, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.FACT__EXPR, newExpr, newExpr));
+      eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.FACT__EXPR, oldExpr, expr));
   }
 
   /**
@@ -172,22 +155,6 @@ public class FactImpl extends NodeImpl implements Fact
    * @generated
    */
   @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case ArgumentPackage.FACT__EXPR:
-        return basicSetExpr(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
     switch (featureID)
@@ -212,7 +179,7 @@ public class FactImpl extends NodeImpl implements Fact
     switch (featureID)
     {
       case ArgumentPackage.FACT__EXPR:
-        setExpr((Expression)newValue);
+        setExpr((String)newValue);
         return;
       case ArgumentPackage.FACT__ORIGIN:
         setOrigin((Node)newValue);
@@ -232,7 +199,7 @@ public class FactImpl extends NodeImpl implements Fact
     switch (featureID)
     {
       case ArgumentPackage.FACT__EXPR:
-        setExpr((Expression)null);
+        setExpr(EXPR_EDEFAULT);
         return;
       case ArgumentPackage.FACT__ORIGIN:
         setOrigin((Node)null);
@@ -252,11 +219,28 @@ public class FactImpl extends NodeImpl implements Fact
     switch (featureID)
     {
       case ArgumentPackage.FACT__EXPR:
-        return expr != null;
+        return EXPR_EDEFAULT == null ? expr != null : !EXPR_EDEFAULT.equals(expr);
       case ArgumentPackage.FACT__ORIGIN:
         return origin != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (expr: ");
+    result.append(expr);
+    result.append(')');
+    return result.toString();
   }
 
 } //FactImpl

@@ -17,6 +17,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//ArgumentDiagram/links"/>
     </genClasses>
     <genClasses ecoreClass="Argument.ecore#//Node">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Argument.ecore#//Node/value"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Node/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Node/description"/>
     </genClasses>
@@ -27,10 +28,11 @@
     </genClasses>
     <genClasses ecoreClass="Argument.ecore#//Fact">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//Fact/expr"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Argument.ecore#//Fact/origin"/>
     </genClasses>
     <genClasses ecoreClass="Argument.ecore#//Expression">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//Expression/expr"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Expression/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//Expression/assign"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Expression/uop"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//Expression/right"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Expression/n"/>
     </genClasses>
@@ -41,54 +43,69 @@
     </genClasses>
     <genClasses ecoreClass="Argument.ecore#//Rebuts"/>
     <genClasses ecoreClass="Argument.ecore#//Mitigates"/>
-    <genClasses ecoreClass="Argument.ecore#//Restores"/>
     <genClasses ecoreClass="Argument.ecore#//AssignPlus">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//AssignPlus/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//AssignPlus/aop"/>
     </genClasses>
     <genClasses ecoreClass="Argument.ecore#//AssignMin">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//AssignMin/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//AssignMin/aop"/>
     </genClasses>
     <genClasses ecoreClass="Argument.ecore#//Or">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//Or/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Or/or_op"/>
     </genClasses>
     <genClasses ecoreClass="Argument.ecore#//And">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//And/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//And/and_op"/>
     </genClasses>
     <genClasses ecoreClass="Argument.ecore#//RelNotEq">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//RelNotEq/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//RelNotEq/rel_op"/>
     </genClasses>
     <genClasses ecoreClass="Argument.ecore#//RelEqEq">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//RelEqEq/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//RelEqEq/rel_op"/>
     </genClasses>
     <genClasses ecoreClass="Argument.ecore#//RelLtEq">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//RelLtEq/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//RelLtEq/rel_op"/>
     </genClasses>
     <genClasses ecoreClass="Argument.ecore#//RelGtEq">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//RelGtEq/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//RelGtEq/rel_op"/>
     </genClasses>
     <genClasses ecoreClass="Argument.ecore#//RelEq">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//RelEq/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//RelEq/rel_op"/>
     </genClasses>
     <genClasses ecoreClass="Argument.ecore#//RelLt">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//RelLt/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//RelLt/rel_op"/>
     </genClasses>
     <genClasses ecoreClass="Argument.ecore#//RelGt">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//RelGt/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//RelGt/rel_op"/>
     </genClasses>
     <genClasses ecoreClass="Argument.ecore#//Plus">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//Plus/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Plus/add_op"/>
     </genClasses>
     <genClasses ecoreClass="Argument.ecore#//Minus">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//Minus/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Minus/add_op"/>
     </genClasses>
     <genClasses ecoreClass="Argument.ecore#//Multi">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//Multi/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Multi/mul_op"/>
     </genClasses>
     <genClasses ecoreClass="Argument.ecore#//Div">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//Div/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Div/mul_op"/>
     </genClasses>
     <genClasses ecoreClass="Argument.ecore#//Pow">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//Pow/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Pow/pow_op"/>
     </genClasses>
     <genClasses ecoreClass="Argument.ecore#//IntLiteral">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//IntLiteral/value"/>
