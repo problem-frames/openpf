@@ -9,14 +9,14 @@ import uk.ac.open.argument.argument.diagram.providers.ArgumentElementTypes;
 /**
  * @generated
  */
-public class FactOriginItemSemanticEditPolicy extends
+public class ArgumentOriginItemSemanticEditPolicy extends
 		ArgumentBaseItemSemanticEditPolicy {
 
 	/**
 	 * @generated
 	 */
-	public FactOriginItemSemanticEditPolicy() {
-		super(ArgumentElementTypes.FactOrigin_4003);
+	public ArgumentOriginItemSemanticEditPolicy() {
+		super(ArgumentElementTypes.ArgumentOrigin_4003);
 	}
 
 	/**

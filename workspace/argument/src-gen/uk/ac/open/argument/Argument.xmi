@@ -15,18 +15,7 @@
         <elements xsi:type="xtext:Group" cardinality="?">
           <elements xsi:type="xtext:Keyword" value="argument:"/>
           <elements xsi:type="xtext:Assignment" feature="name" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.9"/>
-          </elements>
-        </elements>
-        <elements xsi:type="xtext:Group" cardinality="?">
-          <elements xsi:type="xtext:Keyword" value="for"/>
-          <elements xsi:type="xtext:Assignment" feature="highlight" operator="=">
-            <terminal xsi:type="xtext:CrossReference">
-              <type metamodel="/0/@metamodelDeclarations.1">
-                <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/argument/Argument#//Node"/>
-              </type>
-              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.9"/>
-            </terminal>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
           </elements>
         </elements>
         <elements xsi:type="xtext:Alternatives" cardinality="*">
@@ -34,18 +23,9 @@
             <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.1"/>
           </elements>
           <elements xsi:type="xtext:Assignment" feature="links" operator="+=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.2"/>
           </elements>
         </elements>
-      </alternatives>
-    </rules>
-    <rules xsi:type="xtext:ParserRule" name="Node">
-      <type metamodel="/0/@metamodelDeclarations.1">
-        <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/argument/Argument#//Node"/>
-      </type>
-      <alternatives xsi:type="xtext:Alternatives">
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.2"/>
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Argument">
@@ -54,27 +34,64 @@
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.9"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
         </elements>
-        <elements xsi:type="xtext:Keyword" value="A"/>
         <elements xsi:type="xtext:Keyword" cardinality="?" value=":"/>
-        <elements xsi:type="xtext:Assignment" cardinality="?" feature="description" operator="=">
+        <elements xsi:type="xtext:Assignment" feature="description" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
         </elements>
         <elements xsi:type="xtext:Group" cardinality="?">
-          <elements xsi:type="xtext:Keyword" value="{"/>
-          <elements xsi:type="xtext:Group" cardinality="?">
-            <elements xsi:type="xtext:Keyword" value="round"/>
-            <elements xsi:type="xtext:Assignment" feature="round" operator="=">
-              <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
-            </elements>
+          <elements xsi:type="xtext:Keyword" value="round"/>
+          <elements xsi:type="xtext:Assignment" feature="round" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.5"/>
           </elements>
+        </elements>
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="expr" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="replacing"/>
+          <elements xsi:type="xtext:Assignment" feature="origin" operator="=">
+            <terminal xsi:type="xtext:CrossReference">
+              <type metamodel="/0/@metamodelDeclarations.1">
+                <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/argument/Argument#//Argument"/>
+              </type>
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
+            </terminal>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="foreground"/>
+          <elements xsi:type="xtext:Assignment" feature="foreground" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="background"/>
+          <elements xsi:type="xtext:Assignment" feature="background" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="shape"/>
+          <elements xsi:type="xtext:Assignment" feature="shape" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="image"/>
+          <elements xsi:type="xtext:Assignment" feature="image" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="{"/>
           <elements xsi:type="xtext:Group" cardinality="?">
             <elements xsi:type="xtext:Keyword" value="supported by"/>
             <elements xsi:type="xtext:Group" cardinality="*">
               <elements xsi:type="xtext:Keyword" cardinality="?" value=","/>
               <elements xsi:type="xtext:Assignment" feature="grounds" operator="+=">
-                <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
+                <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.1"/>
               </elements>
             </elements>
           </elements>
@@ -83,42 +100,11 @@
             <elements xsi:type="xtext:Group" cardinality="*">
               <elements xsi:type="xtext:Keyword" cardinality="?" value=","/>
               <elements xsi:type="xtext:Assignment" feature="warrants" operator="+=">
-                <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.2"/>
+                <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.1"/>
               </elements>
             </elements>
           </elements>
           <elements xsi:type="xtext:Keyword" value="}"/>
-        </elements>
-      </alternatives>
-    </rules>
-    <rules xsi:type="xtext:ParserRule" name="Fact">
-      <type metamodel="/0/@metamodelDeclarations.1">
-        <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/argument/Argument#//Fact"/>
-      </type>
-      <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.9"/>
-        </elements>
-        <elements xsi:type="xtext:Keyword" value="G"/>
-        <elements xsi:type="xtext:Group" cardinality="?">
-          <elements xsi:type="xtext:Keyword" cardinality="?" value=":"/>
-          <elements xsi:type="xtext:Assignment" feature="description" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
-          </elements>
-          <elements xsi:type="xtext:Assignment" feature="expr" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
-          </elements>
-          <elements xsi:type="xtext:Group" cardinality="?">
-            <elements xsi:type="xtext:Keyword" value="replacing"/>
-            <elements xsi:type="xtext:Assignment" feature="origin" operator="=">
-              <terminal xsi:type="xtext:CrossReference">
-                <type metamodel="/0/@metamodelDeclarations.1">
-                  <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/argument/Argument#//Node"/>
-                </type>
-                <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.9"/>
-              </terminal>
-            </elements>
-          </elements>
         </elements>
       </alternatives>
     </rules>
@@ -127,8 +113,8 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/argument/Argument#//Link"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.5"/>
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.6"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Rebuts">
@@ -141,7 +127,7 @@
             <type metamodel="/0/@metamodelDeclarations.1">
               <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/argument/Argument#//Argument"/>
             </type>
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.9"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
           </terminal>
         </elements>
         <elements xsi:type="xtext:Keyword" value="rebutted by"/>
@@ -150,7 +136,7 @@
             <type metamodel="/0/@metamodelDeclarations.1">
               <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/argument/Argument#//Argument"/>
             </type>
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.9"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
           </terminal>
         </elements>
       </alternatives>
@@ -165,7 +151,7 @@
             <type metamodel="/0/@metamodelDeclarations.1">
               <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/argument/Argument#//Argument"/>
             </type>
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.9"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
           </terminal>
         </elements>
         <elements xsi:type="xtext:Keyword" value="mitigated by"/>
@@ -174,7 +160,7 @@
             <type metamodel="/0/@metamodelDeclarations.1">
               <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/argument/Argument#//Argument"/>
             </type>
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.9"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
           </terminal>
         </elements>
       </alternatives>
@@ -254,10 +240,10 @@
         <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.9"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
         <elements xsi:type="xtext:Group" cardinality="*">
           <elements xsi:type="xtext:Keyword" value="."/>
-          <elements xsi:type="xtext:RuleCall" rule="/0/@rules.9"/>
+          <elements xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
         </elements>
       </alternatives>
     </rules>

@@ -3,7 +3,7 @@ package uk.ac.open.argument.argument.diagram.edit.policies;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 
-import uk.ac.open.argument.argument.diagram.edit.commands.Fact2CreateCommand;
+import uk.ac.open.argument.argument.diagram.edit.commands.Argument2CreateCommand;
 import uk.ac.open.argument.argument.diagram.providers.ArgumentElementTypes;
 
 /**
@@ -16,15 +16,15 @@ public class ArgumentArgumentGroundsCompartment2ItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public ArgumentArgumentGroundsCompartment2ItemSemanticEditPolicy() {
-		super(ArgumentElementTypes.Argument_3002);
+		super(ArgumentElementTypes.Argument_3001);
 	}
 
 	/**
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (ArgumentElementTypes.Fact_3001 == req.getElementType()) {
-			return getGEFWrapper(new Fact2CreateCommand(req));
+		if (ArgumentElementTypes.Argument_3001 == req.getElementType()) {
+			return getGEFWrapper(new Argument2CreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}

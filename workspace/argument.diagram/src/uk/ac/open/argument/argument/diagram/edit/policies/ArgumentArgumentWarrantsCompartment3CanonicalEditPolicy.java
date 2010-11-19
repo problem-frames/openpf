@@ -21,7 +21,7 @@ import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
 
 import uk.ac.open.argument.argument.ArgumentPackage;
-import uk.ac.open.argument.argument.diagram.edit.parts.Argument2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.Argument3EditPart;
 import uk.ac.open.argument.argument.diagram.part.ArgumentDiagramUpdater;
 import uk.ac.open.argument.argument.diagram.part.ArgumentNodeDescriptor;
 import uk.ac.open.argument.argument.diagram.part.ArgumentVisualIDRegistry;
@@ -29,14 +29,14 @@ import uk.ac.open.argument.argument.diagram.part.ArgumentVisualIDRegistry;
 /**
  * @generated
  */
-public class ArgumentArgumentGroundsCompartment2CanonicalEditPolicy extends
+public class ArgumentArgumentWarrantsCompartment3CanonicalEditPolicy extends
 		CanonicalEditPolicy {
 
 	/**
 	 * @generated
 	 */
 	protected EStructuralFeature getFeatureToSynchronize() {
-		return ArgumentPackage.eINSTANCE.getArgument_Grounds();
+		return ArgumentPackage.eINSTANCE.getArgument_Warrants();
 	}
 
 	/**
@@ -47,7 +47,7 @@ public class ArgumentArgumentGroundsCompartment2CanonicalEditPolicy extends
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<ArgumentNodeDescriptor> childDescriptors = ArgumentDiagramUpdater
-				.getArgumentArgumentGroundsCompartment_7003SemanticChildren(viewObject);
+				.getArgumentArgumentWarrantsCompartment_7006SemanticChildren(viewObject);
 		for (ArgumentNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -67,7 +67,7 @@ public class ArgumentArgumentGroundsCompartment2CanonicalEditPolicy extends
 	 * @generated
 	 */
 	private boolean isMyDiagramElement(View view) {
-		return Argument2EditPart.VISUAL_ID == ArgumentVisualIDRegistry
+		return Argument3EditPart.VISUAL_ID == ArgumentVisualIDRegistry
 				.getVisualID(view);
 	}
 
@@ -80,7 +80,7 @@ public class ArgumentArgumentGroundsCompartment2CanonicalEditPolicy extends
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<ArgumentNodeDescriptor> childDescriptors = ArgumentDiagramUpdater
-				.getArgumentArgumentGroundsCompartment_7003SemanticChildren((View) getHost()
+				.getArgumentArgumentWarrantsCompartment_7006SemanticChildren((View) getHost()
 						.getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours

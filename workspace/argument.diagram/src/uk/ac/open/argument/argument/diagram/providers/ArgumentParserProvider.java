@@ -14,10 +14,9 @@ import org.eclipse.gmf.runtime.emf.ui.services.parser.ParserHintAdapter;
 import org.eclipse.gmf.runtime.notation.View;
 
 import uk.ac.open.argument.argument.ArgumentPackage;
-import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDescriptionRound2EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDescriptionRoundEditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.FactName2EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.FactNameEditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameDescriptionRoundExp2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameDescriptionRoundExp3EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameDescriptionRoundExpEditPart;
 import uk.ac.open.argument.argument.diagram.parsers.MessageFormatParser;
 import uk.ac.open.argument.argument.diagram.part.ArgumentVisualIDRegistry;
 
@@ -30,93 +29,73 @@ public class ArgumentParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser argumentNameDescriptionRound_5003Parser;
+	private IParser argumentNameDescriptionRoundExpr_5003Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getArgumentNameDescriptionRound_5003Parser() {
-		if (argumentNameDescriptionRound_5003Parser == null) {
+	private IParser getArgumentNameDescriptionRoundExpr_5003Parser() {
+		if (argumentNameDescriptionRoundExpr_5003Parser == null) {
 			EAttribute[] features = new EAttribute[] {
-					ArgumentPackage.eINSTANCE.getNode_Name(),
-					ArgumentPackage.eINSTANCE.getNode_Description(),
-					ArgumentPackage.eINSTANCE.getArgument_Round() };
+					ArgumentPackage.eINSTANCE.getArgument_Name(),
+					ArgumentPackage.eINSTANCE.getArgument_Description(),
+					ArgumentPackage.eINSTANCE.getArgument_Round(),
+					ArgumentPackage.eINSTANCE.getArgument_Expr() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			parser.setViewPattern("{0}: {1} #{2}"); //$NON-NLS-1$
-			parser.setEditorPattern("{0}: {1} #{2}"); //$NON-NLS-1$
-			parser.setEditPattern("{0}: {1} #{2}"); //$NON-NLS-1$
-			argumentNameDescriptionRound_5003Parser = parser;
+			parser.setViewPattern("{0}: {1}\n {2} #{3}"); //$NON-NLS-1$
+			parser.setEditorPattern("{0}: {1}\n {2} #{3}"); //$NON-NLS-1$
+			parser.setEditPattern("{0}: {1}\n {2} #{3}"); //$NON-NLS-1$
+			argumentNameDescriptionRoundExpr_5003Parser = parser;
 		}
-		return argumentNameDescriptionRound_5003Parser;
+		return argumentNameDescriptionRoundExpr_5003Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser factNameDescriptionExpr_5004Parser;
+	private IParser argumentNameDescriptionRoundExpr_5002Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getFactNameDescriptionExpr_5004Parser() {
-		if (factNameDescriptionExpr_5004Parser == null) {
+	private IParser getArgumentNameDescriptionRoundExpr_5002Parser() {
+		if (argumentNameDescriptionRoundExpr_5002Parser == null) {
 			EAttribute[] features = new EAttribute[] {
-					ArgumentPackage.eINSTANCE.getNode_Name(),
-					ArgumentPackage.eINSTANCE.getNode_Description(),
-					ArgumentPackage.eINSTANCE.getFact_Expr() };
+					ArgumentPackage.eINSTANCE.getArgument_Name(),
+					ArgumentPackage.eINSTANCE.getArgument_Description(),
+					ArgumentPackage.eINSTANCE.getArgument_Round(),
+					ArgumentPackage.eINSTANCE.getArgument_Expr() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			parser.setViewPattern("{0}: {1}: {2}"); //$NON-NLS-1$
-			parser.setEditorPattern("{0}: {1}: {2}"); //$NON-NLS-1$
-			parser.setEditPattern("{0}: {1}: {2}"); //$NON-NLS-1$
-			factNameDescriptionExpr_5004Parser = parser;
+			parser.setViewPattern("{0}: {1}\n {2} #{3}"); //$NON-NLS-1$
+			parser.setEditorPattern("{0}: {1}\n {2} #{3}"); //$NON-NLS-1$
+			parser.setEditPattern("{0}: {1}\n {2} #{3}"); //$NON-NLS-1$
+			argumentNameDescriptionRoundExpr_5002Parser = parser;
 		}
-		return factNameDescriptionExpr_5004Parser;
+		return argumentNameDescriptionRoundExpr_5002Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser factNameDescriptionExpr_5001Parser;
+	private IParser argumentNameDescriptionRoundExpr_5001Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getFactNameDescriptionExpr_5001Parser() {
-		if (factNameDescriptionExpr_5001Parser == null) {
+	private IParser getArgumentNameDescriptionRoundExpr_5001Parser() {
+		if (argumentNameDescriptionRoundExpr_5001Parser == null) {
 			EAttribute[] features = new EAttribute[] {
-					ArgumentPackage.eINSTANCE.getNode_Name(),
-					ArgumentPackage.eINSTANCE.getNode_Description(),
-					ArgumentPackage.eINSTANCE.getFact_Expr() };
+					ArgumentPackage.eINSTANCE.getArgument_Name(),
+					ArgumentPackage.eINSTANCE.getArgument_Description(),
+					ArgumentPackage.eINSTANCE.getArgument_Round(),
+					ArgumentPackage.eINSTANCE.getArgument_Expr() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			parser.setViewPattern("{0}: {1}: {2}"); //$NON-NLS-1$
-			parser.setEditorPattern("{0}: {1}: {2}"); //$NON-NLS-1$
-			parser.setEditPattern("{0}: {1}: {2}"); //$NON-NLS-1$
-			factNameDescriptionExpr_5001Parser = parser;
+			parser.setViewPattern("{0}: {1}\n {2} #{3}"); //$NON-NLS-1$
+			parser.setEditorPattern("{0}: {1}\n {2} #{3}"); //$NON-NLS-1$
+			parser.setEditPattern("{0}: {1}\n {2} #{3}"); //$NON-NLS-1$
+			argumentNameDescriptionRoundExpr_5001Parser = parser;
 		}
-		return factNameDescriptionExpr_5001Parser;
-	}
-
-	/**
-	 * @generated
-	 */
-	private IParser argumentNameDescriptionRound_5002Parser;
-
-	/**
-	 * @generated
-	 */
-	private IParser getArgumentNameDescriptionRound_5002Parser() {
-		if (argumentNameDescriptionRound_5002Parser == null) {
-			EAttribute[] features = new EAttribute[] {
-					ArgumentPackage.eINSTANCE.getNode_Name(),
-					ArgumentPackage.eINSTANCE.getNode_Description(),
-					ArgumentPackage.eINSTANCE.getArgument_Round() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			parser.setViewPattern("{0}: {1} #{2}"); //$NON-NLS-1$
-			parser.setEditorPattern("{0}: {1} #{2}"); //$NON-NLS-1$
-			parser.setEditPattern("{0}: {1} #{2}"); //$NON-NLS-1$
-			argumentNameDescriptionRound_5002Parser = parser;
-		}
-		return argumentNameDescriptionRound_5002Parser;
+		return argumentNameDescriptionRoundExpr_5001Parser;
 	}
 
 	/**
@@ -124,14 +103,12 @@ public class ArgumentParserProvider extends AbstractProvider implements
 	 */
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
-		case ArgumentDescriptionRoundEditPart.VISUAL_ID:
-			return getArgumentNameDescriptionRound_5003Parser();
-		case FactNameEditPart.VISUAL_ID:
-			return getFactNameDescriptionExpr_5004Parser();
-		case FactName2EditPart.VISUAL_ID:
-			return getFactNameDescriptionExpr_5001Parser();
-		case ArgumentDescriptionRound2EditPart.VISUAL_ID:
-			return getArgumentNameDescriptionRound_5002Parser();
+		case ArgumentNameDescriptionRoundExpEditPart.VISUAL_ID:
+			return getArgumentNameDescriptionRoundExpr_5003Parser();
+		case ArgumentNameDescriptionRoundExp2EditPart.VISUAL_ID:
+			return getArgumentNameDescriptionRoundExpr_5002Parser();
+		case ArgumentNameDescriptionRoundExp3EditPart.VISUAL_ID:
+			return getArgumentNameDescriptionRoundExpr_5001Parser();
 		}
 		return null;
 	}

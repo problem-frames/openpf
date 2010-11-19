@@ -16,10 +16,8 @@ import uk.ac.open.argument.argument.Argument;
 import uk.ac.open.argument.argument.ArgumentDiagram;
 import uk.ac.open.argument.argument.ArgumentFactory;
 import uk.ac.open.argument.argument.ArgumentPackage;
-import uk.ac.open.argument.argument.Fact;
 import uk.ac.open.argument.argument.Link;
 import uk.ac.open.argument.argument.Mitigates;
-import uk.ac.open.argument.argument.Node;
 import uk.ac.open.argument.argument.Rebuts;
 
 /**
@@ -42,21 +40,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass nodeEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass argumentEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass factEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -167,7 +151,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getArgumentDiagram_Highlight()
+  public EReference getArgumentDiagram_Nodes()
   {
     return (EReference)argumentDiagramEClass.getEStructuralFeatures().get(1);
   }
@@ -177,49 +161,9 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getArgumentDiagram_Nodes()
-  {
-    return (EReference)argumentDiagramEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getArgumentDiagram_Links()
   {
-    return (EReference)argumentDiagramEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getNode()
-  {
-    return nodeEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getNode_Name()
-  {
-    return (EAttribute)nodeEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getNode_Description()
-  {
-    return (EAttribute)nodeEClass.getEStructuralFeatures().get(1);
+    return (EReference)argumentDiagramEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -237,7 +181,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getArgument_Round()
+  public EAttribute getArgument_Name()
   {
     return (EAttribute)argumentEClass.getEStructuralFeatures().get(0);
   }
@@ -247,9 +191,89 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getArgument_Description()
+  {
+    return (EAttribute)argumentEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getArgument_Round()
+  {
+    return (EAttribute)argumentEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getArgument_Expr()
+  {
+    return (EAttribute)argumentEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getArgument_Origin()
+  {
+    return (EReference)argumentEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getArgument_Foreground()
+  {
+    return (EAttribute)argumentEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getArgument_Background()
+  {
+    return (EAttribute)argumentEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getArgument_Shape()
+  {
+    return (EAttribute)argumentEClass.getEStructuralFeatures().get(7);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getArgument_Image()
+  {
+    return (EAttribute)argumentEClass.getEStructuralFeatures().get(8);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getArgument_Grounds()
   {
-    return (EReference)argumentEClass.getEStructuralFeatures().get(1);
+    return (EReference)argumentEClass.getEStructuralFeatures().get(9);
   }
 
   /**
@@ -259,37 +283,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    */
   public EReference getArgument_Warrants()
   {
-    return (EReference)argumentEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getFact()
-  {
-    return factEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getFact_Expr()
-  {
-    return (EAttribute)factEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getFact_Origin()
-  {
-    return (EReference)factEClass.getEStructuralFeatures().get(1);
+    return (EReference)argumentEClass.getEStructuralFeatures().get(10);
   }
 
   /**
@@ -374,22 +368,21 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
     // Create classes and their features
     argumentDiagramEClass = createEClass(ARGUMENT_DIAGRAM);
     createEAttribute(argumentDiagramEClass, ARGUMENT_DIAGRAM__NAME);
-    createEReference(argumentDiagramEClass, ARGUMENT_DIAGRAM__HIGHLIGHT);
     createEReference(argumentDiagramEClass, ARGUMENT_DIAGRAM__NODES);
     createEReference(argumentDiagramEClass, ARGUMENT_DIAGRAM__LINKS);
 
-    nodeEClass = createEClass(NODE);
-    createEAttribute(nodeEClass, NODE__NAME);
-    createEAttribute(nodeEClass, NODE__DESCRIPTION);
-
     argumentEClass = createEClass(ARGUMENT);
+    createEAttribute(argumentEClass, ARGUMENT__NAME);
+    createEAttribute(argumentEClass, ARGUMENT__DESCRIPTION);
     createEAttribute(argumentEClass, ARGUMENT__ROUND);
+    createEAttribute(argumentEClass, ARGUMENT__EXPR);
+    createEReference(argumentEClass, ARGUMENT__ORIGIN);
+    createEAttribute(argumentEClass, ARGUMENT__FOREGROUND);
+    createEAttribute(argumentEClass, ARGUMENT__BACKGROUND);
+    createEAttribute(argumentEClass, ARGUMENT__SHAPE);
+    createEAttribute(argumentEClass, ARGUMENT__IMAGE);
     createEReference(argumentEClass, ARGUMENT__GROUNDS);
     createEReference(argumentEClass, ARGUMENT__WARRANTS);
-
-    factEClass = createEClass(FACT);
-    createEAttribute(factEClass, FACT__EXPR);
-    createEReference(factEClass, FACT__ORIGIN);
 
     linkEClass = createEClass(LINK);
     createEReference(linkEClass, LINK__FROM);
@@ -429,30 +422,27 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    argumentEClass.getESuperTypes().add(this.getNode());
-    factEClass.getESuperTypes().add(this.getNode());
     rebutsEClass.getESuperTypes().add(this.getLink());
     mitigatesEClass.getESuperTypes().add(this.getLink());
 
     // Initialize classes and features; add operations and parameters
     initEClass(argumentDiagramEClass, ArgumentDiagram.class, "ArgumentDiagram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getArgumentDiagram_Name(), ecorePackage.getEString(), "name", null, 0, 1, ArgumentDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getArgumentDiagram_Highlight(), this.getNode(), null, "highlight", null, 0, 1, ArgumentDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getArgumentDiagram_Nodes(), this.getNode(), null, "nodes", null, 0, -1, ArgumentDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getArgumentDiagram_Nodes(), this.getArgument(), null, "nodes", null, 0, -1, ArgumentDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getArgumentDiagram_Links(), this.getLink(), null, "links", null, 0, -1, ArgumentDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(nodeEClass, Node.class, "Node", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getNode_Name(), ecorePackage.getEString(), "name", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getNode_Description(), ecorePackage.getEString(), "description", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
     initEClass(argumentEClass, Argument.class, "Argument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getArgument_Round(), ecorePackage.getEString(), "round", null, 0, 1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getArgument_Grounds(), this.getFact(), null, "grounds", null, 0, -1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getArgument_Name(), ecorePackage.getEString(), "name", null, 0, 1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getArgument_Description(), ecorePackage.getEString(), "description", null, 0, 1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getArgument_Round(), ecorePackage.getEInt(), "round", null, 0, 1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getArgument_Expr(), ecorePackage.getEString(), "expr", null, 0, 1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getArgument_Origin(), this.getArgument(), null, "origin", null, 0, 1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getArgument_Foreground(), ecorePackage.getEString(), "foreground", null, 0, 1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getArgument_Background(), ecorePackage.getEString(), "background", null, 0, 1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getArgument_Shape(), ecorePackage.getEString(), "shape", null, 0, 1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getArgument_Image(), ecorePackage.getEString(), "image", null, 0, 1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getArgument_Grounds(), this.getArgument(), null, "grounds", null, 0, -1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getArgument_Warrants(), this.getArgument(), null, "warrants", null, 0, -1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(factEClass, Fact.class, "Fact", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getFact_Expr(), ecorePackage.getEString(), "expr", null, 0, 1, Fact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFact_Origin(), this.getNode(), null, "origin", null, 0, 1, Fact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(linkEClass, Link.class, "Link", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getLink_From(), this.getArgument(), null, "from", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

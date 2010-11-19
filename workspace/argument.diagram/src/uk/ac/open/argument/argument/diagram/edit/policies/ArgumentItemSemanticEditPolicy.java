@@ -18,17 +18,17 @@ import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
 
-import uk.ac.open.argument.argument.diagram.edit.commands.FactOriginCreateCommand;
-import uk.ac.open.argument.argument.diagram.edit.commands.FactOriginReorientCommand;
+import uk.ac.open.argument.argument.diagram.edit.commands.ArgumentOriginCreateCommand;
+import uk.ac.open.argument.argument.diagram.edit.commands.ArgumentOriginReorientCommand;
 import uk.ac.open.argument.argument.diagram.edit.commands.MitigatesCreateCommand;
 import uk.ac.open.argument.argument.diagram.edit.commands.MitigatesReorientCommand;
 import uk.ac.open.argument.argument.diagram.edit.commands.RebutsCreateCommand;
 import uk.ac.open.argument.argument.diagram.edit.commands.RebutsReorientCommand;
 import uk.ac.open.argument.argument.diagram.edit.parts.Argument2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.Argument3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentGroundsCompartmentEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentWarrantsCompartmentEditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.Fact2EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.FactOriginEditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentOriginEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.RebutsEditPart;
 import uk.ac.open.argument.argument.diagram.part.ArgumentVisualIDRegistry;
@@ -71,7 +71,7 @@ public class ArgumentItemSemanticEditPolicy extends
 				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
 				continue;
 			}
-			if (ArgumentVisualIDRegistry.getVisualID(incomingLink) == FactOriginEditPart.VISUAL_ID) {
+			if (ArgumentVisualIDRegistry.getVisualID(incomingLink) == ArgumentOriginEditPart.VISUAL_ID) {
 				DestroyReferenceRequest r = new DestroyReferenceRequest(
 						incomingLink.getSource().getElement(), null,
 						incomingLink.getTarget().getElement(), false);
@@ -93,6 +93,14 @@ public class ArgumentItemSemanticEditPolicy extends
 				DestroyElementRequest r = new DestroyElementRequest(
 						outgoingLink.getElement(), false);
 				cmd.add(new DestroyElementCommand(r));
+				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
+				continue;
+			}
+			if (ArgumentVisualIDRegistry.getVisualID(outgoingLink) == ArgumentOriginEditPart.VISUAL_ID) {
+				DestroyReferenceRequest r = new DestroyReferenceRequest(
+						outgoingLink.getSource().getElement(), null,
+						outgoingLink.getTarget().getElement(), false);
+				cmd.add(new DestroyReferenceCommand(r));
 				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
 				continue;
 			}
@@ -123,51 +131,6 @@ public class ArgumentItemSemanticEditPolicy extends
 						.hasNext();) {
 					Node cnode = (Node) cit.next();
 					switch (ArgumentVisualIDRegistry.getVisualID(cnode)) {
-					case Fact2EditPart.VISUAL_ID:
-						for (Iterator<?> it = cnode.getTargetEdges().iterator(); it
-								.hasNext();) {
-							Edge incomingLink = (Edge) it.next();
-							if (ArgumentVisualIDRegistry
-									.getVisualID(incomingLink) == FactOriginEditPart.VISUAL_ID) {
-								DestroyReferenceRequest r = new DestroyReferenceRequest(
-										incomingLink.getSource().getElement(),
-										null, incomingLink.getTarget()
-												.getElement(), false);
-								cmd.add(new DestroyReferenceCommand(r));
-								cmd.add(new DeleteCommand(getEditingDomain(),
-										incomingLink));
-								continue;
-							}
-						}
-						for (Iterator<?> it = cnode.getSourceEdges().iterator(); it
-								.hasNext();) {
-							Edge outgoingLink = (Edge) it.next();
-							if (ArgumentVisualIDRegistry
-									.getVisualID(outgoingLink) == FactOriginEditPart.VISUAL_ID) {
-								DestroyReferenceRequest r = new DestroyReferenceRequest(
-										outgoingLink.getSource().getElement(),
-										null, outgoingLink.getTarget()
-												.getElement(), false);
-								cmd.add(new DestroyReferenceCommand(r));
-								cmd.add(new DeleteCommand(getEditingDomain(),
-										outgoingLink));
-								continue;
-							}
-						}
-						cmd.add(new DestroyElementCommand(
-								new DestroyElementRequest(getEditingDomain(),
-										cnode.getElement(), false))); // directlyOwned: true
-						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
-						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
-						break;
-					}
-				}
-				break;
-			case ArgumentArgumentWarrantsCompartmentEditPart.VISUAL_ID:
-				for (Iterator<?> cit = node.getChildren().iterator(); cit
-						.hasNext();) {
-					Node cnode = (Node) cit.next();
-					switch (ArgumentVisualIDRegistry.getVisualID(cnode)) {
 					case Argument2EditPart.VISUAL_ID:
 						for (Iterator<?> it = cnode.getTargetEdges().iterator(); it
 								.hasNext();) {
@@ -191,7 +154,7 @@ public class ArgumentItemSemanticEditPolicy extends
 								continue;
 							}
 							if (ArgumentVisualIDRegistry
-									.getVisualID(incomingLink) == FactOriginEditPart.VISUAL_ID) {
+									.getVisualID(incomingLink) == ArgumentOriginEditPart.VISUAL_ID) {
 								DestroyReferenceRequest r = new DestroyReferenceRequest(
 										incomingLink.getSource().getElement(),
 										null, incomingLink.getTarget()
@@ -219,6 +182,98 @@ public class ArgumentItemSemanticEditPolicy extends
 								DestroyElementRequest r = new DestroyElementRequest(
 										outgoingLink.getElement(), false);
 								cmd.add(new DestroyElementCommand(r));
+								cmd.add(new DeleteCommand(getEditingDomain(),
+										outgoingLink));
+								continue;
+							}
+							if (ArgumentVisualIDRegistry
+									.getVisualID(outgoingLink) == ArgumentOriginEditPart.VISUAL_ID) {
+								DestroyReferenceRequest r = new DestroyReferenceRequest(
+										outgoingLink.getSource().getElement(),
+										null, outgoingLink.getTarget()
+												.getElement(), false);
+								cmd.add(new DestroyReferenceCommand(r));
+								cmd.add(new DeleteCommand(getEditingDomain(),
+										outgoingLink));
+								continue;
+							}
+						}
+						cmd.add(new DestroyElementCommand(
+								new DestroyElementRequest(getEditingDomain(),
+										cnode.getElement(), false))); // directlyOwned: true
+						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
+						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
+						break;
+					}
+				}
+				break;
+			case ArgumentArgumentWarrantsCompartmentEditPart.VISUAL_ID:
+				for (Iterator<?> cit = node.getChildren().iterator(); cit
+						.hasNext();) {
+					Node cnode = (Node) cit.next();
+					switch (ArgumentVisualIDRegistry.getVisualID(cnode)) {
+					case Argument3EditPart.VISUAL_ID:
+						for (Iterator<?> it = cnode.getTargetEdges().iterator(); it
+								.hasNext();) {
+							Edge incomingLink = (Edge) it.next();
+							if (ArgumentVisualIDRegistry
+									.getVisualID(incomingLink) == RebutsEditPart.VISUAL_ID) {
+								DestroyElementRequest r = new DestroyElementRequest(
+										incomingLink.getElement(), false);
+								cmd.add(new DestroyElementCommand(r));
+								cmd.add(new DeleteCommand(getEditingDomain(),
+										incomingLink));
+								continue;
+							}
+							if (ArgumentVisualIDRegistry
+									.getVisualID(incomingLink) == MitigatesEditPart.VISUAL_ID) {
+								DestroyElementRequest r = new DestroyElementRequest(
+										incomingLink.getElement(), false);
+								cmd.add(new DestroyElementCommand(r));
+								cmd.add(new DeleteCommand(getEditingDomain(),
+										incomingLink));
+								continue;
+							}
+							if (ArgumentVisualIDRegistry
+									.getVisualID(incomingLink) == ArgumentOriginEditPart.VISUAL_ID) {
+								DestroyReferenceRequest r = new DestroyReferenceRequest(
+										incomingLink.getSource().getElement(),
+										null, incomingLink.getTarget()
+												.getElement(), false);
+								cmd.add(new DestroyReferenceCommand(r));
+								cmd.add(new DeleteCommand(getEditingDomain(),
+										incomingLink));
+								continue;
+							}
+						}
+						for (Iterator<?> it = cnode.getSourceEdges().iterator(); it
+								.hasNext();) {
+							Edge outgoingLink = (Edge) it.next();
+							if (ArgumentVisualIDRegistry
+									.getVisualID(outgoingLink) == RebutsEditPart.VISUAL_ID) {
+								DestroyElementRequest r = new DestroyElementRequest(
+										outgoingLink.getElement(), false);
+								cmd.add(new DestroyElementCommand(r));
+								cmd.add(new DeleteCommand(getEditingDomain(),
+										outgoingLink));
+								continue;
+							}
+							if (ArgumentVisualIDRegistry
+									.getVisualID(outgoingLink) == MitigatesEditPart.VISUAL_ID) {
+								DestroyElementRequest r = new DestroyElementRequest(
+										outgoingLink.getElement(), false);
+								cmd.add(new DestroyElementCommand(r));
+								cmd.add(new DeleteCommand(getEditingDomain(),
+										outgoingLink));
+								continue;
+							}
+							if (ArgumentVisualIDRegistry
+									.getVisualID(outgoingLink) == ArgumentOriginEditPart.VISUAL_ID) {
+								DestroyReferenceRequest r = new DestroyReferenceRequest(
+										outgoingLink.getSource().getElement(),
+										null, outgoingLink.getTarget()
+												.getElement(), false);
+								cmd.add(new DestroyReferenceCommand(r));
 								cmd.add(new DeleteCommand(getEditingDomain(),
 										outgoingLink));
 								continue;
@@ -260,8 +315,9 @@ public class ArgumentItemSemanticEditPolicy extends
 			return getGEFWrapper(new MitigatesCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (ArgumentElementTypes.FactOrigin_4003 == req.getElementType()) {
-			return null;
+		if (ArgumentElementTypes.ArgumentOrigin_4003 == req.getElementType()) {
+			return getGEFWrapper(new ArgumentOriginCreateCommand(req,
+					req.getSource(), req.getTarget()));
 		}
 		return null;
 	}
@@ -279,8 +335,8 @@ public class ArgumentItemSemanticEditPolicy extends
 			return getGEFWrapper(new MitigatesCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (ArgumentElementTypes.FactOrigin_4003 == req.getElementType()) {
-			return getGEFWrapper(new FactOriginCreateCommand(req,
+		if (ArgumentElementTypes.ArgumentOrigin_4003 == req.getElementType()) {
+			return getGEFWrapper(new ArgumentOriginCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
 		return null;
@@ -312,8 +368,8 @@ public class ArgumentItemSemanticEditPolicy extends
 	protected Command getReorientReferenceRelationshipCommand(
 			ReorientReferenceRelationshipRequest req) {
 		switch (getVisualID(req)) {
-		case FactOriginEditPart.VISUAL_ID:
-			return getGEFWrapper(new FactOriginReorientCommand(req));
+		case ArgumentOriginEditPart.VISUAL_ID:
+			return getGEFWrapper(new ArgumentOriginReorientCommand(req));
 		}
 		return super.getReorientReferenceRelationshipCommand(req);
 	}

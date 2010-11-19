@@ -56,7 +56,7 @@ public class Argument2CreateCommand extends EditElementCommand {
 		Argument newElement = ArgumentFactory.eINSTANCE.createArgument();
 
 		Argument owner = (Argument) getElementToEdit();
-		owner.getWarrants().add(newElement);
+		owner.getGrounds().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

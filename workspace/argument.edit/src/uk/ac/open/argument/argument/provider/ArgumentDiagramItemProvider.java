@@ -68,7 +68,6 @@ public class ArgumentDiagramItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addHighlightPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -91,28 +90,6 @@ public class ArgumentDiagramItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Highlight feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addHighlightPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ArgumentDiagram_highlight_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ArgumentDiagram_highlight_feature", "_UI_ArgumentDiagram_type"),
-				 ArgumentPackage.Literals.ARGUMENT_DIAGRAM__HIGHLIGHT,
-				 true,
-				 false,
-				 true,
-				 null,
 				 null,
 				 null));
 	}
@@ -210,17 +187,7 @@ public class ArgumentDiagramItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ArgumentPackage.Literals.ARGUMENT_DIAGRAM__NODES,
-				 ArgumentFactory.eINSTANCE.createNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ArgumentPackage.Literals.ARGUMENT_DIAGRAM__NODES,
 				 ArgumentFactory.eINSTANCE.createArgument()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ArgumentPackage.Literals.ARGUMENT_DIAGRAM__NODES,
-				 ArgumentFactory.eINSTANCE.createFact()));
 
 		newChildDescriptors.add
 			(createChildParameter

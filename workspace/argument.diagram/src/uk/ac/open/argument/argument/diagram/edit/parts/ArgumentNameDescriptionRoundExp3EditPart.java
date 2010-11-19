@@ -47,13 +47,13 @@ import uk.ac.open.argument.argument.diagram.providers.ArgumentParserProvider;
 /**
  * @generated
  */
-public class FactNameEditPart extends CompartmentEditPart implements
-		ITextAwareEditPart {
+public class ArgumentNameDescriptionRoundExp3EditPart extends
+		CompartmentEditPart implements ITextAwareEditPart {
 
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5004;
+	public static final int VISUAL_ID = 5001;
 
 	/**
 	 * @generated
@@ -78,7 +78,7 @@ public class FactNameEditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public FactNameEditPart(View view) {
+	public ArgumentNameDescriptionRoundExp3EditPart(View view) {
 		super(view);
 	}
 
@@ -291,10 +291,10 @@ public class FactNameEditPart extends CompartmentEditPart implements
 		if (parser == null) {
 			parser = ArgumentParserProvider
 					.getParser(
-							ArgumentElementTypes.Fact_2002,
+							ArgumentElementTypes.Argument_3002,
 							getParserElement(),
 							ArgumentVisualIDRegistry
-									.getType(uk.ac.open.argument.argument.diagram.edit.parts.FactNameEditPart.VISUAL_ID));
+									.getType(uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameDescriptionRoundExp3EditPart.VISUAL_ID));
 		}
 		return parser;
 	}

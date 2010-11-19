@@ -37,7 +37,6 @@ public class ArgumentPaletteFactory {
 				Messages.Objects1Group_title);
 		paletteContainer.setId("createObjects1Group"); //$NON-NLS-1$
 		paletteContainer.add(createArgument1CreationTool());
-		paletteContainer.add(createFact2CreationTool());
 		return paletteContainer;
 	}
 
@@ -59,8 +58,9 @@ public class ArgumentPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createArgument1CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
 		types.add(ArgumentElementTypes.Argument_2001);
+		types.add(ArgumentElementTypes.Argument_3001);
 		types.add(ArgumentElementTypes.Argument_3002);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Argument1CreationTool_title,
@@ -68,23 +68,6 @@ public class ArgumentPaletteFactory {
 		entry.setId("createArgument1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ArgumentElementTypes
 				.getImageDescriptor(ArgumentElementTypes.Argument_2001));
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	 * @generated
-	 */
-	private ToolEntry createFact2CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(ArgumentElementTypes.Fact_3001);
-		types.add(ArgumentElementTypes.Fact_2002);
-		NodeToolEntry entry = new NodeToolEntry(
-				Messages.Fact2CreationTool_title,
-				Messages.Fact2CreationTool_desc, types);
-		entry.setId("createFact2CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(ArgumentElementTypes
-				.getImageDescriptor(ArgumentElementTypes.Fact_3001));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -111,10 +94,11 @@ public class ArgumentPaletteFactory {
 		LinkToolEntry entry = new LinkToolEntry(
 				Messages.Origin2CreationTool_title,
 				Messages.Origin2CreationTool_desc,
-				Collections.singletonList(ArgumentElementTypes.FactOrigin_4003));
+				Collections
+						.singletonList(ArgumentElementTypes.ArgumentOrigin_4003));
 		entry.setId("createOrigin2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ArgumentElementTypes
-				.getImageDescriptor(ArgumentElementTypes.FactOrigin_4003));
+				.getImageDescriptor(ArgumentElementTypes.ArgumentOrigin_4003));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}

@@ -26,8 +26,8 @@ import uk.ac.open.argument.argument.diagram.edit.commands.RebutsCreateCommand;
 import uk.ac.open.argument.argument.diagram.edit.commands.RebutsReorientCommand;
 import uk.ac.open.argument.argument.diagram.edit.parts.Argument2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.Argument3EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentGroundsCompartment2EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentWarrantsCompartment2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentGroundsCompartment3EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentWarrantsCompartment3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentOriginEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.RebutsEditPart;
@@ -37,14 +37,14 @@ import uk.ac.open.argument.argument.diagram.providers.ArgumentElementTypes;
 /**
  * @generated
  */
-public class Argument2ItemSemanticEditPolicy extends
+public class Argument3ItemSemanticEditPolicy extends
 		ArgumentBaseItemSemanticEditPolicy {
 
 	/**
 	 * @generated
 	 */
-	public Argument2ItemSemanticEditPolicy() {
-		super(ArgumentElementTypes.Argument_3001);
+	public Argument3ItemSemanticEditPolicy() {
+		super(ArgumentElementTypes.Argument_3002);
 	}
 
 	/**
@@ -126,7 +126,7 @@ public class Argument2ItemSemanticEditPolicy extends
 		for (Iterator<?> nit = view.getChildren().iterator(); nit.hasNext();) {
 			Node node = (Node) nit.next();
 			switch (ArgumentVisualIDRegistry.getVisualID(node)) {
-			case ArgumentArgumentGroundsCompartment2EditPart.VISUAL_ID:
+			case ArgumentArgumentGroundsCompartment3EditPart.VISUAL_ID:
 				for (Iterator<?> cit = node.getChildren().iterator(); cit
 						.hasNext();) {
 					Node cnode = (Node) cit.next();
@@ -207,7 +207,7 @@ public class Argument2ItemSemanticEditPolicy extends
 					}
 				}
 				break;
-			case ArgumentArgumentWarrantsCompartment2EditPart.VISUAL_ID:
+			case ArgumentArgumentWarrantsCompartment3EditPart.VISUAL_ID:
 				for (Iterator<?> cit = node.getChildren().iterator(); cit
 						.hasNext();) {
 					Node cnode = (Node) cit.next();

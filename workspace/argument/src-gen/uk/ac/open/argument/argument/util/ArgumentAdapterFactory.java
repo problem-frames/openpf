@@ -83,19 +83,9 @@ public class ArgumentAdapterFactory extends AdapterFactoryImpl
         return createArgumentDiagramAdapter();
       }
       @Override
-      public Adapter caseNode(Node object)
-      {
-        return createNodeAdapter();
-      }
-      @Override
       public Adapter caseArgument(Argument object)
       {
         return createArgumentAdapter();
-      }
-      @Override
-      public Adapter caseFact(Fact object)
-      {
-        return createFactAdapter();
       }
       @Override
       public Adapter caseLink(Link object)
@@ -150,21 +140,6 @@ public class ArgumentAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.Node <em>Node</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see uk.ac.open.argument.argument.Node
-   * @generated
-   */
-  public Adapter createNodeAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.Argument <em>Argument</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -175,21 +150,6 @@ public class ArgumentAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createArgumentAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.Fact <em>Fact</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see uk.ac.open.argument.argument.Fact
-   * @generated
-   */
-  public Adapter createFactAdapter()
   {
     return null;
   }

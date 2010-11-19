@@ -21,10 +21,10 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import uk.ac.open.argument.argument.Argument;
 import uk.ac.open.argument.argument.ArgumentDiagram;
 import uk.ac.open.argument.argument.ArgumentPackage;
 import uk.ac.open.argument.argument.Link;
-import uk.ac.open.argument.argument.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,7 +34,6 @@ import uk.ac.open.argument.argument.Node;
  * The following features are implemented:
  * <ul>
  *   <li>{@link uk.ac.open.argument.argument.impl.ArgumentDiagramImpl#getName <em>Name</em>}</li>
- *   <li>{@link uk.ac.open.argument.argument.impl.ArgumentDiagramImpl#getHighlight <em>Highlight</em>}</li>
  *   <li>{@link uk.ac.open.argument.argument.impl.ArgumentDiagramImpl#getNodes <em>Nodes</em>}</li>
  *   <li>{@link uk.ac.open.argument.argument.impl.ArgumentDiagramImpl#getLinks <em>Links</em>}</li>
  * </ul>
@@ -65,16 +64,6 @@ public class ArgumentDiagramImpl extends MinimalEObjectImpl.Container implements
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getHighlight() <em>Highlight</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getHighlight()
-   * @generated
-   * @ordered
-   */
-  protected Node highlight;
-
-  /**
    * The cached value of the '{@link #getNodes() <em>Nodes</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -82,7 +71,7 @@ public class ArgumentDiagramImpl extends MinimalEObjectImpl.Container implements
    * @generated
    * @ordered
    */
-  protected EList<Node> nodes;
+  protected EList<Argument> nodes;
 
   /**
    * The cached value of the '{@link #getLinks() <em>Links</em>}' containment reference list.
@@ -143,54 +132,11 @@ public class ArgumentDiagramImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public Node getHighlight()
-  {
-    if (highlight != null && highlight.eIsProxy())
-    {
-      InternalEObject oldHighlight = (InternalEObject)highlight;
-      highlight = (Node)eResolveProxy(oldHighlight);
-      if (highlight != oldHighlight)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, ArgumentPackage.ARGUMENT_DIAGRAM__HIGHLIGHT, oldHighlight, highlight));
-      }
-    }
-    return highlight;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Node basicGetHighlight()
-  {
-    return highlight;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setHighlight(Node newHighlight)
-  {
-    Node oldHighlight = highlight;
-    highlight = newHighlight;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.ARGUMENT_DIAGRAM__HIGHLIGHT, oldHighlight, highlight));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<Node> getNodes()
+  public EList<Argument> getNodes()
   {
     if (nodes == null)
     {
-      nodes = new EObjectContainmentEList<Node>(Node.class, this, ArgumentPackage.ARGUMENT_DIAGRAM__NODES);
+      nodes = new EObjectContainmentEList<Argument>(Argument.class, this, ArgumentPackage.ARGUMENT_DIAGRAM__NODES);
     }
     return nodes;
   }
@@ -239,9 +185,6 @@ public class ArgumentDiagramImpl extends MinimalEObjectImpl.Container implements
     {
       case ArgumentPackage.ARGUMENT_DIAGRAM__NAME:
         return getName();
-      case ArgumentPackage.ARGUMENT_DIAGRAM__HIGHLIGHT:
-        if (resolve) return getHighlight();
-        return basicGetHighlight();
       case ArgumentPackage.ARGUMENT_DIAGRAM__NODES:
         return getNodes();
       case ArgumentPackage.ARGUMENT_DIAGRAM__LINKS:
@@ -264,12 +207,9 @@ public class ArgumentDiagramImpl extends MinimalEObjectImpl.Container implements
       case ArgumentPackage.ARGUMENT_DIAGRAM__NAME:
         setName((String)newValue);
         return;
-      case ArgumentPackage.ARGUMENT_DIAGRAM__HIGHLIGHT:
-        setHighlight((Node)newValue);
-        return;
       case ArgumentPackage.ARGUMENT_DIAGRAM__NODES:
         getNodes().clear();
-        getNodes().addAll((Collection<? extends Node>)newValue);
+        getNodes().addAll((Collection<? extends Argument>)newValue);
         return;
       case ArgumentPackage.ARGUMENT_DIAGRAM__LINKS:
         getLinks().clear();
@@ -291,9 +231,6 @@ public class ArgumentDiagramImpl extends MinimalEObjectImpl.Container implements
     {
       case ArgumentPackage.ARGUMENT_DIAGRAM__NAME:
         setName(NAME_EDEFAULT);
-        return;
-      case ArgumentPackage.ARGUMENT_DIAGRAM__HIGHLIGHT:
-        setHighlight((Node)null);
         return;
       case ArgumentPackage.ARGUMENT_DIAGRAM__NODES:
         getNodes().clear();
@@ -317,8 +254,6 @@ public class ArgumentDiagramImpl extends MinimalEObjectImpl.Container implements
     {
       case ArgumentPackage.ARGUMENT_DIAGRAM__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case ArgumentPackage.ARGUMENT_DIAGRAM__HIGHLIGHT:
-        return highlight != null;
       case ArgumentPackage.ARGUMENT_DIAGRAM__NODES:
         return nodes != null && !nodes.isEmpty();
       case ArgumentPackage.ARGUMENT_DIAGRAM__LINKS:

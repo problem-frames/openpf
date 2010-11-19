@@ -35,26 +35,20 @@ public class ArgumentEditPartFactory implements EditPartFactory {
 			case ArgumentEditPart.VISUAL_ID:
 				return new ArgumentEditPart(view);
 
-			case ArgumentDescriptionRoundEditPart.VISUAL_ID:
-				return new ArgumentDescriptionRoundEditPart(view);
-
-			case FactEditPart.VISUAL_ID:
-				return new FactEditPart(view);
-
-			case FactNameEditPart.VISUAL_ID:
-				return new FactNameEditPart(view);
-
-			case Fact2EditPart.VISUAL_ID:
-				return new Fact2EditPart(view);
-
-			case FactName2EditPart.VISUAL_ID:
-				return new FactName2EditPart(view);
+			case ArgumentNameDescriptionRoundExpEditPart.VISUAL_ID:
+				return new ArgumentNameDescriptionRoundExpEditPart(view);
 
 			case Argument2EditPart.VISUAL_ID:
 				return new Argument2EditPart(view);
 
-			case ArgumentDescriptionRound2EditPart.VISUAL_ID:
-				return new ArgumentDescriptionRound2EditPart(view);
+			case ArgumentNameDescriptionRoundExp2EditPart.VISUAL_ID:
+				return new ArgumentNameDescriptionRoundExp2EditPart(view);
+
+			case Argument3EditPart.VISUAL_ID:
+				return new Argument3EditPart(view);
+
+			case ArgumentNameDescriptionRoundExp3EditPart.VISUAL_ID:
+				return new ArgumentNameDescriptionRoundExp3EditPart(view);
 
 			case ArgumentArgumentGroundsCompartmentEditPart.VISUAL_ID:
 				return new ArgumentArgumentGroundsCompartmentEditPart(view);
@@ -68,14 +62,20 @@ public class ArgumentEditPartFactory implements EditPartFactory {
 			case ArgumentArgumentWarrantsCompartment2EditPart.VISUAL_ID:
 				return new ArgumentArgumentWarrantsCompartment2EditPart(view);
 
+			case ArgumentArgumentGroundsCompartment3EditPart.VISUAL_ID:
+				return new ArgumentArgumentGroundsCompartment3EditPart(view);
+
+			case ArgumentArgumentWarrantsCompartment3EditPart.VISUAL_ID:
+				return new ArgumentArgumentWarrantsCompartment3EditPart(view);
+
 			case RebutsEditPart.VISUAL_ID:
 				return new RebutsEditPart(view);
 
 			case MitigatesEditPart.VISUAL_ID:
 				return new MitigatesEditPart(view);
 
-			case FactOriginEditPart.VISUAL_ID:
-				return new FactOriginEditPart(view);
+			case ArgumentOriginEditPart.VISUAL_ID:
+				return new ArgumentOriginEditPart(view);
 
 			case WrappingLabelEditPart.VISUAL_ID:
 				return new WrappingLabelEditPart(view);

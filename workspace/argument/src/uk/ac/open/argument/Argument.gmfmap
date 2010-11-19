@@ -13,13 +13,20 @@
       <domainMetaElement
           href="Argument.ecore#//Argument"/>
       <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
+          xsi:type="gmfmap:FeatureLabelMapping"
+          viewPattern="{0}: {1}\n {2} #{3}"
+          editorPattern="{0}: {1}\n {2} #{3}"
+          editPattern="{0}: {1}\n {2} #{3}">
         <diagramLabel
             href="Argument.gmfgraph#ArgumentLabel"/>
         <features
-            href="Argument.ecore#//Node/description"/>
+            href="Argument.ecore#//Argument/name"/>
+        <features
+            href="Argument.ecore#//Argument/description"/>
         <features
             href="Argument.ecore#//Argument/round"/>
+        <features
+            href="Argument.ecore#//Argument/expr"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
@@ -28,7 +35,7 @@
           href="Argument.gmfgraph#Argument"/>
       <children
           compartment="//@nodes.0/@ownedChild/@compartments.0"
-          referencedChild="//@nodes.1/@ownedChild">
+          referencedChild="//@nodes.0/@ownedChild">
         <containmentFeature
             href="Argument.ecore#//Argument/grounds"/>
       </children>
@@ -48,26 +55,6 @@
         <compartment
             href="Argument.gmfgraph#ArgumentWarrantsCompartment"/>
       </compartments>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <containmentFeature
-        href="Argument.ecore#//ArgumentDiagram/nodes"/>
-    <ownedChild>
-      <domainMetaElement
-          href="Argument.ecore#//Fact"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="Argument.gmfgraph#FactLabel"/>
-        <features
-            href="Argument.ecore#//Node/description"/>
-      </labelMappings>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="Argument.gmftool#//@palette/@tools.0/@tools.1"/>
-      <diagramNode
-          href="Argument.gmfgraph#Fact"/>
     </ownedChild>
   </nodes>
   <links>
@@ -109,16 +96,16 @@
         xsi:type="gmfmap:DesignLabelMapping"
         readOnly="true">
       <diagramLabel
-          href="Argument.gmfgraph#FactOriginExternalLabel"/>
+          href="Argument.gmfgraph#ArgumentOriginExternalLabel"/>
     </labelMappings>
     <tool
         xsi:type="gmftool:CreationTool"
         href="Argument.gmftool#//@palette/@tools.1/@tools.1"/>
     <diagramLink
-        href="Argument.gmfgraph#FactOrigin"/>
+        href="Argument.gmfgraph#ArgumentOrigin"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
-        href="Argument.ecore#//Fact/origin"/>
+        href="Argument.ecore#//Argument/origin"/>
   </links>
   <diagram>
     <diagramCanvas

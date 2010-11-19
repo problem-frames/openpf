@@ -22,12 +22,15 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.dialogs.ElementListSelectionDialog;
 
 import uk.ac.open.argument.argument.diagram.edit.parts.Argument2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.Argument3EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentGroundsCompartment2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentGroundsCompartment3EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentGroundsCompartmentEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentWarrantsCompartment2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentWarrantsCompartment3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentWarrantsCompartmentEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDiagramEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentEditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.Fact2EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.FactEditPart;
 import uk.ac.open.argument.argument.diagram.part.ArgumentDiagramEditorPlugin;
 import uk.ac.open.argument.argument.diagram.part.Messages;
 
@@ -44,19 +47,13 @@ public class ArgumentModelingAssistantProvider extends
 		IGraphicalEditPart editPart = (IGraphicalEditPart) host
 				.getAdapter(IGraphicalEditPart.class);
 		if (editPart instanceof ArgumentDiagramEditPart) {
-			ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+			ArrayList<IElementType> types = new ArrayList<IElementType>(1);
 			types.add(ArgumentElementTypes.Argument_2001);
-			types.add(ArgumentElementTypes.Fact_2002);
 			return types;
 		}
-		if (editPart instanceof ArgumentEditPart) {
+		if (editPart instanceof ArgumentArgumentGroundsCompartmentEditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(1);
-			types.add(ArgumentElementTypes.Fact_3001);
-			return types;
-		}
-		if (editPart instanceof Argument2EditPart) {
-			ArrayList<IElementType> types = new ArrayList<IElementType>(1);
-			types.add(ArgumentElementTypes.Fact_3001);
+			types.add(ArgumentElementTypes.Argument_3001);
 			return types;
 		}
 		if (editPart instanceof ArgumentArgumentWarrantsCompartmentEditPart) {
@@ -64,7 +61,22 @@ public class ArgumentModelingAssistantProvider extends
 			types.add(ArgumentElementTypes.Argument_3002);
 			return types;
 		}
+		if (editPart instanceof ArgumentArgumentGroundsCompartment2EditPart) {
+			ArrayList<IElementType> types = new ArrayList<IElementType>(1);
+			types.add(ArgumentElementTypes.Argument_3001);
+			return types;
+		}
 		if (editPart instanceof ArgumentArgumentWarrantsCompartment2EditPart) {
+			ArrayList<IElementType> types = new ArrayList<IElementType>(1);
+			types.add(ArgumentElementTypes.Argument_3002);
+			return types;
+		}
+		if (editPart instanceof ArgumentArgumentGroundsCompartment3EditPart) {
+			ArrayList<IElementType> types = new ArrayList<IElementType>(1);
+			types.add(ArgumentElementTypes.Argument_3001);
+			return types;
+		}
+		if (editPart instanceof ArgumentArgumentWarrantsCompartment3EditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(1);
 			types.add(ArgumentElementTypes.Argument_3002);
 			return types;
@@ -81,14 +93,11 @@ public class ArgumentModelingAssistantProvider extends
 		if (sourceEditPart instanceof ArgumentEditPart) {
 			return ((ArgumentEditPart) sourceEditPart).getMARelTypesOnSource();
 		}
-		if (sourceEditPart instanceof FactEditPart) {
-			return ((FactEditPart) sourceEditPart).getMARelTypesOnSource();
-		}
-		if (sourceEditPart instanceof Fact2EditPart) {
-			return ((Fact2EditPart) sourceEditPart).getMARelTypesOnSource();
-		}
 		if (sourceEditPart instanceof Argument2EditPart) {
 			return ((Argument2EditPart) sourceEditPart).getMARelTypesOnSource();
+		}
+		if (sourceEditPart instanceof Argument3EditPart) {
+			return ((Argument3EditPart) sourceEditPart).getMARelTypesOnSource();
 		}
 		return Collections.EMPTY_LIST;
 	}
@@ -102,14 +111,11 @@ public class ArgumentModelingAssistantProvider extends
 		if (targetEditPart instanceof ArgumentEditPart) {
 			return ((ArgumentEditPart) targetEditPart).getMARelTypesOnTarget();
 		}
-		if (targetEditPart instanceof FactEditPart) {
-			return ((FactEditPart) targetEditPart).getMARelTypesOnTarget();
-		}
-		if (targetEditPart instanceof Fact2EditPart) {
-			return ((Fact2EditPart) targetEditPart).getMARelTypesOnTarget();
-		}
 		if (targetEditPart instanceof Argument2EditPart) {
 			return ((Argument2EditPart) targetEditPart).getMARelTypesOnTarget();
+		}
+		if (targetEditPart instanceof Argument3EditPart) {
+			return ((Argument3EditPart) targetEditPart).getMARelTypesOnTarget();
 		}
 		return Collections.EMPTY_LIST;
 	}
@@ -127,16 +133,12 @@ public class ArgumentModelingAssistantProvider extends
 			return ((ArgumentEditPart) sourceEditPart)
 					.getMARelTypesOnSourceAndTarget(targetEditPart);
 		}
-		if (sourceEditPart instanceof FactEditPart) {
-			return ((FactEditPart) sourceEditPart)
-					.getMARelTypesOnSourceAndTarget(targetEditPart);
-		}
-		if (sourceEditPart instanceof Fact2EditPart) {
-			return ((Fact2EditPart) sourceEditPart)
-					.getMARelTypesOnSourceAndTarget(targetEditPart);
-		}
 		if (sourceEditPart instanceof Argument2EditPart) {
 			return ((Argument2EditPart) sourceEditPart)
+					.getMARelTypesOnSourceAndTarget(targetEditPart);
+		}
+		if (sourceEditPart instanceof Argument3EditPart) {
+			return ((Argument3EditPart) sourceEditPart)
 					.getMARelTypesOnSourceAndTarget(targetEditPart);
 		}
 		return Collections.EMPTY_LIST;
@@ -153,16 +155,12 @@ public class ArgumentModelingAssistantProvider extends
 			return ((ArgumentEditPart) targetEditPart)
 					.getMATypesForSource(relationshipType);
 		}
-		if (targetEditPart instanceof FactEditPart) {
-			return ((FactEditPart) targetEditPart)
-					.getMATypesForSource(relationshipType);
-		}
-		if (targetEditPart instanceof Fact2EditPart) {
-			return ((Fact2EditPart) targetEditPart)
-					.getMATypesForSource(relationshipType);
-		}
 		if (targetEditPart instanceof Argument2EditPart) {
 			return ((Argument2EditPart) targetEditPart)
+					.getMATypesForSource(relationshipType);
+		}
+		if (targetEditPart instanceof Argument3EditPart) {
+			return ((Argument3EditPart) targetEditPart)
 					.getMATypesForSource(relationshipType);
 		}
 		return Collections.EMPTY_LIST;
@@ -179,16 +177,12 @@ public class ArgumentModelingAssistantProvider extends
 			return ((ArgumentEditPart) sourceEditPart)
 					.getMATypesForTarget(relationshipType);
 		}
-		if (sourceEditPart instanceof FactEditPart) {
-			return ((FactEditPart) sourceEditPart)
-					.getMATypesForTarget(relationshipType);
-		}
-		if (sourceEditPart instanceof Fact2EditPart) {
-			return ((Fact2EditPart) sourceEditPart)
-					.getMATypesForTarget(relationshipType);
-		}
 		if (sourceEditPart instanceof Argument2EditPart) {
 			return ((Argument2EditPart) sourceEditPart)
+					.getMATypesForTarget(relationshipType);
+		}
+		if (sourceEditPart instanceof Argument3EditPart) {
+			return ((Argument3EditPart) sourceEditPart)
 					.getMATypesForTarget(relationshipType);
 		}
 		return Collections.EMPTY_LIST;

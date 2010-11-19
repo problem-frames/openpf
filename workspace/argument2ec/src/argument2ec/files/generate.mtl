@@ -1,28 +1,35 @@
 [comment encoding = UTF-8 /]
 [module generate('http://www.ac.uk/open/argument/Argument')/]
-
+[comment]
+The transformation will generate one EC knowledge base per round of argumentation.
+[/comment]
 [template public generate(d: ArgumentDiagram) post (trim())]
-[file (d.name.toString().concat('.e'), false)]
-;load foundations/Root.e
+[for (i: Integer | Sequence{1, 2})]
+[file (d.name.toString().concat(''+i).concat('.e'), false)]
 sort boolean
 sort integer
 sort fluent
 sort time: integer
 range time 1 2
-
-; The following propositions are genenerated from the id of facts and arguments
-[for (n: Node | d.nodes) ]
-boolean [n.name/]
-[n.name/].
-[/for]	
-
-; Define these facts and arguments by the expressions
+[let e : Integer = i]
 [for (a: Argument | d.nodes) ]
-  [for (f: Fact | a.eAllContents(Fact))]
+  [if (a.round < e)]
+boolean [a.name/]
+  [for (f: Argument | a.eAllContents(Argument))]
 boolean [f.name/]
-[f.name/] <-> ([f.expr/]).
   [/for]
+  [if (a.round = 0)]
+![a.name/].
+  [/if] 
+[for (f:Argument | a.eAllContents(Argument))]
+[for (g:Argument | d.eAllContents(Argument))]
+[if (f = g.origin and g.round < e)];[/if]
 [/for]
-[/file]
-	
+[if (f.expr = null)][f.name/][else][f.expr/][/if].
+[/for]
+  [/if]
+[/for]	
+[/let]
+[/file]	
+[/for]
 [/template]

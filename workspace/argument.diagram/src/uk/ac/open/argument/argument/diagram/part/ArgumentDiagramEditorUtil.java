@@ -217,6 +217,7 @@ public class ArgumentDiagramEditorUtil extends ImageDiagramUtil {
 		}
 		setCharset(WorkspaceSynchronizer.getFile(modelResource));
 		setCharset(WorkspaceSynchronizer.getFile(diagramResource));
+		// this line is new, inherited from ImageDiagramUtil
 		saveDiagramToImages(diagramResource, modelResource);
 		return diagramResource;
 	}
@@ -232,9 +233,9 @@ public class ArgumentDiagramEditorUtil extends ImageDiagramUtil {
 	}
 
 	/**
-	 * Store model element in the resource.
-	 * <!-- begin-user-doc --> <!--
+	 * Store model element in the resource. <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	private static void attachModelToResource(ArgumentDiagram model,
@@ -286,7 +287,8 @@ public class ArgumentDiagramEditorUtil extends ImageDiagramUtil {
 		@SuppressWarnings("unchecked")
 		List<EditPart> associatedParts = viewer.findEditPartsForElement(
 				elementID, IGraphicalEditPart.class);
-		// perform the possible hierarchy disjoint -> take the top-most parts only
+		// perform the possible hierarchy disjoint -> take the top-most parts
+		// only
 		for (EditPart nextPart : associatedParts) {
 			EditPart parentPart = nextPart.getParent();
 			while (parentPart != null && !associatedParts.contains(parentPart)) {
@@ -372,12 +374,16 @@ public class ArgumentDiagramEditorUtil extends ImageDiagramUtil {
 		public final Map<EObject, View> getElement2ViewMap() {
 			if (element2ViewMap == null) {
 				element2ViewMap = new HashMap<EObject, View>();
-				// map possible notation elements to itself as these can't be found by view.getElement()
+				// map possible notation elements to itself as these can't be
+				// found by view.getElement()
 				for (EObject element : elementSet) {
 					if (element instanceof View) {
 						View view = (View) element;
 						if (view.getDiagram() == scope.getDiagram()) {
-							element2ViewMap.put(element, view); // take only those that part of our diagram
+							element2ViewMap.put(element, view); // take only
+																// those that
+																// part of our
+																// diagram
 						}
 					}
 				}

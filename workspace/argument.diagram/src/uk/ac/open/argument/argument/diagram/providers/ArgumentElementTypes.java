@@ -18,11 +18,10 @@ import org.eclipse.swt.graphics.Image;
 
 import uk.ac.open.argument.argument.ArgumentPackage;
 import uk.ac.open.argument.argument.diagram.edit.parts.Argument2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.Argument3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDiagramEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentEditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.Fact2EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.FactEditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.FactOriginEditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentOriginEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.RebutsEditPart;
 import uk.ac.open.argument.argument.diagram.part.ArgumentDiagramEditorPlugin;
@@ -64,30 +63,23 @@ public class ArgumentElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType Fact_2002 = getElementType("argument.diagram.Fact_2002"); //$NON-NLS-1$
-	/**
-	 * @generated
-	 */
-	public static final IElementType Fact_3001 = getElementType("argument.diagram.Fact_3001"); //$NON-NLS-1$
+	public static final IElementType Argument_3001 = getElementType("argument.diagram.Argument_3001"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
 	public static final IElementType Argument_3002 = getElementType("argument.diagram.Argument_3002"); //$NON-NLS-1$
-
 	/**
 	 * @generated
 	 */
 	public static final IElementType Rebuts_4001 = getElementType("argument.diagram.Rebuts_4001"); //$NON-NLS-1$
-
 	/**
 	 * @generated
 	 */
 	public static final IElementType Mitigates_4002 = getElementType("argument.diagram.Mitigates_4002"); //$NON-NLS-1$
-
 	/**
 	 * @generated
 	 */
-	public static final IElementType FactOrigin_4003 = getElementType("argument.diagram.FactOrigin_4003"); //$NON-NLS-1$
+	public static final IElementType ArgumentOrigin_4003 = getElementType("argument.diagram.ArgumentOrigin_4003"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -205,9 +197,7 @@ public class ArgumentElementTypes {
 
 			elements.put(Argument_2001, ArgumentPackage.eINSTANCE.getArgument());
 
-			elements.put(Fact_2002, ArgumentPackage.eINSTANCE.getFact());
-
-			elements.put(Fact_3001, ArgumentPackage.eINSTANCE.getFact());
+			elements.put(Argument_3001, ArgumentPackage.eINSTANCE.getArgument());
 
 			elements.put(Argument_3002, ArgumentPackage.eINSTANCE.getArgument());
 
@@ -216,8 +206,8 @@ public class ArgumentElementTypes {
 			elements.put(Mitigates_4002,
 					ArgumentPackage.eINSTANCE.getMitigates());
 
-			elements.put(FactOrigin_4003,
-					ArgumentPackage.eINSTANCE.getFact_Origin());
+			elements.put(ArgumentOrigin_4003,
+					ArgumentPackage.eINSTANCE.getArgument_Origin());
 		}
 		return (ENamedElement) elements.get(type);
 	}
@@ -237,12 +227,11 @@ public class ArgumentElementTypes {
 			KNOWN_ELEMENT_TYPES = new HashSet<IElementType>();
 			KNOWN_ELEMENT_TYPES.add(ArgumentDiagram_1000);
 			KNOWN_ELEMENT_TYPES.add(Argument_2001);
-			KNOWN_ELEMENT_TYPES.add(Fact_2002);
-			KNOWN_ELEMENT_TYPES.add(Fact_3001);
+			KNOWN_ELEMENT_TYPES.add(Argument_3001);
 			KNOWN_ELEMENT_TYPES.add(Argument_3002);
 			KNOWN_ELEMENT_TYPES.add(Rebuts_4001);
 			KNOWN_ELEMENT_TYPES.add(Mitigates_4002);
-			KNOWN_ELEMENT_TYPES.add(FactOrigin_4003);
+			KNOWN_ELEMENT_TYPES.add(ArgumentOrigin_4003);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -256,18 +245,16 @@ public class ArgumentElementTypes {
 			return ArgumentDiagram_1000;
 		case ArgumentEditPart.VISUAL_ID:
 			return Argument_2001;
-		case FactEditPart.VISUAL_ID:
-			return Fact_2002;
-		case Fact2EditPart.VISUAL_ID:
-			return Fact_3001;
 		case Argument2EditPart.VISUAL_ID:
+			return Argument_3001;
+		case Argument3EditPart.VISUAL_ID:
 			return Argument_3002;
 		case RebutsEditPart.VISUAL_ID:
 			return Rebuts_4001;
 		case MitigatesEditPart.VISUAL_ID:
 			return Mitigates_4002;
-		case FactOriginEditPart.VISUAL_ID:
-			return FactOrigin_4003;
+		case ArgumentOriginEditPart.VISUAL_ID:
+			return ArgumentOrigin_4003;
 		}
 		return null;
 	}

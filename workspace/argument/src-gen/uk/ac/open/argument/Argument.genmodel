@@ -9,22 +9,21 @@
       ecorePackage="Argument.ecore#/">
     <genClasses ecoreClass="Argument.ecore#//ArgumentDiagram">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//ArgumentDiagram/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Argument.ecore#//ArgumentDiagram/highlight"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//ArgumentDiagram/nodes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//ArgumentDiagram/links"/>
     </genClasses>
-    <genClasses ecoreClass="Argument.ecore#//Node">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Node/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Node/description"/>
-    </genClasses>
     <genClasses ecoreClass="Argument.ecore#//Argument">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Argument/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Argument/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Argument/round"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Argument/expr"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Argument.ecore#//Argument/origin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Argument/foreground"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Argument/background"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Argument/shape"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Argument/image"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//Argument/grounds"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Argument.ecore#//Argument/warrants"/>
-    </genClasses>
-    <genClasses ecoreClass="Argument.ecore#//Fact">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Argument.ecore#//Fact/expr"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Argument.ecore#//Fact/origin"/>
     </genClasses>
     <genClasses ecoreClass="Argument.ecore#//Link">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Argument.ecore#//Link/from"/>

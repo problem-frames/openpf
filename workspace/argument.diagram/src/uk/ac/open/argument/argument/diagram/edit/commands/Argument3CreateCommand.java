@@ -14,17 +14,16 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import uk.ac.open.argument.argument.Argument;
 import uk.ac.open.argument.argument.ArgumentFactory;
-import uk.ac.open.argument.argument.Fact;
 
 /**
  * @generated
  */
-public class Fact2CreateCommand extends EditElementCommand {
+public class Argument3CreateCommand extends EditElementCommand {
 
 	/**
 	 * @generated
 	 */
-	public Fact2CreateCommand(CreateElementRequest req) {
+	public Argument3CreateCommand(CreateElementRequest req) {
 		super(req.getLabel(), null, req);
 	}
 
@@ -54,10 +53,10 @@ public class Fact2CreateCommand extends EditElementCommand {
 	 */
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor,
 			IAdaptable info) throws ExecutionException {
-		Fact newElement = ArgumentFactory.eINSTANCE.createFact();
+		Argument newElement = ArgumentFactory.eINSTANCE.createArgument();
 
 		Argument owner = (Argument) getElementToEdit();
-		owner.getGrounds().add(newElement);
+		owner.getWarrants().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 
@@ -68,7 +67,7 @@ public class Fact2CreateCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	protected void doConfigure(Fact newElement, IProgressMonitor monitor,
+	protected void doConfigure(Argument newElement, IProgressMonitor monitor,
 			IAdaptable info) throws ExecutionException {
 		IElementType elementType = ((CreateElementRequest) getRequest())
 				.getElementType();

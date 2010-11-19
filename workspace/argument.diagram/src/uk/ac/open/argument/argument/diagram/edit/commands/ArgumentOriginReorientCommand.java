@@ -9,14 +9,13 @@ import org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelationshipRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest;
 
-import uk.ac.open.argument.argument.Fact;
-import uk.ac.open.argument.argument.Node;
+import uk.ac.open.argument.argument.Argument;
 import uk.ac.open.argument.argument.diagram.edit.policies.ArgumentBaseItemSemanticEditPolicy;
 
 /**
  * @generated
  */
-public class FactOriginReorientCommand extends EditElementCommand {
+public class ArgumentOriginReorientCommand extends EditElementCommand {
 
 	/**
 	 * @generated
@@ -41,7 +40,7 @@ public class FactOriginReorientCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	public FactOriginReorientCommand(
+	public ArgumentOriginReorientCommand(
 			ReorientReferenceRelationshipRequest request) {
 		super(request.getLabel(), null, request);
 		reorientDirection = request.getDirection();
@@ -54,7 +53,7 @@ public class FactOriginReorientCommand extends EditElementCommand {
 	 * @generated
 	 */
 	public boolean canExecute() {
-		if (false == referenceOwner instanceof Fact) {
+		if (false == referenceOwner instanceof Argument) {
 			return false;
 		}
 		if (reorientDirection == ReorientRelationshipRequest.REORIENT_SOURCE) {
@@ -70,22 +69,22 @@ public class FactOriginReorientCommand extends EditElementCommand {
 	 * @generated
 	 */
 	protected boolean canReorientSource() {
-		if (!(oldEnd instanceof Node && newEnd instanceof Fact)) {
+		if (!(oldEnd instanceof Argument && newEnd instanceof Argument)) {
 			return false;
 		}
 		return ArgumentBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistFactOrigin_4003(getNewSource(), getOldTarget());
+				.canExistArgumentOrigin_4003(getNewSource(), getOldTarget());
 	}
 
 	/**
 	 * @generated
 	 */
 	protected boolean canReorientTarget() {
-		if (!(oldEnd instanceof Node && newEnd instanceof Node)) {
+		if (!(oldEnd instanceof Argument && newEnd instanceof Argument)) {
 			return false;
 		}
 		return ArgumentBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistFactOrigin_4003(getOldSource(), getNewTarget());
+				.canExistArgumentOrigin_4003(getOldSource(), getNewTarget());
 	}
 
 	/**
@@ -126,28 +125,28 @@ public class FactOriginReorientCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	protected Fact getOldSource() {
-		return (Fact) referenceOwner;
+	protected Argument getOldSource() {
+		return (Argument) referenceOwner;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected Fact getNewSource() {
-		return (Fact) newEnd;
+	protected Argument getNewSource() {
+		return (Argument) newEnd;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected Node getOldTarget() {
-		return (Node) oldEnd;
+	protected Argument getOldTarget() {
+		return (Argument) oldEnd;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected Node getNewTarget() {
-		return (Node) newEnd;
+	protected Argument getNewTarget() {
+		return (Argument) newEnd;
 	}
 }

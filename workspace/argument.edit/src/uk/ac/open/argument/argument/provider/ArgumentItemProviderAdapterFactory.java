@@ -99,29 +99,6 @@ public class ArgumentItemProviderAdapterFactory extends ArgumentAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link uk.ac.open.argument.argument.Node} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected NodeItemProvider nodeItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link uk.ac.open.argument.argument.Node}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNodeAdapter() {
-		if (nodeItemProvider == null) {
-			nodeItemProvider = new NodeItemProvider(this);
-		}
-
-		return nodeItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link uk.ac.open.argument.argument.Argument} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -142,29 +119,6 @@ public class ArgumentItemProviderAdapterFactory extends ArgumentAdapterFactory i
 		}
 
 		return argumentItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link uk.ac.open.argument.argument.Fact} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FactItemProvider factItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link uk.ac.open.argument.argument.Fact}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFactAdapter() {
-		if (factItemProvider == null) {
-			factItemProvider = new FactItemProvider(this);
-		}
-
-		return factItemProvider;
 	}
 
 	/**
@@ -336,9 +290,7 @@ public class ArgumentItemProviderAdapterFactory extends ArgumentAdapterFactory i
 	 */
 	public void dispose() {
 		if (argumentDiagramItemProvider != null) argumentDiagramItemProvider.dispose();
-		if (nodeItemProvider != null) nodeItemProvider.dispose();
 		if (argumentItemProvider != null) argumentItemProvider.dispose();
-		if (factItemProvider != null) factItemProvider.dispose();
 		if (linkItemProvider != null) linkItemProvider.dispose();
 		if (rebutsItemProvider != null) rebutsItemProvider.dispose();
 		if (mitigatesItemProvider != null) mitigatesItemProvider.dispose();

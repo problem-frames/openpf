@@ -35,15 +35,6 @@ public interface ArgumentFactory extends EFactory
   ArgumentDiagram createArgumentDiagram();
 
   /**
-   * Returns a new object of class '<em>Node</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Node</em>'.
-   * @generated
-   */
-  Node createNode();
-
-  /**
    * Returns a new object of class '<em>Argument</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -51,15 +42,6 @@ public interface ArgumentFactory extends EFactory
    * @generated
    */
   Argument createArgument();
-
-  /**
-   * Returns a new object of class '<em>Fact</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Fact</em>'.
-   * @generated
-   */
-  Fact createFact();
 
   /**
    * Returns a new object of class '<em>Link</em>'.

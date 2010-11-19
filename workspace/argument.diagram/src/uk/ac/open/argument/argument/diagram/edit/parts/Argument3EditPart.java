@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.GridData;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;
@@ -29,26 +28,23 @@ import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
-import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.swt.graphics.Color;
 
 import uk.ac.open.argument.argument.Argument;
-import uk.ac.open.argument.argument.diagram.edit.policies.ArgumentItemSemanticEditPolicy;
+import uk.ac.open.argument.argument.diagram.edit.policies.Argument3ItemSemanticEditPolicy;
 import uk.ac.open.argument.argument.diagram.edit.policies.OpenDiagramEditPolicy;
 import uk.ac.open.argument.argument.diagram.part.ArgumentVisualIDRegistry;
 import uk.ac.open.argument.argument.diagram.providers.ArgumentElementTypes;
-import uk.ac.open.problem.Node;
-import uk.ac.open.problem.diagram.part.ProblemDiagramEditorPlugin;
 
 /**
  * @generated
  */
-public class ArgumentEditPart extends ShapeNodeEditPart {
+public class Argument3EditPart extends ShapeNodeEditPart {
 
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2001;
+	public static final int VISUAL_ID = 3002;
 
 	/**
 	 * @generated
@@ -63,7 +59,7 @@ public class ArgumentEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated NOT
 	 */
-	public ArgumentEditPart(View view) {
+	public Argument3EditPart(View view) {
 		super(view);
 		node = (Argument) view.getElement();
 	}
@@ -74,12 +70,11 @@ public class ArgumentEditPart extends ShapeNodeEditPart {
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new ArgumentItemSemanticEditPolicy());
+				new Argument3ItemSemanticEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
 		installEditPolicy(EditPolicyRoles.OPEN_ROLE,
 				new OpenDiagramEditPolicy());
-		// XXX need an SCR to runtime to have another abstract superclass that
-		// would let children add reasonable editpolicies
+		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
 	}
 
@@ -110,7 +105,6 @@ public class ArgumentEditPart extends ShapeNodeEditPart {
 	}
 
 	Argument node;
-
 	/**
 	 * @generated NOT
 	 */
@@ -129,26 +123,24 @@ public class ArgumentEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof ArgumentNameDescriptionRoundExpEditPart) {
-			((ArgumentNameDescriptionRoundExpEditPart) childEditPart)
+		if (childEditPart instanceof ArgumentNameDescriptionRoundExp3EditPart) {
+			((ArgumentNameDescriptionRoundExp3EditPart) childEditPart)
 					.setLabel(getPrimaryShape().getFigureArgumentLabelFigure());
 			return true;
 		}
-		if (childEditPart instanceof ArgumentArgumentGroundsCompartmentEditPart) {
+		if (childEditPart instanceof ArgumentArgumentGroundsCompartment3EditPart) {
 			IFigure pane = getPrimaryShape()
 					.getArgumentGroundsCompartmentFigure();
-			setupContentPane(pane); // FIXME each comparment should handle his
-									// content pane in his own way
-			pane.add(((ArgumentArgumentGroundsCompartmentEditPart) childEditPart)
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((ArgumentArgumentGroundsCompartment3EditPart) childEditPart)
 					.getFigure());
 			return true;
 		}
-		if (childEditPart instanceof ArgumentArgumentWarrantsCompartmentEditPart) {
+		if (childEditPart instanceof ArgumentArgumentWarrantsCompartment3EditPart) {
 			IFigure pane = getPrimaryShape()
 					.getArgumentWarrantsCompartmentFigure();
-			setupContentPane(pane); // FIXME each comparment should handle his
-									// content pane in his own way
-			pane.add(((ArgumentArgumentWarrantsCompartmentEditPart) childEditPart)
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((ArgumentArgumentWarrantsCompartment3EditPart) childEditPart)
 					.getFigure());
 			return true;
 		}
@@ -159,24 +151,22 @@ public class ArgumentEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof ArgumentNameDescriptionRoundExpEditPart) {
+		if (childEditPart instanceof ArgumentNameDescriptionRoundExp3EditPart) {
 			return true;
 		}
-		if (childEditPart instanceof ArgumentArgumentGroundsCompartmentEditPart) {
+		if (childEditPart instanceof ArgumentArgumentGroundsCompartment3EditPart) {
 			IFigure pane = getPrimaryShape()
 					.getArgumentGroundsCompartmentFigure();
-			setupContentPane(pane); // FIXME each comparment should handle his
-									// content pane in his own way
-			pane.remove(((ArgumentArgumentGroundsCompartmentEditPart) childEditPart)
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.remove(((ArgumentArgumentGroundsCompartment3EditPart) childEditPart)
 					.getFigure());
 			return true;
 		}
-		if (childEditPart instanceof ArgumentArgumentWarrantsCompartmentEditPart) {
+		if (childEditPart instanceof ArgumentArgumentWarrantsCompartment3EditPart) {
 			IFigure pane = getPrimaryShape()
 					.getArgumentWarrantsCompartmentFigure();
-			setupContentPane(pane); // FIXME each comparment should handle his
-									// content pane in his own way
-			pane.remove(((ArgumentArgumentWarrantsCompartmentEditPart) childEditPart)
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.remove(((ArgumentArgumentWarrantsCompartment3EditPart) childEditPart)
 					.getFigure());
 			return true;
 		}
@@ -207,10 +197,10 @@ public class ArgumentEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
-		if (editPart instanceof ArgumentArgumentGroundsCompartmentEditPart) {
+		if (editPart instanceof ArgumentArgumentGroundsCompartment3EditPart) {
 			return getPrimaryShape().getArgumentGroundsCompartmentFigure();
 		}
-		if (editPart instanceof ArgumentArgumentWarrantsCompartmentEditPart) {
+		if (editPart instanceof ArgumentArgumentWarrantsCompartment3EditPart) {
 			return getPrimaryShape().getArgumentWarrantsCompartmentFigure();
 		}
 		return getContentPane();
@@ -227,8 +217,8 @@ public class ArgumentEditPart extends ShapeNodeEditPart {
 	/**
 	 * Creates figure for this edit part.
 	 * 
-	 * Body of this method does not depend on settings in generation model so
-	 * you may safely remove <i>generated</i> tag and modify it.
+	 * Body of this method does not depend on settings in generation model
+	 * so you may safely remove <i>generated</i> tag and modify it.
 	 * 
 	 * @generated
 	 */
@@ -242,11 +232,9 @@ public class ArgumentEditPart extends ShapeNodeEditPart {
 	}
 
 	/**
-	 * Default implementation treats passed figure as content pane. Respects
-	 * layout one may have set for generated figure.
-	 * 
-	 * @param nodeShape
-	 *            instance of generated figure class
+	 * Default implementation treats passed figure as content pane.
+	 * Respects layout one may have set for generated figure.
+	 * @param nodeShape instance of generated figure class
 	 * @generated
 	 */
 	protected IFigure setupContentPane(IFigure nodeShape) {
@@ -309,7 +297,7 @@ public class ArgumentEditPart extends ShapeNodeEditPart {
 	 */
 	public EditPart getPrimaryChildEditPart() {
 		return getChildBySemanticHint(ArgumentVisualIDRegistry
-				.getType(ArgumentNameDescriptionRoundExpEditPart.VISUAL_ID));
+				.getType(ArgumentNameDescriptionRoundExp3EditPart.VISUAL_ID));
 	}
 
 	/**
@@ -329,31 +317,31 @@ public class ArgumentEditPart extends ShapeNodeEditPart {
 	public List<IElementType> getMARelTypesOnSourceAndTarget(
 			IGraphicalEditPart targetEditPart) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (targetEditPart instanceof uk.ac.open.argument.argument.diagram.edit.parts.ArgumentEditPart) {
+		if (targetEditPart instanceof ArgumentEditPart) {
 			types.add(ArgumentElementTypes.Rebuts_4001);
 		}
 		if (targetEditPart instanceof Argument2EditPart) {
 			types.add(ArgumentElementTypes.Rebuts_4001);
 		}
-		if (targetEditPart instanceof Argument3EditPart) {
+		if (targetEditPart instanceof uk.ac.open.argument.argument.diagram.edit.parts.Argument3EditPart) {
 			types.add(ArgumentElementTypes.Rebuts_4001);
 		}
-		if (targetEditPart instanceof uk.ac.open.argument.argument.diagram.edit.parts.ArgumentEditPart) {
+		if (targetEditPart instanceof ArgumentEditPart) {
 			types.add(ArgumentElementTypes.Mitigates_4002);
 		}
 		if (targetEditPart instanceof Argument2EditPart) {
 			types.add(ArgumentElementTypes.Mitigates_4002);
 		}
-		if (targetEditPart instanceof Argument3EditPart) {
+		if (targetEditPart instanceof uk.ac.open.argument.argument.diagram.edit.parts.Argument3EditPart) {
 			types.add(ArgumentElementTypes.Mitigates_4002);
 		}
-		if (targetEditPart instanceof uk.ac.open.argument.argument.diagram.edit.parts.ArgumentEditPart) {
+		if (targetEditPart instanceof ArgumentEditPart) {
 			types.add(ArgumentElementTypes.ArgumentOrigin_4003);
 		}
 		if (targetEditPart instanceof Argument2EditPart) {
 			types.add(ArgumentElementTypes.ArgumentOrigin_4003);
 		}
-		if (targetEditPart instanceof Argument3EditPart) {
+		if (targetEditPart instanceof uk.ac.open.argument.argument.diagram.edit.parts.Argument3EditPart) {
 			types.add(ArgumentElementTypes.ArgumentOrigin_4003);
 		}
 		return types;
@@ -430,11 +418,8 @@ public class ArgumentEditPart extends ShapeNodeEditPart {
 		 */
 		private RectangleFigure fArgumentWarrantsCompartmentFigure;
 
-		Argument node;
-
 		/**
-		 * @param node
-		 * @generated NOT
+		 * @generated
 		 */
 		public ArgumentFigure(Argument node) {
 			this.setCornerDimensions(new Dimension(getMapMode().DPtoLP(8),
@@ -446,6 +431,7 @@ public class ArgumentEditPart extends ShapeNodeEditPart {
 			createContents();
 		}
 
+		Argument node;
 		/**
 		 * @generated NOT
 		 */
@@ -468,16 +454,18 @@ public class ArgumentEditPart extends ShapeNodeEditPart {
 
 			fArgumentGroundsCompartmentFigure = new RectangleFigure();
 			fArgumentGroundsCompartmentFigure.setOutline(false);
+
 			this.add(fArgumentGroundsCompartmentFigure);
+
 			fArgumentWarrantsCompartmentFigure = new RectangleFigure();
 			fArgumentWarrantsCompartmentFigure.setOutline(false);
+
 			this.add(fArgumentWarrantsCompartmentFigure);
-//			System.out.println(node.getGrounds().size()
-//					+ node.getWarrants().size());
 			if (node.getGrounds().size() + node.getWarrants().size() == 0) {
 				fArgumentGroundsCompartmentFigure.setVisible(false);
 				fArgumentWarrantsCompartmentFigure.setVisible(false);
 			}
+
 		}
 
 		/**

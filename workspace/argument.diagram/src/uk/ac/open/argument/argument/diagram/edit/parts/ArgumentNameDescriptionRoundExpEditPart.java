@@ -47,8 +47,8 @@ import uk.ac.open.argument.argument.diagram.providers.ArgumentParserProvider;
 /**
  * @generated
  */
-public class ArgumentDescriptionRoundEditPart extends CompartmentEditPart
-		implements ITextAwareEditPart {
+public class ArgumentNameDescriptionRoundExpEditPart extends
+		CompartmentEditPart implements ITextAwareEditPart {
 
 	/**
 	 * @generated
@@ -78,7 +78,7 @@ public class ArgumentDescriptionRoundEditPart extends CompartmentEditPart
 	/**
 	 * @generated
 	 */
-	public ArgumentDescriptionRoundEditPart(View view) {
+	public ArgumentNameDescriptionRoundExpEditPart(View view) {
 		super(view);
 	}
 
@@ -294,7 +294,7 @@ public class ArgumentDescriptionRoundEditPart extends CompartmentEditPart
 							ArgumentElementTypes.Argument_2001,
 							getParserElement(),
 							ArgumentVisualIDRegistry
-									.getType(uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDescriptionRoundEditPart.VISUAL_ID));
+									.getType(uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameDescriptionRoundExpEditPart.VISUAL_ID));
 		}
 		return parser;
 	}
@@ -500,7 +500,7 @@ public class ArgumentDescriptionRoundEditPart extends CompartmentEditPart
 	 * @generated
 	 */
 	private View getFontStyleOwnerView() {
-		return (View) getModel();
+		return getPrimaryView();
 	}
 
 	/**

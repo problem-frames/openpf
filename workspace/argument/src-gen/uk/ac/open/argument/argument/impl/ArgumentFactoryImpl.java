@@ -68,9 +68,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
     switch (eClass.getClassifierID())
     {
       case ArgumentPackage.ARGUMENT_DIAGRAM: return createArgumentDiagram();
-      case ArgumentPackage.NODE: return createNode();
       case ArgumentPackage.ARGUMENT: return createArgument();
-      case ArgumentPackage.FACT: return createFact();
       case ArgumentPackage.LINK: return createLink();
       case ArgumentPackage.REBUTS: return createRebuts();
       case ArgumentPackage.MITIGATES: return createMitigates();
@@ -95,32 +93,10 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Node createNode()
-  {
-    NodeImpl node = new NodeImpl();
-    return node;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public Argument createArgument()
   {
     ArgumentImpl argument = new ArgumentImpl();
     return argument;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Fact createFact()
-  {
-    FactImpl fact = new FactImpl();
-    return fact;
   }
 
   /**

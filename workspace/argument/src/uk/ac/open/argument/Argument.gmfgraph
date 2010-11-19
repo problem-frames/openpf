@@ -13,7 +13,7 @@
         name="MitigatesFigureTargetDecoration"/>
     <figures
         xsi:type="gmfgraph:PolylineDecoration"
-        name="FactOriginFigureTargetDecoration"/>
+        name="ArgumentOriginFigureTargetDecoration"/>
     <descriptors
         name="ArgumentFigure">
       <actualFigure
@@ -55,28 +55,6 @@
           figure="//@figures.0/@descriptors.0/@actualFigure/@children.2"/>
     </descriptors>
     <descriptors
-        name="FactFigure">
-      <actualFigure
-          xsi:type="gmfgraph:RoundedRectangle"
-          name="FactFigure">
-        <border
-            xsi:type="gmfgraph:MarginBorder">
-          <insets
-              top="5"
-              left="5"
-              bottom="5"
-              right="5"/>
-        </border>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="FactLabelFigure"
-            text="Fact"/>
-      </actualFigure>
-      <accessors
-          accessor="getFigureFactLabelFigure"
-          figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
-    </descriptors>
-    <descriptors
         name="RebutsFigure">
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
@@ -102,10 +80,10 @@
       </actualFigure>
     </descriptors>
     <descriptors
-        name="FactOriginFigure">
+        name="ArgumentOriginFigure">
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
-          name="FactOriginFigure"
+          name="ArgumentOriginFigure"
           lineWidth="2"
           lineKind="LINE_DASH"
           targetDecoration="//@figures.0/@figures.2">
@@ -115,18 +93,15 @@
       </actualFigure>
     </descriptors>
     <descriptors
-        name="FactOriginExternalLabelFigure">
+        name="ArgumentOriginExternalLabelFigure">
       <actualFigure
           xsi:type="gmfgraph:Label"
-          name="FactOriginExternalLabel"/>
+          name="ArgumentOriginExternalLabel"/>
     </descriptors>
   </figures>
   <nodes
       name="Argument"
       figure="ArgumentFigure"/>
-  <nodes
-      name="Fact"
-      figure="FactFigure"/>
   <connections
       name="Rebuts"
       figure="RebutsFigure"/>
@@ -134,8 +109,8 @@
       name="Mitigates"
       figure="MitigatesFigure"/>
   <connections
-      name="FactOrigin"
-      figure="FactOriginFigure"/>
+      name="ArgumentOrigin"
+      figure="ArgumentOriginFigure"/>
   <compartments
       name="ArgumentGroundsCompartment"
       figure="ArgumentFigure"
@@ -149,13 +124,10 @@
   <labels
       name="ArgumentLabel"
       figure="ArgumentFigure"
+      elementIcon="false"
       accessor="//@figures.0/@descriptors.0/@accessors.0"/>
   <labels
-      name="FactLabel"
-      figure="FactFigure"
-      accessor="//@figures.0/@descriptors.1/@accessors.0"/>
-  <labels
-      name="FactOriginExternalLabel"
-      figure="FactOriginExternalLabelFigure"
+      name="ArgumentOriginExternalLabel"
+      figure="ArgumentOriginExternalLabelFigure"
       elementIcon="false"/>
 </gmfgraph:Canvas>

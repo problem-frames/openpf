@@ -11,25 +11,25 @@ import org.eclipse.gmf.runtime.diagram.ui.figures.ResizableCompartmentFigure;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout;
 import org.eclipse.gmf.runtime.notation.View;
 
-import uk.ac.open.argument.argument.diagram.edit.policies.ArgumentArgumentGroundsCompartment2CanonicalEditPolicy;
-import uk.ac.open.argument.argument.diagram.edit.policies.ArgumentArgumentGroundsCompartment2ItemSemanticEditPolicy;
+import uk.ac.open.argument.argument.diagram.edit.policies.ArgumentArgumentWarrantsCompartment3CanonicalEditPolicy;
+import uk.ac.open.argument.argument.diagram.edit.policies.ArgumentArgumentWarrantsCompartment3ItemSemanticEditPolicy;
 import uk.ac.open.argument.argument.diagram.part.Messages;
 
 /**
  * @generated
  */
-public class ArgumentArgumentGroundsCompartment2EditPart extends
+public class ArgumentArgumentWarrantsCompartment3EditPart extends
 		ShapeCompartmentEditPart {
 
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 7003;
+	public static final int VISUAL_ID = 7006;
 
 	/**
 	 * @generated
 	 */
-	public ArgumentArgumentGroundsCompartment2EditPart(View view) {
+	public ArgumentArgumentWarrantsCompartment3EditPart(View view) {
 		super(view);
 	}
 
@@ -37,7 +37,7 @@ public class ArgumentArgumentGroundsCompartment2EditPart extends
 	 * @generated
 	 */
 	public String getCompartmentName() {
-		return Messages.ArgumentArgumentGroundsCompartment2EditPart_title;
+		return Messages.ArgumentArgumentWarrantsCompartment3EditPart_title;
 	}
 
 	/**
@@ -57,14 +57,15 @@ public class ArgumentArgumentGroundsCompartment2EditPart extends
 		super.createDefaultEditPolicies();
 		installEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE,
 				new ResizableCompartmentEditPolicy());
-		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new ArgumentArgumentGroundsCompartment2ItemSemanticEditPolicy());
+		installEditPolicy(
+				EditPolicyRoles.SEMANTIC_ROLE,
+				new ArgumentArgumentWarrantsCompartment3ItemSemanticEditPolicy());
 		installEditPolicy(EditPolicyRoles.CREATION_ROLE,
 				new CreationEditPolicy());
 		installEditPolicy(EditPolicyRoles.DRAG_DROP_ROLE,
 				new DragDropEditPolicy());
 		installEditPolicy(EditPolicyRoles.CANONICAL_ROLE,
-				new ArgumentArgumentGroundsCompartment2CanonicalEditPolicy());
+				new ArgumentArgumentWarrantsCompartment3CanonicalEditPolicy());
 	}
 
 	/**

@@ -8,14 +8,13 @@ import org.eclipse.gmf.runtime.common.core.command.CommandResult;
 import org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest;
 
-import uk.ac.open.argument.argument.Fact;
-import uk.ac.open.argument.argument.Node;
+import uk.ac.open.argument.argument.Argument;
 import uk.ac.open.argument.argument.diagram.edit.policies.ArgumentBaseItemSemanticEditPolicy;
 
 /**
  * @generated
  */
-public class FactOriginCreateCommand extends EditElementCommand {
+public class ArgumentOriginCreateCommand extends EditElementCommand {
 
 	/**
 	 * @generated
@@ -30,7 +29,7 @@ public class FactOriginCreateCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	public FactOriginCreateCommand(CreateRelationshipRequest request,
+	public ArgumentOriginCreateCommand(CreateRelationshipRequest request,
 			EObject source, EObject target) {
 		super(request.getLabel(), null, request);
 		this.source = source;
@@ -44,10 +43,10 @@ public class FactOriginCreateCommand extends EditElementCommand {
 		if (source == null && target == null) {
 			return false;
 		}
-		if (source != null && false == source instanceof Fact) {
+		if (source != null && false == source instanceof Argument) {
 			return false;
 		}
-		if (target != null && false == target instanceof Node) {
+		if (target != null && false == target instanceof Argument) {
 			return false;
 		}
 		if (getSource() == null) {
@@ -55,7 +54,7 @@ public class FactOriginCreateCommand extends EditElementCommand {
 		}
 		// target may be null here but it's possible to check constraint
 		return ArgumentBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canCreateFactOrigin_4003(getSource(), getTarget());
+				.canCreateArgumentOrigin_4003(getSource(), getTarget());
 	}
 
 	/**
@@ -85,14 +84,14 @@ public class FactOriginCreateCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	protected Fact getSource() {
-		return (Fact) source;
+	protected Argument getSource() {
+		return (Argument) source;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected Node getTarget() {
-		return (Node) target;
+	protected Argument getTarget() {
+		return (Argument) target;
 	}
 }

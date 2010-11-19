@@ -79,22 +79,13 @@ public interface ArgumentPackage extends EPackage
   int ARGUMENT_DIAGRAM__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Highlight</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ARGUMENT_DIAGRAM__HIGHLIGHT = 1;
-
-  /**
    * The feature id for the '<em><b>Nodes</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ARGUMENT_DIAGRAM__NODES = 2;
+  int ARGUMENT_DIAGRAM__NODES = 1;
 
   /**
    * The feature id for the '<em><b>Links</b></em>' containment reference list.
@@ -103,7 +94,7 @@ public interface ArgumentPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ARGUMENT_DIAGRAM__LINKS = 3;
+  int ARGUMENT_DIAGRAM__LINKS = 2;
 
   /**
    * The number of structural features of the '<em>Diagram</em>' class.
@@ -112,44 +103,7 @@ public interface ArgumentPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ARGUMENT_DIAGRAM_FEATURE_COUNT = 4;
-
-  /**
-   * The meta object id for the '{@link uk.ac.open.argument.argument.impl.NodeImpl <em>Node</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see uk.ac.open.argument.argument.impl.NodeImpl
-   * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getNode()
-   * @generated
-   */
-  int NODE = 1;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NODE__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NODE__DESCRIPTION = 1;
-
-  /**
-   * The number of structural features of the '<em>Node</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NODE_FEATURE_COUNT = 2;
+  int ARGUMENT_DIAGRAM_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link uk.ac.open.argument.argument.impl.ArgumentImpl <em>Argument</em>}' class.
@@ -159,7 +113,7 @@ public interface ArgumentPackage extends EPackage
    * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getArgument()
    * @generated
    */
-  int ARGUMENT = 2;
+  int ARGUMENT = 1;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -168,7 +122,7 @@ public interface ArgumentPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ARGUMENT__NAME = NODE__NAME;
+  int ARGUMENT__NAME = 0;
 
   /**
    * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -177,7 +131,7 @@ public interface ArgumentPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ARGUMENT__DESCRIPTION = NODE__DESCRIPTION;
+  int ARGUMENT__DESCRIPTION = 1;
 
   /**
    * The feature id for the '<em><b>Round</b></em>' attribute.
@@ -186,62 +140,7 @@ public interface ArgumentPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ARGUMENT__ROUND = NODE_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Grounds</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ARGUMENT__GROUNDS = NODE_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Warrants</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ARGUMENT__WARRANTS = NODE_FEATURE_COUNT + 2;
-
-  /**
-   * The number of structural features of the '<em>Argument</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ARGUMENT_FEATURE_COUNT = NODE_FEATURE_COUNT + 3;
-
-  /**
-   * The meta object id for the '{@link uk.ac.open.argument.argument.impl.FactImpl <em>Fact</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see uk.ac.open.argument.argument.impl.FactImpl
-   * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getFact()
-   * @generated
-   */
-  int FACT = 3;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FACT__NAME = NODE__NAME;
-
-  /**
-   * The feature id for the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FACT__DESCRIPTION = NODE__DESCRIPTION;
+  int ARGUMENT__ROUND = 2;
 
   /**
    * The feature id for the '<em><b>Expr</b></em>' attribute.
@@ -250,7 +149,7 @@ public interface ArgumentPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FACT__EXPR = NODE_FEATURE_COUNT + 0;
+  int ARGUMENT__EXPR = 3;
 
   /**
    * The feature id for the '<em><b>Origin</b></em>' reference.
@@ -259,16 +158,70 @@ public interface ArgumentPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FACT__ORIGIN = NODE_FEATURE_COUNT + 1;
+  int ARGUMENT__ORIGIN = 4;
 
   /**
-   * The number of structural features of the '<em>Fact</em>' class.
+   * The feature id for the '<em><b>Foreground</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FACT_FEATURE_COUNT = NODE_FEATURE_COUNT + 2;
+  int ARGUMENT__FOREGROUND = 5;
+
+  /**
+   * The feature id for the '<em><b>Background</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARGUMENT__BACKGROUND = 6;
+
+  /**
+   * The feature id for the '<em><b>Shape</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARGUMENT__SHAPE = 7;
+
+  /**
+   * The feature id for the '<em><b>Image</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARGUMENT__IMAGE = 8;
+
+  /**
+   * The feature id for the '<em><b>Grounds</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARGUMENT__GROUNDS = 9;
+
+  /**
+   * The feature id for the '<em><b>Warrants</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARGUMENT__WARRANTS = 10;
+
+  /**
+   * The number of structural features of the '<em>Argument</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARGUMENT_FEATURE_COUNT = 11;
 
   /**
    * The meta object id for the '{@link uk.ac.open.argument.argument.impl.LinkImpl <em>Link</em>}' class.
@@ -278,7 +231,7 @@ public interface ArgumentPackage extends EPackage
    * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getLink()
    * @generated
    */
-  int LINK = 4;
+  int LINK = 2;
 
   /**
    * The feature id for the '<em><b>From</b></em>' reference.
@@ -315,7 +268,7 @@ public interface ArgumentPackage extends EPackage
    * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getRebuts()
    * @generated
    */
-  int REBUTS = 5;
+  int REBUTS = 3;
 
   /**
    * The feature id for the '<em><b>From</b></em>' reference.
@@ -352,7 +305,7 @@ public interface ArgumentPackage extends EPackage
    * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getMitigates()
    * @generated
    */
-  int MITIGATES = 6;
+  int MITIGATES = 4;
 
   /**
    * The feature id for the '<em><b>From</b></em>' reference.
@@ -404,17 +357,6 @@ public interface ArgumentPackage extends EPackage
   EAttribute getArgumentDiagram_Name();
 
   /**
-   * Returns the meta object for the reference '{@link uk.ac.open.argument.argument.ArgumentDiagram#getHighlight <em>Highlight</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Highlight</em>'.
-   * @see uk.ac.open.argument.argument.ArgumentDiagram#getHighlight()
-   * @see #getArgumentDiagram()
-   * @generated
-   */
-  EReference getArgumentDiagram_Highlight();
-
-  /**
    * Returns the meta object for the containment reference list '{@link uk.ac.open.argument.argument.ArgumentDiagram#getNodes <em>Nodes</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -437,38 +379,6 @@ public interface ArgumentPackage extends EPackage
   EReference getArgumentDiagram_Links();
 
   /**
-   * Returns the meta object for class '{@link uk.ac.open.argument.argument.Node <em>Node</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Node</em>'.
-   * @see uk.ac.open.argument.argument.Node
-   * @generated
-   */
-  EClass getNode();
-
-  /**
-   * Returns the meta object for the attribute '{@link uk.ac.open.argument.argument.Node#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see uk.ac.open.argument.argument.Node#getName()
-   * @see #getNode()
-   * @generated
-   */
-  EAttribute getNode_Name();
-
-  /**
-   * Returns the meta object for the attribute '{@link uk.ac.open.argument.argument.Node#getDescription <em>Description</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Description</em>'.
-   * @see uk.ac.open.argument.argument.Node#getDescription()
-   * @see #getNode()
-   * @generated
-   */
-  EAttribute getNode_Description();
-
-  /**
    * Returns the meta object for class '{@link uk.ac.open.argument.argument.Argument <em>Argument</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -477,6 +387,28 @@ public interface ArgumentPackage extends EPackage
    * @generated
    */
   EClass getArgument();
+
+  /**
+   * Returns the meta object for the attribute '{@link uk.ac.open.argument.argument.Argument#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see uk.ac.open.argument.argument.Argument#getName()
+   * @see #getArgument()
+   * @generated
+   */
+  EAttribute getArgument_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link uk.ac.open.argument.argument.Argument#getDescription <em>Description</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Description</em>'.
+   * @see uk.ac.open.argument.argument.Argument#getDescription()
+   * @see #getArgument()
+   * @generated
+   */
+  EAttribute getArgument_Description();
 
   /**
    * Returns the meta object for the attribute '{@link uk.ac.open.argument.argument.Argument#getRound <em>Round</em>}'.
@@ -488,6 +420,72 @@ public interface ArgumentPackage extends EPackage
    * @generated
    */
   EAttribute getArgument_Round();
+
+  /**
+   * Returns the meta object for the attribute '{@link uk.ac.open.argument.argument.Argument#getExpr <em>Expr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Expr</em>'.
+   * @see uk.ac.open.argument.argument.Argument#getExpr()
+   * @see #getArgument()
+   * @generated
+   */
+  EAttribute getArgument_Expr();
+
+  /**
+   * Returns the meta object for the reference '{@link uk.ac.open.argument.argument.Argument#getOrigin <em>Origin</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Origin</em>'.
+   * @see uk.ac.open.argument.argument.Argument#getOrigin()
+   * @see #getArgument()
+   * @generated
+   */
+  EReference getArgument_Origin();
+
+  /**
+   * Returns the meta object for the attribute '{@link uk.ac.open.argument.argument.Argument#getForeground <em>Foreground</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Foreground</em>'.
+   * @see uk.ac.open.argument.argument.Argument#getForeground()
+   * @see #getArgument()
+   * @generated
+   */
+  EAttribute getArgument_Foreground();
+
+  /**
+   * Returns the meta object for the attribute '{@link uk.ac.open.argument.argument.Argument#getBackground <em>Background</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Background</em>'.
+   * @see uk.ac.open.argument.argument.Argument#getBackground()
+   * @see #getArgument()
+   * @generated
+   */
+  EAttribute getArgument_Background();
+
+  /**
+   * Returns the meta object for the attribute '{@link uk.ac.open.argument.argument.Argument#getShape <em>Shape</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Shape</em>'.
+   * @see uk.ac.open.argument.argument.Argument#getShape()
+   * @see #getArgument()
+   * @generated
+   */
+  EAttribute getArgument_Shape();
+
+  /**
+   * Returns the meta object for the attribute '{@link uk.ac.open.argument.argument.Argument#getImage <em>Image</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Image</em>'.
+   * @see uk.ac.open.argument.argument.Argument#getImage()
+   * @see #getArgument()
+   * @generated
+   */
+  EAttribute getArgument_Image();
 
   /**
    * Returns the meta object for the containment reference list '{@link uk.ac.open.argument.argument.Argument#getGrounds <em>Grounds</em>}'.
@@ -510,38 +508,6 @@ public interface ArgumentPackage extends EPackage
    * @generated
    */
   EReference getArgument_Warrants();
-
-  /**
-   * Returns the meta object for class '{@link uk.ac.open.argument.argument.Fact <em>Fact</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Fact</em>'.
-   * @see uk.ac.open.argument.argument.Fact
-   * @generated
-   */
-  EClass getFact();
-
-  /**
-   * Returns the meta object for the attribute '{@link uk.ac.open.argument.argument.Fact#getExpr <em>Expr</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Expr</em>'.
-   * @see uk.ac.open.argument.argument.Fact#getExpr()
-   * @see #getFact()
-   * @generated
-   */
-  EAttribute getFact_Expr();
-
-  /**
-   * Returns the meta object for the reference '{@link uk.ac.open.argument.argument.Fact#getOrigin <em>Origin</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Origin</em>'.
-   * @see uk.ac.open.argument.argument.Fact#getOrigin()
-   * @see #getFact()
-   * @generated
-   */
-  EReference getFact_Origin();
 
   /**
    * Returns the meta object for class '{@link uk.ac.open.argument.argument.Link <em>Link</em>}'.
@@ -637,14 +603,6 @@ public interface ArgumentPackage extends EPackage
     EAttribute ARGUMENT_DIAGRAM__NAME = eINSTANCE.getArgumentDiagram_Name();
 
     /**
-     * The meta object literal for the '<em><b>Highlight</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference ARGUMENT_DIAGRAM__HIGHLIGHT = eINSTANCE.getArgumentDiagram_Highlight();
-
-    /**
      * The meta object literal for the '<em><b>Nodes</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -661,32 +619,6 @@ public interface ArgumentPackage extends EPackage
     EReference ARGUMENT_DIAGRAM__LINKS = eINSTANCE.getArgumentDiagram_Links();
 
     /**
-     * The meta object literal for the '{@link uk.ac.open.argument.argument.impl.NodeImpl <em>Node</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see uk.ac.open.argument.argument.impl.NodeImpl
-     * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getNode()
-     * @generated
-     */
-    EClass NODE = eINSTANCE.getNode();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute NODE__NAME = eINSTANCE.getNode_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute NODE__DESCRIPTION = eINSTANCE.getNode_Description();
-
-    /**
      * The meta object literal for the '{@link uk.ac.open.argument.argument.impl.ArgumentImpl <em>Argument</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -697,12 +629,76 @@ public interface ArgumentPackage extends EPackage
     EClass ARGUMENT = eINSTANCE.getArgument();
 
     /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ARGUMENT__NAME = eINSTANCE.getArgument_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ARGUMENT__DESCRIPTION = eINSTANCE.getArgument_Description();
+
+    /**
      * The meta object literal for the '<em><b>Round</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EAttribute ARGUMENT__ROUND = eINSTANCE.getArgument_Round();
+
+    /**
+     * The meta object literal for the '<em><b>Expr</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ARGUMENT__EXPR = eINSTANCE.getArgument_Expr();
+
+    /**
+     * The meta object literal for the '<em><b>Origin</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ARGUMENT__ORIGIN = eINSTANCE.getArgument_Origin();
+
+    /**
+     * The meta object literal for the '<em><b>Foreground</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ARGUMENT__FOREGROUND = eINSTANCE.getArgument_Foreground();
+
+    /**
+     * The meta object literal for the '<em><b>Background</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ARGUMENT__BACKGROUND = eINSTANCE.getArgument_Background();
+
+    /**
+     * The meta object literal for the '<em><b>Shape</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ARGUMENT__SHAPE = eINSTANCE.getArgument_Shape();
+
+    /**
+     * The meta object literal for the '<em><b>Image</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ARGUMENT__IMAGE = eINSTANCE.getArgument_Image();
 
     /**
      * The meta object literal for the '<em><b>Grounds</b></em>' containment reference list feature.
@@ -719,32 +715,6 @@ public interface ArgumentPackage extends EPackage
      * @generated
      */
     EReference ARGUMENT__WARRANTS = eINSTANCE.getArgument_Warrants();
-
-    /**
-     * The meta object literal for the '{@link uk.ac.open.argument.argument.impl.FactImpl <em>Fact</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see uk.ac.open.argument.argument.impl.FactImpl
-     * @see uk.ac.open.argument.argument.impl.ArgumentPackageImpl#getFact()
-     * @generated
-     */
-    EClass FACT = eINSTANCE.getFact();
-
-    /**
-     * The meta object literal for the '<em><b>Expr</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute FACT__EXPR = eINSTANCE.getFact_Expr();
-
-    /**
-     * The meta object literal for the '<em><b>Origin</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference FACT__ORIGIN = eINSTANCE.getFact_Origin();
 
     /**
      * The meta object literal for the '{@link uk.ac.open.argument.argument.impl.LinkImpl <em>Link</em>}' class.

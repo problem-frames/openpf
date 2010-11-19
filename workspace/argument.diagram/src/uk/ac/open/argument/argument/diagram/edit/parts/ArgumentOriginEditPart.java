@@ -11,12 +11,12 @@ import org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
-import uk.ac.open.argument.argument.diagram.edit.policies.FactOriginItemSemanticEditPolicy;
+import uk.ac.open.argument.argument.diagram.edit.policies.ArgumentOriginItemSemanticEditPolicy;
 
 /**
  * @generated
  */
-public class FactOriginEditPart extends ConnectionNodeEditPart implements
+public class ArgumentOriginEditPart extends ConnectionNodeEditPart implements
 		ITreeBranchEditPart {
 
 	/**
@@ -27,7 +27,7 @@ public class FactOriginEditPart extends ConnectionNodeEditPart implements
 	/**
 	 * @generated
 	 */
-	public FactOriginEditPart(View view) {
+	public ArgumentOriginEditPart(View view) {
 		super(view);
 	}
 
@@ -37,7 +37,7 @@ public class FactOriginEditPart extends ConnectionNodeEditPart implements
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new FactOriginItemSemanticEditPolicy());
+				new ArgumentOriginItemSemanticEditPolicy());
 	}
 
 	/**
@@ -50,25 +50,25 @@ public class FactOriginEditPart extends ConnectionNodeEditPart implements
 	 */
 
 	protected Connection createConnectionFigure() {
-		return new FactOriginFigure();
+		return new ArgumentOriginFigure();
 	}
 
 	/**
 	 * @generated
 	 */
-	public FactOriginFigure getPrimaryShape() {
-		return (FactOriginFigure) getFigure();
+	public ArgumentOriginFigure getPrimaryShape() {
+		return (ArgumentOriginFigure) getFigure();
 	}
 
 	/**
 	 * @generated
 	 */
-	public class FactOriginFigure extends PolylineConnectionEx {
+	public class ArgumentOriginFigure extends PolylineConnectionEx {
 
 		/**
 		 * @generated
 		 */
-		public FactOriginFigure() {
+		public ArgumentOriginFigure() {
 			this.setLineWidth(2);
 			this.setLineStyle(Graphics.LINE_DASH);
 			this.setForegroundColor(THIS_FORE);

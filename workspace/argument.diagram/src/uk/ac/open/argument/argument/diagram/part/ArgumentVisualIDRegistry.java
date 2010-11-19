@@ -9,19 +9,19 @@ import org.eclipse.gmf.runtime.notation.View;
 import uk.ac.open.argument.argument.ArgumentDiagram;
 import uk.ac.open.argument.argument.ArgumentPackage;
 import uk.ac.open.argument.argument.diagram.edit.parts.Argument2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.Argument3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentGroundsCompartment2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentGroundsCompartment3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentGroundsCompartmentEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentWarrantsCompartment2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentWarrantsCompartment3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentWarrantsCompartmentEditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDescriptionRound2EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDescriptionRoundEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDiagramEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentEditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.Fact2EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.FactEditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.FactName2EditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.FactNameEditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.FactOriginEditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameDescriptionRoundExp2EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameDescriptionRoundExp3EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameDescriptionRoundExpEditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentOriginEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.RebutsEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.WrappingLabelEditPart;
@@ -138,33 +138,41 @@ public class ArgumentVisualIDRegistry {
 					domainElement.eClass())) {
 				return ArgumentEditPart.VISUAL_ID;
 			}
-			if (ArgumentPackage.eINSTANCE.getFact().isSuperTypeOf(
-					domainElement.eClass())) {
-				return FactEditPart.VISUAL_ID;
-			}
 			break;
 		case ArgumentArgumentGroundsCompartmentEditPart.VISUAL_ID:
-			if (ArgumentPackage.eINSTANCE.getFact().isSuperTypeOf(
+			if (ArgumentPackage.eINSTANCE.getArgument().isSuperTypeOf(
 					domainElement.eClass())) {
-				return Fact2EditPart.VISUAL_ID;
+				return Argument2EditPart.VISUAL_ID;
 			}
 			break;
 		case ArgumentArgumentWarrantsCompartmentEditPart.VISUAL_ID:
 			if (ArgumentPackage.eINSTANCE.getArgument().isSuperTypeOf(
 					domainElement.eClass())) {
-				return Argument2EditPart.VISUAL_ID;
+				return Argument3EditPart.VISUAL_ID;
 			}
 			break;
 		case ArgumentArgumentGroundsCompartment2EditPart.VISUAL_ID:
-			if (ArgumentPackage.eINSTANCE.getFact().isSuperTypeOf(
+			if (ArgumentPackage.eINSTANCE.getArgument().isSuperTypeOf(
 					domainElement.eClass())) {
-				return Fact2EditPart.VISUAL_ID;
+				return Argument2EditPart.VISUAL_ID;
 			}
 			break;
 		case ArgumentArgumentWarrantsCompartment2EditPart.VISUAL_ID:
 			if (ArgumentPackage.eINSTANCE.getArgument().isSuperTypeOf(
 					domainElement.eClass())) {
+				return Argument3EditPart.VISUAL_ID;
+			}
+			break;
+		case ArgumentArgumentGroundsCompartment3EditPart.VISUAL_ID:
+			if (ArgumentPackage.eINSTANCE.getArgument().isSuperTypeOf(
+					domainElement.eClass())) {
 				return Argument2EditPart.VISUAL_ID;
+			}
+			break;
+		case ArgumentArgumentWarrantsCompartment3EditPart.VISUAL_ID:
+			if (ArgumentPackage.eINSTANCE.getArgument().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Argument3EditPart.VISUAL_ID;
 			}
 			break;
 		}
@@ -196,12 +204,9 @@ public class ArgumentVisualIDRegistry {
 			if (ArgumentEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (FactEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
 			break;
 		case ArgumentEditPart.VISUAL_ID:
-			if (ArgumentDescriptionRoundEditPart.VISUAL_ID == nodeVisualID) {
+			if (ArgumentNameDescriptionRoundExpEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (ArgumentArgumentGroundsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
@@ -211,18 +216,8 @@ public class ArgumentVisualIDRegistry {
 				return true;
 			}
 			break;
-		case FactEditPart.VISUAL_ID:
-			if (FactNameEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Fact2EditPart.VISUAL_ID:
-			if (FactName2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
 		case Argument2EditPart.VISUAL_ID:
-			if (ArgumentDescriptionRound2EditPart.VISUAL_ID == nodeVisualID) {
+			if (ArgumentNameDescriptionRoundExp2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (ArgumentArgumentGroundsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
@@ -232,27 +227,48 @@ public class ArgumentVisualIDRegistry {
 				return true;
 			}
 			break;
+		case Argument3EditPart.VISUAL_ID:
+			if (ArgumentNameDescriptionRoundExp3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ArgumentArgumentGroundsCompartment3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ArgumentArgumentWarrantsCompartment3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
 		case ArgumentArgumentGroundsCompartmentEditPart.VISUAL_ID:
-			if (Fact2EditPart.VISUAL_ID == nodeVisualID) {
+			if (Argument2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
 		case ArgumentArgumentWarrantsCompartmentEditPart.VISUAL_ID:
-			if (Argument2EditPart.VISUAL_ID == nodeVisualID) {
+			if (Argument3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
 		case ArgumentArgumentGroundsCompartment2EditPart.VISUAL_ID:
-			if (Fact2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case ArgumentArgumentWarrantsCompartment2EditPart.VISUAL_ID:
 			if (Argument2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case FactOriginEditPart.VISUAL_ID:
+		case ArgumentArgumentWarrantsCompartment2EditPart.VISUAL_ID:
+			if (Argument3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ArgumentArgumentGroundsCompartment3EditPart.VISUAL_ID:
+			if (Argument2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ArgumentArgumentWarrantsCompartment3EditPart.VISUAL_ID:
+			if (Argument3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ArgumentOriginEditPart.VISUAL_ID:
 			if (WrappingLabelEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}

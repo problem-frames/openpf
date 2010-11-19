@@ -1,34 +1,33 @@
-@namespace(uri="http://www.ac.uk/open/argument/Argument", prefix="argument")
 @gmf(foo="bar")
+@namespace(uri="http://www.ac.uk/open/argument/Argument", prefix="argument")
 package argument;
 
 @gmf.diagram(foo="bar")
 class ArgumentDiagram {
   attr String name;
-  ref Node highlight;
-  val Node[*] nodes;
+  val Argument[*] nodes;
   val Link[*] links;
 }
 
-class Node {
+@gmf.node(label="name, description, round, expr", label.pattern="{0}: {1}\n {2}   {3}", label.icon="false")
+class Argument {
   attr String name;
   attr String description;
-}
+  attr int round;
+  attr String expr;
 
-@gmf.node(label="name, description, round", label.pattern="{0}: {1} #{2}", label.icon="false")
-class Argument extends Node {
-  attr String round;
+  @gmf.link(target="origin", style="dash", width="2", color="0,255,0", target.decoration="arrow")
+  ref Argument origin;
+  attr String foreground;
+  attr String background;
+  attr String shape;
+  attr String image;
+
   @gmf.compartment(foo="bar")
-  val Fact[*] grounds;
+  val Argument[*] grounds;
+
   @gmf.compartment(foo="bar")
   val Argument[*] warrants;
-}
-
-@gmf.node(label="name, description, expr", label.pattern="{0}: {1}: {2}", label.icon="false")
-class Fact extends Node {
-  attr String expr;
-  @gmf.link(target="origin", style="dash", width="2", color="0,255,0", target.decoration="arrow")
-  ref Node origin;
 }
 
 class Link {

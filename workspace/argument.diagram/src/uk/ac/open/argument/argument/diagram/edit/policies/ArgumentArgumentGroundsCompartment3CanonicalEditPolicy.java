@@ -29,7 +29,7 @@ import uk.ac.open.argument.argument.diagram.part.ArgumentVisualIDRegistry;
 /**
  * @generated
  */
-public class ArgumentArgumentGroundsCompartment2CanonicalEditPolicy extends
+public class ArgumentArgumentGroundsCompartment3CanonicalEditPolicy extends
 		CanonicalEditPolicy {
 
 	/**
@@ -47,7 +47,7 @@ public class ArgumentArgumentGroundsCompartment2CanonicalEditPolicy extends
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<ArgumentNodeDescriptor> childDescriptors = ArgumentDiagramUpdater
-				.getArgumentArgumentGroundsCompartment_7003SemanticChildren(viewObject);
+				.getArgumentArgumentGroundsCompartment_7005SemanticChildren(viewObject);
 		for (ArgumentNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -80,7 +80,7 @@ public class ArgumentArgumentGroundsCompartment2CanonicalEditPolicy extends
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<ArgumentNodeDescriptor> childDescriptors = ArgumentDiagramUpdater
-				.getArgumentArgumentGroundsCompartment_7003SemanticChildren((View) getHost()
+				.getArgumentArgumentGroundsCompartment_7005SemanticChildren((View) getHost()
 						.getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours

@@ -223,7 +223,7 @@
       <viewProvider class="uk.ac.open.argument.argument.diagram.providers.ArgumentViewProvider">
          <Priority name="Lowest"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Argument"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,3001,3002"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,3001,3002"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003"/>
       </viewProvider>
    </extension>
@@ -236,16 +236,16 @@
             <method name="getType()" value="Argument"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
-            <method name="getType()" value="2001,2002,3001,3002"/>
+            <method name="getType()" value="2001,3001,3002"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
             <method name="getType()" value="4001,4002,4003"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
-            <method name="getType()" value="5003,5004,5001,5002"/>
+            <method name="getType()" value="5003,5002,5001"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
-            <method name="getType()" value="7001,7002,7003,7004"/>
+            <method name="getType()" value="7001,7002,7003,7004,7005,7006"/>
          </object>
          <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
       </editpartProvider>
@@ -257,8 +257,7 @@
          <Priority name="Lowest"/>
          <object class="uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDiagramEditPart" id="ArgumentDiagram_1000"/>
          <object class="uk.ac.open.argument.argument.diagram.edit.parts.ArgumentEditPart" id="Argument_2001"/>
-         <object class="uk.ac.open.argument.argument.diagram.edit.parts.FactEditPart" id="Fact_2002"/>
-         <context elements="ArgumentDiagram_1000,Argument_2001,Fact_2002"/>
+         <context elements="ArgumentDiagram_1000,Argument_2001"/>
       </modelingAssistantProvider>
    </extension>
 
@@ -300,22 +299,12 @@
       </metamodel>
       <metamodel nsURI="http://www.ac.uk/open/argument/Argument">
          <specializationType
-               id="argument.diagram.Fact_2002"
-               name="%metatype.name.Fact_2002"
+               id="argument.diagram.Argument_3001"
+               name="%metatype.name.Argument_3001"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="argument.diagram.Fact_3001"/>
-            <param name="semanticHint" value="2002"/>
-         </specializationType>
-      </metamodel>
-      <metamodel nsURI="http://www.ac.uk/open/argument/Argument">
-         <metamodelType
-               id="argument.diagram.Fact_3001"
-               name="%metatype.name.Fact_3001"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="Fact"
-               edithelper="uk.ac.open.argument.argument.diagram.edit.helpers.FactEditHelper">
+            <specializes id="argument.diagram.Argument_2001"/>
             <param name="semanticHint" value="3001"/>
-         </metamodelType>
+         </specializationType>
       </metamodel>
       <metamodel nsURI="http://www.ac.uk/open/argument/Argument">
          <specializationType
@@ -348,8 +337,8 @@
       </metamodel>
       <metamodel nsURI="http://www.ac.uk/open/argument/Argument">
          <specializationType
-               id="argument.diagram.FactOrigin_4003"
-               name="%metatype.name.FactOrigin_4003"
+               id="argument.diagram.ArgumentOrigin_4003"
+               name="%metatype.name.ArgumentOrigin_4003"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
             <param name="semanticHint" value="4003"/>
@@ -369,12 +358,11 @@
       <binding context="argument.diagram.TypeContext">
          <elementType ref="argument.diagram.ArgumentDiagram_1000"/>
          <elementType ref="argument.diagram.Argument_2001"/>
-         <elementType ref="argument.diagram.Fact_2002"/>
-         <elementType ref="argument.diagram.Fact_3001"/>
+         <elementType ref="argument.diagram.Argument_3001"/>
          <elementType ref="argument.diagram.Argument_3002"/>
          <elementType ref="argument.diagram.Rebuts_4001"/>
          <elementType ref="argument.diagram.Mitigates_4002"/>
-         <elementType ref="argument.diagram.FactOrigin_4003"/>
+         <elementType ref="argument.diagram.ArgumentOrigin_4003"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
       </binding>
    </extension>

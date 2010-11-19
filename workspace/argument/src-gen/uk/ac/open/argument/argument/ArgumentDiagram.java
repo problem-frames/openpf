@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link uk.ac.open.argument.argument.ArgumentDiagram#getName <em>Name</em>}</li>
- *   <li>{@link uk.ac.open.argument.argument.ArgumentDiagram#getHighlight <em>Highlight</em>}</li>
  *   <li>{@link uk.ac.open.argument.argument.ArgumentDiagram#getNodes <em>Nodes</em>}</li>
  *   <li>{@link uk.ac.open.argument.argument.ArgumentDiagram#getLinks <em>Links</em>}</li>
  * </ul>
@@ -57,34 +56,8 @@ public interface ArgumentDiagram extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Highlight</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Highlight</em>' reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Highlight</em>' reference.
-   * @see #setHighlight(Node)
-   * @see uk.ac.open.argument.argument.ArgumentPackage#getArgumentDiagram_Highlight()
-   * @model
-   * @generated
-   */
-  Node getHighlight();
-
-  /**
-   * Sets the value of the '{@link uk.ac.open.argument.argument.ArgumentDiagram#getHighlight <em>Highlight</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Highlight</em>' reference.
-   * @see #getHighlight()
-   * @generated
-   */
-  void setHighlight(Node value);
-
-  /**
    * Returns the value of the '<em><b>Nodes</b></em>' containment reference list.
-   * The list contents are of type {@link uk.ac.open.argument.argument.Node}.
+   * The list contents are of type {@link uk.ac.open.argument.argument.Argument}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Nodes</em>' containment reference list isn't clear,
@@ -96,7 +69,7 @@ public interface ArgumentDiagram extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<Node> getNodes();
+  EList<Argument> getNodes();
 
   /**
    * Returns the value of the '<em><b>Links</b></em>' containment reference list.
