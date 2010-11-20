@@ -20,13 +20,10 @@ public class EventCalculusRun implements IConvertor {
 	public void convert(String input, String output) {
 		try {
 			final IWorkspace w = ResourcesPlugin.getWorkspace();
-			IPath location = w.getRoot().getProject("Examples")
-					.getLocation();
-			String command = "/usr/bin/python "
-					+ location
+			IPath location = w.getRoot().getProject("Examples").getLocation();
+			String command = "/usr/bin/python " + location
 					+ "/event/decreasoner.py" + " " + input;
-			File binary = new File(location
-					+ "/event/decreasoner");
+			File binary = new File(location + "/event/decreasoner");
 			if (!binary.exists()) {
 				String os = System.getProperty("os.name");
 				String arch = System.getProperty("os.arch");
@@ -35,24 +32,18 @@ public class EventCalculusRun implements IConvertor {
 					vendor = "macosx";
 				else if (os.contains("nix") || os.contains("nux"))
 					vendor = "linux";
-				copy_file(location
-						+ "/event/binary/" + vendor + "." + arch
+				copy_file(location + "/event/binary/" + vendor + "." + arch
 						+ "/decreasoner", binary);
-				copy_file(location
-						+ "/event/binary/" + vendor + "." + arch
+				copy_file(location + "/event/binary/" + vendor + "." + arch
 						+ "/solvers/relsat", new File(location
-								+ "/event/solvers/relsat"));
-				copy_file(location
-						+ "/event/binary/" + vendor + "." + arch
+						+ "/event/solvers/relsat"));
+				copy_file(location + "/event/binary/" + vendor + "." + arch
 						+ "/solvers/walksat", new File(location
-								+ "/event/solvers/walksat"));
+						+ "/event/solvers/walksat"));
 			}
-			System.out.println(command);
-			Process p = Runtime.getRuntime().exec(
-					command,
-					null,
-					new File(location
-							+ "/event"));
+//			System.out.println(command);
+			Process p = Runtime.getRuntime().exec(command, null,
+					new File(location + "/event"));
 			int exitValue = p.waitFor();
 			BufferedReader br = new BufferedReader(new InputStreamReader(
 					p.getInputStream()));
@@ -66,9 +57,9 @@ public class EventCalculusRun implements IConvertor {
 			ps.close();
 			ResourcesPlugin.getWorkspace().getRoot().refreshLocal(0, null);
 		} catch (CoreException e) {
-			e.printStackTrace();
+//			e.printStackTrace();
 		} catch (Exception e) {
-			e.printStackTrace();
+//			e.printStackTrace();
 		}
 	}
 

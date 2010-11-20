@@ -19,11 +19,18 @@ public class ArgumentFormatter extends AbstractDeclarativeFormatter {
 	@Override
 	protected void configureFormatting(FormattingConfig c) {
 		uk.ac.open.argument.services.ArgumentGrammarAccess f = (uk.ac.open.argument.services.ArgumentGrammarAccess) getGrammarAccess();
-
 		c.setLinewrap(0, 1, 2).before(f.getSL_COMMENTRule());
 		c.setLinewrap(0, 1, 2).before(f.getML_COMMENTRule());
 		c.setLinewrap(0, 1, 1).after(f.getML_COMMENTRule());
-
-		// ...
+	    c.setLinewrap(1).before(f.getArgumentAccess().getNameAssignment_0());
+	    c.setLinewrap(1).before(f.getArgumentAccess().getRightCurlyBracketKeyword_10_3());
+	    c.setLinewrap(1).before(f.getArgumentAccess().getSupportedByKeyword_10_1_0());
+	    c.setLinewrap(1).before(f.getLinkAccess().getRule());
+//	    c.setIndentation(f.getArgumentAccess().getLeftCurlyBracketKeyword_10_0(),
+//	 	         f.getArgumentAccess().getRightCurlyBracketKeyword_10_3());
+	    c.setIndentationIncrement().after(f.getArgumentAccess().getLeftCurlyBracketKeyword_10_0());	    	    
+	    c.setIndentationIncrement().after(f.getArgumentAccess().getSupportedByKeyword_10_1_0());
+	    c.setIndentationDecrement().before(f.getArgumentAccess().getRightCurlyBracketKeyword_10_3());	    	    
+	    c.setIndentationDecrement().before(f.getArgumentAccess().getRightCurlyBracketKeyword_10_3());	    	    
 	}
 }

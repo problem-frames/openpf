@@ -134,27 +134,6 @@ public class Generate extends AbstractAcceleoGenerator {
 		}
 	}
 
-	public Map<Argument, Argument> rebuttals(String[] args) {
-		Map<Argument, Argument> map = new HashMap<Argument, Argument>();
-		try {
-			if (args.length < 2) {
-				System.out.println("Arguments not valid : {model, folder}.");
-			} else {
-				URI modelURI = URI.createFileURI(args[0]);
-				File folder = new File(args[1]);
-				List<String> arguments = new ArrayList<String>();
-				for (int i = 2; i < args.length; i++) {
-					arguments.add(args[i]);
-				}
-				Generate generator = new Generate(modelURI, folder, arguments);
-				generator.doGenerate(new BasicMonitor());
-			}
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return map;
-	}
-	
 	/**
 	 * Launches the generation described by this instance.
 	 * 
