@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="dependency.feature"
-      label="Feature"
+      label="Stategic Dependency Analysis"
       version="1.0.0.qualifier"
       provider-name="The Open University">
 
