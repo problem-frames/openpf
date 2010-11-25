@@ -13,7 +13,7 @@ package uk.ac.open.argument.argument;
  *
  *
  * @see uk.ac.open.argument.argument.ArgumentPackage#getRebuts()
- * @model
+ * @model annotation="gmf.link source='from' target='to' style='dot' width='2' color='255,0,0' target.decoration='arrow'"
  * @generated
  */
 public interface Rebuts extends Link

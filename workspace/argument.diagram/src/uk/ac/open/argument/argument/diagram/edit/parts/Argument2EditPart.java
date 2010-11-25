@@ -422,18 +422,6 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 		 */
 		private RectangleFigure fArgumentWarrantsCompartmentFigure;
 
-		/**
-		 * @generated
-		 */
-		public ArgumentFigure() {
-			this.setCornerDimensions(new Dimension(getMapMode().DPtoLP(8),
-					getMapMode().DPtoLP(8)));
-			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5),
-					getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
-					getMapMode().DPtoLP(5)));
-			createContents();
-		}
-
 		Argument node;
 
 		/**

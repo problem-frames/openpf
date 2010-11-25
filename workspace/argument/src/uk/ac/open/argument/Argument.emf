@@ -17,7 +17,7 @@ class Argument {
   attr String description;
   attr int round;
   attr String expr;
-  @gmf.link(target="origin", style="dash", width="2", color="0,255,0", target.decoration="arrow")
+  @gmf.link(target="origin", style="dash", width="2", color="255,255,0", target.decoration="arrow")
   ref Argument origin;
   attr String foreground;
   attr String background;

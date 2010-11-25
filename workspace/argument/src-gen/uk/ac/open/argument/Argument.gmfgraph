@@ -79,7 +79,7 @@
           targetDecoration="//@figures.0/@figures.1">
         <foregroundColor
             xsi:type="gmfgraph:RGBColor"
-            blue="255"/>
+            green="255"/>
       </actualFigure>
     </descriptors>
     <descriptors
@@ -99,7 +99,9 @@
           targetDecoration="//@figures.0/@figures.2">
         <foregroundColor
             xsi:type="gmfgraph:RGBColor"
-            green="255"/>
+            red="160"
+            green="32"
+            blue="240"/>
       </actualFigure>
     </descriptors>
     <descriptors

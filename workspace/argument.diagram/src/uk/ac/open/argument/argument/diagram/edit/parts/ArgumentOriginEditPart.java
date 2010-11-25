@@ -89,6 +89,6 @@ public class ArgumentOriginEditPart extends ConnectionNodeEditPart implements
 	/**
 	 * @generated
 	 */
-	static final Color THIS_FORE = new Color(null, 0, 255, 0);
+	static final Color THIS_FORE = new Color(null, 160, 32, 240);
 
 }

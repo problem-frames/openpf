@@ -194,11 +194,11 @@ public class ArgumentEditor extends ImageDiagramEditor {
 			Argument c = I.next();
 			outputInternalArgumentWarrants(output, c, replaced);
 			out += c.getName() + "->" + a.getName();
-			if (replaced.contains(a))
-				output.println(";" + a.getName() + ".");
-			else
-				output.println(out + ".");
 		}
+		if (replaced.contains(a))
+			output.println(";" + a.getName() + ".");
+		else if (!out.equals(""))
+			output.println(out + ".");
 	}
 
 	/**

@@ -17,7 +17,7 @@ class Argument {
   attr String description;
   attr int round;
   attr String expr;
-  @gmf.link(target="origin", style="dash", width="2", color="0,255,0", target.decoration="arrow")
+  @gmf.link(target="origin", style="dash", width="2", color="160,32,240", target.decoration="arrow")
   ref Argument origin;
   attr String foreground;
   attr String background;
@@ -38,7 +38,7 @@ class Link {
 class Rebuts extends Link {
 }
 
-@gmf.link(source="from", target="to", label="name", style="solid", width="2", color="0,0,255", target.decoration="arrow")
+@gmf.link(source="from", target="to", label="name", style="solid", width="2", color="0,255,0", target.decoration="arrow")
 class Mitigates extends Link {
   attr String name;
   ref Argument rebuttal;

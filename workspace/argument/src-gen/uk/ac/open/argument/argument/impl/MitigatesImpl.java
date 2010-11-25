@@ -33,214 +33,208 @@ import uk.ac.open.argument.argument.Mitigates;
 public class MitigatesImpl extends LinkImpl implements Mitigates
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
   protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getRebuttal() <em>Rebuttal</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getRebuttal() <em>Rebuttal</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRebuttal()
-   * @generated
-   * @ordered
-   */
+	 * @see #getRebuttal()
+	 * @generated
+	 * @ordered
+	 */
   protected Argument rebuttal;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected MitigatesImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return ArgumentPackage.Literals.MITIGATES;
-  }
+		return ArgumentPackage.Literals.MITIGATES;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public String getName()
   {
-    return name;
-  }
+		return name;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setName(String newName)
   {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.MITIGATES__NAME, oldName, name));
-  }
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.MITIGATES__NAME, oldName, name));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Argument getRebuttal()
   {
-    if (rebuttal != null && rebuttal.eIsProxy())
-    {
-      InternalEObject oldRebuttal = (InternalEObject)rebuttal;
-      rebuttal = (Argument)eResolveProxy(oldRebuttal);
-      if (rebuttal != oldRebuttal)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, ArgumentPackage.MITIGATES__REBUTTAL, oldRebuttal, rebuttal));
-      }
-    }
-    return rebuttal;
-  }
+		if (rebuttal != null && rebuttal.eIsProxy()) {
+			InternalEObject oldRebuttal = (InternalEObject)rebuttal;
+			rebuttal = (Argument)eResolveProxy(oldRebuttal);
+			if (rebuttal != oldRebuttal) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ArgumentPackage.MITIGATES__REBUTTAL, oldRebuttal, rebuttal));
+			}
+		}
+		return rebuttal;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Argument basicGetRebuttal()
   {
-    return rebuttal;
-  }
+		return rebuttal;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setRebuttal(Argument newRebuttal)
   {
-    Argument oldRebuttal = rebuttal;
-    rebuttal = newRebuttal;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.MITIGATES__REBUTTAL, oldRebuttal, rebuttal));
-  }
+		Argument oldRebuttal = rebuttal;
+		rebuttal = newRebuttal;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.MITIGATES__REBUTTAL, oldRebuttal, rebuttal));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case ArgumentPackage.MITIGATES__NAME:
-        return getName();
-      case ArgumentPackage.MITIGATES__REBUTTAL:
-        if (resolve) return getRebuttal();
-        return basicGetRebuttal();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case ArgumentPackage.MITIGATES__NAME:
+				return getName();
+			case ArgumentPackage.MITIGATES__REBUTTAL:
+				if (resolve) return getRebuttal();
+				return basicGetRebuttal();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case ArgumentPackage.MITIGATES__NAME:
-        setName((String)newValue);
-        return;
-      case ArgumentPackage.MITIGATES__REBUTTAL:
-        setRebuttal((Argument)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case ArgumentPackage.MITIGATES__NAME:
+				setName((String)newValue);
+				return;
+			case ArgumentPackage.MITIGATES__REBUTTAL:
+				setRebuttal((Argument)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case ArgumentPackage.MITIGATES__NAME:
-        setName(NAME_EDEFAULT);
-        return;
-      case ArgumentPackage.MITIGATES__REBUTTAL:
-        setRebuttal((Argument)null);
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case ArgumentPackage.MITIGATES__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case ArgumentPackage.MITIGATES__REBUTTAL:
+				setRebuttal((Argument)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case ArgumentPackage.MITIGATES__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case ArgumentPackage.MITIGATES__REBUTTAL:
-        return rebuttal != null;
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case ArgumentPackage.MITIGATES__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case ArgumentPackage.MITIGATES__REBUTTAL:
+				return rebuttal != null;
+		}
+		return super.eIsSet(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public String toString()
   {
-    if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
-  }
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
+	}
 
 } //MitigatesImpl
