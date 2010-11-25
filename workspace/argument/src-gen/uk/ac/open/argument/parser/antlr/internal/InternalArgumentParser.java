@@ -24,7 +24,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalArgumentParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_BOOLEAN", "RULE_QUALIFIED_NAME", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'argument:'", "':'", "'round'", "'replacing'", "'foreground'", "'background'", "'shape'", "'image'", "'{'", "'supported by'", "','", "'warranted by'", "'}'", "'rebutted by'", "'mitigated by'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_BOOLEAN", "RULE_QUALIFIED_NAME", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'argument:'", "':'", "'round'", "'replacing'", "'foreground'", "'background'", "'shape'", "'image'", "'{'", "'supported by'", "','", "'warranted by'", "'}'", "'rebutted by'", "'mitigated by'", "'for'"
     };
     public static final int RULE_BOOLEAN=7;
     public static final int RULE_ID=4;
@@ -1362,18 +1362,20 @@ public class InternalArgumentParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleMitigates
-    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:612:1: ruleMitigates returns [EObject current=null] : ( ( ( RULE_ID ) ) 'mitigated by' ( ( RULE_ID ) ) ) ;
+    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:612:1: ruleMitigates returns [EObject current=null] : ( ( ( RULE_ID ) ) 'mitigated by' ( ( RULE_ID ) ) ( 'for' ( (lv_name_4_0= RULE_STRING ) )? ( ( RULE_ID ) )? )? ) ;
     public final EObject ruleMitigates() throws RecognitionException {
         EObject current = null;
+
+        Token lv_name_4_0=null;
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:617:6: ( ( ( ( RULE_ID ) ) 'mitigated by' ( ( RULE_ID ) ) ) )
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:618:1: ( ( ( RULE_ID ) ) 'mitigated by' ( ( RULE_ID ) ) )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:617:6: ( ( ( ( RULE_ID ) ) 'mitigated by' ( ( RULE_ID ) ) ( 'for' ( (lv_name_4_0= RULE_STRING ) )? ( ( RULE_ID ) )? )? ) )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:618:1: ( ( ( RULE_ID ) ) 'mitigated by' ( ( RULE_ID ) ) ( 'for' ( (lv_name_4_0= RULE_STRING ) )? ( ( RULE_ID ) )? )? )
             {
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:618:1: ( ( ( RULE_ID ) ) 'mitigated by' ( ( RULE_ID ) ) )
-            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:618:2: ( ( RULE_ID ) ) 'mitigated by' ( ( RULE_ID ) )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:618:1: ( ( ( RULE_ID ) ) 'mitigated by' ( ( RULE_ID ) ) ( 'for' ( (lv_name_4_0= RULE_STRING ) )? ( ( RULE_ID ) )? )? )
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:618:2: ( ( RULE_ID ) ) 'mitigated by' ( ( RULE_ID ) ) ( 'for' ( (lv_name_4_0= RULE_STRING ) )? ( ( RULE_ID ) )? )?
             {
             // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:618:2: ( ( RULE_ID ) )
             // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:619:1: ( RULE_ID )
@@ -1420,6 +1422,108 @@ public class InternalArgumentParser extends AbstractInternalAntlrParser {
 
             }
 
+
+            }
+
+            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:650:2: ( 'for' ( (lv_name_4_0= RULE_STRING ) )? ( ( RULE_ID ) )? )?
+            int alt21=2;
+            int LA21_0 = input.LA(1);
+
+            if ( (LA21_0==28) ) {
+                alt21=1;
+            }
+            switch (alt21) {
+                case 1 :
+                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:650:4: 'for' ( (lv_name_4_0= RULE_STRING ) )? ( ( RULE_ID ) )?
+                    {
+                    match(input,28,FOLLOW_28_in_ruleMitigates1040); 
+
+                            createLeafNode(grammarAccess.getMitigatesAccess().getForKeyword_3_0(), null); 
+                        
+                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:654:1: ( (lv_name_4_0= RULE_STRING ) )?
+                    int alt19=2;
+                    int LA19_0 = input.LA(1);
+
+                    if ( (LA19_0==RULE_STRING) ) {
+                        alt19=1;
+                    }
+                    switch (alt19) {
+                        case 1 :
+                            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:655:1: (lv_name_4_0= RULE_STRING )
+                            {
+                            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:655:1: (lv_name_4_0= RULE_STRING )
+                            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:656:3: lv_name_4_0= RULE_STRING
+                            {
+                            lv_name_4_0=(Token)input.LT(1);
+                            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMitigates1057); 
+
+                            			createLeafNode(grammarAccess.getMitigatesAccess().getNameSTRINGTerminalRuleCall_3_1_0(), "name"); 
+                            		
+
+                            	        if (current==null) {
+                            	            current = factory.create(grammarAccess.getMitigatesRule().getType().getClassifier());
+                            	            associateNodeWithAstElement(currentNode, current);
+                            	        }
+                            	        try {
+                            	       		set(
+                            	       			current, 
+                            	       			"name",
+                            	        		lv_name_4_0, 
+                            	        		"STRING", 
+                            	        		lastConsumedNode);
+                            	        } catch (ValueConverterException vce) {
+                            				handleValueConverterException(vce);
+                            	        }
+                            	    
+
+                            }
+
+
+                            }
+                            break;
+
+                    }
+
+                    // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:678:3: ( ( RULE_ID ) )?
+                    int alt20=2;
+                    int LA20_0 = input.LA(1);
+
+                    if ( (LA20_0==RULE_ID) ) {
+                        int LA20_1 = input.LA(2);
+
+                        if ( (LA20_1==EOF||LA20_1==RULE_ID) ) {
+                            alt20=1;
+                        }
+                    }
+                    switch (alt20) {
+                        case 1 :
+                            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:679:1: ( RULE_ID )
+                            {
+                            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:679:1: ( RULE_ID )
+                            // ../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g:680:3: RULE_ID
+                            {
+
+                            			if (current==null) {
+                            	            current = factory.create(grammarAccess.getMitigatesRule().getType().getClassifier());
+                            	            associateNodeWithAstElement(currentNode, current);
+                            	        }
+                                    
+                            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleMitigates1081); 
+
+                            		createLeafNode(grammarAccess.getMitigatesAccess().getRebuttalArgumentCrossReference_3_2_0(), "rebuttal"); 
+                            	
+
+                            }
+
+
+                            }
+                            break;
+
+                    }
+
+
+                    }
+                    break;
 
             }
 
@@ -1492,6 +1596,9 @@ public class InternalArgumentParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_EOF_in_entryRuleMitigates958 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleMitigates1001 = new BitSet(new long[]{0x0000000008000000L});
     public static final BitSet FOLLOW_27_in_ruleMitigates1011 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleMitigates1029 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleMitigates1029 = new BitSet(new long[]{0x0000000010000002L});
+    public static final BitSet FOLLOW_28_in_ruleMitigates1040 = new BitSet(new long[]{0x0000000000000032L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleMitigates1057 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleMitigates1081 = new BitSet(new long[]{0x0000000000000002L});
 
 }

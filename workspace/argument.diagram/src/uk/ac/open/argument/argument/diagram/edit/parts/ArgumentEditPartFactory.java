@@ -74,6 +74,9 @@ public class ArgumentEditPartFactory implements EditPartFactory {
 			case MitigatesEditPart.VISUAL_ID:
 				return new MitigatesEditPart(view);
 
+			case MitigatesNameEditPart.VISUAL_ID:
+				return new MitigatesNameEditPart(view);
+
 			case ArgumentOriginEditPart.VISUAL_ID:
 				return new ArgumentOriginEditPart(view);
 

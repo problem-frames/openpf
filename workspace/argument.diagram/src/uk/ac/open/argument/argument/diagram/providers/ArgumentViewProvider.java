@@ -57,6 +57,7 @@ import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameDescriptionRo
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameDescriptionRoundExpEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentOriginEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesEditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesNameEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.RebutsEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.WrappingLabelEditPart;
 import uk.ac.open.argument.argument.diagram.part.ArgumentVisualIDRegistry;
@@ -530,6 +531,14 @@ public class ArgumentViewProvider extends AbstractProvider implements
 					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
 					routing);
 		}
+		Node label6001 = createLabel(edge,
+				ArgumentVisualIDRegistry
+						.getType(MitigatesNameEditPart.VISUAL_ID));
+		label6001.setLayoutConstraint(NotationFactory.eINSTANCE
+				.createLocation());
+		Location location6001 = (Location) label6001.getLayoutConstraint();
+		location6001.setX(0);
+		location6001.setY(40);
 		return edge;
 	}
 
@@ -577,16 +586,16 @@ public class ArgumentViewProvider extends AbstractProvider implements
 					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
 					routing);
 		}
-		Node label6001 = createLabel(edge,
+		Node label6002 = createLabel(edge,
 				ArgumentVisualIDRegistry
 						.getType(WrappingLabelEditPart.VISUAL_ID));
-		label6001.getStyles().add(
+		label6002.getStyles().add(
 				NotationFactory.eINSTANCE.createDescriptionStyle());
-		label6001.setLayoutConstraint(NotationFactory.eINSTANCE
+		label6002.setLayoutConstraint(NotationFactory.eINSTANCE
 				.createLocation());
-		Location location6001 = (Location) label6001.getLayoutConstraint();
-		location6001.setX(0);
-		location6001.setY(40);
+		Location location6002 = (Location) label6002.getLayoutConstraint();
+		location6002.setX(0);
+		location6002.setY(40);
 		return edge;
 	}
 

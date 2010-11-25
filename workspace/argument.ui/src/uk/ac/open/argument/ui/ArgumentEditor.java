@@ -57,18 +57,18 @@ public class ArgumentEditor extends ImageDiagramEditor {
 	 * current argument a is inconsistent.
 	 * 
 	 * @param origin
-	 * @param a
+	 * @param rebuttal
 	 * @param d
 	 * @return
 	 */
-	boolean reasoning(Argument origin, Argument a, ArgumentDiagram d) {
+	boolean reasoning(Argument origin, Argument rebuttal, ArgumentDiagram d) {
 		// initialise the inconsistency flag
 		boolean inconsistent = false;
 
 		// prepare the filename
-		URI u = a.eResource().getURI();
-		URI e = u.trimFileExtension().appendFileExtension("" + a.getRound())
-				.appendFileExtension("e");
+		URI u = rebuttal.eResource().getURI();
+		URI e = u.trimFileExtension().appendFileExtension("" + origin.getName() + "." + 
+				rebuttal.getName() + ".e");
 		IPath path = new Path(e.toString());
 		try {
 			IFile file = ResourcesPlugin.getWorkspace().getRoot().getFile(path);
@@ -85,39 +85,25 @@ public class ArgumentEditor extends ImageDiagramEditor {
 			// declare the booleans, also collect the replaced arguments
 			Set<Argument> replaced = new HashSet<Argument>();
 			declareArgument(out, origin, replaced);
-			for (Argument b : set) {
-				if (origin.getRound() < b.getRound()
-						&& b.getRound() < a.getRound()) {
-					declareArgument(out, b, replaced);
+			declareArgument(out, rebuttal, replaced);
+			for (Argument a: d.getNodes()) {
+				if (a != origin && a!=rebuttal) {
+					declareArgumentNot(out, a, replaced);
 				}
 			}
-			declareArgument(out, a, replaced);
-
 			// prepare the grounds for the original, target and intermediate
 			// arguments
 			outputInternalArgumentGrounds(out, origin, replaced);
-			for (Argument b : set) {
-				if (origin.getRound() < b.getRound()
-						&& b.getRound() < a.getRound()) {
-					outputInternalArgumentGrounds(out, b, replaced);
-				}
-			}
-			outputInternalArgumentGrounds(out, a, replaced);
+			outputInternalArgumentGrounds(out, rebuttal, replaced);
 
 			// prepare an implication rule (warrants) for the original and the
 			// target argument
 			// and also all intermediate arguments
 			outputInternalArgumentWarrants(out, origin, replaced);
-			for (Argument b : set) {
-				if (origin.getRound() < b.getRound()
-						&& b.getRound() < a.getRound()) {
-					outputInternalArgumentWarrants(out, b, replaced);
-				}
-			}
-			outputInternalArgumentWarrants(out, a, replaced);
+			outputInternalArgumentWarrants(out, rebuttal, replaced);
 
 			// set the claim of the original argument to be the goal
-			out.println("! (" + getExpr(origin) + ").");
+			out.println("!" + origin.getName() + ".");
 
 			// run the event calculus reasoner to check whether there is any
 			// inconsistency by introducing the goal
@@ -152,40 +138,48 @@ public class ArgumentEditor extends ImageDiagramEditor {
 	}
 
 	String getExpr(Argument a) {
-		if (a.getExpr() == null) {
+		// a.expr could be "" if the label is edited by the GMF editor
+		if (a.getExpr() == null || a.getExpr().equals("")) {
 			return a.getName();
 		}
-		return "(" + a.getExpr() + ")";
+		return a.getName() + "<-> (" + a.getExpr() + ")";
 	}
 
 	/**
-	 * Output the facts that are not nested 
+	 * Output the facts that are not nested
 	 */
 	private void outputInternalArgumentGrounds(PrintStream out, Argument a,
 			Set<Argument> replaced) {
 		Set<Argument> sub = new HashSet<Argument>();
 		sub.addAll(a.getGrounds());
 		sub.addAll(a.getWarrants());
-		if (sub.size() > 0)
+		if (sub.size() > 0) {
 			for (Argument c : sub) {
 				outputInternalArgumentGrounds(out, c, replaced);
 			}
-		else {
-			if (replaced.contains(a))
-				out.println(";" + getExpr(a) + ".");
-			else
+			if (!(a.getExpr()==null || a.getExpr().equals(""))) {
 				out.println(getExpr(a) + ".");
+			}
+		} else {
+			if (replaced.contains(a))
+				out.println(";" + a.getName() + ".");
+			else {
+				out.println(a.getName() + ".");
+				if (!(a.getExpr()==null || a.getExpr().equals("")))
+					out.println(getExpr(a) + ".");
+			}
 		}
 	}
 
 	/**
 	 * Output the implicit implication rule for every nested argument
+	 * 
 	 * @param output
 	 * @param a
 	 * @param replaced
 	 */
-	private void outputInternalArgumentWarrants(PrintStream output,
-			Argument a, Set<Argument> replaced) {
+	private void outputInternalArgumentWarrants(PrintStream output, Argument a,
+			Set<Argument> replaced) {
 		String out = "";
 		Set<Argument> sub = new HashSet<Argument>();
 		sub.addAll(a.getGrounds());
@@ -195,13 +189,13 @@ public class ArgumentEditor extends ImageDiagramEditor {
 			for (int i = 0; i < sub.size() - 1; i++) {
 				Argument c = I.next();
 				outputInternalArgumentWarrants(output, c, replaced);
-				out += getExpr(c) + "&";
+				out += c.getName() + "&";
 			}
 			Argument c = I.next();
 			outputInternalArgumentWarrants(output, c, replaced);
-			out += getExpr(c) + "->" + getExpr(a);
+			out += c.getName() + "->" + a.getName();
 			if (replaced.contains(a))
-				output.println("; " + out + ".");
+				output.println(";" + a.getName() + ".");
 			else
 				output.println(out + ".");
 		}
@@ -242,39 +236,108 @@ public class ArgumentEditor extends ImageDiagramEditor {
 		// remove all user specified links
 		d.getLinks().clear();
 		for (Argument origin : arguments) {
-			boolean has_rebuttal = false;
-			int round = origin.getRound();
 			for (Argument rebuttal : arguments) {
-				if (rebuttal.getRound() > origin.getRound()) {
-					boolean consist = reasoning(origin, rebuttal, d);
-					if (!consist) {
+				if (rebuttal.getRound() == origin.getRound()+1) {
+					boolean consistent = reasoning(origin, rebuttal, d);
+					if (!consistent) {
 						// insert rebuttal links
 						Rebuts r = ArgumentFactory.eINSTANCE.createRebuts();
 						r.setFrom(origin);
 						r.setTo(rebuttal);
 						d.getLinks().add(r);
-						has_rebuttal = true;
-						round = rebuttal.getRound();
-					}
-				}
-			}
-			if (has_rebuttal) {
-				// now we need to look for mitigations
-				for (Argument mitigation : arguments) {
-					if (mitigation.getRound() > round) {
-						boolean consist = reasoning(origin, mitigation, d);
-						if (consist) {
-							// insert mitigation links
-							Mitigates m = ArgumentFactory.eINSTANCE
-									.createMitigates();
-							m.setFrom(origin);
-							m.setTo(mitigation);
-							d.getLinks().add(m);
+						// now we need to look for mitigations
+						for (Argument mitigation : arguments) {
+							if (mitigation.getRound() == rebuttal.getRound()+1) {
+								consistent = reasoning(origin, rebuttal, mitigation, d);
+								if (consistent) {
+									// insert mitigation links
+									Mitigates m = ArgumentFactory.eINSTANCE
+											.createMitigates();
+									m.setFrom(origin);
+									m.setTo(mitigation);
+									m.setRebuttal(rebuttal);
+									m.setName(rebuttal.getName());
+									d.getLinks().add(m);
+								}
+							}
 						}
 					}
 				}
 			}
 		}
+	}
+
+	private boolean reasoning(Argument origin, Argument rebuttal,
+			Argument mitigation, ArgumentDiagram d) {
+		// initialise the inconsistency flag
+		boolean inconsistent = false;
+
+		// prepare the filename
+		URI u = mitigation.eResource().getURI();
+		URI e = u.trimFileExtension().appendFileExtension("" + origin.getName() + "." + 
+				rebuttal.getName() + "." + mitigation.getName())
+				.appendFileExtension("e");
+		IPath path = new Path(e.toString());
+		try {
+			IFile file = ResourcesPlugin.getWorkspace().getRoot().getFile(path);
+			File f = new File(file.getLocation().toOSString());
+			PrintStream out = new PrintStream(f);
+
+			// print the common header for every specification in Event Calculus
+			out.println("sort boolean");
+			out.println("sort integer");
+			out.println("sort fluent");
+			out.println("sort time: integer");
+			out.println("range time 1 2");
+
+			// declare the booleans, also collect the replaced arguments
+			Set<Argument> replaced = new HashSet<Argument>();
+			declareArgument(out, origin, replaced);
+			declareArgument(out, rebuttal, replaced);
+			declareArgument(out, mitigation, replaced);
+			for (Argument a: d.getNodes()) {
+				if (a != origin && a!=rebuttal && a!=mitigation) {
+					declareArgumentNot(out, a, replaced);
+				}
+			}
+			outputInternalArgumentGrounds(out, origin, replaced);
+			outputInternalArgumentGrounds(out, rebuttal, replaced);
+			outputInternalArgumentGrounds(out, mitigation, replaced);
+			outputInternalArgumentWarrants(out, origin, replaced);
+			outputInternalArgumentWarrants(out, rebuttal, replaced);
+			outputInternalArgumentWarrants(out, mitigation, replaced);
+			out.println("!" + origin.getName() + ".");
+
+			// run the event calculus reasoner to check whether there is any
+			// inconsistency by introducing the goal
+			EventCalculusRun c = new EventCalculusRun();
+			c.convert(file.getLocation().toOSString(), file.getLocation()
+					.toOSString() + ".txt");
+			File txtFile = new File(file.getLocation().toOSString() + ".txt");
+			Scanner scanner = new Scanner(txtFile);
+			while (scanner.hasNext()) {
+				String line = scanner.nextLine();
+				if (line.contains("unsatisfied clauses")) {
+					inconsistent = true;
+				}
+			}
+			scanner.close();
+
+		} catch (Exception x) {
+		}
+		return inconsistent;
+	}
+
+	private void declareArgumentNot(PrintStream out, Argument b,
+			Set<Argument> replaced) {
+		// don't care about these arguments
+		out.println("boolean " + b.getName());
+		out.println("!" + b.getName() + ".");
+		for (Argument a : b.getGrounds())
+			declareArgumentNot(out, a, replaced);
+		for (Argument a : b.getWarrants())
+			declareArgumentNot(out, a, replaced);
+		
 	}
 
 	protected void createDiagram(URI diagramURI, URI modelURI) {

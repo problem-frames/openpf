@@ -500,7 +500,7 @@ public class ArgumentNameDescriptionRoundExp3EditPart extends
 	 * @generated
 	 */
 	private View getFontStyleOwnerView() {
-		return getPrimaryView();
+		return (View) getModel();
 	}
 
 	/**

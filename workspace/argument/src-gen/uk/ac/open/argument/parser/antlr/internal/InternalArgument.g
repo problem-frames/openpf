@@ -647,7 +647,49 @@ ruleMitigates returns [EObject current=null]
 	}
 
 )
-))
+)(	'for' 
+    {
+        createLeafNode(grammarAccess.getMitigatesAccess().getForKeyword_3_0(), null); 
+    }
+(
+(
+		lv_name_4_0=RULE_STRING
+		{
+			createLeafNode(grammarAccess.getMitigatesAccess().getNameSTRINGTerminalRuleCall_3_1_0(), "name"); 
+		}
+		{
+	        if ($current==null) {
+	            $current = factory.create(grammarAccess.getMitigatesRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode, $current);
+	        }
+	        try {
+	       		set(
+	       			$current, 
+	       			"name",
+	        		lv_name_4_0, 
+	        		"STRING", 
+	        		lastConsumedNode);
+	        } catch (ValueConverterException vce) {
+				handleValueConverterException(vce);
+	        }
+	    }
+
+)
+)?(
+(
+		{
+			if ($current==null) {
+	            $current = factory.create(grammarAccess.getMitigatesRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode, $current);
+	        }
+        }
+	RULE_ID
+	{
+		createLeafNode(grammarAccess.getMitigatesAccess().getRebuttalArgumentCrossReference_3_2_0(), "rebuttal"); 
+	}
+
+)
+)?)?)
 ;
 
 

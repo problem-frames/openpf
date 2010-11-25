@@ -25,11 +25,12 @@ public class ArgumentFormatter extends AbstractDeclarativeFormatter {
 	    c.setLinewrap(1).before(f.getArgumentAccess().getNameAssignment_0());
 	    c.setLinewrap(1).before(f.getArgumentAccess().getRightCurlyBracketKeyword_10_3());
 	    c.setLinewrap(1).before(f.getArgumentAccess().getSupportedByKeyword_10_1_0());
+	    c.setLinewrap(1).before(f.getArgumentAccess().getWarrantedByKeyword_10_2_0());
 	    c.setLinewrap(1).before(f.getLinkAccess().getRule());
-//	    c.setIndentation(f.getArgumentAccess().getLeftCurlyBracketKeyword_10_0(),
-//	 	         f.getArgumentAccess().getRightCurlyBracketKeyword_10_3());
 	    c.setIndentationIncrement().after(f.getArgumentAccess().getLeftCurlyBracketKeyword_10_0());	    	    
 	    c.setIndentationIncrement().after(f.getArgumentAccess().getSupportedByKeyword_10_1_0());
+	    c.setIndentationDecrement().before(f.getArgumentAccess().getWarrantedByKeyword_10_2_0());
+	    c.setIndentationIncrement().after(f.getArgumentAccess().getWarrantedByKeyword_10_2_0());
 	    c.setIndentationDecrement().before(f.getArgumentAccess().getRightCurlyBracketKeyword_10_3());	    	    
 	    c.setIndentationDecrement().before(f.getArgumentAccess().getRightCurlyBracketKeyword_10_3());	    	    
 	}

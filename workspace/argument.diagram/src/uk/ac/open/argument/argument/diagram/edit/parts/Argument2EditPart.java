@@ -28,8 +28,11 @@ import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
 
+import org.eclipse.swt.graphics.Font;
+import org.eclipse.swt.widgets.Display;
 import uk.ac.open.argument.argument.Argument;
 import uk.ac.open.argument.argument.diagram.edit.policies.Argument2ItemSemanticEditPolicy;
 import uk.ac.open.argument.argument.diagram.edit.policies.OpenDiagramEditPolicy;
@@ -57,6 +60,7 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 	protected IFigure primaryShape;
 
 	Argument node;
+
 	/**
 	 * @generated NOT
 	 */
@@ -106,7 +110,7 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 	}
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
 	protected IFigure createNodeShape() {
 		return primaryShape = new ArgumentFigure(node);
@@ -418,7 +422,20 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 		 */
 		private RectangleFigure fArgumentWarrantsCompartmentFigure;
 
+		/**
+		 * @generated
+		 */
+		public ArgumentFigure() {
+			this.setCornerDimensions(new Dimension(getMapMode().DPtoLP(8),
+					getMapMode().DPtoLP(8)));
+			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5),
+					getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
+					getMapMode().DPtoLP(5)));
+			createContents();
+		}
+
 		Argument node;
+
 		/**
 		 * @param node 
 		 * @generated NOT
@@ -491,5 +508,12 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 		}
 
 	}
+
+	/**
+	 * @generated
+	 */
+	static final Font FFIGUREARGUMENTLABELFIGURE_FONT = new Font(
+			Display.getCurrent(), Display.getDefault().getSystemFont()
+					.getFontData()[0].getName(), 9, SWT.BOLD);
 
 }

@@ -70,7 +70,7 @@ Link: Rebuts | Mitigates;
 
 Rebuts: from=[Argument] "rebutted by" to=[Argument];
 
-Mitigates: from=[Argument] "mitigated by" to=[Argument];
+Mitigates: from=[Argument] "mitigated by" to=[Argument] ("for" (name=STRING)? (rebuttal=[Argument])?)?;
 
 terminal INT returns ecore::EInt:
 	'0' | '1'..'9' ('0'..'9')*;

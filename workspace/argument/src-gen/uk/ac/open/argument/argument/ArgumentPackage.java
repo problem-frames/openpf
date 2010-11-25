@@ -326,13 +326,31 @@ public interface ArgumentPackage extends EPackage
   int MITIGATES__TO = LINK__TO;
 
   /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MITIGATES__NAME = LINK_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Rebuttal</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MITIGATES__REBUTTAL = LINK_FEATURE_COUNT + 1;
+
+  /**
    * The number of structural features of the '<em>Mitigates</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MITIGATES_FEATURE_COUNT = LINK_FEATURE_COUNT + 0;
+  int MITIGATES_FEATURE_COUNT = LINK_FEATURE_COUNT + 2;
 
 
   /**
@@ -562,6 +580,28 @@ public interface ArgumentPackage extends EPackage
   EClass getMitigates();
 
   /**
+   * Returns the meta object for the attribute '{@link uk.ac.open.argument.argument.Mitigates#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see uk.ac.open.argument.argument.Mitigates#getName()
+   * @see #getMitigates()
+   * @generated
+   */
+  EAttribute getMitigates_Name();
+
+  /**
+   * Returns the meta object for the reference '{@link uk.ac.open.argument.argument.Mitigates#getRebuttal <em>Rebuttal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Rebuttal</em>'.
+   * @see uk.ac.open.argument.argument.Mitigates#getRebuttal()
+   * @see #getMitigates()
+   * @generated
+   */
+  EReference getMitigates_Rebuttal();
+
+  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -761,6 +801,22 @@ public interface ArgumentPackage extends EPackage
      * @generated
      */
     EClass MITIGATES = eINSTANCE.getMitigates();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MITIGATES__NAME = eINSTANCE.getMitigates_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Rebuttal</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MITIGATES__REBUTTAL = eINSTANCE.getMitigates_Rebuttal();
 
   }
 

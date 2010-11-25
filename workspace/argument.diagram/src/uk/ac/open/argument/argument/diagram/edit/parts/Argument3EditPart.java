@@ -28,8 +28,11 @@ import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
 
+import org.eclipse.swt.graphics.Font;
+import org.eclipse.swt.widgets.Display;
 import uk.ac.open.argument.argument.Argument;
 import uk.ac.open.argument.argument.diagram.edit.policies.Argument3ItemSemanticEditPolicy;
 import uk.ac.open.argument.argument.diagram.edit.policies.OpenDiagramEditPolicy;
@@ -105,6 +108,7 @@ public class Argument3EditPart extends ShapeNodeEditPart {
 	}
 
 	Argument node;
+
 	/**
 	 * @generated NOT
 	 */
@@ -419,7 +423,8 @@ public class Argument3EditPart extends ShapeNodeEditPart {
 		private RectangleFigure fArgumentWarrantsCompartmentFigure;
 
 		/**
-		 * @generated
+		 * @param node
+		 * @generated NOT
 		 */
 		public ArgumentFigure(Argument node) {
 			this.setCornerDimensions(new Dimension(getMapMode().DPtoLP(8),
@@ -432,6 +437,7 @@ public class Argument3EditPart extends ShapeNodeEditPart {
 		}
 
 		Argument node;
+
 		/**
 		 * @generated NOT
 		 */
@@ -490,5 +496,12 @@ public class Argument3EditPart extends ShapeNodeEditPart {
 		}
 
 	}
+
+	/**
+	 * @generated
+	 */
+	static final Font FFIGUREARGUMENTLABELFIGURE_FONT = new Font(
+			Display.getCurrent(), Display.getDefault().getSystemFont()
+					.getFontData()[0].getName(), 9, SWT.BOLD);
 
 }

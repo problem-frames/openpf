@@ -30,8 +30,11 @@ import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.jface.preference.IPreferenceStore;
+import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
 
+import org.eclipse.swt.graphics.Font;
+import org.eclipse.swt.widgets.Display;
 import uk.ac.open.argument.argument.Argument;
 import uk.ac.open.argument.argument.diagram.edit.policies.ArgumentItemSemanticEditPolicy;
 import uk.ac.open.argument.argument.diagram.edit.policies.OpenDiagramEditPolicy;
@@ -78,8 +81,7 @@ public class ArgumentEditPart extends ShapeNodeEditPart {
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
 		installEditPolicy(EditPolicyRoles.OPEN_ROLE,
 				new OpenDiagramEditPolicy());
-		// XXX need an SCR to runtime to have another abstract superclass that
-		// would let children add reasonable editpolicies
+		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
 	}
 
@@ -137,8 +139,7 @@ public class ArgumentEditPart extends ShapeNodeEditPart {
 		if (childEditPart instanceof ArgumentArgumentGroundsCompartmentEditPart) {
 			IFigure pane = getPrimaryShape()
 					.getArgumentGroundsCompartmentFigure();
-			setupContentPane(pane); // FIXME each comparment should handle his
-									// content pane in his own way
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
 			pane.add(((ArgumentArgumentGroundsCompartmentEditPart) childEditPart)
 					.getFigure());
 			return true;
@@ -146,8 +147,7 @@ public class ArgumentEditPart extends ShapeNodeEditPart {
 		if (childEditPart instanceof ArgumentArgumentWarrantsCompartmentEditPart) {
 			IFigure pane = getPrimaryShape()
 					.getArgumentWarrantsCompartmentFigure();
-			setupContentPane(pane); // FIXME each comparment should handle his
-									// content pane in his own way
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
 			pane.add(((ArgumentArgumentWarrantsCompartmentEditPart) childEditPart)
 					.getFigure());
 			return true;
@@ -165,8 +165,7 @@ public class ArgumentEditPart extends ShapeNodeEditPart {
 		if (childEditPart instanceof ArgumentArgumentGroundsCompartmentEditPart) {
 			IFigure pane = getPrimaryShape()
 					.getArgumentGroundsCompartmentFigure();
-			setupContentPane(pane); // FIXME each comparment should handle his
-									// content pane in his own way
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
 			pane.remove(((ArgumentArgumentGroundsCompartmentEditPart) childEditPart)
 					.getFigure());
 			return true;
@@ -174,8 +173,7 @@ public class ArgumentEditPart extends ShapeNodeEditPart {
 		if (childEditPart instanceof ArgumentArgumentWarrantsCompartmentEditPart) {
 			IFigure pane = getPrimaryShape()
 					.getArgumentWarrantsCompartmentFigure();
-			setupContentPane(pane); // FIXME each comparment should handle his
-									// content pane in his own way
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
 			pane.remove(((ArgumentArgumentWarrantsCompartmentEditPart) childEditPart)
 					.getFigure());
 			return true;
@@ -430,6 +428,18 @@ public class ArgumentEditPart extends ShapeNodeEditPart {
 		 */
 		private RectangleFigure fArgumentWarrantsCompartmentFigure;
 
+		/**
+		 * @generated
+		 */
+		public ArgumentFigure() {
+			this.setCornerDimensions(new Dimension(getMapMode().DPtoLP(8),
+					getMapMode().DPtoLP(8)));
+			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5),
+					getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
+					getMapMode().DPtoLP(5)));
+			createContents();
+		}
+
 		Argument node;
 
 		/**
@@ -472,8 +482,8 @@ public class ArgumentEditPart extends ShapeNodeEditPart {
 			fArgumentWarrantsCompartmentFigure = new RectangleFigure();
 			fArgumentWarrantsCompartmentFigure.setOutline(false);
 			this.add(fArgumentWarrantsCompartmentFigure);
-//			System.out.println(node.getGrounds().size()
-//					+ node.getWarrants().size());
+			//			System.out.println(node.getGrounds().size()
+			//					+ node.getWarrants().size());
 			if (node.getGrounds().size() + node.getWarrants().size() == 0) {
 				fArgumentGroundsCompartmentFigure.setVisible(false);
 				fArgumentWarrantsCompartmentFigure.setVisible(false);
@@ -502,5 +512,12 @@ public class ArgumentEditPart extends ShapeNodeEditPart {
 		}
 
 	}
+
+	/**
+	 * @generated
+	 */
+	static final Font FFIGUREARGUMENTLABELFIGURE_FONT = new Font(
+			Display.getCurrent(), Display.getDefault().getSystemFont()
+					.getFontData()[0].getName(), 9, SWT.BOLD);
 
 }

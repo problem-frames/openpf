@@ -341,6 +341,26 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getMitigates_Name()
+  {
+    return (EAttribute)mitigatesEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMitigates_Rebuttal()
+  {
+    return (EReference)mitigatesEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public ArgumentFactory getArgumentFactory()
   {
     return (ArgumentFactory)getEFactoryInstance();
@@ -391,6 +411,8 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
     rebutsEClass = createEClass(REBUTS);
 
     mitigatesEClass = createEClass(MITIGATES);
+    createEAttribute(mitigatesEClass, MITIGATES__NAME);
+    createEReference(mitigatesEClass, MITIGATES__REBUTTAL);
   }
 
   /**
@@ -451,6 +473,8 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
     initEClass(rebutsEClass, Rebuts.class, "Rebuts", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(mitigatesEClass, Mitigates.class, "Mitigates", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getMitigates_Name(), ecorePackage.getEString(), "name", null, 0, 1, Mitigates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMitigates_Rebuttal(), this.getArgument(), null, "rebuttal", null, 0, 1, Mitigates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

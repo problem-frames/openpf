@@ -17,6 +17,7 @@ import uk.ac.open.argument.argument.ArgumentPackage;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameDescriptionRoundExp2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameDescriptionRoundExp3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameDescriptionRoundExpEditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesNameEditPart;
 import uk.ac.open.argument.argument.diagram.parsers.MessageFormatParser;
 import uk.ac.open.argument.argument.diagram.part.ArgumentVisualIDRegistry;
 
@@ -101,6 +102,24 @@ public class ArgumentParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
+	private IParser mitigatesName_6001Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getMitigatesName_6001Parser() {
+		if (mitigatesName_6001Parser == null) {
+			EAttribute[] features = new EAttribute[] { ArgumentPackage.eINSTANCE
+					.getMitigates_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			mitigatesName_6001Parser = parser;
+		}
+		return mitigatesName_6001Parser;
+	}
+
+	/**
+	 * @generated
+	 */
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
 		case ArgumentNameDescriptionRoundExpEditPart.VISUAL_ID:
@@ -109,6 +128,8 @@ public class ArgumentParserProvider extends AbstractProvider implements
 			return getArgumentNameDescriptionRoundExpr_5002Parser();
 		case ArgumentNameDescriptionRoundExp3EditPart.VISUAL_ID:
 			return getArgumentNameDescriptionRoundExpr_5001Parser();
+		case MitigatesNameEditPart.VISUAL_ID:
+			return getMitigatesName_6001Parser();
 		}
 		return null;
 	}

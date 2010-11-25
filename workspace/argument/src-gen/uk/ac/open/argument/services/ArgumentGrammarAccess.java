@@ -404,12 +404,19 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cToAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final CrossReference cToArgumentCrossReference_2_0 = (CrossReference)cToAssignment_2.eContents().get(0);
 		private final RuleCall cToArgumentIDTerminalRuleCall_2_0_1 = (RuleCall)cToArgumentCrossReference_2_0.eContents().get(1);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cForKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cNameAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cNameSTRINGTerminalRuleCall_3_1_0 = (RuleCall)cNameAssignment_3_1.eContents().get(0);
+		private final Assignment cRebuttalAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
+		private final CrossReference cRebuttalArgumentCrossReference_3_2_0 = (CrossReference)cRebuttalAssignment_3_2.eContents().get(0);
+		private final RuleCall cRebuttalArgumentIDTerminalRuleCall_3_2_0_1 = (RuleCall)cRebuttalArgumentCrossReference_3_2_0.eContents().get(1);
 		
 		//Mitigates:
-		//	from=[Argument] "mitigated by" to=[Argument];
+		//	from=[Argument] "mitigated by" to=[Argument] ("for" name=STRING? rebuttal=[Argument]?)?;
 		public ParserRule getRule() { return rule; }
 
-		//from=[Argument] "mitigated by" to=[Argument]
+		//from=[Argument] "mitigated by" to=[Argument] ("for" name=STRING? rebuttal=[Argument]?)?
 		public Group getGroup() { return cGroup; }
 
 		//from=[Argument]
@@ -432,6 +439,27 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 
 		//ID
 		public RuleCall getToArgumentIDTerminalRuleCall_2_0_1() { return cToArgumentIDTerminalRuleCall_2_0_1; }
+
+		//("for" name=STRING? rebuttal=[Argument]?)?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"for"
+		public Keyword getForKeyword_3_0() { return cForKeyword_3_0; }
+
+		//name=STRING?
+		public Assignment getNameAssignment_3_1() { return cNameAssignment_3_1; }
+
+		//STRING
+		public RuleCall getNameSTRINGTerminalRuleCall_3_1_0() { return cNameSTRINGTerminalRuleCall_3_1_0; }
+
+		//rebuttal=[Argument]?
+		public Assignment getRebuttalAssignment_3_2() { return cRebuttalAssignment_3_2; }
+
+		//[Argument]
+		public CrossReference getRebuttalArgumentCrossReference_3_2_0() { return cRebuttalArgumentCrossReference_3_2_0; }
+
+		//ID
+		public RuleCall getRebuttalArgumentIDTerminalRuleCall_3_2_0_1() { return cRebuttalArgumentIDTerminalRuleCall_3_2_0_1; }
 	}
 	
 	
@@ -562,7 +590,7 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Mitigates:
-	//	from=[Argument] "mitigated by" to=[Argument];
+	//	from=[Argument] "mitigated by" to=[Argument] ("for" name=STRING? rebuttal=[Argument]?)?;
 	public MitigatesElements getMitigatesAccess() {
 		return (pMitigates != null) ? pMitigates : (pMitigates = new MitigatesElements());
 	}
