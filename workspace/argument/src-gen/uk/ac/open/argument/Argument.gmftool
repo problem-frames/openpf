@@ -50,6 +50,15 @@
         <largeIcon
             xsi:type="gmftool:DefaultImage"/>
       </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Rebuttal"
+          description="Create new Rebuttal">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
     </tools>
   </palette>
 </gmftool:ToolRegistry>

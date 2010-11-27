@@ -51,6 +51,7 @@ public class ArgumentPaletteFactory {
 		paletteContainer.add(createMitigates1CreationTool());
 		paletteContainer.add(createOrigin2CreationTool());
 		paletteContainer.add(createRebuts3CreationTool());
+		paletteContainer.add(createRebuttal4CreationTool());
 		return paletteContainer;
 	}
 
@@ -114,6 +115,22 @@ public class ArgumentPaletteFactory {
 		entry.setId("createRebuts3CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ArgumentElementTypes
 				.getImageDescriptor(ArgumentElementTypes.Rebuts_4001));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createRebuttal4CreationTool() {
+		LinkToolEntry entry = new LinkToolEntry(
+				Messages.Rebuttal4CreationTool_title,
+				Messages.Rebuttal4CreationTool_desc,
+				Collections
+						.singletonList(ArgumentElementTypes.MitigatesRebuttal_4004));
+		entry.setId("createRebuttal4CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ArgumentElementTypes
+				.getImageDescriptor(ArgumentElementTypes.MitigatesRebuttal_4004));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}

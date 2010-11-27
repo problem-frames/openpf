@@ -58,6 +58,8 @@ import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameDescriptionRo
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentOriginEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesNameEditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesRebuttalEditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesRebuttalExternalLabelEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.RebutsEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.WrappingLabelEditPart;
 import uk.ac.open.argument.argument.diagram.part.ArgumentVisualIDRegistry;
@@ -261,6 +263,9 @@ public class ArgumentViewProvider extends AbstractProvider implements
 		case ArgumentOriginEditPart.VISUAL_ID:
 			return createArgumentOrigin_4003(containerView, index, persisted,
 					preferencesHint);
+		case MitigatesRebuttalEditPart.VISUAL_ID:
+			return createMitigatesRebuttal_4004(containerView, index,
+					persisted, preferencesHint);
 		}
 		// can never happen, provided #provides(CreateEdgeViewOperation) is correct
 		return null;
@@ -531,14 +536,6 @@ public class ArgumentViewProvider extends AbstractProvider implements
 					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
 					routing);
 		}
-		Node label6001 = createLabel(edge,
-				ArgumentVisualIDRegistry
-						.getType(MitigatesNameEditPart.VISUAL_ID));
-		label6001.setLayoutConstraint(NotationFactory.eINSTANCE
-				.createLocation());
-		Location location6001 = (Location) label6001.getLayoutConstraint();
-		location6001.setX(0);
-		location6001.setY(40);
 		return edge;
 	}
 
@@ -586,9 +583,67 @@ public class ArgumentViewProvider extends AbstractProvider implements
 					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
 					routing);
 		}
-		Node label6002 = createLabel(edge,
+		Node label6001 = createLabel(edge,
 				ArgumentVisualIDRegistry
 						.getType(WrappingLabelEditPart.VISUAL_ID));
+		label6001.getStyles().add(
+				NotationFactory.eINSTANCE.createDescriptionStyle());
+		label6001.setLayoutConstraint(NotationFactory.eINSTANCE
+				.createLocation());
+		Location location6001 = (Location) label6001.getLayoutConstraint();
+		location6001.setX(0);
+		location6001.setY(40);
+		return edge;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Edge createMitigatesRebuttal_4004(View containerView, int index,
+			boolean persisted, PreferencesHint preferencesHint) {
+		Edge edge = NotationFactory.eINSTANCE.createEdge();
+		edge.getStyles().add(NotationFactory.eINSTANCE.createRoutingStyle());
+		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
+		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
+				.createRelativeBendpoints();
+		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
+				2);
+		points.add(new RelativeBendpoint());
+		points.add(new RelativeBendpoint());
+		bendpoints.setPoints(points);
+		edge.setBendpoints(bendpoints);
+		ViewUtil.insertChildView(containerView, edge, index, persisted);
+		edge.setType(ArgumentVisualIDRegistry
+				.getType(MitigatesRebuttalEditPart.VISUAL_ID));
+		edge.setElement(null);
+		// initializePreferences
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+		FontStyle edgeFontStyle = (FontStyle) edge
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (edgeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			edgeFontStyle.setFontName(fontData.getName());
+			edgeFontStyle.setFontHeight(fontData.getHeight());
+			edgeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			edgeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			edgeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		Routing routing = Routing.get(prefStore
+				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
+		if (routing != null) {
+			ViewUtil.setStructuralFeatureValue(edge,
+					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
+					routing);
+		}
+		Node label6002 = createLabel(
+				edge,
+				ArgumentVisualIDRegistry
+						.getType(MitigatesRebuttalExternalLabelEditPart.VISUAL_ID));
 		label6002.getStyles().add(
 				NotationFactory.eINSTANCE.createDescriptionStyle());
 		label6002.setLayoutConstraint(NotationFactory.eINSTANCE

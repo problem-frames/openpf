@@ -256,7 +256,7 @@ public class ArgumentEditor extends ImageDiagramEditor {
 									m.setFrom(origin);
 									m.setTo(mitigation);
 									m.setRebuttal(rebuttal);
-									m.setName(rebuttal.getName());
+//									m.setName(rebuttal.getName());
 									d.getLinks().add(m);
 								}
 							}

@@ -29,6 +29,7 @@ import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDiagramEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentOriginEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesEditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesRebuttalEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.RebutsEditPart;
 import uk.ac.open.argument.argument.diagram.providers.ArgumentElementTypes;
 
@@ -361,7 +362,10 @@ public class ArgumentDiagramUpdater {
 	 */
 	public static List<ArgumentLinkDescriptor> getMitigates_4002ContainedLinks(
 			View view) {
-		return Collections.emptyList();
+		Mitigates modelElement = (Mitigates) view.getElement();
+		LinkedList<ArgumentLinkDescriptor> result = new LinkedList<ArgumentLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Mitigates_Rebuttal_4004(modelElement));
+		return result;
 	}
 
 	/**
@@ -378,6 +382,8 @@ public class ArgumentDiagramUpdater {
 		result.addAll(getIncomingTypeModelFacetLinks_Mitigates_4002(
 				modelElement, crossReferences));
 		result.addAll(getIncomingFeatureModelFacetLinks_Argument_Origin_4003(
+				modelElement, crossReferences));
+		result.addAll(getIncomingFeatureModelFacetLinks_Mitigates_Rebuttal_4004(
 				modelElement, crossReferences));
 		return result;
 	}
@@ -397,6 +403,8 @@ public class ArgumentDiagramUpdater {
 				modelElement, crossReferences));
 		result.addAll(getIncomingFeatureModelFacetLinks_Argument_Origin_4003(
 				modelElement, crossReferences));
+		result.addAll(getIncomingFeatureModelFacetLinks_Mitigates_Rebuttal_4004(
+				modelElement, crossReferences));
 		return result;
 	}
 
@@ -414,6 +422,8 @@ public class ArgumentDiagramUpdater {
 		result.addAll(getIncomingTypeModelFacetLinks_Mitigates_4002(
 				modelElement, crossReferences));
 		result.addAll(getIncomingFeatureModelFacetLinks_Argument_Origin_4003(
+				modelElement, crossReferences));
+		result.addAll(getIncomingFeatureModelFacetLinks_Mitigates_Rebuttal_4004(
 				modelElement, crossReferences));
 		return result;
 	}
@@ -486,7 +496,10 @@ public class ArgumentDiagramUpdater {
 	 */
 	public static List<ArgumentLinkDescriptor> getMitigates_4002OutgoingLinks(
 			View view) {
-		return Collections.emptyList();
+		Mitigates modelElement = (Mitigates) view.getElement();
+		LinkedList<ArgumentLinkDescriptor> result = new LinkedList<ArgumentLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Mitigates_Rebuttal_4004(modelElement));
+		return result;
 	}
 
 	/**
@@ -618,6 +631,26 @@ public class ArgumentDiagramUpdater {
 	/**
 	 * @generated
 	 */
+	private static Collection<ArgumentLinkDescriptor> getIncomingFeatureModelFacetLinks_Mitigates_Rebuttal_4004(
+			Argument target,
+			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
+		LinkedList<ArgumentLinkDescriptor> result = new LinkedList<ArgumentLinkDescriptor>();
+		Collection<EStructuralFeature.Setting> settings = crossReferences
+				.get(target);
+		for (EStructuralFeature.Setting setting : settings) {
+			if (setting.getEStructuralFeature() == ArgumentPackage.eINSTANCE
+					.getMitigates_Rebuttal()) {
+				result.add(new ArgumentLinkDescriptor(setting.getEObject(),
+						target, ArgumentElementTypes.MitigatesRebuttal_4004,
+						MitigatesRebuttalEditPart.VISUAL_ID));
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
 	private static Collection<ArgumentLinkDescriptor> getOutgoingTypeModelFacetLinks_Rebuts_4001(
 			Argument source) {
 		ArgumentDiagram container = null;
@@ -711,6 +744,22 @@ public class ArgumentDiagramUpdater {
 		result.add(new ArgumentLinkDescriptor(source, destination,
 				ArgumentElementTypes.ArgumentOrigin_4003,
 				ArgumentOriginEditPart.VISUAL_ID));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	private static Collection<ArgumentLinkDescriptor> getOutgoingFeatureModelFacetLinks_Mitigates_Rebuttal_4004(
+			Mitigates source) {
+		LinkedList<ArgumentLinkDescriptor> result = new LinkedList<ArgumentLinkDescriptor>();
+		Argument destination = source.getRebuttal();
+		if (destination == null) {
+			return result;
+		}
+		result.add(new ArgumentLinkDescriptor(source, destination,
+				ArgumentElementTypes.MitigatesRebuttal_4004,
+				MitigatesRebuttalEditPart.VISUAL_ID));
 		return result;
 	}
 

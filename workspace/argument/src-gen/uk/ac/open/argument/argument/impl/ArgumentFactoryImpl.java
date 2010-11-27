@@ -24,134 +24,130 @@ import uk.ac.open.argument.argument.*;
 public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
 {
   /**
-   * Creates the default factory implementation.
-   * <!-- begin-user-doc -->
+	 * Creates the default factory implementation.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public static ArgumentFactory init()
   {
-    try
-    {
-      ArgumentFactory theArgumentFactory = (ArgumentFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.ac.uk/open/argument/Argument"); 
-      if (theArgumentFactory != null)
-      {
-        return theArgumentFactory;
-      }
-    }
-    catch (Exception exception)
-    {
-      EcorePlugin.INSTANCE.log(exception);
-    }
-    return new ArgumentFactoryImpl();
-  }
+		try {
+			ArgumentFactory theArgumentFactory = (ArgumentFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.ac.uk/open/argument/Argument"); 
+			if (theArgumentFactory != null) {
+				return theArgumentFactory;
+			}
+		}
+		catch (Exception exception) {
+			EcorePlugin.INSTANCE.log(exception);
+		}
+		return new ArgumentFactoryImpl();
+	}
 
   /**
-   * Creates an instance of the factory.
-   * <!-- begin-user-doc -->
+	 * Creates an instance of the factory.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public ArgumentFactoryImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EObject create(EClass eClass)
   {
-    switch (eClass.getClassifierID())
-    {
-      case ArgumentPackage.ARGUMENT_DIAGRAM: return createArgumentDiagram();
-      case ArgumentPackage.ARGUMENT: return createArgument();
-      case ArgumentPackage.LINK: return createLink();
-      case ArgumentPackage.REBUTS: return createRebuts();
-      case ArgumentPackage.MITIGATES: return createMitigates();
-      default:
-        throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-    }
-  }
+		switch (eClass.getClassifierID()) {
+			case ArgumentPackage.ARGUMENT_DIAGRAM: return createArgumentDiagram();
+			case ArgumentPackage.ARGUMENT: return createArgument();
+			case ArgumentPackage.LINK: return createLink();
+			case ArgumentPackage.REBUTS: return createRebuts();
+			case ArgumentPackage.MITIGATES: return createMitigates();
+			default:
+				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public ArgumentDiagram createArgumentDiagram()
   {
-    ArgumentDiagramImpl argumentDiagram = new ArgumentDiagramImpl();
-    return argumentDiagram;
-  }
+		ArgumentDiagramImpl argumentDiagram = new ArgumentDiagramImpl();
+		return argumentDiagram;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Argument createArgument()
   {
-    ArgumentImpl argument = new ArgumentImpl();
-    return argument;
-  }
+		ArgumentImpl argument = new ArgumentImpl();
+		return argument;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Link createLink()
   {
-    LinkImpl link = new LinkImpl();
-    return link;
-  }
+		LinkImpl link = new LinkImpl();
+		return link;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Rebuts createRebuts()
   {
-    RebutsImpl rebuts = new RebutsImpl();
-    return rebuts;
-  }
+		RebutsImpl rebuts = new RebutsImpl();
+		return rebuts;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Mitigates createMitigates()
   {
-    MitigatesImpl mitigates = new MitigatesImpl();
-    return mitigates;
-  }
+		MitigatesImpl mitigates = new MitigatesImpl();
+		return mitigates;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public ArgumentPackage getArgumentPackage()
   {
-    return (ArgumentPackage)getEPackage();
-  }
+		return (ArgumentPackage)getEPackage();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @deprecated
-   * @generated
-   */
+	 * @deprecated
+	 * @generated
+	 */
   @Deprecated
   public static ArgumentPackage getPackage()
   {
-    return ArgumentPackage.eINSTANCE;
-  }
+		return ArgumentPackage.eINSTANCE;
+	}
 
 } //ArgumentFactoryImpl

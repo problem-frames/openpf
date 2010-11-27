@@ -14,6 +14,9 @@
     <figures
         xsi:type="gmfgraph:PolylineDecoration"
         name="ArgumentOriginFigureTargetDecoration"/>
+    <figures
+        xsi:type="gmfgraph:PolylineDecoration"
+        name="MitigatesRebuttalFigureTargetDecoration"/>
     <descriptors
         name="ArgumentFigure">
       <actualFigure
@@ -83,13 +86,6 @@
       </actualFigure>
     </descriptors>
     <descriptors
-        name="MitigatesLabelFigure">
-      <actualFigure
-          xsi:type="gmfgraph:Label"
-          name="MitigatesLabelLabel"
-          text="Mitigates"/>
-    </descriptors>
-    <descriptors
         name="ArgumentOriginFigure">
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
@@ -110,6 +106,26 @@
           xsi:type="gmfgraph:Label"
           name="ArgumentOriginExternalLabel"/>
     </descriptors>
+    <descriptors
+        name="MitigatesRebuttalFigure">
+      <actualFigure
+          xsi:type="gmfgraph:PolylineConnection"
+          name="MitigatesRebuttalFigure"
+          targetDecoration="//@figures.0/@figures.3">
+        <foregroundColor
+            xsi:type="gmfgraph:RGBColor"
+            red="255"
+            green="105"
+            blue="180"/>
+      </actualFigure>
+    </descriptors>
+    <descriptors
+        name="MitigatesRebuttalExternalLabelFigure">
+      <actualFigure
+          xsi:type="gmfgraph:Label"
+          name="MitigatesRebuttalExternalLabel"
+          text="name"/>
+    </descriptors>
   </figures>
   <nodes
       name="Argument"
@@ -123,6 +139,9 @@
   <connections
       name="ArgumentOrigin"
       figure="ArgumentOriginFigure"/>
+  <connections
+      name="MitigatesRebuttal"
+      figure="MitigatesRebuttalFigure"/>
   <compartments
       name="ArgumentGroundsCompartment"
       figure="ArgumentFigure"
@@ -139,11 +158,11 @@
       elementIcon="false"
       accessor="//@figures.0/@descriptors.0/@accessors.0"/>
   <labels
-      name="MitigatesLabel"
-      figure="MitigatesLabelFigure"
-      elementIcon="false"/>
-  <labels
       name="ArgumentOriginExternalLabel"
       figure="ArgumentOriginExternalLabelFigure"
+      elementIcon="false"/>
+  <labels
+      name="MitigatesRebuttalExternalLabel"
+      figure="MitigatesRebuttalExternalLabelFigure"
       elementIcon="false"/>
 </gmfgraph:Canvas>

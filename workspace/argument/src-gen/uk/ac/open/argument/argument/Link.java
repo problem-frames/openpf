@@ -27,55 +27,55 @@ import org.eclipse.emf.ecore.EObject;
 public interface Link extends EObject
 {
   /**
-   * Returns the value of the '<em><b>From</b></em>' reference.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>From</b></em>' reference.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>From</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>From</em>' reference.
-   * @see #setFrom(Argument)
-   * @see uk.ac.open.argument.argument.ArgumentPackage#getLink_From()
-   * @model
-   * @generated
-   */
+	 * @return the value of the '<em>From</em>' reference.
+	 * @see #setFrom(Argument)
+	 * @see uk.ac.open.argument.argument.ArgumentPackage#getLink_From()
+	 * @model
+	 * @generated
+	 */
   Argument getFrom();
 
   /**
-   * Sets the value of the '{@link uk.ac.open.argument.argument.Link#getFrom <em>From</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link uk.ac.open.argument.argument.Link#getFrom <em>From</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>From</em>' reference.
-   * @see #getFrom()
-   * @generated
-   */
+	 * @param value the new value of the '<em>From</em>' reference.
+	 * @see #getFrom()
+	 * @generated
+	 */
   void setFrom(Argument value);
 
   /**
-   * Returns the value of the '<em><b>To</b></em>' reference.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>To</b></em>' reference.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>To</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>To</em>' reference.
-   * @see #setTo(Argument)
-   * @see uk.ac.open.argument.argument.ArgumentPackage#getLink_To()
-   * @model
-   * @generated
-   */
+	 * @return the value of the '<em>To</em>' reference.
+	 * @see #setTo(Argument)
+	 * @see uk.ac.open.argument.argument.ArgumentPackage#getLink_To()
+	 * @model
+	 * @generated
+	 */
   Argument getTo();
 
   /**
-   * Sets the value of the '{@link uk.ac.open.argument.argument.Link#getTo <em>To</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link uk.ac.open.argument.argument.Link#getTo <em>To</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>To</em>' reference.
-   * @see #getTo()
-   * @generated
-   */
+	 * @param value the new value of the '<em>To</em>' reference.
+	 * @see #getTo()
+	 * @generated
+	 */
   void setTo(Argument value);
 
 } // Link

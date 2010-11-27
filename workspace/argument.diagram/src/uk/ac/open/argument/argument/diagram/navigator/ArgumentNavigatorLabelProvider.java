@@ -29,6 +29,7 @@ import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameDescriptionRo
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentOriginEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesNameEditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesRebuttalEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.RebutsEditPart;
 import uk.ac.open.argument.argument.diagram.part.ArgumentDiagramEditorPlugin;
 import uk.ac.open.argument.argument.diagram.part.ArgumentVisualIDRegistry;
@@ -94,24 +95,27 @@ public class ArgumentNavigatorLabelProvider extends LabelProvider implements
 	 */
 	public Image getImage(View view) {
 		switch (ArgumentVisualIDRegistry.getVisualID(view)) {
-		case Argument3EditPart.VISUAL_ID:
+		case ArgumentDiagramEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://www.ac.uk/open/argument/Argument?Argument", ArgumentElementTypes.Argument_3002); //$NON-NLS-1$
+					"Navigator?Diagram?http://www.ac.uk/open/argument/Argument?ArgumentDiagram", ArgumentElementTypes.ArgumentDiagram_1000); //$NON-NLS-1$
+		case ArgumentOriginEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?http://www.ac.uk/open/argument/Argument?Argument?origin", ArgumentElementTypes.ArgumentOrigin_4003); //$NON-NLS-1$
 		case Argument2EditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Node?http://www.ac.uk/open/argument/Argument?Argument", ArgumentElementTypes.Argument_3001); //$NON-NLS-1$
+		case Argument3EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://www.ac.uk/open/argument/Argument?Argument", ArgumentElementTypes.Argument_3002); //$NON-NLS-1$
+		case MitigatesRebuttalEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?http://www.ac.uk/open/argument/Argument?Mitigates?rebuttal", ArgumentElementTypes.MitigatesRebuttal_4004); //$NON-NLS-1$
 		case ArgumentEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?TopLevelNode?http://www.ac.uk/open/argument/Argument?Argument", ArgumentElementTypes.Argument_2001); //$NON-NLS-1$
 		case RebutsEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?http://www.ac.uk/open/argument/Argument?Rebuts", ArgumentElementTypes.Rebuts_4001); //$NON-NLS-1$
-		case ArgumentOriginEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Link?http://www.ac.uk/open/argument/Argument?Argument?origin", ArgumentElementTypes.ArgumentOrigin_4003); //$NON-NLS-1$
-		case ArgumentDiagramEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Diagram?http://www.ac.uk/open/argument/Argument?ArgumentDiagram", ArgumentElementTypes.ArgumentDiagram_1000); //$NON-NLS-1$
 		case MitigatesEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?http://www.ac.uk/open/argument/Argument?Mitigates", ArgumentElementTypes.Mitigates_4002); //$NON-NLS-1$
@@ -167,18 +171,20 @@ public class ArgumentNavigatorLabelProvider extends LabelProvider implements
 			return getUnresolvedDomainElementProxyText(view);
 		}
 		switch (ArgumentVisualIDRegistry.getVisualID(view)) {
-		case Argument3EditPart.VISUAL_ID:
-			return getArgument_3002Text(view);
+		case ArgumentDiagramEditPart.VISUAL_ID:
+			return getArgumentDiagram_1000Text(view);
+		case ArgumentOriginEditPart.VISUAL_ID:
+			return getArgumentOrigin_4003Text(view);
 		case Argument2EditPart.VISUAL_ID:
 			return getArgument_3001Text(view);
+		case Argument3EditPart.VISUAL_ID:
+			return getArgument_3002Text(view);
+		case MitigatesRebuttalEditPart.VISUAL_ID:
+			return getMitigatesRebuttal_4004Text(view);
 		case ArgumentEditPart.VISUAL_ID:
 			return getArgument_2001Text(view);
 		case RebutsEditPart.VISUAL_ID:
 			return getRebuts_4001Text(view);
-		case ArgumentOriginEditPart.VISUAL_ID:
-			return getArgumentOrigin_4003Text(view);
-		case ArgumentDiagramEditPart.VISUAL_ID:
-			return getArgumentDiagram_1000Text(view);
 		case MitigatesEditPart.VISUAL_ID:
 			return getMitigates_4002Text(view);
 		}
@@ -204,20 +210,7 @@ public class ArgumentNavigatorLabelProvider extends LabelProvider implements
 	 * @generated
 	 */
 	private String getMitigates_4002Text(View view) {
-		IParser parser = ArgumentParserProvider.getParser(
-				ArgumentElementTypes.Mitigates_4002,
-				view.getElement() != null ? view.getElement() : view,
-				ArgumentVisualIDRegistry
-						.getType(MitigatesNameEditPart.VISUAL_ID));
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(
-					view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			ArgumentDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 6001); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
+		return ""; //$NON-NLS-1$
 	}
 
 	/**
@@ -265,6 +258,25 @@ public class ArgumentNavigatorLabelProvider extends LabelProvider implements
 	/**
 	 * @generated
 	 */
+	private String getMitigatesRebuttal_4004Text(View view) {
+		IParser parser = ArgumentParserProvider.getParser(
+				ArgumentElementTypes.MitigatesRebuttal_4004,
+				view.getElement() != null ? view.getElement() : view,
+				CommonParserHint.DESCRIPTION);
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			ArgumentDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 6002); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
 	private String getRebuts_4001Text(View view) {
 		return ""; //$NON-NLS-1$
 	}
@@ -304,7 +316,7 @@ public class ArgumentNavigatorLabelProvider extends LabelProvider implements
 					ParserOptions.NONE.intValue());
 		} else {
 			ArgumentDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 6002); //$NON-NLS-1$
+					"Parser was not found for label " + 6001); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}

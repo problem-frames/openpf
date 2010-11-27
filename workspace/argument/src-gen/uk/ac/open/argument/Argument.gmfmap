@@ -77,13 +77,6 @@
   <links>
     <domainMetaElement
         href="Argument.ecore#//Mitigates"/>
-    <labelMappings
-        xsi:type="gmfmap:FeatureLabelMapping">
-      <diagramLabel
-          href="Argument.gmfgraph#MitigatesLabel"/>
-      <features
-          href="Argument.ecore#//Mitigates/name"/>
-    </labelMappings>
     <containmentFeature
         href="Argument.ecore#//ArgumentDiagram/links"/>
     <tool
@@ -113,6 +106,22 @@
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="Argument.ecore#//Argument/origin"/>
+  </links>
+  <links>
+    <labelMappings
+        xsi:type="gmfmap:DesignLabelMapping"
+        readOnly="true">
+      <diagramLabel
+          href="Argument.gmfgraph#MitigatesRebuttalExternalLabel"/>
+    </labelMappings>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="Argument.gmftool#//@palette/@tools.1/@tools.3"/>
+    <diagramLink
+        href="Argument.gmfgraph#MitigatesRebuttal"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="Argument.ecore#//Mitigates/rebuttal"/>
   </links>
   <diagram>
     <diagramCanvas

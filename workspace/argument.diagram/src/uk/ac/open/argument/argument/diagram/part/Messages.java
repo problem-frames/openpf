@@ -293,6 +293,16 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
+	public static String Rebuttal4CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Rebuttal4CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
 	public static String ArgumentArgumentGroundsCompartmentEditPart_title;
 
 	/**
@@ -343,6 +353,11 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
+	public static String NavigatorGroupName_Mitigates_4002_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
 	public static String NavigatorGroupName_Argument_2001_incominglinks;
 
 	/**
@@ -359,6 +374,16 @@ public class Messages extends NLS {
 	 * @generated
 	 */
 	public static String NavigatorGroupName_Argument_3002_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_MitigatesRebuttal_4004_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_MitigatesRebuttal_4004_source;
 
 	/**
 	 * @generated

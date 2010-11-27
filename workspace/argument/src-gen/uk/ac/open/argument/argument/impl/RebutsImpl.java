@@ -22,24 +22,24 @@ import uk.ac.open.argument.argument.Rebuts;
 public class RebutsImpl extends LinkImpl implements Rebuts
 {
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected RebutsImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return ArgumentPackage.Literals.REBUTS;
-  }
+		return ArgumentPackage.Literals.REBUTS;
+	}
 
 } //RebutsImpl

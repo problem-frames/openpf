@@ -397,69 +397,57 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 	public class MitigatesElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Mitigates");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cForKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cLabelAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cLabelSTRINGTerminalRuleCall_1_0 = (RuleCall)cLabelAssignment_1.eContents().get(0);
-		private final Assignment cRebuttalAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final CrossReference cRebuttalArgumentCrossReference_2_0 = (CrossReference)cRebuttalAssignment_2.eContents().get(0);
-		private final RuleCall cRebuttalArgumentIDTerminalRuleCall_2_0_1 = (RuleCall)cRebuttalArgumentCrossReference_2_0.eContents().get(1);
-		private final Keyword cColonKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cFromAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final CrossReference cFromArgumentCrossReference_4_0 = (CrossReference)cFromAssignment_4.eContents().get(0);
-		private final RuleCall cFromArgumentIDTerminalRuleCall_4_0_1 = (RuleCall)cFromArgumentCrossReference_4_0.eContents().get(1);
-		private final Keyword cMitigatedByKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cToAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final CrossReference cToArgumentCrossReference_6_0 = (CrossReference)cToAssignment_6.eContents().get(0);
-		private final RuleCall cToArgumentIDTerminalRuleCall_6_0_1 = (RuleCall)cToArgumentCrossReference_6_0.eContents().get(1);
+		private final Assignment cFromAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final CrossReference cFromArgumentCrossReference_0_0 = (CrossReference)cFromAssignment_0.eContents().get(0);
+		private final RuleCall cFromArgumentIDTerminalRuleCall_0_0_1 = (RuleCall)cFromArgumentCrossReference_0_0.eContents().get(1);
+		private final Keyword cMitigatedByKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cToAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cToArgumentCrossReference_2_0 = (CrossReference)cToAssignment_2.eContents().get(0);
+		private final RuleCall cToArgumentIDTerminalRuleCall_2_0_1 = (RuleCall)cToArgumentCrossReference_2_0.eContents().get(1);
+		private final Keyword cOnKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cRebuttalAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final CrossReference cRebuttalArgumentCrossReference_4_0 = (CrossReference)cRebuttalAssignment_4.eContents().get(0);
+		private final RuleCall cRebuttalArgumentIDTerminalRuleCall_4_0_1 = (RuleCall)cRebuttalArgumentCrossReference_4_0.eContents().get(1);
 		
 		//Mitigates:
-		//	"for" label=STRING rebuttal=[Argument] ":" from=[Argument] "mitigated by" to=[Argument];
+		//	from=[Argument] "mitigated by" to=[Argument] "on" rebuttal=[Argument];
 		public ParserRule getRule() { return rule; }
 
-		//"for" label=STRING rebuttal=[Argument] ":" from=[Argument] "mitigated by" to=[Argument]
+		//from=[Argument] "mitigated by" to=[Argument] "on" rebuttal=[Argument]
 		public Group getGroup() { return cGroup; }
 
-		//"for"
-		public Keyword getForKeyword_0() { return cForKeyword_0; }
-
-		//label=STRING
-		public Assignment getLabelAssignment_1() { return cLabelAssignment_1; }
-
-		//STRING
-		public RuleCall getLabelSTRINGTerminalRuleCall_1_0() { return cLabelSTRINGTerminalRuleCall_1_0; }
-
-		//rebuttal=[Argument]
-		public Assignment getRebuttalAssignment_2() { return cRebuttalAssignment_2; }
-
-		//[Argument]
-		public CrossReference getRebuttalArgumentCrossReference_2_0() { return cRebuttalArgumentCrossReference_2_0; }
-
-		//ID
-		public RuleCall getRebuttalArgumentIDTerminalRuleCall_2_0_1() { return cRebuttalArgumentIDTerminalRuleCall_2_0_1; }
-
-		//":"
-		public Keyword getColonKeyword_3() { return cColonKeyword_3; }
-
 		//from=[Argument]
-		public Assignment getFromAssignment_4() { return cFromAssignment_4; }
+		public Assignment getFromAssignment_0() { return cFromAssignment_0; }
 
 		//[Argument]
-		public CrossReference getFromArgumentCrossReference_4_0() { return cFromArgumentCrossReference_4_0; }
+		public CrossReference getFromArgumentCrossReference_0_0() { return cFromArgumentCrossReference_0_0; }
 
 		//ID
-		public RuleCall getFromArgumentIDTerminalRuleCall_4_0_1() { return cFromArgumentIDTerminalRuleCall_4_0_1; }
+		public RuleCall getFromArgumentIDTerminalRuleCall_0_0_1() { return cFromArgumentIDTerminalRuleCall_0_0_1; }
 
 		//"mitigated by"
-		public Keyword getMitigatedByKeyword_5() { return cMitigatedByKeyword_5; }
+		public Keyword getMitigatedByKeyword_1() { return cMitigatedByKeyword_1; }
 
 		//to=[Argument]
-		public Assignment getToAssignment_6() { return cToAssignment_6; }
+		public Assignment getToAssignment_2() { return cToAssignment_2; }
 
 		//[Argument]
-		public CrossReference getToArgumentCrossReference_6_0() { return cToArgumentCrossReference_6_0; }
+		public CrossReference getToArgumentCrossReference_2_0() { return cToArgumentCrossReference_2_0; }
 
 		//ID
-		public RuleCall getToArgumentIDTerminalRuleCall_6_0_1() { return cToArgumentIDTerminalRuleCall_6_0_1; }
+		public RuleCall getToArgumentIDTerminalRuleCall_2_0_1() { return cToArgumentIDTerminalRuleCall_2_0_1; }
+
+		//"on"
+		public Keyword getOnKeyword_3() { return cOnKeyword_3; }
+
+		//rebuttal=[Argument]
+		public Assignment getRebuttalAssignment_4() { return cRebuttalAssignment_4; }
+
+		//[Argument]
+		public CrossReference getRebuttalArgumentCrossReference_4_0() { return cRebuttalArgumentCrossReference_4_0; }
+
+		//ID
+		public RuleCall getRebuttalArgumentIDTerminalRuleCall_4_0_1() { return cRebuttalArgumentIDTerminalRuleCall_4_0_1; }
 	}
 	
 	
@@ -590,7 +578,7 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Mitigates:
-	//	"for" label=STRING rebuttal=[Argument] ":" from=[Argument] "mitigated by" to=[Argument];
+	//	from=[Argument] "mitigated by" to=[Argument] "on" rebuttal=[Argument];
 	public MitigatesElements getMitigatesAccess() {
 		return (pMitigates != null) ? pMitigates : (pMitigates = new MitigatesElements());
 	}

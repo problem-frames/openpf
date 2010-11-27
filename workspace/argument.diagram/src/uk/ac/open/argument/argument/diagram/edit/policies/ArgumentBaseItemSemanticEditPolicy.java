@@ -356,6 +356,20 @@ public class ArgumentBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
+		public boolean canCreateMitigatesRebuttal_4004(Mitigates source,
+				Argument target) {
+			if (source != null) {
+				if (source.getRebuttal() != null) {
+					return false;
+				}
+			}
+
+			return canExistMitigatesRebuttal_4004(source, target);
+		}
+
+		/**
+		 * @generated
+		 */
 		public boolean canExistRebuts_4001(ArgumentDiagram container,
 				Rebuts linkInstance, Argument source, Argument target) {
 			return true;
@@ -373,6 +387,14 @@ public class ArgumentBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		 * @generated
 		 */
 		public boolean canExistArgumentOrigin_4003(Argument source,
+				Argument target) {
+			return true;
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canExistMitigatesRebuttal_4004(Mitigates source,
 				Argument target) {
 			return true;
 		}
