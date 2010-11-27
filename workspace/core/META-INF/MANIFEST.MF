@@ -1,16 +1,16 @@
 Manifest-Version: 1.0
-Export-Package: edu.toronto.cs.openome.core.action,edu.toronto.cs.open
- ome.core.convertor,edu.toronto.cs.openome.core.plugin,edu.toronto.cs.
- openome.core.ui,uk.ac.open
 Require-Bundle: org.eclipse.core.resources,org.eclipse.ui.ide,org.ecli
  pse.core.runtime,org.eclipse.osgi,org.eclipse.swtbot.eclipse.core,org
  .eclipse.swtbot.eclipse.finder,org.eclipse.swtbot.junit4_x,org.hamcre
  st,org.junit4,org.apache.log4j,org.eclipse.ui
+Export-Package: edu.toronto.cs.openome.core.action,edu.toronto.cs.open
+ ome.core.convertor,edu.toronto.cs.openome.core.plugin,edu.toronto.cs.
+ openome.core.ui,uk.ac.open
 Bundle-ActivationPolicy: lazy
 Bundle-Version: 1.0.0
 Bundle-Name: Core Plug-in
-Bundle-ManifestVersion: 2
 Bundle-Activator: edu.toronto.cs.openome.core.plugin.Activator
+Bundle-ManifestVersion: 2
 Bundle-SymbolicName: core;singleton:=true
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 

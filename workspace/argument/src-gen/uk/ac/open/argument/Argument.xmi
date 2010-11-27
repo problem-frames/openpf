@@ -146,6 +146,19 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/argument/Argument#//Mitigates"/>
       </type>
       <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Keyword" value="for"/>
+        <elements xsi:type="xtext:Assignment" feature="label" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="rebuttal" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.1">
+              <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/argument/Argument#//Argument"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value=":"/>
         <elements xsi:type="xtext:Assignment" feature="from" operator="=">
           <terminal xsi:type="xtext:CrossReference">
             <type metamodel="/0/@metamodelDeclarations.1">
@@ -162,20 +175,6 @@
             </type>
             <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
           </terminal>
-        </elements>
-        <elements xsi:type="xtext:Group" cardinality="?">
-          <elements xsi:type="xtext:Keyword" value="for"/>
-          <elements xsi:type="xtext:Assignment" cardinality="?" feature="name" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
-          </elements>
-          <elements xsi:type="xtext:Assignment" cardinality="?" feature="rebuttal" operator="=">
-            <terminal xsi:type="xtext:CrossReference">
-              <type metamodel="/0/@metamodelDeclarations.1">
-                <classifier xsi:type="ecore:EClass" href="http://www.ac.uk/open/argument/Argument#//Argument"/>
-              </type>
-              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
-            </terminal>
-          </elements>
         </elements>
       </alternatives>
     </rules>

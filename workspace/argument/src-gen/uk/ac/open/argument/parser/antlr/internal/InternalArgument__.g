@@ -21,34 +21,34 @@ T23 : ',' ;
 T24 : 'warranted by' ;
 T25 : '}' ;
 T26 : 'rebutted by' ;
-T27 : 'mitigated by' ;
-T28 : 'for' ;
-
-// $ANTLR src "../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g" 699
-RULE_INT : ('0'|'1'..'9' ('0'..'9')*);
-
-// $ANTLR src "../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g" 701
-RULE_BOOLEAN : ('true'|'false');
+T27 : 'for' ;
+T28 : 'mitigated by' ;
 
 // $ANTLR src "../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g" 703
-RULE_ID : ('#' ~('#')+ '#'|'^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*);
+RULE_INT : ('0'|'1'..'9' ('0'..'9')*);
 
 // $ANTLR src "../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g" 705
-RULE_QUALIFIED_NAME : RULE_ID ('.' RULE_ID)*;
+RULE_BOOLEAN : ('true'|'false');
 
 // $ANTLR src "../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g" 707
-RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\'');
+RULE_ID : ('#' ~('#')+ '#'|'^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*);
 
 // $ANTLR src "../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g" 709
-RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
+RULE_QUALIFIED_NAME : RULE_ID ('.' RULE_ID)*;
 
 // $ANTLR src "../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g" 711
-RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
+RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\'');
 
 // $ANTLR src "../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g" 713
-RULE_WS : (' '|'\t'|'\r'|'\n')+;
+RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 
 // $ANTLR src "../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g" 715
+RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
+
+// $ANTLR src "../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g" 717
+RULE_WS : (' '|'\t'|'\r'|'\n')+;
+
+// $ANTLR src "../argument/src-gen/uk/ac/open/argument/parser/antlr/internal/InternalArgument.g" 719
 RULE_ANY_OTHER : .;
 
 

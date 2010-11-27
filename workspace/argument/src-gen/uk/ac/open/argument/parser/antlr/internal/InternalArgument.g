@@ -615,47 +615,15 @@ ruleMitigates returns [EObject current=null]
     @after { resetLookahead(); 
     	lastConsumedNode = currentNode;
     }:
-((
-(
-		{
-			if ($current==null) {
-	            $current = factory.create(grammarAccess.getMitigatesRule().getType().getClassifier());
-	            associateNodeWithAstElement(currentNode, $current);
-	        }
-        }
-	RULE_ID
-	{
-		createLeafNode(grammarAccess.getMitigatesAccess().getFromArgumentCrossReference_0_0(), "from"); 
-	}
-
-)
-)	'mitigated by' 
+(	'for' 
     {
-        createLeafNode(grammarAccess.getMitigatesAccess().getMitigatedByKeyword_1(), null); 
+        createLeafNode(grammarAccess.getMitigatesAccess().getForKeyword_0(), null); 
     }
 (
 (
+		lv_label_1_0=RULE_STRING
 		{
-			if ($current==null) {
-	            $current = factory.create(grammarAccess.getMitigatesRule().getType().getClassifier());
-	            associateNodeWithAstElement(currentNode, $current);
-	        }
-        }
-	RULE_ID
-	{
-		createLeafNode(grammarAccess.getMitigatesAccess().getToArgumentCrossReference_2_0(), "to"); 
-	}
-
-)
-)(	'for' 
-    {
-        createLeafNode(grammarAccess.getMitigatesAccess().getForKeyword_3_0(), null); 
-    }
-(
-(
-		lv_name_4_0=RULE_STRING
-		{
-			createLeafNode(grammarAccess.getMitigatesAccess().getNameSTRINGTerminalRuleCall_3_1_0(), "name"); 
+			createLeafNode(grammarAccess.getMitigatesAccess().getLabelSTRINGTerminalRuleCall_1_0(), "label"); 
 		}
 		{
 	        if ($current==null) {
@@ -665,8 +633,8 @@ ruleMitigates returns [EObject current=null]
 	        try {
 	       		set(
 	       			$current, 
-	       			"name",
-	        		lv_name_4_0, 
+	       			"label",
+	        		lv_label_1_0, 
 	        		"STRING", 
 	        		lastConsumedNode);
 	        } catch (ValueConverterException vce) {
@@ -675,7 +643,7 @@ ruleMitigates returns [EObject current=null]
 	    }
 
 )
-)?(
+)(
 (
 		{
 			if ($current==null) {
@@ -685,11 +653,47 @@ ruleMitigates returns [EObject current=null]
         }
 	RULE_ID
 	{
-		createLeafNode(grammarAccess.getMitigatesAccess().getRebuttalArgumentCrossReference_3_2_0(), "rebuttal"); 
+		createLeafNode(grammarAccess.getMitigatesAccess().getRebuttalArgumentCrossReference_2_0(), "rebuttal"); 
 	}
 
 )
-)?)?)
+)	':' 
+    {
+        createLeafNode(grammarAccess.getMitigatesAccess().getColonKeyword_3(), null); 
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = factory.create(grammarAccess.getMitigatesRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode, $current);
+	        }
+        }
+	RULE_ID
+	{
+		createLeafNode(grammarAccess.getMitigatesAccess().getFromArgumentCrossReference_4_0(), "from"); 
+	}
+
+)
+)	'mitigated by' 
+    {
+        createLeafNode(grammarAccess.getMitigatesAccess().getMitigatedByKeyword_5(), null); 
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = factory.create(grammarAccess.getMitigatesRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode, $current);
+	        }
+        }
+	RULE_ID
+	{
+		createLeafNode(grammarAccess.getMitigatesAccess().getToArgumentCrossReference_6_0(), "to"); 
+	}
+
+)
+))
 ;
 
 

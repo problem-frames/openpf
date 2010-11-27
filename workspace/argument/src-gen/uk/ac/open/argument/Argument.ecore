@@ -3,13 +3,7 @@
     xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="argument"
     nsURI="http://www.ac.uk/open/argument/Argument" nsPrefix="argument">
-  <eAnnotations source="gmf">
-    <details key="foo" value="bar"/>
-  </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="ArgumentDiagram">
-    <eAnnotations source="gmf.diagram">
-      <details key="foo" value="bar"/>
-    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="nodes" upperBound="-1"
         eType="#//Argument" containment="true"/>
@@ -17,66 +11,27 @@
         eType="#//Link" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Argument">
-    <eAnnotations source="gmf.node">
-      <details key="label" value="name, description, expr, round"/>
-      <details key="label.pattern" value="{0}: {1}\n {2} #{3}"/>
-      <details key="label.icon" value="false"/>
-    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="round" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="expr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="origin" eType="#//Argument">
-      <eAnnotations source="gmf.link">
-        <details key="target" value="origin"/>
-        <details key="style" value="dash"/>
-        <details key="width" value="2"/>
-        <details key="color" value="160,32,240"/>
-        <details key="target.decoration" value="arrow"/>
-      </eAnnotations>
-    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="origin" eType="#//Argument"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="foreground" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="background" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="shape" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="image" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="grounds" upperBound="-1"
-        eType="#//Argument" containment="true">
-      <eAnnotations source="gmf.compartment">
-        <details key="foo" value="bar"/>
-      </eAnnotations>
-    </eStructuralFeatures>
+        eType="#//Argument" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="warrants" upperBound="-1"
-        eType="#//Argument" containment="true">
-      <eAnnotations source="gmf.compartment">
-        <details key="foo" value="bar"/>
-      </eAnnotations>
-    </eStructuralFeatures>
+        eType="#//Argument" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Link">
     <eStructuralFeatures xsi:type="ecore:EReference" name="from" eType="#//Argument"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="to" eType="#//Argument"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Rebuts" eSuperTypes="#//Link">
-    <eAnnotations source="gmf.link">
-      <details key="source" value="from"/>
-      <details key="target" value="to"/>
-      <details key="style" value="dot"/>
-      <details key="width" value="2"/>
-      <details key="color" value="255,0,0"/>
-      <details key="target.decoration" value="arrow"/>
-    </eAnnotations>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Rebuts" eSuperTypes="#//Link"/>
   <eClassifiers xsi:type="ecore:EClass" name="Mitigates" eSuperTypes="#//Link">
-    <eAnnotations source="gmf.link">
-      <details key="source" value="from"/>
-      <details key="target" value="to"/>
-      <details key="label" value="name"/>
-      <details key="style" value="solid"/>
-      <details key="width" value="2"/>
-      <details key="color" value="0,255,0"/>
-      <details key="target.decoration" value="arrow"/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="rebuttal" eType="#//Argument"/>
   </eClassifiers>
 </ecore:EPackage>

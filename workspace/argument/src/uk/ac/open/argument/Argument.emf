@@ -40,7 +40,7 @@ class Rebuts extends Link {
 
 @gmf.link(source="from", target="to", label="name", style="solid", width="2", color="0,0,255", target.decoration="arrow")
 class Mitigates extends Link {
-  attr String name;
+  attr String label;
   ref Argument rebuttal;
 }
 

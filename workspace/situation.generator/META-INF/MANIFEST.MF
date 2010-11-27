@@ -9,8 +9,8 @@ Bundle-ActivationPolicy: lazy
 Bundle-Version: 1.0.0
 Bundle-Name: situation.generator
 Bundle-ManifestVersion: 2
-Bundle-SymbolicName: situation.generator; singleton:=true
 Import-Package: org.apache.log4j
+Bundle-SymbolicName: situation.generator; singleton:=true
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 
 
