@@ -125,7 +125,7 @@ public class LinkEditPart extends ConnectionNodeEditPart implements
 			this.setLineStyle(Graphics.LINE_DASH);
 
 			createContents();
-			setTargetDecoration(createTargetDecoration());
+			setSourceDecoration(createSourceDecoration());
 		}
 
 		/**
@@ -143,7 +143,7 @@ public class LinkEditPart extends ConnectionNodeEditPart implements
 		/**
 		 * @generated
 		 */
-		private RotatableDecoration createTargetDecoration() {
+		private RotatableDecoration createSourceDecoration() {
 			PolylineDecoration df = new PolylineDecoration();
 			df.setForegroundColor(ColorConstants.black);
 			df.setBackgroundColor(ColorConstants.black);

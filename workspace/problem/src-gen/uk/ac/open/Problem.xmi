@@ -243,11 +243,15 @@
         </elements>
         <elements xsi:type="xtext:EnumLiteralDeclaration">
           <enumLiteral href="http://open.ac.uk/problem#//LinkType/CONSTRAINT"/>
-          <literal value="~>"/>
+          <literal value="&lt;~"/>
         </elements>
         <elements xsi:type="xtext:EnumLiteralDeclaration">
           <enumLiteral href="http://open.ac.uk/problem#//LinkType/CONCERN"/>
           <literal value="->"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://open.ac.uk/problem#//LinkType/INV_CONSTRAINT"/>
+          <literal value="~>"/>
         </elements>
       </alternatives>
     </rules>

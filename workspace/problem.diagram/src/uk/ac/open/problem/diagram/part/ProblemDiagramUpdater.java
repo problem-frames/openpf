@@ -119,7 +119,7 @@ public class ProblemDiagramUpdater {
 		case Node7EditPart.VISUAL_ID:
 			return getNode_2007ContainedLinks(view);
 		case Node8EditPart.VISUAL_ID:
-			return getNode_2009ContainedLinks(view);
+			return getNode_2008ContainedLinks(view);
 		case LinkEditPart.VISUAL_ID:
 			return getLink_4001ContainedLinks(view);
 		case Link2EditPart.VISUAL_ID:
@@ -152,7 +152,7 @@ public class ProblemDiagramUpdater {
 		case Node7EditPart.VISUAL_ID:
 			return getNode_2007IncomingLinks(view);
 		case Node8EditPart.VISUAL_ID:
-			return getNode_2009IncomingLinks(view);
+			return getNode_2008IncomingLinks(view);
 		case LinkEditPart.VISUAL_ID:
 			return getLink_4001IncomingLinks(view);
 		case Link2EditPart.VISUAL_ID:
@@ -185,7 +185,7 @@ public class ProblemDiagramUpdater {
 		case Node7EditPart.VISUAL_ID:
 			return getNode_2007OutgoingLinks(view);
 		case Node8EditPart.VISUAL_ID:
-			return getNode_2009OutgoingLinks(view);
+			return getNode_2008OutgoingLinks(view);
 		case LinkEditPart.VISUAL_ID:
 			return getLink_4001OutgoingLinks(view);
 		case Link2EditPart.VISUAL_ID:
@@ -271,7 +271,7 @@ public class ProblemDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ProblemLinkDescriptor> getNode_2009ContainedLinks(
+	public static List<ProblemLinkDescriptor> getNode_2008ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -451,7 +451,7 @@ public class ProblemDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ProblemLinkDescriptor> getNode_2009IncomingLinks(
+	public static List<ProblemLinkDescriptor> getNode_2008IncomingLinks(
 			View view) {
 		Node modelElement = (Node) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
@@ -601,7 +601,7 @@ public class ProblemDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ProblemLinkDescriptor> getNode_2009OutgoingLinks(
+	public static List<ProblemLinkDescriptor> getNode_2008OutgoingLinks(
 			View view) {
 		Node modelElement = (Node) view.getElement();
 		LinkedList<ProblemLinkDescriptor> result = new LinkedList<ProblemLinkDescriptor>();

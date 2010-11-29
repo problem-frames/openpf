@@ -61,7 +61,8 @@ import uk.ac.open.problem.diagram.part.ProblemVisualIDRegistry;
 /**
  * @generated NOT
  */
-public class ProblemDiagramCanonicalEditPolicy extends CanonicalConnectionEditPolicy {
+public class ProblemDiagramCanonicalEditPolicy extends
+		CanonicalConnectionEditPolicy {
 
 	/**
 	 * @generated
@@ -403,7 +404,7 @@ public class ProblemDiagramCanonicalEditPolicy extends CanonicalConnectionEditPo
 		case Node8EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(ProblemDiagramUpdater
-						.getNode_2009ContainedLinks(view));
+						.getNode_2008ContainedLinks(view));
 			}
 			if (!domain2NotationMap.containsKey(view.getElement())
 					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
@@ -557,6 +558,6 @@ public class ProblemDiagramCanonicalEditPolicy extends CanonicalConnectionEditPo
 	@Override
 	protected boolean shouldDeleteView(View view) {
 		return true;
-//		return ViewUtil.resolveSemanticElement(view) == null;
+		//		return ViewUtil.resolveSemanticElement(view) == null;
 	}
 }

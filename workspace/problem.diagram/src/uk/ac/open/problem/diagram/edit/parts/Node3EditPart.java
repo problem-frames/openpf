@@ -394,7 +394,7 @@ public class Node3EditPart extends ShapeNodeEditPart {
 			types.add(ProblemElementTypes.Node_2005);
 			types.add(ProblemElementTypes.Node_2006);
 			types.add(ProblemElementTypes.Node_2007);
-			types.add(ProblemElementTypes.Node_2009);
+			types.add(ProblemElementTypes.Node_2008);
 		} else if (relationshipType == ProblemElementTypes.Link_4002) {
 			types.add(ProblemElementTypes.Node_2001);
 			types.add(ProblemElementTypes.Node_2002);
@@ -403,7 +403,7 @@ public class Node3EditPart extends ShapeNodeEditPart {
 			types.add(ProblemElementTypes.Node_2005);
 			types.add(ProblemElementTypes.Node_2006);
 			types.add(ProblemElementTypes.Node_2007);
-			types.add(ProblemElementTypes.Node_2009);
+			types.add(ProblemElementTypes.Node_2008);
 		} else if (relationshipType == ProblemElementTypes.Link_4003) {
 			types.add(ProblemElementTypes.Node_2001);
 			types.add(ProblemElementTypes.Node_2002);
@@ -412,7 +412,7 @@ public class Node3EditPart extends ShapeNodeEditPart {
 			types.add(ProblemElementTypes.Node_2005);
 			types.add(ProblemElementTypes.Node_2006);
 			types.add(ProblemElementTypes.Node_2007);
-			types.add(ProblemElementTypes.Node_2009);
+			types.add(ProblemElementTypes.Node_2008);
 		} else if (relationshipType == ProblemElementTypes.Link_4004) {
 			types.add(ProblemElementTypes.Node_2001);
 			types.add(ProblemElementTypes.Node_2002);
@@ -421,7 +421,7 @@ public class Node3EditPart extends ShapeNodeEditPart {
 			types.add(ProblemElementTypes.Node_2005);
 			types.add(ProblemElementTypes.Node_2006);
 			types.add(ProblemElementTypes.Node_2007);
-			types.add(ProblemElementTypes.Node_2009);
+			types.add(ProblemElementTypes.Node_2008);
 		}
 		return types;
 	}
@@ -451,7 +451,7 @@ public class Node3EditPart extends ShapeNodeEditPart {
 			types.add(ProblemElementTypes.Node_2005);
 			types.add(ProblemElementTypes.Node_2006);
 			types.add(ProblemElementTypes.Node_2007);
-			types.add(ProblemElementTypes.Node_2009);
+			types.add(ProblemElementTypes.Node_2008);
 		} else if (relationshipType == ProblemElementTypes.Link_4002) {
 			types.add(ProblemElementTypes.Node_2001);
 			types.add(ProblemElementTypes.Node_2002);
@@ -460,7 +460,7 @@ public class Node3EditPart extends ShapeNodeEditPart {
 			types.add(ProblemElementTypes.Node_2005);
 			types.add(ProblemElementTypes.Node_2006);
 			types.add(ProblemElementTypes.Node_2007);
-			types.add(ProblemElementTypes.Node_2009);
+			types.add(ProblemElementTypes.Node_2008);
 		} else if (relationshipType == ProblemElementTypes.Link_4003) {
 			types.add(ProblemElementTypes.Node_2001);
 			types.add(ProblemElementTypes.Node_2002);
@@ -469,7 +469,7 @@ public class Node3EditPart extends ShapeNodeEditPart {
 			types.add(ProblemElementTypes.Node_2005);
 			types.add(ProblemElementTypes.Node_2006);
 			types.add(ProblemElementTypes.Node_2007);
-			types.add(ProblemElementTypes.Node_2009);
+			types.add(ProblemElementTypes.Node_2008);
 		} else if (relationshipType == ProblemElementTypes.Link_4004) {
 			types.add(ProblemElementTypes.Node_2001);
 			types.add(ProblemElementTypes.Node_2002);
@@ -478,7 +478,7 @@ public class Node3EditPart extends ShapeNodeEditPart {
 			types.add(ProblemElementTypes.Node_2005);
 			types.add(ProblemElementTypes.Node_2006);
 			types.add(ProblemElementTypes.Node_2007);
-			types.add(ProblemElementTypes.Node_2009);
+			types.add(ProblemElementTypes.Node_2008);
 		}
 		return types;
 	}

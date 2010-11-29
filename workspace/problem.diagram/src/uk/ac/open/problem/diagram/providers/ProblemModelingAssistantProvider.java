@@ -53,7 +53,7 @@ public class ProblemModelingAssistantProvider extends ModelingAssistantProvider 
 			types.add(ProblemElementTypes.Node_2005);
 			types.add(ProblemElementTypes.Node_2006);
 			types.add(ProblemElementTypes.Node_2007);
-			types.add(ProblemElementTypes.Node_2009);
+			types.add(ProblemElementTypes.Node_2008);
 			return types;
 		}
 		return Collections.EMPTY_LIST;

@@ -20,3 +20,4 @@ test/p2
 test/screenshots
 *.log
 00*
+*.tmp

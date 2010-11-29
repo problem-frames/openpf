@@ -146,7 +146,7 @@ public class ElementInitializers {
 	/**
 	 * @generated
 	 */
-	public void init_Node_2009(Node instance) {
+	public void init_Node_2008(Node instance) {
 		try {
 			Object value_0 = ProblemOCLFactory.getExpression(15,
 					ProblemPackage.eINSTANCE.getNode(), null)

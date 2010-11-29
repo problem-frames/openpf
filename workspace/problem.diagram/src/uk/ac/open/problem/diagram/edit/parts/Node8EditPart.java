@@ -44,6 +44,7 @@ import uk.ac.open.problem.Node;
 import uk.ac.open.problem.NodeType;
 import uk.ac.open.problem.ProblemPackage;
 import uk.ac.open.problem.diagram.edit.policies.Node7ItemSemanticEditPolicy;
+import uk.ac.open.problem.diagram.edit.policies.Node8ItemSemanticEditPolicy;
 import uk.ac.open.problem.diagram.edit.policies.OpenDiagramEditPolicy;
 import uk.ac.open.problem.diagram.part.ProblemVisualIDRegistry;
 import uk.ac.open.problem.diagram.providers.ProblemElementTypes;
@@ -56,7 +57,7 @@ public class Node8EditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2009;
+	public static final int VISUAL_ID = 2008;
 
 	/**
 	 * @generated
@@ -375,7 +376,7 @@ public class Node8EditPart extends ShapeNodeEditPart {
 			types.add(ProblemElementTypes.Node_2005);
 			types.add(ProblemElementTypes.Node_2006);
 			types.add(ProblemElementTypes.Node_2007);
-			types.add(ProblemElementTypes.Node_2009);
+			types.add(ProblemElementTypes.Node_2008);
 		} else if (relationshipType == ProblemElementTypes.Link_4002) {
 			types.add(ProblemElementTypes.Node_2001);
 			types.add(ProblemElementTypes.Node_2002);
@@ -384,7 +385,7 @@ public class Node8EditPart extends ShapeNodeEditPart {
 			types.add(ProblemElementTypes.Node_2005);
 			types.add(ProblemElementTypes.Node_2006);
 			types.add(ProblemElementTypes.Node_2007);
-			types.add(ProblemElementTypes.Node_2009);
+			types.add(ProblemElementTypes.Node_2008);
 		} else if (relationshipType == ProblemElementTypes.Link_4003) {
 			types.add(ProblemElementTypes.Node_2001);
 			types.add(ProblemElementTypes.Node_2002);
@@ -393,7 +394,7 @@ public class Node8EditPart extends ShapeNodeEditPart {
 			types.add(ProblemElementTypes.Node_2005);
 			types.add(ProblemElementTypes.Node_2006);
 			types.add(ProblemElementTypes.Node_2007);
-			types.add(ProblemElementTypes.Node_2009);
+			types.add(ProblemElementTypes.Node_2008);
 		} else if (relationshipType == ProblemElementTypes.Link_4004) {
 			types.add(ProblemElementTypes.Node_2001);
 			types.add(ProblemElementTypes.Node_2002);
@@ -402,7 +403,7 @@ public class Node8EditPart extends ShapeNodeEditPart {
 			types.add(ProblemElementTypes.Node_2005);
 			types.add(ProblemElementTypes.Node_2006);
 			types.add(ProblemElementTypes.Node_2007);
-			types.add(ProblemElementTypes.Node_2009);
+			types.add(ProblemElementTypes.Node_2008);
 		}
 		return types;
 	}
@@ -432,7 +433,7 @@ public class Node8EditPart extends ShapeNodeEditPart {
 			types.add(ProblemElementTypes.Node_2005);
 			types.add(ProblemElementTypes.Node_2006);
 			types.add(ProblemElementTypes.Node_2007);
-			types.add(ProblemElementTypes.Node_2009);
+			types.add(ProblemElementTypes.Node_2008);
 		} else if (relationshipType == ProblemElementTypes.Link_4002) {
 			types.add(ProblemElementTypes.Node_2001);
 			types.add(ProblemElementTypes.Node_2002);
@@ -441,7 +442,7 @@ public class Node8EditPart extends ShapeNodeEditPart {
 			types.add(ProblemElementTypes.Node_2005);
 			types.add(ProblemElementTypes.Node_2006);
 			types.add(ProblemElementTypes.Node_2007);
-			types.add(ProblemElementTypes.Node_2009);
+			types.add(ProblemElementTypes.Node_2008);
 		} else if (relationshipType == ProblemElementTypes.Link_4003) {
 			types.add(ProblemElementTypes.Node_2001);
 			types.add(ProblemElementTypes.Node_2002);
@@ -450,7 +451,7 @@ public class Node8EditPart extends ShapeNodeEditPart {
 			types.add(ProblemElementTypes.Node_2005);
 			types.add(ProblemElementTypes.Node_2006);
 			types.add(ProblemElementTypes.Node_2007);
-			types.add(ProblemElementTypes.Node_2009);
+			types.add(ProblemElementTypes.Node_2008);
 		} else if (relationshipType == ProblemElementTypes.Link_4004) {
 			types.add(ProblemElementTypes.Node_2001);
 			types.add(ProblemElementTypes.Node_2002);
@@ -459,7 +460,7 @@ public class Node8EditPart extends ShapeNodeEditPart {
 			types.add(ProblemElementTypes.Node_2005);
 			types.add(ProblemElementTypes.Node_2006);
 			types.add(ProblemElementTypes.Node_2007);
-			types.add(ProblemElementTypes.Node_2009);
+			types.add(ProblemElementTypes.Node_2008);
 		}
 		return types;
 	}

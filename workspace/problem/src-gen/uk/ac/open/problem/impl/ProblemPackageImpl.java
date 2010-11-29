@@ -569,6 +569,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
     addEEnumLiteral(linkTypeEEnum, LinkType.REFERENCE);
     addEEnumLiteral(linkTypeEEnum, LinkType.CONSTRAINT);
     addEEnumLiteral(linkTypeEEnum, LinkType.CONCERN);
+    addEEnumLiteral(linkTypeEEnum, LinkType.INV_CONSTRAINT);
 
     // Create resource
     createResource(eNS_URI);

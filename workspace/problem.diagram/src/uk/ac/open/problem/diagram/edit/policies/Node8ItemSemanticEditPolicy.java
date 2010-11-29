@@ -41,7 +41,7 @@ public class Node8ItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public Node8ItemSemanticEditPolicy() {
-		super(ProblemElementTypes.Node_2009);
+		super(ProblemElementTypes.Node_2008);
 	}
 
 	/**

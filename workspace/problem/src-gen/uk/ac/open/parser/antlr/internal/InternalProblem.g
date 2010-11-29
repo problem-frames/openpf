@@ -835,7 +835,7 @@ ruleLinkType returns [Enumerator current=null]
         createLeafNode(grammarAccess.getLinkTypeAccess().getREFERENCEEnumLiteralDeclaration_1(), null); 
     }
 )
-    |(	'~>' 
+    |(	'<~' 
 	{
         $current = grammarAccess.getLinkTypeAccess().getCONSTRAINTEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
         createLeafNode(grammarAccess.getLinkTypeAccess().getCONSTRAINTEnumLiteralDeclaration_2(), null); 
@@ -845,6 +845,12 @@ ruleLinkType returns [Enumerator current=null]
 	{
         $current = grammarAccess.getLinkTypeAccess().getCONCERNEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
         createLeafNode(grammarAccess.getLinkTypeAccess().getCONCERNEnumLiteralDeclaration_3(), null); 
+    }
+)
+    |(	'~>' 
+	{
+        $current = grammarAccess.getLinkTypeAccess().getINV_CONSTRAINTEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
+        createLeafNode(grammarAccess.getLinkTypeAccess().getINV_CONSTRAINTEnumLiteralDeclaration_4(), null); 
     }
 ));
 

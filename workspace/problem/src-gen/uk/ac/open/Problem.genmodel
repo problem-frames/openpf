@@ -27,6 +27,7 @@
       <genEnumLiterals ecoreEnumLiteral="Problem.ecore#//LinkType/REFERENCE"/>
       <genEnumLiterals ecoreEnumLiteral="Problem.ecore#//LinkType/CONSTRAINT"/>
       <genEnumLiterals ecoreEnumLiteral="Problem.ecore#//LinkType/CONCERN"/>
+      <genEnumLiterals ecoreEnumLiteral="Problem.ecore#//LinkType/INV_CONSTRAINT"/>
     </genEnums>
     <genClasses ecoreClass="Problem.ecore#//ProblemDiagram">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Problem.ecore#//ProblemDiagram/name"/>

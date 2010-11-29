@@ -36,8 +36,8 @@ public class ProblemDiagramEditPart extends DiagramEditPart {
 	 */
 	public ProblemDiagramEditPart(View view) {
 		super(view);
-//		//FIXME
-//		refresh();
+		//		//FIXME
+		//		refresh();
 	}
 
 	/**

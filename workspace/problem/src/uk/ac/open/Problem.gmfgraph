@@ -36,7 +36,7 @@
           name="ConstraintFigure"
           lineWidth="2"
           lineKind="LINE_DASH"
-          targetDecoration="//@figures.0/@figures.0">
+          sourceDecoration="//@figures.0/@figures.0">
         <children
             xsi:type="gmfgraph:Label"
             name="ConstraintNameFigure"/>

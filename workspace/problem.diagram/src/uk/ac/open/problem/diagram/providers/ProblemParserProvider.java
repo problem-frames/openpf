@@ -340,43 +340,43 @@ public class ProblemParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser nodeName_5017Parser;
+	private IParser nodeName_5015Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getNodeName_5017Parser() {
-		if (nodeName_5017Parser == null) {
+	private IParser getNodeName_5015Parser() {
+		if (nodeName_5015Parser == null) {
 			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getNode_Name() };
 			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getNode_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
-			nodeName_5017Parser = parser;
+			nodeName_5015Parser = parser;
 		}
-		return nodeName_5017Parser;
+		return nodeName_5015Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser nodeDescription_5018Parser;
+	private IParser nodeDescription_5016Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getNodeDescription_5018Parser() {
-		if (nodeDescription_5018Parser == null) {
+	private IParser getNodeDescription_5016Parser() {
+		if (nodeDescription_5016Parser == null) {
 			EAttribute[] features = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getNode_Description() };
 			EAttribute[] editableFeatures = new EAttribute[] { ProblemPackage.eINSTANCE
 					.getNode_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
-			nodeDescription_5018Parser = parser;
+			nodeDescription_5016Parser = parser;
 		}
-		return nodeDescription_5018Parser;
+		return nodeDescription_5016Parser;
 	}
 
 	/**
@@ -497,9 +497,9 @@ public class ProblemParserProvider extends AbstractProvider implements
 		case NodeDescription7EditPart.VISUAL_ID:
 			return getNodeDescription_5014Parser();
 		case NodeName7EditPart.VISUAL_ID:
-			return getNodeName_5017Parser();
+			return getNodeName_5015Parser();
 		case NodeDescription8EditPart.VISUAL_ID:
-			return getNodeDescription_5018Parser();
+			return getNodeDescription_5016Parser();
 		case LinkDescriptionEditPart.VISUAL_ID:
 			return getLinkDescription_6001Parser();
 		case LinkDescription2EditPart.VISUAL_ID:

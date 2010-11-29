@@ -440,27 +440,22 @@ public class ArgumentEditPart extends ShapeNodeEditPart {
 			createContents();
 		}
 
-		Argument node;
-
 		/**
 		 * @param node
 		 * @generated NOT
 		 */
 		public ArgumentFigure(Argument node) {
-			this.setCornerDimensions(new Dimension(getMapMode().DPtoLP(8),
-					getMapMode().DPtoLP(8)));
-			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5),
-					getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
-					getMapMode().DPtoLP(5)));
-			this.node = node;
-			createContents();
+			this();
+			if (node.getGrounds().size() + node.getWarrants().size() == 0) {
+				fArgumentGroundsCompartmentFigure.setVisible(false);
+				fArgumentWarrantsCompartmentFigure.setVisible(false);
+			}
 		}
 
 		/**
 		 * @generated NOT
 		 */
 		private void createContents() {
-
 			fFigureArgumentLabelFigure = new WrappingLabel();
 			fFigureArgumentLabelFigure.setText("Argument");
 			fFigureArgumentLabelFigure.setMaximumSize(new Dimension(
@@ -482,12 +477,6 @@ public class ArgumentEditPart extends ShapeNodeEditPart {
 			fArgumentWarrantsCompartmentFigure = new RectangleFigure();
 			fArgumentWarrantsCompartmentFigure.setOutline(false);
 			this.add(fArgumentWarrantsCompartmentFigure);
-			//			System.out.println(node.getGrounds().size()
-			//					+ node.getWarrants().size());
-			if (node.getGrounds().size() + node.getWarrants().size() == 0) {
-				fArgumentGroundsCompartmentFigure.setVisible(false);
-				fArgumentWarrantsCompartmentFigure.setVisible(false);
-			}
 		}
 
 		/**

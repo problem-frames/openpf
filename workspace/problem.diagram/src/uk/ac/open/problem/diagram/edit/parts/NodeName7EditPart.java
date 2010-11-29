@@ -56,7 +56,7 @@ public class NodeName7EditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5017;
+	public static final int VISUAL_ID = 5015;
 
 	/**
 	 * @generated
@@ -294,7 +294,7 @@ public class NodeName7EditPart extends CompartmentEditPart implements
 		if (parser == null) {
 			parser = ProblemParserProvider
 					.getParser(
-							ProblemElementTypes.Node_2009,
+							ProblemElementTypes.Node_2008,
 							getParserElement(),
 							ProblemVisualIDRegistry
 									.getType(uk.ac.open.problem.diagram.edit.parts.NodeName7EditPart.VISUAL_ID));

@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
+import org.eclipse.emf.workspace.util.WorkspaceSynchronizer;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gmf.runtime.common.core.command.CommandResult;
 import org.eclipse.gmf.runtime.diagram.core.services.ViewService;
@@ -228,9 +229,9 @@ public class ProblemDiagramEditorUtil extends ImageDiagramUtil {
 	}
 
 	/**
-	 * Store model element in the resource. <!-- begin-user-doc --> <!--
+	 * Store model element in the resource.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private static void attachModelToResource(ProblemDiagram model,
@@ -282,8 +283,7 @@ public class ProblemDiagramEditorUtil extends ImageDiagramUtil {
 		@SuppressWarnings("unchecked")
 		List<EditPart> associatedParts = viewer.findEditPartsForElement(
 				elementID, IGraphicalEditPart.class);
-		// perform the possible hierarchy disjoint -> take the top-most parts
-		// only
+		// perform the possible hierarchy disjoint -> take the top-most parts only
 		for (EditPart nextPart : associatedParts) {
 			EditPart parentPart = nextPart.getParent();
 			while (parentPart != null && !associatedParts.contains(parentPart)) {
@@ -366,16 +366,12 @@ public class ProblemDiagramEditorUtil extends ImageDiagramUtil {
 		public final Map<EObject, View> getElement2ViewMap() {
 			if (element2ViewMap == null) {
 				element2ViewMap = new HashMap<EObject, View>();
-				// map possible notation elements to itself as these can't be
-				// found by view.getElement()
+				// map possible notation elements to itself as these can't be found by view.getElement()
 				for (EObject element : elementSet) {
 					if (element instanceof View) {
 						View view = (View) element;
 						if (view.getDiagram() == scope.getDiagram()) {
-							element2ViewMap.put(element, view); // take only
-																// those that
-																// part of our
-																// diagram
+							element2ViewMap.put(element, view); // take only those that part of our diagram
 						}
 					}
 				}
@@ -422,5 +418,5 @@ public class ProblemDiagramEditorUtil extends ImageDiagramUtil {
 			return complete;
 		}
 	} // LazyElement2ViewMap
-	
+
 }

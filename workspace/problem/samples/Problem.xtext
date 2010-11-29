@@ -31,7 +31,7 @@ Link:
 	((":")? description=STRING)?;
 
 enum LinkType:
-	INTERFACE="--" | REFERENCE="~~" | CONSTRAINT="~>" | CONCERN="->";
+	INTERFACE="--" | REFERENCE="~~" | CONSTRAINT="<~" | CONCERN="->" | INV_CONSTRAINT="~>";
 
 terminal ID: ('#' (!('#'))+ '#') |
   ('^'? ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*);

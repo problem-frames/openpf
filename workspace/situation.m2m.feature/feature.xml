@@ -17,20 +17,6 @@
    </license>
 
    <plugin
-         id="PF2EC"
-         download-size="0"
-         install-size="0"
-         version="1.0.0.qualifier"
-         unpack="false"/>
-
-   <plugin
-         id="PF2EC.ui"
-         download-size="0"
-         install-size="0"
-         version="1.0.0.qualifier"
-         unpack="false"/>
-
-   <plugin
          id="pf2situation"
          download-size="0"
          install-size="0"

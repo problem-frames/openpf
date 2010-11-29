@@ -401,7 +401,7 @@ rule__LinkType__Alternatives
 
     |(
 { before(grammarAccess.getLinkTypeAccess().getCONSTRAINTEnumLiteralDeclaration_2()); }
-(	'~>' 
+(	'<~' 
 )
 { after(grammarAccess.getLinkTypeAccess().getCONSTRAINTEnumLiteralDeclaration_2()); }
 )
@@ -411,6 +411,13 @@ rule__LinkType__Alternatives
 (	'->' 
 )
 { after(grammarAccess.getLinkTypeAccess().getCONCERNEnumLiteralDeclaration_3()); }
+)
+
+    |(
+{ before(grammarAccess.getLinkTypeAccess().getINV_CONSTRAINTEnumLiteralDeclaration_4()); }
+(	'~>' 
+)
+{ after(grammarAccess.getLinkTypeAccess().getINV_CONSTRAINTEnumLiteralDeclaration_4()); }
 )
 
 ;

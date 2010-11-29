@@ -58,7 +58,8 @@
   <eClassifiers xsi:type="ecore:EEnum" name="LinkType">
     <eLiterals name="INTERFACE" literal="--"/>
     <eLiterals name="REFERENCE" value="1" literal="~~"/>
-    <eLiterals name="CONSTRAINT" value="2" literal="~>"/>
+    <eLiterals name="CONSTRAINT" value="2" literal="&lt;~"/>
     <eLiterals name="CONCERN" value="3" literal="->"/>
+    <eLiterals name="INV_CONSTRAINT" value="4" literal="~>"/>
   </eClassifiers>
 </ecore:EPackage>

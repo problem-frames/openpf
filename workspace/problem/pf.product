@@ -443,8 +443,8 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <plugin id="org.eclipse.jdt.junit.runtime"/>
       <plugin id="org.eclipse.jdt.junit4.runtime"/>
       <plugin id="org.eclipse.jdt.launching"/>
-      <plugin id="org.eclipse.jdt.launching.macosx" fragment=""/>
-      <plugin id="org.eclipse.jdt.launching.ui.macosx" fragment=""/>
+      <plugin id="org.eclipse.jdt.launching.macosx"/>
+      <plugin id="org.eclipse.jdt.launching.ui.macosx"/>
       <plugin id="org.eclipse.jdt.ui"/>
       <plugin id="org.eclipse.jem.util"/>
       <plugin id="org.eclipse.jface"/>
@@ -700,13 +700,13 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <plugin id="process.edit"/>
       <plugin id="process.editor"/>
       <plugin id="q7"/>
-      <plugin id="situation"/>
-      <plugin id="situation.diagram"/>
-      <plugin id="situation.diagram.extensions"/>
-      <plugin id="situation.edit"/>
-      <plugin id="situation.editor"/>
-      <plugin id="situation.generator"/>
-      <plugin id="situation.ui"/>
+      <plugin id="situation" fragment=""/>
+      <plugin id="situation.diagram" fragment=""/>
+      <plugin id="situation.diagram.extensions" fragment=""/>
+      <plugin id="situation.edit" fragment=""/>
+      <plugin id="situation.editor" fragment=""/>
+      <plugin id="situation.generator" fragment=""/>
+      <plugin id="situation.ui" fragment=""/>
       <plugin id="uncal"/>
       <plugin id="uncal.generator"/>
       <plugin id="uncal.ui"/>
@@ -747,11 +747,9 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <feature id="problem.feature"/>
       <feature id="ontology.feature"/>
       <feature id="org.eclipse.pde"/>
-      <feature id="situation.feature"/>
       <feature id="org.eclipse.acceleo"/>
       <feature id="org.eclipse.acceleo.runtime"/>
       <feature id="istar.feature"/>
-      <feature id="situation.m2m.feature"/>
       <feature id="dependency.feature"/>
       <feature id="argument.feature"/>
       <feature id="laser.littlejil.check.feature"/>

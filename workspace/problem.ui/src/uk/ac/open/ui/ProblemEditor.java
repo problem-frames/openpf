@@ -8,6 +8,8 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.resource.XtextResourceSet;
 
 import uk.ac.open.groundtram.UncalEditor;
+import uk.ac.open.problem.Link;
+import uk.ac.open.problem.LinkType;
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.ProblemDiagram;
 import uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil;
@@ -25,6 +27,17 @@ public class ProblemEditor extends UncalEditor {
 			EObject o = it.next();
 			if (o instanceof ProblemDiagram) {
 				updateID((ProblemDiagram) o);
+			}
+			// replace all inverse constraint ~> to <~
+			if (o instanceof Link) {
+				Link l = (Link) o;
+				if (l.getType() == LinkType.INV_CONSTRAINT) {
+					Node from = l.getFrom();
+					Node to = l.getTo();
+					l.setFrom(to);
+					l.setTo(from);
+					l.setType(LinkType.CONSTRAINT);
+				}
 			}
 		}
 	}

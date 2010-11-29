@@ -223,7 +223,7 @@
       <viewProvider class="uk.ac.open.problem.diagram.providers.ProblemViewProvider">
          <Priority name="Lowest"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Problem"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,2003,2004,2005,2006,2007,2009"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,2003,2004,2005,2006,2007,2008"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003,4004"/>
       </viewProvider>
    </extension>
@@ -236,13 +236,13 @@
             <method name="getType()" value="Problem"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
-            <method name="getType()" value="2001,2002,2003,2004,2005,2006,2007,2009"/>
+            <method name="getType()" value="2001,2002,2003,2004,2005,2006,2007,2008"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
             <method name="getType()" value="4001,4002,4003,4004"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
-            <method name="getType()" value="5001,5002,5003,5004,5005,5006,5007,5008,5009,5010,5011,5012,5013,5014,5017,5018"/>
+            <method name="getType()" value="5001,5002,5003,5004,5005,5006,5007,5008,5009,5010,5011,5012,5013,5014,5015,5016"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
             <method name="getType()" value=""/>
@@ -263,8 +263,8 @@
          <object class="uk.ac.open.problem.diagram.edit.parts.Node5EditPart" id="Node_2005"/>
          <object class="uk.ac.open.problem.diagram.edit.parts.Node6EditPart" id="Node_2006"/>
          <object class="uk.ac.open.problem.diagram.edit.parts.Node7EditPart" id="Node_2007"/>
-         <object class="uk.ac.open.problem.diagram.edit.parts.Node8EditPart" id="Node_2009"/>
-         <context elements="ProblemDiagram_1000,Node_2001,Node_2002,Node_2003,Node_2004,Node_2005,Node_2006,Node_2007,Node_2009"/>
+         <object class="uk.ac.open.problem.diagram.edit.parts.Node8EditPart" id="Node_2008"/>
+         <context elements="ProblemDiagram_1000,Node_2001,Node_2002,Node_2003,Node_2004,Node_2005,Node_2006,Node_2007,Node_2008"/>
       </modelingAssistantProvider>
    </extension>
 
@@ -360,11 +360,11 @@
       </metamodel>
       <metamodel nsURI="http://open.ac.uk/problem">
          <specializationType
-               id="problem.diagram.Node_2009"
-               name="%metatype.name.Node_2009"
+               id="problem.diagram.Node_2008"
+               name="%metatype.name.Node_2008"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="problem.diagram.Node_2001"/>
-            <param name="semanticHint" value="2009"/>
+            <param name="semanticHint" value="2008"/>
          </specializationType>
       </metamodel>
       <metamodel nsURI="http://open.ac.uk/problem">
@@ -424,7 +424,7 @@
          <elementType ref="problem.diagram.Node_2005"/>
          <elementType ref="problem.diagram.Node_2006"/>
          <elementType ref="problem.diagram.Node_2007"/>
-         <elementType ref="problem.diagram.Node_2009"/>
+         <elementType ref="problem.diagram.Node_2008"/>
          <elementType ref="problem.diagram.Link_4001"/>
          <elementType ref="problem.diagram.Link_4002"/>
          <elementType ref="problem.diagram.Link_4003"/>

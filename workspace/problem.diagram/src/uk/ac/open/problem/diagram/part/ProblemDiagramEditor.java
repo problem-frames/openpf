@@ -82,7 +82,7 @@ public class ProblemDiagramEditor extends DiagramDocumentEditor implements
 	 * @generated
 	 */
 	public static final String CONTEXT_ID = "uk.ac.open.problem.diagram.ui.diagramContext"; //$NON-NLS-1$
-	
+
 	/**
 	 * @generated
 	 */
@@ -150,9 +150,9 @@ public class ProblemDiagramEditor extends DiagramDocumentEditor implements
 	 * @generated
 	 */
 	public TransactionalEditingDomain getEditingDomain() {
-		IDocument document = getEditorInput() != null ? 
-				getDocumentProvider() != null? getDocumentProvider()
-				.getDocument(getEditorInput()) : null: null;
+		IDocument document = getEditorInput() != null ? getDocumentProvider() != null ? getDocumentProvider()
+				.getDocument(getEditorInput()) : null
+				: null;
 		if (document instanceof IDiagramDocument) {
 			return ((IDiagramDocument) document).getEditingDomain();
 		}

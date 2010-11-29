@@ -434,20 +434,16 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 			createContents();
 		}
 
-		Argument node;
-
 		/**
 		 * @param node 
 		 * @generated NOT
 		 */
 		public ArgumentFigure(Argument node) {
-			this.setCornerDimensions(new Dimension(getMapMode().DPtoLP(8),
-					getMapMode().DPtoLP(8)));
-			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5),
-					getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
-					getMapMode().DPtoLP(5)));
-			this.node = node;
-			createContents();
+			this();
+			if (node.getGrounds().size() + node.getWarrants().size() == 0) {
+				fArgumentGroundsCompartmentFigure.setVisible(false);
+				fArgumentWarrantsCompartmentFigure.setVisible(false);
+			}			
 		}
 
 		/**
@@ -480,10 +476,6 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 			fArgumentWarrantsCompartmentFigure.setOutline(false);
 
 			this.add(fArgumentWarrantsCompartmentFigure);
-			if (node.getGrounds().size() + node.getWarrants().size() == 0) {
-				fArgumentGroundsCompartmentFigure.setVisible(false);
-				fArgumentWarrantsCompartmentFigure.setVisible(false);
-			}
 		}
 
 		/**

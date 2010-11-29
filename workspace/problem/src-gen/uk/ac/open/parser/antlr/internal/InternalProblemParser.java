@@ -25,7 +25,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalProblemParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_QUALIFIED_NAME", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'problem:'", "'for'", "':'", "'{'", "','", "'see'", "'domain'", "'problem'", "'}'", "'!'", "'R'", "'M'", "'B'", "'X'", "'C'", "'D'", "'P'", "'?'", "'phenomenon'", "'event'", "'state'", "'--'", "'~~'", "'~>'", "'->'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_QUALIFIED_NAME", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'problem:'", "'for'", "':'", "'{'", "','", "'see'", "'domain'", "'problem'", "'}'", "'!'", "'R'", "'M'", "'B'", "'X'", "'C'", "'D'", "'P'", "'?'", "'phenomenon'", "'event'", "'state'", "'--'", "'~~'", "'<~'", "'->'", "'~>'"
     };
     public static final int RULE_ID=4;
     public static final int RULE_STRING=5;
@@ -221,7 +221,7 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
                     if ( (LA2_2==EOF||(LA2_2>=RULE_ID && LA2_2<=RULE_STRING)||LA2_2==12||(LA2_2>=14 && LA2_2<=15)||LA2_2==17||LA2_2==20||(LA2_2>=22 && LA2_2<=29)) ) {
                         alt2=1;
                     }
-                    else if ( ((LA2_2>=33 && LA2_2<=36)) ) {
+                    else if ( ((LA2_2>=33 && LA2_2<=37)) ) {
                         alt2=2;
                     }
 
@@ -1884,17 +1884,17 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleLinkType
-    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:821:1: ruleLinkType returns [Enumerator current=null] : ( ( '--' ) | ( '~~' ) | ( '~>' ) | ( '->' ) ) ;
+    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:821:1: ruleLinkType returns [Enumerator current=null] : ( ( '--' ) | ( '~~' ) | ( '<~' ) | ( '->' ) | ( '~>' ) ) ;
     public final Enumerator ruleLinkType() throws RecognitionException {
         Enumerator current = null;
 
          setCurrentLookahead(); resetLookahead(); 
         try {
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:825:6: ( ( ( '--' ) | ( '~~' ) | ( '~>' ) | ( '->' ) ) )
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:826:1: ( ( '--' ) | ( '~~' ) | ( '~>' ) | ( '->' ) )
+            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:825:6: ( ( ( '--' ) | ( '~~' ) | ( '<~' ) | ( '->' ) | ( '~>' ) ) )
+            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:826:1: ( ( '--' ) | ( '~~' ) | ( '<~' ) | ( '->' ) | ( '~>' ) )
             {
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:826:1: ( ( '--' ) | ( '~~' ) | ( '~>' ) | ( '->' ) )
-            int alt20=4;
+            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:826:1: ( ( '--' ) | ( '~~' ) | ( '<~' ) | ( '->' ) | ( '~>' ) )
+            int alt20=5;
             switch ( input.LA(1) ) {
             case 33:
                 {
@@ -1916,9 +1916,14 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
                 alt20=4;
                 }
                 break;
+            case 37:
+                {
+                alt20=5;
+                }
+                break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("826:1: ( ( '--' ) | ( '~~' ) | ( '~>' ) | ( '->' ) )", 20, 0, input);
+                    new NoViableAltException("826:1: ( ( '--' ) | ( '~~' ) | ( '<~' ) | ( '->' ) | ( '~>' ) )", 20, 0, input);
 
                 throw nvae;
             }
@@ -1959,10 +1964,10 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:838:6: ( '~>' )
+                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:838:6: ( '<~' )
                     {
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:838:6: ( '~>' )
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:838:8: '~>'
+                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:838:6: ( '<~' )
+                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:838:8: '<~'
                     {
                     match(input,35,FOLLOW_35_in_ruleLinkType1342); 
 
@@ -1985,6 +1990,23 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
                             current = grammarAccess.getLinkTypeAccess().getCONCERNEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getLinkTypeAccess().getCONCERNEnumLiteralDeclaration_3(), null); 
+                        
+
+                    }
+
+
+                    }
+                    break;
+                case 5 :
+                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:850:6: ( '~>' )
+                    {
+                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:850:6: ( '~>' )
+                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:850:8: '~>'
+                    {
+                    match(input,37,FOLLOW_37_in_ruleLinkType1372); 
+
+                            current = grammarAccess.getLinkTypeAccess().getINV_CONSTRAINTEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
+                            createLeafNode(grammarAccess.getLinkTypeAccess().getINV_CONSTRAINTEnumLiteralDeclaration_4(), null); 
                         
 
                     }
@@ -2053,7 +2075,7 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_RULE_STRING_in_rulePhenomenon792 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleLink_in_entryRuleLink835 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleLink845 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleLink888 = new BitSet(new long[]{0x0000001E00000000L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleLink888 = new BitSet(new long[]{0x0000003E00000000L});
     public static final BitSet FOLLOW_ruleLinkType_in_ruleLink909 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleLink927 = new BitSet(new long[]{0x000000000000C022L});
     public static final BitSet FOLLOW_15_in_ruleLink938 = new BitSet(new long[]{0x00000001C0200010L});
@@ -2078,5 +2100,6 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_34_in_ruleLinkType1327 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_35_in_ruleLinkType1342 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_36_in_ruleLinkType1357 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_ruleLinkType1372 = new BitSet(new long[]{0x0000000000000002L});
 
 }

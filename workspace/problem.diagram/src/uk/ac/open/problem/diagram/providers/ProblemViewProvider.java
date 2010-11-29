@@ -275,7 +275,7 @@ public class ProblemViewProvider extends AbstractProvider implements
 			return createNode_2007(domainElement, containerView, index,
 					persisted, preferencesHint);
 		case Node8EditPart.VISUAL_ID:
-			return createNode_2009(domainElement, containerView, index,
+			return createNode_2008(domainElement, containerView, index,
 					persisted, preferencesHint);
 		}
 		// can't happen, provided #provides(CreateNodeViewOperation) is correct
@@ -655,7 +655,7 @@ public class ProblemViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createNode_2009(EObject domainElement, View containerView,
+	public Node createNode_2008(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
@@ -691,9 +691,9 @@ public class ProblemViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5017 = createLabel(node,
+		Node label5015 = createLabel(node,
 				ProblemVisualIDRegistry.getType(NodeName7EditPart.VISUAL_ID));
-		Node label5018 = createLabel(node,
+		Node label5016 = createLabel(node,
 				ProblemVisualIDRegistry
 						.getType(NodeDescription8EditPart.VISUAL_ID));
 		return node;

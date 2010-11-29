@@ -11,6 +11,8 @@ import org.eclipse.ocl.Environment;
 import org.eclipse.ocl.EvaluationEnvironment;
 import org.eclipse.ocl.ParserException;
 import org.eclipse.ocl.ecore.EcoreFactory;
+import org.eclipse.ocl.ecore.OCLExpression;
+import org.eclipse.ocl.ecore.Variable;
 import org.eclipse.ocl.ecore.OCL.Helper;
 import org.eclipse.ocl.options.ParsingOptions;
 
@@ -113,7 +115,7 @@ public class ProblemOCLFactory {
 		/**
 		 * @generated
 		 */
-		private org.eclipse.ocl.ecore.OCLExpression oclExpression;
+		private OCLExpression oclExpression;
 
 		/**
 		 * @generated
@@ -177,11 +179,10 @@ public class ProblemOCLFactory {
 		/**
 		 * @generated
 		 */
-		private static org.eclipse.ocl.ecore.Variable createVar(
+		private static Variable createVar(
 				Environment<?, EClassifier, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?> ecoreEnv,
 				String name, EClassifier type) {
-			org.eclipse.ocl.ecore.Variable var = EcoreFactory.eINSTANCE
-					.createVariable();
+			Variable var = EcoreFactory.eINSTANCE.createVariable();
 			var.setName(name);
 			var.setType(ecoreEnv.getUMLReflection().getOCLType(type));
 			return var;

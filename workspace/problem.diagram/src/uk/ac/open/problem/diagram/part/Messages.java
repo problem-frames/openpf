@@ -403,6 +403,16 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
+	public static String NavigatorGroupName_Node_2008_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Node_2008_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
 	public static String NavigatorGroupName_Node_2007_incominglinks;
 
 	/**
@@ -489,16 +499,6 @@ public class Messages extends NLS {
 	 * @generated
 	 */
 	public static String NavigatorGroupName_Link_4002_source;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_Node_2009_incominglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_Node_2009_outgoinglinks;
 
 	/**
 	 * @generated

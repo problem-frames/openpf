@@ -190,7 +190,7 @@ public class ProblemVisualIDRegistry {
 			}
 			if (ProblemPackage.eINSTANCE.getNode().isSuperTypeOf(
 					domainElement.eClass())
-					&& isNode_2009((Node) domainElement)) {
+					&& isNode_2008((Node) domainElement)) {
 				return Node8EditPart.VISUAL_ID;
 			}
 			break;
@@ -446,7 +446,7 @@ public class ProblemVisualIDRegistry {
 	/**
 	 * @generated
 	 */
-	private static boolean isNode_2009(Node domainElement) {
+	private static boolean isNode_2008(Node domainElement) {
 		Object result = ProblemOCLFactory.getExpression(14,
 				ProblemPackage.eINSTANCE.getNode(), null).evaluate(
 				domainElement);

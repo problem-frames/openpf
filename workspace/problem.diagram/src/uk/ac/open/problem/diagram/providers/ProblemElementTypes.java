@@ -94,7 +94,7 @@ public class ProblemElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType Node_2009 = getElementType("problem.diagram.Node_2009"); //$NON-NLS-1$
+	public static final IElementType Node_2008 = getElementType("problem.diagram.Node_2008"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -244,7 +244,7 @@ public class ProblemElementTypes {
 
 			elements.put(Node_2007, ProblemPackage.eINSTANCE.getNode());
 
-			elements.put(Node_2009, ProblemPackage.eINSTANCE.getNode());
+			elements.put(Node_2008, ProblemPackage.eINSTANCE.getNode());
 
 			elements.put(Link_4001, ProblemPackage.eINSTANCE.getLink());
 
@@ -278,7 +278,7 @@ public class ProblemElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Node_2005);
 			KNOWN_ELEMENT_TYPES.add(Node_2006);
 			KNOWN_ELEMENT_TYPES.add(Node_2007);
-			KNOWN_ELEMENT_TYPES.add(Node_2009);
+			KNOWN_ELEMENT_TYPES.add(Node_2008);
 			KNOWN_ELEMENT_TYPES.add(Link_4001);
 			KNOWN_ELEMENT_TYPES.add(Link_4002);
 			KNOWN_ELEMENT_TYPES.add(Link_4003);
@@ -309,7 +309,7 @@ public class ProblemElementTypes {
 		case Node7EditPart.VISUAL_ID:
 			return Node_2007;
 		case Node8EditPart.VISUAL_ID:
-			return Node_2009;
+			return Node_2008;
 		case LinkEditPart.VISUAL_ID:
 			return Link_4001;
 		case Link2EditPart.VISUAL_ID:

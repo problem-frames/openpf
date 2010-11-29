@@ -182,7 +182,7 @@ public class ProblemPaletteFactory {
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.ConcernDescription8CreationTool_title,
 				Messages.ConcernDescription8CreationTool_desc,
-				Collections.singletonList(ProblemElementTypes.Node_2009));
+				Collections.singletonList(ProblemElementTypes.Node_2008));
 		entry.setId("createConcernDescription8CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ProblemDiagramEditorPlugin
 				.findImageDescriptor("/problem/icons/obj16/cn_obj.gif")); //$NON-NLS-1$

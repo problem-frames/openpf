@@ -55,7 +55,7 @@ public class ProblemDiagramItemSemanticEditPolicy extends
 		if (ProblemElementTypes.Node_2007 == req.getElementType()) {
 			return getGEFWrapper(new Node7CreateCommand(req));
 		}
-		if (ProblemElementTypes.Node_2009 == req.getElementType()) {
+		if (ProblemElementTypes.Node_2008 == req.getElementType()) {
 			return getGEFWrapper(new Node8CreateCommand(req));
 		}
 		return super.getCreateCommand(req);

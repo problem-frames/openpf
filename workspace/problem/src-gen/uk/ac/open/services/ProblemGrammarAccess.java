@@ -518,15 +518,17 @@ public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 		private final EnumLiteralDeclaration cREFERENCEEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
 		private final Keyword cREFERENCETildeTildeKeyword_1_0 = (Keyword)cREFERENCEEnumLiteralDeclaration_1.eContents().get(0);
 		private final EnumLiteralDeclaration cCONSTRAINTEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
-		private final Keyword cCONSTRAINTTildeGreaterThanSignKeyword_2_0 = (Keyword)cCONSTRAINTEnumLiteralDeclaration_2.eContents().get(0);
+		private final Keyword cCONSTRAINTLessThanSignTildeKeyword_2_0 = (Keyword)cCONSTRAINTEnumLiteralDeclaration_2.eContents().get(0);
 		private final EnumLiteralDeclaration cCONCERNEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
 		private final Keyword cCONCERNHyphenMinusGreaterThanSignKeyword_3_0 = (Keyword)cCONCERNEnumLiteralDeclaration_3.eContents().get(0);
+		private final EnumLiteralDeclaration cINV_CONSTRAINTEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
+		private final Keyword cINV_CONSTRAINTTildeGreaterThanSignKeyword_4_0 = (Keyword)cINV_CONSTRAINTEnumLiteralDeclaration_4.eContents().get(0);
 		
 		//enum LinkType:
-		//	INTERFACE="--" | REFERENCE="~~" | CONSTRAINT="~>" | CONCERN="->";
+		//	INTERFACE="--" | REFERENCE="~~" | CONSTRAINT="<~" | CONCERN="->" | INV_CONSTRAINT="~>";
 		public EnumRule getRule() { return rule; }
 
-		//INTERFACE="--" | REFERENCE="~~" | CONSTRAINT="~>" | CONCERN="->"
+		//INTERFACE="--" | REFERENCE="~~" | CONSTRAINT="<~" | CONCERN="->" | INV_CONSTRAINT="~>"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//INTERFACE="--"
@@ -541,17 +543,23 @@ public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 		//"~~"
 		public Keyword getREFERENCETildeTildeKeyword_1_0() { return cREFERENCETildeTildeKeyword_1_0; }
 
-		//CONSTRAINT="~>"
+		//CONSTRAINT="<~"
 		public EnumLiteralDeclaration getCONSTRAINTEnumLiteralDeclaration_2() { return cCONSTRAINTEnumLiteralDeclaration_2; }
 
-		//"~>"
-		public Keyword getCONSTRAINTTildeGreaterThanSignKeyword_2_0() { return cCONSTRAINTTildeGreaterThanSignKeyword_2_0; }
+		//"<~"
+		public Keyword getCONSTRAINTLessThanSignTildeKeyword_2_0() { return cCONSTRAINTLessThanSignTildeKeyword_2_0; }
 
 		//CONCERN="->"
 		public EnumLiteralDeclaration getCONCERNEnumLiteralDeclaration_3() { return cCONCERNEnumLiteralDeclaration_3; }
 
 		//"->"
 		public Keyword getCONCERNHyphenMinusGreaterThanSignKeyword_3_0() { return cCONCERNHyphenMinusGreaterThanSignKeyword_3_0; }
+
+		//INV_CONSTRAINT="~>"
+		public EnumLiteralDeclaration getINV_CONSTRAINTEnumLiteralDeclaration_4() { return cINV_CONSTRAINTEnumLiteralDeclaration_4; }
+
+		//"~>"
+		public Keyword getINV_CONSTRAINTTildeGreaterThanSignKeyword_4_0() { return cINV_CONSTRAINTTildeGreaterThanSignKeyword_4_0; }
 	}
 	
 	private ProblemDiagramElements pProblemDiagram;
@@ -649,7 +657,7 @@ public class ProblemGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum LinkType:
-	//	INTERFACE="--" | REFERENCE="~~" | CONSTRAINT="~>" | CONCERN="->";
+	//	INTERFACE="--" | REFERENCE="~~" | CONSTRAINT="<~" | CONCERN="->" | INV_CONSTRAINT="~>";
 	public LinkTypeElements getLinkTypeAccess() {
 		return (unknownRuleLinkType != null) ? unknownRuleLinkType : (unknownRuleLinkType = new LinkTypeElements());
 	}

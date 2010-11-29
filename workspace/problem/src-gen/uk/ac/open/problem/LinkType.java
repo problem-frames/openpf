@@ -50,7 +50,7 @@ public enum LinkType implements Enumerator
    * @generated
    * @ordered
    */
-  CONSTRAINT(2, "CONSTRAINT", "~>"),
+  CONSTRAINT(2, "CONSTRAINT", "<~"),
 
   /**
    * The '<em><b>CONCERN</b></em>' literal object.
@@ -60,7 +60,17 @@ public enum LinkType implements Enumerator
    * @generated
    * @ordered
    */
-  CONCERN(3, "CONCERN", "->");
+  CONCERN(3, "CONCERN", "->"),
+
+  /**
+   * The '<em><b>INV CONSTRAINT</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #INV_CONSTRAINT_VALUE
+   * @generated
+   * @ordered
+   */
+  INV_CONSTRAINT(4, "INV_CONSTRAINT", "~>");
 
   /**
    * The '<em><b>INTERFACE</b></em>' literal value.
@@ -101,7 +111,7 @@ public enum LinkType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #CONSTRAINT
-   * @model literal="~>"
+   * @model literal="<~"
    * @generated
    * @ordered
    */
@@ -123,6 +133,21 @@ public enum LinkType implements Enumerator
   public static final int CONCERN_VALUE = 3;
 
   /**
+   * The '<em><b>INV CONSTRAINT</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>INV CONSTRAINT</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #INV_CONSTRAINT
+   * @model literal="~>"
+   * @generated
+   * @ordered
+   */
+  public static final int INV_CONSTRAINT_VALUE = 4;
+
+  /**
    * An array of all the '<em><b>Link Type</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -135,6 +160,7 @@ public enum LinkType implements Enumerator
       REFERENCE,
       CONSTRAINT,
       CONCERN,
+      INV_CONSTRAINT,
     };
 
   /**
@@ -197,6 +223,7 @@ public enum LinkType implements Enumerator
       case REFERENCE_VALUE: return REFERENCE;
       case CONSTRAINT_VALUE: return CONSTRAINT;
       case CONCERN_VALUE: return CONCERN;
+      case INV_CONSTRAINT_VALUE: return INV_CONSTRAINT;
     }
     return null;
   }
