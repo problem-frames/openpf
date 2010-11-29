@@ -545,7 +545,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
 			 "target", "origin",
 			 "style", "dash",
 			 "width", "2",
-			 "color", "255,255,0",
+			 "color", "160,32,240",
 			 "target.decoration", "arrow"
 		   });				
 		addAnnotation
@@ -568,19 +568,18 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
 			 "label", "name",
 			 "style", "solid",
 			 "width", "2",
-			 "color", "0,0,255",
+			 "color", "0,255,0",
 			 "target.decoration", "arrow"
 		   });		
 		addAnnotation
 		  (getMitigates_Rebuttal(), 
 		   source, 
 		   new String[] {
-			 "source", "from",
 			 "target", "rebuttal",
 			 "label", "name",
-			 "style", "solid",
-			 "width", "2",
-			 "color", "0,0,255",
+			 "style", "dashed",
+			 "width", "1",
+			 "color", "255,105,180",
 			 "target.decoration", "arrow"
 		   });
 	}

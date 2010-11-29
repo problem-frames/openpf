@@ -70,7 +70,6 @@
     <eAnnotations source="gmf.link">
       <details key="source" value="from"/>
       <details key="target" value="to"/>
-      <details key="label" value="name"/>
       <details key="style" value="solid"/>
       <details key="width" value="2"/>
       <details key="color" value="0,255,0"/>
@@ -78,9 +77,7 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="rebuttal" eType="#//Argument">
       <eAnnotations source="gmf.link">
-        <details key="source" value="from"/>
         <details key="target" value="rebuttal"/>
-        <details key="label" value="name"/>
         <details key="style" value="dashed"/>
         <details key="width" value="1"/>
         <details key="color" value="255,105,180"/>

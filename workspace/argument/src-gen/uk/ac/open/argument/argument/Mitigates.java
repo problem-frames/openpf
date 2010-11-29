@@ -19,7 +19,7 @@ package uk.ac.open.argument.argument;
  * </p>
  *
  * @see uk.ac.open.argument.argument.ArgumentPackage#getMitigates()
- * @model annotation="gmf.link source='from' target='to' label='name' style='solid' width='2' color='0,0,255' target.decoration='arrow'"
+ * @model annotation="gmf.link source='from' target='to' label='name' style='solid' width='2' color='0,255,0' target.decoration='arrow'"
  * @generated
  */
 public interface Mitigates extends Link
@@ -35,7 +35,7 @@ public interface Mitigates extends Link
 	 * @return the value of the '<em>Rebuttal</em>' reference.
 	 * @see #setRebuttal(Argument)
 	 * @see uk.ac.open.argument.argument.ArgumentPackage#getMitigates_Rebuttal()
-	 * @model annotation="gmf.link source='from' target='rebuttal' label='name' style='solid' width='2' color='0,0,255' target.decoration='arrow'"
+	 * @model annotation="gmf.link target='rebuttal' label='name' style='dashed' width='1' color='255,105,180' target.decoration='arrow'"
 	 * @generated
 	 */
   Argument getRebuttal();

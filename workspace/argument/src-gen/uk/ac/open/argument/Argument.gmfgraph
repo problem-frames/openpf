@@ -123,8 +123,7 @@
         name="MitigatesRebuttalExternalLabelFigure">
       <actualFigure
           xsi:type="gmfgraph:Label"
-          name="MitigatesRebuttalExternalLabel"
-          text="name"/>
+          name="MitigatesRebuttalExternalLabel"/>
     </descriptors>
   </figures>
   <nodes

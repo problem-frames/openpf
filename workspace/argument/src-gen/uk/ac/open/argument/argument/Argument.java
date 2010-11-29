@@ -152,7 +152,7 @@ public interface Argument extends EObject
 	 * @return the value of the '<em>Origin</em>' reference.
 	 * @see #setOrigin(Argument)
 	 * @see uk.ac.open.argument.argument.ArgumentPackage#getArgument_Origin()
-	 * @model annotation="gmf.link target='origin' style='dash' width='2' color='255,255,0' target.decoration='arrow'"
+	 * @model annotation="gmf.link target='origin' style='dash' width='2' color='160,32,240' target.decoration='arrow'"
 	 * @generated
 	 */
   Argument getOrigin();

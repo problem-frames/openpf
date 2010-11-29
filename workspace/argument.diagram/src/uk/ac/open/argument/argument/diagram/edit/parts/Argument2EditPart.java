@@ -440,10 +440,11 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 		 */
 		public ArgumentFigure(Argument node) {
 			this();
-			if (node.getGrounds().size() + node.getWarrants().size() == 0) {
-				fArgumentGroundsCompartmentFigure.setVisible(false);
-				fArgumentWarrantsCompartmentFigure.setVisible(false);
-			}			
+			if (node != null)
+				if (node.getGrounds().size() + node.getWarrants().size() == 0) {
+					fArgumentGroundsCompartmentFigure.setVisible(false);
+					fArgumentWarrantsCompartmentFigure.setVisible(false);
+				}
 		}
 
 		/**
