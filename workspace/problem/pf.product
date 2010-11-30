@@ -79,8 +79,6 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
    </license>
 
    <plugins>
-      <plugin id="Istar2situation"/>
-      <plugin id="Istar2situation.ui"/>
       <plugin id="PF2EC"/>
       <plugin id="PF2EC.ui"/>
       <plugin id="antlr.plugin"/>
@@ -687,8 +685,6 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <plugin id="org.w3c.dom.events"/>
       <plugin id="org.w3c.dom.smil"/>
       <plugin id="org.w3c.dom.svg"/>
-      <plugin id="pf2situation"/>
-      <plugin id="pf2situation.ui"/>
       <plugin id="problem"/>
       <plugin id="problem.diagram"/>
       <plugin id="problem.diagram.extensions"/>
@@ -700,13 +696,12 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <plugin id="process.edit"/>
       <plugin id="process.editor"/>
       <plugin id="q7"/>
-      <plugin id="situation" fragment=""/>
-      <plugin id="situation.diagram" fragment=""/>
-      <plugin id="situation.diagram.extensions" fragment=""/>
-      <plugin id="situation.edit" fragment=""/>
-      <plugin id="situation.editor" fragment=""/>
-      <plugin id="situation.generator" fragment=""/>
-      <plugin id="situation.ui" fragment=""/>
+      <plugin id="rbac"/>
+      <plugin id="rbac.diagram"/>
+      <plugin id="rbac.diagram.extensions"/>
+      <plugin id="rbac.edit"/>
+      <plugin id="rbac.generator"/>
+      <plugin id="rbac.ui"/>
       <plugin id="uncal"/>
       <plugin id="uncal.generator"/>
       <plugin id="uncal.ui"/>
@@ -782,6 +777,7 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <feature id="org.eclipse.equinox.p2.discovery.feature"/>
       <feature id="org.eclipse.equinox.p2.user.ui"/>
       <feature id="org.eclipse.gmf.tooling"/>
+      <feature id="rbac.feature" version="1.0.0.qualifier"/>
    </features>
 
 

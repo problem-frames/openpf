@@ -1,0 +1,35 @@
+grammar uk.ac.open.rbac.RBAC with org.eclipse.xtext.common.Terminals
+
+generate rbac "http://www.ac.uk.open/rbac/RBAC"
+
+Model:
+	(roles+=Role | users+=User | sessions+=Session | objects+=Object | permissions+=Permission)*;
+	
+Role:
+	'role' name=ID 
+	'{'
+		(permissions+=RolePermissionAssignment)*
+	'}'
+	;
+	
+User:
+	'user' name=ID;
+	
+Permission:
+	type=STRING role=[Role] object=[Object];
+	    	
+Object:
+	"object" name=ID;
+	
+Session:
+	"session" name=ID
+	'{' 
+		(assignments+=UserRoleAssignment)* 
+	'}'
+	;
+
+UserRoleAssignment:
+	user=[User] ':' role=[Role];
+
+RolePermissionAssignment:
+	role=[Role] '=' permission=[Permission];

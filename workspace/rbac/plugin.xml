@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<plugin>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http://www.ac.uk/open/rbac/RBAC" 
+       class = "uk.ac.open.rbac.rBAC.RBACPackage"
+       genModel = "uk/ac/open/rbac/RBAC.genmodel" /> 
+	
+  </extension>
+
+  <extension point="core.example">
+      <example file="RBAC.xtext"/>
+      <example file="rbac.dir"/>
+  </extension>
+
+</plugin>

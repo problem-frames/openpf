@@ -803,13 +803,14 @@
    <feature url="features/process.feature_1.0.0.qualifier.jar" id="process.feature" version="1.0.0.qualifier">
       <category name="RE_Tools"/>
    </feature>
-   <feature url="features/situation.feature_1.0.0.qualifier.jar" id="situation.feature" version="1.0.0.qualifier">
-      <category name="RE_Tools"/>
-   </feature>
    <feature url="features/xtext.feature_1.0.0.201010071122.jar" id="xtext.feature" version="1.0.0.201010071122">
       <category name="RE_Tools"/>
    </feature>
+   <feature url="features/rbac.feature_1.0.0.qualifier.jar" id="xtext.feature" version="1.0.0.qualifier">
+      <category name="Experimental"/>
+   </feature>
    <category-def name="RE_Tools" label="Requirements Engineering Tools"/>
+   <category-def name="Experimental" label="Experimental features"/>
    <category-def name="Little-JIL" label="Little-JIL features"/>
    <category-def name="Viatra2" label="Viatra2 Features"/>
    <category-def name="XTEXT" label="xtext Features"/>
