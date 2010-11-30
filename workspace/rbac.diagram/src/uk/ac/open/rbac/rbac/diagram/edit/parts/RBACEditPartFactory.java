@@ -62,23 +62,14 @@ public class RBACEditPartFactory implements EditPartFactory {
 			case RolePermissionAssignmentEditPart.VISUAL_ID:
 				return new RolePermissionAssignmentEditPart(view);
 
-			case PermissionEditPart.VISUAL_ID:
-				return new PermissionEditPart(view);
-
-			case PermissionTypeEditPart.VISUAL_ID:
-				return new PermissionTypeEditPart(view);
+			case RolePermissionAssignmentTypeEditPart.VISUAL_ID:
+				return new RolePermissionAssignmentTypeEditPart(view);
 
 			case RolePermissionsEditPart.VISUAL_ID:
 				return new RolePermissionsEditPart(view);
 
 			case WrappingLabelEditPart.VISUAL_ID:
 				return new WrappingLabelEditPart(view);
-
-			case SessionAssignmentsEditPart.VISUAL_ID:
-				return new SessionAssignmentsEditPart(view);
-
-			case WrappingLabel2EditPart.VISUAL_ID:
-				return new WrappingLabel2EditPart(view);
 
 			}
 		}

@@ -12,9 +12,9 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest;
 
+import uk.ac.open.rbac.rbac.Model;
 import uk.ac.open.rbac.rbac.RbacFactory;
 import uk.ac.open.rbac.rbac.Role;
-import uk.ac.open.rbac.rbac.Session;
 import uk.ac.open.rbac.rbac.User;
 import uk.ac.open.rbac.rbac.UserRoleAssignment;
 import uk.ac.open.rbac.rbac.diagram.edit.policies.RBACBaseItemSemanticEditPolicy;
@@ -37,7 +37,7 @@ public class UserRoleAssignmentCreateCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	private final Session container;
+	private final Model container;
 
 	/**
 	 * @generated
@@ -144,7 +144,7 @@ public class UserRoleAssignmentCreateCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	public Session getContainer() {
+	public Model getContainer() {
 		return container;
 	}
 
@@ -153,14 +153,14 @@ public class UserRoleAssignmentCreateCommand extends EditElementCommand {
 	 * Modify with appropriate logic.
 	 * @generated
 	 */
-	private static Session deduceContainer(EObject source, EObject target) {
+	private static Model deduceContainer(EObject source, EObject target) {
 		// Find container element for the new link.
 		// Climb up by containment hierarchy starting from the source
 		// and return the first element that is instance of the container class.
 		for (EObject element = source; element != null; element = element
 				.eContainer()) {
-			if (element instanceof Session) {
-				return (Session) element;
+			if (element instanceof Model) {
+				return (Model) element;
 			}
 		}
 		return null;

@@ -1,0 +1,20 @@
+UR1 Yijun : developer
+UR2 Yijun : researcher
+UR3 Yijun : supervisor
+UR4 Lionel : researcher
+UR5 Lionel : developer
+UR6 Michel : researcher
+supervisor "read" Thesis
+student "write" Thesis
+student "read" Thesis
+object Thesis : "file"
+session OfficeSession {
+	UR1
+}
+user Lionel
+user Yijun
+user Michel
+role developer
+role researcher
+role supervisor
+role student

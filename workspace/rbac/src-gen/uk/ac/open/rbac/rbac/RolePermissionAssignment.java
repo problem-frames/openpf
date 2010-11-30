@@ -16,7 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link uk.ac.open.rbac.rbac.RolePermissionAssignment#getRole <em>Role</em>}</li>
- *   <li>{@link uk.ac.open.rbac.rbac.RolePermissionAssignment#getPermission <em>Permission</em>}</li>
+ *   <li>{@link uk.ac.open.rbac.rbac.RolePermissionAssignment#getType <em>Type</em>}</li>
+ *   <li>{@link uk.ac.open.rbac.rbac.RolePermissionAssignment#getObject <em>Object</em>}</li>
  * </ul>
  * </p>
  *
@@ -53,29 +54,55 @@ public interface RolePermissionAssignment extends EObject
   void setRole(Role value);
 
   /**
-   * Returns the value of the '<em><b>Permission</b></em>' reference.
+   * Returns the value of the '<em><b>Type</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Permission</em>' reference isn't clear,
+   * If the meaning of the '<em>Type</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Permission</em>' reference.
-   * @see #setPermission(Permission)
-   * @see uk.ac.open.rbac.rbac.RbacPackage#getRolePermissionAssignment_Permission()
+   * @return the value of the '<em>Type</em>' attribute.
+   * @see #setType(String)
+   * @see uk.ac.open.rbac.rbac.RbacPackage#getRolePermissionAssignment_Type()
    * @model
    * @generated
    */
-  Permission getPermission();
+  String getType();
 
   /**
-   * Sets the value of the '{@link uk.ac.open.rbac.rbac.RolePermissionAssignment#getPermission <em>Permission</em>}' reference.
+   * Sets the value of the '{@link uk.ac.open.rbac.rbac.RolePermissionAssignment#getType <em>Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Permission</em>' reference.
-   * @see #getPermission()
+   * @param value the new value of the '<em>Type</em>' attribute.
+   * @see #getType()
    * @generated
    */
-  void setPermission(Permission value);
+  void setType(String value);
+
+  /**
+   * Returns the value of the '<em><b>Object</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Object</em>' reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Object</em>' reference.
+   * @see #setObject(uk.ac.open.rbac.rbac.Object)
+   * @see uk.ac.open.rbac.rbac.RbacPackage#getRolePermissionAssignment_Object()
+   * @model
+   * @generated
+   */
+  uk.ac.open.rbac.rbac.Object getObject();
+
+  /**
+   * Sets the value of the '{@link uk.ac.open.rbac.rbac.RolePermissionAssignment#getObject <em>Object</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Object</em>' reference.
+   * @see #getObject()
+   * @generated
+   */
+  void setObject(uk.ac.open.rbac.rbac.Object value);
 
 } // RolePermissionAssignment

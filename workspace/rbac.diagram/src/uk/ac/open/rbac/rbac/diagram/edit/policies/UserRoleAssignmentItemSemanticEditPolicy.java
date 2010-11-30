@@ -6,9 +6,9 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelationshipRequest;
 
-import uk.ac.open.rbac.rbac.diagram.edit.commands.SessionAssignmentsCreateCommand;
-import uk.ac.open.rbac.rbac.diagram.edit.commands.SessionAssignmentsReorientCommand;
-import uk.ac.open.rbac.rbac.diagram.edit.parts.SessionAssignmentsEditPart;
+import uk.ac.open.rbac.rbac.diagram.edit.commands.RolePermissionsCreateCommand;
+import uk.ac.open.rbac.rbac.diagram.edit.commands.RolePermissionsReorientCommand;
+import uk.ac.open.rbac.rbac.diagram.edit.parts.RolePermissionsEditPart;
 import uk.ac.open.rbac.rbac.diagram.providers.RBACElementTypes;
 
 /**
@@ -46,7 +46,7 @@ public class UserRoleAssignmentItemSemanticEditPolicy extends
 	 */
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (RBACElementTypes.SessionAssignments_4005 == req.getElementType()) {
+		if (RBACElementTypes.SessionAssignments_4003 == req.getElementType()) {
 			return null;
 		}
 		return null;
@@ -57,8 +57,8 @@ public class UserRoleAssignmentItemSemanticEditPolicy extends
 	 */
 	protected Command getCompleteCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (RBACElementTypes.SessionAssignments_4005 == req.getElementType()) {
-			return getGEFWrapper(new SessionAssignmentsCreateCommand(req,
+		if (RBACElementTypes.SessionAssignments_4003 == req.getElementType()) {
+			return getGEFWrapper(new RolePermissionsCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
 		return null;
@@ -73,8 +73,8 @@ public class UserRoleAssignmentItemSemanticEditPolicy extends
 	protected Command getReorientReferenceRelationshipCommand(
 			ReorientReferenceRelationshipRequest req) {
 		switch (getVisualID(req)) {
-		case SessionAssignmentsEditPart.VISUAL_ID:
-			return getGEFWrapper(new SessionAssignmentsReorientCommand(req));
+		case RolePermissionsEditPart.VISUAL_ID:
+			return getGEFWrapper(new RolePermissionsReorientCommand(req));
 		}
 		return super.getReorientReferenceRelationshipCommand(req);
 	}

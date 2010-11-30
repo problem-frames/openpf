@@ -55,7 +55,7 @@ import uk.ac.open.rbac.rbac.RbacFactory;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.ModelEditPart;
 
 /**
- * @generated
+ * @generated NOT
  */
 public class RBACDiagramEditorUtil extends ImageDiagramUtil {
 
@@ -212,7 +212,7 @@ public class RBACDiagramEditorUtil extends ImageDiagramUtil {
 		setCharset(WorkspaceSynchronizer.getFile(modelResource));
 		setCharset(WorkspaceSynchronizer.getFile(diagramResource));
 		// this line is new, inherited from ImageDiagramUtil
-		saveDiagramToImages(diagramResource, modelResource);		
+		saveDiagramToImages(diagramResource, modelResource);
 		return diagramResource;
 	}
 

@@ -25,6 +25,7 @@ import uk.ac.open.rbac.rbac.UserRoleAssignment;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link uk.ac.open.rbac.rbac.impl.UserRoleAssignmentImpl#getName <em>Name</em>}</li>
  *   <li>{@link uk.ac.open.rbac.rbac.impl.UserRoleAssignmentImpl#getUser <em>User</em>}</li>
  *   <li>{@link uk.ac.open.rbac.rbac.impl.UserRoleAssignmentImpl#getRole <em>Role</em>}</li>
  * </ul>
@@ -34,6 +35,26 @@ import uk.ac.open.rbac.rbac.UserRoleAssignment;
  */
 public class UserRoleAssignmentImpl extends MinimalEObjectImpl.Container implements UserRoleAssignment
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getUser() <em>User</em>}' reference.
    * <!-- begin-user-doc -->
@@ -73,6 +94,29 @@ public class UserRoleAssignmentImpl extends MinimalEObjectImpl.Container impleme
   protected EClass eStaticClass()
   {
     return RbacPackage.Literals.USER_ROLE_ASSIGNMENT;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RbacPackage.USER_ROLE_ASSIGNMENT__NAME, oldName, name));
   }
 
   /**
@@ -171,6 +215,8 @@ public class UserRoleAssignmentImpl extends MinimalEObjectImpl.Container impleme
   {
     switch (featureID)
     {
+      case RbacPackage.USER_ROLE_ASSIGNMENT__NAME:
+        return getName();
       case RbacPackage.USER_ROLE_ASSIGNMENT__USER:
         if (resolve) return getUser();
         return basicGetUser();
@@ -191,6 +237,9 @@ public class UserRoleAssignmentImpl extends MinimalEObjectImpl.Container impleme
   {
     switch (featureID)
     {
+      case RbacPackage.USER_ROLE_ASSIGNMENT__NAME:
+        setName((String)newValue);
+        return;
       case RbacPackage.USER_ROLE_ASSIGNMENT__USER:
         setUser((User)newValue);
         return;
@@ -211,6 +260,9 @@ public class UserRoleAssignmentImpl extends MinimalEObjectImpl.Container impleme
   {
     switch (featureID)
     {
+      case RbacPackage.USER_ROLE_ASSIGNMENT__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case RbacPackage.USER_ROLE_ASSIGNMENT__USER:
         setUser((User)null);
         return;
@@ -231,12 +283,31 @@ public class UserRoleAssignmentImpl extends MinimalEObjectImpl.Container impleme
   {
     switch (featureID)
     {
+      case RbacPackage.USER_ROLE_ASSIGNMENT__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case RbacPackage.USER_ROLE_ASSIGNMENT__USER:
         return user != null;
       case RbacPackage.USER_ROLE_ASSIGNMENT__ROLE:
         return role != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (name: ");
+    result.append(name);
+    result.append(')');
+    return result.toString();
   }
 
 } //UserRoleAssignmentImpl

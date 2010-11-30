@@ -19,11 +19,9 @@ import org.eclipse.swt.graphics.Image;
 import uk.ac.open.rbac.rbac.RbacPackage;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.ModelEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.ObjectEditPart;
-import uk.ac.open.rbac.rbac.diagram.edit.parts.PermissionEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.RoleEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.RolePermissionAssignmentEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.RolePermissionsEditPart;
-import uk.ac.open.rbac.rbac.diagram.edit.parts.SessionAssignmentsEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.SessionEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.UserEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.UserRoleAssignmentEditPart;
@@ -83,18 +81,11 @@ public class RBACElementTypes {
 	 * @generated
 	 */
 	public static final IElementType RolePermissionAssignment_4002 = getElementType("rbac.diagram.RolePermissionAssignment_4002"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType Permission_4003 = getElementType("rbac.diagram.Permission_4003"); //$NON-NLS-1$
-	/**
-	 * @generated
-	 */
-	public static final IElementType RolePermissions_4004 = getElementType("rbac.diagram.RolePermissions_4004"); //$NON-NLS-1$
-	/**
-	 * @generated
-	 */
-	public static final IElementType SessionAssignments_4005 = getElementType("rbac.diagram.SessionAssignments_4005"); //$NON-NLS-1$
+	public static final IElementType SessionAssignments_4003 = getElementType("rbac.diagram.SessionAssignments_4003"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -223,12 +214,7 @@ public class RBACElementTypes {
 			elements.put(RolePermissionAssignment_4002,
 					RbacPackage.eINSTANCE.getRolePermissionAssignment());
 
-			elements.put(Permission_4003, RbacPackage.eINSTANCE.getPermission());
-
-			elements.put(RolePermissions_4004,
-					RbacPackage.eINSTANCE.getRole_Permissions());
-
-			elements.put(SessionAssignments_4005,
+			elements.put(SessionAssignments_4003,
 					RbacPackage.eINSTANCE.getSession_Assignments());
 		}
 		return (ENamedElement) elements.get(type);
@@ -254,9 +240,7 @@ public class RBACElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Object_2004);
 			KNOWN_ELEMENT_TYPES.add(UserRoleAssignment_4001);
 			KNOWN_ELEMENT_TYPES.add(RolePermissionAssignment_4002);
-			KNOWN_ELEMENT_TYPES.add(Permission_4003);
-			KNOWN_ELEMENT_TYPES.add(RolePermissions_4004);
-			KNOWN_ELEMENT_TYPES.add(SessionAssignments_4005);
+			KNOWN_ELEMENT_TYPES.add(SessionAssignments_4003);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -280,12 +264,8 @@ public class RBACElementTypes {
 			return UserRoleAssignment_4001;
 		case RolePermissionAssignmentEditPart.VISUAL_ID:
 			return RolePermissionAssignment_4002;
-		case PermissionEditPart.VISUAL_ID:
-			return Permission_4003;
 		case RolePermissionsEditPart.VISUAL_ID:
-			return RolePermissions_4004;
-		case SessionAssignmentsEditPart.VISUAL_ID:
-			return SessionAssignments_4005;
+			return SessionAssignments_4003;
 		}
 		return null;
 	}

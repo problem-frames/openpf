@@ -11,19 +11,16 @@ import uk.ac.open.rbac.rbac.RbacPackage;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.ModelEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.ObjectEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.ObjectNameEditPart;
-import uk.ac.open.rbac.rbac.diagram.edit.parts.PermissionEditPart;
-import uk.ac.open.rbac.rbac.diagram.edit.parts.PermissionTypeEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.RoleEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.RoleNameEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.RolePermissionAssignmentEditPart;
+import uk.ac.open.rbac.rbac.diagram.edit.parts.RolePermissionAssignmentTypeEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.RolePermissionsEditPart;
-import uk.ac.open.rbac.rbac.diagram.edit.parts.SessionAssignmentsEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.SessionEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.SessionNameEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.UserEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.UserNameEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.UserRoleAssignmentEditPart;
-import uk.ac.open.rbac.rbac.diagram.edit.parts.WrappingLabel2EditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.WrappingLabelEditPart;
 
 /**
@@ -210,18 +207,13 @@ public class RBACVisualIDRegistry {
 				return true;
 			}
 			break;
-		case PermissionEditPart.VISUAL_ID:
-			if (PermissionTypeEditPart.VISUAL_ID == nodeVisualID) {
+		case RolePermissionAssignmentEditPart.VISUAL_ID:
+			if (RolePermissionAssignmentTypeEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
 		case RolePermissionsEditPart.VISUAL_ID:
 			if (WrappingLabelEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case SessionAssignmentsEditPart.VISUAL_ID:
-			if (WrappingLabel2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -243,10 +235,6 @@ public class RBACVisualIDRegistry {
 		if (RbacPackage.eINSTANCE.getRolePermissionAssignment().isSuperTypeOf(
 				domainElement.eClass())) {
 			return RolePermissionAssignmentEditPart.VISUAL_ID;
-		}
-		if (RbacPackage.eINSTANCE.getPermission().isSuperTypeOf(
-				domainElement.eClass())) {
-			return PermissionEditPart.VISUAL_ID;
 		}
 		return -1;
 	}

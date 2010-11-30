@@ -22,6 +22,7 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.dialogs.ElementListSelectionDialog;
 
 import uk.ac.open.rbac.rbac.diagram.edit.parts.ModelEditPart;
+import uk.ac.open.rbac.rbac.diagram.edit.parts.ObjectEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.RoleEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.UserEditPart;
 import uk.ac.open.rbac.rbac.diagram.part.Messages;
@@ -55,6 +56,9 @@ public class RBACModelingAssistantProvider extends ModelingAssistantProvider {
 	public List getRelTypesOnSource(IAdaptable source) {
 		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source
 				.getAdapter(IGraphicalEditPart.class);
+		if (sourceEditPart instanceof RoleEditPart) {
+			return ((RoleEditPart) sourceEditPart).getMARelTypesOnSource();
+		}
 		if (sourceEditPart instanceof UserEditPart) {
 			return ((UserEditPart) sourceEditPart).getMARelTypesOnSource();
 		}
@@ -70,6 +74,9 @@ public class RBACModelingAssistantProvider extends ModelingAssistantProvider {
 		if (targetEditPart instanceof RoleEditPart) {
 			return ((RoleEditPart) targetEditPart).getMARelTypesOnTarget();
 		}
+		if (targetEditPart instanceof ObjectEditPart) {
+			return ((ObjectEditPart) targetEditPart).getMARelTypesOnTarget();
+		}
 		return Collections.EMPTY_LIST;
 	}
 
@@ -82,6 +89,10 @@ public class RBACModelingAssistantProvider extends ModelingAssistantProvider {
 				.getAdapter(IGraphicalEditPart.class);
 		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target
 				.getAdapter(IGraphicalEditPart.class);
+		if (sourceEditPart instanceof RoleEditPart) {
+			return ((RoleEditPart) sourceEditPart)
+					.getMARelTypesOnSourceAndTarget(targetEditPart);
+		}
 		if (sourceEditPart instanceof UserEditPart) {
 			return ((UserEditPart) sourceEditPart)
 					.getMARelTypesOnSourceAndTarget(targetEditPart);
@@ -100,6 +111,10 @@ public class RBACModelingAssistantProvider extends ModelingAssistantProvider {
 			return ((RoleEditPart) targetEditPart)
 					.getMATypesForSource(relationshipType);
 		}
+		if (targetEditPart instanceof ObjectEditPart) {
+			return ((ObjectEditPart) targetEditPart)
+					.getMATypesForSource(relationshipType);
+		}
 		return Collections.EMPTY_LIST;
 	}
 
@@ -110,6 +125,10 @@ public class RBACModelingAssistantProvider extends ModelingAssistantProvider {
 			IElementType relationshipType) {
 		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source
 				.getAdapter(IGraphicalEditPart.class);
+		if (sourceEditPart instanceof RoleEditPart) {
+			return ((RoleEditPart) sourceEditPart)
+					.getMATypesForTarget(relationshipType);
+		}
 		if (sourceEditPart instanceof UserEditPart) {
 			return ((UserEditPart) sourceEditPart)
 					.getMATypesForTarget(relationshipType);

@@ -27,8 +27,9 @@ public class RBACFormatter extends AbstractDeclarativeFormatter {
 	    c.setLinewrap(1).before(f.getRoleAccess().getRoleKeyword_0());
 	    c.setLinewrap(1).before(f.getUserAccess().getUserKeyword_0());
 	    c.setLinewrap(1).before(f.getObjectAccess().getObjectKeyword_0());
-	    c.setLinewrap(1).before(f.getPermissionAccess().getRoleAssignment_1());
-	    c.setLinewrap(1).before(f.getUserRoleAssignmentAccess().getUserAssignment_0());
+	    c.setLinewrap(1).before(f.getUserRoleAssignmentAccess().getNameAssignment_0());
 	    c.setLinewrap(1).before(f.getRolePermissionAssignmentAccess().getRoleAssignment_0());
+	    c.setIndentationIncrement().after(f.getSessionAccess().getLeftCurlyBracketKeyword_2());	    	    
+	    c.setIndentationDecrement().before(f.getSessionAccess().getRightCurlyBracketKeyword_4());	    	    
 	}
 }

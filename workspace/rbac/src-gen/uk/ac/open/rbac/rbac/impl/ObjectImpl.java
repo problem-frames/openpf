@@ -22,6 +22,7 @@ import uk.ac.open.rbac.rbac.RbacPackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link uk.ac.open.rbac.rbac.impl.ObjectImpl#getName <em>Name</em>}</li>
+ *   <li>{@link uk.ac.open.rbac.rbac.impl.ObjectImpl#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -48,6 +49,26 @@ public class ObjectImpl extends MinimalEObjectImpl.Container implements uk.ac.op
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected static final String TYPE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected String type = TYPE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -98,6 +119,29 @@ public class ObjectImpl extends MinimalEObjectImpl.Container implements uk.ac.op
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getType()
+  {
+    return type;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setType(String newType)
+  {
+    String oldType = type;
+    type = newType;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RbacPackage.OBJECT__TYPE, oldType, type));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -105,6 +149,8 @@ public class ObjectImpl extends MinimalEObjectImpl.Container implements uk.ac.op
     {
       case RbacPackage.OBJECT__NAME:
         return getName();
+      case RbacPackage.OBJECT__TYPE:
+        return getType();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -121,6 +167,9 @@ public class ObjectImpl extends MinimalEObjectImpl.Container implements uk.ac.op
     {
       case RbacPackage.OBJECT__NAME:
         setName((String)newValue);
+        return;
+      case RbacPackage.OBJECT__TYPE:
+        setType((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -139,6 +188,9 @@ public class ObjectImpl extends MinimalEObjectImpl.Container implements uk.ac.op
       case RbacPackage.OBJECT__NAME:
         setName(NAME_EDEFAULT);
         return;
+      case RbacPackage.OBJECT__TYPE:
+        setType(TYPE_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -155,6 +207,8 @@ public class ObjectImpl extends MinimalEObjectImpl.Container implements uk.ac.op
     {
       case RbacPackage.OBJECT__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case RbacPackage.OBJECT__TYPE:
+        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
     }
     return super.eIsSet(featureID);
   }
@@ -172,6 +226,8 @@ public class ObjectImpl extends MinimalEObjectImpl.Container implements uk.ac.op
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
+    result.append(", type: ");
+    result.append(type);
     result.append(')');
     return result.toString();
   }

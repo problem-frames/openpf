@@ -115,13 +115,22 @@ public interface RbacPackage extends EPackage
   int MODEL__PERMISSIONS = 4;
 
   /**
+   * The feature id for the '<em><b>Assignments</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MODEL__ASSIGNMENTS = 5;
+
+  /**
    * The number of structural features of the '<em>Model</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL_FEATURE_COUNT = 5;
+  int MODEL_FEATURE_COUNT = 6;
 
   /**
    * The meta object id for the '{@link uk.ac.open.rbac.rbac.impl.RoleImpl <em>Role</em>}' class.
@@ -143,22 +152,13 @@ public interface RbacPackage extends EPackage
   int ROLE__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Permissions</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ROLE__PERMISSIONS = 1;
-
-  /**
    * The number of structural features of the '<em>Role</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ROLE_FEATURE_COUNT = 2;
+  int ROLE_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link uk.ac.open.rbac.rbac.impl.UserImpl <em>User</em>}' class.
@@ -189,52 +189,6 @@ public interface RbacPackage extends EPackage
   int USER_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link uk.ac.open.rbac.rbac.impl.PermissionImpl <em>Permission</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see uk.ac.open.rbac.rbac.impl.PermissionImpl
-   * @see uk.ac.open.rbac.rbac.impl.RbacPackageImpl#getPermission()
-   * @generated
-   */
-  int PERMISSION = 3;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PERMISSION__TYPE = 0;
-
-  /**
-   * The feature id for the '<em><b>Role</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PERMISSION__ROLE = 1;
-
-  /**
-   * The feature id for the '<em><b>Object</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PERMISSION__OBJECT = 2;
-
-  /**
-   * The number of structural features of the '<em>Permission</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PERMISSION_FEATURE_COUNT = 3;
-
-  /**
    * The meta object id for the '{@link uk.ac.open.rbac.rbac.impl.ObjectImpl <em>Object</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -242,7 +196,7 @@ public interface RbacPackage extends EPackage
    * @see uk.ac.open.rbac.rbac.impl.RbacPackageImpl#getObject()
    * @generated
    */
-  int OBJECT = 4;
+  int OBJECT = 3;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -254,13 +208,22 @@ public interface RbacPackage extends EPackage
   int OBJECT__NAME = 0;
 
   /**
+   * The feature id for the '<em><b>Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT__TYPE = 1;
+
+  /**
    * The number of structural features of the '<em>Object</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OBJECT_FEATURE_COUNT = 1;
+  int OBJECT_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link uk.ac.open.rbac.rbac.impl.SessionImpl <em>Session</em>}' class.
@@ -270,7 +233,7 @@ public interface RbacPackage extends EPackage
    * @see uk.ac.open.rbac.rbac.impl.RbacPackageImpl#getSession()
    * @generated
    */
-  int SESSION = 5;
+  int SESSION = 4;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -282,7 +245,7 @@ public interface RbacPackage extends EPackage
   int SESSION__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Assignments</b></em>' containment reference list.
+   * The feature id for the '<em><b>Assignments</b></em>' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -307,7 +270,16 @@ public interface RbacPackage extends EPackage
    * @see uk.ac.open.rbac.rbac.impl.RbacPackageImpl#getUserRoleAssignment()
    * @generated
    */
-  int USER_ROLE_ASSIGNMENT = 6;
+  int USER_ROLE_ASSIGNMENT = 5;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int USER_ROLE_ASSIGNMENT__NAME = 0;
 
   /**
    * The feature id for the '<em><b>User</b></em>' reference.
@@ -316,7 +288,7 @@ public interface RbacPackage extends EPackage
    * @generated
    * @ordered
    */
-  int USER_ROLE_ASSIGNMENT__USER = 0;
+  int USER_ROLE_ASSIGNMENT__USER = 1;
 
   /**
    * The feature id for the '<em><b>Role</b></em>' reference.
@@ -325,7 +297,7 @@ public interface RbacPackage extends EPackage
    * @generated
    * @ordered
    */
-  int USER_ROLE_ASSIGNMENT__ROLE = 1;
+  int USER_ROLE_ASSIGNMENT__ROLE = 2;
 
   /**
    * The number of structural features of the '<em>User Role Assignment</em>' class.
@@ -334,7 +306,7 @@ public interface RbacPackage extends EPackage
    * @generated
    * @ordered
    */
-  int USER_ROLE_ASSIGNMENT_FEATURE_COUNT = 2;
+  int USER_ROLE_ASSIGNMENT_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link uk.ac.open.rbac.rbac.impl.RolePermissionAssignmentImpl <em>Role Permission Assignment</em>}' class.
@@ -344,7 +316,7 @@ public interface RbacPackage extends EPackage
    * @see uk.ac.open.rbac.rbac.impl.RbacPackageImpl#getRolePermissionAssignment()
    * @generated
    */
-  int ROLE_PERMISSION_ASSIGNMENT = 7;
+  int ROLE_PERMISSION_ASSIGNMENT = 6;
 
   /**
    * The feature id for the '<em><b>Role</b></em>' reference.
@@ -356,13 +328,22 @@ public interface RbacPackage extends EPackage
   int ROLE_PERMISSION_ASSIGNMENT__ROLE = 0;
 
   /**
-   * The feature id for the '<em><b>Permission</b></em>' reference.
+   * The feature id for the '<em><b>Type</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ROLE_PERMISSION_ASSIGNMENT__PERMISSION = 1;
+  int ROLE_PERMISSION_ASSIGNMENT__TYPE = 1;
+
+  /**
+   * The feature id for the '<em><b>Object</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ROLE_PERMISSION_ASSIGNMENT__OBJECT = 2;
 
   /**
    * The number of structural features of the '<em>Role Permission Assignment</em>' class.
@@ -371,7 +352,7 @@ public interface RbacPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ROLE_PERMISSION_ASSIGNMENT_FEATURE_COUNT = 2;
+  int ROLE_PERMISSION_ASSIGNMENT_FEATURE_COUNT = 3;
 
 
   /**
@@ -440,6 +421,17 @@ public interface RbacPackage extends EPackage
   EReference getModel_Permissions();
 
   /**
+   * Returns the meta object for the containment reference list '{@link uk.ac.open.rbac.rbac.Model#getAssignments <em>Assignments</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Assignments</em>'.
+   * @see uk.ac.open.rbac.rbac.Model#getAssignments()
+   * @see #getModel()
+   * @generated
+   */
+  EReference getModel_Assignments();
+
+  /**
    * Returns the meta object for class '{@link uk.ac.open.rbac.rbac.Role <em>Role</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -459,17 +451,6 @@ public interface RbacPackage extends EPackage
    * @generated
    */
   EAttribute getRole_Name();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link uk.ac.open.rbac.rbac.Role#getPermissions <em>Permissions</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Permissions</em>'.
-   * @see uk.ac.open.rbac.rbac.Role#getPermissions()
-   * @see #getRole()
-   * @generated
-   */
-  EReference getRole_Permissions();
 
   /**
    * Returns the meta object for class '{@link uk.ac.open.rbac.rbac.User <em>User</em>}'.
@@ -493,49 +474,6 @@ public interface RbacPackage extends EPackage
   EAttribute getUser_Name();
 
   /**
-   * Returns the meta object for class '{@link uk.ac.open.rbac.rbac.Permission <em>Permission</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Permission</em>'.
-   * @see uk.ac.open.rbac.rbac.Permission
-   * @generated
-   */
-  EClass getPermission();
-
-  /**
-   * Returns the meta object for the attribute '{@link uk.ac.open.rbac.rbac.Permission#getType <em>Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Type</em>'.
-   * @see uk.ac.open.rbac.rbac.Permission#getType()
-   * @see #getPermission()
-   * @generated
-   */
-  EAttribute getPermission_Type();
-
-  /**
-   * Returns the meta object for the reference '{@link uk.ac.open.rbac.rbac.Permission#getRole <em>Role</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Role</em>'.
-   * @see uk.ac.open.rbac.rbac.Permission#getRole()
-   * @see #getPermission()
-   * @generated
-   */
-  EReference getPermission_Role();
-
-  /**
-   * Returns the meta object for the reference '{@link uk.ac.open.rbac.rbac.Permission#getObject <em>Object</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Object</em>'.
-   * @see uk.ac.open.rbac.rbac.Permission#getObject()
-   * @see #getPermission()
-   * @generated
-   */
-  EReference getPermission_Object();
-
-  /**
    * Returns the meta object for class '{@link uk.ac.open.rbac.rbac.Object <em>Object</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -555,6 +493,17 @@ public interface RbacPackage extends EPackage
    * @generated
    */
   EAttribute getObject_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link uk.ac.open.rbac.rbac.Object#getType <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Type</em>'.
+   * @see uk.ac.open.rbac.rbac.Object#getType()
+   * @see #getObject()
+   * @generated
+   */
+  EAttribute getObject_Type();
 
   /**
    * Returns the meta object for class '{@link uk.ac.open.rbac.rbac.Session <em>Session</em>}'.
@@ -578,10 +527,10 @@ public interface RbacPackage extends EPackage
   EAttribute getSession_Name();
 
   /**
-   * Returns the meta object for the containment reference list '{@link uk.ac.open.rbac.rbac.Session#getAssignments <em>Assignments</em>}'.
+   * Returns the meta object for the reference list '{@link uk.ac.open.rbac.rbac.Session#getAssignments <em>Assignments</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Assignments</em>'.
+   * @return the meta object for the reference list '<em>Assignments</em>'.
    * @see uk.ac.open.rbac.rbac.Session#getAssignments()
    * @see #getSession()
    * @generated
@@ -597,6 +546,17 @@ public interface RbacPackage extends EPackage
    * @generated
    */
   EClass getUserRoleAssignment();
+
+  /**
+   * Returns the meta object for the attribute '{@link uk.ac.open.rbac.rbac.UserRoleAssignment#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see uk.ac.open.rbac.rbac.UserRoleAssignment#getName()
+   * @see #getUserRoleAssignment()
+   * @generated
+   */
+  EAttribute getUserRoleAssignment_Name();
 
   /**
    * Returns the meta object for the reference '{@link uk.ac.open.rbac.rbac.UserRoleAssignment#getUser <em>User</em>}'.
@@ -642,15 +602,26 @@ public interface RbacPackage extends EPackage
   EReference getRolePermissionAssignment_Role();
 
   /**
-   * Returns the meta object for the reference '{@link uk.ac.open.rbac.rbac.RolePermissionAssignment#getPermission <em>Permission</em>}'.
+   * Returns the meta object for the attribute '{@link uk.ac.open.rbac.rbac.RolePermissionAssignment#getType <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Permission</em>'.
-   * @see uk.ac.open.rbac.rbac.RolePermissionAssignment#getPermission()
+   * @return the meta object for the attribute '<em>Type</em>'.
+   * @see uk.ac.open.rbac.rbac.RolePermissionAssignment#getType()
    * @see #getRolePermissionAssignment()
    * @generated
    */
-  EReference getRolePermissionAssignment_Permission();
+  EAttribute getRolePermissionAssignment_Type();
+
+  /**
+   * Returns the meta object for the reference '{@link uk.ac.open.rbac.rbac.RolePermissionAssignment#getObject <em>Object</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Object</em>'.
+   * @see uk.ac.open.rbac.rbac.RolePermissionAssignment#getObject()
+   * @see #getRolePermissionAssignment()
+   * @generated
+   */
+  EReference getRolePermissionAssignment_Object();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -726,6 +697,14 @@ public interface RbacPackage extends EPackage
     EReference MODEL__PERMISSIONS = eINSTANCE.getModel_Permissions();
 
     /**
+     * The meta object literal for the '<em><b>Assignments</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MODEL__ASSIGNMENTS = eINSTANCE.getModel_Assignments();
+
+    /**
      * The meta object literal for the '{@link uk.ac.open.rbac.rbac.impl.RoleImpl <em>Role</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -742,14 +721,6 @@ public interface RbacPackage extends EPackage
      * @generated
      */
     EAttribute ROLE__NAME = eINSTANCE.getRole_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Permissions</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference ROLE__PERMISSIONS = eINSTANCE.getRole_Permissions();
 
     /**
      * The meta object literal for the '{@link uk.ac.open.rbac.rbac.impl.UserImpl <em>User</em>}' class.
@@ -770,40 +741,6 @@ public interface RbacPackage extends EPackage
     EAttribute USER__NAME = eINSTANCE.getUser_Name();
 
     /**
-     * The meta object literal for the '{@link uk.ac.open.rbac.rbac.impl.PermissionImpl <em>Permission</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see uk.ac.open.rbac.rbac.impl.PermissionImpl
-     * @see uk.ac.open.rbac.rbac.impl.RbacPackageImpl#getPermission()
-     * @generated
-     */
-    EClass PERMISSION = eINSTANCE.getPermission();
-
-    /**
-     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PERMISSION__TYPE = eINSTANCE.getPermission_Type();
-
-    /**
-     * The meta object literal for the '<em><b>Role</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PERMISSION__ROLE = eINSTANCE.getPermission_Role();
-
-    /**
-     * The meta object literal for the '<em><b>Object</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PERMISSION__OBJECT = eINSTANCE.getPermission_Object();
-
-    /**
      * The meta object literal for the '{@link uk.ac.open.rbac.rbac.impl.ObjectImpl <em>Object</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -820,6 +757,14 @@ public interface RbacPackage extends EPackage
      * @generated
      */
     EAttribute OBJECT__NAME = eINSTANCE.getObject_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute OBJECT__TYPE = eINSTANCE.getObject_Type();
 
     /**
      * The meta object literal for the '{@link uk.ac.open.rbac.rbac.impl.SessionImpl <em>Session</em>}' class.
@@ -840,7 +785,7 @@ public interface RbacPackage extends EPackage
     EAttribute SESSION__NAME = eINSTANCE.getSession_Name();
 
     /**
-     * The meta object literal for the '<em><b>Assignments</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Assignments</b></em>' reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -856,6 +801,14 @@ public interface RbacPackage extends EPackage
      * @generated
      */
     EClass USER_ROLE_ASSIGNMENT = eINSTANCE.getUserRoleAssignment();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute USER_ROLE_ASSIGNMENT__NAME = eINSTANCE.getUserRoleAssignment_Name();
 
     /**
      * The meta object literal for the '<em><b>User</b></em>' reference feature.
@@ -892,12 +845,20 @@ public interface RbacPackage extends EPackage
     EReference ROLE_PERMISSION_ASSIGNMENT__ROLE = eINSTANCE.getRolePermissionAssignment_Role();
 
     /**
-     * The meta object literal for the '<em><b>Permission</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ROLE_PERMISSION_ASSIGNMENT__PERMISSION = eINSTANCE.getRolePermissionAssignment_Permission();
+    EAttribute ROLE_PERMISSION_ASSIGNMENT__TYPE = eINSTANCE.getRolePermissionAssignment_Type();
+
+    /**
+     * The meta object literal for the '<em><b>Object</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ROLE_PERMISSION_ASSIGNMENT__OBJECT = eINSTANCE.getRolePermissionAssignment_Object();
 
   }
 

@@ -8,8 +8,8 @@ import org.eclipse.gmf.runtime.common.core.command.CommandResult;
 import org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest;
 
-import uk.ac.open.rbac.rbac.Role;
-import uk.ac.open.rbac.rbac.RolePermissionAssignment;
+import uk.ac.open.rbac.rbac.Session;
+import uk.ac.open.rbac.rbac.UserRoleAssignment;
 import uk.ac.open.rbac.rbac.diagram.edit.policies.RBACBaseItemSemanticEditPolicy;
 
 /**
@@ -44,11 +44,10 @@ public class RolePermissionsCreateCommand extends EditElementCommand {
 		if (source == null && target == null) {
 			return false;
 		}
-		if (source != null && false == source instanceof Role) {
+		if (source != null && false == source instanceof Session) {
 			return false;
 		}
-		if (target != null
-				&& false == target instanceof RolePermissionAssignment) {
+		if (target != null && false == target instanceof UserRoleAssignment) {
 			return false;
 		}
 		if (getSource() == null) {
@@ -56,7 +55,7 @@ public class RolePermissionsCreateCommand extends EditElementCommand {
 		}
 		// target may be null here but it's possible to check constraint
 		return RBACBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canCreateRolePermissions_4004(getSource(), getTarget());
+				.canCreateSessionAssignments_4003(getSource(), getTarget());
 	}
 
 	/**
@@ -70,7 +69,7 @@ public class RolePermissionsCreateCommand extends EditElementCommand {
 		}
 
 		if (getSource() != null && getTarget() != null) {
-			getSource().getPermissions().add(getTarget());
+			getSource().getAssignments().add(getTarget());
 		}
 		return CommandResult.newOKCommandResult();
 
@@ -86,14 +85,14 @@ public class RolePermissionsCreateCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	protected Role getSource() {
-		return (Role) source;
+	protected Session getSource() {
+		return (Session) source;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected RolePermissionAssignment getTarget() {
-		return (RolePermissionAssignment) target;
+	protected UserRoleAssignment getTarget() {
+		return (UserRoleAssignment) target;
 	}
 }

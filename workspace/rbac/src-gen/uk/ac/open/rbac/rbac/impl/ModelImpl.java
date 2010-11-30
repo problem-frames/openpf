@@ -20,11 +20,12 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import uk.ac.open.rbac.rbac.Model;
-import uk.ac.open.rbac.rbac.Permission;
 import uk.ac.open.rbac.rbac.RbacPackage;
 import uk.ac.open.rbac.rbac.Role;
+import uk.ac.open.rbac.rbac.RolePermissionAssignment;
 import uk.ac.open.rbac.rbac.Session;
 import uk.ac.open.rbac.rbac.User;
+import uk.ac.open.rbac.rbac.UserRoleAssignment;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,6 +39,7 @@ import uk.ac.open.rbac.rbac.User;
  *   <li>{@link uk.ac.open.rbac.rbac.impl.ModelImpl#getSessions <em>Sessions</em>}</li>
  *   <li>{@link uk.ac.open.rbac.rbac.impl.ModelImpl#getObjects <em>Objects</em>}</li>
  *   <li>{@link uk.ac.open.rbac.rbac.impl.ModelImpl#getPermissions <em>Permissions</em>}</li>
+ *   <li>{@link uk.ac.open.rbac.rbac.impl.ModelImpl#getAssignments <em>Assignments</em>}</li>
  * </ul>
  * </p>
  *
@@ -93,7 +95,17 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * @generated
    * @ordered
    */
-  protected EList<Permission> permissions;
+  protected EList<RolePermissionAssignment> permissions;
+
+  /**
+   * The cached value of the '{@link #getAssignments() <em>Assignments</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAssignments()
+   * @generated
+   * @ordered
+   */
+  protected EList<UserRoleAssignment> assignments;
 
   /**
    * <!-- begin-user-doc -->
@@ -177,13 +189,27 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Permission> getPermissions()
+  public EList<RolePermissionAssignment> getPermissions()
   {
     if (permissions == null)
     {
-      permissions = new EObjectContainmentEList<Permission>(Permission.class, this, RbacPackage.MODEL__PERMISSIONS);
+      permissions = new EObjectContainmentEList<RolePermissionAssignment>(RolePermissionAssignment.class, this, RbacPackage.MODEL__PERMISSIONS);
     }
     return permissions;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<UserRoleAssignment> getAssignments()
+  {
+    if (assignments == null)
+    {
+      assignments = new EObjectContainmentEList<UserRoleAssignment>(UserRoleAssignment.class, this, RbacPackage.MODEL__ASSIGNMENTS);
+    }
+    return assignments;
   }
 
   /**
@@ -206,6 +232,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
         return ((InternalEList<?>)getObjects()).basicRemove(otherEnd, msgs);
       case RbacPackage.MODEL__PERMISSIONS:
         return ((InternalEList<?>)getPermissions()).basicRemove(otherEnd, msgs);
+      case RbacPackage.MODEL__ASSIGNMENTS:
+        return ((InternalEList<?>)getAssignments()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -230,6 +258,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
         return getObjects();
       case RbacPackage.MODEL__PERMISSIONS:
         return getPermissions();
+      case RbacPackage.MODEL__ASSIGNMENTS:
+        return getAssignments();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -263,7 +293,11 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
         return;
       case RbacPackage.MODEL__PERMISSIONS:
         getPermissions().clear();
-        getPermissions().addAll((Collection<? extends Permission>)newValue);
+        getPermissions().addAll((Collection<? extends RolePermissionAssignment>)newValue);
+        return;
+      case RbacPackage.MODEL__ASSIGNMENTS:
+        getAssignments().clear();
+        getAssignments().addAll((Collection<? extends UserRoleAssignment>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -294,6 +328,9 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
       case RbacPackage.MODEL__PERMISSIONS:
         getPermissions().clear();
         return;
+      case RbacPackage.MODEL__ASSIGNMENTS:
+        getAssignments().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -318,6 +355,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
         return objects != null && !objects.isEmpty();
       case RbacPackage.MODEL__PERMISSIONS:
         return permissions != null && !permissions.isEmpty();
+      case RbacPackage.MODEL__ASSIGNMENTS:
+        return assignments != null && !assignments.isEmpty();
     }
     return super.eIsSet(featureID);
   }

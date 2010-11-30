@@ -15,8 +15,8 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import uk.ac.open.rbac.rbac.RbacPackage;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.ObjectNameEditPart;
-import uk.ac.open.rbac.rbac.diagram.edit.parts.PermissionTypeEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.RoleNameEditPart;
+import uk.ac.open.rbac.rbac.diagram.edit.parts.RolePermissionAssignmentTypeEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.SessionNameEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.UserNameEditPart;
 import uk.ac.open.rbac.rbac.diagram.parsers.MessageFormatParser;
@@ -85,37 +85,41 @@ public class RBACParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser objectName_5004Parser;
+	private IParser objectNameType_5004Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getObjectName_5004Parser() {
-		if (objectName_5004Parser == null) {
-			EAttribute[] features = new EAttribute[] { RbacPackage.eINSTANCE
-					.getObject_Name() };
+	private IParser getObjectNameType_5004Parser() {
+		if (objectNameType_5004Parser == null) {
+			EAttribute[] features = new EAttribute[] {
+					RbacPackage.eINSTANCE.getObject_Name(),
+					RbacPackage.eINSTANCE.getObject_Type() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			objectName_5004Parser = parser;
+			parser.setViewPattern("{0}: {1}"); //$NON-NLS-1$
+			parser.setEditorPattern("{0}: {1}"); //$NON-NLS-1$
+			parser.setEditPattern("{0}: {1}"); //$NON-NLS-1$
+			objectNameType_5004Parser = parser;
 		}
-		return objectName_5004Parser;
+		return objectNameType_5004Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser permissionType_6001Parser;
+	private IParser rolePermissionAssignmentType_6001Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getPermissionType_6001Parser() {
-		if (permissionType_6001Parser == null) {
+	private IParser getRolePermissionAssignmentType_6001Parser() {
+		if (rolePermissionAssignmentType_6001Parser == null) {
 			EAttribute[] features = new EAttribute[] { RbacPackage.eINSTANCE
-					.getPermission_Type() };
+					.getRolePermissionAssignment_Type() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			permissionType_6001Parser = parser;
+			rolePermissionAssignmentType_6001Parser = parser;
 		}
-		return permissionType_6001Parser;
+		return rolePermissionAssignmentType_6001Parser;
 	}
 
 	/**
@@ -130,9 +134,9 @@ public class RBACParserProvider extends AbstractProvider implements
 		case SessionNameEditPart.VISUAL_ID:
 			return getSessionName_5003Parser();
 		case ObjectNameEditPart.VISUAL_ID:
-			return getObjectName_5004Parser();
-		case PermissionTypeEditPart.VISUAL_ID:
-			return getPermissionType_6001Parser();
+			return getObjectNameType_5004Parser();
+		case RolePermissionAssignmentTypeEditPart.VISUAL_ID:
+			return getRolePermissionAssignmentType_6001Parser();
 		}
 		return null;
 	}

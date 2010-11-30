@@ -22,9 +22,12 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
+import org.eclipse.emf.edit.provider.ViewerNotification;
 import uk.ac.open.rbac.rbac.RbacPackage;
+import uk.ac.open.rbac.rbac.RolePermissionAssignment;
 
 /**
  * This is the item provider adapter for a {@link uk.ac.open.rbac.rbac.RolePermissionAssignment} object.
@@ -62,7 +65,8 @@ public class RolePermissionAssignmentItemProvider
 			super.getPropertyDescriptors(object);
 
 			addRolePropertyDescriptor(object);
-			addPermissionPropertyDescriptor(object);
+			addTypePropertyDescriptor(object);
+			addObjectPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -90,19 +94,41 @@ public class RolePermissionAssignmentItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Permission feature.
+	 * This adds a property descriptor for the Type feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPermissionPropertyDescriptor(Object object) {
+	protected void addTypePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_RolePermissionAssignment_permission_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_RolePermissionAssignment_permission_feature", "_UI_RolePermissionAssignment_type"),
-				 RbacPackage.Literals.ROLE_PERMISSION_ASSIGNMENT__PERMISSION,
+				 getString("_UI_RolePermissionAssignment_type_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_RolePermissionAssignment_type_feature", "_UI_RolePermissionAssignment_type"),
+				 RbacPackage.Literals.ROLE_PERMISSION_ASSIGNMENT__TYPE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Object feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addObjectPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_RolePermissionAssignment_object_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_RolePermissionAssignment_object_feature", "_UI_RolePermissionAssignment_type"),
+				 RbacPackage.Literals.ROLE_PERMISSION_ASSIGNMENT__OBJECT,
 				 true,
 				 false,
 				 true,
@@ -130,7 +156,10 @@ public class RolePermissionAssignmentItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_RolePermissionAssignment_type");
+		String label = ((RolePermissionAssignment)object).getType();
+		return label == null || label.length() == 0 ?
+			getString("_UI_RolePermissionAssignment_type") :
+			getString("_UI_RolePermissionAssignment_type") + " " + label;
 	}
 
 	/**
@@ -143,6 +172,12 @@ public class RolePermissionAssignmentItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(RolePermissionAssignment.class)) {
+			case RbacPackage.ROLE_PERMISSION_ASSIGNMENT__TYPE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

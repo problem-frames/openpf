@@ -72,11 +72,16 @@
       <domainMetaElement
           href="RBAC.ecore#//Object"/>
       <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
+          xsi:type="gmfmap:FeatureLabelMapping"
+          viewPattern="{0}: {1}"
+          editorPattern="{0}: {1}"
+          editPattern="{0}: {1}">
         <diagramLabel
             href="RBAC.gmfgraph#ObjectLabel"/>
         <features
             href="RBAC.ecore#//Object/name"/>
+        <features
+            href="RBAC.ecore#//Object/type"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
@@ -89,10 +94,10 @@
     <domainMetaElement
         href="RBAC.ecore#//UserRoleAssignment"/>
     <containmentFeature
-        href="RBAC.ecore#//Session/assignments"/>
+        href="RBAC.ecore#//Model/assignments"/>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="RBAC.gmftool#//@palette/@tools.1/@tools.4"/>
+        href="RBAC.gmftool#//@palette/@tools.1/@tools.2"/>
     <diagramLink
         href="RBAC.gmfgraph#UserRoleAssignment"/>
     <sourceMetaFeature
@@ -105,29 +110,12 @@
   <links>
     <domainMetaElement
         href="RBAC.ecore#//RolePermissionAssignment"/>
-    <containmentFeature
-        href="RBAC.ecore#//Role/permissions"/>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="RBAC.gmftool#//@palette/@tools.1/@tools.3"/>
-    <diagramLink
-        href="RBAC.gmfgraph#RolePermissionAssignment"/>
-    <sourceMetaFeature
-        xsi:type="ecore:EReference"
-        href="RBAC.ecore#//RolePermissionAssignment/role"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="RBAC.ecore#//RolePermissionAssignment/permission"/>
-  </links>
-  <links>
-    <domainMetaElement
-        href="RBAC.ecore#//Permission"/>
     <labelMappings
         xsi:type="gmfmap:FeatureLabelMapping">
       <diagramLabel
-          href="RBAC.gmfgraph#PermissionLabel"/>
+          href="RBAC.gmfgraph#RolePermissionAssignmentLabel"/>
       <features
-          href="RBAC.ecore#//Permission/type"/>
+          href="RBAC.ecore#//RolePermissionAssignment/type"/>
     </labelMappings>
     <containmentFeature
         href="RBAC.ecore#//Model/permissions"/>
@@ -135,26 +123,13 @@
         xsi:type="gmftool:CreationTool"
         href="RBAC.gmftool#//@palette/@tools.1/@tools.1"/>
     <diagramLink
-        href="RBAC.gmfgraph#Permission"/>
+        href="RBAC.gmfgraph#RolePermissionAssignment"/>
+    <sourceMetaFeature
+        xsi:type="ecore:EReference"
+        href="RBAC.ecore#//RolePermissionAssignment/role"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
-        href="RBAC.ecore#//Permission/role"/>
-  </links>
-  <links>
-    <labelMappings
-        xsi:type="gmfmap:DesignLabelMapping"
-        readOnly="true">
-      <diagramLabel
-          href="RBAC.gmfgraph#RolePermissionsExternalLabel"/>
-    </labelMappings>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="RBAC.gmftool#//@palette/@tools.1/@tools.2"/>
-    <diagramLink
-        href="RBAC.gmfgraph#RolePermissions"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="RBAC.ecore#//Role/permissions"/>
+        href="RBAC.ecore#//RolePermissionAssignment/object"/>
   </links>
   <links>
     <labelMappings

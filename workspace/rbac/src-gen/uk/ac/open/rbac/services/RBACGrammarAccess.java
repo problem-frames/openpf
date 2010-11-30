@@ -29,13 +29,17 @@ public class RBACGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cObjectsAssignment_3 = (Assignment)cAlternatives.eContents().get(3);
 		private final RuleCall cObjectsObjectParserRuleCall_3_0 = (RuleCall)cObjectsAssignment_3.eContents().get(0);
 		private final Assignment cPermissionsAssignment_4 = (Assignment)cAlternatives.eContents().get(4);
-		private final RuleCall cPermissionsPermissionParserRuleCall_4_0 = (RuleCall)cPermissionsAssignment_4.eContents().get(0);
+		private final RuleCall cPermissionsRolePermissionAssignmentParserRuleCall_4_0 = (RuleCall)cPermissionsAssignment_4.eContents().get(0);
+		private final Assignment cAssignmentsAssignment_5 = (Assignment)cAlternatives.eContents().get(5);
+		private final RuleCall cAssignmentsUserRoleAssignmentParserRuleCall_5_0 = (RuleCall)cAssignmentsAssignment_5.eContents().get(0);
 		
 		//Model:
-		//	(roles+=Role | users+=User | sessions+=Session | objects+=Object | permissions+=Permission)*;
+		//	(roles+=Role | users+=User | sessions+=Session | objects+=Object | permissions+=RolePermissionAssignment |
+		//	assignments+=UserRoleAssignment)*;
 		public ParserRule getRule() { return rule; }
 
-		//(roles+=Role | users+=User | sessions+=Session | objects+=Object | permissions+=Permission)*
+		//(roles+=Role | users+=User | sessions+=Session | objects+=Object | permissions+=RolePermissionAssignment |
+		//assignments+=UserRoleAssignment)*
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//roles+=Role
@@ -62,11 +66,17 @@ public class RBACGrammarAccess extends AbstractGrammarElementFinder {
 		//Object
 		public RuleCall getObjectsObjectParserRuleCall_3_0() { return cObjectsObjectParserRuleCall_3_0; }
 
-		//permissions+=Permission
+		//permissions+=RolePermissionAssignment
 		public Assignment getPermissionsAssignment_4() { return cPermissionsAssignment_4; }
 
-		//Permission
-		public RuleCall getPermissionsPermissionParserRuleCall_4_0() { return cPermissionsPermissionParserRuleCall_4_0; }
+		//RolePermissionAssignment
+		public RuleCall getPermissionsRolePermissionAssignmentParserRuleCall_4_0() { return cPermissionsRolePermissionAssignmentParserRuleCall_4_0; }
+
+		//assignments+=UserRoleAssignment
+		public Assignment getAssignmentsAssignment_5() { return cAssignmentsAssignment_5; }
+
+		//UserRoleAssignment
+		public RuleCall getAssignmentsUserRoleAssignmentParserRuleCall_5_0() { return cAssignmentsUserRoleAssignmentParserRuleCall_5_0; }
 	}
 
 	public class RoleElements extends AbstractParserRuleElementFinder {
@@ -75,16 +85,12 @@ public class RBACGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRoleKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cPermissionsAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cPermissionsRolePermissionAssignmentParserRuleCall_3_0 = (RuleCall)cPermissionsAssignment_3.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Role:
-		//	"role" name=ID "{" permissions+=RolePermissionAssignment* "}";
+		//	"role" name=ID;
 		public ParserRule getRule() { return rule; }
 
-		//"role" name=ID "{" permissions+=RolePermissionAssignment* "}"
+		//"role" name=ID
 		public Group getGroup() { return cGroup; }
 
 		//"role"
@@ -95,18 +101,6 @@ public class RBACGrammarAccess extends AbstractGrammarElementFinder {
 
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
-
-		//permissions+=RolePermissionAssignment*
-		public Assignment getPermissionsAssignment_3() { return cPermissionsAssignment_3; }
-
-		//RolePermissionAssignment
-		public RuleCall getPermissionsRolePermissionAssignmentParserRuleCall_3_0() { return cPermissionsRolePermissionAssignmentParserRuleCall_3_0; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 
 	public class UserElements extends AbstractParserRuleElementFinder {
@@ -133,62 +127,21 @@ public class RBACGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 	}
 
-	public class PermissionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Permission");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cTypeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cTypeSTRINGTerminalRuleCall_0_0 = (RuleCall)cTypeAssignment_0.eContents().get(0);
-		private final Assignment cRoleAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final CrossReference cRoleRoleCrossReference_1_0 = (CrossReference)cRoleAssignment_1.eContents().get(0);
-		private final RuleCall cRoleRoleIDTerminalRuleCall_1_0_1 = (RuleCall)cRoleRoleCrossReference_1_0.eContents().get(1);
-		private final Assignment cObjectAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final CrossReference cObjectObjectCrossReference_2_0 = (CrossReference)cObjectAssignment_2.eContents().get(0);
-		private final RuleCall cObjectObjectIDTerminalRuleCall_2_0_1 = (RuleCall)cObjectObjectCrossReference_2_0.eContents().get(1);
-		
-		//Permission:
-		//	type=STRING role=[Role] object=[Object];
-		public ParserRule getRule() { return rule; }
-
-		//type=STRING role=[Role] object=[Object]
-		public Group getGroup() { return cGroup; }
-
-		//type=STRING
-		public Assignment getTypeAssignment_0() { return cTypeAssignment_0; }
-
-		//STRING
-		public RuleCall getTypeSTRINGTerminalRuleCall_0_0() { return cTypeSTRINGTerminalRuleCall_0_0; }
-
-		//role=[Role]
-		public Assignment getRoleAssignment_1() { return cRoleAssignment_1; }
-
-		//[Role]
-		public CrossReference getRoleRoleCrossReference_1_0() { return cRoleRoleCrossReference_1_0; }
-
-		//ID
-		public RuleCall getRoleRoleIDTerminalRuleCall_1_0_1() { return cRoleRoleIDTerminalRuleCall_1_0_1; }
-
-		//object=[Object]
-		public Assignment getObjectAssignment_2() { return cObjectAssignment_2; }
-
-		//[Object]
-		public CrossReference getObjectObjectCrossReference_2_0() { return cObjectObjectCrossReference_2_0; }
-
-		//ID
-		public RuleCall getObjectObjectIDTerminalRuleCall_2_0_1() { return cObjectObjectIDTerminalRuleCall_2_0_1; }
-	}
-
 	public class ObjectElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Object");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cObjectKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cColonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cTypeAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTypeSTRINGTerminalRuleCall_3_0 = (RuleCall)cTypeAssignment_3.eContents().get(0);
 		
 		//Object:
-		//	"object" name=ID;
+		//	"object" name=ID ":" type=STRING;
 		public ParserRule getRule() { return rule; }
 
-		//"object" name=ID
+		//"object" name=ID ":" type=STRING
 		public Group getGroup() { return cGroup; }
 
 		//"object"
@@ -199,6 +152,15 @@ public class RBACGrammarAccess extends AbstractGrammarElementFinder {
 
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//":"
+		public Keyword getColonKeyword_2() { return cColonKeyword_2; }
+
+		//type=STRING
+		public Assignment getTypeAssignment_3() { return cTypeAssignment_3; }
+
+		//STRING
+		public RuleCall getTypeSTRINGTerminalRuleCall_3_0() { return cTypeSTRINGTerminalRuleCall_3_0; }
 	}
 
 	public class SessionElements extends AbstractParserRuleElementFinder {
@@ -209,14 +171,15 @@ public class RBACGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cAssignmentsAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cAssignmentsUserRoleAssignmentParserRuleCall_3_0 = (RuleCall)cAssignmentsAssignment_3.eContents().get(0);
+		private final CrossReference cAssignmentsUserRoleAssignmentCrossReference_3_0 = (CrossReference)cAssignmentsAssignment_3.eContents().get(0);
+		private final RuleCall cAssignmentsUserRoleAssignmentIDTerminalRuleCall_3_0_1 = (RuleCall)cAssignmentsUserRoleAssignmentCrossReference_3_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Session:
-		//	"session" name=ID "{" assignments+=UserRoleAssignment* "}";
+		//	"session" name=ID "{" assignments+=[UserRoleAssignment]* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"session" name=ID "{" assignments+=UserRoleAssignment* "}"
+		//"session" name=ID "{" assignments+=[UserRoleAssignment]* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"session"
@@ -231,11 +194,14 @@ public class RBACGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//assignments+=UserRoleAssignment*
+		//assignments+=[UserRoleAssignment]*
 		public Assignment getAssignmentsAssignment_3() { return cAssignmentsAssignment_3; }
 
-		//UserRoleAssignment
-		public RuleCall getAssignmentsUserRoleAssignmentParserRuleCall_3_0() { return cAssignmentsUserRoleAssignmentParserRuleCall_3_0; }
+		//[UserRoleAssignment]
+		public CrossReference getAssignmentsUserRoleAssignmentCrossReference_3_0() { return cAssignmentsUserRoleAssignmentCrossReference_3_0; }
+
+		//ID
+		public RuleCall getAssignmentsUserRoleAssignmentIDTerminalRuleCall_3_0_1() { return cAssignmentsUserRoleAssignmentIDTerminalRuleCall_3_0_1; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
@@ -244,41 +210,49 @@ public class RBACGrammarAccess extends AbstractGrammarElementFinder {
 	public class UserRoleAssignmentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "UserRoleAssignment");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cUserAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final CrossReference cUserUserCrossReference_0_0 = (CrossReference)cUserAssignment_0.eContents().get(0);
-		private final RuleCall cUserUserIDTerminalRuleCall_0_0_1 = (RuleCall)cUserUserCrossReference_0_0.eContents().get(1);
-		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cRoleAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final CrossReference cRoleRoleCrossReference_2_0 = (CrossReference)cRoleAssignment_2.eContents().get(0);
-		private final RuleCall cRoleRoleIDTerminalRuleCall_2_0_1 = (RuleCall)cRoleRoleCrossReference_2_0.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cUserAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final CrossReference cUserUserCrossReference_1_0 = (CrossReference)cUserAssignment_1.eContents().get(0);
+		private final RuleCall cUserUserIDTerminalRuleCall_1_0_1 = (RuleCall)cUserUserCrossReference_1_0.eContents().get(1);
+		private final Keyword cColonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cRoleAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final CrossReference cRoleRoleCrossReference_3_0 = (CrossReference)cRoleAssignment_3.eContents().get(0);
+		private final RuleCall cRoleRoleIDTerminalRuleCall_3_0_1 = (RuleCall)cRoleRoleCrossReference_3_0.eContents().get(1);
 		
 		//UserRoleAssignment:
-		//	user=[User] ":" role=[Role];
+		//	name=ID user=[User] ":" role=[Role];
 		public ParserRule getRule() { return rule; }
 
-		//user=[User] ":" role=[Role]
+		//name=ID user=[User] ":" role=[Role]
 		public Group getGroup() { return cGroup; }
 
+		//name=ID
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
+
 		//user=[User]
-		public Assignment getUserAssignment_0() { return cUserAssignment_0; }
+		public Assignment getUserAssignment_1() { return cUserAssignment_1; }
 
 		//[User]
-		public CrossReference getUserUserCrossReference_0_0() { return cUserUserCrossReference_0_0; }
+		public CrossReference getUserUserCrossReference_1_0() { return cUserUserCrossReference_1_0; }
 
 		//ID
-		public RuleCall getUserUserIDTerminalRuleCall_0_0_1() { return cUserUserIDTerminalRuleCall_0_0_1; }
+		public RuleCall getUserUserIDTerminalRuleCall_1_0_1() { return cUserUserIDTerminalRuleCall_1_0_1; }
 
 		//":"
-		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
+		public Keyword getColonKeyword_2() { return cColonKeyword_2; }
 
 		//role=[Role]
-		public Assignment getRoleAssignment_2() { return cRoleAssignment_2; }
+		public Assignment getRoleAssignment_3() { return cRoleAssignment_3; }
 
 		//[Role]
-		public CrossReference getRoleRoleCrossReference_2_0() { return cRoleRoleCrossReference_2_0; }
+		public CrossReference getRoleRoleCrossReference_3_0() { return cRoleRoleCrossReference_3_0; }
 
 		//ID
-		public RuleCall getRoleRoleIDTerminalRuleCall_2_0_1() { return cRoleRoleIDTerminalRuleCall_2_0_1; }
+		public RuleCall getRoleRoleIDTerminalRuleCall_3_0_1() { return cRoleRoleIDTerminalRuleCall_3_0_1; }
 	}
 
 	public class RolePermissionAssignmentElements extends AbstractParserRuleElementFinder {
@@ -287,16 +261,17 @@ public class RBACGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cRoleAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final CrossReference cRoleRoleCrossReference_0_0 = (CrossReference)cRoleAssignment_0.eContents().get(0);
 		private final RuleCall cRoleRoleIDTerminalRuleCall_0_0_1 = (RuleCall)cRoleRoleCrossReference_0_0.eContents().get(1);
-		private final Keyword cEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cPermissionAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final CrossReference cPermissionPermissionCrossReference_2_0 = (CrossReference)cPermissionAssignment_2.eContents().get(0);
-		private final RuleCall cPermissionPermissionIDTerminalRuleCall_2_0_1 = (RuleCall)cPermissionPermissionCrossReference_2_0.eContents().get(1);
+		private final Assignment cTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cTypeSTRINGTerminalRuleCall_1_0 = (RuleCall)cTypeAssignment_1.eContents().get(0);
+		private final Assignment cObjectAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cObjectObjectCrossReference_2_0 = (CrossReference)cObjectAssignment_2.eContents().get(0);
+		private final RuleCall cObjectObjectIDTerminalRuleCall_2_0_1 = (RuleCall)cObjectObjectCrossReference_2_0.eContents().get(1);
 		
 		//RolePermissionAssignment:
-		//	role=[Role] "=" permission=[Permission];
+		//	role=[Role] type=STRING object=[Object];
 		public ParserRule getRule() { return rule; }
 
-		//role=[Role] "=" permission=[Permission]
+		//role=[Role] type=STRING object=[Object]
 		public Group getGroup() { return cGroup; }
 
 		//role=[Role]
@@ -308,24 +283,26 @@ public class RBACGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getRoleRoleIDTerminalRuleCall_0_0_1() { return cRoleRoleIDTerminalRuleCall_0_0_1; }
 
-		//"="
-		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
+		//type=STRING
+		public Assignment getTypeAssignment_1() { return cTypeAssignment_1; }
 
-		//permission=[Permission]
-		public Assignment getPermissionAssignment_2() { return cPermissionAssignment_2; }
+		//STRING
+		public RuleCall getTypeSTRINGTerminalRuleCall_1_0() { return cTypeSTRINGTerminalRuleCall_1_0; }
 
-		//[Permission]
-		public CrossReference getPermissionPermissionCrossReference_2_0() { return cPermissionPermissionCrossReference_2_0; }
+		//object=[Object]
+		public Assignment getObjectAssignment_2() { return cObjectAssignment_2; }
+
+		//[Object]
+		public CrossReference getObjectObjectCrossReference_2_0() { return cObjectObjectCrossReference_2_0; }
 
 		//ID
-		public RuleCall getPermissionPermissionIDTerminalRuleCall_2_0_1() { return cPermissionPermissionIDTerminalRuleCall_2_0_1; }
+		public RuleCall getObjectObjectIDTerminalRuleCall_2_0_1() { return cObjectObjectIDTerminalRuleCall_2_0_1; }
 	}
 	
 	
 	private ModelElements pModel;
 	private RoleElements pRole;
 	private UserElements pUser;
-	private PermissionElements pPermission;
 	private ObjectElements pObject;
 	private SessionElements pSession;
 	private UserRoleAssignmentElements pUserRoleAssignment;
@@ -353,7 +330,8 @@ public class RBACGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Model:
-	//	(roles+=Role | users+=User | sessions+=Session | objects+=Object | permissions+=Permission)*;
+	//	(roles+=Role | users+=User | sessions+=Session | objects+=Object | permissions+=RolePermissionAssignment |
+	//	assignments+=UserRoleAssignment)*;
 	public ModelElements getModelAccess() {
 		return (pModel != null) ? pModel : (pModel = new ModelElements());
 	}
@@ -363,7 +341,7 @@ public class RBACGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Role:
-	//	"role" name=ID "{" permissions+=RolePermissionAssignment* "}";
+	//	"role" name=ID;
 	public RoleElements getRoleAccess() {
 		return (pRole != null) ? pRole : (pRole = new RoleElements());
 	}
@@ -382,18 +360,8 @@ public class RBACGrammarAccess extends AbstractGrammarElementFinder {
 		return getUserAccess().getRule();
 	}
 
-	//Permission:
-	//	type=STRING role=[Role] object=[Object];
-	public PermissionElements getPermissionAccess() {
-		return (pPermission != null) ? pPermission : (pPermission = new PermissionElements());
-	}
-	
-	public ParserRule getPermissionRule() {
-		return getPermissionAccess().getRule();
-	}
-
 	//Object:
-	//	"object" name=ID;
+	//	"object" name=ID ":" type=STRING;
 	public ObjectElements getObjectAccess() {
 		return (pObject != null) ? pObject : (pObject = new ObjectElements());
 	}
@@ -403,7 +371,7 @@ public class RBACGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Session:
-	//	"session" name=ID "{" assignments+=UserRoleAssignment* "}";
+	//	"session" name=ID "{" assignments+=[UserRoleAssignment]* "}";
 	public SessionElements getSessionAccess() {
 		return (pSession != null) ? pSession : (pSession = new SessionElements());
 	}
@@ -413,7 +381,7 @@ public class RBACGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//UserRoleAssignment:
-	//	user=[User] ":" role=[Role];
+	//	name=ID user=[User] ":" role=[Role];
 	public UserRoleAssignmentElements getUserRoleAssignmentAccess() {
 		return (pUserRoleAssignment != null) ? pUserRoleAssignment : (pUserRoleAssignment = new UserRoleAssignmentElements());
 	}
@@ -423,7 +391,7 @@ public class RBACGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//RolePermissionAssignment:
-	//	role=[Role] "=" permission=[Permission];
+	//	role=[Role] type=STRING object=[Object];
 	public RolePermissionAssignmentElements getRolePermissionAssignmentAccess() {
 		return (pRolePermissionAssignment != null) ? pRolePermissionAssignment : (pRolePermissionAssignment = new RolePermissionAssignmentElements());
 	}

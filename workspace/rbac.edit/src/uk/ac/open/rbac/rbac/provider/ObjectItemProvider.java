@@ -64,6 +64,7 @@ public class ObjectItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -82,6 +83,28 @@ public class ObjectItemProvider
 				 getString("_UI_Object_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Object_name_feature", "_UI_Object_type"),
 				 RbacPackage.Literals.OBJECT__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Object_type_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Object_type_feature", "_UI_Object_type"),
+				 RbacPackage.Literals.OBJECT__TYPE,
 				 true,
 				 false,
 				 false,
@@ -128,6 +151,7 @@ public class ObjectItemProvider
 
 		switch (notification.getFeatureID(uk.ac.open.rbac.rbac.Object.class)) {
 			case RbacPackage.OBJECT__NAME:
+			case RbacPackage.OBJECT__TYPE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

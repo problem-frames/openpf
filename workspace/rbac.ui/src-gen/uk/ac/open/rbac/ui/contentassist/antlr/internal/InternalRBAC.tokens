@@ -6,10 +6,9 @@ RULE_WS=9
 RULE_SL_COMMENT=8
 RULE_ML_COMMENT=7
 'role'=11
-'}'=13
-'='=18
-'object'=15
-':'=17
-'session'=16
-'{'=12
-'user'=14
+'}'=17
+'object'=13
+':'=14
+'session'=15
+'{'=16
+'user'=12

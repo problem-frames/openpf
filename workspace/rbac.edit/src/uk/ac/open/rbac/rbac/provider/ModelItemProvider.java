@@ -86,6 +86,7 @@ public class ModelItemProvider
 			childrenFeatures.add(RbacPackage.Literals.MODEL__SESSIONS);
 			childrenFeatures.add(RbacPackage.Literals.MODEL__OBJECTS);
 			childrenFeatures.add(RbacPackage.Literals.MODEL__PERMISSIONS);
+			childrenFeatures.add(RbacPackage.Literals.MODEL__ASSIGNMENTS);
 		}
 		return childrenFeatures;
 	}
@@ -142,6 +143,7 @@ public class ModelItemProvider
 			case RbacPackage.MODEL__SESSIONS:
 			case RbacPackage.MODEL__OBJECTS:
 			case RbacPackage.MODEL__PERMISSIONS:
+			case RbacPackage.MODEL__ASSIGNMENTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -182,7 +184,12 @@ public class ModelItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(RbacPackage.Literals.MODEL__PERMISSIONS,
-				 RbacFactory.eINSTANCE.createPermission()));
+				 RbacFactory.eINSTANCE.createRolePermissionAssignment()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(RbacPackage.Literals.MODEL__ASSIGNMENTS,
+				 RbacFactory.eINSTANCE.createUserRoleAssignment()));
 	}
 
 	/**

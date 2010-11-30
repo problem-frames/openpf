@@ -13,7 +13,6 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 
 import uk.ac.open.rbac.rbac.Model;
-import uk.ac.open.rbac.rbac.Permission;
 import uk.ac.open.rbac.rbac.RbacPackage;
 import uk.ac.open.rbac.rbac.Role;
 import uk.ac.open.rbac.rbac.RolePermissionAssignment;
@@ -100,11 +99,6 @@ public class RbacAdapterFactory extends AdapterFactoryImpl
         return createUserAdapter();
       }
       @Override
-      public Adapter casePermission(Permission object)
-      {
-        return createPermissionAdapter();
-      }
-      @Override
       public Adapter caseObject(uk.ac.open.rbac.rbac.Object object)
       {
         return createObjectAdapter();
@@ -187,21 +181,6 @@ public class RbacAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createUserAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link uk.ac.open.rbac.rbac.Permission <em>Permission</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see uk.ac.open.rbac.rbac.Permission
-   * @generated
-   */
-  public Adapter createPermissionAdapter()
   {
     return null;
   }

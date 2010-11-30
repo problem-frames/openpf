@@ -192,9 +192,9 @@ ruleModel returns [EObject current=null]
     |(
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getPermissionsPermissionParserRuleCall_4_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getPermissionsRolePermissionAssignmentParserRuleCall_4_0(), currentNode); 
 	    }
-		lv_permissions_4_0=rulePermission		{
+		lv_permissions_4_0=ruleRolePermissionAssignment		{
 	        if ($current==null) {
 	            $current = factory.create(grammarAccess.getModelRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode.getParent(), $current);
@@ -204,7 +204,32 @@ ruleModel returns [EObject current=null]
 	       			$current, 
 	       			"permissions",
 	        		lv_permissions_4_0, 
-	        		"Permission", 
+	        		"RolePermissionAssignment", 
+	        		currentNode);
+	        } catch (ValueConverterException vce) {
+				handleValueConverterException(vce);
+	        }
+	        currentNode = currentNode.getParent();
+	    }
+
+)
+)
+    |(
+(
+		{ 
+	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getAssignmentsUserRoleAssignmentParserRuleCall_5_0(), currentNode); 
+	    }
+		lv_assignments_5_0=ruleUserRoleAssignment		{
+	        if ($current==null) {
+	            $current = factory.create(grammarAccess.getModelRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode.getParent(), $current);
+	        }
+	        try {
+	       		add(
+	       			$current, 
+	       			"assignments",
+	        		lv_assignments_5_0, 
+	        		"UserRoleAssignment", 
 	        		currentNode);
 	        } catch (ValueConverterException vce) {
 				handleValueConverterException(vce);
@@ -264,39 +289,7 @@ ruleRole returns [EObject current=null]
 	    }
 
 )
-)	'{' 
-    {
-        createLeafNode(grammarAccess.getRoleAccess().getLeftCurlyBracketKeyword_2(), null); 
-    }
-(
-(
-		{ 
-	        currentNode=createCompositeNode(grammarAccess.getRoleAccess().getPermissionsRolePermissionAssignmentParserRuleCall_3_0(), currentNode); 
-	    }
-		lv_permissions_3_0=ruleRolePermissionAssignment		{
-	        if ($current==null) {
-	            $current = factory.create(grammarAccess.getRoleRule().getType().getClassifier());
-	            associateNodeWithAstElement(currentNode.getParent(), $current);
-	        }
-	        try {
-	       		add(
-	       			$current, 
-	       			"permissions",
-	        		lv_permissions_3_0, 
-	        		"RolePermissionAssignment", 
-	        		currentNode);
-	        } catch (ValueConverterException vce) {
-				handleValueConverterException(vce);
-	        }
-	        currentNode = currentNode.getParent();
-	    }
-
-)
-)*	'}' 
-    {
-        createLeafNode(grammarAccess.getRoleAccess().getRightCurlyBracketKeyword_4(), null); 
-    }
-)
+))
 ;
 
 
@@ -354,81 +347,6 @@ ruleUser returns [EObject current=null]
 
 
 
-// Entry rule entryRulePermission
-entryRulePermission returns [EObject current=null] 
-	:
-	{ currentNode = createCompositeNode(grammarAccess.getPermissionRule(), currentNode); }
-	 iv_rulePermission=rulePermission 
-	 { $current=$iv_rulePermission.current; } 
-	 EOF 
-;
-
-// Rule Permission
-rulePermission returns [EObject current=null] 
-    @init { EObject temp=null; setCurrentLookahead(); resetLookahead(); 
-    }
-    @after { resetLookahead(); 
-    	lastConsumedNode = currentNode;
-    }:
-((
-(
-		lv_type_0_0=RULE_STRING
-		{
-			createLeafNode(grammarAccess.getPermissionAccess().getTypeSTRINGTerminalRuleCall_0_0(), "type"); 
-		}
-		{
-	        if ($current==null) {
-	            $current = factory.create(grammarAccess.getPermissionRule().getType().getClassifier());
-	            associateNodeWithAstElement(currentNode, $current);
-	        }
-	        try {
-	       		set(
-	       			$current, 
-	       			"type",
-	        		lv_type_0_0, 
-	        		"STRING", 
-	        		lastConsumedNode);
-	        } catch (ValueConverterException vce) {
-				handleValueConverterException(vce);
-	        }
-	    }
-
-)
-)(
-(
-		{
-			if ($current==null) {
-	            $current = factory.create(grammarAccess.getPermissionRule().getType().getClassifier());
-	            associateNodeWithAstElement(currentNode, $current);
-	        }
-        }
-	RULE_ID
-	{
-		createLeafNode(grammarAccess.getPermissionAccess().getRoleRoleCrossReference_1_0(), "role"); 
-	}
-
-)
-)(
-(
-		{
-			if ($current==null) {
-	            $current = factory.create(grammarAccess.getPermissionRule().getType().getClassifier());
-	            associateNodeWithAstElement(currentNode, $current);
-	        }
-        }
-	RULE_ID
-	{
-		createLeafNode(grammarAccess.getPermissionAccess().getObjectObjectCrossReference_2_0(), "object"); 
-	}
-
-)
-))
-;
-
-
-
-
-
 // Entry rule entryRuleObject
 entryRuleObject returns [EObject current=null] 
 	:
@@ -466,6 +384,34 @@ ruleObject returns [EObject current=null]
 	       			"name",
 	        		lv_name_1_0, 
 	        		"ID", 
+	        		lastConsumedNode);
+	        } catch (ValueConverterException vce) {
+				handleValueConverterException(vce);
+	        }
+	    }
+
+)
+)	':' 
+    {
+        createLeafNode(grammarAccess.getObjectAccess().getColonKeyword_2(), null); 
+    }
+(
+(
+		lv_type_3_0=RULE_STRING
+		{
+			createLeafNode(grammarAccess.getObjectAccess().getTypeSTRINGTerminalRuleCall_3_0(), "type"); 
+		}
+		{
+	        if ($current==null) {
+	            $current = factory.create(grammarAccess.getObjectRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode, $current);
+	        }
+	        try {
+	       		set(
+	       			$current, 
+	       			"type",
+	        		lv_type_3_0, 
+	        		"STRING", 
 	        		lastConsumedNode);
 	        } catch (ValueConverterException vce) {
 				handleValueConverterException(vce);
@@ -530,26 +476,16 @@ ruleSession returns [EObject current=null]
     }
 (
 (
-		{ 
-	        currentNode=createCompositeNode(grammarAccess.getSessionAccess().getAssignmentsUserRoleAssignmentParserRuleCall_3_0(), currentNode); 
-	    }
-		lv_assignments_3_0=ruleUserRoleAssignment		{
-	        if ($current==null) {
+		{
+			if ($current==null) {
 	            $current = factory.create(grammarAccess.getSessionRule().getType().getClassifier());
-	            associateNodeWithAstElement(currentNode.getParent(), $current);
+	            associateNodeWithAstElement(currentNode, $current);
 	        }
-	        try {
-	       		add(
-	       			$current, 
-	       			"assignments",
-	        		lv_assignments_3_0, 
-	        		"UserRoleAssignment", 
-	        		currentNode);
-	        } catch (ValueConverterException vce) {
-				handleValueConverterException(vce);
-	        }
-	        currentNode = currentNode.getParent();
-	    }
+        }
+	RULE_ID
+	{
+		createLeafNode(grammarAccess.getSessionAccess().getAssignmentsUserRoleAssignmentCrossReference_3_0(), "assignments"); 
+	}
 
 )
 )*	'}' 
@@ -581,6 +517,30 @@ ruleUserRoleAssignment returns [EObject current=null]
     }:
 ((
 (
+		lv_name_0_0=RULE_ID
+		{
+			createLeafNode(grammarAccess.getUserRoleAssignmentAccess().getNameIDTerminalRuleCall_0_0(), "name"); 
+		}
+		{
+	        if ($current==null) {
+	            $current = factory.create(grammarAccess.getUserRoleAssignmentRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode, $current);
+	        }
+	        try {
+	       		set(
+	       			$current, 
+	       			"name",
+	        		lv_name_0_0, 
+	        		"ID", 
+	        		lastConsumedNode);
+	        } catch (ValueConverterException vce) {
+				handleValueConverterException(vce);
+	        }
+	    }
+
+)
+)(
+(
 		{
 			if ($current==null) {
 	            $current = factory.create(grammarAccess.getUserRoleAssignmentRule().getType().getClassifier());
@@ -589,13 +549,13 @@ ruleUserRoleAssignment returns [EObject current=null]
         }
 	RULE_ID
 	{
-		createLeafNode(grammarAccess.getUserRoleAssignmentAccess().getUserUserCrossReference_0_0(), "user"); 
+		createLeafNode(grammarAccess.getUserRoleAssignmentAccess().getUserUserCrossReference_1_0(), "user"); 
 	}
 
 )
 )	':' 
     {
-        createLeafNode(grammarAccess.getUserRoleAssignmentAccess().getColonKeyword_1(), null); 
+        createLeafNode(grammarAccess.getUserRoleAssignmentAccess().getColonKeyword_2(), null); 
     }
 (
 (
@@ -607,7 +567,7 @@ ruleUserRoleAssignment returns [EObject current=null]
         }
 	RULE_ID
 	{
-		createLeafNode(grammarAccess.getUserRoleAssignmentAccess().getRoleRoleCrossReference_2_0(), "role"); 
+		createLeafNode(grammarAccess.getUserRoleAssignmentAccess().getRoleRoleCrossReference_3_0(), "role"); 
 	}
 
 )
@@ -648,11 +608,31 @@ ruleRolePermissionAssignment returns [EObject current=null]
 	}
 
 )
-)	'=' 
-    {
-        createLeafNode(grammarAccess.getRolePermissionAssignmentAccess().getEqualsSignKeyword_1(), null); 
-    }
+)(
 (
+		lv_type_1_0=RULE_STRING
+		{
+			createLeafNode(grammarAccess.getRolePermissionAssignmentAccess().getTypeSTRINGTerminalRuleCall_1_0(), "type"); 
+		}
+		{
+	        if ($current==null) {
+	            $current = factory.create(grammarAccess.getRolePermissionAssignmentRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode, $current);
+	        }
+	        try {
+	       		set(
+	       			$current, 
+	       			"type",
+	        		lv_type_1_0, 
+	        		"STRING", 
+	        		lastConsumedNode);
+	        } catch (ValueConverterException vce) {
+				handleValueConverterException(vce);
+	        }
+	    }
+
+)
+)(
 (
 		{
 			if ($current==null) {
@@ -662,7 +642,7 @@ ruleRolePermissionAssignment returns [EObject current=null]
         }
 	RULE_ID
 	{
-		createLeafNode(grammarAccess.getRolePermissionAssignmentAccess().getPermissionPermissionCrossReference_2_0(), "permission"); 
+		createLeafNode(grammarAccess.getRolePermissionAssignmentAccess().getObjectObjectCrossReference_2_0(), "object"); 
 	}
 
 )

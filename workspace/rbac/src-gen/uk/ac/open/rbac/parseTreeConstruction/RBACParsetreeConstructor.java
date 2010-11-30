@@ -34,11 +34,10 @@ protected class ThisRootNode extends RootToken {
 			case 0: return new Model_Alternatives(this, this, 0, inst);
 			case 1: return new Role_Group(this, this, 1, inst);
 			case 2: return new User_Group(this, this, 2, inst);
-			case 3: return new Permission_Group(this, this, 3, inst);
-			case 4: return new Object_Group(this, this, 4, inst);
-			case 5: return new Session_Group(this, this, 5, inst);
-			case 6: return new UserRoleAssignment_Group(this, this, 6, inst);
-			case 7: return new RolePermissionAssignment_Group(this, this, 7, inst);
+			case 3: return new Object_Group(this, this, 3, inst);
+			case 4: return new Session_Group(this, this, 4, inst);
+			case 5: return new UserRoleAssignment_Group(this, this, 5, inst);
+			case 6: return new RolePermissionAssignment_Group(this, this, 6, inst);
 			default: return null;
 		}	
 	}	
@@ -48,11 +47,13 @@ protected class ThisRootNode extends RootToken {
 /************ begin Rule Model ****************
  *
  * Model:
- * 	(roles+=Role | users+=User | sessions+=Session | objects+=Object | permissions+=Permission)*;
+ * 	(roles+=Role | users+=User | sessions+=Session | objects+=Object | permissions+=RolePermissionAssignment |
+ * 	assignments+=UserRoleAssignment)*;
  *
  **/
 
-// (roles+=Role | users+=User | sessions+=Session | objects+=Object | permissions+=Permission)*
+// (roles+=Role | users+=User | sessions+=Session | objects+=Object | permissions+=RolePermissionAssignment |
+// assignments+=UserRoleAssignment)*
 protected class Model_Alternatives extends AlternativesToken {
 
 	public Model_Alternatives(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -72,6 +73,7 @@ protected class Model_Alternatives extends AlternativesToken {
 			case 2: return new Model_SessionsAssignment_2(lastRuleCallOrigin, this, 2, inst);
 			case 3: return new Model_ObjectsAssignment_3(lastRuleCallOrigin, this, 3, inst);
 			case 4: return new Model_PermissionsAssignment_4(lastRuleCallOrigin, this, 4, inst);
+			case 5: return new Model_AssignmentsAssignment_5(lastRuleCallOrigin, this, 5, inst);
 			default: return null;
 		}	
 	}
@@ -262,7 +264,7 @@ protected class Model_ObjectsAssignment_3 extends AssignmentToken  {
 	}	
 }
 
-// permissions+=Permission
+// permissions+=RolePermissionAssignment
 protected class Model_PermissionsAssignment_4 extends AssignmentToken  {
 	
 	public Model_PermissionsAssignment_4(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -277,7 +279,7 @@ protected class Model_PermissionsAssignment_4 extends AssignmentToken  {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Permission_Group(this, this, 0, inst);
+			case 0: return new RolePermissionAssignment_Group(this, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -288,9 +290,55 @@ protected class Model_PermissionsAssignment_4 extends AssignmentToken  {
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("permissions");
 		if(value instanceof EObject) { // org::eclipse::xtext::impl::RuleCallImpl
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
-			if(param.isInstanceOf(grammarAccess.getPermissionRule().getType().getClassifier())) {
+			if(param.isInstanceOf(grammarAccess.getRolePermissionAssignmentRule().getType().getClassifier())) {
 				type = AssignmentType.PARSER_RULE_CALL;
-				element = grammarAccess.getModelAccess().getPermissionsPermissionParserRuleCall_4_0(); 
+				element = grammarAccess.getModelAccess().getPermissionsRolePermissionAssignmentParserRuleCall_4_0(); 
+				consumed = obj;
+				return param;
+			}
+		}
+		return null;
+	}
+
+    @Override
+	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
+		if(value == inst.getEObject() && !inst.isConsumed()) return null;
+		switch(index) {
+			case 0: return new Model_Alternatives(lastRuleCallOrigin, next, actIndex, consumed);
+			default: return lastRuleCallOrigin.createFollowerAfterReturn(next, actIndex , index - 1, consumed);
+		}	
+	}	
+}
+
+// assignments+=UserRoleAssignment
+protected class Model_AssignmentsAssignment_5 extends AssignmentToken  {
+	
+	public Model_AssignmentsAssignment_5(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Assignment getGrammarElement() {
+		return grammarAccess.getModelAccess().getAssignmentsAssignment_5();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new UserRoleAssignment_Group(this, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+    @Override	
+	public IEObjectConsumer tryConsume() {
+		if((value = eObjectConsumer.getConsumable("assignments",true)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("assignments");
+		if(value instanceof EObject) { // org::eclipse::xtext::impl::RuleCallImpl
+			IEObjectConsumer param = createEObjectConsumer((EObject)value);
+			if(param.isInstanceOf(grammarAccess.getUserRoleAssignmentRule().getType().getClassifier())) {
+				type = AssignmentType.PARSER_RULE_CALL;
+				element = grammarAccess.getModelAccess().getAssignmentsUserRoleAssignmentParserRuleCall_5_0(); 
 				consumed = obj;
 				return param;
 			}
@@ -315,11 +363,11 @@ protected class Model_PermissionsAssignment_4 extends AssignmentToken  {
 /************ begin Rule Role ****************
  *
  * Role:
- * 	"role" name=ID "{" permissions+=RolePermissionAssignment* "}";
+ * 	"role" name=ID;
  *
  **/
 
-// "role" name=ID "{" permissions+=RolePermissionAssignment* "}"
+// "role" name=ID
 protected class Role_Group extends GroupToken {
 	
 	public Role_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -334,7 +382,7 @@ protected class Role_Group extends GroupToken {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Role_RightCurlyBracketKeyword_4(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new Role_NameAssignment_1(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -399,98 +447,6 @@ protected class Role_NameAssignment_1 extends AssignmentToken  {
 			return obj;
 		}
 		return null;
-	}
-
-}
-
-// "{"
-protected class Role_LeftCurlyBracketKeyword_2 extends KeywordToken  {
-	
-	public Role_LeftCurlyBracketKeyword_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Keyword getGrammarElement() {
-		return grammarAccess.getRoleAccess().getLeftCurlyBracketKeyword_2();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new Role_NameAssignment_1(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-}
-
-// permissions+=RolePermissionAssignment*
-protected class Role_PermissionsAssignment_3 extends AssignmentToken  {
-	
-	public Role_PermissionsAssignment_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Assignment getGrammarElement() {
-		return grammarAccess.getRoleAccess().getPermissionsAssignment_3();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new RolePermissionAssignment_Group(this, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-    @Override	
-	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("permissions",false)) == null) return null;
-		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("permissions");
-		if(value instanceof EObject) { // org::eclipse::xtext::impl::RuleCallImpl
-			IEObjectConsumer param = createEObjectConsumer((EObject)value);
-			if(param.isInstanceOf(grammarAccess.getRolePermissionAssignmentRule().getType().getClassifier())) {
-				type = AssignmentType.PARSER_RULE_CALL;
-				element = grammarAccess.getRoleAccess().getPermissionsRolePermissionAssignmentParserRuleCall_3_0(); 
-				consumed = obj;
-				return param;
-			}
-		}
-		return null;
-	}
-
-    @Override
-	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
-		if(value == inst.getEObject() && !inst.isConsumed()) return null;
-		switch(index) {
-			case 0: return new Role_PermissionsAssignment_3(lastRuleCallOrigin, next, actIndex, consumed);
-			case 1: return new Role_LeftCurlyBracketKeyword_2(lastRuleCallOrigin, next, actIndex, consumed);
-			default: return null;
-		}	
-	}	
-}
-
-// "}"
-protected class Role_RightCurlyBracketKeyword_4 extends KeywordToken  {
-	
-	public Role_RightCurlyBracketKeyword_4(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Keyword getGrammarElement() {
-		return grammarAccess.getRoleAccess().getRightCurlyBracketKeyword_4();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new Role_PermissionsAssignment_3(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new Role_LeftCurlyBracketKeyword_2(lastRuleCallOrigin, this, 1, inst);
-			default: return null;
-		}	
 	}
 
 }
@@ -594,161 +550,14 @@ protected class User_NameAssignment_1 extends AssignmentToken  {
 /************ end Rule User ****************/
 
 
-/************ begin Rule Permission ****************
- *
- * Permission:
- * 	type=STRING role=[Role] object=[Object];
- *
- **/
-
-// type=STRING role=[Role] object=[Object]
-protected class Permission_Group extends GroupToken {
-	
-	public Permission_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Group getGrammarElement() {
-		return grammarAccess.getPermissionAccess().getGroup();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new Permission_ObjectAssignment_2(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-    @Override
-	public IEObjectConsumer tryConsume() {
-		if(getEObject().eClass() != grammarAccess.getPermissionRule().getType().getClassifier())
-			return null;
-		return eObjectConsumer;
-	}
-
-}
-
-// type=STRING
-protected class Permission_TypeAssignment_0 extends AssignmentToken  {
-	
-	public Permission_TypeAssignment_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Assignment getGrammarElement() {
-		return grammarAccess.getPermissionAccess().getTypeAssignment_0();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			default: return lastRuleCallOrigin.createFollowerAfterReturn(this, index, index, inst);
-		}	
-	}
-
-    @Override	
-	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("type",true)) == null) return null;
-		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("type");
-		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getPermissionAccess().getTypeSTRINGTerminalRuleCall_0_0(), value, null)) {
-			type = AssignmentType.TERMINAL_RULE_CALL;
-			element = grammarAccess.getPermissionAccess().getTypeSTRINGTerminalRuleCall_0_0();
-			return obj;
-		}
-		return null;
-	}
-
-}
-
-// role=[Role]
-protected class Permission_RoleAssignment_1 extends AssignmentToken  {
-	
-	public Permission_RoleAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Assignment getGrammarElement() {
-		return grammarAccess.getPermissionAccess().getRoleAssignment_1();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new Permission_TypeAssignment_0(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-    @Override	
-	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("role",true)) == null) return null;
-		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("role");
-		if(value instanceof EObject) { // org::eclipse::xtext::impl::CrossReferenceImpl
-			IEObjectConsumer param = createEObjectConsumer((EObject)value);
-			if(param.isInstanceOf(grammarAccess.getPermissionAccess().getRoleRoleCrossReference_1_0().getType().getClassifier())) {
-				type = AssignmentType.CROSS_REFERENCE;
-				element = grammarAccess.getPermissionAccess().getRoleRoleCrossReference_1_0(); 
-				return obj;
-			}
-		}
-		return null;
-	}
-
-}
-
-// object=[Object]
-protected class Permission_ObjectAssignment_2 extends AssignmentToken  {
-	
-	public Permission_ObjectAssignment_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Assignment getGrammarElement() {
-		return grammarAccess.getPermissionAccess().getObjectAssignment_2();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new Permission_RoleAssignment_1(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-    @Override	
-	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("object",true)) == null) return null;
-		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("object");
-		if(value instanceof EObject) { // org::eclipse::xtext::impl::CrossReferenceImpl
-			IEObjectConsumer param = createEObjectConsumer((EObject)value);
-			if(param.isInstanceOf(grammarAccess.getPermissionAccess().getObjectObjectCrossReference_2_0().getType().getClassifier())) {
-				type = AssignmentType.CROSS_REFERENCE;
-				element = grammarAccess.getPermissionAccess().getObjectObjectCrossReference_2_0(); 
-				return obj;
-			}
-		}
-		return null;
-	}
-
-}
-
-
-/************ end Rule Permission ****************/
-
-
 /************ begin Rule Object ****************
  *
  * Object:
- * 	"object" name=ID;
+ * 	"object" name=ID ":" type=STRING;
  *
  **/
 
-// "object" name=ID
+// "object" name=ID ":" type=STRING
 protected class Object_Group extends GroupToken {
 	
 	public Object_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -763,7 +572,7 @@ protected class Object_Group extends GroupToken {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Object_NameAssignment_1(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new Object_TypeAssignment_3(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -832,6 +641,62 @@ protected class Object_NameAssignment_1 extends AssignmentToken  {
 
 }
 
+// ":"
+protected class Object_ColonKeyword_2 extends KeywordToken  {
+	
+	public Object_ColonKeyword_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Keyword getGrammarElement() {
+		return grammarAccess.getObjectAccess().getColonKeyword_2();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new Object_NameAssignment_1(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+}
+
+// type=STRING
+protected class Object_TypeAssignment_3 extends AssignmentToken  {
+	
+	public Object_TypeAssignment_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Assignment getGrammarElement() {
+		return grammarAccess.getObjectAccess().getTypeAssignment_3();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new Object_ColonKeyword_2(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+    @Override	
+	public IEObjectConsumer tryConsume() {
+		if((value = eObjectConsumer.getConsumable("type",true)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("type");
+		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getObjectAccess().getTypeSTRINGTerminalRuleCall_3_0(), value, null)) {
+			type = AssignmentType.TERMINAL_RULE_CALL;
+			element = grammarAccess.getObjectAccess().getTypeSTRINGTerminalRuleCall_3_0();
+			return obj;
+		}
+		return null;
+	}
+
+}
+
 
 /************ end Rule Object ****************/
 
@@ -839,11 +704,11 @@ protected class Object_NameAssignment_1 extends AssignmentToken  {
 /************ begin Rule Session ****************
  *
  * Session:
- * 	"session" name=ID "{" assignments+=UserRoleAssignment* "}";
+ * 	"session" name=ID "{" assignments+=[UserRoleAssignment]* "}";
  *
  **/
 
-// "session" name=ID "{" assignments+=UserRoleAssignment* "}"
+// "session" name=ID "{" assignments+=[UserRoleAssignment]* "}"
 protected class Session_Group extends GroupToken {
 	
 	public Session_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -949,7 +814,7 @@ protected class Session_LeftCurlyBracketKeyword_2 extends KeywordToken  {
 
 }
 
-// assignments+=UserRoleAssignment*
+// assignments+=[UserRoleAssignment]*
 protected class Session_AssignmentsAssignment_3 extends AssignmentToken  {
 	
 	public Session_AssignmentsAssignment_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -964,7 +829,8 @@ protected class Session_AssignmentsAssignment_3 extends AssignmentToken  {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new UserRoleAssignment_Group(this, this, 0, inst);
+			case 0: return new Session_AssignmentsAssignment_3(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new Session_LeftCurlyBracketKeyword_2(lastRuleCallOrigin, this, 1, inst);
 			default: return null;
 		}	
 	}
@@ -973,27 +839,17 @@ protected class Session_AssignmentsAssignment_3 extends AssignmentToken  {
 	public IEObjectConsumer tryConsume() {
 		if((value = eObjectConsumer.getConsumable("assignments",false)) == null) return null;
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("assignments");
-		if(value instanceof EObject) { // org::eclipse::xtext::impl::RuleCallImpl
+		if(value instanceof EObject) { // org::eclipse::xtext::impl::CrossReferenceImpl
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
-			if(param.isInstanceOf(grammarAccess.getUserRoleAssignmentRule().getType().getClassifier())) {
-				type = AssignmentType.PARSER_RULE_CALL;
-				element = grammarAccess.getSessionAccess().getAssignmentsUserRoleAssignmentParserRuleCall_3_0(); 
-				consumed = obj;
-				return param;
+			if(param.isInstanceOf(grammarAccess.getSessionAccess().getAssignmentsUserRoleAssignmentCrossReference_3_0().getType().getClassifier())) {
+				type = AssignmentType.CROSS_REFERENCE;
+				element = grammarAccess.getSessionAccess().getAssignmentsUserRoleAssignmentCrossReference_3_0(); 
+				return obj;
 			}
 		}
 		return null;
 	}
 
-    @Override
-	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
-		if(value == inst.getEObject() && !inst.isConsumed()) return null;
-		switch(index) {
-			case 0: return new Session_AssignmentsAssignment_3(lastRuleCallOrigin, next, actIndex, consumed);
-			case 1: return new Session_LeftCurlyBracketKeyword_2(lastRuleCallOrigin, next, actIndex, consumed);
-			default: return null;
-		}	
-	}	
 }
 
 // "}"
@@ -1026,11 +882,11 @@ protected class Session_RightCurlyBracketKeyword_4 extends KeywordToken  {
 /************ begin Rule UserRoleAssignment ****************
  *
  * UserRoleAssignment:
- * 	user=[User] ":" role=[Role];
+ * 	name=ID user=[User] ":" role=[Role];
  *
  **/
 
-// user=[User] ":" role=[Role]
+// name=ID user=[User] ":" role=[Role]
 protected class UserRoleAssignment_Group extends GroupToken {
 	
 	public UserRoleAssignment_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1045,7 +901,7 @@ protected class UserRoleAssignment_Group extends GroupToken {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new UserRoleAssignment_RoleAssignment_2(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new UserRoleAssignment_RoleAssignment_3(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -1059,16 +915,16 @@ protected class UserRoleAssignment_Group extends GroupToken {
 
 }
 
-// user=[User]
-protected class UserRoleAssignment_UserAssignment_0 extends AssignmentToken  {
+// name=ID
+protected class UserRoleAssignment_NameAssignment_0 extends AssignmentToken  {
 	
-	public UserRoleAssignment_UserAssignment_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public UserRoleAssignment_NameAssignment_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getUserRoleAssignmentAccess().getUserAssignment_0();
+		return grammarAccess.getUserRoleAssignmentAccess().getNameAssignment_0();
 	}
 
     @Override
@@ -1080,13 +936,47 @@ protected class UserRoleAssignment_UserAssignment_0 extends AssignmentToken  {
 
     @Override	
 	public IEObjectConsumer tryConsume() {
+		if((value = eObjectConsumer.getConsumable("name",true)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("name");
+		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getUserRoleAssignmentAccess().getNameIDTerminalRuleCall_0_0(), value, null)) {
+			type = AssignmentType.TERMINAL_RULE_CALL;
+			element = grammarAccess.getUserRoleAssignmentAccess().getNameIDTerminalRuleCall_0_0();
+			return obj;
+		}
+		return null;
+	}
+
+}
+
+// user=[User]
+protected class UserRoleAssignment_UserAssignment_1 extends AssignmentToken  {
+	
+	public UserRoleAssignment_UserAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Assignment getGrammarElement() {
+		return grammarAccess.getUserRoleAssignmentAccess().getUserAssignment_1();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new UserRoleAssignment_NameAssignment_0(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+    @Override	
+	public IEObjectConsumer tryConsume() {
 		if((value = eObjectConsumer.getConsumable("user",true)) == null) return null;
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("user");
 		if(value instanceof EObject) { // org::eclipse::xtext::impl::CrossReferenceImpl
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
-			if(param.isInstanceOf(grammarAccess.getUserRoleAssignmentAccess().getUserUserCrossReference_0_0().getType().getClassifier())) {
+			if(param.isInstanceOf(grammarAccess.getUserRoleAssignmentAccess().getUserUserCrossReference_1_0().getType().getClassifier())) {
 				type = AssignmentType.CROSS_REFERENCE;
-				element = grammarAccess.getUserRoleAssignmentAccess().getUserUserCrossReference_0_0(); 
+				element = grammarAccess.getUserRoleAssignmentAccess().getUserUserCrossReference_1_0(); 
 				return obj;
 			}
 		}
@@ -1096,21 +986,21 @@ protected class UserRoleAssignment_UserAssignment_0 extends AssignmentToken  {
 }
 
 // ":"
-protected class UserRoleAssignment_ColonKeyword_1 extends KeywordToken  {
+protected class UserRoleAssignment_ColonKeyword_2 extends KeywordToken  {
 	
-	public UserRoleAssignment_ColonKeyword_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public UserRoleAssignment_ColonKeyword_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Keyword getGrammarElement() {
-		return grammarAccess.getUserRoleAssignmentAccess().getColonKeyword_1();
+		return grammarAccess.getUserRoleAssignmentAccess().getColonKeyword_2();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new UserRoleAssignment_UserAssignment_0(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new UserRoleAssignment_UserAssignment_1(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -1118,21 +1008,21 @@ protected class UserRoleAssignment_ColonKeyword_1 extends KeywordToken  {
 }
 
 // role=[Role]
-protected class UserRoleAssignment_RoleAssignment_2 extends AssignmentToken  {
+protected class UserRoleAssignment_RoleAssignment_3 extends AssignmentToken  {
 	
-	public UserRoleAssignment_RoleAssignment_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public UserRoleAssignment_RoleAssignment_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getUserRoleAssignmentAccess().getRoleAssignment_2();
+		return grammarAccess.getUserRoleAssignmentAccess().getRoleAssignment_3();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new UserRoleAssignment_ColonKeyword_1(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new UserRoleAssignment_ColonKeyword_2(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -1143,9 +1033,9 @@ protected class UserRoleAssignment_RoleAssignment_2 extends AssignmentToken  {
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("role");
 		if(value instanceof EObject) { // org::eclipse::xtext::impl::CrossReferenceImpl
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
-			if(param.isInstanceOf(grammarAccess.getUserRoleAssignmentAccess().getRoleRoleCrossReference_2_0().getType().getClassifier())) {
+			if(param.isInstanceOf(grammarAccess.getUserRoleAssignmentAccess().getRoleRoleCrossReference_3_0().getType().getClassifier())) {
 				type = AssignmentType.CROSS_REFERENCE;
-				element = grammarAccess.getUserRoleAssignmentAccess().getRoleRoleCrossReference_2_0(); 
+				element = grammarAccess.getUserRoleAssignmentAccess().getRoleRoleCrossReference_3_0(); 
 				return obj;
 			}
 		}
@@ -1161,11 +1051,11 @@ protected class UserRoleAssignment_RoleAssignment_2 extends AssignmentToken  {
 /************ begin Rule RolePermissionAssignment ****************
  *
  * RolePermissionAssignment:
- * 	role=[Role] "=" permission=[Permission];
+ * 	role=[Role] type=STRING object=[Object];
  *
  **/
 
-// role=[Role] "=" permission=[Permission]
+// role=[Role] type=STRING object=[Object]
 protected class RolePermissionAssignment_Group extends GroupToken {
 	
 	public RolePermissionAssignment_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1180,7 +1070,7 @@ protected class RolePermissionAssignment_Group extends GroupToken {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new RolePermissionAssignment_PermissionAssignment_2(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new RolePermissionAssignment_ObjectAssignment_2(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -1230,16 +1120,16 @@ protected class RolePermissionAssignment_RoleAssignment_0 extends AssignmentToke
 
 }
 
-// "="
-protected class RolePermissionAssignment_EqualsSignKeyword_1 extends KeywordToken  {
+// type=STRING
+protected class RolePermissionAssignment_TypeAssignment_1 extends AssignmentToken  {
 	
-	public RolePermissionAssignment_EqualsSignKeyword_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public RolePermissionAssignment_TypeAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
-	public Keyword getGrammarElement() {
-		return grammarAccess.getRolePermissionAssignmentAccess().getEqualsSignKeyword_1();
+	public Assignment getGrammarElement() {
+		return grammarAccess.getRolePermissionAssignmentAccess().getTypeAssignment_1();
 	}
 
     @Override
@@ -1250,37 +1140,49 @@ protected class RolePermissionAssignment_EqualsSignKeyword_1 extends KeywordToke
 		}	
 	}
 
+    @Override	
+	public IEObjectConsumer tryConsume() {
+		if((value = eObjectConsumer.getConsumable("type",true)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("type");
+		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getRolePermissionAssignmentAccess().getTypeSTRINGTerminalRuleCall_1_0(), value, null)) {
+			type = AssignmentType.TERMINAL_RULE_CALL;
+			element = grammarAccess.getRolePermissionAssignmentAccess().getTypeSTRINGTerminalRuleCall_1_0();
+			return obj;
+		}
+		return null;
+	}
+
 }
 
-// permission=[Permission]
-protected class RolePermissionAssignment_PermissionAssignment_2 extends AssignmentToken  {
+// object=[Object]
+protected class RolePermissionAssignment_ObjectAssignment_2 extends AssignmentToken  {
 	
-	public RolePermissionAssignment_PermissionAssignment_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public RolePermissionAssignment_ObjectAssignment_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getRolePermissionAssignmentAccess().getPermissionAssignment_2();
+		return grammarAccess.getRolePermissionAssignmentAccess().getObjectAssignment_2();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new RolePermissionAssignment_EqualsSignKeyword_1(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new RolePermissionAssignment_TypeAssignment_1(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
 
     @Override	
 	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("permission",true)) == null) return null;
-		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("permission");
+		if((value = eObjectConsumer.getConsumable("object",true)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("object");
 		if(value instanceof EObject) { // org::eclipse::xtext::impl::CrossReferenceImpl
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
-			if(param.isInstanceOf(grammarAccess.getRolePermissionAssignmentAccess().getPermissionPermissionCrossReference_2_0().getType().getClassifier())) {
+			if(param.isInstanceOf(grammarAccess.getRolePermissionAssignmentAccess().getObjectObjectCrossReference_2_0().getType().getClassifier())) {
 				type = AssignmentType.CROSS_REFERENCE;
-				element = grammarAccess.getRolePermissionAssignmentAccess().getPermissionPermissionCrossReference_2_0(); 
+				element = grammarAccess.getRolePermissionAssignmentAccess().getObjectObjectCrossReference_2_0(); 
 				return obj;
 			}
 		}

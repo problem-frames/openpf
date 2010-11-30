@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 import uk.ac.open.rbac.rbac.Model;
-import uk.ac.open.rbac.rbac.Permission;
 import uk.ac.open.rbac.rbac.RbacFactory;
 import uk.ac.open.rbac.rbac.RbacPackage;
 import uk.ac.open.rbac.rbac.Role;
@@ -78,7 +77,6 @@ public class RbacFactoryImpl extends EFactoryImpl implements RbacFactory
       case RbacPackage.MODEL: return createModel();
       case RbacPackage.ROLE: return createRole();
       case RbacPackage.USER: return createUser();
-      case RbacPackage.PERMISSION: return createPermission();
       case RbacPackage.OBJECT: return createObject();
       case RbacPackage.SESSION: return createSession();
       case RbacPackage.USER_ROLE_ASSIGNMENT: return createUserRoleAssignment();
@@ -119,17 +117,6 @@ public class RbacFactoryImpl extends EFactoryImpl implements RbacFactory
   {
     UserImpl user = new UserImpl();
     return user;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Permission createPermission()
-  {
-    PermissionImpl permission = new PermissionImpl();
-    return permission;
   }
 
   /**

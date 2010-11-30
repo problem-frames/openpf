@@ -2,14 +2,8 @@ package uk.ac.open.rbac.rbac.diagram.edit.policies;
 
 import java.util.Iterator;
 
-import org.eclipse.core.commands.ExecutionException;
-import org.eclipse.core.runtime.IAdaptable;
-import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.ecore.EAnnotation;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.gef.commands.Command;
-import org.eclipse.gmf.runtime.common.core.command.CommandResult;
 import org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand;
 import org.eclipse.gmf.runtime.emf.commands.core.command.CompositeTransactionalCommand;
 import org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand;
@@ -21,9 +15,9 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelations
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.View;
 
-import uk.ac.open.rbac.rbac.diagram.edit.commands.SessionAssignmentsCreateCommand;
-import uk.ac.open.rbac.rbac.diagram.edit.commands.SessionAssignmentsReorientCommand;
-import uk.ac.open.rbac.rbac.diagram.edit.parts.SessionAssignmentsEditPart;
+import uk.ac.open.rbac.rbac.diagram.edit.commands.RolePermissionsCreateCommand;
+import uk.ac.open.rbac.rbac.diagram.edit.commands.RolePermissionsReorientCommand;
+import uk.ac.open.rbac.rbac.diagram.edit.parts.RolePermissionsEditPart;
 import uk.ac.open.rbac.rbac.diagram.part.RBACVisualIDRegistry;
 import uk.ac.open.rbac.rbac.diagram.providers.RBACElementTypes;
 
@@ -50,24 +44,11 @@ public class SessionItemSemanticEditPolicy extends
 		cmd.setTransactionNestingEnabled(false);
 		for (Iterator<?> it = view.getSourceEdges().iterator(); it.hasNext();) {
 			Edge outgoingLink = (Edge) it.next();
-			if (RBACVisualIDRegistry.getVisualID(outgoingLink) == SessionAssignmentsEditPart.VISUAL_ID) {
+			if (RBACVisualIDRegistry.getVisualID(outgoingLink) == RolePermissionsEditPart.VISUAL_ID) {
 				DestroyReferenceRequest r = new DestroyReferenceRequest(
 						outgoingLink.getSource().getElement(), null,
 						outgoingLink.getTarget().getElement(), false);
-				cmd.add(new DestroyReferenceCommand(r) {
-					protected CommandResult doExecuteWithResult(
-							IProgressMonitor progressMonitor, IAdaptable info)
-							throws ExecutionException {
-						EObject referencedObject = getReferencedObject();
-						Resource resource = referencedObject.eResource();
-						CommandResult result = super.doExecuteWithResult(
-								progressMonitor, info);
-						if (resource != null) {
-							resource.getContents().add(referencedObject);
-						}
-						return result;
-					}
-				});
+				cmd.add(new DestroyReferenceCommand(r));
 				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
 				continue;
 			}
@@ -99,8 +80,8 @@ public class SessionItemSemanticEditPolicy extends
 	 */
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (RBACElementTypes.SessionAssignments_4005 == req.getElementType()) {
-			return getGEFWrapper(new SessionAssignmentsCreateCommand(req,
+		if (RBACElementTypes.SessionAssignments_4003 == req.getElementType()) {
+			return getGEFWrapper(new RolePermissionsCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
 		return null;
@@ -111,7 +92,7 @@ public class SessionItemSemanticEditPolicy extends
 	 */
 	protected Command getCompleteCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (RBACElementTypes.SessionAssignments_4005 == req.getElementType()) {
+		if (RBACElementTypes.SessionAssignments_4003 == req.getElementType()) {
 			return null;
 		}
 		return null;
@@ -126,8 +107,8 @@ public class SessionItemSemanticEditPolicy extends
 	protected Command getReorientReferenceRelationshipCommand(
 			ReorientReferenceRelationshipRequest req) {
 		switch (getVisualID(req)) {
-		case SessionAssignmentsEditPart.VISUAL_ID:
-			return getGEFWrapper(new SessionAssignmentsReorientCommand(req));
+		case RolePermissionsEditPart.VISUAL_ID:
+			return getGEFWrapper(new RolePermissionsReorientCommand(req));
 		}
 		return super.getReorientReferenceRelationshipCommand(req);
 	}

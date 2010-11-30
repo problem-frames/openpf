@@ -303,42 +303,22 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String Permission2CreationTool_title;
+	public static String RolePermissionAssignment2CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Permission2CreationTool_desc;
+	public static String RolePermissionAssignment2CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String Permissions3CreationTool_title;
+	public static String UserRoleAssignment3CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Permissions3CreationTool_desc;
-
-	/**
-	 * @generated
-	 */
-	public static String RolePermissionAssignment4CreationTool_title;
-
-	/**
-	 * @generated
-	 */
-	public static String RolePermissionAssignment4CreationTool_desc;
-
-	/**
-	 * @generated
-	 */
-	public static String UserRoleAssignment5CreationTool_title;
-
-	/**
-	 * @generated
-	 */
-	public static String UserRoleAssignment5CreationTool_desc;
+	public static String UserRoleAssignment3CreationTool_desc;
 
 	/**
 	 * @generated
@@ -348,42 +328,27 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Permission_4003_target;
+	public static String NavigatorGroupName_SessionAssignments_4003_target;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_SessionAssignments_4005_target;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_SessionAssignments_4005_source;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_RolePermissions_4004_target;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_RolePermissions_4004_source;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_RolePermissionAssignment_4002_source;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_RolePermissionAssignment_4002_incominglinks;
+	public static String NavigatorGroupName_SessionAssignments_4003_source;
 
 	/**
 	 * @generated
 	 */
 	public static String NavigatorGroupName_Session_2003_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_RolePermissionAssignment_4002_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_RolePermissionAssignment_4002_source;
 
 	/**
 	 * @generated
@@ -419,6 +384,11 @@ public class Messages extends NLS {
 	 * @generated
 	 */
 	public static String NavigatorGroupName_Role_2001_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Object_2004_incominglinks;
 
 	/**
 	 * @generated

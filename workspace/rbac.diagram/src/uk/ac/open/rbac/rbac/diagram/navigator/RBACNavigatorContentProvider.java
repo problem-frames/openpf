@@ -25,11 +25,9 @@ import org.eclipse.ui.navigator.ICommonContentProvider;
 
 import uk.ac.open.rbac.rbac.diagram.edit.parts.ModelEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.ObjectEditPart;
-import uk.ac.open.rbac.rbac.diagram.edit.parts.PermissionEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.RoleEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.RolePermissionAssignmentEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.RolePermissionsEditPart;
-import uk.ac.open.rbac.rbac.diagram.edit.parts.SessionAssignmentsEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.SessionEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.UserEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.UserRoleAssignmentEditPart;
@@ -226,18 +224,79 @@ public class RBACNavigatorContentProvider implements ICommonContentProvider {
 	private Object[] getViewChildren(View view, Object parentElement) {
 		switch (RBACVisualIDRegistry.getVisualID(view)) {
 
+		case ModelEditPart.VISUAL_ID: {
+			LinkedList<RBACAbstractNavigatorItem> result = new LinkedList<RBACAbstractNavigatorItem>();
+			Diagram sv = (Diagram) view;
+			RBACNavigatorGroup links = new RBACNavigatorGroup(
+					Messages.NavigatorGroupName_Model_1000_links,
+					"icons/linksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RBACVisualIDRegistry.getType(RoleEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RBACVisualIDRegistry.getType(UserEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RBACVisualIDRegistry.getType(SessionEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RBACVisualIDRegistry.getType(ObjectEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
+					RBACVisualIDRegistry
+							.getType(UserRoleAssignmentEditPart.VISUAL_ID));
+			links.addChildren(createNavigatorItems(connectedViews, links, false));
+			connectedViews = getDiagramLinksByType(
+					Collections.singleton(sv),
+					RBACVisualIDRegistry
+							.getType(RolePermissionAssignmentEditPart.VISUAL_ID));
+			links.addChildren(createNavigatorItems(connectedViews, links, false));
+			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
+					RBACVisualIDRegistry
+							.getType(RolePermissionsEditPart.VISUAL_ID));
+			links.addChildren(createNavigatorItems(connectedViews, links, false));
+			if (!links.isEmpty()) {
+				result.add(links);
+			}
+			return result.toArray();
+		}
+
+		case ObjectEditPart.VISUAL_ID: {
+			LinkedList<RBACAbstractNavigatorItem> result = new LinkedList<RBACAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			RBACNavigatorGroup incominglinks = new RBACNavigatorGroup(
+					Messages.NavigatorGroupName_Object_2004_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(
+					Collections.singleton(sv),
+					RBACVisualIDRegistry
+							.getType(RolePermissionAssignmentEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			return result.toArray();
+		}
+
 		case RolePermissionsEditPart.VISUAL_ID: {
 			LinkedList<RBACAbstractNavigatorItem> result = new LinkedList<RBACAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
 			RBACNavigatorGroup target = new RBACNavigatorGroup(
-					Messages.NavigatorGroupName_RolePermissions_4004_target,
+					Messages.NavigatorGroupName_SessionAssignments_4003_target,
 					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			RBACNavigatorGroup source = new RBACNavigatorGroup(
-					Messages.NavigatorGroupName_RolePermissions_4004_source,
+					Messages.NavigatorGroupName_SessionAssignments_4003_source,
 					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					RBACVisualIDRegistry.getType(RoleEditPart.VISUAL_ID));
+					RBACVisualIDRegistry.getType(SessionEditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			if (!target.isEmpty()) {
@@ -249,43 +308,50 @@ public class RBACNavigatorContentProvider implements ICommonContentProvider {
 			return result.toArray();
 		}
 
-		case SessionEditPart.VISUAL_ID: {
+		case RoleEditPart.VISUAL_ID: {
 			LinkedList<RBACAbstractNavigatorItem> result = new LinkedList<RBACAbstractNavigatorItem>();
 			Node sv = (Node) view;
+			RBACNavigatorGroup incominglinks = new RBACNavigatorGroup(
+					Messages.NavigatorGroupName_Role_2001_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			RBACNavigatorGroup outgoinglinks = new RBACNavigatorGroup(
-					Messages.NavigatorGroupName_Session_2003_outgoinglinks,
+					Messages.NavigatorGroupName_Role_2001_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					RBACVisualIDRegistry
-							.getType(SessionAssignmentsEditPart.VISUAL_ID));
+							.getType(UserRoleAssignmentEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getOutgoingLinksByType(
+					Collections.singleton(sv),
+					RBACVisualIDRegistry
+							.getType(RolePermissionAssignmentEditPart.VISUAL_ID));
 			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
 					outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
 			if (!outgoinglinks.isEmpty()) {
 				result.add(outgoinglinks);
 			}
 			return result.toArray();
 		}
 
-		case RolePermissionAssignmentEditPart.VISUAL_ID: {
+		case UserEditPart.VISUAL_ID: {
 			LinkedList<RBACAbstractNavigatorItem> result = new LinkedList<RBACAbstractNavigatorItem>();
-			Edge sv = (Edge) view;
-			RBACNavigatorGroup source = new RBACNavigatorGroup(
-					Messages.NavigatorGroupName_RolePermissionAssignment_4002_source,
-					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			RBACNavigatorGroup incominglinks = new RBACNavigatorGroup(
-					Messages.NavigatorGroupName_RolePermissionAssignment_4002_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Node sv = (Node) view;
+			RBACNavigatorGroup outgoinglinks = new RBACNavigatorGroup(
+					Messages.NavigatorGroupName_User_2002_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					RBACVisualIDRegistry.getType(RoleEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			if (!source.isEmpty()) {
-				result.add(source);
-			}
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					RBACVisualIDRegistry
+							.getType(UserRoleAssignmentEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
 			}
 			return result.toArray();
 		}
@@ -323,82 +389,16 @@ public class RBACNavigatorContentProvider implements ICommonContentProvider {
 			return result.toArray();
 		}
 
-		case ModelEditPart.VISUAL_ID: {
-			LinkedList<RBACAbstractNavigatorItem> result = new LinkedList<RBACAbstractNavigatorItem>();
-			Diagram sv = (Diagram) view;
-			RBACNavigatorGroup links = new RBACNavigatorGroup(
-					Messages.NavigatorGroupName_Model_1000_links,
-					"icons/linksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					RBACVisualIDRegistry.getType(RoleEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					RBACVisualIDRegistry.getType(UserEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					RBACVisualIDRegistry.getType(SessionEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					RBACVisualIDRegistry.getType(ObjectEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
-					RBACVisualIDRegistry
-							.getType(UserRoleAssignmentEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			connectedViews = getDiagramLinksByType(
-					Collections.singleton(sv),
-					RBACVisualIDRegistry
-							.getType(RolePermissionAssignmentEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
-					RBACVisualIDRegistry.getType(PermissionEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
-					RBACVisualIDRegistry
-							.getType(RolePermissionsEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
-					RBACVisualIDRegistry
-							.getType(SessionAssignmentsEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			if (!links.isEmpty()) {
-				result.add(links);
-			}
-			return result.toArray();
-		}
-
-		case PermissionEditPart.VISUAL_ID: {
-			LinkedList<RBACAbstractNavigatorItem> result = new LinkedList<RBACAbstractNavigatorItem>();
-			Edge sv = (Edge) view;
-			RBACNavigatorGroup target = new RBACNavigatorGroup(
-					Messages.NavigatorGroupName_Permission_4003_target,
-					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					RBACVisualIDRegistry.getType(RoleEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			if (!target.isEmpty()) {
-				result.add(target);
-			}
-			return result.toArray();
-		}
-
-		case UserEditPart.VISUAL_ID: {
+		case SessionEditPart.VISUAL_ID: {
 			LinkedList<RBACAbstractNavigatorItem> result = new LinkedList<RBACAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			RBACNavigatorGroup outgoinglinks = new RBACNavigatorGroup(
-					Messages.NavigatorGroupName_User_2002_outgoinglinks,
+					Messages.NavigatorGroupName_Session_2003_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
 					RBACVisualIDRegistry
-							.getType(UserRoleAssignmentEditPart.VISUAL_ID));
+							.getType(RolePermissionsEditPart.VISUAL_ID));
 			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
 					outgoinglinks, true));
 			if (!outgoinglinks.isEmpty()) {
@@ -407,18 +407,22 @@ public class RBACNavigatorContentProvider implements ICommonContentProvider {
 			return result.toArray();
 		}
 
-		case SessionAssignmentsEditPart.VISUAL_ID: {
+		case RolePermissionAssignmentEditPart.VISUAL_ID: {
 			LinkedList<RBACAbstractNavigatorItem> result = new LinkedList<RBACAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
 			RBACNavigatorGroup target = new RBACNavigatorGroup(
-					Messages.NavigatorGroupName_SessionAssignments_4005_target,
+					Messages.NavigatorGroupName_RolePermissionAssignment_4002_target,
 					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			RBACNavigatorGroup source = new RBACNavigatorGroup(
-					Messages.NavigatorGroupName_SessionAssignments_4005_source,
+					Messages.NavigatorGroupName_RolePermissionAssignment_4002_source,
 					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					RBACVisualIDRegistry.getType(ObjectEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					RBACVisualIDRegistry.getType(SessionEditPart.VISUAL_ID));
+					RBACVisualIDRegistry.getType(RoleEditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			if (!target.isEmpty()) {
@@ -426,45 +430,6 @@ public class RBACNavigatorContentProvider implements ICommonContentProvider {
 			}
 			if (!source.isEmpty()) {
 				result.add(source);
-			}
-			return result.toArray();
-		}
-
-		case RoleEditPart.VISUAL_ID: {
-			LinkedList<RBACAbstractNavigatorItem> result = new LinkedList<RBACAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			RBACNavigatorGroup incominglinks = new RBACNavigatorGroup(
-					Messages.NavigatorGroupName_Role_2001_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			RBACNavigatorGroup outgoinglinks = new RBACNavigatorGroup(
-					Messages.NavigatorGroupName_Role_2001_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					RBACVisualIDRegistry
-							.getType(UserRoleAssignmentEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(
-					Collections.singleton(sv),
-					RBACVisualIDRegistry
-							.getType(RolePermissionAssignmentEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					RBACVisualIDRegistry.getType(PermissionEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					RBACVisualIDRegistry
-							.getType(RolePermissionsEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
 			}
 			return result.toArray();
 		}

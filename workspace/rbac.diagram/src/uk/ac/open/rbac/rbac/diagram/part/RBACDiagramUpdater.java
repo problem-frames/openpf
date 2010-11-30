@@ -14,7 +14,6 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import uk.ac.open.rbac.rbac.Model;
 import uk.ac.open.rbac.rbac.Object;
-import uk.ac.open.rbac.rbac.Permission;
 import uk.ac.open.rbac.rbac.RbacPackage;
 import uk.ac.open.rbac.rbac.Role;
 import uk.ac.open.rbac.rbac.RolePermissionAssignment;
@@ -23,11 +22,9 @@ import uk.ac.open.rbac.rbac.User;
 import uk.ac.open.rbac.rbac.UserRoleAssignment;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.ModelEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.ObjectEditPart;
-import uk.ac.open.rbac.rbac.diagram.edit.parts.PermissionEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.RoleEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.RolePermissionAssignmentEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.RolePermissionsEditPart;
-import uk.ac.open.rbac.rbac.diagram.edit.parts.SessionAssignmentsEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.SessionEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.UserEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.UserRoleAssignmentEditPart;
@@ -119,8 +116,6 @@ public class RBACDiagramUpdater {
 			return getUserRoleAssignment_4001ContainedLinks(view);
 		case RolePermissionAssignmentEditPart.VISUAL_ID:
 			return getRolePermissionAssignment_4002ContainedLinks(view);
-		case PermissionEditPart.VISUAL_ID:
-			return getPermission_4003ContainedLinks(view);
 		}
 		return Collections.emptyList();
 	}
@@ -142,8 +137,6 @@ public class RBACDiagramUpdater {
 			return getUserRoleAssignment_4001IncomingLinks(view);
 		case RolePermissionAssignmentEditPart.VISUAL_ID:
 			return getRolePermissionAssignment_4002IncomingLinks(view);
-		case PermissionEditPart.VISUAL_ID:
-			return getPermission_4003IncomingLinks(view);
 		}
 		return Collections.emptyList();
 	}
@@ -165,8 +158,6 @@ public class RBACDiagramUpdater {
 			return getUserRoleAssignment_4001OutgoingLinks(view);
 		case RolePermissionAssignmentEditPart.VISUAL_ID:
 			return getRolePermissionAssignment_4002OutgoingLinks(view);
-		case PermissionEditPart.VISUAL_ID:
-			return getPermission_4003OutgoingLinks(view);
 		}
 		return Collections.emptyList();
 	}
@@ -177,7 +168,8 @@ public class RBACDiagramUpdater {
 	public static List<RBACLinkDescriptor> getModel_1000ContainedLinks(View view) {
 		Model modelElement = (Model) view.getElement();
 		LinkedList<RBACLinkDescriptor> result = new LinkedList<RBACLinkDescriptor>();
-		result.addAll(getContainedTypeModelFacetLinks_Permission_4003(modelElement));
+		result.addAll(getContainedTypeModelFacetLinks_UserRoleAssignment_4001(modelElement));
+		result.addAll(getContainedTypeModelFacetLinks_RolePermissionAssignment_4002(modelElement));
 		return result;
 	}
 
@@ -185,11 +177,7 @@ public class RBACDiagramUpdater {
 	 * @generated
 	 */
 	public static List<RBACLinkDescriptor> getRole_2001ContainedLinks(View view) {
-		Role modelElement = (Role) view.getElement();
-		LinkedList<RBACLinkDescriptor> result = new LinkedList<RBACLinkDescriptor>();
-		result.addAll(getContainedTypeModelFacetLinks_RolePermissionAssignment_4002(modelElement));
-		result.addAll(getOutgoingFeatureModelFacetLinks_Role_Permissions_4004(modelElement));
-		return result;
+		return Collections.emptyList();
 	}
 
 	/**
@@ -206,8 +194,7 @@ public class RBACDiagramUpdater {
 			View view) {
 		Session modelElement = (Session) view.getElement();
 		LinkedList<RBACLinkDescriptor> result = new LinkedList<RBACLinkDescriptor>();
-		result.addAll(getContainedTypeModelFacetLinks_UserRoleAssignment_4001(modelElement));
-		result.addAll(getOutgoingFeatureModelFacetLinks_Session_Assignments_4005(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_Session_Assignments_4003(modelElement));
 		return result;
 	}
 
@@ -238,22 +225,12 @@ public class RBACDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RBACLinkDescriptor> getPermission_4003ContainedLinks(
-			View view) {
-		return Collections.emptyList();
-	}
-
-	/**
-	 * @generated
-	 */
 	public static List<RBACLinkDescriptor> getRole_2001IncomingLinks(View view) {
 		Role modelElement = (Role) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
 				.find(view.eResource().getResourceSet().getResources());
 		LinkedList<RBACLinkDescriptor> result = new LinkedList<RBACLinkDescriptor>();
 		result.addAll(getIncomingTypeModelFacetLinks_UserRoleAssignment_4001(
-				modelElement, crossReferences));
-		result.addAll(getIncomingTypeModelFacetLinks_Permission_4003(
 				modelElement, crossReferences));
 		return result;
 	}
@@ -277,7 +254,13 @@ public class RBACDiagramUpdater {
 	 * @generated
 	 */
 	public static List<RBACLinkDescriptor> getObject_2004IncomingLinks(View view) {
-		return Collections.emptyList();
+		Object modelElement = (Object) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<RBACLinkDescriptor> result = new LinkedList<RBACLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_RolePermissionAssignment_4002(
+				modelElement, crossReferences));
+		return result;
 	}
 
 	/**
@@ -290,7 +273,7 @@ public class RBACDiagramUpdater {
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
 				.find(view.eResource().getResourceSet().getResources());
 		LinkedList<RBACLinkDescriptor> result = new LinkedList<RBACLinkDescriptor>();
-		result.addAll(getIncomingFeatureModelFacetLinks_Session_Assignments_4005(
+		result.addAll(getIncomingFeatureModelFacetLinks_Session_Assignments_4003(
 				modelElement, crossReferences));
 		return result;
 	}
@@ -300,28 +283,7 @@ public class RBACDiagramUpdater {
 	 */
 	public static List<RBACLinkDescriptor> getRolePermissionAssignment_4002IncomingLinks(
 			View view) {
-		RolePermissionAssignment modelElement = (RolePermissionAssignment) view
-				.getElement();
-		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
-				.find(view.eResource().getResourceSet().getResources());
-		LinkedList<RBACLinkDescriptor> result = new LinkedList<RBACLinkDescriptor>();
-		result.addAll(getIncomingFeatureModelFacetLinks_Role_Permissions_4004(
-				modelElement, crossReferences));
-		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<RBACLinkDescriptor> getPermission_4003IncomingLinks(
-			View view) {
-		Permission modelElement = (Permission) view.getElement();
-		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
-				.find(view.eResource().getResourceSet().getResources());
-		LinkedList<RBACLinkDescriptor> result = new LinkedList<RBACLinkDescriptor>();
-		result.addAll(getIncomingTypeModelFacetLinks_RolePermissionAssignment_4002(
-				modelElement, crossReferences));
-		return result;
+		return Collections.emptyList();
 	}
 
 	/**
@@ -331,7 +293,6 @@ public class RBACDiagramUpdater {
 		Role modelElement = (Role) view.getElement();
 		LinkedList<RBACLinkDescriptor> result = new LinkedList<RBACLinkDescriptor>();
 		result.addAll(getOutgoingTypeModelFacetLinks_RolePermissionAssignment_4002(modelElement));
-		result.addAll(getOutgoingFeatureModelFacetLinks_Role_Permissions_4004(modelElement));
 		return result;
 	}
 
@@ -352,7 +313,7 @@ public class RBACDiagramUpdater {
 			View view) {
 		Session modelElement = (Session) view.getElement();
 		LinkedList<RBACLinkDescriptor> result = new LinkedList<RBACLinkDescriptor>();
-		result.addAll(getOutgoingFeatureModelFacetLinks_Session_Assignments_4005(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_Session_Assignments_4003(modelElement));
 		return result;
 	}
 
@@ -382,16 +343,8 @@ public class RBACDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RBACLinkDescriptor> getPermission_4003OutgoingLinks(
-			View view) {
-		return Collections.emptyList();
-	}
-
-	/**
-	 * @generated
-	 */
 	private static Collection<RBACLinkDescriptor> getContainedTypeModelFacetLinks_UserRoleAssignment_4001(
-			Session container) {
+			Model container) {
 		LinkedList<RBACLinkDescriptor> result = new LinkedList<RBACLinkDescriptor>();
 		for (Iterator<?> links = container.getAssignments().iterator(); links
 				.hasNext();) {
@@ -417,7 +370,7 @@ public class RBACDiagramUpdater {
 	 * @generated
 	 */
 	private static Collection<RBACLinkDescriptor> getContainedTypeModelFacetLinks_RolePermissionAssignment_4002(
-			Role container) {
+			Model container) {
 		LinkedList<RBACLinkDescriptor> result = new LinkedList<RBACLinkDescriptor>();
 		for (Iterator<?> links = container.getPermissions().iterator(); links
 				.hasNext();) {
@@ -430,36 +383,11 @@ public class RBACDiagramUpdater {
 					.getLinkWithClassVisualID(link)) {
 				continue;
 			}
-			Permission dst = link.getPermission();
+			Object dst = link.getObject();
 			Role src = link.getRole();
 			result.add(new RBACLinkDescriptor(src, dst, link,
 					RBACElementTypes.RolePermissionAssignment_4002,
 					RolePermissionAssignmentEditPart.VISUAL_ID));
-		}
-		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	private static Collection<RBACLinkDescriptor> getContainedTypeModelFacetLinks_Permission_4003(
-			Model container) {
-		LinkedList<RBACLinkDescriptor> result = new LinkedList<RBACLinkDescriptor>();
-		for (Iterator<?> links = container.getPermissions().iterator(); links
-				.hasNext();) {
-			EObject linkObject = (EObject) links.next();
-			if (false == linkObject instanceof Permission) {
-				continue;
-			}
-			Permission link = (Permission) linkObject;
-			if (PermissionEditPart.VISUAL_ID != RBACVisualIDRegistry
-					.getLinkWithClassVisualID(link)) {
-				continue;
-			}
-			Role dst = link.getRole();
-			result.add(new RBACLinkDescriptor(container, dst, link,
-					RBACElementTypes.Permission_4003,
-					PermissionEditPart.VISUAL_ID));
 		}
 		return result;
 	}
@@ -496,14 +424,14 @@ public class RBACDiagramUpdater {
 	 * @generated
 	 */
 	private static Collection<RBACLinkDescriptor> getIncomingTypeModelFacetLinks_RolePermissionAssignment_4002(
-			Permission target,
+			Object target,
 			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
 		LinkedList<RBACLinkDescriptor> result = new LinkedList<RBACLinkDescriptor>();
 		Collection<EStructuralFeature.Setting> settings = crossReferences
 				.get(target);
 		for (EStructuralFeature.Setting setting : settings) {
 			if (setting.getEStructuralFeature() != RbacPackage.eINSTANCE
-					.getRolePermissionAssignment_Permission()
+					.getRolePermissionAssignment_Object()
 					|| false == setting.getEObject() instanceof RolePermissionAssignment) {
 				continue;
 			}
@@ -524,59 +452,7 @@ public class RBACDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection<RBACLinkDescriptor> getIncomingTypeModelFacetLinks_Permission_4003(
-			Role target,
-			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
-		LinkedList<RBACLinkDescriptor> result = new LinkedList<RBACLinkDescriptor>();
-		Collection<EStructuralFeature.Setting> settings = crossReferences
-				.get(target);
-		for (EStructuralFeature.Setting setting : settings) {
-			if (setting.getEStructuralFeature() != RbacPackage.eINSTANCE
-					.getPermission_Role()
-					|| false == setting.getEObject() instanceof Permission) {
-				continue;
-			}
-			Permission link = (Permission) setting.getEObject();
-			if (PermissionEditPart.VISUAL_ID != RBACVisualIDRegistry
-					.getLinkWithClassVisualID(link)) {
-				continue;
-			}
-			if (false == link.eContainer() instanceof Model) {
-				continue;
-			}
-			Model container = (Model) link.eContainer();
-			result.add(new RBACLinkDescriptor(container, target, link,
-					RBACElementTypes.Permission_4003,
-					PermissionEditPart.VISUAL_ID));
-
-		}
-		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	private static Collection<RBACLinkDescriptor> getIncomingFeatureModelFacetLinks_Role_Permissions_4004(
-			RolePermissionAssignment target,
-			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
-		LinkedList<RBACLinkDescriptor> result = new LinkedList<RBACLinkDescriptor>();
-		Collection<EStructuralFeature.Setting> settings = crossReferences
-				.get(target);
-		for (EStructuralFeature.Setting setting : settings) {
-			if (setting.getEStructuralFeature() == RbacPackage.eINSTANCE
-					.getRole_Permissions()) {
-				result.add(new RBACLinkDescriptor(setting.getEObject(), target,
-						RBACElementTypes.RolePermissions_4004,
-						RolePermissionsEditPart.VISUAL_ID));
-			}
-		}
-		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	private static Collection<RBACLinkDescriptor> getIncomingFeatureModelFacetLinks_Session_Assignments_4005(
+	private static Collection<RBACLinkDescriptor> getIncomingFeatureModelFacetLinks_Session_Assignments_4003(
 			UserRoleAssignment target,
 			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
 		LinkedList<RBACLinkDescriptor> result = new LinkedList<RBACLinkDescriptor>();
@@ -586,8 +462,8 @@ public class RBACDiagramUpdater {
 			if (setting.getEStructuralFeature() == RbacPackage.eINSTANCE
 					.getSession_Assignments()) {
 				result.add(new RBACLinkDescriptor(setting.getEObject(), target,
-						RBACElementTypes.SessionAssignments_4005,
-						SessionAssignmentsEditPart.VISUAL_ID));
+						RBACElementTypes.SessionAssignments_4003,
+						RolePermissionsEditPart.VISUAL_ID));
 			}
 		}
 		return result;
@@ -598,14 +474,14 @@ public class RBACDiagramUpdater {
 	 */
 	private static Collection<RBACLinkDescriptor> getOutgoingTypeModelFacetLinks_UserRoleAssignment_4001(
 			User source) {
-		Session container = null;
+		Model container = null;
 		// Find container element for the link.
 		// Climb up by containment hierarchy starting from the source
 		// and return the first element that is instance of the container class.
 		for (EObject element = source; element != null && container == null; element = element
 				.eContainer()) {
-			if (element instanceof Session) {
-				container = (Session) element;
+			if (element instanceof Model) {
+				container = (Model) element;
 			}
 		}
 		if (container == null) {
@@ -640,14 +516,14 @@ public class RBACDiagramUpdater {
 	 */
 	private static Collection<RBACLinkDescriptor> getOutgoingTypeModelFacetLinks_RolePermissionAssignment_4002(
 			Role source) {
-		Role container = null;
+		Model container = null;
 		// Find container element for the link.
 		// Climb up by containment hierarchy starting from the source
 		// and return the first element that is instance of the container class.
 		for (EObject element = source; element != null && container == null; element = element
 				.eContainer()) {
-			if (element instanceof Role) {
-				container = (Role) element;
+			if (element instanceof Model) {
+				container = (Model) element;
 			}
 		}
 		if (container == null) {
@@ -665,7 +541,7 @@ public class RBACDiagramUpdater {
 					.getLinkWithClassVisualID(link)) {
 				continue;
 			}
-			Permission dst = link.getPermission();
+			Object dst = link.getObject();
 			Role src = link.getRole();
 			if (src != source) {
 				continue;
@@ -680,24 +556,7 @@ public class RBACDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection<RBACLinkDescriptor> getOutgoingFeatureModelFacetLinks_Role_Permissions_4004(
-			Role source) {
-		LinkedList<RBACLinkDescriptor> result = new LinkedList<RBACLinkDescriptor>();
-		for (Iterator<?> destinations = source.getPermissions().iterator(); destinations
-				.hasNext();) {
-			RolePermissionAssignment destination = (RolePermissionAssignment) destinations
-					.next();
-			result.add(new RBACLinkDescriptor(source, destination,
-					RBACElementTypes.RolePermissions_4004,
-					RolePermissionsEditPart.VISUAL_ID));
-		}
-		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	private static Collection<RBACLinkDescriptor> getOutgoingFeatureModelFacetLinks_Session_Assignments_4005(
+	private static Collection<RBACLinkDescriptor> getOutgoingFeatureModelFacetLinks_Session_Assignments_4003(
 			Session source) {
 		LinkedList<RBACLinkDescriptor> result = new LinkedList<RBACLinkDescriptor>();
 		for (Iterator<?> destinations = source.getAssignments().iterator(); destinations
@@ -705,8 +564,8 @@ public class RBACDiagramUpdater {
 			UserRoleAssignment destination = (UserRoleAssignment) destinations
 					.next();
 			result.add(new RBACLinkDescriptor(source, destination,
-					RBACElementTypes.SessionAssignments_4005,
-					SessionAssignmentsEditPart.VISUAL_ID));
+					RBACElementTypes.SessionAssignments_4003,
+					RolePermissionsEditPart.VISUAL_ID));
 		}
 		return result;
 	}

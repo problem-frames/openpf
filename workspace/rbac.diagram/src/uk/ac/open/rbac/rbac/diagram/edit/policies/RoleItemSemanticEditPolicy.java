@@ -2,37 +2,22 @@ package uk.ac.open.rbac.rbac.diagram.edit.policies;
 
 import java.util.Iterator;
 
-import org.eclipse.core.commands.ExecutionException;
-import org.eclipse.core.runtime.IAdaptable;
-import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.ecore.EAnnotation;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.gef.commands.Command;
-import org.eclipse.gmf.runtime.common.core.command.CommandResult;
 import org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand;
 import org.eclipse.gmf.runtime.emf.commands.core.command.CompositeTransactionalCommand;
 import org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand;
-import org.eclipse.gmf.runtime.emf.type.core.commands.DestroyReferenceCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest;
-import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest;
-import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelationshipRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest;
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.View;
 
-import uk.ac.open.rbac.rbac.diagram.edit.commands.PermissionCreateCommand;
-import uk.ac.open.rbac.rbac.diagram.edit.commands.PermissionReorientCommand;
 import uk.ac.open.rbac.rbac.diagram.edit.commands.RolePermissionAssignmentCreateCommand;
 import uk.ac.open.rbac.rbac.diagram.edit.commands.RolePermissionAssignmentReorientCommand;
-import uk.ac.open.rbac.rbac.diagram.edit.commands.RolePermissionsCreateCommand;
-import uk.ac.open.rbac.rbac.diagram.edit.commands.RolePermissionsReorientCommand;
 import uk.ac.open.rbac.rbac.diagram.edit.commands.UserRoleAssignmentCreateCommand;
 import uk.ac.open.rbac.rbac.diagram.edit.commands.UserRoleAssignmentReorientCommand;
-import uk.ac.open.rbac.rbac.diagram.edit.parts.PermissionEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.RolePermissionAssignmentEditPart;
-import uk.ac.open.rbac.rbac.diagram.edit.parts.RolePermissionsEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.UserRoleAssignmentEditPart;
 import uk.ac.open.rbac.rbac.diagram.part.RBACVisualIDRegistry;
 import uk.ac.open.rbac.rbac.diagram.providers.RBACElementTypes;
@@ -66,13 +51,6 @@ public class RoleItemSemanticEditPolicy extends RBACBaseItemSemanticEditPolicy {
 				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
 				continue;
 			}
-			if (RBACVisualIDRegistry.getVisualID(incomingLink) == PermissionEditPart.VISUAL_ID) {
-				DestroyElementRequest r = new DestroyElementRequest(
-						incomingLink.getElement(), false);
-				cmd.add(new DestroyElementCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
-				continue;
-			}
 		}
 		for (Iterator<?> it = view.getSourceEdges().iterator(); it.hasNext();) {
 			Edge outgoingLink = (Edge) it.next();
@@ -80,27 +58,6 @@ public class RoleItemSemanticEditPolicy extends RBACBaseItemSemanticEditPolicy {
 				DestroyElementRequest r = new DestroyElementRequest(
 						outgoingLink.getElement(), false);
 				cmd.add(new DestroyElementCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
-				continue;
-			}
-			if (RBACVisualIDRegistry.getVisualID(outgoingLink) == RolePermissionsEditPart.VISUAL_ID) {
-				DestroyReferenceRequest r = new DestroyReferenceRequest(
-						outgoingLink.getSource().getElement(), null,
-						outgoingLink.getTarget().getElement(), false);
-				cmd.add(new DestroyReferenceCommand(r) {
-					protected CommandResult doExecuteWithResult(
-							IProgressMonitor progressMonitor, IAdaptable info)
-							throws ExecutionException {
-						EObject referencedObject = getReferencedObject();
-						Resource resource = referencedObject.eResource();
-						CommandResult result = super.doExecuteWithResult(
-								progressMonitor, info);
-						if (resource != null) {
-							resource.getContents().add(referencedObject);
-						}
-						return result;
-					}
-				});
 				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
 				continue;
 			}
@@ -140,13 +97,6 @@ public class RoleItemSemanticEditPolicy extends RBACBaseItemSemanticEditPolicy {
 			return getGEFWrapper(new RolePermissionAssignmentCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (RBACElementTypes.Permission_4003 == req.getElementType()) {
-			return null;
-		}
-		if (RBACElementTypes.RolePermissions_4004 == req.getElementType()) {
-			return getGEFWrapper(new RolePermissionsCreateCommand(req,
-					req.getSource(), req.getTarget()));
-		}
 		return null;
 	}
 
@@ -161,13 +111,6 @@ public class RoleItemSemanticEditPolicy extends RBACBaseItemSemanticEditPolicy {
 		}
 		if (RBACElementTypes.RolePermissionAssignment_4002 == req
 				.getElementType()) {
-			return null;
-		}
-		if (RBACElementTypes.Permission_4003 == req.getElementType()) {
-			return getGEFWrapper(new PermissionCreateCommand(req,
-					req.getSource(), req.getTarget()));
-		}
-		if (RBACElementTypes.RolePermissions_4004 == req.getElementType()) {
 			return null;
 		}
 		return null;
@@ -187,25 +130,8 @@ public class RoleItemSemanticEditPolicy extends RBACBaseItemSemanticEditPolicy {
 		case RolePermissionAssignmentEditPart.VISUAL_ID:
 			return getGEFWrapper(new RolePermissionAssignmentReorientCommand(
 					req));
-		case PermissionEditPart.VISUAL_ID:
-			return getGEFWrapper(new PermissionReorientCommand(req));
 		}
 		return super.getReorientRelationshipCommand(req);
-	}
-
-	/**
-	 * Returns command to reorient EReference based link. New link target or source
-	 * should be the domain model element associated with this node.
-	 * 
-	 * @generated
-	 */
-	protected Command getReorientReferenceRelationshipCommand(
-			ReorientReferenceRelationshipRequest req) {
-		switch (getVisualID(req)) {
-		case RolePermissionsEditPart.VISUAL_ID:
-			return getGEFWrapper(new RolePermissionsReorientCommand(req));
-		}
-		return super.getReorientReferenceRelationshipCommand(req);
 	}
 
 }

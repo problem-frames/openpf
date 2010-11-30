@@ -51,10 +51,8 @@ public class RBACPaletteFactory {
 				Messages.Connections2Group_title);
 		paletteContainer.setId("createConnections2Group"); //$NON-NLS-1$
 		paletteContainer.add(createAssignments1CreationTool());
-		paletteContainer.add(createPermission2CreationTool());
-		paletteContainer.add(createPermissions3CreationTool());
-		paletteContainer.add(createRolePermissionAssignment4CreationTool());
-		paletteContainer.add(createUserRoleAssignment5CreationTool());
+		paletteContainer.add(createRolePermissionAssignment2CreationTool());
+		paletteContainer.add(createUserRoleAssignment3CreationTool());
 		return paletteContainer;
 	}
 
@@ -126,10 +124,10 @@ public class RBACPaletteFactory {
 				Messages.Assignments1CreationTool_title,
 				Messages.Assignments1CreationTool_desc,
 				Collections
-						.singletonList(RBACElementTypes.SessionAssignments_4005));
+						.singletonList(RBACElementTypes.SessionAssignments_4003));
 		entry.setId("createAssignments1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(RBACElementTypes
-				.getImageDescriptor(RBACElementTypes.SessionAssignments_4005));
+				.getImageDescriptor(RBACElementTypes.SessionAssignments_4003));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -137,44 +135,13 @@ public class RBACPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createPermission2CreationTool() {
+	private ToolEntry createRolePermissionAssignment2CreationTool() {
 		LinkToolEntry entry = new LinkToolEntry(
-				Messages.Permission2CreationTool_title,
-				Messages.Permission2CreationTool_desc,
-				Collections.singletonList(RBACElementTypes.Permission_4003));
-		entry.setId("createPermission2CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(RBACElementTypes
-				.getImageDescriptor(RBACElementTypes.Permission_4003));
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	 * @generated
-	 */
-	private ToolEntry createPermissions3CreationTool() {
-		LinkToolEntry entry = new LinkToolEntry(
-				Messages.Permissions3CreationTool_title,
-				Messages.Permissions3CreationTool_desc,
-				Collections
-						.singletonList(RBACElementTypes.RolePermissions_4004));
-		entry.setId("createPermissions3CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(RBACElementTypes
-				.getImageDescriptor(RBACElementTypes.RolePermissions_4004));
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	 * @generated
-	 */
-	private ToolEntry createRolePermissionAssignment4CreationTool() {
-		LinkToolEntry entry = new LinkToolEntry(
-				Messages.RolePermissionAssignment4CreationTool_title,
-				Messages.RolePermissionAssignment4CreationTool_desc,
+				Messages.RolePermissionAssignment2CreationTool_title,
+				Messages.RolePermissionAssignment2CreationTool_desc,
 				Collections
 						.singletonList(RBACElementTypes.RolePermissionAssignment_4002));
-		entry.setId("createRolePermissionAssignment4CreationTool"); //$NON-NLS-1$
+		entry.setId("createRolePermissionAssignment2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(RBACElementTypes
 				.getImageDescriptor(RBACElementTypes.RolePermissionAssignment_4002));
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -184,13 +151,13 @@ public class RBACPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createUserRoleAssignment5CreationTool() {
+	private ToolEntry createUserRoleAssignment3CreationTool() {
 		LinkToolEntry entry = new LinkToolEntry(
-				Messages.UserRoleAssignment5CreationTool_title,
-				Messages.UserRoleAssignment5CreationTool_desc,
+				Messages.UserRoleAssignment3CreationTool_title,
+				Messages.UserRoleAssignment3CreationTool_desc,
 				Collections
 						.singletonList(RBACElementTypes.UserRoleAssignment_4001));
-		entry.setId("createUserRoleAssignment5CreationTool"); //$NON-NLS-1$
+		entry.setId("createUserRoleAssignment3CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(RBACElementTypes
 				.getImageDescriptor(RBACElementTypes.UserRoleAssignment_4001));
 		entry.setLargeIcon(entry.getSmallIcon());

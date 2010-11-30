@@ -40,7 +40,6 @@ public class RBACParser extends AbstractContentAssistParser {
 					put(grammarAccess.getModelAccess().getAlternatives(), "rule__Model__Alternatives");
 					put(grammarAccess.getRoleAccess().getGroup(), "rule__Role__Group__0");
 					put(grammarAccess.getUserAccess().getGroup(), "rule__User__Group__0");
-					put(grammarAccess.getPermissionAccess().getGroup(), "rule__Permission__Group__0");
 					put(grammarAccess.getObjectAccess().getGroup(), "rule__Object__Group__0");
 					put(grammarAccess.getSessionAccess().getGroup(), "rule__Session__Group__0");
 					put(grammarAccess.getUserRoleAssignmentAccess().getGroup(), "rule__UserRoleAssignment__Group__0");
@@ -50,19 +49,19 @@ public class RBACParser extends AbstractContentAssistParser {
 					put(grammarAccess.getModelAccess().getSessionsAssignment_2(), "rule__Model__SessionsAssignment_2");
 					put(grammarAccess.getModelAccess().getObjectsAssignment_3(), "rule__Model__ObjectsAssignment_3");
 					put(grammarAccess.getModelAccess().getPermissionsAssignment_4(), "rule__Model__PermissionsAssignment_4");
+					put(grammarAccess.getModelAccess().getAssignmentsAssignment_5(), "rule__Model__AssignmentsAssignment_5");
 					put(grammarAccess.getRoleAccess().getNameAssignment_1(), "rule__Role__NameAssignment_1");
-					put(grammarAccess.getRoleAccess().getPermissionsAssignment_3(), "rule__Role__PermissionsAssignment_3");
 					put(grammarAccess.getUserAccess().getNameAssignment_1(), "rule__User__NameAssignment_1");
-					put(grammarAccess.getPermissionAccess().getTypeAssignment_0(), "rule__Permission__TypeAssignment_0");
-					put(grammarAccess.getPermissionAccess().getRoleAssignment_1(), "rule__Permission__RoleAssignment_1");
-					put(grammarAccess.getPermissionAccess().getObjectAssignment_2(), "rule__Permission__ObjectAssignment_2");
 					put(grammarAccess.getObjectAccess().getNameAssignment_1(), "rule__Object__NameAssignment_1");
+					put(grammarAccess.getObjectAccess().getTypeAssignment_3(), "rule__Object__TypeAssignment_3");
 					put(grammarAccess.getSessionAccess().getNameAssignment_1(), "rule__Session__NameAssignment_1");
 					put(grammarAccess.getSessionAccess().getAssignmentsAssignment_3(), "rule__Session__AssignmentsAssignment_3");
-					put(grammarAccess.getUserRoleAssignmentAccess().getUserAssignment_0(), "rule__UserRoleAssignment__UserAssignment_0");
-					put(grammarAccess.getUserRoleAssignmentAccess().getRoleAssignment_2(), "rule__UserRoleAssignment__RoleAssignment_2");
+					put(grammarAccess.getUserRoleAssignmentAccess().getNameAssignment_0(), "rule__UserRoleAssignment__NameAssignment_0");
+					put(grammarAccess.getUserRoleAssignmentAccess().getUserAssignment_1(), "rule__UserRoleAssignment__UserAssignment_1");
+					put(grammarAccess.getUserRoleAssignmentAccess().getRoleAssignment_3(), "rule__UserRoleAssignment__RoleAssignment_3");
 					put(grammarAccess.getRolePermissionAssignmentAccess().getRoleAssignment_0(), "rule__RolePermissionAssignment__RoleAssignment_0");
-					put(grammarAccess.getRolePermissionAssignmentAccess().getPermissionAssignment_2(), "rule__RolePermissionAssignment__PermissionAssignment_2");
+					put(grammarAccess.getRolePermissionAssignmentAccess().getTypeAssignment_1(), "rule__RolePermissionAssignment__TypeAssignment_1");
+					put(grammarAccess.getRolePermissionAssignmentAccess().getObjectAssignment_2(), "rule__RolePermissionAssignment__ObjectAssignment_2");
 				}
 			};
 		}

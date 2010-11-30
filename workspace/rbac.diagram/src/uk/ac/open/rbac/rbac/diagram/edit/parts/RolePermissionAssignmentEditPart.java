@@ -1,6 +1,8 @@
 package uk.ac.open.rbac.rbac.diagram.edit.parts;
 
 import org.eclipse.draw2d.Connection;
+import org.eclipse.draw2d.PolylineDecoration;
+import org.eclipse.draw2d.RotatableDecoration;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ConnectionNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ITreeBranchEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
@@ -68,6 +70,15 @@ public class RolePermissionAssignmentEditPart extends ConnectionNodeEditPart
 		public RolePermissionAssignmentFigure() {
 			this.setForegroundColor(THIS_FORE);
 
+			setTargetDecoration(createTargetDecoration());
+		}
+
+		/**
+		 * @generated
+		 */
+		private RotatableDecoration createTargetDecoration() {
+			PolylineDecoration df = new PolylineDecoration();
+			return df;
 		}
 
 	}
@@ -75,6 +86,6 @@ public class RolePermissionAssignmentEditPart extends ConnectionNodeEditPart
 	/**
 	 * @generated
 	 */
-	static final Color THIS_FORE = new Color(null, 255, 0, 0);
+	static final Color THIS_FORE = new Color(null, 0, 255, 0);
 
 }

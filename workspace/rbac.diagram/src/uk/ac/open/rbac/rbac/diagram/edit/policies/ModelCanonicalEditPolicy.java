@@ -34,7 +34,6 @@ import org.eclipse.gmf.runtime.notation.View;
 import uk.ac.open.rbac.rbac.RbacPackage;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.ModelEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.ObjectEditPart;
-import uk.ac.open.rbac.rbac.diagram.edit.parts.PermissionEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.RoleEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.RolePermissionAssignmentEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.SessionEditPart;
@@ -325,17 +324,6 @@ public class ModelCanonicalEditPolicy extends CanonicalEditPolicy {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RBACDiagramUpdater
 						.getRolePermissionAssignment_4002ContainedLinks(view));
-			}
-			if (!domain2NotationMap.containsKey(view.getElement())
-					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
-				domain2NotationMap.put(view.getElement(), view);
-			}
-			break;
-		}
-		case PermissionEditPart.VISUAL_ID: {
-			if (!domain2NotationMap.containsKey(view.getElement())) {
-				result.addAll(RBACDiagramUpdater
-						.getPermission_4003ContainedLinks(view));
 			}
 			if (!domain2NotationMap.containsKey(view.getElement())
 					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$

@@ -309,8 +309,8 @@ public class WrappingLabelEditPart extends LabelEditPart implements
 	public IParser getParser() {
 		if (parser == null) {
 			parser = RBACParserProvider.getParser(
-					RBACElementTypes.RolePermissions_4004, getParserElement(),
-					CommonParserHint.DESCRIPTION);
+					RBACElementTypes.SessionAssignments_4003,
+					getParserElement(), CommonParserHint.DESCRIPTION);
 		}
 		return parser;
 	}

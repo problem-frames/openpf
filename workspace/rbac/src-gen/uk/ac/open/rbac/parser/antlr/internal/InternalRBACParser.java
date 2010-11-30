@@ -24,7 +24,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalRBACParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'role'", "'{'", "'}'", "'user'", "'object'", "'session'", "':'", "'='"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'role'", "'user'", "'object'", "':'", "'session'", "'{'", "'}'"
     };
     public static final int RULE_ID=4;
     public static final int RULE_STRING=5;
@@ -108,7 +108,7 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleModel
-    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:86:1: ruleModel returns [EObject current=null] : ( ( (lv_roles_0_0= ruleRole ) ) | ( (lv_users_1_0= ruleUser ) ) | ( (lv_sessions_2_0= ruleSession ) ) | ( (lv_objects_3_0= ruleObject ) ) | ( (lv_permissions_4_0= rulePermission ) ) )* ;
+    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:86:1: ruleModel returns [EObject current=null] : ( ( (lv_roles_0_0= ruleRole ) ) | ( (lv_users_1_0= ruleUser ) ) | ( (lv_sessions_2_0= ruleSession ) ) | ( (lv_objects_3_0= ruleObject ) ) | ( (lv_permissions_4_0= ruleRolePermissionAssignment ) ) | ( (lv_assignments_5_0= ruleUserRoleAssignment ) ) )* ;
     public final EObject ruleModel() throws RecognitionException {
         EObject current = null;
 
@@ -122,41 +122,52 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
 
         EObject lv_permissions_4_0 = null;
 
+        EObject lv_assignments_5_0 = null;
+
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:91:6: ( ( ( (lv_roles_0_0= ruleRole ) ) | ( (lv_users_1_0= ruleUser ) ) | ( (lv_sessions_2_0= ruleSession ) ) | ( (lv_objects_3_0= ruleObject ) ) | ( (lv_permissions_4_0= rulePermission ) ) )* )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:92:1: ( ( (lv_roles_0_0= ruleRole ) ) | ( (lv_users_1_0= ruleUser ) ) | ( (lv_sessions_2_0= ruleSession ) ) | ( (lv_objects_3_0= ruleObject ) ) | ( (lv_permissions_4_0= rulePermission ) ) )*
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:91:6: ( ( ( (lv_roles_0_0= ruleRole ) ) | ( (lv_users_1_0= ruleUser ) ) | ( (lv_sessions_2_0= ruleSession ) ) | ( (lv_objects_3_0= ruleObject ) ) | ( (lv_permissions_4_0= ruleRolePermissionAssignment ) ) | ( (lv_assignments_5_0= ruleUserRoleAssignment ) ) )* )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:92:1: ( ( (lv_roles_0_0= ruleRole ) ) | ( (lv_users_1_0= ruleUser ) ) | ( (lv_sessions_2_0= ruleSession ) ) | ( (lv_objects_3_0= ruleObject ) ) | ( (lv_permissions_4_0= ruleRolePermissionAssignment ) ) | ( (lv_assignments_5_0= ruleUserRoleAssignment ) ) )*
             {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:92:1: ( ( (lv_roles_0_0= ruleRole ) ) | ( (lv_users_1_0= ruleUser ) ) | ( (lv_sessions_2_0= ruleSession ) ) | ( (lv_objects_3_0= ruleObject ) ) | ( (lv_permissions_4_0= rulePermission ) ) )*
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:92:1: ( ( (lv_roles_0_0= ruleRole ) ) | ( (lv_users_1_0= ruleUser ) ) | ( (lv_sessions_2_0= ruleSession ) ) | ( (lv_objects_3_0= ruleObject ) ) | ( (lv_permissions_4_0= ruleRolePermissionAssignment ) ) | ( (lv_assignments_5_0= ruleUserRoleAssignment ) ) )*
             loop1:
             do {
-                int alt1=6;
+                int alt1=7;
                 switch ( input.LA(1) ) {
                 case 11:
                     {
                     alt1=1;
                     }
                     break;
-                case 14:
+                case 12:
                     {
                     alt1=2;
                     }
                     break;
-                case 16:
+                case 15:
                     {
                     alt1=3;
                     }
                     break;
-                case 15:
+                case 13:
                     {
                     alt1=4;
                     }
                     break;
-                case RULE_STRING:
+                case RULE_ID:
                     {
-                    alt1=5;
+                    int LA1_6 = input.LA(2);
+
+                    if ( (LA1_6==RULE_ID) ) {
+                        alt1=6;
+                    }
+                    else if ( (LA1_6==RULE_STRING) ) {
+                        alt1=5;
+                    }
+
+
                     }
                     break;
 
@@ -332,19 +343,19 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 5 :
-            	    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:192:6: ( (lv_permissions_4_0= rulePermission ) )
+            	    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:192:6: ( (lv_permissions_4_0= ruleRolePermissionAssignment ) )
             	    {
-            	    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:192:6: ( (lv_permissions_4_0= rulePermission ) )
-            	    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:193:1: (lv_permissions_4_0= rulePermission )
+            	    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:192:6: ( (lv_permissions_4_0= ruleRolePermissionAssignment ) )
+            	    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:193:1: (lv_permissions_4_0= ruleRolePermissionAssignment )
             	    {
-            	    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:193:1: (lv_permissions_4_0= rulePermission )
-            	    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:194:3: lv_permissions_4_0= rulePermission
+            	    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:193:1: (lv_permissions_4_0= ruleRolePermissionAssignment )
+            	    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:194:3: lv_permissions_4_0= ruleRolePermissionAssignment
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getPermissionsPermissionParserRuleCall_4_0(), currentNode); 
+            	    	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getPermissionsRolePermissionAssignmentParserRuleCall_4_0(), currentNode); 
             	    	    
-            	    pushFollow(FOLLOW_rulePermission_in_ruleModel239);
-            	    lv_permissions_4_0=rulePermission();
+            	    pushFollow(FOLLOW_ruleRolePermissionAssignment_in_ruleModel239);
+            	    lv_permissions_4_0=ruleRolePermissionAssignment();
             	    _fsp--;
 
 
@@ -357,7 +368,49 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
             	    	       			current, 
             	    	       			"permissions",
             	    	        		lv_permissions_4_0, 
-            	    	        		"Permission", 
+            	    	        		"RolePermissionAssignment", 
+            	    	        		currentNode);
+            	    	        } catch (ValueConverterException vce) {
+            	    				handleValueConverterException(vce);
+            	    	        }
+            	    	        currentNode = currentNode.getParent();
+            	    	    
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
+            	case 6 :
+            	    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:217:6: ( (lv_assignments_5_0= ruleUserRoleAssignment ) )
+            	    {
+            	    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:217:6: ( (lv_assignments_5_0= ruleUserRoleAssignment ) )
+            	    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:218:1: (lv_assignments_5_0= ruleUserRoleAssignment )
+            	    {
+            	    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:218:1: (lv_assignments_5_0= ruleUserRoleAssignment )
+            	    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:219:3: lv_assignments_5_0= ruleUserRoleAssignment
+            	    {
+            	     
+            	    	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getAssignmentsUserRoleAssignmentParserRuleCall_5_0(), currentNode); 
+            	    	    
+            	    pushFollow(FOLLOW_ruleUserRoleAssignment_in_ruleModel266);
+            	    lv_assignments_5_0=ruleUserRoleAssignment();
+            	    _fsp--;
+
+
+            	    	        if (current==null) {
+            	    	            current = factory.create(grammarAccess.getModelRule().getType().getClassifier());
+            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	    	        }
+            	    	        try {
+            	    	       		add(
+            	    	       			current, 
+            	    	       			"assignments",
+            	    	        		lv_assignments_5_0, 
+            	    	        		"UserRoleAssignment", 
             	    	        		currentNode);
             	    	        } catch (ValueConverterException vce) {
             	    				handleValueConverterException(vce);
@@ -399,7 +452,7 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleRole
-    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:224:1: entryRuleRole returns [EObject current=null] : iv_ruleRole= ruleRole EOF ;
+    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:249:1: entryRuleRole returns [EObject current=null] : iv_ruleRole= ruleRole EOF ;
     public final EObject entryRuleRole() throws RecognitionException {
         EObject current = null;
 
@@ -407,16 +460,16 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:225:2: (iv_ruleRole= ruleRole EOF )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:226:2: iv_ruleRole= ruleRole EOF
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:250:2: (iv_ruleRole= ruleRole EOF )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:251:2: iv_ruleRole= ruleRole EOF
             {
              currentNode = createCompositeNode(grammarAccess.getRoleRule(), currentNode); 
-            pushFollow(FOLLOW_ruleRole_in_entryRuleRole276);
+            pushFollow(FOLLOW_ruleRole_in_entryRuleRole303);
             iv_ruleRole=ruleRole();
             _fsp--;
 
              current =iv_ruleRole; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRole286); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRole313); 
 
             }
 
@@ -434,35 +487,33 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleRole
-    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:233:1: ruleRole returns [EObject current=null] : ( 'role' ( (lv_name_1_0= RULE_ID ) ) '{' ( (lv_permissions_3_0= ruleRolePermissionAssignment ) )* '}' ) ;
+    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:258:1: ruleRole returns [EObject current=null] : ( 'role' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleRole() throws RecognitionException {
         EObject current = null;
 
         Token lv_name_1_0=null;
-        EObject lv_permissions_3_0 = null;
-
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:238:6: ( ( 'role' ( (lv_name_1_0= RULE_ID ) ) '{' ( (lv_permissions_3_0= ruleRolePermissionAssignment ) )* '}' ) )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:239:1: ( 'role' ( (lv_name_1_0= RULE_ID ) ) '{' ( (lv_permissions_3_0= ruleRolePermissionAssignment ) )* '}' )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:263:6: ( ( 'role' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:264:1: ( 'role' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:239:1: ( 'role' ( (lv_name_1_0= RULE_ID ) ) '{' ( (lv_permissions_3_0= ruleRolePermissionAssignment ) )* '}' )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:239:3: 'role' ( (lv_name_1_0= RULE_ID ) ) '{' ( (lv_permissions_3_0= ruleRolePermissionAssignment ) )* '}'
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:264:1: ( 'role' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:264:3: 'role' ( (lv_name_1_0= RULE_ID ) )
             {
-            match(input,11,FOLLOW_11_in_ruleRole321); 
+            match(input,11,FOLLOW_11_in_ruleRole348); 
 
                     createLeafNode(grammarAccess.getRoleAccess().getRoleKeyword_0(), null); 
                 
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:243:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:244:1: (lv_name_1_0= RULE_ID )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:268:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:269:1: (lv_name_1_0= RULE_ID )
             {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:244:1: (lv_name_1_0= RULE_ID )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:245:3: lv_name_1_0= RULE_ID
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:269:1: (lv_name_1_0= RULE_ID )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:270:3: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRole338); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRole365); 
 
             			createLeafNode(grammarAccess.getRoleAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
             		
@@ -488,68 +539,6 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,12,FOLLOW_12_in_ruleRole353); 
-
-                    createLeafNode(grammarAccess.getRoleAccess().getLeftCurlyBracketKeyword_2(), null); 
-                
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:271:1: ( (lv_permissions_3_0= ruleRolePermissionAssignment ) )*
-            loop2:
-            do {
-                int alt2=2;
-                int LA2_0 = input.LA(1);
-
-                if ( (LA2_0==RULE_ID) ) {
-                    alt2=1;
-                }
-
-
-                switch (alt2) {
-            	case 1 :
-            	    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:272:1: (lv_permissions_3_0= ruleRolePermissionAssignment )
-            	    {
-            	    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:272:1: (lv_permissions_3_0= ruleRolePermissionAssignment )
-            	    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:273:3: lv_permissions_3_0= ruleRolePermissionAssignment
-            	    {
-            	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getRoleAccess().getPermissionsRolePermissionAssignmentParserRuleCall_3_0(), currentNode); 
-            	    	    
-            	    pushFollow(FOLLOW_ruleRolePermissionAssignment_in_ruleRole374);
-            	    lv_permissions_3_0=ruleRolePermissionAssignment();
-            	    _fsp--;
-
-
-            	    	        if (current==null) {
-            	    	            current = factory.create(grammarAccess.getRoleRule().getType().getClassifier());
-            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
-            	    	        }
-            	    	        try {
-            	    	       		add(
-            	    	       			current, 
-            	    	       			"permissions",
-            	    	        		lv_permissions_3_0, 
-            	    	        		"RolePermissionAssignment", 
-            	    	        		currentNode);
-            	    	        } catch (ValueConverterException vce) {
-            	    				handleValueConverterException(vce);
-            	    	        }
-            	    	        currentNode = currentNode.getParent();
-            	    	    
-
-            	    }
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop2;
-                }
-            } while (true);
-
-            match(input,13,FOLLOW_13_in_ruleRole385); 
-
-                    createLeafNode(grammarAccess.getRoleAccess().getRightCurlyBracketKeyword_4(), null); 
-                
 
             }
 
@@ -573,7 +562,7 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleUser
-    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:307:1: entryRuleUser returns [EObject current=null] : iv_ruleUser= ruleUser EOF ;
+    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:300:1: entryRuleUser returns [EObject current=null] : iv_ruleUser= ruleUser EOF ;
     public final EObject entryRuleUser() throws RecognitionException {
         EObject current = null;
 
@@ -581,16 +570,16 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:308:2: (iv_ruleUser= ruleUser EOF )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:309:2: iv_ruleUser= ruleUser EOF
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:301:2: (iv_ruleUser= ruleUser EOF )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:302:2: iv_ruleUser= ruleUser EOF
             {
              currentNode = createCompositeNode(grammarAccess.getUserRule(), currentNode); 
-            pushFollow(FOLLOW_ruleUser_in_entryRuleUser421);
+            pushFollow(FOLLOW_ruleUser_in_entryRuleUser406);
             iv_ruleUser=ruleUser();
             _fsp--;
 
              current =iv_ruleUser; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleUser431); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleUser416); 
 
             }
 
@@ -608,7 +597,7 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleUser
-    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:316:1: ruleUser returns [EObject current=null] : ( 'user' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:309:1: ruleUser returns [EObject current=null] : ( 'user' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleUser() throws RecognitionException {
         EObject current = null;
 
@@ -617,24 +606,24 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:321:6: ( ( 'user' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:322:1: ( 'user' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:314:6: ( ( 'user' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:315:1: ( 'user' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:322:1: ( 'user' ( (lv_name_1_0= RULE_ID ) ) )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:322:3: 'user' ( (lv_name_1_0= RULE_ID ) )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:315:1: ( 'user' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:315:3: 'user' ( (lv_name_1_0= RULE_ID ) )
             {
-            match(input,14,FOLLOW_14_in_ruleUser466); 
+            match(input,12,FOLLOW_12_in_ruleUser451); 
 
                     createLeafNode(grammarAccess.getUserAccess().getUserKeyword_0(), null); 
                 
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:326:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:327:1: (lv_name_1_0= RULE_ID )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:319:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:320:1: (lv_name_1_0= RULE_ID )
             {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:327:1: (lv_name_1_0= RULE_ID )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:328:3: lv_name_1_0= RULE_ID
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:320:1: (lv_name_1_0= RULE_ID )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:321:3: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleUser483); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleUser468); 
 
             			createLeafNode(grammarAccess.getUserAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
             		
@@ -682,158 +671,8 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
     // $ANTLR end ruleUser
 
 
-    // $ANTLR start entryRulePermission
-    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:358:1: entryRulePermission returns [EObject current=null] : iv_rulePermission= rulePermission EOF ;
-    public final EObject entryRulePermission() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_rulePermission = null;
-
-
-        try {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:359:2: (iv_rulePermission= rulePermission EOF )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:360:2: iv_rulePermission= rulePermission EOF
-            {
-             currentNode = createCompositeNode(grammarAccess.getPermissionRule(), currentNode); 
-            pushFollow(FOLLOW_rulePermission_in_entryRulePermission524);
-            iv_rulePermission=rulePermission();
-            _fsp--;
-
-             current =iv_rulePermission; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePermission534); 
-
-            }
-
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end entryRulePermission
-
-
-    // $ANTLR start rulePermission
-    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:367:1: rulePermission returns [EObject current=null] : ( ( (lv_type_0_0= RULE_STRING ) ) ( ( RULE_ID ) ) ( ( RULE_ID ) ) ) ;
-    public final EObject rulePermission() throws RecognitionException {
-        EObject current = null;
-
-        Token lv_type_0_0=null;
-
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
-            
-        try {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:372:6: ( ( ( (lv_type_0_0= RULE_STRING ) ) ( ( RULE_ID ) ) ( ( RULE_ID ) ) ) )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:373:1: ( ( (lv_type_0_0= RULE_STRING ) ) ( ( RULE_ID ) ) ( ( RULE_ID ) ) )
-            {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:373:1: ( ( (lv_type_0_0= RULE_STRING ) ) ( ( RULE_ID ) ) ( ( RULE_ID ) ) )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:373:2: ( (lv_type_0_0= RULE_STRING ) ) ( ( RULE_ID ) ) ( ( RULE_ID ) )
-            {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:373:2: ( (lv_type_0_0= RULE_STRING ) )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:374:1: (lv_type_0_0= RULE_STRING )
-            {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:374:1: (lv_type_0_0= RULE_STRING )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:375:3: lv_type_0_0= RULE_STRING
-            {
-            lv_type_0_0=(Token)input.LT(1);
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulePermission576); 
-
-            			createLeafNode(grammarAccess.getPermissionAccess().getTypeSTRINGTerminalRuleCall_0_0(), "type"); 
-            		
-
-            	        if (current==null) {
-            	            current = factory.create(grammarAccess.getPermissionRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
-            	        }
-            	        try {
-            	       		set(
-            	       			current, 
-            	       			"type",
-            	        		lv_type_0_0, 
-            	        		"STRING", 
-            	        		lastConsumedNode);
-            	        } catch (ValueConverterException vce) {
-            				handleValueConverterException(vce);
-            	        }
-            	    
-
-            }
-
-
-            }
-
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:397:2: ( ( RULE_ID ) )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:398:1: ( RULE_ID )
-            {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:398:1: ( RULE_ID )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:399:3: RULE_ID
-            {
-
-            			if (current==null) {
-            	            current = factory.create(grammarAccess.getPermissionRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
-            	        }
-                    
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePermission599); 
-
-            		createLeafNode(grammarAccess.getPermissionAccess().getRoleRoleCrossReference_1_0(), "role"); 
-            	
-
-            }
-
-
-            }
-
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:411:2: ( ( RULE_ID ) )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:412:1: ( RULE_ID )
-            {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:412:1: ( RULE_ID )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:413:3: RULE_ID
-            {
-
-            			if (current==null) {
-            	            current = factory.create(grammarAccess.getPermissionRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
-            	        }
-                    
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePermission617); 
-
-            		createLeafNode(grammarAccess.getPermissionAccess().getObjectObjectCrossReference_2_0(), "object"); 
-            	
-
-            }
-
-
-            }
-
-
-            }
-
-
-            }
-
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end rulePermission
-
-
     // $ANTLR start entryRuleObject
-    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:433:1: entryRuleObject returns [EObject current=null] : iv_ruleObject= ruleObject EOF ;
+    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:351:1: entryRuleObject returns [EObject current=null] : iv_ruleObject= ruleObject EOF ;
     public final EObject entryRuleObject() throws RecognitionException {
         EObject current = null;
 
@@ -841,16 +680,16 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:434:2: (iv_ruleObject= ruleObject EOF )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:435:2: iv_ruleObject= ruleObject EOF
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:352:2: (iv_ruleObject= ruleObject EOF )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:353:2: iv_ruleObject= ruleObject EOF
             {
              currentNode = createCompositeNode(grammarAccess.getObjectRule(), currentNode); 
-            pushFollow(FOLLOW_ruleObject_in_entryRuleObject653);
+            pushFollow(FOLLOW_ruleObject_in_entryRuleObject509);
             iv_ruleObject=ruleObject();
             _fsp--;
 
              current =iv_ruleObject; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleObject663); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleObject519); 
 
             }
 
@@ -868,33 +707,34 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleObject
-    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:442:1: ruleObject returns [EObject current=null] : ( 'object' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:360:1: ruleObject returns [EObject current=null] : ( 'object' ( (lv_name_1_0= RULE_ID ) ) ':' ( (lv_type_3_0= RULE_STRING ) ) ) ;
     public final EObject ruleObject() throws RecognitionException {
         EObject current = null;
 
         Token lv_name_1_0=null;
+        Token lv_type_3_0=null;
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:447:6: ( ( 'object' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:448:1: ( 'object' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:365:6: ( ( 'object' ( (lv_name_1_0= RULE_ID ) ) ':' ( (lv_type_3_0= RULE_STRING ) ) ) )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:366:1: ( 'object' ( (lv_name_1_0= RULE_ID ) ) ':' ( (lv_type_3_0= RULE_STRING ) ) )
             {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:448:1: ( 'object' ( (lv_name_1_0= RULE_ID ) ) )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:448:3: 'object' ( (lv_name_1_0= RULE_ID ) )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:366:1: ( 'object' ( (lv_name_1_0= RULE_ID ) ) ':' ( (lv_type_3_0= RULE_STRING ) ) )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:366:3: 'object' ( (lv_name_1_0= RULE_ID ) ) ':' ( (lv_type_3_0= RULE_STRING ) )
             {
-            match(input,15,FOLLOW_15_in_ruleObject698); 
+            match(input,13,FOLLOW_13_in_ruleObject554); 
 
                     createLeafNode(grammarAccess.getObjectAccess().getObjectKeyword_0(), null); 
                 
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:452:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:453:1: (lv_name_1_0= RULE_ID )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:370:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:371:1: (lv_name_1_0= RULE_ID )
             {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:453:1: (lv_name_1_0= RULE_ID )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:454:3: lv_name_1_0= RULE_ID
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:371:1: (lv_name_1_0= RULE_ID )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:372:3: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleObject715); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleObject571); 
 
             			createLeafNode(grammarAccess.getObjectAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
             		
@@ -909,6 +749,43 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
             	       			"name",
             	        		lv_name_1_0, 
             	        		"ID", 
+            	        		lastConsumedNode);
+            	        } catch (ValueConverterException vce) {
+            				handleValueConverterException(vce);
+            	        }
+            	    
+
+            }
+
+
+            }
+
+            match(input,14,FOLLOW_14_in_ruleObject586); 
+
+                    createLeafNode(grammarAccess.getObjectAccess().getColonKeyword_2(), null); 
+                
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:398:1: ( (lv_type_3_0= RULE_STRING ) )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:399:1: (lv_type_3_0= RULE_STRING )
+            {
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:399:1: (lv_type_3_0= RULE_STRING )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:400:3: lv_type_3_0= RULE_STRING
+            {
+            lv_type_3_0=(Token)input.LT(1);
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleObject603); 
+
+            			createLeafNode(grammarAccess.getObjectAccess().getTypeSTRINGTerminalRuleCall_3_0(), "type"); 
+            		
+
+            	        if (current==null) {
+            	            current = factory.create(grammarAccess.getObjectRule().getType().getClassifier());
+            	            associateNodeWithAstElement(currentNode, current);
+            	        }
+            	        try {
+            	       		set(
+            	       			current, 
+            	       			"type",
+            	        		lv_type_3_0, 
+            	        		"STRING", 
             	        		lastConsumedNode);
             	        } catch (ValueConverterException vce) {
             				handleValueConverterException(vce);
@@ -943,7 +820,7 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleSession
-    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:484:1: entryRuleSession returns [EObject current=null] : iv_ruleSession= ruleSession EOF ;
+    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:430:1: entryRuleSession returns [EObject current=null] : iv_ruleSession= ruleSession EOF ;
     public final EObject entryRuleSession() throws RecognitionException {
         EObject current = null;
 
@@ -951,16 +828,16 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:485:2: (iv_ruleSession= ruleSession EOF )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:486:2: iv_ruleSession= ruleSession EOF
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:431:2: (iv_ruleSession= ruleSession EOF )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:432:2: iv_ruleSession= ruleSession EOF
             {
              currentNode = createCompositeNode(grammarAccess.getSessionRule(), currentNode); 
-            pushFollow(FOLLOW_ruleSession_in_entryRuleSession756);
+            pushFollow(FOLLOW_ruleSession_in_entryRuleSession644);
             iv_ruleSession=ruleSession();
             _fsp--;
 
              current =iv_ruleSession; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSession766); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSession654); 
 
             }
 
@@ -978,35 +855,33 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleSession
-    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:493:1: ruleSession returns [EObject current=null] : ( 'session' ( (lv_name_1_0= RULE_ID ) ) '{' ( (lv_assignments_3_0= ruleUserRoleAssignment ) )* '}' ) ;
+    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:439:1: ruleSession returns [EObject current=null] : ( 'session' ( (lv_name_1_0= RULE_ID ) ) '{' ( ( RULE_ID ) )* '}' ) ;
     public final EObject ruleSession() throws RecognitionException {
         EObject current = null;
 
         Token lv_name_1_0=null;
-        EObject lv_assignments_3_0 = null;
-
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:498:6: ( ( 'session' ( (lv_name_1_0= RULE_ID ) ) '{' ( (lv_assignments_3_0= ruleUserRoleAssignment ) )* '}' ) )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:499:1: ( 'session' ( (lv_name_1_0= RULE_ID ) ) '{' ( (lv_assignments_3_0= ruleUserRoleAssignment ) )* '}' )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:444:6: ( ( 'session' ( (lv_name_1_0= RULE_ID ) ) '{' ( ( RULE_ID ) )* '}' ) )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:445:1: ( 'session' ( (lv_name_1_0= RULE_ID ) ) '{' ( ( RULE_ID ) )* '}' )
             {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:499:1: ( 'session' ( (lv_name_1_0= RULE_ID ) ) '{' ( (lv_assignments_3_0= ruleUserRoleAssignment ) )* '}' )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:499:3: 'session' ( (lv_name_1_0= RULE_ID ) ) '{' ( (lv_assignments_3_0= ruleUserRoleAssignment ) )* '}'
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:445:1: ( 'session' ( (lv_name_1_0= RULE_ID ) ) '{' ( ( RULE_ID ) )* '}' )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:445:3: 'session' ( (lv_name_1_0= RULE_ID ) ) '{' ( ( RULE_ID ) )* '}'
             {
-            match(input,16,FOLLOW_16_in_ruleSession801); 
+            match(input,15,FOLLOW_15_in_ruleSession689); 
 
                     createLeafNode(grammarAccess.getSessionAccess().getSessionKeyword_0(), null); 
                 
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:503:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:504:1: (lv_name_1_0= RULE_ID )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:449:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:450:1: (lv_name_1_0= RULE_ID )
             {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:504:1: (lv_name_1_0= RULE_ID )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:505:3: lv_name_1_0= RULE_ID
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:450:1: (lv_name_1_0= RULE_ID )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:451:3: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSession818); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSession706); 
 
             			createLeafNode(grammarAccess.getSessionAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
             		
@@ -1032,52 +907,38 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,12,FOLLOW_12_in_ruleSession833); 
+            match(input,16,FOLLOW_16_in_ruleSession721); 
 
                     createLeafNode(grammarAccess.getSessionAccess().getLeftCurlyBracketKeyword_2(), null); 
                 
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:531:1: ( (lv_assignments_3_0= ruleUserRoleAssignment ) )*
-            loop3:
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:477:1: ( ( RULE_ID ) )*
+            loop2:
             do {
-                int alt3=2;
-                int LA3_0 = input.LA(1);
+                int alt2=2;
+                int LA2_0 = input.LA(1);
 
-                if ( (LA3_0==RULE_ID) ) {
-                    alt3=1;
+                if ( (LA2_0==RULE_ID) ) {
+                    alt2=1;
                 }
 
 
-                switch (alt3) {
+                switch (alt2) {
             	case 1 :
-            	    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:532:1: (lv_assignments_3_0= ruleUserRoleAssignment )
+            	    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:478:1: ( RULE_ID )
             	    {
-            	    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:532:1: (lv_assignments_3_0= ruleUserRoleAssignment )
-            	    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:533:3: lv_assignments_3_0= ruleUserRoleAssignment
+            	    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:478:1: ( RULE_ID )
+            	    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:479:3: RULE_ID
             	    {
-            	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getSessionAccess().getAssignmentsUserRoleAssignmentParserRuleCall_3_0(), currentNode); 
-            	    	    
-            	    pushFollow(FOLLOW_ruleUserRoleAssignment_in_ruleSession854);
-            	    lv_assignments_3_0=ruleUserRoleAssignment();
-            	    _fsp--;
 
-
-            	    	        if (current==null) {
+            	    			if (current==null) {
             	    	            current = factory.create(grammarAccess.getSessionRule().getType().getClassifier());
-            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	    	            associateNodeWithAstElement(currentNode, current);
             	    	        }
-            	    	        try {
-            	    	       		add(
-            	    	       			current, 
-            	    	       			"assignments",
-            	    	        		lv_assignments_3_0, 
-            	    	        		"UserRoleAssignment", 
-            	    	        		currentNode);
-            	    	        } catch (ValueConverterException vce) {
-            	    				handleValueConverterException(vce);
-            	    	        }
-            	    	        currentNode = currentNode.getParent();
-            	    	    
+            	            
+            	    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSession739); 
+
+            	    		createLeafNode(grammarAccess.getSessionAccess().getAssignmentsUserRoleAssignmentCrossReference_3_0(), "assignments"); 
+            	    	
 
             	    }
 
@@ -1086,11 +947,11 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop3;
+            	    break loop2;
                 }
             } while (true);
 
-            match(input,13,FOLLOW_13_in_ruleSession865); 
+            match(input,17,FOLLOW_17_in_ruleSession750); 
 
                     createLeafNode(grammarAccess.getSessionAccess().getRightCurlyBracketKeyword_4(), null); 
                 
@@ -1117,7 +978,7 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleUserRoleAssignment
-    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:567:1: entryRuleUserRoleAssignment returns [EObject current=null] : iv_ruleUserRoleAssignment= ruleUserRoleAssignment EOF ;
+    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:503:1: entryRuleUserRoleAssignment returns [EObject current=null] : iv_ruleUserRoleAssignment= ruleUserRoleAssignment EOF ;
     public final EObject entryRuleUserRoleAssignment() throws RecognitionException {
         EObject current = null;
 
@@ -1125,16 +986,16 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:568:2: (iv_ruleUserRoleAssignment= ruleUserRoleAssignment EOF )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:569:2: iv_ruleUserRoleAssignment= ruleUserRoleAssignment EOF
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:504:2: (iv_ruleUserRoleAssignment= ruleUserRoleAssignment EOF )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:505:2: iv_ruleUserRoleAssignment= ruleUserRoleAssignment EOF
             {
              currentNode = createCompositeNode(grammarAccess.getUserRoleAssignmentRule(), currentNode); 
-            pushFollow(FOLLOW_ruleUserRoleAssignment_in_entryRuleUserRoleAssignment901);
+            pushFollow(FOLLOW_ruleUserRoleAssignment_in_entryRuleUserRoleAssignment786);
             iv_ruleUserRoleAssignment=ruleUserRoleAssignment();
             _fsp--;
 
              current =iv_ruleUserRoleAssignment; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleUserRoleAssignment911); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleUserRoleAssignment796); 
 
             }
 
@@ -1152,24 +1013,59 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleUserRoleAssignment
-    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:576:1: ruleUserRoleAssignment returns [EObject current=null] : ( ( ( RULE_ID ) ) ':' ( ( RULE_ID ) ) ) ;
+    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:512:1: ruleUserRoleAssignment returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ( ( RULE_ID ) ) ':' ( ( RULE_ID ) ) ) ;
     public final EObject ruleUserRoleAssignment() throws RecognitionException {
         EObject current = null;
+
+        Token lv_name_0_0=null;
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:581:6: ( ( ( ( RULE_ID ) ) ':' ( ( RULE_ID ) ) ) )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:582:1: ( ( ( RULE_ID ) ) ':' ( ( RULE_ID ) ) )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:517:6: ( ( ( (lv_name_0_0= RULE_ID ) ) ( ( RULE_ID ) ) ':' ( ( RULE_ID ) ) ) )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:518:1: ( ( (lv_name_0_0= RULE_ID ) ) ( ( RULE_ID ) ) ':' ( ( RULE_ID ) ) )
             {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:582:1: ( ( ( RULE_ID ) ) ':' ( ( RULE_ID ) ) )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:582:2: ( ( RULE_ID ) ) ':' ( ( RULE_ID ) )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:518:1: ( ( (lv_name_0_0= RULE_ID ) ) ( ( RULE_ID ) ) ':' ( ( RULE_ID ) ) )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:518:2: ( (lv_name_0_0= RULE_ID ) ) ( ( RULE_ID ) ) ':' ( ( RULE_ID ) )
             {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:582:2: ( ( RULE_ID ) )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:583:1: ( RULE_ID )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:518:2: ( (lv_name_0_0= RULE_ID ) )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:519:1: (lv_name_0_0= RULE_ID )
             {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:583:1: ( RULE_ID )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:584:3: RULE_ID
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:519:1: (lv_name_0_0= RULE_ID )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:520:3: lv_name_0_0= RULE_ID
+            {
+            lv_name_0_0=(Token)input.LT(1);
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleUserRoleAssignment838); 
+
+            			createLeafNode(grammarAccess.getUserRoleAssignmentAccess().getNameIDTerminalRuleCall_0_0(), "name"); 
+            		
+
+            	        if (current==null) {
+            	            current = factory.create(grammarAccess.getUserRoleAssignmentRule().getType().getClassifier());
+            	            associateNodeWithAstElement(currentNode, current);
+            	        }
+            	        try {
+            	       		set(
+            	       			current, 
+            	       			"name",
+            	        		lv_name_0_0, 
+            	        		"ID", 
+            	        		lastConsumedNode);
+            	        } catch (ValueConverterException vce) {
+            				handleValueConverterException(vce);
+            	        }
+            	    
+
+            }
+
+
+            }
+
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:542:2: ( ( RULE_ID ) )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:543:1: ( RULE_ID )
+            {
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:543:1: ( RULE_ID )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:544:3: RULE_ID
             {
 
             			if (current==null) {
@@ -1177,9 +1073,9 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleUserRoleAssignment954); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleUserRoleAssignment861); 
 
-            		createLeafNode(grammarAccess.getUserRoleAssignmentAccess().getUserUserCrossReference_0_0(), "user"); 
+            		createLeafNode(grammarAccess.getUserRoleAssignmentAccess().getUserUserCrossReference_1_0(), "user"); 
             	
 
             }
@@ -1187,15 +1083,15 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,17,FOLLOW_17_in_ruleUserRoleAssignment964); 
+            match(input,14,FOLLOW_14_in_ruleUserRoleAssignment871); 
 
-                    createLeafNode(grammarAccess.getUserRoleAssignmentAccess().getColonKeyword_1(), null); 
+                    createLeafNode(grammarAccess.getUserRoleAssignmentAccess().getColonKeyword_2(), null); 
                 
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:600:1: ( ( RULE_ID ) )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:601:1: ( RULE_ID )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:560:1: ( ( RULE_ID ) )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:561:1: ( RULE_ID )
             {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:601:1: ( RULE_ID )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:602:3: RULE_ID
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:561:1: ( RULE_ID )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:562:3: RULE_ID
             {
 
             			if (current==null) {
@@ -1203,9 +1099,9 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleUserRoleAssignment982); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleUserRoleAssignment889); 
 
-            		createLeafNode(grammarAccess.getUserRoleAssignmentAccess().getRoleRoleCrossReference_2_0(), "role"); 
+            		createLeafNode(grammarAccess.getUserRoleAssignmentAccess().getRoleRoleCrossReference_3_0(), "role"); 
             	
 
             }
@@ -1236,7 +1132,7 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleRolePermissionAssignment
-    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:622:1: entryRuleRolePermissionAssignment returns [EObject current=null] : iv_ruleRolePermissionAssignment= ruleRolePermissionAssignment EOF ;
+    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:582:1: entryRuleRolePermissionAssignment returns [EObject current=null] : iv_ruleRolePermissionAssignment= ruleRolePermissionAssignment EOF ;
     public final EObject entryRuleRolePermissionAssignment() throws RecognitionException {
         EObject current = null;
 
@@ -1244,16 +1140,16 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:623:2: (iv_ruleRolePermissionAssignment= ruleRolePermissionAssignment EOF )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:624:2: iv_ruleRolePermissionAssignment= ruleRolePermissionAssignment EOF
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:583:2: (iv_ruleRolePermissionAssignment= ruleRolePermissionAssignment EOF )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:584:2: iv_ruleRolePermissionAssignment= ruleRolePermissionAssignment EOF
             {
              currentNode = createCompositeNode(grammarAccess.getRolePermissionAssignmentRule(), currentNode); 
-            pushFollow(FOLLOW_ruleRolePermissionAssignment_in_entryRuleRolePermissionAssignment1018);
+            pushFollow(FOLLOW_ruleRolePermissionAssignment_in_entryRuleRolePermissionAssignment925);
             iv_ruleRolePermissionAssignment=ruleRolePermissionAssignment();
             _fsp--;
 
              current =iv_ruleRolePermissionAssignment; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRolePermissionAssignment1028); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRolePermissionAssignment935); 
 
             }
 
@@ -1271,24 +1167,26 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleRolePermissionAssignment
-    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:631:1: ruleRolePermissionAssignment returns [EObject current=null] : ( ( ( RULE_ID ) ) '=' ( ( RULE_ID ) ) ) ;
+    // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:591:1: ruleRolePermissionAssignment returns [EObject current=null] : ( ( ( RULE_ID ) ) ( (lv_type_1_0= RULE_STRING ) ) ( ( RULE_ID ) ) ) ;
     public final EObject ruleRolePermissionAssignment() throws RecognitionException {
         EObject current = null;
+
+        Token lv_type_1_0=null;
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:636:6: ( ( ( ( RULE_ID ) ) '=' ( ( RULE_ID ) ) ) )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:637:1: ( ( ( RULE_ID ) ) '=' ( ( RULE_ID ) ) )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:596:6: ( ( ( ( RULE_ID ) ) ( (lv_type_1_0= RULE_STRING ) ) ( ( RULE_ID ) ) ) )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:597:1: ( ( ( RULE_ID ) ) ( (lv_type_1_0= RULE_STRING ) ) ( ( RULE_ID ) ) )
             {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:637:1: ( ( ( RULE_ID ) ) '=' ( ( RULE_ID ) ) )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:637:2: ( ( RULE_ID ) ) '=' ( ( RULE_ID ) )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:597:1: ( ( ( RULE_ID ) ) ( (lv_type_1_0= RULE_STRING ) ) ( ( RULE_ID ) ) )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:597:2: ( ( RULE_ID ) ) ( (lv_type_1_0= RULE_STRING ) ) ( ( RULE_ID ) )
             {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:637:2: ( ( RULE_ID ) )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:638:1: ( RULE_ID )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:597:2: ( ( RULE_ID ) )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:598:1: ( RULE_ID )
             {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:638:1: ( RULE_ID )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:639:3: RULE_ID
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:598:1: ( RULE_ID )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:599:3: RULE_ID
             {
 
             			if (current==null) {
@@ -1296,7 +1194,7 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRolePermissionAssignment1071); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRolePermissionAssignment978); 
 
             		createLeafNode(grammarAccess.getRolePermissionAssignmentAccess().getRoleRoleCrossReference_0_0(), "role"); 
             	
@@ -1306,15 +1204,44 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,18,FOLLOW_18_in_ruleRolePermissionAssignment1081); 
-
-                    createLeafNode(grammarAccess.getRolePermissionAssignmentAccess().getEqualsSignKeyword_1(), null); 
-                
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:655:1: ( ( RULE_ID ) )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:656:1: ( RULE_ID )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:611:2: ( (lv_type_1_0= RULE_STRING ) )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:612:1: (lv_type_1_0= RULE_STRING )
             {
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:656:1: ( RULE_ID )
-            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:657:3: RULE_ID
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:612:1: (lv_type_1_0= RULE_STRING )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:613:3: lv_type_1_0= RULE_STRING
+            {
+            lv_type_1_0=(Token)input.LT(1);
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleRolePermissionAssignment995); 
+
+            			createLeafNode(grammarAccess.getRolePermissionAssignmentAccess().getTypeSTRINGTerminalRuleCall_1_0(), "type"); 
+            		
+
+            	        if (current==null) {
+            	            current = factory.create(grammarAccess.getRolePermissionAssignmentRule().getType().getClassifier());
+            	            associateNodeWithAstElement(currentNode, current);
+            	        }
+            	        try {
+            	       		set(
+            	       			current, 
+            	       			"type",
+            	        		lv_type_1_0, 
+            	        		"STRING", 
+            	        		lastConsumedNode);
+            	        } catch (ValueConverterException vce) {
+            				handleValueConverterException(vce);
+            	        }
+            	    
+
+            }
+
+
+            }
+
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:635:2: ( ( RULE_ID ) )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:636:1: ( RULE_ID )
+            {
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:636:1: ( RULE_ID )
+            // ../rbac/src-gen/uk/ac/open/rbac/parser/antlr/internal/InternalRBAC.g:637:3: RULE_ID
             {
 
             			if (current==null) {
@@ -1322,9 +1249,9 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRolePermissionAssignment1099); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRolePermissionAssignment1018); 
 
-            		createLeafNode(grammarAccess.getRolePermissionAssignmentAccess().getPermissionPermissionCrossReference_2_0(), "permission"); 
+            		createLeafNode(grammarAccess.getRolePermissionAssignmentAccess().getObjectObjectCrossReference_2_0(), "object"); 
             	
 
             }
@@ -1358,47 +1285,43 @@ public class InternalRBACParser extends AbstractInternalAntlrParser {
 
     public static final BitSet FOLLOW_ruleModel_in_entryRuleModel75 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleModel85 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRole_in_ruleModel131 = new BitSet(new long[]{0x000000000001C822L});
-    public static final BitSet FOLLOW_ruleUser_in_ruleModel158 = new BitSet(new long[]{0x000000000001C822L});
-    public static final BitSet FOLLOW_ruleSession_in_ruleModel185 = new BitSet(new long[]{0x000000000001C822L});
-    public static final BitSet FOLLOW_ruleObject_in_ruleModel212 = new BitSet(new long[]{0x000000000001C822L});
-    public static final BitSet FOLLOW_rulePermission_in_ruleModel239 = new BitSet(new long[]{0x000000000001C822L});
-    public static final BitSet FOLLOW_ruleRole_in_entryRuleRole276 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRole286 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_ruleRole321 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleRole338 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleRole353 = new BitSet(new long[]{0x0000000000002010L});
-    public static final BitSet FOLLOW_ruleRolePermissionAssignment_in_ruleRole374 = new BitSet(new long[]{0x0000000000002010L});
-    public static final BitSet FOLLOW_13_in_ruleRole385 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUser_in_entryRuleUser421 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleUser431 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_ruleUser466 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleUser483 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePermission_in_entryRulePermission524 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePermission534 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rulePermission576 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulePermission599 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulePermission617 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleObject_in_entryRuleObject653 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleObject663 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_ruleObject698 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleObject715 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSession_in_entryRuleSession756 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSession766 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_ruleSession801 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleSession818 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleSession833 = new BitSet(new long[]{0x0000000000002010L});
-    public static final BitSet FOLLOW_ruleUserRoleAssignment_in_ruleSession854 = new BitSet(new long[]{0x0000000000002010L});
-    public static final BitSet FOLLOW_13_in_ruleSession865 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUserRoleAssignment_in_entryRuleUserRoleAssignment901 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleUserRoleAssignment911 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleUserRoleAssignment954 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleUserRoleAssignment964 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleUserRoleAssignment982 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRolePermissionAssignment_in_entryRuleRolePermissionAssignment1018 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRolePermissionAssignment1028 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleRolePermissionAssignment1071 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleRolePermissionAssignment1081 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleRolePermissionAssignment1099 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRole_in_ruleModel131 = new BitSet(new long[]{0x000000000000B812L});
+    public static final BitSet FOLLOW_ruleUser_in_ruleModel158 = new BitSet(new long[]{0x000000000000B812L});
+    public static final BitSet FOLLOW_ruleSession_in_ruleModel185 = new BitSet(new long[]{0x000000000000B812L});
+    public static final BitSet FOLLOW_ruleObject_in_ruleModel212 = new BitSet(new long[]{0x000000000000B812L});
+    public static final BitSet FOLLOW_ruleRolePermissionAssignment_in_ruleModel239 = new BitSet(new long[]{0x000000000000B812L});
+    public static final BitSet FOLLOW_ruleUserRoleAssignment_in_ruleModel266 = new BitSet(new long[]{0x000000000000B812L});
+    public static final BitSet FOLLOW_ruleRole_in_entryRuleRole303 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRole313 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_11_in_ruleRole348 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleRole365 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUser_in_entryRuleUser406 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleUser416 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_ruleUser451 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleUser468 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleObject_in_entryRuleObject509 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleObject519 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_ruleObject554 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleObject571 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleObject586 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleObject603 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSession_in_entryRuleSession644 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSession654 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_ruleSession689 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleSession706 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleSession721 = new BitSet(new long[]{0x0000000000020010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleSession739 = new BitSet(new long[]{0x0000000000020010L});
+    public static final BitSet FOLLOW_17_in_ruleSession750 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUserRoleAssignment_in_entryRuleUserRoleAssignment786 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleUserRoleAssignment796 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleUserRoleAssignment838 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleUserRoleAssignment861 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleUserRoleAssignment871 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleUserRoleAssignment889 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRolePermissionAssignment_in_entryRuleRolePermissionAssignment925 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRolePermissionAssignment935 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleRolePermissionAssignment978 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleRolePermissionAssignment995 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleRolePermissionAssignment1018 = new BitSet(new long[]{0x0000000000000002L});
 
 }

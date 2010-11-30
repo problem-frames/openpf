@@ -8,21 +8,13 @@ class Model {
   val User[*] users;
   val Session[*] sessions;
   val Object[*] objects;
-  val Permission[*] permissions;
+  val RolePermissionAssignment[*] permissions;
+  val UserRoleAssignment[*] assignments;
 }
 
 @gmf.node(label="name", figure="ellipse", label.icon="false")
 class Role {
   attr String name;
-  @gmf.link(target="permissions", style="dashed")
-  val RolePermissionAssignment[*] permissions;
-}
-
-@gmf.node(label="name", label.icon="false")
-class Session {
-  attr String name;
-  @gmf.link(target="assignments", style="dashed")
-  val UserRoleAssignment[*] assignments;
 }
 
 @gmf.node(label="name", label.icon="false")
@@ -30,26 +22,29 @@ class User {
   attr String name;
 }
 
-@gmf.node(label="name", label.icon="false")
+@gmf.node(label="name, type", label.pattern="{0}: {1}", label.icon="false")
 class Object {
   attr String name;
+  attr String type;
 }
 
-@gmf.link(source="user", target="role", color="0,0,255", label.icon="false")
+@gmf.node(label="name", label.icon="false")
+class Session {
+  attr String name;
+  @gmf.link(target="assignments", color="0,0,255", label.icon="false", style="dashed")  
+  ref UserRoleAssignment[*] assignments;
+}
+
+@gmf.link(source="user", target="role", color="0,0,255", label.icon="false", target.decoration="arrow")
 class UserRoleAssignment {
+  attr String name;
   ref User user;
   ref Role role;
 }
 
-@gmf.link(source="role", target="permission", color="255,0,0", label.icon="false")
+@gmf.link(source="role", target="object", color="0,255,0", label="type", label.icon="false", target.decoration="arrow")
 class RolePermissionAssignment {
   ref Role role;
-  ref Permission permission;
-}
-
-@gmf.link(source="user", target="role", color="0,255,0", label="type", label.icon="false")
-class Permission {
   attr String type;
-  ref Role role;
   ref Object object;
 }

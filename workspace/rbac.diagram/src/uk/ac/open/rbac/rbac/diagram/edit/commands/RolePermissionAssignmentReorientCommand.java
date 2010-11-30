@@ -8,7 +8,8 @@ import org.eclipse.gmf.runtime.common.core.command.CommandResult;
 import org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest;
 
-import uk.ac.open.rbac.rbac.Permission;
+import uk.ac.open.rbac.rbac.Model;
+import uk.ac.open.rbac.rbac.Object;
 import uk.ac.open.rbac.rbac.Role;
 import uk.ac.open.rbac.rbac.RolePermissionAssignment;
 import uk.ac.open.rbac.rbac.diagram.edit.policies.RBACBaseItemSemanticEditPolicy;
@@ -67,11 +68,11 @@ public class RolePermissionAssignmentReorientCommand extends EditElementCommand 
 		if (!(oldEnd instanceof Role && newEnd instanceof Role)) {
 			return false;
 		}
-		Permission target = getLink().getPermission();
-		if (!(getLink().eContainer() instanceof Role)) {
+		Object target = getLink().getObject();
+		if (!(getLink().eContainer() instanceof Model)) {
 			return false;
 		}
-		Role container = (Role) getLink().eContainer();
+		Model container = (Model) getLink().eContainer();
 		return RBACBaseItemSemanticEditPolicy.getLinkConstraints()
 				.canExistRolePermissionAssignment_4002(container, getLink(),
 						getNewSource(), target);
@@ -81,14 +82,14 @@ public class RolePermissionAssignmentReorientCommand extends EditElementCommand 
 	 * @generated
 	 */
 	protected boolean canReorientTarget() {
-		if (!(oldEnd instanceof Permission && newEnd instanceof Permission)) {
+		if (!(oldEnd instanceof Object && newEnd instanceof Object)) {
 			return false;
 		}
 		Role source = getLink().getRole();
-		if (!(getLink().eContainer() instanceof Role)) {
+		if (!(getLink().eContainer() instanceof Model)) {
 			return false;
 		}
-		Role container = (Role) getLink().eContainer();
+		Model container = (Model) getLink().eContainer();
 		return RBACBaseItemSemanticEditPolicy.getLinkConstraints()
 				.canExistRolePermissionAssignment_4002(container, getLink(),
 						source, getNewTarget());
@@ -124,7 +125,7 @@ public class RolePermissionAssignmentReorientCommand extends EditElementCommand 
 	 * @generated
 	 */
 	protected CommandResult reorientTarget() throws ExecutionException {
-		getLink().setPermission(getNewTarget());
+		getLink().setObject(getNewTarget());
 		return CommandResult.newOKCommandResult(getLink());
 	}
 
@@ -152,14 +153,14 @@ public class RolePermissionAssignmentReorientCommand extends EditElementCommand 
 	/**
 	 * @generated
 	 */
-	protected Permission getOldTarget() {
-		return (Permission) oldEnd;
+	protected Object getOldTarget() {
+		return (Object) oldEnd;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected Permission getNewTarget() {
-		return (Permission) newEnd;
+	protected Object getNewTarget() {
+		return (Object) newEnd;
 	}
 }

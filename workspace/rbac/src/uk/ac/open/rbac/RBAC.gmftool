@@ -61,24 +61,6 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Permission"
-          description="Create new Permission">
-        <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="Permissions"
-          description="Create new Permissions">
-        <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
           title="RolePermissionAssignment"
           description="Create new RolePermissionAssignment">
         <smallIcon

@@ -32,7 +32,6 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.SetRequest;
 import org.eclipse.gmf.runtime.notation.View;
 
 import uk.ac.open.rbac.rbac.Model;
-import uk.ac.open.rbac.rbac.Permission;
 import uk.ac.open.rbac.rbac.Role;
 import uk.ac.open.rbac.rbac.RolePermissionAssignment;
 import uk.ac.open.rbac.rbac.Session;
@@ -329,7 +328,7 @@ public class RBACBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canCreateUserRoleAssignment_4001(Session container,
+		public boolean canCreateUserRoleAssignment_4001(Model container,
 				User source, Role target) {
 			return canExistUserRoleAssignment_4001(container, null, source,
 					target);
@@ -338,8 +337,8 @@ public class RBACBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canCreateRolePermissionAssignment_4002(Role container,
-				Role source, Permission target) {
+		public boolean canCreateRolePermissionAssignment_4002(Model container,
+				Role source, uk.ac.open.rbac.rbac.Object target) {
 			return canExistRolePermissionAssignment_4002(container, null,
 					source, target);
 		}
@@ -347,48 +346,21 @@ public class RBACBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canCreatePermission_4003(Model source, Role target) {
-			return canExistPermission_4003(null, source, target);
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canCreateRolePermissions_4004(Role source,
-				RolePermissionAssignment target) {
-			if (source != null) {
-				if (source.getPermissions().contains(target)) {
-					return false;
-				}
-				if (source == target) {
-					return false;
-				}
-			}
-
-			return canExistRolePermissions_4004(source, target);
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canCreateSessionAssignments_4005(Session source,
+		public boolean canCreateSessionAssignments_4003(Session source,
 				UserRoleAssignment target) {
 			if (source != null) {
 				if (source.getAssignments().contains(target)) {
 					return false;
 				}
-				if (source == target) {
-					return false;
-				}
 			}
 
-			return canExistSessionAssignments_4005(source, target);
+			return canExistSessionAssignments_4003(source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canExistUserRoleAssignment_4001(Session container,
+		public boolean canExistUserRoleAssignment_4001(Model container,
 				UserRoleAssignment linkInstance, User source, Role target) {
 			return true;
 		}
@@ -396,32 +368,16 @@ public class RBACBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canExistRolePermissionAssignment_4002(Role container,
+		public boolean canExistRolePermissionAssignment_4002(Model container,
 				RolePermissionAssignment linkInstance, Role source,
-				Permission target) {
+				uk.ac.open.rbac.rbac.Object target) {
 			return true;
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canExistPermission_4003(Permission linkInstance,
-				Model source, Role target) {
-			return true;
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canExistRolePermissions_4004(Role source,
-				RolePermissionAssignment target) {
-			return true;
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canExistSessionAssignments_4005(Session source,
+		public boolean canExistSessionAssignments_4003(Session source,
 				UserRoleAssignment target) {
 			return true;
 		}

@@ -8,7 +8,6 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import uk.ac.open.rbac.rbac.diagram.edit.parts.ModelEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.ObjectEditPart;
-import uk.ac.open.rbac.rbac.diagram.edit.parts.PermissionEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.RBACEditPartFactory;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.RoleEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.SessionEditPart;
@@ -24,8 +23,6 @@ public class RBACEditPartFactoryOverride extends
 			switch (RBACVisualIDRegistry.getVisualID(view)) {
 			case ModelEditPart.VISUAL_ID:
 				return new ModelEditPartOverride(view);
-			case PermissionEditPart.VISUAL_ID:
-				return new PermissionEditPartOverride(view);			
 			case RoleEditPart.VISUAL_ID:
 				return new RoleEditPartOverride(view);			
 			case SessionEditPart.VISUAL_ID:

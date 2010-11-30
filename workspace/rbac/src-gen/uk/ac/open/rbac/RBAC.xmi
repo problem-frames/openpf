@@ -16,13 +16,16 @@
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.2"/>
         </elements>
         <elements xsi:type="xtext:Assignment" feature="sessions" operator="+=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.5"/>
-        </elements>
-        <elements xsi:type="xtext:Assignment" feature="objects" operator="+=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
         </elements>
-        <elements xsi:type="xtext:Assignment" feature="permissions" operator="+=">
+        <elements xsi:type="xtext:Assignment" feature="objects" operator="+=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="permissions" operator="+=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.6"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="assignments" operator="+=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.5"/>
         </elements>
       </alternatives>
     </rules>
@@ -35,11 +38,6 @@
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
         </elements>
-        <elements xsi:type="xtext:Keyword" value="{"/>
-        <elements xsi:type="xtext:Assignment" cardinality="*" feature="permissions" operator="+=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
-        </elements>
-        <elements xsi:type="xtext:Keyword" value="}"/>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="User">
@@ -53,32 +51,6 @@
         </elements>
       </alternatives>
     </rules>
-    <rules xsi:type="xtext:ParserRule" name="Permission">
-      <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.ac.uk.open/rbac/RBAC#//Permission"/>
-      </type>
-      <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Assignment" feature="type" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
-        </elements>
-        <elements xsi:type="xtext:Assignment" feature="role" operator="=">
-          <terminal xsi:type="xtext:CrossReference">
-            <type metamodel="/0/@metamodelDeclarations.0">
-              <classifier xsi:type="ecore:EClass" href="http://www.ac.uk.open/rbac/RBAC#//Role"/>
-            </type>
-            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-          </terminal>
-        </elements>
-        <elements xsi:type="xtext:Assignment" feature="object" operator="=">
-          <terminal xsi:type="xtext:CrossReference">
-            <type metamodel="/0/@metamodelDeclarations.0">
-              <classifier xsi:type="ecore:EClass" href="http://www.ac.uk.open/rbac/RBAC#//Object"/>
-            </type>
-            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-          </terminal>
-        </elements>
-      </alternatives>
-    </rules>
     <rules xsi:type="xtext:ParserRule" name="Object">
       <type metamodel="/0/@metamodelDeclarations.0">
         <classifier xsi:type="ecore:EClass" href="http://www.ac.uk.open/rbac/RBAC#//Object"/>
@@ -87,6 +59,10 @@
         <elements xsi:type="xtext:Keyword" value="object"/>
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value=":"/>
+        <elements xsi:type="xtext:Assignment" feature="type" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
         </elements>
       </alternatives>
     </rules>
@@ -101,7 +77,12 @@
         </elements>
         <elements xsi:type="xtext:Keyword" value="{"/>
         <elements xsi:type="xtext:Assignment" cardinality="*" feature="assignments" operator="+=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.6"/>
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.0">
+              <classifier xsi:type="ecore:EClass" href="http://www.ac.uk.open/rbac/RBAC#//UserRoleAssignment"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+          </terminal>
         </elements>
         <elements xsi:type="xtext:Keyword" value="}"/>
       </alternatives>
@@ -111,6 +92,9 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ac.uk.open/rbac/RBAC#//UserRoleAssignment"/>
       </type>
       <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
         <elements xsi:type="xtext:Assignment" feature="user" operator="=">
           <terminal xsi:type="xtext:CrossReference">
             <type metamodel="/0/@metamodelDeclarations.0">
@@ -143,11 +127,13 @@
             <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
           </terminal>
         </elements>
-        <elements xsi:type="xtext:Keyword" value="="/>
-        <elements xsi:type="xtext:Assignment" feature="permission" operator="=">
+        <elements xsi:type="xtext:Assignment" feature="type" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="object" operator="=">
           <terminal xsi:type="xtext:CrossReference">
             <type metamodel="/0/@metamodelDeclarations.0">
-              <classifier xsi:type="ecore:EClass" href="http://www.ac.uk.open/rbac/RBAC#//Permission"/>
+              <classifier xsi:type="ecore:EClass" href="http://www.ac.uk.open/rbac/RBAC#//Object"/>
             </type>
             <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
           </terminal>

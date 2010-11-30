@@ -25,6 +25,7 @@
         visualID="2001"
         editPartClassName="RoleEditPart"
         itemSemanticEditPolicyClassName="RoleItemSemanticEditPolicy"
+        notationViewFactoryClassName="RoleViewFactory"
         canonicalEditPolicyClassName="RoleCanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="RoleGraphicalNodeEditPolicy"
         createCommandClassName="RoleCreateCommand">
@@ -48,7 +49,8 @@
       <labels
           visualID="5001"
           editPartClassName="RoleNameEditPart"
-          itemSemanticEditPolicyClassName="RoleNameItemSemanticEditPolicy">
+          itemSemanticEditPolicyClassName="RoleNameItemSemanticEditPolicy"
+          notationViewFactoryClassName="RoleNameViewFactory">
         <diagramRunTimeClass
             href="../../../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -67,6 +69,7 @@
         visualID="2002"
         editPartClassName="UserEditPart"
         itemSemanticEditPolicyClassName="UserItemSemanticEditPolicy"
+        notationViewFactoryClassName="UserViewFactory"
         canonicalEditPolicyClassName="UserCanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="UserGraphicalNodeEditPolicy"
         createCommandClassName="UserCreateCommand">
@@ -90,7 +93,8 @@
       <labels
           visualID="5002"
           editPartClassName="UserNameEditPart"
-          itemSemanticEditPolicyClassName="UserNameItemSemanticEditPolicy">
+          itemSemanticEditPolicyClassName="UserNameItemSemanticEditPolicy"
+          notationViewFactoryClassName="UserNameViewFactory">
         <diagramRunTimeClass
             href="../../../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -109,6 +113,7 @@
         visualID="2003"
         editPartClassName="SessionEditPart"
         itemSemanticEditPolicyClassName="SessionItemSemanticEditPolicy"
+        notationViewFactoryClassName="SessionViewFactory"
         canonicalEditPolicyClassName="SessionCanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="SessionGraphicalNodeEditPolicy"
         createCommandClassName="SessionCreateCommand">
@@ -132,7 +137,8 @@
       <labels
           visualID="5003"
           editPartClassName="SessionNameEditPart"
-          itemSemanticEditPolicyClassName="SessionNameItemSemanticEditPolicy">
+          itemSemanticEditPolicyClassName="SessionNameItemSemanticEditPolicy"
+          notationViewFactoryClassName="SessionNameViewFactory">
         <diagramRunTimeClass
             href="../../../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -151,6 +157,7 @@
         visualID="2004"
         editPartClassName="ObjectEditPart"
         itemSemanticEditPolicyClassName="ObjectItemSemanticEditPolicy"
+        notationViewFactoryClassName="ObjectViewFactory"
         canonicalEditPolicyClassName="ObjectCanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="ObjectGraphicalNodeEditPolicy"
         createCommandClassName="ObjectCreateCommand">
@@ -174,7 +181,8 @@
       <labels
           visualID="5004"
           editPartClassName="ObjectNameEditPart"
-          itemSemanticEditPolicyClassName="ObjectNameItemSemanticEditPolicy">
+          itemSemanticEditPolicyClassName="ObjectNameItemSemanticEditPolicy"
+          notationViewFactoryClassName="ObjectNameViewFactory">
         <diagramRunTimeClass
             href="../../../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -183,9 +191,14 @@
             figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
         <modelFacet
             xsi:type="gmfgen:FeatureLabelModelFacet"
-            parser="//@labelParsers/@implementations.0">
+            parser="//@labelParsers/@implementations.0"
+            viewPattern="{0}: {1}"
+            editorPattern="{0}: {1}"
+            editPattern="{0}: {1}">
           <metaFeatures
               href="RBAC.genmodel#//rbac/Object/name"/>
+          <metaFeatures
+              href="RBAC.genmodel#//rbac/Object/type"/>
         </modelFacet>
       </labels>
     </topLevelNodes>
@@ -193,6 +206,7 @@
         visualID="4001"
         editPartClassName="UserRoleAssignmentEditPart"
         itemSemanticEditPolicyClassName="UserRoleAssignmentItemSemanticEditPolicy"
+        notationViewFactoryClassName="UserRoleAssignmentViewFactory"
         createCommandClassName="UserRoleAssignmentCreateCommand"
         reorientCommandClassName="UserRoleAssignmentReorientCommand">
       <diagramRunTimeClass
@@ -203,7 +217,7 @@
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="UserRoleAssignmentFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class UserRoleAssignmentFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public UserRoleAssignmentFigure() {&#xA;&#x9;&#x9;&#x9;this.setForegroundColor(THIS_FORE&#xA;);&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_FORE = new org.eclipse.swt.graphics.Color(null, 0, 0, 255);&#xA;&#xA;">
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class UserRoleAssignmentFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public UserRoleAssignmentFigure() {&#xA;&#x9;&#x9;&#x9;this.setForegroundColor(THIS_FORE&#xA;);&#xA;&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolylineDecoration df = new org.eclipse.draw2d.PolylineDecoration();&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_FORE = new org.eclipse.swt.graphics.Color(null, 0, 0, 255);&#xA;&#xA;">
         <attributes
             xsi:type="gmfgen:StyleAttributes"
             fixedForeground="true"/>
@@ -213,9 +227,9 @@
         <metaClass
             href="RBAC.genmodel#//rbac/UserRoleAssignment"/>
         <containmentMetaFeature
-            href="RBAC.genmodel#//rbac/Session/assignments"/>
+            href="RBAC.genmodel#//rbac/Model/assignments"/>
         <childMetaFeature
-            href="RBAC.genmodel#//rbac/Session/assignments"/>
+            href="RBAC.genmodel#//rbac/Model/assignments"/>
         <sourceMetaFeature
             href="RBAC.genmodel#//rbac/UserRoleAssignment/user"/>
         <targetMetaFeature
@@ -226,6 +240,7 @@
         visualID="4002"
         editPartClassName="RolePermissionAssignmentEditPart"
         itemSemanticEditPolicyClassName="RolePermissionAssignmentItemSemanticEditPolicy"
+        notationViewFactoryClassName="RolePermissionAssignmentViewFactory"
         createCommandClassName="RolePermissionAssignmentCreateCommand"
         reorientCommandClassName="RolePermissionAssignmentReorientCommand">
       <diagramRunTimeClass
@@ -236,7 +251,7 @@
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="RolePermissionAssignmentFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class RolePermissionAssignmentFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public RolePermissionAssignmentFigure() {&#xA;&#x9;&#x9;&#x9;this.setForegroundColor(THIS_FORE&#xA;);&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_FORE = new org.eclipse.swt.graphics.Color(null, 255, 0, 0);&#xA;&#xA;">
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class RolePermissionAssignmentFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public RolePermissionAssignmentFigure() {&#xA;&#x9;&#x9;&#x9;this.setForegroundColor(THIS_FORE&#xA;);&#xA;&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolylineDecoration df = new org.eclipse.draw2d.PolylineDecoration();&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_FORE = new org.eclipse.swt.graphics.Color(null, 0, 255, 0);&#xA;&#xA;">
         <attributes
             xsi:type="gmfgen:StyleAttributes"
             fixedForeground="true"/>
@@ -246,55 +261,24 @@
         <metaClass
             href="RBAC.genmodel#//rbac/RolePermissionAssignment"/>
         <containmentMetaFeature
-            href="RBAC.genmodel#//rbac/Role/permissions"/>
+            href="RBAC.genmodel#//rbac/Model/permissions"/>
         <childMetaFeature
-            href="RBAC.genmodel#//rbac/Role/permissions"/>
+            href="RBAC.genmodel#//rbac/Model/permissions"/>
         <sourceMetaFeature
             href="RBAC.genmodel#//rbac/RolePermissionAssignment/role"/>
         <targetMetaFeature
-            href="RBAC.genmodel#//rbac/RolePermissionAssignment/permission"/>
-      </modelFacet>
-    </links>
-    <links
-        visualID="4003"
-        editPartClassName="PermissionEditPart"
-        itemSemanticEditPolicyClassName="PermissionItemSemanticEditPolicy"
-        createCommandClassName="PermissionCreateCommand"
-        reorientCommandClassName="PermissionReorientCommand">
-      <diagramRunTimeClass
-          href="../../../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
-      <elementType
-          xsi:type="gmfgen:MetamodelType"
-          editHelperClassName="PermissionEditHelper"/>
-      <viewmap
-          xsi:type="gmfgen:InnerClassViewmap"
-          className="PermissionFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class PermissionFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public PermissionFigure() {&#xA;&#x9;&#x9;&#x9;this.setForegroundColor(THIS_FORE&#xA;);&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_FORE = new org.eclipse.swt.graphics.Color(null, 0, 255, 0);&#xA;&#xA;">
-        <attributes
-            xsi:type="gmfgen:StyleAttributes"
-            fixedForeground="true"/>
-      </viewmap>
-      <modelFacet
-          xsi:type="gmfgen:TypeLinkModelFacet">
-        <metaClass
-            href="RBAC.genmodel#//rbac/Permission"/>
-        <containmentMetaFeature
-            href="RBAC.genmodel#//rbac/Model/permissions"/>
-        <childMetaFeature
-            href="RBAC.genmodel#//rbac/Model/permissions"/>
-        <targetMetaFeature
-            href="RBAC.genmodel#//rbac/Permission/role"/>
+            href="RBAC.genmodel#//rbac/RolePermissionAssignment/object"/>
       </modelFacet>
       <labels
           visualID="6001"
-          editPartClassName="PermissionTypeEditPart"
-          itemSemanticEditPolicyClassName="PermissionTypeItemSemanticEditPolicy">
+          editPartClassName="RolePermissionAssignmentTypeEditPart"
+          itemSemanticEditPolicyClassName="RolePermissionAssignmentTypeItemSemanticEditPolicy">
         <diagramRunTimeClass
             href="../../../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:InnerClassViewmap"
-            className="PermissionLabelFigure"
-            classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class PermissionLabelFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public PermissionLabelFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;Permission&quot;);&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+            className="RolePermissionAssignmentLabelFigure"
+            classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class RolePermissionAssignmentLabelFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public RolePermissionAssignmentLabelFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;RolePermissionAssignment&quot;);&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
           <attributes
               xsi:type="gmfgen:LabelOffsetAttributes"
               y="40"/>
@@ -303,14 +287,15 @@
             xsi:type="gmfgen:FeatureLabelModelFacet"
             parser="//@labelParsers/@implementations.0">
           <metaFeatures
-              href="RBAC.genmodel#//rbac/Permission/type"/>
+              href="RBAC.genmodel#//rbac/RolePermissionAssignment/type"/>
         </modelFacet>
       </labels>
     </links>
     <links
-        visualID="4004"
+        visualID="4003"
         editPartClassName="RolePermissionsEditPart"
         itemSemanticEditPolicyClassName="RolePermissionsItemSemanticEditPolicy"
+        notationViewFactoryClassName="RolePermissionsViewFactory"
         createCommandClassName="RolePermissionsCreateCommand"
         reorientCommandClassName="RolePermissionsReorientCommand">
       <diagramRunTimeClass
@@ -318,54 +303,22 @@
       <elementType
           xsi:type="gmfgen:SpecializationType"/>
       <viewmap
-          xsi:type="gmfgen:FigureViewmap"
-          figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
-      <modelFacet
-          xsi:type="gmfgen:FeatureLinkModelFacet">
-        <metaFeature
-            href="RBAC.genmodel#//rbac/Role/permissions"/>
-      </modelFacet>
-      <labels
-          visualID="6002"
-          editPartClassName="WrappingLabelEditPart"
-          itemSemanticEditPolicyClassName="WrappingLabelItemSemanticEditPolicy"
-          readOnly="true">
-        <diagramRunTimeClass
-            href="../../../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-        <viewmap
-            xsi:type="gmfgen:FigureViewmap"
-            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel">
-          <attributes
-              xsi:type="gmfgen:LabelOffsetAttributes"
-              y="40"/>
-        </viewmap>
-        <modelFacet
-            xsi:type="gmfgen:DesignLabelModelFacet"
-            parser="//@labelParsers/@implementations.1"/>
-      </labels>
-    </links>
-    <links
-        visualID="4005"
-        editPartClassName="SessionAssignmentsEditPart"
-        itemSemanticEditPolicyClassName="SessionAssignmentsItemSemanticEditPolicy"
-        createCommandClassName="SessionAssignmentsCreateCommand"
-        reorientCommandClassName="SessionAssignmentsReorientCommand">
-      <diagramRunTimeClass
-          href="../../../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
-      <elementType
-          xsi:type="gmfgen:SpecializationType"/>
-      <viewmap
-          xsi:type="gmfgen:FigureViewmap"
-          figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
+          xsi:type="gmfgen:InnerClassViewmap"
+          className="SessionAssignmentsFigure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class SessionAssignmentsFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public SessionAssignmentsFigure() {&#xA;&#x9;&#x9;&#x9;this.setForegroundColor(THIS_FORE&#xA;);&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_FORE = new org.eclipse.swt.graphics.Color(null, 0, 0, 255);&#xA;&#xA;">
+        <attributes
+            xsi:type="gmfgen:StyleAttributes"
+            fixedForeground="true"/>
+      </viewmap>
       <modelFacet
           xsi:type="gmfgen:FeatureLinkModelFacet">
         <metaFeature
             href="RBAC.genmodel#//rbac/Session/assignments"/>
       </modelFacet>
       <labels
-          visualID="6003"
-          editPartClassName="WrappingLabel2EditPart"
-          itemSemanticEditPolicyClassName="WrappingLabel2ItemSemanticEditPolicy"
+          visualID="6002"
+          editPartClassName="WrappingLabelEditPart"
+          itemSemanticEditPolicyClassName="WrappingLabelItemSemanticEditPolicy"
           readOnly="true">
         <diagramRunTimeClass
             href="../../../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -413,17 +366,7 @@
             xsi:type="gmfgen:ToolEntry"
             title="Assignments"
             description="Create new Assignments"
-            genLinks="//@diagram/@links.4"/>
-        <entries
-            xsi:type="gmfgen:ToolEntry"
-            title="Permission"
-            description="Create new Permission"
             genLinks="//@diagram/@links.2"/>
-        <entries
-            xsi:type="gmfgen:ToolEntry"
-            title="Permissions"
-            description="Create new Permissions"
-            genLinks="//@diagram/@links.3"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="RolePermissionAssignment"
@@ -462,11 +405,9 @@
           kind="RulersAndGrid"/>
     </preferencePages>
   </diagram>
-  <plugin
-      provider="The Open University">
+  <plugin>
     <requiredPlugins>org.eclipse.draw2d</requiredPlugins>
     <requiredPlugins>org.eclipse.gmf.runtime.draw2d.ui</requiredPlugins>
-    <requiredPlugins>org.eclipse.xtext.gmf.glue</requiredPlugins>
   </plugin>
   <editor/>
   <navigator>
@@ -520,6 +461,18 @@
         groupIcon="icons/linksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.1"
+        child="//@diagram/@topLevelNodes.3"
+        referenceType="out_target"
+        groupName="target"
+        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.3"
+        child="//@diagram/@links.1"
+        referenceType="in_source"
+        groupName="incoming links"
+        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.1"
         child="//@diagram/@topLevelNodes.0"
         referenceType="in_source"
         groupName="source"
@@ -537,71 +490,25 @@
         groupIcon="icons/linksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.2"
-        child="//@diagram/@topLevelNodes.0"
-        referenceType="out_target"
-        groupName="target"
-        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@topLevelNodes.0"
-        child="//@diagram/@links.2"
-        referenceType="in_source"
-        groupName="incoming links"
-        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram"
-        child="//@diagram/@links.3"
-        groupName="links"
-        groupIcon="icons/linksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.3"
-        child="//@diagram/@links.1"
-        referenceType="out_target"
-        groupName="target"
-        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.1"
-        child="//@diagram/@links.3"
-        referenceType="in_source"
-        groupName="incoming links"
-        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.3"
-        child="//@diagram/@topLevelNodes.0"
-        referenceType="in_source"
-        groupName="source"
-        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@topLevelNodes.0"
-        child="//@diagram/@links.3"
-        referenceType="out_target"
-        groupName="outgoing links"
-        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram"
-        child="//@diagram/@links.4"
-        groupName="links"
-        groupIcon="icons/linksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.4"
         child="//@diagram/@links.0"
         referenceType="out_target"
         groupName="target"
         groupIcon="icons/linkTargetNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.0"
-        child="//@diagram/@links.4"
+        child="//@diagram/@links.2"
         referenceType="in_source"
         groupName="incoming links"
         groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@links.4"
+        parent="//@diagram/@links.2"
         child="//@diagram/@topLevelNodes.2"
         referenceType="in_source"
         groupName="source"
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@topLevelNodes.2"
-        child="//@diagram/@links.4"
+        child="//@diagram/@links.2"
         referenceType="out_target"
         groupName="outgoing links"
         groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
@@ -632,10 +539,10 @@
       extensibleViaService="true">
     <implementations
         xsi:type="gmfgen:PredefinedParser"
-        uses="//@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.2/@labels.0/@modelFacet //@diagram/@topLevelNodes.3/@labels.0/@modelFacet //@diagram/@links.2/@labels.0/@modelFacet"/>
+        uses="//@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.2/@labels.0/@modelFacet //@diagram/@topLevelNodes.3/@labels.0/@modelFacet //@diagram/@links.1/@labels.0/@modelFacet"/>
     <implementations
         xsi:type="gmfgen:ExternalParser"
-        uses="//@diagram/@links.3/@labels.0/@modelFacet //@diagram/@links.4/@labels.0/@modelFacet"/>
+        uses="//@diagram/@links.2/@labels.0/@modelFacet"/>
   </labelParsers>
   <contextMenus
       context="//@diagram">

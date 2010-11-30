@@ -22,7 +22,6 @@ import org.eclipse.gmf.runtime.draw2d.ui.figures.FigureUtilities;
 import org.eclipse.gmf.runtime.emf.core.util.EMFCoreUtil;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.emf.type.core.IHintedType;
-import org.eclipse.gmf.runtime.notation.Connector;
 import org.eclipse.gmf.runtime.notation.DecorationNode;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.Edge;
@@ -45,19 +44,16 @@ import org.eclipse.swt.graphics.FontData;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.ModelEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.ObjectEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.ObjectNameEditPart;
-import uk.ac.open.rbac.rbac.diagram.edit.parts.PermissionEditPart;
-import uk.ac.open.rbac.rbac.diagram.edit.parts.PermissionTypeEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.RoleEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.RoleNameEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.RolePermissionAssignmentEditPart;
+import uk.ac.open.rbac.rbac.diagram.edit.parts.RolePermissionAssignmentTypeEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.RolePermissionsEditPart;
-import uk.ac.open.rbac.rbac.diagram.edit.parts.SessionAssignmentsEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.SessionEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.SessionNameEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.UserEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.UserNameEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.UserRoleAssignmentEditPart;
-import uk.ac.open.rbac.rbac.diagram.edit.parts.WrappingLabel2EditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.WrappingLabelEditPart;
 import uk.ac.open.rbac.rbac.diagram.part.RBACVisualIDRegistry;
 
@@ -260,14 +256,8 @@ public class RBACViewProvider extends AbstractProvider implements IViewProvider 
 			return createRolePermissionAssignment_4002(
 					getSemanticElement(semanticAdapter), containerView, index,
 					persisted, preferencesHint);
-		case PermissionEditPart.VISUAL_ID:
-			return createPermission_4003(getSemanticElement(semanticAdapter),
-					containerView, index, persisted, preferencesHint);
 		case RolePermissionsEditPart.VISUAL_ID:
-			return createRolePermissions_4004(containerView, index, persisted,
-					preferencesHint);
-		case SessionAssignmentsEditPart.VISUAL_ID:
-			return createSessionAssignments_4005(containerView, index,
+			return createSessionAssignments_4003(containerView, index,
 					persisted, preferencesHint);
 		}
 		// can never happen, provided #provides(CreateEdgeViewOperation) is correct
@@ -543,55 +533,10 @@ public class RBACViewProvider extends AbstractProvider implements IViewProvider 
 					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
 					routing);
 		}
-		return edge;
-	}
-
-	/**
-	 * @generated
-	 */
-	public Edge createPermission_4003(EObject domainElement,
-			View containerView, int index, boolean persisted,
-			PreferencesHint preferencesHint) {
-		Edge edge = NotationFactory.eINSTANCE.createEdge();
-		edge.getStyles().add(NotationFactory.eINSTANCE.createRoutingStyle());
-		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
-		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
-				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
-		points.add(new RelativeBendpoint());
-		points.add(new RelativeBendpoint());
-		bendpoints.setPoints(points);
-		edge.setBendpoints(bendpoints);
-		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(RBACVisualIDRegistry.getType(PermissionEditPart.VISUAL_ID));
-		edge.setElement(domainElement);
-		// initializePreferences
-		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
-				.getPreferenceStore();
-		FontStyle edgeFontStyle = (FontStyle) edge
-				.getStyle(NotationPackage.Literals.FONT_STYLE);
-		if (edgeFontStyle != null) {
-			FontData fontData = PreferenceConverter.getFontData(prefStore,
-					IPreferenceConstants.PREF_DEFAULT_FONT);
-			edgeFontStyle.setFontName(fontData.getName());
-			edgeFontStyle.setFontHeight(fontData.getHeight());
-			edgeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
-			edgeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
-			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
-					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
-			edgeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
-					.intValue());
-		}
-		Routing routing = Routing.get(prefStore
-				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
-		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
-		}
-		Node label6001 = createLabel(edge,
-				RBACVisualIDRegistry.getType(PermissionTypeEditPart.VISUAL_ID));
+		Node label6001 = createLabel(
+				edge,
+				RBACVisualIDRegistry
+						.getType(RolePermissionAssignmentTypeEditPart.VISUAL_ID));
 		label6001.setLayoutConstraint(NotationFactory.eINSTANCE
 				.createLocation());
 		Location location6001 = (Location) label6001.getLayoutConstraint();
@@ -603,9 +548,10 @@ public class RBACViewProvider extends AbstractProvider implements IViewProvider 
 	/**
 	 * @generated
 	 */
-	public Edge createRolePermissions_4004(View containerView, int index,
+	public Edge createSessionAssignments_4003(View containerView, int index,
 			boolean persisted, PreferencesHint preferencesHint) {
-		Connector edge = NotationFactory.eINSTANCE.createConnector();
+		Edge edge = NotationFactory.eINSTANCE.createEdge();
+		edge.getStyles().add(NotationFactory.eINSTANCE.createRoutingStyle());
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
 				.createRelativeBendpoints();
@@ -622,12 +568,6 @@ public class RBACViewProvider extends AbstractProvider implements IViewProvider 
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
 				.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
 		FontStyle edgeFontStyle = (FontStyle) edge
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (edgeFontStyle != null) {
@@ -658,67 +598,6 @@ public class RBACViewProvider extends AbstractProvider implements IViewProvider 
 		Location location6002 = (Location) label6002.getLayoutConstraint();
 		location6002.setX(0);
 		location6002.setY(40);
-		return edge;
-	}
-
-	/**
-	 * @generated
-	 */
-	public Edge createSessionAssignments_4005(View containerView, int index,
-			boolean persisted, PreferencesHint preferencesHint) {
-		Connector edge = NotationFactory.eINSTANCE.createConnector();
-		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
-		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
-				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
-		points.add(new RelativeBendpoint());
-		points.add(new RelativeBendpoint());
-		bendpoints.setPoints(points);
-		edge.setBendpoints(bendpoints);
-		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(RBACVisualIDRegistry
-				.getType(SessionAssignmentsEditPart.VISUAL_ID));
-		edge.setElement(null);
-		// initializePreferences
-		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
-				.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
-		FontStyle edgeFontStyle = (FontStyle) edge
-				.getStyle(NotationPackage.Literals.FONT_STYLE);
-		if (edgeFontStyle != null) {
-			FontData fontData = PreferenceConverter.getFontData(prefStore,
-					IPreferenceConstants.PREF_DEFAULT_FONT);
-			edgeFontStyle.setFontName(fontData.getName());
-			edgeFontStyle.setFontHeight(fontData.getHeight());
-			edgeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
-			edgeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
-			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
-					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
-			edgeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
-					.intValue());
-		}
-		Routing routing = Routing.get(prefStore
-				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
-		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
-		}
-		Node label6003 = createLabel(edge,
-				RBACVisualIDRegistry.getType(WrappingLabel2EditPart.VISUAL_ID));
-		label6003.getStyles().add(
-				NotationFactory.eINSTANCE.createDescriptionStyle());
-		label6003.setLayoutConstraint(NotationFactory.eINSTANCE
-				.createLocation());
-		Location location6003 = (Location) label6003.getLayoutConstraint();
-		location6003.setX(0);
-		location6003.setY(40);
 		return edge;
 	}
 

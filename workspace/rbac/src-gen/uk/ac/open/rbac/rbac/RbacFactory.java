@@ -53,15 +53,6 @@ public interface RbacFactory extends EFactory
   User createUser();
 
   /**
-   * Returns a new object of class '<em>Permission</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Permission</em>'.
-   * @generated
-   */
-  Permission createPermission();
-
-  /**
    * Returns a new object of class '<em>Object</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

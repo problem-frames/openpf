@@ -8,18 +8,15 @@ package uk.ac.open.rbac.rbac.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import uk.ac.open.rbac.rbac.RbacPackage;
 import uk.ac.open.rbac.rbac.Session;
@@ -62,7 +59,7 @@ public class SessionImpl extends MinimalEObjectImpl.Container implements Session
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getAssignments() <em>Assignments</em>}' containment reference list.
+   * The cached value of the '{@link #getAssignments() <em>Assignments</em>}' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getAssignments()
@@ -124,25 +121,9 @@ public class SessionImpl extends MinimalEObjectImpl.Container implements Session
   {
     if (assignments == null)
     {
-      assignments = new EObjectContainmentEList<UserRoleAssignment>(UserRoleAssignment.class, this, RbacPackage.SESSION__ASSIGNMENTS);
+      assignments = new EObjectResolvingEList<UserRoleAssignment>(UserRoleAssignment.class, this, RbacPackage.SESSION__ASSIGNMENTS);
     }
     return assignments;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case RbacPackage.SESSION__ASSIGNMENTS:
-        return ((InternalEList<?>)getAssignments()).basicRemove(otherEnd, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**

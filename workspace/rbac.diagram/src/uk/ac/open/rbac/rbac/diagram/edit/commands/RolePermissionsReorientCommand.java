@@ -9,8 +9,8 @@ import org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelationshipRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest;
 
-import uk.ac.open.rbac.rbac.Role;
-import uk.ac.open.rbac.rbac.RolePermissionAssignment;
+import uk.ac.open.rbac.rbac.Session;
+import uk.ac.open.rbac.rbac.UserRoleAssignment;
 import uk.ac.open.rbac.rbac.diagram.edit.policies.RBACBaseItemSemanticEditPolicy;
 
 /**
@@ -54,7 +54,7 @@ public class RolePermissionsReorientCommand extends EditElementCommand {
 	 * @generated
 	 */
 	public boolean canExecute() {
-		if (false == referenceOwner instanceof Role) {
+		if (false == referenceOwner instanceof Session) {
 			return false;
 		}
 		if (reorientDirection == ReorientRelationshipRequest.REORIENT_SOURCE) {
@@ -70,22 +70,24 @@ public class RolePermissionsReorientCommand extends EditElementCommand {
 	 * @generated
 	 */
 	protected boolean canReorientSource() {
-		if (!(oldEnd instanceof RolePermissionAssignment && newEnd instanceof Role)) {
+		if (!(oldEnd instanceof UserRoleAssignment && newEnd instanceof Session)) {
 			return false;
 		}
-		return RBACBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistRolePermissions_4004(getNewSource(), getOldTarget());
+		return RBACBaseItemSemanticEditPolicy
+				.getLinkConstraints()
+				.canExistSessionAssignments_4003(getNewSource(), getOldTarget());
 	}
 
 	/**
 	 * @generated
 	 */
 	protected boolean canReorientTarget() {
-		if (!(oldEnd instanceof RolePermissionAssignment && newEnd instanceof RolePermissionAssignment)) {
+		if (!(oldEnd instanceof UserRoleAssignment && newEnd instanceof UserRoleAssignment)) {
 			return false;
 		}
-		return RBACBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistRolePermissions_4004(getOldSource(), getNewTarget());
+		return RBACBaseItemSemanticEditPolicy
+				.getLinkConstraints()
+				.canExistSessionAssignments_4003(getOldSource(), getNewTarget());
 	}
 
 	/**
@@ -110,8 +112,8 @@ public class RolePermissionsReorientCommand extends EditElementCommand {
 	 * @generated
 	 */
 	protected CommandResult reorientSource() throws ExecutionException {
-		getOldSource().getPermissions().remove(getOldTarget());
-		getNewSource().getPermissions().add(getOldTarget());
+		getOldSource().getAssignments().remove(getOldTarget());
+		getNewSource().getAssignments().add(getOldTarget());
 		return CommandResult.newOKCommandResult(referenceOwner);
 	}
 
@@ -119,36 +121,36 @@ public class RolePermissionsReorientCommand extends EditElementCommand {
 	 * @generated
 	 */
 	protected CommandResult reorientTarget() throws ExecutionException {
-		getOldSource().getPermissions().remove(getOldTarget());
-		getOldSource().getPermissions().add(getNewTarget());
+		getOldSource().getAssignments().remove(getOldTarget());
+		getOldSource().getAssignments().add(getNewTarget());
 		return CommandResult.newOKCommandResult(referenceOwner);
 	}
 
 	/**
 	 * @generated
 	 */
-	protected Role getOldSource() {
-		return (Role) referenceOwner;
+	protected Session getOldSource() {
+		return (Session) referenceOwner;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected Role getNewSource() {
-		return (Role) newEnd;
+	protected Session getNewSource() {
+		return (Session) newEnd;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected RolePermissionAssignment getOldTarget() {
-		return (RolePermissionAssignment) oldEnd;
+	protected UserRoleAssignment getOldTarget() {
+		return (UserRoleAssignment) oldEnd;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected RolePermissionAssignment getNewTarget() {
-		return (RolePermissionAssignment) newEnd;
+	protected UserRoleAssignment getNewTarget() {
+		return (UserRoleAssignment) newEnd;
 	}
 }

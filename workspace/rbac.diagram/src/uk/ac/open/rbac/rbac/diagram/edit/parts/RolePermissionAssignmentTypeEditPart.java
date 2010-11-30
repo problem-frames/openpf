@@ -48,8 +48,8 @@ import uk.ac.open.rbac.rbac.diagram.providers.RBACParserProvider;
 /**
  * @generated
  */
-public class PermissionTypeEditPart extends LabelEditPart implements
-		ITextAwareEditPart {
+public class RolePermissionAssignmentTypeEditPart extends LabelEditPart
+		implements ITextAwareEditPart {
 
 	/**
 	 * @generated
@@ -82,14 +82,14 @@ public class PermissionTypeEditPart extends LabelEditPart implements
 	static {
 		registerSnapBackPosition(
 				RBACVisualIDRegistry
-						.getType(uk.ac.open.rbac.rbac.diagram.edit.parts.PermissionTypeEditPart.VISUAL_ID),
+						.getType(uk.ac.open.rbac.rbac.diagram.edit.parts.RolePermissionAssignmentTypeEditPart.VISUAL_ID),
 				new Point(0, 40));
 	}
 
 	/**
 	 * @generated
 	 */
-	public PermissionTypeEditPart(View view) {
+	public RolePermissionAssignmentTypeEditPart(View view) {
 		super(view);
 	}
 
@@ -309,10 +309,10 @@ public class PermissionTypeEditPart extends LabelEditPart implements
 		if (parser == null) {
 			parser = RBACParserProvider
 					.getParser(
-							RBACElementTypes.Permission_4003,
+							RBACElementTypes.RolePermissionAssignment_4002,
 							getParserElement(),
 							RBACVisualIDRegistry
-									.getType(uk.ac.open.rbac.rbac.diagram.edit.parts.PermissionTypeEditPart.VISUAL_ID));
+									.getType(uk.ac.open.rbac.rbac.diagram.edit.parts.RolePermissionAssignmentTypeEditPart.VISUAL_ID));
 		}
 		return parser;
 	}
@@ -577,19 +577,19 @@ public class PermissionTypeEditPart extends LabelEditPart implements
 	 * @generated
 	 */
 	protected IFigure createFigurePrim() {
-		return new PermissionLabelFigure();
+		return new RolePermissionAssignmentLabelFigure();
 	}
 
 	/**
 	 * @generated
 	 */
-	public class PermissionLabelFigure extends WrappingLabel {
+	public class RolePermissionAssignmentLabelFigure extends WrappingLabel {
 
 		/**
 		 * @generated
 		 */
-		public PermissionLabelFigure() {
-			this.setText("Permission");
+		public RolePermissionAssignmentLabelFigure() {
+			this.setText("RolePermissionAssignment");
 		}
 
 	}

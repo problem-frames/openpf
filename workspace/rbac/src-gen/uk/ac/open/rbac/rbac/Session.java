@@ -55,17 +55,17 @@ public interface Session extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Assignments</b></em>' containment reference list.
+   * Returns the value of the '<em><b>Assignments</b></em>' reference list.
    * The list contents are of type {@link uk.ac.open.rbac.rbac.UserRoleAssignment}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Assignments</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Assignments</em>' reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Assignments</em>' containment reference list.
+   * @return the value of the '<em>Assignments</em>' reference list.
    * @see uk.ac.open.rbac.rbac.RbacPackage#getSession_Assignments()
-   * @model containment="true"
+   * @model
    * @generated
    */
   EList<UserRoleAssignment> getAssignments();

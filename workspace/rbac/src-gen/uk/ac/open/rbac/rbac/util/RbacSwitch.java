@@ -11,7 +11,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 
 import uk.ac.open.rbac.rbac.Model;
-import uk.ac.open.rbac.rbac.Permission;
 import uk.ac.open.rbac.rbac.RbacPackage;
 import uk.ac.open.rbac.rbac.Role;
 import uk.ac.open.rbac.rbac.RolePermissionAssignment;
@@ -123,13 +122,6 @@ public class RbacSwitch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case RbacPackage.PERMISSION:
-      {
-        Permission permission = (Permission)theEObject;
-        T result = casePermission(permission);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case RbacPackage.OBJECT:
       {
         uk.ac.open.rbac.rbac.Object object = (uk.ac.open.rbac.rbac.Object)theEObject;
@@ -206,22 +198,6 @@ public class RbacSwitch<T>
    * @generated
    */
   public T caseUser(User object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Permission</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Permission</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casePermission(Permission object)
   {
     return null;
   }

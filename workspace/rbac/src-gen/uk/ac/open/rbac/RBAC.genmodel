@@ -13,33 +13,31 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RBAC.ecore#//Model/sessions"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RBAC.ecore#//Model/objects"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RBAC.ecore#//Model/permissions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RBAC.ecore#//Model/assignments"/>
     </genClasses>
     <genClasses ecoreClass="RBAC.ecore#//Role">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RBAC.ecore#//Role/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RBAC.ecore#//Role/permissions"/>
-    </genClasses>
-    <genClasses ecoreClass="RBAC.ecore#//Session">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RBAC.ecore#//Session/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RBAC.ecore#//Session/assignments"/>
     </genClasses>
     <genClasses ecoreClass="RBAC.ecore#//User">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RBAC.ecore#//User/name"/>
     </genClasses>
     <genClasses ecoreClass="RBAC.ecore#//Object">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RBAC.ecore#//Object/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RBAC.ecore#//Object/type"/>
+    </genClasses>
+    <genClasses ecoreClass="RBAC.ecore#//Session">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RBAC.ecore#//Session/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RBAC.ecore#//Session/assignments"/>
     </genClasses>
     <genClasses ecoreClass="RBAC.ecore#//UserRoleAssignment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RBAC.ecore#//UserRoleAssignment/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RBAC.ecore#//UserRoleAssignment/user"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RBAC.ecore#//UserRoleAssignment/role"/>
     </genClasses>
     <genClasses ecoreClass="RBAC.ecore#//RolePermissionAssignment">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RBAC.ecore#//RolePermissionAssignment/role"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RBAC.ecore#//RolePermissionAssignment/permission"/>
-    </genClasses>
-    <genClasses ecoreClass="RBAC.ecore#//Permission">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RBAC.ecore#//Permission/type"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RBAC.ecore#//Permission/role"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RBAC.ecore#//Permission/object"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RBAC.ecore#//RolePermissionAssignment/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RBAC.ecore#//RolePermissionAssignment/object"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

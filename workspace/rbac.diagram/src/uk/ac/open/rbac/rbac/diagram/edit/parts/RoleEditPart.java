@@ -256,6 +256,38 @@ public class RoleEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
+	public List<IElementType> getMARelTypesOnSource() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(1);
+		types.add(RBACElementTypes.RolePermissionAssignment_4002);
+		return types;
+	}
+
+	/**
+	 * @generated
+	 */
+	public List<IElementType> getMARelTypesOnSourceAndTarget(
+			IGraphicalEditPart targetEditPart) {
+		LinkedList<IElementType> types = new LinkedList<IElementType>();
+		if (targetEditPart instanceof ObjectEditPart) {
+			types.add(RBACElementTypes.RolePermissionAssignment_4002);
+		}
+		return types;
+	}
+
+	/**
+	 * @generated
+	 */
+	public List<IElementType> getMATypesForTarget(IElementType relationshipType) {
+		LinkedList<IElementType> types = new LinkedList<IElementType>();
+		if (relationshipType == RBACElementTypes.RolePermissionAssignment_4002) {
+			types.add(RBACElementTypes.Object_2004);
+		}
+		return types;
+	}
+
+	/**
+	 * @generated
+	 */
 	public List<IElementType> getMARelTypesOnTarget() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(1);
 		types.add(RBACElementTypes.UserRoleAssignment_4001);

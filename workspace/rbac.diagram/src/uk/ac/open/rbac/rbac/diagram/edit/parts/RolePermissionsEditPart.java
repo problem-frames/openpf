@@ -6,6 +6,7 @@ import org.eclipse.gmf.runtime.diagram.ui.editparts.ITreeBranchEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx;
 import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.swt.graphics.Color;
 
 import uk.ac.open.rbac.rbac.diagram.edit.policies.RolePermissionsItemSemanticEditPolicy;
 
@@ -18,7 +19,7 @@ public class RolePermissionsEditPart extends ConnectionNodeEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 4004;
+	public static final int VISUAL_ID = 4003;
 
 	/**
 	 * @generated
@@ -45,14 +46,34 @@ public class RolePermissionsEditPart extends ConnectionNodeEditPart implements
 	 * @generated
 	 */
 	protected Connection createConnectionFigure() {
-		return new PolylineConnectionEx();
+		return new SessionAssignmentsFigure();
 	}
 
 	/**
 	 * @generated
 	 */
-	public PolylineConnectionEx getPrimaryShape() {
-		return (PolylineConnectionEx) getFigure();
+	public SessionAssignmentsFigure getPrimaryShape() {
+		return (SessionAssignmentsFigure) getFigure();
 	}
+
+	/**
+	 * @generated
+	 */
+	public class SessionAssignmentsFigure extends PolylineConnectionEx {
+
+		/**
+		 * @generated
+		 */
+		public SessionAssignmentsFigure() {
+			this.setForegroundColor(THIS_FORE);
+
+		}
+
+	}
+
+	/**
+	 * @generated
+	 */
+	static final Color THIS_FORE = new Color(null, 255, 0, 0);
 
 }

@@ -145,29 +145,6 @@ public class RbacItemProviderAdapterFactory extends RbacAdapterFactory implement
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link uk.ac.open.rbac.rbac.Permission} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PermissionItemProvider permissionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link uk.ac.open.rbac.rbac.Permission}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createPermissionAdapter() {
-		if (permissionItemProvider == null) {
-			permissionItemProvider = new PermissionItemProvider(this);
-		}
-
-		return permissionItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link uk.ac.open.rbac.rbac.Object} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -360,12 +337,11 @@ public class RbacItemProviderAdapterFactory extends RbacAdapterFactory implement
 	public void dispose() {
 		if (modelItemProvider != null) modelItemProvider.dispose();
 		if (roleItemProvider != null) roleItemProvider.dispose();
-		if (sessionItemProvider != null) sessionItemProvider.dispose();
 		if (userItemProvider != null) userItemProvider.dispose();
 		if (objectItemProvider != null) objectItemProvider.dispose();
+		if (sessionItemProvider != null) sessionItemProvider.dispose();
 		if (userRoleAssignmentItemProvider != null) userRoleAssignmentItemProvider.dispose();
 		if (rolePermissionAssignmentItemProvider != null) rolePermissionAssignmentItemProvider.dispose();
-		if (permissionItemProvider != null) permissionItemProvider.dispose();
 	}
 
 }

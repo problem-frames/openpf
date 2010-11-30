@@ -8,8 +8,8 @@ import org.eclipse.gmf.runtime.common.core.command.CommandResult;
 import org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest;
 
+import uk.ac.open.rbac.rbac.Model;
 import uk.ac.open.rbac.rbac.Role;
-import uk.ac.open.rbac.rbac.Session;
 import uk.ac.open.rbac.rbac.User;
 import uk.ac.open.rbac.rbac.UserRoleAssignment;
 import uk.ac.open.rbac.rbac.diagram.edit.policies.RBACBaseItemSemanticEditPolicy;
@@ -68,10 +68,10 @@ public class UserRoleAssignmentReorientCommand extends EditElementCommand {
 			return false;
 		}
 		Role target = getLink().getRole();
-		if (!(getLink().eContainer() instanceof Session)) {
+		if (!(getLink().eContainer() instanceof Model)) {
 			return false;
 		}
-		Session container = (Session) getLink().eContainer();
+		Model container = (Model) getLink().eContainer();
 		return RBACBaseItemSemanticEditPolicy.getLinkConstraints()
 				.canExistUserRoleAssignment_4001(container, getLink(),
 						getNewSource(), target);
@@ -85,10 +85,10 @@ public class UserRoleAssignmentReorientCommand extends EditElementCommand {
 			return false;
 		}
 		User source = getLink().getUser();
-		if (!(getLink().eContainer() instanceof Session)) {
+		if (!(getLink().eContainer() instanceof Model)) {
 			return false;
 		}
-		Session container = (Session) getLink().eContainer();
+		Model container = (Model) getLink().eContainer();
 		return RBACBaseItemSemanticEditPolicy.getLinkConstraints()
 				.canExistUserRoleAssignment_4001(container, getLink(), source,
 						getNewTarget());

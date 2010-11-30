@@ -13,7 +13,6 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import uk.ac.open.rbac.rbac.Model;
-import uk.ac.open.rbac.rbac.Permission;
 import uk.ac.open.rbac.rbac.RbacFactory;
 import uk.ac.open.rbac.rbac.RbacPackage;
 import uk.ac.open.rbac.rbac.Role;
@@ -50,13 +49,6 @@ public class RbacPackageImpl extends EPackageImpl implements RbacPackage
    * @generated
    */
   private EClass userEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass permissionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -214,6 +206,16 @@ public class RbacPackageImpl extends EPackageImpl implements RbacPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getModel_Assignments()
+  {
+    return (EReference)modelEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getRole()
   {
     return roleEClass;
@@ -227,16 +229,6 @@ public class RbacPackageImpl extends EPackageImpl implements RbacPackage
   public EAttribute getRole_Name()
   {
     return (EAttribute)roleEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getRole_Permissions()
-  {
-    return (EReference)roleEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -264,46 +256,6 @@ public class RbacPackageImpl extends EPackageImpl implements RbacPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getPermission()
-  {
-    return permissionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getPermission_Type()
-  {
-    return (EAttribute)permissionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPermission_Role()
-  {
-    return (EReference)permissionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPermission_Object()
-  {
-    return (EReference)permissionEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getObject()
   {
     return objectEClass;
@@ -317,6 +269,16 @@ public class RbacPackageImpl extends EPackageImpl implements RbacPackage
   public EAttribute getObject_Name()
   {
     return (EAttribute)objectEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getObject_Type()
+  {
+    return (EAttribute)objectEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -364,9 +326,19 @@ public class RbacPackageImpl extends EPackageImpl implements RbacPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getUserRoleAssignment_Name()
+  {
+    return (EAttribute)userRoleAssignmentEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getUserRoleAssignment_User()
   {
-    return (EReference)userRoleAssignmentEClass.getEStructuralFeatures().get(0);
+    return (EReference)userRoleAssignmentEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -376,7 +348,7 @@ public class RbacPackageImpl extends EPackageImpl implements RbacPackage
    */
   public EReference getUserRoleAssignment_Role()
   {
-    return (EReference)userRoleAssignmentEClass.getEStructuralFeatures().get(1);
+    return (EReference)userRoleAssignmentEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -404,9 +376,19 @@ public class RbacPackageImpl extends EPackageImpl implements RbacPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getRolePermissionAssignment_Permission()
+  public EAttribute getRolePermissionAssignment_Type()
   {
-    return (EReference)rolePermissionAssignmentEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)rolePermissionAssignmentEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRolePermissionAssignment_Object()
+  {
+    return (EReference)rolePermissionAssignmentEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -445,33 +427,31 @@ public class RbacPackageImpl extends EPackageImpl implements RbacPackage
     createEReference(modelEClass, MODEL__SESSIONS);
     createEReference(modelEClass, MODEL__OBJECTS);
     createEReference(modelEClass, MODEL__PERMISSIONS);
+    createEReference(modelEClass, MODEL__ASSIGNMENTS);
 
     roleEClass = createEClass(ROLE);
     createEAttribute(roleEClass, ROLE__NAME);
-    createEReference(roleEClass, ROLE__PERMISSIONS);
 
     userEClass = createEClass(USER);
     createEAttribute(userEClass, USER__NAME);
 
-    permissionEClass = createEClass(PERMISSION);
-    createEAttribute(permissionEClass, PERMISSION__TYPE);
-    createEReference(permissionEClass, PERMISSION__ROLE);
-    createEReference(permissionEClass, PERMISSION__OBJECT);
-
     objectEClass = createEClass(OBJECT);
     createEAttribute(objectEClass, OBJECT__NAME);
+    createEAttribute(objectEClass, OBJECT__TYPE);
 
     sessionEClass = createEClass(SESSION);
     createEAttribute(sessionEClass, SESSION__NAME);
     createEReference(sessionEClass, SESSION__ASSIGNMENTS);
 
     userRoleAssignmentEClass = createEClass(USER_ROLE_ASSIGNMENT);
+    createEAttribute(userRoleAssignmentEClass, USER_ROLE_ASSIGNMENT__NAME);
     createEReference(userRoleAssignmentEClass, USER_ROLE_ASSIGNMENT__USER);
     createEReference(userRoleAssignmentEClass, USER_ROLE_ASSIGNMENT__ROLE);
 
     rolePermissionAssignmentEClass = createEClass(ROLE_PERMISSION_ASSIGNMENT);
     createEReference(rolePermissionAssignmentEClass, ROLE_PERMISSION_ASSIGNMENT__ROLE);
-    createEReference(rolePermissionAssignmentEClass, ROLE_PERMISSION_ASSIGNMENT__PERMISSION);
+    createEAttribute(rolePermissionAssignmentEClass, ROLE_PERMISSION_ASSIGNMENT__TYPE);
+    createEReference(rolePermissionAssignmentEClass, ROLE_PERMISSION_ASSIGNMENT__OBJECT);
   }
 
   /**
@@ -510,34 +490,32 @@ public class RbacPackageImpl extends EPackageImpl implements RbacPackage
     initEReference(getModel_Users(), this.getUser(), null, "users", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModel_Sessions(), this.getSession(), null, "sessions", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModel_Objects(), this.getObject(), null, "objects", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getModel_Permissions(), this.getPermission(), null, "permissions", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_Permissions(), this.getRolePermissionAssignment(), null, "permissions", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_Assignments(), this.getUserRoleAssignment(), null, "assignments", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(roleEClass, Role.class, "Role", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getRole_Name(), ecorePackage.getEString(), "name", null, 0, 1, Role.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getRole_Permissions(), this.getRolePermissionAssignment(), null, "permissions", null, 0, -1, Role.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(userEClass, User.class, "User", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getUser_Name(), ecorePackage.getEString(), "name", null, 0, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(permissionEClass, Permission.class, "Permission", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPermission_Type(), ecorePackage.getEString(), "type", null, 0, 1, Permission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPermission_Role(), this.getRole(), null, "role", null, 0, 1, Permission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPermission_Object(), this.getObject(), null, "object", null, 0, 1, Permission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
     initEClass(objectEClass, uk.ac.open.rbac.rbac.Object.class, "Object", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getObject_Name(), ecorePackage.getEString(), "name", null, 0, 1, uk.ac.open.rbac.rbac.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getObject_Type(), ecorePackage.getEString(), "type", null, 0, 1, uk.ac.open.rbac.rbac.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(sessionEClass, Session.class, "Session", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getSession_Name(), ecorePackage.getEString(), "name", null, 0, 1, Session.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getSession_Assignments(), this.getUserRoleAssignment(), null, "assignments", null, 0, -1, Session.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSession_Assignments(), this.getUserRoleAssignment(), null, "assignments", null, 0, -1, Session.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(userRoleAssignmentEClass, UserRoleAssignment.class, "UserRoleAssignment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getUserRoleAssignment_Name(), ecorePackage.getEString(), "name", null, 0, 1, UserRoleAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getUserRoleAssignment_User(), this.getUser(), null, "user", null, 0, 1, UserRoleAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getUserRoleAssignment_Role(), this.getRole(), null, "role", null, 0, 1, UserRoleAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(rolePermissionAssignmentEClass, RolePermissionAssignment.class, "RolePermissionAssignment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getRolePermissionAssignment_Role(), this.getRole(), null, "role", null, 0, 1, RolePermissionAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getRolePermissionAssignment_Permission(), this.getPermission(), null, "permission", null, 0, 1, RolePermissionAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRolePermissionAssignment_Type(), ecorePackage.getEString(), "type", null, 0, 1, RolePermissionAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRolePermissionAssignment_Object(), this.getObject(), null, "object", null, 0, 1, RolePermissionAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

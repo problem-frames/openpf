@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link uk.ac.open.rbac.rbac.Model#getSessions <em>Sessions</em>}</li>
  *   <li>{@link uk.ac.open.rbac.rbac.Model#getObjects <em>Objects</em>}</li>
  *   <li>{@link uk.ac.open.rbac.rbac.Model#getPermissions <em>Permissions</em>}</li>
+ *   <li>{@link uk.ac.open.rbac.rbac.Model#getAssignments <em>Assignments</em>}</li>
  * </ul>
  * </p>
  *
@@ -97,7 +98,7 @@ public interface Model extends EObject
 
   /**
    * Returns the value of the '<em><b>Permissions</b></em>' containment reference list.
-   * The list contents are of type {@link uk.ac.open.rbac.rbac.Permission}.
+   * The list contents are of type {@link uk.ac.open.rbac.rbac.RolePermissionAssignment}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Permissions</em>' containment reference list isn't clear,
@@ -109,6 +110,22 @@ public interface Model extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<Permission> getPermissions();
+  EList<RolePermissionAssignment> getPermissions();
+
+  /**
+   * Returns the value of the '<em><b>Assignments</b></em>' containment reference list.
+   * The list contents are of type {@link uk.ac.open.rbac.rbac.UserRoleAssignment}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Assignments</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Assignments</em>' containment reference list.
+   * @see uk.ac.open.rbac.rbac.RbacPackage#getModel_Assignments()
+   * @model containment="true"
+   * @generated
+   */
+  EList<UserRoleAssignment> getAssignments();
 
 } // Model

@@ -17,16 +17,15 @@ import org.eclipse.ui.IMemento;
 import org.eclipse.ui.navigator.ICommonContentExtensionSite;
 import org.eclipse.ui.navigator.ICommonLabelProvider;
 
+import uk.ac.open.rbac.rbac.UserRoleAssignment;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.ModelEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.ObjectEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.ObjectNameEditPart;
-import uk.ac.open.rbac.rbac.diagram.edit.parts.PermissionEditPart;
-import uk.ac.open.rbac.rbac.diagram.edit.parts.PermissionTypeEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.RoleEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.RoleNameEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.RolePermissionAssignmentEditPart;
+import uk.ac.open.rbac.rbac.diagram.edit.parts.RolePermissionAssignmentTypeEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.RolePermissionsEditPart;
-import uk.ac.open.rbac.rbac.diagram.edit.parts.SessionAssignmentsEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.SessionEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.SessionNameEditPart;
 import uk.ac.open.rbac.rbac.diagram.edit.parts.UserEditPart;
@@ -96,36 +95,30 @@ public class RBACNavigatorLabelProvider extends LabelProvider implements
 	 */
 	public Image getImage(View view) {
 		switch (RBACVisualIDRegistry.getVisualID(view)) {
+		case ModelEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Diagram?http://www.ac.uk.open/rbac/RBAC?Model", RBACElementTypes.Model_1000); //$NON-NLS-1$
+		case ObjectEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?http://www.ac.uk.open/rbac/RBAC?Object", RBACElementTypes.Object_2004); //$NON-NLS-1$
 		case RolePermissionsEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Link?http://www.ac.uk.open/rbac/RBAC?Role?permissions", RBACElementTypes.RolePermissions_4004); //$NON-NLS-1$
+					"Navigator?Link?http://www.ac.uk.open/rbac/RBAC?Session?assignments", RBACElementTypes.SessionAssignments_4003); //$NON-NLS-1$
+		case RoleEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?http://www.ac.uk.open/rbac/RBAC?Role", RBACElementTypes.Role_2001); //$NON-NLS-1$
+		case UserEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?http://www.ac.uk.open/rbac/RBAC?User", RBACElementTypes.User_2002); //$NON-NLS-1$
+		case UserRoleAssignmentEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?http://www.ac.uk.open/rbac/RBAC?UserRoleAssignment", RBACElementTypes.UserRoleAssignment_4001); //$NON-NLS-1$
 		case SessionEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?TopLevelNode?http://www.ac.uk.open/rbac/RBAC?Session", RBACElementTypes.Session_2003); //$NON-NLS-1$
 		case RolePermissionAssignmentEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?http://www.ac.uk.open/rbac/RBAC?RolePermissionAssignment", RBACElementTypes.RolePermissionAssignment_4002); //$NON-NLS-1$
-		case UserRoleAssignmentEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Link?http://www.ac.uk.open/rbac/RBAC?UserRoleAssignment", RBACElementTypes.UserRoleAssignment_4001); //$NON-NLS-1$
-		case ObjectEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://www.ac.uk.open/rbac/RBAC?Object", RBACElementTypes.Object_2004); //$NON-NLS-1$
-		case ModelEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Diagram?http://www.ac.uk.open/rbac/RBAC?Model", RBACElementTypes.Model_1000); //$NON-NLS-1$
-		case PermissionEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Link?http://www.ac.uk.open/rbac/RBAC?Permission", RBACElementTypes.Permission_4003); //$NON-NLS-1$
-		case UserEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://www.ac.uk.open/rbac/RBAC?User", RBACElementTypes.User_2002); //$NON-NLS-1$
-		case SessionAssignmentsEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Link?http://www.ac.uk.open/rbac/RBAC?Session?assignments", RBACElementTypes.SessionAssignments_4005); //$NON-NLS-1$
-		case RoleEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://www.ac.uk.open/rbac/RBAC?Role", RBACElementTypes.Role_2001); //$NON-NLS-1$
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -178,28 +171,43 @@ public class RBACNavigatorLabelProvider extends LabelProvider implements
 			return getUnresolvedDomainElementProxyText(view);
 		}
 		switch (RBACVisualIDRegistry.getVisualID(view)) {
+		case ModelEditPart.VISUAL_ID:
+			return getModel_1000Text(view);
+		case ObjectEditPart.VISUAL_ID:
+			return getObject_2004Text(view);
 		case RolePermissionsEditPart.VISUAL_ID:
-			return getRolePermissions_4004Text(view);
+			return getSessionAssignments_4003Text(view);
+		case RoleEditPart.VISUAL_ID:
+			return getRole_2001Text(view);
+		case UserEditPart.VISUAL_ID:
+			return getUser_2002Text(view);
+		case UserRoleAssignmentEditPart.VISUAL_ID:
+			return getUserRoleAssignment_4001Text(view);
 		case SessionEditPart.VISUAL_ID:
 			return getSession_2003Text(view);
 		case RolePermissionAssignmentEditPart.VISUAL_ID:
 			return getRolePermissionAssignment_4002Text(view);
-		case UserRoleAssignmentEditPart.VISUAL_ID:
-			return getUserRoleAssignment_4001Text(view);
-		case ObjectEditPart.VISUAL_ID:
-			return getObject_2004Text(view);
-		case ModelEditPart.VISUAL_ID:
-			return getModel_1000Text(view);
-		case PermissionEditPart.VISUAL_ID:
-			return getPermission_4003Text(view);
-		case UserEditPart.VISUAL_ID:
-			return getUser_2002Text(view);
-		case SessionAssignmentsEditPart.VISUAL_ID:
-			return getSessionAssignments_4005Text(view);
-		case RoleEditPart.VISUAL_ID:
-			return getRole_2001Text(view);
 		}
 		return getUnknownElementText(view);
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getSessionAssignments_4003Text(View view) {
+		IParser parser = RBACParserProvider.getParser(
+				RBACElementTypes.SessionAssignments_4003,
+				view.getElement() != null ? view.getElement() : view,
+				CommonParserHint.DESCRIPTION);
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			RBACDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 6002); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
 	}
 
 	/**
@@ -224,70 +232,6 @@ public class RBACNavigatorLabelProvider extends LabelProvider implements
 	/**
 	 * @generated
 	 */
-	private String getPermission_4003Text(View view) {
-		IParser parser = RBACParserProvider.getParser(
-				RBACElementTypes.Permission_4003,
-				view.getElement() != null ? view.getElement() : view,
-				RBACVisualIDRegistry.getType(PermissionTypeEditPart.VISUAL_ID));
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(
-					view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			RBACDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 6001); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getSessionAssignments_4005Text(View view) {
-		IParser parser = RBACParserProvider.getParser(
-				RBACElementTypes.SessionAssignments_4005,
-				view.getElement() != null ? view.getElement() : view,
-				CommonParserHint.DESCRIPTION);
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(
-					view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			RBACDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 6003); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getRolePermissions_4004Text(View view) {
-		IParser parser = RBACParserProvider.getParser(
-				RBACElementTypes.RolePermissions_4004,
-				view.getElement() != null ? view.getElement() : view,
-				CommonParserHint.DESCRIPTION);
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(
-					view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			RBACDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 6002); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getRolePermissionAssignment_4002Text(View view) {
-		return ""; //$NON-NLS-1$
-	}
-
-	/**
-	 * @generated
-	 */
 	private String getSession_2003Text(View view) {
 		IParser parser = RBACParserProvider.getParser(
 				RBACElementTypes.Session_2003,
@@ -300,6 +244,27 @@ public class RBACNavigatorLabelProvider extends LabelProvider implements
 		} else {
 			RBACDiagramEditorPlugin.getInstance().logError(
 					"Parser was not found for label " + 5003); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getRolePermissionAssignment_4002Text(View view) {
+		IParser parser = RBACParserProvider
+				.getParser(
+						RBACElementTypes.RolePermissionAssignment_4002,
+						view.getElement() != null ? view.getElement() : view,
+						RBACVisualIDRegistry
+								.getType(RolePermissionAssignmentTypeEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			RBACDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 6001); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -334,7 +299,15 @@ public class RBACNavigatorLabelProvider extends LabelProvider implements
 	 * @generated
 	 */
 	private String getUserRoleAssignment_4001Text(View view) {
-		return ""; //$NON-NLS-1$
+		UserRoleAssignment domainModelElement = (UserRoleAssignment) view
+				.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			RBACDiagramEditorPlugin.getInstance().logError(
+					"No domain element for view with visualID = " + 4001); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
 	}
 
 	/**

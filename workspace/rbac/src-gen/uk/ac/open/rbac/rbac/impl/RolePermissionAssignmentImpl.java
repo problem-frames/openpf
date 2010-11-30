@@ -13,7 +13,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import uk.ac.open.rbac.rbac.Permission;
 import uk.ac.open.rbac.rbac.RbacPackage;
 import uk.ac.open.rbac.rbac.Role;
 import uk.ac.open.rbac.rbac.RolePermissionAssignment;
@@ -26,7 +25,8 @@ import uk.ac.open.rbac.rbac.RolePermissionAssignment;
  * The following features are implemented:
  * <ul>
  *   <li>{@link uk.ac.open.rbac.rbac.impl.RolePermissionAssignmentImpl#getRole <em>Role</em>}</li>
- *   <li>{@link uk.ac.open.rbac.rbac.impl.RolePermissionAssignmentImpl#getPermission <em>Permission</em>}</li>
+ *   <li>{@link uk.ac.open.rbac.rbac.impl.RolePermissionAssignmentImpl#getType <em>Type</em>}</li>
+ *   <li>{@link uk.ac.open.rbac.rbac.impl.RolePermissionAssignmentImpl#getObject <em>Object</em>}</li>
  * </ul>
  * </p>
  *
@@ -45,14 +45,34 @@ public class RolePermissionAssignmentImpl extends MinimalEObjectImpl.Container i
   protected Role role;
 
   /**
-   * The cached value of the '{@link #getPermission() <em>Permission</em>}' reference.
+   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPermission()
+   * @see #getType()
    * @generated
    * @ordered
    */
-  protected Permission permission;
+  protected static final String TYPE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected String type = TYPE_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getObject() <em>Object</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getObject()
+   * @generated
+   * @ordered
+   */
+  protected uk.ac.open.rbac.rbac.Object object;
 
   /**
    * <!-- begin-user-doc -->
@@ -123,19 +143,42 @@ public class RolePermissionAssignmentImpl extends MinimalEObjectImpl.Container i
    * <!-- end-user-doc -->
    * @generated
    */
-  public Permission getPermission()
+  public String getType()
   {
-    if (permission != null && permission.eIsProxy())
+    return type;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setType(String newType)
+  {
+    String oldType = type;
+    type = newType;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RbacPackage.ROLE_PERMISSION_ASSIGNMENT__TYPE, oldType, type));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public uk.ac.open.rbac.rbac.Object getObject()
+  {
+    if (object != null && object.eIsProxy())
     {
-      InternalEObject oldPermission = (InternalEObject)permission;
-      permission = (Permission)eResolveProxy(oldPermission);
-      if (permission != oldPermission)
+      InternalEObject oldObject = (InternalEObject)object;
+      object = (uk.ac.open.rbac.rbac.Object)eResolveProxy(oldObject);
+      if (object != oldObject)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, RbacPackage.ROLE_PERMISSION_ASSIGNMENT__PERMISSION, oldPermission, permission));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, RbacPackage.ROLE_PERMISSION_ASSIGNMENT__OBJECT, oldObject, object));
       }
     }
-    return permission;
+    return object;
   }
 
   /**
@@ -143,9 +186,9 @@ public class RolePermissionAssignmentImpl extends MinimalEObjectImpl.Container i
    * <!-- end-user-doc -->
    * @generated
    */
-  public Permission basicGetPermission()
+  public uk.ac.open.rbac.rbac.Object basicGetObject()
   {
-    return permission;
+    return object;
   }
 
   /**
@@ -153,12 +196,12 @@ public class RolePermissionAssignmentImpl extends MinimalEObjectImpl.Container i
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setPermission(Permission newPermission)
+  public void setObject(uk.ac.open.rbac.rbac.Object newObject)
   {
-    Permission oldPermission = permission;
-    permission = newPermission;
+    uk.ac.open.rbac.rbac.Object oldObject = object;
+    object = newObject;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RbacPackage.ROLE_PERMISSION_ASSIGNMENT__PERMISSION, oldPermission, permission));
+      eNotify(new ENotificationImpl(this, Notification.SET, RbacPackage.ROLE_PERMISSION_ASSIGNMENT__OBJECT, oldObject, object));
   }
 
   /**
@@ -174,9 +217,11 @@ public class RolePermissionAssignmentImpl extends MinimalEObjectImpl.Container i
       case RbacPackage.ROLE_PERMISSION_ASSIGNMENT__ROLE:
         if (resolve) return getRole();
         return basicGetRole();
-      case RbacPackage.ROLE_PERMISSION_ASSIGNMENT__PERMISSION:
-        if (resolve) return getPermission();
-        return basicGetPermission();
+      case RbacPackage.ROLE_PERMISSION_ASSIGNMENT__TYPE:
+        return getType();
+      case RbacPackage.ROLE_PERMISSION_ASSIGNMENT__OBJECT:
+        if (resolve) return getObject();
+        return basicGetObject();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -194,8 +239,11 @@ public class RolePermissionAssignmentImpl extends MinimalEObjectImpl.Container i
       case RbacPackage.ROLE_PERMISSION_ASSIGNMENT__ROLE:
         setRole((Role)newValue);
         return;
-      case RbacPackage.ROLE_PERMISSION_ASSIGNMENT__PERMISSION:
-        setPermission((Permission)newValue);
+      case RbacPackage.ROLE_PERMISSION_ASSIGNMENT__TYPE:
+        setType((String)newValue);
+        return;
+      case RbacPackage.ROLE_PERMISSION_ASSIGNMENT__OBJECT:
+        setObject((uk.ac.open.rbac.rbac.Object)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -214,8 +262,11 @@ public class RolePermissionAssignmentImpl extends MinimalEObjectImpl.Container i
       case RbacPackage.ROLE_PERMISSION_ASSIGNMENT__ROLE:
         setRole((Role)null);
         return;
-      case RbacPackage.ROLE_PERMISSION_ASSIGNMENT__PERMISSION:
-        setPermission((Permission)null);
+      case RbacPackage.ROLE_PERMISSION_ASSIGNMENT__TYPE:
+        setType(TYPE_EDEFAULT);
+        return;
+      case RbacPackage.ROLE_PERMISSION_ASSIGNMENT__OBJECT:
+        setObject((uk.ac.open.rbac.rbac.Object)null);
         return;
     }
     super.eUnset(featureID);
@@ -233,10 +284,29 @@ public class RolePermissionAssignmentImpl extends MinimalEObjectImpl.Container i
     {
       case RbacPackage.ROLE_PERMISSION_ASSIGNMENT__ROLE:
         return role != null;
-      case RbacPackage.ROLE_PERMISSION_ASSIGNMENT__PERMISSION:
-        return permission != null;
+      case RbacPackage.ROLE_PERMISSION_ASSIGNMENT__TYPE:
+        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+      case RbacPackage.ROLE_PERMISSION_ASSIGNMENT__OBJECT:
+        return object != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (type: ");
+    result.append(type);
+    result.append(')');
+    return result.toString();
   }
 
 } //RolePermissionAssignmentImpl
