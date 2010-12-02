@@ -35,7 +35,7 @@
 		<link>
 			<name>src/Ontology/Ontology.xtext</name>
 			<type>1</type>
-			<locationURI>WORKSPACE_LOC/situation/samples/Ontology.xtext</locationURI>
+			<locationURI>WORKSPACE_LOC/ontology/samples/Ontology.xtext</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

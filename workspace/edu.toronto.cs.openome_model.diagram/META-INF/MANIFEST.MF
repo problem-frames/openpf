@@ -29,9 +29,9 @@ Bundle-Version: 1.0.0.201010080232
 Bundle-ManifestVersion: 2
 Bundle-Activator: edu.toronto.cs.openome_model.diagram.part.Openome_mo
  delDiagramEditorPlugin
-Bundle-SymbolicName: edu.toronto.cs.openome_model.diagram; singleton:=
- true
 Import-Package: junit.framework,org.eclipse.gmf.runtime.notation,org.e
  clipse.gmf.runtime.notation.providers.internal.copypaste
+Bundle-SymbolicName: edu.toronto.cs.openome_model.diagram; singleton:=
+ true
 
 

@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
+Require-Bundle: util,org.eclipse.emf.ecore,core
 Export-Package: .,action,codegen,convertor,model,org.javacc,org.javacc
  .jjdoc,org.javacc.jjtree,org.javacc.parser,parser
-Require-Bundle: util,org.eclipse.emf.ecore,core
 Bundle-Vendor: Yijun Yu
 Bundle-Version: 1.0.0.201010080232
 Bundle-Name: Q7 Plug-in

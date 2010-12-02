@@ -1,9 +1,4 @@
 Manifest-Version: 1.0
-Export-Package: org.eclipse.xtext.example.gmf.resource,uk.ac.open,uk.a
- c.open.formatting,uk.ac.open.parseTreeConstruction,uk.ac.open.parser.
- antlr,uk.ac.open.parser.antlr.internal;x-internal:=true,uk.ac.open.pr
- oblem,uk.ac.open.problem.impl,uk.ac.open.problem.util,uk.ac.open.scop
- ing,uk.ac.open.services,uk.ac.open.validation
 Require-Bundle: org.eclipse.core.resources,com.ibm.icu,core,org.antlr.
  runtime,org.apache.commons.logging,org.apache.log4j,org.apache.log4j,
  org.eclipse.draw2d;visibility:=reexport,org.eclipse.emf.codegen.ecore
@@ -13,13 +8,18 @@ Require-Bundle: org.eclipse.core.resources,com.ibm.icu,core,org.antlr.
  core,org.eclipse.swtbot.eclipse.finder,org.eclipse.swtbot.junit4_x,or
  g.eclipse.ui,org.eclipse.xtext,org.eclipse.xtext.generator,org.eclips
  e.xtext.util,org.eclipse.xtext.xtend,org.hamcrest,org.junit4
+Export-Package: org.eclipse.xtext.example.gmf.resource,uk.ac.open,uk.a
+ c.open.formatting,uk.ac.open.parseTreeConstruction,uk.ac.open.parser.
+ antlr,uk.ac.open.parser.antlr.internal;x-internal:=true,uk.ac.open.pr
+ oblem,uk.ac.open.problem.impl,uk.ac.open.problem.util,uk.ac.open.scop
+ ing,uk.ac.open.services,uk.ac.open.validation
 Bundle-Vendor: The Open University
 Bundle-Version: 1.0.0.201010141018
 Bundle-Name: problem
-Bundle-ManifestVersion: 2
 Bundle-Activator: uk.ac.open.Activator
-Import-Package: org.apache.log4j
+Bundle-ManifestVersion: 2
 Bundle-SymbolicName: problem; singleton:=true
+Import-Package: org.apache.log4j
 Eclipse-RegisterBuddy: org.eclipse.xtext.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 
