@@ -1,6 +1,10 @@
 package uk.ac.open.ui;
 
+import java.awt.Color;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.util.ArrayList;
 
 import org.eclipse.core.resources.IFile;
@@ -20,6 +24,10 @@ import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.custom.StyleRange;
+import org.eclipse.swt.custom.StyledText;
+import org.eclipse.swt.custom.StyledTextContent;
 import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.resource.XtextResourceSet;
 import org.eclipse.xtext.ui.editor.XtextEditor;
@@ -29,18 +37,76 @@ import org.eclipse.xtext.ui.editor.XtextEditor;
  * @author yy66
  * @generate NOT
  */
-public abstract class ImageDiagramEditor extends XtextEditor implements Runnable {
+public abstract class ImageDiagramEditor extends XtextEditor implements
+		Runnable {
 
 	protected ImageDiagramEditor() {
 		Thread runner = new Thread(this);
-		runner.start();		
+		runner.start();
 	}
-	
+
 	@Override
 	public void performSave(boolean overwrite, IProgressMonitor monitor) {
 		super.performSave(overwrite, monitor);
 		String filename = this.getResource().getFullPath().toString();
 		saveModel(filename);
+		String file = getFilename(filename);
+//		System.out.println(file);
+		saveText(file);
+	}
+
+	private String getFilename(String filename) {
+		return ResourcesPlugin.getWorkspace().getRoot().getLocation().toFile().getAbsolutePath() + filename + ".html";
+	}
+
+	private void saveText(String filename) {
+		StyledText widget = getSourceViewer().getTextWidget();
+		StyledTextContent content = widget.getContent();
+		StyleRange[] ranges = widget.getStyleRanges();
+		try {
+			PrintStream ps = new PrintStream(new File(filename));
+			ps.println("<html><body>");
+			for (StyleRange r : ranges) {
+				String text = content.getTextRange(r.start, r.length);
+				StringBuffer buffer = new StringBuffer();
+				text = text.replaceAll("\n","<br/>");
+				text = text.replaceAll(" ","&nbsp;");
+				text = text.replaceAll("\t","&nbsp;");
+				buffer.append("<font color=\"" + hexRGB(r.foreground) + "\">");
+				switch (r.fontStyle) {
+				case SWT.BOLD:
+					buffer.append("<b>" + text + "</b>");
+					break;
+				case SWT.ITALIC:
+					buffer.append("<i>" + text + "</i>");
+					break;
+				case SWT.BOLD | SWT.ITALIC:
+					buffer.append("<b><i>" + text + "</i></b>");
+					break;
+				default:
+					buffer.append(text);
+				}
+				buffer.append("</font>");
+				ps.println(buffer.toString());
+			}
+			ps.println("</body></html>");
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	private String hexRGB(org.eclipse.swt.graphics.Color foreground) {
+		if (foreground != null)
+			return "#" + hex(foreground.getRed()) + hex(foreground.getGreen()) + hex(foreground.getBlue());
+		return "black";
+	}
+
+	private String hex(int r) {
+		String s =  Integer.toHexString(r);
+		if (s.length() < 2)
+			s = "0" + s;
+		return s;
 	}
 
 	protected void saveModel(String filename) {
@@ -80,10 +146,13 @@ public abstract class ImageDiagramEditor extends XtextEditor implements Runnable
 	}
 
 	abstract protected void createDiagram(URI diagramURI, URI modelURI);
-	abstract protected void updateModel(XtextResourceSet resourceSet, Resource xtextResource);
+
+	abstract protected void updateModel(XtextResourceSet resourceSet,
+			Resource xtextResource);
 
 	protected String extension;
 	ArrayList<IResource> added = new ArrayList<IResource>();
+
 	public void initialise() {
 		ResourcesPlugin.getWorkspace().addResourceChangeListener(
 				new IResourceChangeListener() {
@@ -188,7 +257,8 @@ public abstract class ImageDiagramEditor extends XtextEditor implements Runnable
 			}
 			added.clear();
 			try {
-				Thread.sleep(1000); // 0.2 seconds maybe too short, but 2 seconds
+				Thread.sleep(1000); // 0.2 seconds maybe too short, but 2
+									// seconds
 									// seem to be too long!
 			} catch (InterruptedException e) {
 				e.printStackTrace();
