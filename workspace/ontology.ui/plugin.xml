@@ -6,7 +6,7 @@
     <extension
             point="org.eclipse.ui.editors">
         <editor
-            class="eu.securechange.ontology.ui.OntologyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
+            class="eu.securechange.ontology.ui.OntologyExecutableExtensionFactory:eu.securechange.ontology.ui.OntologyEditor"
             contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
             default="true"
             extensions="ontology"

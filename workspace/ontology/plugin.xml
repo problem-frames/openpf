@@ -12,7 +12,6 @@
   </extension>
 
   <extension point="core.example">
-      <!-- local -->
       <example file="Ontology.xtext"/>
   </extension>
  
