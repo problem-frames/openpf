@@ -16,7 +16,7 @@ public class OntologyEditor extends ImageDiagramEditor {
 		super();
 		extension = "ontology";
 	}
-	
+
 	@Override
 	protected void updateModel(XtextResourceSet resourceSet,
 			Resource xtextResource) {
