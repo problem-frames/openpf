@@ -66,7 +66,9 @@ public class DependencyEditor extends ImageDiagramEditor {
 		return pd1;
 	}
 	
-	protected void createDiagram(URI diagramURI, URI modelURI) {
+	@Override
+	protected void createDiagram(URI diagramURI, URI modelURI, Resource xtextResource) {
+		super.createDiagram(diagramURI, modelURI, xtextResource);
 		DependencyDiagramEditorUtil.createDiagram(diagramURI, modelURI,
 				new NullProgressMonitor());
 	}

@@ -17,9 +17,6 @@ public class RBACEditor extends ImageDiagramEditor {
 	
 	@Override
 	protected void updateModel(XtextResourceSet resourceSet, Resource xtextResource) {
-//		for (TreeIterator<EObject> it= xtextResource.getAllContents(); it.hasNext();) {
-//			EObject o = it.next();
-//		}
 	}
 	
 	public RBACEditor() {
@@ -28,7 +25,8 @@ public class RBACEditor extends ImageDiagramEditor {
 	}
 
 	@Override
-	protected void createDiagram(URI diagramURI, URI modelURI) {
+	protected void createDiagram(URI diagramURI, URI modelURI, Resource xtextResource) {
+		super.createDiagram(diagramURI, modelURI, xtextResource);
 		RBACDiagramEditorUtil.createDiagram(diagramURI, modelURI,
 				new NullProgressMonitor());
 	}	

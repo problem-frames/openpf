@@ -64,7 +64,8 @@ public class ProblemEditor extends UncalEditor {
 	}
 
 	@Override
-	protected void createDiagram(URI diagramURI, URI modelURI) {
+	protected void createDiagram(URI diagramURI, URI modelURI, Resource xtextResource) {
+		super.createDiagram(diagramURI, modelURI, xtextResource);
 		ProblemDiagramEditorUtil.createDiagram(diagramURI, modelURI,
 				new NullProgressMonitor());
 	}	

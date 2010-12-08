@@ -8,6 +8,7 @@ import java.util.Scanner;
 import java.util.Set;
 
 import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.NullProgressMonitor;
@@ -37,7 +38,14 @@ public class ArgumentEditor extends ImageDiagramEditor {
 		super();
 		extension = "argument";
 	}
-
+	
+	@Override
+	protected void deleteGeneratedFiles(IResource res) {
+		super.deleteGeneratedFiles(res);
+		deleteFile(res, ".*\\.e");
+		deleteFile(res, ".*\\.e\\.txt");
+	}
+	
 	void updateRound(Argument a) {
 		if (a.eContainer() != null && a.eContainer() instanceof Argument) {
 			Argument parent = (Argument) a.eContainer();
@@ -340,7 +348,8 @@ public class ArgumentEditor extends ImageDiagramEditor {
 		
 	}
 
-	protected void createDiagram(URI diagramURI, URI modelURI) {
+	protected void createDiagram(URI diagramURI, URI modelURI, Resource xtextResource) {
+		super.createDiagram(diagramURI, modelURI, xtextResource);
 		ArgumentDiagramEditorUtil.createDiagram(diagramURI, modelURI,
 				new NullProgressMonitor());
 	}

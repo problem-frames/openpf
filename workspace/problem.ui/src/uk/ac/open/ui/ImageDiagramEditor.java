@@ -1,18 +1,19 @@
 package uk.ac.open.ui;
 
-import java.awt.Color;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.ArrayList;
 
+import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IResourceChangeEvent;
 import org.eclipse.core.resources.IResourceChangeListener;
 import org.eclipse.core.resources.IResourceDelta;
 import org.eclipse.core.resources.IResourceDeltaVisitor;
+import org.eclipse.core.resources.IWorkspace;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.resources.WorkspaceJob;
 import org.eclipse.core.runtime.CoreException;
@@ -24,10 +25,17 @@ import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.StyleRange;
 import org.eclipse.swt.custom.StyledText;
 import org.eclipse.swt.custom.StyledTextContent;
+import org.eclipse.ui.IEditorPart;
+import org.eclipse.ui.IWorkbenchPage;
+import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PartInitException;
+import org.eclipse.ui.PlatformUI;
+import org.eclipse.ui.ide.IDE;
 import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.resource.XtextResourceSet;
 import org.eclipse.xtext.ui.editor.XtextEditor;
@@ -50,28 +58,84 @@ public abstract class ImageDiagramEditor extends XtextEditor implements
 		super.performSave(overwrite, monitor);
 		String filename = this.getResource().getFullPath().toString();
 		saveModel(filename);
-		String file = getFilename(filename);
-//		System.out.println(file);
-		saveText(file);
+	}
+
+	private String getFile(String filename) {
+		try {
+			return ResourcesPlugin.getWorkspace().getRoot().getLocation()
+					.toFile().getAbsolutePath()
+					+ filename;
+		} catch (IllegalStateException i) {
+			return null;
+		}
 	}
 
 	private String getFilename(String filename) {
-		return ResourcesPlugin.getWorkspace().getRoot().getLocation().toFile().getAbsolutePath() + filename + ".html";
+		try {
+			return ResourcesPlugin.getWorkspace().getRoot().getLocation()
+					.toFile().getAbsolutePath()
+					+ filename + ".html";
+		} catch (IllegalStateException i) {
+			return null;
+		}
 	}
 
-	private void saveText(String filename) {
-		StyledText widget = getSourceViewer().getTextWidget();
+	IEditorPart openEditor;
+	private void saveText(final URI uri) {
+		final String file = uri.toFileString();
+		final String original = getFile(file);
+		File fileToOpen = new File(original);
+		String filename = getFilename(file);
+		File fileToCreate = new File(filename);
+		if (fileToOpen.exists() && fileToOpen.isFile()
+				&& !fileToCreate.exists()) {			
+			PlatformUI.getWorkbench().getDisplay().syncExec(new Runnable() {
+				public void run() {
+					try {
+						IWorkbenchWindow dw = PlatformUI.getWorkbench().getActiveWorkbenchWindow();
+						if (dw != null) {
+							IWorkbenchPage page = dw.getActivePage();
+							if (page != null) {
+								IWorkspace ws = ResourcesPlugin.getWorkspace();
+								openEditor  = IDE.openEditor(page, ws.getRoot().getFile(new Path(file)), true);
+							}
+						}
+					} catch (PartInitException e) {
+					}
+				}
+			});
+			// save the opened diagram into an image
+			if (openEditor != null) {
+				PlatformUI.getWorkbench().getDisplay().syncExec(new Runnable() {
+					public void run() {
+					        if (openEditor instanceof ImageDiagramEditor) {
+				        	ImageDiagramEditor e = (ImageDiagramEditor) openEditor;
+				        	if (e.getSourceViewer() != null) {
+				        		StyledText widget = e.getSourceViewer().getTextWidget();
+						        if (widget!=null && ! widget.isDisposed()) {
+						    		saveHTML(widget, file);
+						        }
+				        	}
+						}
+					}
+				});
+			}
+		}
+	}
+
+	private void saveHTML(StyledText widget, String file) {
 		StyledTextContent content = widget.getContent();
 		StyleRange[] ranges = widget.getStyleRanges();
 		try {
+			String filename = getFilename(file);
 			PrintStream ps = new PrintStream(new File(filename));
 			ps.println("<html><body>");
 			for (StyleRange r : ranges) {
 				String text = content.getTextRange(r.start, r.length);
 				StringBuffer buffer = new StringBuffer();
-				text = text.replaceAll("\n","<br/>");
-				text = text.replaceAll(" ","&nbsp;");
-				text = text.replaceAll("\t","&nbsp;");
+				text = text.replaceAll("\n", "<br/>");
+				text = text.replaceAll(" ", "&nbsp;");
+				text = text.replaceAll("\t", "&nbsp;");
 				buffer.append("<font color=\"" + hexRGB(r.foreground) + "\">");
 				switch (r.fontStyle) {
 				case SWT.BOLD:
@@ -91,19 +155,19 @@ public abstract class ImageDiagramEditor extends XtextEditor implements
 			}
 			ps.println("</body></html>");
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
 	private String hexRGB(org.eclipse.swt.graphics.Color foreground) {
 		if (foreground != null)
-			return "#" + hex(foreground.getRed()) + hex(foreground.getGreen()) + hex(foreground.getBlue());
+			return "#" + hex(foreground.getRed()) + hex(foreground.getGreen())
+					+ hex(foreground.getBlue());
 		return "black";
 	}
 
 	private String hex(int r) {
-		String s =  Integer.toHexString(r);
+		String s = Integer.toHexString(r);
 		if (s.length() < 2)
 			s = "0" + s;
 		return s;
@@ -141,11 +205,22 @@ public abstract class ImageDiagramEditor extends XtextEditor implements
 				+ extension;
 		URI modelURI = URI.createURI(newfile);
 		if (diagramURI != null) {
-			createDiagram(diagramURI, modelURI);
+			createDiagram(diagramURI, modelURI, xtextResource);
 		}
+		saveText(xtextResource.getURI());
 	}
 
-	abstract protected void createDiagram(URI diagramURI, URI modelURI);
+	protected void createDiagram(URI diagramURI, URI modelURI,
+			Resource xtextResource) {
+		Resource xmiResource = new XMIResourceFactoryImpl()
+				.createResource(modelURI.appendFileExtension("xmi"));
+		xmiResource.getContents().add(xtextResource.getContents().get(0));
+		try {
+			xmiResource.save(null);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 
 	abstract protected void updateModel(XtextResourceSet resourceSet,
 			Resource xtextResource);
@@ -199,9 +274,7 @@ public abstract class ImageDiagramEditor extends XtextEditor implements
 									IProgressMonitor monitor)
 									throws CoreException {
 								for (IResource res : removed) {
-									deleteFile(res, extension + ".pdf");
-									deleteFile(res, extension + ".png");
-									deleteFile(res, extension + "_diagram");
+									deleteGeneratedFiles(res);
 								}
 								removed.clear();
 								return Status.OK_STATUS;
@@ -213,6 +286,20 @@ public abstract class ImageDiagramEditor extends XtextEditor implements
 	}
 
 	/**
+	 * Delete the files generated from the resource
+	 * 
+	 * @param res
+	 *            -- the resource
+	 */
+	protected void deleteGeneratedFiles(IResource res) {
+		deleteFile(res, extension + ".pdf");
+		deleteFile(res, extension + ".png");
+		deleteFile(res, extension + "_diagram");
+		deleteFile(res, extension + ".xmi");
+		deleteFile(res, extension + ".html");
+	}
+
+	/**
 	 * delete the generated file with the extension if they exist
 	 * 
 	 * @param original
@@ -220,14 +307,40 @@ public abstract class ImageDiagramEditor extends XtextEditor implements
 	 * @param extension
 	 *            -- the extension to look at
 	 */
-	private void deleteFile(IResource original, String extension) {
-		IPath path = original.getFullPath().removeFileExtension()
-				.addFileExtension(extension);
+	protected void deleteFile(IResource original, String extension) {
+		IPath base = original.getFullPath().removeFileExtension();
+		IPath path = base.addFileExtension(extension);
 		IResource resource = ResourcesPlugin.getWorkspace().getRoot()
 				.findMember(path);
-		if (resource != null && resource.exists()) {
+		if (!extension.contains("*")) {
+			if (resource != null && resource.exists()) {
+				try {
+					resource.delete(true, new NullProgressMonitor());
+				} catch (CoreException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		IResource parent = original.getParent();
+		IContainer[] folders = ResourcesPlugin.getWorkspace().getRoot()
+				.findContainersForLocationURI(parent.getLocationURI());
+		for (IContainer f : folders) {
 			try {
-				resource.delete(true, new NullProgressMonitor());
+				for (IResource r : f.members()) {
+					IPath p = r.getFullPath();
+					String ext = "";
+					while (p != p.removeFileExtension()) {
+						ext = "." + p.getFileExtension() + ext;
+						p = p.removeFileExtension();
+					}
+					if (p.equals(base)) {
+						// System.out.println(ext + " matches " + extension +
+						// " = " + ext.matches(extension));
+						if (ext.matches(extension)) {
+							r.delete(true, new NullProgressMonitor());
+						}
+					}
+				}
 			} catch (CoreException e) {
 				e.printStackTrace();
 			}
