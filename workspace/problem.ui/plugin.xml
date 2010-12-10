@@ -6,7 +6,36 @@
    <extension point="org.eclipse.ui.startup">
      <startup class="uk.ac.open.ui.ProblemStartup"/>
    </extension>
-   
+ 
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            objectClass="org.eclipse.core.resources.IFile"
+            nameFilter="*.xmi"
+            id="contribution1">
+         <menu
+               label="Save XMI to"
+               path="additions"
+               id="menu1">
+            <separator
+                  name="group1">
+            </separator>
+         </menu>
+         <action
+               class="uk.ac.open.ui.XMILoader"
+               icon="icons/example.gif"
+               id="XMILoaderAction"
+               label="Xtext"
+               menubarPath="menu1/group1"
+               tooltip="Xtext">
+         </action>
+      </objectContribution>
+   </extension>
+   <extension
+         point="core.convertor">
+  		<convertor id="XMI2Xtext" class="uk.ac.open.ui.ImageDiagramEditor"
+            input="xmi" output=""/>
+   </extension>
     <extension
             point="org.eclipse.ui.editors">
         <editor

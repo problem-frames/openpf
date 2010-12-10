@@ -24,7 +24,10 @@ import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.StyleRange;
@@ -40,19 +43,38 @@ import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.resource.XtextResourceSet;
 import org.eclipse.xtext.ui.editor.XtextEditor;
 
+import edu.toronto.cs.openome.core.convertor.IConvertor;
+
 /**
  * 
  * @author yy66
  * @generate NOT
  */
-public abstract class ImageDiagramEditor extends XtextEditor implements
-		Runnable {
+public class ImageDiagramEditor extends XtextEditor implements
+		Runnable, IConvertor {
 
-	protected ImageDiagramEditor() {
+	public ImageDiagramEditor() {
 		Thread runner = new Thread(this);
 		runner.start();
 	}
 
+	public void convert(String input, String output) {
+            ResourceSet resourceSet = new ResourceSetImpl();
+            URI inputURI = URI.createFileURI(input);
+            Resource inputResource = resourceSet.getResource(inputURI, true);
+            if (inputResource != null && inputResource.getContents().size() == 1) {
+                    EObject topElement = inputResource.getContents().get(0);
+                    XtextResource outputResource = (XtextResource) resourceSet.createResource(URI.createFileURI(output));
+                    outputResource.getContents().clear();
+                    outputResource.getContents().add(topElement);
+                    try {
+						outputResource.save(null);
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+            }
+	}	
+	
 	@Override
 	public void performSave(boolean overwrite, IProgressMonitor monitor) {
 		super.performSave(overwrite, monitor);
@@ -222,8 +244,10 @@ public abstract class ImageDiagramEditor extends XtextEditor implements
 		}
 	}
 
-	abstract protected void updateModel(XtextResourceSet resourceSet,
-			Resource xtextResource);
+	protected void updateModel(XtextResourceSet resourceSet,
+			Resource xtextResource) {
+		
+	}
 
 	protected String extension;
 	ArrayList<IResource> added = new ArrayList<IResource>();

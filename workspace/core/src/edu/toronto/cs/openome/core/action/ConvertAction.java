@@ -36,11 +36,8 @@ public class ConvertAction extends ExtensionReader implements IObjectActionDeleg
 	protected void performConversion(IConfigurationElement convertor, String[] args) {
 		String input = convertor.getAttribute("input");
 		String output = convertor.getAttribute("output");
-		//String classname = convertor.getAttribute("class");
 		if (args[0].endsWith(input) && args[1].endsWith(output)) {
 			try {
-//			  System.out.println(classname);
-//			  Debug.DEBUG_LOADER = true;
 			  IConvertor cv = (IConvertor) convertor.createExecutableExtension("class");
 			  Debug.DEBUG_LOADER = false;
 		      cv.convert(args[0], args[1]);
