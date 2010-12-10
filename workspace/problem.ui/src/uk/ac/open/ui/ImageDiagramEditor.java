@@ -151,7 +151,6 @@ public class ImageDiagramEditor extends XtextEditor implements
 		try {
 			String filename = getFilename(file);
 			PrintStream ps = new PrintStream(new File(filename));
-			ps.println("<html><body>");
 			for (StyleRange r : ranges) {
 				String text = content.getTextRange(r.start, r.length);
 				StringBuffer buffer = new StringBuffer();
@@ -175,7 +174,6 @@ public class ImageDiagramEditor extends XtextEditor implements
 				buffer.append("</font>");
 				ps.println(buffer.toString());
 			}
-			ps.println("</body></html>");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
