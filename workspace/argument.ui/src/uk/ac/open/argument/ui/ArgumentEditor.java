@@ -348,6 +348,7 @@ public class ArgumentEditor extends ImageDiagramEditor {
 		
 	}
 
+	@Override
 	protected void createDiagram(URI diagramURI, URI modelURI, Resource xtextResource) {
 		super.createDiagram(diagramURI, modelURI, xtextResource);
 		ArgumentDiagramEditorUtil.createDiagram(diagramURI, modelURI,
