@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/it.unitn.disi.sistar.modeling/src"
+    modelPluginID="it.unitn.disi.sistar.modeling" modelName="Tropos" importerID="org.eclipse.emf.importer.ecore">
+  <foreignModel>tropos.ecore</foreignModel>
+  <genPackages prefix="Tropos" basePackage="it.unitn.disi.sistar.modeling" disposableProviderFactory="true"
+      ecorePackage="tropos.ecore#/">
+    <genEnums ecoreEnum="tropos.ecore#//EActorType">
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EActorType/ACTOR"/>
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EActorType/AGENT"/>
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EActorType/ROLE"/>
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EActorType/POSITION"/>
+    </genEnums>
+    <genEnums ecoreEnum="tropos.ecore#//EServiceType">
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EServiceType/GOAL"/>
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EServiceType/SOFTGOAL"/>
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EServiceType/TASK"/>
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EServiceType/RESOURCE"/>
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EServiceType/EVENT"/>
+    </genEnums>
+    <genEnums ecoreEnum="tropos.ecore#//EAssociationType">
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EAssociationType/IS_PART_OF"/>
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EAssociationType/IS_A"/>
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EAssociationType/PLAY"/>
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EAssociationType/COVER"/>
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EAssociationType/OCCUPY"/>
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EAssociationType/SUPERVISE"/>
+    </genEnums>
+    <genEnums ecoreEnum="tropos.ecore#//ECompositionType">
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//ECompositionType/AND"/>
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//ECompositionType/OR"/>
+    </genEnums>
+    <genEnums ecoreEnum="tropos.ecore#//EContributionType">
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EContributionType/PP"/>
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EContributionType/P"/>
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EContributionType/M"/>
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EContributionType/MM"/>
+    </genEnums>
+    <genEnums ecoreEnum="tropos.ecore#//EDependencyType">
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EDependencyType/DEPENDENCY"/>
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EDependencyType/DELEGATION_EXECUTION"/>
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EDependencyType/DELEGATION_PERMISSION"/>
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EDependencyType/TRUST_EXECUTION"/>
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EDependencyType/TRUST_PERMISSION"/>
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EDependencyType/DISTRUST_EXECUTION"/>
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EDependencyType/DISTRUST_PERMISSION"/>
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EDependencyType/TRUST_MONITOR"/>
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EDependencyType/MONITORING_EXECUTION"/>
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EDependencyType/MONITORING_PERMISSION"/>
+    </genEnums>
+    <genEnums ecoreEnum="tropos.ecore#//EOwnershipType">
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EOwnershipType/OWN"/>
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EOwnershipType/REQUEST"/>
+      <genEnumLiterals ecoreEnumLiteral="tropos.ecore#//EOwnershipType/PROVIDE"/>
+    </genEnums>
+    <genClasses ecoreClass="tropos.ecore#//Diagram">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tropos.ecore#//Diagram/title"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tropos.ecore#//Diagram/object"/>
+    </genClasses>
+    <genClasses ecoreClass="tropos.ecore#//GraphicalObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tropos.ecore#//GraphicalObject/name"/>
+    </genClasses>
+    <genClasses ecoreClass="tropos.ecore#//Actor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tropos.ecore#//Actor/actorType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tropos.ecore#//Actor/services"/>
+    </genClasses>
+    <genClasses ecoreClass="tropos.ecore#//Service">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tropos.ecore#//Service/serviceType"/>
+    </genClasses>
+    <genClasses ecoreClass="tropos.ecore#//Relation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tropos.ecore#//Relation/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tropos.ecore#//Relation/target"/>
+    </genClasses>
+    <genClasses ecoreClass="tropos.ecore#//Association">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tropos.ecore#//Association/associationType"/>
+    </genClasses>
+    <genClasses ecoreClass="tropos.ecore#//Composition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tropos.ecore#//Composition/compositionType"/>
+    </genClasses>
+    <genClasses ecoreClass="tropos.ecore#//Contribution">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tropos.ecore#//Contribution/contributionType"/>
+    </genClasses>
+    <genClasses ecoreClass="tropos.ecore#//Dependency">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tropos.ecore#//Dependency/dependencyType"/>
+    </genClasses>
+    <genClasses ecoreClass="tropos.ecore#//Ownership">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tropos.ecore#//Ownership/ownershipType"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

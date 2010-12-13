@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tropos"
+    nsURI="http://www.troposproject.org" nsPrefix="tr">
+  <eClassifiers xsi:type="ecore:EClass" name="Diagram">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="TroposDiagram"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" upperBound="-1"
+        eType="#//GraphicalObject" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GraphicalObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Actor" eSuperTypes="#//GraphicalObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="actorType" lowerBound="1"
+        eType="#//EActorType" defaultValueLiteral="AGENT"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="services" upperBound="-1"
+        eType="#//Service" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EActorType">
+    <eLiterals name="ACTOR"/>
+    <eLiterals name="AGENT" value="1"/>
+    <eLiterals name="ROLE" value="2"/>
+    <eLiterals name="POSITION" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Service" eSuperTypes="#//GraphicalObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceType" lowerBound="1"
+        eType="#//EServiceType" defaultValueLiteral="GOAL"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceProperties" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EServiceType">
+    <eLiterals name="GOAL"/>
+    <eLiterals name="SOFTGOAL" value="1"/>
+    <eLiterals name="TASK" value="2"/>
+    <eLiterals name="RESOURCE" value="3"/>
+    <eLiterals name="EVENT" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Relation" eSuperTypes="#//GraphicalObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//GraphicalObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//GraphicalObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Association" eSuperTypes="#//Relation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="associationType" lowerBound="1"
+        eType="#//EAssociationType" defaultValueLiteral="IS_PART_OF"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EAssociationType">
+    <eLiterals name="IS_PART_OF"/>
+    <eLiterals name="IS_A" value="1"/>
+    <eLiterals name="PLAY" value="2"/>
+    <eLiterals name="COVER" value="3"/>
+    <eLiterals name="OCCUPY" value="4"/>
+    <eLiterals name="SUPERVISE" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Composition" eSuperTypes="#//Relation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="compositionType" lowerBound="1"
+        eType="#//ECompositionType" defaultValueLiteral="AND"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ECompositionType">
+    <eLiterals name="AND"/>
+    <eLiterals name="OR" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Contribution" eSuperTypes="#//Relation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="contributionType" lowerBound="1"
+        eType="#//EContributionType" defaultValueLiteral="PP"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="satType" lowerBound="1"
+        eType="#//ESATType" defaultValueLiteral="NA"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="weight" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="relationshipType" lowerBound="1"
+        eType="#//ERelationshipType" defaultValueLiteral="CONTRIBUTION"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EContributionType">
+    <eLiterals name="PP"/>
+    <eLiterals name="P" value="1"/>
+    <eLiterals name="M" value="2"/>
+    <eLiterals name="MM" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Dependency" eSuperTypes="#//Relation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dependencyType" lowerBound="1"
+        eType="#//EDependencyType" defaultValueLiteral="DELEGATION_EXECUTION"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dependencyProperties" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EDependencyType">
+    <eLiterals name="DEPENDENCY"/>
+    <eLiterals name="DELEGATION_EXECUTION" value="1"/>
+    <eLiterals name="DELEGATION_PERMISSION" value="2"/>
+    <eLiterals name="TRUST_EXECUTION" value="3"/>
+    <eLiterals name="TRUST_PERMISSION" value="4" literal="TRUST_PERMISSION"/>
+    <eLiterals name="DISTRUST_EXECUTION" value="5"/>
+    <eLiterals name="DISTRUST_PERMISSION" value="6"/>
+    <eLiterals name="TRUST_MONITOR" value="7"/>
+    <eLiterals name="MONITORING_EXECUTION" value="8"/>
+    <eLiterals name="MONITORING_PERMISSION" value="9"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Ownership" eSuperTypes="#//Relation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ownershipType" lowerBound="1"
+        eType="#//EOwnershipType" defaultValueLiteral="OWN"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="instantiation" lowerBound="1"
+        eType="#//EInstantiationType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EOwnershipType">
+    <eLiterals name="OWN"/>
+    <eLiterals name="REQUEST" value="1"/>
+    <eLiterals name="PROVIDE" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MeansEnd" eSuperTypes="#//Relation"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="ESATType">
+    <eLiterals name="SAT" literal="S"/>
+    <eLiterals name="DEN" literal="D"/>
+    <eLiterals name="NA" literal="NA"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ERelationshipType">
+    <eLiterals name="CONTRIBUTION"/>
+    <eLiterals name="IMPACT" value="1"/>
+    <eLiterals name="ALLEVIATION" value="2" literal="ALLEVIATION"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CustomRelation" eSuperTypes="#//Relation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="predicate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EInstantiationType">
+    <eLiterals name="EXISTENTIAL"/>
+    <eLiterals name="UNIVERSAL" value="1"/>
+  </eClassifiers>
+</ecore:EPackage>

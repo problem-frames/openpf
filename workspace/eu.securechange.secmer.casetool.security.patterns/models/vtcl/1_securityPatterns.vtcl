@@ -1,0 +1,10 @@
+namespace secmer;
+
+machine security
+{
+	pattern untrustedDelegation(Act1, Act2, Dependum) = {
+		find secmer.ontology.delegation(Act1, Act2, Dependum);
+		neg find secmer.ontology.trust(Act1, Act2, Dependum);
+	}
+	
+}

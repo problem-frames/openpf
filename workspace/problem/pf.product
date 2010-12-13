@@ -108,8 +108,22 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <plugin id="edu.toronto.cs.openome_model.diagram"/>
       <plugin id="edu.toronto.cs.openome_model.edit"/>
       <plugin id="edu.toronto.cs.openome_model.editor"/>
+      <plugin id="eu.securechange.secmer.casetool.core"/>
+      <plugin id="eu.securechange.secmer.casetool.model"/>
+      <plugin id="eu.securechange.secmer.casetool.model.edit"/>
+      <plugin id="eu.securechange.secmer.casetool.model.editor"/>
+      <plugin id="eu.securechange.secmer.casetool.security.patterns"/>
+      <plugin id="eu.securechange.secmer.casetool.security.rules"/>
+      <plugin id="eu.securechange.secmer.casetool.sistar"/>
+      <plugin id="eu.securechange.secmer.casetool.sistar.synch"/>
+      <plugin id="eu.securechange.sistaer.model.editor.extra"/>
       <plugin id="event"/>
       <plugin id="event.ui"/>
+      <plugin id="hu.bme.mit.incquery.core"/>
+      <plugin id="hu.bme.mit.incquery.gui"/>
+      <plugin id="hu.bme.mit.incquery.model"/>
+      <plugin id="hu.bme.mit.incquery.model.edit"/>
+      <plugin id="hu.bme.mit.incquery.model.editor"/>
       <plugin id="hu.bme.mit.viatra2.viatraDSM.grabats2009live"/>
       <plugin id="hu.bme.mit.viatra2.viatraDSM.skypesim"/>
       <plugin id="hu.optxware.emf2viatra.core"/>
@@ -117,6 +131,13 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <plugin id="istar.diagram.extensions"/>
       <plugin id="istar.generator"/>
       <plugin id="istar.ui"/>
+      <plugin id="it.unitn.disi.sistar"/>
+      <plugin id="it.unitn.disi.sistar.evolution"/>
+      <plugin id="it.unitn.disi.sistar.evolution.edit"/>
+      <plugin id="it.unitn.disi.sistar.evolution.editor"/>
+      <plugin id="it.unitn.disi.sistar.modeling"/>
+      <plugin id="it.unitn.disi.sistar.modeling.diagram"/>
+      <plugin id="it.unitn.disi.sistar.modeling.edit"/>
       <plugin id="javax.servlet"/>
       <plugin id="javax.servlet.jsp"/>
       <plugin id="javax.xml"/>
@@ -441,8 +462,8 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <plugin id="org.eclipse.jdt.junit.runtime"/>
       <plugin id="org.eclipse.jdt.junit4.runtime"/>
       <plugin id="org.eclipse.jdt.launching"/>
-      <plugin id="org.eclipse.jdt.launching.macosx" fragment=""/>
-      <plugin id="org.eclipse.jdt.launching.ui.macosx" fragment=""/>
+      <plugin id="org.eclipse.jdt.launching.macosx"/>
+      <plugin id="org.eclipse.jdt.launching.ui.macosx"/>
       <plugin id="org.eclipse.jdt.ui"/>
       <plugin id="org.eclipse.jem.util"/>
       <plugin id="org.eclipse.jface"/>
@@ -580,6 +601,9 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <plugin id="org.eclipse.update.core.win32" fragment="true"/>
       <plugin id="org.eclipse.update.scheduler"/>
       <plugin id="org.eclipse.update.ui"/>
+      <plugin id="org.eclipse.viatra2.compiled.emf.patternmatcher"/>
+      <plugin id="org.eclipse.viatra2.compiled.emf.runtime"/>
+      <plugin id="org.eclipse.viatra2.compiled.emf.term"/>
       <plugin id="org.eclipse.viatra2.core2"/>
       <plugin id="org.eclipse.viatra2.editor"/>
       <plugin id="org.eclipse.viatra2.editor.text"/>
@@ -587,10 +611,12 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <plugin id="org.eclipse.viatra2.gtasm.interpreter.impl"/>
       <plugin id="org.eclipse.viatra2.gtasm.interpreter.term"/>
       <plugin id="org.eclipse.viatra2.gtasm.model"/>
+      <plugin id="org.eclipse.viatra2.gtasm.model.edit"/>
       <plugin id="org.eclipse.viatra2.gtasm.patternmatcher"/>
       <plugin id="org.eclipse.viatra2.gtasm.patternmatcher.impl"/>
       <plugin id="org.eclipse.viatra2.gtasm.patternmatcher.incremental"/>
       <plugin id="org.eclipse.viatra2.gtasm.patternmatcher.incremental.rete"/>
+      <plugin id="org.eclipse.viatra2.gtasm.support"/>
       <plugin id="org.eclipse.viatra2.gtasm.trigger"/>
       <plugin id="org.eclipse.viatra2.gtasm.typing.model"/>
       <plugin id="org.eclipse.viatra2.gui"/>
@@ -696,12 +722,12 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <plugin id="process.edit"/>
       <plugin id="process.editor"/>
       <plugin id="q7"/>
-      <plugin id="rbac" fragment=""/>
-      <plugin id="rbac.diagram" fragment=""/>
-      <plugin id="rbac.diagram.extensions" fragment=""/>
-      <plugin id="rbac.edit" fragment=""/>
-      <plugin id="rbac.generator" fragment=""/>
-      <plugin id="rbac.ui" fragment=""/>
+      <plugin id="rbac"/>
+      <plugin id="rbac.diagram"/>
+      <plugin id="rbac.diagram.extensions"/>
+      <plugin id="rbac.edit"/>
+      <plugin id="rbac.generator"/>
+      <plugin id="rbac.ui"/>
       <plugin id="uncal"/>
       <plugin id="uncal.generator"/>
       <plugin id="uncal.ui"/>
@@ -778,6 +804,7 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <feature id="org.eclipse.equinox.p2.user.ui"/>
       <feature id="org.eclipse.gmf.tooling"/>
       <feature id="rbac.feature" version="1.0.0.qualifier"/>
+      <feature id="it.unitn.disi.sistar.feature" version="0.997"/>
    </features>
 
 

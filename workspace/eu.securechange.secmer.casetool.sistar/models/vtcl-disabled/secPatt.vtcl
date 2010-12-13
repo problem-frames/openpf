@@ -1,0 +1,287 @@
+namespace requirements;
+import nemf.packages.ontology;
+
+machine securityProperties
+{
+// TRIGGERS
+	
+	/*
+	@Trigger('autoStart'='true')
+	 gtrule restoreConfidentiality(out RES) = {
+	 	precondition find confidentialityViolation(Asset, Actor, SecurityGoal)
+	 	action { 
+	 		println("Confidentiality of " + Asset + " has become violated.");
+	 		//new(...);
+	 	}
+	 }
+	@Trigger('autoStart'='true')
+	 gtrule restoreIntegrity(out RES) = {
+	 	precondition find integrityViolation(Asset, Actor, SecurityGoal)
+	 	action { 
+	 		println("Integrity of " + Asset + " has become violated.");
+	 		//new(...);
+	 	}
+	 }	 
+	 
+	*/
+	
+	
+	
+// SECURITY PATTERNS
+	
+	// Violations
+	// This pattern checks for resources that violate the securty property below	
+	 pattern confidentialityViolation(Asset, Actor, SecurityGoal) = {
+	 	find actorWantsAssetProtected(Actor, SecurityGoal, Asset);
+	 	find confidentialitySecurityGoal(SecurityGoal);
+	 	neg find confidentialitySatisfied(Asset, Actor, SecurityGoal);
+	 }
+	 pattern integrityViolation(Asset, Actor, SecurityGoal) = {
+	 	find actorWantsAssetProtected(Actor, SecurityGoal, Asset);
+	 	find integritySecurityGoal(SecurityGoal);
+	 	neg find integritySatisfied(Asset, Actor, SecurityGoal);
+	 }
+		
+	// Positive patterns
+	pattern confidentialitySatisfied(Asset, Actor, SecurityGoal) = {
+		find actorWantsAssetProtected(Actor, SecurityGoal, Asset);
+		find confidentialitySecurityGoal(SecurityGoal);		  
+		find actorActsToFulfillGoal(Actor, ENC, SecurityGoal);
+		find encryptionAction(ENC);
+	} or { //  other cases of confidentiality
+		find actorWantsAssetProtected(Actor, SecurityGoal, Asset);
+		find confidentialitySecurityGoal(SecurityGoal);
+		
+		find actor(OtherActor);
+		find doDelegation(Actor, OtherActor, SecurityGoal);
+		find trust(Actor, OtherActor, SecurityGoal);
+		
+		find actorActsToFulfillGoal(OtherActor, ENC, SecurityGoalReplica);
+		find encryptionAction(ENC);
+		find goalReplica(SecurityGoal, SecurityGoalReplica);
+	} 
+	pattern integritySatisfied(Asset, Actor, SecurityGoal) = {
+		find actorWantsAssetProtected(Actor, SecurityGoal, Asset);
+		find integritySecurityGoal(SecurityGoal);
+		find actorActsToFulfillGoal(Actor, SIG, SecurityGoal);
+		find signatureAction(SIG);
+	} or { //  other cases of integrity
+		find actorWantsAssetProtected(Actor, SecurityGoal, Asset);
+		find integritySecurityGoal(SecurityGoal);
+		
+		find actor(OtherActor);
+		find doDelegation(Actor, OtherActor, SecurityGoal);
+		find trust(Actor, OtherActor, SecurityGoal);
+		
+		find actorActsToFulfillGoal(OtherActor, SIG, SecurityGoalReplica);
+		find signatureAction(SIG);
+		find goalReplica(SecurityGoal, SecurityGoalReplica);
+	 } 
+	 		 	 
+	 
+// HELPERS	
+	pattern actorWantsAssetProtected(Actor, SecurityGoal, Asset) = {
+		find actorWantsGoal(Actor, SecurityGoal);
+		find securityGoal(SecurityGoal);
+		find protect(SecurityGoal, Asset);
+		find asset(Asset); 
+		find actorProvidesResource(Actor, Asset); // TODO remove this? what if someone else provides it?
+	}
+	pattern actorActsToFulfillGoal(Actor, Action, Goal) = {
+		find actor(Actor);
+		find carryOut(Actor, Action);
+		find Action(Action);
+		find fulfill(Action, Goal);
+	}
+ 
+  	pattern carryOut(Actor, Process) = {
+ 	 	find carryOutDirect(Actor, Process);
+ 	} or {
+ 		find carryOut(Actor, SuperProcess);
+ 	 	find decomposeDirect(SuperProcess, Process);	 	
+ 	}
+ 		 
+ 	pattern actorWantsGoal(Actor, Goal) = {
+ 	 	find actorWantsGoalDirect(Actor, Goal);
+ 	} or {
+ 		find actorWantsGoal(Actor, GParent);
+ 		find decomposeDirect(GParent, Goal);
+ 		// ignore composition type
+ 	}
+ 	
+ 	pattern doDelegation(Act1, Act2, Dependum) = {
+ 		find doDelegationDirect(Act1, Act2, Dependum);
+ 	} or {
+ 		find doDelegation(Act1, Act2, SuperDependum);
+ 		find decomposeDirect(SuperDependum, Dependum);
+ 	}
+ 	pattern canDelegation(Act1, Act2, Dependum) = {
+ 		find canDelegationDirect(Act1, Act2, Dependum);
+ 	} or {
+ 		find canDelegation(Act1, Act2, SuperDependum);
+ 		find decomposeDirect(SuperDependum, Dependum);
+ 	}
+ 	pattern trust(Act1, Act2, Dependum) = {
+ 		find trustDirect(Act1, Act2, Dependum);
+ 	} or {
+ 		find trust(Act1, Act2, SuperDependum);
+ 		find decomposeDirect(SuperDependum, Dependum);
+ 	}
+ 	
+// SYNTAX LEVEL, OU ONTOLOGY WRAPPERS
+ 	
+ 	pattern goalReplica(G1, G2) = {
+		find goal(G1);
+		G1 = G2;
+ 	 	// find goal(G2);
+		// check(name(G1) == name(G2)); // stupid Sistar...
+ 	}
+ 	
+ 	pattern decomposeDirectWithType(Parent, Child, CompositionType) = {
+ 		Requirement(Parent);
+   	 	Decomposes.target(T, Decomposes, Parent);  
+ 		Requirement(Child);
+   	 	Decomposes.source(S, Decomposes, Child);  
+  	 	Decomposes(Decomposes);
+  	 	Decomposes.type(CT, Decomposes, CompositionType);  
+ 		DecomposesType(CompositionType);		
+ 	}
+  	pattern decomposeDirect(Parent, Child) = {
+   	 	find decomposeDirectWithType(Parent, Child, CompositionType);
+ 	}
+ 			
+ 	
+ 	/*
+ 	pattern decomposeGoal(ParentGoal, ChildGoal, CompositionType) = {
+ 	 	find goal(ParentGoal);
+ 	 	find goal(ChildGoal);
+  	 	find decompose(ParentGoal, ChildGoal, CompositionType);
+ 	}
+ 	
+ 	pattern decomposeActivity(Activity, Action) = {
+ 		find Action(Action);
+ 		find activity(Activity);
+ 		find decompose(ParentGoal, ChildGoal, CompositionType);
+ 		//Composition.compositionType(CT, Rel, CompositionType);
+ 		//ECompositionType(CompositionType);
+ 		//check(value(CompositionType) == "AND");
+ 	} 	
+ 	*/
+ 	
+ 	pattern dependency(Act1, Act2, DependencyType, Dependum) = {
+ 	 	Actor(Act1);
+ 	 	Delegates.source(S, Delegates, Act1);
+ 	 	Delegates(Delegates);
+  	 	Delegates.target(T, Delegates, Act2);
+ 	 	Actor(Act2);
+ 	 	Delegates.'entity'(E, Delegates, Dependum);
+ 	 	Thing(Dependum);
+  	 	Delegates.type(DT, Delegates, DependencyType);  
+ 		nemf.ecore.datatypes.EString(DependencyType);	
+ 	}
+ 	pattern trustDirect(Act1, Act2, Dependum) = {
+ 	 	Actor(Act1);
+ 	 	Trusts.source(S, Trusts, Act1);
+ 	 	Trusts(Trusts);
+  	 	Trusts.target(T, Trusts, Act2);
+ 	 	Actor(Act2);
+ 	 	Trusts.'entity'(E, Trusts, Dependum);
+ 	 	Thing(Dependum);
+	} 
+ 	pattern doDelegationDirect(Act1, Act2, Dependum) = {
+		find dependency(Act1, Act2, DependencyType, Dependum);
+		check(toString(value(DependencyType)) == "DELEGATION_EXECUTION"); // TODO
+	} 
+ 	pattern canDelegationDirect(Act1, Act2, Dependum) = {
+		find dependency(Act1, Act2, DependencyType, Dependum);
+		check(toString(value(DependencyType)) == "DELEGATION_PERMISSION"); // TODO
+	} 
+ 	
+ 	 pattern actorWantsGoalDirect(Actor, Goal) = {
+		Actor(Actor);
+		Wants.source(S, Wants, Actor);
+ 	 	Wants(Wants);
+		Wants.target(T, Wants, Goal);
+ 	 	Requirement(Goal);
+ 	 }
+
+ 	
+ 	
+	pattern actor(Actor) = {
+		Actor(Actor);
+	}
+   	pattern activity(Activity) = {
+  		find Action(Activity);
+  	}  	  	
+  	pattern asset(Asset) = {
+ 	 	Asset(Asset);
+  	}
+ 	pattern goal(Goal) = {
+ 	 	Requirement(Goal); 	 	
+ 	} 	
+  	pattern antiGoal(Goal) = {
+ 	 	AntiRequirement(Goal); 	 	
+ 	} 	
+  	pattern securityGoal(Goal) = {
+ 	 	SecurityRequirement(Goal); 	 	
+ 	} 	
+  	pattern confidentialitySecurityGoal(Goal) = {
+ 	 	find securityGoal(Goal);
+ 	 	//find hasAnnotationID(Goal, AnnotationID);
+ 	 	//check(value(AnnotationID) == "security.securityGoal.confidentiality");
+ 	} 	  	
+ 	pattern integritySecurityGoal(Goal) = {
+ 	 	find securityGoal(Goal);
+ 	 	//find hasAnnotationID(Goal, AnnotationID);
+ 	 	//check(value(AnnotationID) == "security.securityGoal.integrity");
+ 	} 	
+ 	pattern Action(Action) = {
+ 	 	Action(Action);
+ 	}
+  	pattern encryptionAction(Action) = {
+ 	 	find Action(Action);
+ 	 	//find hasAnnotationID(Action, AnnotationID);
+ 	 	//check(value(AnnotationID) == "security.action.encryption");
+ 	} 	
+  	pattern signatureAction(Action) = {
+ 	 	find Action(Action);
+ 	 	//find hasAnnotationID(Action, AnnotationID);
+ 	 	//check(value(AnnotationID) == "security.action.signature");
+ 	}  	
+  	pattern protect(Goal, Asset) = { // TODO contributes?
+ 	 	find securityGoal(Goal);
+ 	 	find troposRelation(Rel, Goal, Asset);
+  	 	find asset(Asset);
+	 	find hasAnnotationID(Rel, AnnotationID);
+ 	 	check(value(AnnotationID) == "security.protect");
+ 	}  
+/*  pattern deny(AntiGoal, SecurityGoal) = {
+ 	 	find antiGoal(AntiGoal);
+ 	 	find securityGoal(SecurityGoal);
+ 	 	find troposRelation(Rel, AntiGoal, SecurityGoal);  	 	
+	 	find hasAnnotationID(Rel, AnnotationID);
+ 	 	check(value(AnnotationID) == "security.deny");
+ 	}*/
+  	pattern carryOutDirect(Actor, Activity) = {
+		Actor(Actor);
+		Does.source(S, Does, Actor);
+ 	 	Does(Does);
+		Does.target(T, Does, Activity);
+ 	 	Activity(Activity);
+ 	}  
+	pattern fulfill(Process, Proposition) = {
+		Process(Process);
+		Fulfils.source(S, Fulfils, Process);
+ 	 	Fulfils(Fulfils);
+		Fulfils.target(T, Fulfils, Proposition);
+ 	 	Proposition(Proposition);
+	} 
+	pattern actorProvidesResource(Actor, Resource) = {
+		Actor(Actor);
+		Provides.source(S, Provides, Actor);
+ 	 	Provides(Provides);
+		Provides.target(T, Provides, Resource);
+ 	 	Resource(Resource);
+	}	
+
+}

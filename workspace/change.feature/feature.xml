@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="change.feature"
-      label="Example files for integration with Viatra"
+      label="SECMER (SecureChangeModel4EvolvingRequirements)"
       version="1.0.0.qualifier"
-      provider-name="The Open University">
+      provider-name="BME">
 
    <description url="http://www.example.com/description">
       [Enter Feature Description here.]
@@ -25,6 +25,69 @@
 
    <plugin
          id="change"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="eu.securechange.secmer.casetool.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="eu.securechange.secmer.casetool.model"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="eu.securechange.secmer.casetool.model.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="eu.securechange.secmer.casetool.model.editor"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="eu.securechange.secmer.casetool.security.patterns"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="eu.securechange.secmer.casetool.security.rules"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="eu.securechange.secmer.casetool.sistar"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="eu.securechange.secmer.casetool.sistar.synch"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="eu.securechange.sistaer.model.editor.extra"
          download-size="0"
          install-size="0"
          version="0.0.0"

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="secmertool.presentation.SecMERToolModelWizardID"
+            name="%_UI_SecMERToolModelWizard_label"
+            class="secmertool.presentation.SecMERToolModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SecMERToolModelFile.gif">
+         <description>%_UI_SecMERToolModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="secmertool.presentation.SecMERToolEditorID"
+            name="%_UI_SecMERToolEditor_label"
+            icon="icons/full/obj16/SecMERToolModelFile.gif"
+            extensions="secmertool"
+            class="secmertool.presentation.SecMERToolEditor"
+            contributorClass="secmertool.presentation.SecMERToolActionBarContributor">
+      </editor>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="eu.securechange.secmer.casetool.runeditor.tropos"
+            name="Open Si* Tropos Diagram Editor">
+      </command>
+      <command
+            id="eu.securechange.secmer.casetool.runeditor.situation"
+            name="Open Situation Editor">
+      </command>
+   </extension>
+      
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:secmertool.presentation.SecMERToolEditorID">
+         <command
+               commandId="eu.securechange.secmer.casetool.runeditor.tropos"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="selection">
+                  <count
+                        value="1">
+                  </count>
+                  <iterate>
+                     <instanceof
+                           value="secmertool.SecMERIntegrationModel">
+                     </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:secmertool.presentation.SecMERToolEditorID">
+         <command
+               commandId="eu.securechange.secmer.casetool.runeditor.situation"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="selection">
+                  <count
+                        value="1">
+                  </count>
+                  <iterate>
+                     <instanceof
+                           value="secmertool.SecMERIntegrationModel">
+                     </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+      
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="actions.editor.OpenTroposEditor"
+            commandId="eu.securechange.secmer.casetool.runeditor.tropos">
+      </handler>
+      <handler
+            class="actions.editor.OpenSituationEditor"
+            commandId="eu.securechange.secmer.casetool.runeditor.situation">
+      </handler>
+   </extension>
+   
+
+</plugin>

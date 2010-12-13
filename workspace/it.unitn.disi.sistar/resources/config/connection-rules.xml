@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sd-config>
+	<filtering-rules>
+		<filter>
+			<name>Tropos Model</name>
+			<relation>Dependency</relation>
+		</filter>
+		<filter>
+			<name>Secure Tropos Model</name>
+			<relation>Own, Request, Provide</relation>
+		</filter>
+		<filter>
+			<name>Tropos Model</name>
+			<relation>
+				Supervise,Trust Execution,Trust Permission
+			</relation>
+		</filter>
+		<filter>
+			<name>Permission Delegation</name>
+			<relation>Delegation Permission</relation>
+		</filter>
+		<filter>
+			<name>Execution Dependency</name>
+			<relation>Delegation Execution</relation>
+		</filter>
+	</filtering-rules>
+	<connection-rules>
+		<relation name="COMPOSITION" type="AND,OR">
+			<connection>
+				<start>GOAL</start>
+				<end>GOAL</end>
+			</connection>
+			<connection>
+				<start>SOFTGOAL</start>
+				<end>SOFTGOAL</end>
+			</connection>
+			<connection>
+				<start>TASK</start>
+				<end>TASK</end>
+			</connection>
+			<connection>
+				<start>RESOURCE</start>
+				<end>RESOURCE</end>
+			</connection>
+			<connection>
+				<start>EVENT</start>
+				<end>EVENT</end>
+			</connection>
+		</relation>
+		<relation name="CONTRIBUTION" type="++,+,-,--">
+			<connection>
+				<start>GOAL,SOFTGOAL,TASK,RESOURCE,EVENT</start>
+				<end>GOAL,SOFTGOAL,TASK,RESOURCE,EVENT</end>
+			</connection>
+			<connection>
+				<start>EVENT</start>
+				<end>EVENT</end>
+			</connection>
+		</relation>
+		<relation name="IMPACT" type="++,+,-,--">
+			<connection>
+				<start>EVENT</start>
+				<end>GOAL,SOFTGOAL,TASK,RESOURCE,EVENT</end>
+			</connection>
+		</relation>
+		<relation name="ALLEVIATION" type="++,+,-,--">
+			<connection>
+				<start>TASK</start>
+				<end>IMPACT</end>
+			</connection>
+		</relation>
+		<relation name="IS_PART_OF">
+			<connection>
+				<start>ACTOR,ROLE,AGENT</start>
+				<end>ACTOR,ROLE,AGENT</end>
+			</connection>
+		</relation>
+		<relation name="IS_A">
+			<connection>
+				<start>ROLE</start>
+				<end>ROLE</end>
+			</connection>
+		</relation>
+		<relation name="PLAY">
+			<connection>
+				<start>AGENT</start>
+				<end>ROLE</end>
+			</connection>
+		</relation>
+		<relation name="COVER">
+			<connection>
+				<start>ROLE</start>
+				<end>POSITION</end>
+			</connection>
+		</relation>
+		<relation name="SUPERVISE">
+			<connection>
+				<start>ROLE</start>
+				<end>ROLE</end>
+			</connection>
+		</relation>
+		<relation name="OCCUPY">
+			<connection>
+				<start>AGENT</start>
+				<end>POSITION</end>
+			</connection>
+		</relation>
+		<relation name="MEANS_END">
+			<connection>
+				<start>TASK</start>
+				<end>GOAL,SOFTGOAL,RESOURCE</end>
+			</connection>
+			<connection>
+				<start>RESOURCE</start>
+				<end>GOAL,SOFTGOAL,TASK</end>
+			</connection>
+		</relation>
+		<relation name="OWN, REQUEST, PROVIDE, TEST">
+			<connection>
+				<start>ACTOR,ROLE,AGENT</start>
+				<end>GOAL,SOFTGOAL,TASK,RESOURCE</end>
+			</connection>
+		</relation>
+		<relation
+			name="DEPENDENCY,DELEGATION_EXECUTION,DELEGATION_PERMISSION,
+			TRUST_EXECUTION,TRUST_PERMISSION,DISTRUST_EXECUTION,DISTRUST_PERMISSION,
+			TRUST_MONITOR,MONITORING_PERMISSION, MONITORING_EXECUTION">
+			<connection>
+				<start>ACTOR,AGENT,ROLE</start>
+				<end>GOAL,SOFTGOAL,TASK,RESOURCE</end>
+			</connection>
+			<connection>
+				<start>GOAL,SOFTGOAL,TASK,RESOURCE</start>
+				<end>ACTOR,AGENT,ROLE</end>
+			</connection>
+			<connection>
+				<start>ACTOR,AGENT,ROLE</start>
+				<end>ACTOR,AGENT,ROLE</end>
+			</connection>
+		</relation>
+	</connection-rules>
+	<properties>
+		<object>
+			<name>SERVICE</name>
+			<property>COST,TIME,LOSS</property>
+		</object>	
+		<object>
+			<name>DELEGATION</name>
+			<property>DEPTH,CONDITION</property>
+		</object>	
+	</properties>
+	<relations>
+		<relation>
+			<id>TEST</id>
+			<name>Test Relation</name>
+			<description>A Test relation</description>
+			<!-- NONE,SOLID_ARROW,LINE_ARROW,BOX,SOLID_ARROW_FILL,BOX_FILL,DIAMOND,DIAMOND_FILL -->
+			<decorationSource>SOLID_ARROW_FILL</decorationSource>
+			<!-- NONE,SOLID_ARROW,LINE_ARROW,BOX,SOLID_ARROW_FILL,BOX_FILL,DIAMOND,DIAMOND_FILL -->
+			<decorationTarget>LINE_ARROW</decorationTarget>
+			<!-- NONE,ARROW,BOX -->
+			<decorationMiddle>BOX</decorationMiddle>
+			<decorationMiddleText>Test</decorationMiddleText>
+			<!--SOLID,DASHED,DOTTED -->
+			<connectionLineStyle>DOTTED</connectionLineStyle>	
+			<textSource>Source</textSource>	
+			<textMiddle>Middle</textMiddle>	
+			<textTarget>Target</textTarget>	
+			<icon>C:/test.png</icon>
+			<predicate>a_new_predicate</predicate>
+		</relation>
+	</relations>
+</sd-config>
+

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="secmertool"
+    nsURI="http://securechange.eu/secmer/tool" nsPrefix="SecmerTool">
+  <eClassifiers xsi:type="ecore:EClass" name="SecMERIntegrationModel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="TroposModel" lowerBound="1"
+        eType="ecore:EClass ../../it.unitn.disi.sistar.modeling/model/tropos.ecore#//Diagram"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="TroposResource" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SituationModel" eType="ecore:EClass ../../ontology/src-gen/eu/securechange/ontology/Ontology.ecore#//Situation"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="SituationResource" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referenceModels" upperBound="-1"
+        eType="#//ReferenceModel" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReferenceModel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="links" upperBound="-1"
+        eType="#//ReferenceLink" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReferenceLink"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedReferenceLink" eSuperTypes="#//ReferenceLink">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AAA"/>
+  <eSubpackages name="troposAspect" nsURI="http://securechange.eu/secmer/tool/aspects/tropos"
+      nsPrefix="TroposAspect">
+    <eClassifiers xsi:type="ecore:EClass" name="TroposReferenceModel" eSuperTypes="#//ReferenceModel"/>
+    <eClassifiers xsi:type="ecore:EClass" name="TroposActorLink" eSuperTypes="#//NamedReferenceLink">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="secmer" eType="ecore:EClass ../../ontology/src-gen/eu/securechange/ontology/Ontology.ecore#//Actor"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="tropos" eType="ecore:EClass ../../it.unitn.disi.sistar.modeling/model/tropos.ecore#//Actor"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TroposResourceLink" eSuperTypes="#//NamedReferenceLink">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="secmer" eType="ecore:EClass ../../ontology/src-gen/eu/securechange/ontology/Ontology.ecore#//Resource"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="tropos" eType="ecore:EClass ../../it.unitn.disi.sistar.modeling/model/tropos.ecore#//Service"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TroposTrustLink" eSuperTypes="#//ReferenceLink">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="secmer" eType="ecore:EClass ../../ontology/src-gen/eu/securechange/ontology/Ontology.ecore#//Trusts"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="tropos" eType="ecore:EClass ../../it.unitn.disi.sistar.modeling/model/tropos.ecore#//Dependency"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TroposDelegateLink" eSuperTypes="#//ReferenceLink">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="secmer" eType="ecore:EClass ../../ontology/src-gen/eu/securechange/ontology/Ontology.ecore#//Delegates"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="tropos" eType="ecore:EClass ../../it.unitn.disi.sistar.modeling/model/tropos.ecore#//Dependency"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

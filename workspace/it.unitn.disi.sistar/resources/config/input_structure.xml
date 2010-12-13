@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+
+<description>
+
+<types> 
+	<type>
+		<name>t_actor</name>
+	</type>
+	<type>
+		<name>t_goal</name>
+	</type>
+	<type>
+		<name>t_gtype</name>
+	</type>
+</types> 
+
+<predicates>
+	<predicate>
+    		<name>can_provide</name>
+		<related-type>t_actor</related-type>
+		<parameters>
+			<parameter>
+				<type>t_actor</type>
+			</parameter>
+			<parameter>
+				<type>t_goal</type>
+			</parameter>
+		</parameters>
+	</predicate>
+
+	<predicate>
+    		<name>can_provide_gt</name>
+		<related-type>t_actor</related-type>
+		<parameters>
+			<parameter>
+				<type>t_actor</type>
+			</parameter>
+			<parameter>
+				<type>t_gtype</type>
+			</parameter>
+		</parameters>
+	</predicate>
+
+	<predicate>
+    		<name>can_depend_on</name>
+		<related-type>t_actor</related-type>
+		<parameters>
+			<parameter>
+				<type>t_actor</type>
+			</parameter>
+			<parameter>
+				<type>t_actor</type>
+			</parameter>
+		</parameters>
+	</predicate>
+
+	<predicate>
+    		<name>can_depend_on_gt</name>
+		<related-type>t_actor</related-type>
+		<parameters>
+			<parameter>
+				<type>t_actor</type>
+			</parameter>
+			<parameter>
+				<type>t_actor</type>
+			</parameter>
+			<parameter>
+				<type>t_gtype</type>
+			</parameter>
+		</parameters>
+	</predicate>
+
+	<predicate>
+    		<name>can_depend_on_g</name>
+		<related-type>t_actor</related-type>
+		<parameters>
+			<parameter>
+				<type>t_actor</type>
+			</parameter>
+			<parameter>
+				<type>t_actor</type>
+			</parameter>
+			<parameter>
+				<type>t_goal</type>
+			</parameter>
+		</parameters>
+	</predicate>
+
+	<predicate>
+    		<name>requests</name>
+		<related-type>t_actor</related-type>
+		<parameters>
+			<parameter>
+				<type>t_actor</type>
+			</parameter>
+			<parameter>
+				<type>t_goal</type>
+			</parameter>
+		</parameters>
+	</predicate>
+
+	<predicate>
+    		<name>type</name>
+		<related-type>t_goal</related-type>
+		<parameters>
+			<parameter>
+				<type>t_goal</type>
+			</parameter>
+			<parameter>
+				<type>t_gtype</type>
+			</parameter>
+		</parameters>
+	</predicate>
+
+	<predicate>
+    		<name>and_subgoal</name>
+		<related-type>t_goal</related-type>
+		<parameters>
+			<parameter>
+				<type>t_goal</type>
+			</parameter>
+			<parameter>
+				<list-of>
+					<type>t_goal</type>
+				</list-of>
+			</parameter>
+		</parameters>
+	</predicate>
+
+	<predicate>
+    		<name>or_subgoal</name>
+		<related-type>t_goal</related-type>
+		<parameters>
+			<parameter>
+				<type>t_goal</type>
+			</parameter>
+			<parameter>
+				<list-of>
+					<type>t_goal</type>
+				</list-of>
+			</parameter>
+		</parameters>
+	</predicate>
+	
+	<predicate>
+		<name>pr_passes</name>
+		<related-type>t_goal</related-type>
+		<negation>
+			<type>boolean</type>
+		</negation>
+		<parameters>
+			<parameter>
+				<type>t_actor</type>
+			</parameter>
+			<parameter>
+				<type>t_goal</type>
+			</parameter>
+		</parameters>
+	</predicate>	
+
+	<predicate>
+		<name>pr_satisfies</name>
+		<related-type>t_goal</related-type>
+		<negation>
+			<type>boolean</type>
+		</negation>
+		<parameters>
+			<parameter>
+				<type>t_actor</type>
+			</parameter>
+			<parameter>
+				<type>t_goal</type>
+			</parameter>
+		</parameters>
+	</predicate>	
+
+</predicates>
+
+</description>

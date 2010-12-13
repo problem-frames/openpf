@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="eu.securechange.secmer.casetool.evolutionrule" name="Evolution Rules" schema="schema/eu.securechange.secmer.casetool.evolutionrule.exsd"/>
+   <extension
+         point="org.eclipse.emf.transaction.editingDomains">
+      <editingDomain
+            factory="eu.securechange.secmer.casetool.core.EditingDomainFactory"
+            id="eu.securechange.secmer.casetool.EditingDomain">
+      </editingDomain>
+   </extension>
+
+</plugin>

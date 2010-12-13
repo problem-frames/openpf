@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <description name="Requirements Engineering Tools Provided by The Open University" url="http://sead1.open.ac.uk/openre"> The update site contains a number of Eclipse plugins to support the requirements engineering research at the Software Engineering And Design group, The Open University.
+   <description name="Requirements Engineering Tools Provided by The Open University" url="http://sead1.open.ac.uk/openre">
+      The update site contains a number of Eclipse plugins to support the requirements engineering research at the Software Engineering And Design group, The Open University.
    </description>
    <feature url="features/problem.feature_1.0.0.qualifier.jar" id="problem.feature" version="1.0.0.qualifier">
-      <category name="RE_Tools"/>
-   </feature>
-   <feature url="features/xtext.feature_1.0.0.qualifier.jar" id="xtext.feature" version="1.0.0.qualifier">
       <category name="RE_Tools"/>
    </feature>
    <feature url="features/hu.optxware.emf2viatra.feature_0.0.1.jar" id="hu.optxware.emf2viatra.feature" version="0.0.1">
@@ -803,12 +801,16 @@
    <feature url="features/process.feature_1.0.0.qualifier.jar" id="process.feature" version="1.0.0.qualifier">
       <category name="RE_Tools"/>
    </feature>
-   <feature url="features/xtext.feature_1.0.0.201010071122.jar" id="xtext.feature" version="1.0.0.201010071122">
+   <feature url="features/it.unitn.disi.sistar.feature_0.997.0.jar" id="it.unitn.disi.sistar.feature" version="0.997">
       <category name="RE_Tools"/>
    </feature>
-   <feature url="features/rbac.feature_1.0.0.qualifier.jar" id="xtext.feature" version="1.0.0.qualifier">
+   <feature url="features/rbac.feature_1.0.0.qualifier.jar" id="rbac.feature" version="1.0.0.qualifier">
       <category name="Experimental"/>
    </feature>
+   <feature url="features/uncal.feature_1.0.0.qualifier.jar" id="uncal.feature" version="1.0.0.qualifier">
+      <category name="Experimental"/>
+   </feature>
+   <feature url="features/xtext.feature_1.0.0.201010071122.jar" id="xtext.feature" version="1.0.0.201010071122"/>
    <category-def name="RE_Tools" label="Requirements Engineering Tools"/>
    <category-def name="Experimental" label="Experimental features"/>
    <category-def name="Little-JIL" label="Little-JIL features"/>

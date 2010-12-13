@@ -1,0 +1,7 @@
+# Tracing options for the it.unitn.disi.sistar.modeling.diagram plug-in
+
+# Common issues
+it.unitn.disi.sistar.modeling.diagram/debug=false
+
+# Visual IDs
+it.unitn.disi.sistar.modeling.diagram/debug/visualID=false

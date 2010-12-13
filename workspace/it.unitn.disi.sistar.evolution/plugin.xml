@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            id="it.unitn.disi.sistar.evolution.contribution"
+            nameFilter="*.evolution"
+            objectClass="org.eclipse.core.resources.IFile">
+         <menu
+               id="it.unitn.disi.sistar.evolution.popup"
+               label="Evolution"
+               path="additions">
+            <separator
+                  name="group1">
+            </separator>
+         </menu>
+         <action
+               class="it.unitn.disi.sistar.evolution.popup.actions.UpdateFileRepository"
+               enablesFor="1"
+               id="it.unitn.disi.sistar.evolution.UpdateFileRepositoryAction"
+               label="Update diagram file repository"
+               menubarPath="it.unitn.disi.sistar.evolution.popup/group1">
+         </action>
+         <action
+               class="it.unitn.disi.sistar.evolution.popup.actions.EvolutionAssessment"
+               enablesFor="1"
+               id="it.unitn.disi.sistar.evolution.EvolutionAssessmentAction"
+               label="Evolution assessment"
+               menubarPath="it.unitn.disi.sistar.evolution.popup/group1">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>
