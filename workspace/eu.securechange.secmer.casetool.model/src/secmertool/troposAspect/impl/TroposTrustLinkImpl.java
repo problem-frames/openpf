@@ -6,7 +6,7 @@
  */
 package secmertool.troposAspect.impl;
 
-import eu.securechange.ontology.ontology.Trusts;
+import eu.securechange.ontology.ontology.Relationship;
 
 import it.unitn.disi.sistar.modeling.tropos.Dependency;
 
@@ -45,7 +45,7 @@ public class TroposTrustLinkImpl extends ReferenceLinkImpl implements TroposTrus
 	 * @generated
 	 * @ordered
 	 */
-	protected Trusts secmer;
+	protected Relationship secmer;
 
 	/**
 	 * The cached value of the '{@link #getTropos() <em>Tropos</em>}' reference.
@@ -81,10 +81,10 @@ public class TroposTrustLinkImpl extends ReferenceLinkImpl implements TroposTrus
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Trusts getSecmer() {
+	public Relationship getSecmer() {
 		if (secmer != null && secmer.eIsProxy()) {
 			InternalEObject oldSecmer = (InternalEObject)secmer;
-			secmer = (Trusts)eResolveProxy(oldSecmer);
+			secmer = (Relationship)eResolveProxy(oldSecmer);
 			if (secmer != oldSecmer) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TroposAspectPackage.TROPOS_TRUST_LINK__SECMER, oldSecmer, secmer));
@@ -98,7 +98,7 @@ public class TroposTrustLinkImpl extends ReferenceLinkImpl implements TroposTrus
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Trusts basicGetSecmer() {
+	public Relationship basicGetSecmer() {
 		return secmer;
 	}
 
@@ -107,8 +107,8 @@ public class TroposTrustLinkImpl extends ReferenceLinkImpl implements TroposTrus
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSecmer(Trusts newSecmer) {
-		Trusts oldSecmer = secmer;
+	public void setSecmer(Relationship newSecmer) {
+		Relationship oldSecmer = secmer;
 		secmer = newSecmer;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, TroposAspectPackage.TROPOS_TRUST_LINK__SECMER, oldSecmer, secmer));
@@ -179,7 +179,7 @@ public class TroposTrustLinkImpl extends ReferenceLinkImpl implements TroposTrus
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case TroposAspectPackage.TROPOS_TRUST_LINK__SECMER:
-				setSecmer((Trusts)newValue);
+				setSecmer((Relationship)newValue);
 				return;
 			case TroposAspectPackage.TROPOS_TRUST_LINK__TROPOS:
 				setTropos((Dependency)newValue);
@@ -197,7 +197,7 @@ public class TroposTrustLinkImpl extends ReferenceLinkImpl implements TroposTrus
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case TroposAspectPackage.TROPOS_TRUST_LINK__SECMER:
-				setSecmer((Trusts)null);
+				setSecmer((Relationship)null);
 				return;
 			case TroposAspectPackage.TROPOS_TRUST_LINK__TROPOS:
 				setTropos((Dependency)null);

@@ -23,7 +23,7 @@ public class ActorNewFromTropos extends BaseTroposForallRule<ActorNewFromTroposS
 		it.unitn.disi.sistar.modeling.tropos.Actor troposActor = 
 			(it.unitn.disi.sistar.modeling.tropos.Actor) signature.getTroposActor();
 		
-		eu.securechange.ontology.ontology.Stakeholder actor = OntologyFactory.eINSTANCE.createStakeholder();
+		eu.securechange.ontology.ontology.Actor actor = OntologyFactory.eINSTANCE.createActor();
 		actor.setName(troposActor.getName());
 		getSituationModel().getWorld().getEntities().add(actor);
 		

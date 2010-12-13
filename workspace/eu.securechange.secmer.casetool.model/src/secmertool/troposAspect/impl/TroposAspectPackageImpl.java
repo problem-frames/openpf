@@ -355,11 +355,11 @@ public class TroposAspectPackageImpl extends EPackageImpl implements TroposAspec
 		initEReference(getTroposResourceLink_Tropos(), theTroposPackage.getService(), null, "tropos", null, 0, 1, TroposResourceLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(troposTrustLinkEClass, TroposTrustLink.class, "TroposTrustLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTroposTrustLink_Secmer(), theOntologyPackage.getTrusts(), null, "secmer", null, 0, 1, TroposTrustLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTroposTrustLink_Secmer(), theOntologyPackage.getRelationship(), null, "secmer", null, 0, 1, TroposTrustLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTroposTrustLink_Tropos(), theTroposPackage.getDependency(), null, "tropos", null, 0, 1, TroposTrustLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(troposDelegateLinkEClass, TroposDelegateLink.class, "TroposDelegateLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTroposDelegateLink_Secmer(), theOntologyPackage.getDelegates(), null, "secmer", null, 0, 1, TroposDelegateLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTroposDelegateLink_Secmer(), theOntologyPackage.getRelationship(), null, "secmer", null, 0, 1, TroposDelegateLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTroposDelegateLink_Tropos(), theTroposPackage.getDependency(), null, "tropos", null, 0, 1, TroposDelegateLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 

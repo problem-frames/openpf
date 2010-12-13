@@ -6,7 +6,7 @@
  */
 package secmertool.troposAspect.impl;
 
-import eu.securechange.ontology.ontology.Delegates;
+import eu.securechange.ontology.ontology.Relationship;
 
 import it.unitn.disi.sistar.modeling.tropos.Dependency;
 
@@ -45,7 +45,7 @@ public class TroposDelegateLinkImpl extends ReferenceLinkImpl implements TroposD
 	 * @generated
 	 * @ordered
 	 */
-	protected Delegates secmer;
+	protected Relationship secmer;
 
 	/**
 	 * The cached value of the '{@link #getTropos() <em>Tropos</em>}' reference.
@@ -81,10 +81,10 @@ public class TroposDelegateLinkImpl extends ReferenceLinkImpl implements TroposD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Delegates getSecmer() {
+	public Relationship getSecmer() {
 		if (secmer != null && secmer.eIsProxy()) {
 			InternalEObject oldSecmer = (InternalEObject)secmer;
-			secmer = (Delegates)eResolveProxy(oldSecmer);
+			secmer = (Relationship)eResolveProxy(oldSecmer);
 			if (secmer != oldSecmer) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TroposAspectPackage.TROPOS_DELEGATE_LINK__SECMER, oldSecmer, secmer));
@@ -98,7 +98,7 @@ public class TroposDelegateLinkImpl extends ReferenceLinkImpl implements TroposD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Delegates basicGetSecmer() {
+	public Relationship basicGetSecmer() {
 		return secmer;
 	}
 
@@ -107,8 +107,8 @@ public class TroposDelegateLinkImpl extends ReferenceLinkImpl implements TroposD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSecmer(Delegates newSecmer) {
-		Delegates oldSecmer = secmer;
+	public void setSecmer(Relationship newSecmer) {
+		Relationship oldSecmer = secmer;
 		secmer = newSecmer;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, TroposAspectPackage.TROPOS_DELEGATE_LINK__SECMER, oldSecmer, secmer));
@@ -179,7 +179,7 @@ public class TroposDelegateLinkImpl extends ReferenceLinkImpl implements TroposD
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case TroposAspectPackage.TROPOS_DELEGATE_LINK__SECMER:
-				setSecmer((Delegates)newValue);
+				setSecmer((Relationship)newValue);
 				return;
 			case TroposAspectPackage.TROPOS_DELEGATE_LINK__TROPOS:
 				setTropos((Dependency)newValue);
@@ -197,7 +197,7 @@ public class TroposDelegateLinkImpl extends ReferenceLinkImpl implements TroposD
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case TroposAspectPackage.TROPOS_DELEGATE_LINK__SECMER:
-				setSecmer((Delegates)null);
+				setSecmer((Relationship)null);
 				return;
 			case TroposAspectPackage.TROPOS_DELEGATE_LINK__TROPOS:
 				setTropos((Dependency)null);

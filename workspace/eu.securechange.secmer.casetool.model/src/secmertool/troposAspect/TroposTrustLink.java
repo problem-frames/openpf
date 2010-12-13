@@ -6,11 +6,11 @@
  */
 package secmertool.troposAspect;
 
-import eu.securechange.ontology.ontology.Trusts;
+//import eu.securechange.ontology.ontology.Trusts;
 
 import it.unitn.disi.sistar.modeling.tropos.Dependency;
-
 import secmertool.ReferenceLink;
+import eu.securechange.ontology.ontology.Relationship;
 
 /**
  * <!-- begin-user-doc -->
@@ -44,7 +44,7 @@ public interface TroposTrustLink extends ReferenceLink {
 	 * @model
 	 * @generated
 	 */
-	Trusts getSecmer();
+	Relationship getSecmer();
 
 	/**
 	 * Sets the value of the '{@link secmertool.troposAspect.TroposTrustLink#getSecmer <em>Secmer</em>}' reference.
@@ -54,7 +54,7 @@ public interface TroposTrustLink extends ReferenceLink {
 	 * @see #getSecmer()
 	 * @generated
 	 */
-	void setSecmer(Trusts value);
+	void setSecmer(Relationship value);
 
 	/**
 	 * Returns the value of the '<em><b>Tropos</b></em>' reference.

@@ -16,6 +16,6 @@ package eu.securechange.ontology.ontology;
  * @model
  * @generated
  */
-public interface Requirement extends Proposition
+public interface Requirement extends Goal
 {
 } // Requirement

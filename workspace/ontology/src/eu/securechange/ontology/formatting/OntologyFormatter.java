@@ -26,53 +26,10 @@ public class OntologyFormatter extends AbstractDeclarativeFormatter {
 		c.setLinewrap(0, 1, 1).after(f.getML_COMMENTRule());
 		c.setAutoLinewrap(200);
 		c.setLinewrap().before(f.getML_COMMENTRule());
-		c.setLinewrap(2).before(f.getDomainRule());
 		c.setLinewrap().before(f.getRelationshipRule());
-		c.setSpace("\n\t").before(f.getProcessRule());
-		c.setSpace("\n\t").before(f.getResourceRule());
-		c.setSpace("\n\t").before(f.getActorRule());
+		c.setSpace("\n\t").before(f.getEntityRule());
 		c.setSpace("\n\t").before(f.getPropositionRule());
-		c.setSpace("\n\t\t").before(f.getActionRule());
 		c.setNoSpace().before(f.getSituationAccess().getColonKeyword_0_2());
-		c.setNoSpace().before(f.getDomainAccess().getCommaKeyword_2_0());
-		c.setNoSpace().before(f.getWantsAccess().getCommaKeyword_3());
-		c.setNoSpace()
-				.before(f.getWantsAccess().getRightParenthesisKeyword_5());
-		c.setNoSpace().before(f.getTrustsAccess().getCommaKeyword_3());
-		c.setNoSpace().before(
-				f.getTrustsAccess().getRightParenthesisKeyword_6());
-		c.setNoSpace().before(f.getDelegatesAccess().getCommaKeyword_3());
-		c.setNoSpace().before(
-				f.getDelegatesAccess().getRightParenthesisKeyword_6());
-		c.setNoSpace().before(f.getFulfilsAccess().getCommaKeyword_3());
-		c.setNoSpace().before(
-				f.getFulfilsAccess().getRightParenthesisKeyword_5());
-		c.setNoSpace().before(f.getDecomposesAccess().getCommaKeyword_3());
-		c.setNoSpace().before(
-				f.getDecomposesAccess().getRightParenthesisKeyword_5());
-		c.setNoSpace().before(f.getContributesAccess().getCommaKeyword_3());
-		c.setNoSpace().before(
-				f.getContributesAccess().getRightParenthesisKeyword_5());
-		c.setNoSpace().before(f.getAttacksAccess().getCommaKeyword_3());
-		c.setNoSpace().before(
-				f.getAttacksAccess().getRightParenthesisKeyword_5());
-		c.setNoSpace().before(f.getExploitsAccess().getCommaKeyword_3());
-		c.setNoSpace().before(
-				f.getExploitsAccess().getRightParenthesisKeyword_5());
-		c.setNoSpace().before(f.getDamagesAccess().getCommaKeyword_3());
-		c.setNoSpace().before(
-				f.getDamagesAccess().getRightParenthesisKeyword_5());
-		c.setNoSpace().before(f.getArguesAccess().getCommaKeyword_3());
-		c.setNoSpace().before(
-				f.getArguesAccess().getRightParenthesisKeyword_5());
-		c.setNoSpace().before(f.getProvidesAccess().getCommaKeyword_3());
-		c.setNoSpace().before(
-				f.getProvidesAccess().getRightParenthesisKeyword_5());
-		c.setNoSpace().before(f.getConsumesAccess().getCommaKeyword_3());
-		c.setNoSpace().before(
-				f.getConsumesAccess().getRightParenthesisKeyword_5());
-//		c.setNoLinewrap().after(f.getHumanActivityAccess().getActivityKeyword_1());
-//		c.setNoLinewrap().after(f.getAttackerAccess().getAttackerKeyword_0());
 		c.setNoLinewrap().around(f.getSL_COMMENTRule());
 	}
 }

@@ -5,7 +5,6 @@
  */
 package eu.securechange.ontology.ontology.impl;
 
-import eu.securechange.ontology.ontology.Domain;
 import eu.securechange.ontology.ontology.Entity;
 import eu.securechange.ontology.ontology.OntologyPackage;
 import eu.securechange.ontology.ontology.Relationship;
@@ -33,7 +32,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link eu.securechange.ontology.ontology.impl.WorldImpl#getEntities <em>Entities</em>}</li>
- *   <li>{@link eu.securechange.ontology.ontology.impl.WorldImpl#getDomains <em>Domains</em>}</li>
  *   <li>{@link eu.securechange.ontology.ontology.impl.WorldImpl#getRelationships <em>Relationships</em>}</li>
  * </ul>
  * </p>
@@ -43,198 +41,169 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class WorldImpl extends MinimalEObjectImpl.Container implements World
 {
   /**
-	 * The cached value of the '{@link #getEntities() <em>Entities</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getEntities() <em>Entities</em>}' containment reference list.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getEntities()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getEntities()
+   * @generated
+   * @ordered
+   */
   protected EList<Entity> entities;
 
   /**
-	 * The cached value of the '{@link #getDomains() <em>Domains</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getRelationships() <em>Relationships</em>}' containment reference list.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getDomains()
-	 * @generated
-	 * @ordered
-	 */
-  protected EList<Domain> domains;
-
-  /**
-	 * The cached value of the '{@link #getRelationships() <em>Relationships</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see #getRelationships()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getRelationships()
+   * @generated
+   * @ordered
+   */
   protected EList<Relationship> relationships;
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected WorldImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   protected EClass eStaticClass()
   {
-		return OntologyPackage.Literals.WORLD;
-	}
+    return OntologyPackage.Literals.WORLD;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EList<Entity> getEntities()
   {
-		if (entities == null) {
-			entities = new EObjectContainmentEList<Entity>(Entity.class, this, OntologyPackage.WORLD__ENTITIES);
-		}
-		return entities;
-	}
+    if (entities == null)
+    {
+      entities = new EObjectContainmentEList<Entity>(Entity.class, this, OntologyPackage.WORLD__ENTITIES);
+    }
+    return entities;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EList<Domain> getDomains()
-  {
-		if (domains == null) {
-			domains = new EObjectContainmentEList<Domain>(Domain.class, this, OntologyPackage.WORLD__DOMAINS);
-		}
-		return domains;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EList<Relationship> getRelationships()
   {
-		if (relationships == null) {
-			relationships = new EObjectContainmentEList<Relationship>(Relationship.class, this, OntologyPackage.WORLD__RELATIONSHIPS);
-		}
-		return relationships;
-	}
+    if (relationships == null)
+    {
+      relationships = new EObjectContainmentEList<Relationship>(Relationship.class, this, OntologyPackage.WORLD__RELATIONSHIPS);
+    }
+    return relationships;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-		switch (featureID) {
-			case OntologyPackage.WORLD__ENTITIES:
-				return ((InternalEList<?>)getEntities()).basicRemove(otherEnd, msgs);
-			case OntologyPackage.WORLD__DOMAINS:
-				return ((InternalEList<?>)getDomains()).basicRemove(otherEnd, msgs);
-			case OntologyPackage.WORLD__RELATIONSHIPS:
-				return ((InternalEList<?>)getRelationships()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    switch (featureID)
+    {
+      case OntologyPackage.WORLD__ENTITIES:
+        return ((InternalEList<?>)getEntities()).basicRemove(otherEnd, msgs);
+      case OntologyPackage.WORLD__RELATIONSHIPS:
+        return ((InternalEList<?>)getRelationships()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-		switch (featureID) {
-			case OntologyPackage.WORLD__ENTITIES:
-				return getEntities();
-			case OntologyPackage.WORLD__DOMAINS:
-				return getDomains();
-			case OntologyPackage.WORLD__RELATIONSHIPS:
-				return getRelationships();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    switch (featureID)
+    {
+      case OntologyPackage.WORLD__ENTITIES:
+        return getEntities();
+      case OntologyPackage.WORLD__RELATIONSHIPS:
+        return getRelationships();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
-		switch (featureID) {
-			case OntologyPackage.WORLD__ENTITIES:
-				getEntities().clear();
-				getEntities().addAll((Collection<? extends Entity>)newValue);
-				return;
-			case OntologyPackage.WORLD__DOMAINS:
-				getDomains().clear();
-				getDomains().addAll((Collection<? extends Domain>)newValue);
-				return;
-			case OntologyPackage.WORLD__RELATIONSHIPS:
-				getRelationships().clear();
-				getRelationships().addAll((Collection<? extends Relationship>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    switch (featureID)
+    {
+      case OntologyPackage.WORLD__ENTITIES:
+        getEntities().clear();
+        getEntities().addAll((Collection<? extends Entity>)newValue);
+        return;
+      case OntologyPackage.WORLD__RELATIONSHIPS:
+        getRelationships().clear();
+        getRelationships().addAll((Collection<? extends Relationship>)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public void eUnset(int featureID)
   {
-		switch (featureID) {
-			case OntologyPackage.WORLD__ENTITIES:
-				getEntities().clear();
-				return;
-			case OntologyPackage.WORLD__DOMAINS:
-				getDomains().clear();
-				return;
-			case OntologyPackage.WORLD__RELATIONSHIPS:
-				getRelationships().clear();
-				return;
-		}
-		super.eUnset(featureID);
-	}
+    switch (featureID)
+    {
+      case OntologyPackage.WORLD__ENTITIES:
+        getEntities().clear();
+        return;
+      case OntologyPackage.WORLD__RELATIONSHIPS:
+        getRelationships().clear();
+        return;
+    }
+    super.eUnset(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public boolean eIsSet(int featureID)
   {
-		switch (featureID) {
-			case OntologyPackage.WORLD__ENTITIES:
-				return entities != null && !entities.isEmpty();
-			case OntologyPackage.WORLD__DOMAINS:
-				return domains != null && !domains.isEmpty();
-			case OntologyPackage.WORLD__RELATIONSHIPS:
-				return relationships != null && !relationships.isEmpty();
-		}
-		return super.eIsSet(featureID);
-	}
+    switch (featureID)
+    {
+      case OntologyPackage.WORLD__ENTITIES:
+        return entities != null && !entities.isEmpty();
+      case OntologyPackage.WORLD__RELATIONSHIPS:
+        return relationships != null && !relationships.isEmpty();
+    }
+    return super.eIsSet(featureID);
+  }
 
 } //WorldImpl

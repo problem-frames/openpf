@@ -82,7 +82,6 @@ public class WorldItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(OntologyPackage.Literals.WORLD__ENTITIES);
-			childrenFeatures.add(OntologyPackage.Literals.WORLD__DOMAINS);
 			childrenFeatures.add(OntologyPackage.Literals.WORLD__RELATIONSHIPS);
 		}
 		return childrenFeatures;
@@ -136,7 +135,6 @@ public class WorldItemProvider
 
 		switch (notification.getFeatureID(World.class)) {
 			case OntologyPackage.WORLD__ENTITIES:
-			case OntologyPackage.WORLD__DOMAINS:
 			case OntologyPackage.WORLD__RELATIONSHIPS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -163,32 +161,32 @@ public class WorldItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(OntologyPackage.Literals.WORLD__ENTITIES,
+				 OntologyFactory.eINSTANCE.createGoal()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(OntologyPackage.Literals.WORLD__ENTITIES,
+				 OntologyFactory.eINSTANCE.createSecurityGoal()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(OntologyPackage.Literals.WORLD__ENTITIES,
+				 OntologyFactory.eINSTANCE.createRequirement()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(OntologyPackage.Literals.WORLD__ENTITIES,
+				 OntologyFactory.eINSTANCE.createDomain()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(OntologyPackage.Literals.WORLD__ENTITIES,
 				 OntologyFactory.eINSTANCE.createActor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(OntologyPackage.Literals.WORLD__ENTITIES,
-				 OntologyFactory.eINSTANCE.createStakeholder()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OntologyPackage.Literals.WORLD__ENTITIES,
-				 OntologyFactory.eINSTANCE.createAttacker()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OntologyPackage.Literals.WORLD__ENTITIES,
-				 OntologyFactory.eINSTANCE.createProcess()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OntologyPackage.Literals.WORLD__ENTITIES,
-				 OntologyFactory.eINSTANCE.createNaturalProcess()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OntologyPackage.Literals.WORLD__ENTITIES,
-				 OntologyFactory.eINSTANCE.createHumanActivity()));
+				 OntologyFactory.eINSTANCE.createAction()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -197,88 +195,8 @@ public class WorldItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(OntologyPackage.Literals.WORLD__ENTITIES,
-				 OntologyFactory.eINSTANCE.createAsset()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OntologyPackage.Literals.WORLD__ENTITIES,
-				 OntologyFactory.eINSTANCE.createActivity()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OntologyPackage.Literals.WORLD__DOMAINS,
-				 OntologyFactory.eINSTANCE.createDomain()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(OntologyPackage.Literals.WORLD__RELATIONSHIPS,
 				 OntologyFactory.eINSTANCE.createRelationship()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OntologyPackage.Literals.WORLD__RELATIONSHIPS,
-				 OntologyFactory.eINSTANCE.createWants()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OntologyPackage.Literals.WORLD__RELATIONSHIPS,
-				 OntologyFactory.eINSTANCE.createDoes()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OntologyPackage.Literals.WORLD__RELATIONSHIPS,
-				 OntologyFactory.eINSTANCE.createDecomposes()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OntologyPackage.Literals.WORLD__RELATIONSHIPS,
-				 OntologyFactory.eINSTANCE.createTrusts()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OntologyPackage.Literals.WORLD__RELATIONSHIPS,
-				 OntologyFactory.eINSTANCE.createDelegates()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OntologyPackage.Literals.WORLD__RELATIONSHIPS,
-				 OntologyFactory.eINSTANCE.createContributes()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OntologyPackage.Literals.WORLD__RELATIONSHIPS,
-				 OntologyFactory.eINSTANCE.createFulfils()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OntologyPackage.Literals.WORLD__RELATIONSHIPS,
-				 OntologyFactory.eINSTANCE.createProvides()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OntologyPackage.Literals.WORLD__RELATIONSHIPS,
-				 OntologyFactory.eINSTANCE.createConsumes()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OntologyPackage.Literals.WORLD__RELATIONSHIPS,
-				 OntologyFactory.eINSTANCE.createExploits()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OntologyPackage.Literals.WORLD__RELATIONSHIPS,
-				 OntologyFactory.eINSTANCE.createDamages()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OntologyPackage.Literals.WORLD__RELATIONSHIPS,
-				 OntologyFactory.eINSTANCE.createAttacks()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OntologyPackage.Literals.WORLD__RELATIONSHIPS,
-				 OntologyFactory.eINSTANCE.createArgues()));
 	}
 
 	/**
