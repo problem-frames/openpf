@@ -150,7 +150,27 @@ public enum RelType implements Enumerator
    * @generated
    * @ordered
    */
-  INTERFACES(12, "INTERFACES", "interfaces");
+  INTERFACES(12, "INTERFACES", "interfaces"),
+
+  /**
+   * The '<em><b>CONSUM Es</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #CONSUM_ES_VALUE
+   * @generated
+   * @ordered
+   */
+  CONSUM_ES(13, "CONSUMEs", "consumes"),
+
+  /**
+   * The '<em><b>PROTECTS</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #PROTECTS_VALUE
+   * @generated
+   * @ordered
+   */
+  PROTECTS(14, "PROTECTS", "protects");
 
   /**
    * The '<em><b>CARRIESOUT</b></em>' literal value.
@@ -348,6 +368,36 @@ public enum RelType implements Enumerator
   public static final int INTERFACES_VALUE = 12;
 
   /**
+   * The '<em><b>CONSUM Es</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>CONSUM Es</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #CONSUM_ES
+   * @model name="CONSUMEs" literal="consumes"
+   * @generated
+   * @ordered
+   */
+  public static final int CONSUM_ES_VALUE = 13;
+
+  /**
+   * The '<em><b>PROTECTS</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>PROTECTS</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #PROTECTS
+   * @model literal="protects"
+   * @generated
+   * @ordered
+   */
+  public static final int PROTECTS_VALUE = 14;
+
+  /**
    * An array of all the '<em><b>Rel Type</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -369,6 +419,8 @@ public enum RelType implements Enumerator
       ATTACKS,
       ARGUES,
       INTERFACES,
+      CONSUM_ES,
+      PROTECTS,
     };
 
   /**
@@ -440,6 +492,8 @@ public enum RelType implements Enumerator
       case ATTACKS_VALUE: return ATTACKS;
       case ARGUES_VALUE: return ARGUES;
       case INTERFACES_VALUE: return INTERFACES;
+      case CONSUM_ES_VALUE: return CONSUM_ES;
+      case PROTECTS_VALUE: return PROTECTS;
     }
     return null;
   }

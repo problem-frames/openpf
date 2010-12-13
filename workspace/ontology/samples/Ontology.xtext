@@ -29,11 +29,11 @@ Proposition:
 	name=STRING;
 
 Relationship:
-    type=RelType '(' source=[Entity] ',' target=[Entity] ')';
+    type=RelType '(' source=[Entity] ',' target=[Entity] ')'  ((',')? properties+=Proposition)*;
 
 enum RelType: CARRIESOUT='carries out' | DEPENDS='depends' | DECOMPOSES='decomposes' | CONTRIBUTES='contributes' |
 	DELEGATES='delegates' | FULFILS='fulfils' | PROVIDES='provides' | TRUSTS='trusts' | WANTS='wants' | DAMAGES ='damages' 
-	| ATTACKS='attacks' | ARGUES ='argues' | INTERFACES='interfaces';
+	| ATTACKS='attacks' | ARGUES ='argues' | INTERFACES='interfaces' | CONSUMEs='consumes' | PROTECTS='protects';
 
 terminal ID:
 	('#' (!('#'))+ '#') | ('^'? ('a'..'z' | 'A'..'Z' | '_' | '.') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9' | '.')*);

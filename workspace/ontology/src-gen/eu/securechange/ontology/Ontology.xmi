@@ -262,6 +262,12 @@
           </terminal>
         </elements>
         <elements xsi:type="xtext:Keyword" value=")"/>
+        <elements xsi:type="xtext:Group" cardinality="*">
+          <elements xsi:type="xtext:Keyword" cardinality="?" value=","/>
+          <elements xsi:type="xtext:Assignment" feature="properties" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.11"/>
+          </elements>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:EnumRule" name="RelType">
@@ -320,6 +326,14 @@
         <elements xsi:type="xtext:EnumLiteralDeclaration">
           <enumLiteral href="http://securechange.eu/ontology#//RelType/INTERFACES"/>
           <literal value="interfaces"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://securechange.eu/ontology#//RelType/CONSUMEs"/>
+          <literal value="consumes"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://securechange.eu/ontology#//RelType/PROTECTS"/>
+          <literal value="protects"/>
         </elements>
       </alternatives>
     </rules>

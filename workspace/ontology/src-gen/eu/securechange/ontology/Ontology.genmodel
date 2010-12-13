@@ -21,6 +21,8 @@
       <genEnumLiterals ecoreEnumLiteral="Ontology.ecore#//RelType/ATTACKS"/>
       <genEnumLiterals ecoreEnumLiteral="Ontology.ecore#//RelType/ARGUES"/>
       <genEnumLiterals ecoreEnumLiteral="Ontology.ecore#//RelType/INTERFACES"/>
+      <genEnumLiterals ecoreEnumLiteral="Ontology.ecore#//RelType/CONSUMEs"/>
+      <genEnumLiterals ecoreEnumLiteral="Ontology.ecore#//RelType/PROTECTS"/>
     </genEnums>
     <genClasses ecoreClass="Ontology.ecore#//Situation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ontology.ecore#//Situation/time"/>
@@ -54,6 +56,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ontology.ecore#//Relationship/type"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ontology.ecore#//Relationship/source"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ontology.ecore#//Relationship/target"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ontology.ecore#//Relationship/properties"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

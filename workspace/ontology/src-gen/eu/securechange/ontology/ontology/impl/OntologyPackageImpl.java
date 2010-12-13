@@ -474,6 +474,16 @@ public class OntologyPackageImpl extends EPackageImpl implements OntologyPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getRelationship_Properties()
+  {
+    return (EReference)relationshipEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EEnum getRelType()
   {
     return relTypeEEnum;
@@ -548,6 +558,7 @@ public class OntologyPackageImpl extends EPackageImpl implements OntologyPackage
     createEAttribute(relationshipEClass, RELATIONSHIP__TYPE);
     createEReference(relationshipEClass, RELATIONSHIP__SOURCE);
     createEReference(relationshipEClass, RELATIONSHIP__TARGET);
+    createEReference(relationshipEClass, RELATIONSHIP__PROPERTIES);
 
     // Create enums
     relTypeEEnum = createEEnum(REL_TYPE);
@@ -630,6 +641,7 @@ public class OntologyPackageImpl extends EPackageImpl implements OntologyPackage
     initEAttribute(getRelationship_Type(), this.getRelType(), "type", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getRelationship_Source(), this.getEntity(), null, "source", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getRelationship_Target(), this.getEntity(), null, "target", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRelationship_Properties(), this.getProposition(), null, "properties", null, 0, -1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
     initEEnum(relTypeEEnum, RelType.class, "RelType");
@@ -646,6 +658,8 @@ public class OntologyPackageImpl extends EPackageImpl implements OntologyPackage
     addEEnumLiteral(relTypeEEnum, RelType.ATTACKS);
     addEEnumLiteral(relTypeEEnum, RelType.ARGUES);
     addEEnumLiteral(relTypeEEnum, RelType.INTERFACES);
+    addEEnumLiteral(relTypeEEnum, RelType.CONSUM_ES);
+    addEEnumLiteral(relTypeEEnum, RelType.PROTECTS);
 
     // Create resource
     createResource(eNS_URI);

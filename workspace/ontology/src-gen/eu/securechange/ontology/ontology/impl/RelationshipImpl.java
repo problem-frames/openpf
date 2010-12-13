@@ -7,16 +7,25 @@ package eu.securechange.ontology.ontology.impl;
 
 import eu.securechange.ontology.ontology.Entity;
 import eu.securechange.ontology.ontology.OntologyPackage;
+import eu.securechange.ontology.ontology.Proposition;
 import eu.securechange.ontology.ontology.RelType;
 import eu.securechange.ontology.ontology.Relationship;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,6 +37,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link eu.securechange.ontology.ontology.impl.RelationshipImpl#getType <em>Type</em>}</li>
  *   <li>{@link eu.securechange.ontology.ontology.impl.RelationshipImpl#getSource <em>Source</em>}</li>
  *   <li>{@link eu.securechange.ontology.ontology.impl.RelationshipImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link eu.securechange.ontology.ontology.impl.RelationshipImpl#getProperties <em>Properties</em>}</li>
  * </ul>
  * </p>
  *
@@ -74,6 +84,16 @@ public class RelationshipImpl extends MinimalEObjectImpl.Container implements Re
    * @ordered
    */
   protected Entity target;
+
+  /**
+   * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getProperties()
+   * @generated
+   * @ordered
+   */
+  protected EList<Proposition> properties;
 
   /**
    * <!-- begin-user-doc -->
@@ -210,6 +230,36 @@ public class RelationshipImpl extends MinimalEObjectImpl.Container implements Re
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Proposition> getProperties()
+  {
+    if (properties == null)
+    {
+      properties = new EObjectContainmentEList<Proposition>(Proposition.class, this, OntologyPackage.RELATIONSHIP__PROPERTIES);
+    }
+    return properties;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case OntologyPackage.RELATIONSHIP__PROPERTIES:
+        return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -223,6 +273,8 @@ public class RelationshipImpl extends MinimalEObjectImpl.Container implements Re
       case OntologyPackage.RELATIONSHIP__TARGET:
         if (resolve) return getTarget();
         return basicGetTarget();
+      case OntologyPackage.RELATIONSHIP__PROPERTIES:
+        return getProperties();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -232,6 +284,7 @@ public class RelationshipImpl extends MinimalEObjectImpl.Container implements Re
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -245,6 +298,10 @@ public class RelationshipImpl extends MinimalEObjectImpl.Container implements Re
         return;
       case OntologyPackage.RELATIONSHIP__TARGET:
         setTarget((Entity)newValue);
+        return;
+      case OntologyPackage.RELATIONSHIP__PROPERTIES:
+        getProperties().clear();
+        getProperties().addAll((Collection<? extends Proposition>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -269,6 +326,9 @@ public class RelationshipImpl extends MinimalEObjectImpl.Container implements Re
       case OntologyPackage.RELATIONSHIP__TARGET:
         setTarget((Entity)null);
         return;
+      case OntologyPackage.RELATIONSHIP__PROPERTIES:
+        getProperties().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -289,6 +349,8 @@ public class RelationshipImpl extends MinimalEObjectImpl.Container implements Re
         return source != null;
       case OntologyPackage.RELATIONSHIP__TARGET:
         return target != null;
+      case OntologyPackage.RELATIONSHIP__PROPERTIES:
+        return properties != null && !properties.isEmpty();
     }
     return super.eIsSet(featureID);
   }

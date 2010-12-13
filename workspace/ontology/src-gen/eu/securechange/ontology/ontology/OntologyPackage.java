@@ -677,13 +677,22 @@ public interface OntologyPackage extends EPackage
   int RELATIONSHIP__TARGET = 2;
 
   /**
+   * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RELATIONSHIP__PROPERTIES = 3;
+
+  /**
    * The number of structural features of the '<em>Relationship</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RELATIONSHIP_FEATURE_COUNT = 3;
+  int RELATIONSHIP_FEATURE_COUNT = 4;
 
   /**
    * The meta object id for the '{@link eu.securechange.ontology.ontology.RelType <em>Rel Type</em>}' enum.
@@ -981,6 +990,17 @@ public interface OntologyPackage extends EPackage
   EReference getRelationship_Target();
 
   /**
+   * Returns the meta object for the containment reference list '{@link eu.securechange.ontology.ontology.Relationship#getProperties <em>Properties</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Properties</em>'.
+   * @see eu.securechange.ontology.ontology.Relationship#getProperties()
+   * @see #getRelationship()
+   * @generated
+   */
+  EReference getRelationship_Properties();
+
+  /**
    * Returns the meta object for enum '{@link eu.securechange.ontology.ontology.RelType <em>Rel Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1254,6 +1274,14 @@ public interface OntologyPackage extends EPackage
      * @generated
      */
     EReference RELATIONSHIP__TARGET = eINSTANCE.getRelationship_Target();
+
+    /**
+     * The meta object literal for the '<em><b>Properties</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference RELATIONSHIP__PROPERTIES = eINSTANCE.getRelationship_Properties();
 
     /**
      * The meta object literal for the '{@link eu.securechange.ontology.ontology.RelType <em>Rel Type</em>}' enum.

@@ -20,39 +20,41 @@ T20 : 'damages' ;
 T21 : 'attacks' ;
 T22 : 'argues' ;
 T23 : 'interfaces' ;
-T24 : 'model' ;
-T25 : ':' ;
-T26 : ',' ;
-T27 : '$' ;
-T28 : '(' ;
-T29 : ')' ;
-T30 : 'goal' ;
-T31 : 'sec' ;
-T32 : 'req' ;
-T33 : 'dom' ;
-T34 : 'actor' ;
-T35 : 'action' ;
-T36 : 'resource' ;
+T24 : 'consumes' ;
+T25 : 'protects' ;
+T26 : 'model' ;
+T27 : ':' ;
+T28 : ',' ;
+T29 : '$' ;
+T30 : '(' ;
+T31 : ')' ;
+T32 : 'goal' ;
+T33 : 'sec' ;
+T34 : 'req' ;
+T35 : 'dom' ;
+T36 : 'actor' ;
+T37 : 'action' ;
+T38 : 'resource' ;
 
-// $ANTLR src "../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g" 3096
+// $ANTLR src "../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g" 3219
 RULE_ID : ('#' ~('#')+ '#'|'^'? ('a'..'z'|'A'..'Z'|'_'|'.') ('a'..'z'|'A'..'Z'|'_'|'0'..'9'|'.')*);
 
-// $ANTLR src "../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g" 3098
+// $ANTLR src "../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g" 3221
 RULE_INT : ('0'..'9')+;
 
-// $ANTLR src "../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g" 3100
+// $ANTLR src "../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g" 3223
 RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\'');
 
-// $ANTLR src "../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g" 3102
+// $ANTLR src "../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g" 3225
 RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 
-// $ANTLR src "../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g" 3104
+// $ANTLR src "../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g" 3227
 RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
-// $ANTLR src "../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g" 3106
+// $ANTLR src "../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g" 3229
 RULE_WS : (' '|'\t'|'\r'|'\n')+;
 
-// $ANTLR src "../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g" 3108
+// $ANTLR src "../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g" 3231
 RULE_ANY_OTHER : .;
 
 

@@ -2555,11 +2555,11 @@ protected class Proposition_NameAssignment extends AssignmentToken  {
 /************ begin Rule Relationship ****************
  *
  * Relationship:
- * 	type=RelType "(" source=[Entity] "," target=[Entity] ")";
+ * 	type=RelType "(" source=[Entity] "," target=[Entity] ")" (","? properties+=Proposition)*;
  *
  **/
 
-// type=RelType "(" source=[Entity] "," target=[Entity] ")"
+// type=RelType "(" source=[Entity] "," target=[Entity] ")" (","? properties+=Proposition)*
 protected class Relationship_Group extends GroupToken {
 	
 	public Relationship_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -2574,7 +2574,8 @@ protected class Relationship_Group extends GroupToken {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Relationship_RightParenthesisKeyword_5(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new Relationship_Group_6(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new Relationship_RightParenthesisKeyword_5(lastRuleCallOrigin, this, 1, inst);
 			default: return null;
 		}	
 	}
@@ -2760,6 +2761,76 @@ protected class Relationship_RightParenthesisKeyword_5 extends KeywordToken  {
 	}
 
 }
+
+// (","? properties+=Proposition)*
+protected class Relationship_Group_6 extends GroupToken {
+	
+	public Relationship_Group_6(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Group getGrammarElement() {
+		return grammarAccess.getRelationshipAccess().getGroup_6();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new Relationship_PropertiesAssignment_6_1(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+}
+
+// properties+=Proposition
+protected class Relationship_PropertiesAssignment_6_1 extends AssignmentToken  {
+	
+	public Relationship_PropertiesAssignment_6_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Assignment getGrammarElement() {
+		return grammarAccess.getRelationshipAccess().getPropertiesAssignment_6_1();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new Proposition_NameAssignment(this, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+    @Override	
+	public IEObjectConsumer tryConsume() {
+		if((value = eObjectConsumer.getConsumable("properties",false)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("properties");
+		if(value instanceof EObject) { // org::eclipse::xtext::impl::RuleCallImpl
+			IEObjectConsumer param = createEObjectConsumer((EObject)value);
+			if(param.isInstanceOf(grammarAccess.getPropositionRule().getType().getClassifier())) {
+				type = AssignmentType.PARSER_RULE_CALL;
+				element = grammarAccess.getRelationshipAccess().getPropertiesPropositionParserRuleCall_6_1_0(); 
+				consumed = obj;
+				return param;
+			}
+		}
+		return null;
+	}
+
+    @Override
+	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
+		if(value == inst.getEObject() && !inst.isConsumed()) return null;
+		switch(index) {
+			case 0: return new Relationship_Group_6(lastRuleCallOrigin, next, actIndex, consumed);
+			case 1: return new Relationship_RightParenthesisKeyword_5(lastRuleCallOrigin, next, actIndex, consumed);
+			default: return null;
+		}	
+	}	
+}
+
 
 
 /************ end Rule Relationship ****************/

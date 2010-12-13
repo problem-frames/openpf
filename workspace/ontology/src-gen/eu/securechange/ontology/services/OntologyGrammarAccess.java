@@ -567,12 +567,16 @@ public class OntologyGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cTargetEntityCrossReference_4_0 = (CrossReference)cTargetAssignment_4.eContents().get(0);
 		private final RuleCall cTargetEntityIDTerminalRuleCall_4_0_1 = (RuleCall)cTargetEntityCrossReference_4_0.eContents().get(1);
 		private final Keyword cRightParenthesisKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
+		private final Keyword cCommaKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Assignment cPropertiesAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
+		private final RuleCall cPropertiesPropositionParserRuleCall_6_1_0 = (RuleCall)cPropertiesAssignment_6_1.eContents().get(0);
 		
 		//Relationship:
-		//	type=RelType "(" source=[Entity] "," target=[Entity] ")";
+		//	type=RelType "(" source=[Entity] "," target=[Entity] ")" (","? properties+=Proposition)*;
 		public ParserRule getRule() { return rule; }
 
-		//type=RelType "(" source=[Entity] "," target=[Entity] ")"
+		//type=RelType "(" source=[Entity] "," target=[Entity] ")" (","? properties+=Proposition)*
 		public Group getGroup() { return cGroup; }
 
 		//type=RelType
@@ -607,6 +611,18 @@ public class OntologyGrammarAccess extends AbstractGrammarElementFinder {
 
 		//")"
 		public Keyword getRightParenthesisKeyword_5() { return cRightParenthesisKeyword_5; }
+
+		//(","? properties+=Proposition)*
+		public Group getGroup_6() { return cGroup_6; }
+
+		//","?
+		public Keyword getCommaKeyword_6_0() { return cCommaKeyword_6_0; }
+
+		//properties+=Proposition
+		public Assignment getPropertiesAssignment_6_1() { return cPropertiesAssignment_6_1; }
+
+		//Proposition
+		public RuleCall getPropertiesPropositionParserRuleCall_6_1_0() { return cPropertiesPropositionParserRuleCall_6_1_0; }
 	}
 	
 	
@@ -639,16 +655,20 @@ public class OntologyGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cARGUESArguesKeyword_11_0 = (Keyword)cARGUESEnumLiteralDeclaration_11.eContents().get(0);
 		private final EnumLiteralDeclaration cINTERFACESEnumLiteralDeclaration_12 = (EnumLiteralDeclaration)cAlternatives.eContents().get(12);
 		private final Keyword cINTERFACESInterfacesKeyword_12_0 = (Keyword)cINTERFACESEnumLiteralDeclaration_12.eContents().get(0);
+		private final EnumLiteralDeclaration cCONSUMEsEnumLiteralDeclaration_13 = (EnumLiteralDeclaration)cAlternatives.eContents().get(13);
+		private final Keyword cCONSUMEsConsumesKeyword_13_0 = (Keyword)cCONSUMEsEnumLiteralDeclaration_13.eContents().get(0);
+		private final EnumLiteralDeclaration cPROTECTSEnumLiteralDeclaration_14 = (EnumLiteralDeclaration)cAlternatives.eContents().get(14);
+		private final Keyword cPROTECTSProtectsKeyword_14_0 = (Keyword)cPROTECTSEnumLiteralDeclaration_14.eContents().get(0);
 		
 		//enum RelType:
 		//	CARRIESOUT="carries out" | DEPENDS="depends" | DECOMPOSES="decomposes" | CONTRIBUTES="contributes" |
 		//	DELEGATES="delegates" | FULFILS="fulfils" | PROVIDES="provides" | TRUSTS="trusts" | WANTS="wants" | DAMAGES="damages"
-		//	| ATTACKS="attacks" | ARGUES="argues" | INTERFACES="interfaces";
+		//	| ATTACKS="attacks" | ARGUES="argues" | INTERFACES="interfaces" | CONSUMEs="consumes" | PROTECTS="protects";
 		public EnumRule getRule() { return rule; }
 
 		//CARRIESOUT="carries out" | DEPENDS="depends" | DECOMPOSES="decomposes" | CONTRIBUTES="contributes" |
 		//DELEGATES="delegates" | FULFILS="fulfils" | PROVIDES="provides" | TRUSTS="trusts" | WANTS="wants" | DAMAGES="damages" |
-		//ATTACKS="attacks" | ARGUES="argues" | INTERFACES="interfaces"
+		//ATTACKS="attacks" | ARGUES="argues" | INTERFACES="interfaces" | CONSUMEs="consumes" | PROTECTS="protects"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//CARRIESOUT="carries out"
@@ -728,6 +748,18 @@ public class OntologyGrammarAccess extends AbstractGrammarElementFinder {
 
 		//"interfaces"
 		public Keyword getINTERFACESInterfacesKeyword_12_0() { return cINTERFACESInterfacesKeyword_12_0; }
+
+		//CONSUMEs="consumes"
+		public EnumLiteralDeclaration getCONSUMEsEnumLiteralDeclaration_13() { return cCONSUMEsEnumLiteralDeclaration_13; }
+
+		//"consumes"
+		public Keyword getCONSUMEsConsumesKeyword_13_0() { return cCONSUMEsConsumesKeyword_13_0; }
+
+		//PROTECTS="protects"
+		public EnumLiteralDeclaration getPROTECTSEnumLiteralDeclaration_14() { return cPROTECTSEnumLiteralDeclaration_14; }
+
+		//"protects"
+		public Keyword getPROTECTSProtectsKeyword_14_0() { return cPROTECTSProtectsKeyword_14_0; }
 	}
 	
 	private SituationElements pSituation;
@@ -888,7 +920,7 @@ public class OntologyGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Relationship:
-	//	type=RelType "(" source=[Entity] "," target=[Entity] ")";
+	//	type=RelType "(" source=[Entity] "," target=[Entity] ")" (","? properties+=Proposition)*;
 	public RelationshipElements getRelationshipAccess() {
 		return (pRelationship != null) ? pRelationship : (pRelationship = new RelationshipElements());
 	}
@@ -900,7 +932,7 @@ public class OntologyGrammarAccess extends AbstractGrammarElementFinder {
 	//enum RelType:
 	//	CARRIESOUT="carries out" | DEPENDS="depends" | DECOMPOSES="decomposes" | CONTRIBUTES="contributes" |
 	//	DELEGATES="delegates" | FULFILS="fulfils" | PROVIDES="provides" | TRUSTS="trusts" | WANTS="wants" | DAMAGES="damages"
-	//	| ATTACKS="attacks" | ARGUES="argues" | INTERFACES="interfaces";
+	//	| ATTACKS="attacks" | ARGUES="argues" | INTERFACES="interfaces" | CONSUMEs="consumes" | PROTECTS="protects";
 	public RelTypeElements getRelTypeAccess() {
 		return (unknownRuleRelType != null) ? unknownRuleRelType : (unknownRuleRelType = new RelTypeElements());
 	}

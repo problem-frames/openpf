@@ -40,6 +40,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//RelType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Entity"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
+        eType="#//Proposition" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="RelType">
     <eLiterals name="CARRIESOUT" literal="carries out"/>
@@ -55,5 +57,7 @@
     <eLiterals name="ATTACKS" value="10" literal="attacks"/>
     <eLiterals name="ARGUES" value="11" literal="argues"/>
     <eLiterals name="INTERFACES" value="12" literal="interfaces"/>
+    <eLiterals name="CONSUMEs" value="13" literal="consumes"/>
+    <eLiterals name="PROTECTS" value="14" literal="protects"/>
   </eClassifiers>
 </ecore:EPackage>

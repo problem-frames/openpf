@@ -1370,7 +1370,35 @@ ruleRelationship returns [EObject current=null]
     {
         createLeafNode(grammarAccess.getRelationshipAccess().getRightParenthesisKeyword_5(), null); 
     }
+((	',' 
+    {
+        createLeafNode(grammarAccess.getRelationshipAccess().getCommaKeyword_6_0(), null); 
+    }
+)?(
+(
+		{ 
+	        currentNode=createCompositeNode(grammarAccess.getRelationshipAccess().getPropertiesPropositionParserRuleCall_6_1_0(), currentNode); 
+	    }
+		lv_properties_7_0=ruleProposition		{
+	        if ($current==null) {
+	            $current = factory.create(grammarAccess.getRelationshipRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode.getParent(), $current);
+	        }
+	        try {
+	       		add(
+	       			$current, 
+	       			"properties",
+	        		lv_properties_7_0, 
+	        		"Proposition", 
+	        		currentNode);
+	        } catch (ValueConverterException vce) {
+				handleValueConverterException(vce);
+	        }
+	        currentNode = currentNode.getParent();
+	    }
+
 )
+))*)
 ;
 
 
@@ -1459,6 +1487,18 @@ ruleRelType returns [Enumerator current=null]
 	{
         $current = grammarAccess.getRelTypeAccess().getINTERFACESEnumLiteralDeclaration_12().getEnumLiteral().getInstance();
         createLeafNode(grammarAccess.getRelTypeAccess().getINTERFACESEnumLiteralDeclaration_12(), null); 
+    }
+)
+    |(	'consumes' 
+	{
+        $current = grammarAccess.getRelTypeAccess().getCONSUMEsEnumLiteralDeclaration_13().getEnumLiteral().getInstance();
+        createLeafNode(grammarAccess.getRelTypeAccess().getCONSUMEsEnumLiteralDeclaration_13(), null); 
+    }
+)
+    |(	'protects' 
+	{
+        $current = grammarAccess.getRelTypeAccess().getPROTECTSEnumLiteralDeclaration_14().getEnumLiteral().getInstance();
+        createLeafNode(grammarAccess.getRelTypeAccess().getPROTECTSEnumLiteralDeclaration_14(), null); 
     }
 ));
 
