@@ -18,8 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link eu.securechange.ontology.ontology.Relationship#getType <em>Type</em>}</li>
- *   <li>{@link eu.securechange.ontology.ontology.Relationship#getSource <em>Source</em>}</li>
- *   <li>{@link eu.securechange.ontology.ontology.Relationship#getTarget <em>Target</em>}</li>
+ *   <li>{@link eu.securechange.ontology.ontology.Relationship#getEntities <em>Entities</em>}</li>
  *   <li>{@link eu.securechange.ontology.ontology.Relationship#getProperties <em>Properties</em>}</li>
  * </ul>
  * </p>
@@ -60,56 +59,20 @@ public interface Relationship extends EObject
   void setType(RelType value);
 
   /**
-   * Returns the value of the '<em><b>Source</b></em>' reference.
+   * Returns the value of the '<em><b>Entities</b></em>' reference list.
+   * The list contents are of type {@link eu.securechange.ontology.ontology.Entity}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Source</em>' reference isn't clear,
+   * If the meaning of the '<em>Entities</em>' reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Source</em>' reference.
-   * @see #setSource(Entity)
-   * @see eu.securechange.ontology.ontology.OntologyPackage#getRelationship_Source()
+   * @return the value of the '<em>Entities</em>' reference list.
+   * @see eu.securechange.ontology.ontology.OntologyPackage#getRelationship_Entities()
    * @model
    * @generated
    */
-  Entity getSource();
-
-  /**
-   * Sets the value of the '{@link eu.securechange.ontology.ontology.Relationship#getSource <em>Source</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Source</em>' reference.
-   * @see #getSource()
-   * @generated
-   */
-  void setSource(Entity value);
-
-  /**
-   * Returns the value of the '<em><b>Target</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Target</em>' reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Target</em>' reference.
-   * @see #setTarget(Entity)
-   * @see eu.securechange.ontology.ontology.OntologyPackage#getRelationship_Target()
-   * @model
-   * @generated
-   */
-  Entity getTarget();
-
-  /**
-   * Sets the value of the '{@link eu.securechange.ontology.ontology.Relationship#getTarget <em>Target</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Target</em>' reference.
-   * @see #getTarget()
-   * @generated
-   */
-  void setTarget(Entity value);
+  EList<Entity> getEntities();
 
   /**
    * Returns the value of the '<em><b>Properties</b></em>' containment reference list.

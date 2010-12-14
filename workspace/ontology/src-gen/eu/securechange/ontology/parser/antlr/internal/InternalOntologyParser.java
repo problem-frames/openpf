@@ -25,7 +25,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalOntologyParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'model'", "':'", "'goal'", "','", "'sec'", "'req'", "'dom'", "'$'", "'actor'", "'action'", "'resource'", "'('", "')'", "'carries out'", "'depends'", "'decomposes'", "'contributes'", "'delegates'", "'fulfils'", "'provides'", "'trusts'", "'wants'", "'damages'", "'attacks'", "'argues'", "'interfaces'", "'consumes'", "'protects'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'model'", "':'", "'goal'", "','", "'sec'", "'req'", "'dom'", "'$'", "'actor'", "'action'", "'resource'", "'('", "')'", "'carries out'", "'depends'", "'and decomposes'", "'or decomposes'", "'+'", "'-'", "'--'", "'++'", "'delegates'", "'fulfils'", "'provides'", "'trusts'", "'wants'", "'damages'", "'attacks'", "'argues'", "'interfaces'", "'consumes'", "'protects'"
     };
     public static final int RULE_ID=4;
     public static final int RULE_STRING=5;
@@ -321,7 +321,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                 if ( (LA2_0==RULE_ID) ) {
                     alt2=1;
                 }
-                else if ( ((LA2_0>=24 && LA2_0<=38)) ) {
+                else if ( ((LA2_0>=24 && LA2_0<=42)) ) {
                     alt2=2;
                 }
 
@@ -2958,23 +2958,23 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleRelationship
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1303:1: ruleRelationship returns [EObject current=null] : ( ( (lv_type_0_0= ruleRelType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ( ( ',' )? ( (lv_properties_7_0= ruleProposition ) ) )* ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1303:1: ruleRelationship returns [EObject current=null] : ( ( (lv_type_0_0= ruleRelType ) ) '(' ( ( ',' )? ( ( RULE_ID ) ) )* ')' ( ( ',' )? ( (lv_properties_6_0= ruleProposition ) ) )* ) ;
     public final EObject ruleRelationship() throws RecognitionException {
         EObject current = null;
 
         Enumerator lv_type_0_0 = null;
 
-        EObject lv_properties_7_0 = null;
+        EObject lv_properties_6_0 = null;
 
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1308:6: ( ( ( (lv_type_0_0= ruleRelType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ( ( ',' )? ( (lv_properties_7_0= ruleProposition ) ) )* ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1309:1: ( ( (lv_type_0_0= ruleRelType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ( ( ',' )? ( (lv_properties_7_0= ruleProposition ) ) )* )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1308:6: ( ( ( (lv_type_0_0= ruleRelType ) ) '(' ( ( ',' )? ( ( RULE_ID ) ) )* ')' ( ( ',' )? ( (lv_properties_6_0= ruleProposition ) ) )* ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1309:1: ( ( (lv_type_0_0= ruleRelType ) ) '(' ( ( ',' )? ( ( RULE_ID ) ) )* ')' ( ( ',' )? ( (lv_properties_6_0= ruleProposition ) ) )* )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1309:1: ( ( (lv_type_0_0= ruleRelType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ( ( ',' )? ( (lv_properties_7_0= ruleProposition ) ) )* )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1309:2: ( (lv_type_0_0= ruleRelType ) ) '(' ( ( RULE_ID ) ) ',' ( ( RULE_ID ) ) ')' ( ( ',' )? ( (lv_properties_7_0= ruleProposition ) ) )*
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1309:1: ( ( (lv_type_0_0= ruleRelType ) ) '(' ( ( ',' )? ( ( RULE_ID ) ) )* ')' ( ( ',' )? ( (lv_properties_6_0= ruleProposition ) ) )* )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1309:2: ( (lv_type_0_0= ruleRelType ) ) '(' ( ( ',' )? ( ( RULE_ID ) ) )* ')' ( ( ',' )? ( (lv_properties_6_0= ruleProposition ) ) )*
             {
             // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1309:2: ( (lv_type_0_0= ruleRelType ) )
             // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1310:1: (lv_type_0_0= ruleRelType )
@@ -3016,74 +3016,22 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
                     createLeafNode(grammarAccess.getRelationshipAccess().getLeftParenthesisKeyword_1(), null); 
                 
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1337:1: ( ( RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1338:1: ( RULE_ID )
-            {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1338:1: ( RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1339:3: RULE_ID
-            {
-
-            			if (current==null) {
-            	            current = factory.create(grammarAccess.getRelationshipRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
-            	        }
-                    
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRelationship2183); 
-
-            		createLeafNode(grammarAccess.getRelationshipAccess().getSourceEntityCrossReference_2_0(), "source"); 
-            	
-
-            }
-
-
-            }
-
-            match(input,14,FOLLOW_14_in_ruleRelationship2193); 
-
-                    createLeafNode(grammarAccess.getRelationshipAccess().getCommaKeyword_3(), null); 
-                
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1355:1: ( ( RULE_ID ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1356:1: ( RULE_ID )
-            {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1356:1: ( RULE_ID )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1357:3: RULE_ID
-            {
-
-            			if (current==null) {
-            	            current = factory.create(grammarAccess.getRelationshipRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
-            	        }
-                    
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRelationship2211); 
-
-            		createLeafNode(grammarAccess.getRelationshipAccess().getTargetEntityCrossReference_4_0(), "target"); 
-            	
-
-            }
-
-
-            }
-
-            match(input,23,FOLLOW_23_in_ruleRelationship2221); 
-
-                    createLeafNode(grammarAccess.getRelationshipAccess().getRightParenthesisKeyword_5(), null); 
-                
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1373:1: ( ( ',' )? ( (lv_properties_7_0= ruleProposition ) ) )*
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1337:1: ( ( ',' )? ( ( RULE_ID ) ) )*
             loop29:
             do {
                 int alt29=2;
                 int LA29_0 = input.LA(1);
 
-                if ( (LA29_0==RULE_STRING||LA29_0==14) ) {
+                if ( (LA29_0==RULE_ID||LA29_0==14) ) {
                     alt29=1;
                 }
 
 
                 switch (alt29) {
             	case 1 :
-            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1373:2: ( ',' )? ( (lv_properties_7_0= ruleProposition ) )
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1337:2: ( ',' )? ( ( RULE_ID ) )
             	    {
-            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1373:2: ( ',' )?
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1337:2: ( ',' )?
             	    int alt28=2;
             	    int LA28_0 = input.LA(1);
 
@@ -3092,11 +3040,11 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             	    }
             	    switch (alt28) {
             	        case 1 :
-            	            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1373:4: ','
+            	            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1337:4: ','
             	            {
-            	            match(input,14,FOLLOW_14_in_ruleRelationship2233); 
+            	            match(input,14,FOLLOW_14_in_ruleRelationship2177); 
 
-            	                    createLeafNode(grammarAccess.getRelationshipAccess().getCommaKeyword_6_0(), null); 
+            	                    createLeafNode(grammarAccess.getRelationshipAccess().getCommaKeyword_2_0(), null); 
             	                
 
             	            }
@@ -3104,17 +3052,88 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1377:3: ( (lv_properties_7_0= ruleProposition ) )
-            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1378:1: (lv_properties_7_0= ruleProposition )
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1341:3: ( ( RULE_ID ) )
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1342:1: ( RULE_ID )
             	    {
-            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1378:1: (lv_properties_7_0= ruleProposition )
-            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1379:3: lv_properties_7_0= ruleProposition
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1342:1: ( RULE_ID )
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1343:3: RULE_ID
+            	    {
+
+            	    			if (current==null) {
+            	    	            current = factory.create(grammarAccess.getRelationshipRule().getType().getClassifier());
+            	    	            associateNodeWithAstElement(currentNode, current);
+            	    	        }
+            	            
+            	    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRelationship2197); 
+
+            	    		createLeafNode(grammarAccess.getRelationshipAccess().getEntitiesEntityCrossReference_2_1_0(), "entities"); 
+            	    	
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop29;
+                }
+            } while (true);
+
+            match(input,23,FOLLOW_23_in_ruleRelationship2209); 
+
+                    createLeafNode(grammarAccess.getRelationshipAccess().getRightParenthesisKeyword_3(), null); 
+                
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1359:1: ( ( ',' )? ( (lv_properties_6_0= ruleProposition ) ) )*
+            loop31:
+            do {
+                int alt31=2;
+                int LA31_0 = input.LA(1);
+
+                if ( (LA31_0==RULE_STRING||LA31_0==14) ) {
+                    alt31=1;
+                }
+
+
+                switch (alt31) {
+            	case 1 :
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1359:2: ( ',' )? ( (lv_properties_6_0= ruleProposition ) )
+            	    {
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1359:2: ( ',' )?
+            	    int alt30=2;
+            	    int LA30_0 = input.LA(1);
+
+            	    if ( (LA30_0==14) ) {
+            	        alt30=1;
+            	    }
+            	    switch (alt30) {
+            	        case 1 :
+            	            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1359:4: ','
+            	            {
+            	            match(input,14,FOLLOW_14_in_ruleRelationship2221); 
+
+            	                    createLeafNode(grammarAccess.getRelationshipAccess().getCommaKeyword_4_0(), null); 
+            	                
+
+            	            }
+            	            break;
+
+            	    }
+
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1363:3: ( (lv_properties_6_0= ruleProposition ) )
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1364:1: (lv_properties_6_0= ruleProposition )
+            	    {
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1364:1: (lv_properties_6_0= ruleProposition )
+            	    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1365:3: lv_properties_6_0= ruleProposition
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getRelationshipAccess().getPropertiesPropositionParserRuleCall_6_1_0(), currentNode); 
+            	    	        currentNode=createCompositeNode(grammarAccess.getRelationshipAccess().getPropertiesPropositionParserRuleCall_4_1_0(), currentNode); 
             	    	    
-            	    pushFollow(FOLLOW_ruleProposition_in_ruleRelationship2256);
-            	    lv_properties_7_0=ruleProposition();
+            	    pushFollow(FOLLOW_ruleProposition_in_ruleRelationship2244);
+            	    lv_properties_6_0=ruleProposition();
             	    _fsp--;
 
 
@@ -3126,7 +3145,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             	    	       		add(
             	    	       			current, 
             	    	       			"properties",
-            	    	        		lv_properties_7_0, 
+            	    	        		lv_properties_6_0, 
             	    	        		"Proposition", 
             	    	        		currentNode);
             	    	        } catch (ValueConverterException vce) {
@@ -3145,7 +3164,7 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop29;
+            	    break loop31;
                 }
             } while (true);
 
@@ -3172,108 +3191,128 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleRelType
-    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1409:1: ruleRelType returns [Enumerator current=null] : ( ( 'carries out' ) | ( 'depends' ) | ( 'decomposes' ) | ( 'contributes' ) | ( 'delegates' ) | ( 'fulfils' ) | ( 'provides' ) | ( 'trusts' ) | ( 'wants' ) | ( 'damages' ) | ( 'attacks' ) | ( 'argues' ) | ( 'interfaces' ) | ( 'consumes' ) | ( 'protects' ) ) ;
+    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1395:1: ruleRelType returns [Enumerator current=null] : ( ( 'carries out' ) | ( 'depends' ) | ( 'and decomposes' ) | ( 'or decomposes' ) | ( '+' ) | ( '-' ) | ( '--' ) | ( '++' ) | ( 'delegates' ) | ( 'fulfils' ) | ( 'provides' ) | ( 'trusts' ) | ( 'wants' ) | ( 'damages' ) | ( 'attacks' ) | ( 'argues' ) | ( 'interfaces' ) | ( 'consumes' ) | ( 'protects' ) ) ;
     public final Enumerator ruleRelType() throws RecognitionException {
         Enumerator current = null;
 
          setCurrentLookahead(); resetLookahead(); 
         try {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1413:6: ( ( ( 'carries out' ) | ( 'depends' ) | ( 'decomposes' ) | ( 'contributes' ) | ( 'delegates' ) | ( 'fulfils' ) | ( 'provides' ) | ( 'trusts' ) | ( 'wants' ) | ( 'damages' ) | ( 'attacks' ) | ( 'argues' ) | ( 'interfaces' ) | ( 'consumes' ) | ( 'protects' ) ) )
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1414:1: ( ( 'carries out' ) | ( 'depends' ) | ( 'decomposes' ) | ( 'contributes' ) | ( 'delegates' ) | ( 'fulfils' ) | ( 'provides' ) | ( 'trusts' ) | ( 'wants' ) | ( 'damages' ) | ( 'attacks' ) | ( 'argues' ) | ( 'interfaces' ) | ( 'consumes' ) | ( 'protects' ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1399:6: ( ( ( 'carries out' ) | ( 'depends' ) | ( 'and decomposes' ) | ( 'or decomposes' ) | ( '+' ) | ( '-' ) | ( '--' ) | ( '++' ) | ( 'delegates' ) | ( 'fulfils' ) | ( 'provides' ) | ( 'trusts' ) | ( 'wants' ) | ( 'damages' ) | ( 'attacks' ) | ( 'argues' ) | ( 'interfaces' ) | ( 'consumes' ) | ( 'protects' ) ) )
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1400:1: ( ( 'carries out' ) | ( 'depends' ) | ( 'and decomposes' ) | ( 'or decomposes' ) | ( '+' ) | ( '-' ) | ( '--' ) | ( '++' ) | ( 'delegates' ) | ( 'fulfils' ) | ( 'provides' ) | ( 'trusts' ) | ( 'wants' ) | ( 'damages' ) | ( 'attacks' ) | ( 'argues' ) | ( 'interfaces' ) | ( 'consumes' ) | ( 'protects' ) )
             {
-            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1414:1: ( ( 'carries out' ) | ( 'depends' ) | ( 'decomposes' ) | ( 'contributes' ) | ( 'delegates' ) | ( 'fulfils' ) | ( 'provides' ) | ( 'trusts' ) | ( 'wants' ) | ( 'damages' ) | ( 'attacks' ) | ( 'argues' ) | ( 'interfaces' ) | ( 'consumes' ) | ( 'protects' ) )
-            int alt30=15;
+            // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1400:1: ( ( 'carries out' ) | ( 'depends' ) | ( 'and decomposes' ) | ( 'or decomposes' ) | ( '+' ) | ( '-' ) | ( '--' ) | ( '++' ) | ( 'delegates' ) | ( 'fulfils' ) | ( 'provides' ) | ( 'trusts' ) | ( 'wants' ) | ( 'damages' ) | ( 'attacks' ) | ( 'argues' ) | ( 'interfaces' ) | ( 'consumes' ) | ( 'protects' ) )
+            int alt32=19;
             switch ( input.LA(1) ) {
             case 24:
                 {
-                alt30=1;
+                alt32=1;
                 }
                 break;
             case 25:
                 {
-                alt30=2;
+                alt32=2;
                 }
                 break;
             case 26:
                 {
-                alt30=3;
+                alt32=3;
                 }
                 break;
             case 27:
                 {
-                alt30=4;
+                alt32=4;
                 }
                 break;
             case 28:
                 {
-                alt30=5;
+                alt32=5;
                 }
                 break;
             case 29:
                 {
-                alt30=6;
+                alt32=6;
                 }
                 break;
             case 30:
                 {
-                alt30=7;
+                alt32=7;
                 }
                 break;
             case 31:
                 {
-                alt30=8;
+                alt32=8;
                 }
                 break;
             case 32:
                 {
-                alt30=9;
+                alt32=9;
                 }
                 break;
             case 33:
                 {
-                alt30=10;
+                alt32=10;
                 }
                 break;
             case 34:
                 {
-                alt30=11;
+                alt32=11;
                 }
                 break;
             case 35:
                 {
-                alt30=12;
+                alt32=12;
                 }
                 break;
             case 36:
                 {
-                alt30=13;
+                alt32=13;
                 }
                 break;
             case 37:
                 {
-                alt30=14;
+                alt32=14;
                 }
                 break;
             case 38:
                 {
-                alt30=15;
+                alt32=15;
+                }
+                break;
+            case 39:
+                {
+                alt32=16;
+                }
+                break;
+            case 40:
+                {
+                alt32=17;
+                }
+                break;
+            case 41:
+                {
+                alt32=18;
+                }
+                break;
+            case 42:
+                {
+                alt32=19;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("1414:1: ( ( 'carries out' ) | ( 'depends' ) | ( 'decomposes' ) | ( 'contributes' ) | ( 'delegates' ) | ( 'fulfils' ) | ( 'provides' ) | ( 'trusts' ) | ( 'wants' ) | ( 'damages' ) | ( 'attacks' ) | ( 'argues' ) | ( 'interfaces' ) | ( 'consumes' ) | ( 'protects' ) )", 30, 0, input);
+                    new NoViableAltException("1400:1: ( ( 'carries out' ) | ( 'depends' ) | ( 'and decomposes' ) | ( 'or decomposes' ) | ( '+' ) | ( '-' ) | ( '--' ) | ( '++' ) | ( 'delegates' ) | ( 'fulfils' ) | ( 'provides' ) | ( 'trusts' ) | ( 'wants' ) | ( 'damages' ) | ( 'attacks' ) | ( 'argues' ) | ( 'interfaces' ) | ( 'consumes' ) | ( 'protects' ) )", 32, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt30) {
+            switch (alt32) {
                 case 1 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1414:2: ( 'carries out' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1400:2: ( 'carries out' )
                     {
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1414:2: ( 'carries out' )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1414:4: 'carries out'
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1400:2: ( 'carries out' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1400:4: 'carries out'
                     {
-                    match(input,24,FOLLOW_24_in_ruleRelType2306); 
+                    match(input,24,FOLLOW_24_in_ruleRelType2294); 
 
                             current = grammarAccess.getRelTypeAccess().getCARRIESOUTEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getRelTypeAccess().getCARRIESOUTEnumLiteralDeclaration_0(), null); 
@@ -3285,12 +3324,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1420:6: ( 'depends' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1406:6: ( 'depends' )
                     {
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1420:6: ( 'depends' )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1420:8: 'depends'
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1406:6: ( 'depends' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1406:8: 'depends'
                     {
-                    match(input,25,FOLLOW_25_in_ruleRelType2321); 
+                    match(input,25,FOLLOW_25_in_ruleRelType2309); 
 
                             current = grammarAccess.getRelTypeAccess().getDEPENDSEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             createLeafNode(grammarAccess.getRelTypeAccess().getDEPENDSEnumLiteralDeclaration_1(), null); 
@@ -3302,15 +3341,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1426:6: ( 'decomposes' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1412:6: ( 'and decomposes' )
                     {
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1426:6: ( 'decomposes' )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1426:8: 'decomposes'
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1412:6: ( 'and decomposes' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1412:8: 'and decomposes'
                     {
-                    match(input,26,FOLLOW_26_in_ruleRelType2336); 
+                    match(input,26,FOLLOW_26_in_ruleRelType2324); 
 
-                            current = grammarAccess.getRelTypeAccess().getDECOMPOSESEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getRelTypeAccess().getDECOMPOSESEnumLiteralDeclaration_2(), null); 
+                            current = grammarAccess.getRelTypeAccess().getAND_DECOMPOSESEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+                            createLeafNode(grammarAccess.getRelTypeAccess().getAND_DECOMPOSESEnumLiteralDeclaration_2(), null); 
                         
 
                     }
@@ -3319,15 +3358,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1432:6: ( 'contributes' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1418:6: ( 'or decomposes' )
                     {
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1432:6: ( 'contributes' )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1432:8: 'contributes'
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1418:6: ( 'or decomposes' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1418:8: 'or decomposes'
                     {
-                    match(input,27,FOLLOW_27_in_ruleRelType2351); 
+                    match(input,27,FOLLOW_27_in_ruleRelType2339); 
 
-                            current = grammarAccess.getRelTypeAccess().getCONTRIBUTESEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getRelTypeAccess().getCONTRIBUTESEnumLiteralDeclaration_3(), null); 
+                            current = grammarAccess.getRelTypeAccess().getOR_DECOMPOSESEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+                            createLeafNode(grammarAccess.getRelTypeAccess().getOR_DECOMPOSESEnumLiteralDeclaration_3(), null); 
                         
 
                     }
@@ -3336,15 +3375,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1438:6: ( 'delegates' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1424:6: ( '+' )
                     {
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1438:6: ( 'delegates' )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1438:8: 'delegates'
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1424:6: ( '+' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1424:8: '+'
                     {
-                    match(input,28,FOLLOW_28_in_ruleRelType2366); 
+                    match(input,28,FOLLOW_28_in_ruleRelType2354); 
 
-                            current = grammarAccess.getRelTypeAccess().getDELEGATESEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getRelTypeAccess().getDELEGATESEnumLiteralDeclaration_4(), null); 
+                            current = grammarAccess.getRelTypeAccess().getHELPSEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
+                            createLeafNode(grammarAccess.getRelTypeAccess().getHELPSEnumLiteralDeclaration_4(), null); 
                         
 
                     }
@@ -3353,15 +3392,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1444:6: ( 'fulfils' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1430:6: ( '-' )
                     {
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1444:6: ( 'fulfils' )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1444:8: 'fulfils'
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1430:6: ( '-' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1430:8: '-'
                     {
-                    match(input,29,FOLLOW_29_in_ruleRelType2381); 
+                    match(input,29,FOLLOW_29_in_ruleRelType2369); 
 
-                            current = grammarAccess.getRelTypeAccess().getFULFILSEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getRelTypeAccess().getFULFILSEnumLiteralDeclaration_5(), null); 
+                            current = grammarAccess.getRelTypeAccess().getHURTSEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
+                            createLeafNode(grammarAccess.getRelTypeAccess().getHURTSEnumLiteralDeclaration_5(), null); 
                         
 
                     }
@@ -3370,15 +3409,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1450:6: ( 'provides' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1436:6: ( '--' )
                     {
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1450:6: ( 'provides' )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1450:8: 'provides'
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1436:6: ( '--' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1436:8: '--'
                     {
-                    match(input,30,FOLLOW_30_in_ruleRelType2396); 
+                    match(input,30,FOLLOW_30_in_ruleRelType2384); 
 
-                            current = grammarAccess.getRelTypeAccess().getPROVIDESEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getRelTypeAccess().getPROVIDESEnumLiteralDeclaration_6(), null); 
+                            current = grammarAccess.getRelTypeAccess().getBREAKSEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
+                            createLeafNode(grammarAccess.getRelTypeAccess().getBREAKSEnumLiteralDeclaration_6(), null); 
                         
 
                     }
@@ -3387,15 +3426,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1456:6: ( 'trusts' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1442:6: ( '++' )
                     {
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1456:6: ( 'trusts' )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1456:8: 'trusts'
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1442:6: ( '++' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1442:8: '++'
                     {
-                    match(input,31,FOLLOW_31_in_ruleRelType2411); 
+                    match(input,31,FOLLOW_31_in_ruleRelType2399); 
 
-                            current = grammarAccess.getRelTypeAccess().getTRUSTSEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getRelTypeAccess().getTRUSTSEnumLiteralDeclaration_7(), null); 
+                            current = grammarAccess.getRelTypeAccess().getMAKESEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
+                            createLeafNode(grammarAccess.getRelTypeAccess().getMAKESEnumLiteralDeclaration_7(), null); 
                         
 
                     }
@@ -3404,15 +3443,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1462:6: ( 'wants' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1448:6: ( 'delegates' )
                     {
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1462:6: ( 'wants' )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1462:8: 'wants'
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1448:6: ( 'delegates' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1448:8: 'delegates'
                     {
-                    match(input,32,FOLLOW_32_in_ruleRelType2426); 
+                    match(input,32,FOLLOW_32_in_ruleRelType2414); 
 
-                            current = grammarAccess.getRelTypeAccess().getWANTSEnumLiteralDeclaration_8().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getRelTypeAccess().getWANTSEnumLiteralDeclaration_8(), null); 
+                            current = grammarAccess.getRelTypeAccess().getDELEGATESEnumLiteralDeclaration_8().getEnumLiteral().getInstance();
+                            createLeafNode(grammarAccess.getRelTypeAccess().getDELEGATESEnumLiteralDeclaration_8(), null); 
                         
 
                     }
@@ -3421,15 +3460,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1468:6: ( 'damages' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1454:6: ( 'fulfils' )
                     {
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1468:6: ( 'damages' )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1468:8: 'damages'
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1454:6: ( 'fulfils' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1454:8: 'fulfils'
                     {
-                    match(input,33,FOLLOW_33_in_ruleRelType2441); 
+                    match(input,33,FOLLOW_33_in_ruleRelType2429); 
 
-                            current = grammarAccess.getRelTypeAccess().getDAMAGESEnumLiteralDeclaration_9().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getRelTypeAccess().getDAMAGESEnumLiteralDeclaration_9(), null); 
+                            current = grammarAccess.getRelTypeAccess().getFULFILSEnumLiteralDeclaration_9().getEnumLiteral().getInstance();
+                            createLeafNode(grammarAccess.getRelTypeAccess().getFULFILSEnumLiteralDeclaration_9(), null); 
                         
 
                     }
@@ -3438,15 +3477,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 11 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1474:6: ( 'attacks' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1460:6: ( 'provides' )
                     {
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1474:6: ( 'attacks' )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1474:8: 'attacks'
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1460:6: ( 'provides' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1460:8: 'provides'
                     {
-                    match(input,34,FOLLOW_34_in_ruleRelType2456); 
+                    match(input,34,FOLLOW_34_in_ruleRelType2444); 
 
-                            current = grammarAccess.getRelTypeAccess().getATTACKSEnumLiteralDeclaration_10().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getRelTypeAccess().getATTACKSEnumLiteralDeclaration_10(), null); 
+                            current = grammarAccess.getRelTypeAccess().getPROVIDESEnumLiteralDeclaration_10().getEnumLiteral().getInstance();
+                            createLeafNode(grammarAccess.getRelTypeAccess().getPROVIDESEnumLiteralDeclaration_10(), null); 
                         
 
                     }
@@ -3455,15 +3494,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 12 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1480:6: ( 'argues' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1466:6: ( 'trusts' )
                     {
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1480:6: ( 'argues' )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1480:8: 'argues'
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1466:6: ( 'trusts' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1466:8: 'trusts'
                     {
-                    match(input,35,FOLLOW_35_in_ruleRelType2471); 
+                    match(input,35,FOLLOW_35_in_ruleRelType2459); 
 
-                            current = grammarAccess.getRelTypeAccess().getARGUESEnumLiteralDeclaration_11().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getRelTypeAccess().getARGUESEnumLiteralDeclaration_11(), null); 
+                            current = grammarAccess.getRelTypeAccess().getTRUSTSEnumLiteralDeclaration_11().getEnumLiteral().getInstance();
+                            createLeafNode(grammarAccess.getRelTypeAccess().getTRUSTSEnumLiteralDeclaration_11(), null); 
                         
 
                     }
@@ -3472,15 +3511,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 13 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1486:6: ( 'interfaces' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1472:6: ( 'wants' )
                     {
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1486:6: ( 'interfaces' )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1486:8: 'interfaces'
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1472:6: ( 'wants' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1472:8: 'wants'
                     {
-                    match(input,36,FOLLOW_36_in_ruleRelType2486); 
+                    match(input,36,FOLLOW_36_in_ruleRelType2474); 
 
-                            current = grammarAccess.getRelTypeAccess().getINTERFACESEnumLiteralDeclaration_12().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getRelTypeAccess().getINTERFACESEnumLiteralDeclaration_12(), null); 
+                            current = grammarAccess.getRelTypeAccess().getWANTSEnumLiteralDeclaration_12().getEnumLiteral().getInstance();
+                            createLeafNode(grammarAccess.getRelTypeAccess().getWANTSEnumLiteralDeclaration_12(), null); 
                         
 
                     }
@@ -3489,15 +3528,15 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 14 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1492:6: ( 'consumes' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1478:6: ( 'damages' )
                     {
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1492:6: ( 'consumes' )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1492:8: 'consumes'
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1478:6: ( 'damages' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1478:8: 'damages'
                     {
-                    match(input,37,FOLLOW_37_in_ruleRelType2501); 
+                    match(input,37,FOLLOW_37_in_ruleRelType2489); 
 
-                            current = grammarAccess.getRelTypeAccess().getCONSUMEsEnumLiteralDeclaration_13().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getRelTypeAccess().getCONSUMEsEnumLiteralDeclaration_13(), null); 
+                            current = grammarAccess.getRelTypeAccess().getDAMAGESEnumLiteralDeclaration_13().getEnumLiteral().getInstance();
+                            createLeafNode(grammarAccess.getRelTypeAccess().getDAMAGESEnumLiteralDeclaration_13(), null); 
                         
 
                     }
@@ -3506,15 +3545,83 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 15 :
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1498:6: ( 'protects' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1484:6: ( 'attacks' )
                     {
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1498:6: ( 'protects' )
-                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1498:8: 'protects'
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1484:6: ( 'attacks' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1484:8: 'attacks'
                     {
-                    match(input,38,FOLLOW_38_in_ruleRelType2516); 
+                    match(input,38,FOLLOW_38_in_ruleRelType2504); 
 
-                            current = grammarAccess.getRelTypeAccess().getPROTECTSEnumLiteralDeclaration_14().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getRelTypeAccess().getPROTECTSEnumLiteralDeclaration_14(), null); 
+                            current = grammarAccess.getRelTypeAccess().getATTACKSEnumLiteralDeclaration_14().getEnumLiteral().getInstance();
+                            createLeafNode(grammarAccess.getRelTypeAccess().getATTACKSEnumLiteralDeclaration_14(), null); 
+                        
+
+                    }
+
+
+                    }
+                    break;
+                case 16 :
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1490:6: ( 'argues' )
+                    {
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1490:6: ( 'argues' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1490:8: 'argues'
+                    {
+                    match(input,39,FOLLOW_39_in_ruleRelType2519); 
+
+                            current = grammarAccess.getRelTypeAccess().getARGUESEnumLiteralDeclaration_15().getEnumLiteral().getInstance();
+                            createLeafNode(grammarAccess.getRelTypeAccess().getARGUESEnumLiteralDeclaration_15(), null); 
+                        
+
+                    }
+
+
+                    }
+                    break;
+                case 17 :
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1496:6: ( 'interfaces' )
+                    {
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1496:6: ( 'interfaces' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1496:8: 'interfaces'
+                    {
+                    match(input,40,FOLLOW_40_in_ruleRelType2534); 
+
+                            current = grammarAccess.getRelTypeAccess().getINTERFACESEnumLiteralDeclaration_16().getEnumLiteral().getInstance();
+                            createLeafNode(grammarAccess.getRelTypeAccess().getINTERFACESEnumLiteralDeclaration_16(), null); 
+                        
+
+                    }
+
+
+                    }
+                    break;
+                case 18 :
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1502:6: ( 'consumes' )
+                    {
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1502:6: ( 'consumes' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1502:8: 'consumes'
+                    {
+                    match(input,41,FOLLOW_41_in_ruleRelType2549); 
+
+                            current = grammarAccess.getRelTypeAccess().getCONSUMEsEnumLiteralDeclaration_17().getEnumLiteral().getInstance();
+                            createLeafNode(grammarAccess.getRelTypeAccess().getCONSUMEsEnumLiteralDeclaration_17(), null); 
+                        
+
+                    }
+
+
+                    }
+                    break;
+                case 19 :
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1508:6: ( 'protects' )
+                    {
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1508:6: ( 'protects' )
+                    // ../ontology/src-gen/eu/securechange/ontology/parser/antlr/internal/InternalOntology.g:1508:8: 'protects'
+                    {
+                    match(input,42,FOLLOW_42_in_ruleRelType2564); 
+
+                            current = grammarAccess.getRelTypeAccess().getPROTECTSEnumLiteralDeclaration_18().getEnumLiteral().getInstance();
+                            createLeafNode(grammarAccess.getRelTypeAccess().getPROTECTSEnumLiteralDeclaration_18(), null); 
                         
 
                     }
@@ -3550,12 +3657,12 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_EOF_in_entryRuleSituation85 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_11_in_ruleSituation121 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleSituation138 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleSituation153 = new BitSet(new long[]{0x0000007FFF000012L});
+    public static final BitSet FOLLOW_12_in_ruleSituation153 = new BitSet(new long[]{0x000007FFFF000012L});
     public static final BitSet FOLLOW_ruleWorld_in_ruleSituation176 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleWorld_in_entryRuleWorld212 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleWorld222 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEntity_in_ruleWorld278 = new BitSet(new long[]{0x0000007FFF000012L});
-    public static final BitSet FOLLOW_ruleRelationship_in_ruleWorld305 = new BitSet(new long[]{0x0000007FFF000012L});
+    public static final BitSet FOLLOW_ruleEntity_in_ruleWorld278 = new BitSet(new long[]{0x000007FFFF000012L});
+    public static final BitSet FOLLOW_ruleRelationship_in_ruleWorld305 = new BitSet(new long[]{0x000007FFFF000012L});
     public static final BitSet FOLLOW_ruleEntity_in_entryRuleEntity343 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleEntity353 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleGoal_in_ruleEntity400 = new BitSet(new long[]{0x0000000000000002L});
@@ -3625,27 +3732,30 @@ public class InternalOntologyParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleRelationship_in_entryRuleRelationship2099 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleRelationship2109 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleRelType_in_ruleRelationship2155 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_22_in_ruleRelationship2165 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleRelationship2183 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleRelationship2193 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleRelationship2211 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_23_in_ruleRelationship2221 = new BitSet(new long[]{0x0000000000004022L});
-    public static final BitSet FOLLOW_14_in_ruleRelationship2233 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleProposition_in_ruleRelationship2256 = new BitSet(new long[]{0x0000000000004022L});
-    public static final BitSet FOLLOW_24_in_ruleRelType2306 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_ruleRelType2321 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_ruleRelType2336 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_ruleRelType2351 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_ruleRelType2366 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_ruleRelType2381 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_ruleRelType2396 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_ruleRelType2411 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_ruleRelType2426 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_ruleRelType2441 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_ruleRelType2456 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_ruleRelType2471 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_ruleRelType2486 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_ruleRelType2501 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_ruleRelType2516 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_ruleRelationship2165 = new BitSet(new long[]{0x0000000000804010L});
+    public static final BitSet FOLLOW_14_in_ruleRelationship2177 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleRelationship2197 = new BitSet(new long[]{0x0000000000804010L});
+    public static final BitSet FOLLOW_23_in_ruleRelationship2209 = new BitSet(new long[]{0x0000000000004022L});
+    public static final BitSet FOLLOW_14_in_ruleRelationship2221 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleProposition_in_ruleRelationship2244 = new BitSet(new long[]{0x0000000000004022L});
+    public static final BitSet FOLLOW_24_in_ruleRelType2294 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_ruleRelType2309 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_ruleRelType2324 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_ruleRelType2339 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_ruleRelType2354 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_ruleRelType2369 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_ruleRelType2384 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_ruleRelType2399 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_ruleRelType2414 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_ruleRelType2429 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_ruleRelType2444 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_ruleRelType2459 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_ruleRelType2474 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_ruleRelType2489 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_ruleRelType2504 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_ruleRelType2519 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_ruleRelType2534 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_ruleRelType2549 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_ruleRelType2564 = new BitSet(new long[]{0x0000000000000002L});
 
 }

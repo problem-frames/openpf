@@ -244,22 +244,16 @@
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.13"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value="("/>
-        <elements xsi:type="xtext:Assignment" feature="source" operator="=">
-          <terminal xsi:type="xtext:CrossReference">
-            <type metamodel="/0/@metamodelDeclarations.0">
-              <classifier xsi:type="ecore:EClass" href="http://securechange.eu/ontology#//Entity"/>
-            </type>
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.14"/>
-          </terminal>
-        </elements>
-        <elements xsi:type="xtext:Keyword" value=","/>
-        <elements xsi:type="xtext:Assignment" feature="target" operator="=">
-          <terminal xsi:type="xtext:CrossReference">
-            <type metamodel="/0/@metamodelDeclarations.0">
-              <classifier xsi:type="ecore:EClass" href="http://securechange.eu/ontology#//Entity"/>
-            </type>
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.14"/>
-          </terminal>
+        <elements xsi:type="xtext:Group" cardinality="*">
+          <elements xsi:type="xtext:Keyword" cardinality="?" value=","/>
+          <elements xsi:type="xtext:Assignment" feature="entities" operator="+=">
+            <terminal xsi:type="xtext:CrossReference">
+              <type metamodel="/0/@metamodelDeclarations.0">
+                <classifier xsi:type="ecore:EClass" href="http://securechange.eu/ontology#//Entity"/>
+              </type>
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.14"/>
+            </terminal>
+          </elements>
         </elements>
         <elements xsi:type="xtext:Keyword" value=")"/>
         <elements xsi:type="xtext:Group" cardinality="*">
@@ -284,12 +278,28 @@
           <literal value="depends"/>
         </elements>
         <elements xsi:type="xtext:EnumLiteralDeclaration">
-          <enumLiteral href="http://securechange.eu/ontology#//RelType/DECOMPOSES"/>
-          <literal value="decomposes"/>
+          <enumLiteral href="http://securechange.eu/ontology#//RelType/AND_DECOMPOSES"/>
+          <literal value="and decomposes"/>
         </elements>
         <elements xsi:type="xtext:EnumLiteralDeclaration">
-          <enumLiteral href="http://securechange.eu/ontology#//RelType/CONTRIBUTES"/>
-          <literal value="contributes"/>
+          <enumLiteral href="http://securechange.eu/ontology#//RelType/OR_DECOMPOSES"/>
+          <literal value="or decomposes"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://securechange.eu/ontology#//RelType/HELPS"/>
+          <literal value="+"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://securechange.eu/ontology#//RelType/HURTS"/>
+          <literal value="-"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://securechange.eu/ontology#//RelType/BREAKS"/>
+          <literal value="--"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://securechange.eu/ontology#//RelType/MAKES"/>
+          <literal value="++"/>
         </elements>
         <elements xsi:type="xtext:EnumLiteralDeclaration">
           <enumLiteral href="http://securechange.eu/ontology#//RelType/DELEGATES"/>

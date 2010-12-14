@@ -43,24 +43,64 @@ public enum RelType implements Enumerator
   DEPENDS(1, "DEPENDS", "depends"),
 
   /**
-   * The '<em><b>DECOMPOSES</b></em>' literal object.
+   * The '<em><b>AND DECOMPOSES</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #DECOMPOSES_VALUE
+   * @see #AND_DECOMPOSES_VALUE
    * @generated
    * @ordered
    */
-  DECOMPOSES(2, "DECOMPOSES", "decomposes"),
+  AND_DECOMPOSES(2, "AND_DECOMPOSES", "and decomposes"),
 
   /**
-   * The '<em><b>CONTRIBUTES</b></em>' literal object.
+   * The '<em><b>OR DECOMPOSES</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #CONTRIBUTES_VALUE
+   * @see #OR_DECOMPOSES_VALUE
    * @generated
    * @ordered
    */
-  CONTRIBUTES(3, "CONTRIBUTES", "contributes"),
+  OR_DECOMPOSES(3, "OR_DECOMPOSES", "or decomposes"),
+
+  /**
+   * The '<em><b>HELPS</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #HELPS_VALUE
+   * @generated
+   * @ordered
+   */
+  HELPS(4, "HELPS", "+"),
+
+  /**
+   * The '<em><b>HURTS</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #HURTS_VALUE
+   * @generated
+   * @ordered
+   */
+  HURTS(5, "HURTS", "-"),
+
+  /**
+   * The '<em><b>BREAKS</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #BREAKS_VALUE
+   * @generated
+   * @ordered
+   */
+  BREAKS(6, "BREAKS", "--"),
+
+  /**
+   * The '<em><b>MAKES</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #MAKES_VALUE
+   * @generated
+   * @ordered
+   */
+  MAKES(7, "MAKES", "++"),
 
   /**
    * The '<em><b>DELEGATES</b></em>' literal object.
@@ -70,7 +110,7 @@ public enum RelType implements Enumerator
    * @generated
    * @ordered
    */
-  DELEGATES(4, "DELEGATES", "delegates"),
+  DELEGATES(8, "DELEGATES", "delegates"),
 
   /**
    * The '<em><b>FULFILS</b></em>' literal object.
@@ -80,7 +120,7 @@ public enum RelType implements Enumerator
    * @generated
    * @ordered
    */
-  FULFILS(5, "FULFILS", "fulfils"),
+  FULFILS(9, "FULFILS", "fulfils"),
 
   /**
    * The '<em><b>PROVIDES</b></em>' literal object.
@@ -90,7 +130,7 @@ public enum RelType implements Enumerator
    * @generated
    * @ordered
    */
-  PROVIDES(6, "PROVIDES", "provides"),
+  PROVIDES(10, "PROVIDES", "provides"),
 
   /**
    * The '<em><b>TRUSTS</b></em>' literal object.
@@ -100,7 +140,7 @@ public enum RelType implements Enumerator
    * @generated
    * @ordered
    */
-  TRUSTS(7, "TRUSTS", "trusts"),
+  TRUSTS(11, "TRUSTS", "trusts"),
 
   /**
    * The '<em><b>WANTS</b></em>' literal object.
@@ -110,7 +150,7 @@ public enum RelType implements Enumerator
    * @generated
    * @ordered
    */
-  WANTS(8, "WANTS", "wants"),
+  WANTS(12, "WANTS", "wants"),
 
   /**
    * The '<em><b>DAMAGES</b></em>' literal object.
@@ -120,7 +160,7 @@ public enum RelType implements Enumerator
    * @generated
    * @ordered
    */
-  DAMAGES(9, "DAMAGES", "damages"),
+  DAMAGES(13, "DAMAGES", "damages"),
 
   /**
    * The '<em><b>ATTACKS</b></em>' literal object.
@@ -130,7 +170,7 @@ public enum RelType implements Enumerator
    * @generated
    * @ordered
    */
-  ATTACKS(10, "ATTACKS", "attacks"),
+  ATTACKS(14, "ATTACKS", "attacks"),
 
   /**
    * The '<em><b>ARGUES</b></em>' literal object.
@@ -140,7 +180,7 @@ public enum RelType implements Enumerator
    * @generated
    * @ordered
    */
-  ARGUES(11, "ARGUES", "argues"),
+  ARGUES(15, "ARGUES", "argues"),
 
   /**
    * The '<em><b>INTERFACES</b></em>' literal object.
@@ -150,7 +190,7 @@ public enum RelType implements Enumerator
    * @generated
    * @ordered
    */
-  INTERFACES(12, "INTERFACES", "interfaces"),
+  INTERFACES(16, "INTERFACES", "interfaces"),
 
   /**
    * The '<em><b>CONSUM Es</b></em>' literal object.
@@ -160,7 +200,7 @@ public enum RelType implements Enumerator
    * @generated
    * @ordered
    */
-  CONSUM_ES(13, "CONSUMEs", "consumes"),
+  CONSUM_ES(17, "CONSUMEs", "consumes"),
 
   /**
    * The '<em><b>PROTECTS</b></em>' literal object.
@@ -170,7 +210,7 @@ public enum RelType implements Enumerator
    * @generated
    * @ordered
    */
-  PROTECTS(14, "PROTECTS", "protects");
+  PROTECTS(18, "PROTECTS", "protects");
 
   /**
    * The '<em><b>CARRIESOUT</b></em>' literal value.
@@ -203,34 +243,94 @@ public enum RelType implements Enumerator
   public static final int DEPENDS_VALUE = 1;
 
   /**
-   * The '<em><b>DECOMPOSES</b></em>' literal value.
+   * The '<em><b>AND DECOMPOSES</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>DECOMPOSES</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>AND DECOMPOSES</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #DECOMPOSES
-   * @model literal="decomposes"
+   * @see #AND_DECOMPOSES
+   * @model literal="and decomposes"
    * @generated
    * @ordered
    */
-  public static final int DECOMPOSES_VALUE = 2;
+  public static final int AND_DECOMPOSES_VALUE = 2;
 
   /**
-   * The '<em><b>CONTRIBUTES</b></em>' literal value.
+   * The '<em><b>OR DECOMPOSES</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>CONTRIBUTES</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>OR DECOMPOSES</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #CONTRIBUTES
-   * @model literal="contributes"
+   * @see #OR_DECOMPOSES
+   * @model literal="or decomposes"
    * @generated
    * @ordered
    */
-  public static final int CONTRIBUTES_VALUE = 3;
+  public static final int OR_DECOMPOSES_VALUE = 3;
+
+  /**
+   * The '<em><b>HELPS</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>HELPS</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #HELPS
+   * @model literal="+"
+   * @generated
+   * @ordered
+   */
+  public static final int HELPS_VALUE = 4;
+
+  /**
+   * The '<em><b>HURTS</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>HURTS</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #HURTS
+   * @model literal="-"
+   * @generated
+   * @ordered
+   */
+  public static final int HURTS_VALUE = 5;
+
+  /**
+   * The '<em><b>BREAKS</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>BREAKS</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #BREAKS
+   * @model literal="--"
+   * @generated
+   * @ordered
+   */
+  public static final int BREAKS_VALUE = 6;
+
+  /**
+   * The '<em><b>MAKES</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>MAKES</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #MAKES
+   * @model literal="++"
+   * @generated
+   * @ordered
+   */
+  public static final int MAKES_VALUE = 7;
 
   /**
    * The '<em><b>DELEGATES</b></em>' literal value.
@@ -245,7 +345,7 @@ public enum RelType implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int DELEGATES_VALUE = 4;
+  public static final int DELEGATES_VALUE = 8;
 
   /**
    * The '<em><b>FULFILS</b></em>' literal value.
@@ -260,7 +360,7 @@ public enum RelType implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int FULFILS_VALUE = 5;
+  public static final int FULFILS_VALUE = 9;
 
   /**
    * The '<em><b>PROVIDES</b></em>' literal value.
@@ -275,7 +375,7 @@ public enum RelType implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int PROVIDES_VALUE = 6;
+  public static final int PROVIDES_VALUE = 10;
 
   /**
    * The '<em><b>TRUSTS</b></em>' literal value.
@@ -290,7 +390,7 @@ public enum RelType implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int TRUSTS_VALUE = 7;
+  public static final int TRUSTS_VALUE = 11;
 
   /**
    * The '<em><b>WANTS</b></em>' literal value.
@@ -305,7 +405,7 @@ public enum RelType implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int WANTS_VALUE = 8;
+  public static final int WANTS_VALUE = 12;
 
   /**
    * The '<em><b>DAMAGES</b></em>' literal value.
@@ -320,7 +420,7 @@ public enum RelType implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int DAMAGES_VALUE = 9;
+  public static final int DAMAGES_VALUE = 13;
 
   /**
    * The '<em><b>ATTACKS</b></em>' literal value.
@@ -335,7 +435,7 @@ public enum RelType implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int ATTACKS_VALUE = 10;
+  public static final int ATTACKS_VALUE = 14;
 
   /**
    * The '<em><b>ARGUES</b></em>' literal value.
@@ -350,7 +450,7 @@ public enum RelType implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int ARGUES_VALUE = 11;
+  public static final int ARGUES_VALUE = 15;
 
   /**
    * The '<em><b>INTERFACES</b></em>' literal value.
@@ -365,7 +465,7 @@ public enum RelType implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int INTERFACES_VALUE = 12;
+  public static final int INTERFACES_VALUE = 16;
 
   /**
    * The '<em><b>CONSUM Es</b></em>' literal value.
@@ -380,7 +480,7 @@ public enum RelType implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int CONSUM_ES_VALUE = 13;
+  public static final int CONSUM_ES_VALUE = 17;
 
   /**
    * The '<em><b>PROTECTS</b></em>' literal value.
@@ -395,7 +495,7 @@ public enum RelType implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int PROTECTS_VALUE = 14;
+  public static final int PROTECTS_VALUE = 18;
 
   /**
    * An array of all the '<em><b>Rel Type</b></em>' enumerators.
@@ -408,8 +508,12 @@ public enum RelType implements Enumerator
     {
       CARRIESOUT,
       DEPENDS,
-      DECOMPOSES,
-      CONTRIBUTES,
+      AND_DECOMPOSES,
+      OR_DECOMPOSES,
+      HELPS,
+      HURTS,
+      BREAKS,
+      MAKES,
       DELEGATES,
       FULFILS,
       PROVIDES,
@@ -481,8 +585,12 @@ public enum RelType implements Enumerator
     {
       case CARRIESOUT_VALUE: return CARRIESOUT;
       case DEPENDS_VALUE: return DEPENDS;
-      case DECOMPOSES_VALUE: return DECOMPOSES;
-      case CONTRIBUTES_VALUE: return CONTRIBUTES;
+      case AND_DECOMPOSES_VALUE: return AND_DECOMPOSES;
+      case OR_DECOMPOSES_VALUE: return OR_DECOMPOSES;
+      case HELPS_VALUE: return HELPS;
+      case HURTS_VALUE: return HURTS;
+      case BREAKS_VALUE: return BREAKS;
+      case MAKES_VALUE: return MAKES;
       case DELEGATES_VALUE: return DELEGATES;
       case FULFILS_VALUE: return FULFILS;
       case PROVIDES_VALUE: return PROVIDES;

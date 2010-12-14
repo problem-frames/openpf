@@ -26,9 +26,9 @@ public class OntologyFormatter extends AbstractDeclarativeFormatter {
 		c.setLinewrap(0, 1, 1).after(f.getML_COMMENTRule());
 		c.setAutoLinewrap(200);
 		c.setLinewrap().before(f.getML_COMMENTRule());
+		c.setLinewrap().before(f.getEntityRule());
 		c.setLinewrap().before(f.getRelationshipRule());
-		c.setSpace("\n\t").before(f.getEntityRule());
-		c.setSpace("\n\t").before(f.getPropositionRule());
+		c.setLinewrap().before(f.getPropositionRule());
 		c.setNoSpace().before(f.getSituationAccess().getColonKeyword_0_2());
 		c.setNoLinewrap().around(f.getSL_COMMENTRule());
 	}

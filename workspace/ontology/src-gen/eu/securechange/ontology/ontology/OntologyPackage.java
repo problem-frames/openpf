@@ -659,22 +659,13 @@ public interface OntologyPackage extends EPackage
   int RELATIONSHIP__TYPE = 0;
 
   /**
-   * The feature id for the '<em><b>Source</b></em>' reference.
+   * The feature id for the '<em><b>Entities</b></em>' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RELATIONSHIP__SOURCE = 1;
-
-  /**
-   * The feature id for the '<em><b>Target</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RELATIONSHIP__TARGET = 2;
+  int RELATIONSHIP__ENTITIES = 1;
 
   /**
    * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -683,7 +674,7 @@ public interface OntologyPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RELATIONSHIP__PROPERTIES = 3;
+  int RELATIONSHIP__PROPERTIES = 2;
 
   /**
    * The number of structural features of the '<em>Relationship</em>' class.
@@ -692,7 +683,7 @@ public interface OntologyPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RELATIONSHIP_FEATURE_COUNT = 4;
+  int RELATIONSHIP_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link eu.securechange.ontology.ontology.RelType <em>Rel Type</em>}' enum.
@@ -968,26 +959,15 @@ public interface OntologyPackage extends EPackage
   EAttribute getRelationship_Type();
 
   /**
-   * Returns the meta object for the reference '{@link eu.securechange.ontology.ontology.Relationship#getSource <em>Source</em>}'.
+   * Returns the meta object for the reference list '{@link eu.securechange.ontology.ontology.Relationship#getEntities <em>Entities</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Source</em>'.
-   * @see eu.securechange.ontology.ontology.Relationship#getSource()
+   * @return the meta object for the reference list '<em>Entities</em>'.
+   * @see eu.securechange.ontology.ontology.Relationship#getEntities()
    * @see #getRelationship()
    * @generated
    */
-  EReference getRelationship_Source();
-
-  /**
-   * Returns the meta object for the reference '{@link eu.securechange.ontology.ontology.Relationship#getTarget <em>Target</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Target</em>'.
-   * @see eu.securechange.ontology.ontology.Relationship#getTarget()
-   * @see #getRelationship()
-   * @generated
-   */
-  EReference getRelationship_Target();
+  EReference getRelationship_Entities();
 
   /**
    * Returns the meta object for the containment reference list '{@link eu.securechange.ontology.ontology.Relationship#getProperties <em>Properties</em>}'.
@@ -1260,20 +1240,12 @@ public interface OntologyPackage extends EPackage
     EAttribute RELATIONSHIP__TYPE = eINSTANCE.getRelationship_Type();
 
     /**
-     * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Entities</b></em>' reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference RELATIONSHIP__SOURCE = eINSTANCE.getRelationship_Source();
-
-    /**
-     * The meta object literal for the '<em><b>Target</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference RELATIONSHIP__TARGET = eINSTANCE.getRelationship_Target();
+    EReference RELATIONSHIP__ENTITIES = eINSTANCE.getRelationship_Entities();
 
     /**
      * The meta object literal for the '<em><b>Properties</b></em>' containment reference list feature.

@@ -10,8 +10,12 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="Ontology.ecore#//RelType">
       <genEnumLiterals ecoreEnumLiteral="Ontology.ecore#//RelType/CARRIESOUT"/>
       <genEnumLiterals ecoreEnumLiteral="Ontology.ecore#//RelType/DEPENDS"/>
-      <genEnumLiterals ecoreEnumLiteral="Ontology.ecore#//RelType/DECOMPOSES"/>
-      <genEnumLiterals ecoreEnumLiteral="Ontology.ecore#//RelType/CONTRIBUTES"/>
+      <genEnumLiterals ecoreEnumLiteral="Ontology.ecore#//RelType/AND_DECOMPOSES"/>
+      <genEnumLiterals ecoreEnumLiteral="Ontology.ecore#//RelType/OR_DECOMPOSES"/>
+      <genEnumLiterals ecoreEnumLiteral="Ontology.ecore#//RelType/HELPS"/>
+      <genEnumLiterals ecoreEnumLiteral="Ontology.ecore#//RelType/HURTS"/>
+      <genEnumLiterals ecoreEnumLiteral="Ontology.ecore#//RelType/BREAKS"/>
+      <genEnumLiterals ecoreEnumLiteral="Ontology.ecore#//RelType/MAKES"/>
       <genEnumLiterals ecoreEnumLiteral="Ontology.ecore#//RelType/DELEGATES"/>
       <genEnumLiterals ecoreEnumLiteral="Ontology.ecore#//RelType/FULFILS"/>
       <genEnumLiterals ecoreEnumLiteral="Ontology.ecore#//RelType/PROVIDES"/>
@@ -54,8 +58,7 @@
     </genClasses>
     <genClasses ecoreClass="Ontology.ecore#//Relationship">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ontology.ecore#//Relationship/type"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ontology.ecore#//Relationship/source"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ontology.ecore#//Relationship/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ontology.ecore#//Relationship/entities"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ontology.ecore#//Relationship/properties"/>
     </genClasses>
   </genPackages>

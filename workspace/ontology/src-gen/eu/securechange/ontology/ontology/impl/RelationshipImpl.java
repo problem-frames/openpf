@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -35,8 +36,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link eu.securechange.ontology.ontology.impl.RelationshipImpl#getType <em>Type</em>}</li>
- *   <li>{@link eu.securechange.ontology.ontology.impl.RelationshipImpl#getSource <em>Source</em>}</li>
- *   <li>{@link eu.securechange.ontology.ontology.impl.RelationshipImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link eu.securechange.ontology.ontology.impl.RelationshipImpl#getEntities <em>Entities</em>}</li>
  *   <li>{@link eu.securechange.ontology.ontology.impl.RelationshipImpl#getProperties <em>Properties</em>}</li>
  * </ul>
  * </p>
@@ -66,24 +66,14 @@ public class RelationshipImpl extends MinimalEObjectImpl.Container implements Re
   protected RelType type = TYPE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
+   * The cached value of the '{@link #getEntities() <em>Entities</em>}' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSource()
+   * @see #getEntities()
    * @generated
    * @ordered
    */
-  protected Entity source;
-
-  /**
-   * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTarget()
-   * @generated
-   * @ordered
-   */
-  protected Entity target;
+  protected EList<Entity> entities;
 
   /**
    * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
@@ -144,85 +134,13 @@ public class RelationshipImpl extends MinimalEObjectImpl.Container implements Re
    * <!-- end-user-doc -->
    * @generated
    */
-  public Entity getSource()
+  public EList<Entity> getEntities()
   {
-    if (source != null && source.eIsProxy())
+    if (entities == null)
     {
-      InternalEObject oldSource = (InternalEObject)source;
-      source = (Entity)eResolveProxy(oldSource);
-      if (source != oldSource)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, OntologyPackage.RELATIONSHIP__SOURCE, oldSource, source));
-      }
+      entities = new EObjectResolvingEList<Entity>(Entity.class, this, OntologyPackage.RELATIONSHIP__ENTITIES);
     }
-    return source;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Entity basicGetSource()
-  {
-    return source;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setSource(Entity newSource)
-  {
-    Entity oldSource = source;
-    source = newSource;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OntologyPackage.RELATIONSHIP__SOURCE, oldSource, source));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Entity getTarget()
-  {
-    if (target != null && target.eIsProxy())
-    {
-      InternalEObject oldTarget = (InternalEObject)target;
-      target = (Entity)eResolveProxy(oldTarget);
-      if (target != oldTarget)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, OntologyPackage.RELATIONSHIP__TARGET, oldTarget, target));
-      }
-    }
-    return target;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Entity basicGetTarget()
-  {
-    return target;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setTarget(Entity newTarget)
-  {
-    Entity oldTarget = target;
-    target = newTarget;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OntologyPackage.RELATIONSHIP__TARGET, oldTarget, target));
+    return entities;
   }
 
   /**
@@ -267,12 +185,8 @@ public class RelationshipImpl extends MinimalEObjectImpl.Container implements Re
     {
       case OntologyPackage.RELATIONSHIP__TYPE:
         return getType();
-      case OntologyPackage.RELATIONSHIP__SOURCE:
-        if (resolve) return getSource();
-        return basicGetSource();
-      case OntologyPackage.RELATIONSHIP__TARGET:
-        if (resolve) return getTarget();
-        return basicGetTarget();
+      case OntologyPackage.RELATIONSHIP__ENTITIES:
+        return getEntities();
       case OntologyPackage.RELATIONSHIP__PROPERTIES:
         return getProperties();
     }
@@ -293,11 +207,9 @@ public class RelationshipImpl extends MinimalEObjectImpl.Container implements Re
       case OntologyPackage.RELATIONSHIP__TYPE:
         setType((RelType)newValue);
         return;
-      case OntologyPackage.RELATIONSHIP__SOURCE:
-        setSource((Entity)newValue);
-        return;
-      case OntologyPackage.RELATIONSHIP__TARGET:
-        setTarget((Entity)newValue);
+      case OntologyPackage.RELATIONSHIP__ENTITIES:
+        getEntities().clear();
+        getEntities().addAll((Collection<? extends Entity>)newValue);
         return;
       case OntologyPackage.RELATIONSHIP__PROPERTIES:
         getProperties().clear();
@@ -320,11 +232,8 @@ public class RelationshipImpl extends MinimalEObjectImpl.Container implements Re
       case OntologyPackage.RELATIONSHIP__TYPE:
         setType(TYPE_EDEFAULT);
         return;
-      case OntologyPackage.RELATIONSHIP__SOURCE:
-        setSource((Entity)null);
-        return;
-      case OntologyPackage.RELATIONSHIP__TARGET:
-        setTarget((Entity)null);
+      case OntologyPackage.RELATIONSHIP__ENTITIES:
+        getEntities().clear();
         return;
       case OntologyPackage.RELATIONSHIP__PROPERTIES:
         getProperties().clear();
@@ -345,10 +254,8 @@ public class RelationshipImpl extends MinimalEObjectImpl.Container implements Re
     {
       case OntologyPackage.RELATIONSHIP__TYPE:
         return type != TYPE_EDEFAULT;
-      case OntologyPackage.RELATIONSHIP__SOURCE:
-        return source != null;
-      case OntologyPackage.RELATIONSHIP__TARGET:
-        return target != null;
+      case OntologyPackage.RELATIONSHIP__ENTITIES:
+        return entities != null && !entities.isEmpty();
       case OntologyPackage.RELATIONSHIP__PROPERTIES:
         return properties != null && !properties.isEmpty();
     }

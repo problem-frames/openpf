@@ -61,7 +61,8 @@ public class OntologyParser extends AbstractContentAssistParser {
 					put(grammarAccess.getResourceAccess().getGroup(), "rule__Resource__Group__0");
 					put(grammarAccess.getResourceAccess().getGroup_3(), "rule__Resource__Group_3__0");
 					put(grammarAccess.getRelationshipAccess().getGroup(), "rule__Relationship__Group__0");
-					put(grammarAccess.getRelationshipAccess().getGroup_6(), "rule__Relationship__Group_6__0");
+					put(grammarAccess.getRelationshipAccess().getGroup_2(), "rule__Relationship__Group_2__0");
+					put(grammarAccess.getRelationshipAccess().getGroup_4(), "rule__Relationship__Group_4__0");
 					put(grammarAccess.getSituationAccess().getTimeAssignment_0_1(), "rule__Situation__TimeAssignment_0_1");
 					put(grammarAccess.getSituationAccess().getWorldAssignment_1(), "rule__Situation__WorldAssignment_1");
 					put(grammarAccess.getWorldAccess().getEntitiesAssignment_1_0(), "rule__World__EntitiesAssignment_1_0");
@@ -98,9 +99,8 @@ public class OntologyParser extends AbstractContentAssistParser {
 					put(grammarAccess.getResourceAccess().getPropertiesAssignment_3_1(), "rule__Resource__PropertiesAssignment_3_1");
 					put(grammarAccess.getPropositionAccess().getNameAssignment(), "rule__Proposition__NameAssignment");
 					put(grammarAccess.getRelationshipAccess().getTypeAssignment_0(), "rule__Relationship__TypeAssignment_0");
-					put(grammarAccess.getRelationshipAccess().getSourceAssignment_2(), "rule__Relationship__SourceAssignment_2");
-					put(grammarAccess.getRelationshipAccess().getTargetAssignment_4(), "rule__Relationship__TargetAssignment_4");
-					put(grammarAccess.getRelationshipAccess().getPropertiesAssignment_6_1(), "rule__Relationship__PropertiesAssignment_6_1");
+					put(grammarAccess.getRelationshipAccess().getEntitiesAssignment_2_1(), "rule__Relationship__EntitiesAssignment_2_1");
+					put(grammarAccess.getRelationshipAccess().getPropertiesAssignment_4_1(), "rule__Relationship__PropertiesAssignment_4_1");
 				}
 			};
 		}

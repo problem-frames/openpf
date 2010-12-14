@@ -68,8 +68,7 @@ public class RelationshipItemProvider
 			super.getPropertyDescriptors(object);
 
 			addTypePropertyDescriptor(object);
-			addSourcePropertyDescriptor(object);
-			addTargetPropertyDescriptor(object);
+			addEntitiesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -97,41 +96,19 @@ public class RelationshipItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Source feature.
+	 * This adds a property descriptor for the Entities feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSourcePropertyDescriptor(Object object) {
+	protected void addEntitiesPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Relationship_source_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Relationship_source_feature", "_UI_Relationship_type"),
-				 OntologyPackage.Literals.RELATIONSHIP__SOURCE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Target feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTargetPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Relationship_target_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Relationship_target_feature", "_UI_Relationship_type"),
-				 OntologyPackage.Literals.RELATIONSHIP__TARGET,
+				 getString("_UI_Relationship_entities_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Relationship_entities_feature", "_UI_Relationship_type"),
+				 OntologyPackage.Literals.RELATIONSHIP__ENTITIES,
 				 true,
 				 false,
 				 true,

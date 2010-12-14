@@ -23,7 +23,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalOntologyParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'carries out'", "'depends'", "'decomposes'", "'contributes'", "'delegates'", "'fulfils'", "'provides'", "'trusts'", "'wants'", "'damages'", "'attacks'", "'argues'", "'interfaces'", "'consumes'", "'protects'", "'model'", "':'", "','", "'$'", "'('", "')'", "'goal'", "'sec'", "'req'", "'dom'", "'actor'", "'action'", "'resource'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'carries out'", "'depends'", "'and decomposes'", "'or decomposes'", "'+'", "'-'", "'--'", "'++'", "'delegates'", "'fulfils'", "'provides'", "'trusts'", "'wants'", "'damages'", "'attacks'", "'argues'", "'interfaces'", "'consumes'", "'protects'", "'model'", "':'", "','", "'$'", "'('", "')'", "'goal'", "'sec'", "'req'", "'dom'", "'actor'", "'action'", "'resource'"
     };
     public static final int RULE_ID=4;
     public static final int RULE_STRING=5;
@@ -1098,7 +1098,7 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
             if ( (LA1_0==RULE_ID) ) {
                 alt1=1;
             }
-            else if ( ((LA1_0>=11 && LA1_0<=25)) ) {
+            else if ( ((LA1_0>=11 && LA1_0<=29)) ) {
                 alt1=2;
             }
             else {
@@ -1187,10 +1187,10 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
             if ( (LA2_0==RULE_ID) ) {
                 int LA2_1 = input.LA(2);
 
-                if ( ((LA2_1>=35 && LA2_1<=38)) ) {
+                if ( ((LA2_1>=39 && LA2_1<=42)) ) {
                     alt2=2;
                 }
-                else if ( ((LA2_1>=32 && LA2_1<=34)) ) {
+                else if ( ((LA2_1>=36 && LA2_1<=38)) ) {
                     alt2=1;
                 }
                 else {
@@ -1273,19 +1273,19 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
             if ( (LA3_0==RULE_ID) ) {
                 switch ( input.LA(2) ) {
-                case 32:
+                case 36:
                     {
                     alt3=1;
                     }
                     break;
-                case 33:
-                    {
-                    alt3=2;
-                    }
-                    break;
-                case 34:
+                case 38:
                     {
                     alt3=3;
+                    }
+                    break;
+                case 37:
+                    {
+                    alt3=2;
                     }
                     break;
                 default:
@@ -1393,24 +1393,24 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
             if ( (LA4_0==RULE_ID) ) {
                 switch ( input.LA(2) ) {
-                case 38:
+                case 39:
                     {
-                    alt4=4;
+                    alt4=1;
                     }
                     break;
-                case 37:
+                case 41:
                     {
                     alt4=3;
                     }
                     break;
-                case 36:
+                case 42:
                     {
-                    alt4=2;
+                    alt4=4;
                     }
                     break;
-                case 35:
+                case 40:
                     {
-                    alt4=1;
+                    alt4=2;
                     }
                     break;
                 default:
@@ -1524,14 +1524,14 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__RelType__Alternatives
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:550:1: rule__RelType__Alternatives : ( ( ( 'carries out' ) ) | ( ( 'depends' ) ) | ( ( 'decomposes' ) ) | ( ( 'contributes' ) ) | ( ( 'delegates' ) ) | ( ( 'fulfils' ) ) | ( ( 'provides' ) ) | ( ( 'trusts' ) ) | ( ( 'wants' ) ) | ( ( 'damages' ) ) | ( ( 'attacks' ) ) | ( ( 'argues' ) ) | ( ( 'interfaces' ) ) | ( ( 'consumes' ) ) | ( ( 'protects' ) ) );
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:550:1: rule__RelType__Alternatives : ( ( ( 'carries out' ) ) | ( ( 'depends' ) ) | ( ( 'and decomposes' ) ) | ( ( 'or decomposes' ) ) | ( ( '+' ) ) | ( ( '-' ) ) | ( ( '--' ) ) | ( ( '++' ) ) | ( ( 'delegates' ) ) | ( ( 'fulfils' ) ) | ( ( 'provides' ) ) | ( ( 'trusts' ) ) | ( ( 'wants' ) ) | ( ( 'damages' ) ) | ( ( 'attacks' ) ) | ( ( 'argues' ) ) | ( ( 'interfaces' ) ) | ( ( 'consumes' ) ) | ( ( 'protects' ) ) );
     public final void rule__RelType__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:554:1: ( ( ( 'carries out' ) ) | ( ( 'depends' ) ) | ( ( 'decomposes' ) ) | ( ( 'contributes' ) ) | ( ( 'delegates' ) ) | ( ( 'fulfils' ) ) | ( ( 'provides' ) ) | ( ( 'trusts' ) ) | ( ( 'wants' ) ) | ( ( 'damages' ) ) | ( ( 'attacks' ) ) | ( ( 'argues' ) ) | ( ( 'interfaces' ) ) | ( ( 'consumes' ) ) | ( ( 'protects' ) ) )
-            int alt5=15;
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:554:1: ( ( ( 'carries out' ) ) | ( ( 'depends' ) ) | ( ( 'and decomposes' ) ) | ( ( 'or decomposes' ) ) | ( ( '+' ) ) | ( ( '-' ) ) | ( ( '--' ) ) | ( ( '++' ) ) | ( ( 'delegates' ) ) | ( ( 'fulfils' ) ) | ( ( 'provides' ) ) | ( ( 'trusts' ) ) | ( ( 'wants' ) ) | ( ( 'damages' ) ) | ( ( 'attacks' ) ) | ( ( 'argues' ) ) | ( ( 'interfaces' ) ) | ( ( 'consumes' ) ) | ( ( 'protects' ) ) )
+            int alt5=19;
             switch ( input.LA(1) ) {
             case 11:
                 {
@@ -1608,9 +1608,29 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
                 alt5=15;
                 }
                 break;
+            case 26:
+                {
+                alt5=16;
+                }
+                break;
+            case 27:
+                {
+                alt5=17;
+                }
+                break;
+            case 28:
+                {
+                alt5=18;
+                }
+                break;
+            case 29:
+                {
+                alt5=19;
+                }
+                break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("550:1: rule__RelType__Alternatives : ( ( ( 'carries out' ) ) | ( ( 'depends' ) ) | ( ( 'decomposes' ) ) | ( ( 'contributes' ) ) | ( ( 'delegates' ) ) | ( ( 'fulfils' ) ) | ( ( 'provides' ) ) | ( ( 'trusts' ) ) | ( ( 'wants' ) ) | ( ( 'damages' ) ) | ( ( 'attacks' ) ) | ( ( 'argues' ) ) | ( ( 'interfaces' ) ) | ( ( 'consumes' ) ) | ( ( 'protects' ) ) );", 5, 0, input);
+                    new NoViableAltException("550:1: rule__RelType__Alternatives : ( ( ( 'carries out' ) ) | ( ( 'depends' ) ) | ( ( 'and decomposes' ) ) | ( ( 'or decomposes' ) ) | ( ( '+' ) ) | ( ( '-' ) ) | ( ( '--' ) ) | ( ( '++' ) ) | ( ( 'delegates' ) ) | ( ( 'fulfils' ) ) | ( ( 'provides' ) ) | ( ( 'trusts' ) ) | ( ( 'wants' ) ) | ( ( 'damages' ) ) | ( ( 'attacks' ) ) | ( ( 'argues' ) ) | ( ( 'interfaces' ) ) | ( ( 'consumes' ) ) | ( ( 'protects' ) ) );", 5, 0, input);
 
                 throw nvae;
             }
@@ -1659,20 +1679,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 3 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:569:6: ( ( 'decomposes' ) )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:569:6: ( ( 'and decomposes' ) )
                     {
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:569:6: ( ( 'decomposes' ) )
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:570:1: ( 'decomposes' )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:569:6: ( ( 'and decomposes' ) )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:570:1: ( 'and decomposes' )
                     {
-                     before(grammarAccess.getRelTypeAccess().getDECOMPOSESEnumLiteralDeclaration_2()); 
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:571:1: ( 'decomposes' )
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:571:3: 'decomposes'
+                     before(grammarAccess.getRelTypeAccess().getAND_DECOMPOSESEnumLiteralDeclaration_2()); 
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:571:1: ( 'and decomposes' )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:571:3: 'and decomposes'
                     {
                     match(input,13,FOLLOW_13_in_rule__RelType__Alternatives1180); 
 
                     }
 
-                     after(grammarAccess.getRelTypeAccess().getDECOMPOSESEnumLiteralDeclaration_2()); 
+                     after(grammarAccess.getRelTypeAccess().getAND_DECOMPOSESEnumLiteralDeclaration_2()); 
 
                     }
 
@@ -1680,20 +1700,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 4 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:576:6: ( ( 'contributes' ) )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:576:6: ( ( 'or decomposes' ) )
                     {
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:576:6: ( ( 'contributes' ) )
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:577:1: ( 'contributes' )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:576:6: ( ( 'or decomposes' ) )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:577:1: ( 'or decomposes' )
                     {
-                     before(grammarAccess.getRelTypeAccess().getCONTRIBUTESEnumLiteralDeclaration_3()); 
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:578:1: ( 'contributes' )
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:578:3: 'contributes'
+                     before(grammarAccess.getRelTypeAccess().getOR_DECOMPOSESEnumLiteralDeclaration_3()); 
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:578:1: ( 'or decomposes' )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:578:3: 'or decomposes'
                     {
                     match(input,14,FOLLOW_14_in_rule__RelType__Alternatives1201); 
 
                     }
 
-                     after(grammarAccess.getRelTypeAccess().getCONTRIBUTESEnumLiteralDeclaration_3()); 
+                     after(grammarAccess.getRelTypeAccess().getOR_DECOMPOSESEnumLiteralDeclaration_3()); 
 
                     }
 
@@ -1701,20 +1721,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 5 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:583:6: ( ( 'delegates' ) )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:583:6: ( ( '+' ) )
                     {
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:583:6: ( ( 'delegates' ) )
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:584:1: ( 'delegates' )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:583:6: ( ( '+' ) )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:584:1: ( '+' )
                     {
-                     before(grammarAccess.getRelTypeAccess().getDELEGATESEnumLiteralDeclaration_4()); 
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:585:1: ( 'delegates' )
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:585:3: 'delegates'
+                     before(grammarAccess.getRelTypeAccess().getHELPSEnumLiteralDeclaration_4()); 
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:585:1: ( '+' )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:585:3: '+'
                     {
                     match(input,15,FOLLOW_15_in_rule__RelType__Alternatives1222); 
 
                     }
 
-                     after(grammarAccess.getRelTypeAccess().getDELEGATESEnumLiteralDeclaration_4()); 
+                     after(grammarAccess.getRelTypeAccess().getHELPSEnumLiteralDeclaration_4()); 
 
                     }
 
@@ -1722,20 +1742,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 6 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:590:6: ( ( 'fulfils' ) )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:590:6: ( ( '-' ) )
                     {
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:590:6: ( ( 'fulfils' ) )
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:591:1: ( 'fulfils' )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:590:6: ( ( '-' ) )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:591:1: ( '-' )
                     {
-                     before(grammarAccess.getRelTypeAccess().getFULFILSEnumLiteralDeclaration_5()); 
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:592:1: ( 'fulfils' )
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:592:3: 'fulfils'
+                     before(grammarAccess.getRelTypeAccess().getHURTSEnumLiteralDeclaration_5()); 
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:592:1: ( '-' )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:592:3: '-'
                     {
                     match(input,16,FOLLOW_16_in_rule__RelType__Alternatives1243); 
 
                     }
 
-                     after(grammarAccess.getRelTypeAccess().getFULFILSEnumLiteralDeclaration_5()); 
+                     after(grammarAccess.getRelTypeAccess().getHURTSEnumLiteralDeclaration_5()); 
 
                     }
 
@@ -1743,20 +1763,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 7 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:597:6: ( ( 'provides' ) )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:597:6: ( ( '--' ) )
                     {
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:597:6: ( ( 'provides' ) )
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:598:1: ( 'provides' )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:597:6: ( ( '--' ) )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:598:1: ( '--' )
                     {
-                     before(grammarAccess.getRelTypeAccess().getPROVIDESEnumLiteralDeclaration_6()); 
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:599:1: ( 'provides' )
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:599:3: 'provides'
+                     before(grammarAccess.getRelTypeAccess().getBREAKSEnumLiteralDeclaration_6()); 
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:599:1: ( '--' )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:599:3: '--'
                     {
                     match(input,17,FOLLOW_17_in_rule__RelType__Alternatives1264); 
 
                     }
 
-                     after(grammarAccess.getRelTypeAccess().getPROVIDESEnumLiteralDeclaration_6()); 
+                     after(grammarAccess.getRelTypeAccess().getBREAKSEnumLiteralDeclaration_6()); 
 
                     }
 
@@ -1764,20 +1784,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 8 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:604:6: ( ( 'trusts' ) )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:604:6: ( ( '++' ) )
                     {
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:604:6: ( ( 'trusts' ) )
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:605:1: ( 'trusts' )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:604:6: ( ( '++' ) )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:605:1: ( '++' )
                     {
-                     before(grammarAccess.getRelTypeAccess().getTRUSTSEnumLiteralDeclaration_7()); 
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:606:1: ( 'trusts' )
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:606:3: 'trusts'
+                     before(grammarAccess.getRelTypeAccess().getMAKESEnumLiteralDeclaration_7()); 
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:606:1: ( '++' )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:606:3: '++'
                     {
                     match(input,18,FOLLOW_18_in_rule__RelType__Alternatives1285); 
 
                     }
 
-                     after(grammarAccess.getRelTypeAccess().getTRUSTSEnumLiteralDeclaration_7()); 
+                     after(grammarAccess.getRelTypeAccess().getMAKESEnumLiteralDeclaration_7()); 
 
                     }
 
@@ -1785,20 +1805,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 9 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:611:6: ( ( 'wants' ) )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:611:6: ( ( 'delegates' ) )
                     {
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:611:6: ( ( 'wants' ) )
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:612:1: ( 'wants' )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:611:6: ( ( 'delegates' ) )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:612:1: ( 'delegates' )
                     {
-                     before(grammarAccess.getRelTypeAccess().getWANTSEnumLiteralDeclaration_8()); 
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:613:1: ( 'wants' )
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:613:3: 'wants'
+                     before(grammarAccess.getRelTypeAccess().getDELEGATESEnumLiteralDeclaration_8()); 
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:613:1: ( 'delegates' )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:613:3: 'delegates'
                     {
                     match(input,19,FOLLOW_19_in_rule__RelType__Alternatives1306); 
 
                     }
 
-                     after(grammarAccess.getRelTypeAccess().getWANTSEnumLiteralDeclaration_8()); 
+                     after(grammarAccess.getRelTypeAccess().getDELEGATESEnumLiteralDeclaration_8()); 
 
                     }
 
@@ -1806,20 +1826,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 10 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:618:6: ( ( 'damages' ) )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:618:6: ( ( 'fulfils' ) )
                     {
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:618:6: ( ( 'damages' ) )
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:619:1: ( 'damages' )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:618:6: ( ( 'fulfils' ) )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:619:1: ( 'fulfils' )
                     {
-                     before(grammarAccess.getRelTypeAccess().getDAMAGESEnumLiteralDeclaration_9()); 
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:620:1: ( 'damages' )
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:620:3: 'damages'
+                     before(grammarAccess.getRelTypeAccess().getFULFILSEnumLiteralDeclaration_9()); 
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:620:1: ( 'fulfils' )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:620:3: 'fulfils'
                     {
                     match(input,20,FOLLOW_20_in_rule__RelType__Alternatives1327); 
 
                     }
 
-                     after(grammarAccess.getRelTypeAccess().getDAMAGESEnumLiteralDeclaration_9()); 
+                     after(grammarAccess.getRelTypeAccess().getFULFILSEnumLiteralDeclaration_9()); 
 
                     }
 
@@ -1827,20 +1847,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 11 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:625:6: ( ( 'attacks' ) )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:625:6: ( ( 'provides' ) )
                     {
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:625:6: ( ( 'attacks' ) )
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:626:1: ( 'attacks' )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:625:6: ( ( 'provides' ) )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:626:1: ( 'provides' )
                     {
-                     before(grammarAccess.getRelTypeAccess().getATTACKSEnumLiteralDeclaration_10()); 
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:627:1: ( 'attacks' )
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:627:3: 'attacks'
+                     before(grammarAccess.getRelTypeAccess().getPROVIDESEnumLiteralDeclaration_10()); 
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:627:1: ( 'provides' )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:627:3: 'provides'
                     {
                     match(input,21,FOLLOW_21_in_rule__RelType__Alternatives1348); 
 
                     }
 
-                     after(grammarAccess.getRelTypeAccess().getATTACKSEnumLiteralDeclaration_10()); 
+                     after(grammarAccess.getRelTypeAccess().getPROVIDESEnumLiteralDeclaration_10()); 
 
                     }
 
@@ -1848,20 +1868,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 12 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:632:6: ( ( 'argues' ) )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:632:6: ( ( 'trusts' ) )
                     {
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:632:6: ( ( 'argues' ) )
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:633:1: ( 'argues' )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:632:6: ( ( 'trusts' ) )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:633:1: ( 'trusts' )
                     {
-                     before(grammarAccess.getRelTypeAccess().getARGUESEnumLiteralDeclaration_11()); 
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:634:1: ( 'argues' )
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:634:3: 'argues'
+                     before(grammarAccess.getRelTypeAccess().getTRUSTSEnumLiteralDeclaration_11()); 
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:634:1: ( 'trusts' )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:634:3: 'trusts'
                     {
                     match(input,22,FOLLOW_22_in_rule__RelType__Alternatives1369); 
 
                     }
 
-                     after(grammarAccess.getRelTypeAccess().getARGUESEnumLiteralDeclaration_11()); 
+                     after(grammarAccess.getRelTypeAccess().getTRUSTSEnumLiteralDeclaration_11()); 
 
                     }
 
@@ -1869,20 +1889,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 13 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:639:6: ( ( 'interfaces' ) )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:639:6: ( ( 'wants' ) )
                     {
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:639:6: ( ( 'interfaces' ) )
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:640:1: ( 'interfaces' )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:639:6: ( ( 'wants' ) )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:640:1: ( 'wants' )
                     {
-                     before(grammarAccess.getRelTypeAccess().getINTERFACESEnumLiteralDeclaration_12()); 
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:641:1: ( 'interfaces' )
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:641:3: 'interfaces'
+                     before(grammarAccess.getRelTypeAccess().getWANTSEnumLiteralDeclaration_12()); 
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:641:1: ( 'wants' )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:641:3: 'wants'
                     {
                     match(input,23,FOLLOW_23_in_rule__RelType__Alternatives1390); 
 
                     }
 
-                     after(grammarAccess.getRelTypeAccess().getINTERFACESEnumLiteralDeclaration_12()); 
+                     after(grammarAccess.getRelTypeAccess().getWANTSEnumLiteralDeclaration_12()); 
 
                     }
 
@@ -1890,20 +1910,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 14 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:646:6: ( ( 'consumes' ) )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:646:6: ( ( 'damages' ) )
                     {
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:646:6: ( ( 'consumes' ) )
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:647:1: ( 'consumes' )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:646:6: ( ( 'damages' ) )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:647:1: ( 'damages' )
                     {
-                     before(grammarAccess.getRelTypeAccess().getCONSUMEsEnumLiteralDeclaration_13()); 
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:648:1: ( 'consumes' )
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:648:3: 'consumes'
+                     before(grammarAccess.getRelTypeAccess().getDAMAGESEnumLiteralDeclaration_13()); 
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:648:1: ( 'damages' )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:648:3: 'damages'
                     {
                     match(input,24,FOLLOW_24_in_rule__RelType__Alternatives1411); 
 
                     }
 
-                     after(grammarAccess.getRelTypeAccess().getCONSUMEsEnumLiteralDeclaration_13()); 
+                     after(grammarAccess.getRelTypeAccess().getDAMAGESEnumLiteralDeclaration_13()); 
 
                     }
 
@@ -1911,20 +1931,104 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 15 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:653:6: ( ( 'protects' ) )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:653:6: ( ( 'attacks' ) )
                     {
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:653:6: ( ( 'protects' ) )
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:654:1: ( 'protects' )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:653:6: ( ( 'attacks' ) )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:654:1: ( 'attacks' )
                     {
-                     before(grammarAccess.getRelTypeAccess().getPROTECTSEnumLiteralDeclaration_14()); 
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:655:1: ( 'protects' )
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:655:3: 'protects'
+                     before(grammarAccess.getRelTypeAccess().getATTACKSEnumLiteralDeclaration_14()); 
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:655:1: ( 'attacks' )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:655:3: 'attacks'
                     {
                     match(input,25,FOLLOW_25_in_rule__RelType__Alternatives1432); 
 
                     }
 
-                     after(grammarAccess.getRelTypeAccess().getPROTECTSEnumLiteralDeclaration_14()); 
+                     after(grammarAccess.getRelTypeAccess().getATTACKSEnumLiteralDeclaration_14()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 16 :
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:660:6: ( ( 'argues' ) )
+                    {
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:660:6: ( ( 'argues' ) )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:661:1: ( 'argues' )
+                    {
+                     before(grammarAccess.getRelTypeAccess().getARGUESEnumLiteralDeclaration_15()); 
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:662:1: ( 'argues' )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:662:3: 'argues'
+                    {
+                    match(input,26,FOLLOW_26_in_rule__RelType__Alternatives1453); 
+
+                    }
+
+                     after(grammarAccess.getRelTypeAccess().getARGUESEnumLiteralDeclaration_15()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 17 :
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:667:6: ( ( 'interfaces' ) )
+                    {
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:667:6: ( ( 'interfaces' ) )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:668:1: ( 'interfaces' )
+                    {
+                     before(grammarAccess.getRelTypeAccess().getINTERFACESEnumLiteralDeclaration_16()); 
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:669:1: ( 'interfaces' )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:669:3: 'interfaces'
+                    {
+                    match(input,27,FOLLOW_27_in_rule__RelType__Alternatives1474); 
+
+                    }
+
+                     after(grammarAccess.getRelTypeAccess().getINTERFACESEnumLiteralDeclaration_16()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 18 :
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:674:6: ( ( 'consumes' ) )
+                    {
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:674:6: ( ( 'consumes' ) )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:675:1: ( 'consumes' )
+                    {
+                     before(grammarAccess.getRelTypeAccess().getCONSUMEsEnumLiteralDeclaration_17()); 
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:676:1: ( 'consumes' )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:676:3: 'consumes'
+                    {
+                    match(input,28,FOLLOW_28_in_rule__RelType__Alternatives1495); 
+
+                    }
+
+                     after(grammarAccess.getRelTypeAccess().getCONSUMEsEnumLiteralDeclaration_17()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 19 :
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:681:6: ( ( 'protects' ) )
+                    {
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:681:6: ( ( 'protects' ) )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:682:1: ( 'protects' )
+                    {
+                     before(grammarAccess.getRelTypeAccess().getPROTECTSEnumLiteralDeclaration_18()); 
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:683:1: ( 'protects' )
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:683:3: 'protects'
+                    {
+                    match(input,29,FOLLOW_29_in_rule__RelType__Alternatives1516); 
+
+                    }
+
+                     after(grammarAccess.getRelTypeAccess().getPROTECTSEnumLiteralDeclaration_18()); 
 
                     }
 
@@ -1949,20 +2053,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Situation__Group__0
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:667:1: rule__Situation__Group__0 : rule__Situation__Group__0__Impl rule__Situation__Group__1 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:695:1: rule__Situation__Group__0 : rule__Situation__Group__0__Impl rule__Situation__Group__1 ;
     public final void rule__Situation__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:671:1: ( rule__Situation__Group__0__Impl rule__Situation__Group__1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:672:2: rule__Situation__Group__0__Impl rule__Situation__Group__1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:699:1: ( rule__Situation__Group__0__Impl rule__Situation__Group__1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:700:2: rule__Situation__Group__0__Impl rule__Situation__Group__1
             {
-            pushFollow(FOLLOW_rule__Situation__Group__0__Impl_in_rule__Situation__Group__01465);
+            pushFollow(FOLLOW_rule__Situation__Group__0__Impl_in_rule__Situation__Group__01549);
             rule__Situation__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Situation__Group__1_in_rule__Situation__Group__01468);
+            pushFollow(FOLLOW_rule__Situation__Group__1_in_rule__Situation__Group__01552);
             rule__Situation__Group__1();
             _fsp--;
 
@@ -1985,31 +2089,31 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Situation__Group__0__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:679:1: rule__Situation__Group__0__Impl : ( ( rule__Situation__Group_0__0 )? ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:707:1: rule__Situation__Group__0__Impl : ( ( rule__Situation__Group_0__0 )? ) ;
     public final void rule__Situation__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:683:1: ( ( ( rule__Situation__Group_0__0 )? ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:684:1: ( ( rule__Situation__Group_0__0 )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:711:1: ( ( ( rule__Situation__Group_0__0 )? ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:712:1: ( ( rule__Situation__Group_0__0 )? )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:684:1: ( ( rule__Situation__Group_0__0 )? )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:685:1: ( rule__Situation__Group_0__0 )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:712:1: ( ( rule__Situation__Group_0__0 )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:713:1: ( rule__Situation__Group_0__0 )?
             {
              before(grammarAccess.getSituationAccess().getGroup_0()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:686:1: ( rule__Situation__Group_0__0 )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:714:1: ( rule__Situation__Group_0__0 )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
-            if ( (LA6_0==26) ) {
+            if ( (LA6_0==30) ) {
                 alt6=1;
             }
             switch (alt6) {
                 case 1 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:686:2: rule__Situation__Group_0__0
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:714:2: rule__Situation__Group_0__0
                     {
-                    pushFollow(FOLLOW_rule__Situation__Group_0__0_in_rule__Situation__Group__0__Impl1495);
+                    pushFollow(FOLLOW_rule__Situation__Group_0__0_in_rule__Situation__Group__0__Impl1579);
                     rule__Situation__Group_0__0();
                     _fsp--;
 
@@ -2042,16 +2146,16 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Situation__Group__1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:696:1: rule__Situation__Group__1 : rule__Situation__Group__1__Impl ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:724:1: rule__Situation__Group__1 : rule__Situation__Group__1__Impl ;
     public final void rule__Situation__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:700:1: ( rule__Situation__Group__1__Impl )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:701:2: rule__Situation__Group__1__Impl
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:728:1: ( rule__Situation__Group__1__Impl )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:729:2: rule__Situation__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Situation__Group__1__Impl_in_rule__Situation__Group__11526);
+            pushFollow(FOLLOW_rule__Situation__Group__1__Impl_in_rule__Situation__Group__11610);
             rule__Situation__Group__1__Impl();
             _fsp--;
 
@@ -2074,23 +2178,23 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Situation__Group__1__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:707:1: rule__Situation__Group__1__Impl : ( ( rule__Situation__WorldAssignment_1 ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:735:1: rule__Situation__Group__1__Impl : ( ( rule__Situation__WorldAssignment_1 ) ) ;
     public final void rule__Situation__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:711:1: ( ( ( rule__Situation__WorldAssignment_1 ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:712:1: ( ( rule__Situation__WorldAssignment_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:739:1: ( ( ( rule__Situation__WorldAssignment_1 ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:740:1: ( ( rule__Situation__WorldAssignment_1 ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:712:1: ( ( rule__Situation__WorldAssignment_1 ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:713:1: ( rule__Situation__WorldAssignment_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:740:1: ( ( rule__Situation__WorldAssignment_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:741:1: ( rule__Situation__WorldAssignment_1 )
             {
              before(grammarAccess.getSituationAccess().getWorldAssignment_1()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:714:1: ( rule__Situation__WorldAssignment_1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:714:2: rule__Situation__WorldAssignment_1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:742:1: ( rule__Situation__WorldAssignment_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:742:2: rule__Situation__WorldAssignment_1
             {
-            pushFollow(FOLLOW_rule__Situation__WorldAssignment_1_in_rule__Situation__Group__1__Impl1553);
+            pushFollow(FOLLOW_rule__Situation__WorldAssignment_1_in_rule__Situation__Group__1__Impl1637);
             rule__Situation__WorldAssignment_1();
             _fsp--;
 
@@ -2120,20 +2224,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Situation__Group_0__0
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:728:1: rule__Situation__Group_0__0 : rule__Situation__Group_0__0__Impl rule__Situation__Group_0__1 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:756:1: rule__Situation__Group_0__0 : rule__Situation__Group_0__0__Impl rule__Situation__Group_0__1 ;
     public final void rule__Situation__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:732:1: ( rule__Situation__Group_0__0__Impl rule__Situation__Group_0__1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:733:2: rule__Situation__Group_0__0__Impl rule__Situation__Group_0__1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:760:1: ( rule__Situation__Group_0__0__Impl rule__Situation__Group_0__1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:761:2: rule__Situation__Group_0__0__Impl rule__Situation__Group_0__1
             {
-            pushFollow(FOLLOW_rule__Situation__Group_0__0__Impl_in_rule__Situation__Group_0__01587);
+            pushFollow(FOLLOW_rule__Situation__Group_0__0__Impl_in_rule__Situation__Group_0__01671);
             rule__Situation__Group_0__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Situation__Group_0__1_in_rule__Situation__Group_0__01590);
+            pushFollow(FOLLOW_rule__Situation__Group_0__1_in_rule__Situation__Group_0__01674);
             rule__Situation__Group_0__1();
             _fsp--;
 
@@ -2156,20 +2260,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Situation__Group_0__0__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:740:1: rule__Situation__Group_0__0__Impl : ( 'model' ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:768:1: rule__Situation__Group_0__0__Impl : ( 'model' ) ;
     public final void rule__Situation__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:744:1: ( ( 'model' ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:745:1: ( 'model' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:772:1: ( ( 'model' ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:773:1: ( 'model' )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:745:1: ( 'model' )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:746:1: 'model'
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:773:1: ( 'model' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:774:1: 'model'
             {
              before(grammarAccess.getSituationAccess().getModelKeyword_0_0()); 
-            match(input,26,FOLLOW_26_in_rule__Situation__Group_0__0__Impl1618); 
+            match(input,30,FOLLOW_30_in_rule__Situation__Group_0__0__Impl1702); 
              after(grammarAccess.getSituationAccess().getModelKeyword_0_0()); 
 
             }
@@ -2193,20 +2297,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Situation__Group_0__1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:759:1: rule__Situation__Group_0__1 : rule__Situation__Group_0__1__Impl rule__Situation__Group_0__2 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:787:1: rule__Situation__Group_0__1 : rule__Situation__Group_0__1__Impl rule__Situation__Group_0__2 ;
     public final void rule__Situation__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:763:1: ( rule__Situation__Group_0__1__Impl rule__Situation__Group_0__2 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:764:2: rule__Situation__Group_0__1__Impl rule__Situation__Group_0__2
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:791:1: ( rule__Situation__Group_0__1__Impl rule__Situation__Group_0__2 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:792:2: rule__Situation__Group_0__1__Impl rule__Situation__Group_0__2
             {
-            pushFollow(FOLLOW_rule__Situation__Group_0__1__Impl_in_rule__Situation__Group_0__11649);
+            pushFollow(FOLLOW_rule__Situation__Group_0__1__Impl_in_rule__Situation__Group_0__11733);
             rule__Situation__Group_0__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Situation__Group_0__2_in_rule__Situation__Group_0__11652);
+            pushFollow(FOLLOW_rule__Situation__Group_0__2_in_rule__Situation__Group_0__11736);
             rule__Situation__Group_0__2();
             _fsp--;
 
@@ -2229,23 +2333,23 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Situation__Group_0__1__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:771:1: rule__Situation__Group_0__1__Impl : ( ( rule__Situation__TimeAssignment_0_1 ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:799:1: rule__Situation__Group_0__1__Impl : ( ( rule__Situation__TimeAssignment_0_1 ) ) ;
     public final void rule__Situation__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:775:1: ( ( ( rule__Situation__TimeAssignment_0_1 ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:776:1: ( ( rule__Situation__TimeAssignment_0_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:803:1: ( ( ( rule__Situation__TimeAssignment_0_1 ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:804:1: ( ( rule__Situation__TimeAssignment_0_1 ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:776:1: ( ( rule__Situation__TimeAssignment_0_1 ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:777:1: ( rule__Situation__TimeAssignment_0_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:804:1: ( ( rule__Situation__TimeAssignment_0_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:805:1: ( rule__Situation__TimeAssignment_0_1 )
             {
              before(grammarAccess.getSituationAccess().getTimeAssignment_0_1()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:778:1: ( rule__Situation__TimeAssignment_0_1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:778:2: rule__Situation__TimeAssignment_0_1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:806:1: ( rule__Situation__TimeAssignment_0_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:806:2: rule__Situation__TimeAssignment_0_1
             {
-            pushFollow(FOLLOW_rule__Situation__TimeAssignment_0_1_in_rule__Situation__Group_0__1__Impl1679);
+            pushFollow(FOLLOW_rule__Situation__TimeAssignment_0_1_in_rule__Situation__Group_0__1__Impl1763);
             rule__Situation__TimeAssignment_0_1();
             _fsp--;
 
@@ -2275,16 +2379,16 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Situation__Group_0__2
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:788:1: rule__Situation__Group_0__2 : rule__Situation__Group_0__2__Impl ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:816:1: rule__Situation__Group_0__2 : rule__Situation__Group_0__2__Impl ;
     public final void rule__Situation__Group_0__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:792:1: ( rule__Situation__Group_0__2__Impl )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:793:2: rule__Situation__Group_0__2__Impl
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:820:1: ( rule__Situation__Group_0__2__Impl )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:821:2: rule__Situation__Group_0__2__Impl
             {
-            pushFollow(FOLLOW_rule__Situation__Group_0__2__Impl_in_rule__Situation__Group_0__21709);
+            pushFollow(FOLLOW_rule__Situation__Group_0__2__Impl_in_rule__Situation__Group_0__21793);
             rule__Situation__Group_0__2__Impl();
             _fsp--;
 
@@ -2307,20 +2411,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Situation__Group_0__2__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:799:1: rule__Situation__Group_0__2__Impl : ( ':' ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:827:1: rule__Situation__Group_0__2__Impl : ( ':' ) ;
     public final void rule__Situation__Group_0__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:803:1: ( ( ':' ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:804:1: ( ':' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:831:1: ( ( ':' ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:832:1: ( ':' )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:804:1: ( ':' )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:805:1: ':'
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:832:1: ( ':' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:833:1: ':'
             {
              before(grammarAccess.getSituationAccess().getColonKeyword_0_2()); 
-            match(input,27,FOLLOW_27_in_rule__Situation__Group_0__2__Impl1737); 
+            match(input,31,FOLLOW_31_in_rule__Situation__Group_0__2__Impl1821); 
              after(grammarAccess.getSituationAccess().getColonKeyword_0_2()); 
 
             }
@@ -2344,20 +2448,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__World__Group__0
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:824:1: rule__World__Group__0 : rule__World__Group__0__Impl rule__World__Group__1 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:852:1: rule__World__Group__0 : rule__World__Group__0__Impl rule__World__Group__1 ;
     public final void rule__World__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:828:1: ( rule__World__Group__0__Impl rule__World__Group__1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:829:2: rule__World__Group__0__Impl rule__World__Group__1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:856:1: ( rule__World__Group__0__Impl rule__World__Group__1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:857:2: rule__World__Group__0__Impl rule__World__Group__1
             {
-            pushFollow(FOLLOW_rule__World__Group__0__Impl_in_rule__World__Group__01774);
+            pushFollow(FOLLOW_rule__World__Group__0__Impl_in_rule__World__Group__01858);
             rule__World__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__World__Group__1_in_rule__World__Group__01777);
+            pushFollow(FOLLOW_rule__World__Group__1_in_rule__World__Group__01861);
             rule__World__Group__1();
             _fsp--;
 
@@ -2380,21 +2484,21 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__World__Group__0__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:836:1: rule__World__Group__0__Impl : ( () ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:864:1: rule__World__Group__0__Impl : ( () ) ;
     public final void rule__World__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:840:1: ( ( () ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:841:1: ( () )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:868:1: ( ( () ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:869:1: ( () )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:841:1: ( () )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:842:1: ()
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:869:1: ( () )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:870:1: ()
             {
              before(grammarAccess.getWorldAccess().getWorldAction_0()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:843:1: ()
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:845:1: 
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:871:1: ()
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:873:1: 
             {
             }
 
@@ -2417,16 +2521,16 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__World__Group__1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:855:1: rule__World__Group__1 : rule__World__Group__1__Impl ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:883:1: rule__World__Group__1 : rule__World__Group__1__Impl ;
     public final void rule__World__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:859:1: ( rule__World__Group__1__Impl )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:860:2: rule__World__Group__1__Impl
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:887:1: ( rule__World__Group__1__Impl )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:888:2: rule__World__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__World__Group__1__Impl_in_rule__World__Group__11835);
+            pushFollow(FOLLOW_rule__World__Group__1__Impl_in_rule__World__Group__11919);
             rule__World__Group__1__Impl();
             _fsp--;
 
@@ -2449,35 +2553,35 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__World__Group__1__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:866:1: rule__World__Group__1__Impl : ( ( rule__World__Alternatives_1 )* ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:894:1: rule__World__Group__1__Impl : ( ( rule__World__Alternatives_1 )* ) ;
     public final void rule__World__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:870:1: ( ( ( rule__World__Alternatives_1 )* ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:871:1: ( ( rule__World__Alternatives_1 )* )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:898:1: ( ( ( rule__World__Alternatives_1 )* ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:899:1: ( ( rule__World__Alternatives_1 )* )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:871:1: ( ( rule__World__Alternatives_1 )* )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:872:1: ( rule__World__Alternatives_1 )*
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:899:1: ( ( rule__World__Alternatives_1 )* )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:900:1: ( rule__World__Alternatives_1 )*
             {
              before(grammarAccess.getWorldAccess().getAlternatives_1()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:873:1: ( rule__World__Alternatives_1 )*
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:901:1: ( rule__World__Alternatives_1 )*
             loop7:
             do {
                 int alt7=2;
                 int LA7_0 = input.LA(1);
 
-                if ( (LA7_0==RULE_ID||(LA7_0>=11 && LA7_0<=25)) ) {
+                if ( (LA7_0==RULE_ID||(LA7_0>=11 && LA7_0<=29)) ) {
                     alt7=1;
                 }
 
 
                 switch (alt7) {
             	case 1 :
-            	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:873:2: rule__World__Alternatives_1
+            	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:901:2: rule__World__Alternatives_1
             	    {
-            	    pushFollow(FOLLOW_rule__World__Alternatives_1_in_rule__World__Group__1__Impl1862);
+            	    pushFollow(FOLLOW_rule__World__Alternatives_1_in_rule__World__Group__1__Impl1946);
             	    rule__World__Alternatives_1();
             	    _fsp--;
 
@@ -2513,20 +2617,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Goal__Group_0__0
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:887:1: rule__Goal__Group_0__0 : rule__Goal__Group_0__0__Impl rule__Goal__Group_0__1 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:915:1: rule__Goal__Group_0__0 : rule__Goal__Group_0__0__Impl rule__Goal__Group_0__1 ;
     public final void rule__Goal__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:891:1: ( rule__Goal__Group_0__0__Impl rule__Goal__Group_0__1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:892:2: rule__Goal__Group_0__0__Impl rule__Goal__Group_0__1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:919:1: ( rule__Goal__Group_0__0__Impl rule__Goal__Group_0__1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:920:2: rule__Goal__Group_0__0__Impl rule__Goal__Group_0__1
             {
-            pushFollow(FOLLOW_rule__Goal__Group_0__0__Impl_in_rule__Goal__Group_0__01897);
+            pushFollow(FOLLOW_rule__Goal__Group_0__0__Impl_in_rule__Goal__Group_0__01981);
             rule__Goal__Group_0__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Goal__Group_0__1_in_rule__Goal__Group_0__01900);
+            pushFollow(FOLLOW_rule__Goal__Group_0__1_in_rule__Goal__Group_0__01984);
             rule__Goal__Group_0__1();
             _fsp--;
 
@@ -2549,23 +2653,23 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Goal__Group_0__0__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:899:1: rule__Goal__Group_0__0__Impl : ( ( rule__Goal__NameAssignment_0_0 ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:927:1: rule__Goal__Group_0__0__Impl : ( ( rule__Goal__NameAssignment_0_0 ) ) ;
     public final void rule__Goal__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:903:1: ( ( ( rule__Goal__NameAssignment_0_0 ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:904:1: ( ( rule__Goal__NameAssignment_0_0 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:931:1: ( ( ( rule__Goal__NameAssignment_0_0 ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:932:1: ( ( rule__Goal__NameAssignment_0_0 ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:904:1: ( ( rule__Goal__NameAssignment_0_0 ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:905:1: ( rule__Goal__NameAssignment_0_0 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:932:1: ( ( rule__Goal__NameAssignment_0_0 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:933:1: ( rule__Goal__NameAssignment_0_0 )
             {
              before(grammarAccess.getGoalAccess().getNameAssignment_0_0()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:906:1: ( rule__Goal__NameAssignment_0_0 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:906:2: rule__Goal__NameAssignment_0_0
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:934:1: ( rule__Goal__NameAssignment_0_0 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:934:2: rule__Goal__NameAssignment_0_0
             {
-            pushFollow(FOLLOW_rule__Goal__NameAssignment_0_0_in_rule__Goal__Group_0__0__Impl1927);
+            pushFollow(FOLLOW_rule__Goal__NameAssignment_0_0_in_rule__Goal__Group_0__0__Impl2011);
             rule__Goal__NameAssignment_0_0();
             _fsp--;
 
@@ -2595,20 +2699,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Goal__Group_0__1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:916:1: rule__Goal__Group_0__1 : rule__Goal__Group_0__1__Impl rule__Goal__Group_0__2 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:944:1: rule__Goal__Group_0__1 : rule__Goal__Group_0__1__Impl rule__Goal__Group_0__2 ;
     public final void rule__Goal__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:920:1: ( rule__Goal__Group_0__1__Impl rule__Goal__Group_0__2 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:921:2: rule__Goal__Group_0__1__Impl rule__Goal__Group_0__2
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:948:1: ( rule__Goal__Group_0__1__Impl rule__Goal__Group_0__2 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:949:2: rule__Goal__Group_0__1__Impl rule__Goal__Group_0__2
             {
-            pushFollow(FOLLOW_rule__Goal__Group_0__1__Impl_in_rule__Goal__Group_0__11957);
+            pushFollow(FOLLOW_rule__Goal__Group_0__1__Impl_in_rule__Goal__Group_0__12041);
             rule__Goal__Group_0__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Goal__Group_0__2_in_rule__Goal__Group_0__11960);
+            pushFollow(FOLLOW_rule__Goal__Group_0__2_in_rule__Goal__Group_0__12044);
             rule__Goal__Group_0__2();
             _fsp--;
 
@@ -2631,23 +2735,23 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Goal__Group_0__1__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:928:1: rule__Goal__Group_0__1__Impl : ( ( rule__Goal__TypeAssignment_0_1 ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:956:1: rule__Goal__Group_0__1__Impl : ( ( rule__Goal__TypeAssignment_0_1 ) ) ;
     public final void rule__Goal__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:932:1: ( ( ( rule__Goal__TypeAssignment_0_1 ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:933:1: ( ( rule__Goal__TypeAssignment_0_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:960:1: ( ( ( rule__Goal__TypeAssignment_0_1 ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:961:1: ( ( rule__Goal__TypeAssignment_0_1 ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:933:1: ( ( rule__Goal__TypeAssignment_0_1 ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:934:1: ( rule__Goal__TypeAssignment_0_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:961:1: ( ( rule__Goal__TypeAssignment_0_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:962:1: ( rule__Goal__TypeAssignment_0_1 )
             {
              before(grammarAccess.getGoalAccess().getTypeAssignment_0_1()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:935:1: ( rule__Goal__TypeAssignment_0_1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:935:2: rule__Goal__TypeAssignment_0_1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:963:1: ( rule__Goal__TypeAssignment_0_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:963:2: rule__Goal__TypeAssignment_0_1
             {
-            pushFollow(FOLLOW_rule__Goal__TypeAssignment_0_1_in_rule__Goal__Group_0__1__Impl1987);
+            pushFollow(FOLLOW_rule__Goal__TypeAssignment_0_1_in_rule__Goal__Group_0__1__Impl2071);
             rule__Goal__TypeAssignment_0_1();
             _fsp--;
 
@@ -2677,20 +2781,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Goal__Group_0__2
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:945:1: rule__Goal__Group_0__2 : rule__Goal__Group_0__2__Impl rule__Goal__Group_0__3 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:973:1: rule__Goal__Group_0__2 : rule__Goal__Group_0__2__Impl rule__Goal__Group_0__3 ;
     public final void rule__Goal__Group_0__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:949:1: ( rule__Goal__Group_0__2__Impl rule__Goal__Group_0__3 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:950:2: rule__Goal__Group_0__2__Impl rule__Goal__Group_0__3
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:977:1: ( rule__Goal__Group_0__2__Impl rule__Goal__Group_0__3 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:978:2: rule__Goal__Group_0__2__Impl rule__Goal__Group_0__3
             {
-            pushFollow(FOLLOW_rule__Goal__Group_0__2__Impl_in_rule__Goal__Group_0__22017);
+            pushFollow(FOLLOW_rule__Goal__Group_0__2__Impl_in_rule__Goal__Group_0__22101);
             rule__Goal__Group_0__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Goal__Group_0__3_in_rule__Goal__Group_0__22020);
+            pushFollow(FOLLOW_rule__Goal__Group_0__3_in_rule__Goal__Group_0__22104);
             rule__Goal__Group_0__3();
             _fsp--;
 
@@ -2713,35 +2817,35 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Goal__Group_0__2__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:957:1: rule__Goal__Group_0__2__Impl : ( ( rule__Goal__AssetAssignment_0_2 )? ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:985:1: rule__Goal__Group_0__2__Impl : ( ( rule__Goal__AssetAssignment_0_2 )? ) ;
     public final void rule__Goal__Group_0__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:961:1: ( ( ( rule__Goal__AssetAssignment_0_2 )? ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:962:1: ( ( rule__Goal__AssetAssignment_0_2 )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:989:1: ( ( ( rule__Goal__AssetAssignment_0_2 )? ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:990:1: ( ( rule__Goal__AssetAssignment_0_2 )? )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:962:1: ( ( rule__Goal__AssetAssignment_0_2 )? )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:963:1: ( rule__Goal__AssetAssignment_0_2 )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:990:1: ( ( rule__Goal__AssetAssignment_0_2 )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:991:1: ( rule__Goal__AssetAssignment_0_2 )?
             {
              before(grammarAccess.getGoalAccess().getAssetAssignment_0_2()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:964:1: ( rule__Goal__AssetAssignment_0_2 )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:992:1: ( rule__Goal__AssetAssignment_0_2 )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
             if ( (LA8_0==RULE_ID) ) {
                 int LA8_1 = input.LA(2);
 
-                if ( (LA8_1==29) ) {
+                if ( (LA8_1==33) ) {
                     alt8=1;
                 }
             }
             switch (alt8) {
                 case 1 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:964:2: rule__Goal__AssetAssignment_0_2
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:992:2: rule__Goal__AssetAssignment_0_2
                     {
-                    pushFollow(FOLLOW_rule__Goal__AssetAssignment_0_2_in_rule__Goal__Group_0__2__Impl2047);
+                    pushFollow(FOLLOW_rule__Goal__AssetAssignment_0_2_in_rule__Goal__Group_0__2__Impl2131);
                     rule__Goal__AssetAssignment_0_2();
                     _fsp--;
 
@@ -2774,16 +2878,16 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Goal__Group_0__3
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:974:1: rule__Goal__Group_0__3 : rule__Goal__Group_0__3__Impl ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1002:1: rule__Goal__Group_0__3 : rule__Goal__Group_0__3__Impl ;
     public final void rule__Goal__Group_0__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:978:1: ( rule__Goal__Group_0__3__Impl )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:979:2: rule__Goal__Group_0__3__Impl
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1006:1: ( rule__Goal__Group_0__3__Impl )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1007:2: rule__Goal__Group_0__3__Impl
             {
-            pushFollow(FOLLOW_rule__Goal__Group_0__3__Impl_in_rule__Goal__Group_0__32078);
+            pushFollow(FOLLOW_rule__Goal__Group_0__3__Impl_in_rule__Goal__Group_0__32162);
             rule__Goal__Group_0__3__Impl();
             _fsp--;
 
@@ -2806,35 +2910,35 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Goal__Group_0__3__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:985:1: rule__Goal__Group_0__3__Impl : ( ( rule__Goal__Group_0_3__0 )* ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1013:1: rule__Goal__Group_0__3__Impl : ( ( rule__Goal__Group_0_3__0 )* ) ;
     public final void rule__Goal__Group_0__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:989:1: ( ( ( rule__Goal__Group_0_3__0 )* ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:990:1: ( ( rule__Goal__Group_0_3__0 )* )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1017:1: ( ( ( rule__Goal__Group_0_3__0 )* ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1018:1: ( ( rule__Goal__Group_0_3__0 )* )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:990:1: ( ( rule__Goal__Group_0_3__0 )* )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:991:1: ( rule__Goal__Group_0_3__0 )*
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1018:1: ( ( rule__Goal__Group_0_3__0 )* )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1019:1: ( rule__Goal__Group_0_3__0 )*
             {
              before(grammarAccess.getGoalAccess().getGroup_0_3()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:992:1: ( rule__Goal__Group_0_3__0 )*
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1020:1: ( rule__Goal__Group_0_3__0 )*
             loop9:
             do {
                 int alt9=2;
                 int LA9_0 = input.LA(1);
 
-                if ( (LA9_0==RULE_STRING||LA9_0==28) ) {
+                if ( (LA9_0==RULE_STRING||LA9_0==32) ) {
                     alt9=1;
                 }
 
 
                 switch (alt9) {
             	case 1 :
-            	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:992:2: rule__Goal__Group_0_3__0
+            	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1020:2: rule__Goal__Group_0_3__0
             	    {
-            	    pushFollow(FOLLOW_rule__Goal__Group_0_3__0_in_rule__Goal__Group_0__3__Impl2105);
+            	    pushFollow(FOLLOW_rule__Goal__Group_0_3__0_in_rule__Goal__Group_0__3__Impl2189);
             	    rule__Goal__Group_0_3__0();
             	    _fsp--;
 
@@ -2870,20 +2974,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Goal__Group_0_3__0
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1010:1: rule__Goal__Group_0_3__0 : rule__Goal__Group_0_3__0__Impl rule__Goal__Group_0_3__1 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1038:1: rule__Goal__Group_0_3__0 : rule__Goal__Group_0_3__0__Impl rule__Goal__Group_0_3__1 ;
     public final void rule__Goal__Group_0_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1014:1: ( rule__Goal__Group_0_3__0__Impl rule__Goal__Group_0_3__1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1015:2: rule__Goal__Group_0_3__0__Impl rule__Goal__Group_0_3__1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1042:1: ( rule__Goal__Group_0_3__0__Impl rule__Goal__Group_0_3__1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1043:2: rule__Goal__Group_0_3__0__Impl rule__Goal__Group_0_3__1
             {
-            pushFollow(FOLLOW_rule__Goal__Group_0_3__0__Impl_in_rule__Goal__Group_0_3__02144);
+            pushFollow(FOLLOW_rule__Goal__Group_0_3__0__Impl_in_rule__Goal__Group_0_3__02228);
             rule__Goal__Group_0_3__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Goal__Group_0_3__1_in_rule__Goal__Group_0_3__02147);
+            pushFollow(FOLLOW_rule__Goal__Group_0_3__1_in_rule__Goal__Group_0_3__02231);
             rule__Goal__Group_0_3__1();
             _fsp--;
 
@@ -2906,31 +3010,31 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Goal__Group_0_3__0__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1022:1: rule__Goal__Group_0_3__0__Impl : ( ( ',' )? ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1050:1: rule__Goal__Group_0_3__0__Impl : ( ( ',' )? ) ;
     public final void rule__Goal__Group_0_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1026:1: ( ( ( ',' )? ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1027:1: ( ( ',' )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1054:1: ( ( ( ',' )? ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1055:1: ( ( ',' )? )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1027:1: ( ( ',' )? )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1028:1: ( ',' )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1055:1: ( ( ',' )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1056:1: ( ',' )?
             {
              before(grammarAccess.getGoalAccess().getCommaKeyword_0_3_0()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1029:1: ( ',' )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1057:1: ( ',' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
-            if ( (LA10_0==28) ) {
+            if ( (LA10_0==32) ) {
                 alt10=1;
             }
             switch (alt10) {
                 case 1 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1030:2: ','
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1058:2: ','
                     {
-                    match(input,28,FOLLOW_28_in_rule__Goal__Group_0_3__0__Impl2176); 
+                    match(input,32,FOLLOW_32_in_rule__Goal__Group_0_3__0__Impl2260); 
 
                     }
                     break;
@@ -2960,16 +3064,16 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Goal__Group_0_3__1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1041:1: rule__Goal__Group_0_3__1 : rule__Goal__Group_0_3__1__Impl ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1069:1: rule__Goal__Group_0_3__1 : rule__Goal__Group_0_3__1__Impl ;
     public final void rule__Goal__Group_0_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1045:1: ( rule__Goal__Group_0_3__1__Impl )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1046:2: rule__Goal__Group_0_3__1__Impl
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1073:1: ( rule__Goal__Group_0_3__1__Impl )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1074:2: rule__Goal__Group_0_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__Goal__Group_0_3__1__Impl_in_rule__Goal__Group_0_3__12209);
+            pushFollow(FOLLOW_rule__Goal__Group_0_3__1__Impl_in_rule__Goal__Group_0_3__12293);
             rule__Goal__Group_0_3__1__Impl();
             _fsp--;
 
@@ -2992,23 +3096,23 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Goal__Group_0_3__1__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1052:1: rule__Goal__Group_0_3__1__Impl : ( ( rule__Goal__PropertiesAssignment_0_3_1 ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1080:1: rule__Goal__Group_0_3__1__Impl : ( ( rule__Goal__PropertiesAssignment_0_3_1 ) ) ;
     public final void rule__Goal__Group_0_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1056:1: ( ( ( rule__Goal__PropertiesAssignment_0_3_1 ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1057:1: ( ( rule__Goal__PropertiesAssignment_0_3_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1084:1: ( ( ( rule__Goal__PropertiesAssignment_0_3_1 ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1085:1: ( ( rule__Goal__PropertiesAssignment_0_3_1 ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1057:1: ( ( rule__Goal__PropertiesAssignment_0_3_1 ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1058:1: ( rule__Goal__PropertiesAssignment_0_3_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1085:1: ( ( rule__Goal__PropertiesAssignment_0_3_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1086:1: ( rule__Goal__PropertiesAssignment_0_3_1 )
             {
              before(grammarAccess.getGoalAccess().getPropertiesAssignment_0_3_1()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1059:1: ( rule__Goal__PropertiesAssignment_0_3_1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1059:2: rule__Goal__PropertiesAssignment_0_3_1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1087:1: ( rule__Goal__PropertiesAssignment_0_3_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1087:2: rule__Goal__PropertiesAssignment_0_3_1
             {
-            pushFollow(FOLLOW_rule__Goal__PropertiesAssignment_0_3_1_in_rule__Goal__Group_0_3__1__Impl2236);
+            pushFollow(FOLLOW_rule__Goal__PropertiesAssignment_0_3_1_in_rule__Goal__Group_0_3__1__Impl2320);
             rule__Goal__PropertiesAssignment_0_3_1();
             _fsp--;
 
@@ -3038,20 +3142,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__SecurityGoal__Group__0
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1073:1: rule__SecurityGoal__Group__0 : rule__SecurityGoal__Group__0__Impl rule__SecurityGoal__Group__1 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1101:1: rule__SecurityGoal__Group__0 : rule__SecurityGoal__Group__0__Impl rule__SecurityGoal__Group__1 ;
     public final void rule__SecurityGoal__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1077:1: ( rule__SecurityGoal__Group__0__Impl rule__SecurityGoal__Group__1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1078:2: rule__SecurityGoal__Group__0__Impl rule__SecurityGoal__Group__1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1105:1: ( rule__SecurityGoal__Group__0__Impl rule__SecurityGoal__Group__1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1106:2: rule__SecurityGoal__Group__0__Impl rule__SecurityGoal__Group__1
             {
-            pushFollow(FOLLOW_rule__SecurityGoal__Group__0__Impl_in_rule__SecurityGoal__Group__02270);
+            pushFollow(FOLLOW_rule__SecurityGoal__Group__0__Impl_in_rule__SecurityGoal__Group__02354);
             rule__SecurityGoal__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__SecurityGoal__Group__1_in_rule__SecurityGoal__Group__02273);
+            pushFollow(FOLLOW_rule__SecurityGoal__Group__1_in_rule__SecurityGoal__Group__02357);
             rule__SecurityGoal__Group__1();
             _fsp--;
 
@@ -3074,23 +3178,23 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__SecurityGoal__Group__0__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1085:1: rule__SecurityGoal__Group__0__Impl : ( ( rule__SecurityGoal__NameAssignment_0 ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1113:1: rule__SecurityGoal__Group__0__Impl : ( ( rule__SecurityGoal__NameAssignment_0 ) ) ;
     public final void rule__SecurityGoal__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1089:1: ( ( ( rule__SecurityGoal__NameAssignment_0 ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1090:1: ( ( rule__SecurityGoal__NameAssignment_0 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1117:1: ( ( ( rule__SecurityGoal__NameAssignment_0 ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1118:1: ( ( rule__SecurityGoal__NameAssignment_0 ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1090:1: ( ( rule__SecurityGoal__NameAssignment_0 ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1091:1: ( rule__SecurityGoal__NameAssignment_0 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1118:1: ( ( rule__SecurityGoal__NameAssignment_0 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1119:1: ( rule__SecurityGoal__NameAssignment_0 )
             {
              before(grammarAccess.getSecurityGoalAccess().getNameAssignment_0()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1092:1: ( rule__SecurityGoal__NameAssignment_0 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1092:2: rule__SecurityGoal__NameAssignment_0
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1120:1: ( rule__SecurityGoal__NameAssignment_0 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1120:2: rule__SecurityGoal__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__SecurityGoal__NameAssignment_0_in_rule__SecurityGoal__Group__0__Impl2300);
+            pushFollow(FOLLOW_rule__SecurityGoal__NameAssignment_0_in_rule__SecurityGoal__Group__0__Impl2384);
             rule__SecurityGoal__NameAssignment_0();
             _fsp--;
 
@@ -3120,20 +3224,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__SecurityGoal__Group__1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1102:1: rule__SecurityGoal__Group__1 : rule__SecurityGoal__Group__1__Impl rule__SecurityGoal__Group__2 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1130:1: rule__SecurityGoal__Group__1 : rule__SecurityGoal__Group__1__Impl rule__SecurityGoal__Group__2 ;
     public final void rule__SecurityGoal__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1106:1: ( rule__SecurityGoal__Group__1__Impl rule__SecurityGoal__Group__2 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1107:2: rule__SecurityGoal__Group__1__Impl rule__SecurityGoal__Group__2
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1134:1: ( rule__SecurityGoal__Group__1__Impl rule__SecurityGoal__Group__2 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1135:2: rule__SecurityGoal__Group__1__Impl rule__SecurityGoal__Group__2
             {
-            pushFollow(FOLLOW_rule__SecurityGoal__Group__1__Impl_in_rule__SecurityGoal__Group__12330);
+            pushFollow(FOLLOW_rule__SecurityGoal__Group__1__Impl_in_rule__SecurityGoal__Group__12414);
             rule__SecurityGoal__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__SecurityGoal__Group__2_in_rule__SecurityGoal__Group__12333);
+            pushFollow(FOLLOW_rule__SecurityGoal__Group__2_in_rule__SecurityGoal__Group__12417);
             rule__SecurityGoal__Group__2();
             _fsp--;
 
@@ -3156,23 +3260,23 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__SecurityGoal__Group__1__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1114:1: rule__SecurityGoal__Group__1__Impl : ( ( rule__SecurityGoal__TypeAssignment_1 ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1142:1: rule__SecurityGoal__Group__1__Impl : ( ( rule__SecurityGoal__TypeAssignment_1 ) ) ;
     public final void rule__SecurityGoal__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1118:1: ( ( ( rule__SecurityGoal__TypeAssignment_1 ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1119:1: ( ( rule__SecurityGoal__TypeAssignment_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1146:1: ( ( ( rule__SecurityGoal__TypeAssignment_1 ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1147:1: ( ( rule__SecurityGoal__TypeAssignment_1 ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1119:1: ( ( rule__SecurityGoal__TypeAssignment_1 ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1120:1: ( rule__SecurityGoal__TypeAssignment_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1147:1: ( ( rule__SecurityGoal__TypeAssignment_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1148:1: ( rule__SecurityGoal__TypeAssignment_1 )
             {
              before(grammarAccess.getSecurityGoalAccess().getTypeAssignment_1()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1121:1: ( rule__SecurityGoal__TypeAssignment_1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1121:2: rule__SecurityGoal__TypeAssignment_1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1149:1: ( rule__SecurityGoal__TypeAssignment_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1149:2: rule__SecurityGoal__TypeAssignment_1
             {
-            pushFollow(FOLLOW_rule__SecurityGoal__TypeAssignment_1_in_rule__SecurityGoal__Group__1__Impl2360);
+            pushFollow(FOLLOW_rule__SecurityGoal__TypeAssignment_1_in_rule__SecurityGoal__Group__1__Impl2444);
             rule__SecurityGoal__TypeAssignment_1();
             _fsp--;
 
@@ -3202,20 +3306,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__SecurityGoal__Group__2
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1131:1: rule__SecurityGoal__Group__2 : rule__SecurityGoal__Group__2__Impl rule__SecurityGoal__Group__3 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1159:1: rule__SecurityGoal__Group__2 : rule__SecurityGoal__Group__2__Impl rule__SecurityGoal__Group__3 ;
     public final void rule__SecurityGoal__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1135:1: ( rule__SecurityGoal__Group__2__Impl rule__SecurityGoal__Group__3 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1136:2: rule__SecurityGoal__Group__2__Impl rule__SecurityGoal__Group__3
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1163:1: ( rule__SecurityGoal__Group__2__Impl rule__SecurityGoal__Group__3 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1164:2: rule__SecurityGoal__Group__2__Impl rule__SecurityGoal__Group__3
             {
-            pushFollow(FOLLOW_rule__SecurityGoal__Group__2__Impl_in_rule__SecurityGoal__Group__22390);
+            pushFollow(FOLLOW_rule__SecurityGoal__Group__2__Impl_in_rule__SecurityGoal__Group__22474);
             rule__SecurityGoal__Group__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__SecurityGoal__Group__3_in_rule__SecurityGoal__Group__22393);
+            pushFollow(FOLLOW_rule__SecurityGoal__Group__3_in_rule__SecurityGoal__Group__22477);
             rule__SecurityGoal__Group__3();
             _fsp--;
 
@@ -3238,35 +3342,35 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__SecurityGoal__Group__2__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1143:1: rule__SecurityGoal__Group__2__Impl : ( ( rule__SecurityGoal__AssetAssignment_2 )? ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1171:1: rule__SecurityGoal__Group__2__Impl : ( ( rule__SecurityGoal__AssetAssignment_2 )? ) ;
     public final void rule__SecurityGoal__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1147:1: ( ( ( rule__SecurityGoal__AssetAssignment_2 )? ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1148:1: ( ( rule__SecurityGoal__AssetAssignment_2 )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1175:1: ( ( ( rule__SecurityGoal__AssetAssignment_2 )? ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1176:1: ( ( rule__SecurityGoal__AssetAssignment_2 )? )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1148:1: ( ( rule__SecurityGoal__AssetAssignment_2 )? )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1149:1: ( rule__SecurityGoal__AssetAssignment_2 )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1176:1: ( ( rule__SecurityGoal__AssetAssignment_2 )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1177:1: ( rule__SecurityGoal__AssetAssignment_2 )?
             {
              before(grammarAccess.getSecurityGoalAccess().getAssetAssignment_2()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1150:1: ( rule__SecurityGoal__AssetAssignment_2 )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1178:1: ( rule__SecurityGoal__AssetAssignment_2 )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
             if ( (LA11_0==RULE_ID) ) {
                 int LA11_1 = input.LA(2);
 
-                if ( (LA11_1==29) ) {
+                if ( (LA11_1==33) ) {
                     alt11=1;
                 }
             }
             switch (alt11) {
                 case 1 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1150:2: rule__SecurityGoal__AssetAssignment_2
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1178:2: rule__SecurityGoal__AssetAssignment_2
                     {
-                    pushFollow(FOLLOW_rule__SecurityGoal__AssetAssignment_2_in_rule__SecurityGoal__Group__2__Impl2420);
+                    pushFollow(FOLLOW_rule__SecurityGoal__AssetAssignment_2_in_rule__SecurityGoal__Group__2__Impl2504);
                     rule__SecurityGoal__AssetAssignment_2();
                     _fsp--;
 
@@ -3299,16 +3403,16 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__SecurityGoal__Group__3
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1160:1: rule__SecurityGoal__Group__3 : rule__SecurityGoal__Group__3__Impl ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1188:1: rule__SecurityGoal__Group__3 : rule__SecurityGoal__Group__3__Impl ;
     public final void rule__SecurityGoal__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1164:1: ( rule__SecurityGoal__Group__3__Impl )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1165:2: rule__SecurityGoal__Group__3__Impl
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1192:1: ( rule__SecurityGoal__Group__3__Impl )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1193:2: rule__SecurityGoal__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__SecurityGoal__Group__3__Impl_in_rule__SecurityGoal__Group__32451);
+            pushFollow(FOLLOW_rule__SecurityGoal__Group__3__Impl_in_rule__SecurityGoal__Group__32535);
             rule__SecurityGoal__Group__3__Impl();
             _fsp--;
 
@@ -3331,35 +3435,35 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__SecurityGoal__Group__3__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1171:1: rule__SecurityGoal__Group__3__Impl : ( ( rule__SecurityGoal__Group_3__0 )* ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1199:1: rule__SecurityGoal__Group__3__Impl : ( ( rule__SecurityGoal__Group_3__0 )* ) ;
     public final void rule__SecurityGoal__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1175:1: ( ( ( rule__SecurityGoal__Group_3__0 )* ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1176:1: ( ( rule__SecurityGoal__Group_3__0 )* )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1203:1: ( ( ( rule__SecurityGoal__Group_3__0 )* ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1204:1: ( ( rule__SecurityGoal__Group_3__0 )* )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1176:1: ( ( rule__SecurityGoal__Group_3__0 )* )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1177:1: ( rule__SecurityGoal__Group_3__0 )*
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1204:1: ( ( rule__SecurityGoal__Group_3__0 )* )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1205:1: ( rule__SecurityGoal__Group_3__0 )*
             {
              before(grammarAccess.getSecurityGoalAccess().getGroup_3()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1178:1: ( rule__SecurityGoal__Group_3__0 )*
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1206:1: ( rule__SecurityGoal__Group_3__0 )*
             loop12:
             do {
                 int alt12=2;
                 int LA12_0 = input.LA(1);
 
-                if ( (LA12_0==RULE_STRING||LA12_0==28) ) {
+                if ( (LA12_0==RULE_STRING||LA12_0==32) ) {
                     alt12=1;
                 }
 
 
                 switch (alt12) {
             	case 1 :
-            	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1178:2: rule__SecurityGoal__Group_3__0
+            	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1206:2: rule__SecurityGoal__Group_3__0
             	    {
-            	    pushFollow(FOLLOW_rule__SecurityGoal__Group_3__0_in_rule__SecurityGoal__Group__3__Impl2478);
+            	    pushFollow(FOLLOW_rule__SecurityGoal__Group_3__0_in_rule__SecurityGoal__Group__3__Impl2562);
             	    rule__SecurityGoal__Group_3__0();
             	    _fsp--;
 
@@ -3395,20 +3499,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__SecurityGoal__Group_3__0
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1196:1: rule__SecurityGoal__Group_3__0 : rule__SecurityGoal__Group_3__0__Impl rule__SecurityGoal__Group_3__1 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1224:1: rule__SecurityGoal__Group_3__0 : rule__SecurityGoal__Group_3__0__Impl rule__SecurityGoal__Group_3__1 ;
     public final void rule__SecurityGoal__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1200:1: ( rule__SecurityGoal__Group_3__0__Impl rule__SecurityGoal__Group_3__1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1201:2: rule__SecurityGoal__Group_3__0__Impl rule__SecurityGoal__Group_3__1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1228:1: ( rule__SecurityGoal__Group_3__0__Impl rule__SecurityGoal__Group_3__1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1229:2: rule__SecurityGoal__Group_3__0__Impl rule__SecurityGoal__Group_3__1
             {
-            pushFollow(FOLLOW_rule__SecurityGoal__Group_3__0__Impl_in_rule__SecurityGoal__Group_3__02517);
+            pushFollow(FOLLOW_rule__SecurityGoal__Group_3__0__Impl_in_rule__SecurityGoal__Group_3__02601);
             rule__SecurityGoal__Group_3__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__SecurityGoal__Group_3__1_in_rule__SecurityGoal__Group_3__02520);
+            pushFollow(FOLLOW_rule__SecurityGoal__Group_3__1_in_rule__SecurityGoal__Group_3__02604);
             rule__SecurityGoal__Group_3__1();
             _fsp--;
 
@@ -3431,31 +3535,31 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__SecurityGoal__Group_3__0__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1208:1: rule__SecurityGoal__Group_3__0__Impl : ( ( ',' )? ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1236:1: rule__SecurityGoal__Group_3__0__Impl : ( ( ',' )? ) ;
     public final void rule__SecurityGoal__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1212:1: ( ( ( ',' )? ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1213:1: ( ( ',' )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1240:1: ( ( ( ',' )? ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1241:1: ( ( ',' )? )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1213:1: ( ( ',' )? )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1214:1: ( ',' )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1241:1: ( ( ',' )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1242:1: ( ',' )?
             {
              before(grammarAccess.getSecurityGoalAccess().getCommaKeyword_3_0()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1215:1: ( ',' )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1243:1: ( ',' )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
-            if ( (LA13_0==28) ) {
+            if ( (LA13_0==32) ) {
                 alt13=1;
             }
             switch (alt13) {
                 case 1 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1216:2: ','
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1244:2: ','
                     {
-                    match(input,28,FOLLOW_28_in_rule__SecurityGoal__Group_3__0__Impl2549); 
+                    match(input,32,FOLLOW_32_in_rule__SecurityGoal__Group_3__0__Impl2633); 
 
                     }
                     break;
@@ -3485,16 +3589,16 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__SecurityGoal__Group_3__1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1227:1: rule__SecurityGoal__Group_3__1 : rule__SecurityGoal__Group_3__1__Impl ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1255:1: rule__SecurityGoal__Group_3__1 : rule__SecurityGoal__Group_3__1__Impl ;
     public final void rule__SecurityGoal__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1231:1: ( rule__SecurityGoal__Group_3__1__Impl )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1232:2: rule__SecurityGoal__Group_3__1__Impl
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1259:1: ( rule__SecurityGoal__Group_3__1__Impl )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1260:2: rule__SecurityGoal__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__SecurityGoal__Group_3__1__Impl_in_rule__SecurityGoal__Group_3__12582);
+            pushFollow(FOLLOW_rule__SecurityGoal__Group_3__1__Impl_in_rule__SecurityGoal__Group_3__12666);
             rule__SecurityGoal__Group_3__1__Impl();
             _fsp--;
 
@@ -3517,23 +3621,23 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__SecurityGoal__Group_3__1__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1238:1: rule__SecurityGoal__Group_3__1__Impl : ( ( rule__SecurityGoal__PropertiesAssignment_3_1 ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1266:1: rule__SecurityGoal__Group_3__1__Impl : ( ( rule__SecurityGoal__PropertiesAssignment_3_1 ) ) ;
     public final void rule__SecurityGoal__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1242:1: ( ( ( rule__SecurityGoal__PropertiesAssignment_3_1 ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1243:1: ( ( rule__SecurityGoal__PropertiesAssignment_3_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1270:1: ( ( ( rule__SecurityGoal__PropertiesAssignment_3_1 ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1271:1: ( ( rule__SecurityGoal__PropertiesAssignment_3_1 ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1243:1: ( ( rule__SecurityGoal__PropertiesAssignment_3_1 ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1244:1: ( rule__SecurityGoal__PropertiesAssignment_3_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1271:1: ( ( rule__SecurityGoal__PropertiesAssignment_3_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1272:1: ( rule__SecurityGoal__PropertiesAssignment_3_1 )
             {
              before(grammarAccess.getSecurityGoalAccess().getPropertiesAssignment_3_1()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1245:1: ( rule__SecurityGoal__PropertiesAssignment_3_1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1245:2: rule__SecurityGoal__PropertiesAssignment_3_1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1273:1: ( rule__SecurityGoal__PropertiesAssignment_3_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1273:2: rule__SecurityGoal__PropertiesAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__SecurityGoal__PropertiesAssignment_3_1_in_rule__SecurityGoal__Group_3__1__Impl2609);
+            pushFollow(FOLLOW_rule__SecurityGoal__PropertiesAssignment_3_1_in_rule__SecurityGoal__Group_3__1__Impl2693);
             rule__SecurityGoal__PropertiesAssignment_3_1();
             _fsp--;
 
@@ -3563,20 +3667,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Requirement__Group__0
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1259:1: rule__Requirement__Group__0 : rule__Requirement__Group__0__Impl rule__Requirement__Group__1 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1287:1: rule__Requirement__Group__0 : rule__Requirement__Group__0__Impl rule__Requirement__Group__1 ;
     public final void rule__Requirement__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1263:1: ( rule__Requirement__Group__0__Impl rule__Requirement__Group__1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1264:2: rule__Requirement__Group__0__Impl rule__Requirement__Group__1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1291:1: ( rule__Requirement__Group__0__Impl rule__Requirement__Group__1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1292:2: rule__Requirement__Group__0__Impl rule__Requirement__Group__1
             {
-            pushFollow(FOLLOW_rule__Requirement__Group__0__Impl_in_rule__Requirement__Group__02643);
+            pushFollow(FOLLOW_rule__Requirement__Group__0__Impl_in_rule__Requirement__Group__02727);
             rule__Requirement__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Requirement__Group__1_in_rule__Requirement__Group__02646);
+            pushFollow(FOLLOW_rule__Requirement__Group__1_in_rule__Requirement__Group__02730);
             rule__Requirement__Group__1();
             _fsp--;
 
@@ -3599,23 +3703,23 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Requirement__Group__0__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1271:1: rule__Requirement__Group__0__Impl : ( ( rule__Requirement__NameAssignment_0 ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1299:1: rule__Requirement__Group__0__Impl : ( ( rule__Requirement__NameAssignment_0 ) ) ;
     public final void rule__Requirement__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1275:1: ( ( ( rule__Requirement__NameAssignment_0 ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1276:1: ( ( rule__Requirement__NameAssignment_0 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1303:1: ( ( ( rule__Requirement__NameAssignment_0 ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1304:1: ( ( rule__Requirement__NameAssignment_0 ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1276:1: ( ( rule__Requirement__NameAssignment_0 ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1277:1: ( rule__Requirement__NameAssignment_0 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1304:1: ( ( rule__Requirement__NameAssignment_0 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1305:1: ( rule__Requirement__NameAssignment_0 )
             {
              before(grammarAccess.getRequirementAccess().getNameAssignment_0()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1278:1: ( rule__Requirement__NameAssignment_0 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1278:2: rule__Requirement__NameAssignment_0
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1306:1: ( rule__Requirement__NameAssignment_0 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1306:2: rule__Requirement__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__Requirement__NameAssignment_0_in_rule__Requirement__Group__0__Impl2673);
+            pushFollow(FOLLOW_rule__Requirement__NameAssignment_0_in_rule__Requirement__Group__0__Impl2757);
             rule__Requirement__NameAssignment_0();
             _fsp--;
 
@@ -3645,20 +3749,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Requirement__Group__1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1288:1: rule__Requirement__Group__1 : rule__Requirement__Group__1__Impl rule__Requirement__Group__2 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1316:1: rule__Requirement__Group__1 : rule__Requirement__Group__1__Impl rule__Requirement__Group__2 ;
     public final void rule__Requirement__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1292:1: ( rule__Requirement__Group__1__Impl rule__Requirement__Group__2 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1293:2: rule__Requirement__Group__1__Impl rule__Requirement__Group__2
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1320:1: ( rule__Requirement__Group__1__Impl rule__Requirement__Group__2 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1321:2: rule__Requirement__Group__1__Impl rule__Requirement__Group__2
             {
-            pushFollow(FOLLOW_rule__Requirement__Group__1__Impl_in_rule__Requirement__Group__12703);
+            pushFollow(FOLLOW_rule__Requirement__Group__1__Impl_in_rule__Requirement__Group__12787);
             rule__Requirement__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Requirement__Group__2_in_rule__Requirement__Group__12706);
+            pushFollow(FOLLOW_rule__Requirement__Group__2_in_rule__Requirement__Group__12790);
             rule__Requirement__Group__2();
             _fsp--;
 
@@ -3681,23 +3785,23 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Requirement__Group__1__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1300:1: rule__Requirement__Group__1__Impl : ( ( rule__Requirement__TypeAssignment_1 ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1328:1: rule__Requirement__Group__1__Impl : ( ( rule__Requirement__TypeAssignment_1 ) ) ;
     public final void rule__Requirement__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1304:1: ( ( ( rule__Requirement__TypeAssignment_1 ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1305:1: ( ( rule__Requirement__TypeAssignment_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1332:1: ( ( ( rule__Requirement__TypeAssignment_1 ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1333:1: ( ( rule__Requirement__TypeAssignment_1 ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1305:1: ( ( rule__Requirement__TypeAssignment_1 ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1306:1: ( rule__Requirement__TypeAssignment_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1333:1: ( ( rule__Requirement__TypeAssignment_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1334:1: ( rule__Requirement__TypeAssignment_1 )
             {
              before(grammarAccess.getRequirementAccess().getTypeAssignment_1()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1307:1: ( rule__Requirement__TypeAssignment_1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1307:2: rule__Requirement__TypeAssignment_1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1335:1: ( rule__Requirement__TypeAssignment_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1335:2: rule__Requirement__TypeAssignment_1
             {
-            pushFollow(FOLLOW_rule__Requirement__TypeAssignment_1_in_rule__Requirement__Group__1__Impl2733);
+            pushFollow(FOLLOW_rule__Requirement__TypeAssignment_1_in_rule__Requirement__Group__1__Impl2817);
             rule__Requirement__TypeAssignment_1();
             _fsp--;
 
@@ -3727,20 +3831,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Requirement__Group__2
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1317:1: rule__Requirement__Group__2 : rule__Requirement__Group__2__Impl rule__Requirement__Group__3 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1345:1: rule__Requirement__Group__2 : rule__Requirement__Group__2__Impl rule__Requirement__Group__3 ;
     public final void rule__Requirement__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1321:1: ( rule__Requirement__Group__2__Impl rule__Requirement__Group__3 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1322:2: rule__Requirement__Group__2__Impl rule__Requirement__Group__3
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1349:1: ( rule__Requirement__Group__2__Impl rule__Requirement__Group__3 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1350:2: rule__Requirement__Group__2__Impl rule__Requirement__Group__3
             {
-            pushFollow(FOLLOW_rule__Requirement__Group__2__Impl_in_rule__Requirement__Group__22763);
+            pushFollow(FOLLOW_rule__Requirement__Group__2__Impl_in_rule__Requirement__Group__22847);
             rule__Requirement__Group__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Requirement__Group__3_in_rule__Requirement__Group__22766);
+            pushFollow(FOLLOW_rule__Requirement__Group__3_in_rule__Requirement__Group__22850);
             rule__Requirement__Group__3();
             _fsp--;
 
@@ -3763,35 +3867,35 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Requirement__Group__2__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1329:1: rule__Requirement__Group__2__Impl : ( ( rule__Requirement__AssetAssignment_2 )? ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1357:1: rule__Requirement__Group__2__Impl : ( ( rule__Requirement__AssetAssignment_2 )? ) ;
     public final void rule__Requirement__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1333:1: ( ( ( rule__Requirement__AssetAssignment_2 )? ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1334:1: ( ( rule__Requirement__AssetAssignment_2 )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1361:1: ( ( ( rule__Requirement__AssetAssignment_2 )? ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1362:1: ( ( rule__Requirement__AssetAssignment_2 )? )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1334:1: ( ( rule__Requirement__AssetAssignment_2 )? )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1335:1: ( rule__Requirement__AssetAssignment_2 )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1362:1: ( ( rule__Requirement__AssetAssignment_2 )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1363:1: ( rule__Requirement__AssetAssignment_2 )?
             {
              before(grammarAccess.getRequirementAccess().getAssetAssignment_2()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1336:1: ( rule__Requirement__AssetAssignment_2 )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1364:1: ( rule__Requirement__AssetAssignment_2 )?
             int alt14=2;
             int LA14_0 = input.LA(1);
 
             if ( (LA14_0==RULE_ID) ) {
                 int LA14_1 = input.LA(2);
 
-                if ( (LA14_1==29) ) {
+                if ( (LA14_1==33) ) {
                     alt14=1;
                 }
             }
             switch (alt14) {
                 case 1 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1336:2: rule__Requirement__AssetAssignment_2
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1364:2: rule__Requirement__AssetAssignment_2
                     {
-                    pushFollow(FOLLOW_rule__Requirement__AssetAssignment_2_in_rule__Requirement__Group__2__Impl2793);
+                    pushFollow(FOLLOW_rule__Requirement__AssetAssignment_2_in_rule__Requirement__Group__2__Impl2877);
                     rule__Requirement__AssetAssignment_2();
                     _fsp--;
 
@@ -3824,16 +3928,16 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Requirement__Group__3
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1346:1: rule__Requirement__Group__3 : rule__Requirement__Group__3__Impl ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1374:1: rule__Requirement__Group__3 : rule__Requirement__Group__3__Impl ;
     public final void rule__Requirement__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1350:1: ( rule__Requirement__Group__3__Impl )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1351:2: rule__Requirement__Group__3__Impl
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1378:1: ( rule__Requirement__Group__3__Impl )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1379:2: rule__Requirement__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__Requirement__Group__3__Impl_in_rule__Requirement__Group__32824);
+            pushFollow(FOLLOW_rule__Requirement__Group__3__Impl_in_rule__Requirement__Group__32908);
             rule__Requirement__Group__3__Impl();
             _fsp--;
 
@@ -3856,35 +3960,35 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Requirement__Group__3__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1357:1: rule__Requirement__Group__3__Impl : ( ( rule__Requirement__Group_3__0 )* ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1385:1: rule__Requirement__Group__3__Impl : ( ( rule__Requirement__Group_3__0 )* ) ;
     public final void rule__Requirement__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1361:1: ( ( ( rule__Requirement__Group_3__0 )* ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1362:1: ( ( rule__Requirement__Group_3__0 )* )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1389:1: ( ( ( rule__Requirement__Group_3__0 )* ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1390:1: ( ( rule__Requirement__Group_3__0 )* )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1362:1: ( ( rule__Requirement__Group_3__0 )* )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1363:1: ( rule__Requirement__Group_3__0 )*
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1390:1: ( ( rule__Requirement__Group_3__0 )* )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1391:1: ( rule__Requirement__Group_3__0 )*
             {
              before(grammarAccess.getRequirementAccess().getGroup_3()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1364:1: ( rule__Requirement__Group_3__0 )*
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1392:1: ( rule__Requirement__Group_3__0 )*
             loop15:
             do {
                 int alt15=2;
                 int LA15_0 = input.LA(1);
 
-                if ( (LA15_0==RULE_STRING||LA15_0==28) ) {
+                if ( (LA15_0==RULE_STRING||LA15_0==32) ) {
                     alt15=1;
                 }
 
 
                 switch (alt15) {
             	case 1 :
-            	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1364:2: rule__Requirement__Group_3__0
+            	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1392:2: rule__Requirement__Group_3__0
             	    {
-            	    pushFollow(FOLLOW_rule__Requirement__Group_3__0_in_rule__Requirement__Group__3__Impl2851);
+            	    pushFollow(FOLLOW_rule__Requirement__Group_3__0_in_rule__Requirement__Group__3__Impl2935);
             	    rule__Requirement__Group_3__0();
             	    _fsp--;
 
@@ -3920,20 +4024,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Requirement__Group_3__0
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1382:1: rule__Requirement__Group_3__0 : rule__Requirement__Group_3__0__Impl rule__Requirement__Group_3__1 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1410:1: rule__Requirement__Group_3__0 : rule__Requirement__Group_3__0__Impl rule__Requirement__Group_3__1 ;
     public final void rule__Requirement__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1386:1: ( rule__Requirement__Group_3__0__Impl rule__Requirement__Group_3__1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1387:2: rule__Requirement__Group_3__0__Impl rule__Requirement__Group_3__1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1414:1: ( rule__Requirement__Group_3__0__Impl rule__Requirement__Group_3__1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1415:2: rule__Requirement__Group_3__0__Impl rule__Requirement__Group_3__1
             {
-            pushFollow(FOLLOW_rule__Requirement__Group_3__0__Impl_in_rule__Requirement__Group_3__02890);
+            pushFollow(FOLLOW_rule__Requirement__Group_3__0__Impl_in_rule__Requirement__Group_3__02974);
             rule__Requirement__Group_3__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Requirement__Group_3__1_in_rule__Requirement__Group_3__02893);
+            pushFollow(FOLLOW_rule__Requirement__Group_3__1_in_rule__Requirement__Group_3__02977);
             rule__Requirement__Group_3__1();
             _fsp--;
 
@@ -3956,31 +4060,31 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Requirement__Group_3__0__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1394:1: rule__Requirement__Group_3__0__Impl : ( ( ',' )? ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1422:1: rule__Requirement__Group_3__0__Impl : ( ( ',' )? ) ;
     public final void rule__Requirement__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1398:1: ( ( ( ',' )? ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1399:1: ( ( ',' )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1426:1: ( ( ( ',' )? ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1427:1: ( ( ',' )? )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1399:1: ( ( ',' )? )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1400:1: ( ',' )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1427:1: ( ( ',' )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1428:1: ( ',' )?
             {
              before(grammarAccess.getRequirementAccess().getCommaKeyword_3_0()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1401:1: ( ',' )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1429:1: ( ',' )?
             int alt16=2;
             int LA16_0 = input.LA(1);
 
-            if ( (LA16_0==28) ) {
+            if ( (LA16_0==32) ) {
                 alt16=1;
             }
             switch (alt16) {
                 case 1 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1402:2: ','
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1430:2: ','
                     {
-                    match(input,28,FOLLOW_28_in_rule__Requirement__Group_3__0__Impl2922); 
+                    match(input,32,FOLLOW_32_in_rule__Requirement__Group_3__0__Impl3006); 
 
                     }
                     break;
@@ -4010,16 +4114,16 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Requirement__Group_3__1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1413:1: rule__Requirement__Group_3__1 : rule__Requirement__Group_3__1__Impl ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1441:1: rule__Requirement__Group_3__1 : rule__Requirement__Group_3__1__Impl ;
     public final void rule__Requirement__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1417:1: ( rule__Requirement__Group_3__1__Impl )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1418:2: rule__Requirement__Group_3__1__Impl
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1445:1: ( rule__Requirement__Group_3__1__Impl )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1446:2: rule__Requirement__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__Requirement__Group_3__1__Impl_in_rule__Requirement__Group_3__12955);
+            pushFollow(FOLLOW_rule__Requirement__Group_3__1__Impl_in_rule__Requirement__Group_3__13039);
             rule__Requirement__Group_3__1__Impl();
             _fsp--;
 
@@ -4042,23 +4146,23 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Requirement__Group_3__1__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1424:1: rule__Requirement__Group_3__1__Impl : ( ( rule__Requirement__PropertiesAssignment_3_1 ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1452:1: rule__Requirement__Group_3__1__Impl : ( ( rule__Requirement__PropertiesAssignment_3_1 ) ) ;
     public final void rule__Requirement__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1428:1: ( ( ( rule__Requirement__PropertiesAssignment_3_1 ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1429:1: ( ( rule__Requirement__PropertiesAssignment_3_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1456:1: ( ( ( rule__Requirement__PropertiesAssignment_3_1 ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1457:1: ( ( rule__Requirement__PropertiesAssignment_3_1 ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1429:1: ( ( rule__Requirement__PropertiesAssignment_3_1 ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1430:1: ( rule__Requirement__PropertiesAssignment_3_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1457:1: ( ( rule__Requirement__PropertiesAssignment_3_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1458:1: ( rule__Requirement__PropertiesAssignment_3_1 )
             {
              before(grammarAccess.getRequirementAccess().getPropertiesAssignment_3_1()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1431:1: ( rule__Requirement__PropertiesAssignment_3_1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1431:2: rule__Requirement__PropertiesAssignment_3_1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1459:1: ( rule__Requirement__PropertiesAssignment_3_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1459:2: rule__Requirement__PropertiesAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__Requirement__PropertiesAssignment_3_1_in_rule__Requirement__Group_3__1__Impl2982);
+            pushFollow(FOLLOW_rule__Requirement__PropertiesAssignment_3_1_in_rule__Requirement__Group_3__1__Impl3066);
             rule__Requirement__PropertiesAssignment_3_1();
             _fsp--;
 
@@ -4088,20 +4192,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Domain__Group_0__0
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1445:1: rule__Domain__Group_0__0 : rule__Domain__Group_0__0__Impl rule__Domain__Group_0__1 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1473:1: rule__Domain__Group_0__0 : rule__Domain__Group_0__0__Impl rule__Domain__Group_0__1 ;
     public final void rule__Domain__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1449:1: ( rule__Domain__Group_0__0__Impl rule__Domain__Group_0__1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1450:2: rule__Domain__Group_0__0__Impl rule__Domain__Group_0__1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1477:1: ( rule__Domain__Group_0__0__Impl rule__Domain__Group_0__1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1478:2: rule__Domain__Group_0__0__Impl rule__Domain__Group_0__1
             {
-            pushFollow(FOLLOW_rule__Domain__Group_0__0__Impl_in_rule__Domain__Group_0__03016);
+            pushFollow(FOLLOW_rule__Domain__Group_0__0__Impl_in_rule__Domain__Group_0__03100);
             rule__Domain__Group_0__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Domain__Group_0__1_in_rule__Domain__Group_0__03019);
+            pushFollow(FOLLOW_rule__Domain__Group_0__1_in_rule__Domain__Group_0__03103);
             rule__Domain__Group_0__1();
             _fsp--;
 
@@ -4124,23 +4228,23 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Domain__Group_0__0__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1457:1: rule__Domain__Group_0__0__Impl : ( ( rule__Domain__NameAssignment_0_0 ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1485:1: rule__Domain__Group_0__0__Impl : ( ( rule__Domain__NameAssignment_0_0 ) ) ;
     public final void rule__Domain__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1461:1: ( ( ( rule__Domain__NameAssignment_0_0 ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1462:1: ( ( rule__Domain__NameAssignment_0_0 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1489:1: ( ( ( rule__Domain__NameAssignment_0_0 ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1490:1: ( ( rule__Domain__NameAssignment_0_0 ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1462:1: ( ( rule__Domain__NameAssignment_0_0 ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1463:1: ( rule__Domain__NameAssignment_0_0 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1490:1: ( ( rule__Domain__NameAssignment_0_0 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1491:1: ( rule__Domain__NameAssignment_0_0 )
             {
              before(grammarAccess.getDomainAccess().getNameAssignment_0_0()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1464:1: ( rule__Domain__NameAssignment_0_0 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1464:2: rule__Domain__NameAssignment_0_0
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1492:1: ( rule__Domain__NameAssignment_0_0 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1492:2: rule__Domain__NameAssignment_0_0
             {
-            pushFollow(FOLLOW_rule__Domain__NameAssignment_0_0_in_rule__Domain__Group_0__0__Impl3046);
+            pushFollow(FOLLOW_rule__Domain__NameAssignment_0_0_in_rule__Domain__Group_0__0__Impl3130);
             rule__Domain__NameAssignment_0_0();
             _fsp--;
 
@@ -4170,20 +4274,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Domain__Group_0__1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1474:1: rule__Domain__Group_0__1 : rule__Domain__Group_0__1__Impl rule__Domain__Group_0__2 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1502:1: rule__Domain__Group_0__1 : rule__Domain__Group_0__1__Impl rule__Domain__Group_0__2 ;
     public final void rule__Domain__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1478:1: ( rule__Domain__Group_0__1__Impl rule__Domain__Group_0__2 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1479:2: rule__Domain__Group_0__1__Impl rule__Domain__Group_0__2
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1506:1: ( rule__Domain__Group_0__1__Impl rule__Domain__Group_0__2 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1507:2: rule__Domain__Group_0__1__Impl rule__Domain__Group_0__2
             {
-            pushFollow(FOLLOW_rule__Domain__Group_0__1__Impl_in_rule__Domain__Group_0__13076);
+            pushFollow(FOLLOW_rule__Domain__Group_0__1__Impl_in_rule__Domain__Group_0__13160);
             rule__Domain__Group_0__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Domain__Group_0__2_in_rule__Domain__Group_0__13079);
+            pushFollow(FOLLOW_rule__Domain__Group_0__2_in_rule__Domain__Group_0__13163);
             rule__Domain__Group_0__2();
             _fsp--;
 
@@ -4206,23 +4310,23 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Domain__Group_0__1__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1486:1: rule__Domain__Group_0__1__Impl : ( ( rule__Domain__TypeAssignment_0_1 ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1514:1: rule__Domain__Group_0__1__Impl : ( ( rule__Domain__TypeAssignment_0_1 ) ) ;
     public final void rule__Domain__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1490:1: ( ( ( rule__Domain__TypeAssignment_0_1 ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1491:1: ( ( rule__Domain__TypeAssignment_0_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1518:1: ( ( ( rule__Domain__TypeAssignment_0_1 ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1519:1: ( ( rule__Domain__TypeAssignment_0_1 ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1491:1: ( ( rule__Domain__TypeAssignment_0_1 ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1492:1: ( rule__Domain__TypeAssignment_0_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1519:1: ( ( rule__Domain__TypeAssignment_0_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1520:1: ( rule__Domain__TypeAssignment_0_1 )
             {
              before(grammarAccess.getDomainAccess().getTypeAssignment_0_1()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1493:1: ( rule__Domain__TypeAssignment_0_1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1493:2: rule__Domain__TypeAssignment_0_1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1521:1: ( rule__Domain__TypeAssignment_0_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1521:2: rule__Domain__TypeAssignment_0_1
             {
-            pushFollow(FOLLOW_rule__Domain__TypeAssignment_0_1_in_rule__Domain__Group_0__1__Impl3106);
+            pushFollow(FOLLOW_rule__Domain__TypeAssignment_0_1_in_rule__Domain__Group_0__1__Impl3190);
             rule__Domain__TypeAssignment_0_1();
             _fsp--;
 
@@ -4252,20 +4356,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Domain__Group_0__2
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1503:1: rule__Domain__Group_0__2 : rule__Domain__Group_0__2__Impl rule__Domain__Group_0__3 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1531:1: rule__Domain__Group_0__2 : rule__Domain__Group_0__2__Impl rule__Domain__Group_0__3 ;
     public final void rule__Domain__Group_0__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1507:1: ( rule__Domain__Group_0__2__Impl rule__Domain__Group_0__3 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1508:2: rule__Domain__Group_0__2__Impl rule__Domain__Group_0__3
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1535:1: ( rule__Domain__Group_0__2__Impl rule__Domain__Group_0__3 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1536:2: rule__Domain__Group_0__2__Impl rule__Domain__Group_0__3
             {
-            pushFollow(FOLLOW_rule__Domain__Group_0__2__Impl_in_rule__Domain__Group_0__23136);
+            pushFollow(FOLLOW_rule__Domain__Group_0__2__Impl_in_rule__Domain__Group_0__23220);
             rule__Domain__Group_0__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Domain__Group_0__3_in_rule__Domain__Group_0__23139);
+            pushFollow(FOLLOW_rule__Domain__Group_0__3_in_rule__Domain__Group_0__23223);
             rule__Domain__Group_0__3();
             _fsp--;
 
@@ -4288,35 +4392,35 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Domain__Group_0__2__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1515:1: rule__Domain__Group_0__2__Impl : ( ( rule__Domain__AssetAssignment_0_2 )? ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1543:1: rule__Domain__Group_0__2__Impl : ( ( rule__Domain__AssetAssignment_0_2 )? ) ;
     public final void rule__Domain__Group_0__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1519:1: ( ( ( rule__Domain__AssetAssignment_0_2 )? ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1520:1: ( ( rule__Domain__AssetAssignment_0_2 )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1547:1: ( ( ( rule__Domain__AssetAssignment_0_2 )? ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1548:1: ( ( rule__Domain__AssetAssignment_0_2 )? )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1520:1: ( ( rule__Domain__AssetAssignment_0_2 )? )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1521:1: ( rule__Domain__AssetAssignment_0_2 )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1548:1: ( ( rule__Domain__AssetAssignment_0_2 )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1549:1: ( rule__Domain__AssetAssignment_0_2 )?
             {
              before(grammarAccess.getDomainAccess().getAssetAssignment_0_2()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1522:1: ( rule__Domain__AssetAssignment_0_2 )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1550:1: ( rule__Domain__AssetAssignment_0_2 )?
             int alt17=2;
             int LA17_0 = input.LA(1);
 
             if ( (LA17_0==RULE_ID) ) {
                 int LA17_1 = input.LA(2);
 
-                if ( (LA17_1==29) ) {
+                if ( (LA17_1==33) ) {
                     alt17=1;
                 }
             }
             switch (alt17) {
                 case 1 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1522:2: rule__Domain__AssetAssignment_0_2
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1550:2: rule__Domain__AssetAssignment_0_2
                     {
-                    pushFollow(FOLLOW_rule__Domain__AssetAssignment_0_2_in_rule__Domain__Group_0__2__Impl3166);
+                    pushFollow(FOLLOW_rule__Domain__AssetAssignment_0_2_in_rule__Domain__Group_0__2__Impl3250);
                     rule__Domain__AssetAssignment_0_2();
                     _fsp--;
 
@@ -4349,16 +4453,16 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Domain__Group_0__3
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1532:1: rule__Domain__Group_0__3 : rule__Domain__Group_0__3__Impl ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1560:1: rule__Domain__Group_0__3 : rule__Domain__Group_0__3__Impl ;
     public final void rule__Domain__Group_0__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1536:1: ( rule__Domain__Group_0__3__Impl )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1537:2: rule__Domain__Group_0__3__Impl
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1564:1: ( rule__Domain__Group_0__3__Impl )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1565:2: rule__Domain__Group_0__3__Impl
             {
-            pushFollow(FOLLOW_rule__Domain__Group_0__3__Impl_in_rule__Domain__Group_0__33197);
+            pushFollow(FOLLOW_rule__Domain__Group_0__3__Impl_in_rule__Domain__Group_0__33281);
             rule__Domain__Group_0__3__Impl();
             _fsp--;
 
@@ -4381,35 +4485,35 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Domain__Group_0__3__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1543:1: rule__Domain__Group_0__3__Impl : ( ( rule__Domain__Group_0_3__0 )* ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1571:1: rule__Domain__Group_0__3__Impl : ( ( rule__Domain__Group_0_3__0 )* ) ;
     public final void rule__Domain__Group_0__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1547:1: ( ( ( rule__Domain__Group_0_3__0 )* ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1548:1: ( ( rule__Domain__Group_0_3__0 )* )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1575:1: ( ( ( rule__Domain__Group_0_3__0 )* ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1576:1: ( ( rule__Domain__Group_0_3__0 )* )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1548:1: ( ( rule__Domain__Group_0_3__0 )* )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1549:1: ( rule__Domain__Group_0_3__0 )*
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1576:1: ( ( rule__Domain__Group_0_3__0 )* )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1577:1: ( rule__Domain__Group_0_3__0 )*
             {
              before(grammarAccess.getDomainAccess().getGroup_0_3()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1550:1: ( rule__Domain__Group_0_3__0 )*
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1578:1: ( rule__Domain__Group_0_3__0 )*
             loop18:
             do {
                 int alt18=2;
                 int LA18_0 = input.LA(1);
 
-                if ( (LA18_0==RULE_STRING||LA18_0==28) ) {
+                if ( (LA18_0==RULE_STRING||LA18_0==32) ) {
                     alt18=1;
                 }
 
 
                 switch (alt18) {
             	case 1 :
-            	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1550:2: rule__Domain__Group_0_3__0
+            	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1578:2: rule__Domain__Group_0_3__0
             	    {
-            	    pushFollow(FOLLOW_rule__Domain__Group_0_3__0_in_rule__Domain__Group_0__3__Impl3224);
+            	    pushFollow(FOLLOW_rule__Domain__Group_0_3__0_in_rule__Domain__Group_0__3__Impl3308);
             	    rule__Domain__Group_0_3__0();
             	    _fsp--;
 
@@ -4445,20 +4549,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Domain__Group_0_3__0
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1568:1: rule__Domain__Group_0_3__0 : rule__Domain__Group_0_3__0__Impl rule__Domain__Group_0_3__1 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1596:1: rule__Domain__Group_0_3__0 : rule__Domain__Group_0_3__0__Impl rule__Domain__Group_0_3__1 ;
     public final void rule__Domain__Group_0_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1572:1: ( rule__Domain__Group_0_3__0__Impl rule__Domain__Group_0_3__1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1573:2: rule__Domain__Group_0_3__0__Impl rule__Domain__Group_0_3__1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1600:1: ( rule__Domain__Group_0_3__0__Impl rule__Domain__Group_0_3__1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1601:2: rule__Domain__Group_0_3__0__Impl rule__Domain__Group_0_3__1
             {
-            pushFollow(FOLLOW_rule__Domain__Group_0_3__0__Impl_in_rule__Domain__Group_0_3__03263);
+            pushFollow(FOLLOW_rule__Domain__Group_0_3__0__Impl_in_rule__Domain__Group_0_3__03347);
             rule__Domain__Group_0_3__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Domain__Group_0_3__1_in_rule__Domain__Group_0_3__03266);
+            pushFollow(FOLLOW_rule__Domain__Group_0_3__1_in_rule__Domain__Group_0_3__03350);
             rule__Domain__Group_0_3__1();
             _fsp--;
 
@@ -4481,31 +4585,31 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Domain__Group_0_3__0__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1580:1: rule__Domain__Group_0_3__0__Impl : ( ( ',' )? ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1608:1: rule__Domain__Group_0_3__0__Impl : ( ( ',' )? ) ;
     public final void rule__Domain__Group_0_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1584:1: ( ( ( ',' )? ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1585:1: ( ( ',' )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1612:1: ( ( ( ',' )? ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1613:1: ( ( ',' )? )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1585:1: ( ( ',' )? )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1586:1: ( ',' )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1613:1: ( ( ',' )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1614:1: ( ',' )?
             {
              before(grammarAccess.getDomainAccess().getCommaKeyword_0_3_0()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1587:1: ( ',' )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1615:1: ( ',' )?
             int alt19=2;
             int LA19_0 = input.LA(1);
 
-            if ( (LA19_0==28) ) {
+            if ( (LA19_0==32) ) {
                 alt19=1;
             }
             switch (alt19) {
                 case 1 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1588:2: ','
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1616:2: ','
                     {
-                    match(input,28,FOLLOW_28_in_rule__Domain__Group_0_3__0__Impl3295); 
+                    match(input,32,FOLLOW_32_in_rule__Domain__Group_0_3__0__Impl3379); 
 
                     }
                     break;
@@ -4535,16 +4639,16 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Domain__Group_0_3__1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1599:1: rule__Domain__Group_0_3__1 : rule__Domain__Group_0_3__1__Impl ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1627:1: rule__Domain__Group_0_3__1 : rule__Domain__Group_0_3__1__Impl ;
     public final void rule__Domain__Group_0_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1603:1: ( rule__Domain__Group_0_3__1__Impl )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1604:2: rule__Domain__Group_0_3__1__Impl
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1631:1: ( rule__Domain__Group_0_3__1__Impl )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1632:2: rule__Domain__Group_0_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__Domain__Group_0_3__1__Impl_in_rule__Domain__Group_0_3__13328);
+            pushFollow(FOLLOW_rule__Domain__Group_0_3__1__Impl_in_rule__Domain__Group_0_3__13412);
             rule__Domain__Group_0_3__1__Impl();
             _fsp--;
 
@@ -4567,23 +4671,23 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Domain__Group_0_3__1__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1610:1: rule__Domain__Group_0_3__1__Impl : ( ( rule__Domain__PropertiesAssignment_0_3_1 ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1638:1: rule__Domain__Group_0_3__1__Impl : ( ( rule__Domain__PropertiesAssignment_0_3_1 ) ) ;
     public final void rule__Domain__Group_0_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1614:1: ( ( ( rule__Domain__PropertiesAssignment_0_3_1 ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1615:1: ( ( rule__Domain__PropertiesAssignment_0_3_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1642:1: ( ( ( rule__Domain__PropertiesAssignment_0_3_1 ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1643:1: ( ( rule__Domain__PropertiesAssignment_0_3_1 ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1615:1: ( ( rule__Domain__PropertiesAssignment_0_3_1 ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1616:1: ( rule__Domain__PropertiesAssignment_0_3_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1643:1: ( ( rule__Domain__PropertiesAssignment_0_3_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1644:1: ( rule__Domain__PropertiesAssignment_0_3_1 )
             {
              before(grammarAccess.getDomainAccess().getPropertiesAssignment_0_3_1()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1617:1: ( rule__Domain__PropertiesAssignment_0_3_1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1617:2: rule__Domain__PropertiesAssignment_0_3_1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1645:1: ( rule__Domain__PropertiesAssignment_0_3_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1645:2: rule__Domain__PropertiesAssignment_0_3_1
             {
-            pushFollow(FOLLOW_rule__Domain__PropertiesAssignment_0_3_1_in_rule__Domain__Group_0_3__1__Impl3355);
+            pushFollow(FOLLOW_rule__Domain__PropertiesAssignment_0_3_1_in_rule__Domain__Group_0_3__1__Impl3439);
             rule__Domain__PropertiesAssignment_0_3_1();
             _fsp--;
 
@@ -4613,20 +4717,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Asset__Group__0
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1631:1: rule__Asset__Group__0 : rule__Asset__Group__0__Impl rule__Asset__Group__1 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1659:1: rule__Asset__Group__0 : rule__Asset__Group__0__Impl rule__Asset__Group__1 ;
     public final void rule__Asset__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1635:1: ( rule__Asset__Group__0__Impl rule__Asset__Group__1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1636:2: rule__Asset__Group__0__Impl rule__Asset__Group__1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1663:1: ( rule__Asset__Group__0__Impl rule__Asset__Group__1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1664:2: rule__Asset__Group__0__Impl rule__Asset__Group__1
             {
-            pushFollow(FOLLOW_rule__Asset__Group__0__Impl_in_rule__Asset__Group__03389);
+            pushFollow(FOLLOW_rule__Asset__Group__0__Impl_in_rule__Asset__Group__03473);
             rule__Asset__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Asset__Group__1_in_rule__Asset__Group__03392);
+            pushFollow(FOLLOW_rule__Asset__Group__1_in_rule__Asset__Group__03476);
             rule__Asset__Group__1();
             _fsp--;
 
@@ -4649,23 +4753,23 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Asset__Group__0__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1643:1: rule__Asset__Group__0__Impl : ( ( rule__Asset__NameAssignment_0 ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1671:1: rule__Asset__Group__0__Impl : ( ( rule__Asset__NameAssignment_0 ) ) ;
     public final void rule__Asset__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1647:1: ( ( ( rule__Asset__NameAssignment_0 ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1648:1: ( ( rule__Asset__NameAssignment_0 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1675:1: ( ( ( rule__Asset__NameAssignment_0 ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1676:1: ( ( rule__Asset__NameAssignment_0 ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1648:1: ( ( rule__Asset__NameAssignment_0 ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1649:1: ( rule__Asset__NameAssignment_0 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1676:1: ( ( rule__Asset__NameAssignment_0 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1677:1: ( rule__Asset__NameAssignment_0 )
             {
              before(grammarAccess.getAssetAccess().getNameAssignment_0()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1650:1: ( rule__Asset__NameAssignment_0 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1650:2: rule__Asset__NameAssignment_0
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1678:1: ( rule__Asset__NameAssignment_0 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1678:2: rule__Asset__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__Asset__NameAssignment_0_in_rule__Asset__Group__0__Impl3419);
+            pushFollow(FOLLOW_rule__Asset__NameAssignment_0_in_rule__Asset__Group__0__Impl3503);
             rule__Asset__NameAssignment_0();
             _fsp--;
 
@@ -4695,20 +4799,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Asset__Group__1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1660:1: rule__Asset__Group__1 : rule__Asset__Group__1__Impl rule__Asset__Group__2 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1688:1: rule__Asset__Group__1 : rule__Asset__Group__1__Impl rule__Asset__Group__2 ;
     public final void rule__Asset__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1664:1: ( rule__Asset__Group__1__Impl rule__Asset__Group__2 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1665:2: rule__Asset__Group__1__Impl rule__Asset__Group__2
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1692:1: ( rule__Asset__Group__1__Impl rule__Asset__Group__2 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1693:2: rule__Asset__Group__1__Impl rule__Asset__Group__2
             {
-            pushFollow(FOLLOW_rule__Asset__Group__1__Impl_in_rule__Asset__Group__13449);
+            pushFollow(FOLLOW_rule__Asset__Group__1__Impl_in_rule__Asset__Group__13533);
             rule__Asset__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Asset__Group__2_in_rule__Asset__Group__13452);
+            pushFollow(FOLLOW_rule__Asset__Group__2_in_rule__Asset__Group__13536);
             rule__Asset__Group__2();
             _fsp--;
 
@@ -4731,20 +4835,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Asset__Group__1__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1672:1: rule__Asset__Group__1__Impl : ( '$' ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1700:1: rule__Asset__Group__1__Impl : ( '$' ) ;
     public final void rule__Asset__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1676:1: ( ( '$' ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1677:1: ( '$' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1704:1: ( ( '$' ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1705:1: ( '$' )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1677:1: ( '$' )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1678:1: '$'
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1705:1: ( '$' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1706:1: '$'
             {
              before(grammarAccess.getAssetAccess().getDollarSignKeyword_1()); 
-            match(input,29,FOLLOW_29_in_rule__Asset__Group__1__Impl3480); 
+            match(input,33,FOLLOW_33_in_rule__Asset__Group__1__Impl3564); 
              after(grammarAccess.getAssetAccess().getDollarSignKeyword_1()); 
 
             }
@@ -4768,16 +4872,16 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Asset__Group__2
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1691:1: rule__Asset__Group__2 : rule__Asset__Group__2__Impl ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1719:1: rule__Asset__Group__2 : rule__Asset__Group__2__Impl ;
     public final void rule__Asset__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1695:1: ( rule__Asset__Group__2__Impl )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1696:2: rule__Asset__Group__2__Impl
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1723:1: ( rule__Asset__Group__2__Impl )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1724:2: rule__Asset__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Asset__Group__2__Impl_in_rule__Asset__Group__23511);
+            pushFollow(FOLLOW_rule__Asset__Group__2__Impl_in_rule__Asset__Group__23595);
             rule__Asset__Group__2__Impl();
             _fsp--;
 
@@ -4800,20 +4904,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Asset__Group__2__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1702:1: rule__Asset__Group__2__Impl : ( ( rule__Asset__ValueAssignment_2 )? ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1730:1: rule__Asset__Group__2__Impl : ( ( rule__Asset__ValueAssignment_2 )? ) ;
     public final void rule__Asset__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1706:1: ( ( ( rule__Asset__ValueAssignment_2 )? ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1707:1: ( ( rule__Asset__ValueAssignment_2 )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1734:1: ( ( ( rule__Asset__ValueAssignment_2 )? ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1735:1: ( ( rule__Asset__ValueAssignment_2 )? )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1707:1: ( ( rule__Asset__ValueAssignment_2 )? )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1708:1: ( rule__Asset__ValueAssignment_2 )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1735:1: ( ( rule__Asset__ValueAssignment_2 )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1736:1: ( rule__Asset__ValueAssignment_2 )?
             {
              before(grammarAccess.getAssetAccess().getValueAssignment_2()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1709:1: ( rule__Asset__ValueAssignment_2 )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1737:1: ( rule__Asset__ValueAssignment_2 )?
             int alt20=2;
             int LA20_0 = input.LA(1);
 
@@ -4822,9 +4926,9 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
             }
             switch (alt20) {
                 case 1 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1709:2: rule__Asset__ValueAssignment_2
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1737:2: rule__Asset__ValueAssignment_2
                     {
-                    pushFollow(FOLLOW_rule__Asset__ValueAssignment_2_in_rule__Asset__Group__2__Impl3538);
+                    pushFollow(FOLLOW_rule__Asset__ValueAssignment_2_in_rule__Asset__Group__2__Impl3622);
                     rule__Asset__ValueAssignment_2();
                     _fsp--;
 
@@ -4857,20 +4961,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Actor__Group__0
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1725:1: rule__Actor__Group__0 : rule__Actor__Group__0__Impl rule__Actor__Group__1 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1753:1: rule__Actor__Group__0 : rule__Actor__Group__0__Impl rule__Actor__Group__1 ;
     public final void rule__Actor__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1729:1: ( rule__Actor__Group__0__Impl rule__Actor__Group__1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1730:2: rule__Actor__Group__0__Impl rule__Actor__Group__1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1757:1: ( rule__Actor__Group__0__Impl rule__Actor__Group__1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1758:2: rule__Actor__Group__0__Impl rule__Actor__Group__1
             {
-            pushFollow(FOLLOW_rule__Actor__Group__0__Impl_in_rule__Actor__Group__03575);
+            pushFollow(FOLLOW_rule__Actor__Group__0__Impl_in_rule__Actor__Group__03659);
             rule__Actor__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Actor__Group__1_in_rule__Actor__Group__03578);
+            pushFollow(FOLLOW_rule__Actor__Group__1_in_rule__Actor__Group__03662);
             rule__Actor__Group__1();
             _fsp--;
 
@@ -4893,23 +4997,23 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Actor__Group__0__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1737:1: rule__Actor__Group__0__Impl : ( ( rule__Actor__NameAssignment_0 ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1765:1: rule__Actor__Group__0__Impl : ( ( rule__Actor__NameAssignment_0 ) ) ;
     public final void rule__Actor__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1741:1: ( ( ( rule__Actor__NameAssignment_0 ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1742:1: ( ( rule__Actor__NameAssignment_0 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1769:1: ( ( ( rule__Actor__NameAssignment_0 ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1770:1: ( ( rule__Actor__NameAssignment_0 ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1742:1: ( ( rule__Actor__NameAssignment_0 ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1743:1: ( rule__Actor__NameAssignment_0 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1770:1: ( ( rule__Actor__NameAssignment_0 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1771:1: ( rule__Actor__NameAssignment_0 )
             {
              before(grammarAccess.getActorAccess().getNameAssignment_0()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1744:1: ( rule__Actor__NameAssignment_0 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1744:2: rule__Actor__NameAssignment_0
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1772:1: ( rule__Actor__NameAssignment_0 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1772:2: rule__Actor__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__Actor__NameAssignment_0_in_rule__Actor__Group__0__Impl3605);
+            pushFollow(FOLLOW_rule__Actor__NameAssignment_0_in_rule__Actor__Group__0__Impl3689);
             rule__Actor__NameAssignment_0();
             _fsp--;
 
@@ -4939,20 +5043,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Actor__Group__1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1754:1: rule__Actor__Group__1 : rule__Actor__Group__1__Impl rule__Actor__Group__2 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1782:1: rule__Actor__Group__1 : rule__Actor__Group__1__Impl rule__Actor__Group__2 ;
     public final void rule__Actor__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1758:1: ( rule__Actor__Group__1__Impl rule__Actor__Group__2 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1759:2: rule__Actor__Group__1__Impl rule__Actor__Group__2
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1786:1: ( rule__Actor__Group__1__Impl rule__Actor__Group__2 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1787:2: rule__Actor__Group__1__Impl rule__Actor__Group__2
             {
-            pushFollow(FOLLOW_rule__Actor__Group__1__Impl_in_rule__Actor__Group__13635);
+            pushFollow(FOLLOW_rule__Actor__Group__1__Impl_in_rule__Actor__Group__13719);
             rule__Actor__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Actor__Group__2_in_rule__Actor__Group__13638);
+            pushFollow(FOLLOW_rule__Actor__Group__2_in_rule__Actor__Group__13722);
             rule__Actor__Group__2();
             _fsp--;
 
@@ -4975,23 +5079,23 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Actor__Group__1__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1766:1: rule__Actor__Group__1__Impl : ( ( rule__Actor__TypeAssignment_1 ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1794:1: rule__Actor__Group__1__Impl : ( ( rule__Actor__TypeAssignment_1 ) ) ;
     public final void rule__Actor__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1770:1: ( ( ( rule__Actor__TypeAssignment_1 ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1771:1: ( ( rule__Actor__TypeAssignment_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1798:1: ( ( ( rule__Actor__TypeAssignment_1 ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1799:1: ( ( rule__Actor__TypeAssignment_1 ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1771:1: ( ( rule__Actor__TypeAssignment_1 ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1772:1: ( rule__Actor__TypeAssignment_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1799:1: ( ( rule__Actor__TypeAssignment_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1800:1: ( rule__Actor__TypeAssignment_1 )
             {
              before(grammarAccess.getActorAccess().getTypeAssignment_1()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1773:1: ( rule__Actor__TypeAssignment_1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1773:2: rule__Actor__TypeAssignment_1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1801:1: ( rule__Actor__TypeAssignment_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1801:2: rule__Actor__TypeAssignment_1
             {
-            pushFollow(FOLLOW_rule__Actor__TypeAssignment_1_in_rule__Actor__Group__1__Impl3665);
+            pushFollow(FOLLOW_rule__Actor__TypeAssignment_1_in_rule__Actor__Group__1__Impl3749);
             rule__Actor__TypeAssignment_1();
             _fsp--;
 
@@ -5021,20 +5125,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Actor__Group__2
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1783:1: rule__Actor__Group__2 : rule__Actor__Group__2__Impl rule__Actor__Group__3 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1811:1: rule__Actor__Group__2 : rule__Actor__Group__2__Impl rule__Actor__Group__3 ;
     public final void rule__Actor__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1787:1: ( rule__Actor__Group__2__Impl rule__Actor__Group__3 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1788:2: rule__Actor__Group__2__Impl rule__Actor__Group__3
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1815:1: ( rule__Actor__Group__2__Impl rule__Actor__Group__3 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1816:2: rule__Actor__Group__2__Impl rule__Actor__Group__3
             {
-            pushFollow(FOLLOW_rule__Actor__Group__2__Impl_in_rule__Actor__Group__23695);
+            pushFollow(FOLLOW_rule__Actor__Group__2__Impl_in_rule__Actor__Group__23779);
             rule__Actor__Group__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Actor__Group__3_in_rule__Actor__Group__23698);
+            pushFollow(FOLLOW_rule__Actor__Group__3_in_rule__Actor__Group__23782);
             rule__Actor__Group__3();
             _fsp--;
 
@@ -5057,35 +5161,35 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Actor__Group__2__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1795:1: rule__Actor__Group__2__Impl : ( ( rule__Actor__AssetAssignment_2 )? ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1823:1: rule__Actor__Group__2__Impl : ( ( rule__Actor__AssetAssignment_2 )? ) ;
     public final void rule__Actor__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1799:1: ( ( ( rule__Actor__AssetAssignment_2 )? ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1800:1: ( ( rule__Actor__AssetAssignment_2 )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1827:1: ( ( ( rule__Actor__AssetAssignment_2 )? ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1828:1: ( ( rule__Actor__AssetAssignment_2 )? )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1800:1: ( ( rule__Actor__AssetAssignment_2 )? )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1801:1: ( rule__Actor__AssetAssignment_2 )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1828:1: ( ( rule__Actor__AssetAssignment_2 )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1829:1: ( rule__Actor__AssetAssignment_2 )?
             {
              before(grammarAccess.getActorAccess().getAssetAssignment_2()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1802:1: ( rule__Actor__AssetAssignment_2 )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1830:1: ( rule__Actor__AssetAssignment_2 )?
             int alt21=2;
             int LA21_0 = input.LA(1);
 
             if ( (LA21_0==RULE_ID) ) {
                 int LA21_1 = input.LA(2);
 
-                if ( (LA21_1==29) ) {
+                if ( (LA21_1==33) ) {
                     alt21=1;
                 }
             }
             switch (alt21) {
                 case 1 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1802:2: rule__Actor__AssetAssignment_2
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1830:2: rule__Actor__AssetAssignment_2
                     {
-                    pushFollow(FOLLOW_rule__Actor__AssetAssignment_2_in_rule__Actor__Group__2__Impl3725);
+                    pushFollow(FOLLOW_rule__Actor__AssetAssignment_2_in_rule__Actor__Group__2__Impl3809);
                     rule__Actor__AssetAssignment_2();
                     _fsp--;
 
@@ -5118,16 +5222,16 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Actor__Group__3
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1812:1: rule__Actor__Group__3 : rule__Actor__Group__3__Impl ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1840:1: rule__Actor__Group__3 : rule__Actor__Group__3__Impl ;
     public final void rule__Actor__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1816:1: ( rule__Actor__Group__3__Impl )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1817:2: rule__Actor__Group__3__Impl
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1844:1: ( rule__Actor__Group__3__Impl )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1845:2: rule__Actor__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__Actor__Group__3__Impl_in_rule__Actor__Group__33756);
+            pushFollow(FOLLOW_rule__Actor__Group__3__Impl_in_rule__Actor__Group__33840);
             rule__Actor__Group__3__Impl();
             _fsp--;
 
@@ -5150,35 +5254,35 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Actor__Group__3__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1823:1: rule__Actor__Group__3__Impl : ( ( rule__Actor__Group_3__0 )* ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1851:1: rule__Actor__Group__3__Impl : ( ( rule__Actor__Group_3__0 )* ) ;
     public final void rule__Actor__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1827:1: ( ( ( rule__Actor__Group_3__0 )* ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1828:1: ( ( rule__Actor__Group_3__0 )* )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1855:1: ( ( ( rule__Actor__Group_3__0 )* ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1856:1: ( ( rule__Actor__Group_3__0 )* )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1828:1: ( ( rule__Actor__Group_3__0 )* )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1829:1: ( rule__Actor__Group_3__0 )*
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1856:1: ( ( rule__Actor__Group_3__0 )* )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1857:1: ( rule__Actor__Group_3__0 )*
             {
              before(grammarAccess.getActorAccess().getGroup_3()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1830:1: ( rule__Actor__Group_3__0 )*
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1858:1: ( rule__Actor__Group_3__0 )*
             loop22:
             do {
                 int alt22=2;
                 int LA22_0 = input.LA(1);
 
-                if ( (LA22_0==RULE_STRING||LA22_0==28) ) {
+                if ( (LA22_0==RULE_STRING||LA22_0==32) ) {
                     alt22=1;
                 }
 
 
                 switch (alt22) {
             	case 1 :
-            	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1830:2: rule__Actor__Group_3__0
+            	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1858:2: rule__Actor__Group_3__0
             	    {
-            	    pushFollow(FOLLOW_rule__Actor__Group_3__0_in_rule__Actor__Group__3__Impl3783);
+            	    pushFollow(FOLLOW_rule__Actor__Group_3__0_in_rule__Actor__Group__3__Impl3867);
             	    rule__Actor__Group_3__0();
             	    _fsp--;
 
@@ -5214,20 +5318,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Actor__Group_3__0
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1848:1: rule__Actor__Group_3__0 : rule__Actor__Group_3__0__Impl rule__Actor__Group_3__1 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1876:1: rule__Actor__Group_3__0 : rule__Actor__Group_3__0__Impl rule__Actor__Group_3__1 ;
     public final void rule__Actor__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1852:1: ( rule__Actor__Group_3__0__Impl rule__Actor__Group_3__1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1853:2: rule__Actor__Group_3__0__Impl rule__Actor__Group_3__1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1880:1: ( rule__Actor__Group_3__0__Impl rule__Actor__Group_3__1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1881:2: rule__Actor__Group_3__0__Impl rule__Actor__Group_3__1
             {
-            pushFollow(FOLLOW_rule__Actor__Group_3__0__Impl_in_rule__Actor__Group_3__03822);
+            pushFollow(FOLLOW_rule__Actor__Group_3__0__Impl_in_rule__Actor__Group_3__03906);
             rule__Actor__Group_3__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Actor__Group_3__1_in_rule__Actor__Group_3__03825);
+            pushFollow(FOLLOW_rule__Actor__Group_3__1_in_rule__Actor__Group_3__03909);
             rule__Actor__Group_3__1();
             _fsp--;
 
@@ -5250,31 +5354,31 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Actor__Group_3__0__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1860:1: rule__Actor__Group_3__0__Impl : ( ( ',' )? ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1888:1: rule__Actor__Group_3__0__Impl : ( ( ',' )? ) ;
     public final void rule__Actor__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1864:1: ( ( ( ',' )? ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1865:1: ( ( ',' )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1892:1: ( ( ( ',' )? ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1893:1: ( ( ',' )? )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1865:1: ( ( ',' )? )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1866:1: ( ',' )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1893:1: ( ( ',' )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1894:1: ( ',' )?
             {
              before(grammarAccess.getActorAccess().getCommaKeyword_3_0()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1867:1: ( ',' )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1895:1: ( ',' )?
             int alt23=2;
             int LA23_0 = input.LA(1);
 
-            if ( (LA23_0==28) ) {
+            if ( (LA23_0==32) ) {
                 alt23=1;
             }
             switch (alt23) {
                 case 1 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1868:2: ','
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1896:2: ','
                     {
-                    match(input,28,FOLLOW_28_in_rule__Actor__Group_3__0__Impl3854); 
+                    match(input,32,FOLLOW_32_in_rule__Actor__Group_3__0__Impl3938); 
 
                     }
                     break;
@@ -5304,16 +5408,16 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Actor__Group_3__1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1879:1: rule__Actor__Group_3__1 : rule__Actor__Group_3__1__Impl ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1907:1: rule__Actor__Group_3__1 : rule__Actor__Group_3__1__Impl ;
     public final void rule__Actor__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1883:1: ( rule__Actor__Group_3__1__Impl )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1884:2: rule__Actor__Group_3__1__Impl
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1911:1: ( rule__Actor__Group_3__1__Impl )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1912:2: rule__Actor__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__Actor__Group_3__1__Impl_in_rule__Actor__Group_3__13887);
+            pushFollow(FOLLOW_rule__Actor__Group_3__1__Impl_in_rule__Actor__Group_3__13971);
             rule__Actor__Group_3__1__Impl();
             _fsp--;
 
@@ -5336,23 +5440,23 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Actor__Group_3__1__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1890:1: rule__Actor__Group_3__1__Impl : ( ( rule__Actor__PropertiesAssignment_3_1 ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1918:1: rule__Actor__Group_3__1__Impl : ( ( rule__Actor__PropertiesAssignment_3_1 ) ) ;
     public final void rule__Actor__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1894:1: ( ( ( rule__Actor__PropertiesAssignment_3_1 ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1895:1: ( ( rule__Actor__PropertiesAssignment_3_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1922:1: ( ( ( rule__Actor__PropertiesAssignment_3_1 ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1923:1: ( ( rule__Actor__PropertiesAssignment_3_1 ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1895:1: ( ( rule__Actor__PropertiesAssignment_3_1 ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1896:1: ( rule__Actor__PropertiesAssignment_3_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1923:1: ( ( rule__Actor__PropertiesAssignment_3_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1924:1: ( rule__Actor__PropertiesAssignment_3_1 )
             {
              before(grammarAccess.getActorAccess().getPropertiesAssignment_3_1()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1897:1: ( rule__Actor__PropertiesAssignment_3_1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1897:2: rule__Actor__PropertiesAssignment_3_1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1925:1: ( rule__Actor__PropertiesAssignment_3_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1925:2: rule__Actor__PropertiesAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__Actor__PropertiesAssignment_3_1_in_rule__Actor__Group_3__1__Impl3914);
+            pushFollow(FOLLOW_rule__Actor__PropertiesAssignment_3_1_in_rule__Actor__Group_3__1__Impl3998);
             rule__Actor__PropertiesAssignment_3_1();
             _fsp--;
 
@@ -5382,20 +5486,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Action__Group__0
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1911:1: rule__Action__Group__0 : rule__Action__Group__0__Impl rule__Action__Group__1 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1939:1: rule__Action__Group__0 : rule__Action__Group__0__Impl rule__Action__Group__1 ;
     public final void rule__Action__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1915:1: ( rule__Action__Group__0__Impl rule__Action__Group__1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1916:2: rule__Action__Group__0__Impl rule__Action__Group__1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1943:1: ( rule__Action__Group__0__Impl rule__Action__Group__1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1944:2: rule__Action__Group__0__Impl rule__Action__Group__1
             {
-            pushFollow(FOLLOW_rule__Action__Group__0__Impl_in_rule__Action__Group__03948);
+            pushFollow(FOLLOW_rule__Action__Group__0__Impl_in_rule__Action__Group__04032);
             rule__Action__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Action__Group__1_in_rule__Action__Group__03951);
+            pushFollow(FOLLOW_rule__Action__Group__1_in_rule__Action__Group__04035);
             rule__Action__Group__1();
             _fsp--;
 
@@ -5418,23 +5522,23 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Action__Group__0__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1923:1: rule__Action__Group__0__Impl : ( ( rule__Action__NameAssignment_0 ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1951:1: rule__Action__Group__0__Impl : ( ( rule__Action__NameAssignment_0 ) ) ;
     public final void rule__Action__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1927:1: ( ( ( rule__Action__NameAssignment_0 ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1928:1: ( ( rule__Action__NameAssignment_0 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1955:1: ( ( ( rule__Action__NameAssignment_0 ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1956:1: ( ( rule__Action__NameAssignment_0 ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1928:1: ( ( rule__Action__NameAssignment_0 ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1929:1: ( rule__Action__NameAssignment_0 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1956:1: ( ( rule__Action__NameAssignment_0 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1957:1: ( rule__Action__NameAssignment_0 )
             {
              before(grammarAccess.getActionAccess().getNameAssignment_0()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1930:1: ( rule__Action__NameAssignment_0 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1930:2: rule__Action__NameAssignment_0
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1958:1: ( rule__Action__NameAssignment_0 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1958:2: rule__Action__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__Action__NameAssignment_0_in_rule__Action__Group__0__Impl3978);
+            pushFollow(FOLLOW_rule__Action__NameAssignment_0_in_rule__Action__Group__0__Impl4062);
             rule__Action__NameAssignment_0();
             _fsp--;
 
@@ -5464,20 +5568,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Action__Group__1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1940:1: rule__Action__Group__1 : rule__Action__Group__1__Impl rule__Action__Group__2 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1968:1: rule__Action__Group__1 : rule__Action__Group__1__Impl rule__Action__Group__2 ;
     public final void rule__Action__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1944:1: ( rule__Action__Group__1__Impl rule__Action__Group__2 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1945:2: rule__Action__Group__1__Impl rule__Action__Group__2
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1972:1: ( rule__Action__Group__1__Impl rule__Action__Group__2 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1973:2: rule__Action__Group__1__Impl rule__Action__Group__2
             {
-            pushFollow(FOLLOW_rule__Action__Group__1__Impl_in_rule__Action__Group__14008);
+            pushFollow(FOLLOW_rule__Action__Group__1__Impl_in_rule__Action__Group__14092);
             rule__Action__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Action__Group__2_in_rule__Action__Group__14011);
+            pushFollow(FOLLOW_rule__Action__Group__2_in_rule__Action__Group__14095);
             rule__Action__Group__2();
             _fsp--;
 
@@ -5500,23 +5604,23 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Action__Group__1__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1952:1: rule__Action__Group__1__Impl : ( ( rule__Action__TypeAssignment_1 ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1980:1: rule__Action__Group__1__Impl : ( ( rule__Action__TypeAssignment_1 ) ) ;
     public final void rule__Action__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1956:1: ( ( ( rule__Action__TypeAssignment_1 ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1957:1: ( ( rule__Action__TypeAssignment_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1984:1: ( ( ( rule__Action__TypeAssignment_1 ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1985:1: ( ( rule__Action__TypeAssignment_1 ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1957:1: ( ( rule__Action__TypeAssignment_1 ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1958:1: ( rule__Action__TypeAssignment_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1985:1: ( ( rule__Action__TypeAssignment_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1986:1: ( rule__Action__TypeAssignment_1 )
             {
              before(grammarAccess.getActionAccess().getTypeAssignment_1()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1959:1: ( rule__Action__TypeAssignment_1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1959:2: rule__Action__TypeAssignment_1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1987:1: ( rule__Action__TypeAssignment_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1987:2: rule__Action__TypeAssignment_1
             {
-            pushFollow(FOLLOW_rule__Action__TypeAssignment_1_in_rule__Action__Group__1__Impl4038);
+            pushFollow(FOLLOW_rule__Action__TypeAssignment_1_in_rule__Action__Group__1__Impl4122);
             rule__Action__TypeAssignment_1();
             _fsp--;
 
@@ -5546,20 +5650,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Action__Group__2
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1969:1: rule__Action__Group__2 : rule__Action__Group__2__Impl rule__Action__Group__3 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1997:1: rule__Action__Group__2 : rule__Action__Group__2__Impl rule__Action__Group__3 ;
     public final void rule__Action__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1973:1: ( rule__Action__Group__2__Impl rule__Action__Group__3 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1974:2: rule__Action__Group__2__Impl rule__Action__Group__3
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2001:1: ( rule__Action__Group__2__Impl rule__Action__Group__3 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2002:2: rule__Action__Group__2__Impl rule__Action__Group__3
             {
-            pushFollow(FOLLOW_rule__Action__Group__2__Impl_in_rule__Action__Group__24068);
+            pushFollow(FOLLOW_rule__Action__Group__2__Impl_in_rule__Action__Group__24152);
             rule__Action__Group__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Action__Group__3_in_rule__Action__Group__24071);
+            pushFollow(FOLLOW_rule__Action__Group__3_in_rule__Action__Group__24155);
             rule__Action__Group__3();
             _fsp--;
 
@@ -5582,35 +5686,35 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Action__Group__2__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1981:1: rule__Action__Group__2__Impl : ( ( rule__Action__AssetAssignment_2 )? ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2009:1: rule__Action__Group__2__Impl : ( ( rule__Action__AssetAssignment_2 )? ) ;
     public final void rule__Action__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1985:1: ( ( ( rule__Action__AssetAssignment_2 )? ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1986:1: ( ( rule__Action__AssetAssignment_2 )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2013:1: ( ( ( rule__Action__AssetAssignment_2 )? ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2014:1: ( ( rule__Action__AssetAssignment_2 )? )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1986:1: ( ( rule__Action__AssetAssignment_2 )? )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1987:1: ( rule__Action__AssetAssignment_2 )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2014:1: ( ( rule__Action__AssetAssignment_2 )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2015:1: ( rule__Action__AssetAssignment_2 )?
             {
              before(grammarAccess.getActionAccess().getAssetAssignment_2()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1988:1: ( rule__Action__AssetAssignment_2 )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2016:1: ( rule__Action__AssetAssignment_2 )?
             int alt24=2;
             int LA24_0 = input.LA(1);
 
             if ( (LA24_0==RULE_ID) ) {
                 int LA24_1 = input.LA(2);
 
-                if ( (LA24_1==29) ) {
+                if ( (LA24_1==33) ) {
                     alt24=1;
                 }
             }
             switch (alt24) {
                 case 1 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1988:2: rule__Action__AssetAssignment_2
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2016:2: rule__Action__AssetAssignment_2
                     {
-                    pushFollow(FOLLOW_rule__Action__AssetAssignment_2_in_rule__Action__Group__2__Impl4098);
+                    pushFollow(FOLLOW_rule__Action__AssetAssignment_2_in_rule__Action__Group__2__Impl4182);
                     rule__Action__AssetAssignment_2();
                     _fsp--;
 
@@ -5643,16 +5747,16 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Action__Group__3
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:1998:1: rule__Action__Group__3 : rule__Action__Group__3__Impl ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2026:1: rule__Action__Group__3 : rule__Action__Group__3__Impl ;
     public final void rule__Action__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2002:1: ( rule__Action__Group__3__Impl )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2003:2: rule__Action__Group__3__Impl
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2030:1: ( rule__Action__Group__3__Impl )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2031:2: rule__Action__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__Action__Group__3__Impl_in_rule__Action__Group__34129);
+            pushFollow(FOLLOW_rule__Action__Group__3__Impl_in_rule__Action__Group__34213);
             rule__Action__Group__3__Impl();
             _fsp--;
 
@@ -5675,35 +5779,35 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Action__Group__3__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2009:1: rule__Action__Group__3__Impl : ( ( rule__Action__Group_3__0 )* ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2037:1: rule__Action__Group__3__Impl : ( ( rule__Action__Group_3__0 )* ) ;
     public final void rule__Action__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2013:1: ( ( ( rule__Action__Group_3__0 )* ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2014:1: ( ( rule__Action__Group_3__0 )* )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2041:1: ( ( ( rule__Action__Group_3__0 )* ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2042:1: ( ( rule__Action__Group_3__0 )* )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2014:1: ( ( rule__Action__Group_3__0 )* )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2015:1: ( rule__Action__Group_3__0 )*
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2042:1: ( ( rule__Action__Group_3__0 )* )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2043:1: ( rule__Action__Group_3__0 )*
             {
              before(grammarAccess.getActionAccess().getGroup_3()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2016:1: ( rule__Action__Group_3__0 )*
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2044:1: ( rule__Action__Group_3__0 )*
             loop25:
             do {
                 int alt25=2;
                 int LA25_0 = input.LA(1);
 
-                if ( (LA25_0==RULE_STRING||LA25_0==28) ) {
+                if ( (LA25_0==RULE_STRING||LA25_0==32) ) {
                     alt25=1;
                 }
 
 
                 switch (alt25) {
             	case 1 :
-            	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2016:2: rule__Action__Group_3__0
+            	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2044:2: rule__Action__Group_3__0
             	    {
-            	    pushFollow(FOLLOW_rule__Action__Group_3__0_in_rule__Action__Group__3__Impl4156);
+            	    pushFollow(FOLLOW_rule__Action__Group_3__0_in_rule__Action__Group__3__Impl4240);
             	    rule__Action__Group_3__0();
             	    _fsp--;
 
@@ -5739,20 +5843,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Action__Group_3__0
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2034:1: rule__Action__Group_3__0 : rule__Action__Group_3__0__Impl rule__Action__Group_3__1 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2062:1: rule__Action__Group_3__0 : rule__Action__Group_3__0__Impl rule__Action__Group_3__1 ;
     public final void rule__Action__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2038:1: ( rule__Action__Group_3__0__Impl rule__Action__Group_3__1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2039:2: rule__Action__Group_3__0__Impl rule__Action__Group_3__1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2066:1: ( rule__Action__Group_3__0__Impl rule__Action__Group_3__1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2067:2: rule__Action__Group_3__0__Impl rule__Action__Group_3__1
             {
-            pushFollow(FOLLOW_rule__Action__Group_3__0__Impl_in_rule__Action__Group_3__04195);
+            pushFollow(FOLLOW_rule__Action__Group_3__0__Impl_in_rule__Action__Group_3__04279);
             rule__Action__Group_3__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Action__Group_3__1_in_rule__Action__Group_3__04198);
+            pushFollow(FOLLOW_rule__Action__Group_3__1_in_rule__Action__Group_3__04282);
             rule__Action__Group_3__1();
             _fsp--;
 
@@ -5775,31 +5879,31 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Action__Group_3__0__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2046:1: rule__Action__Group_3__0__Impl : ( ( ',' )? ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2074:1: rule__Action__Group_3__0__Impl : ( ( ',' )? ) ;
     public final void rule__Action__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2050:1: ( ( ( ',' )? ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2051:1: ( ( ',' )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2078:1: ( ( ( ',' )? ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2079:1: ( ( ',' )? )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2051:1: ( ( ',' )? )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2052:1: ( ',' )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2079:1: ( ( ',' )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2080:1: ( ',' )?
             {
              before(grammarAccess.getActionAccess().getCommaKeyword_3_0()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2053:1: ( ',' )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2081:1: ( ',' )?
             int alt26=2;
             int LA26_0 = input.LA(1);
 
-            if ( (LA26_0==28) ) {
+            if ( (LA26_0==32) ) {
                 alt26=1;
             }
             switch (alt26) {
                 case 1 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2054:2: ','
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2082:2: ','
                     {
-                    match(input,28,FOLLOW_28_in_rule__Action__Group_3__0__Impl4227); 
+                    match(input,32,FOLLOW_32_in_rule__Action__Group_3__0__Impl4311); 
 
                     }
                     break;
@@ -5829,16 +5933,16 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Action__Group_3__1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2065:1: rule__Action__Group_3__1 : rule__Action__Group_3__1__Impl ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2093:1: rule__Action__Group_3__1 : rule__Action__Group_3__1__Impl ;
     public final void rule__Action__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2069:1: ( rule__Action__Group_3__1__Impl )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2070:2: rule__Action__Group_3__1__Impl
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2097:1: ( rule__Action__Group_3__1__Impl )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2098:2: rule__Action__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__Action__Group_3__1__Impl_in_rule__Action__Group_3__14260);
+            pushFollow(FOLLOW_rule__Action__Group_3__1__Impl_in_rule__Action__Group_3__14344);
             rule__Action__Group_3__1__Impl();
             _fsp--;
 
@@ -5861,23 +5965,23 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Action__Group_3__1__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2076:1: rule__Action__Group_3__1__Impl : ( ( rule__Action__PropertiesAssignment_3_1 ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2104:1: rule__Action__Group_3__1__Impl : ( ( rule__Action__PropertiesAssignment_3_1 ) ) ;
     public final void rule__Action__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2080:1: ( ( ( rule__Action__PropertiesAssignment_3_1 ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2081:1: ( ( rule__Action__PropertiesAssignment_3_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2108:1: ( ( ( rule__Action__PropertiesAssignment_3_1 ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2109:1: ( ( rule__Action__PropertiesAssignment_3_1 ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2081:1: ( ( rule__Action__PropertiesAssignment_3_1 ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2082:1: ( rule__Action__PropertiesAssignment_3_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2109:1: ( ( rule__Action__PropertiesAssignment_3_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2110:1: ( rule__Action__PropertiesAssignment_3_1 )
             {
              before(grammarAccess.getActionAccess().getPropertiesAssignment_3_1()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2083:1: ( rule__Action__PropertiesAssignment_3_1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2083:2: rule__Action__PropertiesAssignment_3_1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2111:1: ( rule__Action__PropertiesAssignment_3_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2111:2: rule__Action__PropertiesAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__Action__PropertiesAssignment_3_1_in_rule__Action__Group_3__1__Impl4287);
+            pushFollow(FOLLOW_rule__Action__PropertiesAssignment_3_1_in_rule__Action__Group_3__1__Impl4371);
             rule__Action__PropertiesAssignment_3_1();
             _fsp--;
 
@@ -5907,20 +6011,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Resource__Group__0
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2097:1: rule__Resource__Group__0 : rule__Resource__Group__0__Impl rule__Resource__Group__1 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2125:1: rule__Resource__Group__0 : rule__Resource__Group__0__Impl rule__Resource__Group__1 ;
     public final void rule__Resource__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2101:1: ( rule__Resource__Group__0__Impl rule__Resource__Group__1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2102:2: rule__Resource__Group__0__Impl rule__Resource__Group__1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2129:1: ( rule__Resource__Group__0__Impl rule__Resource__Group__1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2130:2: rule__Resource__Group__0__Impl rule__Resource__Group__1
             {
-            pushFollow(FOLLOW_rule__Resource__Group__0__Impl_in_rule__Resource__Group__04321);
+            pushFollow(FOLLOW_rule__Resource__Group__0__Impl_in_rule__Resource__Group__04405);
             rule__Resource__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Resource__Group__1_in_rule__Resource__Group__04324);
+            pushFollow(FOLLOW_rule__Resource__Group__1_in_rule__Resource__Group__04408);
             rule__Resource__Group__1();
             _fsp--;
 
@@ -5943,23 +6047,23 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Resource__Group__0__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2109:1: rule__Resource__Group__0__Impl : ( ( rule__Resource__NameAssignment_0 ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2137:1: rule__Resource__Group__0__Impl : ( ( rule__Resource__NameAssignment_0 ) ) ;
     public final void rule__Resource__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2113:1: ( ( ( rule__Resource__NameAssignment_0 ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2114:1: ( ( rule__Resource__NameAssignment_0 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2141:1: ( ( ( rule__Resource__NameAssignment_0 ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2142:1: ( ( rule__Resource__NameAssignment_0 ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2114:1: ( ( rule__Resource__NameAssignment_0 ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2115:1: ( rule__Resource__NameAssignment_0 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2142:1: ( ( rule__Resource__NameAssignment_0 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2143:1: ( rule__Resource__NameAssignment_0 )
             {
              before(grammarAccess.getResourceAccess().getNameAssignment_0()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2116:1: ( rule__Resource__NameAssignment_0 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2116:2: rule__Resource__NameAssignment_0
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2144:1: ( rule__Resource__NameAssignment_0 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2144:2: rule__Resource__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__Resource__NameAssignment_0_in_rule__Resource__Group__0__Impl4351);
+            pushFollow(FOLLOW_rule__Resource__NameAssignment_0_in_rule__Resource__Group__0__Impl4435);
             rule__Resource__NameAssignment_0();
             _fsp--;
 
@@ -5989,20 +6093,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Resource__Group__1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2126:1: rule__Resource__Group__1 : rule__Resource__Group__1__Impl rule__Resource__Group__2 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2154:1: rule__Resource__Group__1 : rule__Resource__Group__1__Impl rule__Resource__Group__2 ;
     public final void rule__Resource__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2130:1: ( rule__Resource__Group__1__Impl rule__Resource__Group__2 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2131:2: rule__Resource__Group__1__Impl rule__Resource__Group__2
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2158:1: ( rule__Resource__Group__1__Impl rule__Resource__Group__2 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2159:2: rule__Resource__Group__1__Impl rule__Resource__Group__2
             {
-            pushFollow(FOLLOW_rule__Resource__Group__1__Impl_in_rule__Resource__Group__14381);
+            pushFollow(FOLLOW_rule__Resource__Group__1__Impl_in_rule__Resource__Group__14465);
             rule__Resource__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Resource__Group__2_in_rule__Resource__Group__14384);
+            pushFollow(FOLLOW_rule__Resource__Group__2_in_rule__Resource__Group__14468);
             rule__Resource__Group__2();
             _fsp--;
 
@@ -6025,23 +6129,23 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Resource__Group__1__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2138:1: rule__Resource__Group__1__Impl : ( ( rule__Resource__TypeAssignment_1 ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2166:1: rule__Resource__Group__1__Impl : ( ( rule__Resource__TypeAssignment_1 ) ) ;
     public final void rule__Resource__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2142:1: ( ( ( rule__Resource__TypeAssignment_1 ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2143:1: ( ( rule__Resource__TypeAssignment_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2170:1: ( ( ( rule__Resource__TypeAssignment_1 ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2171:1: ( ( rule__Resource__TypeAssignment_1 ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2143:1: ( ( rule__Resource__TypeAssignment_1 ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2144:1: ( rule__Resource__TypeAssignment_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2171:1: ( ( rule__Resource__TypeAssignment_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2172:1: ( rule__Resource__TypeAssignment_1 )
             {
              before(grammarAccess.getResourceAccess().getTypeAssignment_1()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2145:1: ( rule__Resource__TypeAssignment_1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2145:2: rule__Resource__TypeAssignment_1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2173:1: ( rule__Resource__TypeAssignment_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2173:2: rule__Resource__TypeAssignment_1
             {
-            pushFollow(FOLLOW_rule__Resource__TypeAssignment_1_in_rule__Resource__Group__1__Impl4411);
+            pushFollow(FOLLOW_rule__Resource__TypeAssignment_1_in_rule__Resource__Group__1__Impl4495);
             rule__Resource__TypeAssignment_1();
             _fsp--;
 
@@ -6071,20 +6175,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Resource__Group__2
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2155:1: rule__Resource__Group__2 : rule__Resource__Group__2__Impl rule__Resource__Group__3 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2183:1: rule__Resource__Group__2 : rule__Resource__Group__2__Impl rule__Resource__Group__3 ;
     public final void rule__Resource__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2159:1: ( rule__Resource__Group__2__Impl rule__Resource__Group__3 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2160:2: rule__Resource__Group__2__Impl rule__Resource__Group__3
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2187:1: ( rule__Resource__Group__2__Impl rule__Resource__Group__3 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2188:2: rule__Resource__Group__2__Impl rule__Resource__Group__3
             {
-            pushFollow(FOLLOW_rule__Resource__Group__2__Impl_in_rule__Resource__Group__24441);
+            pushFollow(FOLLOW_rule__Resource__Group__2__Impl_in_rule__Resource__Group__24525);
             rule__Resource__Group__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Resource__Group__3_in_rule__Resource__Group__24444);
+            pushFollow(FOLLOW_rule__Resource__Group__3_in_rule__Resource__Group__24528);
             rule__Resource__Group__3();
             _fsp--;
 
@@ -6107,35 +6211,35 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Resource__Group__2__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2167:1: rule__Resource__Group__2__Impl : ( ( rule__Resource__AssetAssignment_2 )? ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2195:1: rule__Resource__Group__2__Impl : ( ( rule__Resource__AssetAssignment_2 )? ) ;
     public final void rule__Resource__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2171:1: ( ( ( rule__Resource__AssetAssignment_2 )? ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2172:1: ( ( rule__Resource__AssetAssignment_2 )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2199:1: ( ( ( rule__Resource__AssetAssignment_2 )? ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2200:1: ( ( rule__Resource__AssetAssignment_2 )? )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2172:1: ( ( rule__Resource__AssetAssignment_2 )? )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2173:1: ( rule__Resource__AssetAssignment_2 )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2200:1: ( ( rule__Resource__AssetAssignment_2 )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2201:1: ( rule__Resource__AssetAssignment_2 )?
             {
              before(grammarAccess.getResourceAccess().getAssetAssignment_2()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2174:1: ( rule__Resource__AssetAssignment_2 )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2202:1: ( rule__Resource__AssetAssignment_2 )?
             int alt27=2;
             int LA27_0 = input.LA(1);
 
             if ( (LA27_0==RULE_ID) ) {
                 int LA27_1 = input.LA(2);
 
-                if ( (LA27_1==29) ) {
+                if ( (LA27_1==33) ) {
                     alt27=1;
                 }
             }
             switch (alt27) {
                 case 1 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2174:2: rule__Resource__AssetAssignment_2
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2202:2: rule__Resource__AssetAssignment_2
                     {
-                    pushFollow(FOLLOW_rule__Resource__AssetAssignment_2_in_rule__Resource__Group__2__Impl4471);
+                    pushFollow(FOLLOW_rule__Resource__AssetAssignment_2_in_rule__Resource__Group__2__Impl4555);
                     rule__Resource__AssetAssignment_2();
                     _fsp--;
 
@@ -6168,16 +6272,16 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Resource__Group__3
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2184:1: rule__Resource__Group__3 : rule__Resource__Group__3__Impl ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2212:1: rule__Resource__Group__3 : rule__Resource__Group__3__Impl ;
     public final void rule__Resource__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2188:1: ( rule__Resource__Group__3__Impl )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2189:2: rule__Resource__Group__3__Impl
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2216:1: ( rule__Resource__Group__3__Impl )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2217:2: rule__Resource__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__Resource__Group__3__Impl_in_rule__Resource__Group__34502);
+            pushFollow(FOLLOW_rule__Resource__Group__3__Impl_in_rule__Resource__Group__34586);
             rule__Resource__Group__3__Impl();
             _fsp--;
 
@@ -6200,35 +6304,35 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Resource__Group__3__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2195:1: rule__Resource__Group__3__Impl : ( ( rule__Resource__Group_3__0 )* ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2223:1: rule__Resource__Group__3__Impl : ( ( rule__Resource__Group_3__0 )* ) ;
     public final void rule__Resource__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2199:1: ( ( ( rule__Resource__Group_3__0 )* ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2200:1: ( ( rule__Resource__Group_3__0 )* )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2227:1: ( ( ( rule__Resource__Group_3__0 )* ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2228:1: ( ( rule__Resource__Group_3__0 )* )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2200:1: ( ( rule__Resource__Group_3__0 )* )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2201:1: ( rule__Resource__Group_3__0 )*
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2228:1: ( ( rule__Resource__Group_3__0 )* )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2229:1: ( rule__Resource__Group_3__0 )*
             {
              before(grammarAccess.getResourceAccess().getGroup_3()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2202:1: ( rule__Resource__Group_3__0 )*
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2230:1: ( rule__Resource__Group_3__0 )*
             loop28:
             do {
                 int alt28=2;
                 int LA28_0 = input.LA(1);
 
-                if ( (LA28_0==RULE_STRING||LA28_0==28) ) {
+                if ( (LA28_0==RULE_STRING||LA28_0==32) ) {
                     alt28=1;
                 }
 
 
                 switch (alt28) {
             	case 1 :
-            	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2202:2: rule__Resource__Group_3__0
+            	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2230:2: rule__Resource__Group_3__0
             	    {
-            	    pushFollow(FOLLOW_rule__Resource__Group_3__0_in_rule__Resource__Group__3__Impl4529);
+            	    pushFollow(FOLLOW_rule__Resource__Group_3__0_in_rule__Resource__Group__3__Impl4613);
             	    rule__Resource__Group_3__0();
             	    _fsp--;
 
@@ -6264,20 +6368,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Resource__Group_3__0
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2220:1: rule__Resource__Group_3__0 : rule__Resource__Group_3__0__Impl rule__Resource__Group_3__1 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2248:1: rule__Resource__Group_3__0 : rule__Resource__Group_3__0__Impl rule__Resource__Group_3__1 ;
     public final void rule__Resource__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2224:1: ( rule__Resource__Group_3__0__Impl rule__Resource__Group_3__1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2225:2: rule__Resource__Group_3__0__Impl rule__Resource__Group_3__1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2252:1: ( rule__Resource__Group_3__0__Impl rule__Resource__Group_3__1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2253:2: rule__Resource__Group_3__0__Impl rule__Resource__Group_3__1
             {
-            pushFollow(FOLLOW_rule__Resource__Group_3__0__Impl_in_rule__Resource__Group_3__04568);
+            pushFollow(FOLLOW_rule__Resource__Group_3__0__Impl_in_rule__Resource__Group_3__04652);
             rule__Resource__Group_3__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Resource__Group_3__1_in_rule__Resource__Group_3__04571);
+            pushFollow(FOLLOW_rule__Resource__Group_3__1_in_rule__Resource__Group_3__04655);
             rule__Resource__Group_3__1();
             _fsp--;
 
@@ -6300,31 +6404,31 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Resource__Group_3__0__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2232:1: rule__Resource__Group_3__0__Impl : ( ( ',' )? ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2260:1: rule__Resource__Group_3__0__Impl : ( ( ',' )? ) ;
     public final void rule__Resource__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2236:1: ( ( ( ',' )? ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2237:1: ( ( ',' )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2264:1: ( ( ( ',' )? ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2265:1: ( ( ',' )? )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2237:1: ( ( ',' )? )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2238:1: ( ',' )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2265:1: ( ( ',' )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2266:1: ( ',' )?
             {
              before(grammarAccess.getResourceAccess().getCommaKeyword_3_0()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2239:1: ( ',' )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2267:1: ( ',' )?
             int alt29=2;
             int LA29_0 = input.LA(1);
 
-            if ( (LA29_0==28) ) {
+            if ( (LA29_0==32) ) {
                 alt29=1;
             }
             switch (alt29) {
                 case 1 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2240:2: ','
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2268:2: ','
                     {
-                    match(input,28,FOLLOW_28_in_rule__Resource__Group_3__0__Impl4600); 
+                    match(input,32,FOLLOW_32_in_rule__Resource__Group_3__0__Impl4684); 
 
                     }
                     break;
@@ -6354,16 +6458,16 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Resource__Group_3__1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2251:1: rule__Resource__Group_3__1 : rule__Resource__Group_3__1__Impl ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2279:1: rule__Resource__Group_3__1 : rule__Resource__Group_3__1__Impl ;
     public final void rule__Resource__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2255:1: ( rule__Resource__Group_3__1__Impl )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2256:2: rule__Resource__Group_3__1__Impl
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2283:1: ( rule__Resource__Group_3__1__Impl )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2284:2: rule__Resource__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__Resource__Group_3__1__Impl_in_rule__Resource__Group_3__14633);
+            pushFollow(FOLLOW_rule__Resource__Group_3__1__Impl_in_rule__Resource__Group_3__14717);
             rule__Resource__Group_3__1__Impl();
             _fsp--;
 
@@ -6386,23 +6490,23 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Resource__Group_3__1__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2262:1: rule__Resource__Group_3__1__Impl : ( ( rule__Resource__PropertiesAssignment_3_1 ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2290:1: rule__Resource__Group_3__1__Impl : ( ( rule__Resource__PropertiesAssignment_3_1 ) ) ;
     public final void rule__Resource__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2266:1: ( ( ( rule__Resource__PropertiesAssignment_3_1 ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2267:1: ( ( rule__Resource__PropertiesAssignment_3_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2294:1: ( ( ( rule__Resource__PropertiesAssignment_3_1 ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2295:1: ( ( rule__Resource__PropertiesAssignment_3_1 ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2267:1: ( ( rule__Resource__PropertiesAssignment_3_1 ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2268:1: ( rule__Resource__PropertiesAssignment_3_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2295:1: ( ( rule__Resource__PropertiesAssignment_3_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2296:1: ( rule__Resource__PropertiesAssignment_3_1 )
             {
              before(grammarAccess.getResourceAccess().getPropertiesAssignment_3_1()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2269:1: ( rule__Resource__PropertiesAssignment_3_1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2269:2: rule__Resource__PropertiesAssignment_3_1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2297:1: ( rule__Resource__PropertiesAssignment_3_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2297:2: rule__Resource__PropertiesAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__Resource__PropertiesAssignment_3_1_in_rule__Resource__Group_3__1__Impl4660);
+            pushFollow(FOLLOW_rule__Resource__PropertiesAssignment_3_1_in_rule__Resource__Group_3__1__Impl4744);
             rule__Resource__PropertiesAssignment_3_1();
             _fsp--;
 
@@ -6432,20 +6536,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Relationship__Group__0
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2283:1: rule__Relationship__Group__0 : rule__Relationship__Group__0__Impl rule__Relationship__Group__1 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2311:1: rule__Relationship__Group__0 : rule__Relationship__Group__0__Impl rule__Relationship__Group__1 ;
     public final void rule__Relationship__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2287:1: ( rule__Relationship__Group__0__Impl rule__Relationship__Group__1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2288:2: rule__Relationship__Group__0__Impl rule__Relationship__Group__1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2315:1: ( rule__Relationship__Group__0__Impl rule__Relationship__Group__1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2316:2: rule__Relationship__Group__0__Impl rule__Relationship__Group__1
             {
-            pushFollow(FOLLOW_rule__Relationship__Group__0__Impl_in_rule__Relationship__Group__04694);
+            pushFollow(FOLLOW_rule__Relationship__Group__0__Impl_in_rule__Relationship__Group__04778);
             rule__Relationship__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Relationship__Group__1_in_rule__Relationship__Group__04697);
+            pushFollow(FOLLOW_rule__Relationship__Group__1_in_rule__Relationship__Group__04781);
             rule__Relationship__Group__1();
             _fsp--;
 
@@ -6468,23 +6572,23 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Relationship__Group__0__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2295:1: rule__Relationship__Group__0__Impl : ( ( rule__Relationship__TypeAssignment_0 ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2323:1: rule__Relationship__Group__0__Impl : ( ( rule__Relationship__TypeAssignment_0 ) ) ;
     public final void rule__Relationship__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2299:1: ( ( ( rule__Relationship__TypeAssignment_0 ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2300:1: ( ( rule__Relationship__TypeAssignment_0 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2327:1: ( ( ( rule__Relationship__TypeAssignment_0 ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2328:1: ( ( rule__Relationship__TypeAssignment_0 ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2300:1: ( ( rule__Relationship__TypeAssignment_0 ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2301:1: ( rule__Relationship__TypeAssignment_0 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2328:1: ( ( rule__Relationship__TypeAssignment_0 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2329:1: ( rule__Relationship__TypeAssignment_0 )
             {
              before(grammarAccess.getRelationshipAccess().getTypeAssignment_0()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2302:1: ( rule__Relationship__TypeAssignment_0 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2302:2: rule__Relationship__TypeAssignment_0
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2330:1: ( rule__Relationship__TypeAssignment_0 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2330:2: rule__Relationship__TypeAssignment_0
             {
-            pushFollow(FOLLOW_rule__Relationship__TypeAssignment_0_in_rule__Relationship__Group__0__Impl4724);
+            pushFollow(FOLLOW_rule__Relationship__TypeAssignment_0_in_rule__Relationship__Group__0__Impl4808);
             rule__Relationship__TypeAssignment_0();
             _fsp--;
 
@@ -6514,20 +6618,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Relationship__Group__1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2312:1: rule__Relationship__Group__1 : rule__Relationship__Group__1__Impl rule__Relationship__Group__2 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2340:1: rule__Relationship__Group__1 : rule__Relationship__Group__1__Impl rule__Relationship__Group__2 ;
     public final void rule__Relationship__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2316:1: ( rule__Relationship__Group__1__Impl rule__Relationship__Group__2 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2317:2: rule__Relationship__Group__1__Impl rule__Relationship__Group__2
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2344:1: ( rule__Relationship__Group__1__Impl rule__Relationship__Group__2 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2345:2: rule__Relationship__Group__1__Impl rule__Relationship__Group__2
             {
-            pushFollow(FOLLOW_rule__Relationship__Group__1__Impl_in_rule__Relationship__Group__14754);
+            pushFollow(FOLLOW_rule__Relationship__Group__1__Impl_in_rule__Relationship__Group__14838);
             rule__Relationship__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Relationship__Group__2_in_rule__Relationship__Group__14757);
+            pushFollow(FOLLOW_rule__Relationship__Group__2_in_rule__Relationship__Group__14841);
             rule__Relationship__Group__2();
             _fsp--;
 
@@ -6550,20 +6654,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Relationship__Group__1__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2324:1: rule__Relationship__Group__1__Impl : ( '(' ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2352:1: rule__Relationship__Group__1__Impl : ( '(' ) ;
     public final void rule__Relationship__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2328:1: ( ( '(' ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2329:1: ( '(' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2356:1: ( ( '(' ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2357:1: ( '(' )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2329:1: ( '(' )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2330:1: '('
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2357:1: ( '(' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2358:1: '('
             {
              before(grammarAccess.getRelationshipAccess().getLeftParenthesisKeyword_1()); 
-            match(input,30,FOLLOW_30_in_rule__Relationship__Group__1__Impl4785); 
+            match(input,34,FOLLOW_34_in_rule__Relationship__Group__1__Impl4869); 
              after(grammarAccess.getRelationshipAccess().getLeftParenthesisKeyword_1()); 
 
             }
@@ -6587,20 +6691,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Relationship__Group__2
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2343:1: rule__Relationship__Group__2 : rule__Relationship__Group__2__Impl rule__Relationship__Group__3 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2371:1: rule__Relationship__Group__2 : rule__Relationship__Group__2__Impl rule__Relationship__Group__3 ;
     public final void rule__Relationship__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2347:1: ( rule__Relationship__Group__2__Impl rule__Relationship__Group__3 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2348:2: rule__Relationship__Group__2__Impl rule__Relationship__Group__3
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2375:1: ( rule__Relationship__Group__2__Impl rule__Relationship__Group__3 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2376:2: rule__Relationship__Group__2__Impl rule__Relationship__Group__3
             {
-            pushFollow(FOLLOW_rule__Relationship__Group__2__Impl_in_rule__Relationship__Group__24816);
+            pushFollow(FOLLOW_rule__Relationship__Group__2__Impl_in_rule__Relationship__Group__24900);
             rule__Relationship__Group__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Relationship__Group__3_in_rule__Relationship__Group__24819);
+            pushFollow(FOLLOW_rule__Relationship__Group__3_in_rule__Relationship__Group__24903);
             rule__Relationship__Group__3();
             _fsp--;
 
@@ -6623,30 +6727,48 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Relationship__Group__2__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2355:1: rule__Relationship__Group__2__Impl : ( ( rule__Relationship__SourceAssignment_2 ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2383:1: rule__Relationship__Group__2__Impl : ( ( rule__Relationship__Group_2__0 )* ) ;
     public final void rule__Relationship__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2359:1: ( ( ( rule__Relationship__SourceAssignment_2 ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2360:1: ( ( rule__Relationship__SourceAssignment_2 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2387:1: ( ( ( rule__Relationship__Group_2__0 )* ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2388:1: ( ( rule__Relationship__Group_2__0 )* )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2360:1: ( ( rule__Relationship__SourceAssignment_2 ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2361:1: ( rule__Relationship__SourceAssignment_2 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2388:1: ( ( rule__Relationship__Group_2__0 )* )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2389:1: ( rule__Relationship__Group_2__0 )*
             {
-             before(grammarAccess.getRelationshipAccess().getSourceAssignment_2()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2362:1: ( rule__Relationship__SourceAssignment_2 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2362:2: rule__Relationship__SourceAssignment_2
-            {
-            pushFollow(FOLLOW_rule__Relationship__SourceAssignment_2_in_rule__Relationship__Group__2__Impl4846);
-            rule__Relationship__SourceAssignment_2();
-            _fsp--;
+             before(grammarAccess.getRelationshipAccess().getGroup_2()); 
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2390:1: ( rule__Relationship__Group_2__0 )*
+            loop30:
+            do {
+                int alt30=2;
+                int LA30_0 = input.LA(1);
+
+                if ( (LA30_0==RULE_ID||LA30_0==32) ) {
+                    alt30=1;
+                }
 
 
-            }
+                switch (alt30) {
+            	case 1 :
+            	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2390:2: rule__Relationship__Group_2__0
+            	    {
+            	    pushFollow(FOLLOW_rule__Relationship__Group_2__0_in_rule__Relationship__Group__2__Impl4930);
+            	    rule__Relationship__Group_2__0();
+            	    _fsp--;
 
-             after(grammarAccess.getRelationshipAccess().getSourceAssignment_2()); 
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop30;
+                }
+            } while (true);
+
+             after(grammarAccess.getRelationshipAccess().getGroup_2()); 
 
             }
 
@@ -6669,20 +6791,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Relationship__Group__3
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2372:1: rule__Relationship__Group__3 : rule__Relationship__Group__3__Impl rule__Relationship__Group__4 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2400:1: rule__Relationship__Group__3 : rule__Relationship__Group__3__Impl rule__Relationship__Group__4 ;
     public final void rule__Relationship__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2376:1: ( rule__Relationship__Group__3__Impl rule__Relationship__Group__4 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2377:2: rule__Relationship__Group__3__Impl rule__Relationship__Group__4
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2404:1: ( rule__Relationship__Group__3__Impl rule__Relationship__Group__4 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2405:2: rule__Relationship__Group__3__Impl rule__Relationship__Group__4
             {
-            pushFollow(FOLLOW_rule__Relationship__Group__3__Impl_in_rule__Relationship__Group__34876);
+            pushFollow(FOLLOW_rule__Relationship__Group__3__Impl_in_rule__Relationship__Group__34961);
             rule__Relationship__Group__3__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Relationship__Group__4_in_rule__Relationship__Group__34879);
+            pushFollow(FOLLOW_rule__Relationship__Group__4_in_rule__Relationship__Group__34964);
             rule__Relationship__Group__4();
             _fsp--;
 
@@ -6705,21 +6827,21 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Relationship__Group__3__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2384:1: rule__Relationship__Group__3__Impl : ( ',' ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2412:1: rule__Relationship__Group__3__Impl : ( ')' ) ;
     public final void rule__Relationship__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2388:1: ( ( ',' ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2389:1: ( ',' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2416:1: ( ( ')' ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2417:1: ( ')' )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2389:1: ( ',' )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2390:1: ','
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2417:1: ( ')' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2418:1: ')'
             {
-             before(grammarAccess.getRelationshipAccess().getCommaKeyword_3()); 
-            match(input,28,FOLLOW_28_in_rule__Relationship__Group__3__Impl4907); 
-             after(grammarAccess.getRelationshipAccess().getCommaKeyword_3()); 
+             before(grammarAccess.getRelationshipAccess().getRightParenthesisKeyword_3()); 
+            match(input,35,FOLLOW_35_in_rule__Relationship__Group__3__Impl4992); 
+             after(grammarAccess.getRelationshipAccess().getRightParenthesisKeyword_3()); 
 
             }
 
@@ -6742,21 +6864,17 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Relationship__Group__4
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2403:1: rule__Relationship__Group__4 : rule__Relationship__Group__4__Impl rule__Relationship__Group__5 ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2431:1: rule__Relationship__Group__4 : rule__Relationship__Group__4__Impl ;
     public final void rule__Relationship__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2407:1: ( rule__Relationship__Group__4__Impl rule__Relationship__Group__5 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2408:2: rule__Relationship__Group__4__Impl rule__Relationship__Group__5
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2435:1: ( rule__Relationship__Group__4__Impl )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2436:2: rule__Relationship__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__Relationship__Group__4__Impl_in_rule__Relationship__Group__44938);
+            pushFollow(FOLLOW_rule__Relationship__Group__4__Impl_in_rule__Relationship__Group__45023);
             rule__Relationship__Group__4__Impl();
-            _fsp--;
-
-            pushFollow(FOLLOW_rule__Relationship__Group__5_in_rule__Relationship__Group__44941);
-            rule__Relationship__Group__5();
             _fsp--;
 
 
@@ -6778,30 +6896,48 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Relationship__Group__4__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2415:1: rule__Relationship__Group__4__Impl : ( ( rule__Relationship__TargetAssignment_4 ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2442:1: rule__Relationship__Group__4__Impl : ( ( rule__Relationship__Group_4__0 )* ) ;
     public final void rule__Relationship__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2419:1: ( ( ( rule__Relationship__TargetAssignment_4 ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2420:1: ( ( rule__Relationship__TargetAssignment_4 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2446:1: ( ( ( rule__Relationship__Group_4__0 )* ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2447:1: ( ( rule__Relationship__Group_4__0 )* )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2420:1: ( ( rule__Relationship__TargetAssignment_4 ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2421:1: ( rule__Relationship__TargetAssignment_4 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2447:1: ( ( rule__Relationship__Group_4__0 )* )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2448:1: ( rule__Relationship__Group_4__0 )*
             {
-             before(grammarAccess.getRelationshipAccess().getTargetAssignment_4()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2422:1: ( rule__Relationship__TargetAssignment_4 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2422:2: rule__Relationship__TargetAssignment_4
-            {
-            pushFollow(FOLLOW_rule__Relationship__TargetAssignment_4_in_rule__Relationship__Group__4__Impl4968);
-            rule__Relationship__TargetAssignment_4();
-            _fsp--;
+             before(grammarAccess.getRelationshipAccess().getGroup_4()); 
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2449:1: ( rule__Relationship__Group_4__0 )*
+            loop31:
+            do {
+                int alt31=2;
+                int LA31_0 = input.LA(1);
+
+                if ( (LA31_0==RULE_STRING||LA31_0==32) ) {
+                    alt31=1;
+                }
 
 
-            }
+                switch (alt31) {
+            	case 1 :
+            	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2449:2: rule__Relationship__Group_4__0
+            	    {
+            	    pushFollow(FOLLOW_rule__Relationship__Group_4__0_in_rule__Relationship__Group__4__Impl5050);
+            	    rule__Relationship__Group_4__0();
+            	    _fsp--;
 
-             after(grammarAccess.getRelationshipAccess().getTargetAssignment_4()); 
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop31;
+                }
+            } while (true);
+
+             after(grammarAccess.getRelationshipAccess().getGroup_4()); 
 
             }
 
@@ -6823,91 +6959,22 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
     // $ANTLR end rule__Relationship__Group__4__Impl
 
 
-    // $ANTLR start rule__Relationship__Group__5
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2432:1: rule__Relationship__Group__5 : rule__Relationship__Group__5__Impl rule__Relationship__Group__6 ;
-    public final void rule__Relationship__Group__5() throws RecognitionException {
+    // $ANTLR start rule__Relationship__Group_2__0
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2469:1: rule__Relationship__Group_2__0 : rule__Relationship__Group_2__0__Impl rule__Relationship__Group_2__1 ;
+    public final void rule__Relationship__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2436:1: ( rule__Relationship__Group__5__Impl rule__Relationship__Group__6 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2437:2: rule__Relationship__Group__5__Impl rule__Relationship__Group__6
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2473:1: ( rule__Relationship__Group_2__0__Impl rule__Relationship__Group_2__1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2474:2: rule__Relationship__Group_2__0__Impl rule__Relationship__Group_2__1
             {
-            pushFollow(FOLLOW_rule__Relationship__Group__5__Impl_in_rule__Relationship__Group__54998);
-            rule__Relationship__Group__5__Impl();
+            pushFollow(FOLLOW_rule__Relationship__Group_2__0__Impl_in_rule__Relationship__Group_2__05091);
+            rule__Relationship__Group_2__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Relationship__Group__6_in_rule__Relationship__Group__55001);
-            rule__Relationship__Group__6();
-            _fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__Relationship__Group__5
-
-
-    // $ANTLR start rule__Relationship__Group__5__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2444:1: rule__Relationship__Group__5__Impl : ( ')' ) ;
-    public final void rule__Relationship__Group__5__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2448:1: ( ( ')' ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2449:1: ( ')' )
-            {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2449:1: ( ')' )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2450:1: ')'
-            {
-             before(grammarAccess.getRelationshipAccess().getRightParenthesisKeyword_5()); 
-            match(input,31,FOLLOW_31_in_rule__Relationship__Group__5__Impl5029); 
-             after(grammarAccess.getRelationshipAccess().getRightParenthesisKeyword_5()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__Relationship__Group__5__Impl
-
-
-    // $ANTLR start rule__Relationship__Group__6
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2463:1: rule__Relationship__Group__6 : rule__Relationship__Group__6__Impl ;
-    public final void rule__Relationship__Group__6() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2467:1: ( rule__Relationship__Group__6__Impl )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2468:2: rule__Relationship__Group__6__Impl
-            {
-            pushFollow(FOLLOW_rule__Relationship__Group__6__Impl_in_rule__Relationship__Group__65060);
-            rule__Relationship__Group__6__Impl();
+            pushFollow(FOLLOW_rule__Relationship__Group_2__1_in_rule__Relationship__Group_2__05094);
+            rule__Relationship__Group_2__1();
             _fsp--;
 
 
@@ -6925,142 +6992,42 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end rule__Relationship__Group__6
+    // $ANTLR end rule__Relationship__Group_2__0
 
 
-    // $ANTLR start rule__Relationship__Group__6__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2474:1: rule__Relationship__Group__6__Impl : ( ( rule__Relationship__Group_6__0 )* ) ;
-    public final void rule__Relationship__Group__6__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2478:1: ( ( ( rule__Relationship__Group_6__0 )* ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2479:1: ( ( rule__Relationship__Group_6__0 )* )
-            {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2479:1: ( ( rule__Relationship__Group_6__0 )* )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2480:1: ( rule__Relationship__Group_6__0 )*
-            {
-             before(grammarAccess.getRelationshipAccess().getGroup_6()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2481:1: ( rule__Relationship__Group_6__0 )*
-            loop30:
-            do {
-                int alt30=2;
-                int LA30_0 = input.LA(1);
-
-                if ( (LA30_0==RULE_STRING||LA30_0==28) ) {
-                    alt30=1;
-                }
-
-
-                switch (alt30) {
-            	case 1 :
-            	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2481:2: rule__Relationship__Group_6__0
-            	    {
-            	    pushFollow(FOLLOW_rule__Relationship__Group_6__0_in_rule__Relationship__Group__6__Impl5087);
-            	    rule__Relationship__Group_6__0();
-            	    _fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop30;
-                }
-            } while (true);
-
-             after(grammarAccess.getRelationshipAccess().getGroup_6()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__Relationship__Group__6__Impl
-
-
-    // $ANTLR start rule__Relationship__Group_6__0
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2505:1: rule__Relationship__Group_6__0 : rule__Relationship__Group_6__0__Impl rule__Relationship__Group_6__1 ;
-    public final void rule__Relationship__Group_6__0() throws RecognitionException {
+    // $ANTLR start rule__Relationship__Group_2__0__Impl
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2481:1: rule__Relationship__Group_2__0__Impl : ( ( ',' )? ) ;
+    public final void rule__Relationship__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2509:1: ( rule__Relationship__Group_6__0__Impl rule__Relationship__Group_6__1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2510:2: rule__Relationship__Group_6__0__Impl rule__Relationship__Group_6__1
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2485:1: ( ( ( ',' )? ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2486:1: ( ( ',' )? )
             {
-            pushFollow(FOLLOW_rule__Relationship__Group_6__0__Impl_in_rule__Relationship__Group_6__05132);
-            rule__Relationship__Group_6__0__Impl();
-            _fsp--;
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2486:1: ( ( ',' )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2487:1: ( ',' )?
+            {
+             before(grammarAccess.getRelationshipAccess().getCommaKeyword_2_0()); 
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2488:1: ( ',' )?
+            int alt32=2;
+            int LA32_0 = input.LA(1);
 
-            pushFollow(FOLLOW_rule__Relationship__Group_6__1_in_rule__Relationship__Group_6__05135);
-            rule__Relationship__Group_6__1();
-            _fsp--;
-
-
+            if ( (LA32_0==32) ) {
+                alt32=1;
             }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__Relationship__Group_6__0
-
-
-    // $ANTLR start rule__Relationship__Group_6__0__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2517:1: rule__Relationship__Group_6__0__Impl : ( ( ',' )? ) ;
-    public final void rule__Relationship__Group_6__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2521:1: ( ( ( ',' )? ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2522:1: ( ( ',' )? )
-            {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2522:1: ( ( ',' )? )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2523:1: ( ',' )?
-            {
-             before(grammarAccess.getRelationshipAccess().getCommaKeyword_6_0()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2524:1: ( ',' )?
-            int alt31=2;
-            int LA31_0 = input.LA(1);
-
-            if ( (LA31_0==28) ) {
-                alt31=1;
-            }
-            switch (alt31) {
+            switch (alt32) {
                 case 1 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2525:2: ','
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2489:2: ','
                     {
-                    match(input,28,FOLLOW_28_in_rule__Relationship__Group_6__0__Impl5164); 
+                    match(input,32,FOLLOW_32_in_rule__Relationship__Group_2__0__Impl5123); 
 
                     }
                     break;
 
             }
 
-             after(grammarAccess.getRelationshipAccess().getCommaKeyword_6_0()); 
+             after(grammarAccess.getRelationshipAccess().getCommaKeyword_2_0()); 
 
             }
 
@@ -7079,21 +7046,21 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end rule__Relationship__Group_6__0__Impl
+    // $ANTLR end rule__Relationship__Group_2__0__Impl
 
 
-    // $ANTLR start rule__Relationship__Group_6__1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2536:1: rule__Relationship__Group_6__1 : rule__Relationship__Group_6__1__Impl ;
-    public final void rule__Relationship__Group_6__1() throws RecognitionException {
+    // $ANTLR start rule__Relationship__Group_2__1
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2500:1: rule__Relationship__Group_2__1 : rule__Relationship__Group_2__1__Impl ;
+    public final void rule__Relationship__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2540:1: ( rule__Relationship__Group_6__1__Impl )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2541:2: rule__Relationship__Group_6__1__Impl
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2504:1: ( rule__Relationship__Group_2__1__Impl )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2505:2: rule__Relationship__Group_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Relationship__Group_6__1__Impl_in_rule__Relationship__Group_6__15197);
-            rule__Relationship__Group_6__1__Impl();
+            pushFollow(FOLLOW_rule__Relationship__Group_2__1__Impl_in_rule__Relationship__Group_2__15156);
+            rule__Relationship__Group_2__1__Impl();
             _fsp--;
 
 
@@ -7111,34 +7078,34 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end rule__Relationship__Group_6__1
+    // $ANTLR end rule__Relationship__Group_2__1
 
 
-    // $ANTLR start rule__Relationship__Group_6__1__Impl
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2547:1: rule__Relationship__Group_6__1__Impl : ( ( rule__Relationship__PropertiesAssignment_6_1 ) ) ;
-    public final void rule__Relationship__Group_6__1__Impl() throws RecognitionException {
+    // $ANTLR start rule__Relationship__Group_2__1__Impl
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2511:1: rule__Relationship__Group_2__1__Impl : ( ( rule__Relationship__EntitiesAssignment_2_1 ) ) ;
+    public final void rule__Relationship__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2551:1: ( ( ( rule__Relationship__PropertiesAssignment_6_1 ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2552:1: ( ( rule__Relationship__PropertiesAssignment_6_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2515:1: ( ( ( rule__Relationship__EntitiesAssignment_2_1 ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2516:1: ( ( rule__Relationship__EntitiesAssignment_2_1 ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2552:1: ( ( rule__Relationship__PropertiesAssignment_6_1 ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2553:1: ( rule__Relationship__PropertiesAssignment_6_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2516:1: ( ( rule__Relationship__EntitiesAssignment_2_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2517:1: ( rule__Relationship__EntitiesAssignment_2_1 )
             {
-             before(grammarAccess.getRelationshipAccess().getPropertiesAssignment_6_1()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2554:1: ( rule__Relationship__PropertiesAssignment_6_1 )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2554:2: rule__Relationship__PropertiesAssignment_6_1
+             before(grammarAccess.getRelationshipAccess().getEntitiesAssignment_2_1()); 
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2518:1: ( rule__Relationship__EntitiesAssignment_2_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2518:2: rule__Relationship__EntitiesAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__Relationship__PropertiesAssignment_6_1_in_rule__Relationship__Group_6__1__Impl5224);
-            rule__Relationship__PropertiesAssignment_6_1();
+            pushFollow(FOLLOW_rule__Relationship__EntitiesAssignment_2_1_in_rule__Relationship__Group_2__1__Impl5183);
+            rule__Relationship__EntitiesAssignment_2_1();
             _fsp--;
 
 
             }
 
-             after(grammarAccess.getRelationshipAccess().getPropertiesAssignment_6_1()); 
+             after(grammarAccess.getRelationshipAccess().getEntitiesAssignment_2_1()); 
 
             }
 
@@ -7157,24 +7124,192 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end rule__Relationship__Group_6__1__Impl
+    // $ANTLR end rule__Relationship__Group_2__1__Impl
+
+
+    // $ANTLR start rule__Relationship__Group_4__0
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2532:1: rule__Relationship__Group_4__0 : rule__Relationship__Group_4__0__Impl rule__Relationship__Group_4__1 ;
+    public final void rule__Relationship__Group_4__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2536:1: ( rule__Relationship__Group_4__0__Impl rule__Relationship__Group_4__1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2537:2: rule__Relationship__Group_4__0__Impl rule__Relationship__Group_4__1
+            {
+            pushFollow(FOLLOW_rule__Relationship__Group_4__0__Impl_in_rule__Relationship__Group_4__05217);
+            rule__Relationship__Group_4__0__Impl();
+            _fsp--;
+
+            pushFollow(FOLLOW_rule__Relationship__Group_4__1_in_rule__Relationship__Group_4__05220);
+            rule__Relationship__Group_4__1();
+            _fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end rule__Relationship__Group_4__0
+
+
+    // $ANTLR start rule__Relationship__Group_4__0__Impl
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2544:1: rule__Relationship__Group_4__0__Impl : ( ( ',' )? ) ;
+    public final void rule__Relationship__Group_4__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2548:1: ( ( ( ',' )? ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2549:1: ( ( ',' )? )
+            {
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2549:1: ( ( ',' )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2550:1: ( ',' )?
+            {
+             before(grammarAccess.getRelationshipAccess().getCommaKeyword_4_0()); 
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2551:1: ( ',' )?
+            int alt33=2;
+            int LA33_0 = input.LA(1);
+
+            if ( (LA33_0==32) ) {
+                alt33=1;
+            }
+            switch (alt33) {
+                case 1 :
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2552:2: ','
+                    {
+                    match(input,32,FOLLOW_32_in_rule__Relationship__Group_4__0__Impl5249); 
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getRelationshipAccess().getCommaKeyword_4_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end rule__Relationship__Group_4__0__Impl
+
+
+    // $ANTLR start rule__Relationship__Group_4__1
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2563:1: rule__Relationship__Group_4__1 : rule__Relationship__Group_4__1__Impl ;
+    public final void rule__Relationship__Group_4__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2567:1: ( rule__Relationship__Group_4__1__Impl )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2568:2: rule__Relationship__Group_4__1__Impl
+            {
+            pushFollow(FOLLOW_rule__Relationship__Group_4__1__Impl_in_rule__Relationship__Group_4__15282);
+            rule__Relationship__Group_4__1__Impl();
+            _fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end rule__Relationship__Group_4__1
+
+
+    // $ANTLR start rule__Relationship__Group_4__1__Impl
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2574:1: rule__Relationship__Group_4__1__Impl : ( ( rule__Relationship__PropertiesAssignment_4_1 ) ) ;
+    public final void rule__Relationship__Group_4__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2578:1: ( ( ( rule__Relationship__PropertiesAssignment_4_1 ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2579:1: ( ( rule__Relationship__PropertiesAssignment_4_1 ) )
+            {
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2579:1: ( ( rule__Relationship__PropertiesAssignment_4_1 ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2580:1: ( rule__Relationship__PropertiesAssignment_4_1 )
+            {
+             before(grammarAccess.getRelationshipAccess().getPropertiesAssignment_4_1()); 
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2581:1: ( rule__Relationship__PropertiesAssignment_4_1 )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2581:2: rule__Relationship__PropertiesAssignment_4_1
+            {
+            pushFollow(FOLLOW_rule__Relationship__PropertiesAssignment_4_1_in_rule__Relationship__Group_4__1__Impl5309);
+            rule__Relationship__PropertiesAssignment_4_1();
+            _fsp--;
+
+
+            }
+
+             after(grammarAccess.getRelationshipAccess().getPropertiesAssignment_4_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end rule__Relationship__Group_4__1__Impl
 
 
     // $ANTLR start rule__Situation__TimeAssignment_0_1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2569:1: rule__Situation__TimeAssignment_0_1 : ( RULE_ID ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2596:1: rule__Situation__TimeAssignment_0_1 : ( RULE_ID ) ;
     public final void rule__Situation__TimeAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2573:1: ( ( RULE_ID ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2574:1: ( RULE_ID )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2600:1: ( ( RULE_ID ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2601:1: ( RULE_ID )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2574:1: ( RULE_ID )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2575:1: RULE_ID
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2601:1: ( RULE_ID )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2602:1: RULE_ID
             {
              before(grammarAccess.getSituationAccess().getTimeIDTerminalRuleCall_0_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Situation__TimeAssignment_0_15263); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Situation__TimeAssignment_0_15348); 
              after(grammarAccess.getSituationAccess().getTimeIDTerminalRuleCall_0_1_0()); 
 
             }
@@ -7198,20 +7333,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Situation__WorldAssignment_1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2584:1: rule__Situation__WorldAssignment_1 : ( ruleWorld ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2611:1: rule__Situation__WorldAssignment_1 : ( ruleWorld ) ;
     public final void rule__Situation__WorldAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2588:1: ( ( ruleWorld ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2589:1: ( ruleWorld )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2615:1: ( ( ruleWorld ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2616:1: ( ruleWorld )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2589:1: ( ruleWorld )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2590:1: ruleWorld
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2616:1: ( ruleWorld )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2617:1: ruleWorld
             {
              before(grammarAccess.getSituationAccess().getWorldWorldParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleWorld_in_rule__Situation__WorldAssignment_15294);
+            pushFollow(FOLLOW_ruleWorld_in_rule__Situation__WorldAssignment_15379);
             ruleWorld();
             _fsp--;
 
@@ -7238,20 +7373,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__World__EntitiesAssignment_1_0
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2599:1: rule__World__EntitiesAssignment_1_0 : ( ruleEntity ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2626:1: rule__World__EntitiesAssignment_1_0 : ( ruleEntity ) ;
     public final void rule__World__EntitiesAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2603:1: ( ( ruleEntity ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2604:1: ( ruleEntity )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2630:1: ( ( ruleEntity ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2631:1: ( ruleEntity )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2604:1: ( ruleEntity )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2605:1: ruleEntity
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2631:1: ( ruleEntity )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2632:1: ruleEntity
             {
              before(grammarAccess.getWorldAccess().getEntitiesEntityParserRuleCall_1_0_0()); 
-            pushFollow(FOLLOW_ruleEntity_in_rule__World__EntitiesAssignment_1_05325);
+            pushFollow(FOLLOW_ruleEntity_in_rule__World__EntitiesAssignment_1_05410);
             ruleEntity();
             _fsp--;
 
@@ -7278,20 +7413,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__World__RelationshipsAssignment_1_1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2614:1: rule__World__RelationshipsAssignment_1_1 : ( ruleRelationship ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2641:1: rule__World__RelationshipsAssignment_1_1 : ( ruleRelationship ) ;
     public final void rule__World__RelationshipsAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2618:1: ( ( ruleRelationship ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2619:1: ( ruleRelationship )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2645:1: ( ( ruleRelationship ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2646:1: ( ruleRelationship )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2619:1: ( ruleRelationship )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2620:1: ruleRelationship
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2646:1: ( ruleRelationship )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2647:1: ruleRelationship
             {
              before(grammarAccess.getWorldAccess().getRelationshipsRelationshipParserRuleCall_1_1_0()); 
-            pushFollow(FOLLOW_ruleRelationship_in_rule__World__RelationshipsAssignment_1_15356);
+            pushFollow(FOLLOW_ruleRelationship_in_rule__World__RelationshipsAssignment_1_15441);
             ruleRelationship();
             _fsp--;
 
@@ -7318,20 +7453,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Goal__NameAssignment_0_0
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2629:1: rule__Goal__NameAssignment_0_0 : ( RULE_ID ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2656:1: rule__Goal__NameAssignment_0_0 : ( RULE_ID ) ;
     public final void rule__Goal__NameAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2633:1: ( ( RULE_ID ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2634:1: ( RULE_ID )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2660:1: ( ( RULE_ID ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2661:1: ( RULE_ID )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2634:1: ( RULE_ID )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2635:1: RULE_ID
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2661:1: ( RULE_ID )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2662:1: RULE_ID
             {
              before(grammarAccess.getGoalAccess().getNameIDTerminalRuleCall_0_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Goal__NameAssignment_0_05387); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Goal__NameAssignment_0_05472); 
              after(grammarAccess.getGoalAccess().getNameIDTerminalRuleCall_0_0_0()); 
 
             }
@@ -7355,24 +7490,24 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Goal__TypeAssignment_0_1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2644:1: rule__Goal__TypeAssignment_0_1 : ( ( 'goal' ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2671:1: rule__Goal__TypeAssignment_0_1 : ( ( 'goal' ) ) ;
     public final void rule__Goal__TypeAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2648:1: ( ( ( 'goal' ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2649:1: ( ( 'goal' ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2675:1: ( ( ( 'goal' ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2676:1: ( ( 'goal' ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2649:1: ( ( 'goal' ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2650:1: ( 'goal' )
-            {
-             before(grammarAccess.getGoalAccess().getTypeGoalKeyword_0_1_0()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2651:1: ( 'goal' )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2652:1: 'goal'
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2676:1: ( ( 'goal' ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2677:1: ( 'goal' )
             {
              before(grammarAccess.getGoalAccess().getTypeGoalKeyword_0_1_0()); 
-            match(input,32,FOLLOW_32_in_rule__Goal__TypeAssignment_0_15423); 
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2678:1: ( 'goal' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2679:1: 'goal'
+            {
+             before(grammarAccess.getGoalAccess().getTypeGoalKeyword_0_1_0()); 
+            match(input,36,FOLLOW_36_in_rule__Goal__TypeAssignment_0_15508); 
              after(grammarAccess.getGoalAccess().getTypeGoalKeyword_0_1_0()); 
 
             }
@@ -7400,20 +7535,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Goal__AssetAssignment_0_2
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2667:1: rule__Goal__AssetAssignment_0_2 : ( ruleAsset ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2694:1: rule__Goal__AssetAssignment_0_2 : ( ruleAsset ) ;
     public final void rule__Goal__AssetAssignment_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2671:1: ( ( ruleAsset ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2672:1: ( ruleAsset )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2698:1: ( ( ruleAsset ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2699:1: ( ruleAsset )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2672:1: ( ruleAsset )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2673:1: ruleAsset
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2699:1: ( ruleAsset )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2700:1: ruleAsset
             {
              before(grammarAccess.getGoalAccess().getAssetAssetParserRuleCall_0_2_0()); 
-            pushFollow(FOLLOW_ruleAsset_in_rule__Goal__AssetAssignment_0_25462);
+            pushFollow(FOLLOW_ruleAsset_in_rule__Goal__AssetAssignment_0_25547);
             ruleAsset();
             _fsp--;
 
@@ -7440,20 +7575,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Goal__PropertiesAssignment_0_3_1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2682:1: rule__Goal__PropertiesAssignment_0_3_1 : ( ruleProposition ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2709:1: rule__Goal__PropertiesAssignment_0_3_1 : ( ruleProposition ) ;
     public final void rule__Goal__PropertiesAssignment_0_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2686:1: ( ( ruleProposition ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2687:1: ( ruleProposition )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2713:1: ( ( ruleProposition ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2714:1: ( ruleProposition )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2687:1: ( ruleProposition )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2688:1: ruleProposition
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2714:1: ( ruleProposition )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2715:1: ruleProposition
             {
              before(grammarAccess.getGoalAccess().getPropertiesPropositionParserRuleCall_0_3_1_0()); 
-            pushFollow(FOLLOW_ruleProposition_in_rule__Goal__PropertiesAssignment_0_3_15493);
+            pushFollow(FOLLOW_ruleProposition_in_rule__Goal__PropertiesAssignment_0_3_15578);
             ruleProposition();
             _fsp--;
 
@@ -7480,20 +7615,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__SecurityGoal__NameAssignment_0
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2697:1: rule__SecurityGoal__NameAssignment_0 : ( RULE_ID ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2724:1: rule__SecurityGoal__NameAssignment_0 : ( RULE_ID ) ;
     public final void rule__SecurityGoal__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2701:1: ( ( RULE_ID ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2702:1: ( RULE_ID )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2728:1: ( ( RULE_ID ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2729:1: ( RULE_ID )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2702:1: ( RULE_ID )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2703:1: RULE_ID
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2729:1: ( RULE_ID )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2730:1: RULE_ID
             {
              before(grammarAccess.getSecurityGoalAccess().getNameIDTerminalRuleCall_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SecurityGoal__NameAssignment_05524); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SecurityGoal__NameAssignment_05609); 
              after(grammarAccess.getSecurityGoalAccess().getNameIDTerminalRuleCall_0_0()); 
 
             }
@@ -7517,24 +7652,24 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__SecurityGoal__TypeAssignment_1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2712:1: rule__SecurityGoal__TypeAssignment_1 : ( ( 'sec' ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2739:1: rule__SecurityGoal__TypeAssignment_1 : ( ( 'sec' ) ) ;
     public final void rule__SecurityGoal__TypeAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2716:1: ( ( ( 'sec' ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2717:1: ( ( 'sec' ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2743:1: ( ( ( 'sec' ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2744:1: ( ( 'sec' ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2717:1: ( ( 'sec' ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2718:1: ( 'sec' )
-            {
-             before(grammarAccess.getSecurityGoalAccess().getTypeSecKeyword_1_0()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2719:1: ( 'sec' )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2720:1: 'sec'
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2744:1: ( ( 'sec' ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2745:1: ( 'sec' )
             {
              before(grammarAccess.getSecurityGoalAccess().getTypeSecKeyword_1_0()); 
-            match(input,33,FOLLOW_33_in_rule__SecurityGoal__TypeAssignment_15560); 
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2746:1: ( 'sec' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2747:1: 'sec'
+            {
+             before(grammarAccess.getSecurityGoalAccess().getTypeSecKeyword_1_0()); 
+            match(input,37,FOLLOW_37_in_rule__SecurityGoal__TypeAssignment_15645); 
              after(grammarAccess.getSecurityGoalAccess().getTypeSecKeyword_1_0()); 
 
             }
@@ -7562,20 +7697,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__SecurityGoal__AssetAssignment_2
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2735:1: rule__SecurityGoal__AssetAssignment_2 : ( ruleAsset ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2762:1: rule__SecurityGoal__AssetAssignment_2 : ( ruleAsset ) ;
     public final void rule__SecurityGoal__AssetAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2739:1: ( ( ruleAsset ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2740:1: ( ruleAsset )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2766:1: ( ( ruleAsset ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2767:1: ( ruleAsset )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2740:1: ( ruleAsset )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2741:1: ruleAsset
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2767:1: ( ruleAsset )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2768:1: ruleAsset
             {
              before(grammarAccess.getSecurityGoalAccess().getAssetAssetParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleAsset_in_rule__SecurityGoal__AssetAssignment_25599);
+            pushFollow(FOLLOW_ruleAsset_in_rule__SecurityGoal__AssetAssignment_25684);
             ruleAsset();
             _fsp--;
 
@@ -7602,20 +7737,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__SecurityGoal__PropertiesAssignment_3_1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2750:1: rule__SecurityGoal__PropertiesAssignment_3_1 : ( ruleProposition ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2777:1: rule__SecurityGoal__PropertiesAssignment_3_1 : ( ruleProposition ) ;
     public final void rule__SecurityGoal__PropertiesAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2754:1: ( ( ruleProposition ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2755:1: ( ruleProposition )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2781:1: ( ( ruleProposition ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2782:1: ( ruleProposition )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2755:1: ( ruleProposition )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2756:1: ruleProposition
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2782:1: ( ruleProposition )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2783:1: ruleProposition
             {
              before(grammarAccess.getSecurityGoalAccess().getPropertiesPropositionParserRuleCall_3_1_0()); 
-            pushFollow(FOLLOW_ruleProposition_in_rule__SecurityGoal__PropertiesAssignment_3_15630);
+            pushFollow(FOLLOW_ruleProposition_in_rule__SecurityGoal__PropertiesAssignment_3_15715);
             ruleProposition();
             _fsp--;
 
@@ -7642,20 +7777,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Requirement__NameAssignment_0
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2765:1: rule__Requirement__NameAssignment_0 : ( RULE_ID ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2792:1: rule__Requirement__NameAssignment_0 : ( RULE_ID ) ;
     public final void rule__Requirement__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2769:1: ( ( RULE_ID ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2770:1: ( RULE_ID )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2796:1: ( ( RULE_ID ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2797:1: ( RULE_ID )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2770:1: ( RULE_ID )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2771:1: RULE_ID
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2797:1: ( RULE_ID )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2798:1: RULE_ID
             {
              before(grammarAccess.getRequirementAccess().getNameIDTerminalRuleCall_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Requirement__NameAssignment_05661); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Requirement__NameAssignment_05746); 
              after(grammarAccess.getRequirementAccess().getNameIDTerminalRuleCall_0_0()); 
 
             }
@@ -7679,24 +7814,24 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Requirement__TypeAssignment_1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2780:1: rule__Requirement__TypeAssignment_1 : ( ( 'req' ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2807:1: rule__Requirement__TypeAssignment_1 : ( ( 'req' ) ) ;
     public final void rule__Requirement__TypeAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2784:1: ( ( ( 'req' ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2785:1: ( ( 'req' ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2811:1: ( ( ( 'req' ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2812:1: ( ( 'req' ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2785:1: ( ( 'req' ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2786:1: ( 'req' )
-            {
-             before(grammarAccess.getRequirementAccess().getTypeReqKeyword_1_0()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2787:1: ( 'req' )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2788:1: 'req'
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2812:1: ( ( 'req' ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2813:1: ( 'req' )
             {
              before(grammarAccess.getRequirementAccess().getTypeReqKeyword_1_0()); 
-            match(input,34,FOLLOW_34_in_rule__Requirement__TypeAssignment_15697); 
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2814:1: ( 'req' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2815:1: 'req'
+            {
+             before(grammarAccess.getRequirementAccess().getTypeReqKeyword_1_0()); 
+            match(input,38,FOLLOW_38_in_rule__Requirement__TypeAssignment_15782); 
              after(grammarAccess.getRequirementAccess().getTypeReqKeyword_1_0()); 
 
             }
@@ -7724,20 +7859,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Requirement__AssetAssignment_2
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2803:1: rule__Requirement__AssetAssignment_2 : ( ruleAsset ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2830:1: rule__Requirement__AssetAssignment_2 : ( ruleAsset ) ;
     public final void rule__Requirement__AssetAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2807:1: ( ( ruleAsset ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2808:1: ( ruleAsset )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2834:1: ( ( ruleAsset ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2835:1: ( ruleAsset )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2808:1: ( ruleAsset )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2809:1: ruleAsset
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2835:1: ( ruleAsset )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2836:1: ruleAsset
             {
              before(grammarAccess.getRequirementAccess().getAssetAssetParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleAsset_in_rule__Requirement__AssetAssignment_25736);
+            pushFollow(FOLLOW_ruleAsset_in_rule__Requirement__AssetAssignment_25821);
             ruleAsset();
             _fsp--;
 
@@ -7764,20 +7899,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Requirement__PropertiesAssignment_3_1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2818:1: rule__Requirement__PropertiesAssignment_3_1 : ( ruleProposition ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2845:1: rule__Requirement__PropertiesAssignment_3_1 : ( ruleProposition ) ;
     public final void rule__Requirement__PropertiesAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2822:1: ( ( ruleProposition ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2823:1: ( ruleProposition )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2849:1: ( ( ruleProposition ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2850:1: ( ruleProposition )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2823:1: ( ruleProposition )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2824:1: ruleProposition
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2850:1: ( ruleProposition )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2851:1: ruleProposition
             {
              before(grammarAccess.getRequirementAccess().getPropertiesPropositionParserRuleCall_3_1_0()); 
-            pushFollow(FOLLOW_ruleProposition_in_rule__Requirement__PropertiesAssignment_3_15767);
+            pushFollow(FOLLOW_ruleProposition_in_rule__Requirement__PropertiesAssignment_3_15852);
             ruleProposition();
             _fsp--;
 
@@ -7804,20 +7939,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Domain__NameAssignment_0_0
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2833:1: rule__Domain__NameAssignment_0_0 : ( RULE_ID ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2860:1: rule__Domain__NameAssignment_0_0 : ( RULE_ID ) ;
     public final void rule__Domain__NameAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2837:1: ( ( RULE_ID ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2838:1: ( RULE_ID )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2864:1: ( ( RULE_ID ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2865:1: ( RULE_ID )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2838:1: ( RULE_ID )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2839:1: RULE_ID
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2865:1: ( RULE_ID )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2866:1: RULE_ID
             {
              before(grammarAccess.getDomainAccess().getNameIDTerminalRuleCall_0_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Domain__NameAssignment_0_05798); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Domain__NameAssignment_0_05883); 
              after(grammarAccess.getDomainAccess().getNameIDTerminalRuleCall_0_0_0()); 
 
             }
@@ -7841,24 +7976,24 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Domain__TypeAssignment_0_1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2848:1: rule__Domain__TypeAssignment_0_1 : ( ( 'dom' ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2875:1: rule__Domain__TypeAssignment_0_1 : ( ( 'dom' ) ) ;
     public final void rule__Domain__TypeAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2852:1: ( ( ( 'dom' ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2853:1: ( ( 'dom' ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2879:1: ( ( ( 'dom' ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2880:1: ( ( 'dom' ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2853:1: ( ( 'dom' ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2854:1: ( 'dom' )
-            {
-             before(grammarAccess.getDomainAccess().getTypeDomKeyword_0_1_0()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2855:1: ( 'dom' )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2856:1: 'dom'
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2880:1: ( ( 'dom' ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2881:1: ( 'dom' )
             {
              before(grammarAccess.getDomainAccess().getTypeDomKeyword_0_1_0()); 
-            match(input,35,FOLLOW_35_in_rule__Domain__TypeAssignment_0_15834); 
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2882:1: ( 'dom' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2883:1: 'dom'
+            {
+             before(grammarAccess.getDomainAccess().getTypeDomKeyword_0_1_0()); 
+            match(input,39,FOLLOW_39_in_rule__Domain__TypeAssignment_0_15919); 
              after(grammarAccess.getDomainAccess().getTypeDomKeyword_0_1_0()); 
 
             }
@@ -7886,20 +8021,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Domain__AssetAssignment_0_2
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2871:1: rule__Domain__AssetAssignment_0_2 : ( ruleAsset ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2898:1: rule__Domain__AssetAssignment_0_2 : ( ruleAsset ) ;
     public final void rule__Domain__AssetAssignment_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2875:1: ( ( ruleAsset ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2876:1: ( ruleAsset )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2902:1: ( ( ruleAsset ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2903:1: ( ruleAsset )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2876:1: ( ruleAsset )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2877:1: ruleAsset
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2903:1: ( ruleAsset )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2904:1: ruleAsset
             {
              before(grammarAccess.getDomainAccess().getAssetAssetParserRuleCall_0_2_0()); 
-            pushFollow(FOLLOW_ruleAsset_in_rule__Domain__AssetAssignment_0_25873);
+            pushFollow(FOLLOW_ruleAsset_in_rule__Domain__AssetAssignment_0_25958);
             ruleAsset();
             _fsp--;
 
@@ -7926,20 +8061,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Domain__PropertiesAssignment_0_3_1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2886:1: rule__Domain__PropertiesAssignment_0_3_1 : ( ruleProposition ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2913:1: rule__Domain__PropertiesAssignment_0_3_1 : ( ruleProposition ) ;
     public final void rule__Domain__PropertiesAssignment_0_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2890:1: ( ( ruleProposition ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2891:1: ( ruleProposition )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2917:1: ( ( ruleProposition ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2918:1: ( ruleProposition )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2891:1: ( ruleProposition )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2892:1: ruleProposition
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2918:1: ( ruleProposition )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2919:1: ruleProposition
             {
              before(grammarAccess.getDomainAccess().getPropertiesPropositionParserRuleCall_0_3_1_0()); 
-            pushFollow(FOLLOW_ruleProposition_in_rule__Domain__PropertiesAssignment_0_3_15904);
+            pushFollow(FOLLOW_ruleProposition_in_rule__Domain__PropertiesAssignment_0_3_15989);
             ruleProposition();
             _fsp--;
 
@@ -7966,20 +8101,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Asset__NameAssignment_0
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2901:1: rule__Asset__NameAssignment_0 : ( RULE_ID ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2928:1: rule__Asset__NameAssignment_0 : ( RULE_ID ) ;
     public final void rule__Asset__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2905:1: ( ( RULE_ID ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2906:1: ( RULE_ID )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2932:1: ( ( RULE_ID ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2933:1: ( RULE_ID )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2906:1: ( RULE_ID )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2907:1: RULE_ID
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2933:1: ( RULE_ID )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2934:1: RULE_ID
             {
              before(grammarAccess.getAssetAccess().getNameIDTerminalRuleCall_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Asset__NameAssignment_05935); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Asset__NameAssignment_06020); 
              after(grammarAccess.getAssetAccess().getNameIDTerminalRuleCall_0_0()); 
 
             }
@@ -8003,20 +8138,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Asset__ValueAssignment_2
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2916:1: rule__Asset__ValueAssignment_2 : ( RULE_STRING ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2943:1: rule__Asset__ValueAssignment_2 : ( RULE_STRING ) ;
     public final void rule__Asset__ValueAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2920:1: ( ( RULE_STRING ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2921:1: ( RULE_STRING )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2947:1: ( ( RULE_STRING ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2948:1: ( RULE_STRING )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2921:1: ( RULE_STRING )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2922:1: RULE_STRING
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2948:1: ( RULE_STRING )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2949:1: RULE_STRING
             {
              before(grammarAccess.getAssetAccess().getValueSTRINGTerminalRuleCall_2_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Asset__ValueAssignment_25966); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Asset__ValueAssignment_26051); 
              after(grammarAccess.getAssetAccess().getValueSTRINGTerminalRuleCall_2_0()); 
 
             }
@@ -8040,20 +8175,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Actor__NameAssignment_0
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2931:1: rule__Actor__NameAssignment_0 : ( RULE_ID ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2958:1: rule__Actor__NameAssignment_0 : ( RULE_ID ) ;
     public final void rule__Actor__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2935:1: ( ( RULE_ID ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2936:1: ( RULE_ID )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2962:1: ( ( RULE_ID ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2963:1: ( RULE_ID )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2936:1: ( RULE_ID )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2937:1: RULE_ID
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2963:1: ( RULE_ID )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2964:1: RULE_ID
             {
              before(grammarAccess.getActorAccess().getNameIDTerminalRuleCall_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Actor__NameAssignment_05997); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Actor__NameAssignment_06082); 
              after(grammarAccess.getActorAccess().getNameIDTerminalRuleCall_0_0()); 
 
             }
@@ -8077,24 +8212,24 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Actor__TypeAssignment_1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2946:1: rule__Actor__TypeAssignment_1 : ( ( 'actor' ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2973:1: rule__Actor__TypeAssignment_1 : ( ( 'actor' ) ) ;
     public final void rule__Actor__TypeAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2950:1: ( ( ( 'actor' ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2951:1: ( ( 'actor' ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2977:1: ( ( ( 'actor' ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2978:1: ( ( 'actor' ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2951:1: ( ( 'actor' ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2952:1: ( 'actor' )
-            {
-             before(grammarAccess.getActorAccess().getTypeActorKeyword_1_0()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2953:1: ( 'actor' )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2954:1: 'actor'
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2978:1: ( ( 'actor' ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2979:1: ( 'actor' )
             {
              before(grammarAccess.getActorAccess().getTypeActorKeyword_1_0()); 
-            match(input,36,FOLLOW_36_in_rule__Actor__TypeAssignment_16033); 
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2980:1: ( 'actor' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2981:1: 'actor'
+            {
+             before(grammarAccess.getActorAccess().getTypeActorKeyword_1_0()); 
+            match(input,40,FOLLOW_40_in_rule__Actor__TypeAssignment_16118); 
              after(grammarAccess.getActorAccess().getTypeActorKeyword_1_0()); 
 
             }
@@ -8122,20 +8257,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Actor__AssetAssignment_2
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2969:1: rule__Actor__AssetAssignment_2 : ( ruleAsset ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2996:1: rule__Actor__AssetAssignment_2 : ( ruleAsset ) ;
     public final void rule__Actor__AssetAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2973:1: ( ( ruleAsset ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2974:1: ( ruleAsset )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3000:1: ( ( ruleAsset ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3001:1: ( ruleAsset )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2974:1: ( ruleAsset )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2975:1: ruleAsset
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3001:1: ( ruleAsset )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3002:1: ruleAsset
             {
              before(grammarAccess.getActorAccess().getAssetAssetParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleAsset_in_rule__Actor__AssetAssignment_26072);
+            pushFollow(FOLLOW_ruleAsset_in_rule__Actor__AssetAssignment_26157);
             ruleAsset();
             _fsp--;
 
@@ -8162,20 +8297,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Actor__PropertiesAssignment_3_1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2984:1: rule__Actor__PropertiesAssignment_3_1 : ( ruleProposition ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3011:1: rule__Actor__PropertiesAssignment_3_1 : ( ruleProposition ) ;
     public final void rule__Actor__PropertiesAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2988:1: ( ( ruleProposition ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2989:1: ( ruleProposition )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3015:1: ( ( ruleProposition ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3016:1: ( ruleProposition )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2989:1: ( ruleProposition )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2990:1: ruleProposition
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3016:1: ( ruleProposition )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3017:1: ruleProposition
             {
              before(grammarAccess.getActorAccess().getPropertiesPropositionParserRuleCall_3_1_0()); 
-            pushFollow(FOLLOW_ruleProposition_in_rule__Actor__PropertiesAssignment_3_16103);
+            pushFollow(FOLLOW_ruleProposition_in_rule__Actor__PropertiesAssignment_3_16188);
             ruleProposition();
             _fsp--;
 
@@ -8202,20 +8337,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Action__NameAssignment_0
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:2999:1: rule__Action__NameAssignment_0 : ( RULE_ID ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3026:1: rule__Action__NameAssignment_0 : ( RULE_ID ) ;
     public final void rule__Action__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3003:1: ( ( RULE_ID ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3004:1: ( RULE_ID )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3030:1: ( ( RULE_ID ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3031:1: ( RULE_ID )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3004:1: ( RULE_ID )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3005:1: RULE_ID
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3031:1: ( RULE_ID )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3032:1: RULE_ID
             {
              before(grammarAccess.getActionAccess().getNameIDTerminalRuleCall_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Action__NameAssignment_06134); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Action__NameAssignment_06219); 
              after(grammarAccess.getActionAccess().getNameIDTerminalRuleCall_0_0()); 
 
             }
@@ -8239,24 +8374,24 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Action__TypeAssignment_1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3014:1: rule__Action__TypeAssignment_1 : ( ( 'action' ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3041:1: rule__Action__TypeAssignment_1 : ( ( 'action' ) ) ;
     public final void rule__Action__TypeAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3018:1: ( ( ( 'action' ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3019:1: ( ( 'action' ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3045:1: ( ( ( 'action' ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3046:1: ( ( 'action' ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3019:1: ( ( 'action' ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3020:1: ( 'action' )
-            {
-             before(grammarAccess.getActionAccess().getTypeActionKeyword_1_0()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3021:1: ( 'action' )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3022:1: 'action'
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3046:1: ( ( 'action' ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3047:1: ( 'action' )
             {
              before(grammarAccess.getActionAccess().getTypeActionKeyword_1_0()); 
-            match(input,37,FOLLOW_37_in_rule__Action__TypeAssignment_16170); 
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3048:1: ( 'action' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3049:1: 'action'
+            {
+             before(grammarAccess.getActionAccess().getTypeActionKeyword_1_0()); 
+            match(input,41,FOLLOW_41_in_rule__Action__TypeAssignment_16255); 
              after(grammarAccess.getActionAccess().getTypeActionKeyword_1_0()); 
 
             }
@@ -8284,20 +8419,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Action__AssetAssignment_2
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3037:1: rule__Action__AssetAssignment_2 : ( ruleAsset ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3064:1: rule__Action__AssetAssignment_2 : ( ruleAsset ) ;
     public final void rule__Action__AssetAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3041:1: ( ( ruleAsset ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3042:1: ( ruleAsset )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3068:1: ( ( ruleAsset ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3069:1: ( ruleAsset )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3042:1: ( ruleAsset )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3043:1: ruleAsset
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3069:1: ( ruleAsset )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3070:1: ruleAsset
             {
              before(grammarAccess.getActionAccess().getAssetAssetParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleAsset_in_rule__Action__AssetAssignment_26209);
+            pushFollow(FOLLOW_ruleAsset_in_rule__Action__AssetAssignment_26294);
             ruleAsset();
             _fsp--;
 
@@ -8324,20 +8459,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Action__PropertiesAssignment_3_1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3052:1: rule__Action__PropertiesAssignment_3_1 : ( ruleProposition ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3079:1: rule__Action__PropertiesAssignment_3_1 : ( ruleProposition ) ;
     public final void rule__Action__PropertiesAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3056:1: ( ( ruleProposition ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3057:1: ( ruleProposition )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3083:1: ( ( ruleProposition ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3084:1: ( ruleProposition )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3057:1: ( ruleProposition )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3058:1: ruleProposition
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3084:1: ( ruleProposition )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3085:1: ruleProposition
             {
              before(grammarAccess.getActionAccess().getPropertiesPropositionParserRuleCall_3_1_0()); 
-            pushFollow(FOLLOW_ruleProposition_in_rule__Action__PropertiesAssignment_3_16240);
+            pushFollow(FOLLOW_ruleProposition_in_rule__Action__PropertiesAssignment_3_16325);
             ruleProposition();
             _fsp--;
 
@@ -8364,20 +8499,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Resource__NameAssignment_0
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3067:1: rule__Resource__NameAssignment_0 : ( RULE_ID ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3094:1: rule__Resource__NameAssignment_0 : ( RULE_ID ) ;
     public final void rule__Resource__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3071:1: ( ( RULE_ID ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3072:1: ( RULE_ID )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3098:1: ( ( RULE_ID ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3099:1: ( RULE_ID )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3072:1: ( RULE_ID )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3073:1: RULE_ID
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3099:1: ( RULE_ID )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3100:1: RULE_ID
             {
              before(grammarAccess.getResourceAccess().getNameIDTerminalRuleCall_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Resource__NameAssignment_06271); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Resource__NameAssignment_06356); 
              after(grammarAccess.getResourceAccess().getNameIDTerminalRuleCall_0_0()); 
 
             }
@@ -8401,24 +8536,24 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Resource__TypeAssignment_1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3082:1: rule__Resource__TypeAssignment_1 : ( ( 'resource' ) ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3109:1: rule__Resource__TypeAssignment_1 : ( ( 'resource' ) ) ;
     public final void rule__Resource__TypeAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3086:1: ( ( ( 'resource' ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3087:1: ( ( 'resource' ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3113:1: ( ( ( 'resource' ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3114:1: ( ( 'resource' ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3087:1: ( ( 'resource' ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3088:1: ( 'resource' )
-            {
-             before(grammarAccess.getResourceAccess().getTypeResourceKeyword_1_0()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3089:1: ( 'resource' )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3090:1: 'resource'
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3114:1: ( ( 'resource' ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3115:1: ( 'resource' )
             {
              before(grammarAccess.getResourceAccess().getTypeResourceKeyword_1_0()); 
-            match(input,38,FOLLOW_38_in_rule__Resource__TypeAssignment_16307); 
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3116:1: ( 'resource' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3117:1: 'resource'
+            {
+             before(grammarAccess.getResourceAccess().getTypeResourceKeyword_1_0()); 
+            match(input,42,FOLLOW_42_in_rule__Resource__TypeAssignment_16392); 
              after(grammarAccess.getResourceAccess().getTypeResourceKeyword_1_0()); 
 
             }
@@ -8446,20 +8581,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Resource__AssetAssignment_2
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3105:1: rule__Resource__AssetAssignment_2 : ( ruleAsset ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3132:1: rule__Resource__AssetAssignment_2 : ( ruleAsset ) ;
     public final void rule__Resource__AssetAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3109:1: ( ( ruleAsset ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3110:1: ( ruleAsset )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3136:1: ( ( ruleAsset ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3137:1: ( ruleAsset )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3110:1: ( ruleAsset )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3111:1: ruleAsset
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3137:1: ( ruleAsset )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3138:1: ruleAsset
             {
              before(grammarAccess.getResourceAccess().getAssetAssetParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleAsset_in_rule__Resource__AssetAssignment_26346);
+            pushFollow(FOLLOW_ruleAsset_in_rule__Resource__AssetAssignment_26431);
             ruleAsset();
             _fsp--;
 
@@ -8486,20 +8621,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Resource__PropertiesAssignment_3_1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3120:1: rule__Resource__PropertiesAssignment_3_1 : ( ruleProposition ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3147:1: rule__Resource__PropertiesAssignment_3_1 : ( ruleProposition ) ;
     public final void rule__Resource__PropertiesAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3124:1: ( ( ruleProposition ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3125:1: ( ruleProposition )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3151:1: ( ( ruleProposition ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3152:1: ( ruleProposition )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3125:1: ( ruleProposition )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3126:1: ruleProposition
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3152:1: ( ruleProposition )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3153:1: ruleProposition
             {
              before(grammarAccess.getResourceAccess().getPropertiesPropositionParserRuleCall_3_1_0()); 
-            pushFollow(FOLLOW_ruleProposition_in_rule__Resource__PropertiesAssignment_3_16377);
+            pushFollow(FOLLOW_ruleProposition_in_rule__Resource__PropertiesAssignment_3_16462);
             ruleProposition();
             _fsp--;
 
@@ -8526,20 +8661,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Proposition__NameAssignment
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3135:1: rule__Proposition__NameAssignment : ( RULE_STRING ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3162:1: rule__Proposition__NameAssignment : ( RULE_STRING ) ;
     public final void rule__Proposition__NameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3139:1: ( ( RULE_STRING ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3140:1: ( RULE_STRING )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3166:1: ( ( RULE_STRING ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3167:1: ( RULE_STRING )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3140:1: ( RULE_STRING )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3141:1: RULE_STRING
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3167:1: ( RULE_STRING )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3168:1: RULE_STRING
             {
              before(grammarAccess.getPropositionAccess().getNameSTRINGTerminalRuleCall_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Proposition__NameAssignment6408); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Proposition__NameAssignment6493); 
              after(grammarAccess.getPropositionAccess().getNameSTRINGTerminalRuleCall_0()); 
 
             }
@@ -8563,20 +8698,20 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Relationship__TypeAssignment_0
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3150:1: rule__Relationship__TypeAssignment_0 : ( ruleRelType ) ;
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3177:1: rule__Relationship__TypeAssignment_0 : ( ruleRelType ) ;
     public final void rule__Relationship__TypeAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3154:1: ( ( ruleRelType ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3155:1: ( ruleRelType )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3181:1: ( ( ruleRelType ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3182:1: ( ruleRelType )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3155:1: ( ruleRelType )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3156:1: ruleRelType
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3182:1: ( ruleRelType )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3183:1: ruleRelType
             {
              before(grammarAccess.getRelationshipAccess().getTypeRelTypeEnumRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleRelType_in_rule__Relationship__TypeAssignment_06439);
+            pushFollow(FOLLOW_ruleRelType_in_rule__Relationship__TypeAssignment_06524);
             ruleRelType();
             _fsp--;
 
@@ -8602,30 +8737,30 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
     // $ANTLR end rule__Relationship__TypeAssignment_0
 
 
-    // $ANTLR start rule__Relationship__SourceAssignment_2
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3165:1: rule__Relationship__SourceAssignment_2 : ( ( RULE_ID ) ) ;
-    public final void rule__Relationship__SourceAssignment_2() throws RecognitionException {
+    // $ANTLR start rule__Relationship__EntitiesAssignment_2_1
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3192:1: rule__Relationship__EntitiesAssignment_2_1 : ( ( RULE_ID ) ) ;
+    public final void rule__Relationship__EntitiesAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3169:1: ( ( ( RULE_ID ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3170:1: ( ( RULE_ID ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3196:1: ( ( ( RULE_ID ) ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3197:1: ( ( RULE_ID ) )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3170:1: ( ( RULE_ID ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3171:1: ( RULE_ID )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3197:1: ( ( RULE_ID ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3198:1: ( RULE_ID )
             {
-             before(grammarAccess.getRelationshipAccess().getSourceEntityCrossReference_2_0()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3172:1: ( RULE_ID )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3173:1: RULE_ID
+             before(grammarAccess.getRelationshipAccess().getEntitiesEntityCrossReference_2_1_0()); 
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3199:1: ( RULE_ID )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3200:1: RULE_ID
             {
-             before(grammarAccess.getRelationshipAccess().getSourceEntityIDTerminalRuleCall_2_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Relationship__SourceAssignment_26474); 
-             after(grammarAccess.getRelationshipAccess().getSourceEntityIDTerminalRuleCall_2_0_1()); 
+             before(grammarAccess.getRelationshipAccess().getEntitiesEntityIDTerminalRuleCall_2_1_0_1()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Relationship__EntitiesAssignment_2_16559); 
+             after(grammarAccess.getRelationshipAccess().getEntitiesEntityIDTerminalRuleCall_2_1_0_1()); 
 
             }
 
-             after(grammarAccess.getRelationshipAccess().getSourceEntityCrossReference_2_0()); 
+             after(grammarAccess.getRelationshipAccess().getEntitiesEntityCrossReference_2_1_0()); 
 
             }
 
@@ -8644,73 +8779,28 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end rule__Relationship__SourceAssignment_2
+    // $ANTLR end rule__Relationship__EntitiesAssignment_2_1
 
 
-    // $ANTLR start rule__Relationship__TargetAssignment_4
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3184:1: rule__Relationship__TargetAssignment_4 : ( ( RULE_ID ) ) ;
-    public final void rule__Relationship__TargetAssignment_4() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3188:1: ( ( ( RULE_ID ) ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3189:1: ( ( RULE_ID ) )
-            {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3189:1: ( ( RULE_ID ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3190:1: ( RULE_ID )
-            {
-             before(grammarAccess.getRelationshipAccess().getTargetEntityCrossReference_4_0()); 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3191:1: ( RULE_ID )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3192:1: RULE_ID
-            {
-             before(grammarAccess.getRelationshipAccess().getTargetEntityIDTerminalRuleCall_4_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Relationship__TargetAssignment_46513); 
-             after(grammarAccess.getRelationshipAccess().getTargetEntityIDTerminalRuleCall_4_0_1()); 
-
-            }
-
-             after(grammarAccess.getRelationshipAccess().getTargetEntityCrossReference_4_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__Relationship__TargetAssignment_4
-
-
-    // $ANTLR start rule__Relationship__PropertiesAssignment_6_1
-    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3203:1: rule__Relationship__PropertiesAssignment_6_1 : ( ruleProposition ) ;
-    public final void rule__Relationship__PropertiesAssignment_6_1() throws RecognitionException {
+    // $ANTLR start rule__Relationship__PropertiesAssignment_4_1
+    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3211:1: rule__Relationship__PropertiesAssignment_4_1 : ( ruleProposition ) ;
+    public final void rule__Relationship__PropertiesAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3207:1: ( ( ruleProposition ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3208:1: ( ruleProposition )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3215:1: ( ( ruleProposition ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3216:1: ( ruleProposition )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3208:1: ( ruleProposition )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3209:1: ruleProposition
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3216:1: ( ruleProposition )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3217:1: ruleProposition
             {
-             before(grammarAccess.getRelationshipAccess().getPropertiesPropositionParserRuleCall_6_1_0()); 
-            pushFollow(FOLLOW_ruleProposition_in_rule__Relationship__PropertiesAssignment_6_16548);
+             before(grammarAccess.getRelationshipAccess().getPropertiesPropositionParserRuleCall_4_1_0()); 
+            pushFollow(FOLLOW_ruleProposition_in_rule__Relationship__PropertiesAssignment_4_16594);
             ruleProposition();
             _fsp--;
 
-             after(grammarAccess.getRelationshipAccess().getPropertiesPropositionParserRuleCall_6_1_0()); 
+             after(grammarAccess.getRelationshipAccess().getPropertiesPropositionParserRuleCall_4_1_0()); 
 
             }
 
@@ -8729,7 +8819,7 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end rule__Relationship__PropertiesAssignment_6_1
+    // $ANTLR end rule__Relationship__PropertiesAssignment_4_1
 
 
  
@@ -8800,206 +8890,208 @@ public class InternalOntologyParser extends AbstractInternalContentAssistParser 
     public static final BitSet FOLLOW_23_in_rule__RelType__Alternatives1390 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_24_in_rule__RelType__Alternatives1411 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_25_in_rule__RelType__Alternatives1432 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Situation__Group__0__Impl_in_rule__Situation__Group__01465 = new BitSet(new long[]{0x0000000003FFF812L});
-    public static final BitSet FOLLOW_rule__Situation__Group__1_in_rule__Situation__Group__01468 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Situation__Group_0__0_in_rule__Situation__Group__0__Impl1495 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Situation__Group__1__Impl_in_rule__Situation__Group__11526 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Situation__WorldAssignment_1_in_rule__Situation__Group__1__Impl1553 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Situation__Group_0__0__Impl_in_rule__Situation__Group_0__01587 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Situation__Group_0__1_in_rule__Situation__Group_0__01590 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__Situation__Group_0__0__Impl1618 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Situation__Group_0__1__Impl_in_rule__Situation__Group_0__11649 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_rule__Situation__Group_0__2_in_rule__Situation__Group_0__11652 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Situation__TimeAssignment_0_1_in_rule__Situation__Group_0__1__Impl1679 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Situation__Group_0__2__Impl_in_rule__Situation__Group_0__21709 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__Situation__Group_0__2__Impl1737 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__World__Group__0__Impl_in_rule__World__Group__01774 = new BitSet(new long[]{0x0000000003FFF812L});
-    public static final BitSet FOLLOW_rule__World__Group__1_in_rule__World__Group__01777 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__World__Group__1__Impl_in_rule__World__Group__11835 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__World__Alternatives_1_in_rule__World__Group__1__Impl1862 = new BitSet(new long[]{0x0000000003FFF812L});
-    public static final BitSet FOLLOW_rule__Goal__Group_0__0__Impl_in_rule__Goal__Group_0__01897 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__Goal__Group_0__1_in_rule__Goal__Group_0__01900 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Goal__NameAssignment_0_0_in_rule__Goal__Group_0__0__Impl1927 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Goal__Group_0__1__Impl_in_rule__Goal__Group_0__11957 = new BitSet(new long[]{0x0000000010000032L});
-    public static final BitSet FOLLOW_rule__Goal__Group_0__2_in_rule__Goal__Group_0__11960 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Goal__TypeAssignment_0_1_in_rule__Goal__Group_0__1__Impl1987 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Goal__Group_0__2__Impl_in_rule__Goal__Group_0__22017 = new BitSet(new long[]{0x0000000010000022L});
-    public static final BitSet FOLLOW_rule__Goal__Group_0__3_in_rule__Goal__Group_0__22020 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Goal__AssetAssignment_0_2_in_rule__Goal__Group_0__2__Impl2047 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Goal__Group_0__3__Impl_in_rule__Goal__Group_0__32078 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Goal__Group_0_3__0_in_rule__Goal__Group_0__3__Impl2105 = new BitSet(new long[]{0x0000000010000022L});
-    public static final BitSet FOLLOW_rule__Goal__Group_0_3__0__Impl_in_rule__Goal__Group_0_3__02144 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Goal__Group_0_3__1_in_rule__Goal__Group_0_3__02147 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__Goal__Group_0_3__0__Impl2176 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Goal__Group_0_3__1__Impl_in_rule__Goal__Group_0_3__12209 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Goal__PropertiesAssignment_0_3_1_in_rule__Goal__Group_0_3__1__Impl2236 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SecurityGoal__Group__0__Impl_in_rule__SecurityGoal__Group__02270 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_rule__SecurityGoal__Group__1_in_rule__SecurityGoal__Group__02273 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SecurityGoal__NameAssignment_0_in_rule__SecurityGoal__Group__0__Impl2300 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SecurityGoal__Group__1__Impl_in_rule__SecurityGoal__Group__12330 = new BitSet(new long[]{0x0000000010000032L});
-    public static final BitSet FOLLOW_rule__SecurityGoal__Group__2_in_rule__SecurityGoal__Group__12333 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SecurityGoal__TypeAssignment_1_in_rule__SecurityGoal__Group__1__Impl2360 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SecurityGoal__Group__2__Impl_in_rule__SecurityGoal__Group__22390 = new BitSet(new long[]{0x0000000010000022L});
-    public static final BitSet FOLLOW_rule__SecurityGoal__Group__3_in_rule__SecurityGoal__Group__22393 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SecurityGoal__AssetAssignment_2_in_rule__SecurityGoal__Group__2__Impl2420 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SecurityGoal__Group__3__Impl_in_rule__SecurityGoal__Group__32451 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SecurityGoal__Group_3__0_in_rule__SecurityGoal__Group__3__Impl2478 = new BitSet(new long[]{0x0000000010000022L});
-    public static final BitSet FOLLOW_rule__SecurityGoal__Group_3__0__Impl_in_rule__SecurityGoal__Group_3__02517 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__SecurityGoal__Group_3__1_in_rule__SecurityGoal__Group_3__02520 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__SecurityGoal__Group_3__0__Impl2549 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SecurityGoal__Group_3__1__Impl_in_rule__SecurityGoal__Group_3__12582 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SecurityGoal__PropertiesAssignment_3_1_in_rule__SecurityGoal__Group_3__1__Impl2609 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Requirement__Group__0__Impl_in_rule__Requirement__Group__02643 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_rule__Requirement__Group__1_in_rule__Requirement__Group__02646 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Requirement__NameAssignment_0_in_rule__Requirement__Group__0__Impl2673 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Requirement__Group__1__Impl_in_rule__Requirement__Group__12703 = new BitSet(new long[]{0x0000000010000032L});
-    public static final BitSet FOLLOW_rule__Requirement__Group__2_in_rule__Requirement__Group__12706 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Requirement__TypeAssignment_1_in_rule__Requirement__Group__1__Impl2733 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Requirement__Group__2__Impl_in_rule__Requirement__Group__22763 = new BitSet(new long[]{0x0000000010000022L});
-    public static final BitSet FOLLOW_rule__Requirement__Group__3_in_rule__Requirement__Group__22766 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Requirement__AssetAssignment_2_in_rule__Requirement__Group__2__Impl2793 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Requirement__Group__3__Impl_in_rule__Requirement__Group__32824 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Requirement__Group_3__0_in_rule__Requirement__Group__3__Impl2851 = new BitSet(new long[]{0x0000000010000022L});
-    public static final BitSet FOLLOW_rule__Requirement__Group_3__0__Impl_in_rule__Requirement__Group_3__02890 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Requirement__Group_3__1_in_rule__Requirement__Group_3__02893 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__Requirement__Group_3__0__Impl2922 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Requirement__Group_3__1__Impl_in_rule__Requirement__Group_3__12955 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Requirement__PropertiesAssignment_3_1_in_rule__Requirement__Group_3__1__Impl2982 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Domain__Group_0__0__Impl_in_rule__Domain__Group_0__03016 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_rule__Domain__Group_0__1_in_rule__Domain__Group_0__03019 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Domain__NameAssignment_0_0_in_rule__Domain__Group_0__0__Impl3046 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Domain__Group_0__1__Impl_in_rule__Domain__Group_0__13076 = new BitSet(new long[]{0x0000000010000032L});
-    public static final BitSet FOLLOW_rule__Domain__Group_0__2_in_rule__Domain__Group_0__13079 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Domain__TypeAssignment_0_1_in_rule__Domain__Group_0__1__Impl3106 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Domain__Group_0__2__Impl_in_rule__Domain__Group_0__23136 = new BitSet(new long[]{0x0000000010000022L});
-    public static final BitSet FOLLOW_rule__Domain__Group_0__3_in_rule__Domain__Group_0__23139 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Domain__AssetAssignment_0_2_in_rule__Domain__Group_0__2__Impl3166 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Domain__Group_0__3__Impl_in_rule__Domain__Group_0__33197 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Domain__Group_0_3__0_in_rule__Domain__Group_0__3__Impl3224 = new BitSet(new long[]{0x0000000010000022L});
-    public static final BitSet FOLLOW_rule__Domain__Group_0_3__0__Impl_in_rule__Domain__Group_0_3__03263 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Domain__Group_0_3__1_in_rule__Domain__Group_0_3__03266 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__Domain__Group_0_3__0__Impl3295 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Domain__Group_0_3__1__Impl_in_rule__Domain__Group_0_3__13328 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Domain__PropertiesAssignment_0_3_1_in_rule__Domain__Group_0_3__1__Impl3355 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Asset__Group__0__Impl_in_rule__Asset__Group__03389 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_rule__Asset__Group__1_in_rule__Asset__Group__03392 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Asset__NameAssignment_0_in_rule__Asset__Group__0__Impl3419 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Asset__Group__1__Impl_in_rule__Asset__Group__13449 = new BitSet(new long[]{0x0000000000000022L});
-    public static final BitSet FOLLOW_rule__Asset__Group__2_in_rule__Asset__Group__13452 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rule__Asset__Group__1__Impl3480 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Asset__Group__2__Impl_in_rule__Asset__Group__23511 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Asset__ValueAssignment_2_in_rule__Asset__Group__2__Impl3538 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Actor__Group__0__Impl_in_rule__Actor__Group__03575 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_rule__Actor__Group__1_in_rule__Actor__Group__03578 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Actor__NameAssignment_0_in_rule__Actor__Group__0__Impl3605 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Actor__Group__1__Impl_in_rule__Actor__Group__13635 = new BitSet(new long[]{0x0000000010000032L});
-    public static final BitSet FOLLOW_rule__Actor__Group__2_in_rule__Actor__Group__13638 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Actor__TypeAssignment_1_in_rule__Actor__Group__1__Impl3665 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Actor__Group__2__Impl_in_rule__Actor__Group__23695 = new BitSet(new long[]{0x0000000010000022L});
-    public static final BitSet FOLLOW_rule__Actor__Group__3_in_rule__Actor__Group__23698 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Actor__AssetAssignment_2_in_rule__Actor__Group__2__Impl3725 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Actor__Group__3__Impl_in_rule__Actor__Group__33756 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Actor__Group_3__0_in_rule__Actor__Group__3__Impl3783 = new BitSet(new long[]{0x0000000010000022L});
-    public static final BitSet FOLLOW_rule__Actor__Group_3__0__Impl_in_rule__Actor__Group_3__03822 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Actor__Group_3__1_in_rule__Actor__Group_3__03825 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__Actor__Group_3__0__Impl3854 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Actor__Group_3__1__Impl_in_rule__Actor__Group_3__13887 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Actor__PropertiesAssignment_3_1_in_rule__Actor__Group_3__1__Impl3914 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Action__Group__0__Impl_in_rule__Action__Group__03948 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_rule__Action__Group__1_in_rule__Action__Group__03951 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Action__NameAssignment_0_in_rule__Action__Group__0__Impl3978 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Action__Group__1__Impl_in_rule__Action__Group__14008 = new BitSet(new long[]{0x0000000010000032L});
-    public static final BitSet FOLLOW_rule__Action__Group__2_in_rule__Action__Group__14011 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Action__TypeAssignment_1_in_rule__Action__Group__1__Impl4038 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Action__Group__2__Impl_in_rule__Action__Group__24068 = new BitSet(new long[]{0x0000000010000022L});
-    public static final BitSet FOLLOW_rule__Action__Group__3_in_rule__Action__Group__24071 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Action__AssetAssignment_2_in_rule__Action__Group__2__Impl4098 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Action__Group__3__Impl_in_rule__Action__Group__34129 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Action__Group_3__0_in_rule__Action__Group__3__Impl4156 = new BitSet(new long[]{0x0000000010000022L});
-    public static final BitSet FOLLOW_rule__Action__Group_3__0__Impl_in_rule__Action__Group_3__04195 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Action__Group_3__1_in_rule__Action__Group_3__04198 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__Action__Group_3__0__Impl4227 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Action__Group_3__1__Impl_in_rule__Action__Group_3__14260 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Action__PropertiesAssignment_3_1_in_rule__Action__Group_3__1__Impl4287 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Resource__Group__0__Impl_in_rule__Resource__Group__04321 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_rule__Resource__Group__1_in_rule__Resource__Group__04324 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Resource__NameAssignment_0_in_rule__Resource__Group__0__Impl4351 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Resource__Group__1__Impl_in_rule__Resource__Group__14381 = new BitSet(new long[]{0x0000000010000032L});
-    public static final BitSet FOLLOW_rule__Resource__Group__2_in_rule__Resource__Group__14384 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Resource__TypeAssignment_1_in_rule__Resource__Group__1__Impl4411 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Resource__Group__2__Impl_in_rule__Resource__Group__24441 = new BitSet(new long[]{0x0000000010000022L});
-    public static final BitSet FOLLOW_rule__Resource__Group__3_in_rule__Resource__Group__24444 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Resource__AssetAssignment_2_in_rule__Resource__Group__2__Impl4471 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Resource__Group__3__Impl_in_rule__Resource__Group__34502 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Resource__Group_3__0_in_rule__Resource__Group__3__Impl4529 = new BitSet(new long[]{0x0000000010000022L});
-    public static final BitSet FOLLOW_rule__Resource__Group_3__0__Impl_in_rule__Resource__Group_3__04568 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Resource__Group_3__1_in_rule__Resource__Group_3__04571 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__Resource__Group_3__0__Impl4600 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Resource__Group_3__1__Impl_in_rule__Resource__Group_3__14633 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Resource__PropertiesAssignment_3_1_in_rule__Resource__Group_3__1__Impl4660 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relationship__Group__0__Impl_in_rule__Relationship__Group__04694 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_rule__Relationship__Group__1_in_rule__Relationship__Group__04697 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relationship__TypeAssignment_0_in_rule__Relationship__Group__0__Impl4724 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relationship__Group__1__Impl_in_rule__Relationship__Group__14754 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Relationship__Group__2_in_rule__Relationship__Group__14757 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__Relationship__Group__1__Impl4785 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relationship__Group__2__Impl_in_rule__Relationship__Group__24816 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_rule__Relationship__Group__3_in_rule__Relationship__Group__24819 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relationship__SourceAssignment_2_in_rule__Relationship__Group__2__Impl4846 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relationship__Group__3__Impl_in_rule__Relationship__Group__34876 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Relationship__Group__4_in_rule__Relationship__Group__34879 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__Relationship__Group__3__Impl4907 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relationship__Group__4__Impl_in_rule__Relationship__Group__44938 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_rule__Relationship__Group__5_in_rule__Relationship__Group__44941 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relationship__TargetAssignment_4_in_rule__Relationship__Group__4__Impl4968 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relationship__Group__5__Impl_in_rule__Relationship__Group__54998 = new BitSet(new long[]{0x0000000010000022L});
-    public static final BitSet FOLLOW_rule__Relationship__Group__6_in_rule__Relationship__Group__55001 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rule__Relationship__Group__5__Impl5029 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relationship__Group__6__Impl_in_rule__Relationship__Group__65060 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relationship__Group_6__0_in_rule__Relationship__Group__6__Impl5087 = new BitSet(new long[]{0x0000000010000022L});
-    public static final BitSet FOLLOW_rule__Relationship__Group_6__0__Impl_in_rule__Relationship__Group_6__05132 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Relationship__Group_6__1_in_rule__Relationship__Group_6__05135 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__Relationship__Group_6__0__Impl5164 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relationship__Group_6__1__Impl_in_rule__Relationship__Group_6__15197 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relationship__PropertiesAssignment_6_1_in_rule__Relationship__Group_6__1__Impl5224 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Situation__TimeAssignment_0_15263 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWorld_in_rule__Situation__WorldAssignment_15294 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEntity_in_rule__World__EntitiesAssignment_1_05325 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRelationship_in_rule__World__RelationshipsAssignment_1_15356 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Goal__NameAssignment_0_05387 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__Goal__TypeAssignment_0_15423 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAsset_in_rule__Goal__AssetAssignment_0_25462 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProposition_in_rule__Goal__PropertiesAssignment_0_3_15493 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SecurityGoal__NameAssignment_05524 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__SecurityGoal__TypeAssignment_15560 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAsset_in_rule__SecurityGoal__AssetAssignment_25599 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProposition_in_rule__SecurityGoal__PropertiesAssignment_3_15630 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Requirement__NameAssignment_05661 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__Requirement__TypeAssignment_15697 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAsset_in_rule__Requirement__AssetAssignment_25736 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProposition_in_rule__Requirement__PropertiesAssignment_3_15767 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Domain__NameAssignment_0_05798 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__Domain__TypeAssignment_0_15834 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAsset_in_rule__Domain__AssetAssignment_0_25873 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProposition_in_rule__Domain__PropertiesAssignment_0_3_15904 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Asset__NameAssignment_05935 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Asset__ValueAssignment_25966 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Actor__NameAssignment_05997 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__Actor__TypeAssignment_16033 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAsset_in_rule__Actor__AssetAssignment_26072 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProposition_in_rule__Actor__PropertiesAssignment_3_16103 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Action__NameAssignment_06134 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_rule__Action__TypeAssignment_16170 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAsset_in_rule__Action__AssetAssignment_26209 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProposition_in_rule__Action__PropertiesAssignment_3_16240 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Resource__NameAssignment_06271 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_rule__Resource__TypeAssignment_16307 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAsset_in_rule__Resource__AssetAssignment_26346 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProposition_in_rule__Resource__PropertiesAssignment_3_16377 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Proposition__NameAssignment6408 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRelType_in_rule__Relationship__TypeAssignment_06439 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Relationship__SourceAssignment_26474 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Relationship__TargetAssignment_46513 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProposition_in_rule__Relationship__PropertiesAssignment_6_16548 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__RelType__Alternatives1453 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__RelType__Alternatives1474 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__RelType__Alternatives1495 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rule__RelType__Alternatives1516 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Situation__Group__0__Impl_in_rule__Situation__Group__01549 = new BitSet(new long[]{0x000000003FFFF812L});
+    public static final BitSet FOLLOW_rule__Situation__Group__1_in_rule__Situation__Group__01552 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Situation__Group_0__0_in_rule__Situation__Group__0__Impl1579 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Situation__Group__1__Impl_in_rule__Situation__Group__11610 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Situation__WorldAssignment_1_in_rule__Situation__Group__1__Impl1637 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Situation__Group_0__0__Impl_in_rule__Situation__Group_0__01671 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Situation__Group_0__1_in_rule__Situation__Group_0__01674 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__Situation__Group_0__0__Impl1702 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Situation__Group_0__1__Impl_in_rule__Situation__Group_0__11733 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_rule__Situation__Group_0__2_in_rule__Situation__Group_0__11736 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Situation__TimeAssignment_0_1_in_rule__Situation__Group_0__1__Impl1763 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Situation__Group_0__2__Impl_in_rule__Situation__Group_0__21793 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__Situation__Group_0__2__Impl1821 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__World__Group__0__Impl_in_rule__World__Group__01858 = new BitSet(new long[]{0x000000003FFFF812L});
+    public static final BitSet FOLLOW_rule__World__Group__1_in_rule__World__Group__01861 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__World__Group__1__Impl_in_rule__World__Group__11919 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__World__Alternatives_1_in_rule__World__Group__1__Impl1946 = new BitSet(new long[]{0x000000003FFFF812L});
+    public static final BitSet FOLLOW_rule__Goal__Group_0__0__Impl_in_rule__Goal__Group_0__01981 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_rule__Goal__Group_0__1_in_rule__Goal__Group_0__01984 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Goal__NameAssignment_0_0_in_rule__Goal__Group_0__0__Impl2011 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Goal__Group_0__1__Impl_in_rule__Goal__Group_0__12041 = new BitSet(new long[]{0x0000000100000032L});
+    public static final BitSet FOLLOW_rule__Goal__Group_0__2_in_rule__Goal__Group_0__12044 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Goal__TypeAssignment_0_1_in_rule__Goal__Group_0__1__Impl2071 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Goal__Group_0__2__Impl_in_rule__Goal__Group_0__22101 = new BitSet(new long[]{0x0000000100000022L});
+    public static final BitSet FOLLOW_rule__Goal__Group_0__3_in_rule__Goal__Group_0__22104 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Goal__AssetAssignment_0_2_in_rule__Goal__Group_0__2__Impl2131 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Goal__Group_0__3__Impl_in_rule__Goal__Group_0__32162 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Goal__Group_0_3__0_in_rule__Goal__Group_0__3__Impl2189 = new BitSet(new long[]{0x0000000100000022L});
+    public static final BitSet FOLLOW_rule__Goal__Group_0_3__0__Impl_in_rule__Goal__Group_0_3__02228 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Goal__Group_0_3__1_in_rule__Goal__Group_0_3__02231 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Goal__Group_0_3__0__Impl2260 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Goal__Group_0_3__1__Impl_in_rule__Goal__Group_0_3__12293 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Goal__PropertiesAssignment_0_3_1_in_rule__Goal__Group_0_3__1__Impl2320 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SecurityGoal__Group__0__Impl_in_rule__SecurityGoal__Group__02354 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_rule__SecurityGoal__Group__1_in_rule__SecurityGoal__Group__02357 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SecurityGoal__NameAssignment_0_in_rule__SecurityGoal__Group__0__Impl2384 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SecurityGoal__Group__1__Impl_in_rule__SecurityGoal__Group__12414 = new BitSet(new long[]{0x0000000100000032L});
+    public static final BitSet FOLLOW_rule__SecurityGoal__Group__2_in_rule__SecurityGoal__Group__12417 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SecurityGoal__TypeAssignment_1_in_rule__SecurityGoal__Group__1__Impl2444 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SecurityGoal__Group__2__Impl_in_rule__SecurityGoal__Group__22474 = new BitSet(new long[]{0x0000000100000022L});
+    public static final BitSet FOLLOW_rule__SecurityGoal__Group__3_in_rule__SecurityGoal__Group__22477 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SecurityGoal__AssetAssignment_2_in_rule__SecurityGoal__Group__2__Impl2504 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SecurityGoal__Group__3__Impl_in_rule__SecurityGoal__Group__32535 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SecurityGoal__Group_3__0_in_rule__SecurityGoal__Group__3__Impl2562 = new BitSet(new long[]{0x0000000100000022L});
+    public static final BitSet FOLLOW_rule__SecurityGoal__Group_3__0__Impl_in_rule__SecurityGoal__Group_3__02601 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__SecurityGoal__Group_3__1_in_rule__SecurityGoal__Group_3__02604 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__SecurityGoal__Group_3__0__Impl2633 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SecurityGoal__Group_3__1__Impl_in_rule__SecurityGoal__Group_3__12666 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SecurityGoal__PropertiesAssignment_3_1_in_rule__SecurityGoal__Group_3__1__Impl2693 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Requirement__Group__0__Impl_in_rule__Requirement__Group__02727 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_rule__Requirement__Group__1_in_rule__Requirement__Group__02730 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Requirement__NameAssignment_0_in_rule__Requirement__Group__0__Impl2757 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Requirement__Group__1__Impl_in_rule__Requirement__Group__12787 = new BitSet(new long[]{0x0000000100000032L});
+    public static final BitSet FOLLOW_rule__Requirement__Group__2_in_rule__Requirement__Group__12790 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Requirement__TypeAssignment_1_in_rule__Requirement__Group__1__Impl2817 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Requirement__Group__2__Impl_in_rule__Requirement__Group__22847 = new BitSet(new long[]{0x0000000100000022L});
+    public static final BitSet FOLLOW_rule__Requirement__Group__3_in_rule__Requirement__Group__22850 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Requirement__AssetAssignment_2_in_rule__Requirement__Group__2__Impl2877 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Requirement__Group__3__Impl_in_rule__Requirement__Group__32908 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Requirement__Group_3__0_in_rule__Requirement__Group__3__Impl2935 = new BitSet(new long[]{0x0000000100000022L});
+    public static final BitSet FOLLOW_rule__Requirement__Group_3__0__Impl_in_rule__Requirement__Group_3__02974 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Requirement__Group_3__1_in_rule__Requirement__Group_3__02977 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Requirement__Group_3__0__Impl3006 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Requirement__Group_3__1__Impl_in_rule__Requirement__Group_3__13039 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Requirement__PropertiesAssignment_3_1_in_rule__Requirement__Group_3__1__Impl3066 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Domain__Group_0__0__Impl_in_rule__Domain__Group_0__03100 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_rule__Domain__Group_0__1_in_rule__Domain__Group_0__03103 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Domain__NameAssignment_0_0_in_rule__Domain__Group_0__0__Impl3130 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Domain__Group_0__1__Impl_in_rule__Domain__Group_0__13160 = new BitSet(new long[]{0x0000000100000032L});
+    public static final BitSet FOLLOW_rule__Domain__Group_0__2_in_rule__Domain__Group_0__13163 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Domain__TypeAssignment_0_1_in_rule__Domain__Group_0__1__Impl3190 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Domain__Group_0__2__Impl_in_rule__Domain__Group_0__23220 = new BitSet(new long[]{0x0000000100000022L});
+    public static final BitSet FOLLOW_rule__Domain__Group_0__3_in_rule__Domain__Group_0__23223 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Domain__AssetAssignment_0_2_in_rule__Domain__Group_0__2__Impl3250 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Domain__Group_0__3__Impl_in_rule__Domain__Group_0__33281 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Domain__Group_0_3__0_in_rule__Domain__Group_0__3__Impl3308 = new BitSet(new long[]{0x0000000100000022L});
+    public static final BitSet FOLLOW_rule__Domain__Group_0_3__0__Impl_in_rule__Domain__Group_0_3__03347 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Domain__Group_0_3__1_in_rule__Domain__Group_0_3__03350 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Domain__Group_0_3__0__Impl3379 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Domain__Group_0_3__1__Impl_in_rule__Domain__Group_0_3__13412 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Domain__PropertiesAssignment_0_3_1_in_rule__Domain__Group_0_3__1__Impl3439 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Asset__Group__0__Impl_in_rule__Asset__Group__03473 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_rule__Asset__Group__1_in_rule__Asset__Group__03476 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Asset__NameAssignment_0_in_rule__Asset__Group__0__Impl3503 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Asset__Group__1__Impl_in_rule__Asset__Group__13533 = new BitSet(new long[]{0x0000000000000022L});
+    public static final BitSet FOLLOW_rule__Asset__Group__2_in_rule__Asset__Group__13536 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__Asset__Group__1__Impl3564 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Asset__Group__2__Impl_in_rule__Asset__Group__23595 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Asset__ValueAssignment_2_in_rule__Asset__Group__2__Impl3622 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Actor__Group__0__Impl_in_rule__Actor__Group__03659 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_rule__Actor__Group__1_in_rule__Actor__Group__03662 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Actor__NameAssignment_0_in_rule__Actor__Group__0__Impl3689 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Actor__Group__1__Impl_in_rule__Actor__Group__13719 = new BitSet(new long[]{0x0000000100000032L});
+    public static final BitSet FOLLOW_rule__Actor__Group__2_in_rule__Actor__Group__13722 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Actor__TypeAssignment_1_in_rule__Actor__Group__1__Impl3749 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Actor__Group__2__Impl_in_rule__Actor__Group__23779 = new BitSet(new long[]{0x0000000100000022L});
+    public static final BitSet FOLLOW_rule__Actor__Group__3_in_rule__Actor__Group__23782 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Actor__AssetAssignment_2_in_rule__Actor__Group__2__Impl3809 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Actor__Group__3__Impl_in_rule__Actor__Group__33840 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Actor__Group_3__0_in_rule__Actor__Group__3__Impl3867 = new BitSet(new long[]{0x0000000100000022L});
+    public static final BitSet FOLLOW_rule__Actor__Group_3__0__Impl_in_rule__Actor__Group_3__03906 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Actor__Group_3__1_in_rule__Actor__Group_3__03909 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Actor__Group_3__0__Impl3938 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Actor__Group_3__1__Impl_in_rule__Actor__Group_3__13971 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Actor__PropertiesAssignment_3_1_in_rule__Actor__Group_3__1__Impl3998 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Action__Group__0__Impl_in_rule__Action__Group__04032 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_rule__Action__Group__1_in_rule__Action__Group__04035 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Action__NameAssignment_0_in_rule__Action__Group__0__Impl4062 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Action__Group__1__Impl_in_rule__Action__Group__14092 = new BitSet(new long[]{0x0000000100000032L});
+    public static final BitSet FOLLOW_rule__Action__Group__2_in_rule__Action__Group__14095 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Action__TypeAssignment_1_in_rule__Action__Group__1__Impl4122 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Action__Group__2__Impl_in_rule__Action__Group__24152 = new BitSet(new long[]{0x0000000100000022L});
+    public static final BitSet FOLLOW_rule__Action__Group__3_in_rule__Action__Group__24155 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Action__AssetAssignment_2_in_rule__Action__Group__2__Impl4182 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Action__Group__3__Impl_in_rule__Action__Group__34213 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Action__Group_3__0_in_rule__Action__Group__3__Impl4240 = new BitSet(new long[]{0x0000000100000022L});
+    public static final BitSet FOLLOW_rule__Action__Group_3__0__Impl_in_rule__Action__Group_3__04279 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Action__Group_3__1_in_rule__Action__Group_3__04282 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Action__Group_3__0__Impl4311 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Action__Group_3__1__Impl_in_rule__Action__Group_3__14344 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Action__PropertiesAssignment_3_1_in_rule__Action__Group_3__1__Impl4371 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Resource__Group__0__Impl_in_rule__Resource__Group__04405 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_rule__Resource__Group__1_in_rule__Resource__Group__04408 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Resource__NameAssignment_0_in_rule__Resource__Group__0__Impl4435 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Resource__Group__1__Impl_in_rule__Resource__Group__14465 = new BitSet(new long[]{0x0000000100000032L});
+    public static final BitSet FOLLOW_rule__Resource__Group__2_in_rule__Resource__Group__14468 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Resource__TypeAssignment_1_in_rule__Resource__Group__1__Impl4495 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Resource__Group__2__Impl_in_rule__Resource__Group__24525 = new BitSet(new long[]{0x0000000100000022L});
+    public static final BitSet FOLLOW_rule__Resource__Group__3_in_rule__Resource__Group__24528 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Resource__AssetAssignment_2_in_rule__Resource__Group__2__Impl4555 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Resource__Group__3__Impl_in_rule__Resource__Group__34586 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Resource__Group_3__0_in_rule__Resource__Group__3__Impl4613 = new BitSet(new long[]{0x0000000100000022L});
+    public static final BitSet FOLLOW_rule__Resource__Group_3__0__Impl_in_rule__Resource__Group_3__04652 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Resource__Group_3__1_in_rule__Resource__Group_3__04655 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Resource__Group_3__0__Impl4684 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Resource__Group_3__1__Impl_in_rule__Resource__Group_3__14717 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Resource__PropertiesAssignment_3_1_in_rule__Resource__Group_3__1__Impl4744 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relationship__Group__0__Impl_in_rule__Relationship__Group__04778 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_rule__Relationship__Group__1_in_rule__Relationship__Group__04781 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relationship__TypeAssignment_0_in_rule__Relationship__Group__0__Impl4808 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relationship__Group__1__Impl_in_rule__Relationship__Group__14838 = new BitSet(new long[]{0x0000000900000010L});
+    public static final BitSet FOLLOW_rule__Relationship__Group__2_in_rule__Relationship__Group__14841 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__Relationship__Group__1__Impl4869 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relationship__Group__2__Impl_in_rule__Relationship__Group__24900 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_rule__Relationship__Group__3_in_rule__Relationship__Group__24903 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relationship__Group_2__0_in_rule__Relationship__Group__2__Impl4930 = new BitSet(new long[]{0x0000000100000012L});
+    public static final BitSet FOLLOW_rule__Relationship__Group__3__Impl_in_rule__Relationship__Group__34961 = new BitSet(new long[]{0x0000000100000022L});
+    public static final BitSet FOLLOW_rule__Relationship__Group__4_in_rule__Relationship__Group__34964 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__Relationship__Group__3__Impl4992 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relationship__Group__4__Impl_in_rule__Relationship__Group__45023 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relationship__Group_4__0_in_rule__Relationship__Group__4__Impl5050 = new BitSet(new long[]{0x0000000100000022L});
+    public static final BitSet FOLLOW_rule__Relationship__Group_2__0__Impl_in_rule__Relationship__Group_2__05091 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Relationship__Group_2__1_in_rule__Relationship__Group_2__05094 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Relationship__Group_2__0__Impl5123 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relationship__Group_2__1__Impl_in_rule__Relationship__Group_2__15156 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relationship__EntitiesAssignment_2_1_in_rule__Relationship__Group_2__1__Impl5183 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relationship__Group_4__0__Impl_in_rule__Relationship__Group_4__05217 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Relationship__Group_4__1_in_rule__Relationship__Group_4__05220 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Relationship__Group_4__0__Impl5249 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relationship__Group_4__1__Impl_in_rule__Relationship__Group_4__15282 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relationship__PropertiesAssignment_4_1_in_rule__Relationship__Group_4__1__Impl5309 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Situation__TimeAssignment_0_15348 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWorld_in_rule__Situation__WorldAssignment_15379 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEntity_in_rule__World__EntitiesAssignment_1_05410 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRelationship_in_rule__World__RelationshipsAssignment_1_15441 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Goal__NameAssignment_0_05472 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__Goal__TypeAssignment_0_15508 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAsset_in_rule__Goal__AssetAssignment_0_25547 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProposition_in_rule__Goal__PropertiesAssignment_0_3_15578 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SecurityGoal__NameAssignment_05609 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_rule__SecurityGoal__TypeAssignment_15645 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAsset_in_rule__SecurityGoal__AssetAssignment_25684 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProposition_in_rule__SecurityGoal__PropertiesAssignment_3_15715 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Requirement__NameAssignment_05746 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_rule__Requirement__TypeAssignment_15782 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAsset_in_rule__Requirement__AssetAssignment_25821 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProposition_in_rule__Requirement__PropertiesAssignment_3_15852 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Domain__NameAssignment_0_05883 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_rule__Domain__TypeAssignment_0_15919 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAsset_in_rule__Domain__AssetAssignment_0_25958 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProposition_in_rule__Domain__PropertiesAssignment_0_3_15989 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Asset__NameAssignment_06020 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Asset__ValueAssignment_26051 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Actor__NameAssignment_06082 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__Actor__TypeAssignment_16118 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAsset_in_rule__Actor__AssetAssignment_26157 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProposition_in_rule__Actor__PropertiesAssignment_3_16188 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Action__NameAssignment_06219 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__Action__TypeAssignment_16255 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAsset_in_rule__Action__AssetAssignment_26294 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProposition_in_rule__Action__PropertiesAssignment_3_16325 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Resource__NameAssignment_06356 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_rule__Resource__TypeAssignment_16392 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAsset_in_rule__Resource__AssetAssignment_26431 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProposition_in_rule__Resource__PropertiesAssignment_3_16462 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Proposition__NameAssignment6493 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRelType_in_rule__Relationship__TypeAssignment_06524 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Relationship__EntitiesAssignment_2_16559 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProposition_in_rule__Relationship__PropertiesAssignment_4_16594 = new BitSet(new long[]{0x0000000000000002L});
 
 }
