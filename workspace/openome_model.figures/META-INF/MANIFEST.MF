@@ -12,9 +12,9 @@ Bundle-Vendor: %providerName
 Bundle-Version: 1.0.0
 Bundle-ManifestVersion: 2
 Bundle-Activator: openome_model.figures.activator.PluginActivator
+Bundle-SymbolicName: openome_model.figures;singleton:=true
 Import-Package: org.eclipse.gef,org.eclipse.gef.handles,org.eclipse.ge
  f.tools,org.eclipse.gmf.runtime.diagram.ui.editpolicies,org.eclipse.g
  mf.runtime.diagram.ui.figures
-Bundle-SymbolicName: openome_model.figures;singleton:=true
 
 
