@@ -26,7 +26,7 @@ import org.eclipse.gmf.runtime.notation.View;
 /**
  * @generated
  */
-public class UnknownContributionEditPart extends ConnectionNodeEditPart
+public class UnknownContributionEditPart extends CustomConnectionNodeEditPart
 		implements ITreeBranchEditPart {
 
 	/**
@@ -71,27 +71,7 @@ public class UnknownContributionEditPart extends ConnectionNodeEditPart
 		if (addFixedChild(childEditPart)) {
 			return;
 		}
-		super.addChildVisual(childEditPart, index);
-	}
-
-	/**
-	 * @generated
-	 */
-	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.UnknownContributionContributionTypeEditPart) {
-			return true;
-		}
-		return false;
-	}
-
-	/**
-	 * @generated
-	 */
-	protected void removeChildVisual(EditPart childEditPart) {
-		if (removeFixedChild(childEditPart)) {
-			return;
-		}
-		super.removeChildVisual(childEditPart);
+		super.addChildVisual(childEditPart, -1);
 	}
 
 	/**
@@ -113,20 +93,19 @@ public class UnknownContributionEditPart extends ConnectionNodeEditPart
 	public UnknownContributionFigure getPrimaryShape() {
 		return (UnknownContributionFigure) getFigure();
 	}
-
+	
 	/**
 	 * Make this line straight
 	 */
-	public void straightenLine() {
+	public void straightenLine(){
 		// Straighten the connector figure
 		getPrimaryShape().straightenLine();
-
+		
 		// Now update the Bendpoints list to 0, since a  straight line has no bendpoint
 		// otherwise next time the line get refreshed the straight effect would be nullified
-		RelativeBendpoints bendpoints = (RelativeBendpoints) getEdge()
-				.getBendpoints();
-		ArrayList<RelativeBendpoints> emptyList = new ArrayList<RelativeBendpoints>();
-
+		RelativeBendpoints bendpoints = (RelativeBendpoints) getEdge().getBendpoints();
+		ArrayList <RelativeBendpoints> emptyList = new ArrayList<RelativeBendpoints>();
+		
 		// Update the Bendpoint collection in such a way that no odd notification is given
 		bendpoints.eSetDeliver(false);
 		bendpoints.setPoints(emptyList);
@@ -152,7 +131,7 @@ public class UnknownContributionEditPart extends ConnectionNodeEditPart
 			createContents();
 			setTargetDecoration(createTargetDecoration());
 		}
-
+		
 		/**
 		 * Straighten the connector so that there are no bends or curves
 		 */
@@ -160,12 +139,12 @@ public class UnknownContributionEditPart extends ConnectionNodeEditPart
 
 			// straighten the line by simply redefining a brand new routing
 			// constraint, that contains only the source and target points
-
+			
 			Point sourcePoint = this.getPoints().getFirstPoint();
 			Point targetPoint = this.getPoints().getLastPoint();
-
+			
 			ArrayList<AbsoluteBendpoint> list = new ArrayList<AbsoluteBendpoint>();
-
+			
 			list.add(new AbsoluteBendpoint(sourcePoint));
 			list.add(new AbsoluteBendpoint(targetPoint));
 			this.setRoutingConstraint(list);
@@ -183,17 +162,17 @@ public class UnknownContributionEditPart extends ConnectionNodeEditPart
 			this.add(fFigureUnknownContributionLabel);
 
 		}
-
-		//		NOTE: Not sure why links are always set to visible, for now will set it to normal (last revision: changeset 1275)
-		//		/**
-		//		 * *** NOTE: This method has been overridden to prevent
-		//		 * the link to be hidden. This method will always call super.setVisible(true) ***
-		//		 * @generated NOT
-		//		 */
-		//		public void setVisible(boolean newbool) {
-		//			super.setVisible(true);
-		//			this.refreshLine();
-		//		}
+		
+//		NOTE: Not sure why links are always set to visible, for now will set it to normal (last revision: changeset 1275)
+//		/**
+//		 * *** NOTE: This method has been overridden to prevent
+//		 * the link to be hidden. This method will always call super.setVisible(true) ***
+//		 * @generated NOT
+//		 */
+//		public void setVisible(boolean newbool) {
+//			super.setVisible(true);
+//			this.refreshLine();
+//		}
 
 		/**
 		 * @generated
@@ -210,12 +189,12 @@ public class UnknownContributionEditPart extends ConnectionNodeEditPart
 		public WrappingLabel getFigureUnknownContributionLabel() {
 			return fFigureUnknownContributionLabel;
 		}
-
+		
 		/**
 		 * @generated NOT
 		 */
 		public void outlineShape(Graphics g) {
-
+			
 			// determine whether or not we should draw the line (and decoration) or not..
 			// in the case where the dependency link connects 2 elements within the same
 			// container and the container is collapsed, we DO NOT draw the link
@@ -223,17 +202,17 @@ public class UnknownContributionEditPart extends ConnectionNodeEditPart
 			ConnectionAnchor sourceAnchor = this.getSourceAnchor();
 			ConnectionAnchor targetAnchor = this.getTargetAnchor();
 
-			boolean goalAnchorInSameContainerAsTargetAnchor = ((sourceAnchor instanceof GoalAnchor) && ((GoalAnchor) sourceAnchor)
-					.collapsedInSameContainerAs(targetAnchor));
+			boolean goalAnchorInSameContainerAsTargetAnchor = ((sourceAnchor instanceof GoalAnchor) 
+					&& ((GoalAnchor) sourceAnchor).collapsedInSameContainerAs(targetAnchor));
 
-			boolean softGoalAnchorInSameContainerAsTargetAnchor = ((sourceAnchor instanceof SoftgoalAnchor) && ((SoftgoalAnchor) sourceAnchor)
-					.collapsedInSameContainerAs(targetAnchor));
+			boolean softGoalAnchorInSameContainerAsTargetAnchor = ((sourceAnchor instanceof SoftgoalAnchor) 
+					&& ((SoftgoalAnchor) sourceAnchor).collapsedInSameContainerAs(targetAnchor));
 
-			boolean TaskAnchorInSameContainerAsTargetAnchor = ((sourceAnchor instanceof TaskAnchor) && ((TaskAnchor) sourceAnchor)
-					.collapsedInSameContainerAs(targetAnchor));
+			boolean TaskAnchorInSameContainerAsTargetAnchor = ((sourceAnchor instanceof TaskAnchor) 
+					&& ((TaskAnchor) sourceAnchor).collapsedInSameContainerAs(targetAnchor));
 
-			boolean ResourceAnchorInSameContainerAsTargetAnchor = ((sourceAnchor instanceof ResourceAnchor) && ((ResourceAnchor) sourceAnchor)
-					.collapsedInSameContainerAs(targetAnchor));
+			boolean ResourceAnchorInSameContainerAsTargetAnchor = ((sourceAnchor instanceof ResourceAnchor) 
+					&& ((ResourceAnchor) sourceAnchor).collapsedInSameContainerAs(targetAnchor));
 
 			// search for the contribution text (wrapping label)..
 			// depend on whehter it is connecting intentions within the same
@@ -243,10 +222,10 @@ public class UnknownContributionEditPart extends ConnectionNodeEditPart
 			for (int i = 0; i < listOfChildren.size(); i++) {
 				Object currentChild = listOfChildren.get(i);
 				if (currentChild instanceof WrappingLabel) {
-					label = (WrappingLabel) currentChild;
+					label = (WrappingLabel)currentChild;
 				}
 			}
-
+			
 			if (goalAnchorInSameContainerAsTargetAnchor
 					|| softGoalAnchorInSameContainerAsTargetAnchor
 					|| TaskAnchorInSameContainerAsTargetAnchor

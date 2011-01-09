@@ -7,7 +7,7 @@ package edu.toronto.cs.openome_model.provider;
 
 
 import edu.toronto.cs.openome_model.Agent;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -78,7 +78,7 @@ public class AgentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Agent_plays_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Agent_plays_feature", "_UI_Agent_type"),
-				 openome_modelPackage.Literals.AGENT__PLAYS,
+				 Openome_modelPackage.Literals.AGENT__PLAYS,
 				 true,
 				 false,
 				 true,
@@ -100,7 +100,7 @@ public class AgentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Agent_occupies_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Agent_occupies_feature", "_UI_Agent_type"),
-				 openome_modelPackage.Literals.AGENT__OCCUPIES,
+				 Openome_modelPackage.Literals.AGENT__OCCUPIES,
 				 true,
 				 false,
 				 true,
@@ -122,7 +122,7 @@ public class AgentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Agent_ins_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Agent_ins_feature", "_UI_Agent_type"),
-				 openome_modelPackage.Literals.AGENT__INS,
+				 Openome_modelPackage.Literals.AGENT__INS,
 				 true,
 				 false,
 				 true,

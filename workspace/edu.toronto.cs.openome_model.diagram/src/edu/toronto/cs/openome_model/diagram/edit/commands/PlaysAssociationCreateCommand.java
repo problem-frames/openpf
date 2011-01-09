@@ -67,9 +67,9 @@ public class PlaysAssociationCreateCommand extends EditElementCommand {
 		if (getContainer() == null) {
 			return false;
 		}
-		return edu.toronto.cs.openome_model.diagram.edit.policies.Openome_modelBaseItemSemanticEditPolicy
-				.getLinkConstraints().canCreatePlaysAssociation_3017(
-						getContainer(), getSource(), getTarget());
+		return edu.toronto.cs.openome_model.diagram.edit.policies.Openome_modelBaseItemSemanticEditPolicy.LinkConstraints
+				.canCreatePlaysAssociation_3017(getContainer(), getSource(),
+						getTarget());
 	}
 
 	/**
@@ -82,7 +82,7 @@ public class PlaysAssociationCreateCommand extends EditElementCommand {
 					"Invalid arguments in create link command"); //$NON-NLS-1$
 		}
 
-		edu.toronto.cs.openome_model.PlaysAssociation newElement = edu.toronto.cs.openome_model.openome_modelFactory.eINSTANCE
+		edu.toronto.cs.openome_model.PlaysAssociation newElement = edu.toronto.cs.openome_model.Openome_modelFactory.eINSTANCE
 				.createPlaysAssociation();
 		getContainer().getAssociations().add(newElement);
 		newElement.setSource(getSource());

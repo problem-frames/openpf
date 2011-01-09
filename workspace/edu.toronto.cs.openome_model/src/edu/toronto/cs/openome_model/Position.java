@@ -19,18 +19,11 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see edu.toronto.cs.openome_model.openome_modelPackage#getPosition()
+ * @see edu.toronto.cs.openome_model.Openome_modelPackage#getPosition()
  * @model
  * @generated
  */
 public interface Position extends Container {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Copyright 2001-2008 University of Toronto";
-
 	/**
 	 * Returns the value of the '<em><b>Covers</b></em>' reference list.
 	 * The list contents are of type {@link edu.toronto.cs.openome_model.Role}.
@@ -41,7 +34,7 @@ public interface Position extends Container {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Covers</em>' reference list.
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getPosition_Covers()
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getPosition_Covers()
 	 * @model
 	 * @generated
 	 */

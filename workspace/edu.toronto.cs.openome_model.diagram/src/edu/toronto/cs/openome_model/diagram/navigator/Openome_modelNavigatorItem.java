@@ -78,9 +78,10 @@ public class Openome_modelNavigatorItem
 		if (obj instanceof edu.toronto.cs.openome_model.diagram.navigator.Openome_modelNavigatorItem) {
 			return EcoreUtil
 					.getURI(getView())
-					.equals(EcoreUtil
-							.getURI(((edu.toronto.cs.openome_model.diagram.navigator.Openome_modelNavigatorItem) obj)
-									.getView()));
+					.equals(
+							EcoreUtil
+									.getURI(((edu.toronto.cs.openome_model.diagram.navigator.Openome_modelNavigatorItem) obj)
+											.getView()));
 		}
 		return super.equals(obj);
 	}

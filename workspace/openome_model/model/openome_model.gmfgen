@@ -5,9 +5,7 @@
     xmlns:gmfgen="http://www.eclipse.org/gmf/2009/GenModel">
   <gmfgen:GenEditorGenerator
       diagramFileExtension="ood"
-      domainFileExtension="oom"
-      dynamicTemplates="true"
-      templateDirectory="/openome_model/templates">
+      domainFileExtension="oom">
     <diagram
         visualID="79"
         editPartClassName="ModelEditPart"
@@ -2854,9 +2852,7 @@
             kind="Pathmaps"/>
       </preferencePages>
     </diagram>
-    <plugin>
-      <requiredPlugins>org.eclipse.xtext.gmf.glue</requiredPlugins>
-    </plugin>
+    <plugin/>
     <editor/>
     <navigator>
       <childReferences

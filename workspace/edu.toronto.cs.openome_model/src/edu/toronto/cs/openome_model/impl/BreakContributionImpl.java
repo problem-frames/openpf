@@ -6,7 +6,7 @@
 package edu.toronto.cs.openome_model.impl;
 
 import edu.toronto.cs.openome_model.BreakContribution;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -24,13 +24,6 @@ import org.eclipse.emf.ecore.EClass;
  * @generated
  */
 public class BreakContributionImpl extends ContributionImpl implements BreakContribution {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Copyright 2001-2008 University of Toronto";
-
 	/**
 	 * The default value of the '{@link #getContributionType() <em>Contribution Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -67,7 +60,7 @@ public class BreakContributionImpl extends ContributionImpl implements BreakCont
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return openome_modelPackage.Literals.BREAK_CONTRIBUTION;
+		return Openome_modelPackage.Literals.BREAK_CONTRIBUTION;
 	}
 
 	/**
@@ -87,7 +80,7 @@ public class BreakContributionImpl extends ContributionImpl implements BreakCont
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case openome_modelPackage.BREAK_CONTRIBUTION__CONTRIBUTION_TYPE:
+			case Openome_modelPackage.BREAK_CONTRIBUTION__CONTRIBUTION_TYPE:
 				return getContributionType();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -101,7 +94,7 @@ public class BreakContributionImpl extends ContributionImpl implements BreakCont
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case openome_modelPackage.BREAK_CONTRIBUTION__CONTRIBUTION_TYPE:
+			case Openome_modelPackage.BREAK_CONTRIBUTION__CONTRIBUTION_TYPE:
 				return CONTRIBUTION_TYPE_EDEFAULT == null ? contributionType != null : !CONTRIBUTION_TYPE_EDEFAULT.equals(contributionType);
 		}
 		return super.eIsSet(featureID);

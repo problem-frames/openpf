@@ -21,12 +21,11 @@ import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameDescriptionRoundExp2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameDescriptionRoundExp3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameDescriptionRoundExpEditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentOrigin2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentOriginEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesEditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesNameEditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesRebuttalEditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesRebuttalExternalLabelEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.RebutsEditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.WrappingLabel2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.WrappingLabelEditPart;
 
 /**
@@ -276,8 +275,8 @@ public class ArgumentVisualIDRegistry {
 				return true;
 			}
 			break;
-		case MitigatesRebuttalEditPart.VISUAL_ID:
-			if (MitigatesRebuttalExternalLabelEditPart.VISUAL_ID == nodeVisualID) {
+		case ArgumentOrigin2EditPart.VISUAL_ID:
+			if (WrappingLabel2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;

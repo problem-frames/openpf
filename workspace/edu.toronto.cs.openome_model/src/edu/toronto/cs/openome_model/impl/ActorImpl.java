@@ -7,7 +7,7 @@ package edu.toronto.cs.openome_model.impl;
 
 import edu.toronto.cs.openome_model.Actor;
 import edu.toronto.cs.openome_model.Belief;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 
 import java.util.Collection;
 
@@ -33,13 +33,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * @generated
  */
 public class ActorImpl extends ContainerImpl implements Actor {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Copyright 2001-2008 University of Toronto";
-
 	/**
 	 * The cached value of the '{@link #getIs_a() <em>Is a</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -86,7 +79,7 @@ public class ActorImpl extends ContainerImpl implements Actor {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return openome_modelPackage.Literals.ACTOR;
+		return Openome_modelPackage.Literals.ACTOR;
 	}
 
 	/**
@@ -96,7 +89,7 @@ public class ActorImpl extends ContainerImpl implements Actor {
 	 */
 	public EList<Actor> getIs_a() {
 		if (is_a == null) {
-			is_a = new EObjectResolvingEList<Actor>(Actor.class, this, openome_modelPackage.ACTOR__IS_A);
+			is_a = new EObjectResolvingEList<Actor>(Actor.class, this, Openome_modelPackage.ACTOR__IS_A);
 		}
 		return is_a;
 	}
@@ -108,7 +101,7 @@ public class ActorImpl extends ContainerImpl implements Actor {
 	 */
 	public EList<Actor> getIs_part_of() {
 		if (is_part_of == null) {
-			is_part_of = new EObjectResolvingEList<Actor>(Actor.class, this, openome_modelPackage.ACTOR__IS_PART_OF);
+			is_part_of = new EObjectResolvingEList<Actor>(Actor.class, this, Openome_modelPackage.ACTOR__IS_PART_OF);
 		}
 		return is_part_of;
 	}
@@ -120,7 +113,7 @@ public class ActorImpl extends ContainerImpl implements Actor {
 	 */
 	public EList<Belief> getBelieves() {
 		if (believes == null) {
-			believes = new EObjectResolvingEList<Belief>(Belief.class, this, openome_modelPackage.ACTOR__BELIEVES);
+			believes = new EObjectResolvingEList<Belief>(Belief.class, this, Openome_modelPackage.ACTOR__BELIEVES);
 		}
 		return believes;
 	}
@@ -133,11 +126,11 @@ public class ActorImpl extends ContainerImpl implements Actor {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case openome_modelPackage.ACTOR__IS_A:
+			case Openome_modelPackage.ACTOR__IS_A:
 				return getIs_a();
-			case openome_modelPackage.ACTOR__IS_PART_OF:
+			case Openome_modelPackage.ACTOR__IS_PART_OF:
 				return getIs_part_of();
-			case openome_modelPackage.ACTOR__BELIEVES:
+			case Openome_modelPackage.ACTOR__BELIEVES:
 				return getBelieves();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -152,15 +145,15 @@ public class ActorImpl extends ContainerImpl implements Actor {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case openome_modelPackage.ACTOR__IS_A:
+			case Openome_modelPackage.ACTOR__IS_A:
 				getIs_a().clear();
 				getIs_a().addAll((Collection<? extends Actor>)newValue);
 				return;
-			case openome_modelPackage.ACTOR__IS_PART_OF:
+			case Openome_modelPackage.ACTOR__IS_PART_OF:
 				getIs_part_of().clear();
 				getIs_part_of().addAll((Collection<? extends Actor>)newValue);
 				return;
-			case openome_modelPackage.ACTOR__BELIEVES:
+			case Openome_modelPackage.ACTOR__BELIEVES:
 				getBelieves().clear();
 				getBelieves().addAll((Collection<? extends Belief>)newValue);
 				return;
@@ -176,13 +169,13 @@ public class ActorImpl extends ContainerImpl implements Actor {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case openome_modelPackage.ACTOR__IS_A:
+			case Openome_modelPackage.ACTOR__IS_A:
 				getIs_a().clear();
 				return;
-			case openome_modelPackage.ACTOR__IS_PART_OF:
+			case Openome_modelPackage.ACTOR__IS_PART_OF:
 				getIs_part_of().clear();
 				return;
-			case openome_modelPackage.ACTOR__BELIEVES:
+			case Openome_modelPackage.ACTOR__BELIEVES:
 				getBelieves().clear();
 				return;
 		}
@@ -197,11 +190,11 @@ public class ActorImpl extends ContainerImpl implements Actor {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case openome_modelPackage.ACTOR__IS_A:
+			case Openome_modelPackage.ACTOR__IS_A:
 				return is_a != null && !is_a.isEmpty();
-			case openome_modelPackage.ACTOR__IS_PART_OF:
+			case Openome_modelPackage.ACTOR__IS_PART_OF:
 				return is_part_of != null && !is_part_of.isEmpty();
-			case openome_modelPackage.ACTOR__BELIEVES:
+			case Openome_modelPackage.ACTOR__BELIEVES:
 				return believes != null && !believes.isEmpty();
 		}
 		return super.eIsSet(featureID);

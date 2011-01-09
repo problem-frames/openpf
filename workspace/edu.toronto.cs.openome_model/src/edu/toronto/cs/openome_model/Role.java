@@ -12,17 +12,10 @@ package edu.toronto.cs.openome_model;
  * <!-- end-user-doc -->
  *
  *
- * @see edu.toronto.cs.openome_model.openome_modelPackage#getRole()
+ * @see edu.toronto.cs.openome_model.Openome_modelPackage#getRole()
  * @model
  * @generated
  */
 public interface Role extends Container {
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Copyright 2001-2008 University of Toronto";
 
 } // Role

@@ -7,8 +7,8 @@ package edu.toronto.cs.openome_model.provider;
 
 
 import edu.toronto.cs.openome_model.Intention;
-import edu.toronto.cs.openome_model.openome_modelFactory;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelFactory;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -96,7 +96,7 @@ public class IntentionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Intention_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Intention_name_feature", "_UI_Intention_type"),
-				 openome_modelPackage.Literals.INTENTION__NAME,
+				 Openome_modelPackage.Literals.INTENTION__NAME,
 				 true,
 				 false,
 				 false,
@@ -118,7 +118,7 @@ public class IntentionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Intention_system_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Intention_system_feature", "_UI_Intention_type"),
-				 openome_modelPackage.Literals.INTENTION__SYSTEM,
+				 Openome_modelPackage.Literals.INTENTION__SYSTEM,
 				 true,
 				 false,
 				 false,
@@ -140,7 +140,7 @@ public class IntentionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Intention_boundary_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Intention_boundary_feature", "_UI_Intention_type"),
-				 openome_modelPackage.Literals.INTENTION__BOUNDARY,
+				 Openome_modelPackage.Literals.INTENTION__BOUNDARY,
 				 true,
 				 false,
 				 false,
@@ -162,7 +162,7 @@ public class IntentionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Intention_exclusive_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Intention_exclusive_feature", "_UI_Intention_type"),
-				 openome_modelPackage.Literals.INTENTION__EXCLUSIVE,
+				 Openome_modelPackage.Literals.INTENTION__EXCLUSIVE,
 				 true,
 				 false,
 				 false,
@@ -184,7 +184,7 @@ public class IntentionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Intention_sequential_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Intention_sequential_feature", "_UI_Intention_type"),
-				 openome_modelPackage.Literals.INTENTION__SEQUENTIAL,
+				 Openome_modelPackage.Literals.INTENTION__SEQUENTIAL,
 				 true,
 				 false,
 				 false,
@@ -206,7 +206,7 @@ public class IntentionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Intention_parallel_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Intention_parallel_feature", "_UI_Intention_type"),
-				 openome_modelPackage.Literals.INTENTION__PARALLEL,
+				 Openome_modelPackage.Literals.INTENTION__PARALLEL,
 				 true,
 				 false,
 				 false,
@@ -228,7 +228,7 @@ public class IntentionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Intention_decompositions_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Intention_decompositions_feature", "_UI_Intention_type"),
-				 openome_modelPackage.Literals.INTENTION__DECOMPOSITIONS,
+				 Openome_modelPackage.Literals.INTENTION__DECOMPOSITIONS,
 				 true,
 				 false,
 				 true,
@@ -250,7 +250,7 @@ public class IntentionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Intention_parentDecompositions_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Intention_parentDecompositions_feature", "_UI_Intention_type"),
-				 openome_modelPackage.Literals.INTENTION__PARENT_DECOMPOSITIONS,
+				 Openome_modelPackage.Literals.INTENTION__PARENT_DECOMPOSITIONS,
 				 true,
 				 false,
 				 true,
@@ -272,7 +272,7 @@ public class IntentionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Intention_qualitativeReasoningCombinedLabel_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Intention_qualitativeReasoningCombinedLabel_feature", "_UI_Intention_type"),
-				 openome_modelPackage.Literals.INTENTION__QUALITATIVE_REASONING_COMBINED_LABEL,
+				 Openome_modelPackage.Literals.INTENTION__QUALITATIVE_REASONING_COMBINED_LABEL,
 				 true,
 				 false,
 				 false,
@@ -294,7 +294,7 @@ public class IntentionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Intention_qualitativeReasoningSatisfiedLabel_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Intention_qualitativeReasoningSatisfiedLabel_feature", "_UI_Intention_type"),
-				 openome_modelPackage.Literals.INTENTION__QUALITATIVE_REASONING_SATISFIED_LABEL,
+				 Openome_modelPackage.Literals.INTENTION__QUALITATIVE_REASONING_SATISFIED_LABEL,
 				 true,
 				 false,
 				 false,
@@ -316,7 +316,7 @@ public class IntentionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Intention_qualitativeReasoningDenialLabel_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Intention_qualitativeReasoningDenialLabel_feature", "_UI_Intention_type"),
-				 openome_modelPackage.Literals.INTENTION__QUALITATIVE_REASONING_DENIAL_LABEL,
+				 Openome_modelPackage.Literals.INTENTION__QUALITATIVE_REASONING_DENIAL_LABEL,
 				 true,
 				 false,
 				 false,
@@ -338,7 +338,7 @@ public class IntentionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Intention_quantitativeReasoningCombinedLabel_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Intention_quantitativeReasoningCombinedLabel_feature", "_UI_Intention_type"),
-				 openome_modelPackage.Literals.INTENTION__QUANTITATIVE_REASONING_COMBINED_LABEL,
+				 Openome_modelPackage.Literals.INTENTION__QUANTITATIVE_REASONING_COMBINED_LABEL,
 				 true,
 				 false,
 				 false,
@@ -360,7 +360,7 @@ public class IntentionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Intention_quantitativeReasoningDeniedLabel_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Intention_quantitativeReasoningDeniedLabel_feature", "_UI_Intention_type"),
-				 openome_modelPackage.Literals.INTENTION__QUANTITATIVE_REASONING_DENIED_LABEL,
+				 Openome_modelPackage.Literals.INTENTION__QUANTITATIVE_REASONING_DENIED_LABEL,
 				 true,
 				 false,
 				 false,
@@ -382,7 +382,7 @@ public class IntentionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Intention_quantitativeReasoningSatisfiedLabel_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Intention_quantitativeReasoningSatisfiedLabel_feature", "_UI_Intention_type"),
-				 openome_modelPackage.Literals.INTENTION__QUANTITATIVE_REASONING_SATISFIED_LABEL,
+				 Openome_modelPackage.Literals.INTENTION__QUANTITATIVE_REASONING_SATISFIED_LABEL,
 				 true,
 				 false,
 				 false,
@@ -404,7 +404,7 @@ public class IntentionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Intention_contributesTo_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Intention_contributesTo_feature", "_UI_Intention_type"),
-				 openome_modelPackage.Literals.INTENTION__CONTRIBUTES_TO,
+				 Openome_modelPackage.Literals.INTENTION__CONTRIBUTES_TO,
 				 true,
 				 false,
 				 true,
@@ -426,7 +426,7 @@ public class IntentionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Intention_contributesFrom_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Intention_contributesFrom_feature", "_UI_Intention_type"),
-				 openome_modelPackage.Literals.INTENTION__CONTRIBUTES_FROM,
+				 Openome_modelPackage.Literals.INTENTION__CONTRIBUTES_FROM,
 				 true,
 				 false,
 				 true,
@@ -447,7 +447,7 @@ public class IntentionItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(openome_modelPackage.Literals.INTENTION__PROPERTY);
+			childrenFeatures.add(Openome_modelPackage.Literals.INTENTION__PROPERTY);
 		}
 		return childrenFeatures;
 	}
@@ -502,21 +502,21 @@ public class IntentionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Intention.class)) {
-			case openome_modelPackage.INTENTION__NAME:
-			case openome_modelPackage.INTENTION__SYSTEM:
-			case openome_modelPackage.INTENTION__BOUNDARY:
-			case openome_modelPackage.INTENTION__EXCLUSIVE:
-			case openome_modelPackage.INTENTION__SEQUENTIAL:
-			case openome_modelPackage.INTENTION__PARALLEL:
-			case openome_modelPackage.INTENTION__QUALITATIVE_REASONING_COMBINED_LABEL:
-			case openome_modelPackage.INTENTION__QUALITATIVE_REASONING_SATISFIED_LABEL:
-			case openome_modelPackage.INTENTION__QUALITATIVE_REASONING_DENIAL_LABEL:
-			case openome_modelPackage.INTENTION__QUANTITATIVE_REASONING_COMBINED_LABEL:
-			case openome_modelPackage.INTENTION__QUANTITATIVE_REASONING_DENIED_LABEL:
-			case openome_modelPackage.INTENTION__QUANTITATIVE_REASONING_SATISFIED_LABEL:
+			case Openome_modelPackage.INTENTION__NAME:
+			case Openome_modelPackage.INTENTION__SYSTEM:
+			case Openome_modelPackage.INTENTION__BOUNDARY:
+			case Openome_modelPackage.INTENTION__EXCLUSIVE:
+			case Openome_modelPackage.INTENTION__SEQUENTIAL:
+			case Openome_modelPackage.INTENTION__PARALLEL:
+			case Openome_modelPackage.INTENTION__QUALITATIVE_REASONING_COMBINED_LABEL:
+			case Openome_modelPackage.INTENTION__QUALITATIVE_REASONING_SATISFIED_LABEL:
+			case Openome_modelPackage.INTENTION__QUALITATIVE_REASONING_DENIAL_LABEL:
+			case Openome_modelPackage.INTENTION__QUANTITATIVE_REASONING_COMBINED_LABEL:
+			case Openome_modelPackage.INTENTION__QUANTITATIVE_REASONING_DENIED_LABEL:
+			case Openome_modelPackage.INTENTION__QUANTITATIVE_REASONING_SATISFIED_LABEL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case openome_modelPackage.INTENTION__PROPERTY:
+			case Openome_modelPackage.INTENTION__PROPERTY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -536,8 +536,8 @@ public class IntentionItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.INTENTION__PROPERTY,
-				 openome_modelFactory.eINSTANCE.createProperty()));
+				(Openome_modelPackage.Literals.INTENTION__PROPERTY,
+				 Openome_modelFactory.eINSTANCE.createProperty()));
 	}
 
 }

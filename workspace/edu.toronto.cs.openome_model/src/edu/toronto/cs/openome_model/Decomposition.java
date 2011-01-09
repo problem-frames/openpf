@@ -20,20 +20,14 @@ package edu.toronto.cs.openome_model;
  * </ul>
  * </p>
  *
- * @see edu.toronto.cs.openome_model.openome_modelPackage#getDecomposition()
+ * @see edu.toronto.cs.openome_model.Openome_modelPackage#getDecomposition()
  * @model
  * @generated
  */
 public interface Decomposition extends Link {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Copyright 2001-2008 University of Toronto";
-
-	/**
 	 * Returns the value of the '<em><b>Source</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link edu.toronto.cs.openome_model.Intention#getDecompositions <em>Decompositions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Source</em>' reference isn't clear,
@@ -42,8 +36,9 @@ public interface Decomposition extends Link {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Source</em>' reference.
 	 * @see #setSource(Intention)
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getDecomposition_Source()
-	 * @model
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getDecomposition_Source()
+	 * @see edu.toronto.cs.openome_model.Intention#getDecompositions
+	 * @model opposite="decompositions"
 	 * @generated
 	 */
 	Intention getSource();
@@ -60,6 +55,7 @@ public interface Decomposition extends Link {
 
 	/**
 	 * Returns the value of the '<em><b>Target</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link edu.toronto.cs.openome_model.Intention#getParentDecompositions <em>Parent Decompositions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Target</em>' reference isn't clear,
@@ -68,8 +64,9 @@ public interface Decomposition extends Link {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target</em>' reference.
 	 * @see #setTarget(Intention)
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getDecomposition_Target()
-	 * @model
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getDecomposition_Target()
+	 * @see edu.toronto.cs.openome_model.Intention#getParentDecompositions
+	 * @model opposite="parentDecompositions"
 	 * @generated
 	 */
 	Intention getTarget();
@@ -95,7 +92,7 @@ public interface Decomposition extends Link {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Model</em>' container reference.
 	 * @see #setModel(Model)
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getDecomposition_Model()
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getDecomposition_Model()
 	 * @see edu.toronto.cs.openome_model.Model#getDecompositions
 	 * @model opposite="decompositions"
 	 * @generated

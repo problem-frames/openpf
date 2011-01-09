@@ -18,18 +18,11 @@ package edu.toronto.cs.openome_model;
  * </ul>
  * </p>
  *
- * @see edu.toronto.cs.openome_model.openome_modelPackage#getIsAAssociation()
+ * @see edu.toronto.cs.openome_model.Openome_modelPackage#getIsAAssociation()
  * @model
  * @generated
  */
 public interface IsAAssociation extends Association {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Copyright 2001-2008 University of Toronto";
-
 	/**
 	 * Returns the value of the '<em><b>Label</b></em>' attribute.
 	 * The default value is <code>"ISA"</code>.
@@ -40,7 +33,7 @@ public interface IsAAssociation extends Association {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Label</em>' attribute.
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getIsAAssociation_Label()
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getIsAAssociation_Label()
 	 * @model default="ISA" changeable="false"
 	 * @generated
 	 */

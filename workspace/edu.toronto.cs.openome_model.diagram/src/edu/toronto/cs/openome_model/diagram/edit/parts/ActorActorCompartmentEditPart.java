@@ -39,7 +39,7 @@ import edu.toronto.cs.openome_model.diagram.edit.parts.ActorEditPart.ActorFigure
 /**
  * @generated
  */
-public class ActorActorCompartmentEditPart extends ShapeCompartmentEditPart {
+public class ActorActorCompartmentEditPart extends CompartmentEditPart {
 
 	/**
 	 * @generated
@@ -420,8 +420,8 @@ public class ActorActorCompartmentEditPart extends ShapeCompartmentEditPart {
 				CompositeCommand compoudCommand = new CompositeCommand(
 						"collapse");
 
-				ICommand changeThisBoundsCommand = new SetBoundsCommand(
-						this.getEditingDomain(), "collapse", this.getParent(),
+				ICommand changeThisBoundsCommand = new SetBoundsCommand(this
+						.getEditingDomain(), "collapse", this.getParent(),
 						newBounds);
 
 				compoudCommand.add(changeThisBoundsCommand);
@@ -503,8 +503,8 @@ public class ActorActorCompartmentEditPart extends ShapeCompartmentEditPart {
 				CompositeCommand compoudCommand = new CompositeCommand(
 						"collapse");
 
-				ICommand changeThisBoundsCommand = new SetBoundsCommand(
-						this.getEditingDomain(), "collapse", this.getParent(),
+				ICommand changeThisBoundsCommand = new SetBoundsCommand(this
+						.getEditingDomain(), "collapse", this.getParent(),
 						newBounds);
 
 				compoudCommand.add(changeThisBoundsCommand);

@@ -80,7 +80,6 @@ public abstract class Openome_modelAbstractExpression {
 	/**
 	 * @generated
 	 */
-	@SuppressWarnings("rawtypes")
 	protected abstract Object doEvaluate(Object context, Map env);
 
 	/**
@@ -93,7 +92,6 @@ public abstract class Openome_modelAbstractExpression {
 	/**
 	 * @generated
 	 */
-	@SuppressWarnings("rawtypes")
 	public Object evaluate(Object context, Map env) {
 		if (context().isInstance(context)) {
 			try {
@@ -123,10 +121,10 @@ public abstract class Openome_modelAbstractExpression {
 				|| targetType.getInstanceClass() == null) {
 			return value;
 		}
-		Class<?> targetClass = targetType.getInstanceClass();
+		Class targetClass = targetType.getInstanceClass();
 		Number num = (Number) value;
-		Class<?> valClass = value.getClass();
-		Class<?> targetWrapperClass = targetClass;
+		Class valClass = value.getClass();
+		Class targetWrapperClass = targetClass;
 		if (targetClass.isPrimitive()) {
 			targetWrapperClass = EcoreUtil.wrapperClassFor(targetClass);
 		}

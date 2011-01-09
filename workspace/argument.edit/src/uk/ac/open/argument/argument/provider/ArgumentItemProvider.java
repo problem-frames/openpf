@@ -38,7 +38,7 @@ import uk.ac.open.argument.argument.ArgumentPackage;
  * @generated
  */
 public class ArgumentItemProvider
-	extends ItemProviderAdapter
+	extends TerminalExpressionItemProvider
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -69,12 +69,12 @@ public class ArgumentItemProvider
 			addNamePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
 			addRoundPropertyDescriptor(object);
-			addExprPropertyDescriptor(object);
 			addOriginPropertyDescriptor(object);
 			addForegroundPropertyDescriptor(object);
 			addBackgroundPropertyDescriptor(object);
 			addShapePropertyDescriptor(object);
 			addImagePropertyDescriptor(object);
+			addValuePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -141,28 +141,6 @@ public class ArgumentItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Expr feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addExprPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Argument_expr_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Argument_expr_feature", "_UI_Argument_type"),
-				 ArgumentPackage.Literals.ARGUMENT__EXPR,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -278,6 +256,28 @@ public class ArgumentItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Value feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addValuePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Argument_value_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Argument_value_feature", "_UI_Argument_type"),
+				 ArgumentPackage.Literals.ARGUMENT__VALUE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -289,6 +289,7 @@ public class ArgumentItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(ArgumentPackage.Literals.ARGUMENT__EXPR);
 			childrenFeatures.add(ArgumentPackage.Literals.ARGUMENT__GROUNDS);
 			childrenFeatures.add(ArgumentPackage.Literals.ARGUMENT__WARRANTS);
 		}
@@ -348,13 +349,13 @@ public class ArgumentItemProvider
 			case ArgumentPackage.ARGUMENT__NAME:
 			case ArgumentPackage.ARGUMENT__DESCRIPTION:
 			case ArgumentPackage.ARGUMENT__ROUND:
-			case ArgumentPackage.ARGUMENT__EXPR:
 			case ArgumentPackage.ARGUMENT__FOREGROUND:
 			case ArgumentPackage.ARGUMENT__BACKGROUND:
 			case ArgumentPackage.ARGUMENT__SHAPE:
 			case ArgumentPackage.ARGUMENT__IMAGE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
+			case ArgumentPackage.ARGUMENT__EXPR:
 			case ArgumentPackage.ARGUMENT__GROUNDS:
 			case ArgumentPackage.ARGUMENT__WARRANTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -373,6 +374,111 @@ public class ArgumentItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArgumentPackage.Literals.ARGUMENT__EXPR,
+				 ArgumentFactory.eINSTANCE.createExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArgumentPackage.Literals.ARGUMENT__EXPR,
+				 ArgumentFactory.eINSTANCE.createTerminalExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArgumentPackage.Literals.ARGUMENT__EXPR,
+				 ArgumentFactory.eINSTANCE.createArgument()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArgumentPackage.Literals.ARGUMENT__EXPR,
+				 ArgumentFactory.eINSTANCE.createAssignPlus()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArgumentPackage.Literals.ARGUMENT__EXPR,
+				 ArgumentFactory.eINSTANCE.createAssignMin()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArgumentPackage.Literals.ARGUMENT__EXPR,
+				 ArgumentFactory.eINSTANCE.createOr()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArgumentPackage.Literals.ARGUMENT__EXPR,
+				 ArgumentFactory.eINSTANCE.createAnd()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArgumentPackage.Literals.ARGUMENT__EXPR,
+				 ArgumentFactory.eINSTANCE.createRelNotEq()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArgumentPackage.Literals.ARGUMENT__EXPR,
+				 ArgumentFactory.eINSTANCE.createRelEqEq()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArgumentPackage.Literals.ARGUMENT__EXPR,
+				 ArgumentFactory.eINSTANCE.createRelLtEq()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArgumentPackage.Literals.ARGUMENT__EXPR,
+				 ArgumentFactory.eINSTANCE.createRelGtEq()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArgumentPackage.Literals.ARGUMENT__EXPR,
+				 ArgumentFactory.eINSTANCE.createRelEq()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArgumentPackage.Literals.ARGUMENT__EXPR,
+				 ArgumentFactory.eINSTANCE.createRelLt()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArgumentPackage.Literals.ARGUMENT__EXPR,
+				 ArgumentFactory.eINSTANCE.createRelGt()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArgumentPackage.Literals.ARGUMENT__EXPR,
+				 ArgumentFactory.eINSTANCE.createPlus()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArgumentPackage.Literals.ARGUMENT__EXPR,
+				 ArgumentFactory.eINSTANCE.createMinus()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArgumentPackage.Literals.ARGUMENT__EXPR,
+				 ArgumentFactory.eINSTANCE.createMulti()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArgumentPackage.Literals.ARGUMENT__EXPR,
+				 ArgumentFactory.eINSTANCE.createDiv()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArgumentPackage.Literals.ARGUMENT__EXPR,
+				 ArgumentFactory.eINSTANCE.createPow()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArgumentPackage.Literals.ARGUMENT__EXPR,
+				 ArgumentFactory.eINSTANCE.createIntLiteral()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArgumentPackage.Literals.ARGUMENT__EXPR,
+				 ArgumentFactory.eINSTANCE.createBooleanLiteral()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -397,6 +503,9 @@ public class ArgumentItemProvider
 		Object childObject = child;
 
 		boolean qualify =
+			childFeature == ArgumentPackage.Literals.EXPRESSION__ASSIGN ||
+			childFeature == ArgumentPackage.Literals.EXPRESSION__RIGHT ||
+			childFeature == ArgumentPackage.Literals.ARGUMENT__EXPR ||
 			childFeature == ArgumentPackage.Literals.ARGUMENT__GROUNDS ||
 			childFeature == ArgumentPackage.Literals.ARGUMENT__WARRANTS;
 
@@ -406,17 +515,6 @@ public class ArgumentItemProvider
 				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}
 		return super.getCreateChildText(owner, feature, child, selection);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return ArgumentEditPlugin.INSTANCE;
 	}
 
 }

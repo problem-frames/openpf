@@ -18,11 +18,11 @@ import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
 
+import uk.ac.open.argument.argument.diagram.edit.commands.ArgumentOrigin2CreateCommand;
+import uk.ac.open.argument.argument.diagram.edit.commands.ArgumentOrigin2ReorientCommand;
 import uk.ac.open.argument.argument.diagram.edit.commands.ArgumentOriginCreateCommand;
 import uk.ac.open.argument.argument.diagram.edit.commands.ArgumentOriginReorientCommand;
 import uk.ac.open.argument.argument.diagram.edit.commands.MitigatesCreateCommand;
-import uk.ac.open.argument.argument.diagram.edit.commands.MitigatesRebuttalCreateCommand;
-import uk.ac.open.argument.argument.diagram.edit.commands.MitigatesRebuttalReorientCommand;
 import uk.ac.open.argument.argument.diagram.edit.commands.MitigatesReorientCommand;
 import uk.ac.open.argument.argument.diagram.edit.commands.RebutsCreateCommand;
 import uk.ac.open.argument.argument.diagram.edit.commands.RebutsReorientCommand;
@@ -30,9 +30,9 @@ import uk.ac.open.argument.argument.diagram.edit.parts.Argument2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.Argument3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentGroundsCompartment3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentArgumentWarrantsCompartment3EditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentOrigin2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentOriginEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesEditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesRebuttalEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.RebutsEditPart;
 import uk.ac.open.argument.argument.diagram.part.ArgumentVisualIDRegistry;
 import uk.ac.open.argument.argument.diagram.providers.ArgumentElementTypes;
@@ -82,7 +82,7 @@ public class Argument3ItemSemanticEditPolicy extends
 				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
 				continue;
 			}
-			if (ArgumentVisualIDRegistry.getVisualID(incomingLink) == MitigatesRebuttalEditPart.VISUAL_ID) {
+			if (ArgumentVisualIDRegistry.getVisualID(incomingLink) == ArgumentOrigin2EditPart.VISUAL_ID) {
 				DestroyReferenceRequest r = new DestroyReferenceRequest(
 						incomingLink.getSource().getElement(), null,
 						incomingLink.getTarget().getElement(), false);
@@ -107,7 +107,7 @@ public class Argument3ItemSemanticEditPolicy extends
 				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
 				continue;
 			}
-			if (ArgumentVisualIDRegistry.getVisualID(outgoingLink) == ArgumentOriginEditPart.VISUAL_ID) {
+			if (ArgumentVisualIDRegistry.getVisualID(outgoingLink) == ArgumentOrigin2EditPart.VISUAL_ID) {
 				DestroyReferenceRequest r = new DestroyReferenceRequest(
 						outgoingLink.getSource().getElement(), null,
 						outgoingLink.getTarget().getElement(), false);
@@ -176,7 +176,7 @@ public class Argument3ItemSemanticEditPolicy extends
 								continue;
 							}
 							if (ArgumentVisualIDRegistry
-									.getVisualID(incomingLink) == MitigatesRebuttalEditPart.VISUAL_ID) {
+									.getVisualID(incomingLink) == ArgumentOrigin2EditPart.VISUAL_ID) {
 								DestroyReferenceRequest r = new DestroyReferenceRequest(
 										incomingLink.getSource().getElement(),
 										null, incomingLink.getTarget()
@@ -209,7 +209,7 @@ public class Argument3ItemSemanticEditPolicy extends
 								continue;
 							}
 							if (ArgumentVisualIDRegistry
-									.getVisualID(outgoingLink) == ArgumentOriginEditPart.VISUAL_ID) {
+									.getVisualID(outgoingLink) == ArgumentOrigin2EditPart.VISUAL_ID) {
 								DestroyReferenceRequest r = new DestroyReferenceRequest(
 										outgoingLink.getSource().getElement(),
 										null, outgoingLink.getTarget()
@@ -268,7 +268,7 @@ public class Argument3ItemSemanticEditPolicy extends
 								continue;
 							}
 							if (ArgumentVisualIDRegistry
-									.getVisualID(incomingLink) == MitigatesRebuttalEditPart.VISUAL_ID) {
+									.getVisualID(incomingLink) == ArgumentOrigin2EditPart.VISUAL_ID) {
 								DestroyReferenceRequest r = new DestroyReferenceRequest(
 										incomingLink.getSource().getElement(),
 										null, incomingLink.getTarget()
@@ -301,7 +301,7 @@ public class Argument3ItemSemanticEditPolicy extends
 								continue;
 							}
 							if (ArgumentVisualIDRegistry
-									.getVisualID(outgoingLink) == ArgumentOriginEditPart.VISUAL_ID) {
+									.getVisualID(outgoingLink) == ArgumentOrigin2EditPart.VISUAL_ID) {
 								DestroyReferenceRequest r = new DestroyReferenceRequest(
 										outgoingLink.getSource().getElement(),
 										null, outgoingLink.getTarget()
@@ -348,12 +348,12 @@ public class Argument3ItemSemanticEditPolicy extends
 			return getGEFWrapper(new MitigatesCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (ArgumentElementTypes.ArgumentOrigin_4003 == req.getElementType()) {
-			return getGEFWrapper(new ArgumentOriginCreateCommand(req,
-					req.getSource(), req.getTarget()));
-		}
-		if (ArgumentElementTypes.MitigatesRebuttal_4004 == req.getElementType()) {
+		if (ArgumentElementTypes.MitigatesRebuttal_4003 == req.getElementType()) {
 			return null;
+		}
+		if (ArgumentElementTypes.ArgumentOrigin_4004 == req.getElementType()) {
+			return getGEFWrapper(new ArgumentOrigin2CreateCommand(req,
+					req.getSource(), req.getTarget()));
 		}
 		return null;
 	}
@@ -371,12 +371,12 @@ public class Argument3ItemSemanticEditPolicy extends
 			return getGEFWrapper(new MitigatesCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (ArgumentElementTypes.ArgumentOrigin_4003 == req.getElementType()) {
+		if (ArgumentElementTypes.MitigatesRebuttal_4003 == req.getElementType()) {
 			return getGEFWrapper(new ArgumentOriginCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (ArgumentElementTypes.MitigatesRebuttal_4004 == req.getElementType()) {
-			return getGEFWrapper(new MitigatesRebuttalCreateCommand(req,
+		if (ArgumentElementTypes.ArgumentOrigin_4004 == req.getElementType()) {
+			return getGEFWrapper(new ArgumentOrigin2CreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
 		return null;
@@ -410,8 +410,8 @@ public class Argument3ItemSemanticEditPolicy extends
 		switch (getVisualID(req)) {
 		case ArgumentOriginEditPart.VISUAL_ID:
 			return getGEFWrapper(new ArgumentOriginReorientCommand(req));
-		case MitigatesRebuttalEditPart.VISUAL_ID:
-			return getGEFWrapper(new MitigatesRebuttalReorientCommand(req));
+		case ArgumentOrigin2EditPart.VISUAL_ID:
+			return getGEFWrapper(new ArgumentOrigin2ReorientCommand(req));
 		}
 		return super.getReorientReferenceRelationshipCommand(req);
 	}

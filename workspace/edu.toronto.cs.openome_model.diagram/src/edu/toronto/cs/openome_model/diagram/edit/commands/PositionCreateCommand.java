@@ -51,7 +51,7 @@ public class PositionCreateCommand extends EditElementCommand {
 	 */
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor,
 			IAdaptable info) throws ExecutionException {
-		edu.toronto.cs.openome_model.Position newElement = edu.toronto.cs.openome_model.openome_modelFactory.eINSTANCE
+		edu.toronto.cs.openome_model.Position newElement = edu.toronto.cs.openome_model.Openome_modelFactory.eINSTANCE
 				.createPosition();
 
 		edu.toronto.cs.openome_model.Model owner = (edu.toronto.cs.openome_model.Model) getElementToEdit();

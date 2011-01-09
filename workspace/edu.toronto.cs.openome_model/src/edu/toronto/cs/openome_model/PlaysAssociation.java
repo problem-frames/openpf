@@ -18,18 +18,11 @@ package edu.toronto.cs.openome_model;
  * </ul>
  * </p>
  *
- * @see edu.toronto.cs.openome_model.openome_modelPackage#getPlaysAssociation()
+ * @see edu.toronto.cs.openome_model.Openome_modelPackage#getPlaysAssociation()
  * @model
  * @generated
  */
 public interface PlaysAssociation extends Association {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Copyright 2001-2008 University of Toronto";
-
 	/**
 	 * Returns the value of the '<em><b>Label</b></em>' attribute.
 	 * The default value is <code>"Plays"</code>.
@@ -40,7 +33,7 @@ public interface PlaysAssociation extends Association {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Label</em>' attribute.
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getPlaysAssociation_Label()
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getPlaysAssociation_Label()
 	 * @model default="Plays" changeable="false"
 	 * @generated
 	 */

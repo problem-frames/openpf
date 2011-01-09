@@ -10,6 +10,7 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelations
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest;
 
 import uk.ac.open.argument.argument.Argument;
+import uk.ac.open.argument.argument.Mitigates;
 import uk.ac.open.argument.argument.diagram.edit.policies.ArgumentBaseItemSemanticEditPolicy;
 
 /**
@@ -53,7 +54,7 @@ public class ArgumentOriginReorientCommand extends EditElementCommand {
 	 * @generated
 	 */
 	public boolean canExecute() {
-		if (false == referenceOwner instanceof Argument) {
+		if (false == referenceOwner instanceof Mitigates) {
 			return false;
 		}
 		if (reorientDirection == ReorientRelationshipRequest.REORIENT_SOURCE) {
@@ -69,11 +70,11 @@ public class ArgumentOriginReorientCommand extends EditElementCommand {
 	 * @generated
 	 */
 	protected boolean canReorientSource() {
-		if (!(oldEnd instanceof Argument && newEnd instanceof Argument)) {
+		if (!(oldEnd instanceof Argument && newEnd instanceof Mitigates)) {
 			return false;
 		}
 		return ArgumentBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistArgumentOrigin_4003(getNewSource(), getOldTarget());
+				.canExistMitigatesRebuttal_4003(getNewSource(), getOldTarget());
 	}
 
 	/**
@@ -84,7 +85,7 @@ public class ArgumentOriginReorientCommand extends EditElementCommand {
 			return false;
 		}
 		return ArgumentBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistArgumentOrigin_4003(getOldSource(), getNewTarget());
+				.canExistMitigatesRebuttal_4003(getOldSource(), getNewTarget());
 	}
 
 	/**
@@ -109,8 +110,8 @@ public class ArgumentOriginReorientCommand extends EditElementCommand {
 	 * @generated
 	 */
 	protected CommandResult reorientSource() throws ExecutionException {
-		getOldSource().setOrigin(null);
-		getNewSource().setOrigin(getOldTarget());
+		getOldSource().setRebuttal(null);
+		getNewSource().setRebuttal(getOldTarget());
 		return CommandResult.newOKCommandResult(referenceOwner);
 	}
 
@@ -118,22 +119,22 @@ public class ArgumentOriginReorientCommand extends EditElementCommand {
 	 * @generated
 	 */
 	protected CommandResult reorientTarget() throws ExecutionException {
-		getOldSource().setOrigin(getNewTarget());
+		getOldSource().setRebuttal(getNewTarget());
 		return CommandResult.newOKCommandResult(referenceOwner);
 	}
 
 	/**
 	 * @generated
 	 */
-	protected Argument getOldSource() {
-		return (Argument) referenceOwner;
+	protected Mitigates getOldSource() {
+		return (Mitigates) referenceOwner;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected Argument getNewSource() {
-		return (Argument) newEnd;
+	protected Mitigates getNewSource() {
+		return (Mitigates) newEnd;
 	}
 
 	/**

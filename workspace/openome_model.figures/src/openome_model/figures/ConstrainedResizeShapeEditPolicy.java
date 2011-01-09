@@ -53,46 +53,46 @@ public class ConstrainedResizeShapeEditPolicy extends ResizableShapeEditPolicy {
 		usedForActor = newValue;
 	}
 
-//	@SuppressWarnings("unchecked")
-//	@Override
-//	protected List<ResizeHandle> createSelectionHandles() {
-//		
-//		List<ResizeHandle> list = super.createSelectionHandles();
-//		for (Iterator<ResizeHandle> iterator = list.iterator(); iterator.hasNext();) {
-//			Object o = (Object) iterator.next();
-//
-//			if (o instanceof ResizeHandle) {
-//				iterator.remove();
-//			}
-//		}
-//
-//		// if the figure is an actor/agent/position/role and is collapsed
-//		if ((editPart.getFigure().getSize().height) <= ContainerSVGFigure.ACTOR_COLLAPSED_WIDTH_AND_HEIGHT_THRESHOLD 
-//		 && (editPart.getFigure().getSize().width <= ContainerSVGFigure.ACTOR_COLLAPSED_WIDTH_AND_HEIGHT_THRESHOLD)
-//		 && usedForActor) {
-//			// return the empty list with no resizable points
-//			return list;
-//		}
-//		
-//			
-//		list.add(createHandle(PositionConstants.NORTH_WEST));
-//		list.add(createHandle(PositionConstants.NORTH_EAST));
-//		list.add(createHandle(PositionConstants.SOUTH_WEST));
-//		list.add(createHandle(PositionConstants.SOUTH_EAST));
-//
-//		// only add NESW resize points for actors, but not intentions
-//		if (usedForActor) {
-//			// if we want to adjust the shape of the figure, we will allow
-//			// them to resize north, east, south, or west
-//			list.add(createHandle(PositionConstants.NORTH));
-//			list.add(createHandle(PositionConstants.EAST));
-//			list.add(createHandle(PositionConstants.SOUTH));
-//			list.add(createHandle(PositionConstants.WEST));	
-//		}
-//		
-//
-//		return list;
-//	}
+	@SuppressWarnings("unchecked")
+	@Override
+	protected List createSelectionHandles() {
+		
+		List list = super.createSelectionHandles();
+		for (Iterator iterator = list.iterator(); iterator.hasNext();) {
+			Object o = (Object) iterator.next();
+
+			if (o instanceof ResizeHandle) {
+				iterator.remove();
+			}
+		}
+
+		// if the figure is an actor/agent/position/role and is collapsed
+		if ((editPart.getFigure().getSize().height) <= ContainerSVGFigure.ACTOR_COLLAPSED_WIDTH_AND_HEIGHT_THRESHOLD 
+		 && (editPart.getFigure().getSize().width <= ContainerSVGFigure.ACTOR_COLLAPSED_WIDTH_AND_HEIGHT_THRESHOLD)
+		 && usedForActor) {
+			// return the empty list with no resizable points
+			return list;
+		}
+		
+			
+		list.add(createHandle(PositionConstants.NORTH_WEST));
+		list.add(createHandle(PositionConstants.NORTH_EAST));
+		list.add(createHandle(PositionConstants.SOUTH_WEST));
+		list.add(createHandle(PositionConstants.SOUTH_EAST));
+
+		// only add NESW resize points for actors, but not intentions
+		if (usedForActor) {
+			// if we want to adjust the shape of the figure, we will allow
+			// them to resize north, east, south, or west
+			list.add(createHandle(PositionConstants.NORTH));
+			list.add(createHandle(PositionConstants.EAST));
+			list.add(createHandle(PositionConstants.SOUTH));
+			list.add(createHandle(PositionConstants.WEST));	
+		}
+		
+
+		return list;
+	}
 
 
 	private ResizeHandle createHandle(final int direction) {

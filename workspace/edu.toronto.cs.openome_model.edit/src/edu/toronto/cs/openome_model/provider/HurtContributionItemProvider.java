@@ -8,7 +8,7 @@ package edu.toronto.cs.openome_model.provider;
 
 import edu.toronto.cs.openome_model.GoalModelingContributionSymmetry;
 import edu.toronto.cs.openome_model.HurtContribution;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -79,7 +79,7 @@ public class HurtContributionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_HurtContribution_contributionType_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_HurtContribution_contributionType_feature", "_UI_HurtContribution_type"),
-				 openome_modelPackage.Literals.HURT_CONTRIBUTION__CONTRIBUTION_TYPE,
+				 Openome_modelPackage.Literals.HURT_CONTRIBUTION__CONTRIBUTION_TYPE,
 				 false,
 				 false,
 				 false,
@@ -126,7 +126,7 @@ public class HurtContributionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(HurtContribution.class)) {
-			case openome_modelPackage.HURT_CONTRIBUTION__CONTRIBUTION_TYPE:
+			case Openome_modelPackage.HURT_CONTRIBUTION__CONTRIBUTION_TYPE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

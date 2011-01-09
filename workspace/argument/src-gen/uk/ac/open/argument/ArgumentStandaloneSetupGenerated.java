@@ -27,8 +27,8 @@ public class ArgumentStandaloneSetupGenerated implements ISetup {
 	}
 	
 	public void register(Injector injector) {
-	if (!EPackage.Registry.INSTANCE.containsKey("http://www.ac.uk/open/argument/Argument")) {
-		EPackage.Registry.INSTANCE.put("http://www.ac.uk/open/argument/Argument", uk.ac.open.argument.argument.ArgumentPackage.eINSTANCE);
+	if (!EPackage.Registry.INSTANCE.containsKey("http://sead1.open.ac.uk/argument/Argument")) {
+		EPackage.Registry.INSTANCE.put("http://sead1.open.ac.uk/argument/Argument", uk.ac.open.argument.argument.ArgumentPackage.eINSTANCE);
 	}
 
 		org.eclipse.xtext.resource.IResourceFactory resourceFactory = injector.getInstance(org.eclipse.xtext.resource.IResourceFactory.class);

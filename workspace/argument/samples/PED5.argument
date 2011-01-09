@@ -1,6 +1,6 @@
 argument: PED
 A1 rebutted by A4
-A1 mitigated by A9 for "A4" A4
+A1 mitigated by A9 on A4
 A1 rebutted by A5
 A1 rebutted by A6
 A1 "Confidentiality and integrity of customers' PIN is assured" {
@@ -32,10 +32,10 @@ supported by
 warranted by
 	DK4 "Incentive and expertise ( with some imagination )
 represent enough ingredients to overcome tamper proofing mechanism "round 1
-	"!DK2" replacing DK2
+	replacing DK2 with !DK2
 }
 A5 "Failure in tamper proofing mechanism exposes security of PED
-sealed box"round 1 "!A3" replacing A3 {
+sealed box"round 1 replacing A3 with !A3{
 supported by
 	F8 "Overcoming PED sealed box allows obtaining clear text PIN" round 1
 warranted by
@@ -44,7 +44,7 @@ tampering with the PED sealed box but also by other means such as by
 social engineering applied to the card holders"round 1 
 }
 
-A6 "Weak encryption does not protect PIN " round 1 "!F3" replacing F3 {
+A6 "Weak encryption does not protect PIN " round 1 replacing F3 with !F3{
 supported by
 	F6 "Only strong encryption protects PIN " round 1 
 warranted by
@@ -54,7 +54,7 @@ warranted by
 		brute force is reasonable to be achieved"round 1
 		warranted by
 			A8 "There are people with physical access to the PED box for long
-		periods "round 1 "!DK1" replacing DK1 {
+		periods "round 1 replacing DK1 with !DK1{
 				supported by
 					F5 "Merchants and PED administrators are in a position to deal
 		with the PED without raising suspicion "round 1
@@ -67,7 +67,7 @@ warranted by
 }
 
 A9 "Other mechanisms are applied to track activities of
-merchants and PED administrators" round 2 "DK2 & !A4" replacing A4 {
+merchants and PED administrators" round 2 replacing A4 with DK2 & !A4{
 supported by
 	F10 "Recording from surveillance cameras helps to
 reconstruct some activities performed by merchants and administrators"round 2

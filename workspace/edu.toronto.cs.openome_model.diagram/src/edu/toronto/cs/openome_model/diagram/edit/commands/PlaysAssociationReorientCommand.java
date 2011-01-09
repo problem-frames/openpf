@@ -67,9 +67,9 @@ public class PlaysAssociationReorientCommand extends EditElementCommand {
 		}
 		edu.toronto.cs.openome_model.Model container = (edu.toronto.cs.openome_model.Model) getLink()
 				.eContainer();
-		return edu.toronto.cs.openome_model.diagram.edit.policies.Openome_modelBaseItemSemanticEditPolicy
-				.getLinkConstraints().canExistPlaysAssociation_3017(container,
-						getLink(), getNewSource(), target);
+		return edu.toronto.cs.openome_model.diagram.edit.policies.Openome_modelBaseItemSemanticEditPolicy.LinkConstraints
+				.canExistPlaysAssociation_3017(container, getNewSource(),
+						target);
 	}
 
 	/**
@@ -85,9 +85,9 @@ public class PlaysAssociationReorientCommand extends EditElementCommand {
 		}
 		edu.toronto.cs.openome_model.Model container = (edu.toronto.cs.openome_model.Model) getLink()
 				.eContainer();
-		return edu.toronto.cs.openome_model.diagram.edit.policies.Openome_modelBaseItemSemanticEditPolicy
-				.getLinkConstraints().canExistPlaysAssociation_3017(container,
-						getLink(), source, getNewTarget());
+		return edu.toronto.cs.openome_model.diagram.edit.policies.Openome_modelBaseItemSemanticEditPolicy.LinkConstraints
+				.canExistPlaysAssociation_3017(container, source,
+						getNewTarget());
 	}
 
 	/**

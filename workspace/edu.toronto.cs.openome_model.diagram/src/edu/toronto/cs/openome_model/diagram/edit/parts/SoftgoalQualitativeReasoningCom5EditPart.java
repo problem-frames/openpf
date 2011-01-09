@@ -72,7 +72,7 @@ public class SoftgoalQualitativeReasoningCom5EditPart extends LabelEditPart
 	/**
 	 * @generated
 	 */
-	private List<?> parserElements;
+	private List parserElements;
 
 	/**
 	 * @generated
@@ -195,7 +195,6 @@ public class SoftgoalQualitativeReasoningCom5EditPart extends LabelEditPart
 	/**
 	 * @generated
 	 */
-	@SuppressWarnings("rawtypes")
 	protected List getModelChildren() {
 		return Collections.EMPTY_LIST;
 	}
@@ -297,17 +296,14 @@ public class SoftgoalQualitativeReasoningCom5EditPart extends LabelEditPart
 					final IParser parser = getParser();
 					try {
 						IParserEditStatus valid = (IParserEditStatus) getEditingDomain()
-								.runExclusive(
-										new RunnableWithResult.Impl<IParserEditStatus>() {
+								.runExclusive(new RunnableWithResult.Impl() {
 
-											public void run() {
-												setResult(parser
-														.isValidEditString(
-																new EObjectAdapter(
-																		element),
-																(String) value));
-											}
-										});
+									public void run() {
+										setResult(parser.isValidEditString(
+												new EObjectAdapter(element),
+												(String) value));
+									}
+								});
 						return valid.getCode() == ParserEditStatus.EDITABLE ? null
 								: valid.getMessage();
 					} catch (InterruptedException ie) {
@@ -415,10 +411,12 @@ public class SoftgoalQualitativeReasoningCom5EditPart extends LabelEditPart
 					if (isActive() && isEditable()) {
 						if (theRequest
 								.getExtendedData()
-								.get(RequestConstants.REQ_DIRECTEDIT_EXTENDEDDATA_INITIAL_CHAR) instanceof Character) {
+								.get(
+										RequestConstants.REQ_DIRECTEDIT_EXTENDEDDATA_INITIAL_CHAR) instanceof Character) {
 							Character initialChar = (Character) theRequest
 									.getExtendedData()
-									.get(RequestConstants.REQ_DIRECTEDIT_EXTENDEDDATA_INITIAL_CHAR);
+									.get(
+											RequestConstants.REQ_DIRECTEDIT_EXTENDEDDATA_INITIAL_CHAR);
 							performDirectEdit(initialChar.charValue());
 						} else if ((theRequest instanceof DirectEditRequest)
 								&& (getEditText().equals(getLabelText()))) {
@@ -495,10 +493,9 @@ public class SoftgoalQualitativeReasoningCom5EditPart extends LabelEditPart
 		FontStyle style = (FontStyle) getFontStyleOwnerView().getStyle(
 				NotationPackage.eINSTANCE.getFontStyle());
 		if (style != null) {
-			FontData fontData = new FontData(style.getFontName(),
-					style.getFontHeight(), (style.isBold() ? SWT.BOLD
-							: SWT.NORMAL)
-							| (style.isItalic() ? SWT.ITALIC : SWT.NORMAL));
+			FontData fontData = new FontData(style.getFontName(), style
+					.getFontHeight(), (style.isBold() ? SWT.BOLD : SWT.NORMAL)
+					| (style.isItalic() ? SWT.ITALIC : SWT.NORMAL));
 			setFont(fontData);
 		}
 	}

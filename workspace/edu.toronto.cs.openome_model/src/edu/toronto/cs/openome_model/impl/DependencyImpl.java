@@ -8,7 +8,7 @@ package edu.toronto.cs.openome_model.impl;
 import edu.toronto.cs.openome_model.Dependable;
 import edu.toronto.cs.openome_model.Dependency;
 import edu.toronto.cs.openome_model.Model;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -38,13 +38,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * @generated
  */
 public class DependencyImpl extends LinkImpl implements Dependency {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Copyright 2001-2008 University of Toronto";
-
 	/**
 	 * The cached value of the '{@link #getDependencyFrom() <em>Dependency From</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -121,7 +114,7 @@ public class DependencyImpl extends LinkImpl implements Dependency {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return openome_modelPackage.Literals.DEPENDENCY;
+		return Openome_modelPackage.Literals.DEPENDENCY;
 	}
 
 	/**
@@ -135,7 +128,7 @@ public class DependencyImpl extends LinkImpl implements Dependency {
 			dependencyFrom = (Dependable)eResolveProxy(oldDependencyFrom);
 			if (dependencyFrom != oldDependencyFrom) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, openome_modelPackage.DEPENDENCY__DEPENDENCY_FROM, oldDependencyFrom, dependencyFrom));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Openome_modelPackage.DEPENDENCY__DEPENDENCY_FROM, oldDependencyFrom, dependencyFrom));
 			}
 		}
 		return dependencyFrom;
@@ -155,11 +148,33 @@ public class DependencyImpl extends LinkImpl implements Dependency {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDependencyFrom(Dependable newDependencyFrom) {
+	public NotificationChain basicSetDependencyFrom(Dependable newDependencyFrom, NotificationChain msgs) {
 		Dependable oldDependencyFrom = dependencyFrom;
 		dependencyFrom = newDependencyFrom;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, openome_modelPackage.DEPENDENCY__DEPENDENCY_FROM, oldDependencyFrom, dependencyFrom));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Openome_modelPackage.DEPENDENCY__DEPENDENCY_FROM, oldDependencyFrom, newDependencyFrom);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDependencyFrom(Dependable newDependencyFrom) {
+		if (newDependencyFrom != dependencyFrom) {
+			NotificationChain msgs = null;
+			if (dependencyFrom != null)
+				msgs = ((InternalEObject)dependencyFrom).eInverseRemove(this, Openome_modelPackage.DEPENDABLE__DEPENDENCY_TO, Dependable.class, msgs);
+			if (newDependencyFrom != null)
+				msgs = ((InternalEObject)newDependencyFrom).eInverseAdd(this, Openome_modelPackage.DEPENDABLE__DEPENDENCY_TO, Dependable.class, msgs);
+			msgs = basicSetDependencyFrom(newDependencyFrom, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Openome_modelPackage.DEPENDENCY__DEPENDENCY_FROM, newDependencyFrom, newDependencyFrom));
 	}
 
 	/**
@@ -173,7 +188,7 @@ public class DependencyImpl extends LinkImpl implements Dependency {
 			dependencyTo = (Dependable)eResolveProxy(oldDependencyTo);
 			if (dependencyTo != oldDependencyTo) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, openome_modelPackage.DEPENDENCY__DEPENDENCY_TO, oldDependencyTo, dependencyTo));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Openome_modelPackage.DEPENDENCY__DEPENDENCY_TO, oldDependencyTo, dependencyTo));
 			}
 		}
 		return dependencyTo;
@@ -193,11 +208,33 @@ public class DependencyImpl extends LinkImpl implements Dependency {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDependencyTo(Dependable newDependencyTo) {
+	public NotificationChain basicSetDependencyTo(Dependable newDependencyTo, NotificationChain msgs) {
 		Dependable oldDependencyTo = dependencyTo;
 		dependencyTo = newDependencyTo;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, openome_modelPackage.DEPENDENCY__DEPENDENCY_TO, oldDependencyTo, dependencyTo));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Openome_modelPackage.DEPENDENCY__DEPENDENCY_TO, oldDependencyTo, newDependencyTo);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDependencyTo(Dependable newDependencyTo) {
+		if (newDependencyTo != dependencyTo) {
+			NotificationChain msgs = null;
+			if (dependencyTo != null)
+				msgs = ((InternalEObject)dependencyTo).eInverseRemove(this, Openome_modelPackage.DEPENDABLE__DEPENDENCY_FROM, Dependable.class, msgs);
+			if (newDependencyTo != null)
+				msgs = ((InternalEObject)newDependencyTo).eInverseAdd(this, Openome_modelPackage.DEPENDABLE__DEPENDENCY_FROM, Dependable.class, msgs);
+			msgs = basicSetDependencyTo(newDependencyTo, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Openome_modelPackage.DEPENDENCY__DEPENDENCY_TO, newDependencyTo, newDependencyTo));
 	}
 
 	/**
@@ -218,7 +255,7 @@ public class DependencyImpl extends LinkImpl implements Dependency {
 		float oldTrust = trust;
 		trust = newTrust;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, openome_modelPackage.DEPENDENCY__TRUST, oldTrust, trust));
+			eNotify(new ENotificationImpl(this, Notification.SET, Openome_modelPackage.DEPENDENCY__TRUST, oldTrust, trust));
 	}
 
 	/**
@@ -239,7 +276,7 @@ public class DependencyImpl extends LinkImpl implements Dependency {
 		String oldLabel = label;
 		label = newLabel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, openome_modelPackage.DEPENDENCY__LABEL, oldLabel, label));
+			eNotify(new ENotificationImpl(this, Notification.SET, Openome_modelPackage.DEPENDENCY__LABEL, oldLabel, label));
 	}
 
 	/**
@@ -248,7 +285,7 @@ public class DependencyImpl extends LinkImpl implements Dependency {
 	 * @generated
 	 */
 	public Model getModel() {
-		if (eContainerFeatureID() != openome_modelPackage.DEPENDENCY__MODEL) return null;
+		if (eContainerFeatureID() != Openome_modelPackage.DEPENDENCY__MODEL) return null;
 		return (Model)eContainer();
 	}
 
@@ -258,7 +295,7 @@ public class DependencyImpl extends LinkImpl implements Dependency {
 	 * @generated
 	 */
 	public NotificationChain basicSetModel(Model newModel, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newModel, openome_modelPackage.DEPENDENCY__MODEL, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newModel, Openome_modelPackage.DEPENDENCY__MODEL, msgs);
 		return msgs;
 	}
 
@@ -268,19 +305,19 @@ public class DependencyImpl extends LinkImpl implements Dependency {
 	 * @generated
 	 */
 	public void setModel(Model newModel) {
-		if (newModel != eInternalContainer() || (eContainerFeatureID() != openome_modelPackage.DEPENDENCY__MODEL && newModel != null)) {
+		if (newModel != eInternalContainer() || (eContainerFeatureID() != Openome_modelPackage.DEPENDENCY__MODEL && newModel != null)) {
 			if (EcoreUtil.isAncestor(this, newModel))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newModel != null)
-				msgs = ((InternalEObject)newModel).eInverseAdd(this, openome_modelPackage.MODEL__DEPENDENCIES, Model.class, msgs);
+				msgs = ((InternalEObject)newModel).eInverseAdd(this, Openome_modelPackage.MODEL__DEPENDENCIES, Model.class, msgs);
 			msgs = basicSetModel(newModel, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, openome_modelPackage.DEPENDENCY__MODEL, newModel, newModel));
+			eNotify(new ENotificationImpl(this, Notification.SET, Openome_modelPackage.DEPENDENCY__MODEL, newModel, newModel));
 	}
 
 	/**
@@ -291,7 +328,15 @@ public class DependencyImpl extends LinkImpl implements Dependency {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case openome_modelPackage.DEPENDENCY__MODEL:
+			case Openome_modelPackage.DEPENDENCY__DEPENDENCY_FROM:
+				if (dependencyFrom != null)
+					msgs = ((InternalEObject)dependencyFrom).eInverseRemove(this, Openome_modelPackage.DEPENDABLE__DEPENDENCY_TO, Dependable.class, msgs);
+				return basicSetDependencyFrom((Dependable)otherEnd, msgs);
+			case Openome_modelPackage.DEPENDENCY__DEPENDENCY_TO:
+				if (dependencyTo != null)
+					msgs = ((InternalEObject)dependencyTo).eInverseRemove(this, Openome_modelPackage.DEPENDABLE__DEPENDENCY_FROM, Dependable.class, msgs);
+				return basicSetDependencyTo((Dependable)otherEnd, msgs);
+			case Openome_modelPackage.DEPENDENCY__MODEL:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetModel((Model)otherEnd, msgs);
@@ -307,7 +352,11 @@ public class DependencyImpl extends LinkImpl implements Dependency {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case openome_modelPackage.DEPENDENCY__MODEL:
+			case Openome_modelPackage.DEPENDENCY__DEPENDENCY_FROM:
+				return basicSetDependencyFrom(null, msgs);
+			case Openome_modelPackage.DEPENDENCY__DEPENDENCY_TO:
+				return basicSetDependencyTo(null, msgs);
+			case Openome_modelPackage.DEPENDENCY__MODEL:
 				return basicSetModel(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -321,8 +370,8 @@ public class DependencyImpl extends LinkImpl implements Dependency {
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case openome_modelPackage.DEPENDENCY__MODEL:
-				return eInternalContainer().eInverseRemove(this, openome_modelPackage.MODEL__DEPENDENCIES, Model.class, msgs);
+			case Openome_modelPackage.DEPENDENCY__MODEL:
+				return eInternalContainer().eInverseRemove(this, Openome_modelPackage.MODEL__DEPENDENCIES, Model.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -335,17 +384,17 @@ public class DependencyImpl extends LinkImpl implements Dependency {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case openome_modelPackage.DEPENDENCY__DEPENDENCY_FROM:
+			case Openome_modelPackage.DEPENDENCY__DEPENDENCY_FROM:
 				if (resolve) return getDependencyFrom();
 				return basicGetDependencyFrom();
-			case openome_modelPackage.DEPENDENCY__DEPENDENCY_TO:
+			case Openome_modelPackage.DEPENDENCY__DEPENDENCY_TO:
 				if (resolve) return getDependencyTo();
 				return basicGetDependencyTo();
-			case openome_modelPackage.DEPENDENCY__TRUST:
+			case Openome_modelPackage.DEPENDENCY__TRUST:
 				return getTrust();
-			case openome_modelPackage.DEPENDENCY__LABEL:
+			case Openome_modelPackage.DEPENDENCY__LABEL:
 				return getLabel();
-			case openome_modelPackage.DEPENDENCY__MODEL:
+			case Openome_modelPackage.DEPENDENCY__MODEL:
 				return getModel();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -359,19 +408,19 @@ public class DependencyImpl extends LinkImpl implements Dependency {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case openome_modelPackage.DEPENDENCY__DEPENDENCY_FROM:
+			case Openome_modelPackage.DEPENDENCY__DEPENDENCY_FROM:
 				setDependencyFrom((Dependable)newValue);
 				return;
-			case openome_modelPackage.DEPENDENCY__DEPENDENCY_TO:
+			case Openome_modelPackage.DEPENDENCY__DEPENDENCY_TO:
 				setDependencyTo((Dependable)newValue);
 				return;
-			case openome_modelPackage.DEPENDENCY__TRUST:
+			case Openome_modelPackage.DEPENDENCY__TRUST:
 				setTrust((Float)newValue);
 				return;
-			case openome_modelPackage.DEPENDENCY__LABEL:
+			case Openome_modelPackage.DEPENDENCY__LABEL:
 				setLabel((String)newValue);
 				return;
-			case openome_modelPackage.DEPENDENCY__MODEL:
+			case Openome_modelPackage.DEPENDENCY__MODEL:
 				setModel((Model)newValue);
 				return;
 		}
@@ -386,19 +435,19 @@ public class DependencyImpl extends LinkImpl implements Dependency {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case openome_modelPackage.DEPENDENCY__DEPENDENCY_FROM:
+			case Openome_modelPackage.DEPENDENCY__DEPENDENCY_FROM:
 				setDependencyFrom((Dependable)null);
 				return;
-			case openome_modelPackage.DEPENDENCY__DEPENDENCY_TO:
+			case Openome_modelPackage.DEPENDENCY__DEPENDENCY_TO:
 				setDependencyTo((Dependable)null);
 				return;
-			case openome_modelPackage.DEPENDENCY__TRUST:
+			case Openome_modelPackage.DEPENDENCY__TRUST:
 				setTrust(TRUST_EDEFAULT);
 				return;
-			case openome_modelPackage.DEPENDENCY__LABEL:
+			case Openome_modelPackage.DEPENDENCY__LABEL:
 				setLabel(LABEL_EDEFAULT);
 				return;
-			case openome_modelPackage.DEPENDENCY__MODEL:
+			case Openome_modelPackage.DEPENDENCY__MODEL:
 				setModel((Model)null);
 				return;
 		}
@@ -413,15 +462,15 @@ public class DependencyImpl extends LinkImpl implements Dependency {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case openome_modelPackage.DEPENDENCY__DEPENDENCY_FROM:
+			case Openome_modelPackage.DEPENDENCY__DEPENDENCY_FROM:
 				return dependencyFrom != null;
-			case openome_modelPackage.DEPENDENCY__DEPENDENCY_TO:
+			case Openome_modelPackage.DEPENDENCY__DEPENDENCY_TO:
 				return dependencyTo != null;
-			case openome_modelPackage.DEPENDENCY__TRUST:
+			case Openome_modelPackage.DEPENDENCY__TRUST:
 				return trust != TRUST_EDEFAULT;
-			case openome_modelPackage.DEPENDENCY__LABEL:
+			case Openome_modelPackage.DEPENDENCY__LABEL:
 				return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
-			case openome_modelPackage.DEPENDENCY__MODEL:
+			case Openome_modelPackage.DEPENDENCY__MODEL:
 				return getModel() != null;
 		}
 		return super.eIsSet(featureID);

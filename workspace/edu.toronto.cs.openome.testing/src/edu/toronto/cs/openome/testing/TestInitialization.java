@@ -1,7 +1,15 @@
 package edu.toronto.cs.openome.testing;
  
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+
+import java.util.List;
+
 import org.eclipse.swtbot.eclipse.finder.SWTEclipseBot;
 import org.eclipse.swtbot.swt.finder.junit.SWTBotJunit4ClassRunner;
+import org.eclipse.swtbot.swt.finder.utils.SWTBotPreferences;
+import org.eclipse.swtbot.swt.finder.widgets.SWTBotShell;
+import org.eclipse.swtbot.swt.finder.widgets.SWTBotTreeItem;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;

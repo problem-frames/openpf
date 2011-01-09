@@ -91,9 +91,11 @@ public class Openome_modelInitDiagramFileAction implements
 		}
 		Wizard wizard = new edu.toronto.cs.openome_model.diagram.part.Openome_modelNewDiagramFileWizard(
 				domainModelURI, diagramRoot, editingDomain);
-		wizard.setWindowTitle(NLS
-				.bind(edu.toronto.cs.openome_model.diagram.part.Messages.InitDiagramFile_WizardTitle,
-						edu.toronto.cs.openome_model.diagram.edit.parts.ModelEditPart.MODEL_ID));
+		wizard
+				.setWindowTitle(NLS
+						.bind(
+								edu.toronto.cs.openome_model.diagram.part.Messages.InitDiagramFile_WizardTitle,
+								edu.toronto.cs.openome_model.diagram.edit.parts.ModelEditPart.MODEL_ID));
 		edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorUtil
 				.runWizard(getShell(), wizard, "InitDiagramFile"); //$NON-NLS-1$
 	}

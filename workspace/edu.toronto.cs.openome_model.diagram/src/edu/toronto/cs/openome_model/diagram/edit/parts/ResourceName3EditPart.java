@@ -71,7 +71,7 @@ public class ResourceName3EditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	private List<?> parserElements;
+	private List parserElements;
 
 	/**
 	 * @generated
@@ -95,9 +95,25 @@ public class ResourceName3EditPart extends CompartmentEditPart implements
 				new edu.toronto.cs.openome_model.diagram.edit.policies.Openome_modelTextSelectionEditPolicy());
 		installEditPolicy(EditPolicy.DIRECT_EDIT_ROLE,
 				new LabelDirectEditPolicy());
-		installEditPolicy(
-				EditPolicy.PRIMARY_DRAG_ROLE,
-				new edu.toronto.cs.openome_model.diagram.edit.parts.ModelEditPart.NodeLabelDragPolicy());
+		installEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE,
+				new NonResizableEditPolicy() {
+
+					protected List createSelectionHandles() {
+						List handles = new ArrayList();
+						NonResizableHandleKit.addMoveHandle(
+								(GraphicalEditPart) getHost(), handles);
+						((MoveHandle) handles.get(0)).setBorder(null);
+						return handles;
+					}
+
+					public Command getCommand(Request request) {
+						return null;
+					}
+
+					public boolean understandsRequest(Request request) {
+						return false;
+					}
+				});
 	}
 
 	/**
@@ -158,7 +174,6 @@ public class ResourceName3EditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	@SuppressWarnings("rawtypes")
 	protected List getModelChildren() {
 		return Collections.EMPTY_LIST;
 	}
@@ -249,17 +264,14 @@ public class ResourceName3EditPart extends CompartmentEditPart implements
 					final IParser parser = getParser();
 					try {
 						IParserEditStatus valid = (IParserEditStatus) getEditingDomain()
-								.runExclusive(
-										new RunnableWithResult.Impl<IParserEditStatus>() {
+								.runExclusive(new RunnableWithResult.Impl() {
 
-											public void run() {
-												setResult(parser
-														.isValidEditString(
-																new EObjectAdapter(
-																		element),
-																(String) value));
-											}
-										});
+									public void run() {
+										setResult(parser.isValidEditString(
+												new EObjectAdapter(element),
+												(String) value));
+									}
+								});
 						return valid.getCode() == ParserEditStatus.EDITABLE ? null
 								: valid.getMessage();
 					} catch (InterruptedException ie) {
@@ -367,10 +379,12 @@ public class ResourceName3EditPart extends CompartmentEditPart implements
 					if (isActive() && isEditable()) {
 						if (theRequest
 								.getExtendedData()
-								.get(RequestConstants.REQ_DIRECTEDIT_EXTENDEDDATA_INITIAL_CHAR) instanceof Character) {
+								.get(
+										RequestConstants.REQ_DIRECTEDIT_EXTENDEDDATA_INITIAL_CHAR) instanceof Character) {
 							Character initialChar = (Character) theRequest
 									.getExtendedData()
-									.get(RequestConstants.REQ_DIRECTEDIT_EXTENDEDDATA_INITIAL_CHAR);
+									.get(
+											RequestConstants.REQ_DIRECTEDIT_EXTENDEDDATA_INITIAL_CHAR);
 							performDirectEdit(initialChar.charValue());
 						} else if ((theRequest instanceof DirectEditRequest)
 								&& (getEditText().equals(getLabelText()))) {
@@ -447,10 +461,9 @@ public class ResourceName3EditPart extends CompartmentEditPart implements
 		FontStyle style = (FontStyle) getFontStyleOwnerView().getStyle(
 				NotationPackage.eINSTANCE.getFontStyle());
 		if (style != null) {
-			FontData fontData = new FontData(style.getFontName(),
-					style.getFontHeight(), (style.isBold() ? SWT.BOLD
-							: SWT.NORMAL)
-							| (style.isItalic() ? SWT.ITALIC : SWT.NORMAL));
+			FontData fontData = new FontData(style.getFontName(), style
+					.getFontHeight(), (style.isBold() ? SWT.BOLD : SWT.NORMAL)
+					| (style.isItalic() ? SWT.ITALIC : SWT.NORMAL));
 			setFont(fontData);
 		}
 	}

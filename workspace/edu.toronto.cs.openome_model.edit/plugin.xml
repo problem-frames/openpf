@@ -12,7 +12,7 @@
   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
     <factory 
        uri = "http:///edu/toronto/cs/openome_model.ecore" 
-       class = "edu.toronto.cs.openome_model.provider.openome_modelItemProviderAdapterFactory" 
+       class = "edu.toronto.cs.openome_model.provider.Openome_modelItemProviderAdapterFactory" 
        supportedTypes = 
          "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
           org.eclipse.emf.edit.provider.IStructuredItemContentProvider

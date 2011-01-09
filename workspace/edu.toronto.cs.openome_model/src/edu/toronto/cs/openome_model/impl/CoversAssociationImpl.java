@@ -6,7 +6,7 @@
 package edu.toronto.cs.openome_model.impl;
 
 import edu.toronto.cs.openome_model.CoversAssociation;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -24,13 +24,6 @@ import org.eclipse.emf.ecore.EClass;
  * @generated
  */
 public class CoversAssociationImpl extends AssociationImpl implements CoversAssociation {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Copyright 2001-2008 University of Toronto";
-
 	/**
 	 * The default value of the '{@link #getLabel() <em>Label</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -67,7 +60,7 @@ public class CoversAssociationImpl extends AssociationImpl implements CoversAsso
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return openome_modelPackage.Literals.COVERS_ASSOCIATION;
+		return Openome_modelPackage.Literals.COVERS_ASSOCIATION;
 	}
 
 	/**
@@ -87,7 +80,7 @@ public class CoversAssociationImpl extends AssociationImpl implements CoversAsso
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case openome_modelPackage.COVERS_ASSOCIATION__LABEL:
+			case Openome_modelPackage.COVERS_ASSOCIATION__LABEL:
 				return getLabel();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -101,7 +94,7 @@ public class CoversAssociationImpl extends AssociationImpl implements CoversAsso
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case openome_modelPackage.COVERS_ASSOCIATION__LABEL:
+			case Openome_modelPackage.COVERS_ASSOCIATION__LABEL:
 				return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
 		}
 		return super.eIsSet(featureID);

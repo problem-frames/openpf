@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.2"?>
 <plugin>
-<!-- // remove for the demo of securechange
-   <extension point="core.example">   
+   <extension point="core.example">
       <example file="aspects/yu04re.pdf"/>
       <example file="aspects/yu07re.pdf"/>
       <example file="aspects/mediashop.q7"/>
@@ -37,7 +36,7 @@
       <example file="bpel/lapouchnian07bpm.pdf"/>
       <example file="bpel/componenx.q7"/>
    </extension>    
--->
+
    <extension
          point="org.eclipse.ui.popupMenus">
       <objectContribution

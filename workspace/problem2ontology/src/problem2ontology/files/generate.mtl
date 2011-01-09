@@ -1,0 +1,25 @@
+[comment encoding = UTF-8 /]
+[module generate('http://open.ac.uk/problem')/]
+[template public generate(p : ProblemDiagram)]	
+[comment @main /]
+[file (p.name.concat('.ontology'), false, 'UTF-8')]
+// generated from the [p.name/] problem diagram
+model [p.name/]:
+    [for (dom: Node | p.nodes) ]
+[getName(dom)/] [if (dom.type.toString() = 'R')] req 
+[elseif (dom.type.toString() = 'M')] action 
+[elseif (dom.type.toString() = 'X')] resource 
+[elseif (dom.type.toString() = 'B')] actor 
+[else] dom 
+[/if] [/for]
+
+    [for (l: Link | p.links) ]
+interfaces([getName(l.from)/], [getName(l.to)/]) [l.phenomena->collect('"' + name + ': ' + description + '"')->sep(' , ')/]
+[/for]
+
+[/file]
+[/template]
+
+[template getName(dom: Node)]
+[if dom.description = ''][dom.name/][else]#[dom.description/]#[/if]
+[/template]

@@ -29,7 +29,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getActorName_4009Parser() {
 		if (actorName_4009Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getContainer_Name() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -48,7 +48,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getAgentName_4018Parser() {
 		if (agentName_4018Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getContainer_Name() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -67,7 +67,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getPositionName_4027Parser() {
 		if (positionName_4027Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getContainer_Name() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -86,7 +86,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getRoleName_4036Parser() {
 		if (roleName_4036Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getContainer_Name() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -105,7 +105,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getGoalName_4037Parser() {
 		if (goalName_4037Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_Name() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -124,7 +124,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getGoalQualitativeReasoningCombinedLabel_4038Parser() {
 		if (goalQualitativeReasoningCombinedLabel_4038Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_QualitativeReasoningCombinedLabel() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -143,7 +143,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getSoftgoalName_4039Parser() {
 		if (softgoalName_4039Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_Name() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -162,7 +162,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getSoftgoalQualitativeReasoningCombinedLabel_4040Parser() {
 		if (softgoalQualitativeReasoningCombinedLabel_4040Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_QualitativeReasoningCombinedLabel() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -181,7 +181,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getTaskName_4041Parser() {
 		if (taskName_4041Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_Name() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -200,7 +200,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getTaskQualitativeReasoningCombinedLabel_4042Parser() {
 		if (taskQualitativeReasoningCombinedLabel_4042Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_QualitativeReasoningCombinedLabel() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -219,7 +219,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getResourceName_4043Parser() {
 		if (resourceName_4043Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_Name() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -238,7 +238,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getResourceQualitativeReasoningCombinedLabel_4044Parser() {
 		if (resourceQualitativeReasoningCombinedLabel_4044Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_QualitativeReasoningCombinedLabel() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -257,7 +257,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getGoalName_4001Parser() {
 		if (goalName_4001Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_Name() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -276,7 +276,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getGoalQualitativeReasoningCombinedLabel_4002Parser() {
 		if (goalQualitativeReasoningCombinedLabel_4002Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_QualitativeReasoningCombinedLabel() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -295,7 +295,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getSoftgoalName_4003Parser() {
 		if (softgoalName_4003Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_Name() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -314,7 +314,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getSoftgoalQualitativeReasoningCombinedLabel_4004Parser() {
 		if (softgoalQualitativeReasoningCombinedLabel_4004Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_QualitativeReasoningCombinedLabel() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -333,7 +333,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getResourceName_4005Parser() {
 		if (resourceName_4005Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_Name() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -352,7 +352,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getResourceQualitativeReasoningCombinedLabel_4006Parser() {
 		if (resourceQualitativeReasoningCombinedLabel_4006Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_QualitativeReasoningCombinedLabel() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -371,7 +371,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getTaskName_4007Parser() {
 		if (taskName_4007Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_Name() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -390,7 +390,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getTaskQualitativeReasoningCombinedLabel_4008Parser() {
 		if (taskQualitativeReasoningCombinedLabel_4008Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_QualitativeReasoningCombinedLabel() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -409,7 +409,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getGoalName_4010Parser() {
 		if (goalName_4010Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_Name() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -428,7 +428,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getGoalQualitativeReasoningCombinedLabel_4011Parser() {
 		if (goalQualitativeReasoningCombinedLabel_4011Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_QualitativeReasoningCombinedLabel() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -447,7 +447,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getSoftgoalName_4012Parser() {
 		if (softgoalName_4012Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_Name() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -466,7 +466,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getSoftgoalQualitativeReasoningCombinedLabel_4013Parser() {
 		if (softgoalQualitativeReasoningCombinedLabel_4013Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_QualitativeReasoningCombinedLabel() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -485,7 +485,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getResourceName_4014Parser() {
 		if (resourceName_4014Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_Name() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -504,7 +504,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getResourceQualitativeReasoningCombinedLabel_4015Parser() {
 		if (resourceQualitativeReasoningCombinedLabel_4015Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_QualitativeReasoningCombinedLabel() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -523,7 +523,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getTaskName_4016Parser() {
 		if (taskName_4016Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_Name() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -542,7 +542,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getTaskQualitativeReasoningCombinedLabel_4017Parser() {
 		if (taskQualitativeReasoningCombinedLabel_4017Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_QualitativeReasoningCombinedLabel() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -561,7 +561,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getGoalName_4019Parser() {
 		if (goalName_4019Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_Name() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -580,7 +580,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getGoalQualitativeReasoningCombinedLabel_4020Parser() {
 		if (goalQualitativeReasoningCombinedLabel_4020Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_QualitativeReasoningCombinedLabel() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -599,7 +599,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getSoftgoalName_4021Parser() {
 		if (softgoalName_4021Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_Name() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -618,7 +618,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getSoftgoalQualitativeReasoningCombinedLabel_4022Parser() {
 		if (softgoalQualitativeReasoningCombinedLabel_4022Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_QualitativeReasoningCombinedLabel() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -637,7 +637,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getResourceName_4023Parser() {
 		if (resourceName_4023Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_Name() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -656,7 +656,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getResourceQualitativeReasoningCombinedLabel_4024Parser() {
 		if (resourceQualitativeReasoningCombinedLabel_4024Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_QualitativeReasoningCombinedLabel() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -675,7 +675,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getTaskName_4025Parser() {
 		if (taskName_4025Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_Name() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -694,7 +694,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getTaskQualitativeReasoningCombinedLabel_4026Parser() {
 		if (taskQualitativeReasoningCombinedLabel_4026Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_QualitativeReasoningCombinedLabel() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -713,7 +713,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getGoalName_4028Parser() {
 		if (goalName_4028Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_Name() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -732,7 +732,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getGoalQualitativeReasoningCombinedLabel_4029Parser() {
 		if (goalQualitativeReasoningCombinedLabel_4029Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_QualitativeReasoningCombinedLabel() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -751,7 +751,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getSoftgoalName_4030Parser() {
 		if (softgoalName_4030Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_Name() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -770,7 +770,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getSoftgoalQualitativeReasoningCombinedLabel_4031Parser() {
 		if (softgoalQualitativeReasoningCombinedLabel_4031Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_QualitativeReasoningCombinedLabel() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -789,7 +789,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getResourceName_4032Parser() {
 		if (resourceName_4032Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_Name() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -808,7 +808,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getResourceQualitativeReasoningCombinedLabel_4033Parser() {
 		if (resourceQualitativeReasoningCombinedLabel_4033Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_QualitativeReasoningCombinedLabel() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -827,7 +827,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getTaskName_4034Parser() {
 		if (taskName_4034Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_Name() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -846,7 +846,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getTaskQualitativeReasoningCombinedLabel_4035Parser() {
 		if (taskQualitativeReasoningCombinedLabel_4035Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIntention_QualitativeReasoningCombinedLabel() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -865,7 +865,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getHelpContributionContributionType_4045Parser() {
 		if (helpContributionContributionType_4045Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getHelpContribution_ContributionType() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -884,7 +884,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getHurtContributionContributionType_4046Parser() {
 		if (hurtContributionContributionType_4046Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getHurtContribution_ContributionType() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -903,7 +903,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getMakeContributionContributionType_4047Parser() {
 		if (makeContributionContributionType_4047Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getMakeContribution_ContributionType() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -922,7 +922,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getBreakContributionContributionType_4048Parser() {
 		if (breakContributionContributionType_4048Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getBreakContribution_ContributionType() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -941,7 +941,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getSomePlusContributionContributionType_4049Parser() {
 		if (somePlusContributionContributionType_4049Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getSomePlusContribution_ContributionType() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -960,7 +960,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getSomeMinusContributionContributionType_4050Parser() {
 		if (someMinusContributionContributionType_4050Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getSomeMinusContribution_ContributionType() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -979,7 +979,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getUnknownContributionContributionType_4051Parser() {
 		if (unknownContributionContributionType_4051Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getUnknownContribution_ContributionType() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -998,7 +998,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getAndContributionContributionType_4052Parser() {
 		if (andContributionContributionType_4052Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getAndContribution_ContributionType() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -1017,7 +1017,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getOrContributionContributionType_4053Parser() {
 		if (orContributionContributionType_4053Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getOrContribution_ContributionType() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -1036,7 +1036,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getIsAAssociationLabel_4054Parser() {
 		if (isAAssociationLabel_4054Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIsAAssociation_Label() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -1055,7 +1055,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getCoversAssociationLabel_4055Parser() {
 		if (coversAssociationLabel_4055Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getCoversAssociation_Label() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -1074,7 +1074,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getOccupiesAssociationLabel_4056Parser() {
 		if (occupiesAssociationLabel_4056Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getOccupiesAssociation_Label() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -1093,7 +1093,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getIsPartOfAssociationLabel_4057Parser() {
 		if (isPartOfAssociationLabel_4057Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getIsPartOfAssociation_Label() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -1112,7 +1112,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getPlaysAssociationLabel_4058Parser() {
 		if (playsAssociationLabel_4058Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getPlaysAssociation_Label() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);
@@ -1131,7 +1131,7 @@ public class Openome_modelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getINSAssociationLabel_4059Parser() {
 		if (iNSAssociationLabel_4059Parser == null) {
-			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.openome_modelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { edu.toronto.cs.openome_model.Openome_modelPackage.eINSTANCE
 					.getINSAssociation_Label() };
 			edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser parser = new edu.toronto.cs.openome_model.diagram.parsers.MessageFormatParser(
 					features);

@@ -110,16 +110,16 @@ public class Openome_modelCreationWizard extends Wizard implements INewWizard {
 		addPage(diagramModelFilePage);
 
 		domainModelFilePage = new edu.toronto.cs.openome_model.diagram.part.Openome_modelCreationWizardPage(
-				"DomainModelFile", getSelection(), "istar") { //$NON-NLS-1$ //$NON-NLS-2$
+				"DomainModelFile", getSelection(), "oom") { //$NON-NLS-1$ //$NON-NLS-2$
 
 			public void setVisible(boolean visible) {
 				if (visible) {
 					String fileName = diagramModelFilePage.getFileName();
-					fileName = fileName.substring(0,
-							fileName.length() - ".ood".length()); //$NON-NLS-1$
+					fileName = fileName.substring(0, fileName.length()
+							- ".ood".length()); //$NON-NLS-1$
 					setFileName(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorUtil
 							.getUniqueFileName(getContainerFullPath(),
-									fileName, "istar")); //$NON-NLS-1$
+									fileName, "oom")); //$NON-NLS-1$
 				}
 				super.setVisible(visible);
 			}
@@ -141,7 +141,7 @@ public class Openome_modelCreationWizard extends Wizard implements INewWizard {
 		fileName = fileName.substring(0, fileName.length() - ".ood".length());
 
 		// rename the .oom file to match the name of the diagram file
-		domainModelFilePage.setFileName(fileName + ".istar");
+		domainModelFilePage.setFileName(fileName + ".oom");
 
 		IRunnableWithProgress op = new WorkspaceModifyOperation(null) {
 

@@ -8,7 +8,7 @@ package edu.toronto.cs.openome_model.impl;
 import edu.toronto.cs.openome_model.Agent;
 import edu.toronto.cs.openome_model.Position;
 import edu.toronto.cs.openome_model.Role;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 
 import java.util.Collection;
 
@@ -39,13 +39,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * @generated
  */
 public class AgentImpl extends ContainerImpl implements Agent {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Copyright 2001-2008 University of Toronto";
-
 	/**
 	 * The cached value of the '{@link #getPlays() <em>Plays</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -92,7 +85,7 @@ public class AgentImpl extends ContainerImpl implements Agent {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return openome_modelPackage.Literals.AGENT;
+		return Openome_modelPackage.Literals.AGENT;
 	}
 
 	/**
@@ -102,7 +95,7 @@ public class AgentImpl extends ContainerImpl implements Agent {
 	 */
 	public EList<Role> getPlays() {
 		if (plays == null) {
-			plays = new EObjectResolvingEList<Role>(Role.class, this, openome_modelPackage.AGENT__PLAYS);
+			plays = new EObjectResolvingEList<Role>(Role.class, this, Openome_modelPackage.AGENT__PLAYS);
 		}
 		return plays;
 	}
@@ -114,7 +107,7 @@ public class AgentImpl extends ContainerImpl implements Agent {
 	 */
 	public EList<Position> getOccupies() {
 		if (occupies == null) {
-			occupies = new EObjectResolvingEList<Position>(Position.class, this, openome_modelPackage.AGENT__OCCUPIES);
+			occupies = new EObjectResolvingEList<Position>(Position.class, this, Openome_modelPackage.AGENT__OCCUPIES);
 		}
 		return occupies;
 	}
@@ -130,7 +123,7 @@ public class AgentImpl extends ContainerImpl implements Agent {
 			ins = (Agent)eResolveProxy(oldIns);
 			if (ins != oldIns) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, openome_modelPackage.AGENT__INS, oldIns, ins));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Openome_modelPackage.AGENT__INS, oldIns, ins));
 			}
 		}
 		return ins;
@@ -154,7 +147,7 @@ public class AgentImpl extends ContainerImpl implements Agent {
 		Agent oldIns = ins;
 		ins = newIns;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, openome_modelPackage.AGENT__INS, oldIns, ins));
+			eNotify(new ENotificationImpl(this, Notification.SET, Openome_modelPackage.AGENT__INS, oldIns, ins));
 	}
 
 	/**
@@ -165,11 +158,11 @@ public class AgentImpl extends ContainerImpl implements Agent {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case openome_modelPackage.AGENT__PLAYS:
+			case Openome_modelPackage.AGENT__PLAYS:
 				return getPlays();
-			case openome_modelPackage.AGENT__OCCUPIES:
+			case Openome_modelPackage.AGENT__OCCUPIES:
 				return getOccupies();
-			case openome_modelPackage.AGENT__INS:
+			case Openome_modelPackage.AGENT__INS:
 				if (resolve) return getIns();
 				return basicGetIns();
 		}
@@ -185,15 +178,15 @@ public class AgentImpl extends ContainerImpl implements Agent {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case openome_modelPackage.AGENT__PLAYS:
+			case Openome_modelPackage.AGENT__PLAYS:
 				getPlays().clear();
 				getPlays().addAll((Collection<? extends Role>)newValue);
 				return;
-			case openome_modelPackage.AGENT__OCCUPIES:
+			case Openome_modelPackage.AGENT__OCCUPIES:
 				getOccupies().clear();
 				getOccupies().addAll((Collection<? extends Position>)newValue);
 				return;
-			case openome_modelPackage.AGENT__INS:
+			case Openome_modelPackage.AGENT__INS:
 				setIns((Agent)newValue);
 				return;
 		}
@@ -208,13 +201,13 @@ public class AgentImpl extends ContainerImpl implements Agent {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case openome_modelPackage.AGENT__PLAYS:
+			case Openome_modelPackage.AGENT__PLAYS:
 				getPlays().clear();
 				return;
-			case openome_modelPackage.AGENT__OCCUPIES:
+			case Openome_modelPackage.AGENT__OCCUPIES:
 				getOccupies().clear();
 				return;
-			case openome_modelPackage.AGENT__INS:
+			case Openome_modelPackage.AGENT__INS:
 				setIns((Agent)null);
 				return;
 		}
@@ -229,11 +222,11 @@ public class AgentImpl extends ContainerImpl implements Agent {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case openome_modelPackage.AGENT__PLAYS:
+			case Openome_modelPackage.AGENT__PLAYS:
 				return plays != null && !plays.isEmpty();
-			case openome_modelPackage.AGENT__OCCUPIES:
+			case Openome_modelPackage.AGENT__OCCUPIES:
 				return occupies != null && !occupies.isEmpty();
-			case openome_modelPackage.AGENT__INS:
+			case Openome_modelPackage.AGENT__INS:
 				return ins != null;
 		}
 		return super.eIsSet(featureID);

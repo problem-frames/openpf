@@ -9,6 +9,7 @@ import org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest;
 
 import uk.ac.open.argument.argument.Argument;
+import uk.ac.open.argument.argument.Mitigates;
 import uk.ac.open.argument.argument.diagram.edit.policies.ArgumentBaseItemSemanticEditPolicy;
 
 /**
@@ -43,7 +44,7 @@ public class ArgumentOriginCreateCommand extends EditElementCommand {
 		if (source == null && target == null) {
 			return false;
 		}
-		if (source != null && false == source instanceof Argument) {
+		if (source != null && false == source instanceof Mitigates) {
 			return false;
 		}
 		if (target != null && false == target instanceof Argument) {
@@ -54,7 +55,7 @@ public class ArgumentOriginCreateCommand extends EditElementCommand {
 		}
 		// target may be null here but it's possible to check constraint
 		return ArgumentBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canCreateArgumentOrigin_4003(getSource(), getTarget());
+				.canCreateMitigatesRebuttal_4003(getSource(), getTarget());
 	}
 
 	/**
@@ -68,7 +69,7 @@ public class ArgumentOriginCreateCommand extends EditElementCommand {
 		}
 
 		if (getSource() != null && getTarget() != null) {
-			getSource().setOrigin(getTarget());
+			getSource().setRebuttal(getTarget());
 		}
 		return CommandResult.newOKCommandResult();
 
@@ -84,8 +85,8 @@ public class ArgumentOriginCreateCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	protected Argument getSource() {
-		return (Argument) source;
+	protected Mitigates getSource() {
+		return (Mitigates) source;
 	}
 
 	/**

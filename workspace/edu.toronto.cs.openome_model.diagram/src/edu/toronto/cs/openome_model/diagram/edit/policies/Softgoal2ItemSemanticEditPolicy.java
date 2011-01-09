@@ -36,7 +36,7 @@ public class Softgoal2ItemSemanticEditPolicy
 		CompositeTransactionalCommand cmd = new CompositeTransactionalCommand(
 				getEditingDomain(), null);
 		cmd.setTransactionNestingEnabled(false);
-		for (Iterator<?> it = view.getTargetEdges().iterator(); it.hasNext();) {
+		for (Iterator it = view.getTargetEdges().iterator(); it.hasNext();) {
 			Edge incomingLink = (Edge) it.next();
 			if (edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
 					.getVisualID(incomingLink) == edu.toronto.cs.openome_model.diagram.edit.parts.DependencyEditPart.VISUAL_ID) {
@@ -135,7 +135,7 @@ public class Softgoal2ItemSemanticEditPolicy
 				continue;
 			}
 		}
-		for (Iterator<?> it = view.getSourceEdges().iterator(); it.hasNext();) {
+		for (Iterator it = view.getSourceEdges().iterator(); it.hasNext();) {
 			Edge outgoingLink = (Edge) it.next();
 			if (edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
 					.getVisualID(outgoingLink) == edu.toronto.cs.openome_model.diagram.edit.parts.DependencyEditPart.VISUAL_ID) {

@@ -6,7 +6,7 @@
 package edu.toronto.cs.openome_model.provider;
 
 
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -79,7 +79,7 @@ public class DependableItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Dependable_dependencyFrom_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Dependable_dependencyFrom_feature", "_UI_Dependable_type"),
-				 openome_modelPackage.Literals.DEPENDABLE__DEPENDENCY_FROM,
+				 Openome_modelPackage.Literals.DEPENDABLE__DEPENDENCY_FROM,
 				 true,
 				 false,
 				 true,
@@ -101,7 +101,7 @@ public class DependableItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Dependable_dependencyTo_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Dependable_dependencyTo_feature", "_UI_Dependable_type"),
-				 openome_modelPackage.Literals.DEPENDABLE__DEPENDENCY_TO,
+				 Openome_modelPackage.Literals.DEPENDABLE__DEPENDENCY_TO,
 				 true,
 				 false,
 				 true,

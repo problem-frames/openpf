@@ -36,18 +36,11 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see edu.toronto.cs.openome_model.openome_modelPackage#getIntention()
+ * @see edu.toronto.cs.openome_model.Openome_modelPackage#getIntention()
  * @model
  * @generated
  */
 public interface Intention extends Dependable {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Copyright 2001-2008 University of Toronto";
-
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -58,7 +51,7 @@ public interface Intention extends Dependable {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getIntention_Name()
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getIntention_Name()
 	 * @model
 	 * @generated
 	 */
@@ -85,7 +78,7 @@ public interface Intention extends Dependable {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>System</em>' attribute.
 	 * @see #setSystem(Boolean)
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getIntention_System()
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getIntention_System()
 	 * @model default="true"
 	 * @generated
 	 */
@@ -112,7 +105,7 @@ public interface Intention extends Dependable {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Boundary</em>' attribute.
 	 * @see #setBoundary(Boolean)
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getIntention_Boundary()
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getIntention_Boundary()
 	 * @model default="false"
 	 * @generated
 	 */
@@ -139,7 +132,7 @@ public interface Intention extends Dependable {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Exclusive</em>' attribute.
 	 * @see #setExclusive(Boolean)
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getIntention_Exclusive()
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getIntention_Exclusive()
 	 * @model default="true"
 	 * @generated
 	 */
@@ -166,7 +159,7 @@ public interface Intention extends Dependable {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sequential</em>' attribute.
 	 * @see #setSequential(Boolean)
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getIntention_Sequential()
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getIntention_Sequential()
 	 * @model default="true"
 	 * @generated
 	 */
@@ -193,7 +186,7 @@ public interface Intention extends Dependable {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parallel</em>' attribute.
 	 * @see #setParallel(Boolean)
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getIntention_Parallel()
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getIntention_Parallel()
 	 * @model default="false"
 	 * @generated
 	 */
@@ -219,7 +212,7 @@ public interface Intention extends Dependable {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Property</em>' containment reference list.
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getIntention_Property()
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getIntention_Property()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -228,6 +221,7 @@ public interface Intention extends Dependable {
 	/**
 	 * Returns the value of the '<em><b>Decompositions</b></em>' reference list.
 	 * The list contents are of type {@link edu.toronto.cs.openome_model.Decomposition}.
+	 * It is bidirectional and its opposite is '{@link edu.toronto.cs.openome_model.Decomposition#getSource <em>Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Decompositions</em>' reference list isn't clear,
@@ -237,8 +231,9 @@ public interface Intention extends Dependable {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Decompositions</em>' reference list.
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getIntention_Decompositions()
-	 * @model
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getIntention_Decompositions()
+	 * @see edu.toronto.cs.openome_model.Decomposition#getSource
+	 * @model opposite="source"
 	 * @generated
 	 */
 	EList<Decomposition> getDecompositions();
@@ -246,6 +241,7 @@ public interface Intention extends Dependable {
 	/**
 	 * Returns the value of the '<em><b>Parent Decompositions</b></em>' reference list.
 	 * The list contents are of type {@link edu.toronto.cs.openome_model.Decomposition}.
+	 * It is bidirectional and its opposite is '{@link edu.toronto.cs.openome_model.Decomposition#getTarget <em>Target</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Parent Decompositions</em>' reference list isn't clear,
@@ -255,8 +251,9 @@ public interface Intention extends Dependable {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parent Decompositions</em>' reference list.
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getIntention_ParentDecompositions()
-	 * @model
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getIntention_ParentDecompositions()
+	 * @see edu.toronto.cs.openome_model.Decomposition#getTarget
+	 * @model opposite="target"
 	 * @generated
 	 */
 	EList<Decomposition> getParentDecompositions();
@@ -272,7 +269,7 @@ public interface Intention extends Dependable {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Container</em>' container reference.
 	 * @see #setContainer(Container)
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getIntention_Container()
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getIntention_Container()
 	 * @see edu.toronto.cs.openome_model.Container#getIntentions
 	 * @model opposite="intentions"
 	 * @generated
@@ -301,7 +298,7 @@ public interface Intention extends Dependable {
 	 * @return the value of the '<em>Qualitative Reasoning Combined Label</em>' attribute.
 	 * @see edu.toronto.cs.openome_model.EvaluationLabel
 	 * @see #setQualitativeReasoningCombinedLabel(EvaluationLabel)
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getIntention_QualitativeReasoningCombinedLabel()
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getIntention_QualitativeReasoningCombinedLabel()
 	 * @model
 	 * @generated
 	 */
@@ -330,7 +327,7 @@ public interface Intention extends Dependable {
 	 * @return the value of the '<em>Qualitative Reasoning Satisfied Label</em>' attribute.
 	 * @see edu.toronto.cs.openome_model.EvaluationLabel
 	 * @see #setQualitativeReasoningSatisfiedLabel(EvaluationLabel)
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getIntention_QualitativeReasoningSatisfiedLabel()
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getIntention_QualitativeReasoningSatisfiedLabel()
 	 * @model
 	 * @generated
 	 */
@@ -359,7 +356,7 @@ public interface Intention extends Dependable {
 	 * @return the value of the '<em>Qualitative Reasoning Denial Label</em>' attribute.
 	 * @see edu.toronto.cs.openome_model.EvaluationLabel
 	 * @see #setQualitativeReasoningDenialLabel(EvaluationLabel)
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getIntention_QualitativeReasoningDenialLabel()
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getIntention_QualitativeReasoningDenialLabel()
 	 * @model
 	 * @generated
 	 */
@@ -386,7 +383,7 @@ public interface Intention extends Dependable {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Quantitative Reasoning Combined Label</em>' attribute.
 	 * @see #setQuantitativeReasoningCombinedLabel(double)
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getIntention_QuantitativeReasoningCombinedLabel()
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getIntention_QuantitativeReasoningCombinedLabel()
 	 * @model
 	 * @generated
 	 */
@@ -412,7 +409,7 @@ public interface Intention extends Dependable {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Quantitative Reasoning Denied Label</em>' attribute.
 	 * @see #setQuantitativeReasoningDeniedLabel(double)
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getIntention_QuantitativeReasoningDeniedLabel()
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getIntention_QuantitativeReasoningDeniedLabel()
 	 * @model
 	 * @generated
 	 */
@@ -438,7 +435,7 @@ public interface Intention extends Dependable {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Quantitative Reasoning Satisfied Label</em>' attribute.
 	 * @see #setQuantitativeReasoningSatisfiedLabel(double)
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getIntention_QuantitativeReasoningSatisfiedLabel()
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getIntention_QuantitativeReasoningSatisfiedLabel()
 	 * @model
 	 * @generated
 	 */
@@ -457,6 +454,7 @@ public interface Intention extends Dependable {
 	/**
 	 * Returns the value of the '<em><b>Contributes To</b></em>' reference list.
 	 * The list contents are of type {@link edu.toronto.cs.openome_model.Contribution}.
+	 * It is bidirectional and its opposite is '{@link edu.toronto.cs.openome_model.Contribution#getSource <em>Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Contributes To</em>' reference list isn't clear,
@@ -464,8 +462,9 @@ public interface Intention extends Dependable {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Contributes To</em>' reference list.
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getIntention_ContributesTo()
-	 * @model
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getIntention_ContributesTo()
+	 * @see edu.toronto.cs.openome_model.Contribution#getSource
+	 * @model opposite="source"
 	 * @generated
 	 */
 	EList<Contribution> getContributesTo();
@@ -473,6 +472,7 @@ public interface Intention extends Dependable {
 	/**
 	 * Returns the value of the '<em><b>Contributes From</b></em>' reference list.
 	 * The list contents are of type {@link edu.toronto.cs.openome_model.Contribution}.
+	 * It is bidirectional and its opposite is '{@link edu.toronto.cs.openome_model.Contribution#getTarget <em>Target</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Contributes From</em>' reference list isn't clear,
@@ -480,8 +480,9 @@ public interface Intention extends Dependable {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Contributes From</em>' reference list.
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getIntention_ContributesFrom()
-	 * @model
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getIntention_ContributesFrom()
+	 * @see edu.toronto.cs.openome_model.Contribution#getTarget
+	 * @model opposite="target"
 	 * @generated
 	 */
 	EList<Contribution> getContributesFrom();

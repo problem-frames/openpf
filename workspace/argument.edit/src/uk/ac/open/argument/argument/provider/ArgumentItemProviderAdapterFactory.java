@@ -99,29 +99,6 @@ public class ArgumentItemProviderAdapterFactory extends ArgumentAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link uk.ac.open.argument.argument.Argument} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ArgumentItemProvider argumentItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link uk.ac.open.argument.argument.Argument}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createArgumentAdapter() {
-		if (argumentItemProvider == null) {
-			argumentItemProvider = new ArgumentItemProvider(this);
-		}
-
-		return argumentItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link uk.ac.open.argument.argument.Link} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -188,6 +165,489 @@ public class ArgumentItemProviderAdapterFactory extends ArgumentAdapterFactory i
 		}
 
 		return mitigatesItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link uk.ac.open.argument.argument.Argument} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ArgumentItemProvider argumentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link uk.ac.open.argument.argument.Argument}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createArgumentAdapter() {
+		if (argumentItemProvider == null) {
+			argumentItemProvider = new ArgumentItemProvider(this);
+		}
+
+		return argumentItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link uk.ac.open.argument.argument.Expression} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ExpressionItemProvider expressionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link uk.ac.open.argument.argument.Expression}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createExpressionAdapter() {
+		if (expressionItemProvider == null) {
+			expressionItemProvider = new ExpressionItemProvider(this);
+		}
+
+		return expressionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link uk.ac.open.argument.argument.TerminalExpression} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TerminalExpressionItemProvider terminalExpressionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link uk.ac.open.argument.argument.TerminalExpression}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTerminalExpressionAdapter() {
+		if (terminalExpressionItemProvider == null) {
+			terminalExpressionItemProvider = new TerminalExpressionItemProvider(this);
+		}
+
+		return terminalExpressionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link uk.ac.open.argument.argument.AssignPlus} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AssignPlusItemProvider assignPlusItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link uk.ac.open.argument.argument.AssignPlus}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAssignPlusAdapter() {
+		if (assignPlusItemProvider == null) {
+			assignPlusItemProvider = new AssignPlusItemProvider(this);
+		}
+
+		return assignPlusItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link uk.ac.open.argument.argument.AssignMin} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AssignMinItemProvider assignMinItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link uk.ac.open.argument.argument.AssignMin}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAssignMinAdapter() {
+		if (assignMinItemProvider == null) {
+			assignMinItemProvider = new AssignMinItemProvider(this);
+		}
+
+		return assignMinItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link uk.ac.open.argument.argument.Or} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OrItemProvider orItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link uk.ac.open.argument.argument.Or}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOrAdapter() {
+		if (orItemProvider == null) {
+			orItemProvider = new OrItemProvider(this);
+		}
+
+		return orItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link uk.ac.open.argument.argument.And} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AndItemProvider andItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link uk.ac.open.argument.argument.And}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAndAdapter() {
+		if (andItemProvider == null) {
+			andItemProvider = new AndItemProvider(this);
+		}
+
+		return andItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link uk.ac.open.argument.argument.RelNotEq} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RelNotEqItemProvider relNotEqItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link uk.ac.open.argument.argument.RelNotEq}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRelNotEqAdapter() {
+		if (relNotEqItemProvider == null) {
+			relNotEqItemProvider = new RelNotEqItemProvider(this);
+		}
+
+		return relNotEqItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link uk.ac.open.argument.argument.RelEqEq} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RelEqEqItemProvider relEqEqItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link uk.ac.open.argument.argument.RelEqEq}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRelEqEqAdapter() {
+		if (relEqEqItemProvider == null) {
+			relEqEqItemProvider = new RelEqEqItemProvider(this);
+		}
+
+		return relEqEqItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link uk.ac.open.argument.argument.RelLtEq} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RelLtEqItemProvider relLtEqItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link uk.ac.open.argument.argument.RelLtEq}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRelLtEqAdapter() {
+		if (relLtEqItemProvider == null) {
+			relLtEqItemProvider = new RelLtEqItemProvider(this);
+		}
+
+		return relLtEqItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link uk.ac.open.argument.argument.RelGtEq} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RelGtEqItemProvider relGtEqItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link uk.ac.open.argument.argument.RelGtEq}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRelGtEqAdapter() {
+		if (relGtEqItemProvider == null) {
+			relGtEqItemProvider = new RelGtEqItemProvider(this);
+		}
+
+		return relGtEqItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link uk.ac.open.argument.argument.RelEq} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RelEqItemProvider relEqItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link uk.ac.open.argument.argument.RelEq}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRelEqAdapter() {
+		if (relEqItemProvider == null) {
+			relEqItemProvider = new RelEqItemProvider(this);
+		}
+
+		return relEqItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link uk.ac.open.argument.argument.RelLt} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RelLtItemProvider relLtItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link uk.ac.open.argument.argument.RelLt}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRelLtAdapter() {
+		if (relLtItemProvider == null) {
+			relLtItemProvider = new RelLtItemProvider(this);
+		}
+
+		return relLtItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link uk.ac.open.argument.argument.RelGt} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RelGtItemProvider relGtItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link uk.ac.open.argument.argument.RelGt}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRelGtAdapter() {
+		if (relGtItemProvider == null) {
+			relGtItemProvider = new RelGtItemProvider(this);
+		}
+
+		return relGtItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link uk.ac.open.argument.argument.Plus} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PlusItemProvider plusItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link uk.ac.open.argument.argument.Plus}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPlusAdapter() {
+		if (plusItemProvider == null) {
+			plusItemProvider = new PlusItemProvider(this);
+		}
+
+		return plusItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link uk.ac.open.argument.argument.Minus} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MinusItemProvider minusItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link uk.ac.open.argument.argument.Minus}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMinusAdapter() {
+		if (minusItemProvider == null) {
+			minusItemProvider = new MinusItemProvider(this);
+		}
+
+		return minusItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link uk.ac.open.argument.argument.Multi} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MultiItemProvider multiItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link uk.ac.open.argument.argument.Multi}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMultiAdapter() {
+		if (multiItemProvider == null) {
+			multiItemProvider = new MultiItemProvider(this);
+		}
+
+		return multiItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link uk.ac.open.argument.argument.Div} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DivItemProvider divItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link uk.ac.open.argument.argument.Div}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDivAdapter() {
+		if (divItemProvider == null) {
+			divItemProvider = new DivItemProvider(this);
+		}
+
+		return divItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link uk.ac.open.argument.argument.Pow} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PowItemProvider powItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link uk.ac.open.argument.argument.Pow}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPowAdapter() {
+		if (powItemProvider == null) {
+			powItemProvider = new PowItemProvider(this);
+		}
+
+		return powItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link uk.ac.open.argument.argument.IntLiteral} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected IntLiteralItemProvider intLiteralItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link uk.ac.open.argument.argument.IntLiteral}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createIntLiteralAdapter() {
+		if (intLiteralItemProvider == null) {
+			intLiteralItemProvider = new IntLiteralItemProvider(this);
+		}
+
+		return intLiteralItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link uk.ac.open.argument.argument.BooleanLiteral} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BooleanLiteralItemProvider booleanLiteralItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link uk.ac.open.argument.argument.BooleanLiteral}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBooleanLiteralAdapter() {
+		if (booleanLiteralItemProvider == null) {
+			booleanLiteralItemProvider = new BooleanLiteralItemProvider(this);
+		}
+
+		return booleanLiteralItemProvider;
 	}
 
 	/**
@@ -290,10 +750,30 @@ public class ArgumentItemProviderAdapterFactory extends ArgumentAdapterFactory i
 	 */
 	public void dispose() {
 		if (argumentDiagramItemProvider != null) argumentDiagramItemProvider.dispose();
-		if (argumentItemProvider != null) argumentItemProvider.dispose();
 		if (linkItemProvider != null) linkItemProvider.dispose();
 		if (rebutsItemProvider != null) rebutsItemProvider.dispose();
 		if (mitigatesItemProvider != null) mitigatesItemProvider.dispose();
+		if (argumentItemProvider != null) argumentItemProvider.dispose();
+		if (expressionItemProvider != null) expressionItemProvider.dispose();
+		if (terminalExpressionItemProvider != null) terminalExpressionItemProvider.dispose();
+		if (assignPlusItemProvider != null) assignPlusItemProvider.dispose();
+		if (assignMinItemProvider != null) assignMinItemProvider.dispose();
+		if (orItemProvider != null) orItemProvider.dispose();
+		if (andItemProvider != null) andItemProvider.dispose();
+		if (relNotEqItemProvider != null) relNotEqItemProvider.dispose();
+		if (relEqEqItemProvider != null) relEqEqItemProvider.dispose();
+		if (relLtEqItemProvider != null) relLtEqItemProvider.dispose();
+		if (relGtEqItemProvider != null) relGtEqItemProvider.dispose();
+		if (relEqItemProvider != null) relEqItemProvider.dispose();
+		if (relLtItemProvider != null) relLtItemProvider.dispose();
+		if (relGtItemProvider != null) relGtItemProvider.dispose();
+		if (plusItemProvider != null) plusItemProvider.dispose();
+		if (minusItemProvider != null) minusItemProvider.dispose();
+		if (multiItemProvider != null) multiItemProvider.dispose();
+		if (divItemProvider != null) divItemProvider.dispose();
+		if (powItemProvider != null) powItemProvider.dispose();
+		if (intLiteralItemProvider != null) intLiteralItemProvider.dispose();
+		if (booleanLiteralItemProvider != null) booleanLiteralItemProvider.dispose();
 	}
 
 }

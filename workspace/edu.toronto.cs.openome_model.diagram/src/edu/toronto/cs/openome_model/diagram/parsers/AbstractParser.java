@@ -254,9 +254,10 @@ public abstract class AbstractParser implements IParser {
 					value = Boolean.valueOf((String) value);
 				} else {
 					value = new InvalidValue(
-							NLS.bind(
-									edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_UnexpectedValueType,
-									iClass.getName()));
+							NLS
+									.bind(
+											edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_UnexpectedValueType,
+											iClass.getName()));
 				}
 			} else if (Character.TYPE.equals(iClass)) {
 				if (value instanceof Character) {
@@ -270,9 +271,10 @@ public abstract class AbstractParser implements IParser {
 					}
 				} else {
 					value = new InvalidValue(
-							NLS.bind(
-									edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_UnexpectedValueType,
-									iClass.getName()));
+							NLS
+									.bind(
+											edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_UnexpectedValueType,
+											iClass.getName()));
 				}
 			} else if (Byte.TYPE.equals(iClass)) {
 				if (value instanceof Byte) {
@@ -288,16 +290,18 @@ public abstract class AbstractParser implements IParser {
 							value = Byte.valueOf(s);
 						} catch (NumberFormatException nfe) {
 							value = new InvalidValue(
-									NLS.bind(
-											edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_WrongStringConversion,
-											iClass.getName()));
+									NLS
+											.bind(
+													edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_WrongStringConversion,
+													iClass.getName()));
 						}
 					}
 				} else {
 					value = new InvalidValue(
-							NLS.bind(
-									edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_UnexpectedValueType,
-									iClass.getName()));
+							NLS
+									.bind(
+											edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_UnexpectedValueType,
+											iClass.getName()));
 				}
 			} else if (Short.TYPE.equals(iClass)) {
 				if (value instanceof Short) {
@@ -313,16 +317,18 @@ public abstract class AbstractParser implements IParser {
 							value = Short.valueOf(s);
 						} catch (NumberFormatException nfe) {
 							value = new InvalidValue(
-									NLS.bind(
-											edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_WrongStringConversion,
-											iClass.getName()));
+									NLS
+											.bind(
+													edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_WrongStringConversion,
+													iClass.getName()));
 						}
 					}
 				} else {
 					value = new InvalidValue(
-							NLS.bind(
-									edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_UnexpectedValueType,
-									iClass.getName()));
+							NLS
+									.bind(
+											edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_UnexpectedValueType,
+											iClass.getName()));
 				}
 			} else if (Integer.TYPE.equals(iClass)) {
 				if (value instanceof Integer) {
@@ -338,16 +344,18 @@ public abstract class AbstractParser implements IParser {
 							value = Integer.valueOf(s);
 						} catch (NumberFormatException nfe) {
 							value = new InvalidValue(
-									NLS.bind(
-											edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_WrongStringConversion,
-											iClass.getName()));
+									NLS
+											.bind(
+													edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_WrongStringConversion,
+													iClass.getName()));
 						}
 					}
 				} else {
 					value = new InvalidValue(
-							NLS.bind(
-									edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_UnexpectedValueType,
-									iClass.getName()));
+							NLS
+									.bind(
+											edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_UnexpectedValueType,
+											iClass.getName()));
 				}
 			} else if (Long.TYPE.equals(iClass)) {
 				if (value instanceof Long) {
@@ -363,16 +371,18 @@ public abstract class AbstractParser implements IParser {
 							value = Long.valueOf(s);
 						} catch (NumberFormatException nfe) {
 							value = new InvalidValue(
-									NLS.bind(
-											edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_WrongStringConversion,
-											iClass.getName()));
+									NLS
+											.bind(
+													edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_WrongStringConversion,
+													iClass.getName()));
 						}
 					}
 				} else {
 					value = new InvalidValue(
-							NLS.bind(
-									edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_UnexpectedValueType,
-									iClass.getName()));
+							NLS
+									.bind(
+											edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_UnexpectedValueType,
+											iClass.getName()));
 				}
 			} else if (Float.TYPE.equals(iClass)) {
 				if (value instanceof Float) {
@@ -388,16 +398,18 @@ public abstract class AbstractParser implements IParser {
 							value = Float.valueOf(s);
 						} catch (NumberFormatException nfe) {
 							value = new InvalidValue(
-									NLS.bind(
-											edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_WrongStringConversion,
-											iClass.getName()));
+									NLS
+											.bind(
+													edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_WrongStringConversion,
+													iClass.getName()));
 						}
 					}
 				} else {
 					value = new InvalidValue(
-							NLS.bind(
-									edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_UnexpectedValueType,
-									iClass.getName()));
+							NLS
+									.bind(
+											edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_UnexpectedValueType,
+											iClass.getName()));
 				}
 			} else if (Double.TYPE.equals(iClass)) {
 				if (value instanceof Double) {
@@ -413,16 +425,18 @@ public abstract class AbstractParser implements IParser {
 							value = Double.valueOf(s);
 						} catch (NumberFormatException nfe) {
 							value = new InvalidValue(
-									NLS.bind(
-											edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_WrongStringConversion,
-											iClass.getName()));
+									NLS
+											.bind(
+													edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_WrongStringConversion,
+													iClass.getName()));
 						}
 					}
 				} else {
 					value = new InvalidValue(
-							NLS.bind(
-									edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_UnexpectedValueType,
-									iClass.getName()));
+							NLS
+									.bind(
+											edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_UnexpectedValueType,
+											iClass.getName()));
 				}
 			} else if (type instanceof EEnum) {
 				if (value instanceof String) {
@@ -430,17 +444,19 @@ public abstract class AbstractParser implements IParser {
 							.getEEnumLiteralByLiteral((String) value);
 					if (literal == null) {
 						value = new InvalidValue(
-								NLS.bind(
-										edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_UnknownLiteral,
-										value));
+								NLS
+										.bind(
+												edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_UnknownLiteral,
+												value));
 					} else {
 						value = literal.getInstance();
 					}
 				} else {
 					value = new InvalidValue(
-							NLS.bind(
-									edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_UnexpectedValueType,
-									String.class.getName()));
+							NLS
+									.bind(
+											edu.toronto.cs.openome_model.diagram.part.Messages.AbstractParser_UnexpectedValueType,
+											String.class.getName()));
 				}
 			}
 		}

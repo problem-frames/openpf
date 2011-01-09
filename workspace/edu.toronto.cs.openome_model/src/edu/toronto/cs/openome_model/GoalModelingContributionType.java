@@ -16,7 +16,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Goal Modeling Contribution Type</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see edu.toronto.cs.openome_model.openome_modelPackage#getGoalModelingContributionType()
+ * @see edu.toronto.cs.openome_model.Openome_modelPackage#getGoalModelingContributionType()
  * @model
  * @generated
  */
@@ -70,13 +70,6 @@ public enum GoalModelingContributionType implements Enumerator {
 	 * @ordered
 	 */
 	MINUS_MINUS(4, "MinusMinus", "--");
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Copyright 2001-2008 University of Toronto";
 
 	/**
 	 * The '<em><b>None</b></em>' literal value.

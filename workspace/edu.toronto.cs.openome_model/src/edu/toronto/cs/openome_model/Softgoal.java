@@ -18,18 +18,11 @@ package edu.toronto.cs.openome_model;
  * </ul>
  * </p>
  *
- * @see edu.toronto.cs.openome_model.openome_modelPackage#getSoftgoal()
+ * @see edu.toronto.cs.openome_model.Openome_modelPackage#getSoftgoal()
  * @model
  * @generated
  */
 public interface Softgoal extends Intention {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Copyright 2001-2008 University of Toronto";
-
 	/**
 	 * Returns the value of the '<em><b>Topic</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -40,7 +33,7 @@ public interface Softgoal extends Intention {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Topic</em>' attribute.
 	 * @see #setTopic(String)
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getSoftgoal_Topic()
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getSoftgoal_Topic()
 	 * @model
 	 * @generated
 	 */

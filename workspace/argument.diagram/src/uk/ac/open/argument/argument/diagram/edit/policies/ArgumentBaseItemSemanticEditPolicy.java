@@ -342,21 +342,7 @@ public class ArgumentBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canCreateArgumentOrigin_4003(Argument source,
-				Argument target) {
-			if (source != null) {
-				if (source.getOrigin() != null) {
-					return false;
-				}
-			}
-
-			return canExistArgumentOrigin_4003(source, target);
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canCreateMitigatesRebuttal_4004(Mitigates source,
+		public boolean canCreateMitigatesRebuttal_4003(Mitigates source,
 				Argument target) {
 			if (source != null) {
 				if (source.getRebuttal() != null) {
@@ -364,7 +350,21 @@ public class ArgumentBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 				}
 			}
 
-			return canExistMitigatesRebuttal_4004(source, target);
+			return canExistMitigatesRebuttal_4003(source, target);
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canCreateArgumentOrigin_4004(Argument source,
+				Argument target) {
+			if (source != null) {
+				if (source.getOrigin() != null) {
+					return false;
+				}
+			}
+
+			return canExistArgumentOrigin_4004(source, target);
 		}
 
 		/**
@@ -386,7 +386,7 @@ public class ArgumentBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canExistArgumentOrigin_4003(Argument source,
+		public boolean canExistMitigatesRebuttal_4003(Mitigates source,
 				Argument target) {
 			return true;
 		}
@@ -394,7 +394,7 @@ public class ArgumentBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canExistMitigatesRebuttal_4004(Mitigates source,
+		public boolean canExistArgumentOrigin_4004(Argument source,
 				Argument target) {
 			return true;
 		}

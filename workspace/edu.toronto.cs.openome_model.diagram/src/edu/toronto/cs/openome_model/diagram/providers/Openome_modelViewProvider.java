@@ -235,7 +235,8 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 			String diagramKind, PreferencesHint preferencesHint) {
 		Diagram diagram = NotationFactory.eINSTANCE.createDiagram();
 		diagram.getStyles().add(NotationFactory.eINSTANCE.createDiagramStyle());
-		diagram.setType(edu.toronto.cs.openome_model.diagram.edit.parts.ModelEditPart.MODEL_ID);
+		diagram
+				.setType(edu.toronto.cs.openome_model.diagram.edit.parts.ModelEditPart.MODEL_ID);
 		diagram.setElement(getSemanticElement(semanticAdapter));
 		diagram.setMeasurementUnit(MeasurementUnit.PIXEL_LITERAL);
 		return diagram;
@@ -427,8 +428,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.ActorEditPart.VISUAL_ID));
+		node
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.ActorEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		stampShortcut(containerView, node);
@@ -438,9 +440,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle nodeFontStyle = (FontStyle) node
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (nodeFontStyle != null) {
@@ -457,9 +459,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		}
 		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getFillStyle_FillColor(), FigureUtilities
+				.RGBToInteger(fillRGB));
 		Node label4009 = createLabel(
 				node,
 				edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -479,8 +481,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.AgentEditPart.VISUAL_ID));
+		node
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.AgentEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		stampShortcut(containerView, node);
@@ -490,9 +493,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle nodeFontStyle = (FontStyle) node
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (nodeFontStyle != null) {
@@ -509,9 +512,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		}
 		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getFillStyle_FillColor(), FigureUtilities
+				.RGBToInteger(fillRGB));
 		Node label4018 = createLabel(
 				node,
 				edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -531,8 +534,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.PositionEditPart.VISUAL_ID));
+		node
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.PositionEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		stampShortcut(containerView, node);
@@ -542,9 +546,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle nodeFontStyle = (FontStyle) node
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (nodeFontStyle != null) {
@@ -561,9 +565,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		}
 		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getFillStyle_FillColor(), FigureUtilities
+				.RGBToInteger(fillRGB));
 		Node label4027 = createLabel(
 				node,
 				edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -583,8 +587,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.RoleEditPart.VISUAL_ID));
+		node
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.RoleEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		stampShortcut(containerView, node);
@@ -594,9 +599,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle nodeFontStyle = (FontStyle) node
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (nodeFontStyle != null) {
@@ -613,9 +618,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		}
 		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getFillStyle_FillColor(), FigureUtilities
+				.RGBToInteger(fillRGB));
 		Node label4036 = createLabel(
 				node,
 				edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -635,8 +640,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.GoalEditPart.VISUAL_ID));
+		node
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.GoalEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		stampShortcut(containerView, node);
@@ -646,9 +652,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle nodeFontStyle = (FontStyle) node
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (nodeFontStyle != null) {
@@ -665,9 +671,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		}
 		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getFillStyle_FillColor(), FigureUtilities
+				.RGBToInteger(fillRGB));
 		Node label4037 = createLabel(
 				node,
 				edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -691,8 +697,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.SoftgoalEditPart.VISUAL_ID));
+		node
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.SoftgoalEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		stampShortcut(containerView, node);
@@ -702,9 +709,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle nodeFontStyle = (FontStyle) node
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (nodeFontStyle != null) {
@@ -721,9 +728,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		}
 		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getFillStyle_FillColor(), FigureUtilities
+				.RGBToInteger(fillRGB));
 		Node label4039 = createLabel(
 				node,
 				edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -747,8 +754,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.TaskEditPart.VISUAL_ID));
+		node
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.TaskEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		stampShortcut(containerView, node);
@@ -758,9 +766,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle nodeFontStyle = (FontStyle) node
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (nodeFontStyle != null) {
@@ -777,9 +785,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		}
 		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getFillStyle_FillColor(), FigureUtilities
+				.RGBToInteger(fillRGB));
 		Node label4041 = createLabel(
 				node,
 				edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -803,8 +811,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.ResourceEditPart.VISUAL_ID));
+		node
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.ResourceEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		stampShortcut(containerView, node);
@@ -814,9 +823,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle nodeFontStyle = (FontStyle) node
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (nodeFontStyle != null) {
@@ -833,9 +842,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		}
 		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getFillStyle_FillColor(), FigureUtilities
+				.RGBToInteger(fillRGB));
 		Node label4043 = createLabel(
 				node,
 				edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -859,8 +868,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Goal2EditPart.VISUAL_ID));
+		node
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Goal2EditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		// initializeFromPreferences 
@@ -869,9 +879,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle nodeFontStyle = (FontStyle) node
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (nodeFontStyle != null) {
@@ -888,9 +898,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		}
 		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getFillStyle_FillColor(), FigureUtilities
+				.RGBToInteger(fillRGB));
 		Node label4001 = createLabel(
 				node,
 				edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -914,8 +924,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal2EditPart.VISUAL_ID));
+		node
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal2EditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		// initializeFromPreferences 
@@ -924,9 +935,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle nodeFontStyle = (FontStyle) node
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (nodeFontStyle != null) {
@@ -943,9 +954,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		}
 		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getFillStyle_FillColor(), FigureUtilities
+				.RGBToInteger(fillRGB));
 		Node label4003 = createLabel(
 				node,
 				edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -969,8 +980,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Resource2EditPart.VISUAL_ID));
+		node
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Resource2EditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		// initializeFromPreferences 
@@ -979,9 +991,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle nodeFontStyle = (FontStyle) node
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (nodeFontStyle != null) {
@@ -998,9 +1010,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		}
 		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getFillStyle_FillColor(), FigureUtilities
+				.RGBToInteger(fillRGB));
 		Node label4005 = createLabel(
 				node,
 				edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -1024,8 +1036,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Task2EditPart.VISUAL_ID));
+		node
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Task2EditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		// initializeFromPreferences 
@@ -1034,9 +1047,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle nodeFontStyle = (FontStyle) node
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (nodeFontStyle != null) {
@@ -1053,9 +1066,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		}
 		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getFillStyle_FillColor(), FigureUtilities
+				.RGBToInteger(fillRGB));
 		Node label4007 = createLabel(
 				node,
 				edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -1079,8 +1092,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Goal3EditPart.VISUAL_ID));
+		node
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Goal3EditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		// initializeFromPreferences 
@@ -1089,9 +1103,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle nodeFontStyle = (FontStyle) node
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (nodeFontStyle != null) {
@@ -1108,9 +1122,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		}
 		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getFillStyle_FillColor(), FigureUtilities
+				.RGBToInteger(fillRGB));
 		Node label4010 = createLabel(
 				node,
 				edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -1134,8 +1148,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal3EditPart.VISUAL_ID));
+		node
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal3EditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		// initializeFromPreferences 
@@ -1144,9 +1159,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle nodeFontStyle = (FontStyle) node
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (nodeFontStyle != null) {
@@ -1163,9 +1178,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		}
 		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getFillStyle_FillColor(), FigureUtilities
+				.RGBToInteger(fillRGB));
 		Node label4012 = createLabel(
 				node,
 				edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -1189,8 +1204,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Resource3EditPart.VISUAL_ID));
+		node
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Resource3EditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		// initializeFromPreferences 
@@ -1199,9 +1215,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle nodeFontStyle = (FontStyle) node
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (nodeFontStyle != null) {
@@ -1218,9 +1234,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		}
 		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getFillStyle_FillColor(), FigureUtilities
+				.RGBToInteger(fillRGB));
 		Node label4014 = createLabel(
 				node,
 				edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -1244,8 +1260,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Task3EditPart.VISUAL_ID));
+		node
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Task3EditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		// initializeFromPreferences 
@@ -1254,9 +1271,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle nodeFontStyle = (FontStyle) node
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (nodeFontStyle != null) {
@@ -1273,9 +1290,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		}
 		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getFillStyle_FillColor(), FigureUtilities
+				.RGBToInteger(fillRGB));
 		Node label4016 = createLabel(
 				node,
 				edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -1299,8 +1316,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Goal4EditPart.VISUAL_ID));
+		node
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Goal4EditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		// initializeFromPreferences 
@@ -1309,9 +1327,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle nodeFontStyle = (FontStyle) node
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (nodeFontStyle != null) {
@@ -1328,9 +1346,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		}
 		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getFillStyle_FillColor(), FigureUtilities
+				.RGBToInteger(fillRGB));
 		Node label4019 = createLabel(
 				node,
 				edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -1354,8 +1372,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal4EditPart.VISUAL_ID));
+		node
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal4EditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		// initializeFromPreferences 
@@ -1364,9 +1383,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle nodeFontStyle = (FontStyle) node
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (nodeFontStyle != null) {
@@ -1383,9 +1402,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		}
 		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getFillStyle_FillColor(), FigureUtilities
+				.RGBToInteger(fillRGB));
 		Node label4021 = createLabel(
 				node,
 				edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -1409,8 +1428,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Resource4EditPart.VISUAL_ID));
+		node
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Resource4EditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		// initializeFromPreferences 
@@ -1419,9 +1439,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle nodeFontStyle = (FontStyle) node
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (nodeFontStyle != null) {
@@ -1438,9 +1458,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		}
 		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getFillStyle_FillColor(), FigureUtilities
+				.RGBToInteger(fillRGB));
 		Node label4023 = createLabel(
 				node,
 				edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -1464,8 +1484,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Task4EditPart.VISUAL_ID));
+		node
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Task4EditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		// initializeFromPreferences 
@@ -1474,9 +1495,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle nodeFontStyle = (FontStyle) node
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (nodeFontStyle != null) {
@@ -1493,9 +1514,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		}
 		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getFillStyle_FillColor(), FigureUtilities
+				.RGBToInteger(fillRGB));
 		Node label4025 = createLabel(
 				node,
 				edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -1519,8 +1540,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Goal5EditPart.VISUAL_ID));
+		node
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Goal5EditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		// initializeFromPreferences 
@@ -1529,9 +1551,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle nodeFontStyle = (FontStyle) node
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (nodeFontStyle != null) {
@@ -1548,9 +1570,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		}
 		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getFillStyle_FillColor(), FigureUtilities
+				.RGBToInteger(fillRGB));
 		Node label4028 = createLabel(
 				node,
 				edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -1574,8 +1596,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal5EditPart.VISUAL_ID));
+		node
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal5EditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		// initializeFromPreferences 
@@ -1584,9 +1607,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle nodeFontStyle = (FontStyle) node
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (nodeFontStyle != null) {
@@ -1603,9 +1626,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		}
 		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getFillStyle_FillColor(), FigureUtilities
+				.RGBToInteger(fillRGB));
 		Node label4030 = createLabel(
 				node,
 				edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -1629,8 +1652,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Resource5EditPart.VISUAL_ID));
+		node
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Resource5EditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		// initializeFromPreferences 
@@ -1639,9 +1663,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle nodeFontStyle = (FontStyle) node
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (nodeFontStyle != null) {
@@ -1658,9 +1682,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		}
 		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getFillStyle_FillColor(), FigureUtilities
+				.RGBToInteger(fillRGB));
 		Node label4032 = createLabel(
 				node,
 				edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -1684,8 +1708,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Task5EditPart.VISUAL_ID));
+		node
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.Task5EditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		// initializeFromPreferences 
@@ -1694,9 +1719,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle nodeFontStyle = (FontStyle) node
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (nodeFontStyle != null) {
@@ -1713,9 +1738,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		}
 		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
+				.getFillStyle_FillColor(), FigureUtilities
+				.RGBToInteger(fillRGB));
 		Node label4034 = createLabel(
 				node,
 				edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -1742,15 +1767,15 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
 				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
+		ArrayList points = new ArrayList(2);
 		points.add(new RelativeBendpoint());
 		points.add(new RelativeBendpoint());
 		bendpoints.setPoints(points);
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.DependencyEditPart.VISUAL_ID));
+		edge
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.DependencyEditPart.VISUAL_ID));
 		edge.setElement(domainElement);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
@@ -1758,9 +1783,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle edgeFontStyle = (FontStyle) edge
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (edgeFontStyle != null) {
@@ -1778,9 +1803,8 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		Routing routing = Routing.get(prefStore
 				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
 		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
+			ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+					.getRoutingStyle_Routing(), routing);
 		}
 		return edge;
 	}
@@ -1795,15 +1819,15 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
 				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
+		ArrayList points = new ArrayList(2);
 		points.add(new RelativeBendpoint());
 		points.add(new RelativeBendpoint());
 		bendpoints.setPoints(points);
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.AndDecompositionEditPart.VISUAL_ID));
+		edge
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.AndDecompositionEditPart.VISUAL_ID));
 		edge.setElement(domainElement);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
@@ -1811,9 +1835,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle edgeFontStyle = (FontStyle) edge
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (edgeFontStyle != null) {
@@ -1831,9 +1855,8 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		Routing routing = Routing.get(prefStore
 				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
 		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
+			ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+					.getRoutingStyle_Routing(), routing);
 		}
 		return edge;
 	}
@@ -1848,15 +1871,15 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
 				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
+		ArrayList points = new ArrayList(2);
 		points.add(new RelativeBendpoint());
 		points.add(new RelativeBendpoint());
 		bendpoints.setPoints(points);
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.OrDecompositionEditPart.VISUAL_ID));
+		edge
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.OrDecompositionEditPart.VISUAL_ID));
 		edge.setElement(domainElement);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
@@ -1864,9 +1887,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle edgeFontStyle = (FontStyle) edge
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (edgeFontStyle != null) {
@@ -1884,9 +1907,8 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		Routing routing = Routing.get(prefStore
 				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
 		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
+			ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+					.getRoutingStyle_Routing(), routing);
 		}
 		return edge;
 	}
@@ -1901,15 +1923,15 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
 				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
+		ArrayList points = new ArrayList(2);
 		points.add(new RelativeBendpoint());
 		points.add(new RelativeBendpoint());
 		bendpoints.setPoints(points);
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.HelpContributionEditPart.VISUAL_ID));
+		edge
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.HelpContributionEditPart.VISUAL_ID));
 		edge.setElement(domainElement);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
@@ -1917,9 +1939,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle edgeFontStyle = (FontStyle) edge
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (edgeFontStyle != null) {
@@ -1937,9 +1959,8 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		Routing routing = Routing.get(prefStore
 				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
 		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
+			ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+					.getRoutingStyle_Routing(), routing);
 		}
 		Node label4045 = createLabel(
 				edge,
@@ -1960,15 +1981,15 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
 				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
+		ArrayList points = new ArrayList(2);
 		points.add(new RelativeBendpoint());
 		points.add(new RelativeBendpoint());
 		bendpoints.setPoints(points);
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.HurtContributionEditPart.VISUAL_ID));
+		edge
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.HurtContributionEditPart.VISUAL_ID));
 		edge.setElement(domainElement);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
@@ -1976,9 +1997,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle edgeFontStyle = (FontStyle) edge
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (edgeFontStyle != null) {
@@ -1996,9 +2017,8 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		Routing routing = Routing.get(prefStore
 				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
 		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
+			ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+					.getRoutingStyle_Routing(), routing);
 		}
 		Node label4046 = createLabel(
 				edge,
@@ -2019,15 +2039,15 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
 				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
+		ArrayList points = new ArrayList(2);
 		points.add(new RelativeBendpoint());
 		points.add(new RelativeBendpoint());
 		bendpoints.setPoints(points);
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.MakeContributionEditPart.VISUAL_ID));
+		edge
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.MakeContributionEditPart.VISUAL_ID));
 		edge.setElement(domainElement);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
@@ -2035,9 +2055,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle edgeFontStyle = (FontStyle) edge
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (edgeFontStyle != null) {
@@ -2055,9 +2075,8 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		Routing routing = Routing.get(prefStore
 				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
 		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
+			ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+					.getRoutingStyle_Routing(), routing);
 		}
 		Node label4047 = createLabel(
 				edge,
@@ -2078,15 +2097,15 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
 				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
+		ArrayList points = new ArrayList(2);
 		points.add(new RelativeBendpoint());
 		points.add(new RelativeBendpoint());
 		bendpoints.setPoints(points);
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.BreakContributionEditPart.VISUAL_ID));
+		edge
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.BreakContributionEditPart.VISUAL_ID));
 		edge.setElement(domainElement);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
@@ -2094,9 +2113,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle edgeFontStyle = (FontStyle) edge
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (edgeFontStyle != null) {
@@ -2114,9 +2133,8 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		Routing routing = Routing.get(prefStore
 				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
 		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
+			ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+					.getRoutingStyle_Routing(), routing);
 		}
 		Node label4048 = createLabel(
 				edge,
@@ -2137,15 +2155,15 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
 				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
+		ArrayList points = new ArrayList(2);
 		points.add(new RelativeBendpoint());
 		points.add(new RelativeBendpoint());
 		bendpoints.setPoints(points);
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.SomePlusContributionEditPart.VISUAL_ID));
+		edge
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.SomePlusContributionEditPart.VISUAL_ID));
 		edge.setElement(domainElement);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
@@ -2153,9 +2171,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle edgeFontStyle = (FontStyle) edge
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (edgeFontStyle != null) {
@@ -2173,9 +2191,8 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		Routing routing = Routing.get(prefStore
 				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
 		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
+			ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+					.getRoutingStyle_Routing(), routing);
 		}
 		Node label4049 = createLabel(
 				edge,
@@ -2196,15 +2213,15 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
 				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
+		ArrayList points = new ArrayList(2);
 		points.add(new RelativeBendpoint());
 		points.add(new RelativeBendpoint());
 		bendpoints.setPoints(points);
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.SomeMinusContributionEditPart.VISUAL_ID));
+		edge
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.SomeMinusContributionEditPart.VISUAL_ID));
 		edge.setElement(domainElement);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
@@ -2212,9 +2229,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle edgeFontStyle = (FontStyle) edge
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (edgeFontStyle != null) {
@@ -2232,9 +2249,8 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		Routing routing = Routing.get(prefStore
 				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
 		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
+			ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+					.getRoutingStyle_Routing(), routing);
 		}
 		Node label4050 = createLabel(
 				edge,
@@ -2255,15 +2271,15 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
 				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
+		ArrayList points = new ArrayList(2);
 		points.add(new RelativeBendpoint());
 		points.add(new RelativeBendpoint());
 		bendpoints.setPoints(points);
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.UnknownContributionEditPart.VISUAL_ID));
+		edge
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.UnknownContributionEditPart.VISUAL_ID));
 		edge.setElement(domainElement);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
@@ -2271,9 +2287,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle edgeFontStyle = (FontStyle) edge
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (edgeFontStyle != null) {
@@ -2291,9 +2307,8 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		Routing routing = Routing.get(prefStore
 				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
 		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
+			ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+					.getRoutingStyle_Routing(), routing);
 		}
 		Node label4051 = createLabel(
 				edge,
@@ -2314,15 +2329,15 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
 				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
+		ArrayList points = new ArrayList(2);
 		points.add(new RelativeBendpoint());
 		points.add(new RelativeBendpoint());
 		bendpoints.setPoints(points);
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.AndContributionEditPart.VISUAL_ID));
+		edge
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.AndContributionEditPart.VISUAL_ID));
 		edge.setElement(domainElement);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
@@ -2330,9 +2345,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle edgeFontStyle = (FontStyle) edge
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (edgeFontStyle != null) {
@@ -2350,9 +2365,8 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		Routing routing = Routing.get(prefStore
 				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
 		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
+			ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+					.getRoutingStyle_Routing(), routing);
 		}
 		Node label4052 = createLabel(
 				edge,
@@ -2373,15 +2387,15 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
 				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
+		ArrayList points = new ArrayList(2);
 		points.add(new RelativeBendpoint());
 		points.add(new RelativeBendpoint());
 		bendpoints.setPoints(points);
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.OrContributionEditPart.VISUAL_ID));
+		edge
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.OrContributionEditPart.VISUAL_ID));
 		edge.setElement(domainElement);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
@@ -2389,9 +2403,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle edgeFontStyle = (FontStyle) edge
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (edgeFontStyle != null) {
@@ -2409,9 +2423,8 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		Routing routing = Routing.get(prefStore
 				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
 		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
+			ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+					.getRoutingStyle_Routing(), routing);
 		}
 		Node label4053 = createLabel(
 				edge,
@@ -2432,15 +2445,15 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
 				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
+		ArrayList points = new ArrayList(2);
 		points.add(new RelativeBendpoint());
 		points.add(new RelativeBendpoint());
 		bendpoints.setPoints(points);
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.IsAAssociationEditPart.VISUAL_ID));
+		edge
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.IsAAssociationEditPart.VISUAL_ID));
 		edge.setElement(domainElement);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
@@ -2448,9 +2461,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle edgeFontStyle = (FontStyle) edge
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (edgeFontStyle != null) {
@@ -2468,9 +2481,8 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		Routing routing = Routing.get(prefStore
 				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
 		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
+			ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+					.getRoutingStyle_Routing(), routing);
 		}
 		Node label4054 = createLabel(
 				edge,
@@ -2491,15 +2503,15 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
 				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
+		ArrayList points = new ArrayList(2);
 		points.add(new RelativeBendpoint());
 		points.add(new RelativeBendpoint());
 		bendpoints.setPoints(points);
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.CoversAssociationEditPart.VISUAL_ID));
+		edge
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.CoversAssociationEditPart.VISUAL_ID));
 		edge.setElement(domainElement);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
@@ -2507,9 +2519,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle edgeFontStyle = (FontStyle) edge
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (edgeFontStyle != null) {
@@ -2527,9 +2539,8 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		Routing routing = Routing.get(prefStore
 				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
 		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
+			ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+					.getRoutingStyle_Routing(), routing);
 		}
 		Node label4055 = createLabel(
 				edge,
@@ -2550,15 +2561,15 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
 				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
+		ArrayList points = new ArrayList(2);
 		points.add(new RelativeBendpoint());
 		points.add(new RelativeBendpoint());
 		bendpoints.setPoints(points);
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.OccupiesAssociationEditPart.VISUAL_ID));
+		edge
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.OccupiesAssociationEditPart.VISUAL_ID));
 		edge.setElement(domainElement);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
@@ -2566,9 +2577,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle edgeFontStyle = (FontStyle) edge
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (edgeFontStyle != null) {
@@ -2586,9 +2597,8 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		Routing routing = Routing.get(prefStore
 				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
 		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
+			ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+					.getRoutingStyle_Routing(), routing);
 		}
 		Node label4056 = createLabel(
 				edge,
@@ -2609,15 +2619,15 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
 				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
+		ArrayList points = new ArrayList(2);
 		points.add(new RelativeBendpoint());
 		points.add(new RelativeBendpoint());
 		bendpoints.setPoints(points);
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.IsPartOfAssociationEditPart.VISUAL_ID));
+		edge
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.IsPartOfAssociationEditPart.VISUAL_ID));
 		edge.setElement(domainElement);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
@@ -2625,9 +2635,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle edgeFontStyle = (FontStyle) edge
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (edgeFontStyle != null) {
@@ -2645,9 +2655,8 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		Routing routing = Routing.get(prefStore
 				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
 		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
+			ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+					.getRoutingStyle_Routing(), routing);
 		}
 		Node label4057 = createLabel(
 				edge,
@@ -2668,15 +2677,15 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
 				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
+		ArrayList points = new ArrayList(2);
 		points.add(new RelativeBendpoint());
 		points.add(new RelativeBendpoint());
 		bendpoints.setPoints(points);
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.PlaysAssociationEditPart.VISUAL_ID));
+		edge
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.PlaysAssociationEditPart.VISUAL_ID));
 		edge.setElement(domainElement);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
@@ -2684,9 +2693,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle edgeFontStyle = (FontStyle) edge
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (edgeFontStyle != null) {
@@ -2704,9 +2713,8 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		Routing routing = Routing.get(prefStore
 				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
 		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
+			ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+					.getRoutingStyle_Routing(), routing);
 		}
 		Node label4058 = createLabel(
 				edge,
@@ -2727,15 +2735,15 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
 				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
+		ArrayList points = new ArrayList(2);
 		points.add(new RelativeBendpoint());
 		points.add(new RelativeBendpoint());
 		bendpoints.setPoints(points);
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
-				.getType(edu.toronto.cs.openome_model.diagram.edit.parts.INSAssociationEditPart.VISUAL_ID));
+		edge
+				.setType(edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
+						.getType(edu.toronto.cs.openome_model.diagram.edit.parts.INSAssociationEditPart.VISUAL_ID));
 		edge.setElement(domainElement);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
@@ -2743,9 +2751,9 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+				.getLineStyle_LineColor(), FigureUtilities
+				.RGBToInteger(lineRGB));
 		FontStyle edgeFontStyle = (FontStyle) edge
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (edgeFontStyle != null) {
@@ -2763,9 +2771,8 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		Routing routing = Routing.get(prefStore
 				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
 		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
+			ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
+					.getRoutingStyle_Routing(), routing);
 		}
 		Node label4059 = createLabel(
 				edge,
@@ -2788,7 +2795,8 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 			shortcutAnnotation.setSource("Shortcut"); //$NON-NLS-1$
 			shortcutAnnotation
 					.getDetails()
-					.put("modelID", edu.toronto.cs.openome_model.diagram.edit.parts.ModelEditPart.MODEL_ID); //$NON-NLS-1$
+					.put(
+							"modelID", edu.toronto.cs.openome_model.diagram.edit.parts.ModelEditPart.MODEL_ID); //$NON-NLS-1$
 			target.getEAnnotations().add(shortcutAnnotation);
 		}
 	}
@@ -2844,8 +2852,8 @@ public class Openome_modelViewProvider extends AbstractProvider implements
 		}
 		EObject eObject = (EObject) semanticAdapter.getAdapter(EObject.class);
 		if (eObject != null) {
-			return EMFCoreUtil.resolve(
-					TransactionUtil.getEditingDomain(eObject), eObject);
+			return EMFCoreUtil.resolve(TransactionUtil
+					.getEditingDomain(eObject), eObject);
 		}
 		return null;
 	}

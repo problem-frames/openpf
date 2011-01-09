@@ -65,7 +65,8 @@ public class Openome_modelNewDiagramFileWizard extends Wizard {
 				.setTitle(edu.toronto.cs.openome_model.diagram.part.Messages.Openome_modelNewDiagramFileWizard_CreationPageTitle);
 		myFileCreationPage
 				.setDescription(NLS
-						.bind(edu.toronto.cs.openome_model.diagram.part.Messages.Openome_modelNewDiagramFileWizard_CreationPageDescription,
+						.bind(
+								edu.toronto.cs.openome_model.diagram.part.Messages.Openome_modelNewDiagramFileWizard_CreationPageDescription,
 								edu.toronto.cs.openome_model.diagram.edit.parts.ModelEditPart.MODEL_ID));
 		IPath filePath;
 		String fileName = URI.decode(domainModelURI.trimFileExtension()
@@ -108,7 +109,7 @@ public class Openome_modelNewDiagramFileWizard extends Wizard {
 	 * @generated
 	 */
 	public boolean performFinish() {
-		LinkedList<IFile> affectedFiles = new LinkedList<IFile>();
+		List affectedFiles = new LinkedList();
 		IFile diagramFile = myFileCreationPage.createNewFile();
 		edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorUtil
 				.setCharset(diagramFile);

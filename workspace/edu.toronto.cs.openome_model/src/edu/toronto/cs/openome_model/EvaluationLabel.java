@@ -16,7 +16,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Evaluation Label</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see edu.toronto.cs.openome_model.openome_modelPackage#getEvaluationLabel()
+ * @see edu.toronto.cs.openome_model.Openome_modelPackage#getEvaluationLabel()
  * @model
  * @generated
  */
@@ -78,13 +78,6 @@ public enum EvaluationLabel implements Enumerator {
 	 * @ordered
 	 */
 	CONFLICT(0, "Conflict", "Conflict");
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Copyright 2001-2008 University of Toronto";
 
 	/**
 	 * The '<em><b>None</b></em>' literal value.

@@ -6,7 +6,7 @@
 package edu.toronto.cs.openome_model.impl;
 
 import edu.toronto.cs.openome_model.OrDecomposition;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -25,13 +25,6 @@ public class OrDecompositionImpl extends DecompositionImpl implements OrDecompos
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final String copyright = "Copyright 2001-2008 University of Toronto";
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	protected OrDecompositionImpl() {
 		super();
 	}
@@ -43,7 +36,7 @@ public class OrDecompositionImpl extends DecompositionImpl implements OrDecompos
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return openome_modelPackage.Literals.OR_DECOMPOSITION;
+		return Openome_modelPackage.Literals.OR_DECOMPOSITION;
 	}
 
 } //OrDecompositionImpl

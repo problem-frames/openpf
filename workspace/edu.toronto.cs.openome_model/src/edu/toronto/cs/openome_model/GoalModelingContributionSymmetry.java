@@ -16,7 +16,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Goal Modeling Contribution Symmetry</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see edu.toronto.cs.openome_model.openome_modelPackage#getGoalModelingContributionSymmetry()
+ * @see edu.toronto.cs.openome_model.Openome_modelPackage#getGoalModelingContributionSymmetry()
  * @model
  * @generated
  */
@@ -50,13 +50,6 @@ public enum GoalModelingContributionSymmetry implements Enumerator {
 	 * @ordered
 	 */
 	DEN(1, "Den", "Den");
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Copyright 2001-2008 University of Toronto";
 
 	/**
 	 * The '<em><b>Both</b></em>' literal value.

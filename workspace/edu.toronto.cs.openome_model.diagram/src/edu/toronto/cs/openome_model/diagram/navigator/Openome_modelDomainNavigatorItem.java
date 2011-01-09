@@ -100,9 +100,10 @@ public class Openome_modelDomainNavigatorItem extends PlatformObject {
 		if (obj instanceof edu.toronto.cs.openome_model.diagram.navigator.Openome_modelDomainNavigatorItem) {
 			return EcoreUtil
 					.getURI(getEObject())
-					.equals(EcoreUtil
-							.getURI(((edu.toronto.cs.openome_model.diagram.navigator.Openome_modelDomainNavigatorItem) obj)
-									.getEObject()));
+					.equals(
+							EcoreUtil
+									.getURI(((edu.toronto.cs.openome_model.diagram.navigator.Openome_modelDomainNavigatorItem) obj)
+											.getEObject()));
 		}
 		return super.equals(obj);
 	}

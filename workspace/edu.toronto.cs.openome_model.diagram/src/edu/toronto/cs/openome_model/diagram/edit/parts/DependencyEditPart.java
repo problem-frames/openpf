@@ -13,9 +13,9 @@ import org.eclipse.gmf.runtime.notation.View;
 /**
  * @generated
  */
-public class DependencyEditPart extends ConnectionNodeEditPart implements
+public class DependencyEditPart extends CustomConnectionNodeEditPart implements
 		ITreeBranchEditPart {
-
+	
 	/**
 	 * @generated
 	 */
@@ -56,20 +56,19 @@ public class DependencyEditPart extends ConnectionNodeEditPart implements
 	public openome_model.figures.DependencyLineConnection getPrimaryShape() {
 		return (openome_model.figures.DependencyLineConnection) getFigure();
 	}
-
+	
 	/**
 	 * Make this line straight
 	 */
-	public void straightenLine() {
+	public void straightenLine(){
 		// Straighten the connector figure
 		getPrimaryShape().straightenLine();
-
+		
 		// Now update the Bendpoints list to 0, since a  straight line has no bendpoint
 		// otherwise next time the line get refreshed the straight effect would be nullified
-		RelativeBendpoints bendpoints = (RelativeBendpoints) getEdge()
-				.getBendpoints();
-		ArrayList<RelativeBendpoints> emptyList = new ArrayList<RelativeBendpoints>();
-
+		RelativeBendpoints bendpoints = (RelativeBendpoints) getEdge().getBendpoints();
+		ArrayList <RelativeBendpoints> emptyList = new ArrayList<RelativeBendpoints>();
+		
 		// Update the Bendpoint collection in such a way that no odd notification is given
 		bendpoints.eSetDeliver(false);
 		bendpoints.setPoints(emptyList);

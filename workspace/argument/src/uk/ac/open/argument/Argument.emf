@@ -8,27 +8,6 @@ class ArgumentDiagram {
   val Argument[*] nodes;
   val Link[*] links;
 }
-
-@gmf.node(label="name, description, expr, round", 
-   label.pattern="{0}: {1}\n {2} #{3}", 
-   label.icon="false")
-class Argument {
-  attr String name;
-  attr String description;
-  attr int round;
-  attr String expr;
-  @gmf.link(target="origin", style="dash", width="2", color="160,32,240", target.decoration="arrow")
-  ref Argument origin;
-  attr String foreground;
-  attr String background;
-  attr String shape;
-  attr String image;
-  @gmf.compartment(foo="bar")
-  val Argument[*] grounds;
-  @gmf.compartment(foo="bar")
-  val Argument[*] warrants;
-}
-
 class Link {
   ref Argument from;
   ref Argument to;
@@ -44,3 +23,22 @@ class Mitigates extends Link {
   ref Argument rebuttal;
 }
 
+@gmf.node(label="name, description, round", 
+   label.pattern="{0}: {1} #{2}", 
+   label.icon="false")
+class Argument {
+  attr String name;
+  attr String description;
+  attr int round;
+  @gmf.link(target="origin", style="dash", width="2", color="160,32,240", target.decoration="arrow")
+  ref Argument origin;
+  attr String expr;
+  attr String foreground;
+  attr String background;
+  attr String shape;
+  attr String image;
+  @gmf.compartment(foo="bar")
+  val Argument[*] grounds;
+  @gmf.compartment(foo="bar")
+  val Argument[*] warrants;
+}

@@ -67,9 +67,9 @@ public class HurtContributionCreateCommand extends EditElementCommand {
 		if (getContainer() == null) {
 			return false;
 		}
-		return edu.toronto.cs.openome_model.diagram.edit.policies.Openome_modelBaseItemSemanticEditPolicy
-				.getLinkConstraints().canCreateHurtContribution_3005(
-						getContainer(), getSource(), getTarget());
+		return edu.toronto.cs.openome_model.diagram.edit.policies.Openome_modelBaseItemSemanticEditPolicy.LinkConstraints
+				.canCreateHurtContribution_3005(getContainer(), getSource(),
+						getTarget());
 	}
 
 	/**
@@ -82,7 +82,7 @@ public class HurtContributionCreateCommand extends EditElementCommand {
 					"Invalid arguments in create link command"); //$NON-NLS-1$
 		}
 
-		edu.toronto.cs.openome_model.HurtContribution newElement = edu.toronto.cs.openome_model.openome_modelFactory.eINSTANCE
+		edu.toronto.cs.openome_model.HurtContribution newElement = edu.toronto.cs.openome_model.Openome_modelFactory.eINSTANCE
 				.createHurtContribution();
 		getContainer().getContributions().add(newElement);
 		newElement.setSource(getSource());

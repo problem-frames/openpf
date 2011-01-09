@@ -34,18 +34,20 @@ public class Openome_modelNavigatorLinkHelper implements ILinkHelper {
 	 */
 	private static IEditorInput getEditorInput(Diagram diagram) {
 		Resource diagramResource = diagram.eResource();
-		for (EObject nextEObject : diagramResource.getContents()) {
+		for (Iterator it = diagramResource.getContents().iterator(); it
+				.hasNext();) {
+			EObject nextEObject = (EObject) it.next();
 			if (nextEObject == diagram) {
-				return new FileEditorInput(
-						WorkspaceSynchronizer.getFile(diagramResource));
+				return new FileEditorInput(WorkspaceSynchronizer
+						.getFile(diagramResource));
 			}
 			if (nextEObject instanceof Diagram) {
 				break;
 			}
 		}
 		URI uri = EcoreUtil.getURI(diagram);
-		String editorName = uri.lastSegment() + '#'
-				+ diagram.eResource().getContents().indexOf(diagram);
+		String editorName = uri.lastSegment()
+				+ "#" + diagram.eResource().getContents().indexOf(diagram); //$NON-NLS-1$
 		IEditorInput editorInput = new URIEditorInput(uri, editorName);
 		return editorInput;
 	}

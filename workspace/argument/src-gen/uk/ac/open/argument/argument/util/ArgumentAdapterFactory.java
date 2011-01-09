@@ -83,11 +83,6 @@ public class ArgumentAdapterFactory extends AdapterFactoryImpl
         return createArgumentDiagramAdapter();
       }
       @Override
-      public Adapter caseArgument(Argument object)
-      {
-        return createArgumentAdapter();
-      }
-      @Override
       public Adapter caseLink(Link object)
       {
         return createLinkAdapter();
@@ -101,6 +96,111 @@ public class ArgumentAdapterFactory extends AdapterFactoryImpl
       public Adapter caseMitigates(Mitigates object)
       {
         return createMitigatesAdapter();
+      }
+      @Override
+      public Adapter caseArgument(Argument object)
+      {
+        return createArgumentAdapter();
+      }
+      @Override
+      public Adapter caseExpression(Expression object)
+      {
+        return createExpressionAdapter();
+      }
+      @Override
+      public Adapter caseTerminalExpression(TerminalExpression object)
+      {
+        return createTerminalExpressionAdapter();
+      }
+      @Override
+      public Adapter caseAssignPlus(AssignPlus object)
+      {
+        return createAssignPlusAdapter();
+      }
+      @Override
+      public Adapter caseAssignMin(AssignMin object)
+      {
+        return createAssignMinAdapter();
+      }
+      @Override
+      public Adapter caseOr(Or object)
+      {
+        return createOrAdapter();
+      }
+      @Override
+      public Adapter caseAnd(And object)
+      {
+        return createAndAdapter();
+      }
+      @Override
+      public Adapter caseRelNotEq(RelNotEq object)
+      {
+        return createRelNotEqAdapter();
+      }
+      @Override
+      public Adapter caseRelEqEq(RelEqEq object)
+      {
+        return createRelEqEqAdapter();
+      }
+      @Override
+      public Adapter caseRelLtEq(RelLtEq object)
+      {
+        return createRelLtEqAdapter();
+      }
+      @Override
+      public Adapter caseRelGtEq(RelGtEq object)
+      {
+        return createRelGtEqAdapter();
+      }
+      @Override
+      public Adapter caseRelEq(RelEq object)
+      {
+        return createRelEqAdapter();
+      }
+      @Override
+      public Adapter caseRelLt(RelLt object)
+      {
+        return createRelLtAdapter();
+      }
+      @Override
+      public Adapter caseRelGt(RelGt object)
+      {
+        return createRelGtAdapter();
+      }
+      @Override
+      public Adapter casePlus(Plus object)
+      {
+        return createPlusAdapter();
+      }
+      @Override
+      public Adapter caseMinus(Minus object)
+      {
+        return createMinusAdapter();
+      }
+      @Override
+      public Adapter caseMulti(Multi object)
+      {
+        return createMultiAdapter();
+      }
+      @Override
+      public Adapter caseDiv(Div object)
+      {
+        return createDivAdapter();
+      }
+      @Override
+      public Adapter casePow(Pow object)
+      {
+        return createPowAdapter();
+      }
+      @Override
+      public Adapter caseIntLiteral(IntLiteral object)
+      {
+        return createIntLiteralAdapter();
+      }
+      @Override
+      public Adapter caseBooleanLiteral(BooleanLiteral object)
+      {
+        return createBooleanLiteralAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -135,21 +235,6 @@ public class ArgumentAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createArgumentDiagramAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.Argument <em>Argument</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see uk.ac.open.argument.argument.Argument
-   * @generated
-   */
-  public Adapter createArgumentAdapter()
   {
     return null;
   }
@@ -195,6 +280,321 @@ public class ArgumentAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createMitigatesAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.Argument <em>Argument</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.argument.argument.Argument
+   * @generated
+   */
+  public Adapter createArgumentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.Expression <em>Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.argument.argument.Expression
+   * @generated
+   */
+  public Adapter createExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.TerminalExpression <em>Terminal Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.argument.argument.TerminalExpression
+   * @generated
+   */
+  public Adapter createTerminalExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.AssignPlus <em>Assign Plus</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.argument.argument.AssignPlus
+   * @generated
+   */
+  public Adapter createAssignPlusAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.AssignMin <em>Assign Min</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.argument.argument.AssignMin
+   * @generated
+   */
+  public Adapter createAssignMinAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.Or <em>Or</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.argument.argument.Or
+   * @generated
+   */
+  public Adapter createOrAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.And <em>And</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.argument.argument.And
+   * @generated
+   */
+  public Adapter createAndAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.RelNotEq <em>Rel Not Eq</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.argument.argument.RelNotEq
+   * @generated
+   */
+  public Adapter createRelNotEqAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.RelEqEq <em>Rel Eq Eq</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.argument.argument.RelEqEq
+   * @generated
+   */
+  public Adapter createRelEqEqAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.RelLtEq <em>Rel Lt Eq</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.argument.argument.RelLtEq
+   * @generated
+   */
+  public Adapter createRelLtEqAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.RelGtEq <em>Rel Gt Eq</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.argument.argument.RelGtEq
+   * @generated
+   */
+  public Adapter createRelGtEqAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.RelEq <em>Rel Eq</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.argument.argument.RelEq
+   * @generated
+   */
+  public Adapter createRelEqAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.RelLt <em>Rel Lt</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.argument.argument.RelLt
+   * @generated
+   */
+  public Adapter createRelLtAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.RelGt <em>Rel Gt</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.argument.argument.RelGt
+   * @generated
+   */
+  public Adapter createRelGtAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.Plus <em>Plus</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.argument.argument.Plus
+   * @generated
+   */
+  public Adapter createPlusAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.Minus <em>Minus</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.argument.argument.Minus
+   * @generated
+   */
+  public Adapter createMinusAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.Multi <em>Multi</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.argument.argument.Multi
+   * @generated
+   */
+  public Adapter createMultiAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.Div <em>Div</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.argument.argument.Div
+   * @generated
+   */
+  public Adapter createDivAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.Pow <em>Pow</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.argument.argument.Pow
+   * @generated
+   */
+  public Adapter createPowAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.IntLiteral <em>Int Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.argument.argument.IntLiteral
+   * @generated
+   */
+  public Adapter createIntLiteralAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.argument.argument.BooleanLiteral <em>Boolean Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.argument.argument.BooleanLiteral
+   * @generated
+   */
+  public Adapter createBooleanLiteralAdapter()
   {
     return null;
   }

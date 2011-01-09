@@ -7,19 +7,40 @@ RULE_QUALIFIED_NAME=8
 RULE_WS=11
 RULE_SL_COMMENT=10
 RULE_ML_COMMENT=9
-'}'=25
-'replacing'=16
-'rebutted by'=26
-'foreground'=17
-'{'=21
-'round'=15
-'supported by'=22
+'!'=49
+'|'=32
+'>='=36
+'replacing'=19
+'/'=44
+'=='=35
+'foreground'=21
+'>'=40
+'with'=20
+'='=38
 'argument:'=13
-'mitigated by'=27
-':'=14
-'background'=18
-'shape'=19
-','=23
-'on'=28
-'warranted by'=24
-'image'=20
+'mitigated by'=15
+'shape'=23
+'background'=22
+'+'=41
+'<->'=31
+')'=47
+'on'=16
+'warranted by'=28
+'^'=45
+'->'=30
+'}'=29
+'rebutted by'=14
+'{'=25
+'?'=48
+'<='=37
+'round'=18
+'supported by'=26
+'!='=34
+'<'=39
+'('=46
+':'=17
+'*'=43
+'-'=42
+','=27
+'&'=33
+'image'=24

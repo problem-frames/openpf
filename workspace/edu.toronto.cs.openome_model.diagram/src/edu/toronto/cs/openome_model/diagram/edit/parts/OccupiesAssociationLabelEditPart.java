@@ -69,7 +69,7 @@ public class OccupiesAssociationLabelEditPart extends LabelEditPart implements
 	/**
 	 * @generated
 	 */
-	private List<?> parserElements;
+	private List parserElements;
 
 	/**
 	 * @generated
@@ -103,9 +103,16 @@ public class OccupiesAssociationLabelEditPart extends LabelEditPart implements
 		installEditPolicy(
 				EditPolicy.SELECTION_FEEDBACK_ROLE,
 				new edu.toronto.cs.openome_model.diagram.edit.policies.Openome_modelTextSelectionEditPolicy());
-		installEditPolicy(
-				EditPolicy.PRIMARY_DRAG_ROLE,
-				new edu.toronto.cs.openome_model.diagram.edit.parts.ModelEditPart.LinkLabelDragPolicy());
+		installEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE,
+				new NonResizableLabelEditPolicy() {
+
+					protected List createSelectionHandles() {
+						MoveHandle mh = new MoveHandle(
+								(GraphicalEditPart) getHost());
+						mh.setBorder(null);
+						return Collections.singletonList(mh);
+					}
+				});
 	}
 
 	/**
@@ -173,7 +180,6 @@ public class OccupiesAssociationLabelEditPart extends LabelEditPart implements
 	/**
 	 * @generated
 	 */
-	@SuppressWarnings("rawtypes")
 	protected List getModelChildren() {
 		return Collections.EMPTY_LIST;
 	}
@@ -264,17 +270,14 @@ public class OccupiesAssociationLabelEditPart extends LabelEditPart implements
 					final IParser parser = getParser();
 					try {
 						IParserEditStatus valid = (IParserEditStatus) getEditingDomain()
-								.runExclusive(
-										new RunnableWithResult.Impl<IParserEditStatus>() {
+								.runExclusive(new RunnableWithResult.Impl() {
 
-											public void run() {
-												setResult(parser
-														.isValidEditString(
-																new EObjectAdapter(
-																		element),
-																(String) value));
-											}
-										});
+									public void run() {
+										setResult(parser.isValidEditString(
+												new EObjectAdapter(element),
+												(String) value));
+									}
+								});
 						return valid.getCode() == ParserEditStatus.EDITABLE ? null
 								: valid.getMessage();
 					} catch (InterruptedException ie) {
@@ -382,10 +385,12 @@ public class OccupiesAssociationLabelEditPart extends LabelEditPart implements
 					if (isActive() && isEditable()) {
 						if (theRequest
 								.getExtendedData()
-								.get(RequestConstants.REQ_DIRECTEDIT_EXTENDEDDATA_INITIAL_CHAR) instanceof Character) {
+								.get(
+										RequestConstants.REQ_DIRECTEDIT_EXTENDEDDATA_INITIAL_CHAR) instanceof Character) {
 							Character initialChar = (Character) theRequest
 									.getExtendedData()
-									.get(RequestConstants.REQ_DIRECTEDIT_EXTENDEDDATA_INITIAL_CHAR);
+									.get(
+											RequestConstants.REQ_DIRECTEDIT_EXTENDEDDATA_INITIAL_CHAR);
 							performDirectEdit(initialChar.charValue());
 						} else if ((theRequest instanceof DirectEditRequest)
 								&& (getEditText().equals(getLabelText()))) {
@@ -462,10 +467,9 @@ public class OccupiesAssociationLabelEditPart extends LabelEditPart implements
 		FontStyle style = (FontStyle) getFontStyleOwnerView().getStyle(
 				NotationPackage.eINSTANCE.getFontStyle());
 		if (style != null) {
-			FontData fontData = new FontData(style.getFontName(),
-					style.getFontHeight(), (style.isBold() ? SWT.BOLD
-							: SWT.NORMAL)
-							| (style.isItalic() ? SWT.ITALIC : SWT.NORMAL));
+			FontData fontData = new FontData(style.getFontName(), style
+					.getFontHeight(), (style.isBold() ? SWT.BOLD : SWT.NORMAL)
+					| (style.isItalic() ? SWT.ITALIC : SWT.NORMAL));
 			setFont(fontData);
 		}
 	}

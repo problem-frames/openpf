@@ -55,7 +55,7 @@
       <?gmfgen generated="true"?>
       <objectContribution
             id="edu.toronto.cs.openome_model.diagram.InitDiagram"
-            nameFilter="*.istar"
+            nameFilter="*.oom"
             objectClass="org.eclipse.core.resources.IFile">
          <action
                label="%initDiagramActionLabel"
@@ -832,7 +832,7 @@
             <or>
 	           <and>
     	          <instanceof value="org.eclipse.core.resources.IFile"/>
-        	      <test property="org.eclipse.core.resources.extension" value="istar"/>
+        	      <test property="org.eclipse.core.resources.extension" value="oom"/>
                </and>
                <instanceof value="edu.toronto.cs.openome_model.diagram.navigator.Openome_modelDomainNavigatorItem"/>
             </or>
@@ -886,7 +886,6 @@
          schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
          sequence="F5"/>
    </extension>
-<!--
    <extension
          point="org.eclipse.gmf.runtime.diagram.ui.layoutProviders">
       <layoutProvider
@@ -912,7 +911,6 @@
          </menu>
       </menuContribution>
    </extension>
--->
    <extension
          point="org.eclipse.gmf.runtime.common.ui.services.action.contributionItemProviders">
       <contributionItemProvider

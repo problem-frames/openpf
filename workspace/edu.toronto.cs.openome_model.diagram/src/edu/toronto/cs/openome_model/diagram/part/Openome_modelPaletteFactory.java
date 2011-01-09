@@ -1,7 +1,6 @@
 package edu.toronto.cs.openome_model.diagram.part;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import org.eclipse.gef.Tool;
@@ -13,7 +12,6 @@ import org.eclipse.gef.palette.PaletteSeparator;
 import org.eclipse.gef.palette.ToolEntry;
 import org.eclipse.gmf.runtime.diagram.ui.tools.UnspecifiedTypeConnectionTool;
 import org.eclipse.gmf.runtime.diagram.ui.tools.UnspecifiedTypeCreationTool;
-import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 
 /**
  * @generated
@@ -102,16 +100,20 @@ public class Openome_modelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createActor1CreationTool() {
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Actor_1001);
 		NodeToolEntry entry = new NodeToolEntry(
 				edu.toronto.cs.openome_model.diagram.part.Messages.Actor1CreationTool_title,
 				edu.toronto.cs.openome_model.diagram.part.Messages.Actor1CreationTool_desc,
-				Collections
-						.singletonList(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Actor_1001));
+				types);
 		entry.setId("createActor1CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/actor.gif")); //$NON-NLS-1$
-		entry.setLargeIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/actor.gif")); //$NON-NLS-1$
+		entry
+				.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/actor.gif")); //$NON-NLS-1$
+		entry
+				.setLargeIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/actor.gif")); //$NON-NLS-1$
 		return entry;
 	}
 
@@ -119,16 +121,20 @@ public class Openome_modelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createAgent2CreationTool() {
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Agent_1002);
 		NodeToolEntry entry = new NodeToolEntry(
 				edu.toronto.cs.openome_model.diagram.part.Messages.Agent2CreationTool_title,
 				edu.toronto.cs.openome_model.diagram.part.Messages.Agent2CreationTool_desc,
-				Collections
-						.singletonList(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Agent_1002));
+				types);
 		entry.setId("createAgent2CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/agent.gif")); //$NON-NLS-1$
-		entry.setLargeIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/agent.gif")); //$NON-NLS-1$
+		entry
+				.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/agent.gif")); //$NON-NLS-1$
+		entry
+				.setLargeIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/agent.gif")); //$NON-NLS-1$
 		return entry;
 	}
 
@@ -136,16 +142,20 @@ public class Openome_modelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createPosition3CreationTool() {
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Position_1003);
 		NodeToolEntry entry = new NodeToolEntry(
 				edu.toronto.cs.openome_model.diagram.part.Messages.Position3CreationTool_title,
 				edu.toronto.cs.openome_model.diagram.part.Messages.Position3CreationTool_desc,
-				Collections
-						.singletonList(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Position_1003));
+				types);
 		entry.setId("createPosition3CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/position.gif")); //$NON-NLS-1$
-		entry.setLargeIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/position.gif")); //$NON-NLS-1$
+		entry
+				.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/position.gif")); //$NON-NLS-1$
+		entry
+				.setLargeIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/position.gif")); //$NON-NLS-1$
 		return entry;
 	}
 
@@ -153,16 +163,20 @@ public class Openome_modelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createRole4CreationTool() {
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Role_1004);
 		NodeToolEntry entry = new NodeToolEntry(
 				edu.toronto.cs.openome_model.diagram.part.Messages.Role4CreationTool_title,
 				edu.toronto.cs.openome_model.diagram.part.Messages.Role4CreationTool_desc,
-				Collections
-						.singletonList(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Role_1004));
+				types);
 		entry.setId("createRole4CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/role.gif")); //$NON-NLS-1$
-		entry.setLargeIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/role.gif")); //$NON-NLS-1$
+		entry
+				.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/role.gif")); //$NON-NLS-1$
+		entry
+				.setLargeIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/role.gif")); //$NON-NLS-1$
 		return entry;
 	}
 
@@ -170,21 +184,28 @@ public class Openome_modelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createHardgoal6CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(5);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(5);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
 		NodeToolEntry entry = new NodeToolEntry(
 				edu.toronto.cs.openome_model.diagram.part.Messages.Hardgoal6CreationTool_title,
 				edu.toronto.cs.openome_model.diagram.part.Messages.Hardgoal6CreationTool_desc,
 				types);
 		entry.setId("createHardgoal6CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/hardgoal.gif")); //$NON-NLS-1$
-		entry.setLargeIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/hardgoal.gif")); //$NON-NLS-1$
+		entry
+				.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/hardgoal.gif")); //$NON-NLS-1$
+		entry
+				.setLargeIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/hardgoal.gif")); //$NON-NLS-1$
 		return entry;
 	}
 
@@ -192,21 +213,28 @@ public class Openome_modelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createSoftgoal7CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(5);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(5);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
 		NodeToolEntry entry = new NodeToolEntry(
 				edu.toronto.cs.openome_model.diagram.part.Messages.Softgoal7CreationTool_title,
 				edu.toronto.cs.openome_model.diagram.part.Messages.Softgoal7CreationTool_desc,
 				types);
 		entry.setId("createSoftgoal7CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/softgoal.gif")); //$NON-NLS-1$
-		entry.setLargeIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/softgoal.gif")); //$NON-NLS-1$
+		entry
+				.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/softgoal.gif")); //$NON-NLS-1$
+		entry
+				.setLargeIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/softgoal.gif")); //$NON-NLS-1$
 		return entry;
 	}
 
@@ -214,21 +242,28 @@ public class Openome_modelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createTask8CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(5);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(5);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
 		NodeToolEntry entry = new NodeToolEntry(
 				edu.toronto.cs.openome_model.diagram.part.Messages.Task8CreationTool_title,
 				edu.toronto.cs.openome_model.diagram.part.Messages.Task8CreationTool_desc,
 				types);
 		entry.setId("createTask8CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/task.gif")); //$NON-NLS-1$
-		entry.setLargeIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/task.gif")); //$NON-NLS-1$
+		entry
+				.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/task.gif")); //$NON-NLS-1$
+		entry
+				.setLargeIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/task.gif")); //$NON-NLS-1$
 		return entry;
 	}
 
@@ -236,21 +271,28 @@ public class Openome_modelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createResource9CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(5);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(5);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
 		NodeToolEntry entry = new NodeToolEntry(
 				edu.toronto.cs.openome_model.diagram.part.Messages.Resource9CreationTool_title,
 				edu.toronto.cs.openome_model.diagram.part.Messages.Resource9CreationTool_desc,
 				types);
 		entry.setId("createResource9CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/resource.gif")); //$NON-NLS-1$
-		entry.setLargeIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/resource.gif")); //$NON-NLS-1$
+		entry
+				.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/resource.gif")); //$NON-NLS-1$
+		entry
+				.setLargeIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/resource.gif")); //$NON-NLS-1$
 		return entry;
 	}
 
@@ -258,16 +300,20 @@ public class Openome_modelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createDependency11CreationTool() {
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
 		LinkToolEntry entry = new LinkToolEntry(
 				edu.toronto.cs.openome_model.diagram.part.Messages.Dependency11CreationTool_title,
 				edu.toronto.cs.openome_model.diagram.part.Messages.Dependency11CreationTool_desc,
-				Collections
-						.singletonList(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001));
+				types);
 		entry.setId("createDependency11CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/dependency.gif")); //$NON-NLS-1$
-		entry.setLargeIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/dependency.gif")); //$NON-NLS-1$
+		entry
+				.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/dependency.gif")); //$NON-NLS-1$
+		entry
+				.setLargeIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/dependency.gif")); //$NON-NLS-1$
 		return entry;
 	}
 
@@ -275,16 +321,20 @@ public class Openome_modelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createAnd13CreationTool() {
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
 		LinkToolEntry entry = new LinkToolEntry(
 				edu.toronto.cs.openome_model.diagram.part.Messages.And13CreationTool_title,
 				edu.toronto.cs.openome_model.diagram.part.Messages.And13CreationTool_desc,
-				Collections
-						.singletonList(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002));
+				types);
 		entry.setId("createAnd13CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/anddecomposition.gif")); //$NON-NLS-1$
-		entry.setLargeIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/anddecomposition.gif")); //$NON-NLS-1$
+		entry
+				.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/anddecomposition.gif")); //$NON-NLS-1$
+		entry
+				.setLargeIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/anddecomposition.gif")); //$NON-NLS-1$
 		return entry;
 	}
 
@@ -292,16 +342,20 @@ public class Openome_modelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createOr14CreationTool() {
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
 		LinkToolEntry entry = new LinkToolEntry(
 				edu.toronto.cs.openome_model.diagram.part.Messages.Or14CreationTool_title,
 				edu.toronto.cs.openome_model.diagram.part.Messages.Or14CreationTool_desc,
-				Collections
-						.singletonList(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003));
+				types);
 		entry.setId("createOr14CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/ordecomposition.gif")); //$NON-NLS-1$
-		entry.setLargeIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/ordecomposition.gif")); //$NON-NLS-1$
+		entry
+				.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/ordecomposition.gif")); //$NON-NLS-1$
+		entry
+				.setLargeIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/ordecomposition.gif")); //$NON-NLS-1$
 		return entry;
 	}
 
@@ -309,14 +363,17 @@ public class Openome_modelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createMake1CreationTool() {
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
 		LinkToolEntry entry = new LinkToolEntry(
 				edu.toronto.cs.openome_model.diagram.part.Messages.Make1CreationTool_title,
 				edu.toronto.cs.openome_model.diagram.part.Messages.Make1CreationTool_desc,
-				Collections
-						.singletonList(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006));
+				types);
 		entry.setId("createMake1CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
+		entry
+				.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -325,14 +382,17 @@ public class Openome_modelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createSome2CreationTool() {
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
 		LinkToolEntry entry = new LinkToolEntry(
 				edu.toronto.cs.openome_model.diagram.part.Messages.Some2CreationTool_title,
 				edu.toronto.cs.openome_model.diagram.part.Messages.Some2CreationTool_desc,
-				Collections
-						.singletonList(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008));
+				types);
 		entry.setId("createSome2CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
+		entry
+				.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -341,16 +401,20 @@ public class Openome_modelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createHelp3CreationTool() {
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
 		LinkToolEntry entry = new LinkToolEntry(
 				edu.toronto.cs.openome_model.diagram.part.Messages.Help3CreationTool_title,
 				edu.toronto.cs.openome_model.diagram.part.Messages.Help3CreationTool_desc,
-				Collections
-						.singletonList(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004));
+				types);
 		entry.setId("createHelp3CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
-		entry.setLargeIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
+		entry
+				.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
+		entry
+				.setLargeIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
 		return entry;
 	}
 
@@ -358,16 +422,20 @@ public class Openome_modelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createUnknown4CreationTool() {
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
 		LinkToolEntry entry = new LinkToolEntry(
 				edu.toronto.cs.openome_model.diagram.part.Messages.Unknown4CreationTool_title,
 				edu.toronto.cs.openome_model.diagram.part.Messages.Unknown4CreationTool_desc,
-				Collections
-						.singletonList(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010));
+				types);
 		entry.setId("createUnknown4CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
-		entry.setLargeIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
+		entry
+				.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
+		entry
+				.setLargeIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
 		return entry;
 	}
 
@@ -375,14 +443,17 @@ public class Openome_modelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createHurt5CreationTool() {
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
 		LinkToolEntry entry = new LinkToolEntry(
 				edu.toronto.cs.openome_model.diagram.part.Messages.Hurt5CreationTool_title,
 				edu.toronto.cs.openome_model.diagram.part.Messages.Hurt5CreationTool_desc,
-				Collections
-						.singletonList(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005));
+				types);
 		entry.setId("createHurt5CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
+		entry
+				.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -391,14 +462,17 @@ public class Openome_modelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createSome6CreationTool() {
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
 		LinkToolEntry entry = new LinkToolEntry(
 				edu.toronto.cs.openome_model.diagram.part.Messages.Some6CreationTool_title,
 				edu.toronto.cs.openome_model.diagram.part.Messages.Some6CreationTool_desc,
-				Collections
-						.singletonList(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009));
+				types);
 		entry.setId("createSome6CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
+		entry
+				.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -407,14 +481,17 @@ public class Openome_modelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createBreak7CreationTool() {
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
 		LinkToolEntry entry = new LinkToolEntry(
 				edu.toronto.cs.openome_model.diagram.part.Messages.Break7CreationTool_title,
 				edu.toronto.cs.openome_model.diagram.part.Messages.Break7CreationTool_desc,
-				Collections
-						.singletonList(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007));
+				types);
 		entry.setId("createBreak7CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
+		entry
+				.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -423,14 +500,17 @@ public class Openome_modelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createAND8CreationTool() {
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
 		LinkToolEntry entry = new LinkToolEntry(
 				edu.toronto.cs.openome_model.diagram.part.Messages.AND8CreationTool_title,
 				edu.toronto.cs.openome_model.diagram.part.Messages.AND8CreationTool_desc,
-				Collections
-						.singletonList(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011));
+				types);
 		entry.setId("createAND8CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
+		entry
+				.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -439,14 +519,17 @@ public class Openome_modelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createOR9CreationTool() {
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
 		LinkToolEntry entry = new LinkToolEntry(
 				edu.toronto.cs.openome_model.diagram.part.Messages.OR9CreationTool_title,
 				edu.toronto.cs.openome_model.diagram.part.Messages.OR9CreationTool_desc,
-				Collections
-						.singletonList(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012));
+				types);
 		entry.setId("createOR9CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
+		entry
+				.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -455,14 +538,17 @@ public class Openome_modelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createISA1CreationTool() {
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.IsAAssociation_3013);
 		LinkToolEntry entry = new LinkToolEntry(
 				edu.toronto.cs.openome_model.diagram.part.Messages.ISA1CreationTool_title,
 				edu.toronto.cs.openome_model.diagram.part.Messages.ISA1CreationTool_desc,
-				Collections
-						.singletonList(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.IsAAssociation_3013));
+				types);
 		entry.setId("createISA1CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
+		entry
+				.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -471,14 +557,17 @@ public class Openome_modelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createCovers2CreationTool() {
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.CoversAssociation_3014);
 		LinkToolEntry entry = new LinkToolEntry(
 				edu.toronto.cs.openome_model.diagram.part.Messages.Covers2CreationTool_title,
 				edu.toronto.cs.openome_model.diagram.part.Messages.Covers2CreationTool_desc,
-				Collections
-						.singletonList(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.CoversAssociation_3014));
+				types);
 		entry.setId("createCovers2CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
+		entry
+				.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -487,14 +576,17 @@ public class Openome_modelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createIspartof3CreationTool() {
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.IsPartOfAssociation_3016);
 		LinkToolEntry entry = new LinkToolEntry(
 				edu.toronto.cs.openome_model.diagram.part.Messages.Ispartof3CreationTool_title,
 				edu.toronto.cs.openome_model.diagram.part.Messages.Ispartof3CreationTool_desc,
-				Collections
-						.singletonList(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.IsPartOfAssociation_3016));
+				types);
 		entry.setId("createIspartof3CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
+		entry
+				.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -503,14 +595,17 @@ public class Openome_modelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createOccupies4CreationTool() {
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OccupiesAssociation_3015);
 		LinkToolEntry entry = new LinkToolEntry(
 				edu.toronto.cs.openome_model.diagram.part.Messages.Occupies4CreationTool_title,
 				edu.toronto.cs.openome_model.diagram.part.Messages.Occupies4CreationTool_desc,
-				Collections
-						.singletonList(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OccupiesAssociation_3015));
+				types);
 		entry.setId("createOccupies4CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
+		entry
+				.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -519,14 +614,17 @@ public class Openome_modelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createPlays5CreationTool() {
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.PlaysAssociation_3017);
 		LinkToolEntry entry = new LinkToolEntry(
 				edu.toronto.cs.openome_model.diagram.part.Messages.Plays5CreationTool_title,
 				edu.toronto.cs.openome_model.diagram.part.Messages.Plays5CreationTool_desc,
-				Collections
-						.singletonList(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.PlaysAssociation_3017));
+				types);
 		entry.setId("createPlays5CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
+		entry
+				.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -535,14 +633,17 @@ public class Openome_modelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createINS6CreationTool() {
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.INSAssociation_3018);
 		LinkToolEntry entry = new LinkToolEntry(
 				edu.toronto.cs.openome_model.diagram.part.Messages.INS6CreationTool_title,
 				edu.toronto.cs.openome_model.diagram.part.Messages.INS6CreationTool_desc,
-				Collections
-						.singletonList(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.INSAssociation_3018));
+				types);
 		entry.setId("createINS6CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
-				.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
+		entry
+				.setSmallIcon(edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin
+						.findImageDescriptor("/openome_model/icons/contribution.png")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -555,13 +656,13 @@ public class Openome_modelPaletteFactory {
 		/**
 		 * @generated
 		 */
-		private final List<IElementType> elementTypes;
+		private final List elementTypes;
 
 		/**
 		 * @generated
 		 */
 		private NodeToolEntry(String title, String description,
-				List<IElementType> elementTypes) {
+				List elementTypes) {
 			super(title, description, null, null);
 			this.elementTypes = elementTypes;
 		}
@@ -584,13 +685,13 @@ public class Openome_modelPaletteFactory {
 		/**
 		 * @generated
 		 */
-		private final List<IElementType> relationshipTypes;
+		private final List relationshipTypes;
 
 		/**
 		 * @generated
 		 */
 		private LinkToolEntry(String title, String description,
-				List<IElementType> relationshipTypes) {
+				List relationshipTypes) {
 			super(title, description, null, null);
 			this.relationshipTypes = relationshipTypes;
 		}

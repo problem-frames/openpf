@@ -28,8 +28,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="goal_model_symmetry" eType="#//GoalModelingContributionSymmetry"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Decomposition" eSuperTypes="#//Link">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Intention"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Intention"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Intention"
+        eOpposite="#//Intention/decompositions"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Intention"
+        eOpposite="#//Intention/parentDecompositions"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="model" eType="#//Model"
         transient="true" eOpposite="#//Model/decompositions"/>
   </eClassifiers>
@@ -59,9 +61,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="property" upperBound="-1"
         eType="#//Property" containment="true" resolveProxies="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="decompositions" upperBound="-1"
-        eType="#//Decomposition"/>
+        eType="#//Decomposition" eOpposite="#//Decomposition/source"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parentDecompositions" upperBound="-1"
-        eType="#//Decomposition"/>
+        eType="#//Decomposition" eOpposite="#//Decomposition/target"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="container" eType="#//Container"
         transient="true" eOpposite="#//Container/intentions"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="qualitativeReasoningCombinedLabel"

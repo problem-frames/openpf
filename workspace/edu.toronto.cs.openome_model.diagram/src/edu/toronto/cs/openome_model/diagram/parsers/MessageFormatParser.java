@@ -185,9 +185,10 @@ public class MessageFormatParser extends
 			return new ParserEditStatus(
 					edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorPlugin.ID,
 					IParserEditStatus.UNEDITABLE,
-					NLS.bind(
-							edu.toronto.cs.openome_model.diagram.part.Messages.MessageFormatParser_InvalidInputError,
-							new Integer(pos.getErrorIndex())));
+					NLS
+							.bind(
+									edu.toronto.cs.openome_model.diagram.part.Messages.MessageFormatParser_InvalidInputError,
+									new Integer(pos.getErrorIndex())));
 		}
 		return validateNewValues(values);
 	}

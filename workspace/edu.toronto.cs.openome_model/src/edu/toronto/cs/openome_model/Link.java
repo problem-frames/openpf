@@ -13,17 +13,10 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  *
- * @see edu.toronto.cs.openome_model.openome_modelPackage#getLink()
+ * @see edu.toronto.cs.openome_model.Openome_modelPackage#getLink()
  * @model abstract="true"
  * @generated
  */
 public interface Link extends EObject {
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Copyright 2001-2008 University of Toronto";
 
 } // Link

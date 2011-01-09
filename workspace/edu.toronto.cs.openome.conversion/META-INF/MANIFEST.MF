@@ -1,25 +1,22 @@
 Manifest-Version: 1.0
-Require-Bundle: edu.toronto.cs.openome_model,org.junit,org.sat4j.core,
- core,util,org.eclipse.core.runtime;bundle-version="3.6.0",org.eclipse
- .emf.ecore.xmi;bundle-version="2.5.0",q7;bundle-version="1.0.0"
-Export-Package: edu.toronto.cs.openome.conversion.action;uses:="org.ec
- lipse.core.runtime,edu.toronto.cs.openome.core.action,org.osgi.framew
- ork",edu.toronto.cs.openome.conversion.codegen; uses:="org.eclipse.em
- f.ecore.resource,  model,  junit.framework,  org.eclipse.emf.common.u
- til,  codegen,  edu.toronto.cs.openome_model",edu.toronto.cs.openome.
- conversion.convertor;uses:="edu.toronto.cs.openome.core.convertor",ed
- u.toronto.cs.openome.conversion.parser;uses:="org.eclipse.emf.ecore.r
- esource,edu.toronto.cs.openome_model",edu.toronto.cs.openome.conversi
- on.service;uses:="org.eclipse.emf.ecore.resource,edu.toronto.cs.openo
- me_model"
-Bundle-Vendor: University Of Toronto
-Bundle-ActivationPolicy: lazy
-Bundle-Version: 1.0.0.201010080232
-Bundle-Name: Conversion Plug-in for OpenOME
 Bundle-ManifestVersion: 2
-Bundle-Activator: edu.toronto.cs.openome.conversion.action.PluginActiv
- ator
+Bundle-Name: Conversion Plug-in for OpenOME
 Bundle-SymbolicName: edu.toronto.cs.openome.conversion;singleton:=true
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-
-
+Bundle-Version: 1.0.0
+Bundle-Vendor: University Of Toronto
+Require-Bundle: q7,
+ core,
+ util,
+ edu.toronto.cs.openome_model,
+ org.eclipse.gmf.codegen,
+ org.junit,
+ org.eclipse.core.runtime
+Export-Package: edu.toronto.cs.openome.conversion.action,
+ edu.toronto.cs.openome.conversion.codegen,
+ edu.toronto.cs.openome.conversion.convertor,
+ edu.toronto.cs.openome.conversion.parser,
+ edu.toronto.cs.openome.conversion.service
+Import-Package: org.osgi.framework,
+ org.sat4j.minisat,
+ org.sat4j.reader,
+ org.sat4j.specs

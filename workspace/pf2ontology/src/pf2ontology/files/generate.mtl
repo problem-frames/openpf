@@ -1,0 +1,11 @@
+[comment encoding = UTF-8 /]
+[module generate('http://open.ac.uk/problem')/]
+
+[template public generate(p : ProblemDiagram)]
+	
+	[comment @main /]
+	[file (p.name, false, 'UTF-8')]
+	[p.name/]
+	[/file]
+	
+[/template]

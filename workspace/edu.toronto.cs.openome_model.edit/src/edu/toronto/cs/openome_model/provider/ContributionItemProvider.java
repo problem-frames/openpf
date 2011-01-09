@@ -8,7 +8,7 @@ package edu.toronto.cs.openome_model.provider;
 
 import edu.toronto.cs.openome_model.Contribution;
 import edu.toronto.cs.openome_model.GoalModelingContributionSymmetry;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -81,7 +81,7 @@ public class ContributionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Contribution_target_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Contribution_target_feature", "_UI_Contribution_type"),
-				 openome_modelPackage.Literals.CONTRIBUTION__TARGET,
+				 Openome_modelPackage.Literals.CONTRIBUTION__TARGET,
 				 true,
 				 false,
 				 true,
@@ -103,7 +103,7 @@ public class ContributionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Contribution_source_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Contribution_source_feature", "_UI_Contribution_type"),
-				 openome_modelPackage.Literals.CONTRIBUTION__SOURCE,
+				 Openome_modelPackage.Literals.CONTRIBUTION__SOURCE,
 				 true,
 				 false,
 				 true,
@@ -125,7 +125,7 @@ public class ContributionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Contribution_goal_model_symmetry_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Contribution_goal_model_symmetry_feature", "_UI_Contribution_type"),
-				 openome_modelPackage.Literals.CONTRIBUTION__GOAL_MODEL_SYMMETRY,
+				 Openome_modelPackage.Literals.CONTRIBUTION__GOAL_MODEL_SYMMETRY,
 				 true,
 				 false,
 				 false,
@@ -172,7 +172,7 @@ public class ContributionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Contribution.class)) {
-			case openome_modelPackage.CONTRIBUTION__GOAL_MODEL_SYMMETRY:
+			case Openome_modelPackage.CONTRIBUTION__GOAL_MODEL_SYMMETRY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

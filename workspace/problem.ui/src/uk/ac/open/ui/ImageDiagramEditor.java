@@ -103,6 +103,7 @@ public class ImageDiagramEditor extends XtextEditor implements
 	}
 
 	IEditorPart openEditor;
+	protected String diagram_extension = null;
 	private void saveText(final URI uri) {
 		final String file = uri.toFileString();
 		final String original = getFile(file);
@@ -204,8 +205,11 @@ public class ImageDiagramEditor extends XtextEditor implements
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}
+		if (diagram_extension == null) {
+			diagram_extension = extension + "_diagram";
+		}
 		String diagramFile = filename.substring(0, filename.lastIndexOf("."))
-				+ "." + extension + "_diagram";
+				+ "." + diagram_extension;
 		URI diagramURI = URI.createURI(diagramFile);
 		IPath path = new Path(diagramURI.toString());
 		try {
@@ -316,7 +320,10 @@ public class ImageDiagramEditor extends XtextEditor implements
 	protected void deleteGeneratedFiles(IResource res) {
 		deleteFile(res, extension + ".pdf");
 		deleteFile(res, extension + ".png");
-		deleteFile(res, extension + "_diagram");
+		if (diagram_extension == null)
+			deleteFile(res, extension + "_diagram");
+		else
+			deleteFile(res, diagram_extension);
 		deleteFile(res, extension + ".xmi");
 		deleteFile(res, extension + ".html");
 	}

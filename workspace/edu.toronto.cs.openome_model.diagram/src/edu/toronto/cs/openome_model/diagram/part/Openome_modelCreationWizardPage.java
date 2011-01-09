@@ -80,7 +80,8 @@ public class Openome_modelCreationWizardPage extends WizardNewFileCreationPage {
 		if (extension != null
 				&& !getFilePath().toString().endsWith("." + extension)) {
 			setErrorMessage(NLS
-					.bind(edu.toronto.cs.openome_model.diagram.part.Messages.Openome_modelCreationWizardPageExtensionError,
+					.bind(
+							edu.toronto.cs.openome_model.diagram.part.Messages.Openome_modelCreationWizardPageExtensionError,
 							extension));
 			return false;
 		}

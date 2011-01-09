@@ -7,7 +7,7 @@ package edu.toronto.cs.openome_model.impl;
 
 import edu.toronto.cs.openome_model.Dependable;
 import edu.toronto.cs.openome_model.Dependency;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 
 import java.util.Collection;
 
@@ -20,7 +20,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -39,13 +38,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public abstract class DependableImpl extends EObjectImpl implements Dependable {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Copyright 2001-2008 University of Toronto";
-
 	/**
 	 * The cached value of the '{@link #getDependencyFrom() <em>Dependency From</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -82,7 +74,7 @@ public abstract class DependableImpl extends EObjectImpl implements Dependable {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return openome_modelPackage.Literals.DEPENDABLE;
+		return Openome_modelPackage.Literals.DEPENDABLE;
 	}
 
 	/**
@@ -92,7 +84,7 @@ public abstract class DependableImpl extends EObjectImpl implements Dependable {
 	 */
 	public EList<Dependency> getDependencyFrom() {
 		if (dependencyFrom == null) {
-			dependencyFrom = new EObjectResolvingEList<Dependency>(Dependency.class, this, openome_modelPackage.DEPENDABLE__DEPENDENCY_FROM);
+			dependencyFrom = new EObjectWithInverseResolvingEList<Dependency>(Dependency.class, this, Openome_modelPackage.DEPENDABLE__DEPENDENCY_FROM, Openome_modelPackage.DEPENDENCY__DEPENDENCY_TO);
 		}
 		return dependencyFrom;
 	}
@@ -104,9 +96,42 @@ public abstract class DependableImpl extends EObjectImpl implements Dependable {
 	 */
 	public EList<Dependency> getDependencyTo() {
 		if (dependencyTo == null) {
-			dependencyTo = new EObjectResolvingEList<Dependency>(Dependency.class, this, openome_modelPackage.DEPENDABLE__DEPENDENCY_TO);
+			dependencyTo = new EObjectWithInverseResolvingEList<Dependency>(Dependency.class, this, Openome_modelPackage.DEPENDABLE__DEPENDENCY_TO, Openome_modelPackage.DEPENDENCY__DEPENDENCY_FROM);
 		}
 		return dependencyTo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case Openome_modelPackage.DEPENDABLE__DEPENDENCY_FROM:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDependencyFrom()).basicAdd(otherEnd, msgs);
+			case Openome_modelPackage.DEPENDABLE__DEPENDENCY_TO:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDependencyTo()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case Openome_modelPackage.DEPENDABLE__DEPENDENCY_FROM:
+				return ((InternalEList<?>)getDependencyFrom()).basicRemove(otherEnd, msgs);
+			case Openome_modelPackage.DEPENDABLE__DEPENDENCY_TO:
+				return ((InternalEList<?>)getDependencyTo()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -117,9 +142,9 @@ public abstract class DependableImpl extends EObjectImpl implements Dependable {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case openome_modelPackage.DEPENDABLE__DEPENDENCY_FROM:
+			case Openome_modelPackage.DEPENDABLE__DEPENDENCY_FROM:
 				return getDependencyFrom();
-			case openome_modelPackage.DEPENDABLE__DEPENDENCY_TO:
+			case Openome_modelPackage.DEPENDABLE__DEPENDENCY_TO:
 				return getDependencyTo();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -134,11 +159,11 @@ public abstract class DependableImpl extends EObjectImpl implements Dependable {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case openome_modelPackage.DEPENDABLE__DEPENDENCY_FROM:
+			case Openome_modelPackage.DEPENDABLE__DEPENDENCY_FROM:
 				getDependencyFrom().clear();
 				getDependencyFrom().addAll((Collection<? extends Dependency>)newValue);
 				return;
-			case openome_modelPackage.DEPENDABLE__DEPENDENCY_TO:
+			case Openome_modelPackage.DEPENDABLE__DEPENDENCY_TO:
 				getDependencyTo().clear();
 				getDependencyTo().addAll((Collection<? extends Dependency>)newValue);
 				return;
@@ -154,10 +179,10 @@ public abstract class DependableImpl extends EObjectImpl implements Dependable {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case openome_modelPackage.DEPENDABLE__DEPENDENCY_FROM:
+			case Openome_modelPackage.DEPENDABLE__DEPENDENCY_FROM:
 				getDependencyFrom().clear();
 				return;
-			case openome_modelPackage.DEPENDABLE__DEPENDENCY_TO:
+			case Openome_modelPackage.DEPENDABLE__DEPENDENCY_TO:
 				getDependencyTo().clear();
 				return;
 		}
@@ -172,9 +197,9 @@ public abstract class DependableImpl extends EObjectImpl implements Dependable {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case openome_modelPackage.DEPENDABLE__DEPENDENCY_FROM:
+			case Openome_modelPackage.DEPENDABLE__DEPENDENCY_FROM:
 				return dependencyFrom != null && !dependencyFrom.isEmpty();
-			case openome_modelPackage.DEPENDABLE__DEPENDENCY_TO:
+			case Openome_modelPackage.DEPENDABLE__DEPENDENCY_TO:
 				return dependencyTo != null && !dependencyTo.isEmpty();
 		}
 		return super.eIsSet(featureID);

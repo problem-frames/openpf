@@ -4,11 +4,11 @@ import org.eclipse.gef.commands.Command;
 import org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest;
-
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelationshipRequest;
-import uk.ac.open.argument.argument.diagram.edit.commands.MitigatesRebuttalCreateCommand;
-import uk.ac.open.argument.argument.diagram.edit.commands.MitigatesRebuttalReorientCommand;
-import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesRebuttalEditPart;
+
+import uk.ac.open.argument.argument.diagram.edit.commands.ArgumentOriginCreateCommand;
+import uk.ac.open.argument.argument.diagram.edit.commands.ArgumentOriginReorientCommand;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentOriginEditPart;
 import uk.ac.open.argument.argument.diagram.providers.ArgumentElementTypes;
 
 /**
@@ -46,8 +46,8 @@ public class MitigatesItemSemanticEditPolicy extends
 	 */
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (ArgumentElementTypes.MitigatesRebuttal_4004 == req.getElementType()) {
-			return getGEFWrapper(new MitigatesRebuttalCreateCommand(req,
+		if (ArgumentElementTypes.MitigatesRebuttal_4003 == req.getElementType()) {
+			return getGEFWrapper(new ArgumentOriginCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
 		return null;
@@ -58,7 +58,7 @@ public class MitigatesItemSemanticEditPolicy extends
 	 */
 	protected Command getCompleteCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (ArgumentElementTypes.MitigatesRebuttal_4004 == req.getElementType()) {
+		if (ArgumentElementTypes.MitigatesRebuttal_4003 == req.getElementType()) {
 			return null;
 		}
 		return null;
@@ -73,8 +73,8 @@ public class MitigatesItemSemanticEditPolicy extends
 	protected Command getReorientReferenceRelationshipCommand(
 			ReorientReferenceRelationshipRequest req) {
 		switch (getVisualID(req)) {
-		case MitigatesRebuttalEditPart.VISUAL_ID:
-			return getGEFWrapper(new MitigatesRebuttalReorientCommand(req));
+		case ArgumentOriginEditPart.VISUAL_ID:
+			return getGEFWrapper(new ArgumentOriginReorientCommand(req));
 		}
 		return super.getReorientReferenceRelationshipCommand(req);
 	}

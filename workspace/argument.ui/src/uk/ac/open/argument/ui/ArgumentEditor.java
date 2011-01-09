@@ -16,6 +16,8 @@ import org.eclipse.core.runtime.Path;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.xtext.parsetree.reconstr.Serializer;
+import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.resource.XtextResourceSet;
 
 import uk.ac.open.argument.argument.Argument;
@@ -58,6 +60,7 @@ public class ArgumentEditor extends ImageDiagramEditor {
 	}
 
 	Set<Argument> set = new HashSet<Argument>();
+	private Serializer sr;
 
 	/**
 	 * Assume the original argument was true, check whether all knowledge
@@ -150,6 +153,8 @@ public class ArgumentEditor extends ImageDiagramEditor {
 		if (a.getExpr() == null || a.getExpr().equals("")) {
 			return a.getName();
 		}
+		if (sr!=null)
+			return a.getName() + "<-> (" + sr.serialize(a.getExpr()) + ")";
 		return a.getName() + "<-> (" + a.getExpr() + ")";
 	}
 
@@ -235,6 +240,8 @@ public class ArgumentEditor extends ImageDiagramEditor {
 			Resource xtextResource) {
 		ArgumentDiagram d = (ArgumentDiagram) xtextResource.getContents()
 				.get(0);
+		XtextResource xr = (XtextResource) xtextResource;
+		sr = xr.getSerializer();
 		EList<Argument> arguments = d.getNodes();
 		set.clear();
 		for (Argument a : arguments) {

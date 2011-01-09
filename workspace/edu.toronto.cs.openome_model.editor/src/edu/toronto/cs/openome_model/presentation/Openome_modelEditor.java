@@ -157,7 +157,7 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
-import edu.toronto.cs.openome_model.provider.openome_modelItemProviderAdapterFactory;
+import edu.toronto.cs.openome_model.provider.Openome_modelItemProviderAdapterFactory;
 //import edu.toronto.cs.openome_model.versioning.MolhadoActions;
 //import edu.toronto.cs.openome_model.versioning.MolhadoWorkspaceModifyOperation;
 
@@ -697,7 +697,7 @@ public class Openome_modelEditor
 		adapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
 
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new openome_modelItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new Openome_modelItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.

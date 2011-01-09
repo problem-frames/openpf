@@ -33,48 +33,72 @@ public class Openome_modelModelingAssistantProvider extends
 	public List getTypesForPopupBar(IAdaptable host) {
 		IGraphicalEditPart editPart = (IGraphicalEditPart) host
 				.getAdapter(IGraphicalEditPart.class);
-		if (editPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.ModelEditPart) {
-			ArrayList<IElementType> types = new ArrayList<IElementType>(8);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Actor_1001);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Agent_1002);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Position_1003);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Role_1004);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
-			return types;
-		}
 		if (editPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.ActorActorCompartmentEditPart) {
-			ArrayList<IElementType> types = new ArrayList<IElementType>(4);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
+			ArrayList types = new ArrayList(4);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
 			return types;
 		}
 		if (editPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.AgentAgentCompartmentEditPart) {
-			ArrayList<IElementType> types = new ArrayList<IElementType>(4);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
+			ArrayList types = new ArrayList(4);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
 			return types;
 		}
 		if (editPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.PositionPositionCompartmentEditPart) {
-			ArrayList<IElementType> types = new ArrayList<IElementType>(4);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
+			ArrayList types = new ArrayList(4);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
 			return types;
 		}
 		if (editPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.RoleRoleCompartmentEditPart) {
-			ArrayList<IElementType> types = new ArrayList<IElementType>(4);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
+			ArrayList types = new ArrayList(4);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
+			return types;
+		}
+		if (editPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.ModelEditPart) {
+			ArrayList types = new ArrayList(8);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Actor_1001);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Agent_1002);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Position_1003);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Role_1004);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
 			return types;
 		}
 		return Collections.EMPTY_LIST;
@@ -615,8 +639,8 @@ public class Openome_modelModelingAssistantProvider extends
 	 */
 	public EObject selectExistingElementForSource(IAdaptable target,
 			IElementType relationshipType) {
-		return selectExistingElement(target,
-				getTypesForSource(target, relationshipType));
+		return selectExistingElement(target, getTypesForSource(target,
+				relationshipType));
 	}
 
 	/**
@@ -624,8 +648,8 @@ public class Openome_modelModelingAssistantProvider extends
 	 */
 	public EObject selectExistingElementForTarget(IAdaptable source,
 			IElementType relationshipType) {
-		return selectExistingElement(source,
-				getTypesForTarget(source, relationshipType));
+		return selectExistingElement(source, getTypesForTarget(source,
+				relationshipType));
 	}
 
 	/**
@@ -641,10 +665,9 @@ public class Openome_modelModelingAssistantProvider extends
 			return null;
 		}
 		Diagram diagram = (Diagram) editPart.getRoot().getContents().getModel();
-		HashSet<EObject> elements = new HashSet<EObject>();
-		for (Iterator<EObject> it = diagram.getElement().eAllContents(); it
-				.hasNext();) {
-			EObject element = it.next();
+		Collection elements = new HashSet();
+		for (Iterator it = diagram.getElement().eAllContents(); it.hasNext();) {
+			EObject element = (EObject) it.next();
 			if (isApplicableElement(element, types)) {
 				elements.add(element);
 			}
@@ -675,8 +698,10 @@ public class Openome_modelModelingAssistantProvider extends
 						.getInstance().getItemProvidersAdapterFactory());
 		ElementListSelectionDialog dialog = new ElementListSelectionDialog(
 				shell, labelProvider);
-		dialog.setMessage(edu.toronto.cs.openome_model.diagram.part.Messages.Openome_modelModelingAssistantProviderMessage);
-		dialog.setTitle(edu.toronto.cs.openome_model.diagram.part.Messages.Openome_modelModelingAssistantProviderTitle);
+		dialog
+				.setMessage(edu.toronto.cs.openome_model.diagram.part.Messages.Openome_modelModelingAssistantProviderMessage);
+		dialog
+				.setTitle(edu.toronto.cs.openome_model.diagram.part.Messages.Openome_modelModelingAssistantProviderTitle);
 		dialog.setMultipleSelection(false);
 		dialog.setElements(elements);
 		EObject selected = null;

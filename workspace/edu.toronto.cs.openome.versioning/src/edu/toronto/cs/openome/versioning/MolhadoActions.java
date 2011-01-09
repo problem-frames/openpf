@@ -15,7 +15,9 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.List;
-import java.util.logging.Logger;
+
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 
 import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.core.runtime.Path;
@@ -37,28 +39,16 @@ import org.eclipse.emf.edit.command.CreateChildCommand;
 import org.eclipse.emf.edit.command.DeleteCommand;
 import org.eclipse.emf.edit.command.SetCommand;
 
+
 import sc.document.Component;
 import sc.document.Configuration;
 import sc.document.GoalModel;
 import sc.document.SCDirectory;
-import edu.toronto.cs.openome_model.AndDecomposition;
-import edu.toronto.cs.openome_model.BreakContribution;
-import edu.toronto.cs.openome_model.Contribution;
-import edu.toronto.cs.openome_model.Decomposition;
-import edu.toronto.cs.openome_model.Goal;
-import edu.toronto.cs.openome_model.HelpContribution;
-import edu.toronto.cs.openome_model.HurtContribution;
-import edu.toronto.cs.openome_model.Intention;
-import edu.toronto.cs.openome_model.MakeContribution;
-import edu.toronto.cs.openome_model.Model;
-import edu.toronto.cs.openome_model.OrDecomposition;
-import edu.toronto.cs.openome_model.Softgoal;
-import edu.toronto.cs.openome_model.SomeMinusContribution;
-import edu.toronto.cs.openome_model.SomePlusContribution;
-import edu.toronto.cs.openome_model.openome_modelFactory;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+
+import edu.toronto.cs.openome_model.*;
 import edu.toronto.cs.openome_model.impl.ModelImpl;
 import edu.toronto.cs.openome_model.presentation.Openome_modelEditor;
+
 import fluid.ir.IRNode;
 import fluid.ir.IRPersistent;
 import fluid.version.Version;
@@ -80,10 +70,11 @@ public class MolhadoActions {
 	
 	private Hashtable<String, Integer> versions = new Hashtable<String, Integer>();
 	Hashtable<String, Intention> nodes;
+	private static final Logger LOG = Logger.getLogger("GoalmodelEditor"); //added field
 	final static String MOLHADO_PLUGIN_NAME = "molhado";
 
-	openome_modelPackage e = openome_modelPackage.eINSTANCE;
-	openome_modelFactory f = e.getopenome_modelFactory();
+	Openome_modelPackage e = Openome_modelPackage.eINSTANCE;
+	Openome_modelFactory f = e.getopenome_modelFactory();
 	/** indexed on project_name e.g. 'Examples' */
 	HashSet<IRNode> set;
 	public Hashtable<String, Configuration> configurations = new Hashtable<String, Configuration>();
@@ -398,8 +389,8 @@ public class MolhadoActions {
 	 * ALGORITHM 3 from ICSE paper
 	 */
 	public  void checkLatestVersion(String model_name, String project_name, String file_name, ResourceSet res) { //must set properties in CH first.
-//		LOG.setLevel(Level.ERROR);		
-//		org.apache.log4j.Logger.getLogger("IR").setLevel(Level.ERROR);
+		LOG.setLevel(Level.ERROR);		
+		org.apache.log4j.Logger.getLogger("IR").setLevel(Level.ERROR);
 		String property = getMolhadoProperty();	
 		Configuration config = loadConfig(project_name, property);
 		if(config != null) { //we found an existing 'repository' aka a file in the specified molhado directory			

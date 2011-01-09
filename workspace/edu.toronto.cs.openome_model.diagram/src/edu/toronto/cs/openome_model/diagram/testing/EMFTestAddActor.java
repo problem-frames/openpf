@@ -18,7 +18,7 @@ import edu.toronto.cs.openome_model.impl.AgentImpl;
 import edu.toronto.cs.openome_model.impl.ModelImpl;
 import edu.toronto.cs.openome_model.impl.PositionImpl;
 import edu.toronto.cs.openome_model.impl.RoleImpl;
-import edu.toronto.cs.openome_model.impl.openome_modelFactoryImpl;
+import edu.toronto.cs.openome_model.impl.Openome_modelFactoryImpl;
 import junit.framework.*;
 
 /**
@@ -31,7 +31,7 @@ public class EMFTestAddActor {
 	/*
 	 * A factory that can create any class Impl
 	 */
-	private static openome_modelFactoryImpl factory = new openome_modelFactoryImpl();
+	private static Openome_modelFactoryImpl factory = new Openome_modelFactoryImpl();
 	
 	/*
 	 * The main model we are using

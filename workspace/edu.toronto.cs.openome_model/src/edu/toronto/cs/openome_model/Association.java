@@ -20,18 +20,11 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see edu.toronto.cs.openome_model.openome_modelPackage#getAssociation()
+ * @see edu.toronto.cs.openome_model.Openome_modelPackage#getAssociation()
  * @model
  * @generated
  */
 public interface Association extends Link {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Copyright 2001-2008 University of Toronto";
-
 	/**
 	 * Returns the value of the '<em><b>Source</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -42,7 +35,7 @@ public interface Association extends Link {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Source</em>' reference.
 	 * @see #setSource(Container)
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getAssociation_Source()
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getAssociation_Source()
 	 * @model
 	 * @generated
 	 */
@@ -68,7 +61,7 @@ public interface Association extends Link {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target</em>' reference.
 	 * @see #setTarget(Container)
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getAssociation_Target()
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getAssociation_Target()
 	 * @model
 	 * @generated
 	 */

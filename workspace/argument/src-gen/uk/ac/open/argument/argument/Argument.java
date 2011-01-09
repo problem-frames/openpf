@@ -7,8 +7,6 @@ package uk.ac.open.argument.argument;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Argument</b></em>'.
@@ -20,14 +18,15 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link uk.ac.open.argument.argument.Argument#getName <em>Name</em>}</li>
  *   <li>{@link uk.ac.open.argument.argument.Argument#getDescription <em>Description</em>}</li>
  *   <li>{@link uk.ac.open.argument.argument.Argument#getRound <em>Round</em>}</li>
- *   <li>{@link uk.ac.open.argument.argument.Argument#getExpr <em>Expr</em>}</li>
  *   <li>{@link uk.ac.open.argument.argument.Argument#getOrigin <em>Origin</em>}</li>
+ *   <li>{@link uk.ac.open.argument.argument.Argument#getExpr <em>Expr</em>}</li>
  *   <li>{@link uk.ac.open.argument.argument.Argument#getForeground <em>Foreground</em>}</li>
  *   <li>{@link uk.ac.open.argument.argument.Argument#getBackground <em>Background</em>}</li>
  *   <li>{@link uk.ac.open.argument.argument.Argument#getShape <em>Shape</em>}</li>
  *   <li>{@link uk.ac.open.argument.argument.Argument#getImage <em>Image</em>}</li>
  *   <li>{@link uk.ac.open.argument.argument.Argument#getGrounds <em>Grounds</em>}</li>
  *   <li>{@link uk.ac.open.argument.argument.Argument#getWarrants <em>Warrants</em>}</li>
+ *   <li>{@link uk.ac.open.argument.argument.Argument#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -35,7 +34,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Argument extends EObject
+public interface Argument extends TerminalExpression
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -116,32 +115,6 @@ public interface Argument extends EObject
   void setRound(int value);
 
   /**
-   * Returns the value of the '<em><b>Expr</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Expr</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Expr</em>' attribute.
-   * @see #setExpr(String)
-   * @see uk.ac.open.argument.argument.ArgumentPackage#getArgument_Expr()
-   * @model
-   * @generated
-   */
-  String getExpr();
-
-  /**
-   * Sets the value of the '{@link uk.ac.open.argument.argument.Argument#getExpr <em>Expr</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Expr</em>' attribute.
-   * @see #getExpr()
-   * @generated
-   */
-  void setExpr(String value);
-
-  /**
    * Returns the value of the '<em><b>Origin</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
@@ -166,6 +139,32 @@ public interface Argument extends EObject
    * @generated
    */
   void setOrigin(Argument value);
+
+  /**
+   * Returns the value of the '<em><b>Expr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Expr</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Expr</em>' containment reference.
+   * @see #setExpr(Expression)
+   * @see uk.ac.open.argument.argument.ArgumentPackage#getArgument_Expr()
+   * @model containment="true"
+   * @generated
+   */
+  Expression getExpr();
+
+  /**
+   * Sets the value of the '{@link uk.ac.open.argument.argument.Argument#getExpr <em>Expr</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Expr</em>' containment reference.
+   * @see #getExpr()
+   * @generated
+   */
+  void setExpr(Expression value);
 
   /**
    * Returns the value of the '<em><b>Foreground</b></em>' attribute.
@@ -302,5 +301,31 @@ public interface Argument extends EObject
    * @generated
    */
   EList<Argument> getWarrants();
+
+  /**
+   * Returns the value of the '<em><b>Value</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Value</em>' reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Value</em>' reference.
+   * @see #setValue(Argument)
+   * @see uk.ac.open.argument.argument.ArgumentPackage#getArgument_Value()
+   * @model
+   * @generated
+   */
+  Argument getValue();
+
+  /**
+   * Sets the value of the '{@link uk.ac.open.argument.argument.Argument#getValue <em>Value</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Value</em>' reference.
+   * @see #getValue()
+   * @generated
+   */
+  void setValue(Argument value);
 
 } // Argument

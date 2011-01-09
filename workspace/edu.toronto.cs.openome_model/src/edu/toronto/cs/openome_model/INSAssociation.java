@@ -18,18 +18,11 @@ package edu.toronto.cs.openome_model;
  * </ul>
  * </p>
  *
- * @see edu.toronto.cs.openome_model.openome_modelPackage#getINSAssociation()
+ * @see edu.toronto.cs.openome_model.Openome_modelPackage#getINSAssociation()
  * @model
  * @generated
  */
 public interface INSAssociation extends Association {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Copyright 2001-2008 University of Toronto";
-
 	/**
 	 * Returns the value of the '<em><b>Label</b></em>' attribute.
 	 * The default value is <code>"INS"</code>.
@@ -40,7 +33,7 @@ public interface INSAssociation extends Association {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Label</em>' attribute.
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getINSAssociation_Label()
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getINSAssociation_Label()
 	 * @model default="INS" changeable="false"
 	 * @generated
 	 */

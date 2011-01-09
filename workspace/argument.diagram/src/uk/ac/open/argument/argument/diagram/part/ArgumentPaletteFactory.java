@@ -96,10 +96,10 @@ public class ArgumentPaletteFactory {
 				Messages.Origin2CreationTool_title,
 				Messages.Origin2CreationTool_desc,
 				Collections
-						.singletonList(ArgumentElementTypes.ArgumentOrigin_4003));
+						.singletonList(ArgumentElementTypes.ArgumentOrigin_4004));
 		entry.setId("createOrigin2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ArgumentElementTypes
-				.getImageDescriptor(ArgumentElementTypes.ArgumentOrigin_4003));
+				.getImageDescriptor(ArgumentElementTypes.ArgumentOrigin_4004));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -127,10 +127,10 @@ public class ArgumentPaletteFactory {
 				Messages.Rebuttal4CreationTool_title,
 				Messages.Rebuttal4CreationTool_desc,
 				Collections
-						.singletonList(ArgumentElementTypes.MitigatesRebuttal_4004));
+						.singletonList(ArgumentElementTypes.MitigatesRebuttal_4003));
 		entry.setId("createRebuttal4CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ArgumentElementTypes
-				.getImageDescriptor(ArgumentElementTypes.MitigatesRebuttal_4004));
+				.getImageDescriptor(ArgumentElementTypes.MitigatesRebuttal_4003));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}

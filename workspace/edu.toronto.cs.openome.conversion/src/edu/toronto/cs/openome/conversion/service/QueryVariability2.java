@@ -35,8 +35,8 @@ import edu.toronto.cs.openome_model.Model;
 import edu.toronto.cs.openome_model.OrDecomposition;
 import edu.toronto.cs.openome_model.Property;
 import edu.toronto.cs.openome_model.Softgoal;
-import edu.toronto.cs.openome_model.openome_modelFactory;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelFactory;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 
 @SuppressWarnings("restriction")
 public class QueryVariability2 implements IConfigurator {
@@ -48,19 +48,19 @@ public class QueryVariability2 implements IConfigurator {
 	public final int LEVELS = 10;
 	public final float INTERVAL = 1f/LEVELS;
 	
-	public openome_modelPackage e = null;
-	public openome_modelFactory f = null;
+	public Openome_modelPackage e = null;
+	public Openome_modelFactory f = null;
 	public Resource resource;
 	public int max_rank;
 
 	public QueryVariability2() {
-		e = openome_modelPackage.eINSTANCE;
+		e = Openome_modelPackage.eINSTANCE;
 		f = e.getopenome_modelFactory();		
 		current_rank = 0;
 		max_rank = -1;
 	}
 	public QueryVariability2(Resource r, Map<String, Integer> labels, Map<String, Integer> ranks) {		
-		e = openome_modelPackage.eINSTANCE;
+		e = Openome_modelPackage.eINSTANCE;
 		f = e.getopenome_modelFactory();
 		current_rank = 0;
 		setModel(r, labels, ranks);		

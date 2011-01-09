@@ -19,21 +19,27 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AndDecomposition" eSuperTypes="#//Decomposition"/>
   <eClassifiers xsi:type="ecore:EClass" name="Contribution" eSuperTypes="#//Link">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Intention"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Intention"
+        eOpposite="#//Intention/contributesFrom"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="model" eType="#//Model"
         transient="true" eOpposite="#//Model/contributions"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Intention"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Intention"
+        eOpposite="#//Intention/contributesTo"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="goal_model_symmetry" eType="#//GoalModelingContributionSymmetry"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Decomposition" eSuperTypes="#//Link">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Intention"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Intention"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Intention"
+        eOpposite="#//Intention/decompositions"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Intention"
+        eOpposite="#//Intention/parentDecompositions"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="model" eType="#//Model"
         transient="true" eOpposite="#//Model/decompositions"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Dependency" eSuperTypes="#//Link">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dependencyFrom" eType="#//Dependable"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dependencyTo" eType="#//Dependable"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dependencyFrom" eType="#//Dependable"
+        eOpposite="#//Dependable/dependencyTo"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dependencyTo" eType="#//Dependable"
+        eOpposite="#//Dependable/dependencyFrom"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="trust" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="model" eType="#//Model"
@@ -55,9 +61,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="property" upperBound="-1"
         eType="#//Property" containment="true" resolveProxies="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="decompositions" upperBound="-1"
-        eType="#//Decomposition"/>
+        eType="#//Decomposition" eOpposite="#//Decomposition/source"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parentDecompositions" upperBound="-1"
-        eType="#//Decomposition"/>
+        eType="#//Decomposition" eOpposite="#//Decomposition/target"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="container" eType="#//Container"
         transient="true" eOpposite="#//Container/intentions"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="QualitativeReasoningCombinedLabel"
@@ -73,9 +79,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="QuantitativeReasoningSatisfiedLabel"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contributesTo" upperBound="-1"
-        eType="#//Contribution"/>
+        eType="#//Contribution" eOpposite="#//Contribution/source"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contributesFrom" upperBound="-1"
-        eType="#//Contribution"/>
+        eType="#//Contribution" eOpposite="#//Contribution/target"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Model">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -153,9 +159,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Dependable" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="dependencyFrom" upperBound="-1"
-        eType="#//Dependency"/>
+        eType="#//Dependency" eOpposite="#//Dependency/dependencyTo"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dependencyTo" upperBound="-1"
-        eType="#//Dependency"/>
+        eType="#//Dependency" eOpposite="#//Dependency/dependencyFrom"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HelpContribution" eSuperTypes="#//Contribution">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="contributionType" lowerBound="1"

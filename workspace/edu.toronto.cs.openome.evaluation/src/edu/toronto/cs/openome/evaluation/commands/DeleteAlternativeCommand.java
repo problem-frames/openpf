@@ -9,9 +9,9 @@ import edu.toronto.cs.openome.evaluation.views.ModelInstance;
 import edu.toronto.cs.openome_model.Alternative;
 import edu.toronto.cs.openome_model.EvaluationLabel;
 import edu.toronto.cs.openome_model.Intention;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 import edu.toronto.cs.openome_model.impl.ModelImpl;
-import edu.toronto.cs.openome_model.impl.openome_modelFactoryImpl;
+import edu.toronto.cs.openome_model.impl.Openome_modelFactoryImpl;
 
 public class DeleteAlternativeCommand implements Command {
 	private Alternative alternative;

@@ -21,18 +21,11 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see edu.toronto.cs.openome_model.openome_modelPackage#getAgent()
+ * @see edu.toronto.cs.openome_model.Openome_modelPackage#getAgent()
  * @model
  * @generated
  */
 public interface Agent extends Container {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Copyright 2001-2008 University of Toronto";
-
 	/**
 	 * Returns the value of the '<em><b>Plays</b></em>' reference list.
 	 * The list contents are of type {@link edu.toronto.cs.openome_model.Role}.
@@ -43,7 +36,7 @@ public interface Agent extends Container {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Plays</em>' reference list.
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getAgent_Plays()
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getAgent_Plays()
 	 * @model
 	 * @generated
 	 */
@@ -59,7 +52,7 @@ public interface Agent extends Container {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Occupies</em>' reference list.
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getAgent_Occupies()
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getAgent_Occupies()
 	 * @model
 	 * @generated
 	 */
@@ -75,7 +68,7 @@ public interface Agent extends Container {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ins</em>' reference.
 	 * @see #setIns(Agent)
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getAgent_Ins()
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getAgent_Ins()
 	 * @model
 	 * @generated
 	 */

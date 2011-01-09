@@ -1,40 +1,26 @@
 grammar eu.securechange.ontology.Ontology with org.eclipse.xtext.common.Terminals
-
 generate ontology 'http://securechange.eu/ontology'
 
-Situation:
-	('model' time=ID ':')? world=World;
-
+Situation: ('model' time=ID ':')? world=World;
 World: {World} (entities+=Entity | relationships+=Relationship)*;
-
 Entity: Goal | Domain;
-
 Goal: name=ID type='goal' (asset=Asset)? ((',')? properties+=Proposition)* | SecurityGoal | Requirement;
-
 SecurityGoal: name=ID type='sec' (asset=Asset)? ((',')? properties+=Proposition)*;
-
 Requirement: name=ID type='req' (asset=Asset)? ((',')? properties+=Proposition)*; 
-
 Domain: name=ID type='dom' (asset=Asset)? ((',')? properties+=Proposition)* | Actor | Action | Resource; 
-
 Asset: name=ID '$' (value=STRING)?;
-
 Actor:	name=ID type='actor' (asset=Asset)? ((',')? properties+=Proposition)*;
-
 Action:	name=ID type='action' (asset=Asset)? ((',')? properties+=Proposition)*;
-
 Resource: name=ID type='resource' (asset=Asset)? ((',')? properties+=Proposition)*;
-
-Proposition:
-	name=STRING;
-
-Relationship:
-    type=RelType '(' (','? entities+=[Entity])* ')'  ((',')? properties+=Proposition)*;
-
-enum RelType: CARRIESOUT='carries out' | DEPENDS='depends' | AND_DECOMPOSES='and decomposes' | OR_DECOMPOSES='or decomposes' 
-	| HELPS='+' | HURTS='-' | BREAKS='--' | MAKES='++' 
-	| DELEGATES='delegates' | FULFILS='fulfils' | PROVIDES='provides' | TRUSTS='trusts' | WANTS='wants' | DAMAGES ='damages' 
-	| ATTACKS='attacks' | ARGUES ='argues' | INTERFACES='interfaces' | CONSUMEs='consumes' | PROTECTS='protects';
-
+Proposition: name=STRING;
+Relationship: type=RelType '(' (','? entities+=[Entity])* ')'  ((',')? properties+=Proposition)*;
+enum RelType: CARRIESOUT='carries out' | FULFILS='fulfils'  // refinement
+    | AND_DECOMPOSES='and decomposes' | OR_DECOMPOSES='or decomposes' // decompositions
+	| HELPS='+' | HURTS='-' | BREAKS='--' | MAKES='++' // contributions
+    | WANTS='wants' | DEPENDS='depends' | DELEGATES='delegates' | TRUSTS='trusts' // i*
+	| PROVIDES='provides' | CONSUMEs='consumes' | INTERFACES='interfaces' // PF
+	| DAMAGES ='damages' | ATTACKS='attacks' | PROTECTS='protects' // security
+	| ARGUES ='argues'; // argumentation
+	
 terminal ID:
-	('#' (!('#'))+ '#') | ('^'? ('a'..'z' | 'A'..'Z' | '_' | '.') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9' | '.')*);
+ ('#' (!('#'))+ '#') | ('^'? ('a'..'z' | 'A'..'Z' | '_' | '.') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9' | '.')*);

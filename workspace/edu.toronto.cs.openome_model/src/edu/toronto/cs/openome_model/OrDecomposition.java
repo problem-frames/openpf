@@ -12,17 +12,10 @@ package edu.toronto.cs.openome_model;
  * <!-- end-user-doc -->
  *
  *
- * @see edu.toronto.cs.openome_model.openome_modelPackage#getOrDecomposition()
+ * @see edu.toronto.cs.openome_model.Openome_modelPackage#getOrDecomposition()
  * @model
  * @generated
  */
 public interface OrDecomposition extends Decomposition {
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Copyright 2001-2008 University of Toronto";
 
 } // OrDecomposition

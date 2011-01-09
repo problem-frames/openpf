@@ -21,9 +21,9 @@ import uk.ac.open.argument.argument.diagram.edit.parts.Argument2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.Argument3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDiagramEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentEditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentOrigin2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentOriginEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesEditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesRebuttalEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.RebutsEditPart;
 import uk.ac.open.argument.argument.diagram.part.ArgumentDiagramEditorPlugin;
 
@@ -80,12 +80,12 @@ public class ArgumentElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType ArgumentOrigin_4003 = getElementType("argument.diagram.ArgumentOrigin_4003"); //$NON-NLS-1$
+	public static final IElementType MitigatesRebuttal_4003 = getElementType("argument.diagram.MitigatesRebuttal_4003"); //$NON-NLS-1$
 
 	/**
 	 * @generated
 	 */
-	public static final IElementType MitigatesRebuttal_4004 = getElementType("argument.diagram.MitigatesRebuttal_4004"); //$NON-NLS-1$
+	public static final IElementType ArgumentOrigin_4004 = getElementType("argument.diagram.ArgumentOrigin_4004"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -212,11 +212,11 @@ public class ArgumentElementTypes {
 			elements.put(Mitigates_4002,
 					ArgumentPackage.eINSTANCE.getMitigates());
 
-			elements.put(ArgumentOrigin_4003,
-					ArgumentPackage.eINSTANCE.getArgument_Origin());
-
-			elements.put(MitigatesRebuttal_4004,
+			elements.put(MitigatesRebuttal_4003,
 					ArgumentPackage.eINSTANCE.getMitigates_Rebuttal());
+
+			elements.put(ArgumentOrigin_4004,
+					ArgumentPackage.eINSTANCE.getArgument_Origin());
 		}
 		return (ENamedElement) elements.get(type);
 	}
@@ -240,8 +240,8 @@ public class ArgumentElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Argument_3002);
 			KNOWN_ELEMENT_TYPES.add(Rebuts_4001);
 			KNOWN_ELEMENT_TYPES.add(Mitigates_4002);
-			KNOWN_ELEMENT_TYPES.add(ArgumentOrigin_4003);
-			KNOWN_ELEMENT_TYPES.add(MitigatesRebuttal_4004);
+			KNOWN_ELEMENT_TYPES.add(MitigatesRebuttal_4003);
+			KNOWN_ELEMENT_TYPES.add(ArgumentOrigin_4004);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -264,9 +264,9 @@ public class ArgumentElementTypes {
 		case MitigatesEditPart.VISUAL_ID:
 			return Mitigates_4002;
 		case ArgumentOriginEditPart.VISUAL_ID:
-			return ArgumentOrigin_4003;
-		case MitigatesRebuttalEditPart.VISUAL_ID:
-			return MitigatesRebuttal_4004;
+			return MitigatesRebuttal_4003;
+		case ArgumentOrigin2EditPart.VISUAL_ID:
+			return ArgumentOrigin_4004;
 		}
 		return null;
 	}

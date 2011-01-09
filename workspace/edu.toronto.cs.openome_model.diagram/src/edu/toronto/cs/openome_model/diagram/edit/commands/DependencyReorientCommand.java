@@ -68,9 +68,8 @@ public class DependencyReorientCommand extends EditElementCommand {
 		}
 		edu.toronto.cs.openome_model.Model container = (edu.toronto.cs.openome_model.Model) getLink()
 				.eContainer();
-		return edu.toronto.cs.openome_model.diagram.edit.policies.Openome_modelBaseItemSemanticEditPolicy
-				.getLinkConstraints().canExistDependency_3001(container,
-						getLink(), getNewSource(), target);
+		return edu.toronto.cs.openome_model.diagram.edit.policies.Openome_modelBaseItemSemanticEditPolicy.LinkConstraints
+				.canExistDependency_3001(container, getNewSource(), target);
 	}
 
 	/**
@@ -87,9 +86,8 @@ public class DependencyReorientCommand extends EditElementCommand {
 		}
 		edu.toronto.cs.openome_model.Model container = (edu.toronto.cs.openome_model.Model) getLink()
 				.eContainer();
-		return edu.toronto.cs.openome_model.diagram.edit.policies.Openome_modelBaseItemSemanticEditPolicy
-				.getLinkConstraints().canExistDependency_3001(container,
-						getLink(), source, getNewTarget());
+		return edu.toronto.cs.openome_model.diagram.edit.policies.Openome_modelBaseItemSemanticEditPolicy.LinkConstraints
+				.canExistDependency_3001(container, source, getNewTarget());
 	}
 
 	/**

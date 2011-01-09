@@ -28,11 +28,8 @@ import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
-import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
 
-import org.eclipse.swt.graphics.Font;
-import org.eclipse.swt.widgets.Display;
 import uk.ac.open.argument.argument.Argument;
 import uk.ac.open.argument.argument.diagram.edit.policies.Argument2ItemSemanticEditPolicy;
 import uk.ac.open.argument.argument.diagram.edit.policies.OpenDiagramEditPolicy;
@@ -311,7 +308,7 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
 		types.add(ArgumentElementTypes.Rebuts_4001);
 		types.add(ArgumentElementTypes.Mitigates_4002);
-		types.add(ArgumentElementTypes.ArgumentOrigin_4003);
+		types.add(ArgumentElementTypes.ArgumentOrigin_4004);
 		return types;
 	}
 
@@ -340,13 +337,13 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 			types.add(ArgumentElementTypes.Mitigates_4002);
 		}
 		if (targetEditPart instanceof ArgumentEditPart) {
-			types.add(ArgumentElementTypes.ArgumentOrigin_4003);
+			types.add(ArgumentElementTypes.ArgumentOrigin_4004);
 		}
 		if (targetEditPart instanceof uk.ac.open.argument.argument.diagram.edit.parts.Argument2EditPart) {
-			types.add(ArgumentElementTypes.ArgumentOrigin_4003);
+			types.add(ArgumentElementTypes.ArgumentOrigin_4004);
 		}
 		if (targetEditPart instanceof Argument3EditPart) {
-			types.add(ArgumentElementTypes.ArgumentOrigin_4003);
+			types.add(ArgumentElementTypes.ArgumentOrigin_4004);
 		}
 		return types;
 	}
@@ -364,7 +361,7 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 			types.add(ArgumentElementTypes.Argument_2001);
 			types.add(ArgumentElementTypes.Argument_3001);
 			types.add(ArgumentElementTypes.Argument_3002);
-		} else if (relationshipType == ArgumentElementTypes.ArgumentOrigin_4003) {
+		} else if (relationshipType == ArgumentElementTypes.ArgumentOrigin_4004) {
 			types.add(ArgumentElementTypes.Argument_2001);
 			types.add(ArgumentElementTypes.Argument_3001);
 			types.add(ArgumentElementTypes.Argument_3002);
@@ -379,7 +376,7 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
 		types.add(ArgumentElementTypes.Rebuts_4001);
 		types.add(ArgumentElementTypes.Mitigates_4002);
-		types.add(ArgumentElementTypes.ArgumentOrigin_4003);
+		types.add(ArgumentElementTypes.ArgumentOrigin_4004);
 		return types;
 	}
 
@@ -396,7 +393,7 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 			types.add(ArgumentElementTypes.Argument_2001);
 			types.add(ArgumentElementTypes.Argument_3001);
 			types.add(ArgumentElementTypes.Argument_3002);
-		} else if (relationshipType == ArgumentElementTypes.ArgumentOrigin_4003) {
+		} else if (relationshipType == ArgumentElementTypes.ArgumentOrigin_4004) {
 			types.add(ArgumentElementTypes.Argument_2001);
 			types.add(ArgumentElementTypes.Argument_3001);
 			types.add(ArgumentElementTypes.Argument_3002);
@@ -501,12 +498,5 @@ public class Argument2EditPart extends ShapeNodeEditPart {
 		}
 
 	}
-
-	/**
-	 * @generated
-	 */
-	static final Font FFIGUREARGUMENTLABELFIGURE_FONT = new Font(
-			Display.getCurrent(), Display.getDefault().getSystemFont()
-					.getFontData()[0].getName(), 9, SWT.BOLD);
 
 }

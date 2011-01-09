@@ -9,9 +9,9 @@ import edu.toronto.cs.openome.evaluation.views.ModelInstance;
 import edu.toronto.cs.openome_model.Alternative;
 import edu.toronto.cs.openome_model.EvaluationLabel;
 import edu.toronto.cs.openome_model.Intention;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 import edu.toronto.cs.openome_model.impl.ModelImpl;
-import edu.toronto.cs.openome_model.impl.openome_modelFactoryImpl;
+import edu.toronto.cs.openome_model.impl.Openome_modelFactoryImpl;
 
 public class AddIntentionsToAlternativeCommand implements Command {
 	private Alternative alternative;
@@ -21,7 +21,7 @@ public class AddIntentionsToAlternativeCommand implements Command {
 	/*
 	 * A factory that can create any class Impl
 	 */
-	private static openome_modelFactoryImpl factory = new openome_modelFactoryImpl();
+	private static Openome_modelFactoryImpl factory = new Openome_modelFactoryImpl();
 	
 	public AddIntentionsToAlternativeCommand(Alternative alt, EList<Intention> ints, ModelImpl m) {
 		alternative = alt;

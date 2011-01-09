@@ -51,7 +51,7 @@ import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.internal.ViewActionBars;
 
 import edu.toronto.cs.openome_model.Intention;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 import edu.toronto.cs.openome_model.diagram.edit.commands.*;
 import edu.toronto.cs.openome_model.diagram.edit.parts.ActorActorCompartmentEditPart;
 import edu.toronto.cs.openome_model.diagram.edit.parts.AndContributionEditPart;

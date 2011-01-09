@@ -4,9 +4,10 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.command.Command;
 
+import edu.toronto.cs.openome_model.impl.ActorImpl;
 import edu.toronto.cs.openome_model.impl.AgentImpl;
 import edu.toronto.cs.openome_model.impl.ModelImpl;
-import edu.toronto.cs.openome_model.impl.openome_modelFactoryImpl;
+import edu.toronto.cs.openome_model.impl.Openome_modelFactoryImpl;
 
 public class AgentImplCreateCommand implements Command {
 	
@@ -23,7 +24,7 @@ public class AgentImplCreateCommand implements Command {
 	/*
 	 * A factory that can create any class Impl
 	 */
-	private static openome_modelFactoryImpl factory = new openome_modelFactoryImpl();
+	private static Openome_modelFactoryImpl factory = new Openome_modelFactoryImpl();
 	
 	/**
 	 * Command to add an actor inside a model
@@ -44,31 +45,31 @@ public class AgentImplCreateCommand implements Command {
 
 
 
-//	
+//	@Override
 	public boolean canExecute() {
 		// TODO Auto-generated method stub
 		return true;
 	}
 
-//	
+//	@Override
 	public boolean canUndo() {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-//	
+//	@Override
 	public Command chain(Command command) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-//	
+//	@Override
 	public void dispose() {
 		// TODO Auto-generated method stub
 
 	}
 
-//	
+//	@Override
 	public void execute() {
 		AgentImpl agent = (AgentImpl) factory.createAgent();
 		agent.setModel(model);
@@ -77,36 +78,36 @@ public class AgentImplCreateCommand implements Command {
 
 	}
 
-//	
+//	@Override
 	public Collection<?> getAffectedObjects() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-//	
+//	@Override
 	public String getDescription() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-//	
+//	@Override
 	public String getLabel() {
 		return "Create Agent model";
 	}
 
-//	
+//	@Override
 	public Collection<?> getResult() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-//	
+//	@Override
 	public void redo() {
 		// TODO Auto-generated method stub
 
 	}
 
-//	
+//	@Override
 	public void undo() {
 		// TODO Auto-generated method stub
 

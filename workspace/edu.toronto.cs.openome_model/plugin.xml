@@ -12,7 +12,7 @@
   <extension point="org.eclipse.emf.ecore.generated_package">
     <package 
        uri = "http:///edu/toronto/cs/openome_model.ecore" 
-       class = "edu.toronto.cs.openome_model.openome_modelPackage" />
+       class = "edu.toronto.cs.openome_model.Openome_modelPackage" />
   </extension>
 
 </plugin>

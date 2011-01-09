@@ -67,9 +67,9 @@ public class CoversAssociationCreateCommand extends EditElementCommand {
 		if (getContainer() == null) {
 			return false;
 		}
-		return edu.toronto.cs.openome_model.diagram.edit.policies.Openome_modelBaseItemSemanticEditPolicy
-				.getLinkConstraints().canCreateCoversAssociation_3014(
-						getContainer(), getSource(), getTarget());
+		return edu.toronto.cs.openome_model.diagram.edit.policies.Openome_modelBaseItemSemanticEditPolicy.LinkConstraints
+				.canCreateCoversAssociation_3014(getContainer(), getSource(),
+						getTarget());
 	}
 
 	/**
@@ -82,7 +82,7 @@ public class CoversAssociationCreateCommand extends EditElementCommand {
 					"Invalid arguments in create link command"); //$NON-NLS-1$
 		}
 
-		edu.toronto.cs.openome_model.CoversAssociation newElement = edu.toronto.cs.openome_model.openome_modelFactory.eINSTANCE
+		edu.toronto.cs.openome_model.CoversAssociation newElement = edu.toronto.cs.openome_model.Openome_modelFactory.eINSTANCE
 				.createCoversAssociation();
 		getContainer().getAssociations().add(newElement);
 		newElement.setSource(getSource());

@@ -12,17 +12,10 @@ package edu.toronto.cs.openome_model;
  * <!-- end-user-doc -->
  *
  *
- * @see edu.toronto.cs.openome_model.openome_modelPackage#getResource()
+ * @see edu.toronto.cs.openome_model.Openome_modelPackage#getResource()
  * @model
  * @generated
  */
 public interface Resource extends Intention {
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Copyright 2001-2008 University of Toronto";
 
 } // Resource

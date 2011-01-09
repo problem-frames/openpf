@@ -6,7 +6,7 @@
 package edu.toronto.cs.openome_model.impl;
 
 import edu.toronto.cs.openome_model.Softgoal;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -28,13 +28,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 public class SoftgoalImpl extends IntentionImpl implements Softgoal {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Copyright 2001-2008 University of Toronto";
-
 	/**
 	 * The default value of the '{@link #getTopic() <em>Topic</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -71,7 +64,7 @@ public class SoftgoalImpl extends IntentionImpl implements Softgoal {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return openome_modelPackage.Literals.SOFTGOAL;
+		return Openome_modelPackage.Literals.SOFTGOAL;
 	}
 
 	/**
@@ -92,7 +85,7 @@ public class SoftgoalImpl extends IntentionImpl implements Softgoal {
 		String oldTopic = topic;
 		topic = newTopic;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, openome_modelPackage.SOFTGOAL__TOPIC, oldTopic, topic));
+			eNotify(new ENotificationImpl(this, Notification.SET, Openome_modelPackage.SOFTGOAL__TOPIC, oldTopic, topic));
 	}
 
 	/**
@@ -103,7 +96,7 @@ public class SoftgoalImpl extends IntentionImpl implements Softgoal {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case openome_modelPackage.SOFTGOAL__TOPIC:
+			case Openome_modelPackage.SOFTGOAL__TOPIC:
 				return getTopic();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -117,7 +110,7 @@ public class SoftgoalImpl extends IntentionImpl implements Softgoal {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case openome_modelPackage.SOFTGOAL__TOPIC:
+			case Openome_modelPackage.SOFTGOAL__TOPIC:
 				setTopic((String)newValue);
 				return;
 		}
@@ -132,7 +125,7 @@ public class SoftgoalImpl extends IntentionImpl implements Softgoal {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case openome_modelPackage.SOFTGOAL__TOPIC:
+			case Openome_modelPackage.SOFTGOAL__TOPIC:
 				setTopic(TOPIC_EDEFAULT);
 				return;
 		}
@@ -147,7 +140,7 @@ public class SoftgoalImpl extends IntentionImpl implements Softgoal {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case openome_modelPackage.SOFTGOAL__TOPIC:
+			case Openome_modelPackage.SOFTGOAL__TOPIC:
 				return TOPIC_EDEFAULT == null ? topic != null : !TOPIC_EDEFAULT.equals(topic);
 		}
 		return super.eIsSet(featureID);
@@ -163,7 +156,7 @@ public class SoftgoalImpl extends IntentionImpl implements Softgoal {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (Topic: ");
+		result.append(" (topic: ");
 		result.append(topic);
 		result.append(')');
 		return result.toString();

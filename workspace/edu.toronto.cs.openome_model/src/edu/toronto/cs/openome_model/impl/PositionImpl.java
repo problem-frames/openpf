@@ -7,7 +7,7 @@ package edu.toronto.cs.openome_model.impl;
 
 import edu.toronto.cs.openome_model.Position;
 import edu.toronto.cs.openome_model.Role;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 
 import java.util.Collection;
 
@@ -31,12 +31,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * @generated
  */
 public class PositionImpl extends ContainerImpl implements Position {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Copyright 2001-2008 University of Toronto";
 	/**
 	 * The cached value of the '{@link #getCovers() <em>Covers</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -63,7 +57,7 @@ public class PositionImpl extends ContainerImpl implements Position {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return openome_modelPackage.Literals.POSITION;
+		return Openome_modelPackage.Literals.POSITION;
 	}
 
 	/**
@@ -73,7 +67,7 @@ public class PositionImpl extends ContainerImpl implements Position {
 	 */
 	public EList<Role> getCovers() {
 		if (covers == null) {
-			covers = new EObjectResolvingEList<Role>(Role.class, this, openome_modelPackage.POSITION__COVERS);
+			covers = new EObjectResolvingEList<Role>(Role.class, this, Openome_modelPackage.POSITION__COVERS);
 		}
 		return covers;
 	}
@@ -86,7 +80,7 @@ public class PositionImpl extends ContainerImpl implements Position {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case openome_modelPackage.POSITION__COVERS:
+			case Openome_modelPackage.POSITION__COVERS:
 				return getCovers();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -101,7 +95,7 @@ public class PositionImpl extends ContainerImpl implements Position {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case openome_modelPackage.POSITION__COVERS:
+			case Openome_modelPackage.POSITION__COVERS:
 				getCovers().clear();
 				getCovers().addAll((Collection<? extends Role>)newValue);
 				return;
@@ -117,7 +111,7 @@ public class PositionImpl extends ContainerImpl implements Position {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case openome_modelPackage.POSITION__COVERS:
+			case Openome_modelPackage.POSITION__COVERS:
 				getCovers().clear();
 				return;
 		}
@@ -132,7 +126,7 @@ public class PositionImpl extends ContainerImpl implements Position {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case openome_modelPackage.POSITION__COVERS:
+			case Openome_modelPackage.POSITION__COVERS:
 				return covers != null && !covers.isEmpty();
 		}
 		return super.eIsSet(featureID);

@@ -7,7 +7,7 @@ package edu.toronto.cs.openome_model.impl;
 
 import edu.toronto.cs.openome_model.EvaluationLabel;
 import edu.toronto.cs.openome_model.Intention;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -37,13 +37,6 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * @generated
  */
 public class IntentionToEvaluationLabelMapImpl extends EObjectImpl implements BasicEMap.Entry<Intention,EvaluationLabel> {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Copyright 2001-2008 University of Toronto";
-
 	/**
 	 * The cached value of the '{@link #getTypedKey() <em>Key</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -90,7 +83,7 @@ public class IntentionToEvaluationLabelMapImpl extends EObjectImpl implements Ba
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return openome_modelPackage.Literals.INTENTION_TO_EVALUATION_LABEL_MAP;
+		return Openome_modelPackage.Literals.INTENTION_TO_EVALUATION_LABEL_MAP;
 	}
 
 	/**
@@ -111,7 +104,7 @@ public class IntentionToEvaluationLabelMapImpl extends EObjectImpl implements Ba
 		Intention oldKey = key;
 		key = newKey;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, openome_modelPackage.INTENTION_TO_EVALUATION_LABEL_MAP__KEY, oldKey, newKey);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Openome_modelPackage.INTENTION_TO_EVALUATION_LABEL_MAP__KEY, oldKey, newKey);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -126,14 +119,14 @@ public class IntentionToEvaluationLabelMapImpl extends EObjectImpl implements Ba
 		if (newKey != key) {
 			NotificationChain msgs = null;
 			if (key != null)
-				msgs = ((InternalEObject)key).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - openome_modelPackage.INTENTION_TO_EVALUATION_LABEL_MAP__KEY, null, msgs);
+				msgs = ((InternalEObject)key).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Openome_modelPackage.INTENTION_TO_EVALUATION_LABEL_MAP__KEY, null, msgs);
 			if (newKey != null)
-				msgs = ((InternalEObject)newKey).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - openome_modelPackage.INTENTION_TO_EVALUATION_LABEL_MAP__KEY, null, msgs);
+				msgs = ((InternalEObject)newKey).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Openome_modelPackage.INTENTION_TO_EVALUATION_LABEL_MAP__KEY, null, msgs);
 			msgs = basicSetTypedKey(newKey, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, openome_modelPackage.INTENTION_TO_EVALUATION_LABEL_MAP__KEY, newKey, newKey));
+			eNotify(new ENotificationImpl(this, Notification.SET, Openome_modelPackage.INTENTION_TO_EVALUATION_LABEL_MAP__KEY, newKey, newKey));
 	}
 
 	/**
@@ -154,7 +147,7 @@ public class IntentionToEvaluationLabelMapImpl extends EObjectImpl implements Ba
 		EvaluationLabel oldValue = value;
 		value = newValue == null ? VALUE_EDEFAULT : newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, openome_modelPackage.INTENTION_TO_EVALUATION_LABEL_MAP__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, Openome_modelPackage.INTENTION_TO_EVALUATION_LABEL_MAP__VALUE, oldValue, value));
 	}
 
 	/**
@@ -165,7 +158,7 @@ public class IntentionToEvaluationLabelMapImpl extends EObjectImpl implements Ba
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case openome_modelPackage.INTENTION_TO_EVALUATION_LABEL_MAP__KEY:
+			case Openome_modelPackage.INTENTION_TO_EVALUATION_LABEL_MAP__KEY:
 				return basicSetTypedKey(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -179,9 +172,9 @@ public class IntentionToEvaluationLabelMapImpl extends EObjectImpl implements Ba
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case openome_modelPackage.INTENTION_TO_EVALUATION_LABEL_MAP__KEY:
+			case Openome_modelPackage.INTENTION_TO_EVALUATION_LABEL_MAP__KEY:
 				return getTypedKey();
-			case openome_modelPackage.INTENTION_TO_EVALUATION_LABEL_MAP__VALUE:
+			case Openome_modelPackage.INTENTION_TO_EVALUATION_LABEL_MAP__VALUE:
 				return getTypedValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -195,10 +188,10 @@ public class IntentionToEvaluationLabelMapImpl extends EObjectImpl implements Ba
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case openome_modelPackage.INTENTION_TO_EVALUATION_LABEL_MAP__KEY:
+			case Openome_modelPackage.INTENTION_TO_EVALUATION_LABEL_MAP__KEY:
 				setTypedKey((Intention)newValue);
 				return;
-			case openome_modelPackage.INTENTION_TO_EVALUATION_LABEL_MAP__VALUE:
+			case Openome_modelPackage.INTENTION_TO_EVALUATION_LABEL_MAP__VALUE:
 				setTypedValue((EvaluationLabel)newValue);
 				return;
 		}
@@ -213,10 +206,10 @@ public class IntentionToEvaluationLabelMapImpl extends EObjectImpl implements Ba
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case openome_modelPackage.INTENTION_TO_EVALUATION_LABEL_MAP__KEY:
+			case Openome_modelPackage.INTENTION_TO_EVALUATION_LABEL_MAP__KEY:
 				setTypedKey((Intention)null);
 				return;
-			case openome_modelPackage.INTENTION_TO_EVALUATION_LABEL_MAP__VALUE:
+			case Openome_modelPackage.INTENTION_TO_EVALUATION_LABEL_MAP__VALUE:
 				setTypedValue(VALUE_EDEFAULT);
 				return;
 		}
@@ -231,9 +224,9 @@ public class IntentionToEvaluationLabelMapImpl extends EObjectImpl implements Ba
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case openome_modelPackage.INTENTION_TO_EVALUATION_LABEL_MAP__KEY:
+			case Openome_modelPackage.INTENTION_TO_EVALUATION_LABEL_MAP__KEY:
 				return key != null;
-			case openome_modelPackage.INTENTION_TO_EVALUATION_LABEL_MAP__VALUE:
+			case Openome_modelPackage.INTENTION_TO_EVALUATION_LABEL_MAP__VALUE:
 				return value != VALUE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

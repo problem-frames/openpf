@@ -6,7 +6,7 @@
 package edu.toronto.cs.openome_model.impl;
 
 import edu.toronto.cs.openome_model.Goal;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -25,13 +25,6 @@ public class GoalImpl extends IntentionImpl implements Goal {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final String copyright = "Copyright 2001-2008 University of Toronto";
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	protected GoalImpl() {
 		super();
 	}
@@ -43,7 +36,7 @@ public class GoalImpl extends IntentionImpl implements Goal {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return openome_modelPackage.Literals.GOAL;
+		return Openome_modelPackage.Literals.GOAL;
 	}
 
 } //GoalImpl

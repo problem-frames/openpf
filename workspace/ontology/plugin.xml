@@ -11,7 +11,8 @@
 	
   </extension>
 
-
-
+  <extension point="core.example">
+      <example file="Ontology.xtext"/>
+  </extension>
 
 </plugin>

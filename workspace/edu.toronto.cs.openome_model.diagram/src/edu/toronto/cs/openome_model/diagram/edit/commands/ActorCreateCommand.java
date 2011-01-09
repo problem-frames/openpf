@@ -14,8 +14,6 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
 
-import edu.toronto.cs.openome_model.openome_modelFactory;
-
 /**
  * @generated
  */
@@ -53,7 +51,7 @@ public class ActorCreateCommand extends EditElementCommand {
 	 */
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor,
 			IAdaptable info) throws ExecutionException {
-		edu.toronto.cs.openome_model.Actor newElement = edu.toronto.cs.openome_model.openome_modelFactory.eINSTANCE
+		edu.toronto.cs.openome_model.Actor newElement = edu.toronto.cs.openome_model.Openome_modelFactory.eINSTANCE
 				.createActor();
 
 		edu.toronto.cs.openome_model.Model owner = (edu.toronto.cs.openome_model.Model) getElementToEdit();

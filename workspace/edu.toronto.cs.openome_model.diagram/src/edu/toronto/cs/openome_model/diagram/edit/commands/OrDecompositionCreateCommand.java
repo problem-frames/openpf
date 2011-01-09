@@ -67,9 +67,9 @@ public class OrDecompositionCreateCommand extends EditElementCommand {
 		if (getContainer() == null) {
 			return false;
 		}
-		return edu.toronto.cs.openome_model.diagram.edit.policies.Openome_modelBaseItemSemanticEditPolicy
-				.getLinkConstraints().canCreateOrDecomposition_3003(
-						getContainer(), getSource(), getTarget());
+		return edu.toronto.cs.openome_model.diagram.edit.policies.Openome_modelBaseItemSemanticEditPolicy.LinkConstraints
+				.canCreateOrDecomposition_3003(getContainer(), getSource(),
+						getTarget());
 	}
 
 	/**
@@ -82,7 +82,7 @@ public class OrDecompositionCreateCommand extends EditElementCommand {
 					"Invalid arguments in create link command"); //$NON-NLS-1$
 		}
 
-		edu.toronto.cs.openome_model.OrDecomposition newElement = edu.toronto.cs.openome_model.openome_modelFactory.eINSTANCE
+		edu.toronto.cs.openome_model.OrDecomposition newElement = edu.toronto.cs.openome_model.Openome_modelFactory.eINSTANCE
 				.createOrDecomposition();
 		getContainer().getDecompositions().add(newElement);
 		newElement.setSource(getSource());

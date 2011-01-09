@@ -16,13 +16,13 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import uk.ac.open.argument.argument.Argument;
 import uk.ac.open.argument.argument.ArgumentPackage;
+import uk.ac.open.argument.argument.Expression;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,20 +34,21 @@ import uk.ac.open.argument.argument.ArgumentPackage;
  *   <li>{@link uk.ac.open.argument.argument.impl.ArgumentImpl#getName <em>Name</em>}</li>
  *   <li>{@link uk.ac.open.argument.argument.impl.ArgumentImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link uk.ac.open.argument.argument.impl.ArgumentImpl#getRound <em>Round</em>}</li>
- *   <li>{@link uk.ac.open.argument.argument.impl.ArgumentImpl#getExpr <em>Expr</em>}</li>
  *   <li>{@link uk.ac.open.argument.argument.impl.ArgumentImpl#getOrigin <em>Origin</em>}</li>
+ *   <li>{@link uk.ac.open.argument.argument.impl.ArgumentImpl#getExpr <em>Expr</em>}</li>
  *   <li>{@link uk.ac.open.argument.argument.impl.ArgumentImpl#getForeground <em>Foreground</em>}</li>
  *   <li>{@link uk.ac.open.argument.argument.impl.ArgumentImpl#getBackground <em>Background</em>}</li>
  *   <li>{@link uk.ac.open.argument.argument.impl.ArgumentImpl#getShape <em>Shape</em>}</li>
  *   <li>{@link uk.ac.open.argument.argument.impl.ArgumentImpl#getImage <em>Image</em>}</li>
  *   <li>{@link uk.ac.open.argument.argument.impl.ArgumentImpl#getGrounds <em>Grounds</em>}</li>
  *   <li>{@link uk.ac.open.argument.argument.impl.ArgumentImpl#getWarrants <em>Warrants</em>}</li>
+ *   <li>{@link uk.ac.open.argument.argument.impl.ArgumentImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ArgumentImpl extends MinimalEObjectImpl.Container implements Argument
+public class ArgumentImpl extends TerminalExpressionImpl implements Argument
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -110,26 +111,6 @@ public class ArgumentImpl extends MinimalEObjectImpl.Container implements Argume
   protected int round = ROUND_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getExpr() <em>Expr</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getExpr()
-   * @generated
-   * @ordered
-   */
-  protected static final String EXPR_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getExpr() <em>Expr</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getExpr()
-   * @generated
-   * @ordered
-   */
-  protected String expr = EXPR_EDEFAULT;
-
-  /**
    * The cached value of the '{@link #getOrigin() <em>Origin</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -138,6 +119,16 @@ public class ArgumentImpl extends MinimalEObjectImpl.Container implements Argume
    * @ordered
    */
   protected Argument origin;
+
+  /**
+   * The cached value of the '{@link #getExpr() <em>Expr</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getExpr()
+   * @generated
+   * @ordered
+   */
+  protected Expression expr;
 
   /**
    * The default value of the '{@link #getForeground() <em>Foreground</em>}' attribute.
@@ -240,6 +231,16 @@ public class ArgumentImpl extends MinimalEObjectImpl.Container implements Argume
   protected EList<Argument> warrants;
 
   /**
+   * The cached value of the '{@link #getValue() <em>Value</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getValue()
+   * @generated
+   * @ordered
+   */
+  protected Argument value;
+
+  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -334,29 +335,6 @@ public class ArgumentImpl extends MinimalEObjectImpl.Container implements Argume
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getExpr()
-  {
-    return expr;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setExpr(String newExpr)
-  {
-    String oldExpr = expr;
-    expr = newExpr;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.ARGUMENT__EXPR, oldExpr, expr));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public Argument getOrigin()
   {
     if (origin != null && origin.eIsProxy())
@@ -393,6 +371,54 @@ public class ArgumentImpl extends MinimalEObjectImpl.Container implements Argume
     origin = newOrigin;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.ARGUMENT__ORIGIN, oldOrigin, origin));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Expression getExpr()
+  {
+    return expr;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetExpr(Expression newExpr, NotificationChain msgs)
+  {
+    Expression oldExpr = expr;
+    expr = newExpr;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ArgumentPackage.ARGUMENT__EXPR, oldExpr, newExpr);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setExpr(Expression newExpr)
+  {
+    if (newExpr != expr)
+    {
+      NotificationChain msgs = null;
+      if (expr != null)
+        msgs = ((InternalEObject)expr).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ArgumentPackage.ARGUMENT__EXPR, null, msgs);
+      if (newExpr != null)
+        msgs = ((InternalEObject)newExpr).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ArgumentPackage.ARGUMENT__EXPR, null, msgs);
+      msgs = basicSetExpr(newExpr, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.ARGUMENT__EXPR, newExpr, newExpr));
   }
 
   /**
@@ -520,11 +546,56 @@ public class ArgumentImpl extends MinimalEObjectImpl.Container implements Argume
    * <!-- end-user-doc -->
    * @generated
    */
+  public Argument getValue()
+  {
+    if (value != null && value.eIsProxy())
+    {
+      InternalEObject oldValue = (InternalEObject)value;
+      value = (Argument)eResolveProxy(oldValue);
+      if (value != oldValue)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, ArgumentPackage.ARGUMENT__VALUE, oldValue, value));
+      }
+    }
+    return value;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Argument basicGetValue()
+  {
+    return value;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setValue(Argument newValue)
+  {
+    Argument oldValue = value;
+    value = newValue;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.ARGUMENT__VALUE, oldValue, value));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
     {
+      case ArgumentPackage.ARGUMENT__EXPR:
+        return basicSetExpr(null, msgs);
       case ArgumentPackage.ARGUMENT__GROUNDS:
         return ((InternalEList<?>)getGrounds()).basicRemove(otherEnd, msgs);
       case ArgumentPackage.ARGUMENT__WARRANTS:
@@ -549,11 +620,11 @@ public class ArgumentImpl extends MinimalEObjectImpl.Container implements Argume
         return getDescription();
       case ArgumentPackage.ARGUMENT__ROUND:
         return getRound();
-      case ArgumentPackage.ARGUMENT__EXPR:
-        return getExpr();
       case ArgumentPackage.ARGUMENT__ORIGIN:
         if (resolve) return getOrigin();
         return basicGetOrigin();
+      case ArgumentPackage.ARGUMENT__EXPR:
+        return getExpr();
       case ArgumentPackage.ARGUMENT__FOREGROUND:
         return getForeground();
       case ArgumentPackage.ARGUMENT__BACKGROUND:
@@ -566,6 +637,9 @@ public class ArgumentImpl extends MinimalEObjectImpl.Container implements Argume
         return getGrounds();
       case ArgumentPackage.ARGUMENT__WARRANTS:
         return getWarrants();
+      case ArgumentPackage.ARGUMENT__VALUE:
+        if (resolve) return getValue();
+        return basicGetValue();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -590,11 +664,11 @@ public class ArgumentImpl extends MinimalEObjectImpl.Container implements Argume
       case ArgumentPackage.ARGUMENT__ROUND:
         setRound((Integer)newValue);
         return;
-      case ArgumentPackage.ARGUMENT__EXPR:
-        setExpr((String)newValue);
-        return;
       case ArgumentPackage.ARGUMENT__ORIGIN:
         setOrigin((Argument)newValue);
+        return;
+      case ArgumentPackage.ARGUMENT__EXPR:
+        setExpr((Expression)newValue);
         return;
       case ArgumentPackage.ARGUMENT__FOREGROUND:
         setForeground((String)newValue);
@@ -615,6 +689,9 @@ public class ArgumentImpl extends MinimalEObjectImpl.Container implements Argume
       case ArgumentPackage.ARGUMENT__WARRANTS:
         getWarrants().clear();
         getWarrants().addAll((Collection<? extends Argument>)newValue);
+        return;
+      case ArgumentPackage.ARGUMENT__VALUE:
+        setValue((Argument)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -639,11 +716,11 @@ public class ArgumentImpl extends MinimalEObjectImpl.Container implements Argume
       case ArgumentPackage.ARGUMENT__ROUND:
         setRound(ROUND_EDEFAULT);
         return;
-      case ArgumentPackage.ARGUMENT__EXPR:
-        setExpr(EXPR_EDEFAULT);
-        return;
       case ArgumentPackage.ARGUMENT__ORIGIN:
         setOrigin((Argument)null);
+        return;
+      case ArgumentPackage.ARGUMENT__EXPR:
+        setExpr((Expression)null);
         return;
       case ArgumentPackage.ARGUMENT__FOREGROUND:
         setForeground(FOREGROUND_EDEFAULT);
@@ -662,6 +739,9 @@ public class ArgumentImpl extends MinimalEObjectImpl.Container implements Argume
         return;
       case ArgumentPackage.ARGUMENT__WARRANTS:
         getWarrants().clear();
+        return;
+      case ArgumentPackage.ARGUMENT__VALUE:
+        setValue((Argument)null);
         return;
     }
     super.eUnset(featureID);
@@ -683,10 +763,10 @@ public class ArgumentImpl extends MinimalEObjectImpl.Container implements Argume
         return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
       case ArgumentPackage.ARGUMENT__ROUND:
         return round != ROUND_EDEFAULT;
-      case ArgumentPackage.ARGUMENT__EXPR:
-        return EXPR_EDEFAULT == null ? expr != null : !EXPR_EDEFAULT.equals(expr);
       case ArgumentPackage.ARGUMENT__ORIGIN:
         return origin != null;
+      case ArgumentPackage.ARGUMENT__EXPR:
+        return expr != null;
       case ArgumentPackage.ARGUMENT__FOREGROUND:
         return FOREGROUND_EDEFAULT == null ? foreground != null : !FOREGROUND_EDEFAULT.equals(foreground);
       case ArgumentPackage.ARGUMENT__BACKGROUND:
@@ -699,6 +779,8 @@ public class ArgumentImpl extends MinimalEObjectImpl.Container implements Argume
         return grounds != null && !grounds.isEmpty();
       case ArgumentPackage.ARGUMENT__WARRANTS:
         return warrants != null && !warrants.isEmpty();
+      case ArgumentPackage.ARGUMENT__VALUE:
+        return value != null;
     }
     return super.eIsSet(featureID);
   }
@@ -720,8 +802,6 @@ public class ArgumentImpl extends MinimalEObjectImpl.Container implements Argume
     result.append(description);
     result.append(", round: ");
     result.append(round);
-    result.append(", expr: ");
-    result.append(expr);
     result.append(", foreground: ");
     result.append(foreground);
     result.append(", background: ");

@@ -16,7 +16,7 @@ public class ArgumentOriginItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public ArgumentOriginItemSemanticEditPolicy() {
-		super(ArgumentElementTypes.ArgumentOrigin_4003);
+		super(ArgumentElementTypes.MitigatesRebuttal_4003);
 	}
 
 	/**

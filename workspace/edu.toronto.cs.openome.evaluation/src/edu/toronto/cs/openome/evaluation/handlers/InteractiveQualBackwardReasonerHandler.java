@@ -24,8 +24,8 @@ import edu.toronto.cs.openome.evaluation.views.AlternativesView;
 import edu.toronto.cs.openome_model.Alternative;
 import edu.toronto.cs.openome_model.EvaluationLabel;
 import edu.toronto.cs.openome_model.Intention;
-import edu.toronto.cs.openome_model.openome_modelFactory;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelFactory;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 import edu.toronto.cs.openome_model.impl.AlternativeImpl;
 import edu.toronto.cs.openome_model.impl.ModelImpl;
 
@@ -81,8 +81,8 @@ public class InteractiveQualBackwardReasonerHandler extends ReasonerHandler {
 		}
 		
 	
-		openome_modelPackage _openome_modelPackage = openome_modelPackage.eINSTANCE;
-		openome_modelFactory _openome_modelFactory = _openome_modelPackage.getopenome_modelFactory();
+		Openome_modelPackage _openome_modelPackage = Openome_modelPackage.eINSTANCE;
+		Openome_modelFactory _openome_modelFactory = _openome_modelPackage.getopenome_modelFactory();
 		
 		/* Create an Alternative */
 		Alternative alt = _openome_modelFactory.createAlternative();

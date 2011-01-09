@@ -13,7 +13,7 @@ import util.Computing;
 import edu.toronto.cs.openome_model.Container;
 import edu.toronto.cs.openome_model.Decomposition;
 import edu.toronto.cs.openome_model.Intention;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 
 public class GoalModelReader {
 	
@@ -49,7 +49,7 @@ public class GoalModelReader {
 		ResourceSet resourceSet = new ResourceSetImpl();
 		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put
 			(Resource.Factory.Registry.DEFAULT_EXTENSION, new XMIResourceFactoryImpl());
-		resourceSet.getPackageRegistry().put(openome_modelPackage.eNS_URI, openome_modelPackage.eINSTANCE);
+		resourceSet.getPackageRegistry().put(Openome_modelPackage.eNS_URI, Openome_modelPackage.eINSTANCE);
 		File file = new File(filename);
 		URI uri = file.isFile() ? URI.createFileURI(file.getAbsolutePath()): URI.createURI(filename);		
 		return resourceSet.getResource(uri, true);

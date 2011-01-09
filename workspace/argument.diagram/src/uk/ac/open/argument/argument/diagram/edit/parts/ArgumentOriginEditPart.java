@@ -1,7 +1,6 @@
 package uk.ac.open.argument.argument.diagram.edit.parts;
 
 import org.eclipse.draw2d.Connection;
-import org.eclipse.draw2d.Graphics;
 import org.eclipse.draw2d.PolylineDecoration;
 import org.eclipse.draw2d.RotatableDecoration;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ConnectionNodeEditPart;
@@ -50,27 +49,25 @@ public class ArgumentOriginEditPart extends ConnectionNodeEditPart implements
 	 */
 
 	protected Connection createConnectionFigure() {
-		return new ArgumentOriginFigure();
+		return new MitigatesRebuttalFigure();
 	}
 
 	/**
 	 * @generated
 	 */
-	public ArgumentOriginFigure getPrimaryShape() {
-		return (ArgumentOriginFigure) getFigure();
+	public MitigatesRebuttalFigure getPrimaryShape() {
+		return (MitigatesRebuttalFigure) getFigure();
 	}
 
 	/**
 	 * @generated
 	 */
-	public class ArgumentOriginFigure extends PolylineConnectionEx {
+	public class MitigatesRebuttalFigure extends PolylineConnectionEx {
 
 		/**
 		 * @generated
 		 */
-		public ArgumentOriginFigure() {
-			this.setLineWidth(2);
-			this.setLineStyle(Graphics.LINE_DASH);
+		public MitigatesRebuttalFigure() {
 			this.setForegroundColor(THIS_FORE);
 
 			setTargetDecoration(createTargetDecoration());
@@ -89,6 +86,6 @@ public class ArgumentOriginEditPart extends ConnectionNodeEditPart implements
 	/**
 	 * @generated
 	 */
-	static final Color THIS_FORE = new Color(null, 160, 32, 240);
+	static final Color THIS_FORE = new Color(null, 255, 105, 180);
 
 }

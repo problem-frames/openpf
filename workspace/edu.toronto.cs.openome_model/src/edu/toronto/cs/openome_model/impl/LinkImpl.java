@@ -6,7 +6,7 @@
 package edu.toronto.cs.openome_model.impl;
 
 import edu.toronto.cs.openome_model.Link;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -27,13 +27,6 @@ public abstract class LinkImpl extends EObjectImpl implements Link {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final String copyright = "Copyright 2001-2008 University of Toronto";
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	protected LinkImpl() {
 		super();
 	}
@@ -45,7 +38,7 @@ public abstract class LinkImpl extends EObjectImpl implements Link {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return openome_modelPackage.Literals.LINK;
+		return Openome_modelPackage.Literals.LINK;
 	}
 
 } //LinkImpl

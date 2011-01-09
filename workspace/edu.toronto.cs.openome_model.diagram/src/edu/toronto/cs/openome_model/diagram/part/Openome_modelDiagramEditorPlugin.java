@@ -54,21 +54,6 @@ public class Openome_modelDiagramEditorPlugin extends AbstractUIPlugin {
 	/**
 	 * @generated
 	 */
-	private edu.toronto.cs.openome_model.diagram.edit.policies.Openome_modelBaseItemSemanticEditPolicy.LinkConstraints linkConstraints;
-
-	/**
-	 * @generated
-	 */
-	private edu.toronto.cs.openome_model.diagram.providers.ElementInitializers initializers;
-
-	/**
-	 * @generated
-	 */
-	private edu.toronto.cs.openome_model.diagram.expressions.Openome_modelOCLFactory oclFactory;
-
-	/**
-	 * @generated
-	 */
 	public Openome_modelDiagramEditorPlugin() {
 	}
 
@@ -89,9 +74,6 @@ public class Openome_modelDiagramEditorPlugin extends AbstractUIPlugin {
 	public void stop(BundleContext context) throws Exception {
 		adapterFactory.dispose();
 		adapterFactory = null;
-		linkConstraints = null;
-		initializers = null;
-		oclFactory = null;
 		instance = null;
 		super.stop(context);
 	}
@@ -107,7 +89,7 @@ public class Openome_modelDiagramEditorPlugin extends AbstractUIPlugin {
 	 * @generated
 	 */
 	protected ComposedAdapterFactory createAdapterFactory() {
-		ArrayList<AdapterFactory> factories = new ArrayList<AdapterFactory>();
+		List factories = new ArrayList();
 		fillItemProviderFactories(factories);
 		return new ComposedAdapterFactory(factories);
 	}
@@ -115,9 +97,9 @@ public class Openome_modelDiagramEditorPlugin extends AbstractUIPlugin {
 	/**
 	 * @generated
 	 */
-	protected void fillItemProviderFactories(List<AdapterFactory> factories) {
+	protected void fillItemProviderFactories(List factories) {
 		factories
-				.add(new edu.toronto.cs.openome_model.provider.openome_modelItemProviderAdapterFactory());
+				.add(new edu.toronto.cs.openome_model.provider.Openome_modelItemProviderAdapterFactory());
 		factories.add(new ResourceItemProviderAdapterFactory());
 		factories.add(new ReflectiveItemProviderAdapterFactory());
 	}
@@ -207,51 +189,6 @@ public class Openome_modelDiagramEditorPlugin extends AbstractUIPlugin {
 			documentProvider = new edu.toronto.cs.openome_model.diagram.part.Openome_modelDocumentProvider();
 		}
 		return documentProvider;
-	}
-
-	/**
-	 * @generated
-	 */
-	public edu.toronto.cs.openome_model.diagram.edit.policies.Openome_modelBaseItemSemanticEditPolicy.LinkConstraints getLinkConstraints() {
-		return linkConstraints;
-	}
-
-	/**
-	 * @generated
-	 */
-	public void setLinkConstraints(
-			edu.toronto.cs.openome_model.diagram.edit.policies.Openome_modelBaseItemSemanticEditPolicy.LinkConstraints lc) {
-		this.linkConstraints = lc;
-	}
-
-	/**
-	 * @generated
-	 */
-	public edu.toronto.cs.openome_model.diagram.providers.ElementInitializers getElementInitializers() {
-		return initializers;
-	}
-
-	/**
-	 * @generated
-	 */
-	public void setElementInitializers(
-			edu.toronto.cs.openome_model.diagram.providers.ElementInitializers i) {
-		this.initializers = i;
-	}
-
-	/**
-	 * @generated
-	 */
-	public edu.toronto.cs.openome_model.diagram.expressions.Openome_modelOCLFactory getOpenome_modelOCLFactory() {
-		return oclFactory;
-	}
-
-	/**
-	 * @generated
-	 */
-	public void setOpenome_modelOCLFactory(
-			edu.toronto.cs.openome_model.diagram.expressions.Openome_modelOCLFactory f) {
-		this.oclFactory = f;
 	}
 
 	/**

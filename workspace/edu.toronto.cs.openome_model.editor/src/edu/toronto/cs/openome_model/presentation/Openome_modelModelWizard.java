@@ -72,8 +72,8 @@ import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ISetSelectionTarget;
 
-import edu.toronto.cs.openome_model.openome_modelFactory;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelFactory;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 import edu.toronto.cs.openome_model.provider.Openome_modelEditPlugin;
 
 
@@ -119,7 +119,7 @@ public class Openome_modelModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected openome_modelPackage _openome_modelPackage = openome_modelPackage.eINSTANCE;
+	protected Openome_modelPackage _openome_modelPackage = Openome_modelPackage.eINSTANCE;
 
 	/**
 	 * This caches an instance of the model factory.
@@ -127,7 +127,7 @@ public class Openome_modelModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected openome_modelFactory _openome_modelFactory = _openome_modelPackage.getopenome_modelFactory();
+	protected Openome_modelFactory _openome_modelFactory = _openome_modelPackage.getopenome_modelFactory();
 
 	/**
 	 * This is the file creation page.

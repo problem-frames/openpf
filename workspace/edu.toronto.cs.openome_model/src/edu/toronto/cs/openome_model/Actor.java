@@ -21,18 +21,11 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see edu.toronto.cs.openome_model.openome_modelPackage#getActor()
+ * @see edu.toronto.cs.openome_model.Openome_modelPackage#getActor()
  * @model
  * @generated
  */
 public interface Actor extends Container {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Copyright 2001-2008 University of Toronto";
-
 	/**
 	 * Returns the value of the '<em><b>Is a</b></em>' reference list.
 	 * The list contents are of type {@link edu.toronto.cs.openome_model.Actor}.
@@ -43,7 +36,7 @@ public interface Actor extends Container {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is a</em>' reference list.
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getActor_Is_a()
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getActor_Is_a()
 	 * @model
 	 * @generated
 	 */
@@ -59,7 +52,7 @@ public interface Actor extends Container {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is part of</em>' reference list.
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getActor_Is_part_of()
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getActor_Is_part_of()
 	 * @model
 	 * @generated
 	 */
@@ -75,7 +68,7 @@ public interface Actor extends Container {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Believes</em>' reference list.
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getActor_Believes()
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getActor_Believes()
 	 * @model
 	 * @generated
 	 */

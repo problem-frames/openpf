@@ -7,7 +7,7 @@ package edu.toronto.cs.openome_model.provider;
 
 
 import edu.toronto.cs.openome_model.Dependency;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -81,7 +81,7 @@ public class DependencyItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Dependency_dependencyFrom_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Dependency_dependencyFrom_feature", "_UI_Dependency_type"),
-				 openome_modelPackage.Literals.DEPENDENCY__DEPENDENCY_FROM,
+				 Openome_modelPackage.Literals.DEPENDENCY__DEPENDENCY_FROM,
 				 true,
 				 false,
 				 true,
@@ -103,7 +103,7 @@ public class DependencyItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Dependency_dependencyTo_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Dependency_dependencyTo_feature", "_UI_Dependency_type"),
-				 openome_modelPackage.Literals.DEPENDENCY__DEPENDENCY_TO,
+				 Openome_modelPackage.Literals.DEPENDENCY__DEPENDENCY_TO,
 				 true,
 				 false,
 				 true,
@@ -125,7 +125,7 @@ public class DependencyItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Dependency_trust_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Dependency_trust_feature", "_UI_Dependency_type"),
-				 openome_modelPackage.Literals.DEPENDENCY__TRUST,
+				 Openome_modelPackage.Literals.DEPENDENCY__TRUST,
 				 true,
 				 false,
 				 false,
@@ -147,7 +147,7 @@ public class DependencyItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Dependency_label_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Dependency_label_feature", "_UI_Dependency_type"),
-				 openome_modelPackage.Literals.DEPENDENCY__LABEL,
+				 Openome_modelPackage.Literals.DEPENDENCY__LABEL,
 				 true,
 				 false,
 				 false,
@@ -191,8 +191,8 @@ public class DependencyItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Dependency.class)) {
-			case openome_modelPackage.DEPENDENCY__TRUST:
-			case openome_modelPackage.DEPENDENCY__LABEL:
+			case Openome_modelPackage.DEPENDENCY__TRUST:
+			case Openome_modelPackage.DEPENDENCY__LABEL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

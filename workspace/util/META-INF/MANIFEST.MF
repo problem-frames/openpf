@@ -1,10 +1,8 @@
 Manifest-Version: 1.0
-Export-Package: util
-Bundle-ActivationPolicy: lazy
-Bundle-Version: 1.0.0.201010080232
-Bundle-Name: Util Plug-in
 Bundle-ManifestVersion: 2
+Bundle-Name: Util Plug-in
 Bundle-SymbolicName: util
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-
-
+Bundle-Version: 1.0.0.qualifier
+Bundle-Localization: plugin
+Export-Package: util
+Eclipse-LazyStart: true

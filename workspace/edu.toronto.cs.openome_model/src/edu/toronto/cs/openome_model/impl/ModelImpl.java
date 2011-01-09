@@ -14,7 +14,7 @@ import edu.toronto.cs.openome_model.Decomposition;
 import edu.toronto.cs.openome_model.Dependency;
 import edu.toronto.cs.openome_model.Intention;
 import edu.toronto.cs.openome_model.Model;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 
 import java.util.Collection;
 import java.util.Iterator;
@@ -61,13 +61,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class ModelImpl extends EObjectImpl implements Model {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Copyright 2001-2008 University of Toronto";
-
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -184,7 +177,7 @@ public class ModelImpl extends EObjectImpl implements Model {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return openome_modelPackage.Literals.MODEL;
+		return Openome_modelPackage.Literals.MODEL;
 	}
 
 	/**
@@ -205,7 +198,7 @@ public class ModelImpl extends EObjectImpl implements Model {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, openome_modelPackage.MODEL__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Openome_modelPackage.MODEL__NAME, oldName, name));
 	}
 
 	/**
@@ -215,7 +208,7 @@ public class ModelImpl extends EObjectImpl implements Model {
 	 */
 	public EList<Intention> getIntentions() {
 		if (intentions == null) {
-			intentions = new EObjectContainmentEList<Intention>(Intention.class, this, openome_modelPackage.MODEL__INTENTIONS);
+			intentions = new EObjectContainmentEList<Intention>(Intention.class, this, Openome_modelPackage.MODEL__INTENTIONS);
 		}
 		return intentions;
 	}
@@ -256,7 +249,7 @@ public class ModelImpl extends EObjectImpl implements Model {
 	 */
 	public EList<Contribution> getContributions() {
 		if (contributions == null) {
-			contributions = new EObjectContainmentWithInverseEList<Contribution>(Contribution.class, this, openome_modelPackage.MODEL__CONTRIBUTIONS, openome_modelPackage.CONTRIBUTION__MODEL);
+			contributions = new EObjectContainmentWithInverseEList<Contribution>(Contribution.class, this, Openome_modelPackage.MODEL__CONTRIBUTIONS, Openome_modelPackage.CONTRIBUTION__MODEL);
 		}
 		return contributions;
 	}
@@ -268,7 +261,7 @@ public class ModelImpl extends EObjectImpl implements Model {
 	 */
 	public EList<Dependency> getDependencies() {
 		if (dependencies == null) {
-			dependencies = new EObjectContainmentWithInverseEList<Dependency>(Dependency.class, this, openome_modelPackage.MODEL__DEPENDENCIES, openome_modelPackage.DEPENDENCY__MODEL);
+			dependencies = new EObjectContainmentWithInverseEList<Dependency>(Dependency.class, this, Openome_modelPackage.MODEL__DEPENDENCIES, Openome_modelPackage.DEPENDENCY__MODEL);
 		}
 		return dependencies;
 	}
@@ -280,7 +273,7 @@ public class ModelImpl extends EObjectImpl implements Model {
 	 */
 	public EList<Decomposition> getDecompositions() {
 		if (decompositions == null) {
-			decompositions = new EObjectContainmentWithInverseEList<Decomposition>(Decomposition.class, this, openome_modelPackage.MODEL__DECOMPOSITIONS, openome_modelPackage.DECOMPOSITION__MODEL);
+			decompositions = new EObjectContainmentWithInverseEList<Decomposition>(Decomposition.class, this, Openome_modelPackage.MODEL__DECOMPOSITIONS, Openome_modelPackage.DECOMPOSITION__MODEL);
 		}
 		return decompositions;
 	}
@@ -292,7 +285,7 @@ public class ModelImpl extends EObjectImpl implements Model {
 	 */
 	public EList<Container> getContainers() {
 		if (containers == null) {
-			containers = new EObjectContainmentWithInverseEList<Container>(Container.class, this, openome_modelPackage.MODEL__CONTAINERS, openome_modelPackage.CONTAINER__MODEL);
+			containers = new EObjectContainmentWithInverseEList<Container>(Container.class, this, Openome_modelPackage.MODEL__CONTAINERS, Openome_modelPackage.CONTAINER__MODEL);
 		}
 		return containers;
 	}
@@ -304,7 +297,7 @@ public class ModelImpl extends EObjectImpl implements Model {
 	 */
 	public EList<Correlation> getCorrelations() {
 		if (correlations == null) {
-			correlations = new EObjectResolvingEList<Correlation>(Correlation.class, this, openome_modelPackage.MODEL__CORRELATIONS);
+			correlations = new EObjectResolvingEList<Correlation>(Correlation.class, this, Openome_modelPackage.MODEL__CORRELATIONS);
 		}
 		return correlations;
 	}
@@ -316,7 +309,7 @@ public class ModelImpl extends EObjectImpl implements Model {
 	 */
 	public EList<Association> getAssociations() {
 		if (associations == null) {
-			associations = new EObjectContainmentEList<Association>(Association.class, this, openome_modelPackage.MODEL__ASSOCIATIONS);
+			associations = new EObjectContainmentEList<Association>(Association.class, this, Openome_modelPackage.MODEL__ASSOCIATIONS);
 		}
 		return associations;
 	}
@@ -328,7 +321,7 @@ public class ModelImpl extends EObjectImpl implements Model {
 	 */
 	public EList<Alternative> getAlternatives() {
 		if (alternatives == null) {
-			alternatives = new EObjectContainmentEList<Alternative>(Alternative.class, this, openome_modelPackage.MODEL__ALTERNATIVES);
+			alternatives = new EObjectContainmentEList<Alternative>(Alternative.class, this, Openome_modelPackage.MODEL__ALTERNATIVES);
 		}
 		return alternatives;
 	}
@@ -342,13 +335,13 @@ public class ModelImpl extends EObjectImpl implements Model {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case openome_modelPackage.MODEL__CONTRIBUTIONS:
+			case Openome_modelPackage.MODEL__CONTRIBUTIONS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getContributions()).basicAdd(otherEnd, msgs);
-			case openome_modelPackage.MODEL__DEPENDENCIES:
+			case Openome_modelPackage.MODEL__DEPENDENCIES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDependencies()).basicAdd(otherEnd, msgs);
-			case openome_modelPackage.MODEL__DECOMPOSITIONS:
+			case Openome_modelPackage.MODEL__DECOMPOSITIONS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDecompositions()).basicAdd(otherEnd, msgs);
-			case openome_modelPackage.MODEL__CONTAINERS:
+			case Openome_modelPackage.MODEL__CONTAINERS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getContainers()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -362,19 +355,19 @@ public class ModelImpl extends EObjectImpl implements Model {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case openome_modelPackage.MODEL__INTENTIONS:
+			case Openome_modelPackage.MODEL__INTENTIONS:
 				return ((InternalEList<?>)getIntentions()).basicRemove(otherEnd, msgs);
-			case openome_modelPackage.MODEL__CONTRIBUTIONS:
+			case Openome_modelPackage.MODEL__CONTRIBUTIONS:
 				return ((InternalEList<?>)getContributions()).basicRemove(otherEnd, msgs);
-			case openome_modelPackage.MODEL__DEPENDENCIES:
+			case Openome_modelPackage.MODEL__DEPENDENCIES:
 				return ((InternalEList<?>)getDependencies()).basicRemove(otherEnd, msgs);
-			case openome_modelPackage.MODEL__DECOMPOSITIONS:
+			case Openome_modelPackage.MODEL__DECOMPOSITIONS:
 				return ((InternalEList<?>)getDecompositions()).basicRemove(otherEnd, msgs);
-			case openome_modelPackage.MODEL__CONTAINERS:
+			case Openome_modelPackage.MODEL__CONTAINERS:
 				return ((InternalEList<?>)getContainers()).basicRemove(otherEnd, msgs);
-			case openome_modelPackage.MODEL__ASSOCIATIONS:
+			case Openome_modelPackage.MODEL__ASSOCIATIONS:
 				return ((InternalEList<?>)getAssociations()).basicRemove(otherEnd, msgs);
-			case openome_modelPackage.MODEL__ALTERNATIVES:
+			case Openome_modelPackage.MODEL__ALTERNATIVES:
 				return ((InternalEList<?>)getAlternatives()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -388,23 +381,23 @@ public class ModelImpl extends EObjectImpl implements Model {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case openome_modelPackage.MODEL__NAME:
+			case Openome_modelPackage.MODEL__NAME:
 				return getName();
-			case openome_modelPackage.MODEL__INTENTIONS:
+			case Openome_modelPackage.MODEL__INTENTIONS:
 				return getIntentions();
-			case openome_modelPackage.MODEL__CONTRIBUTIONS:
+			case Openome_modelPackage.MODEL__CONTRIBUTIONS:
 				return getContributions();
-			case openome_modelPackage.MODEL__DEPENDENCIES:
+			case Openome_modelPackage.MODEL__DEPENDENCIES:
 				return getDependencies();
-			case openome_modelPackage.MODEL__DECOMPOSITIONS:
+			case Openome_modelPackage.MODEL__DECOMPOSITIONS:
 				return getDecompositions();
-			case openome_modelPackage.MODEL__CONTAINERS:
+			case Openome_modelPackage.MODEL__CONTAINERS:
 				return getContainers();
-			case openome_modelPackage.MODEL__CORRELATIONS:
+			case Openome_modelPackage.MODEL__CORRELATIONS:
 				return getCorrelations();
-			case openome_modelPackage.MODEL__ASSOCIATIONS:
+			case Openome_modelPackage.MODEL__ASSOCIATIONS:
 				return getAssociations();
-			case openome_modelPackage.MODEL__ALTERNATIVES:
+			case Openome_modelPackage.MODEL__ALTERNATIVES:
 				return getAlternatives();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -419,38 +412,38 @@ public class ModelImpl extends EObjectImpl implements Model {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case openome_modelPackage.MODEL__NAME:
+			case Openome_modelPackage.MODEL__NAME:
 				setName((String)newValue);
 				return;
-			case openome_modelPackage.MODEL__INTENTIONS:
+			case Openome_modelPackage.MODEL__INTENTIONS:
 				getIntentions().clear();
 				getIntentions().addAll((Collection<? extends Intention>)newValue);
 				return;
-			case openome_modelPackage.MODEL__CONTRIBUTIONS:
+			case Openome_modelPackage.MODEL__CONTRIBUTIONS:
 				getContributions().clear();
 				getContributions().addAll((Collection<? extends Contribution>)newValue);
 				return;
-			case openome_modelPackage.MODEL__DEPENDENCIES:
+			case Openome_modelPackage.MODEL__DEPENDENCIES:
 				getDependencies().clear();
 				getDependencies().addAll((Collection<? extends Dependency>)newValue);
 				return;
-			case openome_modelPackage.MODEL__DECOMPOSITIONS:
+			case Openome_modelPackage.MODEL__DECOMPOSITIONS:
 				getDecompositions().clear();
 				getDecompositions().addAll((Collection<? extends Decomposition>)newValue);
 				return;
-			case openome_modelPackage.MODEL__CONTAINERS:
+			case Openome_modelPackage.MODEL__CONTAINERS:
 				getContainers().clear();
 				getContainers().addAll((Collection<? extends Container>)newValue);
 				return;
-			case openome_modelPackage.MODEL__CORRELATIONS:
+			case Openome_modelPackage.MODEL__CORRELATIONS:
 				getCorrelations().clear();
 				getCorrelations().addAll((Collection<? extends Correlation>)newValue);
 				return;
-			case openome_modelPackage.MODEL__ASSOCIATIONS:
+			case Openome_modelPackage.MODEL__ASSOCIATIONS:
 				getAssociations().clear();
 				getAssociations().addAll((Collection<? extends Association>)newValue);
 				return;
-			case openome_modelPackage.MODEL__ALTERNATIVES:
+			case Openome_modelPackage.MODEL__ALTERNATIVES:
 				getAlternatives().clear();
 				getAlternatives().addAll((Collection<? extends Alternative>)newValue);
 				return;
@@ -466,31 +459,31 @@ public class ModelImpl extends EObjectImpl implements Model {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case openome_modelPackage.MODEL__NAME:
+			case Openome_modelPackage.MODEL__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case openome_modelPackage.MODEL__INTENTIONS:
+			case Openome_modelPackage.MODEL__INTENTIONS:
 				getIntentions().clear();
 				return;
-			case openome_modelPackage.MODEL__CONTRIBUTIONS:
+			case Openome_modelPackage.MODEL__CONTRIBUTIONS:
 				getContributions().clear();
 				return;
-			case openome_modelPackage.MODEL__DEPENDENCIES:
+			case Openome_modelPackage.MODEL__DEPENDENCIES:
 				getDependencies().clear();
 				return;
-			case openome_modelPackage.MODEL__DECOMPOSITIONS:
+			case Openome_modelPackage.MODEL__DECOMPOSITIONS:
 				getDecompositions().clear();
 				return;
-			case openome_modelPackage.MODEL__CONTAINERS:
+			case Openome_modelPackage.MODEL__CONTAINERS:
 				getContainers().clear();
 				return;
-			case openome_modelPackage.MODEL__CORRELATIONS:
+			case Openome_modelPackage.MODEL__CORRELATIONS:
 				getCorrelations().clear();
 				return;
-			case openome_modelPackage.MODEL__ASSOCIATIONS:
+			case Openome_modelPackage.MODEL__ASSOCIATIONS:
 				getAssociations().clear();
 				return;
-			case openome_modelPackage.MODEL__ALTERNATIVES:
+			case Openome_modelPackage.MODEL__ALTERNATIVES:
 				getAlternatives().clear();
 				return;
 		}
@@ -505,23 +498,23 @@ public class ModelImpl extends EObjectImpl implements Model {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case openome_modelPackage.MODEL__NAME:
+			case Openome_modelPackage.MODEL__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case openome_modelPackage.MODEL__INTENTIONS:
+			case Openome_modelPackage.MODEL__INTENTIONS:
 				return intentions != null && !intentions.isEmpty();
-			case openome_modelPackage.MODEL__CONTRIBUTIONS:
+			case Openome_modelPackage.MODEL__CONTRIBUTIONS:
 				return contributions != null && !contributions.isEmpty();
-			case openome_modelPackage.MODEL__DEPENDENCIES:
+			case Openome_modelPackage.MODEL__DEPENDENCIES:
 				return dependencies != null && !dependencies.isEmpty();
-			case openome_modelPackage.MODEL__DECOMPOSITIONS:
+			case Openome_modelPackage.MODEL__DECOMPOSITIONS:
 				return decompositions != null && !decompositions.isEmpty();
-			case openome_modelPackage.MODEL__CONTAINERS:
+			case Openome_modelPackage.MODEL__CONTAINERS:
 				return containers != null && !containers.isEmpty();
-			case openome_modelPackage.MODEL__CORRELATIONS:
+			case Openome_modelPackage.MODEL__CORRELATIONS:
 				return correlations != null && !correlations.isEmpty();
-			case openome_modelPackage.MODEL__ASSOCIATIONS:
+			case Openome_modelPackage.MODEL__ASSOCIATIONS:
 				return associations != null && !associations.isEmpty();
-			case openome_modelPackage.MODEL__ALTERNATIVES:
+			case Openome_modelPackage.MODEL__ALTERNATIVES:
 				return alternatives != null && !alternatives.isEmpty();
 		}
 		return super.eIsSet(featureID);

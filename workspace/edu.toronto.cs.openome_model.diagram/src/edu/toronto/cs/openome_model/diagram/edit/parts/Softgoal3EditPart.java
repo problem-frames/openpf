@@ -2,7 +2,6 @@ package edu.toronto.cs.openome_model.diagram.edit.parts;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.LinkedList;
 import java.util.List;
 import openome_model.figures.ConstrainedResizeShapeEditPolicy;
 import openome_model.figures.OpenOMEBorderItemLocator;
@@ -156,7 +155,7 @@ public class Softgoal3EditPart extends AbstractBorderedShapeEditPart {
 	 * @generated
 	 */
 	protected LayoutEditPolicy createLayoutEditPolicy() {
-		org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy lep = new org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy() {
+		LayoutEditPolicy lep = new LayoutEditPolicy() {
 
 			protected EditPolicy createChildEditPolicy(EditPart child) {
 				View childView = (View) child.getModel();
@@ -196,7 +195,8 @@ public class Softgoal3EditPart extends AbstractBorderedShapeEditPart {
 	 * @generated
 	 */
 	protected IFigure createNodeShape() {
-		return primaryShape = new SoftGoalSVGFigure();
+		SoftGoalSVGFigure figure = new SoftGoalSVGFigure();
+		return primaryShape = figure;
 	}
 
 	/**
@@ -373,760 +373,1016 @@ public class Softgoal3EditPart extends AbstractBorderedShapeEditPart {
 	/**
 	 * @generated
 	 */
-	public List<IElementType> getMARelTypesOnSource() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(12);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
+	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMARelTypesOnSource() {
+		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
 		return types;
 	}
 
 	/**
 	 * @generated
 	 */
-	public List<IElementType> getMARelTypesOnSourceAndTarget(
+	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMARelTypesOnSourceAndTarget(
 			IGraphicalEditPart targetEditPart) {
-		LinkedList<IElementType> types = new LinkedList<IElementType>();
+		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.ActorEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.AgentEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.PositionEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.RoleEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.GoalEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.SoftgoalEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.TaskEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.ResourceEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.GoalEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.SoftgoalEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.TaskEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.ResourceEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.GoalEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.SoftgoalEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.TaskEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.ResourceEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.GoalEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.SoftgoalEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.TaskEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.ResourceEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.GoalEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.SoftgoalEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.TaskEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.ResourceEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.GoalEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.SoftgoalEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.TaskEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.ResourceEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.GoalEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.SoftgoalEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.TaskEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.ResourceEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.GoalEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.SoftgoalEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.TaskEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.ResourceEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.GoalEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.SoftgoalEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.TaskEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.ResourceEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.GoalEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.SoftgoalEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.TaskEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.ResourceEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.GoalEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.SoftgoalEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.TaskEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.ResourceEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.GoalEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.SoftgoalEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.TaskEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.ResourceEditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task2EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task3EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task4EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Goal5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Resource5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
 		}
 		if (targetEditPart instanceof edu.toronto.cs.openome_model.diagram.edit.parts.Task5EditPart) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
 		}
 		return types;
 	}
@@ -1134,264 +1390,984 @@ public class Softgoal3EditPart extends AbstractBorderedShapeEditPart {
 	/**
 	 * @generated
 	 */
-	public List<IElementType> getMATypesForTarget(IElementType relationshipType) {
-		LinkedList<IElementType> types = new LinkedList<IElementType>();
+	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMATypesForTarget(
+			IElementType relationshipType) {
+		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
 		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Actor_1001);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Agent_1002);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Position_1003);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Role_1004);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
-		} else if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
-		} else if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
-		} else if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
-		} else if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
-		} else if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
-		} else if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
-		} else if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
-		} else if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
-		} else if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
-		} else if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
-		} else if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Actor_1001);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Agent_1002);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Position_1003);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Role_1004);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
 		}
 		return types;
 	}
@@ -1399,284 +2375,1016 @@ public class Softgoal3EditPart extends AbstractBorderedShapeEditPart {
 	/**
 	 * @generated
 	 */
-	public List<IElementType> getMARelTypesOnTarget() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(12);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
-		types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
+	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMARelTypesOnTarget() {
+		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011);
+		types
+				.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012);
 		return types;
 	}
 
 	/**
 	 * @generated
 	 */
-	public List<IElementType> getMATypesForSource(IElementType relationshipType) {
-		LinkedList<IElementType> types = new LinkedList<IElementType>();
+	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMATypesForSource(
+			IElementType relationshipType) {
+		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
 		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Actor_1001);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Agent_1002);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Position_1003);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Role_1004);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
-		} else if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
-		} else if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
-		} else if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
-		} else if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
-		} else if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
-		} else if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
-		} else if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
-		} else if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
-		} else if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
-		} else if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
-		} else if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
-			types.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Actor_1001);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Agent_1002);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Position_1003);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Role_1004);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Dependency_3001) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndDecomposition_3002) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrDecomposition_3003) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HelpContribution_3004) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.HurtContribution_3005) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.MakeContribution_3006) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.BreakContribution_3007) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomePlusContribution_3008) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.SomeMinusContribution_3009) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.UnknownContribution_3010) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.AndContribution_3011) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_1005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_1006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_1007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_1008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2001);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2002);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2003);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2004);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2005);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2006);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2007);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2008);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2009);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2010);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2011);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2012);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Goal_2013);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Softgoal_2014);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Resource_2015);
+		}
+		if (relationshipType == edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.OrContribution_3012) {
+			types
+					.add(edu.toronto.cs.openome_model.diagram.providers.Openome_modelElementTypes.Task_2016);
 		}
 		return types;
 	}

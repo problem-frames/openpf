@@ -67,9 +67,8 @@ public class AndContributionReorientCommand extends EditElementCommand {
 		}
 		edu.toronto.cs.openome_model.Model container = (edu.toronto.cs.openome_model.Model) getLink()
 				.eContainer();
-		return edu.toronto.cs.openome_model.diagram.edit.policies.Openome_modelBaseItemSemanticEditPolicy
-				.getLinkConstraints().canExistAndContribution_3011(container,
-						getLink(), getNewSource(), target);
+		return edu.toronto.cs.openome_model.diagram.edit.policies.Openome_modelBaseItemSemanticEditPolicy.LinkConstraints
+				.canExistAndContribution_3011(container, getNewSource(), target);
 	}
 
 	/**
@@ -85,9 +84,8 @@ public class AndContributionReorientCommand extends EditElementCommand {
 		}
 		edu.toronto.cs.openome_model.Model container = (edu.toronto.cs.openome_model.Model) getLink()
 				.eContainer();
-		return edu.toronto.cs.openome_model.diagram.edit.policies.Openome_modelBaseItemSemanticEditPolicy
-				.getLinkConstraints().canExistAndContribution_3011(container,
-						getLink(), source, getNewTarget());
+		return edu.toronto.cs.openome_model.diagram.edit.policies.Openome_modelBaseItemSemanticEditPolicy.LinkConstraints
+				.canExistAndContribution_3011(container, source, getNewTarget());
 	}
 
 	/**

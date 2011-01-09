@@ -7,8 +7,8 @@ package edu.toronto.cs.openome_model.provider;
 
 
 import edu.toronto.cs.openome_model.Model;
-import edu.toronto.cs.openome_model.openome_modelFactory;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelFactory;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -85,7 +85,7 @@ public class ModelItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Model_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Model_name_feature", "_UI_Model_type"),
-				 openome_modelPackage.Literals.MODEL__NAME,
+				 Openome_modelPackage.Literals.MODEL__NAME,
 				 true,
 				 false,
 				 false,
@@ -107,7 +107,7 @@ public class ModelItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Model_correlations_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Model_correlations_feature", "_UI_Model_type"),
-				 openome_modelPackage.Literals.MODEL__CORRELATIONS,
+				 Openome_modelPackage.Literals.MODEL__CORRELATIONS,
 				 true,
 				 false,
 				 true,
@@ -128,13 +128,13 @@ public class ModelItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(openome_modelPackage.Literals.MODEL__INTENTIONS);
-			childrenFeatures.add(openome_modelPackage.Literals.MODEL__CONTRIBUTIONS);
-			childrenFeatures.add(openome_modelPackage.Literals.MODEL__DEPENDENCIES);
-			childrenFeatures.add(openome_modelPackage.Literals.MODEL__DECOMPOSITIONS);
-			childrenFeatures.add(openome_modelPackage.Literals.MODEL__CONTAINERS);
-			childrenFeatures.add(openome_modelPackage.Literals.MODEL__ASSOCIATIONS);
-			childrenFeatures.add(openome_modelPackage.Literals.MODEL__ALTERNATIVES);
+			childrenFeatures.add(Openome_modelPackage.Literals.MODEL__INTENTIONS);
+			childrenFeatures.add(Openome_modelPackage.Literals.MODEL__CONTRIBUTIONS);
+			childrenFeatures.add(Openome_modelPackage.Literals.MODEL__DEPENDENCIES);
+			childrenFeatures.add(Openome_modelPackage.Literals.MODEL__DECOMPOSITIONS);
+			childrenFeatures.add(Openome_modelPackage.Literals.MODEL__CONTAINERS);
+			childrenFeatures.add(Openome_modelPackage.Literals.MODEL__ASSOCIATIONS);
+			childrenFeatures.add(Openome_modelPackage.Literals.MODEL__ALTERNATIVES);
 		}
 		return childrenFeatures;
 	}
@@ -189,16 +189,16 @@ public class ModelItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Model.class)) {
-			case openome_modelPackage.MODEL__NAME:
+			case Openome_modelPackage.MODEL__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case openome_modelPackage.MODEL__INTENTIONS:
-			case openome_modelPackage.MODEL__CONTRIBUTIONS:
-			case openome_modelPackage.MODEL__DEPENDENCIES:
-			case openome_modelPackage.MODEL__DECOMPOSITIONS:
-			case openome_modelPackage.MODEL__CONTAINERS:
-			case openome_modelPackage.MODEL__ASSOCIATIONS:
-			case openome_modelPackage.MODEL__ALTERNATIVES:
+			case Openome_modelPackage.MODEL__INTENTIONS:
+			case Openome_modelPackage.MODEL__CONTRIBUTIONS:
+			case Openome_modelPackage.MODEL__DEPENDENCIES:
+			case Openome_modelPackage.MODEL__DECOMPOSITIONS:
+			case Openome_modelPackage.MODEL__CONTAINERS:
+			case Openome_modelPackage.MODEL__ASSOCIATIONS:
+			case Openome_modelPackage.MODEL__ALTERNATIVES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -218,163 +218,163 @@ public class ModelItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__INTENTIONS,
-				 openome_modelFactory.eINSTANCE.createIntention()));
+				(Openome_modelPackage.Literals.MODEL__INTENTIONS,
+				 Openome_modelFactory.eINSTANCE.createIntention()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__INTENTIONS,
-				 openome_modelFactory.eINSTANCE.createGoal()));
+				(Openome_modelPackage.Literals.MODEL__INTENTIONS,
+				 Openome_modelFactory.eINSTANCE.createGoal()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__INTENTIONS,
-				 openome_modelFactory.eINSTANCE.createResource()));
+				(Openome_modelPackage.Literals.MODEL__INTENTIONS,
+				 Openome_modelFactory.eINSTANCE.createResource()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__INTENTIONS,
-				 openome_modelFactory.eINSTANCE.createSoftgoal()));
+				(Openome_modelPackage.Literals.MODEL__INTENTIONS,
+				 Openome_modelFactory.eINSTANCE.createSoftgoal()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__INTENTIONS,
-				 openome_modelFactory.eINSTANCE.createTask()));
+				(Openome_modelPackage.Literals.MODEL__INTENTIONS,
+				 Openome_modelFactory.eINSTANCE.createTask()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__INTENTIONS,
-				 openome_modelFactory.eINSTANCE.createBelief()));
+				(Openome_modelPackage.Literals.MODEL__INTENTIONS,
+				 Openome_modelFactory.eINSTANCE.createBelief()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__CONTRIBUTIONS,
-				 openome_modelFactory.eINSTANCE.createContribution()));
+				(Openome_modelPackage.Literals.MODEL__CONTRIBUTIONS,
+				 Openome_modelFactory.eINSTANCE.createContribution()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__CONTRIBUTIONS,
-				 openome_modelFactory.eINSTANCE.createHelpContribution()));
+				(Openome_modelPackage.Literals.MODEL__CONTRIBUTIONS,
+				 Openome_modelFactory.eINSTANCE.createHelpContribution()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__CONTRIBUTIONS,
-				 openome_modelFactory.eINSTANCE.createHurtContribution()));
+				(Openome_modelPackage.Literals.MODEL__CONTRIBUTIONS,
+				 Openome_modelFactory.eINSTANCE.createHurtContribution()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__CONTRIBUTIONS,
-				 openome_modelFactory.eINSTANCE.createMakeContribution()));
+				(Openome_modelPackage.Literals.MODEL__CONTRIBUTIONS,
+				 Openome_modelFactory.eINSTANCE.createMakeContribution()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__CONTRIBUTIONS,
-				 openome_modelFactory.eINSTANCE.createBreakContribution()));
+				(Openome_modelPackage.Literals.MODEL__CONTRIBUTIONS,
+				 Openome_modelFactory.eINSTANCE.createBreakContribution()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__CONTRIBUTIONS,
-				 openome_modelFactory.eINSTANCE.createSomePlusContribution()));
+				(Openome_modelPackage.Literals.MODEL__CONTRIBUTIONS,
+				 Openome_modelFactory.eINSTANCE.createSomePlusContribution()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__CONTRIBUTIONS,
-				 openome_modelFactory.eINSTANCE.createSomeMinusContribution()));
+				(Openome_modelPackage.Literals.MODEL__CONTRIBUTIONS,
+				 Openome_modelFactory.eINSTANCE.createSomeMinusContribution()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__CONTRIBUTIONS,
-				 openome_modelFactory.eINSTANCE.createUnknownContribution()));
+				(Openome_modelPackage.Literals.MODEL__CONTRIBUTIONS,
+				 Openome_modelFactory.eINSTANCE.createUnknownContribution()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__CONTRIBUTIONS,
-				 openome_modelFactory.eINSTANCE.createAndContribution()));
+				(Openome_modelPackage.Literals.MODEL__CONTRIBUTIONS,
+				 Openome_modelFactory.eINSTANCE.createAndContribution()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__CONTRIBUTIONS,
-				 openome_modelFactory.eINSTANCE.createOrContribution()));
+				(Openome_modelPackage.Literals.MODEL__CONTRIBUTIONS,
+				 Openome_modelFactory.eINSTANCE.createOrContribution()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__DEPENDENCIES,
-				 openome_modelFactory.eINSTANCE.createDependency()));
+				(Openome_modelPackage.Literals.MODEL__DEPENDENCIES,
+				 Openome_modelFactory.eINSTANCE.createDependency()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__DECOMPOSITIONS,
-				 openome_modelFactory.eINSTANCE.createDecomposition()));
+				(Openome_modelPackage.Literals.MODEL__DECOMPOSITIONS,
+				 Openome_modelFactory.eINSTANCE.createDecomposition()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__DECOMPOSITIONS,
-				 openome_modelFactory.eINSTANCE.createAndDecomposition()));
+				(Openome_modelPackage.Literals.MODEL__DECOMPOSITIONS,
+				 Openome_modelFactory.eINSTANCE.createAndDecomposition()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__DECOMPOSITIONS,
-				 openome_modelFactory.eINSTANCE.createOrDecomposition()));
+				(Openome_modelPackage.Literals.MODEL__DECOMPOSITIONS,
+				 Openome_modelFactory.eINSTANCE.createOrDecomposition()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__CONTAINERS,
-				 openome_modelFactory.eINSTANCE.createActor()));
+				(Openome_modelPackage.Literals.MODEL__CONTAINERS,
+				 Openome_modelFactory.eINSTANCE.createActor()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__CONTAINERS,
-				 openome_modelFactory.eINSTANCE.createAgent()));
+				(Openome_modelPackage.Literals.MODEL__CONTAINERS,
+				 Openome_modelFactory.eINSTANCE.createAgent()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__CONTAINERS,
-				 openome_modelFactory.eINSTANCE.createPosition()));
+				(Openome_modelPackage.Literals.MODEL__CONTAINERS,
+				 Openome_modelFactory.eINSTANCE.createPosition()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__CONTAINERS,
-				 openome_modelFactory.eINSTANCE.createRole()));
+				(Openome_modelPackage.Literals.MODEL__CONTAINERS,
+				 Openome_modelFactory.eINSTANCE.createRole()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__ASSOCIATIONS,
-				 openome_modelFactory.eINSTANCE.createAssociation()));
+				(Openome_modelPackage.Literals.MODEL__ASSOCIATIONS,
+				 Openome_modelFactory.eINSTANCE.createAssociation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__ASSOCIATIONS,
-				 openome_modelFactory.eINSTANCE.createIsAAssociation()));
+				(Openome_modelPackage.Literals.MODEL__ASSOCIATIONS,
+				 Openome_modelFactory.eINSTANCE.createIsAAssociation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__ASSOCIATIONS,
-				 openome_modelFactory.eINSTANCE.createCoversAssociation()));
+				(Openome_modelPackage.Literals.MODEL__ASSOCIATIONS,
+				 Openome_modelFactory.eINSTANCE.createCoversAssociation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__ASSOCIATIONS,
-				 openome_modelFactory.eINSTANCE.createIsPartOfAssociation()));
+				(Openome_modelPackage.Literals.MODEL__ASSOCIATIONS,
+				 Openome_modelFactory.eINSTANCE.createIsPartOfAssociation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__ASSOCIATIONS,
-				 openome_modelFactory.eINSTANCE.createOccupiesAssociation()));
+				(Openome_modelPackage.Literals.MODEL__ASSOCIATIONS,
+				 Openome_modelFactory.eINSTANCE.createOccupiesAssociation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__ASSOCIATIONS,
-				 openome_modelFactory.eINSTANCE.createPlaysAssociation()));
+				(Openome_modelPackage.Literals.MODEL__ASSOCIATIONS,
+				 Openome_modelFactory.eINSTANCE.createPlaysAssociation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__ASSOCIATIONS,
-				 openome_modelFactory.eINSTANCE.createINSAssociation()));
+				(Openome_modelPackage.Literals.MODEL__ASSOCIATIONS,
+				 Openome_modelFactory.eINSTANCE.createINSAssociation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(openome_modelPackage.Literals.MODEL__ALTERNATIVES,
-				 openome_modelFactory.eINSTANCE.createAlternative()));
+				(Openome_modelPackage.Literals.MODEL__ALTERNATIVES,
+				 Openome_modelFactory.eINSTANCE.createAlternative()));
 	}
 
 	/**

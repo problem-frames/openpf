@@ -12,17 +12,10 @@ package edu.toronto.cs.openome_model;
  * <!-- end-user-doc -->
  *
  *
- * @see edu.toronto.cs.openome_model.openome_modelPackage#getGoal()
+ * @see edu.toronto.cs.openome_model.Openome_modelPackage#getGoal()
  * @model
  * @generated
  */
 public interface Goal extends Intention {
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Copyright 2001-2008 University of Toronto";
 
 } // Goal

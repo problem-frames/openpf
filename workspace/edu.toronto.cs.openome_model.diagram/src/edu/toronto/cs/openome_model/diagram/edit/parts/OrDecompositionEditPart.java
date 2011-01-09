@@ -24,7 +24,7 @@ import org.eclipse.gmf.runtime.notation.View;
 /**
  * @generated
  */
-public class OrDecompositionEditPart extends ConnectionNodeEditPart implements
+public class OrDecompositionEditPart extends CustomConnectionNodeEditPart implements
 		ITreeBranchEditPart {
 
 	/**
@@ -82,7 +82,7 @@ public class OrDecompositionEditPart extends ConnectionNodeEditPart implements
 
 			setTargetDecoration(createTargetDecoration());
 		}
-
+		
 		/**
 		 * Straighten the connector so that there are no bends or curves
 		 */
@@ -90,12 +90,12 @@ public class OrDecompositionEditPart extends ConnectionNodeEditPart implements
 
 			// straighten the line by simply redefining a brand new routing
 			// constraint, that contains only the source and target points
-
+			
 			Point sourcePoint = this.getPoints().getFirstPoint();
 			Point targetPoint = this.getPoints().getLastPoint();
-
+			
 			ArrayList<AbsoluteBendpoint> list = new ArrayList<AbsoluteBendpoint>();
-
+			
 			list.add(new AbsoluteBendpoint(sourcePoint));
 			list.add(new AbsoluteBendpoint(targetPoint));
 			this.setRoutingConstraint(list);
@@ -110,50 +110,50 @@ public class OrDecompositionEditPart extends ConnectionNodeEditPart implements
 
 			return df;
 		}
-
-		//		NOTE: Not sure why links are always set to visible, for now will set it to normal (last revision: changeset 1275)
-		//		/**
-		//		 * *** NOTE: This method has been overridden to prevent
-		//		 * the link to be hidden. This method will always call super.setVisible(true) ***
-		//		 * @generated NOT
-		//		 */
-		//		public void setVisible(boolean newbool) {
-		//			super.setVisible(true);
-		//			this.refreshLine();
-		//		}
-
+		
+//		NOTE: Not sure why links are always set to visible, for now will set it to normal (last revision: changeset 1275)
+//		/**
+//		 * *** NOTE: This method has been overridden to prevent
+//		 * the link to be hidden. This method will always call super.setVisible(true) ***
+//		 * @generated NOT
+//		 */
+//		public void setVisible(boolean newbool) {
+//			super.setVisible(true);
+//			this.refreshLine();
+//		}
+		
 		/**
 		 * @generated NOT
 		 */
 		public void outlineShape(Graphics g) {
-
+			
 			// determine whether or not we should draw the line (and decoration) or not..
 			// in the case where the dependency link connects 2 elements within the same
 			// container and the container is collapsed, we DO NOT draw the link
-
+			
 			ConnectionAnchor sourceAnchor = this.getSourceAnchor();
 			ConnectionAnchor targetAnchor = this.getTargetAnchor();
-
-			boolean goalAnchorInSameContainerAsTargetAnchor = ((sourceAnchor instanceof GoalAnchor) && ((GoalAnchor) sourceAnchor)
-					.collapsedInSameContainerAs(targetAnchor));
-
-			boolean softGoalAnchorInSameContainerAsTargetAnchor = ((sourceAnchor instanceof SoftgoalAnchor) && ((SoftgoalAnchor) sourceAnchor)
-					.collapsedInSameContainerAs(targetAnchor));
-
-			boolean TaskAnchorInSameContainerAsTargetAnchor = ((sourceAnchor instanceof TaskAnchor) && ((TaskAnchor) sourceAnchor)
-					.collapsedInSameContainerAs(targetAnchor));
-
-			boolean ResourceAnchorInSameContainerAsTargetAnchor = ((sourceAnchor instanceof ResourceAnchor) && ((ResourceAnchor) sourceAnchor)
-					.collapsedInSameContainerAs(targetAnchor));
-
-			if (goalAnchorInSameContainerAsTargetAnchor
-					|| softGoalAnchorInSameContainerAsTargetAnchor
-					|| TaskAnchorInSameContainerAsTargetAnchor
-					|| ResourceAnchorInSameContainerAsTargetAnchor) {
+			
+			boolean goalAnchorInSameContainerAsTargetAnchor = ((sourceAnchor instanceof GoalAnchor)
+					&& ((GoalAnchor)sourceAnchor).collapsedInSameContainerAs(targetAnchor));
+			
+			boolean softGoalAnchorInSameContainerAsTargetAnchor = ((sourceAnchor instanceof SoftgoalAnchor)
+					&& ((SoftgoalAnchor)sourceAnchor).collapsedInSameContainerAs(targetAnchor));
+			
+			boolean TaskAnchorInSameContainerAsTargetAnchor = ((sourceAnchor instanceof TaskAnchor)
+					&& ((TaskAnchor)sourceAnchor).collapsedInSameContainerAs(targetAnchor));
+			
+			boolean ResourceAnchorInSameContainerAsTargetAnchor = ((sourceAnchor instanceof ResourceAnchor)
+					&& ((ResourceAnchor)sourceAnchor).collapsedInSameContainerAs(targetAnchor));
+			
+			
+			
+			if (goalAnchorInSameContainerAsTargetAnchor || softGoalAnchorInSameContainerAsTargetAnchor
+					|| TaskAnchorInSameContainerAsTargetAnchor || ResourceAnchorInSameContainerAsTargetAnchor) {
 				// if any of the checks were triggered (true), then that means that this link/connector
 				// is connecting (any) 2 intentions within the same container, and the container
 				// is collapsed.. so don't do anything (ie, dont' draw the link/connector)
-
+			
 				this.setVisible(false);
 				this.getTargetDecoration().setVisible(false);
 			} else {
@@ -162,7 +162,7 @@ public class OrDecompositionEditPart extends ConnectionNodeEditPart implements
 				this.setVisible(true);
 				this.getTargetDecoration().setVisible(true);
 			}
-
+			
 		}
 
 	}

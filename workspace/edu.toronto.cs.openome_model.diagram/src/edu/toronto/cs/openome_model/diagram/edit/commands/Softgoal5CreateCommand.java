@@ -51,7 +51,7 @@ public class Softgoal5CreateCommand extends EditElementCommand {
 	 */
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor,
 			IAdaptable info) throws ExecutionException {
-		edu.toronto.cs.openome_model.Softgoal newElement = edu.toronto.cs.openome_model.openome_modelFactory.eINSTANCE
+		edu.toronto.cs.openome_model.Softgoal newElement = edu.toronto.cs.openome_model.Openome_modelFactory.eINSTANCE
 				.createSoftgoal();
 
 		edu.toronto.cs.openome_model.Container owner = (edu.toronto.cs.openome_model.Container) getElementToEdit();

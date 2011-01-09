@@ -1,6 +1,6 @@
 problem: #Required Behavior#
 
-CD~>RB "a"
+CD<~RB "a"
 
 CM--CD "b"
 

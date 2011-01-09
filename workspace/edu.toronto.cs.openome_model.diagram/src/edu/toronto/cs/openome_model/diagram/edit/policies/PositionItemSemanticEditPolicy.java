@@ -39,7 +39,7 @@ public class PositionItemSemanticEditPolicy
 		CompositeTransactionalCommand cmd = new CompositeTransactionalCommand(
 				getEditingDomain(), null);
 		cmd.setTransactionNestingEnabled(false);
-		for (Iterator<?> it = view.getTargetEdges().iterator(); it.hasNext();) {
+		for (Iterator it = view.getTargetEdges().iterator(); it.hasNext();) {
 			Edge incomingLink = (Edge) it.next();
 			if (edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
 					.getVisualID(incomingLink) == edu.toronto.cs.openome_model.diagram.edit.parts.DependencyEditPart.VISUAL_ID) {
@@ -98,7 +98,7 @@ public class PositionItemSemanticEditPolicy
 				continue;
 			}
 		}
-		for (Iterator<?> it = view.getSourceEdges().iterator(); it.hasNext();) {
+		for (Iterator it = view.getSourceEdges().iterator(); it.hasNext();) {
 			Edge outgoingLink = (Edge) it.next();
 			if (edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
 					.getVisualID(outgoingLink) == edu.toronto.cs.openome_model.diagram.edit.parts.DependencyEditPart.VISUAL_ID) {
@@ -175,18 +175,18 @@ public class PositionItemSemanticEditPolicy
 	 */
 	private void addDestroyChildNodesCommand(ICompositeCommand cmd) {
 		View view = (View) getHost().getModel();
-		for (Iterator<?> nit = view.getChildren().iterator(); nit.hasNext();) {
+		for (Iterator nit = view.getChildren().iterator(); nit.hasNext();) {
 			Node node = (Node) nit.next();
 			switch (edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
 					.getVisualID(node)) {
 			case edu.toronto.cs.openome_model.diagram.edit.parts.PositionPositionCompartmentEditPart.VISUAL_ID:
-				for (Iterator<?> cit = node.getChildren().iterator(); cit
+				for (Iterator cit = node.getChildren().iterator(); cit
 						.hasNext();) {
 					Node cnode = (Node) cit.next();
 					switch (edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
 							.getVisualID(cnode)) {
 					case edu.toronto.cs.openome_model.diagram.edit.parts.Goal4EditPart.VISUAL_ID:
-						for (Iterator<?> it = cnode.getTargetEdges().iterator(); it
+						for (Iterator it = cnode.getTargetEdges().iterator(); it
 								.hasNext();) {
 							Edge incomingLink = (Edge) it.next();
 							if (edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -298,7 +298,7 @@ public class PositionItemSemanticEditPolicy
 								continue;
 							}
 						}
-						for (Iterator<?> it = cnode.getSourceEdges().iterator(); it
+						for (Iterator it = cnode.getSourceEdges().iterator(); it
 								.hasNext();) {
 							Edge outgoingLink = (Edge) it.next();
 							if (edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -417,7 +417,7 @@ public class PositionItemSemanticEditPolicy
 						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
 						break;
 					case edu.toronto.cs.openome_model.diagram.edit.parts.Softgoal4EditPart.VISUAL_ID:
-						for (Iterator<?> it = cnode.getTargetEdges().iterator(); it
+						for (Iterator it = cnode.getTargetEdges().iterator(); it
 								.hasNext();) {
 							Edge incomingLink = (Edge) it.next();
 							if (edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -529,7 +529,7 @@ public class PositionItemSemanticEditPolicy
 								continue;
 							}
 						}
-						for (Iterator<?> it = cnode.getSourceEdges().iterator(); it
+						for (Iterator it = cnode.getSourceEdges().iterator(); it
 								.hasNext();) {
 							Edge outgoingLink = (Edge) it.next();
 							if (edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -648,7 +648,7 @@ public class PositionItemSemanticEditPolicy
 						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
 						break;
 					case edu.toronto.cs.openome_model.diagram.edit.parts.Resource4EditPart.VISUAL_ID:
-						for (Iterator<?> it = cnode.getTargetEdges().iterator(); it
+						for (Iterator it = cnode.getTargetEdges().iterator(); it
 								.hasNext();) {
 							Edge incomingLink = (Edge) it.next();
 							if (edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -760,7 +760,7 @@ public class PositionItemSemanticEditPolicy
 								continue;
 							}
 						}
-						for (Iterator<?> it = cnode.getSourceEdges().iterator(); it
+						for (Iterator it = cnode.getSourceEdges().iterator(); it
 								.hasNext();) {
 							Edge outgoingLink = (Edge) it.next();
 							if (edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -879,7 +879,7 @@ public class PositionItemSemanticEditPolicy
 						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
 						break;
 					case edu.toronto.cs.openome_model.diagram.edit.parts.Task4EditPart.VISUAL_ID:
-						for (Iterator<?> it = cnode.getTargetEdges().iterator(); it
+						for (Iterator it = cnode.getTargetEdges().iterator(); it
 								.hasNext();) {
 							Edge incomingLink = (Edge) it.next();
 							if (edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry
@@ -991,7 +991,7 @@ public class PositionItemSemanticEditPolicy
 								continue;
 							}
 						}
-						for (Iterator<?> it = cnode.getSourceEdges().iterator(); it
+						for (Iterator it = cnode.getSourceEdges().iterator(); it
 								.hasNext();) {
 							Edge outgoingLink = (Edge) it.next();
 							if (edu.toronto.cs.openome_model.diagram.part.Openome_modelVisualIDRegistry

@@ -86,21 +86,42 @@ public class Openome_modelDomainNavigatorContentProvider implements
 					}
 
 					public boolean handleResourceChanged(final Resource resource) {
-						unloadAllResources();
-						asyncRefresh();
+						for (Iterator it = myEditingDomain.getResourceSet()
+								.getResources().iterator(); it.hasNext();) {
+							Resource nextResource = (Resource) it.next();
+							nextResource.unload();
+						}
+						if (myViewer != null) {
+							myViewer.getControl().getDisplay().asyncExec(
+									myViewerRefreshRunnable);
+						}
 						return true;
 					}
 
 					public boolean handleResourceDeleted(Resource resource) {
-						unloadAllResources();
-						asyncRefresh();
+						for (Iterator it = myEditingDomain.getResourceSet()
+								.getResources().iterator(); it.hasNext();) {
+							Resource nextResource = (Resource) it.next();
+							nextResource.unload();
+						}
+						if (myViewer != null) {
+							myViewer.getControl().getDisplay().asyncExec(
+									myViewerRefreshRunnable);
+						}
 						return true;
 					}
 
 					public boolean handleResourceMoved(Resource resource,
 							final URI newURI) {
-						unloadAllResources();
-						asyncRefresh();
+						for (Iterator it = myEditingDomain.getResourceSet()
+								.getResources().iterator(); it.hasNext();) {
+							Resource nextResource = (Resource) it.next();
+							nextResource.unload();
+						}
+						if (myViewer != null) {
+							myViewer.getControl().getDisplay().asyncExec(
+									myViewerRefreshRunnable);
+						}
 						return true;
 					}
 				});
@@ -113,8 +134,11 @@ public class Openome_modelDomainNavigatorContentProvider implements
 		myWorkspaceSynchronizer.dispose();
 		myWorkspaceSynchronizer = null;
 		myViewerRefreshRunnable = null;
-		myViewer = null;
-		unloadAllResources();
+		for (Iterator it = myEditingDomain.getResourceSet().getResources()
+				.iterator(); it.hasNext();) {
+			Resource resource = (Resource) it.next();
+			resource.unload();
+		}
 		((TransactionalEditingDomain) myEditingDomain).dispose();
 		myEditingDomain = null;
 	}
@@ -124,26 +148,6 @@ public class Openome_modelDomainNavigatorContentProvider implements
 	 */
 	public void inputChanged(Viewer viewer, Object oldInput, Object newInput) {
 		myViewer = viewer;
-	}
-
-	/**
-	 * @generated
-	 */
-	void unloadAllResources() {
-		for (Resource nextResource : myEditingDomain.getResourceSet()
-				.getResources()) {
-			nextResource.unload();
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	void asyncRefresh() {
-		if (myViewer != null && !myViewer.getControl().isDisposed()) {
-			myViewer.getControl().getDisplay()
-					.asyncExec(myViewerRefreshRunnable);
-		}
 	}
 
 	/**
@@ -181,15 +185,15 @@ public class Openome_modelDomainNavigatorContentProvider implements
 					.toString(), true);
 			Resource resource = myEditingDomain.getResourceSet().getResource(
 					fileURI, true);
-			return wrapEObjects(
-					myAdapterFctoryContentProvier.getChildren(resource),
-					parentElement);
+			return wrapEObjects(myAdapterFctoryContentProvier
+					.getChildren(resource), parentElement);
 		}
 
 		if (parentElement instanceof edu.toronto.cs.openome_model.diagram.navigator.Openome_modelDomainNavigatorItem) {
 			return wrapEObjects(
-					myAdapterFctoryContentProvier.getChildren(((edu.toronto.cs.openome_model.diagram.navigator.Openome_modelDomainNavigatorItem) parentElement)
-							.getEObject()), parentElement);
+					myAdapterFctoryContentProvier
+							.getChildren(((edu.toronto.cs.openome_model.diagram.navigator.Openome_modelDomainNavigatorItem) parentElement)
+									.getEObject()), parentElement);
 		}
 		return EMPTY_ARRAY;
 	}
@@ -201,9 +205,10 @@ public class Openome_modelDomainNavigatorContentProvider implements
 		Collection result = new ArrayList();
 		for (int i = 0; i < objects.length; i++) {
 			if (objects[i] instanceof EObject) {
-				result.add(new edu.toronto.cs.openome_model.diagram.navigator.Openome_modelDomainNavigatorItem(
-						(EObject) objects[i], parentElement,
-						myAdapterFctoryContentProvier));
+				result
+						.add(new edu.toronto.cs.openome_model.diagram.navigator.Openome_modelDomainNavigatorItem(
+								(EObject) objects[i], parentElement,
+								myAdapterFctoryContentProvier));
 			}
 		}
 		return result.toArray();

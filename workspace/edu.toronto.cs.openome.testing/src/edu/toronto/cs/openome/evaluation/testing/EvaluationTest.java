@@ -26,8 +26,8 @@ import org.junit.Test;
 import edu.toronto.cs.openome.testing.ActorImplCreateCommand;
 import edu.toronto.cs.openome.testing.SoftgoalImplCreateCommand;
 import edu.toronto.cs.openome_model.Model;
-import edu.toronto.cs.openome_model.openome_modelFactory;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelFactory;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 import edu.toronto.cs.openome_model.diagram.part.Openome_modelDiagramEditorUtil;
 import edu.toronto.cs.openome_model.impl.ModelImpl;
 

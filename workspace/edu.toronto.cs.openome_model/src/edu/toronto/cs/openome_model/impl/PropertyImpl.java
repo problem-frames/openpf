@@ -6,7 +6,7 @@
 package edu.toronto.cs.openome_model.impl;
 
 import edu.toronto.cs.openome_model.Property;
-import edu.toronto.cs.openome_model.openome_modelPackage;
+import edu.toronto.cs.openome_model.Openome_modelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -30,13 +30,6 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * @generated
  */
 public class PropertyImpl extends EObjectImpl implements Property {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Copyright 2001-2008 University of Toronto";
-
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -93,7 +86,7 @@ public class PropertyImpl extends EObjectImpl implements Property {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return openome_modelPackage.Literals.PROPERTY;
+		return Openome_modelPackage.Literals.PROPERTY;
 	}
 
 	/**
@@ -114,7 +107,7 @@ public class PropertyImpl extends EObjectImpl implements Property {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, openome_modelPackage.PROPERTY__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Openome_modelPackage.PROPERTY__NAME, oldName, name));
 	}
 
 	/**
@@ -135,7 +128,7 @@ public class PropertyImpl extends EObjectImpl implements Property {
 		String oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, openome_modelPackage.PROPERTY__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, Openome_modelPackage.PROPERTY__VALUE, oldValue, value));
 	}
 
 	/**
@@ -146,9 +139,9 @@ public class PropertyImpl extends EObjectImpl implements Property {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case openome_modelPackage.PROPERTY__NAME:
+			case Openome_modelPackage.PROPERTY__NAME:
 				return getName();
-			case openome_modelPackage.PROPERTY__VALUE:
+			case Openome_modelPackage.PROPERTY__VALUE:
 				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -162,10 +155,10 @@ public class PropertyImpl extends EObjectImpl implements Property {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case openome_modelPackage.PROPERTY__NAME:
+			case Openome_modelPackage.PROPERTY__NAME:
 				setName((String)newValue);
 				return;
-			case openome_modelPackage.PROPERTY__VALUE:
+			case Openome_modelPackage.PROPERTY__VALUE:
 				setValue((String)newValue);
 				return;
 		}
@@ -180,10 +173,10 @@ public class PropertyImpl extends EObjectImpl implements Property {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case openome_modelPackage.PROPERTY__NAME:
+			case Openome_modelPackage.PROPERTY__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case openome_modelPackage.PROPERTY__VALUE:
+			case Openome_modelPackage.PROPERTY__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
 		}
@@ -198,9 +191,9 @@ public class PropertyImpl extends EObjectImpl implements Property {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case openome_modelPackage.PROPERTY__NAME:
+			case Openome_modelPackage.PROPERTY__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case openome_modelPackage.PROPERTY__VALUE:
+			case Openome_modelPackage.PROPERTY__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 		}
 		return super.eIsSet(featureID);

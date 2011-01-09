@@ -55,12 +55,11 @@ import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameDescriptionRoundExp2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameDescriptionRoundExp3EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentNameDescriptionRoundExpEditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentOrigin2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.ArgumentOriginEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesEditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesNameEditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesRebuttalEditPart;
-import uk.ac.open.argument.argument.diagram.edit.parts.MitigatesRebuttalExternalLabelEditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.RebutsEditPart;
+import uk.ac.open.argument.argument.diagram.edit.parts.WrappingLabel2EditPart;
 import uk.ac.open.argument.argument.diagram.edit.parts.WrappingLabelEditPart;
 import uk.ac.open.argument.argument.diagram.part.ArgumentVisualIDRegistry;
 
@@ -261,11 +260,11 @@ public class ArgumentViewProvider extends AbstractProvider implements
 			return createMitigates_4002(getSemanticElement(semanticAdapter),
 					containerView, index, persisted, preferencesHint);
 		case ArgumentOriginEditPart.VISUAL_ID:
-			return createArgumentOrigin_4003(containerView, index, persisted,
-					preferencesHint);
-		case MitigatesRebuttalEditPart.VISUAL_ID:
-			return createMitigatesRebuttal_4004(containerView, index,
+			return createMitigatesRebuttal_4003(containerView, index,
 					persisted, preferencesHint);
+		case ArgumentOrigin2EditPart.VISUAL_ID:
+			return createArgumentOrigin_4004(containerView, index, persisted,
+					preferencesHint);
 		}
 		// can never happen, provided #provides(CreateEdgeViewOperation) is correct
 		return null;
@@ -542,7 +541,7 @@ public class ArgumentViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Edge createArgumentOrigin_4003(View containerView, int index,
+	public Edge createMitigatesRebuttal_4003(View containerView, int index,
 			boolean persisted, PreferencesHint preferencesHint) {
 		Edge edge = NotationFactory.eINSTANCE.createEdge();
 		edge.getStyles().add(NotationFactory.eINSTANCE.createRoutingStyle());
@@ -599,7 +598,7 @@ public class ArgumentViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Edge createMitigatesRebuttal_4004(View containerView, int index,
+	public Edge createArgumentOrigin_4004(View containerView, int index,
 			boolean persisted, PreferencesHint preferencesHint) {
 		Edge edge = NotationFactory.eINSTANCE.createEdge();
 		edge.getStyles().add(NotationFactory.eINSTANCE.createRoutingStyle());
@@ -614,7 +613,7 @@ public class ArgumentViewProvider extends AbstractProvider implements
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
 		edge.setType(ArgumentVisualIDRegistry
-				.getType(MitigatesRebuttalEditPart.VISUAL_ID));
+				.getType(ArgumentOrigin2EditPart.VISUAL_ID));
 		edge.setElement(null);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
@@ -640,10 +639,9 @@ public class ArgumentViewProvider extends AbstractProvider implements
 					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
 					routing);
 		}
-		Node label6002 = createLabel(
-				edge,
+		Node label6002 = createLabel(edge,
 				ArgumentVisualIDRegistry
-						.getType(MitigatesRebuttalExternalLabelEditPart.VISUAL_ID));
+						.getType(WrappingLabel2EditPart.VISUAL_ID));
 		label6002.getStyles().add(
 				NotationFactory.eINSTANCE.createDescriptionStyle());
 		label6002.setLayoutConstraint(NotationFactory.eINSTANCE

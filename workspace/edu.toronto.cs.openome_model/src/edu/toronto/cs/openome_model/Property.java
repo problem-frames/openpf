@@ -20,18 +20,11 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see edu.toronto.cs.openome_model.openome_modelPackage#getProperty()
+ * @see edu.toronto.cs.openome_model.Openome_modelPackage#getProperty()
  * @model
  * @generated
  */
 public interface Property extends EObject {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Copyright 2001-2008 University of Toronto";
-
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -42,7 +35,7 @@ public interface Property extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getProperty_Name()
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getProperty_Name()
 	 * @model
 	 * @generated
 	 */
@@ -68,7 +61,7 @@ public interface Property extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(String)
-	 * @see edu.toronto.cs.openome_model.openome_modelPackage#getProperty_Value()
+	 * @see edu.toronto.cs.openome_model.Openome_modelPackage#getProperty_Value()
 	 * @model
 	 * @generated
 	 */
