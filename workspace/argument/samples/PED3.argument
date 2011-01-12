@@ -30,10 +30,10 @@ supported by
 warranted by
 	DK4 "Incentive and expertise ( with some imagination )
 represent enough ingredients to overcome tamper proofing mechanism "round 1
-	"!DK2" replacing DK2
+	replacing DK2 with !DK2 
 }
 A5 "Failure in tamper proofing mechanism exposes security of PED
-sealed box"round 1 "!A3" replacing A3 {
+sealed box"round 1 replacing A3 with !A3  {
 supported by
 	F8 "Overcoming PED sealed box allows obtaining clear text PIN" round 1
 warranted by

@@ -1,6 +1,6 @@
-problem: #Commanded Behavior#
+problem: RequiredBehaviour
 
-CB R :"Commanded Behavior" 
+CB R :"Required Behavior" 
 
 CM M : "Control Machine"
 
@@ -8,9 +8,9 @@ O B :"Operator"
 
 CD C :"Controlled Domain" 
 
-CB ~> CD :"d"
+CD <~ CB :"d"
 
-CB ~~ O : "a"
+O ~~ CB : "a"
 
 CM -- O : "b"
 

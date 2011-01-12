@@ -6,7 +6,7 @@ A1 "Confidentiality and integrity of customers' PIN is assured" {
 	warranted by
 		A2 "The tamper proofing mechanism guarantees that attempts to
 tamper the PED sealed box will cause data in transit to be deleted, 
-lost or overridden (depending on the mechanism implemented)""!F1     " {
+lost or overridden (depending on the mechanism implemented)" with !F1  {
 		warranted by
 			DK1 "Defeating the tamper proofing mechanism
 requires more than 10 hours effort"
