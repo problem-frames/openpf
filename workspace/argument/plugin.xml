@@ -13,6 +13,19 @@
 
   <extension point="core.example">
       <example file="Argument.xtext"/>
+      <example file="ATM1.argument"/>
+      <example file="SWIM.argument"/>
+      <example file="Dialog.argument"/>
+      <example file="example.argument"/>
+      <example file="PED1.argument"/>
+      <example file="PED2.argument"/>
+      <example file="PED3.argument"/>
+      <example file="PED4.argument"/>
+      <example file="PED5.argument"/>
+      <example file="PED6.argument"/>
+      <example file="plants_vs_zombie1.argument"/>
+      <example file="plants_vs_zombie2.argument"/>
+      <example file="plants_vs_zombie3.argument"/>
 <!--
       <example file="ATM1.argument" href="http://computing-research.open.ac.uk/trac/openre/raw-attachment/wiki/Examples/argument/SecureChange/ATM1/ATM1.argument" />
       <example file="http://computing-research.open.ac.uk/trac/openre/raw-attachment/wiki/Examples/argument.dir"/>

@@ -10,6 +10,10 @@ export PRODUCT_HOME=$(cd ..; pwd)
 #-----------------------------------------------------------
 PRODUCT_FILE=$PRODUCT.product
 PROJECT_FILE=$PROJECT
+if [ ! -f $ECLIPSE_HOME/plugins/org.eclipse.xtext_1.0.1.v201008251220.jar ]; then
+	cp -r ~/IDE/pf-3.6.product/more/eclipse/features/* ~/IDE/pf-3.6.product/eclipse/features/
+	cp -r ~/IDE/pf-3.6.product/more/eclipse/plugins/* ~/IDE/pf-3.6.product/eclipse/plugins/
+fi
 \ls ../workspace > workspace.plugins.txt
 /usr/bin/xsltproc product.xsl ../workspace/$PROJECT_FILE/$PRODUCT_FILE > product.plugins.txt
 /usr/bin/xsltproc feature.xsl ../workspace/$PROJECT_FILE/$PRODUCT_FILE > product.features.txt

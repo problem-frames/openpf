@@ -70,31 +70,31 @@ public class SomeMinusImplCreateCommand implements Command {
 
 
 
-	@Override
+	
 	public boolean canExecute() {
 		// TODO Auto-generated method stub
 		return true;
 	}
 
-	@Override
+	
 	public boolean canUndo() {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	@Override
+	
 	public Command chain(Command command) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
+	
 	public void dispose() {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
+	
 	public void execute() {
 		SomeMinusContributionImpl cont = (SomeMinusContributionImpl) factory.createSomeMinusContribution();
 		cont.setSource(source);
@@ -106,36 +106,36 @@ public class SomeMinusImplCreateCommand implements Command {
 		}
 	}
 
-	@Override
+	
 	public Collection<?> getAffectedObjects() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
+	
 	public String getDescription() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
+	
 	public String getLabel() {
 		return "Create Actor model";
 	}
 
-	@Override
+	
 	public Collection<?> getResult() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
+	
 	public void redo() {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
+	
 	public void undo() {
 		// TODO Auto-generated method stub
 
