@@ -1,0 +1,744 @@
+%
+% Copyright (c) 2005 IBM Corporation and others.
+% All rights reserved. This program and the accompanying materials
+% are made available under the terms of the Common Public License v1.0
+% which accompanies this distribution, and is available at
+% http://www.eclipse.org/legal/cpl-v10.html
+%
+% Contributors: 
+% IBM - Initial implementation
+%
+\documentclass{article}
+
+\usepackage{url}
+\usepackage{moreverb}
+
+\setlength{\topmargin}{-0.35in}
+\setlength{\oddsidemargin}{0.25in}
+\setlength{\textwidth}{6.0in}
+\setlength{\textheight}{8.7in}
+\setlength{\parskip}{3pt}
+\setlength{\parindent}{0pt}
+\renewcommand{\bottomfraction}{1.0}
+\renewcommand{\textfraction}{0.10}
+\renewcommand{\floatpagefraction}{0.0}
+\renewcommand{\topfraction}{1.0}
+
+\begin{document}
+
+\title{Discrete Event Calculus Reasoner \\
+Documentation}
+\author{Erik T. Mueller \\
+IBM Thomas J. Watson Research Center \\
+P.O. Box 704 \\
+Yorktown Heights, NY 10598 \\
+USA}
+
+\bibliographystyle{apalike}
+\maketitle
+\sloppy
+
+\copyright\ 2005 IBM Corporation and others.
+
+\noindent
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Common Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/cpl-v10.html
+
+\noindent
+Contributors: 
+IBM - Initial implementation
+
+\section{Introduction}
+
+The Discrete Event Calculus Reasoner is a program for performing
+automated commonsense reasoning using the discrete event calculus
+\cite{Mueller:2006}, a version of the classical logic event calculus
+\cite{Shanahan:1997,MillerShanahan:2002}. The program supports such
+types of reasoning as deduction, temporal projection, abduction,
+planning, postdiction, and model finding.
+
+The Discrete Event Calculus Reasoner supports the following commonsense
+phenomena:
+\begin{itemize}
+\item
+The {\em commonsense law of inertia}, which states that an event
+typically changes only a small number of things and everything else in
+the world remains unchanged. For example, moving a glass does not
+mysteriously cause a glass in another room to move.
+\item
+{\em Conditional effects of events}. For example, the results of
+turning on a television set depend on whether or not it is plugged in.
+\item
+{\em Release from the commonsense law of inertia}. For example, if a
+person is holding a glass, then the location of the glass is released from
+the commonsense law of inertia so that the location of the glass is
+permitted to vary.
+\item
+{\em Event ramifications} or indirect effects of events. The tool
+supports {\em state constraints}. For example, a glass moves along
+with the person holding it. The tool supports {\em causal
+constraints}, which deal with the instantaneous propagation of
+interacting indirect effects, as in idealized electrical circuits.
+\item
+{\em Events with nondeterministic effects}. For example, flipping a
+coin results in the coin landing either heads or tails.
+\item
+{\em Gradual change} such as the changing height of a falling object
+or volume of a balloon in the process of inflation.
+\item
+{\em Triggered events} or events that are triggered under certain
+conditions. For example, if water is flowing from a faucet into a
+sink, then once the water reaches a certain level the water will
+overflow.
+\item
+{\em Concurrent events with cumulative or canceling effects}. For
+example, if a shopping cart is simultaneously pulled and pushed, then
+it will spin around.
+\end{itemize}
+
+The Discrete Event Calculus Reasoner is used as follows.
+One places a {\em domain description} into a file. (This file may load
+other files.) The domain description consists of
+\begin{itemize}
+\item
+an {\em axiomatization} describing a commonsense domain or domains of
+interest,
+\item
+{\em observations} of world properties at various times, and
+\item
+a {\em narrative} of known event occurrences.
+\end{itemize}
+The domain description is expressed using the {\em Discrete Event Calculus
+Reasoner language}. One invokes the Discrete Event Calculus Reasoner on the
+domain description. The program transforms the domain description into a
+{\em satisfiability} (SAT) problem. (The SAT problem is expressed in the
+standard format used by most SAT solvers \cite{DIMACS:1993}.) The program
+then runs a SAT solver, which produces zero or more solutions, called
+{\em models}. The program decodes these models and displays them.
+
+\subsection{Software Requirements}
+
+The Discrete Event Calculus Reasoner runs under Windows and Linux.
+To run under Windows, you will first need to install Cygwin, which is
+available from
+\url{http://www.cygwin.com/}. When installing Cygwin, make sure you
+install Python, gcc, and g++. Most Linux installations already have
+Python, gcc, and g++. (If you need to get Python, you can get it from
+\url{http://www.python.org/}. If you need to get gcc and g++, you can
+get them from \url{http://gcc.gnu.org/}.) Under both Windows and
+Linux, you will also need to download the following:
+\begin{itemize}
+\item
+One or more SAT solvers. The following are recommended:
+Relsat \cite{BayardoSchrag:1997},
+which is available from
+\url{http://www.almaden.ibm.com/cs/people/bayardo/resources.html},
+and
+Walksat \cite{SelmanKautzCohen:1993}, which is available from
+\url{http://www.cs.washington.edu/homes/kautz/walksat/}.
+Walksat can be used to display near miss solutions.
+You can also use
+Minisat \cite{EenSorensson:2004},
+which is available from
+\url{http://www.cs.chalmers.se/Cs/Research/FormalMethods/MiniSat/Main.html}.
+\item
+PLY (Python Lex-Yacc), which is available from
+\url{http://www.dabeaz.com/ply/}.
+\end{itemize}
+
+\subsection{Installing the Program}
+
+Download the tar file {\tt decreasoner.tar.gz} and
+issue the following command:
+\begin{verbatim}
+tar -zxvf decreasoner.tar.gz
+\end{verbatim}
+Then continue by following the installation instructions in the file
+{\tt decreasoner/README}.
+
+To verify that the program is functioning properly, {\tt cd} to the
+{\tt decreasoner} directory and type the following:
+\begin{verbatim}
+$ python
+>>> import decreasoner
+>>> decreasoner.test()
+\end{verbatim}
+If the program is working properly, it will print something like
+the following:
+\begin{verbatim}
+loading examples/Shanahan1997/Yale.e
+loading foundations/Root.e
+loading foundations/EC.e
+28 variables and 64 clauses
+relsat solver
+1 model
+---
+model 1:
+0
+Alive().
+Happens(Load(), 0).
+1
++Loaded().
+Happens(Sneeze(), 1).
+2
+Happens(Shoot(), 2).
+3
+-Alive().
+-Loaded().
+EC: 7 predicates, 0 functions, 0 fluents, 0 events, 0 axioms
+Root: 0 predicates, 0 functions, 0 fluents, 0 events, 0 axioms
+Yale: 0 predicates, 0 functions, 2 fluents, 3 events, 8 axioms
+encoding 0.0s
+solution 0.0s
+total 0.1s
+>>>
+\end{verbatim}
+
+\subsection{A Simple Example}
+
+Here is a simple example of how to use the Discrete Event Calculus Reasoner.
+We use a text editor to create a file containing the following domain
+description:
+% ../examples/Manual/Example1.e
+\begin{verbatim}
+load foundations/Root.e
+load foundations/EC.e
+
+sort agent
+
+fluent Awake(agent)
+event WakeUp(agent)
+
+[agent,time] Initiates(WakeUp(agent),Awake(agent),time).
+
+agent James
+!HoldsAt(Awake(James),0).
+Delta: Happens(WakeUp(James),0).
+
+completion Delta Happens
+
+range time 0 1
+range offset 1 1
+\end{verbatim}
+The first line of the file is a comment. The {\tt ;} indicates that it
+and the rest of the characters on the line should be ignored.
+We always start by loading {\tt Root.e}, which defines the boolean,
+integer, predicate, and function sorts, and {\tt EC.e}, which defines
+the sorts, functions, predicates, and axioms for the event calculus.
+
+Next we create a simple axiomatization of waking up: We define a new
+sort {\tt agent}, to represent a person or animal. We define a new
+fluent {\tt Awake} and a new event {\tt WakeUp}.  We add an effect
+axiom that states that if an agent wakes up, then that agent will be
+awake. Every sentence must be terminated with a period.
+
+Now we code a particular commonsense reasoning problem that uses the
+axiomatization. We start by defining a constant {\tt James}, who is an
+agent. We state that James is not awake at timepoint 0 and that he
+wakes up at timepoint 0. We state that reasoning should be limited to
+timepoints 0 through 1.
+
+We save the file as {\tt examples/Manual/Example1.e} and run it by typing
+the following:
+\begin{verbatim}
+$ python
+>>> import decreasoner
+>>> decreasoner.run('examples/Manual/Example1.e')
+\end{verbatim}
+
+The following output is produced:
+% ../examples/Manual/Example1.txt
+\begin{verbatim}
+loading examples/Manual/Example1.e
+loading foundations/Root.e
+loading foundations/EC.e
+6 variables and 10 clauses
+relsat solver
+1 model
+---
+model 1:
+0
+Happens(WakeUp(James), 0).
+1
++Awake(James).
+P
+!Happens(WakeUp(James), 1).
+!ReleasedAt(Awake(James), 0).
+!ReleasedAt(Awake(James), 1).
+EC: 7 predicates, 0 functions, 0 fluents, 0 events, 0 axioms
+Example1: 0 predicates, 0 functions, 1 fluents, 1 events, 3 axioms
+Root: 0 predicates, 0 functions, 0 fluents, 0 events, 0 axioms
+encoding 0.0s
+solution 0.0s
+total 0.1s
+\end{verbatim}
+This shows the fluents that are true at timepoint zero, and the
+differences in what fluents are true from one timepoint to the next.
+Fluents that become true are indicated with a plus sign (``{\tt +}''),
+and fluents that become false are indicated with a minus sign
+(``{\tt -}'').
+
+An alternative output format is available that shows all the fluents
+that are true and false at every timepoint. This format is obtained by
+adding the line:
+\begin{verbatim}
+option timediff off
+\end{verbatim}
+With this option set, we get the following output:
+% ../examples/Manual/Example1a.txt
+\begin{verbatim}
+loading examples/Manual/Example1a.e
+loading foundations/Root.e
+loading foundations/EC.e
+6 variables and 10 clauses
+relsat solver
+1 model
+---
+model 1:
+0
+!HoldsAt(Awake(James), 0).
+!ReleasedAt(Awake(James), 0).
+Happens(WakeUp(James), 0).
+1
+!Happens(WakeUp(James), 1).
+!ReleasedAt(Awake(James), 1).
+HoldsAt(Awake(James), 1).
+P
+EC: 7 predicates, 0 functions, 0 fluents, 0 events, 0 axioms
+Example1a: 0 predicates, 0 functions, 1 fluents, 1 events, 3 axioms
+Root: 0 predicates, 0 functions, 0 fluents, 0 events, 0 axioms
+encoding 0.0s
+solution 0.0s
+total 0.1s
+\end{verbatim}
+
+\subsection{More Examples}
+
+The above example showed how the Discrete Event Calculus Reasoner can be
+used to perform deduction. Specifically the example demonstrated temporal
+projection---given an initial situation and a sequence of events, we
+would like to determine the resulting situation. Instead, suppose we
+are given an initial situation and a resulting situation, and would
+like to reason about what must have happened. This is an example of
+abduction. We can perform this type of reasoning by setting up the
+commonsense reasoning problem as follows:
+% ../examples/Manual/Example2.e
+\begin{verbatim}
+load foundations/Root.e
+load foundations/EC.e
+
+sort agent
+
+fluent Awake(agent)
+event WakeUp(agent)
+
+[agent,time] Initiates(WakeUp(agent),Awake(agent),time).
+
+agent James
+!HoldsAt(Awake(James),0).
+HoldsAt(Awake(James),1).
+
+range time 0 1
+range offset 1 1
+\end{verbatim}
+That is, we assert that James was not awake at timepoint 0 and he was
+awake at timepoint 0, but we do not say anything about James waking
+up. If we run this, the program abduces that James woke up:
+% ../examples/Manual/Example2.txt
+\begin{verbatim}
+loading examples/Manual/Example2.e
+loading foundations/Root.e
+loading foundations/EC.e
+5 variables and 9 clauses
+relsat solver
+1 model
+---
+model 1:
+0
+Happens(WakeUp(James), 0).
+1
++Awake(James).
+P
+!ReleasedAt(Awake(James), 0).
+!ReleasedAt(Awake(James), 1).
+EC: 7 predicates, 0 functions, 0 fluents, 0 events, 0 axioms
+Example2: 0 predicates, 0 functions, 1 fluents, 1 events, 3 axioms
+Root: 0 predicates, 0 functions, 0 fluents, 0 events, 0 axioms
+encoding 0.0s
+solution 0.0s
+total 0.1s
+\end{verbatim}
+
+What if we add another agent {\tt Jessie}, but do not specify anything further?
+Then we get four models:
+% ../examples/Manual/Example3.txt
+\begin{verbatim}
+loading examples/Manual/Example3.e
+loading foundations/Root.e
+loading foundations/EC.e
+10 variables and 16 clauses
+relsat solver
+4 models
+---
+model 1:
+0
+Happens(WakeUp(James), 0).
+Happens(WakeUp(Jessie), 0).
+1
++Awake(James).
++Awake(Jessie).
+P
+!ReleasedAt(Awake(James), 0).
+!ReleasedAt(Awake(James), 1).
+!ReleasedAt(Awake(Jessie), 0).
+!ReleasedAt(Awake(Jessie), 1).
+---
+model 2:
+0
+Awake(Jessie).
+Happens(WakeUp(James), 0).
+Happens(WakeUp(Jessie), 0).
+1
++Awake(James).
+P
+!ReleasedAt(Awake(James), 0).
+!ReleasedAt(Awake(James), 1).
+!ReleasedAt(Awake(Jessie), 0).
+!ReleasedAt(Awake(Jessie), 1).
+---
+model 3:
+0
+Awake(Jessie).
+Happens(WakeUp(James), 0).
+1
++Awake(James).
+P
+!Happens(WakeUp(Jessie), 0).
+!ReleasedAt(Awake(James), 0).
+!ReleasedAt(Awake(James), 1).
+!ReleasedAt(Awake(Jessie), 0).
+!ReleasedAt(Awake(Jessie), 1).
+---
+model 4:
+0
+Happens(WakeUp(James), 0).
+1
++Awake(James).
+P
+!Happens(WakeUp(Jessie), 0).
+!ReleasedAt(Awake(James), 0).
+!ReleasedAt(Awake(James), 1).
+!ReleasedAt(Awake(Jessie), 0).
+!ReleasedAt(Awake(Jessie), 1).
+EC: 7 predicates, 0 functions, 0 fluents, 0 events, 0 axioms
+Example3: 0 predicates, 0 functions, 1 fluents, 1 events, 3 axioms
+Root: 0 predicates, 0 functions, 0 fluents, 0 events, 0 axioms
+encoding 0.0s
+solution 0.0s
+total 0.1s
+\end{verbatim}
+The program simply finds all the models consistent with the stated facts and
+axioms. (An exception is that occurrences of events at the last 
+timepoint are ruled out.)
+We haven't said whether Jessie was initially awake or not, and
+we haven't said that in order for a person to wake up, the person must
+have previously been asleep. If we add Jessie's initial state and
+an action precondition axiom for {\tt WakeUp}:
+\begin{verbatim}
+!HoldsAt(Awake(Jessie),0).
+[agent,time] Happens(WakeUp(agent),time) -> !HoldsAt(Awake(agent),time).
+\end{verbatim}
+then we get only two models:
+% ../examples/Manual/Example4.txt
+\begin{verbatim}
+loading examples/Manual/Example4.e
+loading foundations/Root.e
+loading foundations/EC.e
+10 variables and 19 clauses
+relsat solver
+2 models
+---
+model 1:
+0
+Happens(WakeUp(James), 0).
+1
++Awake(James).
+P
+!Happens(WakeUp(Jessie), 0).
+!ReleasedAt(Awake(James), 0).
+!ReleasedAt(Awake(James), 1).
+!ReleasedAt(Awake(Jessie), 0).
+!ReleasedAt(Awake(Jessie), 1).
+---
+model 2:
+0
+Happens(WakeUp(James), 0).
+Happens(WakeUp(Jessie), 0).
+1
++Awake(James).
++Awake(Jessie).
+P
+!ReleasedAt(Awake(James), 0).
+!ReleasedAt(Awake(James), 1).
+!ReleasedAt(Awake(Jessie), 0).
+!ReleasedAt(Awake(Jessie), 1).
+EC: 7 predicates, 0 functions, 0 fluents, 0 events, 0 axioms
+Example4: 0 predicates, 0 functions, 1 fluents, 1 events, 5 axioms
+Root: 0 predicates, 0 functions, 0 fluents, 0 events, 0 axioms
+encoding 0.0s
+solution 0.0s
+total 0.1s
+\end{verbatim}
+That is, Jessie might or might not have woken up.
+
+\section{Discrete Event Calculus Reasoner Language}
+In this section, we describe the Discrete Event Calculus Reasoner
+in more detail.
+
+\subsection{Sorts}
+Sentences are expressed in the language of many-sorted first-order predicate
+calculus with subsort orders \cite{Walther:1987}. This means that:
+\begin{itemize}
+\item
+sorts can be subsorts of other sorts,
+\item
+every variable, constant, and function symbol has an associated sort,
+\item
+every argument position of every function and predicate symbol has an
+associated sort, and
+\item
+for a term to fill an argument position of a function or predicate
+symbol, the sort associated with the term must be a subsort of the
+sort associated with the argument position.
+\end{itemize}
+
+We define a sort called {\tt object} as follows:
+\begin{verbatim}
+sort object
+\end{verbatim}
+We define a sort {\tt agent} that is a subsort of {\tt object} as follows:
+\begin{verbatim}
+sort agent: object
+\end{verbatim}
+
+The sort associated with a variable is determined by removing digits
+from the variable. For example, the sort of the variable
+{\tt snowflake72} is {\tt snowflake}. A constant's sort is specified
+when the constant is defined. For example, the following defines
+three constants whose sort is {\tt agent}:
+\begin{verbatim}
+agent Fred, Annie, Thea
+\end{verbatim}
+Each object in the world is assumed to be named by a unique constant.
+That is, the constants {\tt Annie} and {\tt Thea} do not refer to the
+same person. This is known as the {\em unique names assumption}.
+
+Here is a definition of a function symbol {\tt Floor} whose sort is
+{\tt integer} and whose first and only argument position is of sort
+{\tt room}:
+\begin{verbatim}
+function Floor(room): integer
+\end{verbatim}
+
+Here is a definition of a predicate symbol {\tt PartOf} that takes two
+arguments of sort {\tt physobj} and {\tt object}:
+\begin{verbatim}
+predicate PartOf(physobj,object)
+\end{verbatim}
+
+\subsection{Formulas}
+
+The following grammar,
+which is based on that of the Bliksem theorem prover \cite{deNivelle:1999},
+in conjunction with the sort constraints described above, specifies
+how sentences are constructed:
+\begin{tabbing}
+{\em term} ::= \= {\em variable} $\mid$ {\em constant} $\mid$ \\
+         \> {\em functionsymbol}{\tt (}{\em arguments}{\tt )} $\mid$ \\
+         \> {\em term} {\tt +} {\em term} $\mid$ {\em term} {\tt -} {\em term} $\mid$ {\em term} {\tt *} {\em term} $\mid$ {\em term} {\tt /} {\em term} $\mid$ \\
+         \> {\em term} {\tt \%} {\em term} $\mid$ {\tt -} {\em term} $\mid$ \\
+         \> {\tt (}{\em term}{\tt )} $\mid$ {\em reifiedformula} \\
+{\em formula} ::= \= {\em predicatesymbol}{\tt (}{\em arguments}{\tt )} $\mid$ \\
+            \> {\em term} {\tt <} {\em term} $\mid$ {\em term} $\mbox{\tt <=}$ {\em term} $\mid$ {\em term} {\tt =} {\em term} $\mid$ \\
+            \> {\em term} $\mbox{\tt >=}$ {\em term} $\mid$ {\em term} {\tt >} {\em term} $\mid$ {\em term} $\mbox{\tt !=}$ {\em term} $\mid$ \\
+            \> {\em formula} {\tt |} {\em formula} $\mid$ {\em formula} {\tt \&} {\em formula} $\mid$ {\tt !} {\em formula} $\mid$ \\
+            \> {\em formula} $\mbox{\tt ->}$ {\em formula} $\mid$ {\em formula} $\mbox{\tt <->}$ {\em formula} $\mid$ \\
+            \> {\tt \{}{\em variables}{\tt \}} {\em formula} $\mid$ {\tt [}{\em variables}{\tt ]} {\em formula} $\mid$ \\
+            \> {\tt (}{\em formula}{\tt )} \\
+{\em reifiedformula} ::= \= {\em formula} \\
+{\em arguments} ::= \= {\em term} $\mid$ {\em arguments}{\tt ,} {\em term} \\
+{\em variables} ::= \= {\em variable} $\mid$ {\em variables}{\tt ,} {\em variable}
+\end{tabbing}
+A {\em variable} consists of one or more lowercase letters followed by
+zero or more digits. Examples of variables are {\em agent} and
+{\em cat1}.
+A {\em constant} consists of (a) one or more digits or (b) an
+uppercase letter followed by zero or more letters or digits. Examples
+of constants are 63, {\em James}, and {\em Snowball1}.
+{\em functionsymbol}s and {\em predicatesymbol}s consist of an
+uppercase letter followed by zero or more letters or digits. Examples
+of {\em functionsymbol}s are {\em BuildingOf} and {\em SkyOf}; examples of
+{\em predicatesymbol}s are {\em PartOf} and {\em Adjacent}.
+Fluent and event symbols are predicate symbols.
+
+The meaning of the symbols is as follows:
+\begin{center}
+\begin{tabular}{|l|l|l|l|} \hline
+{\bf Symbol} & {\bf Meaning} & {\bf Symbol} & {\bf Meaning} \\ \hline
+{\tt +} & addition &
+{\tt !=} & not equal to \\ \hline
+{\tt -}  & subtraction, negation &
+{\tt |} & disjunction (OR, $\vee$) \\ \hline
+{\tt *} & multiplication &
+{\tt \&} & conjunction (AND, $\wedge$) \\ \hline
+{\tt /} & division &
+{\tt !} & logical negation \\ \hline
+{\tt \%} & modulus &
+{\tt ->} & implication \\ \hline
+{\tt <} & less than &
+{\tt <->} & bi-implication \\ \hline
+{\tt <=} & less than or equal to &
+{\tt \{ \}} & existential quantification ($\exists$) \\ \hline
+{\tt =} & equal to &
+{\tt [ ]} & universal quantification ($\forall$) \\ \hline
+{\tt >=} & greater than or equal to &
+{\tt ( )} & grouping \\ \hline
+{\tt >} & greater than & {\tt ,} & separator \\ \hline
+\end{tabular}
+\end{center}
+
+\subsection{Completion}
+The {\tt completion} statement specifies that a predicate symbol should
+be subject to predicate completion. The syntax of this statement is:
+\begin{flushleft}
+{\tt completion} {\em label} {\em predicatesymbol}
+\end{flushleft}
+
+\subsection{Ignore}
+The {\tt ignore} statement specifies that one or more predicate symbols
+and all sentences containing those predicate symbols should be ignored.
+The syntax of this statement is:
+\begin{flushleft}
+{\tt ignore} {\em predicatesymbol}{\tt ,} {\em predicatesymbol}{\tt ,} \ldots
+\end{flushleft}
+
+\subsection{Load}
+The {\tt load} statement can be used to load other Discrete Event Calculus
+Reasoner language files. The syntax of this statement is:
+\begin{flushleft}
+{\tt load} {\em filename}
+\end{flushleft}
+
+\subsection{Manualrelease}
+The {\tt manualrelease} statement inhibits automatic generation of
+assertions that particular fluent symbols are not released at time
+point 0. The syntax of this statement is:
+\begin{flushleft}
+{\tt manualrelease} {\em fluentsymbol}{\tt ,} {\em fluentsymbol}{\tt ,} \ldots
+\end{flushleft}
+
+\subsection{Mutex and Xor}
+The {\tt mutex} statement specifies that one or more event or fluent
+symbols are mutually exclusive at each timepoint. The syntax of this
+statement is:
+\begin{flushleft}
+{\tt mutex} {\em symbol}{\tt ,} {\em symbol}{\tt ,} \ldots
+\end{flushleft}
+Exclusive or (xor) is also provided:
+\begin{flushleft}
+{\tt xor} {\em symbol}{\tt ,} {\em symbol}{\tt ,} \ldots
+\end{flushleft}
+
+\subsection{Noninertial}
+The {\tt noninertial} statement specifies that one or more fluent symbols
+should not be subject to the commonsense law of inertia, across all
+timepoints. The syntax of this statement is:
+\begin{flushleft}
+{\tt noninertial} {\em fluentsymbol}{\tt ,} {\em fluentsymbol}{\tt ,} \ldots
+\end{flushleft}
+
+\subsection{Options}
+The {\tt option} statement can be used to specify the values of certain
+program options. The syntax of this statement is:
+\begin{flushleft}
+{\tt option} {\em optionname} {\em optionvalue}
+\end{flushleft}
+The following {\em optionname}s are supported:
+\begin{description}
+
+\item[{\tt debug}]
+If the {\em optionvalue} is {\tt on}, detailed debugging output is
+produced.
+The default value of this option is {\tt off}.
+
+\item[{\tt encoding}]
+The value of this option specifies the event calculus-to-SAT encoding
+method.  Option 2 is the method described in the FLAIRS
+paper \cite{Mueller:2004b}, and option 3 is the slightly different
+method described in the {\em Journal of Logic and Computation} article
+\cite{Mueller:2004a}. The default value of this option is 2.
+
+\item[{\tt finalstatefile}]
+The value of this option specifies the name of a file to which the
+final state of (the first model of) the run will be written.
+
+\item[{\tt manualrelease}]
+If {\tt on}, automatic generation of assertions of the form
+{\tt !Released(fluent,0)} is inhibited, so that such assertions can be
+added manually on a case-by-case basis.
+This is typically used when pasting together several runs---the final
+state of each run, including whether each fluent is {\tt Released}
+or not, serves as the initial state of the next run.
+The default value of this option is {\tt off}.
+
+\item[{\tt modeldiff}]
+If {\tt on}, differences from one model to the next are shown,
+instead of complete models. The default value of this option is {\tt off}.
+
+\item[{\tt renaming}]
+If {\tt on}, the technique of renaming subformulas
+\cite{PlaistedGreenbaum:1986,GiunchigliaSebastiani:1999} is used to
+convert to a compact conjunctive normal. The default value of this
+option is {\tt on}.
+
+\item[{\tt showpred}]
+If {\tt on}, the truth values of all predicates other than fluents and
+events are shown. The default value of this option is {\tt off}.
+
+\item[{\tt solver}]
+The value of this option specifies the name of the solver to use.
+The default value of this option is {\tt relsat}.
+
+\item[{\tt timediff}]
+If {\tt on}, differences from one timepoint to the next are shown,
+instead of complete states. The default value of this option is {\tt on}.
+
+\item[{\tt tmpfilerm}]
+If {\tt on}, temporary files, which are stored in the {\tt /tmp}
+directory, are removed at the end of each run. The default value of
+this option is {\tt on}.
+
+\item[{\tt trajectory}]
+If {\tt on}, {\tt Trajectory} axioms are supported.
+The default value of this option is {\tt off}.
+
+%\item[{\tt weighted}]
+%If {\tt on}, weighted MAX-SAT is performed. (You must download a MAX-SAT
+%solver such as maxwalksat or wmaxsat.)
+%The default value of this option is {\tt off}.
+
+\end{description}
+
+\subsection{Ranges}
+The {\tt range} statement specifies the range of sorts, such as the
+{\tt time} sort, that are subsorts of the {\tt integer} sort.
+The syntax is:
+\begin{flushleft}
+{\tt range} {\em sort} {\em minvalue} {\em maxvalue}
+\end{flushleft}
+
+\bibliography{doc}
+
+\end{document}
