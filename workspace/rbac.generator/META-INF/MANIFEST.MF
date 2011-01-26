@@ -1,16 +1,16 @@
 Manifest-Version: 1.0
-Require-Bundle: rbac;visibility:=reexport,org.eclipse.xpand;visibility
- :=reexport,org.eclipse.xtend;visibility:=reexport,org.eclipse.xtext;v
- isibility:=reexport,org.eclipse.emf.mwe2.launch;resolution:=optional,
- org.eclipse.emf.mwe.utils;visibility:=reexport,org.eclipse.xtend.type
- system.emf;visibility:=reexport
-Bundle-Vendor: My Company
-Bundle-ActivationPolicy: lazy
-Bundle-Version: 1.0.0
-Bundle-Name: rbac.generator
 Bundle-ManifestVersion: 2
-Import-Package: org.apache.log4j
+Bundle-Name: rbac.generator
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0
 Bundle-SymbolicName: rbac.generator; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: rbac;visibility:=reexport,
+ org.eclipse.xpand;visibility:=reexport,
+ org.eclipse.xtend;visibility:=reexport,
+ org.eclipse.xtext;visibility:=reexport,
+ org.eclipse.emf.mwe2.launch;resolution:=optional,
+ org.eclipse.emf.mwe.utils;resolution:=optional;visibility:=reexport,
+ org.eclipse.xtend.typesystem.emf;visibility:=reexport
+Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-
-

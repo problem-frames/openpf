@@ -1,12 +1,17 @@
 Manifest-Version: 1.0
-Export-Package: action,codegen,convertor,model,parser
-Require-Bundle: util,org.eclipse.emf.ecore,core
-Bundle-Vendor: Yijun Yu
-Eclipse-LazyStart: true
-Bundle-Version: 1.0.0.201101121129
-Bundle-Localization: plugin
-Bundle-Name: Q7 Plug-in
 Bundle-ManifestVersion: 2
+Bundle-Name: Q7 Plug-in
 Bundle-SymbolicName: q7;singleton:=true
-
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Yijun Yu
+Bundle-Localization: plugin
+Require-Bundle: util,
+ org.eclipse.emf.ecore,
+ core
+Eclipse-LazyStart: true
+Export-Package: action,
+ codegen,
+ convertor,
+ model,
+ parser
 

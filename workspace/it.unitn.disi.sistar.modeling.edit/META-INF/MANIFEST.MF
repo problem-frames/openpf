@@ -1,19 +1,17 @@
 Manifest-Version: 1.0
-Require-Bundle: org.eclipse.core.runtime,it.unitn.disi.sistar.modeling
- ;visibility:=reexport,org.eclipse.emf.edit;visibility:=reexport,org.e
- clipse.emf.ecore.edit,org.eclipse.gmf.runtime.notation.edit
-Export-Package: it.unitn.disi.sistar.modeling.styles.customStyle.provi
- der,it.unitn.disi.sistar.modeling.tropos.provider
-Bundle-Vendor: %providerName
-Eclipse-LazyStart: true
-Bundle-ClassPath: .
-Bundle-Version: 0.997.0
-Bundle-Localization: plugin
-Bundle-Name: %pluginName
-Bundle-Activator: it.unitn.disi.sistar.modeling.tropos.provider.Tropos
- EditPlugin$Implementation
 Bundle-ManifestVersion: 2
-Bundle-SymbolicName: it.unitn.disi.sistar.modeling.edit; singleton:=tr
- ue
-
-
+Bundle-Name: %pluginName
+Bundle-SymbolicName: it.unitn.disi.sistar.modeling.edit; singleton:=true
+Bundle-Version: 0.997
+Bundle-ClassPath: .
+Bundle-Activator: it.unitn.disi.sistar.modeling.tropos.provider.TroposEditPlugin$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: it.unitn.disi.sistar.modeling.styles.customStyle.provider,
+ it.unitn.disi.sistar.modeling.tropos.provider
+Require-Bundle: org.eclipse.core.runtime,
+ it.unitn.disi.sistar.modeling;visibility:=reexport,
+ org.eclipse.emf.edit;visibility:=reexport,
+ org.eclipse.emf.ecore.edit,
+ org.eclipse.gmf.runtime.notation.edit
+Eclipse-LazyStart: true

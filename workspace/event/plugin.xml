@@ -32,11 +32,13 @@
       <example file="binary/linux.x86_64/decreasoner"/>
       <example file="binary/linux.x86_64/solvers/relsat"/>
       <example file="binary/linux.x86_64/solvers/walksat"/>
-<!-- not ready yet
-      <example file="binary/win32/decreasoner"/>
-      <example file="binary/win32/solvers/relsat"/>
-      <example file="binary/win32/solvers/walksat"/>
--->
+      <example file="binary/win32/decreasoner.exe"/>
+      <example file="binary/win32/cygwin1.dll"/>
+      <example file="binary/win32/cyggcc_s-1.dll"/>
+      <example file="binary/win32/python.exe"/>
+      <example file="binary/win32/libpython2.6.dll"/>
+      <example file="binary/win32/solvers/relsat.exe"/>
+      <example file="binary/win32/solvers/walksat.exe"/>
       <example file="examples/OpenPF/openpf-1.problem"/>
       <example file="examples/OpenPF/openpf-1.TestCase.e"/>
       <example file="examples/SecureChange/sit1.e"/>

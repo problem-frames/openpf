@@ -33,6 +33,7 @@ import convertor.EventCalculusRun;
  * 
  * @author yy66
  * @generate NOT
+ * 
  */
 public class ArgumentEditor extends ImageDiagramEditor {
 

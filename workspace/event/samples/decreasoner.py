@@ -89,7 +89,8 @@ def runexamples1(infn,outfn):
 
 def run(inputfilename):
   ecreasoner=decreasoner()
-  ecreasoner.run(inputfilename,None)
+  if inputfilename!='\r':
+	  ecreasoner.run(inputfilename,None)
 
 ########################################################################
 # Rep

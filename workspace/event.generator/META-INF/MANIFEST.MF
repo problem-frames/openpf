@@ -7,7 +7,7 @@ Bundle-SymbolicName: event.generator; singleton:=true
 Eclipse-RegisterBuddy: org.eclipse.xtext.log4j
 Bundle-ActivationPolicy: lazy
 Require-Bundle: event;visibility:=reexport,
- org.eclipse.xpand;visibility:=reexport,
+ org.eclipse.xpand;resolution:=optional;visibility:=reexport,
  org.eclipse.xtend;visibility:=reexport,
  org.eclipse.xtext;visibility:=reexport,
  org.eclipse.emf.mwe.core;visibility:=reexport,
