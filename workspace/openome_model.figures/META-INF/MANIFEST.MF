@@ -1,20 +1,18 @@
 Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: %pluginName
-Bundle-SymbolicName: openome_model.figures;singleton:=true
-Bundle-Version: 1.0.0
-Bundle-Vendor: %providerName
-Bundle-Activator: openome_model.figures.activator.PluginActivator
-Bundle-Localization: plugin
 Export-Package: openome_model.figures
-Require-Bundle: org.eclipse.gmf.runtime.draw2d.ui,
- org.eclipse.gmf.runtime.draw2d.ui.render;visibility:=reexport,
- org.eclipse.draw2d,
- org.eclipse.core.runtime,
- org.eclipse.emf.workspace;visibility:=reexport
+Require-Bundle: org.eclipse.gmf.runtime.draw2d.ui,org.eclipse.gmf.runt
+ ime.draw2d.ui.render;visibility:=reexport,org.eclipse.draw2d,org.ecli
+ pse.core.runtime,org.eclipse.emf.workspace;visibility:=reexport
+Bundle-Vendor: %providerName
 Eclipse-LazyStart: true
-Import-Package: org.eclipse.gef,
- org.eclipse.gef.handles,
- org.eclipse.gef.tools,
- org.eclipse.gmf.runtime.diagram.ui.editpolicies,
- org.eclipse.gmf.runtime.diagram.ui.figures
+Bundle-Version: 1.0.0
+Bundle-Name: %pluginName
+Bundle-Localization: plugin
+Bundle-ManifestVersion: 2
+Bundle-Activator: openome_model.figures.activator.PluginActivator
+Bundle-SymbolicName: openome_model.figures;singleton:=true
+Import-Package: org.eclipse.gef,org.eclipse.gef.handles,org.eclipse.ge
+ f.tools,org.eclipse.gmf.runtime.diagram.ui.editpolicies,org.eclipse.g
+ mf.runtime.diagram.ui.figures
+
+

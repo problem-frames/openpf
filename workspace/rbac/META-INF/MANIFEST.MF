@@ -1,32 +1,23 @@
 Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: rbac
+Require-Bundle: org.eclipse.xtext,org.eclipse.xtext.generator;resoluti
+ on:=optional,org.apache.commons.logging;resolution:=optional,org.ecli
+ pse.emf.codegen.ecore;resolution:=optional,org.eclipse.emf.mwe.utils;
+ resolution:=optional,org.eclipse.emf.mwe2.launch;resolution:=optional
+ ,com.ibm.icu;resolution:=optional,org.eclipse.xtext.xtend;resolution:
+ =optional,org.eclipse.xtext.util,org.eclipse.emf.ecore,org.eclipse.em
+ f.common,org.antlr.runtime,core;bundle-version="1.0.0",problem;bundle
+ -version="1.0.0"
+Export-Package: uk.ac.open.rbac,uk.ac.open.rbac.services,uk.ac.open.rb
+ ac.rbac,uk.ac.open.rbac.rbac.impl,uk.ac.open.rbac.rbac.util,uk.ac.ope
+ n.rbac.parseTreeConstruction,uk.ac.open.rbac.parser.antlr,uk.ac.open.
+ rbac.parser.antlr.internal,uk.ac.open.rbac.validation
 Bundle-Vendor: My Company
-Bundle-Version: 1.0.0
-Bundle-SymbolicName: rbac; singleton:=true
 Bundle-ActivationPolicy: lazy
-Require-Bundle: org.eclipse.xtext,
- org.eclipse.xtext.generator;resolution:=optional,
- org.apache.commons.logging;resolution:=optional,
- org.eclipse.emf.codegen.ecore;resolution:=optional,
- org.eclipse.emf.mwe.utils;resolution:=optional,
- org.eclipse.emf.mwe2.launch;resolution:=optional,
- com.ibm.icu;resolution:=optional,
- org.eclipse.xtext.xtend;resolution:=optional,
- org.eclipse.xtext.util,
- org.eclipse.emf.ecore,
- org.eclipse.emf.common,
- org.antlr.runtime,
- core;bundle-version="1.0.0",
- problem;bundle-version="1.0.0"
+Bundle-Version: 1.0.0
+Bundle-Name: rbac
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: rbac; singleton:=true
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: uk.ac.open.rbac,
- uk.ac.open.rbac.services,
- uk.ac.open.rbac.rbac,
- uk.ac.open.rbac.rbac.impl,
- uk.ac.open.rbac.rbac.util,
- uk.ac.open.rbac.parseTreeConstruction,
- uk.ac.open.rbac.parser.antlr,
- uk.ac.open.rbac.parser.antlr.internal,
- uk.ac.open.rbac.validation
+
+

@@ -1,11 +1,9 @@
 Manifest-Version: 1.0
-Require-Bundle: istar;visibility:=reexport,
- org.eclipse.xpand;resolution:=optional;visibility:=reexport,
- org.eclipse.xtend;visibility:=reexport,
- org.eclipse.xtext;visibility:=reexport,
- org.eclipse.emf.mwe2.launch,
- org.eclipse.emf.mwe.utils;visibility:=reexport,
- org.eclipse.xtend.typesystem.emf;visibility:=reexport
+Require-Bundle: istar;visibility:=reexport,org.eclipse.xpand;resolutio
+ n:=optional;visibility:=reexport,org.eclipse.xtend;visibility:=reexpo
+ rt,org.eclipse.xtext;visibility:=reexport,org.eclipse.emf.mwe2.launch
+ ,org.eclipse.emf.mwe.utils;visibility:=reexport,org.eclipse.xtend.typ
+ esystem.emf;visibility:=reexport
 Bundle-Vendor: The Open University
 Bundle-ActivationPolicy: lazy
 Bundle-Version: 1.0.0
