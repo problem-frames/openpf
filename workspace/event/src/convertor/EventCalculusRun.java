@@ -80,13 +80,13 @@ public class EventCalculusRun implements IConvertor {
 //			    } 
 			}}); 
 			thread.start(); 
-			synchronized(this){ 
-			    try{ 
-			        this.wait(5000); 
-			    }catch(Exception   e   )   {} 
-			    if(   thread   .isAlive())   
-			        thread.interrupt(); 
-			}			
+//			synchronized(this){ 
+//			    try{ 
+//			        this.wait(5000); 
+//			    }catch(Exception   e   )   {} 
+//			    if(   thread   .isAlive())   
+//			        thread.interrupt(); 
+//			}			
 			BufferedReader br = new BufferedReader(new InputStreamReader(
 					p.getInputStream()));
 			PrintStream ps = new PrintStream(new File(output));
