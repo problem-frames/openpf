@@ -2,8 +2,11 @@ package uk.ac.open.argument.ui;
 
 import java.io.File;
 import java.io.PrintStream;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -23,6 +26,7 @@ import org.eclipse.xtext.resource.XtextResourceSet;
 import uk.ac.open.argument.argument.Argument;
 import uk.ac.open.argument.argument.ArgumentDiagram;
 import uk.ac.open.argument.argument.ArgumentFactory;
+import uk.ac.open.argument.argument.Link;
 import uk.ac.open.argument.argument.Mitigates;
 import uk.ac.open.argument.argument.Rebuts;
 import uk.ac.open.argument.argument.diagram.part.ArgumentDiagramEditorUtil;
@@ -41,14 +45,14 @@ public class ArgumentEditor extends ImageDiagramEditor {
 		super();
 		extension = "argument";
 	}
-	
+
 	@Override
 	protected void deleteGeneratedFiles(IResource res) {
 		super.deleteGeneratedFiles(res);
 		deleteFile(res, ".*\\.e");
 		deleteFile(res, ".*\\.e\\.txt");
 	}
-	
+
 	void updateRound(Argument a) {
 		if (a.eContainer() != null && a.eContainer() instanceof Argument) {
 			Argument parent = (Argument) a.eContainer();
@@ -63,126 +67,14 @@ public class ArgumentEditor extends ImageDiagramEditor {
 	Set<Argument> set = new HashSet<Argument>();
 	private Serializer sr;
 
-	/**
-	 * Assume the original argument was true, check whether all knowledge
-	 * accumulated from the intermediate rounds until this round, plus the
-	 * current argument a is inconsistent.
-	 * 
-	 * @param origin
-	 * @param rebuttal
-	 * @param d
-	 * @return
-	 */
-	boolean reasoning(Argument origin, Argument rebuttal, ArgumentDiagram d) {
-		// initialise the inconsistency flag
-		boolean inconsistent = false;
-
-		// prepare the filename
-		URI u = rebuttal.eResource().getURI();
-		URI e = u.trimFileExtension().appendFileExtension("" + origin.getName() + "." + 
-				rebuttal.getName() + ".e");
-		IPath path = new Path(e.toString());
-		try {
-			IFile file = ResourcesPlugin.getWorkspace().getRoot().getFile(path);
-			File f = new File(file.getLocation().toOSString());
-			PrintStream out = new PrintStream(f);
-
-			// print the common header for every specification in Event Calculus
-			out.println("sort boolean");
-			out.println("sort integer");
-			out.println("sort fluent");
-			out.println("sort time: integer");
-			out.println("range time 1 2");
-
-			// declare the booleans, also collect the replaced arguments
-			Set<Argument> replaced = new HashSet<Argument>();
-			declareArgument(out, origin, replaced);
-			declareArgument(out, rebuttal, replaced);
-			for (Argument a: d.getNodes()) {
-				if (a != origin && a!=rebuttal) {
-					declareArgumentNot(out, a, replaced);
-				}
-			}
-			// prepare the grounds for the original, target and intermediate
-			// arguments
-			outputInternalArgumentGrounds(out, origin, replaced);
-			outputInternalArgumentGrounds(out, rebuttal, replaced);
-
-			// prepare an implication rule (warrants) for the original and the
-			// target argument
-			// and also all intermediate arguments
-			outputInternalArgumentWarrants(out, origin, replaced);
-			outputInternalArgumentWarrants(out, rebuttal, replaced);
-
-			// set the claim of the original argument to be the goal
-			out.println("!" + origin.getName() + ".");
-
-			// run the event calculus reasoner to check whether there is any
-			// inconsistency by introducing the goal
-			EventCalculusRun c = new EventCalculusRun();
-			c.convert(file.getLocation().toOSString(), file.getLocation()
-					.toOSString() + ".txt");
-			File txtFile = new File(file.getLocation().toOSString() + ".txt");
-			Scanner scanner = new Scanner(txtFile);
-			while (scanner.hasNext()) {
-				String line = scanner.nextLine();
-				if (line.contains("unsatisfied clauses")) {
-					inconsistent = true;
-				}
-			}
-			scanner.close();
-
-		} catch (Exception x) {
-		}
-		return inconsistent;
-	}
-
-	private void declareArgument(PrintStream out, Argument b,
-			Set<Argument> replaced) {
-		out.println("boolean " + b.getName() + "; "
-				+ b.getDescription().replaceAll("\n", "\n; "));
-		if (b.getOrigin() != null)
-			replaced.add(b.getOrigin());
-		for (Argument a : b.getGrounds())
-			declareArgument(out, a, replaced);
-		for (Argument a : b.getWarrants())
-			declareArgument(out, a, replaced);
-	}
-
 	String getExpr(Argument a) {
 		// a.expr could be "" if the label is edited by the GMF editor
 		if (a.getExpr() == null || a.getExpr().equals("")) {
 			return a.getName();
 		}
-		if (sr!=null)
+		if (sr != null)
 			return a.getName() + "<-> (" + sr.serialize(a.getExpr()) + ")";
 		return a.getName() + "<-> (" + a.getExpr() + ")";
-	}
-
-	/**
-	 * Output the facts that are not nested
-	 */
-	private void outputInternalArgumentGrounds(PrintStream out, Argument a,
-			Set<Argument> replaced) {
-		Set<Argument> sub = new HashSet<Argument>();
-		sub.addAll(a.getGrounds());
-		sub.addAll(a.getWarrants());
-		if (sub.size() > 0) {
-			for (Argument c : sub) {
-				outputInternalArgumentGrounds(out, c, replaced);
-			}
-			if (!(a.getExpr()==null || a.getExpr().equals(""))) {
-				out.println(getExpr(a) + ".");
-			}
-		} else {
-			if (replaced.contains(a))
-				out.println(";" + a.getName() + ".");
-			else {
-				out.println(a.getName() + ".");
-				if (!(a.getExpr()==null || a.getExpr().equals("")))
-					out.println(getExpr(a) + ".");
-			}
-		}
 	}
 
 	/**
@@ -215,6 +107,9 @@ public class ArgumentEditor extends ImageDiagramEditor {
 			output.println(out + ".");
 	}
 
+	int maxRound = Integer.MIN_VALUE;
+	int minRound = Integer.MAX_VALUE;
+
 	/**
 	 * This method is called right after the syntax check is done, and before
 	 * the model is to be saved back.
@@ -245,53 +140,233 @@ public class ArgumentEditor extends ImageDiagramEditor {
 		sr = xr.getSerializer();
 		EList<Argument> arguments = d.getNodes();
 		set.clear();
+		// propagate the round number of the root argument to all the descendant
+		// sub-arguments
 		for (Argument a : arguments) {
 			updateRound(a);
 			set.add(a);
+			if (a.getRound() > maxRound) {
+				maxRound = a.getRound();
+			}
+			if (a.getRound() < minRound) {
+				minRound = a.getRound();
+			}
 		}
 		// remove all user specified links
 		d.getLinks().clear();
-		for (Argument origin : arguments) {
-			for (Argument rebuttal : arguments) {
-				if (rebuttal.getRound() == origin.getRound()+1) {
-					boolean consistent = reasoning(origin, rebuttal, d);
-					if (!consistent) {
-						// insert rebuttal links
-						Rebuts r = ArgumentFactory.eINSTANCE.createRebuts();
-						r.setFrom(origin);
-						r.setTo(rebuttal);
-						d.getLinks().add(r);
-						// now we need to look for mitigations
-						for (Argument mitigation : arguments) {
-							if (mitigation.getRound() == rebuttal.getRound()+1) {
-								consistent = reasoning(origin, rebuttal, mitigation, d);
-								if (consistent) {
-									// insert mitigation links
-									Mitigates m = ArgumentFactory.eINSTANCE
-											.createMitigates();
-									m.setFrom(origin);
-									m.setTo(mitigation);
-									m.setRebuttal(rebuttal);
-//									m.setName(rebuttal.getName());
-									d.getLinks().add(m);
-								}
-							}
+		// Algorithm 1: enumerate all the paths
+		HashSet<ArrayList<Argument>> seqs = new HashSet<ArrayList<Argument>>();
+		for (int r = minRound; r <= maxRound; r++) {
+			HashSet<ArrayList<Argument>> seqs2 = new HashSet<ArrayList<Argument>>();
+			for (Argument a : arguments) {
+				// add the next round arguments
+				if (a.getRound() == r) {
+					if (r == minRound) {
+						ArrayList<Argument> seq = new ArrayList<Argument>();
+						seq.add(a);
+						seqs2.add(seq);
+					} else {
+						// copy the earlier sequences
+						for (ArrayList<Argument> seq : seqs) {
+							ArrayList<Argument> seq2 = new ArrayList<Argument>();
+							// append the new argument to these sequences
+							seq2.addAll(seq);
+							seq2.add(a);
+							seqs2.add(seq2);
 						}
 					}
 				}
 			}
+			seqs.clear();
+			seqs = seqs2;
+//			for (ArrayList<Argument> seq : seqs) {
+//				for (int i=0; i<seq.size(); i++)
+//					System.out.print(seq.get(i).getName() + ".");
+//				System.out.println();
+//			}
+		}
+		for (ArrayList<Argument> seq : seqs) {
+			for (int i=0; i<seq.size(); i++)
+				System.out.print(seq.get(i).getName() + ".");
+			System.out.println();
+			// verify the sequence
+			KB.clear();
+			consistency.clear();
+			reasoning(seq, d); // Algorithm 2
 		}
 	}
 
-	private boolean reasoning(Argument origin, Argument rebuttal,
-			Argument mitigation, ArgumentDiagram d) {
+	/*
+	 * Compute the accumulated knowledge from the incremental arguments along
+	 * this sequence
+	 */
+	Set<String> getKB(List<Argument> seq, ArgumentDiagram d) {
+		Set<String> KB = new HashSet<String>();
+		if (seq.size() == 0)
+			return KB;
+		List<Argument> previous = seq.subList(0, seq.size() - 1);
+		KB = getKB(previous, d);
+		Argument tail = seq.get(seq.size() - 1);
+		Set<String> removed = getRemoved(tail);
+		Set<String> added = getModified(tail, d);
+		KB.removeAll(removed);
+		KB.addAll(added);
+		return KB;
+	}
+
+	/*
+	 * Compute the accumulated declarations from the incremental arguments along
+	 * this sequence
+	 */
+	Set<String> getKBDeclarations(List<Argument> seq) {
+		Set<String> KB = new HashSet<String>();
+		if (seq.size() == 0)
+			return KB;
+		List<Argument> previous = seq.subList(0, seq.size() - 1);
+		KB = getKBDeclarations(previous);
+		Argument tail = seq.get(seq.size() - 1);
+		Set<String> added = getKBDeclarations(tail);
+		KB.addAll(added);
+		return KB;
+	}
+	
+	private Set<String> getKBDeclarations(Argument a) {
+		Set<String> r = new HashSet<String>();
+		r.add("boolean " + a.getName() + "; "
+				+ a.getDescription().replaceAll("\n", "\n; "));
+		for (Argument b : a.getGrounds()) {
+			r.addAll(getKBDeclarations(b));
+		}
+		for (Argument b : a.getWarrants()) {
+			r.addAll(getKBDeclarations(b));
+		}
+		return r;
+	}
+
+	/*
+	 * Remove all the claims that are pointed by the "replacing A" clause
+	 */
+	private Set<String> getRemoved(Argument a) {
+		Set<String> r = new HashSet<String>();
+		if (a.getOrigin() != null) {
+			r.add("!" + a.getOrigin().getName() + ".");
+		}
+		for (Argument b : a.getGrounds())
+			r.addAll(getRemoved(b));
+		for (Argument b : a.getWarrants())
+			r.addAll(getRemoved(b));
+		return r;
+	}
+
+	/*
+	 * Add all the expressions in the "with E" clause If "with E" does not
+	 * appear, then use the name of the argument instead
+	 */
+	private Set<String> getModified(Argument a, ArgumentDiagram d) {
+		Set<String> r = new HashSet<String>();
+		if (a.getExpr()!=null)
+			r.add(getExpr(a) + ".");
+		List<String> implicit_rules = new ArrayList<String>();
+		for (Argument b : a.getGrounds()) {
+			r.addAll(getModified(b, d));
+			implicit_rules.add(b.getName());
+		}
+		for (Argument b : a.getWarrants()) {
+			r.addAll(getModified(b, d));
+			implicit_rules.add(b.getName());
+		}
+		String implicit = "";
+		for (String premise: implicit_rules) {
+			implicit = implicit + (implicit.equals("")?"": " & ") + premise;
+		}
+		if (implicit_rules.size()>0)
+			r.add("(" + implicit + ") -> " + a.getName() + ".");
+		else
+			r.add(a.getName() + ".");
+		return r;
+	}
+
+	/**
+	 * return "." separated list of the names of the claim in the sequence
+	 */
+	String getSequenceID(List<Argument> seq) {
+		String name = "";
+		if (seq.size() == 0)
+			return "";
+		List<Argument> previous = seq.subList(0, seq.size() - 1);
+		Argument tail = seq.get(seq.size() - 1);
+		name = getSequenceID(previous) + (previous.size()>0?".":"") + tail.getName();
+		return name;
+	}
+
+	Set<String> KB = new HashSet<String>();
+	HashMap<Argument, Boolean> consistency = new HashMap<Argument, Boolean>();
+	private void reasoning(List<Argument> seq, ArgumentDiagram d) {
+		if (seq.size() == 0)
+			return;
+		List<Argument> previous = seq.subList(0, seq.size() - 1);
+		// perform the reasoning on the previous arguments
+		reasoning(previous, d);
+		Argument tail = seq.get(seq.size() - 1);
+		Set<String> removed = getRemoved(tail);
+		Set<String> added = getModified(tail, d);
+		for (String rem: removed) {
+			KB.remove(rem.replace("!", ""));
+		}
+		KB.addAll(removed);
+		KB.addAll(added);
+		for (int i = 0; i < previous.size(); i++) {
+			Argument a = previous.get(i);
+			boolean consistent = reasoning(seq, KB, a, d);
+			System.out.println(getSequenceID(seq) + "->" + a.getName() + " " + consistent);
+			Boolean previousConsistency = consistency.get(a);
+			if (previousConsistency == null)
+				previousConsistency = Boolean.TRUE;
+			if (previousConsistency && !consistent) {
+				Rebuts r = ArgumentFactory.eINSTANCE.createRebuts();
+				r.setFrom(previous.get(previous.size() - 1));
+				r.setTo(tail);
+				r.setOrigin(a);
+				boolean found = false;
+				for (Link l: d.getLinks()) {
+					if (l instanceof Rebuts) {
+						Rebuts lr = (Rebuts) l;
+						if (l.getFrom() == r.getFrom() && l.getTo()==r.getTo() && lr.getOrigin() == r.getOrigin()) {
+							found = true;
+						}
+					}
+				}
+				if (!found) d.getLinks().add(r);
+			} else if (!previousConsistency && consistent) {
+				Mitigates m = ArgumentFactory.eINSTANCE.createMitigates();
+				m.setFrom(previous.get(previous.size() - 1));
+				m.setTo(tail);
+				m.setRebuttal(a);
+				boolean found = false;
+				for (Link l: d.getLinks()) {
+					if (l instanceof Mitigates) {
+						Mitigates lm = (Mitigates) l;
+						if (l.getFrom() == m.getFrom() && l.getTo()==m.getTo() && lm.getRebuttal() == m.getRebuttal()) {
+							found = true;
+						}
+					}
+				}
+				if (!found) d.getLinks().add(m);
+			}
+			consistency.put(a, consistent);
+		}
+	}
+
+	private boolean reasoning(List<Argument> seq, Set<String> KB,
+			Argument claim, ArgumentDiagram d) {
 		// initialise the inconsistency flag
 		boolean inconsistent = false;
-
 		// prepare the filename
-		URI u = mitigation.eResource().getURI();
-		URI e = u.trimFileExtension().appendFileExtension("" + origin.getName() + "." + 
-				rebuttal.getName() + "." + mitigation.getName())
+		URI u = claim.eResource().getURI();
+		URI e = u
+				.trimFileExtension()
+				.appendFileExtension(
+						"" + getSequenceID(seq) + "." + claim.getName())
 				.appendFileExtension("e");
 		IPath path = new Path(e.toString());
 		try {
@@ -305,25 +380,13 @@ public class ArgumentEditor extends ImageDiagramEditor {
 			out.println("sort fluent");
 			out.println("sort time: integer");
 			out.println("range time 1 2");
-
-			// declare the booleans, also collect the replaced arguments
-			Set<Argument> replaced = new HashSet<Argument>();
-			declareArgument(out, origin, replaced);
-			declareArgument(out, rebuttal, replaced);
-			declareArgument(out, mitigation, replaced);
-			for (Argument a: d.getNodes()) {
-				if (a != origin && a!=rebuttal && a!=mitigation) {
-					declareArgumentNot(out, a, replaced);
-				}
+			for (String s: getKBDeclarations(seq)) {
+				out.println(s);
 			}
-			outputInternalArgumentGrounds(out, origin, replaced);
-			outputInternalArgumentGrounds(out, rebuttal, replaced);
-			outputInternalArgumentGrounds(out, mitigation, replaced);
-			outputInternalArgumentWarrants(out, origin, replaced);
-			outputInternalArgumentWarrants(out, rebuttal, replaced);
-			outputInternalArgumentWarrants(out, mitigation, replaced);
-			out.println("!" + origin.getName() + ".");
-
+			for (String s : KB) {
+				out.println(s);
+			}
+			out.println("!" + claim.getName() + ".");
 			// run the event calculus reasoner to check whether there is any
 			// inconsistency by introducing the goal
 			EventCalculusRun c = new EventCalculusRun();
@@ -338,26 +401,14 @@ public class ArgumentEditor extends ImageDiagramEditor {
 				}
 			}
 			scanner.close();
-
 		} catch (Exception x) {
 		}
 		return inconsistent;
 	}
 
-	private void declareArgumentNot(PrintStream out, Argument b,
-			Set<Argument> replaced) {
-		// don't care about these arguments
-		out.println("boolean " + b.getName());
-		out.println("!" + b.getName() + ".");
-		for (Argument a : b.getGrounds())
-			declareArgumentNot(out, a, replaced);
-		for (Argument a : b.getWarrants())
-			declareArgumentNot(out, a, replaced);
-		
-	}
-
 	@Override
-	protected void createDiagram(URI diagramURI, URI modelURI, Resource xtextResource) {
+	protected void createDiagram(URI diagramURI, URI modelURI,
+			Resource xtextResource) {
 		super.createDiagram(diagramURI, modelURI, xtextResource);
 		ArgumentDiagramEditorUtil.createDiagram(diagramURI, modelURI,
 				new NullProgressMonitor());

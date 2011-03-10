@@ -14,7 +14,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="from" eType="#//Argument"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="to" eType="#//Argument"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Rebuts" eSuperTypes="#//Link"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Rebuts" eSuperTypes="#//Link">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="origin" eType="#//Argument"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Mitigates" eSuperTypes="#//Link">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rebuttal" eType="#//Argument"/>
   </eClassifiers>

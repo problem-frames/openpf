@@ -264,6 +264,24 @@ ruleRebuts returns [EObject current=null]
 	}
 
 )
+)	'on' 
+    {
+        createLeafNode(grammarAccess.getRebutsAccess().getOnKeyword_3(), null); 
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = factory.create(grammarAccess.getRebutsRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode, $current);
+	        }
+        }
+	RULE_ID
+	{
+		createLeafNode(grammarAccess.getRebutsAccess().getOriginArgumentCrossReference_4_0(), "origin"); 
+	}
+
+)
 ))
 ;
 

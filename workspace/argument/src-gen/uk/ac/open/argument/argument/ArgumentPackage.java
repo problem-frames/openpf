@@ -172,13 +172,22 @@ public interface ArgumentPackage extends EPackage
   int REBUTS__TO = LINK__TO;
 
   /**
+   * The feature id for the '<em><b>Origin</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REBUTS__ORIGIN = LINK_FEATURE_COUNT + 0;
+
+  /**
    * The number of structural features of the '<em>Rebuts</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int REBUTS_FEATURE_COUNT = LINK_FEATURE_COUNT + 0;
+  int REBUTS_FEATURE_COUNT = LINK_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link uk.ac.open.argument.argument.impl.MitigatesImpl <em>Mitigates</em>}' class.
@@ -1892,6 +1901,17 @@ public interface ArgumentPackage extends EPackage
   EClass getRebuts();
 
   /**
+   * Returns the meta object for the reference '{@link uk.ac.open.argument.argument.Rebuts#getOrigin <em>Origin</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Origin</em>'.
+   * @see uk.ac.open.argument.argument.Rebuts#getOrigin()
+   * @see #getRebuts()
+   * @generated
+   */
+  EReference getRebuts_Origin();
+
+  /**
    * Returns the meta object for class '{@link uk.ac.open.argument.argument.Mitigates <em>Mitigates</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2774,6 +2794,14 @@ public interface ArgumentPackage extends EPackage
      * @generated
      */
     EClass REBUTS = eINSTANCE.getRebuts();
+
+    /**
+     * The meta object literal for the '<em><b>Origin</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference REBUTS__ORIGIN = eINSTANCE.getRebuts_Origin();
 
     /**
      * The meta object literal for the '{@link uk.ac.open.argument.argument.impl.MitigatesImpl <em>Mitigates</em>}' class.

@@ -97,12 +97,16 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cToAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final CrossReference cToArgumentCrossReference_2_0 = (CrossReference)cToAssignment_2.eContents().get(0);
 		private final RuleCall cToArgumentIDTerminalRuleCall_2_0_1 = (RuleCall)cToArgumentCrossReference_2_0.eContents().get(1);
+		private final Keyword cOnKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cOriginAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final CrossReference cOriginArgumentCrossReference_4_0 = (CrossReference)cOriginAssignment_4.eContents().get(0);
+		private final RuleCall cOriginArgumentIDTerminalRuleCall_4_0_1 = (RuleCall)cOriginArgumentCrossReference_4_0.eContents().get(1);
 		
 		//Rebuts:
-		//	from=[Argument] "rebutted by" to=[Argument];
+		//	from=[Argument] "rebutted by" to=[Argument] "on" origin=[Argument];
 		public ParserRule getRule() { return rule; }
 
-		//from=[Argument] "rebutted by" to=[Argument]
+		//from=[Argument] "rebutted by" to=[Argument] "on" origin=[Argument]
 		public Group getGroup() { return cGroup; }
 
 		//from=[Argument]
@@ -125,6 +129,18 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 
 		//ID
 		public RuleCall getToArgumentIDTerminalRuleCall_2_0_1() { return cToArgumentIDTerminalRuleCall_2_0_1; }
+
+		//"on"
+		public Keyword getOnKeyword_3() { return cOnKeyword_3; }
+
+		//origin=[Argument]
+		public Assignment getOriginAssignment_4() { return cOriginAssignment_4; }
+
+		//[Argument]
+		public CrossReference getOriginArgumentCrossReference_4_0() { return cOriginArgumentCrossReference_4_0; }
+
+		//ID
+		public RuleCall getOriginArgumentIDTerminalRuleCall_4_0_1() { return cOriginArgumentIDTerminalRuleCall_4_0_1; }
 	}
 
 	public class MitigatesElements extends AbstractParserRuleElementFinder {
@@ -1135,7 +1151,7 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Rebuts:
-	//	from=[Argument] "rebutted by" to=[Argument];
+	//	from=[Argument] "rebutted by" to=[Argument] "on" origin=[Argument];
 	public RebutsElements getRebutsAccess() {
 		return (pRebuts != null) ? pRebuts : (pRebuts = new RebutsElements());
 	}

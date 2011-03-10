@@ -409,11 +409,11 @@ protected class Link_MitigatesParserRuleCall_1 extends RuleCallToken {
 /************ begin Rule Rebuts ****************
  *
  * Rebuts:
- * 	from=[Argument] "rebutted by" to=[Argument];
+ * 	from=[Argument] "rebutted by" to=[Argument] "on" origin=[Argument];
  *
  **/
 
-// from=[Argument] "rebutted by" to=[Argument]
+// from=[Argument] "rebutted by" to=[Argument] "on" origin=[Argument]
 protected class Rebuts_Group extends GroupToken {
 	
 	public Rebuts_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -428,7 +428,7 @@ protected class Rebuts_Group extends GroupToken {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Rebuts_ToAssignment_2(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new Rebuts_OriginAssignment_4(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -529,6 +529,65 @@ protected class Rebuts_ToAssignment_2 extends AssignmentToken  {
 			if(param.isInstanceOf(grammarAccess.getRebutsAccess().getToArgumentCrossReference_2_0().getType().getClassifier())) {
 				type = AssignmentType.CROSS_REFERENCE;
 				element = grammarAccess.getRebutsAccess().getToArgumentCrossReference_2_0(); 
+				return obj;
+			}
+		}
+		return null;
+	}
+
+}
+
+// "on"
+protected class Rebuts_OnKeyword_3 extends KeywordToken  {
+	
+	public Rebuts_OnKeyword_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Keyword getGrammarElement() {
+		return grammarAccess.getRebutsAccess().getOnKeyword_3();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new Rebuts_ToAssignment_2(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+}
+
+// origin=[Argument]
+protected class Rebuts_OriginAssignment_4 extends AssignmentToken  {
+	
+	public Rebuts_OriginAssignment_4(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Assignment getGrammarElement() {
+		return grammarAccess.getRebutsAccess().getOriginAssignment_4();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new Rebuts_OnKeyword_3(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+    @Override	
+	public IEObjectConsumer tryConsume() {
+		if((value = eObjectConsumer.getConsumable("origin",true)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("origin");
+		if(value instanceof EObject) { // org::eclipse::xtext::impl::CrossReferenceImpl
+			IEObjectConsumer param = createEObjectConsumer((EObject)value);
+			if(param.isInstanceOf(grammarAccess.getRebutsAccess().getOriginArgumentCrossReference_4_0().getType().getClassifier())) {
+				type = AssignmentType.CROSS_REFERENCE;
+				element = grammarAccess.getRebutsAccess().getOriginArgumentCrossReference_4_0(); 
 				return obj;
 			}
 		}

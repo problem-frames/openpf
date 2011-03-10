@@ -959,6 +959,7 @@ rule__Rebuts__Group__2
     }
 :
 	rule__Rebuts__Group__2__Impl
+	rule__Rebuts__Group__3
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -979,6 +980,69 @@ rule__Rebuts__Group__2__Impl
 finally {
 	restoreStackSize(stackSize);
 }
+
+
+rule__Rebuts__Group__3
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__Rebuts__Group__3__Impl
+	rule__Rebuts__Group__4
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Rebuts__Group__3__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getRebutsAccess().getOnKeyword_3()); }
+
+	'on' 
+
+{ after(grammarAccess.getRebutsAccess().getOnKeyword_3()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__Rebuts__Group__4
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__Rebuts__Group__4__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Rebuts__Group__4__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getRebutsAccess().getOriginAssignment_4()); }
+(rule__Rebuts__OriginAssignment_4)
+{ after(grammarAccess.getRebutsAccess().getOriginAssignment_4()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+
 
 
 
@@ -4595,6 +4659,25 @@ rule__Rebuts__ToAssignment_2
 	RULE_ID{ after(grammarAccess.getRebutsAccess().getToArgumentIDTerminalRuleCall_2_0_1()); }
 )
 { after(grammarAccess.getRebutsAccess().getToArgumentCrossReference_2_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Rebuts__OriginAssignment_4
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getRebutsAccess().getOriginArgumentCrossReference_4_0()); }
+(
+{ before(grammarAccess.getRebutsAccess().getOriginArgumentIDTerminalRuleCall_4_0_1()); }
+	RULE_ID{ after(grammarAccess.getRebutsAccess().getOriginArgumentIDTerminalRuleCall_4_0_1()); }
+)
+{ after(grammarAccess.getRebutsAccess().getOriginArgumentCrossReference_4_0()); }
 )
 
 ;

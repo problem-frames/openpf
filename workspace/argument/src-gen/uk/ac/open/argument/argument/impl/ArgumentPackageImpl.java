@@ -380,6 +380,16 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getRebuts_Origin()
+  {
+    return (EReference)rebutsEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getMitigates()
   {
     return mitigatesEClass;
@@ -1155,6 +1165,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
     createEReference(linkEClass, LINK__TO);
 
     rebutsEClass = createEClass(REBUTS);
+    createEReference(rebutsEClass, REBUTS__ORIGIN);
 
     mitigatesEClass = createEClass(MITIGATES);
     createEReference(mitigatesEClass, MITIGATES__REBUTTAL);
@@ -1318,6 +1329,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
     initEReference(getLink_To(), this.getArgument(), null, "to", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(rebutsEClass, Rebuts.class, "Rebuts", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getRebuts_Origin(), this.getArgument(), null, "origin", null, 0, 1, Rebuts.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(mitigatesEClass, Mitigates.class, "Mitigates", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getMitigates_Rebuttal(), this.getArgument(), null, "rebuttal", null, 0, 1, Mitigates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

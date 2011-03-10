@@ -18,13 +18,13 @@ RULE_ML_COMMENT=9
 'with'=22
 '='=43
 'argument:'=15
-'mitigated by'=17
+'mitigated by'=18
 'shape'=25
 'background'=24
 '+'=46
 '<->'=36
 ')'=33
-'on'=18
+'on'=17
 'warranted by'=31
 '^'=49
 '->'=35

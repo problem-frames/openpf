@@ -9,8 +9,7 @@ These relationships can be derived
 */
 Link: Rebuts | Mitigates;
 
-Rebuts: from=[Argument] "rebutted by" to=[Argument];
-
+Rebuts: from=[Argument] "rebutted by" to=[Argument] "on" origin=[Argument];
 Mitigates: from=[Argument] "mitigated by" to=[Argument] "on" rebuttal=[Argument];
 
 Argument: name=ID ":"? // unique identifier

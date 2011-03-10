@@ -20,7 +20,9 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Argument.ecore#//Link/from"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Argument.ecore#//Link/to"/>
     </genClasses>
-    <genClasses ecoreClass="Argument.ecore#//Rebuts"/>
+    <genClasses ecoreClass="Argument.ecore#//Rebuts">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Argument.ecore#//Rebuts/origin"/>
+    </genClasses>
     <genClasses ecoreClass="Argument.ecore#//Mitigates">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Argument.ecore#//Mitigates/rebuttal"/>
     </genClasses>

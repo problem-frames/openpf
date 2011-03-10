@@ -102,6 +102,7 @@ public class ArgumentParser extends AbstractContentAssistParser {
 					put(grammarAccess.getArgumentDiagramAccess().getLinksAssignment_1_1(), "rule__ArgumentDiagram__LinksAssignment_1_1");
 					put(grammarAccess.getRebutsAccess().getFromAssignment_0(), "rule__Rebuts__FromAssignment_0");
 					put(grammarAccess.getRebutsAccess().getToAssignment_2(), "rule__Rebuts__ToAssignment_2");
+					put(grammarAccess.getRebutsAccess().getOriginAssignment_4(), "rule__Rebuts__OriginAssignment_4");
 					put(grammarAccess.getMitigatesAccess().getFromAssignment_0(), "rule__Mitigates__FromAssignment_0");
 					put(grammarAccess.getMitigatesAccess().getToAssignment_2(), "rule__Mitigates__ToAssignment_2");
 					put(grammarAccess.getMitigatesAccess().getRebuttalAssignment_4(), "rule__Mitigates__RebuttalAssignment_4");
