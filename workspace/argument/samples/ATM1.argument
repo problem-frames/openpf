@@ -1,10 +1,4 @@
 argument: SWIM1
-A1 rebutted by A2
-A1 rebutted by A3
-A1 mitigated by A5 on A3
-A1 rebutted by A4
-A1 mitigated by A5 on A4
-A1 mitigated by A6 on A4
 A1 "The ATM system remains secure after introducing AMAN" {
 	supported by
 		F1 "The AMAN system is controlled by a new 

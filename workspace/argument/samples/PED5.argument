@@ -1,8 +1,4 @@
 argument: PED
-A1 rebutted by A4
-A1 mitigated by A9 on A4
-A1 rebutted by A5
-A1 rebutted by A6
 A1 "Confidentiality and integrity of customers' PIN is assured" {
 	supported by
 		F1 "PED has a tamper proofing mechanism"

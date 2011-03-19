@@ -1,5 +1,4 @@
 argument: HouseIsSafe
-A1 rebutted by A2
 A1 "House is safe" {
 	supported by
 		Fact1 "it is protected by plants"
