@@ -1,21 +1,21 @@
 Manifest-Version: 1.0
+Export-Package: uk.ac.open.istar.ui,uk.ac.open.istar.ui.contentassist,
+ uk.ac.open.istar.ui.contentassist.antlr,uk.ac.open.istar.ui.contentas
+ sist.antlr.internal,uk.ac.open.istar.ui.internal,uk.ac.open.istar.ui.
+ labeling,uk.ac.open.istar.ui.outline,uk.ac.open.istar.ui.quickfix
 Require-Bundle: istar;visibility:=reexport,org.eclipse.xtext.ui,org.ec
  lipse.ui.editors;bundle-version="3.5.0",org.eclipse.ui.ide;bundle-ver
  sion="3.5.0",org.eclipse.xtext.ui.shared,org.eclipse.ui,org.antlr.run
  time,org.eclipse.xtext.builder,edu.toronto.cs.openome_model,edu.toron
  to.cs.openome_model.diagram,problem.ui;bundle-version="1.0.0"
-Export-Package: uk.ac.open.istar.ui,uk.ac.open.istar.ui.contentassist,
- uk.ac.open.istar.ui.contentassist.antlr,uk.ac.open.istar.ui.contentas
- sist.antlr.internal,uk.ac.open.istar.ui.internal,uk.ac.open.istar.ui.
- labeling,uk.ac.open.istar.ui.outline,uk.ac.open.istar.ui.quickfix
 Bundle-Vendor: The Open University
 Bundle-ActivationPolicy: lazy
 Bundle-Version: 1.0.0
 Bundle-Name: istar.ui
-Bundle-ManifestVersion: 2
 Bundle-Activator: uk.ac.open.istar.ui.internal.IstarActivator
-Bundle-SymbolicName: istar.ui; singleton:=true
+Bundle-ManifestVersion: 2
 Import-Package: org.apache.log4j
+Bundle-SymbolicName: istar.ui; singleton:=true
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 
 

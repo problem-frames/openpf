@@ -107,9 +107,6 @@ public class ArgumentEditor extends ImageDiagramEditor {
 			output.println(out + ".");
 	}
 
-	int maxRound = Integer.MIN_VALUE;
-	int minRound = Integer.MAX_VALUE;
-
 	/**
 	 * This method is called right after the syntax check is done, and before
 	 * the model is to be saved back.
@@ -142,6 +139,8 @@ public class ArgumentEditor extends ImageDiagramEditor {
 		set.clear();
 		// propagate the round number of the root argument to all the descendant
 		// sub-arguments
+		int maxRound = Integer.MIN_VALUE;
+		int minRound = Integer.MAX_VALUE;
 		for (Argument a : arguments) {
 			updateRound(a);
 			set.add(a);
@@ -179,11 +178,11 @@ public class ArgumentEditor extends ImageDiagramEditor {
 			}
 			seqs.clear();
 			seqs = seqs2;
-//			for (ArrayList<Argument> seq : seqs) {
-//				for (int i=0; i<seq.size(); i++)
-//					System.out.print(seq.get(i).getName() + ".");
-//				System.out.println();
-//			}
+			for (ArrayList<Argument> seq : seqs) {
+				for (int i=0; i<seq.size(); i++)
+					System.out.print(seq.get(i).getName() + ".");
+				System.out.println();
+			}
 		}
 		for (ArrayList<Argument> seq : seqs) {
 			for (int i=0; i<seq.size(); i++)

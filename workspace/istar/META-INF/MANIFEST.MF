@@ -1,19 +1,19 @@
 Manifest-Version: 1.0
-Export-Package: uk.ac.open.istar,uk.ac.open.istar.services,uk.ac.open.
- istar.parseTreeConstruction,uk.ac.open.istar.parser.antlr,uk.ac.open.
- istar.parser.antlr.internal,uk.ac.open.istar.validation
 Require-Bundle: org.eclipse.xtext,org.eclipse.xtext.generator,org.apac
  he.commons.logging,org.eclipse.emf.codegen.ecore,org.eclipse.emf.mwe.
  utils,org.eclipse.emf.mwe2.launch,org.eclipse.xtext.xtend,edu.toronto
  .cs.openome_model,org.eclipse.xtext.util,org.antlr.runtime,core,openo
  me_model;bundle-version="1.0.0"
+Export-Package: uk.ac.open.istar,uk.ac.open.istar.services,uk.ac.open.
+ istar.parseTreeConstruction,uk.ac.open.istar.parser.antlr,uk.ac.open.
+ istar.parser.antlr.internal,uk.ac.open.istar.validation
 Bundle-Vendor: The Open University
 Bundle-ActivationPolicy: lazy
 Bundle-Version: 1.0.0
 Bundle-Name: istar
 Bundle-ManifestVersion: 2
-Import-Package: org.apache.log4j
 Bundle-SymbolicName: istar; singleton:=true
+Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 
 

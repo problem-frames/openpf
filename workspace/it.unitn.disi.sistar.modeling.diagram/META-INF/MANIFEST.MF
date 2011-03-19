@@ -1,7 +1,4 @@
 Manifest-Version: 1.0
-Export-Package: it.unitn.disi.sistar.modeling.tropos.diagram.edit.part
- s,it.unitn.disi.sistar.modeling.tropos.diagram.part,it.unitn.disi.sis
- tar.modeling.tropos.diagram.providers
 Require-Bundle: org.eclipse.core.runtime,org.eclipse.core.resources,or
  g.eclipse.jface,org.eclipse.ui.ide,org.eclipse.ui.views,org.eclipse.u
  i.workbench,org.eclipse.ui.workbench.texteditor,org.eclipse.emf.ecore
@@ -20,15 +17,18 @@ Require-Bundle: org.eclipse.core.runtime,org.eclipse.core.resources,or
  g.eclipse.ocl.ecore;visibility:=reexport,it.unitn.disi.sistar.modelin
  g;bundle-version="0.997.0",it.unitn.disi.sistar.modeling.edit;bundle-
  version="0.997.0"
+Export-Package: it.unitn.disi.sistar.modeling.tropos.diagram.edit.part
+ s,it.unitn.disi.sistar.modeling.tropos.diagram.part,it.unitn.disi.sis
+ tar.modeling.tropos.diagram.providers
 Bundle-Vendor: %providerName
 Eclipse-LazyStart: true
 Bundle-ClassPath: .
 Bundle-Version: 0.997.0
-Bundle-Name: %pluginName
 Bundle-Localization: plugin
-Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
 Bundle-Activator: it.unitn.disi.sistar.modeling.tropos.diagram.part.Tr
  oposDiagramEditorPlugin
+Bundle-ManifestVersion: 2
 Bundle-SymbolicName: it.unitn.disi.sistar.modeling.diagram; singleton:
  =true
 
