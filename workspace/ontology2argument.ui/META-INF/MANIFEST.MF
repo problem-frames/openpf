@@ -4,12 +4,12 @@ Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.co
  .ecore.xmi,org.eclipse.ocl,org.eclipse.ocl.ecore,org.eclipse.acceleo.
  model,org.eclipse.acceleo.engine
 Bundle-Vendor: Eclipse Modeling Project
-Eclipse-LazyStart: true
 Bundle-ActivationPolicy: lazy
+Eclipse-LazyStart: true
 Bundle-Version: 1.0.0.201101261814
 Bundle-Name: Acceleo Ontology2argument Module IDE Plug-in
-Bundle-Activator: ontology2argument.ui.Activator
 Bundle-ManifestVersion: 2
+Bundle-Activator: ontology2argument.ui.Activator
 Bundle-SymbolicName: ontology2argument.ui;singleton:=true
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 

@@ -14,12 +14,12 @@ Require-Bundle: org.eclipse.ui.intro,org.eclipse.core.runtime,org.ecli
  edit;visibility:=reexport,org.eclipse.ocl.ecore;visibility:=reexport,
  org.eclipse.gmf.runtime.draw2d.ui;visibility:=reexport,org.eclipse.ge
  f;visibility:=reexport,core;bundle-version="1.0.0"
-Plugin-Class: PluginActivator
 Bundle-Vendor: University of Toronto KM lab
+Plugin-Class: PluginActivator
 Eclipse-LazyStart: true
 Bundle-Version: 1.0.0
-Bundle-Localization: plugin
 Bundle-Name: OpenOME model Plug-in
+Bundle-Localization: plugin
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: openome_model;singleton:=true
 

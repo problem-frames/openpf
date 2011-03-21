@@ -788,11 +788,13 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <feature id="laser.visualjil.vsrm.feature"/>
       <feature id="littlejil.analysis.eclipse.feature"/>
       <feature id="process.feature"/>
+<!--
       <feature id="org.eclipse.wst.common_core.feature"/>
       <feature id="org.eclipse.wst.common_ui.feature"/>
       <feature id="org.eclipse.wst.common.fproj"/>
       <feature id="org.eclipse.wst.server_core.feature"/>
       <feature id="org.eclipse.wst.xml_core.feature"/>
+-->
       <feature id="hu.optxware.emf2viatra.feature"/>
       <feature id="org.eclipse.viatra2.feature.core"/>
       <feature id="org.eclipse.viatra2.feature.dsm"/>

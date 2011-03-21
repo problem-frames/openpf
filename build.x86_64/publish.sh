@@ -1,9 +1,10 @@
 #!/bin/bash
 # see http://wiki.eclipse.org/Equinox/p2/Publisher
-ECLIPSE_HOME=$HOME/IDE/pf-3.6.product/eclipse
+#ECLIPSE_HOME=$HOME/IDE/pf-3.6.product/eclipse
+ECLIPSE_HOME=$HOME/IDE/pf-3.6.2.product/eclipse
 SITEXML=file:/$HOME/build/cruisecontrol-bin-2.8.3/projects/openpf/workspace/problem.update/site.xml 
 CATEGORYXML=file:/$HOME/build/cruisecontrol-bin-2.8.3/projects/openpf/workspace/problem.update/category.xml 
-BUILT_REPO=$HOME/eclipse.build/update-3.6
+BUILT_REPO=$HOME/eclipse.build/update-3.6.2
 PUBLIC_REPO=/home/share/sead/openre/update
 USERGUIDE=$HOME/build/cruisecontrol-bin-2.8.3/projects/openpf/doc/UserGuide
 rm -rf $PUBLIC_REPO

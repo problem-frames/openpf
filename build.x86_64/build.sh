@@ -3,7 +3,7 @@
 PROJECT=problem
 PRODUCT=pf
 IDE=$HOME/IDE
-VERSION=3.6
+VERSION=3.6.2
 export ECLIPSE_HOME=$IDE/$PRODUCT-$VERSION.product/eclipse
 export BUILD_HOME=$HOME/eclipse.build
 export PRODUCT_HOME=$(cd ..; pwd)

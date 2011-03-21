@@ -1,16 +1,16 @@
 Manifest-Version: 1.0
+Require-Bundle: q7,core,util,edu.toronto.cs.openome_model,org.eclipse.
+ gmf.codegen,org.junit,org.eclipse.core.runtime
 Export-Package: edu.toronto.cs.openome.conversion.action,edu.toronto.c
  s.openome.conversion.codegen,edu.toronto.cs.openome.conversion.conver
  tor,edu.toronto.cs.openome.conversion.parser,edu.toronto.cs.openome.c
  onversion.service
-Require-Bundle: q7,core,util,edu.toronto.cs.openome_model,org.eclipse.
- gmf.codegen,org.junit,org.eclipse.core.runtime
 Bundle-Vendor: University Of Toronto
 Bundle-Version: 1.0.0
 Bundle-Name: Conversion Plug-in for OpenOME
 Bundle-ManifestVersion: 2
+Bundle-SymbolicName: edu.toronto.cs.openome.conversion;singleton:=true
 Import-Package: org.osgi.framework,org.sat4j.minisat,org.sat4j.reader,
  org.sat4j.specs
-Bundle-SymbolicName: edu.toronto.cs.openome.conversion;singleton:=true
 
 
