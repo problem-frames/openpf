@@ -1,5 +1,17 @@
  = An Open Requirements Engineering Tool =
 
+ == User's manual == 
+ * To enable the decreasoner reasoning for argumentation, define the system
+   property openpf.argument.reasoning, using one of the following ways:
+   * MacOSX:
+     open Eclipse.app --args -vmargs -Dopenpf.argument.reasoning
+   * Linux/Windows
+     eclipse -vmargs -Dopenpf.argument.reasoning
+   * And alternatively use the following line in the config.ini:
+     echo openpf.argument.reasoning= >> configuration/config.ini
+ * Similarly, to monitor the files the physical Examples folders (for Miki),
+   define the system property "openpf.monitor"
+
  == Developer's Manual ==
 
  * To develop OpenPF/OpenOME inside the Eclipse IDE, you need the following steps:
@@ -81,3 +93,4 @@ eclipse-modeling-helios-incubation-linux-gtk.tar.gz
    http://sead1.open.ac.uk/pf/development-kit/eclipse-SDK-more-required-products.zip
    But you have to use the "IDE/pf-3.6.sh" to install it properly, unpack them
 to the dropsin folder won't work.
+
