@@ -131,6 +131,8 @@ public class ArgumentEditor extends ImageDiagramEditor {
 	 */
 	protected void updateModel(XtextResourceSet resourceSet,
 			Resource xtextResource) {
+		if (System.getProperty("openpf.argument.reasoning")==null)
+			return;
 		ArgumentDiagram d = (ArgumentDiagram) xtextResource.getContents()
 				.get(0);
 		XtextResource xr = (XtextResource) xtextResource;

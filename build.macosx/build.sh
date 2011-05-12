@@ -4,15 +4,15 @@ PROJECT=problem
 PRODUCT=pf
 IDE=$HOME/IDE
 VERSION=3.6.2
-export ECLIPSE_HOME=$IDE/pf-$VERSION.product/eclipse
+export ECLIPSE_HOME=$IDE/pf-macosx-$VERSION.product/eclipse
 export BUILD_HOME=$HOME/eclipse.build
 export PRODUCT_HOME=$(cd ..; pwd)
 #-----------------------------------------------------------
 PRODUCT_FILE=$PRODUCT.product
 PROJECT_FILE=$PROJECT
 if [ ! -f $ECLIPSE_HOME/plugins/org.eclipse.xtext_1.0.1.v201008251220.jar ]; then
-	cp -r ~/IDE/pf-3.6.2.product/more/eclipse/features/* ~/IDE/pf-3.6.2.product/eclipse/features/
-	cp -r ~/IDE/pf-3.6.2.product/more/eclipse/plugins/* ~/IDE/pf-3.6.2.product/eclipse/plugins/
+	cp -r $ECLIPSE_HOME/../more/eclipse/features/* $ECLIPSE_HOME/features/
+	cp -r $ECLIPSE_HOME/../more/eclipse/plugins/* $ECLIPSE_HOME/plugins/
 fi
 \ls ../workspace > workspace.plugins.txt
 /usr/bin/xsltproc product.xsl ../workspace/$PROJECT_FILE/$PRODUCT_FILE > product.plugins.txt
@@ -36,7 +36,7 @@ done
 rm -rf $BUILD_HOME/I.$PRODUCT/*
 cd -
 cp -r $ECLIPSE_HOME/configuration .
-sed -e "s/MYPRODUCT/\/$PROJECT_FILE\/$PRODUCT_FILE/" productBuild.properties  | sed -e "s/MYVERSION/pf-$VERSION.product/" | sed -e "s/PRODUCT/$PRODUCT/" > build.properties
+sed -e "s/MYPRODUCT/\/$PROJECT_FILE\/$PRODUCT_FILE/" productBuild.properties  | sed -e "s/MYVERSION/pf-macosx-$VERSION.product/" | sed -e "s/PRODUCT/$PRODUCT/" > build.properties
 #$ECLIPSE_HOME/eclipse -configuration configuration -nosplash -application org.eclipse.ant.core.antRunner -buildfile $ECLIPSE_HOME/plugins/org.eclipse.pde.build_*/scripts/productBuild/productBuild.xml -Dbuilder=. $*
 cp $ECLIPSE_HOME/plugins/org.eclipse.pde.build_*/scripts/productBuild/productBuild.xml build.xml
 $ECLIPSE_HOME/eclipse -configuration configuration -nosplash -application org.eclipse.ant.core.antRunner -Dbuilder=. -buildfile `pwd`/build.xml $*
