@@ -12,13 +12,16 @@
 	</target>
 
 	<!-- ================================================================= -->
-	<!-- This will be called automatically after the compilation of each   -->
-	<!-- Bundle... in dependency order.                                    -->
+	<!-- Steps to do after the target gather.bin.parts                     -->
+	<!-- Available parameters :                                            -->
+	<!--   build.result.folder - folder containing the build results       -->
+	<!--   target.folder - destination folder                              -->
 	<!-- ================================================================= -->
-	<target name="post.compile.@dot">
+
+	<target name="post.gather.bin.parts">
 		<acceleoCompiler 
 			sourceFolders="${target.folder}" 
-			dependencies="${target.folder}/../../problem;${target.folder}/../../core;">
+			dependencies="${target.folder}/../problem;${target.folder}/../core;">
 		</acceleoCompiler>
 	</target>	
 

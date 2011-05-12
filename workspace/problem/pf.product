@@ -3,6 +3,7 @@
 
 <product name="Problem Analysis Tool" uid="openre" id="core.openre" application="org.eclipse.ui.ide.workbench" version="1.0.0" useFeatures="true" includeLaunchers="true">
 
+
    <configIni use="default">
    </configIni>
 
@@ -11,12 +12,15 @@
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
    </launcherArgs>
 
+   <windowImages/>
+
    <launcher name="eclipse">
       <solaris/>
       <win useIco="false">
          <bmp/>
       </win>
    </launcher>
+
 
    <vm>
    </vm>
@@ -464,8 +468,8 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <plugin id="org.eclipse.jdt.junit.runtime"/>
       <plugin id="org.eclipse.jdt.junit4.runtime"/>
       <plugin id="org.eclipse.jdt.launching"/>
-      <plugin id="org.eclipse.jdt.launching.macosx"/>
-      <plugin id="org.eclipse.jdt.launching.ui.macosx"/>
+      <plugin id="org.eclipse.jdt.launching.macosx" fragment=""/>
+      <plugin id="org.eclipse.jdt.launching.ui.macosx" fragment=""/>
       <plugin id="org.eclipse.jdt.ui"/>
       <plugin id="org.eclipse.jem.util"/>
       <plugin id="org.eclipse.jface"/>
@@ -726,15 +730,15 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <plugin id="process.edit"/>
       <plugin id="process.editor"/>
       <plugin id="q7"/>
-      <plugin id="rbac"/>
-      <plugin id="rbac.diagram"/>
-      <plugin id="rbac.diagram.extensions"/>
-      <plugin id="rbac.edit"/>
-      <plugin id="rbac.generator"/>
-      <plugin id="rbac.ui"/>
-      <plugin id="uncal"/>
-      <plugin id="uncal.generator"/>
-      <plugin id="uncal.ui"/>
+      <plugin id="rbac" fragment=""/>
+      <plugin id="rbac.diagram" fragment=""/>
+      <plugin id="rbac.diagram.extensions" fragment=""/>
+      <plugin id="rbac.edit" fragment=""/>
+      <plugin id="rbac.generator" fragment=""/>
+      <plugin id="rbac.ui" fragment=""/>
+      <plugin id="uncal" fragment=""/>
+      <plugin id="uncal.generator" fragment=""/>
+      <plugin id="uncal.ui" fragment=""/>
       <plugin id="util"/>
    </plugins>
 
@@ -788,13 +792,6 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <feature id="laser.visualjil.vsrm.feature"/>
       <feature id="littlejil.analysis.eclipse.feature"/>
       <feature id="process.feature"/>
-<!--
-      <feature id="org.eclipse.wst.common_core.feature"/>
-      <feature id="org.eclipse.wst.common_ui.feature"/>
-      <feature id="org.eclipse.wst.common.fproj"/>
-      <feature id="org.eclipse.wst.server_core.feature"/>
-      <feature id="org.eclipse.wst.xml_core.feature"/>
--->
       <feature id="hu.optxware.emf2viatra.feature"/>
       <feature id="org.eclipse.viatra2.feature.core"/>
       <feature id="org.eclipse.viatra2.feature.dsm"/>
