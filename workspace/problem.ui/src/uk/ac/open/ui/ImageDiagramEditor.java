@@ -54,8 +54,11 @@ public class ImageDiagramEditor extends XtextEditor implements
 		Runnable, IConvertor {
 
 	public ImageDiagramEditor() {
-		Thread runner = new Thread(this);
-		runner.start();
+		// Yijun: Turn off the monitoring by default
+		if (System.getProperty("openpf.monitor")!=null) {
+			Thread runner = new Thread(this);
+			runner.start();
+		}
 	}
 
 	public void convert(String input, String output) {
