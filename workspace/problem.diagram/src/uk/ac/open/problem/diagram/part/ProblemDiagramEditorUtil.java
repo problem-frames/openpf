@@ -60,6 +60,7 @@ public class ProblemDiagramEditorUtil extends ImageDiagramUtil {
 
 	public static HashMap<Diagram, IPath> pdf_paths = new HashMap<Diagram, IPath>();
 	public static HashMap<Diagram, IPath> png_paths = new HashMap<Diagram, IPath>();
+	public static HashMap<Diagram, IPath> jpg_paths = new HashMap<Diagram, IPath>();
 
 	/**
 	 * @generated

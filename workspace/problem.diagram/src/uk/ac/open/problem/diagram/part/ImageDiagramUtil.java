@@ -76,7 +76,7 @@ public class ImageDiagramUtil {
 		if (openEditor != null) {
 			PlatformUI.getWorkbench().getDisplay().syncExec(new Runnable() {
 				public void run() {
-					for (String ext: new String[] {"pdf", "png"}) {
+					for (String ext: new String[] {"pdf", "png", "jpg", "svg"}) {
 						IPath pdf_path = ResourcesPlugin
 								.getWorkspace()
 								.getRoot()
@@ -89,6 +89,10 @@ public class ImageDiagramUtil {
 						ImageFileFormat fmt = ImageFileFormat.PDF; // default
 						if (ext.equals("png"))
 							fmt = ImageFileFormat.PNG;
+						if (ext.equals("jpg"))
+							fmt = ImageFileFormat.JPG;
+						if (ext.equals("svg"))
+							fmt = ImageFileFormat.SVG;
 						final CopyToImageUtil util = new CopyToImageUtil();
 						try {							
 							util.copyToImage(dep, pdf_path, fmt, monitor);

@@ -33,8 +33,9 @@ public class EntityFigure extends Shape {
 
 	static final Font FFIGUREENTITYDESCRIPTION_FONT = new Font(Display
 			.getCurrent(),
-			Display.getDefault().getSystemFont().getFontData()[0].getName(), 
-			Display.getDefault().getSystemFont().getFontData()[0].getHeight(),
+//			Display.getDefault().getSystemFont().getFontData()[0].getName(), 
+//			Display.getDefault().getSystemFont().getFontData()[0].getHeight(),
+			"Arial", 6,
 			SWT.ITALIC);
 	
 	private WrappingLabel fFigureEntityName;
@@ -75,16 +76,8 @@ public class EntityFigure extends Shape {
 		fFigureEntityName.setAlignment(PositionConstants.CENTER);
 		fFigureEntityName.setTextAlignment(PositionConstants.CENTER);
 		fFigureEntityName.setTextUnderline(true);
-		IPreferenceStore store = ProblemDiagramEditorPlugin.getInstance().getPreferenceStore();
-		boolean FIX_FONT = store.getDefaultBoolean("Fixed font");
-		if (FIX_FONT) {
-			fFigureEntityName.setFont(FFIGUREENTITYNAME_FONT);			
-		} else 
-			fFigureEntityName.setTextUnderline(true);
-		if (highlight) {
-			fFigureEntityName.setForegroundColor(ColorConstants.white);
-			fFigureEntityName.setBackgroundColor(ColorConstants.black);
-		}
+		fFigureEntityName.setFont(FFIGUREENTITYNAME_FONT);			
+		fFigureEntityName.setTextUnderline(true);
 		GridData constraintFFigureEntityName = new GridData();
 		constraintFFigureEntityName.verticalAlignment = GridData.BEGINNING;
 		constraintFFigureEntityName.horizontalAlignment = GridData.CENTER;
@@ -98,15 +91,9 @@ public class EntityFigure extends Shape {
 		fFigureEntityDescription = new WrappingLabel();
 		fFigureEntityDescription.setText("");
 		fFigureEntityDescription.setTextWrap(true);
-		if (FIX_FONT)
-			fFigureEntityDescription.setFont(FFIGUREENTITYDESCRIPTION_FONT);
+		fFigureEntityDescription.setFont(FFIGUREENTITYDESCRIPTION_FONT);
 		fFigureEntityDescription.setAlignment(PositionConstants.LEFT);
 		fFigureEntityDescription.setTextAlignment(PositionConstants.LEFT);
-		if (highlight) {
-			fFigureEntityDescription.setForegroundColor(ColorConstants.white);
-			fFigureEntityDescription.setBackgroundColor(ColorConstants.black);
-		}
-		
 		GridData constraintFFigureEntityDescription = new GridData();
 		constraintFFigureEntityDescription.verticalAlignment = GridData.CENTER;
 		constraintFFigureEntityDescription.horizontalAlignment = GridData.CENTER;
@@ -170,17 +157,11 @@ public class EntityFigure extends Shape {
 		if (node != null && node.getType() == NodeType.REQUIREMENT) {
 			this.setLineWidth(2);
 			this.setLineStyle(Graphics.LINE_DASH);
-			if (isHighlight())
-				graphics.fillOval(r);
-			else
-				graphics.drawOval(r);
+			graphics.drawOval(r);
 		} else if (node != null && node.getType() == NodeType.CONCERN) {
 			this.setLineWidth(2);
 			this.setLineStyle(Graphics.LINE_DASHDOT);
-			if (isHighlight())
-				graphics.fillRoundRectangle(r, inset1, inset2);
-			else
-				graphics.drawRoundRectangle(r, inset1, inset2);
+			graphics.drawRoundRectangle(r, inset1, inset2);
 		} else {
 			this.setLineWidth(2);
 			this.setLineStyle(Graphics.LINE_SOLID);
@@ -193,10 +174,7 @@ public class EntityFigure extends Shape {
 			t.x = r.x + r.width - 22;
 			t.y = r.y + r.height - 22;
 			if (node != null && node.getType() != NodeType.REQUIREMENT) {
-				if (isHighlight())
-					graphics.fillRectangle(r);
-				else
-					graphics.drawRectangle(r);
+				graphics.drawRectangle(r);
 				if (node.getType() == NodeType.MACHINE) {
 					r.x += inset1;
 					r.y += inset1;

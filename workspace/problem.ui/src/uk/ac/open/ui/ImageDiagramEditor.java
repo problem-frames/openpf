@@ -323,6 +323,8 @@ public class ImageDiagramEditor extends XtextEditor implements
 	protected void deleteGeneratedFiles(IResource res) {
 		deleteFile(res, extension + ".pdf");
 		deleteFile(res, extension + ".png");
+		deleteFile(res, extension + ".jpg");
+		deleteFile(res, extension + ".svg");
 		if (diagram_extension == null)
 			deleteFile(res, extension + "_diagram");
 		else
