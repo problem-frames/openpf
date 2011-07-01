@@ -3,7 +3,6 @@
 
 <product name="Problem Analysis Tool" uid="openre" id="core.openre" application="org.eclipse.ui.ide.workbench" version="1.0.0" useFeatures="true" includeLaunchers="true">
 
-
    <configIni use="default">
    </configIni>
 
@@ -20,7 +19,6 @@
          <bmp/>
       </win>
    </launcher>
-
 
    <vm>
    </vm>
@@ -83,20 +81,12 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
    </license>
 
    <plugins>
-<!--
-      <plugin id="PF2EC"/>
-      <plugin id="PF2EC.ui"/>
--->
       <plugin id="antlr.plugin"/>
       <plugin id="argument"/>
       <plugin id="argument.diagram"/>
       <plugin id="argument.diagram.extensions"/>
       <plugin id="argument.edit"/>
       <plugin id="argument.ui"/>
-<!--
-      <plugin id="argument2ec"/>
-      <plugin id="argument2ec.ui"/>
--->
       <plugin id="change"/>
       <plugin id="com.google.collect"/>
       <plugin id="com.google.inject"/>
@@ -111,34 +101,13 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <plugin id="edu.toronto.cs.openome.conversion"/>
       <plugin id="edu.toronto.cs.openome.evaluation"/>
       <plugin id="edu.toronto.cs.openome.testing"/>
-      <plugin id="edu.toronto.cs.openome.versioning"/>
+      <plugin id="edu.toronto.cs.openome.versioning" fragment=""/>
       <plugin id="edu.toronto.cs.openome_model"/>
       <plugin id="edu.toronto.cs.openome_model.diagram"/>
       <plugin id="edu.toronto.cs.openome_model.edit"/>
       <plugin id="edu.toronto.cs.openome_model.editor"/>
-<!--
-      <plugin id="eu.securechange.secmer.casetool.core" fragment=""/>
-      <plugin id="eu.securechange.secmer.casetool.model" fragment=""/>
-      <plugin id="eu.securechange.secmer.casetool.model.edit" fragment=""/>
-      <plugin id="eu.securechange.secmer.casetool.model.editor" fragment=""/>
-      <plugin id="eu.securechange.secmer.casetool.security.patterns" fragment=""/>
-      <plugin id="eu.securechange.secmer.casetool.security.rules" fragment=""/>
-      <plugin id="eu.securechange.secmer.casetool.sistar" fragment=""/>
-      <plugin id="eu.securechange.secmer.casetool.sistar.synch" fragment=""/>
-      <plugin id="eu.securechange.sistaer.model.editor.extra" fragment=""/>
--->
       <plugin id="event"/>
       <plugin id="event.ui"/>
-<!--
-      <plugin id="hu.bme.mit.incquery.core" fragment=""/>
-      <plugin id="hu.bme.mit.incquery.gui" fragment=""/>
-      <plugin id="hu.bme.mit.incquery.model" fragment=""/>
-      <plugin id="hu.bme.mit.incquery.model.edit" fragment=""/>
-      <plugin id="hu.bme.mit.incquery.model.editor" fragment=""/>
-      <plugin id="hu.bme.mit.viatra2.viatraDSM.grabats2009live"/>
-      <plugin id="hu.bme.mit.viatra2.viatraDSM.skypesim"/>
-      <plugin id="hu.optxware.emf2viatra.core"/>
--->
       <plugin id="istar"/>
       <plugin id="istar.diagram.extensions"/>
       <plugin id="istar.generator"/>
@@ -154,43 +123,12 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <plugin id="javax.servlet.jsp"/>
       <plugin id="javax.xml"/>
       <plugin id="javax.xml.bind"/>
-<!--
-      <plugin id="laser.flavers.plugin"/>
-      <plugin id="laser.juliette.archive"/>
-      <plugin id="laser.littlejil"/>
-      <plugin id="laser.littlejil.analysis.ui"/>
-      <plugin id="laser.littlejil.eclipse.check"/>
-      <plugin id="laser.littlejil.eclipse.search"/>
-      <plugin id="laser.littlejil.standardtypesplugin"/>
-      <plugin id="laser.propel"/>
-      <plugin id="laser.visualjil"/>
-      <plugin id="laser.visualjil.eclipse.assistants"/>
-      <plugin id="laser.visualjil.javabeans"/>
-      <plugin id="laser.visualjil.jgrid"/>
-      <plugin id="laser.visualjil.jsim"/>
-      <plugin id="laser.visualjil.julexporter"/>
-      <plugin id="laser.visualjil.julimporter"/>
-      <plugin id="laser.visualjil.project"/>
-      <plugin id="laser.visualjil.romeo"/>
-      <plugin id="laser.visualjil.serialimporter"/>
-      <plugin id="laser.visualjil.vsrm"/>
-      <plugin id="littlejil.analysis.fsv"/>
-      <plugin id="littlejil.analysis.fta"/>
-      <plugin id="littlejil.analysis.help"/>
-      <plugin id="littlejil.analysis.trace"/>
-      <plugin id="littlejil.analysis.trace.visualization"/>
-      <plugin id="littlejil.analysis.translator"/>
--->
       <plugin id="lpg.runtime.java"/>
-      <plugin id="molhado"/>
+      <plugin id="molhado" fragment=""/>
       <plugin id="net.sourceforge.lpg.lpgjavaruntime"/>
       <plugin id="ontology"/>
       <plugin id="ontology.edit"/>
       <plugin id="ontology.ui"/>
-<!--
-      <plugin id="ontology2argument"/>
-      <plugin id="ontology2argument.ui"/>
--->
       <plugin id="openome_model"/>
       <plugin id="openome_model.figures"/>
       <plugin id="org.antlr.runtime"/>
@@ -224,23 +162,6 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <plugin id="org.apache.xml.serializer"/>
       <plugin id="org.apache.xmlrpc"/>
       <plugin id="org.easymock"/>
-<!--
-      <plugin id="org.eclipse.acceleo.common"/>
-      <plugin id="org.eclipse.acceleo.compatibility"/>
-      <plugin id="org.eclipse.acceleo.compatibility.ui"/>
-      <plugin id="org.eclipse.acceleo.doc"/>
-      <plugin id="org.eclipse.acceleo.engine"/>
-      <plugin id="org.eclipse.acceleo.ide.ui"/>
-      <plugin id="org.eclipse.acceleo.model"/>
-      <plugin id="org.eclipse.acceleo.model.edit"/>
-      <plugin id="org.eclipse.acceleo.parser"/>
-      <plugin id="org.eclipse.acceleo.profiler"/>
-      <plugin id="org.eclipse.acceleo.profiler.edit"/>
-      <plugin id="org.eclipse.acceleo.profiler.editor"/>
-      <plugin id="org.eclipse.acceleo.traceability" fragment="true"/>
-      <plugin id="org.eclipse.acceleo.traceability.model"/>
-      <plugin id="org.eclipse.acceleo.ui.capabilities"/>
--->
       <plugin id="org.eclipse.ant.core"/>
       <plugin id="org.eclipse.ant.launching"/>
       <plugin id="org.eclipse.ant.ui"/>
@@ -482,8 +403,8 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <plugin id="org.eclipse.jdt.junit.runtime"/>
       <plugin id="org.eclipse.jdt.junit4.runtime"/>
       <plugin id="org.eclipse.jdt.launching"/>
-      <plugin id="org.eclipse.jdt.launching.macosx" fragment=""/>
-      <plugin id="org.eclipse.jdt.launching.ui.macosx" fragment=""/>
+      <plugin id="org.eclipse.jdt.launching.macosx"/>
+      <plugin id="org.eclipse.jdt.launching.ui.macosx"/>
       <plugin id="org.eclipse.jdt.ui"/>
       <plugin id="org.eclipse.jem.util"/>
       <plugin id="org.eclipse.jface"/>
@@ -604,19 +525,9 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <plugin id="org.eclipse.ui.workbench"/>
       <plugin id="org.eclipse.ui.workbench.compatibility" fragment="true"/>
       <plugin id="org.eclipse.ui.workbench.texteditor"/>
-<!--
       <plugin id="org.eclipse.uml2"/>
-      <plugin id="org.eclipse.uml2.codegen.ecore"/>
-      <plugin id="org.eclipse.uml2.codegen.ecore.ui"/>
       <plugin id="org.eclipse.uml2.common"/>
-      <plugin id="org.eclipse.uml2.common.edit"/>
       <plugin id="org.eclipse.uml2.uml"/>
-      <plugin id="org.eclipse.uml2.uml.ecore.exporter"/>
-      <plugin id="org.eclipse.uml2.uml.ecore.importer"/>
-      <plugin id="org.eclipse.uml2.uml.edit"/>
-      <plugin id="org.eclipse.uml2.uml.editor"/>
-      <plugin id="org.eclipse.uml2.uml.resources"/>
--->
       <plugin id="org.eclipse.update.configurator"/>
       <plugin id="org.eclipse.update.core"/>
       <plugin id="org.eclipse.update.core.linux" fragment="true"/>
@@ -715,10 +626,8 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <plugin id="org.eclipse.xtext.util"/>
       <plugin id="org.eclipse.xtext.xtend"/>
       <plugin id="org.eclipse.xtext.xtext.ui"/>
-<!--
       <plugin id="org.eclipse.zest.core"/>
       <plugin id="org.eclipse.zest.layouts"/>
--->
       <plugin id="org.hamcrest"/>
       <plugin id="org.hamcrest.core"/>
       <plugin id="org.hamcrest.integration"/>
@@ -742,10 +651,6 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <plugin id="problem.editor"/>
       <plugin id="problem.generator"/>
       <plugin id="problem.ui"/>
-<!--
-      <plugin id="problem2ontology"/>
-      <plugin id="problem2ontology.ui"/>
--->
       <plugin id="process"/>
       <plugin id="process.edit"/>
       <plugin id="process.editor"/>
@@ -776,9 +681,6 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <feature id="org.eclipse.xtend.ui"/>
       <feature id="org.eclipse.xpand"/>
       <feature id="org.eclipse.xpand.ui"/>
-<!--
-      <feature id="org.eclipse.emf.mwe.ui"/>
--->
       <feature id="org.eclipse.mylyn_feature"/>
       <feature id="org.eclipse.mylyn.ide_feature"/>
       <feature id="org.eclipse.mylyn.bugzilla_feature"/>
@@ -797,49 +699,15 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <feature id="problem.feature"/>
       <feature id="ontology.feature"/>
       <feature id="org.eclipse.pde"/>
-<!--
-      <feature id="org.eclipse.acceleo"/>
-      <feature id="org.eclipse.acceleo.runtime"/>
--->
       <feature id="istar.feature"/>
       <feature id="dependency.feature"/>
       <feature id="argument.feature"/>
-<!--
-      <feature id="laser.littlejil.check.feature"/>
-      <feature id="laser.littlejil.search.feature"/>
-      <feature id="laser.visualjil.eclipse.assistants.feature"/>
-      <feature id="laser.visualjil.eclipse.romeo.feature"/>
-      <feature id="laser.visualjil.feature"/>
-      <feature id="laser.visualjil.javabeans.feature"/>
-      <feature id="laser.visualjil.jgrid.feature"/>
-      <feature id="laser.visualjil.jsim.feature"/>
-      <feature id="laser.visualjil.serialimporter.feature"/>
-      <feature id="laser.visualjil.vsrm.feature"/>
-      <feature id="littlejil.analysis.eclipse.feature"/>
-      <feature id="process.feature"/>
--->
-<!--
-      <feature id="hu.optxware.emf2viatra.feature"/>
-      <feature id="org.eclipse.viatra2.feature.core"/>
-      <feature id="org.eclipse.viatra2.feature.dsm"/>
-      <feature id="org.eclipse.viatra2.feature.strings"/>
-      <feature id="org.eclipse.viatra2.feature.visualisation"/>
-      <feature id="org.eclipse.viatra2.gui.pattern"/>
--->
       <feature id="org.eclipse.xsd.sdk"/>
       <feature id="org.eclipse.emf.doc"/>
-<!--
-      <feature id="org.eclipse.uml2"/>
--->
       <feature id="org.eclipse.help"/>
       <feature id="org.eclipse.equinox.p2.discovery.feature"/>
       <feature id="org.eclipse.equinox.p2.user.ui"/>
       <feature id="org.eclipse.gmf.tooling"/>
-<!--
-      <feature id="rbac.feature"/>
-      <feature id="it.unitn.disi.sistar.feature"/>
-      <feature id="elicitation.feature"/>
--->
    </features>
 
 

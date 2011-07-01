@@ -6,8 +6,8 @@
   <extension point="org.eclipse.emf.ecore.generated_package">
     <package 
        uri = "http://sead1.open.ac.uk/argument/Argument" 
-       class = "uk.ac.open.argument.argument.ArgumentPackage"
-       genModel = "uk/ac/open/argument/Argument.genmodel" /> 
+       class = "argument.argument.ArgumentPackage"
+       genModel = "argument/Argument.genmodel" /> 
 	
   </extension>
 

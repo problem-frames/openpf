@@ -1,0 +1,196 @@
+@namespace(uri="http://sead1.open.ac.uk/argument/Argument", prefix="argument")
+@gmf(foo="bar")
+package argument;
+
+@gmf.diagram(foo="bar")
+class ArgumentDiagram {
+  attr String name;
+  val Argument[*] nodes;
+  val Link[*] links;
+}
+
+class Link {
+  ref Argument from;
+  ref Argument to;
+  attr boolean generated;
+}
+
+@gmf.link(source="from", target="to", style="dot", width="2", color="255,0,0", target.decoration="arrow")
+class Rebuts extends Link {
+  @gmf.link(target="origin", style="dashed", width="1", color="255,105,180", target.decoration="arrow")
+  ref Argument origin;
+}
+
+@gmf.link(source="from", target="to", style="solid", width="2", color="0,255,0", target.decoration="arrow")
+class Mitigates extends Link {
+  @gmf.link(target="rebuttal", style="solid", width="1", color="255,105,180", target.decoration="arrow")
+  ref Argument rebuttal;
+}
+
+@gmf.node(label="name, description, round",
+   label.pattern="{0}: {1} #{2}",
+   label.icon="false")
+class Argument extends TerminalExpression {
+  attr String name;
+  attr String description;
+  attr int round;
+  @gmf.link(target="origin", style="dash", width="2", color="160,32,240", target.decoration="arrow")
+  ref Argument origin;
+  val Expression expr;
+  attr String foreground;
+  attr String background;
+  attr String shape;
+  attr String image;
+  @gmf.compartment(foo="bar")
+  val Argument[*] grounds;
+  @gmf.compartment(foo="bar")
+  val Argument[*] warrants;
+  ref Argument value;
+}
+
+class Expression extends PrePrimaryExpr {
+  val AssignmentOp assign;
+}
+
+class AssignmentOp {
+}
+
+class OrExp extends AssignmentOp {
+}
+
+class AndExp extends OrExp {
+}
+
+class Relational extends AndExp {
+}
+
+class Addition extends Relational {
+}
+
+class Multiplication extends Addition {
+}
+
+class Power extends Multiplication {
+}
+
+class UnaryExpr extends Power {
+  attr UnaryOp uop;
+  val PrePrimaryExpr right;
+}
+
+enum UnaryOp {
+  DEFAULT = 0;
+  NOT = 1;
+}
+
+class PrePrimaryExpr {
+  attr int n;
+}
+
+class TerminalExpression extends PrePrimaryExpr {
+}
+
+class AssignPlus extends AssignmentOp {
+  val OrExp left;
+  attr String aop;
+  val OrExp right;
+}
+
+class AssignMin extends AssignmentOp {
+  val OrExp left;
+  attr String aop;
+  val OrExp right;
+}
+
+class Or extends OrExp {
+  val AndExp left;
+  attr String or_op;
+  val AndExp right;
+}
+
+class And extends AndExp {
+  val Relational left;
+  attr String and_op;
+  val Relational right;
+}
+
+class RelNotEq extends Relational {
+  val Addition left;
+  attr String rel_op;
+  val Addition right;
+}
+
+class RelEqEq extends Relational {
+  val Addition left;
+  attr String rel_op;
+  val Addition right;
+}
+
+class RelLtEq extends Relational {
+  val Addition left;
+  attr String rel_op;
+  val Addition right;
+}
+
+class RelGtEq extends Relational {
+  val Addition left;
+  attr String rel_op;
+  val Addition right;
+}
+
+class RelEq extends Relational {
+  val Addition left;
+  attr String rel_op;
+  val Addition right;
+}
+
+class RelLt extends Relational {
+  val Addition left;
+  attr String rel_op;
+  val Addition right;
+}
+
+class RelGt extends Relational {
+  val Addition left;
+  attr String rel_op;
+  val Addition right;
+}
+
+class Plus extends Addition {
+  val Multiplication left;
+  attr String add_op;
+  val Multiplication right;
+}
+
+class Minus extends Addition {
+  val Multiplication left;
+  attr String add_op;
+  val Multiplication right;
+}
+
+class Multi extends Multiplication {
+  val Power left;
+  attr String mul_op;
+  val Power right;
+}
+
+class Div extends Multiplication {
+  val Power left;
+  attr String mul_op;
+  val Power right;
+}
+
+class Pow extends Power {
+  val UnaryExpr left;
+  attr String pow_op;
+  val UnaryExpr right;
+}
+
+class IntLiteral extends TerminalExpression {
+  attr int value;
+}
+
+class BooleanLiteral extends TerminalExpression {
+  attr boolean value;
+}
+

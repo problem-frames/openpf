@@ -12,8 +12,8 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="http://www.ac.uk/open/argument/Argument"
-            class="uk.ac.open.argument.argument.provider.ArgumentItemProviderAdapterFactory"
+            uri="http://sead1.open.ac.uk/argument/Argument"
+            class="argument.argument.provider.ArgumentItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

@@ -17,7 +17,7 @@ package edu.toronto.cs.openome.core.ui;
 public interface IConstants {
     public static final String PLUGIN_ID = "core"; //$NON-NLS-1$
 
-    public static final String PREFIX = PLUGIN_ID + "."; //$NON-NLS-1$
+    public static final String PREFIX = "open"; //$NON-NLS-1$
 
     public static final String P_CONTENT_OUTLINE = PREFIX + "content_outline"; //$NON-NLS-1$
 

@@ -87,5 +87,16 @@
        </property>
     </product>
  </extension>
-
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="org.eclipse.pde.ui.MainPreferencePage"
+            class="edu.toronto.cs.openome.core.ui.PrefPage"
+            id="core.prefpage"
+            name="Program Analysis">
+         <keywordReference
+               id="core.prefpage">
+         </keywordReference>
+      </page>
+   </extension>
 </plugin>

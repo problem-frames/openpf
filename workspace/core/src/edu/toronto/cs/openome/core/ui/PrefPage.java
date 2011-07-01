@@ -29,11 +29,11 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
  */
 public class PrefPage extends PreferencePage implements IWorkbenchPreferencePage, SelectionListener, ModifyListener {
 	public PrefPage() {
-		super("OpenOME");
+		super("Open");
 	}
 	public void init(IWorkbench workbench) {
 		setImageDescriptor(
-			AbstractUIPlugin.imageDescriptorFromPlugin("core", "icons/protege.gif"));
+			AbstractUIPlugin.imageDescriptorFromPlugin("core", "icons/example.gif"));
 	}
 	protected void performApply() {
         storeValues();
@@ -86,13 +86,8 @@ public class PrefPage extends PreferencePage implements IWorkbenchPreferencePage
      * Method declared on PreferencePage
      */
     protected Control createContents(Composite parent) {
-        // The following method is not supported in SDK 3.0.2 !
-//    	PlatformUI.getWorkbench().getHelpSystem().setHelp(parent,
-//				IConstants.PREFERENCE_PAGE_CONTEXT);
-        //composite_textField << parent
         Composite composite_textField = createComposite(parent, 2);
         Composite composite_tab = createComposite(parent, 2);
-//        createLabel(composite_tab, "Check_Box_Options");
         tabForward(composite_tab);
         Composite composite_checkBox = createComposite(composite_tab, 1);
         Properties ps = System.getProperties();        
@@ -111,7 +106,6 @@ public class PrefPage extends PreferencePage implements IWorkbenchPreferencePage
                 fields.put(key, text);
         	}
         }
-//        createPushButton(composite_textField, "Change");
         initializeValues();
         return new Composite(parent, SWT.NULL);
     }

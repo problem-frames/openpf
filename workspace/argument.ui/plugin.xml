@@ -2,49 +2,48 @@
 <?eclipse version="3.0"?>
 
 <plugin>
-
-   <extension point="org.eclipse.ui.startup">
-     <startup class="uk.ac.open.argument.ui.ArgumentStartup"/>
-   </extension>
+       <extension point="org.eclipse.ui.startup">
+	     <startup class="argument.ui.ArgumentStartup"/>
+	   </extension>
     <extension
             point="org.eclipse.ui.editors">
         <editor
-            class="uk.ac.open.argument.ui.ArgumentExecutableExtensionFactory:uk.ac.open.argument.ui.ArgumentEditor"
+            class="argument.ui.ArgumentExecutableExtensionFactory:argument.ui.ArgumentEditor"
             contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
             default="true"
             extensions="argument"
-            id="uk.ac.open.argument.Argument"
+            id="argument.Argument"
             name="Argument Editor">
         </editor>
     </extension>
     <extension
         point="org.eclipse.ui.handlers">
         <handler
-            class="uk.ac.open.argument.ui.ArgumentExecutableExtensionFactory:org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler"
+            class="argument.ui.ArgumentExecutableExtensionFactory:org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler"
             commandId="org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclaration">
             <activeWhen>
                 <reference
-                    definitionId="uk.ac.open.argument.Argument.Editor.opened">
+                    definitionId="argument.Argument.Editor.opened">
                 </reference>
             </activeWhen>
         </handler>
         <handler
-            class="uk.ac.open.argument.ui.ArgumentExecutableExtensionFactory:org.eclipse.xtext.ui.editor.handler.ValidateActionHandler"
-            commandId="uk.ac.open.argument.Argument.validate">
+            class="argument.ui.ArgumentExecutableExtensionFactory:org.eclipse.xtext.ui.editor.handler.ValidateActionHandler"
+            commandId="argument.Argument.validate">
          <activeWhen>
             <reference
-                    definitionId="uk.ac.open.argument.Argument.Editor.opened">
+                    definitionId="argument.Argument.Editor.opened">
             </reference>
          </activeWhen>
       </handler>
     </extension>
     <extension point="org.eclipse.core.expressions.definitions">
-        <definition id="uk.ac.open.argument.Argument.Editor.opened">
+        <definition id="argument.Argument.Editor.opened">
             <and>
                 <reference definitionId="isActiveEditorAnInstanceOfXtextEditor"/>
                 <with variable="activeEditor">
                     <test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName" 
-                        value="uk.ac.open.argument.Argument" 
+                        value="argument.Argument" 
                         forcePluginActivation="true"/>
                 </with>        
             </and>
@@ -53,37 +52,51 @@
     <extension
             point="org.eclipse.ui.preferencePages">
         <page
-            class="uk.ac.open.argument.ui.ArgumentExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
-            id="uk.ac.open.argument.Argument"
+            category="argument.Argument"
+            class="argument.ui.ArgumentExecutableExtensionFactory:argument.ui.ArgumentPreference"
+            id="argument.Argument.reasoning"
+            name="Reasoning">
+            <keywordReference id="argument.ui.keyword_Argument"/>
+        </page>
+        <page
+            class="argument.ui.ArgumentExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
+            id="argument.Argument"
             name="Argument">
-            <keywordReference id="uk.ac.open.argument.ui.keyword_Argument"/>
+            <keywordReference id="argument.ui.keyword_Argument"/>
         </page>
         <page
-            category="uk.ac.open.argument.Argument"
-            class="uk.ac.open.argument.ui.ArgumentExecutableExtensionFactory:org.eclipse.xtext.ui.editor.syntaxcoloring.SyntaxColoringPreferencePage"
-            id="uk.ac.open.argument.Argument.coloring"
+            category="argument.Argument"
+            class="argument.ui.ArgumentExecutableExtensionFactory:org.eclipse.xtext.ui.editor.syntaxcoloring.SyntaxColoringPreferencePage"
+            id="argument.Argument.coloring"
             name="Syntax Coloring">
-            <keywordReference id="uk.ac.open.argument.ui.keyword_Argument"/>
+            <keywordReference id="argument.ui.keyword_Argument"/>
         </page>
         <page
-            category="uk.ac.open.argument.Argument"
-            class="uk.ac.open.argument.ui.ArgumentExecutableExtensionFactory:org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage"
-            id="uk.ac.open.argument.Argument.templates"
+            category="argument.Argument"
+            class="argument.ui.ArgumentExecutableExtensionFactory:org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage"
+            id="argument.Argument.templates"
             name="Templates">
-            <keywordReference id="uk.ac.open.argument.ui.keyword_Argument"/>
+            <keywordReference id="argument.ui.keyword_Argument"/>
         </page>
+        
     </extension>
+    <extension  
+         point="org.eclipse.core.runtime.preferences">  
+      <initializer  
+            class="argument.ui.ArgumentExecutableExtensionFactory:argument.ui.ArgumentPreferenceInitializer">  
+      </initializer>  
+    </extension>   
     <extension
         point="org.eclipse.ui.keywords">
         <keyword
-            id="uk.ac.open.argument.ui.keyword_Argument"
+            id="argument.ui.keyword_Argument"
             label="Argument"/>
     </extension>
     <extension
          point="org.eclipse.ui.commands">
       <command
             description="Trigger expensive validation"
-            id="uk.ac.open.argument.Argument.validate"
+            id="argument.Argument.validate"
             name="Validate">
       </command>
     </extension>
@@ -91,12 +104,12 @@
         <menuContribution
             locationURI="popup:#TextEditorContext?after=group.edit">
              <command
-                 commandId="uk.ac.open.argument.Argument.validate"
+                 commandId="argument.Argument.validate"
                  style="push"
                  tooltip="Trigger expensive validation">
             <visibleWhen checkEnabled="false">
                 <reference
-                    definitionId="uk.ac.open.argument.Argument.Editor.opened">
+                    definitionId="argument.Argument.Editor.opened">
                 </reference>
             </visibleWhen>
          </command>  
@@ -106,7 +119,7 @@
 		<menuContribution locationURI="popup:#TextEditorContext?endof=group.find">
 			<command commandId="org.eclipse.xtext.ui.editor.FindReferences">
 				<visibleWhen checkEnabled="false">
-                	<reference definitionId="uk.ac.open.argument.Argument.Editor.opened">
+                	<reference definitionId="argument.Argument.Editor.opened">
                 	</reference>
             	</visibleWhen>
 			</command>
@@ -114,11 +127,11 @@
 	</extension>
 	<extension point="org.eclipse.ui.handlers">
 	    <handler
-            class="uk.ac.open.argument.ui.ArgumentExecutableExtensionFactory:org.eclipse.xtext.ui.editor.findrefs.FindReferencesHandler"
+            class="argument.ui.ArgumentExecutableExtensionFactory:org.eclipse.xtext.ui.editor.findrefs.FindReferencesHandler"
             commandId="org.eclipse.xtext.ui.editor.FindReferences">
             <activeWhen>
                 <reference
-                    definitionId="uk.ac.open.argument.Argument.Editor.opened">
+                    definitionId="argument.Argument.Editor.opened">
                 </reference>
             </activeWhen>
         </handler>
@@ -129,13 +142,13 @@
 	<extension
 		point="org.eclipse.emf.ecore.extension_parser">
 		<parser
-			class="uk.ac.open.argument.ui.ArgumentExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
+			class="argument.ui.ArgumentExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
 			type="argument">
 		</parser>
 	</extension>
 	<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
         <resourceServiceProvider
-            class="uk.ac.open.argument.ui.ArgumentExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
+            class="argument.ui.ArgumentExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
             uriExtension="argument">
         </resourceServiceProvider>
     </extension>
@@ -147,11 +160,11 @@
 	<extension
 		point="org.eclipse.ui.handlers">
 		<handler 
-			class="uk.ac.open.argument.ui.ArgumentExecutableExtensionFactory:org.eclipse.xtext.ui.editor.outline.quickoutline.ShowQuickOutlineActionHandler"
+			class="argument.ui.ArgumentExecutableExtensionFactory:org.eclipse.xtext.ui.editor.outline.quickoutline.ShowQuickOutlineActionHandler"
 			commandId="org.eclipse.xtext.ui.editor.outline.QuickOutline">
 			<activeWhen>
 				<reference
-					definitionId="uk.ac.open.argument.Argument.Editor.opened">
+					definitionId="argument.Argument.Editor.opened">
 				</reference>
 			</activeWhen>
 		</handler>
@@ -171,7 +184,7 @@
 				style="push"
 				tooltip="Open Quick Outline">
 				<visibleWhen checkEnabled="false">
-					<reference definitionId="uk.ac.open.argument.Argument.Editor.opened"/>
+					<reference definitionId="argument.Argument.Editor.opened"/>
 				</visibleWhen>
 			</command>
 		</menuContribution>
@@ -180,7 +193,7 @@
    <extension
          point="org.eclipse.ui.ide.markerResolution">
       <markerResolutionGenerator
-            class="uk.ac.open.argument.ui.ArgumentExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator">
+            class="argument.ui.ArgumentExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator">
       </markerResolutionGenerator>
    </extension>
 

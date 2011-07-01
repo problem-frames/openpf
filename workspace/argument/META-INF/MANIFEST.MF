@@ -1,4 +1,10 @@
 Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: argument
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0
+Bundle-SymbolicName: argument; singleton:=true
+Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext,
  org.eclipse.xtext.generator;resolution:=optional,
  org.apache.commons.logging;resolution:=optional,
@@ -10,19 +16,16 @@ Require-Bundle: org.eclipse.xtext,
  org.eclipse.xtext.util,
  org.eclipse.emf.ecore,
  org.eclipse.emf.common,
- org.antlr.runtime;resolution:=optional
-Export-Package: uk.ac.open.argument,uk.ac.open.argument.services,uk.ac
- .open.argument.argument,uk.ac.open.argument.argument.impl,uk.ac.open.
- argument.argument.util,uk.ac.open.argument.parseTreeConstruction,uk.a
- c.open.argument.parser.antlr,uk.ac.open.argument.parser.antlr.interna
- l,uk.ac.open.argument.validation
-Bundle-Vendor: The Open University
-Bundle-ActivationPolicy: lazy
-Bundle-Version: 1.0.0
-Bundle-Name: argument
-Bundle-ManifestVersion: 2
-Bundle-SymbolicName: argument; singleton:=true
+ org.antlr.runtime
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-
-
+Export-Package: argument.argument,
+ argument.argument.formatting,
+ argument.argument.impl,
+ argument.argument.scoping,
+ argument.argument.util,
+ argument.argument.validation,
+ argument.parseTreeConstruction,
+ argument.parser.antlr,
+ argument.parser.antlr.internal,
+ argument.services

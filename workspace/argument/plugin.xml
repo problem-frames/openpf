@@ -5,9 +5,9 @@
 
   <extension point="org.eclipse.emf.ecore.generated_package">
     <package 
-       uri = "http://www.ac.uk/open/argument/Argument" 
-       class = "uk.ac.open.argument.argument.ArgumentPackage"
-       genModel = "uk/ac/open/argument/Argument.genmodel" /> 
+       uri = "http://sead1.open.ac.uk/argument/Argument" 
+       class = "argument.argument.ArgumentPackage"
+       genModel = "argument/Argument.genmodel" /> 
 	
   </extension>
 
@@ -31,5 +31,4 @@
       <example file="http://computing-research.open.ac.uk/trac/openre/raw-attachment/wiki/Examples/argument.dir"/>
 -->
   </extension>
-
 </plugin>

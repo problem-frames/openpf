@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.0"?>
+<!--
+
+-->
 <plugin>
 
    <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
@@ -18,14 +21,14 @@
    <extension point="org.eclipse.ui.editors" id="gmf-editor">
       <?gmfgen generated="true"?>
       <editor
-         id="uk.ac.open.argument.argument.diagram.part.ArgumentDiagramEditorID"
+         id="argument.argument.diagram.part.ArgumentDiagramEditorID"
          name="%editorName"
          icon="icons/obj16/ArgumentDiagramFile.gif"
          extensions="argument_diagram"
          default="true"
-         class="uk.ac.open.argument.argument.diagram.part.ArgumentDiagramEditor"
-         matchingStrategy="uk.ac.open.argument.argument.diagram.part.ArgumentMatchingStrategy"
-         contributorClass="uk.ac.open.argument.argument.diagram.part.ArgumentDiagramActionBarContributor">
+         class="argument.argument.diagram.part.ArgumentDiagramEditor"
+         matchingStrategy="argument.argument.diagram.part.ArgumentMatchingStrategy"
+         contributorClass="argument.argument.diagram.part.ArgumentDiagramActionBarContributor">
       </editor>
    </extension>
    
@@ -33,7 +36,7 @@
       <?gmfgen generated="true"?>
       <context
          description="%context.description"
-         id="uk.ac.open.argument.argument.diagram.ui.diagramContext"
+         id="argument.argument.diagram.ui.diagramContext"
          name="%context.name"
          parentId="org.eclipse.gmf.runtime.diagram.ui.diagramContext">
       </context>
@@ -45,8 +48,8 @@
   	     name="%newWizardName"
   	     icon="icons/obj16/ArgumentDiagramFile.gif"
   	     category="org.eclipse.ui.Examples"
-  	     class="uk.ac.open.argument.argument.diagram.part.ArgumentCreationWizard"
-  	     id="uk.ac.open.argument.argument.diagram.part.ArgumentCreationWizardID">
+  	     class="argument.argument.diagram.part.ArgumentCreationWizard"
+  	     id="argument.argument.diagram.part.ArgumentCreationWizardID">
   	  	 <description>%newWizardDesc</description>  
       </wizard>
    </extension>
@@ -59,7 +62,7 @@
             objectClass="org.eclipse.core.resources.IFile">
          <action
                label="%initDiagramActionLabel"
-               class="uk.ac.open.argument.argument.diagram.part.ArgumentInitDiagramFileAction"
+               class="argument.argument.diagram.part.ArgumentInitDiagramFileAction"
                menubarPath="additions"
                enablesFor="1"
                id="argument.diagram.InitDiagramAction">
@@ -73,7 +76,7 @@
          class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
          id="ArgumentPresentation">
          <Priority name="Lowest"/>
-         <ViewId id="uk.ac.open.argument.argument.diagram.part.ArgumentDiagramEditorID">
+         <ViewId id="argument.argument.diagram.part.ArgumentDiagramEditorID">
             <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
                <GlobalActionId actionId="delete"/>
             </ElementType>
@@ -86,7 +89,7 @@
          class="org.eclipse.gmf.runtime.diagram.ui.printing.render.providers.DiagramWithPrintGlobalActionHandlerProvider"
          id="ArgumentPresentationPrint">
          <Priority name="Lowest"/>
-         <ViewId id="uk.ac.open.argument.argument.diagram.part.ArgumentDiagramEditorID">
+         <ViewId id="argument.argument.diagram.part.ArgumentDiagramEditorID">
             <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
                <GlobalActionId actionId="print"/>
             </ElementType>
@@ -96,7 +99,7 @@
          class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
          id="ArgumentPresentationIDE">
          <Priority name="Lowest"/>
-         <ViewId id="uk.ac.open.argument.argument.diagram.part.ArgumentDiagramEditorID">
+         <ViewId id="argument.argument.diagram.part.ArgumentDiagramEditorID">
             <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
                <GlobalActionId actionId="bookmark"/>
             </ElementType>
@@ -106,7 +109,7 @@
             class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
             id="ArgumentRender">
          <Priority name="Lowest"/>
-         <ViewId id="uk.ac.open.argument.argument.diagram.part.ArgumentDiagramEditorID">
+         <ViewId id="argument.argument.diagram.part.ArgumentDiagramEditorID">
             <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
                <GlobalActionId actionId="cut"/>
                <GlobalActionId actionId="copy"/>
@@ -117,9 +120,33 @@
    </extension>
 
 
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.markerNavigationProviders" id="markers-navigation">
+      <?gmfgen generated="true"?>
+      <MarkerNavigationProvider class="argument.argument.diagram.providers.ArgumentMarkerNavigationProvider">
+         <MarkerType name="argument.diagram.diagnostic"/>
+         <Priority name="Lowest"/>
+      </MarkerNavigationProvider>
+   </extension>
+
+   <extension id="diagnostic" name="Argument Plugin problems" point="org.eclipse.core.resources.markers">
+      <?gmfgen generated="true"?>
+      <super type="org.eclipse.core.resources.problemmarker"/>
+      <super type="org.eclipse.gmf.runtime.common.ui.services.marker"/>
+      <persistent value="true"/>
+   </extension>   
+
+   <extension id="validationDecoratorProvider" name="ValidationDecorations" point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders">
+      <?gmfgen generated="true"?>
+      <decoratorProvider class="argument.argument.diagram.providers.ArgumentValidationDecoratorProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.diagram.ui.editparts.IPrimaryEditPart(org.eclipse.gmf.runtime.diagram.ui)" id="PRIMARY_VIEW"/>
+         <context decoratorTargets="PRIMARY_VIEW"/>
+      </decoratorProvider>
+   </extension>
+
    <extension point="org.eclipse.core.runtime.preferences" id="prefs">
       <?gmfgen generated="true"?>
-      <initializer class="uk.ac.open.argument.argument.diagram.preferences.DiagramPreferenceInitializer"/>
+      <initializer class="argument.argument.diagram.preferences.DiagramPreferenceInitializer"/>
    </extension>
 
    <extension point="org.eclipse.ui.preferencePages" id="prefpages">
@@ -127,31 +154,31 @@
       <page
             id="argument.diagram.general"
             name="%prefpage.argument.diagram.general"
-            class="uk.ac.open.argument.argument.diagram.preferences.DiagramGeneralPreferencePage">
+            class="argument.argument.diagram.preferences.DiagramGeneralPreferencePage">
       </page>
       <page
             id="argument.diagram.appearance"
             name="%prefpage.argument.diagram.appearance"
             category="argument.diagram.general"
-            class="uk.ac.open.argument.argument.diagram.preferences.DiagramAppearancePreferencePage">
+            class="argument.argument.diagram.preferences.DiagramAppearancePreferencePage">
       </page>
       <page
             id="argument.diagram.connections"
             name="%prefpage.argument.diagram.connections"
             category="argument.diagram.general"
-            class="uk.ac.open.argument.argument.diagram.preferences.DiagramConnectionsPreferencePage">
+            class="argument.argument.diagram.preferences.DiagramConnectionsPreferencePage">
       </page>
       <page
             id="argument.diagram.printing"
             name="%prefpage.argument.diagram.printing"
             category="argument.diagram.general"
-            class="uk.ac.open.argument.argument.diagram.preferences.DiagramPrintingPreferencePage">
+            class="argument.argument.diagram.preferences.DiagramPrintingPreferencePage">
       </page>
       <page
             id="argument.diagram.rulersAndGrid"
             name="%prefpage.argument.diagram.rulersAndGrid"
             category="argument.diagram.general"
-            class="uk.ac.open.argument.argument.diagram.preferences.DiagramRulersAndGridPreferencePage">
+            class="argument.argument.diagram.preferences.DiagramRulersAndGridPreferencePage">
       </page>
    </extension>
 
@@ -159,7 +186,7 @@
       <?gmfgen generated="true"?>
       <propertyContributor
             contributorId="argument.diagram"
-            labelProvider="uk.ac.open.argument.argument.diagram.sheet.ArgumentSheetLabelProvider">
+            labelProvider="argument.argument.diagram.sheet.ArgumentSheetLabelProvider">
          <propertyCategory category="domain"/>
          <propertyCategory category="visual"/>
          <propertyCategory category="extra"/>
@@ -210,27 +237,31 @@
          <propertySection
             id="property.section.domain" 
             tab="property.tab.domain"
-            class="uk.ac.open.argument.argument.diagram.sheet.ArgumentPropertySection">
+            class="argument.argument.diagram.sheet.ArgumentPropertySection">
             <input type="org.eclipse.gmf.runtime.notation.View"/>
             <input type="org.eclipse.gef.EditPart"/>
-            <input type="uk.ac.open.argument.argument.diagram.navigator.ArgumentAbstractNavigatorItem"/>
+            <input type="argument.argument.diagram.navigator.ArgumentAbstractNavigatorItem"/>
          </propertySection>
       </propertySections>
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders" id="view-provider">
       <?gmfgen generated="true"?>
-      <viewProvider class="uk.ac.open.argument.argument.diagram.providers.ArgumentViewProvider">
+      <viewProvider class="argument.argument.diagram.providers.ArgumentViewProvider">
          <Priority name="Lowest"/>
+         <object id="referencing-diagrams" class="org.eclipse.gmf.runtime.notation.Diagram">
+            <method name="getType()" value="argument"/>
+         </object>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Argument"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,3001,3002"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003,4004"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003,4004,4005"/>
       </viewProvider>
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders" id="ep-provider">
       <?gmfgen generated="true"?>
-      <editpartProvider class="uk.ac.open.argument.argument.diagram.providers.ArgumentEditPartProvider">
+      <editpartProvider class="argument.argument.diagram.providers.ArgumentEditPartProvider">
          <Priority name="Lowest"/>
          <object class="org.eclipse.gmf.runtime.notation.Diagram" id="generated-diagram">
             <method name="getType()" value="Argument"/>
@@ -239,7 +270,7 @@
             <method name="getType()" value="2001,3001,3002"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
-            <method name="getType()" value="4001,4002,4003,4004"/>
+            <method name="getType()" value="4001,4002,4003,4004,4005"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
             <method name="getType()" value="5003,5002,5001"/>
@@ -253,51 +284,62 @@
 
    <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
       <?gmfgen generated="true"?>
-      <modelingAssistantProvider class="uk.ac.open.argument.argument.diagram.providers.ArgumentModelingAssistantProvider">
+      <modelingAssistantProvider class="argument.argument.diagram.providers.ArgumentModelingAssistantProvider">
          <Priority name="Lowest"/>
-         <object class="uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDiagramEditPart" id="ArgumentDiagram_1000"/>
-         <object class="uk.ac.open.argument.argument.diagram.edit.parts.ArgumentEditPart" id="Argument_2001"/>
+         <object class="argument.argument.diagram.edit.parts.ArgumentDiagramEditPart" id="ArgumentDiagram_1000"/>
+         <object class="argument.argument.diagram.edit.parts.ArgumentEditPart" id="Argument_2001"/>
          <context elements="ArgumentDiagram_1000,Argument_2001"/>
       </modelingAssistantProvider>
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders" id="icon-provider">
       <?gmfgen generated="true"?>
-      <IconProvider class="uk.ac.open.argument.argument.diagram.providers.ArgumentIconProvider">
+      <IconProvider class="argument.argument.diagram.providers.ArgumentIconProvider">
          <Priority name="Low"/>
       </IconProvider>
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders" id="parser-provider">
       <?gmfgen generated="true"?>
-      <ParserProvider class="uk.ac.open.argument.argument.diagram.providers.ArgumentParserProvider">
+      <ParserProvider class="argument.argument.diagram.providers.ArgumentParserProvider">
          <Priority name="Lowest"/>
       </ParserProvider>
    </extension>
 
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders" id="decorator-provider">
+      <?gmfgen generated="true"?>
+      <decoratorProvider class="argument.argument.diagram.providers.ArgumentShortcutsDecoratorProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Node(org.eclipse.gmf.runtime.notation)" id="generated-top-nodes">
+            <method name="getType()" value="2001"/>
+         </object>
+         <context decoratorTargets="generated-top-nodes"/>
+      </decoratorProvider>
+   </extension>
+
    <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes" id="element-types">
       <?gmfgen generated="true"?>
-      <metamodel nsURI="http://www.ac.uk/open/argument/Argument">
+      <metamodel nsURI="http://sead1.open.ac.uk/argument/Argument">
          <metamodelType
                id="argument.diagram.ArgumentDiagram_1000"
                name="%metatype.name.ArgumentDiagram_1000"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="ArgumentDiagram"
-               edithelper="uk.ac.open.argument.argument.diagram.edit.helpers.ArgumentDiagramEditHelper">
+               edithelper="argument.argument.diagram.edit.helpers.ArgumentDiagramEditHelper">
             <param name="semanticHint" value="1000"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="http://www.ac.uk/open/argument/Argument">
+      <metamodel nsURI="http://sead1.open.ac.uk/argument/Argument">
          <metamodelType
                id="argument.diagram.Argument_2001"
                name="%metatype.name.Argument_2001"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="Argument"
-               edithelper="uk.ac.open.argument.argument.diagram.edit.helpers.ArgumentEditHelper">
+               edithelper="argument.argument.diagram.edit.helpers.ArgumentEditHelper">
             <param name="semanticHint" value="2001"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="http://www.ac.uk/open/argument/Argument">
+      <metamodel nsURI="http://sead1.open.ac.uk/argument/Argument">
          <specializationType
                id="argument.diagram.Argument_3001"
                name="%metatype.name.Argument_3001"
@@ -306,7 +348,7 @@
             <param name="semanticHint" value="3001"/>
          </specializationType>
       </metamodel>
-      <metamodel nsURI="http://www.ac.uk/open/argument/Argument">
+      <metamodel nsURI="http://sead1.open.ac.uk/argument/Argument">
          <specializationType
                id="argument.diagram.Argument_3002"
                name="%metatype.name.Argument_3002"
@@ -315,42 +357,51 @@
             <param name="semanticHint" value="3002"/>
          </specializationType>
       </metamodel>
-      <metamodel nsURI="http://www.ac.uk/open/argument/Argument">
+      <metamodel nsURI="http://sead1.open.ac.uk/argument/Argument">
          <metamodelType
                id="argument.diagram.Rebuts_4001"
                name="%metatype.name.Rebuts_4001"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="Rebuts"
-               edithelper="uk.ac.open.argument.argument.diagram.edit.helpers.RebutsEditHelper">
+               edithelper="argument.argument.diagram.edit.helpers.RebutsEditHelper">
             <param name="semanticHint" value="4001"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="http://www.ac.uk/open/argument/Argument">
+      <metamodel nsURI="http://sead1.open.ac.uk/argument/Argument">
          <metamodelType
                id="argument.diagram.Mitigates_4002"
                name="%metatype.name.Mitigates_4002"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="Mitigates"
-               edithelper="uk.ac.open.argument.argument.diagram.edit.helpers.MitigatesEditHelper">
+               edithelper="argument.argument.diagram.edit.helpers.MitigatesEditHelper">
             <param name="semanticHint" value="4002"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="http://www.ac.uk/open/argument/Argument">
+      <metamodel nsURI="http://sead1.open.ac.uk/argument/Argument">
          <specializationType
-               id="argument.diagram.MitigatesRebuttal_4003"
-               name="%metatype.name.MitigatesRebuttal_4003"
+               id="argument.diagram.RebutsOrigin_4003"
+               name="%metatype.name.RebutsOrigin_4003"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
             <param name="semanticHint" value="4003"/>
          </specializationType>
       </metamodel>
-      <metamodel nsURI="http://www.ac.uk/open/argument/Argument">
+      <metamodel nsURI="http://sead1.open.ac.uk/argument/Argument">
          <specializationType
-               id="argument.diagram.ArgumentOrigin_4004"
-               name="%metatype.name.ArgumentOrigin_4004"
+               id="argument.diagram.MitigatesRebuttal_4004"
+               name="%metatype.name.MitigatesRebuttal_4004"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
             <param name="semanticHint" value="4004"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://sead1.open.ac.uk/argument/Argument">
+         <specializationType
+               id="argument.diagram.ArgumentOrigin_4005"
+               name="%metatype.name.ArgumentOrigin_4005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4005"/>
          </specializationType>
       </metamodel>
    </extension>
@@ -371,8 +422,9 @@
          <elementType ref="argument.diagram.Argument_3002"/>
          <elementType ref="argument.diagram.Rebuts_4001"/>
          <elementType ref="argument.diagram.Mitigates_4002"/>
-         <elementType ref="argument.diagram.MitigatesRebuttal_4003"/>
-         <elementType ref="argument.diagram.ArgumentOrigin_4004"/>
+         <elementType ref="argument.diagram.RebutsOrigin_4003"/>
+         <elementType ref="argument.diagram.MitigatesRebuttal_4004"/>
+         <elementType ref="argument.diagram.ArgumentOrigin_4005"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
       </binding>
    </extension>
@@ -383,7 +435,18 @@
            type="org.eclipse.emf.common.ui.URIEditorInput"
            namespace="argument.diagram"
            properties="isURIEditorInput"
-           class="uk.ac.open.argument.argument.diagram.part.ArgumentUriEditorInputTester">
+           class="argument.argument.diagram.part.ArgumentUriEditorInputTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isShortcut">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="argument.diagram.ShortcutPropertyTester"
+           type="org.eclipse.gmf.runtime.notation.View"
+           namespace="argument.diagram"
+           properties="isShortcut"
+           class="argument.argument.diagram.part.ArgumentShortcutPropertyTester">
        </propertyTester>
    </extension>
 
@@ -409,8 +472,8 @@
             id="argument.diagram.resourceContent" 
             name="%navigatorContentName" 
             priority="normal" 
-            contentProvider="uk.ac.open.argument.argument.diagram.navigator.ArgumentNavigatorContentProvider" 
-            labelProvider="uk.ac.open.argument.argument.diagram.navigator.ArgumentNavigatorLabelProvider"
+            contentProvider="argument.argument.diagram.navigator.ArgumentNavigatorContentProvider" 
+            labelProvider="argument.argument.diagram.navigator.ArgumentNavigatorLabelProvider"
             icon="icons/obj16/ArgumentDiagramFile.gif"
             activeByDefault="true">
          <triggerPoints>
@@ -419,24 +482,30 @@
     	          <instanceof value="org.eclipse.core.resources.IFile"/>
         	      <test property="org.eclipse.core.resources.extension" value="argument_diagram"/>
                </and>
-               <instanceof value="uk.ac.open.argument.argument.diagram.navigator.ArgumentAbstractNavigatorItem"/>
+               <instanceof value="argument.argument.diagram.navigator.ArgumentAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="argument.diagram.isShortcut"/>
+           	   </adapt>
             </or>
          </triggerPoints>
          <possibleChildren>
             <or>
-         	   <instanceof value="uk.ac.open.argument.argument.diagram.navigator.ArgumentAbstractNavigatorItem"/>
+         	   <instanceof value="argument.argument.diagram.navigator.ArgumentAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="argument.diagram.isShortcut"/>
+           	   </adapt>
             </or>
          </possibleChildren>
          <commonSorter 
                id="argument.diagram.navigatorSorter" 
-               class="uk.ac.open.argument.argument.diagram.navigator.ArgumentNavigatorSorter">
+               class="argument.argument.diagram.navigator.ArgumentNavigatorSorter">
             <parentExpression>
                <or>
 	              <and>
     	             <instanceof value="org.eclipse.core.resources.IFile"/>
         	         <test property="org.eclipse.core.resources.extension" value="argument_diagram"/>
                   </and>
-                  <instanceof value="uk.ac.open.argument.argument.diagram.navigator.ArgumentAbstractNavigatorItem"/>
+                  <instanceof value="argument.argument.diagram.navigator.ArgumentAbstractNavigatorItem"/>
                </or>
             </parentExpression>
          </commonSorter>
@@ -445,8 +514,8 @@
             id="argument.diagram.domainResourceContent" 
             name="%domainNavigatorContentName" 
             priority="normal" 
-            contentProvider="uk.ac.open.argument.argument.diagram.navigator.ArgumentDomainNavigatorContentProvider" 
-            labelProvider="uk.ac.open.argument.argument.diagram.navigator.ArgumentDomainNavigatorLabelProvider"
+            contentProvider="argument.argument.diagram.navigator.ArgumentDomainNavigatorContentProvider" 
+            labelProvider="argument.argument.diagram.navigator.ArgumentDomainNavigatorLabelProvider"
             icon="icons/obj16/ArgumentDiagramFile.gif"
             activeByDefault="true">
          <triggerPoints>
@@ -455,19 +524,22 @@
     	          <instanceof value="org.eclipse.core.resources.IFile"/>
         	      <test property="org.eclipse.core.resources.extension" value="argument"/>
                </and>
-               <instanceof value="uk.ac.open.argument.argument.diagram.navigator.ArgumentDomainNavigatorItem"/>
+               <instanceof value="argument.argument.diagram.navigator.ArgumentDomainNavigatorItem"/>
             </or>
          </triggerPoints>
          <possibleChildren>
-            <instanceof value="uk.ac.open.argument.argument.diagram.navigator.ArgumentDomainNavigatorItem"/>
+            <instanceof value="argument.argument.diagram.navigator.ArgumentDomainNavigatorItem"/>
          </possibleChildren>
       </navigatorContent>
       <actionProvider
             id="argument.diagram.navigatorActionProvider"
-            class="uk.ac.open.argument.argument.diagram.navigator.ArgumentNavigatorActionProvider">
+            class="argument.argument.diagram.navigator.ArgumentNavigatorActionProvider">
          <enablement>
             <or>
-               <instanceof value="uk.ac.open.argument.argument.diagram.navigator.ArgumentAbstractNavigatorItem"/>
+               <instanceof value="argument.argument.diagram.navigator.ArgumentAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="argument.diagram.isShortcut"/>
+           	   </adapt>
             </or>
          </enablement>
       </actionProvider>
@@ -477,7 +549,7 @@
       <?gmfgen generated="true"?>
       <linkHelper
             id="argument.diagram.navigatorLinkHelper"
-            class="uk.ac.open.argument.argument.diagram.navigator.ArgumentNavigatorLinkHelper">
+            class="argument.argument.diagram.navigator.ArgumentNavigatorLinkHelper">
          <editorInputEnablement>
             <and>
                <instanceof value="org.eclipse.emf.common.ui.URIEditorInput"/>
@@ -485,7 +557,7 @@
             </and>
          </editorInputEnablement>
          <selectionEnablement>
-            <instanceof value="uk.ac.open.argument.argument.diagram.navigator.ArgumentAbstractNavigatorItem"/>
+            <instanceof value="argument.argument.diagram.navigator.ArgumentAbstractNavigatorItem"/>
          </selectionEnablement>
       </linkHelper>
    </extension>
@@ -493,17 +565,17 @@
       <?gmfgen generated="true"?>
       <command
          categoryId="org.eclipse.ui.category.edit"
-         defaultHandler="uk.ac.open.argument.argument.diagram.part.ArgumentDiagramUpdateCommand"
+         defaultHandler="argument.argument.diagram.part.ArgumentDiagramUpdateCommand"
          description="%update.diagram.description"
-         id="uk.ac.open.argument.argument.diagram.updateDiagram"
+         id="argument.argument.diagram.updateDiagram"
          name="%update.diagram.name"/>
    </extension>
    
    <extension point="org.eclipse.ui.bindings" id="update-cmd-binding">
       <?gmfgen generated="true"?>
       <key 
-         commandId="uk.ac.open.argument.argument.diagram.updateDiagram"
-         contextId="uk.ac.open.argument.argument.diagram.ui.diagramContext"
+         commandId="argument.argument.diagram.updateDiagram"
+         contextId="argument.argument.diagram.ui.diagramContext"
          schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
          sequence="F5"/>
    </extension>
@@ -518,9 +590,9 @@
          <command commandId="argument.diagram.LoadResourceAction">
             <visibleWhen>
                <and>
-                  <with variable="activePartId"><equals value="uk.ac.open.argument.argument.diagram.part.ArgumentDiagramEditorID"/></with>
+                  <with variable="activePartId"><equals value="argument.argument.diagram.part.ArgumentDiagramEditorID"/></with>
                   <with variable="selection"><iterate ifEmpty="false"> 
-                     <instanceof value="uk.ac.open.argument.argument.diagram.edit.parts.ArgumentDiagramEditPart"/>
+                     <instanceof value="argument.argument.diagram.edit.parts.ArgumentDiagramEditPart"/>
                   </iterate></with>
                </and>
             </visibleWhen>
@@ -530,11 +602,11 @@
 
    <extension point="org.eclipse.ui.commands" id="menu-commands">
       <?gmfgen generated="true"?>
-      <category id="uk.ac.open.argument.argument.diagram.part.ArgumentDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
+      <category id="argument.argument.diagram.part.ArgumentDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
       <command id="argument.diagram.LoadResourceAction"
          name="Load Resource"
-         categoryId="uk.ac.open.argument.argument.diagram.part.ArgumentDiagramEditorID"
-         defaultHandler="uk.ac.open.argument.argument.diagram.part.LoadResourceAction"/>
+         categoryId="argument.argument.diagram.part.ArgumentDiagramEditorID"
+         defaultHandler="argument.argument.diagram.part.LoadResourceAction"/>
    </extension>
 
    <extension point="org.eclipse.ui.handlers" id="menu-handlers">
