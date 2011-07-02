@@ -12,9 +12,8 @@ Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.sw
 Bundle-ActivationPolicy: lazy
 Bundle-Version: 1.0.0
 Bundle-Name: Testing Plug-in
-Bundle-ManifestVersion: 2
 Bundle-Activator: edu.toronto.cs.openome.testing.Activator
-Bundle-SymbolicName: edu.toronto.cs.openome.testing
+Bundle-ManifestVersion: 2
 Import-Package: edu.toronto.cs.openome.evaluation.qualitativeinteracti
  vereasoning,edu.toronto.cs.openome_model.diagram.edit.parts,org.eclip
  se.draw2d,org.eclipse.emf.common.util,org.eclipse.emf.ecore.resource,
@@ -22,6 +21,7 @@ Import-Package: edu.toronto.cs.openome.evaluation.qualitativeinteracti
  clipse.gef,org.eclipse.gmf.runtime.diagram.core,org.eclipse.gmf.runti
  me.diagram.ui.actions.internal,org.eclipse.gmf.runtime.diagram.ui.edi
  tparts,org.eclipse.gmf.runtime.emf.core,org.sat4j.core
+Bundle-SymbolicName: edu.toronto.cs.openome.testing
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 
 
