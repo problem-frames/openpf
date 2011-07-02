@@ -1,16 +1,22 @@
  = An Open Requirements Engineering Tool =
 
  == User's manual == 
- * To enable the decreasoner reasoning for argumentation, define the system
-   property openpf.argument.reasoning, using one of the following ways:
-   * MacOSX:
-     open Eclipse.app --args -vmargs -Dopenpf.argument.reasoning
-   * Linux/Windows
-     eclipse -vmargs -Dopenpf.argument.reasoning
-   * And alternatively use the following line in the config.ini:
-     echo openpf.argument.reasoning= >> configuration/config.ini
- * Similarly, to monitor the files the physical Examples folders (for Miki),
-   define the system property "openpf.monitor"
+ * ON reasoning
+   * To use the decreasoner (a platform-specific 3rd party tool), you need to copy every precompiled
+     file under the project subfolder "Examples/Events/binary/<platform>/*" to "Examples/events/"
+   * To initially enable the decreasoner reasoning for argumentation, define the system
+     property openpf.argument.reasoning, using one of the following ways:
+     * MacOSX:
+       open Eclipse.app --args -vmargs -Dopenpf.argument.reasoning
+     * Linux/Windows
+       eclipse -vmargs -Dopenpf.argument.reasoning
+     * And alternatively use the following line in the config.ini:
+       echo openpf.argument.reasoning= >> configuration/config.ini
+     * Similarly, to monitor the files the physical Examples folders (for Miki),
+       define the system property "openpf.monitor"
+   * If you haven't initialise the property, then at the runtime, the reasoning feature
+     can be enabled in the Windows > Preferences (windows/linux), or Eclipse > Preferences (mac).
+     Under the "Argument / Reasoning" preference categorty, you can toggle the feature.
 
  == Developer's Manual ==
 
