@@ -21,7 +21,7 @@ public class RebutsDeniesEditPart extends ConnectionNodeEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 4004;
+	public static final int VISUAL_ID = 4003;
 
 	/**
 	 * @generated

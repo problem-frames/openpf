@@ -22,24 +22,24 @@ import org.eclipse.emf.ecore.EClass;
 public class MultiplicationImpl extends AdditionImpl implements Multiplication
 {
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected MultiplicationImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   protected EClass eStaticClass()
   {
-		return ArgumentPackage.Literals.MULTIPLICATION;
-	}
+    return ArgumentPackage.Literals.MULTIPLICATION;
+  }
 
 } //MultiplicationImpl

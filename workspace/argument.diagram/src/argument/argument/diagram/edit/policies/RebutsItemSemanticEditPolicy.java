@@ -46,7 +46,7 @@ public class RebutsItemSemanticEditPolicy extends
 	 */
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (ArgumentElementTypes.RebutsDenies_4004 == req.getElementType()) {
+		if (ArgumentElementTypes.RebutsDenies_4003 == req.getElementType()) {
 			return getGEFWrapper(new RebutsDeniesCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
@@ -58,7 +58,7 @@ public class RebutsItemSemanticEditPolicy extends
 	 */
 	protected Command getCompleteCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (ArgumentElementTypes.RebutsDenies_4004 == req.getElementType()) {
+		if (ArgumentElementTypes.RebutsDenies_4003 == req.getElementType()) {
 			return null;
 		}
 		return null;

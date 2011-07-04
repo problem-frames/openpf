@@ -35,227 +35,234 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class UnaryExprImpl extends PowerImpl implements UnaryExpr
 {
   /**
-	 * The default value of the '{@link #getUop() <em>Uop</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The default value of the '{@link #getUop() <em>Uop</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getUop()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getUop()
+   * @generated
+   * @ordered
+   */
   protected static final UnaryOp UOP_EDEFAULT = UnaryOp.DEFAULT;
 
   /**
-	 * The cached value of the '{@link #getUop() <em>Uop</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getUop() <em>Uop</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getUop()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getUop()
+   * @generated
+   * @ordered
+   */
   protected UnaryOp uop = UOP_EDEFAULT;
 
   /**
-	 * The cached value of the '{@link #getRight() <em>Right</em>}' containment reference.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getRight() <em>Right</em>}' containment reference.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getRight()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getRight()
+   * @generated
+   * @ordered
+   */
   protected PrePrimaryExpr right;
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected UnaryExprImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   protected EClass eStaticClass()
   {
-		return ArgumentPackage.Literals.UNARY_EXPR;
-	}
+    return ArgumentPackage.Literals.UNARY_EXPR;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public UnaryOp getUop()
   {
-		return uop;
-	}
+    return uop;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public void setUop(UnaryOp newUop)
   {
-		UnaryOp oldUop = uop;
-		uop = newUop == null ? UOP_EDEFAULT : newUop;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.UNARY_EXPR__UOP, oldUop, uop));
-	}
+    UnaryOp oldUop = uop;
+    uop = newUop == null ? UOP_EDEFAULT : newUop;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.UNARY_EXPR__UOP, oldUop, uop));
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public PrePrimaryExpr getRight()
   {
-		return right;
-	}
+    return right;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public NotificationChain basicSetRight(PrePrimaryExpr newRight, NotificationChain msgs)
   {
-		PrePrimaryExpr oldRight = right;
-		right = newRight;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ArgumentPackage.UNARY_EXPR__RIGHT, oldRight, newRight);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
+    PrePrimaryExpr oldRight = right;
+    right = newRight;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ArgumentPackage.UNARY_EXPR__RIGHT, oldRight, newRight);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public void setRight(PrePrimaryExpr newRight)
   {
-		if (newRight != right) {
-			NotificationChain msgs = null;
-			if (right != null)
-				msgs = ((InternalEObject)right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ArgumentPackage.UNARY_EXPR__RIGHT, null, msgs);
-			if (newRight != null)
-				msgs = ((InternalEObject)newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ArgumentPackage.UNARY_EXPR__RIGHT, null, msgs);
-			msgs = basicSetRight(newRight, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.UNARY_EXPR__RIGHT, newRight, newRight));
-	}
+    if (newRight != right)
+    {
+      NotificationChain msgs = null;
+      if (right != null)
+        msgs = ((InternalEObject)right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ArgumentPackage.UNARY_EXPR__RIGHT, null, msgs);
+      if (newRight != null)
+        msgs = ((InternalEObject)newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ArgumentPackage.UNARY_EXPR__RIGHT, null, msgs);
+      msgs = basicSetRight(newRight, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.UNARY_EXPR__RIGHT, newRight, newRight));
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-		switch (featureID) {
-			case ArgumentPackage.UNARY_EXPR__RIGHT:
-				return basicSetRight(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    switch (featureID)
+    {
+      case ArgumentPackage.UNARY_EXPR__RIGHT:
+        return basicSetRight(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-		switch (featureID) {
-			case ArgumentPackage.UNARY_EXPR__UOP:
-				return getUop();
-			case ArgumentPackage.UNARY_EXPR__RIGHT:
-				return getRight();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    switch (featureID)
+    {
+      case ArgumentPackage.UNARY_EXPR__UOP:
+        return getUop();
+      case ArgumentPackage.UNARY_EXPR__RIGHT:
+        return getRight();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public void eSet(int featureID, Object newValue)
   {
-		switch (featureID) {
-			case ArgumentPackage.UNARY_EXPR__UOP:
-				setUop((UnaryOp)newValue);
-				return;
-			case ArgumentPackage.UNARY_EXPR__RIGHT:
-				setRight((PrePrimaryExpr)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    switch (featureID)
+    {
+      case ArgumentPackage.UNARY_EXPR__UOP:
+        setUop((UnaryOp)newValue);
+        return;
+      case ArgumentPackage.UNARY_EXPR__RIGHT:
+        setRight((PrePrimaryExpr)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public void eUnset(int featureID)
   {
-		switch (featureID) {
-			case ArgumentPackage.UNARY_EXPR__UOP:
-				setUop(UOP_EDEFAULT);
-				return;
-			case ArgumentPackage.UNARY_EXPR__RIGHT:
-				setRight((PrePrimaryExpr)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+    switch (featureID)
+    {
+      case ArgumentPackage.UNARY_EXPR__UOP:
+        setUop(UOP_EDEFAULT);
+        return;
+      case ArgumentPackage.UNARY_EXPR__RIGHT:
+        setRight((PrePrimaryExpr)null);
+        return;
+    }
+    super.eUnset(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public boolean eIsSet(int featureID)
   {
-		switch (featureID) {
-			case ArgumentPackage.UNARY_EXPR__UOP:
-				return uop != UOP_EDEFAULT;
-			case ArgumentPackage.UNARY_EXPR__RIGHT:
-				return right != null;
-		}
-		return super.eIsSet(featureID);
-	}
+    switch (featureID)
+    {
+      case ArgumentPackage.UNARY_EXPR__UOP:
+        return uop != UOP_EDEFAULT;
+      case ArgumentPackage.UNARY_EXPR__RIGHT:
+        return right != null;
+    }
+    return super.eIsSet(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public String toString()
   {
-		if (eIsProxy()) return super.toString();
+    if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (uop: ");
-		result.append(uop);
-		result.append(')');
-		return result.toString();
-	}
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (uop: ");
+    result.append(uop);
+    result.append(')');
+    return result.toString();
+  }
 
 } //UnaryExprImpl

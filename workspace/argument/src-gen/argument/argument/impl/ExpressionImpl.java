@@ -33,157 +33,164 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ExpressionImpl extends PrePrimaryExprImpl implements Expression
 {
   /**
-	 * The cached value of the '{@link #getAssign() <em>Assign</em>}' containment reference.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getAssign() <em>Assign</em>}' containment reference.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getAssign()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getAssign()
+   * @generated
+   * @ordered
+   */
   protected AssignmentOp assign;
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected ExpressionImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   protected EClass eStaticClass()
   {
-		return ArgumentPackage.Literals.EXPRESSION;
-	}
+    return ArgumentPackage.Literals.EXPRESSION;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public AssignmentOp getAssign()
   {
-		return assign;
-	}
+    return assign;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public NotificationChain basicSetAssign(AssignmentOp newAssign, NotificationChain msgs)
   {
-		AssignmentOp oldAssign = assign;
-		assign = newAssign;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ArgumentPackage.EXPRESSION__ASSIGN, oldAssign, newAssign);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
+    AssignmentOp oldAssign = assign;
+    assign = newAssign;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ArgumentPackage.EXPRESSION__ASSIGN, oldAssign, newAssign);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public void setAssign(AssignmentOp newAssign)
   {
-		if (newAssign != assign) {
-			NotificationChain msgs = null;
-			if (assign != null)
-				msgs = ((InternalEObject)assign).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ArgumentPackage.EXPRESSION__ASSIGN, null, msgs);
-			if (newAssign != null)
-				msgs = ((InternalEObject)newAssign).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ArgumentPackage.EXPRESSION__ASSIGN, null, msgs);
-			msgs = basicSetAssign(newAssign, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.EXPRESSION__ASSIGN, newAssign, newAssign));
-	}
+    if (newAssign != assign)
+    {
+      NotificationChain msgs = null;
+      if (assign != null)
+        msgs = ((InternalEObject)assign).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ArgumentPackage.EXPRESSION__ASSIGN, null, msgs);
+      if (newAssign != null)
+        msgs = ((InternalEObject)newAssign).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ArgumentPackage.EXPRESSION__ASSIGN, null, msgs);
+      msgs = basicSetAssign(newAssign, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.EXPRESSION__ASSIGN, newAssign, newAssign));
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-		switch (featureID) {
-			case ArgumentPackage.EXPRESSION__ASSIGN:
-				return basicSetAssign(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    switch (featureID)
+    {
+      case ArgumentPackage.EXPRESSION__ASSIGN:
+        return basicSetAssign(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-		switch (featureID) {
-			case ArgumentPackage.EXPRESSION__ASSIGN:
-				return getAssign();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    switch (featureID)
+    {
+      case ArgumentPackage.EXPRESSION__ASSIGN:
+        return getAssign();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public void eSet(int featureID, Object newValue)
   {
-		switch (featureID) {
-			case ArgumentPackage.EXPRESSION__ASSIGN:
-				setAssign((AssignmentOp)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    switch (featureID)
+    {
+      case ArgumentPackage.EXPRESSION__ASSIGN:
+        setAssign((AssignmentOp)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public void eUnset(int featureID)
   {
-		switch (featureID) {
-			case ArgumentPackage.EXPRESSION__ASSIGN:
-				setAssign((AssignmentOp)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+    switch (featureID)
+    {
+      case ArgumentPackage.EXPRESSION__ASSIGN:
+        setAssign((AssignmentOp)null);
+        return;
+    }
+    super.eUnset(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public boolean eIsSet(int featureID)
   {
-		switch (featureID) {
-			case ArgumentPackage.EXPRESSION__ASSIGN:
-				return assign != null;
-		}
-		return super.eIsSet(featureID);
-	}
+    switch (featureID)
+    {
+      case ArgumentPackage.EXPRESSION__ASSIGN:
+        return assign != null;
+    }
+    return super.eIsSet(featureID);
+  }
 
 } //ExpressionImpl

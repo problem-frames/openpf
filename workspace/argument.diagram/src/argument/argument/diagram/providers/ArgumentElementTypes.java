@@ -22,7 +22,6 @@ import argument.argument.diagram.edit.parts.Argument3EditPart;
 import argument.argument.diagram.edit.parts.ArgumentDiagramEditPart;
 import argument.argument.diagram.edit.parts.ArgumentEditPart;
 import argument.argument.diagram.edit.parts.ArgumentReplacesEditPart;
-import argument.argument.diagram.edit.parts.LinkEditPart;
 import argument.argument.diagram.edit.parts.MitigatesEditPart;
 import argument.argument.diagram.edit.parts.MitigatesRestoresEditPart;
 import argument.argument.diagram.edit.parts.RebutsDeniesEditPart;
@@ -82,19 +81,17 @@ public class ArgumentElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType Link_4003 = getElementType("argument.diagram.Link_4003"); //$NON-NLS-1$
+	public static final IElementType RebutsDenies_4003 = getElementType("argument.diagram.RebutsDenies_4003"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType RebutsDenies_4004 = getElementType("argument.diagram.RebutsDenies_4004"); //$NON-NLS-1$
+	public static final IElementType MitigatesRestores_4004 = getElementType("argument.diagram.MitigatesRestores_4004"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType MitigatesRestores_4005 = getElementType("argument.diagram.MitigatesRestores_4005"); //$NON-NLS-1$
-	/**
-	 * @generated
-	 */
-	public static final IElementType ArgumentReplaces_4006 = getElementType("argument.diagram.ArgumentReplaces_4006"); //$NON-NLS-1$
+	public static final IElementType ArgumentReplaces_4005 = getElementType("argument.diagram.ArgumentReplaces_4005"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -221,15 +218,13 @@ public class ArgumentElementTypes {
 			elements.put(Mitigates_4002,
 					ArgumentPackage.eINSTANCE.getMitigates());
 
-			elements.put(Link_4003, ArgumentPackage.eINSTANCE.getLink());
-
-			elements.put(RebutsDenies_4004,
+			elements.put(RebutsDenies_4003,
 					ArgumentPackage.eINSTANCE.getRebuts_Denies());
 
-			elements.put(MitigatesRestores_4005,
+			elements.put(MitigatesRestores_4004,
 					ArgumentPackage.eINSTANCE.getMitigates_Restores());
 
-			elements.put(ArgumentReplaces_4006,
+			elements.put(ArgumentReplaces_4005,
 					ArgumentPackage.eINSTANCE.getArgument_Replaces());
 		}
 		return (ENamedElement) elements.get(type);
@@ -254,10 +249,9 @@ public class ArgumentElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Argument_3002);
 			KNOWN_ELEMENT_TYPES.add(Rebuts_4001);
 			KNOWN_ELEMENT_TYPES.add(Mitigates_4002);
-			KNOWN_ELEMENT_TYPES.add(Link_4003);
-			KNOWN_ELEMENT_TYPES.add(RebutsDenies_4004);
-			KNOWN_ELEMENT_TYPES.add(MitigatesRestores_4005);
-			KNOWN_ELEMENT_TYPES.add(ArgumentReplaces_4006);
+			KNOWN_ELEMENT_TYPES.add(RebutsDenies_4003);
+			KNOWN_ELEMENT_TYPES.add(MitigatesRestores_4004);
+			KNOWN_ELEMENT_TYPES.add(ArgumentReplaces_4005);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -279,14 +273,12 @@ public class ArgumentElementTypes {
 			return Rebuts_4001;
 		case MitigatesEditPart.VISUAL_ID:
 			return Mitigates_4002;
-		case LinkEditPart.VISUAL_ID:
-			return Link_4003;
 		case RebutsDeniesEditPart.VISUAL_ID:
-			return RebutsDenies_4004;
+			return RebutsDenies_4003;
 		case MitigatesRestoresEditPart.VISUAL_ID:
-			return MitigatesRestores_4005;
+			return MitigatesRestores_4004;
 		case ArgumentReplacesEditPart.VISUAL_ID:
-			return ArgumentReplaces_4006;
+			return ArgumentReplaces_4005;
 		}
 		return null;
 	}

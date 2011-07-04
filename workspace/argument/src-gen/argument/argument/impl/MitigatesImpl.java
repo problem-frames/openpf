@@ -32,138 +32,144 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class MitigatesImpl extends LinkImpl implements Mitigates
 {
   /**
-	 * The cached value of the '{@link #getRestores() <em>Restores</em>}' reference.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getRestores() <em>Restores</em>}' reference.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getRestores()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getRestores()
+   * @generated
+   * @ordered
+   */
   protected Argument restores;
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected MitigatesImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   protected EClass eStaticClass()
   {
-		return ArgumentPackage.Literals.MITIGATES;
-	}
+    return ArgumentPackage.Literals.MITIGATES;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Argument getRestores()
   {
-		if (restores != null && restores.eIsProxy()) {
-			InternalEObject oldRestores = (InternalEObject)restores;
-			restores = (Argument)eResolveProxy(oldRestores);
-			if (restores != oldRestores) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ArgumentPackage.MITIGATES__RESTORES, oldRestores, restores));
-			}
-		}
-		return restores;
-	}
+    if (restores != null && restores.eIsProxy())
+    {
+      InternalEObject oldRestores = (InternalEObject)restores;
+      restores = (Argument)eResolveProxy(oldRestores);
+      if (restores != oldRestores)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, ArgumentPackage.MITIGATES__RESTORES, oldRestores, restores));
+      }
+    }
+    return restores;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Argument basicGetRestores()
   {
-		return restores;
-	}
+    return restores;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public void setRestores(Argument newRestores)
   {
-		Argument oldRestores = restores;
-		restores = newRestores;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.MITIGATES__RESTORES, oldRestores, restores));
-	}
+    Argument oldRestores = restores;
+    restores = newRestores;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.MITIGATES__RESTORES, oldRestores, restores));
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-		switch (featureID) {
-			case ArgumentPackage.MITIGATES__RESTORES:
-				if (resolve) return getRestores();
-				return basicGetRestores();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    switch (featureID)
+    {
+      case ArgumentPackage.MITIGATES__RESTORES:
+        if (resolve) return getRestores();
+        return basicGetRestores();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public void eSet(int featureID, Object newValue)
   {
-		switch (featureID) {
-			case ArgumentPackage.MITIGATES__RESTORES:
-				setRestores((Argument)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    switch (featureID)
+    {
+      case ArgumentPackage.MITIGATES__RESTORES:
+        setRestores((Argument)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public void eUnset(int featureID)
   {
-		switch (featureID) {
-			case ArgumentPackage.MITIGATES__RESTORES:
-				setRestores((Argument)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+    switch (featureID)
+    {
+      case ArgumentPackage.MITIGATES__RESTORES:
+        setRestores((Argument)null);
+        return;
+    }
+    super.eUnset(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public boolean eIsSet(int featureID)
   {
-		switch (featureID) {
-			case ArgumentPackage.MITIGATES__RESTORES:
-				return restores != null;
-		}
-		return super.eIsSet(featureID);
-	}
+    switch (featureID)
+    {
+      case ArgumentPackage.MITIGATES__RESTORES:
+        return restores != null;
+    }
+    return super.eIsSet(featureID);
+  }
 
 } //MitigatesImpl

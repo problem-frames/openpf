@@ -16,7 +16,7 @@ public class MitigatesRestoresItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public MitigatesRestoresItemSemanticEditPolicy() {
-		super(ArgumentElementTypes.MitigatesRestores_4005);
+		super(ArgumentElementTypes.MitigatesRestores_4004);
 	}
 
 	/**

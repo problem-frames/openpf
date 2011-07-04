@@ -55,7 +55,7 @@ public class RebutsDeniesCreateCommand extends EditElementCommand {
 		}
 		// target may be null here but it's possible to check constraint
 		return ArgumentBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canCreateRebutsDenies_4004(getSource(), getTarget());
+				.canCreateRebutsDenies_4003(getSource(), getTarget());
 	}
 
 	/**

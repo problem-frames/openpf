@@ -46,7 +46,7 @@ public class MitigatesItemSemanticEditPolicy extends
 	 */
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (ArgumentElementTypes.MitigatesRestores_4005 == req.getElementType()) {
+		if (ArgumentElementTypes.MitigatesRestores_4004 == req.getElementType()) {
 			return getGEFWrapper(new MitigatesRestoresCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
@@ -58,7 +58,7 @@ public class MitigatesItemSemanticEditPolicy extends
 	 */
 	protected Command getCompleteCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (ArgumentElementTypes.MitigatesRestores_4005 == req.getElementType()) {
+		if (ArgumentElementTypes.MitigatesRestores_4004 == req.getElementType()) {
 			return null;
 		}
 		return null;

@@ -73,7 +73,7 @@ public class ArgumentReplacesReorientCommand extends EditElementCommand {
 			return false;
 		}
 		return ArgumentBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistArgumentReplaces_4006(getNewSource(), getOldTarget());
+				.canExistArgumentReplaces_4005(getNewSource(), getOldTarget());
 	}
 
 	/**
@@ -84,7 +84,7 @@ public class ArgumentReplacesReorientCommand extends EditElementCommand {
 			return false;
 		}
 		return ArgumentBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistArgumentReplaces_4006(getOldSource(), getNewTarget());
+				.canExistArgumentReplaces_4005(getOldSource(), getNewTarget());
 	}
 
 	/**

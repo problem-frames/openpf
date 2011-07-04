@@ -74,7 +74,7 @@ public class MitigatesRestoresReorientCommand extends EditElementCommand {
 			return false;
 		}
 		return ArgumentBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistMitigatesRestores_4005(getNewSource(), getOldTarget());
+				.canExistMitigatesRestores_4004(getNewSource(), getOldTarget());
 	}
 
 	/**
@@ -85,7 +85,7 @@ public class MitigatesRestoresReorientCommand extends EditElementCommand {
 			return false;
 		}
 		return ArgumentBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistMitigatesRestores_4005(getOldSource(), getNewTarget());
+				.canExistMitigatesRestores_4004(getOldSource(), getNewTarget());
 	}
 
 	/**

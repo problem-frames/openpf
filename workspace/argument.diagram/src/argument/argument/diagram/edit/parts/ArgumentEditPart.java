@@ -300,11 +300,10 @@ public class ArgumentEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	public List<IElementType> getMARelTypesOnSource() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
 		types.add(ArgumentElementTypes.Rebuts_4001);
 		types.add(ArgumentElementTypes.Mitigates_4002);
-		types.add(ArgumentElementTypes.Link_4003);
-		types.add(ArgumentElementTypes.ArgumentReplaces_4006);
+		types.add(ArgumentElementTypes.ArgumentReplaces_4005);
 		return types;
 	}
 
@@ -333,22 +332,13 @@ public class ArgumentEditPart extends ShapeNodeEditPart {
 			types.add(ArgumentElementTypes.Mitigates_4002);
 		}
 		if (targetEditPart instanceof argument.argument.diagram.edit.parts.ArgumentEditPart) {
-			types.add(ArgumentElementTypes.Link_4003);
+			types.add(ArgumentElementTypes.ArgumentReplaces_4005);
 		}
 		if (targetEditPart instanceof Argument2EditPart) {
-			types.add(ArgumentElementTypes.Link_4003);
+			types.add(ArgumentElementTypes.ArgumentReplaces_4005);
 		}
 		if (targetEditPart instanceof Argument3EditPart) {
-			types.add(ArgumentElementTypes.Link_4003);
-		}
-		if (targetEditPart instanceof argument.argument.diagram.edit.parts.ArgumentEditPart) {
-			types.add(ArgumentElementTypes.ArgumentReplaces_4006);
-		}
-		if (targetEditPart instanceof Argument2EditPart) {
-			types.add(ArgumentElementTypes.ArgumentReplaces_4006);
-		}
-		if (targetEditPart instanceof Argument3EditPart) {
-			types.add(ArgumentElementTypes.ArgumentReplaces_4006);
+			types.add(ArgumentElementTypes.ArgumentReplaces_4005);
 		}
 		return types;
 	}
@@ -366,11 +356,7 @@ public class ArgumentEditPart extends ShapeNodeEditPart {
 			types.add(ArgumentElementTypes.Argument_2001);
 			types.add(ArgumentElementTypes.Argument_3001);
 			types.add(ArgumentElementTypes.Argument_3002);
-		} else if (relationshipType == ArgumentElementTypes.Link_4003) {
-			types.add(ArgumentElementTypes.Argument_2001);
-			types.add(ArgumentElementTypes.Argument_3001);
-			types.add(ArgumentElementTypes.Argument_3002);
-		} else if (relationshipType == ArgumentElementTypes.ArgumentReplaces_4006) {
+		} else if (relationshipType == ArgumentElementTypes.ArgumentReplaces_4005) {
 			types.add(ArgumentElementTypes.Argument_2001);
 			types.add(ArgumentElementTypes.Argument_3001);
 			types.add(ArgumentElementTypes.Argument_3002);
@@ -382,11 +368,10 @@ public class ArgumentEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	public List<IElementType> getMARelTypesOnTarget() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
 		types.add(ArgumentElementTypes.Rebuts_4001);
 		types.add(ArgumentElementTypes.Mitigates_4002);
-		types.add(ArgumentElementTypes.Link_4003);
-		types.add(ArgumentElementTypes.ArgumentReplaces_4006);
+		types.add(ArgumentElementTypes.ArgumentReplaces_4005);
 		return types;
 	}
 
@@ -403,11 +388,7 @@ public class ArgumentEditPart extends ShapeNodeEditPart {
 			types.add(ArgumentElementTypes.Argument_2001);
 			types.add(ArgumentElementTypes.Argument_3001);
 			types.add(ArgumentElementTypes.Argument_3002);
-		} else if (relationshipType == ArgumentElementTypes.Link_4003) {
-			types.add(ArgumentElementTypes.Argument_2001);
-			types.add(ArgumentElementTypes.Argument_3001);
-			types.add(ArgumentElementTypes.Argument_3002);
-		} else if (relationshipType == ArgumentElementTypes.ArgumentReplaces_4006) {
+		} else if (relationshipType == ArgumentElementTypes.ArgumentReplaces_4005) {
 			types.add(ArgumentElementTypes.Argument_2001);
 			types.add(ArgumentElementTypes.Argument_3001);
 			types.add(ArgumentElementTypes.Argument_3002);

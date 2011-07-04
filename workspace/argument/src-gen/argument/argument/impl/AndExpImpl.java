@@ -22,24 +22,24 @@ import org.eclipse.emf.ecore.EClass;
 public class AndExpImpl extends OrExpImpl implements AndExp
 {
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected AndExpImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   protected EClass eStaticClass()
   {
-		return ArgumentPackage.Literals.AND_EXP;
-	}
+    return ArgumentPackage.Literals.AND_EXP;
+  }
 
 } //AndExpImpl

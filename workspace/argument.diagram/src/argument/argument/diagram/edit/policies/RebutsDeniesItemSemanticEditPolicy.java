@@ -16,7 +16,7 @@ public class RebutsDeniesItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public RebutsDeniesItemSemanticEditPolicy() {
-		super(ArgumentElementTypes.RebutsDenies_4004);
+		super(ArgumentElementTypes.RebutsDenies_4003);
 	}
 
 	/**

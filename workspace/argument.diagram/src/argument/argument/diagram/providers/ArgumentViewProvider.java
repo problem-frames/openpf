@@ -56,7 +56,6 @@ import argument.argument.diagram.edit.parts.ArgumentNameDescriptionRound2EditPar
 import argument.argument.diagram.edit.parts.ArgumentNameDescriptionRound3EditPart;
 import argument.argument.diagram.edit.parts.ArgumentNameDescriptionRoundEditPart;
 import argument.argument.diagram.edit.parts.ArgumentReplacesEditPart;
-import argument.argument.diagram.edit.parts.LinkEditPart;
 import argument.argument.diagram.edit.parts.MitigatesEditPart;
 import argument.argument.diagram.edit.parts.MitigatesRestoresEditPart;
 import argument.argument.diagram.edit.parts.RebutsDeniesEditPart;
@@ -262,17 +261,14 @@ public class ArgumentViewProvider extends AbstractProvider implements
 		case MitigatesEditPart.VISUAL_ID:
 			return createMitigates_4002(getSemanticElement(semanticAdapter),
 					containerView, index, persisted, preferencesHint);
-		case LinkEditPart.VISUAL_ID:
-			return createLink_4003(getSemanticElement(semanticAdapter),
-					containerView, index, persisted, preferencesHint);
 		case RebutsDeniesEditPart.VISUAL_ID:
-			return createRebutsDenies_4004(containerView, index, persisted,
+			return createRebutsDenies_4003(containerView, index, persisted,
 					preferencesHint);
 		case MitigatesRestoresEditPart.VISUAL_ID:
-			return createMitigatesRestores_4005(containerView, index,
+			return createMitigatesRestores_4004(containerView, index,
 					persisted, preferencesHint);
 		case ArgumentReplacesEditPart.VISUAL_ID:
-			return createArgumentReplaces_4006(containerView, index, persisted,
+			return createArgumentReplaces_4005(containerView, index, persisted,
 					preferencesHint);
 		}
 		// can never happen, provided #provides(CreateEdgeViewOperation) is correct
@@ -550,53 +546,7 @@ public class ArgumentViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Edge createLink_4003(EObject domainElement, View containerView,
-			int index, boolean persisted, PreferencesHint preferencesHint) {
-		Edge edge = NotationFactory.eINSTANCE.createEdge();
-		edge.getStyles().add(NotationFactory.eINSTANCE.createRoutingStyle());
-		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
-		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
-				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
-		points.add(new RelativeBendpoint());
-		points.add(new RelativeBendpoint());
-		bendpoints.setPoints(points);
-		edge.setBendpoints(bendpoints);
-		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(ArgumentVisualIDRegistry.getType(LinkEditPart.VISUAL_ID));
-		edge.setElement(domainElement);
-		// initializePreferences
-		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
-				.getPreferenceStore();
-		FontStyle edgeFontStyle = (FontStyle) edge
-				.getStyle(NotationPackage.Literals.FONT_STYLE);
-		if (edgeFontStyle != null) {
-			FontData fontData = PreferenceConverter.getFontData(prefStore,
-					IPreferenceConstants.PREF_DEFAULT_FONT);
-			edgeFontStyle.setFontName(fontData.getName());
-			edgeFontStyle.setFontHeight(fontData.getHeight());
-			edgeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
-			edgeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
-			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
-					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
-			edgeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
-					.intValue());
-		}
-		Routing routing = Routing.get(prefStore
-				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
-		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
-		}
-		return edge;
-	}
-
-	/**
-	 * @generated
-	 */
-	public Edge createRebutsDenies_4004(View containerView, int index,
+	public Edge createRebutsDenies_4003(View containerView, int index,
 			boolean persisted, PreferencesHint preferencesHint) {
 		Edge edge = NotationFactory.eINSTANCE.createEdge();
 		edge.getStyles().add(NotationFactory.eINSTANCE.createRoutingStyle());
@@ -653,7 +603,7 @@ public class ArgumentViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Edge createMitigatesRestores_4005(View containerView, int index,
+	public Edge createMitigatesRestores_4004(View containerView, int index,
 			boolean persisted, PreferencesHint preferencesHint) {
 		Edge edge = NotationFactory.eINSTANCE.createEdge();
 		edge.getStyles().add(NotationFactory.eINSTANCE.createRoutingStyle());
@@ -710,7 +660,7 @@ public class ArgumentViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Edge createArgumentReplaces_4006(View containerView, int index,
+	public Edge createArgumentReplaces_4005(View containerView, int index,
 			boolean persisted, PreferencesHint preferencesHint) {
 		Edge edge = NotationFactory.eINSTANCE.createEdge();
 		edge.getStyles().add(NotationFactory.eINSTANCE.createRoutingStyle());

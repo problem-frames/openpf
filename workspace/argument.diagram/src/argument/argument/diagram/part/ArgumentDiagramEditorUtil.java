@@ -1,6 +1,5 @@
 package argument.argument.diagram.part;
 
-
 import java.io.IOException;
 import java.util.Collections;
 import java.util.HashMap;
@@ -50,7 +49,6 @@ import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.FileEditorInput;
 
 import uk.ac.open.problem.diagram.part.ImageDiagramUtil;
-
 import argument.argument.ArgumentDiagram;
 import argument.argument.ArgumentFactory;
 import argument.argument.diagram.edit.parts.ArgumentDiagramEditPart;
@@ -193,8 +191,8 @@ public class ArgumentDiagramEditorUtil extends ImageDiagramUtil {
 					if (modelResource.getURI().toFileString() == null) {
 						model.setName("default");
 						modelResource
-							.save(argument.argument.diagram.part.ArgumentDiagramEditorUtil
-									.getSaveOptions());
+								.save(argument.argument.diagram.part.ArgumentDiagramEditorUtil
+										.getSaveOptions());
 					}
 					diagramResource
 							.save(argument.argument.diagram.part.ArgumentDiagramEditorUtil
@@ -214,8 +212,8 @@ public class ArgumentDiagramEditorUtil extends ImageDiagramUtil {
 			ArgumentDiagramEditorPlugin.getInstance().logError(
 					"Unable to create model and diagram", e); //$NON-NLS-1$
 		}
-//		setCharset(WorkspaceSynchronizer.getFile(modelResource));
-//		setCharset(WorkspaceSynchronizer.getFile(diagramResource));
+		//		setCharset(WorkspaceSynchronizer.getFile(modelResource));
+		//		setCharset(WorkspaceSynchronizer.getFile(diagramResource));
 		// this line is new, inherited from ImageDiagramUtil
 		saveDiagramToImages(diagramResource, modelResource);
 		return diagramResource;

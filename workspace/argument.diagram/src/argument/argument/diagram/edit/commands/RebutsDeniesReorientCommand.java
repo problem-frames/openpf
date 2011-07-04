@@ -74,7 +74,7 @@ public class RebutsDeniesReorientCommand extends EditElementCommand {
 			return false;
 		}
 		return ArgumentBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistRebutsDenies_4004(getNewSource(), getOldTarget());
+				.canExistRebutsDenies_4003(getNewSource(), getOldTarget());
 	}
 
 	/**
@@ -85,7 +85,7 @@ public class RebutsDeniesReorientCommand extends EditElementCommand {
 			return false;
 		}
 		return ArgumentBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistRebutsDenies_4004(getOldSource(), getNewTarget());
+				.canExistRebutsDenies_4003(getOldSource(), getNewTarget());
 	}
 
 	/**

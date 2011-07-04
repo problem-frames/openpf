@@ -309,7 +309,7 @@ public class WrappingLabel2EditPart extends LabelEditPart implements
 	public IParser getParser() {
 		if (parser == null) {
 			parser = ArgumentParserProvider.getParser(
-					ArgumentElementTypes.MitigatesRestores_4005,
+					ArgumentElementTypes.MitigatesRestores_4004,
 					getParserElement(), CommonParserHint.DESCRIPTION);
 		}
 		return parser;

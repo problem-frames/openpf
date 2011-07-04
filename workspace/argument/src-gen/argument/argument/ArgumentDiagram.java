@@ -24,67 +24,67 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see argument.argument.ArgumentPackage#getArgumentDiagram()
- * @model annotation="gmf.diagram foo='bar'"
+ * @model
  * @generated
  */
 public interface ArgumentDiagram extends EObject
 {
   /**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Name</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see argument.argument.ArgumentPackage#getArgumentDiagram_Name()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see argument.argument.ArgumentPackage#getArgumentDiagram_Name()
+   * @model
+   * @generated
+   */
   String getName();
 
   /**
-	 * Sets the value of the '{@link argument.argument.ArgumentDiagram#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link argument.argument.ArgumentDiagram#getName <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
+   * @generated
+   */
   void setName(String value);
 
   /**
-	 * Returns the value of the '<em><b>Nodes</b></em>' containment reference list.
-	 * The list contents are of type {@link argument.argument.Argument}.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Nodes</b></em>' containment reference list.
+   * The list contents are of type {@link argument.argument.Argument}.
+   * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Nodes</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nodes</em>' containment reference list.
-	 * @see argument.argument.ArgumentPackage#getArgumentDiagram_Nodes()
-	 * @model containment="true"
-	 * @generated
-	 */
+   * @return the value of the '<em>Nodes</em>' containment reference list.
+   * @see argument.argument.ArgumentPackage#getArgumentDiagram_Nodes()
+   * @model containment="true"
+   * @generated
+   */
   EList<Argument> getNodes();
 
   /**
-	 * Returns the value of the '<em><b>Links</b></em>' containment reference list.
-	 * The list contents are of type {@link argument.argument.Link}.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Links</b></em>' containment reference list.
+   * The list contents are of type {@link argument.argument.Link}.
+   * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Links</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Links</em>' containment reference list.
-	 * @see argument.argument.ArgumentPackage#getArgumentDiagram_Links()
-	 * @model containment="true"
-	 * @generated
-	 */
+   * @return the value of the '<em>Links</em>' containment reference list.
+   * @see argument.argument.ArgumentPackage#getArgumentDiagram_Links()
+   * @model containment="true"
+   * @generated
+   */
   EList<Link> getLinks();
 
 } // ArgumentDiagram

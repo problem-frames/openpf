@@ -22,24 +22,24 @@ import org.eclipse.emf.ecore.EClass;
 public class OrExpImpl extends AssignmentOpImpl implements OrExp
 {
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected OrExpImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   protected EClass eStaticClass()
   {
-		return ArgumentPackage.Literals.OR_EXP;
-	}
+    return ArgumentPackage.Literals.OR_EXP;
+  }
 
 } //OrExpImpl

@@ -22,24 +22,24 @@ import org.eclipse.emf.ecore.EClass;
 public class PowerImpl extends MultiplicationImpl implements Power
 {
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected PowerImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   protected EClass eStaticClass()
   {
-		return ArgumentPackage.Literals.POWER;
-	}
+    return ArgumentPackage.Literals.POWER;
+  }
 
 } //PowerImpl

@@ -10,7 +10,6 @@ import argument.argument.AssignmentOp;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
@@ -22,27 +21,27 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class AssignmentOpImpl extends EObjectImpl implements AssignmentOp
+public class AssignmentOpImpl extends MinimalEObjectImpl.Container implements AssignmentOp
 {
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected AssignmentOpImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   protected EClass eStaticClass()
   {
-		return ArgumentPackage.Literals.ASSIGNMENT_OP;
-	}
+    return ArgumentPackage.Literals.ASSIGNMENT_OP;
+  }
 
 } //AssignmentOpImpl

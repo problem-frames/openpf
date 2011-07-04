@@ -34,7 +34,6 @@ import argument.argument.diagram.edit.parts.Argument2EditPart;
 import argument.argument.diagram.edit.parts.Argument3EditPart;
 import argument.argument.diagram.edit.parts.ArgumentDiagramEditPart;
 import argument.argument.diagram.edit.parts.ArgumentEditPart;
-import argument.argument.diagram.edit.parts.LinkEditPart;
 import argument.argument.diagram.edit.parts.MitigatesEditPart;
 import argument.argument.diagram.edit.parts.RebutsEditPart;
 import argument.argument.diagram.part.ArgumentDiagramUpdater;
@@ -303,17 +302,6 @@ public class ArgumentDiagramCanonicalEditPolicy extends CanonicalEditPolicy {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(ArgumentDiagramUpdater
 						.getMitigates_4002ContainedLinks(view));
-			}
-			if (!domain2NotationMap.containsKey(view.getElement())
-					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
-				domain2NotationMap.put(view.getElement(), view);
-			}
-			break;
-		}
-		case LinkEditPart.VISUAL_ID: {
-			if (!domain2NotationMap.containsKey(view.getElement())) {
-				result.addAll(ArgumentDiagramUpdater
-						.getLink_4003ContainedLinks(view));
 			}
 			if (!domain2NotationMap.containsKey(view.getElement())
 					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$

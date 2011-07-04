@@ -22,7 +22,6 @@ import argument.argument.diagram.edit.parts.ArgumentNameDescriptionRound2EditPar
 import argument.argument.diagram.edit.parts.ArgumentNameDescriptionRound3EditPart;
 import argument.argument.diagram.edit.parts.ArgumentNameDescriptionRoundEditPart;
 import argument.argument.diagram.edit.parts.ArgumentReplacesEditPart;
-import argument.argument.diagram.edit.parts.LinkEditPart;
 import argument.argument.diagram.edit.parts.MitigatesEditPart;
 import argument.argument.diagram.edit.parts.MitigatesRestoresEditPart;
 import argument.argument.diagram.edit.parts.RebutsDeniesEditPart;
@@ -306,10 +305,6 @@ public class ArgumentVisualIDRegistry {
 		if (ArgumentPackage.eINSTANCE.getMitigates().isSuperTypeOf(
 				domainElement.eClass())) {
 			return MitigatesEditPart.VISUAL_ID;
-		}
-		if (ArgumentPackage.eINSTANCE.getLink().isSuperTypeOf(
-				domainElement.eClass())) {
-			return LinkEditPart.VISUAL_ID;
 		}
 		return -1;
 	}

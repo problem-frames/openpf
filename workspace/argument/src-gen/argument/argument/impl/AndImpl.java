@@ -35,295 +35,304 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class AndImpl extends AndExpImpl implements And
 {
   /**
-	 * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getLeft()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getLeft()
+   * @generated
+   * @ordered
+   */
   protected Relational left;
 
   /**
-	 * The default value of the '{@link #getAnd_op() <em>And op</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The default value of the '{@link #getAnd_op() <em>And op</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getAnd_op()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getAnd_op()
+   * @generated
+   * @ordered
+   */
   protected static final String AND_OP_EDEFAULT = null;
 
   /**
-	 * The cached value of the '{@link #getAnd_op() <em>And op</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getAnd_op() <em>And op</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getAnd_op()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getAnd_op()
+   * @generated
+   * @ordered
+   */
   protected String and_op = AND_OP_EDEFAULT;
 
   /**
-	 * The cached value of the '{@link #getRight() <em>Right</em>}' containment reference.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getRight() <em>Right</em>}' containment reference.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getRight()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getRight()
+   * @generated
+   * @ordered
+   */
   protected Relational right;
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected AndImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   protected EClass eStaticClass()
   {
-		return ArgumentPackage.Literals.AND;
-	}
+    return ArgumentPackage.Literals.AND;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Relational getLeft()
   {
-		return left;
-	}
+    return left;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public NotificationChain basicSetLeft(Relational newLeft, NotificationChain msgs)
   {
-		Relational oldLeft = left;
-		left = newLeft;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ArgumentPackage.AND__LEFT, oldLeft, newLeft);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
+    Relational oldLeft = left;
+    left = newLeft;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ArgumentPackage.AND__LEFT, oldLeft, newLeft);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public void setLeft(Relational newLeft)
   {
-		if (newLeft != left) {
-			NotificationChain msgs = null;
-			if (left != null)
-				msgs = ((InternalEObject)left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ArgumentPackage.AND__LEFT, null, msgs);
-			if (newLeft != null)
-				msgs = ((InternalEObject)newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ArgumentPackage.AND__LEFT, null, msgs);
-			msgs = basicSetLeft(newLeft, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.AND__LEFT, newLeft, newLeft));
-	}
+    if (newLeft != left)
+    {
+      NotificationChain msgs = null;
+      if (left != null)
+        msgs = ((InternalEObject)left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ArgumentPackage.AND__LEFT, null, msgs);
+      if (newLeft != null)
+        msgs = ((InternalEObject)newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ArgumentPackage.AND__LEFT, null, msgs);
+      msgs = basicSetLeft(newLeft, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.AND__LEFT, newLeft, newLeft));
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public String getAnd_op()
   {
-		return and_op;
-	}
+    return and_op;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public void setAnd_op(String newAnd_op)
   {
-		String oldAnd_op = and_op;
-		and_op = newAnd_op;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.AND__AND_OP, oldAnd_op, and_op));
-	}
+    String oldAnd_op = and_op;
+    and_op = newAnd_op;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.AND__AND_OP, oldAnd_op, and_op));
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Relational getRight()
   {
-		return right;
-	}
+    return right;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public NotificationChain basicSetRight(Relational newRight, NotificationChain msgs)
   {
-		Relational oldRight = right;
-		right = newRight;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ArgumentPackage.AND__RIGHT, oldRight, newRight);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
+    Relational oldRight = right;
+    right = newRight;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ArgumentPackage.AND__RIGHT, oldRight, newRight);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public void setRight(Relational newRight)
   {
-		if (newRight != right) {
-			NotificationChain msgs = null;
-			if (right != null)
-				msgs = ((InternalEObject)right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ArgumentPackage.AND__RIGHT, null, msgs);
-			if (newRight != null)
-				msgs = ((InternalEObject)newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ArgumentPackage.AND__RIGHT, null, msgs);
-			msgs = basicSetRight(newRight, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.AND__RIGHT, newRight, newRight));
-	}
+    if (newRight != right)
+    {
+      NotificationChain msgs = null;
+      if (right != null)
+        msgs = ((InternalEObject)right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ArgumentPackage.AND__RIGHT, null, msgs);
+      if (newRight != null)
+        msgs = ((InternalEObject)newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ArgumentPackage.AND__RIGHT, null, msgs);
+      msgs = basicSetRight(newRight, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.AND__RIGHT, newRight, newRight));
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-		switch (featureID) {
-			case ArgumentPackage.AND__LEFT:
-				return basicSetLeft(null, msgs);
-			case ArgumentPackage.AND__RIGHT:
-				return basicSetRight(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    switch (featureID)
+    {
+      case ArgumentPackage.AND__LEFT:
+        return basicSetLeft(null, msgs);
+      case ArgumentPackage.AND__RIGHT:
+        return basicSetRight(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-		switch (featureID) {
-			case ArgumentPackage.AND__LEFT:
-				return getLeft();
-			case ArgumentPackage.AND__AND_OP:
-				return getAnd_op();
-			case ArgumentPackage.AND__RIGHT:
-				return getRight();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    switch (featureID)
+    {
+      case ArgumentPackage.AND__LEFT:
+        return getLeft();
+      case ArgumentPackage.AND__AND_OP:
+        return getAnd_op();
+      case ArgumentPackage.AND__RIGHT:
+        return getRight();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public void eSet(int featureID, Object newValue)
   {
-		switch (featureID) {
-			case ArgumentPackage.AND__LEFT:
-				setLeft((Relational)newValue);
-				return;
-			case ArgumentPackage.AND__AND_OP:
-				setAnd_op((String)newValue);
-				return;
-			case ArgumentPackage.AND__RIGHT:
-				setRight((Relational)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    switch (featureID)
+    {
+      case ArgumentPackage.AND__LEFT:
+        setLeft((Relational)newValue);
+        return;
+      case ArgumentPackage.AND__AND_OP:
+        setAnd_op((String)newValue);
+        return;
+      case ArgumentPackage.AND__RIGHT:
+        setRight((Relational)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public void eUnset(int featureID)
   {
-		switch (featureID) {
-			case ArgumentPackage.AND__LEFT:
-				setLeft((Relational)null);
-				return;
-			case ArgumentPackage.AND__AND_OP:
-				setAnd_op(AND_OP_EDEFAULT);
-				return;
-			case ArgumentPackage.AND__RIGHT:
-				setRight((Relational)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+    switch (featureID)
+    {
+      case ArgumentPackage.AND__LEFT:
+        setLeft((Relational)null);
+        return;
+      case ArgumentPackage.AND__AND_OP:
+        setAnd_op(AND_OP_EDEFAULT);
+        return;
+      case ArgumentPackage.AND__RIGHT:
+        setRight((Relational)null);
+        return;
+    }
+    super.eUnset(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public boolean eIsSet(int featureID)
   {
-		switch (featureID) {
-			case ArgumentPackage.AND__LEFT:
-				return left != null;
-			case ArgumentPackage.AND__AND_OP:
-				return AND_OP_EDEFAULT == null ? and_op != null : !AND_OP_EDEFAULT.equals(and_op);
-			case ArgumentPackage.AND__RIGHT:
-				return right != null;
-		}
-		return super.eIsSet(featureID);
-	}
+    switch (featureID)
+    {
+      case ArgumentPackage.AND__LEFT:
+        return left != null;
+      case ArgumentPackage.AND__AND_OP:
+        return AND_OP_EDEFAULT == null ? and_op != null : !AND_OP_EDEFAULT.equals(and_op);
+      case ArgumentPackage.AND__RIGHT:
+        return right != null;
+    }
+    return super.eIsSet(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public String toString()
   {
-		if (eIsProxy()) return super.toString();
+    if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (and_op: ");
-		result.append(and_op);
-		result.append(')');
-		return result.toString();
-	}
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (and_op: ");
+    result.append(and_op);
+    result.append(')');
+    return result.toString();
+  }
 
 } //AndImpl

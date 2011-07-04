@@ -55,7 +55,7 @@ public class MitigatesRestoresCreateCommand extends EditElementCommand {
 		}
 		// target may be null here but it's possible to check constraint
 		return ArgumentBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canCreateMitigatesRestores_4005(getSource(), getTarget());
+				.canCreateMitigatesRestores_4004(getSource(), getTarget());
 	}
 
 	/**

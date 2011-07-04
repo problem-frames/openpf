@@ -22,24 +22,24 @@ import org.eclipse.emf.ecore.EClass;
 public class TerminalExpressionImpl extends PrePrimaryExprImpl implements TerminalExpression
 {
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected TerminalExpressionImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   protected EClass eStaticClass()
   {
-		return ArgumentPackage.Literals.TERMINAL_EXPRESSION;
-	}
+    return ArgumentPackage.Literals.TERMINAL_EXPRESSION;
+  }
 
 } //TerminalExpressionImpl

@@ -74,9 +74,6 @@ public class ArgumentEditPartFactory implements EditPartFactory {
 			case MitigatesEditPart.VISUAL_ID:
 				return new MitigatesEditPart(view);
 
-			case LinkEditPart.VISUAL_ID:
-				return new LinkEditPart(view);
-
 			case RebutsDeniesEditPart.VISUAL_ID:
 				return new RebutsDeniesEditPart(view);
 

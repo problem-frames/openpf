@@ -16,7 +16,7 @@ public class ArgumentReplacesItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public ArgumentReplacesItemSemanticEditPolicy() {
-		super(ArgumentElementTypes.ArgumentReplaces_4006);
+		super(ArgumentElementTypes.ArgumentReplaces_4005);
 	}
 
 	/**

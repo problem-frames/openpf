@@ -33,7 +33,6 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import argument.argument.Argument;
 import argument.argument.ArgumentDiagram;
-import argument.argument.Link;
 import argument.argument.Mitigates;
 import argument.argument.Rebuts;
 import argument.argument.diagram.edit.helpers.ArgumentBaseEditHelper;
@@ -343,28 +342,20 @@ public class ArgumentBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canCreateLink_4003(ArgumentDiagram container,
-				Argument source, Argument target) {
-			return canExistLink_4003(container, null, source, target);
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canCreateRebutsDenies_4004(Rebuts source, Argument target) {
+		public boolean canCreateRebutsDenies_4003(Rebuts source, Argument target) {
 			if (source != null) {
 				if (source.getDenies() != null) {
 					return false;
 				}
 			}
 
-			return canExistRebutsDenies_4004(source, target);
+			return canExistRebutsDenies_4003(source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canCreateMitigatesRestores_4005(Mitigates source,
+		public boolean canCreateMitigatesRestores_4004(Mitigates source,
 				Argument target) {
 			if (source != null) {
 				if (source.getRestores() != null) {
@@ -372,13 +363,13 @@ public class ArgumentBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 				}
 			}
 
-			return canExistMitigatesRestores_4005(source, target);
+			return canExistMitigatesRestores_4004(source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canCreateArgumentReplaces_4006(Argument source,
+		public boolean canCreateArgumentReplaces_4005(Argument source,
 				Argument target) {
 			if (source != null) {
 				if (source.getReplaces() != null) {
@@ -386,7 +377,7 @@ public class ArgumentBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 				}
 			}
 
-			return canExistArgumentReplaces_4006(source, target);
+			return canExistArgumentReplaces_4005(source, target);
 		}
 
 		/**
@@ -408,22 +399,14 @@ public class ArgumentBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canExistLink_4003(ArgumentDiagram container,
-				Link linkInstance, Argument source, Argument target) {
+		public boolean canExistRebutsDenies_4003(Rebuts source, Argument target) {
 			return true;
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canExistRebutsDenies_4004(Rebuts source, Argument target) {
-			return true;
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canExistMitigatesRestores_4005(Mitigates source,
+		public boolean canExistMitigatesRestores_4004(Mitigates source,
 				Argument target) {
 			return true;
 		}
@@ -431,7 +414,7 @@ public class ArgumentBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canExistArgumentReplaces_4006(Argument source,
+		public boolean canExistArgumentReplaces_4005(Argument source,
 				Argument target) {
 			return true;
 		}

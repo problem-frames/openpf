@@ -54,7 +54,7 @@ public class ArgumentReplacesCreateCommand extends EditElementCommand {
 		}
 		// target may be null here but it's possible to check constraint
 		return ArgumentBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canCreateArgumentReplaces_4006(getSource(), getTarget());
+				.canCreateArgumentReplaces_4005(getSource(), getTarget());
 	}
 
 	/**

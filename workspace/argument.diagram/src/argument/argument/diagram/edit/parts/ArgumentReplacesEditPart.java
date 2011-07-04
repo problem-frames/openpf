@@ -22,7 +22,7 @@ public class ArgumentReplacesEditPart extends ConnectionNodeEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 4006;
+	public static final int VISUAL_ID = 4005;
 
 	/**
 	 * @generated
