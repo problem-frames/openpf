@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link argument.argument.impl.RebutsImpl#getOrigin <em>Origin</em>}</li>
+ *   <li>{@link argument.argument.impl.RebutsImpl#getDenies <em>Denies</em>}</li>
  * </ul>
  * </p>
  *
@@ -32,14 +32,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class RebutsImpl extends LinkImpl implements Rebuts
 {
   /**
-	 * The cached value of the '{@link #getOrigin() <em>Origin</em>}' reference.
+	 * The cached value of the '{@link #getDenies() <em>Denies</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getOrigin()
+	 * @see #getDenies()
 	 * @generated
 	 * @ordered
 	 */
-  protected Argument origin;
+  protected Argument denies;
 
   /**
 	 * <!-- begin-user-doc -->
@@ -67,17 +67,17 @@ public class RebutsImpl extends LinkImpl implements Rebuts
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Argument getOrigin()
+  public Argument getDenies()
   {
-		if (origin != null && origin.eIsProxy()) {
-			InternalEObject oldOrigin = (InternalEObject)origin;
-			origin = (Argument)eResolveProxy(oldOrigin);
-			if (origin != oldOrigin) {
+		if (denies != null && denies.eIsProxy()) {
+			InternalEObject oldDenies = (InternalEObject)denies;
+			denies = (Argument)eResolveProxy(oldDenies);
+			if (denies != oldDenies) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ArgumentPackage.REBUTS__ORIGIN, oldOrigin, origin));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ArgumentPackage.REBUTS__DENIES, oldDenies, denies));
 			}
 		}
-		return origin;
+		return denies;
 	}
 
   /**
@@ -85,9 +85,9 @@ public class RebutsImpl extends LinkImpl implements Rebuts
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Argument basicGetOrigin()
+  public Argument basicGetDenies()
   {
-		return origin;
+		return denies;
 	}
 
   /**
@@ -95,12 +95,12 @@ public class RebutsImpl extends LinkImpl implements Rebuts
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setOrigin(Argument newOrigin)
+  public void setDenies(Argument newDenies)
   {
-		Argument oldOrigin = origin;
-		origin = newOrigin;
+		Argument oldDenies = denies;
+		denies = newDenies;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.REBUTS__ORIGIN, oldOrigin, origin));
+			eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.REBUTS__DENIES, oldDenies, denies));
 	}
 
   /**
@@ -112,9 +112,9 @@ public class RebutsImpl extends LinkImpl implements Rebuts
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case ArgumentPackage.REBUTS__ORIGIN:
-				if (resolve) return getOrigin();
-				return basicGetOrigin();
+			case ArgumentPackage.REBUTS__DENIES:
+				if (resolve) return getDenies();
+				return basicGetDenies();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -128,8 +128,8 @@ public class RebutsImpl extends LinkImpl implements Rebuts
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case ArgumentPackage.REBUTS__ORIGIN:
-				setOrigin((Argument)newValue);
+			case ArgumentPackage.REBUTS__DENIES:
+				setDenies((Argument)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -144,8 +144,8 @@ public class RebutsImpl extends LinkImpl implements Rebuts
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case ArgumentPackage.REBUTS__ORIGIN:
-				setOrigin((Argument)null);
+			case ArgumentPackage.REBUTS__DENIES:
+				setDenies((Argument)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -160,8 +160,8 @@ public class RebutsImpl extends LinkImpl implements Rebuts
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case ArgumentPackage.REBUTS__ORIGIN:
-				return origin != null;
+			case ArgumentPackage.REBUTS__DENIES:
+				return denies != null;
 		}
 		return super.eIsSet(featureID);
 	}

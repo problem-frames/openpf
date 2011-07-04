@@ -1,6 +1,3 @@
-/*
- * 
- */
 package argument.argument.diagram.navigator;
 
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;

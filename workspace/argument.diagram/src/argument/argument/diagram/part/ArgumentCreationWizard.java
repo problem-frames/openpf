@@ -1,6 +1,3 @@
-/*
- * 
- */
 package argument.argument.diagram.part;
 
 import java.lang.reflect.InvocationTargetException;

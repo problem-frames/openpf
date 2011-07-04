@@ -278,7 +278,7 @@ ruleRebuts returns [EObject current=null]
         }
 	RULE_ID
 	{
-		createLeafNode(grammarAccess.getRebutsAccess().getOriginArgumentCrossReference_4_0(), "origin"); 
+		createLeafNode(grammarAccess.getRebutsAccess().getDeniesArgumentCrossReference_4_0(), "denies"); 
 	}
 
 )
@@ -372,7 +372,7 @@ ruleMitigates returns [EObject current=null]
         }
 	RULE_ID
 	{
-		createLeafNode(grammarAccess.getMitigatesAccess().getRebuttalArgumentCrossReference_4_0(), "rebuttal"); 
+		createLeafNode(grammarAccess.getMitigatesAccess().getRestoresArgumentCrossReference_4_0(), "restores"); 
 	}
 
 )
@@ -514,7 +514,7 @@ ruleArgument returns [EObject current=null]
         }
 	RULE_ID
 	{
-		createLeafNode(grammarAccess.getArgumentAccess().getOriginArgumentCrossReference_4_1_0(), "origin"); 
+		createLeafNode(grammarAccess.getArgumentAccess().getReplacesArgumentCrossReference_4_1_0(), "replaces"); 
 	}
 
 )

@@ -1,6 +1,3 @@
-/*
- * 
- */
 package argument.argument.diagram.preferences;
 
 import org.eclipse.gmf.runtime.diagram.ui.preferences.PrintingPreferencePage;

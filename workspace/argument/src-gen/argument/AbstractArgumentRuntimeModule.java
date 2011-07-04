@@ -80,13 +80,13 @@ public abstract class AbstractArgumentRuntimeModule extends DefaultRuntimeModule
 	}
 
 	// contributed by org.eclipse.xtext.generator.validation.JavaValidatorFragment
-	@org.eclipse.xtext.service.SingletonBinding(eager=true)	public Class<? extends argument.argument.validation.ArgumentJavaValidator> bindArgumentJavaValidator() {
-		return argument.argument.validation.ArgumentJavaValidator.class;
+	@org.eclipse.xtext.service.SingletonBinding(eager=true)	public Class<? extends argument.validation.ArgumentJavaValidator> bindArgumentJavaValidator() {
+		return argument.validation.ArgumentJavaValidator.class;
 	}
 
 	// contributed by org.eclipse.xtext.generator.scoping.AbstractScopingFragment
 	public Class<? extends org.eclipse.xtext.scoping.IScopeProvider> bindIScopeProvider() {
-		return argument.argument.scoping.ArgumentScopeProvider.class;
+		return argument.scoping.ArgumentScopeProvider.class;
 	}
 
 	// contributed by org.eclipse.xtext.generator.scoping.AbstractScopingFragment
@@ -126,7 +126,7 @@ public abstract class AbstractArgumentRuntimeModule extends DefaultRuntimeModule
 
 	// contributed by org.eclipse.xtext.generator.formatting.FormatterFragment
 	public Class<? extends org.eclipse.xtext.formatting.IFormatter> bindIFormatter() {
-		return argument.argument.formatting.ArgumentFormatter.class;
+		return argument.formatting.ArgumentFormatter.class;
 	}
 
 }

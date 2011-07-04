@@ -67,7 +67,7 @@ public class ArgumentItemProvider
 			addNamePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
 			addRoundPropertyDescriptor(object);
-			addOriginPropertyDescriptor(object);
+			addReplacesPropertyDescriptor(object);
 			addForegroundPropertyDescriptor(object);
 			addBackgroundPropertyDescriptor(object);
 			addShapePropertyDescriptor(object);
@@ -144,19 +144,19 @@ public class ArgumentItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Origin feature.
+	 * This adds a property descriptor for the Replaces feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addOriginPropertyDescriptor(Object object) {
+	protected void addReplacesPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Argument_origin_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Argument_origin_feature", "_UI_Argument_type"),
-				 ArgumentPackage.Literals.ARGUMENT__ORIGIN,
+				 getString("_UI_Argument_replaces_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Argument_replaces_feature", "_UI_Argument_type"),
+				 ArgumentPackage.Literals.ARGUMENT__REPLACES,
 				 true,
 				 false,
 				 true,

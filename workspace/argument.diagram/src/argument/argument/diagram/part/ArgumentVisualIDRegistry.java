@@ -1,6 +1,3 @@
-/*
- * 
- */
 package argument.argument.diagram.part;
 
 import org.eclipse.core.runtime.Platform;
@@ -24,11 +21,12 @@ import argument.argument.diagram.edit.parts.ArgumentEditPart;
 import argument.argument.diagram.edit.parts.ArgumentNameDescriptionRound2EditPart;
 import argument.argument.diagram.edit.parts.ArgumentNameDescriptionRound3EditPart;
 import argument.argument.diagram.edit.parts.ArgumentNameDescriptionRoundEditPart;
-import argument.argument.diagram.edit.parts.ArgumentOriginEditPart;
+import argument.argument.diagram.edit.parts.ArgumentReplacesEditPart;
+import argument.argument.diagram.edit.parts.LinkEditPart;
 import argument.argument.diagram.edit.parts.MitigatesEditPart;
-import argument.argument.diagram.edit.parts.MitigatesRebuttalEditPart;
+import argument.argument.diagram.edit.parts.MitigatesRestoresEditPart;
+import argument.argument.diagram.edit.parts.RebutsDeniesEditPart;
 import argument.argument.diagram.edit.parts.RebutsEditPart;
-import argument.argument.diagram.edit.parts.RebutsOriginEditPart;
 import argument.argument.diagram.edit.parts.WrappingLabel2EditPart;
 import argument.argument.diagram.edit.parts.WrappingLabel3EditPart;
 import argument.argument.diagram.edit.parts.WrappingLabelEditPart;
@@ -125,8 +123,7 @@ public class ArgumentVisualIDRegistry {
 		}
 		String containerModelID = argument.argument.diagram.part.ArgumentVisualIDRegistry
 				.getModelID(containerView);
-		if (!ArgumentDiagramEditPart.MODEL_ID.equals(containerModelID)
-				&& !"argument".equals(containerModelID)) { //$NON-NLS-1$
+		if (!ArgumentDiagramEditPart.MODEL_ID.equals(containerModelID)) {
 			return -1;
 		}
 		int containerVisualID;
@@ -193,8 +190,7 @@ public class ArgumentVisualIDRegistry {
 	public static boolean canCreateNode(View containerView, int nodeVisualID) {
 		String containerModelID = argument.argument.diagram.part.ArgumentVisualIDRegistry
 				.getModelID(containerView);
-		if (!ArgumentDiagramEditPart.MODEL_ID.equals(containerModelID)
-				&& !"argument".equals(containerModelID)) { //$NON-NLS-1$
+		if (!ArgumentDiagramEditPart.MODEL_ID.equals(containerModelID)) {
 			return false;
 		}
 		int containerVisualID;
@@ -277,17 +273,17 @@ public class ArgumentVisualIDRegistry {
 				return true;
 			}
 			break;
-		case RebutsOriginEditPart.VISUAL_ID:
+		case RebutsDeniesEditPart.VISUAL_ID:
 			if (WrappingLabelEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case MitigatesRebuttalEditPart.VISUAL_ID:
+		case MitigatesRestoresEditPart.VISUAL_ID:
 			if (WrappingLabel2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case ArgumentOriginEditPart.VISUAL_ID:
+		case ArgumentReplacesEditPart.VISUAL_ID:
 			if (WrappingLabel3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
@@ -310,6 +306,10 @@ public class ArgumentVisualIDRegistry {
 		if (ArgumentPackage.eINSTANCE.getMitigates().isSuperTypeOf(
 				domainElement.eClass())) {
 			return MitigatesEditPart.VISUAL_ID;
+		}
+		if (ArgumentPackage.eINSTANCE.getLink().isSuperTypeOf(
+				domainElement.eClass())) {
+			return LinkEditPart.VISUAL_ID;
 		}
 		return -1;
 	}

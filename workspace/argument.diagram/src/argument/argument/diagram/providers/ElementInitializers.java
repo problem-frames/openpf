@@ -1,6 +1,3 @@
-/*
- * 
- */
 package argument.argument.diagram.providers;
 
 import argument.argument.diagram.part.ArgumentDiagramEditorPlugin;

@@ -52,7 +52,7 @@ public class ArgumentActivator extends AbstractUIPlugin {
 	protected Module getRuntimeModule(String grammar) {
 		
 		if ("argument.Argument".equals(grammar)) {
-		  return new argument.argument.ArgumentRuntimeModule();
+		  return new argument.ArgumentRuntimeModule();
 		}
 		
 		throw new IllegalArgumentException(grammar);

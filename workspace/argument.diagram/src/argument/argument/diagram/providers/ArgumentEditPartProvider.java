@@ -1,6 +1,3 @@
-/*
- * 
- */
 package argument.argument.diagram.providers;
 
 import java.lang.ref.WeakReference;

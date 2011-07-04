@@ -1,6 +1,3 @@
-/*
- * 
- */
 package argument.argument.diagram.edit.parts;
 
 import java.util.Collections;

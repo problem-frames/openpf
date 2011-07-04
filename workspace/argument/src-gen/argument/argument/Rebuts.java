@@ -14,7 +14,7 @@ package argument.argument;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link argument.argument.Rebuts#getOrigin <em>Origin</em>}</li>
+ *   <li>{@link argument.argument.Rebuts#getDenies <em>Denies</em>}</li>
  * </ul>
  * </p>
  *
@@ -25,29 +25,29 @@ package argument.argument;
 public interface Rebuts extends Link
 {
   /**
-	 * Returns the value of the '<em><b>Origin</b></em>' reference.
+	 * Returns the value of the '<em><b>Denies</b></em>' reference.
 	 * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Origin</em>' reference isn't clear,
+   * If the meaning of the '<em>Denies</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Origin</em>' reference.
-	 * @see #setOrigin(Argument)
-	 * @see argument.argument.ArgumentPackage#getRebuts_Origin()
-	 * @model annotation="gmf.link target='origin' style='dashed' width='1' color='255,105,180' target.decoration='arrow'"
+	 * @return the value of the '<em>Denies</em>' reference.
+	 * @see #setDenies(Argument)
+	 * @see argument.argument.ArgumentPackage#getRebuts_Denies()
+	 * @model annotation="gmf.link target='denies' style='dashed' width='1' color='255,105,180' target.decoration='arrow'"
 	 * @generated
 	 */
-  Argument getOrigin();
+  Argument getDenies();
 
   /**
-	 * Sets the value of the '{@link argument.argument.Rebuts#getOrigin <em>Origin</em>}' reference.
+	 * Sets the value of the '{@link argument.argument.Rebuts#getDenies <em>Denies</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Origin</em>' reference.
-	 * @see #getOrigin()
+	 * @param value the new value of the '<em>Denies</em>' reference.
+	 * @see #getDenies()
 	 * @generated
 	 */
-  void setOrigin(Argument value);
+  void setDenies(Argument value);
 
 } // Rebuts

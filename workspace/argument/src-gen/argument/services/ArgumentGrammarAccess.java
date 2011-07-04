@@ -98,17 +98,17 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cToArgumentCrossReference_2_0 = (CrossReference)cToAssignment_2.eContents().get(0);
 		private final RuleCall cToArgumentIDTerminalRuleCall_2_0_1 = (RuleCall)cToArgumentCrossReference_2_0.eContents().get(1);
 		private final Keyword cOnKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cOriginAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final CrossReference cOriginArgumentCrossReference_4_0 = (CrossReference)cOriginAssignment_4.eContents().get(0);
-		private final RuleCall cOriginArgumentIDTerminalRuleCall_4_0_1 = (RuleCall)cOriginArgumentCrossReference_4_0.eContents().get(1);
+		private final Assignment cDeniesAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final CrossReference cDeniesArgumentCrossReference_4_0 = (CrossReference)cDeniesAssignment_4.eContents().get(0);
+		private final RuleCall cDeniesArgumentIDTerminalRuleCall_4_0_1 = (RuleCall)cDeniesArgumentCrossReference_4_0.eContents().get(1);
 		private final Assignment cGeneratedAssignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final Keyword cGeneratedGeneratedKeyword_5_0 = (Keyword)cGeneratedAssignment_5.eContents().get(0);
 		
 		//Rebuts:
-		//	from=[Argument] "rebutted by" to=[Argument] "on" origin=[Argument] generated?="@generated"?;
+		//	from=[Argument] "rebutted by" to=[Argument] "on" denies=[Argument] generated?="@generated"?;
 		public ParserRule getRule() { return rule; }
 
-		//from=[Argument] "rebutted by" to=[Argument] "on" origin=[Argument] generated?="@generated"?
+		//from=[Argument] "rebutted by" to=[Argument] "on" denies=[Argument] generated?="@generated"?
 		public Group getGroup() { return cGroup; }
 
 		//from=[Argument]
@@ -135,14 +135,14 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 		//"on"
 		public Keyword getOnKeyword_3() { return cOnKeyword_3; }
 
-		//origin=[Argument]
-		public Assignment getOriginAssignment_4() { return cOriginAssignment_4; }
+		//denies=[Argument]
+		public Assignment getDeniesAssignment_4() { return cDeniesAssignment_4; }
 
 		//[Argument]
-		public CrossReference getOriginArgumentCrossReference_4_0() { return cOriginArgumentCrossReference_4_0; }
+		public CrossReference getDeniesArgumentCrossReference_4_0() { return cDeniesArgumentCrossReference_4_0; }
 
 		//ID
-		public RuleCall getOriginArgumentIDTerminalRuleCall_4_0_1() { return cOriginArgumentIDTerminalRuleCall_4_0_1; }
+		public RuleCall getDeniesArgumentIDTerminalRuleCall_4_0_1() { return cDeniesArgumentIDTerminalRuleCall_4_0_1; }
 
 		//generated?="@generated"?
 		public Assignment getGeneratedAssignment_5() { return cGeneratedAssignment_5; }
@@ -162,17 +162,17 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cToArgumentCrossReference_2_0 = (CrossReference)cToAssignment_2.eContents().get(0);
 		private final RuleCall cToArgumentIDTerminalRuleCall_2_0_1 = (RuleCall)cToArgumentCrossReference_2_0.eContents().get(1);
 		private final Keyword cOnKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cRebuttalAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final CrossReference cRebuttalArgumentCrossReference_4_0 = (CrossReference)cRebuttalAssignment_4.eContents().get(0);
-		private final RuleCall cRebuttalArgumentIDTerminalRuleCall_4_0_1 = (RuleCall)cRebuttalArgumentCrossReference_4_0.eContents().get(1);
+		private final Assignment cRestoresAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final CrossReference cRestoresArgumentCrossReference_4_0 = (CrossReference)cRestoresAssignment_4.eContents().get(0);
+		private final RuleCall cRestoresArgumentIDTerminalRuleCall_4_0_1 = (RuleCall)cRestoresArgumentCrossReference_4_0.eContents().get(1);
 		private final Assignment cGeneratedAssignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final Keyword cGeneratedGeneratedKeyword_5_0 = (Keyword)cGeneratedAssignment_5.eContents().get(0);
 		
 		//Mitigates:
-		//	from=[Argument] "mitigated by" to=[Argument] "on" rebuttal=[Argument] generated?="@generated"?;
+		//	from=[Argument] "mitigated by" to=[Argument] "on" restores=[Argument] generated?="@generated"?;
 		public ParserRule getRule() { return rule; }
 
-		//from=[Argument] "mitigated by" to=[Argument] "on" rebuttal=[Argument] generated?="@generated"?
+		//from=[Argument] "mitigated by" to=[Argument] "on" restores=[Argument] generated?="@generated"?
 		public Group getGroup() { return cGroup; }
 
 		//from=[Argument]
@@ -199,14 +199,14 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 		//"on"
 		public Keyword getOnKeyword_3() { return cOnKeyword_3; }
 
-		//rebuttal=[Argument]
-		public Assignment getRebuttalAssignment_4() { return cRebuttalAssignment_4; }
+		//restores=[Argument]
+		public Assignment getRestoresAssignment_4() { return cRestoresAssignment_4; }
 
 		//[Argument]
-		public CrossReference getRebuttalArgumentCrossReference_4_0() { return cRebuttalArgumentCrossReference_4_0; }
+		public CrossReference getRestoresArgumentCrossReference_4_0() { return cRestoresArgumentCrossReference_4_0; }
 
 		//ID
-		public RuleCall getRebuttalArgumentIDTerminalRuleCall_4_0_1() { return cRebuttalArgumentIDTerminalRuleCall_4_0_1; }
+		public RuleCall getRestoresArgumentIDTerminalRuleCall_4_0_1() { return cRestoresArgumentIDTerminalRuleCall_4_0_1; }
 
 		//generated?="@generated"?
 		public Assignment getGeneratedAssignment_5() { return cGeneratedAssignment_5; }
@@ -229,9 +229,9 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRoundINTTerminalRuleCall_3_1_0 = (RuleCall)cRoundAssignment_3_1.eContents().get(0);
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
 		private final Keyword cReplacingKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cOriginAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final CrossReference cOriginArgumentCrossReference_4_1_0 = (CrossReference)cOriginAssignment_4_1.eContents().get(0);
-		private final RuleCall cOriginArgumentIDTerminalRuleCall_4_1_0_1 = (RuleCall)cOriginArgumentCrossReference_4_1_0.eContents().get(1);
+		private final Assignment cReplacesAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final CrossReference cReplacesArgumentCrossReference_4_1_0 = (CrossReference)cReplacesAssignment_4_1.eContents().get(0);
+		private final RuleCall cReplacesArgumentIDTerminalRuleCall_4_1_0_1 = (RuleCall)cReplacesArgumentCrossReference_4_1_0.eContents().get(1);
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
 		private final Keyword cWithKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
 		private final Assignment cExprAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
@@ -272,7 +272,7 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 		//	name=ID ":"? // unique identifier
 		//	description= // non-empty description
 		//	STRING ("round" round=INT)? // default is 0
-		//	("replacing" origin=[Argument])? // default is null
+		//	("replacing" replaces=[Argument])? // default is null
 		//	("with" expr=Expression)? // default is the same as the name
 		//	("foreground" foreground=STRING)? // default is 'black'
 		//	("background" background=STRING)? // default is 'white'
@@ -285,7 +285,7 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 		//name=ID ":"? // unique identifier
 		//description= // non-empty description
 		//STRING ("round" round=INT)? // default is 0
-		//("replacing" origin=[Argument])? // default is null
+		//("replacing" replaces=[Argument])? // default is null
 		//("with" expr=Expression)? // default is the same as the name
 		//("foreground" foreground=STRING)? // default is 'black'
 		//("background" background=STRING)? // default is 'white'
@@ -324,20 +324,20 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getRoundINTTerminalRuleCall_3_1_0() { return cRoundINTTerminalRuleCall_3_1_0; }
 
-		//("replacing" origin=[Argument])?
+		//("replacing" replaces=[Argument])?
 		public Group getGroup_4() { return cGroup_4; }
 
 		//"replacing"
 		public Keyword getReplacingKeyword_4_0() { return cReplacingKeyword_4_0; }
 
-		//origin=[Argument]
-		public Assignment getOriginAssignment_4_1() { return cOriginAssignment_4_1; }
+		//replaces=[Argument]
+		public Assignment getReplacesAssignment_4_1() { return cReplacesAssignment_4_1; }
 
 		//[Argument]
-		public CrossReference getOriginArgumentCrossReference_4_1_0() { return cOriginArgumentCrossReference_4_1_0; }
+		public CrossReference getReplacesArgumentCrossReference_4_1_0() { return cReplacesArgumentCrossReference_4_1_0; }
 
 		//ID
-		public RuleCall getOriginArgumentIDTerminalRuleCall_4_1_0_1() { return cOriginArgumentIDTerminalRuleCall_4_1_0_1; }
+		public RuleCall getReplacesArgumentIDTerminalRuleCall_4_1_0_1() { return cReplacesArgumentIDTerminalRuleCall_4_1_0_1; }
 
 		//("with" expr=Expression)?
 		public Group getGroup_5() { return cGroup_5; }
@@ -1167,7 +1167,7 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Rebuts:
-	//	from=[Argument] "rebutted by" to=[Argument] "on" origin=[Argument] generated?="@generated"?;
+	//	from=[Argument] "rebutted by" to=[Argument] "on" denies=[Argument] generated?="@generated"?;
 	public RebutsElements getRebutsAccess() {
 		return (pRebuts != null) ? pRebuts : (pRebuts = new RebutsElements());
 	}
@@ -1177,7 +1177,7 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Mitigates:
-	//	from=[Argument] "mitigated by" to=[Argument] "on" rebuttal=[Argument] generated?="@generated"?;
+	//	from=[Argument] "mitigated by" to=[Argument] "on" restores=[Argument] generated?="@generated"?;
 	public MitigatesElements getMitigatesAccess() {
 		return (pMitigates != null) ? pMitigates : (pMitigates = new MitigatesElements());
 	}
@@ -1190,7 +1190,7 @@ public class ArgumentGrammarAccess extends AbstractGrammarElementFinder {
 	//	name=ID ":"? // unique identifier
 	//	description= // non-empty description
 	//	STRING ("round" round=INT)? // default is 0
-	//	("replacing" origin=[Argument])? // default is null
+	//	("replacing" replaces=[Argument])? // default is null
 	//	("with" expr=Expression)? // default is the same as the name
 	//	("foreground" foreground=STRING)? // default is 'black'
 	//	("background" background=STRING)? // default is 'white'

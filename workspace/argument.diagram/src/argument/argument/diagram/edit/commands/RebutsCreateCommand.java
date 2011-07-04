@@ -1,6 +1,3 @@
-/*
- * 
- */
 package argument.argument.diagram.edit.commands;
 
 import org.eclipse.core.commands.ExecutionException;

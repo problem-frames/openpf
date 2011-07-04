@@ -191,13 +191,13 @@ public interface ArgumentPackage extends EPackage
   int REBUTS__GENERATED = LINK__GENERATED;
 
   /**
-	 * The feature id for the '<em><b>Origin</b></em>' reference.
+	 * The feature id for the '<em><b>Denies</b></em>' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int REBUTS__ORIGIN = LINK_FEATURE_COUNT + 0;
+  int REBUTS__DENIES = LINK_FEATURE_COUNT + 0;
 
   /**
 	 * The number of structural features of the '<em>Rebuts</em>' class.
@@ -246,13 +246,13 @@ public interface ArgumentPackage extends EPackage
   int MITIGATES__GENERATED = LINK__GENERATED;
 
   /**
-	 * The feature id for the '<em><b>Rebuttal</b></em>' reference.
+	 * The feature id for the '<em><b>Restores</b></em>' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int MITIGATES__REBUTTAL = LINK_FEATURE_COUNT + 0;
+  int MITIGATES__RESTORES = LINK_FEATURE_COUNT + 0;
 
   /**
 	 * The number of structural features of the '<em>Mitigates</em>' class.
@@ -366,13 +366,13 @@ public interface ArgumentPackage extends EPackage
   int ARGUMENT__ROUND = TERMINAL_EXPRESSION_FEATURE_COUNT + 2;
 
   /**
-	 * The feature id for the '<em><b>Origin</b></em>' reference.
+	 * The feature id for the '<em><b>Replaces</b></em>' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ARGUMENT__ORIGIN = TERMINAL_EXPRESSION_FEATURE_COUNT + 3;
+  int ARGUMENT__REPLACES = TERMINAL_EXPRESSION_FEATURE_COUNT + 3;
 
   /**
 	 * The feature id for the '<em><b>Expr</b></em>' containment reference.
@@ -1580,15 +1580,15 @@ public interface ArgumentPackage extends EPackage
   EClass getRebuts();
 
   /**
-	 * Returns the meta object for the reference '{@link argument.argument.Rebuts#getOrigin <em>Origin</em>}'.
+	 * Returns the meta object for the reference '{@link argument.argument.Rebuts#getDenies <em>Denies</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Origin</em>'.
-	 * @see argument.argument.Rebuts#getOrigin()
+	 * @return the meta object for the reference '<em>Denies</em>'.
+	 * @see argument.argument.Rebuts#getDenies()
 	 * @see #getRebuts()
 	 * @generated
 	 */
-  EReference getRebuts_Origin();
+  EReference getRebuts_Denies();
 
   /**
 	 * Returns the meta object for class '{@link argument.argument.Mitigates <em>Mitigates</em>}'.
@@ -1601,15 +1601,15 @@ public interface ArgumentPackage extends EPackage
   EClass getMitigates();
 
   /**
-	 * Returns the meta object for the reference '{@link argument.argument.Mitigates#getRebuttal <em>Rebuttal</em>}'.
+	 * Returns the meta object for the reference '{@link argument.argument.Mitigates#getRestores <em>Restores</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Rebuttal</em>'.
-	 * @see argument.argument.Mitigates#getRebuttal()
+	 * @return the meta object for the reference '<em>Restores</em>'.
+	 * @see argument.argument.Mitigates#getRestores()
 	 * @see #getMitigates()
 	 * @generated
 	 */
-  EReference getMitigates_Rebuttal();
+  EReference getMitigates_Restores();
 
   /**
 	 * Returns the meta object for class '{@link argument.argument.Argument <em>Argument</em>}'.
@@ -1655,15 +1655,15 @@ public interface ArgumentPackage extends EPackage
   EAttribute getArgument_Round();
 
   /**
-	 * Returns the meta object for the reference '{@link argument.argument.Argument#getOrigin <em>Origin</em>}'.
+	 * Returns the meta object for the reference '{@link argument.argument.Argument#getReplaces <em>Replaces</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Origin</em>'.
-	 * @see argument.argument.Argument#getOrigin()
+	 * @return the meta object for the reference '<em>Replaces</em>'.
+	 * @see argument.argument.Argument#getReplaces()
 	 * @see #getArgument()
 	 * @generated
 	 */
-  EReference getArgument_Origin();
+  EReference getArgument_Replaces();
 
   /**
 	 * Returns the meta object for the containment reference '{@link argument.argument.Argument#getExpr <em>Expr</em>}'.
@@ -2749,12 +2749,12 @@ public interface ArgumentPackage extends EPackage
     EClass REBUTS = eINSTANCE.getRebuts();
 
     /**
-		 * The meta object literal for the '<em><b>Origin</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Denies</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EReference REBUTS__ORIGIN = eINSTANCE.getRebuts_Origin();
+    EReference REBUTS__DENIES = eINSTANCE.getRebuts_Denies();
 
     /**
 		 * The meta object literal for the '{@link argument.argument.impl.MitigatesImpl <em>Mitigates</em>}' class.
@@ -2767,12 +2767,12 @@ public interface ArgumentPackage extends EPackage
     EClass MITIGATES = eINSTANCE.getMitigates();
 
     /**
-		 * The meta object literal for the '<em><b>Rebuttal</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Restores</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EReference MITIGATES__REBUTTAL = eINSTANCE.getMitigates_Rebuttal();
+    EReference MITIGATES__RESTORES = eINSTANCE.getMitigates_Restores();
 
     /**
 		 * The meta object literal for the '{@link argument.argument.impl.ArgumentImpl <em>Argument</em>}' class.
@@ -2809,12 +2809,12 @@ public interface ArgumentPackage extends EPackage
     EAttribute ARGUMENT__ROUND = eINSTANCE.getArgument_Round();
 
     /**
-		 * The meta object literal for the '<em><b>Origin</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Replaces</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EReference ARGUMENT__ORIGIN = eINSTANCE.getArgument_Origin();
+    EReference ARGUMENT__REPLACES = eINSTANCE.getArgument_Replaces();
 
     /**
 		 * The meta object literal for the '<em><b>Expr</b></em>' containment reference feature.

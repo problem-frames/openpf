@@ -59,25 +59,25 @@ public class MitigatesItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addRebuttalPropertyDescriptor(object);
+			addRestoresPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Rebuttal feature.
+	 * This adds a property descriptor for the Restores feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addRebuttalPropertyDescriptor(Object object) {
+	protected void addRestoresPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Mitigates_rebuttal_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Mitigates_rebuttal_feature", "_UI_Mitigates_type"),
-				 ArgumentPackage.Literals.MITIGATES__REBUTTAL,
+				 getString("_UI_Mitigates_restores_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Mitigates_restores_feature", "_UI_Mitigates_type"),
+				 ArgumentPackage.Literals.MITIGATES__RESTORES,
 				 true,
 				 false,
 				 true,

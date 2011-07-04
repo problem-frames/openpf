@@ -14,7 +14,7 @@ package argument.argument;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link argument.argument.Mitigates#getRebuttal <em>Rebuttal</em>}</li>
+ *   <li>{@link argument.argument.Mitigates#getRestores <em>Restores</em>}</li>
  * </ul>
  * </p>
  *
@@ -25,29 +25,29 @@ package argument.argument;
 public interface Mitigates extends Link
 {
   /**
-	 * Returns the value of the '<em><b>Rebuttal</b></em>' reference.
+	 * Returns the value of the '<em><b>Restores</b></em>' reference.
 	 * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Rebuttal</em>' reference isn't clear,
+   * If the meaning of the '<em>Restores</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Rebuttal</em>' reference.
-	 * @see #setRebuttal(Argument)
-	 * @see argument.argument.ArgumentPackage#getMitigates_Rebuttal()
-	 * @model annotation="gmf.link target='rebuttal' style='solid' width='1' color='255,105,180' target.decoration='arrow'"
+	 * @return the value of the '<em>Restores</em>' reference.
+	 * @see #setRestores(Argument)
+	 * @see argument.argument.ArgumentPackage#getMitigates_Restores()
+	 * @model annotation="gmf.link target='restores' style='solid' width='1' color='255,105,180' target.decoration='arrow'"
 	 * @generated
 	 */
-  Argument getRebuttal();
+  Argument getRestores();
 
   /**
-	 * Sets the value of the '{@link argument.argument.Mitigates#getRebuttal <em>Rebuttal</em>}' reference.
+	 * Sets the value of the '{@link argument.argument.Mitigates#getRestores <em>Restores</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Rebuttal</em>' reference.
-	 * @see #getRebuttal()
+	 * @param value the new value of the '<em>Restores</em>' reference.
+	 * @see #getRestores()
 	 * @generated
 	 */
-  void setRebuttal(Argument value);
+  void setRestores(Argument value);
 
 } // Mitigates

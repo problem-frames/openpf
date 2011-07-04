@@ -1,6 +1,3 @@
-/*
- * 
- */
 package argument.argument.diagram.edit.parts;
 
 import java.util.Collections;
@@ -312,7 +309,7 @@ public class WrappingLabel3EditPart extends LabelEditPart implements
 	public IParser getParser() {
 		if (parser == null) {
 			parser = ArgumentParserProvider.getParser(
-					ArgumentElementTypes.ArgumentOrigin_4005,
+					ArgumentElementTypes.ArgumentReplaces_4006,
 					getParserElement(), CommonParserHint.DESCRIPTION);
 		}
 		return parser;

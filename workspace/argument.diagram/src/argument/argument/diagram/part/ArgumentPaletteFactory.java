@@ -1,6 +1,3 @@
-/*
- * 
- */
 package argument.argument.diagram.part;
 
 import java.util.ArrayList;
@@ -51,11 +48,12 @@ public class ArgumentPaletteFactory {
 		PaletteDrawer paletteContainer = new PaletteDrawer(
 				Messages.Connections2Group_title);
 		paletteContainer.setId("createConnections2Group"); //$NON-NLS-1$
-		paletteContainer.add(createMitigates1CreationTool());
-		paletteContainer.add(createOrigin2CreationTool());
-		paletteContainer.add(createOrigin3CreationTool());
+		paletteContainer.add(createDenies1CreationTool());
+		paletteContainer.add(createLink2CreationTool());
+		paletteContainer.add(createMitigates3CreationTool());
 		paletteContainer.add(createRebuts4CreationTool());
-		paletteContainer.add(createRebuttal5CreationTool());
+		paletteContainer.add(createReplaces5CreationTool());
+		paletteContainer.add(createRestores6CreationTool());
 		return paletteContainer;
 	}
 
@@ -80,46 +78,45 @@ public class ArgumentPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createMitigates1CreationTool() {
+	private ToolEntry createDenies1CreationTool() {
 		LinkToolEntry entry = new LinkToolEntry(
-				Messages.Mitigates1CreationTool_title,
-				Messages.Mitigates1CreationTool_desc,
+				Messages.Denies1CreationTool_title,
+				Messages.Denies1CreationTool_desc,
+				Collections
+						.singletonList(ArgumentElementTypes.RebutsDenies_4004));
+		entry.setId("createDenies1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ArgumentElementTypes
+				.getImageDescriptor(ArgumentElementTypes.RebutsDenies_4004));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createLink2CreationTool() {
+		LinkToolEntry entry = new LinkToolEntry(
+				Messages.Link2CreationTool_title,
+				Messages.Link2CreationTool_desc,
+				Collections.singletonList(ArgumentElementTypes.Link_4003));
+		entry.setId("createLink2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ArgumentElementTypes
+				.getImageDescriptor(ArgumentElementTypes.Link_4003));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createMitigates3CreationTool() {
+		LinkToolEntry entry = new LinkToolEntry(
+				Messages.Mitigates3CreationTool_title,
+				Messages.Mitigates3CreationTool_desc,
 				Collections.singletonList(ArgumentElementTypes.Mitigates_4002));
-		entry.setId("createMitigates1CreationTool"); //$NON-NLS-1$
+		entry.setId("createMitigates3CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ArgumentElementTypes
 				.getImageDescriptor(ArgumentElementTypes.Mitigates_4002));
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	 * @generated
-	 */
-	private ToolEntry createOrigin2CreationTool() {
-		LinkToolEntry entry = new LinkToolEntry(
-				Messages.Origin2CreationTool_title,
-				Messages.Origin2CreationTool_desc,
-				Collections
-						.singletonList(ArgumentElementTypes.RebutsOrigin_4003));
-		entry.setId("createOrigin2CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(ArgumentElementTypes
-				.getImageDescriptor(ArgumentElementTypes.RebutsOrigin_4003));
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	 * @generated
-	 */
-	private ToolEntry createOrigin3CreationTool() {
-		LinkToolEntry entry = new LinkToolEntry(
-				Messages.Origin3CreationTool_title,
-				Messages.Origin3CreationTool_desc,
-				Collections
-						.singletonList(ArgumentElementTypes.ArgumentOrigin_4005));
-		entry.setId("createOrigin3CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(ArgumentElementTypes
-				.getImageDescriptor(ArgumentElementTypes.ArgumentOrigin_4005));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -142,15 +139,31 @@ public class ArgumentPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createRebuttal5CreationTool() {
+	private ToolEntry createReplaces5CreationTool() {
 		LinkToolEntry entry = new LinkToolEntry(
-				Messages.Rebuttal5CreationTool_title,
-				Messages.Rebuttal5CreationTool_desc,
+				Messages.Replaces5CreationTool_title,
+				Messages.Replaces5CreationTool_desc,
 				Collections
-						.singletonList(ArgumentElementTypes.MitigatesRebuttal_4004));
-		entry.setId("createRebuttal5CreationTool"); //$NON-NLS-1$
+						.singletonList(ArgumentElementTypes.ArgumentReplaces_4006));
+		entry.setId("createReplaces5CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ArgumentElementTypes
-				.getImageDescriptor(ArgumentElementTypes.MitigatesRebuttal_4004));
+				.getImageDescriptor(ArgumentElementTypes.ArgumentReplaces_4006));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createRestores6CreationTool() {
+		LinkToolEntry entry = new LinkToolEntry(
+				Messages.Restores6CreationTool_title,
+				Messages.Restores6CreationTool_desc,
+				Collections
+						.singletonList(ArgumentElementTypes.MitigatesRestores_4005));
+		entry.setId("createRestores6CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ArgumentElementTypes
+				.getImageDescriptor(ArgumentElementTypes.MitigatesRestores_4005));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}

@@ -1,6 +1,3 @@
-/*
- * 
- */
 package argument.argument.diagram.edit.policies;
 
 import java.util.Iterator;
@@ -36,6 +33,7 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import argument.argument.Argument;
 import argument.argument.ArgumentDiagram;
+import argument.argument.Link;
 import argument.argument.Mitigates;
 import argument.argument.Rebuts;
 import argument.argument.diagram.edit.helpers.ArgumentBaseEditHelper;
@@ -345,42 +343,50 @@ public class ArgumentBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canCreateRebutsOrigin_4003(Rebuts source, Argument target) {
-			if (source != null) {
-				if (source.getOrigin() != null) {
-					return false;
-				}
-			}
-
-			return canExistRebutsOrigin_4003(source, target);
+		public boolean canCreateLink_4003(ArgumentDiagram container,
+				Argument source, Argument target) {
+			return canExistLink_4003(container, null, source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canCreateMitigatesRebuttal_4004(Mitigates source,
-				Argument target) {
+		public boolean canCreateRebutsDenies_4004(Rebuts source, Argument target) {
 			if (source != null) {
-				if (source.getRebuttal() != null) {
+				if (source.getDenies() != null) {
 					return false;
 				}
 			}
 
-			return canExistMitigatesRebuttal_4004(source, target);
+			return canExistRebutsDenies_4004(source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canCreateArgumentOrigin_4005(Argument source,
+		public boolean canCreateMitigatesRestores_4005(Mitigates source,
 				Argument target) {
 			if (source != null) {
-				if (source.getOrigin() != null) {
+				if (source.getRestores() != null) {
 					return false;
 				}
 			}
 
-			return canExistArgumentOrigin_4005(source, target);
+			return canExistMitigatesRestores_4005(source, target);
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canCreateArgumentReplaces_4006(Argument source,
+				Argument target) {
+			if (source != null) {
+				if (source.getReplaces() != null) {
+					return false;
+				}
+			}
+
+			return canExistArgumentReplaces_4006(source, target);
 		}
 
 		/**
@@ -402,14 +408,22 @@ public class ArgumentBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canExistRebutsOrigin_4003(Rebuts source, Argument target) {
+		public boolean canExistLink_4003(ArgumentDiagram container,
+				Link linkInstance, Argument source, Argument target) {
 			return true;
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canExistMitigatesRebuttal_4004(Mitigates source,
+		public boolean canExistRebutsDenies_4004(Rebuts source, Argument target) {
+			return true;
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canExistMitigatesRestores_4005(Mitigates source,
 				Argument target) {
 			return true;
 		}
@@ -417,7 +431,7 @@ public class ArgumentBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canExistArgumentOrigin_4005(Argument source,
+		public boolean canExistArgumentReplaces_4006(Argument source,
 				Argument target) {
 			return true;
 		}

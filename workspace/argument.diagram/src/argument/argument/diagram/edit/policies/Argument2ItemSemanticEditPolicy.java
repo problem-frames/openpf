@@ -1,6 +1,3 @@
-/*
- * 
- */
 package argument.argument.diagram.edit.policies;
 
 import java.util.Iterator;
@@ -21,25 +18,28 @@ import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
 
-import argument.argument.diagram.edit.commands.ArgumentOriginCreateCommand;
-import argument.argument.diagram.edit.commands.ArgumentOriginReorientCommand;
+import argument.argument.diagram.edit.commands.ArgumentReplacesCreateCommand;
+import argument.argument.diagram.edit.commands.ArgumentReplacesReorientCommand;
+import argument.argument.diagram.edit.commands.LinkCreateCommand;
+import argument.argument.diagram.edit.commands.LinkReorientCommand;
 import argument.argument.diagram.edit.commands.MitigatesCreateCommand;
-import argument.argument.diagram.edit.commands.MitigatesRebuttalCreateCommand;
-import argument.argument.diagram.edit.commands.MitigatesRebuttalReorientCommand;
 import argument.argument.diagram.edit.commands.MitigatesReorientCommand;
+import argument.argument.diagram.edit.commands.MitigatesRestoresCreateCommand;
+import argument.argument.diagram.edit.commands.MitigatesRestoresReorientCommand;
 import argument.argument.diagram.edit.commands.RebutsCreateCommand;
-import argument.argument.diagram.edit.commands.RebutsOriginCreateCommand;
-import argument.argument.diagram.edit.commands.RebutsOriginReorientCommand;
+import argument.argument.diagram.edit.commands.RebutsDeniesCreateCommand;
+import argument.argument.diagram.edit.commands.RebutsDeniesReorientCommand;
 import argument.argument.diagram.edit.commands.RebutsReorientCommand;
 import argument.argument.diagram.edit.parts.Argument2EditPart;
 import argument.argument.diagram.edit.parts.Argument3EditPart;
 import argument.argument.diagram.edit.parts.ArgumentArgumentGroundsCompartment2EditPart;
 import argument.argument.diagram.edit.parts.ArgumentArgumentWarrantsCompartment2EditPart;
-import argument.argument.diagram.edit.parts.ArgumentOriginEditPart;
+import argument.argument.diagram.edit.parts.ArgumentReplacesEditPart;
+import argument.argument.diagram.edit.parts.LinkEditPart;
 import argument.argument.diagram.edit.parts.MitigatesEditPart;
-import argument.argument.diagram.edit.parts.MitigatesRebuttalEditPart;
+import argument.argument.diagram.edit.parts.MitigatesRestoresEditPart;
+import argument.argument.diagram.edit.parts.RebutsDeniesEditPart;
 import argument.argument.diagram.edit.parts.RebutsEditPart;
-import argument.argument.diagram.edit.parts.RebutsOriginEditPart;
 import argument.argument.diagram.part.ArgumentVisualIDRegistry;
 import argument.argument.diagram.providers.ArgumentElementTypes;
 
@@ -80,7 +80,14 @@ public class Argument2ItemSemanticEditPolicy extends
 				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
 				continue;
 			}
-			if (ArgumentVisualIDRegistry.getVisualID(incomingLink) == RebutsOriginEditPart.VISUAL_ID) {
+			if (ArgumentVisualIDRegistry.getVisualID(incomingLink) == LinkEditPart.VISUAL_ID) {
+				DestroyElementRequest r = new DestroyElementRequest(
+						incomingLink.getElement(), false);
+				cmd.add(new DestroyElementCommand(r));
+				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
+				continue;
+			}
+			if (ArgumentVisualIDRegistry.getVisualID(incomingLink) == RebutsDeniesEditPart.VISUAL_ID) {
 				DestroyReferenceRequest r = new DestroyReferenceRequest(
 						incomingLink.getSource().getElement(), null,
 						incomingLink.getTarget().getElement(), false);
@@ -88,7 +95,7 @@ public class Argument2ItemSemanticEditPolicy extends
 				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
 				continue;
 			}
-			if (ArgumentVisualIDRegistry.getVisualID(incomingLink) == MitigatesRebuttalEditPart.VISUAL_ID) {
+			if (ArgumentVisualIDRegistry.getVisualID(incomingLink) == MitigatesRestoresEditPart.VISUAL_ID) {
 				DestroyReferenceRequest r = new DestroyReferenceRequest(
 						incomingLink.getSource().getElement(), null,
 						incomingLink.getTarget().getElement(), false);
@@ -96,7 +103,7 @@ public class Argument2ItemSemanticEditPolicy extends
 				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
 				continue;
 			}
-			if (ArgumentVisualIDRegistry.getVisualID(incomingLink) == ArgumentOriginEditPart.VISUAL_ID) {
+			if (ArgumentVisualIDRegistry.getVisualID(incomingLink) == ArgumentReplacesEditPart.VISUAL_ID) {
 				DestroyReferenceRequest r = new DestroyReferenceRequest(
 						incomingLink.getSource().getElement(), null,
 						incomingLink.getTarget().getElement(), false);
@@ -121,7 +128,14 @@ public class Argument2ItemSemanticEditPolicy extends
 				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
 				continue;
 			}
-			if (ArgumentVisualIDRegistry.getVisualID(outgoingLink) == ArgumentOriginEditPart.VISUAL_ID) {
+			if (ArgumentVisualIDRegistry.getVisualID(outgoingLink) == LinkEditPart.VISUAL_ID) {
+				DestroyElementRequest r = new DestroyElementRequest(
+						outgoingLink.getElement(), false);
+				cmd.add(new DestroyElementCommand(r));
+				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
+				continue;
+			}
+			if (ArgumentVisualIDRegistry.getVisualID(outgoingLink) == ArgumentReplacesEditPart.VISUAL_ID) {
 				DestroyReferenceRequest r = new DestroyReferenceRequest(
 						outgoingLink.getSource().getElement(), null,
 						outgoingLink.getTarget().getElement(), false);
@@ -179,7 +193,16 @@ public class Argument2ItemSemanticEditPolicy extends
 								continue;
 							}
 							if (ArgumentVisualIDRegistry
-									.getVisualID(incomingLink) == RebutsOriginEditPart.VISUAL_ID) {
+									.getVisualID(incomingLink) == LinkEditPart.VISUAL_ID) {
+								DestroyElementRequest r = new DestroyElementRequest(
+										incomingLink.getElement(), false);
+								cmd.add(new DestroyElementCommand(r));
+								cmd.add(new DeleteCommand(getEditingDomain(),
+										incomingLink));
+								continue;
+							}
+							if (ArgumentVisualIDRegistry
+									.getVisualID(incomingLink) == RebutsDeniesEditPart.VISUAL_ID) {
 								DestroyReferenceRequest r = new DestroyReferenceRequest(
 										incomingLink.getSource().getElement(),
 										null, incomingLink.getTarget()
@@ -190,7 +213,7 @@ public class Argument2ItemSemanticEditPolicy extends
 								continue;
 							}
 							if (ArgumentVisualIDRegistry
-									.getVisualID(incomingLink) == MitigatesRebuttalEditPart.VISUAL_ID) {
+									.getVisualID(incomingLink) == MitigatesRestoresEditPart.VISUAL_ID) {
 								DestroyReferenceRequest r = new DestroyReferenceRequest(
 										incomingLink.getSource().getElement(),
 										null, incomingLink.getTarget()
@@ -201,7 +224,7 @@ public class Argument2ItemSemanticEditPolicy extends
 								continue;
 							}
 							if (ArgumentVisualIDRegistry
-									.getVisualID(incomingLink) == ArgumentOriginEditPart.VISUAL_ID) {
+									.getVisualID(incomingLink) == ArgumentReplacesEditPart.VISUAL_ID) {
 								DestroyReferenceRequest r = new DestroyReferenceRequest(
 										incomingLink.getSource().getElement(),
 										null, incomingLink.getTarget()
@@ -234,7 +257,16 @@ public class Argument2ItemSemanticEditPolicy extends
 								continue;
 							}
 							if (ArgumentVisualIDRegistry
-									.getVisualID(outgoingLink) == ArgumentOriginEditPart.VISUAL_ID) {
+									.getVisualID(outgoingLink) == LinkEditPart.VISUAL_ID) {
+								DestroyElementRequest r = new DestroyElementRequest(
+										outgoingLink.getElement(), false);
+								cmd.add(new DestroyElementCommand(r));
+								cmd.add(new DeleteCommand(getEditingDomain(),
+										outgoingLink));
+								continue;
+							}
+							if (ArgumentVisualIDRegistry
+									.getVisualID(outgoingLink) == ArgumentReplacesEditPart.VISUAL_ID) {
 								DestroyReferenceRequest r = new DestroyReferenceRequest(
 										outgoingLink.getSource().getElement(),
 										null, outgoingLink.getTarget()
@@ -282,7 +314,16 @@ public class Argument2ItemSemanticEditPolicy extends
 								continue;
 							}
 							if (ArgumentVisualIDRegistry
-									.getVisualID(incomingLink) == RebutsOriginEditPart.VISUAL_ID) {
+									.getVisualID(incomingLink) == LinkEditPart.VISUAL_ID) {
+								DestroyElementRequest r = new DestroyElementRequest(
+										incomingLink.getElement(), false);
+								cmd.add(new DestroyElementCommand(r));
+								cmd.add(new DeleteCommand(getEditingDomain(),
+										incomingLink));
+								continue;
+							}
+							if (ArgumentVisualIDRegistry
+									.getVisualID(incomingLink) == RebutsDeniesEditPart.VISUAL_ID) {
 								DestroyReferenceRequest r = new DestroyReferenceRequest(
 										incomingLink.getSource().getElement(),
 										null, incomingLink.getTarget()
@@ -293,7 +334,7 @@ public class Argument2ItemSemanticEditPolicy extends
 								continue;
 							}
 							if (ArgumentVisualIDRegistry
-									.getVisualID(incomingLink) == MitigatesRebuttalEditPart.VISUAL_ID) {
+									.getVisualID(incomingLink) == MitigatesRestoresEditPart.VISUAL_ID) {
 								DestroyReferenceRequest r = new DestroyReferenceRequest(
 										incomingLink.getSource().getElement(),
 										null, incomingLink.getTarget()
@@ -304,7 +345,7 @@ public class Argument2ItemSemanticEditPolicy extends
 								continue;
 							}
 							if (ArgumentVisualIDRegistry
-									.getVisualID(incomingLink) == ArgumentOriginEditPart.VISUAL_ID) {
+									.getVisualID(incomingLink) == ArgumentReplacesEditPart.VISUAL_ID) {
 								DestroyReferenceRequest r = new DestroyReferenceRequest(
 										incomingLink.getSource().getElement(),
 										null, incomingLink.getTarget()
@@ -337,7 +378,16 @@ public class Argument2ItemSemanticEditPolicy extends
 								continue;
 							}
 							if (ArgumentVisualIDRegistry
-									.getVisualID(outgoingLink) == ArgumentOriginEditPart.VISUAL_ID) {
+									.getVisualID(outgoingLink) == LinkEditPart.VISUAL_ID) {
+								DestroyElementRequest r = new DestroyElementRequest(
+										outgoingLink.getElement(), false);
+								cmd.add(new DestroyElementCommand(r));
+								cmd.add(new DeleteCommand(getEditingDomain(),
+										outgoingLink));
+								continue;
+							}
+							if (ArgumentVisualIDRegistry
+									.getVisualID(outgoingLink) == ArgumentReplacesEditPart.VISUAL_ID) {
 								DestroyReferenceRequest r = new DestroyReferenceRequest(
 										outgoingLink.getSource().getElement(),
 										null, outgoingLink.getTarget()
@@ -384,14 +434,18 @@ public class Argument2ItemSemanticEditPolicy extends
 			return getGEFWrapper(new MitigatesCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (ArgumentElementTypes.RebutsOrigin_4003 == req.getElementType()) {
+		if (ArgumentElementTypes.Link_4003 == req.getElementType()) {
+			return getGEFWrapper(new LinkCreateCommand(req, req.getSource(),
+					req.getTarget()));
+		}
+		if (ArgumentElementTypes.RebutsDenies_4004 == req.getElementType()) {
 			return null;
 		}
-		if (ArgumentElementTypes.MitigatesRebuttal_4004 == req.getElementType()) {
+		if (ArgumentElementTypes.MitigatesRestores_4005 == req.getElementType()) {
 			return null;
 		}
-		if (ArgumentElementTypes.ArgumentOrigin_4005 == req.getElementType()) {
-			return getGEFWrapper(new ArgumentOriginCreateCommand(req,
+		if (ArgumentElementTypes.ArgumentReplaces_4006 == req.getElementType()) {
+			return getGEFWrapper(new ArgumentReplacesCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
 		return null;
@@ -410,16 +464,20 @@ public class Argument2ItemSemanticEditPolicy extends
 			return getGEFWrapper(new MitigatesCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (ArgumentElementTypes.RebutsOrigin_4003 == req.getElementType()) {
-			return getGEFWrapper(new RebutsOriginCreateCommand(req,
+		if (ArgumentElementTypes.Link_4003 == req.getElementType()) {
+			return getGEFWrapper(new LinkCreateCommand(req, req.getSource(),
+					req.getTarget()));
+		}
+		if (ArgumentElementTypes.RebutsDenies_4004 == req.getElementType()) {
+			return getGEFWrapper(new RebutsDeniesCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (ArgumentElementTypes.MitigatesRebuttal_4004 == req.getElementType()) {
-			return getGEFWrapper(new MitigatesRebuttalCreateCommand(req,
+		if (ArgumentElementTypes.MitigatesRestores_4005 == req.getElementType()) {
+			return getGEFWrapper(new MitigatesRestoresCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (ArgumentElementTypes.ArgumentOrigin_4005 == req.getElementType()) {
-			return getGEFWrapper(new ArgumentOriginCreateCommand(req,
+		if (ArgumentElementTypes.ArgumentReplaces_4006 == req.getElementType()) {
+			return getGEFWrapper(new ArgumentReplacesCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
 		return null;
@@ -438,6 +496,8 @@ public class Argument2ItemSemanticEditPolicy extends
 			return getGEFWrapper(new RebutsReorientCommand(req));
 		case MitigatesEditPart.VISUAL_ID:
 			return getGEFWrapper(new MitigatesReorientCommand(req));
+		case LinkEditPart.VISUAL_ID:
+			return getGEFWrapper(new LinkReorientCommand(req));
 		}
 		return super.getReorientRelationshipCommand(req);
 	}
@@ -451,12 +511,12 @@ public class Argument2ItemSemanticEditPolicy extends
 	protected Command getReorientReferenceRelationshipCommand(
 			ReorientReferenceRelationshipRequest req) {
 		switch (getVisualID(req)) {
-		case RebutsOriginEditPart.VISUAL_ID:
-			return getGEFWrapper(new RebutsOriginReorientCommand(req));
-		case MitigatesRebuttalEditPart.VISUAL_ID:
-			return getGEFWrapper(new MitigatesRebuttalReorientCommand(req));
-		case ArgumentOriginEditPart.VISUAL_ID:
-			return getGEFWrapper(new ArgumentOriginReorientCommand(req));
+		case RebutsDeniesEditPart.VISUAL_ID:
+			return getGEFWrapper(new RebutsDeniesReorientCommand(req));
+		case MitigatesRestoresEditPart.VISUAL_ID:
+			return getGEFWrapper(new MitigatesRestoresReorientCommand(req));
+		case ArgumentReplacesEditPart.VISUAL_ID:
+			return getGEFWrapper(new ArgumentReplacesReorientCommand(req));
 		}
 		return super.getReorientReferenceRelationshipCommand(req);
 	}

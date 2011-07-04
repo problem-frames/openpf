@@ -1,6 +1,3 @@
-/*
- * 
- */
 package argument.argument.diagram.edit.policies;
 
 import org.eclipse.gef.commands.Command;
@@ -9,9 +6,9 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelationshipRequest;
 
-import argument.argument.diagram.edit.commands.RebutsOriginCreateCommand;
-import argument.argument.diagram.edit.commands.RebutsOriginReorientCommand;
-import argument.argument.diagram.edit.parts.RebutsOriginEditPart;
+import argument.argument.diagram.edit.commands.RebutsDeniesCreateCommand;
+import argument.argument.diagram.edit.commands.RebutsDeniesReorientCommand;
+import argument.argument.diagram.edit.parts.RebutsDeniesEditPart;
 import argument.argument.diagram.providers.ArgumentElementTypes;
 
 /**
@@ -49,8 +46,8 @@ public class RebutsItemSemanticEditPolicy extends
 	 */
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (ArgumentElementTypes.RebutsOrigin_4003 == req.getElementType()) {
-			return getGEFWrapper(new RebutsOriginCreateCommand(req,
+		if (ArgumentElementTypes.RebutsDenies_4004 == req.getElementType()) {
+			return getGEFWrapper(new RebutsDeniesCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
 		return null;
@@ -61,7 +58,7 @@ public class RebutsItemSemanticEditPolicy extends
 	 */
 	protected Command getCompleteCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (ArgumentElementTypes.RebutsOrigin_4003 == req.getElementType()) {
+		if (ArgumentElementTypes.RebutsDenies_4004 == req.getElementType()) {
 			return null;
 		}
 		return null;
@@ -76,8 +73,8 @@ public class RebutsItemSemanticEditPolicy extends
 	protected Command getReorientReferenceRelationshipCommand(
 			ReorientReferenceRelationshipRequest req) {
 		switch (getVisualID(req)) {
-		case RebutsOriginEditPart.VISUAL_ID:
-			return getGEFWrapper(new RebutsOriginReorientCommand(req));
+		case RebutsDeniesEditPart.VISUAL_ID:
+			return getGEFWrapper(new RebutsDeniesReorientCommand(req));
 		}
 		return super.getReorientReferenceRelationshipCommand(req);
 	}

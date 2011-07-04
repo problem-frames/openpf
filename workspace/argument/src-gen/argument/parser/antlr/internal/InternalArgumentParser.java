@@ -568,7 +568,7 @@ public class InternalArgumentParser extends AbstractInternalAntlrParser {
                     
             match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRebuts460); 
 
-            		createLeafNode(grammarAccess.getRebutsAccess().getOriginArgumentCrossReference_4_0(), "origin"); 
+            		createLeafNode(grammarAccess.getRebutsAccess().getDeniesArgumentCrossReference_4_0(), "denies"); 
             	
 
             }
@@ -755,7 +755,7 @@ public class InternalArgumentParser extends AbstractInternalAntlrParser {
                     
             match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleMitigates637); 
 
-            		createLeafNode(grammarAccess.getMitigatesAccess().getRebuttalArgumentCrossReference_4_0(), "rebuttal"); 
+            		createLeafNode(grammarAccess.getMitigatesAccess().getRestoresArgumentCrossReference_4_0(), "restores"); 
             	
 
             }
@@ -1058,7 +1058,7 @@ public class InternalArgumentParser extends AbstractInternalAntlrParser {
                             
                     match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleArgument861); 
 
-                    		createLeafNode(grammarAccess.getArgumentAccess().getOriginArgumentCrossReference_4_1_0(), "origin"); 
+                    		createLeafNode(grammarAccess.getArgumentAccess().getReplacesArgumentCrossReference_4_1_0(), "replaces"); 
                     	
 
                     }

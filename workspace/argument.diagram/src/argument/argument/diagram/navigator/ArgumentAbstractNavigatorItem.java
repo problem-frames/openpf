@@ -1,6 +1,3 @@
-/*
- * 
- */
 package argument.argument.diagram.navigator;
 
 import org.eclipse.core.runtime.IAdapterFactory;

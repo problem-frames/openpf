@@ -34,7 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link argument.argument.impl.ArgumentImpl#getName <em>Name</em>}</li>
  *   <li>{@link argument.argument.impl.ArgumentImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link argument.argument.impl.ArgumentImpl#getRound <em>Round</em>}</li>
- *   <li>{@link argument.argument.impl.ArgumentImpl#getOrigin <em>Origin</em>}</li>
+ *   <li>{@link argument.argument.impl.ArgumentImpl#getReplaces <em>Replaces</em>}</li>
  *   <li>{@link argument.argument.impl.ArgumentImpl#getExpr <em>Expr</em>}</li>
  *   <li>{@link argument.argument.impl.ArgumentImpl#getForeground <em>Foreground</em>}</li>
  *   <li>{@link argument.argument.impl.ArgumentImpl#getBackground <em>Background</em>}</li>
@@ -111,14 +111,14 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
   protected int round = ROUND_EDEFAULT;
 
   /**
-	 * The cached value of the '{@link #getOrigin() <em>Origin</em>}' reference.
+	 * The cached value of the '{@link #getReplaces() <em>Replaces</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getOrigin()
+	 * @see #getReplaces()
 	 * @generated
 	 * @ordered
 	 */
-  protected Argument origin;
+  protected Argument replaces;
 
   /**
 	 * The cached value of the '{@link #getExpr() <em>Expr</em>}' containment reference.
@@ -335,17 +335,17 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Argument getOrigin()
+  public Argument getReplaces()
   {
-		if (origin != null && origin.eIsProxy()) {
-			InternalEObject oldOrigin = (InternalEObject)origin;
-			origin = (Argument)eResolveProxy(oldOrigin);
-			if (origin != oldOrigin) {
+		if (replaces != null && replaces.eIsProxy()) {
+			InternalEObject oldReplaces = (InternalEObject)replaces;
+			replaces = (Argument)eResolveProxy(oldReplaces);
+			if (replaces != oldReplaces) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ArgumentPackage.ARGUMENT__ORIGIN, oldOrigin, origin));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ArgumentPackage.ARGUMENT__REPLACES, oldReplaces, replaces));
 			}
 		}
-		return origin;
+		return replaces;
 	}
 
   /**
@@ -353,9 +353,9 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Argument basicGetOrigin()
+  public Argument basicGetReplaces()
   {
-		return origin;
+		return replaces;
 	}
 
   /**
@@ -363,12 +363,12 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setOrigin(Argument newOrigin)
+  public void setReplaces(Argument newReplaces)
   {
-		Argument oldOrigin = origin;
-		origin = newOrigin;
+		Argument oldReplaces = replaces;
+		replaces = newReplaces;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.ARGUMENT__ORIGIN, oldOrigin, origin));
+			eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.ARGUMENT__REPLACES, oldReplaces, replaces));
 	}
 
   /**
@@ -610,9 +610,9 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
 				return getDescription();
 			case ArgumentPackage.ARGUMENT__ROUND:
 				return getRound();
-			case ArgumentPackage.ARGUMENT__ORIGIN:
-				if (resolve) return getOrigin();
-				return basicGetOrigin();
+			case ArgumentPackage.ARGUMENT__REPLACES:
+				if (resolve) return getReplaces();
+				return basicGetReplaces();
 			case ArgumentPackage.ARGUMENT__EXPR:
 				return getExpr();
 			case ArgumentPackage.ARGUMENT__FOREGROUND:
@@ -653,8 +653,8 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
 			case ArgumentPackage.ARGUMENT__ROUND:
 				setRound((Integer)newValue);
 				return;
-			case ArgumentPackage.ARGUMENT__ORIGIN:
-				setOrigin((Argument)newValue);
+			case ArgumentPackage.ARGUMENT__REPLACES:
+				setReplaces((Argument)newValue);
 				return;
 			case ArgumentPackage.ARGUMENT__EXPR:
 				setExpr((Expression)newValue);
@@ -704,8 +704,8 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
 			case ArgumentPackage.ARGUMENT__ROUND:
 				setRound(ROUND_EDEFAULT);
 				return;
-			case ArgumentPackage.ARGUMENT__ORIGIN:
-				setOrigin((Argument)null);
+			case ArgumentPackage.ARGUMENT__REPLACES:
+				setReplaces((Argument)null);
 				return;
 			case ArgumentPackage.ARGUMENT__EXPR:
 				setExpr((Expression)null);
@@ -750,8 +750,8 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case ArgumentPackage.ARGUMENT__ROUND:
 				return round != ROUND_EDEFAULT;
-			case ArgumentPackage.ARGUMENT__ORIGIN:
-				return origin != null;
+			case ArgumentPackage.ARGUMENT__REPLACES:
+				return replaces != null;
 			case ArgumentPackage.ARGUMENT__EXPR:
 				return expr != null;
 			case ArgumentPackage.ARGUMENT__FOREGROUND:

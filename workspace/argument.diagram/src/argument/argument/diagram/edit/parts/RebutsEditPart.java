@@ -1,6 +1,3 @@
-/*
- * 
- */
 package argument.argument.diagram.edit.parts;
 
 import org.eclipse.draw2d.Connection;

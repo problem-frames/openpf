@@ -1,7 +1,5 @@
-/*
- * 
- */
 package argument.argument.diagram.part;
+
 
 import java.io.IOException;
 import java.util.Collections;
@@ -29,7 +27,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
-import org.eclipse.emf.workspace.util.WorkspaceSynchronizer;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gmf.runtime.common.core.command.CommandResult;
 import org.eclipse.gmf.runtime.diagram.core.services.ViewService;
@@ -193,12 +190,12 @@ public class ArgumentDiagramEditorUtil extends ImageDiagramUtil {
 				}
 
 				try {
-                    if (modelResource.getURI().toFileString() == null) {
-                    	                        model.setName("default");
-					modelResource
+					if (modelResource.getURI().toFileString() == null) {
+						model.setName("default");
+						modelResource
 							.save(argument.argument.diagram.part.ArgumentDiagramEditorUtil
 									.getSaveOptions());
-                    }
+					}
 					diagramResource
 							.save(argument.argument.diagram.part.ArgumentDiagramEditorUtil
 									.getSaveOptions());
@@ -217,8 +214,8 @@ public class ArgumentDiagramEditorUtil extends ImageDiagramUtil {
 			ArgumentDiagramEditorPlugin.getInstance().logError(
 					"Unable to create model and diagram", e); //$NON-NLS-1$
 		}
-		setCharset(WorkspaceSynchronizer.getFile(modelResource));
-		setCharset(WorkspaceSynchronizer.getFile(diagramResource));
+//		setCharset(WorkspaceSynchronizer.getFile(modelResource));
+//		setCharset(WorkspaceSynchronizer.getFile(diagramResource));
 		// this line is new, inherited from ImageDiagramUtil
 		saveDiagramToImages(diagramResource, modelResource);
 		return diagramResource;

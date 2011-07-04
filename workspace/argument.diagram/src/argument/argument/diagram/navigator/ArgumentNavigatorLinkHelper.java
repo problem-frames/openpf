@@ -1,10 +1,6 @@
-/*
- * 
- */
 package argument.argument.diagram.navigator;
 
 import org.eclipse.core.resources.IFile;
-import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.emf.common.ui.URIEditorInput;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
@@ -99,9 +95,6 @@ public class ArgumentNavigatorLinkHelper implements ILinkHelper {
 			if (navigatorGroup.getParent() instanceof ArgumentNavigatorItem) {
 				navigatorView = ((ArgumentNavigatorItem) navigatorGroup
 						.getParent()).getView();
-			} else if (navigatorGroup.getParent() instanceof IAdaptable) {
-				navigatorView = (View) ((IAdaptable) navigatorGroup.getParent())
-						.getAdapter(View.class);
 			}
 		}
 		if (navigatorView == null) {

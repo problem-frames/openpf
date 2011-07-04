@@ -1,6 +1,3 @@
-/*
- * 
- */
 package argument.argument.diagram.edit.policies;
 
 import org.eclipse.gef.commands.Command;
@@ -9,9 +6,9 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelationshipRequest;
 
-import argument.argument.diagram.edit.commands.MitigatesRebuttalCreateCommand;
-import argument.argument.diagram.edit.commands.MitigatesRebuttalReorientCommand;
-import argument.argument.diagram.edit.parts.MitigatesRebuttalEditPart;
+import argument.argument.diagram.edit.commands.MitigatesRestoresCreateCommand;
+import argument.argument.diagram.edit.commands.MitigatesRestoresReorientCommand;
+import argument.argument.diagram.edit.parts.MitigatesRestoresEditPart;
 import argument.argument.diagram.providers.ArgumentElementTypes;
 
 /**
@@ -49,8 +46,8 @@ public class MitigatesItemSemanticEditPolicy extends
 	 */
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (ArgumentElementTypes.MitigatesRebuttal_4004 == req.getElementType()) {
-			return getGEFWrapper(new MitigatesRebuttalCreateCommand(req,
+		if (ArgumentElementTypes.MitigatesRestores_4005 == req.getElementType()) {
+			return getGEFWrapper(new MitigatesRestoresCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
 		return null;
@@ -61,7 +58,7 @@ public class MitigatesItemSemanticEditPolicy extends
 	 */
 	protected Command getCompleteCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (ArgumentElementTypes.MitigatesRebuttal_4004 == req.getElementType()) {
+		if (ArgumentElementTypes.MitigatesRestores_4005 == req.getElementType()) {
 			return null;
 		}
 		return null;
@@ -76,8 +73,8 @@ public class MitigatesItemSemanticEditPolicy extends
 	protected Command getReorientReferenceRelationshipCommand(
 			ReorientReferenceRelationshipRequest req) {
 		switch (getVisualID(req)) {
-		case MitigatesRebuttalEditPart.VISUAL_ID:
-			return getGEFWrapper(new MitigatesRebuttalReorientCommand(req));
+		case MitigatesRestoresEditPart.VISUAL_ID:
+			return getGEFWrapper(new MitigatesRestoresReorientCommand(req));
 		}
 		return super.getReorientReferenceRelationshipCommand(req);
 	}

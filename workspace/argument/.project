@@ -33,7 +33,7 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>src/argument/argument/Argument.xtext</name>
+			<name>src/argument/Argument.xtext</name>
 			<type>1</type>
 			<locationURI>PROJECT_LOC/samples/Argument.xtext</locationURI>
 		</link>

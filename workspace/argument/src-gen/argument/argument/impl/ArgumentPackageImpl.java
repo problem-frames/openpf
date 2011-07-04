@@ -462,7 +462,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getRebuts_Origin()
+  public EReference getRebuts_Denies()
   {
 		return (EReference)rebutsEClass.getEStructuralFeatures().get(0);
 	}
@@ -482,7 +482,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getMitigates_Rebuttal()
+  public EReference getMitigates_Restores()
   {
 		return (EReference)mitigatesEClass.getEStructuralFeatures().get(0);
 	}
@@ -532,7 +532,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getArgument_Origin()
+  public EReference getArgument_Replaces()
   {
 		return (EReference)argumentEClass.getEStructuralFeatures().get(3);
 	}
@@ -1498,16 +1498,16 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
 		createEAttribute(linkEClass, LINK__GENERATED);
 
 		rebutsEClass = createEClass(REBUTS);
-		createEReference(rebutsEClass, REBUTS__ORIGIN);
+		createEReference(rebutsEClass, REBUTS__DENIES);
 
 		mitigatesEClass = createEClass(MITIGATES);
-		createEReference(mitigatesEClass, MITIGATES__REBUTTAL);
+		createEReference(mitigatesEClass, MITIGATES__RESTORES);
 
 		argumentEClass = createEClass(ARGUMENT);
 		createEAttribute(argumentEClass, ARGUMENT__NAME);
 		createEAttribute(argumentEClass, ARGUMENT__DESCRIPTION);
 		createEAttribute(argumentEClass, ARGUMENT__ROUND);
-		createEReference(argumentEClass, ARGUMENT__ORIGIN);
+		createEReference(argumentEClass, ARGUMENT__REPLACES);
 		createEReference(argumentEClass, ARGUMENT__EXPR);
 		createEAttribute(argumentEClass, ARGUMENT__FOREGROUND);
 		createEAttribute(argumentEClass, ARGUMENT__BACKGROUND);
@@ -1705,16 +1705,16 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
 		initEAttribute(getLink_Generated(), ecorePackage.getEBoolean(), "generated", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(rebutsEClass, Rebuts.class, "Rebuts", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRebuts_Origin(), this.getArgument(), null, "origin", null, 0, 1, Rebuts.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRebuts_Denies(), this.getArgument(), null, "denies", null, 0, 1, Rebuts.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mitigatesEClass, Mitigates.class, "Mitigates", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMitigates_Rebuttal(), this.getArgument(), null, "rebuttal", null, 0, 1, Mitigates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMitigates_Restores(), this.getArgument(), null, "restores", null, 0, 1, Mitigates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(argumentEClass, Argument.class, "Argument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getArgument_Name(), ecorePackage.getEString(), "name", null, 0, 1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getArgument_Description(), ecorePackage.getEString(), "description", null, 0, 1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getArgument_Round(), ecorePackage.getEInt(), "round", null, 0, 1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getArgument_Origin(), this.getArgument(), null, "origin", null, 0, 1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArgument_Replaces(), this.getArgument(), null, "replaces", null, 0, 1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getArgument_Expr(), this.getExpression(), null, "expr", null, 0, 1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getArgument_Foreground(), ecorePackage.getEString(), "foreground", null, 0, 1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getArgument_Background(), ecorePackage.getEString(), "background", null, 0, 1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1870,7 +1870,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
 		   source, 
 		   new String[] {
 			 "foo", "bar"
-		   });									
+		   });										
 	}
 
 		/**
@@ -1886,7 +1886,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
 		   source, 
 		   new String[] {
 			 "foo", "bar"
-		   });								
+		   });									
 	}
 
 		/**
@@ -1897,6 +1897,17 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
 	 */
 	protected void createGmf_2Annotations() {
 		String source = "gmf.link";				
+		addAnnotation
+		  (linkEClass, 
+		   source, 
+		   new String[] {
+			 "source", "from",
+			 "target", "to",
+			 "style", "dot",
+			 "width", "2",
+			 "color", "255,0,0",
+			 "target.decoration", "arrow"
+		   });		
 		addAnnotation
 		  (rebutsEClass, 
 		   source, 
@@ -1909,10 +1920,10 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
 			 "target.decoration", "arrow"
 		   });		
 		addAnnotation
-		  (getRebuts_Origin(), 
+		  (getRebuts_Denies(), 
 		   source, 
 		   new String[] {
-			 "target", "origin",
+			 "target", "denies",
 			 "style", "dashed",
 			 "width", "1",
 			 "color", "255,105,180",
@@ -1930,20 +1941,20 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
 			 "target.decoration", "arrow"
 		   });		
 		addAnnotation
-		  (getMitigates_Rebuttal(), 
+		  (getMitigates_Restores(), 
 		   source, 
 		   new String[] {
-			 "target", "rebuttal",
+			 "target", "restores",
 			 "style", "solid",
 			 "width", "1",
 			 "color", "255,105,180",
 			 "target.decoration", "arrow"
 		   });			
 		addAnnotation
-		  (getArgument_Origin(), 
+		  (getArgument_Replaces(), 
 		   source, 
 		   new String[] {
-			 "target", "origin",
+			 "target", "replaces",
 			 "style", "dash",
 			 "width", "2",
 			 "color", "160,32,240",
@@ -1958,7 +1969,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
 	 * @generated
 	 */
 	protected void createGmf_3Annotations() {
-		String source = "gmf.node";								
+		String source = "gmf.node";									
 		addAnnotation
 		  (argumentEClass, 
 		   source, 
@@ -1976,7 +1987,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
 	 * @generated
 	 */
 	protected void createGmf_4Annotations() {
-		String source = "gmf.compartment";										
+		String source = "gmf.compartment";											
 		addAnnotation
 		  (getArgument_Grounds(), 
 		   source, 

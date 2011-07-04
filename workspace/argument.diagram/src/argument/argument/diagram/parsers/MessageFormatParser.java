@@ -1,6 +1,3 @@
-/*
- * 
- */
 package argument.argument.diagram.parsers;
 
 import java.text.FieldPosition;

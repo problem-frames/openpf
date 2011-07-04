@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see argument.argument.ArgumentPackage#getLink()
- * @model
+ * @model annotation="gmf.link source='from' target='to' style='dot' width='2' color='255,0,0' target.decoration='arrow'"
  * @generated
  */
 public interface Link extends EObject

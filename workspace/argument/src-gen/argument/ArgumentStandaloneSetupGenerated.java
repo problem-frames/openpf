@@ -23,7 +23,7 @@ public class ArgumentStandaloneSetupGenerated implements ISetup {
 	}
 	
 	public Injector createInjector() {
-		return Guice.createInjector(new argument.argument.ArgumentRuntimeModule());
+		return Guice.createInjector(new argument.ArgumentRuntimeModule());
 	}
 	
 	public void register(Injector injector) {

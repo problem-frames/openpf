@@ -1,6 +1,3 @@
-/*
- * 
- */
 package argument.argument.diagram.providers;
 
 import java.util.ArrayList;
@@ -58,11 +55,12 @@ import argument.argument.diagram.edit.parts.ArgumentEditPart;
 import argument.argument.diagram.edit.parts.ArgumentNameDescriptionRound2EditPart;
 import argument.argument.diagram.edit.parts.ArgumentNameDescriptionRound3EditPart;
 import argument.argument.diagram.edit.parts.ArgumentNameDescriptionRoundEditPart;
-import argument.argument.diagram.edit.parts.ArgumentOriginEditPart;
+import argument.argument.diagram.edit.parts.ArgumentReplacesEditPart;
+import argument.argument.diagram.edit.parts.LinkEditPart;
 import argument.argument.diagram.edit.parts.MitigatesEditPart;
-import argument.argument.diagram.edit.parts.MitigatesRebuttalEditPart;
+import argument.argument.diagram.edit.parts.MitigatesRestoresEditPart;
+import argument.argument.diagram.edit.parts.RebutsDeniesEditPart;
 import argument.argument.diagram.edit.parts.RebutsEditPart;
-import argument.argument.diagram.edit.parts.RebutsOriginEditPart;
 import argument.argument.diagram.edit.parts.WrappingLabel2EditPart;
 import argument.argument.diagram.edit.parts.WrappingLabel3EditPart;
 import argument.argument.diagram.edit.parts.WrappingLabelEditPart;
@@ -264,14 +262,17 @@ public class ArgumentViewProvider extends AbstractProvider implements
 		case MitigatesEditPart.VISUAL_ID:
 			return createMitigates_4002(getSemanticElement(semanticAdapter),
 					containerView, index, persisted, preferencesHint);
-		case RebutsOriginEditPart.VISUAL_ID:
-			return createRebutsOrigin_4003(containerView, index, persisted,
+		case LinkEditPart.VISUAL_ID:
+			return createLink_4003(getSemanticElement(semanticAdapter),
+					containerView, index, persisted, preferencesHint);
+		case RebutsDeniesEditPart.VISUAL_ID:
+			return createRebutsDenies_4004(containerView, index, persisted,
 					preferencesHint);
-		case MitigatesRebuttalEditPart.VISUAL_ID:
-			return createMitigatesRebuttal_4004(containerView, index,
+		case MitigatesRestoresEditPart.VISUAL_ID:
+			return createMitigatesRestores_4005(containerView, index,
 					persisted, preferencesHint);
-		case ArgumentOriginEditPart.VISUAL_ID:
-			return createArgumentOrigin_4005(containerView, index, persisted,
+		case ArgumentReplacesEditPart.VISUAL_ID:
+			return createArgumentReplaces_4006(containerView, index, persisted,
 					preferencesHint);
 		}
 		// can never happen, provided #provides(CreateEdgeViewOperation) is correct
@@ -549,7 +550,53 @@ public class ArgumentViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Edge createRebutsOrigin_4003(View containerView, int index,
+	public Edge createLink_4003(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Edge edge = NotationFactory.eINSTANCE.createEdge();
+		edge.getStyles().add(NotationFactory.eINSTANCE.createRoutingStyle());
+		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
+		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
+				.createRelativeBendpoints();
+		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
+				2);
+		points.add(new RelativeBendpoint());
+		points.add(new RelativeBendpoint());
+		bendpoints.setPoints(points);
+		edge.setBendpoints(bendpoints);
+		ViewUtil.insertChildView(containerView, edge, index, persisted);
+		edge.setType(ArgumentVisualIDRegistry.getType(LinkEditPart.VISUAL_ID));
+		edge.setElement(domainElement);
+		// initializePreferences
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+		FontStyle edgeFontStyle = (FontStyle) edge
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (edgeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			edgeFontStyle.setFontName(fontData.getName());
+			edgeFontStyle.setFontHeight(fontData.getHeight());
+			edgeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			edgeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			edgeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		Routing routing = Routing.get(prefStore
+				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
+		if (routing != null) {
+			ViewUtil.setStructuralFeatureValue(edge,
+					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
+					routing);
+		}
+		return edge;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Edge createRebutsDenies_4004(View containerView, int index,
 			boolean persisted, PreferencesHint preferencesHint) {
 		Edge edge = NotationFactory.eINSTANCE.createEdge();
 		edge.getStyles().add(NotationFactory.eINSTANCE.createRoutingStyle());
@@ -564,7 +611,7 @@ public class ArgumentViewProvider extends AbstractProvider implements
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
 		edge.setType(ArgumentVisualIDRegistry
-				.getType(RebutsOriginEditPart.VISUAL_ID));
+				.getType(RebutsDeniesEditPart.VISUAL_ID));
 		edge.setElement(null);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
@@ -606,7 +653,7 @@ public class ArgumentViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Edge createMitigatesRebuttal_4004(View containerView, int index,
+	public Edge createMitigatesRestores_4005(View containerView, int index,
 			boolean persisted, PreferencesHint preferencesHint) {
 		Edge edge = NotationFactory.eINSTANCE.createEdge();
 		edge.getStyles().add(NotationFactory.eINSTANCE.createRoutingStyle());
@@ -621,7 +668,7 @@ public class ArgumentViewProvider extends AbstractProvider implements
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
 		edge.setType(ArgumentVisualIDRegistry
-				.getType(MitigatesRebuttalEditPart.VISUAL_ID));
+				.getType(MitigatesRestoresEditPart.VISUAL_ID));
 		edge.setElement(null);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
@@ -663,7 +710,7 @@ public class ArgumentViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Edge createArgumentOrigin_4005(View containerView, int index,
+	public Edge createArgumentReplaces_4006(View containerView, int index,
 			boolean persisted, PreferencesHint preferencesHint) {
 		Edge edge = NotationFactory.eINSTANCE.createEdge();
 		edge.getStyles().add(NotationFactory.eINSTANCE.createRoutingStyle());
@@ -678,7 +725,7 @@ public class ArgumentViewProvider extends AbstractProvider implements
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
 		edge.setType(ArgumentVisualIDRegistry
-				.getType(ArgumentOriginEditPart.VISUAL_ID));
+				.getType(ArgumentReplacesEditPart.VISUAL_ID));
 		edge.setElement(null);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint

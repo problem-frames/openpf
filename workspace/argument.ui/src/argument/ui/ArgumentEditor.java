@@ -30,7 +30,7 @@ import argument.argument.ArgumentFactory;
 import argument.argument.Link;
 import argument.argument.Mitigates;
 import argument.argument.Rebuts;
-import argument.diagram.part.ArgumentDiagramEditorUtil;
+import argument.argument.diagram.part.ArgumentDiagramEditorUtil;
 import argument.ui.internal.ArgumentActivator;
 import convertor.EventCalculusRun;
 
@@ -252,8 +252,8 @@ public class ArgumentEditor extends ImageDiagramEditor {
 	 */
 	private Set<String> getRemoved(Argument a) {
 		Set<String> r = new HashSet<String>();
-		if (a.getOrigin() != null) {
-			r.add("!" + a.getOrigin().getName() + ".");
+		if (a.getReplaces() != null) {
+			r.add("!" + a.getReplaces().getName() + ".");
 		}
 		for (Argument b : a.getGrounds())
 			r.addAll(getRemoved(b));
@@ -330,12 +330,12 @@ public class ArgumentEditor extends ImageDiagramEditor {
 				Rebuts r = ArgumentFactory.eINSTANCE.createRebuts();
 				r.setFrom(previous.get(previous.size() - 1));
 				r.setTo(tail);
-				r.setOrigin(a);
+				r.setDenies(a);
 				boolean found = false;
 				for (Link l: d.getLinks()) {
 					if (l instanceof Rebuts) {
 						Rebuts lr = (Rebuts) l;
-						if (l.getFrom() == r.getFrom() && l.getTo()==r.getTo() && lr.getOrigin() == r.getOrigin()) {
+						if (l.getFrom() == r.getFrom() && l.getTo()==r.getTo() && lr.getDenies() == r.getDenies()) {
 							found = true;
 						}
 					}
@@ -345,12 +345,12 @@ public class ArgumentEditor extends ImageDiagramEditor {
 				Mitigates m = ArgumentFactory.eINSTANCE.createMitigates();
 				m.setFrom(previous.get(previous.size() - 1));
 				m.setTo(tail);
-				m.setRebuttal(a);
+				m.setRestores(a);
 				boolean found = false;
 				for (Link l: d.getLinks()) {
 					if (l instanceof Mitigates) {
 						Mitigates lm = (Mitigates) l;
-						if (l.getFrom() == m.getFrom() && l.getTo()==m.getTo() && lm.getRebuttal() == m.getRebuttal()) {
+						if (l.getFrom() == m.getFrom() && l.getTo()==m.getTo() && lm.getRestores() == m.getRestores()) {
 							found = true;
 						}
 					}

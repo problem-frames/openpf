@@ -1,6 +1,3 @@
-/*
- * 
- */
 package argument.argument.diagram.sheet;
 
 import org.eclipse.core.runtime.IAdaptable;

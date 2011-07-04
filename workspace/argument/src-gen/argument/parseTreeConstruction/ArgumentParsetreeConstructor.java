@@ -409,11 +409,11 @@ protected class Link_MitigatesParserRuleCall_1 extends RuleCallToken {
 /************ begin Rule Rebuts ****************
  *
  * Rebuts:
- * 	from=[Argument] "rebutted by" to=[Argument] "on" origin=[Argument] generated?="@generated"?;
+ * 	from=[Argument] "rebutted by" to=[Argument] "on" denies=[Argument] generated?="@generated"?;
  *
  **/
 
-// from=[Argument] "rebutted by" to=[Argument] "on" origin=[Argument] generated?="@generated"?
+// from=[Argument] "rebutted by" to=[Argument] "on" denies=[Argument] generated?="@generated"?
 protected class Rebuts_Group extends GroupToken {
 	
 	public Rebuts_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -429,7 +429,7 @@ protected class Rebuts_Group extends GroupToken {
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
 			case 0: return new Rebuts_GeneratedAssignment_5(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new Rebuts_OriginAssignment_4(lastRuleCallOrigin, this, 1, inst);
+			case 1: return new Rebuts_DeniesAssignment_4(lastRuleCallOrigin, this, 1, inst);
 			default: return null;
 		}	
 	}
@@ -560,16 +560,16 @@ protected class Rebuts_OnKeyword_3 extends KeywordToken  {
 
 }
 
-// origin=[Argument]
-protected class Rebuts_OriginAssignment_4 extends AssignmentToken  {
+// denies=[Argument]
+protected class Rebuts_DeniesAssignment_4 extends AssignmentToken  {
 	
-	public Rebuts_OriginAssignment_4(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public Rebuts_DeniesAssignment_4(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getRebutsAccess().getOriginAssignment_4();
+		return grammarAccess.getRebutsAccess().getDeniesAssignment_4();
 	}
 
     @Override
@@ -582,13 +582,13 @@ protected class Rebuts_OriginAssignment_4 extends AssignmentToken  {
 
     @Override	
 	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("origin",true)) == null) return null;
-		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("origin");
+		if((value = eObjectConsumer.getConsumable("denies",true)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("denies");
 		if(value instanceof EObject) { // org::eclipse::xtext::impl::CrossReferenceImpl
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
-			if(param.isInstanceOf(grammarAccess.getRebutsAccess().getOriginArgumentCrossReference_4_0().getType().getClassifier())) {
+			if(param.isInstanceOf(grammarAccess.getRebutsAccess().getDeniesArgumentCrossReference_4_0().getType().getClassifier())) {
 				type = AssignmentType.CROSS_REFERENCE;
-				element = grammarAccess.getRebutsAccess().getOriginArgumentCrossReference_4_0(); 
+				element = grammarAccess.getRebutsAccess().getDeniesArgumentCrossReference_4_0(); 
 				return obj;
 			}
 		}
@@ -612,7 +612,7 @@ protected class Rebuts_GeneratedAssignment_5 extends AssignmentToken  {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Rebuts_OriginAssignment_4(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new Rebuts_DeniesAssignment_4(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -638,11 +638,11 @@ protected class Rebuts_GeneratedAssignment_5 extends AssignmentToken  {
 /************ begin Rule Mitigates ****************
  *
  * Mitigates:
- * 	from=[Argument] "mitigated by" to=[Argument] "on" rebuttal=[Argument] generated?="@generated"?;
+ * 	from=[Argument] "mitigated by" to=[Argument] "on" restores=[Argument] generated?="@generated"?;
  *
  **/
 
-// from=[Argument] "mitigated by" to=[Argument] "on" rebuttal=[Argument] generated?="@generated"?
+// from=[Argument] "mitigated by" to=[Argument] "on" restores=[Argument] generated?="@generated"?
 protected class Mitigates_Group extends GroupToken {
 	
 	public Mitigates_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -658,7 +658,7 @@ protected class Mitigates_Group extends GroupToken {
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
 			case 0: return new Mitigates_GeneratedAssignment_5(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new Mitigates_RebuttalAssignment_4(lastRuleCallOrigin, this, 1, inst);
+			case 1: return new Mitigates_RestoresAssignment_4(lastRuleCallOrigin, this, 1, inst);
 			default: return null;
 		}	
 	}
@@ -789,16 +789,16 @@ protected class Mitigates_OnKeyword_3 extends KeywordToken  {
 
 }
 
-// rebuttal=[Argument]
-protected class Mitigates_RebuttalAssignment_4 extends AssignmentToken  {
+// restores=[Argument]
+protected class Mitigates_RestoresAssignment_4 extends AssignmentToken  {
 	
-	public Mitigates_RebuttalAssignment_4(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public Mitigates_RestoresAssignment_4(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getMitigatesAccess().getRebuttalAssignment_4();
+		return grammarAccess.getMitigatesAccess().getRestoresAssignment_4();
 	}
 
     @Override
@@ -811,13 +811,13 @@ protected class Mitigates_RebuttalAssignment_4 extends AssignmentToken  {
 
     @Override	
 	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("rebuttal",true)) == null) return null;
-		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("rebuttal");
+		if((value = eObjectConsumer.getConsumable("restores",true)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("restores");
 		if(value instanceof EObject) { // org::eclipse::xtext::impl::CrossReferenceImpl
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
-			if(param.isInstanceOf(grammarAccess.getMitigatesAccess().getRebuttalArgumentCrossReference_4_0().getType().getClassifier())) {
+			if(param.isInstanceOf(grammarAccess.getMitigatesAccess().getRestoresArgumentCrossReference_4_0().getType().getClassifier())) {
 				type = AssignmentType.CROSS_REFERENCE;
-				element = grammarAccess.getMitigatesAccess().getRebuttalArgumentCrossReference_4_0(); 
+				element = grammarAccess.getMitigatesAccess().getRestoresArgumentCrossReference_4_0(); 
 				return obj;
 			}
 		}
@@ -841,7 +841,7 @@ protected class Mitigates_GeneratedAssignment_5 extends AssignmentToken  {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Mitigates_RebuttalAssignment_4(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new Mitigates_RestoresAssignment_4(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -870,7 +870,7 @@ protected class Mitigates_GeneratedAssignment_5 extends AssignmentToken  {
  * 	name=ID ":"? // unique identifier
  * 	description= // non-empty description
  * 	STRING ("round" round=INT)? // default is 0
- * 	("replacing" origin=[Argument])? // default is null
+ * 	("replacing" replaces=[Argument])? // default is null
  * 	("with" expr=Expression)? // default is the same as the name
  * 	("foreground" foreground=STRING)? // default is 'black'
  * 	("background" background=STRING)? // default is 'white'
@@ -884,7 +884,7 @@ protected class Mitigates_GeneratedAssignment_5 extends AssignmentToken  {
 // name=ID ":"? // unique identifier
 // description= // non-empty description
 // STRING ("round" round=INT)? // default is 0
-// ("replacing" origin=[Argument])? // default is null
+// ("replacing" replaces=[Argument])? // default is null
 // ("with" expr=Expression)? // default is the same as the name
 // ("foreground" foreground=STRING)? // default is 'black'
 // ("background" background=STRING)? // default is 'white'
@@ -1075,7 +1075,7 @@ protected class Argument_RoundAssignment_3_1 extends AssignmentToken  {
 }
 
 
-// ("replacing" origin=[Argument])?
+// ("replacing" replaces=[Argument])?
 protected class Argument_Group_4 extends GroupToken {
 	
 	public Argument_Group_4(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1090,7 +1090,7 @@ protected class Argument_Group_4 extends GroupToken {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Argument_OriginAssignment_4_1(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new Argument_ReplacesAssignment_4_1(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -1120,16 +1120,16 @@ protected class Argument_ReplacingKeyword_4_0 extends KeywordToken  {
 
 }
 
-// origin=[Argument]
-protected class Argument_OriginAssignment_4_1 extends AssignmentToken  {
+// replaces=[Argument]
+protected class Argument_ReplacesAssignment_4_1 extends AssignmentToken  {
 	
-	public Argument_OriginAssignment_4_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public Argument_ReplacesAssignment_4_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getArgumentAccess().getOriginAssignment_4_1();
+		return grammarAccess.getArgumentAccess().getReplacesAssignment_4_1();
 	}
 
     @Override
@@ -1142,13 +1142,13 @@ protected class Argument_OriginAssignment_4_1 extends AssignmentToken  {
 
     @Override	
 	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("origin",false)) == null) return null;
-		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("origin");
+		if((value = eObjectConsumer.getConsumable("replaces",false)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("replaces");
 		if(value instanceof EObject) { // org::eclipse::xtext::impl::CrossReferenceImpl
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
-			if(param.isInstanceOf(grammarAccess.getArgumentAccess().getOriginArgumentCrossReference_4_1_0().getType().getClassifier())) {
+			if(param.isInstanceOf(grammarAccess.getArgumentAccess().getReplacesArgumentCrossReference_4_1_0().getType().getClassifier())) {
 				type = AssignmentType.CROSS_REFERENCE;
-				element = grammarAccess.getArgumentAccess().getOriginArgumentCrossReference_4_1_0(); 
+				element = grammarAccess.getArgumentAccess().getReplacesArgumentCrossReference_4_1_0(); 
 				return obj;
 			}
 		}

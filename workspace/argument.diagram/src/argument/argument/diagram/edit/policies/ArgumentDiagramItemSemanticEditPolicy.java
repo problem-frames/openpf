@@ -1,6 +1,3 @@
-/*
- * 
- */
 package argument.argument.diagram.edit.policies;
 
 import org.eclipse.emf.transaction.TransactionalEditingDomain;

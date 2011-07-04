@@ -18,7 +18,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link argument.argument.Argument#getName <em>Name</em>}</li>
  *   <li>{@link argument.argument.Argument#getDescription <em>Description</em>}</li>
  *   <li>{@link argument.argument.Argument#getRound <em>Round</em>}</li>
- *   <li>{@link argument.argument.Argument#getOrigin <em>Origin</em>}</li>
+ *   <li>{@link argument.argument.Argument#getReplaces <em>Replaces</em>}</li>
  *   <li>{@link argument.argument.Argument#getExpr <em>Expr</em>}</li>
  *   <li>{@link argument.argument.Argument#getForeground <em>Foreground</em>}</li>
  *   <li>{@link argument.argument.Argument#getBackground <em>Background</em>}</li>
@@ -115,30 +115,30 @@ public interface Argument extends TerminalExpression
   void setRound(int value);
 
   /**
-	 * Returns the value of the '<em><b>Origin</b></em>' reference.
+	 * Returns the value of the '<em><b>Replaces</b></em>' reference.
 	 * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Origin</em>' reference isn't clear,
+   * If the meaning of the '<em>Replaces</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Origin</em>' reference.
-	 * @see #setOrigin(Argument)
-	 * @see argument.argument.ArgumentPackage#getArgument_Origin()
-	 * @model annotation="gmf.link target='origin' style='dash' width='2' color='160,32,240' target.decoration='arrow'"
+	 * @return the value of the '<em>Replaces</em>' reference.
+	 * @see #setReplaces(Argument)
+	 * @see argument.argument.ArgumentPackage#getArgument_Replaces()
+	 * @model annotation="gmf.link target='replaces' style='dash' width='2' color='160,32,240' target.decoration='arrow'"
 	 * @generated
 	 */
-  Argument getOrigin();
+  Argument getReplaces();
 
   /**
-	 * Sets the value of the '{@link argument.argument.Argument#getOrigin <em>Origin</em>}' reference.
+	 * Sets the value of the '{@link argument.argument.Argument#getReplaces <em>Replaces</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Origin</em>' reference.
-	 * @see #getOrigin()
+	 * @param value the new value of the '<em>Replaces</em>' reference.
+	 * @see #getReplaces()
 	 * @generated
 	 */
-  void setOrigin(Argument value);
+  void setReplaces(Argument value);
 
   /**
 	 * Returns the value of the '<em><b>Expr</b></em>' containment reference.

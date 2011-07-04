@@ -1,6 +1,3 @@
-/*
- * 
- */
 package argument.argument.diagram.edit.helpers;
 
 import org.eclipse.gmf.runtime.common.core.command.CompositeCommand;

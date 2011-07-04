@@ -1,6 +1,3 @@
-/*
- * 
- */
 package argument.argument.diagram.part;
 
 import org.eclipse.emf.common.ui.URIEditorInput;

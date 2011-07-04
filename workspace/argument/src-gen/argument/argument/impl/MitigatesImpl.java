@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link argument.argument.impl.MitigatesImpl#getRebuttal <em>Rebuttal</em>}</li>
+ *   <li>{@link argument.argument.impl.MitigatesImpl#getRestores <em>Restores</em>}</li>
  * </ul>
  * </p>
  *
@@ -32,14 +32,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class MitigatesImpl extends LinkImpl implements Mitigates
 {
   /**
-	 * The cached value of the '{@link #getRebuttal() <em>Rebuttal</em>}' reference.
+	 * The cached value of the '{@link #getRestores() <em>Restores</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getRebuttal()
+	 * @see #getRestores()
 	 * @generated
 	 * @ordered
 	 */
-  protected Argument rebuttal;
+  protected Argument restores;
 
   /**
 	 * <!-- begin-user-doc -->
@@ -67,17 +67,17 @@ public class MitigatesImpl extends LinkImpl implements Mitigates
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Argument getRebuttal()
+  public Argument getRestores()
   {
-		if (rebuttal != null && rebuttal.eIsProxy()) {
-			InternalEObject oldRebuttal = (InternalEObject)rebuttal;
-			rebuttal = (Argument)eResolveProxy(oldRebuttal);
-			if (rebuttal != oldRebuttal) {
+		if (restores != null && restores.eIsProxy()) {
+			InternalEObject oldRestores = (InternalEObject)restores;
+			restores = (Argument)eResolveProxy(oldRestores);
+			if (restores != oldRestores) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ArgumentPackage.MITIGATES__REBUTTAL, oldRebuttal, rebuttal));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ArgumentPackage.MITIGATES__RESTORES, oldRestores, restores));
 			}
 		}
-		return rebuttal;
+		return restores;
 	}
 
   /**
@@ -85,9 +85,9 @@ public class MitigatesImpl extends LinkImpl implements Mitigates
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Argument basicGetRebuttal()
+  public Argument basicGetRestores()
   {
-		return rebuttal;
+		return restores;
 	}
 
   /**
@@ -95,12 +95,12 @@ public class MitigatesImpl extends LinkImpl implements Mitigates
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setRebuttal(Argument newRebuttal)
+  public void setRestores(Argument newRestores)
   {
-		Argument oldRebuttal = rebuttal;
-		rebuttal = newRebuttal;
+		Argument oldRestores = restores;
+		restores = newRestores;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.MITIGATES__REBUTTAL, oldRebuttal, rebuttal));
+			eNotify(new ENotificationImpl(this, Notification.SET, ArgumentPackage.MITIGATES__RESTORES, oldRestores, restores));
 	}
 
   /**
@@ -112,9 +112,9 @@ public class MitigatesImpl extends LinkImpl implements Mitigates
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case ArgumentPackage.MITIGATES__REBUTTAL:
-				if (resolve) return getRebuttal();
-				return basicGetRebuttal();
+			case ArgumentPackage.MITIGATES__RESTORES:
+				if (resolve) return getRestores();
+				return basicGetRestores();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -128,8 +128,8 @@ public class MitigatesImpl extends LinkImpl implements Mitigates
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case ArgumentPackage.MITIGATES__REBUTTAL:
-				setRebuttal((Argument)newValue);
+			case ArgumentPackage.MITIGATES__RESTORES:
+				setRestores((Argument)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -144,8 +144,8 @@ public class MitigatesImpl extends LinkImpl implements Mitigates
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case ArgumentPackage.MITIGATES__REBUTTAL:
-				setRebuttal((Argument)null);
+			case ArgumentPackage.MITIGATES__RESTORES:
+				setRestores((Argument)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -160,8 +160,8 @@ public class MitigatesImpl extends LinkImpl implements Mitigates
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case ArgumentPackage.MITIGATES__REBUTTAL:
-				return rebuttal != null;
+			case ArgumentPackage.MITIGATES__RESTORES:
+				return restores != null;
 		}
 		return super.eIsSet(featureID);
 	}

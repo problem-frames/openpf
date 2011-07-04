@@ -1,6 +1,3 @@
-/*
- * 
- */
 package argument.argument.diagram.edit.parts;
 
 import org.eclipse.draw2d.FigureUtilities;
@@ -77,20 +74,23 @@ public class ArgumentEditPartFactory implements EditPartFactory {
 			case MitigatesEditPart.VISUAL_ID:
 				return new MitigatesEditPart(view);
 
-			case RebutsOriginEditPart.VISUAL_ID:
-				return new RebutsOriginEditPart(view);
+			case LinkEditPart.VISUAL_ID:
+				return new LinkEditPart(view);
+
+			case RebutsDeniesEditPart.VISUAL_ID:
+				return new RebutsDeniesEditPart(view);
 
 			case WrappingLabelEditPart.VISUAL_ID:
 				return new WrappingLabelEditPart(view);
 
-			case MitigatesRebuttalEditPart.VISUAL_ID:
-				return new MitigatesRebuttalEditPart(view);
+			case MitigatesRestoresEditPart.VISUAL_ID:
+				return new MitigatesRestoresEditPart(view);
 
 			case WrappingLabel2EditPart.VISUAL_ID:
 				return new WrappingLabel2EditPart(view);
 
-			case ArgumentOriginEditPart.VISUAL_ID:
-				return new ArgumentOriginEditPart(view);
+			case ArgumentReplacesEditPart.VISUAL_ID:
+				return new ArgumentReplacesEditPart(view);
 
 			case WrappingLabel3EditPart.VISUAL_ID:
 				return new WrappingLabel3EditPart(view);

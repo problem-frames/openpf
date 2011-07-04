@@ -1,6 +1,3 @@
-/*
- * 
- */
 package argument.argument.diagram.providers;
 
 import java.util.HashSet;
@@ -24,11 +21,12 @@ import argument.argument.diagram.edit.parts.Argument2EditPart;
 import argument.argument.diagram.edit.parts.Argument3EditPart;
 import argument.argument.diagram.edit.parts.ArgumentDiagramEditPart;
 import argument.argument.diagram.edit.parts.ArgumentEditPart;
-import argument.argument.diagram.edit.parts.ArgumentOriginEditPart;
+import argument.argument.diagram.edit.parts.ArgumentReplacesEditPart;
+import argument.argument.diagram.edit.parts.LinkEditPart;
 import argument.argument.diagram.edit.parts.MitigatesEditPart;
-import argument.argument.diagram.edit.parts.MitigatesRebuttalEditPart;
+import argument.argument.diagram.edit.parts.MitigatesRestoresEditPart;
+import argument.argument.diagram.edit.parts.RebutsDeniesEditPart;
 import argument.argument.diagram.edit.parts.RebutsEditPart;
-import argument.argument.diagram.edit.parts.RebutsOriginEditPart;
 import argument.argument.diagram.part.ArgumentDiagramEditorPlugin;
 
 /**
@@ -84,15 +82,19 @@ public class ArgumentElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType RebutsOrigin_4003 = getElementType("argument.diagram.RebutsOrigin_4003"); //$NON-NLS-1$
+	public static final IElementType Link_4003 = getElementType("argument.diagram.Link_4003"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType MitigatesRebuttal_4004 = getElementType("argument.diagram.MitigatesRebuttal_4004"); //$NON-NLS-1$
+	public static final IElementType RebutsDenies_4004 = getElementType("argument.diagram.RebutsDenies_4004"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType ArgumentOrigin_4005 = getElementType("argument.diagram.ArgumentOrigin_4005"); //$NON-NLS-1$
+	public static final IElementType MitigatesRestores_4005 = getElementType("argument.diagram.MitigatesRestores_4005"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType ArgumentReplaces_4006 = getElementType("argument.diagram.ArgumentReplaces_4006"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -219,14 +221,16 @@ public class ArgumentElementTypes {
 			elements.put(Mitigates_4002,
 					ArgumentPackage.eINSTANCE.getMitigates());
 
-			elements.put(RebutsOrigin_4003,
-					ArgumentPackage.eINSTANCE.getRebuts_Origin());
+			elements.put(Link_4003, ArgumentPackage.eINSTANCE.getLink());
 
-			elements.put(MitigatesRebuttal_4004,
-					ArgumentPackage.eINSTANCE.getMitigates_Rebuttal());
+			elements.put(RebutsDenies_4004,
+					ArgumentPackage.eINSTANCE.getRebuts_Denies());
 
-			elements.put(ArgumentOrigin_4005,
-					ArgumentPackage.eINSTANCE.getArgument_Origin());
+			elements.put(MitigatesRestores_4005,
+					ArgumentPackage.eINSTANCE.getMitigates_Restores());
+
+			elements.put(ArgumentReplaces_4006,
+					ArgumentPackage.eINSTANCE.getArgument_Replaces());
 		}
 		return (ENamedElement) elements.get(type);
 	}
@@ -250,9 +254,10 @@ public class ArgumentElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Argument_3002);
 			KNOWN_ELEMENT_TYPES.add(Rebuts_4001);
 			KNOWN_ELEMENT_TYPES.add(Mitigates_4002);
-			KNOWN_ELEMENT_TYPES.add(RebutsOrigin_4003);
-			KNOWN_ELEMENT_TYPES.add(MitigatesRebuttal_4004);
-			KNOWN_ELEMENT_TYPES.add(ArgumentOrigin_4005);
+			KNOWN_ELEMENT_TYPES.add(Link_4003);
+			KNOWN_ELEMENT_TYPES.add(RebutsDenies_4004);
+			KNOWN_ELEMENT_TYPES.add(MitigatesRestores_4005);
+			KNOWN_ELEMENT_TYPES.add(ArgumentReplaces_4006);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -274,12 +279,14 @@ public class ArgumentElementTypes {
 			return Rebuts_4001;
 		case MitigatesEditPart.VISUAL_ID:
 			return Mitigates_4002;
-		case RebutsOriginEditPart.VISUAL_ID:
-			return RebutsOrigin_4003;
-		case MitigatesRebuttalEditPart.VISUAL_ID:
-			return MitigatesRebuttal_4004;
-		case ArgumentOriginEditPart.VISUAL_ID:
-			return ArgumentOrigin_4005;
+		case LinkEditPart.VISUAL_ID:
+			return Link_4003;
+		case RebutsDeniesEditPart.VISUAL_ID:
+			return RebutsDenies_4004;
+		case MitigatesRestoresEditPart.VISUAL_ID:
+			return MitigatesRestores_4005;
+		case ArgumentReplacesEditPart.VISUAL_ID:
+			return ArgumentReplaces_4006;
 		}
 		return null;
 	}
