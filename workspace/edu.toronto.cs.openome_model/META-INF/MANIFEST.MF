@@ -1,14 +1,14 @@
 Manifest-Version: 1.0
-Require-Bundle: org.eclipse.core.runtime,org.eclipse.emf.ecore;visibil
- ity:=reexport
 Export-Package: edu.toronto.cs.openome_model,edu.toronto.cs.openome_mo
  del.impl,edu.toronto.cs.openome_model.util
+Require-Bundle: org.eclipse.core.runtime,org.eclipse.emf.ecore;visibil
+ ity:=reexport
 Bundle-Vendor: %providerName
 Eclipse-LazyStart: true
 Bundle-ClassPath: .
 Bundle-Version: 1.0.0
-Bundle-Localization: plugin
 Bundle-Name: %pluginName
+Bundle-Localization: plugin
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: edu.toronto.cs.openome_model; singleton:=true
 Bundle-RequiredExecutionEnvironment: J2SE-1.5

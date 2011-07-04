@@ -1,4 +1,9 @@
 Manifest-Version: 1.0
+Export-Package: uk.ac.open.dependency.ui,uk.ac.open.dependency.ui.cont
+ entassist,uk.ac.open.dependency.ui.contentassist.antlr,uk.ac.open.dep
+ endency.ui.contentassist.antlr.internal,uk.ac.open.dependency.ui.inte
+ rnal,uk.ac.open.dependency.ui.labeling,uk.ac.open.dependency.ui.outli
+ ne,uk.ac.open.dependency.ui.quickfix
 Require-Bundle: dependency;visibility:=reexport,org.eclipse.xtext.ui,o
  rg.eclipse.ui.editors;bundle-version="3.5.0",org.eclipse.ui.ide;bundl
  e-version="3.5.0",org.eclipse.xtext.ui.shared,org.eclipse.ui,org.ecli
@@ -6,20 +11,15 @@ Require-Bundle: dependency;visibility:=reexport,org.eclipse.xtext.ui,o
  ="1.0.0",dependency.diagram.extensions;bundle-version="1.0.0",problem
  ;bundle-version="1.0.0",problem.ui;bundle-version="1.0.0",core;bundle
  -version="1.0.0"
-Export-Package: uk.ac.open.dependency.ui,uk.ac.open.dependency.ui.cont
- entassist,uk.ac.open.dependency.ui.contentassist.antlr,uk.ac.open.dep
- endency.ui.contentassist.antlr.internal,uk.ac.open.dependency.ui.inte
- rnal,uk.ac.open.dependency.ui.labeling,uk.ac.open.dependency.ui.outli
- ne,uk.ac.open.dependency.ui.quickfix
 Bundle-Vendor: The Open University
 Bundle-ActivationPolicy: lazy
 Bundle-Version: 1.0.0
 Bundle-Name: dependency.ui
-Bundle-ManifestVersion: 2
 Bundle-Activator: uk.ac.open.dependency.ui.internal.DependencyActivato
  r
-Bundle-SymbolicName: dependency.ui; singleton:=true
+Bundle-ManifestVersion: 2
 Import-Package: org.apache.log4j
+Bundle-SymbolicName: dependency.ui; singleton:=true
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 
 
