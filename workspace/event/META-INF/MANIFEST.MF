@@ -11,8 +11,8 @@ Bundle-ActivationPolicy: lazy
 Bundle-Version: 1.0.0
 Bundle-Name: event
 Bundle-ManifestVersion: 2
-Import-Package: org.apache.log4j
 Bundle-SymbolicName: event; singleton:=true
+Import-Package: org.apache.log4j
 Eclipse-RegisterBuddy: org.eclipse.xtext.log4j
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 

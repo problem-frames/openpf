@@ -1,8 +1,4 @@
 Manifest-Version: 1.0
-Export-Package: argument.argument,argument.argument.impl,argument.argu
- ment.util,argument.parseTreeConstruction,argument.parser.antlr,argume
- nt.parser.antlr.internal,argument.services,argument,argument.validati
- on
 Require-Bundle: org.eclipse.xtext,org.eclipse.xtext.generator;resoluti
  on:=optional,org.apache.commons.logging;resolution:=optional,org.ecli
  pse.emf.codegen.ecore;resolution:=optional,org.eclipse.emf.mwe.utils;
@@ -10,13 +6,17 @@ Require-Bundle: org.eclipse.xtext,org.eclipse.xtext.generator;resoluti
  ,com.ibm.icu;resolution:=optional,org.eclipse.xtext.xtend;resolution:
  =optional,org.eclipse.xtext.util,org.eclipse.emf.ecore,org.eclipse.em
  f.common,org.antlr.runtime
+Export-Package: argument.argument,argument.argument.impl,argument.argu
+ ment.util,argument.parseTreeConstruction,argument.parser.antlr,argume
+ nt.parser.antlr.internal,argument.services,argument,argument.validati
+ on
 Bundle-Vendor: My Company
 Bundle-ActivationPolicy: lazy
 Bundle-Version: 1.0.0
 Bundle-Name: argument
 Bundle-ManifestVersion: 2
-Bundle-SymbolicName: argument; singleton:=true
 Import-Package: org.apache.log4j
+Bundle-SymbolicName: argument; singleton:=true
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 
 

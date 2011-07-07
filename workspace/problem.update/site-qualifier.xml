@@ -3,9 +3,6 @@
    <description name="Requirements Engineering Tools Provided by The Open University" url="http://sead1.open.ac.uk/openre">
       The update site contains a number of Eclipse plugins to support the requirements engineering research at the Software Engineering And Design group, The Open University.
    </description>
-   <feature url="features/problem.feature_1.0.0.qualifier.jar" id="problem.feature" version="1.0.0.qualifier">
-      <category name="RE_Tools"/>
-   </feature>
    <feature url="features/hu.optxware.emf2viatra.feature_0.0.1.jar" id="hu.optxware.emf2viatra.feature" version="0.0.1">
       <category name="Little-JIL"/>
    </feature>
@@ -459,22 +456,13 @@
    <feature url="features/org.eclipse.acceleo.ui.capabilities_3.0.1.v201009150438.jar" id="org.eclipse.acceleo.ui.capabilities" version="3.0.1.v201009150438">
       <category name="Acceleo"/>
    </feature>
-   <feature url="features/org.eclipse.swtbot_2.0.0.595-dev-e36.jar" id="org.eclipse.swtbot" version="2.0.0.595-dev-e36">
+   <feature url="features/org.eclipse.swtbot_2.0.4.20110304_0338-e5aff47-dev-e36.jar" id="org.eclipse.swtbot" version="2.0.4.20110304_0338-e5aff47-dev-e36">
       <category name="SWTbot"/>
    </feature>
-   <feature url="features/org.eclipse.swtbot.eclipse_2.0.0.595-dev-e36.jar" id="org.eclipse.swtbot.eclipse" version="2.0.0.595-dev-e36">
+   <feature url="features/org.eclipse.swtbot.eclipse_2.0.4.20110304_0338-e5aff47-dev-e36.jar" id="org.eclipse.swtbot.eclipse" version="2.0.4.20110304_0338-e5aff47-dev-e36">
       <category name="SWTbot"/>
    </feature>
-   <feature url="features/org.eclipse.swtbot.eclipse.gef_2.0.0.595-dev-e36.jar" id="org.eclipse.swtbot.eclipse.gef" version="2.0.0.595-dev-e36">
-      <category name="SWTbot"/>
-   </feature>
-   <feature url="features/org.eclipse.swtbot.eclipse.test.junit3_2.0.0.595-dev-e36.jar" id="org.eclipse.swtbot.eclipse.test.junit3" version="2.0.0.595-dev-e36">
-      <category name="SWTbot"/>
-   </feature>
-   <feature url="features/org.eclipse.swtbot.eclipse.test.junit4_2.0.0.595-dev-e36.jar" id="org.eclipse.swtbot.eclipse.test.junit4" version="2.0.0.595-dev-e36">
-      <category name="SWTbot"/>
-   </feature>
-   <feature url="features/org.eclipse.swtbot.ide_2.0.0.595-dev-e36.jar" id="org.eclipse.swtbot.ide" version="2.0.0.595-dev-e36">
+   <feature url="features/org.eclipse.swtbot.forms_2.0.4.20110304_0338-e5aff47-dev-e36.jar" id="org.eclipse.swtbot.eclipse.gef" version="2.0.4.20110304_0338-e5aff47-dev-e36">
       <category name="SWTbot"/>
    </feature>
    <feature url="features/org.eclipse.xsd_2.6.0.v20100914-1218.jar" id="org.eclipse.xsd" version="2.6.0.v20100914-1218">
@@ -773,6 +761,9 @@
    </feature>
    <feature url="features/org.eclipse.wst.xsl_sdk.feature_1.1.2.v201009091745-528h98jYgXy1VmFpgUekbhAP5Dsy.jar" id="org.eclipse.wst.xsl_sdk.feature" version="1.1.2.v201009091745-528h98jYgXy1VmFpgUekbhAP5Dsy">
       <category name="WST"/>
+   </feature>
+   <feature url="features/problem.feature_1.0.0.qualifier.jar" id="problem.feature" version="1.0.0.qualifier">
+      <category name="RE_Tools"/>
    </feature>
    <feature url="features/argument.feature_1.0.0.qualifier.jar" id="argument.feature" version="1.0.0.qualifier">
       <category name="RE_Tools"/>

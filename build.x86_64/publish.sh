@@ -19,7 +19,7 @@ cp -r $BUILT_REPO/features $PUBLIC_REPO
 cp -r $BUILT_REPO/plugins $PUBLIC_REPO 
 cp $USERGUIDE $PUBLIC_REPO
 }
-#publish
+publish
 list=$(grep qualifier $HOME/build/cruisecontrol-bin-2.8.3/projects/openpf/workspace/problem.update/site.xml \
 | awk '{split($2, a, /\//); split(a[2], b, /\./); print b[1]}')
 cp $PUBLIC_REPO/site.xml .
