@@ -1,0 +1,28 @@
+Index: Ontology.xtext
+===================================================================
+--- Ontology.xtext	(revision 339)
++++ Ontology.xtext	(working copy)
+@@ -17,7 +17,7 @@
+ 
+ Domain: name=ID type='dom' (asset=Asset)? ((',')? properties+=Proposition)* | Actor | Action | Resource; 
+ 
+-Asset: name=ID '$' (value=STRING)?;
++Asset: name=ID '$' ('(' value=STRING ')')?;
+ 
+ Actor:	name=ID type='actor' (asset=Asset)? ((',')? properties+=Proposition)*;
+ 
+@@ -29,12 +29,12 @@
+ 	name=STRING;
+ 
+ Relationship:
+-    type=RelType '(' (','? entities+=[Entity])* ')'  ((',')? properties+=Proposition)*;
++    type=RelType '(' source=[Entity] ',' target=[Entity] (',' dependum=[Entity])? ')'  ((',')? properties+=Proposition)*;
+ 
+ enum RelType: CARRIESOUT='carries out' | DEPENDS='depends' | AND_DECOMPOSES='and decomposes' | OR_DECOMPOSES='or decomposes' 
+ 	| HELPS='+' | HURTS='-' | BREAKS='--' | MAKES='++' 
+ 	| DELEGATES='delegates' | FULFILS='fulfils' | PROVIDES='provides' | TRUSTS='trusts' | WANTS='wants' | DAMAGES ='damages' 
+-	| ATTACKS='attacks' | ARGUES ='argues' | INTERFACES='interfaces' | CONSUMEs='consumes' | PROTECTS='protects';
++	| ATTACKS='attacks' | ARGUES ='argues' | INTERFACES='interfaces' | CONSUMES='consumes' | PROTECTS='protects';
+ 
+ terminal ID:
+ 	('#' (!('#'))+ '#') | ('^'? ('a'..'z' | 'A'..'Z' | '_' | '.') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9' | '.')*);

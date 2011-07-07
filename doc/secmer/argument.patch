@@ -1,0 +1,13 @@
+Index: plugin.xml
+===================================================================
+--- plugin.xml	(revision 341)
++++ plugin.xml	(working copy)
+@@ -7,7 +7,7 @@
+     <package 
+        uri = "http://www.ac.uk/open/argument/Argument" 
+        class = "uk.ac.open.argument.argument.ArgumentPackage"
+-       genModel = "uk/ac/open/argument/Argument.genmodel" /> 
++       genModel = "src-gen/uk/ac/open/argument/Argument.genmodel" /> 
+ 	
+   </extension>
+ 

@@ -1,0 +1,368 @@
+### Eclipse Workspace Patch 1.0
+#P edu.toronto.cs.openome_model.tests
+Index: .project
+===================================================================
+--- .project	(revision 0)
++++ .project	(revision 0)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<projectDescription>
++	<name>edu.toronto.cs.openome_model.tests</name>
++	<comment></comment>
++	<projects>
++	</projects>
++	<buildSpec>
++	</buildSpec>
++	<natures>
++	</natures>
++</projectDescription>
+#P edu.toronto.cs.openome.conversion
+Index: .classpath
+===================================================================
+--- .classpath	(revision 339)
++++ .classpath	(working copy)
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <classpath>
+ 	<classpathentry kind="src" path="src"/>
+-	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
+-	<classpathentry exported="true" kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
++	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
++	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+ 	<classpathentry kind="output" path="bin"/>
+ </classpath>
+Index: META-INF/MANIFEST.MF
+===================================================================
+--- META-INF/MANIFEST.MF	(revision 339)
++++ META-INF/MANIFEST.MF	(working copy)
+@@ -9,9 +9,15 @@
+  esource,edu.toronto.cs.openome_model",edu.toronto.cs.openome.conversi
+  on.service;uses:="org.eclipse.emf.ecore.resource,edu.toronto.cs.openo
+  me_model"
+-Require-Bundle: edu.toronto.cs.openome_model,org.junit,org.sat4j.core,
+- core,util,org.eclipse.core.runtime;bundle-version="3.6.0",org.eclipse
+- .emf.ecore.xmi;bundle-version="2.5.0",q7;bundle-version="1.0.0"
++Require-Bundle: edu.toronto.cs.openome_model,
++ org.junit,
++ org.sat4j.core,
++ core,
++ util,
++ org.eclipse.core.runtime;bundle-version="3.6.0",
++ org.eclipse.emf.ecore.xmi;bundle-version="2.5.0",
++ q7;bundle-version="1.0.0",
++ org.eclipse.ui;bundle-version="3.6.0"
+ Bundle-Vendor: University Of Toronto
+ Bundle-ActivationPolicy: lazy
+ Bundle-Version: 1.0.0.201010080232
+#P event
+Index: META-INF/MANIFEST.MF
+===================================================================
+--- META-INF/MANIFEST.MF	(revision 339)
++++ META-INF/MANIFEST.MF	(working copy)
+@@ -4,13 +4,23 @@
+  calculus.util,uk.ac.open.event.parseTreeConstruction,uk.ac.open.event
+  .parser.antlr,uk.ac.open.event.parser.antlr.internal,uk.ac.open.event
+  .services,uk.ac.open.event.validation
+-Require-Bundle: org.eclipse.xtext,org.eclipse.xtext.generator,org.apac
+- he.commons.logging,org.eclipse.emf.codegen.ecore,org.eclipse.emf.mwe.
+- utils,org.eclipse.emf.mwe.core,org.eclipse.xtext.xtend,org.eclipse.xt
+- ext.util,org.eclipse.emf.ecore,org.eclipse.emf.common,org.antlr.runti
+- me,core,org.apache.log4j,org.eclipse.emf.mwe2.launch,org.eclipse.core
+- .resources;bundle-version="3.6.0",org.eclipse.core.runtime;bundle-ver
+- sion="3.6.0"
++Require-Bundle: org.eclipse.xtext,
++ org.eclipse.xtext.generator,
++ org.apache.commons.logging,
++ org.eclipse.emf.codegen.ecore,
++ org.eclipse.emf.mwe.utils,
++ org.eclipse.emf.mwe.core,
++ org.eclipse.xtext.xtend,
++ org.eclipse.xtext.util,
++ org.eclipse.emf.ecore,
++ org.eclipse.emf.common,
++ org.antlr.runtime,
++ core,
++ org.apache.log4j,
++ org.eclipse.emf.mwe2.launch,
++ org.eclipse.core.resources;bundle-version="3.6.0",
++ org.eclipse.core.runtime;bundle-version="3.6.0",
++ org.eclipse.ui;bundle-version="3.6.0"
+ Bundle-Vendor: The Open University
+ Bundle-ActivationPolicy: lazy
+ Bundle-Version: 1.0.0
+#P argument2ec
+#P PF2EC
+#P openome_model.figures
+Index: .classpath
+===================================================================
+--- .classpath	(revision 339)
++++ .classpath	(working copy)
+@@ -2,6 +2,6 @@
+ <classpath>
+ 	<classpathentry kind="src" path="src"/>
+ 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
+-	<classpathentry exported="true" kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
++	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+ 	<classpathentry kind="output" path="bin"/>
+ </classpath>
+#P problem.ui
+Index: .classpath
+===================================================================
+--- .classpath	(revision 339)
++++ .classpath	(working copy)
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <classpath>
+-	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
+-	<classpathentry exported="true" kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
++	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
++	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+ 	<classpathentry kind="src" path="src"/>
+ 	<classpathentry kind="src" path="src-gen"/>
+ 	<classpathentry kind="output" path="bin"/>
+#P problem.editor
+Index: .classpath
+===================================================================
+--- .classpath	(revision 339)
++++ .classpath	(working copy)
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <classpath>
+ 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
+-	<classpathentry exported="true" kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
++	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+ 	<classpathentry kind="src" path="src"/>
+ 	<classpathentry kind="output" path="bin"/>
+ </classpath>
+#P ontology
+Index: META-INF/MANIFEST.MF
+===================================================================
+--- META-INF/MANIFEST.MF	(revision 339)
++++ META-INF/MANIFEST.MF	(working copy)
+@@ -5,11 +5,19 @@
+  ogy.parseTreeConstruction,eu.securechange.ontology.parser.antlr,eu.se
+  curechange.ontology.parser.antlr.internal,eu.securechange.ontology.va
+  lidation
+-Require-Bundle: org.eclipse.xtext,org.eclipse.xtext.generator,org.apac
+- he.commons.logging,org.eclipse.emf.codegen.ecore,org.eclipse.emf.mwe.
+- utils,org.eclipse.emf.mwe2.launch,com.ibm.icu,org.eclipse.xtext.xtend
+- ,org.eclipse.xtext.util,org.eclipse.emf.ecore,org.eclipse.emf.common,
+- org.antlr.runtime,core
++Require-Bundle: org.eclipse.xtext,
++ org.eclipse.xtext.generator,
++ org.apache.commons.logging,
++ org.eclipse.emf.codegen.ecore,
++ org.eclipse.emf.mwe.utils,
++ org.eclipse.emf.mwe2.launch,
++ com.ibm.icu,
++ org.eclipse.xtext.xtend,
++ org.eclipse.xtext.util,
++ org.eclipse.emf.ecore,
++ org.eclipse.emf.common,
++ org.antlr.runtime,
++ core;visibility:=reexport
+ Bundle-Vendor: SecureChange
+ Bundle-ActivationPolicy: lazy
+ Bundle-Version: 1.0.0.201010080232
+#P problem
+Index: META-INF/MANIFEST.MF
+===================================================================
+--- META-INF/MANIFEST.MF	(revision 339)
++++ META-INF/MANIFEST.MF	(working copy)
+@@ -1,13 +1,30 @@
+ Manifest-Version: 1.0
+-Require-Bundle: org.eclipse.core.resources,com.ibm.icu,core,org.antlr.
+- runtime,org.apache.commons.logging,org.apache.log4j,org.apache.log4j,
+- org.eclipse.draw2d;visibility:=reexport,org.eclipse.emf.codegen.ecore
+- ,org.eclipse.emf.common,org.eclipse.emf.ecore,org.eclipse.emf.mwe.cor
+- e,org.eclipse.emf.mwe.utils,org.eclipse.emf.mwe2.launch,org.eclipse.g
+- mf.runtime.draw2d.ui;visibility:=reexport,org.eclipse.swtbot.eclipse.
+- core,org.eclipse.swtbot.eclipse.finder,org.eclipse.swtbot.junit4_x,or
+- g.eclipse.ui,org.eclipse.xtext,org.eclipse.xtext.generator,org.eclips
+- e.xtext.util,org.eclipse.xtext.xtend,org.hamcrest,org.junit4
++Require-Bundle: org.eclipse.core.resources,
++ com.ibm.icu,
++ core,
++ org.antlr.runtime,
++ org.apache.commons.logging,
++ org.apache.log4j,
++ org.apache.log4j,
++ org.eclipse.draw2d;visibility:=reexport,
++ org.eclipse.emf.codegen.ecore,
++ org.eclipse.emf.common,
++ org.eclipse.emf.ecore,
++ org.eclipse.emf.mwe.core,
++ org.eclipse.emf.mwe.utils,
++ org.eclipse.emf.mwe2.launch,
++ org.eclipse.gmf.runtime.draw2d.ui;visibility:=reexport,
++ org.eclipse.swtbot.eclipse.core,
++ org.eclipse.swtbot.eclipse.finder,
++ org.eclipse.swtbot.junit4_x,
++ org.eclipse.ui,
++ org.eclipse.xtext,
++ org.eclipse.xtext.generator,
++ org.eclipse.xtext.util,
++ org.eclipse.xtext.xtend,
++ org.hamcrest,
++ org.junit4,
++ org.eclipse.core.runtime;bundle-version="3.6.0"
+ Export-Package: org.eclipse.xtext.example.gmf.resource,uk.ac.open,uk.a
+  c.open.formatting,uk.ac.open.parseTreeConstruction,uk.ac.open.parser.
+  antlr,uk.ac.open.parser.antlr.internal;x-internal:=true,uk.ac.open.pr
+#P problem.generator
+Index: .classpath
+===================================================================
+--- .classpath	(revision 339)
++++ .classpath	(working copy)
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <classpath>
+-	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
+-	<classpathentry exported="true" kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
++	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
++	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+ 	<classpathentry kind="src" path="src"/>
+ 	<classpathentry kind="src" path="src-gen"/>
+ 	<classpathentry kind="output" path="bin"/>
+#P q7
+Index: META-INF/MANIFEST.MF
+===================================================================
+--- META-INF/MANIFEST.MF	(revision 339)
++++ META-INF/MANIFEST.MF	(working copy)
+@@ -1,5 +1,8 @@
+ Manifest-Version: 1.0
+-Require-Bundle: util,org.eclipse.emf.ecore,core
++Require-Bundle: util,
++ org.eclipse.emf.ecore,
++ core,
++ org.eclipse.ui;bundle-version="3.6.0"
+ Export-Package: .,action,codegen,convertor,model,org.javacc,org.javacc
+  .jjdoc,org.javacc.jjtree,org.javacc.parser,parser
+ Bundle-Vendor: Yijun Yu
+Index: .classpath
+===================================================================
+--- .classpath	(revision 339)
++++ .classpath	(working copy)
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <classpath>
+ 	<classpathentry excluding="q7dsl/" kind="src" path="src"/>
+-	<classpathentry exported="true" kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
++	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+ 	<classpathentry kind="lib" path="lib/javacc.jar"/>
+ 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
+ 	<classpathentry kind="output" path="bin"/>
+#P event.ui
+Index: .classpath
+===================================================================
+--- .classpath	(revision 339)
++++ .classpath	(working copy)
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <classpath>
+-	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
+-	<classpathentry exported="true" kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
++	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
++	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+ 	<classpathentry kind="src" path="src"/>
+ 	<classpathentry kind="src" path="src-gen"/>
+ 	<classpathentry kind="output" path="bin"/>
+#P model
+Index: .project
+===================================================================
+--- .project	(revision 0)
++++ .project	(revision 0)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<projectDescription>
++	<name>model</name>
++	<comment></comment>
++	<projects>
++	</projects>
++	<buildSpec>
++	</buildSpec>
++	<natures>
++	</natures>
++</projectDescription>
+#P argument.ui
+Index: META-INF/MANIFEST.MF
+===================================================================
+--- META-INF/MANIFEST.MF	(revision 339)
++++ META-INF/MANIFEST.MF	(working copy)
+@@ -3,18 +3,24 @@
+ Bundle-ActivationPolicy: lazy
+ Bundle-Name: argument.ui
+ Bundle-RequiredExecutionEnvironment: J2SE-1.5
+-Require-Bundle: argument;visibility:=reexport,org.eclipse.xtext.ui,org
+- .eclipse.ui.editors;bundle-version="3.5.0",org.eclipse.ui.ide;bundle-
+- version="3.5.0",org.eclipse.xtext.ui.shared,org.eclipse.ui,org.eclips
+- e.xtext.builder,org.antlr.runtime,argument.diagram;bundle-version="1.
+- 0.0",problem.ui;bundle-version="1.0.0",core;bundle-version="1.0.0",ev
+- ent;bundle-version="1.0.0"
++Require-Bundle: argument;visibility:=reexport,
++ org.eclipse.xtext.ui,
++ org.eclipse.ui.editors;bundle-version="3.5.0",
++ org.eclipse.ui.ide;bundle-version="3.5.0",
++ org.eclipse.xtext.ui.shared,
++ org.eclipse.ui,
++ org.eclipse.xtext.builder,
++ org.antlr.runtime,
++ argument.diagram;bundle-version="1.0.0",
++ problem.ui;bundle-version="1.0.0",
++ event;bundle-version="1.0.0",
++ org.apache.log4j;bundle-version="1.2.0",
++ core;bundle-version="1.0.0"
+ Bundle-Vendor: The Open University
+ Bundle-Version: 1.0.0
+ tManifest-Version: 1.0
+ Bundle-ManifestVersion: 2
+ Bundle-Activator: uk.ac.open.argument.ui.internal.ArgumentActivator
+ Bundle-SymbolicName: argument.ui; singleton:=true
+-Import-Package: org.apache.log4j
+ 
+ 
+#P edu.toronto.cs.openome.testing
+Index: .classpath
+===================================================================
+--- .classpath	(revision 339)
++++ .classpath	(working copy)
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <classpath>
+ 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
+-	<classpathentry exported="true" kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
++	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+ 	<classpathentry kind="src" path="src"/>
+ 	<classpathentry kind="output" path="bin"/>
+ </classpath>
+#P problem.tests
+Index: .project
+===================================================================
+--- .project	(revision 0)
++++ .project	(revision 0)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<projectDescription>
++	<name>problem.tests</name>
++	<comment></comment>
++	<projects>
++	</projects>
++	<buildSpec>
++	</buildSpec>
++	<natures>
++	</natures>
++</projectDescription>
+#P core
+Index: .classpath
+===================================================================
+--- .classpath	(revision 339)
++++ .classpath	(working copy)
+@@ -2,7 +2,7 @@
+ <classpath>
+ 	<classpathentry kind="src" path="src"/>
+ 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
+-	<classpathentry exported="true" kind="con" path="org.eclipse.pde.core.requiredPlugins">
++	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins">
+ 		<accessrules>
+ 			<accessrule kind="accessible" pattern="**/*"/>
+ 		</accessrules>
