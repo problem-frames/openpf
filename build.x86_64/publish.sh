@@ -7,6 +7,7 @@ CATEGORYXML=file:/$HOME/build/cruisecontrol-bin-2.8.3/projects/openpf/workspace/
 BUILT_REPO=$HOME/eclipse.build/update-3.6.2
 PUBLIC_REPO=/home/share/sead/openre/update
 USERGUIDE=$HOME/build/cruisecontrol-bin-2.8.3/projects/openpf/doc/UserGuide
+function publish() {
 rm -rf $PUBLIC_REPO
 awk -f version.awk $HOME/build/cruisecontrol-bin-2.8.3/projects/openpf/workspace/problem.update/site-qualifier.xml | sed -e 's/\.\./.qualifier./g' | sed -e 's/\."/.qualifier"/g' > $HOME/build/cruisecontrol-bin-2.8.3/projects/openpf/workspace/problem.update/site.xml
 awk -f version.awk $HOME/build/cruisecontrol-bin-2.8.3/projects/openpf/workspace/problem.update/category-qualifier.xml | sed -e 's/\.\./.qualifier./g' | sed -e 's/\."/.qualifier"/g' > $HOME/build/cruisecontrol-bin-2.8.3/projects/openpf/workspace/problem.update/category.xml
@@ -17,3 +18,18 @@ cp $HOME/build/cruisecontrol-bin-2.8.3/projects/openpf/workspace/problem.update/
 cp -r $BUILT_REPO/features $PUBLIC_REPO 
 cp -r $BUILT_REPO/plugins $PUBLIC_REPO 
 cp $USERGUIDE $PUBLIC_REPO
+}
+#publish
+list=$(grep qualifier $HOME/build/cruisecontrol-bin-2.8.3/projects/openpf/workspace/problem.update/site.xml \
+| awk '{split($2, a, /\//); split(a[2], b, /\./); print b[1]}')
+cp $PUBLIC_REPO/site.xml .
+for l in $list; do
+  if [ -e $BUILT_REPO/features/$l*.jar ];  then
+	jar=$(basename $BUILT_REPO/features/$l*.jar)
+  	jar2=${jar/.jar/}
+  	jar3=${jar2/*1.0.0./}
+	sed "s/$l.feature_1.0.0.qualifier.jar\" id=\"$l.feature\" version=\"1.0.0.qualifier/$jar\" id=\"$l.feature\" version=\"1.0.0.$jar3/" site.xml > site.xml.new
+	mv site.xml.new site.xml
+  fi
+done
+mv site.xml $PUBLIC_REPO

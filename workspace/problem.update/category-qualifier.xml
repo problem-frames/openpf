@@ -57,9 +57,6 @@
    <feature url="features/org.eclipse.viatra2.gui.pattern_3.1.0.20100316.jar" id="org.eclipse.viatra2.gui.pattern" version="3.1.0.20100316">
       <category name="Viatra2"/>
    </feature>
-   <feature url="features/argument.feature_1.0.0.201010122129-3.jar" id="argument.feature" version="1.0.0.201010122129-3">
-      <category name="Viatra2"/>
-   </feature>
    <feature url="features/org.eclipse.xpand_1.0.1.v201008251147.jar" id="org.eclipse.xpand" version="1.0.1.v201008251147">
       <category name="XTEXT"/>
    </feature>

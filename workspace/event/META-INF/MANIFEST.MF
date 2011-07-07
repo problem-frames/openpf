@@ -1,33 +1,18 @@
 Manifest-Version: 1.0
-Require-Bundle: org.eclipse.xtext,
- org.eclipse.xtext.generator,
- org.apache.commons.logging,
- org.eclipse.emf.codegen.ecore,
- org.eclipse.emf.mwe.utils,
- org.eclipse.emf.mwe.core,
- org.eclipse.xtext.xtend,
- org.eclipse.xtext.util,
- org.eclipse.emf.ecore,
- org.eclipse.emf.common,
- org.antlr.runtime,
- core,
- org.apache.log4j,
- org.eclipse.emf.mwe2.launch,
- org.eclipse.core.resources;bundle-version="3.6.0",
- org.eclipse.core.runtime;bundle-version="3.6.0",
- org.eclipse.ui;bundle-version="3.6.2"
-Export-Package: action,convertor,uk.ac.open.event,uk.ac.open.event.eve
- ntcalculus,uk.ac.open.event.eventcalculus.impl,uk.ac.open.event.event
- calculus.util,uk.ac.open.event.parseTreeConstruction,uk.ac.open.event
- .parser.antlr,uk.ac.open.event.parser.antlr.internal,uk.ac.open.event
- .services,uk.ac.open.event.validation
+Require-Bundle: org.eclipse.xtext,org.eclipse.xtext.generator,org.apac
+ he.commons.logging,org.eclipse.emf.codegen.ecore,org.eclipse.emf.mwe.
+ utils,org.eclipse.emf.mwe.core,org.eclipse.xtext.xtend,org.eclipse.xt
+ ext.util,org.eclipse.emf.ecore,org.eclipse.emf.common,org.antlr.runti
+ me,core,org.apache.log4j,org.eclipse.emf.mwe2.launch,org.eclipse.core
+ .resources;bundle-version="3.6.0",org.eclipse.core.runtime;bundle-ver
+ sion="3.6.0",org.eclipse.ui;bundle-version="3.6.2"
 Bundle-Vendor: The Open University
 Bundle-ActivationPolicy: lazy
 Bundle-Version: 1.0.0
 Bundle-Name: event
 Bundle-ManifestVersion: 2
-Bundle-SymbolicName: event; singleton:=true
 Import-Package: org.apache.log4j
+Bundle-SymbolicName: event; singleton:=true
 Eclipse-RegisterBuddy: org.eclipse.xtext.log4j
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 
