@@ -82,10 +82,10 @@ public class InternalOntologyLexer extends Lexer {
     public final void mT12() throws RecognitionException {
         try {
             int _type = T12;
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:11:5: ( 'depends' )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:11:7: 'depends'
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:11:5: ( 'fulfils' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:11:7: 'fulfils'
             {
-            match("depends"); 
+            match("fulfils"); 
 
 
             }
@@ -213,10 +213,10 @@ public class InternalOntologyLexer extends Lexer {
     public final void mT19() throws RecognitionException {
         try {
             int _type = T19;
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:18:5: ( 'delegates' )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:18:7: 'delegates'
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:18:5: ( 'wants' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:18:7: 'wants'
             {
-            match("delegates"); 
+            match("wants"); 
 
 
             }
@@ -232,10 +232,10 @@ public class InternalOntologyLexer extends Lexer {
     public final void mT20() throws RecognitionException {
         try {
             int _type = T20;
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:19:5: ( 'fulfils' )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:19:7: 'fulfils'
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:19:5: ( 'depends' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:19:7: 'depends'
             {
-            match("fulfils"); 
+            match("depends"); 
 
 
             }
@@ -251,10 +251,10 @@ public class InternalOntologyLexer extends Lexer {
     public final void mT21() throws RecognitionException {
         try {
             int _type = T21;
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:20:5: ( 'provides' )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:20:7: 'provides'
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:20:5: ( 'delegates' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:20:7: 'delegates'
             {
-            match("provides"); 
+            match("delegates"); 
 
 
             }
@@ -289,10 +289,10 @@ public class InternalOntologyLexer extends Lexer {
     public final void mT23() throws RecognitionException {
         try {
             int _type = T23;
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:22:5: ( 'wants' )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:22:7: 'wants'
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:22:5: ( 'provides' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:22:7: 'provides'
             {
-            match("wants"); 
+            match("provides"); 
 
 
             }
@@ -308,10 +308,10 @@ public class InternalOntologyLexer extends Lexer {
     public final void mT24() throws RecognitionException {
         try {
             int _type = T24;
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:23:5: ( 'damages' )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:23:7: 'damages'
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:23:5: ( 'consumes' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:23:7: 'consumes'
             {
-            match("damages"); 
+            match("consumes"); 
 
 
             }
@@ -327,10 +327,10 @@ public class InternalOntologyLexer extends Lexer {
     public final void mT25() throws RecognitionException {
         try {
             int _type = T25;
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:24:5: ( 'attacks' )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:24:7: 'attacks'
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:24:5: ( 'interfaces' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:24:7: 'interfaces'
             {
-            match("attacks"); 
+            match("interfaces"); 
 
 
             }
@@ -346,10 +346,10 @@ public class InternalOntologyLexer extends Lexer {
     public final void mT26() throws RecognitionException {
         try {
             int _type = T26;
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:25:5: ( 'argues' )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:25:7: 'argues'
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:25:5: ( 'damages' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:25:7: 'damages'
             {
-            match("argues"); 
+            match("damages"); 
 
 
             }
@@ -365,10 +365,10 @@ public class InternalOntologyLexer extends Lexer {
     public final void mT27() throws RecognitionException {
         try {
             int _type = T27;
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:26:5: ( 'interfaces' )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:26:7: 'interfaces'
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:26:5: ( 'attacks' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:26:7: 'attacks'
             {
-            match("interfaces"); 
+            match("attacks"); 
 
 
             }
@@ -384,10 +384,10 @@ public class InternalOntologyLexer extends Lexer {
     public final void mT28() throws RecognitionException {
         try {
             int _type = T28;
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:27:5: ( 'consumes' )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:27:7: 'consumes'
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:27:5: ( 'protects' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:27:7: 'protects'
             {
-            match("consumes"); 
+            match("protects"); 
 
 
             }
@@ -403,10 +403,10 @@ public class InternalOntologyLexer extends Lexer {
     public final void mT29() throws RecognitionException {
         try {
             int _type = T29;
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:28:5: ( 'protects' )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:28:7: 'protects'
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:28:5: ( 'argues' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:28:7: 'argues'
             {
-            match("protects"); 
+            match("argues"); 
 
 
             }
@@ -664,10 +664,10 @@ public class InternalOntologyLexer extends Lexer {
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3227:9: ( ( '#' (~ ( '#' ) )+ '#' | ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '.' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '.' )* ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3227:11: ( '#' (~ ( '#' ) )+ '#' | ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '.' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '.' )* )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3456:9: ( ( '#' (~ ( '#' ) )+ '#' | ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '.' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '.' )* ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3456:11: ( '#' (~ ( '#' ) )+ '#' | ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '.' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '.' )* )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3227:11: ( '#' (~ ( '#' ) )+ '#' | ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '.' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '.' )* )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3456:11: ( '#' (~ ( '#' ) )+ '#' | ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '.' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '.' )* )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -679,16 +679,16 @@ public class InternalOntologyLexer extends Lexer {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("3227:11: ( '#' (~ ( '#' ) )+ '#' | ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '.' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '.' )* )", 4, 0, input);
+                    new NoViableAltException("3456:11: ( '#' (~ ( '#' ) )+ '#' | ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '.' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '.' )* )", 4, 0, input);
 
                 throw nvae;
             }
             switch (alt4) {
                 case 1 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3227:12: '#' (~ ( '#' ) )+ '#'
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3456:12: '#' (~ ( '#' ) )+ '#'
                     {
                     match('#'); 
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3227:16: (~ ( '#' ) )+
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3456:16: (~ ( '#' ) )+
                     int cnt1=0;
                     loop1:
                     do {
@@ -702,7 +702,7 @@ public class InternalOntologyLexer extends Lexer {
 
                         switch (alt1) {
                     	case 1 :
-                    	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3227:16: ~ ( '#' )
+                    	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3456:16: ~ ( '#' )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\"')||(input.LA(1)>='$' && input.LA(1)<='\uFFFE') ) {
                     	        input.consume();
@@ -732,9 +732,9 @@ public class InternalOntologyLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3227:28: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '.' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '.' )*
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3456:28: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '.' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '.' )*
                     {
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3227:28: ( '^' )?
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3456:28: ( '^' )?
                     int alt2=2;
                     int LA2_0 = input.LA(1);
 
@@ -743,7 +743,7 @@ public class InternalOntologyLexer extends Lexer {
                     }
                     switch (alt2) {
                         case 1 :
-                            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3227:28: '^'
+                            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3456:28: '^'
                             {
                             match('^'); 
 
@@ -762,7 +762,7 @@ public class InternalOntologyLexer extends Lexer {
                         recover(mse);    throw mse;
                     }
 
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3227:61: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '.' )*
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3456:61: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '.' )*
                     loop3:
                     do {
                         int alt3=2;
@@ -816,10 +816,10 @@ public class InternalOntologyLexer extends Lexer {
     public final void mRULE_INT() throws RecognitionException {
         try {
             int _type = RULE_INT;
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3229:10: ( ( '0' .. '9' )+ )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3229:12: ( '0' .. '9' )+
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3458:10: ( ( '0' .. '9' )+ )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3458:12: ( '0' .. '9' )+
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3229:12: ( '0' .. '9' )+
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3458:12: ( '0' .. '9' )+
             int cnt5=0;
             loop5:
             do {
@@ -833,7 +833,7 @@ public class InternalOntologyLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3229:13: '0' .. '9'
+            	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3458:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -863,10 +863,10 @@ public class InternalOntologyLexer extends Lexer {
     public final void mRULE_STRING() throws RecognitionException {
         try {
             int _type = RULE_STRING;
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3231:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3231:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3460:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3460:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3231:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3460:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -878,16 +878,16 @@ public class InternalOntologyLexer extends Lexer {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("3231:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )", 8, 0, input);
+                    new NoViableAltException("3460:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )", 8, 0, input);
 
                 throw nvae;
             }
             switch (alt8) {
                 case 1 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3231:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3460:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3231:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3460:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop6:
                     do {
                         int alt6=3;
@@ -903,7 +903,7 @@ public class InternalOntologyLexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3231:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
+                    	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3460:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
@@ -920,7 +920,7 @@ public class InternalOntologyLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3231:62: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3460:62: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFE') ) {
                     	        input.consume();
@@ -946,10 +946,10 @@ public class InternalOntologyLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3231:82: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3460:82: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3231:87: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3460:87: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop7:
                     do {
                         int alt7=3;
@@ -965,7 +965,7 @@ public class InternalOntologyLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3231:88: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
+                    	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3460:88: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
@@ -982,7 +982,7 @@ public class InternalOntologyLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3231:129: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3460:129: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFE') ) {
                     	        input.consume();
@@ -1024,12 +1024,12 @@ public class InternalOntologyLexer extends Lexer {
     public final void mRULE_ML_COMMENT() throws RecognitionException {
         try {
             int _type = RULE_ML_COMMENT;
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3233:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3233:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3462:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3462:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3233:24: ( options {greedy=false; } : . )*
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3462:24: ( options {greedy=false; } : . )*
             loop9:
             do {
                 int alt9=2;
@@ -1054,7 +1054,7 @@ public class InternalOntologyLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3233:52: .
+            	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3462:52: .
             	    {
             	    matchAny(); 
 
@@ -1082,12 +1082,12 @@ public class InternalOntologyLexer extends Lexer {
     public final void mRULE_SL_COMMENT() throws RecognitionException {
         try {
             int _type = RULE_SL_COMMENT;
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3235:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3235:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3464:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3464:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3235:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3464:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop10:
             do {
                 int alt10=2;
@@ -1100,7 +1100,7 @@ public class InternalOntologyLexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3235:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3464:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFE') ) {
             	        input.consume();
@@ -1121,7 +1121,7 @@ public class InternalOntologyLexer extends Lexer {
                 }
             } while (true);
 
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3235:40: ( ( '\\r' )? '\\n' )?
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3464:40: ( ( '\\r' )? '\\n' )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1130,9 +1130,9 @@ public class InternalOntologyLexer extends Lexer {
             }
             switch (alt12) {
                 case 1 :
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3235:41: ( '\\r' )? '\\n'
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3464:41: ( '\\r' )? '\\n'
                     {
-                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3235:41: ( '\\r' )?
+                    // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3464:41: ( '\\r' )?
                     int alt11=2;
                     int LA11_0 = input.LA(1);
 
@@ -1141,7 +1141,7 @@ public class InternalOntologyLexer extends Lexer {
                     }
                     switch (alt11) {
                         case 1 :
-                            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3235:41: '\\r'
+                            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3464:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1171,10 +1171,10 @@ public class InternalOntologyLexer extends Lexer {
     public final void mRULE_WS() throws RecognitionException {
         try {
             int _type = RULE_WS;
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3237:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3237:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3466:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3466:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3237:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3466:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt13=0;
             loop13:
             do {
@@ -1227,8 +1227,8 @@ public class InternalOntologyLexer extends Lexer {
     public final void mRULE_ANY_OTHER() throws RecognitionException {
         try {
             int _type = RULE_ANY_OTHER;
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3239:16: ( . )
-            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3239:18: .
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3468:16: ( . )
+            // ../ontology.ui/src-gen/eu/securechange/ontology/ui/contentassist/antlr/internal/InternalOntology.g:3468:18: .
             {
             matchAny(); 
 
@@ -1315,7 +1315,7 @@ public class InternalOntologyLexer extends Lexer {
                                             alt14=33;
                                         }
                                         else {
-                                            alt14=18;}
+                                            alt14=14;}
                                     }
                                     else {
                                         alt14=33;}
@@ -1340,92 +1340,28 @@ public class InternalOntologyLexer extends Lexer {
                 alt14=33;}
 
         }
-        else if ( (LA14_0=='d') ) {
-            switch ( input.LA(2) ) {
-            case 'o':
-                {
+        else if ( (LA14_0=='f') ) {
+            int LA14_2 = input.LA(2);
+
+            if ( (LA14_2=='u') ) {
                 int LA14_33 = input.LA(3);
 
-                if ( (LA14_33=='m') ) {
+                if ( (LA14_33=='l') ) {
                     int LA14_66 = input.LA(4);
 
-                    if ( (LA14_66=='.'||(LA14_66>='0' && LA14_66<='9')||(LA14_66>='A' && LA14_66<='Z')||LA14_66=='_'||(LA14_66>='a' && LA14_66<='z')) ) {
-                        alt14=33;
-                    }
-                    else {
-                        alt14=29;}
-                }
-                else {
-                    alt14=33;}
-                }
-                break;
-            case 'e':
-                {
-                switch ( input.LA(3) ) {
-                case 'l':
-                    {
-                    int LA14_67 = input.LA(4);
+                    if ( (LA14_66=='f') ) {
+                        int LA14_87 = input.LA(5);
 
-                    if ( (LA14_67=='e') ) {
-                        int LA14_88 = input.LA(5);
-
-                        if ( (LA14_88=='g') ) {
+                        if ( (LA14_87=='i') ) {
                             int LA14_109 = input.LA(6);
 
-                            if ( (LA14_109=='a') ) {
+                            if ( (LA14_109=='l') ) {
                                 int LA14_127 = input.LA(7);
 
-                                if ( (LA14_127=='t') ) {
+                                if ( (LA14_127=='s') ) {
                                     int LA14_144 = input.LA(8);
 
-                                    if ( (LA14_144=='e') ) {
-                                        int LA14_158 = input.LA(9);
-
-                                        if ( (LA14_158=='s') ) {
-                                            int LA14_168 = input.LA(10);
-
-                                            if ( (LA14_168=='.'||(LA14_168>='0' && LA14_168<='9')||(LA14_168>='A' && LA14_168<='Z')||LA14_168=='_'||(LA14_168>='a' && LA14_168<='z')) ) {
-                                                alt14=33;
-                                            }
-                                            else {
-                                                alt14=9;}
-                                        }
-                                        else {
-                                            alt14=33;}
-                                    }
-                                    else {
-                                        alt14=33;}
-                                }
-                                else {
-                                    alt14=33;}
-                            }
-                            else {
-                                alt14=33;}
-                        }
-                        else {
-                            alt14=33;}
-                    }
-                    else {
-                        alt14=33;}
-                    }
-                    break;
-                case 'p':
-                    {
-                    int LA14_68 = input.LA(4);
-
-                    if ( (LA14_68=='e') ) {
-                        int LA14_89 = input.LA(5);
-
-                        if ( (LA14_89=='n') ) {
-                            int LA14_110 = input.LA(6);
-
-                            if ( (LA14_110=='d') ) {
-                                int LA14_128 = input.LA(7);
-
-                                if ( (LA14_128=='s') ) {
-                                    int LA14_145 = input.LA(8);
-
-                                    if ( (LA14_145=='.'||(LA14_145>='0' && LA14_145<='9')||(LA14_145>='A' && LA14_145<='Z')||LA14_145=='_'||(LA14_145>='a' && LA14_145<='z')) ) {
+                                    if ( (LA14_144=='.'||(LA14_144>='0' && LA14_144<='9')||(LA14_144>='A' && LA14_144<='Z')||LA14_144=='_'||(LA14_144>='a' && LA14_144<='z')) ) {
                                         alt14=33;
                                     }
                                     else {
@@ -1442,68 +1378,23 @@ public class InternalOntologyLexer extends Lexer {
                     }
                     else {
                         alt14=33;}
-                    }
-                    break;
-                default:
-                    alt14=33;}
-
-                }
-                break;
-            case 'a':
-                {
-                int LA14_35 = input.LA(3);
-
-                if ( (LA14_35=='m') ) {
-                    int LA14_69 = input.LA(4);
-
-                    if ( (LA14_69=='a') ) {
-                        int LA14_90 = input.LA(5);
-
-                        if ( (LA14_90=='g') ) {
-                            int LA14_111 = input.LA(6);
-
-                            if ( (LA14_111=='e') ) {
-                                int LA14_129 = input.LA(7);
-
-                                if ( (LA14_129=='s') ) {
-                                    int LA14_146 = input.LA(8);
-
-                                    if ( (LA14_146=='.'||(LA14_146>='0' && LA14_146<='9')||(LA14_146>='A' && LA14_146<='Z')||LA14_146=='_'||(LA14_146>='a' && LA14_146<='z')) ) {
-                                        alt14=33;
-                                    }
-                                    else {
-                                        alt14=14;}
-                                }
-                                else {
-                                    alt14=33;}
-                            }
-                            else {
-                                alt14=33;}
-                        }
-                        else {
-                            alt14=33;}
-                    }
-                    else {
-                        alt14=33;}
                 }
                 else {
                     alt14=33;}
-                }
-                break;
-            default:
+            }
+            else {
                 alt14=33;}
-
         }
         else if ( (LA14_0=='a') ) {
             switch ( input.LA(2) ) {
             case 'n':
                 {
-                int LA14_36 = input.LA(3);
+                int LA14_34 = input.LA(3);
 
-                if ( (LA14_36=='d') ) {
-                    int LA14_70 = input.LA(4);
+                if ( (LA14_34=='d') ) {
+                    int LA14_67 = input.LA(4);
 
-                    if ( (LA14_70==' ') ) {
+                    if ( (LA14_67==' ') ) {
                         alt14=3;
                     }
                     else {
@@ -1515,21 +1406,21 @@ public class InternalOntologyLexer extends Lexer {
                 break;
             case 'c':
                 {
-                int LA14_37 = input.LA(3);
+                int LA14_35 = input.LA(3);
 
-                if ( (LA14_37=='t') ) {
+                if ( (LA14_35=='t') ) {
                     switch ( input.LA(4) ) {
                     case 'i':
                         {
-                        int LA14_92 = input.LA(5);
+                        int LA14_89 = input.LA(5);
 
-                        if ( (LA14_92=='o') ) {
-                            int LA14_112 = input.LA(6);
+                        if ( (LA14_89=='o') ) {
+                            int LA14_110 = input.LA(6);
 
-                            if ( (LA14_112=='n') ) {
-                                int LA14_130 = input.LA(7);
+                            if ( (LA14_110=='n') ) {
+                                int LA14_128 = input.LA(7);
 
-                                if ( (LA14_130=='.'||(LA14_130>='0' && LA14_130<='9')||(LA14_130>='A' && LA14_130<='Z')||LA14_130=='_'||(LA14_130>='a' && LA14_130<='z')) ) {
+                                if ( (LA14_128=='.'||(LA14_128>='0' && LA14_128<='9')||(LA14_128>='A' && LA14_128<='Z')||LA14_128=='_'||(LA14_128>='a' && LA14_128<='z')) ) {
                                     alt14=33;
                                 }
                                 else {
@@ -1544,12 +1435,12 @@ public class InternalOntologyLexer extends Lexer {
                         break;
                     case 'o':
                         {
-                        int LA14_93 = input.LA(5);
+                        int LA14_90 = input.LA(5);
 
-                        if ( (LA14_93=='r') ) {
-                            int LA14_113 = input.LA(6);
+                        if ( (LA14_90=='r') ) {
+                            int LA14_111 = input.LA(6);
 
-                            if ( (LA14_113=='.'||(LA14_113>='0' && LA14_113<='9')||(LA14_113>='A' && LA14_113<='Z')||LA14_113=='_'||(LA14_113>='a' && LA14_113<='z')) ) {
+                            if ( (LA14_111=='.'||(LA14_111>='0' && LA14_111<='9')||(LA14_111>='A' && LA14_111<='Z')||LA14_111=='_'||(LA14_111>='a' && LA14_111<='z')) ) {
                                 alt14=33;
                             }
                             else {
@@ -1567,33 +1458,27 @@ public class InternalOntologyLexer extends Lexer {
                     alt14=33;}
                 }
                 break;
-            case 't':
+            case 'r':
                 {
-                int LA14_38 = input.LA(3);
+                int LA14_36 = input.LA(3);
 
-                if ( (LA14_38=='t') ) {
-                    int LA14_72 = input.LA(4);
+                if ( (LA14_36=='g') ) {
+                    int LA14_69 = input.LA(4);
 
-                    if ( (LA14_72=='a') ) {
-                        int LA14_94 = input.LA(5);
+                    if ( (LA14_69=='u') ) {
+                        int LA14_91 = input.LA(5);
 
-                        if ( (LA14_94=='c') ) {
-                            int LA14_114 = input.LA(6);
+                        if ( (LA14_91=='e') ) {
+                            int LA14_112 = input.LA(6);
 
-                            if ( (LA14_114=='k') ) {
-                                int LA14_132 = input.LA(7);
+                            if ( (LA14_112=='s') ) {
+                                int LA14_130 = input.LA(7);
 
-                                if ( (LA14_132=='s') ) {
-                                    int LA14_148 = input.LA(8);
-
-                                    if ( (LA14_148=='.'||(LA14_148>='0' && LA14_148<='9')||(LA14_148>='A' && LA14_148<='Z')||LA14_148=='_'||(LA14_148>='a' && LA14_148<='z')) ) {
-                                        alt14=33;
-                                    }
-                                    else {
-                                        alt14=15;}
+                                if ( (LA14_130=='.'||(LA14_130>='0' && LA14_130<='9')||(LA14_130>='A' && LA14_130<='Z')||LA14_130=='_'||(LA14_130>='a' && LA14_130<='z')) ) {
+                                    alt14=33;
                                 }
                                 else {
-                                    alt14=33;}
+                                    alt14=19;}
                             }
                             else {
                                 alt14=33;}
@@ -1608,27 +1493,33 @@ public class InternalOntologyLexer extends Lexer {
                     alt14=33;}
                 }
                 break;
-            case 'r':
+            case 't':
                 {
-                int LA14_39 = input.LA(3);
+                int LA14_37 = input.LA(3);
 
-                if ( (LA14_39=='g') ) {
-                    int LA14_73 = input.LA(4);
+                if ( (LA14_37=='t') ) {
+                    int LA14_70 = input.LA(4);
 
-                    if ( (LA14_73=='u') ) {
-                        int LA14_95 = input.LA(5);
+                    if ( (LA14_70=='a') ) {
+                        int LA14_92 = input.LA(5);
 
-                        if ( (LA14_95=='e') ) {
-                            int LA14_115 = input.LA(6);
+                        if ( (LA14_92=='c') ) {
+                            int LA14_113 = input.LA(6);
 
-                            if ( (LA14_115=='s') ) {
-                                int LA14_133 = input.LA(7);
+                            if ( (LA14_113=='k') ) {
+                                int LA14_131 = input.LA(7);
 
-                                if ( (LA14_133=='.'||(LA14_133>='0' && LA14_133<='9')||(LA14_133>='A' && LA14_133<='Z')||LA14_133=='_'||(LA14_133>='a' && LA14_133<='z')) ) {
-                                    alt14=33;
+                                if ( (LA14_131=='s') ) {
+                                    int LA14_147 = input.LA(8);
+
+                                    if ( (LA14_147=='.'||(LA14_147>='0' && LA14_147<='9')||(LA14_147>='A' && LA14_147<='Z')||LA14_147=='_'||(LA14_147>='a' && LA14_147<='z')) ) {
+                                        alt14=33;
+                                    }
+                                    else {
+                                        alt14=17;}
                                 }
                                 else {
-                                    alt14=16;}
+                                    alt14=33;}
                             }
                             else {
                                 alt14=33;}
@@ -1651,9 +1542,9 @@ public class InternalOntologyLexer extends Lexer {
             int LA14_4 = input.LA(2);
 
             if ( (LA14_4=='r') ) {
-                int LA14_40 = input.LA(3);
+                int LA14_38 = input.LA(3);
 
-                if ( (LA14_40==' ') ) {
+                if ( (LA14_38==' ') ) {
                     alt14=4;
                 }
                 else {
@@ -1680,28 +1571,78 @@ public class InternalOntologyLexer extends Lexer {
             else {
                 alt14=6;}
         }
-        else if ( (LA14_0=='f') ) {
+        else if ( (LA14_0=='w') ) {
             int LA14_7 = input.LA(2);
 
-            if ( (LA14_7=='u') ) {
-                int LA14_45 = input.LA(3);
+            if ( (LA14_7=='a') ) {
+                int LA14_43 = input.LA(3);
 
-                if ( (LA14_45=='l') ) {
-                    int LA14_75 = input.LA(4);
+                if ( (LA14_43=='n') ) {
+                    int LA14_72 = input.LA(4);
 
-                    if ( (LA14_75=='f') ) {
-                        int LA14_96 = input.LA(5);
+                    if ( (LA14_72=='t') ) {
+                        int LA14_93 = input.LA(5);
 
-                        if ( (LA14_96=='i') ) {
-                            int LA14_116 = input.LA(6);
+                        if ( (LA14_93=='s') ) {
+                            int LA14_114 = input.LA(6);
 
-                            if ( (LA14_116=='l') ) {
-                                int LA14_134 = input.LA(7);
+                            if ( (LA14_114=='.'||(LA14_114>='0' && LA14_114<='9')||(LA14_114>='A' && LA14_114<='Z')||LA14_114=='_'||(LA14_114>='a' && LA14_114<='z')) ) {
+                                alt14=33;
+                            }
+                            else {
+                                alt14=9;}
+                        }
+                        else {
+                            alt14=33;}
+                    }
+                    else {
+                        alt14=33;}
+                }
+                else {
+                    alt14=33;}
+            }
+            else {
+                alt14=33;}
+        }
+        else if ( (LA14_0=='d') ) {
+            switch ( input.LA(2) ) {
+            case 'o':
+                {
+                int LA14_44 = input.LA(3);
 
-                                if ( (LA14_134=='s') ) {
-                                    int LA14_150 = input.LA(8);
+                if ( (LA14_44=='m') ) {
+                    int LA14_73 = input.LA(4);
 
-                                    if ( (LA14_150=='.'||(LA14_150>='0' && LA14_150<='9')||(LA14_150>='A' && LA14_150<='Z')||LA14_150=='_'||(LA14_150>='a' && LA14_150<='z')) ) {
+                    if ( (LA14_73=='.'||(LA14_73>='0' && LA14_73<='9')||(LA14_73>='A' && LA14_73<='Z')||LA14_73=='_'||(LA14_73>='a' && LA14_73<='z')) ) {
+                        alt14=33;
+                    }
+                    else {
+                        alt14=29;}
+                }
+                else {
+                    alt14=33;}
+                }
+                break;
+            case 'e':
+                {
+                switch ( input.LA(3) ) {
+                case 'p':
+                    {
+                    int LA14_74 = input.LA(4);
+
+                    if ( (LA14_74=='e') ) {
+                        int LA14_95 = input.LA(5);
+
+                        if ( (LA14_95=='n') ) {
+                            int LA14_115 = input.LA(6);
+
+                            if ( (LA14_115=='d') ) {
+                                int LA14_133 = input.LA(7);
+
+                                if ( (LA14_133=='s') ) {
+                                    int LA14_148 = input.LA(8);
+
+                                    if ( (LA14_148=='.'||(LA14_148>='0' && LA14_148<='9')||(LA14_148>='A' && LA14_148<='Z')||LA14_148=='_'||(LA14_148>='a' && LA14_148<='z')) ) {
                                         alt14=33;
                                     }
                                     else {
@@ -1718,45 +1659,84 @@ public class InternalOntologyLexer extends Lexer {
                     }
                     else {
                         alt14=33;}
-                }
-                else {
-                    alt14=33;}
-            }
-            else {
-                alt14=33;}
-        }
-        else if ( (LA14_0=='p') ) {
-            int LA14_8 = input.LA(2);
+                    }
+                    break;
+                case 'l':
+                    {
+                    int LA14_75 = input.LA(4);
 
-            if ( (LA14_8=='r') ) {
+                    if ( (LA14_75=='e') ) {
+                        int LA14_96 = input.LA(5);
+
+                        if ( (LA14_96=='g') ) {
+                            int LA14_116 = input.LA(6);
+
+                            if ( (LA14_116=='a') ) {
+                                int LA14_134 = input.LA(7);
+
+                                if ( (LA14_134=='t') ) {
+                                    int LA14_149 = input.LA(8);
+
+                                    if ( (LA14_149=='e') ) {
+                                        int LA14_161 = input.LA(9);
+
+                                        if ( (LA14_161=='s') ) {
+                                            int LA14_168 = input.LA(10);
+
+                                            if ( (LA14_168=='.'||(LA14_168>='0' && LA14_168<='9')||(LA14_168>='A' && LA14_168<='Z')||LA14_168=='_'||(LA14_168>='a' && LA14_168<='z')) ) {
+                                                alt14=33;
+                                            }
+                                            else {
+                                                alt14=11;}
+                                        }
+                                        else {
+                                            alt14=33;}
+                                    }
+                                    else {
+                                        alt14=33;}
+                                }
+                                else {
+                                    alt14=33;}
+                            }
+                            else {
+                                alt14=33;}
+                        }
+                        else {
+                            alt14=33;}
+                    }
+                    else {
+                        alt14=33;}
+                    }
+                    break;
+                default:
+                    alt14=33;}
+
+                }
+                break;
+            case 'a':
+                {
                 int LA14_46 = input.LA(3);
 
-                if ( (LA14_46=='o') ) {
-                    switch ( input.LA(4) ) {
-                    case 't':
-                        {
+                if ( (LA14_46=='m') ) {
+                    int LA14_76 = input.LA(4);
+
+                    if ( (LA14_76=='a') ) {
                         int LA14_97 = input.LA(5);
 
-                        if ( (LA14_97=='e') ) {
+                        if ( (LA14_97=='g') ) {
                             int LA14_117 = input.LA(6);
 
-                            if ( (LA14_117=='c') ) {
+                            if ( (LA14_117=='e') ) {
                                 int LA14_135 = input.LA(7);
 
-                                if ( (LA14_135=='t') ) {
-                                    int LA14_151 = input.LA(8);
+                                if ( (LA14_135=='s') ) {
+                                    int LA14_150 = input.LA(8);
 
-                                    if ( (LA14_151=='s') ) {
-                                        int LA14_163 = input.LA(9);
-
-                                        if ( (LA14_163=='.'||(LA14_163>='0' && LA14_163<='9')||(LA14_163>='A' && LA14_163<='Z')||LA14_163=='_'||(LA14_163>='a' && LA14_163<='z')) ) {
-                                            alt14=33;
-                                        }
-                                        else {
-                                            alt14=19;}
+                                    if ( (LA14_150=='.'||(LA14_150>='0' && LA14_150<='9')||(LA14_150>='A' && LA14_150<='Z')||LA14_150=='_'||(LA14_150>='a' && LA14_150<='z')) ) {
+                                        alt14=33;
                                     }
                                     else {
-                                        alt14=33;}
+                                        alt14=16;}
                                 }
                                 else {
                                     alt14=33;}
@@ -1766,52 +1746,17 @@ public class InternalOntologyLexer extends Lexer {
                         }
                         else {
                             alt14=33;}
-                        }
-                        break;
-                    case 'v':
-                        {
-                        int LA14_98 = input.LA(5);
-
-                        if ( (LA14_98=='i') ) {
-                            int LA14_118 = input.LA(6);
-
-                            if ( (LA14_118=='d') ) {
-                                int LA14_136 = input.LA(7);
-
-                                if ( (LA14_136=='e') ) {
-                                    int LA14_152 = input.LA(8);
-
-                                    if ( (LA14_152=='s') ) {
-                                        int LA14_164 = input.LA(9);
-
-                                        if ( (LA14_164=='.'||(LA14_164>='0' && LA14_164<='9')||(LA14_164>='A' && LA14_164<='Z')||LA14_164=='_'||(LA14_164>='a' && LA14_164<='z')) ) {
-                                            alt14=33;
-                                        }
-                                        else {
-                                            alt14=11;}
-                                    }
-                                    else {
-                                        alt14=33;}
-                                }
-                                else {
-                                    alt14=33;}
-                            }
-                            else {
-                                alt14=33;}
-                        }
-                        else {
-                            alt14=33;}
-                        }
-                        break;
-                    default:
+                    }
+                    else {
                         alt14=33;}
-
                 }
                 else {
                     alt14=33;}
-            }
-            else {
+                }
+                break;
+            default:
                 alt14=33;}
+
         }
         else if ( (LA14_0=='t') ) {
             int LA14_9 = input.LA(2);
@@ -1823,15 +1768,15 @@ public class InternalOntologyLexer extends Lexer {
                     int LA14_77 = input.LA(4);
 
                     if ( (LA14_77=='s') ) {
-                        int LA14_99 = input.LA(5);
+                        int LA14_98 = input.LA(5);
 
-                        if ( (LA14_99=='t') ) {
-                            int LA14_119 = input.LA(6);
+                        if ( (LA14_98=='t') ) {
+                            int LA14_118 = input.LA(6);
 
-                            if ( (LA14_119=='s') ) {
-                                int LA14_137 = input.LA(7);
+                            if ( (LA14_118=='s') ) {
+                                int LA14_136 = input.LA(7);
 
-                                if ( (LA14_137=='.'||(LA14_137>='0' && LA14_137<='9')||(LA14_137>='A' && LA14_137<='Z')||LA14_137=='_'||(LA14_137>='a' && LA14_137<='z')) ) {
+                                if ( (LA14_136=='.'||(LA14_136>='0' && LA14_136<='9')||(LA14_136>='A' && LA14_136<='Z')||LA14_136=='_'||(LA14_136>='a' && LA14_136<='z')) ) {
                                     alt14=33;
                                 }
                                 else {
@@ -1852,32 +1797,87 @@ public class InternalOntologyLexer extends Lexer {
             else {
                 alt14=33;}
         }
-        else if ( (LA14_0=='w') ) {
+        else if ( (LA14_0=='p') ) {
             int LA14_10 = input.LA(2);
 
-            if ( (LA14_10=='a') ) {
+            if ( (LA14_10=='r') ) {
                 int LA14_48 = input.LA(3);
 
-                if ( (LA14_48=='n') ) {
-                    int LA14_78 = input.LA(4);
+                if ( (LA14_48=='o') ) {
+                    switch ( input.LA(4) ) {
+                    case 't':
+                        {
+                        int LA14_99 = input.LA(5);
 
-                    if ( (LA14_78=='t') ) {
-                        int LA14_100 = input.LA(5);
+                        if ( (LA14_99=='e') ) {
+                            int LA14_119 = input.LA(6);
 
-                        if ( (LA14_100=='s') ) {
-                            int LA14_120 = input.LA(6);
+                            if ( (LA14_119=='c') ) {
+                                int LA14_137 = input.LA(7);
 
-                            if ( (LA14_120=='.'||(LA14_120>='0' && LA14_120<='9')||(LA14_120>='A' && LA14_120<='Z')||LA14_120=='_'||(LA14_120>='a' && LA14_120<='z')) ) {
-                                alt14=33;
+                                if ( (LA14_137=='t') ) {
+                                    int LA14_152 = input.LA(8);
+
+                                    if ( (LA14_152=='s') ) {
+                                        int LA14_163 = input.LA(9);
+
+                                        if ( (LA14_163=='.'||(LA14_163>='0' && LA14_163<='9')||(LA14_163>='A' && LA14_163<='Z')||LA14_163=='_'||(LA14_163>='a' && LA14_163<='z')) ) {
+                                            alt14=33;
+                                        }
+                                        else {
+                                            alt14=18;}
+                                    }
+                                    else {
+                                        alt14=33;}
+                                }
+                                else {
+                                    alt14=33;}
                             }
                             else {
-                                alt14=13;}
+                                alt14=33;}
                         }
                         else {
                             alt14=33;}
-                    }
-                    else {
+                        }
+                        break;
+                    case 'v':
+                        {
+                        int LA14_100 = input.LA(5);
+
+                        if ( (LA14_100=='i') ) {
+                            int LA14_120 = input.LA(6);
+
+                            if ( (LA14_120=='d') ) {
+                                int LA14_138 = input.LA(7);
+
+                                if ( (LA14_138=='e') ) {
+                                    int LA14_153 = input.LA(8);
+
+                                    if ( (LA14_153=='s') ) {
+                                        int LA14_164 = input.LA(9);
+
+                                        if ( (LA14_164=='.'||(LA14_164>='0' && LA14_164<='9')||(LA14_164>='A' && LA14_164<='Z')||LA14_164=='_'||(LA14_164>='a' && LA14_164<='z')) ) {
+                                            alt14=33;
+                                        }
+                                        else {
+                                            alt14=13;}
+                                    }
+                                    else {
+                                        alt14=33;}
+                                }
+                                else {
+                                    alt14=33;}
+                            }
+                            else {
+                                alt14=33;}
+                        }
+                        else {
+                            alt14=33;}
+                        }
+                        break;
+                    default:
                         alt14=33;}
+
                 }
                 else {
                     alt14=33;}
@@ -1919,7 +1919,7 @@ public class InternalOntologyLexer extends Lexer {
                                                     alt14=33;
                                                 }
                                                 else {
-                                                    alt14=17;}
+                                                    alt14=15;}
                                             }
                                             else {
                                                 alt14=33;}

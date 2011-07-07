@@ -852,11 +852,15 @@ ruleAsset returns [EObject current=null]
     {
         createLeafNode(grammarAccess.getAssetAccess().getDollarSignKeyword_1(), null); 
     }
+(	'(' 
+    {
+        createLeafNode(grammarAccess.getAssetAccess().getLeftParenthesisKeyword_2_0(), null); 
+    }
 (
 (
-		lv_value_2_0=RULE_STRING
+		lv_value_3_0=RULE_STRING
 		{
-			createLeafNode(grammarAccess.getAssetAccess().getValueSTRINGTerminalRuleCall_2_0(), "value"); 
+			createLeafNode(grammarAccess.getAssetAccess().getValueSTRINGTerminalRuleCall_2_1_0(), "value"); 
 		}
 		{
 	        if ($current==null) {
@@ -867,7 +871,7 @@ ruleAsset returns [EObject current=null]
 	       		set(
 	       			$current, 
 	       			"value",
-	        		lv_value_2_0, 
+	        		lv_value_3_0, 
 	        		"STRING", 
 	        		lastConsumedNode);
 	        } catch (ValueConverterException vce) {
@@ -876,6 +880,10 @@ ruleAsset returns [EObject current=null]
 	    }
 
 )
+)	')' 
+    {
+        createLeafNode(grammarAccess.getAssetAccess().getRightParenthesisKeyword_2_2(), null); 
+    }
 )?)
 ;
 
@@ -1334,11 +1342,7 @@ ruleRelationship returns [EObject current=null]
     {
         createLeafNode(grammarAccess.getRelationshipAccess().getLeftParenthesisKeyword_1(), null); 
     }
-((	',' 
-    {
-        createLeafNode(grammarAccess.getRelationshipAccess().getCommaKeyword_2_0(), null); 
-    }
-)?(
+(
 (
 		{
 			if ($current==null) {
@@ -1348,24 +1352,60 @@ ruleRelationship returns [EObject current=null]
         }
 	RULE_ID
 	{
-		createLeafNode(grammarAccess.getRelationshipAccess().getEntitiesEntityCrossReference_2_1_0(), "entities"); 
+		createLeafNode(grammarAccess.getRelationshipAccess().getSourceEntityCrossReference_2_0(), "source"); 
 	}
 
 )
-))*	')' 
+)	',' 
     {
-        createLeafNode(grammarAccess.getRelationshipAccess().getRightParenthesisKeyword_3(), null); 
+        createLeafNode(grammarAccess.getRelationshipAccess().getCommaKeyword_3(), null); 
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = factory.create(grammarAccess.getRelationshipRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode, $current);
+	        }
+        }
+	RULE_ID
+	{
+		createLeafNode(grammarAccess.getRelationshipAccess().getTargetEntityCrossReference_4_0(), "target"); 
+	}
+
+)
+)(	',' 
+    {
+        createLeafNode(grammarAccess.getRelationshipAccess().getCommaKeyword_5_0(), null); 
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = factory.create(grammarAccess.getRelationshipRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode, $current);
+	        }
+        }
+	RULE_ID
+	{
+		createLeafNode(grammarAccess.getRelationshipAccess().getDependumEntityCrossReference_5_1_0(), "dependum"); 
+	}
+
+)
+))?	')' 
+    {
+        createLeafNode(grammarAccess.getRelationshipAccess().getRightParenthesisKeyword_6(), null); 
     }
 ((	',' 
     {
-        createLeafNode(grammarAccess.getRelationshipAccess().getCommaKeyword_4_0(), null); 
+        createLeafNode(grammarAccess.getRelationshipAccess().getCommaKeyword_7_0(), null); 
     }
 )?(
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getRelationshipAccess().getPropertiesPropositionParserRuleCall_4_1_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getRelationshipAccess().getPropertiesPropositionParserRuleCall_7_1_0(), currentNode); 
 	    }
-		lv_properties_6_0=ruleProposition		{
+		lv_properties_9_0=ruleProposition		{
 	        if ($current==null) {
 	            $current = factory.create(grammarAccess.getRelationshipRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode.getParent(), $current);
@@ -1374,7 +1414,7 @@ ruleRelationship returns [EObject current=null]
 	       		add(
 	       			$current, 
 	       			"properties",
-	        		lv_properties_6_0, 
+	        		lv_properties_9_0, 
 	        		"Proposition", 
 	        		currentNode);
 	        } catch (ValueConverterException vce) {
@@ -1403,10 +1443,10 @@ ruleRelType returns [Enumerator current=null]
         createLeafNode(grammarAccess.getRelTypeAccess().getCARRIESOUTEnumLiteralDeclaration_0(), null); 
     }
 )
-    |(	'depends' 
+    |(	'fulfils' 
 	{
-        $current = grammarAccess.getRelTypeAccess().getDEPENDSEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-        createLeafNode(grammarAccess.getRelTypeAccess().getDEPENDSEnumLiteralDeclaration_1(), null); 
+        $current = grammarAccess.getRelTypeAccess().getFULFILSEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+        createLeafNode(grammarAccess.getRelTypeAccess().getFULFILSEnumLiteralDeclaration_1(), null); 
     }
 )
     |(	'and decomposes' 
@@ -1445,22 +1485,22 @@ ruleRelType returns [Enumerator current=null]
         createLeafNode(grammarAccess.getRelTypeAccess().getMAKESEnumLiteralDeclaration_7(), null); 
     }
 )
+    |(	'wants' 
+	{
+        $current = grammarAccess.getRelTypeAccess().getWANTSEnumLiteralDeclaration_8().getEnumLiteral().getInstance();
+        createLeafNode(grammarAccess.getRelTypeAccess().getWANTSEnumLiteralDeclaration_8(), null); 
+    }
+)
+    |(	'depends' 
+	{
+        $current = grammarAccess.getRelTypeAccess().getDEPENDSEnumLiteralDeclaration_9().getEnumLiteral().getInstance();
+        createLeafNode(grammarAccess.getRelTypeAccess().getDEPENDSEnumLiteralDeclaration_9(), null); 
+    }
+)
     |(	'delegates' 
 	{
-        $current = grammarAccess.getRelTypeAccess().getDELEGATESEnumLiteralDeclaration_8().getEnumLiteral().getInstance();
-        createLeafNode(grammarAccess.getRelTypeAccess().getDELEGATESEnumLiteralDeclaration_8(), null); 
-    }
-)
-    |(	'fulfils' 
-	{
-        $current = grammarAccess.getRelTypeAccess().getFULFILSEnumLiteralDeclaration_9().getEnumLiteral().getInstance();
-        createLeafNode(grammarAccess.getRelTypeAccess().getFULFILSEnumLiteralDeclaration_9(), null); 
-    }
-)
-    |(	'provides' 
-	{
-        $current = grammarAccess.getRelTypeAccess().getPROVIDESEnumLiteralDeclaration_10().getEnumLiteral().getInstance();
-        createLeafNode(grammarAccess.getRelTypeAccess().getPROVIDESEnumLiteralDeclaration_10(), null); 
+        $current = grammarAccess.getRelTypeAccess().getDELEGATESEnumLiteralDeclaration_10().getEnumLiteral().getInstance();
+        createLeafNode(grammarAccess.getRelTypeAccess().getDELEGATESEnumLiteralDeclaration_10(), null); 
     }
 )
     |(	'trusts' 
@@ -1469,46 +1509,46 @@ ruleRelType returns [Enumerator current=null]
         createLeafNode(grammarAccess.getRelTypeAccess().getTRUSTSEnumLiteralDeclaration_11(), null); 
     }
 )
-    |(	'wants' 
+    |(	'provides' 
 	{
-        $current = grammarAccess.getRelTypeAccess().getWANTSEnumLiteralDeclaration_12().getEnumLiteral().getInstance();
-        createLeafNode(grammarAccess.getRelTypeAccess().getWANTSEnumLiteralDeclaration_12(), null); 
-    }
-)
-    |(	'damages' 
-	{
-        $current = grammarAccess.getRelTypeAccess().getDAMAGESEnumLiteralDeclaration_13().getEnumLiteral().getInstance();
-        createLeafNode(grammarAccess.getRelTypeAccess().getDAMAGESEnumLiteralDeclaration_13(), null); 
-    }
-)
-    |(	'attacks' 
-	{
-        $current = grammarAccess.getRelTypeAccess().getATTACKSEnumLiteralDeclaration_14().getEnumLiteral().getInstance();
-        createLeafNode(grammarAccess.getRelTypeAccess().getATTACKSEnumLiteralDeclaration_14(), null); 
-    }
-)
-    |(	'argues' 
-	{
-        $current = grammarAccess.getRelTypeAccess().getARGUESEnumLiteralDeclaration_15().getEnumLiteral().getInstance();
-        createLeafNode(grammarAccess.getRelTypeAccess().getARGUESEnumLiteralDeclaration_15(), null); 
-    }
-)
-    |(	'interfaces' 
-	{
-        $current = grammarAccess.getRelTypeAccess().getINTERFACESEnumLiteralDeclaration_16().getEnumLiteral().getInstance();
-        createLeafNode(grammarAccess.getRelTypeAccess().getINTERFACESEnumLiteralDeclaration_16(), null); 
+        $current = grammarAccess.getRelTypeAccess().getPROVIDESEnumLiteralDeclaration_12().getEnumLiteral().getInstance();
+        createLeafNode(grammarAccess.getRelTypeAccess().getPROVIDESEnumLiteralDeclaration_12(), null); 
     }
 )
     |(	'consumes' 
 	{
-        $current = grammarAccess.getRelTypeAccess().getCONSUMEsEnumLiteralDeclaration_17().getEnumLiteral().getInstance();
-        createLeafNode(grammarAccess.getRelTypeAccess().getCONSUMEsEnumLiteralDeclaration_17(), null); 
+        $current = grammarAccess.getRelTypeAccess().getCONSUMESEnumLiteralDeclaration_13().getEnumLiteral().getInstance();
+        createLeafNode(grammarAccess.getRelTypeAccess().getCONSUMESEnumLiteralDeclaration_13(), null); 
+    }
+)
+    |(	'interfaces' 
+	{
+        $current = grammarAccess.getRelTypeAccess().getINTERFACESEnumLiteralDeclaration_14().getEnumLiteral().getInstance();
+        createLeafNode(grammarAccess.getRelTypeAccess().getINTERFACESEnumLiteralDeclaration_14(), null); 
+    }
+)
+    |(	'damages' 
+	{
+        $current = grammarAccess.getRelTypeAccess().getDAMAGESEnumLiteralDeclaration_15().getEnumLiteral().getInstance();
+        createLeafNode(grammarAccess.getRelTypeAccess().getDAMAGESEnumLiteralDeclaration_15(), null); 
+    }
+)
+    |(	'attacks' 
+	{
+        $current = grammarAccess.getRelTypeAccess().getATTACKSEnumLiteralDeclaration_16().getEnumLiteral().getInstance();
+        createLeafNode(grammarAccess.getRelTypeAccess().getATTACKSEnumLiteralDeclaration_16(), null); 
     }
 )
     |(	'protects' 
 	{
-        $current = grammarAccess.getRelTypeAccess().getPROTECTSEnumLiteralDeclaration_18().getEnumLiteral().getInstance();
-        createLeafNode(grammarAccess.getRelTypeAccess().getPROTECTSEnumLiteralDeclaration_18(), null); 
+        $current = grammarAccess.getRelTypeAccess().getPROTECTSEnumLiteralDeclaration_17().getEnumLiteral().getInstance();
+        createLeafNode(grammarAccess.getRelTypeAccess().getPROTECTSEnumLiteralDeclaration_17(), null); 
+    }
+)
+    |(	'argues' 
+	{
+        $current = grammarAccess.getRelTypeAccess().getARGUESEnumLiteralDeclaration_18().getEnumLiteral().getInstance();
+        createLeafNode(grammarAccess.getRelTypeAccess().getARGUESEnumLiteralDeclaration_18(), null); 
     }
 ));
 

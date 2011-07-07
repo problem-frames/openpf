@@ -10,7 +10,8 @@ Require-Bundle: argument;visibility:=reexport,
  problem;bundle-version="1.0.0",
  core;bundle-version="1.0.0",
  argument.diagram;bundle-version="1.0.0",
- event;bundle-version="1.0.0"
+ event;bundle-version="1.0.0",
+ problem.diagram;bundle-version="1.0.0"
 Bundle-Vendor: My Company
 Bundle-ActivationPolicy: lazy
 Bundle-Version: 1.0.0

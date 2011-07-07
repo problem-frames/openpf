@@ -43,6 +43,7 @@ Workflow {
 
 			// generates Java API for the generated EPackages 
 			fragment = ecore.EcoreGeneratorFragment {
+				generateEdit = true
 			// referencedGenModels = "uri to genmodel, uri to next genmodel"
 			}
 

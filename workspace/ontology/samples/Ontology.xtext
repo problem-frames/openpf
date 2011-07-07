@@ -8,17 +8,17 @@ Goal: name=ID type='goal' (asset=Asset)? ((',')? properties+=Proposition)* | Sec
 SecurityGoal: name=ID type='sec' (asset=Asset)? ((',')? properties+=Proposition)*;
 Requirement: name=ID type='req' (asset=Asset)? ((',')? properties+=Proposition)*; 
 Domain: name=ID type='dom' (asset=Asset)? ((',')? properties+=Proposition)* | Actor | Action | Resource; 
-Asset: name=ID '$' (value=STRING)?;
+Asset: name=ID '$' ('(' value=STRING ')')?;
 Actor:	name=ID type='actor' (asset=Asset)? ((',')? properties+=Proposition)*;
 Action:	name=ID type='action' (asset=Asset)? ((',')? properties+=Proposition)*;
 Resource: name=ID type='resource' (asset=Asset)? ((',')? properties+=Proposition)*;
 Proposition: name=STRING;
-Relationship: type=RelType '(' (','? entities+=[Entity])* ')'  ((',')? properties+=Proposition)*;
+Relationship: type=RelType '(' source=[Entity] ',' target=[Entity] (',' dependum=[Entity])? ')' ((',')? properties+=Proposition)*;
 enum RelType: CARRIESOUT='carries out' | FULFILS='fulfils'  // refinement
     | AND_DECOMPOSES='and decomposes' | OR_DECOMPOSES='or decomposes' // decompositions
 	| HELPS='+' | HURTS='-' | BREAKS='--' | MAKES='++' // contributions
     | WANTS='wants' | DEPENDS='depends' | DELEGATES='delegates' | TRUSTS='trusts' // i*
-	| PROVIDES='provides' | CONSUMEs='consumes' | INTERFACES='interfaces' // PF
+	| PROVIDES='provides' | CONSUMES='consumes' | INTERFACES='interfaces' // PF
 	| DAMAGES ='damages' | ATTACKS='attacks' | PROTECTS='protects' // security
 	| ARGUES ='argues'; // argumentation
 	

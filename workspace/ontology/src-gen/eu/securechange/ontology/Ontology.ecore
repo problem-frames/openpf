@@ -38,30 +38,31 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Relationship">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//RelType"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entities" unique="false"
-        upperBound="-1" eType="#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dependum" eType="#//Entity"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
         eType="#//Proposition" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="RelType">
     <eLiterals name="CARRIESOUT" literal="carries out"/>
-    <eLiterals name="DEPENDS" value="1" literal="depends"/>
+    <eLiterals name="FULFILS" value="1" literal="fulfils"/>
     <eLiterals name="AND_DECOMPOSES" value="2" literal="and decomposes"/>
     <eLiterals name="OR_DECOMPOSES" value="3" literal="or decomposes"/>
     <eLiterals name="HELPS" value="4" literal="+"/>
     <eLiterals name="HURTS" value="5" literal="-"/>
     <eLiterals name="BREAKS" value="6" literal="--"/>
     <eLiterals name="MAKES" value="7" literal="++"/>
-    <eLiterals name="DELEGATES" value="8" literal="delegates"/>
-    <eLiterals name="FULFILS" value="9" literal="fulfils"/>
-    <eLiterals name="PROVIDES" value="10" literal="provides"/>
+    <eLiterals name="WANTS" value="8" literal="wants"/>
+    <eLiterals name="DEPENDS" value="9" literal="depends"/>
+    <eLiterals name="DELEGATES" value="10" literal="delegates"/>
     <eLiterals name="TRUSTS" value="11" literal="trusts"/>
-    <eLiterals name="WANTS" value="12" literal="wants"/>
-    <eLiterals name="DAMAGES" value="13" literal="damages"/>
-    <eLiterals name="ATTACKS" value="14" literal="attacks"/>
-    <eLiterals name="ARGUES" value="15" literal="argues"/>
-    <eLiterals name="INTERFACES" value="16" literal="interfaces"/>
-    <eLiterals name="CONSUMEs" value="17" literal="consumes"/>
-    <eLiterals name="PROTECTS" value="18" literal="protects"/>
+    <eLiterals name="PROVIDES" value="12" literal="provides"/>
+    <eLiterals name="CONSUMES" value="13" literal="consumes"/>
+    <eLiterals name="INTERFACES" value="14" literal="interfaces"/>
+    <eLiterals name="DAMAGES" value="15" literal="damages"/>
+    <eLiterals name="ATTACKS" value="16" literal="attacks"/>
+    <eLiterals name="PROTECTS" value="17" literal="protects"/>
+    <eLiterals name="ARGUES" value="18" literal="argues"/>
   </eClassifiers>
 </ecore:EPackage>

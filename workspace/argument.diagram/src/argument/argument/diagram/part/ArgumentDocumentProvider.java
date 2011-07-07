@@ -54,18 +54,21 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.part.FileEditorInput;
 
+import org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide.document.FileEditorInputProxy;
+import org.eclipse.ui.IFileEditorInput;
+
 /**
- * @generated
+ * @generated NOT
  */
 public class ArgumentDocumentProvider extends AbstractDocumentProvider
 		implements IDiagramDocumentProvider {
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
 	protected ElementInfo createElementInfo(Object element)
 			throws CoreException {
-		if (false == element instanceof FileEditorInput
+		if (false == element instanceof IFileEditorInput
 				&& false == element instanceof URIEditorInput) {
 			throw new CoreException(
 					new Status(
@@ -89,10 +92,10 @@ public class ArgumentDocumentProvider extends AbstractDocumentProvider
 	}
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
 	protected IDocument createDocument(Object element) throws CoreException {
-		if (false == element instanceof FileEditorInput
+		if (false == element instanceof IFileEditorInput
 				&& false == element instanceof URIEditorInput) {
 			throw new CoreException(
 					new Status(
@@ -106,19 +109,21 @@ public class ArgumentDocumentProvider extends AbstractDocumentProvider
 											"org.eclipse.ui.part.FileEditorInput", "org.eclipse.emf.common.ui.URIEditorInput" }), //$NON-NLS-1$ //$NON-NLS-2$ 
 							null));
 		}
-		IDocument document = createEmptyDocument();
+		IDocument document = createEmptyDocument(element);
 		setDocumentContent(document, (IEditorInput) element);
 		setupDocument(element, document);
 		return document;
 	}
 
 	/**
-	 * Sets up the given document as it would be provided for the given element. The
-	 * content of the document is not changed. This default implementation is empty.
-	 * Subclasses may reimplement.
+	 * Sets up the given document as it would be provided for the given element.
+	 * The content of the document is not changed. This default implementation
+	 * is empty. Subclasses may reimplement.
 	 * 
-	 * @param element the blue-print element
-	 * @param document the document to set up
+	 * @param element
+	 *            the blue-print element
+	 * @param document
+	 *            the document to set up
 	 * @generated
 	 */
 	protected void setupDocument(Object element, IDocument document) {
@@ -146,11 +151,20 @@ public class ArgumentDocumentProvider extends AbstractDocumentProvider
 	}
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
 	protected IDocument createEmptyDocument() {
+		return createEmptyDocument(null);
+	}
+
+	protected IDocument createEmptyDocument(Object input) {
 		DiagramDocument document = new DiagramDocument();
-		document.setEditingDomain(createEditingDomain());
+		if (input instanceof FileEditorInputProxy) {
+			FileEditorInputProxy proxy = (FileEditorInputProxy) input;
+			document.setEditingDomain(proxy.getEditingDomain());
+		} else {
+			document.setEditingDomain(createEditingDomain());
+		}
 		return document;
 	}
 
@@ -197,14 +211,14 @@ public class ArgumentDocumentProvider extends AbstractDocumentProvider
 	}
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
 	protected void setDocumentContent(IDocument document, IEditorInput element)
 			throws CoreException {
 		IDiagramDocument diagramDocument = (IDiagramDocument) document;
 		TransactionalEditingDomain domain = diagramDocument.getEditingDomain();
-		if (element instanceof FileEditorInput) {
-			IStorage storage = ((FileEditorInput) element).getStorage();
+		if (element instanceof IFileEditorInput) {
+			IStorage storage = ((IFileEditorInput) element).getStorage();
 			Diagram diagram = DiagramIOUtil.load(domain, storage, true,
 					getProgressMonitor());
 			document.setContent(diagram);
@@ -222,8 +236,9 @@ public class ArgumentDocumentProvider extends AbstractDocumentProvider
 					try {
 						Map options = new HashMap(
 								GMFResourceFactory.getDefaultLoadOptions());
-						// @see 171060 
-						// options.put(org.eclipse.emf.ecore.xmi.XMLResource.OPTION_RECORD_UNKNOWN_FEATURE, Boolean.TRUE);
+						// @see 171060
+						// options.put(org.eclipse.emf.ecore.xmi.XMLResource.OPTION_RECORD_UNKNOWN_FEATURE,
+						// Boolean.TRUE);
 						resource.load(options);
 					} catch (IOException e) {
 						resource.unload();
@@ -361,7 +376,8 @@ public class ArgumentDocumentProvider extends AbstractDocumentProvider
 				} catch (CoreException ex) {
 					ArgumentDiagramEditorPlugin.getInstance().logError(
 							Messages.ArgumentDocumentProvider_isModifiable, ex);
-					// Error message to log was initially taken from org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide.internal.l10n.EditorMessages.StorageDocumentProvider_isModifiable
+					// Error message to log was initially taken from
+					// org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide.internal.l10n.EditorMessages.StorageDocumentProvider_isModifiable
 				}
 			}
 			return info.isReadOnly();
@@ -370,11 +386,11 @@ public class ArgumentDocumentProvider extends AbstractDocumentProvider
 	}
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean isModifiable(Object element) {
 		if (!isStateValidated(element)) {
-			if (element instanceof FileEditorInput
+			if (element instanceof IFileEditorInput
 					|| element instanceof URIEditorInput) {
 				return true;
 			}
@@ -387,7 +403,8 @@ public class ArgumentDocumentProvider extends AbstractDocumentProvider
 				} catch (CoreException ex) {
 					ArgumentDiagramEditorPlugin.getInstance().logError(
 							Messages.ArgumentDocumentProvider_isModifiable, ex);
-					// Error message to log was initially taken from org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide.internal.l10n.EditorMessages.StorageDocumentProvider_isModifiable
+					// Error message to log was initially taken from
+					// org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide.internal.l10n.EditorMessages.StorageDocumentProvider_isModifiable
 				}
 			}
 			return info.isModifiable();
@@ -573,7 +590,7 @@ public class ArgumentDocumentProvider extends AbstractDocumentProvider
 	}
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
 	protected void doSaveDocument(IProgressMonitor monitor, Object element,
 			IDocument document, boolean overwrite) throws CoreException {
@@ -593,7 +610,7 @@ public class ArgumentDocumentProvider extends AbstractDocumentProvider
 			try {
 				monitor.beginTask(
 						Messages.ArgumentDocumentProvider_SaveDiagramTask, info
-								.getResourceSet().getResources().size() + 1); //"Saving diagram"
+								.getResourceSet().getResources().size() + 1); // "Saving diagram"
 				for (Iterator<Resource> it = info.getLoadedResourcesIterator(); it
 						.hasNext();) {
 					Resource nextResource = it.next();
@@ -627,8 +644,8 @@ public class ArgumentDocumentProvider extends AbstractDocumentProvider
 		} else {
 			URI newResoruceURI;
 			List<IFile> affectedFiles = null;
-			if (element instanceof FileEditorInput) {
-				IFile newFile = ((FileEditorInput) element).getFile();
+			if (element instanceof IFileEditorInput) {
+				IFile newFile = ((IFileEditorInput) element).getFile();
 				affectedFiles = Collections.singletonList(newFile);
 				newResoruceURI = URI.createPlatformResourceURI(newFile
 						.getFullPath().toString(), true);
@@ -706,7 +723,8 @@ public class ArgumentDocumentProvider extends AbstractDocumentProvider
 						.logError(
 								Messages.ArgumentDocumentProvider_handleElementContentChanged,
 								ex);
-				// Error message to log was initially taken from org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide.internal.l10n.EditorMessages.FileDocumentProvider_handleElementContentChanged
+				// Error message to log was initially taken from
+				// org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide.internal.l10n.EditorMessages.FileDocumentProvider_handleElementContentChanged
 			}
 		}
 		changedResource.unload();
@@ -727,10 +745,10 @@ public class ArgumentDocumentProvider extends AbstractDocumentProvider
 	}
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
 	protected void handleElementMoved(IEditorInput input, URI uri) {
-		if (input instanceof FileEditorInput) {
+		if (input instanceof IFileEditorInput) {
 			IFile newFile = ResourcesPlugin
 					.getWorkspace()
 					.getRoot()
@@ -1090,7 +1108,7 @@ public class ArgumentDocumentProvider extends AbstractDocumentProvider
 					Resource resource = (Resource) notification.getNotifier();
 					if (resource.isLoaded()) {
 						boolean modified = false;
-						for (Iterator/*<org.eclipse.emf.ecore.resource.Resource>*/it = myInfo
+						for (Iterator/* <org.eclipse.emf.ecore.resource.Resource> */it = myInfo
 								.getLoadedResourcesIterator(); it.hasNext()
 								&& !modified;) {
 							Resource nextResource = (Resource) it.next();

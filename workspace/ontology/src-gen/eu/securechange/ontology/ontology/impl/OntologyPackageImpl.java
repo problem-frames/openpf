@@ -454,7 +454,7 @@ public class OntologyPackageImpl extends EPackageImpl implements OntologyPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getRelationship_Entities()
+  public EReference getRelationship_Source()
   {
     return (EReference)relationshipEClass.getEStructuralFeatures().get(1);
   }
@@ -464,9 +464,29 @@ public class OntologyPackageImpl extends EPackageImpl implements OntologyPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getRelationship_Properties()
+  public EReference getRelationship_Target()
   {
     return (EReference)relationshipEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRelationship_Dependum()
+  {
+    return (EReference)relationshipEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRelationship_Properties()
+  {
+    return (EReference)relationshipEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -546,7 +566,9 @@ public class OntologyPackageImpl extends EPackageImpl implements OntologyPackage
 
     relationshipEClass = createEClass(RELATIONSHIP);
     createEAttribute(relationshipEClass, RELATIONSHIP__TYPE);
-    createEReference(relationshipEClass, RELATIONSHIP__ENTITIES);
+    createEReference(relationshipEClass, RELATIONSHIP__SOURCE);
+    createEReference(relationshipEClass, RELATIONSHIP__TARGET);
+    createEReference(relationshipEClass, RELATIONSHIP__DEPENDUM);
     createEReference(relationshipEClass, RELATIONSHIP__PROPERTIES);
 
     // Create enums
@@ -628,30 +650,32 @@ public class OntologyPackageImpl extends EPackageImpl implements OntologyPackage
 
     initEClass(relationshipEClass, Relationship.class, "Relationship", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getRelationship_Type(), this.getRelType(), "type", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getRelationship_Entities(), this.getEntity(), null, "entities", null, 0, -1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRelationship_Source(), this.getEntity(), null, "source", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRelationship_Target(), this.getEntity(), null, "target", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRelationship_Dependum(), this.getEntity(), null, "dependum", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getRelationship_Properties(), this.getProposition(), null, "properties", null, 0, -1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
     initEEnum(relTypeEEnum, RelType.class, "RelType");
     addEEnumLiteral(relTypeEEnum, RelType.CARRIESOUT);
-    addEEnumLiteral(relTypeEEnum, RelType.DEPENDS);
+    addEEnumLiteral(relTypeEEnum, RelType.FULFILS);
     addEEnumLiteral(relTypeEEnum, RelType.AND_DECOMPOSES);
     addEEnumLiteral(relTypeEEnum, RelType.OR_DECOMPOSES);
     addEEnumLiteral(relTypeEEnum, RelType.HELPS);
     addEEnumLiteral(relTypeEEnum, RelType.HURTS);
     addEEnumLiteral(relTypeEEnum, RelType.BREAKS);
     addEEnumLiteral(relTypeEEnum, RelType.MAKES);
-    addEEnumLiteral(relTypeEEnum, RelType.DELEGATES);
-    addEEnumLiteral(relTypeEEnum, RelType.FULFILS);
-    addEEnumLiteral(relTypeEEnum, RelType.PROVIDES);
-    addEEnumLiteral(relTypeEEnum, RelType.TRUSTS);
     addEEnumLiteral(relTypeEEnum, RelType.WANTS);
+    addEEnumLiteral(relTypeEEnum, RelType.DEPENDS);
+    addEEnumLiteral(relTypeEEnum, RelType.DELEGATES);
+    addEEnumLiteral(relTypeEEnum, RelType.TRUSTS);
+    addEEnumLiteral(relTypeEEnum, RelType.PROVIDES);
+    addEEnumLiteral(relTypeEEnum, RelType.CONSUMES);
+    addEEnumLiteral(relTypeEEnum, RelType.INTERFACES);
     addEEnumLiteral(relTypeEEnum, RelType.DAMAGES);
     addEEnumLiteral(relTypeEEnum, RelType.ATTACKS);
-    addEEnumLiteral(relTypeEEnum, RelType.ARGUES);
-    addEEnumLiteral(relTypeEEnum, RelType.INTERFACES);
-    addEEnumLiteral(relTypeEEnum, RelType.CONSUM_ES);
     addEEnumLiteral(relTypeEEnum, RelType.PROTECTS);
+    addEEnumLiteral(relTypeEEnum, RelType.ARGUES);
 
     // Create resource
     createResource(eNS_URI);

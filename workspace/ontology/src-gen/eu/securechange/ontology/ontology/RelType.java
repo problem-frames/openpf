@@ -33,14 +33,14 @@ public enum RelType implements Enumerator
   CARRIESOUT(0, "CARRIESOUT", "carries out"),
 
   /**
-   * The '<em><b>DEPENDS</b></em>' literal object.
+   * The '<em><b>FULFILS</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #DEPENDS_VALUE
+   * @see #FULFILS_VALUE
    * @generated
    * @ordered
    */
-  DEPENDS(1, "DEPENDS", "depends"),
+  FULFILS(1, "FULFILS", "fulfils"),
 
   /**
    * The '<em><b>AND DECOMPOSES</b></em>' literal object.
@@ -103,6 +103,26 @@ public enum RelType implements Enumerator
   MAKES(7, "MAKES", "++"),
 
   /**
+   * The '<em><b>WANTS</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #WANTS_VALUE
+   * @generated
+   * @ordered
+   */
+  WANTS(8, "WANTS", "wants"),
+
+  /**
+   * The '<em><b>DEPENDS</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #DEPENDS_VALUE
+   * @generated
+   * @ordered
+   */
+  DEPENDS(9, "DEPENDS", "depends"),
+
+  /**
    * The '<em><b>DELEGATES</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -110,27 +130,7 @@ public enum RelType implements Enumerator
    * @generated
    * @ordered
    */
-  DELEGATES(8, "DELEGATES", "delegates"),
-
-  /**
-   * The '<em><b>FULFILS</b></em>' literal object.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #FULFILS_VALUE
-   * @generated
-   * @ordered
-   */
-  FULFILS(9, "FULFILS", "fulfils"),
-
-  /**
-   * The '<em><b>PROVIDES</b></em>' literal object.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #PROVIDES_VALUE
-   * @generated
-   * @ordered
-   */
-  PROVIDES(10, "PROVIDES", "provides"),
+  DELEGATES(10, "DELEGATES", "delegates"),
 
   /**
    * The '<em><b>TRUSTS</b></em>' literal object.
@@ -143,44 +143,24 @@ public enum RelType implements Enumerator
   TRUSTS(11, "TRUSTS", "trusts"),
 
   /**
-   * The '<em><b>WANTS</b></em>' literal object.
+   * The '<em><b>PROVIDES</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #WANTS_VALUE
+   * @see #PROVIDES_VALUE
    * @generated
    * @ordered
    */
-  WANTS(12, "WANTS", "wants"),
+  PROVIDES(12, "PROVIDES", "provides"),
 
   /**
-   * The '<em><b>DAMAGES</b></em>' literal object.
+   * The '<em><b>CONSUMES</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #DAMAGES_VALUE
+   * @see #CONSUMES_VALUE
    * @generated
    * @ordered
    */
-  DAMAGES(13, "DAMAGES", "damages"),
-
-  /**
-   * The '<em><b>ATTACKS</b></em>' literal object.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #ATTACKS_VALUE
-   * @generated
-   * @ordered
-   */
-  ATTACKS(14, "ATTACKS", "attacks"),
-
-  /**
-   * The '<em><b>ARGUES</b></em>' literal object.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #ARGUES_VALUE
-   * @generated
-   * @ordered
-   */
-  ARGUES(15, "ARGUES", "argues"),
+  CONSUMES(13, "CONSUMES", "consumes"),
 
   /**
    * The '<em><b>INTERFACES</b></em>' literal object.
@@ -190,17 +170,27 @@ public enum RelType implements Enumerator
    * @generated
    * @ordered
    */
-  INTERFACES(16, "INTERFACES", "interfaces"),
+  INTERFACES(14, "INTERFACES", "interfaces"),
 
   /**
-   * The '<em><b>CONSUM Es</b></em>' literal object.
+   * The '<em><b>DAMAGES</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #CONSUM_ES_VALUE
+   * @see #DAMAGES_VALUE
    * @generated
    * @ordered
    */
-  CONSUM_ES(17, "CONSUMEs", "consumes"),
+  DAMAGES(15, "DAMAGES", "damages"),
+
+  /**
+   * The '<em><b>ATTACKS</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #ATTACKS_VALUE
+   * @generated
+   * @ordered
+   */
+  ATTACKS(16, "ATTACKS", "attacks"),
 
   /**
    * The '<em><b>PROTECTS</b></em>' literal object.
@@ -210,7 +200,17 @@ public enum RelType implements Enumerator
    * @generated
    * @ordered
    */
-  PROTECTS(18, "PROTECTS", "protects");
+  PROTECTS(17, "PROTECTS", "protects"),
+
+  /**
+   * The '<em><b>ARGUES</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #ARGUES_VALUE
+   * @generated
+   * @ordered
+   */
+  ARGUES(18, "ARGUES", "argues");
 
   /**
    * The '<em><b>CARRIESOUT</b></em>' literal value.
@@ -228,19 +228,19 @@ public enum RelType implements Enumerator
   public static final int CARRIESOUT_VALUE = 0;
 
   /**
-   * The '<em><b>DEPENDS</b></em>' literal value.
+   * The '<em><b>FULFILS</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>DEPENDS</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>FULFILS</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #DEPENDS
-   * @model literal="depends"
+   * @see #FULFILS
+   * @model literal="fulfils"
    * @generated
    * @ordered
    */
-  public static final int DEPENDS_VALUE = 1;
+  public static final int FULFILS_VALUE = 1;
 
   /**
    * The '<em><b>AND DECOMPOSES</b></em>' literal value.
@@ -333,6 +333,36 @@ public enum RelType implements Enumerator
   public static final int MAKES_VALUE = 7;
 
   /**
+   * The '<em><b>WANTS</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>WANTS</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #WANTS
+   * @model literal="wants"
+   * @generated
+   * @ordered
+   */
+  public static final int WANTS_VALUE = 8;
+
+  /**
+   * The '<em><b>DEPENDS</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>DEPENDS</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #DEPENDS
+   * @model literal="depends"
+   * @generated
+   * @ordered
+   */
+  public static final int DEPENDS_VALUE = 9;
+
+  /**
    * The '<em><b>DELEGATES</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
@@ -345,37 +375,7 @@ public enum RelType implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int DELEGATES_VALUE = 8;
-
-  /**
-   * The '<em><b>FULFILS</b></em>' literal value.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of '<em><b>FULFILS</b></em>' literal object isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @see #FULFILS
-   * @model literal="fulfils"
-   * @generated
-   * @ordered
-   */
-  public static final int FULFILS_VALUE = 9;
-
-  /**
-   * The '<em><b>PROVIDES</b></em>' literal value.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of '<em><b>PROVIDES</b></em>' literal object isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @see #PROVIDES
-   * @model literal="provides"
-   * @generated
-   * @ordered
-   */
-  public static final int PROVIDES_VALUE = 10;
+  public static final int DELEGATES_VALUE = 10;
 
   /**
    * The '<em><b>TRUSTS</b></em>' literal value.
@@ -393,64 +393,34 @@ public enum RelType implements Enumerator
   public static final int TRUSTS_VALUE = 11;
 
   /**
-   * The '<em><b>WANTS</b></em>' literal value.
+   * The '<em><b>PROVIDES</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>WANTS</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>PROVIDES</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #WANTS
-   * @model literal="wants"
+   * @see #PROVIDES
+   * @model literal="provides"
    * @generated
    * @ordered
    */
-  public static final int WANTS_VALUE = 12;
+  public static final int PROVIDES_VALUE = 12;
 
   /**
-   * The '<em><b>DAMAGES</b></em>' literal value.
+   * The '<em><b>CONSUMES</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>DAMAGES</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>CONSUMES</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #DAMAGES
-   * @model literal="damages"
+   * @see #CONSUMES
+   * @model literal="consumes"
    * @generated
    * @ordered
    */
-  public static final int DAMAGES_VALUE = 13;
-
-  /**
-   * The '<em><b>ATTACKS</b></em>' literal value.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of '<em><b>ATTACKS</b></em>' literal object isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @see #ATTACKS
-   * @model literal="attacks"
-   * @generated
-   * @ordered
-   */
-  public static final int ATTACKS_VALUE = 14;
-
-  /**
-   * The '<em><b>ARGUES</b></em>' literal value.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of '<em><b>ARGUES</b></em>' literal object isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @see #ARGUES
-   * @model literal="argues"
-   * @generated
-   * @ordered
-   */
-  public static final int ARGUES_VALUE = 15;
+  public static final int CONSUMES_VALUE = 13;
 
   /**
    * The '<em><b>INTERFACES</b></em>' literal value.
@@ -465,22 +435,37 @@ public enum RelType implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int INTERFACES_VALUE = 16;
+  public static final int INTERFACES_VALUE = 14;
 
   /**
-   * The '<em><b>CONSUM Es</b></em>' literal value.
+   * The '<em><b>DAMAGES</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>CONSUM Es</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>DAMAGES</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #CONSUM_ES
-   * @model name="CONSUMEs" literal="consumes"
+   * @see #DAMAGES
+   * @model literal="damages"
    * @generated
    * @ordered
    */
-  public static final int CONSUM_ES_VALUE = 17;
+  public static final int DAMAGES_VALUE = 15;
+
+  /**
+   * The '<em><b>ATTACKS</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>ATTACKS</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #ATTACKS
+   * @model literal="attacks"
+   * @generated
+   * @ordered
+   */
+  public static final int ATTACKS_VALUE = 16;
 
   /**
    * The '<em><b>PROTECTS</b></em>' literal value.
@@ -495,7 +480,22 @@ public enum RelType implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int PROTECTS_VALUE = 18;
+  public static final int PROTECTS_VALUE = 17;
+
+  /**
+   * The '<em><b>ARGUES</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>ARGUES</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #ARGUES
+   * @model literal="argues"
+   * @generated
+   * @ordered
+   */
+  public static final int ARGUES_VALUE = 18;
 
   /**
    * An array of all the '<em><b>Rel Type</b></em>' enumerators.
@@ -507,24 +507,24 @@ public enum RelType implements Enumerator
     new RelType[]
     {
       CARRIESOUT,
-      DEPENDS,
+      FULFILS,
       AND_DECOMPOSES,
       OR_DECOMPOSES,
       HELPS,
       HURTS,
       BREAKS,
       MAKES,
-      DELEGATES,
-      FULFILS,
-      PROVIDES,
-      TRUSTS,
       WANTS,
+      DEPENDS,
+      DELEGATES,
+      TRUSTS,
+      PROVIDES,
+      CONSUMES,
+      INTERFACES,
       DAMAGES,
       ATTACKS,
-      ARGUES,
-      INTERFACES,
-      CONSUM_ES,
       PROTECTS,
+      ARGUES,
     };
 
   /**
@@ -584,24 +584,24 @@ public enum RelType implements Enumerator
     switch (value)
     {
       case CARRIESOUT_VALUE: return CARRIESOUT;
-      case DEPENDS_VALUE: return DEPENDS;
+      case FULFILS_VALUE: return FULFILS;
       case AND_DECOMPOSES_VALUE: return AND_DECOMPOSES;
       case OR_DECOMPOSES_VALUE: return OR_DECOMPOSES;
       case HELPS_VALUE: return HELPS;
       case HURTS_VALUE: return HURTS;
       case BREAKS_VALUE: return BREAKS;
       case MAKES_VALUE: return MAKES;
-      case DELEGATES_VALUE: return DELEGATES;
-      case FULFILS_VALUE: return FULFILS;
-      case PROVIDES_VALUE: return PROVIDES;
-      case TRUSTS_VALUE: return TRUSTS;
       case WANTS_VALUE: return WANTS;
+      case DEPENDS_VALUE: return DEPENDS;
+      case DELEGATES_VALUE: return DELEGATES;
+      case TRUSTS_VALUE: return TRUSTS;
+      case PROVIDES_VALUE: return PROVIDES;
+      case CONSUMES_VALUE: return CONSUMES;
+      case INTERFACES_VALUE: return INTERFACES;
       case DAMAGES_VALUE: return DAMAGES;
       case ATTACKS_VALUE: return ATTACKS;
-      case ARGUES_VALUE: return ARGUES;
-      case INTERFACES_VALUE: return INTERFACES;
-      case CONSUM_ES_VALUE: return CONSUM_ES;
       case PROTECTS_VALUE: return PROTECTS;
+      case ARGUES_VALUE: return ARGUES;
     }
     return null;
   }

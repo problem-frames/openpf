@@ -25,7 +25,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -36,7 +35,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link eu.securechange.ontology.ontology.impl.RelationshipImpl#getType <em>Type</em>}</li>
- *   <li>{@link eu.securechange.ontology.ontology.impl.RelationshipImpl#getEntities <em>Entities</em>}</li>
+ *   <li>{@link eu.securechange.ontology.ontology.impl.RelationshipImpl#getSource <em>Source</em>}</li>
+ *   <li>{@link eu.securechange.ontology.ontology.impl.RelationshipImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link eu.securechange.ontology.ontology.impl.RelationshipImpl#getDependum <em>Dependum</em>}</li>
  *   <li>{@link eu.securechange.ontology.ontology.impl.RelationshipImpl#getProperties <em>Properties</em>}</li>
  * </ul>
  * </p>
@@ -66,14 +67,34 @@ public class RelationshipImpl extends MinimalEObjectImpl.Container implements Re
   protected RelType type = TYPE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getEntities() <em>Entities</em>}' reference list.
+   * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getEntities()
+   * @see #getSource()
    * @generated
    * @ordered
    */
-  protected EList<Entity> entities;
+  protected Entity source;
+
+  /**
+   * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTarget()
+   * @generated
+   * @ordered
+   */
+  protected Entity target;
+
+  /**
+   * The cached value of the '{@link #getDependum() <em>Dependum</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDependum()
+   * @generated
+   * @ordered
+   */
+  protected Entity dependum;
 
   /**
    * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
@@ -134,13 +155,128 @@ public class RelationshipImpl extends MinimalEObjectImpl.Container implements Re
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Entity> getEntities()
+  public Entity getSource()
   {
-    if (entities == null)
+    if (source != null && source.eIsProxy())
     {
-      entities = new EObjectResolvingEList<Entity>(Entity.class, this, OntologyPackage.RELATIONSHIP__ENTITIES);
+      InternalEObject oldSource = (InternalEObject)source;
+      source = (Entity)eResolveProxy(oldSource);
+      if (source != oldSource)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, OntologyPackage.RELATIONSHIP__SOURCE, oldSource, source));
+      }
     }
-    return entities;
+    return source;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Entity basicGetSource()
+  {
+    return source;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setSource(Entity newSource)
+  {
+    Entity oldSource = source;
+    source = newSource;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, OntologyPackage.RELATIONSHIP__SOURCE, oldSource, source));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Entity getTarget()
+  {
+    if (target != null && target.eIsProxy())
+    {
+      InternalEObject oldTarget = (InternalEObject)target;
+      target = (Entity)eResolveProxy(oldTarget);
+      if (target != oldTarget)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, OntologyPackage.RELATIONSHIP__TARGET, oldTarget, target));
+      }
+    }
+    return target;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Entity basicGetTarget()
+  {
+    return target;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setTarget(Entity newTarget)
+  {
+    Entity oldTarget = target;
+    target = newTarget;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, OntologyPackage.RELATIONSHIP__TARGET, oldTarget, target));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Entity getDependum()
+  {
+    if (dependum != null && dependum.eIsProxy())
+    {
+      InternalEObject oldDependum = (InternalEObject)dependum;
+      dependum = (Entity)eResolveProxy(oldDependum);
+      if (dependum != oldDependum)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, OntologyPackage.RELATIONSHIP__DEPENDUM, oldDependum, dependum));
+      }
+    }
+    return dependum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Entity basicGetDependum()
+  {
+    return dependum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setDependum(Entity newDependum)
+  {
+    Entity oldDependum = dependum;
+    dependum = newDependum;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, OntologyPackage.RELATIONSHIP__DEPENDUM, oldDependum, dependum));
   }
 
   /**
@@ -185,8 +321,15 @@ public class RelationshipImpl extends MinimalEObjectImpl.Container implements Re
     {
       case OntologyPackage.RELATIONSHIP__TYPE:
         return getType();
-      case OntologyPackage.RELATIONSHIP__ENTITIES:
-        return getEntities();
+      case OntologyPackage.RELATIONSHIP__SOURCE:
+        if (resolve) return getSource();
+        return basicGetSource();
+      case OntologyPackage.RELATIONSHIP__TARGET:
+        if (resolve) return getTarget();
+        return basicGetTarget();
+      case OntologyPackage.RELATIONSHIP__DEPENDUM:
+        if (resolve) return getDependum();
+        return basicGetDependum();
       case OntologyPackage.RELATIONSHIP__PROPERTIES:
         return getProperties();
     }
@@ -207,9 +350,14 @@ public class RelationshipImpl extends MinimalEObjectImpl.Container implements Re
       case OntologyPackage.RELATIONSHIP__TYPE:
         setType((RelType)newValue);
         return;
-      case OntologyPackage.RELATIONSHIP__ENTITIES:
-        getEntities().clear();
-        getEntities().addAll((Collection<? extends Entity>)newValue);
+      case OntologyPackage.RELATIONSHIP__SOURCE:
+        setSource((Entity)newValue);
+        return;
+      case OntologyPackage.RELATIONSHIP__TARGET:
+        setTarget((Entity)newValue);
+        return;
+      case OntologyPackage.RELATIONSHIP__DEPENDUM:
+        setDependum((Entity)newValue);
         return;
       case OntologyPackage.RELATIONSHIP__PROPERTIES:
         getProperties().clear();
@@ -232,8 +380,14 @@ public class RelationshipImpl extends MinimalEObjectImpl.Container implements Re
       case OntologyPackage.RELATIONSHIP__TYPE:
         setType(TYPE_EDEFAULT);
         return;
-      case OntologyPackage.RELATIONSHIP__ENTITIES:
-        getEntities().clear();
+      case OntologyPackage.RELATIONSHIP__SOURCE:
+        setSource((Entity)null);
+        return;
+      case OntologyPackage.RELATIONSHIP__TARGET:
+        setTarget((Entity)null);
+        return;
+      case OntologyPackage.RELATIONSHIP__DEPENDUM:
+        setDependum((Entity)null);
         return;
       case OntologyPackage.RELATIONSHIP__PROPERTIES:
         getProperties().clear();
@@ -254,8 +408,12 @@ public class RelationshipImpl extends MinimalEObjectImpl.Container implements Re
     {
       case OntologyPackage.RELATIONSHIP__TYPE:
         return type != TYPE_EDEFAULT;
-      case OntologyPackage.RELATIONSHIP__ENTITIES:
-        return entities != null && !entities.isEmpty();
+      case OntologyPackage.RELATIONSHIP__SOURCE:
+        return source != null;
+      case OntologyPackage.RELATIONSHIP__TARGET:
+        return target != null;
+      case OntologyPackage.RELATIONSHIP__DEPENDUM:
+        return dependum != null;
       case OntologyPackage.RELATIONSHIP__PROPERTIES:
         return properties != null && !properties.isEmpty();
     }

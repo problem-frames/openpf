@@ -4,15 +4,32 @@ Export-Package: org.eclipse.xtext.example.gmf.resource,uk.ac.open,uk.a
  antlr,uk.ac.open.parser.antlr.internal;x-internal:=true,uk.ac.open.pr
  oblem,uk.ac.open.problem.impl,uk.ac.open.problem.util,uk.ac.open.scop
  ing,uk.ac.open.services,uk.ac.open.validation
-Require-Bundle: org.eclipse.core.resources,com.ibm.icu,core,org.antlr.
- runtime,org.apache.commons.logging,org.apache.log4j,org.apache.log4j,
- org.eclipse.draw2d;visibility:=reexport,org.eclipse.emf.codegen.ecore
- ,org.eclipse.emf.common,org.eclipse.emf.ecore,org.eclipse.emf.mwe.cor
- e,org.eclipse.emf.mwe.utils,org.eclipse.emf.mwe2.launch,org.eclipse.g
- mf.runtime.draw2d.ui;visibility:=reexport,org.eclipse.swtbot.eclipse.
- core,org.eclipse.swtbot.eclipse.finder,org.eclipse.swtbot.junit4_x,or
- g.eclipse.ui,org.eclipse.xtext,org.eclipse.xtext.generator,org.eclips
- e.xtext.util,org.eclipse.xtext.xtend,org.hamcrest,org.junit4
+Require-Bundle: org.eclipse.core.resources,
+ com.ibm.icu,
+ core,
+ org.antlr.runtime,
+ org.apache.commons.logging,
+ org.apache.log4j,
+ org.apache.log4j,
+ org.eclipse.draw2d;visibility:=reexport,
+ org.eclipse.emf.codegen.ecore,
+ org.eclipse.emf.common,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.mwe.core,
+ org.eclipse.emf.mwe.utils,
+ org.eclipse.emf.mwe2.launch,
+ org.eclipse.gmf.runtime.draw2d.ui;visibility:=reexport,
+ org.eclipse.swtbot.eclipse.core,
+ org.eclipse.swtbot.eclipse.finder,
+ org.eclipse.swtbot.junit4_x,
+ org.eclipse.ui,
+ org.eclipse.xtext,
+ org.eclipse.xtext.generator,
+ org.eclipse.xtext.util,
+ org.eclipse.xtext.xtend,
+ org.hamcrest,
+ org.junit4,
+ org.eclipse.core.runtime;bundle-version="3.6.0"
 Bundle-Vendor: The Open University
 Bundle-Version: 1.0.0.201010141018
 Bundle-Name: problem

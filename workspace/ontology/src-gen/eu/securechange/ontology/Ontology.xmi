@@ -156,8 +156,12 @@
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.14"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value="$"/>
-        <elements xsi:type="xtext:Assignment" cardinality="?" feature="value" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="("/>
+          <elements xsi:type="xtext:Assignment" feature="value" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value=")"/>
         </elements>
       </alternatives>
     </rules>
@@ -244,9 +248,26 @@
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.13"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value="("/>
-        <elements xsi:type="xtext:Group" cardinality="*">
-          <elements xsi:type="xtext:Keyword" cardinality="?" value=","/>
-          <elements xsi:type="xtext:Assignment" feature="entities" operator="+=">
+        <elements xsi:type="xtext:Assignment" feature="source" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.0">
+              <classifier xsi:type="ecore:EClass" href="http://securechange.eu/ontology#//Entity"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.14"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value=","/>
+        <elements xsi:type="xtext:Assignment" feature="target" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.0">
+              <classifier xsi:type="ecore:EClass" href="http://securechange.eu/ontology#//Entity"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.14"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value=","/>
+          <elements xsi:type="xtext:Assignment" feature="dependum" operator="=">
             <terminal xsi:type="xtext:CrossReference">
               <type metamodel="/0/@metamodelDeclarations.0">
                 <classifier xsi:type="ecore:EClass" href="http://securechange.eu/ontology#//Entity"/>
@@ -274,8 +295,8 @@
           <literal value="carries out"/>
         </elements>
         <elements xsi:type="xtext:EnumLiteralDeclaration">
-          <enumLiteral href="http://securechange.eu/ontology#//RelType/DEPENDS"/>
-          <literal value="depends"/>
+          <enumLiteral href="http://securechange.eu/ontology#//RelType/FULFILS"/>
+          <literal value="fulfils"/>
         </elements>
         <elements xsi:type="xtext:EnumLiteralDeclaration">
           <enumLiteral href="http://securechange.eu/ontology#//RelType/AND_DECOMPOSES"/>
@@ -302,24 +323,32 @@
           <literal value="++"/>
         </elements>
         <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://securechange.eu/ontology#//RelType/WANTS"/>
+          <literal value="wants"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://securechange.eu/ontology#//RelType/DEPENDS"/>
+          <literal value="depends"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
           <enumLiteral href="http://securechange.eu/ontology#//RelType/DELEGATES"/>
           <literal value="delegates"/>
-        </elements>
-        <elements xsi:type="xtext:EnumLiteralDeclaration">
-          <enumLiteral href="http://securechange.eu/ontology#//RelType/FULFILS"/>
-          <literal value="fulfils"/>
-        </elements>
-        <elements xsi:type="xtext:EnumLiteralDeclaration">
-          <enumLiteral href="http://securechange.eu/ontology#//RelType/PROVIDES"/>
-          <literal value="provides"/>
         </elements>
         <elements xsi:type="xtext:EnumLiteralDeclaration">
           <enumLiteral href="http://securechange.eu/ontology#//RelType/TRUSTS"/>
           <literal value="trusts"/>
         </elements>
         <elements xsi:type="xtext:EnumLiteralDeclaration">
-          <enumLiteral href="http://securechange.eu/ontology#//RelType/WANTS"/>
-          <literal value="wants"/>
+          <enumLiteral href="http://securechange.eu/ontology#//RelType/PROVIDES"/>
+          <literal value="provides"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://securechange.eu/ontology#//RelType/CONSUMES"/>
+          <literal value="consumes"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://securechange.eu/ontology#//RelType/INTERFACES"/>
+          <literal value="interfaces"/>
         </elements>
         <elements xsi:type="xtext:EnumLiteralDeclaration">
           <enumLiteral href="http://securechange.eu/ontology#//RelType/DAMAGES"/>
@@ -330,20 +359,12 @@
           <literal value="attacks"/>
         </elements>
         <elements xsi:type="xtext:EnumLiteralDeclaration">
-          <enumLiteral href="http://securechange.eu/ontology#//RelType/ARGUES"/>
-          <literal value="argues"/>
-        </elements>
-        <elements xsi:type="xtext:EnumLiteralDeclaration">
-          <enumLiteral href="http://securechange.eu/ontology#//RelType/INTERFACES"/>
-          <literal value="interfaces"/>
-        </elements>
-        <elements xsi:type="xtext:EnumLiteralDeclaration">
-          <enumLiteral href="http://securechange.eu/ontology#//RelType/CONSUMEs"/>
-          <literal value="consumes"/>
-        </elements>
-        <elements xsi:type="xtext:EnumLiteralDeclaration">
           <enumLiteral href="http://securechange.eu/ontology#//RelType/PROTECTS"/>
           <literal value="protects"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://securechange.eu/ontology#//RelType/ARGUES"/>
+          <literal value="argues"/>
         </elements>
       </alternatives>
     </rules>
