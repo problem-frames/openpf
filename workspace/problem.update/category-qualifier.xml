@@ -150,37 +150,16 @@
    <feature url="features/org.eclipse.xtext.xbase.source_1.0.1.v201008251220.jar" id="org.eclipse.xtext.xbase.source" version="1.0.1.v201008251220">
       <category name="XTEXT"/>
    </feature>
-   <feature url="features/org.eclipse.gmf_1.4.1.v20100909-1300-7d9A78FYnmMD7VBZOqOghp2tsgXc.jar" id="org.eclipse.gmf" version="1.4.1.v20100909-1300-7d9A78FYnmMD7VBZOqOghp2tsgXc">
-      <category name="GMF"/>
-   </feature>
-   <feature url="features/org.eclipse.gmf.doc_1.4.0.v20100518-2359-35-8s733L3H7L17395.jar" id="org.eclipse.gmf.doc" version="1.4.0.v20100518-2359-35-8s733L3H7L17395">
-      <category name="GMF"/>
-   </feature>
-   <feature url="features/org.eclipse.gmf.examples.runtime.ui.pde_1.4.0.v20100511-1355-2307w3121183101141.jar" id="org.eclipse.gmf.examples.runtime.ui.pde" version="1.4.0.v20100511-1355-2307w3121183101141">
+   <feature url="features/org.eclipse.gmf_1.4.2.v20110201-1000-7d9A7FFYnmMD7_nYQqNhbc2tsgXc.jar" id="org.eclipse.gmf" version="1.4.2.v20110201-1000-7d9A7FFYnmMD7_nYQqNhbc2tsgXc">
       <category name="GMF"/>
    </feature>
    <feature url="features/org.eclipse.gmf.runtime.notation_1.4.1.v20100909-1000-37708s73533F5C1479I.jar" id="org.eclipse.gmf.runtime.notation" version="1.4.1.v20100909-1000-37708s73533F5C1479I">
       <category name="GMF"/>
    </feature>
-   <feature url="features/org.eclipse.gmf.runtime.sdk_1.4.1.v20100909-1300-67G29E9QYAZrXowmYt08ti7x8V1i.jar" id="org.eclipse.gmf.runtime.sdk" version="1.4.1.v20100909-1300-67G29E9QYAZrXowmYt08ti7x8V1i">
-      <category name="GMF"/>
-   </feature>
    <feature url="features/org.eclipse.gmf.runtime.thirdparty_1.4.0.v20100521-1113-7P8W5FHV2CNOiy0niXURaw311A16.jar" id="org.eclipse.gmf.runtime.thirdparty" version="1.4.0.v20100521-1113-7P8W5FHV2CNOiy0niXURaw311A16">
       <category name="GMF"/>
    </feature>
-   <feature url="features/org.eclipse.gmf.runtime.thirdparty.source_1.1.0.v20100511-1424-7I850FCnk296ZOs5Y2KHaw311A16.jar" id="org.eclipse.gmf.runtime.thirdparty.source" version="1.1.0.v20100511-1424-7I850FCnk296ZOs5Y2KHaw311A16">
-      <category name="GMF"/>
-   </feature>
-   <feature url="features/org.eclipse.gmf.sdk_2.3.0.v20100508-1742-7779-95sDcLbJSsdu7Xz-x9w7ogv.jar" id="org.eclipse.gmf.sdk" version="2.3.0.v20100508-1742-7779-95sDcLbJSsdu7Xz-x9w7ogv">
-      <category name="GMF"/>
-   </feature>
-   <feature url="features/org.eclipse.gmf.source_1.4.1.v20100909-1300-7d9A78FYnmMD7VBZOqOghp2tsgXc.jar" id="org.eclipse.gmf.source" version="1.4.1.v20100909-1300-7d9A78FYnmMD7VBZOqOghp2tsgXc">
-      <category name="GMF"/>
-   </feature>
-   <feature url="features/org.eclipse.gmf.tooling_2.3.0.v20100421-2359-7c7MFO-FLWUl0ilw5sQPVD1.jar" id="org.eclipse.gmf.tooling" version="2.3.0.v20100421-2359-7c7MFO-FLWUl0ilw5sQPVD1">
-      <category name="GMF"/>
-   </feature>
-   <feature url="features/org.eclipse.gmf.tooling.source_2.3.0.v20100421-2359-7c7MFO-FLWUl0ilw5sQPVD1.jar" id="org.eclipse.gmf.tooling.source" version="2.3.0.v20100421-2359-7c7MFO-FLWUl0ilw5sQPVD1">
+   <feature url="features/org.eclipse.gmf.tooling_2.4.0.v20101217-1532-7_7MFMTFIhIewClguWLA42l.jar" id="org.eclipse.gmf.tooling" version="2.4.0.v20101217-1532-7_7MFMTFIhIewClguWLA42l">
       <category name="GMF"/>
    </feature>
    <feature url="features/org.eclipse.emf_2.6.1.v20100914-1218.jar" id="org.eclipse.emf" version="2.6.1.v20100914-1218">
