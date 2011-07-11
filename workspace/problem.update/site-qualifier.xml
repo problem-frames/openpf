@@ -126,7 +126,7 @@
    <feature url="features/org.eclipse.xtext.examples.source_1.0.1.v201008251220.jar" id="org.eclipse.xtext.examples.source" version="1.0.1.v201008251220">
       <category name="XTEXT"/>
    </feature>
-   <feature url="features/org.eclipse.xtext.runtime_1.0.1.v201008251220.jar" id="org.eclipse.xtext.runtime" version="1.0.1.v201008251220">
+   <feature url="features/org.eclipse.xtext.runtime_1.0.2.v201102150722.jar" id="org.eclipse.xtext.runtime" version="1.0.2.v201102150722">
       <category name="XTEXT"/>
    </feature>
    <feature url="features/org.eclipse.xtext.runtime.source_1.0.1.v201008251220.jar" id="org.eclipse.xtext.runtime.source" version="1.0.1.v201008251220">
@@ -138,7 +138,7 @@
    <feature url="features/org.eclipse.xtext.sdk.source_1.0.1.v201008251220.jar" id="org.eclipse.xtext.sdk.source" version="1.0.1.v201008251220">
       <category name="XTEXT"/>
    </feature>
-   <feature url="features/org.eclipse.xtext.ui_1.0.1.v201008251220.jar" id="org.eclipse.xtext.ui" version="1.0.1.v201008251220">
+   <feature url="features/org.eclipse.xtext.ui_1.0.2.v201102150722.jar" id="org.eclipse.xtext.ui" version="1.0.2.v201102150722">
       <category name="XTEXT"/>
    </feature>
    <feature url="features/org.eclipse.xtext.ui.source_1.0.1.v201008251220.jar" id="org.eclipse.xtext.ui.source" version="1.0.1.v201008251220">
@@ -489,22 +489,25 @@
    <feature url="features/org.eclipse.xsd.source_2.6.0.v20100914-1218.jar" id="org.eclipse.xsd.source" version="2.6.0.v20100914-1218">
       <category name="EMF"/>
    </feature>
-   <feature url="features/org.eclipse.draw2d_3.6.1.v20100908-1100-4507w31211A2403131.jar" id="org.eclipse.draw2d" version="3.6.1.v20100908-1100-4507w31211A2403131">
+   <feature url="features/org.eclipse.draw2d_3.6.2.v20110128-0100-4517w3122123901211.jar" id="org.eclipse.draw2d" version="3.6.2.v20110128-0100-4517w3122123901211">
       <category name="GMF"/>
    </feature>
-   <feature url="features/org.eclipse.draw2d.sdk_3.6.1.v20100908-1100-7A7G18yE5F-8K8N4I8E558B48x42.jar" id="org.eclipse.draw2d.sdk" version="3.6.1.v20100908-1100-7A7G18yE5F-8K8N4I8E558B48x42">
+   <feature url="features/org.eclipse.draw2d.sdk_3.6.2.v20110128-0100-7A7G38yE6F08CAO499J539958x42.jar" id="org.eclipse.draw2d.sdk" version="3.6.2.v20110128-0100-7A7G38yE6F08CAO499J539958x42">
       <category name="GMF"/>
    </feature>
-   <feature url="features/org.eclipse.draw2d.source_3.6.1.v20100908-1100-4507w31211A2403131.jar" id="org.eclipse.draw2d.source" version="3.6.1.v20100908-1100-4507w31211A2403131">
+   <feature url="features/org.eclipse.draw2d.source_3.6.2.v20110128-0100-4517w3122123901211.jar" id="org.eclipse.draw2d.source" version="3.6.2.v20110128-0100-4517w3122123901211">
       <category name="GMF"/>
    </feature>
-   <feature url="features/org.eclipse.gef_3.6.1.v20100908-1100-777B181A3Bz-6B663E7974242.jar" id="org.eclipse.gef" version="3.6.1.v20100908-1100-777B181A3Bz-6B663E7974242">
+   <feature url="features/org.eclipse.gef_3.6.2.v20110128-0100-777B381A4Bz06565376E32322.jar" id="org.eclipse.gef" version="3.6.2.v20110128-0100-777B381A4Bz06565376E32322">
       <category name="GMF"/>
    </feature>
-   <feature url="features/org.eclipse.gef.sdk_3.6.1.v20100908-1100-7G7R2A5WNcBQPZgXAHiSXMXYaKPI.jar" id="org.eclipse.gef.sdk" version="3.6.1.v20100908-1100-7G7R2A5WNcBQPZgXAHiSXMXYaKPI">
+   <feature url="features/org.eclipse.emf.mwe.core_1.0.2.v201102150556.jar" id="org.eclipse.emf.mwe.core" version="1.0.2.v201102150556">
+      <category name="EMF"/>
+   </feature>
+   <feature url="features/org.eclipse.gef.sdk_3.6.2.v20110128-0100-7G7R77A5WNcHQDbhX8JWOYLOSeRJ.jar" id="org.eclipse.gef.sdk" version="3.6.2.v20110128-0100-7G7R77A5WNcHQDbhX8JWOYLOSeRJ">
       <category name="GMF"/>
    </feature>
-   <feature url="features/org.eclipse.gef.source_3.6.1.v20100908-1100-777B181A3Bz-6B663E7974242.jar" id="org.eclipse.gef.source" version="3.6.1.v20100908-1100-777B181A3Bz-6B663E7974242">
+   <feature url="features/org.eclipse.gef.source_3.6.2.v20110128-0100-777B381A4Bz06565376E32322.jar" id="org.eclipse.gef.source" version="3.6.2.v20110128-0100-777B381A4Bz06565376E32322">
       <category name="GMF"/>
    </feature>
    <feature url="features/org.eclipse.mylyn.bugzilla_feature_3.4.0.v20100608-0100-e3x.jar" id="org.eclipse.mylyn.bugzilla_feature" version="3.4.0.v20100608-0100-e3x">
@@ -534,7 +537,7 @@
    <feature url="features/org.eclipse.amalgam.discovery_1.1.0.v201006150414-42-9oB5855N8K5H8H.jar" id="org.eclipse.amalgam.discovery" version="1.1.0.v201006150414-42-9oB5855N8K5H8H">
       <category name="SDK"/>
    </feature>
-   <feature url="features/org.eclipse.cvs_1.2.0.v20100427-7B77FKs8sF7B77SDX4GW85.jar" id="org.eclipse.cvs" version="1.2.0.v20100427-7B77FKs8sF7B77SDX4GW85">
+   <feature url="features/org.eclipse.cvs_1.2.1.r362_v20101111-7B77FKv99HL0GvIAF99I8H14B7E.jar" id="org.eclipse.cvs" version="1.2.1.r362_v20101111-7B77FKv99HL0GvIAF99I8H14B7E">
       <category name="SDK"/>
    </feature>
    <feature url="features/org.eclipse.cvs.source_1.2.0.v20100427-7B77FKs8sF7B77SDX4GW85.jar" id="org.eclipse.cvs.source" version="1.2.0.v20100427-7B77FKs8sF7B77SDX4GW85">
@@ -555,22 +558,22 @@
    <feature url="features/org.eclipse.equinox.executable_3.4.0.v20100524-7M7K-FIhIez-egBko15H73.jar" id="org.eclipse.equinox.executable" version="3.4.0.v20100524-7M7K-FIhIez-egBko15H73">
       <category name="SDK"/>
    </feature>
-   <feature url="features/org.eclipse.equinox.p2.discovery.feature_1.0.0.v20100510-4--9oB5855K7P.jar" id="org.eclipse.equinox.p2.discovery.feature" version="1.0.0.v20100510-4--9oB5855K7P">
+   <feature url="features/org.eclipse.equinox.p2.discovery.feature_1.0.1.R36x_v20110210-4-09oB5865H6L02434.jar" id="org.eclipse.equinox.p2.discovery.feature" version="1.0.1.R36x_v20110210-4-09oB5865H6L02434">
       <category name="SDK"/>
    </feature>
-   <feature url="features/org.eclipse.equinox.p2.user.ui_2.0.0.v20100503-897HFZ-FdHjO2NQo0sD_Nt.jar" id="org.eclipse.equinox.p2.user.ui" version="2.0.0.v20100503-897HFZ-FdHjO2NQo0sD_Nt">
+   <feature url="features/org.eclipse.equinox.p2.user.ui_2.0.1.r361_v20100903-897HFa-FX0z-z-ntoaavz0JPX628.jar" id="org.eclipse.equinox.p2.user.ui" version="2.0.1.r361_v20100903-897HFa-FX0z-z-ntoaavz0JPX628">
       <category name="SDK"/>
    </feature>
    <feature url="features/org.eclipse.equinox.p2.user.ui.source_2.0.0.v20100503-897HFZ-FdHjO2NQo0sD_Nt.jar" id="org.eclipse.equinox.p2.user.ui.source" version="2.0.0.v20100503-897HFZ-FdHjO2NQo0sD_Nt">
       <category name="SDK"/>
    </feature>
-   <feature url="features/org.eclipse.help_1.2.0.v20100427-7e7jEKFEx2XlnZinYPtgz03.jar" id="org.eclipse.help" version="1.2.0.v20100427-7e7jEKFEx2XlnZinYPtgz03">
+   <feature url="features/org.eclipse.help_1.2.1.r362_v20101111-7e7jEVFDr6xg-LSlC_z0w1D.jar" id="org.eclipse.help" version="1.2.1.r362_v20101111-7e7jEVFDr6xg-LSlC_z0w1D">
       <category name="SDK"/>
    </feature>
    <feature url="features/org.eclipse.help.source_1.2.0.v20100427-7e7jEKFEx2XlnZinYPtgz03.jar" id="org.eclipse.help.source" version="1.2.0.v20100427-7e7jEKFEx2XlnZinYPtgz03">
       <category name="SDK"/>
    </feature>
-   <feature url="features/org.eclipse.jdt_3.6.0.v20100526-0800-7z8XFUJFMTfCWGoVuHImpms9H155.jar" id="org.eclipse.jdt" version="3.6.0.v20100526-0800-7z8XFUJFMTfCWGoVuHImpms9H155">
+   <feature url="features/org.eclipse.jdt_3.6.2.r362_v20101117-0800-7z8XFW6FLFlmjJcvz03jyeFBLS_F.jar" id="org.eclipse.jdt" version="3.6.2.r362_v20101117-0800-7z8XFW6FLFlmjJcvz03jyeFBLS_F">
       <category name="SDK"/>
    </feature>
    <feature url="features/org.eclipse.jdt.source_3.6.0.v20100526-0800-7z8XFUJFMTfCWGoVuHImpms9H155.jar" id="org.eclipse.jdt.source" version="3.6.0.v20100526-0800-7z8XFUJFMTfCWGoVuHImpms9H155">
@@ -588,7 +591,7 @@
    <feature url="features/org.eclipse.net4j.db.h2_3.0.0.v20100614-1656.jar" id="org.eclipse.net4j.db.h2" version="3.0.0.v20100614-1656">
       <category name="SDK"/>
    </feature>
-   <feature url="features/org.eclipse.ocl_3.0.0.v201005061704-79-7G9oB5855J7O8P9D.jar" id="org.eclipse.ocl" version="3.0.0.v201005061704-79-7G9oB5855J7O8P9D">
+   <feature url="features/org.eclipse.ocl_3.0.2.R30x_v201101181635-79-7K8qD6z-DtD7E8BB753F53.jar" id="org.eclipse.ocl" version="3.0.2.R30x_v201101181635-79-7K8qD6z-DtD7E8BB753F53">
       <category name="UML2"/>
    </feature>
    <feature url="features/org.eclipse.ocl.all_3.0.0.v201005061704-77--7EB1IDFsG9CE9TCZCXAE.jar" id="org.eclipse.ocl.all" version="3.0.0.v201005061704-77--7EB1IDFsG9CE9TCZCXAE">
@@ -615,19 +618,19 @@
    <feature url="features/org.eclipse.ocl.uml.source_3.0.0.v201005061704-4--7w312116172815.jar" id="org.eclipse.ocl.uml.source" version="3.0.0.v201005061704-4--7w312116172815">
       <category name="UML2"/>
    </feature>
-   <feature url="features/org.eclipse.pde_3.6.0.v20100525-7b7mFKtFEx2XmfZ4_B7NUJA.jar" id="org.eclipse.pde" version="3.6.0.v20100525-7b7mFKtFEx2XmfZ4_B7NUJA">
+   <feature url="features/org.eclipse.pde_3.6.2.r362_v20110203-7b7mFL2FET3dhHalh1iNZtL.jar" id="org.eclipse.pde" version="3.6.2.r362_v20110203-7b7mFL2FET3dhHalh1iNZtL">
       <category name="SDK"/>
    </feature>
    <feature url="features/org.eclipse.pde.source_3.6.0.v20100525-7b7mFKtFEx2XmfZ4_B7NUJA.jar" id="org.eclipse.pde.source" version="3.6.0.v20100525-7b7mFKtFEx2XmfZ4_B7NUJA">
       <category name="SDK"/>
    </feature>
-   <feature url="features/org.eclipse.platform_3.6.0.v20100602-9gF78GpqFt6trOGhL60z0oEx3fz-JKNwxPY.jar" id="org.eclipse.platform" version="3.6.0.v20100602-9gF78GpqFt6trOGhL60z0oEx3fz-JKNwxPY">
+   <feature url="features/org.eclipse.platform_3.6.2.r362_v20110210-9gF78Gs1FrIGnHDHWkEcopoN8AmxeZflGDGKQi.jar" id="org.eclipse.platform" version="3.6.2.r362_v20110210-9gF78Gs1FrIGnHDHWkEcopoN8AmxeZflGDGKQi">
       <category name="SDK"/>
    </feature>
    <feature url="features/org.eclipse.platform.source_3.6.0.v20100602-9gF78GpqFt6trOGhL60z0oEx3fz-JKNwxPY.jar" id="org.eclipse.platform.source" version="3.6.0.v20100602-9gF78GpqFt6trOGhL60z0oEx3fz-JKNwxPY">
       <category name="SDK"/>
    </feature>
-   <feature url="features/org.eclipse.rcp_3.6.0.v20100519-9OArFKvFtsd7WLUKh-DcYTS.jar" id="org.eclipse.rcp" version="3.6.0.v20100519-9OArFKvFtsd7WLUKh-DcYTS">
+   <feature url="features/org.eclipse.rcp_3.6.2.r362_v20101104-9SAxFMKFkSAqi8axkv1ZjegmiBLY.jar" id="org.eclipse.rcp" version="3.6.2.r362_v20101104-9SAxFMKFkSAqi8axkv1ZjegmiBLY">
       <category name="SDK"/>
    </feature>
    <feature url="features/org.eclipse.rcp.source_3.6.0.v20100519-9OArFKvFtsd7WLUKh-DcYTS.jar" id="org.eclipse.rcp.source" version="3.6.0.v20100519-9OArFKvFtsd7WLUKh-DcYTS">
@@ -741,28 +744,28 @@
    <feature url="features/org.eclipse.wst.xsl_sdk.feature_1.1.2.v201009091745-528h98jYgXy1VmFpgUekbhAP5Dsy.jar" id="org.eclipse.wst.xsl_sdk.feature" version="1.1.2.v201009091745-528h98jYgXy1VmFpgUekbhAP5Dsy">
       <category name="WST"/>
    </feature>
-   <feature url="features/problem.feature_1.0.0.qualifier.jar" id="problem.feature" version="1.0.0.qualifier">
+   <feature url="features/problem.feature_1.0.0.201107111823.jar" id="problem.feature" version="1.0.0.201107111823">
       <category name="RE_Tools"/>
    </feature>
-   <feature url="features/argument.feature_1.0.0.qualifier.jar" id="argument.feature" version="1.0.0.qualifier">
+   <feature url="features/argument.feature_1.0.0.201107111823.jar" id="argument.feature" version="1.0.0.201107111823">
       <category name="RE_Tools"/>
    </feature>
    <feature url="features/change.feature_1.0.0.qualifier.jar" id="change.feature" version="1.0.0.qualifier">
       <category name="RE_Tools"/>
    </feature>
-   <feature url="features/core.feature_1.0.0.qualifier.jar" id="core.feature" version="1.0.0.qualifier">
+   <feature url="features/core.feature_1.0.0.201107111823.jar" id="core.feature" version="1.0.0.201107111823">
       <category name="RE_Tools"/>
    </feature>
-   <feature url="features/dependency.feature_1.0.0.qualifier.jar" id="dependency.feature" version="1.0.0.qualifier">
+   <feature url="features/dependency.feature_1.0.0.201107111823.jar" id="dependency.feature" version="1.0.0.201107111823">
       <category name="RE_Tools"/>
    </feature>
-   <feature url="features/event.feature_1.0.0.qualifier.jar" id="event.feature" version="1.0.0.qualifier">
+   <feature url="features/event.feature_1.0.0.201107111823.jar" id="event.feature" version="1.0.0.201107111823">
       <category name="RE_Tools"/>
    </feature>
-   <feature url="features/istar.feature_1.0.0.qualifier.jar" id="istar.feature" version="1.0.0.qualifier">
+   <feature url="features/istar.feature_1.0.0.201107111823.jar" id="istar.feature" version="1.0.0.201107111823">
       <category name="RE_Tools"/>
    </feature>
-   <feature url="features/ontology.feature_1.0.0.qualifier.jar" id="ontology.feature" version="1.0.0.qualifier">
+   <feature url="features/ontology.feature_1.0.0.201107111823.jar" id="ontology.feature" version="1.0.0.201107111823">
       <category name="RE_Tools"/>
    </feature>
    <feature url="features/process.feature_1.0.0.qualifier.jar" id="process.feature" version="1.0.0.qualifier">
@@ -777,7 +780,7 @@
    <feature url="features/uncal.feature_1.0.0.qualifier.jar" id="uncal.feature" version="1.0.0.qualifier">
       <category name="Experimental"/>
    </feature>
-   <feature url="features/xtext.feature_1.0.0.201010071122.jar" id="xtext.feature" version="1.0.0.201010071122"/>
+   <feature url="features/xtext.feature_1.0.0.201107111823.jar" id="xtext.feature" version="1.0.0.201107111823"/>
    <category-def name="RE_Tools" label="Requirements Engineering Tools"/>
    <category-def name="Experimental" label="Experimental features"/>
    <category-def name="Little-JIL" label="Little-JIL features"/>
