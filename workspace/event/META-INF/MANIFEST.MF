@@ -15,5 +15,18 @@ Bundle-SymbolicName: event; singleton:=true
 Import-Package: org.apache.log4j
 Eclipse-RegisterBuddy: org.eclipse.xtext.log4j
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: action,
+ convertor,
+ uk.ac.open.event,
+ uk.ac.open.event.eventcalculus,
+ uk.ac.open.event.eventcalculus.impl,
+ uk.ac.open.event.eventcalculus.util,
+ uk.ac.open.event.formatting,
+ uk.ac.open.event.parseTreeConstruction,
+ uk.ac.open.event.parser.antlr,
+ uk.ac.open.event.parser.antlr.internal,
+ uk.ac.open.event.scoping,
+ uk.ac.open.event.services,
+ uk.ac.open.event.validation
 
 
