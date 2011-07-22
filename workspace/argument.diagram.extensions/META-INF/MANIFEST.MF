@@ -26,7 +26,7 @@ Require-Bundle: org.eclipse.core.runtime,org.eclipse.core.resources,or
 Bundle-Vendor: %providerName
 Bundle-Version: 1.0.0.201010080232
 Bundle-ManifestVersion: 2
-Bundle-Activator: argument.diagram.extensions.Activator
+Bundle-Activator: argument.argument.diagram.extensions.Activator
 Bundle-SymbolicName: argument.diagram.extensions;singleton:=true
 
 

@@ -7,7 +7,7 @@
    <extension
          point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders">
       <editpartProvider
-            class="argument.diagram.edit.part.ArgumentEditPartProviderOverride">
+            class="argument.argument.diagram.edit.part.ArgumentEditPartProviderOverride">
          <Priority
                name="Low">
          </Priority>
