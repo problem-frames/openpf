@@ -10,7 +10,7 @@ Export-Package: uk.ac.open.event.ui,uk.ac.open.event.ui.contentassist,
  e,uk.ac.open.event.ui.quickfix,uk.ac.open.groundtram
 Bundle-Vendor: Yijun Yu
 Bundle-ActivationPolicy: lazy
-Bundle-Version: 1.0.0
+Bundle-Version: 1.0.0.qualifier
 Bundle-Name: event.ui
 Bundle-ManifestVersion: 2
 Bundle-Activator: uk.ac.open.event.ui.internal.EventCalculusActivator

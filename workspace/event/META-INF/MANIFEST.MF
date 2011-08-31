@@ -14,7 +14,7 @@ Require-Bundle: org.eclipse.xtext,org.eclipse.xtext.generator,org.apac
  sion="3.6.0",org.eclipse.ui;bundle-version="3.6.2"
 Bundle-Vendor: The Open University
 Bundle-ActivationPolicy: lazy
-Bundle-Version: 1.0.0.201107131823
+Bundle-Version: 1.0.0.qualifier
 Bundle-Name: event
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: event; singleton:=true
