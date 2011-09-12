@@ -6,7 +6,6 @@
  */
 package argument.argument.provider;
 
-
 import argument.argument.Argument;
 import argument.argument.ArgumentFactory;
 import argument.argument.ArgumentPackage;
@@ -30,23 +29,18 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link argument.argument.Argument} object.
- * <!-- begin-user-doc -->
- * <!-- end-user-doc -->
+ * This is the item provider adapter for a {@link argument.argument.Argument}
+ * object. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
  * @generated
  */
-public class ArgumentItemProvider
-	extends TerminalExpressionItemProvider
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+public class ArgumentItemProvider extends TerminalExpressionItemProvider
+		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
-	 * This constructs an instance from a factory and a notifier.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This constructs an instance from a factory and a notifier. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public ArgumentItemProvider(AdapterFactory adapterFactory) {
@@ -54,9 +48,9 @@ public class ArgumentItemProvider
 	}
 
 	/**
-	 * This returns the property descriptors for the adapted class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This returns the property descriptors for the adapted class. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -78,213 +72,189 @@ public class ArgumentItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This adds a property descriptor for the Name feature. <!-- begin-user-doc
+	 * --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Argument_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Argument_name_feature", "_UI_Argument_type"),
-				 ArgumentPackage.Literals.ARGUMENT__NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory)
+						.getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_Argument_name_feature"),
+				getString("_UI_PropertyDescriptor_description",
+						"_UI_Argument_name_feature", "_UI_Argument_type"),
+				ArgumentPackage.Literals.ARGUMENT__NAME, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Description feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This adds a property descriptor for the Description feature. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected void addDescriptionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Argument_description_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Argument_description_feature", "_UI_Argument_type"),
-				 ArgumentPackage.Literals.ARGUMENT__DESCRIPTION,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(
+						((ComposeableAdapterFactory) adapterFactory)
+								.getRootAdapterFactory(),
+						getResourceLocator(),
+						getString("_UI_Argument_description_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_Argument_description_feature",
+								"_UI_Argument_type"),
+						ArgumentPackage.Literals.ARGUMENT__DESCRIPTION, true,
+						false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Round feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This adds a property descriptor for the Round feature. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected void addRoundPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Argument_round_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Argument_round_feature", "_UI_Argument_type"),
-				 ArgumentPackage.Literals.ARGUMENT__ROUND,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory)
+						.getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_Argument_round_feature"),
+				getString("_UI_PropertyDescriptor_description",
+						"_UI_Argument_round_feature", "_UI_Argument_type"),
+				ArgumentPackage.Literals.ARGUMENT__ROUND, true, false, false,
+				ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Replaces feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This adds a property descriptor for the Replaces feature. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected void addReplacesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Argument_replaces_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Argument_replaces_feature", "_UI_Argument_type"),
-				 ArgumentPackage.Literals.ARGUMENT__REPLACES,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory)
+						.getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_Argument_replaces_feature"),
+				getString("_UI_PropertyDescriptor_description",
+						"_UI_Argument_replaces_feature", "_UI_Argument_type"),
+				ArgumentPackage.Literals.ARGUMENT__REPLACES, true, false, true,
+				null, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Foreground feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This adds a property descriptor for the Foreground feature. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected void addForegroundPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Argument_foreground_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Argument_foreground_feature", "_UI_Argument_type"),
-				 ArgumentPackage.Literals.ARGUMENT__FOREGROUND,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(
+						((ComposeableAdapterFactory) adapterFactory)
+								.getRootAdapterFactory(),
+						getResourceLocator(),
+						getString("_UI_Argument_foreground_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_Argument_foreground_feature",
+								"_UI_Argument_type"),
+						ArgumentPackage.Literals.ARGUMENT__FOREGROUND, true,
+						false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Background feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This adds a property descriptor for the Background feature. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected void addBackgroundPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Argument_background_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Argument_background_feature", "_UI_Argument_type"),
-				 ArgumentPackage.Literals.ARGUMENT__BACKGROUND,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(
+						((ComposeableAdapterFactory) adapterFactory)
+								.getRootAdapterFactory(),
+						getResourceLocator(),
+						getString("_UI_Argument_background_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_Argument_background_feature",
+								"_UI_Argument_type"),
+						ArgumentPackage.Literals.ARGUMENT__BACKGROUND, true,
+						false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Shape feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This adds a property descriptor for the Shape feature. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected void addShapePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Argument_shape_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Argument_shape_feature", "_UI_Argument_type"),
-				 ArgumentPackage.Literals.ARGUMENT__SHAPE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory)
+						.getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_Argument_shape_feature"),
+				getString("_UI_PropertyDescriptor_description",
+						"_UI_Argument_shape_feature", "_UI_Argument_type"),
+				ArgumentPackage.Literals.ARGUMENT__SHAPE, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Image feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This adds a property descriptor for the Image feature. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected void addImagePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Argument_image_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Argument_image_feature", "_UI_Argument_type"),
-				 ArgumentPackage.Literals.ARGUMENT__IMAGE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory)
+						.getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_Argument_image_feature"),
+				getString("_UI_PropertyDescriptor_description",
+						"_UI_Argument_image_feature", "_UI_Argument_type"),
+				ArgumentPackage.Literals.ARGUMENT__IMAGE, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Value feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This adds a property descriptor for the Value feature. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected void addValuePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Argument_value_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Argument_value_feature", "_UI_Argument_type"),
-				 ArgumentPackage.Literals.ARGUMENT__VALUE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory)
+						.getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_Argument_value_feature"),
+				getString("_UI_PropertyDescriptor_description",
+						"_UI_Argument_value_feature", "_UI_Argument_type"),
+				ArgumentPackage.Literals.ARGUMENT__VALUE, true, false, true,
+				null, null, null));
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This specifies how to implement {@link #getChildren} and is used to
+	 * deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand},
+	 * {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in
+	 * {@link #createCommand}. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(
+			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ArgumentPackage.Literals.ARGUMENT__EXPR);
@@ -295,48 +265,54 @@ public class ArgumentItemProvider
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
+		// Check the type of the specified child object and return the proper
+		// feature to use for
 		// adding (see {@link AddCommand}) it as a child.
 
 		return super.getChildFeature(object, child);
 	}
 
 	/**
-	 * This returns Argument.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This returns Argument.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Argument"));
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/Argument"));
 	}
 
 	/**
-	 * This returns the label text for the adapted class.
-	 * <!-- begin-user-doc -->
+	 * This returns the label text for the adapted class. 
+	 * <!-- begin-user-doc--> 
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
+	 * @generated NOT
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Argument)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Argument_type") :
-			getString("_UI_Argument_type") + " " + label;
+		final Argument argument = (Argument) object;
+		String label = argument.getName();
+		label = label == null || label.length() == 0 ? getString("_UI_Argument_type")
+				: getString("_UI_Argument_type") + " " + label;
+		final String description = argument.getDescription();
+		return description == null || description.length() == 0 ? label : label
+				+ " : " + description;
 	}
 
 	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update any cached
-	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This handles model notifications by calling {@link #updateChildren} to
+	 * update any cached children and by creating a viewer notification, which
+	 * it passes to {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -344,70 +320,71 @@ public class ArgumentItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Argument.class)) {
-			case ArgumentPackage.ARGUMENT__NAME:
-			case ArgumentPackage.ARGUMENT__DESCRIPTION:
-			case ArgumentPackage.ARGUMENT__ROUND:
-			case ArgumentPackage.ARGUMENT__FOREGROUND:
-			case ArgumentPackage.ARGUMENT__BACKGROUND:
-			case ArgumentPackage.ARGUMENT__SHAPE:
-			case ArgumentPackage.ARGUMENT__IMAGE:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-			case ArgumentPackage.ARGUMENT__EXPR:
-			case ArgumentPackage.ARGUMENT__GROUNDS:
-			case ArgumentPackage.ARGUMENT__WARRANTS:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-				return;
+		case ArgumentPackage.ARGUMENT__NAME:
+		case ArgumentPackage.ARGUMENT__DESCRIPTION:
+		case ArgumentPackage.ARGUMENT__ROUND:
+		case ArgumentPackage.ARGUMENT__FOREGROUND:
+		case ArgumentPackage.ARGUMENT__BACKGROUND:
+		case ArgumentPackage.ARGUMENT__SHAPE:
+		case ArgumentPackage.ARGUMENT__IMAGE:
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), false, true));
+			return;
+		case ArgumentPackage.ARGUMENT__EXPR:
+		case ArgumentPackage.ARGUMENT__GROUNDS:
+		case ArgumentPackage.ARGUMENT__WARRANTS:
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), true, false));
+			return;
 		}
 		super.notifyChanged(notification);
 	}
 
 	/**
-	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
-	 * that can be created under this object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s
+	 * describing the children that can be created under this object. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(
+			Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add
-			(createChildParameter
-				(ArgumentPackage.Literals.ARGUMENT__EXPR,
-				 ArgumentFactory.eINSTANCE.createExpression()));
+		newChildDescriptors.add(createChildParameter(
+				ArgumentPackage.Literals.ARGUMENT__EXPR,
+				ArgumentFactory.eINSTANCE.createExpression()));
 
-		newChildDescriptors.add
-			(createChildParameter
-				(ArgumentPackage.Literals.ARGUMENT__GROUNDS,
-				 ArgumentFactory.eINSTANCE.createArgument()));
+		newChildDescriptors.add(createChildParameter(
+				ArgumentPackage.Literals.ARGUMENT__GROUNDS,
+				ArgumentFactory.eINSTANCE.createArgument()));
 
-		newChildDescriptors.add
-			(createChildParameter
-				(ArgumentPackage.Literals.ARGUMENT__WARRANTS,
-				 ArgumentFactory.eINSTANCE.createArgument()));
+		newChildDescriptors.add(createChildParameter(
+				ArgumentPackage.Literals.ARGUMENT__WARRANTS,
+				ArgumentFactory.eINSTANCE.createArgument()));
 	}
 
 	/**
-	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This returns the label text for
+	 * {@link org.eclipse.emf.edit.command.CreateChildCommand}. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+	public String getCreateChildText(Object owner, Object feature,
+			Object child, Collection<?> selection) {
 		Object childFeature = feature;
 		Object childObject = child;
 
-		boolean qualify =
-			childFeature == ArgumentPackage.Literals.ARGUMENT__GROUNDS ||
-			childFeature == ArgumentPackage.Literals.ARGUMENT__WARRANTS;
+		boolean qualify = childFeature == ArgumentPackage.Literals.ARGUMENT__GROUNDS
+				|| childFeature == ArgumentPackage.Literals.ARGUMENT__WARRANTS;
 
 		if (qualify) {
-			return getString
-				("_UI_CreateChild_text2",
-				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+			return getString("_UI_CreateChild_text2", new Object[] {
+					getTypeText(childObject), getFeatureText(childFeature),
+					getTypeText(owner) });
 		}
 		return super.getCreateChildText(owner, feature, child, selection);
 	}

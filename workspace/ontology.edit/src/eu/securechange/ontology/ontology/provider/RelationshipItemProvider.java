@@ -6,21 +6,13 @@
 package eu.securechange.ontology.ontology.provider;
 
 
-import eu.securechange.ontology.ontology.OntologyFactory;
-import eu.securechange.ontology.ontology.OntologyPackage;
-import eu.securechange.ontology.ontology.RelType;
-import eu.securechange.ontology.ontology.Relationship;
-
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -31,6 +23,16 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import eu.securechange.ontology.ontology.OntologyFactory;
+import eu.securechange.ontology.ontology.OntologyPackage;
+import eu.securechange.ontology.ontology.RelType;
+import eu.securechange.ontology.ontology.Relationship;
+
+import eu.securechange.ontology.ontology.OntologyFactory;
+import eu.securechange.ontology.ontology.OntologyPackage;
+import eu.securechange.ontology.ontology.RelType;
+import eu.securechange.ontology.ontology.Relationship;
 
 /**
  * This is the item provider adapter for a {@link eu.securechange.ontology.ontology.Relationship} object.
@@ -220,16 +222,27 @@ public class RelationshipItemProvider
    * This returns the label text for the adapted class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
+   * @generated NOT
    */
   @Override
   public String getText(Object object)
   {
-    RelType labelValue = ((Relationship)object).getType();
+	final Relationship relationship = (Relationship)object;
+	RelType labelValue = relationship.getType();
     String label = labelValue == null ? null : labelValue.toString();
-    return label == null || label.length() == 0 ?
+    label = label == null || label.length() == 0 ?
       getString("_UI_Relationship_type") :
       getString("_UI_Relationship_type") + " " + label;
+	String sourceName = relationship.getSource() != null ? relationship.getSource().getName() : null;
+	sourceName = sourceName == null ? "" : sourceName;
+	String targetName = relationship.getTarget() != null ? relationship.getTarget().getName() : null;
+	targetName = targetName == null ? "" : targetName;
+	String dependumName = relationship.getDependum() != null ? relationship.getDependum().getName() : null;
+	dependumName = dependumName == null ? "" : dependumName;
+	label = (sourceName + targetName + dependumName).length() == 0 ? 
+			label :
+			label + " (" + sourceName + ", " + targetName + (dependumName.length() == 0 ? "" : ", " + dependumName) + ")";
+    return label;
   }
 
   /**
