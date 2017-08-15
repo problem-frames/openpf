@@ -5,11 +5,14 @@ generate problem "http://open.ac.uk/problem"
 ProblemDiagram: "problem:" name=ID ("for" highlight=[Node])?
 	((nodes+=Node | links+=Link))*;
 
+Clock: Node | Phenomenon;
+
 Node:
 	name=ID (type=NodeType)?
 	((":")? description=STRING)?
 	("{"
 	(hiddenPhenomena+=Phenomenon (',' hiddenPhenomena+=Phenomenon)*)?
+	(timingConstraint+=Constraint (';'timingConstraint+=Constraint)*)?
 	(subproblem+=ProblemDiagram
 	| "see" "domain" problemNodeRef+=[Node]
 	| "see" "problem" problemRef+=[ProblemDiagram]
@@ -25,15 +28,24 @@ Phenomenon:
 enum PhenomenonType:
 	UNSPECIFIED="phenomenon" | EVENT="event" | STATE="state";
 
+enum ConstraintType:
+   StrictPre="<" |cause="<="|alternate="~";
+   
+Constraint: 
+      (type=ConstraintType) '(' (operand+=[Clock]) (',' (operand+=[Clock]))* ')';
+
 Link:
-	from=[Node] (type=LinkType) to=[Node] ('{' phenomena+=Phenomenon (',' phenomena+=Phenomenon)*
+	from=[Node] (type=LinkType) to=[Node] ('{' phenomena+=Phenomenon (',' phenomena+=Phenomenon)* 
+		(timing+=Constraint (';' timing+=Constraint)*)?
 	'}')?
 	((":")? description=STRING)?;
 
 enum LinkType:
 	INTERFACE="--" | REFERENCE="~~" | CONSTRAINT="<~" | CONCERN="->" | INV_CONSTRAINT="~>";
 
+@Override 
 terminal ID: ('#' (!('#'))+ '#') |
   ('^'? ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*);
   
 terminal QUALIFIED_NAME : ID ('.' ID)*;  
+	

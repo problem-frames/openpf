@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.problem;
 
@@ -111,7 +108,7 @@ public enum LinkType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #CONSTRAINT
-   * @model literal="<~"
+   * @model literal="&lt;~"
    * @generated
    * @ordered
    */
@@ -126,7 +123,7 @@ public enum LinkType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #CONCERN
-   * @model literal="->"
+   * @model literal="-&gt;"
    * @generated
    * @ordered
    */
@@ -141,7 +138,7 @@ public enum LinkType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #INV_CONSTRAINT
-   * @model literal="~>"
+   * @model literal="~&gt;"
    * @generated
    * @ordered
    */
@@ -175,6 +172,8 @@ public enum LinkType implements Enumerator
    * Returns the '<em><b>Link Type</b></em>' literal with the specified literal value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * @param literal the literal.
+   * @return the matching enumerator or <code>null</code>.
    * @generated
    */
   public static LinkType get(String literal)
@@ -194,6 +193,8 @@ public enum LinkType implements Enumerator
    * Returns the '<em><b>Link Type</b></em>' literal with the specified name.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * @param name the name.
+   * @return the matching enumerator or <code>null</code>.
    * @generated
    */
   public static LinkType getByName(String name)
@@ -213,6 +214,8 @@ public enum LinkType implements Enumerator
    * Returns the '<em><b>Link Type</b></em>' literal with the specified integer value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * @param value the integer value.
+   * @return the matching enumerator or <code>null</code>.
    * @generated
    */
   public static LinkType get(int value)

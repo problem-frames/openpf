@@ -12,7 +12,7 @@ import uk.ac.open.problem.Link;
 import uk.ac.open.problem.LinkType;
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.ProblemDiagram;
-import uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil;
+//import uk.ac.open.problem.diagram.part.ProblemDiagramEditorUtil;
 
 /**
  * 
@@ -66,7 +66,7 @@ public class ProblemEditor extends UncalEditor {
 	@Override
 	protected void createDiagram(URI diagramURI, URI modelURI, Resource xtextResource) {
 		super.createDiagram(diagramURI, modelURI, xtextResource);
-		ProblemDiagramEditorUtil.createDiagram(diagramURI, modelURI,
-				new NullProgressMonitor());
+//		ProblemDiagramEditorUtil.createDiagram(diagramURI, modelURI,
+//				new NullProgressMonitor());
 	}	
 }

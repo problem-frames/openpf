@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.problem.impl;
 
@@ -32,13 +29,13 @@ import uk.ac.open.problem.ProblemPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.problem.impl.ProblemDiagramImpl#getName <em>Name</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.ProblemDiagramImpl#getHighlight <em>Highlight</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.ProblemDiagramImpl#getNodes <em>Nodes</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.ProblemDiagramImpl#getLinks <em>Links</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

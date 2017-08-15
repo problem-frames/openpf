@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.problem.impl;
 
@@ -13,6 +10,9 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import uk.ac.open.problem.Clock;
+import uk.ac.open.problem.Constraint;
+import uk.ac.open.problem.ConstraintType;
 import uk.ac.open.problem.Link;
 import uk.ac.open.problem.LinkType;
 import uk.ac.open.problem.Node;
@@ -43,6 +43,13 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass clockEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass nodeEClass = null;
 
   /**
@@ -51,6 +58,13 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * @generated
    */
   private EClass phenomenonEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass constraintEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -72,6 +86,13 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * @generated
    */
   private EEnum phenomenonTypeEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum constraintTypeEEnum = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -198,6 +219,36 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getClock()
+  {
+    return clockEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getClock_Name()
+  {
+    return (EAttribute)clockEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getClock_Description()
+  {
+    return (EAttribute)clockEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getNode()
   {
     return nodeEClass;
@@ -208,7 +259,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getNode_Name()
+  public EAttribute getNode_Type()
   {
     return (EAttribute)nodeEClass.getEStructuralFeatures().get(0);
   }
@@ -218,29 +269,19 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getNode_Type()
-  {
-    return (EAttribute)nodeEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getNode_Description()
-  {
-    return (EAttribute)nodeEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getNode_HiddenPhenomena()
   {
-    return (EReference)nodeEClass.getEStructuralFeatures().get(3);
+    return (EReference)nodeEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getNode_TimingConstraint()
+  {
+    return (EReference)nodeEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -250,7 +291,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    */
   public EReference getNode_Subproblem()
   {
-    return (EReference)nodeEClass.getEStructuralFeatures().get(4);
+    return (EReference)nodeEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -260,7 +301,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    */
   public EReference getNode_ProblemNodeRef()
   {
-    return (EReference)nodeEClass.getEStructuralFeatures().get(5);
+    return (EReference)nodeEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -270,7 +311,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    */
   public EReference getNode_ProblemRef()
   {
-    return (EReference)nodeEClass.getEStructuralFeatures().get(6);
+    return (EReference)nodeEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -280,7 +321,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    */
   public EAttribute getNode_Href()
   {
-    return (EAttribute)nodeEClass.getEStructuralFeatures().get(7);
+    return (EAttribute)nodeEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -318,9 +359,9 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getPhenomenon_Name()
+  public EClass getConstraint()
   {
-    return (EAttribute)phenomenonEClass.getEStructuralFeatures().get(2);
+    return constraintEClass;
   }
 
   /**
@@ -328,9 +369,19 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getPhenomenon_Description()
+  public EAttribute getConstraint_Type()
   {
-    return (EAttribute)phenomenonEClass.getEStructuralFeatures().get(3);
+    return (EAttribute)constraintEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getConstraint_Operand()
+  {
+    return (EReference)constraintEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -388,9 +439,19 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getLink_Timing()
+  {
+    return (EReference)linkEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EAttribute getLink_Description()
   {
-    return (EAttribute)linkEClass.getEStructuralFeatures().get(4);
+    return (EAttribute)linkEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -411,6 +472,16 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
   public EEnum getPhenomenonType()
   {
     return phenomenonTypeEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EEnum getConstraintType()
+  {
+    return constraintTypeEEnum;
   }
 
   /**
@@ -459,11 +530,14 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
     createEReference(problemDiagramEClass, PROBLEM_DIAGRAM__NODES);
     createEReference(problemDiagramEClass, PROBLEM_DIAGRAM__LINKS);
 
+    clockEClass = createEClass(CLOCK);
+    createEAttribute(clockEClass, CLOCK__NAME);
+    createEAttribute(clockEClass, CLOCK__DESCRIPTION);
+
     nodeEClass = createEClass(NODE);
-    createEAttribute(nodeEClass, NODE__NAME);
     createEAttribute(nodeEClass, NODE__TYPE);
-    createEAttribute(nodeEClass, NODE__DESCRIPTION);
     createEReference(nodeEClass, NODE__HIDDEN_PHENOMENA);
+    createEReference(nodeEClass, NODE__TIMING_CONSTRAINT);
     createEReference(nodeEClass, NODE__SUBPROBLEM);
     createEReference(nodeEClass, NODE__PROBLEM_NODE_REF);
     createEReference(nodeEClass, NODE__PROBLEM_REF);
@@ -472,19 +546,23 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
     phenomenonEClass = createEClass(PHENOMENON);
     createEAttribute(phenomenonEClass, PHENOMENON__TYPE);
     createEAttribute(phenomenonEClass, PHENOMENON__IS_CONTROLLED);
-    createEAttribute(phenomenonEClass, PHENOMENON__NAME);
-    createEAttribute(phenomenonEClass, PHENOMENON__DESCRIPTION);
+
+    constraintEClass = createEClass(CONSTRAINT);
+    createEAttribute(constraintEClass, CONSTRAINT__TYPE);
+    createEReference(constraintEClass, CONSTRAINT__OPERAND);
 
     linkEClass = createEClass(LINK);
     createEReference(linkEClass, LINK__FROM);
     createEAttribute(linkEClass, LINK__TYPE);
     createEReference(linkEClass, LINK__TO);
     createEReference(linkEClass, LINK__PHENOMENA);
+    createEReference(linkEClass, LINK__TIMING);
     createEAttribute(linkEClass, LINK__DESCRIPTION);
 
     // Create enums
     nodeTypeEEnum = createEEnum(NODE_TYPE);
     phenomenonTypeEEnum = createEEnum(PHENOMENON_TYPE);
+    constraintTypeEEnum = createEEnum(CONSTRAINT_TYPE);
     linkTypeEEnum = createEEnum(LINK_TYPE);
   }
 
@@ -517,6 +595,8 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    nodeEClass.getESuperTypes().add(this.getClock());
+    phenomenonEClass.getESuperTypes().add(this.getClock());
 
     // Initialize classes and features; add operations and parameters
     initEClass(problemDiagramEClass, ProblemDiagram.class, "ProblemDiagram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -525,11 +605,14 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
     initEReference(getProblemDiagram_Nodes(), this.getNode(), null, "nodes", null, 0, -1, ProblemDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getProblemDiagram_Links(), this.getLink(), null, "links", null, 0, -1, ProblemDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(clockEClass, Clock.class, "Clock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getClock_Name(), ecorePackage.getEString(), "name", null, 0, 1, Clock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getClock_Description(), ecorePackage.getEString(), "description", null, 0, 1, Clock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(nodeEClass, Node.class, "Node", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getNode_Name(), ecorePackage.getEString(), "name", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getNode_Type(), this.getNodeType(), "type", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getNode_Description(), ecorePackage.getEString(), "description", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getNode_HiddenPhenomena(), this.getPhenomenon(), null, "hiddenPhenomena", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getNode_TimingConstraint(), this.getConstraint(), null, "timingConstraint", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getNode_Subproblem(), this.getProblemDiagram(), null, "subproblem", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getNode_ProblemNodeRef(), this.getNode(), null, "problemNodeRef", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getNode_ProblemRef(), this.getProblemDiagram(), null, "problemRef", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -538,14 +621,17 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
     initEClass(phenomenonEClass, Phenomenon.class, "Phenomenon", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getPhenomenon_Type(), this.getPhenomenonType(), "type", null, 0, 1, Phenomenon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getPhenomenon_IsControlled(), ecorePackage.getEBoolean(), "isControlled", null, 0, 1, Phenomenon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPhenomenon_Name(), ecorePackage.getEString(), "name", null, 0, 1, Phenomenon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPhenomenon_Description(), ecorePackage.getEString(), "description", null, 0, 1, Phenomenon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(constraintEClass, Constraint.class, "Constraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getConstraint_Type(), this.getConstraintType(), "type", null, 0, 1, Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getConstraint_Operand(), this.getClock(), null, "operand", null, 0, -1, Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(linkEClass, Link.class, "Link", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getLink_From(), this.getNode(), null, "from", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getLink_Type(), this.getLinkType(), "type", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getLink_To(), this.getNode(), null, "to", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getLink_Phenomena(), this.getPhenomenon(), null, "phenomena", null, 0, -1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getLink_Timing(), this.getConstraint(), null, "timing", null, 0, -1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getLink_Description(), ecorePackage.getEString(), "description", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
@@ -563,6 +649,11 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
     addEEnumLiteral(phenomenonTypeEEnum, PhenomenonType.UNSPECIFIED);
     addEEnumLiteral(phenomenonTypeEEnum, PhenomenonType.EVENT);
     addEEnumLiteral(phenomenonTypeEEnum, PhenomenonType.STATE);
+
+    initEEnum(constraintTypeEEnum, ConstraintType.class, "ConstraintType");
+    addEEnumLiteral(constraintTypeEEnum, ConstraintType.STRICT_PRE);
+    addEEnumLiteral(constraintTypeEEnum, ConstraintType.CAUSE);
+    addEEnumLiteral(constraintTypeEEnum, ConstraintType.ALTERNATE);
 
     initEEnum(linkTypeEEnum, LinkType.class, "LinkType");
     addEEnumLiteral(linkTypeEEnum, LinkType.INTERFACE);

@@ -10,125 +10,125 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Phenomenon Type</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Constraint Type</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see uk.ac.open.problem.ProblemPackage#getPhenomenonType()
+ * @see uk.ac.open.problem.ProblemPackage#getConstraintType()
  * @model
  * @generated
  */
-public enum PhenomenonType implements Enumerator
+public enum ConstraintType implements Enumerator
 {
   /**
-   * The '<em><b>UNSPECIFIED</b></em>' literal object.
+   * The '<em><b>Strict Pre</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #UNSPECIFIED_VALUE
+   * @see #STRICT_PRE_VALUE
    * @generated
    * @ordered
    */
-  UNSPECIFIED(0, "UNSPECIFIED", "phenomenon"),
+  STRICT_PRE(0, "StrictPre", "<"),
 
   /**
-   * The '<em><b>EVENT</b></em>' literal object.
+   * The '<em><b>Cause</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #EVENT_VALUE
+   * @see #CAUSE_VALUE
    * @generated
    * @ordered
    */
-  EVENT(1, "EVENT", "event"),
+  CAUSE(1, "cause", "<="),
 
   /**
-   * The '<em><b>STATE</b></em>' literal object.
+   * The '<em><b>Alternate</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #STATE_VALUE
+   * @see #ALTERNATE_VALUE
    * @generated
    * @ordered
    */
-  STATE(2, "STATE", "state");
+  ALTERNATE(2, "alternate", "~");
 
   /**
-   * The '<em><b>UNSPECIFIED</b></em>' literal value.
+   * The '<em><b>Strict Pre</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>UNSPECIFIED</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>Strict Pre</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #UNSPECIFIED
-   * @model literal="phenomenon"
+   * @see #STRICT_PRE
+   * @model name="StrictPre" literal="&lt;"
    * @generated
    * @ordered
    */
-  public static final int UNSPECIFIED_VALUE = 0;
+  public static final int STRICT_PRE_VALUE = 0;
 
   /**
-   * The '<em><b>EVENT</b></em>' literal value.
+   * The '<em><b>Cause</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>EVENT</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>Cause</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #EVENT
-   * @model literal="event"
+   * @see #CAUSE
+   * @model name="cause" literal="&lt;="
    * @generated
    * @ordered
    */
-  public static final int EVENT_VALUE = 1;
+  public static final int CAUSE_VALUE = 1;
 
   /**
-   * The '<em><b>STATE</b></em>' literal value.
+   * The '<em><b>Alternate</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>STATE</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>Alternate</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #STATE
-   * @model literal="state"
+   * @see #ALTERNATE
+   * @model name="alternate" literal="~"
    * @generated
    * @ordered
    */
-  public static final int STATE_VALUE = 2;
+  public static final int ALTERNATE_VALUE = 2;
 
   /**
-   * An array of all the '<em><b>Phenomenon Type</b></em>' enumerators.
+   * An array of all the '<em><b>Constraint Type</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private static final PhenomenonType[] VALUES_ARRAY =
-    new PhenomenonType[]
+  private static final ConstraintType[] VALUES_ARRAY =
+    new ConstraintType[]
     {
-      UNSPECIFIED,
-      EVENT,
-      STATE,
+      STRICT_PRE,
+      CAUSE,
+      ALTERNATE,
     };
 
   /**
-   * A public read-only list of all the '<em><b>Phenomenon Type</b></em>' enumerators.
+   * A public read-only list of all the '<em><b>Constraint Type</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static final List<PhenomenonType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+  public static final List<ConstraintType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>Phenomenon Type</b></em>' literal with the specified literal value.
+   * Returns the '<em><b>Constraint Type</b></em>' literal with the specified literal value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param literal the literal.
    * @return the matching enumerator or <code>null</code>.
    * @generated
    */
-  public static PhenomenonType get(String literal)
+  public static ConstraintType get(String literal)
   {
     for (int i = 0; i < VALUES_ARRAY.length; ++i)
     {
-      PhenomenonType result = VALUES_ARRAY[i];
+      ConstraintType result = VALUES_ARRAY[i];
       if (result.toString().equals(literal))
       {
         return result;
@@ -138,18 +138,18 @@ public enum PhenomenonType implements Enumerator
   }
 
   /**
-   * Returns the '<em><b>Phenomenon Type</b></em>' literal with the specified name.
+   * Returns the '<em><b>Constraint Type</b></em>' literal with the specified name.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param name the name.
    * @return the matching enumerator or <code>null</code>.
    * @generated
    */
-  public static PhenomenonType getByName(String name)
+  public static ConstraintType getByName(String name)
   {
     for (int i = 0; i < VALUES_ARRAY.length; ++i)
     {
-      PhenomenonType result = VALUES_ARRAY[i];
+      ConstraintType result = VALUES_ARRAY[i];
       if (result.getName().equals(name))
       {
         return result;
@@ -159,20 +159,20 @@ public enum PhenomenonType implements Enumerator
   }
 
   /**
-   * Returns the '<em><b>Phenomenon Type</b></em>' literal with the specified integer value.
+   * Returns the '<em><b>Constraint Type</b></em>' literal with the specified integer value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the integer value.
    * @return the matching enumerator or <code>null</code>.
    * @generated
    */
-  public static PhenomenonType get(int value)
+  public static ConstraintType get(int value)
   {
     switch (value)
     {
-      case UNSPECIFIED_VALUE: return UNSPECIFIED;
-      case EVENT_VALUE: return EVENT;
-      case STATE_VALUE: return STATE;
+      case STRICT_PRE_VALUE: return STRICT_PRE;
+      case CAUSE_VALUE: return CAUSE;
+      case ALTERNATE_VALUE: return ALTERNATE;
     }
     return null;
   }
@@ -204,7 +204,7 @@ public enum PhenomenonType implements Enumerator
    * <!-- end-user-doc -->
    * @generated
    */
-  private PhenomenonType(int value, String name, String literal)
+  private ConstraintType(int value, String name, String literal)
   {
     this.value = value;
     this.name = name;
@@ -253,4 +253,4 @@ public enum PhenomenonType implements Enumerator
     return literal;
   }
   
-} //PhenomenonType
+} //ConstraintType

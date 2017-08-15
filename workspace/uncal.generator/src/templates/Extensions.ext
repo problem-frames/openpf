@@ -1,4 +1,0 @@
-import uk::ac::open::pf::pF;
-
-sortedGreetings(Model this) :
-	this.greetings.sortBy(g|g.name.toLowerCase());

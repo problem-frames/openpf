@@ -1,7 +1,0 @@
-# Tracing options for the argument.diagram plug-in
-
-# Common issues
-argument.diagram/debug=false
-
-# Visual IDs
-argument.diagram/debug/visualID=false

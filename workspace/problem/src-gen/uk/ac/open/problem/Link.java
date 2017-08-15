@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.problem;
 
@@ -16,14 +13,15 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.problem.Link#getFrom <em>From</em>}</li>
  *   <li>{@link uk.ac.open.problem.Link#getType <em>Type</em>}</li>
  *   <li>{@link uk.ac.open.problem.Link#getTo <em>To</em>}</li>
  *   <li>{@link uk.ac.open.problem.Link#getPhenomena <em>Phenomena</em>}</li>
+ *   <li>{@link uk.ac.open.problem.Link#getTiming <em>Timing</em>}</li>
  *   <li>{@link uk.ac.open.problem.Link#getDescription <em>Description</em>}</li>
  * </ul>
- * </p>
  *
  * @see uk.ac.open.problem.ProblemPackage#getLink()
  * @model
@@ -127,6 +125,22 @@ public interface Link extends EObject
    * @generated
    */
   EList<Phenomenon> getPhenomena();
+
+  /**
+   * Returns the value of the '<em><b>Timing</b></em>' containment reference list.
+   * The list contents are of type {@link uk.ac.open.problem.Constraint}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Timing</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Timing</em>' containment reference list.
+   * @see uk.ac.open.problem.ProblemPackage#getLink_Timing()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Constraint> getTiming();
 
   /**
    * Returns the value of the '<em><b>Description</b></em>' attribute.

@@ -21,11 +21,11 @@ import org.eclipse.jface.text.contentassist.IContentAssistProcessor;
 import org.eclipse.xtext.gmf.glue.Activator;
 import org.eclipse.xtext.gmf.glue.editingdomain.UpdateXtextResourceTextCommand;
 import org.eclipse.xtext.parser.IParseResult;
-import org.eclipse.xtext.parser.antlr.IAntlrParser;
-import org.eclipse.xtext.parsetree.CompositeNode;
-import org.eclipse.xtext.parsetree.NodeAdapter;
-import org.eclipse.xtext.parsetree.NodeUtil;
-import org.eclipse.xtext.parsetree.SyntaxError;
+//import org.eclipse.xtext.parser.antlr.IAntlrParser;
+//import org.eclipse.xtext.parsetree.CompositeNode;
+//import org.eclipse.xtext.parsetree.NodeAdapter;
+//import org.eclipse.xtext.parsetree.NodeUtil;
+//import org.eclipse.xtext.parsetree.SyntaxError;
 import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.ui.editor.contentassist.XtextContentAssistProcessor;
 
@@ -61,7 +61,7 @@ public class AntlrParserWrapper implements IParser {
 	}
 
 	public String getEditString(IAdaptable element, int flags) {
-		EObject semanticElement = (EObject) element.getAdapter(EObject.class);
+		EObject semanticElement = element.getAdapter(EObject.class);
 		if (semanticElement != null) {
 			NodeAdapter nodeAdapter = NodeUtil.getNodeAdapter(semanticElement);
 			if (nodeAdapter != null) {
@@ -72,7 +72,7 @@ public class AntlrParserWrapper implements IParser {
 	}
 
 	public ICommand getParseCommand(IAdaptable element, final String newString, int flags) {
-		EObject semanticElement = (EObject) element.getAdapter(EObject.class);
+		EObject semanticElement = element.getAdapter(EObject.class);
 		if (semanticElement != null) {
 			IParseResult parseResult = xtextParser.parse(parserRuleName, new StringReader(newString));
 			if (isValidParseResult(parseResult, semanticElement)) {
@@ -100,7 +100,7 @@ public class AntlrParserWrapper implements IParser {
 	public IParserEditStatus isValidEditString(IAdaptable element, String editString) {
 		try {
 			IParseResult parseResult = xtextParser.parse(parserRuleName, new StringReader(editString));
-			if (isValidParseResult(parseResult, (EObject) element.getAdapter(EObject.class))) {
+			if (isValidParseResult(parseResult, element.getAdapter(EObject.class))) {
 				return new ParserEditStatus(IStatus.OK, Activator.PLUGIN_ID, IParserEditStatus.EDITABLE, "OK", null);
 			} else {
 				SyntaxError syntaxError = parseResult.getParseErrors().get(0);

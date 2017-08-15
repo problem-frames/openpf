@@ -16,7 +16,7 @@ import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.osgi.framework.debug.Debug;
+//import org.eclipse.osgi.framework.debug.Debug;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchWindow;
 
@@ -87,7 +87,7 @@ public class CleanProjects extends ExtensionReader implements IHandler
 		  System.out.println(classname);
 //		  Debug.DEBUG_LOADER = true;
 		  IGenerator cv = (IGenerator) generator.createExecutableExtension("class");
-		  Debug.DEBUG_LOADER = false;
+//		  Debug.DEBUG_LOADER = false;
 		  cv.cleanup();
 //	      cv.generate();
 		} catch (ClassCastException x) {

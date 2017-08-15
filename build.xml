@@ -1,9 +1,6 @@
 <project default="build">
   <target name="build">
     <exec dir="build.x86_64" executable="./build.sh"/>
-<!--
-    <exec dir="test" executable="./build-test.sh"/>
--->
     <exec dir="build.x86_64" executable="./deploy.sh"/>
   </target>
 </project>

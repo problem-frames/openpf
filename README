@@ -1,4 +1,4 @@
- = An Open Requirements Engineering Tool =
+ = OpenPF: An Open Requirements Engineering Tool =
 
  == User's manual == 
  * ON reasoning
@@ -20,25 +20,12 @@
 
  == Developer's Manual ==
 
- * To develop OpenPF/OpenOME inside the Eclipse IDE, you need the following steps:
+ * To develop OpenPF, you need the following steps:
   * checkout the code for openpf:
-    git svn clone -r HEAD https://computing-research.open.ac.uk/repos/openpf/trunk openpf
-If you are behind a proxy server, you need to change the configuration file 
-$HOME/.subversion/servers, for example:
-[global]
-http-proxy-host = wwwcache.open.ac.uk
-http-proxy-port = 80
-    * For the latest code of openome, see Appendix A.
 
-  * Install the Eclipse IDE.  
-To simplify the development, we currently use the script "IDE/pf-3.6.sh" to install all necessary dependent products. Alternative step please see Appendix B.
+    git clone https://github.com/problem-frames/openpf
 
   * Run Eclipse
-    ./pf.sh (if you already installed the minimal set of plugins for the openpf
-development by following the above installation script; 
-or
-    ./develop (if you want to use the SDK preinstalled under $HOME/SDK/3.6pf 
-		folder). 
 
     * The following menu/dialog options are used to develop for the first time:
       * import the projects from the workspace
@@ -52,10 +39,9 @@ or
  == Maintainer's Manual ==
 
   * Run the headless script to build locally:
+
     cd build.x86_64   (or cd build.macosx)
     build.sh 
-
-  * It is now continously integrated on the sead1 server: any commit to subversion repository trunk/workspace will trigger a rebuilt of the binaries.
 
 Enjoy Problem Solving,
 

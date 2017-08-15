@@ -8,7 +8,7 @@ import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.StructuredSelection;
-import org.eclipse.osgi.framework.debug.Debug;
+//import org.eclipse.osgi.framework.debug.Debug;
 import org.eclipse.ui.IActionDelegate;
 import org.eclipse.ui.IObjectActionDelegate;
 import org.eclipse.ui.IWorkbenchPage;
@@ -39,7 +39,7 @@ public class ConvertAction extends ExtensionReader implements IObjectActionDeleg
 		if (args[0].endsWith(input) && args[1].endsWith(output)) {
 			try {
 			  IConvertor cv = (IConvertor) convertor.createExecutableExtension("class");
-			  Debug.DEBUG_LOADER = false;
+//			  Debug.DEBUG_LOADER = false;
 		      cv.convert(args[0], args[1]);
 			} catch (ClassCastException x) {
 				x.printStackTrace();

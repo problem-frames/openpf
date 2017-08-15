@@ -23,9 +23,9 @@ import org.eclipse.emf.transaction.util.TransactionUtil;
 import org.eclipse.emf.workspace.IWorkspaceCommandStack;
 import org.eclipse.gmf.runtime.common.core.command.ICommand;
 import org.eclipse.xtext.gmf.glue.Activator;
-import org.eclipse.xtext.parsetree.CompositeNode;
-import org.eclipse.xtext.parsetree.NodeAdapter;
-import org.eclipse.xtext.parsetree.NodeUtil;
+//import org.eclipse.xtext.parsetree.CompositeNode;
+//import org.eclipse.xtext.parsetree.NodeAdapter;
+//import org.eclipse.xtext.parsetree.NodeUtil;
 import org.eclipse.xtext.parsetree.reconstr.Serializer;
 import org.eclipse.xtext.resource.XtextResource;
 

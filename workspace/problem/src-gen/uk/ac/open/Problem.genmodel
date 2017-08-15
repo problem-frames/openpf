@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<genmodel:GenModel xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/problem/src-gen"
-    editDirectory="/problem.edit/src" editorDirectory="/problem.editor/src" modelPluginID="problem"
-    forceOverwrite="true" modelName="Problem" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
-    complianceLevel="5.0" copyrightFields="false" editPluginID="problem.edit" editorPluginID="problem.editor">
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/problem/src-gen" editDirectory="/problem.edit/src"
+    editorDirectory="/problem.editor/src" modelPluginID="problem" forceOverwrite="true"
+    modelName="Problem" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="6.0" copyrightFields="false" editPluginID="problem.edit" editorPluginID="problem.editor"
+    runtimeVersion="2.13">
   <genPackages prefix="Problem" basePackage="uk.ac.open" disposableProviderFactory="true"
       ecorePackage="Problem.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="Problem.ecore#//NodeType">
@@ -22,6 +22,11 @@
       <genEnumLiterals ecoreEnumLiteral="Problem.ecore#//PhenomenonType/EVENT"/>
       <genEnumLiterals ecoreEnumLiteral="Problem.ecore#//PhenomenonType/STATE"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Problem.ecore#//ConstraintType">
+      <genEnumLiterals ecoreEnumLiteral="Problem.ecore#//ConstraintType/StrictPre"/>
+      <genEnumLiterals ecoreEnumLiteral="Problem.ecore#//ConstraintType/cause"/>
+      <genEnumLiterals ecoreEnumLiteral="Problem.ecore#//ConstraintType/alternate"/>
+    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="Problem.ecore#//LinkType">
       <genEnumLiterals ecoreEnumLiteral="Problem.ecore#//LinkType/INTERFACE"/>
       <genEnumLiterals ecoreEnumLiteral="Problem.ecore#//LinkType/REFERENCE"/>
@@ -35,11 +40,14 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Problem.ecore#//ProblemDiagram/nodes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Problem.ecore#//ProblemDiagram/links"/>
     </genClasses>
+    <genClasses ecoreClass="Problem.ecore#//Clock">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Problem.ecore#//Clock/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Problem.ecore#//Clock/description"/>
+    </genClasses>
     <genClasses ecoreClass="Problem.ecore#//Node">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Problem.ecore#//Node/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Problem.ecore#//Node/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Problem.ecore#//Node/description"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Problem.ecore#//Node/hiddenPhenomena"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Problem.ecore#//Node/timingConstraint"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Problem.ecore#//Node/subproblem"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Problem.ecore#//Node/problemNodeRef"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Problem.ecore#//Node/problemRef"/>
@@ -48,14 +56,17 @@
     <genClasses ecoreClass="Problem.ecore#//Phenomenon">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Problem.ecore#//Phenomenon/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Problem.ecore#//Phenomenon/isControlled"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Problem.ecore#//Phenomenon/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Problem.ecore#//Phenomenon/description"/>
+    </genClasses>
+    <genClasses ecoreClass="Problem.ecore#//Constraint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Problem.ecore#//Constraint/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Problem.ecore#//Constraint/operand"/>
     </genClasses>
     <genClasses ecoreClass="Problem.ecore#//Link">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Problem.ecore#//Link/from"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Problem.ecore#//Link/type"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Problem.ecore#//Link/to"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Problem.ecore#//Link/phenomena"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Problem.ecore#//Link/timing"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Problem.ecore#//Link/description"/>
     </genClasses>
   </genPackages>

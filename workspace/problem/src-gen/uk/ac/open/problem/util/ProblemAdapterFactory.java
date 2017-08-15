@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.problem.util;
 
@@ -83,6 +80,11 @@ public class ProblemAdapterFactory extends AdapterFactoryImpl
         return createProblemDiagramAdapter();
       }
       @Override
+      public Adapter caseClock(Clock object)
+      {
+        return createClockAdapter();
+      }
+      @Override
       public Adapter caseNode(Node object)
       {
         return createNodeAdapter();
@@ -91,6 +93,11 @@ public class ProblemAdapterFactory extends AdapterFactoryImpl
       public Adapter casePhenomenon(Phenomenon object)
       {
         return createPhenomenonAdapter();
+      }
+      @Override
+      public Adapter caseConstraint(Constraint object)
+      {
+        return createConstraintAdapter();
       }
       @Override
       public Adapter caseLink(Link object)
@@ -135,6 +142,21 @@ public class ProblemAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.problem.Clock <em>Clock</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.problem.Clock
+   * @generated
+   */
+  public Adapter createClockAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link uk.ac.open.problem.Node <em>Node</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -160,6 +182,21 @@ public class ProblemAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createPhenomenonAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.open.problem.Constraint <em>Constraint</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.open.problem.Constraint
+   * @generated
+   */
+  public Adapter createConstraintAdapter()
   {
     return null;
   }

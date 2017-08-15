@@ -1,3 +1,0 @@
-#core uk.ac.open.CreateExamplesTest
-problem uk.ac.open.CreateProblemExamplesTest
-#problem.diagram uk.ac.open.problem.diagram.test.CreateDefaultProblemDiagramTest

@@ -1,4 +1,0 @@
-Due to the lack of import support for 'load' instructions, you need to include the declarations so that it can be parsed by the complete event calculus grammar.
-See the examples in this folder, and the example of /Examples/event/examples/AkmanEtAl2004/ZooWorld.e
-
-The syntax rules are inside /Examples/event/EventCalculus.xtext.

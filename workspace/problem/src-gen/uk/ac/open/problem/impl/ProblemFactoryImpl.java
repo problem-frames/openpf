@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.problem.impl;
 
@@ -34,7 +31,7 @@ public class ProblemFactoryImpl extends EFactoryImpl implements ProblemFactory
   {
     try
     {
-      ProblemFactory theProblemFactory = (ProblemFactory)EPackage.Registry.INSTANCE.getEFactory("http://open.ac.uk/problem"); 
+      ProblemFactory theProblemFactory = (ProblemFactory)EPackage.Registry.INSTANCE.getEFactory(ProblemPackage.eNS_URI);
       if (theProblemFactory != null)
       {
         return theProblemFactory;
@@ -69,8 +66,10 @@ public class ProblemFactoryImpl extends EFactoryImpl implements ProblemFactory
     switch (eClass.getClassifierID())
     {
       case ProblemPackage.PROBLEM_DIAGRAM: return createProblemDiagram();
+      case ProblemPackage.CLOCK: return createClock();
       case ProblemPackage.NODE: return createNode();
       case ProblemPackage.PHENOMENON: return createPhenomenon();
+      case ProblemPackage.CONSTRAINT: return createConstraint();
       case ProblemPackage.LINK: return createLink();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -91,6 +90,8 @@ public class ProblemFactoryImpl extends EFactoryImpl implements ProblemFactory
         return createNodeTypeFromString(eDataType, initialValue);
       case ProblemPackage.PHENOMENON_TYPE:
         return createPhenomenonTypeFromString(eDataType, initialValue);
+      case ProblemPackage.CONSTRAINT_TYPE:
+        return createConstraintTypeFromString(eDataType, initialValue);
       case ProblemPackage.LINK_TYPE:
         return createLinkTypeFromString(eDataType, initialValue);
       default:
@@ -112,6 +113,8 @@ public class ProblemFactoryImpl extends EFactoryImpl implements ProblemFactory
         return convertNodeTypeToString(eDataType, instanceValue);
       case ProblemPackage.PHENOMENON_TYPE:
         return convertPhenomenonTypeToString(eDataType, instanceValue);
+      case ProblemPackage.CONSTRAINT_TYPE:
+        return convertConstraintTypeToString(eDataType, instanceValue);
       case ProblemPackage.LINK_TYPE:
         return convertLinkTypeToString(eDataType, instanceValue);
       default:
@@ -135,6 +138,17 @@ public class ProblemFactoryImpl extends EFactoryImpl implements ProblemFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public Clock createClock()
+  {
+    ClockImpl clock = new ClockImpl();
+    return clock;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Node createNode()
   {
     NodeImpl node = new NodeImpl();
@@ -150,6 +164,17 @@ public class ProblemFactoryImpl extends EFactoryImpl implements ProblemFactory
   {
     PhenomenonImpl phenomenon = new PhenomenonImpl();
     return phenomenon;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Constraint createConstraint()
+  {
+    ConstraintImpl constraint = new ConstraintImpl();
+    return constraint;
   }
 
   /**
@@ -203,6 +228,28 @@ public class ProblemFactoryImpl extends EFactoryImpl implements ProblemFactory
    * @generated
    */
   public String convertPhenomenonTypeToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ConstraintType createConstraintTypeFromString(EDataType eDataType, String initialValue)
+  {
+    ConstraintType result = ConstraintType.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertConstraintTypeToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }

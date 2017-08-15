@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.problem;
 
@@ -16,13 +13,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.problem.ProblemDiagram#getName <em>Name</em>}</li>
  *   <li>{@link uk.ac.open.problem.ProblemDiagram#getHighlight <em>Highlight</em>}</li>
  *   <li>{@link uk.ac.open.problem.ProblemDiagram#getNodes <em>Nodes</em>}</li>
  *   <li>{@link uk.ac.open.problem.ProblemDiagram#getLinks <em>Links</em>}</li>
  * </ul>
- * </p>
  *
  * @see uk.ac.open.problem.ProblemPackage#getProblemDiagram()
  * @model

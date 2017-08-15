@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.problem;
 
@@ -35,6 +32,15 @@ public interface ProblemFactory extends EFactory
   ProblemDiagram createProblemDiagram();
 
   /**
+   * Returns a new object of class '<em>Clock</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Clock</em>'.
+   * @generated
+   */
+  Clock createClock();
+
+  /**
    * Returns a new object of class '<em>Node</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -51,6 +57,15 @@ public interface ProblemFactory extends EFactory
    * @generated
    */
   Phenomenon createPhenomenon();
+
+  /**
+   * Returns a new object of class '<em>Constraint</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Constraint</em>'.
+   * @generated
+   */
+  Constraint createConstraint();
 
   /**
    * Returns a new object of class '<em>Link</em>'.

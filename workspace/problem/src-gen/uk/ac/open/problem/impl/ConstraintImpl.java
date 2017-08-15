@@ -2,31 +2,39 @@
  */
 package uk.ac.open.problem.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import uk.ac.open.problem.Phenomenon;
-import uk.ac.open.problem.PhenomenonType;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
+import uk.ac.open.problem.Clock;
+import uk.ac.open.problem.Constraint;
+import uk.ac.open.problem.ConstraintType;
 import uk.ac.open.problem.ProblemPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Phenomenon</b></em>'.
+ * An implementation of the model object '<em><b>Constraint</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link uk.ac.open.problem.impl.PhenomenonImpl#getType <em>Type</em>}</li>
- *   <li>{@link uk.ac.open.problem.impl.PhenomenonImpl#isIsControlled <em>Is Controlled</em>}</li>
+ *   <li>{@link uk.ac.open.problem.impl.ConstraintImpl#getType <em>Type</em>}</li>
+ *   <li>{@link uk.ac.open.problem.impl.ConstraintImpl#getOperand <em>Operand</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class PhenomenonImpl extends ClockImpl implements Phenomenon
+public class ConstraintImpl extends MinimalEObjectImpl.Container implements Constraint
 {
   /**
    * The default value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -36,7 +44,7 @@ public class PhenomenonImpl extends ClockImpl implements Phenomenon
    * @generated
    * @ordered
    */
-  protected static final PhenomenonType TYPE_EDEFAULT = PhenomenonType.UNSPECIFIED;
+  protected static final ConstraintType TYPE_EDEFAULT = ConstraintType.STRICT_PRE;
 
   /**
    * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -46,34 +54,24 @@ public class PhenomenonImpl extends ClockImpl implements Phenomenon
    * @generated
    * @ordered
    */
-  protected PhenomenonType type = TYPE_EDEFAULT;
+  protected ConstraintType type = TYPE_EDEFAULT;
 
   /**
-   * The default value of the '{@link #isIsControlled() <em>Is Controlled</em>}' attribute.
+   * The cached value of the '{@link #getOperand() <em>Operand</em>}' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #isIsControlled()
+   * @see #getOperand()
    * @generated
    * @ordered
    */
-  protected static final boolean IS_CONTROLLED_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isIsControlled() <em>Is Controlled</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isIsControlled()
-   * @generated
-   * @ordered
-   */
-  protected boolean isControlled = IS_CONTROLLED_EDEFAULT;
+  protected EList<Clock> operand;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected PhenomenonImpl()
+  protected ConstraintImpl()
   {
     super();
   }
@@ -86,7 +84,7 @@ public class PhenomenonImpl extends ClockImpl implements Phenomenon
   @Override
   protected EClass eStaticClass()
   {
-    return ProblemPackage.Literals.PHENOMENON;
+    return ProblemPackage.Literals.CONSTRAINT;
   }
 
   /**
@@ -94,7 +92,7 @@ public class PhenomenonImpl extends ClockImpl implements Phenomenon
    * <!-- end-user-doc -->
    * @generated
    */
-  public PhenomenonType getType()
+  public ConstraintType getType()
   {
     return type;
   }
@@ -104,12 +102,12 @@ public class PhenomenonImpl extends ClockImpl implements Phenomenon
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setType(PhenomenonType newType)
+  public void setType(ConstraintType newType)
   {
-    PhenomenonType oldType = type;
+    ConstraintType oldType = type;
     type = newType == null ? TYPE_EDEFAULT : newType;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.PHENOMENON__TYPE, oldType, type));
+      eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.CONSTRAINT__TYPE, oldType, type));
   }
 
   /**
@@ -117,22 +115,13 @@ public class PhenomenonImpl extends ClockImpl implements Phenomenon
    * <!-- end-user-doc -->
    * @generated
    */
-  public boolean isIsControlled()
+  public EList<Clock> getOperand()
   {
-    return isControlled;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setIsControlled(boolean newIsControlled)
-  {
-    boolean oldIsControlled = isControlled;
-    isControlled = newIsControlled;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.PHENOMENON__IS_CONTROLLED, oldIsControlled, isControlled));
+    if (operand == null)
+    {
+      operand = new EObjectResolvingEList<Clock>(Clock.class, this, ProblemPackage.CONSTRAINT__OPERAND);
+    }
+    return operand;
   }
 
   /**
@@ -145,10 +134,10 @@ public class PhenomenonImpl extends ClockImpl implements Phenomenon
   {
     switch (featureID)
     {
-      case ProblemPackage.PHENOMENON__TYPE:
+      case ProblemPackage.CONSTRAINT__TYPE:
         return getType();
-      case ProblemPackage.PHENOMENON__IS_CONTROLLED:
-        return isIsControlled();
+      case ProblemPackage.CONSTRAINT__OPERAND:
+        return getOperand();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -158,16 +147,18 @@ public class PhenomenonImpl extends ClockImpl implements Phenomenon
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case ProblemPackage.PHENOMENON__TYPE:
-        setType((PhenomenonType)newValue);
+      case ProblemPackage.CONSTRAINT__TYPE:
+        setType((ConstraintType)newValue);
         return;
-      case ProblemPackage.PHENOMENON__IS_CONTROLLED:
-        setIsControlled((Boolean)newValue);
+      case ProblemPackage.CONSTRAINT__OPERAND:
+        getOperand().clear();
+        getOperand().addAll((Collection<? extends Clock>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -183,11 +174,11 @@ public class PhenomenonImpl extends ClockImpl implements Phenomenon
   {
     switch (featureID)
     {
-      case ProblemPackage.PHENOMENON__TYPE:
+      case ProblemPackage.CONSTRAINT__TYPE:
         setType(TYPE_EDEFAULT);
         return;
-      case ProblemPackage.PHENOMENON__IS_CONTROLLED:
-        setIsControlled(IS_CONTROLLED_EDEFAULT);
+      case ProblemPackage.CONSTRAINT__OPERAND:
+        getOperand().clear();
         return;
     }
     super.eUnset(featureID);
@@ -203,10 +194,10 @@ public class PhenomenonImpl extends ClockImpl implements Phenomenon
   {
     switch (featureID)
     {
-      case ProblemPackage.PHENOMENON__TYPE:
+      case ProblemPackage.CONSTRAINT__TYPE:
         return type != TYPE_EDEFAULT;
-      case ProblemPackage.PHENOMENON__IS_CONTROLLED:
-        return isControlled != IS_CONTROLLED_EDEFAULT;
+      case ProblemPackage.CONSTRAINT__OPERAND:
+        return operand != null && !operand.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -224,10 +215,8 @@ public class PhenomenonImpl extends ClockImpl implements Phenomenon
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (type: ");
     result.append(type);
-    result.append(", isControlled: ");
-    result.append(isControlled);
     result.append(')');
     return result.toString();
   }
 
-} //PhenomenonImpl
+} //ConstraintImpl

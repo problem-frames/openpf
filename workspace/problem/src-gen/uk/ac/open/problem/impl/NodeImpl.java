@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.problem.impl;
 
@@ -16,13 +13,13 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import uk.ac.open.problem.Constraint;
 import uk.ac.open.problem.Node;
 import uk.ac.open.problem.NodeType;
 import uk.ac.open.problem.Phenomenon;
@@ -35,42 +32,21 @@ import uk.ac.open.problem.ProblemPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
- *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getName <em>Name</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getType <em>Type</em>}</li>
- *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getHiddenPhenomena <em>Hidden Phenomena</em>}</li>
+ *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getTimingConstraint <em>Timing Constraint</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getSubproblem <em>Subproblem</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getProblemNodeRef <em>Problem Node Ref</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getProblemRef <em>Problem Ref</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getHref <em>Href</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class NodeImpl extends MinimalEObjectImpl.Container implements Node
+public class NodeImpl extends ClockImpl implements Node
 {
-  /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
-
   /**
    * The default value of the '{@link #getType() <em>Type</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -92,26 +68,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
   protected NodeType type = TYPE_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDescription()
-   * @generated
-   * @ordered
-   */
-  protected static final String DESCRIPTION_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDescription()
-   * @generated
-   * @ordered
-   */
-  protected String description = DESCRIPTION_EDEFAULT;
-
-  /**
    * The cached value of the '{@link #getHiddenPhenomena() <em>Hidden Phenomena</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -120,6 +76,16 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
    * @ordered
    */
   protected EList<Phenomenon> hiddenPhenomena;
+
+  /**
+   * The cached value of the '{@link #getTimingConstraint() <em>Timing Constraint</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTimingConstraint()
+   * @generated
+   * @ordered
+   */
+  protected EList<Constraint> timingConstraint;
 
   /**
    * The cached value of the '{@link #getSubproblem() <em>Subproblem</em>}' containment reference list.
@@ -187,29 +153,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.NODE__NAME, oldName, name));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public NodeType getType()
   {
     return type;
@@ -233,29 +176,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getDescription()
-  {
-    return description;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setDescription(String newDescription)
-  {
-    String oldDescription = description;
-    description = newDescription;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ProblemPackage.NODE__DESCRIPTION, oldDescription, description));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EList<Phenomenon> getHiddenPhenomena()
   {
     if (hiddenPhenomena == null)
@@ -263,6 +183,20 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
       hiddenPhenomena = new EObjectContainmentEList<Phenomenon>(Phenomenon.class, this, ProblemPackage.NODE__HIDDEN_PHENOMENA);
     }
     return hiddenPhenomena;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<Constraint> getTimingConstraint()
+  {
+    if (timingConstraint == null)
+    {
+      timingConstraint = new EObjectContainmentEList<Constraint>(Constraint.class, this, ProblemPackage.NODE__TIMING_CONSTRAINT);
+    }
+    return timingConstraint;
   }
 
   /**
@@ -333,6 +267,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
     {
       case ProblemPackage.NODE__HIDDEN_PHENOMENA:
         return ((InternalEList<?>)getHiddenPhenomena()).basicRemove(otherEnd, msgs);
+      case ProblemPackage.NODE__TIMING_CONSTRAINT:
+        return ((InternalEList<?>)getTimingConstraint()).basicRemove(otherEnd, msgs);
       case ProblemPackage.NODE__SUBPROBLEM:
         return ((InternalEList<?>)getSubproblem()).basicRemove(otherEnd, msgs);
     }
@@ -349,14 +285,12 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
   {
     switch (featureID)
     {
-      case ProblemPackage.NODE__NAME:
-        return getName();
       case ProblemPackage.NODE__TYPE:
         return getType();
-      case ProblemPackage.NODE__DESCRIPTION:
-        return getDescription();
       case ProblemPackage.NODE__HIDDEN_PHENOMENA:
         return getHiddenPhenomena();
+      case ProblemPackage.NODE__TIMING_CONSTRAINT:
+        return getTimingConstraint();
       case ProblemPackage.NODE__SUBPROBLEM:
         return getSubproblem();
       case ProblemPackage.NODE__PROBLEM_NODE_REF:
@@ -380,18 +314,16 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
   {
     switch (featureID)
     {
-      case ProblemPackage.NODE__NAME:
-        setName((String)newValue);
-        return;
       case ProblemPackage.NODE__TYPE:
         setType((NodeType)newValue);
-        return;
-      case ProblemPackage.NODE__DESCRIPTION:
-        setDescription((String)newValue);
         return;
       case ProblemPackage.NODE__HIDDEN_PHENOMENA:
         getHiddenPhenomena().clear();
         getHiddenPhenomena().addAll((Collection<? extends Phenomenon>)newValue);
+        return;
+      case ProblemPackage.NODE__TIMING_CONSTRAINT:
+        getTimingConstraint().clear();
+        getTimingConstraint().addAll((Collection<? extends Constraint>)newValue);
         return;
       case ProblemPackage.NODE__SUBPROBLEM:
         getSubproblem().clear();
@@ -423,17 +355,14 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
   {
     switch (featureID)
     {
-      case ProblemPackage.NODE__NAME:
-        setName(NAME_EDEFAULT);
-        return;
       case ProblemPackage.NODE__TYPE:
         setType(TYPE_EDEFAULT);
         return;
-      case ProblemPackage.NODE__DESCRIPTION:
-        setDescription(DESCRIPTION_EDEFAULT);
-        return;
       case ProblemPackage.NODE__HIDDEN_PHENOMENA:
         getHiddenPhenomena().clear();
+        return;
+      case ProblemPackage.NODE__TIMING_CONSTRAINT:
+        getTimingConstraint().clear();
         return;
       case ProblemPackage.NODE__SUBPROBLEM:
         getSubproblem().clear();
@@ -461,14 +390,12 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
   {
     switch (featureID)
     {
-      case ProblemPackage.NODE__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case ProblemPackage.NODE__TYPE:
         return type != TYPE_EDEFAULT;
-      case ProblemPackage.NODE__DESCRIPTION:
-        return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
       case ProblemPackage.NODE__HIDDEN_PHENOMENA:
         return hiddenPhenomena != null && !hiddenPhenomena.isEmpty();
+      case ProblemPackage.NODE__TIMING_CONSTRAINT:
+        return timingConstraint != null && !timingConstraint.isEmpty();
       case ProblemPackage.NODE__SUBPROBLEM:
         return subproblem != null && !subproblem.isEmpty();
       case ProblemPackage.NODE__PROBLEM_NODE_REF:
@@ -492,12 +419,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(", type: ");
+    result.append(" (type: ");
     result.append(type);
-    result.append(", description: ");
-    result.append(description);
     result.append(", href: ");
     result.append(href);
     result.append(')');

@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.problem.impl;
 
@@ -21,6 +18,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import uk.ac.open.problem.Constraint;
 import uk.ac.open.problem.Link;
 import uk.ac.open.problem.LinkType;
 import uk.ac.open.problem.Node;
@@ -33,14 +31,15 @@ import uk.ac.open.problem.ProblemPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.problem.impl.LinkImpl#getFrom <em>From</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.LinkImpl#getType <em>Type</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.LinkImpl#getTo <em>To</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.LinkImpl#getPhenomena <em>Phenomena</em>}</li>
+ *   <li>{@link uk.ac.open.problem.impl.LinkImpl#getTiming <em>Timing</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.LinkImpl#getDescription <em>Description</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -95,6 +94,16 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link
    * @ordered
    */
   protected EList<Phenomenon> phenomena;
+
+  /**
+   * The cached value of the '{@link #getTiming() <em>Timing</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTiming()
+   * @generated
+   * @ordered
+   */
+  protected EList<Constraint> timing;
 
   /**
    * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -265,6 +274,20 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Constraint> getTiming()
+  {
+    if (timing == null)
+    {
+      timing = new EObjectContainmentEList<Constraint>(Constraint.class, this, ProblemPackage.LINK__TIMING);
+    }
+    return timing;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getDescription()
   {
     return description;
@@ -295,6 +318,8 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link
     {
       case ProblemPackage.LINK__PHENOMENA:
         return ((InternalEList<?>)getPhenomena()).basicRemove(otherEnd, msgs);
+      case ProblemPackage.LINK__TIMING:
+        return ((InternalEList<?>)getTiming()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -319,6 +344,8 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link
         return basicGetTo();
       case ProblemPackage.LINK__PHENOMENA:
         return getPhenomena();
+      case ProblemPackage.LINK__TIMING:
+        return getTiming();
       case ProblemPackage.LINK__DESCRIPTION:
         return getDescription();
     }
@@ -349,6 +376,10 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link
         getPhenomena().clear();
         getPhenomena().addAll((Collection<? extends Phenomenon>)newValue);
         return;
+      case ProblemPackage.LINK__TIMING:
+        getTiming().clear();
+        getTiming().addAll((Collection<? extends Constraint>)newValue);
+        return;
       case ProblemPackage.LINK__DESCRIPTION:
         setDescription((String)newValue);
         return;
@@ -378,6 +409,9 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link
       case ProblemPackage.LINK__PHENOMENA:
         getPhenomena().clear();
         return;
+      case ProblemPackage.LINK__TIMING:
+        getTiming().clear();
+        return;
       case ProblemPackage.LINK__DESCRIPTION:
         setDescription(DESCRIPTION_EDEFAULT);
         return;
@@ -403,6 +437,8 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link
         return to != null;
       case ProblemPackage.LINK__PHENOMENA:
         return phenomena != null && !phenomena.isEmpty();
+      case ProblemPackage.LINK__TIMING:
+        return timing != null && !timing.isEmpty();
       case ProblemPackage.LINK__DESCRIPTION:
         return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
     }

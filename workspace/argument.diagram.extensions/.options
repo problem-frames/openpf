@@ -1,7 +1,0 @@
-# Tracing options for the situation.diagram plug-in
-
-# Common issues
-situation.diagram/debug=false
-
-# Visual IDs
-situation.diagram/debug/visualID=false

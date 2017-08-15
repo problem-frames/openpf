@@ -1,5 +1,6 @@
 package org.eclipse.xtext.gmf.glue.concurrency;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -35,7 +36,7 @@ import org.eclipse.xtext.ui.editor.IDirtyStateManager;
 import org.eclipse.xtext.ui.shared.Access;
 
 import com.google.common.collect.Lists;
-import com.google.inject.internal.Maps;
+//import com.google.inject.internal.Maps;
 
 public class EditingDomainAdapter extends AdapterImpl implements ResourceSetListener,
 		TransactionalEditingDomainListener {
@@ -76,7 +77,7 @@ public class EditingDomainAdapter extends AdapterImpl implements ResourceSetList
 		this.editingDomain = editingDomain;
 		editingDomain.addResourceSetListener(this);
 		dirtyStateManager = Access.getIDirtyStateManager().get();
-		uri2dirtyResource = Maps.newHashMap();
+		uri2dirtyResource = new HashMap();// Maps.newHashMap();
 		Lifecycle lifecycle = TransactionUtil.getAdapter(editingDomain, Lifecycle.class);
 		lifecycle.addTransactionalEditingDomainListener(this);
 	}

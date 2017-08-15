@@ -1,3 +1,0 @@
-# $Header: /cvs/fluid/fluid/code/fluid/java/operator/PackageDeclaration.op,v 1.1 1997/07/30 11:18:22 boyland Exp $
-public operator PackageDeclaration {
-}

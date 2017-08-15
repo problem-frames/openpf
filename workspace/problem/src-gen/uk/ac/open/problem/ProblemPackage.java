@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.problem;
 
@@ -116,14 +113,14 @@ public interface ProblemPackage extends EPackage
   int PROBLEM_DIAGRAM_FEATURE_COUNT = 4;
 
   /**
-   * The meta object id for the '{@link uk.ac.open.problem.impl.NodeImpl <em>Node</em>}' class.
+   * The meta object id for the '{@link uk.ac.open.problem.impl.ClockImpl <em>Clock</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see uk.ac.open.problem.impl.NodeImpl
-   * @see uk.ac.open.problem.impl.ProblemPackageImpl#getNode()
+   * @see uk.ac.open.problem.impl.ClockImpl
+   * @see uk.ac.open.problem.impl.ProblemPackageImpl#getClock()
    * @generated
    */
-  int NODE = 1;
+  int CLOCK = 1;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -132,16 +129,7 @@ public interface ProblemPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NODE__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NODE__TYPE = 1;
+  int CLOCK__NAME = 0;
 
   /**
    * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -150,7 +138,53 @@ public interface ProblemPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NODE__DESCRIPTION = 2;
+  int CLOCK__DESCRIPTION = 1;
+
+  /**
+   * The number of structural features of the '<em>Clock</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLOCK_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link uk.ac.open.problem.impl.NodeImpl <em>Node</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see uk.ac.open.problem.impl.NodeImpl
+   * @see uk.ac.open.problem.impl.ProblemPackageImpl#getNode()
+   * @generated
+   */
+  int NODE = 2;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NODE__NAME = CLOCK__NAME;
+
+  /**
+   * The feature id for the '<em><b>Description</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NODE__DESCRIPTION = CLOCK__DESCRIPTION;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NODE__TYPE = CLOCK_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Hidden Phenomena</b></em>' containment reference list.
@@ -159,7 +193,16 @@ public interface ProblemPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NODE__HIDDEN_PHENOMENA = 3;
+  int NODE__HIDDEN_PHENOMENA = CLOCK_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Timing Constraint</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NODE__TIMING_CONSTRAINT = CLOCK_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Subproblem</b></em>' containment reference list.
@@ -168,7 +211,7 @@ public interface ProblemPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NODE__SUBPROBLEM = 4;
+  int NODE__SUBPROBLEM = CLOCK_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Problem Node Ref</b></em>' reference list.
@@ -177,7 +220,7 @@ public interface ProblemPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NODE__PROBLEM_NODE_REF = 5;
+  int NODE__PROBLEM_NODE_REF = CLOCK_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Problem Ref</b></em>' reference list.
@@ -186,7 +229,7 @@ public interface ProblemPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NODE__PROBLEM_REF = 6;
+  int NODE__PROBLEM_REF = CLOCK_FEATURE_COUNT + 5;
 
   /**
    * The feature id for the '<em><b>Href</b></em>' attribute list.
@@ -195,7 +238,7 @@ public interface ProblemPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NODE__HREF = 7;
+  int NODE__HREF = CLOCK_FEATURE_COUNT + 6;
 
   /**
    * The number of structural features of the '<em>Node</em>' class.
@@ -204,7 +247,7 @@ public interface ProblemPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NODE_FEATURE_COUNT = 8;
+  int NODE_FEATURE_COUNT = CLOCK_FEATURE_COUNT + 7;
 
   /**
    * The meta object id for the '{@link uk.ac.open.problem.impl.PhenomenonImpl <em>Phenomenon</em>}' class.
@@ -214,25 +257,7 @@ public interface ProblemPackage extends EPackage
    * @see uk.ac.open.problem.impl.ProblemPackageImpl#getPhenomenon()
    * @generated
    */
-  int PHENOMENON = 2;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PHENOMENON__TYPE = 0;
-
-  /**
-   * The feature id for the '<em><b>Is Controlled</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PHENOMENON__IS_CONTROLLED = 1;
+  int PHENOMENON = 3;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -241,7 +266,7 @@ public interface ProblemPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PHENOMENON__NAME = 2;
+  int PHENOMENON__NAME = CLOCK__NAME;
 
   /**
    * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -250,7 +275,25 @@ public interface ProblemPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PHENOMENON__DESCRIPTION = 3;
+  int PHENOMENON__DESCRIPTION = CLOCK__DESCRIPTION;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PHENOMENON__TYPE = CLOCK_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Is Controlled</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PHENOMENON__IS_CONTROLLED = CLOCK_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Phenomenon</em>' class.
@@ -259,7 +302,44 @@ public interface ProblemPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PHENOMENON_FEATURE_COUNT = 4;
+  int PHENOMENON_FEATURE_COUNT = CLOCK_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link uk.ac.open.problem.impl.ConstraintImpl <em>Constraint</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see uk.ac.open.problem.impl.ConstraintImpl
+   * @see uk.ac.open.problem.impl.ProblemPackageImpl#getConstraint()
+   * @generated
+   */
+  int CONSTRAINT = 4;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONSTRAINT__TYPE = 0;
+
+  /**
+   * The feature id for the '<em><b>Operand</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONSTRAINT__OPERAND = 1;
+
+  /**
+   * The number of structural features of the '<em>Constraint</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONSTRAINT_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link uk.ac.open.problem.impl.LinkImpl <em>Link</em>}' class.
@@ -269,7 +349,7 @@ public interface ProblemPackage extends EPackage
    * @see uk.ac.open.problem.impl.ProblemPackageImpl#getLink()
    * @generated
    */
-  int LINK = 3;
+  int LINK = 5;
 
   /**
    * The feature id for the '<em><b>From</b></em>' reference.
@@ -308,13 +388,22 @@ public interface ProblemPackage extends EPackage
   int LINK__PHENOMENA = 3;
 
   /**
+   * The feature id for the '<em><b>Timing</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LINK__TIMING = 4;
+
+  /**
    * The feature id for the '<em><b>Description</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LINK__DESCRIPTION = 4;
+  int LINK__DESCRIPTION = 5;
 
   /**
    * The number of structural features of the '<em>Link</em>' class.
@@ -323,7 +412,7 @@ public interface ProblemPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LINK_FEATURE_COUNT = 5;
+  int LINK_FEATURE_COUNT = 6;
 
   /**
    * The meta object id for the '{@link uk.ac.open.problem.NodeType <em>Node Type</em>}' enum.
@@ -333,7 +422,7 @@ public interface ProblemPackage extends EPackage
    * @see uk.ac.open.problem.impl.ProblemPackageImpl#getNodeType()
    * @generated
    */
-  int NODE_TYPE = 4;
+  int NODE_TYPE = 6;
 
   /**
    * The meta object id for the '{@link uk.ac.open.problem.PhenomenonType <em>Phenomenon Type</em>}' enum.
@@ -343,7 +432,17 @@ public interface ProblemPackage extends EPackage
    * @see uk.ac.open.problem.impl.ProblemPackageImpl#getPhenomenonType()
    * @generated
    */
-  int PHENOMENON_TYPE = 5;
+  int PHENOMENON_TYPE = 7;
+
+  /**
+   * The meta object id for the '{@link uk.ac.open.problem.ConstraintType <em>Constraint Type</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see uk.ac.open.problem.ConstraintType
+   * @see uk.ac.open.problem.impl.ProblemPackageImpl#getConstraintType()
+   * @generated
+   */
+  int CONSTRAINT_TYPE = 8;
 
   /**
    * The meta object id for the '{@link uk.ac.open.problem.LinkType <em>Link Type</em>}' enum.
@@ -353,7 +452,7 @@ public interface ProblemPackage extends EPackage
    * @see uk.ac.open.problem.impl.ProblemPackageImpl#getLinkType()
    * @generated
    */
-  int LINK_TYPE = 6;
+  int LINK_TYPE = 9;
 
 
   /**
@@ -411,6 +510,38 @@ public interface ProblemPackage extends EPackage
   EReference getProblemDiagram_Links();
 
   /**
+   * Returns the meta object for class '{@link uk.ac.open.problem.Clock <em>Clock</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Clock</em>'.
+   * @see uk.ac.open.problem.Clock
+   * @generated
+   */
+  EClass getClock();
+
+  /**
+   * Returns the meta object for the attribute '{@link uk.ac.open.problem.Clock#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see uk.ac.open.problem.Clock#getName()
+   * @see #getClock()
+   * @generated
+   */
+  EAttribute getClock_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link uk.ac.open.problem.Clock#getDescription <em>Description</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Description</em>'.
+   * @see uk.ac.open.problem.Clock#getDescription()
+   * @see #getClock()
+   * @generated
+   */
+  EAttribute getClock_Description();
+
+  /**
    * Returns the meta object for class '{@link uk.ac.open.problem.Node <em>Node</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -419,17 +550,6 @@ public interface ProblemPackage extends EPackage
    * @generated
    */
   EClass getNode();
-
-  /**
-   * Returns the meta object for the attribute '{@link uk.ac.open.problem.Node#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see uk.ac.open.problem.Node#getName()
-   * @see #getNode()
-   * @generated
-   */
-  EAttribute getNode_Name();
 
   /**
    * Returns the meta object for the attribute '{@link uk.ac.open.problem.Node#getType <em>Type</em>}'.
@@ -443,17 +563,6 @@ public interface ProblemPackage extends EPackage
   EAttribute getNode_Type();
 
   /**
-   * Returns the meta object for the attribute '{@link uk.ac.open.problem.Node#getDescription <em>Description</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Description</em>'.
-   * @see uk.ac.open.problem.Node#getDescription()
-   * @see #getNode()
-   * @generated
-   */
-  EAttribute getNode_Description();
-
-  /**
    * Returns the meta object for the containment reference list '{@link uk.ac.open.problem.Node#getHiddenPhenomena <em>Hidden Phenomena</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -463,6 +572,17 @@ public interface ProblemPackage extends EPackage
    * @generated
    */
   EReference getNode_HiddenPhenomena();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link uk.ac.open.problem.Node#getTimingConstraint <em>Timing Constraint</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Timing Constraint</em>'.
+   * @see uk.ac.open.problem.Node#getTimingConstraint()
+   * @see #getNode()
+   * @generated
+   */
+  EReference getNode_TimingConstraint();
 
   /**
    * Returns the meta object for the containment reference list '{@link uk.ac.open.problem.Node#getSubproblem <em>Subproblem</em>}'.
@@ -541,26 +661,36 @@ public interface ProblemPackage extends EPackage
   EAttribute getPhenomenon_IsControlled();
 
   /**
-   * Returns the meta object for the attribute '{@link uk.ac.open.problem.Phenomenon#getName <em>Name</em>}'.
+   * Returns the meta object for class '{@link uk.ac.open.problem.Constraint <em>Constraint</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see uk.ac.open.problem.Phenomenon#getName()
-   * @see #getPhenomenon()
+   * @return the meta object for class '<em>Constraint</em>'.
+   * @see uk.ac.open.problem.Constraint
    * @generated
    */
-  EAttribute getPhenomenon_Name();
+  EClass getConstraint();
 
   /**
-   * Returns the meta object for the attribute '{@link uk.ac.open.problem.Phenomenon#getDescription <em>Description</em>}'.
+   * Returns the meta object for the attribute '{@link uk.ac.open.problem.Constraint#getType <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Description</em>'.
-   * @see uk.ac.open.problem.Phenomenon#getDescription()
-   * @see #getPhenomenon()
+   * @return the meta object for the attribute '<em>Type</em>'.
+   * @see uk.ac.open.problem.Constraint#getType()
+   * @see #getConstraint()
    * @generated
    */
-  EAttribute getPhenomenon_Description();
+  EAttribute getConstraint_Type();
+
+  /**
+   * Returns the meta object for the reference list '{@link uk.ac.open.problem.Constraint#getOperand <em>Operand</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference list '<em>Operand</em>'.
+   * @see uk.ac.open.problem.Constraint#getOperand()
+   * @see #getConstraint()
+   * @generated
+   */
+  EReference getConstraint_Operand();
 
   /**
    * Returns the meta object for class '{@link uk.ac.open.problem.Link <em>Link</em>}'.
@@ -617,6 +747,17 @@ public interface ProblemPackage extends EPackage
   EReference getLink_Phenomena();
 
   /**
+   * Returns the meta object for the containment reference list '{@link uk.ac.open.problem.Link#getTiming <em>Timing</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Timing</em>'.
+   * @see uk.ac.open.problem.Link#getTiming()
+   * @see #getLink()
+   * @generated
+   */
+  EReference getLink_Timing();
+
+  /**
    * Returns the meta object for the attribute '{@link uk.ac.open.problem.Link#getDescription <em>Description</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -646,6 +787,16 @@ public interface ProblemPackage extends EPackage
    * @generated
    */
   EEnum getPhenomenonType();
+
+  /**
+   * Returns the meta object for enum '{@link uk.ac.open.problem.ConstraintType <em>Constraint Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Constraint Type</em>'.
+   * @see uk.ac.open.problem.ConstraintType
+   * @generated
+   */
+  EEnum getConstraintType();
 
   /**
    * Returns the meta object for enum '{@link uk.ac.open.problem.LinkType <em>Link Type</em>}'.
@@ -723,6 +874,32 @@ public interface ProblemPackage extends EPackage
     EReference PROBLEM_DIAGRAM__LINKS = eINSTANCE.getProblemDiagram_Links();
 
     /**
+     * The meta object literal for the '{@link uk.ac.open.problem.impl.ClockImpl <em>Clock</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see uk.ac.open.problem.impl.ClockImpl
+     * @see uk.ac.open.problem.impl.ProblemPackageImpl#getClock()
+     * @generated
+     */
+    EClass CLOCK = eINSTANCE.getClock();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CLOCK__NAME = eINSTANCE.getClock_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CLOCK__DESCRIPTION = eINSTANCE.getClock_Description();
+
+    /**
      * The meta object literal for the '{@link uk.ac.open.problem.impl.NodeImpl <em>Node</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -733,14 +910,6 @@ public interface ProblemPackage extends EPackage
     EClass NODE = eINSTANCE.getNode();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute NODE__NAME = eINSTANCE.getNode_Name();
-
-    /**
      * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -749,20 +918,20 @@ public interface ProblemPackage extends EPackage
     EAttribute NODE__TYPE = eINSTANCE.getNode_Type();
 
     /**
-     * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute NODE__DESCRIPTION = eINSTANCE.getNode_Description();
-
-    /**
      * The meta object literal for the '<em><b>Hidden Phenomena</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference NODE__HIDDEN_PHENOMENA = eINSTANCE.getNode_HiddenPhenomena();
+
+    /**
+     * The meta object literal for the '<em><b>Timing Constraint</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference NODE__TIMING_CONSTRAINT = eINSTANCE.getNode_TimingConstraint();
 
     /**
      * The meta object literal for the '<em><b>Subproblem</b></em>' containment reference list feature.
@@ -823,20 +992,30 @@ public interface ProblemPackage extends EPackage
     EAttribute PHENOMENON__IS_CONTROLLED = eINSTANCE.getPhenomenon_IsControlled();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * The meta object literal for the '{@link uk.ac.open.problem.impl.ConstraintImpl <em>Constraint</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see uk.ac.open.problem.impl.ConstraintImpl
+     * @see uk.ac.open.problem.impl.ProblemPackageImpl#getConstraint()
      * @generated
      */
-    EAttribute PHENOMENON__NAME = eINSTANCE.getPhenomenon_Name();
+    EClass CONSTRAINT = eINSTANCE.getConstraint();
 
     /**
-     * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PHENOMENON__DESCRIPTION = eINSTANCE.getPhenomenon_Description();
+    EAttribute CONSTRAINT__TYPE = eINSTANCE.getConstraint_Type();
+
+    /**
+     * The meta object literal for the '<em><b>Operand</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONSTRAINT__OPERAND = eINSTANCE.getConstraint_Operand();
 
     /**
      * The meta object literal for the '{@link uk.ac.open.problem.impl.LinkImpl <em>Link</em>}' class.
@@ -881,6 +1060,14 @@ public interface ProblemPackage extends EPackage
     EReference LINK__PHENOMENA = eINSTANCE.getLink_Phenomena();
 
     /**
+     * The meta object literal for the '<em><b>Timing</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LINK__TIMING = eINSTANCE.getLink_Timing();
+
+    /**
      * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -907,6 +1094,16 @@ public interface ProblemPackage extends EPackage
      * @generated
      */
     EEnum PHENOMENON_TYPE = eINSTANCE.getPhenomenonType();
+
+    /**
+     * The meta object literal for the '{@link uk.ac.open.problem.ConstraintType <em>Constraint Type</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see uk.ac.open.problem.ConstraintType
+     * @see uk.ac.open.problem.impl.ProblemPackageImpl#getConstraintType()
+     * @generated
+     */
+    EEnum CONSTRAINT_TYPE = eINSTANCE.getConstraintType();
 
     /**
      * The meta object literal for the '{@link uk.ac.open.problem.LinkType <em>Link Type</em>}' enum.

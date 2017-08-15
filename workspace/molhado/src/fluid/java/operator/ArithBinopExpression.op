@@ -1,3 +1,0 @@
-# $Header: /cvs/fluid/fluid/code/fluid/java/operator/ArithBinopExpression.op,v 1.1 1997/07/31 20:03:37 boyland Exp $
-public operator ArithBinopExpression extends BinopExpression implements ArithExpression {
-}

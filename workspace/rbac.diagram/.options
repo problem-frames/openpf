@@ -1,7 +1,0 @@
-# Tracing options for the rbac.diagram plug-in
-
-# Common issues
-rbac.diagram/debug=false
-
-# Visual IDs
-rbac.diagram/debug/visualID=false

@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="problem"
-    nsURI="http://open.ac.uk/problem" nsPrefix="problem">
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="problem" nsURI="http://open.ac.uk/problem" nsPrefix="problem">
   <eClassifiers xsi:type="ecore:EClass" name="ProblemDiagram">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="highlight" eType="#//Node"/>
@@ -11,12 +9,16 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="links" upperBound="-1"
         eType="#//Link" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Node">
+  <eClassifiers xsi:type="ecore:EClass" name="Clock">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//NodeType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Node" eSuperTypes="#//Clock">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//NodeType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="hiddenPhenomena" upperBound="-1"
         eType="#//Phenomenon" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="timingConstraint" upperBound="-1"
+        eType="#//Constraint" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="subproblem" upperBound="-1"
         eType="#//ProblemDiagram" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="problemNodeRef" unique="false"
@@ -36,16 +38,24 @@
     <eLiterals name="PHYSICAL" value="6" literal="P"/>
     <eLiterals name="CONCERN" value="7" literal="?"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Phenomenon">
+  <eClassifiers xsi:type="ecore:EClass" name="Phenomenon" eSuperTypes="#//Clock">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//PhenomenonType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isControlled" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="PhenomenonType">
     <eLiterals name="UNSPECIFIED" literal="phenomenon"/>
     <eLiterals name="EVENT" value="1" literal="event"/>
     <eLiterals name="STATE" value="2" literal="state"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ConstraintType">
+    <eLiterals name="StrictPre" literal="&lt;"/>
+    <eLiterals name="cause" value="1" literal="&lt;="/>
+    <eLiterals name="alternate" value="2" literal="~"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Constraint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ConstraintType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operand" unique="false"
+        upperBound="-1" eType="#//Clock"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Link">
     <eStructuralFeatures xsi:type="ecore:EReference" name="from" eType="#//Node"/>
@@ -53,6 +63,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="to" eType="#//Node"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="phenomena" upperBound="-1"
         eType="#//Phenomenon" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="timing" upperBound="-1"
+        eType="#//Constraint" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="LinkType">
