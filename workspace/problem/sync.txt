@@ -1,5 +1,0 @@
-Add:
-   templates
-
-GMFGen:
-   dynamic templates -> true

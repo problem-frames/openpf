@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.core.runtime;singleton:=true
+Bundle-Version: 3.13.0.v20170207-1030
+Bundle-ClassPath: org.eclipse.core.runtime_3.13.0.v20170207-1030.jar
+Bundle-Activator: org.eclipse.core.internal.runtime.PlatformActivator
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: org.eclipse.core.internal.preferences.legacy;x-internal:=true,
+  org.eclipse.core.internal.runtime;x-internal:=true,
+  org.eclipse.core.runtime;version="3.5.0"
+Require-Bundle: javax.inject;bundle-version="1.0.0";resolution:=optional;visibility:=reexport,
+  org.eclipse.osgi;bundle-version="[3.7.0,4.0.0)";visibility:=reexport,
+  org.eclipse.equinox.common;bundle-version="[3.8.0,4.0.0)";visibility:=reexport,
+  org.eclipse.core.jobs;bundle-version="[3.2.0,4.0.0)";visibility:=reexport,
+  org.eclipse.equinox.registry;bundle-version="[3.4.0,4.0.0)";visibility:=reexport,
+  org.eclipse.equinox.preferences;bundle-version="[3.4.0,4.0.0)";visibility:=reexport,
+  org.eclipse.core.contenttype;bundle-version="[3.3.0,4.0.0)";visibility:=reexport,
+  org.eclipse.equinox.app;bundle-version="1.0.0";visibility:=reexport
+Build-Jdk: 1.8.0_102
+Created-By: Apache Maven 3.3.3
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/platform/eclipse.platform.runtime.git;path="bundles/org.eclipse.core.runtime";tag="I20170207-2000";commitId=df9d7a0966886435aed8a133eb7da48c072b21e5
+Bundle-ActivationPolicy: lazy
+DynamicImport-Package: org.eclipse.core.internal.runtime.auth
+Archiver-Version: Plexus Archiver
+Built-By: genie.releng
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

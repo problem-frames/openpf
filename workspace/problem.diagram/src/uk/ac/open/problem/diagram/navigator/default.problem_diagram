@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:problem="http://open.ac.uk/problem" xmi:id="_99itwdmDEd-3448URVpRTQ" type="Problem" name="default.problem_diagram" measurementUnit="Pixel">
-  <styles xmi:type="notation:DiagramStyle" xmi:id="_99itwtmDEd-3448URVpRTQ"/>
-  <element xmi:type="problem:ProblemDiagram" href="default.problem#/"/>
-</notation:Diagram>

@@ -81,10 +81,6 @@
              name="appName"
              value="Problem Analysis Tool">
        </property>
-       <property
-             name="preferenceCustomization"
-             value="plugin_customization.ini">
-       </property>
     </product>
  </extension>
    <extension

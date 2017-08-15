@@ -1,29 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.0"?>
-
 <plugin>
-
-  <extension point="org.eclipse.emf.ecore.generated_package">
-    <package 
-       uri = "http://open.ac.uk/problem" 
-       class = "uk.ac.open.problem.ProblemPackage"
-       genModel = "uk/ac/open/problem/Problem.genmodel" /> 	
-  </extension>
-  
-  <extension point="core.example">
-      <!-- local -->
-      <example file="Jackson/CommandedBehaviour.problem"/>
-      <example file="Jackson/InformationDisplay.problem"/>
-      <example file="Jackson/RequiredBehaviour.problem"/>
-      <example file="Jackson/Transformation.problem"/>
-      <example file="Jackson/Workpiece.problem"/>
-      <example file="Jackson/LightController.problem"/>
-      <example file="Jackson/SluiceGateInteractive.problem"/>
-      <example file="Jackson/SluiceGateTimed.problem"/>
-      <example file="Jackson/ZooTurnstile.problem"/>
-      <example file="Jackson/Library.problem"/>
-      <example file="Problem.xtext"/>
-      <example file="Problem.ecore"/>
-      <example file="problems.dir" href="http://computing-research.open.ac.uk/trac/openre/raw-attachment/wiki/Examples/problems.dir"/>
-  </extension>
+	<extension point="org.eclipse.emf.ecore.generated_package">
+		<package 
+			uri = "http://open.ac.uk/problem"
+			class = "uk.ac.open.problem.ProblemPackage"
+			genModel = "model/generated/Problem.genmodel" />
+	</extension>
 </plugin>
