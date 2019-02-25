@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.problem.impl;
 
@@ -109,7 +106,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
 
   /**
    * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-   * 
+   *
    * <p>This method is used to initialize {@link ProblemPackage#eINSTANCE} when that field is accessed.
    * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
    * <!-- begin-user-doc -->
@@ -124,7 +121,8 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
     if (isInited) return (ProblemPackage)EPackage.Registry.INSTANCE.getEPackage(ProblemPackage.eNS_URI);
 
     // Obtain or create and register package
-    ProblemPackageImpl theProblemPackage = (ProblemPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ProblemPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ProblemPackageImpl());
+    Object registeredProblemPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+    ProblemPackageImpl theProblemPackage = registeredProblemPackage instanceof ProblemPackageImpl ? (ProblemPackageImpl)registeredProblemPackage : new ProblemPackageImpl();
 
     isInited = true;
 
@@ -137,7 +135,6 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
     // Mark meta-data to indicate it can't be changed
     theProblemPackage.freeze();
 
-  
     // Update the registry and return the package
     EPackage.Registry.INSTANCE.put(ProblemPackage.eNS_URI, theProblemPackage);
     return theProblemPackage;
@@ -148,6 +145,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+// @Override
   public EClass getProblemDiagram()
   {
     return problemDiagramEClass;
@@ -158,6 +156,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+// @Override
   public EAttribute getProblemDiagram_Name()
   {
     return (EAttribute)problemDiagramEClass.getEStructuralFeatures().get(0);
@@ -168,6 +167,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+// @Override
   public EReference getProblemDiagram_Highlight()
   {
     return (EReference)problemDiagramEClass.getEStructuralFeatures().get(1);
@@ -178,6 +178,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+// @Override
   public EReference getProblemDiagram_Nodes()
   {
     return (EReference)problemDiagramEClass.getEStructuralFeatures().get(2);
@@ -188,6 +189,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+// @Override
   public EReference getProblemDiagram_Links()
   {
     return (EReference)problemDiagramEClass.getEStructuralFeatures().get(3);
@@ -198,6 +200,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+// @Override
   public EClass getNode()
   {
     return nodeEClass;
@@ -208,6 +211,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+// @Override
   public EAttribute getNode_Name()
   {
     return (EAttribute)nodeEClass.getEStructuralFeatures().get(0);
@@ -218,6 +222,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+// @Override
   public EAttribute getNode_Type()
   {
     return (EAttribute)nodeEClass.getEStructuralFeatures().get(1);
@@ -228,6 +233,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+// @Override
   public EAttribute getNode_Description()
   {
     return (EAttribute)nodeEClass.getEStructuralFeatures().get(2);
@@ -238,6 +244,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+// @Override
   public EReference getNode_HiddenPhenomena()
   {
     return (EReference)nodeEClass.getEStructuralFeatures().get(3);
@@ -248,6 +255,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+// @Override
   public EReference getNode_Subproblem()
   {
     return (EReference)nodeEClass.getEStructuralFeatures().get(4);
@@ -258,6 +266,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+// @Override
   public EReference getNode_ProblemNodeRef()
   {
     return (EReference)nodeEClass.getEStructuralFeatures().get(5);
@@ -268,6 +277,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+// @Override
   public EReference getNode_ProblemRef()
   {
     return (EReference)nodeEClass.getEStructuralFeatures().get(6);
@@ -278,6 +288,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+// @Override
   public EAttribute getNode_Href()
   {
     return (EAttribute)nodeEClass.getEStructuralFeatures().get(7);
@@ -288,6 +299,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+// @Override
   public EClass getPhenomenon()
   {
     return phenomenonEClass;
@@ -298,6 +310,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+// @Override
   public EAttribute getPhenomenon_Type()
   {
     return (EAttribute)phenomenonEClass.getEStructuralFeatures().get(0);
@@ -308,6 +321,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+// @Override
   public EAttribute getPhenomenon_IsControlled()
   {
     return (EAttribute)phenomenonEClass.getEStructuralFeatures().get(1);
@@ -318,6 +332,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+// @Override
   public EAttribute getPhenomenon_Name()
   {
     return (EAttribute)phenomenonEClass.getEStructuralFeatures().get(2);
@@ -328,6 +343,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+// @Override
   public EAttribute getPhenomenon_Description()
   {
     return (EAttribute)phenomenonEClass.getEStructuralFeatures().get(3);
@@ -338,6 +354,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+// @Override
   public EClass getLink()
   {
     return linkEClass;
@@ -348,6 +365,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+// @Override
   public EReference getLink_From()
   {
     return (EReference)linkEClass.getEStructuralFeatures().get(0);
@@ -358,6 +376,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+// @Override
   public EAttribute getLink_Type()
   {
     return (EAttribute)linkEClass.getEStructuralFeatures().get(1);
@@ -368,6 +387,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+// @Override
   public EReference getLink_To()
   {
     return (EReference)linkEClass.getEStructuralFeatures().get(2);
@@ -378,6 +398,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+// @Override
   public EReference getLink_Phenomena()
   {
     return (EReference)linkEClass.getEStructuralFeatures().get(3);
@@ -388,6 +409,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+// @Override
   public EAttribute getLink_Description()
   {
     return (EAttribute)linkEClass.getEStructuralFeatures().get(4);
@@ -398,6 +420,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+// @Override
   public EEnum getNodeType()
   {
     return nodeTypeEEnum;
@@ -408,6 +431,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+// @Override
   public EEnum getPhenomenonType()
   {
     return phenomenonTypeEEnum;
@@ -418,6 +442,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+// @Override
   public EEnum getLinkType()
   {
     return linkTypeEEnum;
@@ -428,6 +453,7 @@ public class ProblemPackageImpl extends EPackageImpl implements ProblemPackage
    * <!-- end-user-doc -->
    * @generated
    */
+// @Override
   public ProblemFactory getProblemFactory()
   {
     return (ProblemFactory)getEFactoryInstance();

@@ -1,12 +1,10 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package argument.argument.impl;
 
 import argument.argument.ArgumentPackage;
 import argument.argument.Pow;
+import argument.argument.Power;
 import argument.argument.UnaryExpr;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -23,12 +21,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link argument.argument.impl.PowImpl#getLeft <em>Left</em>}</li>
  *   <li>{@link argument.argument.impl.PowImpl#getPow_op <em>Pow op</em>}</li>
  *   <li>{@link argument.argument.impl.PowImpl#getRight <em>Right</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -42,7 +40,7 @@ public class PowImpl extends PowerImpl implements Pow
    * @generated
    * @ordered
    */
-  protected UnaryExpr left;
+  protected Power left;
 
   /**
    * The default value of the '{@link #getPow_op() <em>Pow op</em>}' attribute.
@@ -100,7 +98,8 @@ public class PowImpl extends PowerImpl implements Pow
    * <!-- end-user-doc -->
    * @generated
    */
-  public UnaryExpr getLeft()
+  @Override
+  public Power getLeft()
   {
     return left;
   }
@@ -110,9 +109,9 @@ public class PowImpl extends PowerImpl implements Pow
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetLeft(UnaryExpr newLeft, NotificationChain msgs)
+  public NotificationChain basicSetLeft(Power newLeft, NotificationChain msgs)
   {
-    UnaryExpr oldLeft = left;
+    Power oldLeft = left;
     left = newLeft;
     if (eNotificationRequired())
     {
@@ -127,7 +126,8 @@ public class PowImpl extends PowerImpl implements Pow
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setLeft(UnaryExpr newLeft)
+  @Override
+  public void setLeft(Power newLeft)
   {
     if (newLeft != left)
     {
@@ -148,6 +148,7 @@ public class PowImpl extends PowerImpl implements Pow
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getPow_op()
   {
     return pow_op;
@@ -158,6 +159,7 @@ public class PowImpl extends PowerImpl implements Pow
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setPow_op(String newPow_op)
   {
     String oldPow_op = pow_op;
@@ -171,6 +173,7 @@ public class PowImpl extends PowerImpl implements Pow
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public UnaryExpr getRight()
   {
     return right;
@@ -198,6 +201,7 @@ public class PowImpl extends PowerImpl implements Pow
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setRight(UnaryExpr newRight)
   {
     if (newRight != right)
@@ -263,7 +267,7 @@ public class PowImpl extends PowerImpl implements Pow
     switch (featureID)
     {
       case ArgumentPackage.POW__LEFT:
-        setLeft((UnaryExpr)newValue);
+        setLeft((Power)newValue);
         return;
       case ArgumentPackage.POW__POW_OP:
         setPow_op((String)newValue);
@@ -286,7 +290,7 @@ public class PowImpl extends PowerImpl implements Pow
     switch (featureID)
     {
       case ArgumentPackage.POW__LEFT:
-        setLeft((UnaryExpr)null);
+        setLeft((Power)null);
         return;
       case ArgumentPackage.POW__POW_OP:
         setPow_op(POW_OP_EDEFAULT);
@@ -328,7 +332,7 @@ public class PowImpl extends PowerImpl implements Pow
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (pow_op: ");
     result.append(pow_op);
     result.append(')');

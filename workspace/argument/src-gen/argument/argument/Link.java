@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package argument.argument;
 
@@ -14,12 +11,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link argument.argument.Link#getFrom <em>From</em>}</li>
  *   <li>{@link argument.argument.Link#getTo <em>To</em>}</li>
  *   <li>{@link argument.argument.Link#isGenerated <em>Generated</em>}</li>
  * </ul>
- * </p>
  *
  * @see argument.argument.ArgumentPackage#getLink()
  * @model

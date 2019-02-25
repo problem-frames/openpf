@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package argument.argument;
 
@@ -13,12 +10,12 @@ package argument.argument;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link argument.argument.Pow#getLeft <em>Left</em>}</li>
  *   <li>{@link argument.argument.Pow#getPow_op <em>Pow op</em>}</li>
  *   <li>{@link argument.argument.Pow#getRight <em>Right</em>}</li>
  * </ul>
- * </p>
  *
  * @see argument.argument.ArgumentPackage#getPow()
  * @model
@@ -35,12 +32,12 @@ public interface Pow extends Power
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Left</em>' containment reference.
-   * @see #setLeft(UnaryExpr)
+   * @see #setLeft(Power)
    * @see argument.argument.ArgumentPackage#getPow_Left()
    * @model containment="true"
    * @generated
    */
-  UnaryExpr getLeft();
+  Power getLeft();
 
   /**
    * Sets the value of the '{@link argument.argument.Pow#getLeft <em>Left</em>}' containment reference.
@@ -50,7 +47,7 @@ public interface Pow extends Power
    * @see #getLeft()
    * @generated
    */
-  void setLeft(UnaryExpr value);
+  void setLeft(Power value);
 
   /**
    * Returns the value of the '<em><b>Pow op</b></em>' attribute.

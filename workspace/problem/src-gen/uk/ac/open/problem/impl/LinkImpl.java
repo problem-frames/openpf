@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.problem.impl;
 
@@ -33,6 +30,7 @@ import uk.ac.open.problem.ProblemPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.problem.impl.LinkImpl#getFrom <em>From</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.LinkImpl#getType <em>Type</em>}</li>
@@ -40,7 +38,6 @@ import uk.ac.open.problem.ProblemPackage;
  *   <li>{@link uk.ac.open.problem.impl.LinkImpl#getPhenomena <em>Phenomena</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.LinkImpl#getDescription <em>Description</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -419,7 +416,7 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (type: ");
     result.append(type);
     result.append(", description: ");

@@ -157,8 +157,6 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
-import argument.provider.ArgumentItemProviderAdapterFactory;
-
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
 
@@ -771,7 +769,7 @@ public class ArgumentEditor
     adapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
 
     adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
-    adapterFactory.addAdapterFactory(new ArgumentItemProviderAdapterFactory());
+    adapterFactory.addAdapterFactory(new argument.argument.provider.ArgumentItemProviderAdapterFactory());
     adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
     // Create the command stack that will notify this editor as commands are executed.

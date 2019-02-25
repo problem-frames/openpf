@@ -43,7 +43,6 @@ import uk.ac.open.problem.diagram.edit.parts.NodeName7EditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeNameDescriptionEditPart;
 import uk.ac.open.problem.diagram.edit.parts.NodeNameEditPart;
 import uk.ac.open.problem.diagram.edit.parts.ProblemDiagramEditPart;
-import uk.ac.open.problem.diagram.expressions.ProblemOCLFactory;
 
 /**
  * This registry is used to determine which type of visual object should be
@@ -153,47 +152,7 @@ public class ProblemVisualIDRegistry {
 		}
 		switch (containerVisualID) {
 		case ProblemDiagramEditPart.VISUAL_ID:
-			if (ProblemPackage.eINSTANCE.getNode().isSuperTypeOf(
-					domainElement.eClass())
-					&& isNode_2001((Node) domainElement)) {
-				return NodeEditPart.VISUAL_ID;
-			}
-			if (ProblemPackage.eINSTANCE.getNode().isSuperTypeOf(
-					domainElement.eClass())
-					&& isNode_2002((Node) domainElement)) {
-				return Node2EditPart.VISUAL_ID;
-			}
-			if (ProblemPackage.eINSTANCE.getNode().isSuperTypeOf(
-					domainElement.eClass())
-					&& isNode_2003((Node) domainElement)) {
-				return Node3EditPart.VISUAL_ID;
-			}
-			if (ProblemPackage.eINSTANCE.getNode().isSuperTypeOf(
-					domainElement.eClass())
-					&& isNode_2004((Node) domainElement)) {
-				return Node4EditPart.VISUAL_ID;
-			}
-			if (ProblemPackage.eINSTANCE.getNode().isSuperTypeOf(
-					domainElement.eClass())
-					&& isNode_2005((Node) domainElement)) {
-				return Node5EditPart.VISUAL_ID;
-			}
-			if (ProblemPackage.eINSTANCE.getNode().isSuperTypeOf(
-					domainElement.eClass())
-					&& isNode_2006((Node) domainElement)) {
-				return Node6EditPart.VISUAL_ID;
-			}
-			if (ProblemPackage.eINSTANCE.getNode().isSuperTypeOf(
-					domainElement.eClass())
-					&& isNode_2007((Node) domainElement)) {
-				return Node7EditPart.VISUAL_ID;
-			}
-			if (ProblemPackage.eINSTANCE.getNode().isSuperTypeOf(
-					domainElement.eClass())
-					&& isNode_2008((Node) domainElement)) {
-				return Node8EditPart.VISUAL_ID;
-			}
-			break;
+			return NodeEditPart.VISUAL_ID;
 		}
 		return -1;
 	}
@@ -340,26 +299,6 @@ public class ProblemVisualIDRegistry {
 		if (domainElement == null) {
 			return -1;
 		}
-		if (ProblemPackage.eINSTANCE.getLink().isSuperTypeOf(
-				domainElement.eClass())
-				&& isLink_4001((Link) domainElement)) {
-			return LinkEditPart.VISUAL_ID;
-		}
-		if (ProblemPackage.eINSTANCE.getLink().isSuperTypeOf(
-				domainElement.eClass())
-				&& isLink_4002((Link) domainElement)) {
-			return Link2EditPart.VISUAL_ID;
-		}
-		if (ProblemPackage.eINSTANCE.getLink().isSuperTypeOf(
-				domainElement.eClass())
-				&& isLink_4003((Link) domainElement)) {
-			return Link3EditPart.VISUAL_ID;
-		}
-		if (ProblemPackage.eINSTANCE.getLink().isSuperTypeOf(
-				domainElement.eClass())
-				&& isLink_4004((Link) domainElement)) {
-			return Link4EditPart.VISUAL_ID;
-		}
 		return -1;
 	}
 
@@ -371,126 +310,6 @@ public class ProblemVisualIDRegistry {
 	 */
 	private static boolean isDiagram(ProblemDiagram element) {
 		return true;
-	}
-
-	/**
-	 * @generated
-	 */
-	private static boolean isNode_2001(Node domainElement) {
-		Object result = ProblemOCLFactory.getExpression(0,
-				ProblemPackage.eINSTANCE.getNode(), null).evaluate(
-				domainElement);
-		return result instanceof Boolean && ((Boolean) result).booleanValue();
-	}
-
-	/**
-	 * @generated
-	 */
-	private static boolean isNode_2002(Node domainElement) {
-		Object result = ProblemOCLFactory.getExpression(2,
-				ProblemPackage.eINSTANCE.getNode(), null).evaluate(
-				domainElement);
-		return result instanceof Boolean && ((Boolean) result).booleanValue();
-	}
-
-	/**
-	 * @generated
-	 */
-	private static boolean isNode_2003(Node domainElement) {
-		Object result = ProblemOCLFactory.getExpression(4,
-				ProblemPackage.eINSTANCE.getNode(), null).evaluate(
-				domainElement);
-		return result instanceof Boolean && ((Boolean) result).booleanValue();
-	}
-
-	/**
-	 * @generated
-	 */
-	private static boolean isNode_2004(Node domainElement) {
-		Object result = ProblemOCLFactory.getExpression(6,
-				ProblemPackage.eINSTANCE.getNode(), null).evaluate(
-				domainElement);
-		return result instanceof Boolean && ((Boolean) result).booleanValue();
-	}
-
-	/**
-	 * @generated
-	 */
-	private static boolean isNode_2005(Node domainElement) {
-		Object result = ProblemOCLFactory.getExpression(8,
-				ProblemPackage.eINSTANCE.getNode(), null).evaluate(
-				domainElement);
-		return result instanceof Boolean && ((Boolean) result).booleanValue();
-	}
-
-	/**
-	 * @generated
-	 */
-	private static boolean isNode_2006(Node domainElement) {
-		Object result = ProblemOCLFactory.getExpression(10,
-				ProblemPackage.eINSTANCE.getNode(), null).evaluate(
-				domainElement);
-		return result instanceof Boolean && ((Boolean) result).booleanValue();
-	}
-
-	/**
-	 * @generated
-	 */
-	private static boolean isNode_2007(Node domainElement) {
-		Object result = ProblemOCLFactory.getExpression(12,
-				ProblemPackage.eINSTANCE.getNode(), null).evaluate(
-				domainElement);
-		return result instanceof Boolean && ((Boolean) result).booleanValue();
-	}
-
-	/**
-	 * @generated
-	 */
-	private static boolean isNode_2008(Node domainElement) {
-		Object result = ProblemOCLFactory.getExpression(14,
-				ProblemPackage.eINSTANCE.getNode(), null).evaluate(
-				domainElement);
-		return result instanceof Boolean && ((Boolean) result).booleanValue();
-	}
-
-	/**
-	 * @generated
-	 */
-	private static boolean isLink_4001(Link domainElement) {
-		Object result = ProblemOCLFactory.getExpression(16,
-				ProblemPackage.eINSTANCE.getLink(), null).evaluate(
-				domainElement);
-		return result instanceof Boolean && ((Boolean) result).booleanValue();
-	}
-
-	/**
-	 * @generated
-	 */
-	private static boolean isLink_4002(Link domainElement) {
-		Object result = ProblemOCLFactory.getExpression(18,
-				ProblemPackage.eINSTANCE.getLink(), null).evaluate(
-				domainElement);
-		return result instanceof Boolean && ((Boolean) result).booleanValue();
-	}
-
-	/**
-	 * @generated
-	 */
-	private static boolean isLink_4003(Link domainElement) {
-		Object result = ProblemOCLFactory.getExpression(20,
-				ProblemPackage.eINSTANCE.getLink(), null).evaluate(
-				domainElement);
-		return result instanceof Boolean && ((Boolean) result).booleanValue();
-	}
-
-	/**
-	 * @generated
-	 */
-	private static boolean isLink_4004(Link domainElement) {
-		Object result = ProblemOCLFactory.getExpression(22,
-				ProblemPackage.eINSTANCE.getLink(), null).evaluate(
-				domainElement);
-		return result instanceof Boolean && ((Boolean) result).booleanValue();
 	}
 
 }

@@ -4,9 +4,7 @@ generate argument "http://sead1.open.ac.uk/argument/Argument"
 
 ArgumentDiagram: ("argument:" name=ID)?
         ((nodes+=Argument | links+=Link))*;
-/*
-These relationships can be derived
-*/
+// These relationships can be derived
 Link: Rebuts | Mitigates;
 
 Rebuts: from=[Argument] "rebutted by" to=[Argument] "on" denies=[Argument] (generated?='@generated')?;

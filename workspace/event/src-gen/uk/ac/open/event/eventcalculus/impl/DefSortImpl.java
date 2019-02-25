@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.event.eventcalculus.impl;
 
@@ -21,12 +18,12 @@ import uk.ac.open.event.eventcalculus.EventcalculusPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.DefSortImpl#getName <em>Name</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.DefSortImpl#getReified <em>Reified</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.DefSortImpl#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -118,6 +115,7 @@ public class DefSortImpl extends DeclarationImpl implements DefSort
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getName()
   {
     return name;
@@ -128,6 +126,7 @@ public class DefSortImpl extends DeclarationImpl implements DefSort
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setName(String newName)
   {
     String oldName = name;
@@ -141,6 +140,7 @@ public class DefSortImpl extends DeclarationImpl implements DefSort
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getReified()
   {
     return reified;
@@ -151,6 +151,7 @@ public class DefSortImpl extends DeclarationImpl implements DefSort
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setReified(String newReified)
   {
     String oldReified = reified;
@@ -164,6 +165,7 @@ public class DefSortImpl extends DeclarationImpl implements DefSort
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getType()
   {
     return type;
@@ -174,6 +176,7 @@ public class DefSortImpl extends DeclarationImpl implements DefSort
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setType(String newType)
   {
     String oldType = type;
@@ -316,7 +319,7 @@ public class DefSortImpl extends DeclarationImpl implements DefSort
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (name: ");
     result.append(name);
     result.append(", reified: ");

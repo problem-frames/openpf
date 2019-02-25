@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.problem;
 
@@ -16,6 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.problem.Link#getFrom <em>From</em>}</li>
  *   <li>{@link uk.ac.open.problem.Link#getType <em>Type</em>}</li>
@@ -23,7 +21,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link uk.ac.open.problem.Link#getPhenomena <em>Phenomena</em>}</li>
  *   <li>{@link uk.ac.open.problem.Link#getDescription <em>Description</em>}</li>
  * </ul>
- * </p>
  *
  * @see uk.ac.open.problem.ProblemPackage#getLink()
  * @model

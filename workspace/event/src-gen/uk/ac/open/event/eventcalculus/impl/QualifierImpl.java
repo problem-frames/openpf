@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.event.eventcalculus.impl;
 
@@ -25,11 +22,11 @@ import uk.ac.open.event.eventcalculus.UnaryOp;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.QualifierImpl#getOp <em>Op</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.QualifierImpl#getParameters <em>Parameters</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -91,6 +88,7 @@ public class QualifierImpl extends MinimalEObjectImpl.Container implements Quali
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public UnaryOp getOp()
   {
     return op;
@@ -101,6 +99,7 @@ public class QualifierImpl extends MinimalEObjectImpl.Container implements Quali
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setOp(UnaryOp newOp)
   {
     UnaryOp oldOp = op;
@@ -114,6 +113,7 @@ public class QualifierImpl extends MinimalEObjectImpl.Container implements Quali
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Parameters getParameters()
   {
     return parameters;
@@ -141,6 +141,7 @@ public class QualifierImpl extends MinimalEObjectImpl.Container implements Quali
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setParameters(Parameters newParameters)
   {
     if (newParameters != parameters)
@@ -259,7 +260,7 @@ public class QualifierImpl extends MinimalEObjectImpl.Container implements Quali
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (op: ");
     result.append(op);
     result.append(')');

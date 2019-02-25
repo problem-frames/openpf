@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package argument.argument.impl;
 
@@ -22,10 +19,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link argument.argument.impl.MitigatesImpl#getRestores <em>Restores</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -67,6 +64,7 @@ public class MitigatesImpl extends LinkImpl implements Mitigates
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Argument getRestores()
   {
     if (restores != null && restores.eIsProxy())
@@ -97,6 +95,7 @@ public class MitigatesImpl extends LinkImpl implements Mitigates
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setRestores(Argument newRestores)
   {
     Argument oldRestores = restores;

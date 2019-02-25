@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.event.eventcalculus.impl;
 
@@ -22,12 +19,12 @@ import uk.ac.open.event.eventcalculus.EventcalculusPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.DefRangeImpl#getName <em>Name</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.DefRangeImpl#getMin <em>Min</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.DefRangeImpl#getMax <em>Max</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -109,6 +106,7 @@ public class DefRangeImpl extends DeclarationImpl implements DefRange
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public DefSort getName()
   {
     if (name != null && name.eIsProxy())
@@ -139,6 +137,7 @@ public class DefRangeImpl extends DeclarationImpl implements DefRange
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setName(DefSort newName)
   {
     DefSort oldName = name;
@@ -152,6 +151,7 @@ public class DefRangeImpl extends DeclarationImpl implements DefRange
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public int getMin()
   {
     return min;
@@ -162,6 +162,7 @@ public class DefRangeImpl extends DeclarationImpl implements DefRange
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setMin(int newMin)
   {
     int oldMin = min;
@@ -175,6 +176,7 @@ public class DefRangeImpl extends DeclarationImpl implements DefRange
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public int getMax()
   {
     return max;
@@ -185,6 +187,7 @@ public class DefRangeImpl extends DeclarationImpl implements DefRange
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setMax(int newMax)
   {
     int oldMax = max;
@@ -290,7 +293,7 @@ public class DefRangeImpl extends DeclarationImpl implements DefRange
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (min: ");
     result.append(min);
     result.append(", max: ");

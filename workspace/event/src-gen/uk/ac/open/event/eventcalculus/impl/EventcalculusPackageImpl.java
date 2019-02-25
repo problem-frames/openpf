@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.event.eventcalculus.impl;
 
@@ -396,7 +393,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
 
   /**
    * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-   * 
+   *
    * <p>This method is used to initialize {@link EventcalculusPackage#eINSTANCE} when that field is accessed.
    * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
    * <!-- begin-user-doc -->
@@ -411,7 +408,8 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
     if (isInited) return (EventcalculusPackage)EPackage.Registry.INSTANCE.getEPackage(EventcalculusPackage.eNS_URI);
 
     // Obtain or create and register package
-    EventcalculusPackageImpl theEventcalculusPackage = (EventcalculusPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof EventcalculusPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new EventcalculusPackageImpl());
+    Object registeredEventcalculusPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+    EventcalculusPackageImpl theEventcalculusPackage = registeredEventcalculusPackage instanceof EventcalculusPackageImpl ? (EventcalculusPackageImpl)registeredEventcalculusPackage : new EventcalculusPackageImpl();
 
     isInited = true;
 
@@ -424,7 +422,6 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
     // Mark meta-data to indicate it can't be changed
     theEventcalculusPackage.freeze();
 
-  
     // Update the registry and return the package
     EPackage.Registry.INSTANCE.put(EventcalculusPackage.eNS_URI, theEventcalculusPackage);
     return theEventcalculusPackage;
@@ -435,6 +432,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getModel()
   {
     return modelEClass;
@@ -445,6 +443,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getModel_Imports()
   {
     return (EReference)modelEClass.getEStructuralFeatures().get(0);
@@ -455,6 +454,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getModel_Declarations()
   {
     return (EReference)modelEClass.getEStructuralFeatures().get(1);
@@ -465,6 +465,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getModel_Statements()
   {
     return (EReference)modelEClass.getEStructuralFeatures().get(2);
@@ -475,6 +476,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getImport()
   {
     return importEClass;
@@ -485,6 +487,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getImport_ImportURI()
   {
     return (EAttribute)importEClass.getEStructuralFeatures().get(0);
@@ -495,6 +498,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getAnnotation()
   {
     return annotationEClass;
@@ -505,6 +509,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getAnnotation_Type()
   {
     return (EAttribute)annotationEClass.getEStructuralFeatures().get(0);
@@ -515,6 +520,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getAnnotation_Value()
   {
     return (EAttribute)annotationEClass.getEStructuralFeatures().get(1);
@@ -525,6 +531,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getDeclaration()
   {
     return declarationEClass;
@@ -535,6 +542,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getDeclaration_Annotations()
   {
     return (EReference)declarationEClass.getEStructuralFeatures().get(0);
@@ -545,6 +553,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getDefines()
   {
     return definesEClass;
@@ -555,6 +564,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getDefines_Name()
   {
     return (EAttribute)definesEClass.getEStructuralFeatures().get(0);
@@ -565,6 +575,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getDefSort()
   {
     return defSortEClass;
@@ -575,6 +586,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getDefSort_Reified()
   {
     return (EAttribute)defSortEClass.getEStructuralFeatures().get(0);
@@ -585,6 +597,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getDefSort_Type()
   {
     return (EAttribute)defSortEClass.getEStructuralFeatures().get(1);
@@ -595,6 +608,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getDefRange()
   {
     return defRangeEClass;
@@ -605,6 +619,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getDefRange_Name()
   {
     return (EReference)defRangeEClass.getEStructuralFeatures().get(0);
@@ -615,6 +630,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getDefRange_Min()
   {
     return (EAttribute)defRangeEClass.getEStructuralFeatures().get(1);
@@ -625,6 +641,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getDefRange_Max()
   {
     return (EAttribute)defRangeEClass.getEStructuralFeatures().get(2);
@@ -635,6 +652,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getDefOption()
   {
     return defOptionEClass;
@@ -645,6 +663,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getDefOption_Name()
   {
     return (EAttribute)defOptionEClass.getEStructuralFeatures().get(0);
@@ -655,6 +674,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getDefOption_Value()
   {
     return (EAttribute)defOptionEClass.getEStructuralFeatures().get(1);
@@ -665,6 +685,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getDefOption_Value2()
   {
     return (EAttribute)defOptionEClass.getEStructuralFeatures().get(2);
@@ -675,6 +696,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getDefCompletion()
   {
     return defCompletionEClass;
@@ -685,6 +707,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getDefCompletion_Type()
   {
     return (EAttribute)defCompletionEClass.getEStructuralFeatures().get(0);
@@ -695,6 +718,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getDefCompletion_Label()
   {
     return (EReference)defCompletionEClass.getEStructuralFeatures().get(1);
@@ -705,6 +729,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getDefNonInertia()
   {
     return defNonInertiaEClass;
@@ -715,6 +740,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getDefNonInertia_Names()
   {
     return (EReference)defNonInertiaEClass.getEStructuralFeatures().get(0);
@@ -725,6 +751,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getDefXor()
   {
     return defXorEClass;
@@ -735,6 +762,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getDefXor_Names()
   {
     return (EReference)defXorEClass.getEStructuralFeatures().get(0);
@@ -745,6 +773,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getDefMutex()
   {
     return defMutexEClass;
@@ -755,6 +784,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getDefMutex_Names()
   {
     return (EReference)defMutexEClass.getEStructuralFeatures().get(0);
@@ -765,6 +795,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getStatement()
   {
     return statementEClass;
@@ -775,6 +806,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getStatement_Annotations()
   {
     return (EReference)statementEClass.getEStructuralFeatures().get(0);
@@ -785,6 +817,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getLabeledExpression()
   {
     return labeledExpressionEClass;
@@ -795,6 +828,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getLabeledExpression_Name()
   {
     return (EAttribute)labeledExpressionEClass.getEStructuralFeatures().get(0);
@@ -805,6 +839,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getLabeledExpression_Expr()
   {
     return (EReference)labeledExpressionEClass.getEStructuralFeatures().get(1);
@@ -815,6 +850,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getSortDefinition()
   {
     return sortDefinitionEClass;
@@ -825,6 +861,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getSortDefinition_Sort()
   {
     return (EReference)sortDefinitionEClass.getEStructuralFeatures().get(0);
@@ -835,6 +872,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getSortDefinition_Definitions()
   {
     return (EReference)sortDefinitionEClass.getEStructuralFeatures().get(1);
@@ -845,6 +883,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getDefinition()
   {
     return definitionEClass;
@@ -855,6 +894,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getDefinition_Args()
   {
     return (EReference)definitionEClass.getEStructuralFeatures().get(0);
@@ -865,6 +905,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getDefinition_Return()
   {
     return (EReference)definitionEClass.getEStructuralFeatures().get(1);
@@ -875,6 +916,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getExpression()
   {
     return expressionEClass;
@@ -885,6 +927,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getExpression_Expr()
   {
     return (EReference)expressionEClass.getEStructuralFeatures().get(0);
@@ -895,6 +938,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getExpression_Qualifiers()
   {
     return (EReference)expressionEClass.getEStructuralFeatures().get(1);
@@ -905,6 +949,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getExpression_Op()
   {
     return (EAttribute)expressionEClass.getEStructuralFeatures().get(2);
@@ -915,6 +960,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getExpression_Right()
   {
     return (EReference)expressionEClass.getEStructuralFeatures().get(3);
@@ -925,6 +971,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getExpression_N()
   {
     return (EAttribute)expressionEClass.getEStructuralFeatures().get(4);
@@ -935,6 +982,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getExpression_Define()
   {
     return (EReference)expressionEClass.getEStructuralFeatures().get(5);
@@ -945,6 +993,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getQualifier()
   {
     return qualifierEClass;
@@ -955,6 +1004,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getQualifier_Op()
   {
     return (EAttribute)qualifierEClass.getEStructuralFeatures().get(0);
@@ -965,6 +1015,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getQualifier_Parameters()
   {
     return (EReference)qualifierEClass.getEStructuralFeatures().get(1);
@@ -975,6 +1026,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getParameters()
   {
     return parametersEClass;
@@ -985,6 +1037,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getParameters_Names()
   {
     return (EReference)parametersEClass.getEStructuralFeatures().get(0);
@@ -995,6 +1048,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getTerminalExpression()
   {
     return terminalExpressionEClass;
@@ -1005,6 +1059,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getAssignPlus()
   {
     return assignPlusEClass;
@@ -1015,6 +1070,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getAssignPlus_Left()
   {
     return (EReference)assignPlusEClass.getEStructuralFeatures().get(0);
@@ -1025,6 +1081,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getAssignPlus_Q()
   {
     return (EReference)assignPlusEClass.getEStructuralFeatures().get(1);
@@ -1035,6 +1092,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getAssignMin()
   {
     return assignMinEClass;
@@ -1045,6 +1103,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getAssignMin_Left()
   {
     return (EReference)assignMinEClass.getEStructuralFeatures().get(0);
@@ -1055,6 +1114,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getAssignMin_Q()
   {
     return (EReference)assignMinEClass.getEStructuralFeatures().get(1);
@@ -1065,6 +1125,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getOr()
   {
     return orEClass;
@@ -1075,6 +1136,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getOr_Left()
   {
     return (EReference)orEClass.getEStructuralFeatures().get(0);
@@ -1085,6 +1147,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getOr_Q()
   {
     return (EReference)orEClass.getEStructuralFeatures().get(1);
@@ -1095,6 +1158,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getAnd()
   {
     return andEClass;
@@ -1105,6 +1169,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getAnd_Left()
   {
     return (EReference)andEClass.getEStructuralFeatures().get(0);
@@ -1115,6 +1180,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getAnd_Q()
   {
     return (EReference)andEClass.getEStructuralFeatures().get(1);
@@ -1125,6 +1191,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getRelNotEq()
   {
     return relNotEqEClass;
@@ -1135,6 +1202,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getRelNotEq_Left()
   {
     return (EReference)relNotEqEClass.getEStructuralFeatures().get(0);
@@ -1145,6 +1213,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getRelEqEq()
   {
     return relEqEqEClass;
@@ -1155,6 +1224,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getRelEqEq_Left()
   {
     return (EReference)relEqEqEClass.getEStructuralFeatures().get(0);
@@ -1165,6 +1235,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getRelLtEq()
   {
     return relLtEqEClass;
@@ -1175,6 +1246,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getRelLtEq_Left()
   {
     return (EReference)relLtEqEClass.getEStructuralFeatures().get(0);
@@ -1185,6 +1257,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getRelGtEq()
   {
     return relGtEqEClass;
@@ -1195,6 +1268,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getRelGtEq_Left()
   {
     return (EReference)relGtEqEClass.getEStructuralFeatures().get(0);
@@ -1205,6 +1279,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getRelEq()
   {
     return relEqEClass;
@@ -1215,6 +1290,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getRelEq_Left()
   {
     return (EReference)relEqEClass.getEStructuralFeatures().get(0);
@@ -1225,6 +1301,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getRelLt()
   {
     return relLtEClass;
@@ -1235,6 +1312,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getRelLt_Left()
   {
     return (EReference)relLtEClass.getEStructuralFeatures().get(0);
@@ -1245,6 +1323,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getRelGt()
   {
     return relGtEClass;
@@ -1255,6 +1334,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getRelGt_Left()
   {
     return (EReference)relGtEClass.getEStructuralFeatures().get(0);
@@ -1265,6 +1345,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getPlus()
   {
     return plusEClass;
@@ -1275,6 +1356,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getPlus_Left()
   {
     return (EReference)plusEClass.getEStructuralFeatures().get(0);
@@ -1285,6 +1367,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getMinus()
   {
     return minusEClass;
@@ -1295,6 +1378,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getMinus_Left()
   {
     return (EReference)minusEClass.getEStructuralFeatures().get(0);
@@ -1305,6 +1389,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getMulti()
   {
     return multiEClass;
@@ -1315,6 +1400,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getMulti_Left()
   {
     return (EReference)multiEClass.getEStructuralFeatures().get(0);
@@ -1325,6 +1411,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getDiv()
   {
     return divEClass;
@@ -1335,6 +1422,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getDiv_Left()
   {
     return (EReference)divEClass.getEStructuralFeatures().get(0);
@@ -1345,6 +1433,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getPow()
   {
     return powEClass;
@@ -1355,6 +1444,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getPow_Left()
   {
     return (EReference)powEClass.getEStructuralFeatures().get(0);
@@ -1365,6 +1455,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getFunctionRef()
   {
     return functionRefEClass;
@@ -1375,6 +1466,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getFunctionRef_Func()
   {
     return (EReference)functionRefEClass.getEStructuralFeatures().get(0);
@@ -1385,6 +1477,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getFunctionRef_Args()
   {
     return (EReference)functionRefEClass.getEStructuralFeatures().get(1);
@@ -1395,6 +1488,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getIntLiteral()
   {
     return intLiteralEClass;
@@ -1405,6 +1499,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getIntLiteral_Value()
   {
     return (EAttribute)intLiteralEClass.getEStructuralFeatures().get(0);
@@ -1415,6 +1510,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getStringLiteral()
   {
     return stringLiteralEClass;
@@ -1425,6 +1521,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getStringLiteral_Value()
   {
     return (EAttribute)stringLiteralEClass.getEStructuralFeatures().get(0);
@@ -1435,6 +1532,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getBooleanLiteral()
   {
     return booleanLiteralEClass;
@@ -1445,6 +1543,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getBooleanLiteral_Value()
   {
     return (EAttribute)booleanLiteralEClass.getEStructuralFeatures().get(0);
@@ -1455,6 +1554,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EEnum getANNOTATION_TYPE()
   {
     return annotatioN_TYPEEEnum;
@@ -1465,6 +1565,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EEnum getLabelType()
   {
     return labelTypeEEnum;
@@ -1475,6 +1576,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EEnum getUnaryOp()
   {
     return unaryOpEEnum;
@@ -1485,6 +1587,7 @@ public class EventcalculusPackageImpl extends EPackageImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EventcalculusFactory getEventcalculusFactory()
   {
     return (EventcalculusFactory)getEFactoryInstance();

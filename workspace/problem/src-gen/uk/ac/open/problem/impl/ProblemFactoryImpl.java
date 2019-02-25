@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.problem.impl;
 
@@ -34,7 +31,7 @@ public class ProblemFactoryImpl extends EFactoryImpl implements ProblemFactory
   {
     try
     {
-      ProblemFactory theProblemFactory = (ProblemFactory)EPackage.Registry.INSTANCE.getEFactory("http://open.ac.uk/problem"); 
+      ProblemFactory theProblemFactory = (ProblemFactory)EPackage.Registry.INSTANCE.getEFactory(ProblemPackage.eNS_URI);
       if (theProblemFactory != null)
       {
         return theProblemFactory;

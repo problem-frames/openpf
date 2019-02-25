@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package argument.argument.impl;
 
@@ -23,12 +20,12 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link argument.argument.impl.LinkImpl#getFrom <em>From</em>}</li>
  *   <li>{@link argument.argument.impl.LinkImpl#getTo <em>To</em>}</li>
  *   <li>{@link argument.argument.impl.LinkImpl#isGenerated <em>Generated</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -100,6 +97,7 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Argument getFrom()
   {
     if (from != null && from.eIsProxy())
@@ -130,6 +128,7 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setFrom(Argument newFrom)
   {
     Argument oldFrom = from;
@@ -143,6 +142,7 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Argument getTo()
   {
     if (to != null && to.eIsProxy())
@@ -173,6 +173,7 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setTo(Argument newTo)
   {
     Argument oldTo = to;
@@ -186,6 +187,7 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public boolean isGenerated()
   {
     return generated;
@@ -196,6 +198,7 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setGenerated(boolean newGenerated)
   {
     boolean oldGenerated = generated;
@@ -302,7 +305,7 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (generated: ");
     result.append(generated);
     result.append(')');

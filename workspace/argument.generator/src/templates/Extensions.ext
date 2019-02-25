@@ -1,4 +1,0 @@
-import argument::argument;
-
-sortedGreetings(Model this) :
-	this.greetings.sortBy(g|g.name.toLowerCase());

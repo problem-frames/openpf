@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.event.eventcalculus.impl;
 
@@ -23,10 +20,10 @@ import uk.ac.open.event.eventcalculus.RelLt;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.RelLtImpl#getLeft <em>Left</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -68,6 +65,7 @@ public class RelLtImpl extends ExpressionImpl implements RelLt
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Expression getLeft()
   {
     return left;
@@ -95,6 +93,7 @@ public class RelLtImpl extends ExpressionImpl implements RelLt
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setLeft(Expression newLeft)
   {
     if (newLeft != left)

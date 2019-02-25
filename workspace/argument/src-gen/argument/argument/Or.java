@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package argument.argument;
 
@@ -13,12 +10,12 @@ package argument.argument;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link argument.argument.Or#getLeft <em>Left</em>}</li>
  *   <li>{@link argument.argument.Or#getOr_op <em>Or op</em>}</li>
  *   <li>{@link argument.argument.Or#getRight <em>Right</em>}</li>
  * </ul>
- * </p>
  *
  * @see argument.argument.ArgumentPackage#getOr()
  * @model
@@ -35,12 +32,12 @@ public interface Or extends OrExp
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Left</em>' containment reference.
-   * @see #setLeft(AndExp)
+   * @see #setLeft(OrExp)
    * @see argument.argument.ArgumentPackage#getOr_Left()
    * @model containment="true"
    * @generated
    */
-  AndExp getLeft();
+  OrExp getLeft();
 
   /**
    * Sets the value of the '{@link argument.argument.Or#getLeft <em>Left</em>}' containment reference.
@@ -50,7 +47,7 @@ public interface Or extends OrExp
    * @see #getLeft()
    * @generated
    */
-  void setLeft(AndExp value);
+  void setLeft(OrExp value);
 
   /**
    * Returns the value of the '<em><b>Or op</b></em>' attribute.

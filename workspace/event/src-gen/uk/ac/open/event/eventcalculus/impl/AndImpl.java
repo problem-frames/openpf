@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.event.eventcalculus.impl;
 
@@ -24,11 +21,11 @@ import uk.ac.open.event.eventcalculus.Qualifier;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.AndImpl#getLeft <em>Left</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.AndImpl#getQ <em>Q</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -80,6 +77,7 @@ public class AndImpl extends ExpressionImpl implements And
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Expression getLeft()
   {
     return left;
@@ -107,6 +105,7 @@ public class AndImpl extends ExpressionImpl implements And
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setLeft(Expression newLeft)
   {
     if (newLeft != left)
@@ -128,6 +127,7 @@ public class AndImpl extends ExpressionImpl implements And
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Qualifier getQ()
   {
     return q;
@@ -155,6 +155,7 @@ public class AndImpl extends ExpressionImpl implements And
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setQ(Qualifier newQ)
   {
     if (newQ != q)

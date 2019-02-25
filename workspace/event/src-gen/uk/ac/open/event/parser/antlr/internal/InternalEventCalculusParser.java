@@ -1,10 +1,8 @@
 package uk.ac.open.event.parser.antlr.internal; 
 
-import java.io.InputStream;
 import org.eclipse.xtext.*;
 import org.eclipse.xtext.parser.*;
 import org.eclipse.xtext.parser.impl.*;
-import org.eclipse.xtext.parsetree.*;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.common.util.Enumerator;
@@ -12,7 +10,6 @@ import org.eclipse.xtext.parser.antlr.AbstractInternalAntlrParser;
 import org.eclipse.xtext.parser.antlr.XtextTokenStream;
 import org.eclipse.xtext.parser.antlr.XtextTokenStream.HiddenTokens;
 import org.eclipse.xtext.parser.antlr.AntlrDatatypeRuleToken;
-import org.eclipse.xtext.conversion.ValueConverterException;
 import uk.ac.open.event.services.EventCalculusGrammarAccess;
 
 
@@ -27,39 +24,82 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_BOOLEAN", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'load'", "';'", "'#'", "'not'", "'reified'", "'sort'", "':'", "'range'", "'option'", "'completion'", "'noninertial'", "','", "'xor'", "'mutex'", "'.'", "'('", "')'", "'{'", "'}'", "'['", "']'", "'->'", "'<->'", "'|'", "'&'", "'!='", "'=='", "'>='", "'<='", "'='", "'<'", "'>'", "'+'", "'-'", "'*'", "'/'", "'^'", "'generated'", "'author'", "'Theta'", "'Delta'", "'!'"
     };
+    public static final int T__50=50;
     public static final int RULE_BOOLEAN=7;
+    public static final int T__19=19;
+    public static final int T__15=15;
+    public static final int T__16=16;
+    public static final int T__17=17;
+    public static final int T__18=18;
+    public static final int T__12=12;
+    public static final int T__13=13;
+    public static final int T__14=14;
+    public static final int T__51=51;
+    public static final int T__52=52;
+    public static final int T__53=53;
     public static final int RULE_ID=5;
-    public static final int RULE_STRING=4;
-    public static final int RULE_ANY_OTHER=11;
+    public static final int T__26=26;
+    public static final int T__27=27;
+    public static final int T__28=28;
     public static final int RULE_INT=6;
-    public static final int RULE_WS=10;
-    public static final int RULE_SL_COMMENT=9;
-    public static final int EOF=-1;
+    public static final int T__29=29;
+    public static final int T__22=22;
     public static final int RULE_ML_COMMENT=8;
+    public static final int T__23=23;
+    public static final int T__24=24;
+    public static final int T__25=25;
+    public static final int T__20=20;
+    public static final int T__21=21;
+    public static final int RULE_STRING=4;
+    public static final int RULE_SL_COMMENT=9;
+    public static final int T__37=37;
+    public static final int T__38=38;
+    public static final int T__39=39;
+    public static final int T__33=33;
+    public static final int T__34=34;
+    public static final int T__35=35;
+    public static final int T__36=36;
+    public static final int EOF=-1;
+    public static final int T__30=30;
+    public static final int T__31=31;
+    public static final int T__32=32;
+    public static final int RULE_WS=10;
+    public static final int RULE_ANY_OTHER=11;
+    public static final int T__48=48;
+    public static final int T__49=49;
+    public static final int T__44=44;
+    public static final int T__45=45;
+    public static final int T__46=46;
+    public static final int T__47=47;
+    public static final int T__40=40;
+    public static final int T__41=41;
+    public static final int T__42=42;
+    public static final int T__43=43;
+
+    // delegates
+    // delegators
+
 
         public InternalEventCalculusParser(TokenStream input) {
-            super(input);
+            this(input, new RecognizerSharedState());
+        }
+        public InternalEventCalculusParser(TokenStream input, RecognizerSharedState state) {
+            super(input, state);
+             
         }
         
 
-    public String[] getTokenNames() { return tokenNames; }
-    public String getGrammarFileName() { return "../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g"; }
+    public String[] getTokenNames() { return InternalEventCalculusParser.tokenNames; }
+    public String getGrammarFileName() { return "InternalEventCalculus.g"; }
 
 
 
      	private EventCalculusGrammarAccess grammarAccess;
      	
-        public InternalEventCalculusParser(TokenStream input, IAstFactory factory, EventCalculusGrammarAccess grammarAccess) {
+        public InternalEventCalculusParser(TokenStream input, EventCalculusGrammarAccess grammarAccess) {
             this(input);
-            this.factory = factory;
-            registerRules(grammarAccess.getGrammar());
             this.grammarAccess = grammarAccess;
-        }
-        
-        @Override
-        protected InputStream getTokenFile() {
-        	ClassLoader classLoader = getClass().getClassLoader();
-        	return classLoader.getResourceAsStream("uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.tokens");
+            registerRules(grammarAccess.getGrammar());
         }
         
         @Override
@@ -74,8 +114,8 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
 
-    // $ANTLR start entryRuleModel
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:78:1: entryRuleModel returns [EObject current=null] : iv_ruleModel= ruleModel EOF ;
+    // $ANTLR start "entryRuleModel"
+    // InternalEventCalculus.g:68:1: entryRuleModel returns [EObject current=null] : iv_ruleModel= ruleModel EOF ;
     public final EObject entryRuleModel() throws RecognitionException {
         EObject current = null;
 
@@ -83,16 +123,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:79:2: (iv_ruleModel= ruleModel EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:80:2: iv_ruleModel= ruleModel EOF
+            // InternalEventCalculus.g:69:2: (iv_ruleModel= ruleModel EOF )
+            // InternalEventCalculus.g:70:2: iv_ruleModel= ruleModel EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getModelRule(), currentNode); 
-            pushFollow(FOLLOW_ruleModel_in_entryRuleModel75);
+             newCompositeNode(grammarAccess.getModelRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleModel=ruleModel();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleModel; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleModel85); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -106,11 +147,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleModel
+    // $ANTLR end "entryRuleModel"
 
 
-    // $ANTLR start ruleModel
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:87:1: ruleModel returns [EObject current=null] : ( ( (lv_imports_0_0= ruleImport ) )* ( ( (lv_declarations_1_0= ruleDeclaration ) ) | ( (lv_statements_2_0= ruleStatement ) ) )* ) ;
+    // $ANTLR start "ruleModel"
+    // InternalEventCalculus.g:77:1: ruleModel returns [EObject current=null] : ( ( (lv_imports_0_0= ruleImport ) )* ( ( (lv_declarations_1_0= ruleDeclaration ) ) | ( (lv_statements_2_0= ruleStatement ) ) )* ) ;
     public final EObject ruleModel() throws RecognitionException {
         EObject current = null;
 
@@ -121,16 +162,16 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         EObject lv_statements_2_0 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:92:6: ( ( ( (lv_imports_0_0= ruleImport ) )* ( ( (lv_declarations_1_0= ruleDeclaration ) ) | ( (lv_statements_2_0= ruleStatement ) ) )* ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:93:1: ( ( (lv_imports_0_0= ruleImport ) )* ( ( (lv_declarations_1_0= ruleDeclaration ) ) | ( (lv_statements_2_0= ruleStatement ) ) )* )
+            // InternalEventCalculus.g:80:28: ( ( ( (lv_imports_0_0= ruleImport ) )* ( ( (lv_declarations_1_0= ruleDeclaration ) ) | ( (lv_statements_2_0= ruleStatement ) ) )* ) )
+            // InternalEventCalculus.g:81:1: ( ( (lv_imports_0_0= ruleImport ) )* ( ( (lv_declarations_1_0= ruleDeclaration ) ) | ( (lv_statements_2_0= ruleStatement ) ) )* )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:93:1: ( ( (lv_imports_0_0= ruleImport ) )* ( ( (lv_declarations_1_0= ruleDeclaration ) ) | ( (lv_statements_2_0= ruleStatement ) ) )* )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:93:2: ( (lv_imports_0_0= ruleImport ) )* ( ( (lv_declarations_1_0= ruleDeclaration ) ) | ( (lv_statements_2_0= ruleStatement ) ) )*
+            // InternalEventCalculus.g:81:1: ( ( (lv_imports_0_0= ruleImport ) )* ( ( (lv_declarations_1_0= ruleDeclaration ) ) | ( (lv_statements_2_0= ruleStatement ) ) )* )
+            // InternalEventCalculus.g:81:2: ( (lv_imports_0_0= ruleImport ) )* ( ( (lv_declarations_1_0= ruleDeclaration ) ) | ( (lv_statements_2_0= ruleStatement ) ) )*
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:93:2: ( (lv_imports_0_0= ruleImport ) )*
+            // InternalEventCalculus.g:81:2: ( (lv_imports_0_0= ruleImport ) )*
             loop1:
             do {
                 int alt1=2;
@@ -143,34 +184,29 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                 switch (alt1) {
             	case 1 :
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:94:1: (lv_imports_0_0= ruleImport )
+            	    // InternalEventCalculus.g:82:1: (lv_imports_0_0= ruleImport )
             	    {
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:94:1: (lv_imports_0_0= ruleImport )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:95:3: lv_imports_0_0= ruleImport
+            	    // InternalEventCalculus.g:82:1: (lv_imports_0_0= ruleImport )
+            	    // InternalEventCalculus.g:83:3: lv_imports_0_0= ruleImport
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getImportsImportParserRuleCall_0_0(), currentNode); 
+            	    	        newCompositeNode(grammarAccess.getModelAccess().getImportsImportParserRuleCall_0_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleImport_in_ruleModel131);
+            	    pushFollow(FOLLOW_3);
             	    lv_imports_0_0=ruleImport();
-            	    _fsp--;
+
+            	    state._fsp--;
 
 
             	    	        if (current==null) {
-            	    	            current = factory.create(grammarAccess.getModelRule().getType().getClassifier());
-            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	    	            current = createModelElementForParent(grammarAccess.getModelRule());
             	    	        }
-            	    	        try {
-            	    	       		add(
-            	    	       			current, 
-            	    	       			"imports",
-            	    	        		lv_imports_0_0, 
-            	    	        		"Import", 
-            	    	        		currentNode);
-            	    	        } catch (ValueConverterException vce) {
-            	    				handleValueConverterException(vce);
-            	    	        }
-            	    	        currentNode = currentNode.getParent();
+            	           		add(
+            	           			current, 
+            	           			"imports",
+            	            		lv_imports_0_0, 
+            	            		"uk.ac.open.event.EventCalculus.Import");
+            	    	        afterParserOrEnumRuleCall();
             	    	    
 
             	    }
@@ -184,44 +220,39 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:117:3: ( ( (lv_declarations_1_0= ruleDeclaration ) ) | ( (lv_statements_2_0= ruleStatement ) ) )*
+            // InternalEventCalculus.g:99:3: ( ( (lv_declarations_1_0= ruleDeclaration ) ) | ( (lv_statements_2_0= ruleStatement ) ) )*
             loop2:
             do {
                 int alt2=3;
                 alt2 = dfa2.predict(input);
                 switch (alt2) {
             	case 1 :
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:117:4: ( (lv_declarations_1_0= ruleDeclaration ) )
+            	    // InternalEventCalculus.g:99:4: ( (lv_declarations_1_0= ruleDeclaration ) )
             	    {
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:117:4: ( (lv_declarations_1_0= ruleDeclaration ) )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:118:1: (lv_declarations_1_0= ruleDeclaration )
+            	    // InternalEventCalculus.g:99:4: ( (lv_declarations_1_0= ruleDeclaration ) )
+            	    // InternalEventCalculus.g:100:1: (lv_declarations_1_0= ruleDeclaration )
             	    {
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:118:1: (lv_declarations_1_0= ruleDeclaration )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:119:3: lv_declarations_1_0= ruleDeclaration
+            	    // InternalEventCalculus.g:100:1: (lv_declarations_1_0= ruleDeclaration )
+            	    // InternalEventCalculus.g:101:3: lv_declarations_1_0= ruleDeclaration
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getDeclarationsDeclarationParserRuleCall_1_0_0(), currentNode); 
+            	    	        newCompositeNode(grammarAccess.getModelAccess().getDeclarationsDeclarationParserRuleCall_1_0_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleDeclaration_in_ruleModel154);
+            	    pushFollow(FOLLOW_4);
             	    lv_declarations_1_0=ruleDeclaration();
-            	    _fsp--;
+
+            	    state._fsp--;
 
 
             	    	        if (current==null) {
-            	    	            current = factory.create(grammarAccess.getModelRule().getType().getClassifier());
-            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	    	            current = createModelElementForParent(grammarAccess.getModelRule());
             	    	        }
-            	    	        try {
-            	    	       		add(
-            	    	       			current, 
-            	    	       			"declarations",
-            	    	        		lv_declarations_1_0, 
-            	    	        		"Declaration", 
-            	    	        		currentNode);
-            	    	        } catch (ValueConverterException vce) {
-            	    				handleValueConverterException(vce);
-            	    	        }
-            	    	        currentNode = currentNode.getParent();
+            	           		add(
+            	           			current, 
+            	           			"declarations",
+            	            		lv_declarations_1_0, 
+            	            		"uk.ac.open.event.EventCalculus.Declaration");
+            	    	        afterParserOrEnumRuleCall();
             	    	    
 
             	    }
@@ -233,37 +264,32 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:142:6: ( (lv_statements_2_0= ruleStatement ) )
+            	    // InternalEventCalculus.g:118:6: ( (lv_statements_2_0= ruleStatement ) )
             	    {
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:142:6: ( (lv_statements_2_0= ruleStatement ) )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:143:1: (lv_statements_2_0= ruleStatement )
+            	    // InternalEventCalculus.g:118:6: ( (lv_statements_2_0= ruleStatement ) )
+            	    // InternalEventCalculus.g:119:1: (lv_statements_2_0= ruleStatement )
             	    {
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:143:1: (lv_statements_2_0= ruleStatement )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:144:3: lv_statements_2_0= ruleStatement
+            	    // InternalEventCalculus.g:119:1: (lv_statements_2_0= ruleStatement )
+            	    // InternalEventCalculus.g:120:3: lv_statements_2_0= ruleStatement
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getStatementsStatementParserRuleCall_1_1_0(), currentNode); 
+            	    	        newCompositeNode(grammarAccess.getModelAccess().getStatementsStatementParserRuleCall_1_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleStatement_in_ruleModel181);
+            	    pushFollow(FOLLOW_4);
             	    lv_statements_2_0=ruleStatement();
-            	    _fsp--;
+
+            	    state._fsp--;
 
 
             	    	        if (current==null) {
-            	    	            current = factory.create(grammarAccess.getModelRule().getType().getClassifier());
-            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	    	            current = createModelElementForParent(grammarAccess.getModelRule());
             	    	        }
-            	    	        try {
-            	    	       		add(
-            	    	       			current, 
-            	    	       			"statements",
-            	    	        		lv_statements_2_0, 
-            	    	        		"Statement", 
-            	    	        		currentNode);
-            	    	        } catch (ValueConverterException vce) {
-            	    				handleValueConverterException(vce);
-            	    	        }
-            	    	        currentNode = currentNode.getParent();
+            	           		add(
+            	           			current, 
+            	           			"statements",
+            	            		lv_statements_2_0, 
+            	            		"uk.ac.open.event.EventCalculus.Statement");
+            	    	        afterParserOrEnumRuleCall();
             	    	    
 
             	    }
@@ -286,9 +312,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -299,11 +323,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleModel
+    // $ANTLR end "ruleModel"
 
 
-    // $ANTLR start entryRuleImport
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:174:1: entryRuleImport returns [EObject current=null] : iv_ruleImport= ruleImport EOF ;
+    // $ANTLR start "entryRuleImport"
+    // InternalEventCalculus.g:144:1: entryRuleImport returns [EObject current=null] : iv_ruleImport= ruleImport EOF ;
     public final EObject entryRuleImport() throws RecognitionException {
         EObject current = null;
 
@@ -311,16 +335,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:175:2: (iv_ruleImport= ruleImport EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:176:2: iv_ruleImport= ruleImport EOF
+            // InternalEventCalculus.g:145:2: (iv_ruleImport= ruleImport EOF )
+            // InternalEventCalculus.g:146:2: iv_ruleImport= ruleImport EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getImportRule(), currentNode); 
-            pushFollow(FOLLOW_ruleImport_in_entryRuleImport219);
+             newCompositeNode(grammarAccess.getImportRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleImport=ruleImport();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleImport; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleImport229); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -334,55 +359,49 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleImport
+    // $ANTLR end "entryRuleImport"
 
 
-    // $ANTLR start ruleImport
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:183:1: ruleImport returns [EObject current=null] : ( 'load' ( (lv_importURI_1_0= RULE_STRING ) ) ) ;
+    // $ANTLR start "ruleImport"
+    // InternalEventCalculus.g:153:1: ruleImport returns [EObject current=null] : (otherlv_0= 'load' ( (lv_importURI_1_0= RULE_STRING ) ) ) ;
     public final EObject ruleImport() throws RecognitionException {
         EObject current = null;
 
+        Token otherlv_0=null;
         Token lv_importURI_1_0=null;
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:188:6: ( ( 'load' ( (lv_importURI_1_0= RULE_STRING ) ) ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:189:1: ( 'load' ( (lv_importURI_1_0= RULE_STRING ) ) )
+            // InternalEventCalculus.g:156:28: ( (otherlv_0= 'load' ( (lv_importURI_1_0= RULE_STRING ) ) ) )
+            // InternalEventCalculus.g:157:1: (otherlv_0= 'load' ( (lv_importURI_1_0= RULE_STRING ) ) )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:189:1: ( 'load' ( (lv_importURI_1_0= RULE_STRING ) ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:189:3: 'load' ( (lv_importURI_1_0= RULE_STRING ) )
+            // InternalEventCalculus.g:157:1: (otherlv_0= 'load' ( (lv_importURI_1_0= RULE_STRING ) ) )
+            // InternalEventCalculus.g:157:3: otherlv_0= 'load' ( (lv_importURI_1_0= RULE_STRING ) )
             {
-            match(input,12,FOLLOW_12_in_ruleImport264); 
+            otherlv_0=(Token)match(input,12,FOLLOW_5); 
 
-                    createLeafNode(grammarAccess.getImportAccess().getLoadKeyword_0(), null); 
+                	newLeafNode(otherlv_0, grammarAccess.getImportAccess().getLoadKeyword_0());
                 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:193:1: ( (lv_importURI_1_0= RULE_STRING ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:194:1: (lv_importURI_1_0= RULE_STRING )
+            // InternalEventCalculus.g:161:1: ( (lv_importURI_1_0= RULE_STRING ) )
+            // InternalEventCalculus.g:162:1: (lv_importURI_1_0= RULE_STRING )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:194:1: (lv_importURI_1_0= RULE_STRING )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:195:3: lv_importURI_1_0= RULE_STRING
+            // InternalEventCalculus.g:162:1: (lv_importURI_1_0= RULE_STRING )
+            // InternalEventCalculus.g:163:3: lv_importURI_1_0= RULE_STRING
             {
-            lv_importURI_1_0=(Token)input.LT(1);
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleImport281); 
+            lv_importURI_1_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
 
-            			createLeafNode(grammarAccess.getImportAccess().getImportURISTRINGTerminalRuleCall_1_0(), "importURI"); 
+            			newLeafNode(lv_importURI_1_0, grammarAccess.getImportAccess().getImportURISTRINGTerminalRuleCall_1_0()); 
             		
 
             	        if (current==null) {
-            	            current = factory.create(grammarAccess.getImportRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
+            	            current = createModelElement(grammarAccess.getImportRule());
             	        }
-            	        try {
-            	       		set(
-            	       			current, 
-            	       			"importURI",
-            	        		lv_importURI_1_0, 
-            	        		"STRING", 
-            	        		lastConsumedNode);
-            	        } catch (ValueConverterException vce) {
-            				handleValueConverterException(vce);
-            	        }
+                   		setWithLastConsumed(
+                   			current, 
+                   			"importURI",
+                    		lv_importURI_1_0, 
+                    		"uk.ac.open.event.EventCalculus.STRING");
             	    
 
             }
@@ -396,9 +415,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -409,11 +426,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleImport
+    // $ANTLR end "ruleImport"
 
 
-    // $ANTLR start entryRuleAnnotation
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:225:1: entryRuleAnnotation returns [EObject current=null] : iv_ruleAnnotation= ruleAnnotation EOF ;
+    // $ANTLR start "entryRuleAnnotation"
+    // InternalEventCalculus.g:187:1: entryRuleAnnotation returns [EObject current=null] : iv_ruleAnnotation= ruleAnnotation EOF ;
     public final EObject entryRuleAnnotation() throws RecognitionException {
         EObject current = null;
 
@@ -421,16 +438,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:226:2: (iv_ruleAnnotation= ruleAnnotation EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:227:2: iv_ruleAnnotation= ruleAnnotation EOF
+            // InternalEventCalculus.g:188:2: (iv_ruleAnnotation= ruleAnnotation EOF )
+            // InternalEventCalculus.g:189:2: iv_ruleAnnotation= ruleAnnotation EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getAnnotationRule(), currentNode); 
-            pushFollow(FOLLOW_ruleAnnotation_in_entryRuleAnnotation322);
+             newCompositeNode(grammarAccess.getAnnotationRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleAnnotation=ruleAnnotation();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleAnnotation; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAnnotation332); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -444,65 +462,62 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleAnnotation
+    // $ANTLR end "entryRuleAnnotation"
 
 
-    // $ANTLR start ruleAnnotation
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:234:1: ruleAnnotation returns [EObject current=null] : ( ';' '#' ( (lv_type_2_0= ruleANNOTATION_TYPE ) ) ( ( (lv_value_3_0= RULE_STRING ) ) | ( (lv_value_4_0= 'not' ) ) )? ) ;
+    // $ANTLR start "ruleAnnotation"
+    // InternalEventCalculus.g:196:1: ruleAnnotation returns [EObject current=null] : (otherlv_0= ';' otherlv_1= '#' ( (lv_type_2_0= ruleANNOTATION_TYPE ) ) ( ( (lv_value_3_0= RULE_STRING ) ) | ( (lv_value_4_0= 'not' ) ) )? ) ;
     public final EObject ruleAnnotation() throws RecognitionException {
         EObject current = null;
 
+        Token otherlv_0=null;
+        Token otherlv_1=null;
         Token lv_value_3_0=null;
         Token lv_value_4_0=null;
         Enumerator lv_type_2_0 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:239:6: ( ( ';' '#' ( (lv_type_2_0= ruleANNOTATION_TYPE ) ) ( ( (lv_value_3_0= RULE_STRING ) ) | ( (lv_value_4_0= 'not' ) ) )? ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:240:1: ( ';' '#' ( (lv_type_2_0= ruleANNOTATION_TYPE ) ) ( ( (lv_value_3_0= RULE_STRING ) ) | ( (lv_value_4_0= 'not' ) ) )? )
+            // InternalEventCalculus.g:199:28: ( (otherlv_0= ';' otherlv_1= '#' ( (lv_type_2_0= ruleANNOTATION_TYPE ) ) ( ( (lv_value_3_0= RULE_STRING ) ) | ( (lv_value_4_0= 'not' ) ) )? ) )
+            // InternalEventCalculus.g:200:1: (otherlv_0= ';' otherlv_1= '#' ( (lv_type_2_0= ruleANNOTATION_TYPE ) ) ( ( (lv_value_3_0= RULE_STRING ) ) | ( (lv_value_4_0= 'not' ) ) )? )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:240:1: ( ';' '#' ( (lv_type_2_0= ruleANNOTATION_TYPE ) ) ( ( (lv_value_3_0= RULE_STRING ) ) | ( (lv_value_4_0= 'not' ) ) )? )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:240:3: ';' '#' ( (lv_type_2_0= ruleANNOTATION_TYPE ) ) ( ( (lv_value_3_0= RULE_STRING ) ) | ( (lv_value_4_0= 'not' ) ) )?
+            // InternalEventCalculus.g:200:1: (otherlv_0= ';' otherlv_1= '#' ( (lv_type_2_0= ruleANNOTATION_TYPE ) ) ( ( (lv_value_3_0= RULE_STRING ) ) | ( (lv_value_4_0= 'not' ) ) )? )
+            // InternalEventCalculus.g:200:3: otherlv_0= ';' otherlv_1= '#' ( (lv_type_2_0= ruleANNOTATION_TYPE ) ) ( ( (lv_value_3_0= RULE_STRING ) ) | ( (lv_value_4_0= 'not' ) ) )?
             {
-            match(input,13,FOLLOW_13_in_ruleAnnotation367); 
+            otherlv_0=(Token)match(input,13,FOLLOW_6); 
 
-                    createLeafNode(grammarAccess.getAnnotationAccess().getSemicolonKeyword_0(), null); 
+                	newLeafNode(otherlv_0, grammarAccess.getAnnotationAccess().getSemicolonKeyword_0());
                 
-            match(input,14,FOLLOW_14_in_ruleAnnotation377); 
+            otherlv_1=(Token)match(input,14,FOLLOW_7); 
 
-                    createLeafNode(grammarAccess.getAnnotationAccess().getNumberSignKeyword_1(), null); 
+                	newLeafNode(otherlv_1, grammarAccess.getAnnotationAccess().getNumberSignKeyword_1());
                 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:248:1: ( (lv_type_2_0= ruleANNOTATION_TYPE ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:249:1: (lv_type_2_0= ruleANNOTATION_TYPE )
+            // InternalEventCalculus.g:208:1: ( (lv_type_2_0= ruleANNOTATION_TYPE ) )
+            // InternalEventCalculus.g:209:1: (lv_type_2_0= ruleANNOTATION_TYPE )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:249:1: (lv_type_2_0= ruleANNOTATION_TYPE )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:250:3: lv_type_2_0= ruleANNOTATION_TYPE
+            // InternalEventCalculus.g:209:1: (lv_type_2_0= ruleANNOTATION_TYPE )
+            // InternalEventCalculus.g:210:3: lv_type_2_0= ruleANNOTATION_TYPE
             {
              
-            	        currentNode=createCompositeNode(grammarAccess.getAnnotationAccess().getTypeANNOTATION_TYPEEnumRuleCall_2_0(), currentNode); 
+            	        newCompositeNode(grammarAccess.getAnnotationAccess().getTypeANNOTATION_TYPEEnumRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleANNOTATION_TYPE_in_ruleAnnotation398);
+            pushFollow(FOLLOW_8);
             lv_type_2_0=ruleANNOTATION_TYPE();
-            _fsp--;
+
+            state._fsp--;
 
 
             	        if (current==null) {
-            	            current = factory.create(grammarAccess.getAnnotationRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	            current = createModelElementForParent(grammarAccess.getAnnotationRule());
             	        }
-            	        try {
-            	       		set(
-            	       			current, 
-            	       			"type",
-            	        		lv_type_2_0, 
-            	        		"ANNOTATION_TYPE", 
-            	        		currentNode);
-            	        } catch (ValueConverterException vce) {
-            				handleValueConverterException(vce);
-            	        }
-            	        currentNode = currentNode.getParent();
+                   		set(
+                   			current, 
+                   			"type",
+                    		lv_type_2_0, 
+                    		"uk.ac.open.event.EventCalculus.ANNOTATION_TYPE");
+            	        afterParserOrEnumRuleCall();
             	    
 
             }
@@ -510,22 +525,22 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:272:2: ( ( (lv_value_3_0= RULE_STRING ) ) | ( (lv_value_4_0= 'not' ) ) )?
+            // InternalEventCalculus.g:226:2: ( ( (lv_value_3_0= RULE_STRING ) ) | ( (lv_value_4_0= 'not' ) ) )?
             int alt3=3;
             int LA3_0 = input.LA(1);
 
             if ( (LA3_0==RULE_STRING) ) {
                 int LA3_1 = input.LA(2);
 
-                if ( (LA3_1==45) ) {
-                    int LA3_4 = input.LA(3);
+                if ( (LA3_1==EOF||(LA3_1>=RULE_STRING && LA3_1<=RULE_BOOLEAN)||LA3_1==13||(LA3_1>=16 && LA3_1<=17)||(LA3_1>=19 && LA3_1<=22)||(LA3_1>=24 && LA3_1<=25)||LA3_1==27||LA3_1==29||LA3_1==31||(LA3_1>=51 && LA3_1<=53)) ) {
+                    alt3=1;
+                }
+                else if ( (LA3_1==45) ) {
+                    int LA3_5 = input.LA(3);
 
-                    if ( (LA3_4==RULE_INT) ) {
+                    if ( (LA3_5==RULE_INT) ) {
                         alt3=1;
                     }
-                }
-                else if ( (LA3_1==EOF||(LA3_1>=RULE_STRING && LA3_1<=RULE_BOOLEAN)||LA3_1==13||(LA3_1>=16 && LA3_1<=17)||(LA3_1>=19 && LA3_1<=22)||(LA3_1>=24 && LA3_1<=25)||LA3_1==27||LA3_1==29||LA3_1==31||(LA3_1>=51 && LA3_1<=53)) ) {
-                    alt3=1;
                 }
             }
             else if ( (LA3_0==15) ) {
@@ -533,34 +548,27 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
             }
             switch (alt3) {
                 case 1 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:272:3: ( (lv_value_3_0= RULE_STRING ) )
+                    // InternalEventCalculus.g:226:3: ( (lv_value_3_0= RULE_STRING ) )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:272:3: ( (lv_value_3_0= RULE_STRING ) )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:273:1: (lv_value_3_0= RULE_STRING )
+                    // InternalEventCalculus.g:226:3: ( (lv_value_3_0= RULE_STRING ) )
+                    // InternalEventCalculus.g:227:1: (lv_value_3_0= RULE_STRING )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:273:1: (lv_value_3_0= RULE_STRING )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:274:3: lv_value_3_0= RULE_STRING
+                    // InternalEventCalculus.g:227:1: (lv_value_3_0= RULE_STRING )
+                    // InternalEventCalculus.g:228:3: lv_value_3_0= RULE_STRING
                     {
-                    lv_value_3_0=(Token)input.LT(1);
-                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleAnnotation416); 
+                    lv_value_3_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
 
-                    			createLeafNode(grammarAccess.getAnnotationAccess().getValueSTRINGTerminalRuleCall_3_0_0(), "value"); 
+                    			newLeafNode(lv_value_3_0, grammarAccess.getAnnotationAccess().getValueSTRINGTerminalRuleCall_3_0_0()); 
                     		
 
                     	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getAnnotationRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
+                    	            current = createModelElement(grammarAccess.getAnnotationRule());
                     	        }
-                    	        try {
-                    	       		set(
-                    	       			current, 
-                    	       			"value",
-                    	        		lv_value_3_0, 
-                    	        		"STRING", 
-                    	        		lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"value",
+                            		lv_value_3_0, 
+                            		"uk.ac.open.event.EventCalculus.STRING");
                     	    
 
                     }
@@ -572,30 +580,23 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:297:6: ( (lv_value_4_0= 'not' ) )
+                    // InternalEventCalculus.g:245:6: ( (lv_value_4_0= 'not' ) )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:297:6: ( (lv_value_4_0= 'not' ) )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:298:1: (lv_value_4_0= 'not' )
+                    // InternalEventCalculus.g:245:6: ( (lv_value_4_0= 'not' ) )
+                    // InternalEventCalculus.g:246:1: (lv_value_4_0= 'not' )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:298:1: (lv_value_4_0= 'not' )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:299:3: lv_value_4_0= 'not'
+                    // InternalEventCalculus.g:246:1: (lv_value_4_0= 'not' )
+                    // InternalEventCalculus.g:247:3: lv_value_4_0= 'not'
                     {
-                    lv_value_4_0=(Token)input.LT(1);
-                    match(input,15,FOLLOW_15_in_ruleAnnotation445); 
+                    lv_value_4_0=(Token)match(input,15,FOLLOW_2); 
 
-                            createLeafNode(grammarAccess.getAnnotationAccess().getValueNotKeyword_3_1_0(), "value"); 
+                            newLeafNode(lv_value_4_0, grammarAccess.getAnnotationAccess().getValueNotKeyword_3_1_0());
                         
 
                     	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getAnnotationRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
+                    	            current = createModelElement(grammarAccess.getAnnotationRule());
                     	        }
-                    	        
-                    	        try {
-                    	       		set(current, "value", lv_value_4_0, "not", lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
+                           		setWithLastConsumed(current, "value", lv_value_4_0, "not");
                     	    
 
                     }
@@ -615,9 +616,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -628,11 +627,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleAnnotation
+    // $ANTLR end "ruleAnnotation"
 
 
-    // $ANTLR start entryRuleDeclaration
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:326:1: entryRuleDeclaration returns [EObject current=null] : iv_ruleDeclaration= ruleDeclaration EOF ;
+    // $ANTLR start "entryRuleDeclaration"
+    // InternalEventCalculus.g:268:1: entryRuleDeclaration returns [EObject current=null] : iv_ruleDeclaration= ruleDeclaration EOF ;
     public final EObject entryRuleDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -640,16 +639,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:327:2: (iv_ruleDeclaration= ruleDeclaration EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:328:2: iv_ruleDeclaration= ruleDeclaration EOF
+            // InternalEventCalculus.g:269:2: (iv_ruleDeclaration= ruleDeclaration EOF )
+            // InternalEventCalculus.g:270:2: iv_ruleDeclaration= ruleDeclaration EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getDeclarationRule(), currentNode); 
-            pushFollow(FOLLOW_ruleDeclaration_in_entryRuleDeclaration496);
+             newCompositeNode(grammarAccess.getDeclarationRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleDeclaration=ruleDeclaration();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleDeclaration; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDeclaration506); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -663,11 +663,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleDeclaration
+    // $ANTLR end "entryRuleDeclaration"
 
 
-    // $ANTLR start ruleDeclaration
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:335:1: ruleDeclaration returns [EObject current=null] : (this_DefSort_0= ruleDefSort | this_DefRange_1= ruleDefRange | this_DefOption_2= ruleDefOption | this_DefCompletion_3= ruleDefCompletion | this_DefNonInertia_4= ruleDefNonInertia | this_DefXor_5= ruleDefXor | this_DefMutex_6= ruleDefMutex ) ;
+    // $ANTLR start "ruleDeclaration"
+    // InternalEventCalculus.g:277:1: ruleDeclaration returns [EObject current=null] : (this_DefSort_0= ruleDefSort | this_DefRange_1= ruleDefRange | this_DefOption_2= ruleDefOption | this_DefCompletion_3= ruleDefCompletion | this_DefNonInertia_4= ruleDefNonInertia | this_DefXor_5= ruleDefXor | this_DefMutex_6= ruleDefMutex ) ;
     public final EObject ruleDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -686,131 +686,138 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         EObject this_DefMutex_6 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:340:6: ( (this_DefSort_0= ruleDefSort | this_DefRange_1= ruleDefRange | this_DefOption_2= ruleDefOption | this_DefCompletion_3= ruleDefCompletion | this_DefNonInertia_4= ruleDefNonInertia | this_DefXor_5= ruleDefXor | this_DefMutex_6= ruleDefMutex ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:341:1: (this_DefSort_0= ruleDefSort | this_DefRange_1= ruleDefRange | this_DefOption_2= ruleDefOption | this_DefCompletion_3= ruleDefCompletion | this_DefNonInertia_4= ruleDefNonInertia | this_DefXor_5= ruleDefXor | this_DefMutex_6= ruleDefMutex )
+            // InternalEventCalculus.g:280:28: ( (this_DefSort_0= ruleDefSort | this_DefRange_1= ruleDefRange | this_DefOption_2= ruleDefOption | this_DefCompletion_3= ruleDefCompletion | this_DefNonInertia_4= ruleDefNonInertia | this_DefXor_5= ruleDefXor | this_DefMutex_6= ruleDefMutex ) )
+            // InternalEventCalculus.g:281:1: (this_DefSort_0= ruleDefSort | this_DefRange_1= ruleDefRange | this_DefOption_2= ruleDefOption | this_DefCompletion_3= ruleDefCompletion | this_DefNonInertia_4= ruleDefNonInertia | this_DefXor_5= ruleDefXor | this_DefMutex_6= ruleDefMutex )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:341:1: (this_DefSort_0= ruleDefSort | this_DefRange_1= ruleDefRange | this_DefOption_2= ruleDefOption | this_DefCompletion_3= ruleDefCompletion | this_DefNonInertia_4= ruleDefNonInertia | this_DefXor_5= ruleDefXor | this_DefMutex_6= ruleDefMutex )
+            // InternalEventCalculus.g:281:1: (this_DefSort_0= ruleDefSort | this_DefRange_1= ruleDefRange | this_DefOption_2= ruleDefOption | this_DefCompletion_3= ruleDefCompletion | this_DefNonInertia_4= ruleDefNonInertia | this_DefXor_5= ruleDefXor | this_DefMutex_6= ruleDefMutex )
             int alt4=7;
             alt4 = dfa4.predict(input);
             switch (alt4) {
                 case 1 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:342:5: this_DefSort_0= ruleDefSort
+                    // InternalEventCalculus.g:282:5: this_DefSort_0= ruleDefSort
                     {
                      
-                            currentNode=createCompositeNode(grammarAccess.getDeclarationAccess().getDefSortParserRuleCall_0(), currentNode); 
+                            newCompositeNode(grammarAccess.getDeclarationAccess().getDefSortParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleDefSort_in_ruleDeclaration553);
+                    pushFollow(FOLLOW_2);
                     this_DefSort_0=ruleDefSort();
-                    _fsp--;
+
+                    state._fsp--;
 
                      
                             current = this_DefSort_0; 
-                            currentNode = currentNode.getParent();
+                            afterParserOrEnumRuleCall();
                         
 
                     }
                     break;
                 case 2 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:352:5: this_DefRange_1= ruleDefRange
+                    // InternalEventCalculus.g:292:5: this_DefRange_1= ruleDefRange
                     {
                      
-                            currentNode=createCompositeNode(grammarAccess.getDeclarationAccess().getDefRangeParserRuleCall_1(), currentNode); 
+                            newCompositeNode(grammarAccess.getDeclarationAccess().getDefRangeParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleDefRange_in_ruleDeclaration580);
+                    pushFollow(FOLLOW_2);
                     this_DefRange_1=ruleDefRange();
-                    _fsp--;
+
+                    state._fsp--;
 
                      
                             current = this_DefRange_1; 
-                            currentNode = currentNode.getParent();
+                            afterParserOrEnumRuleCall();
                         
 
                     }
                     break;
                 case 3 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:362:5: this_DefOption_2= ruleDefOption
+                    // InternalEventCalculus.g:302:5: this_DefOption_2= ruleDefOption
                     {
                      
-                            currentNode=createCompositeNode(grammarAccess.getDeclarationAccess().getDefOptionParserRuleCall_2(), currentNode); 
+                            newCompositeNode(grammarAccess.getDeclarationAccess().getDefOptionParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleDefOption_in_ruleDeclaration607);
+                    pushFollow(FOLLOW_2);
                     this_DefOption_2=ruleDefOption();
-                    _fsp--;
+
+                    state._fsp--;
 
                      
                             current = this_DefOption_2; 
-                            currentNode = currentNode.getParent();
+                            afterParserOrEnumRuleCall();
                         
 
                     }
                     break;
                 case 4 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:372:5: this_DefCompletion_3= ruleDefCompletion
+                    // InternalEventCalculus.g:312:5: this_DefCompletion_3= ruleDefCompletion
                     {
                      
-                            currentNode=createCompositeNode(grammarAccess.getDeclarationAccess().getDefCompletionParserRuleCall_3(), currentNode); 
+                            newCompositeNode(grammarAccess.getDeclarationAccess().getDefCompletionParserRuleCall_3()); 
                         
-                    pushFollow(FOLLOW_ruleDefCompletion_in_ruleDeclaration634);
+                    pushFollow(FOLLOW_2);
                     this_DefCompletion_3=ruleDefCompletion();
-                    _fsp--;
+
+                    state._fsp--;
 
                      
                             current = this_DefCompletion_3; 
-                            currentNode = currentNode.getParent();
+                            afterParserOrEnumRuleCall();
                         
 
                     }
                     break;
                 case 5 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:382:5: this_DefNonInertia_4= ruleDefNonInertia
+                    // InternalEventCalculus.g:322:5: this_DefNonInertia_4= ruleDefNonInertia
                     {
                      
-                            currentNode=createCompositeNode(grammarAccess.getDeclarationAccess().getDefNonInertiaParserRuleCall_4(), currentNode); 
+                            newCompositeNode(grammarAccess.getDeclarationAccess().getDefNonInertiaParserRuleCall_4()); 
                         
-                    pushFollow(FOLLOW_ruleDefNonInertia_in_ruleDeclaration661);
+                    pushFollow(FOLLOW_2);
                     this_DefNonInertia_4=ruleDefNonInertia();
-                    _fsp--;
+
+                    state._fsp--;
 
                      
                             current = this_DefNonInertia_4; 
-                            currentNode = currentNode.getParent();
+                            afterParserOrEnumRuleCall();
                         
 
                     }
                     break;
                 case 6 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:392:5: this_DefXor_5= ruleDefXor
+                    // InternalEventCalculus.g:332:5: this_DefXor_5= ruleDefXor
                     {
                      
-                            currentNode=createCompositeNode(grammarAccess.getDeclarationAccess().getDefXorParserRuleCall_5(), currentNode); 
+                            newCompositeNode(grammarAccess.getDeclarationAccess().getDefXorParserRuleCall_5()); 
                         
-                    pushFollow(FOLLOW_ruleDefXor_in_ruleDeclaration688);
+                    pushFollow(FOLLOW_2);
                     this_DefXor_5=ruleDefXor();
-                    _fsp--;
+
+                    state._fsp--;
 
                      
                             current = this_DefXor_5; 
-                            currentNode = currentNode.getParent();
+                            afterParserOrEnumRuleCall();
                         
 
                     }
                     break;
                 case 7 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:402:5: this_DefMutex_6= ruleDefMutex
+                    // InternalEventCalculus.g:342:5: this_DefMutex_6= ruleDefMutex
                     {
                      
-                            currentNode=createCompositeNode(grammarAccess.getDeclarationAccess().getDefMutexParserRuleCall_6(), currentNode); 
+                            newCompositeNode(grammarAccess.getDeclarationAccess().getDefMutexParserRuleCall_6()); 
                         
-                    pushFollow(FOLLOW_ruleDefMutex_in_ruleDeclaration715);
+                    pushFollow(FOLLOW_2);
                     this_DefMutex_6=ruleDefMutex();
-                    _fsp--;
+
+                    state._fsp--;
 
                      
                             current = this_DefMutex_6; 
-                            currentNode = currentNode.getParent();
+                            afterParserOrEnumRuleCall();
                         
 
                     }
@@ -821,9 +828,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -834,11 +839,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleDeclaration
+    // $ANTLR end "ruleDeclaration"
 
 
-    // $ANTLR start entryRuleDefSort
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:420:1: entryRuleDefSort returns [EObject current=null] : iv_ruleDefSort= ruleDefSort EOF ;
+    // $ANTLR start "entryRuleDefSort"
+    // InternalEventCalculus.g:360:1: entryRuleDefSort returns [EObject current=null] : iv_ruleDefSort= ruleDefSort EOF ;
     public final EObject entryRuleDefSort() throws RecognitionException {
         EObject current = null;
 
@@ -846,16 +851,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:421:2: (iv_ruleDefSort= ruleDefSort EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:422:2: iv_ruleDefSort= ruleDefSort EOF
+            // InternalEventCalculus.g:361:2: (iv_ruleDefSort= ruleDefSort EOF )
+            // InternalEventCalculus.g:362:2: iv_ruleDefSort= ruleDefSort EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getDefSortRule(), currentNode); 
-            pushFollow(FOLLOW_ruleDefSort_in_entryRuleDefSort752);
+             newCompositeNode(grammarAccess.getDefSortRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleDefSort=ruleDefSort();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleDefSort; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDefSort762); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -869,30 +875,32 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleDefSort
+    // $ANTLR end "entryRuleDefSort"
 
 
-    // $ANTLR start ruleDefSort
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:429:1: ruleDefSort returns [EObject current=null] : ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( (lv_reified_1_0= 'reified' ) )? 'sort' ( (lv_name_3_0= RULE_ID ) ) ( ':' ( (lv_type_5_0= RULE_ID ) ) )? ) ;
+    // $ANTLR start "ruleDefSort"
+    // InternalEventCalculus.g:369:1: ruleDefSort returns [EObject current=null] : ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( (lv_reified_1_0= 'reified' ) )? otherlv_2= 'sort' ( (lv_name_3_0= RULE_ID ) ) (otherlv_4= ':' ( (lv_type_5_0= RULE_ID ) ) )? ) ;
     public final EObject ruleDefSort() throws RecognitionException {
         EObject current = null;
 
         Token lv_reified_1_0=null;
+        Token otherlv_2=null;
         Token lv_name_3_0=null;
+        Token otherlv_4=null;
         Token lv_type_5_0=null;
         EObject lv_annotations_0_0 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:434:6: ( ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( (lv_reified_1_0= 'reified' ) )? 'sort' ( (lv_name_3_0= RULE_ID ) ) ( ':' ( (lv_type_5_0= RULE_ID ) ) )? ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:435:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( (lv_reified_1_0= 'reified' ) )? 'sort' ( (lv_name_3_0= RULE_ID ) ) ( ':' ( (lv_type_5_0= RULE_ID ) ) )? )
+            // InternalEventCalculus.g:372:28: ( ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( (lv_reified_1_0= 'reified' ) )? otherlv_2= 'sort' ( (lv_name_3_0= RULE_ID ) ) (otherlv_4= ':' ( (lv_type_5_0= RULE_ID ) ) )? ) )
+            // InternalEventCalculus.g:373:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( (lv_reified_1_0= 'reified' ) )? otherlv_2= 'sort' ( (lv_name_3_0= RULE_ID ) ) (otherlv_4= ':' ( (lv_type_5_0= RULE_ID ) ) )? )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:435:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( (lv_reified_1_0= 'reified' ) )? 'sort' ( (lv_name_3_0= RULE_ID ) ) ( ':' ( (lv_type_5_0= RULE_ID ) ) )? )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:435:2: ( (lv_annotations_0_0= ruleAnnotation ) )* ( (lv_reified_1_0= 'reified' ) )? 'sort' ( (lv_name_3_0= RULE_ID ) ) ( ':' ( (lv_type_5_0= RULE_ID ) ) )?
+            // InternalEventCalculus.g:373:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( (lv_reified_1_0= 'reified' ) )? otherlv_2= 'sort' ( (lv_name_3_0= RULE_ID ) ) (otherlv_4= ':' ( (lv_type_5_0= RULE_ID ) ) )? )
+            // InternalEventCalculus.g:373:2: ( (lv_annotations_0_0= ruleAnnotation ) )* ( (lv_reified_1_0= 'reified' ) )? otherlv_2= 'sort' ( (lv_name_3_0= RULE_ID ) ) (otherlv_4= ':' ( (lv_type_5_0= RULE_ID ) ) )?
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:435:2: ( (lv_annotations_0_0= ruleAnnotation ) )*
+            // InternalEventCalculus.g:373:2: ( (lv_annotations_0_0= ruleAnnotation ) )*
             loop5:
             do {
                 int alt5=2;
@@ -905,34 +913,29 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                 switch (alt5) {
             	case 1 :
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:436:1: (lv_annotations_0_0= ruleAnnotation )
+            	    // InternalEventCalculus.g:374:1: (lv_annotations_0_0= ruleAnnotation )
             	    {
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:436:1: (lv_annotations_0_0= ruleAnnotation )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:437:3: lv_annotations_0_0= ruleAnnotation
+            	    // InternalEventCalculus.g:374:1: (lv_annotations_0_0= ruleAnnotation )
+            	    // InternalEventCalculus.g:375:3: lv_annotations_0_0= ruleAnnotation
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getDefSortAccess().getAnnotationsAnnotationParserRuleCall_0_0(), currentNode); 
+            	    	        newCompositeNode(grammarAccess.getDefSortAccess().getAnnotationsAnnotationParserRuleCall_0_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleAnnotation_in_ruleDefSort808);
+            	    pushFollow(FOLLOW_9);
             	    lv_annotations_0_0=ruleAnnotation();
-            	    _fsp--;
+
+            	    state._fsp--;
 
 
             	    	        if (current==null) {
-            	    	            current = factory.create(grammarAccess.getDefSortRule().getType().getClassifier());
-            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	    	            current = createModelElementForParent(grammarAccess.getDefSortRule());
             	    	        }
-            	    	        try {
-            	    	       		add(
-            	    	       			current, 
-            	    	       			"annotations",
-            	    	        		lv_annotations_0_0, 
-            	    	        		"Annotation", 
-            	    	        		currentNode);
-            	    	        } catch (ValueConverterException vce) {
-            	    				handleValueConverterException(vce);
-            	    	        }
-            	    	        currentNode = currentNode.getParent();
+            	           		add(
+            	           			current, 
+            	           			"annotations",
+            	            		lv_annotations_0_0, 
+            	            		"uk.ac.open.event.EventCalculus.Annotation");
+            	    	        afterParserOrEnumRuleCall();
             	    	    
 
             	    }
@@ -946,7 +949,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:459:3: ( (lv_reified_1_0= 'reified' ) )?
+            // InternalEventCalculus.g:391:3: ( (lv_reified_1_0= 'reified' ) )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -955,27 +958,20 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
             }
             switch (alt6) {
                 case 1 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:460:1: (lv_reified_1_0= 'reified' )
+                    // InternalEventCalculus.g:392:1: (lv_reified_1_0= 'reified' )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:460:1: (lv_reified_1_0= 'reified' )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:461:3: lv_reified_1_0= 'reified'
+                    // InternalEventCalculus.g:392:1: (lv_reified_1_0= 'reified' )
+                    // InternalEventCalculus.g:393:3: lv_reified_1_0= 'reified'
                     {
-                    lv_reified_1_0=(Token)input.LT(1);
-                    match(input,16,FOLLOW_16_in_ruleDefSort827); 
+                    lv_reified_1_0=(Token)match(input,16,FOLLOW_10); 
 
-                            createLeafNode(grammarAccess.getDefSortAccess().getReifiedReifiedKeyword_1_0(), "reified"); 
+                            newLeafNode(lv_reified_1_0, grammarAccess.getDefSortAccess().getReifiedReifiedKeyword_1_0());
                         
 
                     	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getDefSortRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
+                    	            current = createModelElement(grammarAccess.getDefSortRule());
                     	        }
-                    	        
-                    	        try {
-                    	       		set(current, "reified", lv_reified_1_0, "reified", lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
+                           		setWithLastConsumed(current, "reified", lv_reified_1_0, "reified");
                     	    
 
                     }
@@ -986,36 +982,29 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,17,FOLLOW_17_in_ruleDefSort851); 
+            otherlv_2=(Token)match(input,17,FOLLOW_11); 
 
-                    createLeafNode(grammarAccess.getDefSortAccess().getSortKeyword_2(), null); 
+                	newLeafNode(otherlv_2, grammarAccess.getDefSortAccess().getSortKeyword_2());
                 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:484:1: ( (lv_name_3_0= RULE_ID ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:485:1: (lv_name_3_0= RULE_ID )
+            // InternalEventCalculus.g:410:1: ( (lv_name_3_0= RULE_ID ) )
+            // InternalEventCalculus.g:411:1: (lv_name_3_0= RULE_ID )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:485:1: (lv_name_3_0= RULE_ID )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:486:3: lv_name_3_0= RULE_ID
+            // InternalEventCalculus.g:411:1: (lv_name_3_0= RULE_ID )
+            // InternalEventCalculus.g:412:3: lv_name_3_0= RULE_ID
             {
-            lv_name_3_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDefSort868); 
+            lv_name_3_0=(Token)match(input,RULE_ID,FOLLOW_12); 
 
-            			createLeafNode(grammarAccess.getDefSortAccess().getNameIDTerminalRuleCall_3_0(), "name"); 
+            			newLeafNode(lv_name_3_0, grammarAccess.getDefSortAccess().getNameIDTerminalRuleCall_3_0()); 
             		
 
             	        if (current==null) {
-            	            current = factory.create(grammarAccess.getDefSortRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
+            	            current = createModelElement(grammarAccess.getDefSortRule());
             	        }
-            	        try {
-            	       		set(
-            	       			current, 
-            	       			"name",
-            	        		lv_name_3_0, 
-            	        		"ID", 
-            	        		lastConsumedNode);
-            	        } catch (ValueConverterException vce) {
-            				handleValueConverterException(vce);
-            	        }
+                   		setWithLastConsumed(
+                   			current, 
+                   			"name",
+                    		lv_name_3_0, 
+                    		"uk.ac.open.event.EventCalculus.ID");
             	    
 
             }
@@ -1023,7 +1012,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:508:2: ( ':' ( (lv_type_5_0= RULE_ID ) ) )?
+            // InternalEventCalculus.g:428:2: (otherlv_4= ':' ( (lv_type_5_0= RULE_ID ) ) )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -1032,38 +1021,31 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
             }
             switch (alt7) {
                 case 1 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:508:4: ':' ( (lv_type_5_0= RULE_ID ) )
+                    // InternalEventCalculus.g:428:4: otherlv_4= ':' ( (lv_type_5_0= RULE_ID ) )
                     {
-                    match(input,18,FOLLOW_18_in_ruleDefSort884); 
+                    otherlv_4=(Token)match(input,18,FOLLOW_11); 
 
-                            createLeafNode(grammarAccess.getDefSortAccess().getColonKeyword_4_0(), null); 
+                        	newLeafNode(otherlv_4, grammarAccess.getDefSortAccess().getColonKeyword_4_0());
                         
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:512:1: ( (lv_type_5_0= RULE_ID ) )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:513:1: (lv_type_5_0= RULE_ID )
+                    // InternalEventCalculus.g:432:1: ( (lv_type_5_0= RULE_ID ) )
+                    // InternalEventCalculus.g:433:1: (lv_type_5_0= RULE_ID )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:513:1: (lv_type_5_0= RULE_ID )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:514:3: lv_type_5_0= RULE_ID
+                    // InternalEventCalculus.g:433:1: (lv_type_5_0= RULE_ID )
+                    // InternalEventCalculus.g:434:3: lv_type_5_0= RULE_ID
                     {
-                    lv_type_5_0=(Token)input.LT(1);
-                    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDefSort901); 
+                    lv_type_5_0=(Token)match(input,RULE_ID,FOLLOW_2); 
 
-                    			createLeafNode(grammarAccess.getDefSortAccess().getTypeIDTerminalRuleCall_4_1_0(), "type"); 
+                    			newLeafNode(lv_type_5_0, grammarAccess.getDefSortAccess().getTypeIDTerminalRuleCall_4_1_0()); 
                     		
 
                     	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getDefSortRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
+                    	            current = createModelElement(grammarAccess.getDefSortRule());
                     	        }
-                    	        try {
-                    	       		set(
-                    	       			current, 
-                    	       			"type",
-                    	        		lv_type_5_0, 
-                    	        		"ID", 
-                    	        		lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"type",
+                            		lv_type_5_0, 
+                            		"uk.ac.open.event.EventCalculus.ID");
                     	    
 
                     }
@@ -1083,9 +1065,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -1096,11 +1076,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleDefSort
+    // $ANTLR end "ruleDefSort"
 
 
-    // $ANTLR start entryRuleDefRange
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:544:1: entryRuleDefRange returns [EObject current=null] : iv_ruleDefRange= ruleDefRange EOF ;
+    // $ANTLR start "entryRuleDefRange"
+    // InternalEventCalculus.g:458:1: entryRuleDefRange returns [EObject current=null] : iv_ruleDefRange= ruleDefRange EOF ;
     public final EObject entryRuleDefRange() throws RecognitionException {
         EObject current = null;
 
@@ -1108,16 +1088,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:545:2: (iv_ruleDefRange= ruleDefRange EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:546:2: iv_ruleDefRange= ruleDefRange EOF
+            // InternalEventCalculus.g:459:2: (iv_ruleDefRange= ruleDefRange EOF )
+            // InternalEventCalculus.g:460:2: iv_ruleDefRange= ruleDefRange EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getDefRangeRule(), currentNode); 
-            pushFollow(FOLLOW_ruleDefRange_in_entryRuleDefRange944);
+             newCompositeNode(grammarAccess.getDefRangeRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleDefRange=ruleDefRange();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleDefRange; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDefRange954); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -1131,29 +1112,31 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleDefRange
+    // $ANTLR end "entryRuleDefRange"
 
 
-    // $ANTLR start ruleDefRange
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:553:1: ruleDefRange returns [EObject current=null] : ( ( (lv_annotations_0_0= ruleAnnotation ) )* 'range' ( ( RULE_ID ) ) ( (lv_min_3_0= RULE_INT ) ) ( (lv_max_4_0= RULE_INT ) ) ) ;
+    // $ANTLR start "ruleDefRange"
+    // InternalEventCalculus.g:467:1: ruleDefRange returns [EObject current=null] : ( ( (lv_annotations_0_0= ruleAnnotation ) )* otherlv_1= 'range' ( (otherlv_2= RULE_ID ) ) ( (lv_min_3_0= RULE_INT ) ) ( (lv_max_4_0= RULE_INT ) ) ) ;
     public final EObject ruleDefRange() throws RecognitionException {
         EObject current = null;
 
+        Token otherlv_1=null;
+        Token otherlv_2=null;
         Token lv_min_3_0=null;
         Token lv_max_4_0=null;
         EObject lv_annotations_0_0 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:558:6: ( ( ( (lv_annotations_0_0= ruleAnnotation ) )* 'range' ( ( RULE_ID ) ) ( (lv_min_3_0= RULE_INT ) ) ( (lv_max_4_0= RULE_INT ) ) ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:559:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* 'range' ( ( RULE_ID ) ) ( (lv_min_3_0= RULE_INT ) ) ( (lv_max_4_0= RULE_INT ) ) )
+            // InternalEventCalculus.g:470:28: ( ( ( (lv_annotations_0_0= ruleAnnotation ) )* otherlv_1= 'range' ( (otherlv_2= RULE_ID ) ) ( (lv_min_3_0= RULE_INT ) ) ( (lv_max_4_0= RULE_INT ) ) ) )
+            // InternalEventCalculus.g:471:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* otherlv_1= 'range' ( (otherlv_2= RULE_ID ) ) ( (lv_min_3_0= RULE_INT ) ) ( (lv_max_4_0= RULE_INT ) ) )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:559:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* 'range' ( ( RULE_ID ) ) ( (lv_min_3_0= RULE_INT ) ) ( (lv_max_4_0= RULE_INT ) ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:559:2: ( (lv_annotations_0_0= ruleAnnotation ) )* 'range' ( ( RULE_ID ) ) ( (lv_min_3_0= RULE_INT ) ) ( (lv_max_4_0= RULE_INT ) )
+            // InternalEventCalculus.g:471:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* otherlv_1= 'range' ( (otherlv_2= RULE_ID ) ) ( (lv_min_3_0= RULE_INT ) ) ( (lv_max_4_0= RULE_INT ) ) )
+            // InternalEventCalculus.g:471:2: ( (lv_annotations_0_0= ruleAnnotation ) )* otherlv_1= 'range' ( (otherlv_2= RULE_ID ) ) ( (lv_min_3_0= RULE_INT ) ) ( (lv_max_4_0= RULE_INT ) )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:559:2: ( (lv_annotations_0_0= ruleAnnotation ) )*
+            // InternalEventCalculus.g:471:2: ( (lv_annotations_0_0= ruleAnnotation ) )*
             loop8:
             do {
                 int alt8=2;
@@ -1166,34 +1149,29 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:560:1: (lv_annotations_0_0= ruleAnnotation )
+            	    // InternalEventCalculus.g:472:1: (lv_annotations_0_0= ruleAnnotation )
             	    {
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:560:1: (lv_annotations_0_0= ruleAnnotation )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:561:3: lv_annotations_0_0= ruleAnnotation
+            	    // InternalEventCalculus.g:472:1: (lv_annotations_0_0= ruleAnnotation )
+            	    // InternalEventCalculus.g:473:3: lv_annotations_0_0= ruleAnnotation
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getDefRangeAccess().getAnnotationsAnnotationParserRuleCall_0_0(), currentNode); 
+            	    	        newCompositeNode(grammarAccess.getDefRangeAccess().getAnnotationsAnnotationParserRuleCall_0_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleAnnotation_in_ruleDefRange1000);
+            	    pushFollow(FOLLOW_13);
             	    lv_annotations_0_0=ruleAnnotation();
-            	    _fsp--;
+
+            	    state._fsp--;
 
 
             	    	        if (current==null) {
-            	    	            current = factory.create(grammarAccess.getDefRangeRule().getType().getClassifier());
-            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	    	            current = createModelElementForParent(grammarAccess.getDefRangeRule());
             	    	        }
-            	    	        try {
-            	    	       		add(
-            	    	       			current, 
-            	    	       			"annotations",
-            	    	        		lv_annotations_0_0, 
-            	    	        		"Annotation", 
-            	    	        		currentNode);
-            	    	        } catch (ValueConverterException vce) {
-            	    				handleValueConverterException(vce);
-            	    	        }
-            	    	        currentNode = currentNode.getParent();
+            	           		add(
+            	           			current, 
+            	           			"annotations",
+            	            		lv_annotations_0_0, 
+            	            		"uk.ac.open.event.EventCalculus.Annotation");
+            	    	        afterParserOrEnumRuleCall();
             	    	    
 
             	    }
@@ -1207,25 +1185,24 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            match(input,19,FOLLOW_19_in_ruleDefRange1011); 
+            otherlv_1=(Token)match(input,19,FOLLOW_11); 
 
-                    createLeafNode(grammarAccess.getDefRangeAccess().getRangeKeyword_1(), null); 
+                	newLeafNode(otherlv_1, grammarAccess.getDefRangeAccess().getRangeKeyword_1());
                 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:587:1: ( ( RULE_ID ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:588:1: ( RULE_ID )
+            // InternalEventCalculus.g:493:1: ( (otherlv_2= RULE_ID ) )
+            // InternalEventCalculus.g:494:1: (otherlv_2= RULE_ID )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:588:1: ( RULE_ID )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:589:3: RULE_ID
+            // InternalEventCalculus.g:494:1: (otherlv_2= RULE_ID )
+            // InternalEventCalculus.g:495:3: otherlv_2= RULE_ID
             {
 
             			if (current==null) {
-            	            current = factory.create(grammarAccess.getDefRangeRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
+            	            current = createModelElement(grammarAccess.getDefRangeRule());
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDefRange1029); 
+            otherlv_2=(Token)match(input,RULE_ID,FOLLOW_14); 
 
-            		createLeafNode(grammarAccess.getDefRangeAccess().getNameDefSortCrossReference_2_0(), "name"); 
+            		newLeafNode(otherlv_2, grammarAccess.getDefRangeAccess().getNameDefSortCrossReference_2_0()); 
             	
 
             }
@@ -1233,32 +1210,25 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:601:2: ( (lv_min_3_0= RULE_INT ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:602:1: (lv_min_3_0= RULE_INT )
+            // InternalEventCalculus.g:506:2: ( (lv_min_3_0= RULE_INT ) )
+            // InternalEventCalculus.g:507:1: (lv_min_3_0= RULE_INT )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:602:1: (lv_min_3_0= RULE_INT )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:603:3: lv_min_3_0= RULE_INT
+            // InternalEventCalculus.g:507:1: (lv_min_3_0= RULE_INT )
+            // InternalEventCalculus.g:508:3: lv_min_3_0= RULE_INT
             {
-            lv_min_3_0=(Token)input.LT(1);
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleDefRange1046); 
+            lv_min_3_0=(Token)match(input,RULE_INT,FOLLOW_14); 
 
-            			createLeafNode(grammarAccess.getDefRangeAccess().getMinINTTerminalRuleCall_3_0(), "min"); 
+            			newLeafNode(lv_min_3_0, grammarAccess.getDefRangeAccess().getMinINTTerminalRuleCall_3_0()); 
             		
 
             	        if (current==null) {
-            	            current = factory.create(grammarAccess.getDefRangeRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
+            	            current = createModelElement(grammarAccess.getDefRangeRule());
             	        }
-            	        try {
-            	       		set(
-            	       			current, 
-            	       			"min",
-            	        		lv_min_3_0, 
-            	        		"INT", 
-            	        		lastConsumedNode);
-            	        } catch (ValueConverterException vce) {
-            				handleValueConverterException(vce);
-            	        }
+                   		setWithLastConsumed(
+                   			current, 
+                   			"min",
+                    		lv_min_3_0, 
+                    		"uk.ac.open.event.EventCalculus.INT");
             	    
 
             }
@@ -1266,32 +1236,25 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:625:2: ( (lv_max_4_0= RULE_INT ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:626:1: (lv_max_4_0= RULE_INT )
+            // InternalEventCalculus.g:524:2: ( (lv_max_4_0= RULE_INT ) )
+            // InternalEventCalculus.g:525:1: (lv_max_4_0= RULE_INT )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:626:1: (lv_max_4_0= RULE_INT )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:627:3: lv_max_4_0= RULE_INT
+            // InternalEventCalculus.g:525:1: (lv_max_4_0= RULE_INT )
+            // InternalEventCalculus.g:526:3: lv_max_4_0= RULE_INT
             {
-            lv_max_4_0=(Token)input.LT(1);
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleDefRange1068); 
+            lv_max_4_0=(Token)match(input,RULE_INT,FOLLOW_2); 
 
-            			createLeafNode(grammarAccess.getDefRangeAccess().getMaxINTTerminalRuleCall_4_0(), "max"); 
+            			newLeafNode(lv_max_4_0, grammarAccess.getDefRangeAccess().getMaxINTTerminalRuleCall_4_0()); 
             		
 
             	        if (current==null) {
-            	            current = factory.create(grammarAccess.getDefRangeRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
+            	            current = createModelElement(grammarAccess.getDefRangeRule());
             	        }
-            	        try {
-            	       		set(
-            	       			current, 
-            	       			"max",
-            	        		lv_max_4_0, 
-            	        		"INT", 
-            	        		lastConsumedNode);
-            	        } catch (ValueConverterException vce) {
-            				handleValueConverterException(vce);
-            	        }
+                   		setWithLastConsumed(
+                   			current, 
+                   			"max",
+                    		lv_max_4_0, 
+                    		"uk.ac.open.event.EventCalculus.INT");
             	    
 
             }
@@ -1305,9 +1268,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -1318,11 +1279,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleDefRange
+    // $ANTLR end "ruleDefRange"
 
 
-    // $ANTLR start entryRuleDefOption
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:657:1: entryRuleDefOption returns [EObject current=null] : iv_ruleDefOption= ruleDefOption EOF ;
+    // $ANTLR start "entryRuleDefOption"
+    // InternalEventCalculus.g:550:1: entryRuleDefOption returns [EObject current=null] : iv_ruleDefOption= ruleDefOption EOF ;
     public final EObject entryRuleDefOption() throws RecognitionException {
         EObject current = null;
 
@@ -1330,16 +1291,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:658:2: (iv_ruleDefOption= ruleDefOption EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:659:2: iv_ruleDefOption= ruleDefOption EOF
+            // InternalEventCalculus.g:551:2: (iv_ruleDefOption= ruleDefOption EOF )
+            // InternalEventCalculus.g:552:2: iv_ruleDefOption= ruleDefOption EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getDefOptionRule(), currentNode); 
-            pushFollow(FOLLOW_ruleDefOption_in_entryRuleDefOption1109);
+             newCompositeNode(grammarAccess.getDefOptionRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleDefOption=ruleDefOption();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleDefOption; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDefOption1119); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -1353,31 +1315,33 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleDefOption
+    // $ANTLR end "entryRuleDefOption"
 
 
-    // $ANTLR start ruleDefOption
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:666:1: ruleDefOption returns [EObject current=null] : ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( ( 'option' ( (lv_name_2_0= RULE_ID ) ) ( (lv_value_3_0= RULE_INT ) ) ) | ( 'option' ( (lv_name_5_0= RULE_ID ) ) ( (lv_value2_6_0= RULE_ID ) ) ) ) ) ;
+    // $ANTLR start "ruleDefOption"
+    // InternalEventCalculus.g:559:1: ruleDefOption returns [EObject current=null] : ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( (otherlv_1= 'option' ( (lv_name_2_0= RULE_ID ) ) ( (lv_value_3_0= RULE_INT ) ) ) | (otherlv_4= 'option' ( (lv_name_5_0= RULE_ID ) ) ( (lv_value2_6_0= RULE_ID ) ) ) ) ) ;
     public final EObject ruleDefOption() throws RecognitionException {
         EObject current = null;
 
+        Token otherlv_1=null;
         Token lv_name_2_0=null;
         Token lv_value_3_0=null;
+        Token otherlv_4=null;
         Token lv_name_5_0=null;
         Token lv_value2_6_0=null;
         EObject lv_annotations_0_0 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:671:6: ( ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( ( 'option' ( (lv_name_2_0= RULE_ID ) ) ( (lv_value_3_0= RULE_INT ) ) ) | ( 'option' ( (lv_name_5_0= RULE_ID ) ) ( (lv_value2_6_0= RULE_ID ) ) ) ) ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:672:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( ( 'option' ( (lv_name_2_0= RULE_ID ) ) ( (lv_value_3_0= RULE_INT ) ) ) | ( 'option' ( (lv_name_5_0= RULE_ID ) ) ( (lv_value2_6_0= RULE_ID ) ) ) ) )
+            // InternalEventCalculus.g:562:28: ( ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( (otherlv_1= 'option' ( (lv_name_2_0= RULE_ID ) ) ( (lv_value_3_0= RULE_INT ) ) ) | (otherlv_4= 'option' ( (lv_name_5_0= RULE_ID ) ) ( (lv_value2_6_0= RULE_ID ) ) ) ) ) )
+            // InternalEventCalculus.g:563:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( (otherlv_1= 'option' ( (lv_name_2_0= RULE_ID ) ) ( (lv_value_3_0= RULE_INT ) ) ) | (otherlv_4= 'option' ( (lv_name_5_0= RULE_ID ) ) ( (lv_value2_6_0= RULE_ID ) ) ) ) )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:672:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( ( 'option' ( (lv_name_2_0= RULE_ID ) ) ( (lv_value_3_0= RULE_INT ) ) ) | ( 'option' ( (lv_name_5_0= RULE_ID ) ) ( (lv_value2_6_0= RULE_ID ) ) ) ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:672:2: ( (lv_annotations_0_0= ruleAnnotation ) )* ( ( 'option' ( (lv_name_2_0= RULE_ID ) ) ( (lv_value_3_0= RULE_INT ) ) ) | ( 'option' ( (lv_name_5_0= RULE_ID ) ) ( (lv_value2_6_0= RULE_ID ) ) ) )
+            // InternalEventCalculus.g:563:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( (otherlv_1= 'option' ( (lv_name_2_0= RULE_ID ) ) ( (lv_value_3_0= RULE_INT ) ) ) | (otherlv_4= 'option' ( (lv_name_5_0= RULE_ID ) ) ( (lv_value2_6_0= RULE_ID ) ) ) ) )
+            // InternalEventCalculus.g:563:2: ( (lv_annotations_0_0= ruleAnnotation ) )* ( (otherlv_1= 'option' ( (lv_name_2_0= RULE_ID ) ) ( (lv_value_3_0= RULE_INT ) ) ) | (otherlv_4= 'option' ( (lv_name_5_0= RULE_ID ) ) ( (lv_value2_6_0= RULE_ID ) ) ) )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:672:2: ( (lv_annotations_0_0= ruleAnnotation ) )*
+            // InternalEventCalculus.g:563:2: ( (lv_annotations_0_0= ruleAnnotation ) )*
             loop9:
             do {
                 int alt9=2;
@@ -1390,34 +1354,29 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                 switch (alt9) {
             	case 1 :
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:673:1: (lv_annotations_0_0= ruleAnnotation )
+            	    // InternalEventCalculus.g:564:1: (lv_annotations_0_0= ruleAnnotation )
             	    {
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:673:1: (lv_annotations_0_0= ruleAnnotation )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:674:3: lv_annotations_0_0= ruleAnnotation
+            	    // InternalEventCalculus.g:564:1: (lv_annotations_0_0= ruleAnnotation )
+            	    // InternalEventCalculus.g:565:3: lv_annotations_0_0= ruleAnnotation
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getDefOptionAccess().getAnnotationsAnnotationParserRuleCall_0_0(), currentNode); 
+            	    	        newCompositeNode(grammarAccess.getDefOptionAccess().getAnnotationsAnnotationParserRuleCall_0_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleAnnotation_in_ruleDefOption1165);
+            	    pushFollow(FOLLOW_15);
             	    lv_annotations_0_0=ruleAnnotation();
-            	    _fsp--;
+
+            	    state._fsp--;
 
 
             	    	        if (current==null) {
-            	    	            current = factory.create(grammarAccess.getDefOptionRule().getType().getClassifier());
-            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	    	            current = createModelElementForParent(grammarAccess.getDefOptionRule());
             	    	        }
-            	    	        try {
-            	    	       		add(
-            	    	       			current, 
-            	    	       			"annotations",
-            	    	        		lv_annotations_0_0, 
-            	    	        		"Annotation", 
-            	    	        		currentNode);
-            	    	        } catch (ValueConverterException vce) {
-            	    				handleValueConverterException(vce);
-            	    	        }
-            	    	        currentNode = currentNode.getParent();
+            	           		add(
+            	           			current, 
+            	           			"annotations",
+            	            		lv_annotations_0_0, 
+            	            		"uk.ac.open.event.EventCalculus.Annotation");
+            	    	        afterParserOrEnumRuleCall();
             	    	    
 
             	    }
@@ -1431,7 +1390,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:696:3: ( ( 'option' ( (lv_name_2_0= RULE_ID ) ) ( (lv_value_3_0= RULE_INT ) ) ) | ( 'option' ( (lv_name_5_0= RULE_ID ) ) ( (lv_value2_6_0= RULE_ID ) ) ) )
+            // InternalEventCalculus.g:581:3: ( (otherlv_1= 'option' ( (lv_name_2_0= RULE_ID ) ) ( (lv_value_3_0= RULE_INT ) ) ) | (otherlv_4= 'option' ( (lv_name_5_0= RULE_ID ) ) ( (lv_value2_6_0= RULE_ID ) ) ) )
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1449,61 +1408,54 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("696:3: ( ( 'option' ( (lv_name_2_0= RULE_ID ) ) ( (lv_value_3_0= RULE_INT ) ) ) | ( 'option' ( (lv_name_5_0= RULE_ID ) ) ( (lv_value2_6_0= RULE_ID ) ) ) )", 10, 2, input);
+                            new NoViableAltException("", 10, 2, input);
 
                         throw nvae;
                     }
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("696:3: ( ( 'option' ( (lv_name_2_0= RULE_ID ) ) ( (lv_value_3_0= RULE_INT ) ) ) | ( 'option' ( (lv_name_5_0= RULE_ID ) ) ( (lv_value2_6_0= RULE_ID ) ) ) )", 10, 1, input);
+                        new NoViableAltException("", 10, 1, input);
 
                     throw nvae;
                 }
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("696:3: ( ( 'option' ( (lv_name_2_0= RULE_ID ) ) ( (lv_value_3_0= RULE_INT ) ) ) | ( 'option' ( (lv_name_5_0= RULE_ID ) ) ( (lv_value2_6_0= RULE_ID ) ) ) )", 10, 0, input);
+                    new NoViableAltException("", 10, 0, input);
 
                 throw nvae;
             }
             switch (alt10) {
                 case 1 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:696:4: ( 'option' ( (lv_name_2_0= RULE_ID ) ) ( (lv_value_3_0= RULE_INT ) ) )
+                    // InternalEventCalculus.g:581:4: (otherlv_1= 'option' ( (lv_name_2_0= RULE_ID ) ) ( (lv_value_3_0= RULE_INT ) ) )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:696:4: ( 'option' ( (lv_name_2_0= RULE_ID ) ) ( (lv_value_3_0= RULE_INT ) ) )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:696:6: 'option' ( (lv_name_2_0= RULE_ID ) ) ( (lv_value_3_0= RULE_INT ) )
+                    // InternalEventCalculus.g:581:4: (otherlv_1= 'option' ( (lv_name_2_0= RULE_ID ) ) ( (lv_value_3_0= RULE_INT ) ) )
+                    // InternalEventCalculus.g:581:6: otherlv_1= 'option' ( (lv_name_2_0= RULE_ID ) ) ( (lv_value_3_0= RULE_INT ) )
                     {
-                    match(input,20,FOLLOW_20_in_ruleDefOption1178); 
+                    otherlv_1=(Token)match(input,20,FOLLOW_11); 
 
-                            createLeafNode(grammarAccess.getDefOptionAccess().getOptionKeyword_1_0_0(), null); 
+                        	newLeafNode(otherlv_1, grammarAccess.getDefOptionAccess().getOptionKeyword_1_0_0());
                         
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:700:1: ( (lv_name_2_0= RULE_ID ) )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:701:1: (lv_name_2_0= RULE_ID )
+                    // InternalEventCalculus.g:585:1: ( (lv_name_2_0= RULE_ID ) )
+                    // InternalEventCalculus.g:586:1: (lv_name_2_0= RULE_ID )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:701:1: (lv_name_2_0= RULE_ID )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:702:3: lv_name_2_0= RULE_ID
+                    // InternalEventCalculus.g:586:1: (lv_name_2_0= RULE_ID )
+                    // InternalEventCalculus.g:587:3: lv_name_2_0= RULE_ID
                     {
-                    lv_name_2_0=(Token)input.LT(1);
-                    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDefOption1195); 
+                    lv_name_2_0=(Token)match(input,RULE_ID,FOLLOW_14); 
 
-                    			createLeafNode(grammarAccess.getDefOptionAccess().getNameIDTerminalRuleCall_1_0_1_0(), "name"); 
+                    			newLeafNode(lv_name_2_0, grammarAccess.getDefOptionAccess().getNameIDTerminalRuleCall_1_0_1_0()); 
                     		
 
                     	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getDefOptionRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
+                    	            current = createModelElement(grammarAccess.getDefOptionRule());
                     	        }
-                    	        try {
-                    	       		set(
-                    	       			current, 
-                    	       			"name",
-                    	        		lv_name_2_0, 
-                    	        		"ID", 
-                    	        		lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"name",
+                            		lv_name_2_0, 
+                            		"uk.ac.open.event.EventCalculus.ID");
                     	    
 
                     }
@@ -1511,32 +1463,25 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:724:2: ( (lv_value_3_0= RULE_INT ) )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:725:1: (lv_value_3_0= RULE_INT )
+                    // InternalEventCalculus.g:603:2: ( (lv_value_3_0= RULE_INT ) )
+                    // InternalEventCalculus.g:604:1: (lv_value_3_0= RULE_INT )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:725:1: (lv_value_3_0= RULE_INT )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:726:3: lv_value_3_0= RULE_INT
+                    // InternalEventCalculus.g:604:1: (lv_value_3_0= RULE_INT )
+                    // InternalEventCalculus.g:605:3: lv_value_3_0= RULE_INT
                     {
-                    lv_value_3_0=(Token)input.LT(1);
-                    match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleDefOption1217); 
+                    lv_value_3_0=(Token)match(input,RULE_INT,FOLLOW_2); 
 
-                    			createLeafNode(grammarAccess.getDefOptionAccess().getValueINTTerminalRuleCall_1_0_2_0(), "value"); 
+                    			newLeafNode(lv_value_3_0, grammarAccess.getDefOptionAccess().getValueINTTerminalRuleCall_1_0_2_0()); 
                     		
 
                     	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getDefOptionRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
+                    	            current = createModelElement(grammarAccess.getDefOptionRule());
                     	        }
-                    	        try {
-                    	       		set(
-                    	       			current, 
-                    	       			"value",
-                    	        		lv_value_3_0, 
-                    	        		"INT", 
-                    	        		lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"value",
+                            		lv_value_3_0, 
+                            		"uk.ac.open.event.EventCalculus.INT");
                     	    
 
                     }
@@ -1551,41 +1496,34 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:749:6: ( 'option' ( (lv_name_5_0= RULE_ID ) ) ( (lv_value2_6_0= RULE_ID ) ) )
+                    // InternalEventCalculus.g:622:6: (otherlv_4= 'option' ( (lv_name_5_0= RULE_ID ) ) ( (lv_value2_6_0= RULE_ID ) ) )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:749:6: ( 'option' ( (lv_name_5_0= RULE_ID ) ) ( (lv_value2_6_0= RULE_ID ) ) )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:749:8: 'option' ( (lv_name_5_0= RULE_ID ) ) ( (lv_value2_6_0= RULE_ID ) )
+                    // InternalEventCalculus.g:622:6: (otherlv_4= 'option' ( (lv_name_5_0= RULE_ID ) ) ( (lv_value2_6_0= RULE_ID ) ) )
+                    // InternalEventCalculus.g:622:8: otherlv_4= 'option' ( (lv_name_5_0= RULE_ID ) ) ( (lv_value2_6_0= RULE_ID ) )
                     {
-                    match(input,20,FOLLOW_20_in_ruleDefOption1240); 
+                    otherlv_4=(Token)match(input,20,FOLLOW_11); 
 
-                            createLeafNode(grammarAccess.getDefOptionAccess().getOptionKeyword_1_1_0(), null); 
+                        	newLeafNode(otherlv_4, grammarAccess.getDefOptionAccess().getOptionKeyword_1_1_0());
                         
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:753:1: ( (lv_name_5_0= RULE_ID ) )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:754:1: (lv_name_5_0= RULE_ID )
+                    // InternalEventCalculus.g:626:1: ( (lv_name_5_0= RULE_ID ) )
+                    // InternalEventCalculus.g:627:1: (lv_name_5_0= RULE_ID )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:754:1: (lv_name_5_0= RULE_ID )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:755:3: lv_name_5_0= RULE_ID
+                    // InternalEventCalculus.g:627:1: (lv_name_5_0= RULE_ID )
+                    // InternalEventCalculus.g:628:3: lv_name_5_0= RULE_ID
                     {
-                    lv_name_5_0=(Token)input.LT(1);
-                    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDefOption1257); 
+                    lv_name_5_0=(Token)match(input,RULE_ID,FOLLOW_11); 
 
-                    			createLeafNode(grammarAccess.getDefOptionAccess().getNameIDTerminalRuleCall_1_1_1_0(), "name"); 
+                    			newLeafNode(lv_name_5_0, grammarAccess.getDefOptionAccess().getNameIDTerminalRuleCall_1_1_1_0()); 
                     		
 
                     	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getDefOptionRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
+                    	            current = createModelElement(grammarAccess.getDefOptionRule());
                     	        }
-                    	        try {
-                    	       		set(
-                    	       			current, 
-                    	       			"name",
-                    	        		lv_name_5_0, 
-                    	        		"ID", 
-                    	        		lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"name",
+                            		lv_name_5_0, 
+                            		"uk.ac.open.event.EventCalculus.ID");
                     	    
 
                     }
@@ -1593,32 +1531,25 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:777:2: ( (lv_value2_6_0= RULE_ID ) )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:778:1: (lv_value2_6_0= RULE_ID )
+                    // InternalEventCalculus.g:644:2: ( (lv_value2_6_0= RULE_ID ) )
+                    // InternalEventCalculus.g:645:1: (lv_value2_6_0= RULE_ID )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:778:1: (lv_value2_6_0= RULE_ID )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:779:3: lv_value2_6_0= RULE_ID
+                    // InternalEventCalculus.g:645:1: (lv_value2_6_0= RULE_ID )
+                    // InternalEventCalculus.g:646:3: lv_value2_6_0= RULE_ID
                     {
-                    lv_value2_6_0=(Token)input.LT(1);
-                    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDefOption1279); 
+                    lv_value2_6_0=(Token)match(input,RULE_ID,FOLLOW_2); 
 
-                    			createLeafNode(grammarAccess.getDefOptionAccess().getValue2IDTerminalRuleCall_1_1_2_0(), "value2"); 
+                    			newLeafNode(lv_value2_6_0, grammarAccess.getDefOptionAccess().getValue2IDTerminalRuleCall_1_1_2_0()); 
                     		
 
                     	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getDefOptionRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
+                    	            current = createModelElement(grammarAccess.getDefOptionRule());
                     	        }
-                    	        try {
-                    	       		set(
-                    	       			current, 
-                    	       			"value2",
-                    	        		lv_value2_6_0, 
-                    	        		"ID", 
-                    	        		lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"value2",
+                            		lv_value2_6_0, 
+                            		"uk.ac.open.event.EventCalculus.ID");
                     	    
 
                     }
@@ -1641,9 +1572,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -1654,11 +1583,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleDefOption
+    // $ANTLR end "ruleDefOption"
 
 
-    // $ANTLR start entryRuleDefCompletion
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:809:1: entryRuleDefCompletion returns [EObject current=null] : iv_ruleDefCompletion= ruleDefCompletion EOF ;
+    // $ANTLR start "entryRuleDefCompletion"
+    // InternalEventCalculus.g:670:1: entryRuleDefCompletion returns [EObject current=null] : iv_ruleDefCompletion= ruleDefCompletion EOF ;
     public final EObject entryRuleDefCompletion() throws RecognitionException {
         EObject current = null;
 
@@ -1666,16 +1595,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:810:2: (iv_ruleDefCompletion= ruleDefCompletion EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:811:2: iv_ruleDefCompletion= ruleDefCompletion EOF
+            // InternalEventCalculus.g:671:2: (iv_ruleDefCompletion= ruleDefCompletion EOF )
+            // InternalEventCalculus.g:672:2: iv_ruleDefCompletion= ruleDefCompletion EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getDefCompletionRule(), currentNode); 
-            pushFollow(FOLLOW_ruleDefCompletion_in_entryRuleDefCompletion1322);
+             newCompositeNode(grammarAccess.getDefCompletionRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleDefCompletion=ruleDefCompletion();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleDefCompletion; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDefCompletion1332); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -1689,29 +1619,31 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleDefCompletion
+    // $ANTLR end "entryRuleDefCompletion"
 
 
-    // $ANTLR start ruleDefCompletion
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:818:1: ruleDefCompletion returns [EObject current=null] : ( ( (lv_annotations_0_0= ruleAnnotation ) )* 'completion' ( (lv_type_2_0= ruleLabelType ) )? ( ( RULE_ID ) ) ) ;
+    // $ANTLR start "ruleDefCompletion"
+    // InternalEventCalculus.g:679:1: ruleDefCompletion returns [EObject current=null] : ( ( (lv_annotations_0_0= ruleAnnotation ) )* otherlv_1= 'completion' ( (lv_type_2_0= ruleLabelType ) )? ( (otherlv_3= RULE_ID ) ) ) ;
     public final EObject ruleDefCompletion() throws RecognitionException {
         EObject current = null;
 
+        Token otherlv_1=null;
+        Token otherlv_3=null;
         EObject lv_annotations_0_0 = null;
 
         Enumerator lv_type_2_0 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:823:6: ( ( ( (lv_annotations_0_0= ruleAnnotation ) )* 'completion' ( (lv_type_2_0= ruleLabelType ) )? ( ( RULE_ID ) ) ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:824:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* 'completion' ( (lv_type_2_0= ruleLabelType ) )? ( ( RULE_ID ) ) )
+            // InternalEventCalculus.g:682:28: ( ( ( (lv_annotations_0_0= ruleAnnotation ) )* otherlv_1= 'completion' ( (lv_type_2_0= ruleLabelType ) )? ( (otherlv_3= RULE_ID ) ) ) )
+            // InternalEventCalculus.g:683:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* otherlv_1= 'completion' ( (lv_type_2_0= ruleLabelType ) )? ( (otherlv_3= RULE_ID ) ) )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:824:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* 'completion' ( (lv_type_2_0= ruleLabelType ) )? ( ( RULE_ID ) ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:824:2: ( (lv_annotations_0_0= ruleAnnotation ) )* 'completion' ( (lv_type_2_0= ruleLabelType ) )? ( ( RULE_ID ) )
+            // InternalEventCalculus.g:683:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* otherlv_1= 'completion' ( (lv_type_2_0= ruleLabelType ) )? ( (otherlv_3= RULE_ID ) ) )
+            // InternalEventCalculus.g:683:2: ( (lv_annotations_0_0= ruleAnnotation ) )* otherlv_1= 'completion' ( (lv_type_2_0= ruleLabelType ) )? ( (otherlv_3= RULE_ID ) )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:824:2: ( (lv_annotations_0_0= ruleAnnotation ) )*
+            // InternalEventCalculus.g:683:2: ( (lv_annotations_0_0= ruleAnnotation ) )*
             loop11:
             do {
                 int alt11=2;
@@ -1724,34 +1656,29 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                 switch (alt11) {
             	case 1 :
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:825:1: (lv_annotations_0_0= ruleAnnotation )
+            	    // InternalEventCalculus.g:684:1: (lv_annotations_0_0= ruleAnnotation )
             	    {
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:825:1: (lv_annotations_0_0= ruleAnnotation )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:826:3: lv_annotations_0_0= ruleAnnotation
+            	    // InternalEventCalculus.g:684:1: (lv_annotations_0_0= ruleAnnotation )
+            	    // InternalEventCalculus.g:685:3: lv_annotations_0_0= ruleAnnotation
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getDefCompletionAccess().getAnnotationsAnnotationParserRuleCall_0_0(), currentNode); 
+            	    	        newCompositeNode(grammarAccess.getDefCompletionAccess().getAnnotationsAnnotationParserRuleCall_0_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleAnnotation_in_ruleDefCompletion1378);
+            	    pushFollow(FOLLOW_16);
             	    lv_annotations_0_0=ruleAnnotation();
-            	    _fsp--;
+
+            	    state._fsp--;
 
 
             	    	        if (current==null) {
-            	    	            current = factory.create(grammarAccess.getDefCompletionRule().getType().getClassifier());
-            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	    	            current = createModelElementForParent(grammarAccess.getDefCompletionRule());
             	    	        }
-            	    	        try {
-            	    	       		add(
-            	    	       			current, 
-            	    	       			"annotations",
-            	    	        		lv_annotations_0_0, 
-            	    	        		"Annotation", 
-            	    	        		currentNode);
-            	    	        } catch (ValueConverterException vce) {
-            	    				handleValueConverterException(vce);
-            	    	        }
-            	    	        currentNode = currentNode.getParent();
+            	           		add(
+            	           			current, 
+            	           			"annotations",
+            	            		lv_annotations_0_0, 
+            	            		"uk.ac.open.event.EventCalculus.Annotation");
+            	    	        afterParserOrEnumRuleCall();
             	    	    
 
             	    }
@@ -1765,11 +1692,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            match(input,21,FOLLOW_21_in_ruleDefCompletion1389); 
+            otherlv_1=(Token)match(input,21,FOLLOW_17); 
 
-                    createLeafNode(grammarAccess.getDefCompletionAccess().getCompletionKeyword_1(), null); 
+                	newLeafNode(otherlv_1, grammarAccess.getDefCompletionAccess().getCompletionKeyword_1());
                 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:852:1: ( (lv_type_2_0= ruleLabelType ) )?
+            // InternalEventCalculus.g:705:1: ( (lv_type_2_0= ruleLabelType ) )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1778,34 +1705,29 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
             }
             switch (alt12) {
                 case 1 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:853:1: (lv_type_2_0= ruleLabelType )
+                    // InternalEventCalculus.g:706:1: (lv_type_2_0= ruleLabelType )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:853:1: (lv_type_2_0= ruleLabelType )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:854:3: lv_type_2_0= ruleLabelType
+                    // InternalEventCalculus.g:706:1: (lv_type_2_0= ruleLabelType )
+                    // InternalEventCalculus.g:707:3: lv_type_2_0= ruleLabelType
                     {
                      
-                    	        currentNode=createCompositeNode(grammarAccess.getDefCompletionAccess().getTypeLabelTypeEnumRuleCall_2_0(), currentNode); 
+                    	        newCompositeNode(grammarAccess.getDefCompletionAccess().getTypeLabelTypeEnumRuleCall_2_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleLabelType_in_ruleDefCompletion1410);
+                    pushFollow(FOLLOW_11);
                     lv_type_2_0=ruleLabelType();
-                    _fsp--;
+
+                    state._fsp--;
 
 
                     	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getDefCompletionRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode.getParent(), current);
+                    	            current = createModelElementForParent(grammarAccess.getDefCompletionRule());
                     	        }
-                    	        try {
-                    	       		set(
-                    	       			current, 
-                    	       			"type",
-                    	        		lv_type_2_0, 
-                    	        		"LabelType", 
-                    	        		currentNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	        currentNode = currentNode.getParent();
+                           		set(
+                           			current, 
+                           			"type",
+                            		lv_type_2_0, 
+                            		"uk.ac.open.event.EventCalculus.LabelType");
+                    	        afterParserOrEnumRuleCall();
                     	    
 
                     }
@@ -1816,21 +1738,20 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:876:3: ( ( RULE_ID ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:877:1: ( RULE_ID )
+            // InternalEventCalculus.g:723:3: ( (otherlv_3= RULE_ID ) )
+            // InternalEventCalculus.g:724:1: (otherlv_3= RULE_ID )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:877:1: ( RULE_ID )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:878:3: RULE_ID
+            // InternalEventCalculus.g:724:1: (otherlv_3= RULE_ID )
+            // InternalEventCalculus.g:725:3: otherlv_3= RULE_ID
             {
 
             			if (current==null) {
-            	            current = factory.create(grammarAccess.getDefCompletionRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
+            	            current = createModelElement(grammarAccess.getDefCompletionRule());
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDefCompletion1429); 
+            otherlv_3=(Token)match(input,RULE_ID,FOLLOW_2); 
 
-            		createLeafNode(grammarAccess.getDefCompletionAccess().getLabelDefinitionCrossReference_3_0(), "label"); 
+            		newLeafNode(otherlv_3, grammarAccess.getDefCompletionAccess().getLabelDefinitionCrossReference_3_0()); 
             	
 
             }
@@ -1844,9 +1765,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -1857,11 +1776,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleDefCompletion
+    // $ANTLR end "ruleDefCompletion"
 
 
-    // $ANTLR start entryRuleDefNonInertia
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:898:1: entryRuleDefNonInertia returns [EObject current=null] : iv_ruleDefNonInertia= ruleDefNonInertia EOF ;
+    // $ANTLR start "entryRuleDefNonInertia"
+    // InternalEventCalculus.g:744:1: entryRuleDefNonInertia returns [EObject current=null] : iv_ruleDefNonInertia= ruleDefNonInertia EOF ;
     public final EObject entryRuleDefNonInertia() throws RecognitionException {
         EObject current = null;
 
@@ -1869,16 +1788,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:899:2: (iv_ruleDefNonInertia= ruleDefNonInertia EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:900:2: iv_ruleDefNonInertia= ruleDefNonInertia EOF
+            // InternalEventCalculus.g:745:2: (iv_ruleDefNonInertia= ruleDefNonInertia EOF )
+            // InternalEventCalculus.g:746:2: iv_ruleDefNonInertia= ruleDefNonInertia EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getDefNonInertiaRule(), currentNode); 
-            pushFollow(FOLLOW_ruleDefNonInertia_in_entryRuleDefNonInertia1465);
+             newCompositeNode(grammarAccess.getDefNonInertiaRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleDefNonInertia=ruleDefNonInertia();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleDefNonInertia; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDefNonInertia1475); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -1892,27 +1812,31 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleDefNonInertia
+    // $ANTLR end "entryRuleDefNonInertia"
 
 
-    // $ANTLR start ruleDefNonInertia
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:907:1: ruleDefNonInertia returns [EObject current=null] : ( ( (lv_annotations_0_0= ruleAnnotation ) )* 'noninertial' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )* ) ;
+    // $ANTLR start "ruleDefNonInertia"
+    // InternalEventCalculus.g:753:1: ruleDefNonInertia returns [EObject current=null] : ( ( (lv_annotations_0_0= ruleAnnotation ) )* otherlv_1= 'noninertial' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )* ) ;
     public final EObject ruleDefNonInertia() throws RecognitionException {
         EObject current = null;
 
+        Token otherlv_1=null;
+        Token otherlv_2=null;
+        Token otherlv_3=null;
+        Token otherlv_4=null;
         EObject lv_annotations_0_0 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:912:6: ( ( ( (lv_annotations_0_0= ruleAnnotation ) )* 'noninertial' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )* ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:913:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* 'noninertial' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )* )
+            // InternalEventCalculus.g:756:28: ( ( ( (lv_annotations_0_0= ruleAnnotation ) )* otherlv_1= 'noninertial' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )* ) )
+            // InternalEventCalculus.g:757:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* otherlv_1= 'noninertial' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )* )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:913:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* 'noninertial' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )* )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:913:2: ( (lv_annotations_0_0= ruleAnnotation ) )* 'noninertial' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )*
+            // InternalEventCalculus.g:757:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* otherlv_1= 'noninertial' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )* )
+            // InternalEventCalculus.g:757:2: ( (lv_annotations_0_0= ruleAnnotation ) )* otherlv_1= 'noninertial' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )*
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:913:2: ( (lv_annotations_0_0= ruleAnnotation ) )*
+            // InternalEventCalculus.g:757:2: ( (lv_annotations_0_0= ruleAnnotation ) )*
             loop13:
             do {
                 int alt13=2;
@@ -1925,34 +1849,29 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                 switch (alt13) {
             	case 1 :
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:914:1: (lv_annotations_0_0= ruleAnnotation )
+            	    // InternalEventCalculus.g:758:1: (lv_annotations_0_0= ruleAnnotation )
             	    {
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:914:1: (lv_annotations_0_0= ruleAnnotation )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:915:3: lv_annotations_0_0= ruleAnnotation
+            	    // InternalEventCalculus.g:758:1: (lv_annotations_0_0= ruleAnnotation )
+            	    // InternalEventCalculus.g:759:3: lv_annotations_0_0= ruleAnnotation
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getDefNonInertiaAccess().getAnnotationsAnnotationParserRuleCall_0_0(), currentNode); 
+            	    	        newCompositeNode(grammarAccess.getDefNonInertiaAccess().getAnnotationsAnnotationParserRuleCall_0_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleAnnotation_in_ruleDefNonInertia1521);
+            	    pushFollow(FOLLOW_18);
             	    lv_annotations_0_0=ruleAnnotation();
-            	    _fsp--;
+
+            	    state._fsp--;
 
 
             	    	        if (current==null) {
-            	    	            current = factory.create(grammarAccess.getDefNonInertiaRule().getType().getClassifier());
-            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	    	            current = createModelElementForParent(grammarAccess.getDefNonInertiaRule());
             	    	        }
-            	    	        try {
-            	    	       		add(
-            	    	       			current, 
-            	    	       			"annotations",
-            	    	        		lv_annotations_0_0, 
-            	    	        		"Annotation", 
-            	    	        		currentNode);
-            	    	        } catch (ValueConverterException vce) {
-            	    				handleValueConverterException(vce);
-            	    	        }
-            	    	        currentNode = currentNode.getParent();
+            	           		add(
+            	           			current, 
+            	           			"annotations",
+            	            		lv_annotations_0_0, 
+            	            		"uk.ac.open.event.EventCalculus.Annotation");
+            	    	        afterParserOrEnumRuleCall();
             	    	    
 
             	    }
@@ -1966,25 +1885,24 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            match(input,22,FOLLOW_22_in_ruleDefNonInertia1532); 
+            otherlv_1=(Token)match(input,22,FOLLOW_11); 
 
-                    createLeafNode(grammarAccess.getDefNonInertiaAccess().getNoninertialKeyword_1(), null); 
+                	newLeafNode(otherlv_1, grammarAccess.getDefNonInertiaAccess().getNoninertialKeyword_1());
                 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:941:1: ( ( RULE_ID ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:942:1: ( RULE_ID )
+            // InternalEventCalculus.g:779:1: ( (otherlv_2= RULE_ID ) )
+            // InternalEventCalculus.g:780:1: (otherlv_2= RULE_ID )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:942:1: ( RULE_ID )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:943:3: RULE_ID
+            // InternalEventCalculus.g:780:1: (otherlv_2= RULE_ID )
+            // InternalEventCalculus.g:781:3: otherlv_2= RULE_ID
             {
 
             			if (current==null) {
-            	            current = factory.create(grammarAccess.getDefNonInertiaRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
+            	            current = createModelElement(grammarAccess.getDefNonInertiaRule());
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDefNonInertia1550); 
+            otherlv_2=(Token)match(input,RULE_ID,FOLLOW_19); 
 
-            		createLeafNode(grammarAccess.getDefNonInertiaAccess().getNamesDefinitionCrossReference_2_0(), "names"); 
+            		newLeafNode(otherlv_2, grammarAccess.getDefNonInertiaAccess().getNamesDefinitionCrossReference_2_0()); 
             	
 
             }
@@ -1992,7 +1910,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:955:2: ( ',' ( ( RULE_ID ) ) )*
+            // InternalEventCalculus.g:792:2: (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )*
             loop14:
             do {
                 int alt14=2;
@@ -2005,27 +1923,26 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                 switch (alt14) {
             	case 1 :
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:955:4: ',' ( ( RULE_ID ) )
+            	    // InternalEventCalculus.g:792:4: otherlv_3= ',' ( (otherlv_4= RULE_ID ) )
             	    {
-            	    match(input,23,FOLLOW_23_in_ruleDefNonInertia1561); 
+            	    otherlv_3=(Token)match(input,23,FOLLOW_11); 
 
-            	            createLeafNode(grammarAccess.getDefNonInertiaAccess().getCommaKeyword_3_0(), null); 
+            	        	newLeafNode(otherlv_3, grammarAccess.getDefNonInertiaAccess().getCommaKeyword_3_0());
             	        
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:959:1: ( ( RULE_ID ) )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:960:1: ( RULE_ID )
+            	    // InternalEventCalculus.g:796:1: ( (otherlv_4= RULE_ID ) )
+            	    // InternalEventCalculus.g:797:1: (otherlv_4= RULE_ID )
             	    {
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:960:1: ( RULE_ID )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:961:3: RULE_ID
+            	    // InternalEventCalculus.g:797:1: (otherlv_4= RULE_ID )
+            	    // InternalEventCalculus.g:798:3: otherlv_4= RULE_ID
             	    {
 
             	    			if (current==null) {
-            	    	            current = factory.create(grammarAccess.getDefNonInertiaRule().getType().getClassifier());
-            	    	            associateNodeWithAstElement(currentNode, current);
+            	    	            current = createModelElement(grammarAccess.getDefNonInertiaRule());
             	    	        }
             	            
-            	    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDefNonInertia1579); 
+            	    otherlv_4=(Token)match(input,RULE_ID,FOLLOW_19); 
 
-            	    		createLeafNode(grammarAccess.getDefNonInertiaAccess().getNamesDefinitionCrossReference_3_1_0(), "names"); 
+            	    		newLeafNode(otherlv_4, grammarAccess.getDefNonInertiaAccess().getNamesDefinitionCrossReference_3_1_0()); 
             	    	
 
             	    }
@@ -2048,9 +1965,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -2061,11 +1976,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleDefNonInertia
+    // $ANTLR end "ruleDefNonInertia"
 
 
-    // $ANTLR start entryRuleDefXor
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:981:1: entryRuleDefXor returns [EObject current=null] : iv_ruleDefXor= ruleDefXor EOF ;
+    // $ANTLR start "entryRuleDefXor"
+    // InternalEventCalculus.g:817:1: entryRuleDefXor returns [EObject current=null] : iv_ruleDefXor= ruleDefXor EOF ;
     public final EObject entryRuleDefXor() throws RecognitionException {
         EObject current = null;
 
@@ -2073,16 +1988,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:982:2: (iv_ruleDefXor= ruleDefXor EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:983:2: iv_ruleDefXor= ruleDefXor EOF
+            // InternalEventCalculus.g:818:2: (iv_ruleDefXor= ruleDefXor EOF )
+            // InternalEventCalculus.g:819:2: iv_ruleDefXor= ruleDefXor EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getDefXorRule(), currentNode); 
-            pushFollow(FOLLOW_ruleDefXor_in_entryRuleDefXor1617);
+             newCompositeNode(grammarAccess.getDefXorRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleDefXor=ruleDefXor();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleDefXor; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDefXor1627); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -2096,27 +2012,31 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleDefXor
+    // $ANTLR end "entryRuleDefXor"
 
 
-    // $ANTLR start ruleDefXor
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:990:1: ruleDefXor returns [EObject current=null] : ( ( (lv_annotations_0_0= ruleAnnotation ) )* 'xor' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )* ) ;
+    // $ANTLR start "ruleDefXor"
+    // InternalEventCalculus.g:826:1: ruleDefXor returns [EObject current=null] : ( ( (lv_annotations_0_0= ruleAnnotation ) )* otherlv_1= 'xor' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )* ) ;
     public final EObject ruleDefXor() throws RecognitionException {
         EObject current = null;
 
+        Token otherlv_1=null;
+        Token otherlv_2=null;
+        Token otherlv_3=null;
+        Token otherlv_4=null;
         EObject lv_annotations_0_0 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:995:6: ( ( ( (lv_annotations_0_0= ruleAnnotation ) )* 'xor' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )* ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:996:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* 'xor' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )* )
+            // InternalEventCalculus.g:829:28: ( ( ( (lv_annotations_0_0= ruleAnnotation ) )* otherlv_1= 'xor' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )* ) )
+            // InternalEventCalculus.g:830:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* otherlv_1= 'xor' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )* )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:996:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* 'xor' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )* )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:996:2: ( (lv_annotations_0_0= ruleAnnotation ) )* 'xor' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )*
+            // InternalEventCalculus.g:830:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* otherlv_1= 'xor' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )* )
+            // InternalEventCalculus.g:830:2: ( (lv_annotations_0_0= ruleAnnotation ) )* otherlv_1= 'xor' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )*
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:996:2: ( (lv_annotations_0_0= ruleAnnotation ) )*
+            // InternalEventCalculus.g:830:2: ( (lv_annotations_0_0= ruleAnnotation ) )*
             loop15:
             do {
                 int alt15=2;
@@ -2129,34 +2049,29 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                 switch (alt15) {
             	case 1 :
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:997:1: (lv_annotations_0_0= ruleAnnotation )
+            	    // InternalEventCalculus.g:831:1: (lv_annotations_0_0= ruleAnnotation )
             	    {
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:997:1: (lv_annotations_0_0= ruleAnnotation )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:998:3: lv_annotations_0_0= ruleAnnotation
+            	    // InternalEventCalculus.g:831:1: (lv_annotations_0_0= ruleAnnotation )
+            	    // InternalEventCalculus.g:832:3: lv_annotations_0_0= ruleAnnotation
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getDefXorAccess().getAnnotationsAnnotationParserRuleCall_0_0(), currentNode); 
+            	    	        newCompositeNode(grammarAccess.getDefXorAccess().getAnnotationsAnnotationParserRuleCall_0_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleAnnotation_in_ruleDefXor1673);
+            	    pushFollow(FOLLOW_20);
             	    lv_annotations_0_0=ruleAnnotation();
-            	    _fsp--;
+
+            	    state._fsp--;
 
 
             	    	        if (current==null) {
-            	    	            current = factory.create(grammarAccess.getDefXorRule().getType().getClassifier());
-            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	    	            current = createModelElementForParent(grammarAccess.getDefXorRule());
             	    	        }
-            	    	        try {
-            	    	       		add(
-            	    	       			current, 
-            	    	       			"annotations",
-            	    	        		lv_annotations_0_0, 
-            	    	        		"Annotation", 
-            	    	        		currentNode);
-            	    	        } catch (ValueConverterException vce) {
-            	    				handleValueConverterException(vce);
-            	    	        }
-            	    	        currentNode = currentNode.getParent();
+            	           		add(
+            	           			current, 
+            	           			"annotations",
+            	            		lv_annotations_0_0, 
+            	            		"uk.ac.open.event.EventCalculus.Annotation");
+            	    	        afterParserOrEnumRuleCall();
             	    	    
 
             	    }
@@ -2170,25 +2085,24 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            match(input,24,FOLLOW_24_in_ruleDefXor1684); 
+            otherlv_1=(Token)match(input,24,FOLLOW_11); 
 
-                    createLeafNode(grammarAccess.getDefXorAccess().getXorKeyword_1(), null); 
+                	newLeafNode(otherlv_1, grammarAccess.getDefXorAccess().getXorKeyword_1());
                 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1024:1: ( ( RULE_ID ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1025:1: ( RULE_ID )
+            // InternalEventCalculus.g:852:1: ( (otherlv_2= RULE_ID ) )
+            // InternalEventCalculus.g:853:1: (otherlv_2= RULE_ID )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1025:1: ( RULE_ID )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1026:3: RULE_ID
+            // InternalEventCalculus.g:853:1: (otherlv_2= RULE_ID )
+            // InternalEventCalculus.g:854:3: otherlv_2= RULE_ID
             {
 
             			if (current==null) {
-            	            current = factory.create(grammarAccess.getDefXorRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
+            	            current = createModelElement(grammarAccess.getDefXorRule());
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDefXor1702); 
+            otherlv_2=(Token)match(input,RULE_ID,FOLLOW_19); 
 
-            		createLeafNode(grammarAccess.getDefXorAccess().getNamesDefinitionCrossReference_2_0(), "names"); 
+            		newLeafNode(otherlv_2, grammarAccess.getDefXorAccess().getNamesDefinitionCrossReference_2_0()); 
             	
 
             }
@@ -2196,7 +2110,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1038:2: ( ',' ( ( RULE_ID ) ) )*
+            // InternalEventCalculus.g:865:2: (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )*
             loop16:
             do {
                 int alt16=2;
@@ -2209,27 +2123,26 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                 switch (alt16) {
             	case 1 :
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1038:4: ',' ( ( RULE_ID ) )
+            	    // InternalEventCalculus.g:865:4: otherlv_3= ',' ( (otherlv_4= RULE_ID ) )
             	    {
-            	    match(input,23,FOLLOW_23_in_ruleDefXor1713); 
+            	    otherlv_3=(Token)match(input,23,FOLLOW_11); 
 
-            	            createLeafNode(grammarAccess.getDefXorAccess().getCommaKeyword_3_0(), null); 
+            	        	newLeafNode(otherlv_3, grammarAccess.getDefXorAccess().getCommaKeyword_3_0());
             	        
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1042:1: ( ( RULE_ID ) )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1043:1: ( RULE_ID )
+            	    // InternalEventCalculus.g:869:1: ( (otherlv_4= RULE_ID ) )
+            	    // InternalEventCalculus.g:870:1: (otherlv_4= RULE_ID )
             	    {
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1043:1: ( RULE_ID )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1044:3: RULE_ID
+            	    // InternalEventCalculus.g:870:1: (otherlv_4= RULE_ID )
+            	    // InternalEventCalculus.g:871:3: otherlv_4= RULE_ID
             	    {
 
             	    			if (current==null) {
-            	    	            current = factory.create(grammarAccess.getDefXorRule().getType().getClassifier());
-            	    	            associateNodeWithAstElement(currentNode, current);
+            	    	            current = createModelElement(grammarAccess.getDefXorRule());
             	    	        }
             	            
-            	    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDefXor1731); 
+            	    otherlv_4=(Token)match(input,RULE_ID,FOLLOW_19); 
 
-            	    		createLeafNode(grammarAccess.getDefXorAccess().getNamesDefinitionCrossReference_3_1_0(), "names"); 
+            	    		newLeafNode(otherlv_4, grammarAccess.getDefXorAccess().getNamesDefinitionCrossReference_3_1_0()); 
             	    	
 
             	    }
@@ -2252,9 +2165,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -2265,11 +2176,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleDefXor
+    // $ANTLR end "ruleDefXor"
 
 
-    // $ANTLR start entryRuleDefMutex
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1064:1: entryRuleDefMutex returns [EObject current=null] : iv_ruleDefMutex= ruleDefMutex EOF ;
+    // $ANTLR start "entryRuleDefMutex"
+    // InternalEventCalculus.g:890:1: entryRuleDefMutex returns [EObject current=null] : iv_ruleDefMutex= ruleDefMutex EOF ;
     public final EObject entryRuleDefMutex() throws RecognitionException {
         EObject current = null;
 
@@ -2277,16 +2188,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1065:2: (iv_ruleDefMutex= ruleDefMutex EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1066:2: iv_ruleDefMutex= ruleDefMutex EOF
+            // InternalEventCalculus.g:891:2: (iv_ruleDefMutex= ruleDefMutex EOF )
+            // InternalEventCalculus.g:892:2: iv_ruleDefMutex= ruleDefMutex EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getDefMutexRule(), currentNode); 
-            pushFollow(FOLLOW_ruleDefMutex_in_entryRuleDefMutex1769);
+             newCompositeNode(grammarAccess.getDefMutexRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleDefMutex=ruleDefMutex();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleDefMutex; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDefMutex1779); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -2300,27 +2212,31 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleDefMutex
+    // $ANTLR end "entryRuleDefMutex"
 
 
-    // $ANTLR start ruleDefMutex
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1073:1: ruleDefMutex returns [EObject current=null] : ( ( (lv_annotations_0_0= ruleAnnotation ) )* 'mutex' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )* ) ;
+    // $ANTLR start "ruleDefMutex"
+    // InternalEventCalculus.g:899:1: ruleDefMutex returns [EObject current=null] : ( ( (lv_annotations_0_0= ruleAnnotation ) )* otherlv_1= 'mutex' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )* ) ;
     public final EObject ruleDefMutex() throws RecognitionException {
         EObject current = null;
 
+        Token otherlv_1=null;
+        Token otherlv_2=null;
+        Token otherlv_3=null;
+        Token otherlv_4=null;
         EObject lv_annotations_0_0 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1078:6: ( ( ( (lv_annotations_0_0= ruleAnnotation ) )* 'mutex' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )* ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1079:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* 'mutex' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )* )
+            // InternalEventCalculus.g:902:28: ( ( ( (lv_annotations_0_0= ruleAnnotation ) )* otherlv_1= 'mutex' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )* ) )
+            // InternalEventCalculus.g:903:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* otherlv_1= 'mutex' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )* )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1079:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* 'mutex' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )* )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1079:2: ( (lv_annotations_0_0= ruleAnnotation ) )* 'mutex' ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )*
+            // InternalEventCalculus.g:903:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* otherlv_1= 'mutex' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )* )
+            // InternalEventCalculus.g:903:2: ( (lv_annotations_0_0= ruleAnnotation ) )* otherlv_1= 'mutex' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )*
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1079:2: ( (lv_annotations_0_0= ruleAnnotation ) )*
+            // InternalEventCalculus.g:903:2: ( (lv_annotations_0_0= ruleAnnotation ) )*
             loop17:
             do {
                 int alt17=2;
@@ -2333,34 +2249,29 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                 switch (alt17) {
             	case 1 :
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1080:1: (lv_annotations_0_0= ruleAnnotation )
+            	    // InternalEventCalculus.g:904:1: (lv_annotations_0_0= ruleAnnotation )
             	    {
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1080:1: (lv_annotations_0_0= ruleAnnotation )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1081:3: lv_annotations_0_0= ruleAnnotation
+            	    // InternalEventCalculus.g:904:1: (lv_annotations_0_0= ruleAnnotation )
+            	    // InternalEventCalculus.g:905:3: lv_annotations_0_0= ruleAnnotation
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getDefMutexAccess().getAnnotationsAnnotationParserRuleCall_0_0(), currentNode); 
+            	    	        newCompositeNode(grammarAccess.getDefMutexAccess().getAnnotationsAnnotationParserRuleCall_0_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleAnnotation_in_ruleDefMutex1825);
+            	    pushFollow(FOLLOW_21);
             	    lv_annotations_0_0=ruleAnnotation();
-            	    _fsp--;
+
+            	    state._fsp--;
 
 
             	    	        if (current==null) {
-            	    	            current = factory.create(grammarAccess.getDefMutexRule().getType().getClassifier());
-            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	    	            current = createModelElementForParent(grammarAccess.getDefMutexRule());
             	    	        }
-            	    	        try {
-            	    	       		add(
-            	    	       			current, 
-            	    	       			"annotations",
-            	    	        		lv_annotations_0_0, 
-            	    	        		"Annotation", 
-            	    	        		currentNode);
-            	    	        } catch (ValueConverterException vce) {
-            	    				handleValueConverterException(vce);
-            	    	        }
-            	    	        currentNode = currentNode.getParent();
+            	           		add(
+            	           			current, 
+            	           			"annotations",
+            	            		lv_annotations_0_0, 
+            	            		"uk.ac.open.event.EventCalculus.Annotation");
+            	    	        afterParserOrEnumRuleCall();
             	    	    
 
             	    }
@@ -2374,25 +2285,24 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            match(input,25,FOLLOW_25_in_ruleDefMutex1836); 
+            otherlv_1=(Token)match(input,25,FOLLOW_11); 
 
-                    createLeafNode(grammarAccess.getDefMutexAccess().getMutexKeyword_1(), null); 
+                	newLeafNode(otherlv_1, grammarAccess.getDefMutexAccess().getMutexKeyword_1());
                 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1107:1: ( ( RULE_ID ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1108:1: ( RULE_ID )
+            // InternalEventCalculus.g:925:1: ( (otherlv_2= RULE_ID ) )
+            // InternalEventCalculus.g:926:1: (otherlv_2= RULE_ID )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1108:1: ( RULE_ID )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1109:3: RULE_ID
+            // InternalEventCalculus.g:926:1: (otherlv_2= RULE_ID )
+            // InternalEventCalculus.g:927:3: otherlv_2= RULE_ID
             {
 
             			if (current==null) {
-            	            current = factory.create(grammarAccess.getDefMutexRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
+            	            current = createModelElement(grammarAccess.getDefMutexRule());
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDefMutex1854); 
+            otherlv_2=(Token)match(input,RULE_ID,FOLLOW_19); 
 
-            		createLeafNode(grammarAccess.getDefMutexAccess().getNamesDefinitionCrossReference_2_0(), "names"); 
+            		newLeafNode(otherlv_2, grammarAccess.getDefMutexAccess().getNamesDefinitionCrossReference_2_0()); 
             	
 
             }
@@ -2400,7 +2310,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1121:2: ( ',' ( ( RULE_ID ) ) )*
+            // InternalEventCalculus.g:938:2: (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )*
             loop18:
             do {
                 int alt18=2;
@@ -2413,27 +2323,26 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                 switch (alt18) {
             	case 1 :
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1121:4: ',' ( ( RULE_ID ) )
+            	    // InternalEventCalculus.g:938:4: otherlv_3= ',' ( (otherlv_4= RULE_ID ) )
             	    {
-            	    match(input,23,FOLLOW_23_in_ruleDefMutex1865); 
+            	    otherlv_3=(Token)match(input,23,FOLLOW_11); 
 
-            	            createLeafNode(grammarAccess.getDefMutexAccess().getCommaKeyword_3_0(), null); 
+            	        	newLeafNode(otherlv_3, grammarAccess.getDefMutexAccess().getCommaKeyword_3_0());
             	        
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1125:1: ( ( RULE_ID ) )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1126:1: ( RULE_ID )
+            	    // InternalEventCalculus.g:942:1: ( (otherlv_4= RULE_ID ) )
+            	    // InternalEventCalculus.g:943:1: (otherlv_4= RULE_ID )
             	    {
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1126:1: ( RULE_ID )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1127:3: RULE_ID
+            	    // InternalEventCalculus.g:943:1: (otherlv_4= RULE_ID )
+            	    // InternalEventCalculus.g:944:3: otherlv_4= RULE_ID
             	    {
 
             	    			if (current==null) {
-            	    	            current = factory.create(grammarAccess.getDefMutexRule().getType().getClassifier());
-            	    	            associateNodeWithAstElement(currentNode, current);
+            	    	            current = createModelElement(grammarAccess.getDefMutexRule());
             	    	        }
             	            
-            	    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDefMutex1883); 
+            	    otherlv_4=(Token)match(input,RULE_ID,FOLLOW_19); 
 
-            	    		createLeafNode(grammarAccess.getDefMutexAccess().getNamesDefinitionCrossReference_3_1_0(), "names"); 
+            	    		newLeafNode(otherlv_4, grammarAccess.getDefMutexAccess().getNamesDefinitionCrossReference_3_1_0()); 
             	    	
 
             	    }
@@ -2456,9 +2365,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -2469,11 +2376,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleDefMutex
+    // $ANTLR end "ruleDefMutex"
 
 
-    // $ANTLR start entryRuleStatement
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1147:1: entryRuleStatement returns [EObject current=null] : iv_ruleStatement= ruleStatement EOF ;
+    // $ANTLR start "entryRuleStatement"
+    // InternalEventCalculus.g:963:1: entryRuleStatement returns [EObject current=null] : iv_ruleStatement= ruleStatement EOF ;
     public final EObject entryRuleStatement() throws RecognitionException {
         EObject current = null;
 
@@ -2481,16 +2388,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1148:2: (iv_ruleStatement= ruleStatement EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1149:2: iv_ruleStatement= ruleStatement EOF
+            // InternalEventCalculus.g:964:2: (iv_ruleStatement= ruleStatement EOF )
+            // InternalEventCalculus.g:965:2: iv_ruleStatement= ruleStatement EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getStatementRule(), currentNode); 
-            pushFollow(FOLLOW_ruleStatement_in_entryRuleStatement1921);
+             newCompositeNode(grammarAccess.getStatementRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleStatement=ruleStatement();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleStatement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleStatement1931); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -2504,11 +2412,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleStatement
+    // $ANTLR end "entryRuleStatement"
 
 
-    // $ANTLR start ruleStatement
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1156:1: ruleStatement returns [EObject current=null] : (this_SortDefinition_0= ruleSortDefinition | this_LabeledExpression_1= ruleLabeledExpression ) ;
+    // $ANTLR start "ruleStatement"
+    // InternalEventCalculus.g:972:1: ruleStatement returns [EObject current=null] : (this_SortDefinition_0= ruleSortDefinition | this_LabeledExpression_1= ruleLabeledExpression ) ;
     public final EObject ruleStatement() throws RecognitionException {
         EObject current = null;
 
@@ -2517,46 +2425,48 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         EObject this_LabeledExpression_1 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1161:6: ( (this_SortDefinition_0= ruleSortDefinition | this_LabeledExpression_1= ruleLabeledExpression ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1162:1: (this_SortDefinition_0= ruleSortDefinition | this_LabeledExpression_1= ruleLabeledExpression )
+            // InternalEventCalculus.g:975:28: ( (this_SortDefinition_0= ruleSortDefinition | this_LabeledExpression_1= ruleLabeledExpression ) )
+            // InternalEventCalculus.g:976:1: (this_SortDefinition_0= ruleSortDefinition | this_LabeledExpression_1= ruleLabeledExpression )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1162:1: (this_SortDefinition_0= ruleSortDefinition | this_LabeledExpression_1= ruleLabeledExpression )
+            // InternalEventCalculus.g:976:1: (this_SortDefinition_0= ruleSortDefinition | this_LabeledExpression_1= ruleLabeledExpression )
             int alt19=2;
             alt19 = dfa19.predict(input);
             switch (alt19) {
                 case 1 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1163:5: this_SortDefinition_0= ruleSortDefinition
+                    // InternalEventCalculus.g:977:5: this_SortDefinition_0= ruleSortDefinition
                     {
                      
-                            currentNode=createCompositeNode(grammarAccess.getStatementAccess().getSortDefinitionParserRuleCall_0(), currentNode); 
+                            newCompositeNode(grammarAccess.getStatementAccess().getSortDefinitionParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleSortDefinition_in_ruleStatement1978);
+                    pushFollow(FOLLOW_2);
                     this_SortDefinition_0=ruleSortDefinition();
-                    _fsp--;
+
+                    state._fsp--;
 
                      
                             current = this_SortDefinition_0; 
-                            currentNode = currentNode.getParent();
+                            afterParserOrEnumRuleCall();
                         
 
                     }
                     break;
                 case 2 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1173:5: this_LabeledExpression_1= ruleLabeledExpression
+                    // InternalEventCalculus.g:987:5: this_LabeledExpression_1= ruleLabeledExpression
                     {
                      
-                            currentNode=createCompositeNode(grammarAccess.getStatementAccess().getLabeledExpressionParserRuleCall_1(), currentNode); 
+                            newCompositeNode(grammarAccess.getStatementAccess().getLabeledExpressionParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleLabeledExpression_in_ruleStatement2005);
+                    pushFollow(FOLLOW_2);
                     this_LabeledExpression_1=ruleLabeledExpression();
-                    _fsp--;
+
+                    state._fsp--;
 
                      
                             current = this_LabeledExpression_1; 
-                            currentNode = currentNode.getParent();
+                            afterParserOrEnumRuleCall();
                         
 
                     }
@@ -2567,9 +2477,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -2580,11 +2488,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleStatement
+    // $ANTLR end "ruleStatement"
 
 
-    // $ANTLR start entryRuleLabeledExpression
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1189:1: entryRuleLabeledExpression returns [EObject current=null] : iv_ruleLabeledExpression= ruleLabeledExpression EOF ;
+    // $ANTLR start "entryRuleLabeledExpression"
+    // InternalEventCalculus.g:1003:1: entryRuleLabeledExpression returns [EObject current=null] : iv_ruleLabeledExpression= ruleLabeledExpression EOF ;
     public final EObject entryRuleLabeledExpression() throws RecognitionException {
         EObject current = null;
 
@@ -2592,16 +2500,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1190:2: (iv_ruleLabeledExpression= ruleLabeledExpression EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1191:2: iv_ruleLabeledExpression= ruleLabeledExpression EOF
+            // InternalEventCalculus.g:1004:2: (iv_ruleLabeledExpression= ruleLabeledExpression EOF )
+            // InternalEventCalculus.g:1005:2: iv_ruleLabeledExpression= ruleLabeledExpression EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getLabeledExpressionRule(), currentNode); 
-            pushFollow(FOLLOW_ruleLabeledExpression_in_entryRuleLabeledExpression2040);
+             newCompositeNode(grammarAccess.getLabeledExpressionRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleLabeledExpression=ruleLabeledExpression();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleLabeledExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLabeledExpression2050); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -2615,14 +2524,16 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleLabeledExpression
+    // $ANTLR end "entryRuleLabeledExpression"
 
 
-    // $ANTLR start ruleLabeledExpression
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1198:1: ruleLabeledExpression returns [EObject current=null] : ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( ( (lv_name_1_0= ruleLabelType ) ) ':' )? ( (lv_expr_3_0= ruleExpression ) ) '.' ) ;
+    // $ANTLR start "ruleLabeledExpression"
+    // InternalEventCalculus.g:1012:1: ruleLabeledExpression returns [EObject current=null] : ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( ( (lv_name_1_0= ruleLabelType ) ) otherlv_2= ':' )? ( (lv_expr_3_0= ruleExpression ) ) otherlv_4= '.' ) ;
     public final EObject ruleLabeledExpression() throws RecognitionException {
         EObject current = null;
 
+        Token otherlv_2=null;
+        Token otherlv_4=null;
         EObject lv_annotations_0_0 = null;
 
         Enumerator lv_name_1_0 = null;
@@ -2630,16 +2541,16 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         EObject lv_expr_3_0 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1203:6: ( ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( ( (lv_name_1_0= ruleLabelType ) ) ':' )? ( (lv_expr_3_0= ruleExpression ) ) '.' ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1204:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( ( (lv_name_1_0= ruleLabelType ) ) ':' )? ( (lv_expr_3_0= ruleExpression ) ) '.' )
+            // InternalEventCalculus.g:1015:28: ( ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( ( (lv_name_1_0= ruleLabelType ) ) otherlv_2= ':' )? ( (lv_expr_3_0= ruleExpression ) ) otherlv_4= '.' ) )
+            // InternalEventCalculus.g:1016:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( ( (lv_name_1_0= ruleLabelType ) ) otherlv_2= ':' )? ( (lv_expr_3_0= ruleExpression ) ) otherlv_4= '.' )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1204:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( ( (lv_name_1_0= ruleLabelType ) ) ':' )? ( (lv_expr_3_0= ruleExpression ) ) '.' )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1204:2: ( (lv_annotations_0_0= ruleAnnotation ) )* ( ( (lv_name_1_0= ruleLabelType ) ) ':' )? ( (lv_expr_3_0= ruleExpression ) ) '.'
+            // InternalEventCalculus.g:1016:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( ( (lv_name_1_0= ruleLabelType ) ) otherlv_2= ':' )? ( (lv_expr_3_0= ruleExpression ) ) otherlv_4= '.' )
+            // InternalEventCalculus.g:1016:2: ( (lv_annotations_0_0= ruleAnnotation ) )* ( ( (lv_name_1_0= ruleLabelType ) ) otherlv_2= ':' )? ( (lv_expr_3_0= ruleExpression ) ) otherlv_4= '.'
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1204:2: ( (lv_annotations_0_0= ruleAnnotation ) )*
+            // InternalEventCalculus.g:1016:2: ( (lv_annotations_0_0= ruleAnnotation ) )*
             loop20:
             do {
                 int alt20=2;
@@ -2652,34 +2563,29 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                 switch (alt20) {
             	case 1 :
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1205:1: (lv_annotations_0_0= ruleAnnotation )
+            	    // InternalEventCalculus.g:1017:1: (lv_annotations_0_0= ruleAnnotation )
             	    {
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1205:1: (lv_annotations_0_0= ruleAnnotation )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1206:3: lv_annotations_0_0= ruleAnnotation
+            	    // InternalEventCalculus.g:1017:1: (lv_annotations_0_0= ruleAnnotation )
+            	    // InternalEventCalculus.g:1018:3: lv_annotations_0_0= ruleAnnotation
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getLabeledExpressionAccess().getAnnotationsAnnotationParserRuleCall_0_0(), currentNode); 
+            	    	        newCompositeNode(grammarAccess.getLabeledExpressionAccess().getAnnotationsAnnotationParserRuleCall_0_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleAnnotation_in_ruleLabeledExpression2096);
+            	    pushFollow(FOLLOW_22);
             	    lv_annotations_0_0=ruleAnnotation();
-            	    _fsp--;
+
+            	    state._fsp--;
 
 
             	    	        if (current==null) {
-            	    	            current = factory.create(grammarAccess.getLabeledExpressionRule().getType().getClassifier());
-            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	    	            current = createModelElementForParent(grammarAccess.getLabeledExpressionRule());
             	    	        }
-            	    	        try {
-            	    	       		add(
-            	    	       			current, 
-            	    	       			"annotations",
-            	    	        		lv_annotations_0_0, 
-            	    	        		"Annotation", 
-            	    	        		currentNode);
-            	    	        } catch (ValueConverterException vce) {
-            	    				handleValueConverterException(vce);
-            	    	        }
-            	    	        currentNode = currentNode.getParent();
+            	           		add(
+            	           			current, 
+            	           			"annotations",
+            	            		lv_annotations_0_0, 
+            	            		"uk.ac.open.event.EventCalculus.Annotation");
+            	    	        afterParserOrEnumRuleCall();
             	    	    
 
             	    }
@@ -2693,7 +2599,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1228:3: ( ( (lv_name_1_0= ruleLabelType ) ) ':' )?
+            // InternalEventCalculus.g:1034:3: ( ( (lv_name_1_0= ruleLabelType ) ) otherlv_2= ':' )?
             int alt21=2;
             int LA21_0 = input.LA(1);
 
@@ -2702,37 +2608,32 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
             }
             switch (alt21) {
                 case 1 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1228:4: ( (lv_name_1_0= ruleLabelType ) ) ':'
+                    // InternalEventCalculus.g:1034:4: ( (lv_name_1_0= ruleLabelType ) ) otherlv_2= ':'
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1228:4: ( (lv_name_1_0= ruleLabelType ) )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1229:1: (lv_name_1_0= ruleLabelType )
+                    // InternalEventCalculus.g:1034:4: ( (lv_name_1_0= ruleLabelType ) )
+                    // InternalEventCalculus.g:1035:1: (lv_name_1_0= ruleLabelType )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1229:1: (lv_name_1_0= ruleLabelType )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1230:3: lv_name_1_0= ruleLabelType
+                    // InternalEventCalculus.g:1035:1: (lv_name_1_0= ruleLabelType )
+                    // InternalEventCalculus.g:1036:3: lv_name_1_0= ruleLabelType
                     {
                      
-                    	        currentNode=createCompositeNode(grammarAccess.getLabeledExpressionAccess().getNameLabelTypeEnumRuleCall_1_0_0(), currentNode); 
+                    	        newCompositeNode(grammarAccess.getLabeledExpressionAccess().getNameLabelTypeEnumRuleCall_1_0_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleLabelType_in_ruleLabeledExpression2119);
+                    pushFollow(FOLLOW_23);
                     lv_name_1_0=ruleLabelType();
-                    _fsp--;
+
+                    state._fsp--;
 
 
                     	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getLabeledExpressionRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode.getParent(), current);
+                    	            current = createModelElementForParent(grammarAccess.getLabeledExpressionRule());
                     	        }
-                    	        try {
-                    	       		set(
-                    	       			current, 
-                    	       			"name",
-                    	        		lv_name_1_0, 
-                    	        		"LabelType", 
-                    	        		currentNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	        currentNode = currentNode.getParent();
+                           		set(
+                           			current, 
+                           			"name",
+                            		lv_name_1_0, 
+                            		"uk.ac.open.event.EventCalculus.LabelType");
+                    	        afterParserOrEnumRuleCall();
                     	    
 
                     }
@@ -2740,9 +2641,9 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    match(input,18,FOLLOW_18_in_ruleLabeledExpression2129); 
+                    otherlv_2=(Token)match(input,18,FOLLOW_22); 
 
-                            createLeafNode(grammarAccess.getLabeledExpressionAccess().getColonKeyword_1_1(), null); 
+                        	newLeafNode(otherlv_2, grammarAccess.getLabeledExpressionAccess().getColonKeyword_1_1());
                         
 
                     }
@@ -2750,35 +2651,30 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1256:3: ( (lv_expr_3_0= ruleExpression ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1257:1: (lv_expr_3_0= ruleExpression )
+            // InternalEventCalculus.g:1056:3: ( (lv_expr_3_0= ruleExpression ) )
+            // InternalEventCalculus.g:1057:1: (lv_expr_3_0= ruleExpression )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1257:1: (lv_expr_3_0= ruleExpression )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1258:3: lv_expr_3_0= ruleExpression
+            // InternalEventCalculus.g:1057:1: (lv_expr_3_0= ruleExpression )
+            // InternalEventCalculus.g:1058:3: lv_expr_3_0= ruleExpression
             {
              
-            	        currentNode=createCompositeNode(grammarAccess.getLabeledExpressionAccess().getExprExpressionParserRuleCall_2_0(), currentNode); 
+            	        newCompositeNode(grammarAccess.getLabeledExpressionAccess().getExprExpressionParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleExpression_in_ruleLabeledExpression2152);
+            pushFollow(FOLLOW_24);
             lv_expr_3_0=ruleExpression();
-            _fsp--;
+
+            state._fsp--;
 
 
             	        if (current==null) {
-            	            current = factory.create(grammarAccess.getLabeledExpressionRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	            current = createModelElementForParent(grammarAccess.getLabeledExpressionRule());
             	        }
-            	        try {
-            	       		set(
-            	       			current, 
-            	       			"expr",
-            	        		lv_expr_3_0, 
-            	        		"Expression", 
-            	        		currentNode);
-            	        } catch (ValueConverterException vce) {
-            				handleValueConverterException(vce);
-            	        }
-            	        currentNode = currentNode.getParent();
+                   		set(
+                   			current, 
+                   			"expr",
+                    		lv_expr_3_0, 
+                    		"uk.ac.open.event.EventCalculus.Expression");
+            	        afterParserOrEnumRuleCall();
             	    
 
             }
@@ -2786,9 +2682,9 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,26,FOLLOW_26_in_ruleLabeledExpression2162); 
+            otherlv_4=(Token)match(input,26,FOLLOW_2); 
 
-                    createLeafNode(grammarAccess.getLabeledExpressionAccess().getFullStopKeyword_3(), null); 
+                	newLeafNode(otherlv_4, grammarAccess.getLabeledExpressionAccess().getFullStopKeyword_3());
                 
 
             }
@@ -2796,9 +2692,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -2809,11 +2703,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleLabeledExpression
+    // $ANTLR end "ruleLabeledExpression"
 
 
-    // $ANTLR start entryRuleSortDefinition
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1292:1: entryRuleSortDefinition returns [EObject current=null] : iv_ruleSortDefinition= ruleSortDefinition EOF ;
+    // $ANTLR start "entryRuleSortDefinition"
+    // InternalEventCalculus.g:1086:1: entryRuleSortDefinition returns [EObject current=null] : iv_ruleSortDefinition= ruleSortDefinition EOF ;
     public final EObject entryRuleSortDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -2821,16 +2715,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1293:2: (iv_ruleSortDefinition= ruleSortDefinition EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1294:2: iv_ruleSortDefinition= ruleSortDefinition EOF
+            // InternalEventCalculus.g:1087:2: (iv_ruleSortDefinition= ruleSortDefinition EOF )
+            // InternalEventCalculus.g:1088:2: iv_ruleSortDefinition= ruleSortDefinition EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getSortDefinitionRule(), currentNode); 
-            pushFollow(FOLLOW_ruleSortDefinition_in_entryRuleSortDefinition2198);
+             newCompositeNode(grammarAccess.getSortDefinitionRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleSortDefinition=ruleSortDefinition();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleSortDefinition; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSortDefinition2208); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -2844,14 +2739,16 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleSortDefinition
+    // $ANTLR end "entryRuleSortDefinition"
 
 
-    // $ANTLR start ruleSortDefinition
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1301:1: ruleSortDefinition returns [EObject current=null] : ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( ( RULE_ID ) ) ( (lv_definitions_2_0= ruleDefinition ) ) ( ',' ( (lv_definitions_4_0= ruleDefinition ) ) )* ) ;
+    // $ANTLR start "ruleSortDefinition"
+    // InternalEventCalculus.g:1095:1: ruleSortDefinition returns [EObject current=null] : ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( (otherlv_1= RULE_ID ) ) ( (lv_definitions_2_0= ruleDefinition ) ) (otherlv_3= ',' ( (lv_definitions_4_0= ruleDefinition ) ) )* ) ;
     public final EObject ruleSortDefinition() throws RecognitionException {
         EObject current = null;
 
+        Token otherlv_1=null;
+        Token otherlv_3=null;
         EObject lv_annotations_0_0 = null;
 
         EObject lv_definitions_2_0 = null;
@@ -2859,16 +2756,16 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         EObject lv_definitions_4_0 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1306:6: ( ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( ( RULE_ID ) ) ( (lv_definitions_2_0= ruleDefinition ) ) ( ',' ( (lv_definitions_4_0= ruleDefinition ) ) )* ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1307:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( ( RULE_ID ) ) ( (lv_definitions_2_0= ruleDefinition ) ) ( ',' ( (lv_definitions_4_0= ruleDefinition ) ) )* )
+            // InternalEventCalculus.g:1098:28: ( ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( (otherlv_1= RULE_ID ) ) ( (lv_definitions_2_0= ruleDefinition ) ) (otherlv_3= ',' ( (lv_definitions_4_0= ruleDefinition ) ) )* ) )
+            // InternalEventCalculus.g:1099:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( (otherlv_1= RULE_ID ) ) ( (lv_definitions_2_0= ruleDefinition ) ) (otherlv_3= ',' ( (lv_definitions_4_0= ruleDefinition ) ) )* )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1307:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( ( RULE_ID ) ) ( (lv_definitions_2_0= ruleDefinition ) ) ( ',' ( (lv_definitions_4_0= ruleDefinition ) ) )* )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1307:2: ( (lv_annotations_0_0= ruleAnnotation ) )* ( ( RULE_ID ) ) ( (lv_definitions_2_0= ruleDefinition ) ) ( ',' ( (lv_definitions_4_0= ruleDefinition ) ) )*
+            // InternalEventCalculus.g:1099:1: ( ( (lv_annotations_0_0= ruleAnnotation ) )* ( (otherlv_1= RULE_ID ) ) ( (lv_definitions_2_0= ruleDefinition ) ) (otherlv_3= ',' ( (lv_definitions_4_0= ruleDefinition ) ) )* )
+            // InternalEventCalculus.g:1099:2: ( (lv_annotations_0_0= ruleAnnotation ) )* ( (otherlv_1= RULE_ID ) ) ( (lv_definitions_2_0= ruleDefinition ) ) (otherlv_3= ',' ( (lv_definitions_4_0= ruleDefinition ) ) )*
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1307:2: ( (lv_annotations_0_0= ruleAnnotation ) )*
+            // InternalEventCalculus.g:1099:2: ( (lv_annotations_0_0= ruleAnnotation ) )*
             loop22:
             do {
                 int alt22=2;
@@ -2881,34 +2778,29 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                 switch (alt22) {
             	case 1 :
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1308:1: (lv_annotations_0_0= ruleAnnotation )
+            	    // InternalEventCalculus.g:1100:1: (lv_annotations_0_0= ruleAnnotation )
             	    {
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1308:1: (lv_annotations_0_0= ruleAnnotation )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1309:3: lv_annotations_0_0= ruleAnnotation
+            	    // InternalEventCalculus.g:1100:1: (lv_annotations_0_0= ruleAnnotation )
+            	    // InternalEventCalculus.g:1101:3: lv_annotations_0_0= ruleAnnotation
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getSortDefinitionAccess().getAnnotationsAnnotationParserRuleCall_0_0(), currentNode); 
+            	    	        newCompositeNode(grammarAccess.getSortDefinitionAccess().getAnnotationsAnnotationParserRuleCall_0_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleAnnotation_in_ruleSortDefinition2254);
+            	    pushFollow(FOLLOW_25);
             	    lv_annotations_0_0=ruleAnnotation();
-            	    _fsp--;
+
+            	    state._fsp--;
 
 
             	    	        if (current==null) {
-            	    	            current = factory.create(grammarAccess.getSortDefinitionRule().getType().getClassifier());
-            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	    	            current = createModelElementForParent(grammarAccess.getSortDefinitionRule());
             	    	        }
-            	    	        try {
-            	    	       		add(
-            	    	       			current, 
-            	    	       			"annotations",
-            	    	        		lv_annotations_0_0, 
-            	    	        		"Annotation", 
-            	    	        		currentNode);
-            	    	        } catch (ValueConverterException vce) {
-            	    				handleValueConverterException(vce);
-            	    	        }
-            	    	        currentNode = currentNode.getParent();
+            	           		add(
+            	           			current, 
+            	           			"annotations",
+            	            		lv_annotations_0_0, 
+            	            		"uk.ac.open.event.EventCalculus.Annotation");
+            	    	        afterParserOrEnumRuleCall();
             	    	    
 
             	    }
@@ -2922,21 +2814,20 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1331:3: ( ( RULE_ID ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1332:1: ( RULE_ID )
+            // InternalEventCalculus.g:1117:3: ( (otherlv_1= RULE_ID ) )
+            // InternalEventCalculus.g:1118:1: (otherlv_1= RULE_ID )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1332:1: ( RULE_ID )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1333:3: RULE_ID
+            // InternalEventCalculus.g:1118:1: (otherlv_1= RULE_ID )
+            // InternalEventCalculus.g:1119:3: otherlv_1= RULE_ID
             {
 
             			if (current==null) {
-            	            current = factory.create(grammarAccess.getSortDefinitionRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
+            	            current = createModelElement(grammarAccess.getSortDefinitionRule());
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSortDefinition2273); 
+            otherlv_1=(Token)match(input,RULE_ID,FOLLOW_11); 
 
-            		createLeafNode(grammarAccess.getSortDefinitionAccess().getSortDefSortCrossReference_1_0(), "sort"); 
+            		newLeafNode(otherlv_1, grammarAccess.getSortDefinitionAccess().getSortDefSortCrossReference_1_0()); 
             	
 
             }
@@ -2944,35 +2835,30 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1345:2: ( (lv_definitions_2_0= ruleDefinition ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1346:1: (lv_definitions_2_0= ruleDefinition )
+            // InternalEventCalculus.g:1130:2: ( (lv_definitions_2_0= ruleDefinition ) )
+            // InternalEventCalculus.g:1131:1: (lv_definitions_2_0= ruleDefinition )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1346:1: (lv_definitions_2_0= ruleDefinition )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1347:3: lv_definitions_2_0= ruleDefinition
+            // InternalEventCalculus.g:1131:1: (lv_definitions_2_0= ruleDefinition )
+            // InternalEventCalculus.g:1132:3: lv_definitions_2_0= ruleDefinition
             {
              
-            	        currentNode=createCompositeNode(grammarAccess.getSortDefinitionAccess().getDefinitionsDefinitionParserRuleCall_2_0(), currentNode); 
+            	        newCompositeNode(grammarAccess.getSortDefinitionAccess().getDefinitionsDefinitionParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleDefinition_in_ruleSortDefinition2294);
+            pushFollow(FOLLOW_19);
             lv_definitions_2_0=ruleDefinition();
-            _fsp--;
+
+            state._fsp--;
 
 
             	        if (current==null) {
-            	            current = factory.create(grammarAccess.getSortDefinitionRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	            current = createModelElementForParent(grammarAccess.getSortDefinitionRule());
             	        }
-            	        try {
-            	       		add(
-            	       			current, 
-            	       			"definitions",
-            	        		lv_definitions_2_0, 
-            	        		"Definition", 
-            	        		currentNode);
-            	        } catch (ValueConverterException vce) {
-            				handleValueConverterException(vce);
-            	        }
-            	        currentNode = currentNode.getParent();
+                   		add(
+                   			current, 
+                   			"definitions",
+                    		lv_definitions_2_0, 
+                    		"uk.ac.open.event.EventCalculus.Definition");
+            	        afterParserOrEnumRuleCall();
             	    
 
             }
@@ -2980,7 +2866,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1369:2: ( ',' ( (lv_definitions_4_0= ruleDefinition ) ) )*
+            // InternalEventCalculus.g:1148:2: (otherlv_3= ',' ( (lv_definitions_4_0= ruleDefinition ) ) )*
             loop23:
             do {
                 int alt23=2;
@@ -2993,41 +2879,36 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                 switch (alt23) {
             	case 1 :
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1369:4: ',' ( (lv_definitions_4_0= ruleDefinition ) )
+            	    // InternalEventCalculus.g:1148:4: otherlv_3= ',' ( (lv_definitions_4_0= ruleDefinition ) )
             	    {
-            	    match(input,23,FOLLOW_23_in_ruleSortDefinition2305); 
+            	    otherlv_3=(Token)match(input,23,FOLLOW_11); 
 
-            	            createLeafNode(grammarAccess.getSortDefinitionAccess().getCommaKeyword_3_0(), null); 
+            	        	newLeafNode(otherlv_3, grammarAccess.getSortDefinitionAccess().getCommaKeyword_3_0());
             	        
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1373:1: ( (lv_definitions_4_0= ruleDefinition ) )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1374:1: (lv_definitions_4_0= ruleDefinition )
+            	    // InternalEventCalculus.g:1152:1: ( (lv_definitions_4_0= ruleDefinition ) )
+            	    // InternalEventCalculus.g:1153:1: (lv_definitions_4_0= ruleDefinition )
             	    {
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1374:1: (lv_definitions_4_0= ruleDefinition )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1375:3: lv_definitions_4_0= ruleDefinition
+            	    // InternalEventCalculus.g:1153:1: (lv_definitions_4_0= ruleDefinition )
+            	    // InternalEventCalculus.g:1154:3: lv_definitions_4_0= ruleDefinition
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getSortDefinitionAccess().getDefinitionsDefinitionParserRuleCall_3_1_0(), currentNode); 
+            	    	        newCompositeNode(grammarAccess.getSortDefinitionAccess().getDefinitionsDefinitionParserRuleCall_3_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleDefinition_in_ruleSortDefinition2326);
+            	    pushFollow(FOLLOW_19);
             	    lv_definitions_4_0=ruleDefinition();
-            	    _fsp--;
+
+            	    state._fsp--;
 
 
             	    	        if (current==null) {
-            	    	            current = factory.create(grammarAccess.getSortDefinitionRule().getType().getClassifier());
-            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	    	            current = createModelElementForParent(grammarAccess.getSortDefinitionRule());
             	    	        }
-            	    	        try {
-            	    	       		add(
-            	    	       			current, 
-            	    	       			"definitions",
-            	    	        		lv_definitions_4_0, 
-            	    	        		"Definition", 
-            	    	        		currentNode);
-            	    	        } catch (ValueConverterException vce) {
-            	    				handleValueConverterException(vce);
-            	    	        }
-            	    	        currentNode = currentNode.getParent();
+            	           		add(
+            	           			current, 
+            	           			"definitions",
+            	            		lv_definitions_4_0, 
+            	            		"uk.ac.open.event.EventCalculus.Definition");
+            	    	        afterParserOrEnumRuleCall();
             	    	    
 
             	    }
@@ -3050,9 +2931,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -3063,11 +2942,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleSortDefinition
+    // $ANTLR end "ruleSortDefinition"
 
 
-    // $ANTLR start entryRuleDefinition
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1405:1: entryRuleDefinition returns [EObject current=null] : iv_ruleDefinition= ruleDefinition EOF ;
+    // $ANTLR start "entryRuleDefinition"
+    // InternalEventCalculus.g:1178:1: entryRuleDefinition returns [EObject current=null] : iv_ruleDefinition= ruleDefinition EOF ;
     public final EObject entryRuleDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -3075,16 +2954,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1406:2: (iv_ruleDefinition= ruleDefinition EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1407:2: iv_ruleDefinition= ruleDefinition EOF
+            // InternalEventCalculus.g:1179:2: (iv_ruleDefinition= ruleDefinition EOF )
+            // InternalEventCalculus.g:1180:2: iv_ruleDefinition= ruleDefinition EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getDefinitionRule(), currentNode); 
-            pushFollow(FOLLOW_ruleDefinition_in_entryRuleDefinition2364);
+             newCompositeNode(grammarAccess.getDefinitionRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleDefinition=ruleDefinition();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleDefinition; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDefinition2374); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -3098,51 +2978,51 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleDefinition
+    // $ANTLR end "entryRuleDefinition"
 
 
-    // $ANTLR start ruleDefinition
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1414:1: ruleDefinition returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ( '(' ( ( RULE_ID ) )? ( ',' ( ( RULE_ID ) ) )* ')' )? ( ':' ( ( RULE_ID ) ) )? ) ;
+    // $ANTLR start "ruleDefinition"
+    // InternalEventCalculus.g:1187:1: ruleDefinition returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) (otherlv_1= '(' ( (otherlv_2= RULE_ID ) )? (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )* otherlv_5= ')' )? (otherlv_6= ':' ( (otherlv_7= RULE_ID ) ) )? ) ;
     public final EObject ruleDefinition() throws RecognitionException {
         EObject current = null;
 
         Token lv_name_0_0=null;
+        Token otherlv_1=null;
+        Token otherlv_2=null;
+        Token otherlv_3=null;
+        Token otherlv_4=null;
+        Token otherlv_5=null;
+        Token otherlv_6=null;
+        Token otherlv_7=null;
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1419:6: ( ( ( (lv_name_0_0= RULE_ID ) ) ( '(' ( ( RULE_ID ) )? ( ',' ( ( RULE_ID ) ) )* ')' )? ( ':' ( ( RULE_ID ) ) )? ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1420:1: ( ( (lv_name_0_0= RULE_ID ) ) ( '(' ( ( RULE_ID ) )? ( ',' ( ( RULE_ID ) ) )* ')' )? ( ':' ( ( RULE_ID ) ) )? )
+            // InternalEventCalculus.g:1190:28: ( ( ( (lv_name_0_0= RULE_ID ) ) (otherlv_1= '(' ( (otherlv_2= RULE_ID ) )? (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )* otherlv_5= ')' )? (otherlv_6= ':' ( (otherlv_7= RULE_ID ) ) )? ) )
+            // InternalEventCalculus.g:1191:1: ( ( (lv_name_0_0= RULE_ID ) ) (otherlv_1= '(' ( (otherlv_2= RULE_ID ) )? (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )* otherlv_5= ')' )? (otherlv_6= ':' ( (otherlv_7= RULE_ID ) ) )? )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1420:1: ( ( (lv_name_0_0= RULE_ID ) ) ( '(' ( ( RULE_ID ) )? ( ',' ( ( RULE_ID ) ) )* ')' )? ( ':' ( ( RULE_ID ) ) )? )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1420:2: ( (lv_name_0_0= RULE_ID ) ) ( '(' ( ( RULE_ID ) )? ( ',' ( ( RULE_ID ) ) )* ')' )? ( ':' ( ( RULE_ID ) ) )?
+            // InternalEventCalculus.g:1191:1: ( ( (lv_name_0_0= RULE_ID ) ) (otherlv_1= '(' ( (otherlv_2= RULE_ID ) )? (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )* otherlv_5= ')' )? (otherlv_6= ':' ( (otherlv_7= RULE_ID ) ) )? )
+            // InternalEventCalculus.g:1191:2: ( (lv_name_0_0= RULE_ID ) ) (otherlv_1= '(' ( (otherlv_2= RULE_ID ) )? (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )* otherlv_5= ')' )? (otherlv_6= ':' ( (otherlv_7= RULE_ID ) ) )?
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1420:2: ( (lv_name_0_0= RULE_ID ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1421:1: (lv_name_0_0= RULE_ID )
+            // InternalEventCalculus.g:1191:2: ( (lv_name_0_0= RULE_ID ) )
+            // InternalEventCalculus.g:1192:1: (lv_name_0_0= RULE_ID )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1421:1: (lv_name_0_0= RULE_ID )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1422:3: lv_name_0_0= RULE_ID
+            // InternalEventCalculus.g:1192:1: (lv_name_0_0= RULE_ID )
+            // InternalEventCalculus.g:1193:3: lv_name_0_0= RULE_ID
             {
-            lv_name_0_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDefinition2416); 
+            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_26); 
 
-            			createLeafNode(grammarAccess.getDefinitionAccess().getNameIDTerminalRuleCall_0_0(), "name"); 
+            			newLeafNode(lv_name_0_0, grammarAccess.getDefinitionAccess().getNameIDTerminalRuleCall_0_0()); 
             		
 
             	        if (current==null) {
-            	            current = factory.create(grammarAccess.getDefinitionRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
+            	            current = createModelElement(grammarAccess.getDefinitionRule());
             	        }
-            	        try {
-            	       		set(
-            	       			current, 
-            	       			"name",
-            	        		lv_name_0_0, 
-            	        		"ID", 
-            	        		lastConsumedNode);
-            	        } catch (ValueConverterException vce) {
-            				handleValueConverterException(vce);
-            	        }
+                   		setWithLastConsumed(
+                   			current, 
+                   			"name",
+                    		lv_name_0_0, 
+                    		"uk.ac.open.event.EventCalculus.ID");
             	    
 
             }
@@ -3150,7 +3030,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1444:2: ( '(' ( ( RULE_ID ) )? ( ',' ( ( RULE_ID ) ) )* ')' )?
+            // InternalEventCalculus.g:1209:2: (otherlv_1= '(' ( (otherlv_2= RULE_ID ) )? (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )* otherlv_5= ')' )?
             int alt26=2;
             int LA26_0 = input.LA(1);
 
@@ -3184,13 +3064,13 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
             }
             switch (alt26) {
                 case 1 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1444:4: '(' ( ( RULE_ID ) )? ( ',' ( ( RULE_ID ) ) )* ')'
+                    // InternalEventCalculus.g:1209:4: otherlv_1= '(' ( (otherlv_2= RULE_ID ) )? (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )* otherlv_5= ')'
                     {
-                    match(input,27,FOLLOW_27_in_ruleDefinition2432); 
+                    otherlv_1=(Token)match(input,27,FOLLOW_27); 
 
-                            createLeafNode(grammarAccess.getDefinitionAccess().getLeftParenthesisKeyword_1_0(), null); 
+                        	newLeafNode(otherlv_1, grammarAccess.getDefinitionAccess().getLeftParenthesisKeyword_1_0());
                         
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1448:1: ( ( RULE_ID ) )?
+                    // InternalEventCalculus.g:1213:1: ( (otherlv_2= RULE_ID ) )?
                     int alt24=2;
                     int LA24_0 = input.LA(1);
 
@@ -3199,20 +3079,19 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt24) {
                         case 1 :
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1449:1: ( RULE_ID )
+                            // InternalEventCalculus.g:1214:1: (otherlv_2= RULE_ID )
                             {
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1449:1: ( RULE_ID )
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1450:3: RULE_ID
+                            // InternalEventCalculus.g:1214:1: (otherlv_2= RULE_ID )
+                            // InternalEventCalculus.g:1215:3: otherlv_2= RULE_ID
                             {
 
                             			if (current==null) {
-                            	            current = factory.create(grammarAccess.getDefinitionRule().getType().getClassifier());
-                            	            associateNodeWithAstElement(currentNode, current);
+                            	            current = createModelElement(grammarAccess.getDefinitionRule());
                             	        }
                                     
-                            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDefinition2450); 
+                            otherlv_2=(Token)match(input,RULE_ID,FOLLOW_28); 
 
-                            		createLeafNode(grammarAccess.getDefinitionAccess().getArgsDefinesCrossReference_1_1_0(), "args"); 
+                            		newLeafNode(otherlv_2, grammarAccess.getDefinitionAccess().getArgsDefinesCrossReference_1_1_0()); 
                             	
 
                             }
@@ -3223,7 +3102,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1462:3: ( ',' ( ( RULE_ID ) ) )*
+                    // InternalEventCalculus.g:1226:3: (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )*
                     loop25:
                     do {
                         int alt25=2;
@@ -3236,27 +3115,26 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                         switch (alt25) {
                     	case 1 :
-                    	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1462:5: ',' ( ( RULE_ID ) )
+                    	    // InternalEventCalculus.g:1226:5: otherlv_3= ',' ( (otherlv_4= RULE_ID ) )
                     	    {
-                    	    match(input,23,FOLLOW_23_in_ruleDefinition2462); 
+                    	    otherlv_3=(Token)match(input,23,FOLLOW_11); 
 
-                    	            createLeafNode(grammarAccess.getDefinitionAccess().getCommaKeyword_1_2_0(), null); 
+                    	        	newLeafNode(otherlv_3, grammarAccess.getDefinitionAccess().getCommaKeyword_1_2_0());
                     	        
-                    	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1466:1: ( ( RULE_ID ) )
-                    	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1467:1: ( RULE_ID )
+                    	    // InternalEventCalculus.g:1230:1: ( (otherlv_4= RULE_ID ) )
+                    	    // InternalEventCalculus.g:1231:1: (otherlv_4= RULE_ID )
                     	    {
-                    	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1467:1: ( RULE_ID )
-                    	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1468:3: RULE_ID
+                    	    // InternalEventCalculus.g:1231:1: (otherlv_4= RULE_ID )
+                    	    // InternalEventCalculus.g:1232:3: otherlv_4= RULE_ID
                     	    {
 
                     	    			if (current==null) {
-                    	    	            current = factory.create(grammarAccess.getDefinitionRule().getType().getClassifier());
-                    	    	            associateNodeWithAstElement(currentNode, current);
+                    	    	            current = createModelElement(grammarAccess.getDefinitionRule());
                     	    	        }
                     	            
-                    	    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDefinition2480); 
+                    	    otherlv_4=(Token)match(input,RULE_ID,FOLLOW_28); 
 
-                    	    		createLeafNode(grammarAccess.getDefinitionAccess().getArgsDefinesCrossReference_1_2_1_0(), "args"); 
+                    	    		newLeafNode(otherlv_4, grammarAccess.getDefinitionAccess().getArgsDefinesCrossReference_1_2_1_0()); 
                     	    	
 
                     	    }
@@ -3273,9 +3151,9 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    match(input,28,FOLLOW_28_in_ruleDefinition2492); 
+                    otherlv_5=(Token)match(input,28,FOLLOW_12); 
 
-                            createLeafNode(grammarAccess.getDefinitionAccess().getRightParenthesisKeyword_1_3(), null); 
+                        	newLeafNode(otherlv_5, grammarAccess.getDefinitionAccess().getRightParenthesisKeyword_1_3());
                         
 
                     }
@@ -3283,7 +3161,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1484:3: ( ':' ( ( RULE_ID ) ) )?
+            // InternalEventCalculus.g:1247:3: (otherlv_6= ':' ( (otherlv_7= RULE_ID ) ) )?
             int alt27=2;
             int LA27_0 = input.LA(1);
 
@@ -3292,27 +3170,26 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
             }
             switch (alt27) {
                 case 1 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1484:5: ':' ( ( RULE_ID ) )
+                    // InternalEventCalculus.g:1247:5: otherlv_6= ':' ( (otherlv_7= RULE_ID ) )
                     {
-                    match(input,18,FOLLOW_18_in_ruleDefinition2505); 
+                    otherlv_6=(Token)match(input,18,FOLLOW_11); 
 
-                            createLeafNode(grammarAccess.getDefinitionAccess().getColonKeyword_2_0(), null); 
+                        	newLeafNode(otherlv_6, grammarAccess.getDefinitionAccess().getColonKeyword_2_0());
                         
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1488:1: ( ( RULE_ID ) )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1489:1: ( RULE_ID )
+                    // InternalEventCalculus.g:1251:1: ( (otherlv_7= RULE_ID ) )
+                    // InternalEventCalculus.g:1252:1: (otherlv_7= RULE_ID )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1489:1: ( RULE_ID )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1490:3: RULE_ID
+                    // InternalEventCalculus.g:1252:1: (otherlv_7= RULE_ID )
+                    // InternalEventCalculus.g:1253:3: otherlv_7= RULE_ID
                     {
 
                     			if (current==null) {
-                    	            current = factory.create(grammarAccess.getDefinitionRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
+                    	            current = createModelElement(grammarAccess.getDefinitionRule());
                     	        }
                             
-                    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDefinition2523); 
+                    otherlv_7=(Token)match(input,RULE_ID,FOLLOW_2); 
 
-                    		createLeafNode(grammarAccess.getDefinitionAccess().getReturnDefinesCrossReference_2_1_0(), "return"); 
+                    		newLeafNode(otherlv_7, grammarAccess.getDefinitionAccess().getReturnDefinesCrossReference_2_1_0()); 
                     	
 
                     }
@@ -3332,9 +3209,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -3345,11 +3220,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleDefinition
+    // $ANTLR end "ruleDefinition"
 
 
-    // $ANTLR start entryRuleExpression
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1510:1: entryRuleExpression returns [EObject current=null] : iv_ruleExpression= ruleExpression EOF ;
+    // $ANTLR start "entryRuleExpression"
+    // InternalEventCalculus.g:1272:1: entryRuleExpression returns [EObject current=null] : iv_ruleExpression= ruleExpression EOF ;
     public final EObject entryRuleExpression() throws RecognitionException {
         EObject current = null;
 
@@ -3357,16 +3232,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1511:2: (iv_ruleExpression= ruleExpression EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1512:2: iv_ruleExpression= ruleExpression EOF
+            // InternalEventCalculus.g:1273:2: (iv_ruleExpression= ruleExpression EOF )
+            // InternalEventCalculus.g:1274:2: iv_ruleExpression= ruleExpression EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getExpressionRule(), currentNode); 
-            pushFollow(FOLLOW_ruleExpression_in_entryRuleExpression2561);
+             newCompositeNode(grammarAccess.getExpressionRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleExpression=ruleExpression();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleExpression2571); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -3380,11 +3256,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleExpression
+    // $ANTLR end "entryRuleExpression"
 
 
-    // $ANTLR start ruleExpression
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1519:1: ruleExpression returns [EObject current=null] : ( ( (lv_expr_0_0= ruleAssignmentOp ) ) | ( ( (lv_qualifiers_1_0= ruleQualifier ) ) ( (lv_expr_2_0= ruleExpression ) ) ) ) ;
+    // $ANTLR start "ruleExpression"
+    // InternalEventCalculus.g:1281:1: ruleExpression returns [EObject current=null] : ( ( (lv_expr_0_0= ruleAssignmentOp ) ) | ( ( (lv_qualifiers_1_0= ruleQualifier ) ) ( (lv_expr_2_0= ruleExpression ) ) ) ) ;
     public final EObject ruleExpression() throws RecognitionException {
         EObject current = null;
 
@@ -3395,28 +3271,28 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         EObject lv_expr_2_0 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1524:6: ( ( ( (lv_expr_0_0= ruleAssignmentOp ) ) | ( ( (lv_qualifiers_1_0= ruleQualifier ) ) ( (lv_expr_2_0= ruleExpression ) ) ) ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1525:1: ( ( (lv_expr_0_0= ruleAssignmentOp ) ) | ( ( (lv_qualifiers_1_0= ruleQualifier ) ) ( (lv_expr_2_0= ruleExpression ) ) ) )
+            // InternalEventCalculus.g:1284:28: ( ( ( (lv_expr_0_0= ruleAssignmentOp ) ) | ( ( (lv_qualifiers_1_0= ruleQualifier ) ) ( (lv_expr_2_0= ruleExpression ) ) ) ) )
+            // InternalEventCalculus.g:1285:1: ( ( (lv_expr_0_0= ruleAssignmentOp ) ) | ( ( (lv_qualifiers_1_0= ruleQualifier ) ) ( (lv_expr_2_0= ruleExpression ) ) ) )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1525:1: ( ( (lv_expr_0_0= ruleAssignmentOp ) ) | ( ( (lv_qualifiers_1_0= ruleQualifier ) ) ( (lv_expr_2_0= ruleExpression ) ) ) )
+            // InternalEventCalculus.g:1285:1: ( ( (lv_expr_0_0= ruleAssignmentOp ) ) | ( ( (lv_qualifiers_1_0= ruleQualifier ) ) ( (lv_expr_2_0= ruleExpression ) ) ) )
             int alt28=2;
             switch ( input.LA(1) ) {
             case 53:
                 {
                 int LA28_1 = input.LA(2);
 
-                if ( (LA28_1==29||LA28_1==31) ) {
-                    alt28=2;
-                }
-                else if ( ((LA28_1>=RULE_STRING && LA28_1<=RULE_BOOLEAN)||LA28_1==27||LA28_1==45) ) {
+                if ( ((LA28_1>=RULE_STRING && LA28_1<=RULE_BOOLEAN)||LA28_1==27||LA28_1==45) ) {
                     alt28=1;
+                }
+                else if ( (LA28_1==29||LA28_1==31) ) {
+                    alt28=2;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("1525:1: ( ( (lv_expr_0_0= ruleAssignmentOp ) ) | ( ( (lv_qualifiers_1_0= ruleQualifier ) ) ( (lv_expr_2_0= ruleExpression ) ) ) )", 28, 1, input);
+                        new NoViableAltException("", 28, 1, input);
 
                     throw nvae;
                 }
@@ -3440,44 +3316,39 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("1525:1: ( ( (lv_expr_0_0= ruleAssignmentOp ) ) | ( ( (lv_qualifiers_1_0= ruleQualifier ) ) ( (lv_expr_2_0= ruleExpression ) ) ) )", 28, 0, input);
+                    new NoViableAltException("", 28, 0, input);
 
                 throw nvae;
             }
 
             switch (alt28) {
                 case 1 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1525:2: ( (lv_expr_0_0= ruleAssignmentOp ) )
+                    // InternalEventCalculus.g:1285:2: ( (lv_expr_0_0= ruleAssignmentOp ) )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1525:2: ( (lv_expr_0_0= ruleAssignmentOp ) )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1526:1: (lv_expr_0_0= ruleAssignmentOp )
+                    // InternalEventCalculus.g:1285:2: ( (lv_expr_0_0= ruleAssignmentOp ) )
+                    // InternalEventCalculus.g:1286:1: (lv_expr_0_0= ruleAssignmentOp )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1526:1: (lv_expr_0_0= ruleAssignmentOp )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1527:3: lv_expr_0_0= ruleAssignmentOp
+                    // InternalEventCalculus.g:1286:1: (lv_expr_0_0= ruleAssignmentOp )
+                    // InternalEventCalculus.g:1287:3: lv_expr_0_0= ruleAssignmentOp
                     {
                      
-                    	        currentNode=createCompositeNode(grammarAccess.getExpressionAccess().getExprAssignmentOpParserRuleCall_0_0(), currentNode); 
+                    	        newCompositeNode(grammarAccess.getExpressionAccess().getExprAssignmentOpParserRuleCall_0_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleAssignmentOp_in_ruleExpression2617);
+                    pushFollow(FOLLOW_2);
                     lv_expr_0_0=ruleAssignmentOp();
-                    _fsp--;
+
+                    state._fsp--;
 
 
                     	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getExpressionRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode.getParent(), current);
+                    	            current = createModelElementForParent(grammarAccess.getExpressionRule());
                     	        }
-                    	        try {
-                    	       		set(
-                    	       			current, 
-                    	       			"expr",
-                    	        		lv_expr_0_0, 
-                    	        		"AssignmentOp", 
-                    	        		currentNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	        currentNode = currentNode.getParent();
+                           		set(
+                           			current, 
+                           			"expr",
+                            		lv_expr_0_0, 
+                            		"uk.ac.open.event.EventCalculus.AssignmentOp");
+                    	        afterParserOrEnumRuleCall();
                     	    
 
                     }
@@ -3489,40 +3360,35 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1550:6: ( ( (lv_qualifiers_1_0= ruleQualifier ) ) ( (lv_expr_2_0= ruleExpression ) ) )
+                    // InternalEventCalculus.g:1304:6: ( ( (lv_qualifiers_1_0= ruleQualifier ) ) ( (lv_expr_2_0= ruleExpression ) ) )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1550:6: ( ( (lv_qualifiers_1_0= ruleQualifier ) ) ( (lv_expr_2_0= ruleExpression ) ) )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1550:7: ( (lv_qualifiers_1_0= ruleQualifier ) ) ( (lv_expr_2_0= ruleExpression ) )
+                    // InternalEventCalculus.g:1304:6: ( ( (lv_qualifiers_1_0= ruleQualifier ) ) ( (lv_expr_2_0= ruleExpression ) ) )
+                    // InternalEventCalculus.g:1304:7: ( (lv_qualifiers_1_0= ruleQualifier ) ) ( (lv_expr_2_0= ruleExpression ) )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1550:7: ( (lv_qualifiers_1_0= ruleQualifier ) )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1551:1: (lv_qualifiers_1_0= ruleQualifier )
+                    // InternalEventCalculus.g:1304:7: ( (lv_qualifiers_1_0= ruleQualifier ) )
+                    // InternalEventCalculus.g:1305:1: (lv_qualifiers_1_0= ruleQualifier )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1551:1: (lv_qualifiers_1_0= ruleQualifier )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1552:3: lv_qualifiers_1_0= ruleQualifier
+                    // InternalEventCalculus.g:1305:1: (lv_qualifiers_1_0= ruleQualifier )
+                    // InternalEventCalculus.g:1306:3: lv_qualifiers_1_0= ruleQualifier
                     {
                      
-                    	        currentNode=createCompositeNode(grammarAccess.getExpressionAccess().getQualifiersQualifierParserRuleCall_1_0_0(), currentNode); 
+                    	        newCompositeNode(grammarAccess.getExpressionAccess().getQualifiersQualifierParserRuleCall_1_0_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleQualifier_in_ruleExpression2645);
+                    pushFollow(FOLLOW_22);
                     lv_qualifiers_1_0=ruleQualifier();
-                    _fsp--;
+
+                    state._fsp--;
 
 
                     	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getExpressionRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode.getParent(), current);
+                    	            current = createModelElementForParent(grammarAccess.getExpressionRule());
                     	        }
-                    	        try {
-                    	       		set(
-                    	       			current, 
-                    	       			"qualifiers",
-                    	        		lv_qualifiers_1_0, 
-                    	        		"Qualifier", 
-                    	        		currentNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	        currentNode = currentNode.getParent();
+                           		set(
+                           			current, 
+                           			"qualifiers",
+                            		lv_qualifiers_1_0, 
+                            		"uk.ac.open.event.EventCalculus.Qualifier");
+                    	        afterParserOrEnumRuleCall();
                     	    
 
                     }
@@ -3530,35 +3396,30 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1574:2: ( (lv_expr_2_0= ruleExpression ) )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1575:1: (lv_expr_2_0= ruleExpression )
+                    // InternalEventCalculus.g:1322:2: ( (lv_expr_2_0= ruleExpression ) )
+                    // InternalEventCalculus.g:1323:1: (lv_expr_2_0= ruleExpression )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1575:1: (lv_expr_2_0= ruleExpression )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1576:3: lv_expr_2_0= ruleExpression
+                    // InternalEventCalculus.g:1323:1: (lv_expr_2_0= ruleExpression )
+                    // InternalEventCalculus.g:1324:3: lv_expr_2_0= ruleExpression
                     {
                      
-                    	        currentNode=createCompositeNode(grammarAccess.getExpressionAccess().getExprExpressionParserRuleCall_1_1_0(), currentNode); 
+                    	        newCompositeNode(grammarAccess.getExpressionAccess().getExprExpressionParserRuleCall_1_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleExpression_in_ruleExpression2666);
+                    pushFollow(FOLLOW_2);
                     lv_expr_2_0=ruleExpression();
-                    _fsp--;
+
+                    state._fsp--;
 
 
                     	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getExpressionRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode.getParent(), current);
+                    	            current = createModelElementForParent(grammarAccess.getExpressionRule());
                     	        }
-                    	        try {
-                    	       		set(
-                    	       			current, 
-                    	       			"expr",
-                    	        		lv_expr_2_0, 
-                    	        		"Expression", 
-                    	        		currentNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	        currentNode = currentNode.getParent();
+                           		set(
+                           			current, 
+                           			"expr",
+                            		lv_expr_2_0, 
+                            		"uk.ac.open.event.EventCalculus.Expression");
+                    	        afterParserOrEnumRuleCall();
                     	    
 
                     }
@@ -3578,9 +3439,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -3591,11 +3450,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleExpression
+    // $ANTLR end "ruleExpression"
 
 
-    // $ANTLR start entryRuleQualifier
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1606:1: entryRuleQualifier returns [EObject current=null] : iv_ruleQualifier= ruleQualifier EOF ;
+    // $ANTLR start "entryRuleQualifier"
+    // InternalEventCalculus.g:1348:1: entryRuleQualifier returns [EObject current=null] : iv_ruleQualifier= ruleQualifier EOF ;
     public final EObject entryRuleQualifier() throws RecognitionException {
         EObject current = null;
 
@@ -3603,16 +3462,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1607:2: (iv_ruleQualifier= ruleQualifier EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1608:2: iv_ruleQualifier= ruleQualifier EOF
+            // InternalEventCalculus.g:1349:2: (iv_ruleQualifier= ruleQualifier EOF )
+            // InternalEventCalculus.g:1350:2: iv_ruleQualifier= ruleQualifier EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getQualifierRule(), currentNode); 
-            pushFollow(FOLLOW_ruleQualifier_in_entryRuleQualifier2703);
+             newCompositeNode(grammarAccess.getQualifierRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleQualifier=ruleQualifier();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleQualifier; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleQualifier2713); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -3626,11 +3486,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleQualifier
+    // $ANTLR end "entryRuleQualifier"
 
 
-    // $ANTLR start ruleQualifier
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1615:1: ruleQualifier returns [EObject current=null] : (this_Exists_0= ruleExists | this_Forall_1= ruleForall ) ;
+    // $ANTLR start "ruleQualifier"
+    // InternalEventCalculus.g:1357:1: ruleQualifier returns [EObject current=null] : (this_Exists_0= ruleExists | this_Forall_1= ruleForall ) ;
     public final EObject ruleQualifier() throws RecognitionException {
         EObject current = null;
 
@@ -3639,28 +3499,28 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         EObject this_Forall_1 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1620:6: ( (this_Exists_0= ruleExists | this_Forall_1= ruleForall ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1621:1: (this_Exists_0= ruleExists | this_Forall_1= ruleForall )
+            // InternalEventCalculus.g:1360:28: ( (this_Exists_0= ruleExists | this_Forall_1= ruleForall ) )
+            // InternalEventCalculus.g:1361:1: (this_Exists_0= ruleExists | this_Forall_1= ruleForall )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1621:1: (this_Exists_0= ruleExists | this_Forall_1= ruleForall )
+            // InternalEventCalculus.g:1361:1: (this_Exists_0= ruleExists | this_Forall_1= ruleForall )
             int alt29=2;
             switch ( input.LA(1) ) {
             case 53:
                 {
                 int LA29_1 = input.LA(2);
 
-                if ( (LA29_1==29) ) {
-                    alt29=1;
-                }
-                else if ( (LA29_1==31) ) {
+                if ( (LA29_1==31) ) {
                     alt29=2;
+                }
+                else if ( (LA29_1==29) ) {
+                    alt29=1;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("1621:1: (this_Exists_0= ruleExists | this_Forall_1= ruleForall )", 29, 1, input);
+                        new NoViableAltException("", 29, 1, input);
 
                     throw nvae;
                 }
@@ -3678,42 +3538,44 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("1621:1: (this_Exists_0= ruleExists | this_Forall_1= ruleForall )", 29, 0, input);
+                    new NoViableAltException("", 29, 0, input);
 
                 throw nvae;
             }
 
             switch (alt29) {
                 case 1 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1622:5: this_Exists_0= ruleExists
+                    // InternalEventCalculus.g:1362:5: this_Exists_0= ruleExists
                     {
                      
-                            currentNode=createCompositeNode(grammarAccess.getQualifierAccess().getExistsParserRuleCall_0(), currentNode); 
+                            newCompositeNode(grammarAccess.getQualifierAccess().getExistsParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleExists_in_ruleQualifier2760);
+                    pushFollow(FOLLOW_2);
                     this_Exists_0=ruleExists();
-                    _fsp--;
+
+                    state._fsp--;
 
                      
                             current = this_Exists_0; 
-                            currentNode = currentNode.getParent();
+                            afterParserOrEnumRuleCall();
                         
 
                     }
                     break;
                 case 2 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1632:5: this_Forall_1= ruleForall
+                    // InternalEventCalculus.g:1372:5: this_Forall_1= ruleForall
                     {
                      
-                            currentNode=createCompositeNode(grammarAccess.getQualifierAccess().getForallParserRuleCall_1(), currentNode); 
+                            newCompositeNode(grammarAccess.getQualifierAccess().getForallParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleForall_in_ruleQualifier2787);
+                    pushFollow(FOLLOW_2);
                     this_Forall_1=ruleForall();
-                    _fsp--;
+
+                    state._fsp--;
 
                      
                             current = this_Forall_1; 
-                            currentNode = currentNode.getParent();
+                            afterParserOrEnumRuleCall();
                         
 
                     }
@@ -3724,9 +3586,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -3737,11 +3597,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleQualifier
+    // $ANTLR end "ruleQualifier"
 
 
-    // $ANTLR start entryRuleParameters
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1648:1: entryRuleParameters returns [EObject current=null] : iv_ruleParameters= ruleParameters EOF ;
+    // $ANTLR start "entryRuleParameters"
+    // InternalEventCalculus.g:1388:1: entryRuleParameters returns [EObject current=null] : iv_ruleParameters= ruleParameters EOF ;
     public final EObject entryRuleParameters() throws RecognitionException {
         EObject current = null;
 
@@ -3749,16 +3609,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1649:2: (iv_ruleParameters= ruleParameters EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1650:2: iv_ruleParameters= ruleParameters EOF
+            // InternalEventCalculus.g:1389:2: (iv_ruleParameters= ruleParameters EOF )
+            // InternalEventCalculus.g:1390:2: iv_ruleParameters= ruleParameters EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getParametersRule(), currentNode); 
-            pushFollow(FOLLOW_ruleParameters_in_entryRuleParameters2822);
+             newCompositeNode(grammarAccess.getParametersRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleParameters=ruleParameters();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleParameters; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleParameters2832); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -3772,38 +3633,41 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleParameters
+    // $ANTLR end "entryRuleParameters"
 
 
-    // $ANTLR start ruleParameters
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1657:1: ruleParameters returns [EObject current=null] : ( ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )* ) ;
+    // $ANTLR start "ruleParameters"
+    // InternalEventCalculus.g:1397:1: ruleParameters returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= ',' ( (otherlv_2= RULE_ID ) ) )* ) ;
     public final EObject ruleParameters() throws RecognitionException {
         EObject current = null;
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+        Token otherlv_0=null;
+        Token otherlv_1=null;
+        Token otherlv_2=null;
+
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1662:6: ( ( ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )* ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1663:1: ( ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )* )
+            // InternalEventCalculus.g:1400:28: ( ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= ',' ( (otherlv_2= RULE_ID ) ) )* ) )
+            // InternalEventCalculus.g:1401:1: ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= ',' ( (otherlv_2= RULE_ID ) ) )* )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1663:1: ( ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )* )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1663:2: ( ( RULE_ID ) ) ( ',' ( ( RULE_ID ) ) )*
+            // InternalEventCalculus.g:1401:1: ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= ',' ( (otherlv_2= RULE_ID ) ) )* )
+            // InternalEventCalculus.g:1401:2: ( (otherlv_0= RULE_ID ) ) (otherlv_1= ',' ( (otherlv_2= RULE_ID ) ) )*
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1663:2: ( ( RULE_ID ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1664:1: ( RULE_ID )
+            // InternalEventCalculus.g:1401:2: ( (otherlv_0= RULE_ID ) )
+            // InternalEventCalculus.g:1402:1: (otherlv_0= RULE_ID )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1664:1: ( RULE_ID )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1665:3: RULE_ID
+            // InternalEventCalculus.g:1402:1: (otherlv_0= RULE_ID )
+            // InternalEventCalculus.g:1403:3: otherlv_0= RULE_ID
             {
 
             			if (current==null) {
-            	            current = factory.create(grammarAccess.getParametersRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
+            	            current = createModelElement(grammarAccess.getParametersRule());
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleParameters2875); 
+            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_19); 
 
-            		createLeafNode(grammarAccess.getParametersAccess().getNamesDefinesCrossReference_0_0(), "names"); 
+            		newLeafNode(otherlv_0, grammarAccess.getParametersAccess().getNamesDefinesCrossReference_0_0()); 
             	
 
             }
@@ -3811,7 +3675,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1677:2: ( ',' ( ( RULE_ID ) ) )*
+            // InternalEventCalculus.g:1414:2: (otherlv_1= ',' ( (otherlv_2= RULE_ID ) ) )*
             loop30:
             do {
                 int alt30=2;
@@ -3824,27 +3688,26 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                 switch (alt30) {
             	case 1 :
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1677:4: ',' ( ( RULE_ID ) )
+            	    // InternalEventCalculus.g:1414:4: otherlv_1= ',' ( (otherlv_2= RULE_ID ) )
             	    {
-            	    match(input,23,FOLLOW_23_in_ruleParameters2886); 
+            	    otherlv_1=(Token)match(input,23,FOLLOW_11); 
 
-            	            createLeafNode(grammarAccess.getParametersAccess().getCommaKeyword_1_0(), null); 
+            	        	newLeafNode(otherlv_1, grammarAccess.getParametersAccess().getCommaKeyword_1_0());
             	        
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1681:1: ( ( RULE_ID ) )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1682:1: ( RULE_ID )
+            	    // InternalEventCalculus.g:1418:1: ( (otherlv_2= RULE_ID ) )
+            	    // InternalEventCalculus.g:1419:1: (otherlv_2= RULE_ID )
             	    {
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1682:1: ( RULE_ID )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1683:3: RULE_ID
+            	    // InternalEventCalculus.g:1419:1: (otherlv_2= RULE_ID )
+            	    // InternalEventCalculus.g:1420:3: otherlv_2= RULE_ID
             	    {
 
             	    			if (current==null) {
-            	    	            current = factory.create(grammarAccess.getParametersRule().getType().getClassifier());
-            	    	            associateNodeWithAstElement(currentNode, current);
+            	    	            current = createModelElement(grammarAccess.getParametersRule());
             	    	        }
             	            
-            	    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleParameters2904); 
+            	    otherlv_2=(Token)match(input,RULE_ID,FOLLOW_19); 
 
-            	    		createLeafNode(grammarAccess.getParametersAccess().getNamesDefinesCrossReference_1_1_0(), "names"); 
+            	    		newLeafNode(otherlv_2, grammarAccess.getParametersAccess().getNamesDefinesCrossReference_1_1_0()); 
             	    	
 
             	    }
@@ -3867,9 +3730,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -3880,11 +3741,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleParameters
+    // $ANTLR end "ruleParameters"
 
 
-    // $ANTLR start entryRuleExists
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1703:1: entryRuleExists returns [EObject current=null] : iv_ruleExists= ruleExists EOF ;
+    // $ANTLR start "entryRuleExists"
+    // InternalEventCalculus.g:1439:1: entryRuleExists returns [EObject current=null] : iv_ruleExists= ruleExists EOF ;
     public final EObject entryRuleExists() throws RecognitionException {
         EObject current = null;
 
@@ -3892,16 +3753,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1704:2: (iv_ruleExists= ruleExists EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1705:2: iv_ruleExists= ruleExists EOF
+            // InternalEventCalculus.g:1440:2: (iv_ruleExists= ruleExists EOF )
+            // InternalEventCalculus.g:1441:2: iv_ruleExists= ruleExists EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getExistsRule(), currentNode); 
-            pushFollow(FOLLOW_ruleExists_in_entryRuleExists2942);
+             newCompositeNode(grammarAccess.getExistsRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleExists=ruleExists();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleExists; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleExists2952); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -3915,29 +3777,31 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleExists
+    // $ANTLR end "entryRuleExists"
 
 
-    // $ANTLR start ruleExists
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1712:1: ruleExists returns [EObject current=null] : ( ( (lv_op_0_0= ruleUnaryOp ) )? '{' ( (lv_parameters_2_0= ruleParameters ) ) '}' ) ;
+    // $ANTLR start "ruleExists"
+    // InternalEventCalculus.g:1448:1: ruleExists returns [EObject current=null] : ( ( (lv_op_0_0= ruleUnaryOp ) )? otherlv_1= '{' ( (lv_parameters_2_0= ruleParameters ) ) otherlv_3= '}' ) ;
     public final EObject ruleExists() throws RecognitionException {
         EObject current = null;
 
+        Token otherlv_1=null;
+        Token otherlv_3=null;
         Enumerator lv_op_0_0 = null;
 
         EObject lv_parameters_2_0 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1717:6: ( ( ( (lv_op_0_0= ruleUnaryOp ) )? '{' ( (lv_parameters_2_0= ruleParameters ) ) '}' ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1718:1: ( ( (lv_op_0_0= ruleUnaryOp ) )? '{' ( (lv_parameters_2_0= ruleParameters ) ) '}' )
+            // InternalEventCalculus.g:1451:28: ( ( ( (lv_op_0_0= ruleUnaryOp ) )? otherlv_1= '{' ( (lv_parameters_2_0= ruleParameters ) ) otherlv_3= '}' ) )
+            // InternalEventCalculus.g:1452:1: ( ( (lv_op_0_0= ruleUnaryOp ) )? otherlv_1= '{' ( (lv_parameters_2_0= ruleParameters ) ) otherlv_3= '}' )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1718:1: ( ( (lv_op_0_0= ruleUnaryOp ) )? '{' ( (lv_parameters_2_0= ruleParameters ) ) '}' )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1718:2: ( (lv_op_0_0= ruleUnaryOp ) )? '{' ( (lv_parameters_2_0= ruleParameters ) ) '}'
+            // InternalEventCalculus.g:1452:1: ( ( (lv_op_0_0= ruleUnaryOp ) )? otherlv_1= '{' ( (lv_parameters_2_0= ruleParameters ) ) otherlv_3= '}' )
+            // InternalEventCalculus.g:1452:2: ( (lv_op_0_0= ruleUnaryOp ) )? otherlv_1= '{' ( (lv_parameters_2_0= ruleParameters ) ) otherlv_3= '}'
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1718:2: ( (lv_op_0_0= ruleUnaryOp ) )?
+            // InternalEventCalculus.g:1452:2: ( (lv_op_0_0= ruleUnaryOp ) )?
             int alt31=2;
             int LA31_0 = input.LA(1);
 
@@ -3946,34 +3810,29 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
             }
             switch (alt31) {
                 case 1 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1719:1: (lv_op_0_0= ruleUnaryOp )
+                    // InternalEventCalculus.g:1453:1: (lv_op_0_0= ruleUnaryOp )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1719:1: (lv_op_0_0= ruleUnaryOp )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1720:3: lv_op_0_0= ruleUnaryOp
+                    // InternalEventCalculus.g:1453:1: (lv_op_0_0= ruleUnaryOp )
+                    // InternalEventCalculus.g:1454:3: lv_op_0_0= ruleUnaryOp
                     {
                      
-                    	        currentNode=createCompositeNode(grammarAccess.getExistsAccess().getOpUnaryOpEnumRuleCall_0_0(), currentNode); 
+                    	        newCompositeNode(grammarAccess.getExistsAccess().getOpUnaryOpEnumRuleCall_0_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleUnaryOp_in_ruleExists2998);
+                    pushFollow(FOLLOW_29);
                     lv_op_0_0=ruleUnaryOp();
-                    _fsp--;
+
+                    state._fsp--;
 
 
                     	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getExistsRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode.getParent(), current);
+                    	            current = createModelElementForParent(grammarAccess.getExistsRule());
                     	        }
-                    	        try {
-                    	       		set(
-                    	       			current, 
-                    	       			"op",
-                    	        		lv_op_0_0, 
-                    	        		"UnaryOp", 
-                    	        		currentNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	        currentNode = currentNode.getParent();
+                           		set(
+                           			current, 
+                           			"op",
+                            		lv_op_0_0, 
+                            		"uk.ac.open.event.EventCalculus.UnaryOp");
+                    	        afterParserOrEnumRuleCall();
                     	    
 
                     }
@@ -3984,39 +3843,34 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,29,FOLLOW_29_in_ruleExists3009); 
+            otherlv_1=(Token)match(input,29,FOLLOW_11); 
 
-                    createLeafNode(grammarAccess.getExistsAccess().getLeftCurlyBracketKeyword_1(), null); 
+                	newLeafNode(otherlv_1, grammarAccess.getExistsAccess().getLeftCurlyBracketKeyword_1());
                 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1746:1: ( (lv_parameters_2_0= ruleParameters ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1747:1: (lv_parameters_2_0= ruleParameters )
+            // InternalEventCalculus.g:1474:1: ( (lv_parameters_2_0= ruleParameters ) )
+            // InternalEventCalculus.g:1475:1: (lv_parameters_2_0= ruleParameters )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1747:1: (lv_parameters_2_0= ruleParameters )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1748:3: lv_parameters_2_0= ruleParameters
+            // InternalEventCalculus.g:1475:1: (lv_parameters_2_0= ruleParameters )
+            // InternalEventCalculus.g:1476:3: lv_parameters_2_0= ruleParameters
             {
              
-            	        currentNode=createCompositeNode(grammarAccess.getExistsAccess().getParametersParametersParserRuleCall_2_0(), currentNode); 
+            	        newCompositeNode(grammarAccess.getExistsAccess().getParametersParametersParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleParameters_in_ruleExists3030);
+            pushFollow(FOLLOW_30);
             lv_parameters_2_0=ruleParameters();
-            _fsp--;
+
+            state._fsp--;
 
 
             	        if (current==null) {
-            	            current = factory.create(grammarAccess.getExistsRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	            current = createModelElementForParent(grammarAccess.getExistsRule());
             	        }
-            	        try {
-            	       		set(
-            	       			current, 
-            	       			"parameters",
-            	        		lv_parameters_2_0, 
-            	        		"Parameters", 
-            	        		currentNode);
-            	        } catch (ValueConverterException vce) {
-            				handleValueConverterException(vce);
-            	        }
-            	        currentNode = currentNode.getParent();
+                   		set(
+                   			current, 
+                   			"parameters",
+                    		lv_parameters_2_0, 
+                    		"uk.ac.open.event.EventCalculus.Parameters");
+            	        afterParserOrEnumRuleCall();
             	    
 
             }
@@ -4024,9 +3878,9 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,30,FOLLOW_30_in_ruleExists3040); 
+            otherlv_3=(Token)match(input,30,FOLLOW_2); 
 
-                    createLeafNode(grammarAccess.getExistsAccess().getRightCurlyBracketKeyword_3(), null); 
+                	newLeafNode(otherlv_3, grammarAccess.getExistsAccess().getRightCurlyBracketKeyword_3());
                 
 
             }
@@ -4034,9 +3888,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -4047,11 +3899,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleExists
+    // $ANTLR end "ruleExists"
 
 
-    // $ANTLR start entryRuleForall
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1782:1: entryRuleForall returns [EObject current=null] : iv_ruleForall= ruleForall EOF ;
+    // $ANTLR start "entryRuleForall"
+    // InternalEventCalculus.g:1504:1: entryRuleForall returns [EObject current=null] : iv_ruleForall= ruleForall EOF ;
     public final EObject entryRuleForall() throws RecognitionException {
         EObject current = null;
 
@@ -4059,16 +3911,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1783:2: (iv_ruleForall= ruleForall EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1784:2: iv_ruleForall= ruleForall EOF
+            // InternalEventCalculus.g:1505:2: (iv_ruleForall= ruleForall EOF )
+            // InternalEventCalculus.g:1506:2: iv_ruleForall= ruleForall EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getForallRule(), currentNode); 
-            pushFollow(FOLLOW_ruleForall_in_entryRuleForall3076);
+             newCompositeNode(grammarAccess.getForallRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleForall=ruleForall();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleForall; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleForall3086); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -4082,29 +3935,31 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleForall
+    // $ANTLR end "entryRuleForall"
 
 
-    // $ANTLR start ruleForall
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1791:1: ruleForall returns [EObject current=null] : ( ( (lv_op_0_0= ruleUnaryOp ) )? '[' ( (lv_parameters_2_0= ruleParameters ) ) ']' ) ;
+    // $ANTLR start "ruleForall"
+    // InternalEventCalculus.g:1513:1: ruleForall returns [EObject current=null] : ( ( (lv_op_0_0= ruleUnaryOp ) )? otherlv_1= '[' ( (lv_parameters_2_0= ruleParameters ) ) otherlv_3= ']' ) ;
     public final EObject ruleForall() throws RecognitionException {
         EObject current = null;
 
+        Token otherlv_1=null;
+        Token otherlv_3=null;
         Enumerator lv_op_0_0 = null;
 
         EObject lv_parameters_2_0 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1796:6: ( ( ( (lv_op_0_0= ruleUnaryOp ) )? '[' ( (lv_parameters_2_0= ruleParameters ) ) ']' ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1797:1: ( ( (lv_op_0_0= ruleUnaryOp ) )? '[' ( (lv_parameters_2_0= ruleParameters ) ) ']' )
+            // InternalEventCalculus.g:1516:28: ( ( ( (lv_op_0_0= ruleUnaryOp ) )? otherlv_1= '[' ( (lv_parameters_2_0= ruleParameters ) ) otherlv_3= ']' ) )
+            // InternalEventCalculus.g:1517:1: ( ( (lv_op_0_0= ruleUnaryOp ) )? otherlv_1= '[' ( (lv_parameters_2_0= ruleParameters ) ) otherlv_3= ']' )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1797:1: ( ( (lv_op_0_0= ruleUnaryOp ) )? '[' ( (lv_parameters_2_0= ruleParameters ) ) ']' )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1797:2: ( (lv_op_0_0= ruleUnaryOp ) )? '[' ( (lv_parameters_2_0= ruleParameters ) ) ']'
+            // InternalEventCalculus.g:1517:1: ( ( (lv_op_0_0= ruleUnaryOp ) )? otherlv_1= '[' ( (lv_parameters_2_0= ruleParameters ) ) otherlv_3= ']' )
+            // InternalEventCalculus.g:1517:2: ( (lv_op_0_0= ruleUnaryOp ) )? otherlv_1= '[' ( (lv_parameters_2_0= ruleParameters ) ) otherlv_3= ']'
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1797:2: ( (lv_op_0_0= ruleUnaryOp ) )?
+            // InternalEventCalculus.g:1517:2: ( (lv_op_0_0= ruleUnaryOp ) )?
             int alt32=2;
             int LA32_0 = input.LA(1);
 
@@ -4113,34 +3968,29 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
             }
             switch (alt32) {
                 case 1 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1798:1: (lv_op_0_0= ruleUnaryOp )
+                    // InternalEventCalculus.g:1518:1: (lv_op_0_0= ruleUnaryOp )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1798:1: (lv_op_0_0= ruleUnaryOp )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1799:3: lv_op_0_0= ruleUnaryOp
+                    // InternalEventCalculus.g:1518:1: (lv_op_0_0= ruleUnaryOp )
+                    // InternalEventCalculus.g:1519:3: lv_op_0_0= ruleUnaryOp
                     {
                      
-                    	        currentNode=createCompositeNode(grammarAccess.getForallAccess().getOpUnaryOpEnumRuleCall_0_0(), currentNode); 
+                    	        newCompositeNode(grammarAccess.getForallAccess().getOpUnaryOpEnumRuleCall_0_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleUnaryOp_in_ruleForall3132);
+                    pushFollow(FOLLOW_31);
                     lv_op_0_0=ruleUnaryOp();
-                    _fsp--;
+
+                    state._fsp--;
 
 
                     	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getForallRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode.getParent(), current);
+                    	            current = createModelElementForParent(grammarAccess.getForallRule());
                     	        }
-                    	        try {
-                    	       		set(
-                    	       			current, 
-                    	       			"op",
-                    	        		lv_op_0_0, 
-                    	        		"UnaryOp", 
-                    	        		currentNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	        currentNode = currentNode.getParent();
+                           		set(
+                           			current, 
+                           			"op",
+                            		lv_op_0_0, 
+                            		"uk.ac.open.event.EventCalculus.UnaryOp");
+                    	        afterParserOrEnumRuleCall();
                     	    
 
                     }
@@ -4151,39 +4001,34 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,31,FOLLOW_31_in_ruleForall3143); 
+            otherlv_1=(Token)match(input,31,FOLLOW_11); 
 
-                    createLeafNode(grammarAccess.getForallAccess().getLeftSquareBracketKeyword_1(), null); 
+                	newLeafNode(otherlv_1, grammarAccess.getForallAccess().getLeftSquareBracketKeyword_1());
                 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1825:1: ( (lv_parameters_2_0= ruleParameters ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1826:1: (lv_parameters_2_0= ruleParameters )
+            // InternalEventCalculus.g:1539:1: ( (lv_parameters_2_0= ruleParameters ) )
+            // InternalEventCalculus.g:1540:1: (lv_parameters_2_0= ruleParameters )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1826:1: (lv_parameters_2_0= ruleParameters )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1827:3: lv_parameters_2_0= ruleParameters
+            // InternalEventCalculus.g:1540:1: (lv_parameters_2_0= ruleParameters )
+            // InternalEventCalculus.g:1541:3: lv_parameters_2_0= ruleParameters
             {
              
-            	        currentNode=createCompositeNode(grammarAccess.getForallAccess().getParametersParametersParserRuleCall_2_0(), currentNode); 
+            	        newCompositeNode(grammarAccess.getForallAccess().getParametersParametersParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleParameters_in_ruleForall3164);
+            pushFollow(FOLLOW_32);
             lv_parameters_2_0=ruleParameters();
-            _fsp--;
+
+            state._fsp--;
 
 
             	        if (current==null) {
-            	            current = factory.create(grammarAccess.getForallRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	            current = createModelElementForParent(grammarAccess.getForallRule());
             	        }
-            	        try {
-            	       		set(
-            	       			current, 
-            	       			"parameters",
-            	        		lv_parameters_2_0, 
-            	        		"Parameters", 
-            	        		currentNode);
-            	        } catch (ValueConverterException vce) {
-            				handleValueConverterException(vce);
-            	        }
-            	        currentNode = currentNode.getParent();
+                   		set(
+                   			current, 
+                   			"parameters",
+                    		lv_parameters_2_0, 
+                    		"uk.ac.open.event.EventCalculus.Parameters");
+            	        afterParserOrEnumRuleCall();
             	    
 
             }
@@ -4191,9 +4036,9 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,32,FOLLOW_32_in_ruleForall3174); 
+            otherlv_3=(Token)match(input,32,FOLLOW_2); 
 
-                    createLeafNode(grammarAccess.getForallAccess().getRightSquareBracketKeyword_3(), null); 
+                	newLeafNode(otherlv_3, grammarAccess.getForallAccess().getRightSquareBracketKeyword_3());
                 
 
             }
@@ -4201,9 +4046,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -4214,11 +4057,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleForall
+    // $ANTLR end "ruleForall"
 
 
-    // $ANTLR start entryRuleAssignmentOp
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1861:1: entryRuleAssignmentOp returns [EObject current=null] : iv_ruleAssignmentOp= ruleAssignmentOp EOF ;
+    // $ANTLR start "entryRuleAssignmentOp"
+    // InternalEventCalculus.g:1569:1: entryRuleAssignmentOp returns [EObject current=null] : iv_ruleAssignmentOp= ruleAssignmentOp EOF ;
     public final EObject entryRuleAssignmentOp() throws RecognitionException {
         EObject current = null;
 
@@ -4226,16 +4069,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1862:2: (iv_ruleAssignmentOp= ruleAssignmentOp EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1863:2: iv_ruleAssignmentOp= ruleAssignmentOp EOF
+            // InternalEventCalculus.g:1570:2: (iv_ruleAssignmentOp= ruleAssignmentOp EOF )
+            // InternalEventCalculus.g:1571:2: iv_ruleAssignmentOp= ruleAssignmentOp EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getAssignmentOpRule(), currentNode); 
-            pushFollow(FOLLOW_ruleAssignmentOp_in_entryRuleAssignmentOp3210);
+             newCompositeNode(grammarAccess.getAssignmentOpRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleAssignmentOp=ruleAssignmentOp();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleAssignmentOp; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAssignmentOp3220); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -4249,14 +4093,16 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleAssignmentOp
+    // $ANTLR end "entryRuleAssignmentOp"
 
 
-    // $ANTLR start ruleAssignmentOp
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1870:1: ruleAssignmentOp returns [EObject current=null] : (this_OrExp_0= ruleOrExp ( ( ( () '->' ) | ( () '<->' ) ) ( (lv_q_5_0= ruleQualifier ) )? ( (lv_right_6_0= ruleOrExp ) ) )? ) ;
+    // $ANTLR start "ruleAssignmentOp"
+    // InternalEventCalculus.g:1578:1: ruleAssignmentOp returns [EObject current=null] : (this_OrExp_0= ruleOrExp ( ( ( () otherlv_2= '->' ) | ( () otherlv_4= '<->' ) ) ( (lv_q_5_0= ruleQualifier ) )? ( (lv_right_6_0= ruleOrExp ) ) )? ) ;
     public final EObject ruleAssignmentOp() throws RecognitionException {
         EObject current = null;
 
+        Token otherlv_2=null;
+        Token otherlv_4=null;
         EObject this_OrExp_0 = null;
 
         EObject lv_q_5_0 = null;
@@ -4264,27 +4110,28 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         EObject lv_right_6_0 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1875:6: ( (this_OrExp_0= ruleOrExp ( ( ( () '->' ) | ( () '<->' ) ) ( (lv_q_5_0= ruleQualifier ) )? ( (lv_right_6_0= ruleOrExp ) ) )? ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1876:1: (this_OrExp_0= ruleOrExp ( ( ( () '->' ) | ( () '<->' ) ) ( (lv_q_5_0= ruleQualifier ) )? ( (lv_right_6_0= ruleOrExp ) ) )? )
+            // InternalEventCalculus.g:1581:28: ( (this_OrExp_0= ruleOrExp ( ( ( () otherlv_2= '->' ) | ( () otherlv_4= '<->' ) ) ( (lv_q_5_0= ruleQualifier ) )? ( (lv_right_6_0= ruleOrExp ) ) )? ) )
+            // InternalEventCalculus.g:1582:1: (this_OrExp_0= ruleOrExp ( ( ( () otherlv_2= '->' ) | ( () otherlv_4= '<->' ) ) ( (lv_q_5_0= ruleQualifier ) )? ( (lv_right_6_0= ruleOrExp ) ) )? )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1876:1: (this_OrExp_0= ruleOrExp ( ( ( () '->' ) | ( () '<->' ) ) ( (lv_q_5_0= ruleQualifier ) )? ( (lv_right_6_0= ruleOrExp ) ) )? )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1877:5: this_OrExp_0= ruleOrExp ( ( ( () '->' ) | ( () '<->' ) ) ( (lv_q_5_0= ruleQualifier ) )? ( (lv_right_6_0= ruleOrExp ) ) )?
+            // InternalEventCalculus.g:1582:1: (this_OrExp_0= ruleOrExp ( ( ( () otherlv_2= '->' ) | ( () otherlv_4= '<->' ) ) ( (lv_q_5_0= ruleQualifier ) )? ( (lv_right_6_0= ruleOrExp ) ) )? )
+            // InternalEventCalculus.g:1583:5: this_OrExp_0= ruleOrExp ( ( ( () otherlv_2= '->' ) | ( () otherlv_4= '<->' ) ) ( (lv_q_5_0= ruleQualifier ) )? ( (lv_right_6_0= ruleOrExp ) ) )?
             {
              
-                    currentNode=createCompositeNode(grammarAccess.getAssignmentOpAccess().getOrExpParserRuleCall_0(), currentNode); 
+                    newCompositeNode(grammarAccess.getAssignmentOpAccess().getOrExpParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_ruleOrExp_in_ruleAssignmentOp3267);
+            pushFollow(FOLLOW_33);
             this_OrExp_0=ruleOrExp();
-            _fsp--;
+
+            state._fsp--;
 
              
                     current = this_OrExp_0; 
-                    currentNode = currentNode.getParent();
+                    afterParserOrEnumRuleCall();
                 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1885:1: ( ( ( () '->' ) | ( () '<->' ) ) ( (lv_q_5_0= ruleQualifier ) )? ( (lv_right_6_0= ruleOrExp ) ) )?
+            // InternalEventCalculus.g:1591:1: ( ( ( () otherlv_2= '->' ) | ( () otherlv_4= '<->' ) ) ( (lv_q_5_0= ruleQualifier ) )? ( (lv_right_6_0= ruleOrExp ) ) )?
             int alt35=2;
             int LA35_0 = input.LA(1);
 
@@ -4293,9 +4140,9 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
             }
             switch (alt35) {
                 case 1 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1885:2: ( ( () '->' ) | ( () '<->' ) ) ( (lv_q_5_0= ruleQualifier ) )? ( (lv_right_6_0= ruleOrExp ) )
+                    // InternalEventCalculus.g:1591:2: ( ( () otherlv_2= '->' ) | ( () otherlv_4= '<->' ) ) ( (lv_q_5_0= ruleQualifier ) )? ( (lv_right_6_0= ruleOrExp ) )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1885:2: ( ( () '->' ) | ( () '<->' ) )
+                    // InternalEventCalculus.g:1591:2: ( ( () otherlv_2= '->' ) | ( () otherlv_4= '<->' ) )
                     int alt33=2;
                     int LA33_0 = input.LA(1);
 
@@ -4307,41 +4154,31 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("1885:2: ( ( () '->' ) | ( () '<->' ) )", 33, 0, input);
+                            new NoViableAltException("", 33, 0, input);
 
                         throw nvae;
                     }
                     switch (alt33) {
                         case 1 :
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1885:3: ( () '->' )
+                            // InternalEventCalculus.g:1591:3: ( () otherlv_2= '->' )
                             {
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1885:3: ( () '->' )
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1885:4: () '->'
+                            // InternalEventCalculus.g:1591:3: ( () otherlv_2= '->' )
+                            // InternalEventCalculus.g:1591:4: () otherlv_2= '->'
                             {
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1885:4: ()
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1886:5: 
+                            // InternalEventCalculus.g:1591:4: ()
+                            // InternalEventCalculus.g:1592:5: 
                             {
-                             
-                                    temp=factory.create(grammarAccess.getAssignmentOpAccess().getAssignPlusLeftAction_1_0_0_0().getType().getClassifier());
-                                    try {
-                                    	factory.set(temp, "left", current, null /*ParserRule*/, currentNode);
-                                    } catch(ValueConverterException vce) {
-                                    	handleValueConverterException(vce);
-                                    }
-                                    current = temp; 
-                                    temp = null;
-                                    CompositeNode newNode = createCompositeNode(grammarAccess.getAssignmentOpAccess().getAssignPlusLeftAction_1_0_0_0(), currentNode.getParent());
-                                newNode.getChildren().add(currentNode);
-                                moveLookaheadInfo(currentNode, newNode);
-                                currentNode = newNode; 
-                                    associateNodeWithAstElement(currentNode, current); 
+
+                                    current = forceCreateModelElementAndSet(
+                                        grammarAccess.getAssignmentOpAccess().getAssignPlusLeftAction_1_0_0_0(),
+                                        current);
                                 
 
                             }
 
-                            match(input,33,FOLLOW_33_in_ruleAssignmentOp3288); 
+                            otherlv_2=(Token)match(input,33,FOLLOW_22); 
 
-                                    createLeafNode(grammarAccess.getAssignmentOpAccess().getHyphenMinusGreaterThanSignKeyword_1_0_0_1(), null); 
+                                	newLeafNode(otherlv_2, grammarAccess.getAssignmentOpAccess().getHyphenMinusGreaterThanSignKeyword_1_0_0_1());
                                 
 
                             }
@@ -4350,35 +4187,25 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1906:6: ( () '<->' )
+                            // InternalEventCalculus.g:1602:6: ( () otherlv_4= '<->' )
                             {
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1906:6: ( () '<->' )
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1906:7: () '<->'
+                            // InternalEventCalculus.g:1602:6: ( () otherlv_4= '<->' )
+                            // InternalEventCalculus.g:1602:7: () otherlv_4= '<->'
                             {
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1906:7: ()
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1907:5: 
+                            // InternalEventCalculus.g:1602:7: ()
+                            // InternalEventCalculus.g:1603:5: 
                             {
-                             
-                                    temp=factory.create(grammarAccess.getAssignmentOpAccess().getAssignMinLeftAction_1_0_1_0().getType().getClassifier());
-                                    try {
-                                    	factory.set(temp, "left", current, null /*ParserRule*/, currentNode);
-                                    } catch(ValueConverterException vce) {
-                                    	handleValueConverterException(vce);
-                                    }
-                                    current = temp; 
-                                    temp = null;
-                                    CompositeNode newNode = createCompositeNode(grammarAccess.getAssignmentOpAccess().getAssignMinLeftAction_1_0_1_0(), currentNode.getParent());
-                                newNode.getChildren().add(currentNode);
-                                moveLookaheadInfo(currentNode, newNode);
-                                currentNode = newNode; 
-                                    associateNodeWithAstElement(currentNode, current); 
+
+                                    current = forceCreateModelElementAndSet(
+                                        grammarAccess.getAssignmentOpAccess().getAssignMinLeftAction_1_0_1_0(),
+                                        current);
                                 
 
                             }
 
-                            match(input,34,FOLLOW_34_in_ruleAssignmentOp3315); 
+                            otherlv_4=(Token)match(input,34,FOLLOW_22); 
 
-                                    createLeafNode(grammarAccess.getAssignmentOpAccess().getLessThanSignHyphenMinusGreaterThanSignKeyword_1_0_1_1(), null); 
+                                	newLeafNode(otherlv_4, grammarAccess.getAssignmentOpAccess().getLessThanSignHyphenMinusGreaterThanSignKeyword_1_0_1_1());
                                 
 
                             }
@@ -4389,7 +4216,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1926:3: ( (lv_q_5_0= ruleQualifier ) )?
+                    // InternalEventCalculus.g:1612:3: ( (lv_q_5_0= ruleQualifier ) )?
                     int alt34=2;
                     int LA34_0 = input.LA(1);
 
@@ -4405,34 +4232,29 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt34) {
                         case 1 :
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1927:1: (lv_q_5_0= ruleQualifier )
+                            // InternalEventCalculus.g:1613:1: (lv_q_5_0= ruleQualifier )
                             {
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1927:1: (lv_q_5_0= ruleQualifier )
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1928:3: lv_q_5_0= ruleQualifier
+                            // InternalEventCalculus.g:1613:1: (lv_q_5_0= ruleQualifier )
+                            // InternalEventCalculus.g:1614:3: lv_q_5_0= ruleQualifier
                             {
                              
-                            	        currentNode=createCompositeNode(grammarAccess.getAssignmentOpAccess().getQQualifierParserRuleCall_1_1_0(), currentNode); 
+                            	        newCompositeNode(grammarAccess.getAssignmentOpAccess().getQQualifierParserRuleCall_1_1_0()); 
                             	    
-                            pushFollow(FOLLOW_ruleQualifier_in_ruleAssignmentOp3338);
+                            pushFollow(FOLLOW_34);
                             lv_q_5_0=ruleQualifier();
-                            _fsp--;
+
+                            state._fsp--;
 
 
                             	        if (current==null) {
-                            	            current = factory.create(grammarAccess.getAssignmentOpRule().getType().getClassifier());
-                            	            associateNodeWithAstElement(currentNode.getParent(), current);
+                            	            current = createModelElementForParent(grammarAccess.getAssignmentOpRule());
                             	        }
-                            	        try {
-                            	       		set(
-                            	       			current, 
-                            	       			"q",
-                            	        		lv_q_5_0, 
-                            	        		"Qualifier", 
-                            	        		currentNode);
-                            	        } catch (ValueConverterException vce) {
-                            				handleValueConverterException(vce);
-                            	        }
-                            	        currentNode = currentNode.getParent();
+                                   		set(
+                                   			current, 
+                                   			"q",
+                                    		lv_q_5_0, 
+                                    		"uk.ac.open.event.EventCalculus.Qualifier");
+                            	        afterParserOrEnumRuleCall();
                             	    
 
                             }
@@ -4443,35 +4265,30 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1950:3: ( (lv_right_6_0= ruleOrExp ) )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1951:1: (lv_right_6_0= ruleOrExp )
+                    // InternalEventCalculus.g:1630:3: ( (lv_right_6_0= ruleOrExp ) )
+                    // InternalEventCalculus.g:1631:1: (lv_right_6_0= ruleOrExp )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1951:1: (lv_right_6_0= ruleOrExp )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1952:3: lv_right_6_0= ruleOrExp
+                    // InternalEventCalculus.g:1631:1: (lv_right_6_0= ruleOrExp )
+                    // InternalEventCalculus.g:1632:3: lv_right_6_0= ruleOrExp
                     {
                      
-                    	        currentNode=createCompositeNode(grammarAccess.getAssignmentOpAccess().getRightOrExpParserRuleCall_1_2_0(), currentNode); 
+                    	        newCompositeNode(grammarAccess.getAssignmentOpAccess().getRightOrExpParserRuleCall_1_2_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleOrExp_in_ruleAssignmentOp3360);
+                    pushFollow(FOLLOW_2);
                     lv_right_6_0=ruleOrExp();
-                    _fsp--;
+
+                    state._fsp--;
 
 
                     	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getAssignmentOpRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode.getParent(), current);
+                    	            current = createModelElementForParent(grammarAccess.getAssignmentOpRule());
                     	        }
-                    	        try {
-                    	       		set(
-                    	       			current, 
-                    	       			"right",
-                    	        		lv_right_6_0, 
-                    	        		"OrExp", 
-                    	        		currentNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	        currentNode = currentNode.getParent();
+                           		set(
+                           			current, 
+                           			"right",
+                            		lv_right_6_0, 
+                            		"uk.ac.open.event.EventCalculus.OrExp");
+                    	        afterParserOrEnumRuleCall();
                     	    
 
                     }
@@ -4491,9 +4308,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -4504,11 +4319,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleAssignmentOp
+    // $ANTLR end "ruleAssignmentOp"
 
 
-    // $ANTLR start entryRuleOrExp
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1982:1: entryRuleOrExp returns [EObject current=null] : iv_ruleOrExp= ruleOrExp EOF ;
+    // $ANTLR start "entryRuleOrExp"
+    // InternalEventCalculus.g:1656:1: entryRuleOrExp returns [EObject current=null] : iv_ruleOrExp= ruleOrExp EOF ;
     public final EObject entryRuleOrExp() throws RecognitionException {
         EObject current = null;
 
@@ -4516,16 +4331,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1983:2: (iv_ruleOrExp= ruleOrExp EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1984:2: iv_ruleOrExp= ruleOrExp EOF
+            // InternalEventCalculus.g:1657:2: (iv_ruleOrExp= ruleOrExp EOF )
+            // InternalEventCalculus.g:1658:2: iv_ruleOrExp= ruleOrExp EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getOrExpRule(), currentNode); 
-            pushFollow(FOLLOW_ruleOrExp_in_entryRuleOrExp3398);
+             newCompositeNode(grammarAccess.getOrExpRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleOrExp=ruleOrExp();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleOrExp; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleOrExp3408); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -4539,14 +4355,15 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleOrExp
+    // $ANTLR end "entryRuleOrExp"
 
 
-    // $ANTLR start ruleOrExp
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1991:1: ruleOrExp returns [EObject current=null] : (this_AndExp_0= ruleAndExp ( () '|' ( (lv_q_3_0= ruleQualifier ) )? ( (lv_right_4_0= ruleAndExp ) ) )* ) ;
+    // $ANTLR start "ruleOrExp"
+    // InternalEventCalculus.g:1665:1: ruleOrExp returns [EObject current=null] : (this_AndExp_0= ruleAndExp ( () otherlv_2= '|' ( (lv_q_3_0= ruleQualifier ) )? ( (lv_right_4_0= ruleAndExp ) ) )* ) ;
     public final EObject ruleOrExp() throws RecognitionException {
         EObject current = null;
 
+        Token otherlv_2=null;
         EObject this_AndExp_0 = null;
 
         EObject lv_q_3_0 = null;
@@ -4554,27 +4371,28 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         EObject lv_right_4_0 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1996:6: ( (this_AndExp_0= ruleAndExp ( () '|' ( (lv_q_3_0= ruleQualifier ) )? ( (lv_right_4_0= ruleAndExp ) ) )* ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1997:1: (this_AndExp_0= ruleAndExp ( () '|' ( (lv_q_3_0= ruleQualifier ) )? ( (lv_right_4_0= ruleAndExp ) ) )* )
+            // InternalEventCalculus.g:1668:28: ( (this_AndExp_0= ruleAndExp ( () otherlv_2= '|' ( (lv_q_3_0= ruleQualifier ) )? ( (lv_right_4_0= ruleAndExp ) ) )* ) )
+            // InternalEventCalculus.g:1669:1: (this_AndExp_0= ruleAndExp ( () otherlv_2= '|' ( (lv_q_3_0= ruleQualifier ) )? ( (lv_right_4_0= ruleAndExp ) ) )* )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1997:1: (this_AndExp_0= ruleAndExp ( () '|' ( (lv_q_3_0= ruleQualifier ) )? ( (lv_right_4_0= ruleAndExp ) ) )* )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:1998:5: this_AndExp_0= ruleAndExp ( () '|' ( (lv_q_3_0= ruleQualifier ) )? ( (lv_right_4_0= ruleAndExp ) ) )*
+            // InternalEventCalculus.g:1669:1: (this_AndExp_0= ruleAndExp ( () otherlv_2= '|' ( (lv_q_3_0= ruleQualifier ) )? ( (lv_right_4_0= ruleAndExp ) ) )* )
+            // InternalEventCalculus.g:1670:5: this_AndExp_0= ruleAndExp ( () otherlv_2= '|' ( (lv_q_3_0= ruleQualifier ) )? ( (lv_right_4_0= ruleAndExp ) ) )*
             {
              
-                    currentNode=createCompositeNode(grammarAccess.getOrExpAccess().getAndExpParserRuleCall_0(), currentNode); 
+                    newCompositeNode(grammarAccess.getOrExpAccess().getAndExpParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_ruleAndExp_in_ruleOrExp3455);
+            pushFollow(FOLLOW_35);
             this_AndExp_0=ruleAndExp();
-            _fsp--;
+
+            state._fsp--;
 
              
                     current = this_AndExp_0; 
-                    currentNode = currentNode.getParent();
+                    afterParserOrEnumRuleCall();
                 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2006:1: ( () '|' ( (lv_q_3_0= ruleQualifier ) )? ( (lv_right_4_0= ruleAndExp ) ) )*
+            // InternalEventCalculus.g:1678:1: ( () otherlv_2= '|' ( (lv_q_3_0= ruleQualifier ) )? ( (lv_right_4_0= ruleAndExp ) ) )*
             loop37:
             do {
                 int alt37=2;
@@ -4587,34 +4405,24 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                 switch (alt37) {
             	case 1 :
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2006:2: () '|' ( (lv_q_3_0= ruleQualifier ) )? ( (lv_right_4_0= ruleAndExp ) )
+            	    // InternalEventCalculus.g:1678:2: () otherlv_2= '|' ( (lv_q_3_0= ruleQualifier ) )? ( (lv_right_4_0= ruleAndExp ) )
             	    {
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2006:2: ()
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2007:5: 
+            	    // InternalEventCalculus.g:1678:2: ()
+            	    // InternalEventCalculus.g:1679:5: 
             	    {
-            	     
-            	            temp=factory.create(grammarAccess.getOrExpAccess().getOrLeftAction_1_0().getType().getClassifier());
-            	            try {
-            	            	factory.set(temp, "left", current, null /*ParserRule*/, currentNode);
-            	            } catch(ValueConverterException vce) {
-            	            	handleValueConverterException(vce);
-            	            }
-            	            current = temp; 
-            	            temp = null;
-            	            CompositeNode newNode = createCompositeNode(grammarAccess.getOrExpAccess().getOrLeftAction_1_0(), currentNode.getParent());
-            	        newNode.getChildren().add(currentNode);
-            	        moveLookaheadInfo(currentNode, newNode);
-            	        currentNode = newNode; 
-            	            associateNodeWithAstElement(currentNode, current); 
+
+            	            current = forceCreateModelElementAndSet(
+            	                grammarAccess.getOrExpAccess().getOrLeftAction_1_0(),
+            	                current);
             	        
 
             	    }
 
-            	    match(input,35,FOLLOW_35_in_ruleOrExp3474); 
+            	    otherlv_2=(Token)match(input,35,FOLLOW_22); 
 
-            	            createLeafNode(grammarAccess.getOrExpAccess().getVerticalLineKeyword_1_1(), null); 
+            	        	newLeafNode(otherlv_2, grammarAccess.getOrExpAccess().getVerticalLineKeyword_1_1());
             	        
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2026:1: ( (lv_q_3_0= ruleQualifier ) )?
+            	    // InternalEventCalculus.g:1688:1: ( (lv_q_3_0= ruleQualifier ) )?
             	    int alt36=2;
             	    int LA36_0 = input.LA(1);
 
@@ -4630,34 +4438,29 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
             	    }
             	    switch (alt36) {
             	        case 1 :
-            	            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2027:1: (lv_q_3_0= ruleQualifier )
+            	            // InternalEventCalculus.g:1689:1: (lv_q_3_0= ruleQualifier )
             	            {
-            	            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2027:1: (lv_q_3_0= ruleQualifier )
-            	            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2028:3: lv_q_3_0= ruleQualifier
+            	            // InternalEventCalculus.g:1689:1: (lv_q_3_0= ruleQualifier )
+            	            // InternalEventCalculus.g:1690:3: lv_q_3_0= ruleQualifier
             	            {
             	             
-            	            	        currentNode=createCompositeNode(grammarAccess.getOrExpAccess().getQQualifierParserRuleCall_1_2_0(), currentNode); 
+            	            	        newCompositeNode(grammarAccess.getOrExpAccess().getQQualifierParserRuleCall_1_2_0()); 
             	            	    
-            	            pushFollow(FOLLOW_ruleQualifier_in_ruleOrExp3495);
+            	            pushFollow(FOLLOW_34);
             	            lv_q_3_0=ruleQualifier();
-            	            _fsp--;
+
+            	            state._fsp--;
 
 
             	            	        if (current==null) {
-            	            	            current = factory.create(grammarAccess.getOrExpRule().getType().getClassifier());
-            	            	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	            	            current = createModelElementForParent(grammarAccess.getOrExpRule());
             	            	        }
-            	            	        try {
-            	            	       		set(
-            	            	       			current, 
-            	            	       			"q",
-            	            	        		lv_q_3_0, 
-            	            	        		"Qualifier", 
-            	            	        		currentNode);
-            	            	        } catch (ValueConverterException vce) {
-            	            				handleValueConverterException(vce);
-            	            	        }
-            	            	        currentNode = currentNode.getParent();
+            	                   		set(
+            	                   			current, 
+            	                   			"q",
+            	                    		lv_q_3_0, 
+            	                    		"uk.ac.open.event.EventCalculus.Qualifier");
+            	            	        afterParserOrEnumRuleCall();
             	            	    
 
             	            }
@@ -4668,35 +4471,30 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2050:3: ( (lv_right_4_0= ruleAndExp ) )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2051:1: (lv_right_4_0= ruleAndExp )
+            	    // InternalEventCalculus.g:1706:3: ( (lv_right_4_0= ruleAndExp ) )
+            	    // InternalEventCalculus.g:1707:1: (lv_right_4_0= ruleAndExp )
             	    {
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2051:1: (lv_right_4_0= ruleAndExp )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2052:3: lv_right_4_0= ruleAndExp
+            	    // InternalEventCalculus.g:1707:1: (lv_right_4_0= ruleAndExp )
+            	    // InternalEventCalculus.g:1708:3: lv_right_4_0= ruleAndExp
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getOrExpAccess().getRightAndExpParserRuleCall_1_3_0(), currentNode); 
+            	    	        newCompositeNode(grammarAccess.getOrExpAccess().getRightAndExpParserRuleCall_1_3_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleAndExp_in_ruleOrExp3517);
+            	    pushFollow(FOLLOW_35);
             	    lv_right_4_0=ruleAndExp();
-            	    _fsp--;
+
+            	    state._fsp--;
 
 
             	    	        if (current==null) {
-            	    	            current = factory.create(grammarAccess.getOrExpRule().getType().getClassifier());
-            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	    	            current = createModelElementForParent(grammarAccess.getOrExpRule());
             	    	        }
-            	    	        try {
-            	    	       		set(
-            	    	       			current, 
-            	    	       			"right",
-            	    	        		lv_right_4_0, 
-            	    	        		"AndExp", 
-            	    	        		currentNode);
-            	    	        } catch (ValueConverterException vce) {
-            	    				handleValueConverterException(vce);
-            	    	        }
-            	    	        currentNode = currentNode.getParent();
+            	           		set(
+            	           			current, 
+            	           			"right",
+            	            		lv_right_4_0, 
+            	            		"uk.ac.open.event.EventCalculus.AndExp");
+            	    	        afterParserOrEnumRuleCall();
             	    	    
 
             	    }
@@ -4719,9 +4517,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -4732,11 +4528,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleOrExp
+    // $ANTLR end "ruleOrExp"
 
 
-    // $ANTLR start entryRuleAndExp
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2082:1: entryRuleAndExp returns [EObject current=null] : iv_ruleAndExp= ruleAndExp EOF ;
+    // $ANTLR start "entryRuleAndExp"
+    // InternalEventCalculus.g:1732:1: entryRuleAndExp returns [EObject current=null] : iv_ruleAndExp= ruleAndExp EOF ;
     public final EObject entryRuleAndExp() throws RecognitionException {
         EObject current = null;
 
@@ -4744,16 +4540,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2083:2: (iv_ruleAndExp= ruleAndExp EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2084:2: iv_ruleAndExp= ruleAndExp EOF
+            // InternalEventCalculus.g:1733:2: (iv_ruleAndExp= ruleAndExp EOF )
+            // InternalEventCalculus.g:1734:2: iv_ruleAndExp= ruleAndExp EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getAndExpRule(), currentNode); 
-            pushFollow(FOLLOW_ruleAndExp_in_entryRuleAndExp3555);
+             newCompositeNode(grammarAccess.getAndExpRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleAndExp=ruleAndExp();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleAndExp; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAndExp3565); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -4767,14 +4564,15 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleAndExp
+    // $ANTLR end "entryRuleAndExp"
 
 
-    // $ANTLR start ruleAndExp
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2091:1: ruleAndExp returns [EObject current=null] : (this_Relational_0= ruleRelational ( () '&' ( (lv_q_3_0= ruleQualifier ) )? ( (lv_right_4_0= ruleRelational ) ) )* ) ;
+    // $ANTLR start "ruleAndExp"
+    // InternalEventCalculus.g:1741:1: ruleAndExp returns [EObject current=null] : (this_Relational_0= ruleRelational ( () otherlv_2= '&' ( (lv_q_3_0= ruleQualifier ) )? ( (lv_right_4_0= ruleRelational ) ) )* ) ;
     public final EObject ruleAndExp() throws RecognitionException {
         EObject current = null;
 
+        Token otherlv_2=null;
         EObject this_Relational_0 = null;
 
         EObject lv_q_3_0 = null;
@@ -4782,27 +4580,28 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         EObject lv_right_4_0 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2096:6: ( (this_Relational_0= ruleRelational ( () '&' ( (lv_q_3_0= ruleQualifier ) )? ( (lv_right_4_0= ruleRelational ) ) )* ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2097:1: (this_Relational_0= ruleRelational ( () '&' ( (lv_q_3_0= ruleQualifier ) )? ( (lv_right_4_0= ruleRelational ) ) )* )
+            // InternalEventCalculus.g:1744:28: ( (this_Relational_0= ruleRelational ( () otherlv_2= '&' ( (lv_q_3_0= ruleQualifier ) )? ( (lv_right_4_0= ruleRelational ) ) )* ) )
+            // InternalEventCalculus.g:1745:1: (this_Relational_0= ruleRelational ( () otherlv_2= '&' ( (lv_q_3_0= ruleQualifier ) )? ( (lv_right_4_0= ruleRelational ) ) )* )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2097:1: (this_Relational_0= ruleRelational ( () '&' ( (lv_q_3_0= ruleQualifier ) )? ( (lv_right_4_0= ruleRelational ) ) )* )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2098:5: this_Relational_0= ruleRelational ( () '&' ( (lv_q_3_0= ruleQualifier ) )? ( (lv_right_4_0= ruleRelational ) ) )*
+            // InternalEventCalculus.g:1745:1: (this_Relational_0= ruleRelational ( () otherlv_2= '&' ( (lv_q_3_0= ruleQualifier ) )? ( (lv_right_4_0= ruleRelational ) ) )* )
+            // InternalEventCalculus.g:1746:5: this_Relational_0= ruleRelational ( () otherlv_2= '&' ( (lv_q_3_0= ruleQualifier ) )? ( (lv_right_4_0= ruleRelational ) ) )*
             {
              
-                    currentNode=createCompositeNode(grammarAccess.getAndExpAccess().getRelationalParserRuleCall_0(), currentNode); 
+                    newCompositeNode(grammarAccess.getAndExpAccess().getRelationalParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_ruleRelational_in_ruleAndExp3612);
+            pushFollow(FOLLOW_36);
             this_Relational_0=ruleRelational();
-            _fsp--;
+
+            state._fsp--;
 
              
                     current = this_Relational_0; 
-                    currentNode = currentNode.getParent();
+                    afterParserOrEnumRuleCall();
                 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2106:1: ( () '&' ( (lv_q_3_0= ruleQualifier ) )? ( (lv_right_4_0= ruleRelational ) ) )*
+            // InternalEventCalculus.g:1754:1: ( () otherlv_2= '&' ( (lv_q_3_0= ruleQualifier ) )? ( (lv_right_4_0= ruleRelational ) ) )*
             loop39:
             do {
                 int alt39=2;
@@ -4815,34 +4614,24 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                 switch (alt39) {
             	case 1 :
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2106:2: () '&' ( (lv_q_3_0= ruleQualifier ) )? ( (lv_right_4_0= ruleRelational ) )
+            	    // InternalEventCalculus.g:1754:2: () otherlv_2= '&' ( (lv_q_3_0= ruleQualifier ) )? ( (lv_right_4_0= ruleRelational ) )
             	    {
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2106:2: ()
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2107:5: 
+            	    // InternalEventCalculus.g:1754:2: ()
+            	    // InternalEventCalculus.g:1755:5: 
             	    {
-            	     
-            	            temp=factory.create(grammarAccess.getAndExpAccess().getAndLeftAction_1_0().getType().getClassifier());
-            	            try {
-            	            	factory.set(temp, "left", current, null /*ParserRule*/, currentNode);
-            	            } catch(ValueConverterException vce) {
-            	            	handleValueConverterException(vce);
-            	            }
-            	            current = temp; 
-            	            temp = null;
-            	            CompositeNode newNode = createCompositeNode(grammarAccess.getAndExpAccess().getAndLeftAction_1_0(), currentNode.getParent());
-            	        newNode.getChildren().add(currentNode);
-            	        moveLookaheadInfo(currentNode, newNode);
-            	        currentNode = newNode; 
-            	            associateNodeWithAstElement(currentNode, current); 
+
+            	            current = forceCreateModelElementAndSet(
+            	                grammarAccess.getAndExpAccess().getAndLeftAction_1_0(),
+            	                current);
             	        
 
             	    }
 
-            	    match(input,36,FOLLOW_36_in_ruleAndExp3631); 
+            	    otherlv_2=(Token)match(input,36,FOLLOW_22); 
 
-            	            createLeafNode(grammarAccess.getAndExpAccess().getAmpersandKeyword_1_1(), null); 
+            	        	newLeafNode(otherlv_2, grammarAccess.getAndExpAccess().getAmpersandKeyword_1_1());
             	        
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2126:1: ( (lv_q_3_0= ruleQualifier ) )?
+            	    // InternalEventCalculus.g:1764:1: ( (lv_q_3_0= ruleQualifier ) )?
             	    int alt38=2;
             	    int LA38_0 = input.LA(1);
 
@@ -4858,34 +4647,29 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
             	    }
             	    switch (alt38) {
             	        case 1 :
-            	            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2127:1: (lv_q_3_0= ruleQualifier )
+            	            // InternalEventCalculus.g:1765:1: (lv_q_3_0= ruleQualifier )
             	            {
-            	            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2127:1: (lv_q_3_0= ruleQualifier )
-            	            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2128:3: lv_q_3_0= ruleQualifier
+            	            // InternalEventCalculus.g:1765:1: (lv_q_3_0= ruleQualifier )
+            	            // InternalEventCalculus.g:1766:3: lv_q_3_0= ruleQualifier
             	            {
             	             
-            	            	        currentNode=createCompositeNode(grammarAccess.getAndExpAccess().getQQualifierParserRuleCall_1_2_0(), currentNode); 
+            	            	        newCompositeNode(grammarAccess.getAndExpAccess().getQQualifierParserRuleCall_1_2_0()); 
             	            	    
-            	            pushFollow(FOLLOW_ruleQualifier_in_ruleAndExp3652);
+            	            pushFollow(FOLLOW_34);
             	            lv_q_3_0=ruleQualifier();
-            	            _fsp--;
+
+            	            state._fsp--;
 
 
             	            	        if (current==null) {
-            	            	            current = factory.create(grammarAccess.getAndExpRule().getType().getClassifier());
-            	            	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	            	            current = createModelElementForParent(grammarAccess.getAndExpRule());
             	            	        }
-            	            	        try {
-            	            	       		set(
-            	            	       			current, 
-            	            	       			"q",
-            	            	        		lv_q_3_0, 
-            	            	        		"Qualifier", 
-            	            	        		currentNode);
-            	            	        } catch (ValueConverterException vce) {
-            	            				handleValueConverterException(vce);
-            	            	        }
-            	            	        currentNode = currentNode.getParent();
+            	                   		set(
+            	                   			current, 
+            	                   			"q",
+            	                    		lv_q_3_0, 
+            	                    		"uk.ac.open.event.EventCalculus.Qualifier");
+            	            	        afterParserOrEnumRuleCall();
             	            	    
 
             	            }
@@ -4896,35 +4680,30 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2150:3: ( (lv_right_4_0= ruleRelational ) )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2151:1: (lv_right_4_0= ruleRelational )
+            	    // InternalEventCalculus.g:1782:3: ( (lv_right_4_0= ruleRelational ) )
+            	    // InternalEventCalculus.g:1783:1: (lv_right_4_0= ruleRelational )
             	    {
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2151:1: (lv_right_4_0= ruleRelational )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2152:3: lv_right_4_0= ruleRelational
+            	    // InternalEventCalculus.g:1783:1: (lv_right_4_0= ruleRelational )
+            	    // InternalEventCalculus.g:1784:3: lv_right_4_0= ruleRelational
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getAndExpAccess().getRightRelationalParserRuleCall_1_3_0(), currentNode); 
+            	    	        newCompositeNode(grammarAccess.getAndExpAccess().getRightRelationalParserRuleCall_1_3_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleRelational_in_ruleAndExp3674);
+            	    pushFollow(FOLLOW_36);
             	    lv_right_4_0=ruleRelational();
-            	    _fsp--;
+
+            	    state._fsp--;
 
 
             	    	        if (current==null) {
-            	    	            current = factory.create(grammarAccess.getAndExpRule().getType().getClassifier());
-            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	    	            current = createModelElementForParent(grammarAccess.getAndExpRule());
             	    	        }
-            	    	        try {
-            	    	       		set(
-            	    	       			current, 
-            	    	       			"right",
-            	    	        		lv_right_4_0, 
-            	    	        		"Relational", 
-            	    	        		currentNode);
-            	    	        } catch (ValueConverterException vce) {
-            	    				handleValueConverterException(vce);
-            	    	        }
-            	    	        currentNode = currentNode.getParent();
+            	           		set(
+            	           			current, 
+            	           			"right",
+            	            		lv_right_4_0, 
+            	            		"uk.ac.open.event.EventCalculus.Relational");
+            	    	        afterParserOrEnumRuleCall();
             	    	    
 
             	    }
@@ -4947,9 +4726,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -4960,11 +4737,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleAndExp
+    // $ANTLR end "ruleAndExp"
 
 
-    // $ANTLR start entryRuleRelational
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2182:1: entryRuleRelational returns [EObject current=null] : iv_ruleRelational= ruleRelational EOF ;
+    // $ANTLR start "entryRuleRelational"
+    // InternalEventCalculus.g:1808:1: entryRuleRelational returns [EObject current=null] : iv_ruleRelational= ruleRelational EOF ;
     public final EObject entryRuleRelational() throws RecognitionException {
         EObject current = null;
 
@@ -4972,16 +4749,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2183:2: (iv_ruleRelational= ruleRelational EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2184:2: iv_ruleRelational= ruleRelational EOF
+            // InternalEventCalculus.g:1809:2: (iv_ruleRelational= ruleRelational EOF )
+            // InternalEventCalculus.g:1810:2: iv_ruleRelational= ruleRelational EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getRelationalRule(), currentNode); 
-            pushFollow(FOLLOW_ruleRelational_in_entryRuleRelational3712);
+             newCompositeNode(grammarAccess.getRelationalRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleRelational=ruleRelational();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleRelational; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRelational3722); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -4995,40 +4773,48 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleRelational
+    // $ANTLR end "entryRuleRelational"
 
 
-    // $ANTLR start ruleRelational
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2191:1: ruleRelational returns [EObject current=null] : (this_Addition_0= ruleAddition ( ( ( () '!=' ) | ( () '==' ) | ( () '>=' ) | ( () '<=' ) | ( () '=' ) | ( () '<' ) | ( () '>' ) ) ( (lv_right_15_0= ruleAddition ) ) )? ) ;
+    // $ANTLR start "ruleRelational"
+    // InternalEventCalculus.g:1817:1: ruleRelational returns [EObject current=null] : (this_Addition_0= ruleAddition ( ( ( () otherlv_2= '!=' ) | ( () otherlv_4= '==' ) | ( () otherlv_6= '>=' ) | ( () otherlv_8= '<=' ) | ( () otherlv_10= '=' ) | ( () otherlv_12= '<' ) | ( () otherlv_14= '>' ) ) ( (lv_right_15_0= ruleAddition ) ) )? ) ;
     public final EObject ruleRelational() throws RecognitionException {
         EObject current = null;
 
+        Token otherlv_2=null;
+        Token otherlv_4=null;
+        Token otherlv_6=null;
+        Token otherlv_8=null;
+        Token otherlv_10=null;
+        Token otherlv_12=null;
+        Token otherlv_14=null;
         EObject this_Addition_0 = null;
 
         EObject lv_right_15_0 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2196:6: ( (this_Addition_0= ruleAddition ( ( ( () '!=' ) | ( () '==' ) | ( () '>=' ) | ( () '<=' ) | ( () '=' ) | ( () '<' ) | ( () '>' ) ) ( (lv_right_15_0= ruleAddition ) ) )? ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2197:1: (this_Addition_0= ruleAddition ( ( ( () '!=' ) | ( () '==' ) | ( () '>=' ) | ( () '<=' ) | ( () '=' ) | ( () '<' ) | ( () '>' ) ) ( (lv_right_15_0= ruleAddition ) ) )? )
+            // InternalEventCalculus.g:1820:28: ( (this_Addition_0= ruleAddition ( ( ( () otherlv_2= '!=' ) | ( () otherlv_4= '==' ) | ( () otherlv_6= '>=' ) | ( () otherlv_8= '<=' ) | ( () otherlv_10= '=' ) | ( () otherlv_12= '<' ) | ( () otherlv_14= '>' ) ) ( (lv_right_15_0= ruleAddition ) ) )? ) )
+            // InternalEventCalculus.g:1821:1: (this_Addition_0= ruleAddition ( ( ( () otherlv_2= '!=' ) | ( () otherlv_4= '==' ) | ( () otherlv_6= '>=' ) | ( () otherlv_8= '<=' ) | ( () otherlv_10= '=' ) | ( () otherlv_12= '<' ) | ( () otherlv_14= '>' ) ) ( (lv_right_15_0= ruleAddition ) ) )? )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2197:1: (this_Addition_0= ruleAddition ( ( ( () '!=' ) | ( () '==' ) | ( () '>=' ) | ( () '<=' ) | ( () '=' ) | ( () '<' ) | ( () '>' ) ) ( (lv_right_15_0= ruleAddition ) ) )? )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2198:5: this_Addition_0= ruleAddition ( ( ( () '!=' ) | ( () '==' ) | ( () '>=' ) | ( () '<=' ) | ( () '=' ) | ( () '<' ) | ( () '>' ) ) ( (lv_right_15_0= ruleAddition ) ) )?
+            // InternalEventCalculus.g:1821:1: (this_Addition_0= ruleAddition ( ( ( () otherlv_2= '!=' ) | ( () otherlv_4= '==' ) | ( () otherlv_6= '>=' ) | ( () otherlv_8= '<=' ) | ( () otherlv_10= '=' ) | ( () otherlv_12= '<' ) | ( () otherlv_14= '>' ) ) ( (lv_right_15_0= ruleAddition ) ) )? )
+            // InternalEventCalculus.g:1822:5: this_Addition_0= ruleAddition ( ( ( () otherlv_2= '!=' ) | ( () otherlv_4= '==' ) | ( () otherlv_6= '>=' ) | ( () otherlv_8= '<=' ) | ( () otherlv_10= '=' ) | ( () otherlv_12= '<' ) | ( () otherlv_14= '>' ) ) ( (lv_right_15_0= ruleAddition ) ) )?
             {
              
-                    currentNode=createCompositeNode(grammarAccess.getRelationalAccess().getAdditionParserRuleCall_0(), currentNode); 
+                    newCompositeNode(grammarAccess.getRelationalAccess().getAdditionParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_ruleAddition_in_ruleRelational3769);
+            pushFollow(FOLLOW_37);
             this_Addition_0=ruleAddition();
-            _fsp--;
+
+            state._fsp--;
 
              
                     current = this_Addition_0; 
-                    currentNode = currentNode.getParent();
+                    afterParserOrEnumRuleCall();
                 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2206:1: ( ( ( () '!=' ) | ( () '==' ) | ( () '>=' ) | ( () '<=' ) | ( () '=' ) | ( () '<' ) | ( () '>' ) ) ( (lv_right_15_0= ruleAddition ) ) )?
+            // InternalEventCalculus.g:1830:1: ( ( ( () otherlv_2= '!=' ) | ( () otherlv_4= '==' ) | ( () otherlv_6= '>=' ) | ( () otherlv_8= '<=' ) | ( () otherlv_10= '=' ) | ( () otherlv_12= '<' ) | ( () otherlv_14= '>' ) ) ( (lv_right_15_0= ruleAddition ) ) )?
             int alt41=2;
             int LA41_0 = input.LA(1);
 
@@ -5037,9 +4823,9 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
             }
             switch (alt41) {
                 case 1 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2206:2: ( ( () '!=' ) | ( () '==' ) | ( () '>=' ) | ( () '<=' ) | ( () '=' ) | ( () '<' ) | ( () '>' ) ) ( (lv_right_15_0= ruleAddition ) )
+                    // InternalEventCalculus.g:1830:2: ( ( () otherlv_2= '!=' ) | ( () otherlv_4= '==' ) | ( () otherlv_6= '>=' ) | ( () otherlv_8= '<=' ) | ( () otherlv_10= '=' ) | ( () otherlv_12= '<' ) | ( () otherlv_14= '>' ) ) ( (lv_right_15_0= ruleAddition ) )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2206:2: ( ( () '!=' ) | ( () '==' ) | ( () '>=' ) | ( () '<=' ) | ( () '=' ) | ( () '<' ) | ( () '>' ) )
+                    // InternalEventCalculus.g:1830:2: ( ( () otherlv_2= '!=' ) | ( () otherlv_4= '==' ) | ( () otherlv_6= '>=' ) | ( () otherlv_8= '<=' ) | ( () otherlv_10= '=' ) | ( () otherlv_12= '<' ) | ( () otherlv_14= '>' ) )
                     int alt40=7;
                     switch ( input.LA(1) ) {
                     case 37:
@@ -5079,42 +4865,32 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                         break;
                     default:
                         NoViableAltException nvae =
-                            new NoViableAltException("2206:2: ( ( () '!=' ) | ( () '==' ) | ( () '>=' ) | ( () '<=' ) | ( () '=' ) | ( () '<' ) | ( () '>' ) )", 40, 0, input);
+                            new NoViableAltException("", 40, 0, input);
 
                         throw nvae;
                     }
 
                     switch (alt40) {
                         case 1 :
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2206:3: ( () '!=' )
+                            // InternalEventCalculus.g:1830:3: ( () otherlv_2= '!=' )
                             {
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2206:3: ( () '!=' )
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2206:4: () '!='
+                            // InternalEventCalculus.g:1830:3: ( () otherlv_2= '!=' )
+                            // InternalEventCalculus.g:1830:4: () otherlv_2= '!='
                             {
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2206:4: ()
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2207:5: 
+                            // InternalEventCalculus.g:1830:4: ()
+                            // InternalEventCalculus.g:1831:5: 
                             {
-                             
-                                    temp=factory.create(grammarAccess.getRelationalAccess().getRelNotEqLeftAction_1_0_0_0().getType().getClassifier());
-                                    try {
-                                    	factory.set(temp, "left", current, null /*ParserRule*/, currentNode);
-                                    } catch(ValueConverterException vce) {
-                                    	handleValueConverterException(vce);
-                                    }
-                                    current = temp; 
-                                    temp = null;
-                                    CompositeNode newNode = createCompositeNode(grammarAccess.getRelationalAccess().getRelNotEqLeftAction_1_0_0_0(), currentNode.getParent());
-                                newNode.getChildren().add(currentNode);
-                                moveLookaheadInfo(currentNode, newNode);
-                                currentNode = newNode; 
-                                    associateNodeWithAstElement(currentNode, current); 
+
+                                    current = forceCreateModelElementAndSet(
+                                        grammarAccess.getRelationalAccess().getRelNotEqLeftAction_1_0_0_0(),
+                                        current);
                                 
 
                             }
 
-                            match(input,37,FOLLOW_37_in_ruleRelational3790); 
+                            otherlv_2=(Token)match(input,37,FOLLOW_34); 
 
-                                    createLeafNode(grammarAccess.getRelationalAccess().getExclamationMarkEqualsSignKeyword_1_0_0_1(), null); 
+                                	newLeafNode(otherlv_2, grammarAccess.getRelationalAccess().getExclamationMarkEqualsSignKeyword_1_0_0_1());
                                 
 
                             }
@@ -5123,35 +4899,25 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2227:6: ( () '==' )
+                            // InternalEventCalculus.g:1841:6: ( () otherlv_4= '==' )
                             {
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2227:6: ( () '==' )
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2227:7: () '=='
+                            // InternalEventCalculus.g:1841:6: ( () otherlv_4= '==' )
+                            // InternalEventCalculus.g:1841:7: () otherlv_4= '=='
                             {
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2227:7: ()
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2228:5: 
+                            // InternalEventCalculus.g:1841:7: ()
+                            // InternalEventCalculus.g:1842:5: 
                             {
-                             
-                                    temp=factory.create(grammarAccess.getRelationalAccess().getRelEqEqLeftAction_1_0_1_0().getType().getClassifier());
-                                    try {
-                                    	factory.set(temp, "left", current, null /*ParserRule*/, currentNode);
-                                    } catch(ValueConverterException vce) {
-                                    	handleValueConverterException(vce);
-                                    }
-                                    current = temp; 
-                                    temp = null;
-                                    CompositeNode newNode = createCompositeNode(grammarAccess.getRelationalAccess().getRelEqEqLeftAction_1_0_1_0(), currentNode.getParent());
-                                newNode.getChildren().add(currentNode);
-                                moveLookaheadInfo(currentNode, newNode);
-                                currentNode = newNode; 
-                                    associateNodeWithAstElement(currentNode, current); 
+
+                                    current = forceCreateModelElementAndSet(
+                                        grammarAccess.getRelationalAccess().getRelEqEqLeftAction_1_0_1_0(),
+                                        current);
                                 
 
                             }
 
-                            match(input,38,FOLLOW_38_in_ruleRelational3817); 
+                            otherlv_4=(Token)match(input,38,FOLLOW_34); 
 
-                                    createLeafNode(grammarAccess.getRelationalAccess().getEqualsSignEqualsSignKeyword_1_0_1_1(), null); 
+                                	newLeafNode(otherlv_4, grammarAccess.getRelationalAccess().getEqualsSignEqualsSignKeyword_1_0_1_1());
                                 
 
                             }
@@ -5160,35 +4926,25 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 3 :
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2248:6: ( () '>=' )
+                            // InternalEventCalculus.g:1852:6: ( () otherlv_6= '>=' )
                             {
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2248:6: ( () '>=' )
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2248:7: () '>='
+                            // InternalEventCalculus.g:1852:6: ( () otherlv_6= '>=' )
+                            // InternalEventCalculus.g:1852:7: () otherlv_6= '>='
                             {
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2248:7: ()
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2249:5: 
+                            // InternalEventCalculus.g:1852:7: ()
+                            // InternalEventCalculus.g:1853:5: 
                             {
-                             
-                                    temp=factory.create(grammarAccess.getRelationalAccess().getRelLtEqLeftAction_1_0_2_0().getType().getClassifier());
-                                    try {
-                                    	factory.set(temp, "left", current, null /*ParserRule*/, currentNode);
-                                    } catch(ValueConverterException vce) {
-                                    	handleValueConverterException(vce);
-                                    }
-                                    current = temp; 
-                                    temp = null;
-                                    CompositeNode newNode = createCompositeNode(grammarAccess.getRelationalAccess().getRelLtEqLeftAction_1_0_2_0(), currentNode.getParent());
-                                newNode.getChildren().add(currentNode);
-                                moveLookaheadInfo(currentNode, newNode);
-                                currentNode = newNode; 
-                                    associateNodeWithAstElement(currentNode, current); 
+
+                                    current = forceCreateModelElementAndSet(
+                                        grammarAccess.getRelationalAccess().getRelLtEqLeftAction_1_0_2_0(),
+                                        current);
                                 
 
                             }
 
-                            match(input,39,FOLLOW_39_in_ruleRelational3844); 
+                            otherlv_6=(Token)match(input,39,FOLLOW_34); 
 
-                                    createLeafNode(grammarAccess.getRelationalAccess().getGreaterThanSignEqualsSignKeyword_1_0_2_1(), null); 
+                                	newLeafNode(otherlv_6, grammarAccess.getRelationalAccess().getGreaterThanSignEqualsSignKeyword_1_0_2_1());
                                 
 
                             }
@@ -5197,35 +4953,25 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 4 :
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2269:6: ( () '<=' )
+                            // InternalEventCalculus.g:1863:6: ( () otherlv_8= '<=' )
                             {
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2269:6: ( () '<=' )
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2269:7: () '<='
+                            // InternalEventCalculus.g:1863:6: ( () otherlv_8= '<=' )
+                            // InternalEventCalculus.g:1863:7: () otherlv_8= '<='
                             {
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2269:7: ()
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2270:5: 
+                            // InternalEventCalculus.g:1863:7: ()
+                            // InternalEventCalculus.g:1864:5: 
                             {
-                             
-                                    temp=factory.create(grammarAccess.getRelationalAccess().getRelGtEqLeftAction_1_0_3_0().getType().getClassifier());
-                                    try {
-                                    	factory.set(temp, "left", current, null /*ParserRule*/, currentNode);
-                                    } catch(ValueConverterException vce) {
-                                    	handleValueConverterException(vce);
-                                    }
-                                    current = temp; 
-                                    temp = null;
-                                    CompositeNode newNode = createCompositeNode(grammarAccess.getRelationalAccess().getRelGtEqLeftAction_1_0_3_0(), currentNode.getParent());
-                                newNode.getChildren().add(currentNode);
-                                moveLookaheadInfo(currentNode, newNode);
-                                currentNode = newNode; 
-                                    associateNodeWithAstElement(currentNode, current); 
+
+                                    current = forceCreateModelElementAndSet(
+                                        grammarAccess.getRelationalAccess().getRelGtEqLeftAction_1_0_3_0(),
+                                        current);
                                 
 
                             }
 
-                            match(input,40,FOLLOW_40_in_ruleRelational3871); 
+                            otherlv_8=(Token)match(input,40,FOLLOW_34); 
 
-                                    createLeafNode(grammarAccess.getRelationalAccess().getLessThanSignEqualsSignKeyword_1_0_3_1(), null); 
+                                	newLeafNode(otherlv_8, grammarAccess.getRelationalAccess().getLessThanSignEqualsSignKeyword_1_0_3_1());
                                 
 
                             }
@@ -5234,35 +4980,25 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 5 :
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2290:6: ( () '=' )
+                            // InternalEventCalculus.g:1874:6: ( () otherlv_10= '=' )
                             {
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2290:6: ( () '=' )
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2290:7: () '='
+                            // InternalEventCalculus.g:1874:6: ( () otherlv_10= '=' )
+                            // InternalEventCalculus.g:1874:7: () otherlv_10= '='
                             {
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2290:7: ()
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2291:5: 
+                            // InternalEventCalculus.g:1874:7: ()
+                            // InternalEventCalculus.g:1875:5: 
                             {
-                             
-                                    temp=factory.create(grammarAccess.getRelationalAccess().getRelEqLeftAction_1_0_4_0().getType().getClassifier());
-                                    try {
-                                    	factory.set(temp, "left", current, null /*ParserRule*/, currentNode);
-                                    } catch(ValueConverterException vce) {
-                                    	handleValueConverterException(vce);
-                                    }
-                                    current = temp; 
-                                    temp = null;
-                                    CompositeNode newNode = createCompositeNode(grammarAccess.getRelationalAccess().getRelEqLeftAction_1_0_4_0(), currentNode.getParent());
-                                newNode.getChildren().add(currentNode);
-                                moveLookaheadInfo(currentNode, newNode);
-                                currentNode = newNode; 
-                                    associateNodeWithAstElement(currentNode, current); 
+
+                                    current = forceCreateModelElementAndSet(
+                                        grammarAccess.getRelationalAccess().getRelEqLeftAction_1_0_4_0(),
+                                        current);
                                 
 
                             }
 
-                            match(input,41,FOLLOW_41_in_ruleRelational3898); 
+                            otherlv_10=(Token)match(input,41,FOLLOW_34); 
 
-                                    createLeafNode(grammarAccess.getRelationalAccess().getEqualsSignKeyword_1_0_4_1(), null); 
+                                	newLeafNode(otherlv_10, grammarAccess.getRelationalAccess().getEqualsSignKeyword_1_0_4_1());
                                 
 
                             }
@@ -5271,35 +5007,25 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 6 :
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2311:6: ( () '<' )
+                            // InternalEventCalculus.g:1885:6: ( () otherlv_12= '<' )
                             {
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2311:6: ( () '<' )
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2311:7: () '<'
+                            // InternalEventCalculus.g:1885:6: ( () otherlv_12= '<' )
+                            // InternalEventCalculus.g:1885:7: () otherlv_12= '<'
                             {
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2311:7: ()
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2312:5: 
+                            // InternalEventCalculus.g:1885:7: ()
+                            // InternalEventCalculus.g:1886:5: 
                             {
-                             
-                                    temp=factory.create(grammarAccess.getRelationalAccess().getRelLtLeftAction_1_0_5_0().getType().getClassifier());
-                                    try {
-                                    	factory.set(temp, "left", current, null /*ParserRule*/, currentNode);
-                                    } catch(ValueConverterException vce) {
-                                    	handleValueConverterException(vce);
-                                    }
-                                    current = temp; 
-                                    temp = null;
-                                    CompositeNode newNode = createCompositeNode(grammarAccess.getRelationalAccess().getRelLtLeftAction_1_0_5_0(), currentNode.getParent());
-                                newNode.getChildren().add(currentNode);
-                                moveLookaheadInfo(currentNode, newNode);
-                                currentNode = newNode; 
-                                    associateNodeWithAstElement(currentNode, current); 
+
+                                    current = forceCreateModelElementAndSet(
+                                        grammarAccess.getRelationalAccess().getRelLtLeftAction_1_0_5_0(),
+                                        current);
                                 
 
                             }
 
-                            match(input,42,FOLLOW_42_in_ruleRelational3925); 
+                            otherlv_12=(Token)match(input,42,FOLLOW_34); 
 
-                                    createLeafNode(grammarAccess.getRelationalAccess().getLessThanSignKeyword_1_0_5_1(), null); 
+                                	newLeafNode(otherlv_12, grammarAccess.getRelationalAccess().getLessThanSignKeyword_1_0_5_1());
                                 
 
                             }
@@ -5308,35 +5034,25 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 7 :
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2332:6: ( () '>' )
+                            // InternalEventCalculus.g:1896:6: ( () otherlv_14= '>' )
                             {
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2332:6: ( () '>' )
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2332:7: () '>'
+                            // InternalEventCalculus.g:1896:6: ( () otherlv_14= '>' )
+                            // InternalEventCalculus.g:1896:7: () otherlv_14= '>'
                             {
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2332:7: ()
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2333:5: 
+                            // InternalEventCalculus.g:1896:7: ()
+                            // InternalEventCalculus.g:1897:5: 
                             {
-                             
-                                    temp=factory.create(grammarAccess.getRelationalAccess().getRelGtLeftAction_1_0_6_0().getType().getClassifier());
-                                    try {
-                                    	factory.set(temp, "left", current, null /*ParserRule*/, currentNode);
-                                    } catch(ValueConverterException vce) {
-                                    	handleValueConverterException(vce);
-                                    }
-                                    current = temp; 
-                                    temp = null;
-                                    CompositeNode newNode = createCompositeNode(grammarAccess.getRelationalAccess().getRelGtLeftAction_1_0_6_0(), currentNode.getParent());
-                                newNode.getChildren().add(currentNode);
-                                moveLookaheadInfo(currentNode, newNode);
-                                currentNode = newNode; 
-                                    associateNodeWithAstElement(currentNode, current); 
+
+                                    current = forceCreateModelElementAndSet(
+                                        grammarAccess.getRelationalAccess().getRelGtLeftAction_1_0_6_0(),
+                                        current);
                                 
 
                             }
 
-                            match(input,43,FOLLOW_43_in_ruleRelational3952); 
+                            otherlv_14=(Token)match(input,43,FOLLOW_34); 
 
-                                    createLeafNode(grammarAccess.getRelationalAccess().getGreaterThanSignKeyword_1_0_6_1(), null); 
+                                	newLeafNode(otherlv_14, grammarAccess.getRelationalAccess().getGreaterThanSignKeyword_1_0_6_1());
                                 
 
                             }
@@ -5347,35 +5063,30 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2352:3: ( (lv_right_15_0= ruleAddition ) )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2353:1: (lv_right_15_0= ruleAddition )
+                    // InternalEventCalculus.g:1906:3: ( (lv_right_15_0= ruleAddition ) )
+                    // InternalEventCalculus.g:1907:1: (lv_right_15_0= ruleAddition )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2353:1: (lv_right_15_0= ruleAddition )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2354:3: lv_right_15_0= ruleAddition
+                    // InternalEventCalculus.g:1907:1: (lv_right_15_0= ruleAddition )
+                    // InternalEventCalculus.g:1908:3: lv_right_15_0= ruleAddition
                     {
                      
-                    	        currentNode=createCompositeNode(grammarAccess.getRelationalAccess().getRightAdditionParserRuleCall_1_1_0(), currentNode); 
+                    	        newCompositeNode(grammarAccess.getRelationalAccess().getRightAdditionParserRuleCall_1_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleAddition_in_ruleRelational3975);
+                    pushFollow(FOLLOW_2);
                     lv_right_15_0=ruleAddition();
-                    _fsp--;
+
+                    state._fsp--;
 
 
                     	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getRelationalRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode.getParent(), current);
+                    	            current = createModelElementForParent(grammarAccess.getRelationalRule());
                     	        }
-                    	        try {
-                    	       		set(
-                    	       			current, 
-                    	       			"right",
-                    	        		lv_right_15_0, 
-                    	        		"Addition", 
-                    	        		currentNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	        currentNode = currentNode.getParent();
+                           		set(
+                           			current, 
+                           			"right",
+                            		lv_right_15_0, 
+                            		"uk.ac.open.event.EventCalculus.Addition");
+                    	        afterParserOrEnumRuleCall();
                     	    
 
                     }
@@ -5395,9 +5106,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -5408,11 +5117,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleRelational
+    // $ANTLR end "ruleRelational"
 
 
-    // $ANTLR start entryRuleAddition
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2384:1: entryRuleAddition returns [EObject current=null] : iv_ruleAddition= ruleAddition EOF ;
+    // $ANTLR start "entryRuleAddition"
+    // InternalEventCalculus.g:1932:1: entryRuleAddition returns [EObject current=null] : iv_ruleAddition= ruleAddition EOF ;
     public final EObject entryRuleAddition() throws RecognitionException {
         EObject current = null;
 
@@ -5420,16 +5129,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2385:2: (iv_ruleAddition= ruleAddition EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2386:2: iv_ruleAddition= ruleAddition EOF
+            // InternalEventCalculus.g:1933:2: (iv_ruleAddition= ruleAddition EOF )
+            // InternalEventCalculus.g:1934:2: iv_ruleAddition= ruleAddition EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getAdditionRule(), currentNode); 
-            pushFollow(FOLLOW_ruleAddition_in_entryRuleAddition4013);
+             newCompositeNode(grammarAccess.getAdditionRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleAddition=ruleAddition();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleAddition; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAddition4023); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -5443,40 +5153,43 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleAddition
+    // $ANTLR end "entryRuleAddition"
 
 
-    // $ANTLR start ruleAddition
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2393:1: ruleAddition returns [EObject current=null] : (this_Multiplication_0= ruleMultiplication ( ( ( () '+' ) | ( () '-' ) ) ( (lv_right_5_0= ruleMultiplication ) ) )* ) ;
+    // $ANTLR start "ruleAddition"
+    // InternalEventCalculus.g:1941:1: ruleAddition returns [EObject current=null] : (this_Multiplication_0= ruleMultiplication ( ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ( (lv_right_5_0= ruleMultiplication ) ) )* ) ;
     public final EObject ruleAddition() throws RecognitionException {
         EObject current = null;
 
+        Token otherlv_2=null;
+        Token otherlv_4=null;
         EObject this_Multiplication_0 = null;
 
         EObject lv_right_5_0 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2398:6: ( (this_Multiplication_0= ruleMultiplication ( ( ( () '+' ) | ( () '-' ) ) ( (lv_right_5_0= ruleMultiplication ) ) )* ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2399:1: (this_Multiplication_0= ruleMultiplication ( ( ( () '+' ) | ( () '-' ) ) ( (lv_right_5_0= ruleMultiplication ) ) )* )
+            // InternalEventCalculus.g:1944:28: ( (this_Multiplication_0= ruleMultiplication ( ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ( (lv_right_5_0= ruleMultiplication ) ) )* ) )
+            // InternalEventCalculus.g:1945:1: (this_Multiplication_0= ruleMultiplication ( ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ( (lv_right_5_0= ruleMultiplication ) ) )* )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2399:1: (this_Multiplication_0= ruleMultiplication ( ( ( () '+' ) | ( () '-' ) ) ( (lv_right_5_0= ruleMultiplication ) ) )* )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2400:5: this_Multiplication_0= ruleMultiplication ( ( ( () '+' ) | ( () '-' ) ) ( (lv_right_5_0= ruleMultiplication ) ) )*
+            // InternalEventCalculus.g:1945:1: (this_Multiplication_0= ruleMultiplication ( ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ( (lv_right_5_0= ruleMultiplication ) ) )* )
+            // InternalEventCalculus.g:1946:5: this_Multiplication_0= ruleMultiplication ( ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ( (lv_right_5_0= ruleMultiplication ) ) )*
             {
              
-                    currentNode=createCompositeNode(grammarAccess.getAdditionAccess().getMultiplicationParserRuleCall_0(), currentNode); 
+                    newCompositeNode(grammarAccess.getAdditionAccess().getMultiplicationParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_ruleMultiplication_in_ruleAddition4070);
+            pushFollow(FOLLOW_38);
             this_Multiplication_0=ruleMultiplication();
-            _fsp--;
+
+            state._fsp--;
 
              
                     current = this_Multiplication_0; 
-                    currentNode = currentNode.getParent();
+                    afterParserOrEnumRuleCall();
                 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2408:1: ( ( ( () '+' ) | ( () '-' ) ) ( (lv_right_5_0= ruleMultiplication ) ) )*
+            // InternalEventCalculus.g:1954:1: ( ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ( (lv_right_5_0= ruleMultiplication ) ) )*
             loop43:
             do {
                 int alt43=2;
@@ -5489,9 +5202,9 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                 switch (alt43) {
             	case 1 :
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2408:2: ( ( () '+' ) | ( () '-' ) ) ( (lv_right_5_0= ruleMultiplication ) )
+            	    // InternalEventCalculus.g:1954:2: ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ( (lv_right_5_0= ruleMultiplication ) )
             	    {
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2408:2: ( ( () '+' ) | ( () '-' ) )
+            	    // InternalEventCalculus.g:1954:2: ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) )
             	    int alt42=2;
             	    int LA42_0 = input.LA(1);
 
@@ -5503,41 +5216,31 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
             	    }
             	    else {
             	        NoViableAltException nvae =
-            	            new NoViableAltException("2408:2: ( ( () '+' ) | ( () '-' ) )", 42, 0, input);
+            	            new NoViableAltException("", 42, 0, input);
 
             	        throw nvae;
             	    }
             	    switch (alt42) {
             	        case 1 :
-            	            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2408:3: ( () '+' )
+            	            // InternalEventCalculus.g:1954:3: ( () otherlv_2= '+' )
             	            {
-            	            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2408:3: ( () '+' )
-            	            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2408:4: () '+'
+            	            // InternalEventCalculus.g:1954:3: ( () otherlv_2= '+' )
+            	            // InternalEventCalculus.g:1954:4: () otherlv_2= '+'
             	            {
-            	            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2408:4: ()
-            	            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2409:5: 
+            	            // InternalEventCalculus.g:1954:4: ()
+            	            // InternalEventCalculus.g:1955:5: 
             	            {
-            	             
-            	                    temp=factory.create(grammarAccess.getAdditionAccess().getPlusLeftAction_1_0_0_0().getType().getClassifier());
-            	                    try {
-            	                    	factory.set(temp, "left", current, null /*ParserRule*/, currentNode);
-            	                    } catch(ValueConverterException vce) {
-            	                    	handleValueConverterException(vce);
-            	                    }
-            	                    current = temp; 
-            	                    temp = null;
-            	                    CompositeNode newNode = createCompositeNode(grammarAccess.getAdditionAccess().getPlusLeftAction_1_0_0_0(), currentNode.getParent());
-            	                newNode.getChildren().add(currentNode);
-            	                moveLookaheadInfo(currentNode, newNode);
-            	                currentNode = newNode; 
-            	                    associateNodeWithAstElement(currentNode, current); 
+
+            	                    current = forceCreateModelElementAndSet(
+            	                        grammarAccess.getAdditionAccess().getPlusLeftAction_1_0_0_0(),
+            	                        current);
             	                
 
             	            }
 
-            	            match(input,44,FOLLOW_44_in_ruleAddition4091); 
+            	            otherlv_2=(Token)match(input,44,FOLLOW_34); 
 
-            	                    createLeafNode(grammarAccess.getAdditionAccess().getPlusSignKeyword_1_0_0_1(), null); 
+            	                	newLeafNode(otherlv_2, grammarAccess.getAdditionAccess().getPlusSignKeyword_1_0_0_1());
             	                
 
             	            }
@@ -5546,35 +5249,25 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2429:6: ( () '-' )
+            	            // InternalEventCalculus.g:1965:6: ( () otherlv_4= '-' )
             	            {
-            	            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2429:6: ( () '-' )
-            	            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2429:7: () '-'
+            	            // InternalEventCalculus.g:1965:6: ( () otherlv_4= '-' )
+            	            // InternalEventCalculus.g:1965:7: () otherlv_4= '-'
             	            {
-            	            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2429:7: ()
-            	            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2430:5: 
+            	            // InternalEventCalculus.g:1965:7: ()
+            	            // InternalEventCalculus.g:1966:5: 
             	            {
-            	             
-            	                    temp=factory.create(grammarAccess.getAdditionAccess().getMinusLeftAction_1_0_1_0().getType().getClassifier());
-            	                    try {
-            	                    	factory.set(temp, "left", current, null /*ParserRule*/, currentNode);
-            	                    } catch(ValueConverterException vce) {
-            	                    	handleValueConverterException(vce);
-            	                    }
-            	                    current = temp; 
-            	                    temp = null;
-            	                    CompositeNode newNode = createCompositeNode(grammarAccess.getAdditionAccess().getMinusLeftAction_1_0_1_0(), currentNode.getParent());
-            	                newNode.getChildren().add(currentNode);
-            	                moveLookaheadInfo(currentNode, newNode);
-            	                currentNode = newNode; 
-            	                    associateNodeWithAstElement(currentNode, current); 
+
+            	                    current = forceCreateModelElementAndSet(
+            	                        grammarAccess.getAdditionAccess().getMinusLeftAction_1_0_1_0(),
+            	                        current);
             	                
 
             	            }
 
-            	            match(input,45,FOLLOW_45_in_ruleAddition4118); 
+            	            otherlv_4=(Token)match(input,45,FOLLOW_34); 
 
-            	                    createLeafNode(grammarAccess.getAdditionAccess().getHyphenMinusKeyword_1_0_1_1(), null); 
+            	                	newLeafNode(otherlv_4, grammarAccess.getAdditionAccess().getHyphenMinusKeyword_1_0_1_1());
             	                
 
             	            }
@@ -5585,35 +5278,30 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2449:3: ( (lv_right_5_0= ruleMultiplication ) )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2450:1: (lv_right_5_0= ruleMultiplication )
+            	    // InternalEventCalculus.g:1975:3: ( (lv_right_5_0= ruleMultiplication ) )
+            	    // InternalEventCalculus.g:1976:1: (lv_right_5_0= ruleMultiplication )
             	    {
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2450:1: (lv_right_5_0= ruleMultiplication )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2451:3: lv_right_5_0= ruleMultiplication
+            	    // InternalEventCalculus.g:1976:1: (lv_right_5_0= ruleMultiplication )
+            	    // InternalEventCalculus.g:1977:3: lv_right_5_0= ruleMultiplication
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getAdditionAccess().getRightMultiplicationParserRuleCall_1_1_0(), currentNode); 
+            	    	        newCompositeNode(grammarAccess.getAdditionAccess().getRightMultiplicationParserRuleCall_1_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleMultiplication_in_ruleAddition4141);
+            	    pushFollow(FOLLOW_38);
             	    lv_right_5_0=ruleMultiplication();
-            	    _fsp--;
+
+            	    state._fsp--;
 
 
             	    	        if (current==null) {
-            	    	            current = factory.create(grammarAccess.getAdditionRule().getType().getClassifier());
-            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	    	            current = createModelElementForParent(grammarAccess.getAdditionRule());
             	    	        }
-            	    	        try {
-            	    	       		set(
-            	    	       			current, 
-            	    	       			"right",
-            	    	        		lv_right_5_0, 
-            	    	        		"Multiplication", 
-            	    	        		currentNode);
-            	    	        } catch (ValueConverterException vce) {
-            	    				handleValueConverterException(vce);
-            	    	        }
-            	    	        currentNode = currentNode.getParent();
+            	           		set(
+            	           			current, 
+            	           			"right",
+            	            		lv_right_5_0, 
+            	            		"uk.ac.open.event.EventCalculus.Multiplication");
+            	    	        afterParserOrEnumRuleCall();
             	    	    
 
             	    }
@@ -5636,9 +5324,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -5649,11 +5335,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleAddition
+    // $ANTLR end "ruleAddition"
 
 
-    // $ANTLR start entryRuleMultiplication
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2481:1: entryRuleMultiplication returns [EObject current=null] : iv_ruleMultiplication= ruleMultiplication EOF ;
+    // $ANTLR start "entryRuleMultiplication"
+    // InternalEventCalculus.g:2001:1: entryRuleMultiplication returns [EObject current=null] : iv_ruleMultiplication= ruleMultiplication EOF ;
     public final EObject entryRuleMultiplication() throws RecognitionException {
         EObject current = null;
 
@@ -5661,16 +5347,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2482:2: (iv_ruleMultiplication= ruleMultiplication EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2483:2: iv_ruleMultiplication= ruleMultiplication EOF
+            // InternalEventCalculus.g:2002:2: (iv_ruleMultiplication= ruleMultiplication EOF )
+            // InternalEventCalculus.g:2003:2: iv_ruleMultiplication= ruleMultiplication EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getMultiplicationRule(), currentNode); 
-            pushFollow(FOLLOW_ruleMultiplication_in_entryRuleMultiplication4179);
+             newCompositeNode(grammarAccess.getMultiplicationRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleMultiplication=ruleMultiplication();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleMultiplication; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMultiplication4189); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -5684,40 +5371,43 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleMultiplication
+    // $ANTLR end "entryRuleMultiplication"
 
 
-    // $ANTLR start ruleMultiplication
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2490:1: ruleMultiplication returns [EObject current=null] : (this_Power_0= rulePower ( ( ( () '*' ) | ( () '/' ) ) ( (lv_right_5_0= rulePower ) ) )* ) ;
+    // $ANTLR start "ruleMultiplication"
+    // InternalEventCalculus.g:2010:1: ruleMultiplication returns [EObject current=null] : (this_Power_0= rulePower ( ( ( () otherlv_2= '*' ) | ( () otherlv_4= '/' ) ) ( (lv_right_5_0= rulePower ) ) )* ) ;
     public final EObject ruleMultiplication() throws RecognitionException {
         EObject current = null;
 
+        Token otherlv_2=null;
+        Token otherlv_4=null;
         EObject this_Power_0 = null;
 
         EObject lv_right_5_0 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2495:6: ( (this_Power_0= rulePower ( ( ( () '*' ) | ( () '/' ) ) ( (lv_right_5_0= rulePower ) ) )* ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2496:1: (this_Power_0= rulePower ( ( ( () '*' ) | ( () '/' ) ) ( (lv_right_5_0= rulePower ) ) )* )
+            // InternalEventCalculus.g:2013:28: ( (this_Power_0= rulePower ( ( ( () otherlv_2= '*' ) | ( () otherlv_4= '/' ) ) ( (lv_right_5_0= rulePower ) ) )* ) )
+            // InternalEventCalculus.g:2014:1: (this_Power_0= rulePower ( ( ( () otherlv_2= '*' ) | ( () otherlv_4= '/' ) ) ( (lv_right_5_0= rulePower ) ) )* )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2496:1: (this_Power_0= rulePower ( ( ( () '*' ) | ( () '/' ) ) ( (lv_right_5_0= rulePower ) ) )* )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2497:5: this_Power_0= rulePower ( ( ( () '*' ) | ( () '/' ) ) ( (lv_right_5_0= rulePower ) ) )*
+            // InternalEventCalculus.g:2014:1: (this_Power_0= rulePower ( ( ( () otherlv_2= '*' ) | ( () otherlv_4= '/' ) ) ( (lv_right_5_0= rulePower ) ) )* )
+            // InternalEventCalculus.g:2015:5: this_Power_0= rulePower ( ( ( () otherlv_2= '*' ) | ( () otherlv_4= '/' ) ) ( (lv_right_5_0= rulePower ) ) )*
             {
              
-                    currentNode=createCompositeNode(grammarAccess.getMultiplicationAccess().getPowerParserRuleCall_0(), currentNode); 
+                    newCompositeNode(grammarAccess.getMultiplicationAccess().getPowerParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_rulePower_in_ruleMultiplication4236);
+            pushFollow(FOLLOW_39);
             this_Power_0=rulePower();
-            _fsp--;
+
+            state._fsp--;
 
              
                     current = this_Power_0; 
-                    currentNode = currentNode.getParent();
+                    afterParserOrEnumRuleCall();
                 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2505:1: ( ( ( () '*' ) | ( () '/' ) ) ( (lv_right_5_0= rulePower ) ) )*
+            // InternalEventCalculus.g:2023:1: ( ( ( () otherlv_2= '*' ) | ( () otherlv_4= '/' ) ) ( (lv_right_5_0= rulePower ) ) )*
             loop45:
             do {
                 int alt45=2;
@@ -5730,9 +5420,9 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                 switch (alt45) {
             	case 1 :
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2505:2: ( ( () '*' ) | ( () '/' ) ) ( (lv_right_5_0= rulePower ) )
+            	    // InternalEventCalculus.g:2023:2: ( ( () otherlv_2= '*' ) | ( () otherlv_4= '/' ) ) ( (lv_right_5_0= rulePower ) )
             	    {
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2505:2: ( ( () '*' ) | ( () '/' ) )
+            	    // InternalEventCalculus.g:2023:2: ( ( () otherlv_2= '*' ) | ( () otherlv_4= '/' ) )
             	    int alt44=2;
             	    int LA44_0 = input.LA(1);
 
@@ -5744,41 +5434,31 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
             	    }
             	    else {
             	        NoViableAltException nvae =
-            	            new NoViableAltException("2505:2: ( ( () '*' ) | ( () '/' ) )", 44, 0, input);
+            	            new NoViableAltException("", 44, 0, input);
 
             	        throw nvae;
             	    }
             	    switch (alt44) {
             	        case 1 :
-            	            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2505:3: ( () '*' )
+            	            // InternalEventCalculus.g:2023:3: ( () otherlv_2= '*' )
             	            {
-            	            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2505:3: ( () '*' )
-            	            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2505:4: () '*'
+            	            // InternalEventCalculus.g:2023:3: ( () otherlv_2= '*' )
+            	            // InternalEventCalculus.g:2023:4: () otherlv_2= '*'
             	            {
-            	            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2505:4: ()
-            	            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2506:5: 
+            	            // InternalEventCalculus.g:2023:4: ()
+            	            // InternalEventCalculus.g:2024:5: 
             	            {
-            	             
-            	                    temp=factory.create(grammarAccess.getMultiplicationAccess().getMultiLeftAction_1_0_0_0().getType().getClassifier());
-            	                    try {
-            	                    	factory.set(temp, "left", current, null /*ParserRule*/, currentNode);
-            	                    } catch(ValueConverterException vce) {
-            	                    	handleValueConverterException(vce);
-            	                    }
-            	                    current = temp; 
-            	                    temp = null;
-            	                    CompositeNode newNode = createCompositeNode(grammarAccess.getMultiplicationAccess().getMultiLeftAction_1_0_0_0(), currentNode.getParent());
-            	                newNode.getChildren().add(currentNode);
-            	                moveLookaheadInfo(currentNode, newNode);
-            	                currentNode = newNode; 
-            	                    associateNodeWithAstElement(currentNode, current); 
+
+            	                    current = forceCreateModelElementAndSet(
+            	                        grammarAccess.getMultiplicationAccess().getMultiLeftAction_1_0_0_0(),
+            	                        current);
             	                
 
             	            }
 
-            	            match(input,46,FOLLOW_46_in_ruleMultiplication4257); 
+            	            otherlv_2=(Token)match(input,46,FOLLOW_34); 
 
-            	                    createLeafNode(grammarAccess.getMultiplicationAccess().getAsteriskKeyword_1_0_0_1(), null); 
+            	                	newLeafNode(otherlv_2, grammarAccess.getMultiplicationAccess().getAsteriskKeyword_1_0_0_1());
             	                
 
             	            }
@@ -5787,35 +5467,25 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2526:6: ( () '/' )
+            	            // InternalEventCalculus.g:2034:6: ( () otherlv_4= '/' )
             	            {
-            	            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2526:6: ( () '/' )
-            	            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2526:7: () '/'
+            	            // InternalEventCalculus.g:2034:6: ( () otherlv_4= '/' )
+            	            // InternalEventCalculus.g:2034:7: () otherlv_4= '/'
             	            {
-            	            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2526:7: ()
-            	            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2527:5: 
+            	            // InternalEventCalculus.g:2034:7: ()
+            	            // InternalEventCalculus.g:2035:5: 
             	            {
-            	             
-            	                    temp=factory.create(grammarAccess.getMultiplicationAccess().getDivLeftAction_1_0_1_0().getType().getClassifier());
-            	                    try {
-            	                    	factory.set(temp, "left", current, null /*ParserRule*/, currentNode);
-            	                    } catch(ValueConverterException vce) {
-            	                    	handleValueConverterException(vce);
-            	                    }
-            	                    current = temp; 
-            	                    temp = null;
-            	                    CompositeNode newNode = createCompositeNode(grammarAccess.getMultiplicationAccess().getDivLeftAction_1_0_1_0(), currentNode.getParent());
-            	                newNode.getChildren().add(currentNode);
-            	                moveLookaheadInfo(currentNode, newNode);
-            	                currentNode = newNode; 
-            	                    associateNodeWithAstElement(currentNode, current); 
+
+            	                    current = forceCreateModelElementAndSet(
+            	                        grammarAccess.getMultiplicationAccess().getDivLeftAction_1_0_1_0(),
+            	                        current);
             	                
 
             	            }
 
-            	            match(input,47,FOLLOW_47_in_ruleMultiplication4284); 
+            	            otherlv_4=(Token)match(input,47,FOLLOW_34); 
 
-            	                    createLeafNode(grammarAccess.getMultiplicationAccess().getSolidusKeyword_1_0_1_1(), null); 
+            	                	newLeafNode(otherlv_4, grammarAccess.getMultiplicationAccess().getSolidusKeyword_1_0_1_1());
             	                
 
             	            }
@@ -5826,35 +5496,30 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2546:3: ( (lv_right_5_0= rulePower ) )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2547:1: (lv_right_5_0= rulePower )
+            	    // InternalEventCalculus.g:2044:3: ( (lv_right_5_0= rulePower ) )
+            	    // InternalEventCalculus.g:2045:1: (lv_right_5_0= rulePower )
             	    {
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2547:1: (lv_right_5_0= rulePower )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2548:3: lv_right_5_0= rulePower
+            	    // InternalEventCalculus.g:2045:1: (lv_right_5_0= rulePower )
+            	    // InternalEventCalculus.g:2046:3: lv_right_5_0= rulePower
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getMultiplicationAccess().getRightPowerParserRuleCall_1_1_0(), currentNode); 
+            	    	        newCompositeNode(grammarAccess.getMultiplicationAccess().getRightPowerParserRuleCall_1_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_rulePower_in_ruleMultiplication4307);
+            	    pushFollow(FOLLOW_39);
             	    lv_right_5_0=rulePower();
-            	    _fsp--;
+
+            	    state._fsp--;
 
 
             	    	        if (current==null) {
-            	    	            current = factory.create(grammarAccess.getMultiplicationRule().getType().getClassifier());
-            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	    	            current = createModelElementForParent(grammarAccess.getMultiplicationRule());
             	    	        }
-            	    	        try {
-            	    	       		set(
-            	    	       			current, 
-            	    	       			"right",
-            	    	        		lv_right_5_0, 
-            	    	        		"Power", 
-            	    	        		currentNode);
-            	    	        } catch (ValueConverterException vce) {
-            	    				handleValueConverterException(vce);
-            	    	        }
-            	    	        currentNode = currentNode.getParent();
+            	           		set(
+            	           			current, 
+            	           			"right",
+            	            		lv_right_5_0, 
+            	            		"uk.ac.open.event.EventCalculus.Power");
+            	    	        afterParserOrEnumRuleCall();
             	    	    
 
             	    }
@@ -5877,9 +5542,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -5890,11 +5553,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleMultiplication
+    // $ANTLR end "ruleMultiplication"
 
 
-    // $ANTLR start entryRulePower
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2578:1: entryRulePower returns [EObject current=null] : iv_rulePower= rulePower EOF ;
+    // $ANTLR start "entryRulePower"
+    // InternalEventCalculus.g:2070:1: entryRulePower returns [EObject current=null] : iv_rulePower= rulePower EOF ;
     public final EObject entryRulePower() throws RecognitionException {
         EObject current = null;
 
@@ -5902,16 +5565,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2579:2: (iv_rulePower= rulePower EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2580:2: iv_rulePower= rulePower EOF
+            // InternalEventCalculus.g:2071:2: (iv_rulePower= rulePower EOF )
+            // InternalEventCalculus.g:2072:2: iv_rulePower= rulePower EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getPowerRule(), currentNode); 
-            pushFollow(FOLLOW_rulePower_in_entryRulePower4345);
+             newCompositeNode(grammarAccess.getPowerRule()); 
+            pushFollow(FOLLOW_1);
             iv_rulePower=rulePower();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_rulePower; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePower4355); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -5925,40 +5589,42 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRulePower
+    // $ANTLR end "entryRulePower"
 
 
-    // $ANTLR start rulePower
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2587:1: rulePower returns [EObject current=null] : (this_UnaryExpr_0= ruleUnaryExpr ( ( () '^' ) ( (lv_right_3_0= ruleUnaryExpr ) ) )* ) ;
+    // $ANTLR start "rulePower"
+    // InternalEventCalculus.g:2079:1: rulePower returns [EObject current=null] : (this_UnaryExpr_0= ruleUnaryExpr ( ( () otherlv_2= '^' ) ( (lv_right_3_0= ruleUnaryExpr ) ) )* ) ;
     public final EObject rulePower() throws RecognitionException {
         EObject current = null;
 
+        Token otherlv_2=null;
         EObject this_UnaryExpr_0 = null;
 
         EObject lv_right_3_0 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2592:6: ( (this_UnaryExpr_0= ruleUnaryExpr ( ( () '^' ) ( (lv_right_3_0= ruleUnaryExpr ) ) )* ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2593:1: (this_UnaryExpr_0= ruleUnaryExpr ( ( () '^' ) ( (lv_right_3_0= ruleUnaryExpr ) ) )* )
+            // InternalEventCalculus.g:2082:28: ( (this_UnaryExpr_0= ruleUnaryExpr ( ( () otherlv_2= '^' ) ( (lv_right_3_0= ruleUnaryExpr ) ) )* ) )
+            // InternalEventCalculus.g:2083:1: (this_UnaryExpr_0= ruleUnaryExpr ( ( () otherlv_2= '^' ) ( (lv_right_3_0= ruleUnaryExpr ) ) )* )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2593:1: (this_UnaryExpr_0= ruleUnaryExpr ( ( () '^' ) ( (lv_right_3_0= ruleUnaryExpr ) ) )* )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2594:5: this_UnaryExpr_0= ruleUnaryExpr ( ( () '^' ) ( (lv_right_3_0= ruleUnaryExpr ) ) )*
+            // InternalEventCalculus.g:2083:1: (this_UnaryExpr_0= ruleUnaryExpr ( ( () otherlv_2= '^' ) ( (lv_right_3_0= ruleUnaryExpr ) ) )* )
+            // InternalEventCalculus.g:2084:5: this_UnaryExpr_0= ruleUnaryExpr ( ( () otherlv_2= '^' ) ( (lv_right_3_0= ruleUnaryExpr ) ) )*
             {
              
-                    currentNode=createCompositeNode(grammarAccess.getPowerAccess().getUnaryExprParserRuleCall_0(), currentNode); 
+                    newCompositeNode(grammarAccess.getPowerAccess().getUnaryExprParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_ruleUnaryExpr_in_rulePower4402);
+            pushFollow(FOLLOW_40);
             this_UnaryExpr_0=ruleUnaryExpr();
-            _fsp--;
+
+            state._fsp--;
 
              
                     current = this_UnaryExpr_0; 
-                    currentNode = currentNode.getParent();
+                    afterParserOrEnumRuleCall();
                 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2602:1: ( ( () '^' ) ( (lv_right_3_0= ruleUnaryExpr ) ) )*
+            // InternalEventCalculus.g:2092:1: ( ( () otherlv_2= '^' ) ( (lv_right_3_0= ruleUnaryExpr ) ) )*
             loop46:
             do {
                 int alt46=2;
@@ -5971,68 +5637,53 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                 switch (alt46) {
             	case 1 :
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2602:2: ( () '^' ) ( (lv_right_3_0= ruleUnaryExpr ) )
+            	    // InternalEventCalculus.g:2092:2: ( () otherlv_2= '^' ) ( (lv_right_3_0= ruleUnaryExpr ) )
             	    {
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2602:2: ( () '^' )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2602:3: () '^'
+            	    // InternalEventCalculus.g:2092:2: ( () otherlv_2= '^' )
+            	    // InternalEventCalculus.g:2092:3: () otherlv_2= '^'
             	    {
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2602:3: ()
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2603:5: 
+            	    // InternalEventCalculus.g:2092:3: ()
+            	    // InternalEventCalculus.g:2093:5: 
             	    {
-            	     
-            	            temp=factory.create(grammarAccess.getPowerAccess().getPowLeftAction_1_0_0().getType().getClassifier());
-            	            try {
-            	            	factory.set(temp, "left", current, null /*ParserRule*/, currentNode);
-            	            } catch(ValueConverterException vce) {
-            	            	handleValueConverterException(vce);
-            	            }
-            	            current = temp; 
-            	            temp = null;
-            	            CompositeNode newNode = createCompositeNode(grammarAccess.getPowerAccess().getPowLeftAction_1_0_0(), currentNode.getParent());
-            	        newNode.getChildren().add(currentNode);
-            	        moveLookaheadInfo(currentNode, newNode);
-            	        currentNode = newNode; 
-            	            associateNodeWithAstElement(currentNode, current); 
+
+            	            current = forceCreateModelElementAndSet(
+            	                grammarAccess.getPowerAccess().getPowLeftAction_1_0_0(),
+            	                current);
             	        
 
             	    }
 
-            	    match(input,48,FOLLOW_48_in_rulePower4422); 
+            	    otherlv_2=(Token)match(input,48,FOLLOW_34); 
 
-            	            createLeafNode(grammarAccess.getPowerAccess().getCircumflexAccentKeyword_1_0_1(), null); 
+            	        	newLeafNode(otherlv_2, grammarAccess.getPowerAccess().getCircumflexAccentKeyword_1_0_1());
             	        
 
             	    }
 
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2622:2: ( (lv_right_3_0= ruleUnaryExpr ) )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2623:1: (lv_right_3_0= ruleUnaryExpr )
+            	    // InternalEventCalculus.g:2102:2: ( (lv_right_3_0= ruleUnaryExpr ) )
+            	    // InternalEventCalculus.g:2103:1: (lv_right_3_0= ruleUnaryExpr )
             	    {
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2623:1: (lv_right_3_0= ruleUnaryExpr )
-            	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2624:3: lv_right_3_0= ruleUnaryExpr
+            	    // InternalEventCalculus.g:2103:1: (lv_right_3_0= ruleUnaryExpr )
+            	    // InternalEventCalculus.g:2104:3: lv_right_3_0= ruleUnaryExpr
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getPowerAccess().getRightUnaryExprParserRuleCall_1_1_0(), currentNode); 
+            	    	        newCompositeNode(grammarAccess.getPowerAccess().getRightUnaryExprParserRuleCall_1_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleUnaryExpr_in_rulePower4444);
+            	    pushFollow(FOLLOW_40);
             	    lv_right_3_0=ruleUnaryExpr();
-            	    _fsp--;
+
+            	    state._fsp--;
 
 
             	    	        if (current==null) {
-            	    	            current = factory.create(grammarAccess.getPowerRule().getType().getClassifier());
-            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	    	            current = createModelElementForParent(grammarAccess.getPowerRule());
             	    	        }
-            	    	        try {
-            	    	       		set(
-            	    	       			current, 
-            	    	       			"right",
-            	    	        		lv_right_3_0, 
-            	    	        		"UnaryExpr", 
-            	    	        		currentNode);
-            	    	        } catch (ValueConverterException vce) {
-            	    				handleValueConverterException(vce);
-            	    	        }
-            	    	        currentNode = currentNode.getParent();
+            	           		set(
+            	           			current, 
+            	           			"right",
+            	            		lv_right_3_0, 
+            	            		"uk.ac.open.event.EventCalculus.UnaryExpr");
+            	    	        afterParserOrEnumRuleCall();
             	    	    
 
             	    }
@@ -6055,9 +5706,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -6068,11 +5717,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end rulePower
+    // $ANTLR end "rulePower"
 
 
-    // $ANTLR start entryRuleUnaryExpr
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2654:1: entryRuleUnaryExpr returns [EObject current=null] : iv_ruleUnaryExpr= ruleUnaryExpr EOF ;
+    // $ANTLR start "entryRuleUnaryExpr"
+    // InternalEventCalculus.g:2128:1: entryRuleUnaryExpr returns [EObject current=null] : iv_ruleUnaryExpr= ruleUnaryExpr EOF ;
     public final EObject entryRuleUnaryExpr() throws RecognitionException {
         EObject current = null;
 
@@ -6080,16 +5729,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2655:2: (iv_ruleUnaryExpr= ruleUnaryExpr EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2656:2: iv_ruleUnaryExpr= ruleUnaryExpr EOF
+            // InternalEventCalculus.g:2129:2: (iv_ruleUnaryExpr= ruleUnaryExpr EOF )
+            // InternalEventCalculus.g:2130:2: iv_ruleUnaryExpr= ruleUnaryExpr EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getUnaryExprRule(), currentNode); 
-            pushFollow(FOLLOW_ruleUnaryExpr_in_entryRuleUnaryExpr4482);
+             newCompositeNode(grammarAccess.getUnaryExprRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleUnaryExpr=ruleUnaryExpr();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleUnaryExpr; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleUnaryExpr4492); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -6103,11 +5753,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleUnaryExpr
+    // $ANTLR end "entryRuleUnaryExpr"
 
 
-    // $ANTLR start ruleUnaryExpr
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2663:1: ruleUnaryExpr returns [EObject current=null] : ( ( (lv_op_0_0= ruleUnaryOp ) )? ( (lv_right_1_0= rulePrePrimaryExpr ) ) ) ;
+    // $ANTLR start "ruleUnaryExpr"
+    // InternalEventCalculus.g:2137:1: ruleUnaryExpr returns [EObject current=null] : ( ( (lv_op_0_0= ruleUnaryOp ) )? ( (lv_right_1_0= rulePrePrimaryExpr ) ) ) ;
     public final EObject ruleUnaryExpr() throws RecognitionException {
         EObject current = null;
 
@@ -6116,16 +5766,16 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         EObject lv_right_1_0 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2668:6: ( ( ( (lv_op_0_0= ruleUnaryOp ) )? ( (lv_right_1_0= rulePrePrimaryExpr ) ) ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2669:1: ( ( (lv_op_0_0= ruleUnaryOp ) )? ( (lv_right_1_0= rulePrePrimaryExpr ) ) )
+            // InternalEventCalculus.g:2140:28: ( ( ( (lv_op_0_0= ruleUnaryOp ) )? ( (lv_right_1_0= rulePrePrimaryExpr ) ) ) )
+            // InternalEventCalculus.g:2141:1: ( ( (lv_op_0_0= ruleUnaryOp ) )? ( (lv_right_1_0= rulePrePrimaryExpr ) ) )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2669:1: ( ( (lv_op_0_0= ruleUnaryOp ) )? ( (lv_right_1_0= rulePrePrimaryExpr ) ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2669:2: ( (lv_op_0_0= ruleUnaryOp ) )? ( (lv_right_1_0= rulePrePrimaryExpr ) )
+            // InternalEventCalculus.g:2141:1: ( ( (lv_op_0_0= ruleUnaryOp ) )? ( (lv_right_1_0= rulePrePrimaryExpr ) ) )
+            // InternalEventCalculus.g:2141:2: ( (lv_op_0_0= ruleUnaryOp ) )? ( (lv_right_1_0= rulePrePrimaryExpr ) )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2669:2: ( (lv_op_0_0= ruleUnaryOp ) )?
+            // InternalEventCalculus.g:2141:2: ( (lv_op_0_0= ruleUnaryOp ) )?
             int alt47=2;
             int LA47_0 = input.LA(1);
 
@@ -6134,34 +5784,29 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
             }
             switch (alt47) {
                 case 1 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2670:1: (lv_op_0_0= ruleUnaryOp )
+                    // InternalEventCalculus.g:2142:1: (lv_op_0_0= ruleUnaryOp )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2670:1: (lv_op_0_0= ruleUnaryOp )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2671:3: lv_op_0_0= ruleUnaryOp
+                    // InternalEventCalculus.g:2142:1: (lv_op_0_0= ruleUnaryOp )
+                    // InternalEventCalculus.g:2143:3: lv_op_0_0= ruleUnaryOp
                     {
                      
-                    	        currentNode=createCompositeNode(grammarAccess.getUnaryExprAccess().getOpUnaryOpEnumRuleCall_0_0(), currentNode); 
+                    	        newCompositeNode(grammarAccess.getUnaryExprAccess().getOpUnaryOpEnumRuleCall_0_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleUnaryOp_in_ruleUnaryExpr4538);
+                    pushFollow(FOLLOW_34);
                     lv_op_0_0=ruleUnaryOp();
-                    _fsp--;
+
+                    state._fsp--;
 
 
                     	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getUnaryExprRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode.getParent(), current);
+                    	            current = createModelElementForParent(grammarAccess.getUnaryExprRule());
                     	        }
-                    	        try {
-                    	       		set(
-                    	       			current, 
-                    	       			"op",
-                    	        		lv_op_0_0, 
-                    	        		"UnaryOp", 
-                    	        		currentNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	        currentNode = currentNode.getParent();
+                           		set(
+                           			current, 
+                           			"op",
+                            		lv_op_0_0, 
+                            		"uk.ac.open.event.EventCalculus.UnaryOp");
+                    	        afterParserOrEnumRuleCall();
                     	    
 
                     }
@@ -6172,35 +5817,30 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2693:3: ( (lv_right_1_0= rulePrePrimaryExpr ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2694:1: (lv_right_1_0= rulePrePrimaryExpr )
+            // InternalEventCalculus.g:2159:3: ( (lv_right_1_0= rulePrePrimaryExpr ) )
+            // InternalEventCalculus.g:2160:1: (lv_right_1_0= rulePrePrimaryExpr )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2694:1: (lv_right_1_0= rulePrePrimaryExpr )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2695:3: lv_right_1_0= rulePrePrimaryExpr
+            // InternalEventCalculus.g:2160:1: (lv_right_1_0= rulePrePrimaryExpr )
+            // InternalEventCalculus.g:2161:3: lv_right_1_0= rulePrePrimaryExpr
             {
              
-            	        currentNode=createCompositeNode(grammarAccess.getUnaryExprAccess().getRightPrePrimaryExprParserRuleCall_1_0(), currentNode); 
+            	        newCompositeNode(grammarAccess.getUnaryExprAccess().getRightPrePrimaryExprParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_rulePrePrimaryExpr_in_ruleUnaryExpr4560);
+            pushFollow(FOLLOW_2);
             lv_right_1_0=rulePrePrimaryExpr();
-            _fsp--;
+
+            state._fsp--;
 
 
             	        if (current==null) {
-            	            current = factory.create(grammarAccess.getUnaryExprRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	            current = createModelElementForParent(grammarAccess.getUnaryExprRule());
             	        }
-            	        try {
-            	       		set(
-            	       			current, 
-            	       			"right",
-            	        		lv_right_1_0, 
-            	        		"PrePrimaryExpr", 
-            	        		currentNode);
-            	        } catch (ValueConverterException vce) {
-            				handleValueConverterException(vce);
-            	        }
-            	        currentNode = currentNode.getParent();
+                   		set(
+                   			current, 
+                   			"right",
+                    		lv_right_1_0, 
+                    		"uk.ac.open.event.EventCalculus.PrePrimaryExpr");
+            	        afterParserOrEnumRuleCall();
             	    
 
             }
@@ -6214,9 +5854,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -6227,11 +5865,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleUnaryExpr
+    // $ANTLR end "ruleUnaryExpr"
 
 
-    // $ANTLR start entryRulePrePrimaryExpr
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2725:1: entryRulePrePrimaryExpr returns [EObject current=null] : iv_rulePrePrimaryExpr= rulePrePrimaryExpr EOF ;
+    // $ANTLR start "entryRulePrePrimaryExpr"
+    // InternalEventCalculus.g:2185:1: entryRulePrePrimaryExpr returns [EObject current=null] : iv_rulePrePrimaryExpr= rulePrePrimaryExpr EOF ;
     public final EObject entryRulePrePrimaryExpr() throws RecognitionException {
         EObject current = null;
 
@@ -6239,16 +5877,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2726:2: (iv_rulePrePrimaryExpr= rulePrePrimaryExpr EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2727:2: iv_rulePrePrimaryExpr= rulePrePrimaryExpr EOF
+            // InternalEventCalculus.g:2186:2: (iv_rulePrePrimaryExpr= rulePrePrimaryExpr EOF )
+            // InternalEventCalculus.g:2187:2: iv_rulePrePrimaryExpr= rulePrePrimaryExpr EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getPrePrimaryExprRule(), currentNode); 
-            pushFollow(FOLLOW_rulePrePrimaryExpr_in_entryRulePrePrimaryExpr4596);
+             newCompositeNode(grammarAccess.getPrePrimaryExprRule()); 
+            pushFollow(FOLLOW_1);
             iv_rulePrePrimaryExpr=rulePrePrimaryExpr();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_rulePrePrimaryExpr; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePrePrimaryExpr4606); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -6262,14 +5901,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRulePrePrimaryExpr
+    // $ANTLR end "entryRulePrePrimaryExpr"
 
 
-    // $ANTLR start rulePrePrimaryExpr
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2734:1: rulePrePrimaryExpr returns [EObject current=null] : (this_TerminalExpression_0= ruleTerminalExpression | this_AbstractRef_1= ruleAbstractRef | ( '(' this_Expression_3= ruleExpression ')' ) | ( '-' ( (lv_n_6_0= RULE_INT ) ) ) ) ;
+    // $ANTLR start "rulePrePrimaryExpr"
+    // InternalEventCalculus.g:2194:1: rulePrePrimaryExpr returns [EObject current=null] : (this_TerminalExpression_0= ruleTerminalExpression | this_AbstractRef_1= ruleAbstractRef | (otherlv_2= '(' this_Expression_3= ruleExpression otherlv_4= ')' ) | (otherlv_5= '-' ( (lv_n_6_0= RULE_INT ) ) ) ) ;
     public final EObject rulePrePrimaryExpr() throws RecognitionException {
         EObject current = null;
 
+        Token otherlv_2=null;
+        Token otherlv_4=null;
+        Token otherlv_5=null;
         Token lv_n_6_0=null;
         EObject this_TerminalExpression_0 = null;
 
@@ -6278,13 +5920,13 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         EObject this_Expression_3 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2739:6: ( (this_TerminalExpression_0= ruleTerminalExpression | this_AbstractRef_1= ruleAbstractRef | ( '(' this_Expression_3= ruleExpression ')' ) | ( '-' ( (lv_n_6_0= RULE_INT ) ) ) ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2740:1: (this_TerminalExpression_0= ruleTerminalExpression | this_AbstractRef_1= ruleAbstractRef | ( '(' this_Expression_3= ruleExpression ')' ) | ( '-' ( (lv_n_6_0= RULE_INT ) ) ) )
+            // InternalEventCalculus.g:2197:28: ( (this_TerminalExpression_0= ruleTerminalExpression | this_AbstractRef_1= ruleAbstractRef | (otherlv_2= '(' this_Expression_3= ruleExpression otherlv_4= ')' ) | (otherlv_5= '-' ( (lv_n_6_0= RULE_INT ) ) ) ) )
+            // InternalEventCalculus.g:2198:1: (this_TerminalExpression_0= ruleTerminalExpression | this_AbstractRef_1= ruleAbstractRef | (otherlv_2= '(' this_Expression_3= ruleExpression otherlv_4= ')' ) | (otherlv_5= '-' ( (lv_n_6_0= RULE_INT ) ) ) )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2740:1: (this_TerminalExpression_0= ruleTerminalExpression | this_AbstractRef_1= ruleAbstractRef | ( '(' this_Expression_3= ruleExpression ')' ) | ( '-' ( (lv_n_6_0= RULE_INT ) ) ) )
+            // InternalEventCalculus.g:2198:1: (this_TerminalExpression_0= ruleTerminalExpression | this_AbstractRef_1= ruleAbstractRef | (otherlv_2= '(' this_Expression_3= ruleExpression otherlv_4= ')' ) | (otherlv_5= '-' ( (lv_n_6_0= RULE_INT ) ) ) )
             int alt48=4;
             switch ( input.LA(1) ) {
             case RULE_STRING:
@@ -6311,70 +5953,73 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("2740:1: (this_TerminalExpression_0= ruleTerminalExpression | this_AbstractRef_1= ruleAbstractRef | ( '(' this_Expression_3= ruleExpression ')' ) | ( '-' ( (lv_n_6_0= RULE_INT ) ) ) )", 48, 0, input);
+                    new NoViableAltException("", 48, 0, input);
 
                 throw nvae;
             }
 
             switch (alt48) {
                 case 1 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2741:5: this_TerminalExpression_0= ruleTerminalExpression
+                    // InternalEventCalculus.g:2199:5: this_TerminalExpression_0= ruleTerminalExpression
                     {
                      
-                            currentNode=createCompositeNode(grammarAccess.getPrePrimaryExprAccess().getTerminalExpressionParserRuleCall_0(), currentNode); 
+                            newCompositeNode(grammarAccess.getPrePrimaryExprAccess().getTerminalExpressionParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleTerminalExpression_in_rulePrePrimaryExpr4653);
+                    pushFollow(FOLLOW_2);
                     this_TerminalExpression_0=ruleTerminalExpression();
-                    _fsp--;
+
+                    state._fsp--;
 
                      
                             current = this_TerminalExpression_0; 
-                            currentNode = currentNode.getParent();
+                            afterParserOrEnumRuleCall();
                         
 
                     }
                     break;
                 case 2 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2751:5: this_AbstractRef_1= ruleAbstractRef
+                    // InternalEventCalculus.g:2209:5: this_AbstractRef_1= ruleAbstractRef
                     {
                      
-                            currentNode=createCompositeNode(grammarAccess.getPrePrimaryExprAccess().getAbstractRefParserRuleCall_1(), currentNode); 
+                            newCompositeNode(grammarAccess.getPrePrimaryExprAccess().getAbstractRefParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleAbstractRef_in_rulePrePrimaryExpr4680);
+                    pushFollow(FOLLOW_2);
                     this_AbstractRef_1=ruleAbstractRef();
-                    _fsp--;
+
+                    state._fsp--;
 
                      
                             current = this_AbstractRef_1; 
-                            currentNode = currentNode.getParent();
+                            afterParserOrEnumRuleCall();
                         
 
                     }
                     break;
                 case 3 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2760:6: ( '(' this_Expression_3= ruleExpression ')' )
+                    // InternalEventCalculus.g:2218:6: (otherlv_2= '(' this_Expression_3= ruleExpression otherlv_4= ')' )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2760:6: ( '(' this_Expression_3= ruleExpression ')' )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2760:8: '(' this_Expression_3= ruleExpression ')'
+                    // InternalEventCalculus.g:2218:6: (otherlv_2= '(' this_Expression_3= ruleExpression otherlv_4= ')' )
+                    // InternalEventCalculus.g:2218:8: otherlv_2= '(' this_Expression_3= ruleExpression otherlv_4= ')'
                     {
-                    match(input,27,FOLLOW_27_in_rulePrePrimaryExpr4696); 
+                    otherlv_2=(Token)match(input,27,FOLLOW_22); 
 
-                            createLeafNode(grammarAccess.getPrePrimaryExprAccess().getLeftParenthesisKeyword_2_0(), null); 
+                        	newLeafNode(otherlv_2, grammarAccess.getPrePrimaryExprAccess().getLeftParenthesisKeyword_2_0());
                         
                      
-                            currentNode=createCompositeNode(grammarAccess.getPrePrimaryExprAccess().getExpressionParserRuleCall_2_1(), currentNode); 
+                            newCompositeNode(grammarAccess.getPrePrimaryExprAccess().getExpressionParserRuleCall_2_1()); 
                         
-                    pushFollow(FOLLOW_ruleExpression_in_rulePrePrimaryExpr4718);
+                    pushFollow(FOLLOW_41);
                     this_Expression_3=ruleExpression();
-                    _fsp--;
+
+                    state._fsp--;
 
                      
                             current = this_Expression_3; 
-                            currentNode = currentNode.getParent();
+                            afterParserOrEnumRuleCall();
                         
-                    match(input,28,FOLLOW_28_in_rulePrePrimaryExpr4727); 
+                    otherlv_4=(Token)match(input,28,FOLLOW_2); 
 
-                            createLeafNode(grammarAccess.getPrePrimaryExprAccess().getRightParenthesisKeyword_2_2(), null); 
+                        	newLeafNode(otherlv_4, grammarAccess.getPrePrimaryExprAccess().getRightParenthesisKeyword_2_2());
                         
 
                     }
@@ -6383,41 +6028,34 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2778:6: ( '-' ( (lv_n_6_0= RULE_INT ) ) )
+                    // InternalEventCalculus.g:2236:6: (otherlv_5= '-' ( (lv_n_6_0= RULE_INT ) ) )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2778:6: ( '-' ( (lv_n_6_0= RULE_INT ) ) )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2778:8: '-' ( (lv_n_6_0= RULE_INT ) )
+                    // InternalEventCalculus.g:2236:6: (otherlv_5= '-' ( (lv_n_6_0= RULE_INT ) ) )
+                    // InternalEventCalculus.g:2236:8: otherlv_5= '-' ( (lv_n_6_0= RULE_INT ) )
                     {
-                    match(input,45,FOLLOW_45_in_rulePrePrimaryExpr4745); 
+                    otherlv_5=(Token)match(input,45,FOLLOW_14); 
 
-                            createLeafNode(grammarAccess.getPrePrimaryExprAccess().getHyphenMinusKeyword_3_0(), null); 
+                        	newLeafNode(otherlv_5, grammarAccess.getPrePrimaryExprAccess().getHyphenMinusKeyword_3_0());
                         
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2782:1: ( (lv_n_6_0= RULE_INT ) )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2783:1: (lv_n_6_0= RULE_INT )
+                    // InternalEventCalculus.g:2240:1: ( (lv_n_6_0= RULE_INT ) )
+                    // InternalEventCalculus.g:2241:1: (lv_n_6_0= RULE_INT )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2783:1: (lv_n_6_0= RULE_INT )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2784:3: lv_n_6_0= RULE_INT
+                    // InternalEventCalculus.g:2241:1: (lv_n_6_0= RULE_INT )
+                    // InternalEventCalculus.g:2242:3: lv_n_6_0= RULE_INT
                     {
-                    lv_n_6_0=(Token)input.LT(1);
-                    match(input,RULE_INT,FOLLOW_RULE_INT_in_rulePrePrimaryExpr4762); 
+                    lv_n_6_0=(Token)match(input,RULE_INT,FOLLOW_2); 
 
-                    			createLeafNode(grammarAccess.getPrePrimaryExprAccess().getNINTTerminalRuleCall_3_1_0(), "n"); 
+                    			newLeafNode(lv_n_6_0, grammarAccess.getPrePrimaryExprAccess().getNINTTerminalRuleCall_3_1_0()); 
                     		
 
                     	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getPrePrimaryExprRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
+                    	            current = createModelElement(grammarAccess.getPrePrimaryExprRule());
                     	        }
-                    	        try {
-                    	       		set(
-                    	       			current, 
-                    	       			"n",
-                    	        		lv_n_6_0, 
-                    	        		"INT", 
-                    	        		lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"n",
+                            		lv_n_6_0, 
+                            		"uk.ac.open.event.EventCalculus.INT");
                     	    
 
                     }
@@ -6437,9 +6075,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -6450,11 +6086,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end rulePrePrimaryExpr
+    // $ANTLR end "rulePrePrimaryExpr"
 
 
-    // $ANTLR start entryRuleAbstractRef
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2814:1: entryRuleAbstractRef returns [EObject current=null] : iv_ruleAbstractRef= ruleAbstractRef EOF ;
+    // $ANTLR start "entryRuleAbstractRef"
+    // InternalEventCalculus.g:2266:1: entryRuleAbstractRef returns [EObject current=null] : iv_ruleAbstractRef= ruleAbstractRef EOF ;
     public final EObject entryRuleAbstractRef() throws RecognitionException {
         EObject current = null;
 
@@ -6462,16 +6098,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2815:2: (iv_ruleAbstractRef= ruleAbstractRef EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2816:2: iv_ruleAbstractRef= ruleAbstractRef EOF
+            // InternalEventCalculus.g:2267:2: (iv_ruleAbstractRef= ruleAbstractRef EOF )
+            // InternalEventCalculus.g:2268:2: iv_ruleAbstractRef= ruleAbstractRef EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getAbstractRefRule(), currentNode); 
-            pushFollow(FOLLOW_ruleAbstractRef_in_entryRuleAbstractRef4804);
+             newCompositeNode(grammarAccess.getAbstractRefRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleAbstractRef=ruleAbstractRef();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleAbstractRef; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAbstractRef4814); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -6485,43 +6122,46 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleAbstractRef
+    // $ANTLR end "entryRuleAbstractRef"
 
 
-    // $ANTLR start ruleAbstractRef
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2823:1: ruleAbstractRef returns [EObject current=null] : ( ( ( RULE_ID ) ) ( () ( '(' ( (lv_args_3_0= ruleExpression ) )? ( ',' ( (lv_args_5_0= ruleExpression ) ) )* ')' ) )? ) ;
+    // $ANTLR start "ruleAbstractRef"
+    // InternalEventCalculus.g:2275:1: ruleAbstractRef returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) ( () (otherlv_2= '(' ( (lv_args_3_0= ruleExpression ) )? (otherlv_4= ',' ( (lv_args_5_0= ruleExpression ) ) )* otherlv_6= ')' ) )? ) ;
     public final EObject ruleAbstractRef() throws RecognitionException {
         EObject current = null;
 
+        Token otherlv_0=null;
+        Token otherlv_2=null;
+        Token otherlv_4=null;
+        Token otherlv_6=null;
         EObject lv_args_3_0 = null;
 
         EObject lv_args_5_0 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2828:6: ( ( ( ( RULE_ID ) ) ( () ( '(' ( (lv_args_3_0= ruleExpression ) )? ( ',' ( (lv_args_5_0= ruleExpression ) ) )* ')' ) )? ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2829:1: ( ( ( RULE_ID ) ) ( () ( '(' ( (lv_args_3_0= ruleExpression ) )? ( ',' ( (lv_args_5_0= ruleExpression ) ) )* ')' ) )? )
+            // InternalEventCalculus.g:2278:28: ( ( ( (otherlv_0= RULE_ID ) ) ( () (otherlv_2= '(' ( (lv_args_3_0= ruleExpression ) )? (otherlv_4= ',' ( (lv_args_5_0= ruleExpression ) ) )* otherlv_6= ')' ) )? ) )
+            // InternalEventCalculus.g:2279:1: ( ( (otherlv_0= RULE_ID ) ) ( () (otherlv_2= '(' ( (lv_args_3_0= ruleExpression ) )? (otherlv_4= ',' ( (lv_args_5_0= ruleExpression ) ) )* otherlv_6= ')' ) )? )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2829:1: ( ( ( RULE_ID ) ) ( () ( '(' ( (lv_args_3_0= ruleExpression ) )? ( ',' ( (lv_args_5_0= ruleExpression ) ) )* ')' ) )? )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2829:2: ( ( RULE_ID ) ) ( () ( '(' ( (lv_args_3_0= ruleExpression ) )? ( ',' ( (lv_args_5_0= ruleExpression ) ) )* ')' ) )?
+            // InternalEventCalculus.g:2279:1: ( ( (otherlv_0= RULE_ID ) ) ( () (otherlv_2= '(' ( (lv_args_3_0= ruleExpression ) )? (otherlv_4= ',' ( (lv_args_5_0= ruleExpression ) ) )* otherlv_6= ')' ) )? )
+            // InternalEventCalculus.g:2279:2: ( (otherlv_0= RULE_ID ) ) ( () (otherlv_2= '(' ( (lv_args_3_0= ruleExpression ) )? (otherlv_4= ',' ( (lv_args_5_0= ruleExpression ) ) )* otherlv_6= ')' ) )?
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2829:2: ( ( RULE_ID ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2830:1: ( RULE_ID )
+            // InternalEventCalculus.g:2279:2: ( (otherlv_0= RULE_ID ) )
+            // InternalEventCalculus.g:2280:1: (otherlv_0= RULE_ID )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2830:1: ( RULE_ID )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2831:3: RULE_ID
+            // InternalEventCalculus.g:2280:1: (otherlv_0= RULE_ID )
+            // InternalEventCalculus.g:2281:3: otherlv_0= RULE_ID
             {
 
             			if (current==null) {
-            	            current = factory.create(grammarAccess.getAbstractRefRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
+            	            current = createModelElement(grammarAccess.getAbstractRefRule());
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleAbstractRef4857); 
+            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_42); 
 
-            		createLeafNode(grammarAccess.getAbstractRefAccess().getDefineDefinesCrossReference_0_0(), "define"); 
+            		newLeafNode(otherlv_0, grammarAccess.getAbstractRefAccess().getDefineDefinesCrossReference_0_0()); 
             	
 
             }
@@ -6529,7 +6169,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2843:2: ( () ( '(' ( (lv_args_3_0= ruleExpression ) )? ( ',' ( (lv_args_5_0= ruleExpression ) ) )* ')' ) )?
+            // InternalEventCalculus.g:2292:2: ( () (otherlv_2= '(' ( (lv_args_3_0= ruleExpression ) )? (otherlv_4= ',' ( (lv_args_5_0= ruleExpression ) ) )* otherlv_6= ')' ) )?
             int alt51=2;
             int LA51_0 = input.LA(1);
 
@@ -6538,37 +6178,27 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
             }
             switch (alt51) {
                 case 1 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2843:3: () ( '(' ( (lv_args_3_0= ruleExpression ) )? ( ',' ( (lv_args_5_0= ruleExpression ) ) )* ')' )
+                    // InternalEventCalculus.g:2292:3: () (otherlv_2= '(' ( (lv_args_3_0= ruleExpression ) )? (otherlv_4= ',' ( (lv_args_5_0= ruleExpression ) ) )* otherlv_6= ')' )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2843:3: ()
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2844:5: 
+                    // InternalEventCalculus.g:2292:3: ()
+                    // InternalEventCalculus.g:2293:5: 
                     {
-                     
-                            temp=factory.create(grammarAccess.getAbstractRefAccess().getFunctionRefFuncAction_1_0().getType().getClassifier());
-                            try {
-                            	factory.set(temp, "func", current, null /*ParserRule*/, currentNode);
-                            } catch(ValueConverterException vce) {
-                            	handleValueConverterException(vce);
-                            }
-                            current = temp; 
-                            temp = null;
-                            CompositeNode newNode = createCompositeNode(grammarAccess.getAbstractRefAccess().getFunctionRefFuncAction_1_0(), currentNode.getParent());
-                        newNode.getChildren().add(currentNode);
-                        moveLookaheadInfo(currentNode, newNode);
-                        currentNode = newNode; 
-                            associateNodeWithAstElement(currentNode, current); 
+
+                            current = forceCreateModelElementAndSet(
+                                grammarAccess.getAbstractRefAccess().getFunctionRefFuncAction_1_0(),
+                                current);
                         
 
                     }
 
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2859:2: ( '(' ( (lv_args_3_0= ruleExpression ) )? ( ',' ( (lv_args_5_0= ruleExpression ) ) )* ')' )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2859:4: '(' ( (lv_args_3_0= ruleExpression ) )? ( ',' ( (lv_args_5_0= ruleExpression ) ) )* ')'
+                    // InternalEventCalculus.g:2298:2: (otherlv_2= '(' ( (lv_args_3_0= ruleExpression ) )? (otherlv_4= ',' ( (lv_args_5_0= ruleExpression ) ) )* otherlv_6= ')' )
+                    // InternalEventCalculus.g:2298:4: otherlv_2= '(' ( (lv_args_3_0= ruleExpression ) )? (otherlv_4= ',' ( (lv_args_5_0= ruleExpression ) ) )* otherlv_6= ')'
                     {
-                    match(input,27,FOLLOW_27_in_ruleAbstractRef4878); 
+                    otherlv_2=(Token)match(input,27,FOLLOW_43); 
 
-                            createLeafNode(grammarAccess.getAbstractRefAccess().getLeftParenthesisKeyword_1_1_0(), null); 
+                        	newLeafNode(otherlv_2, grammarAccess.getAbstractRefAccess().getLeftParenthesisKeyword_1_1_0());
                         
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2863:1: ( (lv_args_3_0= ruleExpression ) )?
+                    // InternalEventCalculus.g:2302:1: ( (lv_args_3_0= ruleExpression ) )?
                     int alt49=2;
                     int LA49_0 = input.LA(1);
 
@@ -6577,34 +6207,29 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt49) {
                         case 1 :
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2864:1: (lv_args_3_0= ruleExpression )
+                            // InternalEventCalculus.g:2303:1: (lv_args_3_0= ruleExpression )
                             {
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2864:1: (lv_args_3_0= ruleExpression )
-                            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2865:3: lv_args_3_0= ruleExpression
+                            // InternalEventCalculus.g:2303:1: (lv_args_3_0= ruleExpression )
+                            // InternalEventCalculus.g:2304:3: lv_args_3_0= ruleExpression
                             {
                              
-                            	        currentNode=createCompositeNode(grammarAccess.getAbstractRefAccess().getArgsExpressionParserRuleCall_1_1_1_0(), currentNode); 
+                            	        newCompositeNode(grammarAccess.getAbstractRefAccess().getArgsExpressionParserRuleCall_1_1_1_0()); 
                             	    
-                            pushFollow(FOLLOW_ruleExpression_in_ruleAbstractRef4899);
+                            pushFollow(FOLLOW_28);
                             lv_args_3_0=ruleExpression();
-                            _fsp--;
+
+                            state._fsp--;
 
 
                             	        if (current==null) {
-                            	            current = factory.create(grammarAccess.getAbstractRefRule().getType().getClassifier());
-                            	            associateNodeWithAstElement(currentNode.getParent(), current);
+                            	            current = createModelElementForParent(grammarAccess.getAbstractRefRule());
                             	        }
-                            	        try {
-                            	       		add(
-                            	       			current, 
-                            	       			"args",
-                            	        		lv_args_3_0, 
-                            	        		"Expression", 
-                            	        		currentNode);
-                            	        } catch (ValueConverterException vce) {
-                            				handleValueConverterException(vce);
-                            	        }
-                            	        currentNode = currentNode.getParent();
+                                   		add(
+                                   			current, 
+                                   			"args",
+                                    		lv_args_3_0, 
+                                    		"uk.ac.open.event.EventCalculus.Expression");
+                            	        afterParserOrEnumRuleCall();
                             	    
 
                             }
@@ -6615,7 +6240,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2887:3: ( ',' ( (lv_args_5_0= ruleExpression ) ) )*
+                    // InternalEventCalculus.g:2320:3: (otherlv_4= ',' ( (lv_args_5_0= ruleExpression ) ) )*
                     loop50:
                     do {
                         int alt50=2;
@@ -6628,41 +6253,36 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
                         switch (alt50) {
                     	case 1 :
-                    	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2887:5: ',' ( (lv_args_5_0= ruleExpression ) )
+                    	    // InternalEventCalculus.g:2320:5: otherlv_4= ',' ( (lv_args_5_0= ruleExpression ) )
                     	    {
-                    	    match(input,23,FOLLOW_23_in_ruleAbstractRef4911); 
+                    	    otherlv_4=(Token)match(input,23,FOLLOW_22); 
 
-                    	            createLeafNode(grammarAccess.getAbstractRefAccess().getCommaKeyword_1_1_2_0(), null); 
+                    	        	newLeafNode(otherlv_4, grammarAccess.getAbstractRefAccess().getCommaKeyword_1_1_2_0());
                     	        
-                    	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2891:1: ( (lv_args_5_0= ruleExpression ) )
-                    	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2892:1: (lv_args_5_0= ruleExpression )
+                    	    // InternalEventCalculus.g:2324:1: ( (lv_args_5_0= ruleExpression ) )
+                    	    // InternalEventCalculus.g:2325:1: (lv_args_5_0= ruleExpression )
                     	    {
-                    	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2892:1: (lv_args_5_0= ruleExpression )
-                    	    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2893:3: lv_args_5_0= ruleExpression
+                    	    // InternalEventCalculus.g:2325:1: (lv_args_5_0= ruleExpression )
+                    	    // InternalEventCalculus.g:2326:3: lv_args_5_0= ruleExpression
                     	    {
                     	     
-                    	    	        currentNode=createCompositeNode(grammarAccess.getAbstractRefAccess().getArgsExpressionParserRuleCall_1_1_2_1_0(), currentNode); 
+                    	    	        newCompositeNode(grammarAccess.getAbstractRefAccess().getArgsExpressionParserRuleCall_1_1_2_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleExpression_in_ruleAbstractRef4932);
+                    	    pushFollow(FOLLOW_28);
                     	    lv_args_5_0=ruleExpression();
-                    	    _fsp--;
+
+                    	    state._fsp--;
 
 
                     	    	        if (current==null) {
-                    	    	            current = factory.create(grammarAccess.getAbstractRefRule().getType().getClassifier());
-                    	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+                    	    	            current = createModelElementForParent(grammarAccess.getAbstractRefRule());
                     	    	        }
-                    	    	        try {
-                    	    	       		add(
-                    	    	       			current, 
-                    	    	       			"args",
-                    	    	        		lv_args_5_0, 
-                    	    	        		"Expression", 
-                    	    	        		currentNode);
-                    	    	        } catch (ValueConverterException vce) {
-                    	    				handleValueConverterException(vce);
-                    	    	        }
-                    	    	        currentNode = currentNode.getParent();
+                    	           		add(
+                    	           			current, 
+                    	           			"args",
+                    	            		lv_args_5_0, 
+                    	            		"uk.ac.open.event.EventCalculus.Expression");
+                    	    	        afterParserOrEnumRuleCall();
                     	    	    
 
                     	    }
@@ -6679,9 +6299,9 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    match(input,28,FOLLOW_28_in_ruleAbstractRef4944); 
+                    otherlv_6=(Token)match(input,28,FOLLOW_2); 
 
-                            createLeafNode(grammarAccess.getAbstractRefAccess().getRightParenthesisKeyword_1_1_3(), null); 
+                        	newLeafNode(otherlv_6, grammarAccess.getAbstractRefAccess().getRightParenthesisKeyword_1_1_3());
                         
 
                     }
@@ -6698,9 +6318,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -6711,11 +6329,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleAbstractRef
+    // $ANTLR end "ruleAbstractRef"
 
 
-    // $ANTLR start entryRuleTerminalExpression
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2927:1: entryRuleTerminalExpression returns [EObject current=null] : iv_ruleTerminalExpression= ruleTerminalExpression EOF ;
+    // $ANTLR start "entryRuleTerminalExpression"
+    // InternalEventCalculus.g:2354:1: entryRuleTerminalExpression returns [EObject current=null] : iv_ruleTerminalExpression= ruleTerminalExpression EOF ;
     public final EObject entryRuleTerminalExpression() throws RecognitionException {
         EObject current = null;
 
@@ -6723,16 +6341,17 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2928:2: (iv_ruleTerminalExpression= ruleTerminalExpression EOF )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2929:2: iv_ruleTerminalExpression= ruleTerminalExpression EOF
+            // InternalEventCalculus.g:2355:2: (iv_ruleTerminalExpression= ruleTerminalExpression EOF )
+            // InternalEventCalculus.g:2356:2: iv_ruleTerminalExpression= ruleTerminalExpression EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getTerminalExpressionRule(), currentNode); 
-            pushFollow(FOLLOW_ruleTerminalExpression_in_entryRuleTerminalExpression4983);
+             newCompositeNode(grammarAccess.getTerminalExpressionRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleTerminalExpression=ruleTerminalExpression();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleTerminalExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTerminalExpression4993); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -6746,11 +6365,11 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleTerminalExpression
+    // $ANTLR end "entryRuleTerminalExpression"
 
 
-    // $ANTLR start ruleTerminalExpression
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2936:1: ruleTerminalExpression returns [EObject current=null] : ( ( () ( (lv_value_1_0= RULE_INT ) ) ) | ( () ( (lv_value_3_0= RULE_STRING ) ) ) | ( () ( (lv_value_5_0= RULE_BOOLEAN ) ) ) ) ;
+    // $ANTLR start "ruleTerminalExpression"
+    // InternalEventCalculus.g:2363:1: ruleTerminalExpression returns [EObject current=null] : ( ( () ( (lv_value_1_0= RULE_INT ) ) ) | ( () ( (lv_value_3_0= RULE_STRING ) ) ) | ( () ( (lv_value_5_0= RULE_BOOLEAN ) ) ) ) ;
     public final EObject ruleTerminalExpression() throws RecognitionException {
         EObject current = null;
 
@@ -6758,13 +6377,13 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         Token lv_value_3_0=null;
         Token lv_value_5_0=null;
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2941:6: ( ( ( () ( (lv_value_1_0= RULE_INT ) ) ) | ( () ( (lv_value_3_0= RULE_STRING ) ) ) | ( () ( (lv_value_5_0= RULE_BOOLEAN ) ) ) ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2942:1: ( ( () ( (lv_value_1_0= RULE_INT ) ) ) | ( () ( (lv_value_3_0= RULE_STRING ) ) ) | ( () ( (lv_value_5_0= RULE_BOOLEAN ) ) ) )
+            // InternalEventCalculus.g:2366:28: ( ( ( () ( (lv_value_1_0= RULE_INT ) ) ) | ( () ( (lv_value_3_0= RULE_STRING ) ) ) | ( () ( (lv_value_5_0= RULE_BOOLEAN ) ) ) ) )
+            // InternalEventCalculus.g:2367:1: ( ( () ( (lv_value_1_0= RULE_INT ) ) ) | ( () ( (lv_value_3_0= RULE_STRING ) ) ) | ( () ( (lv_value_5_0= RULE_BOOLEAN ) ) ) )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2942:1: ( ( () ( (lv_value_1_0= RULE_INT ) ) ) | ( () ( (lv_value_3_0= RULE_STRING ) ) ) | ( () ( (lv_value_5_0= RULE_BOOLEAN ) ) ) )
+            // InternalEventCalculus.g:2367:1: ( ( () ( (lv_value_1_0= RULE_INT ) ) ) | ( () ( (lv_value_3_0= RULE_STRING ) ) ) | ( () ( (lv_value_5_0= RULE_BOOLEAN ) ) ) )
             int alt52=3;
             switch ( input.LA(1) ) {
             case RULE_INT:
@@ -6784,60 +6403,48 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("2942:1: ( ( () ( (lv_value_1_0= RULE_INT ) ) ) | ( () ( (lv_value_3_0= RULE_STRING ) ) ) | ( () ( (lv_value_5_0= RULE_BOOLEAN ) ) ) )", 52, 0, input);
+                    new NoViableAltException("", 52, 0, input);
 
                 throw nvae;
             }
 
             switch (alt52) {
                 case 1 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2942:2: ( () ( (lv_value_1_0= RULE_INT ) ) )
+                    // InternalEventCalculus.g:2367:2: ( () ( (lv_value_1_0= RULE_INT ) ) )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2942:2: ( () ( (lv_value_1_0= RULE_INT ) ) )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2942:3: () ( (lv_value_1_0= RULE_INT ) )
+                    // InternalEventCalculus.g:2367:2: ( () ( (lv_value_1_0= RULE_INT ) ) )
+                    // InternalEventCalculus.g:2367:3: () ( (lv_value_1_0= RULE_INT ) )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2942:3: ()
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2943:5: 
+                    // InternalEventCalculus.g:2367:3: ()
+                    // InternalEventCalculus.g:2368:5: 
                     {
-                     
-                            temp=factory.create(grammarAccess.getTerminalExpressionAccess().getIntLiteralAction_0_0().getType().getClassifier());
-                            current = temp; 
-                            temp = null;
-                            CompositeNode newNode = createCompositeNode(grammarAccess.getTerminalExpressionAccess().getIntLiteralAction_0_0(), currentNode.getParent());
-                        newNode.getChildren().add(currentNode);
-                        moveLookaheadInfo(currentNode, newNode);
-                        currentNode = newNode; 
-                            associateNodeWithAstElement(currentNode, current); 
+
+                            current = forceCreateModelElement(
+                                grammarAccess.getTerminalExpressionAccess().getIntLiteralAction_0_0(),
+                                current);
                         
 
                     }
 
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2953:2: ( (lv_value_1_0= RULE_INT ) )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2954:1: (lv_value_1_0= RULE_INT )
+                    // InternalEventCalculus.g:2373:2: ( (lv_value_1_0= RULE_INT ) )
+                    // InternalEventCalculus.g:2374:1: (lv_value_1_0= RULE_INT )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2954:1: (lv_value_1_0= RULE_INT )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2955:3: lv_value_1_0= RULE_INT
+                    // InternalEventCalculus.g:2374:1: (lv_value_1_0= RULE_INT )
+                    // InternalEventCalculus.g:2375:3: lv_value_1_0= RULE_INT
                     {
-                    lv_value_1_0=(Token)input.LT(1);
-                    match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleTerminalExpression5045); 
+                    lv_value_1_0=(Token)match(input,RULE_INT,FOLLOW_2); 
 
-                    			createLeafNode(grammarAccess.getTerminalExpressionAccess().getValueINTTerminalRuleCall_0_1_0(), "value"); 
+                    			newLeafNode(lv_value_1_0, grammarAccess.getTerminalExpressionAccess().getValueINTTerminalRuleCall_0_1_0()); 
                     		
 
                     	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getTerminalExpressionRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
+                    	            current = createModelElement(grammarAccess.getTerminalExpressionRule());
                     	        }
-                    	        try {
-                    	       		set(
-                    	       			current, 
-                    	       			"value",
-                    	        		lv_value_1_0, 
-                    	        		"INT", 
-                    	        		lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"value",
+                            		lv_value_1_0, 
+                            		"uk.ac.open.event.EventCalculus.INT");
                     	    
 
                     }
@@ -6852,53 +6459,41 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2978:6: ( () ( (lv_value_3_0= RULE_STRING ) ) )
+                    // InternalEventCalculus.g:2392:6: ( () ( (lv_value_3_0= RULE_STRING ) ) )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2978:6: ( () ( (lv_value_3_0= RULE_STRING ) ) )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2978:7: () ( (lv_value_3_0= RULE_STRING ) )
+                    // InternalEventCalculus.g:2392:6: ( () ( (lv_value_3_0= RULE_STRING ) ) )
+                    // InternalEventCalculus.g:2392:7: () ( (lv_value_3_0= RULE_STRING ) )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2978:7: ()
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2979:5: 
+                    // InternalEventCalculus.g:2392:7: ()
+                    // InternalEventCalculus.g:2393:5: 
                     {
-                     
-                            temp=factory.create(grammarAccess.getTerminalExpressionAccess().getStringLiteralAction_1_0().getType().getClassifier());
-                            current = temp; 
-                            temp = null;
-                            CompositeNode newNode = createCompositeNode(grammarAccess.getTerminalExpressionAccess().getStringLiteralAction_1_0(), currentNode.getParent());
-                        newNode.getChildren().add(currentNode);
-                        moveLookaheadInfo(currentNode, newNode);
-                        currentNode = newNode; 
-                            associateNodeWithAstElement(currentNode, current); 
+
+                            current = forceCreateModelElement(
+                                grammarAccess.getTerminalExpressionAccess().getStringLiteralAction_1_0(),
+                                current);
                         
 
                     }
 
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2989:2: ( (lv_value_3_0= RULE_STRING ) )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2990:1: (lv_value_3_0= RULE_STRING )
+                    // InternalEventCalculus.g:2398:2: ( (lv_value_3_0= RULE_STRING ) )
+                    // InternalEventCalculus.g:2399:1: (lv_value_3_0= RULE_STRING )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2990:1: (lv_value_3_0= RULE_STRING )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:2991:3: lv_value_3_0= RULE_STRING
+                    // InternalEventCalculus.g:2399:1: (lv_value_3_0= RULE_STRING )
+                    // InternalEventCalculus.g:2400:3: lv_value_3_0= RULE_STRING
                     {
-                    lv_value_3_0=(Token)input.LT(1);
-                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleTerminalExpression5084); 
+                    lv_value_3_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
 
-                    			createLeafNode(grammarAccess.getTerminalExpressionAccess().getValueSTRINGTerminalRuleCall_1_1_0(), "value"); 
+                    			newLeafNode(lv_value_3_0, grammarAccess.getTerminalExpressionAccess().getValueSTRINGTerminalRuleCall_1_1_0()); 
                     		
 
                     	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getTerminalExpressionRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
+                    	            current = createModelElement(grammarAccess.getTerminalExpressionRule());
                     	        }
-                    	        try {
-                    	       		set(
-                    	       			current, 
-                    	       			"value",
-                    	        		lv_value_3_0, 
-                    	        		"STRING", 
-                    	        		lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"value",
+                            		lv_value_3_0, 
+                            		"uk.ac.open.event.EventCalculus.STRING");
                     	    
 
                     }
@@ -6913,53 +6508,41 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3014:6: ( () ( (lv_value_5_0= RULE_BOOLEAN ) ) )
+                    // InternalEventCalculus.g:2417:6: ( () ( (lv_value_5_0= RULE_BOOLEAN ) ) )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3014:6: ( () ( (lv_value_5_0= RULE_BOOLEAN ) ) )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3014:7: () ( (lv_value_5_0= RULE_BOOLEAN ) )
+                    // InternalEventCalculus.g:2417:6: ( () ( (lv_value_5_0= RULE_BOOLEAN ) ) )
+                    // InternalEventCalculus.g:2417:7: () ( (lv_value_5_0= RULE_BOOLEAN ) )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3014:7: ()
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3015:5: 
+                    // InternalEventCalculus.g:2417:7: ()
+                    // InternalEventCalculus.g:2418:5: 
                     {
-                     
-                            temp=factory.create(grammarAccess.getTerminalExpressionAccess().getBooleanLiteralAction_2_0().getType().getClassifier());
-                            current = temp; 
-                            temp = null;
-                            CompositeNode newNode = createCompositeNode(grammarAccess.getTerminalExpressionAccess().getBooleanLiteralAction_2_0(), currentNode.getParent());
-                        newNode.getChildren().add(currentNode);
-                        moveLookaheadInfo(currentNode, newNode);
-                        currentNode = newNode; 
-                            associateNodeWithAstElement(currentNode, current); 
+
+                            current = forceCreateModelElement(
+                                grammarAccess.getTerminalExpressionAccess().getBooleanLiteralAction_2_0(),
+                                current);
                         
 
                     }
 
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3025:2: ( (lv_value_5_0= RULE_BOOLEAN ) )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3026:1: (lv_value_5_0= RULE_BOOLEAN )
+                    // InternalEventCalculus.g:2423:2: ( (lv_value_5_0= RULE_BOOLEAN ) )
+                    // InternalEventCalculus.g:2424:1: (lv_value_5_0= RULE_BOOLEAN )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3026:1: (lv_value_5_0= RULE_BOOLEAN )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3027:3: lv_value_5_0= RULE_BOOLEAN
+                    // InternalEventCalculus.g:2424:1: (lv_value_5_0= RULE_BOOLEAN )
+                    // InternalEventCalculus.g:2425:3: lv_value_5_0= RULE_BOOLEAN
                     {
-                    lv_value_5_0=(Token)input.LT(1);
-                    match(input,RULE_BOOLEAN,FOLLOW_RULE_BOOLEAN_in_ruleTerminalExpression5123); 
+                    lv_value_5_0=(Token)match(input,RULE_BOOLEAN,FOLLOW_2); 
 
-                    			createLeafNode(grammarAccess.getTerminalExpressionAccess().getValueBOOLEANTerminalRuleCall_2_1_0(), "value"); 
+                    			newLeafNode(lv_value_5_0, grammarAccess.getTerminalExpressionAccess().getValueBOOLEANTerminalRuleCall_2_1_0()); 
                     		
 
                     	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getTerminalExpressionRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
+                    	            current = createModelElement(grammarAccess.getTerminalExpressionRule());
                     	        }
-                    	        try {
-                    	       		set(
-                    	       			current, 
-                    	       			"value",
-                    	        		lv_value_5_0, 
-                    	        		"BOOLEAN", 
-                    	        		lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"value",
+                            		lv_value_5_0, 
+                            		"uk.ac.open.event.EventCalculus.BOOLEAN");
                     	    
 
                     }
@@ -6979,9 +6562,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -6992,20 +6573,23 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleTerminalExpression
+    // $ANTLR end "ruleTerminalExpression"
 
 
-    // $ANTLR start ruleANNOTATION_TYPE
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3059:1: ruleANNOTATION_TYPE returns [Enumerator current=null] : ( ( 'generated' ) | ( 'author' ) ) ;
+    // $ANTLR start "ruleANNOTATION_TYPE"
+    // InternalEventCalculus.g:2451:1: ruleANNOTATION_TYPE returns [Enumerator current=null] : ( (enumLiteral_0= 'generated' ) | (enumLiteral_1= 'author' ) ) ;
     public final Enumerator ruleANNOTATION_TYPE() throws RecognitionException {
         Enumerator current = null;
 
-         setCurrentLookahead(); resetLookahead(); 
+        Token enumLiteral_0=null;
+        Token enumLiteral_1=null;
+
+         enterRule(); 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3063:6: ( ( ( 'generated' ) | ( 'author' ) ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3064:1: ( ( 'generated' ) | ( 'author' ) )
+            // InternalEventCalculus.g:2453:28: ( ( (enumLiteral_0= 'generated' ) | (enumLiteral_1= 'author' ) ) )
+            // InternalEventCalculus.g:2454:1: ( (enumLiteral_0= 'generated' ) | (enumLiteral_1= 'author' ) )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3064:1: ( ( 'generated' ) | ( 'author' ) )
+            // InternalEventCalculus.g:2454:1: ( (enumLiteral_0= 'generated' ) | (enumLiteral_1= 'author' ) )
             int alt53=2;
             int LA53_0 = input.LA(1);
 
@@ -7017,21 +6601,21 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("3064:1: ( ( 'generated' ) | ( 'author' ) )", 53, 0, input);
+                    new NoViableAltException("", 53, 0, input);
 
                 throw nvae;
             }
             switch (alt53) {
                 case 1 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3064:2: ( 'generated' )
+                    // InternalEventCalculus.g:2454:2: (enumLiteral_0= 'generated' )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3064:2: ( 'generated' )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3064:4: 'generated'
+                    // InternalEventCalculus.g:2454:2: (enumLiteral_0= 'generated' )
+                    // InternalEventCalculus.g:2454:4: enumLiteral_0= 'generated'
                     {
-                    match(input,49,FOLLOW_49_in_ruleANNOTATION_TYPE5179); 
+                    enumLiteral_0=(Token)match(input,49,FOLLOW_2); 
 
                             current = grammarAccess.getANNOTATION_TYPEAccess().getGEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getANNOTATION_TYPEAccess().getGEnumLiteralDeclaration_0(), null); 
+                            newLeafNode(enumLiteral_0, grammarAccess.getANNOTATION_TYPEAccess().getGEnumLiteralDeclaration_0()); 
                         
 
                     }
@@ -7040,15 +6624,15 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3070:6: ( 'author' )
+                    // InternalEventCalculus.g:2460:6: (enumLiteral_1= 'author' )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3070:6: ( 'author' )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3070:8: 'author'
+                    // InternalEventCalculus.g:2460:6: (enumLiteral_1= 'author' )
+                    // InternalEventCalculus.g:2460:8: enumLiteral_1= 'author'
                     {
-                    match(input,50,FOLLOW_50_in_ruleANNOTATION_TYPE5194); 
+                    enumLiteral_1=(Token)match(input,50,FOLLOW_2); 
 
                             current = grammarAccess.getANNOTATION_TYPEAccess().getAEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getANNOTATION_TYPEAccess().getAEnumLiteralDeclaration_1(), null); 
+                            newLeafNode(enumLiteral_1, grammarAccess.getANNOTATION_TYPEAccess().getAEnumLiteralDeclaration_1()); 
                         
 
                     }
@@ -7062,9 +6646,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -7075,20 +6657,23 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleANNOTATION_TYPE
+    // $ANTLR end "ruleANNOTATION_TYPE"
 
 
-    // $ANTLR start ruleLabelType
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3080:1: ruleLabelType returns [Enumerator current=null] : ( ( 'Theta' ) | ( 'Delta' ) ) ;
+    // $ANTLR start "ruleLabelType"
+    // InternalEventCalculus.g:2470:1: ruleLabelType returns [Enumerator current=null] : ( (enumLiteral_0= 'Theta' ) | (enumLiteral_1= 'Delta' ) ) ;
     public final Enumerator ruleLabelType() throws RecognitionException {
         Enumerator current = null;
 
-         setCurrentLookahead(); resetLookahead(); 
+        Token enumLiteral_0=null;
+        Token enumLiteral_1=null;
+
+         enterRule(); 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3084:6: ( ( ( 'Theta' ) | ( 'Delta' ) ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3085:1: ( ( 'Theta' ) | ( 'Delta' ) )
+            // InternalEventCalculus.g:2472:28: ( ( (enumLiteral_0= 'Theta' ) | (enumLiteral_1= 'Delta' ) ) )
+            // InternalEventCalculus.g:2473:1: ( (enumLiteral_0= 'Theta' ) | (enumLiteral_1= 'Delta' ) )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3085:1: ( ( 'Theta' ) | ( 'Delta' ) )
+            // InternalEventCalculus.g:2473:1: ( (enumLiteral_0= 'Theta' ) | (enumLiteral_1= 'Delta' ) )
             int alt54=2;
             int LA54_0 = input.LA(1);
 
@@ -7100,21 +6685,21 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("3085:1: ( ( 'Theta' ) | ( 'Delta' ) )", 54, 0, input);
+                    new NoViableAltException("", 54, 0, input);
 
                 throw nvae;
             }
             switch (alt54) {
                 case 1 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3085:2: ( 'Theta' )
+                    // InternalEventCalculus.g:2473:2: (enumLiteral_0= 'Theta' )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3085:2: ( 'Theta' )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3085:4: 'Theta'
+                    // InternalEventCalculus.g:2473:2: (enumLiteral_0= 'Theta' )
+                    // InternalEventCalculus.g:2473:4: enumLiteral_0= 'Theta'
                     {
-                    match(input,51,FOLLOW_51_in_ruleLabelType5237); 
+                    enumLiteral_0=(Token)match(input,51,FOLLOW_2); 
 
                             current = grammarAccess.getLabelTypeAccess().getTEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getLabelTypeAccess().getTEnumLiteralDeclaration_0(), null); 
+                            newLeafNode(enumLiteral_0, grammarAccess.getLabelTypeAccess().getTEnumLiteralDeclaration_0()); 
                         
 
                     }
@@ -7123,15 +6708,15 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3091:6: ( 'Delta' )
+                    // InternalEventCalculus.g:2479:6: (enumLiteral_1= 'Delta' )
                     {
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3091:6: ( 'Delta' )
-                    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3091:8: 'Delta'
+                    // InternalEventCalculus.g:2479:6: (enumLiteral_1= 'Delta' )
+                    // InternalEventCalculus.g:2479:8: enumLiteral_1= 'Delta'
                     {
-                    match(input,52,FOLLOW_52_in_ruleLabelType5252); 
+                    enumLiteral_1=(Token)match(input,52,FOLLOW_2); 
 
                             current = grammarAccess.getLabelTypeAccess().getDEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getLabelTypeAccess().getDEnumLiteralDeclaration_1(), null); 
+                            newLeafNode(enumLiteral_1, grammarAccess.getLabelTypeAccess().getDEnumLiteralDeclaration_1()); 
                         
 
                     }
@@ -7145,9 +6730,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -7158,26 +6741,28 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleLabelType
+    // $ANTLR end "ruleLabelType"
 
 
-    // $ANTLR start ruleUnaryOp
-    // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3101:1: ruleUnaryOp returns [Enumerator current=null] : ( '!' ) ;
+    // $ANTLR start "ruleUnaryOp"
+    // InternalEventCalculus.g:2489:1: ruleUnaryOp returns [Enumerator current=null] : (enumLiteral_0= '!' ) ;
     public final Enumerator ruleUnaryOp() throws RecognitionException {
         Enumerator current = null;
 
-         setCurrentLookahead(); resetLookahead(); 
+        Token enumLiteral_0=null;
+
+         enterRule(); 
         try {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3105:6: ( ( '!' ) )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3106:1: ( '!' )
+            // InternalEventCalculus.g:2491:28: ( (enumLiteral_0= '!' ) )
+            // InternalEventCalculus.g:2492:1: (enumLiteral_0= '!' )
             {
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3106:1: ( '!' )
-            // ../event/src-gen/uk/ac/open/event/parser/antlr/internal/InternalEventCalculus.g:3106:3: '!'
+            // InternalEventCalculus.g:2492:1: (enumLiteral_0= '!' )
+            // InternalEventCalculus.g:2492:3: enumLiteral_0= '!'
             {
-            match(input,53,FOLLOW_53_in_ruleUnaryOp5294); 
+            enumLiteral_0=(Token)match(input,53,FOLLOW_2); 
 
                     current = grammarAccess.getUnaryOpAccess().getNOTEnumLiteralDeclaration().getEnumLiteral().getInstance();
-                    createLeafNode(grammarAccess.getUnaryOpAccess().getNOTEnumLiteralDeclaration(), null); 
+                    newLeafNode(enumLiteral_0, grammarAccess.getUnaryOpAccess().getNOTEnumLiteralDeclaration()); 
                 
 
             }
@@ -7185,9 +6770,7 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -7198,90 +6781,64 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleUnaryOp
+    // $ANTLR end "ruleUnaryOp"
+
+    // Delegated rules
 
 
     protected DFA2 dfa2 = new DFA2(this);
     protected DFA4 dfa4 = new DFA4(this);
     protected DFA19 dfa19 = new DFA19(this);
-    static final String DFA2_eotS =
-        "\12\uffff";
-    static final String DFA2_eofS =
-        "\1\1\11\uffff";
-    static final String DFA2_minS =
-        "\1\4\1\uffff\1\16\2\uffff\1\61\4\4";
-    static final String DFA2_maxS =
-        "\1\65\1\uffff\1\16\2\uffff\1\62\4\65";
-    static final String DFA2_acceptS =
-        "\1\uffff\1\3\1\uffff\1\1\1\2\5\uffff";
-    static final String DFA2_specialS =
-        "\12\uffff}>";
-    static final String[] DFA2_transitionS = {
-            "\4\4\5\uffff\1\2\2\uffff\2\3\1\uffff\4\3\1\uffff\2\3\1\uffff"+
-            "\1\4\1\uffff\1\4\1\uffff\1\4\15\uffff\1\4\5\uffff\3\4",
+    static final String dfa_1s = "\12\uffff";
+    static final String dfa_2s = "\1\1\11\uffff";
+    static final String dfa_3s = "\1\4\1\uffff\1\16\2\uffff\1\61\4\4";
+    static final String dfa_4s = "\1\65\1\uffff\1\16\2\uffff\1\62\4\65";
+    static final String dfa_5s = "\1\uffff\1\3\1\uffff\1\1\1\2\5\uffff";
+    static final String dfa_6s = "\12\uffff}>";
+    static final String[] dfa_7s = {
+            "\4\4\5\uffff\1\2\2\uffff\2\3\1\uffff\4\3\1\uffff\2\3\1\uffff\1\4\1\uffff\1\4\1\uffff\1\4\15\uffff\1\4\5\uffff\3\4",
             "",
             "\1\5",
             "",
             "",
             "\1\6\1\7",
-            "\1\10\3\4\5\uffff\1\2\1\uffff\1\11\2\3\1\uffff\4\3\1\uffff\2"+
-            "\3\1\uffff\1\4\1\uffff\1\4\1\uffff\1\4\15\uffff\1\4\5\uffff"+
-            "\3\4",
-            "\1\10\3\4\5\uffff\1\2\1\uffff\1\11\2\3\1\uffff\4\3\1\uffff\2"+
-            "\3\1\uffff\1\4\1\uffff\1\4\1\uffff\1\4\15\uffff\1\4\5\uffff"+
-            "\3\4",
-            "\4\4\5\uffff\1\2\2\uffff\2\3\1\uffff\4\3\1\uffff\2\3\2\4\1\uffff"+
-            "\1\4\1\uffff\1\4\1\uffff\20\4\2\uffff\3\4",
-            "\4\4\5\uffff\1\2\2\uffff\2\3\1\uffff\4\3\1\uffff\2\3\1\uffff"+
-            "\1\4\1\uffff\1\4\1\uffff\1\4\15\uffff\1\4\5\uffff\3\4"
+            "\1\10\3\4\5\uffff\1\2\1\uffff\1\11\2\3\1\uffff\4\3\1\uffff\2\3\1\uffff\1\4\1\uffff\1\4\1\uffff\1\4\15\uffff\1\4\5\uffff\3\4",
+            "\1\10\3\4\5\uffff\1\2\1\uffff\1\11\2\3\1\uffff\4\3\1\uffff\2\3\1\uffff\1\4\1\uffff\1\4\1\uffff\1\4\15\uffff\1\4\5\uffff\3\4",
+            "\4\4\5\uffff\1\2\2\uffff\2\3\1\uffff\4\3\1\uffff\2\3\2\4\1\uffff\1\4\1\uffff\1\4\1\uffff\20\4\2\uffff\3\4",
+            "\4\4\5\uffff\1\2\2\uffff\2\3\1\uffff\4\3\1\uffff\2\3\1\uffff\1\4\1\uffff\1\4\1\uffff\1\4\15\uffff\1\4\5\uffff\3\4"
     };
 
-    static final short[] DFA2_eot = DFA.unpackEncodedString(DFA2_eotS);
-    static final short[] DFA2_eof = DFA.unpackEncodedString(DFA2_eofS);
-    static final char[] DFA2_min = DFA.unpackEncodedStringToUnsignedChars(DFA2_minS);
-    static final char[] DFA2_max = DFA.unpackEncodedStringToUnsignedChars(DFA2_maxS);
-    static final short[] DFA2_accept = DFA.unpackEncodedString(DFA2_acceptS);
-    static final short[] DFA2_special = DFA.unpackEncodedString(DFA2_specialS);
-    static final short[][] DFA2_transition;
-
-    static {
-        int numStates = DFA2_transitionS.length;
-        DFA2_transition = new short[numStates][];
-        for (int i=0; i<numStates; i++) {
-            DFA2_transition[i] = DFA.unpackEncodedString(DFA2_transitionS[i]);
-        }
-    }
+    static final short[] dfa_1 = DFA.unpackEncodedString(dfa_1s);
+    static final short[] dfa_2 = DFA.unpackEncodedString(dfa_2s);
+    static final char[] dfa_3 = DFA.unpackEncodedStringToUnsignedChars(dfa_3s);
+    static final char[] dfa_4 = DFA.unpackEncodedStringToUnsignedChars(dfa_4s);
+    static final short[] dfa_5 = DFA.unpackEncodedString(dfa_5s);
+    static final short[] dfa_6 = DFA.unpackEncodedString(dfa_6s);
+    static final short[][] dfa_7 = unpackEncodedStringArray(dfa_7s);
 
     class DFA2 extends DFA {
 
         public DFA2(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
             this.decisionNumber = 2;
-            this.eot = DFA2_eot;
-            this.eof = DFA2_eof;
-            this.min = DFA2_min;
-            this.max = DFA2_max;
-            this.accept = DFA2_accept;
-            this.special = DFA2_special;
-            this.transition = DFA2_transition;
+            this.eot = dfa_1;
+            this.eof = dfa_2;
+            this.min = dfa_3;
+            this.max = dfa_4;
+            this.accept = dfa_5;
+            this.special = dfa_6;
+            this.transition = dfa_7;
         }
         public String getDescription() {
-            return "()* loopback of 117:3: ( ( (lv_declarations_1_0= ruleDeclaration ) ) | ( (lv_statements_2_0= ruleStatement ) ) )*";
+            return "()* loopback of 99:3: ( ( (lv_declarations_1_0= ruleDeclaration ) ) | ( (lv_statements_2_0= ruleStatement ) ) )*";
         }
     }
-    static final String DFA4_eotS =
-        "\16\uffff";
-    static final String DFA4_eofS =
-        "\16\uffff";
-    static final String DFA4_minS =
-        "\1\15\1\16\7\uffff\1\61\2\4\2\15";
-    static final String DFA4_maxS =
-        "\1\31\1\16\7\uffff\1\62\4\31";
-    static final String DFA4_acceptS =
-        "\2\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\5\uffff";
-    static final String DFA4_specialS =
-        "\16\uffff}>";
-    static final String[] DFA4_transitionS = {
+    static final String dfa_8s = "\16\uffff";
+    static final String dfa_9s = "\1\15\1\16\7\uffff\1\61\2\4\2\15";
+    static final String dfa_10s = "\1\31\1\16\7\uffff\1\62\4\31";
+    static final String dfa_11s = "\2\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\5\uffff";
+    static final String dfa_12s = "\16\uffff}>";
+    static final String[] dfa_13s = {
             "\1\1\2\uffff\2\2\1\uffff\1\3\1\4\1\5\1\6\1\uffff\1\7\1\10",
             "\1\11",
             "",
@@ -7292,319 +6849,117 @@ public class InternalEventCalculusParser extends AbstractInternalAntlrParser {
             "",
             "",
             "\1\12\1\13",
-            "\1\14\10\uffff\1\1\1\uffff\1\15\2\2\1\uffff\1\3\1\4\1\5\1\6"+
-            "\1\uffff\1\7\1\10",
-            "\1\14\10\uffff\1\1\1\uffff\1\15\2\2\1\uffff\1\3\1\4\1\5\1\6"+
-            "\1\uffff\1\7\1\10",
+            "\1\14\10\uffff\1\1\1\uffff\1\15\2\2\1\uffff\1\3\1\4\1\5\1\6\1\uffff\1\7\1\10",
+            "\1\14\10\uffff\1\1\1\uffff\1\15\2\2\1\uffff\1\3\1\4\1\5\1\6\1\uffff\1\7\1\10",
             "\1\1\2\uffff\2\2\1\uffff\1\3\1\4\1\5\1\6\1\uffff\1\7\1\10",
             "\1\1\2\uffff\2\2\1\uffff\1\3\1\4\1\5\1\6\1\uffff\1\7\1\10"
     };
 
-    static final short[] DFA4_eot = DFA.unpackEncodedString(DFA4_eotS);
-    static final short[] DFA4_eof = DFA.unpackEncodedString(DFA4_eofS);
-    static final char[] DFA4_min = DFA.unpackEncodedStringToUnsignedChars(DFA4_minS);
-    static final char[] DFA4_max = DFA.unpackEncodedStringToUnsignedChars(DFA4_maxS);
-    static final short[] DFA4_accept = DFA.unpackEncodedString(DFA4_acceptS);
-    static final short[] DFA4_special = DFA.unpackEncodedString(DFA4_specialS);
-    static final short[][] DFA4_transition;
-
-    static {
-        int numStates = DFA4_transitionS.length;
-        DFA4_transition = new short[numStates][];
-        for (int i=0; i<numStates; i++) {
-            DFA4_transition[i] = DFA.unpackEncodedString(DFA4_transitionS[i]);
-        }
-    }
+    static final short[] dfa_8 = DFA.unpackEncodedString(dfa_8s);
+    static final char[] dfa_9 = DFA.unpackEncodedStringToUnsignedChars(dfa_9s);
+    static final char[] dfa_10 = DFA.unpackEncodedStringToUnsignedChars(dfa_10s);
+    static final short[] dfa_11 = DFA.unpackEncodedString(dfa_11s);
+    static final short[] dfa_12 = DFA.unpackEncodedString(dfa_12s);
+    static final short[][] dfa_13 = unpackEncodedStringArray(dfa_13s);
 
     class DFA4 extends DFA {
 
         public DFA4(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
             this.decisionNumber = 4;
-            this.eot = DFA4_eot;
-            this.eof = DFA4_eof;
-            this.min = DFA4_min;
-            this.max = DFA4_max;
-            this.accept = DFA4_accept;
-            this.special = DFA4_special;
-            this.transition = DFA4_transition;
+            this.eot = dfa_8;
+            this.eof = dfa_8;
+            this.min = dfa_9;
+            this.max = dfa_10;
+            this.accept = dfa_11;
+            this.special = dfa_12;
+            this.transition = dfa_13;
         }
         public String getDescription() {
-            return "341:1: (this_DefSort_0= ruleDefSort | this_DefRange_1= ruleDefRange | this_DefOption_2= ruleDefOption | this_DefCompletion_3= ruleDefCompletion | this_DefNonInertia_4= ruleDefNonInertia | this_DefXor_5= ruleDefXor | this_DefMutex_6= ruleDefMutex )";
+            return "281:1: (this_DefSort_0= ruleDefSort | this_DefRange_1= ruleDefRange | this_DefOption_2= ruleDefOption | this_DefCompletion_3= ruleDefCompletion | this_DefNonInertia_4= ruleDefNonInertia | this_DefXor_5= ruleDefXor | this_DefMutex_6= ruleDefMutex )";
         }
     }
-    static final String DFA19_eotS =
-        "\12\uffff";
-    static final String DFA19_eofS =
-        "\12\uffff";
-    static final String DFA19_minS =
-        "\1\4\1\16\1\5\1\uffff\1\61\1\uffff\4\4";
-    static final String DFA19_maxS =
-        "\1\65\1\16\1\60\1\uffff\1\62\1\uffff\4\65";
-    static final String DFA19_acceptS =
-        "\3\uffff\1\2\1\uffff\1\1\4\uffff";
-    static final String DFA19_specialS =
-        "\12\uffff}>";
-    static final String[] DFA19_transitionS = {
-            "\1\3\1\2\2\3\5\uffff\1\1\15\uffff\1\3\1\uffff\1\3\1\uffff\1"+
-            "\3\15\uffff\1\3\5\uffff\3\3",
+    static final String dfa_14s = "\1\4\1\16\1\5\1\uffff\1\61\1\uffff\4\4";
+    static final String dfa_15s = "\1\65\1\16\1\60\1\uffff\1\62\1\uffff\4\65";
+    static final String dfa_16s = "\3\uffff\1\2\1\uffff\1\1\4\uffff";
+    static final String[] dfa_17s = {
+            "\1\3\1\2\2\3\5\uffff\1\1\15\uffff\1\3\1\uffff\1\3\1\uffff\1\3\15\uffff\1\3\5\uffff\3\3",
             "\1\4",
             "\1\5\24\uffff\2\3\5\uffff\20\3",
             "",
             "\1\6\1\7",
             "",
-            "\1\10\1\2\2\3\5\uffff\1\1\1\uffff\1\11\13\uffff\1\3\1\uffff"+
-            "\1\3\1\uffff\1\3\15\uffff\1\3\5\uffff\3\3",
-            "\1\10\1\2\2\3\5\uffff\1\1\1\uffff\1\11\13\uffff\1\3\1\uffff"+
-            "\1\3\1\uffff\1\3\15\uffff\1\3\5\uffff\3\3",
-            "\1\3\1\2\2\3\5\uffff\1\1\14\uffff\2\3\1\uffff\1\3\1\uffff\1"+
-            "\3\1\uffff\20\3\2\uffff\3\3",
-            "\1\3\1\2\2\3\5\uffff\1\1\15\uffff\1\3\1\uffff\1\3\1\uffff\1"+
-            "\3\15\uffff\1\3\5\uffff\3\3"
+            "\1\10\1\2\2\3\5\uffff\1\1\1\uffff\1\11\13\uffff\1\3\1\uffff\1\3\1\uffff\1\3\15\uffff\1\3\5\uffff\3\3",
+            "\1\10\1\2\2\3\5\uffff\1\1\1\uffff\1\11\13\uffff\1\3\1\uffff\1\3\1\uffff\1\3\15\uffff\1\3\5\uffff\3\3",
+            "\1\3\1\2\2\3\5\uffff\1\1\14\uffff\2\3\1\uffff\1\3\1\uffff\1\3\1\uffff\20\3\2\uffff\3\3",
+            "\1\3\1\2\2\3\5\uffff\1\1\15\uffff\1\3\1\uffff\1\3\1\uffff\1\3\15\uffff\1\3\5\uffff\3\3"
     };
-
-    static final short[] DFA19_eot = DFA.unpackEncodedString(DFA19_eotS);
-    static final short[] DFA19_eof = DFA.unpackEncodedString(DFA19_eofS);
-    static final char[] DFA19_min = DFA.unpackEncodedStringToUnsignedChars(DFA19_minS);
-    static final char[] DFA19_max = DFA.unpackEncodedStringToUnsignedChars(DFA19_maxS);
-    static final short[] DFA19_accept = DFA.unpackEncodedString(DFA19_acceptS);
-    static final short[] DFA19_special = DFA.unpackEncodedString(DFA19_specialS);
-    static final short[][] DFA19_transition;
-
-    static {
-        int numStates = DFA19_transitionS.length;
-        DFA19_transition = new short[numStates][];
-        for (int i=0; i<numStates; i++) {
-            DFA19_transition[i] = DFA.unpackEncodedString(DFA19_transitionS[i]);
-        }
-    }
+    static final char[] dfa_14 = DFA.unpackEncodedStringToUnsignedChars(dfa_14s);
+    static final char[] dfa_15 = DFA.unpackEncodedStringToUnsignedChars(dfa_15s);
+    static final short[] dfa_16 = DFA.unpackEncodedString(dfa_16s);
+    static final short[][] dfa_17 = unpackEncodedStringArray(dfa_17s);
 
     class DFA19 extends DFA {
 
         public DFA19(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
             this.decisionNumber = 19;
-            this.eot = DFA19_eot;
-            this.eof = DFA19_eof;
-            this.min = DFA19_min;
-            this.max = DFA19_max;
-            this.accept = DFA19_accept;
-            this.special = DFA19_special;
-            this.transition = DFA19_transition;
+            this.eot = dfa_1;
+            this.eof = dfa_1;
+            this.min = dfa_14;
+            this.max = dfa_15;
+            this.accept = dfa_16;
+            this.special = dfa_6;
+            this.transition = dfa_17;
         }
         public String getDescription() {
-            return "1162:1: (this_SortDefinition_0= ruleSortDefinition | this_LabeledExpression_1= ruleLabeledExpression )";
+            return "976:1: (this_SortDefinition_0= ruleSortDefinition | this_LabeledExpression_1= ruleLabeledExpression )";
         }
     }
  
 
-    public static final BitSet FOLLOW_ruleModel_in_entryRuleModel75 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleModel85 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleImport_in_ruleModel131 = new BitSet(new long[]{0x00382000AB7B30F2L});
-    public static final BitSet FOLLOW_ruleDeclaration_in_ruleModel154 = new BitSet(new long[]{0x00382000AB7B20F2L});
-    public static final BitSet FOLLOW_ruleStatement_in_ruleModel181 = new BitSet(new long[]{0x00382000AB7B20F2L});
-    public static final BitSet FOLLOW_ruleImport_in_entryRuleImport219 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleImport229 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_ruleImport264 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleImport281 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnnotation_in_entryRuleAnnotation322 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAnnotation332 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_ruleAnnotation367 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleAnnotation377 = new BitSet(new long[]{0x0006000000000000L});
-    public static final BitSet FOLLOW_ruleANNOTATION_TYPE_in_ruleAnnotation398 = new BitSet(new long[]{0x0000000000008012L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleAnnotation416 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_ruleAnnotation445 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDeclaration_in_entryRuleDeclaration496 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDeclaration506 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDefSort_in_ruleDeclaration553 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDefRange_in_ruleDeclaration580 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDefOption_in_ruleDeclaration607 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDefCompletion_in_ruleDeclaration634 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDefNonInertia_in_ruleDeclaration661 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDefXor_in_ruleDeclaration688 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDefMutex_in_ruleDeclaration715 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDefSort_in_entryRuleDefSort752 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDefSort762 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnnotation_in_ruleDefSort808 = new BitSet(new long[]{0x0000000000032000L});
-    public static final BitSet FOLLOW_16_in_ruleDefSort827 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleDefSort851 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDefSort868 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_18_in_ruleDefSort884 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDefSort901 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDefRange_in_entryRuleDefRange944 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDefRange954 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnnotation_in_ruleDefRange1000 = new BitSet(new long[]{0x0000000000082000L});
-    public static final BitSet FOLLOW_19_in_ruleDefRange1011 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDefRange1029 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleDefRange1046 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleDefRange1068 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDefOption_in_entryRuleDefOption1109 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDefOption1119 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnnotation_in_ruleDefOption1165 = new BitSet(new long[]{0x0000000000102000L});
-    public static final BitSet FOLLOW_20_in_ruleDefOption1178 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDefOption1195 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleDefOption1217 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_ruleDefOption1240 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDefOption1257 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDefOption1279 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDefCompletion_in_entryRuleDefCompletion1322 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDefCompletion1332 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnnotation_in_ruleDefCompletion1378 = new BitSet(new long[]{0x0000000000202000L});
-    public static final BitSet FOLLOW_21_in_ruleDefCompletion1389 = new BitSet(new long[]{0x0018000000000020L});
-    public static final BitSet FOLLOW_ruleLabelType_in_ruleDefCompletion1410 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDefCompletion1429 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDefNonInertia_in_entryRuleDefNonInertia1465 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDefNonInertia1475 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnnotation_in_ruleDefNonInertia1521 = new BitSet(new long[]{0x0000000000402000L});
-    public static final BitSet FOLLOW_22_in_ruleDefNonInertia1532 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDefNonInertia1550 = new BitSet(new long[]{0x0000000000800002L});
-    public static final BitSet FOLLOW_23_in_ruleDefNonInertia1561 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDefNonInertia1579 = new BitSet(new long[]{0x0000000000800002L});
-    public static final BitSet FOLLOW_ruleDefXor_in_entryRuleDefXor1617 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDefXor1627 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnnotation_in_ruleDefXor1673 = new BitSet(new long[]{0x0000000001002000L});
-    public static final BitSet FOLLOW_24_in_ruleDefXor1684 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDefXor1702 = new BitSet(new long[]{0x0000000000800002L});
-    public static final BitSet FOLLOW_23_in_ruleDefXor1713 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDefXor1731 = new BitSet(new long[]{0x0000000000800002L});
-    public static final BitSet FOLLOW_ruleDefMutex_in_entryRuleDefMutex1769 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDefMutex1779 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnnotation_in_ruleDefMutex1825 = new BitSet(new long[]{0x0000000002002000L});
-    public static final BitSet FOLLOW_25_in_ruleDefMutex1836 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDefMutex1854 = new BitSet(new long[]{0x0000000000800002L});
-    public static final BitSet FOLLOW_23_in_ruleDefMutex1865 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDefMutex1883 = new BitSet(new long[]{0x0000000000800002L});
-    public static final BitSet FOLLOW_ruleStatement_in_entryRuleStatement1921 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleStatement1931 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSortDefinition_in_ruleStatement1978 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLabeledExpression_in_ruleStatement2005 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLabeledExpression_in_entryRuleLabeledExpression2040 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLabeledExpression2050 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnnotation_in_ruleLabeledExpression2096 = new BitSet(new long[]{0x00382000A80020F0L});
-    public static final BitSet FOLLOW_ruleLabelType_in_ruleLabeledExpression2119 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleLabeledExpression2129 = new BitSet(new long[]{0x00202000A80000F0L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleLabeledExpression2152 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_26_in_ruleLabeledExpression2162 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSortDefinition_in_entryRuleSortDefinition2198 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSortDefinition2208 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnnotation_in_ruleSortDefinition2254 = new BitSet(new long[]{0x0000000000002020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleSortDefinition2273 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleDefinition_in_ruleSortDefinition2294 = new BitSet(new long[]{0x0000000000800002L});
-    public static final BitSet FOLLOW_23_in_ruleSortDefinition2305 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleDefinition_in_ruleSortDefinition2326 = new BitSet(new long[]{0x0000000000800002L});
-    public static final BitSet FOLLOW_ruleDefinition_in_entryRuleDefinition2364 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDefinition2374 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDefinition2416 = new BitSet(new long[]{0x0000000008040002L});
-    public static final BitSet FOLLOW_27_in_ruleDefinition2432 = new BitSet(new long[]{0x0000000010800020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDefinition2450 = new BitSet(new long[]{0x0000000010800000L});
-    public static final BitSet FOLLOW_23_in_ruleDefinition2462 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDefinition2480 = new BitSet(new long[]{0x0000000010800000L});
-    public static final BitSet FOLLOW_28_in_ruleDefinition2492 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_18_in_ruleDefinition2505 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDefinition2523 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_entryRuleExpression2561 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleExpression2571 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAssignmentOp_in_ruleExpression2617 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifier_in_ruleExpression2645 = new BitSet(new long[]{0x00202000A80000F0L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleExpression2666 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifier_in_entryRuleQualifier2703 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleQualifier2713 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExists_in_ruleQualifier2760 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleForall_in_ruleQualifier2787 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParameters_in_entryRuleParameters2822 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleParameters2832 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleParameters2875 = new BitSet(new long[]{0x0000000000800002L});
-    public static final BitSet FOLLOW_23_in_ruleParameters2886 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleParameters2904 = new BitSet(new long[]{0x0000000000800002L});
-    public static final BitSet FOLLOW_ruleExists_in_entryRuleExists2942 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleExists2952 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUnaryOp_in_ruleExists2998 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_ruleExists3009 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleParameters_in_ruleExists3030 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_ruleExists3040 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleForall_in_entryRuleForall3076 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleForall3086 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUnaryOp_in_ruleForall3132 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_31_in_ruleForall3143 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleParameters_in_ruleForall3164 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleForall3174 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAssignmentOp_in_entryRuleAssignmentOp3210 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAssignmentOp3220 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOrExp_in_ruleAssignmentOp3267 = new BitSet(new long[]{0x0000000600000002L});
-    public static final BitSet FOLLOW_33_in_ruleAssignmentOp3288 = new BitSet(new long[]{0x00202000A80000F0L});
-    public static final BitSet FOLLOW_34_in_ruleAssignmentOp3315 = new BitSet(new long[]{0x00202000A80000F0L});
-    public static final BitSet FOLLOW_ruleQualifier_in_ruleAssignmentOp3338 = new BitSet(new long[]{0x00202000080000F0L});
-    public static final BitSet FOLLOW_ruleOrExp_in_ruleAssignmentOp3360 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOrExp_in_entryRuleOrExp3398 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleOrExp3408 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAndExp_in_ruleOrExp3455 = new BitSet(new long[]{0x0000000800000002L});
-    public static final BitSet FOLLOW_35_in_ruleOrExp3474 = new BitSet(new long[]{0x00202000A80000F0L});
-    public static final BitSet FOLLOW_ruleQualifier_in_ruleOrExp3495 = new BitSet(new long[]{0x00202000080000F0L});
-    public static final BitSet FOLLOW_ruleAndExp_in_ruleOrExp3517 = new BitSet(new long[]{0x0000000800000002L});
-    public static final BitSet FOLLOW_ruleAndExp_in_entryRuleAndExp3555 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAndExp3565 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRelational_in_ruleAndExp3612 = new BitSet(new long[]{0x0000001000000002L});
-    public static final BitSet FOLLOW_36_in_ruleAndExp3631 = new BitSet(new long[]{0x00202000A80000F0L});
-    public static final BitSet FOLLOW_ruleQualifier_in_ruleAndExp3652 = new BitSet(new long[]{0x00202000080000F0L});
-    public static final BitSet FOLLOW_ruleRelational_in_ruleAndExp3674 = new BitSet(new long[]{0x0000001000000002L});
-    public static final BitSet FOLLOW_ruleRelational_in_entryRuleRelational3712 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRelational3722 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAddition_in_ruleRelational3769 = new BitSet(new long[]{0x00000FE000000002L});
-    public static final BitSet FOLLOW_37_in_ruleRelational3790 = new BitSet(new long[]{0x00202000080000F0L});
-    public static final BitSet FOLLOW_38_in_ruleRelational3817 = new BitSet(new long[]{0x00202000080000F0L});
-    public static final BitSet FOLLOW_39_in_ruleRelational3844 = new BitSet(new long[]{0x00202000080000F0L});
-    public static final BitSet FOLLOW_40_in_ruleRelational3871 = new BitSet(new long[]{0x00202000080000F0L});
-    public static final BitSet FOLLOW_41_in_ruleRelational3898 = new BitSet(new long[]{0x00202000080000F0L});
-    public static final BitSet FOLLOW_42_in_ruleRelational3925 = new BitSet(new long[]{0x00202000080000F0L});
-    public static final BitSet FOLLOW_43_in_ruleRelational3952 = new BitSet(new long[]{0x00202000080000F0L});
-    public static final BitSet FOLLOW_ruleAddition_in_ruleRelational3975 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAddition_in_entryRuleAddition4013 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAddition4023 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMultiplication_in_ruleAddition4070 = new BitSet(new long[]{0x0000300000000002L});
-    public static final BitSet FOLLOW_44_in_ruleAddition4091 = new BitSet(new long[]{0x00202000080000F0L});
-    public static final BitSet FOLLOW_45_in_ruleAddition4118 = new BitSet(new long[]{0x00202000080000F0L});
-    public static final BitSet FOLLOW_ruleMultiplication_in_ruleAddition4141 = new BitSet(new long[]{0x0000300000000002L});
-    public static final BitSet FOLLOW_ruleMultiplication_in_entryRuleMultiplication4179 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMultiplication4189 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePower_in_ruleMultiplication4236 = new BitSet(new long[]{0x0000C00000000002L});
-    public static final BitSet FOLLOW_46_in_ruleMultiplication4257 = new BitSet(new long[]{0x00202000080000F0L});
-    public static final BitSet FOLLOW_47_in_ruleMultiplication4284 = new BitSet(new long[]{0x00202000080000F0L});
-    public static final BitSet FOLLOW_rulePower_in_ruleMultiplication4307 = new BitSet(new long[]{0x0000C00000000002L});
-    public static final BitSet FOLLOW_rulePower_in_entryRulePower4345 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePower4355 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUnaryExpr_in_rulePower4402 = new BitSet(new long[]{0x0001000000000002L});
-    public static final BitSet FOLLOW_48_in_rulePower4422 = new BitSet(new long[]{0x00202000080000F0L});
-    public static final BitSet FOLLOW_ruleUnaryExpr_in_rulePower4444 = new BitSet(new long[]{0x0001000000000002L});
-    public static final BitSet FOLLOW_ruleUnaryExpr_in_entryRuleUnaryExpr4482 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleUnaryExpr4492 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUnaryOp_in_ruleUnaryExpr4538 = new BitSet(new long[]{0x00002000080000F0L});
-    public static final BitSet FOLLOW_rulePrePrimaryExpr_in_ruleUnaryExpr4560 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrePrimaryExpr_in_entryRulePrePrimaryExpr4596 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePrePrimaryExpr4606 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTerminalExpression_in_rulePrePrimaryExpr4653 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractRef_in_rulePrePrimaryExpr4680 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rulePrePrimaryExpr4696 = new BitSet(new long[]{0x00202000A80000F0L});
-    public static final BitSet FOLLOW_ruleExpression_in_rulePrePrimaryExpr4718 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_rulePrePrimaryExpr4727 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_45_in_rulePrePrimaryExpr4745 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_INT_in_rulePrePrimaryExpr4762 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractRef_in_entryRuleAbstractRef4804 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAbstractRef4814 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleAbstractRef4857 = new BitSet(new long[]{0x0000000008000002L});
-    public static final BitSet FOLLOW_27_in_ruleAbstractRef4878 = new BitSet(new long[]{0x00202000B88000F0L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleAbstractRef4899 = new BitSet(new long[]{0x0000000010800000L});
-    public static final BitSet FOLLOW_23_in_ruleAbstractRef4911 = new BitSet(new long[]{0x00202000A80000F0L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleAbstractRef4932 = new BitSet(new long[]{0x0000000010800000L});
-    public static final BitSet FOLLOW_28_in_ruleAbstractRef4944 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTerminalExpression_in_entryRuleTerminalExpression4983 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTerminalExpression4993 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleTerminalExpression5045 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleTerminalExpression5084 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_BOOLEAN_in_ruleTerminalExpression5123 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_ruleANNOTATION_TYPE5179 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_50_in_ruleANNOTATION_TYPE5194 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_51_in_ruleLabelType5237 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_ruleLabelType5252 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_53_in_ruleUnaryOp5294 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x00382000AB7B30F2L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x00382000AB7B20F2L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0006000000000000L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000008012L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000032000L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000040002L});
+    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000082000L});
+    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000102000L});
+    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000202000L});
+    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0018000000000020L});
+    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000402000L});
+    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000001002000L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000002002000L});
+    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x00382000AB7B20F0L});
+    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000000002020L});
+    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000008040002L});
+    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000010800020L});
+    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000010800000L});
+    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000000600000002L});
+    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x00202000080000F0L});
+    public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000000800000002L});
+    public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000001000000002L});
+    public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x00000FE000000002L});
+    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000300000000002L});
+    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0000C00000000002L});
+    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0001000000000002L});
+    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x00382000BBFB20F0L});
 
 }

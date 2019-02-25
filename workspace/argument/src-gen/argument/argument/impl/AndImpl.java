@@ -1,11 +1,9 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package argument.argument.impl;
 
 import argument.argument.And;
+import argument.argument.AndExp;
 import argument.argument.ArgumentPackage;
 import argument.argument.Relational;
 
@@ -23,12 +21,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link argument.argument.impl.AndImpl#getLeft <em>Left</em>}</li>
  *   <li>{@link argument.argument.impl.AndImpl#getAnd_op <em>And op</em>}</li>
  *   <li>{@link argument.argument.impl.AndImpl#getRight <em>Right</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -42,7 +40,7 @@ public class AndImpl extends AndExpImpl implements And
    * @generated
    * @ordered
    */
-  protected Relational left;
+  protected AndExp left;
 
   /**
    * The default value of the '{@link #getAnd_op() <em>And op</em>}' attribute.
@@ -100,7 +98,8 @@ public class AndImpl extends AndExpImpl implements And
    * <!-- end-user-doc -->
    * @generated
    */
-  public Relational getLeft()
+  @Override
+  public AndExp getLeft()
   {
     return left;
   }
@@ -110,9 +109,9 @@ public class AndImpl extends AndExpImpl implements And
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetLeft(Relational newLeft, NotificationChain msgs)
+  public NotificationChain basicSetLeft(AndExp newLeft, NotificationChain msgs)
   {
-    Relational oldLeft = left;
+    AndExp oldLeft = left;
     left = newLeft;
     if (eNotificationRequired())
     {
@@ -127,7 +126,8 @@ public class AndImpl extends AndExpImpl implements And
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setLeft(Relational newLeft)
+  @Override
+  public void setLeft(AndExp newLeft)
   {
     if (newLeft != left)
     {
@@ -148,6 +148,7 @@ public class AndImpl extends AndExpImpl implements And
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getAnd_op()
   {
     return and_op;
@@ -158,6 +159,7 @@ public class AndImpl extends AndExpImpl implements And
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setAnd_op(String newAnd_op)
   {
     String oldAnd_op = and_op;
@@ -171,6 +173,7 @@ public class AndImpl extends AndExpImpl implements And
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Relational getRight()
   {
     return right;
@@ -198,6 +201,7 @@ public class AndImpl extends AndExpImpl implements And
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setRight(Relational newRight)
   {
     if (newRight != right)
@@ -263,7 +267,7 @@ public class AndImpl extends AndExpImpl implements And
     switch (featureID)
     {
       case ArgumentPackage.AND__LEFT:
-        setLeft((Relational)newValue);
+        setLeft((AndExp)newValue);
         return;
       case ArgumentPackage.AND__AND_OP:
         setAnd_op((String)newValue);
@@ -286,7 +290,7 @@ public class AndImpl extends AndExpImpl implements And
     switch (featureID)
     {
       case ArgumentPackage.AND__LEFT:
-        setLeft((Relational)null);
+        setLeft((AndExp)null);
         return;
       case ArgumentPackage.AND__AND_OP:
         setAnd_op(AND_OP_EDEFAULT);
@@ -328,7 +332,7 @@ public class AndImpl extends AndExpImpl implements And
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (and_op: ");
     result.append(and_op);
     result.append(')');

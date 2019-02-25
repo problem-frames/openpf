@@ -88,7 +88,7 @@ public class Link3CreateCommand extends EditElementCommand {
 		getContainer().getLinks().add(newElement);
 		newElement.setFrom(getSource());
 		newElement.setTo(getTarget());
-		ElementInitializers.getInstance().init_Link_4003(newElement);
+//		ElementInitializers.getInstance().init_Link_4003(newElement);
 		doConfigure(newElement, monitor, info);
 		((CreateElementRequest) getRequest()).setNewElement(newElement);
 		return CommandResult.newOKCommandResult(newElement);

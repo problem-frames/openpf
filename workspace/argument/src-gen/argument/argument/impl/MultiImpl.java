@@ -1,12 +1,10 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package argument.argument.impl;
 
 import argument.argument.ArgumentPackage;
 import argument.argument.Multi;
+import argument.argument.Multiplication;
 import argument.argument.Power;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -23,12 +21,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link argument.argument.impl.MultiImpl#getLeft <em>Left</em>}</li>
  *   <li>{@link argument.argument.impl.MultiImpl#getMul_op <em>Mul op</em>}</li>
  *   <li>{@link argument.argument.impl.MultiImpl#getRight <em>Right</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -42,7 +40,7 @@ public class MultiImpl extends MultiplicationImpl implements Multi
    * @generated
    * @ordered
    */
-  protected Power left;
+  protected Multiplication left;
 
   /**
    * The default value of the '{@link #getMul_op() <em>Mul op</em>}' attribute.
@@ -100,7 +98,8 @@ public class MultiImpl extends MultiplicationImpl implements Multi
    * <!-- end-user-doc -->
    * @generated
    */
-  public Power getLeft()
+  @Override
+  public Multiplication getLeft()
   {
     return left;
   }
@@ -110,9 +109,9 @@ public class MultiImpl extends MultiplicationImpl implements Multi
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetLeft(Power newLeft, NotificationChain msgs)
+  public NotificationChain basicSetLeft(Multiplication newLeft, NotificationChain msgs)
   {
-    Power oldLeft = left;
+    Multiplication oldLeft = left;
     left = newLeft;
     if (eNotificationRequired())
     {
@@ -127,7 +126,8 @@ public class MultiImpl extends MultiplicationImpl implements Multi
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setLeft(Power newLeft)
+  @Override
+  public void setLeft(Multiplication newLeft)
   {
     if (newLeft != left)
     {
@@ -148,6 +148,7 @@ public class MultiImpl extends MultiplicationImpl implements Multi
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getMul_op()
   {
     return mul_op;
@@ -158,6 +159,7 @@ public class MultiImpl extends MultiplicationImpl implements Multi
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setMul_op(String newMul_op)
   {
     String oldMul_op = mul_op;
@@ -171,6 +173,7 @@ public class MultiImpl extends MultiplicationImpl implements Multi
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Power getRight()
   {
     return right;
@@ -198,6 +201,7 @@ public class MultiImpl extends MultiplicationImpl implements Multi
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setRight(Power newRight)
   {
     if (newRight != right)
@@ -263,7 +267,7 @@ public class MultiImpl extends MultiplicationImpl implements Multi
     switch (featureID)
     {
       case ArgumentPackage.MULTI__LEFT:
-        setLeft((Power)newValue);
+        setLeft((Multiplication)newValue);
         return;
       case ArgumentPackage.MULTI__MUL_OP:
         setMul_op((String)newValue);
@@ -286,7 +290,7 @@ public class MultiImpl extends MultiplicationImpl implements Multi
     switch (featureID)
     {
       case ArgumentPackage.MULTI__LEFT:
-        setLeft((Power)null);
+        setLeft((Multiplication)null);
         return;
       case ArgumentPackage.MULTI__MUL_OP:
         setMul_op(MUL_OP_EDEFAULT);
@@ -328,7 +332,7 @@ public class MultiImpl extends MultiplicationImpl implements Multi
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (mul_op: ");
     result.append(mul_op);
     result.append(')');

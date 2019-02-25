@@ -1,12 +1,12 @@
 package uk.ac.open.ui;
-import org.eclipse.xtext.parsetree.AbstractNode;
-import org.eclipse.xtext.parsetree.NodeUtil;
+import org.eclipse.emf.common.util.TreeIterator;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.xtext.nodemodel.ICompositeNode;
+import org.eclipse.xtext.nodemodel.impl.AbstractNode;
 import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.ui.editor.syntaxcoloring.DefaultHighlightingConfiguration;
 import org.eclipse.xtext.ui.editor.syntaxcoloring.IHighlightedPositionAcceptor;
 import org.eclipse.xtext.ui.editor.syntaxcoloring.ISemanticHighlightingCalculator;
-
-import uk.ac.open.problem.Node;
 public class ProblemSemanticHighlightingCalculator implements
                 ISemanticHighlightingCalculator {
 
@@ -15,15 +15,14 @@ public class ProblemSemanticHighlightingCalculator implements
                 if (resource == null)
                         return;
 
-                Iterable<AbstractNode> allNodes = NodeUtil.getAllContents(
-                                resource.getParseResult().getRootNode());
+                TreeIterator<EObject> allNodes = resource.getAllContents();
 
-                for (AbstractNode abstractNode : allNodes) {
+                for (EObject abstractNode = allNodes.next(); allNodes.hasNext(); abstractNode = allNodes.next()) {
                         // apply KEYWORD style to our Gaml defined Keyword / facet / operators
-                        if (abstractNode.getElement() instanceof Node) {
-                        		Node n = (Node) abstractNode.getElement();
-                        		int l = n.getName().length();
-                                acceptor.addPosition(abstractNode.getOffset(), l, 
+                        if (abstractNode instanceof AbstractNode) {
+                        		ICompositeNode n = ((AbstractNode) abstractNode).getRootNode();
+                        		int l = n.getText().length();
+                                acceptor.addPosition(n.getOffset(), l, 
                                                 DefaultHighlightingConfiguration.STRING_ID);
                         }
                 }

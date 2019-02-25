@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package argument.argument;
 
@@ -13,11 +10,11 @@ package argument.argument;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link argument.argument.UnaryExpr#getUop <em>Uop</em>}</li>
  *   <li>{@link argument.argument.UnaryExpr#getRight <em>Right</em>}</li>
  * </ul>
- * </p>
  *
  * @see argument.argument.ArgumentPackage#getUnaryExpr()
  * @model

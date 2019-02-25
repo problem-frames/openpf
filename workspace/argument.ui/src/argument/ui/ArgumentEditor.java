@@ -139,7 +139,7 @@ public class ArgumentEditor extends ImageDiagramEditor {
 		ArgumentDiagram d = (ArgumentDiagram) xtextResource.getContents()
 				.get(0);
 		XtextResource xr = (XtextResource) xtextResource;
-		sr = xr.getSerializer();
+		sr = (Serializer) xr.getSerializer();
 		EList<Argument> arguments = d.getNodes();
 		set.clear();
 		// propagate the round number of the root argument to all the descendant

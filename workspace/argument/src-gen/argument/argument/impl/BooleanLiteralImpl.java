@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package argument.argument.impl;
 
@@ -20,10 +17,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link argument.argument.impl.BooleanLiteralImpl#isValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -75,6 +72,7 @@ public class BooleanLiteralImpl extends TerminalExpressionImpl implements Boolea
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public boolean isValue()
   {
     return value;
@@ -85,6 +83,7 @@ public class BooleanLiteralImpl extends TerminalExpressionImpl implements Boolea
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setValue(boolean newValue)
   {
     boolean oldValue = value;
@@ -169,7 +168,7 @@ public class BooleanLiteralImpl extends TerminalExpressionImpl implements Boolea
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (value: ");
     result.append(value);
     result.append(')');

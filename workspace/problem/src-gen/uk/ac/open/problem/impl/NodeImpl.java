@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.problem.impl;
 
@@ -35,6 +32,7 @@ import uk.ac.open.problem.ProblemPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getName <em>Name</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getType <em>Type</em>}</li>
@@ -45,7 +43,6 @@ import uk.ac.open.problem.ProblemPackage;
  *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getProblemRef <em>Problem Ref</em>}</li>
  *   <li>{@link uk.ac.open.problem.impl.NodeImpl#getHref <em>Href</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -176,7 +173,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   protected EClass eStaticClass()
   {
     return ProblemPackage.Literals.NODE;
@@ -491,7 +487,7 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (name: ");
     result.append(name);
     result.append(", type: ");

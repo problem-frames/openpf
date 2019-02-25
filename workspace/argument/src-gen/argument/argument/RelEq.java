@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package argument.argument;
 
@@ -13,12 +10,12 @@ package argument.argument;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link argument.argument.RelEq#getLeft <em>Left</em>}</li>
  *   <li>{@link argument.argument.RelEq#getRel_op <em>Rel op</em>}</li>
  *   <li>{@link argument.argument.RelEq#getRight <em>Right</em>}</li>
  * </ul>
- * </p>
  *
  * @see argument.argument.ArgumentPackage#getRelEq()
  * @model

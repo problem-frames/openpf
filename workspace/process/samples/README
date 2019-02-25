@@ -1,7 +1,0 @@
-* Copy the following two files from /Examples/process 
-  to the project folder /Examples:
-  SecurityArgumentation.ljx
-  littlejil-1.5.dtd
-* Switch to the Little-JILs Perspective
-* Then confirm that the project will have Littlejil nature
-* Finally open the SecurityArgumention process description

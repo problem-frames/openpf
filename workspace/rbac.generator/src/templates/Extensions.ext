@@ -1,4 +1,0 @@
-import uk::ac::open::rbac::rBAC;
-
-sortedGreetings(Model this) :
-	this.greetings.sortBy(g|g.name.toLowerCase());

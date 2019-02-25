@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.event.eventcalculus.impl;
 
@@ -25,10 +22,10 @@ import uk.ac.open.event.eventcalculus.Parameters;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.ParametersImpl#getNames <em>Names</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -70,6 +67,7 @@ public class ParametersImpl extends MinimalEObjectImpl.Container implements Para
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EList<Defines> getNames()
   {
     if (names == null)

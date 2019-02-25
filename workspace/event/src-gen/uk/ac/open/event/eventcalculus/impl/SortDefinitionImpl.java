@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.event.eventcalculus.impl;
 
@@ -31,11 +28,11 @@ import uk.ac.open.event.eventcalculus.SortDefinition;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.SortDefinitionImpl#getSort <em>Sort</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.SortDefinitionImpl#getDefinitions <em>Definitions</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -87,6 +84,7 @@ public class SortDefinitionImpl extends StatementImpl implements SortDefinition
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public DefSort getSort()
   {
     if (sort != null && sort.eIsProxy())
@@ -117,6 +115,7 @@ public class SortDefinitionImpl extends StatementImpl implements SortDefinition
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setSort(DefSort newSort)
   {
     DefSort oldSort = sort;
@@ -130,6 +129,7 @@ public class SortDefinitionImpl extends StatementImpl implements SortDefinition
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EList<Definition> getDefinitions()
   {
     if (definitions == null)

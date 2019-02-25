@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.event.eventcalculus.impl;
 
@@ -23,11 +20,11 @@ import uk.ac.open.event.eventcalculus.LabelType;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.DefCompletionImpl#getType <em>Type</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.DefCompletionImpl#getLabel <em>Label</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -89,6 +86,7 @@ public class DefCompletionImpl extends DeclarationImpl implements DefCompletion
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public LabelType getType()
   {
     return type;
@@ -99,6 +97,7 @@ public class DefCompletionImpl extends DeclarationImpl implements DefCompletion
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setType(LabelType newType)
   {
     LabelType oldType = type;
@@ -112,6 +111,7 @@ public class DefCompletionImpl extends DeclarationImpl implements DefCompletion
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Definition getLabel()
   {
     if (label != null && label.eIsProxy())
@@ -142,6 +142,7 @@ public class DefCompletionImpl extends DeclarationImpl implements DefCompletion
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setLabel(Definition newLabel)
   {
     Definition oldLabel = label;
@@ -237,7 +238,7 @@ public class DefCompletionImpl extends DeclarationImpl implements DefCompletion
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (type: ");
     result.append(type);
     result.append(')');

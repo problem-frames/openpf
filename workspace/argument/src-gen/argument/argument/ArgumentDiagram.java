@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package argument.argument;
 
@@ -16,12 +13,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link argument.argument.ArgumentDiagram#getName <em>Name</em>}</li>
  *   <li>{@link argument.argument.ArgumentDiagram#getNodes <em>Nodes</em>}</li>
  *   <li>{@link argument.argument.ArgumentDiagram#getLinks <em>Links</em>}</li>
  * </ul>
- * </p>
  *
  * @see argument.argument.ArgumentPackage#getArgumentDiagram()
  * @model

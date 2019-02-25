@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.event.eventcalculus.impl;
 
@@ -31,12 +28,12 @@ import uk.ac.open.event.eventcalculus.Statement;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.ModelImpl#getImports <em>Imports</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.ModelImpl#getDeclarations <em>Declarations</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.ModelImpl#getStatements <em>Statements</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -98,6 +95,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EList<Import> getImports()
   {
     if (imports == null)
@@ -112,6 +110,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EList<Declaration> getDeclarations()
   {
     if (declarations == null)
@@ -126,6 +125,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EList<Statement> getStatements()
   {
     if (statements == null)

@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.problem;
 
@@ -14,13 +11,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.problem.Phenomenon#getType <em>Type</em>}</li>
  *   <li>{@link uk.ac.open.problem.Phenomenon#isIsControlled <em>Is Controlled</em>}</li>
  *   <li>{@link uk.ac.open.problem.Phenomenon#getName <em>Name</em>}</li>
  *   <li>{@link uk.ac.open.problem.Phenomenon#getDescription <em>Description</em>}</li>
  * </ul>
- * </p>
  *
  * @see uk.ac.open.problem.ProblemPackage#getPhenomenon()
  * @model

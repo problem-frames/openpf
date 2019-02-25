@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package argument.argument.impl;
 
@@ -21,10 +18,10 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link argument.argument.impl.PrePrimaryExprImpl#getN <em>N</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -76,6 +73,7 @@ public class PrePrimaryExprImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public int getN()
   {
     return n;
@@ -86,6 +84,7 @@ public class PrePrimaryExprImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setN(int newN)
   {
     int oldN = n;
@@ -170,7 +169,7 @@ public class PrePrimaryExprImpl extends MinimalEObjectImpl.Container implements 
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (n: ");
     result.append(n);
     result.append(')');

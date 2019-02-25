@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.event.eventcalculus.impl;
 
@@ -34,7 +31,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
   {
     try
     {
-      EventcalculusFactory theEventcalculusFactory = (EventcalculusFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.ac.uk/open/EventCalculus"); 
+      EventcalculusFactory theEventcalculusFactory = (EventcalculusFactory)EPackage.Registry.INSTANCE.getEFactory(EventcalculusPackage.eNS_URI);
       if (theEventcalculusFactory != null)
       {
         return theEventcalculusFactory;
@@ -160,6 +157,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Model createModel()
   {
     ModelImpl model = new ModelImpl();
@@ -171,6 +169,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Import createImport()
   {
     ImportImpl import_ = new ImportImpl();
@@ -182,6 +181,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Annotation createAnnotation()
   {
     AnnotationImpl annotation = new AnnotationImpl();
@@ -193,6 +193,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Declaration createDeclaration()
   {
     DeclarationImpl declaration = new DeclarationImpl();
@@ -204,6 +205,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Defines createDefines()
   {
     DefinesImpl defines = new DefinesImpl();
@@ -215,6 +217,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public DefSort createDefSort()
   {
     DefSortImpl defSort = new DefSortImpl();
@@ -226,6 +229,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public DefRange createDefRange()
   {
     DefRangeImpl defRange = new DefRangeImpl();
@@ -237,6 +241,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public DefOption createDefOption()
   {
     DefOptionImpl defOption = new DefOptionImpl();
@@ -248,6 +253,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public DefCompletion createDefCompletion()
   {
     DefCompletionImpl defCompletion = new DefCompletionImpl();
@@ -259,6 +265,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public DefNonInertia createDefNonInertia()
   {
     DefNonInertiaImpl defNonInertia = new DefNonInertiaImpl();
@@ -270,6 +277,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public DefXor createDefXor()
   {
     DefXorImpl defXor = new DefXorImpl();
@@ -281,6 +289,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public DefMutex createDefMutex()
   {
     DefMutexImpl defMutex = new DefMutexImpl();
@@ -292,6 +301,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Statement createStatement()
   {
     StatementImpl statement = new StatementImpl();
@@ -303,6 +313,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public LabeledExpression createLabeledExpression()
   {
     LabeledExpressionImpl labeledExpression = new LabeledExpressionImpl();
@@ -314,6 +325,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public SortDefinition createSortDefinition()
   {
     SortDefinitionImpl sortDefinition = new SortDefinitionImpl();
@@ -325,6 +337,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Definition createDefinition()
   {
     DefinitionImpl definition = new DefinitionImpl();
@@ -336,6 +349,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Expression createExpression()
   {
     ExpressionImpl expression = new ExpressionImpl();
@@ -347,6 +361,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Qualifier createQualifier()
   {
     QualifierImpl qualifier = new QualifierImpl();
@@ -358,6 +373,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Parameters createParameters()
   {
     ParametersImpl parameters = new ParametersImpl();
@@ -369,6 +385,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public TerminalExpression createTerminalExpression()
   {
     TerminalExpressionImpl terminalExpression = new TerminalExpressionImpl();
@@ -380,6 +397,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public AssignPlus createAssignPlus()
   {
     AssignPlusImpl assignPlus = new AssignPlusImpl();
@@ -391,6 +409,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public AssignMin createAssignMin()
   {
     AssignMinImpl assignMin = new AssignMinImpl();
@@ -402,6 +421,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Or createOr()
   {
     OrImpl or = new OrImpl();
@@ -413,6 +433,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public And createAnd()
   {
     AndImpl and = new AndImpl();
@@ -424,6 +445,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public RelNotEq createRelNotEq()
   {
     RelNotEqImpl relNotEq = new RelNotEqImpl();
@@ -435,6 +457,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public RelEqEq createRelEqEq()
   {
     RelEqEqImpl relEqEq = new RelEqEqImpl();
@@ -446,6 +469,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public RelLtEq createRelLtEq()
   {
     RelLtEqImpl relLtEq = new RelLtEqImpl();
@@ -457,6 +481,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public RelGtEq createRelGtEq()
   {
     RelGtEqImpl relGtEq = new RelGtEqImpl();
@@ -468,6 +493,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public RelEq createRelEq()
   {
     RelEqImpl relEq = new RelEqImpl();
@@ -479,6 +505,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public RelLt createRelLt()
   {
     RelLtImpl relLt = new RelLtImpl();
@@ -490,6 +517,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public RelGt createRelGt()
   {
     RelGtImpl relGt = new RelGtImpl();
@@ -501,6 +529,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Plus createPlus()
   {
     PlusImpl plus = new PlusImpl();
@@ -512,6 +541,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Minus createMinus()
   {
     MinusImpl minus = new MinusImpl();
@@ -523,6 +553,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Multi createMulti()
   {
     MultiImpl multi = new MultiImpl();
@@ -534,6 +565,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Div createDiv()
   {
     DivImpl div = new DivImpl();
@@ -545,6 +577,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Pow createPow()
   {
     PowImpl pow = new PowImpl();
@@ -556,6 +589,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public FunctionRef createFunctionRef()
   {
     FunctionRefImpl functionRef = new FunctionRefImpl();
@@ -567,6 +601,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public IntLiteral createIntLiteral()
   {
     IntLiteralImpl intLiteral = new IntLiteralImpl();
@@ -578,6 +613,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public StringLiteral createStringLiteral()
   {
     StringLiteralImpl stringLiteral = new StringLiteralImpl();
@@ -589,6 +625,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public BooleanLiteral createBooleanLiteral()
   {
     BooleanLiteralImpl booleanLiteral = new BooleanLiteralImpl();
@@ -666,6 +703,7 @@ public class EventcalculusFactoryImpl extends EFactoryImpl implements Eventcalcu
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EventcalculusPackage getEventcalculusPackage()
   {
     return (EventcalculusPackage)getEPackage();

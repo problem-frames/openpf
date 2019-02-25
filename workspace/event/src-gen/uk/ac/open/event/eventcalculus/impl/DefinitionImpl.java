@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.event.eventcalculus.impl;
 
@@ -23,11 +20,11 @@ import uk.ac.open.event.eventcalculus.EventcalculusPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.DefinitionImpl#getArgs <em>Args</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.DefinitionImpl#getReturn <em>Return</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -79,6 +76,7 @@ public class DefinitionImpl extends DefinesImpl implements Definition
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EList<Defines> getArgs()
   {
     if (args == null)
@@ -93,6 +91,7 @@ public class DefinitionImpl extends DefinesImpl implements Definition
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EList<Defines> getReturn()
   {
     if (return_ == null)

@@ -1,13 +1,11 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package argument.argument.impl;
 
 import argument.argument.AndExp;
 import argument.argument.ArgumentPackage;
 import argument.argument.Or;
+import argument.argument.OrExp;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -23,12 +21,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link argument.argument.impl.OrImpl#getLeft <em>Left</em>}</li>
  *   <li>{@link argument.argument.impl.OrImpl#getOr_op <em>Or op</em>}</li>
  *   <li>{@link argument.argument.impl.OrImpl#getRight <em>Right</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -42,7 +40,7 @@ public class OrImpl extends OrExpImpl implements Or
    * @generated
    * @ordered
    */
-  protected AndExp left;
+  protected OrExp left;
 
   /**
    * The default value of the '{@link #getOr_op() <em>Or op</em>}' attribute.
@@ -100,7 +98,8 @@ public class OrImpl extends OrExpImpl implements Or
    * <!-- end-user-doc -->
    * @generated
    */
-  public AndExp getLeft()
+  @Override
+  public OrExp getLeft()
   {
     return left;
   }
@@ -110,9 +109,9 @@ public class OrImpl extends OrExpImpl implements Or
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetLeft(AndExp newLeft, NotificationChain msgs)
+  public NotificationChain basicSetLeft(OrExp newLeft, NotificationChain msgs)
   {
-    AndExp oldLeft = left;
+    OrExp oldLeft = left;
     left = newLeft;
     if (eNotificationRequired())
     {
@@ -127,7 +126,8 @@ public class OrImpl extends OrExpImpl implements Or
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setLeft(AndExp newLeft)
+  @Override
+  public void setLeft(OrExp newLeft)
   {
     if (newLeft != left)
     {
@@ -148,6 +148,7 @@ public class OrImpl extends OrExpImpl implements Or
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getOr_op()
   {
     return or_op;
@@ -158,6 +159,7 @@ public class OrImpl extends OrExpImpl implements Or
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setOr_op(String newOr_op)
   {
     String oldOr_op = or_op;
@@ -171,6 +173,7 @@ public class OrImpl extends OrExpImpl implements Or
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public AndExp getRight()
   {
     return right;
@@ -198,6 +201,7 @@ public class OrImpl extends OrExpImpl implements Or
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setRight(AndExp newRight)
   {
     if (newRight != right)
@@ -263,7 +267,7 @@ public class OrImpl extends OrExpImpl implements Or
     switch (featureID)
     {
       case ArgumentPackage.OR__LEFT:
-        setLeft((AndExp)newValue);
+        setLeft((OrExp)newValue);
         return;
       case ArgumentPackage.OR__OR_OP:
         setOr_op((String)newValue);
@@ -286,7 +290,7 @@ public class OrImpl extends OrExpImpl implements Or
     switch (featureID)
     {
       case ArgumentPackage.OR__LEFT:
-        setLeft((AndExp)null);
+        setLeft((OrExp)null);
         return;
       case ArgumentPackage.OR__OR_OP:
         setOr_op(OR_OP_EDEFAULT);
@@ -328,7 +332,7 @@ public class OrImpl extends OrExpImpl implements Or
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (or_op: ");
     result.append(or_op);
     result.append(')');

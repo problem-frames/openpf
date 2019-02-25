@@ -1,10 +1,8 @@
 package uk.ac.open.parser.antlr.internal; 
 
-import java.io.InputStream;
 import org.eclipse.xtext.*;
 import org.eclipse.xtext.parser.*;
 import org.eclipse.xtext.parser.impl.*;
-import org.eclipse.xtext.parsetree.*;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.common.util.Enumerator;
@@ -12,7 +10,6 @@ import org.eclipse.xtext.parser.antlr.AbstractInternalAntlrParser;
 import org.eclipse.xtext.parser.antlr.XtextTokenStream;
 import org.eclipse.xtext.parser.antlr.XtextTokenStream.HiddenTokens;
 import org.eclipse.xtext.parser.antlr.AntlrDatatypeRuleToken;
-import org.eclipse.xtext.conversion.ValueConverterException;
 import uk.ac.open.services.ProblemGrammarAccess;
 
 
@@ -27,39 +24,66 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_QUALIFIED_NAME", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'problem:'", "'for'", "':'", "'{'", "','", "'see'", "'domain'", "'problem'", "'}'", "'!'", "'R'", "'M'", "'B'", "'X'", "'C'", "'D'", "'P'", "'?'", "'phenomenon'", "'event'", "'state'", "'--'", "'~~'", "'<~'", "'->'", "'~>'"
     };
-    public static final int RULE_ID=4;
     public static final int RULE_STRING=5;
-    public static final int RULE_ANY_OTHER=11;
-    public static final int RULE_INT=7;
-    public static final int RULE_QUALIFIED_NAME=6;
-    public static final int RULE_WS=10;
     public static final int RULE_SL_COMMENT=9;
+    public static final int T__19=19;
+    public static final int T__15=15;
+    public static final int T__37=37;
+    public static final int T__16=16;
+    public static final int T__17=17;
+    public static final int T__18=18;
+    public static final int T__33=33;
+    public static final int T__12=12;
+    public static final int T__34=34;
+    public static final int T__13=13;
+    public static final int T__35=35;
+    public static final int T__14=14;
+    public static final int T__36=36;
     public static final int EOF=-1;
+    public static final int T__30=30;
+    public static final int T__31=31;
+    public static final int T__32=32;
+    public static final int RULE_QUALIFIED_NAME=6;
+    public static final int RULE_ID=4;
+    public static final int RULE_WS=10;
+    public static final int RULE_ANY_OTHER=11;
+    public static final int T__26=26;
+    public static final int T__27=27;
+    public static final int T__28=28;
+    public static final int RULE_INT=7;
+    public static final int T__29=29;
+    public static final int T__22=22;
     public static final int RULE_ML_COMMENT=8;
+    public static final int T__23=23;
+    public static final int T__24=24;
+    public static final int T__25=25;
+    public static final int T__20=20;
+    public static final int T__21=21;
+
+    // delegates
+    // delegators
+
 
         public InternalProblemParser(TokenStream input) {
-            super(input);
+            this(input, new RecognizerSharedState());
+        }
+        public InternalProblemParser(TokenStream input, RecognizerSharedState state) {
+            super(input, state);
+             
         }
         
 
-    public String[] getTokenNames() { return tokenNames; }
-    public String getGrammarFileName() { return "../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g"; }
+    public String[] getTokenNames() { return InternalProblemParser.tokenNames; }
+    public String getGrammarFileName() { return "InternalProblem.g"; }
 
 
 
      	private ProblemGrammarAccess grammarAccess;
      	
-        public InternalProblemParser(TokenStream input, IAstFactory factory, ProblemGrammarAccess grammarAccess) {
+        public InternalProblemParser(TokenStream input, ProblemGrammarAccess grammarAccess) {
             this(input);
-            this.factory = factory;
-            registerRules(grammarAccess.getGrammar());
             this.grammarAccess = grammarAccess;
-        }
-        
-        @Override
-        protected InputStream getTokenFile() {
-        	ClassLoader classLoader = getClass().getClassLoader();
-        	return classLoader.getResourceAsStream("uk/ac/open/parser/antlr/internal/InternalProblem.tokens");
+            registerRules(grammarAccess.getGrammar());
         }
         
         @Override
@@ -74,8 +98,8 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
 
 
-    // $ANTLR start entryRuleProblemDiagram
-    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:78:1: entryRuleProblemDiagram returns [EObject current=null] : iv_ruleProblemDiagram= ruleProblemDiagram EOF ;
+    // $ANTLR start "entryRuleProblemDiagram"
+    // InternalProblem.g:68:1: entryRuleProblemDiagram returns [EObject current=null] : iv_ruleProblemDiagram= ruleProblemDiagram EOF ;
     public final EObject entryRuleProblemDiagram() throws RecognitionException {
         EObject current = null;
 
@@ -83,16 +107,17 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:79:2: (iv_ruleProblemDiagram= ruleProblemDiagram EOF )
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:80:2: iv_ruleProblemDiagram= ruleProblemDiagram EOF
+            // InternalProblem.g:69:2: (iv_ruleProblemDiagram= ruleProblemDiagram EOF )
+            // InternalProblem.g:70:2: iv_ruleProblemDiagram= ruleProblemDiagram EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getProblemDiagramRule(), currentNode); 
-            pushFollow(FOLLOW_ruleProblemDiagram_in_entryRuleProblemDiagram75);
+             newCompositeNode(grammarAccess.getProblemDiagramRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleProblemDiagram=ruleProblemDiagram();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleProblemDiagram; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleProblemDiagram85); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -106,59 +131,55 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleProblemDiagram
+    // $ANTLR end "entryRuleProblemDiagram"
 
 
-    // $ANTLR start ruleProblemDiagram
-    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:87:1: ruleProblemDiagram returns [EObject current=null] : ( 'problem:' ( (lv_name_1_0= RULE_ID ) ) ( 'for' ( ( RULE_ID ) ) )? ( ( (lv_nodes_4_0= ruleNode ) ) | ( (lv_links_5_0= ruleLink ) ) )* ) ;
+    // $ANTLR start "ruleProblemDiagram"
+    // InternalProblem.g:77:1: ruleProblemDiagram returns [EObject current=null] : (otherlv_0= 'problem:' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'for' ( (otherlv_3= RULE_ID ) ) )? ( ( (lv_nodes_4_0= ruleNode ) ) | ( (lv_links_5_0= ruleLink ) ) )* ) ;
     public final EObject ruleProblemDiagram() throws RecognitionException {
         EObject current = null;
 
+        Token otherlv_0=null;
         Token lv_name_1_0=null;
+        Token otherlv_2=null;
+        Token otherlv_3=null;
         EObject lv_nodes_4_0 = null;
 
         EObject lv_links_5_0 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:92:6: ( ( 'problem:' ( (lv_name_1_0= RULE_ID ) ) ( 'for' ( ( RULE_ID ) ) )? ( ( (lv_nodes_4_0= ruleNode ) ) | ( (lv_links_5_0= ruleLink ) ) )* ) )
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:93:1: ( 'problem:' ( (lv_name_1_0= RULE_ID ) ) ( 'for' ( ( RULE_ID ) ) )? ( ( (lv_nodes_4_0= ruleNode ) ) | ( (lv_links_5_0= ruleLink ) ) )* )
+            // InternalProblem.g:80:28: ( (otherlv_0= 'problem:' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'for' ( (otherlv_3= RULE_ID ) ) )? ( ( (lv_nodes_4_0= ruleNode ) ) | ( (lv_links_5_0= ruleLink ) ) )* ) )
+            // InternalProblem.g:81:1: (otherlv_0= 'problem:' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'for' ( (otherlv_3= RULE_ID ) ) )? ( ( (lv_nodes_4_0= ruleNode ) ) | ( (lv_links_5_0= ruleLink ) ) )* )
             {
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:93:1: ( 'problem:' ( (lv_name_1_0= RULE_ID ) ) ( 'for' ( ( RULE_ID ) ) )? ( ( (lv_nodes_4_0= ruleNode ) ) | ( (lv_links_5_0= ruleLink ) ) )* )
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:93:3: 'problem:' ( (lv_name_1_0= RULE_ID ) ) ( 'for' ( ( RULE_ID ) ) )? ( ( (lv_nodes_4_0= ruleNode ) ) | ( (lv_links_5_0= ruleLink ) ) )*
+            // InternalProblem.g:81:1: (otherlv_0= 'problem:' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'for' ( (otherlv_3= RULE_ID ) ) )? ( ( (lv_nodes_4_0= ruleNode ) ) | ( (lv_links_5_0= ruleLink ) ) )* )
+            // InternalProblem.g:81:3: otherlv_0= 'problem:' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'for' ( (otherlv_3= RULE_ID ) ) )? ( ( (lv_nodes_4_0= ruleNode ) ) | ( (lv_links_5_0= ruleLink ) ) )*
             {
-            match(input,12,FOLLOW_12_in_ruleProblemDiagram120); 
+            otherlv_0=(Token)match(input,12,FOLLOW_3); 
 
-                    createLeafNode(grammarAccess.getProblemDiagramAccess().getProblemKeyword_0(), null); 
+                	newLeafNode(otherlv_0, grammarAccess.getProblemDiagramAccess().getProblemKeyword_0());
                 
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:97:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:98:1: (lv_name_1_0= RULE_ID )
+            // InternalProblem.g:85:1: ( (lv_name_1_0= RULE_ID ) )
+            // InternalProblem.g:86:1: (lv_name_1_0= RULE_ID )
             {
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:98:1: (lv_name_1_0= RULE_ID )
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:99:3: lv_name_1_0= RULE_ID
+            // InternalProblem.g:86:1: (lv_name_1_0= RULE_ID )
+            // InternalProblem.g:87:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleProblemDiagram137); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_4); 
 
-            			createLeafNode(grammarAccess.getProblemDiagramAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
+            			newLeafNode(lv_name_1_0, grammarAccess.getProblemDiagramAccess().getNameIDTerminalRuleCall_1_0()); 
             		
 
             	        if (current==null) {
-            	            current = factory.create(grammarAccess.getProblemDiagramRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
+            	            current = createModelElement(grammarAccess.getProblemDiagramRule());
             	        }
-            	        try {
-            	       		set(
-            	       			current, 
-            	       			"name",
-            	        		lv_name_1_0, 
-            	        		"ID", 
-            	        		lastConsumedNode);
-            	        } catch (ValueConverterException vce) {
-            				handleValueConverterException(vce);
-            	        }
+                   		setWithLastConsumed(
+                   			current, 
+                   			"name",
+                    		lv_name_1_0, 
+                    		"uk.ac.open.Problem.ID");
             	    
 
             }
@@ -166,7 +187,7 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:121:2: ( 'for' ( ( RULE_ID ) ) )?
+            // InternalProblem.g:103:2: (otherlv_2= 'for' ( (otherlv_3= RULE_ID ) ) )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -175,27 +196,26 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
             }
             switch (alt1) {
                 case 1 :
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:121:4: 'for' ( ( RULE_ID ) )
+                    // InternalProblem.g:103:4: otherlv_2= 'for' ( (otherlv_3= RULE_ID ) )
                     {
-                    match(input,13,FOLLOW_13_in_ruleProblemDiagram153); 
+                    otherlv_2=(Token)match(input,13,FOLLOW_3); 
 
-                            createLeafNode(grammarAccess.getProblemDiagramAccess().getForKeyword_2_0(), null); 
+                        	newLeafNode(otherlv_2, grammarAccess.getProblemDiagramAccess().getForKeyword_2_0());
                         
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:125:1: ( ( RULE_ID ) )
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:126:1: ( RULE_ID )
+                    // InternalProblem.g:107:1: ( (otherlv_3= RULE_ID ) )
+                    // InternalProblem.g:108:1: (otherlv_3= RULE_ID )
                     {
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:126:1: ( RULE_ID )
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:127:3: RULE_ID
+                    // InternalProblem.g:108:1: (otherlv_3= RULE_ID )
+                    // InternalProblem.g:109:3: otherlv_3= RULE_ID
                     {
 
                     			if (current==null) {
-                    	            current = factory.create(grammarAccess.getProblemDiagramRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
+                    	            current = createModelElement(grammarAccess.getProblemDiagramRule());
                     	        }
                             
-                    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleProblemDiagram171); 
+                    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_5); 
 
-                    		createLeafNode(grammarAccess.getProblemDiagramAccess().getHighlightNodeCrossReference_2_1_0(), "highlight"); 
+                    		newLeafNode(otherlv_3, grammarAccess.getProblemDiagramAccess().getHighlightNodeCrossReference_2_1_0()); 
                     	
 
                     }
@@ -209,7 +229,7 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:139:4: ( ( (lv_nodes_4_0= ruleNode ) ) | ( (lv_links_5_0= ruleLink ) ) )*
+            // InternalProblem.g:120:4: ( ( (lv_nodes_4_0= ruleNode ) ) | ( (lv_links_5_0= ruleLink ) ) )*
             loop2:
             do {
                 int alt2=3;
@@ -218,11 +238,11 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
                 if ( (LA2_0==RULE_ID) ) {
                     int LA2_2 = input.LA(2);
 
-                    if ( (LA2_2==EOF||(LA2_2>=RULE_ID && LA2_2<=RULE_STRING)||LA2_2==12||(LA2_2>=14 && LA2_2<=15)||LA2_2==17||LA2_2==20||(LA2_2>=22 && LA2_2<=29)) ) {
-                        alt2=1;
-                    }
-                    else if ( ((LA2_2>=33 && LA2_2<=37)) ) {
+                    if ( ((LA2_2>=33 && LA2_2<=37)) ) {
                         alt2=2;
+                    }
+                    else if ( (LA2_2==EOF||(LA2_2>=RULE_ID && LA2_2<=RULE_STRING)||LA2_2==12||(LA2_2>=14 && LA2_2<=15)||LA2_2==17||LA2_2==20||(LA2_2>=22 && LA2_2<=29)) ) {
+                        alt2=1;
                     }
 
 
@@ -231,37 +251,32 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
                 switch (alt2) {
             	case 1 :
-            	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:139:5: ( (lv_nodes_4_0= ruleNode ) )
+            	    // InternalProblem.g:120:5: ( (lv_nodes_4_0= ruleNode ) )
             	    {
-            	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:139:5: ( (lv_nodes_4_0= ruleNode ) )
-            	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:140:1: (lv_nodes_4_0= ruleNode )
+            	    // InternalProblem.g:120:5: ( (lv_nodes_4_0= ruleNode ) )
+            	    // InternalProblem.g:121:1: (lv_nodes_4_0= ruleNode )
             	    {
-            	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:140:1: (lv_nodes_4_0= ruleNode )
-            	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:141:3: lv_nodes_4_0= ruleNode
+            	    // InternalProblem.g:121:1: (lv_nodes_4_0= ruleNode )
+            	    // InternalProblem.g:122:3: lv_nodes_4_0= ruleNode
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getProblemDiagramAccess().getNodesNodeParserRuleCall_3_0_0(), currentNode); 
+            	    	        newCompositeNode(grammarAccess.getProblemDiagramAccess().getNodesNodeParserRuleCall_3_0_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleNode_in_ruleProblemDiagram195);
+            	    pushFollow(FOLLOW_5);
             	    lv_nodes_4_0=ruleNode();
-            	    _fsp--;
+
+            	    state._fsp--;
 
 
             	    	        if (current==null) {
-            	    	            current = factory.create(grammarAccess.getProblemDiagramRule().getType().getClassifier());
-            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	    	            current = createModelElementForParent(grammarAccess.getProblemDiagramRule());
             	    	        }
-            	    	        try {
-            	    	       		add(
-            	    	       			current, 
-            	    	       			"nodes",
-            	    	        		lv_nodes_4_0, 
-            	    	        		"Node", 
-            	    	        		currentNode);
-            	    	        } catch (ValueConverterException vce) {
-            	    				handleValueConverterException(vce);
-            	    	        }
-            	    	        currentNode = currentNode.getParent();
+            	           		add(
+            	           			current, 
+            	           			"nodes",
+            	            		lv_nodes_4_0, 
+            	            		"uk.ac.open.Problem.Node");
+            	    	        afterParserOrEnumRuleCall();
             	    	    
 
             	    }
@@ -273,37 +288,32 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:164:6: ( (lv_links_5_0= ruleLink ) )
+            	    // InternalProblem.g:139:6: ( (lv_links_5_0= ruleLink ) )
             	    {
-            	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:164:6: ( (lv_links_5_0= ruleLink ) )
-            	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:165:1: (lv_links_5_0= ruleLink )
+            	    // InternalProblem.g:139:6: ( (lv_links_5_0= ruleLink ) )
+            	    // InternalProblem.g:140:1: (lv_links_5_0= ruleLink )
             	    {
-            	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:165:1: (lv_links_5_0= ruleLink )
-            	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:166:3: lv_links_5_0= ruleLink
+            	    // InternalProblem.g:140:1: (lv_links_5_0= ruleLink )
+            	    // InternalProblem.g:141:3: lv_links_5_0= ruleLink
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getProblemDiagramAccess().getLinksLinkParserRuleCall_3_1_0(), currentNode); 
+            	    	        newCompositeNode(grammarAccess.getProblemDiagramAccess().getLinksLinkParserRuleCall_3_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleLink_in_ruleProblemDiagram222);
+            	    pushFollow(FOLLOW_5);
             	    lv_links_5_0=ruleLink();
-            	    _fsp--;
+
+            	    state._fsp--;
 
 
             	    	        if (current==null) {
-            	    	            current = factory.create(grammarAccess.getProblemDiagramRule().getType().getClassifier());
-            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	    	            current = createModelElementForParent(grammarAccess.getProblemDiagramRule());
             	    	        }
-            	    	        try {
-            	    	       		add(
-            	    	       			current, 
-            	    	       			"links",
-            	    	        		lv_links_5_0, 
-            	    	        		"Link", 
-            	    	        		currentNode);
-            	    	        } catch (ValueConverterException vce) {
-            	    				handleValueConverterException(vce);
-            	    	        }
-            	    	        currentNode = currentNode.getParent();
+            	           		add(
+            	           			current, 
+            	           			"links",
+            	            		lv_links_5_0, 
+            	            		"uk.ac.open.Problem.Link");
+            	    	        afterParserOrEnumRuleCall();
             	    	    
 
             	    }
@@ -326,9 +336,7 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -339,11 +347,11 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleProblemDiagram
+    // $ANTLR end "ruleProblemDiagram"
 
 
-    // $ANTLR start entryRuleNode
-    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:196:1: entryRuleNode returns [EObject current=null] : iv_ruleNode= ruleNode EOF ;
+    // $ANTLR start "entryRuleNode"
+    // InternalProblem.g:165:1: entryRuleNode returns [EObject current=null] : iv_ruleNode= ruleNode EOF ;
     public final EObject entryRuleNode() throws RecognitionException {
         EObject current = null;
 
@@ -351,16 +359,17 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:197:2: (iv_ruleNode= ruleNode EOF )
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:198:2: iv_ruleNode= ruleNode EOF
+            // InternalProblem.g:166:2: (iv_ruleNode= ruleNode EOF )
+            // InternalProblem.g:167:2: iv_ruleNode= ruleNode EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getNodeRule(), currentNode); 
-            pushFollow(FOLLOW_ruleNode_in_entryRuleNode260);
+             newCompositeNode(grammarAccess.getNodeRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleNode=ruleNode();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleNode; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNode270); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -374,17 +383,28 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleNode
+    // $ANTLR end "entryRuleNode"
 
 
-    // $ANTLR start ruleNode
-    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:205:1: ruleNode returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleNodeType ) )? ( ( ':' )? ( (lv_description_3_0= RULE_STRING ) ) )? ( '{' ( ( (lv_hiddenPhenomena_5_0= rulePhenomenon ) ) ( ',' ( (lv_hiddenPhenomena_7_0= rulePhenomenon ) ) )* )? ( ( (lv_subproblem_8_0= ruleProblemDiagram ) ) | ( 'see' 'domain' ( ( RULE_ID ) ) ) | ( 'see' 'problem' ( ( RULE_ID ) ) ) | ( 'see' ( (lv_href_16_0= RULE_STRING ) ) ) )* '}' )? ) ;
+    // $ANTLR start "ruleNode"
+    // InternalProblem.g:174:1: ruleNode returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleNodeType ) )? ( (otherlv_2= ':' )? ( (lv_description_3_0= RULE_STRING ) ) )? (otherlv_4= '{' ( ( (lv_hiddenPhenomena_5_0= rulePhenomenon ) ) (otherlv_6= ',' ( (lv_hiddenPhenomena_7_0= rulePhenomenon ) ) )* )? ( ( (lv_subproblem_8_0= ruleProblemDiagram ) ) | (otherlv_9= 'see' otherlv_10= 'domain' ( (otherlv_11= RULE_ID ) ) ) | (otherlv_12= 'see' otherlv_13= 'problem' ( (otherlv_14= RULE_ID ) ) ) | (otherlv_15= 'see' ( (lv_href_16_0= RULE_STRING ) ) ) )* otherlv_17= '}' )? ) ;
     public final EObject ruleNode() throws RecognitionException {
         EObject current = null;
 
         Token lv_name_0_0=null;
+        Token otherlv_2=null;
         Token lv_description_3_0=null;
+        Token otherlv_4=null;
+        Token otherlv_6=null;
+        Token otherlv_9=null;
+        Token otherlv_10=null;
+        Token otherlv_11=null;
+        Token otherlv_12=null;
+        Token otherlv_13=null;
+        Token otherlv_14=null;
+        Token otherlv_15=null;
         Token lv_href_16_0=null;
+        Token otherlv_17=null;
         Enumerator lv_type_1_0 = null;
 
         EObject lv_hiddenPhenomena_5_0 = null;
@@ -394,41 +414,34 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
         EObject lv_subproblem_8_0 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:210:6: ( ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleNodeType ) )? ( ( ':' )? ( (lv_description_3_0= RULE_STRING ) ) )? ( '{' ( ( (lv_hiddenPhenomena_5_0= rulePhenomenon ) ) ( ',' ( (lv_hiddenPhenomena_7_0= rulePhenomenon ) ) )* )? ( ( (lv_subproblem_8_0= ruleProblemDiagram ) ) | ( 'see' 'domain' ( ( RULE_ID ) ) ) | ( 'see' 'problem' ( ( RULE_ID ) ) ) | ( 'see' ( (lv_href_16_0= RULE_STRING ) ) ) )* '}' )? ) )
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:211:1: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleNodeType ) )? ( ( ':' )? ( (lv_description_3_0= RULE_STRING ) ) )? ( '{' ( ( (lv_hiddenPhenomena_5_0= rulePhenomenon ) ) ( ',' ( (lv_hiddenPhenomena_7_0= rulePhenomenon ) ) )* )? ( ( (lv_subproblem_8_0= ruleProblemDiagram ) ) | ( 'see' 'domain' ( ( RULE_ID ) ) ) | ( 'see' 'problem' ( ( RULE_ID ) ) ) | ( 'see' ( (lv_href_16_0= RULE_STRING ) ) ) )* '}' )? )
+            // InternalProblem.g:177:28: ( ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleNodeType ) )? ( (otherlv_2= ':' )? ( (lv_description_3_0= RULE_STRING ) ) )? (otherlv_4= '{' ( ( (lv_hiddenPhenomena_5_0= rulePhenomenon ) ) (otherlv_6= ',' ( (lv_hiddenPhenomena_7_0= rulePhenomenon ) ) )* )? ( ( (lv_subproblem_8_0= ruleProblemDiagram ) ) | (otherlv_9= 'see' otherlv_10= 'domain' ( (otherlv_11= RULE_ID ) ) ) | (otherlv_12= 'see' otherlv_13= 'problem' ( (otherlv_14= RULE_ID ) ) ) | (otherlv_15= 'see' ( (lv_href_16_0= RULE_STRING ) ) ) )* otherlv_17= '}' )? ) )
+            // InternalProblem.g:178:1: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleNodeType ) )? ( (otherlv_2= ':' )? ( (lv_description_3_0= RULE_STRING ) ) )? (otherlv_4= '{' ( ( (lv_hiddenPhenomena_5_0= rulePhenomenon ) ) (otherlv_6= ',' ( (lv_hiddenPhenomena_7_0= rulePhenomenon ) ) )* )? ( ( (lv_subproblem_8_0= ruleProblemDiagram ) ) | (otherlv_9= 'see' otherlv_10= 'domain' ( (otherlv_11= RULE_ID ) ) ) | (otherlv_12= 'see' otherlv_13= 'problem' ( (otherlv_14= RULE_ID ) ) ) | (otherlv_15= 'see' ( (lv_href_16_0= RULE_STRING ) ) ) )* otherlv_17= '}' )? )
             {
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:211:1: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleNodeType ) )? ( ( ':' )? ( (lv_description_3_0= RULE_STRING ) ) )? ( '{' ( ( (lv_hiddenPhenomena_5_0= rulePhenomenon ) ) ( ',' ( (lv_hiddenPhenomena_7_0= rulePhenomenon ) ) )* )? ( ( (lv_subproblem_8_0= ruleProblemDiagram ) ) | ( 'see' 'domain' ( ( RULE_ID ) ) ) | ( 'see' 'problem' ( ( RULE_ID ) ) ) | ( 'see' ( (lv_href_16_0= RULE_STRING ) ) ) )* '}' )? )
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:211:2: ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleNodeType ) )? ( ( ':' )? ( (lv_description_3_0= RULE_STRING ) ) )? ( '{' ( ( (lv_hiddenPhenomena_5_0= rulePhenomenon ) ) ( ',' ( (lv_hiddenPhenomena_7_0= rulePhenomenon ) ) )* )? ( ( (lv_subproblem_8_0= ruleProblemDiagram ) ) | ( 'see' 'domain' ( ( RULE_ID ) ) ) | ( 'see' 'problem' ( ( RULE_ID ) ) ) | ( 'see' ( (lv_href_16_0= RULE_STRING ) ) ) )* '}' )?
+            // InternalProblem.g:178:1: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleNodeType ) )? ( (otherlv_2= ':' )? ( (lv_description_3_0= RULE_STRING ) ) )? (otherlv_4= '{' ( ( (lv_hiddenPhenomena_5_0= rulePhenomenon ) ) (otherlv_6= ',' ( (lv_hiddenPhenomena_7_0= rulePhenomenon ) ) )* )? ( ( (lv_subproblem_8_0= ruleProblemDiagram ) ) | (otherlv_9= 'see' otherlv_10= 'domain' ( (otherlv_11= RULE_ID ) ) ) | (otherlv_12= 'see' otherlv_13= 'problem' ( (otherlv_14= RULE_ID ) ) ) | (otherlv_15= 'see' ( (lv_href_16_0= RULE_STRING ) ) ) )* otherlv_17= '}' )? )
+            // InternalProblem.g:178:2: ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleNodeType ) )? ( (otherlv_2= ':' )? ( (lv_description_3_0= RULE_STRING ) ) )? (otherlv_4= '{' ( ( (lv_hiddenPhenomena_5_0= rulePhenomenon ) ) (otherlv_6= ',' ( (lv_hiddenPhenomena_7_0= rulePhenomenon ) ) )* )? ( ( (lv_subproblem_8_0= ruleProblemDiagram ) ) | (otherlv_9= 'see' otherlv_10= 'domain' ( (otherlv_11= RULE_ID ) ) ) | (otherlv_12= 'see' otherlv_13= 'problem' ( (otherlv_14= RULE_ID ) ) ) | (otherlv_15= 'see' ( (lv_href_16_0= RULE_STRING ) ) ) )* otherlv_17= '}' )?
             {
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:211:2: ( (lv_name_0_0= RULE_ID ) )
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:212:1: (lv_name_0_0= RULE_ID )
+            // InternalProblem.g:178:2: ( (lv_name_0_0= RULE_ID ) )
+            // InternalProblem.g:179:1: (lv_name_0_0= RULE_ID )
             {
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:212:1: (lv_name_0_0= RULE_ID )
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:213:3: lv_name_0_0= RULE_ID
+            // InternalProblem.g:179:1: (lv_name_0_0= RULE_ID )
+            // InternalProblem.g:180:3: lv_name_0_0= RULE_ID
             {
-            lv_name_0_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNode312); 
+            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_6); 
 
-            			createLeafNode(grammarAccess.getNodeAccess().getNameIDTerminalRuleCall_0_0(), "name"); 
+            			newLeafNode(lv_name_0_0, grammarAccess.getNodeAccess().getNameIDTerminalRuleCall_0_0()); 
             		
 
             	        if (current==null) {
-            	            current = factory.create(grammarAccess.getNodeRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
+            	            current = createModelElement(grammarAccess.getNodeRule());
             	        }
-            	        try {
-            	       		set(
-            	       			current, 
-            	       			"name",
-            	        		lv_name_0_0, 
-            	        		"ID", 
-            	        		lastConsumedNode);
-            	        } catch (ValueConverterException vce) {
-            				handleValueConverterException(vce);
-            	        }
+                   		setWithLastConsumed(
+                   			current, 
+                   			"name",
+                    		lv_name_0_0, 
+                    		"uk.ac.open.Problem.ID");
             	    
 
             }
@@ -436,7 +449,7 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:235:2: ( (lv_type_1_0= ruleNodeType ) )?
+            // InternalProblem.g:196:2: ( (lv_type_1_0= ruleNodeType ) )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -445,34 +458,29 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
             }
             switch (alt3) {
                 case 1 :
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:236:1: (lv_type_1_0= ruleNodeType )
+                    // InternalProblem.g:197:1: (lv_type_1_0= ruleNodeType )
                     {
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:236:1: (lv_type_1_0= ruleNodeType )
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:237:3: lv_type_1_0= ruleNodeType
+                    // InternalProblem.g:197:1: (lv_type_1_0= ruleNodeType )
+                    // InternalProblem.g:198:3: lv_type_1_0= ruleNodeType
                     {
                      
-                    	        currentNode=createCompositeNode(grammarAccess.getNodeAccess().getTypeNodeTypeEnumRuleCall_1_0(), currentNode); 
+                    	        newCompositeNode(grammarAccess.getNodeAccess().getTypeNodeTypeEnumRuleCall_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleNodeType_in_ruleNode338);
+                    pushFollow(FOLLOW_7);
                     lv_type_1_0=ruleNodeType();
-                    _fsp--;
+
+                    state._fsp--;
 
 
                     	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getNodeRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode.getParent(), current);
+                    	            current = createModelElementForParent(grammarAccess.getNodeRule());
                     	        }
-                    	        try {
-                    	       		set(
-                    	       			current, 
-                    	       			"type",
-                    	        		lv_type_1_0, 
-                    	        		"NodeType", 
-                    	        		currentNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	        currentNode = currentNode.getParent();
+                           		set(
+                           			current, 
+                           			"type",
+                            		lv_type_1_0, 
+                            		"uk.ac.open.Problem.NodeType");
+                    	        afterParserOrEnumRuleCall();
                     	    
 
                     }
@@ -483,7 +491,7 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:259:3: ( ( ':' )? ( (lv_description_3_0= RULE_STRING ) ) )?
+            // InternalProblem.g:214:3: ( (otherlv_2= ':' )? ( (lv_description_3_0= RULE_STRING ) ) )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -492,9 +500,9 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
             }
             switch (alt5) {
                 case 1 :
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:259:4: ( ':' )? ( (lv_description_3_0= RULE_STRING ) )
+                    // InternalProblem.g:214:4: (otherlv_2= ':' )? ( (lv_description_3_0= RULE_STRING ) )
                     {
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:259:4: ( ':' )?
+                    // InternalProblem.g:214:4: (otherlv_2= ':' )?
                     int alt4=2;
                     int LA4_0 = input.LA(1);
 
@@ -503,11 +511,11 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt4) {
                         case 1 :
-                            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:259:6: ':'
+                            // InternalProblem.g:214:6: otherlv_2= ':'
                             {
-                            match(input,14,FOLLOW_14_in_ruleNode351); 
+                            otherlv_2=(Token)match(input,14,FOLLOW_8); 
 
-                                    createLeafNode(grammarAccess.getNodeAccess().getColonKeyword_2_0(), null); 
+                                	newLeafNode(otherlv_2, grammarAccess.getNodeAccess().getColonKeyword_2_0());
                                 
 
                             }
@@ -515,32 +523,25 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:263:3: ( (lv_description_3_0= RULE_STRING ) )
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:264:1: (lv_description_3_0= RULE_STRING )
+                    // InternalProblem.g:218:3: ( (lv_description_3_0= RULE_STRING ) )
+                    // InternalProblem.g:219:1: (lv_description_3_0= RULE_STRING )
                     {
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:264:1: (lv_description_3_0= RULE_STRING )
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:265:3: lv_description_3_0= RULE_STRING
+                    // InternalProblem.g:219:1: (lv_description_3_0= RULE_STRING )
+                    // InternalProblem.g:220:3: lv_description_3_0= RULE_STRING
                     {
-                    lv_description_3_0=(Token)input.LT(1);
-                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleNode370); 
+                    lv_description_3_0=(Token)match(input,RULE_STRING,FOLLOW_9); 
 
-                    			createLeafNode(grammarAccess.getNodeAccess().getDescriptionSTRINGTerminalRuleCall_2_1_0(), "description"); 
+                    			newLeafNode(lv_description_3_0, grammarAccess.getNodeAccess().getDescriptionSTRINGTerminalRuleCall_2_1_0()); 
                     		
 
                     	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getNodeRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
+                    	            current = createModelElement(grammarAccess.getNodeRule());
                     	        }
-                    	        try {
-                    	       		set(
-                    	       			current, 
-                    	       			"description",
-                    	        		lv_description_3_0, 
-                    	        		"STRING", 
-                    	        		lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"description",
+                            		lv_description_3_0, 
+                            		"org.eclipse.xtext.common.Terminals.STRING");
                     	    
 
                     }
@@ -554,7 +555,7 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:287:4: ( '{' ( ( (lv_hiddenPhenomena_5_0= rulePhenomenon ) ) ( ',' ( (lv_hiddenPhenomena_7_0= rulePhenomenon ) ) )* )? ( ( (lv_subproblem_8_0= ruleProblemDiagram ) ) | ( 'see' 'domain' ( ( RULE_ID ) ) ) | ( 'see' 'problem' ( ( RULE_ID ) ) ) | ( 'see' ( (lv_href_16_0= RULE_STRING ) ) ) )* '}' )?
+            // InternalProblem.g:236:4: (otherlv_4= '{' ( ( (lv_hiddenPhenomena_5_0= rulePhenomenon ) ) (otherlv_6= ',' ( (lv_hiddenPhenomena_7_0= rulePhenomenon ) ) )* )? ( ( (lv_subproblem_8_0= ruleProblemDiagram ) ) | (otherlv_9= 'see' otherlv_10= 'domain' ( (otherlv_11= RULE_ID ) ) ) | (otherlv_12= 'see' otherlv_13= 'problem' ( (otherlv_14= RULE_ID ) ) ) | (otherlv_15= 'see' ( (lv_href_16_0= RULE_STRING ) ) ) )* otherlv_17= '}' )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -563,13 +564,13 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
             }
             switch (alt9) {
                 case 1 :
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:287:6: '{' ( ( (lv_hiddenPhenomena_5_0= rulePhenomenon ) ) ( ',' ( (lv_hiddenPhenomena_7_0= rulePhenomenon ) ) )* )? ( ( (lv_subproblem_8_0= ruleProblemDiagram ) ) | ( 'see' 'domain' ( ( RULE_ID ) ) ) | ( 'see' 'problem' ( ( RULE_ID ) ) ) | ( 'see' ( (lv_href_16_0= RULE_STRING ) ) ) )* '}'
+                    // InternalProblem.g:236:6: otherlv_4= '{' ( ( (lv_hiddenPhenomena_5_0= rulePhenomenon ) ) (otherlv_6= ',' ( (lv_hiddenPhenomena_7_0= rulePhenomenon ) ) )* )? ( ( (lv_subproblem_8_0= ruleProblemDiagram ) ) | (otherlv_9= 'see' otherlv_10= 'domain' ( (otherlv_11= RULE_ID ) ) ) | (otherlv_12= 'see' otherlv_13= 'problem' ( (otherlv_14= RULE_ID ) ) ) | (otherlv_15= 'see' ( (lv_href_16_0= RULE_STRING ) ) ) )* otherlv_17= '}'
                     {
-                    match(input,15,FOLLOW_15_in_ruleNode388); 
+                    otherlv_4=(Token)match(input,15,FOLLOW_10); 
 
-                            createLeafNode(grammarAccess.getNodeAccess().getLeftCurlyBracketKeyword_3_0(), null); 
+                        	newLeafNode(otherlv_4, grammarAccess.getNodeAccess().getLeftCurlyBracketKeyword_3_0());
                         
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:291:1: ( ( (lv_hiddenPhenomena_5_0= rulePhenomenon ) ) ( ',' ( (lv_hiddenPhenomena_7_0= rulePhenomenon ) ) )* )?
+                    // InternalProblem.g:240:1: ( ( (lv_hiddenPhenomena_5_0= rulePhenomenon ) ) (otherlv_6= ',' ( (lv_hiddenPhenomena_7_0= rulePhenomenon ) ) )* )?
                     int alt7=2;
                     int LA7_0 = input.LA(1);
 
@@ -578,37 +579,32 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt7) {
                         case 1 :
-                            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:291:2: ( (lv_hiddenPhenomena_5_0= rulePhenomenon ) ) ( ',' ( (lv_hiddenPhenomena_7_0= rulePhenomenon ) ) )*
+                            // InternalProblem.g:240:2: ( (lv_hiddenPhenomena_5_0= rulePhenomenon ) ) (otherlv_6= ',' ( (lv_hiddenPhenomena_7_0= rulePhenomenon ) ) )*
                             {
-                            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:291:2: ( (lv_hiddenPhenomena_5_0= rulePhenomenon ) )
-                            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:292:1: (lv_hiddenPhenomena_5_0= rulePhenomenon )
+                            // InternalProblem.g:240:2: ( (lv_hiddenPhenomena_5_0= rulePhenomenon ) )
+                            // InternalProblem.g:241:1: (lv_hiddenPhenomena_5_0= rulePhenomenon )
                             {
-                            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:292:1: (lv_hiddenPhenomena_5_0= rulePhenomenon )
-                            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:293:3: lv_hiddenPhenomena_5_0= rulePhenomenon
+                            // InternalProblem.g:241:1: (lv_hiddenPhenomena_5_0= rulePhenomenon )
+                            // InternalProblem.g:242:3: lv_hiddenPhenomena_5_0= rulePhenomenon
                             {
                              
-                            	        currentNode=createCompositeNode(grammarAccess.getNodeAccess().getHiddenPhenomenaPhenomenonParserRuleCall_3_1_0_0(), currentNode); 
+                            	        newCompositeNode(grammarAccess.getNodeAccess().getHiddenPhenomenaPhenomenonParserRuleCall_3_1_0_0()); 
                             	    
-                            pushFollow(FOLLOW_rulePhenomenon_in_ruleNode410);
+                            pushFollow(FOLLOW_11);
                             lv_hiddenPhenomena_5_0=rulePhenomenon();
-                            _fsp--;
+
+                            state._fsp--;
 
 
                             	        if (current==null) {
-                            	            current = factory.create(grammarAccess.getNodeRule().getType().getClassifier());
-                            	            associateNodeWithAstElement(currentNode.getParent(), current);
+                            	            current = createModelElementForParent(grammarAccess.getNodeRule());
                             	        }
-                            	        try {
-                            	       		add(
-                            	       			current, 
-                            	       			"hiddenPhenomena",
-                            	        		lv_hiddenPhenomena_5_0, 
-                            	        		"Phenomenon", 
-                            	        		currentNode);
-                            	        } catch (ValueConverterException vce) {
-                            				handleValueConverterException(vce);
-                            	        }
-                            	        currentNode = currentNode.getParent();
+                                   		add(
+                                   			current, 
+                                   			"hiddenPhenomena",
+                                    		lv_hiddenPhenomena_5_0, 
+                                    		"uk.ac.open.Problem.Phenomenon");
+                            	        afterParserOrEnumRuleCall();
                             	    
 
                             }
@@ -616,7 +612,7 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:315:2: ( ',' ( (lv_hiddenPhenomena_7_0= rulePhenomenon ) ) )*
+                            // InternalProblem.g:258:2: (otherlv_6= ',' ( (lv_hiddenPhenomena_7_0= rulePhenomenon ) ) )*
                             loop6:
                             do {
                                 int alt6=2;
@@ -629,41 +625,36 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
                                 switch (alt6) {
                             	case 1 :
-                            	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:315:4: ',' ( (lv_hiddenPhenomena_7_0= rulePhenomenon ) )
+                            	    // InternalProblem.g:258:4: otherlv_6= ',' ( (lv_hiddenPhenomena_7_0= rulePhenomenon ) )
                             	    {
-                            	    match(input,16,FOLLOW_16_in_ruleNode421); 
+                            	    otherlv_6=(Token)match(input,16,FOLLOW_12); 
 
-                            	            createLeafNode(grammarAccess.getNodeAccess().getCommaKeyword_3_1_1_0(), null); 
+                            	        	newLeafNode(otherlv_6, grammarAccess.getNodeAccess().getCommaKeyword_3_1_1_0());
                             	        
-                            	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:319:1: ( (lv_hiddenPhenomena_7_0= rulePhenomenon ) )
-                            	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:320:1: (lv_hiddenPhenomena_7_0= rulePhenomenon )
+                            	    // InternalProblem.g:262:1: ( (lv_hiddenPhenomena_7_0= rulePhenomenon ) )
+                            	    // InternalProblem.g:263:1: (lv_hiddenPhenomena_7_0= rulePhenomenon )
                             	    {
-                            	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:320:1: (lv_hiddenPhenomena_7_0= rulePhenomenon )
-                            	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:321:3: lv_hiddenPhenomena_7_0= rulePhenomenon
+                            	    // InternalProblem.g:263:1: (lv_hiddenPhenomena_7_0= rulePhenomenon )
+                            	    // InternalProblem.g:264:3: lv_hiddenPhenomena_7_0= rulePhenomenon
                             	    {
                             	     
-                            	    	        currentNode=createCompositeNode(grammarAccess.getNodeAccess().getHiddenPhenomenaPhenomenonParserRuleCall_3_1_1_1_0(), currentNode); 
+                            	    	        newCompositeNode(grammarAccess.getNodeAccess().getHiddenPhenomenaPhenomenonParserRuleCall_3_1_1_1_0()); 
                             	    	    
-                            	    pushFollow(FOLLOW_rulePhenomenon_in_ruleNode442);
+                            	    pushFollow(FOLLOW_11);
                             	    lv_hiddenPhenomena_7_0=rulePhenomenon();
-                            	    _fsp--;
+
+                            	    state._fsp--;
 
 
                             	    	        if (current==null) {
-                            	    	            current = factory.create(grammarAccess.getNodeRule().getType().getClassifier());
-                            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+                            	    	            current = createModelElementForParent(grammarAccess.getNodeRule());
                             	    	        }
-                            	    	        try {
-                            	    	       		add(
-                            	    	       			current, 
-                            	    	       			"hiddenPhenomena",
-                            	    	        		lv_hiddenPhenomena_7_0, 
-                            	    	        		"Phenomenon", 
-                            	    	        		currentNode);
-                            	    	        } catch (ValueConverterException vce) {
-                            	    				handleValueConverterException(vce);
-                            	    	        }
-                            	    	        currentNode = currentNode.getParent();
+                            	           		add(
+                            	           			current, 
+                            	           			"hiddenPhenomena",
+                            	            		lv_hiddenPhenomena_7_0, 
+                            	            		"uk.ac.open.Problem.Phenomenon");
+                            	    	        afterParserOrEnumRuleCall();
                             	    	    
 
                             	    }
@@ -686,7 +677,7 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:343:6: ( ( (lv_subproblem_8_0= ruleProblemDiagram ) ) | ( 'see' 'domain' ( ( RULE_ID ) ) ) | ( 'see' 'problem' ( ( RULE_ID ) ) ) | ( 'see' ( (lv_href_16_0= RULE_STRING ) ) ) )*
+                    // InternalProblem.g:280:6: ( ( (lv_subproblem_8_0= ruleProblemDiagram ) ) | (otherlv_9= 'see' otherlv_10= 'domain' ( (otherlv_11= RULE_ID ) ) ) | (otherlv_12= 'see' otherlv_13= 'problem' ( (otherlv_14= RULE_ID ) ) ) | (otherlv_15= 'see' ( (lv_href_16_0= RULE_STRING ) ) ) )*
                     loop8:
                     do {
                         int alt8=5;
@@ -702,14 +693,14 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
                                 alt8=4;
                                 }
                                 break;
-                            case 19:
-                                {
-                                alt8=3;
-                                }
-                                break;
                             case 18:
                                 {
                                 alt8=2;
+                                }
+                                break;
+                            case 19:
+                                {
+                                alt8=3;
                                 }
                                 break;
 
@@ -720,37 +711,32 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
                         switch (alt8) {
                     	case 1 :
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:343:7: ( (lv_subproblem_8_0= ruleProblemDiagram ) )
+                    	    // InternalProblem.g:280:7: ( (lv_subproblem_8_0= ruleProblemDiagram ) )
                     	    {
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:343:7: ( (lv_subproblem_8_0= ruleProblemDiagram ) )
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:344:1: (lv_subproblem_8_0= ruleProblemDiagram )
+                    	    // InternalProblem.g:280:7: ( (lv_subproblem_8_0= ruleProblemDiagram ) )
+                    	    // InternalProblem.g:281:1: (lv_subproblem_8_0= ruleProblemDiagram )
                     	    {
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:344:1: (lv_subproblem_8_0= ruleProblemDiagram )
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:345:3: lv_subproblem_8_0= ruleProblemDiagram
+                    	    // InternalProblem.g:281:1: (lv_subproblem_8_0= ruleProblemDiagram )
+                    	    // InternalProblem.g:282:3: lv_subproblem_8_0= ruleProblemDiagram
                     	    {
                     	     
-                    	    	        currentNode=createCompositeNode(grammarAccess.getNodeAccess().getSubproblemProblemDiagramParserRuleCall_3_2_0_0(), currentNode); 
+                    	    	        newCompositeNode(grammarAccess.getNodeAccess().getSubproblemProblemDiagramParserRuleCall_3_2_0_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleProblemDiagram_in_ruleNode468);
+                    	    pushFollow(FOLLOW_13);
                     	    lv_subproblem_8_0=ruleProblemDiagram();
-                    	    _fsp--;
+
+                    	    state._fsp--;
 
 
                     	    	        if (current==null) {
-                    	    	            current = factory.create(grammarAccess.getNodeRule().getType().getClassifier());
-                    	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+                    	    	            current = createModelElementForParent(grammarAccess.getNodeRule());
                     	    	        }
-                    	    	        try {
-                    	    	       		add(
-                    	    	       			current, 
-                    	    	       			"subproblem",
-                    	    	        		lv_subproblem_8_0, 
-                    	    	        		"ProblemDiagram", 
-                    	    	        		currentNode);
-                    	    	        } catch (ValueConverterException vce) {
-                    	    				handleValueConverterException(vce);
-                    	    	        }
-                    	    	        currentNode = currentNode.getParent();
+                    	           		add(
+                    	           			current, 
+                    	           			"subproblem",
+                    	            		lv_subproblem_8_0, 
+                    	            		"uk.ac.open.Problem.ProblemDiagram");
+                    	    	        afterParserOrEnumRuleCall();
                     	    	    
 
                     	    }
@@ -762,34 +748,33 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:368:6: ( 'see' 'domain' ( ( RULE_ID ) ) )
+                    	    // InternalProblem.g:299:6: (otherlv_9= 'see' otherlv_10= 'domain' ( (otherlv_11= RULE_ID ) ) )
                     	    {
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:368:6: ( 'see' 'domain' ( ( RULE_ID ) ) )
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:368:8: 'see' 'domain' ( ( RULE_ID ) )
+                    	    // InternalProblem.g:299:6: (otherlv_9= 'see' otherlv_10= 'domain' ( (otherlv_11= RULE_ID ) ) )
+                    	    // InternalProblem.g:299:8: otherlv_9= 'see' otherlv_10= 'domain' ( (otherlv_11= RULE_ID ) )
                     	    {
-                    	    match(input,17,FOLLOW_17_in_ruleNode485); 
+                    	    otherlv_9=(Token)match(input,17,FOLLOW_14); 
 
-                    	            createLeafNode(grammarAccess.getNodeAccess().getSeeKeyword_3_2_1_0(), null); 
+                    	        	newLeafNode(otherlv_9, grammarAccess.getNodeAccess().getSeeKeyword_3_2_1_0());
                     	        
-                    	    match(input,18,FOLLOW_18_in_ruleNode495); 
+                    	    otherlv_10=(Token)match(input,18,FOLLOW_3); 
 
-                    	            createLeafNode(grammarAccess.getNodeAccess().getDomainKeyword_3_2_1_1(), null); 
+                    	        	newLeafNode(otherlv_10, grammarAccess.getNodeAccess().getDomainKeyword_3_2_1_1());
                     	        
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:376:1: ( ( RULE_ID ) )
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:377:1: ( RULE_ID )
+                    	    // InternalProblem.g:307:1: ( (otherlv_11= RULE_ID ) )
+                    	    // InternalProblem.g:308:1: (otherlv_11= RULE_ID )
                     	    {
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:377:1: ( RULE_ID )
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:378:3: RULE_ID
+                    	    // InternalProblem.g:308:1: (otherlv_11= RULE_ID )
+                    	    // InternalProblem.g:309:3: otherlv_11= RULE_ID
                     	    {
 
                     	    			if (current==null) {
-                    	    	            current = factory.create(grammarAccess.getNodeRule().getType().getClassifier());
-                    	    	            associateNodeWithAstElement(currentNode, current);
+                    	    	            current = createModelElement(grammarAccess.getNodeRule());
                     	    	        }
                     	            
-                    	    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNode513); 
+                    	    otherlv_11=(Token)match(input,RULE_ID,FOLLOW_13); 
 
-                    	    		createLeafNode(grammarAccess.getNodeAccess().getProblemNodeRefNodeCrossReference_3_2_1_2_0(), "problemNodeRef"); 
+                    	    		newLeafNode(otherlv_11, grammarAccess.getNodeAccess().getProblemNodeRefNodeCrossReference_3_2_1_2_0()); 
                     	    	
 
                     	    }
@@ -804,34 +789,33 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
                     	    }
                     	    break;
                     	case 3 :
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:391:6: ( 'see' 'problem' ( ( RULE_ID ) ) )
+                    	    // InternalProblem.g:321:6: (otherlv_12= 'see' otherlv_13= 'problem' ( (otherlv_14= RULE_ID ) ) )
                     	    {
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:391:6: ( 'see' 'problem' ( ( RULE_ID ) ) )
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:391:8: 'see' 'problem' ( ( RULE_ID ) )
+                    	    // InternalProblem.g:321:6: (otherlv_12= 'see' otherlv_13= 'problem' ( (otherlv_14= RULE_ID ) ) )
+                    	    // InternalProblem.g:321:8: otherlv_12= 'see' otherlv_13= 'problem' ( (otherlv_14= RULE_ID ) )
                     	    {
-                    	    match(input,17,FOLLOW_17_in_ruleNode531); 
+                    	    otherlv_12=(Token)match(input,17,FOLLOW_15); 
 
-                    	            createLeafNode(grammarAccess.getNodeAccess().getSeeKeyword_3_2_2_0(), null); 
+                    	        	newLeafNode(otherlv_12, grammarAccess.getNodeAccess().getSeeKeyword_3_2_2_0());
                     	        
-                    	    match(input,19,FOLLOW_19_in_ruleNode541); 
+                    	    otherlv_13=(Token)match(input,19,FOLLOW_3); 
 
-                    	            createLeafNode(grammarAccess.getNodeAccess().getProblemKeyword_3_2_2_1(), null); 
+                    	        	newLeafNode(otherlv_13, grammarAccess.getNodeAccess().getProblemKeyword_3_2_2_1());
                     	        
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:399:1: ( ( RULE_ID ) )
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:400:1: ( RULE_ID )
+                    	    // InternalProblem.g:329:1: ( (otherlv_14= RULE_ID ) )
+                    	    // InternalProblem.g:330:1: (otherlv_14= RULE_ID )
                     	    {
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:400:1: ( RULE_ID )
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:401:3: RULE_ID
+                    	    // InternalProblem.g:330:1: (otherlv_14= RULE_ID )
+                    	    // InternalProblem.g:331:3: otherlv_14= RULE_ID
                     	    {
 
                     	    			if (current==null) {
-                    	    	            current = factory.create(grammarAccess.getNodeRule().getType().getClassifier());
-                    	    	            associateNodeWithAstElement(currentNode, current);
+                    	    	            current = createModelElement(grammarAccess.getNodeRule());
                     	    	        }
                     	            
-                    	    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNode559); 
+                    	    otherlv_14=(Token)match(input,RULE_ID,FOLLOW_13); 
 
-                    	    		createLeafNode(grammarAccess.getNodeAccess().getProblemRefProblemDiagramCrossReference_3_2_2_2_0(), "problemRef"); 
+                    	    		newLeafNode(otherlv_14, grammarAccess.getNodeAccess().getProblemRefProblemDiagramCrossReference_3_2_2_2_0()); 
                     	    	
 
                     	    }
@@ -846,41 +830,34 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
                     	    }
                     	    break;
                     	case 4 :
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:414:6: ( 'see' ( (lv_href_16_0= RULE_STRING ) ) )
+                    	    // InternalProblem.g:343:6: (otherlv_15= 'see' ( (lv_href_16_0= RULE_STRING ) ) )
                     	    {
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:414:6: ( 'see' ( (lv_href_16_0= RULE_STRING ) ) )
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:414:8: 'see' ( (lv_href_16_0= RULE_STRING ) )
+                    	    // InternalProblem.g:343:6: (otherlv_15= 'see' ( (lv_href_16_0= RULE_STRING ) ) )
+                    	    // InternalProblem.g:343:8: otherlv_15= 'see' ( (lv_href_16_0= RULE_STRING ) )
                     	    {
-                    	    match(input,17,FOLLOW_17_in_ruleNode577); 
+                    	    otherlv_15=(Token)match(input,17,FOLLOW_8); 
 
-                    	            createLeafNode(grammarAccess.getNodeAccess().getSeeKeyword_3_2_3_0(), null); 
+                    	        	newLeafNode(otherlv_15, grammarAccess.getNodeAccess().getSeeKeyword_3_2_3_0());
                     	        
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:418:1: ( (lv_href_16_0= RULE_STRING ) )
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:419:1: (lv_href_16_0= RULE_STRING )
+                    	    // InternalProblem.g:347:1: ( (lv_href_16_0= RULE_STRING ) )
+                    	    // InternalProblem.g:348:1: (lv_href_16_0= RULE_STRING )
                     	    {
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:419:1: (lv_href_16_0= RULE_STRING )
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:420:3: lv_href_16_0= RULE_STRING
+                    	    // InternalProblem.g:348:1: (lv_href_16_0= RULE_STRING )
+                    	    // InternalProblem.g:349:3: lv_href_16_0= RULE_STRING
                     	    {
-                    	    lv_href_16_0=(Token)input.LT(1);
-                    	    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleNode594); 
+                    	    lv_href_16_0=(Token)match(input,RULE_STRING,FOLLOW_13); 
 
-                    	    			createLeafNode(grammarAccess.getNodeAccess().getHrefSTRINGTerminalRuleCall_3_2_3_1_0(), "href"); 
+                    	    			newLeafNode(lv_href_16_0, grammarAccess.getNodeAccess().getHrefSTRINGTerminalRuleCall_3_2_3_1_0()); 
                     	    		
 
                     	    	        if (current==null) {
-                    	    	            current = factory.create(grammarAccess.getNodeRule().getType().getClassifier());
-                    	    	            associateNodeWithAstElement(currentNode, current);
+                    	    	            current = createModelElement(grammarAccess.getNodeRule());
                     	    	        }
-                    	    	        try {
-                    	    	       		add(
-                    	    	       			current, 
-                    	    	       			"href",
-                    	    	        		lv_href_16_0, 
-                    	    	        		"STRING", 
-                    	    	        		lastConsumedNode);
-                    	    	        } catch (ValueConverterException vce) {
-                    	    				handleValueConverterException(vce);
-                    	    	        }
+                    	           		addWithLastConsumed(
+                    	           			current, 
+                    	           			"href",
+                    	            		lv_href_16_0, 
+                    	            		"org.eclipse.xtext.common.Terminals.STRING");
                     	    	    
 
                     	    }
@@ -900,9 +877,9 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    match(input,20,FOLLOW_20_in_ruleNode612); 
+                    otherlv_17=(Token)match(input,20,FOLLOW_2); 
 
-                            createLeafNode(grammarAccess.getNodeAccess().getRightCurlyBracketKeyword_3_3(), null); 
+                        	newLeafNode(otherlv_17, grammarAccess.getNodeAccess().getRightCurlyBracketKeyword_3_3());
                         
 
                     }
@@ -916,9 +893,7 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -929,11 +904,11 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleNode
+    // $ANTLR end "ruleNode"
 
 
-    // $ANTLR start entryRulePhenomenon
-    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:454:1: entryRulePhenomenon returns [EObject current=null] : iv_rulePhenomenon= rulePhenomenon EOF ;
+    // $ANTLR start "entryRulePhenomenon"
+    // InternalProblem.g:377:1: entryRulePhenomenon returns [EObject current=null] : iv_rulePhenomenon= rulePhenomenon EOF ;
     public final EObject entryRulePhenomenon() throws RecognitionException {
         EObject current = null;
 
@@ -941,16 +916,17 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:455:2: (iv_rulePhenomenon= rulePhenomenon EOF )
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:456:2: iv_rulePhenomenon= rulePhenomenon EOF
+            // InternalProblem.g:378:2: (iv_rulePhenomenon= rulePhenomenon EOF )
+            // InternalProblem.g:379:2: iv_rulePhenomenon= rulePhenomenon EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getPhenomenonRule(), currentNode); 
-            pushFollow(FOLLOW_rulePhenomenon_in_entryRulePhenomenon650);
+             newCompositeNode(grammarAccess.getPhenomenonRule()); 
+            pushFollow(FOLLOW_1);
             iv_rulePhenomenon=rulePhenomenon();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_rulePhenomenon; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePhenomenon660); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -964,30 +940,31 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRulePhenomenon
+    // $ANTLR end "entryRulePhenomenon"
 
 
-    // $ANTLR start rulePhenomenon
-    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:463:1: rulePhenomenon returns [EObject current=null] : ( ( (lv_type_0_0= rulePhenomenonType ) )? ( (lv_isControlled_1_0= '!' ) )? ( (lv_name_2_0= RULE_ID ) ) ( ( ':' )? ( (lv_description_4_0= RULE_STRING ) ) )? ) ;
+    // $ANTLR start "rulePhenomenon"
+    // InternalProblem.g:386:1: rulePhenomenon returns [EObject current=null] : ( ( (lv_type_0_0= rulePhenomenonType ) )? ( (lv_isControlled_1_0= '!' ) )? ( (lv_name_2_0= RULE_ID ) ) ( (otherlv_3= ':' )? ( (lv_description_4_0= RULE_STRING ) ) )? ) ;
     public final EObject rulePhenomenon() throws RecognitionException {
         EObject current = null;
 
         Token lv_isControlled_1_0=null;
         Token lv_name_2_0=null;
+        Token otherlv_3=null;
         Token lv_description_4_0=null;
         Enumerator lv_type_0_0 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:468:6: ( ( ( (lv_type_0_0= rulePhenomenonType ) )? ( (lv_isControlled_1_0= '!' ) )? ( (lv_name_2_0= RULE_ID ) ) ( ( ':' )? ( (lv_description_4_0= RULE_STRING ) ) )? ) )
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:469:1: ( ( (lv_type_0_0= rulePhenomenonType ) )? ( (lv_isControlled_1_0= '!' ) )? ( (lv_name_2_0= RULE_ID ) ) ( ( ':' )? ( (lv_description_4_0= RULE_STRING ) ) )? )
+            // InternalProblem.g:389:28: ( ( ( (lv_type_0_0= rulePhenomenonType ) )? ( (lv_isControlled_1_0= '!' ) )? ( (lv_name_2_0= RULE_ID ) ) ( (otherlv_3= ':' )? ( (lv_description_4_0= RULE_STRING ) ) )? ) )
+            // InternalProblem.g:390:1: ( ( (lv_type_0_0= rulePhenomenonType ) )? ( (lv_isControlled_1_0= '!' ) )? ( (lv_name_2_0= RULE_ID ) ) ( (otherlv_3= ':' )? ( (lv_description_4_0= RULE_STRING ) ) )? )
             {
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:469:1: ( ( (lv_type_0_0= rulePhenomenonType ) )? ( (lv_isControlled_1_0= '!' ) )? ( (lv_name_2_0= RULE_ID ) ) ( ( ':' )? ( (lv_description_4_0= RULE_STRING ) ) )? )
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:469:2: ( (lv_type_0_0= rulePhenomenonType ) )? ( (lv_isControlled_1_0= '!' ) )? ( (lv_name_2_0= RULE_ID ) ) ( ( ':' )? ( (lv_description_4_0= RULE_STRING ) ) )?
+            // InternalProblem.g:390:1: ( ( (lv_type_0_0= rulePhenomenonType ) )? ( (lv_isControlled_1_0= '!' ) )? ( (lv_name_2_0= RULE_ID ) ) ( (otherlv_3= ':' )? ( (lv_description_4_0= RULE_STRING ) ) )? )
+            // InternalProblem.g:390:2: ( (lv_type_0_0= rulePhenomenonType ) )? ( (lv_isControlled_1_0= '!' ) )? ( (lv_name_2_0= RULE_ID ) ) ( (otherlv_3= ':' )? ( (lv_description_4_0= RULE_STRING ) ) )?
             {
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:469:2: ( (lv_type_0_0= rulePhenomenonType ) )?
+            // InternalProblem.g:390:2: ( (lv_type_0_0= rulePhenomenonType ) )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -996,34 +973,29 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
             }
             switch (alt10) {
                 case 1 :
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:470:1: (lv_type_0_0= rulePhenomenonType )
+                    // InternalProblem.g:391:1: (lv_type_0_0= rulePhenomenonType )
                     {
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:470:1: (lv_type_0_0= rulePhenomenonType )
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:471:3: lv_type_0_0= rulePhenomenonType
+                    // InternalProblem.g:391:1: (lv_type_0_0= rulePhenomenonType )
+                    // InternalProblem.g:392:3: lv_type_0_0= rulePhenomenonType
                     {
                      
-                    	        currentNode=createCompositeNode(grammarAccess.getPhenomenonAccess().getTypePhenomenonTypeEnumRuleCall_0_0(), currentNode); 
+                    	        newCompositeNode(grammarAccess.getPhenomenonAccess().getTypePhenomenonTypeEnumRuleCall_0_0()); 
                     	    
-                    pushFollow(FOLLOW_rulePhenomenonType_in_rulePhenomenon706);
+                    pushFollow(FOLLOW_16);
                     lv_type_0_0=rulePhenomenonType();
-                    _fsp--;
+
+                    state._fsp--;
 
 
                     	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getPhenomenonRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode.getParent(), current);
+                    	            current = createModelElementForParent(grammarAccess.getPhenomenonRule());
                     	        }
-                    	        try {
-                    	       		set(
-                    	       			current, 
-                    	       			"type",
-                    	        		lv_type_0_0, 
-                    	        		"PhenomenonType", 
-                    	        		currentNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	        currentNode = currentNode.getParent();
+                           		set(
+                           			current, 
+                           			"type",
+                            		lv_type_0_0, 
+                            		"uk.ac.open.Problem.PhenomenonType");
+                    	        afterParserOrEnumRuleCall();
                     	    
 
                     }
@@ -1034,7 +1006,7 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:493:3: ( (lv_isControlled_1_0= '!' ) )?
+            // InternalProblem.g:408:3: ( (lv_isControlled_1_0= '!' ) )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -1043,27 +1015,20 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
             }
             switch (alt11) {
                 case 1 :
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:494:1: (lv_isControlled_1_0= '!' )
+                    // InternalProblem.g:409:1: (lv_isControlled_1_0= '!' )
                     {
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:494:1: (lv_isControlled_1_0= '!' )
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:495:3: lv_isControlled_1_0= '!'
+                    // InternalProblem.g:409:1: (lv_isControlled_1_0= '!' )
+                    // InternalProblem.g:410:3: lv_isControlled_1_0= '!'
                     {
-                    lv_isControlled_1_0=(Token)input.LT(1);
-                    match(input,21,FOLLOW_21_in_rulePhenomenon725); 
+                    lv_isControlled_1_0=(Token)match(input,21,FOLLOW_3); 
 
-                            createLeafNode(grammarAccess.getPhenomenonAccess().getIsControlledExclamationMarkKeyword_1_0(), "isControlled"); 
+                            newLeafNode(lv_isControlled_1_0, grammarAccess.getPhenomenonAccess().getIsControlledExclamationMarkKeyword_1_0());
                         
 
                     	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getPhenomenonRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
+                    	            current = createModelElement(grammarAccess.getPhenomenonRule());
                     	        }
-                    	        
-                    	        try {
-                    	       		set(current, "isControlled", true, "!", lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
+                           		setWithLastConsumed(current, "isControlled", true, "!");
                     	    
 
                     }
@@ -1074,32 +1039,25 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:514:3: ( (lv_name_2_0= RULE_ID ) )
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:515:1: (lv_name_2_0= RULE_ID )
+            // InternalProblem.g:423:3: ( (lv_name_2_0= RULE_ID ) )
+            // InternalProblem.g:424:1: (lv_name_2_0= RULE_ID )
             {
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:515:1: (lv_name_2_0= RULE_ID )
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:516:3: lv_name_2_0= RULE_ID
+            // InternalProblem.g:424:1: (lv_name_2_0= RULE_ID )
+            // InternalProblem.g:425:3: lv_name_2_0= RULE_ID
             {
-            lv_name_2_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePhenomenon756); 
+            lv_name_2_0=(Token)match(input,RULE_ID,FOLLOW_17); 
 
-            			createLeafNode(grammarAccess.getPhenomenonAccess().getNameIDTerminalRuleCall_2_0(), "name"); 
+            			newLeafNode(lv_name_2_0, grammarAccess.getPhenomenonAccess().getNameIDTerminalRuleCall_2_0()); 
             		
 
             	        if (current==null) {
-            	            current = factory.create(grammarAccess.getPhenomenonRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
+            	            current = createModelElement(grammarAccess.getPhenomenonRule());
             	        }
-            	        try {
-            	       		set(
-            	       			current, 
-            	       			"name",
-            	        		lv_name_2_0, 
-            	        		"ID", 
-            	        		lastConsumedNode);
-            	        } catch (ValueConverterException vce) {
-            				handleValueConverterException(vce);
-            	        }
+                   		setWithLastConsumed(
+                   			current, 
+                   			"name",
+                    		lv_name_2_0, 
+                    		"uk.ac.open.Problem.ID");
             	    
 
             }
@@ -1107,7 +1065,7 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:538:2: ( ( ':' )? ( (lv_description_4_0= RULE_STRING ) ) )?
+            // InternalProblem.g:441:2: ( (otherlv_3= ':' )? ( (lv_description_4_0= RULE_STRING ) ) )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -1116,9 +1074,9 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
             }
             switch (alt13) {
                 case 1 :
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:538:3: ( ':' )? ( (lv_description_4_0= RULE_STRING ) )
+                    // InternalProblem.g:441:3: (otherlv_3= ':' )? ( (lv_description_4_0= RULE_STRING ) )
                     {
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:538:3: ( ':' )?
+                    // InternalProblem.g:441:3: (otherlv_3= ':' )?
                     int alt12=2;
                     int LA12_0 = input.LA(1);
 
@@ -1127,11 +1085,11 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt12) {
                         case 1 :
-                            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:538:5: ':'
+                            // InternalProblem.g:441:5: otherlv_3= ':'
                             {
-                            match(input,14,FOLLOW_14_in_rulePhenomenon773); 
+                            otherlv_3=(Token)match(input,14,FOLLOW_8); 
 
-                                    createLeafNode(grammarAccess.getPhenomenonAccess().getColonKeyword_3_0(), null); 
+                                	newLeafNode(otherlv_3, grammarAccess.getPhenomenonAccess().getColonKeyword_3_0());
                                 
 
                             }
@@ -1139,32 +1097,25 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:542:3: ( (lv_description_4_0= RULE_STRING ) )
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:543:1: (lv_description_4_0= RULE_STRING )
+                    // InternalProblem.g:445:3: ( (lv_description_4_0= RULE_STRING ) )
+                    // InternalProblem.g:446:1: (lv_description_4_0= RULE_STRING )
                     {
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:543:1: (lv_description_4_0= RULE_STRING )
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:544:3: lv_description_4_0= RULE_STRING
+                    // InternalProblem.g:446:1: (lv_description_4_0= RULE_STRING )
+                    // InternalProblem.g:447:3: lv_description_4_0= RULE_STRING
                     {
-                    lv_description_4_0=(Token)input.LT(1);
-                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulePhenomenon792); 
+                    lv_description_4_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
 
-                    			createLeafNode(grammarAccess.getPhenomenonAccess().getDescriptionSTRINGTerminalRuleCall_3_1_0(), "description"); 
+                    			newLeafNode(lv_description_4_0, grammarAccess.getPhenomenonAccess().getDescriptionSTRINGTerminalRuleCall_3_1_0()); 
                     		
 
                     	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getPhenomenonRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
+                    	            current = createModelElement(grammarAccess.getPhenomenonRule());
                     	        }
-                    	        try {
-                    	       		set(
-                    	       			current, 
-                    	       			"description",
-                    	        		lv_description_4_0, 
-                    	        		"STRING", 
-                    	        		lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"description",
+                            		lv_description_4_0, 
+                            		"org.eclipse.xtext.common.Terminals.STRING");
                     	    
 
                     }
@@ -1184,9 +1135,7 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -1197,11 +1146,11 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end rulePhenomenon
+    // $ANTLR end "rulePhenomenon"
 
 
-    // $ANTLR start entryRuleLink
-    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:574:1: entryRuleLink returns [EObject current=null] : iv_ruleLink= ruleLink EOF ;
+    // $ANTLR start "entryRuleLink"
+    // InternalProblem.g:471:1: entryRuleLink returns [EObject current=null] : iv_ruleLink= ruleLink EOF ;
     public final EObject entryRuleLink() throws RecognitionException {
         EObject current = null;
 
@@ -1209,16 +1158,17 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:575:2: (iv_ruleLink= ruleLink EOF )
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:576:2: iv_ruleLink= ruleLink EOF
+            // InternalProblem.g:472:2: (iv_ruleLink= ruleLink EOF )
+            // InternalProblem.g:473:2: iv_ruleLink= ruleLink EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getLinkRule(), currentNode); 
-            pushFollow(FOLLOW_ruleLink_in_entryRuleLink835);
+             newCompositeNode(grammarAccess.getLinkRule()); 
+            pushFollow(FOLLOW_1);
             iv_ruleLink=ruleLink();
-            _fsp--;
+
+            state._fsp--;
 
              current =iv_ruleLink; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLink845); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -1232,14 +1182,20 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleLink
+    // $ANTLR end "entryRuleLink"
 
 
-    // $ANTLR start ruleLink
-    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:583:1: ruleLink returns [EObject current=null] : ( ( ( RULE_ID ) ) ( (lv_type_1_0= ruleLinkType ) ) ( ( RULE_ID ) ) ( '{' ( (lv_phenomena_4_0= rulePhenomenon ) ) ( ',' ( (lv_phenomena_6_0= rulePhenomenon ) ) )* '}' )? ( ( ':' )? ( (lv_description_9_0= RULE_STRING ) ) )? ) ;
+    // $ANTLR start "ruleLink"
+    // InternalProblem.g:480:1: ruleLink returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) ( (lv_type_1_0= ruleLinkType ) ) ( (otherlv_2= RULE_ID ) ) (otherlv_3= '{' ( (lv_phenomena_4_0= rulePhenomenon ) ) (otherlv_5= ',' ( (lv_phenomena_6_0= rulePhenomenon ) ) )* otherlv_7= '}' )? ( (otherlv_8= ':' )? ( (lv_description_9_0= RULE_STRING ) ) )? ) ;
     public final EObject ruleLink() throws RecognitionException {
         EObject current = null;
 
+        Token otherlv_0=null;
+        Token otherlv_2=null;
+        Token otherlv_3=null;
+        Token otherlv_5=null;
+        Token otherlv_7=null;
+        Token otherlv_8=null;
         Token lv_description_9_0=null;
         Enumerator lv_type_1_0 = null;
 
@@ -1248,30 +1204,29 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
         EObject lv_phenomena_6_0 = null;
 
 
-         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+         enterRule(); 
             
         try {
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:588:6: ( ( ( ( RULE_ID ) ) ( (lv_type_1_0= ruleLinkType ) ) ( ( RULE_ID ) ) ( '{' ( (lv_phenomena_4_0= rulePhenomenon ) ) ( ',' ( (lv_phenomena_6_0= rulePhenomenon ) ) )* '}' )? ( ( ':' )? ( (lv_description_9_0= RULE_STRING ) ) )? ) )
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:589:1: ( ( ( RULE_ID ) ) ( (lv_type_1_0= ruleLinkType ) ) ( ( RULE_ID ) ) ( '{' ( (lv_phenomena_4_0= rulePhenomenon ) ) ( ',' ( (lv_phenomena_6_0= rulePhenomenon ) ) )* '}' )? ( ( ':' )? ( (lv_description_9_0= RULE_STRING ) ) )? )
+            // InternalProblem.g:483:28: ( ( ( (otherlv_0= RULE_ID ) ) ( (lv_type_1_0= ruleLinkType ) ) ( (otherlv_2= RULE_ID ) ) (otherlv_3= '{' ( (lv_phenomena_4_0= rulePhenomenon ) ) (otherlv_5= ',' ( (lv_phenomena_6_0= rulePhenomenon ) ) )* otherlv_7= '}' )? ( (otherlv_8= ':' )? ( (lv_description_9_0= RULE_STRING ) ) )? ) )
+            // InternalProblem.g:484:1: ( ( (otherlv_0= RULE_ID ) ) ( (lv_type_1_0= ruleLinkType ) ) ( (otherlv_2= RULE_ID ) ) (otherlv_3= '{' ( (lv_phenomena_4_0= rulePhenomenon ) ) (otherlv_5= ',' ( (lv_phenomena_6_0= rulePhenomenon ) ) )* otherlv_7= '}' )? ( (otherlv_8= ':' )? ( (lv_description_9_0= RULE_STRING ) ) )? )
             {
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:589:1: ( ( ( RULE_ID ) ) ( (lv_type_1_0= ruleLinkType ) ) ( ( RULE_ID ) ) ( '{' ( (lv_phenomena_4_0= rulePhenomenon ) ) ( ',' ( (lv_phenomena_6_0= rulePhenomenon ) ) )* '}' )? ( ( ':' )? ( (lv_description_9_0= RULE_STRING ) ) )? )
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:589:2: ( ( RULE_ID ) ) ( (lv_type_1_0= ruleLinkType ) ) ( ( RULE_ID ) ) ( '{' ( (lv_phenomena_4_0= rulePhenomenon ) ) ( ',' ( (lv_phenomena_6_0= rulePhenomenon ) ) )* '}' )? ( ( ':' )? ( (lv_description_9_0= RULE_STRING ) ) )?
+            // InternalProblem.g:484:1: ( ( (otherlv_0= RULE_ID ) ) ( (lv_type_1_0= ruleLinkType ) ) ( (otherlv_2= RULE_ID ) ) (otherlv_3= '{' ( (lv_phenomena_4_0= rulePhenomenon ) ) (otherlv_5= ',' ( (lv_phenomena_6_0= rulePhenomenon ) ) )* otherlv_7= '}' )? ( (otherlv_8= ':' )? ( (lv_description_9_0= RULE_STRING ) ) )? )
+            // InternalProblem.g:484:2: ( (otherlv_0= RULE_ID ) ) ( (lv_type_1_0= ruleLinkType ) ) ( (otherlv_2= RULE_ID ) ) (otherlv_3= '{' ( (lv_phenomena_4_0= rulePhenomenon ) ) (otherlv_5= ',' ( (lv_phenomena_6_0= rulePhenomenon ) ) )* otherlv_7= '}' )? ( (otherlv_8= ':' )? ( (lv_description_9_0= RULE_STRING ) ) )?
             {
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:589:2: ( ( RULE_ID ) )
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:590:1: ( RULE_ID )
+            // InternalProblem.g:484:2: ( (otherlv_0= RULE_ID ) )
+            // InternalProblem.g:485:1: (otherlv_0= RULE_ID )
             {
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:590:1: ( RULE_ID )
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:591:3: RULE_ID
+            // InternalProblem.g:485:1: (otherlv_0= RULE_ID )
+            // InternalProblem.g:486:3: otherlv_0= RULE_ID
             {
 
             			if (current==null) {
-            	            current = factory.create(grammarAccess.getLinkRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
+            	            current = createModelElement(grammarAccess.getLinkRule());
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleLink888); 
+            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_18); 
 
-            		createLeafNode(grammarAccess.getLinkAccess().getFromNodeCrossReference_0_0(), "from"); 
+            		newLeafNode(otherlv_0, grammarAccess.getLinkAccess().getFromNodeCrossReference_0_0()); 
             	
 
             }
@@ -1279,35 +1234,30 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:603:2: ( (lv_type_1_0= ruleLinkType ) )
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:604:1: (lv_type_1_0= ruleLinkType )
+            // InternalProblem.g:497:2: ( (lv_type_1_0= ruleLinkType ) )
+            // InternalProblem.g:498:1: (lv_type_1_0= ruleLinkType )
             {
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:604:1: (lv_type_1_0= ruleLinkType )
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:605:3: lv_type_1_0= ruleLinkType
+            // InternalProblem.g:498:1: (lv_type_1_0= ruleLinkType )
+            // InternalProblem.g:499:3: lv_type_1_0= ruleLinkType
             {
              
-            	        currentNode=createCompositeNode(grammarAccess.getLinkAccess().getTypeLinkTypeEnumRuleCall_1_0(), currentNode); 
+            	        newCompositeNode(grammarAccess.getLinkAccess().getTypeLinkTypeEnumRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleLinkType_in_ruleLink909);
+            pushFollow(FOLLOW_3);
             lv_type_1_0=ruleLinkType();
-            _fsp--;
+
+            state._fsp--;
 
 
             	        if (current==null) {
-            	            current = factory.create(grammarAccess.getLinkRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	            current = createModelElementForParent(grammarAccess.getLinkRule());
             	        }
-            	        try {
-            	       		set(
-            	       			current, 
-            	       			"type",
-            	        		lv_type_1_0, 
-            	        		"LinkType", 
-            	        		currentNode);
-            	        } catch (ValueConverterException vce) {
-            				handleValueConverterException(vce);
-            	        }
-            	        currentNode = currentNode.getParent();
+                   		set(
+                   			current, 
+                   			"type",
+                    		lv_type_1_0, 
+                    		"uk.ac.open.Problem.LinkType");
+            	        afterParserOrEnumRuleCall();
             	    
 
             }
@@ -1315,21 +1265,20 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:627:2: ( ( RULE_ID ) )
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:628:1: ( RULE_ID )
+            // InternalProblem.g:515:2: ( (otherlv_2= RULE_ID ) )
+            // InternalProblem.g:516:1: (otherlv_2= RULE_ID )
             {
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:628:1: ( RULE_ID )
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:629:3: RULE_ID
+            // InternalProblem.g:516:1: (otherlv_2= RULE_ID )
+            // InternalProblem.g:517:3: otherlv_2= RULE_ID
             {
 
             			if (current==null) {
-            	            current = factory.create(grammarAccess.getLinkRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
+            	            current = createModelElement(grammarAccess.getLinkRule());
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleLink927); 
+            otherlv_2=(Token)match(input,RULE_ID,FOLLOW_7); 
 
-            		createLeafNode(grammarAccess.getLinkAccess().getToNodeCrossReference_2_0(), "to"); 
+            		newLeafNode(otherlv_2, grammarAccess.getLinkAccess().getToNodeCrossReference_2_0()); 
             	
 
             }
@@ -1337,7 +1286,7 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:641:2: ( '{' ( (lv_phenomena_4_0= rulePhenomenon ) ) ( ',' ( (lv_phenomena_6_0= rulePhenomenon ) ) )* '}' )?
+            // InternalProblem.g:528:2: (otherlv_3= '{' ( (lv_phenomena_4_0= rulePhenomenon ) ) (otherlv_5= ',' ( (lv_phenomena_6_0= rulePhenomenon ) ) )* otherlv_7= '}' )?
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -1346,41 +1295,36 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
             }
             switch (alt15) {
                 case 1 :
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:641:4: '{' ( (lv_phenomena_4_0= rulePhenomenon ) ) ( ',' ( (lv_phenomena_6_0= rulePhenomenon ) ) )* '}'
+                    // InternalProblem.g:528:4: otherlv_3= '{' ( (lv_phenomena_4_0= rulePhenomenon ) ) (otherlv_5= ',' ( (lv_phenomena_6_0= rulePhenomenon ) ) )* otherlv_7= '}'
                     {
-                    match(input,15,FOLLOW_15_in_ruleLink938); 
+                    otherlv_3=(Token)match(input,15,FOLLOW_12); 
 
-                            createLeafNode(grammarAccess.getLinkAccess().getLeftCurlyBracketKeyword_3_0(), null); 
+                        	newLeafNode(otherlv_3, grammarAccess.getLinkAccess().getLeftCurlyBracketKeyword_3_0());
                         
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:645:1: ( (lv_phenomena_4_0= rulePhenomenon ) )
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:646:1: (lv_phenomena_4_0= rulePhenomenon )
+                    // InternalProblem.g:532:1: ( (lv_phenomena_4_0= rulePhenomenon ) )
+                    // InternalProblem.g:533:1: (lv_phenomena_4_0= rulePhenomenon )
                     {
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:646:1: (lv_phenomena_4_0= rulePhenomenon )
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:647:3: lv_phenomena_4_0= rulePhenomenon
+                    // InternalProblem.g:533:1: (lv_phenomena_4_0= rulePhenomenon )
+                    // InternalProblem.g:534:3: lv_phenomena_4_0= rulePhenomenon
                     {
                      
-                    	        currentNode=createCompositeNode(grammarAccess.getLinkAccess().getPhenomenaPhenomenonParserRuleCall_3_1_0(), currentNode); 
+                    	        newCompositeNode(grammarAccess.getLinkAccess().getPhenomenaPhenomenonParserRuleCall_3_1_0()); 
                     	    
-                    pushFollow(FOLLOW_rulePhenomenon_in_ruleLink959);
+                    pushFollow(FOLLOW_19);
                     lv_phenomena_4_0=rulePhenomenon();
-                    _fsp--;
+
+                    state._fsp--;
 
 
                     	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getLinkRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode.getParent(), current);
+                    	            current = createModelElementForParent(grammarAccess.getLinkRule());
                     	        }
-                    	        try {
-                    	       		add(
-                    	       			current, 
-                    	       			"phenomena",
-                    	        		lv_phenomena_4_0, 
-                    	        		"Phenomenon", 
-                    	        		currentNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	        currentNode = currentNode.getParent();
+                           		add(
+                           			current, 
+                           			"phenomena",
+                            		lv_phenomena_4_0, 
+                            		"uk.ac.open.Problem.Phenomenon");
+                    	        afterParserOrEnumRuleCall();
                     	    
 
                     }
@@ -1388,7 +1332,7 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:669:2: ( ',' ( (lv_phenomena_6_0= rulePhenomenon ) ) )*
+                    // InternalProblem.g:550:2: (otherlv_5= ',' ( (lv_phenomena_6_0= rulePhenomenon ) ) )*
                     loop14:
                     do {
                         int alt14=2;
@@ -1401,41 +1345,36 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
                         switch (alt14) {
                     	case 1 :
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:669:4: ',' ( (lv_phenomena_6_0= rulePhenomenon ) )
+                    	    // InternalProblem.g:550:4: otherlv_5= ',' ( (lv_phenomena_6_0= rulePhenomenon ) )
                     	    {
-                    	    match(input,16,FOLLOW_16_in_ruleLink970); 
+                    	    otherlv_5=(Token)match(input,16,FOLLOW_12); 
 
-                    	            createLeafNode(grammarAccess.getLinkAccess().getCommaKeyword_3_2_0(), null); 
+                    	        	newLeafNode(otherlv_5, grammarAccess.getLinkAccess().getCommaKeyword_3_2_0());
                     	        
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:673:1: ( (lv_phenomena_6_0= rulePhenomenon ) )
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:674:1: (lv_phenomena_6_0= rulePhenomenon )
+                    	    // InternalProblem.g:554:1: ( (lv_phenomena_6_0= rulePhenomenon ) )
+                    	    // InternalProblem.g:555:1: (lv_phenomena_6_0= rulePhenomenon )
                     	    {
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:674:1: (lv_phenomena_6_0= rulePhenomenon )
-                    	    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:675:3: lv_phenomena_6_0= rulePhenomenon
+                    	    // InternalProblem.g:555:1: (lv_phenomena_6_0= rulePhenomenon )
+                    	    // InternalProblem.g:556:3: lv_phenomena_6_0= rulePhenomenon
                     	    {
                     	     
-                    	    	        currentNode=createCompositeNode(grammarAccess.getLinkAccess().getPhenomenaPhenomenonParserRuleCall_3_2_1_0(), currentNode); 
+                    	    	        newCompositeNode(grammarAccess.getLinkAccess().getPhenomenaPhenomenonParserRuleCall_3_2_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_rulePhenomenon_in_ruleLink991);
+                    	    pushFollow(FOLLOW_19);
                     	    lv_phenomena_6_0=rulePhenomenon();
-                    	    _fsp--;
+
+                    	    state._fsp--;
 
 
                     	    	        if (current==null) {
-                    	    	            current = factory.create(grammarAccess.getLinkRule().getType().getClassifier());
-                    	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+                    	    	            current = createModelElementForParent(grammarAccess.getLinkRule());
                     	    	        }
-                    	    	        try {
-                    	    	       		add(
-                    	    	       			current, 
-                    	    	       			"phenomena",
-                    	    	        		lv_phenomena_6_0, 
-                    	    	        		"Phenomenon", 
-                    	    	        		currentNode);
-                    	    	        } catch (ValueConverterException vce) {
-                    	    				handleValueConverterException(vce);
-                    	    	        }
-                    	    	        currentNode = currentNode.getParent();
+                    	           		add(
+                    	           			current, 
+                    	           			"phenomena",
+                    	            		lv_phenomena_6_0, 
+                    	            		"uk.ac.open.Problem.Phenomenon");
+                    	    	        afterParserOrEnumRuleCall();
                     	    	    
 
                     	    }
@@ -1452,9 +1391,9 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    match(input,20,FOLLOW_20_in_ruleLink1003); 
+                    otherlv_7=(Token)match(input,20,FOLLOW_17); 
 
-                            createLeafNode(grammarAccess.getLinkAccess().getRightCurlyBracketKeyword_3_3(), null); 
+                        	newLeafNode(otherlv_7, grammarAccess.getLinkAccess().getRightCurlyBracketKeyword_3_3());
                         
 
                     }
@@ -1462,7 +1401,7 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:701:3: ( ( ':' )? ( (lv_description_9_0= RULE_STRING ) ) )?
+            // InternalProblem.g:576:3: ( (otherlv_8= ':' )? ( (lv_description_9_0= RULE_STRING ) ) )?
             int alt17=2;
             int LA17_0 = input.LA(1);
 
@@ -1471,9 +1410,9 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
             }
             switch (alt17) {
                 case 1 :
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:701:4: ( ':' )? ( (lv_description_9_0= RULE_STRING ) )
+                    // InternalProblem.g:576:4: (otherlv_8= ':' )? ( (lv_description_9_0= RULE_STRING ) )
                     {
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:701:4: ( ':' )?
+                    // InternalProblem.g:576:4: (otherlv_8= ':' )?
                     int alt16=2;
                     int LA16_0 = input.LA(1);
 
@@ -1482,11 +1421,11 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt16) {
                         case 1 :
-                            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:701:6: ':'
+                            // InternalProblem.g:576:6: otherlv_8= ':'
                             {
-                            match(input,14,FOLLOW_14_in_ruleLink1017); 
+                            otherlv_8=(Token)match(input,14,FOLLOW_8); 
 
-                                    createLeafNode(grammarAccess.getLinkAccess().getColonKeyword_4_0(), null); 
+                                	newLeafNode(otherlv_8, grammarAccess.getLinkAccess().getColonKeyword_4_0());
                                 
 
                             }
@@ -1494,32 +1433,25 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:705:3: ( (lv_description_9_0= RULE_STRING ) )
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:706:1: (lv_description_9_0= RULE_STRING )
+                    // InternalProblem.g:580:3: ( (lv_description_9_0= RULE_STRING ) )
+                    // InternalProblem.g:581:1: (lv_description_9_0= RULE_STRING )
                     {
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:706:1: (lv_description_9_0= RULE_STRING )
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:707:3: lv_description_9_0= RULE_STRING
+                    // InternalProblem.g:581:1: (lv_description_9_0= RULE_STRING )
+                    // InternalProblem.g:582:3: lv_description_9_0= RULE_STRING
                     {
-                    lv_description_9_0=(Token)input.LT(1);
-                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleLink1036); 
+                    lv_description_9_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
 
-                    			createLeafNode(grammarAccess.getLinkAccess().getDescriptionSTRINGTerminalRuleCall_4_1_0(), "description"); 
+                    			newLeafNode(lv_description_9_0, grammarAccess.getLinkAccess().getDescriptionSTRINGTerminalRuleCall_4_1_0()); 
                     		
 
                     	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getLinkRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
+                    	            current = createModelElement(grammarAccess.getLinkRule());
                     	        }
-                    	        try {
-                    	       		set(
-                    	       			current, 
-                    	       			"description",
-                    	        		lv_description_9_0, 
-                    	        		"STRING", 
-                    	        		lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"description",
+                            		lv_description_9_0, 
+                            		"org.eclipse.xtext.common.Terminals.STRING");
                     	    
 
                     }
@@ -1539,9 +1471,7 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -1552,20 +1482,29 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleLink
+    // $ANTLR end "ruleLink"
 
 
-    // $ANTLR start ruleNodeType
-    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:737:1: ruleNodeType returns [Enumerator current=null] : ( ( 'R' ) | ( 'M' ) | ( 'B' ) | ( 'X' ) | ( 'C' ) | ( 'D' ) | ( 'P' ) | ( '?' ) ) ;
+    // $ANTLR start "ruleNodeType"
+    // InternalProblem.g:606:1: ruleNodeType returns [Enumerator current=null] : ( (enumLiteral_0= 'R' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) | (enumLiteral_3= 'X' ) | (enumLiteral_4= 'C' ) | (enumLiteral_5= 'D' ) | (enumLiteral_6= 'P' ) | (enumLiteral_7= '?' ) ) ;
     public final Enumerator ruleNodeType() throws RecognitionException {
         Enumerator current = null;
 
-         setCurrentLookahead(); resetLookahead(); 
+        Token enumLiteral_0=null;
+        Token enumLiteral_1=null;
+        Token enumLiteral_2=null;
+        Token enumLiteral_3=null;
+        Token enumLiteral_4=null;
+        Token enumLiteral_5=null;
+        Token enumLiteral_6=null;
+        Token enumLiteral_7=null;
+
+         enterRule(); 
         try {
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:741:6: ( ( ( 'R' ) | ( 'M' ) | ( 'B' ) | ( 'X' ) | ( 'C' ) | ( 'D' ) | ( 'P' ) | ( '?' ) ) )
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:742:1: ( ( 'R' ) | ( 'M' ) | ( 'B' ) | ( 'X' ) | ( 'C' ) | ( 'D' ) | ( 'P' ) | ( '?' ) )
+            // InternalProblem.g:608:28: ( ( (enumLiteral_0= 'R' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) | (enumLiteral_3= 'X' ) | (enumLiteral_4= 'C' ) | (enumLiteral_5= 'D' ) | (enumLiteral_6= 'P' ) | (enumLiteral_7= '?' ) ) )
+            // InternalProblem.g:609:1: ( (enumLiteral_0= 'R' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) | (enumLiteral_3= 'X' ) | (enumLiteral_4= 'C' ) | (enumLiteral_5= 'D' ) | (enumLiteral_6= 'P' ) | (enumLiteral_7= '?' ) )
             {
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:742:1: ( ( 'R' ) | ( 'M' ) | ( 'B' ) | ( 'X' ) | ( 'C' ) | ( 'D' ) | ( 'P' ) | ( '?' ) )
+            // InternalProblem.g:609:1: ( (enumLiteral_0= 'R' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) | (enumLiteral_3= 'X' ) | (enumLiteral_4= 'C' ) | (enumLiteral_5= 'D' ) | (enumLiteral_6= 'P' ) | (enumLiteral_7= '?' ) )
             int alt18=8;
             switch ( input.LA(1) ) {
             case 22:
@@ -1610,22 +1549,22 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("742:1: ( ( 'R' ) | ( 'M' ) | ( 'B' ) | ( 'X' ) | ( 'C' ) | ( 'D' ) | ( 'P' ) | ( '?' ) )", 18, 0, input);
+                    new NoViableAltException("", 18, 0, input);
 
                 throw nvae;
             }
 
             switch (alt18) {
                 case 1 :
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:742:2: ( 'R' )
+                    // InternalProblem.g:609:2: (enumLiteral_0= 'R' )
                     {
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:742:2: ( 'R' )
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:742:4: 'R'
+                    // InternalProblem.g:609:2: (enumLiteral_0= 'R' )
+                    // InternalProblem.g:609:4: enumLiteral_0= 'R'
                     {
-                    match(input,22,FOLLOW_22_in_ruleNodeType1091); 
+                    enumLiteral_0=(Token)match(input,22,FOLLOW_2); 
 
                             current = grammarAccess.getNodeTypeAccess().getREQUIREMENTEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getNodeTypeAccess().getREQUIREMENTEnumLiteralDeclaration_0(), null); 
+                            newLeafNode(enumLiteral_0, grammarAccess.getNodeTypeAccess().getREQUIREMENTEnumLiteralDeclaration_0()); 
                         
 
                     }
@@ -1634,15 +1573,15 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:748:6: ( 'M' )
+                    // InternalProblem.g:615:6: (enumLiteral_1= 'M' )
                     {
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:748:6: ( 'M' )
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:748:8: 'M'
+                    // InternalProblem.g:615:6: (enumLiteral_1= 'M' )
+                    // InternalProblem.g:615:8: enumLiteral_1= 'M'
                     {
-                    match(input,23,FOLLOW_23_in_ruleNodeType1106); 
+                    enumLiteral_1=(Token)match(input,23,FOLLOW_2); 
 
                             current = grammarAccess.getNodeTypeAccess().getMACHINEEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getNodeTypeAccess().getMACHINEEnumLiteralDeclaration_1(), null); 
+                            newLeafNode(enumLiteral_1, grammarAccess.getNodeTypeAccess().getMACHINEEnumLiteralDeclaration_1()); 
                         
 
                     }
@@ -1651,15 +1590,15 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:754:6: ( 'B' )
+                    // InternalProblem.g:621:6: (enumLiteral_2= 'B' )
                     {
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:754:6: ( 'B' )
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:754:8: 'B'
+                    // InternalProblem.g:621:6: (enumLiteral_2= 'B' )
+                    // InternalProblem.g:621:8: enumLiteral_2= 'B'
                     {
-                    match(input,24,FOLLOW_24_in_ruleNodeType1121); 
+                    enumLiteral_2=(Token)match(input,24,FOLLOW_2); 
 
                             current = grammarAccess.getNodeTypeAccess().getBIDDABLEEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getNodeTypeAccess().getBIDDABLEEnumLiteralDeclaration_2(), null); 
+                            newLeafNode(enumLiteral_2, grammarAccess.getNodeTypeAccess().getBIDDABLEEnumLiteralDeclaration_2()); 
                         
 
                     }
@@ -1668,15 +1607,15 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:760:6: ( 'X' )
+                    // InternalProblem.g:627:6: (enumLiteral_3= 'X' )
                     {
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:760:6: ( 'X' )
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:760:8: 'X'
+                    // InternalProblem.g:627:6: (enumLiteral_3= 'X' )
+                    // InternalProblem.g:627:8: enumLiteral_3= 'X'
                     {
-                    match(input,25,FOLLOW_25_in_ruleNodeType1136); 
+                    enumLiteral_3=(Token)match(input,25,FOLLOW_2); 
 
                             current = grammarAccess.getNodeTypeAccess().getLEXICALEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getNodeTypeAccess().getLEXICALEnumLiteralDeclaration_3(), null); 
+                            newLeafNode(enumLiteral_3, grammarAccess.getNodeTypeAccess().getLEXICALEnumLiteralDeclaration_3()); 
                         
 
                     }
@@ -1685,15 +1624,15 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:766:6: ( 'C' )
+                    // InternalProblem.g:633:6: (enumLiteral_4= 'C' )
                     {
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:766:6: ( 'C' )
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:766:8: 'C'
+                    // InternalProblem.g:633:6: (enumLiteral_4= 'C' )
+                    // InternalProblem.g:633:8: enumLiteral_4= 'C'
                     {
-                    match(input,26,FOLLOW_26_in_ruleNodeType1151); 
+                    enumLiteral_4=(Token)match(input,26,FOLLOW_2); 
 
                             current = grammarAccess.getNodeTypeAccess().getCAUSALEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getNodeTypeAccess().getCAUSALEnumLiteralDeclaration_4(), null); 
+                            newLeafNode(enumLiteral_4, grammarAccess.getNodeTypeAccess().getCAUSALEnumLiteralDeclaration_4()); 
                         
 
                     }
@@ -1702,15 +1641,15 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:772:6: ( 'D' )
+                    // InternalProblem.g:639:6: (enumLiteral_5= 'D' )
                     {
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:772:6: ( 'D' )
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:772:8: 'D'
+                    // InternalProblem.g:639:6: (enumLiteral_5= 'D' )
+                    // InternalProblem.g:639:8: enumLiteral_5= 'D'
                     {
-                    match(input,27,FOLLOW_27_in_ruleNodeType1166); 
+                    enumLiteral_5=(Token)match(input,27,FOLLOW_2); 
 
                             current = grammarAccess.getNodeTypeAccess().getDESIGNEDEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getNodeTypeAccess().getDESIGNEDEnumLiteralDeclaration_5(), null); 
+                            newLeafNode(enumLiteral_5, grammarAccess.getNodeTypeAccess().getDESIGNEDEnumLiteralDeclaration_5()); 
                         
 
                     }
@@ -1719,15 +1658,15 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:778:6: ( 'P' )
+                    // InternalProblem.g:645:6: (enumLiteral_6= 'P' )
                     {
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:778:6: ( 'P' )
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:778:8: 'P'
+                    // InternalProblem.g:645:6: (enumLiteral_6= 'P' )
+                    // InternalProblem.g:645:8: enumLiteral_6= 'P'
                     {
-                    match(input,28,FOLLOW_28_in_ruleNodeType1181); 
+                    enumLiteral_6=(Token)match(input,28,FOLLOW_2); 
 
                             current = grammarAccess.getNodeTypeAccess().getPHYSICALEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getNodeTypeAccess().getPHYSICALEnumLiteralDeclaration_6(), null); 
+                            newLeafNode(enumLiteral_6, grammarAccess.getNodeTypeAccess().getPHYSICALEnumLiteralDeclaration_6()); 
                         
 
                     }
@@ -1736,15 +1675,15 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:784:6: ( '?' )
+                    // InternalProblem.g:651:6: (enumLiteral_7= '?' )
                     {
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:784:6: ( '?' )
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:784:8: '?'
+                    // InternalProblem.g:651:6: (enumLiteral_7= '?' )
+                    // InternalProblem.g:651:8: enumLiteral_7= '?'
                     {
-                    match(input,29,FOLLOW_29_in_ruleNodeType1196); 
+                    enumLiteral_7=(Token)match(input,29,FOLLOW_2); 
 
                             current = grammarAccess.getNodeTypeAccess().getCONCERNEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getNodeTypeAccess().getCONCERNEnumLiteralDeclaration_7(), null); 
+                            newLeafNode(enumLiteral_7, grammarAccess.getNodeTypeAccess().getCONCERNEnumLiteralDeclaration_7()); 
                         
 
                     }
@@ -1758,9 +1697,7 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -1771,20 +1708,24 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleNodeType
+    // $ANTLR end "ruleNodeType"
 
 
-    // $ANTLR start rulePhenomenonType
-    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:794:1: rulePhenomenonType returns [Enumerator current=null] : ( ( 'phenomenon' ) | ( 'event' ) | ( 'state' ) ) ;
+    // $ANTLR start "rulePhenomenonType"
+    // InternalProblem.g:661:1: rulePhenomenonType returns [Enumerator current=null] : ( (enumLiteral_0= 'phenomenon' ) | (enumLiteral_1= 'event' ) | (enumLiteral_2= 'state' ) ) ;
     public final Enumerator rulePhenomenonType() throws RecognitionException {
         Enumerator current = null;
 
-         setCurrentLookahead(); resetLookahead(); 
+        Token enumLiteral_0=null;
+        Token enumLiteral_1=null;
+        Token enumLiteral_2=null;
+
+         enterRule(); 
         try {
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:798:6: ( ( ( 'phenomenon' ) | ( 'event' ) | ( 'state' ) ) )
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:799:1: ( ( 'phenomenon' ) | ( 'event' ) | ( 'state' ) )
+            // InternalProblem.g:663:28: ( ( (enumLiteral_0= 'phenomenon' ) | (enumLiteral_1= 'event' ) | (enumLiteral_2= 'state' ) ) )
+            // InternalProblem.g:664:1: ( (enumLiteral_0= 'phenomenon' ) | (enumLiteral_1= 'event' ) | (enumLiteral_2= 'state' ) )
             {
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:799:1: ( ( 'phenomenon' ) | ( 'event' ) | ( 'state' ) )
+            // InternalProblem.g:664:1: ( (enumLiteral_0= 'phenomenon' ) | (enumLiteral_1= 'event' ) | (enumLiteral_2= 'state' ) )
             int alt19=3;
             switch ( input.LA(1) ) {
             case 30:
@@ -1804,22 +1745,22 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("799:1: ( ( 'phenomenon' ) | ( 'event' ) | ( 'state' ) )", 19, 0, input);
+                    new NoViableAltException("", 19, 0, input);
 
                 throw nvae;
             }
 
             switch (alt19) {
                 case 1 :
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:799:2: ( 'phenomenon' )
+                    // InternalProblem.g:664:2: (enumLiteral_0= 'phenomenon' )
                     {
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:799:2: ( 'phenomenon' )
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:799:4: 'phenomenon'
+                    // InternalProblem.g:664:2: (enumLiteral_0= 'phenomenon' )
+                    // InternalProblem.g:664:4: enumLiteral_0= 'phenomenon'
                     {
-                    match(input,30,FOLLOW_30_in_rulePhenomenonType1239); 
+                    enumLiteral_0=(Token)match(input,30,FOLLOW_2); 
 
                             current = grammarAccess.getPhenomenonTypeAccess().getUNSPECIFIEDEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getPhenomenonTypeAccess().getUNSPECIFIEDEnumLiteralDeclaration_0(), null); 
+                            newLeafNode(enumLiteral_0, grammarAccess.getPhenomenonTypeAccess().getUNSPECIFIEDEnumLiteralDeclaration_0()); 
                         
 
                     }
@@ -1828,15 +1769,15 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:805:6: ( 'event' )
+                    // InternalProblem.g:670:6: (enumLiteral_1= 'event' )
                     {
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:805:6: ( 'event' )
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:805:8: 'event'
+                    // InternalProblem.g:670:6: (enumLiteral_1= 'event' )
+                    // InternalProblem.g:670:8: enumLiteral_1= 'event'
                     {
-                    match(input,31,FOLLOW_31_in_rulePhenomenonType1254); 
+                    enumLiteral_1=(Token)match(input,31,FOLLOW_2); 
 
                             current = grammarAccess.getPhenomenonTypeAccess().getEVENTEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getPhenomenonTypeAccess().getEVENTEnumLiteralDeclaration_1(), null); 
+                            newLeafNode(enumLiteral_1, grammarAccess.getPhenomenonTypeAccess().getEVENTEnumLiteralDeclaration_1()); 
                         
 
                     }
@@ -1845,15 +1786,15 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:811:6: ( 'state' )
+                    // InternalProblem.g:676:6: (enumLiteral_2= 'state' )
                     {
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:811:6: ( 'state' )
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:811:8: 'state'
+                    // InternalProblem.g:676:6: (enumLiteral_2= 'state' )
+                    // InternalProblem.g:676:8: enumLiteral_2= 'state'
                     {
-                    match(input,32,FOLLOW_32_in_rulePhenomenonType1269); 
+                    enumLiteral_2=(Token)match(input,32,FOLLOW_2); 
 
                             current = grammarAccess.getPhenomenonTypeAccess().getSTATEEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getPhenomenonTypeAccess().getSTATEEnumLiteralDeclaration_2(), null); 
+                            newLeafNode(enumLiteral_2, grammarAccess.getPhenomenonTypeAccess().getSTATEEnumLiteralDeclaration_2()); 
                         
 
                     }
@@ -1867,9 +1808,7 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -1880,20 +1819,26 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end rulePhenomenonType
+    // $ANTLR end "rulePhenomenonType"
 
 
-    // $ANTLR start ruleLinkType
-    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:821:1: ruleLinkType returns [Enumerator current=null] : ( ( '--' ) | ( '~~' ) | ( '<~' ) | ( '->' ) | ( '~>' ) ) ;
+    // $ANTLR start "ruleLinkType"
+    // InternalProblem.g:686:1: ruleLinkType returns [Enumerator current=null] : ( (enumLiteral_0= '--' ) | (enumLiteral_1= '~~' ) | (enumLiteral_2= '<~' ) | (enumLiteral_3= '->' ) | (enumLiteral_4= '~>' ) ) ;
     public final Enumerator ruleLinkType() throws RecognitionException {
         Enumerator current = null;
 
-         setCurrentLookahead(); resetLookahead(); 
+        Token enumLiteral_0=null;
+        Token enumLiteral_1=null;
+        Token enumLiteral_2=null;
+        Token enumLiteral_3=null;
+        Token enumLiteral_4=null;
+
+         enterRule(); 
         try {
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:825:6: ( ( ( '--' ) | ( '~~' ) | ( '<~' ) | ( '->' ) | ( '~>' ) ) )
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:826:1: ( ( '--' ) | ( '~~' ) | ( '<~' ) | ( '->' ) | ( '~>' ) )
+            // InternalProblem.g:688:28: ( ( (enumLiteral_0= '--' ) | (enumLiteral_1= '~~' ) | (enumLiteral_2= '<~' ) | (enumLiteral_3= '->' ) | (enumLiteral_4= '~>' ) ) )
+            // InternalProblem.g:689:1: ( (enumLiteral_0= '--' ) | (enumLiteral_1= '~~' ) | (enumLiteral_2= '<~' ) | (enumLiteral_3= '->' ) | (enumLiteral_4= '~>' ) )
             {
-            // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:826:1: ( ( '--' ) | ( '~~' ) | ( '<~' ) | ( '->' ) | ( '~>' ) )
+            // InternalProblem.g:689:1: ( (enumLiteral_0= '--' ) | (enumLiteral_1= '~~' ) | (enumLiteral_2= '<~' ) | (enumLiteral_3= '->' ) | (enumLiteral_4= '~>' ) )
             int alt20=5;
             switch ( input.LA(1) ) {
             case 33:
@@ -1923,22 +1868,22 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("826:1: ( ( '--' ) | ( '~~' ) | ( '<~' ) | ( '->' ) | ( '~>' ) )", 20, 0, input);
+                    new NoViableAltException("", 20, 0, input);
 
                 throw nvae;
             }
 
             switch (alt20) {
                 case 1 :
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:826:2: ( '--' )
+                    // InternalProblem.g:689:2: (enumLiteral_0= '--' )
                     {
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:826:2: ( '--' )
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:826:4: '--'
+                    // InternalProblem.g:689:2: (enumLiteral_0= '--' )
+                    // InternalProblem.g:689:4: enumLiteral_0= '--'
                     {
-                    match(input,33,FOLLOW_33_in_ruleLinkType1312); 
+                    enumLiteral_0=(Token)match(input,33,FOLLOW_2); 
 
                             current = grammarAccess.getLinkTypeAccess().getINTERFACEEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getLinkTypeAccess().getINTERFACEEnumLiteralDeclaration_0(), null); 
+                            newLeafNode(enumLiteral_0, grammarAccess.getLinkTypeAccess().getINTERFACEEnumLiteralDeclaration_0()); 
                         
 
                     }
@@ -1947,15 +1892,15 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:832:6: ( '~~' )
+                    // InternalProblem.g:695:6: (enumLiteral_1= '~~' )
                     {
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:832:6: ( '~~' )
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:832:8: '~~'
+                    // InternalProblem.g:695:6: (enumLiteral_1= '~~' )
+                    // InternalProblem.g:695:8: enumLiteral_1= '~~'
                     {
-                    match(input,34,FOLLOW_34_in_ruleLinkType1327); 
+                    enumLiteral_1=(Token)match(input,34,FOLLOW_2); 
 
                             current = grammarAccess.getLinkTypeAccess().getREFERENCEEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getLinkTypeAccess().getREFERENCEEnumLiteralDeclaration_1(), null); 
+                            newLeafNode(enumLiteral_1, grammarAccess.getLinkTypeAccess().getREFERENCEEnumLiteralDeclaration_1()); 
                         
 
                     }
@@ -1964,15 +1909,15 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:838:6: ( '<~' )
+                    // InternalProblem.g:701:6: (enumLiteral_2= '<~' )
                     {
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:838:6: ( '<~' )
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:838:8: '<~'
+                    // InternalProblem.g:701:6: (enumLiteral_2= '<~' )
+                    // InternalProblem.g:701:8: enumLiteral_2= '<~'
                     {
-                    match(input,35,FOLLOW_35_in_ruleLinkType1342); 
+                    enumLiteral_2=(Token)match(input,35,FOLLOW_2); 
 
                             current = grammarAccess.getLinkTypeAccess().getCONSTRAINTEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getLinkTypeAccess().getCONSTRAINTEnumLiteralDeclaration_2(), null); 
+                            newLeafNode(enumLiteral_2, grammarAccess.getLinkTypeAccess().getCONSTRAINTEnumLiteralDeclaration_2()); 
                         
 
                     }
@@ -1981,15 +1926,15 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:844:6: ( '->' )
+                    // InternalProblem.g:707:6: (enumLiteral_3= '->' )
                     {
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:844:6: ( '->' )
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:844:8: '->'
+                    // InternalProblem.g:707:6: (enumLiteral_3= '->' )
+                    // InternalProblem.g:707:8: enumLiteral_3= '->'
                     {
-                    match(input,36,FOLLOW_36_in_ruleLinkType1357); 
+                    enumLiteral_3=(Token)match(input,36,FOLLOW_2); 
 
                             current = grammarAccess.getLinkTypeAccess().getCONCERNEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getLinkTypeAccess().getCONCERNEnumLiteralDeclaration_3(), null); 
+                            newLeafNode(enumLiteral_3, grammarAccess.getLinkTypeAccess().getCONCERNEnumLiteralDeclaration_3()); 
                         
 
                     }
@@ -1998,15 +1943,15 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:850:6: ( '~>' )
+                    // InternalProblem.g:713:6: (enumLiteral_4= '~>' )
                     {
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:850:6: ( '~>' )
-                    // ../problem/src-gen/uk/ac/open/parser/antlr/internal/InternalProblem.g:850:8: '~>'
+                    // InternalProblem.g:713:6: (enumLiteral_4= '~>' )
+                    // InternalProblem.g:713:8: enumLiteral_4= '~>'
                     {
-                    match(input,37,FOLLOW_37_in_ruleLinkType1372); 
+                    enumLiteral_4=(Token)match(input,37,FOLLOW_2); 
 
                             current = grammarAccess.getLinkTypeAccess().getINV_CONSTRAINTEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
-                            createLeafNode(grammarAccess.getLinkTypeAccess().getINV_CONSTRAINTEnumLiteralDeclaration_4(), null); 
+                            newLeafNode(enumLiteral_4, grammarAccess.getLinkTypeAccess().getINV_CONSTRAINTEnumLiteralDeclaration_4()); 
                         
 
                     }
@@ -2020,9 +1965,7 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
 
             }
 
-             resetLookahead(); 
-                	lastConsumedNode = currentNode;
-                
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -2033,73 +1976,31 @@ public class InternalProblemParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleLinkType
+    // $ANTLR end "ruleLinkType"
+
+    // Delegated rules
 
 
  
 
-    public static final BitSet FOLLOW_ruleProblemDiagram_in_entryRuleProblemDiagram75 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleProblemDiagram85 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_ruleProblemDiagram120 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleProblemDiagram137 = new BitSet(new long[]{0x0000000000002012L});
-    public static final BitSet FOLLOW_13_in_ruleProblemDiagram153 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleProblemDiagram171 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_ruleNode_in_ruleProblemDiagram195 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_ruleLink_in_ruleProblemDiagram222 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_ruleNode_in_entryRuleNode260 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNode270 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleNode312 = new BitSet(new long[]{0x000000003FC0C022L});
-    public static final BitSet FOLLOW_ruleNodeType_in_ruleNode338 = new BitSet(new long[]{0x000000000000C022L});
-    public static final BitSet FOLLOW_14_in_ruleNode351 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleNode370 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_15_in_ruleNode388 = new BitSet(new long[]{0x00000001C0321010L});
-    public static final BitSet FOLLOW_rulePhenomenon_in_ruleNode410 = new BitSet(new long[]{0x0000000000131000L});
-    public static final BitSet FOLLOW_16_in_ruleNode421 = new BitSet(new long[]{0x00000001C0200010L});
-    public static final BitSet FOLLOW_rulePhenomenon_in_ruleNode442 = new BitSet(new long[]{0x0000000000131000L});
-    public static final BitSet FOLLOW_ruleProblemDiagram_in_ruleNode468 = new BitSet(new long[]{0x0000000000121000L});
-    public static final BitSet FOLLOW_17_in_ruleNode485 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleNode495 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleNode513 = new BitSet(new long[]{0x0000000000121000L});
-    public static final BitSet FOLLOW_17_in_ruleNode531 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleNode541 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleNode559 = new BitSet(new long[]{0x0000000000121000L});
-    public static final BitSet FOLLOW_17_in_ruleNode577 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleNode594 = new BitSet(new long[]{0x0000000000121000L});
-    public static final BitSet FOLLOW_20_in_ruleNode612 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePhenomenon_in_entryRulePhenomenon650 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePhenomenon660 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePhenomenonType_in_rulePhenomenon706 = new BitSet(new long[]{0x0000000000200010L});
-    public static final BitSet FOLLOW_21_in_rulePhenomenon725 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulePhenomenon756 = new BitSet(new long[]{0x0000000000004022L});
-    public static final BitSet FOLLOW_14_in_rulePhenomenon773 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rulePhenomenon792 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLink_in_entryRuleLink835 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLink845 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleLink888 = new BitSet(new long[]{0x0000003E00000000L});
-    public static final BitSet FOLLOW_ruleLinkType_in_ruleLink909 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleLink927 = new BitSet(new long[]{0x000000000000C022L});
-    public static final BitSet FOLLOW_15_in_ruleLink938 = new BitSet(new long[]{0x00000001C0200010L});
-    public static final BitSet FOLLOW_rulePhenomenon_in_ruleLink959 = new BitSet(new long[]{0x0000000000110000L});
-    public static final BitSet FOLLOW_16_in_ruleLink970 = new BitSet(new long[]{0x00000001C0200010L});
-    public static final BitSet FOLLOW_rulePhenomenon_in_ruleLink991 = new BitSet(new long[]{0x0000000000110000L});
-    public static final BitSet FOLLOW_20_in_ruleLink1003 = new BitSet(new long[]{0x0000000000004022L});
-    public static final BitSet FOLLOW_14_in_ruleLink1017 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleLink1036 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_ruleNodeType1091 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_ruleNodeType1106 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_ruleNodeType1121 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_ruleNodeType1136 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_ruleNodeType1151 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_ruleNodeType1166 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_ruleNodeType1181 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_ruleNodeType1196 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rulePhenomenonType1239 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rulePhenomenonType1254 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rulePhenomenonType1269 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_ruleLinkType1312 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_ruleLinkType1327 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_ruleLinkType1342 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_ruleLinkType1357 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_ruleLinkType1372 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000002012L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x000000003FC0C022L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x000000000000C022L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x00000001C0321010L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000131000L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x00000001C0200010L});
+    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000121000L});
+    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000200010L});
+    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000004022L});
+    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000003E00000000L});
+    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000110000L});
 
 }

@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.event.eventcalculus.impl;
 
@@ -20,12 +17,12 @@ import uk.ac.open.event.eventcalculus.EventcalculusPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.DefOptionImpl#getName <em>Name</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.DefOptionImpl#getValue <em>Value</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.DefOptionImpl#getValue2 <em>Value2</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -117,6 +114,7 @@ public class DefOptionImpl extends DeclarationImpl implements DefOption
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getName()
   {
     return name;
@@ -127,6 +125,7 @@ public class DefOptionImpl extends DeclarationImpl implements DefOption
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setName(String newName)
   {
     String oldName = name;
@@ -140,6 +139,7 @@ public class DefOptionImpl extends DeclarationImpl implements DefOption
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public int getValue()
   {
     return value;
@@ -150,6 +150,7 @@ public class DefOptionImpl extends DeclarationImpl implements DefOption
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setValue(int newValue)
   {
     int oldValue = value;
@@ -163,6 +164,7 @@ public class DefOptionImpl extends DeclarationImpl implements DefOption
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getValue2()
   {
     return value2;
@@ -173,6 +175,7 @@ public class DefOptionImpl extends DeclarationImpl implements DefOption
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setValue2(String newValue2)
   {
     String oldValue2 = value2;
@@ -277,7 +280,7 @@ public class DefOptionImpl extends DeclarationImpl implements DefOption
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (name: ");
     result.append(name);
     result.append(", value: ");

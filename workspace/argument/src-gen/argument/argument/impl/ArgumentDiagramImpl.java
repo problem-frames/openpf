@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package argument.argument.impl;
 
@@ -32,12 +29,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link argument.argument.impl.ArgumentDiagramImpl#getName <em>Name</em>}</li>
  *   <li>{@link argument.argument.impl.ArgumentDiagramImpl#getNodes <em>Nodes</em>}</li>
  *   <li>{@link argument.argument.impl.ArgumentDiagramImpl#getLinks <em>Links</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -109,6 +106,7 @@ public class ArgumentDiagramImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getName()
   {
     return name;
@@ -119,6 +117,7 @@ public class ArgumentDiagramImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setName(String newName)
   {
     String oldName = name;
@@ -132,6 +131,7 @@ public class ArgumentDiagramImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EList<Argument> getNodes()
   {
     if (nodes == null)
@@ -146,6 +146,7 @@ public class ArgumentDiagramImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EList<Link> getLinks()
   {
     if (links == null)
@@ -272,7 +273,7 @@ public class ArgumentDiagramImpl extends MinimalEObjectImpl.Container implements
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (name: ");
     result.append(name);
     result.append(')');

@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package argument.argument.impl;
 
@@ -30,6 +27,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link argument.argument.impl.ArgumentImpl#getName <em>Name</em>}</li>
  *   <li>{@link argument.argument.impl.ArgumentImpl#getDescription <em>Description</em>}</li>
@@ -44,7 +42,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link argument.argument.impl.ArgumentImpl#getWarrants <em>Warrants</em>}</li>
  *   <li>{@link argument.argument.impl.ArgumentImpl#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -266,6 +263,7 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getName()
   {
     return name;
@@ -276,6 +274,7 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setName(String newName)
   {
     String oldName = name;
@@ -289,6 +288,7 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getDescription()
   {
     return description;
@@ -299,6 +299,7 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setDescription(String newDescription)
   {
     String oldDescription = description;
@@ -312,6 +313,7 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public int getRound()
   {
     return round;
@@ -322,6 +324,7 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setRound(int newRound)
   {
     int oldRound = round;
@@ -335,6 +338,7 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Argument getReplaces()
   {
     if (replaces != null && replaces.eIsProxy())
@@ -365,6 +369,7 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setReplaces(Argument newReplaces)
   {
     Argument oldReplaces = replaces;
@@ -378,6 +383,7 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Expression getExpr()
   {
     return expr;
@@ -405,6 +411,7 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setExpr(Expression newExpr)
   {
     if (newExpr != expr)
@@ -426,6 +433,7 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getForeground()
   {
     return foreground;
@@ -436,6 +444,7 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setForeground(String newForeground)
   {
     String oldForeground = foreground;
@@ -449,6 +458,7 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getBackground()
   {
     return background;
@@ -459,6 +469,7 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setBackground(String newBackground)
   {
     String oldBackground = background;
@@ -472,6 +483,7 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getShape()
   {
     return shape;
@@ -482,6 +494,7 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setShape(String newShape)
   {
     String oldShape = shape;
@@ -495,6 +508,7 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getImage()
   {
     return image;
@@ -505,6 +519,7 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setImage(String newImage)
   {
     String oldImage = image;
@@ -518,6 +533,7 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EList<Argument> getGrounds()
   {
     if (grounds == null)
@@ -532,6 +548,7 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EList<Argument> getWarrants()
   {
     if (warrants == null)
@@ -546,6 +563,7 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Argument getValue()
   {
     if (value != null && value.eIsProxy())
@@ -576,6 +594,7 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setValue(Argument newValue)
   {
     Argument oldValue = value;
@@ -795,7 +814,7 @@ public class ArgumentImpl extends TerminalExpressionImpl implements Argument
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (name: ");
     result.append(name);
     result.append(", description: ");

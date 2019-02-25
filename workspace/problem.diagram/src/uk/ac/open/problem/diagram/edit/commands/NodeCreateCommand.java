@@ -60,7 +60,7 @@ public class NodeCreateCommand extends EditElementCommand {
 		ProblemDiagram owner = (ProblemDiagram) getElementToEdit();
 		owner.getNodes().add(newElement);
 
-		ElementInitializers.getInstance().init_Node_2001(newElement);
+//		ElementInitializers.getInstance().init_Node_2001(newElement);
 
 		doConfigure(newElement, monitor, info);
 

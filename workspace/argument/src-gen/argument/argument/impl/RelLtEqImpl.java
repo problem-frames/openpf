@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package argument.argument.impl;
 
@@ -23,12 +20,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link argument.argument.impl.RelLtEqImpl#getLeft <em>Left</em>}</li>
  *   <li>{@link argument.argument.impl.RelLtEqImpl#getRel_op <em>Rel op</em>}</li>
  *   <li>{@link argument.argument.impl.RelLtEqImpl#getRight <em>Right</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -100,6 +97,7 @@ public class RelLtEqImpl extends RelationalImpl implements RelLtEq
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Addition getLeft()
   {
     return left;
@@ -127,6 +125,7 @@ public class RelLtEqImpl extends RelationalImpl implements RelLtEq
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setLeft(Addition newLeft)
   {
     if (newLeft != left)
@@ -148,6 +147,7 @@ public class RelLtEqImpl extends RelationalImpl implements RelLtEq
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getRel_op()
   {
     return rel_op;
@@ -158,6 +158,7 @@ public class RelLtEqImpl extends RelationalImpl implements RelLtEq
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setRel_op(String newRel_op)
   {
     String oldRel_op = rel_op;
@@ -171,6 +172,7 @@ public class RelLtEqImpl extends RelationalImpl implements RelLtEq
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Addition getRight()
   {
     return right;
@@ -198,6 +200,7 @@ public class RelLtEqImpl extends RelationalImpl implements RelLtEq
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setRight(Addition newRight)
   {
     if (newRight != right)
@@ -328,7 +331,7 @@ public class RelLtEqImpl extends RelationalImpl implements RelLtEq
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (rel_op: ");
     result.append(rel_op);
     result.append(')');

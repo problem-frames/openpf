@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package argument.argument.impl;
 
@@ -333,7 +330,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
 
   /**
    * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-   * 
+   *
    * <p>This method is used to initialize {@link ArgumentPackage#eINSTANCE} when that field is accessed.
    * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
    * <!-- begin-user-doc -->
@@ -348,7 +345,8 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
     if (isInited) return (ArgumentPackage)EPackage.Registry.INSTANCE.getEPackage(ArgumentPackage.eNS_URI);
 
     // Obtain or create and register package
-    ArgumentPackageImpl theArgumentPackage = (ArgumentPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ArgumentPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ArgumentPackageImpl());
+    Object registeredArgumentPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+    ArgumentPackageImpl theArgumentPackage = registeredArgumentPackage instanceof ArgumentPackageImpl ? (ArgumentPackageImpl)registeredArgumentPackage : new ArgumentPackageImpl();
 
     isInited = true;
 
@@ -361,7 +359,6 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
     // Mark meta-data to indicate it can't be changed
     theArgumentPackage.freeze();
 
-  
     // Update the registry and return the package
     EPackage.Registry.INSTANCE.put(ArgumentPackage.eNS_URI, theArgumentPackage);
     return theArgumentPackage;
@@ -372,6 +369,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getArgumentDiagram()
   {
     return argumentDiagramEClass;
@@ -382,6 +380,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getArgumentDiagram_Name()
   {
     return (EAttribute)argumentDiagramEClass.getEStructuralFeatures().get(0);
@@ -392,6 +391,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getArgumentDiagram_Nodes()
   {
     return (EReference)argumentDiagramEClass.getEStructuralFeatures().get(1);
@@ -402,6 +402,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getArgumentDiagram_Links()
   {
     return (EReference)argumentDiagramEClass.getEStructuralFeatures().get(2);
@@ -412,6 +413,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getLink()
   {
     return linkEClass;
@@ -422,6 +424,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getLink_From()
   {
     return (EReference)linkEClass.getEStructuralFeatures().get(0);
@@ -432,6 +435,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getLink_To()
   {
     return (EReference)linkEClass.getEStructuralFeatures().get(1);
@@ -442,6 +446,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getLink_Generated()
   {
     return (EAttribute)linkEClass.getEStructuralFeatures().get(2);
@@ -452,6 +457,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getRebuts()
   {
     return rebutsEClass;
@@ -462,6 +468,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getRebuts_Denies()
   {
     return (EReference)rebutsEClass.getEStructuralFeatures().get(0);
@@ -472,6 +479,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getMitigates()
   {
     return mitigatesEClass;
@@ -482,6 +490,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getMitigates_Restores()
   {
     return (EReference)mitigatesEClass.getEStructuralFeatures().get(0);
@@ -492,6 +501,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getArgument()
   {
     return argumentEClass;
@@ -502,6 +512,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getArgument_Name()
   {
     return (EAttribute)argumentEClass.getEStructuralFeatures().get(0);
@@ -512,6 +523,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getArgument_Description()
   {
     return (EAttribute)argumentEClass.getEStructuralFeatures().get(1);
@@ -522,6 +534,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getArgument_Round()
   {
     return (EAttribute)argumentEClass.getEStructuralFeatures().get(2);
@@ -532,6 +545,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getArgument_Replaces()
   {
     return (EReference)argumentEClass.getEStructuralFeatures().get(3);
@@ -542,6 +556,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getArgument_Expr()
   {
     return (EReference)argumentEClass.getEStructuralFeatures().get(4);
@@ -552,6 +567,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getArgument_Foreground()
   {
     return (EAttribute)argumentEClass.getEStructuralFeatures().get(5);
@@ -562,6 +578,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getArgument_Background()
   {
     return (EAttribute)argumentEClass.getEStructuralFeatures().get(6);
@@ -572,6 +589,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getArgument_Shape()
   {
     return (EAttribute)argumentEClass.getEStructuralFeatures().get(7);
@@ -582,6 +600,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getArgument_Image()
   {
     return (EAttribute)argumentEClass.getEStructuralFeatures().get(8);
@@ -592,6 +611,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getArgument_Grounds()
   {
     return (EReference)argumentEClass.getEStructuralFeatures().get(9);
@@ -602,6 +622,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getArgument_Warrants()
   {
     return (EReference)argumentEClass.getEStructuralFeatures().get(10);
@@ -612,6 +633,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getArgument_Value()
   {
     return (EReference)argumentEClass.getEStructuralFeatures().get(11);
@@ -622,6 +644,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getExpression()
   {
     return expressionEClass;
@@ -632,6 +655,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getExpression_Assign()
   {
     return (EReference)expressionEClass.getEStructuralFeatures().get(0);
@@ -642,6 +666,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getAssignmentOp()
   {
     return assignmentOpEClass;
@@ -652,6 +677,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getOrExp()
   {
     return orExpEClass;
@@ -662,6 +688,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getAndExp()
   {
     return andExpEClass;
@@ -672,6 +699,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getRelational()
   {
     return relationalEClass;
@@ -682,6 +710,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getAddition()
   {
     return additionEClass;
@@ -692,6 +721,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getMultiplication()
   {
     return multiplicationEClass;
@@ -702,6 +732,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getPower()
   {
     return powerEClass;
@@ -712,6 +743,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getUnaryExpr()
   {
     return unaryExprEClass;
@@ -722,6 +754,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getUnaryExpr_Uop()
   {
     return (EAttribute)unaryExprEClass.getEStructuralFeatures().get(0);
@@ -732,6 +765,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getUnaryExpr_Right()
   {
     return (EReference)unaryExprEClass.getEStructuralFeatures().get(1);
@@ -742,6 +776,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getPrePrimaryExpr()
   {
     return prePrimaryExprEClass;
@@ -752,6 +787,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getPrePrimaryExpr_N()
   {
     return (EAttribute)prePrimaryExprEClass.getEStructuralFeatures().get(0);
@@ -762,6 +798,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getTerminalExpression()
   {
     return terminalExpressionEClass;
@@ -772,6 +809,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getAssignPlus()
   {
     return assignPlusEClass;
@@ -782,6 +820,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getAssignPlus_Left()
   {
     return (EReference)assignPlusEClass.getEStructuralFeatures().get(0);
@@ -792,6 +831,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getAssignPlus_Aop()
   {
     return (EAttribute)assignPlusEClass.getEStructuralFeatures().get(1);
@@ -802,6 +842,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getAssignPlus_Right()
   {
     return (EReference)assignPlusEClass.getEStructuralFeatures().get(2);
@@ -812,6 +853,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getAssignMin()
   {
     return assignMinEClass;
@@ -822,6 +864,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getAssignMin_Left()
   {
     return (EReference)assignMinEClass.getEStructuralFeatures().get(0);
@@ -832,6 +875,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getAssignMin_Aop()
   {
     return (EAttribute)assignMinEClass.getEStructuralFeatures().get(1);
@@ -842,6 +886,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getAssignMin_Right()
   {
     return (EReference)assignMinEClass.getEStructuralFeatures().get(2);
@@ -852,6 +897,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getOr()
   {
     return orEClass;
@@ -862,6 +908,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getOr_Left()
   {
     return (EReference)orEClass.getEStructuralFeatures().get(0);
@@ -872,6 +919,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getOr_Or_op()
   {
     return (EAttribute)orEClass.getEStructuralFeatures().get(1);
@@ -882,6 +930,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getOr_Right()
   {
     return (EReference)orEClass.getEStructuralFeatures().get(2);
@@ -892,6 +941,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getAnd()
   {
     return andEClass;
@@ -902,6 +952,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getAnd_Left()
   {
     return (EReference)andEClass.getEStructuralFeatures().get(0);
@@ -912,6 +963,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getAnd_And_op()
   {
     return (EAttribute)andEClass.getEStructuralFeatures().get(1);
@@ -922,6 +974,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getAnd_Right()
   {
     return (EReference)andEClass.getEStructuralFeatures().get(2);
@@ -932,6 +985,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getRelNotEq()
   {
     return relNotEqEClass;
@@ -942,6 +996,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getRelNotEq_Left()
   {
     return (EReference)relNotEqEClass.getEStructuralFeatures().get(0);
@@ -952,6 +1007,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getRelNotEq_Rel_op()
   {
     return (EAttribute)relNotEqEClass.getEStructuralFeatures().get(1);
@@ -962,6 +1018,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getRelNotEq_Right()
   {
     return (EReference)relNotEqEClass.getEStructuralFeatures().get(2);
@@ -972,6 +1029,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getRelEqEq()
   {
     return relEqEqEClass;
@@ -982,6 +1040,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getRelEqEq_Left()
   {
     return (EReference)relEqEqEClass.getEStructuralFeatures().get(0);
@@ -992,6 +1051,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getRelEqEq_Rel_op()
   {
     return (EAttribute)relEqEqEClass.getEStructuralFeatures().get(1);
@@ -1002,6 +1062,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getRelEqEq_Right()
   {
     return (EReference)relEqEqEClass.getEStructuralFeatures().get(2);
@@ -1012,6 +1073,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getRelLtEq()
   {
     return relLtEqEClass;
@@ -1022,6 +1084,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getRelLtEq_Left()
   {
     return (EReference)relLtEqEClass.getEStructuralFeatures().get(0);
@@ -1032,6 +1095,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getRelLtEq_Rel_op()
   {
     return (EAttribute)relLtEqEClass.getEStructuralFeatures().get(1);
@@ -1042,6 +1106,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getRelLtEq_Right()
   {
     return (EReference)relLtEqEClass.getEStructuralFeatures().get(2);
@@ -1052,6 +1117,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getRelGtEq()
   {
     return relGtEqEClass;
@@ -1062,6 +1128,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getRelGtEq_Left()
   {
     return (EReference)relGtEqEClass.getEStructuralFeatures().get(0);
@@ -1072,6 +1139,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getRelGtEq_Rel_op()
   {
     return (EAttribute)relGtEqEClass.getEStructuralFeatures().get(1);
@@ -1082,6 +1150,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getRelGtEq_Right()
   {
     return (EReference)relGtEqEClass.getEStructuralFeatures().get(2);
@@ -1092,6 +1161,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getRelEq()
   {
     return relEqEClass;
@@ -1102,6 +1172,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getRelEq_Left()
   {
     return (EReference)relEqEClass.getEStructuralFeatures().get(0);
@@ -1112,6 +1183,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getRelEq_Rel_op()
   {
     return (EAttribute)relEqEClass.getEStructuralFeatures().get(1);
@@ -1122,6 +1194,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getRelEq_Right()
   {
     return (EReference)relEqEClass.getEStructuralFeatures().get(2);
@@ -1132,6 +1205,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getRelLt()
   {
     return relLtEClass;
@@ -1142,6 +1216,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getRelLt_Left()
   {
     return (EReference)relLtEClass.getEStructuralFeatures().get(0);
@@ -1152,6 +1227,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getRelLt_Rel_op()
   {
     return (EAttribute)relLtEClass.getEStructuralFeatures().get(1);
@@ -1162,6 +1238,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getRelLt_Right()
   {
     return (EReference)relLtEClass.getEStructuralFeatures().get(2);
@@ -1172,6 +1249,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getRelGt()
   {
     return relGtEClass;
@@ -1182,6 +1260,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getRelGt_Left()
   {
     return (EReference)relGtEClass.getEStructuralFeatures().get(0);
@@ -1192,6 +1271,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getRelGt_Rel_op()
   {
     return (EAttribute)relGtEClass.getEStructuralFeatures().get(1);
@@ -1202,6 +1282,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getRelGt_Right()
   {
     return (EReference)relGtEClass.getEStructuralFeatures().get(2);
@@ -1212,6 +1293,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getPlus()
   {
     return plusEClass;
@@ -1222,6 +1304,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getPlus_Left()
   {
     return (EReference)plusEClass.getEStructuralFeatures().get(0);
@@ -1232,6 +1315,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getPlus_Add_op()
   {
     return (EAttribute)plusEClass.getEStructuralFeatures().get(1);
@@ -1242,6 +1326,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getPlus_Right()
   {
     return (EReference)plusEClass.getEStructuralFeatures().get(2);
@@ -1252,6 +1337,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getMinus()
   {
     return minusEClass;
@@ -1262,6 +1348,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getMinus_Left()
   {
     return (EReference)minusEClass.getEStructuralFeatures().get(0);
@@ -1272,6 +1359,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getMinus_Add_op()
   {
     return (EAttribute)minusEClass.getEStructuralFeatures().get(1);
@@ -1282,6 +1370,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getMinus_Right()
   {
     return (EReference)minusEClass.getEStructuralFeatures().get(2);
@@ -1292,6 +1381,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getMulti()
   {
     return multiEClass;
@@ -1302,6 +1392,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getMulti_Left()
   {
     return (EReference)multiEClass.getEStructuralFeatures().get(0);
@@ -1312,6 +1403,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getMulti_Mul_op()
   {
     return (EAttribute)multiEClass.getEStructuralFeatures().get(1);
@@ -1322,6 +1414,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getMulti_Right()
   {
     return (EReference)multiEClass.getEStructuralFeatures().get(2);
@@ -1332,6 +1425,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getDiv()
   {
     return divEClass;
@@ -1342,6 +1436,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getDiv_Left()
   {
     return (EReference)divEClass.getEStructuralFeatures().get(0);
@@ -1352,6 +1447,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getDiv_Mul_op()
   {
     return (EAttribute)divEClass.getEStructuralFeatures().get(1);
@@ -1362,6 +1458,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getDiv_Right()
   {
     return (EReference)divEClass.getEStructuralFeatures().get(2);
@@ -1372,6 +1469,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getPow()
   {
     return powEClass;
@@ -1382,6 +1480,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getPow_Left()
   {
     return (EReference)powEClass.getEStructuralFeatures().get(0);
@@ -1392,6 +1491,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getPow_Pow_op()
   {
     return (EAttribute)powEClass.getEStructuralFeatures().get(1);
@@ -1402,6 +1502,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getPow_Right()
   {
     return (EReference)powEClass.getEStructuralFeatures().get(2);
@@ -1412,6 +1513,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getIntLiteral()
   {
     return intLiteralEClass;
@@ -1422,6 +1524,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getIntLiteral_Value()
   {
     return (EAttribute)intLiteralEClass.getEStructuralFeatures().get(0);
@@ -1432,6 +1535,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getBooleanLiteral()
   {
     return booleanLiteralEClass;
@@ -1442,6 +1546,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getBooleanLiteral_Value()
   {
     return (EAttribute)booleanLiteralEClass.getEStructuralFeatures().get(0);
@@ -1452,6 +1557,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EEnum getUnaryOp()
   {
     return unaryOpEEnum;
@@ -1462,6 +1568,7 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public ArgumentFactory getArgumentFactory()
   {
     return (ArgumentFactory)getEFactoryInstance();
@@ -1761,12 +1868,12 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
     initEReference(getAssignMin_Right(), this.getOrExp(), null, "right", null, 0, 1, AssignMin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(orEClass, Or.class, "Or", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getOr_Left(), this.getAndExp(), null, "left", null, 0, 1, Or.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getOr_Left(), this.getOrExp(), null, "left", null, 0, 1, Or.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getOr_Or_op(), ecorePackage.getEString(), "or_op", null, 0, 1, Or.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getOr_Right(), this.getAndExp(), null, "right", null, 0, 1, Or.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(andEClass, And.class, "And", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getAnd_Left(), this.getRelational(), null, "left", null, 0, 1, And.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAnd_Left(), this.getAndExp(), null, "left", null, 0, 1, And.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getAnd_And_op(), ecorePackage.getEString(), "and_op", null, 0, 1, And.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getAnd_Right(), this.getRelational(), null, "right", null, 0, 1, And.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1806,27 +1913,27 @@ public class ArgumentPackageImpl extends EPackageImpl implements ArgumentPackage
     initEReference(getRelGt_Right(), this.getAddition(), null, "right", null, 0, 1, RelGt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(plusEClass, Plus.class, "Plus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getPlus_Left(), this.getMultiplication(), null, "left", null, 0, 1, Plus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPlus_Left(), this.getAddition(), null, "left", null, 0, 1, Plus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getPlus_Add_op(), ecorePackage.getEString(), "add_op", null, 0, 1, Plus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPlus_Right(), this.getMultiplication(), null, "right", null, 0, 1, Plus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(minusEClass, Minus.class, "Minus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getMinus_Left(), this.getMultiplication(), null, "left", null, 0, 1, Minus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMinus_Left(), this.getAddition(), null, "left", null, 0, 1, Minus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMinus_Add_op(), ecorePackage.getEString(), "add_op", null, 0, 1, Minus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getMinus_Right(), this.getMultiplication(), null, "right", null, 0, 1, Minus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(multiEClass, Multi.class, "Multi", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getMulti_Left(), this.getPower(), null, "left", null, 0, 1, Multi.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMulti_Left(), this.getMultiplication(), null, "left", null, 0, 1, Multi.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMulti_Mul_op(), ecorePackage.getEString(), "mul_op", null, 0, 1, Multi.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getMulti_Right(), this.getPower(), null, "right", null, 0, 1, Multi.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(divEClass, Div.class, "Div", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getDiv_Left(), this.getPower(), null, "left", null, 0, 1, Div.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDiv_Left(), this.getMultiplication(), null, "left", null, 0, 1, Div.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDiv_Mul_op(), ecorePackage.getEString(), "mul_op", null, 0, 1, Div.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDiv_Right(), this.getPower(), null, "right", null, 0, 1, Div.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(powEClass, Pow.class, "Pow", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getPow_Left(), this.getUnaryExpr(), null, "left", null, 0, 1, Pow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPow_Left(), this.getPower(), null, "left", null, 0, 1, Pow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getPow_Pow_op(), ecorePackage.getEString(), "pow_op", null, 0, 1, Pow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPow_Right(), this.getUnaryExpr(), null, "right", null, 0, 1, Pow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

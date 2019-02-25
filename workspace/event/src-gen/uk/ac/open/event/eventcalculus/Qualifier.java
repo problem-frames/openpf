@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.event.eventcalculus;
 
@@ -14,11 +11,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.event.eventcalculus.Qualifier#getOp <em>Op</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.Qualifier#getParameters <em>Parameters</em>}</li>
  * </ul>
- * </p>
  *
  * @see uk.ac.open.event.eventcalculus.EventcalculusPackage#getQualifier()
  * @model

@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package argument.argument;
 
@@ -14,6 +11,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link argument.argument.Argument#getName <em>Name</em>}</li>
  *   <li>{@link argument.argument.Argument#getDescription <em>Description</em>}</li>
@@ -28,7 +26,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link argument.argument.Argument#getWarrants <em>Warrants</em>}</li>
  *   <li>{@link argument.argument.Argument#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see argument.argument.ArgumentPackage#getArgument()
  * @model

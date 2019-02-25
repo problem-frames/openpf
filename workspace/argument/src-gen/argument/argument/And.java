@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package argument.argument;
 
@@ -13,12 +10,12 @@ package argument.argument;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link argument.argument.And#getLeft <em>Left</em>}</li>
  *   <li>{@link argument.argument.And#getAnd_op <em>And op</em>}</li>
  *   <li>{@link argument.argument.And#getRight <em>Right</em>}</li>
  * </ul>
- * </p>
  *
  * @see argument.argument.ArgumentPackage#getAnd()
  * @model
@@ -35,12 +32,12 @@ public interface And extends AndExp
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Left</em>' containment reference.
-   * @see #setLeft(Relational)
+   * @see #setLeft(AndExp)
    * @see argument.argument.ArgumentPackage#getAnd_Left()
    * @model containment="true"
    * @generated
    */
-  Relational getLeft();
+  AndExp getLeft();
 
   /**
    * Sets the value of the '{@link argument.argument.And#getLeft <em>Left</em>}' containment reference.
@@ -50,7 +47,7 @@ public interface And extends AndExp
    * @see #getLeft()
    * @generated
    */
-  void setLeft(Relational value);
+  void setLeft(AndExp value);
 
   /**
    * Returns the value of the '<em><b>And op</b></em>' attribute.

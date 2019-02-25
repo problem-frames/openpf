@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package argument.argument.impl;
 
@@ -23,10 +20,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link argument.argument.impl.ExpressionImpl#getAssign <em>Assign</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -68,6 +65,7 @@ public class ExpressionImpl extends PrePrimaryExprImpl implements Expression
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public AssignmentOp getAssign()
   {
     return assign;
@@ -95,6 +93,7 @@ public class ExpressionImpl extends PrePrimaryExprImpl implements Expression
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setAssign(AssignmentOp newAssign)
   {
     if (newAssign != assign)

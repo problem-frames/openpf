@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package argument.argument.impl;
 
@@ -34,7 +31,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
   {
     try
     {
-      ArgumentFactory theArgumentFactory = (ArgumentFactory)EPackage.Registry.INSTANCE.getEFactory("http://sead1.open.ac.uk/argument/Argument"); 
+      ArgumentFactory theArgumentFactory = (ArgumentFactory)EPackage.Registry.INSTANCE.getEFactory(ArgumentPackage.eNS_URI);
       if (theArgumentFactory != null)
       {
         return theArgumentFactory;
@@ -146,6 +143,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public ArgumentDiagram createArgumentDiagram()
   {
     ArgumentDiagramImpl argumentDiagram = new ArgumentDiagramImpl();
@@ -157,6 +155,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Link createLink()
   {
     LinkImpl link = new LinkImpl();
@@ -168,6 +167,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Rebuts createRebuts()
   {
     RebutsImpl rebuts = new RebutsImpl();
@@ -179,6 +179,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Mitigates createMitigates()
   {
     MitigatesImpl mitigates = new MitigatesImpl();
@@ -190,6 +191,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Argument createArgument()
   {
     ArgumentImpl argument = new ArgumentImpl();
@@ -201,6 +203,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Expression createExpression()
   {
     ExpressionImpl expression = new ExpressionImpl();
@@ -212,6 +215,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public AssignmentOp createAssignmentOp()
   {
     AssignmentOpImpl assignmentOp = new AssignmentOpImpl();
@@ -223,6 +227,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public OrExp createOrExp()
   {
     OrExpImpl orExp = new OrExpImpl();
@@ -234,6 +239,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public AndExp createAndExp()
   {
     AndExpImpl andExp = new AndExpImpl();
@@ -245,6 +251,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Relational createRelational()
   {
     RelationalImpl relational = new RelationalImpl();
@@ -256,6 +263,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Addition createAddition()
   {
     AdditionImpl addition = new AdditionImpl();
@@ -267,6 +275,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Multiplication createMultiplication()
   {
     MultiplicationImpl multiplication = new MultiplicationImpl();
@@ -278,6 +287,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Power createPower()
   {
     PowerImpl power = new PowerImpl();
@@ -289,6 +299,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public UnaryExpr createUnaryExpr()
   {
     UnaryExprImpl unaryExpr = new UnaryExprImpl();
@@ -300,6 +311,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public PrePrimaryExpr createPrePrimaryExpr()
   {
     PrePrimaryExprImpl prePrimaryExpr = new PrePrimaryExprImpl();
@@ -311,6 +323,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public TerminalExpression createTerminalExpression()
   {
     TerminalExpressionImpl terminalExpression = new TerminalExpressionImpl();
@@ -322,6 +335,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public AssignPlus createAssignPlus()
   {
     AssignPlusImpl assignPlus = new AssignPlusImpl();
@@ -333,6 +347,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public AssignMin createAssignMin()
   {
     AssignMinImpl assignMin = new AssignMinImpl();
@@ -344,6 +359,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Or createOr()
   {
     OrImpl or = new OrImpl();
@@ -355,6 +371,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public And createAnd()
   {
     AndImpl and = new AndImpl();
@@ -366,6 +383,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public RelNotEq createRelNotEq()
   {
     RelNotEqImpl relNotEq = new RelNotEqImpl();
@@ -377,6 +395,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public RelEqEq createRelEqEq()
   {
     RelEqEqImpl relEqEq = new RelEqEqImpl();
@@ -388,6 +407,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public RelLtEq createRelLtEq()
   {
     RelLtEqImpl relLtEq = new RelLtEqImpl();
@@ -399,6 +419,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public RelGtEq createRelGtEq()
   {
     RelGtEqImpl relGtEq = new RelGtEqImpl();
@@ -410,6 +431,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public RelEq createRelEq()
   {
     RelEqImpl relEq = new RelEqImpl();
@@ -421,6 +443,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public RelLt createRelLt()
   {
     RelLtImpl relLt = new RelLtImpl();
@@ -432,6 +455,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public RelGt createRelGt()
   {
     RelGtImpl relGt = new RelGtImpl();
@@ -443,6 +467,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Plus createPlus()
   {
     PlusImpl plus = new PlusImpl();
@@ -454,6 +479,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Minus createMinus()
   {
     MinusImpl minus = new MinusImpl();
@@ -465,6 +491,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Multi createMulti()
   {
     MultiImpl multi = new MultiImpl();
@@ -476,6 +503,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Div createDiv()
   {
     DivImpl div = new DivImpl();
@@ -487,6 +515,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Pow createPow()
   {
     PowImpl pow = new PowImpl();
@@ -498,6 +527,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public IntLiteral createIntLiteral()
   {
     IntLiteralImpl intLiteral = new IntLiteralImpl();
@@ -509,6 +539,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public BooleanLiteral createBooleanLiteral()
   {
     BooleanLiteralImpl booleanLiteral = new BooleanLiteralImpl();
@@ -542,6 +573,7 @@ public class ArgumentFactoryImpl extends EFactoryImpl implements ArgumentFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public ArgumentPackage getArgumentPackage()
   {
     return (ArgumentPackage)getEPackage();

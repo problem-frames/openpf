@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package argument.argument.impl;
 
@@ -22,10 +19,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link argument.argument.impl.RebutsImpl#getDenies <em>Denies</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -67,6 +64,7 @@ public class RebutsImpl extends LinkImpl implements Rebuts
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Argument getDenies()
   {
     if (denies != null && denies.eIsProxy())
@@ -97,6 +95,7 @@ public class RebutsImpl extends LinkImpl implements Rebuts
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setDenies(Argument newDenies)
   {
     Argument oldDenies = denies;

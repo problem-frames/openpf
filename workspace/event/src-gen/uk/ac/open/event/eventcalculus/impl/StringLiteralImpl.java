@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.event.eventcalculus.impl;
 
@@ -20,10 +17,10 @@ import uk.ac.open.event.eventcalculus.StringLiteral;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.StringLiteralImpl#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -75,6 +72,7 @@ public class StringLiteralImpl extends TerminalExpressionImpl implements StringL
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getValue()
   {
     return value;
@@ -85,6 +83,7 @@ public class StringLiteralImpl extends TerminalExpressionImpl implements StringL
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setValue(String newValue)
   {
     String oldValue = value;
@@ -169,7 +168,7 @@ public class StringLiteralImpl extends TerminalExpressionImpl implements StringL
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (value: ");
     result.append(value);
     result.append(')');

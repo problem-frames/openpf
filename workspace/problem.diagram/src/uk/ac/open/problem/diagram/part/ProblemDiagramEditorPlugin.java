@@ -21,7 +21,6 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
 import uk.ac.open.problem.diagram.edit.policies.ProblemBaseItemSemanticEditPolicy;
-import uk.ac.open.problem.diagram.expressions.ProblemOCLFactory;
 import uk.ac.open.problem.diagram.providers.ElementInitializers;
 import uk.ac.open.problem.provider.ProblemItemProviderAdapterFactory;
 
@@ -69,11 +68,6 @@ public class ProblemDiagramEditorPlugin extends AbstractUIPlugin {
 	/**
 	 * @generated
 	 */
-	private ProblemOCLFactory oclFactory;
-
-	/**
-	 * @generated
-	 */
 	public ProblemDiagramEditorPlugin() {
 	}
 
@@ -96,7 +90,6 @@ public class ProblemDiagramEditorPlugin extends AbstractUIPlugin {
 		adapterFactory = null;
 		linkConstraints = null;
 		initializers = null;
-		oclFactory = null;
 		instance = null;
 		super.stop(context);
 	}
@@ -240,20 +233,6 @@ public class ProblemDiagramEditorPlugin extends AbstractUIPlugin {
 	 */
 	public void setElementInitializers(ElementInitializers i) {
 		this.initializers = i;
-	}
-
-	/**
-	 * @generated
-	 */
-	public ProblemOCLFactory getProblemOCLFactory() {
-		return oclFactory;
-	}
-
-	/**
-	 * @generated
-	 */
-	public void setProblemOCLFactory(ProblemOCLFactory f) {
-		this.oclFactory = f;
 	}
 
 	/**

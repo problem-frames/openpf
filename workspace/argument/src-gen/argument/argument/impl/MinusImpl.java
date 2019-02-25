@@ -1,10 +1,8 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package argument.argument.impl;
 
+import argument.argument.Addition;
 import argument.argument.ArgumentPackage;
 import argument.argument.Minus;
 import argument.argument.Multiplication;
@@ -23,12 +21,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link argument.argument.impl.MinusImpl#getLeft <em>Left</em>}</li>
  *   <li>{@link argument.argument.impl.MinusImpl#getAdd_op <em>Add op</em>}</li>
  *   <li>{@link argument.argument.impl.MinusImpl#getRight <em>Right</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -42,7 +40,7 @@ public class MinusImpl extends AdditionImpl implements Minus
    * @generated
    * @ordered
    */
-  protected Multiplication left;
+  protected Addition left;
 
   /**
    * The default value of the '{@link #getAdd_op() <em>Add op</em>}' attribute.
@@ -100,7 +98,8 @@ public class MinusImpl extends AdditionImpl implements Minus
    * <!-- end-user-doc -->
    * @generated
    */
-  public Multiplication getLeft()
+  @Override
+  public Addition getLeft()
   {
     return left;
   }
@@ -110,9 +109,9 @@ public class MinusImpl extends AdditionImpl implements Minus
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetLeft(Multiplication newLeft, NotificationChain msgs)
+  public NotificationChain basicSetLeft(Addition newLeft, NotificationChain msgs)
   {
-    Multiplication oldLeft = left;
+    Addition oldLeft = left;
     left = newLeft;
     if (eNotificationRequired())
     {
@@ -127,7 +126,8 @@ public class MinusImpl extends AdditionImpl implements Minus
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setLeft(Multiplication newLeft)
+  @Override
+  public void setLeft(Addition newLeft)
   {
     if (newLeft != left)
     {
@@ -148,6 +148,7 @@ public class MinusImpl extends AdditionImpl implements Minus
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getAdd_op()
   {
     return add_op;
@@ -158,6 +159,7 @@ public class MinusImpl extends AdditionImpl implements Minus
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setAdd_op(String newAdd_op)
   {
     String oldAdd_op = add_op;
@@ -171,6 +173,7 @@ public class MinusImpl extends AdditionImpl implements Minus
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Multiplication getRight()
   {
     return right;
@@ -198,6 +201,7 @@ public class MinusImpl extends AdditionImpl implements Minus
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setRight(Multiplication newRight)
   {
     if (newRight != right)
@@ -263,7 +267,7 @@ public class MinusImpl extends AdditionImpl implements Minus
     switch (featureID)
     {
       case ArgumentPackage.MINUS__LEFT:
-        setLeft((Multiplication)newValue);
+        setLeft((Addition)newValue);
         return;
       case ArgumentPackage.MINUS__ADD_OP:
         setAdd_op((String)newValue);
@@ -286,7 +290,7 @@ public class MinusImpl extends AdditionImpl implements Minus
     switch (featureID)
     {
       case ArgumentPackage.MINUS__LEFT:
-        setLeft((Multiplication)null);
+        setLeft((Addition)null);
         return;
       case ArgumentPackage.MINUS__ADD_OP:
         setAdd_op(ADD_OP_EDEFAULT);
@@ -328,7 +332,7 @@ public class MinusImpl extends AdditionImpl implements Minus
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (add_op: ");
     result.append(add_op);
     result.append(')');

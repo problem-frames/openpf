@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.event.eventcalculus;
 
@@ -14,10 +11,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.event.eventcalculus.Defines#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @see uk.ac.open.event.eventcalculus.EventcalculusPackage#getDefines()
  * @model

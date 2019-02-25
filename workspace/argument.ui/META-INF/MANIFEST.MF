@@ -1,18 +1,28 @@
 Manifest-Version: 1.0
-Require-Bundle: argument;visibility:=reexport,org.eclipse.xtext.ui,org
- .eclipse.ui.editors;bundle-version="3.5.0",org.eclipse.ui.ide;bundle-
- version="3.5.0",org.eclipse.xtext.ui.shared,org.eclipse.ui,org.eclips
- e.xtext.builder,org.antlr.runtime,problem;bundle-version="1.0.0",core
- ;bundle-version="1.0.0",argument.diagram;bundle-version="1.0.0",event
- ,problem.diagram;bundle-version="1.0.0"
+Require-Bundle: argument;visibility:=reexport,
+ org.eclipse.xtext.ui,
+ org.eclipse.ui.editors;bundle-version="3.5.0",
+ org.eclipse.ui.ide;bundle-version="3.5.0",
+ org.eclipse.xtext.ui.shared,
+ org.eclipse.ui,
+ org.eclipse.xtext.builder,
+ org.antlr.runtime,
+ problem;bundle-version="1.0.0",
+ core;bundle-version="1.0.0",
+ argument.diagram;bundle-version="1.0.0",
+ event,
+ problem.diagram;bundle-version="1.0.0"
 Bundle-Vendor: My Company
 Bundle-ActivationPolicy: lazy
 Bundle-Version: 1.0.0
 Bundle-Name: argument.ui
 Bundle-Activator: argument.ui.internal.ArgumentActivator
 Bundle-ManifestVersion: 2
-Import-Package: org.apache.log4j,uk.ac.open.ui
+Import-Package: org.apache.log4j,
+ uk.ac.open.ui
 Bundle-SymbolicName: argument.ui; singleton:=true
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-
-
+Export-Package: argument.ui.quickfix,
+ argument.ui.contentassist,
+ argument.ui.contentassist.antlr,
+ argument.ui.contentassist.antlr.internal

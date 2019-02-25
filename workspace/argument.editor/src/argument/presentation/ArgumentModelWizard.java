@@ -75,8 +75,7 @@ import org.eclipse.ui.part.ISetSelectionTarget;
 
 import argument.argument.ArgumentFactory;
 import argument.argument.ArgumentPackage;
-import argument.provider.ArgumentEditPlugin;
-
+import argument.argument.provider.ArgumentEditPlugin;
 
 import org.eclipse.core.runtime.Path;
 

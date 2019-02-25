@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.event.eventcalculus.impl;
 
@@ -14,8 +11,6 @@ import uk.ac.open.event.eventcalculus.TerminalExpression;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Terminal Expression</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.event.eventcalculus.impl;
 
@@ -21,10 +18,10 @@ import uk.ac.open.event.eventcalculus.Import;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.ImportImpl#getImportURI <em>Import URI</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -76,6 +73,7 @@ public class ImportImpl extends MinimalEObjectImpl.Container implements Import
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getImportURI()
   {
     return importURI;
@@ -86,6 +84,7 @@ public class ImportImpl extends MinimalEObjectImpl.Container implements Import
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setImportURI(String newImportURI)
   {
     String oldImportURI = importURI;
@@ -170,7 +169,7 @@ public class ImportImpl extends MinimalEObjectImpl.Container implements Import
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (importURI: ");
     result.append(importURI);
     result.append(')');

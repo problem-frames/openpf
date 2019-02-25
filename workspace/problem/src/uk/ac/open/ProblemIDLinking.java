@@ -12,7 +12,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.xtext.linking.impl.DefaultLinkingService;
 import org.eclipse.xtext.linking.impl.IllegalNodeException;
-import org.eclipse.xtext.parsetree.AbstractNode;
+import org.eclipse.xtext.naming.QualifiedName;
+import org.eclipse.xtext.nodemodel.impl.AbstractNode;
 import org.eclipse.xtext.resource.IEObjectDescription;
 import org.eclipse.xtext.scoping.IScope;
 
@@ -20,7 +21,6 @@ import com.google.inject.Singleton;
 
 @Singleton
 public class ProblemIDLinking extends DefaultLinkingService {
-	@Override
 	public List<EObject> getLinkedObjects(EObject context, EReference ref,
 			AbstractNode node) throws IllegalNodeException {		
 		final EClass requiredType = ref.getEReferenceType();
@@ -30,9 +30,9 @@ public class ProblemIDLinking extends DefaultLinkingService {
 		final String s = getCrossRefNodeAsString(node);		
 		if (s != null) {
 			IEObjectDescription eObjectDescription = null;
-			for (IEObjectDescription c: scope.getContents()) {
-				String n = c.getName();
-				String id = n;
+			for (IEObjectDescription c: scope.getAllElements()) {
+				QualifiedName n = c.getName();
+				QualifiedName id = n;
 				if (id.equals(s)) {
 					eObjectDescription = c;
 				}

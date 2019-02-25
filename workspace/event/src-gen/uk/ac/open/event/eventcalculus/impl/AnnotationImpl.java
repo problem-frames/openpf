@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.event.eventcalculus.impl;
 
@@ -22,11 +19,11 @@ import uk.ac.open.event.eventcalculus.EventcalculusPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.AnnotationImpl#getType <em>Type</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.AnnotationImpl#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -98,6 +95,7 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public ANNOTATION_TYPE getType()
   {
     return type;
@@ -108,6 +106,7 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setType(ANNOTATION_TYPE newType)
   {
     ANNOTATION_TYPE oldType = type;
@@ -121,6 +120,7 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getValue()
   {
     return value;
@@ -131,6 +131,7 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setValue(String newValue)
   {
     String oldValue = value;
@@ -225,7 +226,7 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (type: ");
     result.append(type);
     result.append(", value: ");

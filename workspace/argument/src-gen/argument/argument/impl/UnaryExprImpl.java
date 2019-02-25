@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package argument.argument.impl;
 
@@ -24,11 +21,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link argument.argument.impl.UnaryExprImpl#getUop <em>Uop</em>}</li>
  *   <li>{@link argument.argument.impl.UnaryExprImpl#getRight <em>Right</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -90,6 +87,7 @@ public class UnaryExprImpl extends PowerImpl implements UnaryExpr
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public UnaryOp getUop()
   {
     return uop;
@@ -100,6 +98,7 @@ public class UnaryExprImpl extends PowerImpl implements UnaryExpr
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setUop(UnaryOp newUop)
   {
     UnaryOp oldUop = uop;
@@ -113,6 +112,7 @@ public class UnaryExprImpl extends PowerImpl implements UnaryExpr
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public PrePrimaryExpr getRight()
   {
     return right;
@@ -140,6 +140,7 @@ public class UnaryExprImpl extends PowerImpl implements UnaryExpr
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setRight(PrePrimaryExpr newRight)
   {
     if (newRight != right)
@@ -258,7 +259,7 @@ public class UnaryExprImpl extends PowerImpl implements UnaryExpr
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (uop: ");
     result.append(uop);
     result.append(')');

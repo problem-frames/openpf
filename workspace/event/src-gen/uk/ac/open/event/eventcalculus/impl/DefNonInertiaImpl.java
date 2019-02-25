@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.event.eventcalculus.impl;
 
@@ -23,10 +20,10 @@ import uk.ac.open.event.eventcalculus.EventcalculusPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.DefNonInertiaImpl#getNames <em>Names</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -68,6 +65,7 @@ public class DefNonInertiaImpl extends DeclarationImpl implements DefNonInertia
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EList<Definition> getNames()
   {
     if (names == null)

@@ -1,15 +1,28 @@
 Manifest-Version: 1.0
-Require-Bundle: org.eclipse.xtext,org.eclipse.xtext.generator;resoluti
- on:=optional,org.apache.commons.logging;resolution:=optional,org.ecli
- pse.emf.codegen.ecore;resolution:=optional,org.eclipse.emf.mwe.utils;
- resolution:=optional,org.eclipse.emf.mwe2.launch;resolution:=optional
- ,com.ibm.icu;resolution:=optional,org.eclipse.xtext.xtend;resolution:
- =optional,org.eclipse.xtext.util,org.eclipse.emf.ecore,org.eclipse.em
- f.common,org.antlr.runtime
-Export-Package: argument.argument,argument.argument.impl,argument.argu
- ment.util,argument.parseTreeConstruction,argument.parser.antlr,argume
- nt.parser.antlr.internal,argument.services,argument,argument.validati
- on
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.generator;resolution:=optional,
+ org.apache.commons.logging;resolution:=optional,
+ org.eclipse.emf.codegen.ecore;resolution:=optional,
+ org.eclipse.emf.mwe.utils;resolution:=optional,
+ org.eclipse.emf.mwe2.launch;resolution:=optional,
+ com.ibm.icu;resolution:=optional,
+ org.eclipse.xtext.xtend;resolution:=optional,
+ org.eclipse.xtext.util,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.common,
+ org.antlr.runtime,
+ org.eclipse.equinox.common;bundle-version="3.10.200"
+Export-Package: argument.argument,
+ argument.argument.impl,
+ argument.argument.util,
+ argument.parseTreeConstruction,
+ argument.parser.antlr,
+ argument.parser.antlr.internal,
+ argument.services,
+ argument,
+ argument.validation,
+ argument.scoping,
+ argument.formatting
 Bundle-Vendor: My Company
 Bundle-ActivationPolicy: lazy
 Bundle-Version: 1.0.0
@@ -18,5 +31,3 @@ Bundle-ManifestVersion: 2
 Import-Package: org.apache.log4j
 Bundle-SymbolicName: argument; singleton:=true
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-
-

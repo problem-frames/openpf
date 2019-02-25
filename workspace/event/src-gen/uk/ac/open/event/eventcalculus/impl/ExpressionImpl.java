@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.event.eventcalculus.impl;
 
@@ -26,6 +23,7 @@ import uk.ac.open.event.eventcalculus.UnaryOp;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.ExpressionImpl#getExpr <em>Expr</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.ExpressionImpl#getQualifiers <em>Qualifiers</em>}</li>
@@ -34,7 +32,6 @@ import uk.ac.open.event.eventcalculus.UnaryOp;
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.ExpressionImpl#getN <em>N</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.ExpressionImpl#getDefine <em>Define</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -146,6 +143,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Expression getExpr()
   {
     return expr;
@@ -173,6 +171,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setExpr(Expression newExpr)
   {
     if (newExpr != expr)
@@ -194,6 +193,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Qualifier getQualifiers()
   {
     return qualifiers;
@@ -221,6 +221,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setQualifiers(Qualifier newQualifiers)
   {
     if (newQualifiers != qualifiers)
@@ -242,6 +243,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public UnaryOp getOp()
   {
     return op;
@@ -252,6 +254,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setOp(UnaryOp newOp)
   {
     UnaryOp oldOp = op;
@@ -265,6 +268,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Expression getRight()
   {
     return right;
@@ -292,6 +296,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setRight(Expression newRight)
   {
     if (newRight != right)
@@ -313,6 +318,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public int getN()
   {
     return n;
@@ -323,6 +329,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setN(int newN)
   {
     int oldN = n;
@@ -336,6 +343,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Defines getDefine()
   {
     if (define != null && define.eIsProxy())
@@ -366,6 +374,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setDefine(Defines newDefine)
   {
     Defines oldDefine = define;
@@ -521,7 +530,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (op: ");
     result.append(op);
     result.append(", n: ");

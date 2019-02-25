@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.event.eventcalculus;
 
@@ -13,12 +10,12 @@ package uk.ac.open.event.eventcalculus;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.event.eventcalculus.DefRange#getName <em>Name</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.DefRange#getMin <em>Min</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.DefRange#getMax <em>Max</em>}</li>
  * </ul>
- * </p>
  *
  * @see uk.ac.open.event.eventcalculus.EventcalculusPackage#getDefRange()
  * @model

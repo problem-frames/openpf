@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package argument.argument;
 
@@ -13,12 +10,12 @@ package argument.argument;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link argument.argument.Plus#getLeft <em>Left</em>}</li>
  *   <li>{@link argument.argument.Plus#getAdd_op <em>Add op</em>}</li>
  *   <li>{@link argument.argument.Plus#getRight <em>Right</em>}</li>
  * </ul>
- * </p>
  *
  * @see argument.argument.ArgumentPackage#getPlus()
  * @model
@@ -35,12 +32,12 @@ public interface Plus extends Addition
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Left</em>' containment reference.
-   * @see #setLeft(Multiplication)
+   * @see #setLeft(Addition)
    * @see argument.argument.ArgumentPackage#getPlus_Left()
    * @model containment="true"
    * @generated
    */
-  Multiplication getLeft();
+  Addition getLeft();
 
   /**
    * Sets the value of the '{@link argument.argument.Plus#getLeft <em>Left</em>}' containment reference.
@@ -50,7 +47,7 @@ public interface Plus extends Addition
    * @see #getLeft()
    * @generated
    */
-  void setLeft(Multiplication value);
+  void setLeft(Addition value);
 
   /**
    * Returns the value of the '<em><b>Add op</b></em>' attribute.

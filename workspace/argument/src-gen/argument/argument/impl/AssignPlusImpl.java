@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package argument.argument.impl;
 
@@ -23,12 +20,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link argument.argument.impl.AssignPlusImpl#getLeft <em>Left</em>}</li>
  *   <li>{@link argument.argument.impl.AssignPlusImpl#getAop <em>Aop</em>}</li>
  *   <li>{@link argument.argument.impl.AssignPlusImpl#getRight <em>Right</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -100,6 +97,7 @@ public class AssignPlusImpl extends AssignmentOpImpl implements AssignPlus
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public OrExp getLeft()
   {
     return left;
@@ -127,6 +125,7 @@ public class AssignPlusImpl extends AssignmentOpImpl implements AssignPlus
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setLeft(OrExp newLeft)
   {
     if (newLeft != left)
@@ -148,6 +147,7 @@ public class AssignPlusImpl extends AssignmentOpImpl implements AssignPlus
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getAop()
   {
     return aop;
@@ -158,6 +158,7 @@ public class AssignPlusImpl extends AssignmentOpImpl implements AssignPlus
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setAop(String newAop)
   {
     String oldAop = aop;
@@ -171,6 +172,7 @@ public class AssignPlusImpl extends AssignmentOpImpl implements AssignPlus
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public OrExp getRight()
   {
     return right;
@@ -198,6 +200,7 @@ public class AssignPlusImpl extends AssignmentOpImpl implements AssignPlus
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setRight(OrExp newRight)
   {
     if (newRight != right)
@@ -328,7 +331,7 @@ public class AssignPlusImpl extends AssignmentOpImpl implements AssignPlus
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (aop: ");
     result.append(aop);
     result.append(')');

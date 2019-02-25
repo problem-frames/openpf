@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.event.eventcalculus.impl;
 
@@ -30,11 +27,11 @@ import uk.ac.open.event.eventcalculus.FunctionRef;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.FunctionRefImpl#getFunc <em>Func</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.FunctionRefImpl#getArgs <em>Args</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -86,6 +83,7 @@ public class FunctionRefImpl extends ExpressionImpl implements FunctionRef
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Expression getFunc()
   {
     return func;
@@ -113,6 +111,7 @@ public class FunctionRefImpl extends ExpressionImpl implements FunctionRef
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setFunc(Expression newFunc)
   {
     if (newFunc != func)
@@ -134,6 +133,7 @@ public class FunctionRefImpl extends ExpressionImpl implements FunctionRef
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EList<Expression> getArgs()
   {
     if (args == null)

@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package argument.argument;
 
@@ -13,12 +10,12 @@ package argument.argument;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link argument.argument.Div#getLeft <em>Left</em>}</li>
  *   <li>{@link argument.argument.Div#getMul_op <em>Mul op</em>}</li>
  *   <li>{@link argument.argument.Div#getRight <em>Right</em>}</li>
  * </ul>
- * </p>
  *
  * @see argument.argument.ArgumentPackage#getDiv()
  * @model
@@ -35,12 +32,12 @@ public interface Div extends Multiplication
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Left</em>' containment reference.
-   * @see #setLeft(Power)
+   * @see #setLeft(Multiplication)
    * @see argument.argument.ArgumentPackage#getDiv_Left()
    * @model containment="true"
    * @generated
    */
-  Power getLeft();
+  Multiplication getLeft();
 
   /**
    * Sets the value of the '{@link argument.argument.Div#getLeft <em>Left</em>}' containment reference.
@@ -50,7 +47,7 @@ public interface Div extends Multiplication
    * @see #getLeft()
    * @generated
    */
-  void setLeft(Power value);
+  void setLeft(Multiplication value);
 
   /**
    * Returns the value of the '<em><b>Mul op</b></em>' attribute.

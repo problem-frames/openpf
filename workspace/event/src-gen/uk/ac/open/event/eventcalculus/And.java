@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.event.eventcalculus;
 
@@ -13,11 +10,11 @@ package uk.ac.open.event.eventcalculus;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.event.eventcalculus.And#getLeft <em>Left</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.And#getQ <em>Q</em>}</li>
  * </ul>
- * </p>
  *
  * @see uk.ac.open.event.eventcalculus.EventcalculusPackage#getAnd()
  * @model

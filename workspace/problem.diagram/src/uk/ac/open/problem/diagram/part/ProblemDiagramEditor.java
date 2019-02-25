@@ -255,9 +255,8 @@ public class ProblemDiagramEditor extends DiagramDocumentEditor implements
 					newInput,
 					getDocumentProvider().getDocument(getEditorInput()), true);
 			WorkflowRunner wfr = new WorkflowRunner();
-			wfr.prepare("/Example/problem/ProblemGenerator.mwe", null,
-					new HashMap<String, String>());
-			wfr.executeWorkflow(null, null);
+			wfr.run("/Example/problem/ProblemGenerator.mwe", null,
+					new HashMap<String, String>(), null);
 			success = true;
 		} catch (CoreException x) {
 			IStatus status = x.getStatus();

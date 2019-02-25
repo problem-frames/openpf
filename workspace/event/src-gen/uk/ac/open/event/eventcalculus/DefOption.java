@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.event.eventcalculus;
 
@@ -13,12 +10,12 @@ package uk.ac.open.event.eventcalculus;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.event.eventcalculus.DefOption#getName <em>Name</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.DefOption#getValue <em>Value</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.DefOption#getValue2 <em>Value2</em>}</li>
  * </ul>
- * </p>
  *
  * @see uk.ac.open.event.eventcalculus.EventcalculusPackage#getDefOption()
  * @model

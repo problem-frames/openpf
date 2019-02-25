@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.event.eventcalculus;
 
@@ -14,6 +11,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.event.eventcalculus.Expression#getExpr <em>Expr</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.Expression#getQualifiers <em>Qualifiers</em>}</li>
@@ -22,7 +20,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link uk.ac.open.event.eventcalculus.Expression#getN <em>N</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.Expression#getDefine <em>Define</em>}</li>
  * </ul>
- * </p>
  *
  * @see uk.ac.open.event.eventcalculus.EventcalculusPackage#getExpression()
  * @model

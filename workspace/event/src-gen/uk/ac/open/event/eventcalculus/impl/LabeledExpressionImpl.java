@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package uk.ac.open.event.eventcalculus.impl;
 
@@ -24,11 +21,11 @@ import uk.ac.open.event.eventcalculus.LabeledExpression;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.LabeledExpressionImpl#getName <em>Name</em>}</li>
  *   <li>{@link uk.ac.open.event.eventcalculus.impl.LabeledExpressionImpl#getExpr <em>Expr</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -90,6 +87,7 @@ public class LabeledExpressionImpl extends StatementImpl implements LabeledExpre
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public LabelType getName()
   {
     return name;
@@ -100,6 +98,7 @@ public class LabeledExpressionImpl extends StatementImpl implements LabeledExpre
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setName(LabelType newName)
   {
     LabelType oldName = name;
@@ -113,6 +112,7 @@ public class LabeledExpressionImpl extends StatementImpl implements LabeledExpre
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Expression getExpr()
   {
     return expr;
@@ -140,6 +140,7 @@ public class LabeledExpressionImpl extends StatementImpl implements LabeledExpre
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setExpr(Expression newExpr)
   {
     if (newExpr != expr)
@@ -258,7 +259,7 @@ public class LabeledExpressionImpl extends StatementImpl implements LabeledExpre
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (name: ");
     result.append(name);
     result.append(')');

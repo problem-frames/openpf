@@ -34,10 +34,10 @@ import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.xtext.gmf.glue.Activator;
 import org.eclipse.xtext.gmf.glue.editingdomain.UpdateXtextResourceTextCommand;
+import org.eclipse.xtext.nodemodel.ICompositeNode;
+import org.eclipse.xtext.nodemodel.impl.CompositeNode;
+import org.eclipse.xtext.nodemodel.util.NodeModelUtils;
 import org.eclipse.xtext.parser.IParseResult;
-import org.eclipse.xtext.parsetree.CompositeNode;
-import org.eclipse.xtext.parsetree.NodeAdapter;
-import org.eclipse.xtext.parsetree.NodeUtil;
 import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.ui.editor.CompoundXtextEditorCallback;
 import org.eclipse.xtext.ui.editor.XtextEditor;
@@ -202,7 +202,7 @@ public class PopupXtextEditorHelper {
 				if (xtextNode == null) {
 					return false;
 				}
-				// getOffset() and getLength() are trimming whitespaces
+				//	getOffset() and getLength() are trimming whitespaces
 				editorOffset = xtextNode.getOffset();
 				initialEditorSize = xtextNode.getLength();
 				initialDocumentSize = xtextDocument.getLength();
@@ -257,9 +257,9 @@ public class PopupXtextEditorHelper {
 	}
 
 	private CompositeNode getCompositeNode(EObject semanticElement) {
-		NodeAdapter nodeAdapter = NodeUtil.getNodeAdapter(semanticElement);
+		ICompositeNode nodeAdapter = NodeModelUtils.getNode(semanticElement);
 		if (nodeAdapter != null) {
-			final CompositeNode parserNode = nodeAdapter.getParserNode();
+			final CompositeNode parserNode = (CompositeNode) nodeAdapter.getRootNode();
 			return parserNode;
 		}
 		return null;
@@ -269,7 +269,7 @@ public class PopupXtextEditorHelper {
 		return (xtextDocument.readOnly(new IUnitOfWork<Boolean, XtextResource>() {
 			public Boolean exec(XtextResource state) throws Exception {
 				IParseResult parseResult = state.getParseResult();
-				return !state.getErrors().isEmpty() || parseResult == null || !parseResult.getParseErrors().isEmpty();
+				return !state.getErrors().isEmpty() || parseResult == null;
 			}
 		}));
 	}
