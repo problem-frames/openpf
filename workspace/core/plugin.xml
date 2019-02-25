@@ -81,10 +81,6 @@
              name="appName"
              value="Problem Analysis Tool">
        </property>
-       <property
-             name="preferenceCustomization"
-             value="plugin_customization.ini">
-       </property>
     </product>
  </extension>
    <extension
@@ -98,5 +94,25 @@
                id="core.prefpage">
          </keywordReference>
       </page>
+   </extension>
+   <extension
+         id="openome"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.ui.ide.workbench"
+            name="Core">
+         <property
+               name="aboutText"
+               value="OpenOME, an open-source requirements engineering tool">
+         </property>
+         <property
+               name="aboutImage"
+               value="icons/eclipse_lg.gif">
+         </property>
+         <property
+               name="appName"
+               value="Core">
+         </property>
+      </product>
    </extension>
 </plugin>
